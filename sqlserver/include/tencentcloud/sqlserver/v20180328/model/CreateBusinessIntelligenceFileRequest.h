@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return FileURL 
+                     * 
                      */
                     std::string GetFileURL() const;
 
                     /**
                      * 设置
-                     * @param FileURL 
+                     * @param _fileURL 
+                     * 
                      */
                     void SetFileURL(const std::string& _fileURL);
 
                     /**
                      * 判断参数 FileURL 是否已赋值
                      * @return FileURL 是否已赋值
+                     * 
                      */
                     bool FileURLHasBeenSet() const;
 
                     /**
                      * 获取File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
                      * @return FileType File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
+                     * 
                      */
                     std::string GetFileType() const;
 
                     /**
                      * 设置File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
-                     * @param FileType File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
+                     * @param _fileType File type. Valid values: `FLAT` (flat file as data source), `SSIS` (.ispac SSIS package file)
+                     * 
                      */
                     void SetFileType(const std::string& _fileType);
 
                     /**
                      * 判断参数 FileType 是否已赋值
                      * @return FileType 是否已赋值
+                     * 
                      */
                     bool FileTypeHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

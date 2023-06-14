@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the NAT Gateway, such as `nat-df45454`
                      * @return NatGatewayId The ID of the NAT Gateway, such as `nat-df45454`
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The ID of the NAT Gateway, such as `nat-df45454`
-                     * @param NatGatewayId The ID of the NAT Gateway, such as `nat-df45454`
+                     * @param _natGatewayId The ID of the NAT Gateway, such as `nat-df45454`
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The list of SNAT rule IDs of a NAT Gateway, such as `snat-df43254`
                      * @return NatGatewaySnatIds The list of SNAT rule IDs of a NAT Gateway, such as `snat-df43254`
+                     * 
                      */
                     std::vector<std::string> GetNatGatewaySnatIds() const;
 
                     /**
                      * 设置The list of SNAT rule IDs of a NAT Gateway, such as `snat-df43254`
-                     * @param NatGatewaySnatIds The list of SNAT rule IDs of a NAT Gateway, such as `snat-df43254`
+                     * @param _natGatewaySnatIds The list of SNAT rule IDs of a NAT Gateway, such as `snat-df43254`
+                     * 
                      */
                     void SetNatGatewaySnatIds(const std::vector<std::string>& _natGatewaySnatIds);
 
                     /**
                      * 判断参数 NatGatewaySnatIds 是否已赋值
                      * @return NatGatewaySnatIds 是否已赋值
+                     * 
                      */
                     bool NatGatewaySnatIdsHasBeenSet() const;
 

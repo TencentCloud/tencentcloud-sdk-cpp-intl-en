@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Task ID, which uniquely identifies a recording task globally.
                      * @return TaskId Task ID, which uniquely identifies a recording task globally.
+                     * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

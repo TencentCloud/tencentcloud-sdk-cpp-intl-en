@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable configuration. Values:
+                     * @param _switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 If it is left empty, the default value `EO-Client-IPCountry` will be used.
                      * @return HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
 If it is left empty, the default value `EO-Client-IPCountry` will be used.
+                     * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
                      * 设置Header name of ClientIpCountry. This field is valid only when `Switch=on`.
 If it is left empty, the default value `EO-Client-IPCountry` will be used.
-                     * @param HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+                     * @param _headerName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
 If it is left empty, the default value `EO-Client-IPCountry` will be used.
+                     * 
                      */
                     void SetHeaderName(const std::string& _headerName);
 
                     /**
                      * 判断参数 HeaderName 是否已赋值
                      * @return HeaderName 是否已赋值
+                     * 
                      */
                     bool HeaderNameHasBeenSet() const;
 

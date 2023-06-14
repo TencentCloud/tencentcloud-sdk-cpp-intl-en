@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID.
                      * @return Id Unique ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Unique ID.
-                     * @param Id Unique ID.
+                     * @param _id Unique ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取CWP agent `Uuid`.
                      * @return Uuid CWP agent `Uuid`.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `Uuid`.
-                     * @param Uuid CWP agent `Uuid`.
+                     * @param _uuid CWP agent `Uuid`.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取Private IP of server.
                      * @return MachineIp Private IP of server.
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Private IP of server.
-                     * @param MachineIp Private IP of server.
+                     * @param _machineIp Private IP of server.
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
                     /**
                      * 获取Server name.
                      * @return MachineName Server name.
+                     * 
                      */
                     std::string GetMachineName() const;
 
                     /**
                      * 设置Server name.
-                     * @param MachineName Server name.
+                     * @param _machineName Server name.
+                     * 
                      */
                     void SetMachineName(const std::string& _machineName);
 
                     /**
                      * 判断参数 MachineName 是否已赋值
                      * @return MachineName 是否已赋值
+                     * 
                      */
                     bool MachineNameHasBeenSet() const;
 
                     /**
                      * 获取Account name.
                      * @return Username Account name.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Account name.
-                     * @param Username Account name.
+                     * @param _username Account name.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
@@ -145,6 +160,7 @@ namespace TencentCloud
 <li>CREATE: creates account</li>
 <li>MODIFY: modifies account</li>
 <li>DELETE: deletes account</li>
+                     * 
                      */
                     std::string GetModifyType() const;
 
@@ -153,34 +169,39 @@ namespace TencentCloud
 <li>CREATE: creates account</li>
 <li>MODIFY: modifies account</li>
 <li>DELETE: deletes account</li>
-                     * @param ModifyType Account change type.
+                     * @param _modifyType Account change type.
 <li>CREATE: creates account</li>
 <li>MODIFY: modifies account</li>
 <li>DELETE: deletes account</li>
+                     * 
                      */
                     void SetModifyType(const std::string& _modifyType);
 
                     /**
                      * 判断参数 ModifyType 是否已赋值
                      * @return ModifyType 是否已赋值
+                     * 
                      */
                     bool ModifyTypeHasBeenSet() const;
 
                     /**
                      * 获取Change time.
                      * @return ModifyTime Change time.
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Change time.
-                     * @param ModifyTime Change time.
+                     * @param _modifyTime Change time.
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 

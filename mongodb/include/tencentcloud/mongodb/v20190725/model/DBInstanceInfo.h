@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Region information
                      * @return Region Region information
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region information
-                     * @param Region Region information
+                     * @param _region Region information
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancingId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancingId() const;
 
                     /**
                      * 判断参数 LoadBalancingId 是否已赋值
                      * @return LoadBalancingId 是否已赋值
+                     * 
                      */
                     bool LoadBalancingIdHasBeenSet() const;
 

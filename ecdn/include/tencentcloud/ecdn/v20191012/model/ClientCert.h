@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Certificate Client certificate in PEM format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCertificate() const;
 
                     /**
                      * 设置Client certificate in PEM format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Certificate Client certificate in PEM format.
+                     * @param _certificate Client certificate in PEM format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertificate(const std::string& _certificate);
 
                     /**
                      * 判断参数 Certificate 是否已赋值
                      * @return Certificate 是否已赋值
+                     * 
                      */
                     bool CertificateHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CertName Client certificate name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCertName() const;
 
                     /**
                      * 设置Client certificate name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CertName Client certificate name.
+                     * @param _certName Client certificate name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Certificate expiration time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Certificate expiration time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Certificate expiration time.
+                     * @param _expireTime Certificate expiration time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeployTime Certificate issuance time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeployTime() const;
 
                     /**
                      * 设置Certificate issuance time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeployTime Certificate issuance time.
+                     * @param _deployTime Certificate issuance time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeployTime(const std::string& _deployTime);
 
                     /**
                      * 判断参数 DeployTime 是否已赋值
                      * @return DeployTime 是否已赋值
+                     * 
                      */
                     bool DeployTimeHasBeenSet() const;
 

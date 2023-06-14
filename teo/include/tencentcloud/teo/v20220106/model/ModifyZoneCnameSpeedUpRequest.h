@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return Id Site ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Site ID
-                     * @param Id Site ID
+                     * @param _id Site ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return Status CNAME acceleration status.
 - `enabled`: Enabled
 - `disabled`: Disabled
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置CNAME acceleration status.
 - `enabled`: Enabled
 - `disabled`: Disabled
-                     * @param Status CNAME acceleration status.
+                     * @param _status CNAME acceleration status.
 - `enabled`: Enabled
 - `disabled`: Disabled
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

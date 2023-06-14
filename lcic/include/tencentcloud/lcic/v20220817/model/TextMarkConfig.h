@@ -50,36 +50,42 @@ Used by actions: GetWatermark.
                     /**
                      * 获取The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
                     /**
                      * 获取The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetColor() const;
 
                     /**
                      * 设置The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetColor(const std::string& _color);
 
                     /**
                      * 判断参数 Color 是否已赋值
                      * @return Color 是否已赋值
+                     * 
                      */
                     bool ColorHasBeenSet() const;
 

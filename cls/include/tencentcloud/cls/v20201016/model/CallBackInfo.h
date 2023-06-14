@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取`Body` during callback
                      * @return Body `Body` during callback
+                     * 
                      */
                     std::string GetBody() const;
 
                     /**
                      * 设置`Body` during callback
-                     * @param Body `Body` during callback
+                     * @param _body `Body` during callback
+                     * 
                      */
                     void SetBody(const std::string& _body);
 
                     /**
                      * 判断参数 Body 是否已赋值
                      * @return Body 是否已赋值
+                     * 
                      */
                     bool BodyHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Headers `Headers` during callback
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetHeaders() const;
 
                     /**
                      * 设置`Headers` during callback
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Headers `Headers` during callback
+                     * @param _headers `Headers` during callback
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaders(const std::vector<std::string>& _headers);
 
                     /**
                      * 判断参数 Headers 是否已赋值
                      * @return Headers 是否已赋值
+                     * 
                      */
                     bool HeadersHasBeenSet() const;
 

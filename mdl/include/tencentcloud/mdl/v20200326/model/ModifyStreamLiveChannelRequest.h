@@ -52,162 +52,189 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return Id Channel ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param Id Channel ID
+                     * @param _id Channel ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
                      * @return Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-                     * @param Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * @param _name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Inputs to attach. You can attach 1 to 5 inputs.
                      * @return AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
+                     * 
                      */
                     std::vector<AttachedInput> GetAttachedInputs() const;
 
                     /**
                      * 设置Inputs to attach. You can attach 1 to 5 inputs.
-                     * @param AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
+                     * @param _attachedInputs Inputs to attach. You can attach 1 to 5 inputs.
+                     * 
                      */
                     void SetAttachedInputs(const std::vector<AttachedInput>& _attachedInputs);
 
                     /**
                      * 判断参数 AttachedInputs 是否已赋值
                      * @return AttachedInputs 是否已赋值
+                     * 
                      */
                     bool AttachedInputsHasBeenSet() const;
 
                     /**
                      * 获取Configuration information of the channel’s output groups. Quantity: [1, 10]
                      * @return OutputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
+                     * 
                      */
                     std::vector<StreamLiveOutputGroupsInfo> GetOutputGroups() const;
 
                     /**
                      * 设置Configuration information of the channel’s output groups. Quantity: [1, 10]
-                     * @param OutputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
+                     * @param _outputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
+                     * 
                      */
                     void SetOutputGroups(const std::vector<StreamLiveOutputGroupsInfo>& _outputGroups);
 
                     /**
                      * 判断参数 OutputGroups 是否已赋值
                      * @return OutputGroups 是否已赋值
+                     * 
                      */
                     bool OutputGroupsHasBeenSet() const;
 
                     /**
                      * 获取Audio transcoding templates. Quantity: [1, 20]
                      * @return AudioTemplates Audio transcoding templates. Quantity: [1, 20]
+                     * 
                      */
                     std::vector<AudioTemplateInfo> GetAudioTemplates() const;
 
                     /**
                      * 设置Audio transcoding templates. Quantity: [1, 20]
-                     * @param AudioTemplates Audio transcoding templates. Quantity: [1, 20]
+                     * @param _audioTemplates Audio transcoding templates. Quantity: [1, 20]
+                     * 
                      */
                     void SetAudioTemplates(const std::vector<AudioTemplateInfo>& _audioTemplates);
 
                     /**
                      * 判断参数 AudioTemplates 是否已赋值
                      * @return AudioTemplates 是否已赋值
+                     * 
                      */
                     bool AudioTemplatesHasBeenSet() const;
 
                     /**
                      * 获取Video transcoding templates. Quantity: [1, 10]
                      * @return VideoTemplates Video transcoding templates. Quantity: [1, 10]
+                     * 
                      */
                     std::vector<VideoTemplateInfo> GetVideoTemplates() const;
 
                     /**
                      * 设置Video transcoding templates. Quantity: [1, 10]
-                     * @param VideoTemplates Video transcoding templates. Quantity: [1, 10]
+                     * @param _videoTemplates Video transcoding templates. Quantity: [1, 10]
+                     * 
                      */
                     void SetVideoTemplates(const std::vector<VideoTemplateInfo>& _videoTemplates);
 
                     /**
                      * 判断参数 VideoTemplates 是否已赋值
                      * @return VideoTemplates 是否已赋值
+                     * 
                      */
                     bool VideoTemplatesHasBeenSet() const;
 
                     /**
                      * 获取Audio/Video transcoding templates. Quantity: [1, 10]
                      * @return AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+                     * 
                      */
                     std::vector<AVTemplate> GetAVTemplates() const;
 
                     /**
                      * 设置Audio/Video transcoding templates. Quantity: [1, 10]
-                     * @param AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+                     * @param _aVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+                     * 
                      */
                     void SetAVTemplates(const std::vector<AVTemplate>& _aVTemplates);
 
                     /**
                      * 判断参数 AVTemplates 是否已赋值
                      * @return AVTemplates 是否已赋值
+                     * 
                      */
                     bool AVTemplatesHasBeenSet() const;
 
                     /**
                      * 获取Event settings
                      * @return PlanSettings Event settings
+                     * 
                      */
                     PlanSettings GetPlanSettings() const;
 
                     /**
                      * 设置Event settings
-                     * @param PlanSettings Event settings
+                     * @param _planSettings Event settings
+                     * 
                      */
                     void SetPlanSettings(const PlanSettings& _planSettings);
 
                     /**
                      * 判断参数 PlanSettings 是否已赋值
                      * @return PlanSettings 是否已赋值
+                     * 
                      */
                     bool PlanSettingsHasBeenSet() const;
 
                     /**
                      * 获取The callback settings.
                      * @return EventNotifySettings The callback settings.
+                     * 
                      */
                     EventNotifySetting GetEventNotifySettings() const;
 
                     /**
                      * 设置The callback settings.
-                     * @param EventNotifySettings The callback settings.
+                     * @param _eventNotifySettings The callback settings.
+                     * 
                      */
                     void SetEventNotifySettings(const EventNotifySetting& _eventNotifySettings);
 
                     /**
                      * 判断参数 EventNotifySettings 是否已赋值
                      * @return EventNotifySettings 是否已赋值
+                     * 
                      */
                     bool EventNotifySettingsHasBeenSet() const;
 

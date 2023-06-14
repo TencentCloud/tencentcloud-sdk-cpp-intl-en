@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyId Key ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DisplayName Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifiedDate Last modification time of the application in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastModifiedDate() const;
 
                     /**
                      * 判断参数 LastModifiedDate 是否已赋值
                      * @return LastModifiedDate 是否已赋值
+                     * 
                      */
                     bool LastModifiedDateHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClientId Client ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientId() const;
 
                     /**
                      * 判断参数 ClientId 是否已赋值
                      * @return ClientId 是否已赋值
+                     * 
                      */
                     bool ClientIdHasBeenSet() const;
 
@@ -104,12 +112,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationType Application type, i.e., the application template type selected during application creation.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationType() const;
 
                     /**
                      * 判断参数 ApplicationType 是否已赋值
                      * @return ApplicationType 是否已赋值
+                     * 
                      */
                     bool ApplicationTypeHasBeenSet() const;
 
@@ -118,12 +128,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedDate Application creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedDate() const;
 
                     /**
                      * 判断参数 CreatedDate 是否已赋值
                      * @return CreatedDate 是否已赋值
+                     * 
                      */
                     bool CreatedDateHasBeenSet() const;
 
@@ -132,12 +144,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationId Application ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
@@ -146,12 +160,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TokenExpired Token validity period in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTokenExpired() const;
 
                     /**
                      * 判断参数 TokenExpired 是否已赋值
                      * @return TokenExpired 是否已赋值
+                     * 
                      */
                     bool TokenExpiredHasBeenSet() const;
 
@@ -160,12 +176,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClientSecret Client secret.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientSecret() const;
 
                     /**
                      * 判断参数 ClientSecret 是否已赋值
                      * @return ClientSecret 是否已赋值
+                     * 
                      */
                     bool ClientSecretHasBeenSet() const;
 
@@ -174,12 +192,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PublicKey Public key information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
@@ -188,12 +208,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthorizeUrl Authorization address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthorizeUrl() const;
 
                     /**
                      * 判断参数 AuthorizeUrl 是否已赋值
                      * @return AuthorizeUrl 是否已赋值
+                     * 
                      */
                     bool AuthorizeUrlHasBeenSet() const;
 
@@ -202,12 +224,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IconUrl Access address of the application icon image.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIconUrl() const;
 
                     /**
                      * 判断参数 IconUrl 是否已赋值
                      * @return IconUrl 是否已赋值
+                     * 
                      */
                     bool IconUrlHasBeenSet() const;
 
@@ -216,12 +240,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SecureLevel Security level.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecureLevel() const;
 
                     /**
                      * 判断参数 SecureLevel 是否已赋值
                      * @return SecureLevel 是否已赋值
+                     * 
                      */
                     bool SecureLevelHasBeenSet() const;
 
@@ -230,12 +256,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AppStatus Application status.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAppStatus() const;
 
                     /**
                      * 判断参数 AppStatus 是否已赋值
                      * @return AppStatus 是否已赋值
+                     * 
                      */
                     bool AppStatusHasBeenSet() const;
 
@@ -244,12 +272,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

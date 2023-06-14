@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Group name
                      * @return GroupName Group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Group name
-                     * @param GroupName Group name
+                     * @param _groupName Group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 

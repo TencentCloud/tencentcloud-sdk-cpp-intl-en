@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Specific error log, including error code and error message
                      * @return ErrorLog Specific error log, including error code and error message
+                     * 
                      */
                     std::string GetErrorLog() const;
 
                     /**
                      * 设置Specific error log, including error code and error message
-                     * @param ErrorLog Specific error log, including error code and error message
+                     * @param _errorLog Specific error log, including error code and error message
+                     * 
                      */
                     void SetErrorLog(const std::string& _errorLog);
 
                     /**
                      * 判断参数 ErrorLog 是否已赋值
                      * @return ErrorLog 是否已赋值
+                     * 
                      */
                     bool ErrorLogHasBeenSet() const;
 
                     /**
                      * 获取Help document URL corresponding to error
                      * @return HelpDoc Help document URL corresponding to error
+                     * 
                      */
                     std::string GetHelpDoc() const;
 
                     /**
                      * 设置Help document URL corresponding to error
-                     * @param HelpDoc Help document URL corresponding to error
+                     * @param _helpDoc Help document URL corresponding to error
+                     * 
                      */
                     void SetHelpDoc(const std::string& _helpDoc);
 
                     /**
                      * 判断参数 HelpDoc 是否已赋值
                      * @return HelpDoc 是否已赋值
+                     * 
                      */
                     bool HelpDocHasBeenSet() const;
 

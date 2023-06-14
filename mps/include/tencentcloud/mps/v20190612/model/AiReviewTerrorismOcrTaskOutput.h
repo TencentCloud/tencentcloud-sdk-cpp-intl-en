@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
                      * @return Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
-                     * @param Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+                     * @param _confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -82,34 +86,39 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
+                     * @param _suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取The video segments that contain sensitive information detected based on OCR.
                      * @return SegmentSet The video segments that contain sensitive information detected based on OCR.
+                     * 
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置The video segments that contain sensitive information detected based on OCR.
-                     * @param SegmentSet The video segments that contain sensitive information detected based on OCR.
+                     * @param _segmentSet The video segments that contain sensitive information detected based on OCR.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewOcrTextSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

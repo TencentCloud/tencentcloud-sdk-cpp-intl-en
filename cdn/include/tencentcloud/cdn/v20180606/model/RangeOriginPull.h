@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Range GETs configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Range GETs configuration switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Range GETs configuration switch
+                     * @param _switch Range GETs configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RangeRules Range GETs configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<RangeOriginPullRule> GetRangeRules() const;
 
                     /**
                      * 设置Range GETs configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RangeRules Range GETs configuration
+                     * @param _rangeRules Range GETs configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRangeRules(const std::vector<RangeOriginPullRule>& _rangeRules);
 
                     /**
                      * 判断参数 RangeRules 是否已赋值
                      * @return RangeRules 是否已赋值
+                     * 
                      */
                     bool RangeRulesHasBeenSet() const;
 

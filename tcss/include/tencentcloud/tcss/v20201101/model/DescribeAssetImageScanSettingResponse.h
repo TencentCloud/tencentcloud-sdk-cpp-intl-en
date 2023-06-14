@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取Switch
                      * @return Enable Switch
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Scan time, which is a complete time and parsed as hour/minute/second in time zone 0 on the backend.
                      * @return ScanTime Scan time, which is a complete time and parsed as hour/minute/second in time zone 0 on the backend.
+                     * 
                      */
                     std::string GetScanTime() const;
 
                     /**
                      * 判断参数 ScanTime 是否已赋值
                      * @return ScanTime 是否已赋值
+                     * 
                      */
                     bool ScanTimeHasBeenSet() const;
 
                     /**
                      * 获取Scan interval
                      * @return ScanPeriod Scan interval
+                     * 
                      */
                     uint64_t GetScanPeriod() const;
 
                     /**
                      * 判断参数 ScanPeriod 是否已赋值
                      * @return ScanPeriod 是否已赋值
+                     * 
                      */
                     bool ScanPeriodHasBeenSet() const;
 
                     /**
                      * 获取Trojan scan
                      * @return ScanVirus Trojan scan
+                     * 
                      */
                     bool GetScanVirus() const;
 
                     /**
                      * 判断参数 ScanVirus 是否已赋值
                      * @return ScanVirus 是否已赋值
+                     * 
                      */
                     bool ScanVirusHasBeenSet() const;
 
                     /**
                      * 获取Sensitive data scan
                      * @return ScanRisk Sensitive data scan
+                     * 
                      */
                     bool GetScanRisk() const;
 
                     /**
                      * 判断参数 ScanRisk 是否已赋值
                      * @return ScanRisk 是否已赋值
+                     * 
                      */
                     bool ScanRiskHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability scan
                      * @return ScanVul Vulnerability scan
+                     * 
                      */
                     bool GetScanVul() const;
 
                     /**
                      * 判断参数 ScanVul 是否已赋值
                      * @return ScanVul 是否已赋值
+                     * 
                      */
                     bool ScanVulHasBeenSet() const;
 
                     /**
                      * 获取Scan of all images
                      * @return All Scan of all images
+                     * 
                      */
                     bool GetAll() const;
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
+                     * 
                      */
                     bool AllHasBeenSet() const;
 
                     /**
                      * 获取Scan of specified images
                      * @return Images Scan of specified images
+                     * 
                      */
                     std::vector<std::string> GetImages() const;
 
                     /**
                      * 判断参数 Images 是否已赋值
                      * @return Images 是否已赋值
+                     * 
                      */
                     bool ImagesHasBeenSet() const;
 

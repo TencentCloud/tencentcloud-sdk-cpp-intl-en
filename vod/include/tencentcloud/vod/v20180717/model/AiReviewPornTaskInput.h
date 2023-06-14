@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the template for recognition of pornographic content
                      * @return Definition ID of the template for recognition of pornographic content
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置ID of the template for recognition of pornographic content
-                     * @param Definition ID of the template for recognition of pornographic content
+                     * @param _definition ID of the template for recognition of pornographic content
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

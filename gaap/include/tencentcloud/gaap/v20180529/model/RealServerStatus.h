@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Origin server ID.
                      * @return RealServerId Origin server ID.
+                     * 
                      */
                     std::string GetRealServerId() const;
 
                     /**
                      * 设置Origin server ID.
-                     * @param RealServerId Origin server ID.
+                     * @param _realServerId Origin server ID.
+                     * 
                      */
                     void SetRealServerId(const std::string& _realServerId);
 
                     /**
                      * 判断参数 RealServerId 是否已赋值
                      * @return RealServerId 是否已赋值
+                     * 
                      */
                     bool RealServerIdHasBeenSet() const;
 
                     /**
                      * 获取`0`: Not bound; `1`: Bound to rule or listener.
                      * @return BindStatus `0`: Not bound; `1`: Bound to rule or listener.
+                     * 
                      */
                     int64_t GetBindStatus() const;
 
                     /**
                      * 设置`0`: Not bound; `1`: Bound to rule or listener.
-                     * @param BindStatus `0`: Not bound; `1`: Bound to rule or listener.
+                     * @param _bindStatus `0`: Not bound; `1`: Bound to rule or listener.
+                     * 
                      */
                     void SetBindStatus(const int64_t& _bindStatus);
 
                     /**
                      * 判断参数 BindStatus 是否已赋值
                      * @return BindStatus 是否已赋值
+                     * 
                      */
                     bool BindStatusHasBeenSet() const;
 
                     /**
                      * 获取ID of the connection bound to this origin server. This string is empty if they are not bound.
                      * @return ProxyId ID of the connection bound to this origin server. This string is empty if they are not bound.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置ID of the connection bound to this origin server. This string is empty if they are not bound.
-                     * @param ProxyId ID of the connection bound to this origin server. This string is empty if they are not bound.
+                     * @param _proxyId ID of the connection bound to this origin server. This string is empty if they are not bound.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+                     * @param _groupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 

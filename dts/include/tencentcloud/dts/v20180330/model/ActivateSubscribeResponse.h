@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Data subscription configuration task ID.
                      * @return AsyncRequestId Data subscription configuration task ID.
+                     * 
                      */
                     std::string GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

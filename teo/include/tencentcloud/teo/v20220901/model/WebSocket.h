@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable WebSocket connection timeout. Values:
 <li>`on`: The field "Timeout" can be configured.</li>
 <li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Whether to enable WebSocket connection timeout. Values:
 <li>`on`: The field "Timeout" can be configured.</li>
 <li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
-                     * @param Switch Whether to enable WebSocket connection timeout. Values:
+                     * @param _switch Whether to enable WebSocket connection timeout. Values:
 <li>`on`: The field "Timeout" can be configured.</li>
 <li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取The timeout period in seconds. Maximum value: 120.
                      * @return Timeout The timeout period in seconds. Maximum value: 120.
+                     * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
                      * 设置The timeout period in seconds. Maximum value: 120.
-                     * @param Timeout The timeout period in seconds. Maximum value: 120.
+                     * @param _timeout The timeout period in seconds. Maximum value: 120.
+                     * 
                      */
                     void SetTimeout(const int64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 

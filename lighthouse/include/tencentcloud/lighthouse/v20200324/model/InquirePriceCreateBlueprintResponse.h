@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Custom image price.
                      * @return BlueprintPrice Custom image price.
+                     * 
                      */
                     BlueprintPrice GetBlueprintPrice() const;
 
                     /**
                      * 判断参数 BlueprintPrice 是否已赋值
                      * @return BlueprintPrice 是否已赋值
+                     * 
                      */
                     bool BlueprintPriceHasBeenSet() const;
 

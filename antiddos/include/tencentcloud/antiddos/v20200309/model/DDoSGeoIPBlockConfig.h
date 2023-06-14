@@ -57,6 +57,7 @@ namespace TencentCloud
 `china`: The Chinese mainland
 `customized`: User-specified region
 ]
+                     * 
                      */
                     std::string GetRegionType() const;
 
@@ -66,17 +67,19 @@ namespace TencentCloud
 `china`: The Chinese mainland
 `customized`: User-specified region
 ]
-                     * @param RegionType Region type. Valid values:
+                     * @param _regionType Region type. Valid values:
 `oversea`: Outside the Chinese mainland
 `china`: The Chinese mainland
 `customized`: User-specified region
 ]
+                     * 
                      */
                     void SetRegionType(const std::string& _regionType);
 
                     /**
                      * 判断参数 RegionType 是否已赋值
                      * @return RegionType 是否已赋值
+                     * 
                      */
                     bool RegionTypeHasBeenSet() const;
 
@@ -89,6 +92,7 @@ namespace TencentCloud
 `drop`: the request is blocked.
 `trans`: the request is allowed.
 ]
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -97,52 +101,60 @@ namespace TencentCloud
 `drop`: the request is blocked.
 `trans`: the request is allowed.
 ]
-                     * @param Action Blocking action. Valid values:
+                     * @param _action Blocking action. Valid values:
 `drop`: the request is blocked.
 `trans`: the request is allowed.
 ]
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Configuration ID, which is generated after a configuration is added. This field is only required to modify or delete a configuration.
                      * @return Id Configuration ID, which is generated after a configuration is added. This field is only required to modify or delete a configuration.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Configuration ID, which is generated after a configuration is added. This field is only required to modify or delete a configuration.
-                     * @param Id Configuration ID, which is generated after a configuration is added. This field is only required to modify or delete a configuration.
+                     * @param _id Configuration ID, which is generated after a configuration is added. This field is only required to modify or delete a configuration.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取When `RegionType = customized`, AreaList is required and contains up to 128 areas.
                      * @return AreaList When `RegionType = customized`, AreaList is required and contains up to 128 areas.
+                     * 
                      */
                     std::vector<int64_t> GetAreaList() const;
 
                     /**
                      * 设置When `RegionType = customized`, AreaList is required and contains up to 128 areas.
-                     * @param AreaList When `RegionType = customized`, AreaList is required and contains up to 128 areas.
+                     * @param _areaList When `RegionType = customized`, AreaList is required and contains up to 128 areas.
+                     * 
                      */
                     void SetAreaList(const std::vector<int64_t>& _areaList);
 
                     /**
                      * 判断参数 AreaList 是否已赋值
                      * @return AreaList 是否已赋值
+                     * 
                      */
                     bool AreaListHasBeenSet() const;
 

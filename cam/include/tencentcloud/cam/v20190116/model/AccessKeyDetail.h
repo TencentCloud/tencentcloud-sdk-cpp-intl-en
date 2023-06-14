@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Access key ID
                      * @return AccessKeyId Access key ID
+                     * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
                      * 设置Access key ID
-                     * @param AccessKeyId Access key ID
+                     * @param _accessKeyId Access key ID
+                     * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
 
                     /**
                      * 判断参数 AccessKeyId 是否已赋值
                      * @return AccessKeyId 是否已赋值
+                     * 
                      */
                     bool AccessKeyIdHasBeenSet() const;
 
                     /**
                      * 获取Access key, which is visible only when it is created. Keep it properly.
                      * @return SecretAccessKey Access key, which is visible only when it is created. Keep it properly.
+                     * 
                      */
                     std::string GetSecretAccessKey() const;
 
                     /**
                      * 设置Access key, which is visible only when it is created. Keep it properly.
-                     * @param SecretAccessKey Access key, which is visible only when it is created. Keep it properly.
+                     * @param _secretAccessKey Access key, which is visible only when it is created. Keep it properly.
+                     * 
                      */
                     void SetSecretAccessKey(const std::string& _secretAccessKey);
 
                     /**
                      * 判断参数 SecretAccessKey 是否已赋值
                      * @return SecretAccessKey 是否已赋值
+                     * 
                      */
                     bool SecretAccessKeyHasBeenSet() const;
 
                     /**
                      * 获取Key status. Valid values: `Active` (activated), `Inactive` (not activated).
                      * @return Status Key status. Valid values: `Active` (activated), `Inactive` (not activated).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Key status. Valid values: `Active` (activated), `Inactive` (not activated).
-                     * @param Status Key status. Valid values: `Active` (activated), `Inactive` (not activated).
+                     * @param _status Key status. Valid values: `Active` (activated), `Inactive` (not activated).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

@@ -50,270 +50,315 @@ namespace TencentCloud
                     /**
                      * 获取Event ID
                      * @return ID Event ID
+                     * 
                      */
                     uint64_t GetID() const;
 
                     /**
                      * 设置Event ID
-                     * @param ID Event ID
+                     * @param _iD Event ID
+                     * 
                      */
                     void SetID(const uint64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Hit rule type
                      * @return MatchRuleType Hit rule type
+                     * 
                      */
                     std::string GetMatchRuleType() const;
 
                     /**
                      * 设置Hit rule type
-                     * @param MatchRuleType Hit rule type
+                     * @param _matchRuleType Hit rule type
+                     * 
                      */
                     void SetMatchRuleType(const std::string& _matchRuleType);
 
                     /**
                      * 判断参数 MatchRuleType 是否已赋值
                      * @return MatchRuleType 是否已赋值
+                     * 
                      */
                     bool MatchRuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Threat level
                      * @return RiskLevel Threat level
+                     * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
                      * 设置Threat level
-                     * @param RiskLevel Threat level
+                     * @param _riskLevel Threat level
+                     * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
 
                     /**
                      * 判断参数 RiskLevel 是否已赋值
                      * @return RiskLevel 是否已赋值
+                     * 
                      */
                     bool RiskLevelHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterID Cluster ID
+                     * 
                      */
                     std::string GetClusterID() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterID Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
                      */
                     void SetClusterID(const std::string& _clusterID);
 
                     /**
                      * 判断参数 ClusterID 是否已赋值
                      * @return ClusterID 是否已赋值
+                     * 
                      */
                     bool ClusterIDHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Cluster running status
                      * @return ClusterRunningStatus Cluster running status
+                     * 
                      */
                     std::string GetClusterRunningStatus() const;
 
                     /**
                      * 设置Cluster running status
-                     * @param ClusterRunningStatus Cluster running status
+                     * @param _clusterRunningStatus Cluster running status
+                     * 
                      */
                     void SetClusterRunningStatus(const std::string& _clusterRunningStatus);
 
                     /**
                      * 判断参数 ClusterRunningStatus 是否已赋值
                      * @return ClusterRunningStatus 是否已赋值
+                     * 
                      */
                     bool ClusterRunningStatusHasBeenSet() const;
 
                     /**
                      * 获取First creation time
                      * @return FirstCreateTime First creation time
+                     * 
                      */
                     std::string GetFirstCreateTime() const;
 
                     /**
                      * 设置First creation time
-                     * @param FirstCreateTime First creation time
+                     * @param _firstCreateTime First creation time
+                     * 
                      */
                     void SetFirstCreateTime(const std::string& _firstCreateTime);
 
                     /**
                      * 判断参数 FirstCreateTime 是否已赋值
                      * @return FirstCreateTime 是否已赋值
+                     * 
                      */
                     bool FirstCreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last creation time
                      * @return LastCreateTime Last creation time
+                     * 
                      */
                     std::string GetLastCreateTime() const;
 
                     /**
                      * 设置Last creation time
-                     * @param LastCreateTime Last creation time
+                     * @param _lastCreateTime Last creation time
+                     * 
                      */
                     void SetLastCreateTime(const std::string& _lastCreateTime);
 
                     /**
                      * 判断参数 LastCreateTime 是否已赋值
                      * @return LastCreateTime 是否已赋值
+                     * 
                      */
                     bool LastCreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of alarms
                      * @return AlarmCount Number of alarms
+                     * 
                      */
                     uint64_t GetAlarmCount() const;
 
                     /**
                      * 设置Number of alarms
-                     * @param AlarmCount Number of alarms
+                     * @param _alarmCount Number of alarms
+                     * 
                      */
                     void SetAlarmCount(const uint64_t& _alarmCount);
 
                     /**
                      * 判断参数 AlarmCount 是否已赋值
                      * @return AlarmCount 是否已赋值
+                     * 
                      */
                     bool AlarmCountHasBeenSet() const;
 
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Rule type
                      * @return RuleType Rule type
+                     * 
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Rule type
-                     * @param RuleType Rule type
+                     * @param _ruleType Rule type
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Desc Description
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description
-                     * @param Desc Description
+                     * @param _desc Description
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
                     /**
                      * 获取Solution
                      * @return Suggestion Solution
+                     * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
                      * 设置Solution
-                     * @param Suggestion Solution
+                     * @param _suggestion Solution
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取Rule name
                      * @return RuleName Rule name
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
-                     * @param RuleName Rule name
+                     * @param _ruleName Rule name
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Hit rule
                      * @return MatchRule Hit rule
+                     * 
                      */
                     K8sApiAbnormalRuleScopeInfo GetMatchRule() const;
 
                     /**
                      * 设置Hit rule
-                     * @param MatchRule Hit rule
+                     * @param _matchRule Hit rule
+                     * 
                      */
                     void SetMatchRule(const K8sApiAbnormalRuleScopeInfo& _matchRule);
 
                     /**
                      * 判断参数 MatchRule 是否已赋值
                      * @return MatchRule 是否已赋值
+                     * 
                      */
                     bool MatchRuleHasBeenSet() const;
 

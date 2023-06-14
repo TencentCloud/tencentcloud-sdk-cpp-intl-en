@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取IP address
                      * @return Ip IP address
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address
-                     * @param Ip IP address
+                     * @param _ip IP address
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
                      * @return Type IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
-                     * @param Type IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
+                     * @param _type IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance configured
                      * @return InstanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     std::vector<InstanceRelation> GetInstanceDetailList() const;
 
                     /**
                      * 设置Anti-DDoS instance configured
-                     * @param InstanceDetailList Anti-DDoS instance configured
+                     * @param _instanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     void SetInstanceDetailList(const std::vector<InstanceRelation>& _instanceDetailList);
 
                     /**
                      * 判断参数 InstanceDetailList 是否已赋值
                      * @return InstanceDetailList 是否已赋值
+                     * 
                      */
                     bool InstanceDetailListHasBeenSet() const;
 
                     /**
                      * 获取IP mask. `0` indicates a 32-bit IP.
                      * @return Mask IP mask. `0` indicates a 32-bit IP.
+                     * 
                      */
                     uint64_t GetMask() const;
 
                     /**
                      * 设置IP mask. `0` indicates a 32-bit IP.
-                     * @param Mask IP mask. `0` indicates a 32-bit IP.
+                     * @param _mask IP mask. `0` indicates a 32-bit IP.
+                     * 
                      */
                     void SetMask(const uint64_t& _mask);
 
                     /**
                      * 判断参数 Mask 是否已赋值
                      * @return Mask 是否已赋值
+                     * 
                      */
                     bool MaskHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModifyTime Modification time
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Modification time
-                     * @param ModifyTime Modification time
+                     * @param _modifyTime Modification time
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 

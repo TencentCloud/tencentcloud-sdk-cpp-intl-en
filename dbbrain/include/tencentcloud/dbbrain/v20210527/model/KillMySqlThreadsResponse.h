@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the MySQL sessions that have been killed.
                      * @return Threads List of IDs of the MySQL sessions that have been killed.
+                     * 
                      */
                     std::vector<int64_t> GetThreads() const;
 
                     /**
                      * 判断参数 Threads 是否已赋值
                      * @return Threads 是否已赋值
+                     * 
                      */
                     bool ThreadsHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SqlExecId Execution ID, which is output in the `Prepare` stage and used to specify the ID of the session to be killed in the `Commit` stage.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSqlExecId() const;
 
                     /**
                      * 判断参数 SqlExecId 是否已赋值
                      * @return SqlExecId 是否已赋值
+                     * 
                      */
                     bool SqlExecIdHasBeenSet() const;
 

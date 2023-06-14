@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the application to be bound.
                      * @return ApiAppId Unique ID of the application to be bound.
+                     * 
                      */
                     std::string GetApiAppId() const;
 
                     /**
                      * 设置Unique ID of the application to be bound.
-                     * @param ApiAppId Unique ID of the application to be bound.
+                     * @param _apiAppId Unique ID of the application to be bound.
+                     * 
                      */
                     void SetApiAppId(const std::string& _apiAppId);
 
                     /**
                      * 判断参数 ApiAppId 是否已赋值
                      * @return ApiAppId 是否已赋值
+                     * 
                      */
                     bool ApiAppIdHasBeenSet() const;
 
                     /**
                      * 获取Environment to be bound.
                      * @return Environment Environment to be bound.
+                     * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
                      * 设置Environment to be bound.
-                     * @param Environment Environment to be bound.
+                     * @param _environment Environment to be bound.
+                     * 
                      */
                     void SetEnvironment(const std::string& _environment);
 
                     /**
                      * 判断参数 Environment 是否已赋值
                      * @return Environment 是否已赋值
+                     * 
                      */
                     bool EnvironmentHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the service to be bound.
                      * @return ServiceId Unique ID of the service to be bound.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be bound.
-                     * @param ServiceId Unique ID of the service to be bound.
+                     * @param _serviceId Unique ID of the service to be bound.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the API to be bound.
                      * @return ApiId Unique ID of the API to be bound.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique ID of the API to be bound.
-                     * @param ApiId Unique ID of the API to be bound.
+                     * @param _apiId Unique ID of the API to be bound.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 

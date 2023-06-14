@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Username
                      * @return UserName Username
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username
-                     * @param UserName Username
+                     * @param _userName Username
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取The group to which the user belongs
                      * @return UserGroup The group to which the user belongs
+                     * 
                      */
                     std::string GetUserGroup() const;
 
                     /**
                      * 设置The group to which the user belongs
-                     * @param UserGroup The group to which the user belongs
+                     * @param _userGroup The group to which the user belongs
+                     * 
                      */
                     void SetUserGroup(const std::string& _userGroup);
 
                     /**
                      * 判断参数 UserGroup 是否已赋值
                      * @return UserGroup 是否已赋值
+                     * 
                      */
                     bool UserGroupHasBeenSet() const;
 
                     /**
                      * 获取`Manager` represents an admin, and `NormalUser` represents a general user.
                      * @return UserType `Manager` represents an admin, and `NormalUser` represents a general user.
+                     * 
                      */
                     std::string GetUserType() const;
 
                     /**
                      * 设置`Manager` represents an admin, and `NormalUser` represents a general user.
-                     * @param UserType `Manager` represents an admin, and `NormalUser` represents a general user.
+                     * @param _userType `Manager` represents an admin, and `NormalUser` represents a general user.
+                     * 
                      */
                     void SetUserType(const std::string& _userType);
 
                     /**
                      * 判断参数 UserType 是否已赋值
                      * @return UserType 是否已赋值
+                     * 
                      */
                     bool UserTypeHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CreateTime Account creation time
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Account creation time
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param CreateTime Account creation time
+                     * @param _createTime Account creation time
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
                      * @return SupportDownLoadKeyTab Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
+                     * 
                      */
                     bool GetSupportDownLoadKeyTab() const;
 
                     /**
                      * 设置Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
-                     * @param SupportDownLoadKeyTab Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
+                     * @param _supportDownLoadKeyTab Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
+                     * 
                      */
                     void SetSupportDownLoadKeyTab(const bool& _supportDownLoadKeyTab);
 
                     /**
                      * 判断参数 SupportDownLoadKeyTab 是否已赋值
                      * @return SupportDownLoadKeyTab 是否已赋值
+                     * 
                      */
                     bool SupportDownLoadKeyTabHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return DownLoadKeyTabUrl Download link of the Keytab file
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDownLoadKeyTabUrl() const;
 
                     /**
                      * 设置Download link of the Keytab file
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param DownLoadKeyTabUrl Download link of the Keytab file
+                     * @param _downLoadKeyTabUrl Download link of the Keytab file
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDownLoadKeyTabUrl(const std::string& _downLoadKeyTabUrl);
 
                     /**
                      * 判断参数 DownLoadKeyTabUrl 是否已赋值
                      * @return DownLoadKeyTabUrl 是否已赋值
+                     * 
                      */
                     bool DownLoadKeyTabUrlHasBeenSet() const;
 

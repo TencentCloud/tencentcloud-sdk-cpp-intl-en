@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Event name
                      * @return EventName Event name
+                     * 
                      */
                     std::string GetEventName() const;
 
                     /**
                      * 设置Event name
-                     * @param EventName Event name
+                     * @param _eventName Event name
+                     * 
                      */
                     void SetEventName(const std::string& _eventName);
 
                     /**
                      * 判断参数 EventName 是否已赋值
                      * @return EventName 是否已赋值
+                     * 
                      */
                     bool EventNameHasBeenSet() const;
 
                     /**
                      * 获取Event trigger time settings
                      * @return TimingSettings Event trigger time settings
+                     * 
                      */
                     TimingSettingsReq GetTimingSettings() const;
 
                     /**
                      * 设置Event trigger time settings
-                     * @param TimingSettings Event trigger time settings
+                     * @param _timingSettings Event trigger time settings
+                     * 
                      */
                     void SetTimingSettings(const TimingSettingsReq& _timingSettings);
 
                     /**
                      * 判断参数 TimingSettings 是否已赋值
                      * @return TimingSettings 是否已赋值
+                     * 
                      */
                     bool TimingSettingsHasBeenSet() const;
 
                     /**
                      * 获取Event configuration
                      * @return EventSettings Event configuration
+                     * 
                      */
                     EventSettingsReq GetEventSettings() const;
 
                     /**
                      * 设置Event configuration
-                     * @param EventSettings Event configuration
+                     * @param _eventSettings Event configuration
+                     * 
                      */
                     void SetEventSettings(const EventSettingsReq& _eventSettings);
 
                     /**
                      * 判断参数 EventSettings 是否已赋值
                      * @return EventSettings 是否已赋值
+                     * 
                      */
                     bool EventSettingsHasBeenSet() const;
 

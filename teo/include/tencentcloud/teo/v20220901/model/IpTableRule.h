@@ -55,6 +55,7 @@ namespace TencentCloud
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
 <li>`monitor`: Observe</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -63,16 +64,18 @@ namespace TencentCloud
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
 <li>`monitor`: Observe</li>
-                     * @param Action The action. Values:
+                     * @param _action The action. Values:
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
 <li>`monitor`: Observe</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -83,6 +86,7 @@ namespace TencentCloud
                      * @return MatchFrom The matching dimension. Values:
 <li>`ip`: Match by IP.</li>
 <li>`area`: Match by IP region.</li>
+                     * 
                      */
                     std::string GetMatchFrom() const;
 
@@ -90,15 +94,17 @@ namespace TencentCloud
                      * 设置The matching dimension. Values:
 <li>`ip`: Match by IP.</li>
 <li>`area`: Match by IP region.</li>
-                     * @param MatchFrom The matching dimension. Values:
+                     * @param _matchFrom The matching dimension. Values:
 <li>`ip`: Match by IP.</li>
 <li>`area`: Match by IP region.</li>
+                     * 
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
 
                     /**
                      * 判断参数 MatchFrom 是否已赋值
                      * @return MatchFrom 是否已赋值
+                     * 
                      */
                     bool MatchFromHasBeenSet() const;
 
@@ -121,6 +127,7 @@ Values:
 <li>`equal`: Equal to</li>
 <li>`not_equal`: Not equal to</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOperator() const;
 
@@ -134,7 +141,7 @@ Values:
 <li>`equal`: Equal to</li>
 <li>`not_equal`: Not equal to</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Operator Matching method. It defaults to `equal` if it’s left empty.
+                     * @param _operator Matching method. It defaults to `equal` if it’s left empty.
 Values: 
 <li>`is_empty`: The field is empty.</li>
 <li>`not_exists`: The configuration item does not exist.</li>
@@ -143,48 +150,56 @@ Values:
 <li>`equal`: Equal to</li>
 <li>`not_equal`: Not equal to</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取The rule ID, which is only used as an output parameter.
                      * @return RuleID The rule ID, which is only used as an output parameter.
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置The rule ID, which is only used as an output parameter.
-                     * @param RuleID The rule ID, which is only used as an output parameter.
+                     * @param _ruleID The rule ID, which is only used as an output parameter.
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
                     /**
                      * 获取The update time, which is only used as an output parameter.
                      * @return UpdateTime The update time, which is only used as an output parameter.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The update time, which is only used as an output parameter.
-                     * @param UpdateTime The update time, which is only used as an output parameter.
+                     * @param _updateTime The update time, which is only used as an output parameter.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -197,6 +212,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -205,16 +221,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status The rule status. A null value indicates that the rule is enabled. Values:
+                     * @param _status The rule status. A null value indicates that the rule is enabled. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -223,38 +241,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName The rule name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置The rule name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleName The rule name.
+                     * @param _ruleName The rule name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
                      * @return MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * 
                      */
                     std::string GetMatchContent() const;
 
                     /**
                      * 设置Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
-                     * @param MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * @param _matchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * 
                      */
                     void SetMatchContent(const std::string& _matchContent);
 
                     /**
                      * 判断参数 MatchContent 是否已赋值
                      * @return MatchContent 是否已赋值
+                     * 
                      */
                     bool MatchContentHasBeenSet() const;
 

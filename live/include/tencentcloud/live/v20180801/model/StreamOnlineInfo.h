@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Push time list
                      * @return PublishTimeList Push time list
+                     * 
                      */
                     std::vector<PublishTime> GetPublishTimeList() const;
 
                     /**
                      * 设置Push time list
-                     * @param PublishTimeList Push time list
+                     * @param _publishTimeList Push time list
+                     * 
                      */
                     void SetPublishTimeList(const std::vector<PublishTime>& _publishTimeList);
 
                     /**
                      * 判断参数 PublishTimeList 是否已赋值
                      * @return PublishTimeList 是否已赋值
+                     * 
                      */
                     bool PublishTimeListHasBeenSet() const;
 
                     /**
                      * 获取Application name.
                      * @return AppName Application name.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Application name.
-                     * @param AppName Application name.
+                     * @param _appName Application name.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 

@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取IDs of instances removed from isolation
                      * @return SuccessInstanceIds IDs of instances removed from isolation
+                     * 
                      */
                     std::vector<std::string> GetSuccessInstanceIds() const;
 
                     /**
                      * 判断参数 SuccessInstanceIds 是否已赋值
                      * @return SuccessInstanceIds 是否已赋值
+                     * 
                      */
                     bool SuccessInstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取IDs of instances failed to be removed from isolation
                      * @return FailedInstanceIds IDs of instances failed to be removed from isolation
+                     * 
                      */
                     std::vector<std::string> GetFailedInstanceIds() const;
 
                     /**
                      * 判断参数 FailedInstanceIds 是否已赋值
                      * @return FailedInstanceIds 是否已赋值
+                     * 
                      */
                     bool FailedInstanceIdsHasBeenSet() const;
 

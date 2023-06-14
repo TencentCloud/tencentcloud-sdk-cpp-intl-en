@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取The number of the reserved instances you are purchasing.
                      * @return InstanceCount The number of the reserved instances you are purchasing.
+                     * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
                      * 设置The number of the reserved instances you are purchasing.
-                     * @param InstanceCount The number of the reserved instances you are purchasing.
+                     * @param _instanceCount The number of the reserved instances you are purchasing.
+                     * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
 
                     /**
                      * 判断参数 InstanceCount 是否已赋值
                      * @return InstanceCount 是否已赋值
+                     * 
                      */
                     bool InstanceCountHasBeenSet() const;
 
                     /**
                      * 获取The ID of the reserved instance offering.
                      * @return ReservedInstancesOfferingId The ID of the reserved instance offering.
+                     * 
                      */
                     std::string GetReservedInstancesOfferingId() const;
 
                     /**
                      * 设置The ID of the reserved instance offering.
-                     * @param ReservedInstancesOfferingId The ID of the reserved instance offering.
+                     * @param _reservedInstancesOfferingId The ID of the reserved instance offering.
+                     * 
                      */
                     void SetReservedInstancesOfferingId(const std::string& _reservedInstancesOfferingId);
 
                     /**
                      * 判断参数 ReservedInstancesOfferingId 是否已赋值
                      * @return ReservedInstancesOfferingId 是否已赋值
+                     * 
                      */
                     bool ReservedInstancesOfferingIdHasBeenSet() const;
 
                     /**
                      * 获取Dry run.
                      * @return DryRun Dry run.
+                     * 
                      */
                     bool GetDryRun() const;
 
                     /**
                      * 设置Dry run.
-                     * @param DryRun Dry run.
+                     * @param _dryRun Dry run.
+                     * 
                      */
                     void SetDryRun(const bool& _dryRun);
 
                     /**
                      * 判断参数 DryRun 是否已赋值
                      * @return DryRun 是否已赋值
+                     * 
                      */
                     bool DryRunHasBeenSet() const;
 
                     /**
                      * 获取A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
                      * @return ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
+                     * 
                      */
                     std::string GetClientToken() const;
 
                     /**
                      * 设置A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
-                     * @param ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
+                     * @param _clientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.<br>For more information, see Ensuring Idempotency.
+                     * 
                      */
                     void SetClientToken(const std::string& _clientToken);
 
                     /**
                      * 判断参数 ClientToken 是否已赋值
                      * @return ClientToken 是否已赋值
+                     * 
                      */
                     bool ClientTokenHasBeenSet() const;
 
                     /**
                      * 获取Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
                      * @return ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     * 
                      */
                     std::string GetReservedInstanceName() const;
 
                     /**
                      * 设置Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
-                     * @param ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     * @param _reservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+                     * 
                      */
                     void SetReservedInstanceName(const std::string& _reservedInstanceName);
 
                     /**
                      * 判断参数 ReservedInstanceName 是否已赋值
                      * @return ReservedInstanceName 是否已赋值
+                     * 
                      */
                     bool ReservedInstanceNameHasBeenSet() const;
 

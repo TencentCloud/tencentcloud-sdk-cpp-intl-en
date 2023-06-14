@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mode Template name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Template name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mode Template name
+                     * @param _mode Template name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Detail Template details
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     RateLimitTemplateDetail GetDetail() const;
 
                     /**
                      * 设置Template details
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Detail Template details
+                     * @param _detail Template details
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDetail(const RateLimitTemplateDetail& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 

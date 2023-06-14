@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取Number of queried pages
                      * @return Page Number of queried pages
+                     * 
                      */
                     int64_t GetPage() const;
 
                     /**
                      * 设置Number of queried pages
-                     * @param Page Number of queried pages
+                     * @param _page Number of queried pages
+                     * 
                      */
                     void SetPage(const int64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page
                      * @return Size Number of entries per page
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Number of entries per page
-                     * @param Size Number of entries per page
+                     * @param _size Number of entries per page
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
                     /**
                      * 获取Query conditions (user group ID or user group name)
                      * @return Condition Query conditions (user group ID or user group name)
+                     * 
                      */
                     std::string GetCondition() const;
 
                     /**
                      * 设置Query conditions (user group ID or user group name)
-                     * @param Condition Query conditions (user group ID or user group name)
+                     * @param _condition Query conditions (user group ID or user group name)
+                     * 
                      */
                     void SetCondition(const std::string& _condition);
 
                     /**
                      * 判断参数 Condition 是否已赋值
                      * @return Condition 是否已赋值
+                     * 
                      */
                     bool ConditionHasBeenSet() const;
 

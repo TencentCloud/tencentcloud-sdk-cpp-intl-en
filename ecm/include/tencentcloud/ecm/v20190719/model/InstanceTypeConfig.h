@@ -51,126 +51,147 @@ namespace TencentCloud
                     /**
                      * 获取Model family configuration information
                      * @return InstanceFamilyConfig Model family configuration information
+                     * 
                      */
                     InstanceFamilyConfig GetInstanceFamilyConfig() const;
 
                     /**
                      * 设置Model family configuration information
-                     * @param InstanceFamilyConfig Model family configuration information
+                     * @param _instanceFamilyConfig Model family configuration information
+                     * 
                      */
                     void SetInstanceFamilyConfig(const InstanceFamilyConfig& _instanceFamilyConfig);
 
                     /**
                      * 判断参数 InstanceFamilyConfig 是否已赋值
                      * @return InstanceFamilyConfig 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyConfigHasBeenSet() const;
 
                     /**
                      * 获取Model
                      * @return InstanceType Model
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Model
-                     * @param InstanceType Model
+                     * @param _instanceType Model
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of CPU cores
                      * @return Vcpu Number of CPU cores
+                     * 
                      */
                     int64_t GetVcpu() const;
 
                     /**
                      * 设置Number of CPU cores
-                     * @param Vcpu Number of CPU cores
+                     * @param _vcpu Number of CPU cores
+                     * 
                      */
                     void SetVcpu(const int64_t& _vcpu);
 
                     /**
                      * 判断参数 Vcpu 是否已赋值
                      * @return Vcpu 是否已赋值
+                     * 
                      */
                     bool VcpuHasBeenSet() const;
 
                     /**
                      * 获取Memory size
                      * @return Memory Memory size
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Memory size
-                     * @param Memory Memory size
+                     * @param _memory Memory size
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Clock rate
                      * @return Frequency Clock rate
+                     * 
                      */
                     std::string GetFrequency() const;
 
                     /**
                      * 设置Clock rate
-                     * @param Frequency Clock rate
+                     * @param _frequency Clock rate
+                     * 
                      */
                     void SetFrequency(const std::string& _frequency);
 
                     /**
                      * 判断参数 Frequency 是否已赋值
                      * @return Frequency 是否已赋值
+                     * 
                      */
                     bool FrequencyHasBeenSet() const;
 
                     /**
                      * 获取CPU model
                      * @return CpuModelName CPU model
+                     * 
                      */
                     std::string GetCpuModelName() const;
 
                     /**
                      * 设置CPU model
-                     * @param CpuModelName CPU model
+                     * @param _cpuModelName CPU model
+                     * 
                      */
                     void SetCpuModelName(const std::string& _cpuModelName);
 
                     /**
                      * 判断参数 CpuModelName 是否已赋值
                      * @return CpuModelName 是否已赋值
+                     * 
                      */
                     bool CpuModelNameHasBeenSet() const;
 
                     /**
                      * 获取Instance family type configuration information
                      * @return InstanceFamilyTypeConfig Instance family type configuration information
+                     * 
                      */
                     InstanceFamilyTypeConfig GetInstanceFamilyTypeConfig() const;
 
                     /**
                      * 设置Instance family type configuration information
-                     * @param InstanceFamilyTypeConfig Instance family type configuration information
+                     * @param _instanceFamilyTypeConfig Instance family type configuration information
+                     * 
                      */
                     void SetInstanceFamilyTypeConfig(const InstanceFamilyTypeConfig& _instanceFamilyTypeConfig);
 
                     /**
                      * 判断参数 InstanceFamilyTypeConfig 是否已赋值
                      * @return InstanceFamilyTypeConfig 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyTypeConfigHasBeenSet() const;
 
@@ -179,20 +200,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExtInfo Extra model information, which is a JSON string in the format of `{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"default system disk size:60 GB","dataDiskSizeShow":"local NVMe SSD: 3200 GB"}`. It indicates a special model if it exists
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
                      * 设置Extra model information, which is a JSON string in the format of `{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"default system disk size:60 GB","dataDiskSizeShow":"local NVMe SSD: 3200 GB"}`. It indicates a special model if it exists
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExtInfo Extra model information, which is a JSON string in the format of `{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"default system disk size:60 GB","dataDiskSizeShow":"local NVMe SSD: 3200 GB"}`. It indicates a special model if it exists
+                     * @param _extInfo Extra model information, which is a JSON string in the format of `{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"default system disk size:60 GB","dataDiskSizeShow":"local NVMe SSD: 3200 GB"}`. It indicates a special model if it exists
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
 
                     /**
                      * 判断参数 ExtInfo 是否已赋值
                      * @return ExtInfo 是否已赋值
+                     * 
                      */
                     bool ExtInfoHasBeenSet() const;
 
@@ -201,20 +225,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Vgpu Number of GPU cards
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetVgpu() const;
 
                     /**
                      * 设置Number of GPU cards
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Vgpu Number of GPU cards
+                     * @param _vgpu Number of GPU cards
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVgpu(const double& _vgpu);
 
                     /**
                      * 判断参数 Vgpu 是否已赋值
                      * @return Vgpu 是否已赋值
+                     * 
                      */
                     bool VgpuHasBeenSet() const;
 
@@ -223,20 +250,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GpuModelName GPU model
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGpuModelName() const;
 
                     /**
                      * 设置GPU model
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GpuModelName GPU model
+                     * @param _gpuModelName GPU model
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGpuModelName(const std::string& _gpuModelName);
 
                     /**
                      * 判断参数 GpuModelName 是否已赋值
                      * @return GpuModelName 是否已赋值
+                     * 
                      */
                     bool GpuModelNameHasBeenSet() const;
 

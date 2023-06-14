@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Account of the CCN instance owner
                      * @return AccountId Account of the CCN instance owner
+                     * 
                      */
                     std::string GetAccountId() const;
 
                     /**
                      * 设置Account of the CCN instance owner
-                     * @param AccountId Account of the CCN instance owner
+                     * @param _accountId Account of the CCN instance owner
+                     * 
                      */
                     void SetAccountId(const std::string& _accountId);
 
                     /**
                      * 判断参数 AccountId 是否已赋值
                      * @return AccountId 是否已赋值
+                     * 
                      */
                     bool AccountIdHasBeenSet() const;
 
                     /**
                      * 获取CCN ID
                      * @return CcnId CCN ID
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置CCN ID
-                     * @param CcnId CCN ID
+                     * @param _ccnId CCN ID
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 

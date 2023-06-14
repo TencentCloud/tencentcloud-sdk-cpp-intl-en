@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Engine version. If it is left empty, all parameter templates will be queried.
                      * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+                     * 
                      */
                     std::vector<std::string> GetEngineVersions() const;
 
                     /**
                      * 设置Engine version. If it is left empty, all parameter templates will be queried.
-                     * @param EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+                     * @param _engineVersions Engine version. If it is left empty, all parameter templates will be queried.
+                     * 
                      */
                     void SetEngineVersions(const std::vector<std::string>& _engineVersions);
 
                     /**
                      * 判断参数 EngineVersions 是否已赋值
                      * @return EngineVersions 是否已赋值
+                     * 
                      */
                     bool EngineVersionsHasBeenSet() const;
 
                     /**
                      * 获取Engine type. If it is left empty, all engine types will be queried.
                      * @return EngineTypes Engine type. If it is left empty, all engine types will be queried.
+                     * 
                      */
                     std::vector<std::string> GetEngineTypes() const;
 
                     /**
                      * 设置Engine type. If it is left empty, all engine types will be queried.
-                     * @param EngineTypes Engine type. If it is left empty, all engine types will be queried.
+                     * @param _engineTypes Engine type. If it is left empty, all engine types will be queried.
+                     * 
                      */
                     void SetEngineTypes(const std::vector<std::string>& _engineTypes);
 
                     /**
                      * 判断参数 EngineTypes 是否已赋值
                      * @return EngineTypes 是否已赋值
+                     * 
                      */
                     bool EngineTypesHasBeenSet() const;
 
                     /**
                      * 获取Template name. If it is left empty, all template names will be queried.
                      * @return TemplateNames Template name. If it is left empty, all template names will be queried.
+                     * 
                      */
                     std::vector<std::string> GetTemplateNames() const;
 
                     /**
                      * 设置Template name. If it is left empty, all template names will be queried.
-                     * @param TemplateNames Template name. If it is left empty, all template names will be queried.
+                     * @param _templateNames Template name. If it is left empty, all template names will be queried.
+                     * 
                      */
                     void SetTemplateNames(const std::vector<std::string>& _templateNames);
 
                     /**
                      * 判断参数 TemplateNames 是否已赋值
                      * @return TemplateNames 是否已赋值
+                     * 
                      */
                     bool TemplateNamesHasBeenSet() const;
 
                     /**
                      * 获取Template ID. If it is left empty, all template IDs will be queried.
                      * @return TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+                     * 
                      */
                     std::vector<int64_t> GetTemplateIds() const;
 
                     /**
                      * 设置Template ID. If it is left empty, all template IDs will be queried.
-                     * @param TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+                     * @param _templateIds Template ID. If it is left empty, all template IDs will be queried.
+                     * 
                      */
                     void SetTemplateIds(const std::vector<int64_t>& _templateIds);
 
                     /**
                      * 判断参数 TemplateIds 是否已赋值
                      * @return TemplateIds 是否已赋值
+                     * 
                      */
                     bool TemplateIdsHasBeenSet() const;
 

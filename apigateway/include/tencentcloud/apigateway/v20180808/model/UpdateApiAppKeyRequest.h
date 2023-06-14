@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique application ID.
                      * @return ApiAppId Unique application ID.
+                     * 
                      */
                     std::string GetApiAppId() const;
 
                     /**
                      * 设置Unique application ID.
-                     * @param ApiAppId Unique application ID.
+                     * @param _apiAppId Unique application ID.
+                     * 
                      */
                     void SetApiAppId(const std::string& _apiAppId);
 
                     /**
                      * 判断参数 ApiAppId 是否已赋值
                      * @return ApiAppId 是否已赋值
+                     * 
                      */
                     bool ApiAppIdHasBeenSet() const;
 
                     /**
                      * 获取Application Key.
                      * @return ApiAppKey Application Key.
+                     * 
                      */
                     std::string GetApiAppKey() const;
 
                     /**
                      * 设置Application Key.
-                     * @param ApiAppKey Application Key.
+                     * @param _apiAppKey Application Key.
+                     * 
                      */
                     void SetApiAppKey(const std::string& _apiAppKey);
 
                     /**
                      * 判断参数 ApiAppKey 是否已赋值
                      * @return ApiAppKey 是否已赋值
+                     * 
                      */
                     bool ApiAppKeyHasBeenSet() const;
 
                     /**
                      * 获取Application Secret.
                      * @return ApiAppSecret Application Secret.
+                     * 
                      */
                     std::string GetApiAppSecret() const;
 
                     /**
                      * 设置Application Secret.
-                     * @param ApiAppSecret Application Secret.
+                     * @param _apiAppSecret Application Secret.
+                     * 
                      */
                     void SetApiAppSecret(const std::string& _apiAppSecret);
 
                     /**
                      * 判断参数 ApiAppSecret 是否已赋值
                      * @return ApiAppSecret 是否已赋值
+                     * 
                      */
                     bool ApiAppSecretHasBeenSet() const;
 

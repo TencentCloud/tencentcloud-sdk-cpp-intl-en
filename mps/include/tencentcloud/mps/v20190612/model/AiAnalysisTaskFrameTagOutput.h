@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取List of frame-specific video tags.
                      * @return SegmentSet List of frame-specific video tags.
+                     * 
                      */
                     std::vector<MediaAiAnalysisFrameTagSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of frame-specific video tags.
-                     * @param SegmentSet List of frame-specific video tags.
+                     * @param _segmentSet List of frame-specific video tags.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<MediaAiAnalysisFrameTagSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

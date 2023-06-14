@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ZoneId AZ ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置AZ ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ZoneId AZ ID
+                     * @param _zoneId AZ ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Zone AZ information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ information
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Zone AZ information
+                     * @param _zone AZ information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SubnetInfoList Subnet information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<SubnetInfo> GetSubnetInfoList() const;
 
                     /**
                      * 设置Subnet information
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SubnetInfoList Subnet information
+                     * @param _subnetInfoList Subnet information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSubnetInfoList(const std::vector<SubnetInfo>& _subnetInfoList);
 
                     /**
                      * 判断参数 SubnetInfoList 是否已赋值
                      * @return SubnetInfoList 是否已赋值
+                     * 
                      */
                     bool SubnetInfoListHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NodeInfoList Node information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<ShortNodeInfo> GetNodeInfoList() const;
 
                     /**
                      * 设置Node information
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NodeInfoList Node information
+                     * @param _nodeInfoList Node information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNodeInfoList(const std::vector<ShortNodeInfo>& _nodeInfoList);
 
                     /**
                      * 判断参数 NodeInfoList 是否已赋值
                      * @return NodeInfoList 是否已赋值
+                     * 
                      */
                     bool NodeInfoListHasBeenSet() const;
 

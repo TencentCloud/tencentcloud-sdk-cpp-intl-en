@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Id Parameter name. Valid values:
 <li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
 <li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
+                     * 
                      */
                     std::string GetId() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Parameter name. Valid values:
 <li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
 <li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
-                     * @param Id Parameter name. Valid values:
+                     * @param _id Parameter name. Valid values:
 <li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
 <li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -81,6 +84,7 @@ namespace TencentCloud
 <li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
 <li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
 <li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -89,16 +93,18 @@ namespace TencentCloud
 <li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
 <li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
 <li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
-                     * @param Type Parameter value type.
+                     * @param _type Parameter value type.
 <li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
 <li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
 <li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -107,20 +113,23 @@ namespace TencentCloud
 Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
                      * @return Choices Valid values.
 Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
+                     * 
                      */
                     std::vector<std::string> GetChoices() const;
 
                     /**
                      * 设置Valid values.
 Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
-                     * @param Choices Valid values.
+                     * @param _choices Valid values.
 Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
+                     * 
                      */
                     void SetChoices(const std::vector<std::string>& _choices);
 
                     /**
                      * 判断参数 Choices 是否已赋值
                      * @return Choices 是否已赋值
+                     * 
                      */
                     bool ChoicesHasBeenSet() const;
 

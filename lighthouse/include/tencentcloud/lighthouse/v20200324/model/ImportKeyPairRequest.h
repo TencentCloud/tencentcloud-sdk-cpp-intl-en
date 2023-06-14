@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Key pair name, which can contain up to 25 digits, letters, and underscores.
                      * @return KeyName Key pair name, which can contain up to 25 digits, letters, and underscores.
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Key pair name, which can contain up to 25 digits, letters, and underscores.
-                     * @param KeyName Key pair name, which can contain up to 25 digits, letters, and underscores.
+                     * @param _keyName Key pair name, which can contain up to 25 digits, letters, and underscores.
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 
                     /**
                      * 获取Public key content of the key pair, which is in the OpenSSH RSA format.
                      * @return PublicKey Public key content of the key pair, which is in the OpenSSH RSA format.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Public key content of the key pair, which is in the OpenSSH RSA format.
-                     * @param PublicKey Public key content of the key pair, which is in the OpenSSH RSA format.
+                     * @param _publicKey Public key content of the key pair, which is in the OpenSSH RSA format.
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 

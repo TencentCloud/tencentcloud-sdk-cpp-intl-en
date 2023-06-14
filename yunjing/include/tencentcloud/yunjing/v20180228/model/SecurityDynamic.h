@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取CWP agent `UUID`.
                      * @return Uuid CWP agent `UUID`.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `UUID`.
-                     * @param Uuid CWP agent `UUID`.
+                     * @param _uuid CWP agent `UUID`.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取Security event occurrence time.
                      * @return EventTime Security event occurrence time.
+                     * 
                      */
                     std::string GetEventTime() const;
 
                     /**
                      * 设置Security event occurrence time.
-                     * @param EventTime Security event occurrence time.
+                     * @param _eventTime Security event occurrence time.
+                     * 
                      */
                     void SetEventTime(const std::string& _eventTime);
 
                     /**
                      * 判断参数 EventTime 是否已赋值
                      * @return EventTime 是否已赋值
+                     * 
                      */
                     bool EventTimeHasBeenSet() const;
 
@@ -95,6 +101,7 @@ namespace TencentCloud
 <li>BRUTEATTACK_SUCCESS: brute force attack succeeded</li>
 <li>VUL: vulnerability</li>
 <li>BASELINE: security baseline</li>
+                     * 
                      */
                     std::string GetEventType() const;
 
@@ -105,36 +112,41 @@ namespace TencentCloud
 <li>BRUTEATTACK_SUCCESS: brute force attack succeeded</li>
 <li>VUL: vulnerability</li>
 <li>BASELINE: security baseline</li>
-                     * @param EventType Security event type.
+                     * @param _eventType Security event type.
 <li>MALWARE: trojan event</li>
 <li>NON_LOCAL_LOGIN: unusual login location</li>
 <li>BRUTEATTACK_SUCCESS: brute force attack succeeded</li>
 <li>VUL: vulnerability</li>
 <li>BASELINE: security baseline</li>
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Security event message.
                      * @return Message Security event message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Security event message.
-                     * @param Message Security event message.
+                     * @param _message Security event message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -149,6 +161,7 @@ namespace TencentCloud
 <li>HIGH: high</li>
 <li>NORMAL: medium</li>
 <li>LOW: low</li>
+                     * 
                      */
                     std::string GetSecurityLevel() const;
 
@@ -158,17 +171,19 @@ namespace TencentCloud
 <li>HIGH: high</li>
 <li>NORMAL: medium</li>
 <li>LOW: low</li>
-                     * @param SecurityLevel Security event level.
+                     * @param _securityLevel Security event level.
 <li>RISK: severe</li>
 <li>HIGH: high</li>
 <li>NORMAL: medium</li>
 <li>LOW: low</li>
+                     * 
                      */
                     void SetSecurityLevel(const std::string& _securityLevel);
 
                     /**
                      * 判断参数 SecurityLevel 是否已赋值
                      * @return SecurityLevel 是否已赋值
+                     * 
                      */
                     bool SecurityLevelHasBeenSet() const;
 

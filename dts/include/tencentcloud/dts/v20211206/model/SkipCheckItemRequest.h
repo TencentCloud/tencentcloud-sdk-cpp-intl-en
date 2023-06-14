@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Data migration task ID
                      * @return JobId Data migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Data migration task ID
-                     * @param JobId Data migration task ID
+                     * @param _jobId Data migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
                      * @return StepIds ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
+                     * 
                      */
                     std::vector<std::string> GetStepIds() const;
 
                     /**
                      * 设置ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
-                     * @param StepIds ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
+                     * @param _stepIds ID of the check step to be skipped, which is obtained in the `StepInfo[i].StepId` field returned by the `DescribeMigrationCheckJob` API, such as "OptimizeCheck".
+                     * 
                      */
                     void SetStepIds(const std::vector<std::string>& _stepIds);
 
                     /**
                      * 判断参数 StepIds 是否已赋值
                      * @return StepIds 是否已赋值
+                     * 
                      */
                     bool StepIdsHasBeenSet() const;
 
                     /**
                      * 获取When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
                      * @return ForeignKeyFlag When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
+                     * 
                      */
                     std::string GetForeignKeyFlag() const;
 
                     /**
                      * 设置When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
-                     * @param ForeignKeyFlag When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
+                     * @param _foreignKeyFlag When the check fails due to foreign key dependency, you can use this field to specify whether to migrate the foreign key dependency. The foreign key dependency won’t be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `shield`, and will be migrated when `StepIds` contains `ConstraintCheck` and the value of this field is `migrate`.
+                     * 
                      */
                     void SetForeignKeyFlag(const std::string& _foreignKeyFlag);
 
                     /**
                      * 判断参数 ForeignKeyFlag 是否已赋值
                      * @return ForeignKeyFlag 是否已赋值
+                     * 
                      */
                     bool ForeignKeyFlagHasBeenSet() const;
 

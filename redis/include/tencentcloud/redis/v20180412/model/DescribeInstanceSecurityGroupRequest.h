@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of instances
                      * @return InstanceIds List of instances
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of instances
-                     * @param InstanceIds List of instances
+                     * @param _instanceIds List of instances
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

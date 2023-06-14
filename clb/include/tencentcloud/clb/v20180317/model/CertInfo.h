@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
                      * @return CertId ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
-                     * @param CertId ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
+                     * @param _certId ID of the certificate. If it's not specified, `CertContent` and `CertKey` are required. For a server certificate, you also need to specify `CertName`. 
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the uploaded certificate. It's required if `CertId` is not specified.
                      * @return CertName Name of the uploaded certificate. It's required if `CertId` is not specified.
+                     * 
                      */
                     std::string GetCertName() const;
 
                     /**
                      * 设置Name of the uploaded certificate. It's required if `CertId` is not specified.
-                     * @param CertName Name of the uploaded certificate. It's required if `CertId` is not specified.
+                     * @param _certName Name of the uploaded certificate. It's required if `CertId` is not specified.
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 
                     /**
                      * 获取Public key of the uploaded certificate. This is required if `CertId` is not specified.
                      * @return CertContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
+                     * 
                      */
                     std::string GetCertContent() const;
 
                     /**
                      * 设置Public key of the uploaded certificate. This is required if `CertId` is not specified.
-                     * @param CertContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
+                     * @param _certContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
+                     * 
                      */
                     void SetCertContent(const std::string& _certContent);
 
                     /**
                      * 判断参数 CertContent 是否已赋值
                      * @return CertContent 是否已赋值
+                     * 
                      */
                     bool CertContentHasBeenSet() const;
 
                     /**
                      * 获取Private key of the uploaded server certificate. This is required if `CertId` is not specified.
                      * @return CertKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+                     * 
                      */
                     std::string GetCertKey() const;
 
                     /**
                      * 设置Private key of the uploaded server certificate. This is required if `CertId` is not specified.
-                     * @param CertKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+                     * @param _certKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+                     * 
                      */
                     void SetCertKey(const std::string& _certKey);
 
                     /**
                      * 判断参数 CertKey 是否已赋值
                      * @return CertKey 是否已赋值
+                     * 
                      */
                     bool CertKeyHasBeenSet() const;
 

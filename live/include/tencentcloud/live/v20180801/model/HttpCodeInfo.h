@@ -52,38 +52,44 @@ namespace TencentCloud
 Example: "2xx", "3xx", "4xx", "5xx".
                      * @return HttpCode HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
+                     * 
                      */
                     std::string GetHttpCode() const;
 
                     /**
                      * 设置HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
-                     * @param HttpCode HTTP return code.
+                     * @param _httpCode HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
+                     * 
                      */
                     void SetHttpCode(const std::string& _httpCode);
 
                     /**
                      * 判断参数 HttpCode 是否已赋值
                      * @return HttpCode 是否已赋值
+                     * 
                      */
                     bool HttpCodeHasBeenSet() const;
 
                     /**
                      * 获取Statistics. 0 will be added for points in time when there is no data.
                      * @return ValueList Statistics. 0 will be added for points in time when there is no data.
+                     * 
                      */
                     std::vector<HttpCodeValue> GetValueList() const;
 
                     /**
                      * 设置Statistics. 0 will be added for points in time when there is no data.
-                     * @param ValueList Statistics. 0 will be added for points in time when there is no data.
+                     * @param _valueList Statistics. 0 will be added for points in time when there is no data.
+                     * 
                      */
                     void SetValueList(const std::vector<HttpCodeValue>& _valueList);
 
                     /**
                      * 判断参数 ValueList 是否已赋值
                      * @return ValueList 是否已赋值
+                     * 
                      */
                     bool ValueListHasBeenSet() const;
 

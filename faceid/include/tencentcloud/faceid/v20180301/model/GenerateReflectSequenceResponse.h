@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
                      * @return ReflectSequenceUrl The resource URL of the light sequence, which needs to be downloaded and passed through to the SDK to start the identity verification process.
+                     * 
                      */
                     std::string GetReflectSequenceUrl() const;
 
                     /**
                      * 判断参数 ReflectSequenceUrl 是否已赋值
                      * @return ReflectSequenceUrl 是否已赋值
+                     * 
                      */
                     bool ReflectSequenceUrlHasBeenSet() const;
 
                     /**
                      * 获取The MD5 hash value of the light sequence, which is used to check whether the light sequence is altered.
                      * @return ReflectSequenceMd5 The MD5 hash value of the light sequence, which is used to check whether the light sequence is altered.
+                     * 
                      */
                     std::string GetReflectSequenceMd5() const;
 
                     /**
                      * 判断参数 ReflectSequenceMd5 是否已赋值
                      * @return ReflectSequenceMd5 是否已赋值
+                     * 
                      */
                     bool ReflectSequenceMd5HasBeenSet() const;
 

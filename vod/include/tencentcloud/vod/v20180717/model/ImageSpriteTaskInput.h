@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Image sprite generating template ID.
                      * @return Definition Image sprite generating template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Image sprite generating template ID.
-                     * @param Definition Image sprite generating template ID.
+                     * @param _definition Image sprite generating template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

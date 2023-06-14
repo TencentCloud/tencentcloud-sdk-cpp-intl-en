@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Times of initiating intelligent content recognition tasks.
                      * @return TotalCount Times of initiating intelligent content recognition tasks.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Duration of intelligent recognition content.
                      * @return TotalDuration Duration of intelligent recognition content.
+                     * 
                      */
                     int64_t GetTotalDuration() const;
 
                     /**
                      * 判断参数 TotalDuration 是否已赋值
                      * @return TotalDuration 是否已赋值
+                     * 
                      */
                     bool TotalDurationHasBeenSet() const;
 
                     /**
                      * 获取Data of intelligent recognition content duration. One piece of data is collected every day.
                      * @return Data Data of intelligent recognition content duration. One piece of data is collected every day.
+                     * 
                      */
                     std::vector<StatDataItem> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

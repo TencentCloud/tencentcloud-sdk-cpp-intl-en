@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Value
                      * @return Num Value
+                     * 
                      */
                     int64_t GetNum() const;
 
                     /**
                      * 设置Value
-                     * @param Num Value
+                     * @param _num Value
+                     * 
                      */
                     void SetNum(const int64_t& _num);
 
                     /**
                      * 判断参数 Num 是否已赋值
                      * @return Num 是否已赋值
+                     * 
                      */
                     bool NumHasBeenSet() const;
 
                     /**
                      * 获取Time shown on the x-axis of the line graph
                      * @return StatTime Time shown on the x-axis of the line graph
+                     * 
                      */
                     std::string GetStatTime() const;
 
                     /**
                      * 设置Time shown on the x-axis of the line graph
-                     * @param StatTime Time shown on the x-axis of the line graph
+                     * @param _statTime Time shown on the x-axis of the line graph
+                     * 
                      */
                     void SetStatTime(const std::string& _statTime);
 
                     /**
                      * 判断参数 StatTime 是否已赋值
                      * @return StatTime 是否已赋值
+                     * 
                      */
                     bool StatTimeHasBeenSet() const;
 

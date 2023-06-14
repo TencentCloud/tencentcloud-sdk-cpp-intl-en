@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the log topic to be queried
                      * @return TopicId ID of the log topic to be queried
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置ID of the log topic to be queried
-                     * @param TopicId ID of the log topic to be queried
+                     * @param _topicId ID of the log topic to be queried
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Start time of the log to be queried, which is a Unix timestamp in milliseconds
                      * @return From Start time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 
                      */
                     int64_t GetFrom() const;
 
                     /**
                      * 设置Start time of the log to be queried, which is a Unix timestamp in milliseconds
-                     * @param From Start time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * @param _from Start time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 
                      */
                     void SetFrom(const int64_t& _from);
 
                     /**
                      * 判断参数 From 是否已赋值
                      * @return From 是否已赋值
+                     * 
                      */
                     bool FromHasBeenSet() const;
 
                     /**
                      * 获取End time of the log to be queried, which is a Unix timestamp in milliseconds
                      * @return To End time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 
                      */
                     int64_t GetTo() const;
 
                     /**
                      * 设置End time of the log to be queried, which is a Unix timestamp in milliseconds
-                     * @param To End time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * @param _to End time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 
                      */
                     void SetTo(const int64_t& _to);
 
                     /**
                      * 判断参数 To 是否已赋值
                      * @return To 是否已赋值
+                     * 
                      */
                     bool ToHasBeenSet() const;
 
                     /**
                      * 获取Query statement
                      * @return Query Query statement
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Query statement
-                     * @param Query Query statement
+                     * @param _query Query statement
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
                      * @return Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+                     * 
                      */
                     int64_t GetInterval() const;
 
                     /**
                      * 设置Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
-                     * @param Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+                     * @param _interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+                     * 
                      */
                     void SetInterval(const int64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 

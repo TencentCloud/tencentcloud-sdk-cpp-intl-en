@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取After the migration task starts, the flow ID will be returned
                      * @return FlowId After the migration task starts, the flow ID will be returned
+                     * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 

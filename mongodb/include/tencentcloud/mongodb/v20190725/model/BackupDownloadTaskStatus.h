@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Shard name
                      * @return ReplicaSetId Shard name
+                     * 
                      */
                     std::string GetReplicaSetId() const;
 
                     /**
                      * 设置Shard name
-                     * @param ReplicaSetId Shard name
+                     * @param _replicaSetId Shard name
+                     * 
                      */
                     void SetReplicaSetId(const std::string& _replicaSetId);
 
                     /**
                      * 判断参数 ReplicaSetId 是否已赋值
                      * @return ReplicaSetId 是否已赋值
+                     * 
                      */
                     bool ReplicaSetIdHasBeenSet() const;
 
                     /**
                      * 获取Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
                      * @return Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-                     * @param Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * @param _status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

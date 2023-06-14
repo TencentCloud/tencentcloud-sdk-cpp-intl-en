@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Parameter template ID
                      * @return Id Parameter template ID
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Parameter template ID
-                     * @param Id Parameter template ID
+                     * @param _id Parameter template ID
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Parameter template name
                      * @return TemplateName Parameter template name
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Parameter template name
-                     * @param TemplateName Parameter template name
+                     * @param _templateName Parameter template name
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Parameter template description
                      * @return TemplateDescription Parameter template description
+                     * 
                      */
                     std::string GetTemplateDescription() const;
 
                     /**
                      * 设置Parameter template description
-                     * @param TemplateDescription Parameter template description
+                     * @param _templateDescription Parameter template description
+                     * 
                      */
                     void SetTemplateDescription(const std::string& _templateDescription);
 
                     /**
                      * 判断参数 TemplateDescription 是否已赋值
                      * @return TemplateDescription 是否已赋值
+                     * 
                      */
                     bool TemplateDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Engine version
                      * @return EngineVersion Engine version
+                     * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
                      * 设置Engine version
-                     * @param EngineVersion Engine version
+                     * @param _engineVersion Engine version
+                     * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
                     /**
                      * 判断参数 EngineVersion 是否已赋值
                      * @return EngineVersion 是否已赋值
+                     * 
                      */
                     bool EngineVersionHasBeenSet() const;
 
                     /**
                      * 获取Database Type. Valid values: `NORMAL`, `SERVERLESS`.
                      * @return DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * 
                      */
                     std::string GetDbMode() const;
 
                     /**
                      * 设置Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-                     * @param DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * @param _dbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * 
                      */
                     void SetDbMode(const std::string& _dbMode);
 
                     /**
                      * 判断参数 DbMode 是否已赋值
                      * @return DbMode 是否已赋值
+                     * 
                      */
                     bool DbModeHasBeenSet() const;
 
@@ -142,20 +157,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ParamInfoSet Parameter template details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TemplateParamInfo> GetParamInfoSet() const;
 
                     /**
                      * 设置Parameter template details
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ParamInfoSet Parameter template details
+                     * @param _paramInfoSet Parameter template details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParamInfoSet(const std::vector<TemplateParamInfo>& _paramInfoSet);
 
                     /**
                      * 判断参数 ParamInfoSet 是否已赋值
                      * @return ParamInfoSet 是否已赋值
+                     * 
                      */
                     bool ParamInfoSetHasBeenSet() const;
 

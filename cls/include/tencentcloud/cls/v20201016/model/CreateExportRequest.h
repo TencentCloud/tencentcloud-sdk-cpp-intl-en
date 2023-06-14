@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Number of logs to be exported. Maximum value: 50 million
                      * @return Count Number of logs to be exported. Maximum value: 50 million
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of logs to be exported. Maximum value: 50 million
-                     * @param Count Number of logs to be exported. Maximum value: 50 million
+                     * @param _count Number of logs to be exported. Maximum value: 50 million
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
                      * @return Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
-                     * @param Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     * @param _query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Start time of the log to be exported, which is a timestamp in milliseconds
                      * @return From Start time of the log to be exported, which is a timestamp in milliseconds
+                     * 
                      */
                     int64_t GetFrom() const;
 
                     /**
                      * 设置Start time of the log to be exported, which is a timestamp in milliseconds
-                     * @param From Start time of the log to be exported, which is a timestamp in milliseconds
+                     * @param _from Start time of the log to be exported, which is a timestamp in milliseconds
+                     * 
                      */
                     void SetFrom(const int64_t& _from);
 
                     /**
                      * 判断参数 From 是否已赋值
                      * @return From 是否已赋值
+                     * 
                      */
                     bool FromHasBeenSet() const;
 
                     /**
                      * 获取End time of the log to be exported, which is a timestamp in milliseconds
                      * @return To End time of the log to be exported, which is a timestamp in milliseconds
+                     * 
                      */
                     int64_t GetTo() const;
 
                     /**
                      * 设置End time of the log to be exported, which is a timestamp in milliseconds
-                     * @param To End time of the log to be exported, which is a timestamp in milliseconds
+                     * @param _to End time of the log to be exported, which is a timestamp in milliseconds
+                     * 
                      */
                     void SetTo(const int64_t& _to);
 
                     /**
                      * 判断参数 To 是否已赋值
                      * @return To 是否已赋值
+                     * 
                      */
                     bool ToHasBeenSet() const;
 
                     /**
                      * 获取Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
                      * @return Order Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
-                     * @param Order Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+                     * @param _order Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Exported log data format. Valid values: `json`, `csv`. Default value: `json`
                      * @return Format Exported log data format. Valid values: `json`, `csv`. Default value: `json`
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Exported log data format. Valid values: `json`, `csv`. Default value: `json`
-                     * @param Format Exported log data format. Valid values: `json`, `csv`. Default value: `json`
+                     * @param _format Exported log data format. Valid values: `json`, `csv`. Default value: `json`
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 

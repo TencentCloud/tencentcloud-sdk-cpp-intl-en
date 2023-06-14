@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexMetaFields Index metadata field
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<IndexMetaField> GetIndexMetaFields() const;
 
                     /**
                      * 判断参数 IndexMetaFields 是否已赋值
                      * @return IndexMetaFields 是否已赋值
+                     * 
                      */
                     bool IndexMetaFieldsHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalCount Total number of results
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

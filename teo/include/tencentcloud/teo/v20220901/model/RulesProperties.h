@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Parameter name.
                      * @return Name Parameter name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter name.
-                     * @param Name Parameter name.
+                     * @param _name Parameter name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
                      * @return Min Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 
                      */
                     int64_t GetMin() const;
 
                     /**
                      * 设置Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-                     * @param Min Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * @param _min Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 
                      */
                     void SetMin(const int64_t& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
@@ -89,20 +95,23 @@ namespace TencentCloud
 Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
                      * @return ChoicesValue Valid parameter values.
 Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+                     * 
                      */
                     std::vector<std::string> GetChoicesValue() const;
 
                     /**
                      * 设置Valid parameter values.
 Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
-                     * @param ChoicesValue Valid parameter values.
+                     * @param _choicesValue Valid parameter values.
 Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+                     * 
                      */
                     void SetChoicesValue(const std::vector<std::string>& _choicesValue);
 
                     /**
                      * 判断参数 ChoicesValue 是否已赋值
                      * @return ChoicesValue 是否已赋值
+                     * 
                      */
                     bool ChoicesValueHasBeenSet() const;
 
@@ -119,6 +128,7 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 <li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
 <li>`CUSTOM_NUM`: Custom integer</li>
 <li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1).
+                     * 
                      */
                     std::string GetType() const;
 
@@ -129,72 +139,83 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 <li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
 <li>`CUSTOM_NUM`: Custom integer</li>
 <li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1).
-                     * @param Type Parameter value type.
+                     * @param _type Parameter value type.
 <li>`CHOICE`: The parameter value can be selected only from `ChoicesValue`.</li>
 <li>`TOGGLE`: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
 <li>`OBJECT`: The parameter value is of object type, and `ChoiceProperties` indicates the attributes associated with the object type.</li>
 <li>`CUSTOM_NUM`: Custom integer</li>
 <li>`CUSTOM_STRING`: Custom string.</li>Note: If `OBJECT` is selected, refer to [Example 2. Create a rule with parameters of OBJECT type](https://tcloud4api.woa.com/document/product/1657/79382?!preview&!document=1).
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
                      * @return Max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 
                      */
                     int64_t GetMax() const;
 
                     /**
                      * 设置Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-                     * @param Max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * @param _max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+                     * 
                      */
                     void SetMax(const int64_t& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
                     /**
                      * 获取Whether multiple values can be selected or entered.
                      * @return IsMultiple Whether multiple values can be selected or entered.
+                     * 
                      */
                     bool GetIsMultiple() const;
 
                     /**
                      * 设置Whether multiple values can be selected or entered.
-                     * @param IsMultiple Whether multiple values can be selected or entered.
+                     * @param _isMultiple Whether multiple values can be selected or entered.
+                     * 
                      */
                     void SetIsMultiple(const bool& _isMultiple);
 
                     /**
                      * 判断参数 IsMultiple 是否已赋值
                      * @return IsMultiple 是否已赋值
+                     * 
                      */
                     bool IsMultipleHasBeenSet() const;
 
                     /**
                      * 获取Whether the parameter can be left empty.
                      * @return IsAllowEmpty Whether the parameter can be left empty.
+                     * 
                      */
                     bool GetIsAllowEmpty() const;
 
                     /**
                      * 设置Whether the parameter can be left empty.
-                     * @param IsAllowEmpty Whether the parameter can be left empty.
+                     * @param _isAllowEmpty Whether the parameter can be left empty.
+                     * 
                      */
                     void SetIsAllowEmpty(const bool& _isAllowEmpty);
 
                     /**
                      * 判断参数 IsAllowEmpty 是否已赋值
                      * @return IsAllowEmpty 是否已赋值
+                     * 
                      */
                     bool IsAllowEmptyHasBeenSet() const;
 
@@ -203,20 +224,23 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 Note: This parameter will be an empty array if no special parameters are added as optional parameters.
                      * @return ChoiceProperties Associated configuration parameters of this parameter, which are required for API call.
 Note: This parameter will be an empty array if no special parameters are added as optional parameters.
+                     * 
                      */
                     std::vector<RuleChoicePropertiesItem> GetChoiceProperties() const;
 
                     /**
                      * 设置Associated configuration parameters of this parameter, which are required for API call.
 Note: This parameter will be an empty array if no special parameters are added as optional parameters.
-                     * @param ChoiceProperties Associated configuration parameters of this parameter, which are required for API call.
+                     * @param _choiceProperties Associated configuration parameters of this parameter, which are required for API call.
 Note: This parameter will be an empty array if no special parameters are added as optional parameters.
+                     * 
                      */
                     void SetChoiceProperties(const std::vector<RuleChoicePropertiesItem>& _choiceProperties);
 
                     /**
                      * 判断参数 ChoiceProperties 是否已赋值
                      * @return ChoiceProperties 是否已赋值
+                     * 
                      */
                     bool ChoicePropertiesHasBeenSet() const;
 
@@ -225,20 +249,23 @@ Note: This parameter will be an empty array if no special parameters are added a
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExtraParameter <li>NULL: No special parameters when `NormalAction` is selected for `RuleAction`.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RuleExtraParameter GetExtraParameter() const;
 
                     /**
                      * 设置<li>NULL: No special parameters when `NormalAction` is selected for `RuleAction`.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExtraParameter <li>NULL: No special parameters when `NormalAction` is selected for `RuleAction`.</li>
+                     * @param _extraParameter <li>NULL: No special parameters when `NormalAction` is selected for `RuleAction`.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtraParameter(const RuleExtraParameter& _extraParameter);
 
                     /**
                      * 判断参数 ExtraParameter 是否已赋值
                      * @return ExtraParameter 是否已赋值
+                     * 
                      */
                     bool ExtraParameterHasBeenSet() const;
 

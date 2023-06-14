@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Region, such as `ap-guangzhou`
                      * @return Region Region, such as `ap-guangzhou`
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region, such as `ap-guangzhou`
-                     * @param Region Region, such as `ap-guangzhou`
+                     * @param _region Region, such as `ap-guangzhou`
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取The outbound bandwidth cap. Units: Mbps
                      * @return BandwidthLimit The outbound bandwidth cap. Units: Mbps
+                     * 
                      */
                     uint64_t GetBandwidthLimit() const;
 
                     /**
                      * 设置The outbound bandwidth cap. Units: Mbps
-                     * @param BandwidthLimit The outbound bandwidth cap. Units: Mbps
+                     * @param _bandwidthLimit The outbound bandwidth cap. Units: Mbps
+                     * 
                      */
                     void SetBandwidthLimit(const uint64_t& _bandwidthLimit);
 
                     /**
                      * 判断参数 BandwidthLimit 是否已赋值
                      * @return BandwidthLimit 是否已赋值
+                     * 
                      */
                     bool BandwidthLimitHasBeenSet() const;
 
                     /**
                      * 获取Whether it is a BM region. The default is `false`.
                      * @return IsBm Whether it is a BM region. The default is `false`.
+                     * 
                      */
                     bool GetIsBm() const;
 
                     /**
                      * 设置Whether it is a BM region. The default is `false`.
-                     * @param IsBm Whether it is a BM region. The default is `false`.
+                     * @param _isBm Whether it is a BM region. The default is `false`.
+                     * 
                      */
                     void SetIsBm(const bool& _isBm);
 
                     /**
                      * 判断参数 IsBm 是否已赋值
                      * @return IsBm 是否已赋值
+                     * 
                      */
                     bool IsBmHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: This field may return null, indicating no valid value.
                      * @return DstRegion The target region, such as `ap-shanghai`
 Note: This field may return null, indicating no valid value.
+                     * 
                      */
                     std::string GetDstRegion() const;
 
                     /**
                      * 设置The target region, such as `ap-shanghai`
 Note: This field may return null, indicating no valid value.
-                     * @param DstRegion The target region, such as `ap-shanghai`
+                     * @param _dstRegion The target region, such as `ap-shanghai`
 Note: This field may return null, indicating no valid value.
+                     * 
                      */
                     void SetDstRegion(const std::string& _dstRegion);
 
                     /**
                      * 判断参数 DstRegion 是否已赋值
                      * @return DstRegion 是否已赋值
+                     * 
                      */
                     bool DstRegionHasBeenSet() const;
 
                     /**
                      * 获取Whether the target region is a BM region. The default is `false`.
                      * @return DstIsBm Whether the target region is a BM region. The default is `false`.
+                     * 
                      */
                     bool GetDstIsBm() const;
 
                     /**
                      * 设置Whether the target region is a BM region. The default is `false`.
-                     * @param DstIsBm Whether the target region is a BM region. The default is `false`.
+                     * @param _dstIsBm Whether the target region is a BM region. The default is `false`.
+                     * 
                      */
                     void SetDstIsBm(const bool& _dstIsBm);
 
                     /**
                      * 判断参数 DstIsBm 是否已赋值
                      * @return DstIsBm 是否已赋值
+                     * 
                      */
                     bool DstIsBmHasBeenSet() const;
 

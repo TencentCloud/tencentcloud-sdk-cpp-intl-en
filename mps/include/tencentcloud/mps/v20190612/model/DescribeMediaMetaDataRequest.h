@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Input information of file for metadata getting.
                      * @return InputInfo Input information of file for metadata getting.
+                     * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
                      * 设置Input information of file for metadata getting.
-                     * @param InputInfo Input information of file for metadata getting.
+                     * @param _inputInfo Input information of file for metadata getting.
+                     * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
 
                     /**
                      * 判断参数 InputInfo 是否已赋值
                      * @return InputInfo 是否已赋值
+                     * 
                      */
                     bool InputInfoHasBeenSet() const;
 

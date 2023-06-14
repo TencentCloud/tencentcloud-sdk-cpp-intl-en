@@ -56,6 +56,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -64,16 +65,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Status code cache expiration configuration switch
+                     * @param _switch Status code cache expiration configuration switch
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -82,20 +85,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheRules Status code cache expiration rules details
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<StatusCodeCacheRule> GetCacheRules() const;
 
                     /**
                      * 设置Status code cache expiration rules details
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CacheRules Status code cache expiration rules details
+                     * @param _cacheRules Status code cache expiration rules details
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCacheRules(const std::vector<StatusCodeCacheRule>& _cacheRules);
 
                     /**
                      * 判断参数 CacheRules 是否已赋值
                      * @return CacheRules 是否已赋值
+                     * 
                      */
                     bool CacheRulesHasBeenSet() const;
 

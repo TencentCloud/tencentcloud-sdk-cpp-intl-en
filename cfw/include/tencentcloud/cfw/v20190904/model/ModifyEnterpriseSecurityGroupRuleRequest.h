@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取UUID of the rule, which can be obtained by querying the rule list
                      * @return RuleUuid UUID of the rule, which can be obtained by querying the rule list
+                     * 
                      */
                     uint64_t GetRuleUuid() const;
 
                     /**
                      * 设置UUID of the rule, which can be obtained by querying the rule list
-                     * @param RuleUuid UUID of the rule, which can be obtained by querying the rule list
+                     * @param _ruleUuid UUID of the rule, which can be obtained by querying the rule list
+                     * 
                      */
                     void SetRuleUuid(const uint64_t& _ruleUuid);
 
                     /**
                      * 判断参数 RuleUuid 是否已赋值
                      * @return RuleUuid 是否已赋值
+                     * 
                      */
                     bool RuleUuidHasBeenSet() const;
 
                     /**
                      * 获取Modification type. Values: `0` (Modify rule content), `1` (Toggle on/off a rule) and `2` (Toggle on/off all rules)
                      * @return ModifyType Modification type. Values: `0` (Modify rule content), `1` (Toggle on/off a rule) and `2` (Toggle on/off all rules)
+                     * 
                      */
                     uint64_t GetModifyType() const;
 
                     /**
                      * 设置Modification type. Values: `0` (Modify rule content), `1` (Toggle on/off a rule) and `2` (Toggle on/off all rules)
-                     * @param ModifyType Modification type. Values: `0` (Modify rule content), `1` (Toggle on/off a rule) and `2` (Toggle on/off all rules)
+                     * @param _modifyType Modification type. Values: `0` (Modify rule content), `1` (Toggle on/off a rule) and `2` (Toggle on/off all rules)
+                     * 
                      */
                     void SetModifyType(const uint64_t& _modifyType);
 
                     /**
                      * 判断参数 ModifyType 是否已赋值
                      * @return ModifyType 是否已赋值
+                     * 
                      */
                     bool ModifyTypeHasBeenSet() const;
 
                     /**
                      * 获取The new rule content you want. It’s only required when you want to modify the rule content (`ModifyType=0`)
                      * @return Data The new rule content you want. It’s only required when you want to modify the rule content (`ModifyType=0`)
+                     * 
                      */
                     SecurityGroupRule GetData() const;
 
                     /**
                      * 设置The new rule content you want. It’s only required when you want to modify the rule content (`ModifyType=0`)
-                     * @param Data The new rule content you want. It’s only required when you want to modify the rule content (`ModifyType=0`)
+                     * @param _data The new rule content you want. It’s only required when you want to modify the rule content (`ModifyType=0`)
+                     * 
                      */
                     void SetData(const SecurityGroupRule& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取`0`: Do not enable; `1`: Enable
                      * @return Enable `0`: Do not enable; `1`: Enable
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置`0`: Do not enable; `1`: Enable
-                     * @param Enable `0`: Do not enable; `1`: Enable
+                     * @param _enable `0`: Do not enable; `1`: Enable
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

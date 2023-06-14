@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Log topic name
                      * @return TopicName Log topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Log topic name
-                     * @param TopicName Log topic name
+                     * @param _topicName Log topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
                      * @return PartitionCount The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
+                     * 
                      */
                     uint64_t GetPartitionCount() const;
 
                     /**
                      * 设置The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
-                     * @param PartitionCount The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
+                     * @param _partitionCount The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
+                     * 
                      */
                     void SetPartitionCount(const uint64_t& _partitionCount);
 
                     /**
                      * 判断参数 PartitionCount 是否已赋值
                      * @return PartitionCount 是否已赋值
+                     * 
                      */
                     bool PartitionCountHasBeenSet() const;
 
                     /**
                      * 获取Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
                      * @return TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+                     * 
                      */
                     std::string GetTopicType() const;
 
                     /**
                      * 设置Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
-                     * @param TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+                     * @param _topicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+                     * 
                      */
                     void SetTopicType(const std::string& _topicType);
 
                     /**
                      * 判断参数 TopicType 是否已赋值
                      * @return TopicType 是否已赋值
+                     * 
                      */
                     bool TopicTypeHasBeenSet() const;
 
                     /**
                      * 获取Logset retention period (in days). Default: 30 days.
                      * @return Period Logset retention period (in days). Default: 30 days.
+                     * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 设置Logset retention period (in days). Default: 30 days.
-                     * @param Period Logset retention period (in days). Default: 30 days.
+                     * @param _period Logset retention period (in days). Default: 30 days.
+                     * 
                      */
                     void SetPeriod(const uint64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
                      * @return StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * 
                      */
                     std::string GetStorageType() const;
 
                     /**
                      * 设置Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
-                     * @param StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * @param _storageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * 
                      */
                     void SetStorageType(const std::string& _storageType);
 
                     /**
                      * 判断参数 StorageType 是否已赋值
                      * @return StorageType 是否已赋值
+                     * 
                      */
                     bool StorageTypeHasBeenSet() const;
 

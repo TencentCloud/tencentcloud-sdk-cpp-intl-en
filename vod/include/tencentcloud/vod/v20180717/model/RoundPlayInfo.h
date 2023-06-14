@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取The playlist ID.
                      * @return RoundPlayId The playlist ID.
+                     * 
                      */
                     std::string GetRoundPlayId() const;
 
                     /**
                      * 设置The playlist ID.
-                     * @param RoundPlayId The playlist ID.
+                     * @param _roundPlayId The playlist ID.
+                     * 
                      */
                     void SetRoundPlayId(const std::string& _roundPlayId);
 
                     /**
                      * 判断参数 RoundPlayId 是否已赋值
                      * @return RoundPlayId 是否已赋值
+                     * 
                      */
                     bool RoundPlayIdHasBeenSet() const;
 
                     /**
                      * 获取The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
                      * @return StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @param StartTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * @param _startTime The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The files on the list.
                      * @return RoundPlaylist The files on the list.
+                     * 
                      */
                     std::vector<RoundPlayListItemInfo> GetRoundPlaylist() const;
 
                     /**
                      * 设置The files on the list.
-                     * @param RoundPlaylist The files on the list.
+                     * @param _roundPlaylist The files on the list.
+                     * 
                      */
                     void SetRoundPlaylist(const std::vector<RoundPlayListItemInfo>& _roundPlaylist);
 
                     /**
                      * 判断参数 RoundPlaylist 是否已赋值
                      * @return RoundPlaylist 是否已赋值
+                     * 
                      */
                     bool RoundPlaylistHasBeenSet() const;
 
                     /**
                      * 获取The playlist name (not longer than 64 characters).
                      * @return Name The playlist name (not longer than 64 characters).
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The playlist name (not longer than 64 characters).
-                     * @param Name The playlist name (not longer than 64 characters).
+                     * @param _name The playlist name (not longer than 64 characters).
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The playlist description (not longer than 256 characters).
                      * @return Desc The playlist description (not longer than 256 characters).
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置The playlist description (not longer than 256 characters).
-                     * @param Desc The playlist description (not longer than 256 characters).
+                     * @param _desc The playlist description (not longer than 256 characters).
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 

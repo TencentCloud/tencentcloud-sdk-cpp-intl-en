@@ -47,108 +47,126 @@ namespace TencentCloud
                     /**
                      * 获取Module ID.
                      * @return ModuleId Module ID.
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID.
-                     * @param ModuleId Module ID.
+                     * @param _moduleId Module ID.
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 
                     /**
                      * 获取Model ID.
                      * @return InstanceType Model ID.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Model ID.
-                     * @param InstanceType Model ID.
+                     * @param _instanceType Model ID.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Default data disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
                      * @return DefaultDataDiskSize Default data disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
+                     * 
                      */
                     int64_t GetDefaultDataDiskSize() const;
 
                     /**
                      * 设置Default data disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
-                     * @param DefaultDataDiskSize Default data disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
+                     * @param _defaultDataDiskSize Default data disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
+                     * 
                      */
                     void SetDefaultDataDiskSize(const int64_t& _defaultDataDiskSize);
 
                     /**
                      * 判断参数 DefaultDataDiskSize 是否已赋值
                      * @return DefaultDataDiskSize 是否已赋值
+                     * 
                      */
                     bool DefaultDataDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Default system disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
                      * @return DefaultSystemDiskSize Default system disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
+                     * 
                      */
                     int64_t GetDefaultSystemDiskSize() const;
 
                     /**
                      * 设置Default system disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
-                     * @param DefaultSystemDiskSize Default system disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
+                     * @param _defaultSystemDiskSize Default system disk size in GB. It cannot exceed the system disk size range. For more information, see `DescribeConfig`.
+                     * 
                      */
                     void SetDefaultSystemDiskSize(const int64_t& _defaultSystemDiskSize);
 
                     /**
                      * 判断参数 DefaultSystemDiskSize 是否已赋值
                      * @return DefaultSystemDiskSize 是否已赋值
+                     * 
                      */
                     bool DefaultSystemDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取System disk
                      * @return SystemDisk System disk
+                     * 
                      */
                     SystemDisk GetSystemDisk() const;
 
                     /**
                      * 设置System disk
-                     * @param SystemDisk System disk
+                     * @param _systemDisk System disk
+                     * 
                      */
                     void SetSystemDisk(const SystemDisk& _systemDisk);
 
                     /**
                      * 判断参数 SystemDisk 是否已赋值
                      * @return SystemDisk 是否已赋值
+                     * 
                      */
                     bool SystemDiskHasBeenSet() const;
 
                     /**
                      * 获取Data disk
                      * @return DataDisks Data disk
+                     * 
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
                      * 设置Data disk
-                     * @param DataDisks Data disk
+                     * @param _dataDisks Data disk
+                     * 
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
                     /**
                      * 判断参数 DataDisks 是否已赋值
                      * @return DataDisks 是否已赋值
+                     * 
                      */
                     bool DataDisksHasBeenSet() const;
 

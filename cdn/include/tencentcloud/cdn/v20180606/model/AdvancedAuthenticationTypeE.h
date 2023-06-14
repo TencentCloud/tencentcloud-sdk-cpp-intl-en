@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SecretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SecretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
+                     * @param _secretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SignParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSignParam() const;
 
                     /**
                      * 设置Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SignParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _signParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSignParam(const std::string& _signParam);
 
                     /**
                      * 判断参数 SignParam 是否已赋值
                      * @return SignParam 是否已赋值
+                     * 
                      */
                     bool SignParamHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AclSignParam ACL signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAclSignParam() const;
 
                     /**
                      * 设置ACL signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AclSignParam ACL signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _aclSignParam ACL signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAclSignParam(const std::string& _aclSignParam);
 
                     /**
                      * 判断参数 AclSignParam 是否已赋值
                      * @return AclSignParam 是否已赋值
+                     * 
                      */
                     bool AclSignParamHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StartTimeParam Start time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTimeParam() const;
 
                     /**
                      * 设置Start time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param StartTimeParam Start time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _startTimeParam Start time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTimeParam(const std::string& _startTimeParam);
 
                     /**
                      * 判断参数 StartTimeParam 是否已赋值
                      * @return StartTimeParam 是否已赋值
+                     * 
                      */
                     bool StartTimeParamHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ExpireTimeParam Expiration time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTimeParam() const;
 
                     /**
                      * 设置Expiration time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ExpireTimeParam Expiration time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _expireTimeParam Expiration time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTimeParam(const std::string& _expireTimeParam);
 
                     /**
                      * 判断参数 ExpireTimeParam 是否已赋值
                      * @return ExpireTimeParam 是否已赋值
+                     * 
                      */
                     bool ExpireTimeParamHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimeFormat Time format (dec)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTimeFormat() const;
 
                     /**
                      * 设置Time format (dec)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimeFormat Time format (dec)
+                     * @param _timeFormat Time format (dec)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
 
                     /**
                      * 判断参数 TimeFormat 是否已赋值
                      * @return TimeFormat 是否已赋值
+                     * 
                      */
                     bool TimeFormatHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Enable Whether the dynamic message retention time configuration is enabled. 0: disabled; 1: enabled
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Whether the dynamic message retention time configuration is enabled. 0: disabled; 1: enabled
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Enable Whether the dynamic message retention time configuration is enabled. 0: disabled; 1: enabled
+                     * @param _enable Whether the dynamic message retention time configuration is enabled. 0: disabled; 1: enabled
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return DiskQuotaPercentage Disk quota threshold (in percentage) for triggering the message retention time change event
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDiskQuotaPercentage() const;
 
                     /**
                      * 设置Disk quota threshold (in percentage) for triggering the message retention time change event
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param DiskQuotaPercentage Disk quota threshold (in percentage) for triggering the message retention time change event
+                     * @param _diskQuotaPercentage Disk quota threshold (in percentage) for triggering the message retention time change event
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskQuotaPercentage(const int64_t& _diskQuotaPercentage);
 
                     /**
                      * 判断参数 DiskQuotaPercentage 是否已赋值
                      * @return DiskQuotaPercentage 是否已赋值
+                     * 
                      */
                     bool DiskQuotaPercentageHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return StepForwardPercentage Percentage by which the message retention time is shortened each time
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStepForwardPercentage() const;
 
                     /**
                      * 设置Percentage by which the message retention time is shortened each time
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param StepForwardPercentage Percentage by which the message retention time is shortened each time
+                     * @param _stepForwardPercentage Percentage by which the message retention time is shortened each time
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepForwardPercentage(const int64_t& _stepForwardPercentage);
 
                     /**
                      * 判断参数 StepForwardPercentage 是否已赋值
                      * @return StepForwardPercentage 是否已赋值
+                     * 
                      */
                     bool StepForwardPercentageHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return BottomRetention Minimum retention time, in minutes
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBottomRetention() const;
 
                     /**
                      * 设置Minimum retention time, in minutes
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param BottomRetention Minimum retention time, in minutes
+                     * @param _bottomRetention Minimum retention time, in minutes
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBottomRetention(const int64_t& _bottomRetention);
 
                     /**
                      * 判断参数 BottomRetention 是否已赋值
                      * @return BottomRetention 是否已赋值
+                     * 
                      */
                     bool BottomRetentionHasBeenSet() const;
 

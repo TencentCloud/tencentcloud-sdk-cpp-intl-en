@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of tdsql-ow728lmc
                      * @return InstanceId Instance ID in the format of tdsql-ow728lmc
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of tdsql-ow728lmc
-                     * @param InstanceId Instance ID in the format of tdsql-ow728lmc
+                     * @param _instanceId Instance ID in the format of tdsql-ow728lmc
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Target AZ. The node with the lowest delay in the target AZ will be automatically promoted to source node.
                      * @return Zone Target AZ. The node with the lowest delay in the target AZ will be automatically promoted to source node.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Target AZ. The node with the lowest delay in the target AZ will be automatically promoted to source node.
-                     * @param Zone Target AZ. The node with the lowest delay in the target AZ will be automatically promoted to source node.
+                     * @param _zone Target AZ. The node with the lowest delay in the target AZ will be automatically promoted to source node.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 

@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取Kafka instance ID
                      * @return InstanceId Kafka instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Kafka instance ID
-                     * @param InstanceId Kafka instance ID
+                     * @param _instanceId Kafka instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Kafka consumer group
                      * @return Group Kafka consumer group
+                     * 
                      */
                     std::string GetGroup() const;
 
                     /**
                      * 设置Kafka consumer group
-                     * @param Group Kafka consumer group
+                     * @param _group Kafka consumer group
+                     * 
                      */
                     void SetGroup(const std::string& _group);
 
                     /**
                      * 判断参数 Group 是否已赋值
                      * @return Group 是否已赋值
+                     * 
                      */
                     bool GroupHasBeenSet() const;
 
                     /**
                      * 获取Offset resetting policy. Meanings of the input parameters: 0: equivalent to the `shift-by` parameter, which indicates to shift the offset forward or backward by the value of the `shift`. 1: equivalent to `by-duration`, `to-datetime`, `to-earliest`, or `to-latest`, which indicates to move the offset to the specified timestamp. 2: equivalent to `to-offset`, which indicates to move the offset to the specified offset position
                      * @return Strategy Offset resetting policy. Meanings of the input parameters: 0: equivalent to the `shift-by` parameter, which indicates to shift the offset forward or backward by the value of the `shift`. 1: equivalent to `by-duration`, `to-datetime`, `to-earliest`, or `to-latest`, which indicates to move the offset to the specified timestamp. 2: equivalent to `to-offset`, which indicates to move the offset to the specified offset position
+                     * 
                      */
                     int64_t GetStrategy() const;
 
                     /**
                      * 设置Offset resetting policy. Meanings of the input parameters: 0: equivalent to the `shift-by` parameter, which indicates to shift the offset forward or backward by the value of the `shift`. 1: equivalent to `by-duration`, `to-datetime`, `to-earliest`, or `to-latest`, which indicates to move the offset to the specified timestamp. 2: equivalent to `to-offset`, which indicates to move the offset to the specified offset position
-                     * @param Strategy Offset resetting policy. Meanings of the input parameters: 0: equivalent to the `shift-by` parameter, which indicates to shift the offset forward or backward by the value of the `shift`. 1: equivalent to `by-duration`, `to-datetime`, `to-earliest`, or `to-latest`, which indicates to move the offset to the specified timestamp. 2: equivalent to `to-offset`, which indicates to move the offset to the specified offset position
+                     * @param _strategy Offset resetting policy. Meanings of the input parameters: 0: equivalent to the `shift-by` parameter, which indicates to shift the offset forward or backward by the value of the `shift`. 1: equivalent to `by-duration`, `to-datetime`, `to-earliest`, or `to-latest`, which indicates to move the offset to the specified timestamp. 2: equivalent to `to-offset`, which indicates to move the offset to the specified offset position
+                     * 
                      */
                     void SetStrategy(const int64_t& _strategy);
 
                     /**
                      * 判断参数 Strategy 是否已赋值
                      * @return Strategy 是否已赋值
+                     * 
                      */
                     bool StrategyHasBeenSet() const;
 
                     /**
                      * 获取Indicates the topics to be reset. If this parameter is left empty, all topics will be reset
                      * @return Topics Indicates the topics to be reset. If this parameter is left empty, all topics will be reset
+                     * 
                      */
                     std::vector<std::string> GetTopics() const;
 
                     /**
                      * 设置Indicates the topics to be reset. If this parameter is left empty, all topics will be reset
-                     * @param Topics Indicates the topics to be reset. If this parameter is left empty, all topics will be reset
+                     * @param _topics Indicates the topics to be reset. If this parameter is left empty, all topics will be reset
+                     * 
                      */
                     void SetTopics(const std::vector<std::string>& _topics);
 
                     /**
                      * 判断参数 Topics 是否已赋值
                      * @return Topics 是否已赋值
+                     * 
                      */
                     bool TopicsHasBeenSet() const;
 
                     /**
                      * 获取When `strategy` is 0, this field is required. If it is above zero, the offset will be shifted backward by the value of the `shift`. If it is below zero, the offset will be shifted forward by the value of the `shift`. After a correct reset, the new offset should be (old_offset + shift). Note that if the new offset is smaller than the `earliest` parameter of the partition, it will be set to `earliest`, and if it is greater than the `latest` parameter of the partition, it will be set to `latest`
                      * @return Shift When `strategy` is 0, this field is required. If it is above zero, the offset will be shifted backward by the value of the `shift`. If it is below zero, the offset will be shifted forward by the value of the `shift`. After a correct reset, the new offset should be (old_offset + shift). Note that if the new offset is smaller than the `earliest` parameter of the partition, it will be set to `earliest`, and if it is greater than the `latest` parameter of the partition, it will be set to `latest`
+                     * 
                      */
                     int64_t GetShift() const;
 
                     /**
                      * 设置When `strategy` is 0, this field is required. If it is above zero, the offset will be shifted backward by the value of the `shift`. If it is below zero, the offset will be shifted forward by the value of the `shift`. After a correct reset, the new offset should be (old_offset + shift). Note that if the new offset is smaller than the `earliest` parameter of the partition, it will be set to `earliest`, and if it is greater than the `latest` parameter of the partition, it will be set to `latest`
-                     * @param Shift When `strategy` is 0, this field is required. If it is above zero, the offset will be shifted backward by the value of the `shift`. If it is below zero, the offset will be shifted forward by the value of the `shift`. After a correct reset, the new offset should be (old_offset + shift). Note that if the new offset is smaller than the `earliest` parameter of the partition, it will be set to `earliest`, and if it is greater than the `latest` parameter of the partition, it will be set to `latest`
+                     * @param _shift When `strategy` is 0, this field is required. If it is above zero, the offset will be shifted backward by the value of the `shift`. If it is below zero, the offset will be shifted forward by the value of the `shift`. After a correct reset, the new offset should be (old_offset + shift). Note that if the new offset is smaller than the `earliest` parameter of the partition, it will be set to `earliest`, and if it is greater than the `latest` parameter of the partition, it will be set to `latest`
+                     * 
                      */
                     void SetShift(const int64_t& _shift);
 
                     /**
                      * 判断参数 Shift 是否已赋值
                      * @return Shift 是否已赋值
+                     * 
                      */
                     bool ShiftHasBeenSet() const;
 
                     /**
                      * 获取Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
                      * @return ShiftTimestamp Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
+                     * 
                      */
                     int64_t GetShiftTimestamp() const;
 
                     /**
                      * 设置Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
-                     * @param ShiftTimestamp Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
+                     * @param _shiftTimestamp Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
+                     * 
                      */
                     void SetShiftTimestamp(const int64_t& _shiftTimestamp);
 
                     /**
                      * 判断参数 ShiftTimestamp 是否已赋值
                      * @return ShiftTimestamp 是否已赋值
+                     * 
                      */
                     bool ShiftTimestampHasBeenSet() const;
 
                     /**
                      * 获取Position of the offset that needs to be reset. When `strategy` is 2, this field is required
                      * @return Offset Position of the offset that needs to be reset. When `strategy` is 2, this field is required
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Position of the offset that needs to be reset. When `strategy` is 2, this field is required
-                     * @param Offset Position of the offset that needs to be reset. When `strategy` is 2, this field is required
+                     * @param _offset Position of the offset that needs to be reset. When `strategy` is 2, this field is required
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
                      * @return Partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     * 
                      */
                     std::vector<int64_t> GetPartitions() const;
 
                     /**
                      * 设置List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
-                     * @param Partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     * @param _partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+                     * 
                      */
                     void SetPartitions(const std::vector<int64_t>& _partitions);
 
                     /**
                      * 判断参数 Partitions 是否已赋值
                      * @return Partitions 是否已赋值
+                     * 
                      */
                     bool PartitionsHasBeenSet() const;
 

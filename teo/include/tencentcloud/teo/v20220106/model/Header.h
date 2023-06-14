@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取HTTP header name
                      * @return Name HTTP header name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置HTTP header name
-                     * @param Name HTTP header name
+                     * @param _name HTTP header name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取HTTP header value
                      * @return Value HTTP header value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置HTTP header value
-                     * @param Value HTTP header value
+                     * @param _value HTTP header value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

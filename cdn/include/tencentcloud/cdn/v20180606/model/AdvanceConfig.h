@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Name Advanced configuration name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Advanced configuration name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Name Advanced configuration name
+                     * @param _name Advanced configuration name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -77,6 +80,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Supported
 `off`: Not supported
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
@@ -85,16 +89,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Supported
 `off`: Not supported
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Value Whether to support advanced configuration
+                     * @param _value Whether to support advanced configuration
 `on`: Supported
 `off`: Not supported
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

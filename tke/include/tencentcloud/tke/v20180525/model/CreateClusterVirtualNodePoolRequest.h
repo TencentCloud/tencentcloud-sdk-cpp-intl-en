@@ -48,144 +48,168 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Node pool name
                      * @return Name Node pool name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node pool name
-                     * @param Name Node pool name
+                     * @param _name Node pool name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取List of subnet IDs
                      * @return SubnetIds List of subnet IDs
+                     * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
                      * 设置List of subnet IDs
-                     * @param SubnetIds List of subnet IDs
+                     * @param _subnetIds List of subnet IDs
+                     * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
                      * 获取List of security group IDs
                      * @return SecurityGroupIds List of security group IDs
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置List of security group IDs
-                     * @param SecurityGroupIds List of security group IDs
+                     * @param _securityGroupIds List of security group IDs
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Virtual node labels
                      * @return Labels Virtual node labels
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Virtual node labels
-                     * @param Labels Virtual node labels
+                     * @param _labels Virtual node labels
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
                     /**
                      * 获取Virtual node taint
                      * @return Taints Virtual node taint
+                     * 
                      */
                     std::vector<Taint> GetTaints() const;
 
                     /**
                      * 设置Virtual node taint
-                     * @param Taints Virtual node taint
+                     * @param _taints Virtual node taint
+                     * 
                      */
                     void SetTaints(const std::vector<Taint>& _taints);
 
                     /**
                      * 判断参数 Taints 是否已赋值
                      * @return Taints 是否已赋值
+                     * 
                      */
                     bool TaintsHasBeenSet() const;
 
                     /**
                      * 获取List of nodes
                      * @return VirtualNodes List of nodes
+                     * 
                      */
                     std::vector<VirtualNodeSpec> GetVirtualNodes() const;
 
                     /**
                      * 设置List of nodes
-                     * @param VirtualNodes List of nodes
+                     * @param _virtualNodes List of nodes
+                     * 
                      */
                     void SetVirtualNodes(const std::vector<VirtualNodeSpec>& _virtualNodes);
 
                     /**
                      * 判断参数 VirtualNodes 是否已赋值
                      * @return VirtualNodes 是否已赋值
+                     * 
                      */
                     bool VirtualNodesHasBeenSet() const;
 
                     /**
                      * 获取Setting of deletion protection
                      * @return DeletionProtection Setting of deletion protection
+                     * 
                      */
                     bool GetDeletionProtection() const;
 
                     /**
                      * 设置Setting of deletion protection
-                     * @param DeletionProtection Setting of deletion protection
+                     * @param _deletionProtection Setting of deletion protection
+                     * 
                      */
                     void SetDeletionProtection(const bool& _deletionProtection);
 
                     /**
                      * 判断参数 DeletionProtection 是否已赋值
                      * @return DeletionProtection 是否已赋值
+                     * 
                      */
                     bool DeletionProtectionHasBeenSet() const;
 
@@ -196,6 +220,7 @@ namespace TencentCloud
                      * @return OS Node pool OS:
 - `linux` (default value)
 - `windows`
+                     * 
                      */
                     std::string GetOS() const;
 
@@ -203,15 +228,17 @@ namespace TencentCloud
                      * 设置Node pool OS:
 - `linux` (default value)
 - `windows`
-                     * @param OS Node pool OS:
+                     * @param _oS Node pool OS:
 - `linux` (default value)
 - `windows`
+                     * 
                      */
                     void SetOS(const std::string& _oS);
 
                     /**
                      * 判断参数 OS 是否已赋值
                      * @return OS 是否已赋值
+                     * 
                      */
                     bool OSHasBeenSet() const;
 

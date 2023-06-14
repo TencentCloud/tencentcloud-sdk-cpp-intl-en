@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Module ID.
                      * @return ModuleId Module ID.
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID.
-                     * @param ModuleId Module ID.
+                     * @param _moduleId Module ID.
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 
                     /**
                      * 获取Module name.
                      * @return ModuleName Module name.
+                     * 
                      */
                     std::string GetModuleName() const;
 
                     /**
                      * 设置Module name.
-                     * @param ModuleName Module name.
+                     * @param _moduleName Module name.
+                     * 
                      */
                     void SetModuleName(const std::string& _moduleName);
 
                     /**
                      * 判断参数 ModuleName 是否已赋值
                      * @return ModuleName 是否已赋值
+                     * 
                      */
                     bool ModuleNameHasBeenSet() const;
 

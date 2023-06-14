@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -69,6 +72,7 @@ namespace TencentCloud
 <li> 1 = TKE </li>
 <li> 2 = EKS </li>
 <li> 3 = MEKS </li>
+                     * 
                      */
                     int64_t GetKubeType() const;
 
@@ -77,70 +81,81 @@ namespace TencentCloud
 <li> 1 = TKE </li>
 <li> 2 = EKS </li>
 <li> 3 = MEKS </li>
-                     * @param KubeType Kubernetes cluster type. Valid values:
+                     * @param _kubeType Kubernetes cluster type. Valid values:
 <li> 1 = TKE </li>
 <li> 2 = EKS </li>
 <li> 3 = MEKS </li>
+                     * 
                      */
                     void SetKubeType(const int64_t& _kubeType);
 
                     /**
                      * 判断参数 KubeType 是否已赋值
                      * @return KubeType 是否已赋值
+                     * 
                      */
                     bool KubeTypeHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Type
                      * @return Kind Type
+                     * 
                      */
                     std::string GetKind() const;
 
                     /**
                      * 设置Type
-                     * @param Kind Type
+                     * @param _kind Type
+                     * 
                      */
                     void SetKind(const std::string& _kind);
 
                     /**
                      * 判断参数 Kind 是否已赋值
                      * @return Kind 是否已赋值
+                     * 
                      */
                     bool KindHasBeenSet() const;
 
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

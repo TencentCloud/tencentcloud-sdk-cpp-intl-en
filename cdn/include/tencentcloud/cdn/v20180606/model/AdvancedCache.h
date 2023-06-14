@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CacheRules Cache expiration rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AdvanceCacheRule> GetCacheRules() const;
 
                     /**
                      * 设置Cache expiration rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CacheRules Cache expiration rule
+                     * @param _cacheRules Cache expiration rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCacheRules(const std::vector<AdvanceCacheRule>& _cacheRules);
 
                     /**
                      * 判断参数 CacheRules 是否已赋值
                      * @return CacheRules 是否已赋值
+                     * 
                      */
                     bool CacheRulesHasBeenSet() const;
 
@@ -82,6 +85,7 @@ off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIgnoreCacheControl() const;
 
@@ -92,18 +96,20 @@ off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param IgnoreCacheControl Forced cache configuration
+                     * @param _ignoreCacheControl Forced cache configuration
 on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
 
                     /**
                      * 判断参数 IgnoreCacheControl 是否已赋值
                      * @return IgnoreCacheControl 是否已赋值
+                     * 
                      */
                     bool IgnoreCacheControlHasBeenSet() const;
 
@@ -118,6 +124,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIgnoreSetCookie() const;
 
@@ -127,17 +134,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+                     * @param _ignoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
 `on`: Ignore; do not cache the header and body.
 `off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIgnoreSetCookie(const std::string& _ignoreSetCookie);
 
                     /**
                      * 判断参数 IgnoreSetCookie 是否已赋值
                      * @return IgnoreSetCookie 是否已赋值
+                     * 
                      */
                     bool IgnoreSetCookieHasBeenSet() const;
 

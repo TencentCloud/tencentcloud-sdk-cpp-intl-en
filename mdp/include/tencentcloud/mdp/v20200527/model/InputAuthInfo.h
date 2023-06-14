@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Username Username.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Username.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Username Username.
+                     * @param _username Username.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Password Password.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Password Password.
+                     * @param _password Password.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

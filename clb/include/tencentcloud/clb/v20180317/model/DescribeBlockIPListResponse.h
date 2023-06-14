@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of returned IPs
                      * @return BlockedIPCount Number of returned IPs
+                     * 
                      */
                     uint64_t GetBlockedIPCount() const;
 
                     /**
                      * 判断参数 BlockedIPCount 是否已赋值
                      * @return BlockedIPCount 是否已赋值
+                     * 
                      */
                     bool BlockedIPCountHasBeenSet() const;
 
                     /**
                      * 获取Field for getting real client IP
                      * @return ClientIPField Field for getting real client IP
+                     * 
                      */
                     std::string GetClientIPField() const;
 
                     /**
                      * 判断参数 ClientIPField 是否已赋值
                      * @return ClientIPField 是否已赋值
+                     * 
                      */
                     bool ClientIPFieldHasBeenSet() const;
 
                     /**
                      * 获取List of IPs added to blocklist 12360
                      * @return BlockedIPList List of IPs added to blocklist 12360
+                     * 
                      */
                     std::vector<BlockedIP> GetBlockedIPList() const;
 
                     /**
                      * 判断参数 BlockedIPList 是否已赋值
                      * @return BlockedIPList 是否已赋值
+                     * 
                      */
                     bool BlockedIPListHasBeenSet() const;
 

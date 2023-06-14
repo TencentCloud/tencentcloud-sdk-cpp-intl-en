@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Game server session
                      * @return GameServerSession Game server session
+                     * 
                      */
                     GameServerSession GetGameServerSession() const;
 
                     /**
                      * 设置Game server session
-                     * @param GameServerSession Game server session
+                     * @param _gameServerSession Game server session
+                     * 
                      */
                     void SetGameServerSession(const GameServerSession& _gameServerSession);
 
                     /**
                      * 判断参数 GameServerSession 是否已赋值
                      * @return GameServerSession 是否已赋值
+                     * 
                      */
                     bool GameServerSessionHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProtectionPolicy Protection policy. Valid values: NoProtection, FullProtection
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtectionPolicy() const;
 
                     /**
                      * 设置Protection policy. Valid values: NoProtection, FullProtection
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProtectionPolicy Protection policy. Valid values: NoProtection, FullProtection
+                     * @param _protectionPolicy Protection policy. Valid values: NoProtection, FullProtection
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtectionPolicy(const std::string& _protectionPolicy);
 
                     /**
                      * 判断参数 ProtectionPolicy 是否已赋值
                      * @return ProtectionPolicy 是否已赋值
+                     * 
                      */
                     bool ProtectionPolicyHasBeenSet() const;
 

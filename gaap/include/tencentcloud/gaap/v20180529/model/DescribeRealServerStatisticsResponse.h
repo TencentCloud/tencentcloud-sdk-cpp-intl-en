@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Origin server status statistics of specified listener
                      * @return StatisticsData Origin server status statistics of specified listener
+                     * 
                      */
                     std::vector<StatisticsDataInfo> GetStatisticsData() const;
 
                     /**
                      * 判断参数 StatisticsData 是否已赋值
                      * @return StatisticsData 是否已赋值
+                     * 
                      */
                     bool StatisticsDataHasBeenSet() const;
 
                     /**
                      * 获取Status statistics of multiple origin servers
                      * @return RsStatisticsData Status statistics of multiple origin servers
+                     * 
                      */
                     std::vector<MetricStatisticsInfo> GetRsStatisticsData() const;
 
                     /**
                      * 判断参数 RsStatisticsData 是否已赋值
                      * @return RsStatisticsData 是否已赋值
+                     * 
                      */
                     bool RsStatisticsDataHasBeenSet() const;
 

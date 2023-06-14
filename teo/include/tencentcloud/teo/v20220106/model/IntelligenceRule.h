@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Switch Switch
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Switch
+                     * @param _switch Switch
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Items Items in a bot intelligence rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IntelligenceRuleItem> GetItems() const;
 
                     /**
                      * 设置Items in a bot intelligence rule
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Items Items in a bot intelligence rule
+                     * @param _items Items in a bot intelligence rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetItems(const std::vector<IntelligenceRuleItem>& _items);
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

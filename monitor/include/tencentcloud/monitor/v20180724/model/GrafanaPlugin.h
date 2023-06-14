@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Grafana plugin ID
                      * @return PluginId Grafana plugin ID
+                     * 
                      */
                     std::string GetPluginId() const;
 
                     /**
                      * 设置Grafana plugin ID
-                     * @param PluginId Grafana plugin ID
+                     * @param _pluginId Grafana plugin ID
+                     * 
                      */
                     void SetPluginId(const std::string& _pluginId);
 
                     /**
                      * 判断参数 PluginId 是否已赋值
                      * @return PluginId 是否已赋值
+                     * 
                      */
                     bool PluginIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Grafana plugin version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Grafana plugin version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version Grafana plugin version
+                     * @param _version Grafana plugin version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 

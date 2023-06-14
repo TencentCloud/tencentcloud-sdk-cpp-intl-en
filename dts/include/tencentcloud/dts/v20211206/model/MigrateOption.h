@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseTable Migration object options, which tell DTS which database/table objects should be migrated.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DatabaseTableObject GetDatabaseTable() const;
 
                     /**
                      * 设置Migration object options, which tell DTS which database/table objects should be migrated.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DatabaseTable Migration object options, which tell DTS which database/table objects should be migrated.
+                     * @param _databaseTable Migration object options, which tell DTS which database/table objects should be migrated.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabaseTable(const DatabaseTableObject& _databaseTable);
 
                     /**
                      * 判断参数 DatabaseTable 是否已赋值
                      * @return DatabaseTable 是否已赋值
+                     * 
                      */
                     bool DatabaseTableHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MigrateType Migration type. Valid values: `full`, `structure`, `fullAndIncrement`. Default value: `fullAndIncrement`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMigrateType() const;
 
                     /**
                      * 设置Migration type. Valid values: `full`, `structure`, `fullAndIncrement`. Default value: `fullAndIncrement`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MigrateType Migration type. Valid values: `full`, `structure`, `fullAndIncrement`. Default value: `fullAndIncrement`.
+                     * @param _migrateType Migration type. Valid values: `full`, `structure`, `fullAndIncrement`. Default value: `fullAndIncrement`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMigrateType(const std::string& _migrateType);
 
                     /**
                      * 判断参数 MigrateType 是否已赋值
                      * @return MigrateType 是否已赋值
+                     * 
                      */
                     bool MigrateTypeHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Consistency Data consistency check option. Data consistency check is disabled by default.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ConsistencyOption GetConsistency() const;
 
                     /**
                      * 设置Data consistency check option. Data consistency check is disabled by default.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Consistency Data consistency check option. Data consistency check is disabled by default.
+                     * @param _consistency Data consistency check option. Data consistency check is disabled by default.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConsistency(const ConsistencyOption& _consistency);
 
                     /**
                      * 判断参数 Consistency 是否已赋值
                      * @return Consistency 是否已赋值
+                     * 
                      */
                     bool ConsistencyHasBeenSet() const;
 
@@ -120,20 +129,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsMigrateAccount Whether to migrate accounts. Valid values: `yes`, `no`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsMigrateAccount() const;
 
                     /**
                      * 设置Whether to migrate accounts. Valid values: `yes`, `no`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsMigrateAccount Whether to migrate accounts. Valid values: `yes`, `no`.
+                     * @param _isMigrateAccount Whether to migrate accounts. Valid values: `yes`, `no`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsMigrateAccount(const bool& _isMigrateAccount);
 
                     /**
                      * 判断参数 IsMigrateAccount 是否已赋值
                      * @return IsMigrateAccount 是否已赋值
+                     * 
                      */
                     bool IsMigrateAccountHasBeenSet() const;
 
@@ -142,20 +154,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsOverrideRoot Whether to use the `Root` account in the source database to overwrite that in the target database. Valid values: `false`, `true`. For database/table or structural migration, you should specify `false`. Note that this parameter takes effect only for OldDTS.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsOverrideRoot() const;
 
                     /**
                      * 设置Whether to use the `Root` account in the source database to overwrite that in the target database. Valid values: `false`, `true`. For database/table or structural migration, you should specify `false`. Note that this parameter takes effect only for OldDTS.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsOverrideRoot Whether to use the `Root` account in the source database to overwrite that in the target database. Valid values: `false`, `true`. For database/table or structural migration, you should specify `false`. Note that this parameter takes effect only for OldDTS.
+                     * @param _isOverrideRoot Whether to use the `Root` account in the source database to overwrite that in the target database. Valid values: `false`, `true`. For database/table or structural migration, you should specify `false`. Note that this parameter takes effect only for OldDTS.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsOverrideRoot(const bool& _isOverrideRoot);
 
                     /**
                      * 判断参数 IsOverrideRoot 是否已赋值
                      * @return IsOverrideRoot 是否已赋值
+                     * 
                      */
                     bool IsOverrideRootHasBeenSet() const;
 
@@ -164,20 +179,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsDstReadOnly Whether to set the target database to read-only during migration, which takes effect only for MySQL databases. Valid values: `true`, `false`. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsDstReadOnly() const;
 
                     /**
                      * 设置Whether to set the target database to read-only during migration, which takes effect only for MySQL databases. Valid values: `true`, `false`. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsDstReadOnly Whether to set the target database to read-only during migration, which takes effect only for MySQL databases. Valid values: `true`, `false`. Default value: `false`.
+                     * @param _isDstReadOnly Whether to set the target database to read-only during migration, which takes effect only for MySQL databases. Valid values: `true`, `false`. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDstReadOnly(const bool& _isDstReadOnly);
 
                     /**
                      * 判断参数 IsDstReadOnly 是否已赋值
                      * @return IsDstReadOnly 是否已赋值
+                     * 
                      */
                     bool IsDstReadOnlyHasBeenSet() const;
 
@@ -188,6 +206,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ExtraAttr Additional information. You can set additional parameters for certain database types. For Redis, you can define the following parameters: 
 ["ClientOutputBufferHardLimit":512, 	Hard limit of the replica buffer zone capacity in MB	"ClientOutputBufferSoftLimit":512, 	Soft limit of the replica buffer zone capacity in MB	"ClientOutputBufferPersistTime":60, Soft limit duration of the replica buffer zone in seconds	"ReplBacklogSize":512, 	Limit of the circular buffer zone capacity in MB	"ReplTimeout":120, 		Replication timeout period in seconds]
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<KeyValuePairOption> GetExtraAttr() const;
 
@@ -195,15 +214,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Additional information. You can set additional parameters for certain database types. For Redis, you can define the following parameters: 
 ["ClientOutputBufferHardLimit":512, 	Hard limit of the replica buffer zone capacity in MB	"ClientOutputBufferSoftLimit":512, 	Soft limit of the replica buffer zone capacity in MB	"ClientOutputBufferPersistTime":60, Soft limit duration of the replica buffer zone in seconds	"ReplBacklogSize":512, 	Limit of the circular buffer zone capacity in MB	"ReplTimeout":120, 		Replication timeout period in seconds]
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExtraAttr Additional information. You can set additional parameters for certain database types. For Redis, you can define the following parameters: 
+                     * @param _extraAttr Additional information. You can set additional parameters for certain database types. For Redis, you can define the following parameters: 
 ["ClientOutputBufferHardLimit":512, 	Hard limit of the replica buffer zone capacity in MB	"ClientOutputBufferSoftLimit":512, 	Soft limit of the replica buffer zone capacity in MB	"ClientOutputBufferPersistTime":60, Soft limit duration of the replica buffer zone in seconds	"ReplBacklogSize":512, 	Limit of the circular buffer zone capacity in MB	"ReplTimeout":120, 		Replication timeout period in seconds]
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtraAttr(const std::vector<KeyValuePairOption>& _extraAttr);
 
                     /**
                      * 判断参数 ExtraAttr 是否已赋值
                      * @return ExtraAttr 是否已赋值
+                     * 
                      */
                     bool ExtraAttrHasBeenSet() const;
 

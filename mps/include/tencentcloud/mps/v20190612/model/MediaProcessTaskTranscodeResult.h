@@ -51,90 +51,105 @@ namespace TencentCloud
                     /**
                      * 获取Task status. Valid values: PROCESSING, SUCCESS, FAIL.
                      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * @param _status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
                      * @return ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+                     * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
                      * 设置The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
-                     * @param ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+                     * @param _errCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+                     * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
 
                     /**
                      * 判断参数 ErrCodeExt 是否已赋值
                      * @return ErrCodeExt 是否已赋值
+                     * 
                      */
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
                      * 获取Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
                      * @return ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
-                     * @param ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+                     * @param _errCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return Message Error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
-                     * @param Message Error message.
+                     * @param _message Error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Input for a transcoding task.
                      * @return Input Input for a transcoding task.
+                     * 
                      */
                     TranscodeTaskInput GetInput() const;
 
                     /**
                      * 设置Input for a transcoding task.
-                     * @param Input Input for a transcoding task.
+                     * @param _input Input for a transcoding task.
+                     * 
                      */
                     void SetInput(const TranscodeTaskInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
@@ -143,20 +158,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Output Output of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaTranscodeItem GetOutput() const;
 
                     /**
                      * 设置Output of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of a transcoding task.
+                     * @param _output Output of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutput(const MediaTranscodeItem& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 
@@ -165,20 +183,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Progress Transcoding progress. Value range: 0-100
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Transcoding progress. Value range: 0-100
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Progress Transcoding progress. Value range: 0-100
+                     * @param _progress Transcoding progress. Value range: 0-100
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 

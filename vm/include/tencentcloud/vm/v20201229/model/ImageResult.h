@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HitFlag This parameter indicates whether the moderated content hit a maliciousness tag. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHitFlag() const;
 
                     /**
                      * 设置This parameter indicates whether the moderated content hit a maliciousness tag. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HitFlag This parameter indicates whether the moderated content hit a maliciousness tag. Valid values: 0 (**no**), 1 (**yes**).
+                     * @param _hitFlag This parameter indicates whether the moderated content hit a maliciousness tag. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHitFlag(const int64_t& _hitFlag);
 
                     /**
                      * 判断参数 HitFlag 是否已赋值
                      * @return HitFlag 是否已赋值
+                     * 
                      */
                     bool HitFlagHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Label This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Label This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+                     * @param _label This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -98,6 +104,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Suggestion This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -105,15 +112,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
+                     * @param _suggestion This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -122,20 +131,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Score This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn-SexBehavior 99* indicates that the text is highly likely to fall into the category of content involving sexual behaviors.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn-SexBehavior 99* indicates that the text is highly likely to fall into the category of content involving sexual behaviors.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Score This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn-SexBehavior 99* indicates that the text is highly likely to fall into the category of content involving sexual behaviors.
+                     * @param _score This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn-SexBehavior 99* indicates that the text is highly likely to fall into the category of content involving sexual behaviors.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -144,20 +156,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Results This field is used to return the sub-result of the image moderation result. For details, see the description of the `ImageResultResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ImageResultResult> GetResults() const;
 
                     /**
                      * 设置This field is used to return the sub-result of the image moderation result. For details, see the description of the `ImageResultResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Results This field is used to return the sub-result of the image moderation result. For details, see the description of the `ImageResultResult` data structure.
+                     * @param _results This field is used to return the sub-result of the image moderation result. For details, see the description of the `ImageResultResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResults(const std::vector<ImageResultResult>& _results);
 
                     /**
                      * 判断参数 Results 是否已赋值
                      * @return Results 是否已赋值
+                     * 
                      */
                     bool ResultsHasBeenSet() const;
 
@@ -166,20 +181,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Url This field is used to return the access URL of the moderation result. Supported image formats include PNG, JPG, JPEG, BMP, GIF, and WEBP.<br>Note: the data **is valid for 12 hours by default**. If you need a longer storage period, configure it in the COS bucket where the data is stored.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置This field is used to return the access URL of the moderation result. Supported image formats include PNG, JPG, JPEG, BMP, GIF, and WEBP.<br>Note: the data **is valid for 12 hours by default**. If you need a longer storage period, configure it in the COS bucket where the data is stored.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Url This field is used to return the access URL of the moderation result. Supported image formats include PNG, JPG, JPEG, BMP, GIF, and WEBP.<br>Note: the data **is valid for 12 hours by default**. If you need a longer storage period, configure it in the COS bucket where the data is stored.
+                     * @param _url This field is used to return the access URL of the moderation result. Supported image formats include PNG, JPG, JPEG, BMP, GIF, and WEBP.<br>Note: the data **is valid for 12 hours by default**. If you need a longer storage period, configure it in the COS bucket where the data is stored.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -188,20 +206,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Extra This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExtra() const;
 
                     /**
                      * 设置This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Extra This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
+                     * @param _extra This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtra(const std::string& _extra);
 
                     /**
                      * 判断参数 Extra 是否已赋值
                      * @return Extra 是否已赋值
+                     * 
                      */
                     bool ExtraHasBeenSet() const;
 
@@ -210,20 +231,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
                      * 设置This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubLabel This field is used to return a subtag under the current tag (Lable).
+                     * @param _subLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
 
                     /**
                      * 判断参数 SubLabel 是否已赋值
                      * @return SubLabel 是否已赋值
+                     * 
                      */
                     bool SubLabelHasBeenSet() const;
 

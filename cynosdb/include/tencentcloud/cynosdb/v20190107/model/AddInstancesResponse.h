@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TranId Freezing transaction. One freezing transaction ID is generated each time an instance is added.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTranId() const;
 
                     /**
                      * 判断参数 TranId 是否已赋值
                      * @return TranId 是否已赋值
+                     * 
                      */
                     bool TranIdHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DealNames Pay-as-You-Go order ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetDealNames() const;
 
                     /**
                      * 判断参数 DealNames 是否已赋值
                      * @return DealNames 是否已赋值
+                     * 
                      */
                     bool DealNamesHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResourceIds List of IDs of delivered resources
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
                      * 判断参数 ResourceIds 是否已赋值
                      * @return ResourceIds 是否已赋值
+                     * 
                      */
                     bool ResourceIdsHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BigDealIds Big order ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
 
                     /**
                      * 判断参数 BigDealIds 是否已赋值
                      * @return BigDealIds 是否已赋值
+                     * 
                      */
                     bool BigDealIdsHasBeenSet() const;
 

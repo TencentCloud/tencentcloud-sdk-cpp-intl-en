@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Tag key
                      * @return Key Tag key
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Tag key
-                     * @param Key Tag key
+                     * @param _key Tag key
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Tag value
                      * @return Value Tag value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Tag value
-                     * @param Value Tag value
+                     * @param _value Tag value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ResourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
+                     * @param _resourceType Type of the resource binded to the tag. Currently supported types include "auto-scaling-group"
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 

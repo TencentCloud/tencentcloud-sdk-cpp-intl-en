@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return OriginProtectionInfo Origin protection configuration.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<OriginProtectionInfo> GetOriginProtectionInfo() const;
 
                     /**
                      * 判断参数 OriginProtectionInfo 是否已赋值
                      * @return OriginProtectionInfo 是否已赋值
+                     * 
                      */
                     bool OriginProtectionInfoHasBeenSet() const;
 

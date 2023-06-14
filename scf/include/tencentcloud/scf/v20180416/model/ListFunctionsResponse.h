@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Function list
                      * @return Functions Function list
+                     * 
                      */
                     std::vector<Function> GetFunctions() const;
 
                     /**
                      * 判断参数 Functions 是否已赋值
                      * @return Functions 是否已赋值
+                     * 
                      */
                     bool FunctionsHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

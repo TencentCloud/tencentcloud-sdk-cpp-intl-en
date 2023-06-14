@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Only the running connection instance ID lists can be enabled.
                      * @return InvalidStatusInstanceSet Only the running connection instance ID lists can be enabled.
+                     * 
                      */
                     std::vector<std::string> GetInvalidStatusInstanceSet() const;
 
                     /**
                      * 判断参数 InvalidStatusInstanceSet 是否已赋值
                      * @return InvalidStatusInstanceSet 是否已赋值
+                     * 
                      */
                     bool InvalidStatusInstanceSetHasBeenSet() const;
 
                     /**
                      * 获取ID list of connection instances failed to be enabled.
                      * @return OperationFailedInstanceSet ID list of connection instances failed to be enabled.
+                     * 
                      */
                     std::vector<std::string> GetOperationFailedInstanceSet() const;
 
                     /**
                      * 判断参数 OperationFailedInstanceSet 是否已赋值
                      * @return OperationFailedInstanceSet 是否已赋值
+                     * 
                      */
                     bool OperationFailedInstanceSetHasBeenSet() const;
 

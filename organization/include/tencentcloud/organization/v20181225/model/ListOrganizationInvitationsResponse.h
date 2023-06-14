@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of invitations
                      * @return Invitations List of invitations
+                     * 
                      */
                     std::vector<OrgInvitation> GetInvitations() const;
 
                     /**
                      * 判断参数 Invitations 是否已赋值
                      * @return Invitations 是否已赋值
+                     * 
                      */
                     bool InvitationsHasBeenSet() const;
 
                     /**
                      * 获取Total number of results
                      * @return TotalCount Total number of results
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

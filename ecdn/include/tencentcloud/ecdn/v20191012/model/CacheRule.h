@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Cache type. Valid values: all (all files), file (extension type), directory (directory), path (full path), index (homepage).
                      * @return CacheType Cache type. Valid values: all (all files), file (extension type), directory (directory), path (full path), index (homepage).
+                     * 
                      */
                     std::string GetCacheType() const;
 
                     /**
                      * 设置Cache type. Valid values: all (all files), file (extension type), directory (directory), path (full path), index (homepage).
-                     * @param CacheType Cache type. Valid values: all (all files), file (extension type), directory (directory), path (full path), index (homepage).
+                     * @param _cacheType Cache type. Valid values: all (all files), file (extension type), directory (directory), path (full path), index (homepage).
+                     * 
                      */
                     void SetCacheType(const std::string& _cacheType);
 
                     /**
                      * 判断参数 CacheType 是否已赋值
                      * @return CacheType 是否已赋值
+                     * 
                      */
                     bool CacheTypeHasBeenSet() const;
 
                     /**
                      * 获取Cached content list.
                      * @return CacheContents Cached content list.
+                     * 
                      */
                     std::vector<std::string> GetCacheContents() const;
 
                     /**
                      * 设置Cached content list.
-                     * @param CacheContents Cached content list.
+                     * @param _cacheContents Cached content list.
+                     * 
                      */
                     void SetCacheContents(const std::vector<std::string>& _cacheContents);
 
                     /**
                      * 判断参数 CacheContents 是否已赋值
                      * @return CacheContents 是否已赋值
+                     * 
                      */
                     bool CacheContentsHasBeenSet() const;
 
                     /**
                      * 获取Cache time in seconds.
                      * @return CacheTime Cache time in seconds.
+                     * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
                      * 设置Cache time in seconds.
-                     * @param CacheTime Cache time in seconds.
+                     * @param _cacheTime Cache time in seconds.
+                     * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
 
                     /**
                      * 判断参数 CacheTime 是否已赋值
                      * @return CacheTime 是否已赋值
+                     * 
                      */
                     bool CacheTimeHasBeenSet() const;
 

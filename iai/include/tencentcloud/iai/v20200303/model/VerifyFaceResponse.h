@@ -54,36 +54,42 @@ The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90,
 The returned similarity score varies by algorithm version.
 If you need to verify whether the faces in the two images are the same person, then the 0.1%, 0.01%, and 0.001% FARs on v3.0 correspond to scores of 40, 50, and 60, respectively. Generally, if the score is above 50, it can be judged that they are the same person.
 The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90, respectively. Generally, if the score is above 80, it can be judged that they are the same person.
+                     * 
                      */
                     double GetScore() const;
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
                     /**
                      * 获取Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment.
                      * @return IsMatch Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment.
+                     * 
                      */
                     bool GetIsMatch() const;
 
                     /**
                      * 判断参数 IsMatch 是否已赋值
                      * @return IsMatch 是否已赋值
+                     * 
                      */
                     bool IsMatchHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
                      * @return FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

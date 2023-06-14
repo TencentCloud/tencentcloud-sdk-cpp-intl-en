@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyId Connection ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -69,48 +71,56 @@ BOUND (security policies enabled)
 UNBIND (security policies disabled)
 BINDING (enabling security policies)
 UNBINDING (disabling security policies)
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Default policy: ACCEPT or DROP.
                      * @return DefaultAction Default policy: ACCEPT or DROP.
+                     * 
                      */
                     std::string GetDefaultAction() const;
 
                     /**
                      * 判断参数 DefaultAction 是否已赋值
                      * @return DefaultAction 是否已赋值
+                     * 
                      */
                     bool DefaultActionHasBeenSet() const;
 
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取List of rules
                      * @return RuleList List of rules
+                     * 
                      */
                     std::vector<SecurityPolicyRuleOut> GetRuleList() const;
 
                     /**
                      * 判断参数 RuleList 是否已赋值
                      * @return RuleList 是否已赋值
+                     * 
                      */
                     bool RuleListHasBeenSet() const;
 

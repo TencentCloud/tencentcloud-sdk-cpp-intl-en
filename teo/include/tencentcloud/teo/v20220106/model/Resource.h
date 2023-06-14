@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Resource ID
                      * @return Id Resource ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Resource ID
-                     * @param Id Resource ID
+                     * @param _id Resource ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -70,110 +73,128 @@ namespace TencentCloud
 `0`: Pay-as-you-go
                      * @return PayMode Billing mode
 `0`: Pay-as-you-go
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置Billing mode
 `0`: Pay-as-you-go
-                     * @param PayMode Billing mode
+                     * @param _payMode Billing mode
 `0`: Pay-as-you-go
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Effective time
                      * @return EnableTime Effective time
+                     * 
                      */
                     std::string GetEnableTime() const;
 
                     /**
                      * 设置Effective time
-                     * @param EnableTime Effective time
+                     * @param _enableTime Effective time
+                     * 
                      */
                     void SetEnableTime(const std::string& _enableTime);
 
                     /**
                      * 判断参数 EnableTime 是否已赋值
                      * @return EnableTime 是否已赋值
+                     * 
                      */
                     bool EnableTimeHasBeenSet() const;
 
                     /**
                      * 获取Expiration time
                      * @return ExpireTime Expiration time
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Expiration time
-                     * @param ExpireTime Expiration time
+                     * @param _expireTime Expiration time
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Status of the plan
                      * @return Status Status of the plan
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status of the plan
-                     * @param Status Status of the plan
+                     * @param _status Status of the plan
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Pricing query parameter
                      * @return Sv Pricing query parameter
+                     * 
                      */
                     std::vector<Sv> GetSv() const;
 
                     /**
                      * 设置Pricing query parameter
-                     * @param Sv Pricing query parameter
+                     * @param _sv Pricing query parameter
+                     * 
                      */
                     void SetSv(const std::vector<Sv>& _sv);
 
                     /**
                      * 判断参数 Sv 是否已赋值
                      * @return Sv 是否已赋值
+                     * 
                      */
                     bool SvHasBeenSet() const;
 
@@ -186,6 +207,7 @@ namespace TencentCloud
 `0`: Default
 `1`: Enable auto-renewal
 `2`: Disable auto-renewal
+                     * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
@@ -194,52 +216,60 @@ namespace TencentCloud
 `0`: Default
 `1`: Enable auto-renewal
 `2`: Disable auto-renewal
-                     * @param AutoRenewFlag Specifies whether to enable auto-renewal
+                     * @param _autoRenewFlag Specifies whether to enable auto-renewal
 `0`: Default
 `1`: Enable auto-renewal
 `2`: Disable auto-renewal
+                     * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取ID of the plan
                      * @return PlanId ID of the plan
+                     * 
                      */
                     std::string GetPlanId() const;
 
                     /**
                      * 设置ID of the plan
-                     * @param PlanId ID of the plan
+                     * @param _planId ID of the plan
+                     * 
                      */
                     void SetPlanId(const std::string& _planId);
 
                     /**
                      * 判断参数 PlanId 是否已赋值
                      * @return PlanId 是否已赋值
+                     * 
                      */
                     bool PlanIdHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Area 
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置
-                     * @param Area 
+                     * @param _area 
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

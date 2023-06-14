@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
                      * @return Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+                     * 
                      */
                     std::string GetContainer() const;
 
                     /**
                      * 设置Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
-                     * @param Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+                     * @param _container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+                     * 
                      */
                     void SetContainer(const std::string& _container);
 
                     /**
                      * 判断参数 Container 是否已赋值
                      * @return Container 是否已赋值
+                     * 
                      */
                     bool ContainerHasBeenSet() const;
 
@@ -76,6 +79,7 @@ Default value: 0.
 <li>0: retain;</li>
 <li>1: remove.</li>
 Default value: 0.
+                     * 
                      */
                     int64_t GetRemoveVideo() const;
 
@@ -84,16 +88,18 @@ Default value: 0.
 <li>0: retain;</li>
 <li>1: remove.</li>
 Default value: 0.
-                     * @param RemoveVideo Whether to remove video data. Valid values:
+                     * @param _removeVideo Whether to remove video data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
 Default value: 0.
+                     * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
 
                     /**
                      * 判断参数 RemoveVideo 是否已赋值
                      * @return RemoveVideo 是否已赋值
+                     * 
                      */
                     bool RemoveVideoHasBeenSet() const;
 
@@ -106,6 +112,7 @@ Default value: 0.
 <li>0: retain;</li>
 <li>1: remove.</li>
 Default value: 0.
+                     * 
                      */
                     int64_t GetRemoveAudio() const;
 
@@ -114,70 +121,81 @@ Default value: 0.
 <li>0: retain;</li>
 <li>1: remove.</li>
 Default value: 0.
-                     * @param RemoveAudio Whether to remove audio data. Valid values:
+                     * @param _removeAudio Whether to remove audio data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
 Default value: 0.
+                     * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
 
                     /**
                      * 判断参数 RemoveAudio 是否已赋值
                      * @return RemoveAudio 是否已赋值
+                     * 
                      */
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
                      * 获取Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
                      * @return VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * 
                      */
                     VideoTemplateInfo GetVideoTemplate() const;
 
                     /**
                      * 设置Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-                     * @param VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * @param _videoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+                     * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfo& _videoTemplate);
 
                     /**
                      * 判断参数 VideoTemplate 是否已赋值
                      * @return VideoTemplate 是否已赋值
+                     * 
                      */
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
                      * 获取Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
                      * @return AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * 
                      */
                     AudioTemplateInfo GetAudioTemplate() const;
 
                     /**
                      * 设置Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-                     * @param AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * @param _audioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+                     * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfo& _audioTemplate);
 
                     /**
                      * 判断参数 AudioTemplate 是否已赋值
                      * @return AudioTemplate 是否已赋值
+                     * 
                      */
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
                      * 获取TESHD transcoding parameter.
                      * @return TEHDConfig TESHD transcoding parameter.
+                     * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
                      * 设置TESHD transcoding parameter.
-                     * @param TEHDConfig TESHD transcoding parameter.
+                     * @param _tEHDConfig TESHD transcoding parameter.
+                     * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
 
                     /**
                      * 判断参数 TEHDConfig 是否已赋值
                      * @return TEHDConfig 是否已赋值
+                     * 
                      */
                     bool TEHDConfigHasBeenSet() const;
 

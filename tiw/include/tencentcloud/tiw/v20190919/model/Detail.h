@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Usage metric.
                      * @return TagName Usage metric.
+                     * 
                      */
                     std::string GetTagName() const;
 
                     /**
                      * 设置Usage metric.
-                     * @param TagName Usage metric.
+                     * @param _tagName Usage metric.
+                     * 
                      */
                     void SetTagName(const std::string& _tagName);
 
                     /**
                      * 判断参数 TagName 是否已赋值
                      * @return TagName 是否已赋值
+                     * 
                      */
                     bool TagNameHasBeenSet() const;
 
                     /**
                      * 获取Usage weight.
                      * @return Weight Usage weight.
+                     * 
                      */
                     double GetWeight() const;
 
                     /**
                      * 设置Usage weight.
-                     * @param Weight Usage weight.
+                     * @param _weight Usage weight.
+                     * 
                      */
                     void SetWeight(const double& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 
                     /**
                      * 获取Usage value.
                      * @return Value Usage value.
+                     * 
                      */
                     double GetValue() const;
 
                     /**
                      * 设置Usage value.
-                     * @param Value Usage value.
+                     * @param _value Usage value.
+                     * 
                      */
                     void SetValue(const double& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

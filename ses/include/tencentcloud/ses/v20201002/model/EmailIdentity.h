@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Sender domain.
                      * @return IdentityName Sender domain.
+                     * 
                      */
                     std::string GetIdentityName() const;
 
                     /**
                      * 设置Sender domain.
-                     * @param IdentityName Sender domain.
+                     * @param _identityName Sender domain.
+                     * 
                      */
                     void SetIdentityName(const std::string& _identityName);
 
                     /**
                      * 判断参数 IdentityName 是否已赋值
                      * @return IdentityName 是否已赋值
+                     * 
                      */
                     bool IdentityNameHasBeenSet() const;
 
                     /**
                      * 获取Verification type. The value is fixed to `DOMAIN`.
                      * @return IdentityType Verification type. The value is fixed to `DOMAIN`.
+                     * 
                      */
                     std::string GetIdentityType() const;
 
                     /**
                      * 设置Verification type. The value is fixed to `DOMAIN`.
-                     * @param IdentityType Verification type. The value is fixed to `DOMAIN`.
+                     * @param _identityType Verification type. The value is fixed to `DOMAIN`.
+                     * 
                      */
                     void SetIdentityType(const std::string& _identityType);
 
                     /**
                      * 判断参数 IdentityType 是否已赋值
                      * @return IdentityType 是否已赋值
+                     * 
                      */
                     bool IdentityTypeHasBeenSet() const;
 
                     /**
                      * 获取Verification passed or not.
                      * @return SendingEnabled Verification passed or not.
+                     * 
                      */
                     bool GetSendingEnabled() const;
 
                     /**
                      * 设置Verification passed or not.
-                     * @param SendingEnabled Verification passed or not.
+                     * @param _sendingEnabled Verification passed or not.
+                     * 
                      */
                     void SetSendingEnabled(const bool& _sendingEnabled);
 
                     /**
                      * 判断参数 SendingEnabled 是否已赋值
                      * @return SendingEnabled 是否已赋值
+                     * 
                      */
                     bool SendingEnabledHasBeenSet() const;
 
                     /**
                      * 获取Current reputation level
                      * @return CurrentReputationLevel Current reputation level
+                     * 
                      */
                     uint64_t GetCurrentReputationLevel() const;
 
                     /**
                      * 设置Current reputation level
-                     * @param CurrentReputationLevel Current reputation level
+                     * @param _currentReputationLevel Current reputation level
+                     * 
                      */
                     void SetCurrentReputationLevel(const uint64_t& _currentReputationLevel);
 
                     /**
                      * 判断参数 CurrentReputationLevel 是否已赋值
                      * @return CurrentReputationLevel 是否已赋值
+                     * 
                      */
                     bool CurrentReputationLevelHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of messages sent per day
                      * @return DailyQuota Maximum number of messages sent per day
+                     * 
                      */
                     uint64_t GetDailyQuota() const;
 
                     /**
                      * 设置Maximum number of messages sent per day
-                     * @param DailyQuota Maximum number of messages sent per day
+                     * @param _dailyQuota Maximum number of messages sent per day
+                     * 
                      */
                     void SetDailyQuota(const uint64_t& _dailyQuota);
 
                     /**
                      * 判断参数 DailyQuota 是否已赋值
                      * @return DailyQuota 是否已赋值
+                     * 
                      */
                     bool DailyQuotaHasBeenSet() const;
 

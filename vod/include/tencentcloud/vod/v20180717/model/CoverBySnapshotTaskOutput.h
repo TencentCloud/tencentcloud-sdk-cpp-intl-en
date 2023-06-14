@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Cover URL.
                      * @return CoverUrl Cover URL.
+                     * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
                      * 设置Cover URL.
-                     * @param CoverUrl Cover URL.
+                     * @param _coverUrl Cover URL.
+                     * 
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
 
                     /**
                      * 判断参数 CoverUrl 是否已赋值
                      * @return CoverUrl 是否已赋值
+                     * 
                      */
                     bool CoverUrlHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Text keyword recognition result set.
                      * @return ResultSet Text keyword recognition result set.
+                     * 
                      */
                     std::vector<AiRecognitionTaskOcrWordsResultItem> GetResultSet() const;
 
                     /**
                      * 设置Text keyword recognition result set.
-                     * @param ResultSet Text keyword recognition result set.
+                     * @param _resultSet Text keyword recognition result set.
+                     * 
                      */
                     void SetResultSet(const std::vector<AiRecognitionTaskOcrWordsResultItem>& _resultSet);
 
                     /**
                      * 判断参数 ResultSet 是否已赋值
                      * @return ResultSet 是否已赋值
+                     * 
                      */
                     bool ResultSetHasBeenSet() const;
 

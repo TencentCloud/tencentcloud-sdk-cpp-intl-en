@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UrlRecordList Blocking history
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<UrlRecord> GetUrlRecordList() const;
 
                     /**
                      * 判断参数 UrlRecordList 是否已赋值
                      * @return UrlRecordList 是否已赋值
+                     * 
                      */
                     bool UrlRecordListHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalCount Total number of tasks, which is used for pagination.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

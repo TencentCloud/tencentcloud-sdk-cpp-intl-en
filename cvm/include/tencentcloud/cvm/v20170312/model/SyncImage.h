@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return Region Region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
-                     * @param Region Region
+                     * @param _region Region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

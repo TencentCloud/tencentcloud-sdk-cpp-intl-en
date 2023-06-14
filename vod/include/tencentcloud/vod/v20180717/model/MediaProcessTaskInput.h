@@ -58,20 +58,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TranscodeTaskSet List of transcoding tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TranscodeTaskInput> GetTranscodeTaskSet() const;
 
                     /**
                      * 设置List of transcoding tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeTaskSet List of transcoding tasks.
+                     * @param _transcodeTaskSet List of transcoding tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTranscodeTaskSet(const std::vector<TranscodeTaskInput>& _transcodeTaskSet);
 
                     /**
                      * 判断参数 TranscodeTaskSet 是否已赋值
                      * @return TranscodeTaskSet 是否已赋值
+                     * 
                      */
                     bool TranscodeTaskSetHasBeenSet() const;
 
@@ -80,20 +83,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AnimatedGraphicTaskSet List of animated image generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AnimatedGraphicTaskInput> GetAnimatedGraphicTaskSet() const;
 
                     /**
                      * 设置List of animated image generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AnimatedGraphicTaskSet List of animated image generating tasks.
+                     * @param _animatedGraphicTaskSet List of animated image generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnimatedGraphicTaskSet(const std::vector<AnimatedGraphicTaskInput>& _animatedGraphicTaskSet);
 
                     /**
                      * 判断参数 AnimatedGraphicTaskSet 是否已赋值
                      * @return AnimatedGraphicTaskSet 是否已赋值
+                     * 
                      */
                     bool AnimatedGraphicTaskSetHasBeenSet() const;
 
@@ -102,20 +108,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> GetSnapshotByTimeOffsetTaskSet() const;
 
                     /**
                      * 设置List of time point screencapturing tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+                     * @param _snapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotByTimeOffsetTaskSet(const std::vector<SnapshotByTimeOffsetTaskInput>& _snapshotByTimeOffsetTaskSet);
 
                     /**
                      * 判断参数 SnapshotByTimeOffsetTaskSet 是否已赋值
                      * @return SnapshotByTimeOffsetTaskSet 是否已赋值
+                     * 
                      */
                     bool SnapshotByTimeOffsetTaskSetHasBeenSet() const;
 
@@ -124,20 +133,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SampleSnapshotTaskSet List of sampled screencapturing tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SampleSnapshotTaskInput> GetSampleSnapshotTaskSet() const;
 
                     /**
                      * 设置List of sampled screencapturing tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SampleSnapshotTaskSet List of sampled screencapturing tasks.
+                     * @param _sampleSnapshotTaskSet List of sampled screencapturing tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSampleSnapshotTaskSet(const std::vector<SampleSnapshotTaskInput>& _sampleSnapshotTaskSet);
 
                     /**
                      * 判断参数 SampleSnapshotTaskSet 是否已赋值
                      * @return SampleSnapshotTaskSet 是否已赋值
+                     * 
                      */
                     bool SampleSnapshotTaskSetHasBeenSet() const;
 
@@ -146,20 +158,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageSpriteTaskSet List of image sprite generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ImageSpriteTaskInput> GetImageSpriteTaskSet() const;
 
                     /**
                      * 设置List of image sprite generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ImageSpriteTaskSet List of image sprite generating tasks.
+                     * @param _imageSpriteTaskSet List of image sprite generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageSpriteTaskSet(const std::vector<ImageSpriteTaskInput>& _imageSpriteTaskSet);
 
                     /**
                      * 判断参数 ImageSpriteTaskSet 是否已赋值
                      * @return ImageSpriteTaskSet 是否已赋值
+                     * 
                      */
                     bool ImageSpriteTaskSetHasBeenSet() const;
 
@@ -168,20 +183,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CoverBySnapshotTaskSet List of cover generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CoverBySnapshotTaskInput> GetCoverBySnapshotTaskSet() const;
 
                     /**
                      * 设置List of cover generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CoverBySnapshotTaskSet List of cover generating tasks.
+                     * @param _coverBySnapshotTaskSet List of cover generating tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoverBySnapshotTaskSet(const std::vector<CoverBySnapshotTaskInput>& _coverBySnapshotTaskSet);
 
                     /**
                      * 判断参数 CoverBySnapshotTaskSet 是否已赋值
                      * @return CoverBySnapshotTaskSet 是否已赋值
+                     * 
                      */
                     bool CoverBySnapshotTaskSetHasBeenSet() const;
 
@@ -190,20 +208,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AdaptiveDynamicStreamingTaskInput> GetAdaptiveDynamicStreamingTaskSet() const;
 
                     /**
                      * 设置List of adaptive bitrate streaming tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
+                     * @param _adaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingTaskSet(const std::vector<AdaptiveDynamicStreamingTaskInput>& _adaptiveDynamicStreamingTaskSet);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingTaskSet 是否已赋值
                      * @return AdaptiveDynamicStreamingTaskSet 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingTaskSetHasBeenSet() const;
 

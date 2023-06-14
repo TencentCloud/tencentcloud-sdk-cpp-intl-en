@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Table group ID
                      * @return TableGroupId Table group ID
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置Table group ID
-                     * @param TableGroupId Table group ID
+                     * @param _tableGroupId Table group ID
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Table group name
                      * @return TableGroupName Table group name
+                     * 
                      */
                     std::string GetTableGroupName() const;
 
                     /**
                      * 设置Table group name
-                     * @param TableGroupName Table group name
+                     * @param _tableGroupName Table group name
+                     * 
                      */
                     void SetTableGroupName(const std::string& _tableGroupName);
 
                     /**
                      * 判断参数 TableGroupName 是否已赋值
                      * @return TableGroupName 是否已赋值
+                     * 
                      */
                     bool TableGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Table group creation time
                      * @return CreatedTime Table group creation time
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Table group creation time
-                     * @param CreatedTime Table group creation time
+                     * @param _createdTime Table group creation time
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of tables in table group
                      * @return TableCount Number of tables in table group
+                     * 
                      */
                     uint64_t GetTableCount() const;
 
                     /**
                      * 设置Number of tables in table group
-                     * @param TableCount Number of tables in table group
+                     * @param _tableCount Number of tables in table group
+                     * 
                      */
                     void SetTableCount(const uint64_t& _tableCount);
 
                     /**
                      * 判断参数 TableCount 是否已赋值
                      * @return TableCount 是否已赋值
+                     * 
                      */
                     bool TableCountHasBeenSet() const;
 
                     /**
                      * 获取Total table storage capacity in MB in table group
                      * @return TotalSize Total table storage capacity in MB in table group
+                     * 
                      */
                     uint64_t GetTotalSize() const;
 
                     /**
                      * 设置Total table storage capacity in MB in table group
-                     * @param TotalSize Total table storage capacity in MB in table group
+                     * @param _totalSize Total table storage capacity in MB in table group
+                     * 
                      */
                     void SetTotalSize(const uint64_t& _totalSize);
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 
@@ -141,38 +156,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TxhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTxhBackupExpireDay() const;
 
                     /**
                      * 设置The number of days before the backup files of the Txh tables expire and are deleted.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TxhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
+                     * @param _txhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTxhBackupExpireDay(const uint64_t& _txhBackupExpireDay);
 
                     /**
                      * 判断参数 TxhBackupExpireDay 是否已赋值
                      * @return TxhBackupExpireDay 是否已赋值
+                     * 
                      */
                     bool TxhBackupExpireDayHasBeenSet() const;
 
                     /**
                      * 获取Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
                      * @return EnableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     * 
                      */
                     uint64_t GetEnableMysql() const;
 
                     /**
                      * 设置Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
-                     * @param EnableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     * @param _enableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     * 
                      */
                     void SetEnableMysql(const uint64_t& _enableMysql);
 
                     /**
                      * 判断参数 EnableMysql 是否已赋值
                      * @return EnableMysql 是否已赋值
+                     * 
                      */
                     bool EnableMysqlHasBeenSet() const;
 
@@ -181,20 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MysqlConnIp MySQL load rebalancing vip
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMysqlConnIp() const;
 
                     /**
                      * 设置MySQL load rebalancing vip
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MysqlConnIp MySQL load rebalancing vip
+                     * @param _mysqlConnIp MySQL load rebalancing vip
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMysqlConnIp(const std::string& _mysqlConnIp);
 
                     /**
                      * 判断参数 MysqlConnIp 是否已赋值
                      * @return MysqlConnIp 是否已赋值
+                     * 
                      */
                     bool MysqlConnIpHasBeenSet() const;
 
@@ -203,20 +227,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MysqlConnPort MySQL load rebalancing vport
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMysqlConnPort() const;
 
                     /**
                      * 设置MySQL load rebalancing vport
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MysqlConnPort MySQL load rebalancing vport
+                     * @param _mysqlConnPort MySQL load rebalancing vport
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMysqlConnPort(const uint64_t& _mysqlConnPort);
 
                     /**
                      * 判断参数 MysqlConnPort 是否已赋值
                      * @return MysqlConnPort 是否已赋值
+                     * 
                      */
                     bool MysqlConnPortHasBeenSet() const;
 

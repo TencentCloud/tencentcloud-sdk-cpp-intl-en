@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the specified access key that needs to be updated
                      * @return AccessKeyId ID of the specified access key that needs to be updated
+                     * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
                      * 设置ID of the specified access key that needs to be updated
-                     * @param AccessKeyId ID of the specified access key that needs to be updated
+                     * @param _accessKeyId ID of the specified access key that needs to be updated
+                     * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
 
                     /**
                      * 判断参数 AccessKeyId 是否已赋值
                      * @return AccessKeyId 是否已赋值
+                     * 
                      */
                     bool AccessKeyIdHasBeenSet() const;
 
                     /**
                      * 获取Key status. Valid values: `Active` (activated), `Inactive` (not activated).
                      * @return Status Key status. Valid values: `Active` (activated), `Inactive` (not activated).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Key status. Valid values: `Active` (activated), `Inactive` (not activated).
-                     * @param Status Key status. Valid values: `Active` (activated), `Inactive` (not activated).
+                     * @param _status Key status. Valid values: `Active` (activated), `Inactive` (not activated).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取UIN of the specified user. If this parameter is left empty, the access key will be updated for the current user by default.
                      * @return TargetUin UIN of the specified user. If this parameter is left empty, the access key will be updated for the current user by default.
+                     * 
                      */
                     uint64_t GetTargetUin() const;
 
                     /**
                      * 设置UIN of the specified user. If this parameter is left empty, the access key will be updated for the current user by default.
-                     * @param TargetUin UIN of the specified user. If this parameter is left empty, the access key will be updated for the current user by default.
+                     * @param _targetUin UIN of the specified user. If this parameter is left empty, the access key will be updated for the current user by default.
+                     * 
                      */
                     void SetTargetUin(const uint64_t& _targetUin);
 
                     /**
                      * 判断参数 TargetUin 是否已赋值
                      * @return TargetUin 是否已赋值
+                     * 
                      */
                     bool TargetUinHasBeenSet() const;
 

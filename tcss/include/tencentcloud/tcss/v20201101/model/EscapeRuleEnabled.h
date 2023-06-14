@@ -61,6 +61,7 @@ namespace TencentCloud
    `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
    `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `ESCAPE_SYSCALL`: Syscall escape.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -72,37 +73,42 @@ namespace TencentCloud
    `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
    `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `ESCAPE_SYSCALL`: Syscall escape.
-                     * @param Type Rule type
+                     * @param _type Rule type
    `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
    `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
    `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
    `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
    `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `ESCAPE_SYSCALL`: Syscall escape.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable. Valid values: `false` (no); `true` (yes).
                      * @return IsEnable Whether to enable. Valid values: `false` (no); `true` (yes).
+                     * 
                      */
                     bool GetIsEnable() const;
 
                     /**
                      * 设置Whether to enable. Valid values: `false` (no); `true` (yes).
-                     * @param IsEnable Whether to enable. Valid values: `false` (no); `true` (yes).
+                     * @param _isEnable Whether to enable. Valid values: `false` (no); `true` (yes).
+                     * 
                      */
                     void SetIsEnable(const bool& _isEnable);
 
                     /**
                      * 判断参数 IsEnable 是否已赋值
                      * @return IsEnable 是否已赋值
+                     * 
                      */
                     bool IsEnableHasBeenSet() const;
 

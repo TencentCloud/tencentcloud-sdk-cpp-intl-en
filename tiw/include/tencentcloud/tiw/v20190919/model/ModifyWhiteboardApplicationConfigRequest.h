@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Task-related configurations of the whiteboard application.
                      * @return Configs Task-related configurations of the whiteboard application.
+                     * 
                      */
                     std::vector<WhiteboardApplicationConfig> GetConfigs() const;
 
                     /**
                      * 设置Task-related configurations of the whiteboard application.
-                     * @param Configs Task-related configurations of the whiteboard application.
+                     * @param _configs Task-related configurations of the whiteboard application.
+                     * 
                      */
                     void SetConfigs(const std::vector<WhiteboardApplicationConfig>& _configs);
 
                     /**
                      * 判断参数 Configs 是否已赋值
                      * @return Configs 是否已赋值
+                     * 
                      */
                     bool ConfigsHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcId VPC ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VpcId VPC ID. This field is left empty for supporting network and public network access points.
+                     * @param _vpcId VPC ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
@@ -73,56 +76,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubnetId Subnet ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubnetId Subnet ID. This field is left empty for supporting network and public network access points.
+                     * @param _subnetId Subnet ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Access address
                      * @return Endpoint Access address
+                     * 
                      */
                     std::string GetEndpoint() const;
 
                     /**
                      * 设置Access address
-                     * @param Endpoint Access address
+                     * @param _endpoint Access address
+                     * 
                      */
                     void SetEndpoint(const std::string& _endpoint);
 
                     /**
                      * 判断参数 Endpoint 是否已赋值
                      * @return Endpoint 是否已赋值
+                     * 
                      */
                     bool EndpointHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -135,6 +147,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: Supporting network access point 
 `1`: VPC access point 
 `2`: Public network access point
+                     * 
                      */
                     uint64_t GetRouteType() const;
 
@@ -143,16 +156,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: Supporting network access point 
 `1`: VPC access point 
 `2`: Public network access point
-                     * @param RouteType Access point type: 
+                     * @param _routeType Access point type: 
 `0`: Supporting network access point 
 `1`: VPC access point 
 `2`: Public network access point
+                     * 
                      */
                     void SetRouteType(const uint64_t& _routeType);
 
                     /**
                      * 判断参数 RouteType 是否已赋值
                      * @return RouteType 是否已赋值
+                     * 
                      */
                     bool RouteTypeHasBeenSet() const;
 

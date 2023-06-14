@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MasterResourceSpec The description of master nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     NodeResourceSpec GetMasterResourceSpec() const;
 
                     /**
                      * 设置The description of master nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MasterResourceSpec The description of master nodes.
+                     * @param _masterResourceSpec The description of master nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterResourceSpec(const NodeResourceSpec& _masterResourceSpec);
 
                     /**
                      * 判断参数 MasterResourceSpec 是否已赋值
                      * @return MasterResourceSpec 是否已赋值
+                     * 
                      */
                     bool MasterResourceSpecHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CoreResourceSpec The description of core nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     NodeResourceSpec GetCoreResourceSpec() const;
 
                     /**
                      * 设置The description of core nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CoreResourceSpec The description of core nodes.
+                     * @param _coreResourceSpec The description of core nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoreResourceSpec(const NodeResourceSpec& _coreResourceSpec);
 
                     /**
                      * 判断参数 CoreResourceSpec 是否已赋值
                      * @return CoreResourceSpec 是否已赋值
+                     * 
                      */
                     bool CoreResourceSpecHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskResourceSpec The description of task nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     NodeResourceSpec GetTaskResourceSpec() const;
 
                     /**
                      * 设置The description of task nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskResourceSpec The description of task nodes.
+                     * @param _taskResourceSpec The description of task nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskResourceSpec(const NodeResourceSpec& _taskResourceSpec);
 
                     /**
                      * 判断参数 TaskResourceSpec 是否已赋值
                      * @return TaskResourceSpec 是否已赋值
+                     * 
                      */
                     bool TaskResourceSpecHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CommonResourceSpec The description of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     NodeResourceSpec GetCommonResourceSpec() const;
 
                     /**
                      * 设置The description of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CommonResourceSpec The description of common nodes.
+                     * @param _commonResourceSpec The description of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCommonResourceSpec(const NodeResourceSpec& _commonResourceSpec);
 
                     /**
                      * 判断参数 CommonResourceSpec 是否已赋值
                      * @return CommonResourceSpec 是否已赋值
+                     * 
                      */
                     bool CommonResourceSpecHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MasterCount The number of master nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMasterCount() const;
 
                     /**
                      * 设置The number of master nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MasterCount The number of master nodes.
+                     * @param _masterCount The number of master nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterCount(const int64_t& _masterCount);
 
                     /**
                      * 判断参数 MasterCount 是否已赋值
                      * @return MasterCount 是否已赋值
+                     * 
                      */
                     bool MasterCountHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CoreCount The number of core nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCoreCount() const;
 
                     /**
                      * 设置The number of core nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CoreCount The number of core nodes.
+                     * @param _coreCount The number of core nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoreCount(const int64_t& _coreCount);
 
                     /**
                      * 判断参数 CoreCount 是否已赋值
                      * @return CoreCount 是否已赋值
+                     * 
                      */
                     bool CoreCountHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskCount The number of task nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTaskCount() const;
 
                     /**
                      * 设置The number of task nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskCount The number of task nodes.
+                     * @param _taskCount The number of task nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskCount(const int64_t& _taskCount);
 
                     /**
                      * 判断参数 TaskCount 是否已赋值
                      * @return TaskCount 是否已赋值
+                     * 
                      */
                     bool TaskCountHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CommonCount The number of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCommonCount() const;
 
                     /**
                      * 设置The number of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CommonCount The number of common nodes.
+                     * @param _commonCount The number of common nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCommonCount(const int64_t& _commonCount);
 
                     /**
                      * 判断参数 CommonCount 是否已赋值
                      * @return CommonCount 是否已赋值
+                     * 
                      */
                     bool CommonCountHasBeenSet() const;
 

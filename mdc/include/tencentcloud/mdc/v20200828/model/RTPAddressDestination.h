@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Push destination address IP.
                      * @return Ip Push destination address IP.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Push destination address IP.
-                     * @param Ip Push destination address IP.
+                     * @param _ip Push destination address IP.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Push destination address port.
                      * @return Port Push destination address port.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Push destination address port.
-                     * @param Port Push destination address port.
+                     * @param _port Push destination address port.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

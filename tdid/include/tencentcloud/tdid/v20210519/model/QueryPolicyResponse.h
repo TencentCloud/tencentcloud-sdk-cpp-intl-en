@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取The policy index.
                      * @return Id The policy index.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取The policy ID.
                      * @return PolicyId The policy ID.
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取The claim protocol type (CPT) ID.
                      * @return CptId The claim protocol type (CPT) ID.
+                     * 
                      */
                     uint64_t GetCptId() const;
 
                     /**
                      * 判断参数 CptId 是否已赋值
                      * @return CptId 是否已赋值
+                     * 
                      */
                     bool CptIdHasBeenSet() const;
 
                     /**
                      * 获取The content of the policy.
                      * @return PolicyData The content of the policy.
+                     * 
                      */
                     std::string GetPolicyData() const;
 
                     /**
                      * 判断参数 PolicyData 是否已赋值
                      * @return PolicyData 是否已赋值
+                     * 
                      */
                     bool PolicyDataHasBeenSet() const;
 

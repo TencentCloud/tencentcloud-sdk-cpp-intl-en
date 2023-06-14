@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Region ID
                      * @return AreaId Region ID
+                     * 
                      */
                     std::string GetAreaId() const;
 
                     /**
                      * 设置Region ID
-                     * @param AreaId Region ID
+                     * @param _areaId Region ID
+                     * 
                      */
                     void SetAreaId(const std::string& _areaId);
 
                     /**
                      * 判断参数 AreaId 是否已赋值
                      * @return AreaId 是否已赋值
+                     * 
                      */
                     bool AreaIdHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return AreaName Region name
+                     * 
                      */
                     std::string GetAreaName() const;
 
                     /**
                      * 设置Region name
-                     * @param AreaName Region name
+                     * @param _areaName Region name
+                     * 
                      */
                     void SetAreaName(const std::string& _areaName);
 
                     /**
                      * 判断参数 AreaName 是否已赋值
                      * @return AreaName 是否已赋值
+                     * 
                      */
                     bool AreaNameHasBeenSet() const;
 

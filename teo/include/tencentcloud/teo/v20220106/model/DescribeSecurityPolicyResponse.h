@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取User ID
                      * @return AppId User ID
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取Top-level domain name
                      * @return ZoneId Top-level domain name
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Second-level domain name
                      * @return Entity Second-level domain name
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
@@ -85,12 +91,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Config Security configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     SecurityConfig GetConfig() const;
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 

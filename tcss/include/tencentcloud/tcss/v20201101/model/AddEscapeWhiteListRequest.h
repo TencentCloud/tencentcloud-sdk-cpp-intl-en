@@ -59,6 +59,7 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
+                     * 
                      */
                     std::vector<std::string> GetEventType() const;
 
@@ -71,7 +72,7 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
-                     * @param EventType Allowed event type
+                     * @param _eventType Allowed event type
    `ESCAPE_CGROUPS`: Cgroup escape.
    `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
    `ESCAPE_DOCKER_API`: Docker API access escape.
@@ -79,30 +80,35 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
+                     * 
                      */
                     void SetEventType(const std::vector<std::string>& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Array of allowed image IDs
                      * @return ImageIDs Array of allowed image IDs
+                     * 
                      */
                     std::vector<std::string> GetImageIDs() const;
 
                     /**
                      * 设置Array of allowed image IDs
-                     * @param ImageIDs Array of allowed image IDs
+                     * @param _imageIDs Array of allowed image IDs
+                     * 
                      */
                     void SetImageIDs(const std::vector<std::string>& _imageIDs);
 
                     /**
                      * 判断参数 ImageIDs 是否已赋值
                      * @return ImageIDs 是否已赋值
+                     * 
                      */
                     bool ImageIDsHasBeenSet() const;
 

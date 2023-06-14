@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Partitions ID of the current partition.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPartitions() const;
 
                     /**
                      * 设置ID of the current partition.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Partitions ID of the current partition.
+                     * @param _partitions ID of the current partition.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartitions(const uint64_t& _partitions);
 
                     /**
                      * 判断参数 Partitions 是否已赋值
                      * @return Partitions 是否已赋值
+                     * 
                      */
                     bool PartitionsHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NumberOfEntries The number of messages.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetNumberOfEntries() const;
 
                     /**
                      * 设置The number of messages.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NumberOfEntries The number of messages.
+                     * @param _numberOfEntries The number of messages.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNumberOfEntries(const uint64_t& _numberOfEntries);
 
                     /**
                      * 判断参数 NumberOfEntries 是否已赋值
                      * @return NumberOfEntries 是否已赋值
+                     * 
                      */
                     bool NumberOfEntriesHasBeenSet() const;
 
@@ -95,56 +101,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MsgBacklog The number of heaped messages.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMsgBacklog() const;
 
                     /**
                      * 设置The number of heaped messages.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MsgBacklog The number of heaped messages.
+                     * @param _msgBacklog The number of heaped messages.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsgBacklog(const uint64_t& _msgBacklog);
 
                     /**
                      * 判断参数 MsgBacklog 是否已赋值
                      * @return MsgBacklog 是否已赋值
+                     * 
                      */
                     bool MsgBacklogHasBeenSet() const;
 
                     /**
                      * 获取The total number of messages delivered by the consumer per second.
                      * @return MsgRateOut The total number of messages delivered by the consumer per second.
+                     * 
                      */
                     std::string GetMsgRateOut() const;
 
                     /**
                      * 设置The total number of messages delivered by the consumer per second.
-                     * @param MsgRateOut The total number of messages delivered by the consumer per second.
+                     * @param _msgRateOut The total number of messages delivered by the consumer per second.
+                     * 
                      */
                     void SetMsgRateOut(const std::string& _msgRateOut);
 
                     /**
                      * 判断参数 MsgRateOut 是否已赋值
                      * @return MsgRateOut 是否已赋值
+                     * 
                      */
                     bool MsgRateOutHasBeenSet() const;
 
                     /**
                      * 获取The size (in bytes) of messages consumed by the consumer per second.
                      * @return MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
+                     * 
                      */
                     std::string GetMsgThroughputOut() const;
 
                     /**
                      * 设置The size (in bytes) of messages consumed by the consumer per second.
-                     * @param MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
+                     * @param _msgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
+                     * 
                      */
                     void SetMsgThroughputOut(const std::string& _msgThroughputOut);
 
                     /**
                      * 判断参数 MsgThroughputOut 是否已赋值
                      * @return MsgThroughputOut 是否已赋值
+                     * 
                      */
                     bool MsgThroughputOutHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MsgRateExpired Percentage of messages discarded due to timeout.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMsgRateExpired() const;
 
                     /**
                      * 设置Percentage of messages discarded due to timeout.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MsgRateExpired Percentage of messages discarded due to timeout.
+                     * @param _msgRateExpired Percentage of messages discarded due to timeout.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsgRateExpired(const std::string& _msgRateExpired);
 
                     /**
                      * 判断参数 MsgRateExpired 是否已赋值
                      * @return MsgRateExpired 是否已赋值
+                     * 
                      */
                     bool MsgRateExpiredHasBeenSet() const;
 

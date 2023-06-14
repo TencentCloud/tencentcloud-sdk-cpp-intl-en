@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Result `CosToken` object in case of success and `null` in case of failure
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     CosToken GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

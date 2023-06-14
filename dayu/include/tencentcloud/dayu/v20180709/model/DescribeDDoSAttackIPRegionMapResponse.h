@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Global region distribution data
                      * @return NationCount Global region distribution data
+                     * 
                      */
                     std::vector<KeyValueRecord> GetNationCount() const;
 
                     /**
                      * 判断参数 NationCount 是否已赋值
                      * @return NationCount 是否已赋值
+                     * 
                      */
                     bool NationCountHasBeenSet() const;
 
                     /**
                      * 获取Chinese province distribution data
                      * @return ProvinceCount Chinese province distribution data
+                     * 
                      */
                     std::vector<KeyValueRecord> GetProvinceCount() const;
 
                     /**
                      * 判断参数 ProvinceCount 是否已赋值
                      * @return ProvinceCount 是否已赋值
+                     * 
                      */
                     bool ProvinceCountHasBeenSet() const;
 

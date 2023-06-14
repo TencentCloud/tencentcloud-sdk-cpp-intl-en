@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-12345678”.
                      * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-12345678”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Array of DNS servers
                      * @return NameServers Array of DNS servers
+                     * 
                      */
                     std::vector<std::string> GetNameServers() const;
 
                     /**
                      * 设置Array of DNS servers
-                     * @param NameServers Array of DNS servers
+                     * @param _nameServers Array of DNS servers
+                     * 
                      */
                     void SetNameServers(const std::vector<std::string>& _nameServers);
 
                     /**
                      * 判断参数 NameServers 是否已赋值
                      * @return NameServers 是否已赋值
+                     * 
                      */
                     bool NameServersHasBeenSet() const;
 

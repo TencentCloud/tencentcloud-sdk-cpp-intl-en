@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The type. Valid values: `1` (mobile number), `2` (email address).
                      * @return Type The type. Valid values: `1` (mobile number), `2` (email address).
+                     * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置The type. Valid values: `1` (mobile number), `2` (email address).
-                     * @param Type The type. Valid values: `1` (mobile number), `2` (email address).
+                     * @param _type The type. Valid values: `1` (mobile number), `2` (email address).
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The number of records on each page in pagination cases.
                      * @return Limit The number of records on each page in pagination cases.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of records on each page in pagination cases.
-                     * @param Limit The number of records on each page in pagination cases.
+                     * @param _limit The number of records on each page in pagination cases.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The page number in pagination cases.
                      * @return Offset The page number in pagination cases.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The page number in pagination cases.
-                     * @param Offset The page number in pagination cases.
+                     * @param _offset The page number in pagination cases.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

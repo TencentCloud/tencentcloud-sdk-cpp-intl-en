@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Returned ACL result set object
                      * @return Result Returned ACL result set object
+                     * 
                      */
                     AclResponse GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

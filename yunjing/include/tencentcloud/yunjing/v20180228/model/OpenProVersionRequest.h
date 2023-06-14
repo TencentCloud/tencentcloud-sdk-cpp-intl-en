@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return MachineType Server type.
 <li>CVM: CVM</li>
 <li>BM: BM</li>
+                     * 
                      */
                     std::string GetMachineType() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Server type.
 <li>CVM: CVM</li>
 <li>BM: BM</li>
-                     * @param MachineType Server type.
+                     * @param _machineType Server type.
 <li>CVM: CVM</li>
 <li>BM: BM</li>
+                     * 
                      */
                     void SetMachineType(const std::string& _machineType);
 
                     /**
                      * 判断参数 MachineType 是否已赋值
                      * @return MachineType 是否已赋值
+                     * 
                      */
                     bool MachineTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ namespace TencentCloud
 Examples: ap-guangzhou, ap-shanghai
                      * @return MachineRegion Server region
 Examples: ap-guangzhou, ap-shanghai
+                     * 
                      */
                     std::string GetMachineRegion() const;
 
                     /**
                      * 设置Server region
 Examples: ap-guangzhou, ap-shanghai
-                     * @param MachineRegion Server region
+                     * @param _machineRegion Server region
 Examples: ap-guangzhou, ap-shanghai
+                     * 
                      */
                     void SetMachineRegion(const std::string& _machineRegion);
 
                     /**
                      * 判断参数 MachineRegion 是否已赋值
                      * @return MachineRegion 是否已赋值
+                     * 
                      */
                     bool MachineRegionHasBeenSet() const;
 
@@ -95,38 +101,44 @@ Examples: ap-guangzhou, ap-shanghai
 `InstanceId` for BM or `Uuid` for CVM
                      * @return Quuids Server `Uuid` array.
 `InstanceId` for BM or `Uuid` for CVM
+                     * 
                      */
                     std::vector<std::string> GetQuuids() const;
 
                     /**
                      * 设置Server `Uuid` array.
 `InstanceId` for BM or `Uuid` for CVM
-                     * @param Quuids Server `Uuid` array.
+                     * @param _quuids Server `Uuid` array.
 `InstanceId` for BM or `Uuid` for CVM
+                     * 
                      */
                     void SetQuuids(const std::vector<std::string>& _quuids);
 
                     /**
                      * 判断参数 Quuids 是否已赋值
                      * @return Quuids 是否已赋值
+                     * 
                      */
                     bool QuuidsHasBeenSet() const;
 
                     /**
                      * 获取Event ID.
                      * @return ActivityId Event ID.
+                     * 
                      */
                     uint64_t GetActivityId() const;
 
                     /**
                      * 设置Event ID.
-                     * @param ActivityId Event ID.
+                     * @param _activityId Event ID.
+                     * 
                      */
                     void SetActivityId(const uint64_t& _activityId);
 
                     /**
                      * 判断参数 ActivityId 是否已赋值
                      * @return ActivityId 是否已赋值
+                     * 
                      */
                     bool ActivityIdHasBeenSet() const;
 

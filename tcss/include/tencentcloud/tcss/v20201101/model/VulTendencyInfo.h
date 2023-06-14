@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取List of vulnerability trends
                      * @return VulSet List of vulnerability trends
+                     * 
                      */
                     std::vector<RunTimeTendencyInfo> GetVulSet() const;
 
                     /**
                      * 设置List of vulnerability trends
-                     * @param VulSet List of vulnerability trends
+                     * @param _vulSet List of vulnerability trends
+                     * 
                      */
                     void SetVulSet(const std::vector<RunTimeTendencyInfo>& _vulSet);
 
                     /**
                      * 判断参数 VulSet 是否已赋值
                      * @return VulSet 是否已赋值
+                     * 
                      */
                     bool VulSetHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
                      * @return ImageType Image type affected by vulnerabilities:
 `LOCAL`: Local image.
 `REGISTRY`: Repository image.
+                     * 
                      */
                     std::string GetImageType() const;
 
@@ -79,15 +83,17 @@ namespace TencentCloud
                      * 设置Image type affected by vulnerabilities:
 `LOCAL`: Local image.
 `REGISTRY`: Repository image.
-                     * @param ImageType Image type affected by vulnerabilities:
+                     * @param _imageType Image type affected by vulnerabilities:
 `LOCAL`: Local image.
 `REGISTRY`: Repository image.
+                     * 
                      */
                     void SetImageType(const std::string& _imageType);
 
                     /**
                      * 判断参数 ImageType 是否已赋值
                      * @return ImageType 是否已赋值
+                     * 
                      */
                     bool ImageTypeHasBeenSet() const;
 

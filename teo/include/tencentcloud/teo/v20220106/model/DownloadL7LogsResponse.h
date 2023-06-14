@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Data Layer-7 offline log data
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<L7OfflineLog> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PageSize Page size
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PageNo Page number
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPageNo() const;
 
                     /**
                      * 判断参数 PageNo 是否已赋值
                      * @return PageNo 是否已赋值
+                     * 
                      */
                     bool PageNoHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Pages Total number of pages
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPages() const;
 
                     /**
                      * 判断参数 Pages 是否已赋值
                      * @return Pages 是否已赋值
+                     * 
                      */
                     bool PagesHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalSize Total number of entries
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTotalSize() const;
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 

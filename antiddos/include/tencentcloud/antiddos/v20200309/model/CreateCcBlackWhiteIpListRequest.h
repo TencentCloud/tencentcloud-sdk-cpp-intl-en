@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of IPs
                      * @return IpList List of IPs
+                     * 
                      */
                     std::vector<IpSegment> GetIpList() const;
 
                     /**
                      * 设置List of IPs
-                     * @param IpList List of IPs
+                     * @param _ipList List of IPs
+                     * 
                      */
                     void SetIpList(const std::vector<IpSegment>& _ipList);
 
                     /**
                      * 判断参数 IpList 是否已赋值
                      * @return IpList 是否已赋值
+                     * 
                      */
                     bool IpListHasBeenSet() const;
 
                     /**
                      * 获取IP permission. Valid values: `black` (blocked IP), `white` (allowed IP).
                      * @return Type IP permission. Valid values: `black` (blocked IP), `white` (allowed IP).
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置IP permission. Valid values: `black` (blocked IP), `white` (allowed IP).
-                     * @param Type IP permission. Valid values: `black` (blocked IP), `white` (allowed IP).
+                     * @param _type IP permission. Valid values: `black` (blocked IP), `white` (allowed IP).
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取IP address
                      * @return Ip IP address
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address
-                     * @param Ip IP address
+                     * @param _ip IP address
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Domain name
                      * @return Domain Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-                     * @param Domain Domain name
+                     * @param _domain Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Protocol
                      * @return Protocol Protocol
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol
-                     * @param Protocol Protocol
+                     * @param _protocol Protocol
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

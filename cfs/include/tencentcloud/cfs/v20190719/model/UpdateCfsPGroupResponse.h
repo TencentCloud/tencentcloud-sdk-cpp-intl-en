@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Permission group ID
                      * @return PGroupId Permission group ID
+                     * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
                      * 判断参数 PGroupId 是否已赋值
                      * @return PGroupId 是否已赋值
+                     * 
                      */
                     bool PGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Permission group name
                      * @return Name Permission group name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return DescInfo Description
+                     * 
                      */
                     std::string GetDescInfo() const;
 
                     /**
                      * 判断参数 DescInfo 是否已赋值
                      * @return DescInfo 是否已赋值
+                     * 
                      */
                     bool DescInfoHasBeenSet() const;
 

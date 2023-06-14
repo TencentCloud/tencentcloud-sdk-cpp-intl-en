@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the bandwidth package.
                      * @return BandwidthPackageId The unique ID of the bandwidth package.
+                     * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
                      * 设置The unique ID of the bandwidth package.
-                     * @param BandwidthPackageId The unique ID of the bandwidth package.
+                     * @param _bandwidthPackageId The unique ID of the bandwidth package.
+                     * 
                      */
                     void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
 
                     /**
                      * 判断参数 BandwidthPackageId 是否已赋值
                      * @return BandwidthPackageId 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the bandwidth package.
                      * @return BandwidthPackageName The name of the bandwidth package.
+                     * 
                      */
                     std::string GetBandwidthPackageName() const;
 
                     /**
                      * 设置The name of the bandwidth package.
-                     * @param BandwidthPackageName The name of the bandwidth package.
+                     * @param _bandwidthPackageName The name of the bandwidth package.
+                     * 
                      */
                     void SetBandwidthPackageName(const std::string& _bandwidthPackageName);
 
                     /**
                      * 判断参数 BandwidthPackageName 是否已赋值
                      * @return BandwidthPackageName 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageNameHasBeenSet() const;
 
@@ -83,20 +89,23 @@ namespace TencentCloud
 `TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
                      * @return ChargeType The billing mode of the bandwidth package. Values: 
 `TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
+                     * 
                      */
                     std::string GetChargeType() const;
 
                     /**
                      * 设置The billing mode of the bandwidth package. Values: 
 `TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
-                     * @param ChargeType The billing mode of the bandwidth package. Values: 
+                     * @param _chargeType The billing mode of the bandwidth package. Values: 
 `TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
+                     * 
                      */
                     void SetChargeType(const std::string& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 

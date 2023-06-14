@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Access key
                      * @return AccessKey Access key
+                     * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
                      * 设置Access key
-                     * @param AccessKey Access key
+                     * @param _accessKey Access key
+                     * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
 
                     /**
                      * 判断参数 AccessKey 是否已赋值
                      * @return AccessKey 是否已赋值
+                     * 
                      */
                     bool AccessKeyHasBeenSet() const;
 
                     /**
                      * 获取Authentication key
                      * @return SecretKey Authentication key
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Authentication key
-                     * @param SecretKey Authentication key
+                     * @param _secretKey Authentication key
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 

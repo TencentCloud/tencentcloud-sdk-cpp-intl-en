@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
                      * @return SaleStatus Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
+                     * 
                      */
                     std::string GetSaleStatus() const;
 
                     /**
                      * 设置Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
-                     * @param SaleStatus Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
+                     * @param _saleStatus Sale status. Valid values: sale_out (sold out), saling (purchasable), no_saling (non-purchasable)
+                     * 
                      */
                     void SetSaleStatus(const std::string& _saleStatus);
 
                     /**
                      * 判断参数 SaleStatus 是否已赋值
                      * @return SaleStatus 是否已赋值
+                     * 
                      */
                     bool SaleStatusHasBeenSet() const;
 
                     /**
                      * 获取Protocol type. Valid values: NFS, CIFS
                      * @return Protocol Protocol type. Valid values: NFS, CIFS
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol type. Valid values: NFS, CIFS
-                     * @param Protocol Protocol type. Valid values: NFS, CIFS
+                     * @param _protocol Protocol type. Valid values: NFS, CIFS
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

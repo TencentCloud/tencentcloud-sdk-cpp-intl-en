@@ -55,6 +55,7 @@ namespace TencentCloud
 <li>add: Add the HTTP header.</li>
 <li>set: Rewrite the HTTP header.</li>
 <li>del: Delete the HTTP header.</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -63,52 +64,60 @@ namespace TencentCloud
 <li>add: Add the HTTP header.</li>
 <li>set: Rewrite the HTTP header.</li>
 <li>del: Delete the HTTP header.</li>
-                     * @param Action Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
+                     * @param _action Feature parameter name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the parameter name, which has three values:
 <li>add: Add the HTTP header.</li>
 <li>set: Rewrite the HTTP header.</li>
 <li>del: Delete the HTTP header.</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Parameter name
                      * @return Name Parameter name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param Name Parameter name
+                     * @param _name Parameter name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Parameter value
                      * @return Values Parameter value
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Parameter value
-                     * @param Values Parameter value
+                     * @param _values Parameter value
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

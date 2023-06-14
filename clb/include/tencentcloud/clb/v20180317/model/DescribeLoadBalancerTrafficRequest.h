@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance region. If this parameter is not passed in, CLB instances in all regions will be returned.
                      * @return LoadBalancerRegion CLB instance region. If this parameter is not passed in, CLB instances in all regions will be returned.
+                     * 
                      */
                     std::string GetLoadBalancerRegion() const;
 
                     /**
                      * 设置CLB instance region. If this parameter is not passed in, CLB instances in all regions will be returned.
-                     * @param LoadBalancerRegion CLB instance region. If this parameter is not passed in, CLB instances in all regions will be returned.
+                     * @param _loadBalancerRegion CLB instance region. If this parameter is not passed in, CLB instances in all regions will be returned.
+                     * 
                      */
                     void SetLoadBalancerRegion(const std::string& _loadBalancerRegion);
 
                     /**
                      * 判断参数 LoadBalancerRegion 是否已赋值
                      * @return LoadBalancerRegion 是否已赋值
+                     * 
                      */
                     bool LoadBalancerRegionHasBeenSet() const;
 

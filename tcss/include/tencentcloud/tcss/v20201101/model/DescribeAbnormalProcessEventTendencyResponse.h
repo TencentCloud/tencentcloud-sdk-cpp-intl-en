@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Trend of pending abnormal process events
                      * @return List Trend of pending abnormal process events
+                     * 
                      */
                     std::vector<AbnormalProcessEventTendencyInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

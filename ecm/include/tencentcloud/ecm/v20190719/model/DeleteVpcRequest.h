@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
                      * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
-                     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
+                     * @param _vpcId VPC instance ID, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 

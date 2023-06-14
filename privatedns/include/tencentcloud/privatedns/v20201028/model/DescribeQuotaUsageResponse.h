@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取TLD quota usage
                      * @return TldQuota TLD quota usage
+                     * 
                      */
                     TldQuota GetTldQuota() const;
 
                     /**
                      * 判断参数 TldQuota 是否已赋值
                      * @return TldQuota 是否已赋值
+                     * 
                      */
                     bool TldQuotaHasBeenSet() const;
 

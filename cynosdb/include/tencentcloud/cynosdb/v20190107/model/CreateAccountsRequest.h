@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of new accounts
                      * @return Accounts List of new accounts
+                     * 
                      */
                     std::vector<NewAccount> GetAccounts() const;
 
                     /**
                      * 设置List of new accounts
-                     * @param Accounts List of new accounts
+                     * @param _accounts List of new accounts
+                     * 
                      */
                     void SetAccounts(const std::vector<NewAccount>& _accounts);
 
                     /**
                      * 判断参数 Accounts 是否已赋值
                      * @return Accounts 是否已赋值
+                     * 
                      */
                     bool AccountsHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
                      * @return DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+                     * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
                      * 设置ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
-                     * @param DisasterRecoverGroupIds ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+                     * @param _disasterRecoverGroupIds ID list of spread placement groups. You can operate up to 100 spread placement groups in each request.
+                     * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
 
                     /**
                      * 判断参数 DisasterRecoverGroupIds 是否已赋值
                      * @return DisasterRecoverGroupIds 是否已赋值
+                     * 
                      */
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Name of a spread placement group. Fuzzy match is supported.
                      * @return Name Name of a spread placement group. Fuzzy match is supported.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a spread placement group. Fuzzy match is supported.
-                     * @param Name Name of a spread placement group. Fuzzy match is supported.
+                     * @param _name Name of a spread placement group. Fuzzy match is supported.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
                      * @return Offset Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
-                     * @param Offset Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
+                     * @param _offset Offset; default value: 0. For more information on `Offset`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377).
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
                      * @return Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
-                     * @param Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
+                     * @param _limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see the corresponding section in API [Introduction](https://intl.cloud.tencent.com/document/product/377). 
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

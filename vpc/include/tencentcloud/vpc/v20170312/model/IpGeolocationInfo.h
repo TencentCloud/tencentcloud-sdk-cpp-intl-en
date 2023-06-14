@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Country Country/region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCountry() const;
 
                     /**
                      * 设置Country/region
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Country Country/region
+                     * @param _country Country/region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCountry(const std::string& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Province Province- or municipality-level administrative region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProvince() const;
 
                     /**
                      * 设置Province- or municipality-level administrative region
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Province Province- or municipality-level administrative region
+                     * @param _province Province- or municipality-level administrative region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProvince(const std::string& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return City Municipal administrative region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCity() const;
 
                     /**
                      * 设置Municipal administrative region
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param City Municipal administrative region
+                     * @param _city Municipal administrative region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCity(const std::string& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Region Urban area
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Urban area
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Region Urban area
+                     * @param _region Urban area
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Isp Access ISP
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIsp() const;
 
                     /**
                      * 设置Access ISP
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Isp Access ISP
+                     * @param _isp Access ISP
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsp(const std::string& _isp);
 
                     /**
                      * 判断参数 Isp 是否已赋值
                      * @return Isp 是否已赋值
+                     * 
                      */
                     bool IspHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AsName ISP backbone network’s AS name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAsName() const;
 
                     /**
                      * 设置ISP backbone network’s AS name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AsName ISP backbone network’s AS name
+                     * @param _asName ISP backbone network’s AS name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAsName(const std::string& _asName);
 
                     /**
                      * 判断参数 AsName 是否已赋值
                      * @return AsName 是否已赋值
+                     * 
                      */
                     bool AsNameHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AsId ISP backbone network’s AS ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAsId() const;
 
                     /**
                      * 设置ISP backbone network’s AS ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AsId ISP backbone network’s AS ID
+                     * @param _asId ISP backbone network’s AS ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAsId(const std::string& _asId);
 
                     /**
                      * 判断参数 AsId 是否已赋值
                      * @return AsId 是否已赋值
+                     * 
                      */
                     bool AsIdHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Comment Comment. The APN value of mobile users is entered currently. If there is no APN attribute, this is `null`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Comment. The APN value of mobile users is entered currently. If there is no APN attribute, this is `null`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Comment Comment. The APN value of mobile users is entered currently. If there is no APN attribute, this is `null`.
+                     * @param _comment Comment. The APN value of mobile users is entered currently. If there is no APN attribute, this is `null`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AddressIp IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddressIp() const;
 
                     /**
                      * 设置IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AddressIp IP address
+                     * @param _addressIp IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddressIp(const std::string& _addressIp);
 
                     /**
                      * 判断参数 AddressIp 是否已赋值
                      * @return AddressIp 是否已赋值
+                     * 
                      */
                     bool AddressIpHasBeenSet() const;
 

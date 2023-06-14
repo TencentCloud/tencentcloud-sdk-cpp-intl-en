@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Number of namespaces
                      * @return NamespacesCount Number of namespaces
+                     * 
                      */
                     int64_t GetNamespacesCount() const;
 
                     /**
                      * 设置Number of namespaces
-                     * @param NamespacesCount Number of namespaces
+                     * @param _namespacesCount Number of namespaces
+                     * 
                      */
                     void SetNamespacesCount(const int64_t& _namespacesCount);
 
                     /**
                      * 判断参数 NamespacesCount 是否已赋值
                      * @return NamespacesCount 是否已赋值
+                     * 
                      */
                     bool NamespacesCountHasBeenSet() const;
 
                     /**
                      * 获取Namespace details
                      * @return Namespace Namespace details
+                     * 
                      */
                     std::vector<NamespaceUsage> GetNamespace() const;
 
                     /**
                      * 设置Namespace details
-                     * @param Namespace Namespace details
+                     * @param _namespace Namespace details
+                     * 
                      */
                     void SetNamespace(const std::vector<NamespaceUsage>& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Upper limit of user concurrency memory in the current region
                      * @return TotalConcurrencyMem Upper limit of user concurrency memory in the current region
+                     * 
                      */
                     int64_t GetTotalConcurrencyMem() const;
 
                     /**
                      * 设置Upper limit of user concurrency memory in the current region
-                     * @param TotalConcurrencyMem Upper limit of user concurrency memory in the current region
+                     * @param _totalConcurrencyMem Upper limit of user concurrency memory in the current region
+                     * 
                      */
                     void SetTotalConcurrencyMem(const int64_t& _totalConcurrencyMem);
 
                     /**
                      * 判断参数 TotalConcurrencyMem 是否已赋值
                      * @return TotalConcurrencyMem 是否已赋值
+                     * 
                      */
                     bool TotalConcurrencyMemHasBeenSet() const;
 
                     /**
                      * 获取Quota of configured user concurrency memory in the current region
                      * @return TotalAllocatedConcurrencyMem Quota of configured user concurrency memory in the current region
+                     * 
                      */
                     int64_t GetTotalAllocatedConcurrencyMem() const;
 
                     /**
                      * 设置Quota of configured user concurrency memory in the current region
-                     * @param TotalAllocatedConcurrencyMem Quota of configured user concurrency memory in the current region
+                     * @param _totalAllocatedConcurrencyMem Quota of configured user concurrency memory in the current region
+                     * 
                      */
                     void SetTotalAllocatedConcurrencyMem(const int64_t& _totalAllocatedConcurrencyMem);
 
                     /**
                      * 判断参数 TotalAllocatedConcurrencyMem 是否已赋值
                      * @return TotalAllocatedConcurrencyMem 是否已赋值
+                     * 
                      */
                     bool TotalAllocatedConcurrencyMemHasBeenSet() const;
 
                     /**
                      * 获取Quota of account concurrency actually configured by user
                      * @return UserConcurrencyMemLimit Quota of account concurrency actually configured by user
+                     * 
                      */
                     int64_t GetUserConcurrencyMemLimit() const;
 
                     /**
                      * 设置Quota of account concurrency actually configured by user
-                     * @param UserConcurrencyMemLimit Quota of account concurrency actually configured by user
+                     * @param _userConcurrencyMemLimit Quota of account concurrency actually configured by user
+                     * 
                      */
                     void SetUserConcurrencyMemLimit(const int64_t& _userConcurrencyMemLimit);
 
                     /**
                      * 判断参数 UserConcurrencyMemLimit 是否已赋值
                      * @return UserConcurrencyMemLimit 是否已赋值
+                     * 
                      */
                     bool UserConcurrencyMemLimitHasBeenSet() const;
 

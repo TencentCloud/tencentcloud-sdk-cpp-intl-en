@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Text keyword.
                      * @return Word Text keyword.
+                     * 
                      */
                     std::string GetWord() const;
 
                     /**
                      * 设置Text keyword.
-                     * @param Word Text keyword.
+                     * @param _word Text keyword.
+                     * 
                      */
                     void SetWord(const std::string& _word);
 
                     /**
                      * 判断参数 Word 是否已赋值
                      * @return Word 是否已赋值
+                     * 
                      */
                     bool WordHasBeenSet() const;
 
                     /**
                      * 获取Start PTS time of recognized segment in seconds.
                      * @return StartPtsTime Start PTS time of recognized segment in seconds.
+                     * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
                      * 设置Start PTS time of recognized segment in seconds.
-                     * @param StartPtsTime Start PTS time of recognized segment in seconds.
+                     * @param _startPtsTime Start PTS time of recognized segment in seconds.
+                     * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
 
                     /**
                      * 判断参数 StartPtsTime 是否已赋值
                      * @return StartPtsTime 是否已赋值
+                     * 
                      */
                     bool StartPtsTimeHasBeenSet() const;
 
                     /**
                      * 获取End PTS time of recognized segment in seconds.
                      * @return EndPtsTime End PTS time of recognized segment in seconds.
+                     * 
                      */
                     double GetEndPtsTime() const;
 
                     /**
                      * 设置End PTS time of recognized segment in seconds.
-                     * @param EndPtsTime End PTS time of recognized segment in seconds.
+                     * @param _endPtsTime End PTS time of recognized segment in seconds.
+                     * 
                      */
                     void SetEndPtsTime(const double& _endPtsTime);
 
                     /**
                      * 判断参数 EndPtsTime 是否已赋值
                      * @return EndPtsTime 是否已赋值
+                     * 
                      */
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
                      * 获取Confidence of recognized segment. Value range: 0–100.
                      * @return Confidence Confidence of recognized segment. Value range: 0–100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of recognized segment. Value range: 0–100.
-                     * @param Confidence Confidence of recognized segment. Value range: 0–100.
+                     * @param _confidence Confidence of recognized segment. Value range: 0–100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
                      * @return AreaCoords Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 
                      */
                     std::vector<int64_t> GetAreaCoords() const;
 
                     /**
                      * 设置Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-                     * @param AreaCoords Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * @param _areaCoords Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 
                      */
                     void SetAreaCoords(const std::vector<int64_t>& _areaCoords);
 
                     /**
                      * 判断参数 AreaCoords 是否已赋值
                      * @return AreaCoords 是否已赋值
+                     * 
                      */
                     bool AreaCoordsHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Data subscription instance ID
                      * @return SubscribeId Data subscription instance ID
+                     * 
                      */
                     std::string GetSubscribeId() const;
 
                     /**
                      * 设置Data subscription instance ID
-                     * @param SubscribeId Data subscription instance ID
+                     * @param _subscribeId Data subscription instance ID
+                     * 
                      */
                     void SetSubscribeId(const std::string& _subscribeId);
 
                     /**
                      * 判断参数 SubscribeId 是否已赋值
                      * @return SubscribeId 是否已赋值
+                     * 
                      */
                     bool SubscribeIdHasBeenSet() const;
 
                     /**
                      * 获取Specified destination subnet. If this parameter is passed in, `DstIp` must be in the destination subnet
                      * @return DstUniqSubnetId Specified destination subnet. If this parameter is passed in, `DstIp` must be in the destination subnet
+                     * 
                      */
                     std::string GetDstUniqSubnetId() const;
 
                     /**
                      * 设置Specified destination subnet. If this parameter is passed in, `DstIp` must be in the destination subnet
-                     * @param DstUniqSubnetId Specified destination subnet. If this parameter is passed in, `DstIp` must be in the destination subnet
+                     * @param _dstUniqSubnetId Specified destination subnet. If this parameter is passed in, `DstIp` must be in the destination subnet
+                     * 
                      */
                     void SetDstUniqSubnetId(const std::string& _dstUniqSubnetId);
 
                     /**
                      * 判断参数 DstUniqSubnetId 是否已赋值
                      * @return DstUniqSubnetId 是否已赋值
+                     * 
                      */
                     bool DstUniqSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Target IP. Either this field or `DstPort` must be passed in
                      * @return DstIp Target IP. Either this field or `DstPort` must be passed in
+                     * 
                      */
                     std::string GetDstIp() const;
 
                     /**
                      * 设置Target IP. Either this field or `DstPort` must be passed in
-                     * @param DstIp Target IP. Either this field or `DstPort` must be passed in
+                     * @param _dstIp Target IP. Either this field or `DstPort` must be passed in
+                     * 
                      */
                     void SetDstIp(const std::string& _dstIp);
 
                     /**
                      * 判断参数 DstIp 是否已赋值
                      * @return DstIp 是否已赋值
+                     * 
                      */
                     bool DstIpHasBeenSet() const;
 
                     /**
                      * 获取Target port. Value range: [1025-65535]
                      * @return DstPort Target port. Value range: [1025-65535]
+                     * 
                      */
                     int64_t GetDstPort() const;
 
                     /**
                      * 设置Target port. Value range: [1025-65535]
-                     * @param DstPort Target port. Value range: [1025-65535]
+                     * @param _dstPort Target port. Value range: [1025-65535]
+                     * 
                      */
                     void SetDstPort(const int64_t& _dstPort);
 
                     /**
                      * 判断参数 DstPort 是否已赋值
                      * @return DstPort 是否已赋值
+                     * 
                      */
                     bool DstPortHasBeenSet() const;
 

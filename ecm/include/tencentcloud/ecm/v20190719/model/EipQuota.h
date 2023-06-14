@@ -55,6 +55,7 @@ DAILY_PUBLIC_IP_ASSIGN: number of public IP reassignments in the current region.
 TOTAL_EIP_QUOTA: quota of EIPs in the current region;
 DAILY_EIP_APPLY: today's number of applications in the current region;
 DAILY_PUBLIC_IP_ASSIGN: number of public IP reassignments in the current region.
+                     * 
                      */
                     std::string GetQuotaId() const;
 
@@ -63,52 +64,60 @@ DAILY_PUBLIC_IP_ASSIGN: number of public IP reassignments in the current region.
 TOTAL_EIP_QUOTA: quota of EIPs in the current region;
 DAILY_EIP_APPLY: today's number of applications in the current region;
 DAILY_PUBLIC_IP_ASSIGN: number of public IP reassignments in the current region.
-                     * @param QuotaId Quota name. Valid values:
+                     * @param _quotaId Quota name. Valid values:
 TOTAL_EIP_QUOTA: quota of EIPs in the current region;
 DAILY_EIP_APPLY: today's number of applications in the current region;
 DAILY_PUBLIC_IP_ASSIGN: number of public IP reassignments in the current region.
+                     * 
                      */
                     void SetQuotaId(const std::string& _quotaId);
 
                     /**
                      * 判断参数 QuotaId 是否已赋值
                      * @return QuotaId 是否已赋值
+                     * 
                      */
                     bool QuotaIdHasBeenSet() const;
 
                     /**
                      * 获取Current quantity
                      * @return QuotaCurrent Current quantity
+                     * 
                      */
                     uint64_t GetQuotaCurrent() const;
 
                     /**
                      * 设置Current quantity
-                     * @param QuotaCurrent Current quantity
+                     * @param _quotaCurrent Current quantity
+                     * 
                      */
                     void SetQuotaCurrent(const uint64_t& _quotaCurrent);
 
                     /**
                      * 判断参数 QuotaCurrent 是否已赋值
                      * @return QuotaCurrent 是否已赋值
+                     * 
                      */
                     bool QuotaCurrentHasBeenSet() const;
 
                     /**
                      * 获取Quota
                      * @return QuotaLimit Quota
+                     * 
                      */
                     uint64_t GetQuotaLimit() const;
 
                     /**
                      * 设置Quota
-                     * @param QuotaLimit Quota
+                     * @param _quotaLimit Quota
+                     * 
                      */
                     void SetQuotaLimit(const uint64_t& _quotaLimit);
 
                     /**
                      * 判断参数 QuotaLimit 是否已赋值
                      * @return QuotaLimit 是否已赋值
+                     * 
                      */
                     bool QuotaLimitHasBeenSet() const;
 

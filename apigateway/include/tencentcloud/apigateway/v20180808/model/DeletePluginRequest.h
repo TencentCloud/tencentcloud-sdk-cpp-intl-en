@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the plugin to be deleted
                      * @return PluginId ID of the plugin to be deleted
+                     * 
                      */
                     std::string GetPluginId() const;
 
                     /**
                      * 设置ID of the plugin to be deleted
-                     * @param PluginId ID of the plugin to be deleted
+                     * @param _pluginId ID of the plugin to be deleted
+                     * 
                      */
                     void SetPluginId(const std::string& _pluginId);
 
                     /**
                      * 判断参数 PluginId 是否已赋值
                      * @return PluginId 是否已赋值
+                     * 
                      */
                     bool PluginIdHasBeenSet() const;
 

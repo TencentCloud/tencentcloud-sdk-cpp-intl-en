@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable smart compression. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable smart compression. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable smart compression. Values:
+                     * @param _switch Whether to enable smart compression. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`brotli`: Brotli algorithm</li>
 <li>`gzip`: Gzip algorithm</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAlgorithms() const;
 
@@ -89,16 +93,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`brotli`: Brotli algorithm</li>
 <li>`gzip`: Gzip algorithm</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Algorithms Compression algorithm. Values:
+                     * @param _algorithms Compression algorithm. Values:
 <li>`brotli`: Brotli algorithm</li>
 <li>`gzip`: Gzip algorithm</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlgorithms(const std::vector<std::string>& _algorithms);
 
                     /**
                      * 判断参数 Algorithms 是否已赋值
                      * @return Algorithms 是否已赋值
+                     * 
                      */
                     bool AlgorithmsHasBeenSet() const;
 

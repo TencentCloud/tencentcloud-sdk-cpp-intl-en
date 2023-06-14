@@ -58,6 +58,7 @@ namespace TencentCloud
 <li>association.main - String - (Filter condition) Whether it is the main route table.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
 <li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -69,73 +70,84 @@ namespace TencentCloud
 <li>association.main - String - (Filter condition) Whether it is the main route table.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
 <li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
-                     * @param Filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
 <li>route-table-id - String - (Filter condition) Route table instance ID.</li>
 <li>route-table-name - String - (Filter condition) Route table name.</li>
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>association.main - String - (Filter condition) Whether it is the main route table.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
 <li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The route table instance ID, such as `rtb-azd4dt1c`.
                      * @return RouteTableIds The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     std::vector<std::string> GetRouteTableIds() const;
 
                     /**
                      * 设置The route table instance ID, such as `rtb-azd4dt1c`.
-                     * @param RouteTableIds The route table instance ID, such as `rtb-azd4dt1c`.
+                     * @param _routeTableIds The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     void SetRouteTableIds(const std::vector<std::string>& _routeTableIds);
 
                     /**
                      * 判断参数 RouteTableIds 是否已赋值
                      * @return RouteTableIds 是否已赋值
+                     * 
                      */
                     bool RouteTableIdsHasBeenSet() const;
 
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     std::string GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const std::string& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of request objects.
                      * @return Limit The number of request objects.
+                     * 
                      */
                     std::string GetLimit() const;
 
                     /**
                      * 设置The number of request objects.
-                     * @param Limit The number of request objects.
+                     * @param _limit The number of request objects.
+                     * 
                      */
                     void SetLimit(const std::string& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return PeakBandwidthTime Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetPeakBandwidthTime() const;
 
                     /**
                      * 判断参数 PeakBandwidthTime 是否已赋值
                      * @return PeakBandwidthTime 是否已赋值
+                     * 
                      */
                     bool PeakBandwidthTimeHasBeenSet() const;
 
                     /**
                      * 获取Peak bandwidth in Mbps.
                      * @return PeakBandwidth Peak bandwidth in Mbps.
+                     * 
                      */
                     double GetPeakBandwidth() const;
 
                     /**
                      * 判断参数 PeakBandwidth 是否已赋值
                      * @return PeakBandwidth 是否已赋值
+                     * 
                      */
                     bool PeakBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return P95PeakBandwidthTime Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetP95PeakBandwidthTime() const;
 
                     /**
                      * 判断参数 P95PeakBandwidthTime 是否已赋值
                      * @return P95PeakBandwidthTime 是否已赋值
+                     * 
                      */
                     bool P95PeakBandwidthTimeHasBeenSet() const;
 
                     /**
                      * 获取95th percentile bandwidth in Mbps.
                      * @return P95PeakBandwidth 95th percentile bandwidth in Mbps.
+                     * 
                      */
                     double GetP95PeakBandwidth() const;
 
                     /**
                      * 判断参数 P95PeakBandwidth 是否已赋值
                      * @return P95PeakBandwidth 是否已赋值
+                     * 
                      */
                     bool P95PeakBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Total traffic in MB.
                      * @return SumFlux Total traffic in MB.
+                     * 
                      */
                     double GetSumFlux() const;
 
                     /**
                      * 判断参数 SumFlux 是否已赋值
                      * @return SumFlux 是否已赋值
+                     * 
                      */
                     bool SumFluxHasBeenSet() const;
 
                     /**
                      * 获取Detailed data information.
                      * @return DataInfoList Detailed data information.
+                     * 
                      */
                     std::vector<BillDataInfo> GetDataInfoList() const;
 
                     /**
                      * 判断参数 DataInfoList 是否已赋值
                      * @return DataInfoList 是否已赋值
+                     * 
                      */
                     bool DataInfoListHasBeenSet() const;
 

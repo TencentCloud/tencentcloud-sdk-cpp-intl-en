@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     int64_t GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const int64_t& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return MaxDiskSize The cluster’s maximum disk capacity in GB
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxDiskSize() const;
 
                     /**
                      * 设置The cluster’s maximum disk capacity in GB
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param MaxDiskSize The cluster’s maximum disk capacity in GB
+                     * @param _maxDiskSize The cluster’s maximum disk capacity in GB
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxDiskSize(const int64_t& _maxDiskSize);
 
                     /**
                      * 判断参数 MaxDiskSize 是否已赋值
                      * @return MaxDiskSize 是否已赋值
+                     * 
                      */
                     bool MaxDiskSizeHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return MaxBandWidth The cluster’s maximum bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxBandWidth() const;
 
                     /**
                      * 设置The cluster’s maximum bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param MaxBandWidth The cluster’s maximum bandwidth in MB/s
+                     * @param _maxBandWidth The cluster’s maximum bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxBandWidth(const int64_t& _maxBandWidth);
 
                     /**
                      * 判断参数 MaxBandWidth 是否已赋值
                      * @return MaxBandWidth 是否已赋值
+                     * 
                      */
                     bool MaxBandWidthHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return AvailableDiskSize The cluster’s available disk capacity in GB
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAvailableDiskSize() const;
 
                     /**
                      * 设置The cluster’s available disk capacity in GB
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param AvailableDiskSize The cluster’s available disk capacity in GB
+                     * @param _availableDiskSize The cluster’s available disk capacity in GB
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAvailableDiskSize(const int64_t& _availableDiskSize);
 
                     /**
                      * 判断参数 AvailableDiskSize 是否已赋值
                      * @return AvailableDiskSize 是否已赋值
+                     * 
                      */
                     bool AvailableDiskSizeHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return AvailableBandWidth The cluster’s available bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAvailableBandWidth() const;
 
                     /**
                      * 设置The cluster’s available bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param AvailableBandWidth The cluster’s available bandwidth in MB/s
+                     * @param _availableBandWidth The cluster’s available bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAvailableBandWidth(const int64_t& _availableBandWidth);
 
                     /**
                      * 判断参数 AvailableBandWidth 是否已赋值
                      * @return AvailableBandWidth 是否已赋值
+                     * 
                      */
                     bool AvailableBandWidthHasBeenSet() const;
 
@@ -175,20 +193,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ZoneId The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param ZoneId The AZ where the cluster resides
+                     * @param _zoneId The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -197,20 +218,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
                      * 设置The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
+                     * @param _zoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 

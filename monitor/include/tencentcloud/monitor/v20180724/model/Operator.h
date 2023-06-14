@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Operator ID
                      * @return Id Operator ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Operator ID
-                     * @param Id Operator ID
+                     * @param _id Operator ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Operator name
                      * @return Name Operator name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Operator name
-                     * @param Name Operator name
+                     * @param _name Operator name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

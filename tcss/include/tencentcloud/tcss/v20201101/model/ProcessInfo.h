@@ -49,216 +49,252 @@ namespace TencentCloud
                     /**
                      * 获取Process start time
                      * @return StartTime Process start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Process start time
-                     * @param StartTime Process start time
+                     * @param _startTime Process start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Operator
                      * @return RunAs Operator
+                     * 
                      */
                     std::string GetRunAs() const;
 
                     /**
                      * 设置Operator
-                     * @param RunAs Operator
+                     * @param _runAs Operator
+                     * 
                      */
                     void SetRunAs(const std::string& _runAs);
 
                     /**
                      * 判断参数 RunAs 是否已赋值
                      * @return RunAs 是否已赋值
+                     * 
                      */
                     bool RunAsHasBeenSet() const;
 
                     /**
                      * 获取Command line parameter
                      * @return CmdLine Command line parameter
+                     * 
                      */
                     std::string GetCmdLine() const;
 
                     /**
                      * 设置Command line parameter
-                     * @param CmdLine Command line parameter
+                     * @param _cmdLine Command line parameter
+                     * 
                      */
                     void SetCmdLine(const std::string& _cmdLine);
 
                     /**
                      * 判断参数 CmdLine 是否已赋值
                      * @return CmdLine 是否已赋值
+                     * 
                      */
                     bool CmdLineHasBeenSet() const;
 
                     /**
                      * 获取Exe path
                      * @return Exe Exe path
+                     * 
                      */
                     std::string GetExe() const;
 
                     /**
                      * 设置Exe path
-                     * @param Exe Exe path
+                     * @param _exe Exe path
+                     * 
                      */
                     void SetExe(const std::string& _exe);
 
                     /**
                      * 判断参数 Exe 是否已赋值
                      * @return Exe 是否已赋值
+                     * 
                      */
                     bool ExeHasBeenSet() const;
 
                     /**
                      * 获取Server PID
                      * @return PID Server PID
+                     * 
                      */
                     uint64_t GetPID() const;
 
                     /**
                      * 设置Server PID
-                     * @param PID Server PID
+                     * @param _pID Server PID
+                     * 
                      */
                     void SetPID(const uint64_t& _pID);
 
                     /**
                      * 判断参数 PID 是否已赋值
                      * @return PID 是否已赋值
+                     * 
                      */
                     bool PIDHasBeenSet() const;
 
                     /**
                      * 获取Container PID
                      * @return ContainerPID Container PID
+                     * 
                      */
                     uint64_t GetContainerPID() const;
 
                     /**
                      * 设置Container PID
-                     * @param ContainerPID Container PID
+                     * @param _containerPID Container PID
+                     * 
                      */
                     void SetContainerPID(const uint64_t& _containerPID);
 
                     /**
                      * 判断参数 ContainerPID 是否已赋值
                      * @return ContainerPID 是否已赋值
+                     * 
                      */
                     bool ContainerPIDHasBeenSet() const;
 
                     /**
                      * 获取Container name
                      * @return ContainerName Container name
+                     * 
                      */
                     std::string GetContainerName() const;
 
                     /**
                      * 设置Container name
-                     * @param ContainerName Container name
+                     * @param _containerName Container name
+                     * 
                      */
                     void SetContainerName(const std::string& _containerName);
 
                     /**
                      * 判断参数 ContainerName 是否已赋值
                      * @return ContainerName 是否已赋值
+                     * 
                      */
                     bool ContainerNameHasBeenSet() const;
 
                     /**
                      * 获取Server ID
                      * @return HostID Server ID
+                     * 
                      */
                     std::string GetHostID() const;
 
                     /**
                      * 设置Server ID
-                     * @param HostID Server ID
+                     * @param _hostID Server ID
+                     * 
                      */
                     void SetHostID(const std::string& _hostID);
 
                     /**
                      * 判断参数 HostID 是否已赋值
                      * @return HostID 是否已赋值
+                     * 
                      */
                     bool HostIDHasBeenSet() const;
 
                     /**
                      * 获取Server IP
                      * @return HostIP Server IP
+                     * 
                      */
                     std::string GetHostIP() const;
 
                     /**
                      * 设置Server IP
-                     * @param HostIP Server IP
+                     * @param _hostIP Server IP
+                     * 
                      */
                     void SetHostIP(const std::string& _hostIP);
 
                     /**
                      * 判断参数 HostIP 是否已赋值
                      * @return HostIP 是否已赋值
+                     * 
                      */
                     bool HostIPHasBeenSet() const;
 
                     /**
                      * 获取Process name
                      * @return ProcessName Process name
+                     * 
                      */
                     std::string GetProcessName() const;
 
                     /**
                      * 设置Process name
-                     * @param ProcessName Process name
+                     * @param _processName Process name
+                     * 
                      */
                     void SetProcessName(const std::string& _processName);
 
                     /**
                      * 判断参数 ProcessName 是否已赋值
                      * @return ProcessName 是否已赋值
+                     * 
                      */
                     bool ProcessNameHasBeenSet() const;
 
                     /**
                      * 获取Server name
                      * @return HostName Server name
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Server name
-                     * @param HostName Server name
+                     * @param _hostName Server name
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
                     /**
                      * 获取Public IP
                      * @return PublicIp Public IP
+                     * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
                      * 设置Public IP
-                     * @param PublicIp Public IP
+                     * @param _publicIp Public IP
+                     * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
 
                     /**
                      * 判断参数 PublicIp 是否已赋值
                      * @return PublicIp 是否已赋值
+                     * 
                      */
                     bool PublicIpHasBeenSet() const;
 

@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogId The bulk purchase log ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetLogId() const;
 
                     /**
                      * 判断参数 LogId 是否已赋值
                      * @return LogId 是否已赋值
+                     * 
                      */
                     bool LogIdHasBeenSet() const;
 

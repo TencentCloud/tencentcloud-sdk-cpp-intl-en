@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Route table instance ID, such as `rtb-azd4dt1c`.
                      * @return RouteTableId Route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置Route table instance ID, such as `rtb-azd4dt1c`.
-                     * @param RouteTableId Route table instance ID, such as `rtb-azd4dt1c`.
+                     * @param _routeTableId Route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
                      * 获取List of conflicting destination ports to be checked.
                      * @return DestinationCidrBlocks List of conflicting destination ports to be checked.
+                     * 
                      */
                     std::vector<std::string> GetDestinationCidrBlocks() const;
 
                     /**
                      * 设置List of conflicting destination ports to be checked.
-                     * @param DestinationCidrBlocks List of conflicting destination ports to be checked.
+                     * @param _destinationCidrBlocks List of conflicting destination ports to be checked.
+                     * 
                      */
                     void SetDestinationCidrBlocks(const std::vector<std::string>& _destinationCidrBlocks);
 
                     /**
                      * 判断参数 DestinationCidrBlocks 是否已赋值
                      * @return DestinationCidrBlocks 是否已赋值
+                     * 
                      */
                     bool DestinationCidrBlocksHasBeenSet() const;
 

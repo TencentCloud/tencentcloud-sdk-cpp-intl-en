@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取`true`: Draft, indicating the resource pool is not refreshed.
                      * @return IsDraft `true`: Draft, indicating the resource pool is not refreshed.
+                     * 
                      */
                     bool GetIsDraft() const;
 
                     /**
                      * 判断参数 IsDraft 是否已赋值
                      * @return IsDraft 是否已赋值
+                     * 
                      */
                     bool IsDraftHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ErrorMsg Verification error information. If it is not null, the verification fails and thus the configuration fails.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Data The response data.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of mssql-k8voqdlz
                      * @return InstanceId Instance ID in the format of mssql-k8voqdlz
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-k8voqdlz
-                     * @param InstanceId Instance ID in the format of mssql-k8voqdlz
+                     * @param _instanceId Instance ID in the format of mssql-k8voqdlz
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Query start time
                      * @return StartTime Query start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Query start time
-                     * @param StartTime Query start time
+                     * @param _startTime Query start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Query end time
                      * @return EndTime Query end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Query end time
-                     * @param EndTime Query end time
+                     * @param _endTime Query end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page. Value range: 1-100. Default value: 20
                      * @return Limit Number of results per page. Value range: 1-100. Default value: 20
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page. Value range: 1-100. Default value: 20
-                     * @param Limit Number of results per page. Value range: 1-100. Default value: 20
+                     * @param _limit Number of results per page. Value range: 1-100. Default value: 20
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: 0
                      * @return Offset Page number. Default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: 0
-                     * @param Offset Page number. Default value: 0
+                     * @param _offset Page number. Default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

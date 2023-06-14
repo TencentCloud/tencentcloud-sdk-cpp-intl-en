@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -69,38 +72,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Pv Number of PVs
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPv() const;
 
                     /**
                      * 设置Number of PVs
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Pv Number of PVs
+                     * @param _pv Number of PVs
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPv(const std::string& _pv);
 
                     /**
                      * 判断参数 Pv 是否已赋值
                      * @return Pv 是否已赋值
+                     * 
                      */
                     bool PvHasBeenSet() const;
 
                     /**
                      * 获取Time
                      * @return CreateTime Time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Time
-                     * @param CreateTime Time
+                     * @param _createTime Time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

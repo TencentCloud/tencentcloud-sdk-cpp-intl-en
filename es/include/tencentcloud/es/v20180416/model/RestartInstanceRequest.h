@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
                      * @return ForceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+                     * 
                      */
                     bool GetForceRestart() const;
 
                     /**
                      * 设置Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
-                     * @param ForceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+                     * @param _forceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+                     * 
                      */
                     void SetForceRestart(const bool& _forceRestart);
 
                     /**
                      * 判断参数 ForceRestart 是否已赋值
                      * @return ForceRestart 是否已赋值
+                     * 
                      */
                     bool ForceRestartHasBeenSet() const;
 
                     /**
                      * 获取Restart mode. `0`: rolling restart; `1`: full restart
                      * @return RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+                     * 
                      */
                     int64_t GetRestartMode() const;
 
                     /**
                      * 设置Restart mode. `0`: rolling restart; `1`: full restart
-                     * @param RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+                     * @param _restartMode Restart mode. `0`: rolling restart; `1`: full restart
+                     * 
                      */
                     void SetRestartMode(const int64_t& _restartMode);
 
                     /**
                      * 判断参数 RestartMode 是否已赋值
                      * @return RestartMode 是否已赋值
+                     * 
                      */
                     bool RestartModeHasBeenSet() const;
 

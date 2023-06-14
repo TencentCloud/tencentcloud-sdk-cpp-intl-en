@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Key of the policy. Valid values: `host`, `cgi`, `ua`, `referer`
                      * @return Skey Key of the policy. Valid values: `host`, `cgi`, `ua`, `referer`
+                     * 
                      */
                     std::string GetSkey() const;
 
                     /**
                      * 设置Key of the policy. Valid values: `host`, `cgi`, `ua`, `referer`
-                     * @param Skey Key of the policy. Valid values: `host`, `cgi`, `ua`, `referer`
+                     * @param _skey Key of the policy. Valid values: `host`, `cgi`, `ua`, `referer`
+                     * 
                      */
                     void SetSkey(const std::string& _skey);
 
                     /**
                      * 判断参数 Skey 是否已赋值
                      * @return Skey 是否已赋值
+                     * 
                      */
                     bool SkeyHasBeenSet() const;
 
                     /**
                      * 获取Rule condition. Valid values: `include`, `not_include`, `equal`
                      * @return Operator Rule condition. Valid values: `include`, `not_include`, `equal`
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Rule condition. Valid values: `include`, `not_include`, `equal`
-                     * @param Operator Rule condition. Valid values: `include`, `not_include`, `equal`
+                     * @param _operator Rule condition. Valid values: `include`, `not_include`, `equal`
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Value of the policy. Length limit: 31 bytes
                      * @return Value Value of the policy. Length limit: 31 bytes
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value of the policy. Length limit: 31 bytes
-                     * @param Value Value of the policy. Length limit: 31 bytes
+                     * @param _value Value of the policy. Length limit: 31 bytes
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

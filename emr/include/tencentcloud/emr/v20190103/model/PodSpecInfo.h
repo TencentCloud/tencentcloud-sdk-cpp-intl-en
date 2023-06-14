@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取The specified information such as pod spec and source for scale-out with pod resources.
                      * @return PodSpec The specified information such as pod spec and source for scale-out with pod resources.
+                     * 
                      */
                     PodNewSpec GetPodSpec() const;
 
                     /**
                      * 设置The specified information such as pod spec and source for scale-out with pod resources.
-                     * @param PodSpec The specified information such as pod spec and source for scale-out with pod resources.
+                     * @param _podSpec The specified information such as pod spec and source for scale-out with pod resources.
+                     * 
                      */
                     void SetPodSpec(const PodNewSpec& _podSpec);
 
                     /**
                      * 判断参数 PodSpec 是否已赋值
                      * @return PodSpec 是否已赋值
+                     * 
                      */
                     bool PodSpecHasBeenSet() const;
 
                     /**
                      * 获取The custom pod permission and parameter.
                      * @return PodParameter The custom pod permission and parameter.
+                     * 
                      */
                     PodNewParameter GetPodParameter() const;
 
                     /**
                      * 设置The custom pod permission and parameter.
-                     * @param PodParameter The custom pod permission and parameter.
+                     * @param _podParameter The custom pod permission and parameter.
+                     * 
                      */
                     void SetPodParameter(const PodNewParameter& _podParameter);
 
                     /**
                      * 判断参数 PodParameter 是否已赋值
                      * @return PodParameter 是否已赋值
+                     * 
                      */
                     bool PodParameterHasBeenSet() const;
 

@@ -51,162 +51,189 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return Region Cluster ID
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param Region Cluster ID
+                     * @param _region Cluster ID
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Cluster type
                      * @return ClusterType Cluster type
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Cluster type
-                     * @param ClusterType Cluster type
+                     * @param _clusterType Cluster type
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable public network CLB
                      * @return EnableExternal Whether to enable public network CLB
+                     * 
                      */
                     bool GetEnableExternal() const;
 
                     /**
                      * 设置Whether to enable public network CLB
-                     * @param EnableExternal Whether to enable public network CLB
+                     * @param _enableExternal Whether to enable public network CLB
+                     * 
                      */
                     void SetEnableExternal(const bool& _enableExternal);
 
                     /**
                      * 判断参数 EnableExternal 是否已赋值
                      * @return EnableExternal 是否已赋值
+                     * 
                      */
                     bool EnableExternalHasBeenSet() const;
 
                     /**
                      * 获取Pod configurations of components deployed in the cluster
                      * @return InClusterPodConfig Pod configurations of components deployed in the cluster
+                     * 
                      */
                     PrometheusClusterAgentPodConfig GetInClusterPodConfig() const;
 
                     /**
                      * 设置Pod configurations of components deployed in the cluster
-                     * @param InClusterPodConfig Pod configurations of components deployed in the cluster
+                     * @param _inClusterPodConfig Pod configurations of components deployed in the cluster
+                     * 
                      */
                     void SetInClusterPodConfig(const PrometheusClusterAgentPodConfig& _inClusterPodConfig);
 
                     /**
                      * 判断参数 InClusterPodConfig 是否已赋值
                      * @return InClusterPodConfig 是否已赋值
+                     * 
                      */
                     bool InClusterPodConfigHasBeenSet() const;
 
                     /**
                      * 获取External labels, which will be attached to all metrics collected by this cluster
                      * @return ExternalLabels External labels, which will be attached to all metrics collected by this cluster
+                     * 
                      */
                     std::vector<Label> GetExternalLabels() const;
 
                     /**
                      * 设置External labels, which will be attached to all metrics collected by this cluster
-                     * @param ExternalLabels External labels, which will be attached to all metrics collected by this cluster
+                     * @param _externalLabels External labels, which will be attached to all metrics collected by this cluster
+                     * 
                      */
                     void SetExternalLabels(const std::vector<Label>& _externalLabels);
 
                     /**
                      * 判断参数 ExternalLabels 是否已赋值
                      * @return ExternalLabels 是否已赋值
+                     * 
                      */
                     bool ExternalLabelsHasBeenSet() const;
 
                     /**
                      * 获取Whether to install the default collection configuration.
                      * @return NotInstallBasicScrape Whether to install the default collection configuration.
+                     * 
                      */
                     bool GetNotInstallBasicScrape() const;
 
                     /**
                      * 设置Whether to install the default collection configuration.
-                     * @param NotInstallBasicScrape Whether to install the default collection configuration.
+                     * @param _notInstallBasicScrape Whether to install the default collection configuration.
+                     * 
                      */
                     void SetNotInstallBasicScrape(const bool& _notInstallBasicScrape);
 
                     /**
                      * 判断参数 NotInstallBasicScrape 是否已赋值
                      * @return NotInstallBasicScrape 是否已赋值
+                     * 
                      */
                     bool NotInstallBasicScrapeHasBeenSet() const;
 
                     /**
                      * 获取Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
                      * @return NotScrape Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
+                     * 
                      */
                     bool GetNotScrape() const;
 
                     /**
                      * 设置Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
-                     * @param NotScrape Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
+                     * @param _notScrape Whether to collect metrics (`true`: Drop all metrics; `false`: Collect default metrics)
+                     * 
                      */
                     void SetNotScrape(const bool& _notScrape);
 
                     /**
                      * 判断参数 NotScrape 是否已赋值
                      * @return NotScrape 是否已赋值
+                     * 
                      */
                     bool NotScrapeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the default recording rule
                      * @return OpenDefaultRecord Whether to enable the default recording rule
+                     * 
                      */
                     bool GetOpenDefaultRecord() const;
 
                     /**
                      * 设置Whether to enable the default recording rule
-                     * @param OpenDefaultRecord Whether to enable the default recording rule
+                     * @param _openDefaultRecord Whether to enable the default recording rule
+                     * 
                      */
                     void SetOpenDefaultRecord(const bool& _openDefaultRecord);
 
                     /**
                      * 判断参数 OpenDefaultRecord 是否已赋值
                      * @return OpenDefaultRecord 是否已赋值
+                     * 
                      */
                     bool OpenDefaultRecordHasBeenSet() const;
 

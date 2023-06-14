@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RegionName Region name, such as Guangzhou
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name, such as Guangzhou
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RegionName Region name, such as Guangzhou
+                     * @param _regionName Region name, such as Guangzhou
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Region Region ID, such as ap-guangzhou
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region ID, such as ap-guangzhou
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Region Region ID, such as ap-guangzhou
+                     * @param _region Region ID, such as ap-guangzhou
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Area Region name, such as South China
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Region name, such as South China
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Area Region name, such as South China
+                     * @param _area Region name, such as South China
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsDefaultRegion Whether it is the default region. 0: no, 1: yes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsDefaultRegion() const;
 
                     /**
                      * 设置Whether it is the default region. 0: no, 1: yes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsDefaultRegion Whether it is the default region. 0: no, 1: yes
+                     * @param _isDefaultRegion Whether it is the default region. 0: no, 1: yes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDefaultRegion(const int64_t& _isDefaultRegion);
 
                     /**
                      * 判断参数 IsDefaultRegion 是否已赋值
                      * @return IsDefaultRegion 是否已赋值
+                     * 
                      */
                     bool IsDefaultRegionHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Status Purchasable status of current region. 1: normal, 2: beta test, 3: not purchasable
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Purchasable status of current region. 1: normal, 2: beta test, 3: not purchasable
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status Purchasable status of current region. 1: normal, 2: beta test, 3: not purchasable
+                     * @param _status Purchasable status of current region. 1: normal, 2: beta test, 3: not purchasable
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

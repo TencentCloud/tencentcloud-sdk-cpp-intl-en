@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AggregationField Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAggregationField() const;
 
                     /**
                      * 设置Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AggregationField Aggregation dimension
+                     * @param _aggregationField Aggregation dimension
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAggregationField(const std::string& _aggregationField);
 
                     /**
                      * 判断参数 AggregationField 是否已赋值
                      * @return AggregationField 是否已赋值
+                     * 
                      */
                     bool AggregationFieldHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Buckets Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Bucket> GetBuckets() const;
 
                     /**
                      * 设置Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Buckets Result set of an aggregation bucket
+                     * @param _buckets Result set of an aggregation bucket
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBuckets(const std::vector<Bucket>& _buckets);
 
                     /**
                      * 判断参数 Buckets 是否已赋值
                      * @return Buckets 是否已赋值
+                     * 
                      */
                     bool BucketsHasBeenSet() const;
 

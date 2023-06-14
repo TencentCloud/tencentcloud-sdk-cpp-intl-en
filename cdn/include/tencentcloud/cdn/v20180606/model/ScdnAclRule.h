@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Keyword
                      * @return MatchKey Keyword
+                     * 
                      */
                     std::string GetMatchKey() const;
 
                     /**
                      * 设置Keyword
-                     * @param MatchKey Keyword
+                     * @param _matchKey Keyword
+                     * 
                      */
                     void SetMatchKey(const std::string& _matchKey);
 
                     /**
                      * 判断参数 MatchKey 是否已赋值
                      * @return MatchKey 是否已赋值
+                     * 
                      */
                     bool MatchKeyHasBeenSet() const;
 
                     /**
                      * 获取Logical operator. Valid values:
                      * @return LogiOperator Logical operator. Valid values:
+                     * 
                      */
                     std::string GetLogiOperator() const;
 
                     /**
                      * 设置Logical operator. Valid values:
-                     * @param LogiOperator Logical operator. Valid values:
+                     * @param _logiOperator Logical operator. Valid values:
+                     * 
                      */
                     void SetLogiOperator(const std::string& _logiOperator);
 
                     /**
                      * 判断参数 LogiOperator 是否已赋值
                      * @return LogiOperator 是否已赋值
+                     * 
                      */
                     bool LogiOperatorHasBeenSet() const;
 
                     /**
                      * 获取Matched value
                      * @return MatchValue Matched value
+                     * 
                      */
                     std::string GetMatchValue() const;
 
                     /**
                      * 设置Matched value
-                     * @param MatchValue Matched value
+                     * @param _matchValue Matched value
+                     * 
                      */
                     void SetMatchValue(const std::string& _matchValue);
 
                     /**
                      * 判断参数 MatchValue 是否已赋值
                      * @return MatchValue 是否已赋值
+                     * 
                      */
                     bool MatchValueHasBeenSet() const;
 

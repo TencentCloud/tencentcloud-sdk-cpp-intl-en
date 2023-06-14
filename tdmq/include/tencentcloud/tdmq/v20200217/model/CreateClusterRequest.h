@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
                      * @return ClusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
-                     * @param ClusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+                     * @param _clusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
                      * @return BindClusterId ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
+                     * 
                      */
                     uint64_t GetBindClusterId() const;
 
                     /**
                      * 设置ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
-                     * @param BindClusterId ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
+                     * @param _bindClusterId ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
+                     * 
                      */
                     void SetBindClusterId(const uint64_t& _bindClusterId);
 
                     /**
                      * 判断参数 BindClusterId 是否已赋值
                      * @return BindClusterId 是否已赋值
+                     * 
                      */
                     bool BindClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Remarks (up to 128 characters).
                      * @return Remark Remarks (up to 128 characters).
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks (up to 128 characters).
-                     * @param Remark Remarks (up to 128 characters).
+                     * @param _remark Remarks (up to 128 characters).
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Cluster tag list (deprecated).
                      * @return Tags Cluster tag list (deprecated).
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Cluster tag list (deprecated).
-                     * @param Tags Cluster tag list (deprecated).
+                     * @param _tags Cluster tag list (deprecated).
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
                      * @return PublicAccessEnabled Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
+                     * 
                      */
                     bool GetPublicAccessEnabled() const;
 
                     /**
                      * 设置Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
-                     * @param PublicAccessEnabled Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
+                     * @param _publicAccessEnabled Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
+                     * 
                      */
                     void SetPublicAccessEnabled(const bool& _publicAccessEnabled);
 
                     /**
                      * 判断参数 PublicAccessEnabled 是否已赋值
                      * @return PublicAccessEnabled 是否已赋值
+                     * 
                      */
                     bool PublicAccessEnabledHasBeenSet() const;
 

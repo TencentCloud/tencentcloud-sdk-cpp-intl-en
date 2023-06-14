@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Type (`name`, `tag` and `resource`)
                      * @return Type Type (`name`, `tag` and `resource`)
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type (`name`, `tag` and `resource`)
-                     * @param Type Type (`name`, `tag` and `resource`)
+                     * @param _type Type (`name`, `tag` and `resource`)
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取It is left blank by default
                      * @return Value It is left blank by default
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置It is left blank by default
-                     * @param Value It is left blank by default
+                     * @param _value It is left blank by default
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

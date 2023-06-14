@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取CKafka instance ID.
                      * @return InstanceId CKafka instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置CKafka instance ID.
-                     * @param InstanceId CKafka instance ID.
+                     * @param _instanceId CKafka instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the group to be queried, which is optional.
                      * @return GroupName Name of the group to be queried, which is optional.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Name of the group to be queried, which is optional.
-                     * @param GroupName Name of the group to be queried, which is optional.
+                     * @param _groupName Name of the group to be queried, which is optional.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
                      * @return TopicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
-                     * @param TopicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+                     * @param _topicName Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned in this request
                      * @return Limit Number of results to be returned in this request
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned in this request
-                     * @param Limit Number of results to be returned in this request
+                     * @param _limit Number of results to be returned in this request
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset position
                      * @return Offset Offset position
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset position
-                     * @param Offset Offset position
+                     * @param _offset Offset position
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取CWP agent `UUID`
                      * @return Uuid CWP agent `UUID`
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `UUID`
-                     * @param Uuid CWP agent `UUID`
+                     * @param _uuid CWP agent `UUID`
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 

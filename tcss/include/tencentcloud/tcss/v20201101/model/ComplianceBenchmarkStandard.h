@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Compliance standard ID
                      * @return StandardId Compliance standard ID
+                     * 
                      */
                     uint64_t GetStandardId() const;
 
                     /**
                      * 设置Compliance standard ID
-                     * @param StandardId Compliance standard ID
+                     * @param _standardId Compliance standard ID
+                     * 
                      */
                     void SetStandardId(const uint64_t& _standardId);
 
                     /**
                      * 判断参数 StandardId 是否已赋值
                      * @return StandardId 是否已赋值
+                     * 
                      */
                     bool StandardIdHasBeenSet() const;
 
                     /**
                      * 获取Compliance standard name
                      * @return Name Compliance standard name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Compliance standard name
-                     * @param Name Compliance standard name
+                     * @param _name Compliance standard name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Number of items contained in the compliance standard
                      * @return PolicyItemCount Number of items contained in the compliance standard
+                     * 
                      */
                     uint64_t GetPolicyItemCount() const;
 
                     /**
                      * 设置Number of items contained in the compliance standard
-                     * @param PolicyItemCount Number of items contained in the compliance standard
+                     * @param _policyItemCount Number of items contained in the compliance standard
+                     * 
                      */
                     void SetPolicyItemCount(const uint64_t& _policyItemCount);
 
                     /**
                      * 判断参数 PolicyItemCount 是否已赋值
                      * @return PolicyItemCount 是否已赋值
+                     * 
                      */
                     bool PolicyItemCountHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the standard
                      * @return Enabled Whether to enable the standard
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether to enable the standard
-                     * @param Enabled Whether to enable the standard
+                     * @param _enabled Whether to enable the standard
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Description of the standard
                      * @return Description Description of the standard
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description of the standard
-                     * @param Description Description of the standard
+                     * @param _description Description of the standard
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

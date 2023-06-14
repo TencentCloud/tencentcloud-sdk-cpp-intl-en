@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID
                      * @return Id Policy ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param Id Policy ID
+                     * @param _id Policy ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

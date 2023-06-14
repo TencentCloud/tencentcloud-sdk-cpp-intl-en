@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The StreamLive input ID.
                      * @return Id The StreamLive input ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置The StreamLive input ID.
-                     * @param Id The StreamLive input ID.
+                     * @param _id The StreamLive input ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

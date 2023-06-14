@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of scanned containers
                      * @return ContainerTotal Number of scanned containers
+                     * 
                      */
                     uint64_t GetContainerTotal() const;
 
                     /**
                      * 判断参数 ContainerTotal 是否已赋值
                      * @return ContainerTotal 是否已赋值
+                     * 
                      */
                     bool ContainerTotalHasBeenSet() const;
 
                     /**
                      * 获取Number of containers at risk
                      * @return RiskContainerCnt Number of containers at risk
+                     * 
                      */
                     uint64_t GetRiskContainerCnt() const;
 
                     /**
                      * 判断参数 RiskContainerCnt 是否已赋值
                      * @return RiskContainerCnt 是否已赋值
+                     * 
                      */
                     bool RiskContainerCntHasBeenSet() const;
 
@@ -82,96 +86,112 @@ namespace TencentCloud
 `SCAN_TIMEOUT`: Scan timed out.
 `SCAN_CANCELING`: Canceling.
 `SCAN_CANCELED`: Canceled.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Scanning progress
                      * @return Schedule Scanning progress
+                     * 
                      */
                     uint64_t GetSchedule() const;
 
                     /**
                      * 判断参数 Schedule 是否已赋值
                      * @return Schedule 是否已赋值
+                     * 
                      */
                     bool ScheduleHasBeenSet() const;
 
                     /**
                      * 获取Number of scanned containers
                      * @return ContainerScanCnt Number of scanned containers
+                     * 
                      */
                     uint64_t GetContainerScanCnt() const;
 
                     /**
                      * 判断参数 ContainerScanCnt 是否已赋值
                      * @return ContainerScanCnt 是否已赋值
+                     * 
                      */
                     bool ContainerScanCntHasBeenSet() const;
 
                     /**
                      * 获取Number of risks
                      * @return RiskCnt Number of risks
+                     * 
                      */
                     uint64_t GetRiskCnt() const;
 
                     /**
                      * 判断参数 RiskCnt 是否已赋值
                      * @return RiskCnt 是否已赋值
+                     * 
                      */
                     bool RiskCntHasBeenSet() const;
 
                     /**
                      * 获取Remaining scan time
                      * @return LeftSeconds Remaining scan time
+                     * 
                      */
                     uint64_t GetLeftSeconds() const;
 
                     /**
                      * 判断参数 LeftSeconds 是否已赋值
                      * @return LeftSeconds 是否已赋值
+                     * 
                      */
                     bool LeftSecondsHasBeenSet() const;
 
                     /**
                      * 获取Scan start time
                      * @return StartTime Scan start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Scan end time
                      * @return EndTime Scan end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Scan type. Valid values: `CYCLE` (periodic scan); `MANUAL` (manual scan).
                      * @return ScanType Scan type. Valid values: `CYCLE` (periodic scan); `MANUAL` (manual scan).
+                     * 
                      */
                     std::string GetScanType() const;
 
                     /**
                      * 判断参数 ScanType 是否已赋值
                      * @return ScanType 是否已赋值
+                     * 
                      */
                     bool ScanTypeHasBeenSet() const;
 

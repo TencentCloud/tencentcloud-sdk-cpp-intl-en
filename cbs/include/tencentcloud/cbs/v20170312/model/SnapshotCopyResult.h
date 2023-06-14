@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the snapshot replica
                      * @return SnapshotId ID of the snapshot replica
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 设置ID of the snapshot replica
-                     * @param SnapshotId ID of the snapshot replica
+                     * @param _snapshotId ID of the snapshot replica
+                     * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
                      * 获取Error message. It’s null if the request succeeds.
                      * @return Message Error message. It’s null if the request succeeds.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message. It’s null if the request succeeds.
-                     * @param Message Error message. It’s null if the request succeeds.
+                     * @param _message Error message. It’s null if the request succeeds.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Error code. It’s `Success` if the request succeeds.
                      * @return Code Error code. It’s `Success` if the request succeeds.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Error code. It’s `Success` if the request succeeds.
-                     * @param Code Error code. It’s `Success` if the request succeeds.
+                     * @param _code Error code. It’s `Success` if the request succeeds.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取Destination region of the replication task
                      * @return DestinationRegion Destination region of the replication task
+                     * 
                      */
                     std::string GetDestinationRegion() const;
 
                     /**
                      * 设置Destination region of the replication task
-                     * @param DestinationRegion Destination region of the replication task
+                     * @param _destinationRegion Destination region of the replication task
+                     * 
                      */
                     void SetDestinationRegion(const std::string& _destinationRegion);
 
                     /**
                      * 判断参数 DestinationRegion 是否已赋值
                      * @return DestinationRegion 是否已赋值
+                     * 
                      */
                     bool DestinationRegionHasBeenSet() const;
 

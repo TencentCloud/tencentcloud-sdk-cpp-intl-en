@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Auto-scaling policy ID. This parameter is not available to a target tracking policy.
                      * @return AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * 
                      */
                     std::string GetAutoScalingPolicyId() const;
 
                     /**
                      * 设置Auto-scaling policy ID. This parameter is not available to a target tracking policy.
-                     * @param AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * @param _autoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * 
                      */
                     void SetAutoScalingPolicyId(const std::string& _autoScalingPolicyId);
 
                     /**
                      * 判断参数 AutoScalingPolicyId 是否已赋值
                      * @return AutoScalingPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoScalingPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to check if the auto scaling group is in the cooldown period. Default value: false
                      * @return HonorCooldown Whether to check if the auto scaling group is in the cooldown period. Default value: false
+                     * 
                      */
                     bool GetHonorCooldown() const;
 
                     /**
                      * 设置Whether to check if the auto scaling group is in the cooldown period. Default value: false
-                     * @param HonorCooldown Whether to check if the auto scaling group is in the cooldown period. Default value: false
+                     * @param _honorCooldown Whether to check if the auto scaling group is in the cooldown period. Default value: false
+                     * 
                      */
                     void SetHonorCooldown(const bool& _honorCooldown);
 
                     /**
                      * 判断参数 HonorCooldown 是否已赋值
                      * @return HonorCooldown 是否已赋值
+                     * 
                      */
                     bool HonorCooldownHasBeenSet() const;
 
                     /**
                      * 获取Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
                      * @return TriggerSource Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+                     * 
                      */
                     std::string GetTriggerSource() const;
 
                     /**
                      * 设置Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
-                     * @param TriggerSource Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+                     * @param _triggerSource Source that triggers the scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+                     * 
                      */
                     void SetTriggerSource(const std::string& _triggerSource);
 
                     /**
                      * 判断参数 TriggerSource 是否已赋值
                      * @return TriggerSource 是否已赋值
+                     * 
                      */
                     bool TriggerSourceHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of filtered Secrets according to `State` and `SearchSecretName`.
                      * @return TotalCount Number of filtered Secrets according to `State` and `SearchSecretName`.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of Secret information.
                      * @return SecretMetadatas List of Secret information.
+                     * 
                      */
                     std::vector<SecretMetadata> GetSecretMetadatas() const;
 
                     /**
                      * 判断参数 SecretMetadatas 是否已赋值
                      * @return SecretMetadatas 是否已赋值
+                     * 
                      */
                     bool SecretMetadatasHasBeenSet() const;
 

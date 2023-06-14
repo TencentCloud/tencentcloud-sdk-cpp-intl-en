@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterID Cluster ID
+                     * 
                      */
                     std::string GetClusterID() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterID Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
                      */
                     void SetClusterID(const std::string& _clusterID);
 
                     /**
                      * 判断参数 ClusterID 是否已赋值
                      * @return ClusterID 是否已赋值
+                     * 
                      */
                     bool ClusterIDHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
@@ -91,6 +97,7 @@ namespace TencentCloud
 `CSR_RUNNING`: Running
 `CSR_EXCEPTION`: Abnormal
 `CSR_DEL`: Deleted
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -99,34 +106,39 @@ namespace TencentCloud
 `CSR_RUNNING`: Running
 `CSR_EXCEPTION`: Abnormal
 `CSR_DEL`: Deleted
-                     * @param Status Cluster status
+                     * @param _status Cluster status
 `CSR_RUNNING`: Running
 `CSR_EXCEPTION`: Abnormal
 `CSR_DEL`: Deleted
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Bound rule name
                      * @return BindRuleName Bound rule name
+                     * 
                      */
                     std::string GetBindRuleName() const;
 
                     /**
                      * 设置Bound rule name
-                     * @param BindRuleName Bound rule name
+                     * @param _bindRuleName Bound rule name
+                     * 
                      */
                     void SetBindRuleName(const std::string& _bindRuleName);
 
                     /**
                      * 判断参数 BindRuleName 是否已赋值
                      * @return BindRuleName 是否已赋值
+                     * 
                      */
                     bool BindRuleNameHasBeenSet() const;
 
@@ -137,6 +149,7 @@ namespace TencentCloud
                      * @return ClusterType Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+                     * 
                      */
                     std::string GetClusterType() const;
 
@@ -144,15 +157,17 @@ namespace TencentCloud
                      * 设置Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
-                     * @param ClusterType Cluster type:
+                     * @param _clusterType Cluster type:
 `CT_TKE`: TKE cluster
 `CT_USER_CREATE`: External cluster
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the machine
                      * @return ServerUid The unique ID of the machine
+                     * 
                      */
                     std::string GetServerUid() const;
 
                     /**
                      * 设置The unique ID of the machine
-                     * @param ServerUid The unique ID of the machine
+                     * @param _serverUid The unique ID of the machine
+                     * 
                      */
                     void SetServerUid(const std::string& _serverUid);
 
                     /**
                      * 判断参数 ServerUid 是否已赋值
                      * @return ServerUid 是否已赋值
+                     * 
                      */
                     bool ServerUidHasBeenSet() const;
 
                     /**
                      * 获取Machine type
                      * @return MachineType Machine type
+                     * 
                      */
                     std::string GetMachineType() const;
 
                     /**
                      * 设置Machine type
-                     * @param MachineType Machine type
+                     * @param _machineType Machine type
+                     * 
                      */
                     void SetMachineType(const std::string& _machineType);
 
                     /**
                      * 判断参数 MachineType 是否已赋值
                      * @return MachineType 是否已赋值
+                     * 
                      */
                     bool MachineTypeHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Partition name
                      * @return Partition Partition name
+                     * 
                      */
                     std::string GetPartition() const;
 
                     /**
                      * 设置Partition name
-                     * @param Partition Partition name
+                     * @param _partition Partition name
+                     * 
                      */
                     void SetPartition(const std::string& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 
                     /**
                      * 获取Leader ID
                      * @return Leader Leader ID
+                     * 
                      */
                     uint64_t GetLeader() const;
 
                     /**
                      * 设置Leader ID
-                     * @param Leader Leader ID
+                     * @param _leader Leader ID
+                     * 
                      */
                     void SetLeader(const uint64_t& _leader);
 
                     /**
                      * 判断参数 Leader 是否已赋值
                      * @return Leader 是否已赋值
+                     * 
                      */
                     bool LeaderHasBeenSet() const;
 
                     /**
                      * 获取Replica set
                      * @return Replica Replica set
+                     * 
                      */
                     std::string GetReplica() const;
 
                     /**
                      * 设置Replica set
-                     * @param Replica Replica set
+                     * @param _replica Replica set
+                     * 
                      */
                     void SetReplica(const std::string& _replica);
 
                     /**
                      * 判断参数 Replica 是否已赋值
                      * @return Replica 是否已赋值
+                     * 
                      */
                     bool ReplicaHasBeenSet() const;
 
                     /**
                      * 获取ISR
                      * @return InSyncReplica ISR
+                     * 
                      */
                     std::string GetInSyncReplica() const;
 
                     /**
                      * 设置ISR
-                     * @param InSyncReplica ISR
+                     * @param _inSyncReplica ISR
+                     * 
                      */
                     void SetInSyncReplica(const std::string& _inSyncReplica);
 
                     /**
                      * 判断参数 InSyncReplica 是否已赋值
                      * @return InSyncReplica 是否已赋值
+                     * 
                      */
                     bool InSyncReplicaHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BeginOffset Starting offset
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetBeginOffset() const;
 
                     /**
                      * 设置Starting offset
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BeginOffset Starting offset
+                     * @param _beginOffset Starting offset
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBeginOffset(const uint64_t& _beginOffset);
 
                     /**
                      * 判断参数 BeginOffset 是否已赋值
                      * @return BeginOffset 是否已赋值
+                     * 
                      */
                     bool BeginOffsetHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EndOffset Ending offset
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetEndOffset() const;
 
                     /**
                      * 设置Ending offset
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EndOffset Ending offset
+                     * @param _endOffset Ending offset
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndOffset(const uint64_t& _endOffset);
 
                     /**
                      * 判断参数 EndOffset 是否已赋值
                      * @return EndOffset 是否已赋值
+                     * 
                      */
                     bool EndOffsetHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MessageCount Number of messages
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMessageCount() const;
 
                     /**
                      * 设置Number of messages
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MessageCount Number of messages
+                     * @param _messageCount Number of messages
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessageCount(const uint64_t& _messageCount);
 
                     /**
                      * 判断参数 MessageCount 是否已赋值
                      * @return MessageCount 是否已赋值
+                     * 
                      */
                     bool MessageCountHasBeenSet() const;
 
@@ -189,20 +210,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OutOfSyncReplica Unsynced replica set
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOutOfSyncReplica() const;
 
                     /**
                      * 设置Unsynced replica set
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OutOfSyncReplica Unsynced replica set
+                     * @param _outOfSyncReplica Unsynced replica set
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutOfSyncReplica(const std::string& _outOfSyncReplica);
 
                     /**
                      * 判断参数 OutOfSyncReplica 是否已赋值
                      * @return OutOfSyncReplica 是否已赋值
+                     * 
                      */
                     bool OutOfSyncReplicaHasBeenSet() const;
 

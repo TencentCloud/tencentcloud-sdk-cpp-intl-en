@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of the field to query
                      * @return Name Name of the field to query
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the field to query
-                     * @param Name Name of the field to query
+                     * @param _name Name of the field to query
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Value of the field to query
                      * @return Value Value of the field to query
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
                      * 设置Value of the field to query
-                     * @param Value Value of the field to query
+                     * @param _value Value of the field to query
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

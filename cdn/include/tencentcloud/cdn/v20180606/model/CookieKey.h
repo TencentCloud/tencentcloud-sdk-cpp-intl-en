@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
+                     * @param _switch Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Value Used cookies (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Used cookies (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Value Used cookies (separated by ';')
+                     * @param _value Used cookies (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

@@ -55,6 +55,7 @@ Note: you can pull the default image library only using the image name or a comb
 
 Default value: UserDefine. Samples in the custom image library will be pulled.
 Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -65,108 +66,125 @@ Note: you can pull the default image library only using the image name or a comb
 
 Default value: UserDefine. Samples in the custom image library will be pulled.
 Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
-                     * @param Type Type of images to pull. Valid values:
+                     * @param _type Type of images to pull. Valid values:
 <li>UserDefine: custom image library</li>
 <li>Default: default image library</li>
 
 Default value: UserDefine. Samples in the custom image library will be pulled.
 Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Image ID. Array length limit: 100
                      * @return PersonIds Image ID. Array length limit: 100
+                     * 
                      */
                     std::vector<std::string> GetPersonIds() const;
 
                     /**
                      * 设置Image ID. Array length limit: 100
-                     * @param PersonIds Image ID. Array length limit: 100
+                     * @param _personIds Image ID. Array length limit: 100
+                     * 
                      */
                     void SetPersonIds(const std::vector<std::string>& _personIds);
 
                     /**
                      * 判断参数 PersonIds 是否已赋值
                      * @return PersonIds 是否已赋值
+                     * 
                      */
                     bool PersonIdsHasBeenSet() const;
 
                     /**
                      * 获取Image name. Array length limit: 20
                      * @return Names Image name. Array length limit: 20
+                     * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
                      * 设置Image name. Array length limit: 20
-                     * @param Names Image name. Array length limit: 20
+                     * @param _names Image name. Array length limit: 20
+                     * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
                     /**
                      * 判断参数 Names 是否已赋值
                      * @return Names 是否已赋值
+                     * 
                      */
                     bool NamesHasBeenSet() const;
 
                     /**
                      * 获取Image tag. Array length limit: 20
                      * @return Tags Image tag. Array length limit: 20
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Image tag. Array length limit: 20
-                     * @param Tags Image tag. Array length limit: 20
+                     * @param _tags Image tag. Array length limit: 20
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Paging offset. Default value: 0.
                      * @return Offset Paging offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Paging offset. Default value: 0.
-                     * @param Offset Paging offset. Default value: 0.
+                     * @param _offset Paging offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned entries. Default value: 100. Maximum value: 100.
                      * @return Limit Number of returned entries. Default value: 100. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned entries. Default value: 100. Maximum value: 100.
-                     * @param Limit Number of returned entries. Default value: 100. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 100. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

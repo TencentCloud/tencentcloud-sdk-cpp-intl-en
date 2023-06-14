@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Username, which can contain up to 64 characters.
                      * @return UserName Username, which can contain up to 64 characters.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username, which can contain up to 64 characters.
-                     * @param UserName Username, which can contain up to 64 characters.
+                     * @param _userName Username, which can contain up to 64 characters.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取User's mobile number.
                      * @return Phone User's mobile number.
+                     * 
                      */
                     std::string GetPhone() const;
 
                     /**
                      * 设置User's mobile number.
-                     * @param Phone User's mobile number.
+                     * @param _phone User's mobile number.
+                     * 
                      */
                     void SetPhone(const std::string& _phone);
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
                     /**
                      * 获取User's email address.
                      * @return Email User's email address.
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 设置User's email address.
-                     * @param Email User's email address.
+                     * @param _email User's email address.
+                     * 
                      */
                     void SetEmail(const std::string& _email);
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 
                     /**
                      * 获取User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
                      * @return Status User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
-                     * @param Status User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
+                     * @param _status User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取User creation time in ISO 8601 format.
                      * @return CreationTime User creation time in ISO 8601 format.
+                     * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
                      * 设置User creation time in ISO 8601 format.
-                     * @param CreationTime User creation time in ISO 8601 format.
+                     * @param _creationTime User creation time in ISO 8601 format.
+                     * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
 
                     /**
                      * 判断参数 CreationTime 是否已赋值
                      * @return CreationTime 是否已赋值
+                     * 
                      */
                     bool CreationTimeHasBeenSet() const;
 
                     /**
                      * 获取Last update time of the user.
                      * @return LastUpdateTime Last update time of the user.
+                     * 
                      */
                     std::string GetLastUpdateTime() const;
 
                     /**
                      * 设置Last update time of the user.
-                     * @param LastUpdateTime Last update time of the user.
+                     * @param _lastUpdateTime Last update time of the user.
+                     * 
                      */
                     void SetLastUpdateTime(const std::string& _lastUpdateTime);
 
                     /**
                      * 判断参数 LastUpdateTime 是否已赋值
                      * @return LastUpdateTime 是否已赋值
+                     * 
                      */
                     bool LastUpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Search by name. The match criteria include username and user's mobile number.
                      * @return Keyword Search by name. The match criteria include username and user's mobile number.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Search by name. The match criteria include username and user's mobile number.
-                     * @param Keyword Search by name. The match criteria include username and user's mobile number.
+                     * @param _keyword Search by name. The match criteria include username and user's mobile number.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

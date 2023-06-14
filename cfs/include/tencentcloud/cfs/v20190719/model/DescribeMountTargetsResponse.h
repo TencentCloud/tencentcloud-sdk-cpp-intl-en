@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Mount target details
                      * @return MountTargets Mount target details
+                     * 
                      */
                     std::vector<MountInfo> GetMountTargets() const;
 
                     /**
                      * 判断参数 MountTargets 是否已赋值
                      * @return MountTargets 是否已赋值
+                     * 
                      */
                     bool MountTargetsHasBeenSet() const;
 
                     /**
                      * 获取The number of mount targets
                      * @return NumberOfMountTargets The number of mount targets
+                     * 
                      */
                     int64_t GetNumberOfMountTargets() const;
 
                     /**
                      * 判断参数 NumberOfMountTargets 是否已赋值
                      * @return NumberOfMountTargets 是否已赋值
+                     * 
                      */
                     bool NumberOfMountTargetsHasBeenSet() const;
 

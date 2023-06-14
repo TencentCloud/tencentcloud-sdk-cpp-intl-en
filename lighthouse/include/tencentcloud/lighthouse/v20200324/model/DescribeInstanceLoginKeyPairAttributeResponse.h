@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether to allow login with the default key pair. Valid values: YES, NO.
                      * @return PermitLogin Whether to allow login with the default key pair. Valid values: YES, NO.
+                     * 
                      */
                     std::string GetPermitLogin() const;
 
                     /**
                      * 判断参数 PermitLogin 是否已赋值
                      * @return PermitLogin 是否已赋值
+                     * 
                      */
                     bool PermitLoginHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
                      * @return Operation ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
-                     * @param Operation ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
+                     * @param _operation ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
                     /**
                      * 获取Permission types: `Deny`, `Allow`.
                      * @return PermissionType Permission types: `Deny`, `Allow`.
+                     * 
                      */
                     std::string GetPermissionType() const;
 
                     /**
                      * 设置Permission types: `Deny`, `Allow`.
-                     * @param PermissionType Permission types: `Deny`, `Allow`.
+                     * @param _permissionType Permission types: `Deny`, `Allow`.
+                     * 
                      */
                     void SetPermissionType(const std::string& _permissionType);
 
                     /**
                      * 判断参数 PermissionType 是否已赋值
                      * @return PermissionType 是否已赋值
+                     * 
                      */
                     bool PermissionTypeHasBeenSet() const;
 
                     /**
                      * 获取The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
                      * @return Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
-                     * @param Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+                     * @param _host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
                      * @return Principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+                     * 
                      */
                     std::string GetPrincipal() const;
 
                     /**
                      * 设置The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
-                     * @param Principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+                     * @param _principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+                     * 
                      */
                     void SetPrincipal(const std::string& _principal);
 
                     /**
                      * 判断参数 Principal 是否已赋值
                      * @return Principal 是否已赋值
+                     * 
                      */
                     bool PrincipalHasBeenSet() const;
 

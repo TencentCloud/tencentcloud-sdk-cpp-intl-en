@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tasks Shipping task list
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ShipperTaskInfo> GetTasks() const;
 
                     /**
                      * 判断参数 Tasks 是否已赋值
                      * @return Tasks 是否已赋值
+                     * 
                      */
                     bool TasksHasBeenSet() const;
 

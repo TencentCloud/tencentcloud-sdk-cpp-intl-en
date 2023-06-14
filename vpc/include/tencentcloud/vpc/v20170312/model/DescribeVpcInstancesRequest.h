@@ -52,6 +52,7 @@ namespace TencentCloud
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>instance-type - String - (Filter condition) CVM instance ID.</li>
 <li>instance-name - String - (Filter condition) CVM name.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -60,52 +61,60 @@ namespace TencentCloud
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>instance-type - String - (Filter condition) CVM instance ID.</li>
 <li>instance-name - String - (Filter condition) CVM name.</li>
-                     * @param Filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>instance-type - String - (Filter condition) CVM instance ID.</li>
 <li>instance-name - String - (Filter condition) CVM name.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of requested objects.
                      * @return Limit The number of requested objects.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of requested objects.
-                     * @param Limit The number of requested objects.
+                     * @param _limit The number of requested objects.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

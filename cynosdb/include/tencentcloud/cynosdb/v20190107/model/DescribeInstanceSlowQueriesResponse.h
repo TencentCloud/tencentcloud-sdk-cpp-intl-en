@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Slow query record
                      * @return SlowQueries Slow query record
+                     * 
                      */
                     std::vector<SlowQueriesItem> GetSlowQueries() const;
 
                     /**
                      * 判断参数 SlowQueries 是否已赋值
                      * @return SlowQueries 是否已赋值
+                     * 
                      */
                     bool SlowQueriesHasBeenSet() const;
 

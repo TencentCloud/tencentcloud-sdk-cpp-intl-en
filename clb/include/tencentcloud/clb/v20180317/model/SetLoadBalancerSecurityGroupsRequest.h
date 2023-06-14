@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
                      * @return SecurityGroups Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroups() const;
 
                     /**
                      * 设置Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
-                     * @param SecurityGroups Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+                     * @param _securityGroups Array of security group IDs. One CLB instance can be bound to up to 50 security groups. If you want to unbind all security groups, you do not need to pass in this parameter, or you can pass in an empty array.
+                     * 
                      */
                     void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
 
                     /**
                      * 判断参数 SecurityGroups 是否已赋值
                      * @return SecurityGroups 是否已赋值
+                     * 
                      */
                     bool SecurityGroupsHasBeenSet() const;
 

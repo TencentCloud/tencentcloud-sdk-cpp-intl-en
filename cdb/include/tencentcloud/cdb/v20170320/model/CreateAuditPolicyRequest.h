@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Audit policy name.
                      * @return Name Audit policy name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Audit policy name.
-                     * @param Name Audit policy name.
+                     * @param _name Audit policy name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Audit rule ID.
                      * @return RuleId Audit rule ID.
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Audit rule ID.
-                     * @param RuleId Audit rule ID.
+                     * @param _ruleId Audit rule ID.
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -113,6 +122,7 @@ This parameter specifies the retention period (30 days by default) of audit logs
 1095: 1095 days (three years);
 1825: 1825 days (five years).
 This parameter specifies the retention period (30 days by default) of audit logs, which is valid when you create the first audit policy for an instance. If the instance already has audit policies, this parameter is invalid, but you can use the `ModifyAuditConfig` API to modify the retention period.
+                     * 
                      */
                     int64_t GetLogExpireDay() const;
 
@@ -125,7 +135,7 @@ This parameter specifies the retention period (30 days by default) of audit logs
 1095: 1095 days (three years);
 1825: 1825 days (five years).
 This parameter specifies the retention period (30 days by default) of audit logs, which is valid when you create the first audit policy for an instance. If the instance already has audit policies, this parameter is invalid, but you can use the `ModifyAuditConfig` API to modify the retention period.
-                     * @param LogExpireDay Retention period of audit logs. Valid values:
+                     * @param _logExpireDay Retention period of audit logs. Valid values:
 7: seven days (a week);
 30: 30 days (a month);
 180: 180 days (six months);
@@ -133,12 +143,14 @@ This parameter specifies the retention period (30 days by default) of audit logs
 1095: 1095 days (three years);
 1825: 1825 days (five years).
 This parameter specifies the retention period (30 days by default) of audit logs, which is valid when you create the first audit policy for an instance. If the instance already has audit policies, this parameter is invalid, but you can use the `ModifyAuditConfig` API to modify the retention period.
+                     * 
                      */
                     void SetLogExpireDay(const int64_t& _logExpireDay);
 
                     /**
                      * 判断参数 LogExpireDay 是否已赋值
                      * @return LogExpireDay 是否已赋值
+                     * 
                      */
                     bool LogExpireDayHasBeenSet() const;
 

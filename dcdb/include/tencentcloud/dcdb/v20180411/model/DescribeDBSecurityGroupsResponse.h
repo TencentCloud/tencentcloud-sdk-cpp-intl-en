@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Security group details
                      * @return Groups Security group details
+                     * 
                      */
                     std::vector<SecurityGroup> GetGroups() const;
 
                     /**
                      * 判断参数 Groups 是否已赋值
                      * @return Groups 是否已赋值
+                     * 
                      */
                     bool GroupsHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VIP Instance VIP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVIP() const;
 
                     /**
                      * 判断参数 VIP 是否已赋值
                      * @return VIP 是否已赋值
+                     * 
                      */
                     bool VIPHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return VPort Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetVPort() const;
 
                     /**
                      * 判断参数 VPort 是否已赋值
                      * @return VPort 是否已赋值
+                     * 
                      */
                     bool VPortHasBeenSet() const;
 

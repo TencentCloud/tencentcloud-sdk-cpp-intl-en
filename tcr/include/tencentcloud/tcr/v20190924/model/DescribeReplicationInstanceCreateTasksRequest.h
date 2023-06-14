@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Replication instance ID
                      * @return ReplicationRegistryId Replication instance ID
+                     * 
                      */
                     std::string GetReplicationRegistryId() const;
 
                     /**
                      * 设置Replication instance ID
-                     * @param ReplicationRegistryId Replication instance ID
+                     * @param _replicationRegistryId Replication instance ID
+                     * 
                      */
                     void SetReplicationRegistryId(const std::string& _replicationRegistryId);
 
                     /**
                      * 判断参数 ReplicationRegistryId 是否已赋值
                      * @return ReplicationRegistryId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Region ID of the replication instance
                      * @return ReplicationRegionId Region ID of the replication instance
+                     * 
                      */
                     uint64_t GetReplicationRegionId() const;
 
                     /**
                      * 设置Region ID of the replication instance
-                     * @param ReplicationRegionId Region ID of the replication instance
+                     * @param _replicationRegionId Region ID of the replication instance
+                     * 
                      */
                     void SetReplicationRegionId(const uint64_t& _replicationRegionId);
 
                     /**
                      * 判断参数 ReplicationRegionId 是否已赋值
                      * @return ReplicationRegionId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegionIdHasBeenSet() const;
 

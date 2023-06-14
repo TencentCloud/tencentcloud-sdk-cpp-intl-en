@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site.
                      * @return ZoneId ID of the site.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site.
-                     * @param ZoneId ID of the site.
+                     * @param _zoneId ID of the site.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取List of domain names that the certificate will be attached to.
                      * @return Hosts List of domain names that the certificate will be attached to.
+                     * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
                      * 设置List of domain names that the certificate will be attached to.
-                     * @param Hosts List of domain names that the certificate will be attached to.
+                     * @param _hosts List of domain names that the certificate will be attached to.
+                     * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
 
                     /**
                      * 判断参数 Hosts 是否已赋值
                      * @return Hosts 是否已赋值
+                     * 
                      */
                     bool HostsHasBeenSet() const;
 
                     /**
                      * 获取Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
                      * @return ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+                     * 
                      */
                     std::vector<ServerCertInfo> GetServerCertInfo() const;
 
                     /**
                      * 设置Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
-                     * @param ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+                     * @param _serverCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+                     * 
                      */
                     void SetServerCertInfo(const std::vector<ServerCertInfo>& _serverCertInfo);
 
                     /**
                      * 判断参数 ServerCertInfo 是否已赋值
                      * @return ServerCertInfo 是否已赋值
+                     * 
                      */
                     bool ServerCertInfoHasBeenSet() const;
 
@@ -104,6 +113,7 @@ namespace TencentCloud
                      * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
 <li>`apply`: Managed by EdgeOne</li>
 <li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+                     * 
                      */
                     std::string GetApplyType() const;
 
@@ -111,15 +121,17 @@ namespace TencentCloud
                      * 设置Whether the certificate is managed by EdgeOne. Values:
 <li>`apply`: Managed by EdgeOne</li>
 <li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
-                     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
+                     * @param _applyType Whether the certificate is managed by EdgeOne. Values:
 <li>`apply`: Managed by EdgeOne</li>
 <li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+                     * 
                      */
                     void SetApplyType(const std::string& _applyType);
 
                     /**
                      * 判断参数 ApplyType 是否已赋值
                      * @return ApplyType 是否已赋值
+                     * 
                      */
                     bool ApplyTypeHasBeenSet() const;
 

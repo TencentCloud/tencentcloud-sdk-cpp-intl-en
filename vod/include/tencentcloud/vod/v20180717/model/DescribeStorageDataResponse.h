@@ -47,84 +47,98 @@ namespace TencentCloud
                     /**
                      * 获取Total number of current media files.
                      * @return MediaCount Total number of current media files.
+                     * 
                      */
                     uint64_t GetMediaCount() const;
 
                     /**
                      * 判断参数 MediaCount 是否已赋值
                      * @return MediaCount 是否已赋值
+                     * 
                      */
                     bool MediaCountHasBeenSet() const;
 
                     /**
                      * 获取Total current storage capacity in bytes.
                      * @return TotalStorage Total current storage capacity in bytes.
+                     * 
                      */
                     uint64_t GetTotalStorage() const;
 
                     /**
                      * 判断参数 TotalStorage 是否已赋值
                      * @return TotalStorage 是否已赋值
+                     * 
                      */
                     bool TotalStorageHasBeenSet() const;
 
                     /**
                      * 获取Current Standard storage capacity in bytes.
                      * @return StandardStorage Current Standard storage capacity in bytes.
+                     * 
                      */
                     uint64_t GetStandardStorage() const;
 
                     /**
                      * 判断参数 StandardStorage 是否已赋值
                      * @return StandardStorage 是否已赋值
+                     * 
                      */
                     bool StandardStorageHasBeenSet() const;
 
                     /**
                      * 获取Current Standard_IA storage capacity in bytes.
                      * @return InfrequentStorage Current Standard_IA storage capacity in bytes.
+                     * 
                      */
                     uint64_t GetInfrequentStorage() const;
 
                     /**
                      * 判断参数 InfrequentStorage 是否已赋值
                      * @return InfrequentStorage 是否已赋值
+                     * 
                      */
                     bool InfrequentStorageHasBeenSet() const;
 
                     /**
                      * 获取The current ARCHIVE storage usage in bytes.
                      * @return ArchiveStorage The current ARCHIVE storage usage in bytes.
+                     * 
                      */
                     uint64_t GetArchiveStorage() const;
 
                     /**
                      * 判断参数 ArchiveStorage 是否已赋值
                      * @return ArchiveStorage 是否已赋值
+                     * 
                      */
                     bool ArchiveStorageHasBeenSet() const;
 
                     /**
                      * 获取The current DEEP ARCHIVE storage usage in bytes.
                      * @return DeepArchiveStorage The current DEEP ARCHIVE storage usage in bytes.
+                     * 
                      */
                     uint64_t GetDeepArchiveStorage() const;
 
                     /**
                      * 判断参数 DeepArchiveStorage 是否已赋值
                      * @return DeepArchiveStorage 是否已赋值
+                     * 
                      */
                     bool DeepArchiveStorageHasBeenSet() const;
 
                     /**
                      * 获取Storage usage by billing region.
                      * @return StorageStat Storage usage by billing region.
+                     * 
                      */
                     std::vector<StorageStatData> GetStorageStat() const;
 
                     /**
                      * 判断参数 StorageStat 是否已赋值
                      * @return StorageStat 是否已赋值
+                     * 
                      */
                     bool StorageStatHasBeenSet() const;
 

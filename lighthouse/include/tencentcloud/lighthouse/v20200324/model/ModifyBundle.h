@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Price difference that you need to pay for the new instance package after change.
                      * @return ModifyPrice Price difference that you need to pay for the new instance package after change.
+                     * 
                      */
                     Price GetModifyPrice() const;
 
                     /**
                      * 设置Price difference that you need to pay for the new instance package after change.
-                     * @param ModifyPrice Price difference that you need to pay for the new instance package after change.
+                     * @param _modifyPrice Price difference that you need to pay for the new instance package after change.
+                     * 
                      */
                     void SetModifyPrice(const Price& _modifyPrice);
 
                     /**
                      * 判断参数 ModifyPrice 是否已赋值
                      * @return ModifyPrice 是否已赋值
+                     * 
                      */
                     bool ModifyPriceHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
 <li>SOLD_OUT: packages are sold out</li>
 <li>AVAILABLE: packages can be changed</li>
 <li>UNAVAILABLE: packages cannot be changed currently</li>
+                     * 
                      */
                     std::string GetModifyBundleState() const;
 
@@ -83,34 +87,39 @@ namespace TencentCloud
 <li>SOLD_OUT: packages are sold out</li>
 <li>AVAILABLE: packages can be changed</li>
 <li>UNAVAILABLE: packages cannot be changed currently</li>
-                     * @param ModifyBundleState Package change status. Valid values:
+                     * @param _modifyBundleState Package change status. Valid values:
 <li>SOLD_OUT: packages are sold out</li>
 <li>AVAILABLE: packages can be changed</li>
 <li>UNAVAILABLE: packages cannot be changed currently</li>
+                     * 
                      */
                     void SetModifyBundleState(const std::string& _modifyBundleState);
 
                     /**
                      * 判断参数 ModifyBundleState 是否已赋值
                      * @return ModifyBundleState 是否已赋值
+                     * 
                      */
                     bool ModifyBundleStateHasBeenSet() const;
 
                     /**
                      * 获取Package information.
                      * @return Bundle Package information.
+                     * 
                      */
                     Bundle GetBundle() const;
 
                     /**
                      * 设置Package information.
-                     * @param Bundle Package information.
+                     * @param _bundle Package information.
+                     * 
                      */
                     void SetBundle(const Bundle& _bundle);
 
                     /**
                      * 判断参数 Bundle 是否已赋值
                      * @return Bundle 是否已赋值
+                     * 
                      */
                     bool BundleHasBeenSet() const;
 
@@ -119,20 +128,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return NotSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNotSupportModifyMessage() const;
 
                     /**
                      * 设置The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param NotSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+                     * @param _notSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNotSupportModifyMessage(const std::string& _notSupportModifyMessage);
 
                     /**
                      * 判断参数 NotSupportModifyMessage 是否已赋值
                      * @return NotSupportModifyMessage 是否已赋值
+                     * 
                      */
                     bool NotSupportModifyMessageHasBeenSet() const;
 

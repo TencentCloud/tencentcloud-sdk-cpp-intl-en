@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return SampleType Sampled screencapturing type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
+                     * 
                      */
                     std::string GetSampleType() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Sampled screencapturing type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
-                     * @param SampleType Sampled screencapturing type. Valid values:
+                     * @param _sampleType Sampled screencapturing type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
+                     * 
                      */
                     void SetSampleType(const std::string& _sampleType);
 
                     /**
                      * 判断参数 SampleType 是否已赋值
                      * @return SampleType 是否已赋值
+                     * 
                      */
                     bool SampleTypeHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
                      * @return SampleInterval Sampling interval.
 <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+                     * 
                      */
                     uint64_t GetSampleInterval() const;
 
@@ -82,69 +86,80 @@ namespace TencentCloud
                      * 设置Sampling interval.
 <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
-                     * @param SampleInterval Sampling interval.
+                     * @param _sampleInterval Sampling interval.
 <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+                     * 
                      */
                     void SetSampleInterval(const uint64_t& _sampleInterval);
 
                     /**
                      * 判断参数 SampleInterval 是否已赋值
                      * @return SampleInterval 是否已赋值
+                     * 
                      */
                     bool SampleIntervalHasBeenSet() const;
 
                     /**
                      * 获取Name of a sampled screencapturing template. Length limit: 64 characters.
                      * @return Name Name of a sampled screencapturing template. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a sampled screencapturing template. Length limit: 64 characters.
-                     * @param Name Name of a sampled screencapturing template. Length limit: 64 characters.
+                     * @param _name Name of a sampled screencapturing template. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Image width in px. Value range: [128, 4,096].
                      * @return Width Image width in px. Value range: [128, 4,096].
+                     * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
                      * 设置Image width in px. Value range: [128, 4,096].
-                     * @param Width Image width in px. Value range: [128, 4,096].
+                     * @param _width Image width in px. Value range: [128, 4,096].
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Image height in px. Value range: [128, 4,096].
                      * @return Height Image height in px. Value range: [128, 4,096].
+                     * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
                      * 设置Image height in px. Value range: [128, 4,096].
-                     * @param Height Image height in px. Value range: [128, 4,096].
+                     * @param _height Image height in px. Value range: [128, 4,096].
+                     * 
                      */
                     void SetHeight(const uint64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -157,6 +172,7 @@ Default value: open.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
+                     * 
                      */
                     std::string GetResolutionAdaptive() const;
 
@@ -165,52 +181,60 @@ Default value: open.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
-                     * @param ResolutionAdaptive Resolution adaption. Valid values:
+                     * @param _resolutionAdaptive Resolution adaption. Valid values:
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
+                     * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
 
                     /**
                      * 判断参数 ResolutionAdaptive 是否已赋值
                      * @return ResolutionAdaptive 是否已赋值
+                     * 
                      */
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
                      * 获取The image format. Valid values: jpg (default), png, webp.
                      * @return Format The image format. Valid values: jpg (default), png, webp.
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置The image format. Valid values: jpg (default), png, webp.
-                     * @param Format The image format. Valid values: jpg (default), png, webp.
+                     * @param _format The image format. Valid values: jpg (default), png, webp.
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取Template description. Length limit: 256 characters.
                      * @return Comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Template description. Length limit: 256 characters.
-                     * @param Comment Template description. Length limit: 256 characters.
+                     * @param _comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -227,6 +251,7 @@ Default value: black.
 <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
 <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
 Default value: black.
+                     * 
                      */
                     std::string GetFillType() const;
 
@@ -237,18 +262,20 @@ Default value: black.
 <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
 <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
 Default value: black.
-                     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+                     * @param _fillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 <li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
 <li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
 Default value: black.
+                     * 
                      */
                     void SetFillType(const std::string& _fillType);
 
                     /**
                      * 判断参数 FillType 是否已赋值
                      * @return FillType 是否已赋值
+                     * 
                      */
                     bool FillTypeHasBeenSet() const;
 

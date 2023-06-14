@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Tracking set name
                      * @return AuditName Tracking set name
+                     * 
                      */
                     std::string GetAuditName() const;
 
                     /**
                      * 设置Tracking set name
-                     * @param AuditName Tracking set name
+                     * @param _auditName Tracking set name
+                     * 
                      */
                     void SetAuditName(const std::string& _auditName);
 
                     /**
                      * 判断参数 AuditName 是否已赋值
                      * @return AuditName 是否已赋值
+                     * 
                      */
                     bool AuditNameHasBeenSet() const;
 

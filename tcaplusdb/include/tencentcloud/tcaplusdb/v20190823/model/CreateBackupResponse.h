@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return TaskIds List of backup creation task IDs
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTaskIds() const;
 
                     /**
                      * 判断参数 TaskIds 是否已赋值
                      * @return TaskIds 是否已赋值
+                     * 
                      */
                     bool TaskIdsHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ApplicationIds List of backup creation application IDs
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetApplicationIds() const;
 
                     /**
                      * 判断参数 ApplicationIds 是否已赋值
                      * @return ApplicationIds 是否已赋值
+                     * 
                      */
                     bool ApplicationIdsHasBeenSet() const;
 

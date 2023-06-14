@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Screencapturing template list.
                      * @return Templates Screencapturing template list.
+                     * 
                      */
                     std::vector<SnapshotTemplateInfo> GetTemplates() const;
 
                     /**
                      * 判断参数 Templates 是否已赋值
                      * @return Templates 是否已赋值
+                     * 
                      */
                     bool TemplatesHasBeenSet() const;
 

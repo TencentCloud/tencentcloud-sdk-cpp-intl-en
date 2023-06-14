@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Sender address.
                      * @return EmailAddress Sender address.
+                     * 
                      */
                     std::string GetEmailAddress() const;
 
                     /**
                      * 设置Sender address.
-                     * @param EmailAddress Sender address.
+                     * @param _emailAddress Sender address.
+                     * 
                      */
                     void SetEmailAddress(const std::string& _emailAddress);
 
                     /**
                      * 判断参数 EmailAddress 是否已赋值
                      * @return EmailAddress 是否已赋值
+                     * 
                      */
                     bool EmailAddressHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EmailSenderName Sender name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEmailSenderName() const;
 
                     /**
                      * 设置Sender name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EmailSenderName Sender name.
+                     * @param _emailSenderName Sender name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEmailSenderName(const std::string& _emailSenderName);
 
                     /**
                      * 判断参数 EmailSenderName 是否已赋值
                      * @return EmailSenderName 是否已赋值
+                     * 
                      */
                     bool EmailSenderNameHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CreatedTimestamp Creation time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCreatedTimestamp() const;
 
                     /**
                      * 设置Creation time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CreatedTimestamp Creation time.
+                     * @param _createdTimestamp Creation time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTimestamp(const uint64_t& _createdTimestamp);
 
                     /**
                      * 判断参数 CreatedTimestamp 是否已赋值
                      * @return CreatedTimestamp 是否已赋值
+                     * 
                      */
                     bool CreatedTimestampHasBeenSet() const;
 

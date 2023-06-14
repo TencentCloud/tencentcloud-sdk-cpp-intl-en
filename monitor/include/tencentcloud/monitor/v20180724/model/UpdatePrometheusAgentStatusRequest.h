@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TMP instance ID, such as “prom-abcd1234”.
                      * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TMP instance ID, such as “prom-abcd1234”.
-                     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
+                     * @param _instanceId TMP instance ID, such as “prom-abcd1234”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
                      * @return AgentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
+                     * 
                      */
                     std::vector<std::string> GetAgentIds() const;
 
                     /**
                      * 设置List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
-                     * @param AgentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
+                     * @param _agentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
+                     * 
                      */
                     void SetAgentIds(const std::vector<std::string>& _agentIds);
 
                     /**
                      * 判断参数 AgentIds 是否已赋值
                      * @return AgentIds 是否已赋值
+                     * 
                      */
                     bool AgentIdsHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return Status Status to update
 <li> 1 = enabled </li>
 <li> 2 = disabled </li>
+                     * 
                      */
                     int64_t GetStatus() const;
 
@@ -92,15 +99,17 @@ namespace TencentCloud
                      * 设置Status to update
 <li> 1 = enabled </li>
 <li> 2 = disabled </li>
-                     * @param Status Status to update
+                     * @param _status Status to update
 <li> 1 = enabled </li>
 <li> 2 = disabled </li>
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Information such as resource availability in each AZ and the supported storage classes and protocols
                      * @return RegionZones Information such as resource availability in each AZ and the supported storage classes and protocols
+                     * 
                      */
                     std::vector<AvailableRegion> GetRegionZones() const;
 
                     /**
                      * 判断参数 RegionZones 是否已赋值
                      * @return RegionZones 是否已赋值
+                     * 
                      */
                     bool RegionZonesHasBeenSet() const;
 

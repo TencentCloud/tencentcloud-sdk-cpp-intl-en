@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of cloud disk configurations.
                      * @return DiskConfigSet List of cloud disk configurations.
+                     * 
                      */
                     std::vector<DiskConfig> GetDiskConfigSet() const;
 
                     /**
                      * 判断参数 DiskConfigSet 是否已赋值
                      * @return DiskConfigSet 是否已赋值
+                     * 
                      */
                     bool DiskConfigSetHasBeenSet() const;
 

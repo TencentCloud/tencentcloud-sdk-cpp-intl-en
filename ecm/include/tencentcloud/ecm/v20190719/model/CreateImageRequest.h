@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Image name.
                      * @return ImageName Image name.
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name.
-                     * @param ImageName Image name.
+                     * @param _imageName Image name.
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance for which to make an image.
                      * @return InstanceId ID of the instance for which to make an image.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance for which to make an image.
-                     * @param InstanceId ID of the instance for which to make an image.
+                     * @param _instanceId ID of the instance for which to make an image.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Image description.
                      * @return ImageDescription Image description.
+                     * 
                      */
                     std::string GetImageDescription() const;
 
                     /**
                      * 设置Image description.
-                     * @param ImageDescription Image description.
+                     * @param _imageDescription Image description.
+                     * 
                      */
                     void SetImageDescription(const std::string& _imageDescription);
 
                     /**
                      * 判断参数 ImageDescription 是否已赋值
                      * @return ImageDescription 是否已赋值
+                     * 
                      */
                     bool ImageDescriptionHasBeenSet() const;
 
@@ -105,6 +114,7 @@ Default value: FALSE.
 TRUE: yes
 FALSE: no
 Default value: FALSE.
+                     * 
                      */
                     std::string GetForcePoweroff() const;
 
@@ -113,16 +123,18 @@ Default value: FALSE.
 TRUE: yes
 FALSE: no
 Default value: FALSE.
-                     * @param ForcePoweroff Whether to perform a forced shutdown to make an image. Valid values:
+                     * @param _forcePoweroff Whether to perform a forced shutdown to make an image. Valid values:
 TRUE: yes
 FALSE: no
 Default value: FALSE.
+                     * 
                      */
                     void SetForcePoweroff(const std::string& _forcePoweroff);
 
                     /**
                      * 判断参数 ForcePoweroff 是否已赋值
                      * @return ForcePoweroff 是否已赋值
+                     * 
                      */
                     bool ForcePoweroffHasBeenSet() const;
 

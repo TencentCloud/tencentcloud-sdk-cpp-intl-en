@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Topic ID
                      * @return TopicId Topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Topic ID
-                     * @param TopicId Topic ID
+                     * @param _topicId Topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Topic partition where data will be written into by `HashKey` 
                      * @return HashKey Topic partition where data will be written into by `HashKey` 
+                     * 
                      */
                     std::string GetHashKey() const;
 
                     /**
                      * 设置Topic partition where data will be written into by `HashKey` 
-                     * @param HashKey Topic partition where data will be written into by `HashKey` 
+                     * @param _hashKey Topic partition where data will be written into by `HashKey` 
+                     * 
                      */
                     void SetHashKey(const std::string& _hashKey);
 
                     /**
                      * 判断参数 HashKey 是否已赋值
                      * @return HashKey 是否已赋值
+                     * 
                      */
                     bool HashKeyHasBeenSet() const;
 
                     /**
                      * 获取Compression type
                      * @return CompressType Compression type
+                     * 
                      */
                     std::string GetCompressType() const;
 
                     /**
                      * 设置Compression type
-                     * @param CompressType Compression type
+                     * @param _compressType Compression type
+                     * 
                      */
                     void SetCompressType(const std::string& _compressType);
 
                     /**
                      * 判断参数 CompressType 是否已赋值
                      * @return CompressType 是否已赋值
+                     * 
                      */
                     bool CompressTypeHasBeenSet() const;
 

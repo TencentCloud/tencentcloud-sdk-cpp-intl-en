@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取AZ abbreviation
                      * @return Zone AZ abbreviation
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ abbreviation
-                     * @param Zone AZ abbreviation
+                     * @param _zone AZ abbreviation
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取AZ name
                      * @return ZoneName AZ name
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置AZ name
-                     * @param ZoneName AZ name
+                     * @param _zoneName AZ name
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取AZ number
                      * @return ZoneId AZ number
+                     * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
                      * 设置AZ number
-                     * @param ZoneId AZ number
+                     * @param _zoneId AZ number
+                     * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -111,6 +120,7 @@ namespace TencentCloud
 `AVAILABLE`.
 `SELLOUT`.
 `SUPPORTMODIFYONLY` (supports configuration adjustment).
+                     * 
                      */
                     std::string GetZoneState() const;
 
@@ -120,35 +130,40 @@ namespace TencentCloud
 `AVAILABLE`.
 `SELLOUT`.
 `SUPPORTMODIFYONLY` (supports configuration adjustment).
-                     * @param ZoneState Availability status. Valid values:
+                     * @param _zoneState Availability status. Valid values:
 `UNAVAILABLE`.
 `AVAILABLE`.
 `SELLOUT`.
 `SUPPORTMODIFYONLY` (supports configuration adjustment).
+                     * 
                      */
                     void SetZoneState(const std::string& _zoneState);
 
                     /**
                      * 判断参数 ZoneState 是否已赋值
                      * @return ZoneState 是否已赋值
+                     * 
                      */
                     bool ZoneStateHasBeenSet() const;
 
                     /**
                      * 获取Whether the AZ supports IPv6 address access
                      * @return ZoneSupportIpv6 Whether the AZ supports IPv6 address access
+                     * 
                      */
                     uint64_t GetZoneSupportIpv6() const;
 
                     /**
                      * 设置Whether the AZ supports IPv6 address access
-                     * @param ZoneSupportIpv6 Whether the AZ supports IPv6 address access
+                     * @param _zoneSupportIpv6 Whether the AZ supports IPv6 address access
+                     * 
                      */
                     void SetZoneSupportIpv6(const uint64_t& _zoneSupportIpv6);
 
                     /**
                      * 判断参数 ZoneSupportIpv6 是否已赋值
                      * @return ZoneSupportIpv6 是否已赋值
+                     * 
                      */
                     bool ZoneSupportIpv6HasBeenSet() const;
 
@@ -157,20 +172,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StandbyZoneSet AZs that can be used as standby when this AZ is primary
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetStandbyZoneSet() const;
 
                     /**
                      * 设置AZs that can be used as standby when this AZ is primary
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param StandbyZoneSet AZs that can be used as standby when this AZ is primary
+                     * @param _standbyZoneSet AZs that can be used as standby when this AZ is primary
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStandbyZoneSet(const std::vector<std::string>& _standbyZoneSet);
 
                     /**
                      * 判断参数 StandbyZoneSet 是否已赋值
                      * @return StandbyZoneSet 是否已赋值
+                     * 
                      */
                     bool StandbyZoneSetHasBeenSet() const;
 

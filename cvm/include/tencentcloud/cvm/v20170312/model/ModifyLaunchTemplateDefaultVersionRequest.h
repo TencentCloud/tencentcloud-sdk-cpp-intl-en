@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The launch template ID
                      * @return LaunchTemplateId The launch template ID
+                     * 
                      */
                     std::string GetLaunchTemplateId() const;
 
                     /**
                      * 设置The launch template ID
-                     * @param LaunchTemplateId The launch template ID
+                     * @param _launchTemplateId The launch template ID
+                     * 
                      */
                     void SetLaunchTemplateId(const std::string& _launchTemplateId);
 
                     /**
                      * 判断参数 LaunchTemplateId 是否已赋值
                      * @return LaunchTemplateId 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取The number of the version that you want to set as the default version
                      * @return DefaultVersion The number of the version that you want to set as the default version
+                     * 
                      */
                     int64_t GetDefaultVersion() const;
 
                     /**
                      * 设置The number of the version that you want to set as the default version
-                     * @param DefaultVersion The number of the version that you want to set as the default version
+                     * @param _defaultVersion The number of the version that you want to set as the default version
+                     * 
                      */
                     void SetDefaultVersion(const int64_t& _defaultVersion);
 
                     /**
                      * 判断参数 DefaultVersion 是否已赋值
                      * @return DefaultVersion 是否已赋值
+                     * 
                      */
                     bool DefaultVersionHasBeenSet() const;
 

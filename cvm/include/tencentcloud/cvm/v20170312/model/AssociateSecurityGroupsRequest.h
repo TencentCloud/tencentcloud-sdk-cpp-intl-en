@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
                      * @return SecurityGroupIds ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
-                     * @param SecurityGroupIds ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
+                     * @param _securityGroupIds ID of the security group to be associated, such as `sg-efil73jd`. Only one security group can be associated.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
                      * @return InstanceIds ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
-                     * @param InstanceIds ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
+                     * @param _instanceIds ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

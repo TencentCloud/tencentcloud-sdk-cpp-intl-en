@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Alarm details of pipeline 0 under this channel.
                      * @return Pipeline0 Alarm details of pipeline 0 under this channel.
+                     * 
                      */
                     std::vector<ChannelPipelineAlerts> GetPipeline0() const;
 
                     /**
                      * 设置Alarm details of pipeline 0 under this channel.
-                     * @param Pipeline0 Alarm details of pipeline 0 under this channel.
+                     * @param _pipeline0 Alarm details of pipeline 0 under this channel.
+                     * 
                      */
                     void SetPipeline0(const std::vector<ChannelPipelineAlerts>& _pipeline0);
 
                     /**
                      * 判断参数 Pipeline0 是否已赋值
                      * @return Pipeline0 是否已赋值
+                     * 
                      */
                     bool Pipeline0HasBeenSet() const;
 
                     /**
                      * 获取Alarm details of pipeline 1 under this channel.
                      * @return Pipeline1 Alarm details of pipeline 1 under this channel.
+                     * 
                      */
                     std::vector<ChannelPipelineAlerts> GetPipeline1() const;
 
                     /**
                      * 设置Alarm details of pipeline 1 under this channel.
-                     * @param Pipeline1 Alarm details of pipeline 1 under this channel.
+                     * @param _pipeline1 Alarm details of pipeline 1 under this channel.
+                     * 
                      */
                     void SetPipeline1(const std::vector<ChannelPipelineAlerts>& _pipeline1);
 
                     /**
                      * 判断参数 Pipeline1 是否已赋值
                      * @return Pipeline1 是否已赋值
+                     * 
                      */
                     bool Pipeline1HasBeenSet() const;
 

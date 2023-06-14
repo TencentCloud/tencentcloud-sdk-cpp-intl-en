@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerName CLB instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LoadBalancerName CLB instance name
+                     * @param _loadBalancerName CLB instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Listeners List of listeners
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ListenerHealth> GetListeners() const;
 
                     /**
                      * 设置List of listeners
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Listeners List of listeners
+                     * @param _listeners List of listeners
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListeners(const std::vector<ListenerHealth>& _listeners);
 
                     /**
                      * 判断参数 Listeners 是否已赋值
                      * @return Listeners 是否已赋值
+                     * 
                      */
                     bool ListenersHasBeenSet() const;
 

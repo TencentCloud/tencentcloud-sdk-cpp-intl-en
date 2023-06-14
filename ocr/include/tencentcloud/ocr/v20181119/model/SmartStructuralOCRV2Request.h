@@ -53,6 +53,7 @@ Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
@@ -62,17 +63,19 @@ Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @param ImageUrl The URL of the image.
+                     * @param _imageUrl The URL of the image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 
@@ -85,6 +88,7 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are pr
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
+                     * 
                      */
                     std::string GetImageBase64() const;
 
@@ -93,52 +97,60 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are pr
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
-                     * @param ImageBase64 The Base64-encoded value of the image.
+                     * @param _imageBase64 The Base64-encoded value of the image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
+                     * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
                     /**
                      * 判断参数 ImageBase64 是否已赋值
                      * @return ImageBase64 是否已赋值
+                     * 
                      */
                     bool ImageBase64HasBeenSet() const;
 
                     /**
                      * 获取Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
                      * @return IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+                     * 
                      */
                     bool GetIsPdf() const;
 
                     /**
                      * 设置Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
-                     * @param IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+                     * @param _isPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+                     * 
                      */
                     void SetIsPdf(const bool& _isPdf);
 
                     /**
                      * 判断参数 IsPdf 是否已赋值
                      * @return IsPdf 是否已赋值
+                     * 
                      */
                     bool IsPdfHasBeenSet() const;
 
                     /**
                      * 获取The number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of `IsPdf` is `true`. Default value: `1`.
                      * @return PdfPageNumber The number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of `IsPdf` is `true`. Default value: `1`.
+                     * 
                      */
                     uint64_t GetPdfPageNumber() const;
 
                     /**
                      * 设置The number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of `IsPdf` is `true`. Default value: `1`.
-                     * @param PdfPageNumber The number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of `IsPdf` is `true`. Default value: `1`.
+                     * @param _pdfPageNumber The number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of `IsPdf` is `true`. Default value: `1`.
+                     * 
                      */
                     void SetPdfPageNumber(const uint64_t& _pdfPageNumber);
 
                     /**
                      * 判断参数 PdfPageNumber 是否已赋值
                      * @return PdfPageNumber 是否已赋值
+                     * 
                      */
                     bool PdfPageNumberHasBeenSet() const;
 
@@ -149,6 +161,7 @@ ItemNames=["Name","Gender"]
                      * @return ItemNames The names of the fields you want to return for the structured information recognition.
 For example, if you want to return only the recognition result of the "Name" and "Gender" fields, set this parameter as follows:
 ItemNames=["Name","Gender"]
+                     * 
                      */
                     std::vector<std::string> GetItemNames() const;
 
@@ -156,33 +169,38 @@ ItemNames=["Name","Gender"]
                      * 设置The names of the fields you want to return for the structured information recognition.
 For example, if you want to return only the recognition result of the "Name" and "Gender" fields, set this parameter as follows:
 ItemNames=["Name","Gender"]
-                     * @param ItemNames The names of the fields you want to return for the structured information recognition.
+                     * @param _itemNames The names of the fields you want to return for the structured information recognition.
 For example, if you want to return only the recognition result of the "Name" and "Gender" fields, set this parameter as follows:
 ItemNames=["Name","Gender"]
+                     * 
                      */
                     void SetItemNames(const std::vector<std::string>& _itemNames);
 
                     /**
                      * 判断参数 ItemNames 是否已赋值
                      * @return ItemNames 是否已赋值
+                     * 
                      */
                     bool ItemNamesHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable recognition of all fields.
                      * @return ReturnFullText Whether to enable recognition of all fields.
+                     * 
                      */
                     bool GetReturnFullText() const;
 
                     /**
                      * 设置Whether to enable recognition of all fields.
-                     * @param ReturnFullText Whether to enable recognition of all fields.
+                     * @param _returnFullText Whether to enable recognition of all fields.
+                     * 
                      */
                     void SetReturnFullText(const bool& _returnFullText);
 
                     /**
                      * 判断参数 ReturnFullText 是否已赋值
                      * @return ReturnFullText 是否已赋值
+                     * 
                      */
                     bool ReturnFullTextHasBeenSet() const;
 

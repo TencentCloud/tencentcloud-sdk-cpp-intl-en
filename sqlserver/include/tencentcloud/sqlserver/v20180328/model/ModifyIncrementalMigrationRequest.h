@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of imported target instance
                      * @return InstanceId ID of imported target instance
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of imported target instance
-                     * @param InstanceId ID of imported target instance
+                     * @param _instanceId ID of imported target instance
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup import task ID, which is returned through the API CreateBackupMigration
                      * @return BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * 
                      */
                     std::string GetBackupMigrationId() const;
 
                     /**
                      * 设置Backup import task ID, which is returned through the API CreateBackupMigration
-                     * @param BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * @param _backupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * 
                      */
                     void SetBackupMigrationId(const std::string& _backupMigrationId);
 
                     /**
                      * 判断参数 BackupMigrationId 是否已赋值
                      * @return BackupMigrationId 是否已赋值
+                     * 
                      */
                     bool BackupMigrationIdHasBeenSet() const;
 
                     /**
                      * 获取Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
                      * @return IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+                     * 
                      */
                     std::string GetIncrementalMigrationId() const;
 
                     /**
                      * 设置Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
-                     * @param IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+                     * @param _incrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+                     * 
                      */
                     void SetIncrementalMigrationId(const std::string& _incrementalMigrationId);
 
                     /**
                      * 判断参数 IncrementalMigrationId 是否已赋值
                      * @return IncrementalMigrationId 是否已赋值
+                     * 
                      */
                     bool IncrementalMigrationIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
                      * @return IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
+                     * 
                      */
                     std::string GetIsRecovery() const;
 
                     /**
                      * 设置Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
-                     * @param IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
+                     * @param _isRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
+                     * 
                      */
                     void SetIsRecovery(const std::string& _isRecovery);
 
                     /**
                      * 判断参数 IsRecovery 是否已赋值
                      * @return IsRecovery 是否已赋值
+                     * 
                      */
                     bool IsRecoveryHasBeenSet() const;
 
                     /**
                      * 获取If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
                      * @return BackupFiles If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * 
                      */
                     std::vector<std::string> GetBackupFiles() const;
 
                     /**
                      * 设置If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
-                     * @param BackupFiles If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * @param _backupFiles If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * 
                      */
                     void SetBackupFiles(const std::vector<std::string>& _backupFiles);
 
                     /**
                      * 判断参数 BackupFiles 是否已赋值
                      * @return BackupFiles 是否已赋值
+                     * 
                      */
                     bool BackupFilesHasBeenSet() const;
 

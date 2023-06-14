@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Allowed item ID
                      * @return Id Allowed item ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Allowed item ID
-                     * @param Id Allowed item ID
+                     * @param _id Allowed item ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Number of images
                      * @return ImageCount Number of images
+                     * 
                      */
                     uint64_t GetImageCount() const;
 
                     /**
                      * 设置Number of images
-                     * @param ImageCount Number of images
+                     * @param _imageCount Number of images
+                     * 
                      */
                     void SetImageCount(const uint64_t& _imageCount);
 
                     /**
                      * 判断参数 ImageCount 是否已赋值
                      * @return ImageCount 是否已赋值
+                     * 
                      */
                     bool ImageCountHasBeenSet() const;
 
                     /**
                      * 获取Connection process path
                      * @return ProcessPath Connection process path
+                     * 
                      */
                     std::string GetProcessPath() const;
 
                     /**
                      * 设置Connection process path
-                     * @param ProcessPath Connection process path
+                     * @param _processPath Connection process path
+                     * 
                      */
                     void SetProcessPath(const std::string& _processPath);
 
                     /**
                      * 判断参数 ProcessPath 是否已赋值
                      * @return ProcessPath 是否已赋值
+                     * 
                      */
                     bool ProcessPathHasBeenSet() const;
 
                     /**
                      * 获取List of syscall names
                      * @return SyscallNames List of syscall names
+                     * 
                      */
                     std::vector<std::string> GetSyscallNames() const;
 
                     /**
                      * 设置List of syscall names
-                     * @param SyscallNames List of syscall names
+                     * @param _syscallNames List of syscall names
+                     * 
                      */
                     void SetSyscallNames(const std::vector<std::string>& _syscallNames);
 
                     /**
                      * 判断参数 SyscallNames 是否已赋值
                      * @return SyscallNames 是否已赋值
+                     * 
                      */
                     bool SyscallNamesHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether it is allowed globally. `true`: Yes.
                      * @return IsGlobal Whether it is allowed globally. `true`: Yes.
+                     * 
                      */
                     bool GetIsGlobal() const;
 
                     /**
                      * 设置Whether it is allowed globally. `true`: Yes.
-                     * @param IsGlobal Whether it is allowed globally. `true`: Yes.
+                     * @param _isGlobal Whether it is allowed globally. `true`: Yes.
+                     * 
                      */
                     void SetIsGlobal(const bool& _isGlobal);
 
                     /**
                      * 判断参数 IsGlobal 是否已赋值
                      * @return IsGlobal 是否已赋值
+                     * 
                      */
                     bool IsGlobalHasBeenSet() const;
 
                     /**
                      * 获取Array of image IDs
                      * @return ImageIds Array of image IDs
+                     * 
                      */
                     std::vector<std::string> GetImageIds() const;
 
                     /**
                      * 设置Array of image IDs
-                     * @param ImageIds Array of image IDs
+                     * @param _imageIds Array of image IDs
+                     * 
                      */
                     void SetImageIds(const std::vector<std::string>& _imageIds);
 
                     /**
                      * 判断参数 ImageIds 是否已赋值
                      * @return ImageIds 是否已赋值
+                     * 
                      */
                     bool ImageIdsHasBeenSet() const;
 

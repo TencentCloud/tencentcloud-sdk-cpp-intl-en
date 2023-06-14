@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Array of escape events
                      * @return EventSet Array of escape events
+                     * 
                      */
                     std::vector<EscapeEventInfo> GetEventSet() const;
 
                     /**
                      * 判断参数 EventSet 是否已赋值
                      * @return EventSet 是否已赋值
+                     * 
                      */
                     bool EventSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of events
                      * @return TotalCount Total number of events
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

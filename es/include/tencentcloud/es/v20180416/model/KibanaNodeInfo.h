@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Kibana node specification
                      * @return KibanaNodeType Kibana node specification
+                     * 
                      */
                     std::string GetKibanaNodeType() const;
 
                     /**
                      * 设置Kibana node specification
-                     * @param KibanaNodeType Kibana node specification
+                     * @param _kibanaNodeType Kibana node specification
+                     * 
                      */
                     void SetKibanaNodeType(const std::string& _kibanaNodeType);
 
                     /**
                      * 判断参数 KibanaNodeType 是否已赋值
                      * @return KibanaNodeType 是否已赋值
+                     * 
                      */
                     bool KibanaNodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of Kibana nodes
                      * @return KibanaNodeNum Number of Kibana nodes
+                     * 
                      */
                     uint64_t GetKibanaNodeNum() const;
 
                     /**
                      * 设置Number of Kibana nodes
-                     * @param KibanaNodeNum Number of Kibana nodes
+                     * @param _kibanaNodeNum Number of Kibana nodes
+                     * 
                      */
                     void SetKibanaNodeNum(const uint64_t& _kibanaNodeNum);
 
                     /**
                      * 判断参数 KibanaNodeNum 是否已赋值
                      * @return KibanaNodeNum 是否已赋值
+                     * 
                      */
                     bool KibanaNodeNumHasBeenSet() const;
 
                     /**
                      * 获取Number of Kibana node's CPUs
                      * @return KibanaNodeCpuNum Number of Kibana node's CPUs
+                     * 
                      */
                     uint64_t GetKibanaNodeCpuNum() const;
 
                     /**
                      * 设置Number of Kibana node's CPUs
-                     * @param KibanaNodeCpuNum Number of Kibana node's CPUs
+                     * @param _kibanaNodeCpuNum Number of Kibana node's CPUs
+                     * 
                      */
                     void SetKibanaNodeCpuNum(const uint64_t& _kibanaNodeCpuNum);
 
                     /**
                      * 判断参数 KibanaNodeCpuNum 是否已赋值
                      * @return KibanaNodeCpuNum 是否已赋值
+                     * 
                      */
                     bool KibanaNodeCpuNumHasBeenSet() const;
 
                     /**
                      * 获取Kibana node's memory in GB
                      * @return KibanaNodeMemSize Kibana node's memory in GB
+                     * 
                      */
                     uint64_t GetKibanaNodeMemSize() const;
 
                     /**
                      * 设置Kibana node's memory in GB
-                     * @param KibanaNodeMemSize Kibana node's memory in GB
+                     * @param _kibanaNodeMemSize Kibana node's memory in GB
+                     * 
                      */
                     void SetKibanaNodeMemSize(const uint64_t& _kibanaNodeMemSize);
 
                     /**
                      * 判断参数 KibanaNodeMemSize 是否已赋值
                      * @return KibanaNodeMemSize 是否已赋值
+                     * 
                      */
                     bool KibanaNodeMemSizeHasBeenSet() const;
 
                     /**
                      * 获取Kibana node's disk type
                      * @return KibanaNodeDiskType Kibana node's disk type
+                     * 
                      */
                     std::string GetKibanaNodeDiskType() const;
 
                     /**
                      * 设置Kibana node's disk type
-                     * @param KibanaNodeDiskType Kibana node's disk type
+                     * @param _kibanaNodeDiskType Kibana node's disk type
+                     * 
                      */
                     void SetKibanaNodeDiskType(const std::string& _kibanaNodeDiskType);
 
                     /**
                      * 判断参数 KibanaNodeDiskType 是否已赋值
                      * @return KibanaNodeDiskType 是否已赋值
+                     * 
                      */
                     bool KibanaNodeDiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Kibana node's disk size
                      * @return KibanaNodeDiskSize Kibana node's disk size
+                     * 
                      */
                     uint64_t GetKibanaNodeDiskSize() const;
 
                     /**
                      * 设置Kibana node's disk size
-                     * @param KibanaNodeDiskSize Kibana node's disk size
+                     * @param _kibanaNodeDiskSize Kibana node's disk size
+                     * 
                      */
                     void SetKibanaNodeDiskSize(const uint64_t& _kibanaNodeDiskSize);
 
                     /**
                      * 判断参数 KibanaNodeDiskSize 是否已赋值
                      * @return KibanaNodeDiskSize 是否已赋值
+                     * 
                      */
                     bool KibanaNodeDiskSizeHasBeenSet() const;
 

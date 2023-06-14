@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Total duration of phrase filtering (in minutes)
                      * @return Duration Total duration of phrase filtering (in minutes)
+                     * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
                      * 设置Total duration of phrase filtering (in minutes)
-                     * @param Duration Total duration of phrase filtering (in minutes)
+                     * @param _duration Total duration of phrase filtering (in minutes)
+                     * 
                      */
                     void SetDuration(const uint64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 

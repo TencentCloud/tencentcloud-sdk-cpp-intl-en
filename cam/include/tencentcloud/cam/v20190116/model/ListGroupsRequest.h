@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Page number; default is 1
                      * @return Page Page number; default is 1
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number; default is 1
-                     * @param Page Page number; default is 1
+                     * @param _page Page number; default is 1
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page; default is 20
                      * @return Rp Number of entries per page; default is 20
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置Number of entries per page; default is 20
-                     * @param Rp Number of entries per page; default is 20
+                     * @param _rp Number of entries per page; default is 20
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 
                     /**
                      * 获取Filter by User Group name
                      * @return Keyword Filter by User Group name
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Filter by User Group name
-                     * @param Keyword Filter by User Group name
+                     * @param _keyword Filter by User Group name
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

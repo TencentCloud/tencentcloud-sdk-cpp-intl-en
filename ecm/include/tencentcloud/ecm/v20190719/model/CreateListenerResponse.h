@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerIds Array of unique IDs of the created listeners
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
                      * 判断参数 ListenerIds 是否已赋值
                      * @return ListenerIds 是否已赋值
+                     * 
                      */
                     bool ListenerIdsHasBeenSet() const;
 

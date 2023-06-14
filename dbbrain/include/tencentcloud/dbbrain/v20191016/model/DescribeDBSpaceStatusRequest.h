@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Query period in days. The end date is the current date and the query period is 7 days by default.
                      * @return RangeDays Query period in days. The end date is the current date and the query period is 7 days by default.
+                     * 
                      */
                     int64_t GetRangeDays() const;
 
                     /**
                      * 设置Query period in days. The end date is the current date and the query period is 7 days by default.
-                     * @param RangeDays Query period in days. The end date is the current date and the query period is 7 days by default.
+                     * @param _rangeDays Query period in days. The end date is the current date and the query period is 7 days by default.
+                     * 
                      */
                     void SetRangeDays(const int64_t& _rangeDays);
 
                     /**
                      * 判断参数 RangeDays 是否已赋值
                      * @return RangeDays 是否已赋值
+                     * 
                      */
                     bool RangeDaysHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
                      * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
-                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     * @param _product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

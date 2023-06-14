@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the EIP, such as `eip-11112222`.
                      * @return AddressId The unique ID of the EIP, such as `eip-11112222`.
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置The unique ID of the EIP, such as `eip-11112222`.
-                     * @param AddressId The unique ID of the EIP, such as `eip-11112222`.
+                     * @param _addressId The unique ID of the EIP, such as `eip-11112222`.
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 
                     /**
                      * 获取The EIP name after modification. The maximum length is 20 characters.
                      * @return AddressName The EIP name after modification. The maximum length is 20 characters.
+                     * 
                      */
                     std::string GetAddressName() const;
 
                     /**
                      * 设置The EIP name after modification. The maximum length is 20 characters.
-                     * @param AddressName The EIP name after modification. The maximum length is 20 characters.
+                     * @param _addressName The EIP name after modification. The maximum length is 20 characters.
+                     * 
                      */
                     void SetAddressName(const std::string& _addressName);
 
                     /**
                      * 判断参数 AddressName 是否已赋值
                      * @return AddressName 是否已赋值
+                     * 
                      */
                     bool AddressNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
                      * @return EipDirectConnection Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
+                     * 
                      */
                     std::string GetEipDirectConnection() const;
 
                     /**
                      * 设置Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
-                     * @param EipDirectConnection Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
+                     * @param _eipDirectConnection Whether the set EIP is a direct connection EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct connection function.
+                     * 
                      */
                     void SetEipDirectConnection(const std::string& _eipDirectConnection);
 
                     /**
                      * 判断参数 EipDirectConnection 是否已赋值
                      * @return EipDirectConnection 是否已赋值
+                     * 
                      */
                     bool EipDirectConnectionHasBeenSet() const;
 

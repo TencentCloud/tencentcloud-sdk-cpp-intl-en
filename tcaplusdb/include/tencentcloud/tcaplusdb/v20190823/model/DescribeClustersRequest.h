@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of clusters to be queried
                      * @return ClusterIds List of IDs of clusters to be queried
+                     * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
                      * 设置List of IDs of clusters to be queried
-                     * @param ClusterIds List of IDs of clusters to be queried
+                     * @param _clusterIds List of IDs of clusters to be queried
+                     * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
                     /**
                      * 判断参数 ClusterIds 是否已赋值
                      * @return ClusterIds 是否已赋值
+                     * 
                      */
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
                      * 获取Query filter
                      * @return Filters Query filter
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Query filter
-                     * @param Filters Query filter
+                     * @param _filters Query filter
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Query list offset
                      * @return Offset Query list offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Query list offset
-                     * @param Offset Query list offset
+                     * @param _offset Query list offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results in query list. Default value: 20
                      * @return Limit Number of returned results in query list. Default value: 20
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results in query list. Default value: 20
-                     * @param Limit Number of returned results in query list. Default value: 20
+                     * @param _limit Number of returned results in query list. Default value: 20
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable IPv6 address access
                      * @return Ipv6Enable Whether to enable IPv6 address access
+                     * 
                      */
                     int64_t GetIpv6Enable() const;
 
                     /**
                      * 设置Whether to enable IPv6 address access
-                     * @param Ipv6Enable Whether to enable IPv6 address access
+                     * @param _ipv6Enable Whether to enable IPv6 address access
+                     * 
                      */
                     void SetIpv6Enable(const int64_t& _ipv6Enable);
 
                     /**
                      * 判断参数 Ipv6Enable 是否已赋值
                      * @return Ipv6Enable 是否已赋值
+                     * 
                      */
                     bool Ipv6EnableHasBeenSet() const;
 

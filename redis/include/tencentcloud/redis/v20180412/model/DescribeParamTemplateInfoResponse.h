@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Quantity of parameters in the parameter template
                      * @return TotalCount Quantity of parameters in the parameter template
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Parameter template ID.
                      * @return TemplateId Parameter template ID.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Parameter template name.
                      * @return Name Parameter template name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -103,36 +109,42 @@ namespace TencentCloud
 - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
 - `15`: Redis 6.2 Memory Edition (Standard Architecture).
 - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 
                      */
                     uint64_t GetProductType() const;
 
                     /**
                      * 判断参数 ProductType 是否已赋值
                      * @return ProductType 是否已赋值
+                     * 
                      */
                     bool ProductTypeHasBeenSet() const;
 
                     /**
                      * 获取Parameter template description
                      * @return Description Parameter template description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Parameter details, including parameter name, current value, default value, maximum value, minimum value, enumeration value and other information.
                      * @return Items Parameter details, including parameter name, current value, default value, maximum value, minimum value, enumeration value and other information.
+                     * 
                      */
                     std::vector<ParameterDetail> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

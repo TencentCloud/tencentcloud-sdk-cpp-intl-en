@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Host Domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Host Domain name
+                     * @param _host Domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CertInfo Server certificate configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<ServerCertInfo> GetCertInfo() const;
 
                     /**
                      * 设置Server certificate configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CertInfo Server certificate configuration
+                     * @param _certInfo Server certificate configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCertInfo(const std::vector<ServerCertInfo>& _certInfo);
 
                     /**
                      * 判断参数 CertInfo 是否已赋值
                      * @return CertInfo 是否已赋值
+                     * 
                      */
                     bool CertInfoHasBeenSet() const;
 

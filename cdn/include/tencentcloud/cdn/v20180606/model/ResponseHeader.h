@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Custom response header switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Custom response header switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Custom response header switch
+                     * @param _switch Custom response header switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return HeaderRules Custom response header rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<HttpHeaderPathRule> GetHeaderRules() const;
 
                     /**
                      * 设置Custom response header rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param HeaderRules Custom response header rules
+                     * @param _headerRules Custom response header rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHeaderRules(const std::vector<HttpHeaderPathRule>& _headerRules);
 
                     /**
                      * 判断参数 HeaderRules 是否已赋值
                      * @return HeaderRules 是否已赋值
+                     * 
                      */
                     bool HeaderRulesHasBeenSet() const;
 

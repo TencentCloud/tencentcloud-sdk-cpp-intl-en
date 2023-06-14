@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Route table instance ID
                      * @return RouteTableId Route table instance ID
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置Route table instance ID
-                     * @param RouteTableId Route table instance ID
+                     * @param _routeTableId Route table instance ID
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
                      * 获取The conflicting destination ports to be checked
                      * @return DestinationCidrBlock The conflicting destination ports to be checked
+                     * 
                      */
                     std::string GetDestinationCidrBlock() const;
 
                     /**
                      * 设置The conflicting destination ports to be checked
-                     * @param DestinationCidrBlock The conflicting destination ports to be checked
+                     * @param _destinationCidrBlock The conflicting destination ports to be checked
+                     * 
                      */
                     void SetDestinationCidrBlock(const std::string& _destinationCidrBlock);
 
                     /**
                      * 判断参数 DestinationCidrBlock 是否已赋值
                      * @return DestinationCidrBlock 是否已赋值
+                     * 
                      */
                     bool DestinationCidrBlockHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ConflictSet List of conflicting routing policies
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Route> GetConflictSet() const;
 
                     /**
                      * 设置List of conflicting routing policies
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConflictSet List of conflicting routing policies
+                     * @param _conflictSet List of conflicting routing policies
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConflictSet(const std::vector<Route>& _conflictSet);
 
                     /**
                      * 判断参数 ConflictSet 是否已赋值
                      * @return ConflictSet 是否已赋值
+                     * 
                      */
                     bool ConflictSetHasBeenSet() const;
 

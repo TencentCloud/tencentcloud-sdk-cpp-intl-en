@@ -56,36 +56,42 @@ namespace TencentCloud
                     /**
                      * 获取Workflow ID.
                      * @return WorkflowId Workflow ID.
+                     * 
                      */
                     int64_t GetWorkflowId() const;
 
                     /**
                      * 设置Workflow ID.
-                     * @param WorkflowId Workflow ID.
+                     * @param _workflowId Workflow ID.
+                     * 
                      */
                     void SetWorkflowId(const int64_t& _workflowId);
 
                     /**
                      * 判断参数 WorkflowId 是否已赋值
                      * @return WorkflowId 是否已赋值
+                     * 
                      */
                     bool WorkflowIdHasBeenSet() const;
 
                     /**
                      * 获取Workflow name.
                      * @return WorkflowName Workflow name.
+                     * 
                      */
                     std::string GetWorkflowName() const;
 
                     /**
                      * 设置Workflow name.
-                     * @param WorkflowName Workflow name.
+                     * @param _workflowName Workflow name.
+                     * 
                      */
                     void SetWorkflowName(const std::string& _workflowName);
 
                     /**
                      * 判断参数 WorkflowName 是否已赋值
                      * @return WorkflowName 是否已赋值
+                     * 
                      */
                     bool WorkflowNameHasBeenSet() const;
 
@@ -96,6 +102,7 @@ namespace TencentCloud
                      * @return Status Workflow status. Valid values:
 <li>Enabled: Enabled,</li>
 <li>Disabled: Disabled.</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -103,33 +110,38 @@ namespace TencentCloud
                      * 设置Workflow status. Valid values:
 <li>Enabled: Enabled,</li>
 <li>Disabled: Disabled.</li>
-                     * @param Status Workflow status. Valid values:
+                     * @param _status Workflow status. Valid values:
 <li>Enabled: Enabled,</li>
 <li>Disabled: Disabled.</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
                      * @return Trigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+                     * 
                      */
                     WorkflowTrigger GetTrigger() const;
 
                     /**
                      * 设置Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-                     * @param Trigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+                     * @param _trigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+                     * 
                      */
                     void SetTrigger(const WorkflowTrigger& _trigger);
 
                     /**
                      * 判断参数 Trigger 是否已赋值
                      * @return Trigger 是否已赋值
+                     * 
                      */
                     bool TriggerHasBeenSet() const;
 
@@ -138,20 +150,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return OutputStorage The location to save the media processing output file.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置The location to save the media processing output file.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param OutputStorage The location to save the media processing output file.
+                     * @param _outputStorage The location to save the media processing output file.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 
@@ -160,20 +175,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return MediaProcessTask The media processing parameters to use.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     MediaProcessTaskInput GetMediaProcessTask() const;
 
                     /**
                      * 设置The media processing parameters to use.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param MediaProcessTask The media processing parameters to use.
+                     * @param _mediaProcessTask The media processing parameters to use.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMediaProcessTask(const MediaProcessTaskInput& _mediaProcessTask);
 
                     /**
                      * 判断参数 MediaProcessTask 是否已赋值
                      * @return MediaProcessTask 是否已赋值
+                     * 
                      */
                     bool MediaProcessTaskHasBeenSet() const;
 
@@ -182,38 +200,44 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AiContentReviewTask Type parameter of a video content audit task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
                      * 设置Type parameter of a video content audit task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AiContentReviewTask Type parameter of a video content audit task.
+                     * @param _aiContentReviewTask Type parameter of a video content audit task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
 
                     /**
                      * 判断参数 AiContentReviewTask 是否已赋值
                      * @return AiContentReviewTask 是否已赋值
+                     * 
                      */
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
                      * 获取Video content analysis task parameter.
                      * @return AiAnalysisTask Video content analysis task parameter.
+                     * 
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
                      * 设置Video content analysis task parameter.
-                     * @param AiAnalysisTask Video content analysis task parameter.
+                     * @param _aiAnalysisTask Video content analysis task parameter.
+                     * 
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
 
                     /**
                      * 判断参数 AiAnalysisTask 是否已赋值
                      * @return AiAnalysisTask 是否已赋值
+                     * 
                      */
                     bool AiAnalysisTaskHasBeenSet() const;
 
@@ -222,20 +246,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AiRecognitionTask Type parameter of a video content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
                      * 设置Type parameter of a video content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AiRecognitionTask Type parameter of a video content recognition task.
+                     * @param _aiRecognitionTask Type parameter of a video content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
 
                     /**
                      * 判断参数 AiRecognitionTask 是否已赋值
                      * @return AiRecognitionTask 是否已赋值
+                     * 
                      */
                     bool AiRecognitionTaskHasBeenSet() const;
 
@@ -244,92 +271,107 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskNotifyConfig GetTaskNotifyConfig() const;
 
                     /**
                      * 设置Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+                     * @param _taskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskNotifyConfig(const TaskNotifyConfig& _taskNotifyConfig);
 
                     /**
                      * 判断参数 TaskNotifyConfig 是否已赋值
                      * @return TaskNotifyConfig 是否已赋值
+                     * 
                      */
                     bool TaskNotifyConfigHasBeenSet() const;
 
                     /**
                      * 获取Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
                      * @return TaskPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+                     * 
                      */
                     int64_t GetTaskPriority() const;
 
                     /**
                      * 设置Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-                     * @param TaskPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+                     * @param _taskPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+                     * 
                      */
                     void SetTaskPriority(const int64_t& _taskPriority);
 
                     /**
                      * 判断参数 TaskPriority 是否已赋值
                      * @return TaskPriority 是否已赋值
+                     * 
                      */
                     bool TaskPriorityHasBeenSet() const;
 
                     /**
                      * 获取The directory to save the media processing output file, such as `/movie/201907/`.
                      * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
+                     * 
                      */
                     std::string GetOutputDir() const;
 
                     /**
                      * 设置The directory to save the media processing output file, such as `/movie/201907/`.
-                     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
+                     * @param _outputDir The directory to save the media processing output file, such as `/movie/201907/`.
+                     * 
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
                     /**
                      * 判断参数 OutputDir 是否已赋值
                      * @return OutputDir 是否已赋值
+                     * 
                      */
                     bool OutputDirHasBeenSet() const;
 
                     /**
                      * 获取Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      * @return CreateTime Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param CreateTime Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @param _createTime Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      * @return UpdateTime Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param UpdateTime Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @param _updateTime Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

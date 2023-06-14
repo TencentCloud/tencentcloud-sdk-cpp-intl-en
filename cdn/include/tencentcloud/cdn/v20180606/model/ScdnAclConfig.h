@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable. Valid values: `on` and `off`.
                      * @return Switch Whether to enable. Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable. Valid values: `on` and `off`.
-                     * @param Switch Whether to enable. Valid values: `on` and `off`.
+                     * @param _switch Whether to enable. Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -72,20 +75,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ScriptData This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ScdnAclGroup> GetScriptData() const;
 
                     /**
                      * 设置This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ScriptData This field is disused. Please use `AdvancedScriptData` instead.
+                     * @param _scriptData This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScriptData(const std::vector<ScdnAclGroup>& _scriptData);
 
                     /**
                      * 判断参数 ScriptData 是否已赋值
                      * @return ScriptData 是否已赋值
+                     * 
                      */
                     bool ScriptDataHasBeenSet() const;
 
@@ -94,20 +100,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ErrorPage Error page configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     ScdnErrorPage GetErrorPage() const;
 
                     /**
                      * 设置Error page configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ErrorPage Error page configuration
+                     * @param _errorPage Error page configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorPage(const ScdnErrorPage& _errorPage);
 
                     /**
                      * 判断参数 ErrorPage 是否已赋值
                      * @return ErrorPage 是否已赋值
+                     * 
                      */
                     bool ErrorPageHasBeenSet() const;
 
@@ -116,20 +125,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AdvancedScriptData ACL rule group, which is required when the access control is on.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<AdvancedScdnAclGroup> GetAdvancedScriptData() const;
 
                     /**
                      * 设置ACL rule group, which is required when the access control is on.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AdvancedScriptData ACL rule group, which is required when the access control is on.
+                     * @param _advancedScriptData ACL rule group, which is required when the access control is on.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAdvancedScriptData(const std::vector<AdvancedScdnAclGroup>& _advancedScriptData);
 
                     /**
                      * 判断参数 AdvancedScriptData 是否已赋值
                      * @return AdvancedScriptData 是否已赋值
+                     * 
                      */
                     bool AdvancedScriptDataHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
                      * @return Date Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @param Date Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * @param _date Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
@@ -87,6 +90,7 @@ namespace TencentCloud
 <li> iphone_play_times: playback times on iPhone</li>
 <li> android_play_times: playback times on Android</li>
 <li> host_name: domain name</li>
+                     * 
                      */
                     std::string GetUrl() const;
 
@@ -102,7 +106,7 @@ namespace TencentCloud
 <li> iphone_play_times: playback times on iPhone</li>
 <li> android_play_times: playback times on Android</li>
 <li> host_name: domain name</li>
-                     * @param Url URL of a playback statistics file, including the following contents:
+                     * @param _url URL of a playback statistics file, including the following contents:
 <li> date: playback date</li>
 <li> file_id: video file ID</li>
 <li> ip_count: number of client IPs after deduplication</li>
@@ -113,12 +117,14 @@ namespace TencentCloud
 <li> iphone_play_times: playback times on iPhone</li>
 <li> android_play_times: playback times on Android</li>
 <li> host_name: domain name</li>
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

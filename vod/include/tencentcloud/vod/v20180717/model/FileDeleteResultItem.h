@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the file deleted.
                      * @return FileId The ID of the file deleted.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The ID of the file deleted.
-                     * @param FileId The ID of the file deleted.
+                     * @param _fileId The ID of the file deleted.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DeleteParts The type of the file deleted.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<MediaDeleteItem> GetDeleteParts() const;
 
                     /**
                      * 设置The type of the file deleted.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DeleteParts The type of the file deleted.
+                     * @param _deleteParts The type of the file deleted.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDeleteParts(const std::vector<MediaDeleteItem>& _deleteParts);
 
                     /**
                      * 判断参数 DeleteParts 是否已赋值
                      * @return DeleteParts 是否已赋值
+                     * 
                      */
                     bool DeletePartsHasBeenSet() const;
 

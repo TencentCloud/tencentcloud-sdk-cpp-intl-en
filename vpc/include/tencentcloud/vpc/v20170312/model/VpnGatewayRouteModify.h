@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Route ID of the VPN gateway
                      * @return RouteId Route ID of the VPN gateway
+                     * 
                      */
                     std::string GetRouteId() const;
 
                     /**
                      * 设置Route ID of the VPN gateway
-                     * @param RouteId Route ID of the VPN gateway
+                     * @param _routeId Route ID of the VPN gateway
+                     * 
                      */
                     void SetRouteId(const std::string& _routeId);
 
                     /**
                      * 判断参数 RouteId 是否已赋值
                      * @return RouteId 是否已赋值
+                     * 
                      */
                     bool RouteIdHasBeenSet() const;
 
                     /**
                      * 获取Route status of the VPN gateway. Valid values: `ENABLE`, and `DISABLE`.
                      * @return Status Route status of the VPN gateway. Valid values: `ENABLE`, and `DISABLE`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Route status of the VPN gateway. Valid values: `ENABLE`, and `DISABLE`.
-                     * @param Status Route status of the VPN gateway. Valid values: `ENABLE`, and `DISABLE`.
+                     * @param _status Route status of the VPN gateway. Valid values: `ENABLE`, and `DISABLE`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

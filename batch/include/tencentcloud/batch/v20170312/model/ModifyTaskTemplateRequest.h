@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Task template ID
                      * @return TaskTemplateId Task template ID
+                     * 
                      */
                     std::string GetTaskTemplateId() const;
 
                     /**
                      * 设置Task template ID
-                     * @param TaskTemplateId Task template ID
+                     * @param _taskTemplateId Task template ID
+                     * 
                      */
                     void SetTaskTemplateId(const std::string& _taskTemplateId);
 
                     /**
                      * 判断参数 TaskTemplateId 是否已赋值
                      * @return TaskTemplateId 是否已赋值
+                     * 
                      */
                     bool TaskTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Task template name
                      * @return TaskTemplateName Task template name
+                     * 
                      */
                     std::string GetTaskTemplateName() const;
 
                     /**
                      * 设置Task template name
-                     * @param TaskTemplateName Task template name
+                     * @param _taskTemplateName Task template name
+                     * 
                      */
                     void SetTaskTemplateName(const std::string& _taskTemplateName);
 
                     /**
                      * 判断参数 TaskTemplateName 是否已赋值
                      * @return TaskTemplateName 是否已赋值
+                     * 
                      */
                     bool TaskTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Task template description
                      * @return TaskTemplateDescription Task template description
+                     * 
                      */
                     std::string GetTaskTemplateDescription() const;
 
                     /**
                      * 设置Task template description
-                     * @param TaskTemplateDescription Task template description
+                     * @param _taskTemplateDescription Task template description
+                     * 
                      */
                     void SetTaskTemplateDescription(const std::string& _taskTemplateDescription);
 
                     /**
                      * 判断参数 TaskTemplateDescription 是否已赋值
                      * @return TaskTemplateDescription 是否已赋值
+                     * 
                      */
                     bool TaskTemplateDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Task template information
                      * @return TaskTemplateInfo Task template information
+                     * 
                      */
                     Task GetTaskTemplateInfo() const;
 
                     /**
                      * 设置Task template information
-                     * @param TaskTemplateInfo Task template information
+                     * @param _taskTemplateInfo Task template information
+                     * 
                      */
                     void SetTaskTemplateInfo(const Task& _taskTemplateInfo);
 
                     /**
                      * 判断参数 TaskTemplateInfo 是否已赋值
                      * @return TaskTemplateInfo 是否已赋值
+                     * 
                      */
                     bool TaskTemplateInfoHasBeenSet() const;
 

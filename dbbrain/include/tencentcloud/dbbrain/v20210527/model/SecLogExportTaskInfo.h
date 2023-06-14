@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Async task Id.
                      * @return AsyncRequestId Async task Id.
+                     * 
                      */
                     uint64_t GetAsyncRequestId() const;
 
                     /**
                      * 设置Async task Id.
-                     * @param AsyncRequestId Async task Id.
+                     * @param _asyncRequestId Async task Id.
+                     * 
                      */
                     void SetAsyncRequestId(const uint64_t& _asyncRequestId);
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Task start time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Task start time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Task start time.
+                     * @param _startTime Task start time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -91,74 +97,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime Task end time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Task end time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime Task end time.
+                     * @param _endTime Task end time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Task creation time.
                      * @return CreateTime Task creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Task creation time.
-                     * @param CreateTime Task creation time.
+                     * @param _createTime Task creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Task status.
                      * @return Status Task status.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status.
-                     * @param Status Task status.
+                     * @param _status Task status.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Task progress.
                      * @return Progress Task progress.
+                     * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
                      * 设置Task progress.
-                     * @param Progress Task progress.
+                     * @param _progress Task progress.
+                     * 
                      */
                     void SetProgress(const uint64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogStartTime Exported log start time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogStartTime() const;
 
                     /**
                      * 设置Exported log start time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogStartTime Exported log start time.
+                     * @param _logStartTime Exported log start time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogStartTime(const std::string& _logStartTime);
 
                     /**
                      * 判断参数 LogStartTime 是否已赋值
                      * @return LogStartTime 是否已赋值
+                     * 
                      */
                     bool LogStartTimeHasBeenSet() const;
 
@@ -189,20 +210,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogEndTime Exported log end time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogEndTime() const;
 
                     /**
                      * 设置Exported log end time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogEndTime Exported log end time.
+                     * @param _logEndTime Exported log end time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogEndTime(const std::string& _logEndTime);
 
                     /**
                      * 判断参数 LogEndTime 是否已赋值
                      * @return LogEndTime 是否已赋值
+                     * 
                      */
                     bool LogEndTimeHasBeenSet() const;
 
@@ -211,20 +235,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalSize Total size of log files in KB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalSize() const;
 
                     /**
                      * 设置Total size of log files in KB.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalSize Total size of log files in KB.
+                     * @param _totalSize Total size of log files in KB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalSize(const uint64_t& _totalSize);
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 
@@ -233,20 +260,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DangerLevels List of risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<uint64_t> GetDangerLevels() const;
 
                     /**
                      * 设置List of risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DangerLevels List of risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
+                     * @param _dangerLevels List of risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDangerLevels(const std::vector<uint64_t>& _dangerLevels);
 
                     /**
                      * 判断参数 DangerLevels 是否已赋值
                      * @return DangerLevels 是否已赋值
+                     * 
                      */
                     bool DangerLevelsHasBeenSet() const;
 

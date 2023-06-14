@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Id This field is used to return the ID of the recognized object for easier recognition and distinction.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置This field is used to return the ID of the recognized object for easier recognition and distinction.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Id This field is used to return the ID of the recognized object for easier recognition and distinction.
+                     * @param _id This field is used to return the ID of the recognized object for easier recognition and distinction.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Name This field is used to return the hit subtag name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置This field is used to return the hit subtag name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Name This field is used to return the hit subtag name.
+                     * @param _name This field is used to return the hit subtag name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Score This field is used to return the hit score of the subtag. Value range: **0–100**; for example, *Porn-SexBehavior 99* indicates that the hit score of the *Porn-SexBehavior* tag for the recognized content is 99.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetScore() const;
 
                     /**
                      * 设置This field is used to return the hit score of the subtag. Value range: **0–100**; for example, *Porn-SexBehavior 99* indicates that the hit score of the *Porn-SexBehavior* tag for the recognized content is 99.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Score This field is used to return the hit score of the subtag. Value range: **0–100**; for example, *Porn-SexBehavior 99* indicates that the hit score of the *Porn-SexBehavior* tag for the recognized content is 99.
+                     * @param _score This field is used to return the hit score of the subtag. Value range: **0–100**; for example, *Porn-SexBehavior 99* indicates that the hit score of the *Porn-SexBehavior* tag for the recognized content is 99.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const uint64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 

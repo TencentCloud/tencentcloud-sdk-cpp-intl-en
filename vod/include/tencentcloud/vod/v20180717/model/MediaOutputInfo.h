@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Region of the bucket where an output file is stored, such as ap-guangzhou.
                      * @return Region Region of the bucket where an output file is stored, such as ap-guangzhou.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region of the bucket where an output file is stored, such as ap-guangzhou.
-                     * @param Region Region of the bucket where an output file is stored, such as ap-guangzhou.
+                     * @param _region Region of the bucket where an output file is stored, such as ap-guangzhou.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Bucket of output file.
                      * @return Bucket Bucket of output file.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置Bucket of output file.
-                     * @param Bucket Bucket of output file.
+                     * @param _bucket Bucket of output file.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取Path to output file, which must end in "/".
                      * @return Dir Path to output file, which must end in "/".
+                     * 
                      */
                     std::string GetDir() const;
 
                     /**
                      * 设置Path to output file, which must end in "/".
-                     * @param Dir Path to output file, which must end in "/".
+                     * @param _dir Path to output file, which must end in "/".
+                     * 
                      */
                     void SetDir(const std::string& _dir);
 
                     /**
                      * 判断参数 Dir 是否已赋值
                      * @return Dir 是否已赋值
+                     * 
                      */
                     bool DirHasBeenSet() const;
 

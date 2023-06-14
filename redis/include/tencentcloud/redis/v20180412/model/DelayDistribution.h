@@ -61,6 +61,7 @@ namespace TencentCloud
 [10ms,50ms]: 50;
 [50ms,200ms]: 200;
 [200ms,∞]: -1.
+                     * 
                      */
                     int64_t GetLadder() const;
 
@@ -72,55 +73,63 @@ namespace TencentCloud
 [10ms,50ms]: 50;
 [50ms,200ms]: 200;
 [200ms,∞]: -1.
-                     * @param Ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+                     * @param _ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
 [0ms,1ms]: 1;
 [1ms,5ms]: 5;
 [5ms,10ms]: 10;
 [10ms,50ms]: 50;
 [50ms,200ms]: 200;
 [200ms,∞]: -1.
+                     * 
                      */
                     void SetLadder(const int64_t& _ladder);
 
                     /**
                      * 判断参数 Ladder 是否已赋值
                      * @return Ladder 是否已赋值
+                     * 
                      */
                     bool LadderHasBeenSet() const;
 
                     /**
                      * 获取The number of commands whose delay falls within the current delay range
                      * @return Size The number of commands whose delay falls within the current delay range
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置The number of commands whose delay falls within the current delay range
-                     * @param Size The number of commands whose delay falls within the current delay range
+                     * @param _size The number of commands whose delay falls within the current delay range
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return Updatetime Modification time
+                     * 
                      */
                     int64_t GetUpdatetime() const;
 
                     /**
                      * 设置Modification time
-                     * @param Updatetime Modification time
+                     * @param _updatetime Modification time
+                     * 
                      */
                     void SetUpdatetime(const int64_t& _updatetime);
 
                     /**
                      * 判断参数 Updatetime 是否已赋值
                      * @return Updatetime 是否已赋值
+                     * 
                      */
                     bool UpdatetimeHasBeenSet() const;
 

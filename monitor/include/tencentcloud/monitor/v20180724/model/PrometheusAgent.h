@@ -51,56 +51,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Agent name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Agent name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Agent name
+                     * @param _name Agent name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Agent ID
                      * @return AgentId Agent ID
+                     * 
                      */
                     std::string GetAgentId() const;
 
                     /**
                      * 设置Agent ID
-                     * @param AgentId Agent ID
+                     * @param _agentId Agent ID
+                     * 
                      */
                     void SetAgentId(const std::string& _agentId);
 
                     /**
                      * 判断参数 AgentId 是否已赋值
                      * @return AgentId 是否已赋值
+                     * 
                      */
                     bool AgentIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Ipv4 Agent IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIpv4() const;
 
                     /**
                      * 设置Agent IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Ipv4 Agent IP
+                     * @param _ipv4 Agent IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpv4(const std::string& _ipv4);
 
                     /**
                      * 判断参数 Ipv4 是否已赋值
                      * @return Ipv4 是否已赋值
+                     * 
                      */
                     bool Ipv4HasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HeartbeatTime Heartbeat time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeartbeatTime() const;
 
                     /**
                      * 设置Heartbeat time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HeartbeatTime Heartbeat time
+                     * @param _heartbeatTime Heartbeat time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeartbeatTime(const std::string& _heartbeatTime);
 
                     /**
                      * 判断参数 HeartbeatTime 是否已赋值
                      * @return HeartbeatTime 是否已赋值
+                     * 
                      */
                     bool HeartbeatTimeHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastError Last error
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastError() const;
 
                     /**
                      * 设置Last error
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LastError Last error
+                     * @param _lastError Last error
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastError(const std::string& _lastError);
 
                     /**
                      * 判断参数 LastError 是否已赋值
                      * @return LastError 是否已赋值
+                     * 
                      */
                     bool LastErrorHasBeenSet() const;
 
@@ -175,38 +193,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AgentVersion Agent version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAgentVersion() const;
 
                     /**
                      * 设置Agent version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AgentVersion Agent version
+                     * @param _agentVersion Agent version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAgentVersion(const std::string& _agentVersion);
 
                     /**
                      * 判断参数 AgentVersion 是否已赋值
                      * @return AgentVersion 是否已赋值
+                     * 
                      */
                     bool AgentVersionHasBeenSet() const;
 
                     /**
                      * 获取Agent status
                      * @return Status Agent status
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Agent status
-                     * @param Status Agent status
+                     * @param _status Agent status
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

@@ -51,38 +51,44 @@ namespace TencentCloud
 It can be left empty in offline migration tasks.
                      * @return OldName Database name. If the `OldName` database does not exist, a failure will be returned.
 It can be left empty in offline migration tasks.
+                     * 
                      */
                     std::string GetOldName() const;
 
                     /**
                      * 设置Database name. If the `OldName` database does not exist, a failure will be returned.
 It can be left empty in offline migration tasks.
-                     * @param OldName Database name. If the `OldName` database does not exist, a failure will be returned.
+                     * @param _oldName Database name. If the `OldName` database does not exist, a failure will be returned.
 It can be left empty in offline migration tasks.
+                     * 
                      */
                     void SetOldName(const std::string& _oldName);
 
                     /**
                      * 判断参数 OldName 是否已赋值
                      * @return OldName 是否已赋值
+                     * 
                      */
                     bool OldNameHasBeenSet() const;
 
                     /**
                      * 获取New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
                      * @return NewName New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
+                     * 
                      */
                     std::string GetNewName() const;
 
                     /**
                      * 设置New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
-                     * @param NewName New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
+                     * @param _newName New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
+                     * 
                      */
                     void SetNewName(const std::string& _newName);
 
                     /**
                      * 判断参数 NewName 是否已赋值
                      * @return NewName 是否已赋值
+                     * 
                      */
                     bool NewNameHasBeenSet() const;
 

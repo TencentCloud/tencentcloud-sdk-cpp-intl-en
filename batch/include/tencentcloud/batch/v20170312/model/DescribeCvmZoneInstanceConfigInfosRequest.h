@@ -54,6 +54,7 @@ namespace TencentCloud
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
 <li> instance-type - String - Required: No - (Filter) Filter by model.</li>
 <li> instance-charge-type - String - Required: No - (Filter) Filter by instance billing method. ( POSTPAID_BY_HOUR: pay-as-you-go | SPOTPAID: bidding.)  </li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -63,17 +64,19 @@ namespace TencentCloud
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
 <li> instance-type - String - Required: No - (Filter) Filter by model.</li>
 <li> instance-charge-type - String - Required: No - (Filter) Filter by instance billing method. ( POSTPAID_BY_HOUR: pay-as-you-go | SPOTPAID: bidding.)  </li>
-                     * @param Filters Filter.
+                     * @param _filters Filter.
 <li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
 <li> instance-family - String - Required: No - (Filter) Filter by model family such as S1, I1, and M1.</li>
 <li> instance-type - String - Required: No - (Filter) Filter by model.</li>
 <li> instance-charge-type - String - Required: No - (Filter) Filter by instance billing method. ( POSTPAID_BY_HOUR: pay-as-you-go | SPOTPAID: bidding.)  </li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

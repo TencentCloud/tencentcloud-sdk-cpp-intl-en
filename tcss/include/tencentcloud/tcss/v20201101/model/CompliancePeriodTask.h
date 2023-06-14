@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Scheduled task ID
                      * @return PeriodTaskId Scheduled task ID
+                     * 
                      */
                     uint64_t GetPeriodTaskId() const;
 
                     /**
                      * 设置Scheduled task ID
-                     * @param PeriodTaskId Scheduled task ID
+                     * @param _periodTaskId Scheduled task ID
+                     * 
                      */
                     void SetPeriodTaskId(const uint64_t& _periodTaskId);
 
                     /**
                      * 判断参数 PeriodTaskId 是否已赋值
                      * @return PeriodTaskId 是否已赋值
+                     * 
                      */
                     bool PeriodTaskIdHasBeenSet() const;
 
@@ -77,6 +80,7 @@ namespace TencentCloud
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     std::string GetAssetType() const;
 
@@ -86,17 +90,19 @@ namespace TencentCloud
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
-                     * @param AssetType Asset type
+                     * @param _assetType Asset type
 `ASSET_CONTAINER`: Container.
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     void SetAssetType(const std::string& _assetType);
 
                     /**
                      * 判断参数 AssetType 是否已赋值
                      * @return AssetType 是否已赋值
+                     * 
                      */
                     bool AssetTypeHasBeenSet() const;
 
@@ -105,74 +111,86 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastTriggerTime Last trigger time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastTriggerTime() const;
 
                     /**
                      * 设置Last trigger time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LastTriggerTime Last trigger time
+                     * @param _lastTriggerTime Last trigger time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastTriggerTime(const std::string& _lastTriggerTime);
 
                     /**
                      * 判断参数 LastTriggerTime 是否已赋值
                      * @return LastTriggerTime 是否已赋值
+                     * 
                      */
                     bool LastTriggerTimeHasBeenSet() const;
 
                     /**
                      * 获取Total number of check items
                      * @return TotalPolicyItemCount Total number of check items
+                     * 
                      */
                     uint64_t GetTotalPolicyItemCount() const;
 
                     /**
                      * 设置Total number of check items
-                     * @param TotalPolicyItemCount Total number of check items
+                     * @param _totalPolicyItemCount Total number of check items
+                     * 
                      */
                     void SetTotalPolicyItemCount(const uint64_t& _totalPolicyItemCount);
 
                     /**
                      * 判断参数 TotalPolicyItemCount 是否已赋值
                      * @return TotalPolicyItemCount 是否已赋值
+                     * 
                      */
                     bool TotalPolicyItemCountHasBeenSet() const;
 
                     /**
                      * 获取Cycle settings
                      * @return PeriodRule Cycle settings
+                     * 
                      */
                     CompliancePeriodTaskRule GetPeriodRule() const;
 
                     /**
                      * 设置Cycle settings
-                     * @param PeriodRule Cycle settings
+                     * @param _periodRule Cycle settings
+                     * 
                      */
                     void SetPeriodRule(const CompliancePeriodTaskRule& _periodRule);
 
                     /**
                      * 判断参数 PeriodRule 是否已赋值
                      * @return PeriodRule 是否已赋值
+                     * 
                      */
                     bool PeriodRuleHasBeenSet() const;
 
                     /**
                      * 获取List of compliance standards
                      * @return BenchmarkStandardSet List of compliance standards
+                     * 
                      */
                     std::vector<ComplianceBenchmarkStandard> GetBenchmarkStandardSet() const;
 
                     /**
                      * 设置List of compliance standards
-                     * @param BenchmarkStandardSet List of compliance standards
+                     * @param _benchmarkStandardSet List of compliance standards
+                     * 
                      */
                     void SetBenchmarkStandardSet(const std::vector<ComplianceBenchmarkStandard>& _benchmarkStandardSet);
 
                     /**
                      * 判断参数 BenchmarkStandardSet 是否已赋值
                      * @return BenchmarkStandardSet 是否已赋值
+                     * 
                      */
                     bool BenchmarkStandardSetHasBeenSet() const;
 

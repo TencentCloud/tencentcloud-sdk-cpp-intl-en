@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique EIP ID.
                      * @return AddressId Unique EIP ID.
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置Unique EIP ID.
-                     * @param AddressId Unique EIP ID.
+                     * @param _addressId Unique EIP ID.
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 
                     /**
                      * 获取EIP name.
                      * @return AddressName EIP name.
+                     * 
                      */
                     std::string GetAddressName() const;
 
                     /**
                      * 设置EIP name.
-                     * @param AddressName EIP name.
+                     * @param _addressName EIP name.
+                     * 
                      */
                     void SetAddressName(const std::string& _addressName);
 
                     /**
                      * 判断参数 AddressName 是否已赋值
                      * @return AddressName 是否已赋值
+                     * 
                      */
                     bool AddressNameHasBeenSet() const;
 
                     /**
                      * 获取EIP status, including 'CREATING' (creating), 'BINDING' (binding), 'BIND' (bound), 'UNBINDING' (unbinding), 'UNBIND' (unbound), 'OFFLINING' (releasing), and 'BIND_ENI' (binding dangling ENI)
                      * @return AddressStatus EIP status, including 'CREATING' (creating), 'BINDING' (binding), 'BIND' (bound), 'UNBINDING' (unbinding), 'UNBIND' (unbound), 'OFFLINING' (releasing), and 'BIND_ENI' (binding dangling ENI)
+                     * 
                      */
                     std::string GetAddressStatus() const;
 
                     /**
                      * 设置EIP status, including 'CREATING' (creating), 'BINDING' (binding), 'BIND' (bound), 'UNBINDING' (unbinding), 'UNBIND' (unbound), 'OFFLINING' (releasing), and 'BIND_ENI' (binding dangling ENI)
-                     * @param AddressStatus EIP status, including 'CREATING' (creating), 'BINDING' (binding), 'BIND' (bound), 'UNBINDING' (unbinding), 'UNBIND' (unbound), 'OFFLINING' (releasing), and 'BIND_ENI' (binding dangling ENI)
+                     * @param _addressStatus EIP status, including 'CREATING' (creating), 'BINDING' (binding), 'BIND' (bound), 'UNBINDING' (unbinding), 'UNBIND' (unbound), 'OFFLINING' (releasing), and 'BIND_ENI' (binding dangling ENI)
+                     * 
                      */
                     void SetAddressStatus(const std::string& _addressStatus);
 
                     /**
                      * 判断参数 AddressStatus 是否已赋值
                      * @return AddressStatus 是否已赋值
+                     * 
                      */
                     bool AddressStatusHasBeenSet() const;
 
                     /**
                      * 获取Public IP address
                      * @return AddressIp Public IP address
+                     * 
                      */
                     std::string GetAddressIp() const;
 
                     /**
                      * 设置Public IP address
-                     * @param AddressIp Public IP address
+                     * @param _addressIp Public IP address
+                     * 
                      */
                     void SetAddressIp(const std::string& _addressIp);
 
                     /**
                      * 判断参数 AddressIp 是否已赋值
                      * @return AddressIp 是否已赋值
+                     * 
                      */
                     bool AddressIpHasBeenSet() const;
 
@@ -123,38 +135,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId ID of the bound resource instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the bound resource instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId ID of the bound resource instance.
+                     * @param _instanceId ID of the bound resource instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
                      * @return CreatedTime Creation time in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
-                     * @param CreatedTime Creation time in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
+                     * @param _createdTime Creation time in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -163,20 +181,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NetworkInterfaceId ID of the bound ENI
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置ID of the bound ENI
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NetworkInterfaceId ID of the bound ENI
+                     * @param _networkInterfaceId ID of the bound ENI
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
@@ -185,110 +206,128 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PrivateAddressIp Private IP of the bound resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPrivateAddressIp() const;
 
                     /**
                      * 设置Private IP of the bound resource
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateAddressIp Private IP of the bound resource
+                     * @param _privateAddressIp Private IP of the bound resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateAddressIp(const std::string& _privateAddressIp);
 
                     /**
                      * 判断参数 PrivateAddressIp 是否已赋值
                      * @return PrivateAddressIp 是否已赋值
+                     * 
                      */
                     bool PrivateAddressIpHasBeenSet() const;
 
                     /**
                      * 获取Isolation status of the resource. true: isolated; false: not isolated.
                      * @return IsArrears Isolation status of the resource. true: isolated; false: not isolated.
+                     * 
                      */
                     bool GetIsArrears() const;
 
                     /**
                      * 设置Isolation status of the resource. true: isolated; false: not isolated.
-                     * @param IsArrears Isolation status of the resource. true: isolated; false: not isolated.
+                     * @param _isArrears Isolation status of the resource. true: isolated; false: not isolated.
+                     * 
                      */
                     void SetIsArrears(const bool& _isArrears);
 
                     /**
                      * 判断参数 IsArrears 是否已赋值
                      * @return IsArrears 是否已赋值
+                     * 
                      */
                     bool IsArrearsHasBeenSet() const;
 
                     /**
                      * 获取Blockage status of the EIP resource. true: blocked; false: not blocked
                      * @return IsBlocked Blockage status of the EIP resource. true: blocked; false: not blocked
+                     * 
                      */
                     bool GetIsBlocked() const;
 
                     /**
                      * 设置Blockage status of the EIP resource. true: blocked; false: not blocked
-                     * @param IsBlocked Blockage status of the EIP resource. true: blocked; false: not blocked
+                     * @param _isBlocked Blockage status of the EIP resource. true: blocked; false: not blocked
+                     * 
                      */
                     void SetIsBlocked(const bool& _isBlocked);
 
                     /**
                      * 判断参数 IsBlocked 是否已赋值
                      * @return IsBlocked 是否已赋值
+                     * 
                      */
                     bool IsBlockedHasBeenSet() const;
 
                     /**
                      * 获取Whether the EIP supports direct access mode. true: yes; false: no.
                      * @return IsEipDirectConnection Whether the EIP supports direct access mode. true: yes; false: no.
+                     * 
                      */
                     bool GetIsEipDirectConnection() const;
 
                     /**
                      * 设置Whether the EIP supports direct access mode. true: yes; false: no.
-                     * @param IsEipDirectConnection Whether the EIP supports direct access mode. true: yes; false: no.
+                     * @param _isEipDirectConnection Whether the EIP supports direct access mode. true: yes; false: no.
+                     * 
                      */
                     void SetIsEipDirectConnection(const bool& _isEipDirectConnection);
 
                     /**
                      * 判断参数 IsEipDirectConnection 是否已赋值
                      * @return IsEipDirectConnection 是否已赋值
+                     * 
                      */
                     bool IsEipDirectConnectionHasBeenSet() const;
 
                     /**
                      * 获取Resource type of the EIP, including `CalcIP` (device IP), `WanIP` (general public IP), `EIP` (elastic IP), and `AnycastEip` (accelerated EIP).
                      * @return AddressType Resource type of the EIP, including `CalcIP` (device IP), `WanIP` (general public IP), `EIP` (elastic IP), and `AnycastEip` (accelerated EIP).
+                     * 
                      */
                     std::string GetAddressType() const;
 
                     /**
                      * 设置Resource type of the EIP, including `CalcIP` (device IP), `WanIP` (general public IP), `EIP` (elastic IP), and `AnycastEip` (accelerated EIP).
-                     * @param AddressType Resource type of the EIP, including `CalcIP` (device IP), `WanIP` (general public IP), `EIP` (elastic IP), and `AnycastEip` (accelerated EIP).
+                     * @param _addressType Resource type of the EIP, including `CalcIP` (device IP), `WanIP` (general public IP), `EIP` (elastic IP), and `AnycastEip` (accelerated EIP).
+                     * 
                      */
                     void SetAddressType(const std::string& _addressType);
 
                     /**
                      * 判断参数 AddressType 是否已赋值
                      * @return AddressType 是否已赋值
+                     * 
                      */
                     bool AddressTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether the EIP is automatically released after being unbound. true: yes; false: no
                      * @return CascadeRelease Whether the EIP is automatically released after being unbound. true: yes; false: no
+                     * 
                      */
                     bool GetCascadeRelease() const;
 
                     /**
                      * 设置Whether the EIP is automatically released after being unbound. true: yes; false: no
-                     * @param CascadeRelease Whether the EIP is automatically released after being unbound. true: yes; false: no
+                     * @param _cascadeRelease Whether the EIP is automatically released after being unbound. true: yes; false: no
+                     * 
                      */
                     void SetCascadeRelease(const bool& _cascadeRelease);
 
                     /**
                      * 判断参数 CascadeRelease 是否已赋值
                      * @return CascadeRelease 是否已赋值
+                     * 
                      */
                     bool CascadeReleaseHasBeenSet() const;
 
@@ -297,20 +336,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InternetServiceProvider ISP. CTCC: China Telecom; CUCC: China Unicom; CMCC: China Mobile
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInternetServiceProvider() const;
 
                     /**
                      * 设置ISP. CTCC: China Telecom; CUCC: China Unicom; CMCC: China Mobile
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InternetServiceProvider ISP. CTCC: China Telecom; CUCC: China Unicom; CMCC: China Mobile
+                     * @param _internetServiceProvider ISP. CTCC: China Telecom; CUCC: China Unicom; CMCC: China Mobile
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInternetServiceProvider(const std::string& _internetServiceProvider);
 
                     /**
                      * 判断参数 InternetServiceProvider 是否已赋值
                      * @return InternetServiceProvider 是否已赋值
+                     * 
                      */
                     bool InternetServiceProviderHasBeenSet() const;
 
@@ -319,20 +361,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Bandwidth Bandwidth cap
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetBandwidth() const;
 
                     /**
                      * 设置Bandwidth cap
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Bandwidth Bandwidth cap
+                     * @param _bandwidth Bandwidth cap
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBandwidth(const uint64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
@@ -341,20 +386,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PayMode Billing mode
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置Billing mode
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PayMode Billing mode
+                     * @param _payMode Billing mode
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 

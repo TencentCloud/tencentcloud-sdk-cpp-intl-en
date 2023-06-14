@@ -52,54 +52,63 @@ namespace TencentCloud
                     /**
                      * 获取Parameters for recognition of pornographic content in images
                      * @return ImgReviewInfo Parameters for recognition of pornographic content in images
+                     * 
                      */
                     PornImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
                      * 设置Parameters for recognition of pornographic content in images
-                     * @param ImgReviewInfo Parameters for recognition of pornographic content in images
+                     * @param _imgReviewInfo Parameters for recognition of pornographic content in images
+                     * 
                      */
                     void SetImgReviewInfo(const PornImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for ASR-based recognition of pornographic content
                      * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+                     * 
                      */
                     PornAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
                      * 设置Parameters for ASR-based recognition of pornographic content
-                     * @param AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+                     * @param _asrReviewInfo Parameters for ASR-based recognition of pornographic content
+                     * 
                      */
                     void SetAsrReviewInfo(const PornAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for OCR-based recognition of pornographic content
                      * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+                     * 
                      */
                     PornOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
                      * 设置Parameters for OCR-based recognition of pornographic content
-                     * @param OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+                     * @param _ocrReviewInfo Parameters for OCR-based recognition of pornographic content
+                     * 
                      */
                     void SetOcrReviewInfo(const PornOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

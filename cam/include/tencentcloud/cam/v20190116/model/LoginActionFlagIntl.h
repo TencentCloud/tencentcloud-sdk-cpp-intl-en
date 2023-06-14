@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Mobile number
                      * @return Phone Mobile number
+                     * 
                      */
                     uint64_t GetPhone() const;
 
                     /**
                      * 设置Mobile number
-                     * @param Phone Mobile number
+                     * @param _phone Mobile number
+                     * 
                      */
                     void SetPhone(const uint64_t& _phone);
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
                     /**
                      * 获取Hard token
                      * @return Token Hard token
+                     * 
                      */
                     uint64_t GetToken() const;
 
                     /**
                      * 设置Hard token
-                     * @param Token Hard token
+                     * @param _token Hard token
+                     * 
                      */
                     void SetToken(const uint64_t& _token);
 
                     /**
                      * 判断参数 Token 是否已赋值
                      * @return Token 是否已赋值
+                     * 
                      */
                     bool TokenHasBeenSet() const;
 
                     /**
                      * 获取Soft token
                      * @return Stoken Soft token
+                     * 
                      */
                     uint64_t GetStoken() const;
 
                     /**
                      * 设置Soft token
-                     * @param Stoken Soft token
+                     * @param _stoken Soft token
+                     * 
                      */
                     void SetStoken(const uint64_t& _stoken);
 
                     /**
                      * 判断参数 Stoken 是否已赋值
                      * @return Stoken 是否已赋值
+                     * 
                      */
                     bool StokenHasBeenSet() const;
 
                     /**
                      * 获取WeChat
                      * @return Wechat WeChat
+                     * 
                      */
                     uint64_t GetWechat() const;
 
                     /**
                      * 设置WeChat
-                     * @param Wechat WeChat
+                     * @param _wechat WeChat
+                     * 
                      */
                     void SetWechat(const uint64_t& _wechat);
 
                     /**
                      * 判断参数 Wechat 是否已赋值
                      * @return Wechat 是否已赋值
+                     * 
                      */
                     bool WechatHasBeenSet() const;
 
                     /**
                      * 获取Custom
                      * @return Custom Custom
+                     * 
                      */
                     uint64_t GetCustom() const;
 
                     /**
                      * 设置Custom
-                     * @param Custom Custom
+                     * @param _custom Custom
+                     * 
                      */
                     void SetCustom(const uint64_t& _custom);
 
                     /**
                      * 判断参数 Custom 是否已赋值
                      * @return Custom 是否已赋值
+                     * 
                      */
                     bool CustomHasBeenSet() const;
 
                     /**
                      * 获取Email
                      * @return Mail Email
+                     * 
                      */
                     uint64_t GetMail() const;
 
                     /**
                      * 设置Email
-                     * @param Mail Email
+                     * @param _mail Email
+                     * 
                      */
                     void SetMail(const uint64_t& _mail);
 
                     /**
                      * 判断参数 Mail 是否已赋值
                      * @return Mail 是否已赋值
+                     * 
                      */
                     bool MailHasBeenSet() const;
 

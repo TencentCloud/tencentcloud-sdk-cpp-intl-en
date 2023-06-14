@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The room ID.
                      * @return RoomId The room ID.
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置The room ID.
-                     * @param RoomId The room ID.
+                     * @param _roomId The room ID.
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The application ID.
                      * @return SdkAppId The application ID.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID.
-                     * @param SdkAppId The application ID.
+                     * @param _sdkAppId The application ID.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The starting page. Pagination starts from 1. This parameter is valid only if `keyword` is empty.
                      * @return Page The starting page. Pagination starts from 1. This parameter is valid only if `keyword` is empty.
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置The starting page. Pagination starts from 1. This parameter is valid only if `keyword` is empty.
-                     * @param Page The starting page. Pagination starts from 1. This parameter is valid only if `keyword` is empty.
+                     * @param _page The starting page. Pagination starts from 1. This parameter is valid only if `keyword` is empty.
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records (up to 200) per page. This parameter is valid only if `keyword` is empty.
                      * @return Limit The maximum number of records (up to 200) per page. This parameter is valid only if `keyword` is empty.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of records (up to 200) per page. This parameter is valid only if `keyword` is empty.
-                     * @param Limit The maximum number of records (up to 200) per page. This parameter is valid only if `keyword` is empty.
+                     * @param _limit The maximum number of records (up to 200) per page. This parameter is valid only if `keyword` is empty.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -127,6 +139,7 @@ namespace TencentCloud
 `MemberJoin`: A user joined.
 `MemberQuit`: A user left.
 `RecordFinish`: Recording is finished.
+                     * 
                      */
                     std::string GetKeyword() const;
 
@@ -137,18 +150,20 @@ namespace TencentCloud
 `MemberJoin`: A user joined.
 `MemberQuit`: A user left.
 `RecordFinish`: Recording is finished.
-                     * @param Keyword The type of events to query. Valid values:
+                     * @param _keyword The type of events to query. Valid values:
 `RoomStart`: The class started.
 `RoomEnd`: The class ended.
 `MemberJoin`: A user joined.
 `MemberQuit`: A user left.
 `RecordFinish`: Recording is finished.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Original instance configuration information
                      * @return OldInfo Original instance configuration information
+                     * 
                      */
                     std::vector<KeyValue> GetOldInfo() const;
 
                     /**
                      * 设置Original instance configuration information
-                     * @param OldInfo Original instance configuration information
+                     * @param _oldInfo Original instance configuration information
+                     * 
                      */
                     void SetOldInfo(const std::vector<KeyValue>& _oldInfo);
 
                     /**
                      * 判断参数 OldInfo 是否已赋值
                      * @return OldInfo 是否已赋值
+                     * 
                      */
                     bool OldInfoHasBeenSet() const;
 
                     /**
                      * 获取Updated instance configuration information
                      * @return NewInfo Updated instance configuration information
+                     * 
                      */
                     std::vector<KeyValue> GetNewInfo() const;
 
                     /**
                      * 设置Updated instance configuration information
-                     * @param NewInfo Updated instance configuration information
+                     * @param _newInfo Updated instance configuration information
+                     * 
                      */
                     void SetNewInfo(const std::vector<KeyValue>& _newInfo);
 
                     /**
                      * 判断参数 NewInfo 是否已赋值
                      * @return NewInfo 是否已赋值
+                     * 
                      */
                     bool NewInfoHasBeenSet() const;
 

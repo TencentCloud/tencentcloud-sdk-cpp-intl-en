@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Top-level domain name
                      * @return ZoneId Top-level domain name
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Top-level domain name
-                     * @param ZoneId Top-level domain name
+                     * @param _zoneId Top-level domain name
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Subdomain name/layer-4 proxy
                      * @return Entity Subdomain name/layer-4 proxy
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置Subdomain name/layer-4 proxy
-                     * @param Entity Subdomain name/layer-4 proxy
+                     * @param _entity Subdomain name/layer-4 proxy
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
                     /**
                      * 获取Security configuration
                      * @return Config Security configuration
+                     * 
                      */
                     SecurityConfig GetConfig() const;
 
                     /**
                      * 设置Security configuration
-                     * @param Config Security configuration
+                     * @param _config Security configuration
+                     * 
                      */
                     void SetConfig(const SecurityConfig& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 

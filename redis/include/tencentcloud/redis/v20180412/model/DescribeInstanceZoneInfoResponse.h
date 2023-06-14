@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of instance node groups
                      * @return TotalCount Number of instance node groups
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of instance node groups
                      * @return ReplicaGroups List of instance node groups
+                     * 
                      */
                     std::vector<ReplicaGroup> GetReplicaGroups() const;
 
                     /**
                      * 判断参数 ReplicaGroups 是否已赋值
                      * @return ReplicaGroups 是否已赋值
+                     * 
                      */
                     bool ReplicaGroupsHasBeenSet() const;
 

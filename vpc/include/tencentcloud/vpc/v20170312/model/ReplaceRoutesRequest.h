@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The route table instance ID, such as `rtb-azd4dt1c`.
                      * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置The route table instance ID, such as `rtb-azd4dt1c`.
-                     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * @param _routeTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
                      * 获取Routing policy object. The routing policy ID (RouteId) must be specified.
                      * @return Routes Routing policy object. The routing policy ID (RouteId) must be specified.
+                     * 
                      */
                     std::vector<Route> GetRoutes() const;
 
                     /**
                      * 设置Routing policy object. The routing policy ID (RouteId) must be specified.
-                     * @param Routes Routing policy object. The routing policy ID (RouteId) must be specified.
+                     * @param _routes Routing policy object. The routing policy ID (RouteId) must be specified.
+                     * 
                      */
                     void SetRoutes(const std::vector<Route>& _routes);
 
                     /**
                      * 判断参数 Routes 是否已赋值
                      * @return Routes 是否已赋值
+                     * 
                      */
                     bool RoutesHasBeenSet() const;
 

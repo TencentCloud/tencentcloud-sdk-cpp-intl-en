@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the specified cluster to be scanned
                      * @return ClusterId ID of the specified cluster to be scanned
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the specified cluster to be scanned
-                     * @param ClusterId ID of the specified cluster to be scanned
+                     * @param _clusterId ID of the specified cluster to be scanned
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster region
                      * @return ClusterRegion Cluster region
+                     * 
                      */
                     std::string GetClusterRegion() const;
 
                     /**
                      * 设置Cluster region
-                     * @param ClusterRegion Cluster region
+                     * @param _clusterRegion Cluster region
+                     * 
                      */
                     void SetClusterRegion(const std::string& _clusterRegion);
 
                     /**
                      * 判断参数 ClusterRegion 是否已赋值
                      * @return ClusterRegion 是否已赋值
+                     * 
                      */
                     bool ClusterRegionHasBeenSet() const;
 
                     /**
                      * 获取IP of the specified node to be scanned
                      * @return NodeIp IP of the specified node to be scanned
+                     * 
                      */
                     std::string GetNodeIp() const;
 
                     /**
                      * 设置IP of the specified node to be scanned
-                     * @param NodeIp IP of the specified node to be scanned
+                     * @param _nodeIp IP of the specified node to be scanned
+                     * 
                      */
                     void SetNodeIp(const std::string& _nodeIp);
 
                     /**
                      * 判断参数 NodeIp 是否已赋值
                      * @return NodeIp 是否已赋值
+                     * 
                      */
                     bool NodeIpHasBeenSet() const;
 
                     /**
                      * 获取Name of the specified workload to be scanned
                      * @return WorkloadName Name of the specified workload to be scanned
+                     * 
                      */
                     std::string GetWorkloadName() const;
 
                     /**
                      * 设置Name of the specified workload to be scanned
-                     * @param WorkloadName Name of the specified workload to be scanned
+                     * @param _workloadName Name of the specified workload to be scanned
+                     * 
                      */
                     void SetWorkloadName(const std::string& _workloadName);
 
                     /**
                      * 判断参数 WorkloadName 是否已赋值
                      * @return WorkloadName 是否已赋值
+                     * 
                      */
                     bool WorkloadNameHasBeenSet() const;
 

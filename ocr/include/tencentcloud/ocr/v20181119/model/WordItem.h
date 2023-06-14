@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The text content.
                      * @return DetectedText The text content.
+                     * 
                      */
                     std::string GetDetectedText() const;
 
                     /**
                      * 设置The text content.
-                     * @param DetectedText The text content.
+                     * @param _detectedText The text content.
+                     * 
                      */
                     void SetDetectedText(const std::string& _detectedText);
 
                     /**
                      * 判断参数 DetectedText 是否已赋值
                      * @return DetectedText 是否已赋值
+                     * 
                      */
                     bool DetectedTextHasBeenSet() const;
 
                     /**
                      * 获取The coordinates of the four vertices.
                      * @return Coord The coordinates of the four vertices.
+                     * 
                      */
                     Polygon GetCoord() const;
 
                     /**
                      * 设置The coordinates of the four vertices.
-                     * @param Coord The coordinates of the four vertices.
+                     * @param _coord The coordinates of the four vertices.
+                     * 
                      */
                     void SetCoord(const Polygon& _coord);
 
                     /**
                      * 判断参数 Coord 是否已赋值
                      * @return Coord 是否已赋值
+                     * 
                      */
                     bool CoordHasBeenSet() const;
 

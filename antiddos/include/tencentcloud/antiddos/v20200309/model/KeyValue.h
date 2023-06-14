@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取IP
                      * @return Key IP
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置IP
-                     * @param Key IP
+                     * @param _key IP
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Status of the IP. Values: `1` (blocked); `2` (normal); `3` (being attacked)
                      * @return Value Status of the IP. Values: `1` (blocked); `2` (normal); `3` (being attacked)
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Status of the IP. Values: `1` (blocked); `2` (normal); `3` (being attacked)
-                     * @param Value Status of the IP. Values: `1` (blocked); `2` (normal); `3` (being attacked)
+                     * @param _value Status of the IP. Values: `1` (blocked); `2` (normal); `3` (being attacked)
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

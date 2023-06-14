@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable cache configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable cache configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable cache configuration. Values:
+                     * @param _switch Whether to enable cache configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -79,6 +82,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return CacheTime Cache expiration time setting.
 Unit: second. The maximum value is 365 days.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCacheTime() const;
 
@@ -86,15 +90,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Cache expiration time setting.
 Unit: second. The maximum value is 365 days.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CacheTime Cache expiration time setting.
+                     * @param _cacheTime Cache expiration time setting.
 Unit: second. The maximum value is 365 days.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
 
                     /**
                      * 判断参数 CacheTime 是否已赋值
                      * @return CacheTime 是否已赋值
+                     * 
                      */
                     bool CacheTimeHasBeenSet() const;
 
@@ -107,6 +113,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIgnoreCacheControl() const;
 
@@ -115,16 +122,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IgnoreCacheControl Whether to enable force cache. Values:
+                     * @param _ignoreCacheControl Whether to enable force cache. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
 
                     /**
                      * 判断参数 IgnoreCacheControl 是否已赋值
                      * @return IgnoreCacheControl 是否已赋值
+                     * 
                      */
                     bool IgnoreCacheControlHasBeenSet() const;
 

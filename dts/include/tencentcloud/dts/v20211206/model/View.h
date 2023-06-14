@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ViewName View name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetViewName() const;
 
                     /**
                      * 设置View name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ViewName View name
+                     * @param _viewName View name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetViewName(const std::string& _viewName);
 
                     /**
                      * 判断参数 ViewName 是否已赋值
                      * @return ViewName 是否已赋值
+                     * 
                      */
                     bool ViewNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NewViewName New view name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNewViewName() const;
 
                     /**
                      * 设置New view name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NewViewName New view name
+                     * @param _newViewName New view name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNewViewName(const std::string& _newViewName);
 
                     /**
                      * 判断参数 NewViewName 是否已赋值
                      * @return NewViewName 是否已赋值
+                     * 
                      */
                     bool NewViewNameHasBeenSet() const;
 

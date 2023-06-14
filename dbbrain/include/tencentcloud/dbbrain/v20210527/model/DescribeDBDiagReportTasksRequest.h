@@ -45,162 +45,189 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the first task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
                      * @return StartTime Start time of the first task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the first task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
-                     * @param StartTime Start time of the first task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
+                     * @param _startTime Start time of the first task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the last task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
                      * @return EndTime End time of the last task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the last task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
-                     * @param EndTime End time of the last task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
+                     * @param _endTime End time of the last task in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14. It is used for queries by time range.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Array of instance IDs, which is used to filter the task list of the specified instance.
                      * @return InstanceIds Array of instance IDs, which is used to filter the task list of the specified instance.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Array of instance IDs, which is used to filter the task list of the specified instance.
-                     * @param InstanceIds Array of instance IDs, which is used to filter the task list of the specified instance.
+                     * @param _instanceIds Array of instance IDs, which is used to filter the task list of the specified instance.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Source that triggers the task. Valid values: `DAILY_INSPECTION` (instance inspection), `SCHEDULED` (scheduled task), and `MANUAL` (manual trigger).
                      * @return Sources Source that triggers the task. Valid values: `DAILY_INSPECTION` (instance inspection), `SCHEDULED` (scheduled task), and `MANUAL` (manual trigger).
+                     * 
                      */
                     std::vector<std::string> GetSources() const;
 
                     /**
                      * 设置Source that triggers the task. Valid values: `DAILY_INSPECTION` (instance inspection), `SCHEDULED` (scheduled task), and `MANUAL` (manual trigger).
-                     * @param Sources Source that triggers the task. Valid values: `DAILY_INSPECTION` (instance inspection), `SCHEDULED` (scheduled task), and `MANUAL` (manual trigger).
+                     * @param _sources Source that triggers the task. Valid values: `DAILY_INSPECTION` (instance inspection), `SCHEDULED` (scheduled task), and `MANUAL` (manual trigger).
+                     * 
                      */
                     void SetSources(const std::vector<std::string>& _sources);
 
                     /**
                      * 判断参数 Sources 是否已赋值
                      * @return Sources 是否已赋值
+                     * 
                      */
                     bool SourcesHasBeenSet() const;
 
                     /**
                      * 获取Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
                      * @return HealthLevels Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
+                     * 
                      */
                     std::string GetHealthLevels() const;
 
                     /**
                      * 设置Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
-                     * @param HealthLevels Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
+                     * @param _healthLevels Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
+                     * 
                      */
                     void SetHealthLevels(const std::string& _healthLevels);
 
                     /**
                      * 判断参数 HealthLevels 是否已赋值
                      * @return HealthLevels 是否已赋值
+                     * 
                      */
                     bool HealthLevelsHasBeenSet() const;
 
                     /**
                      * 获取Task status. Valid values: `created` (created), `chosen` (to be executed), `running` (being executed), `failed` (failed), and `finished` (completed).
                      * @return TaskStatuses Task status. Valid values: `created` (created), `chosen` (to be executed), `running` (being executed), `failed` (failed), and `finished` (completed).
+                     * 
                      */
                     std::string GetTaskStatuses() const;
 
                     /**
                      * 设置Task status. Valid values: `created` (created), `chosen` (to be executed), `running` (being executed), `failed` (failed), and `finished` (completed).
-                     * @param TaskStatuses Task status. Valid values: `created` (created), `chosen` (to be executed), `running` (being executed), `failed` (failed), and `finished` (completed).
+                     * @param _taskStatuses Task status. Valid values: `created` (created), `chosen` (to be executed), `running` (being executed), `failed` (failed), and `finished` (completed).
+                     * 
                      */
                     void SetTaskStatuses(const std::string& _taskStatuses);
 
                     /**
                      * 判断参数 TaskStatuses 是否已赋值
                      * @return TaskStatuses 是否已赋值
+                     * 
                      */
                     bool TaskStatusesHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: `20`. Maximum value: `100`.
                      * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: `20`. Maximum value: `100`.
-                     * @param Limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * @param _limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
                      * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
-                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * @param _product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to use `QueryString` as part of `CacheKey`. Values:
 <li>`on`: Yes</li>
 <li>`off`: No</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to use `QueryString` as part of `CacheKey`. Values:
 <li>`on`: Yes</li>
 <li>`off`: No</li>
-                     * @param Switch Whether to use `QueryString` as part of `CacheKey`. Values:
+                     * @param _switch Whether to use `QueryString` as part of `CacheKey`. Values:
 <li>`on`: Yes</li>
 <li>`off`: No</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`includeCustom`: `Include partial query strings.</li>
 <li>`excludeCustom`: Exclude partial query strings.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -89,16 +93,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`includeCustom`: `Include partial query strings.</li>
 <li>`excludeCustom`: Exclude partial query strings.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Action Specifies how to use query strings in the cache key. Values:
+                     * @param _action Specifies how to use query strings in the cache key. Values:
 <li>`includeCustom`: `Include partial query strings.</li>
 <li>`excludeCustom`: Exclude partial query strings.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -107,20 +113,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Value Array of query strings used/excluded
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
                      * 设置Array of query strings used/excluded
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Value Array of query strings used/excluded
+                     * @param _value Array of query strings used/excluded
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

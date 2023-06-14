@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取The profile ID.
                      * @return TemplateId The profile ID.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置The profile ID.
-                     * @param TemplateId The profile ID.
+                     * @param _templateId The profile ID.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取The purchase period (years) of the domain. Value range: [1-10]
                      * @return Period The purchase period (years) of the domain. Value range: [1-10]
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置The purchase period (years) of the domain. Value range: [1-10]
-                     * @param Period The purchase period (years) of the domain. Value range: [1-10]
+                     * @param _period The purchase period (years) of the domain. Value range: [1-10]
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取The domains (maximum 4,000) to purchase.
                      * @return Domains The domains (maximum 4,000) to purchase.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domains (maximum 4,000) to purchase.
-                     * @param Domains The domains (maximum 4,000) to purchase.
+                     * @param _domains The domains (maximum 4,000) to purchase.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取The payment method. Valid values: `0` (online payment), `1` (account balance), `2` (package), `3` (offline settlement).
                      * @return PayMode The payment method. Valid values: `0` (online payment), `1` (account balance), `2` (package), `3` (offline settlement).
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置The payment method. Valid values: `0` (online payment), `1` (account balance), `2` (package), `3` (offline settlement).
-                     * @param PayMode The payment method. Valid values: `0` (online payment), `1` (account balance), `2` (package), `3` (offline settlement).
+                     * @param _payMode The payment method. Valid values: `0` (online payment), `1` (account balance), `2` (package), `3` (offline settlement).
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable auto-renewal.
                      * @return AutoRenewFlag Whether to enable auto-renewal.
+                     * 
                      */
                     bool GetAutoRenewFlag() const;
 
                     /**
                      * 设置Whether to enable auto-renewal.
-                     * @param AutoRenewFlag Whether to enable auto-renewal.
+                     * @param _autoRenewFlag Whether to enable auto-renewal.
+                     * 
                      */
                     void SetAutoRenewFlag(const bool& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the transfer prohibition lock.
                      * @return TransferProhibition Whether to enable the transfer prohibition lock.
+                     * 
                      */
                     bool GetTransferProhibition() const;
 
                     /**
                      * 设置Whether to enable the transfer prohibition lock.
-                     * @param TransferProhibition Whether to enable the transfer prohibition lock.
+                     * @param _transferProhibition Whether to enable the transfer prohibition lock.
+                     * 
                      */
                     void SetTransferProhibition(const bool& _transferProhibition);
 
                     /**
                      * 判断参数 TransferProhibition 是否已赋值
                      * @return TransferProhibition 是否已赋值
+                     * 
                      */
                     bool TransferProhibitionHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the update prohibition lock.
                      * @return UpdateProhibition Whether to enable the update prohibition lock.
+                     * 
                      */
                     bool GetUpdateProhibition() const;
 
                     /**
                      * 设置Whether to enable the update prohibition lock.
-                     * @param UpdateProhibition Whether to enable the update prohibition lock.
+                     * @param _updateProhibition Whether to enable the update prohibition lock.
+                     * 
                      */
                     void SetUpdateProhibition(const bool& _updateProhibition);
 
                     /**
                      * 判断参数 UpdateProhibition 是否已赋值
                      * @return UpdateProhibition 是否已赋值
+                     * 
                      */
                     bool UpdateProhibitionHasBeenSet() const;
 
                     /**
                      * 获取The custom DNS servers
                      * @return CustomDns The custom DNS servers
+                     * 
                      */
                     std::vector<std::string> GetCustomDns() const;
 
                     /**
                      * 设置The custom DNS servers
-                     * @param CustomDns The custom DNS servers
+                     * @param _customDns The custom DNS servers
+                     * 
                      */
                     void SetCustomDns(const std::vector<std::string>& _customDns);
 
                     /**
                      * 判断参数 CustomDns 是否已赋值
                      * @return CustomDns 是否已赋值
+                     * 
                      */
                     bool CustomDnsHasBeenSet() const;
 

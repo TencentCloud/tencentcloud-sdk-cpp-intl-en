@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
                      * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
-                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param _personId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
                      * @return FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
+                     * 
                      */
                     std::vector<std::string> GetFaceIds() const;
 
                     /**
                      * 设置List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
-                     * @param FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
+                     * @param _faceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API.
+                     * 
                      */
                     void SetFaceIds(const std::vector<std::string>& _faceIds);
 
                     /**
                      * 判断参数 FaceIds 是否已赋值
                      * @return FaceIds 是否已赋值
+                     * 
                      */
                     bool FaceIdsHasBeenSet() const;
 

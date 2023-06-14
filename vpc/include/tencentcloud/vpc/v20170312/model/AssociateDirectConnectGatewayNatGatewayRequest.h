@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The direct connect gateway ID.
                      * @return VpcId The direct connect gateway ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The direct connect gateway ID.
-                     * @param VpcId The direct connect gateway ID.
+                     * @param _vpcId The direct connect gateway ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The NAT Gateway ID.
                      * @return NatGatewayId The NAT Gateway ID.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The NAT Gateway ID.
-                     * @param NatGatewayId The NAT Gateway ID.
+                     * @param _natGatewayId The NAT Gateway ID.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
                      * @return DirectConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
                      * 设置The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
-                     * @param DirectConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * @param _directConnectGatewayId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
 
                     /**
                      * 判断参数 DirectConnectGatewayId 是否已赋值
                      * @return DirectConnectGatewayId 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayIdHasBeenSet() const;
 

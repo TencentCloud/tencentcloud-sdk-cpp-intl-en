@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Target group ID
                      * @return TargetGroupId Target group ID
+                     * 
                      */
                     std::string GetTargetGroupId() const;
 
                     /**
                      * 设置Target group ID
-                     * @param TargetGroupId Target group ID
+                     * @param _targetGroupId Target group ID
+                     * 
                      */
                     void SetTargetGroupId(const std::string& _targetGroupId);
 
                     /**
                      * 判断参数 TargetGroupId 是否已赋值
                      * @return TargetGroupId 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
                      * 获取New name of target group
                      * @return TargetGroupName New name of target group
+                     * 
                      */
                     std::string GetTargetGroupName() const;
 
                     /**
                      * 设置New name of target group
-                     * @param TargetGroupName New name of target group
+                     * @param _targetGroupName New name of target group
+                     * 
                      */
                     void SetTargetGroupName(const std::string& _targetGroupName);
 
                     /**
                      * 判断参数 TargetGroupName 是否已赋值
                      * @return TargetGroupName 是否已赋值
+                     * 
                      */
                     bool TargetGroupNameHasBeenSet() const;
 
                     /**
                      * 获取New default port of target group
                      * @return Port New default port of target group
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置New default port of target group
-                     * @param Port New default port of target group
+                     * @param _port New default port of target group
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

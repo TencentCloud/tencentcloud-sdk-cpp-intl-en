@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Order number list. Each instance corresponds to an order number.
                      * @return DealNames Order number list. Each instance corresponds to an order number.
+                     * 
                      */
                     std::vector<std::string> GetDealNames() const;
 
                     /**
                      * 判断参数 DealNames 是否已赋值
                      * @return DealNames 是否已赋值
+                     * 
                      */
                     bool DealNamesHasBeenSet() const;
 
                     /**
                      * 获取Bill ID of frozen fees
                      * @return BillId Bill ID of frozen fees
+                     * 
                      */
                     std::string GetBillId() const;
 
                     /**
                      * 判断参数 BillId 是否已赋值
                      * @return BillId 是否已赋值
+                     * 
                      */
                     bool BillIdHasBeenSet() const;
 
                     /**
                      * 获取ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
                      * @return DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+                     * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
                      * 判断参数 DBInstanceIdSet 是否已赋值
                      * @return DBInstanceIdSet 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdSetHasBeenSet() const;
 

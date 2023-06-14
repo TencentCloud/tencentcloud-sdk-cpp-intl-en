@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance to which the cloud disk is attached.
                      * @return InstanceId ID of the instance to which the cloud disk is attached.
+                     * 
                      */
                     std::vector<std::string> GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance to which the cloud disk is attached.
-                     * @param InstanceId ID of the instance to which the cloud disk is attached.
+                     * @param _instanceId ID of the instance to which the cloud disk is attached.
+                     * 
                      */
                     void SetInstanceId(const std::vector<std::string>& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Mount point in the instance.
                      * @return MountPoint Mount point in the instance.
+                     * 
                      */
                     std::vector<std::string> GetMountPoint() const;
 
                     /**
                      * 设置Mount point in the instance.
-                     * @param MountPoint Mount point in the instance.
+                     * @param _mountPoint Mount point in the instance.
+                     * 
                      */
                     void SetMountPoint(const std::vector<std::string>& _mountPoint);
 
                     /**
                      * 判断参数 MountPoint 是否已赋值
                      * @return MountPoint 是否已赋值
+                     * 
                      */
                     bool MountPointHasBeenSet() const;
 
                     /**
                      * 获取File system type. Valid values: `ext4`, `xfs`.
                      * @return FileSystemType File system type. Valid values: `ext4`, `xfs`.
+                     * 
                      */
                     std::string GetFileSystemType() const;
 
                     /**
                      * 设置File system type. Valid values: `ext4`, `xfs`.
-                     * @param FileSystemType File system type. Valid values: `ext4`, `xfs`.
+                     * @param _fileSystemType File system type. Valid values: `ext4`, `xfs`.
+                     * 
                      */
                     void SetFileSystemType(const std::string& _fileSystemType);
 
                     /**
                      * 判断参数 FileSystemType 是否已赋值
                      * @return FileSystemType 是否已赋值
+                     * 
                      */
                     bool FileSystemTypeHasBeenSet() const;
 

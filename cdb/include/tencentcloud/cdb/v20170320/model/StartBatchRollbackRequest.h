@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Details of the instance for rollback
                      * @return Instances Details of the instance for rollback
+                     * 
                      */
                     std::vector<RollbackInstancesInfo> GetInstances() const;
 
                     /**
                      * 设置Details of the instance for rollback
-                     * @param Instances Details of the instance for rollback
+                     * @param _instances Details of the instance for rollback
+                     * 
                      */
                     void SetInstances(const std::vector<RollbackInstancesInfo>& _instances);
 
                     /**
                      * 判断参数 Instances 是否已赋值
                      * @return Instances 是否已赋值
+                     * 
                      */
                     bool InstancesHasBeenSet() const;
 

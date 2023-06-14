@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
                      * @return Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
-                     * @param Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * @param _status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Number of returned entries. Default value: 10. Maximum value: 100.
                      * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
                      * @return ScrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+                     * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
                      * 设置Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
-                     * @param ScrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+                     * @param _scrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+                     * 
                      */
                     void SetScrollToken(const std::string& _scrollToken);
 
                     /**
                      * 判断参数 ScrollToken 是否已赋值
                      * @return ScrollToken 是否已赋值
+                     * 
                      */
                     bool ScrollTokenHasBeenSet() const;
 

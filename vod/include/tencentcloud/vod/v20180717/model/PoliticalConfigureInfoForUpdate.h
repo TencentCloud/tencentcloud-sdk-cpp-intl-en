@@ -52,54 +52,63 @@ namespace TencentCloud
                     /**
                      * 获取Parameters for recognition of politically sensitive content in images
                      * @return ImgReviewInfo Parameters for recognition of politically sensitive content in images
+                     * 
                      */
                     PoliticalImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
                      * 设置Parameters for recognition of politically sensitive content in images
-                     * @param ImgReviewInfo Parameters for recognition of politically sensitive content in images
+                     * @param _imgReviewInfo Parameters for recognition of politically sensitive content in images
+                     * 
                      */
                     void SetImgReviewInfo(const PoliticalImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for ASR-based recognition of politically sensitive content
                      * @return AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+                     * 
                      */
                     PoliticalAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
                      * 设置Parameters for ASR-based recognition of politically sensitive content
-                     * @param AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+                     * @param _asrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+                     * 
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for OCR-based recognition of politically sensitive content
                      * @return OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+                     * 
                      */
                     PoliticalOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
                      * 设置Parameters for OCR-based recognition of politically sensitive content
-                     * @param OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+                     * @param _ocrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+                     * 
                      */
                     void SetOcrReviewInfo(const PoliticalOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

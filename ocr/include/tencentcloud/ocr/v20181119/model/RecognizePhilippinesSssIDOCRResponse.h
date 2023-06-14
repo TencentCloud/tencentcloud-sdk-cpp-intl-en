@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取The Base64-encoded identity photo.
                      * @return HeadPortrait The Base64-encoded identity photo.
+                     * 
                      */
                     TextDetectionResult GetHeadPortrait() const;
 
                     /**
                      * 判断参数 HeadPortrait 是否已赋值
                      * @return HeadPortrait 是否已赋值
+                     * 
                      */
                     bool HeadPortraitHasBeenSet() const;
 
                     /**
                      * 获取The common reference number (CRN).
                      * @return LicenseNumber The common reference number (CRN).
+                     * 
                      */
                     TextDetectionResult GetLicenseNumber() const;
 
                     /**
                      * 判断参数 LicenseNumber 是否已赋值
                      * @return LicenseNumber 是否已赋值
+                     * 
                      */
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
                      * 获取The full name.
                      * @return FullName The full name.
+                     * 
                      */
                     TextDetectionResult GetFullName() const;
 
                     /**
                      * 判断参数 FullName 是否已赋值
                      * @return FullName 是否已赋值
+                     * 
                      */
                     bool FullNameHasBeenSet() const;
 
                     /**
                      * 获取The date of birth.
                      * @return Birthday The date of birth.
+                     * 
                      */
                     TextDetectionResult GetBirthday() const;
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 

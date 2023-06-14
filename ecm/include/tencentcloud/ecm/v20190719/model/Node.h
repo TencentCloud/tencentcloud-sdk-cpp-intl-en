@@ -56,144 +56,168 @@ namespace TencentCloud
                     /**
                      * 获取Zone information.
                      * @return ZoneInfo Zone information.
+                     * 
                      */
                     ZoneInfo GetZoneInfo() const;
 
                     /**
                      * 设置Zone information.
-                     * @param ZoneInfo Zone information.
+                     * @param _zoneInfo Zone information.
+                     * 
                      */
                     void SetZoneInfo(const ZoneInfo& _zoneInfo);
 
                     /**
                      * 判断参数 ZoneInfo 是否已赋值
                      * @return ZoneInfo 是否已赋值
+                     * 
                      */
                     bool ZoneInfoHasBeenSet() const;
 
                     /**
                      * 获取Country/Region information.
                      * @return Country Country/Region information.
+                     * 
                      */
                     Country GetCountry() const;
 
                     /**
                      * 设置Country/Region information.
-                     * @param Country Country/Region information.
+                     * @param _country Country/Region information.
+                     * 
                      */
                     void SetCountry(const Country& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
                     /**
                      * 获取Region information.
                      * @return Area Region information.
+                     * 
                      */
                     Area GetArea() const;
 
                     /**
                      * 设置Region information.
-                     * @param Area Region information.
+                     * @param _area Region information.
+                     * 
                      */
                     void SetArea(const Area& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Province/State information.
                      * @return Province Province/State information.
+                     * 
                      */
                     Province GetProvince() const;
 
                     /**
                      * 设置Province/State information.
-                     * @param Province Province/State information.
+                     * @param _province Province/State information.
+                     * 
                      */
                     void SetProvince(const Province& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
                     /**
                      * 获取City information.
                      * @return City City information.
+                     * 
                      */
                     City GetCity() const;
 
                     /**
                      * 设置City information.
-                     * @param City City information.
+                     * @param _city City information.
+                     * 
                      */
                     void SetCity(const City& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 
                     /**
                      * 获取Region information.
                      * @return RegionInfo Region information.
+                     * 
                      */
                     RegionInfo GetRegionInfo() const;
 
                     /**
                      * 设置Region information.
-                     * @param RegionInfo Region information.
+                     * @param _regionInfo Region information.
+                     * 
                      */
                     void SetRegionInfo(const RegionInfo& _regionInfo);
 
                     /**
                      * 判断参数 RegionInfo 是否已赋值
                      * @return RegionInfo 是否已赋值
+                     * 
                      */
                     bool RegionInfoHasBeenSet() const;
 
                     /**
                      * 获取List of ISPs.
                      * @return ISPSet List of ISPs.
+                     * 
                      */
                     std::vector<ISP> GetISPSet() const;
 
                     /**
                      * 设置List of ISPs.
-                     * @param ISPSet List of ISPs.
+                     * @param _iSPSet List of ISPs.
+                     * 
                      */
                     void SetISPSet(const std::vector<ISP>& _iSPSet);
 
                     /**
                      * 判断参数 ISPSet 是否已赋值
                      * @return ISPSet 是否已赋值
+                     * 
                      */
                     bool ISPSetHasBeenSet() const;
 
                     /**
                      * 获取Number of ISPs.
                      * @return ISPNum Number of ISPs.
+                     * 
                      */
                     int64_t GetISPNum() const;
 
                     /**
                      * 设置Number of ISPs.
-                     * @param ISPNum Number of ISPs.
+                     * @param _iSPNum Number of ISPs.
+                     * 
                      */
                     void SetISPNum(const int64_t& _iSPNum);
 
                     /**
                      * 判断参数 ISPNum 是否已赋值
                      * @return ISPNum 是否已赋值
+                     * 
                      */
                     bool ISPNumHasBeenSet() const;
 

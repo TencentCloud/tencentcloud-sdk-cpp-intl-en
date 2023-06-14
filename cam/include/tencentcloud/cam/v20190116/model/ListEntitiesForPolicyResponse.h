@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return TotalNum Number of entities
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return List Entity list
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<AttachEntityOfPolicy> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

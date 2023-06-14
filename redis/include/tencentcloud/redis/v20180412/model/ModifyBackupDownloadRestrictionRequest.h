@@ -54,6 +54,7 @@ namespace TencentCloud
 - `NoLimit`: Backup files can be downloaded over both public and private networks.
 - `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
 - `Customize`: Backup files can be downloaded only in the customized VPC.
+                     * 
                      */
                     std::string GetLimitType() const;
 
@@ -63,35 +64,40 @@ namespace TencentCloud
 - `NoLimit`: Backup files can be downloaded over both public and private networks.
 - `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
 - `Customize`: Backup files can be downloaded only in the customized VPC.
-                     * @param LimitType Type of the network restrictions for downloading backup files. Valid values:
+                     * @param _limitType Type of the network restrictions for downloading backup files. Valid values:
 
 - `NoLimit`: Backup files can be downloaded over both public and private networks.
 - `LimitOnlyIntranet`: Backup files can be downloaded only at private network addresses auto-assigned by Tencent Cloud.
 - `Customize`: Backup files can be downloaded only in the customized VPC.
+                     * 
                      */
                     void SetLimitType(const std::string& _limitType);
 
                     /**
                      * 判断参数 LimitType 是否已赋值
                      * @return LimitType 是否已赋值
+                     * 
                      */
                     bool LimitTypeHasBeenSet() const;
 
                     /**
                      * 获取Only `In` can be passed in for this parameter, indicating that backup files can be downloaded in the custom `LimitVpc`.
                      * @return VpcComparisonSymbol Only `In` can be passed in for this parameter, indicating that backup files can be downloaded in the custom `LimitVpc`.
+                     * 
                      */
                     std::string GetVpcComparisonSymbol() const;
 
                     /**
                      * 设置Only `In` can be passed in for this parameter, indicating that backup files can be downloaded in the custom `LimitVpc`.
-                     * @param VpcComparisonSymbol Only `In` can be passed in for this parameter, indicating that backup files can be downloaded in the custom `LimitVpc`.
+                     * @param _vpcComparisonSymbol Only `In` can be passed in for this parameter, indicating that backup files can be downloaded in the custom `LimitVpc`.
+                     * 
                      */
                     void SetVpcComparisonSymbol(const std::string& _vpcComparisonSymbol);
 
                     /**
                      * 判断参数 VpcComparisonSymbol 是否已赋值
                      * @return VpcComparisonSymbol 是否已赋值
+                     * 
                      */
                     bool VpcComparisonSymbolHasBeenSet() const;
 
@@ -104,6 +110,7 @@ namespace TencentCloud
 
 - `In`: Download is allowed for the custom IP.
 - `NotIn`: Download is not allowed for the custom IP.
+                     * 
                      */
                     std::string GetIpComparisonSymbol() const;
 
@@ -112,34 +119,39 @@ namespace TencentCloud
 
 - `In`: Download is allowed for the custom IP.
 - `NotIn`: Download is not allowed for the custom IP.
-                     * @param IpComparisonSymbol Whether backups can be downloaded at the custom `LimitIp` address.
+                     * @param _ipComparisonSymbol Whether backups can be downloaded at the custom `LimitIp` address.
 
 - `In`: Download is allowed for the custom IP.
 - `NotIn`: Download is not allowed for the custom IP.
+                     * 
                      */
                     void SetIpComparisonSymbol(const std::string& _ipComparisonSymbol);
 
                     /**
                      * 判断参数 IpComparisonSymbol 是否已赋值
                      * @return IpComparisonSymbol 是否已赋值
+                     * 
                      */
                     bool IpComparisonSymbolHasBeenSet() const;
 
                     /**
                      * 获取VPC ID of the custom backup file download address, which is required if `LimitType` is `Customize`.
                      * @return LimitVpc VPC ID of the custom backup file download address, which is required if `LimitType` is `Customize`.
+                     * 
                      */
                     std::vector<BackupLimitVpcItem> GetLimitVpc() const;
 
                     /**
                      * 设置VPC ID of the custom backup file download address, which is required if `LimitType` is `Customize`.
-                     * @param LimitVpc VPC ID of the custom backup file download address, which is required if `LimitType` is `Customize`.
+                     * @param _limitVpc VPC ID of the custom backup file download address, which is required if `LimitType` is `Customize`.
+                     * 
                      */
                     void SetLimitVpc(const std::vector<BackupLimitVpcItem>& _limitVpc);
 
                     /**
                      * 判断参数 LimitVpc 是否已赋值
                      * @return LimitVpc 是否已赋值
+                     * 
                      */
                     bool LimitVpcHasBeenSet() const;
 
@@ -148,20 +160,23 @@ namespace TencentCloud
 
                      * @return LimitIp VPC IP of the custom backup file download address, which is required if `LimitType` is `Customize`.
 
+                     * 
                      */
                     std::vector<std::string> GetLimitIp() const;
 
                     /**
                      * 设置VPC IP of the custom backup file download address, which is required if `LimitType` is `Customize`.
 
-                     * @param LimitIp VPC IP of the custom backup file download address, which is required if `LimitType` is `Customize`.
+                     * @param _limitIp VPC IP of the custom backup file download address, which is required if `LimitType` is `Customize`.
 
+                     * 
                      */
                     void SetLimitIp(const std::vector<std::string>& _limitIp);
 
                     /**
                      * 判断参数 LimitIp 是否已赋值
                      * @return LimitIp 是否已赋值
+                     * 
                      */
                     bool LimitIpHasBeenSet() const;
 

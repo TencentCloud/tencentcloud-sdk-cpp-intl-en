@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取The rotation angle (degrees) of the text on the image. 0: The text is horizontal. Positive value: The text is rotated clockwise. Negative value: The text is rotated counterclockwise.
                      * @return Angle The rotation angle (degrees) of the text on the image. 0: The text is horizontal. Positive value: The text is rotated clockwise. Negative value: The text is rotated counterclockwise.
+                     * 
                      */
                     double GetAngle() const;
 
                     /**
                      * 判断参数 Angle 是否已赋值
                      * @return Angle 是否已赋值
+                     * 
                      */
                     bool AngleHasBeenSet() const;
 
                     /**
                      * 获取The structural information (key-value).
                      * @return StructuralList The structural information (key-value).
+                     * 
                      */
                     std::vector<GroupInfo> GetStructuralList() const;
 
                     /**
                      * 判断参数 StructuralList 是否已赋值
                      * @return StructuralList 是否已赋值
+                     * 
                      */
                     bool StructuralListHasBeenSet() const;
 
                     /**
                      * 获取The recognized text information.
                      * @return WordList The recognized text information.
+                     * 
                      */
                     std::vector<WordItem> GetWordList() const;
 
                     /**
                      * 判断参数 WordList 是否已赋值
                      * @return WordList 是否已赋值
+                     * 
                      */
                     bool WordListHasBeenSet() const;
 

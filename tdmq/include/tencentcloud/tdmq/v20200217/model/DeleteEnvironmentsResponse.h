@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of environments (namespaces) successfully deleted.
                      * @return EnvironmentIds Array of environments (namespaces) successfully deleted.
+                     * 
                      */
                     std::vector<std::string> GetEnvironmentIds() const;
 
                     /**
                      * 判断参数 EnvironmentIds 是否已赋值
                      * @return EnvironmentIds 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdsHasBeenSet() const;
 

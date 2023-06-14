@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
                      * @return KeyName Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
-                     * @param KeyName Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+                     * @param _keyName Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 
@@ -70,6 +73,7 @@ You can query the project IDs in two ways:
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
@@ -78,34 +82,39 @@ You can query the project IDs in two ways:
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
-                     * @param ProjectId The ID of the project to which the new key pair belongs.
+                     * @param _projectId The ID of the project to which the new key pair belongs.
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Tag description list. This parameter is used to bind a tag to a key pair.
                      * @return TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     * 
                      */
                     std::vector<TagSpecification> GetTagSpecification() const;
 
                     /**
                      * 设置Tag description list. This parameter is used to bind a tag to a key pair.
-                     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     * @param _tagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     * 
                      */
                     void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 

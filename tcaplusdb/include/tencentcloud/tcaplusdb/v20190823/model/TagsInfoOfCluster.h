@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Tag information
                      * @return Tags Tag information
+                     * 
                      */
                     std::vector<TagInfoUnit> GetTags() const;
 
                     /**
                      * 设置Tag information
-                     * @param Tags Tag information
+                     * @param _tags Tag information
+                     * 
                      */
                     void SetTags(const std::vector<TagInfoUnit>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Error message
                      * @return Error Error message
+                     * 
                      */
                     ErrorInfo GetError() const;
 
                     /**
                      * 设置Error message
-                     * @param Error Error message
+                     * @param _error Error message
+                     * 
                      */
                     void SetError(const ErrorInfo& _error);
 
                     /**
                      * 判断参数 Error 是否已赋值
                      * @return Error 是否已赋值
+                     * 
                      */
                     bool ErrorHasBeenSet() const;
 

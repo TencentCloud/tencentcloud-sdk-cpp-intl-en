@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Game server session ID. It should contain 1 to 256 ASCII characters.
                      * @return GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * 
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
                      * 设置Game server session ID. It should contain 1 to 256 ASCII characters.
-                     * @param GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @param _gameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * 
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
                     /**
                      * 判断参数 GameServerSessionId 是否已赋值
                      * @return GameServerSessionId 是否已赋值
+                     * 
                      */
                     bool GameServerSessionIdHasBeenSet() const;
 
                     /**
                      * 获取Player ID list. At least 1 ID and up to 25 IDs.
                      * @return PlayerIds Player ID list. At least 1 ID and up to 25 IDs.
+                     * 
                      */
                     std::vector<std::string> GetPlayerIds() const;
 
                     /**
                      * 设置Player ID list. At least 1 ID and up to 25 IDs.
-                     * @param PlayerIds Player ID list. At least 1 ID and up to 25 IDs.
+                     * @param _playerIds Player ID list. At least 1 ID and up to 25 IDs.
+                     * 
                      */
                     void SetPlayerIds(const std::vector<std::string>& _playerIds);
 
                     /**
                      * 判断参数 PlayerIds 是否已赋值
                      * @return PlayerIds 是否已赋值
+                     * 
                      */
                     bool PlayerIdsHasBeenSet() const;
 
                     /**
                      * 获取Player custom data
                      * @return PlayerDataMap Player custom data
+                     * 
                      */
                     PlayerDataMap GetPlayerDataMap() const;
 
                     /**
                      * 设置Player custom data
-                     * @param PlayerDataMap Player custom data
+                     * @param _playerDataMap Player custom data
+                     * 
                      */
                     void SetPlayerDataMap(const PlayerDataMap& _playerDataMap);
 
                     /**
                      * 判断参数 PlayerDataMap 是否已赋值
                      * @return PlayerDataMap 是否已赋值
+                     * 
                      */
                     bool PlayerDataMapHasBeenSet() const;
 

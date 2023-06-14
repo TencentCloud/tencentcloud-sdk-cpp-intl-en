@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the service to be queried
                      * @return ServiceId ID of the service to be queried
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置ID of the service to be queried
-                     * @param ServiceId ID of the service to be queried
+                     * @param _serviceId ID of the service to be queried
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the plugin to be queried
                      * @return PluginId ID of the plugin to be queried
+                     * 
                      */
                     std::string GetPluginId() const;
 
                     /**
                      * 设置ID of the plugin to be queried
-                     * @param PluginId ID of the plugin to be queried
+                     * @param _pluginId ID of the plugin to be queried
+                     * 
                      */
                     void SetPluginId(const std::string& _pluginId);
 
                     /**
                      * 判断参数 PluginId 是否已赋值
                      * @return PluginId 是否已赋值
+                     * 
                      */
                     bool PluginIdHasBeenSet() const;
 
                     /**
                      * 获取Environment information
                      * @return EnvironmentName Environment information
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment information
-                     * @param EnvironmentName Environment information
+                     * @param _environmentName Environment information
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0
                      * @return Offset Offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0
-                     * @param Offset Offset. Default value: 0
+                     * @param _offset Offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of the database to be backed up
                      * @return Db Name of the database to be backed up
+                     * 
                      */
                     std::string GetDb() const;
 
                     /**
                      * 设置Name of the database to be backed up
-                     * @param Db Name of the database to be backed up
+                     * @param _db Name of the database to be backed up
+                     * 
                      */
                     void SetDb(const std::string& _db);
 
                     /**
                      * 判断参数 Db 是否已赋值
                      * @return Db 是否已赋值
+                     * 
                      */
                     bool DbHasBeenSet() const;
 
                     /**
                      * 获取Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
                      * @return Table Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
+                     * 
                      */
                     std::string GetTable() const;
 
                     /**
                      * 设置Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
-                     * @param Table Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
+                     * @param _table Name of the table to be backed up. If this parameter is passed in, the specified table in the database will be backed up; otherwise, the database will be backed up.
+                     * 
                      */
                     void SetTable(const std::string& _table);
 
                     /**
                      * 判断参数 Table 是否已赋值
                      * @return Table 是否已赋值
+                     * 
                      */
                     bool TableHasBeenSet() const;
 

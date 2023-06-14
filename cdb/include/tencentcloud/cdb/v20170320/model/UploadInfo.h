@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of parts of file
                      * @return AllSliceNum Number of parts of file
+                     * 
                      */
                     int64_t GetAllSliceNum() const;
 
                     /**
                      * 设置Number of parts of file
-                     * @param AllSliceNum Number of parts of file
+                     * @param _allSliceNum Number of parts of file
+                     * 
                      */
                     void SetAllSliceNum(const int64_t& _allSliceNum);
 
                     /**
                      * 判断参数 AllSliceNum 是否已赋值
                      * @return AllSliceNum 是否已赋值
+                     * 
                      */
                     bool AllSliceNumHasBeenSet() const;
 
                     /**
                      * 获取Number of completed parts
                      * @return CompleteNum Number of completed parts
+                     * 
                      */
                     int64_t GetCompleteNum() const;
 
                     /**
                      * 设置Number of completed parts
-                     * @param CompleteNum Number of completed parts
+                     * @param _completeNum Number of completed parts
+                     * 
                      */
                     void SetCompleteNum(const int64_t& _completeNum);
 
                     /**
                      * 判断参数 CompleteNum 是否已赋值
                      * @return CompleteNum 是否已赋值
+                     * 
                      */
                     bool CompleteNumHasBeenSet() const;
 

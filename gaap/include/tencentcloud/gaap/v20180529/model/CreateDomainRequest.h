@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Listener ID.
                      * @return ListenerId Listener ID.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID.
-                     * @param ListenerId Listener ID.
+                     * @param _listenerId Listener ID.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name to be created. Each listener supports up to 100 domain names.
                      * @return Domain Domain name to be created. Each listener supports up to 100 domain names.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name to be created. Each listener supports up to 100 domain names.
-                     * @param Domain Domain name to be created. Each listener supports up to 100 domain names.
+                     * @param _domain Domain name to be created. Each listener supports up to 100 domain names.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Server certificate, which is used for the HTTPS interaction between client and GAAP.
                      * @return CertificateId Server certificate, which is used for the HTTPS interaction between client and GAAP.
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置Server certificate, which is used for the HTTPS interaction between client and GAAP.
-                     * @param CertificateId Server certificate, which is used for the HTTPS interaction between client and GAAP.
+                     * @param _certificateId Server certificate, which is used for the HTTPS interaction between client and GAAP.
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 
@@ -101,20 +110,23 @@ namespace TencentCloud
 This field is required only when the mutual authentication method is adopted.
                      * @return ClientCertificateId Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
 This field is required only when the mutual authentication method is adopted.
+                     * 
                      */
                     std::string GetClientCertificateId() const;
 
                     /**
                      * 设置Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
 This field is required only when the mutual authentication method is adopted.
-                     * @param ClientCertificateId Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
+                     * @param _clientCertificateId Client CA certificate, which is used for the HTTPS interaction between client and GAAP.
 This field is required only when the mutual authentication method is adopted.
+                     * 
                      */
                     void SetClientCertificateId(const std::string& _clientCertificateId);
 
                     /**
                      * 判断参数 ClientCertificateId 是否已赋值
                      * @return ClientCertificateId 是否已赋值
+                     * 
                      */
                     bool ClientCertificateIdHasBeenSet() const;
 
@@ -123,20 +135,23 @@ This field is required only when the mutual authentication method is adopted.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
                      * @return PolyClientCertificateIds Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
+                     * 
                      */
                     std::vector<std::string> GetPolyClientCertificateIds() const;
 
                     /**
                      * 设置Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
-                     * @param PolyClientCertificateIds Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
+                     * @param _polyClientCertificateIds Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
+                     * 
                      */
                     void SetPolyClientCertificateIds(const std::vector<std::string>& _polyClientCertificateIds);
 
                     /**
                      * 判断参数 PolyClientCertificateIds 是否已赋值
                      * @return PolyClientCertificateIds 是否已赋值
+                     * 
                      */
                     bool PolyClientCertificateIdsHasBeenSet() const;
 
@@ -149,6 +164,7 @@ HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp
 `0`: disable HTTP3;
 `1`: enable HTTP3.
 HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+                     * 
                      */
                     int64_t GetHttp3Supported() const;
 
@@ -157,16 +173,18 @@ HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp
 `0`: disable HTTP3;
 `1`: enable HTTP3.
 HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
-                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+                     * @param _http3Supported Specifies whether to enable HTTP3. Valid values:
 `0`: disable HTTP3;
 `1`: enable HTTP3.
 HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+                     * 
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
                     /**
                      * 判断参数 Http3Supported 是否已赋值
                      * @return Http3Supported 是否已赋值
+                     * 
                      */
                     bool Http3SupportedHasBeenSet() const;
 

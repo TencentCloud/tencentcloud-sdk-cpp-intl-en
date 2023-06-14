@@ -47,54 +47,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the scheduled task to be modified, which is returned by the `DescribeCompliancePeriodTaskList` API.
                      * @return PeriodTaskId ID of the scheduled task to be modified, which is returned by the `DescribeCompliancePeriodTaskList` API.
+                     * 
                      */
                     uint64_t GetPeriodTaskId() const;
 
                     /**
                      * 设置ID of the scheduled task to be modified, which is returned by the `DescribeCompliancePeriodTaskList` API.
-                     * @param PeriodTaskId ID of the scheduled task to be modified, which is returned by the `DescribeCompliancePeriodTaskList` API.
+                     * @param _periodTaskId ID of the scheduled task to be modified, which is returned by the `DescribeCompliancePeriodTaskList` API.
+                     * 
                      */
                     void SetPeriodTaskId(const uint64_t& _periodTaskId);
 
                     /**
                      * 判断参数 PeriodTaskId 是否已赋值
                      * @return PeriodTaskId 是否已赋值
+                     * 
                      */
                     bool PeriodTaskIdHasBeenSet() const;
 
                     /**
                      * 获取Cycle rule of the scheduled task, which indicates no modification if the field is not specified.
                      * @return PeriodRule Cycle rule of the scheduled task, which indicates no modification if the field is not specified.
+                     * 
                      */
                     CompliancePeriodTaskRule GetPeriodRule() const;
 
                     /**
                      * 设置Cycle rule of the scheduled task, which indicates no modification if the field is not specified.
-                     * @param PeriodRule Cycle rule of the scheduled task, which indicates no modification if the field is not specified.
+                     * @param _periodRule Cycle rule of the scheduled task, which indicates no modification if the field is not specified.
+                     * 
                      */
                     void SetPeriodRule(const CompliancePeriodTaskRule& _periodRule);
 
                     /**
                      * 判断参数 PeriodRule 是否已赋值
                      * @return PeriodRule 是否已赋值
+                     * 
                      */
                     bool PeriodRuleHasBeenSet() const;
 
                     /**
                      * 获取Compliance standard, which indicates no modification if the field is not specified.
                      * @return StandardSettings Compliance standard, which indicates no modification if the field is not specified.
+                     * 
                      */
                     std::vector<ComplianceBenchmarkStandardEnable> GetStandardSettings() const;
 
                     /**
                      * 设置Compliance standard, which indicates no modification if the field is not specified.
-                     * @param StandardSettings Compliance standard, which indicates no modification if the field is not specified.
+                     * @param _standardSettings Compliance standard, which indicates no modification if the field is not specified.
+                     * 
                      */
                     void SetStandardSettings(const std::vector<ComplianceBenchmarkStandardEnable>& _standardSettings);
 
                     /**
                      * 判断参数 StandardSettings 是否已赋值
                      * @return StandardSettings 是否已赋值
+                     * 
                      */
                     bool StandardSettingsHasBeenSet() const;
 

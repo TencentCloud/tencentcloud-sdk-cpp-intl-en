@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Export field
                      * @return ExportField Export field
+                     * 
                      */
                     std::vector<std::string> GetExportField() const;
 
                     /**
                      * 设置Export field
-                     * @param ExportField Export field
+                     * @param _exportField Export field
+                     * 
                      */
                     void SetExportField(const std::vector<std::string>& _exportField);
 
                     /**
                      * 判断参数 ExportField 是否已赋值
                      * @return ExportField 是否已赋值
+                     * 
                      */
                     bool ExportFieldHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -122,6 +134,7 @@ namespace TencentCloud
                      * @return Filters Filter
 <li>Name- String - Required: No - Vulnerability name</li>
 <li>Level - String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
@@ -129,15 +142,17 @@ namespace TencentCloud
                      * 设置Filter
 <li>Name- String - Required: No - Vulnerability name</li>
 <li>Level - String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>Name- String - Required: No - Vulnerability name</li>
 <li>Level - String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

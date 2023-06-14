@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
                      * @return SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
-                     * @param SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+                     * @param _securityGroupId The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
@@ -82,6 +85,7 @@ namespace TencentCloud
 <li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
 <li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
 <li>`description` - String - Policy description. Fuzzy matching is supported.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -96,7 +100,7 @@ namespace TencentCloud
 <li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
 <li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
 <li>`description` - String - Policy description. Fuzzy matching is supported.</li>
-                     * @param Filters Filters
+                     * @param _filters Filters
 <li>`security-group-id` - String - Security group ID in the rule.</li>
 <li>`ip` - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
 <li>`address-module` - String - IP address or address group template ID.</li>
@@ -106,12 +110,14 @@ namespace TencentCloud
 <li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
 <li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
 <li>`description` - String - Policy description. Fuzzy matching is supported.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

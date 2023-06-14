@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Token ID
                      * @return Id Token ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Token ID
-                     * @param Id Token ID
+                     * @param _id Token ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Token description
                      * @return Desc Token description
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Token description
-                     * @param Desc Token description
+                     * @param _desc Token description
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance of the token
                      * @return RegistryId ID of the instance of the token
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置ID of the instance of the token
-                     * @param RegistryId ID of the instance of the token
+                     * @param _registryId ID of the instance of the token
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Token status
                      * @return Enabled Token status
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Token status
-                     * @param Enabled Token status
+                     * @param _enabled Token status
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Token creation time
                      * @return CreatedAt Token creation time
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置Token creation time
-                     * @param CreatedAt Token creation time
+                     * @param _createdAt Token creation time
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 
                     /**
                      * 获取Token expiration timestamp
                      * @return ExpiredAt Token expiration timestamp
+                     * 
                      */
                     int64_t GetExpiredAt() const;
 
                     /**
                      * 设置Token expiration timestamp
-                     * @param ExpiredAt Token expiration timestamp
+                     * @param _expiredAt Token expiration timestamp
+                     * 
                      */
                     void SetExpiredAt(const int64_t& _expiredAt);
 
                     /**
                      * 判断参数 ExpiredAt 是否已赋值
                      * @return ExpiredAt 是否已赋值
+                     * 
                      */
                     bool ExpiredAtHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
                      * @return NodeType Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
+                     * 
                      */
                     int64_t GetNodeType() const;
 
                     /**
                      * 设置Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
-                     * @param NodeType Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
+                     * @param _nodeType Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
+                     * 
                      */
                     void SetNodeType(const int64_t& _nodeType);
 
                     /**
                      * 判断参数 NodeType 是否已赋值
                      * @return NodeType 是否已赋值
+                     * 
                      */
                     bool NodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
                      * @return NodeId Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
+                     * 
                      */
                     int64_t GetNodeId() const;
 
                     /**
                      * 设置Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
-                     * @param NodeId Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
+                     * @param _nodeId Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
+                     * 
                      */
                     void SetNodeId(const int64_t& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the AZ of the master or replica node
                      * @return ZoneId ID of the AZ of the master or replica node
+                     * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
                      * 设置ID of the AZ of the master or replica node
-                     * @param ZoneId ID of the AZ of the master or replica node
+                     * @param _zoneId ID of the AZ of the master or replica node
+                     * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the AZ of the master or replica node
                      * @return ZoneName Name of the AZ of the master or replica node
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置Name of the AZ of the master or replica node
-                     * @param ZoneName Name of the AZ of the master or replica node
+                     * @param _zoneName Name of the AZ of the master or replica node
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 

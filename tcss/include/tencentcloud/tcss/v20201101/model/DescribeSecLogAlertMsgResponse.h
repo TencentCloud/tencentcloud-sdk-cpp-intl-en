@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Alert message queue
                      * @return List Alert message queue
+                     * 
                      */
                     std::vector<SecLogAlertMsgInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

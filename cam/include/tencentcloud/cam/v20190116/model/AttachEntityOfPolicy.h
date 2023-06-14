@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Entity ID
                      * @return Id Entity ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Entity ID
-                     * @param Id Entity ID
+                     * @param _id Entity ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Name Entity Name
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Entity Name
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Name Entity Name
+                     * @param _name Entity Name
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -91,38 +97,44 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Uin Entity UIN
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 设置Entity UIN
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Uin Entity UIN
+                     * @param _uin Entity UIN
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUin(const uint64_t& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取Type of entity association. 1: Associate by users; 2: Associate by User Groups
                      * @return RelatedType Type of entity association. 1: Associate by users; 2: Associate by User Groups
+                     * 
                      */
                     uint64_t GetRelatedType() const;
 
                     /**
                      * 设置Type of entity association. 1: Associate by users; 2: Associate by User Groups
-                     * @param RelatedType Type of entity association. 1: Associate by users; 2: Associate by User Groups
+                     * @param _relatedType Type of entity association. 1: Associate by users; 2: Associate by User Groups
+                     * 
                      */
                     void SetRelatedType(const uint64_t& _relatedType);
 
                     /**
                      * 判断参数 RelatedType 是否已赋值
                      * @return RelatedType 是否已赋值
+                     * 
                      */
                     bool RelatedTypeHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return AttachmentTime Policy association time
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetAttachmentTime() const;
 
                     /**
                      * 设置Policy association time
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param AttachmentTime Policy association time
+                     * @param _attachmentTime Policy association time
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAttachmentTime(const std::string& _attachmentTime);
 
                     /**
                      * 判断参数 AttachmentTime 是否已赋值
                      * @return AttachmentTime 是否已赋值
+                     * 
                      */
                     bool AttachmentTimeHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Statistics on the HTTP status codes of business traffic
                      * @return HttpStatusMap Statistics on the HTTP status codes of business traffic
+                     * 
                      */
                     HttpStatusMap GetHttpStatusMap() const;
 
                     /**
                      * 判断参数 HttpStatusMap 是否已赋值
                      * @return HttpStatusMap 是否已赋值
+                     * 
                      */
                     bool HttpStatusMapHasBeenSet() const;
 

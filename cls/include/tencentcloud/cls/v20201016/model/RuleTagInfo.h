@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Case sensitivity
                      * @return CaseSensitive Case sensitivity
+                     * 
                      */
                     bool GetCaseSensitive() const;
 
                     /**
                      * 设置Case sensitivity
-                     * @param CaseSensitive Case sensitivity
+                     * @param _caseSensitive Case sensitivity
+                     * 
                      */
                     void SetCaseSensitive(const bool& _caseSensitive);
 
                     /**
                      * 判断参数 CaseSensitive 是否已赋值
                      * @return CaseSensitive 是否已赋值
+                     * 
                      */
                     bool CaseSensitiveHasBeenSet() const;
 
                     /**
                      * 获取Field information in the metafield index configuration
                      * @return KeyValues Field information in the metafield index configuration
+                     * 
                      */
                     std::vector<KeyValueInfo> GetKeyValues() const;
 
                     /**
                      * 设置Field information in the metafield index configuration
-                     * @param KeyValues Field information in the metafield index configuration
+                     * @param _keyValues Field information in the metafield index configuration
+                     * 
                      */
                     void SetKeyValues(const std::vector<KeyValueInfo>& _keyValues);
 
                     /**
                      * 判断参数 KeyValues 是否已赋值
                      * @return KeyValues 是否已赋值
+                     * 
                      */
                     bool KeyValuesHasBeenSet() const;
 

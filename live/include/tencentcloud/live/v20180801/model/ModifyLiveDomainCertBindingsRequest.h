@@ -48,20 +48,23 @@ namespace TencentCloud
 If neither `CloudCertId` nor the public/private key is specified, and a domain is already bound with a certificate, this API will only update the HTTPS configuration of the domain and, if the certificate is a self-owned certificate, upload it to Tencent Cloud.
                      * @return DomainInfos The playback domains to bind and whether to enable HTTPS for them.
 If neither `CloudCertId` nor the public/private key is specified, and a domain is already bound with a certificate, this API will only update the HTTPS configuration of the domain and, if the certificate is a self-owned certificate, upload it to Tencent Cloud.
+                     * 
                      */
                     std::vector<LiveCertDomainInfo> GetDomainInfos() const;
 
                     /**
                      * 设置The playback domains to bind and whether to enable HTTPS for them.
 If neither `CloudCertId` nor the public/private key is specified, and a domain is already bound with a certificate, this API will only update the HTTPS configuration of the domain and, if the certificate is a self-owned certificate, upload it to Tencent Cloud.
-                     * @param DomainInfos The playback domains to bind and whether to enable HTTPS for them.
+                     * @param _domainInfos The playback domains to bind and whether to enable HTTPS for them.
 If neither `CloudCertId` nor the public/private key is specified, and a domain is already bound with a certificate, this API will only update the HTTPS configuration of the domain and, if the certificate is a self-owned certificate, upload it to Tencent Cloud.
+                     * 
                      */
                     void SetDomainInfos(const std::vector<LiveCertDomainInfo>& _domainInfos);
 
                     /**
                      * 判断参数 DomainInfos 是否已赋值
                      * @return DomainInfos 是否已赋值
+                     * 
                      */
                     bool DomainInfosHasBeenSet() const;
 
@@ -70,20 +73,23 @@ If neither `CloudCertId` nor the public/private key is specified, and a domain i
 For details, see https://intl.cloud.tencent.com/document/api/400/41665?from_cn_redirect=1
                      * @return CloudCertId The SSL certificate ID assigned by Tencent Cloud.
 For details, see https://intl.cloud.tencent.com/document/api/400/41665?from_cn_redirect=1
+                     * 
                      */
                     std::string GetCloudCertId() const;
 
                     /**
                      * 设置The SSL certificate ID assigned by Tencent Cloud.
 For details, see https://intl.cloud.tencent.com/document/api/400/41665?from_cn_redirect=1
-                     * @param CloudCertId The SSL certificate ID assigned by Tencent Cloud.
+                     * @param _cloudCertId The SSL certificate ID assigned by Tencent Cloud.
 For details, see https://intl.cloud.tencent.com/document/api/400/41665?from_cn_redirect=1
+                     * 
                      */
                     void SetCloudCertId(const std::string& _cloudCertId);
 
                     /**
                      * 判断参数 CloudCertId 是否已赋值
                      * @return CloudCertId 是否已赋值
+                     * 
                      */
                     bool CloudCertIdHasBeenSet() const;
 
@@ -92,20 +98,23 @@ For details, see https://intl.cloud.tencent.com/document/api/400/41665?from_cn_r
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
                      * @return CertificatePublicKey The public key of the certificate.
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
+                     * 
                      */
                     std::string GetCertificatePublicKey() const;
 
                     /**
                      * 设置The public key of the certificate.
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
-                     * @param CertificatePublicKey The public key of the certificate.
+                     * @param _certificatePublicKey The public key of the certificate.
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
+                     * 
                      */
                     void SetCertificatePublicKey(const std::string& _certificatePublicKey);
 
                     /**
                      * 判断参数 CertificatePublicKey 是否已赋值
                      * @return CertificatePublicKey 是否已赋值
+                     * 
                      */
                     bool CertificatePublicKeyHasBeenSet() const;
 
@@ -114,38 +123,44 @@ You can specify either `CloudCertId` or the public/private key. If both are spec
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
                      * @return CertificatePrivateKey The private key of the certificate.
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
+                     * 
                      */
                     std::string GetCertificatePrivateKey() const;
 
                     /**
                      * 设置The private key of the certificate.
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
-                     * @param CertificatePrivateKey The private key of the certificate.
+                     * @param _certificatePrivateKey The private key of the certificate.
 You can specify either `CloudCertId` or the public/private key. If both are specified, the private and public key parameters will be ignored. If you pass in only the public and private keys, the corresponding certificate will be uploaded to Tencent Cloud SSL Certificate Service, which will generate a `CloudCertId` for the certificate.
+                     * 
                      */
                     void SetCertificatePrivateKey(const std::string& _certificatePrivateKey);
 
                     /**
                      * 判断参数 CertificatePrivateKey 是否已赋值
                      * @return CertificatePrivateKey 是否已赋值
+                     * 
                      */
                     bool CertificatePrivateKeyHasBeenSet() const;
 
                     /**
                      * 获取The remarks for the certificate in Tencent Cloud SSL Certificate Service. This parameter will be ignored if `CloudCertId` is specified.
                      * @return CertificateAlias The remarks for the certificate in Tencent Cloud SSL Certificate Service. This parameter will be ignored if `CloudCertId` is specified.
+                     * 
                      */
                     std::string GetCertificateAlias() const;
 
                     /**
                      * 设置The remarks for the certificate in Tencent Cloud SSL Certificate Service. This parameter will be ignored if `CloudCertId` is specified.
-                     * @param CertificateAlias The remarks for the certificate in Tencent Cloud SSL Certificate Service. This parameter will be ignored if `CloudCertId` is specified.
+                     * @param _certificateAlias The remarks for the certificate in Tencent Cloud SSL Certificate Service. This parameter will be ignored if `CloudCertId` is specified.
+                     * 
                      */
                     void SetCertificateAlias(const std::string& _certificateAlias);
 
                     /**
                      * 判断参数 CertificateAlias 是否已赋值
                      * @return CertificateAlias 是否已赋值
+                     * 
                      */
                     bool CertificateAliasHasBeenSet() const;
 

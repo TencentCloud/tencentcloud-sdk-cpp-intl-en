@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Template ID array.
                      * @return TemplateIdSet Template ID array.
+                     * 
                      */
                     std::vector<uint64_t> GetTemplateIdSet() const;
 
                     /**
                      * 设置Template ID array.
-                     * @param TemplateIdSet Template ID array.
+                     * @param _templateIdSet Template ID array.
+                     * 
                      */
                     void SetTemplateIdSet(const std::vector<uint64_t>& _templateIdSet);
 
                     /**
                      * 判断参数 TemplateIdSet 是否已赋值
                      * @return TemplateIdSet 是否已赋值
+                     * 
                      */
                     bool TemplateIdSetHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
-                     * @param International Whether it is Global SMS:
+                     * @param _international Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 

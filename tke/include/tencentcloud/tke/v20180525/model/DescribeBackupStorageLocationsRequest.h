@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Names of repositories. If it’s not specified, all storage repository names in the current region are returned.
                      * @return Names Names of repositories. If it’s not specified, all storage repository names in the current region are returned.
+                     * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
                      * 设置Names of repositories. If it’s not specified, all storage repository names in the current region are returned.
-                     * @param Names Names of repositories. If it’s not specified, all storage repository names in the current region are returned.
+                     * @param _names Names of repositories. If it’s not specified, all storage repository names in the current region are returned.
+                     * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
                     /**
                      * 判断参数 Names 是否已赋值
                      * @return Names 是否已赋值
+                     * 
                      */
                     bool NamesHasBeenSet() const;
 

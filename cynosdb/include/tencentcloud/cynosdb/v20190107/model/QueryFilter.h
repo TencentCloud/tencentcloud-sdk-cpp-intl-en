@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
                      * @return Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+                     * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
                      * 设置Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
-                     * @param Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+                     * @param _names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+                     * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
                     /**
                      * 判断参数 Names 是否已赋值
                      * @return Names 是否已赋值
+                     * 
                      */
                     bool NamesHasBeenSet() const;
 
                     /**
                      * 获取Search string
                      * @return Values Search string
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Search string
-                     * @param Values Search string
+                     * @param _values Search string
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 
                     /**
                      * 获取Whether to use exact match
                      * @return ExactMatch Whether to use exact match
+                     * 
                      */
                     bool GetExactMatch() const;
 
                     /**
                      * 设置Whether to use exact match
-                     * @param ExactMatch Whether to use exact match
+                     * @param _exactMatch Whether to use exact match
+                     * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
 
                     /**
                      * 判断参数 ExactMatch 是否已赋值
                      * @return ExactMatch 是否已赋值
+                     * 
                      */
                     bool ExactMatchHasBeenSet() const;
 
                     /**
                      * 获取Search field
                      * @return Name Search field
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Search field
-                     * @param Name Search field
+                     * @param _name Search field
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Operator
                      * @return Operator Operator
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Operator
-                     * @param Operator Operator
+                     * @param _operator Operator
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Partition ID
                      * @return Partition Partition ID
+                     * 
                      */
                     int64_t GetPartition() const;
 
                     /**
                      * 设置Partition ID
-                     * @param Partition Partition ID
+                     * @param _partition Partition ID
+                     * 
                      */
                     void SetPartition(const int64_t& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 
                     /**
                      * 获取Leader running status
                      * @return LeaderStatus Leader running status
+                     * 
                      */
                     int64_t GetLeaderStatus() const;
 
                     /**
                      * 设置Leader running status
-                     * @param LeaderStatus Leader running status
+                     * @param _leaderStatus Leader running status
+                     * 
                      */
                     void SetLeaderStatus(const int64_t& _leaderStatus);
 
                     /**
                      * 判断参数 LeaderStatus 是否已赋值
                      * @return LeaderStatus 是否已赋值
+                     * 
                      */
                     bool LeaderStatusHasBeenSet() const;
 
                     /**
                      * 获取ISR quantity
                      * @return IsrNum ISR quantity
+                     * 
                      */
                     int64_t GetIsrNum() const;
 
                     /**
                      * 设置ISR quantity
-                     * @param IsrNum ISR quantity
+                     * @param _isrNum ISR quantity
+                     * 
                      */
                     void SetIsrNum(const int64_t& _isrNum);
 
                     /**
                      * 判断参数 IsrNum 是否已赋值
                      * @return IsrNum 是否已赋值
+                     * 
                      */
                     bool IsrNumHasBeenSet() const;
 
                     /**
                      * 获取Number of replicas
                      * @return ReplicaNum Number of replicas
+                     * 
                      */
                     int64_t GetReplicaNum() const;
 
                     /**
                      * 设置Number of replicas
-                     * @param ReplicaNum Number of replicas
+                     * @param _replicaNum Number of replicas
+                     * 
                      */
                     void SetReplicaNum(const int64_t& _replicaNum);
 
                     /**
                      * 判断参数 ReplicaNum 是否已赋值
                      * @return ReplicaNum 是否已赋值
+                     * 
                      */
                     bool ReplicaNumHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Connection instance ID.
                      * @return InstanceId Connection instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Connection instance ID.
-                     * @param InstanceId Connection instance ID.
+                     * @param _instanceId Connection instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -89,6 +92,7 @@ Where:
 `ISOLATING`: Isolating
 `ISOLATED`: Isolated
 `MOVING`: Migrating
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -105,7 +109,7 @@ Where:
 `ISOLATING`: Isolating
 `ISOLATED`: Isolated
 `MOVING`: Migrating
-                     * @param Status Connection status.
+                     * @param _status Connection status.
 Where:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -117,12 +121,14 @@ Where:
 `ISOLATING`: Isolating
 `ISOLATED`: Isolated
 `MOVING`: Migrating
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

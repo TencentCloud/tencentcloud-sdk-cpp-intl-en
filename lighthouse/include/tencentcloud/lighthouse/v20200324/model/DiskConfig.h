@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Availability zone.
                      * @return Zone Availability zone.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone.
-                     * @param Zone Availability zone.
+                     * @param _zone Availability zone.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk type.
                      * @return DiskType Cloud disk type.
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Cloud disk type.
-                     * @param DiskType Cloud disk type.
+                     * @param _diskType Cloud disk type.
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk sale status.
                      * @return DiskSalesState Cloud disk sale status.
+                     * 
                      */
                     std::string GetDiskSalesState() const;
 
                     /**
                      * 设置Cloud disk sale status.
-                     * @param DiskSalesState Cloud disk sale status.
+                     * @param _diskSalesState Cloud disk sale status.
+                     * 
                      */
                     void SetDiskSalesState(const std::string& _diskSalesState);
 
                     /**
                      * 判断参数 DiskSalesState 是否已赋值
                      * @return DiskSalesState 是否已赋值
+                     * 
                      */
                     bool DiskSalesStateHasBeenSet() const;
 
                     /**
                      * 获取Maximum cloud disk size.
                      * @return MaxDiskSize Maximum cloud disk size.
+                     * 
                      */
                     int64_t GetMaxDiskSize() const;
 
                     /**
                      * 设置Maximum cloud disk size.
-                     * @param MaxDiskSize Maximum cloud disk size.
+                     * @param _maxDiskSize Maximum cloud disk size.
+                     * 
                      */
                     void SetMaxDiskSize(const int64_t& _maxDiskSize);
 
                     /**
                      * 判断参数 MaxDiskSize 是否已赋值
                      * @return MaxDiskSize 是否已赋值
+                     * 
                      */
                     bool MaxDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Minimum cloud disk size.
                      * @return MinDiskSize Minimum cloud disk size.
+                     * 
                      */
                     int64_t GetMinDiskSize() const;
 
                     /**
                      * 设置Minimum cloud disk size.
-                     * @param MinDiskSize Minimum cloud disk size.
+                     * @param _minDiskSize Minimum cloud disk size.
+                     * 
                      */
                     void SetMinDiskSize(const int64_t& _minDiskSize);
 
                     /**
                      * 判断参数 MinDiskSize 是否已赋值
                      * @return MinDiskSize 是否已赋值
+                     * 
                      */
                     bool MinDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk increment.
                      * @return DiskStepSize Cloud disk increment.
+                     * 
                      */
                     int64_t GetDiskStepSize() const;
 
                     /**
                      * 设置Cloud disk increment.
-                     * @param DiskStepSize Cloud disk increment.
+                     * @param _diskStepSize Cloud disk increment.
+                     * 
                      */
                     void SetDiskStepSize(const int64_t& _diskStepSize);
 
                     /**
                      * 判断参数 DiskStepSize 是否已赋值
                      * @return DiskStepSize 是否已赋值
+                     * 
                      */
                     bool DiskStepSizeHasBeenSet() const;
 

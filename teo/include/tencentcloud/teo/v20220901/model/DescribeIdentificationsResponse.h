@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible sites.
                      * @return TotalCount Number of eligible sites.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The site verification information.
                      * @return Identifications The site verification information.
+                     * 
                      */
                     std::vector<Identification> GetIdentifications() const;
 
                     /**
                      * 判断参数 Identifications 是否已赋值
                      * @return Identifications 是否已赋值
+                     * 
                      */
                     bool IdentificationsHasBeenSet() const;
 

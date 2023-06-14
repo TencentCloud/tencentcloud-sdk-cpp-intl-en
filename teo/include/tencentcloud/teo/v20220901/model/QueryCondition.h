@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The key of QueryCondition.
                      * @return Key The key of QueryCondition.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置The key of QueryCondition.
-                     * @param Key The key of QueryCondition.
+                     * @param _key The key of QueryCondition.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
@@ -83,6 +86,7 @@ namespace TencentCloud
 <li>`notStartWith`: Does not start with</li>
 <li>`endWith`: Ends with</li>
 <li>`notEndWith`: Does not end with</li>
+                     * 
                      */
                     std::string GetOperator() const;
 
@@ -96,7 +100,7 @@ namespace TencentCloud
 <li>`notStartWith`: Does not start with</li>
 <li>`endWith`: Ends with</li>
 <li>`notEndWith`: Does not end with</li>
-                     * @param Operator The conditional operator. Values:
+                     * @param _operator The conditional operator. Values:
 <li>`equals`: Equals</li>
 <li>`notEquals`: Does not equal</li>
 <li>`include`: Contains</li>
@@ -105,30 +109,35 @@ namespace TencentCloud
 <li>`notStartWith`: Does not start with</li>
 <li>`endWith`: Ends with</li>
 <li>`notEndWith`: Does not end with</li>
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取The value of QueryCondition.
                      * @return Value The value of QueryCondition.
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
                      * 设置The value of QueryCondition.
-                     * @param Value The value of QueryCondition.
+                     * @param _value The value of QueryCondition.
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

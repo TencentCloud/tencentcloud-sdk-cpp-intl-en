@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Status 0: modified successfully; non-0: modification failed
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

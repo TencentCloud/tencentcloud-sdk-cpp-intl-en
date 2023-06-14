@@ -57,6 +57,7 @@ TRUE: yes
 FALSE: no
 Default value: TRUE.
 Currently, Windows images do not support IP direct access.
+                     * 
                      */
                     bool GetEnabled() const;
 
@@ -66,17 +67,19 @@ TRUE: yes
 FALSE: no
 Default value: TRUE.
 Currently, Windows images do not support IP direct access.
-                     * @param Enabled Whether to enable IP direct access. Valid values:
+                     * @param _enabled Whether to enable IP direct access. Valid values:
 TRUE: yes
 FALSE: no
 Default value: TRUE.
 Currently, Windows images do not support IP direct access.
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 

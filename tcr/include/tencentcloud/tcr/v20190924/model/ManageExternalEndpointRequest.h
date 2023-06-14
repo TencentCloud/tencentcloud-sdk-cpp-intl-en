@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Operation. Valid values: Create, Delete.
                      * @return Operation Operation. Valid values: Create, Delete.
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置Operation. Valid values: Create, Delete.
-                     * @param Operation Operation. Valid values: Create, Delete.
+                     * @param _operation Operation. Valid values: Create, Delete.
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 

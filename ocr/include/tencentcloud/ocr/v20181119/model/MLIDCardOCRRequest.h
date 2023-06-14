@@ -49,6 +49,7 @@ Supported image size: The downloaded image after Base64 encoding can be up to 7 
                      * @return ImageBase64 The Base64-encoded value of an image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
+                     * 
                      */
                     std::string GetImageBase64() const;
 
@@ -56,15 +57,17 @@ Supported image size: The downloaded image after Base64 encoding can be up to 7 
                      * 设置The Base64-encoded value of an image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-                     * @param ImageBase64 The Base64-encoded value of an image.
+                     * @param _imageBase64 The Base64-encoded value of an image.
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
+                     * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
                     /**
                      * 判断参数 ImageBase64 是否已赋值
                      * @return ImageBase64 是否已赋值
+                     * 
                      */
                     bool ImageBase64HasBeenSet() const;
 
@@ -79,6 +82,7 @@ Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be low.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
@@ -88,35 +92,40 @@ Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be low.
-                     * @param ImageUrl The URL of an image. (This field is not available outside the Chinese mainland.)
+                     * @param _imageUrl The URL of an image. (This field is not available outside the Chinese mainland.)
 Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
 Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be low.
+                     * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 
                     /**
                      * 获取Whether to return an image. Default value: `false`.
                      * @return RetImage Whether to return an image. Default value: `false`.
+                     * 
                      */
                     bool GetRetImage() const;
 
                     /**
                      * 设置Whether to return an image. Default value: `false`.
-                     * @param RetImage Whether to return an image. Default value: `false`.
+                     * @param _retImage Whether to return an image. Default value: `false`.
+                     * 
                      */
                     void SetRetImage(const bool& _retImage);
 
                     /**
                      * 判断参数 RetImage 是否已赋值
                      * @return RetImage 是否已赋值
+                     * 
                      */
                     bool RetImageHasBeenSet() const;
 

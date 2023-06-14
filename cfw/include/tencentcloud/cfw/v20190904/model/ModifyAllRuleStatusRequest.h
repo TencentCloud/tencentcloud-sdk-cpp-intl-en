@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Status. 0: all disabled; 1: all enabled
                      * @return Status Status. 0: all disabled; 1: all enabled
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Status. 0: all disabled; 1: all enabled
-                     * @param Status Status. 0: all disabled; 1: all enabled
+                     * @param _status Status. 0: all disabled; 1: all enabled
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Direction. 0: outbound; 1: inbound
                      * @return Direction Direction. 0: outbound; 1: inbound
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Direction. 0: outbound; 1: inbound
-                     * @param Direction Direction. 0: outbound; 1: inbound
+                     * @param _direction Direction. 0: outbound; 1: inbound
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Edge ID value
                      * @return EdgeId Edge ID value
+                     * 
                      */
                     std::string GetEdgeId() const;
 
                     /**
                      * 设置Edge ID value
-                     * @param EdgeId Edge ID value
+                     * @param _edgeId Edge ID value
+                     * 
                      */
                     void SetEdgeId(const std::string& _edgeId);
 
                     /**
                      * 判断参数 EdgeId 是否已赋值
                      * @return EdgeId 是否已赋值
+                     * 
                      */
                     bool EdgeIdHasBeenSet() const;
 
                     /**
                      * 获取NAT region
                      * @return Area NAT region
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置NAT region
-                     * @param Area NAT region
+                     * @param _area NAT region
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

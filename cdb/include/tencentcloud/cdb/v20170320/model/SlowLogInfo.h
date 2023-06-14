@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Backup filename
                      * @return Name Backup filename
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Backup filename
-                     * @param Name Backup filename
+                     * @param _name Backup filename
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Backup file size in bytes
                      * @return Size Backup file size in bytes
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Backup file size in bytes
-                     * @param Size Backup file size in bytes
+                     * @param _size Backup file size in bytes
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
                     /**
                      * 获取Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
                      * @return Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
-                     * @param Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+                     * @param _date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
                     /**
                      * 获取Download address on the private network
                      * @return IntranetUrl Download address on the private network
+                     * 
                      */
                     std::string GetIntranetUrl() const;
 
                     /**
                      * 设置Download address on the private network
-                     * @param IntranetUrl Download address on the private network
+                     * @param _intranetUrl Download address on the private network
+                     * 
                      */
                     void SetIntranetUrl(const std::string& _intranetUrl);
 
                     /**
                      * 判断参数 IntranetUrl 是否已赋值
                      * @return IntranetUrl 是否已赋值
+                     * 
                      */
                     bool IntranetUrlHasBeenSet() const;
 
                     /**
                      * 获取Download address on the public network
                      * @return InternetUrl Download address on the public network
+                     * 
                      */
                     std::string GetInternetUrl() const;
 
                     /**
                      * 设置Download address on the public network
-                     * @param InternetUrl Download address on the public network
+                     * @param _internetUrl Download address on the public network
+                     * 
                      */
                     void SetInternetUrl(const std::string& _internetUrl);
 
                     /**
                      * 判断参数 InternetUrl 是否已赋值
                      * @return InternetUrl 是否已赋值
+                     * 
                      */
                     bool InternetUrlHasBeenSet() const;
 
                     /**
                      * 获取Log type. Value range: slowlog (slow log)
                      * @return Type Log type. Value range: slowlog (slow log)
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Log type. Value range: slowlog (slow log)
-                     * @param Type Log type. Value range: slowlog (slow log)
+                     * @param _type Log type. Value range: slowlog (slow log)
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

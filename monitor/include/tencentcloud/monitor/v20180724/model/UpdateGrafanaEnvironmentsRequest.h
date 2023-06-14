@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-12345678”.
                      * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-12345678”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Environment variable string
                      * @return Envs Environment variable string
+                     * 
                      */
                     std::string GetEnvs() const;
 
                     /**
                      * 设置Environment variable string
-                     * @param Envs Environment variable string
+                     * @param _envs Environment variable string
+                     * 
                      */
                     void SetEnvs(const std::string& _envs);
 
                     /**
                      * 判断参数 Envs 是否已赋值
                      * @return Envs 是否已赋值
+                     * 
                      */
                     bool EnvsHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
                      * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
-                     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * @param _appName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 

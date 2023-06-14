@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
                      * @return DeployMode AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
+                     * 
                      */
                     std::vector<int64_t> GetDeployMode() const;
 
                     /**
                      * 设置AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
-                     * @param DeployMode AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
+                     * @param _deployMode AZ deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
+                     * 
                      */
                     void SetDeployMode(const std::vector<int64_t>& _deployMode);
 
                     /**
                      * 判断参数 DeployMode 是否已赋值
                      * @return DeployMode 是否已赋值
+                     * 
                      */
                     bool DeployModeHasBeenSet() const;
 
                     /**
                      * 获取AZ where the primary instance is located
                      * @return MasterZone AZ where the primary instance is located
+                     * 
                      */
                     std::vector<std::string> GetMasterZone() const;
 
                     /**
                      * 设置AZ where the primary instance is located
-                     * @param MasterZone AZ where the primary instance is located
+                     * @param _masterZone AZ where the primary instance is located
+                     * 
                      */
                     void SetMasterZone(const std::vector<std::string>& _masterZone);
 
                     /**
                      * 判断参数 MasterZone 是否已赋值
                      * @return MasterZone 是否已赋值
+                     * 
                      */
                     bool MasterZoneHasBeenSet() const;
 
                     /**
                      * 获取AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
                      * @return SlaveZone AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
+                     * 
                      */
                     std::vector<std::string> GetSlaveZone() const;
 
                     /**
                      * 设置AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
-                     * @param SlaveZone AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
+                     * @param _slaveZone AZ where salve database 1 is located when the instance is deployed in multi-AZ mode
+                     * 
                      */
                     void SetSlaveZone(const std::vector<std::string>& _slaveZone);
 
                     /**
                      * 判断参数 SlaveZone 是否已赋值
                      * @return SlaveZone 是否已赋值
+                     * 
                      */
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
                      * 获取AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
                      * @return BackupZone AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
+                     * 
                      */
                     std::vector<std::string> GetBackupZone() const;
 
                     /**
                      * 设置AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
-                     * @param BackupZone AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
+                     * @param _backupZone AZ where salve database 2 is located when the instance is deployed in multi-AZ mode
+                     * 
                      */
                     void SetBackupZone(const std::vector<std::string>& _backupZone);
 
                     /**
                      * 判断参数 BackupZone 是否已赋值
                      * @return BackupZone 是否已赋值
+                     * 
                      */
                     bool BackupZoneHasBeenSet() const;
 

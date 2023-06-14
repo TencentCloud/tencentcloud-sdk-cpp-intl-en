@@ -55,6 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
@@ -63,16 +64,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ErrCode Error code
+                     * @param _errCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
@@ -81,20 +84,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TimeOffset Specific time point of screenshot in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTimeOffset() const;
 
                     /**
                      * 设置Specific time point of screenshot in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TimeOffset Specific time point of screenshot in milliseconds.
+                     * @param _timeOffset Specific time point of screenshot in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimeOffset(const uint64_t& _timeOffset);
 
                     /**
                      * 判断参数 TimeOffset 是否已赋值
                      * @return TimeOffset 是否已赋值
+                     * 
                      */
                     bool TimeOffsetHasBeenSet() const;
 
@@ -103,20 +109,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Url Address of output screenshot file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Address of output screenshot file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Url Address of output screenshot file.
+                     * @param _url Address of output screenshot file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

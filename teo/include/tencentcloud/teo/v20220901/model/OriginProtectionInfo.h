@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site.
                      * @return ZoneId ID of the site.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site.
-                     * @param ZoneId ID of the site.
+                     * @param _zoneId ID of the site.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取List of domain names.
                      * @return Hosts List of domain names.
+                     * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
                      * 设置List of domain names.
-                     * @param Hosts List of domain names.
+                     * @param _hosts List of domain names.
+                     * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
 
                     /**
                      * 判断参数 Hosts 是否已赋值
                      * @return Hosts 是否已赋值
+                     * 
                      */
                     bool HostsHasBeenSet() const;
 
                     /**
                      * 获取List of proxy IDs.
                      * @return ProxyIds List of proxy IDs.
+                     * 
                      */
                     std::vector<std::string> GetProxyIds() const;
 
                     /**
                      * 设置List of proxy IDs.
-                     * @param ProxyIds List of proxy IDs.
+                     * @param _proxyIds List of proxy IDs.
+                     * 
                      */
                     void SetProxyIds(const std::vector<std::string>& _proxyIds);
 
                     /**
                      * 判断参数 ProxyIds 是否已赋值
                      * @return ProxyIds 是否已赋值
+                     * 
                      */
                     bool ProxyIdsHasBeenSet() const;
 
@@ -107,20 +116,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CurrentIPWhitelist The existing intermediate IPs.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     IPWhitelist GetCurrentIPWhitelist() const;
 
                     /**
                      * 设置The existing intermediate IPs.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CurrentIPWhitelist The existing intermediate IPs.
+                     * @param _currentIPWhitelist The existing intermediate IPs.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCurrentIPWhitelist(const IPWhitelist& _currentIPWhitelist);
 
                     /**
                      * 判断参数 CurrentIPWhitelist 是否已赋值
                      * @return CurrentIPWhitelist 是否已赋值
+                     * 
                      */
                     bool CurrentIPWhitelistHasBeenSet() const;
 
@@ -131,6 +143,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return NeedUpdate Whether the intermediate IP update is needed for the site. Values:
 <li>`true`: Update needed;</li>
 <li>`false`: Update not needed.</li>
+                     * 
                      */
                     bool GetNeedUpdate() const;
 
@@ -138,15 +151,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 设置Whether the intermediate IP update is needed for the site. Values:
 <li>`true`: Update needed;</li>
 <li>`false`: Update not needed.</li>
-                     * @param NeedUpdate Whether the intermediate IP update is needed for the site. Values:
+                     * @param _needUpdate Whether the intermediate IP update is needed for the site. Values:
 <li>`true`: Update needed;</li>
 <li>`false`: Update not needed.</li>
+                     * 
                      */
                     void SetNeedUpdate(const bool& _needUpdate);
 
                     /**
                      * 判断参数 NeedUpdate 是否已赋值
                      * @return NeedUpdate 是否已赋值
+                     * 
                      */
                     bool NeedUpdateHasBeenSet() const;
 
@@ -159,6 +174,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`online`: Origin protection is activated;</li>
 <li>`offline`: Origin protection is disabled.</li>
 <li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -167,16 +183,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`online`: Origin protection is activated;</li>
 <li>`offline`: Origin protection is disabled.</li>
 <li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
-                     * @param Status Status of the origin protection configuration. Values:
+                     * @param _status Status of the origin protection configuration. Values:
 <li>`online`: Origin protection is activated;</li>
 <li>`offline`: Origin protection is disabled.</li>
 <li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -187,6 +205,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return PlanSupport Whether origin protection is supported in the plan. Values:
 <li>`true`: Origin protection supported;</li>
 <li>`false`: Origin protection not supported.</li>
+                     * 
                      */
                     bool GetPlanSupport() const;
 
@@ -194,15 +213,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 设置Whether origin protection is supported in the plan. Values:
 <li>`true`: Origin protection supported;</li>
 <li>`false`: Origin protection not supported.</li>
-                     * @param PlanSupport Whether origin protection is supported in the plan. Values:
+                     * @param _planSupport Whether origin protection is supported in the plan. Values:
 <li>`true`: Origin protection supported;</li>
 <li>`false`: Origin protection not supported.</li>
+                     * 
                      */
                     void SetPlanSupport(const bool& _planSupport);
 
                     /**
                      * 判断参数 PlanSupport 是否已赋值
                      * @return PlanSupport 是否已赋值
+                     * 
                      */
                     bool PlanSupportHasBeenSet() const;
 
@@ -211,20 +232,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DiffIPWhitelist Differences between the latest and existing intermediate IPs.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     DiffIPWhitelist GetDiffIPWhitelist() const;
 
                     /**
                      * 设置Differences between the latest and existing intermediate IPs.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DiffIPWhitelist Differences between the latest and existing intermediate IPs.
+                     * @param _diffIPWhitelist Differences between the latest and existing intermediate IPs.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiffIPWhitelist(const DiffIPWhitelist& _diffIPWhitelist);
 
                     /**
                      * 判断参数 DiffIPWhitelist 是否已赋值
                      * @return DiffIPWhitelist 是否已赋值
+                     * 
                      */
                     bool DiffIPWhitelistHasBeenSet() const;
 

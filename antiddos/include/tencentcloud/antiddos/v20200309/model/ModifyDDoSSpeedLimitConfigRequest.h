@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Access rate limit configuration. The configuration ID cannot be empty when you set this parameter.
                      * @return DDoSSpeedLimitConfig Access rate limit configuration. The configuration ID cannot be empty when you set this parameter.
+                     * 
                      */
                     DDoSSpeedLimitConfig GetDDoSSpeedLimitConfig() const;
 
                     /**
                      * 设置Access rate limit configuration. The configuration ID cannot be empty when you set this parameter.
-                     * @param DDoSSpeedLimitConfig Access rate limit configuration. The configuration ID cannot be empty when you set this parameter.
+                     * @param _dDoSSpeedLimitConfig Access rate limit configuration. The configuration ID cannot be empty when you set this parameter.
+                     * 
                      */
                     void SetDDoSSpeedLimitConfig(const DDoSSpeedLimitConfig& _dDoSSpeedLimitConfig);
 
                     /**
                      * 判断参数 DDoSSpeedLimitConfig 是否已赋值
                      * @return DDoSSpeedLimitConfig 是否已赋值
+                     * 
                      */
                     bool DDoSSpeedLimitConfigHasBeenSet() const;
 

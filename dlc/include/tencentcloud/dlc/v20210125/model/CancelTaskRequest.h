@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Globally unique task ID
                      * @return TaskId Globally unique task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Globally unique task ID
-                     * @param TaskId Globally unique task ID
+                     * @param _taskId Globally unique task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

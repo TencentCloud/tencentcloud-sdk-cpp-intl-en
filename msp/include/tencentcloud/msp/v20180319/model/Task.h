@@ -52,180 +52,210 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return TaskId Task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Task name
                      * @return TaskName Task name
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Task name
-                     * @param TaskName Task name
+                     * @param _taskName Task name
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 
                     /**
                      * 获取Migration type
                      * @return MigrationType Migration type
+                     * 
                      */
                     std::string GetMigrationType() const;
 
                     /**
                      * 设置Migration type
-                     * @param MigrationType Migration type
+                     * @param _migrationType Migration type
+                     * 
                      */
                     void SetMigrationType(const std::string& _migrationType);
 
                     /**
                      * 判断参数 MigrationType 是否已赋值
                      * @return MigrationType 是否已赋值
+                     * 
                      */
                     bool MigrationTypeHasBeenSet() const;
 
                     /**
                      * 获取Migration status
                      * @return Status Migration status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Migration status
-                     * @param Status Migration status
+                     * @param _status Migration status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Project name
                      * @return ProjectName Project name
+                     * 
                      */
                     std::string GetProjectName() const;
 
                     /**
                      * 设置Project name
-                     * @param ProjectName Project name
+                     * @param _projectName Project name
+                     * 
                      */
                     void SetProjectName(const std::string& _projectName);
 
                     /**
                      * 判断参数 ProjectName 是否已赋值
                      * @return ProjectName 是否已赋值
+                     * 
                      */
                     bool ProjectNameHasBeenSet() const;
 
                     /**
                      * 获取Migration source information
                      * @return SrcInfo Migration source information
+                     * 
                      */
                     SrcInfo GetSrcInfo() const;
 
                     /**
                      * 设置Migration source information
-                     * @param SrcInfo Migration source information
+                     * @param _srcInfo Migration source information
+                     * 
                      */
                     void SetSrcInfo(const SrcInfo& _srcInfo);
 
                     /**
                      * 判断参数 SrcInfo 是否已赋值
                      * @return SrcInfo 是否已赋值
+                     * 
                      */
                     bool SrcInfoHasBeenSet() const;
 
                     /**
                      * 获取Migration time information
                      * @return MigrationTimeLine Migration time information
+                     * 
                      */
                     TimeObj GetMigrationTimeLine() const;
 
                     /**
                      * 设置Migration time information
-                     * @param MigrationTimeLine Migration time information
+                     * @param _migrationTimeLine Migration time information
+                     * 
                      */
                     void SetMigrationTimeLine(const TimeObj& _migrationTimeLine);
 
                     /**
                      * 判断参数 MigrationTimeLine 是否已赋值
                      * @return MigrationTimeLine 是否已赋值
+                     * 
                      */
                     bool MigrationTimeLineHasBeenSet() const;
 
                     /**
                      * 获取Status update time
                      * @return Updated Status update time
+                     * 
                      */
                     std::string GetUpdated() const;
 
                     /**
                      * 设置Status update time
-                     * @param Updated Status update time
+                     * @param _updated Status update time
+                     * 
                      */
                     void SetUpdated(const std::string& _updated);
 
                     /**
                      * 判断参数 Updated 是否已赋值
                      * @return Updated 是否已赋值
+                     * 
                      */
                     bool UpdatedHasBeenSet() const;
 
                     /**
                      * 获取Migration destination information
                      * @return DstInfo Migration destination information
+                     * 
                      */
                     DstInfo GetDstInfo() const;
 
                     /**
                      * 设置Migration destination information
-                     * @param DstInfo Migration destination information
+                     * @param _dstInfo Migration destination information
+                     * 
                      */
                     void SetDstInfo(const DstInfo& _dstInfo);
 
                     /**
                      * 判断参数 DstInfo 是否已赋值
                      * @return DstInfo 是否已赋值
+                     * 
                      */
                     bool DstInfoHasBeenSet() const;
 

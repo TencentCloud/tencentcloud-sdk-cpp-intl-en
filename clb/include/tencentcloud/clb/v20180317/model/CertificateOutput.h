@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
                      * @return SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+                     * 
                      */
                     std::string GetSSLMode() const;
 
                     /**
                      * 设置Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
-                     * @param SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+                     * @param _sSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+                     * 
                      */
                     void SetSSLMode(const std::string& _sSLMode);
 
                     /**
                      * 判断参数 SSLMode 是否已赋值
                      * @return SSLMode 是否已赋值
+                     * 
                      */
                     bool SSLModeHasBeenSet() const;
 
                     /**
                      * 获取Server certificate ID.
                      * @return CertId Server certificate ID.
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Server certificate ID.
-                     * @param CertId Server certificate ID.
+                     * @param _certId Server certificate ID.
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CertCaId Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCertCaId() const;
 
                     /**
                      * 设置Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CertCaId Client certificate ID.
+                     * @param _certCaId Client certificate ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertCaId(const std::string& _certCaId);
 
                     /**
                      * 判断参数 CertCaId 是否已赋值
                      * @return CertCaId 是否已赋值
+                     * 
                      */
                     bool CertCaIdHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ExtCertIds IDs of extra server certificates
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetExtCertIds() const;
 
                     /**
                      * 设置IDs of extra server certificates
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ExtCertIds IDs of extra server certificates
+                     * @param _extCertIds IDs of extra server certificates
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtCertIds(const std::vector<std::string>& _extCertIds);
 
                     /**
                      * 判断参数 ExtCertIds 是否已赋值
                      * @return ExtCertIds 是否已赋值
+                     * 
                      */
                     bool ExtCertIdsHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The total cluster spec.
                      * @return Total The total cluster spec.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取The used cluster spec.
                      * @return Used The used cluster spec.
+                     * 
                      */
                     int64_t GetUsed() const;
 
                     /**
                      * 判断参数 Used 是否已赋值
                      * @return Used 是否已赋值
+                     * 
                      */
                     bool UsedHasBeenSet() const;
 
                     /**
                      * 获取The available cluster spec.
                      * @return Available The available cluster spec.
+                     * 
                      */
                     int64_t GetAvailable() const;
 
                     /**
                      * 判断参数 Available 是否已赋值
                      * @return Available 是否已赋值
+                     * 
                      */
                     bool AvailableHasBeenSet() const;
 

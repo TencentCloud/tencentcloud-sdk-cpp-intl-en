@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取ENI instance ID, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置ENI instance ID, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the specified private IP addresses.
                      * @return PrivateIpAddresses Information of the specified private IP addresses.
+                     * 
                      */
                     std::vector<PrivateIpAddressSpecification> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置Information of the specified private IP addresses.
-                     * @param PrivateIpAddresses Information of the specified private IP addresses.
+                     * @param _privateIpAddresses Information of the specified private IP addresses.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<PrivateIpAddressSpecification>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 
                     /**
                      * 获取Region information of the ECM node, such as `ap-xian-ecm`.
                      * @return EcmRegion Region information of the ECM node, such as `ap-xian-ecm`.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置Region information of the ECM node, such as `ap-xian-ecm`.
-                     * @param EcmRegion Region information of the ECM node, such as `ap-xian-ecm`.
+                     * @param _ecmRegion Region information of the ECM node, such as `ap-xian-ecm`.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 

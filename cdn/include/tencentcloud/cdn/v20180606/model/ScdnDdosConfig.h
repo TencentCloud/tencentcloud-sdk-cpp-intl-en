@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable DDoS defense. Valid values: `on` and `off`.
                      * @return Switch Whether to enable DDoS defense. Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable DDoS defense. Valid values: `on` and `off`.
-                     * @param Switch Whether to enable DDoS defense. Valid values: `on` and `off`.
+                     * @param _switch Whether to enable DDoS defense. Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ID Project ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ID Project ID
+                     * @param _iD Project ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Reporting type
                      * @return ReportType Reporting type
+                     * 
                      */
                     std::string GetReportType() const;
 
                     /**
                      * 设置Reporting type
-                     * @param ReportType Reporting type
+                     * @param _reportType Reporting type
+                     * 
                      */
                     void SetReportType(const std::string& _reportType);
 
                     /**
                      * 判断参数 ReportType 是否已赋值
                      * @return ReportType 是否已赋值
+                     * 
                      */
                     bool ReportTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceID Instance ID
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceID Instance ID
+                     * @param _instanceID Instance ID
+                     * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 

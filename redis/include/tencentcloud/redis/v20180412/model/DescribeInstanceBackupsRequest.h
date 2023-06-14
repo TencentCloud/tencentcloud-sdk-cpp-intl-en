@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Number of backups returned per page. Default value: `20`. Maximum value: `100`.
                      * @return Limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of backups returned per page. Default value: `20`. Maximum value: `100`.
-                     * @param Limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+                     * @param _limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
                      * @return Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
-                     * @param Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * @param _offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
                      * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-                     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * @param _instanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
                      * @return BeginTime Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
-                     * @param BeginTime Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+                     * @param _beginTime Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
                      * @return EndTime End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
-                     * @param EndTime End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+                     * @param _endTime End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -147,6 +162,7 @@ namespace TencentCloud
 `4`: Conversion to RDB has been completed.
 `-1`: The backup expired.
 `-2`: The backup has been deleted.
+                     * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
@@ -158,37 +174,42 @@ namespace TencentCloud
 `4`: Conversion to RDB has been completed.
 `-1`: The backup expired.
 `-2`: The backup has been deleted.
-                     * @param Status Backup task status:
+                     * @param _status Backup task status:
 `1`: The backup is in the process.
 `2`: The backup is normal.
 `3`: The backup is being converted to an RDB file.
 `4`: Conversion to RDB has been completed.
 `-1`: The backup expired.
 `-2`: The backup has been deleted.
+                     * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Instance name, which can be fuzzily searched.
                      * @return InstanceName Instance name, which can be fuzzily searched.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name, which can be fuzzily searched.
-                     * @param InstanceName Instance name, which can be fuzzily searched.
+                     * @param _instanceName Instance name, which can be fuzzily searched.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 

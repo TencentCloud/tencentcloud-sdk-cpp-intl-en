@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Client IP in dotted-decimal notation.
                      * @return ClientIp Client IP in dotted-decimal notation.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置Client IP in dotted-decimal notation.
-                     * @param ClientIp Client IP in dotted-decimal notation.
+                     * @param _clientIp Client IP in dotted-decimal notation.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取District where the client is located.
                      * @return Province District where the client is located.
+                     * 
                      */
                     std::string GetProvince() const;
 
                     /**
                      * 设置District where the client is located.
-                     * @param Province District where the client is located.
+                     * @param _province District where the client is located.
+                     * 
                      */
                     void SetProvince(const std::string& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
                     /**
                      * 获取Total traffic.
                      * @return TotalFlux Total traffic.
+                     * 
                      */
                     double GetTotalFlux() const;
 
                     /**
                      * 设置Total traffic.
-                     * @param TotalFlux Total traffic.
+                     * @param _totalFlux Total traffic.
+                     * 
                      */
                     void SetTotalFlux(const double& _totalFlux);
 
                     /**
                      * 判断参数 TotalFlux 是否已赋值
                      * @return TotalFlux 是否已赋值
+                     * 
                      */
                     bool TotalFluxHasBeenSet() const;
 
                     /**
                      * 获取Total number of requests.
                      * @return TotalRequest Total number of requests.
+                     * 
                      */
                     uint64_t GetTotalRequest() const;
 
                     /**
                      * 设置Total number of requests.
-                     * @param TotalRequest Total number of requests.
+                     * @param _totalRequest Total number of requests.
+                     * 
                      */
                     void SetTotalRequest(const uint64_t& _totalRequest);
 
                     /**
                      * 判断参数 TotalRequest 是否已赋值
                      * @return TotalRequest 是否已赋值
+                     * 
                      */
                     bool TotalRequestHasBeenSet() const;
 
                     /**
                      * 获取Total number of failed requests.
                      * @return TotalFailedRequest Total number of failed requests.
+                     * 
                      */
                     uint64_t GetTotalFailedRequest() const;
 
                     /**
                      * 设置Total number of failed requests.
-                     * @param TotalFailedRequest Total number of failed requests.
+                     * @param _totalFailedRequest Total number of failed requests.
+                     * 
                      */
                     void SetTotalFailedRequest(const uint64_t& _totalFailedRequest);
 
                     /**
                      * 判断参数 TotalFailedRequest 是否已赋值
                      * @return TotalFailedRequest 是否已赋值
+                     * 
                      */
                     bool TotalFailedRequestHasBeenSet() const;
 
                     /**
                      * 获取Country/region where the client is located.
                      * @return CountryArea Country/region where the client is located.
+                     * 
                      */
                     std::string GetCountryArea() const;
 
                     /**
                      * 设置Country/region where the client is located.
-                     * @param CountryArea Country/region where the client is located.
+                     * @param _countryArea Country/region where the client is located.
+                     * 
                      */
                     void SetCountryArea(const std::string& _countryArea);
 
                     /**
                      * 判断参数 CountryArea 是否已赋值
                      * @return CountryArea 是否已赋值
+                     * 
                      */
                     bool CountryAreaHasBeenSet() const;
 

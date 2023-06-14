@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Referred security groups.
                      * @return ReferredSecurityGroupSet Referred security groups.
+                     * 
                      */
                     std::vector<ReferredSecurityGroup> GetReferredSecurityGroupSet() const;
 
                     /**
                      * 判断参数 ReferredSecurityGroupSet 是否已赋值
                      * @return ReferredSecurityGroupSet 是否已赋值
+                     * 
                      */
                     bool ReferredSecurityGroupSetHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of dcdbt-ow728lmc.
                      * @return InstanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of dcdbt-ow728lmc.
-                     * @param InstanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * @param _instanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Parameter list. Each element is a combination of `Param` and `Value`.
                      * @return Params Parameter list. Each element is a combination of `Param` and `Value`.
+                     * 
                      */
                     std::vector<DBParamValue> GetParams() const;
 
                     /**
                      * 设置Parameter list. Each element is a combination of `Param` and `Value`.
-                     * @param Params Parameter list. Each element is a combination of `Param` and `Value`.
+                     * @param _params Parameter list. Each element is a combination of `Param` and `Value`.
+                     * 
                      */
                     void SetParams(const std::vector<DBParamValue>& _params);
 
                     /**
                      * 判断参数 Params 是否已赋值
                      * @return Params 是否已赋值
+                     * 
                      */
                     bool ParamsHasBeenSet() const;
 

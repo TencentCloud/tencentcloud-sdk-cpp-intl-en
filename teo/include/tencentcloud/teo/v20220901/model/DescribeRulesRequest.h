@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site
-                     * @param ZoneId ID of the site
+                     * @param _zoneId ID of the site
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -66,20 +69,23 @@ namespace TencentCloud
 <li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
                      * @return Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
 <li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter conditions. Each filter condition can have up to 20 entries. See below for details:
 <li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
-                     * @param Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+                     * @param _filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
 <li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -51,72 +51,84 @@ namespace TencentCloud
                     /**
                      * 获取The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
                      * @return Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
-                     * @param Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+                     * @param _status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Error code. `0`: The task succeeded; other values: The task failed.
                      * @return ErrCode Error code. `0`: The task succeeded; other values: The task failed.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Error code. `0`: The task succeeded; other values: The task failed.
-                     * @param ErrCode Error code. `0`: The task succeeded; other values: The task failed.
+                     * @param _errCode Error code. `0`: The task succeeded; other values: The task failed.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取The error message.
                      * @return Message The error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置The error message.
-                     * @param Message The error message.
+                     * @param _message The error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取The input of the intelligent highlight generation task.
                      * @return Input The input of the intelligent highlight generation task.
+                     * 
                      */
                     AiAnalysisTaskHighlightInput GetInput() const;
 
                     /**
                      * 设置The input of the intelligent highlight generation task.
-                     * @param Input The input of the intelligent highlight generation task.
+                     * @param _input The input of the intelligent highlight generation task.
+                     * 
                      */
                     void SetInput(const AiAnalysisTaskHighlightInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
@@ -125,20 +137,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Output The output of the intelligent highlight generation task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskHighlightOutput GetOutput() const;
 
                     /**
                      * 设置The output of the intelligent highlight generation task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Output The output of the intelligent highlight generation task.
+                     * @param _output The output of the intelligent highlight generation task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutput(const AiAnalysisTaskHighlightOutput& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 

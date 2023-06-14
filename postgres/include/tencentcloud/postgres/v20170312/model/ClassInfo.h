@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Specification ID
                      * @return SpecCode Specification ID
+                     * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
                      * 设置Specification ID
-                     * @param SpecCode Specification ID
+                     * @param _specCode Specification ID
+                     * 
                      */
                     void SetSpecCode(const std::string& _specCode);
 
                     /**
                      * 判断参数 SpecCode 是否已赋值
                      * @return SpecCode 是否已赋值
+                     * 
                      */
                     bool SpecCodeHasBeenSet() const;
 
                     /**
                      * 获取Number of CPU cores
                      * @return CPU Number of CPU cores
+                     * 
                      */
                     uint64_t GetCPU() const;
 
                     /**
                      * 设置Number of CPU cores
-                     * @param CPU Number of CPU cores
+                     * @param _cPU Number of CPU cores
+                     * 
                      */
                     void SetCPU(const uint64_t& _cPU);
 
                     /**
                      * 判断参数 CPU 是否已赋值
                      * @return CPU 是否已赋值
+                     * 
                      */
                     bool CPUHasBeenSet() const;
 
                     /**
                      * 获取Memory size in MB
                      * @return Memory Memory size in MB
+                     * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
                      * 设置Memory size in MB
-                     * @param Memory Memory size in MB
+                     * @param _memory Memory size in MB
+                     * 
                      */
                     void SetMemory(const uint64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Maximum storage capacity in GB supported by this specification
                      * @return MaxStorage Maximum storage capacity in GB supported by this specification
+                     * 
                      */
                     uint64_t GetMaxStorage() const;
 
                     /**
                      * 设置Maximum storage capacity in GB supported by this specification
-                     * @param MaxStorage Maximum storage capacity in GB supported by this specification
+                     * @param _maxStorage Maximum storage capacity in GB supported by this specification
+                     * 
                      */
                     void SetMaxStorage(const uint64_t& _maxStorage);
 
                     /**
                      * 判断参数 MaxStorage 是否已赋值
                      * @return MaxStorage 是否已赋值
+                     * 
                      */
                     bool MaxStorageHasBeenSet() const;
 
                     /**
                      * 获取Minimum storage capacity in GB supported by this specification
                      * @return MinStorage Minimum storage capacity in GB supported by this specification
+                     * 
                      */
                     uint64_t GetMinStorage() const;
 
                     /**
                      * 设置Minimum storage capacity in GB supported by this specification
-                     * @param MinStorage Minimum storage capacity in GB supported by this specification
+                     * @param _minStorage Minimum storage capacity in GB supported by this specification
+                     * 
                      */
                     void SetMinStorage(const uint64_t& _minStorage);
 
                     /**
                      * 判断参数 MinStorage 是否已赋值
                      * @return MinStorage 是否已赋值
+                     * 
                      */
                     bool MinStorageHasBeenSet() const;
 
                     /**
                      * 获取Estimated QPS for this specification
                      * @return QPS Estimated QPS for this specification
+                     * 
                      */
                     uint64_t GetQPS() const;
 
                     /**
                      * 设置Estimated QPS for this specification
-                     * @param QPS Estimated QPS for this specification
+                     * @param _qPS Estimated QPS for this specification
+                     * 
                      */
                     void SetQPS(const uint64_t& _qPS);
 
                     /**
                      * 判断参数 QPS 是否已赋值
                      * @return QPS 是否已赋值
+                     * 
                      */
                     bool QPSHasBeenSet() const;
 

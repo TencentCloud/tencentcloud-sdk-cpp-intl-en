@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site
-                     * @param ZoneId ID of the site
+                     * @param _zoneId ID of the site
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Subdomain name of the site
                      * @return Entity Subdomain name of the site
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置Subdomain name of the site
-                     * @param Entity Subdomain name of the site
+                     * @param _entity Subdomain name of the site
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
                     /**
                      * 获取Name of the file specified to be returned
                      * @return Name Name of the file specified to be returned
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the file specified to be returned
-                     * @param Name Name of the file specified to be returned
+                     * @param _name Name of the file specified to be returned
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Content of the custom page
                      * @return Content Content of the custom page
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Content of the custom page
-                     * @param Content Content of the custom page
+                     * @param _content Content of the custom page
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

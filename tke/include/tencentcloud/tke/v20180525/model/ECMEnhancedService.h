@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether Cloud Monitoring is enabled
                      * @return SecurityService Whether Cloud Monitoring is enabled
+                     * 
                      */
                     ECMRunMonitorServiceEnabled GetSecurityService() const;
 
                     /**
                      * 设置Whether Cloud Monitoring is enabled
-                     * @param SecurityService Whether Cloud Monitoring is enabled
+                     * @param _securityService Whether Cloud Monitoring is enabled
+                     * 
                      */
                     void SetSecurityService(const ECMRunMonitorServiceEnabled& _securityService);
 
                     /**
                      * 判断参数 SecurityService 是否已赋值
                      * @return SecurityService 是否已赋值
+                     * 
                      */
                     bool SecurityServiceHasBeenSet() const;
 
                     /**
                      * 获取Whether Cloud Workload Protection is enabled
                      * @return MonitorService Whether Cloud Workload Protection is enabled
+                     * 
                      */
                     ECMRunSecurityServiceEnabled GetMonitorService() const;
 
                     /**
                      * 设置Whether Cloud Workload Protection is enabled
-                     * @param MonitorService Whether Cloud Workload Protection is enabled
+                     * @param _monitorService Whether Cloud Workload Protection is enabled
+                     * 
                      */
                     void SetMonitorService(const ECMRunSecurityServiceEnabled& _monitorService);
 
                     /**
                      * 判断参数 MonitorService 是否已赋值
                      * @return MonitorService 是否已赋值
+                     * 
                      */
                     bool MonitorServiceHasBeenSet() const;
 

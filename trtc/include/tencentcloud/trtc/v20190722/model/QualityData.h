@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The quality data.
                      * @return Content The quality data.
+                     * 
                      */
                     std::vector<TimeValue> GetContent() const;
 
                     /**
                      * 设置The quality data.
-                     * @param Content The quality data.
+                     * @param _content The quality data.
+                     * 
                      */
                     void SetContent(const std::vector<TimeValue>& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取The user ID.
                      * @return UserId The user ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user ID.
-                     * @param UserId The user ID.
+                     * @param _userId The user ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -88,38 +94,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PeerId The remote user ID. An empty string indicates that the data is upstream data.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPeerId() const;
 
                     /**
                      * 设置The remote user ID. An empty string indicates that the data is upstream data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PeerId The remote user ID. An empty string indicates that the data is upstream data.
+                     * @param _peerId The remote user ID. An empty string indicates that the data is upstream data.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPeerId(const std::string& _peerId);
 
                     /**
                      * 判断参数 PeerId 是否已赋值
                      * @return PeerId 是否已赋值
+                     * 
                      */
                     bool PeerIdHasBeenSet() const;
 
                     /**
                      * 获取The data type.
                      * @return DataType The data type.
+                     * 
                      */
                     std::string GetDataType() const;
 
                     /**
                      * 设置The data type.
-                     * @param DataType The data type.
+                     * @param _dataType The data type.
+                     * 
                      */
                     void SetDataType(const std::string& _dataType);
 
                     /**
                      * 判断参数 DataType 是否已赋值
                      * @return DataType 是否已赋值
+                     * 
                      */
                     bool DataTypeHasBeenSet() const;
 

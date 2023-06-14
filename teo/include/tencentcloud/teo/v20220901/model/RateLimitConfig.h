@@ -56,6 +56,7 @@ namespace TencentCloud
                      * @return Switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,33 +64,38 @@ namespace TencentCloud
                      * 设置Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Switch. Values:
+                     * @param _switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
                      * @return RateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     std::vector<RateLimitUserRule> GetRateLimitUserRules() const;
 
                     /**
                      * 设置The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
-                     * @param RateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+                     * @param _rateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     void SetRateLimitUserRules(const std::vector<RateLimitUserRule>& _rateLimitUserRules);
 
                     /**
                      * 判断参数 RateLimitUserRules 是否已赋值
                      * @return RateLimitUserRules 是否已赋值
+                     * 
                      */
                     bool RateLimitUserRulesHasBeenSet() const;
 
@@ -98,20 +104,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RateLimitTemplate The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RateLimitTemplate GetRateLimitTemplate() const;
 
                     /**
                      * 设置The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RateLimitTemplate The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
+                     * @param _rateLimitTemplate The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRateLimitTemplate(const RateLimitTemplate& _rateLimitTemplate);
 
                     /**
                      * 判断参数 RateLimitTemplate 是否已赋值
                      * @return RateLimitTemplate 是否已赋值
+                     * 
                      */
                     bool RateLimitTemplateHasBeenSet() const;
 
@@ -120,20 +129,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RateLimitIntelligence GetRateLimitIntelligence() const;
 
                     /**
                      * 设置The client filtering settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
+                     * @param _rateLimitIntelligence The client filtering settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRateLimitIntelligence(const RateLimitIntelligence& _rateLimitIntelligence);
 
                     /**
                      * 判断参数 RateLimitIntelligence 是否已赋值
                      * @return RateLimitIntelligence 是否已赋值
+                     * 
                      */
                     bool RateLimitIntelligenceHasBeenSet() const;
 
@@ -142,20 +154,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<RateLimitUserRule> GetRateLimitCustomizes() const;
 
                     /**
                      * 设置The custom rate limiting rules. If it is `null`, the previous settings is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
+                     * @param _rateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRateLimitCustomizes(const std::vector<RateLimitUserRule>& _rateLimitCustomizes);
 
                     /**
                      * 判断参数 RateLimitCustomizes 是否已赋值
                      * @return RateLimitCustomizes 是否已赋值
+                     * 
                      */
                     bool RateLimitCustomizesHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Integration ID
                      * @return IntegrationId Integration ID
+                     * 
                      */
                     std::string GetIntegrationId() const;
 
                     /**
                      * 设置Integration ID
-                     * @param IntegrationId Integration ID
+                     * @param _integrationId Integration ID
+                     * 
                      */
                     void SetIntegrationId(const std::string& _integrationId);
 
                     /**
                      * 判断参数 IntegrationId 是否已赋值
                      * @return IntegrationId 是否已赋值
+                     * 
                      */
                     bool IntegrationIdHasBeenSet() const;
 
                     /**
                      * 获取Integration type
                      * @return Kind Integration type
+                     * 
                      */
                     std::string GetKind() const;
 
                     /**
                      * 设置Integration type
-                     * @param Kind Integration type
+                     * @param _kind Integration type
+                     * 
                      */
                     void SetKind(const std::string& _kind);
 
                     /**
                      * 判断参数 Kind 是否已赋值
                      * @return Kind 是否已赋值
+                     * 
                      */
                     bool KindHasBeenSet() const;
 
                     /**
                      * 获取Integration content
                      * @return Content Integration content
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Integration content
-                     * @param Content Integration content
+                     * @param _content Integration content
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Integration description
                      * @return Description Integration description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Integration description
-                     * @param Description Integration description
+                     * @param _description Integration description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GrafanaURL Grafana redirection address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGrafanaURL() const;
 
                     /**
                      * 设置Grafana redirection address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GrafanaURL Grafana redirection address
+                     * @param _grafanaURL Grafana redirection address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGrafanaURL(const std::string& _grafanaURL);
 
                     /**
                      * 判断参数 GrafanaURL 是否已赋值
                      * @return GrafanaURL 是否已赋值
+                     * 
                      */
                     bool GrafanaURLHasBeenSet() const;
 

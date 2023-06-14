@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AccessKey Access key
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AccessKeyDetail GetAccessKey() const;
 
                     /**
                      * 判断参数 AccessKey 是否已赋值
                      * @return AccessKey 是否已赋值
+                     * 
                      */
                     bool AccessKeyHasBeenSet() const;
 

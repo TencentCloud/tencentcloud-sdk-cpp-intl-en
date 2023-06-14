@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The trend information.
                      * @return Trend The trend information.
+                     * 
                      */
                     std::vector<Trend> GetTrend() const;
 
                     /**
                      * 判断参数 Trend 是否已赋值
                      * @return Trend 是否已赋值
+                     * 
                      */
                     bool TrendHasBeenSet() const;
 

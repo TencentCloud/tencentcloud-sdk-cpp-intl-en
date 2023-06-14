@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Credentials required for instance access
                      * @return Credentials Credentials required for instance access
+                     * 
                      */
                     Credentials GetCredentials() const;
 
                     /**
                      * 设置Credentials required for instance access
-                     * @param Credentials Credentials required for instance access
+                     * @param _credentials Credentials required for instance access
+                     * 
                      */
                     void SetCredentials(const Credentials& _credentials);
 
                     /**
                      * 判断参数 Credentials 是否已赋值
                      * @return Credentials 是否已赋值
+                     * 
                      */
                     bool CredentialsHasBeenSet() const;
 
                     /**
                      * 获取Service deployment ID
                      * @return FleetId Service deployment ID
+                     * 
                      */
                     std::string GetFleetId() const;
 
                     /**
                      * 设置Service deployment ID
-                     * @param FleetId Service deployment ID
+                     * @param _fleetId Service deployment ID
+                     * 
                      */
                     void SetFleetId(const std::string& _fleetId);
 
                     /**
                      * 判断参数 FleetId 是否已赋值
                      * @return FleetId 是否已赋值
+                     * 
                      */
                     bool FleetIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Public IP of instance
                      * @return IpAddress Public IP of instance
+                     * 
                      */
                     std::string GetIpAddress() const;
 
                     /**
                      * 设置Public IP of instance
-                     * @param IpAddress Public IP of instance
+                     * @param _ipAddress Public IP of instance
+                     * 
                      */
                     void SetIpAddress(const std::string& _ipAddress);
 
                     /**
                      * 判断参数 IpAddress 是否已赋值
                      * @return IpAddress 是否已赋值
+                     * 
                      */
                     bool IpAddressHasBeenSet() const;
 
                     /**
                      * 获取OS
                      * @return OperatingSystem OS
+                     * 
                      */
                     std::string GetOperatingSystem() const;
 
                     /**
                      * 设置OS
-                     * @param OperatingSystem OS
+                     * @param _operatingSystem OS
+                     * 
                      */
                     void SetOperatingSystem(const std::string& _operatingSystem);
 
                     /**
                      * 判断参数 OperatingSystem 是否已赋值
                      * @return OperatingSystem 是否已赋值
+                     * 
                      */
                     bool OperatingSystemHasBeenSet() const;
 

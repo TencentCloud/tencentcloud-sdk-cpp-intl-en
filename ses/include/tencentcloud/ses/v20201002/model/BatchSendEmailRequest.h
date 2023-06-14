@@ -54,6 +54,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
                      * @return FromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
 sender &lt;email address&gt;. For example:
 Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+                     * 
                      */
                     std::string GetFromEmailAddress() const;
 
@@ -61,213 +62,248 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
                      * 设置Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
 sender &lt;email address&gt;. For example:
 Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
-                     * @param FromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+                     * @param _fromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
 sender &lt;email address&gt;. For example:
 Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+                     * 
                      */
                     void SetFromEmailAddress(const std::string& _fromEmailAddress);
 
                     /**
                      * 判断参数 FromEmailAddress 是否已赋值
                      * @return FromEmailAddress 是否已赋值
+                     * 
                      */
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
                      * 获取Recipient group ID
                      * @return ReceiverId Recipient group ID
+                     * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
                      * 设置Recipient group ID
-                     * @param ReceiverId Recipient group ID
+                     * @param _receiverId Recipient group ID
+                     * 
                      */
                     void SetReceiverId(const uint64_t& _receiverId);
 
                     /**
                      * 判断参数 ReceiverId 是否已赋值
                      * @return ReceiverId 是否已赋值
+                     * 
                      */
                     bool ReceiverIdHasBeenSet() const;
 
                     /**
                      * 获取Email subject
                      * @return Subject Email subject
+                     * 
                      */
                     std::string GetSubject() const;
 
                     /**
                      * 设置Email subject
-                     * @param Subject Email subject
+                     * @param _subject Email subject
+                     * 
                      */
                     void SetSubject(const std::string& _subject);
 
                     /**
                      * 判断参数 Subject 是否已赋值
                      * @return Subject 是否已赋值
+                     * 
                      */
                     bool SubjectHasBeenSet() const;
 
                     /**
                      * 获取Task type. `1`: immediate; `2`: scheduled; `3`: recurring
                      * @return TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+                     * 
                      */
                     uint64_t GetTaskType() const;
 
                     /**
                      * 设置Task type. `1`: immediate; `2`: scheduled; `3`: recurring
-                     * @param TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+                     * @param _taskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+                     * 
                      */
                     void SetTaskType(const uint64_t& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * 
                      */
                     std::string GetReplyToAddresses() const;
 
                     /**
                      * 设置Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
-                     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * @param _replyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * 
                      */
                     void SetReplyToAddresses(const std::string& _replyToAddresses);
 
                     /**
                      * 判断参数 ReplyToAddresses 是否已赋值
                      * @return ReplyToAddresses 是否已赋值
+                     * 
                      */
                     bool ReplyToAddressesHasBeenSet() const;
 
                     /**
                      * 获取Template when emails are sent using a template
                      * @return Template Template when emails are sent using a template
+                     * 
                      */
                     Template GetTemplate() const;
 
                     /**
                      * 设置Template when emails are sent using a template
-                     * @param Template Template when emails are sent using a template
+                     * @param _template Template when emails are sent using a template
+                     * 
                      */
                     void SetTemplate(const Template& _template);
 
                     /**
                      * 判断参数 Template 是否已赋值
                      * @return Template 是否已赋值
+                     * 
                      */
                     bool TemplateHasBeenSet() const;
 
                     /**
                      * 获取Disused
                      * @return Simple Disused
+                     * 
                      */
                     Simple GetSimple() const;
 
                     /**
                      * 设置Disused
-                     * @param Simple Disused
+                     * @param _simple Disused
+                     * 
                      */
                     void SetSimple(const Simple& _simple);
 
                     /**
                      * 判断参数 Simple 是否已赋值
                      * @return Simple 是否已赋值
+                     * 
                      */
                     bool SimpleHasBeenSet() const;
 
                     /**
                      * 获取Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
                      * @return Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+                     * 
                      */
                     std::vector<Attachment> GetAttachments() const;
 
                     /**
                      * 设置Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
-                     * @param Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+                     * @param _attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+                     * 
                      */
                     void SetAttachments(const std::vector<Attachment>& _attachments);
 
                     /**
                      * 判断参数 Attachments 是否已赋值
                      * @return Attachments 是否已赋值
+                     * 
                      */
                     bool AttachmentsHasBeenSet() const;
 
                     /**
                      * 获取Parameter required for a recurring sending task
                      * @return CycleParam Parameter required for a recurring sending task
+                     * 
                      */
                     CycleEmailParam GetCycleParam() const;
 
                     /**
                      * 设置Parameter required for a recurring sending task
-                     * @param CycleParam Parameter required for a recurring sending task
+                     * @param _cycleParam Parameter required for a recurring sending task
+                     * 
                      */
                     void SetCycleParam(const CycleEmailParam& _cycleParam);
 
                     /**
                      * 判断参数 CycleParam 是否已赋值
                      * @return CycleParam 是否已赋值
+                     * 
                      */
                     bool CycleParamHasBeenSet() const;
 
                     /**
                      * 获取Parameter required for a scheduled sending task
                      * @return TimedParam Parameter required for a scheduled sending task
+                     * 
                      */
                     TimedEmailParam GetTimedParam() const;
 
                     /**
                      * 设置Parameter required for a scheduled sending task
-                     * @param TimedParam Parameter required for a scheduled sending task
+                     * @param _timedParam Parameter required for a scheduled sending task
+                     * 
                      */
                     void SetTimedParam(const TimedEmailParam& _timedParam);
 
                     /**
                      * 判断参数 TimedParam 是否已赋值
                      * @return TimedParam 是否已赋值
+                     * 
                      */
                     bool TimedParamHasBeenSet() const;
 
                     /**
                      * 获取Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
                      * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * 
                      */
                     std::string GetUnsubscribe() const;
 
                     /**
                      * 设置Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
-                     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * @param _unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * 
                      */
                     void SetUnsubscribe(const std::string& _unsubscribe);
 
                     /**
                      * 判断参数 Unsubscribe 是否已赋值
                      * @return Unsubscribe 是否已赋值
+                     * 
                      */
                     bool UnsubscribeHasBeenSet() const;
 
                     /**
                      * 获取Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
                      * @return ADLocation Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+                     * 
                      */
                     uint64_t GetADLocation() const;
 
                     /**
                      * 设置Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
-                     * @param ADLocation Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+                     * @param _aDLocation Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+                     * 
                      */
                     void SetADLocation(const uint64_t& _aDLocation);
 
                     /**
                      * 判断参数 ADLocation 是否已赋值
                      * @return ADLocation 是否已赋值
+                     * 
                      */
                     bool ADLocationHasBeenSet() const;
 

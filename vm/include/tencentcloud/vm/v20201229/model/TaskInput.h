@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取This field is optional and indicates the data ID assigned by you to the object to be detected for easier file identification and management.<br>It **can contain up to 64 letters, digits, and special symbols (_-@#)**.
                      * @return DataId This field is optional and indicates the data ID assigned by you to the object to be detected for easier file identification and management.<br>It **can contain up to 64 letters, digits, and special symbols (_-@#)**.
+                     * 
                      */
                     std::string GetDataId() const;
 
                     /**
                      * 设置This field is optional and indicates the data ID assigned by you to the object to be detected for easier file identification and management.<br>It **can contain up to 64 letters, digits, and special symbols (_-@#)**.
-                     * @param DataId This field is optional and indicates the data ID assigned by you to the object to be detected for easier file identification and management.<br>It **can contain up to 64 letters, digits, and special symbols (_-@#)**.
+                     * @param _dataId This field is optional and indicates the data ID assigned by you to the object to be detected for easier file identification and management.<br>It **can contain up to 64 letters, digits, and special symbols (_-@#)**.
+                     * 
                      */
                     void SetDataId(const std::string& _dataId);
 
                     /**
                      * 判断参数 DataId 是否已赋值
                      * @return DataId 是否已赋值
+                     * 
                      */
                     bool DataIdHasBeenSet() const;
 
                     /**
                      * 获取This field is optional and indicates the name of a moderation task for subsequent query and management of moderation tasks.
                      * @return Name This field is optional and indicates the name of a moderation task for subsequent query and management of moderation tasks.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置This field is optional and indicates the name of a moderation task for subsequent query and management of moderation tasks.
-                     * @param Name This field is optional and indicates the name of a moderation task for subsequent query and management of moderation tasks.
+                     * @param _name This field is optional and indicates the name of a moderation task for subsequent query and management of moderation tasks.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取This field is required and indicates the access parameter of the moderated file, which is used to get the moderated media file and contains the access type and address.
                      * @return Input This field is required and indicates the access parameter of the moderated file, which is used to get the moderated media file and contains the access type and address.
+                     * 
                      */
                     StorageInfo GetInput() const;
 
                     /**
                      * 设置This field is required and indicates the access parameter of the moderated file, which is used to get the moderated media file and contains the access type and address.
-                     * @param Input This field is required and indicates the access parameter of the moderated file, which is used to get the moderated media file and contains the access type and address.
+                     * @param _input This field is required and indicates the access parameter of the moderated file, which is used to get the moderated media file and contains the access type and address.
+                     * 
                      */
                     void SetInput(const StorageInfo& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 

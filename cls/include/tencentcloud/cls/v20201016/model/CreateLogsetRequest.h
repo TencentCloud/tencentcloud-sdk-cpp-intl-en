@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Logset name, which must be unique
                      * @return LogsetName Logset name, which must be unique
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name, which must be unique
-                     * @param LogsetName Logset name, which must be unique
+                     * @param _logsetName Logset name, which must be unique
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
                     /**
                      * 获取Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
                      * @return Tags Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
-                     * @param Tags Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
+                     * @param _tags Tag description list. Up to 10 tag key-value pairs are supported and must be unique.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

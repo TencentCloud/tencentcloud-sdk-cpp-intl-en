@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Sets user UIN
                      * @return OpUin Sets user UIN
+                     * 
                      */
                     uint64_t GetOpUin() const;
 
                     /**
                      * 设置Sets user UIN
-                     * @param OpUin Sets user UIN
+                     * @param _opUin Sets user UIN
+                     * 
                      */
                     void SetOpUin(const uint64_t& _opUin);
 
                     /**
                      * 判断参数 OpUin 是否已赋值
                      * @return OpUin 是否已赋值
+                     * 
                      */
                     bool OpUinHasBeenSet() const;
 
                     /**
                      * 获取Sets login protection
                      * @return LoginFlag Sets login protection
+                     * 
                      */
                     LoginActionMfaFlag GetLoginFlag() const;
 
                     /**
                      * 设置Sets login protection
-                     * @param LoginFlag Sets login protection
+                     * @param _loginFlag Sets login protection
+                     * 
                      */
                     void SetLoginFlag(const LoginActionMfaFlag& _loginFlag);
 
                     /**
                      * 判断参数 LoginFlag 是否已赋值
                      * @return LoginFlag 是否已赋值
+                     * 
                      */
                     bool LoginFlagHasBeenSet() const;
 
                     /**
                      * 获取Sets operation protection
                      * @return ActionFlag Sets operation protection
+                     * 
                      */
                     LoginActionMfaFlag GetActionFlag() const;
 
                     /**
                      * 设置Sets operation protection
-                     * @param ActionFlag Sets operation protection
+                     * @param _actionFlag Sets operation protection
+                     * 
                      */
                     void SetActionFlag(const LoginActionMfaFlag& _actionFlag);
 
                     /**
                      * 判断参数 ActionFlag 是否已赋值
                      * @return ActionFlag 是否已赋值
+                     * 
                      */
                     bool ActionFlagHasBeenSet() const;
 

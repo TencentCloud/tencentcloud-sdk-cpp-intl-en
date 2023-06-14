@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the notification to be deleted.
                      * @return AutoScalingNotificationId ID of the notification to be deleted.
+                     * 
                      */
                     std::string GetAutoScalingNotificationId() const;
 
                     /**
                      * 设置ID of the notification to be deleted.
-                     * @param AutoScalingNotificationId ID of the notification to be deleted.
+                     * @param _autoScalingNotificationId ID of the notification to be deleted.
+                     * 
                      */
                     void SetAutoScalingNotificationId(const std::string& _autoScalingNotificationId);
 
                     /**
                      * 判断参数 AutoScalingNotificationId 是否已赋值
                      * @return AutoScalingNotificationId 是否已赋值
+                     * 
                      */
                     bool AutoScalingNotificationIdHasBeenSet() const;
 

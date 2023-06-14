@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Logset ID
                      * @return LogsetId Logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置Logset ID
-                     * @param LogsetId Logset ID
+                     * @param _logsetId Logset ID
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Logset name
                      * @return LogsetName Logset name
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name
-                     * @param LogsetName Logset name
+                     * @param _logsetName Logset name
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Log topic name
                      * @return TopicName Log topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Log topic name
-                     * @param TopicName Log topic name
+                     * @param _topicName Log topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Query statement
                      * @return Query Query statement
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Query statement
-                     * @param Query Query statement
+                     * @param _query Query statement
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Monitoring object number
                      * @return Number Monitoring object number
+                     * 
                      */
                     int64_t GetNumber() const;
 
                     /**
                      * 设置Monitoring object number
-                     * @param Number Monitoring object number
+                     * @param _number Monitoring object number
+                     * 
                      */
                     void SetNumber(const int64_t& _number);
 
                     /**
                      * 判断参数 Number 是否已赋值
                      * @return Number 是否已赋值
+                     * 
                      */
                     bool NumberHasBeenSet() const;
 
                     /**
                      * 获取Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
                      * @return StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * 
                      */
                     int64_t GetStartTimeOffset() const;
 
                     /**
                      * 设置Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
-                     * @param StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * @param _startTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * 
                      */
                     void SetStartTimeOffset(const int64_t& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
                      * @return EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * 
                      */
                     int64_t GetEndTimeOffset() const;
 
                     /**
                      * 设置Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
-                     * @param EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * @param _endTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * 
                      */
                     void SetEndTimeOffset(const int64_t& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 

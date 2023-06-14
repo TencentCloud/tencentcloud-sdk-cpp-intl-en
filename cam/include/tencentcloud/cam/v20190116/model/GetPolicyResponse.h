@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return PolicyName Policy name
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Description Policy description
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Type 1: Custom policy; 2: Preset policy
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return AddTime Time created
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
@@ -104,12 +112,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return UpdateTime Time of latest update
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -118,12 +128,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return PolicyDocument Policy document
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetPolicyDocument() const;
 
                     /**
                      * 判断参数 PolicyDocument 是否已赋值
                      * @return PolicyDocument 是否已赋值
+                     * 
                      */
                     bool PolicyDocumentHasBeenSet() const;
 
@@ -132,12 +144,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PresetAlias Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPresetAlias() const;
 
                     /**
                      * 判断参数 PresetAlias 是否已赋值
                      * @return PresetAlias 是否已赋值
+                     * 
                      */
                     bool PresetAliasHasBeenSet() const;
 
@@ -146,12 +160,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsServiceLinkedRolePolicy Whether it is a service-linked policy
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetIsServiceLinkedRolePolicy() const;
 
                     /**
                      * 判断参数 IsServiceLinkedRolePolicy 是否已赋值
                      * @return IsServiceLinkedRolePolicy 是否已赋值
+                     * 
                      */
                     bool IsServiceLinkedRolePolicyHasBeenSet() const;
 

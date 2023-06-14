@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ECM ID list
                      * @return EcmIdSet ECM ID list
+                     * 
                      */
                     std::vector<std::string> GetEcmIdSet() const;
 
                     /**
                      * 判断参数 EcmIdSet 是否已赋值
                      * @return EcmIdSet 是否已赋值
+                     * 
                      */
                     bool EcmIdSetHasBeenSet() const;
 

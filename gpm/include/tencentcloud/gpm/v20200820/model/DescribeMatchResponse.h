@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MatchInfo Matchmaking information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     MatchInfo GetMatchInfo() const;
 
                     /**
                      * 判断参数 MatchInfo 是否已赋值
                      * @return MatchInfo 是否已赋值
+                     * 
                      */
                     bool MatchInfoHasBeenSet() const;
 

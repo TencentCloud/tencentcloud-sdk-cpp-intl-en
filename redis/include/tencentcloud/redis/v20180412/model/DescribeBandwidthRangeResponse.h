@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
                      * @return BaseBandwidth Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
+                     * 
                      */
                     int64_t GetBaseBandwidth() const;
 
                     /**
                      * 判断参数 BaseBandwidth 是否已赋值
                      * @return BaseBandwidth 是否已赋值
+                     * 
                      */
                     bool BaseBandwidthHasBeenSet() const;
 
                     /**
                      * 获取The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
                      * @return AddBandwidth The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
+                     * 
                      */
                     int64_t GetAddBandwidth() const;
 
                     /**
                      * 判断参数 AddBandwidth 是否已赋值
                      * @return AddBandwidth 是否已赋值
+                     * 
                      */
                     bool AddBandwidthHasBeenSet() const;
 
                     /**
                      * 获取The lower limit for additional bandwidth
                      * @return MinAddBandwidth The lower limit for additional bandwidth
+                     * 
                      */
                     int64_t GetMinAddBandwidth() const;
 
                     /**
                      * 判断参数 MinAddBandwidth 是否已赋值
                      * @return MinAddBandwidth 是否已赋值
+                     * 
                      */
                     bool MinAddBandwidthHasBeenSet() const;
 
                     /**
                      * 获取The upper limit for additional bandwidth
                      * @return MaxAddBandwidth The upper limit for additional bandwidth
+                     * 
                      */
                     int64_t GetMaxAddBandwidth() const;
 
                     /**
                      * 判断参数 MaxAddBandwidth 是否已赋值
                      * @return MaxAddBandwidth 是否已赋值
+                     * 
                      */
                     bool MaxAddBandwidthHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Field name of TcaplusDB table
                      * @return SourceName Field name of TcaplusDB table
+                     * 
                      */
                     std::string GetSourceName() const;
 
                     /**
                      * 设置Field name of TcaplusDB table
-                     * @param SourceName Field name of TcaplusDB table
+                     * @param _sourceName Field name of TcaplusDB table
+                     * 
                      */
                     void SetSourceName(const std::string& _sourceName);
 
                     /**
                      * 判断参数 SourceName 是否已赋值
                      * @return SourceName 是否已赋值
+                     * 
                      */
                     bool SourceNameHasBeenSet() const;
 
                     /**
                      * 获取Field name of the target cache table
                      * @return TargetName Field name of the target cache table
+                     * 
                      */
                     std::string GetTargetName() const;
 
                     /**
                      * 设置Field name of the target cache table
-                     * @param TargetName Field name of the target cache table
+                     * @param _targetName Field name of the target cache table
+                     * 
                      */
                     void SetTargetName(const std::string& _targetName);
 
                     /**
                      * 判断参数 TargetName 是否已赋值
                      * @return TargetName 是否已赋值
+                     * 
                      */
                     bool TargetNameHasBeenSet() const;
 

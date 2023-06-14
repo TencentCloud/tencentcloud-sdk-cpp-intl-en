@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the query period. The start time point is included in the query period.
                      * @return BeginTime Start time of the query period. The start time point is included in the query period.
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time of the query period. The start time point is included in the query period.
-                     * @param BeginTime Start time of the query period. The start time point is included in the query period.
+                     * @param _beginTime Start time of the query period. The start time point is included in the query period.
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the query period. The end time point is not included in the query period.
                      * @return EndTime End time of the query period. The end time point is not included in the query period.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the query period. The end time point is not included in the query period.
-                     * @param EndTime End time of the query period. The end time point is not included in the query period.
+                     * @param _endTime End time of the query period. The end time point is not included in the query period.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Subproduct name.
                      * @return SubProduct Subproduct name.
+                     * 
                      */
                     std::string GetSubProduct() const;
 
                     /**
                      * 设置Subproduct name.
-                     * @param SubProduct Subproduct name.
+                     * @param _subProduct Subproduct name.
+                     * 
                      */
                     void SetSubProduct(const std::string& _subProduct);
 
                     /**
                      * 判断参数 SubProduct 是否已赋值
                      * @return SubProduct 是否已赋值
+                     * 
                      */
                     bool SubProductHasBeenSet() const;
 
@@ -105,6 +114,7 @@ namespace TencentCloud
 - MONTHLY: month
 - DAILY: day
 - MINUTELY: minute
+                     * 
                      */
                     std::string GetTimeLevel() const;
 
@@ -113,34 +123,39 @@ namespace TencentCloud
 - MONTHLY: month
 - DAILY: day
 - MINUTELY: minute
-                     * @param TimeLevel Unit of time increment.
+                     * @param _timeLevel Unit of time increment.
 - MONTHLY: month
 - DAILY: day
 - MINUTELY: minute
+                     * 
                      */
                     void SetTimeLevel(const std::string& _timeLevel);
 
                     /**
                      * 判断参数 TimeLevel 是否已赋值
                      * @return TimeLevel 是否已赋值
+                     * 
                      */
                     bool TimeLevelHasBeenSet() const;
 
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -149,20 +164,23 @@ namespace TencentCloud
 false: Returns the raw usage data.
                      * @return IsWeighted true: Returns the weighted sum of raw usage data.
 false: Returns the raw usage data.
+                     * 
                      */
                     bool GetIsWeighted() const;
 
                     /**
                      * 设置true: Returns the weighted sum of raw usage data.
 false: Returns the raw usage data.
-                     * @param IsWeighted true: Returns the weighted sum of raw usage data.
+                     * @param _isWeighted true: Returns the weighted sum of raw usage data.
 false: Returns the raw usage data.
+                     * 
                      */
                     void SetIsWeighted(const bool& _isWeighted);
 
                     /**
                      * 判断参数 IsWeighted 是否已赋值
                      * @return IsWeighted 是否已赋值
+                     * 
                      */
                     bool IsWeightedHasBeenSet() const;
 

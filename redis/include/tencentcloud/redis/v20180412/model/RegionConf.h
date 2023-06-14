@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     std::string GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const std::string& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return RegionName Region name
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name
-                     * @param RegionName Region name
+                     * @param _regionName Region name
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Region abbreviation
                      * @return RegionShortName Region abbreviation
+                     * 
                      */
                     std::string GetRegionShortName() const;
 
                     /**
                      * 设置Region abbreviation
-                     * @param RegionShortName Region abbreviation
+                     * @param _regionShortName Region abbreviation
+                     * 
                      */
                     void SetRegionShortName(const std::string& _regionShortName);
 
                     /**
                      * 判断参数 RegionShortName 是否已赋值
                      * @return RegionShortName 是否已赋值
+                     * 
                      */
                     bool RegionShortNameHasBeenSet() const;
 
                     /**
                      * 获取Name of the area where a region is located
                      * @return Area Name of the area where a region is located
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Name of the area where a region is located
-                     * @param Area Name of the area where a region is located
+                     * @param _area Name of the area where a region is located
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取AZ information
                      * @return ZoneSet AZ information
+                     * 
                      */
                     std::vector<ZoneCapacityConf> GetZoneSet() const;
 
                     /**
                      * 设置AZ information
-                     * @param ZoneSet AZ information
+                     * @param _zoneSet AZ information
+                     * 
                      */
                     void SetZoneSet(const std::vector<ZoneCapacityConf>& _zoneSet);
 
                     /**
                      * 判断参数 ZoneSet 是否已赋值
                      * @return ZoneSet 是否已赋值
+                     * 
                      */
                     bool ZoneSetHasBeenSet() const;
 

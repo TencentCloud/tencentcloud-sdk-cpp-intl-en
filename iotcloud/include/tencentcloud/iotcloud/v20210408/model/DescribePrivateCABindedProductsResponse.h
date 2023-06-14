@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of the products bound to the private CA certificate
                      * @return Products List of the products bound to the private CA certificate
+                     * 
                      */
                     std::vector<BindProductInfo> GetProducts() const;
 
                     /**
                      * 判断参数 Products 是否已赋值
                      * @return Products 是否已赋值
+                     * 
                      */
                     bool ProductsHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Group name of the protocol port template.
                      * @return ServiceTemplateGroupName Group name of the protocol port template.
+                     * 
                      */
                     std::string GetServiceTemplateGroupName() const;
 
                     /**
                      * 设置Group name of the protocol port template.
-                     * @param ServiceTemplateGroupName Group name of the protocol port template.
+                     * @param _serviceTemplateGroupName Group name of the protocol port template.
+                     * 
                      */
                     void SetServiceTemplateGroupName(const std::string& _serviceTemplateGroupName);
 
                     /**
                      * 判断参数 ServiceTemplateGroupName 是否已赋值
                      * @return ServiceTemplateGroupName 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Instance ID of the protocol port template, such as `ppm-4dw6agho`.
                      * @return ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+                     * 
                      */
                     std::vector<std::string> GetServiceTemplateIds() const;
 
                     /**
                      * 设置Instance ID of the protocol port template, such as `ppm-4dw6agho`.
-                     * @param ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+                     * @param _serviceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+                     * 
                      */
                     void SetServiceTemplateIds(const std::vector<std::string>& _serviceTemplateIds);
 
                     /**
                      * 判断参数 ServiceTemplateIds 是否已赋值
                      * @return ServiceTemplateIds 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdsHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The total number of site tests.
                      * @return TotalTestRuns The total number of site tests.
+                     * 
                      */
                     int64_t GetTotalTestRuns() const;
 
                     /**
                      * 设置The total number of site tests.
-                     * @param TotalTestRuns The total number of site tests.
+                     * @param _totalTestRuns The total number of site tests.
+                     * 
                      */
                     void SetTotalTestRuns(const int64_t& _totalTestRuns);
 
                     /**
                      * 判断参数 TotalTestRuns 是否已赋值
                      * @return TotalTestRuns 是否已赋值
+                     * 
                      */
                     bool TotalTestRunsHasBeenSet() const;
 
                     /**
                      * 获取The number of available site tests.
                      * @return AvailableTestRuns The number of available site tests.
+                     * 
                      */
                     int64_t GetAvailableTestRuns() const;
 
                     /**
                      * 设置The number of available site tests.
-                     * @param AvailableTestRuns The number of available site tests.
+                     * @param _availableTestRuns The number of available site tests.
+                     * 
                      */
                     void SetAvailableTestRuns(const int64_t& _availableTestRuns);
 
                     /**
                      * 判断参数 AvailableTestRuns 是否已赋值
                      * @return AvailableTestRuns 是否已赋值
+                     * 
                      */
                     bool AvailableTestRunsHasBeenSet() const;
 

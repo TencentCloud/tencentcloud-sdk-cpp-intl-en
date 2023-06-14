@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ transcode: Document transcoding.
                      * @return TaskType Task type to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
+                     * 
                      */
                     std::string GetTaskType() const;
 
@@ -74,87 +78,101 @@ transcode: Document transcoding.
                      * 设置Task type to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
-                     * @param TaskType Task type to be queried.
+                     * @param _taskType Task type to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
+                     * 
                      */
                     void SetTaskType(const std::string& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取Name of the COS bucket.
                      * @return BucketName Name of the COS bucket.
+                     * 
                      */
                     std::string GetBucketName() const;
 
                     /**
                      * 设置Name of the COS bucket.
-                     * @param BucketName Name of the COS bucket.
+                     * @param _bucketName Name of the COS bucket.
+                     * 
                      */
                     void SetBucketName(const std::string& _bucketName);
 
                     /**
                      * 判断参数 BucketName 是否已赋值
                      * @return BucketName 是否已赋值
+                     * 
                      */
                     bool BucketNameHasBeenSet() const;
 
                     /**
                      * 获取Region of the COS bucket.
                      * @return BucketLocation Region of the COS bucket.
+                     * 
                      */
                     std::string GetBucketLocation() const;
 
                     /**
                      * 设置Region of the COS bucket.
-                     * @param BucketLocation Region of the COS bucket.
+                     * @param _bucketLocation Region of the COS bucket.
+                     * 
                      */
                     void SetBucketLocation(const std::string& _bucketLocation);
 
                     /**
                      * 判断参数 BucketLocation 是否已赋值
                      * @return BucketLocation 是否已赋值
+                     * 
                      */
                     bool BucketLocationHasBeenSet() const;
 
                     /**
                      * 获取Resource prefix of the bucket.
                      * @return BucketPrefix Resource prefix of the bucket.
+                     * 
                      */
                     std::string GetBucketPrefix() const;
 
                     /**
                      * 设置Resource prefix of the bucket.
-                     * @param BucketPrefix Resource prefix of the bucket.
+                     * @param _bucketPrefix Resource prefix of the bucket.
+                     * 
                      */
                     void SetBucketPrefix(const std::string& _bucketPrefix);
 
                     /**
                      * 判断参数 BucketPrefix 是否已赋值
                      * @return BucketPrefix 是否已赋值
+                     * 
                      */
                     bool BucketPrefixHasBeenSet() const;
 
                     /**
                      * 获取Domain name of the URL of the bucket.
                      * @return ResultDomain Domain name of the URL of the bucket.
+                     * 
                      */
                     std::string GetResultDomain() const;
 
                     /**
                      * 设置Domain name of the URL of the bucket.
-                     * @param ResultDomain Domain name of the URL of the bucket.
+                     * @param _resultDomain Domain name of the URL of the bucket.
+                     * 
                      */
                     void SetResultDomain(const std::string& _resultDomain);
 
                     /**
                      * 判断参数 ResultDomain 是否已赋值
                      * @return ResultDomain 是否已赋值
+                     * 
                      */
                     bool ResultDomainHasBeenSet() const;
 

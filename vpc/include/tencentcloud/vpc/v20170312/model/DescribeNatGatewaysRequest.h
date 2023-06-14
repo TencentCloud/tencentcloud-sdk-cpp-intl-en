@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The unified ID of the NAT gateways, such as `nat-123xx454`.
                      * @return NatGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
+                     * 
                      */
                     std::vector<std::string> GetNatGatewayIds() const;
 
                     /**
                      * 设置The unified ID of the NAT gateways, such as `nat-123xx454`.
-                     * @param NatGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
+                     * @param _natGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
+                     * 
                      */
                     void SetNatGatewayIds(const std::vector<std::string>& _natGatewayIds);
 
                     /**
                      * 判断参数 NatGatewayIds 是否已赋值
                      * @return NatGatewayIds 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdsHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
 <li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
 <li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
 <li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -81,53 +85,61 @@ namespace TencentCloud
 <li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
 <li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
 <li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
-                     * @param Filters Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
 <li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
 <li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

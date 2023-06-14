@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Number of CLB instance lists returned. Default value: 20; maximum value: 100.
                      * @return Limit Number of CLB instance lists returned. Default value: 20; maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of CLB instance lists returned. Default value: 20; maximum value: 100.
-                     * @param Limit Number of CLB instance lists returned. Default value: 20; maximum value: 100.
+                     * @param _limit Number of CLB instance lists returned. Default value: 20; maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Starting offset of the CLB instance list returned. Default value: 0.
                      * @return Offset Starting offset of the CLB instance list returned. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the CLB instance list returned. Default value: 0.
-                     * @param Offset Starting offset of the CLB instance list returned. Default value: 0.
+                     * @param _offset Starting offset of the CLB instance list returned. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
                      * @return Fields List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
+                     * 
                      */
                     std::vector<std::string> GetFields() const;
 
                     /**
                      * 设置List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
-                     * @param Fields List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
+                     * @param _fields List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
+                     * 
                      */
                     void SetFields(const std::vector<std::string>& _fields);
 
                     /**
                      * 判断参数 Fields 是否已赋值
                      * @return Fields 是否已赋值
+                     * 
                      */
                     bool FieldsHasBeenSet() const;
 
                     /**
                      * 获取Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
                      * @return TargetType Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
+                     * 
                      */
                     std::string GetTargetType() const;
 
                     /**
                      * 设置Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
-                     * @param TargetType Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
+                     * @param _targetType Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
+                     * 
                      */
                     void SetTargetType(const std::string& _targetType);
 
                     /**
                      * 判断参数 TargetType 是否已赋值
                      * @return TargetType 是否已赋值
+                     * 
                      */
                     bool TargetTypeHasBeenSet() const;
 
@@ -138,6 +150,7 @@ namespace TencentCloud
 <li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
 <li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
 <li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -153,7 +166,7 @@ namespace TencentCloud
 <li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
 <li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
 <li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li>
-                     * @param Filters Filter condition of querying lists describing CLB instance details:
+                     * @param _filters Filter condition of querying lists describing CLB instance details:
 <li> loadbalancer-id - String - Required: no - (Filter condition) CLB instance ID, such as "lb-12345678". </li>
 <li> project-id - String - Required: no - (Filter condition) Project ID, such as "0" and "123".</li>
 <li> network - String - Required: no - (Filter condition) Network type of the CLB instance, such as "Public" and "Private".</li>
@@ -164,12 +177,14 @@ namespace TencentCloud
 <li> tag-key - String - Required: no - (Filter condition) Tag key of the CLB instance, such as "name".</li>
 <li> tag:* - String - Required: no - (Filter condition) CLB instance tag, followed by tag key after the colon ':'. For example, use {"Name": "tag:name","Values": ["zhangsan", "lisi"]} to filter the tag key “name” with the tag value “zhangsan” and “lisi”.</li>
 <li> fuzzy-search - String - Required: no - (Filter condition) Fuzzy search for CLB instance VIP and CLB instance name, such as "1.1".</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Secret name. This field is only valid for SSH key secrets.
                      * @return SecretName Secret name. This field is only valid for SSH key secrets.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Secret name. This field is only valid for SSH key secrets.
-                     * @param SecretName Secret name. This field is only valid for SSH key secrets.
+                     * @param _secretName Secret name. This field is only valid for SSH key secrets.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the key pair, which is the unique identifier of the key pair in the CVM.
                      * @return SSHKeyId ID of the key pair, which is the unique identifier of the key pair in the CVM.
+                     * 
                      */
                     std::string GetSSHKeyId() const;
 
                     /**
                      * 设置ID of the key pair, which is the unique identifier of the key pair in the CVM.
-                     * @param SSHKeyId ID of the key pair, which is the unique identifier of the key pair in the CVM.
+                     * @param _sSHKeyId ID of the key pair, which is the unique identifier of the key pair in the CVM.
+                     * 
                      */
                     void SetSSHKeyId(const std::string& _sSHKeyId);
 
                     /**
                      * 判断参数 SSHKeyId 是否已赋值
                      * @return SSHKeyId 是否已赋值
+                     * 
                      */
                     bool SSHKeyIdHasBeenSet() const;
 

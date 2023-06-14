@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Connection ID to be queried.
                      * @return ProxyId Connection ID to be queried.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Connection ID to be queried.
-                     * @param ProxyId Connection ID to be queried.
+                     * @param _proxyId Connection ID to be queried.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 

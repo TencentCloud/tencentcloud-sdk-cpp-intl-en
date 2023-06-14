@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Username
                      * @return UserName Username
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username
-                     * @param UserName Username
+                     * @param _userName Username
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Database name
                      * @return Database Database name
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name
-                     * @param Database Database name
+                     * @param _database Database name
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
                     /**
                      * 获取Error occurrence time
                      * @return ErrTime Error occurrence time
+                     * 
                      */
                     std::string GetErrTime() const;
 
                     /**
                      * 设置Error occurrence time
-                     * @param ErrTime Error occurrence time
+                     * @param _errTime Error occurrence time
+                     * 
                      */
                     void SetErrTime(const std::string& _errTime);
 
                     /**
                      * 判断参数 ErrTime 是否已赋值
                      * @return ErrTime 是否已赋值
+                     * 
                      */
                     bool ErrTimeHasBeenSet() const;
 
                     /**
                      * 获取Error message
                      * @return ErrMsg Error message
+                     * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
                      * 设置Error message
-                     * @param ErrMsg Error message
+                     * @param _errMsg Error message
+                     * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
 
                     /**
                      * 判断参数 ErrMsg 是否已赋值
                      * @return ErrMsg 是否已赋值
+                     * 
                      */
                     bool ErrMsgHasBeenSet() const;
 

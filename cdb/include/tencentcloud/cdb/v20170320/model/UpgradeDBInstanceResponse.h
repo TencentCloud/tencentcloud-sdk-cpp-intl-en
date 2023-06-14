@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Order ID.
                      * @return DealIds Order ID.
+                     * 
                      */
                     std::vector<std::string> GetDealIds() const;
 
                     /**
                      * 判断参数 DealIds 是否已赋值
                      * @return DealIds 是否已赋值
+                     * 
                      */
                     bool DealIdsHasBeenSet() const;
 
                     /**
                      * 获取Async task request ID, which can be used to query the execution result of an async task.
                      * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+                     * 
                      */
                     std::string GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

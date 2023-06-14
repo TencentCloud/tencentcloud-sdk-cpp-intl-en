@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the policy
                      * @return TimerId Unique ID of the policy
+                     * 
                      */
                     std::string GetTimerId() const;
 
                     /**
                      * 设置Unique ID of the policy
-                     * @param TimerId Unique ID of the policy
+                     * @param _timerId Unique ID of the policy
+                     * 
                      */
                     void SetTimerId(const std::string& _timerId);
 
                     /**
                      * 判断参数 TimerId 是否已赋值
                      * @return TimerId 是否已赋值
+                     * 
                      */
                     bool TimerIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the fleet to be bound with the policy
                      * @return FleetId ID of the fleet to be bound with the policy
+                     * 
                      */
                     std::string GetFleetId() const;
 
                     /**
                      * 设置ID of the fleet to be bound with the policy
-                     * @param FleetId ID of the fleet to be bound with the policy
+                     * @param _fleetId ID of the fleet to be bound with the policy
+                     * 
                      */
                     void SetFleetId(const std::string& _fleetId);
 
                     /**
                      * 判断参数 FleetId 是否已赋值
                      * @return FleetId 是否已赋值
+                     * 
                      */
                     bool FleetIdHasBeenSet() const;
 
                     /**
                      * 获取Scheduled scaling policy name
                      * @return TimerName Scheduled scaling policy name
+                     * 
                      */
                     std::string GetTimerName() const;
 
                     /**
                      * 设置Scheduled scaling policy name
-                     * @param TimerName Scheduled scaling policy name
+                     * @param _timerName Scheduled scaling policy name
+                     * 
                      */
                     void SetTimerName(const std::string& _timerName);
 
                     /**
                      * 判断参数 TimerName 是否已赋值
                      * @return TimerName 是否已赋值
+                     * 
                      */
                     bool TimerNameHasBeenSet() const;
 

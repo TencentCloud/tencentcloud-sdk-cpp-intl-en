@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Event name
                      * @return EventName Event name
+                     * 
                      */
                     std::string GetEventName() const;
 
                     /**
                      * 设置Event name
-                     * @param EventName Event name
+                     * @param _eventName Event name
+                     * 
                      */
                     void SetEventName(const std::string& _eventName);
 
                     /**
                      * 判断参数 EventName 是否已赋值
                      * @return EventName 是否已赋值
+                     * 
                      */
                     bool EventNameHasBeenSet() const;
 
                     /**
                      * 获取Event display name
                      * @return Description Event display name
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Event display name
-                     * @param Description Event display name
+                     * @param _description Event display name
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy type
                      * @return Namespace Alarm policy type
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Alarm policy type
-                     * @param Namespace Alarm policy type
+                     * @param _namespace Alarm policy type
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

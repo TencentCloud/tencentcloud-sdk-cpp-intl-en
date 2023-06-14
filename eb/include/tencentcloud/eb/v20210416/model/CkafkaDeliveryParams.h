@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取ckafka topic name
                      * @return TopicName ckafka topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置ckafka topic name
-                     * @param TopicName ckafka topic name
+                     * @param _topicName ckafka topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Six-Segment QCS description of CKafka resource
                      * @return ResourceDescription Six-Segment QCS description of CKafka resource
+                     * 
                      */
                     std::string GetResourceDescription() const;
 
                     /**
                      * 设置Six-Segment QCS description of CKafka resource
-                     * @param ResourceDescription Six-Segment QCS description of CKafka resource
+                     * @param _resourceDescription Six-Segment QCS description of CKafka resource
+                     * 
                      */
                     void SetResourceDescription(const std::string& _resourceDescription);
 
                     /**
                      * 判断参数 ResourceDescription 是否已赋值
                      * @return ResourceDescription 是否已赋值
+                     * 
                      */
                     bool ResourceDescriptionHasBeenSet() const;
 

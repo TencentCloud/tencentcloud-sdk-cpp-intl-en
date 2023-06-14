@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Organization
                      * @return Organization Organization
+                     * 
                      */
                     std::string GetOrganization() const;
 
                     /**
                      * 设置Organization
-                     * @param Organization Organization
+                     * @param _organization Organization
+                     * 
                      */
                     void SetOrganization(const std::string& _organization);
 
                     /**
                      * 判断参数 Organization 是否已赋值
                      * @return Organization 是否已赋值
+                     * 
                      */
                     bool OrganizationHasBeenSet() const;
 
                     /**
                      * 获取Permission
                      * @return Role Permission
+                     * 
                      */
                     std::string GetRole() const;
 
                     /**
                      * 设置Permission
-                     * @param Role Permission
+                     * @param _role Permission
+                     * 
                      */
                     void SetRole(const std::string& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 

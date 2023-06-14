@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Number of associated containers
                      * @return ContainerCnt Number of associated containers
+                     * 
                      */
                     int64_t GetContainerCnt() const;
 
                     /**
                      * 设置Number of associated containers
-                     * @param ContainerCnt Number of associated containers
+                     * @param _containerCnt Number of associated containers
+                     * 
                      */
                     void SetContainerCnt(const int64_t& _containerCnt);
 
                     /**
                      * 判断参数 ContainerCnt 是否已赋值
                      * @return ContainerCnt 是否已赋值
+                     * 
                      */
                     bool ContainerCntHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId Bound rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Bound rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleId Bound rule ID
+                     * @param _ruleId Bound rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName Rule name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleName Rule name
+                     * @param _ruleName Rule name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageSize Image size
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetImageSize() const;
 
                     /**
                      * 设置Image size
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImageSize Image size
+                     * @param _imageSize Image size
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageSize(const int64_t& _imageSize);
 
                     /**
                      * 判断参数 ImageSize 是否已赋值
                      * @return ImageSize 是否已赋值
+                     * 
                      */
                     bool ImageSizeHasBeenSet() const;
 
@@ -171,20 +189,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanTime Last scan time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScanTime() const;
 
                     /**
                      * 设置Last scan time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ScanTime Last scan time
+                     * @param _scanTime Last scan time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScanTime(const std::string& _scanTime);
 
                     /**
                      * 判断参数 ScanTime 是否已赋值
                      * @return ScanTime 是否已赋值
+                     * 
                      */
                     bool ScanTimeHasBeenSet() const;
 

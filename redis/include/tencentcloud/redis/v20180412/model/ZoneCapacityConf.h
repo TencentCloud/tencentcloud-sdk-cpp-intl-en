@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取AZ ID, such as ap-guangzhou-3
                      * @return ZoneId AZ ID, such as ap-guangzhou-3
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置AZ ID, such as ap-guangzhou-3
-                     * @param ZoneId AZ ID, such as ap-guangzhou-3
+                     * @param _zoneId AZ ID, such as ap-guangzhou-3
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取AZ name
                      * @return ZoneName AZ name
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置AZ name
-                     * @param ZoneName AZ name
+                     * @param _zoneName AZ name
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取Whether a product is sold out in an AZ
                      * @return IsSaleout Whether a product is sold out in an AZ
+                     * 
                      */
                     bool GetIsSaleout() const;
 
                     /**
                      * 设置Whether a product is sold out in an AZ
-                     * @param IsSaleout Whether a product is sold out in an AZ
+                     * @param _isSaleout Whether a product is sold out in an AZ
+                     * 
                      */
                     void SetIsSaleout(const bool& _isSaleout);
 
                     /**
                      * 判断参数 IsSaleout 是否已赋值
                      * @return IsSaleout 是否已赋值
+                     * 
                      */
                     bool IsSaleoutHasBeenSet() const;
 
                     /**
                      * 获取Whether it is a default AZ
                      * @return IsDefault Whether it is a default AZ
+                     * 
                      */
                     bool GetIsDefault() const;
 
                     /**
                      * 设置Whether it is a default AZ
-                     * @param IsDefault Whether it is a default AZ
+                     * @param _isDefault Whether it is a default AZ
+                     * 
                      */
                     void SetIsDefault(const bool& _isDefault);
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
                     /**
                      * 获取Network type. basenet: basic network; vpcnet: VPC
                      * @return NetWorkType Network type. basenet: basic network; vpcnet: VPC
+                     * 
                      */
                     std::vector<std::string> GetNetWorkType() const;
 
                     /**
                      * 设置Network type. basenet: basic network; vpcnet: VPC
-                     * @param NetWorkType Network type. basenet: basic network; vpcnet: VPC
+                     * @param _netWorkType Network type. basenet: basic network; vpcnet: VPC
+                     * 
                      */
                     void SetNetWorkType(const std::vector<std::string>& _netWorkType);
 
                     /**
                      * 判断参数 NetWorkType 是否已赋值
                      * @return NetWorkType 是否已赋值
+                     * 
                      */
                     bool NetWorkTypeHasBeenSet() const;
 
                     /**
                      * 获取Information of an AZ, such as product specifications in it
                      * @return ProductSet Information of an AZ, such as product specifications in it
+                     * 
                      */
                     std::vector<ProductConf> GetProductSet() const;
 
                     /**
                      * 设置Information of an AZ, such as product specifications in it
-                     * @param ProductSet Information of an AZ, such as product specifications in it
+                     * @param _productSet Information of an AZ, such as product specifications in it
+                     * 
                      */
                     void SetProductSet(const std::vector<ProductConf>& _productSet);
 
                     /**
                      * 判断参数 ProductSet 是否已赋值
                      * @return ProductSet 是否已赋值
+                     * 
                      */
                     bool ProductSetHasBeenSet() const;
 
                     /**
                      * 获取AZ ID, such as 100003
                      * @return OldZoneId AZ ID, such as 100003
+                     * 
                      */
                     int64_t GetOldZoneId() const;
 
                     /**
                      * 设置AZ ID, such as 100003
-                     * @param OldZoneId AZ ID, such as 100003
+                     * @param _oldZoneId AZ ID, such as 100003
+                     * 
                      */
                     void SetOldZoneId(const int64_t& _oldZoneId);
 
                     /**
                      * 判断参数 OldZoneId 是否已赋值
                      * @return OldZoneId 是否已赋值
+                     * 
                      */
                     bool OldZoneIdHasBeenSet() const;
 

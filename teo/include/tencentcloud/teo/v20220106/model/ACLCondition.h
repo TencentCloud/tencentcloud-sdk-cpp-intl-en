@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Field to match
                      * @return MatchFrom Field to match
+                     * 
                      */
                     std::string GetMatchFrom() const;
 
                     /**
                      * 设置Field to match
-                     * @param MatchFrom Field to match
+                     * @param _matchFrom Field to match
+                     * 
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
 
                     /**
                      * 判断参数 MatchFrom 是否已赋值
                      * @return MatchFrom 是否已赋值
+                     * 
                      */
                     bool MatchFromHasBeenSet() const;
 
                     /**
                      * 获取String to match
                      * @return MatchParam String to match
+                     * 
                      */
                     std::string GetMatchParam() const;
 
                     /**
                      * 设置String to match
-                     * @param MatchParam String to match
+                     * @param _matchParam String to match
+                     * 
                      */
                     void SetMatchParam(const std::string& _matchParam);
 
                     /**
                      * 判断参数 MatchParam 是否已赋值
                      * @return MatchParam 是否已赋值
+                     * 
                      */
                     bool MatchParamHasBeenSet() const;
 
                     /**
                      * 获取Relation between the field and content
                      * @return Operator Relation between the field and content
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Relation between the field and content
-                     * @param Operator Relation between the field and content
+                     * @param _operator Relation between the field and content
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Content to match
                      * @return MatchContent Content to match
+                     * 
                      */
                     std::string GetMatchContent() const;
 
                     /**
                      * 设置Content to match
-                     * @param MatchContent Content to match
+                     * @param _matchContent Content to match
+                     * 
                      */
                     void SetMatchContent(const std::string& _matchContent);
 
                     /**
                      * 判断参数 MatchContent 是否已赋值
                      * @return MatchContent 是否已赋值
+                     * 
                      */
                     bool MatchContentHasBeenSet() const;
 

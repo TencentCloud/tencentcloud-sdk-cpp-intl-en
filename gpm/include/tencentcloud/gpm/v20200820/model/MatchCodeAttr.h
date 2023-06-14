@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MatchCode MatchCode
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetMatchCode() const;
 
                     /**
                      * 设置MatchCode
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param MatchCode MatchCode
+                     * @param _matchCode MatchCode
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetMatchCode(const std::string& _matchCode);
 
                     /**
                      * 判断参数 MatchCode 是否已赋值
                      * @return MatchCode 是否已赋值
+                     * 
                      */
                     bool MatchCodeHasBeenSet() const;
 

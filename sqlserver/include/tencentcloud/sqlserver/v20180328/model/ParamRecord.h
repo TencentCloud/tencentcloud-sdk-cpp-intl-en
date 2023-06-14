@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Parameter name
                      * @return ParamName Parameter name
+                     * 
                      */
                     std::string GetParamName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param ParamName Parameter name
+                     * @param _paramName Parameter name
+                     * 
                      */
                     void SetParamName(const std::string& _paramName);
 
                     /**
                      * 判断参数 ParamName 是否已赋值
                      * @return ParamName 是否已赋值
+                     * 
                      */
                     bool ParamNameHasBeenSet() const;
 
                     /**
                      * 获取Parameter value before modification
                      * @return OldValue Parameter value before modification
+                     * 
                      */
                     std::string GetOldValue() const;
 
                     /**
                      * 设置Parameter value before modification
-                     * @param OldValue Parameter value before modification
+                     * @param _oldValue Parameter value before modification
+                     * 
                      */
                     void SetOldValue(const std::string& _oldValue);
 
                     /**
                      * 判断参数 OldValue 是否已赋值
                      * @return OldValue 是否已赋值
+                     * 
                      */
                     bool OldValueHasBeenSet() const;
 
                     /**
                      * 获取Parameter value after modification
                      * @return NewValue Parameter value after modification
+                     * 
                      */
                     std::string GetNewValue() const;
 
                     /**
                      * 设置Parameter value after modification
-                     * @param NewValue Parameter value after modification
+                     * @param _newValue Parameter value after modification
+                     * 
                      */
                     void SetNewValue(const std::string& _newValue);
 
                     /**
                      * 判断参数 NewValue 是否已赋值
                      * @return NewValue 是否已赋值
+                     * 
                      */
                     bool NewValueHasBeenSet() const;
 
                     /**
                      * 获取Parameter modification status. Valid values: `1` (initializing and waiting for modification), `2` (modification succeed), `3` (modification failed), `4` (modifying)
                      * @return Status Parameter modification status. Valid values: `1` (initializing and waiting for modification), `2` (modification succeed), `3` (modification failed), `4` (modifying)
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Parameter modification status. Valid values: `1` (initializing and waiting for modification), `2` (modification succeed), `3` (modification failed), `4` (modifying)
-                     * @param Status Parameter modification status. Valid values: `1` (initializing and waiting for modification), `2` (modification succeed), `3` (modification failed), `4` (modifying)
+                     * @param _status Parameter modification status. Valid values: `1` (initializing and waiting for modification), `2` (modification succeed), `3` (modification failed), `4` (modifying)
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModifyTime Modification time
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Modification time
-                     * @param ModifyTime Modification time
+                     * @param _modifyTime Modification time
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 

@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Task type. Valid values: `SQLTask` (SQL query task), `SparkSQLTask` (Spark SQL query task).
                      * @return TaskType Task type. Valid values: `SQLTask` (SQL query task), `SparkSQLTask` (Spark SQL query task).
+                     * 
                      */
                     std::string GetTaskType() const;
 
                     /**
                      * 设置Task type. Valid values: `SQLTask` (SQL query task), `SparkSQLTask` (Spark SQL query task).
-                     * @param TaskType Task type. Valid values: `SQLTask` (SQL query task), `SparkSQLTask` (Spark SQL query task).
+                     * @param _taskType Task type. Valid values: `SQLTask` (SQL query task), `SparkSQLTask` (Spark SQL query task).
+                     * 
                      */
                     void SetTaskType(const std::string& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取Fault tolerance policy. `Proceed`: continues to execute subsequent tasks after the current task fails or is canceled. `Terminate`: terminates the execution of subsequent tasks after the current task fails or is canceled, and marks all subsequent tasks as canceled.
                      * @return FailureTolerance Fault tolerance policy. `Proceed`: continues to execute subsequent tasks after the current task fails or is canceled. `Terminate`: terminates the execution of subsequent tasks after the current task fails or is canceled, and marks all subsequent tasks as canceled.
+                     * 
                      */
                     std::string GetFailureTolerance() const;
 
                     /**
                      * 设置Fault tolerance policy. `Proceed`: continues to execute subsequent tasks after the current task fails or is canceled. `Terminate`: terminates the execution of subsequent tasks after the current task fails or is canceled, and marks all subsequent tasks as canceled.
-                     * @param FailureTolerance Fault tolerance policy. `Proceed`: continues to execute subsequent tasks after the current task fails or is canceled. `Terminate`: terminates the execution of subsequent tasks after the current task fails or is canceled, and marks all subsequent tasks as canceled.
+                     * @param _failureTolerance Fault tolerance policy. `Proceed`: continues to execute subsequent tasks after the current task fails or is canceled. `Terminate`: terminates the execution of subsequent tasks after the current task fails or is canceled, and marks all subsequent tasks as canceled.
+                     * 
                      */
                     void SetFailureTolerance(const std::string& _failureTolerance);
 
                     /**
                      * 判断参数 FailureTolerance 是否已赋值
                      * @return FailureTolerance 是否已赋值
+                     * 
                      */
                     bool FailureToleranceHasBeenSet() const;
 
                     /**
                      * 获取Base64-encrypted SQL statements separated by ";". Up to 50 tasks can be submitted at a time, and they will be executed strictly in sequence.
                      * @return SQL Base64-encrypted SQL statements separated by ";". Up to 50 tasks can be submitted at a time, and they will be executed strictly in sequence.
+                     * 
                      */
                     std::string GetSQL() const;
 
                     /**
                      * 设置Base64-encrypted SQL statements separated by ";". Up to 50 tasks can be submitted at a time, and they will be executed strictly in sequence.
-                     * @param SQL Base64-encrypted SQL statements separated by ";". Up to 50 tasks can be submitted at a time, and they will be executed strictly in sequence.
+                     * @param _sQL Base64-encrypted SQL statements separated by ";". Up to 50 tasks can be submitted at a time, and they will be executed strictly in sequence.
+                     * 
                      */
                     void SetSQL(const std::string& _sQL);
 
                     /**
                      * 判断参数 SQL 是否已赋值
                      * @return SQL 是否已赋值
+                     * 
                      */
                     bool SQLHasBeenSet() const;
 
                     /**
                      * 获取Configuration information of the task. Currently, only `SparkSQLTask` tasks are supported.
                      * @return Config Configuration information of the task. Currently, only `SparkSQLTask` tasks are supported.
+                     * 
                      */
                     std::vector<KVPair> GetConfig() const;
 
                     /**
                      * 设置Configuration information of the task. Currently, only `SparkSQLTask` tasks are supported.
-                     * @param Config Configuration information of the task. Currently, only `SparkSQLTask` tasks are supported.
+                     * @param _config Configuration information of the task. Currently, only `SparkSQLTask` tasks are supported.
+                     * 
                      */
                     void SetConfig(const std::vector<KVPair>& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
                     /**
                      * 获取User-defined parameters of the task
                      * @return Params User-defined parameters of the task
+                     * 
                      */
                     std::vector<KVPair> GetParams() const;
 
                     /**
                      * 设置User-defined parameters of the task
-                     * @param Params User-defined parameters of the task
+                     * @param _params User-defined parameters of the task
+                     * 
                      */
                     void SetParams(const std::vector<KVPair>& _params);
 
                     /**
                      * 判断参数 Params 是否已赋值
                      * @return Params 是否已赋值
+                     * 
                      */
                     bool ParamsHasBeenSet() const;
 

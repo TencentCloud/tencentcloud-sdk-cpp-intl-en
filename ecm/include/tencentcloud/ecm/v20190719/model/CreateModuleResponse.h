@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Module ID. It is the ID assigned to a module after it is created successfully.
                      * @return ModuleId Module ID. It is the ID assigned to a module after it is created successfully.
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 

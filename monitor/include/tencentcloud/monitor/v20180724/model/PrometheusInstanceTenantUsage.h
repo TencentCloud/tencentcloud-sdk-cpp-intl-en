@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CalcDate Billing cycle
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCalcDate() const;
 
                     /**
                      * 设置Billing cycle
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CalcDate Billing cycle
+                     * @param _calcDate Billing cycle
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCalcDate(const std::string& _calcDate);
 
                     /**
                      * 判断参数 CalcDate 是否已赋值
                      * @return CalcDate 是否已赋值
+                     * 
                      */
                     bool CalcDateHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Total Total usage
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetTotal() const;
 
                     /**
                      * 设置Total usage
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Total Total usage
+                     * @param _total Total usage
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotal(const double& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Basic Usage of basic (free) metrics
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetBasic() const;
 
                     /**
                      * 设置Usage of basic (free) metrics
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Basic Usage of basic (free) metrics
+                     * @param _basic Usage of basic (free) metrics
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBasic(const double& _basic);
 
                     /**
                      * 判断参数 Basic 是否已赋值
                      * @return Basic 是否已赋值
+                     * 
                      */
                     bool BasicHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Fee Usage of paid metrics
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetFee() const;
 
                     /**
                      * 设置Usage of paid metrics
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Fee Usage of paid metrics
+                     * @param _fee Usage of paid metrics
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFee(const double& _fee);
 
                     /**
                      * 判断参数 Fee 是否已赋值
                      * @return Fee 是否已赋值
+                     * 
                      */
                     bool FeeHasBeenSet() const;
 

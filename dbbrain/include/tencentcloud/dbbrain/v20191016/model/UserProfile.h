@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ProfileId Configured ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProfileId() const;
 
                     /**
                      * 设置Configured ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProfileId Configured ID
+                     * @param _profileId Configured ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProfileId(const std::string& _profileId);
 
                     /**
                      * 判断参数 ProfileId 是否已赋值
                      * @return ProfileId 是否已赋值
+                     * 
                      */
                     bool ProfileIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ProfileType Configuration type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProfileType() const;
 
                     /**
                      * 设置Configuration type
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProfileType Configuration type
+                     * @param _profileType Configuration type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProfileType(const std::string& _profileType);
 
                     /**
                      * 判断参数 ProfileType 是否已赋值
                      * @return ProfileType 是否已赋值
+                     * 
                      */
                     bool ProfileTypeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ProfileLevel Configuration level. Valid values: “User” or “Instance”
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProfileLevel() const;
 
                     /**
                      * 设置Configuration level. Valid values: “User” or “Instance”
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProfileLevel Configuration level. Valid values: “User” or “Instance”
+                     * @param _profileLevel Configuration level. Valid values: “User” or “Instance”
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProfileLevel(const std::string& _profileLevel);
 
                     /**
                      * 判断参数 ProfileLevel 是否已赋值
                      * @return ProfileLevel 是否已赋值
+                     * 
                      */
                     bool ProfileLevelHasBeenSet() const;
 
@@ -118,38 +127,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ProfileName Configuration name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProfileName() const;
 
                     /**
                      * 设置Configuration name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProfileName Configuration name
+                     * @param _profileName Configuration name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProfileName(const std::string& _profileName);
 
                     /**
                      * 判断参数 ProfileName 是否已赋值
                      * @return ProfileName 是否已赋值
+                     * 
                      */
                     bool ProfileNameHasBeenSet() const;
 
                     /**
                      * 获取Configuration details
                      * @return ProfileInfo Configuration details
+                     * 
                      */
                     ProfileInfo GetProfileInfo() const;
 
                     /**
                      * 设置Configuration details
-                     * @param ProfileInfo Configuration details
+                     * @param _profileInfo Configuration details
+                     * 
                      */
                     void SetProfileInfo(const ProfileInfo& _profileInfo);
 
                     /**
                      * 判断参数 ProfileInfo 是否已赋值
                      * @return ProfileInfo 是否已赋值
+                     * 
                      */
                     bool ProfileInfoHasBeenSet() const;
 

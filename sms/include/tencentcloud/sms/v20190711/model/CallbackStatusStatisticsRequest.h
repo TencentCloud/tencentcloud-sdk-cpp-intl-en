@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Start time of pull in the format of `yyyymmddhh` accurate to the hour.
                      * @return StartDateTime Start time of pull in the format of `yyyymmddhh` accurate to the hour.
+                     * 
                      */
                     uint64_t GetStartDateTime() const;
 
                     /**
                      * 设置Start time of pull in the format of `yyyymmddhh` accurate to the hour.
-                     * @param StartDateTime Start time of pull in the format of `yyyymmddhh` accurate to the hour.
+                     * @param _startDateTime Start time of pull in the format of `yyyymmddhh` accurate to the hour.
+                     * 
                      */
                     void SetStartDateTime(const uint64_t& _startDateTime);
 
                     /**
                      * 判断参数 StartDateTime 是否已赋值
                      * @return StartDateTime 是否已赋值
+                     * 
                      */
                     bool StartDateTimeHasBeenSet() const;
 
@@ -65,38 +68,44 @@ namespace TencentCloud
 Note: `EndDataTime` must be later than `StartDateTime`.
                      * @return EndDataTime End time of pull in the format of `yyyymmddhh` accurate to the hour.
 Note: `EndDataTime` must be later than `StartDateTime`.
+                     * 
                      */
                     uint64_t GetEndDataTime() const;
 
                     /**
                      * 设置End time of pull in the format of `yyyymmddhh` accurate to the hour.
 Note: `EndDataTime` must be later than `StartDateTime`.
-                     * @param EndDataTime End time of pull in the format of `yyyymmddhh` accurate to the hour.
+                     * @param _endDataTime End time of pull in the format of `yyyymmddhh` accurate to the hour.
 Note: `EndDataTime` must be later than `StartDateTime`.
+                     * 
                      */
                     void SetEndDataTime(const uint64_t& _endDataTime);
 
                     /**
                      * 判断参数 EndDataTime 是否已赋值
                      * @return EndDataTime 是否已赋值
+                     * 
                      */
                     bool EndDataTimeHasBeenSet() const;
 
                     /**
                      * 获取SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
                      * @return SmsSdkAppid SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+                     * 
                      */
                     std::string GetSmsSdkAppid() const;
 
                     /**
                      * 设置SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
-                     * @param SmsSdkAppid SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+                     * @param _smsSdkAppid SMS `SdkAppid` actually generated after an application is added in the [SMS Console](https://console.cloud.tencent.com/sms/smslist), such as 1400006666.
+                     * 
                      */
                     void SetSmsSdkAppid(const std::string& _smsSdkAppid);
 
                     /**
                      * 判断参数 SmsSdkAppid 是否已赋值
                      * @return SmsSdkAppid 是否已赋值
+                     * 
                      */
                     bool SmsSdkAppidHasBeenSet() const;
 
@@ -105,20 +114,23 @@ Note: `EndDataTime` must be later than `StartDateTime`.
 Note: this parameter is currently fixed at 0.
                      * @return Limit Upper limit.
 Note: this parameter is currently fixed at 0.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Upper limit.
 Note: this parameter is currently fixed at 0.
-                     * @param Limit Upper limit.
+                     * @param _limit Upper limit.
 Note: this parameter is currently fixed at 0.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: this parameter is currently fixed at 0.
 Note: this parameter is currently fixed at 0.
                      * @return Offset Offset.
 Note: this parameter is currently fixed at 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
 Note: this parameter is currently fixed at 0.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
 Note: this parameter is currently fixed at 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

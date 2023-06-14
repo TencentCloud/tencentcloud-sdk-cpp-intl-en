@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of a full speech recognition task. Valid values:
 <li>ON: Enables an intelligent full speech recognition task;</li>
 <li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of a full speech recognition task. Valid values:
 <li>ON: Enables an intelligent full speech recognition task;</li>
 <li>OFF: Disables an intelligent full speech recognition task.</li>
-                     * @param Switch Switch of a full speech recognition task. Valid values:
+                     * @param _switch Switch of a full speech recognition task. Valid values:
 <li>ON: Enables an intelligent full speech recognition task;</li>
 <li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 <li>vtt: Generates a WebVTT subtitles file.</li>
                      * @return SubtitleFormat Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
 <li>vtt: Generates a WebVTT subtitles file.</li>
+                     * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
                      * 设置Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
 <li>vtt: Generates a WebVTT subtitles file.</li>
-                     * @param SubtitleFormat Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
+                     * @param _subtitleFormat Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
 <li>vtt: Generates a WebVTT subtitles file.</li>
+                     * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
 
                     /**
                      * 判断参数 SubtitleFormat 是否已赋值
                      * @return SubtitleFormat 是否已赋值
+                     * 
                      */
                     bool SubtitleFormatHasBeenSet() const;
 

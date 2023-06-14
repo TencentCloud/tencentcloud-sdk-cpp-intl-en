@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable URL rewriting
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Whether to enable URL rewriting
 `on`: Enable
 `off`: Disable
-                     * @param Switch Whether to enable URL rewriting
+                     * @param _switch Whether to enable URL rewriting
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return PathRules Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<UrlRedirectRule> GetPathRules() const;
 
                     /**
                      * 设置Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PathRules Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+                     * @param _pathRules Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPathRules(const std::vector<UrlRedirectRule>& _pathRules);
 
                     /**
                      * 判断参数 PathRules 是否已赋值
                      * @return PathRules 是否已赋值
+                     * 
                      */
                     bool PathRulesHasBeenSet() const;
 

@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取List of statistical metrics
                      * @return MetricNames List of statistical metrics
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
                      * 设置List of statistical metrics
-                     * @param MetricNames List of statistical metrics
+                     * @param _metricNames List of statistical metrics
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
                     /**
                      * 获取List of site IDs
                      * @return ZoneIds List of site IDs
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of site IDs
-                     * @param ZoneIds List of site IDs
+                     * @param _zoneIds List of site IDs
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取List of subdomain names
                      * @return Domains List of subdomain names
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置List of subdomain names
-                     * @param Domains List of subdomain names
+                     * @param _domains List of subdomain names
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Protocol type
                      * @return ProtocolType Protocol type
+                     * 
                      */
                     std::string GetProtocolType() const;
 
                     /**
                      * 设置Protocol type
-                     * @param ProtocolType Protocol type
+                     * @param _protocolType Protocol type
+                     * 
                      */
                     void SetProtocolType(const std::string& _protocolType);
 
                     /**
                      * 判断参数 ProtocolType 是否已赋值
                      * @return ProtocolType 是否已赋值
+                     * 
                      */
                     bool ProtocolTypeHasBeenSet() const;
 
@@ -181,6 +199,7 @@ namespace TencentCloud
 "other" : Other vulnerability prevention
 
 "all":"All"
+                     * 
                      */
                     std::string GetAttackType() const;
 
@@ -200,7 +219,7 @@ namespace TencentCloud
 "other" : Other vulnerability prevention
 
 "all":"All"
-                     * @param AttackType "webshell" : WebShell detection prevention
+                     * @param _attackType "webshell" : WebShell detection prevention
 "oa" : Common OA vulnerability prevention
 "xss" : XSS attack prevention
 "xxe" : XXE attack prevention
@@ -215,30 +234,35 @@ namespace TencentCloud
 "other" : Other vulnerability prevention
 
 "all":"All"
+                     * 
                      */
                     void SetAttackType(const std::string& _attackType);
 
                     /**
                      * 判断参数 AttackType 是否已赋值
                      * @return AttackType 是否已赋值
+                     * 
                      */
                     bool AttackTypeHasBeenSet() const;
 
                     /**
                      * 获取Query time granularity. Valid values: {min,5min,hour,day}
                      * @return Interval Query time granularity. Valid values: {min,5min,hour,day}
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Query time granularity. Valid values: {min,5min,hour,day}
-                     * @param Interval Query time granularity. Valid values: {min,5min,hour,day}
+                     * @param _interval Query time granularity. Valid values: {min,5min,hour,day}
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 

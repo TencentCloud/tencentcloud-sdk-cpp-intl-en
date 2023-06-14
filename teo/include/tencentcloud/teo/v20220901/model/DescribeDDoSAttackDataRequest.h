@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the query period.
                      * @return StartTime Start time of the query period.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the query period.
-                     * @param StartTime Start time of the query period.
+                     * @param _startTime Start time of the query period.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the query period.
                      * @return EndTime End time of the query period.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the query period.
-                     * @param EndTime End time of the query period.
+                     * @param _endTime End time of the query period.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
@@ -98,53 +105,61 @@ namespace TencentCloud
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
-                     * @param MetricNames Statistical metrics.
+                     * @param _metricNames Statistical metrics.
 <li>`ddos_attackMaxBandwidth`: Peak attack bandwidth;</li>
 <li>`ddos_attackMaxPackageRate`: Peak attack packet rate;</li>
 <li>`ddos_attackBandwidth`: Time-series data of attack bandwidth;</li>
 <li>`ddos_attackPackageRate`: Time-series data of attack packet rate.</li>
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
                     /**
                      * 获取List of sites to be queried. All sites will be selected if this field is not specified.
                      * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * @param _zoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
                      * @return PolicyIds IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<int64_t> GetPolicyIds() const;
 
                     /**
                      * 设置IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
-                     * @param PolicyIds IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
+                     * @param _policyIds IDs of DDoS policies to be queried. All policies will be selected if this field is not specified.
+                     * 
                      */
                     void SetPolicyIds(const std::vector<int64_t>& _policyIds);
 
                     /**
                      * 判断参数 PolicyIds 是否已赋值
                      * @return PolicyIds 是否已赋值
+                     * 
                      */
                     bool PolicyIdsHasBeenSet() const;
 
@@ -159,6 +174,7 @@ namespace TencentCloud
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * 
                      */
                     std::string GetInterval() const;
 
@@ -168,17 +184,19 @@ namespace TencentCloud
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
-                     * @param Interval The query granularity. Values:
+                     * @param _interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day</li>If this field is not specified, the granularity is determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < Period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
@@ -191,6 +209,7 @@ namespace TencentCloud
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global </li>If this field is not specified, the default value `global` is used.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -199,16 +218,18 @@ namespace TencentCloud
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global </li>If this field is not specified, the default value `global` is used.
-                     * @param Area Geolocation scope. Values:
+                     * @param _area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global </li>If this field is not specified, the default value `global` is used.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

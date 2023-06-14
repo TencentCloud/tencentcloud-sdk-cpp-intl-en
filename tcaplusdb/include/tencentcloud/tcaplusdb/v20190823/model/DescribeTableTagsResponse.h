@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of returned results
                      * @return TotalCount The total number of returned results
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The information list of table tags
                      * @return Rows The information list of table tags
+                     * 
                      */
                     std::vector<TagsInfoOfTable> GetRows() const;
 
                     /**
                      * 判断参数 Rows 是否已赋值
                      * @return Rows 是否已赋值
+                     * 
                      */
                     bool RowsHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Key Tag key
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Tag key
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Key Tag key
+                     * @param _key Tag key
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Value Tag value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Tag value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Value Tag value
+                     * @param _value Tag value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Network ACL instance ID, such as `acl-12345678`.
                      * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
                      * 设置Network ACL instance ID, such as `acl-12345678`.
-                     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * @param _networkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
                     /**
                      * 判断参数 NetworkAclId 是否已赋值
                      * @return NetworkAclId 是否已赋值
+                     * 
                      */
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
                      * 获取Network ACL quintuple rule set.
                      * @return NetworkAclQuintupleSet Network ACL quintuple rule set.
+                     * 
                      */
                     NetworkAclQuintupleEntries GetNetworkAclQuintupleSet() const;
 
                     /**
                      * 设置Network ACL quintuple rule set.
-                     * @param NetworkAclQuintupleSet Network ACL quintuple rule set.
+                     * @param _networkAclQuintupleSet Network ACL quintuple rule set.
+                     * 
                      */
                     void SetNetworkAclQuintupleSet(const NetworkAclQuintupleEntries& _networkAclQuintupleSet);
 
                     /**
                      * 判断参数 NetworkAclQuintupleSet 是否已赋值
                      * @return NetworkAclQuintupleSet 是否已赋值
+                     * 
                      */
                     bool NetworkAclQuintupleSetHasBeenSet() const;
 

@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Pagination offset.
                      * @return Offset Pagination offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page.
                      * @return Limit Number of entries per page.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Instance tag information.
                      * @return Rows Instance tag information.
+                     * 
                      */
                     std::vector<TagsInfoOfInstance> GetRows() const;
 
                     /**
                      * 判断参数 Rows 是否已赋值
                      * @return Rows 是否已赋值
+                     * 
                      */
                     bool RowsHasBeenSet() const;
 

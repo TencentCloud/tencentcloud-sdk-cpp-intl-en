@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The relay destination IP.
                      * @return Ip The relay destination IP.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置The relay destination IP.
-                     * @param Ip The relay destination IP.
+                     * @param _ip The relay destination IP.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取The relay destination port.
                      * @return Port The relay destination port.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置The relay destination port.
-                     * @param Port The relay destination port.
+                     * @param _port The relay destination port.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

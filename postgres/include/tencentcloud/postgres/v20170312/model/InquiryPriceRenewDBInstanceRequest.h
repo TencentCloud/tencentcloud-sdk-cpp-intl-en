@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return DBInstanceId Instance ID
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param DBInstanceId Instance ID
+                     * @param _dBInstanceId Instance ID
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Renewal duration in months. Maximum value: 48
                      * @return Period Renewal duration in months. Maximum value: 48
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Renewal duration in months. Maximum value: 48
-                     * @param Period Renewal duration in months. Maximum value: 48
+                     * @param _period Renewal duration in months. Maximum value: 48
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 

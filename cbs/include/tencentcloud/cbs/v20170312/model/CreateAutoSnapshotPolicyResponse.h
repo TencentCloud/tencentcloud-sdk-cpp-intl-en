@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the newly created scheduled snapshot policy.
                      * @return AutoSnapshotPolicyId The ID of the newly created scheduled snapshot policy.
+                     * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
                      * 判断参数 AutoSnapshotPolicyId 是否已赋值
                      * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取The time that initial backup will start.
                      * @return NextTriggerTime The time that initial backup will start.
+                     * 
                      */
                     std::string GetNextTriggerTime() const;
 
                     /**
                      * 判断参数 NextTriggerTime 是否已赋值
                      * @return NextTriggerTime 是否已赋值
+                     * 
                      */
                     bool NextTriggerTimeHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取`Context` for loading subsequent content
                      * @return Context `Context` for loading subsequent content
+                     * 
                      */
                     std::string GetContext() const;
 
                     /**
                      * 判断参数 Context 是否已赋值
                      * @return Context 是否已赋值
+                     * 
                      */
                     bool ContextHasBeenSet() const;
 
                     /**
                      * 获取Whether all log query results are returned
                      * @return ListOver Whether all log query results are returned
+                     * 
                      */
                     bool GetListOver() const;
 
                     /**
                      * 判断参数 ListOver 是否已赋值
                      * @return ListOver 是否已赋值
+                     * 
                      */
                     bool ListOverHasBeenSet() const;
 
                     /**
                      * 获取Whether the return is the analysis result
                      * @return Analysis Whether the return is the analysis result
+                     * 
                      */
                     bool GetAnalysis() const;
 
                     /**
                      * 判断参数 Analysis 是否已赋值
                      * @return Analysis 是否已赋值
+                     * 
                      */
                     bool AnalysisHasBeenSet() const;
 
@@ -87,12 +93,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ColNames If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetColNames() const;
 
                     /**
                      * 判断参数 ColNames 是否已赋值
                      * @return ColNames 是否已赋值
+                     * 
                      */
                     bool ColNamesHasBeenSet() const;
 
@@ -101,12 +109,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Results Log query result. If `Analysis` is `True`, `null` may be returned
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LogInfo> GetResults() const;
 
                     /**
                      * 判断参数 Results 是否已赋值
                      * @return Results 是否已赋值
+                     * 
                      */
                     bool ResultsHasBeenSet() const;
 
@@ -115,12 +125,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AnalysisResults Log analysis result. If `Analysis` is `False`, `null` may be returned
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LogItems> GetAnalysisResults() const;
 
                     /**
                      * 判断参数 AnalysisResults 是否已赋值
                      * @return AnalysisResults 是否已赋值
+                     * 
                      */
                     bool AnalysisResultsHasBeenSet() const;
 
@@ -129,12 +141,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAnalysisRecords() const;
 
                     /**
                      * 判断参数 AnalysisRecords 是否已赋值
                      * @return AnalysisRecords 是否已赋值
+                     * 
                      */
                     bool AnalysisRecordsHasBeenSet() const;
 
@@ -143,12 +157,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Column> GetColumns() const;
 
                     /**
                      * 判断参数 Columns 是否已赋值
                      * @return Columns 是否已赋值
+                     * 
                      */
                     bool ColumnsHasBeenSet() const;
 

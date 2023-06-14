@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Shipping rule ID
                      * @return ShipperId Shipping rule ID
+                     * 
                      */
                     std::string GetShipperId() const;
 
                     /**
                      * 设置Shipping rule ID
-                     * @param ShipperId Shipping rule ID
+                     * @param _shipperId Shipping rule ID
+                     * 
                      */
                     void SetShipperId(const std::string& _shipperId);
 
                     /**
                      * 判断参数 ShipperId 是否已赋值
                      * @return ShipperId 是否已赋值
+                     * 
                      */
                     bool ShipperIdHasBeenSet() const;
 
                     /**
                      * 获取Shipping task ID
                      * @return TaskId Shipping task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Shipping task ID
-                     * @param TaskId Shipping task ID
+                     * @param _taskId Shipping task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

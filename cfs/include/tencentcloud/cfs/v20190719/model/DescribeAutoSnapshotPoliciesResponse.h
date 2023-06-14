@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of snapshot policies
                      * @return TotalCount Total number of snapshot policies
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Snapshot policy information
                      * @return AutoSnapshotPolicies Snapshot policy information
+                     * 
                      */
                     std::vector<AutoSnapshotPolicyInfo> GetAutoSnapshotPolicies() const;
 
                     /**
                      * 判断参数 AutoSnapshotPolicies 是否已赋值
                      * @return AutoSnapshotPolicies 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPoliciesHasBeenSet() const;
 

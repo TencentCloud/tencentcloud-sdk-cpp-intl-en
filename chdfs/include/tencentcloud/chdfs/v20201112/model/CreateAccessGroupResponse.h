@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Permission group
                      * @return AccessGroup Permission group
+                     * 
                      */
                     AccessGroup GetAccessGroup() const;
 
                     /**
                      * 判断参数 AccessGroup 是否已赋值
                      * @return AccessGroup 是否已赋值
+                     * 
                      */
                     bool AccessGroupHasBeenSet() const;
 

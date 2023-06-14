@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Resource type
                      * @return Name Resource type
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Resource type
-                     * @param Name Resource type
+                     * @param _name Resource type
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Resource usage
                      * @return Usage Resource usage
+                     * 
                      */
                     uint64_t GetUsage() const;
 
                     /**
                      * 设置Resource usage
-                     * @param Usage Resource usage
+                     * @param _usage Resource usage
+                     * 
                      */
                     void SetUsage(const uint64_t& _usage);
 
                     /**
                      * 判断参数 Usage 是否已赋值
                      * @return Usage 是否已赋值
+                     * 
                      */
                     bool UsageHasBeenSet() const;
 
                     /**
                      * 获取Resource usage details
                      * @return Details Resource usage details
+                     * 
                      */
                     std::vector<ResourceUsageDetail> GetDetails() const;
 
                     /**
                      * 设置Resource usage details
-                     * @param Details Resource usage details
+                     * @param _details Resource usage details
+                     * 
                      */
                     void SetDetails(const std::vector<ResourceUsageDetail>& _details);
 
                     /**
                      * 判断参数 Details 是否已赋值
                      * @return Details 是否已赋值
+                     * 
                      */
                     bool DetailsHasBeenSet() const;
 

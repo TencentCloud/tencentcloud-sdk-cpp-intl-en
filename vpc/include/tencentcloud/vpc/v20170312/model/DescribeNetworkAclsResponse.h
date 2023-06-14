@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of instance details.
                      * @return NetworkAclSet List of instance details.
+                     * 
                      */
                     std::vector<NetworkAcl> GetNetworkAclSet() const;
 
                     /**
                      * 判断参数 NetworkAclSet 是否已赋值
                      * @return NetworkAclSet 是否已赋值
+                     * 
                      */
                     bool NetworkAclSetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible instances.
                      * @return TotalCount Number of eligible instances.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

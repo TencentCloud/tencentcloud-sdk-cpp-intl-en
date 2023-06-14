@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of game server session placement
                      * @return PlacementId Unique ID of game server session placement
+                     * 
                      */
                     std::string GetPlacementId() const;
 
                     /**
                      * 设置Unique ID of game server session placement
-                     * @param PlacementId Unique ID of game server session placement
+                     * @param _placementId Unique ID of game server session placement
+                     * 
                      */
                     void SetPlacementId(const std::string& _placementId);
 
                     /**
                      * 判断参数 PlacementId 是否已赋值
                      * @return PlacementId 是否已赋值
+                     * 
                      */
                     bool PlacementIdHasBeenSet() const;
 

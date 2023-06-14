@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseName Original database name before rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
                      * 设置Original database name before rollback
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DatabaseName Original database name before rollback
+                     * @param _databaseName Original database name before rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
 
                     /**
                      * 判断参数 DatabaseName 是否已赋值
                      * @return DatabaseName 是否已赋值
+                     * 
                      */
                     bool DatabaseNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NewDatabaseName New database name after rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNewDatabaseName() const;
 
                     /**
                      * 设置New database name after rollback
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NewDatabaseName New database name after rollback
+                     * @param _newDatabaseName New database name after rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNewDatabaseName(const std::string& _newDatabaseName);
 
                     /**
                      * 判断参数 NewDatabaseName 是否已赋值
                      * @return NewDatabaseName 是否已赋值
+                     * 
                      */
                     bool NewDatabaseNameHasBeenSet() const;
 

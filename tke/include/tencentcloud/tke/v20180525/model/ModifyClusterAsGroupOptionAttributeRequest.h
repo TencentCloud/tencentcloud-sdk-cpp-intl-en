@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster auto scaling attributes
                      * @return ClusterAsGroupOption Cluster auto scaling attributes
+                     * 
                      */
                     ClusterAsGroupOption GetClusterAsGroupOption() const;
 
                     /**
                      * 设置Cluster auto scaling attributes
-                     * @param ClusterAsGroupOption Cluster auto scaling attributes
+                     * @param _clusterAsGroupOption Cluster auto scaling attributes
+                     * 
                      */
                     void SetClusterAsGroupOption(const ClusterAsGroupOption& _clusterAsGroupOption);
 
                     /**
                      * 判断参数 ClusterAsGroupOption 是否已赋值
                      * @return ClusterAsGroupOption 是否已赋值
+                     * 
                      */
                     bool ClusterAsGroupOptionHasBeenSet() const;
 

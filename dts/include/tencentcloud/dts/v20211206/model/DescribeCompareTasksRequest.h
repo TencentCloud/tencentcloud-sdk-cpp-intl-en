@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return JobId Migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Migration task ID
-                     * @param JobId Migration task ID
+                     * @param _jobId Migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Number of tasks to be displayed per page. Default value: `20`.
                      * @return Limit Number of tasks to be displayed per page. Default value: `20`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of tasks to be displayed per page. Default value: `20`.
-                     * @param Limit Number of tasks to be displayed per page. Default value: `20`.
+                     * @param _limit Number of tasks to be displayed per page. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset
                      * @return Offset Pagination offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset
-                     * @param Offset Pagination offset
+                     * @param _offset Pagination offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Check task ID
                      * @return CompareTaskId Check task ID
+                     * 
                      */
                     std::string GetCompareTaskId() const;
 
                     /**
                      * 设置Check task ID
-                     * @param CompareTaskId Check task ID
+                     * @param _compareTaskId Check task ID
+                     * 
                      */
                     void SetCompareTaskId(const std::string& _compareTaskId);
 
                     /**
                      * 判断参数 CompareTaskId 是否已赋值
                      * @return CompareTaskId 是否已赋值
+                     * 
                      */
                     bool CompareTaskIdHasBeenSet() const;
 
                     /**
                      * 获取Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
                      * @return Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     * 
                      */
                     std::vector<std::string> GetStatus() const;
 
                     /**
                      * 设置Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
-                     * @param Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     * @param _status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     * 
                      */
                     void SetStatus(const std::vector<std::string>& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

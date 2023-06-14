@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Region of the logset.
                      * @return LogSetRegion Region of the logset.
+                     * 
                      */
                     std::string GetLogSetRegion() const;
 
                     /**
                      * 设置Region of the logset.
-                     * @param LogSetRegion Region of the logset.
+                     * @param _logSetRegion Region of the logset.
+                     * 
                      */
                     void SetLogSetRegion(const std::string& _logSetRegion);
 
                     /**
                      * 判断参数 LogSetRegion 是否已赋值
                      * @return LogSetRegion 是否已赋值
+                     * 
                      */
                     bool LogSetRegionHasBeenSet() const;
 
                     /**
                      * 获取Name of the logset.
                      * @return LogSetName Name of the logset.
+                     * 
                      */
                     std::string GetLogSetName() const;
 
                     /**
                      * 设置Name of the logset.
-                     * @param LogSetName Name of the logset.
+                     * @param _logSetName Name of the logset.
+                     * 
                      */
                     void SetLogSetName(const std::string& _logSetName);
 
                     /**
                      * 判断参数 LogSetName 是否已赋值
                      * @return LogSetName 是否已赋值
+                     * 
                      */
                     bool LogSetNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the logset.
                      * @return LogSetId ID of the logset.
+                     * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
                      * 设置ID of the logset.
-                     * @param LogSetId ID of the logset.
+                     * @param _logSetId ID of the logset.
+                     * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
 
                     /**
                      * 判断参数 LogSetId 是否已赋值
                      * @return LogSetId 是否已赋值
+                     * 
                      */
                     bool LogSetIdHasBeenSet() const;
 
@@ -107,6 +116,7 @@ namespace TencentCloud
                      * @return Deleted Whether the logset is deleted. Values:
 <li>`no`: The logset is not deleted;</li>
 <li>`yes`: The logset is deleted.</li>
+                     * 
                      */
                     std::string GetDeleted() const;
 
@@ -114,15 +124,17 @@ namespace TencentCloud
                      * 设置Whether the logset is deleted. Values:
 <li>`no`: The logset is not deleted;</li>
 <li>`yes`: The logset is deleted.</li>
-                     * @param Deleted Whether the logset is deleted. Values:
+                     * @param _deleted Whether the logset is deleted. Values:
 <li>`no`: The logset is not deleted;</li>
 <li>`yes`: The logset is deleted.</li>
+                     * 
                      */
                     void SetDeleted(const std::string& _deleted);
 
                     /**
                      * 判断参数 Deleted 是否已赋值
                      * @return Deleted 是否已赋值
+                     * 
                      */
                     bool DeletedHasBeenSet() const;
 

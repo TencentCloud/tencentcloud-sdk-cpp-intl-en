@@ -47,54 +47,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取ServiceAccount authentication configuration
                      * @return ServiceAccounts ServiceAccount authentication configuration
+                     * 
                      */
                     ServiceAccountAuthenticationOptions GetServiceAccounts() const;
 
                     /**
                      * 设置ServiceAccount authentication configuration
-                     * @param ServiceAccounts ServiceAccount authentication configuration
+                     * @param _serviceAccounts ServiceAccount authentication configuration
+                     * 
                      */
                     void SetServiceAccounts(const ServiceAccountAuthenticationOptions& _serviceAccounts);
 
                     /**
                      * 判断参数 ServiceAccounts 是否已赋值
                      * @return ServiceAccounts 是否已赋值
+                     * 
                      */
                     bool ServiceAccountsHasBeenSet() const;
 
                     /**
                      * 获取OIDC authentication configurations
                      * @return OIDCConfig OIDC authentication configurations
+                     * 
                      */
                     OIDCConfigAuthenticationOptions GetOIDCConfig() const;
 
                     /**
                      * 设置OIDC authentication configurations
-                     * @param OIDCConfig OIDC authentication configurations
+                     * @param _oIDCConfig OIDC authentication configurations
+                     * 
                      */
                     void SetOIDCConfig(const OIDCConfigAuthenticationOptions& _oIDCConfig);
 
                     /**
                      * 判断参数 OIDCConfig 是否已赋值
                      * @return OIDCConfig 是否已赋值
+                     * 
                      */
                     bool OIDCConfigHasBeenSet() const;
 

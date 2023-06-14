@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取1: enabled, 0: disabled
                      * @return Enable 1: enabled, 0: disabled
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置1: enabled, 0: disabled
-                     * @param Enable 1: enabled, 0: disabled
+                     * @param _enable 1: enabled, 0: disabled
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Detection interval in seconds
                      * @return Interval Detection interval in seconds
+                     * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
                      * 设置Detection interval in seconds
-                     * @param Interval Detection interval in seconds
+                     * @param _interval Detection interval in seconds
+                     * 
                      */
                     void SetInterval(const uint64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Unhealthy threshold in times.
                      * @return KickNum Unhealthy threshold in times.
+                     * 
                      */
                     uint64_t GetKickNum() const;
 
                     /**
                      * 设置Unhealthy threshold in times.
-                     * @param KickNum Unhealthy threshold in times.
+                     * @param _kickNum Unhealthy threshold in times.
+                     * 
                      */
                     void SetKickNum(const uint64_t& _kickNum);
 
                     /**
                      * 判断参数 KickNum 是否已赋值
                      * @return KickNum 是否已赋值
+                     * 
                      */
                     bool KickNumHasBeenSet() const;
 
                     /**
                      * 获取Healthy threshold in times.
                      * @return AliveNum Healthy threshold in times.
+                     * 
                      */
                     uint64_t GetAliveNum() const;
 
                     /**
                      * 设置Healthy threshold in times.
-                     * @param AliveNum Healthy threshold in times.
+                     * @param _aliveNum Healthy threshold in times.
+                     * 
                      */
                     void SetAliveNum(const uint64_t& _aliveNum);
 
                     /**
                      * 判断参数 AliveNum 是否已赋值
                      * @return AliveNum 是否已赋值
+                     * 
                      */
                     bool AliveNumHasBeenSet() const;
 
                     /**
                      * 获取HTTP request method. Valid values: [HEAD, GET]
                      * @return Method HTTP request method. Valid values: [HEAD, GET]
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置HTTP request method. Valid values: [HEAD, GET]
-                     * @param Method HTTP request method. Valid values: [HEAD, GET]
+                     * @param _method HTTP request method. Valid values: [HEAD, GET]
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
                     /**
                      * 获取Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
                      * @return StatusCode Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
+                     * 
                      */
                     uint64_t GetStatusCode() const;
 
                     /**
                      * 设置Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
-                     * @param StatusCode Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
+                     * @param _statusCode Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
+                     * 
                      */
                     void SetStatusCode(const uint64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取URL of checked directory. Default value: /
                      * @return Url URL of checked directory. Default value: /
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of checked directory. Default value: /
-                     * @param Url URL of checked directory. Default value: /
+                     * @param _url URL of checked directory. Default value: /
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Configuration status. 0: normal, 1: configuring, 2: configuration failed
                      * @return Status Configuration status. 0: normal, 1: configuring, 2: configuration failed
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Configuration status. 0: normal, 1: configuring, 2: configuration failed
-                     * @param Status Configuration status. 0: normal, 1: configuring, 2: configuration failed
+                     * @param _status Configuration status. 0: normal, 1: configuring, 2: configuration failed
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

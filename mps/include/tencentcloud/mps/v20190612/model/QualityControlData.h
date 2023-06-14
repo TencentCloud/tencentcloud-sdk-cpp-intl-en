@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NoAudio Whether there is an audio track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetNoAudio() const;
 
                     /**
                      * 设置Whether there is an audio track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NoAudio Whether there is an audio track. `true` indicates that there isn't.
+                     * @param _noAudio Whether there is an audio track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoAudio(const bool& _noAudio);
 
                     /**
                      * 判断参数 NoAudio 是否已赋值
                      * @return NoAudio 是否已赋值
+                     * 
                      */
                     bool NoAudioHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NoVideo Whether there is a video track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetNoVideo() const;
 
                     /**
                      * 设置Whether there is a video track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NoVideo Whether there is a video track. `true` indicates that there isn't.
+                     * @param _noVideo Whether there is a video track. `true` indicates that there isn't.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoVideo(const bool& _noVideo);
 
                     /**
                      * 判断参数 NoVideo 是否已赋值
                      * @return NoVideo 是否已赋值
+                     * 
                      */
                     bool NoVideoHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QualityEvaluationScore The no-reference video quality score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetQualityEvaluationScore() const;
 
                     /**
                      * 设置The no-reference video quality score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param QualityEvaluationScore The no-reference video quality score. Value range: 0-100.
+                     * @param _qualityEvaluationScore The no-reference video quality score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQualityEvaluationScore(const int64_t& _qualityEvaluationScore);
 
                     /**
                      * 判断参数 QualityEvaluationScore 是否已赋值
                      * @return QualityEvaluationScore 是否已赋值
+                     * 
                      */
                     bool QualityEvaluationScoreHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QualityControlResultSet The issues detected by quality control.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<QualityControlResult> GetQualityControlResultSet() const;
 
                     /**
                      * 设置The issues detected by quality control.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param QualityControlResultSet The issues detected by quality control.
+                     * @param _qualityControlResultSet The issues detected by quality control.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQualityControlResultSet(const std::vector<QualityControlResult>& _qualityControlResultSet);
 
                     /**
                      * 判断参数 QualityControlResultSet 是否已赋值
                      * @return QualityControlResultSet 是否已赋值
+                     * 
                      */
                     bool QualityControlResultSetHasBeenSet() const;
 

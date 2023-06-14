@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Filter. Zone: AZ; InstanceType: instance type; DataDiskSize: data disk size.
                      * @return Filters Filter. Zone: AZ; InstanceType: instance type; DataDiskSize: data disk size.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter. Zone: AZ; InstanceType: instance type; DataDiskSize: data disk size.
-                     * @param Filters Filter. Zone: AZ; InstanceType: instance type; DataDiskSize: data disk size.
+                     * @param _filters Filter. Zone: AZ; InstanceType: instance type; DataDiskSize: data disk size.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Data migration task ID
                      * @return JobId Data migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Data migration task ID
-                     * @param JobId Data migration task ID
+                     * @param _jobId Data migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取The way to complete the task, which is supported only for legacy MySQL migration tasks. Valid values: `waitForSync` (wait for the source-replica lag to become 0 before stopping); `immediately` (complete immediately without waiting for source-replica sync). Default value: `waitForSync`.
                      * @return CompleteMode The way to complete the task, which is supported only for legacy MySQL migration tasks. Valid values: `waitForSync` (wait for the source-replica lag to become 0 before stopping); `immediately` (complete immediately without waiting for source-replica sync). Default value: `waitForSync`.
+                     * 
                      */
                     std::string GetCompleteMode() const;
 
                     /**
                      * 设置The way to complete the task, which is supported only for legacy MySQL migration tasks. Valid values: `waitForSync` (wait for the source-replica lag to become 0 before stopping); `immediately` (complete immediately without waiting for source-replica sync). Default value: `waitForSync`.
-                     * @param CompleteMode The way to complete the task, which is supported only for legacy MySQL migration tasks. Valid values: `waitForSync` (wait for the source-replica lag to become 0 before stopping); `immediately` (complete immediately without waiting for source-replica sync). Default value: `waitForSync`.
+                     * @param _completeMode The way to complete the task, which is supported only for legacy MySQL migration tasks. Valid values: `waitForSync` (wait for the source-replica lag to become 0 before stopping); `immediately` (complete immediately without waiting for source-replica sync). Default value: `waitForSync`.
+                     * 
                      */
                     void SetCompleteMode(const std::string& _completeMode);
 
                     /**
                      * 判断参数 CompleteMode 是否已赋值
                      * @return CompleteMode 是否已赋值
+                     * 
                      */
                     bool CompleteModeHasBeenSet() const;
 

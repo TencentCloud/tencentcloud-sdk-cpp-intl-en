@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Name array of roles successfully deleted.
                      * @return RoleNames Name array of roles successfully deleted.
+                     * 
                      */
                     std::vector<std::string> GetRoleNames() const;
 
                     /**
                      * 判断参数 RoleNames 是否已赋值
                      * @return RoleNames 是否已赋值
+                     * 
                      */
                     bool RoleNamesHasBeenSet() const;
 

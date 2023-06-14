@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The ISO 3166-2 Alpha-2 country code. For the list of country codes, see [ISO 3166-2](https://zh.m.wikipedia.org/zh-hans/ISO_3166-2).
                      * @return Alpha2 The ISO 3166-2 Alpha-2 country code. For the list of country codes, see [ISO 3166-2](https://zh.m.wikipedia.org/zh-hans/ISO_3166-2).
+                     * 
                      */
                     std::string GetAlpha2() const;
 
                     /**
                      * 设置The ISO 3166-2 Alpha-2 country code. For the list of country codes, see [ISO 3166-2](https://zh.m.wikipedia.org/zh-hans/ISO_3166-2).
-                     * @param Alpha2 The ISO 3166-2 Alpha-2 country code. For the list of country codes, see [ISO 3166-2](https://zh.m.wikipedia.org/zh-hans/ISO_3166-2).
+                     * @param _alpha2 The ISO 3166-2 Alpha-2 country code. For the list of country codes, see [ISO 3166-2](https://zh.m.wikipedia.org/zh-hans/ISO_3166-2).
+                     * 
                      */
                     void SetAlpha2(const std::string& _alpha2);
 
                     /**
                      * 判断参数 Alpha2 是否已赋值
                      * @return Alpha2 是否已赋值
+                     * 
                      */
                     bool Alpha2HasBeenSet() const;
 
                     /**
                      * 获取The overall load time, in milliseconds.
                      * @return LoadTime The overall load time, in milliseconds.
+                     * 
                      */
                     int64_t GetLoadTime() const;
 
                     /**
                      * 设置The overall load time, in milliseconds.
-                     * @param LoadTime The overall load time, in milliseconds.
+                     * @param _loadTime The overall load time, in milliseconds.
+                     * 
                      */
                     void SetLoadTime(const int64_t& _loadTime);
 
                     /**
                      * 判断参数 LoadTime 是否已赋值
                      * @return LoadTime 是否已赋值
+                     * 
                      */
                     bool LoadTimeHasBeenSet() const;
 

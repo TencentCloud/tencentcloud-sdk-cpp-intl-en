@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Access frequency control rule list
                      * @return CCFrequencyRuleList Access frequency control rule list
+                     * 
                      */
                     std::vector<CCFrequencyRule> GetCCFrequencyRuleList() const;
 
                     /**
                      * 判断参数 CCFrequencyRuleList 是否已赋值
                      * @return CCFrequencyRuleList 是否已赋值
+                     * 
                      */
                     bool CCFrequencyRuleListHasBeenSet() const;
 
                     /**
                      * 获取Access frequency control rule status. Valid values: [on, off];
                      * @return CCFrequencyRuleStatus Access frequency control rule status. Valid values: [on, off];
+                     * 
                      */
                     std::string GetCCFrequencyRuleStatus() const;
 
                     /**
                      * 判断参数 CCFrequencyRuleStatus 是否已赋值
                      * @return CCFrequencyRuleStatus 是否已赋值
+                     * 
                      */
                     bool CCFrequencyRuleStatusHasBeenSet() const;
 

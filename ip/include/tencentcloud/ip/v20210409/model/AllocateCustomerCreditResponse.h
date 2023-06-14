@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The updated total credit
                      * @return TotalCredit The updated total credit
+                     * 
                      */
                     double GetTotalCredit() const;
 
                     /**
                      * 判断参数 TotalCredit 是否已赋值
                      * @return TotalCredit 是否已赋值
+                     * 
                      */
                     bool TotalCreditHasBeenSet() const;
 
                     /**
                      * 获取The updated available credit
                      * @return RemainingCredit The updated available credit
+                     * 
                      */
                     double GetRemainingCredit() const;
 
                     /**
                      * 判断参数 RemainingCredit 是否已赋值
                      * @return RemainingCredit 是否已赋值
+                     * 
                      */
                     bool RemainingCreditHasBeenSet() const;
 

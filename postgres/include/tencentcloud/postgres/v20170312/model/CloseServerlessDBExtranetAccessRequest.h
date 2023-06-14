@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of an instance
                      * @return DBInstanceId Unique ID of an instance
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Unique ID of an instance
-                     * @param DBInstanceId Unique ID of an instance
+                     * @param _dBInstanceId Unique ID of an instance
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return DBInstanceName Instance name
+                     * 
                      */
                     std::string GetDBInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param DBInstanceName Instance name
+                     * @param _dBInstanceName Instance name
+                     * 
                      */
                     void SetDBInstanceName(const std::string& _dBInstanceName);
 
                     /**
                      * 判断参数 DBInstanceName 是否已赋值
                      * @return DBInstanceName 是否已赋值
+                     * 
                      */
                     bool DBInstanceNameHasBeenSet() const;
 

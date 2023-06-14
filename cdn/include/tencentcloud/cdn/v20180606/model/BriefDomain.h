@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Domain name ID
                      * @return ResourceId Domain name ID
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Domain name ID
-                     * @param ResourceId Domain name ID
+                     * @param _resourceId Domain name ID
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Tencent Cloud account ID
                      * @return AppId Tencent Cloud account ID
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 设置Tencent Cloud account ID
-                     * @param AppId Tencent Cloud account ID
+                     * @param _appId Tencent Cloud account ID
+                     * 
                      */
                     void SetAppId(const int64_t& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取Acceleration domain name
                      * @return Domain Acceleration domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Acceleration domain name
-                     * @param Domain Acceleration domain name
+                     * @param _domain Acceleration domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取CNAME address of domain name
                      * @return Cname CNAME address of domain name
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置CNAME address of domain name
-                     * @param Cname CNAME address of domain name
+                     * @param _cname CNAME address of domain name
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 
@@ -132,6 +144,7 @@ namespace TencentCloud
 `closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -142,36 +155,41 @@ namespace TencentCloud
 `closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
-                     * @param Status Acceleration service status
+                     * @param _status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
 `closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Project ID, which can be viewed on the Tencent Cloud project management page
                      * @return ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID, which can be viewed on the Tencent Cloud project management page
-                     * @param ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
+                     * @param _projectId Project ID, which can be viewed on the Tencent Cloud project management page
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -184,6 +202,7 @@ namespace TencentCloud
 `web`: Static acceleration
 `download`: Download acceleration
 `media`: Streaming media VOD acceleration
+                     * 
                      */
                     std::string GetServiceType() const;
 
@@ -192,70 +211,81 @@ namespace TencentCloud
 `web`: Static acceleration
 `download`: Download acceleration
 `media`: Streaming media VOD acceleration
-                     * @param ServiceType Domain name service type
+                     * @param _serviceType Domain name service type
 `web`: Static acceleration
 `download`: Download acceleration
 `media`: Streaming media VOD acceleration
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
                     /**
                      * 获取Domain name creation time.
                      * @return CreateTime Domain name creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Domain name creation time.
-                     * @param CreateTime Domain name creation time.
+                     * @param _createTime Domain name creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Domain name update time.
                      * @return UpdateTime Domain name update time.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Domain name update time.
-                     * @param UpdateTime Domain name update time.
+                     * @param _updateTime Domain name update time.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Origin server configuration details.
                      * @return Origin Origin server configuration details.
+                     * 
                      */
                     Origin GetOrigin() const;
 
                     /**
                      * 设置Origin server configuration details.
-                     * @param Origin Origin server configuration details.
+                     * @param _origin Origin server configuration details.
+                     * 
                      */
                     void SetOrigin(const Origin& _origin);
 
                     /**
                      * 判断参数 Origin 是否已赋值
                      * @return Origin 是否已赋值
+                     * 
                      */
                     bool OriginHasBeenSet() const;
 
@@ -278,6 +308,7 @@ namespace TencentCloud
 `unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
 `capping`: The configured upper limit for bandwidth has been reached.
 `readonly`: The domain name has a special configuration and has been locked.
+                     * 
                      */
                     std::string GetDisable() const;
 
@@ -291,7 +322,7 @@ namespace TencentCloud
 `unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
 `capping`: The configured upper limit for bandwidth has been reached.
 `readonly`: The domain name has a special configuration and has been locked.
-                     * @param Disable Domain name block status
+                     * @param _disable Domain name block status
 `normal`: Normal
 `overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
 `malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
@@ -300,12 +331,14 @@ namespace TencentCloud
 `unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
 `capping`: The configured upper limit for bandwidth has been reached.
 `readonly`: The domain name has a special configuration and has been locked.
+                     * 
                      */
                     void SetDisable(const std::string& _disable);
 
                     /**
                      * 判断参数 Disable 是否已赋值
                      * @return Disable 是否已赋值
+                     * 
                      */
                     bool DisableHasBeenSet() const;
 
@@ -318,6 +351,7 @@ namespace TencentCloud
 `mainland`: Acceleration inside the Chinese mainland
 `overseas`: Acceleration outside the Chinese mainland
 `global`: Acceleration over the globe
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -326,16 +360,18 @@ namespace TencentCloud
 `mainland`: Acceleration inside the Chinese mainland
 `overseas`: Acceleration outside the Chinese mainland
 `global`: Acceleration over the globe
-                     * @param Area Acceleration region
+                     * @param _area Acceleration region
 `mainland`: Acceleration inside the Chinese mainland
 `overseas`: Acceleration outside the Chinese mainland
 `global`: Acceleration over the globe
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -350,6 +386,7 @@ global: Locked globally
 `mainland`: Locked in the Chinese mainland
 overseas: Locked outside the Chinese mainland
 global: Locked globally
+                     * 
                      */
                     std::string GetReadonly() const;
 
@@ -359,53 +396,61 @@ global: Locked globally
 `mainland`: Locked in the Chinese mainland
 overseas: Locked outside the Chinese mainland
 global: Locked globally
-                     * @param Readonly Domain name lock status
+                     * @param _readonly Domain name lock status
 `normal`: Not locked
 `mainland`: Locked in the Chinese mainland
 overseas: Locked outside the Chinese mainland
 global: Locked globally
+                     * 
                      */
                     void SetReadonly(const std::string& _readonly);
 
                     /**
                      * 判断参数 Readonly 是否已赋值
                      * @return Readonly 是否已赋值
+                     * 
                      */
                     bool ReadonlyHasBeenSet() const;
 
                     /**
                      * 获取Product of the domain name, either `cdn` or `ecdn`.
                      * @return Product Product of the domain name, either `cdn` or `ecdn`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Product of the domain name, either `cdn` or `ecdn`.
-                     * @param Product Product of the domain name, either `cdn` or `ecdn`.
+                     * @param _product Product of the domain name, either `cdn` or `ecdn`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Primary domain name
                      * @return ParentHost Primary domain name
+                     * 
                      */
                     std::string GetParentHost() const;
 
                     /**
                      * 设置Primary domain name
-                     * @param ParentHost Primary domain name
+                     * @param _parentHost Primary domain name
+                     * 
                      */
                     void SetParentHost(const std::string& _parentHost);
 
                     /**
                      * 判断参数 ParentHost 是否已赋值
                      * @return ParentHost 是否已赋值
+                     * 
                      */
                     bool ParentHostHasBeenSet() const;
 

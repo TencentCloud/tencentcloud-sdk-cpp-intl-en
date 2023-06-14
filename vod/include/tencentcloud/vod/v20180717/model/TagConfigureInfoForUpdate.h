@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of intelligent tagging task. Valid values:
 <li>ON: enables intelligent tagging task;</li>
 <li>OFF: disables intelligent tagging task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of intelligent tagging task. Valid values:
 <li>ON: enables intelligent tagging task;</li>
 <li>OFF: disables intelligent tagging task.</li>
-                     * @param Switch Switch of intelligent tagging task. Valid values:
+                     * @param _switch Switch of intelligent tagging task. Valid values:
 <li>ON: enables intelligent tagging task;</li>
 <li>OFF: disables intelligent tagging task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

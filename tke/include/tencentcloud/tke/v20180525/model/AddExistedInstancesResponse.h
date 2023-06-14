@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return FailedInstanceIds IDs of failed nodes
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetFailedInstanceIds() const;
 
                     /**
                      * 判断参数 FailedInstanceIds 是否已赋值
                      * @return FailedInstanceIds 是否已赋值
+                     * 
                      */
                     bool FailedInstanceIdsHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return SuccInstanceIds IDs of successful nodes
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetSuccInstanceIds() const;
 
                     /**
                      * 判断参数 SuccInstanceIds 是否已赋值
                      * @return SuccInstanceIds 是否已赋值
+                     * 
                      */
                     bool SuccInstanceIdsHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return TimeoutInstanceIds IDs of (successful or failed) nodes that timed out
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetTimeoutInstanceIds() const;
 
                     /**
                      * 判断参数 TimeoutInstanceIds 是否已赋值
                      * @return TimeoutInstanceIds 是否已赋值
+                     * 
                      */
                     bool TimeoutInstanceIdsHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return FailedReasons Causes of the failure to add a node to a cluster
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetFailedReasons() const;
 
                     /**
                      * 判断参数 FailedReasons 是否已赋值
                      * @return FailedReasons 是否已赋值
+                     * 
                      */
                     bool FailedReasonsHasBeenSet() const;
 

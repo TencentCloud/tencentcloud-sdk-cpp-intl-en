@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return WebSwitch Whether to enable web protection. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+                     * 
                      */
                     std::string GetWebSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable web protection. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>It does not affect DDoS and bot configuration.
-                     * @param WebSwitch Whether to enable web protection. Values:
+                     * @param _webSwitch Whether to enable web protection. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+                     * 
                      */
                     void SetWebSwitch(const std::string& _webSwitch);
 
                     /**
                      * 判断参数 WebSwitch 是否已赋值
                      * @return WebSwitch 是否已赋值
+                     * 
                      */
                     bool WebSwitchHasBeenSet() const;
 

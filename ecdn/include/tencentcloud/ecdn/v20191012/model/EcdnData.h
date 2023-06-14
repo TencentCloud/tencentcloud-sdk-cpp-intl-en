@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Queries the specified metric. Valid values: Bandwidth, Flux, Request, Delay, status code, LogBandwidth, LogFlux, LogRequest
                      * @return Metrics Queries the specified metric. Valid values: Bandwidth, Flux, Request, Delay, status code, LogBandwidth, LogFlux, LogRequest
+                     * 
                      */
                     std::vector<std::string> GetMetrics() const;
 
                     /**
                      * 设置Queries the specified metric. Valid values: Bandwidth, Flux, Request, Delay, status code, LogBandwidth, LogFlux, LogRequest
-                     * @param Metrics Queries the specified metric. Valid values: Bandwidth, Flux, Request, Delay, status code, LogBandwidth, LogFlux, LogRequest
+                     * @param _metrics Queries the specified metric. Valid values: Bandwidth, Flux, Request, Delay, status code, LogBandwidth, LogFlux, LogRequest
+                     * 
                      */
                     void SetMetrics(const std::vector<std::string>& _metrics);
 
                     /**
                      * 判断参数 Metrics 是否已赋值
                      * @return Metrics 是否已赋值
+                     * 
                      */
                     bool MetricsHasBeenSet() const;
 
                     /**
                      * 获取Detailed data collection
                      * @return DetailData Detailed data collection
+                     * 
                      */
                     std::vector<TimestampData> GetDetailData() const;
 
                     /**
                      * 设置Detailed data collection
-                     * @param DetailData Detailed data collection
+                     * @param _detailData Detailed data collection
+                     * 
                      */
                     void SetDetailData(const std::vector<TimestampData>& _detailData);
 
                     /**
                      * 判断参数 DetailData 是否已赋值
                      * @return DetailData 是否已赋值
+                     * 
                      */
                     bool DetailDataHasBeenSet() const;
 

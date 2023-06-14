@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取The policy document to use as the content for the new version
                      * @return PolicyDocument The policy document to use as the content for the new version
+                     * 
                      */
                     std::string GetPolicyDocument() const;
 
                     /**
                      * 设置The policy document to use as the content for the new version
-                     * @param PolicyDocument The policy document to use as the content for the new version
+                     * @param _policyDocument The policy document to use as the content for the new version
+                     * 
                      */
                     void SetPolicyDocument(const std::string& _policyDocument);
 
                     /**
                      * 判断参数 PolicyDocument 是否已赋值
                      * @return PolicyDocument 是否已赋值
+                     * 
                      */
                     bool PolicyDocumentHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to set this version as the default version
                      * @return SetAsDefault Specifies whether to set this version as the default version
+                     * 
                      */
                     bool GetSetAsDefault() const;
 
                     /**
                      * 设置Specifies whether to set this version as the default version
-                     * @param SetAsDefault Specifies whether to set this version as the default version
+                     * @param _setAsDefault Specifies whether to set this version as the default version
+                     * 
                      */
                     void SetSetAsDefault(const bool& _setAsDefault);
 
                     /**
                      * 判断参数 SetAsDefault 是否已赋值
                      * @return SetAsDefault 是否已赋值
+                     * 
                      */
                     bool SetAsDefaultHasBeenSet() const;
 

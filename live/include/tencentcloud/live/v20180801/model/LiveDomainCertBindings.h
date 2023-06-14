@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The domain name.
                      * @return DomainName The domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置The domain name.
-                     * @param DomainName The domain name.
+                     * @param _domainName The domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取The remarks for the certificate. This parameter is the same as `CertName`.
                      * @return CertificateAlias The remarks for the certificate. This parameter is the same as `CertName`.
+                     * 
                      */
                     std::string GetCertificateAlias() const;
 
                     /**
                      * 设置The remarks for the certificate. This parameter is the same as `CertName`.
-                     * @param CertificateAlias The remarks for the certificate. This parameter is the same as `CertName`.
+                     * @param _certificateAlias The remarks for the certificate. This parameter is the same as `CertName`.
+                     * 
                      */
                     void SetCertificateAlias(const std::string& _certificateAlias);
 
                     /**
                      * 判断参数 CertificateAlias 是否已赋值
                      * @return CertificateAlias 是否已赋值
+                     * 
                      */
                     bool CertificateAliasHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
                      * @return CertType The certificate type.
 0: Self-owned certificate
 1: Tencent Cloud-hosted certificate
+                     * 
                      */
                     int64_t GetCertType() const;
 
@@ -96,15 +103,17 @@ namespace TencentCloud
                      * 设置The certificate type.
 0: Self-owned certificate
 1: Tencent Cloud-hosted certificate
-                     * @param CertType The certificate type.
+                     * @param _certType The certificate type.
 0: Self-owned certificate
 1: Tencent Cloud-hosted certificate
+                     * 
                      */
                     void SetCertType(const int64_t& _certType);
 
                     /**
                      * 判断参数 CertType 是否已赋值
                      * @return CertType 是否已赋值
+                     * 
                      */
                     bool CertTypeHasBeenSet() const;
 
@@ -115,6 +124,7 @@ namespace TencentCloud
                      * @return Status Whether HTTPS is enabled.
 1: Enabled
 0: Disabled
+                     * 
                      */
                     int64_t GetStatus() const;
 
@@ -122,15 +132,17 @@ namespace TencentCloud
                      * 设置Whether HTTPS is enabled.
 1: Enabled
 0: Disabled
-                     * @param Status Whether HTTPS is enabled.
+                     * @param _status Whether HTTPS is enabled.
 1: Enabled
 0: Disabled
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -139,56 +151,65 @@ namespace TencentCloud
 Note: Beijing time (UTC+8) is used.
                      * @return CertExpireTime The certificate expiration time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetCertExpireTime() const;
 
                     /**
                      * 设置The certificate expiration time.
 Note: Beijing time (UTC+8) is used.
-                     * @param CertExpireTime The certificate expiration time.
+                     * @param _certExpireTime The certificate expiration time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetCertExpireTime(const std::string& _certExpireTime);
 
                     /**
                      * 判断参数 CertExpireTime 是否已赋值
                      * @return CertExpireTime 是否已赋值
+                     * 
                      */
                     bool CertExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取The certificate ID.
                      * @return CertId The certificate ID.
+                     * 
                      */
                     int64_t GetCertId() const;
 
                     /**
                      * 设置The certificate ID.
-                     * @param CertId The certificate ID.
+                     * @param _certId The certificate ID.
+                     * 
                      */
                     void SetCertId(const int64_t& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
                     /**
                      * 获取The SSL certificate ID assigned by Tencent Cloud.
                      * @return CloudCertId The SSL certificate ID assigned by Tencent Cloud.
+                     * 
                      */
                     std::string GetCloudCertId() const;
 
                     /**
                      * 设置The SSL certificate ID assigned by Tencent Cloud.
-                     * @param CloudCertId The SSL certificate ID assigned by Tencent Cloud.
+                     * @param _cloudCertId The SSL certificate ID assigned by Tencent Cloud.
+                     * 
                      */
                     void SetCloudCertId(const std::string& _cloudCertId);
 
                     /**
                      * 判断参数 CloudCertId 是否已赋值
                      * @return CloudCertId 是否已赋值
+                     * 
                      */
                     bool CloudCertIdHasBeenSet() const;
 
@@ -199,6 +220,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return UpdateTime The last updated time.
 Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
@@ -206,15 +228,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The last updated time.
 Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime The last updated time.
+                     * @param _updateTime The last updated time.
 Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

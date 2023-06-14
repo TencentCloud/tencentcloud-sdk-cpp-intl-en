@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of databases
                      * @return TotalCount Number of databases
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of instance databases
                      * @return DBInstances List of instance databases
+                     * 
                      */
                     std::vector<InstanceDBDetail> GetDBInstances() const;
 
                     /**
                      * 判断参数 DBInstances 是否已赋值
                      * @return DBInstances 是否已赋值
+                     * 
                      */
                     bool DBInstancesHasBeenSet() const;
 

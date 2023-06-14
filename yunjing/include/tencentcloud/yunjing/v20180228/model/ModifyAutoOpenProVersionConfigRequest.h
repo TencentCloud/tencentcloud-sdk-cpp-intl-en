@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return Status Auto-Activation status.
 <li>CLOSE: disabled</li>
 <li>OPEN: enabled</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Auto-Activation status.
 <li>CLOSE: disabled</li>
 <li>OPEN: enabled</li>
-                     * @param Status Auto-Activation status.
+                     * @param _status Auto-Activation status.
 <li>CLOSE: disabled</li>
 <li>OPEN: enabled</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

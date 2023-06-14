@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Unallocated provisioned concurrency amount of function.
                      * @return UnallocatedConcurrencyNum Unallocated provisioned concurrency amount of function.
+                     * 
                      */
                     uint64_t GetUnallocatedConcurrencyNum() const;
 
                     /**
                      * 判断参数 UnallocatedConcurrencyNum 是否已赋值
                      * @return UnallocatedConcurrencyNum 是否已赋值
+                     * 
                      */
                     bool UnallocatedConcurrencyNumHasBeenSet() const;
 
                     /**
                      * 获取Allocated provisioned concurrency amount of function.
                      * @return Allocated Allocated provisioned concurrency amount of function.
+                     * 
                      */
                     std::vector<VersionProvisionedConcurrencyInfo> GetAllocated() const;
 
                     /**
                      * 判断参数 Allocated 是否已赋值
                      * @return Allocated 是否已赋值
+                     * 
                      */
                     bool AllocatedHasBeenSet() const;
 

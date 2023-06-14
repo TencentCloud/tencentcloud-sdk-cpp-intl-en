@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Function execution result
                      * @return Result Function execution result
+                     * 
                      */
                     Result GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

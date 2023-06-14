@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取groupId
                      * @return Group groupId
+                     * 
                      */
                     std::string GetGroup() const;
 
                     /**
                      * 设置groupId
-                     * @param Group groupId
+                     * @param _group groupId
+                     * 
                      */
                     void SetGroup(const std::string& _group);
 
                     /**
                      * 判断参数 Group 是否已赋值
                      * @return Group 是否已赋值
+                     * 
                      */
                     bool GroupHasBeenSet() const;
 
                     /**
                      * 获取Protocol used by the group.
                      * @return Protocol Protocol used by the group.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol used by the group.
-                     * @param Protocol Protocol used by the group.
+                     * @param _protocol Protocol used by the group.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

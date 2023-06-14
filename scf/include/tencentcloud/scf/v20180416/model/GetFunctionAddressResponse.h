@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Cos address of the function
                      * @return Url Cos address of the function
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取SHA256 code of the function
                      * @return CodeSha256 SHA256 code of the function
+                     * 
                      */
                     std::string GetCodeSha256() const;
 
                     /**
                      * 判断参数 CodeSha256 是否已赋值
                      * @return CodeSha256 是否已赋值
+                     * 
                      */
                     bool CodeSha256HasBeenSet() const;
 

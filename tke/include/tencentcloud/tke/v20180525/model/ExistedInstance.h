@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Usable Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetUsable() const;
 
                     /**
                      * 设置Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Usable Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
+                     * @param _usable Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUsable(const bool& _usable);
 
                     /**
                      * 判断参数 Usable 是否已赋值
                      * @return Usable 是否已赋值
+                     * 
                      */
                     bool UsableHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UnusableReason Reason that the instance does not support being added.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUnusableReason() const;
 
                     /**
                      * 设置Reason that the instance does not support being added.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UnusableReason Reason that the instance does not support being added.
+                     * @param _unusableReason Reason that the instance does not support being added.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnusableReason(const std::string& _unusableReason);
 
                     /**
                      * 判断参数 UnusableReason 是否已赋值
                      * @return UnusableReason 是否已赋值
+                     * 
                      */
                     bool UnusableReasonHasBeenSet() const;
 
@@ -95,38 +101,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AlreadyInCluster ID of the cluster in which the instance currently resides.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAlreadyInCluster() const;
 
                     /**
                      * 设置ID of the cluster in which the instance currently resides.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AlreadyInCluster ID of the cluster in which the instance currently resides.
+                     * @param _alreadyInCluster ID of the cluster in which the instance currently resides.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlreadyInCluster(const std::string& _alreadyInCluster);
 
                     /**
                      * 判断参数 AlreadyInCluster 是否已赋值
                      * @return AlreadyInCluster 是否已赋值
+                     * 
                      */
                     bool AlreadyInClusterHasBeenSet() const;
 
                     /**
                      * 获取Instance ID, in the format of ins-xxxxxxxx.
                      * @return InstanceId Instance ID, in the format of ins-xxxxxxxx.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID, in the format of ins-xxxxxxxx.
-                     * @param InstanceId Instance ID, in the format of ins-xxxxxxxx.
+                     * @param _instanceId Instance ID, in the format of ins-xxxxxxxx.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Instance name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceName Instance name.
+                     * @param _instanceName Instance name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrivateIpAddresses List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateIpAddresses List of private IPs of the instance's primary ENI.
+                     * @param _privateIpAddresses List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 
@@ -179,20 +197,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
                      * 设置List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublicIpAddresses List of public IPs of the instance's primary ENI.
+                     * @param _publicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
 
                     /**
                      * 判断参数 PublicIpAddresses 是否已赋值
                      * @return PublicIpAddresses 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressesHasBeenSet() const;
 
@@ -201,20 +222,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
+                     * @param _createdTime Creation time, which follows the ISO8601 standard and uses UTC time. Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -223,20 +247,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CPU Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCPU() const;
 
                     /**
                      * 设置Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CPU Instance's number of CPU cores. Unit: cores.
+                     * @param _cPU Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCPU(const uint64_t& _cPU);
 
                     /**
                      * 判断参数 CPU 是否已赋值
                      * @return CPU 是否已赋值
+                     * 
                      */
                     bool CPUHasBeenSet() const;
 
@@ -245,20 +272,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Memory Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
                      * 设置Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Memory Instance's memory capacity. Unit: GB.
+                     * @param _memory Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMemory(const uint64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
@@ -267,20 +297,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OsName Operating system name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOsName() const;
 
                     /**
                      * 设置Operating system name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OsName Operating system name.
+                     * @param _osName Operating system name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOsName(const std::string& _osName);
 
                     /**
                      * 判断参数 OsName 是否已赋值
                      * @return OsName 是否已赋值
+                     * 
                      */
                     bool OsNameHasBeenSet() const;
 
@@ -289,20 +322,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceType Instance model.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance model.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceType Instance model.
+                     * @param _instanceType Instance model.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -311,20 +347,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value was found.
                      * @return AutoscalingGroupId Auto scaling group ID
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetAutoscalingGroupId() const;
 
                     /**
                      * 设置Auto scaling group ID
 Note: This field may return null, indicating that no valid value was found.
-                     * @param AutoscalingGroupId Auto scaling group ID
+                     * @param _autoscalingGroupId Auto scaling group ID
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetAutoscalingGroupId(const std::string& _autoscalingGroupId);
 
                     /**
                      * 判断参数 AutoscalingGroupId 是否已赋值
                      * @return AutoscalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoscalingGroupIdHasBeenSet() const;
 
@@ -333,20 +372,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+                     * @param _instanceChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
@@ -357,6 +399,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return IPv6Addresses IPv6 address of the instance
 Note: This field may return `null`, indicating that no valid values can be obtained.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetIPv6Addresses() const;
 
@@ -364,15 +407,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 设置IPv6 address of the instance
 Note: This field may return `null`, indicating that no valid values can be obtained.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IPv6Addresses IPv6 address of the instance
+                     * @param _iPv6Addresses IPv6 address of the instance
 Note: This field may return `null`, indicating that no valid values can be obtained.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIPv6Addresses(const std::vector<std::string>& _iPv6Addresses);
 
                     /**
                      * 判断参数 IPv6Addresses 是否已赋值
                      * @return IPv6Addresses 是否已赋值
+                     * 
                      */
                     bool IPv6AddressesHasBeenSet() const;
 

@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取CLB listener ID.
                      * @return ListenerId CLB listener ID.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID.
-                     * @param ListenerId CLB listener ID.
+                     * @param _listenerId CLB listener ID.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取List of real servers whose weights to modify.
                      * @return Targets List of real servers whose weights to modify.
+                     * 
                      */
                     std::vector<Target> GetTargets() const;
 
                     /**
                      * 设置List of real servers whose weights to modify.
-                     * @param Targets List of real servers whose weights to modify.
+                     * @param _targets List of real servers whose weights to modify.
+                     * 
                      */
                     void SetTargets(const std::vector<Target>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule ID, which is required only for layer-7 rules.
                      * @return LocationId Forwarding rule ID, which is required only for layer-7 rules.
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置Forwarding rule ID, which is required only for layer-7 rules.
-                     * @param LocationId Forwarding rule ID, which is required only for layer-7 rules.
+                     * @param _locationId Forwarding rule ID, which is required only for layer-7 rules.
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
                     /**
                      * 获取Target rule domain name. This parameter does not take effect if LocationId is specified
                      * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Target rule domain name. This parameter does not take effect if LocationId is specified
-                     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+                     * @param _domain Target rule domain name. This parameter does not take effect if LocationId is specified
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Target rule URL. This parameter does not take effect if LocationId is specified
                      * @return Url Target rule URL. This parameter does not take effect if LocationId is specified
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Target rule URL. This parameter does not take effect if LocationId is specified
-                     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified
+                     * @param _url Target rule URL. This parameter does not take effect if LocationId is specified
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
                      * @return Weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
+                     * 
                      */
                     int64_t GetWeight() const;
 
                     /**
                      * 设置The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
-                     * @param Weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
+                     * @param _weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
+                     * 
                      */
                     void SetWeight(const int64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

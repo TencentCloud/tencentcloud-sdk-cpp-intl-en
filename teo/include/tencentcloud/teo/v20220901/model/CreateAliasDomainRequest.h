@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The alias domain name.
                      * @return AliasName The alias domain name.
+                     * 
                      */
                     std::string GetAliasName() const;
 
                     /**
                      * 设置The alias domain name.
-                     * @param AliasName The alias domain name.
+                     * @param _aliasName The alias domain name.
+                     * 
                      */
                     void SetAliasName(const std::string& _aliasName);
 
                     /**
                      * 判断参数 AliasName 是否已赋值
                      * @return AliasName 是否已赋值
+                     * 
                      */
                     bool AliasNameHasBeenSet() const;
 
                     /**
                      * 获取The target domain name.
                      * @return TargetName The target domain name.
+                     * 
                      */
                     std::string GetTargetName() const;
 
                     /**
                      * 设置The target domain name.
-                     * @param TargetName The target domain name.
+                     * @param _targetName The target domain name.
+                     * 
                      */
                     void SetTargetName(const std::string& _targetName);
 
                     /**
                      * 判断参数 TargetName 是否已赋值
                      * @return TargetName 是否已赋值
+                     * 
                      */
                     bool TargetNameHasBeenSet() const;
 
@@ -103,6 +112,7 @@ namespace TencentCloud
                      * @return CertType Certificate configuration. Values:
 <li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
+                     * 
                      */
                     std::string GetCertType() const;
 
@@ -110,33 +120,38 @@ namespace TencentCloud
                      * 设置Certificate configuration. Values:
 <li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-                     * @param CertType Certificate configuration. Values:
+                     * @param _certType Certificate configuration. Values:
 <li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
+                     * 
                      */
                     void SetCertType(const std::string& _certType);
 
                     /**
                      * 判断参数 CertType 是否已赋值
                      * @return CertType 是否已赋值
+                     * 
                      */
                     bool CertTypeHasBeenSet() const;
 
                     /**
                      * 获取The certificate ID. This field is required when `CertType=hosting`.
                      * @return CertId The certificate ID. This field is required when `CertType=hosting`.
+                     * 
                      */
                     std::vector<std::string> GetCertId() const;
 
                     /**
                      * 设置The certificate ID. This field is required when `CertType=hosting`.
-                     * @param CertId The certificate ID. This field is required when `CertType=hosting`.
+                     * @param _certId The certificate ID. This field is required when `CertType=hosting`.
+                     * 
                      */
                     void SetCertId(const std::vector<std::string>& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 

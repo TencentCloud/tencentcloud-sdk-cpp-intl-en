@@ -51,108 +51,126 @@ namespace TencentCloud
                     /**
                      * 获取Nearest access region
                      * @return NationCountryInnerList Nearest access region
+                     * 
                      */
                     std::vector<NationCountryInnerInfo> GetNationCountryInnerList() const;
 
                     /**
                      * 设置Nearest access region
-                     * @param NationCountryInnerList Nearest access region
+                     * @param _nationCountryInnerList Nearest access region
+                     * 
                      */
                     void SetNationCountryInnerList(const std::vector<NationCountryInnerInfo>& _nationCountryInnerList);
 
                     /**
                      * 判断参数 NationCountryInnerList 是否已赋值
                      * @return NationCountryInnerList 是否已赋值
+                     * 
                      */
                     bool NationCountryInnerListHasBeenSet() const;
 
                     /**
                      * 获取Acceleration region connection list
                      * @return ProxyList Acceleration region connection list
+                     * 
                      */
                     std::vector<ProxyIdDict> GetProxyList() const;
 
                     /**
                      * 设置Acceleration region connection list
-                     * @param ProxyList Acceleration region connection list
+                     * @param _proxyList Acceleration region connection list
+                     * 
                      */
                     void SetProxyList(const std::vector<ProxyIdDict>& _proxyList);
 
                     /**
                      * 判断参数 ProxyList 是否已赋值
                      * @return ProxyList 是否已赋值
+                     * 
                      */
                     bool ProxyListHasBeenSet() const;
 
                     /**
                      * 获取Acceleration region ID
                      * @return RegionId Acceleration region ID
+                     * 
                      */
                     std::string GetRegionId() const;
 
                     /**
                      * 设置Acceleration region ID
-                     * @param RegionId Acceleration region ID
+                     * @param _regionId Acceleration region ID
+                     * 
                      */
                     void SetRegionId(const std::string& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Acceleration region internal code
                      * @return GeographicalZoneInnerCode Acceleration region internal code
+                     * 
                      */
                     std::string GetGeographicalZoneInnerCode() const;
 
                     /**
                      * 设置Acceleration region internal code
-                     * @param GeographicalZoneInnerCode Acceleration region internal code
+                     * @param _geographicalZoneInnerCode Acceleration region internal code
+                     * 
                      */
                     void SetGeographicalZoneInnerCode(const std::string& _geographicalZoneInnerCode);
 
                     /**
                      * 判断参数 GeographicalZoneInnerCode 是否已赋值
                      * @return GeographicalZoneInnerCode 是否已赋值
+                     * 
                      */
                     bool GeographicalZoneInnerCodeHasBeenSet() const;
 
                     /**
                      * 获取Internal code of the continent to which the acceleration region belongs
                      * @return ContinentInnerCode Internal code of the continent to which the acceleration region belongs
+                     * 
                      */
                     std::string GetContinentInnerCode() const;
 
                     /**
                      * 设置Internal code of the continent to which the acceleration region belongs
-                     * @param ContinentInnerCode Internal code of the continent to which the acceleration region belongs
+                     * @param _continentInnerCode Internal code of the continent to which the acceleration region belongs
+                     * 
                      */
                     void SetContinentInnerCode(const std::string& _continentInnerCode);
 
                     /**
                      * 判断参数 ContinentInnerCode 是否已赋值
                      * @return ContinentInnerCode 是否已赋值
+                     * 
                      */
                     bool ContinentInnerCodeHasBeenSet() const;
 
                     /**
                      * 获取Acceleration region alias
                      * @return RegionName Acceleration region alias
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Acceleration region alias
-                     * @param RegionName Acceleration region alias
+                     * @param _regionName Acceleration region alias
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 

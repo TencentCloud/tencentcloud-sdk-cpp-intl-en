@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取GTID enablement flag. Value range: 0 (not enabled), 1 (enabled).
                      * @return IsGTIDOpen GTID enablement flag. Value range: 0 (not enabled), 1 (enabled).
+                     * 
                      */
                     int64_t GetIsGTIDOpen() const;
 
                     /**
                      * 判断参数 IsGTIDOpen 是否已赋值
                      * @return IsGTIDOpen 是否已赋值
+                     * 
                      */
                     bool IsGTIDOpenHasBeenSet() const;
 

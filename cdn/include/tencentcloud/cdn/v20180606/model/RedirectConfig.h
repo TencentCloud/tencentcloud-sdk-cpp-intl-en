@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Configuration switch
                      * @return Switch Configuration switch
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Configuration switch
-                     * @param Switch Configuration switch
+                     * @param _switch Configuration switch
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取The custom host header that is sent when the primary origin server follows 302 redirects
                      * @return FollowRedirectHost The custom host header that is sent when the primary origin server follows 302 redirects
+                     * 
                      */
                     std::string GetFollowRedirectHost() const;
 
                     /**
                      * 设置The custom host header that is sent when the primary origin server follows 302 redirects
-                     * @param FollowRedirectHost The custom host header that is sent when the primary origin server follows 302 redirects
+                     * @param _followRedirectHost The custom host header that is sent when the primary origin server follows 302 redirects
+                     * 
                      */
                     void SetFollowRedirectHost(const std::string& _followRedirectHost);
 
                     /**
                      * 判断参数 FollowRedirectHost 是否已赋值
                      * @return FollowRedirectHost 是否已赋值
+                     * 
                      */
                     bool FollowRedirectHostHasBeenSet() const;
 
                     /**
                      * 获取The custom host header that is sent when the secondary origin server follows 302 redirects
                      * @return FollowRedirectBackupHost The custom host header that is sent when the secondary origin server follows 302 redirects
+                     * 
                      */
                     std::string GetFollowRedirectBackupHost() const;
 
                     /**
                      * 设置The custom host header that is sent when the secondary origin server follows 302 redirects
-                     * @param FollowRedirectBackupHost The custom host header that is sent when the secondary origin server follows 302 redirects
+                     * @param _followRedirectBackupHost The custom host header that is sent when the secondary origin server follows 302 redirects
+                     * 
                      */
                     void SetFollowRedirectBackupHost(const std::string& _followRedirectBackupHost);
 
                     /**
                      * 判断参数 FollowRedirectBackupHost 是否已赋值
                      * @return FollowRedirectBackupHost 是否已赋值
+                     * 
                      */
                     bool FollowRedirectBackupHostHasBeenSet() const;
 

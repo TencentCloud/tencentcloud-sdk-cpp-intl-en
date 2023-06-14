@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Deletion task identifier, which can be used to check the status of a service-linked role deletion.
                      * @return DeletionTaskId Deletion task identifier, which can be used to check the status of a service-linked role deletion.
+                     * 
                      */
                     std::string GetDeletionTaskId() const;
 
                     /**
                      * 判断参数 DeletionTaskId 是否已赋值
                      * @return DeletionTaskId 是否已赋值
+                     * 
                      */
                     bool DeletionTaskIdHasBeenSet() const;
 

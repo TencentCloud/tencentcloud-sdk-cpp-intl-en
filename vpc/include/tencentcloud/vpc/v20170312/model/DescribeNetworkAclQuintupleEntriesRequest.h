@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Network ACL instance ID, such as `acl-12345678`.
                      * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
                      * 设置Network ACL instance ID, such as `acl-12345678`.
-                     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * @param _networkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
                     /**
                      * 判断参数 NetworkAclId 是否已赋值
                      * @return NetworkAclId 是否已赋值
+                     * 
                      */
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Returned quantity. Default: 20. Value range: 1-100.
                      * @return Limit Returned quantity. Default: 20. Value range: 1-100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Returned quantity. Default: 20. Value range: 1-100.
-                     * @param Limit Returned quantity. Default: 20. Value range: 1-100.
+                     * @param _limit Returned quantity. Default: 20. Value range: 1-100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -114,6 +123,7 @@ namespace TencentCloud
 <li>`action` - String - ·Values: `ACCEPT`, `DROP`</li>
 <li>`network-acl-quintuple-entry-id` - String - Unique ID of the quintuple, such as `acli45-ahnu4rv5`</li>
 <li>`network-acl-direction` - String - Direction of the policy. Values: `INGRESS` or `EGRESS`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -126,7 +136,7 @@ namespace TencentCloud
 <li>`action` - String - ·Values: `ACCEPT`, `DROP`</li>
 <li>`network-acl-quintuple-entry-id` - String - Unique ID of the quintuple, such as `acli45-ahnu4rv5`</li>
 <li>`network-acl-direction` - String - Direction of the policy. Values: `INGRESS` or `EGRESS`.</li>
-                     * @param Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
 <li>`protocol` - String - Such as `TCP`</li>
 <li>`description` - String - Description</li>
 <li>`destination-cidr` - String - Destination CIDR block, such as `192.168.0.0/24`</li>
@@ -134,12 +144,14 @@ namespace TencentCloud
 <li>`action` - String - ·Values: `ACCEPT`, `DROP`</li>
 <li>`network-acl-quintuple-entry-id` - String - Unique ID of the quintuple, such as `acli45-ahnu4rv5`</li>
 <li>`network-acl-direction` - String - Direction of the policy. Values: `INGRESS` or `EGRESS`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

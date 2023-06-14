@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of allowed item IDs
                      * @return IDSet Array of allowed item IDs
+                     * 
                      */
                     std::vector<int64_t> GetIDSet() const;
 
                     /**
                      * 设置Array of allowed item IDs
-                     * @param IDSet Array of allowed item IDs
+                     * @param _iDSet Array of allowed item IDs
+                     * 
                      */
                     void SetIDSet(const std::vector<int64_t>& _iDSet);
 
                     /**
                      * 判断参数 IDSet 是否已赋值
                      * @return IDSet 是否已赋值
+                     * 
                      */
                     bool IDSetHasBeenSet() const;
 

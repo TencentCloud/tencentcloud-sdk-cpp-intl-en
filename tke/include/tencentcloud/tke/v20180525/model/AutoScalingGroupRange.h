@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Minimum number of pods in a scaling group
                      * @return MinSize Minimum number of pods in a scaling group
+                     * 
                      */
                     int64_t GetMinSize() const;
 
                     /**
                      * 设置Minimum number of pods in a scaling group
-                     * @param MinSize Minimum number of pods in a scaling group
+                     * @param _minSize Minimum number of pods in a scaling group
+                     * 
                      */
                     void SetMinSize(const int64_t& _minSize);
 
                     /**
                      * 判断参数 MinSize 是否已赋值
                      * @return MinSize 是否已赋值
+                     * 
                      */
                     bool MinSizeHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of pods in a scaling group
                      * @return MaxSize Maximum number of pods in a scaling group
+                     * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum number of pods in a scaling group
-                     * @param MaxSize Maximum number of pods in a scaling group
+                     * @param _maxSize Maximum number of pods in a scaling group
+                     * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 

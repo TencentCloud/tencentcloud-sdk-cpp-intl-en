@@ -56,6 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 For VOD files, it indicates the video offset time given in seconds (e.g., 0, 5, 10).
 For live files, it indicates a timestamp (e.g., 1594650717).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOffsetTime() const;
 
@@ -64,16 +65,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 For VOD files, it indicates the video offset time given in seconds (e.g., 0, 5, 10).
 For live files, it indicates a timestamp (e.g., 1594650717).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OffsetTime Capture time.
+                     * @param _offsetTime Capture time.
 For VOD files, it indicates the video offset time given in seconds (e.g., 0, 5, 10).
 For live files, it indicates a timestamp (e.g., 1594650717).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOffsetTime(const std::string& _offsetTime);
 
                     /**
                      * 判断参数 OffsetTime 是否已赋值
                      * @return OffsetTime 是否已赋值
+                     * 
                      */
                     bool OffsetTimeHasBeenSet() const;
 
@@ -82,20 +85,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Result Result set
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AudioResult GetResult() const;
 
                     /**
                      * 设置Result set
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Result Result set
+                     * @param _result Result set
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResult(const AudioResult& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

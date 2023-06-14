@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of inconsistent tables
+                     * @param _totalCount Number of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const uint64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Items Details of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DifferenceItem> GetItems() const;
 
                     /**
                      * 设置Details of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Items Details of inconsistent tables
+                     * @param _items Details of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetItems(const std::vector<DifferenceItem>& _items);
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

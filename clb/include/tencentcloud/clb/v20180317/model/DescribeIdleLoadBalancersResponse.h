@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IdleLoadBalancers List of idle CLBs
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IdleLoadBalancer> GetIdleLoadBalancers() const;
 
                     /**
                      * 判断参数 IdleLoadBalancers 是否已赋值
                      * @return IdleLoadBalancers 是否已赋值
+                     * 
                      */
                     bool IdleLoadBalancersHasBeenSet() const;
 
                     /**
                      * 获取Total number of idle CLB instances
                      * @return TotalCount Total number of idle CLB instances
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

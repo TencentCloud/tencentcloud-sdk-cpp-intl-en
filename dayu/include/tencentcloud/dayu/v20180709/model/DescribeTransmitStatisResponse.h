@@ -48,12 +48,14 @@ namespace TencentCloud
 If `MetricName` is `pkg`, this field indicates the inbound packet rate in pps;
                      * @return InDataList If `MetricName` is `traffic`, this field indicates the inbound traffic bandwidth in bps;
 If `MetricName` is `pkg`, this field indicates the inbound packet rate in pps;
+                     * 
                      */
                     std::vector<double> GetInDataList() const;
 
                     /**
                      * 判断参数 InDataList 是否已赋值
                      * @return InDataList 是否已赋值
+                     * 
                      */
                     bool InDataListHasBeenSet() const;
 
@@ -62,12 +64,14 @@ If `MetricName` is `pkg`, this field indicates the inbound packet rate in pps;
 If `MetricName` is `pkg`, this field indicates the outbound packet rate in pps;
                      * @return OutDataList If `MetricName` is `traffic`, this field indicates the outbound traffic bandwidth in bps;
 If `MetricName` is `pkg`, this field indicates the outbound packet rate in pps;
+                     * 
                      */
                     std::vector<double> GetOutDataList() const;
 
                     /**
                      * 判断参数 OutDataList 是否已赋值
                      * @return OutDataList 是否已赋值
+                     * 
                      */
                     bool OutDataListHasBeenSet() const;
 
@@ -78,12 +82,14 @@ pkg: packet rate;
                      * @return MetricName Metric name:
 traffic: traffic bandwidth;
 pkg: packet rate;
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 

@@ -56,6 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 \* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReviewInfo GetMediaReviewInfo() const;
 
@@ -64,16 +65,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 \* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MediaReviewInfo Audio/Video moderation details\*.
+                     * @param _mediaReviewInfo Audio/Video moderation details\*.
 
 \* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMediaReviewInfo(const ReviewInfo& _mediaReviewInfo);
 
                     /**
                      * 判断参数 MediaReviewInfo 是否已赋值
                      * @return MediaReviewInfo 是否已赋值
+                     * 
                      */
                     bool MediaReviewInfoHasBeenSet() const;
 
@@ -86,6 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 \* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReviewInfo GetCoverReviewInfo() const;
 
@@ -94,16 +98,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 \* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CoverReviewInfo Thumbnail moderation details\*.
+                     * @param _coverReviewInfo Thumbnail moderation details\*.
 
 \* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoverReviewInfo(const ReviewInfo& _coverReviewInfo);
 
                     /**
                      * 判断参数 CoverReviewInfo 是否已赋值
                      * @return CoverReviewInfo 是否已赋值
+                     * 
                      */
                     bool CoverReviewInfoHasBeenSet() const;
 

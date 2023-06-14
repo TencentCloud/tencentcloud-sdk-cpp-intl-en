@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Type Type. Values:
 `URL`: Resource link
 `COS`: Tencent Cloud COS
+                     * 
                      */
                     std::string GetType() const;
 
@@ -61,51 +62,59 @@ namespace TencentCloud
                      * 设置Type. Values:
 `URL`: Resource link
 `COS`: Tencent Cloud COS
-                     * @param Type Type. Values:
+                     * @param _type Type. Values:
 `URL`: Resource link
 `COS`: Tencent Cloud COS
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Resource link
                      * @return Url Resource link
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Resource link
-                     * @param Url Resource link
+                     * @param _url Resource link
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Tencent Cloud bucket information
                      * @return BucketInfo Tencent Cloud bucket information
+                     * 
                      */
                     BucketInfo GetBucketInfo() const;
 
                     /**
                      * 设置Tencent Cloud bucket information
-                     * @param BucketInfo Tencent Cloud bucket information
+                     * @param _bucketInfo Tencent Cloud bucket information
+                     * 
                      */
                     void SetBucketInfo(const BucketInfo& _bucketInfo);
 
                     /**
                      * 判断参数 BucketInfo 是否已赋值
                      * @return BucketInfo 是否已赋值
+                     * 
                      */
                     bool BucketInfoHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Cloud disk ID.
                      * @return DiskId Cloud disk ID.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Cloud disk ID.
-                     * @param DiskId Cloud disk ID.
+                     * @param _diskId Cloud disk ID.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk backup point quota after the adjustment
                      * @return DiskBackupQuota Cloud disk backup point quota after the adjustment
+                     * 
                      */
                     uint64_t GetDiskBackupQuota() const;
 
                     /**
                      * 设置Cloud disk backup point quota after the adjustment
-                     * @param DiskBackupQuota Cloud disk backup point quota after the adjustment
+                     * @param _diskBackupQuota Cloud disk backup point quota after the adjustment
+                     * 
                      */
                     void SetDiskBackupQuota(const uint64_t& _diskBackupQuota);
 
                     /**
                      * 判断参数 DiskBackupQuota 是否已赋值
                      * @return DiskBackupQuota 是否已赋值
+                     * 
                      */
                     bool DiskBackupQuotaHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance to be verified.
                      * @return RegistryId ID of the instance to be verified.
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置ID of the instance to be verified.
-                     * @param RegistryId ID of the instance to be verified.
+                     * @param _registryId ID of the instance to be verified.
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 

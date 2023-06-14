@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Original upfront payment, in USD.
                      * @return OriginalFixedPrice Original upfront payment, in USD.
+                     * 
                      */
                     double GetOriginalFixedPrice() const;
 
                     /**
                      * 设置Original upfront payment, in USD.
-                     * @param OriginalFixedPrice Original upfront payment, in USD.
+                     * @param _originalFixedPrice Original upfront payment, in USD.
+                     * 
                      */
                     void SetOriginalFixedPrice(const double& _originalFixedPrice);
 
                     /**
                      * 判断参数 OriginalFixedPrice 是否已赋值
                      * @return OriginalFixedPrice 是否已赋值
+                     * 
                      */
                     bool OriginalFixedPriceHasBeenSet() const;
 
                     /**
                      * 获取Discounted upfront payment, in USD.
                      * @return DiscountFixedPrice Discounted upfront payment, in USD.
+                     * 
                      */
                     double GetDiscountFixedPrice() const;
 
                     /**
                      * 设置Discounted upfront payment, in USD.
-                     * @param DiscountFixedPrice Discounted upfront payment, in USD.
+                     * @param _discountFixedPrice Discounted upfront payment, in USD.
+                     * 
                      */
                     void SetDiscountFixedPrice(const double& _discountFixedPrice);
 
                     /**
                      * 判断参数 DiscountFixedPrice 是否已赋值
                      * @return DiscountFixedPrice 是否已赋值
+                     * 
                      */
                     bool DiscountFixedPriceHasBeenSet() const;
 
                     /**
                      * 获取Original subsequent unit price, in USD/hr.
                      * @return OriginalUsagePrice Original subsequent unit price, in USD/hr.
+                     * 
                      */
                     double GetOriginalUsagePrice() const;
 
                     /**
                      * 设置Original subsequent unit price, in USD/hr.
-                     * @param OriginalUsagePrice Original subsequent unit price, in USD/hr.
+                     * @param _originalUsagePrice Original subsequent unit price, in USD/hr.
+                     * 
                      */
                     void SetOriginalUsagePrice(const double& _originalUsagePrice);
 
                     /**
                      * 判断参数 OriginalUsagePrice 是否已赋值
                      * @return OriginalUsagePrice 是否已赋值
+                     * 
                      */
                     bool OriginalUsagePriceHasBeenSet() const;
 
                     /**
                      * 获取Discounted subsequent unit price, in USD/hr.
                      * @return DiscountUsagePrice Discounted subsequent unit price, in USD/hr.
+                     * 
                      */
                     double GetDiscountUsagePrice() const;
 
                     /**
                      * 设置Discounted subsequent unit price, in USD/hr.
-                     * @param DiscountUsagePrice Discounted subsequent unit price, in USD/hr.
+                     * @param _discountUsagePrice Discounted subsequent unit price, in USD/hr.
+                     * 
                      */
                     void SetDiscountUsagePrice(const double& _discountUsagePrice);
 
                     /**
                      * 判断参数 DiscountUsagePrice 是否已赋值
                      * @return DiscountUsagePrice 是否已赋值
+                     * 
                      */
                     bool DiscountUsagePriceHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The application ID.
                      * @return SdkAppId The application ID.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID.
-                     * @param SdkAppId The application ID.
+                     * @param _sdkAppId The application ID.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The room ID (number).
                      * @return RoomId The room ID (number).
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置The room ID (number).
-                     * @param RoomId The room ID (number).
+                     * @param _roomId The room ID (number).
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The user ID.
                      * @return UserId The user ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user ID.
-                     * @param UserId The user ID.
+                     * @param _userId The user ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
                      * @return IsMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+                     * 
                      */
                     uint64_t GetIsMute() const;
 
                     /**
                      * 设置Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
-                     * @param IsMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+                     * @param _isMute Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+                     * 
                      */
                     void SetIsMute(const uint64_t& _isMute);
 
                     /**
                      * 判断参数 IsMute 是否已赋值
                      * @return IsMute 是否已赋值
+                     * 
                      */
                     bool IsMuteHasBeenSet() const;
 

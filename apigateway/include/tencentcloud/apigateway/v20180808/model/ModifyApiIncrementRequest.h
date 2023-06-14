@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Service ID
                      * @return ServiceId Service ID
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Service ID
-                     * @param ServiceId Service ID
+                     * @param _serviceId Service ID
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取API ID
                      * @return ApiId API ID
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置API ID
-                     * @param ApiId API ID
+                     * @param _apiId API ID
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
                     /**
                      * 获取Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
                      * @return BusinessType Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
+                     * 
                      */
                     std::string GetBusinessType() const;
 
                     /**
                      * 设置Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
-                     * @param BusinessType Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
+                     * @param _businessType Authorization type of the API to be modified (you can select `OAUTH`, i.e., authorization API)
+                     * 
                      */
                     void SetBusinessType(const std::string& _businessType);
 
                     /**
                      * 判断参数 BusinessType 是否已赋值
                      * @return BusinessType 是否已赋值
+                     * 
                      */
                     bool BusinessTypeHasBeenSet() const;
 
                     /**
                      * 获取Public key value to be modified by OAuth API
                      * @return PublicKey Public key value to be modified by OAuth API
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Public key value to be modified by OAuth API
-                     * @param PublicKey Public key value to be modified by OAuth API
+                     * @param _publicKey Public key value to be modified by OAuth API
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取OAuth API redirect address
                      * @return LoginRedirectUrl OAuth API redirect address
+                     * 
                      */
                     std::string GetLoginRedirectUrl() const;
 
                     /**
                      * 设置OAuth API redirect address
-                     * @param LoginRedirectUrl OAuth API redirect address
+                     * @param _loginRedirectUrl OAuth API redirect address
+                     * 
                      */
                     void SetLoginRedirectUrl(const std::string& _loginRedirectUrl);
 
                     /**
                      * 判断参数 LoginRedirectUrl 是否已赋值
                      * @return LoginRedirectUrl 是否已赋值
+                     * 
                      */
                     bool LoginRedirectUrlHasBeenSet() const;
 

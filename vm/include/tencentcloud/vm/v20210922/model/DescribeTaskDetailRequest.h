@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Task ID, which is returned after a task is created
                      * @return TaskId Task ID, which is returned after a task is created
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID, which is returned after a task is created
-                     * @param TaskId Task ID, which is returned after a task is created
+                     * @param _taskId Task ID, which is returned after a task is created
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to show all segments. If it’s not specified, only hit segments are shown.
                      * @return ShowAllSegments Whether to show all segments. If it’s not specified, only hit segments are shown.
+                     * 
                      */
                     bool GetShowAllSegments() const;
 
                     /**
                      * 设置Whether to show all segments. If it’s not specified, only hit segments are shown.
-                     * @param ShowAllSegments Whether to show all segments. If it’s not specified, only hit segments are shown.
+                     * @param _showAllSegments Whether to show all segments. If it’s not specified, only hit segments are shown.
+                     * 
                      */
                     void SetShowAllSegments(const bool& _showAllSegments);
 
                     /**
                      * 判断参数 ShowAllSegments 是否已赋值
                      * @return ShowAllSegments 是否已赋值
+                     * 
                      */
                     bool ShowAllSegmentsHasBeenSet() const;
 

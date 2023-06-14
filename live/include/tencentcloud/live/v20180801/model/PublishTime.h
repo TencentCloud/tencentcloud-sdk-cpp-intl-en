@@ -51,20 +51,23 @@ namespace TencentCloud
 In UTC format, such as 2018-06-29T19:00:00Z.
                      * @return PublishTime Push time.
 In UTC format, such as 2018-06-29T19:00:00Z.
+                     * 
                      */
                     std::string GetPublishTime() const;
 
                     /**
                      * 设置Push time.
 In UTC format, such as 2018-06-29T19:00:00Z.
-                     * @param PublishTime Push time.
+                     * @param _publishTime Push time.
 In UTC format, such as 2018-06-29T19:00:00Z.
+                     * 
                      */
                     void SetPublishTime(const std::string& _publishTime);
 
                     /**
                      * 判断参数 PublishTime 是否已赋值
                      * @return PublishTime 是否已赋值
+                     * 
                      */
                     bool PublishTimeHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Specifies whether to enable. Valid values: `on` and `off`.
                      * @return Switch Specifies whether to enable. Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Specifies whether to enable. Valid values: `on` and `off`.
-                     * @param Switch Specifies whether to enable. Valid values: `on` and `off`.
+                     * @param _switch Specifies whether to enable. Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MaxAge `MaxAge` value.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetMaxAge() const;
 
                     /**
                      * 设置`MaxAge` value.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MaxAge `MaxAge` value.
+                     * @param _maxAge `MaxAge` value.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMaxAge(const int64_t& _maxAge);
 
                     /**
                      * 判断参数 MaxAge 是否已赋值
                      * @return MaxAge 是否已赋值
+                     * 
                      */
                     bool MaxAgeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IncludeSubDomains Specifies whether to include subdomain names. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIncludeSubDomains() const;
 
                     /**
                      * 设置Specifies whether to include subdomain names. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param IncludeSubDomains Specifies whether to include subdomain names. Valid values: `on` and `off`.
+                     * @param _includeSubDomains Specifies whether to include subdomain names. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIncludeSubDomains(const std::string& _includeSubDomains);
 
                     /**
                      * 判断参数 IncludeSubDomains 是否已赋值
                      * @return IncludeSubDomains 是否已赋值
+                     * 
                      */
                     bool IncludeSubDomainsHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Preload Specifies whether to preload. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetPreload() const;
 
                     /**
                      * 设置Specifies whether to preload. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Preload Specifies whether to preload. Valid values: `on` and `off`.
+                     * @param _preload Specifies whether to preload. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPreload(const std::string& _preload);
 
                     /**
                      * 判断参数 Preload 是否已赋值
                      * @return Preload 是否已赋值
+                     * 
                      */
                     bool PreloadHasBeenSet() const;
 

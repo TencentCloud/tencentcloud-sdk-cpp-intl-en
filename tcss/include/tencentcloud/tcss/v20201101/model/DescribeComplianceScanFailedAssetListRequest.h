@@ -54,6 +54,7 @@ namespace TencentCloud
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     std::vector<std::string> GetAssetTypeSet() const;
 
@@ -63,71 +64,82 @@ namespace TencentCloud
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
-                     * @param AssetTypeSet List of asset types
+                     * @param _assetTypeSet List of asset types
 `ASSET_CONTAINER`: Container.
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     void SetAssetTypeSet(const std::vector<std::string>& _assetTypeSet);
 
                     /**
                      * 判断参数 AssetTypeSet 是否已赋值
                      * @return AssetTypeSet 是否已赋值
+                     * 
                      */
                     bool AssetTypeSetHasBeenSet() const;
 
                     /**
                      * 获取Initial offset. Default value: `0`.
                      * @return Offset Initial offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Initial offset. Default value: `0`.
-                     * @param Offset Initial offset. Default value: `0`.
+                     * @param _offset Initial offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query filter
                      * @return Filters Query filter
+                     * 
                      */
                     std::vector<ComplianceFilters> GetFilters() const;
 
                     /**
                      * 设置Query filter
-                     * @param Filters Query filter
+                     * @param _filters Query filter
+                     * 
                      */
                     void SetFilters(const std::vector<ComplianceFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -54,12 +54,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return BaseGroup Basic information of the proxy group
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     BaseGroupInfo GetBaseGroup() const;
 
                     /**
                      * 判断参数 BaseGroup 是否已赋值
                      * @return BaseGroup 是否已赋值
+                     * 
                      */
                     bool BaseGroupHasBeenSet() const;
 
@@ -68,12 +70,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Address Address information of the proxy group
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     Address GetAddress() const;
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
@@ -82,12 +86,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyNode Node information of the proxy group
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     ProxyNodeInfo GetProxyNode() const;
 
                     /**
                      * 判断参数 ProxyNode 是否已赋值
                      * @return ProxyNode 是否已赋值
+                     * 
                      */
                     bool ProxyNodeHasBeenSet() const;
 
@@ -96,12 +102,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return RWInstInfo Read/Write separation information
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     RWInfo GetRWInstInfo() const;
 
                     /**
                      * 判断参数 RWInstInfo 是否已赋值
                      * @return RWInstInfo 是否已赋值
+                     * 
                      */
                     bool RWInstInfoHasBeenSet() const;
 
@@ -110,12 +118,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ConnectionPoolInfo Connection pool information
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     ConnectionPoolInfo GetConnectionPoolInfo() const;
 
                     /**
                      * 判断参数 ConnectionPoolInfo 是否已赋值
                      * @return ConnectionPoolInfo 是否已赋值
+                     * 
                      */
                     bool ConnectionPoolInfoHasBeenSet() const;
 
@@ -124,12 +134,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Count Number of instances in the proxy group
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
@@ -138,12 +150,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyGroup Proxy information
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::vector<ProxyGroup> GetProxyGroup() const;
 
                     /**
                      * 判断参数 ProxyGroup 是否已赋值
                      * @return ProxyGroup 是否已赋值
+                     * 
                      */
                     bool ProxyGroupHasBeenSet() const;
 

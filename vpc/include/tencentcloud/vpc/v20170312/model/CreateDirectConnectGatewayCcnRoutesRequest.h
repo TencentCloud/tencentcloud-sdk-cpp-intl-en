@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
                      * @return DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+                     * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
                      * 设置The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
-                     * @param DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+                     * @param _directConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+                     * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
 
                     /**
                      * 判断参数 DirectConnectGatewayId 是否已赋值
                      * @return DirectConnectGatewayId 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The list of IDC IP range that must be connected
                      * @return Routes The list of IDC IP range that must be connected
+                     * 
                      */
                     std::vector<DirectConnectGatewayCcnRoute> GetRoutes() const;
 
                     /**
                      * 设置The list of IDC IP range that must be connected
-                     * @param Routes The list of IDC IP range that must be connected
+                     * @param _routes The list of IDC IP range that must be connected
+                     * 
                      */
                     void SetRoutes(const std::vector<DirectConnectGatewayCcnRoute>& _routes);
 
                     /**
                      * 判断参数 Routes 是否已赋值
                      * @return Routes 是否已赋值
+                     * 
                      */
                     bool RoutesHasBeenSet() const;
 

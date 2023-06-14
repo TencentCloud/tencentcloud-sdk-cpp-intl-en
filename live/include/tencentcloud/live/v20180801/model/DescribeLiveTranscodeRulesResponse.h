@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of transcoding rules.
                      * @return Rules List of transcoding rules.
+                     * 
                      */
                     std::vector<RuleInfo> GetRules() const;
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

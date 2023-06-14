@@ -51,56 +51,65 @@ namespace TencentCloud
 If 0 is passed, the default block page will be used.
                      * @return PageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
 If 0 is passed, the default block page will be used.
+                     * 
                      */
                     int64_t GetPageId() const;
 
                     /**
                      * 设置The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
 If 0 is passed, the default block page will be used.
-                     * @param PageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
+                     * @param _pageId The ID of the block page, which can be obtained from the CreateSecurityDropPage API.
 If 0 is passed, the default block page will be used.
+                     * 
                      */
                     void SetPageId(const int64_t& _pageId);
 
                     /**
                      * 判断参数 PageId 是否已赋值
                      * @return PageId 是否已赋值
+                     * 
                      */
                     bool PageIdHasBeenSet() const;
 
                     /**
                      * 获取The HTTP status code of the block page. Value range: 100-600.
                      * @return StatusCode The HTTP status code of the block page. Value range: 100-600.
+                     * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
                      * 设置The HTTP status code of the block page. Value range: 100-600.
-                     * @param StatusCode The HTTP status code of the block page. Value range: 100-600.
+                     * @param _statusCode The HTTP status code of the block page. Value range: 100-600.
+                     * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取The block page file or URL.
                      * @return Name The block page file or URL.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The block page file or URL.
-                     * @param Name The block page file or URL.
+                     * @param _name The block page file or URL.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -111,6 +120,7 @@ If 0 is passed, the default block page will be used.
                      * @return Type Type of the block page. Values:
 <li>`file`: Block page file</li>
 <li>`url`: Block page URL</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -118,15 +128,17 @@ If 0 is passed, the default block page will be used.
                      * 设置Type of the block page. Values:
 <li>`file`: Block page file</li>
 <li>`url`: Block page URL</li>
-                     * @param Type Type of the block page. Values:
+                     * @param _type Type of the block page. Values:
 <li>`file`: Block page file</li>
 <li>`url`: Block page URL</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

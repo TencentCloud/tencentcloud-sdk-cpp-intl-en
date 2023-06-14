@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the cluster where the tables reside
                      * @return ClusterId The ID of the cluster where the tables reside
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The ID of the cluster where the tables reside
-                     * @param ClusterId The ID of the cluster where the tables reside
+                     * @param _clusterId The ID of the cluster where the tables reside
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Array of retention policies
                      * @return BackupExpireRules Array of retention policies
+                     * 
                      */
                     std::vector<BackupExpireRuleInfo> GetBackupExpireRules() const;
 
                     /**
                      * 设置Array of retention policies
-                     * @param BackupExpireRules Array of retention policies
+                     * @param _backupExpireRules Array of retention policies
+                     * 
                      */
                     void SetBackupExpireRules(const std::vector<BackupExpireRuleInfo>& _backupExpireRules);
 
                     /**
                      * 判断参数 BackupExpireRules 是否已赋值
                      * @return BackupExpireRules 是否已赋值
+                     * 
                      */
                     bool BackupExpireRulesHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Policy group ID.
                      * @return GroupId Policy group ID.
+                     * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
                      * 设置Policy group ID.
-                     * @param GroupId Policy group ID.
+                     * @param _groupId Policy group ID.
+                     * 
                      */
                     void SetGroupId(const int64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Policy group name.
                      * @return GroupName Policy group name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Policy group name.
-                     * @param GroupName Policy group name.
+                     * @param _groupName Policy group name.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Policy type.
                      * @return ViewName Policy type.
+                     * 
                      */
                     std::string GetViewName() const;
 
                     /**
                      * 设置Policy type.
-                     * @param ViewName Policy type.
+                     * @param _viewName Policy type.
+                     * 
                      */
                     void SetViewName(const std::string& _viewName);
 
                     /**
                      * 判断参数 ViewName 是否已赋值
                      * @return ViewName 是否已赋值
+                     * 
                      */
                     bool ViewNameHasBeenSet() const;
 
                     /**
                      * 获取Policy group remarks.
                      * @return Remark Policy group remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Policy group remarks.
-                     * @param Remark Policy group remarks.
+                     * @param _remark Policy group remarks.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Uin that was last edited.
                      * @return LastEditUin Uin that was last edited.
+                     * 
                      */
                     std::string GetLastEditUin() const;
 
                     /**
                      * 设置Uin that was last edited.
-                     * @param LastEditUin Uin that was last edited.
+                     * @param _lastEditUin Uin that was last edited.
+                     * 
                      */
                     void SetLastEditUin(const std::string& _lastEditUin);
 
                     /**
                      * 判断参数 LastEditUin 是否已赋值
                      * @return LastEditUin 是否已赋值
+                     * 
                      */
                     bool LastEditUinHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return UpdateTime Update time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param UpdateTime Update time.
+                     * @param _updateTime Update time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -163,20 +181,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return InsertTime Creation time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetInsertTime() const;
 
                     /**
                      * 设置Creation time.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InsertTime Creation time.
+                     * @param _insertTime Creation time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetInsertTime(const int64_t& _insertTime);
 
                     /**
                      * 判断参数 InsertTime 是否已赋值
                      * @return InsertTime 是否已赋值
+                     * 
                      */
                     bool InsertTimeHasBeenSet() const;
 
@@ -185,20 +206,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetIsUnionRule() const;
 
                     /**
                      * 设置Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param IsUnionRule Whether the 'AND' rule is used.
+                     * @param _isUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetIsUnionRule(const int64_t& _isUnionRule);
 
                     /**
                      * 判断参数 IsUnionRule 是否已赋值
                      * @return IsUnionRule 是否已赋值
+                     * 
                      */
                     bool IsUnionRuleHasBeenSet() const;
 

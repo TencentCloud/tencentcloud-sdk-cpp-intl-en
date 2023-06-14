@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return L4Clusters Layer-4 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ClusterItem> GetL4Clusters() const;
 
                     /**
                      * 设置Layer-4 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param L4Clusters Layer-4 dedicated cluster list
+                     * @param _l4Clusters Layer-4 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetL4Clusters(const std::vector<ClusterItem>& _l4Clusters);
 
                     /**
                      * 判断参数 L4Clusters 是否已赋值
                      * @return L4Clusters 是否已赋值
+                     * 
                      */
                     bool L4ClustersHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return L7Clusters Layer-7 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ClusterItem> GetL7Clusters() const;
 
                     /**
                      * 设置Layer-7 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param L7Clusters Layer-7 dedicated cluster list
+                     * @param _l7Clusters Layer-7 dedicated cluster list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetL7Clusters(const std::vector<ClusterItem>& _l7Clusters);
 
                     /**
                      * 判断参数 L7Clusters 是否已赋值
                      * @return L7Clusters 是否已赋值
+                     * 
                      */
                     bool L7ClustersHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClassicalCluster vpcgw cluster
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ClusterItem GetClassicalCluster() const;
 
                     /**
                      * 设置vpcgw cluster
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClassicalCluster vpcgw cluster
+                     * @param _classicalCluster vpcgw cluster
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassicalCluster(const ClusterItem& _classicalCluster);
 
                     /**
                      * 判断参数 ClassicalCluster 是否已赋值
                      * @return ClassicalCluster 是否已赋值
+                     * 
                      */
                     bool ClassicalClusterHasBeenSet() const;
 

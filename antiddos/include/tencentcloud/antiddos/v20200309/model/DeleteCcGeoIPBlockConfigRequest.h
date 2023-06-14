@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Region blocking configuration. The configuration ID cannot be empty when you set this parameter.
                      * @return CcGeoIPBlockConfig Region blocking configuration. The configuration ID cannot be empty when you set this parameter.
+                     * 
                      */
                     CcGeoIPBlockConfig GetCcGeoIPBlockConfig() const;
 
                     /**
                      * 设置Region blocking configuration. The configuration ID cannot be empty when you set this parameter.
-                     * @param CcGeoIPBlockConfig Region blocking configuration. The configuration ID cannot be empty when you set this parameter.
+                     * @param _ccGeoIPBlockConfig Region blocking configuration. The configuration ID cannot be empty when you set this parameter.
+                     * 
                      */
                     void SetCcGeoIPBlockConfig(const CcGeoIPBlockConfig& _ccGeoIPBlockConfig);
 
                     /**
                      * 判断参数 CcGeoIPBlockConfig 是否已赋值
                      * @return CcGeoIPBlockConfig 是否已赋值
+                     * 
                      */
                     bool CcGeoIPBlockConfigHasBeenSet() const;
 

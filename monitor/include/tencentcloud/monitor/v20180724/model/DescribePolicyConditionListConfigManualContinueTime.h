@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Default Default duration in seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetDefault() const;
 
                     /**
                      * 设置Default duration in seconds.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Default Default duration in seconds.
+                     * @param _default Default duration in seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetDefault(const int64_t& _default);
 
                     /**
                      * 判断参数 Default 是否已赋值
                      * @return Default 是否已赋值
+                     * 
                      */
                     bool DefaultHasBeenSet() const;
 
@@ -73,38 +76,44 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Keys Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<int64_t> GetKeys() const;
 
                     /**
                      * 设置Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Keys Custom durations in seconds.
+                     * @param _keys Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetKeys(const std::vector<int64_t>& _keys);
 
                     /**
                      * 判断参数 Keys 是否已赋值
                      * @return Keys 是否已赋值
+                     * 
                      */
                     bool KeysHasBeenSet() const;
 
                     /**
                      * 获取Required or not.
                      * @return Need Required or not.
+                     * 
                      */
                     bool GetNeed() const;
 
                     /**
                      * 设置Required or not.
-                     * @param Need Required or not.
+                     * @param _need Required or not.
+                     * 
                      */
                     void SetNeed(const bool& _need);
 
                     /**
                      * 判断参数 Need 是否已赋值
                      * @return Need 是否已赋值
+                     * 
                      */
                     bool NeedHasBeenSet() const;
 

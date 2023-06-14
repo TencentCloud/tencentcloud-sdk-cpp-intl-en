@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Topic name
                      * @return Topic Topic name
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置Topic name
-                     * @param Topic Topic name
+                     * @param _topic Topic name
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Partitions Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<GroupOffsetPartition> GetPartitions() const;
 
                     /**
                      * 设置Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Partitions Array of partitions in the topic, where each element is a JSON object
+                     * @param _partitions Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartitions(const std::vector<GroupOffsetPartition>& _partitions);
 
                     /**
                      * 判断参数 Partitions 是否已赋值
                      * @return Partitions 是否已赋值
+                     * 
                      */
                     bool PartitionsHasBeenSet() const;
 

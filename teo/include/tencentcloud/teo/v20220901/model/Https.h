@@ -57,6 +57,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHttp2() const;
 
@@ -65,16 +66,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Http2 Whether to enable HTTP2. Values:
+                     * @param _http2 Whether to enable HTTP2. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttp2(const std::string& _http2);
 
                     /**
                      * 判断参数 Http2 是否已赋值
                      * @return Http2 是否已赋值
+                     * 
                      */
                     bool Http2HasBeenSet() const;
 
@@ -87,6 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOcspStapling() const;
 
@@ -95,16 +99,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OcspStapling Whether to enable OCSP. Values:
+                     * @param _ocspStapling Whether to enable OCSP. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOcspStapling(const std::string& _ocspStapling);
 
                     /**
                      * 判断参数 OcspStapling 是否已赋值
                      * @return OcspStapling 是否已赋值
+                     * 
                      */
                     bool OcspStaplingHasBeenSet() const;
 
@@ -121,6 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`TLSV1.2`: TLSv1.2 version</li>
 <li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
@@ -131,18 +138,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`TLSV1.2`: TLSv1.2 version</li>
 <li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TlsVersion TLS version. Values:
+                     * @param _tlsVersion TLS version. Values:
 <li>`TLSv1`: TLSv1 version</li>
 <li>`TLSV1.1`: TLSv1.1 version</li>
 <li>`TLSV1.2`: TLSv1.2 version</li>
 <li>`TLSv1.3`: TLSv1.3 version</li>Only consecutive versions can be enabled at the same time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
 
                     /**
                      * 判断参数 TlsVersion 是否已赋值
                      * @return TlsVersion 是否已赋值
+                     * 
                      */
                     bool TlsVersionHasBeenSet() const;
 
@@ -151,20 +160,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Hsts HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Hsts GetHsts() const;
 
                     /**
                      * 设置HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Hsts HSTS Configuration
+                     * @param _hsts HSTS Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHsts(const Hsts& _hsts);
 
                     /**
                      * 判断参数 Hsts 是否已赋值
                      * @return Hsts 是否已赋值
+                     * 
                      */
                     bool HstsHasBeenSet() const;
 
@@ -173,20 +185,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CertInfo The certificate configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ServerCertInfo> GetCertInfo() const;
 
                     /**
                      * 设置The certificate configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CertInfo The certificate configuration.
+                     * @param _certInfo The certificate configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertInfo(const std::vector<ServerCertInfo>& _certInfo);
 
                     /**
                      * 判断参数 CertInfo 是否已赋值
                      * @return CertInfo 是否已赋值
+                     * 
                      */
                     bool CertInfoHasBeenSet() const;
 
@@ -199,6 +214,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`apply`: Managed by EdgeOne.</li>
 <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetApplyType() const;
 
@@ -207,16 +223,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`apply`: Managed by EdgeOne.</li>
 <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
+                     * @param _applyType Whether the certificate is managed by EdgeOne. Values:
 <li>`apply`: Managed by EdgeOne.</li>
 <li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetApplyType(const std::string& _applyType);
 
                     /**
                      * 判断参数 ApplyType 是否已赋值
                      * @return ApplyType 是否已赋值
+                     * 
                      */
                     bool ApplyTypeHasBeenSet() const;
 
@@ -231,6 +249,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
 <li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCipherSuite() const;
 
@@ -240,17 +259,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
 <li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CipherSuite Cipher suite. Values:
+                     * @param _cipherSuite Cipher suite. Values:
 <li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
 <li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
 <li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCipherSuite(const std::string& _cipherSuite);
 
                     /**
                      * 判断参数 CipherSuite 是否已赋值
                      * @return CipherSuite 是否已赋值
+                     * 
                      */
                     bool CipherSuiteHasBeenSet() const;
 

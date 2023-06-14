@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of compliance review requests.
                      * @return CrossBorderComplianceSet List of compliance review requests.
+                     * 
                      */
                     std::vector<CrossBorderCompliance> GetCrossBorderComplianceSet() const;
 
                     /**
                      * 判断参数 CrossBorderComplianceSet 是否已赋值
                      * @return CrossBorderComplianceSet 是否已赋值
+                     * 
                      */
                     bool CrossBorderComplianceSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of compliance review requests.
                      * @return TotalCount Total number of compliance review requests.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

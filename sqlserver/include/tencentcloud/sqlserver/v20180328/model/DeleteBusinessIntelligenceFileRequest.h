@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取File name set
                      * @return FileNameSet File name set
+                     * 
                      */
                     std::vector<std::string> GetFileNameSet() const;
 
                     /**
                      * 设置File name set
-                     * @param FileNameSet File name set
+                     * @param _fileNameSet File name set
+                     * 
                      */
                     void SetFileNameSet(const std::vector<std::string>& _fileNameSet);
 
                     /**
                      * 判断参数 FileNameSet 是否已赋值
                      * @return FileNameSet 是否已赋值
+                     * 
                      */
                     bool FileNameSetHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Response structure of modifying the configurations of a prepaid instance.
                      * @return Result Response structure of modifying the configurations of a prepaid instance.
+                     * 
                      */
                     CreateInstancePreResp GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

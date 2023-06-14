@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Read-only instance ID in the format of "cdbro-3i70uj0k". Its value is the same as the read-only instance ID in the TencentDB Console.
                      * @return InstanceId Read-only instance ID in the format of "cdbro-3i70uj0k". Its value is the same as the read-only instance ID in the TencentDB Console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Read-only instance ID in the format of "cdbro-3i70uj0k". Its value is the same as the read-only instance ID in the TencentDB Console.
-                     * @param InstanceId Read-only instance ID in the format of "cdbro-3i70uj0k". Its value is the same as the read-only instance ID in the TencentDB Console.
+                     * @param _instanceId Read-only instance ID in the format of "cdbro-3i70uj0k". Its value is the same as the read-only instance ID in the TencentDB Console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet descriptor, such as "subnet-1typ0s7d".
                      * @return UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d".
+                     * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
                      * 设置Subnet descriptor, such as "subnet-1typ0s7d".
-                     * @param UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d".
+                     * @param _uniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d".
+                     * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
 
                     /**
                      * 判断参数 UniqSubnetId 是否已赋值
                      * @return UniqSubnetId 是否已赋值
+                     * 
                      */
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
                      * @return UniqVpcId VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
-                     * @param UniqVpcId VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
+                     * @param _uniqVpcId VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 

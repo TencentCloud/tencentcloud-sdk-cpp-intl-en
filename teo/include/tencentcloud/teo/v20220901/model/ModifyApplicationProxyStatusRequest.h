@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The proxy ID.
                      * @return ProxyId The proxy ID.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置The proxy ID.
-                     * @param ProxyId The proxy ID.
+                     * @param _proxyId The proxy ID.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return Status The proxy status. Values:
 <li>`offline`: The proxy is disabled.</li>
 <li>`online`: The proxy is enabled.</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -92,15 +99,17 @@ namespace TencentCloud
                      * 设置The proxy status. Values:
 <li>`offline`: The proxy is disabled.</li>
 <li>`online`: The proxy is enabled.</li>
-                     * @param Status The proxy status. Values:
+                     * @param _status The proxy status. Values:
 <li>`offline`: The proxy is disabled.</li>
 <li>`online`: The proxy is enabled.</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

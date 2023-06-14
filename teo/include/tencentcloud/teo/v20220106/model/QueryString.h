@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to use `QueryString` as part of `CacheKey`. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: `on` and `off`.
+                     * @param _switch Whether to use `QueryString` as part of `CacheKey`. Valid values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -75,6 +78,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Action `includeCustom`: Include the specified query strings.
 `excludeCustom`: Exclude the specified query strings.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -82,15 +86,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置`includeCustom`: Include the specified query strings.
 `excludeCustom`: Exclude the specified query strings.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Action `includeCustom`: Include the specified query strings.
+                     * @param _action `includeCustom`: Include the specified query strings.
 `excludeCustom`: Exclude the specified query strings.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Value Array of query strings used/excluded
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
                      * 设置Array of query strings used/excluded
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Value Array of query strings used/excluded
+                     * @param _value Array of query strings used/excluded
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

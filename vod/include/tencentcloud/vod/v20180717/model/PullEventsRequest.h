@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Reserved field for special purposes.
                      * @return ExtInfo Reserved field for special purposes.
+                     * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
                      * 设置Reserved field for special purposes.
-                     * @param ExtInfo Reserved field for special purposes.
+                     * @param _extInfo Reserved field for special purposes.
+                     * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
 
                     /**
                      * 判断参数 ExtInfo 是否已赋值
                      * @return ExtInfo 是否已赋值
+                     * 
                      */
                     bool ExtInfoHasBeenSet() const;
 
                     /**
                      * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
                      * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param _subAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 

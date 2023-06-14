@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Case sensitivity
                      * @return CaseSensitive Case sensitivity
+                     * 
                      */
                     bool GetCaseSensitive() const;
 
                     /**
                      * 设置Case sensitivity
-                     * @param CaseSensitive Case sensitivity
+                     * @param _caseSensitive Case sensitivity
+                     * 
                      */
                     void SetCaseSensitive(const bool& _caseSensitive);
 
                     /**
                      * 判断参数 CaseSensitive 是否已赋值
                      * @return CaseSensitive 是否已赋值
+                     * 
                      */
                     bool CaseSensitiveHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
                      * @return Tokenizer Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
+                     * 
                      */
                     std::string GetTokenizer() const;
 
@@ -78,15 +82,17 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
                      * 设置Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
-                     * @param Tokenizer Separator of the full-text index. Each character represents a separator.
+                     * @param _tokenizer Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
+                     * 
                      */
                     void SetTokenizer(const std::string& _tokenizer);
 
                     /**
                      * 判断参数 Tokenizer 是否已赋值
                      * @return Tokenizer 是否已赋值
+                     * 
                      */
                     bool TokenizerHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ContainZH Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetContainZH() const;
 
                     /**
                      * 设置Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ContainZH Whether Chinese characters are contained
+                     * @param _containZH Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainZH(const bool& _containZH);
 
                     /**
                      * 判断参数 ContainZH 是否已赋值
                      * @return ContainZH 是否已赋值
+                     * 
                      */
                     bool ContainZHHasBeenSet() const;
 

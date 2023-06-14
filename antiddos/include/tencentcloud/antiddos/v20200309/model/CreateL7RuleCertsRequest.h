@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取SSL certificate ID
                      * @return CertId SSL certificate ID
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置SSL certificate ID
-                     * @param CertId SSL certificate ID
+                     * @param _certId SSL certificate ID
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
                     /**
                      * 获取List of Layer-7 domain name forwarding rules
                      * @return L7Rules List of Layer-7 domain name forwarding rules
+                     * 
                      */
                     std::vector<InsL7Rules> GetL7Rules() const;
 
                     /**
                      * 设置List of Layer-7 domain name forwarding rules
-                     * @param L7Rules List of Layer-7 domain name forwarding rules
+                     * @param _l7Rules List of Layer-7 domain name forwarding rules
+                     * 
                      */
                     void SetL7Rules(const std::vector<InsL7Rules>& _l7Rules);
 
                     /**
                      * 判断参数 L7Rules 是否已赋值
                      * @return L7Rules 是否已赋值
+                     * 
                      */
                     bool L7RulesHasBeenSet() const;
 

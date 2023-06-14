@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceID Message queue instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Message queue instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogTypeList List of log types
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SecLogDeliveryKafkaSettingInfo> GetLogTypeList() const;
 
                     /**
                      * 判断参数 LogTypeList 是否已赋值
                      * @return LogTypeList 是否已赋值
+                     * 
                      */
                     bool LogTypeListHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return User Username
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
@@ -119,12 +129,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return RegionID Region ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRegionID() const;
 
                     /**
                      * 判断参数 RegionID 是否已赋值
                      * @return RegionID 是否已赋值
+                     * 
                      */
                     bool RegionIDHasBeenSet() const;
 

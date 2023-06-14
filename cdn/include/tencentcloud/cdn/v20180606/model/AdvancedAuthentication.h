@@ -55,18 +55,21 @@ namespace TencentCloud
                     /**
                      * 获取Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
                      * @return Switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
-                     * @param Switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+                     * @param _switch Hotlink protection configuration switch (which can be on or off). If it is enabled, only one mode can and must be configured, while other modes are null.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -75,20 +78,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TypeA Timestamp hotlink protection advanced configuration mode A
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AdvancedAuthenticationTypeA GetTypeA() const;
 
                     /**
                      * 设置Timestamp hotlink protection advanced configuration mode A
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TypeA Timestamp hotlink protection advanced configuration mode A
+                     * @param _typeA Timestamp hotlink protection advanced configuration mode A
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeA(const AdvancedAuthenticationTypeA& _typeA);
 
                     /**
                      * 判断参数 TypeA 是否已赋值
                      * @return TypeA 是否已赋值
+                     * 
                      */
                     bool TypeAHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TypeB Timestamp hotlink protection advanced configuration mode B
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AdvancedAuthenticationTypeB GetTypeB() const;
 
                     /**
                      * 设置Timestamp hotlink protection advanced configuration mode B
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TypeB Timestamp hotlink protection advanced configuration mode B
+                     * @param _typeB Timestamp hotlink protection advanced configuration mode B
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeB(const AdvancedAuthenticationTypeB& _typeB);
 
                     /**
                      * 判断参数 TypeB 是否已赋值
                      * @return TypeB 是否已赋值
+                     * 
                      */
                     bool TypeBHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TypeC Timestamp hotlink protection advanced configuration mode C
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AdvancedAuthenticationTypeC GetTypeC() const;
 
                     /**
                      * 设置Timestamp hotlink protection advanced configuration mode C
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TypeC Timestamp hotlink protection advanced configuration mode C
+                     * @param _typeC Timestamp hotlink protection advanced configuration mode C
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeC(const AdvancedAuthenticationTypeC& _typeC);
 
                     /**
                      * 判断参数 TypeC 是否已赋值
                      * @return TypeC 是否已赋值
+                     * 
                      */
                     bool TypeCHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TypeD Timestamp hotlink protection advanced configuration mode D
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AdvancedAuthenticationTypeD GetTypeD() const;
 
                     /**
                      * 设置Timestamp hotlink protection advanced configuration mode D
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TypeD Timestamp hotlink protection advanced configuration mode D
+                     * @param _typeD Timestamp hotlink protection advanced configuration mode D
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeD(const AdvancedAuthenticationTypeD& _typeD);
 
                     /**
                      * 判断参数 TypeD 是否已赋值
                      * @return TypeD 是否已赋值
+                     * 
                      */
                     bool TypeDHasBeenSet() const;
 
@@ -163,20 +178,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TypeE Timestamp hotlink protection advanced configuration mode E
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AdvancedAuthenticationTypeE GetTypeE() const;
 
                     /**
                      * 设置Timestamp hotlink protection advanced configuration mode E
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TypeE Timestamp hotlink protection advanced configuration mode E
+                     * @param _typeE Timestamp hotlink protection advanced configuration mode E
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeE(const AdvancedAuthenticationTypeE& _typeE);
 
                     /**
                      * 判断参数 TypeE 是否已赋值
                      * @return TypeE 是否已赋值
+                     * 
                      */
                     bool TypeEHasBeenSet() const;
 
@@ -185,20 +203,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TypeF Timestamp hotlink protection advanced configuration mode F
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AdvancedAuthenticationTypeF GetTypeF() const;
 
                     /**
                      * 设置Timestamp hotlink protection advanced configuration mode F
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TypeF Timestamp hotlink protection advanced configuration mode F
+                     * @param _typeF Timestamp hotlink protection advanced configuration mode F
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeF(const AdvancedAuthenticationTypeF& _typeF);
 
                     /**
                      * 判断参数 TypeF 是否已赋值
                      * @return TypeF 是否已赋值
+                     * 
                      */
                     bool TypeFHasBeenSet() const;
 

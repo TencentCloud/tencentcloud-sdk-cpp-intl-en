@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Start time, such as "2019-09-10 12:13:14".
                      * @return StartTime Start time, such as "2019-09-10 12:13:14".
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time, such as "2019-09-10 12:13:14".
-                     * @param StartTime Start time, such as "2019-09-10 12:13:14".
+                     * @param _startTime Start time, such as "2019-09-10 12:13:14".
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
                      * @return EndTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
-                     * @param EndTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+                     * @param _endTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
                      * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
-                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * @param _product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

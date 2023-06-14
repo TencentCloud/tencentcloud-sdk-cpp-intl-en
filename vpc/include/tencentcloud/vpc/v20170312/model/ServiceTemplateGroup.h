@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Protocol port template group instance ID, such as `ppmg-2klmrefu`.
                      * @return ServiceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
+                     * 
                      */
                     std::string GetServiceTemplateGroupId() const;
 
                     /**
                      * 设置Protocol port template group instance ID, such as `ppmg-2klmrefu`.
-                     * @param ServiceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
+                     * @param _serviceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
+                     * 
                      */
                     void SetServiceTemplateGroupId(const std::string& _serviceTemplateGroupId);
 
                     /**
                      * 判断参数 ServiceTemplateGroupId 是否已赋值
                      * @return ServiceTemplateGroupId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Protocol port template group name.
                      * @return ServiceTemplateGroupName Protocol port template group name.
+                     * 
                      */
                     std::string GetServiceTemplateGroupName() const;
 
                     /**
                      * 设置Protocol port template group name.
-                     * @param ServiceTemplateGroupName Protocol port template group name.
+                     * @param _serviceTemplateGroupName Protocol port template group name.
+                     * 
                      */
                     void SetServiceTemplateGroupName(const std::string& _serviceTemplateGroupName);
 
                     /**
                      * 判断参数 ServiceTemplateGroupName 是否已赋值
                      * @return ServiceTemplateGroupName 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Protocol port template instance ID.
                      * @return ServiceTemplateIdSet Protocol port template instance ID.
+                     * 
                      */
                     std::vector<std::string> GetServiceTemplateIdSet() const;
 
                     /**
                      * 设置Protocol port template instance ID.
-                     * @param ServiceTemplateIdSet Protocol port template instance ID.
+                     * @param _serviceTemplateIdSet Protocol port template instance ID.
+                     * 
                      */
                     void SetServiceTemplateIdSet(const std::vector<std::string>& _serviceTemplateIdSet);
 
                     /**
                      * 判断参数 ServiceTemplateIdSet 是否已赋值
                      * @return ServiceTemplateIdSet 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdSetHasBeenSet() const;
 
                     /**
                      * 获取Creation Time.
                      * @return CreatedTime Creation Time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation Time.
-                     * @param CreatedTime Creation Time.
+                     * @param _createdTime Creation Time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Protocol port template instance information.
                      * @return ServiceTemplateSet Protocol port template instance information.
+                     * 
                      */
                     std::vector<ServiceTemplate> GetServiceTemplateSet() const;
 
                     /**
                      * 设置Protocol port template instance information.
-                     * @param ServiceTemplateSet Protocol port template instance information.
+                     * @param _serviceTemplateSet Protocol port template instance information.
+                     * 
                      */
                     void SetServiceTemplateSet(const std::vector<ServiceTemplate>& _serviceTemplateSet);
 
                     /**
                      * 判断参数 ServiceTemplateSet 是否已赋值
                      * @return ServiceTemplateSet 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateSetHasBeenSet() const;
 

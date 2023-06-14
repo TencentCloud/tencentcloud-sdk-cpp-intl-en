@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Connection group ID
                      * @return GroupId Connection group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Connection group ID
-                     * @param GroupId Connection group ID
+                     * @param _groupId Connection group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
                      * @return MetricNames Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
                      * 设置Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
-                     * @param MetricNames Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
+                     * @param _metricNames Statistical metric name list. Values: InBandwidth (inbound bandwidth); OutBandwidth (outbound bandwidth); Concurrent (concurrence); InPackets (inbound packets); OutPackets (outbound packets).
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
@@ -123,6 +135,7 @@ Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
 Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
+                     * 
                      */
                     uint64_t GetGranularity() const;
 
@@ -131,16 +144,18 @@ Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
 Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
-                     * @param Granularity Monitoring granularity (in seconds). Valid values: 60s, 300s, 3,600s, 86,400s.
+                     * @param _granularity Monitoring granularity (in seconds). Valid values: 60s, 300s, 3,600s, 86,400s.
 Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
 Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
 Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
+                     * 
                      */
                     void SetGranularity(const uint64_t& _granularity);
 
                     /**
                      * 判断参数 Granularity 是否已赋值
                      * @return Granularity 是否已赋值
+                     * 
                      */
                     bool GranularityHasBeenSet() const;
 

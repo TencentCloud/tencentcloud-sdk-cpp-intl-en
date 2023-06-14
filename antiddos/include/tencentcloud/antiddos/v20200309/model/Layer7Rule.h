@@ -53,126 +53,147 @@ namespace TencentCloud
                     /**
                      * 获取Domain name
                      * @return Domain Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-                     * @param Domain Domain name
+                     * @param _domain Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取List of forwarding types
                      * @return ProxyTypeList List of forwarding types
+                     * 
                      */
                     std::vector<ProxyTypeInfo> GetProxyTypeList() const;
 
                     /**
                      * 设置List of forwarding types
-                     * @param ProxyTypeList List of forwarding types
+                     * @param _proxyTypeList List of forwarding types
+                     * 
                      */
                     void SetProxyTypeList(const std::vector<ProxyTypeInfo>& _proxyTypeList);
 
                     /**
                      * 判断参数 ProxyTypeList 是否已赋值
                      * @return ProxyTypeList 是否已赋值
+                     * 
                      */
                     bool ProxyTypeListHasBeenSet() const;
 
                     /**
                      * 获取List of real servers
                      * @return RealServers List of real servers
+                     * 
                      */
                     std::vector<SourceServer> GetRealServers() const;
 
                     /**
                      * 设置List of real servers
-                     * @param RealServers List of real servers
+                     * @param _realServers List of real servers
+                     * 
                      */
                     void SetRealServers(const std::vector<SourceServer>& _realServers);
 
                     /**
                      * 判断参数 RealServers 是否已赋值
                      * @return RealServers 是否已赋值
+                     * 
                      */
                     bool RealServersHasBeenSet() const;
 
                     /**
                      * 获取Information of the Anti-DDoS instance
                      * @return InstanceDetails Information of the Anti-DDoS instance
+                     * 
                      */
                     std::vector<InstanceRelation> GetInstanceDetails() const;
 
                     /**
                      * 设置Information of the Anti-DDoS instance
-                     * @param InstanceDetails Information of the Anti-DDoS instance
+                     * @param _instanceDetails Information of the Anti-DDoS instance
+                     * 
                      */
                     void SetInstanceDetails(const std::vector<InstanceRelation>& _instanceDetails);
 
                     /**
                      * 判断参数 InstanceDetails 是否已赋值
                      * @return InstanceDetails 是否已赋值
+                     * 
                      */
                     bool InstanceDetailsHasBeenSet() const;
 
                     /**
                      * 获取Information of the Anti-DDoS instance configured
                      * @return InstanceDetailRule Information of the Anti-DDoS instance configured
+                     * 
                      */
                     std::vector<RuleInstanceRelation> GetInstanceDetailRule() const;
 
                     /**
                      * 设置Information of the Anti-DDoS instance configured
-                     * @param InstanceDetailRule Information of the Anti-DDoS instance configured
+                     * @param _instanceDetailRule Information of the Anti-DDoS instance configured
+                     * 
                      */
                     void SetInstanceDetailRule(const std::vector<RuleInstanceRelation>& _instanceDetailRule);
 
                     /**
                      * 判断参数 InstanceDetailRule 是否已赋值
                      * @return InstanceDetailRule 是否已赋值
+                     * 
                      */
                     bool InstanceDetailRuleHasBeenSet() const;
 
                     /**
                      * 获取Protocol
                      * @return Protocol Protocol
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol
-                     * @param Protocol Protocol
+                     * @param _protocol Protocol
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Port number
                      * @return Vport Port number
+                     * 
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Port number
-                     * @param Vport Port number
+                     * @param _vport Port number
+                     * 
                      */
                     void SetVport(const int64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 

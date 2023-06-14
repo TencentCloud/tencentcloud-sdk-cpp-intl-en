@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Step name
                      * @return Step Step name
+                     * 
                      */
                     std::string GetStep() const;
 
                     /**
                      * 设置Step name
-                     * @param Step Step name
+                     * @param _step Step name
+                     * 
                      */
                     void SetStep(const std::string& _step);
 
                     /**
                      * 判断参数 Step 是否已赋值
                      * @return Step 是否已赋值
+                     * 
                      */
                     bool StepHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
 `running`
 `success`
 `failed`
+                     * 
                      */
                     std::string GetLifeState() const;
 
@@ -84,17 +88,19 @@ namespace TencentCloud
 `running`
 `success`
 `failed`
-                     * @param LifeState Lifecycle
+                     * @param _lifeState Lifecycle
 `pending`
 `running`
 `success`
 `failed`
+                     * 
                      */
                     void SetLifeState(const std::string& _lifeState);
 
                     /**
                      * 判断参数 LifeState 是否已赋值
                      * @return LifeState 是否已赋值
+                     * 
                      */
                     bool LifeStateHasBeenSet() const;
 
@@ -103,20 +109,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartAt Step start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartAt() const;
 
                     /**
                      * 设置Step start time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartAt Step start time
+                     * @param _startAt Step start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartAt(const std::string& _startAt);
 
                     /**
                      * 判断参数 StartAt 是否已赋值
                      * @return StartAt 是否已赋值
+                     * 
                      */
                     bool StartAtHasBeenSet() const;
 
@@ -125,20 +134,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndAt Step end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndAt() const;
 
                     /**
                      * 设置Step end time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndAt Step end time
+                     * @param _endAt Step end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndAt(const std::string& _endAt);
 
                     /**
                      * 判断参数 EndAt 是否已赋值
                      * @return EndAt 是否已赋值
+                     * 
                      */
                     bool EndAtHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailedMsg If `LifeState` is `failed`, this field displays the error message.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFailedMsg() const;
 
                     /**
                      * 设置If `LifeState` is `failed`, this field displays the error message.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FailedMsg If `LifeState` is `failed`, this field displays the error message.
+                     * @param _failedMsg If `LifeState` is `failed`, this field displays the error message.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedMsg(const std::string& _failedMsg);
 
                     /**
                      * 判断参数 FailedMsg 是否已赋值
                      * @return FailedMsg 是否已赋值
+                     * 
                      */
                     bool FailedMsgHasBeenSet() const;
 

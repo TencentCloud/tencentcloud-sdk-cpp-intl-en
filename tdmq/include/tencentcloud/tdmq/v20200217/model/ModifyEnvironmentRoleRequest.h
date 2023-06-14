@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Environment (namespace) name.
                      * @return EnvironmentId Environment (namespace) name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment (namespace) name.
-                     * @param EnvironmentId Environment (namespace) name.
+                     * @param _environmentId Environment (namespace) name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Role name.
                      * @return RoleName Role name.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name.
-                     * @param RoleName Role name.
+                     * @param _roleName Role name.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
                     /**
                      * 获取Permissions, which is a non-empty string array of `produce` and `consume` at the most.
                      * @return Permissions Permissions, which is a non-empty string array of `produce` and `consume` at the most.
+                     * 
                      */
                     std::vector<std::string> GetPermissions() const;
 
                     /**
                      * 设置Permissions, which is a non-empty string array of `produce` and `consume` at the most.
-                     * @param Permissions Permissions, which is a non-empty string array of `produce` and `consume` at the most.
+                     * @param _permissions Permissions, which is a non-empty string array of `produce` and `consume` at the most.
+                     * 
                      */
                     void SetPermissions(const std::vector<std::string>& _permissions);
 
                     /**
                      * 判断参数 Permissions 是否已赋值
                      * @return Permissions 是否已赋值
+                     * 
                      */
                     bool PermissionsHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID (required)
                      * @return ClusterId Cluster ID (required)
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID (required)
-                     * @param ClusterId Cluster ID (required)
+                     * @param _clusterId Cluster ID (required)
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

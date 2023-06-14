@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Region ID.
                      * @return RegionId Region ID.
+                     * 
                      */
                     std::string GetRegionId() const;
 
                     /**
                      * 设置Region ID.
-                     * @param RegionId Region ID.
+                     * @param _regionId Region ID.
+                     * 
                      */
                     void SetRegionId(const std::string& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
                      * @return NationCountryInnerList Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
+                     * 
                      */
                     std::vector<std::string> GetNationCountryInnerList() const;
 
                     /**
                      * 设置Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
-                     * @param NationCountryInnerList Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
+                     * @param _nationCountryInnerList Region/country code for the nearest access, which can be obtained via the DescribeCountryAreaMapping API.
+                     * 
                      */
                     void SetNationCountryInnerList(const std::vector<std::string>& _nationCountryInnerList);
 
                     /**
                      * 判断参数 NationCountryInnerList 是否已赋值
                      * @return NationCountryInnerList 是否已赋值
+                     * 
                      */
                     bool NationCountryInnerListHasBeenSet() const;
 

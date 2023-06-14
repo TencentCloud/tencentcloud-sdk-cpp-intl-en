@@ -62,6 +62,7 @@ namespace TencentCloud
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 7. All: ASR- and OCR-based content recognition and inappropriate information detection; equivalent to 1+2+3+4
+                     * 
                      */
                     std::vector<std::string> GetUsages() const;
 
@@ -75,7 +76,7 @@ namespace TencentCloud
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 7. All: ASR- and OCR-based content recognition and inappropriate information detection; equivalent to 1+2+3+4
-                     * @param Usages <b>Keyword usage. Valid values:</b>
+                     * @param _usages <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
 2. Recognition.Asr: ASR-based content recognition
 3. Review.Ocr: OCR-based inappropriate information recognition
@@ -84,30 +85,35 @@ namespace TencentCloud
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 7. All: ASR- and OCR-based content recognition and inappropriate information detection; equivalent to 1+2+3+4
+                     * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
                     /**
                      * 判断参数 Usages 是否已赋值
                      * @return Usages 是否已赋值
+                     * 
                      */
                     bool UsagesHasBeenSet() const;
 
                     /**
                      * 获取Keyword. Array length limit: 100.
                      * @return Words Keyword. Array length limit: 100.
+                     * 
                      */
                     std::vector<AiSampleWordInfo> GetWords() const;
 
                     /**
                      * 设置Keyword. Array length limit: 100.
-                     * @param Words Keyword. Array length limit: 100.
+                     * @param _words Keyword. Array length limit: 100.
+                     * 
                      */
                     void SetWords(const std::vector<AiSampleWordInfo>& _words);
 
                     /**
                      * 判断参数 Words 是否已赋值
                      * @return Words 是否已赋值
+                     * 
                      */
                     bool WordsHasBeenSet() const;
 

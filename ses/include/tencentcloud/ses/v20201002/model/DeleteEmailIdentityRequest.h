@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Sender domain.
                      * @return EmailIdentity Sender domain.
+                     * 
                      */
                     std::string GetEmailIdentity() const;
 
                     /**
                      * 设置Sender domain.
-                     * @param EmailIdentity Sender domain.
+                     * @param _emailIdentity Sender domain.
+                     * 
                      */
                     void SetEmailIdentity(const std::string& _emailIdentity);
 
                     /**
                      * 判断参数 EmailIdentity 是否已赋值
                      * @return EmailIdentity 是否已赋值
+                     * 
                      */
                     bool EmailIdentityHasBeenSet() const;
 

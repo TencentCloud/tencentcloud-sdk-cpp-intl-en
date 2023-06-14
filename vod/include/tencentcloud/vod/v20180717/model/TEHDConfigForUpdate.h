@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
                      * @return Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
-                     * @param Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * @param _type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Maximum bitrate. If this parameter is left blank, no modification will be made.
                      * @return MaxVideoBitrate Maximum bitrate. If this parameter is left blank, no modification will be made.
+                     * 
                      */
                     uint64_t GetMaxVideoBitrate() const;
 
                     /**
                      * 设置Maximum bitrate. If this parameter is left blank, no modification will be made.
-                     * @param MaxVideoBitrate Maximum bitrate. If this parameter is left blank, no modification will be made.
+                     * @param _maxVideoBitrate Maximum bitrate. If this parameter is left blank, no modification will be made.
+                     * 
                      */
                     void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
 
                     /**
                      * 判断参数 MaxVideoBitrate 是否已赋值
                      * @return MaxVideoBitrate 是否已赋值
+                     * 
                      */
                     bool MaxVideoBitrateHasBeenSet() const;
 

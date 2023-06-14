@@ -52,72 +52,84 @@ namespace TencentCloud
                     /**
                      * 获取Client IP.
                      * @return ClientIp Client IP.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置Client IP.
-                     * @param ClientIp Client IP.
+                     * @param _clientIp Client IP.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取Video information of pushed streams.
                      * @return Video Video information of pushed streams.
+                     * 
                      */
                     std::vector<StreamVideoInfo> GetVideo() const;
 
                     /**
                      * 设置Video information of pushed streams.
-                     * @param Video Video information of pushed streams.
+                     * @param _video Video information of pushed streams.
+                     * 
                      */
                     void SetVideo(const std::vector<StreamVideoInfo>& _video);
 
                     /**
                      * 判断参数 Video 是否已赋值
                      * @return Video 是否已赋值
+                     * 
                      */
                     bool VideoHasBeenSet() const;
 
                     /**
                      * 获取Audio information of pushed streams.
                      * @return Audio Audio information of pushed streams.
+                     * 
                      */
                     std::vector<StreamAudioInfo> GetAudio() const;
 
                     /**
                      * 设置Audio information of pushed streams.
-                     * @param Audio Audio information of pushed streams.
+                     * @param _audio Audio information of pushed streams.
+                     * 
                      */
                     void SetAudio(const std::vector<StreamAudioInfo>& _audio);
 
                     /**
                      * 判断参数 Audio 是否已赋值
                      * @return Audio 是否已赋值
+                     * 
                      */
                     bool AudioHasBeenSet() const;
 
                     /**
                      * 获取SCTE-35 information of pushed streams.
                      * @return Scte35 SCTE-35 information of pushed streams.
+                     * 
                      */
                     std::vector<StreamScte35Info> GetScte35() const;
 
                     /**
                      * 设置SCTE-35 information of pushed streams.
-                     * @param Scte35 SCTE-35 information of pushed streams.
+                     * @param _scte35 SCTE-35 information of pushed streams.
+                     * 
                      */
                     void SetScte35(const std::vector<StreamScte35Info>& _scte35);
 
                     /**
                      * 判断参数 Scte35 是否已赋值
                      * @return Scte35 是否已赋值
+                     * 
                      */
                     bool Scte35HasBeenSet() const;
 

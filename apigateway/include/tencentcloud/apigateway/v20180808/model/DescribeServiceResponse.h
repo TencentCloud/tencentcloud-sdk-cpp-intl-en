@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID.
                      * @return ServiceId Unique service ID.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Service environment list.
                      * @return AvailableEnvironments Service environment list.
+                     * 
                      */
                     std::vector<std::string> GetAvailableEnvironments() const;
 
                     /**
                      * 判断参数 AvailableEnvironments 是否已赋值
                      * @return AvailableEnvironments 是否已赋值
+                     * 
                      */
                     bool AvailableEnvironmentsHasBeenSet() const;
 
                     /**
                      * 获取Service name.
                      * @return ServiceName Service name.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
@@ -87,132 +93,154 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceDesc Service description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceDesc() const;
 
                     /**
                      * 判断参数 ServiceDesc 是否已赋值
                      * @return ServiceDesc 是否已赋值
+                     * 
                      */
                     bool ServiceDescHasBeenSet() const;
 
                     /**
                      * 获取Protocol supported by service. Valid values: http, https, http&https.
                      * @return Protocol Protocol supported by service. Valid values: http, https, http&https.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Service creation time.
                      * @return CreatedTime Service creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Service modification time.
                      * @return ModifiedTime Service modification time.
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 
                     /**
                      * 获取Dedicated cluster name.
                      * @return ExclusiveSetName Dedicated cluster name.
+                     * 
                      */
                     std::string GetExclusiveSetName() const;
 
                     /**
                      * 判断参数 ExclusiveSetName 是否已赋值
                      * @return ExclusiveSetName 是否已赋值
+                     * 
                      */
                     bool ExclusiveSetNameHasBeenSet() const;
 
                     /**
                      * 获取Network type list. INNER: private network access; OUTER: public network access.
                      * @return NetTypes Network type list. INNER: private network access; OUTER: public network access.
+                     * 
                      */
                     std::vector<std::string> GetNetTypes() const;
 
                     /**
                      * 判断参数 NetTypes 是否已赋值
                      * @return NetTypes 是否已赋值
+                     * 
                      */
                     bool NetTypesHasBeenSet() const;
 
                     /**
                      * 获取Subdomain name for private network access.
                      * @return InternalSubDomain Subdomain name for private network access.
+                     * 
                      */
                     std::string GetInternalSubDomain() const;
 
                     /**
                      * 判断参数 InternalSubDomain 是否已赋值
                      * @return InternalSubDomain 是否已赋值
+                     * 
                      */
                     bool InternalSubDomainHasBeenSet() const;
 
                     /**
                      * 获取Subdomain name for public network access.
                      * @return OuterSubDomain Subdomain name for public network access.
+                     * 
                      */
                     std::string GetOuterSubDomain() const;
 
                     /**
                      * 判断参数 OuterSubDomain 是否已赋值
                      * @return OuterSubDomain 是否已赋值
+                     * 
                      */
                     bool OuterSubDomainHasBeenSet() const;
 
                     /**
                      * 获取Service port number for HTTP access over private network.
                      * @return InnerHttpPort Service port number for HTTP access over private network.
+                     * 
                      */
                     int64_t GetInnerHttpPort() const;
 
                     /**
                      * 判断参数 InnerHttpPort 是否已赋值
                      * @return InnerHttpPort 是否已赋值
+                     * 
                      */
                     bool InnerHttpPortHasBeenSet() const;
 
                     /**
                      * 获取Port number for HTTPS access over private network.
                      * @return InnerHttpsPort Port number for HTTPS access over private network.
+                     * 
                      */
                     int64_t GetInnerHttpsPort() const;
 
                     /**
                      * 判断参数 InnerHttpsPort 是否已赋值
                      * @return InnerHttpsPort 是否已赋值
+                     * 
                      */
                     bool InnerHttpsPortHasBeenSet() const;
 
                     /**
                      * 获取Total number of APIs.
                      * @return ApiTotalCount Total number of APIs.
+                     * 
                      */
                     int64_t GetApiTotalCount() const;
 
                     /**
                      * 判断参数 ApiTotalCount 是否已赋值
                      * @return ApiTotalCount 是否已赋值
+                     * 
                      */
                     bool ApiTotalCountHasBeenSet() const;
 
@@ -221,24 +249,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiIdStatusSet API list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiIdStatus> GetApiIdStatusSet() const;
 
                     /**
                      * 判断参数 ApiIdStatusSet 是否已赋值
                      * @return ApiIdStatusSet 是否已赋值
+                     * 
                      */
                     bool ApiIdStatusSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of usage plans.
                      * @return UsagePlanTotalCount Total number of usage plans.
+                     * 
                      */
                     int64_t GetUsagePlanTotalCount() const;
 
                     /**
                      * 判断参数 UsagePlanTotalCount 是否已赋值
                      * @return UsagePlanTotalCount 是否已赋值
+                     * 
                      */
                     bool UsagePlanTotalCountHasBeenSet() const;
 
@@ -247,12 +279,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UsagePlanList Usage plan array.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UsagePlan> GetUsagePlanList() const;
 
                     /**
                      * 判断参数 UsagePlanList 是否已赋值
                      * @return UsagePlanList 是否已赋值
+                     * 
                      */
                     bool UsagePlanListHasBeenSet() const;
 
@@ -261,12 +295,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IpVersion IP version.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIpVersion() const;
 
                     /**
                      * 判断参数 IpVersion 是否已赋值
                      * @return IpVersion 是否已赋值
+                     * 
                      */
                     bool IpVersionHasBeenSet() const;
 
@@ -275,12 +311,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserType Service user type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserType() const;
 
                     /**
                      * 判断参数 UserType 是否已赋值
                      * @return UserType 是否已赋值
+                     * 
                      */
                     bool UserTypeHasBeenSet() const;
 
@@ -289,12 +327,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SetId Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSetId() const;
 
                     /**
                      * 判断参数 SetId 是否已赋值
                      * @return SetId 是否已赋值
+                     * 
                      */
                     bool SetIdHasBeenSet() const;
 
@@ -303,12 +343,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values found.
                      * @return Tags Tags bound to a service.
 Note: this field may return null, indicating that no valid values found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -317,12 +359,14 @@ Note: this field may return null, indicating that no valid values found.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Dedicated instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -331,12 +375,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Dedicated instance name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -345,12 +391,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SetType Cluster type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSetType() const;
 
                     /**
                      * 判断参数 SetType 是否已赋值
                      * @return SetType 是否已赋值
+                     * 
                      */
                     bool SetTypeHasBeenSet() const;
 
@@ -359,12 +407,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values found.
                      * @return DeploymentType Cluster type for service deployment
 Note: this field may return null, indicating that no valid values found.
+                     * 
                      */
                     std::string GetDeploymentType() const;
 
                     /**
                      * 判断参数 DeploymentType 是否已赋值
                      * @return DeploymentType 是否已赋值
+                     * 
                      */
                     bool DeploymentTypeHasBeenSet() const;
 
@@ -373,12 +423,14 @@ Note: this field may return null, indicating that no valid values found.
 Note: This field may return `NULL`, indicating that no valid value was found.
                      * @return SpecialUse Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
 Note: This field may return `NULL`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetSpecialUse() const;
 
                     /**
                      * 判断参数 SpecialUse 是否已赋值
                      * @return SpecialUse 是否已赋值
+                     * 
                      */
                     bool SpecialUseHasBeenSet() const;
 

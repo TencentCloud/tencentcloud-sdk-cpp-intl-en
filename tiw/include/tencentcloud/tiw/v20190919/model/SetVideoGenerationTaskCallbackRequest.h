@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Callback URL of the offline recording task result. If it is specified as null, the set callback URL is deleted. The callback URL only supports the HTTP or HTTPS protocol, and therefore the callback URL must start with `http://` or `https://`.
                      * @return Callback Callback URL of the offline recording task result. If it is specified as null, the set callback URL is deleted. The callback URL only supports the HTTP or HTTPS protocol, and therefore the callback URL must start with `http://` or `https://`.
+                     * 
                      */
                     std::string GetCallback() const;
 
                     /**
                      * 设置Callback URL of the offline recording task result. If it is specified as null, the set callback URL is deleted. The callback URL only supports the HTTP or HTTPS protocol, and therefore the callback URL must start with `http://` or `https://`.
-                     * @param Callback Callback URL of the offline recording task result. If it is specified as null, the set callback URL is deleted. The callback URL only supports the HTTP or HTTPS protocol, and therefore the callback URL must start with `http://` or `https://`.
+                     * @param _callback Callback URL of the offline recording task result. If it is specified as null, the set callback URL is deleted. The callback URL only supports the HTTP or HTTPS protocol, and therefore the callback URL must start with `http://` or `https://`.
+                     * 
                      */
                     void SetCallback(const std::string& _callback);
 
                     /**
                      * 判断参数 Callback 是否已赋值
                      * @return Callback 是否已赋值
+                     * 
                      */
                     bool CallbackHasBeenSet() const;
 

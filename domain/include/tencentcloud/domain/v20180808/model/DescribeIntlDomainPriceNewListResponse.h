@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The price list of domains.
                      * @return PriceList The price list of domains.
+                     * 
                      */
                     std::vector<PriceInfoNew> GetPriceList() const;
 
                     /**
                      * 判断参数 PriceList 是否已赋值
                      * @return PriceList 是否已赋值
+                     * 
                      */
                     bool PriceListHasBeenSet() const;
 

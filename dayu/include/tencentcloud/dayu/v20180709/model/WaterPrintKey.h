@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Watermark key ID
                      * @return KeyId Watermark key ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Watermark key ID
-                     * @param KeyId Watermark key ID
+                     * @param _keyId Watermark key ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Watermark key value
                      * @return KeyContent Watermark key value
+                     * 
                      */
                     std::string GetKeyContent() const;
 
                     /**
                      * 设置Watermark key value
-                     * @param KeyContent Watermark key value
+                     * @param _keyContent Watermark key value
+                     * 
                      */
                     void SetKeyContent(const std::string& _keyContent);
 
                     /**
                      * 判断参数 KeyContent 是否已赋值
                      * @return KeyContent 是否已赋值
+                     * 
                      */
                     bool KeyContentHasBeenSet() const;
 
                     /**
                      * 获取Watermark key version number
                      * @return KeyVersion Watermark key version number
+                     * 
                      */
                     std::string GetKeyVersion() const;
 
                     /**
                      * 设置Watermark key version number
-                     * @param KeyVersion Watermark key version number
+                     * @param _keyVersion Watermark key version number
+                     * 
                      */
                     void SetKeyVersion(const std::string& _keyVersion);
 
                     /**
                      * 判断参数 KeyVersion 是否已赋值
                      * @return KeyVersion 是否已赋值
+                     * 
                      */
                     bool KeyVersionHasBeenSet() const;
 
                     /**
                      * 获取Whether it is enabled. Valid values: [0 (no), 1 (yes)]
                      * @return OpenStatus Whether it is enabled. Valid values: [0 (no), 1 (yes)]
+                     * 
                      */
                     uint64_t GetOpenStatus() const;
 
                     /**
                      * 设置Whether it is enabled. Valid values: [0 (no), 1 (yes)]
-                     * @param OpenStatus Whether it is enabled. Valid values: [0 (no), 1 (yes)]
+                     * @param _openStatus Whether it is enabled. Valid values: [0 (no), 1 (yes)]
+                     * 
                      */
                     void SetOpenStatus(const uint64_t& _openStatus);
 
                     /**
                      * 判断参数 OpenStatus 是否已赋值
                      * @return OpenStatus 是否已赋值
+                     * 
                      */
                     bool OpenStatusHasBeenSet() const;
 
                     /**
                      * 获取Key generation time
                      * @return CreateTime Key generation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Key generation time
-                     * @param CreateTime Key generation time
+                     * @param _createTime Key generation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

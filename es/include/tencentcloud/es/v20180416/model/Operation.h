@@ -51,126 +51,147 @@ namespace TencentCloud
                     /**
                      * 获取Unique operation ID
                      * @return Id Unique operation ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Unique operation ID
-                     * @param Id Unique operation ID
+                     * @param _id Unique operation ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Operation start time
                      * @return StartTime Operation start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Operation start time
-                     * @param StartTime Operation start time
+                     * @param _startTime Operation start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Operation type
                      * @return Type Operation type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Operation type
-                     * @param Type Operation type
+                     * @param _type Operation type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Operation details
                      * @return Detail Operation details
+                     * 
                      */
                     OperationDetail GetDetail() const;
 
                     /**
                      * 设置Operation details
-                     * @param Detail Operation details
+                     * @param _detail Operation details
+                     * 
                      */
                     void SetDetail(const OperationDetail& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 
                     /**
                      * 获取Operation result
                      * @return Result Operation result
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 设置Operation result
-                     * @param Result Operation result
+                     * @param _result Operation result
+                     * 
                      */
                     void SetResult(const std::string& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取Workflow task information
                      * @return Tasks Workflow task information
+                     * 
                      */
                     std::vector<TaskDetail> GetTasks() const;
 
                     /**
                      * 设置Workflow task information
-                     * @param Tasks Workflow task information
+                     * @param _tasks Workflow task information
+                     * 
                      */
                     void SetTasks(const std::vector<TaskDetail>& _tasks);
 
                     /**
                      * 判断参数 Tasks 是否已赋值
                      * @return Tasks 是否已赋值
+                     * 
                      */
                     bool TasksHasBeenSet() const;
 
                     /**
                      * 获取Operation progress
                      * @return Progress Operation progress
+                     * 
                      */
                     double GetProgress() const;
 
                     /**
                      * 设置Operation progress
-                     * @param Progress Operation progress
+                     * @param _progress Operation progress
+                     * 
                      */
                     void SetProgress(const double& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 

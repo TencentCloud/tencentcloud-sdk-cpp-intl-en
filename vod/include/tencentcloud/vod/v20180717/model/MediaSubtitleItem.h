@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique subtitle ID
                      * @return Id Unique subtitle ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Unique subtitle ID
-                     * @param Id Unique subtitle ID
+                     * @param _id Unique subtitle ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Subtitle name
                      * @return Name Subtitle name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Subtitle name
-                     * @param Name Subtitle name
+                     * @param _name Subtitle name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -93,6 +99,7 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 <li>`ja`: Japanese</li>
 <li>`en-US`: English</li>
 For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+                     * 
                      */
                     std::string GetLanguage() const;
 
@@ -102,17 +109,19 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 <li>`ja`: Japanese</li>
 <li>`en-US`: English</li>
 For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
-                     * @param Language Subtitle language. Common values:
+                     * @param _language Subtitle language. Common values:
 <li>`cn`: Chinese</li>
 <li>`ja`: Japanese</li>
 <li>`en-US`: English</li>
 For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+                     * 
                      */
                     void SetLanguage(const std::string& _language);
 
                     /**
                      * 判断参数 Language 是否已赋值
                      * @return Language 是否已赋值
+                     * 
                      */
                     bool LanguageHasBeenSet() const;
 
@@ -121,38 +130,44 @@ For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 <li>vtt</li>
                      * @return Format Subtitle format. Valid value:
 <li>vtt</li>
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Subtitle format. Valid value:
 <li>vtt</li>
-                     * @param Format Subtitle format. Valid value:
+                     * @param _format Subtitle format. Valid value:
 <li>vtt</li>
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取Subtitle URL
                      * @return Url Subtitle URL
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Subtitle URL
-                     * @param Url Subtitle URL
+                     * @param _url Subtitle URL
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

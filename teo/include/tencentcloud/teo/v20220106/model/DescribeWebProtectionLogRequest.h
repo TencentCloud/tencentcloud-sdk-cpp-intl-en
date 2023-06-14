@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of items per page
                      * @return PageSize Number of items per page
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置Number of items per page
-                     * @param PageSize Number of items per page
+                     * @param _pageSize Number of items per page
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Current page
                      * @return PageNo Current page
+                     * 
                      */
                     int64_t GetPageNo() const;
 
                     /**
                      * 设置Current page
-                     * @param PageNo Current page
+                     * @param _pageNo Current page
+                     * 
                      */
                     void SetPageNo(const int64_t& _pageNo);
 
                     /**
                      * 判断参数 PageNo 是否已赋值
                      * @return PageNo 是否已赋值
+                     * 
                      */
                     bool PageNoHasBeenSet() const;
 
                     /**
                      * 获取Site set
                      * @return ZoneIds Site set
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置Site set
-                     * @param ZoneIds Site set
+                     * @param _zoneIds Site set
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取Domain name set
                      * @return Domains Domain name set
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置Domain name set
-                     * @param Domains Domain name set
+                     * @param _domains Domain name set
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Query condition
                      * @return QueryCondition Query condition
+                     * 
                      */
                     std::vector<QueryCondition> GetQueryCondition() const;
 
                     /**
                      * 设置Query condition
-                     * @param QueryCondition Query condition
+                     * @param _queryCondition Query condition
+                     * 
                      */
                     void SetQueryCondition(const std::vector<QueryCondition>& _queryCondition);
 
                     /**
                      * 判断参数 QueryCondition 是否已赋值
                      * @return QueryCondition 是否已赋值
+                     * 
                      */
                     bool QueryConditionHasBeenSet() const;
 

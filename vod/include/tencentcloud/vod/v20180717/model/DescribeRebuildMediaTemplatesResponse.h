@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of records that meet the conditions.
                      * @return TotalCount The total number of records that meet the conditions.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The details of the remaster templates.
                      * @return RebuildMediaTemplateSet The details of the remaster templates.
+                     * 
                      */
                     std::vector<RebuildMediaTemplate> GetRebuildMediaTemplateSet() const;
 
                     /**
                      * 判断参数 RebuildMediaTemplateSet 是否已赋值
                      * @return RebuildMediaTemplateSet 是否已赋值
+                     * 
                      */
                     bool RebuildMediaTemplateSetHasBeenSet() const;
 

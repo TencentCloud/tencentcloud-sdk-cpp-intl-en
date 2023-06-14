@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible import task operation logs.
                      * @return TotalCount Number of eligible import task operation logs.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of import operation records.
                      * @return Items List of import operation records.
+                     * 
                      */
                     std::vector<ImportRecord> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

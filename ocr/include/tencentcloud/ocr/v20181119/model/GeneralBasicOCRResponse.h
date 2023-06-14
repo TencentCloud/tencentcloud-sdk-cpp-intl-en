@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
                      * @return TextDetections Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+                     * 
                      */
                     std::vector<TextDetection> GetTextDetections() const;
 
                     /**
                      * 判断参数 TextDetections 是否已赋值
                      * @return TextDetections 是否已赋值
+                     * 
                      */
                     bool TextDetectionsHasBeenSet() const;
 
                     /**
                      * 获取Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
                      * @return Language Detected language. For more information on the supported languages, please see the description of the `LanguageType` input parameter.
+                     * 
                      */
                     std::string GetLanguage() const;
 
                     /**
                      * 判断参数 Language 是否已赋值
                      * @return Language 是否已赋值
+                     * 
                      */
                     bool LanguageHasBeenSet() const;
 
                     /**
                      * 获取Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
                      * @return Angel Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * 
                      */
                     double GetAngel() const;
 
                     /**
                      * 判断参数 Angel 是否已赋值
                      * @return Angel 是否已赋值
+                     * 
                      */
                     bool AngelHasBeenSet() const;
 
                     /**
                      * 获取Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
                      * @return PdfPageSize Total number of PDF pages to be returned if the image is a PDF. Default value: 0.
+                     * 
                      */
                     int64_t GetPdfPageSize() const;
 
                     /**
                      * 判断参数 PdfPageSize 是否已赋值
                      * @return PdfPageSize 是否已赋值
+                     * 
                      */
                     bool PdfPageSizeHasBeenSet() const;
 

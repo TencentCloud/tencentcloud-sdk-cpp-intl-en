@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID.
                      * @return LoadBalancerId CLB instance ID.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID.
-                     * @param LoadBalancerId CLB instance ID.
+                     * @param _loadBalancerId CLB instance ID.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Data offset. Default value: 0.
                      * @return Offset Data offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. Default value: 0.
-                     * @param Offset Data offset. Default value: 0.
+                     * @param _offset Data offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of IPs to be returned. Default value: 100,000.
                      * @return Limit Maximum number of IPs to be returned. Default value: 100,000.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of IPs to be returned. Default value: 100,000.
-                     * @param Limit Maximum number of IPs to be returned. Default value: 100,000.
+                     * @param _limit Maximum number of IPs to be returned. Default value: 100,000.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

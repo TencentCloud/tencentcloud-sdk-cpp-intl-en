@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Status The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ErrorMsg Details of the error occurred while opening the access port
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 

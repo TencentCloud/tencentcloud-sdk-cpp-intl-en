@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of lists
                      * @return Total Total number of lists
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Protocol blocking configuration
                      * @return ConfigList Protocol blocking configuration
+                     * 
                      */
                     std::vector<ProtocolBlockRelation> GetConfigList() const;
 
                     /**
                      * 判断参数 ConfigList 是否已赋值
                      * @return ConfigList 是否已赋值
+                     * 
                      */
                     bool ConfigListHasBeenSet() const;
 

@@ -51,216 +51,252 @@ namespace TencentCloud
                     /**
                      * 获取`VPC` name.
                      * @return VpcName `VPC` name.
+                     * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置`VPC` name.
-                     * @param VpcName `VPC` name.
+                     * @param _vpcName `VPC` name.
+                     * 
                      */
                     void SetVpcName(const std::string& _vpcName);
 
                     /**
                      * 判断参数 VpcName 是否已赋值
                      * @return VpcName 是否已赋值
+                     * 
                      */
                     bool VpcNameHasBeenSet() const;
 
                     /**
                      * 获取`VPC` instance `ID`, such as `vpc-azd4dt1c`.
                      * @return VpcId `VPC` instance `ID`, such as `vpc-azd4dt1c`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置`VPC` instance `ID`, such as `vpc-azd4dt1c`.
-                     * @param VpcId `VPC` instance `ID`, such as `vpc-azd4dt1c`.
+                     * @param _vpcId `VPC` instance `ID`, such as `vpc-azd4dt1c`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The `IPv4` `CIDR` of the `VPC`.
                      * @return CidrBlock The `IPv4` `CIDR` of the `VPC`.
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置The `IPv4` `CIDR` of the `VPC`.
-                     * @param CidrBlock The `IPv4` `CIDR` of the `VPC`.
+                     * @param _cidrBlock The `IPv4` `CIDR` of the `VPC`.
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Whether it is the default `VPC`.
                      * @return IsDefault Whether it is the default `VPC`.
+                     * 
                      */
                     bool GetIsDefault() const;
 
                     /**
                      * 设置Whether it is the default `VPC`.
-                     * @param IsDefault Whether it is the default `VPC`.
+                     * @param _isDefault Whether it is the default `VPC`.
+                     * 
                      */
                     void SetIsDefault(const bool& _isDefault);
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
                     /**
                      * 获取Whether multicast is enabled.
                      * @return EnableMulticast Whether multicast is enabled.
+                     * 
                      */
                     bool GetEnableMulticast() const;
 
                     /**
                      * 设置Whether multicast is enabled.
-                     * @param EnableMulticast Whether multicast is enabled.
+                     * @param _enableMulticast Whether multicast is enabled.
+                     * 
                      */
                     void SetEnableMulticast(const bool& _enableMulticast);
 
                     /**
                      * 判断参数 EnableMulticast 是否已赋值
                      * @return EnableMulticast 是否已赋值
+                     * 
                      */
                     bool EnableMulticastHasBeenSet() const;
 
                     /**
                      * 获取Creation Time.
                      * @return CreatedTime Creation Time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation Time.
-                     * @param CreatedTime Creation Time.
+                     * @param _createdTime Creation Time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取`DNS` list.
                      * @return DnsServerSet `DNS` list.
+                     * 
                      */
                     std::vector<std::string> GetDnsServerSet() const;
 
                     /**
                      * 设置`DNS` list.
-                     * @param DnsServerSet `DNS` list.
+                     * @param _dnsServerSet `DNS` list.
+                     * 
                      */
                     void SetDnsServerSet(const std::vector<std::string>& _dnsServerSet);
 
                     /**
                      * 判断参数 DnsServerSet 是否已赋值
                      * @return DnsServerSet 是否已赋值
+                     * 
                      */
                     bool DnsServerSetHasBeenSet() const;
 
                     /**
                      * 获取DHCP domain name option value.
                      * @return DomainName DHCP domain name option value.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置DHCP domain name option value.
-                     * @param DomainName DHCP domain name option value.
+                     * @param _domainName DHCP domain name option value.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取`DHCP` option set `ID`.
                      * @return DhcpOptionsId `DHCP` option set `ID`.
+                     * 
                      */
                     std::string GetDhcpOptionsId() const;
 
                     /**
                      * 设置`DHCP` option set `ID`.
-                     * @param DhcpOptionsId `DHCP` option set `ID`.
+                     * @param _dhcpOptionsId `DHCP` option set `ID`.
+                     * 
                      */
                     void SetDhcpOptionsId(const std::string& _dhcpOptionsId);
 
                     /**
                      * 判断参数 DhcpOptionsId 是否已赋值
                      * @return DhcpOptionsId 是否已赋值
+                     * 
                      */
                     bool DhcpOptionsIdHasBeenSet() const;
 
                     /**
                      * 获取Whether `DHCP` is enabled.
                      * @return EnableDhcp Whether `DHCP` is enabled.
+                     * 
                      */
                     bool GetEnableDhcp() const;
 
                     /**
                      * 设置Whether `DHCP` is enabled.
-                     * @param EnableDhcp Whether `DHCP` is enabled.
+                     * @param _enableDhcp Whether `DHCP` is enabled.
+                     * 
                      */
                     void SetEnableDhcp(const bool& _enableDhcp);
 
                     /**
                      * 判断参数 EnableDhcp 是否已赋值
                      * @return EnableDhcp 是否已赋值
+                     * 
                      */
                     bool EnableDhcpHasBeenSet() const;
 
                     /**
                      * 获取The `IPv6` `CIDR` of the `VPC`.
                      * @return Ipv6CidrBlock The `IPv6` `CIDR` of the `VPC`.
+                     * 
                      */
                     std::string GetIpv6CidrBlock() const;
 
                     /**
                      * 设置The `IPv6` `CIDR` of the `VPC`.
-                     * @param Ipv6CidrBlock The `IPv6` `CIDR` of the `VPC`.
+                     * @param _ipv6CidrBlock The `IPv6` `CIDR` of the `VPC`.
+                     * 
                      */
                     void SetIpv6CidrBlock(const std::string& _ipv6CidrBlock);
 
                     /**
                      * 判断参数 Ipv6CidrBlock 是否已赋值
                      * @return Ipv6CidrBlock 是否已赋值
+                     * 
                      */
                     bool Ipv6CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Tag key-value pair
                      * @return TagSet Tag key-value pair
+                     * 
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
                      * 设置Tag key-value pair
-                     * @param TagSet Tag key-value pair
+                     * @param _tagSet Tag key-value pair
+                     * 
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
@@ -269,20 +305,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AssistantCidrSet The secondary CIDR block.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AssistantCidr> GetAssistantCidrSet() const;
 
                     /**
                      * 设置The secondary CIDR block.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AssistantCidrSet The secondary CIDR block.
+                     * @param _assistantCidrSet The secondary CIDR block.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAssistantCidrSet(const std::vector<AssistantCidr>& _assistantCidrSet);
 
                     /**
                      * 判断参数 AssistantCidrSet 是否已赋值
                      * @return AssistantCidrSet 是否已赋值
+                     * 
                      */
                     bool AssistantCidrSetHasBeenSet() const;
 

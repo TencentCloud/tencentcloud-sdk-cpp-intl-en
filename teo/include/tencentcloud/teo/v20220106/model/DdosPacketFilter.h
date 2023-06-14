@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
                      * @return Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
-                     * @param Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * @param _switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Array of objects in feature filtering configuration
                      * @return PacketFilter Array of objects in feature filtering configuration
+                     * 
                      */
                     std::vector<DDoSFeaturesFilter> GetPacketFilter() const;
 
                     /**
                      * 设置Array of objects in feature filtering configuration
-                     * @param PacketFilter Array of objects in feature filtering configuration
+                     * @param _packetFilter Array of objects in feature filtering configuration
+                     * 
                      */
                     void SetPacketFilter(const std::vector<DDoSFeaturesFilter>& _packetFilter);
 
                     /**
                      * 判断参数 PacketFilter 是否已赋值
                      * @return PacketFilter 是否已赋值
+                     * 
                      */
                     bool PacketFilterHasBeenSet() const;
 

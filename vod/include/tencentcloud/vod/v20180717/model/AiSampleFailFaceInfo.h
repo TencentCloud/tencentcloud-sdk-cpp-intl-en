@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
                      * @return Index It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+                     * 
                      */
                     uint64_t GetIndex() const;
 
                     /**
                      * 设置It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
-                     * @param Index It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+                     * @param _index It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+                     * 
                      */
                     void SetIndex(const uint64_t& _index);
 
                     /**
                      * 判断参数 Index 是否已赋值
                      * @return Index 是否已赋值
+                     * 
                      */
                     bool IndexHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return ErrCode Error code. Valid values:
 <li>0: success;</li>
 <li>Other values: failure.</li>
+                     * 
                      */
                     int64_t GetErrCode() const;
 
@@ -78,33 +82,38 @@ namespace TencentCloud
                      * 设置Error code. Valid values:
 <li>0: success;</li>
 <li>Other values: failure.</li>
-                     * @param ErrCode Error code. Valid values:
+                     * @param _errCode Error code. Valid values:
 <li>0: success;</li>
 <li>Other values: failure.</li>
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return Message Error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
-                     * @param Message Error message.
+                     * @param _message Error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

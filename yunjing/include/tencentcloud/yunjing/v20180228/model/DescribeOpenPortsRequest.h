@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取CWP agent `Uuid`. Either `Port` or `Uuid` must be specified. If `Uuid` is specified, it indicates to query the information list under the specified server.
                      * @return Uuid CWP agent `Uuid`. Either `Port` or `Uuid` must be specified. If `Uuid` is specified, it indicates to query the information list under the specified server.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `Uuid`. Either `Port` or `Uuid` must be specified. If `Uuid` is specified, it indicates to query the information list under the specified server.
-                     * @param Uuid CWP agent `Uuid`. Either `Port` or `Uuid` must be specified. If `Uuid` is specified, it indicates to query the information list under the specified server.
+                     * @param _uuid CWP agent `Uuid`. Either `Port` or `Uuid` must be specified. If `Uuid` is specified, it indicates to query the information list under the specified server.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取Open port number. Either `Port` or `Uuid` must be specified. If `Port` is specified, it indicates to query the information list under the specified port.
                      * @return Port Open port number. Either `Port` or `Uuid` must be specified. If `Port` is specified, it indicates to query the information list under the specified port.
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Open port number. Either `Port` or `Uuid` must be specified. If `Port` is specified, it indicates to query the information list under the specified port.
-                     * @param Port Open port number. Either `Port` or `Uuid` must be specified. If `Port` is specified, it indicates to query the information list under the specified port.
+                     * @param _port Open port number. Either `Port` or `Uuid` must be specified. If `Port` is specified, it indicates to query the information list under the specified port.
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 10. Maximum value: 100.
                      * @return Limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -124,6 +136,7 @@ namespace TencentCloud
 <li>Port - Uint64 - Required: No - Port number</li>
 <li>ProcessName - String - Required: No - Process name</li>
 <li>MachineIp - String - Required: No - Private IP of server</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -132,16 +145,18 @@ namespace TencentCloud
 <li>Port - Uint64 - Required: No - Port number</li>
 <li>ProcessName - String - Required: No - Process name</li>
 <li>MachineIp - String - Required: No - Private IP of server</li>
-                     * @param Filters Filter.
+                     * @param _filters Filter.
 <li>Port - Uint64 - Required: No - Port number</li>
 <li>ProcessName - String - Required: No - Process name</li>
 <li>MachineIp - String - Required: No - Private IP of server</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

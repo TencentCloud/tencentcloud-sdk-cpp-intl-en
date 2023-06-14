@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of the returned space statistics of top databases.
                      * @return TopSpaceSchemas List of the returned space statistics of top databases.
+                     * 
                      */
                     std::vector<SchemaSpaceData> GetTopSpaceSchemas() const;
 
                     /**
                      * 判断参数 TopSpaceSchemas 是否已赋值
                      * @return TopSpaceSchemas 是否已赋值
+                     * 
                      */
                     bool TopSpaceSchemasHasBeenSet() const;
 
                     /**
                      * 获取Timestamp (in seconds) of database space data collect points
                      * @return Timestamp Timestamp (in seconds) of database space data collect points
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Fee on yesterday (pay-as-you-go)
                      * @return PostPayCost Fee on yesterday (pay-as-you-go)
+                     * 
                      */
                     uint64_t GetPostPayCost() const;
 
                     /**
                      * 判断参数 PostPayCost 是否已赋值
                      * @return PostPayCost 是否已赋值
+                     * 
                      */
                     bool PostPayCostHasBeenSet() const;
 
                     /**
                      * 获取Whether CWP Pro is activated for new servers
                      * @return IsAutoOpenProVersion Whether CWP Pro is activated for new servers
+                     * 
                      */
                     bool GetIsAutoOpenProVersion() const;
 
                     /**
                      * 判断参数 IsAutoOpenProVersion 是否已赋值
                      * @return IsAutoOpenProVersion 是否已赋值
+                     * 
                      */
                     bool IsAutoOpenProVersionHasBeenSet() const;
 
                     /**
                      * 获取Number of servers on CWP Pro
                      * @return ProVersionNum Number of servers on CWP Pro
+                     * 
                      */
                     uint64_t GetProVersionNum() const;
 
                     /**
                      * 判断参数 ProVersionNum 是否已赋值
                      * @return ProVersionNum 是否已赋值
+                     * 
                      */
                     bool ProVersionNumHasBeenSet() const;
 

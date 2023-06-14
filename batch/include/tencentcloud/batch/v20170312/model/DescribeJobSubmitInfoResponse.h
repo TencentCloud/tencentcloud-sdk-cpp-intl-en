@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Job ID
                      * @return JobId Job ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Job name
                      * @return JobName Job name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Job description
                      * @return JobDescription Job description
+                     * 
                      */
                     std::string GetJobDescription() const;
 
                     /**
                      * 判断参数 JobDescription 是否已赋值
                      * @return JobDescription 是否已赋值
+                     * 
                      */
                     bool JobDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Job priority. Tasks (Task) and task instances (TaskInstance) inherit the job priority
                      * @return Priority Job priority. Tasks (Task) and task instances (TaskInstance) inherit the job priority
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 
                     /**
                      * 获取Information of tasks in the job
                      * @return Tasks Information of tasks in the job
+                     * 
                      */
                     std::vector<Task> GetTasks() const;
 
                     /**
                      * 判断参数 Tasks 是否已赋值
                      * @return Tasks 是否已赋值
+                     * 
                      */
                     bool TasksHasBeenSet() const;
 
                     /**
                      * 获取Dependency information
                      * @return Dependences Dependency information
+                     * 
                      */
                     std::vector<Dependence> GetDependences() const;
 
                     /**
                      * 判断参数 Dependences 是否已赋值
                      * @return Dependences 是否已赋值
+                     * 
                      */
                     bool DependencesHasBeenSet() const;
 
@@ -123,12 +135,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Tags List of tags bound with the job.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

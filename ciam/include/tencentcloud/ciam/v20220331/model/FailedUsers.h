@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailedUserIdentification ID of the failed user
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFailedUserIdentification() const;
 
                     /**
                      * 设置ID of the failed user
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FailedUserIdentification ID of the failed user
+                     * @param _failedUserIdentification ID of the failed user
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedUserIdentification(const std::string& _failedUserIdentification);
 
                     /**
                      * 判断参数 FailedUserIdentification 是否已赋值
                      * @return FailedUserIdentification 是否已赋值
+                     * 
                      */
                     bool FailedUserIdentificationHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailedReason Failure cause for user import
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFailedReason() const;
 
                     /**
                      * 设置Failure cause for user import
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FailedReason Failure cause for user import
+                     * @param _failedReason Failure cause for user import
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedReason(const std::string& _failedReason);
 
                     /**
                      * 判断参数 FailedReason 是否已赋值
                      * @return FailedReason 是否已赋值
+                     * 
                      */
                     bool FailedReasonHasBeenSet() const;
 

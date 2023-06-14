@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The private domain ID
                      * @return ZoneId The private domain ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The private domain ID
-                     * @param ZoneId The private domain ID
+                     * @param _zoneId The private domain ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The DNS record IDs.
                      * @return RecordIds The DNS record IDs.
+                     * 
                      */
                     std::vector<int64_t> GetRecordIds() const;
 
                     /**
                      * 设置The DNS record IDs.
-                     * @param RecordIds The DNS record IDs.
+                     * @param _recordIds The DNS record IDs.
+                     * 
                      */
                     void SetRecordIds(const std::vector<int64_t>& _recordIds);
 
                     /**
                      * 判断参数 RecordIds 是否已赋值
                      * @return RecordIds 是否已赋值
+                     * 
                      */
                     bool RecordIdsHasBeenSet() const;
 
                     /**
                      * 获取`enabled`: Enable; `disabled`: Disable.
                      * @return Status `enabled`: Enable; `disabled`: Disable.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置`enabled`: Enable; `disabled`: Disable.
-                     * @param Status `enabled`: Enable; `disabled`: Disable.
+                     * @param _status `enabled`: Enable; `disabled`: Disable.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

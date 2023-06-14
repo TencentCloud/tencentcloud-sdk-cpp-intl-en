@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubscriptionName SubscriptionName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubscriptionName() const;
 
                     /**
                      * 设置SubscriptionName
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubscriptionName SubscriptionName
+                     * @param _subscriptionName SubscriptionName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubscriptionName(const std::string& _subscriptionName);
 
                     /**
                      * 判断参数 SubscriptionName 是否已赋值
                      * @return SubscriptionName 是否已赋值
+                     * 
                      */
                     bool SubscriptionNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubscriptionId SubscriptionId
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubscriptionId() const;
 
                     /**
                      * 设置SubscriptionId
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubscriptionId SubscriptionId
+                     * @param _subscriptionId SubscriptionId
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubscriptionId(const std::string& _subscriptionId);
 
                     /**
                      * 判断参数 SubscriptionId 是否已赋值
                      * @return SubscriptionId 是否已赋值
+                     * 
                      */
                     bool SubscriptionIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TopicOwner TopicOwner
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTopicOwner() const;
 
                     /**
                      * 设置TopicOwner
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TopicOwner TopicOwner
+                     * @param _topicOwner TopicOwner
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicOwner(const uint64_t& _topicOwner);
 
                     /**
                      * 判断参数 TopicOwner 是否已赋值
                      * @return TopicOwner 是否已赋值
+                     * 
                      */
                     bool TopicOwnerHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MsgCount MsgCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMsgCount() const;
 
                     /**
                      * 设置MsgCount
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgCount MsgCount
+                     * @param _msgCount MsgCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsgCount(const uint64_t& _msgCount);
 
                     /**
                      * 判断参数 MsgCount 是否已赋值
                      * @return MsgCount 是否已赋值
+                     * 
                      */
                     bool MsgCountHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifyTime LastModifyTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetLastModifyTime() const;
 
                     /**
                      * 设置LastModifyTime
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastModifyTime LastModifyTime
+                     * @param _lastModifyTime LastModifyTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastModifyTime(const uint64_t& _lastModifyTime);
 
                     /**
                      * 判断参数 LastModifyTime 是否已赋值
                      * @return LastModifyTime 是否已赋值
+                     * 
                      */
                     bool LastModifyTimeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime CreateTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置CreateTime
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime CreateTime
+                     * @param _createTime CreateTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BindingKey BindingKey
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetBindingKey() const;
 
                     /**
                      * 设置BindingKey
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BindingKey BindingKey
+                     * @param _bindingKey BindingKey
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBindingKey(const std::vector<std::string>& _bindingKey);
 
                     /**
                      * 判断参数 BindingKey 是否已赋值
                      * @return BindingKey 是否已赋值
+                     * 
                      */
                     bool BindingKeyHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Endpoint Endpoint
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndpoint() const;
 
                     /**
                      * 设置Endpoint
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Endpoint Endpoint
+                     * @param _endpoint Endpoint
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndpoint(const std::string& _endpoint);
 
                     /**
                      * 判断参数 Endpoint 是否已赋值
                      * @return Endpoint 是否已赋值
+                     * 
                      */
                     bool EndpointHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FilterTags FilterTags
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFilterTags() const;
 
                     /**
                      * 设置FilterTags
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FilterTags FilterTags
+                     * @param _filterTags FilterTags
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFilterTags(const std::vector<std::string>& _filterTags);
 
                     /**
                      * 判断参数 FilterTags 是否已赋值
                      * @return FilterTags 是否已赋值
+                     * 
                      */
                     bool FilterTagsHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Protocol Protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol Protocol
+                     * @param _protocol Protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NotifyStrategy NotifyStrategy
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNotifyStrategy() const;
 
                     /**
                      * 设置NotifyStrategy
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NotifyStrategy NotifyStrategy
+                     * @param _notifyStrategy NotifyStrategy
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNotifyStrategy(const std::string& _notifyStrategy);
 
                     /**
                      * 判断参数 NotifyStrategy 是否已赋值
                      * @return NotifyStrategy 是否已赋值
+                     * 
                      */
                     bool NotifyStrategyHasBeenSet() const;
 
@@ -293,20 +326,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NotifyContentFormat NotifyContentFormat
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNotifyContentFormat() const;
 
                     /**
                      * 设置NotifyContentFormat
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NotifyContentFormat NotifyContentFormat
+                     * @param _notifyContentFormat NotifyContentFormat
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNotifyContentFormat(const std::string& _notifyContentFormat);
 
                     /**
                      * 判断参数 NotifyContentFormat 是否已赋值
                      * @return NotifyContentFormat 是否已赋值
+                     * 
                      */
                     bool NotifyContentFormatHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Target IP
                      * @return DstIp Target IP
+                     * 
                      */
                     std::string GetDstIp() const;
 
                     /**
                      * 设置Target IP
-                     * @param DstIp Target IP
+                     * @param _dstIp Target IP
+                     * 
                      */
                     void SetDstIp(const std::string& _dstIp);
 
                     /**
                      * 判断参数 DstIp 是否已赋值
                      * @return DstIp 是否已赋值
+                     * 
                      */
                     bool DstIpHasBeenSet() const;
 
                     /**
                      * 获取Target port
                      * @return DstPort Target port
+                     * 
                      */
                     std::string GetDstPort() const;
 
                     /**
                      * 设置Target port
-                     * @param DstPort Target port
+                     * @param _dstPort Target port
+                     * 
                      */
                     void SetDstPort(const std::string& _dstPort);
 
                     /**
                      * 判断参数 DstPort 是否已赋值
                      * @return DstPort 是否已赋值
+                     * 
                      */
                     bool DstPortHasBeenSet() const;
 
                     /**
                      * 获取Target process
                      * @return ProcessName Target process
+                     * 
                      */
                     std::string GetProcessName() const;
 
                     /**
                      * 设置Target process
-                     * @param ProcessName Target process
+                     * @param _processName Target process
+                     * 
                      */
                     void SetProcessName(const std::string& _processName);
 
                     /**
                      * 判断参数 ProcessName 是否已赋值
                      * @return ProcessName 是否已赋值
+                     * 
                      */
                     bool ProcessNameHasBeenSet() const;
 
                     /**
                      * 获取Array of image IDs. An empty array indicates all.
                      * @return ImageIds Array of image IDs. An empty array indicates all.
+                     * 
                      */
                     std::vector<std::string> GetImageIds() const;
 
                     /**
                      * 设置Array of image IDs. An empty array indicates all.
-                     * @param ImageIds Array of image IDs. An empty array indicates all.
+                     * @param _imageIds Array of image IDs. An empty array indicates all.
+                     * 
                      */
                     void SetImageIds(const std::vector<std::string>& _imageIds);
 
                     /**
                      * 判断参数 ImageIds 是否已赋值
                      * @return ImageIds 是否已赋值
+                     * 
                      */
                     bool ImageIdsHasBeenSet() const;
 
                     /**
                      * 获取Allowed item ID, which is empty if the item is newly created.
                      * @return Id Allowed item ID, which is empty if the item is newly created.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Allowed item ID, which is empty if the item is newly created.
-                     * @param Id Allowed item ID, which is empty if the item is newly created.
+                     * @param _id Allowed item ID, which is empty if the item is newly created.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Detailed list of Spark jobs
                      * @return SparkAppJobs Detailed list of Spark jobs
+                     * 
                      */
                     std::vector<SparkJobInfo> GetSparkAppJobs() const;
 
                     /**
                      * 判断参数 SparkAppJobs 是否已赋值
                      * @return SparkAppJobs 是否已赋值
+                     * 
                      */
                     bool SparkAppJobsHasBeenSet() const;
 
                     /**
                      * 获取Total number of Spark jobs
                      * @return TotalCount Total number of Spark jobs
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID
                      * @return ProjectId ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置ID
-                     * @param ProjectId ID
+                     * @param _projectId ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Get day:d (leave this parameter empty if to get min)
                      * @return Dimension Get day:d (leave this parameter empty if to get min)
+                     * 
                      */
                     std::string GetDimension() const;
 
                     /**
                      * 设置Get day:d (leave this parameter empty if to get min)
-                     * @param Dimension Get day:d (leave this parameter empty if to get min)
+                     * @param _dimension Get day:d (leave this parameter empty if to get min)
+                     * 
                      */
                     void SetDimension(const std::string& _dimension);
 
                     /**
                      * 判断参数 Dimension 是否已赋值
                      * @return Dimension 是否已赋值
+                     * 
                      */
                     bool DimensionHasBeenSet() const;
 

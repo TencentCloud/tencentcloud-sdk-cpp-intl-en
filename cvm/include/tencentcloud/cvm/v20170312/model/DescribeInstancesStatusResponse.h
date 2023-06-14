@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of instance states meeting the filtering conditions.
                      * @return TotalCount Number of instance states meeting the filtering conditions.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取[Instance status](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) list.
                      * @return InstanceStatusSet [Instance status](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) list.
+                     * 
                      */
                     std::vector<InstanceStatus> GetInstanceStatusSet() const;
 
                     /**
                      * 判断参数 InstanceStatusSet 是否已赋值
                      * @return InstanceStatusSet 是否已赋值
+                     * 
                      */
                     bool InstanceStatusSetHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Page size
                      * @return PageSize Page size
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置Page size
-                     * @param PageSize Page size
+                     * @param _pageSize Page size
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Page number
                      * @return PageNum Page number
+                     * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
                      * 设置Page number
-                     * @param PageNum Page number
+                     * @param _pageNum Page number
+                     * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取Project ID (required)
                      * @return ID Project ID (required)
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Project ID (required)
-                     * @param ID Project ID (required)
+                     * @param _iD Project ID (required)
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

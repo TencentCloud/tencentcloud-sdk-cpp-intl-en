@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取File system snapshot ID
                      * @return SnapshotId File system snapshot ID
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 设置File system snapshot ID
-                     * @param SnapshotId File system snapshot ID
+                     * @param _snapshotId File system snapshot ID
+                     * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
                      * 获取File system snapshot name
                      * @return SnapshotName File system snapshot name
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置File system snapshot name
-                     * @param SnapshotName File system snapshot name
+                     * @param _snapshotName File system snapshot name
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
                      * 获取File system snapshot retention period in days
                      * @return AliveDays File system snapshot retention period in days
+                     * 
                      */
                     uint64_t GetAliveDays() const;
 
                     /**
                      * 设置File system snapshot retention period in days
-                     * @param AliveDays File system snapshot retention period in days
+                     * @param _aliveDays File system snapshot retention period in days
+                     * 
                      */
                     void SetAliveDays(const uint64_t& _aliveDays);
 
                     /**
                      * 判断参数 AliveDays 是否已赋值
                      * @return AliveDays 是否已赋值
+                     * 
                      */
                     bool AliveDaysHasBeenSet() const;
 

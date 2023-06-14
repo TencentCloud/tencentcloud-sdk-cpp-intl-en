@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the query range, which is a Unix timestamp in ms
                      * @return From Start time of the query range, which is a Unix timestamp in ms
+                     * 
                      */
                     uint64_t GetFrom() const;
 
                     /**
                      * 设置Start time of the query range, which is a Unix timestamp in ms
-                     * @param From Start time of the query range, which is a Unix timestamp in ms
+                     * @param _from Start time of the query range, which is a Unix timestamp in ms
+                     * 
                      */
                     void SetFrom(const uint64_t& _from);
 
                     /**
                      * 判断参数 From 是否已赋值
                      * @return From 是否已赋值
+                     * 
                      */
                     bool FromHasBeenSet() const;
 
                     /**
                      * 获取End time of the query range, which is a Unix timestamp in ms
                      * @return To End time of the query range, which is a Unix timestamp in ms
+                     * 
                      */
                     uint64_t GetTo() const;
 
                     /**
                      * 设置End time of the query range, which is a Unix timestamp in ms
-                     * @param To End time of the query range, which is a Unix timestamp in ms
+                     * @param _to End time of the query range, which is a Unix timestamp in ms
+                     * 
                      */
                     void SetTo(const uint64_t& _to);
 
                     /**
                      * 判断参数 To 是否已赋值
                      * @return To 是否已赋值
+                     * 
                      */
                     bool ToHasBeenSet() const;
 
                     /**
                      * 获取Page offset. Default value: 0
                      * @return Offset Page offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page offset. Default value: 0
-                     * @param Offset Page offset. Default value: 0
+                     * @param _offset Page offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of entries per page. Maximum value: 100
                      * @return Limit Maximum number of entries per page. Maximum value: 100
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of entries per page. Maximum value: 100
-                     * @param Limit Maximum number of entries per page. Maximum value: 100
+                     * @param _limit Maximum number of entries per page. Maximum value: 100
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -128,6 +140,7 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
 - alarmLevel: Filter by alarm severity. Type: String, optional. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
 
 Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -138,18 +151,20 @@ Each request can have up to 10 `Filters` and 100 `Filter.Values`.
 - alarmLevel: Filter by alarm severity. Type: String, optional. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
 
 Each request can have up to 10 `Filters` and 100 `Filter.Values`.
-                     * @param Filters - alertId: Filter by alarm policy ID. Type: String; optional
+                     * @param _filters - alertId: Filter by alarm policy ID. Type: String; optional
 - topicId: Filter by ID of monitored object. Type: String; optional
 - status: Filter by alarm status. Type: String, optional. Valid values: `0` (uncleared), `1` (cleared), `2` (expired)
 - alarmLevel: Filter by alarm severity. Type: String, optional. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
 
 Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

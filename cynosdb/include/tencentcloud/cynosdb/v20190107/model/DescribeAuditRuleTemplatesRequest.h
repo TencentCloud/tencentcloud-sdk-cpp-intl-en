@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Rule template ID
                      * @return RuleTemplateIds Rule template ID
+                     * 
                      */
                     std::vector<std::string> GetRuleTemplateIds() const;
 
                     /**
                      * 设置Rule template ID
-                     * @param RuleTemplateIds Rule template ID
+                     * @param _ruleTemplateIds Rule template ID
+                     * 
                      */
                     void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
 
                     /**
                      * 判断参数 RuleTemplateIds 是否已赋值
                      * @return RuleTemplateIds 是否已赋值
+                     * 
                      */
                     bool RuleTemplateIdsHasBeenSet() const;
 
                     /**
                      * 获取Rule template name
                      * @return RuleTemplateNames Rule template name
+                     * 
                      */
                     std::vector<std::string> GetRuleTemplateNames() const;
 
                     /**
                      * 设置Rule template name
-                     * @param RuleTemplateNames Rule template name
+                     * @param _ruleTemplateNames Rule template name
+                     * 
                      */
                     void SetRuleTemplateNames(const std::vector<std::string>& _ruleTemplateNames);
 
                     /**
                      * 判断参数 RuleTemplateNames 是否已赋值
                      * @return RuleTemplateNames 是否已赋值
+                     * 
                      */
                     bool RuleTemplateNamesHasBeenSet() const;
 
                     /**
                      * 获取Number of results returned per request. Default value: `20`.
                      * @return Limit Number of results returned per request. Default value: `20`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results returned per request. Default value: `20`.
-                     * @param Limit Number of results returned per request. Default value: `20`.
+                     * @param _limit Number of results returned per request. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return DBInstanceId Instance ID
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param DBInstanceId Instance ID
+                     * @param _dBInstanceId Instance ID
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Base backup ID
                      * @return BaseBackupId Base backup ID
+                     * 
                      */
                     std::string GetBaseBackupId() const;
 
                     /**
                      * 设置Base backup ID
-                     * @param BaseBackupId Base backup ID
+                     * @param _baseBackupId Base backup ID
+                     * 
                      */
                     void SetBaseBackupId(const std::string& _baseBackupId);
 
                     /**
                      * 判断参数 BaseBackupId 是否已赋值
                      * @return BaseBackupId 是否已赋值
+                     * 
                      */
                     bool BaseBackupIdHasBeenSet() const;
 

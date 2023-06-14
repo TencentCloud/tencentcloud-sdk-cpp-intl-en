@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Deduction item types. Valid values: availability, maintainability, performance, and reliability.
                      * @return IssueType Deduction item types. Valid values: availability, maintainability, performance, and reliability.
+                     * 
                      */
                     std::string GetIssueType() const;
 
                     /**
                      * 设置Deduction item types. Valid values: availability, maintainability, performance, and reliability.
-                     * @param IssueType Deduction item types. Valid values: availability, maintainability, performance, and reliability.
+                     * @param _issueType Deduction item types. Valid values: availability, maintainability, performance, and reliability.
+                     * 
                      */
                     void SetIssueType(const std::string& _issueType);
 
                     /**
                      * 判断参数 IssueType 是否已赋值
                      * @return IssueType 是否已赋值
+                     * 
                      */
                     bool IssueTypeHasBeenSet() const;
 
                     /**
                      * 获取Total scores deducted.
                      * @return ScoreLost Total scores deducted.
+                     * 
                      */
                     int64_t GetScoreLost() const;
 
                     /**
                      * 设置Total scores deducted.
-                     * @param ScoreLost Total scores deducted.
+                     * @param _scoreLost Total scores deducted.
+                     * 
                      */
                     void SetScoreLost(const int64_t& _scoreLost);
 
                     /**
                      * 判断参数 ScoreLost 是否已赋值
                      * @return ScoreLost 是否已赋值
+                     * 
                      */
                     bool ScoreLostHasBeenSet() const;
 
                     /**
                      * 获取Upper limit of the deducted scores.
                      * @return ScoreLostMax Upper limit of the deducted scores.
+                     * 
                      */
                     int64_t GetScoreLostMax() const;
 
                     /**
                      * 设置Upper limit of the deducted scores.
-                     * @param ScoreLostMax Upper limit of the deducted scores.
+                     * @param _scoreLostMax Upper limit of the deducted scores.
+                     * 
                      */
                     void SetScoreLostMax(const int64_t& _scoreLostMax);
 
                     /**
                      * 判断参数 ScoreLostMax 是否已赋值
                      * @return ScoreLostMax 是否已赋值
+                     * 
                      */
                     bool ScoreLostMaxHasBeenSet() const;
 
@@ -106,20 +115,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Items Deduction item list.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ScoreItem> GetItems() const;
 
                     /**
                      * 设置Deduction item list.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Items Deduction item list.
+                     * @param _items Deduction item list.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetItems(const std::vector<ScoreItem>& _items);
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

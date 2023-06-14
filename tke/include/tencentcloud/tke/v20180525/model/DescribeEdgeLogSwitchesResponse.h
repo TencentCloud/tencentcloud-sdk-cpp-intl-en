@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SwitchSet Array of TKE Edge cluster log switches
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSwitchSet() const;
 
                     /**
                      * 判断参数 SwitchSet 是否已赋值
                      * @return SwitchSet 是否已赋值
+                     * 
                      */
                     bool SwitchSetHasBeenSet() const;
 

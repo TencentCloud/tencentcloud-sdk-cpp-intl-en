@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Scaling group ID
                      * @return AutoScalingGroupId Scaling group ID
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Scaling group ID
-                     * @param AutoScalingGroupId Scaling group ID
+                     * @param _autoScalingGroupId Scaling group ID
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Number of instances to be reduced
                      * @return ScaleInNumber Number of instances to be reduced
+                     * 
                      */
                     uint64_t GetScaleInNumber() const;
 
                     /**
                      * 设置Number of instances to be reduced
-                     * @param ScaleInNumber Number of instances to be reduced
+                     * @param _scaleInNumber Number of instances to be reduced
+                     * 
                      */
                     void SetScaleInNumber(const uint64_t& _scaleInNumber);
 
                     /**
                      * 判断参数 ScaleInNumber 是否已赋值
                      * @return ScaleInNumber 是否已赋值
+                     * 
                      */
                     bool ScaleInNumberHasBeenSet() const;
 

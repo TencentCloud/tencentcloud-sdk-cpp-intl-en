@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Allowed operator
                      * @return Operator Allowed operator
+                     * 
                      */
                     std::vector<std::string> GetOperator() const;
 
                     /**
                      * 设置Allowed operator
-                     * @param Operator Allowed operator
+                     * @param _operator Allowed operator
+                     * 
                      */
                     void SetOperator(const std::vector<std::string>& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Allowed data cycle in seconds
                      * @return Period Allowed data cycle in seconds
+                     * 
                      */
                     std::vector<int64_t> GetPeriod() const;
 
                     /**
                      * 设置Allowed data cycle in seconds
-                     * @param Period Allowed data cycle in seconds
+                     * @param _period Allowed data cycle in seconds
+                     * 
                      */
                     void SetPeriod(const std::vector<int64_t>& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Allowed number of continuous cycles
                      * @return ContinuePeriod Allowed number of continuous cycles
+                     * 
                      */
                     std::vector<int64_t> GetContinuePeriod() const;
 
                     /**
                      * 设置Allowed number of continuous cycles
-                     * @param ContinuePeriod Allowed number of continuous cycles
+                     * @param _continuePeriod Allowed number of continuous cycles
+                     * 
                      */
                     void SetContinuePeriod(const std::vector<int64_t>& _continuePeriod);
 
                     /**
                      * 判断参数 ContinuePeriod 是否已赋值
                      * @return ContinuePeriod 是否已赋值
+                     * 
                      */
                     bool ContinuePeriodHasBeenSet() const;
 

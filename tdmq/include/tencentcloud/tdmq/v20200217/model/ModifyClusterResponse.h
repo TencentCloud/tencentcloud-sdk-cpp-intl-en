@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Pulsar cluster ID
                      * @return ClusterId Pulsar cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

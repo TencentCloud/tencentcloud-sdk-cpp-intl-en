@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Security group instance ID, such as `esg-ohuuioma`.
                      * @return SecurityGroupId Security group instance ID, such as `esg-ohuuioma`.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置Security group instance ID, such as `esg-ohuuioma`.
-                     * @param SecurityGroupId Security group instance ID, such as `esg-ohuuioma`.
+                     * @param _securityGroupId Security group instance ID, such as `esg-ohuuioma`.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Security group name, which can be customized with up to 60 characters.
                      * @return SecurityGroupName Security group name, which can be customized with up to 60 characters.
+                     * 
                      */
                     std::string GetSecurityGroupName() const;
 
                     /**
                      * 设置Security group name, which can be customized with up to 60 characters.
-                     * @param SecurityGroupName Security group name, which can be customized with up to 60 characters.
+                     * @param _securityGroupName Security group name, which can be customized with up to 60 characters.
+                     * 
                      */
                     void SetSecurityGroupName(const std::string& _securityGroupName);
 
                     /**
                      * 判断参数 SecurityGroupName 是否已赋值
                      * @return SecurityGroupName 是否已赋值
+                     * 
                      */
                     bool SecurityGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Security group remarks, which can contain up to 100 characters.
                      * @return SecurityGroupDesc Security group remarks, which can contain up to 100 characters.
+                     * 
                      */
                     std::string GetSecurityGroupDesc() const;
 
                     /**
                      * 设置Security group remarks, which can contain up to 100 characters.
-                     * @param SecurityGroupDesc Security group remarks, which can contain up to 100 characters.
+                     * @param _securityGroupDesc Security group remarks, which can contain up to 100 characters.
+                     * 
                      */
                     void SetSecurityGroupDesc(const std::string& _securityGroupDesc);
 
                     /**
                      * 判断参数 SecurityGroupDesc 是否已赋值
                      * @return SecurityGroupDesc 是否已赋值
+                     * 
                      */
                     bool SecurityGroupDescHasBeenSet() const;
 
                     /**
                      * 获取Whether it is the default security group (which cannot be deleted).
                      * @return IsDefault Whether it is the default security group (which cannot be deleted).
+                     * 
                      */
                     bool GetIsDefault() const;
 
                     /**
                      * 设置Whether it is the default security group (which cannot be deleted).
-                     * @param IsDefault Whether it is the default security group (which cannot be deleted).
+                     * @param _isDefault Whether it is the default security group (which cannot be deleted).
+                     * 
                      */
                     void SetIsDefault(const bool& _isDefault);
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
                     /**
                      * 获取Security group creation time.
                      * @return CreatedTime Security group creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Security group creation time.
-                     * @param CreatedTime Security group creation time.
+                     * @param _createdTime Security group creation time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Tag key-value pairs.
                      * @return TagSet Tag key-value pairs.
+                     * 
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
                      * 设置Tag key-value pairs.
-                     * @param TagSet Tag key-value pairs.
+                     * @param _tagSet Tag key-value pairs.
+                     * 
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 

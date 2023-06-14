@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Security audit group ID.
                      * @return SecAuditGroupId Security audit group ID.
+                     * 
                      */
                     std::string GetSecAuditGroupId() const;
 
                     /**
                      * 设置Security audit group ID.
-                     * @param SecAuditGroupId Security audit group ID.
+                     * @param _secAuditGroupId Security audit group ID.
+                     * 
                      */
                     void SetSecAuditGroupId(const std::string& _secAuditGroupId);
 
                     /**
                      * 判断参数 SecAuditGroupId 是否已赋值
                      * @return SecAuditGroupId 是否已赋值
+                     * 
                      */
                     bool SecAuditGroupIdHasBeenSet() const;
 
                     /**
                      * 获取List of log export task IDs. This API will ignore task IDs that do not exist or have been deleted.
                      * @return AsyncRequestIds List of log export task IDs. This API will ignore task IDs that do not exist or have been deleted.
+                     * 
                      */
                     std::vector<uint64_t> GetAsyncRequestIds() const;
 
                     /**
                      * 设置List of log export task IDs. This API will ignore task IDs that do not exist or have been deleted.
-                     * @param AsyncRequestIds List of log export task IDs. This API will ignore task IDs that do not exist or have been deleted.
+                     * @param _asyncRequestIds List of log export task IDs. This API will ignore task IDs that do not exist or have been deleted.
+                     * 
                      */
                     void SetAsyncRequestIds(const std::vector<uint64_t>& _asyncRequestIds);
 
                     /**
                      * 判断参数 AsyncRequestIds 是否已赋值
                      * @return AsyncRequestIds 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdsHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid value: `mysql` (TencentDB for MySQL).
                      * @return Product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid value: `mysql` (TencentDB for MySQL).
-                     * @param Product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * @param _product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

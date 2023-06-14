@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Second-level domain name
                      * @return Host Second-level domain name
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Second-level domain name
-                     * @param Host Second-level domain name
+                     * @param _host Second-level domain name
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable content acceleration. Values: `on` (enable content acceleration), and `off` (disable content acceleration). It can be used together with `SecurityType`.
                      * @return AccelerateType Whether to enable content acceleration. Values: `on` (enable content acceleration), and `off` (disable content acceleration). It can be used together with `SecurityType`.
+                     * 
                      */
                     std::string GetAccelerateType() const;
 
                     /**
                      * 设置Whether to enable content acceleration. Values: `on` (enable content acceleration), and `off` (disable content acceleration). It can be used together with `SecurityType`.
-                     * @param AccelerateType Whether to enable content acceleration. Values: `on` (enable content acceleration), and `off` (disable content acceleration). It can be used together with `SecurityType`.
+                     * @param _accelerateType Whether to enable content acceleration. Values: `on` (enable content acceleration), and `off` (disable content acceleration). It can be used together with `SecurityType`.
+                     * 
                      */
                     void SetAccelerateType(const std::string& _accelerateType);
 
                     /**
                      * 判断参数 AccelerateType 是否已赋值
                      * @return AccelerateType 是否已赋值
+                     * 
                      */
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable security protection. Values: `on` (enable security protection) and `off` (disable security protection). It can be used together with `AccelerateType`.
                      * @return SecurityType Whether to enable security protection. Values: `on` (enable security protection) and `off` (disable security protection). It can be used together with `AccelerateType`.
+                     * 
                      */
                     std::string GetSecurityType() const;
 
                     /**
                      * 设置Whether to enable security protection. Values: `on` (enable security protection) and `off` (disable security protection). It can be used together with `AccelerateType`.
-                     * @param SecurityType Whether to enable security protection. Values: `on` (enable security protection) and `off` (disable security protection). It can be used together with `AccelerateType`.
+                     * @param _securityType Whether to enable security protection. Values: `on` (enable security protection) and `off` (disable security protection). It can be used together with `AccelerateType`.
+                     * 
                      */
                     void SetSecurityType(const std::string& _securityType);
 
                     /**
                      * 判断参数 SecurityType 是否已赋值
                      * @return SecurityType 是否已赋值
+                     * 
                      */
                     bool SecurityTypeHasBeenSet() const;
 

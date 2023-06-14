@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取ARN of the current caller.
                      * @return Arn ARN of the current caller.
+                     * 
                      */
                     std::string GetArn() const;
 
                     /**
                      * 判断参数 Arn 是否已赋值
                      * @return Arn 是否已赋值
+                     * 
                      */
                     bool ArnHasBeenSet() const;
 
                     /**
                      * 获取Root account UIN of the current caller.
                      * @return AccountId Root account UIN of the current caller.
+                     * 
                      */
                     std::string GetAccountId() const;
 
                     /**
                      * 判断参数 AccountId 是否已赋值
                      * @return AccountId 是否已赋值
+                     * 
                      */
                     bool AccountIdHasBeenSet() const;
 
@@ -76,12 +80,14 @@ namespace TencentCloud
 1. If the caller is a Tencent Cloud account, the UIN of the current account is returned.
 2. If the caller is a role, `roleId:roleSessionName` is returned.
 3. If the caller is a federated user, `uin:federatedUserName` is returned.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -92,24 +98,28 @@ namespace TencentCloud
                      * @return PrincipalId Account UIN.
 1. If the caller is a Tencent Cloud account, the UIN of the current account is returned.
 2. If the caller is a role, the UIN of the account that applies for the role is returned.
+                     * 
                      */
                     std::string GetPrincipalId() const;
 
                     /**
                      * 判断参数 PrincipalId 是否已赋值
                      * @return PrincipalId 是否已赋值
+                     * 
                      */
                     bool PrincipalIdHasBeenSet() const;
 
                     /**
                      * 获取Identity type.
                      * @return Type Identity type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

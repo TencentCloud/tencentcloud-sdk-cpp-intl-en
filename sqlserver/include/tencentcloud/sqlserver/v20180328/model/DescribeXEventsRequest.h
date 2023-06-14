@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
                      * @return EventType Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
+                     * 
                      */
                     std::string GetEventType() const;
 
                     /**
                      * 设置Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
-                     * @param EventType Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
+                     * @param _eventType Event type. Valid values: `slow` (Slow SQL event), `blocked` (blocking event),  deadlock` (deadlock event).
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Generation start time of an extended file
                      * @return StartTime Generation start time of an extended file
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Generation start time of an extended file
-                     * @param StartTime Generation start time of an extended file
+                     * @param _startTime Generation start time of an extended file
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Generation end time of an extended file
                      * @return EndTime Generation end time of an extended file
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Generation end time of an extended file
-                     * @param EndTime Generation end time of an extended file
+                     * @param _endTime Generation end time of an extended file
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: `0`
                      * @return Offset Page number. Default value: `0`
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: `0`
-                     * @param Offset Page number. Default value: `0`
+                     * @param _offset Page number. Default value: `0`
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries to be returned per page. Value range: 1-100. Default value: `20`
                      * @return Limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries to be returned per page. Value range: 1-100. Default value: `20`
-                     * @param Limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
+                     * @param _limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

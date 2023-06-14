@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return HealthList List of real server health statuses
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ClassicalHealth> GetHealthList() const;
 
                     /**
                      * 判断参数 HealthList 是否已赋值
                      * @return HealthList 是否已赋值
+                     * 
                      */
                     bool HealthListHasBeenSet() const;
 

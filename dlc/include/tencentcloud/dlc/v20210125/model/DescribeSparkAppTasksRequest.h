@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Spark job ID
                      * @return JobId Spark job ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Spark job ID
-                     * @param JobId Spark job ID
+                     * @param _jobId Spark job ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Paginated query offset
                      * @return Offset Paginated query offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Paginated query offset
-                     * @param Offset Paginated query offset
+                     * @param _offset Paginated query offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Paginated query limit
                      * @return Limit Paginated query limit
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Paginated query limit
-                     * @param Limit Paginated query limit
+                     * @param _limit Paginated query limit
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Execution instance ID
                      * @return TaskId Execution instance ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Execution instance ID
-                     * @param TaskId Execution instance ID
+                     * @param _taskId Execution instance ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Update start time
                      * @return StartTime Update start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Update start time
-                     * @param StartTime Update start time
+                     * @param _startTime Update start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Update end time
                      * @return EndTime Update end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Update end time
-                     * @param EndTime Update end time
+                     * @param _endTime Update end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Filter by this parameter, which can be `task-state`.
                      * @return Filters Filter by this parameter, which can be `task-state`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter by this parameter, which can be `task-state`.
-                     * @param Filters Filter by this parameter, which can be `task-state`.
+                     * @param _filters Filter by this parameter, which can be `task-state`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

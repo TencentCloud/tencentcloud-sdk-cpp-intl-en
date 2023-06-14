@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of CNAME statuses
                      * @return Status List of CNAME statuses
+                     * 
                      */
                     std::vector<CnameStatus> GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

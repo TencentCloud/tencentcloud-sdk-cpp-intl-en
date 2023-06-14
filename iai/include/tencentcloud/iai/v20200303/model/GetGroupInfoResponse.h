@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Group name
                      * @return GroupName Group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Group ID
                      * @return GroupId Group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Custom group description field
                      * @return GroupExDescriptions Custom group description field
+                     * 
                      */
                     std::vector<std::string> GetGroupExDescriptions() const;
 
                     /**
                      * 判断参数 GroupExDescriptions 是否已赋值
                      * @return GroupExDescriptions 是否已赋值
+                     * 
                      */
                     bool GroupExDescriptionsHasBeenSet() const;
 
                     /**
                      * 获取Group remarks
                      * @return Tag Group remarks
+                     * 
                      */
                     std::string GetTag() const;
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 
                     /**
                      * 获取Group creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time.
                      * @return CreationTimestamp Group creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time.
+                     * 
                      */
                     uint64_t GetCreationTimestamp() const;
 
                     /**
                      * 判断参数 CreationTimestamp 是否已赋值
                      * @return CreationTimestamp 是否已赋值
+                     * 
                      */
                     bool CreationTimestampHasBeenSet() const;
 

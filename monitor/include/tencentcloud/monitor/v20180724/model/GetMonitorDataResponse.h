@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Statistical period
                      * @return Period Statistical period
+                     * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Metric name
                      * @return MetricName Metric name
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Array of data points
                      * @return DataPoints Array of data points
+                     * 
                      */
                     std::vector<DataPoint> GetDataPoints() const;
 
                     /**
                      * 判断参数 DataPoints 是否已赋值
                      * @return DataPoints 是否已赋值
+                     * 
                      */
                     bool DataPointsHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Returned message
                      * @return Msg Returned message
+                     * 
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 判断参数 Msg 是否已赋值
                      * @return Msg 是否已赋值
+                     * 
                      */
                     bool MsgHasBeenSet() const;
 

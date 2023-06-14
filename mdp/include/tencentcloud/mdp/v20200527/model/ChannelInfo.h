@@ -51,72 +51,84 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID.
                      * @return Id Channel ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID.
-                     * @param Id Channel ID.
+                     * @param _id Channel ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Channel name.
                      * @return Name Channel name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Channel name.
-                     * @param Name Channel name.
+                     * @param _name Channel name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Channel protocol.
                      * @return Protocol Channel protocol.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Channel protocol.
-                     * @param Protocol Channel protocol.
+                     * @param _protocol Channel protocol.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Channel input and output.
                      * @return Points Channel input and output.
+                     * 
                      */
                     PointInfo GetPoints() const;
 
                     /**
                      * 设置Channel input and output.
-                     * @param Points Channel input and output.
+                     * @param _points Channel input and output.
+                     * 
                      */
                     void SetPoints(const PointInfo& _points);
 
                     /**
                      * 判断参数 Points 是否已赋值
                      * @return Points 是否已赋值
+                     * 
                      */
                     bool PointsHasBeenSet() const;
 
@@ -125,20 +137,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return CacheInfo Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     CacheInfo GetCacheInfo() const;
 
                     /**
                      * 设置Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param CacheInfo Cache configuration
+                     * @param _cacheInfo Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetCacheInfo(const CacheInfo& _cacheInfo);
 
                     /**
                      * 判断参数 CacheInfo 是否已赋值
                      * @return CacheInfo 是否已赋值
+                     * 
                      */
                     bool CacheInfoHasBeenSet() const;
 

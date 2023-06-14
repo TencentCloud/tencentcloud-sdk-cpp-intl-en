@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Agent `Uuid`.
                      * @return Uuid Agent `Uuid`.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置Agent `Uuid`.
-                     * @param Uuid Agent `Uuid`.
+                     * @param _uuid Agent `Uuid`.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return Filters Filter.
 <li>Keywords - String - Required: No - Query keywords</li>
 <li>Status - String - Required: No - Query status (FAILED: brute force attack failed, SUCCESS: brute force attack succeeded)</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -93,33 +100,38 @@ namespace TencentCloud
                      * 设置Filter.
 <li>Keywords - String - Required: No - Query keywords</li>
 <li>Status - String - Required: No - Query status (FAILED: brute force attack failed, SUCCESS: brute force attack succeeded)</li>
-                     * @param Filters Filter.
+                     * @param _filters Filter.
 <li>Keywords - String - Required: No - Query keywords</li>
 <li>Status - String - Required: No - Query status (FAILED: brute force attack failed, SUCCESS: brute force attack succeeded)</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 10. Maximum value: 100.
                      * @return Limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

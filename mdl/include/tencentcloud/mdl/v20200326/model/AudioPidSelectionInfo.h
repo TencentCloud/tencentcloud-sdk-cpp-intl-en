@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Audio `Pid`. Default value: 0.
                      * @return Pid Audio `Pid`. Default value: 0.
+                     * 
                      */
                     uint64_t GetPid() const;
 
                     /**
                      * 设置Audio `Pid`. Default value: 0.
-                     * @param Pid Audio `Pid`. Default value: 0.
+                     * @param _pid Audio `Pid`. Default value: 0.
+                     * 
                      */
                     void SetPid(const uint64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The `SDKAppID` of the room whose streams are recorded.
                      * @return SdkAppId The `SDKAppID` of the room whose streams are recorded.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The `SDKAppID` of the room whose streams are recorded.
-                     * @param SdkAppId The `SDKAppID` of the room whose streams are recorded.
+                     * @param _sdkAppId The `SDKAppID` of the room whose streams are recorded.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the recording task, which is returned after recording starts successfully.
                      * @return TaskId The unique ID of the recording task, which is returned after recording starts successfully.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The unique ID of the recording task, which is returned after recording starts successfully.
-                     * @param TaskId The unique ID of the recording task, which is returned after recording starts successfully.
+                     * @param _taskId The unique ID of the recording task, which is returned after recording starts successfully.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

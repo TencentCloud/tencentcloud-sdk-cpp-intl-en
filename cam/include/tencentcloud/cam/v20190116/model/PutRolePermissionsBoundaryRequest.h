@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Role ID (either it or the role name must be entered)
                      * @return RoleId Role ID (either it or the role name must be entered)
+                     * 
                      */
                     std::string GetRoleId() const;
 
                     /**
                      * 设置Role ID (either it or the role name must be entered)
-                     * @param RoleId Role ID (either it or the role name must be entered)
+                     * @param _roleId Role ID (either it or the role name must be entered)
+                     * 
                      */
                     void SetRoleId(const std::string& _roleId);
 
                     /**
                      * 判断参数 RoleId 是否已赋值
                      * @return RoleId 是否已赋值
+                     * 
                      */
                     bool RoleIdHasBeenSet() const;
 
                     /**
                      * 获取Role name (either it or the role ID must be entered)
                      * @return RoleName Role name (either it or the role ID must be entered)
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name (either it or the role ID must be entered)
-                     * @param RoleName Role name (either it or the role ID must be entered)
+                     * @param _roleName Role name (either it or the role ID must be entered)
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 

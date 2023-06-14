@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Callback address
                      * @return Url Callback address
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Callback address
-                     * @param Url Callback address
+                     * @param _url Callback address
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return CallbackType Callback type. Valid values:
 <li> WeCom
 <li> Http
+                     * 
                      */
                     std::string GetCallbackType() const;
 
@@ -78,15 +82,17 @@ namespace TencentCloud
                      * 设置Callback type. Valid values:
 <li> WeCom
 <li> Http
-                     * @param CallbackType Callback type. Valid values:
+                     * @param _callbackType Callback type. Valid values:
 <li> WeCom
 <li> Http
+                     * 
                      */
                     void SetCallbackType(const std::string& _callbackType);
 
                     /**
                      * 判断参数 CallbackType 是否已赋值
                      * @return CallbackType 是否已赋值
+                     * 
                      */
                     bool CallbackTypeHasBeenSet() const;
 
@@ -101,6 +107,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 <li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetMethod() const;
 
@@ -110,17 +117,19 @@ Note: This field may return `null`, indicating that no valid value was found.
 <li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Method Callback method. Valid values:
+                     * @param _method Callback method. Valid values:
 <li> POST
 <li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
@@ -131,6 +140,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return Headers Request header
 Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetHeaders() const;
 
@@ -138,15 +148,17 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 设置Request header
 Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Headers Request header
+                     * @param _headers Request header
 Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetHeaders(const std::vector<std::string>& _headers);
 
                     /**
                      * 判断参数 Headers 是否已赋值
                      * @return Headers 是否已赋值
+                     * 
                      */
                     bool HeadersHasBeenSet() const;
 
@@ -157,6 +169,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return Body Request content
 Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetBody() const;
 
@@ -164,33 +177,38 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 设置Request content
 Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Body Request content
+                     * @param _body Request content
 Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetBody(const std::string& _body);
 
                     /**
                      * 判断参数 Body 是否已赋值
                      * @return Body 是否已赋值
+                     * 
                      */
                     bool BodyHasBeenSet() const;
 
                     /**
                      * 获取Number
                      * @return Index Number
+                     * 
                      */
                     int64_t GetIndex() const;
 
                     /**
                      * 设置Number
-                     * @param Index Number
+                     * @param _index Number
+                     * 
                      */
                     void SetIndex(const int64_t& _index);
 
                     /**
                      * 判断参数 Index 是否已赋值
                      * @return Index 是否已赋值
+                     * 
                      */
                     bool IndexHasBeenSet() const;
 

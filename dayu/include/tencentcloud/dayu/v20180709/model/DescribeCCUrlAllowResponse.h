@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取This field has been replaced by `RecordList` and should not be used
                      * @return Data This field has been replaced by `RecordList` and should not be used
+                     * 
                      */
                     std::vector<KeyValue> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Total number of records
                      * @return Total Total number of records
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -80,12 +84,14 @@ If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
 If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
+                     * 
                      */
                     std::vector<KeyValueRecord> GetRecordList() const;
 
                     /**
                      * 判断参数 RecordList 是否已赋值
                      * @return RecordList 是否已赋值
+                     * 
                      */
                     bool RecordListHasBeenSet() const;
 

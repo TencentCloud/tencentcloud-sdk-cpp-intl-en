@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Query dimension value
                      * @return TypeKey Query dimension value
+                     * 
                      */
                     std::string GetTypeKey() const;
 
                     /**
                      * 设置Query dimension value
-                     * @param TypeKey Query dimension value
+                     * @param _typeKey Query dimension value
+                     * 
                      */
                     void SetTypeKey(const std::string& _typeKey);
 
                     /**
                      * 判断参数 TypeKey 是否已赋值
                      * @return TypeKey 是否已赋值
+                     * 
                      */
                     bool TypeKeyHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetailData Top data rankings
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TopDetailData> GetDetailData() const;
 
                     /**
                      * 设置Top data rankings
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DetailData Top data rankings
+                     * @param _detailData Top data rankings
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetailData(const std::vector<TopDetailData>& _detailData);
 
                     /**
                      * 判断参数 DetailData 是否已赋值
                      * @return DetailData 是否已赋值
+                     * 
                      */
                     bool DetailDataHasBeenSet() const;
 

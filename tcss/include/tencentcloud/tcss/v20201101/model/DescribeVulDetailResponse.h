@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability details
                      * @return VulInfo Vulnerability details
+                     * 
                      */
                     VulDetailInfo GetVulInfo() const;
 
                     /**
                      * 判断参数 VulInfo 是否已赋值
                      * @return VulInfo 是否已赋值
+                     * 
                      */
                     bool VulInfoHasBeenSet() const;
 

@@ -48,72 +48,84 @@ namespace TencentCloud
                     /**
                      * 获取The result of the entire verification process.
                      * @return Result The result of the entire verification process.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取The result description.
                      * @return Description The result description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取The charge count.
                      * @return ChargeCount The charge count.
+                     * 
                      */
                     int64_t GetChargeCount() const;
 
                     /**
                      * 判断参数 ChargeCount 是否已赋值
                      * @return ChargeCount 是否已赋值
+                     * 
                      */
                     bool ChargeCountHasBeenSet() const;
 
                     /**
                      * 获取The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
                      * @return CardVerifyResults The results of multiple OCR processes (in order). The result of the final process is taken as the valid result.
+                     * 
                      */
                     std::vector<CardVerifyResult> GetCardVerifyResults() const;
 
                     /**
                      * 判断参数 CardVerifyResults 是否已赋值
                      * @return CardVerifyResults 是否已赋值
+                     * 
                      */
                     bool CardVerifyResultsHasBeenSet() const;
 
                     /**
                      * 获取The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
                      * @return CompareResults The results of multiple liveness detection processes (in order). The result of the final process is taken as the valid result.
+                     * 
                      */
                     std::vector<CompareResult> GetCompareResults() const;
 
                     /**
                      * 判断参数 CompareResults 是否已赋值
                      * @return CompareResults 是否已赋值
+                     * 
                      */
                     bool CompareResultsHasBeenSet() const;
 
                     /**
                      * 获取Info passed in the process of getting the token.
                      * @return Extra Info passed in the process of getting the token.
+                     * 
                      */
                     std::string GetExtra() const;
 
                     /**
                      * 判断参数 Extra 是否已赋值
                      * @return Extra 是否已赋值
+                     * 
                      */
                     bool ExtraHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Prohibited information detection template ID.
                      * @return Definition Prohibited information detection template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Prohibited information detection template ID.
-                     * @param Definition Prohibited information detection template ID.
+                     * @param _definition Prohibited information detection template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique task ID.
                      * @return TaskId Unique task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Unique task ID.
-                     * @param TaskId Unique task ID.
+                     * @param _taskId Unique task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 - PREPARED: Push in preparation.
 - PUSHING: Pushing in progress.
 - STOPPED: Pushing stopped.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -82,106 +86,123 @@ namespace TencentCloud
 - PREPARED: Push in preparation.
 - PUSHING: Pushing in progress.
 - STOPPED: Pushing stopped.
-                     * @param Status Status of the whiteboard push task.
+                     * @param _status Status of the whiteboard push task.
 - PREPARED: Push in preparation.
 - PUSHING: Pushing in progress.
 - STOPPED: Pushing stopped.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Room ID of the whiteboard push task.
                      * @return RoomId Room ID of the whiteboard push task.
+                     * 
                      */
                     int64_t GetRoomId() const;
 
                     /**
                      * 设置Room ID of the whiteboard push task.
-                     * @param RoomId Room ID of the whiteboard push task.
+                     * @param _roomId Room ID of the whiteboard push task.
+                     * 
                      */
                     void SetRoomId(const int64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the task.
                      * @return CreateTime Creation time of the task.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of the task.
-                     * @param CreateTime Creation time of the task.
+                     * @param _createTime Creation time of the task.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Whiteboard push result.
                      * @return Result Whiteboard push result.
+                     * 
                      */
                     WhiteboardPushResult GetResult() const;
 
                     /**
                      * 设置Whiteboard push result.
-                     * @param Result Whiteboard push result.
+                     * @param _result Whiteboard push result.
+                     * 
                      */
                     void SetResult(const WhiteboardPushResult& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取User ID of the whiteboard push task.
                      * @return PushUserId User ID of the whiteboard push task.
+                     * 
                      */
                     std::string GetPushUserId() const;
 
                     /**
                      * 设置User ID of the whiteboard push task.
-                     * @param PushUserId User ID of the whiteboard push task.
+                     * @param _pushUserId User ID of the whiteboard push task.
+                     * 
                      */
                     void SetPushUserId(const std::string& _pushUserId);
 
                     /**
                      * 判断参数 PushUserId 是否已赋值
                      * @return PushUserId 是否已赋值
+                     * 
                      */
                     bool PushUserIdHasBeenSet() const;
 

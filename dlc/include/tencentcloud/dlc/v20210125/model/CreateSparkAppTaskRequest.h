@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Spark job name
                      * @return JobName Spark job name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Spark job name
-                     * @param JobName Spark job name
+                     * @param _jobName Spark job name
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
                      * @return CmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+                     * 
                      */
                     std::string GetCmdArgs() const;
 
                     /**
                      * 设置Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
-                     * @param CmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+                     * @param _cmdArgs Command line parameters of the Spark job separated by space. They are generally used for periodic calls.
+                     * 
                      */
                     void SetCmdArgs(const std::string& _cmdArgs);
 
                     /**
                      * 判断参数 CmdArgs 是否已赋值
                      * @return CmdArgs 是否已赋值
+                     * 
                      */
                     bool CmdArgsHasBeenSet() const;
 

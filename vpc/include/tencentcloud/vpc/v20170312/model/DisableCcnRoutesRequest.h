@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-f49l6u0z`.
                      * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-f49l6u0z`.
-                     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * @param _ccnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
                      * @return RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+                     * 
                      */
                     std::vector<std::string> GetRouteIds() const;
 
                     /**
                      * 设置The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
-                     * @param RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+                     * @param _routeIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+                     * 
                      */
                     void SetRouteIds(const std::vector<std::string>& _routeIds);
 
                     /**
                      * 判断参数 RouteIds 是否已赋值
                      * @return RouteIds 是否已赋值
+                     * 
                      */
                     bool RouteIdsHasBeenSet() const;
 

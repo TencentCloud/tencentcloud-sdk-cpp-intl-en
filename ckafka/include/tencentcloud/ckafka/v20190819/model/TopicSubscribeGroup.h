@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number
-                     * @param TotalCount Total number
+                     * @param _totalCount Total number
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Number of consumer group status
                      * @return StatusCountInfo Number of consumer group status
+                     * 
                      */
                     std::string GetStatusCountInfo() const;
 
                     /**
                      * 设置Number of consumer group status
-                     * @param StatusCountInfo Number of consumer group status
+                     * @param _statusCountInfo Number of consumer group status
+                     * 
                      */
                     void SetStatusCountInfo(const std::string& _statusCountInfo);
 
                     /**
                      * 判断参数 StatusCountInfo 是否已赋值
                      * @return StatusCountInfo 是否已赋值
+                     * 
                      */
                     bool StatusCountInfoHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return GroupsInfo Consumer group information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<GroupInfoResponse> GetGroupsInfo() const;
 
                     /**
                      * 设置Consumer group information
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param GroupsInfo Consumer group information
+                     * @param _groupsInfo Consumer group information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupsInfo(const std::vector<GroupInfoResponse>& _groupsInfo);
 
                     /**
                      * 判断参数 GroupsInfo 是否已赋值
                      * @return GroupsInfo 是否已赋值
+                     * 
                      */
                     bool GroupsInfoHasBeenSet() const;
 
@@ -110,20 +119,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Status Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Status Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
+                     * @param _status Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

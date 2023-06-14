@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取CA certificate of cluster APIServer
                      * @return CertificationAuthority CA certificate of cluster APIServer
+                     * 
                      */
                     std::string GetCertificationAuthority() const;
 
                     /**
                      * 判断参数 CertificationAuthority 是否已赋值
                      * @return CertificationAuthority 是否已赋值
+                     * 
                      */
                     bool CertificationAuthorityHasBeenSet() const;
 
                     /**
                      * 获取Public network access address of cluster APIServer
                      * @return ClusterExternalEndpoint Public network access address of cluster APIServer
+                     * 
                      */
                     std::string GetClusterExternalEndpoint() const;
 
                     /**
                      * 判断参数 ClusterExternalEndpoint 是否已赋值
                      * @return ClusterExternalEndpoint 是否已赋值
+                     * 
                      */
                     bool ClusterExternalEndpointHasBeenSet() const;
 
                     /**
                      * 获取Private network access address of cluster APIServer
                      * @return ClusterIntranetEndpoint Private network access address of cluster APIServer
+                     * 
                      */
                     std::string GetClusterIntranetEndpoint() const;
 
                     /**
                      * 判断参数 ClusterIntranetEndpoint 是否已赋值
                      * @return ClusterIntranetEndpoint 是否已赋值
+                     * 
                      */
                     bool ClusterIntranetEndpointHasBeenSet() const;
 
@@ -84,12 +90,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterDomain Domain name of cluster APIServer
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterDomain() const;
 
                     /**
                      * 判断参数 ClusterDomain 是否已赋值
                      * @return ClusterDomain 是否已赋值
+                     * 
                      */
                     bool ClusterDomainHasBeenSet() const;
 
@@ -98,12 +106,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterExternalACL Public network access ACL of cluster APIServer
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetClusterExternalACL() const;
 
                     /**
                      * 判断参数 ClusterExternalACL 是否已赋值
                      * @return ClusterExternalACL 是否已赋值
+                     * 
                      */
                     bool ClusterExternalACLHasBeenSet() const;
 
@@ -112,12 +122,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterExternalDomain Public network domain name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterExternalDomain() const;
 
                     /**
                      * 判断参数 ClusterExternalDomain 是否已赋值
                      * @return ClusterExternalDomain 是否已赋值
+                     * 
                      */
                     bool ClusterExternalDomainHasBeenSet() const;
 
@@ -126,12 +138,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterIntranetDomain Private network domain name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterIntranetDomain() const;
 
                     /**
                      * 判断参数 ClusterIntranetDomain 是否已赋值
                      * @return ClusterIntranetDomain 是否已赋值
+                     * 
                      */
                     bool ClusterIntranetDomainHasBeenSet() const;
 
@@ -140,12 +154,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SecurityGroup Public network security group
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
                      * 判断参数 SecurityGroup 是否已赋值
                      * @return SecurityGroup 是否已赋值
+                     * 
                      */
                     bool SecurityGroupHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID. Either `PolicyId` or `PolicyName` must be entered
                      * @return PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID. Either `PolicyId` or `PolicyName` must be entered
-                     * @param PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * @param _policyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      * @return DetachRoleId Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * 
                      */
                     std::string GetDetachRoleId() const;
 
                     /**
                      * 设置Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
-                     * @param DetachRoleId Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * @param _detachRoleId Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * 
                      */
                     void SetDetachRoleId(const std::string& _detachRoleId);
 
                     /**
                      * 判断参数 DetachRoleId 是否已赋值
                      * @return DetachRoleId 是否已赋值
+                     * 
                      */
                     bool DetachRoleIdHasBeenSet() const;
 
                     /**
                      * 获取Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      * @return DetachRoleName Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * 
                      */
                     std::string GetDetachRoleName() const;
 
                     /**
                      * 设置Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
-                     * @param DetachRoleName Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * @param _detachRoleName Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * 
                      */
                     void SetDetachRoleName(const std::string& _detachRoleName);
 
                     /**
                      * 判断参数 DetachRoleName 是否已赋值
                      * @return DetachRoleName 是否已赋值
+                     * 
                      */
                     bool DetachRoleNameHasBeenSet() const;
 
                     /**
                      * 获取Policy name. Either `PolicyId` or `PolicyName` must be entered
                      * @return PolicyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name. Either `PolicyId` or `PolicyName` must be entered
-                     * @param PolicyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+                     * @param _policyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 

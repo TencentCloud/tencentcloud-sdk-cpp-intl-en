@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
                      * @return CommId The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetCommId() const;
 
                     /**
                      * 设置The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
-                     * @param CommId The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
+                     * @param _commId The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetCommId(const std::string& _commId);
 
                     /**
                      * 判断参数 CommId 是否已赋值
                      * @return CommId 是否已赋值
+                     * 
                      */
                     bool CommIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 Note: Only data in the last 14 days can be queried.
                      * @return StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
-                     * @param StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
+                     * @param _startTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -87,56 +93,65 @@ Note: Only data in the last 14 days can be queried.
 Note: If `DataType` is not null, the end time and start time cannot be more than one hour apart; if `DataType` is null, the end time and start time cannot be more than four hours apart.
                      * @return EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: If `DataType` is not null, the end time and start time cannot be more than one hour apart; if `DataType` is null, the end time and start time cannot be more than four hours apart.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: If `DataType` is not null, the end time and start time cannot be more than one hour apart; if `DataType` is null, the end time and start time cannot be more than four hours apart.
-                     * @param EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
+                     * @param _endTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: If `DataType` is not null, the end time and start time cannot be more than one hour apart; if `DataType` is null, the end time and start time cannot be more than four hours apart.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The application ID, such as `1400xxxxxx`.
                      * @return SdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID, such as `1400xxxxxx`.
-                     * @param SdkAppId The application ID, such as `1400xxxxxx`.
+                     * @param _sdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The users to query. If you do not specify this, the data of six users will be returned.
                      * @return UserIds The users to query. If you do not specify this, the data of six users will be returned.
+                     * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
                      * 设置The users to query. If you do not specify this, the data of six users will be returned.
-                     * @param UserIds The users to query. If you do not specify this, the data of six users will be returned.
+                     * @param _userIds The users to query. If you do not specify this, the data of six users will be returned.
+                     * 
                      */
                     void SetUserIds(const std::vector<std::string>& _userIds);
 
                     /**
                      * 判断参数 UserIds 是否已赋值
                      * @return UserIds 是否已赋值
+                     * 
                      */
                     bool UserIdsHasBeenSet() const;
 
@@ -169,6 +184,7 @@ Note: If `DataType` is not null, the end time and start time cannot be more than
 `bigvLoss`: The upstream/downstream video packet loss.
 `bigvWidth`: The upstream/downstream resolution (width).
 `bigvHeight`: The upstream/downstream resolution (height).
+                     * 
                      */
                     std::vector<std::string> GetDataType() const;
 
@@ -187,7 +203,7 @@ Note: If `DataType` is not null, the end time and start time cannot be more than
 `bigvLoss`: The upstream/downstream video packet loss.
 `bigvWidth`: The upstream/downstream resolution (width).
 `bigvHeight`: The upstream/downstream resolution (height).
-                     * @param DataType The metrics to query. If you do not specify this, only the user list will be returned. If you pass in `all`, all metrics will be returned.
+                     * @param _dataType The metrics to query. If you do not specify this, only the user list will be returned. If you pass in `all`, all metrics will be returned.
 `appCpu`: The CPU utilization of the application.
 `sysCpu`: The CPU utilization of the system.
 `aBit`: The upstream/downstream audio bitrate (bps).
@@ -201,12 +217,14 @@ Note: If `DataType` is not null, the end time and start time cannot be more than
 `bigvLoss`: The upstream/downstream video packet loss.
 `bigvWidth`: The upstream/downstream resolution (width).
 `bigvHeight`: The upstream/downstream resolution (height).
+                     * 
                      */
                     void SetDataType(const std::vector<std::string>& _dataType);
 
                     /**
                      * 判断参数 DataType 是否已赋值
                      * @return DataType 是否已赋值
+                     * 
                      */
                     bool DataTypeHasBeenSet() const;
 
@@ -215,20 +233,23 @@ Note: If `DataType` is not null, the end time and start time cannot be more than
 Note: If `PageNumber` or `PageSize` is not specified, six records will be returned.
                      * @return PageNumber The page number. The default is 0.
 Note: If `PageNumber` or `PageSize` is not specified, six records will be returned.
+                     * 
                      */
                     uint64_t GetPageNumber() const;
 
                     /**
                      * 设置The page number. The default is 0.
 Note: If `PageNumber` or `PageSize` is not specified, six records will be returned.
-                     * @param PageNumber The page number. The default is 0.
+                     * @param _pageNumber The page number. The default is 0.
 Note: If `PageNumber` or `PageSize` is not specified, six records will be returned.
+                     * 
                      */
                     void SetPageNumber(const uint64_t& _pageNumber);
 
                     /**
                      * 判断参数 PageNumber 是否已赋值
                      * @return PageNumber 是否已赋值
+                     * 
                      */
                     bool PageNumberHasBeenSet() const;
 
@@ -241,6 +262,7 @@ If `DataType` is null, the length of the array `UserIds` and the value of `PageS
 Value range: 1-100.
 Note: If `DataType` is not null, the length of the array `UserIds` and the value of `PageSize` cannot exceed `6`.
 If `DataType` is null, the length of the array `UserIds` and the value of `PageSize` cannot exceed `100`.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
@@ -249,16 +271,18 @@ If `DataType` is null, the length of the array `UserIds` and the value of `PageS
 Value range: 1-100.
 Note: If `DataType` is not null, the length of the array `UserIds` and the value of `PageSize` cannot exceed `6`.
 If `DataType` is null, the length of the array `UserIds` and the value of `PageSize` cannot exceed `100`.
-                     * @param PageSize The number of records per page. The default is `6`.
+                     * @param _pageSize The number of records per page. The default is `6`.
 Value range: 1-100.
 Note: If `DataType` is not null, the length of the array `UserIds` and the value of `PageSize` cannot exceed `6`.
 If `DataType` is null, the length of the array `UserIds` and the value of `PageSize` cannot exceed `100`.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

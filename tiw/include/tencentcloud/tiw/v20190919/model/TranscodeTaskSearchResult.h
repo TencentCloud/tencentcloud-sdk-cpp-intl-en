@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Creation time of the task.
                      * @return CreateTime Creation time of the task.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of the task.
-                     * @param CreateTime Creation time of the task.
+                     * @param _createTime Creation time of the task.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Unique task ID.
                      * @return TaskId Unique task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Unique task ID.
-                     * @param TaskId Unique task ID.
+                     * @param _taskId Unique task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -92,6 +98,7 @@ namespace TencentCloud
 - QUEUED: Queuing for transcoding.
 - PROCESSING: Transcoding in progress.
 - FINISHED: Transcoding finished.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -100,88 +107,102 @@ namespace TencentCloud
 - QUEUED: Queuing for transcoding.
 - PROCESSING: Transcoding in progress.
 - FINISHED: Transcoding finished.
-                     * @param Status Current task status.
+                     * @param _status Current task status.
 - QUEUED: Queuing for transcoding.
 - PROCESSING: Transcoding in progress.
 - FINISHED: Transcoding finished.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Original name of the transcoded document.
                      * @return OriginalFilename Original name of the transcoded document.
+                     * 
                      */
                     std::string GetOriginalFilename() const;
 
                     /**
                      * 设置Original name of the transcoded document.
-                     * @param OriginalFilename Original name of the transcoded document.
+                     * @param _originalFilename Original name of the transcoded document.
+                     * 
                      */
                     void SetOriginalFilename(const std::string& _originalFilename);
 
                     /**
                      * 判断参数 OriginalFilename 是否已赋值
                      * @return OriginalFilename 是否已赋值
+                     * 
                      */
                     bool OriginalFilenameHasBeenSet() const;
 
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Transcoding task result.
                      * @return Result Transcoding task result.
+                     * 
                      */
                     TranscodeTaskResult GetResult() const;
 
                     /**
                      * 设置Transcoding task result.
-                     * @param Result Transcoding task result.
+                     * @param _result Transcoding task result.
+                     * 
                      */
                     void SetResult(const TranscodeTaskResult& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether the transcoding is static.
                      * @return IsStatic Specifies whether the transcoding is static.
+                     * 
                      */
                     bool GetIsStatic() const;
 
                     /**
                      * 设置Specifies whether the transcoding is static.
-                     * @param IsStatic Specifies whether the transcoding is static.
+                     * @param _isStatic Specifies whether the transcoding is static.
+                     * 
                      */
                     void SetIsStatic(const bool& _isStatic);
 
                     /**
                      * 判断参数 IsStatic 是否已赋值
                      * @return IsStatic 是否已赋值
+                     * 
                      */
                     bool IsStaticHasBeenSet() const;
 

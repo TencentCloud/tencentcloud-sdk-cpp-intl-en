@@ -55,6 +55,7 @@ namespace TencentCloud
 `createTime`: Domain name creation time
 `certExpireTime`: Certificate expiration time
 `certDeployTime`: Certificate deployment time
+                     * 
                      */
                     std::string GetKey() const;
 
@@ -63,34 +64,39 @@ namespace TencentCloud
 `createTime`: Domain name creation time
 `certExpireTime`: Certificate expiration time
 `certDeployTime`: Certificate deployment time
-                     * @param Key Fields that can be sorted. Values:
+                     * @param _key Fields that can be sorted. Values:
 `createTime`: Domain name creation time
 `certExpireTime`: Certificate expiration time
 `certDeployTime`: Certificate deployment time
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `asc` and `desc` (default).
                      * @return Sequence Sorting order. Valid values: `asc` and `desc` (default).
+                     * 
                      */
                     std::string GetSequence() const;
 
                     /**
                      * 设置Sorting order. Valid values: `asc` and `desc` (default).
-                     * @param Sequence Sorting order. Valid values: `asc` and `desc` (default).
+                     * @param _sequence Sorting order. Valid values: `asc` and `desc` (default).
+                     * 
                      */
                     void SetSequence(const std::string& _sequence);
 
                     /**
                      * 判断参数 Sequence 是否已赋值
                      * @return Sequence 是否已赋值
+                     * 
                      */
                     bool SequenceHasBeenSet() const;
 

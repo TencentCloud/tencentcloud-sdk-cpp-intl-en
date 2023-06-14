@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of instances meeting the filter condition.
                      * @return TotalCount The number of instances meeting the filter condition.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取IP address template.
                      * @return AddressTemplateSet IP address template.
+                     * 
                      */
                     std::vector<AddressTemplate> GetAddressTemplateSet() const;
 
                     /**
                      * 判断参数 AddressTemplateSet 是否已赋值
                      * @return AddressTemplateSet 是否已赋值
+                     * 
                      */
                     bool AddressTemplateSetHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Number of instances returned per page. Default value: `20`.
                      * @return Limit Number of instances returned per page. Default value: `20`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of instances returned per page. Default value: `20`.
-                     * @param Limit Number of instances returned per page. Default value: `20`.
+                     * @param _limit Number of instances returned per page. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
                      * @return Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
-                     * @param Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * @param _offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Replication group ID
                      * @return GroupId Replication group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Replication group ID
-                     * @param GroupId Replication group ID
+                     * @param _groupId Replication group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Key words for fuzzy query, which can be set as the ID or name of a replication group.
                      * @return SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Key words for fuzzy query, which can be set as the ID or name of a replication group.
-                     * @param SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * @param _searchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 

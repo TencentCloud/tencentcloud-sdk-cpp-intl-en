@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The IP address template group instance ID, such as `ipmg-90cex8mq`.
                      * @return AddressTemplateGroupId The IP address template group instance ID, such as `ipmg-90cex8mq`.
+                     * 
                      */
                     std::string GetAddressTemplateGroupId() const;
 
                     /**
                      * 设置The IP address template group instance ID, such as `ipmg-90cex8mq`.
-                     * @param AddressTemplateGroupId The IP address template group instance ID, such as `ipmg-90cex8mq`.
+                     * @param _addressTemplateGroupId The IP address template group instance ID, such as `ipmg-90cex8mq`.
+                     * 
                      */
                     void SetAddressTemplateGroupId(const std::string& _addressTemplateGroupId);
 
                     /**
                      * 判断参数 AddressTemplateGroupId 是否已赋值
                      * @return AddressTemplateGroupId 是否已赋值
+                     * 
                      */
                     bool AddressTemplateGroupIdHasBeenSet() const;
 

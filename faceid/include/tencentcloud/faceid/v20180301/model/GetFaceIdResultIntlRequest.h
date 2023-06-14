@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
                      * @return SdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * 
                      */
                     std::string GetSdkToken() const;
 
                     /**
                      * 设置The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
-                     * @param SdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * @param _sdkToken The ID of the SDK-based liveness detection and face comparison process, which is generated when the `GetFaceIdTokenIntl` API is called.	
+                     * 
                      */
                     void SetSdkToken(const std::string& _sdkToken);
 
                     /**
                      * 判断参数 SdkToken 是否已赋值
                      * @return SdkToken 是否已赋值
+                     * 
                      */
                     bool SdkTokenHasBeenSet() const;
 

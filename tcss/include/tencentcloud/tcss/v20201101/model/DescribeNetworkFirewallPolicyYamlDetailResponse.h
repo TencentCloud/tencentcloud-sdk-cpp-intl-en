@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Policy name
                      * @return PolicyName Policy name
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
@@ -72,12 +76,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Yaml Base64-encoded YAML string
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetYaml() const;
 
                     /**
                      * 判断参数 Yaml 是否已赋值
                      * @return Yaml 是否已赋值
+                     * 
                      */
                     bool YamlHasBeenSet() const;
 
@@ -86,36 +92,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Policy description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Policy creation time
                      * @return PolicyCreateTime Policy creation time
+                     * 
                      */
                     std::string GetPolicyCreateTime() const;
 
                     /**
                      * 判断参数 PolicyCreateTime 是否已赋值
                      * @return PolicyCreateTime 是否已赋值
+                     * 
                      */
                     bool PolicyCreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Policy source type. Valid values: `System` (synched from the cluster); `Manual` (added manually).
                      * @return PolicySourceType Policy source type. Valid values: `System` (synched from the cluster); `Manual` (added manually).
+                     * 
                      */
                     std::string GetPolicySourceType() const;
 
                     /**
                      * 判断参数 PolicySourceType 是否已赋值
                      * @return PolicySourceType 是否已赋值
+                     * 
                      */
                     bool PolicySourceTypeHasBeenSet() const;
 
@@ -124,24 +136,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetworkPolicyPlugin Network plugin of the network policy
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNetworkPolicyPlugin() const;
 
                     /**
                      * 判断参数 NetworkPolicyPlugin 是否已赋值
                      * @return NetworkPolicyPlugin 是否已赋值
+                     * 
                      */
                     bool NetworkPolicyPluginHasBeenSet() const;
 
                     /**
                      * 获取Network policy status
                      * @return PublishStatus Network policy status
+                     * 
                      */
                     std::string GetPublishStatus() const;
 
                     /**
                      * 判断参数 PublishStatus 是否已赋值
                      * @return PublishStatus 是否已赋值
+                     * 
                      */
                     bool PublishStatusHasBeenSet() const;
 
@@ -150,12 +166,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublishResult Policy publishing result
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublishResult() const;
 
                     /**
                      * 判断参数 PublishResult 是否已赋值
                      * @return PublishResult 是否已赋值
+                     * 
                      */
                     bool PublishResultHasBeenSet() const;
 

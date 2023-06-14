@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance family.
                      * @return InstanceFamily Instance family.
+                     * 
                      */
                     std::string GetInstanceFamily() const;
 
                     /**
                      * 设置Instance family.
-                     * @param InstanceFamily Instance family.
+                     * @param _instanceFamily Instance family.
+                     * 
                      */
                     void SetInstanceFamily(const std::string& _instanceFamily);
 
                     /**
                      * 判断参数 InstanceFamily 是否已赋值
                      * @return InstanceFamily 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyHasBeenSet() const;
 
                     /**
                      * 获取Priority.
                      * @return Order Priority.
+                     * 
                      */
                     int64_t GetOrder() const;
 
                     /**
                      * 设置Priority.
-                     * @param Order Priority.
+                     * @param _order Priority.
+                     * 
                      */
                     void SetOrder(const int64_t& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取List of instance types.
                      * @return InstanceTypes List of instance types.
+                     * 
                      */
                     std::vector<ReservedInstanceTypeItem> GetInstanceTypes() const;
 
                     /**
                      * 设置List of instance types.
-                     * @param InstanceTypes List of instance types.
+                     * @param _instanceTypes List of instance types.
+                     * 
                      */
                     void SetInstanceTypes(const std::vector<ReservedInstanceTypeItem>& _instanceTypes);
 
                     /**
                      * 判断参数 InstanceTypes 是否已赋值
                      * @return InstanceTypes 是否已赋值
+                     * 
                      */
                     bool InstanceTypesHasBeenSet() const;
 

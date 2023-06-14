@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The translation template ID.
                      * @return Definition The translation template ID.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置The translation template ID.
-                     * @param Definition The translation template ID.
+                     * @param _definition The translation template ID.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

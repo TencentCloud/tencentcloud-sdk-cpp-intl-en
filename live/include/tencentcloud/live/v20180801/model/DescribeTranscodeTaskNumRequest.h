@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The start time in the format of yyyy-mm-dd HH:MM:SS.
                      * @return StartTime The start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time in the format of yyyy-mm-dd HH:MM:SS.
-                     * @param StartTime The start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @param _startTime The start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time in the format of yyyy-mm-dd HH:MM:SS.
                      * @return EndTime The end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time in the format of yyyy-mm-dd HH:MM:SS.
-                     * @param EndTime The end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @param _endTime The end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The push domains to query. If you do not pass a value, all push domains will be queried.
                      * @return PushDomains The push domains to query. If you do not pass a value, all push domains will be queried.
+                     * 
                      */
                     std::vector<std::string> GetPushDomains() const;
 
                     /**
                      * 设置The push domains to query. If you do not pass a value, all push domains will be queried.
-                     * @param PushDomains The push domains to query. If you do not pass a value, all push domains will be queried.
+                     * @param _pushDomains The push domains to query. If you do not pass a value, all push domains will be queried.
+                     * 
                      */
                     void SetPushDomains(const std::vector<std::string>& _pushDomains);
 
                     /**
                      * 判断参数 PushDomains 是否已赋值
                      * @return PushDomains 是否已赋值
+                     * 
                      */
                     bool PushDomainsHasBeenSet() const;
 

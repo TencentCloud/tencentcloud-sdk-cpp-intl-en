@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FirstContentfulPaint Last contentful paint, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFirstContentfulPaint() const;
 
                     /**
                      * 设置Last contentful paint, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FirstContentfulPaint Last contentful paint, in milliseconds.
+                     * @param _firstContentfulPaint Last contentful paint, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFirstContentfulPaint(const int64_t& _firstContentfulPaint);
 
                     /**
                      * 判断参数 FirstContentfulPaint 是否已赋值
                      * @return FirstContentfulPaint 是否已赋值
+                     * 
                      */
                     bool FirstContentfulPaintHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FirstMeaningfulPaint Full content load, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFirstMeaningfulPaint() const;
 
                     /**
                      * 设置Full content load, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FirstMeaningfulPaint Full content load, in milliseconds.
+                     * @param _firstMeaningfulPaint Full content load, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFirstMeaningfulPaint(const int64_t& _firstMeaningfulPaint);
 
                     /**
                      * 判断参数 FirstMeaningfulPaint 是否已赋值
                      * @return FirstMeaningfulPaint 是否已赋值
+                     * 
                      */
                     bool FirstMeaningfulPaintHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OverallDownloadSpeed Average download speed, in KB/s.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetOverallDownloadSpeed() const;
 
                     /**
                      * 设置Average download speed, in KB/s.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OverallDownloadSpeed Average download speed, in KB/s.
+                     * @param _overallDownloadSpeed Average download speed, in KB/s.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOverallDownloadSpeed(const double& _overallDownloadSpeed);
 
                     /**
                      * 判断参数 OverallDownloadSpeed 是否已赋值
                      * @return OverallDownloadSpeed 是否已赋值
+                     * 
                      */
                     bool OverallDownloadSpeedHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RenderTime Rendering time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRenderTime() const;
 
                     /**
                      * 设置Rendering time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RenderTime Rendering time, in milliseconds.
+                     * @param _renderTime Rendering time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRenderTime(const int64_t& _renderTime);
 
                     /**
                      * 判断参数 RenderTime 是否已赋值
                      * @return RenderTime 是否已赋值
+                     * 
                      */
                     bool RenderTimeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DocumentFinishTime DOM content loaded, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDocumentFinishTime() const;
 
                     /**
                      * 设置DOM content loaded, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DocumentFinishTime DOM content loaded, in milliseconds.
+                     * @param _documentFinishTime DOM content loaded, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDocumentFinishTime(const int64_t& _documentFinishTime);
 
                     /**
                      * 判断参数 DocumentFinishTime 是否已赋值
                      * @return DocumentFinishTime 是否已赋值
+                     * 
                      */
                     bool DocumentFinishTimeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TcpConnectionTime Average TCP connection, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTcpConnectionTime() const;
 
                     /**
                      * 设置Average TCP connection, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TcpConnectionTime Average TCP connection, in milliseconds.
+                     * @param _tcpConnectionTime Average TCP connection, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTcpConnectionTime(const int64_t& _tcpConnectionTime);
 
                     /**
                      * 判断参数 TcpConnectionTime 是否已赋值
                      * @return TcpConnectionTime 是否已赋值
+                     * 
                      */
                     bool TcpConnectionTimeHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResponseTime Average backend response, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetResponseTime() const;
 
                     /**
                      * 设置Average backend response, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ResponseTime Average backend response, in milliseconds.
+                     * @param _responseTime Average backend response, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResponseTime(const int64_t& _responseTime);
 
                     /**
                      * 判断参数 ResponseTime 是否已赋值
                      * @return ResponseTime 是否已赋值
+                     * 
                      */
                     bool ResponseTimeHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FileDownloadTime Average DOM content download, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFileDownloadTime() const;
 
                     /**
                      * 设置Average DOM content download, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FileDownloadTime Average DOM content download, in milliseconds.
+                     * @param _fileDownloadTime Average DOM content download, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileDownloadTime(const int64_t& _fileDownloadTime);
 
                     /**
                      * 判断参数 FileDownloadTime 是否已赋值
                      * @return FileDownloadTime 是否已赋值
+                     * 
                      */
                     bool FileDownloadTimeHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LoadTime Load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetLoadTime() const;
 
                     /**
                      * 设置Load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LoadTime Load time, in milliseconds.
+                     * @param _loadTime Load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoadTime(const int64_t& _loadTime);
 
                     /**
                      * 判断参数 LoadTime 是否已赋值
                      * @return LoadTime 是否已赋值
+                     * 
                      */
                     bool LoadTimeHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Logset ID
                      * @return LogsetId Logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置Logset ID
-                     * @param LogsetId Logset ID
+                     * @param _logsetId Logset ID
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Logset name
                      * @return LogsetName Logset name
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name
-                     * @param LogsetName Logset name
+                     * @param _logsetName Logset name
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
                     /**
                      * 获取Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
                      * @return Tags Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
-                     * @param Tags Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
+                     * @param _tags Tag key-value pair bound to logset. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key at any time.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

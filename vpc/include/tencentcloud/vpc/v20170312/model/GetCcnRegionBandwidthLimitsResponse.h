@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid value was found.
                      * @return CcnBandwidthSet The outbound bandwidth limits of regions in a CCN instance.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<CcnBandwidthInfo> GetCcnBandwidthSet() const;
 
                     /**
                      * 判断参数 CcnBandwidthSet 是否已赋值
                      * @return CcnBandwidthSet 是否已赋值
+                     * 
                      */
                     bool CcnBandwidthSetHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return TotalCount The number of eligible objects.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

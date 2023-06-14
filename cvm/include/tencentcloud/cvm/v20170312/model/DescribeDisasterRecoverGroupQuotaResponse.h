@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取The maximum number of placement groups that can be created.
                      * @return GroupQuota The maximum number of placement groups that can be created.
+                     * 
                      */
                     int64_t GetGroupQuota() const;
 
                     /**
                      * 判断参数 GroupQuota 是否已赋值
                      * @return GroupQuota 是否已赋值
+                     * 
                      */
                     bool GroupQuotaHasBeenSet() const;
 
                     /**
                      * 获取The number of placement groups that have been created by the current user.
                      * @return CurrentNum The number of placement groups that have been created by the current user.
+                     * 
                      */
                     int64_t GetCurrentNum() const;
 
                     /**
                      * 判断参数 CurrentNum 是否已赋值
                      * @return CurrentNum 是否已赋值
+                     * 
                      */
                     bool CurrentNumHasBeenSet() const;
 
                     /**
                      * 获取Quota on instances in a physical-machine-type disaster recovery group.
                      * @return CvmInHostGroupQuota Quota on instances in a physical-machine-type disaster recovery group.
+                     * 
                      */
                     int64_t GetCvmInHostGroupQuota() const;
 
                     /**
                      * 判断参数 CvmInHostGroupQuota 是否已赋值
                      * @return CvmInHostGroupQuota 是否已赋值
+                     * 
                      */
                     bool CvmInHostGroupQuotaHasBeenSet() const;
 
                     /**
                      * 获取Quota on instances in a switch-type disaster recovery group.
                      * @return CvmInSwGroupQuota Quota on instances in a switch-type disaster recovery group.
+                     * 
                      */
                     int64_t GetCvmInSwGroupQuota() const;
 
                     /**
                      * 判断参数 CvmInSwGroupQuota 是否已赋值
                      * @return CvmInSwGroupQuota 是否已赋值
+                     * 
                      */
                     bool CvmInSwGroupQuotaHasBeenSet() const;
 
                     /**
                      * 获取Quota on instances in a rack-type disaster recovery group.
                      * @return CvmInRackGroupQuota Quota on instances in a rack-type disaster recovery group.
+                     * 
                      */
                     int64_t GetCvmInRackGroupQuota() const;
 
                     /**
                      * 判断参数 CvmInRackGroupQuota 是否已赋值
                      * @return CvmInRackGroupQuota 是否已赋值
+                     * 
                      */
                     bool CvmInRackGroupQuotaHasBeenSet() const;
 

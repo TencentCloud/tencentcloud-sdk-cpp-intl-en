@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Vip Address
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Address
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param Vip Address
+                     * @param _vip Address
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return VPort Port
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetVPort() const;
 
                     /**
                      * 设置Port
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param VPort Port
+                     * @param _vPort Port
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetVPort(const uint64_t& _vPort);
 
                     /**
                      * 判断参数 VPort 是否已赋值
                      * @return VPort 是否已赋值
+                     * 
                      */
                     bool VPortHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return UniqVpcId VPC ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC ID
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param UniqVpcId VPC ID
+                     * @param _uniqVpcId VPC ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return UniqSubnet VPC subnet ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetUniqSubnet() const;
 
                     /**
                      * 设置VPC subnet ID
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param UniqSubnet VPC subnet ID
+                     * @param _uniqSubnet VPC subnet ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetUniqSubnet(const std::string& _uniqSubnet);
 
                     /**
                      * 判断参数 UniqSubnet 是否已赋值
                      * @return UniqSubnet 是否已赋值
+                     * 
                      */
                     bool UniqSubnetHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Desc Description
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param Desc Description
+                     * @param _desc Description
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 

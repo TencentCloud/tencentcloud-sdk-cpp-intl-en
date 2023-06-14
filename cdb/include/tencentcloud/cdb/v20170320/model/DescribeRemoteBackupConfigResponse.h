@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Remote backup retention period in days
                      * @return ExpireDays Remote backup retention period in days
+                     * 
                      */
                     int64_t GetExpireDays() const;
 
                     /**
                      * 判断参数 ExpireDays 是否已赋值
                      * @return ExpireDays 是否已赋值
+                     * 
                      */
                     bool ExpireDaysHasBeenSet() const;
 
                     /**
                      * 获取Remote data backup. Valid values:`off` (disable), `on` (enable).
                      * @return RemoteBackupSave Remote data backup. Valid values:`off` (disable), `on` (enable).
+                     * 
                      */
                     std::string GetRemoteBackupSave() const;
 
                     /**
                      * 判断参数 RemoteBackupSave 是否已赋值
                      * @return RemoteBackupSave 是否已赋值
+                     * 
                      */
                     bool RemoteBackupSaveHasBeenSet() const;
 
                     /**
                      * 获取Remote log backup. Valid values: `off` (disable), `on` (enable). Only when the parameter `RemoteBackupSave` is `on`, the `RemoteBinlogSave` parameter can be set to `on`.
                      * @return RemoteBinlogSave Remote log backup. Valid values: `off` (disable), `on` (enable). Only when the parameter `RemoteBackupSave` is `on`, the `RemoteBinlogSave` parameter can be set to `on`.
+                     * 
                      */
                     std::string GetRemoteBinlogSave() const;
 
                     /**
                      * 判断参数 RemoteBinlogSave 是否已赋值
                      * @return RemoteBinlogSave 是否已赋值
+                     * 
                      */
                     bool RemoteBinlogSaveHasBeenSet() const;
 
                     /**
                      * 获取List of configured remote backup regions
                      * @return RemoteRegion List of configured remote backup regions
+                     * 
                      */
                     std::vector<std::string> GetRemoteRegion() const;
 
                     /**
                      * 判断参数 RemoteRegion 是否已赋值
                      * @return RemoteRegion 是否已赋值
+                     * 
                      */
                     bool RemoteRegionHasBeenSet() const;
 
                     /**
                      * 获取List of remote backup regions
                      * @return RegionList List of remote backup regions
+                     * 
                      */
                     std::vector<std::string> GetRegionList() const;
 
                     /**
                      * 判断参数 RegionList 是否已赋值
                      * @return RegionList 是否已赋值
+                     * 
                      */
                     bool RegionListHasBeenSet() const;
 

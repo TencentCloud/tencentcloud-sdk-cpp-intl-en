@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取NAT instance ID
                      * @return NatinsId NAT instance ID
+                     * 
                      */
                     std::string GetNatinsId() const;
 
                     /**
                      * 设置NAT instance ID
-                     * @param NatinsId NAT instance ID
+                     * @param _natinsId NAT instance ID
+                     * 
                      */
                     void SetNatinsId(const std::string& _natinsId);
 
                     /**
                      * 判断参数 NatinsId 是否已赋值
                      * @return NatinsId 是否已赋值
+                     * 
                      */
                     bool NatinsIdHasBeenSet() const;
 
                     /**
                      * 获取NAT instance name
                      * @return NatinsName NAT instance name
+                     * 
                      */
                     std::string GetNatinsName() const;
 
                     /**
                      * 设置NAT instance name
-                     * @param NatinsName NAT instance name
+                     * @param _natinsName NAT instance name
+                     * 
                      */
                     void SetNatinsName(const std::string& _natinsName);
 
                     /**
                      * 判断参数 NatinsName 是否已赋值
                      * @return NatinsName 是否已赋值
+                     * 
                      */
                     bool NatinsNameHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Region Instance region
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Instance region
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Region Instance region
+                     * @param _region Instance region
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return FwMode 0: create new; 1: use existing
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetFwMode() const;
 
                     /**
                      * 设置0: create new; 1: use existing
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param FwMode 0: create new; 1: use existing
+                     * @param _fwMode 0: create new; 1: use existing
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetFwMode(const int64_t& _fwMode);
 
                     /**
                      * 判断参数 FwMode 是否已赋值
                      * @return FwMode 是否已赋值
+                     * 
                      */
                     bool FwModeHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Status 0: normal; 1: creating
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置0: normal; 1: creating
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Status 0: normal; 1: creating
+                     * @param _status 0: normal; 1: creating
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NatIp NAT public IP
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetNatIp() const;
 
                     /**
                      * 设置NAT public IP
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param NatIp NAT public IP
+                     * @param _natIp NAT public IP
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetNatIp(const std::string& _natIp);
 
                     /**
                      * 判断参数 NatIp 是否已赋值
                      * @return NatIp 是否已赋值
+                     * 
                      */
                     bool NatIpHasBeenSet() const;
 

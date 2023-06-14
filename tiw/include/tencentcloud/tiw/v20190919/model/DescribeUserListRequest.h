@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Room ID to be used to query users.
                      * @return RoomId Room ID to be used to query users.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置Room ID to be used to query users.
-                     * @param RoomId Room ID to be used to query users.
+                     * @param _roomId Room ID to be used to query users.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
                      * @return TimeRange Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
+                     * 
                      */
                     std::vector<int64_t> GetTimeRange() const;
 
                     /**
                      * 设置Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
-                     * @param TimeRange Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
+                     * @param _timeRange Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
+                     * 
                      */
                     void SetTimeRange(const std::vector<int64_t>& _timeRange);
 
                     /**
                      * 判断参数 TimeRange 是否已赋值
                      * @return TimeRange 是否已赋值
+                     * 
                      */
                     bool TimeRangeHasBeenSet() const;
 
                     /**
                      * 获取Extra query conditions.
                      * @return Query Extra query conditions.
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Extra query conditions.
-                     * @param Query Extra query conditions.
+                     * @param _query Extra query conditions.
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of data entries to be returned. Default value: `1000`.
                      * @return MaxSize Maximum number of data entries to be returned. Default value: `1000`.
+                     * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum number of data entries to be returned. Default value: `1000`.
-                     * @param MaxSize Maximum number of data entries to be returned. Default value: `1000`.
+                     * @param _maxSize Maximum number of data entries to be returned. Default value: `1000`.
+                     * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 

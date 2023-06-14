@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site (top-level domain name)
                      * @return ZoneId ID of the site (top-level domain name)
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site (top-level domain name)
-                     * @param ZoneId ID of the site (top-level domain name)
+                     * @param _zoneId ID of the site (top-level domain name)
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 

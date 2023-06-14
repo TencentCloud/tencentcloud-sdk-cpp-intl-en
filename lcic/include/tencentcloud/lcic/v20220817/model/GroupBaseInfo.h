@@ -50,36 +50,42 @@ Used by actions: BatchCreateGroupWithMembers.
                     /**
                      * 获取The group names. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置The group names. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _groupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTeacherId() const;
 
                     /**
                      * 设置The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _teacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
                     /**
                      * 判断参数 TeacherId 是否已赋值
                      * @return TeacherId 是否已赋值
+                     * 
                      */
                     bool TeacherIdHasBeenSet() const;
 

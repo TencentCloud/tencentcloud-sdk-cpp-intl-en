@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Runtime policy details
                      * @return RuleDetail Runtime policy details
+                     * 
                      */
                     AccessControlRuleInfo GetRuleDetail() const;
 
                     /**
                      * 判断参数 RuleDetail 是否已赋值
                      * @return RuleDetail 是否已赋值
+                     * 
                      */
                     bool RuleDetailHasBeenSet() const;
 

@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded encryption key
                      * @return EncryptKey Base64-encoded encryption key
+                     * 
                      */
                     std::string GetEncryptKey() const;
 
                     /**
                      * 判断参数 EncryptKey 是否已赋值
                      * @return EncryptKey 是否已赋值
+                     * 
                      */
                     bool EncryptKeyHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded decryption key
                      * @return DecryptKey Base64-encoded decryption key
+                     * 
                      */
                     std::string GetDecryptKey() const;
 
                     /**
                      * 判断参数 DecryptKey 是否已赋值
                      * @return DecryptKey 是否已赋值
+                     * 
                      */
                     bool DecryptKeyHasBeenSet() const;
 
                     /**
                      * 获取Globally unique white-box key ID
                      * @return KeyId Globally unique white-box key ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Tag operation return code. 0: success; 1: internal error; 2: business processing error
                      * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     * 
                      */
                     uint64_t GetTagCode() const;
 
                     /**
                      * 判断参数 TagCode 是否已赋值
                      * @return TagCode 是否已赋值
+                     * 
                      */
                     bool TagCodeHasBeenSet() const;
 
                     /**
                      * 获取Tag operation return message
                      * @return TagMsg Tag operation return message
+                     * 
                      */
                     std::string GetTagMsg() const;
 
                     /**
                      * 判断参数 TagMsg 是否已赋值
                      * @return TagMsg 是否已赋值
+                     * 
                      */
                     bool TagMsgHasBeenSet() const;
 

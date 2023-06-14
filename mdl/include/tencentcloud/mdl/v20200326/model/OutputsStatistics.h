@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Output information of pipeline 0.
                      * @return Pipeline0 Output information of pipeline 0.
+                     * 
                      */
                     std::vector<PipelineOutputStatistics> GetPipeline0() const;
 
                     /**
                      * 设置Output information of pipeline 0.
-                     * @param Pipeline0 Output information of pipeline 0.
+                     * @param _pipeline0 Output information of pipeline 0.
+                     * 
                      */
                     void SetPipeline0(const std::vector<PipelineOutputStatistics>& _pipeline0);
 
                     /**
                      * 判断参数 Pipeline0 是否已赋值
                      * @return Pipeline0 是否已赋值
+                     * 
                      */
                     bool Pipeline0HasBeenSet() const;
 
                     /**
                      * 获取Output information of pipeline 1.
                      * @return Pipeline1 Output information of pipeline 1.
+                     * 
                      */
                     std::vector<PipelineOutputStatistics> GetPipeline1() const;
 
                     /**
                      * 设置Output information of pipeline 1.
-                     * @param Pipeline1 Output information of pipeline 1.
+                     * @param _pipeline1 Output information of pipeline 1.
+                     * 
                      */
                     void SetPipeline1(const std::vector<PipelineOutputStatistics>& _pipeline1);
 
                     /**
                      * 判断参数 Pipeline1 是否已赋值
                      * @return Pipeline1 是否已赋值
+                     * 
                      */
                     bool Pipeline1HasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleID ID of the rule being applied
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置ID of the rule being applied
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RuleID ID of the rule being applied
+                     * @param _ruleID ID of the rule being applied
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AlgManagedIds ID of the rule that is set to verify requests by JavaScript challenge
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetAlgManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to verify requests by JavaScript challenge
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AlgManagedIds ID of the rule that is set to verify requests by JavaScript challenge
+                     * @param _algManagedIds ID of the rule that is set to verify requests by JavaScript challenge
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAlgManagedIds(const std::vector<int64_t>& _algManagedIds);
 
                     /**
                      * 判断参数 AlgManagedIds 是否已赋值
                      * @return AlgManagedIds 是否已赋值
+                     * 
                      */
                     bool AlgManagedIdsHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CapManagedIds ID of the rule that is set to verify requests by CAPTCHA
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetCapManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to verify requests by CAPTCHA
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CapManagedIds ID of the rule that is set to verify requests by CAPTCHA
+                     * @param _capManagedIds ID of the rule that is set to verify requests by CAPTCHA
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCapManagedIds(const std::vector<int64_t>& _capManagedIds);
 
                     /**
                      * 判断参数 CapManagedIds 是否已赋值
                      * @return CapManagedIds 是否已赋值
+                     * 
                      */
                     bool CapManagedIdsHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MonManagedIds ID of the rule that is set to observe requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetMonManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to observe requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MonManagedIds ID of the rule that is set to observe requests
+                     * @param _monManagedIds ID of the rule that is set to observe requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMonManagedIds(const std::vector<int64_t>& _monManagedIds);
 
                     /**
                      * 判断参数 MonManagedIds 是否已赋值
                      * @return MonManagedIds 是否已赋值
+                     * 
                      */
                     bool MonManagedIdsHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DropManagedIds ID of the rule that is set to block requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetDropManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to block requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DropManagedIds ID of the rule that is set to block requests
+                     * @param _dropManagedIds ID of the rule that is set to block requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDropManagedIds(const std::vector<int64_t>& _dropManagedIds);
 
                     /**
                      * 判断参数 DropManagedIds 是否已赋值
                      * @return DropManagedIds 是否已赋值
+                     * 
                      */
                     bool DropManagedIdsHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Switch Feature switch
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Feature switch
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Feature switch
+                     * @param _switch Feature switch
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

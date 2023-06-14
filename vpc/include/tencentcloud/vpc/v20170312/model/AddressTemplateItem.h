@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Start address
                      * @return From Start address
+                     * 
                      */
                     std::string GetFrom() const;
 
                     /**
                      * 设置Start address
-                     * @param From Start address
+                     * @param _from Start address
+                     * 
                      */
                     void SetFrom(const std::string& _from);
 
                     /**
                      * 判断参数 From 是否已赋值
                      * @return From 是否已赋值
+                     * 
                      */
                     bool FromHasBeenSet() const;
 
                     /**
                      * 获取End address
                      * @return To End address
+                     * 
                      */
                     std::string GetTo() const;
 
                     /**
                      * 设置End address
-                     * @param To End address
+                     * @param _to End address
+                     * 
                      */
                     void SetTo(const std::string& _to);
 
                     /**
                      * 判断参数 To 是否已赋值
                      * @return To 是否已赋值
+                     * 
                      */
                     bool ToHasBeenSet() const;
 

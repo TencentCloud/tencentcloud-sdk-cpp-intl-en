@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Timeout Timeout period (ms), which must be an integer multiple of 1000
 .m3u8/.mpd: [1000, 60000]
 .ts/.m4s/.mp4: [10000, 1800000]
+                     * 
                      */
                     int64_t GetTimeout() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Timeout period (ms), which must be an integer multiple of 1000
 .m3u8/.mpd: [1000, 60000]
 .ts/.m4s/.mp4: [10000, 1800000]
-                     * @param Timeout Timeout period (ms), which must be an integer multiple of 1000
+                     * @param _timeout Timeout period (ms), which must be an integer multiple of 1000
 .m3u8/.mpd: [1000, 60000]
 .ts/.m4s/.mp4: [10000, 1800000]
+                     * 
                      */
                     void SetTimeout(const int64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return Ext File extension. Valid values: .m3u8, .ts, .mpd, .m4s, .mp4
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetExt() const;
 
                     /**
                      * 设置File extension. Valid values: .m3u8, .ts, .mpd, .m4s, .mp4
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param Ext File extension. Valid values: .m3u8, .ts, .mpd, .m4s, .mp4
+                     * @param _ext File extension. Valid values: .m3u8, .ts, .mpd, .m4s, .mp4
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetExt(const std::string& _ext);
 
                     /**
                      * 判断参数 Ext 是否已赋值
                      * @return Ext 是否已赋值
+                     * 
                      */
                     bool ExtHasBeenSet() const;
 

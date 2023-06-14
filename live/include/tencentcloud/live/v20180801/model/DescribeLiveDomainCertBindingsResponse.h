@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The information of domains that meet the query criteria.
                      * @return LiveDomainCertBindings The information of domains that meet the query criteria.
+                     * 
                      */
                     std::vector<LiveDomainCertBindings> GetLiveDomainCertBindings() const;
 
                     /**
                      * 判断参数 LiveDomainCertBindings 是否已赋值
                      * @return LiveDomainCertBindings 是否已赋值
+                     * 
                      */
                     bool LiveDomainCertBindingsHasBeenSet() const;
 
                     /**
                      * 获取The number of records returned, which is needed for pagination.
                      * @return TotalNum The number of records returned, which is needed for pagination.
+                     * 
                      */
                     int64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 

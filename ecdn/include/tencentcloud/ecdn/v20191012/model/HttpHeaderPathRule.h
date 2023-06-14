@@ -53,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return HeaderMode HTTP header setting method. Valid values: add (add header), set (set header), del (delete header).
 Request header currently does not support `set`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeaderMode() const;
 
@@ -60,15 +61,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置HTTP header setting method. Valid values: add (add header), set (set header), del (delete header).
 Request header currently does not support `set`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HeaderMode HTTP header setting method. Valid values: add (add header), set (set header), del (delete header).
+                     * @param _headerMode HTTP header setting method. Valid values: add (add header), set (set header), del (delete header).
 Request header currently does not support `set`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaderMode(const std::string& _headerMode);
 
                     /**
                      * 判断参数 HeaderMode 是否已赋值
                      * @return HeaderMode 是否已赋值
+                     * 
                      */
                     bool HeaderModeHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HeaderName HTTP header name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
                      * 设置HTTP header name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HeaderName HTTP header name.
+                     * @param _headerName HTTP header name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaderName(const std::string& _headerName);
 
                     /**
                      * 判断参数 HeaderName 是否已赋值
                      * @return HeaderName 是否已赋值
+                     * 
                      */
                     bool HeaderNameHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HeaderValue HTTP header value, which is optional when it is `del`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeaderValue() const;
 
                     /**
                      * 设置HTTP header value, which is optional when it is `del`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HeaderValue HTTP header value, which is optional when it is `del`.
+                     * @param _headerValue HTTP header value, which is optional when it is `del`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaderValue(const std::string& _headerValue);
 
                     /**
                      * 判断参数 HeaderValue 是否已赋值
                      * @return HeaderValue 是否已赋值
+                     * 
                      */
                     bool HeaderValueHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RuleType Type of effective URL path rule. Valid values: all (all paths), file (file extension), directory (directory), path (absolute path).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Type of effective URL path rule. Valid values: all (all paths), file (file extension), directory (directory), path (absolute path).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RuleType Type of effective URL path rule. Valid values: all (all paths), file (file extension), directory (directory), path (absolute path).
+                     * @param _ruleType Type of effective URL path rule. Valid values: all (all paths), file (file extension), directory (directory), path (absolute path).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -143,20 +155,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RulePaths URL path or file type list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
                      * 设置URL path or file type list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RulePaths URL path or file type list
+                     * @param _rulePaths URL path or file type list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 

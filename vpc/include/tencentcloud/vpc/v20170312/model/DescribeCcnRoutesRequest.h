@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-gree226l`.
                      * @return CcnId The CCN instance ID, such as `ccn-gree226l`.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-gree226l`.
-                     * @param CcnId The CCN instance ID, such as `ccn-gree226l`.
+                     * @param _ccnId The CCN instance ID, such as `ccn-gree226l`.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
                      * @return RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+                     * 
                      */
                     std::vector<std::string> GetRouteIds() const;
 
                     /**
                      * 设置The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
-                     * @param RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+                     * @param _routeIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+                     * 
                      */
                     void SetRouteIds(const std::vector<std::string>& _routeIds);
 
                     /**
                      * 判断参数 RouteIds 是否已赋值
                      * @return RouteIds 是否已赋值
+                     * 
                      */
                     bool RouteIdsHasBeenSet() const;
 
@@ -94,6 +100,7 @@ namespace TencentCloud
 <li>instance-region - String - (Filter condition) The next hop region.</li>
 <li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
 <li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -105,55 +112,63 @@ namespace TencentCloud
 <li>instance-region - String - (Filter condition) The next hop region.</li>
 <li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
 <li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
-                     * @param Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
 <li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
 <li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
 <li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity
                      * @return Limit The returned quantity
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity
-                     * @param Limit The returned quantity
+                     * @param _limit The returned quantity
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

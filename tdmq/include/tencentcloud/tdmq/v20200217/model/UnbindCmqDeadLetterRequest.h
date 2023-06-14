@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Source queue name of dead letter policy. Calling this API will clear the dead letter queue policy of this queue.
                      * @return SourceQueueName Source queue name of dead letter policy. Calling this API will clear the dead letter queue policy of this queue.
+                     * 
                      */
                     std::string GetSourceQueueName() const;
 
                     /**
                      * 设置Source queue name of dead letter policy. Calling this API will clear the dead letter queue policy of this queue.
-                     * @param SourceQueueName Source queue name of dead letter policy. Calling this API will clear the dead letter queue policy of this queue.
+                     * @param _sourceQueueName Source queue name of dead letter policy. Calling this API will clear the dead letter queue policy of this queue.
+                     * 
                      */
                     void SetSourceQueueName(const std::string& _sourceQueueName);
 
                     /**
                      * 判断参数 SourceQueueName 是否已赋值
                      * @return SourceQueueName 是否已赋值
+                     * 
                      */
                     bool SourceQueueNameHasBeenSet() const;
 

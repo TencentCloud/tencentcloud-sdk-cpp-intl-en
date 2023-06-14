@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The time of the day
                      * @return CurTime The time of the day
+                     * 
                      */
                     std::string GetCurTime() const;
 
                     /**
                      * 设置The time of the day
-                     * @param CurTime The time of the day
+                     * @param _curTime The time of the day
+                     * 
                      */
                     void SetCurTime(const std::string& _curTime);
 
                     /**
                      * 判断参数 CurTime 是否已赋值
                      * @return CurTime 是否已赋值
+                     * 
                      */
                     bool CurTimeHasBeenSet() const;
 
                     /**
                      * 获取Current quantity
                      * @return Cnt Current quantity
+                     * 
                      */
                     uint64_t GetCnt() const;
 
                     /**
                      * 设置Current quantity
-                     * @param Cnt Current quantity
+                     * @param _cnt Current quantity
+                     * 
                      */
                     void SetCnt(const uint64_t& _cnt);
 
                     /**
                      * 判断参数 Cnt 是否已赋值
                      * @return Cnt 是否已赋值
+                     * 
                      */
                     bool CntHasBeenSet() const;
 

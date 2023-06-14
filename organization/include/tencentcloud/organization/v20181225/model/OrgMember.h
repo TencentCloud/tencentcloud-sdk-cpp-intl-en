@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取UIN
                      * @return Uin UIN
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 设置UIN
-                     * @param Uin UIN
+                     * @param _uin UIN
+                     * 
                      */
                     void SetUin(const uint64_t& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Notes
                      * @return Remark Notes
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Notes
-                     * @param Remark Notes
+                     * @param _remark Notes
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Joining time
                      * @return JoinTime Joining time
+                     * 
                      */
                     std::string GetJoinTime() const;
 
                     /**
                      * 设置Joining time
-                     * @param JoinTime Joining time
+                     * @param _joinTime Joining time
+                     * 
                      */
                     void SetJoinTime(const std::string& _joinTime);
 
                     /**
                      * 判断参数 JoinTime 是否已赋值
                      * @return JoinTime 是否已赋值
+                     * 
                      */
                     bool JoinTimeHasBeenSet() const;
 

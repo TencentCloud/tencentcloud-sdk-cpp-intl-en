@@ -52,72 +52,84 @@ namespace TencentCloud
                     /**
                      * 获取The watermark type. 0 (default): image; 1: text (not supported yet).
                      * @return WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+                     * 
                      */
                     uint64_t GetWaterMarkType() const;
 
                     /**
                      * 设置The watermark type. 0 (default): image; 1: text (not supported yet).
-                     * @param WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+                     * @param _waterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+                     * 
                      */
                     void SetWaterMarkType(const uint64_t& _waterMarkType);
 
                     /**
                      * 判断参数 WaterMarkType 是否已赋值
                      * @return WaterMarkType 是否已赋值
+                     * 
                      */
                     bool WaterMarkTypeHasBeenSet() const;
 
                     /**
                      * 获取The information of watermark images. This parameter is required if the watermark type is image.
                      * @return WaterMarkImage The information of watermark images. This parameter is required if the watermark type is image.
+                     * 
                      */
                     WaterMarkImage GetWaterMarkImage() const;
 
                     /**
                      * 设置The information of watermark images. This parameter is required if the watermark type is image.
-                     * @param WaterMarkImage The information of watermark images. This parameter is required if the watermark type is image.
+                     * @param _waterMarkImage The information of watermark images. This parameter is required if the watermark type is image.
+                     * 
                      */
                     void SetWaterMarkImage(const WaterMarkImage& _waterMarkImage);
 
                     /**
                      * 判断参数 WaterMarkImage 是否已赋值
                      * @return WaterMarkImage 是否已赋值
+                     * 
                      */
                     bool WaterMarkImageHasBeenSet() const;
 
                     /**
                      * 获取The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
                      * @return WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     * 
                      */
                     WaterMarkChar GetWaterMarkChar() const;
 
                     /**
                      * 设置The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
-                     * @param WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     * @param _waterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     * 
                      */
                     void SetWaterMarkChar(const WaterMarkChar& _waterMarkChar);
 
                     /**
                      * 判断参数 WaterMarkChar 是否已赋值
                      * @return WaterMarkChar 是否已赋值
+                     * 
                      */
                     bool WaterMarkCharHasBeenSet() const;
 
                     /**
                      * 获取The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
                      * @return WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     * 
                      */
                     WaterMarkTimestamp GetWaterMarkTimestamp() const;
 
                     /**
                      * 设置The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
-                     * @param WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     * @param _waterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     * 
                      */
                     void SetWaterMarkTimestamp(const WaterMarkTimestamp& _waterMarkTimestamp);
 
                     /**
                      * 判断参数 WaterMarkTimestamp 是否已赋值
                      * @return WaterMarkTimestamp 是否已赋值
+                     * 
                      */
                     bool WaterMarkTimestampHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BusinessCode Product code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
                      * 设置Product code
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BusinessCode Product code
+                     * @param _businessCode Product code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
 
                     /**
                      * 判断参数 BusinessCode 是否已赋值
                      * @return BusinessCode 是否已赋值
+                     * 
                      */
                     bool BusinessCodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BusinessCodeName Product name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBusinessCodeName() const;
 
                     /**
                      * 设置Product name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BusinessCodeName Product name
+                     * @param _businessCodeName Product name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBusinessCodeName(const std::string& _businessCodeName);
 
                     /**
                      * 判断参数 BusinessCodeName 是否已赋值
                      * @return BusinessCodeName 是否已赋值
+                     * 
                      */
                     bool BusinessCodeNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost List price accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
                      * 设置List price accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginalCost List price accurate down to eight decimal places
+                     * @param _originalCost List price accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
 
                     /**
                      * 判断参数 OriginalCost 是否已赋值
                      * @return OriginalCost 是否已赋值
+                     * 
                      */
                     bool OriginalCostHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
                      * 设置The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
+                     * @param _voucherPayAmount The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
 
                     /**
                      * 判断参数 VoucherPayAmount 是否已赋值
                      * @return VoucherPayAmount 是否已赋值
+                     * 
                      */
                     bool VoucherPayAmountHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCost Consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
                      * 设置Consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCost Consumption amount accurate down to eight decimal places
+                     * @param _totalCost Consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
 
                     /**
                      * 判断参数 TotalCost 是否已赋值
                      * @return TotalCost 是否已赋值
+                     * 
                      */
                     bool TotalCostHasBeenSet() const;
 

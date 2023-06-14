@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of records returned for the query.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationId Application ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AccountGroupList Returned list of eligible data.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AccountGroupInfo> GetAccountGroupList() const;
 
                     /**
                      * 判断参数 AccountGroupList 是否已赋值
                      * @return AccountGroupList 是否已赋值
+                     * 
                      */
                     bool AccountGroupListHasBeenSet() const;
 

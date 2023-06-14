@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取List of unique IDs of the usage plans to be bound.
                      * @return UsagePlanIds List of unique IDs of the usage plans to be bound.
+                     * 
                      */
                     std::vector<std::string> GetUsagePlanIds() const;
 
                     /**
                      * 设置List of unique IDs of the usage plans to be bound.
-                     * @param UsagePlanIds List of unique IDs of the usage plans to be bound.
+                     * @param _usagePlanIds List of unique IDs of the usage plans to be bound.
+                     * 
                      */
                     void SetUsagePlanIds(const std::vector<std::string>& _usagePlanIds);
 
                     /**
                      * 判断参数 UsagePlanIds 是否已赋值
                      * @return UsagePlanIds 是否已赋值
+                     * 
                      */
                     bool UsagePlanIdsHasBeenSet() const;
 
                     /**
                      * 获取Binding type. Valid values: API, SERVICE. Default value: SERVICE.
                      * @return BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+                     * 
                      */
                     std::string GetBindType() const;
 
                     /**
                      * 设置Binding type. Valid values: API, SERVICE. Default value: SERVICE.
-                     * @param BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+                     * @param _bindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+                     * 
                      */
                     void SetBindType(const std::string& _bindType);
 
                     /**
                      * 判断参数 BindType 是否已赋值
                      * @return BindType 是否已赋值
+                     * 
                      */
                     bool BindTypeHasBeenSet() const;
 
                     /**
                      * 获取Environment to be bound.
                      * @return Environment Environment to be bound.
+                     * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
                      * 设置Environment to be bound.
-                     * @param Environment Environment to be bound.
+                     * @param _environment Environment to be bound.
+                     * 
                      */
                     void SetEnvironment(const std::string& _environment);
 
                     /**
                      * 判断参数 Environment 是否已赋值
                      * @return Environment 是否已赋值
+                     * 
                      */
                     bool EnvironmentHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the service to be bound.
                      * @return ServiceId Unique ID of the service to be bound.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be bound.
-                     * @param ServiceId Unique ID of the service to be bound.
+                     * @param _serviceId Unique ID of the service to be bound.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique API ID array, which is required if `bindType` is `API`.
                      * @return ApiIds Unique API ID array, which is required if `bindType` is `API`.
+                     * 
                      */
                     std::vector<std::string> GetApiIds() const;
 
                     /**
                      * 设置Unique API ID array, which is required if `bindType` is `API`.
-                     * @param ApiIds Unique API ID array, which is required if `bindType` is `API`.
+                     * @param _apiIds Unique API ID array, which is required if `bindType` is `API`.
+                     * 
                      */
                     void SetApiIds(const std::vector<std::string>& _apiIds);
 
                     /**
                      * 判断参数 ApiIds 是否已赋值
                      * @return ApiIds 是否已赋值
+                     * 
                      */
                     bool ApiIdsHasBeenSet() const;
 

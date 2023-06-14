@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Resource name.
                      * @return ResourceName Resource name.
+                     * 
                      */
                     std::string GetResourceName() const;
 
                     /**
                      * 设置Resource name.
-                     * @param ResourceName Resource name.
+                     * @param _resourceName Resource name.
+                     * 
                      */
                     void SetResourceName(const std::string& _resourceName);
 
                     /**
                      * 判断参数 ResourceName 是否已赋值
                      * @return ResourceName 是否已赋值
+                     * 
                      */
                     bool ResourceNameHasBeenSet() const;
 
                     /**
                      * 获取Number of available resources.
                      * @return ResourceQuotaAvailable Number of available resources.
+                     * 
                      */
                     int64_t GetResourceQuotaAvailable() const;
 
                     /**
                      * 设置Number of available resources.
-                     * @param ResourceQuotaAvailable Number of available resources.
+                     * @param _resourceQuotaAvailable Number of available resources.
+                     * 
                      */
                     void SetResourceQuotaAvailable(const int64_t& _resourceQuotaAvailable);
 
                     /**
                      * 判断参数 ResourceQuotaAvailable 是否已赋值
                      * @return ResourceQuotaAvailable 是否已赋值
+                     * 
                      */
                     bool ResourceQuotaAvailableHasBeenSet() const;
 
                     /**
                      * 获取Total number of resources.
                      * @return ResourceQuotaTotal Total number of resources.
+                     * 
                      */
                     int64_t GetResourceQuotaTotal() const;
 
                     /**
                      * 设置Total number of resources.
-                     * @param ResourceQuotaTotal Total number of resources.
+                     * @param _resourceQuotaTotal Total number of resources.
+                     * 
                      */
                     void SetResourceQuotaTotal(const int64_t& _resourceQuotaTotal);
 
                     /**
                      * 判断参数 ResourceQuotaTotal 是否已赋值
                      * @return ResourceQuotaTotal 是否已赋值
+                     * 
                      */
                     bool ResourceQuotaTotalHasBeenSet() const;
 

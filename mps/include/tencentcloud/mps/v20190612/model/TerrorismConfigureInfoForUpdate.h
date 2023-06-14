@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取The parameters for detecting sensitive information in images.
                      * @return ImgReviewInfo The parameters for detecting sensitive information in images.
+                     * 
                      */
                     TerrorismImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
                      * 设置The parameters for detecting sensitive information in images.
-                     * @param ImgReviewInfo The parameters for detecting sensitive information in images.
+                     * @param _imgReviewInfo The parameters for detecting sensitive information in images.
+                     * 
                      */
                     void SetImgReviewInfo(const TerrorismImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取The parameters for detecting sensitive information based on OCR.
                      * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * 
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
                      * 设置The parameters for detecting sensitive information based on OCR.
-                     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * @param _ocrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * 
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

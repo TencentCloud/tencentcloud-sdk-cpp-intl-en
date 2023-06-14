@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the flow log.
                      * @return FlowLogId The unique ID of the flow log.
+                     * 
                      */
                     std::string GetFlowLogId() const;
 
                     /**
                      * 设置The unique ID of the flow log.
-                     * @param FlowLogId The unique ID of the flow log.
+                     * @param _flowLogId The unique ID of the flow log.
+                     * 
                      */
                     void SetFlowLogId(const std::string& _flowLogId);
 
                     /**
                      * 判断参数 FlowLogId 是否已赋值
                      * @return FlowLogId 是否已赋值
+                     * 
                      */
                     bool FlowLogIdHasBeenSet() const;
 
                     /**
                      * 获取The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
                      * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
-                     * @param VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     * @param _vpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the flow log instance.
                      * @return FlowLogName The name of the flow log instance.
+                     * 
                      */
                     std::string GetFlowLogName() const;
 
                     /**
                      * 设置The name of the flow log instance.
-                     * @param FlowLogName The name of the flow log instance.
+                     * @param _flowLogName The name of the flow log instance.
+                     * 
                      */
                     void SetFlowLogName(const std::string& _flowLogName);
 
                     /**
                      * 判断参数 FlowLogName 是否已赋值
                      * @return FlowLogName 是否已赋值
+                     * 
                      */
                     bool FlowLogNameHasBeenSet() const;
 
                     /**
                      * 获取The description of the flow log.
                      * @return FlowLogDescription The description of the flow log.
+                     * 
                      */
                     std::string GetFlowLogDescription() const;
 
                     /**
                      * 设置The description of the flow log.
-                     * @param FlowLogDescription The description of the flow log.
+                     * @param _flowLogDescription The description of the flow log.
+                     * 
                      */
                     void SetFlowLogDescription(const std::string& _flowLogDescription);
 
                     /**
                      * 判断参数 FlowLogDescription 是否已赋值
                      * @return FlowLogDescription 是否已赋值
+                     * 
                      */
                     bool FlowLogDescriptionHasBeenSet() const;
 

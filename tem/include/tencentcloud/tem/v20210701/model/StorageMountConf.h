@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Data volume name
                      * @return VolumeName Data volume name
+                     * 
                      */
                     std::string GetVolumeName() const;
 
                     /**
                      * 设置Data volume name
-                     * @param VolumeName Data volume name
+                     * @param _volumeName Data volume name
+                     * 
                      */
                     void SetVolumeName(const std::string& _volumeName);
 
                     /**
                      * 判断参数 VolumeName 是否已赋值
                      * @return VolumeName 是否已赋值
+                     * 
                      */
                     bool VolumeNameHasBeenSet() const;
 
                     /**
                      * 获取Data volume binding path
                      * @return MountPath Data volume binding path
+                     * 
                      */
                     std::string GetMountPath() const;
 
                     /**
                      * 设置Data volume binding path
-                     * @param MountPath Data volume binding path
+                     * @param _mountPath Data volume binding path
+                     * 
                      */
                     void SetMountPath(const std::string& _mountPath);
 
                     /**
                      * 判断参数 MountPath 是否已赋值
                      * @return MountPath 是否已赋值
+                     * 
                      */
                     bool MountPathHasBeenSet() const;
 

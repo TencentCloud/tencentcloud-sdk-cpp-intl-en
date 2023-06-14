@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取RASP name
                      * @return Name RASP name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置RASP name
-                     * @param Name RASP name
+                     * @param _name RASP name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取RASP description
                      * @return Value RASP description
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置RASP description
-                     * @param Value RASP description
+                     * @param _value RASP description
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

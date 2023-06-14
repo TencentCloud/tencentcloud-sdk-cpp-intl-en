@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of URLs to be purged. The protocol header must be included.
                      * @return Urls List of URLs to be purged. The protocol header must be included.
+                     * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
                      * 设置List of URLs to be purged. The protocol header must be included.
-                     * @param Urls List of URLs to be purged. The protocol header must be included.
+                     * @param _urls List of URLs to be purged. The protocol header must be included.
+                     * 
                      */
                     void SetUrls(const std::vector<std::string>& _urls);
 
                     /**
                      * 判断参数 Urls 是否已赋值
                      * @return Urls 是否已赋值
+                     * 
                      */
                     bool UrlsHasBeenSet() const;
 

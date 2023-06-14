@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FaceReviewInfo Control parameter of custom figure audit.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     UserDefineFaceReviewTemplateInfo GetFaceReviewInfo() const;
 
                     /**
                      * 设置Control parameter of custom figure audit.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FaceReviewInfo Control parameter of custom figure audit.
+                     * @param _faceReviewInfo Control parameter of custom figure audit.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfo& _faceReviewInfo);
 
                     /**
                      * 判断参数 FaceReviewInfo 是否已赋值
                      * @return FaceReviewInfo 是否已赋值
+                     * 
                      */
                     bool FaceReviewInfoHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AsrReviewInfo Control parameter of custom speech audit.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     UserDefineAsrTextReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
                      * 设置Control parameter of custom speech audit.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AsrReviewInfo Control parameter of custom speech audit.
+                     * @param _asrReviewInfo Control parameter of custom speech audit.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfo& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OcrReviewInfo Control parameter of custom text audit.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     UserDefineOcrTextReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
                      * 设置Control parameter of custom text audit.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OcrReviewInfo Control parameter of custom text audit.
+                     * @param _ocrReviewInfo Control parameter of custom text audit.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfo& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

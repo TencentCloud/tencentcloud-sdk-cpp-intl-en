@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Keyword. Length limit: 20 characters.
                      * @return Keyword Keyword. Length limit: 20 characters.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Keyword. Length limit: 20 characters.
-                     * @param Keyword Keyword. Length limit: 20 characters.
+                     * @param _keyword Keyword. Length limit: 20 characters.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return Tags Keyword tag
 <li>Array length limit: 20 tags;</li>
 <li>Tag length limit: 128 characters.</li>
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
@@ -78,15 +82,17 @@ namespace TencentCloud
                      * 设置Keyword tag
 <li>Array length limit: 20 tags;</li>
 <li>Tag length limit: 128 characters.</li>
-                     * @param Tags Keyword tag
+                     * @param _tags Keyword tag
 <li>Array length limit: 20 tags;</li>
 <li>Tag length limit: 128 characters.</li>
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -69,56 +72,65 @@ namespace TencentCloud
  `AppName` in push and playback addresses and is `live` by default.
                      * @return AppName Push path, which is the same as the 
  `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path, which is the same as the 
  `AppName` in push and playback addresses and is `live` by default.
-                     * @param AppName Push path, which is the same as the 
+                     * @param _appName Push path, which is the same as the 
  `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Delay time in seconds.
                      * @return DelayInterval Delay time in seconds.
+                     * 
                      */
                     uint64_t GetDelayInterval() const;
 
                     /**
                      * 设置Delay time in seconds.
-                     * @param DelayInterval Delay time in seconds.
+                     * @param _delayInterval Delay time in seconds.
+                     * 
                      */
                     void SetDelayInterval(const uint64_t& _delayInterval);
 
                     /**
                      * 判断参数 DelayInterval 是否已赋值
                      * @return DelayInterval 是否已赋值
+                     * 
                      */
                     bool DelayIntervalHasBeenSet() const;
 
@@ -129,6 +141,7 @@ Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
                      * @return CreateTime Creation time in UTC time.
 Note: the difference between UTC time and Beijing time is 8 hours.
 Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
@@ -136,15 +149,17 @@ Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
                      * 设置Creation time in UTC time.
 Note: the difference between UTC time and Beijing time is 8 hours.
 Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
-                     * @param CreateTime Creation time in UTC time.
+                     * @param _createTime Creation time in UTC time.
 Note: the difference between UTC time and Beijing time is 8 hours.
 Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -155,6 +170,7 @@ Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
                      * @return ExpireTime Expiration time in UTC time.
 Note: the difference between UTC time and Beijing time is 8 hours.
 Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
+                     * 
                      */
                     std::string GetExpireTime() const;
 
@@ -162,15 +178,17 @@ Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
                      * 设置Expiration time in UTC time.
 Note: the difference between UTC time and Beijing time is 8 hours.
 Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
-                     * @param ExpireTime Expiration time in UTC time.
+                     * @param _expireTime Expiration time in UTC time.
 Note: the difference between UTC time and Beijing time is 8 hours.
 Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -181,6 +199,7 @@ Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
                      * @return Status Current status:
 -1: expired.
 1: in effect.
+                     * 
                      */
                     int64_t GetStatus() const;
 
@@ -188,15 +207,17 @@ Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
                      * 设置Current status:
 -1: expired.
 1: in effect.
-                     * @param Status Current status:
+                     * @param _status Current status:
 -1: expired.
 1: in effect.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

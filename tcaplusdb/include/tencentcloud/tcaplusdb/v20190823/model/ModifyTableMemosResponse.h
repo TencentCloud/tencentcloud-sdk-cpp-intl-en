@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of tables modified for remarks
                      * @return TotalCount Number of tables modified for remarks
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of table remarks modification results
                      * @return TableResults List of table remarks modification results
+                     * 
                      */
                     std::vector<TableResultNew> GetTableResults() const;
 
                     /**
                      * 判断参数 TableResults 是否已赋值
                      * @return TableResults 是否已赋值
+                     * 
                      */
                     bool TableResultsHasBeenSet() const;
 

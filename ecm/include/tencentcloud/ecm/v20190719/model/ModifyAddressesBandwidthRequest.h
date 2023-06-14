@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取Unique EIP ID, such as `eip-xxxxxxx`
                      * @return AddressIds Unique EIP ID, such as `eip-xxxxxxx`
+                     * 
                      */
                     std::vector<std::string> GetAddressIds() const;
 
                     /**
                      * 设置Unique EIP ID, such as `eip-xxxxxxx`
-                     * @param AddressIds Unique EIP ID, such as `eip-xxxxxxx`
+                     * @param _addressIds Unique EIP ID, such as `eip-xxxxxxx`
+                     * 
                      */
                     void SetAddressIds(const std::vector<std::string>& _addressIds);
 
                     /**
                      * 判断参数 AddressIds 是否已赋值
                      * @return AddressIds 是否已赋值
+                     * 
                      */
                     bool AddressIdsHasBeenSet() const;
 
                     /**
                      * 获取Target bandwidth value
                      * @return InternetMaxBandwidthOut Target bandwidth value
+                     * 
                      */
                     uint64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置Target bandwidth value
-                     * @param InternetMaxBandwidthOut Target bandwidth value
+                     * @param _internetMaxBandwidthOut Target bandwidth value
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const uint64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 

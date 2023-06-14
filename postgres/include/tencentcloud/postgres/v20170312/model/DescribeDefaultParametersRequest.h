@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The major database version number, such as 11, 12, 13.
                      * @return DBMajorVersion The major database version number, such as 11, 12, 13.
+                     * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
                      * 设置The major database version number, such as 11, 12, 13.
-                     * @param DBMajorVersion The major database version number, such as 11, 12, 13.
+                     * @param _dBMajorVersion The major database version number, such as 11, 12, 13.
+                     * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
 
                     /**
                      * 判断参数 DBMajorVersion 是否已赋值
                      * @return DBMajorVersion 是否已赋值
+                     * 
                      */
                     bool DBMajorVersionHasBeenSet() const;
 
                     /**
                      * 获取Database engine, such as postgresql, mssql_compatible.
                      * @return DBEngine Database engine, such as postgresql, mssql_compatible.
+                     * 
                      */
                     std::string GetDBEngine() const;
 
                     /**
                      * 设置Database engine, such as postgresql, mssql_compatible.
-                     * @param DBEngine Database engine, such as postgresql, mssql_compatible.
+                     * @param _dBEngine Database engine, such as postgresql, mssql_compatible.
+                     * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
 
                     /**
                      * 判断参数 DBEngine 是否已赋值
                      * @return DBEngine 是否已赋值
+                     * 
                      */
                     bool DBEngineHasBeenSet() const;
 

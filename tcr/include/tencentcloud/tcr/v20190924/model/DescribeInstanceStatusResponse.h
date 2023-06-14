@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegistryStatusSet List of instance statuses
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RegistryStatus> GetRegistryStatusSet() const;
 
                     /**
                      * 判断参数 RegistryStatusSet 是否已赋值
                      * @return RegistryStatusSet 是否已赋值
+                     * 
                      */
                     bool RegistryStatusSetHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The UNIX timestamp (seconds), such as `1590065877`.
                      * @return Time The UNIX timestamp (seconds), such as `1590065877`.
+                     * 
                      */
                     uint64_t GetTime() const;
 
                     /**
                      * 设置The UNIX timestamp (seconds), such as `1590065877`.
-                     * @param Time The UNIX timestamp (seconds), such as `1590065877`.
+                     * @param _time The UNIX timestamp (seconds), such as `1590065877`.
+                     * 
                      */
                     void SetTime(const uint64_t& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取The metric value. For example, if the video capturing frame rate (`bigvCapFps`) at the time `1590065877` is `0`, the value of this parameter will be `0`.
                      * @return Value The metric value. For example, if the video capturing frame rate (`bigvCapFps`) at the time `1590065877` is `0`, the value of this parameter will be `0`.
+                     * 
                      */
                     double GetValue() const;
 
                     /**
                      * 设置The metric value. For example, if the video capturing frame rate (`bigvCapFps`) at the time `1590065877` is `0`, the value of this parameter will be `0`.
-                     * @param Value The metric value. For example, if the video capturing frame rate (`bigvCapFps`) at the time `1590065877` is `0`, the value of this parameter will be `0`.
+                     * @param _value The metric value. For example, if the video capturing frame rate (`bigvCapFps`) at the time `1590065877` is `0`, the value of this parameter will be `0`.
+                     * 
                      */
                     void SetValue(const double& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

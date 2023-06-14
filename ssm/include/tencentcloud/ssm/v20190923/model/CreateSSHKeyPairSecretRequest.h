@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
                      * @return SecretName Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
-                     * @param SecretName Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
+                     * @param _secretName Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the project to which the created SSH key belongs.
                      * @return ProjectId ID of the project to which the created SSH key belongs.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置ID of the project to which the created SSH key belongs.
-                     * @param ProjectId ID of the project to which the created SSH key belongs.
+                     * @param _projectId ID of the project to which the created SSH key belongs.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Description, such as what it is used for. It contains up to 2,048 bytes.
                      * @return Description Description, such as what it is used for. It contains up to 2,048 bytes.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description, such as what it is used for. It contains up to 2,048 bytes.
-                     * @param Description Description, such as what it is used for. It contains up to 2,048 bytes.
+                     * @param _description Description, such as what it is used for. It contains up to 2,048 bytes.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -104,6 +113,7 @@ You can also specify a custom KMS CMK created in the same region for encryption.
                      * @return KmsKeyId Specifies a KMS CMK to encrypt the secret.
 If this parameter is left empty, the CMK created by Secrets Manager by default will be used for encryption.
 You can also specify a custom KMS CMK created in the same region for encryption.
+                     * 
                      */
                     std::string GetKmsKeyId() const;
 
@@ -111,51 +121,59 @@ You can also specify a custom KMS CMK created in the same region for encryption.
                      * 设置Specifies a KMS CMK to encrypt the secret.
 If this parameter is left empty, the CMK created by Secrets Manager by default will be used for encryption.
 You can also specify a custom KMS CMK created in the same region for encryption.
-                     * @param KmsKeyId Specifies a KMS CMK to encrypt the secret.
+                     * @param _kmsKeyId Specifies a KMS CMK to encrypt the secret.
 If this parameter is left empty, the CMK created by Secrets Manager by default will be used for encryption.
 You can also specify a custom KMS CMK created in the same region for encryption.
+                     * 
                      */
                     void SetKmsKeyId(const std::string& _kmsKeyId);
 
                     /**
                      * 判断参数 KmsKeyId 是否已赋值
                      * @return KmsKeyId 是否已赋值
+                     * 
                      */
                     bool KmsKeyIdHasBeenSet() const;
 
                     /**
                      * 获取List of tags.
                      * @return Tags List of tags.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of tags.
-                     * @param Tags List of tags.
+                     * @param _tags List of tags.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
                      * @return SSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     * 
                      */
                     std::string GetSSHKeyName() const;
 
                     /**
                      * 设置Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
-                     * @param SSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     * @param _sSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     * 
                      */
                     void SetSSHKeyName(const std::string& _sSHKeyName);
 
                     /**
                      * 判断参数 SSHKeyName 是否已赋值
                      * @return SSHKeyName 是否已赋值
+                     * 
                      */
                     bool SSHKeyNameHasBeenSet() const;
 

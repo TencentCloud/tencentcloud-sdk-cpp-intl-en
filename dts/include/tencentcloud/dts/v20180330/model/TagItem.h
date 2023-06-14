@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Tag key value
                      * @return TagKey Tag key value
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key value
-                     * @param TagKey Tag key value
+                     * @param _tagKey Tag key value
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TagValue Tag value
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TagValue Tag value
+                     * @param _tagValue Tag value
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 

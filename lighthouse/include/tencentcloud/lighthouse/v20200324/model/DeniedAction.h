@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Restricted operation name.
                      * @return Action Restricted operation name.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Restricted operation name.
-                     * @param Action Restricted operation name.
+                     * @param _action Restricted operation name.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Restricted operation message code.
                      * @return Code Restricted operation message code.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Restricted operation message code.
-                     * @param Code Restricted operation message code.
+                     * @param _code Restricted operation message code.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取Restricted operation message.
                      * @return Message Restricted operation message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Restricted operation message.
-                     * @param Message Restricted operation message.
+                     * @param _message Restricted operation message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

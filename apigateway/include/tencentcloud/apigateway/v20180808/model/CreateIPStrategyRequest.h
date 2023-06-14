@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID.
                      * @return ServiceId Unique service ID.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID.
-                     * @param ServiceId Unique service ID.
+                     * @param _serviceId Unique service ID.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Custom policy name.
                      * @return StrategyName Custom policy name.
+                     * 
                      */
                     std::string GetStrategyName() const;
 
                     /**
                      * 设置Custom policy name.
-                     * @param StrategyName Custom policy name.
+                     * @param _strategyName Custom policy name.
+                     * 
                      */
                     void SetStrategyName(const std::string& _strategyName);
 
                     /**
                      * 判断参数 StrategyName 是否已赋值
                      * @return StrategyName 是否已赋值
+                     * 
                      */
                     bool StrategyNameHasBeenSet() const;
 
                     /**
                      * 获取Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
                      * @return StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+                     * 
                      */
                     std::string GetStrategyType() const;
 
                     /**
                      * 设置Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
-                     * @param StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+                     * @param _strategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+                     * 
                      */
                     void SetStrategyType(const std::string& _strategyType);
 
                     /**
                      * 判断参数 StrategyType 是否已赋值
                      * @return StrategyType 是否已赋值
+                     * 
                      */
                     bool StrategyTypeHasBeenSet() const;
 
                     /**
                      * 获取Policy details. Multiple IPs are separated with \n.
                      * @return StrategyData Policy details. Multiple IPs are separated with \n.
+                     * 
                      */
                     std::string GetStrategyData() const;
 
                     /**
                      * 设置Policy details. Multiple IPs are separated with \n.
-                     * @param StrategyData Policy details. Multiple IPs are separated with \n.
+                     * @param _strategyData Policy details. Multiple IPs are separated with \n.
+                     * 
                      */
                     void SetStrategyData(const std::string& _strategyData);
 
                     /**
                      * 判断参数 StrategyData 是否已赋值
                      * @return StrategyData 是否已赋值
+                     * 
                      */
                     bool StrategyDataHasBeenSet() const;
 

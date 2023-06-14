@@ -46,156 +46,182 @@ namespace TencentCloud
                     /**
                      * 获取The CNS address of the contract.
                      * @return Hash The CNS address of the contract.
+                     * 
                      */
                     std::string GetHash() const;
 
                     /**
                      * 判断参数 Hash 是否已赋值
                      * @return Hash 是否已赋值
+                     * 
                      */
                     bool HashHasBeenSet() const;
 
                     /**
                      * 获取The main group ID of the contract.
                      * @return GroupId The main group ID of the contract.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The DID of the organization that deployed the contract.
                      * @return DeployDid The DID of the organization that deployed the contract.
+                     * 
                      */
                     std::string GetDeployDid() const;
 
                     /**
                      * 判断参数 DeployDid 是否已赋值
                      * @return DeployDid 是否已赋值
+                     * 
                      */
                     bool DeployDidHasBeenSet() const;
 
                     /**
                      * 获取The TDID SDK version.
                      * @return SdkVersion The TDID SDK version.
+                     * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
                      * 判断参数 SdkVersion 是否已赋值
                      * @return SdkVersion 是否已赋值
+                     * 
                      */
                     bool SdkVersionHasBeenSet() const;
 
                     /**
                      * 获取The TDID contract version.
                      * @return ContractVersion The TDID contract version.
+                     * 
                      */
                     std::string GetContractVersion() const;
 
                     /**
                      * 判断参数 ContractVersion 是否已赋值
                      * @return ContractVersion 是否已赋值
+                     * 
                      */
                     bool ContractVersionHasBeenSet() const;
 
                     /**
                      * 获取The blockchain node version.
                      * @return BlockVersion The blockchain node version.
+                     * 
                      */
                     std::string GetBlockVersion() const;
 
                     /**
                      * 判断参数 BlockVersion 是否已赋值
                      * @return BlockVersion 是否已赋值
+                     * 
                      */
                     bool BlockVersionHasBeenSet() const;
 
                     /**
                      * 获取The IP address of the blockchain node.
                      * @return BlockIp The IP address of the blockchain node.
+                     * 
                      */
                     std::string GetBlockIp() const;
 
                     /**
                      * 判断参数 BlockIp 是否已赋值
                      * @return BlockIp 是否已赋值
+                     * 
                      */
                     bool BlockIpHasBeenSet() const;
 
                     /**
                      * 获取The address of the DID contract.
                      * @return DidAddress The address of the DID contract.
+                     * 
                      */
                     std::string GetDidAddress() const;
 
                     /**
                      * 判断参数 DidAddress 是否已赋值
                      * @return DidAddress 是否已赋值
+                     * 
                      */
                     bool DidAddressHasBeenSet() const;
 
                     /**
                      * 获取The address of the claim protocol type (CPT) contract.
                      * @return CptAddress The address of the claim protocol type (CPT) contract.
+                     * 
                      */
                     std::string GetCptAddress() const;
 
                     /**
                      * 判断参数 CptAddress 是否已赋值
                      * @return CptAddress 是否已赋值
+                     * 
                      */
                     bool CptAddressHasBeenSet() const;
 
                     /**
                      * 获取The address of the authority.
                      * @return AuthorityAddress The address of the authority.
+                     * 
                      */
                     std::string GetAuthorityAddress() const;
 
                     /**
                      * 判断参数 AuthorityAddress 是否已赋值
                      * @return AuthorityAddress 是否已赋值
+                     * 
                      */
                     bool AuthorityAddressHasBeenSet() const;
 
                     /**
                      * 获取The evidence contract address.
                      * @return EvidenceAddress The evidence contract address.
+                     * 
                      */
                     std::string GetEvidenceAddress() const;
 
                     /**
                      * 判断参数 EvidenceAddress 是否已赋值
                      * @return EvidenceAddress 是否已赋值
+                     * 
                      */
                     bool EvidenceAddressHasBeenSet() const;
 
                     /**
                      * 获取The contract address of the specific issuer.
                      * @return SpecificAddress The contract address of the specific issuer.
+                     * 
                      */
                     std::string GetSpecificAddress() const;
 
                     /**
                      * 判断参数 SpecificAddress 是否已赋值
                      * @return SpecificAddress 是否已赋值
+                     * 
                      */
                     bool SpecificAddressHasBeenSet() const;
 
                     /**
                      * 获取The chain ID.
                      * @return ChainId The chain ID.
+                     * 
                      */
                     std::string GetChainId() const;
 
                     /**
                      * 判断参数 ChainId 是否已赋值
                      * @return ChainId 是否已赋值
+                     * 
                      */
                     bool ChainIdHasBeenSet() const;
 

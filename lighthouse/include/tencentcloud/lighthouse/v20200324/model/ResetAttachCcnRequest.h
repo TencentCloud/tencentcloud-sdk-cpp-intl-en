@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取CCN instance ID.
                      * @return CcnId CCN instance ID.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置CCN instance ID.
-                     * @param CcnId CCN instance ID.
+                     * @param _ccnId CCN instance ID.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 

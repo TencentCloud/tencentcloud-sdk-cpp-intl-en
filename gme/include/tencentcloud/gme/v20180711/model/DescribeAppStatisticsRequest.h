@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取GME application ID
                      * @return BizId GME application ID
+                     * 
                      */
                     uint64_t GetBizId() const;
 
                     /**
                      * 设置GME application ID
-                     * @param BizId GME application ID
+                     * @param _bizId GME application ID
+                     * 
                      */
                     void SetBizId(const uint64_t& _bizId);
 
                     /**
                      * 判断参数 BizId 是否已赋值
                      * @return BizId 是否已赋值
+                     * 
                      */
                     bool BizIdHasBeenSet() const;
 
                     /**
                      * 获取Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      * @return StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * 
                      */
                     std::string GetStartDate() const;
 
                     /**
                      * 设置Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
-                     * @param StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @param _startDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * 
                      */
                     void SetStartDate(const std::string& _startDate);
 
                     /**
                      * 判断参数 StartDate 是否已赋值
                      * @return StartDate 是否已赋值
+                     * 
                      */
                     bool StartDateHasBeenSet() const;
 
                     /**
                      * 获取Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      * @return EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
-                     * @param EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @param _endDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 
                     /**
                      * 获取List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
                      * @return Services List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
+                     * 
                      */
                     std::vector<std::string> GetServices() const;
 
                     /**
                      * 设置List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
-                     * @param Services List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
+                     * @param _services List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
+                     * 
                      */
                     void SetServices(const std::vector<std::string>& _services);
 
                     /**
                      * 判断参数 Services 是否已赋值
                      * @return Services 是否已赋值
+                     * 
                      */
                     bool ServicesHasBeenSet() const;
 

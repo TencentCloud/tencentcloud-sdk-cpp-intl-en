@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding rule ID
                      * @return LocationId Forwarding rule ID
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置Forwarding rule ID
-                     * @param LocationId Forwarding rule ID
+                     * @param _locationId Forwarding rule ID
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name of the forwarding rule
                      * @return Domain Domain name of the forwarding rule
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name of the forwarding rule
-                     * @param Domain Domain name of the forwarding rule
+                     * @param _domain Domain name of the forwarding rule
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule path.
                      * @return Url Forwarding rule path.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Forwarding rule path.
-                     * @param Url Forwarding rule path.
+                     * @param _url Forwarding rule path.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -107,20 +116,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Targets Real server information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Backend> GetTargets() const;
 
                     /**
                      * 设置Real server information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Targets Real server information
+                     * @param _targets Real server information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargets(const std::vector<Backend>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 
@@ -129,20 +141,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FunctionTargets Information about backend SCF functions.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<FunctionTarget> GetFunctionTargets() const;
 
                     /**
                      * 设置Information about backend SCF functions.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FunctionTargets Information about backend SCF functions.
+                     * @param _functionTargets Information about backend SCF functions.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFunctionTargets(const std::vector<FunctionTarget>& _functionTargets);
 
                     /**
                      * 判断参数 FunctionTargets 是否已赋值
                      * @return FunctionTargets 是否已赋值
+                     * 
                      */
                     bool FunctionTargetsHasBeenSet() const;
 

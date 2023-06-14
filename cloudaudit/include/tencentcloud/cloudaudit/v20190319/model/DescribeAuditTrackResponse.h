@@ -47,84 +47,98 @@ namespace TencentCloud
                     /**
                      * 获取Tracking set name
                      * @return Name Tracking set name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
                      * @return ActionType Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+                     * 
                      */
                     std::string GetActionType() const;
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 
                     /**
                      * 获取The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
                      * @return ResourceType The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Tracking set status (0: Not enabled; 1: Enabled)
                      * @return Status Tracking set status (0: Not enabled; 1: Enabled)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The list of API names of tracking set events (`*`: All)
                      * @return EventNames The list of API names of tracking set events (`*`: All)
+                     * 
                      */
                     std::vector<std::string> GetEventNames() const;
 
                     /**
                      * 判断参数 EventNames 是否已赋值
                      * @return EventNames 是否已赋值
+                     * 
                      */
                     bool EventNamesHasBeenSet() const;
 
                     /**
                      * 获取Storage type of shipped data. Valid values: `cos`, `cls`.
                      * @return Storage Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * 
                      */
                     Storage GetStorage() const;
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the tracking set
                      * @return CreateTime Creation time of the tracking set
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -133,12 +147,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTrackForAllMembers() const;
 
                     /**
                      * 判断参数 TrackForAllMembers 是否已赋值
                      * @return TrackForAllMembers 是否已赋值
+                     * 
                      */
                     bool TrackForAllMembersHasBeenSet() const;
 

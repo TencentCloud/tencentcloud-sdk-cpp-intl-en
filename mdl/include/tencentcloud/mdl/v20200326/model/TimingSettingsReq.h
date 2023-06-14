@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
                      * @return StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * 
                      */
                     std::string GetStartType() const;
 
                     /**
                      * 设置Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
-                     * @param StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * @param _startType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+                     * 
                      */
                     void SetStartType(const std::string& _startType);
 
                     /**
                      * 判断参数 StartType 是否已赋值
                      * @return StartType 是否已赋值
+                     * 
                      */
                     bool StartTypeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
                      * @return Time This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
 It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
 It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
-                     * @param Time This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+                     * @param _time This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
 It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
 It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
                      * @return StartTime This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
-                     * @param StartTime This parameter is required if `EventType` is `TIMED_RECORD`.
+                     * @param _startTime This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -113,20 +122,23 @@ It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z
 It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
                      * @return EndTime This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
-                     * @param EndTime This parameter is required if `EventType` is `TIMED_RECORD`.
+                     * @param _endTime This parameter is required if `EventType` is `TIMED_RECORD`.
 It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

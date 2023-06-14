@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
                      * @return DiskIds ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+                     * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
                      * 设置ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
-                     * @param DiskIds ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+                     * @param _diskIds ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+                     * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
 
                     /**
                      * 判断参数 DiskIds 是否已赋值
                      * @return DiskIds 是否已赋值
+                     * 
                      */
                     bool DiskIdsHasBeenSet() const;
 

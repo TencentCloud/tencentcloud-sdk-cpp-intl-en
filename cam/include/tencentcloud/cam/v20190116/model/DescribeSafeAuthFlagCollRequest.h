@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Sub-account
                      * @return SubUin Sub-account
+                     * 
                      */
                     uint64_t GetSubUin() const;
 
                     /**
                      * 设置Sub-account
-                     * @param SubUin Sub-account
+                     * @param _subUin Sub-account
+                     * 
                      */
                     void SetSubUin(const uint64_t& _subUin);
 
                     /**
                      * 判断参数 SubUin 是否已赋值
                      * @return SubUin 是否已赋值
+                     * 
                      */
                     bool SubUinHasBeenSet() const;
 

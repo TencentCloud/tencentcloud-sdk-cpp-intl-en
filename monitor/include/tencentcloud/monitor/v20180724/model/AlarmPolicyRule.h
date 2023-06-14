@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+                     * @param _metricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+                     * @param _period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
@@ -133,6 +139,7 @@ cycle_wave = cyclical fluctuation
 re = regex match
 The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetOperator() const;
 
@@ -157,7 +164,7 @@ cycle_wave = cyclical fluctuation
 re = regex match
 The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Operator Operator
+                     * @param _operator Operator
 intelligent = intelligent detection without threshold
 eq = equal to
 ge = greater than or equal to
@@ -177,12 +184,14 @@ cycle_wave = cyclical fluctuation
 re = regex match
 The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
@@ -191,20 +200,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Value Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Value Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+                     * @param _value Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -213,20 +225,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ContinuePeriod Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetContinuePeriod() const;
 
                     /**
                      * 设置Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param ContinuePeriod Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+                     * @param _continuePeriod Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetContinuePeriod(const int64_t& _continuePeriod);
 
                     /**
                      * 判断参数 ContinuePeriod 是否已赋值
                      * @return ContinuePeriod 是否已赋值
+                     * 
                      */
                     bool ContinuePeriodHasBeenSet() const;
 
@@ -235,20 +250,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NoticeFrequency Alarm interval in seconds. Valid values: 0 (do not repeat), 300 (alarm once every 5 minutes), 600 (alarm once every 10 minutes), 900 (alarm once every 15 minutes), 1800 (alarm once every 30 minutes), 3600 (alarm once every hour), 7200 (alarm once every 2 hours), 10800 (alarm once every 3 hours), 21600 (alarm once every 6 hours),  43200 (alarm once every 12 hours), 86400 (alarm once every day)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetNoticeFrequency() const;
 
                     /**
                      * 设置Alarm interval in seconds. Valid values: 0 (do not repeat), 300 (alarm once every 5 minutes), 600 (alarm once every 10 minutes), 900 (alarm once every 15 minutes), 1800 (alarm once every 30 minutes), 3600 (alarm once every hour), 7200 (alarm once every 2 hours), 10800 (alarm once every 3 hours), 21600 (alarm once every 6 hours),  43200 (alarm once every 12 hours), 86400 (alarm once every day)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NoticeFrequency Alarm interval in seconds. Valid values: 0 (do not repeat), 300 (alarm once every 5 minutes), 600 (alarm once every 10 minutes), 900 (alarm once every 15 minutes), 1800 (alarm once every 30 minutes), 3600 (alarm once every hour), 7200 (alarm once every 2 hours), 10800 (alarm once every 3 hours), 21600 (alarm once every 6 hours),  43200 (alarm once every 12 hours), 86400 (alarm once every day)
+                     * @param _noticeFrequency Alarm interval in seconds. Valid values: 0 (do not repeat), 300 (alarm once every 5 minutes), 600 (alarm once every 10 minutes), 900 (alarm once every 15 minutes), 1800 (alarm once every 30 minutes), 3600 (alarm once every hour), 7200 (alarm once every 2 hours), 10800 (alarm once every 3 hours), 21600 (alarm once every 6 hours),  43200 (alarm once every 12 hours), 86400 (alarm once every day)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoticeFrequency(const int64_t& _noticeFrequency);
 
                     /**
                      * 判断参数 NoticeFrequency 是否已赋值
                      * @return NoticeFrequency 是否已赋值
+                     * 
                      */
                     bool NoticeFrequencyHasBeenSet() const;
 
@@ -257,20 +275,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsPowerNotice Whether the alarm frequency increases exponentially. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsPowerNotice() const;
 
                     /**
                      * 设置Whether the alarm frequency increases exponentially. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsPowerNotice Whether the alarm frequency increases exponentially. Valid values: 0 (no), 1 (yes)
+                     * @param _isPowerNotice Whether the alarm frequency increases exponentially. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsPowerNotice(const int64_t& _isPowerNotice);
 
                     /**
                      * 判断参数 IsPowerNotice 是否已赋值
                      * @return IsPowerNotice 是否已赋值
+                     * 
                      */
                     bool IsPowerNoticeHasBeenSet() const;
 
@@ -279,20 +300,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Filter Filter condition for one single trigger rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AlarmPolicyFilter GetFilter() const;
 
                     /**
                      * 设置Filter condition for one single trigger rule
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Filter Filter condition for one single trigger rule
+                     * @param _filter Filter condition for one single trigger rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFilter(const AlarmPolicyFilter& _filter);
 
                     /**
                      * 判断参数 Filter 是否已赋值
                      * @return Filter 是否已赋值
+                     * 
                      */
                     bool FilterHasBeenSet() const;
 
@@ -301,20 +325,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Metric display name, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Metric display name, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Metric display name, which is used in the output parameter
+                     * @param _description Metric display name, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -323,20 +350,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Unit Unit, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置Unit, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Unit Unit, which is used in the output parameter
+                     * @param _unit Unit, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnit(const std::string& _unit);
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 
@@ -345,20 +375,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return RuleType Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param RuleType Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+                     * @param _ruleType Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -367,20 +400,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IsAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsAdvanced() const;
 
                     /**
                      * 设置Whether it is an advanced metric. 0: No; 1: Yes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
+                     * @param _isAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsAdvanced(const int64_t& _isAdvanced);
 
                     /**
                      * 判断参数 IsAdvanced 是否已赋值
                      * @return IsAdvanced 是否已赋值
+                     * 
                      */
                     bool IsAdvancedHasBeenSet() const;
 
@@ -389,20 +425,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IsOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsOpen() const;
 
                     /**
                      * 设置Whether the advanced metric feature is enabled. 0: No; 1: Yes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+                     * @param _isOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsOpen(const int64_t& _isOpen);
 
                     /**
                      * 判断参数 IsOpen 是否已赋值
                      * @return IsOpen 是否已赋值
+                     * 
                      */
                     bool IsOpenHasBeenSet() const;
 
@@ -411,20 +450,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ProductId Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProductId Integration center product ID.
+                     * @param _productId Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
@@ -433,20 +475,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ValueMax Maximum value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetValueMax() const;
 
                     /**
                      * 设置Maximum value
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ValueMax Maximum value
+                     * @param _valueMax Maximum value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValueMax(const double& _valueMax);
 
                     /**
                      * 判断参数 ValueMax 是否已赋值
                      * @return ValueMax 是否已赋值
+                     * 
                      */
                     bool ValueMaxHasBeenSet() const;
 
@@ -455,20 +500,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ValueMin Minimum value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetValueMin() const;
 
                     /**
                      * 设置Minimum value
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ValueMin Minimum value
+                     * @param _valueMin Minimum value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValueMin(const double& _valueMin);
 
                     /**
                      * 判断参数 ValueMin 是否已赋值
                      * @return ValueMin 是否已赋值
+                     * 
                      */
                     bool ValueMinHasBeenSet() const;
 
@@ -477,20 +525,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HierarchicalValue The configuration of alarm level threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AlarmHierarchicalValue GetHierarchicalValue() const;
 
                     /**
                      * 设置The configuration of alarm level threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HierarchicalValue The configuration of alarm level threshold
+                     * @param _hierarchicalValue The configuration of alarm level threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHierarchicalValue(const AlarmHierarchicalValue& _hierarchicalValue);
 
                     /**
                      * 判断参数 HierarchicalValue 是否已赋值
                      * @return HierarchicalValue 是否已赋值
+                     * 
                      */
                     bool HierarchicalValueHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of reporting rates
                      * @return ProjectLimitSet Array of reporting rates
+                     * 
                      */
                     std::vector<ProjectLimit> GetProjectLimitSet() const;
 
                     /**
                      * 判断参数 ProjectLimitSet 是否已赋值
                      * @return ProjectLimitSet 是否已赋值
+                     * 
                      */
                     bool ProjectLimitSetHasBeenSet() const;
 

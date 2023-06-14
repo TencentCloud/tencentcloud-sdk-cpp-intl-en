@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取URL of the COS bucket to save recording files
                      * @return Url URL of the COS bucket to save recording files
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of the COS bucket to save recording files
-                     * @param Url URL of the COS bucket to save recording files
+                     * @param _url URL of the COS bucket to save recording files
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

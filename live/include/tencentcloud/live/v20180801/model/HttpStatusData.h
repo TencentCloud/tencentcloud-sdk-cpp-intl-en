@@ -52,38 +52,44 @@ namespace TencentCloud
 In the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return Time Data point in time,
 In the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Data point in time,
 In the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param Time Data point in time,
+                     * @param _time Data point in time,
 In the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Playback status code details.
                      * @return HttpStatusInfoList Playback status code details.
+                     * 
                      */
                     std::vector<HttpStatusInfo> GetHttpStatusInfoList() const;
 
                     /**
                      * 设置Playback status code details.
-                     * @param HttpStatusInfoList Playback status code details.
+                     * @param _httpStatusInfoList Playback status code details.
+                     * 
                      */
                     void SetHttpStatusInfoList(const std::vector<HttpStatusInfo>& _httpStatusInfoList);
 
                     /**
                      * 判断参数 HttpStatusInfoList 是否已赋值
                      * @return HttpStatusInfoList 是否已赋值
+                     * 
                      */
                     bool HttpStatusInfoListHasBeenSet() const;
 

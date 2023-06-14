@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
                      * @return MetaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+                     * 
                      */
                     std::string GetMetaDataJdbcUrl() const;
 
                     /**
                      * 设置The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
-                     * @param MetaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+                     * @param _metaDataJdbcUrl The JDBC URL of the custom metadatabase instance. Example: jdbc:mysql://10.10.10.10:3306/dbname
+                     * 
                      */
                     void SetMetaDataJdbcUrl(const std::string& _metaDataJdbcUrl);
 
                     /**
                      * 判断参数 MetaDataJdbcUrl 是否已赋值
                      * @return MetaDataJdbcUrl 是否已赋值
+                     * 
                      */
                     bool MetaDataJdbcUrlHasBeenSet() const;
 
                     /**
                      * 获取The custom metadatabase instance username.
                      * @return MetaDataUser The custom metadatabase instance username.
+                     * 
                      */
                     std::string GetMetaDataUser() const;
 
                     /**
                      * 设置The custom metadatabase instance username.
-                     * @param MetaDataUser The custom metadatabase instance username.
+                     * @param _metaDataUser The custom metadatabase instance username.
+                     * 
                      */
                     void SetMetaDataUser(const std::string& _metaDataUser);
 
                     /**
                      * 判断参数 MetaDataUser 是否已赋值
                      * @return MetaDataUser 是否已赋值
+                     * 
                      */
                     bool MetaDataUserHasBeenSet() const;
 
                     /**
                      * 获取The custom metadatabase instance password.
                      * @return MetaDataPass The custom metadatabase instance password.
+                     * 
                      */
                     std::string GetMetaDataPass() const;
 
                     /**
                      * 设置The custom metadatabase instance password.
-                     * @param MetaDataPass The custom metadatabase instance password.
+                     * @param _metaDataPass The custom metadatabase instance password.
+                     * 
                      */
                     void SetMetaDataPass(const std::string& _metaDataPass);
 
                     /**
                      * 判断参数 MetaDataPass 是否已赋值
                      * @return MetaDataPass 是否已赋值
+                     * 
                      */
                     bool MetaDataPassHasBeenSet() const;
 
@@ -109,6 +118,7 @@ namespace TencentCloud
 <li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
 <li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+                     * 
                      */
                     std::string GetMetaType() const;
 
@@ -117,34 +127,39 @@ namespace TencentCloud
 <li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
 <li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
-                     * @param MetaType The Hive-shared metadatabase type. Valid values:
+                     * @param _metaType The Hive-shared metadatabase type. Valid values:
 <li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
 <li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
+                     * 
                      */
                     void SetMetaType(const std::string& _metaType);
 
                     /**
                      * 判断参数 MetaType 是否已赋值
                      * @return MetaType 是否已赋值
+                     * 
                      */
                     bool MetaTypeHasBeenSet() const;
 
                     /**
                      * 获取The EMR-MetaDB instance.
                      * @return UnifyMetaInstanceId The EMR-MetaDB instance.
+                     * 
                      */
                     std::string GetUnifyMetaInstanceId() const;
 
                     /**
                      * 设置The EMR-MetaDB instance.
-                     * @param UnifyMetaInstanceId The EMR-MetaDB instance.
+                     * @param _unifyMetaInstanceId The EMR-MetaDB instance.
+                     * 
                      */
                     void SetUnifyMetaInstanceId(const std::string& _unifyMetaInstanceId);
 
                     /**
                      * 判断参数 UnifyMetaInstanceId 是否已赋值
                      * @return UnifyMetaInstanceId 是否已赋值
+                     * 
                      */
                     bool UnifyMetaInstanceIdHasBeenSet() const;
 

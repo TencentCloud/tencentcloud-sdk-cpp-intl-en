@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID
                      * @return FlowId Async task ID
+                     * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
                     /**
                      * 获取Status of enabling public network access
                      * @return WanStatus Status of enabling public network access
+                     * 
                      */
                     std::string GetWanStatus() const;
 
                     /**
                      * 判断参数 WanStatus 是否已赋值
                      * @return WanStatus 是否已赋值
+                     * 
                      */
                     bool WanStatusHasBeenSet() const;
 

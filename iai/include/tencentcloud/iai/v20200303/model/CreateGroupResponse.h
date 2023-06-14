@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

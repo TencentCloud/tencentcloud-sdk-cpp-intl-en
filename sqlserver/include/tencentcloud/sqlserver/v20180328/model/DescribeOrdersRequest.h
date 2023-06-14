@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
                      * @return DealNames Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
+                     * 
                      */
                     std::vector<std::string> GetDealNames() const;
 
                     /**
                      * 设置Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
-                     * @param DealNames Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
+                     * @param _dealNames Order array. The order name will be returned upon shipping, which can be used to call the `DescribeOrders` API to query shipment status
+                     * 
                      */
                     void SetDealNames(const std::vector<std::string>& _dealNames);
 
                     /**
                      * 判断参数 DealNames 是否已赋值
                      * @return DealNames 是否已赋值
+                     * 
                      */
                     bool DealNamesHasBeenSet() const;
 

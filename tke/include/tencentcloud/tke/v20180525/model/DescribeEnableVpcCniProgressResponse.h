@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Task status, which can be `Running`, `Succeed`, or `Failed`.
                      * @return Status Task status, which can be `Running`, `Succeed`, or `Failed`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ErrorMessage The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorMessage() const;
 
                     /**
                      * 判断参数 ErrorMessage 是否已赋值
                      * @return ErrorMessage 是否已赋值
+                     * 
                      */
                     bool ErrorMessageHasBeenSet() const;
 

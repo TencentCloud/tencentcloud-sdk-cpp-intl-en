@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The subdomain count.
                      * @return SubdomainCount The subdomain count.
+                     * 
                      */
                     uint64_t GetSubdomainCount() const;
 
                     /**
                      * 设置The subdomain count.
-                     * @param SubdomainCount The subdomain count.
+                     * @param _subdomainCount The subdomain count.
+                     * 
                      */
                     void SetSubdomainCount(const uint64_t& _subdomainCount);
 
                     /**
                      * 判断参数 SubdomainCount 是否已赋值
                      * @return SubdomainCount 是否已赋值
+                     * 
                      */
                     bool SubdomainCountHasBeenSet() const;
 
                     /**
                      * 获取The count of records returned in the list.
                      * @return ListCount The count of records returned in the list.
+                     * 
                      */
                     uint64_t GetListCount() const;
 
                     /**
                      * 设置The count of records returned in the list.
-                     * @param ListCount The count of records returned in the list.
+                     * @param _listCount The count of records returned in the list.
+                     * 
                      */
                     void SetListCount(const uint64_t& _listCount);
 
                     /**
                      * 判断参数 ListCount 是否已赋值
                      * @return ListCount 是否已赋值
+                     * 
                      */
                     bool ListCountHasBeenSet() const;
 
                     /**
                      * 获取The total record count.
                      * @return TotalCount The total record count.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 设置The total record count.
-                     * @param TotalCount The total record count.
+                     * @param _totalCount The total record count.
+                     * 
                      */
                     void SetTotalCount(const uint64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

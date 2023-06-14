@@ -50,6 +50,7 @@ namespace TencentCloud
                      * @return Filters Filter conditions.
 <li>service-template-group-name - String - (Filter condition) Protocol port template group name.</li>
 <li>service-template-group-id - String - (Filter condition) Protocol port template group instance ID, such as `ppmg-e6dy460g`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -57,51 +58,59 @@ namespace TencentCloud
                      * 设置Filter conditions.
 <li>service-template-group-name - String - (Filter condition) Protocol port template group name.</li>
 <li>service-template-group-id - String - (Filter condition) Protocol port template group instance ID, such as `ppmg-e6dy460g`.</li>
-                     * @param Filters Filter conditions.
+                     * @param _filters Filter conditions.
 <li>service-template-group-name - String - (Filter condition) Protocol port template group name.</li>
 <li>service-template-group-id - String - (Filter condition) Protocol port template group instance ID, such as `ppmg-e6dy460g`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. The default value is 0.
                      * @return Offset Offset. The default value is 0.
+                     * 
                      */
                     std::string GetOffset() const;
 
                     /**
                      * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * @param _offset Offset. The default value is 0.
+                     * 
                      */
                     void SetOffset(const std::string& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of values to be returned. The default value is 20. Maximum is 100.
                      * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * 
                      */
                     std::string GetLimit() const;
 
                     /**
                      * 设置Number of values to be returned. The default value is 20. Maximum is 100.
-                     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * @param _limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * 
                      */
                     void SetLimit(const std::string& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

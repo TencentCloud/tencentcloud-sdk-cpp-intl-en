@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The result of importing the OpenAPI
                      * @return Result The result of importing the OpenAPI
+                     * 
                      */
                     CreateApiRspSet GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

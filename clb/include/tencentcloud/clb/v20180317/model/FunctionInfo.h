@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Function namespace
                      * @return FunctionNamespace Function namespace
+                     * 
                      */
                     std::string GetFunctionNamespace() const;
 
                     /**
                      * 设置Function namespace
-                     * @param FunctionNamespace Function namespace
+                     * @param _functionNamespace Function namespace
+                     * 
                      */
                     void SetFunctionNamespace(const std::string& _functionNamespace);
 
                     /**
                      * 判断参数 FunctionNamespace 是否已赋值
                      * @return FunctionNamespace 是否已赋值
+                     * 
                      */
                     bool FunctionNamespaceHasBeenSet() const;
 
                     /**
                      * 获取Function name
                      * @return FunctionName Function name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name
-                     * @param FunctionName Function name
+                     * @param _functionName Function name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function version name or alias
                      * @return FunctionQualifier Function version name or alias
+                     * 
                      */
                     std::string GetFunctionQualifier() const;
 
                     /**
                      * 设置Function version name or alias
-                     * @param FunctionQualifier Function version name or alias
+                     * @param _functionQualifier Function version name or alias
+                     * 
                      */
                     void SetFunctionQualifier(const std::string& _functionQualifier);
 
                     /**
                      * 判断参数 FunctionQualifier 是否已赋值
                      * @return FunctionQualifier 是否已赋值
+                     * 
                      */
                     bool FunctionQualifierHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return FunctionQualifierType Function qualifier type. Values: `VERSION`, `ALIAS`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFunctionQualifierType() const;
 
                     /**
                      * 设置Function qualifier type. Values: `VERSION`, `ALIAS`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param FunctionQualifierType Function qualifier type. Values: `VERSION`, `ALIAS`.
+                     * @param _functionQualifierType Function qualifier type. Values: `VERSION`, `ALIAS`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFunctionQualifierType(const std::string& _functionQualifierType);
 
                     /**
                      * 判断参数 FunctionQualifierType 是否已赋值
                      * @return FunctionQualifierType 是否已赋值
+                     * 
                      */
                     bool FunctionQualifierTypeHasBeenSet() const;
 

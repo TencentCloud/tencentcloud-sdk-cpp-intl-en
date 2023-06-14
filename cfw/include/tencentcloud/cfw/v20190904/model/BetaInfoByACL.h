@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
                      * 设置Task ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskId Task ID.
+                     * @param _taskId Task ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskId(const int64_t& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskName Task name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Task name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskName Task name.
+                     * @param _taskName Task name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastTime Last execution time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastTime() const;
 
                     /**
                      * 设置Last execution time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LastTime Last execution time
+                     * @param _lastTime Last execution time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastTime(const std::string& _lastTime);
 
                     /**
                      * 判断参数 LastTime 是否已赋值
                      * @return LastTime 是否已赋值
+                     * 
                      */
                     bool LastTimeHasBeenSet() const;
 

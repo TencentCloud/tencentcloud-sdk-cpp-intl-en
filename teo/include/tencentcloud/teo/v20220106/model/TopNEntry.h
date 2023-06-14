@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Entry key
                      * @return Key Entry key
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Entry key
-                     * @param Key Entry key
+                     * @param _key Entry key
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Top N data
                      * @return Value Top N data
+                     * 
                      */
                     std::vector<TopNEntryValue> GetValue() const;
 
                     /**
                      * 设置Top N data
-                     * @param Value Top N data
+                     * @param _value Top N data
+                     * 
                      */
                     void SetValue(const std::vector<TopNEntryValue>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

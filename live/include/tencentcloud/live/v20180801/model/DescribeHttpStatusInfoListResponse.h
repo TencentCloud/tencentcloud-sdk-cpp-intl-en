@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Playback status code list.
                      * @return DataInfoList Playback status code list.
+                     * 
                      */
                     std::vector<HttpStatusData> GetDataInfoList() const;
 
                     /**
                      * 判断参数 DataInfoList 是否已赋值
                      * @return DataInfoList 是否已赋值
+                     * 
                      */
                     bool DataInfoListHasBeenSet() const;
 

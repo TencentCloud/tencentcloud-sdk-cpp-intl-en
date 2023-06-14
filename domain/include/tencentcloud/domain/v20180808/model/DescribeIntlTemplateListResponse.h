@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The registrant profile list information.
                      * @return TemplateSet The registrant profile list information.
+                     * 
                      */
                     std::vector<IntlTemplate> GetTemplateSet() const;
 
                     /**
                      * 判断参数 TemplateSet 是否已赋值
                      * @return TemplateSet 是否已赋值
+                     * 
                      */
                     bool TemplateSetHasBeenSet() const;
 
                     /**
                      * 获取The total count.
                      * @return TotalCount The total count.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

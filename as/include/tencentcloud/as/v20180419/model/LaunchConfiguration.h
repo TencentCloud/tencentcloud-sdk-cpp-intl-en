@@ -62,180 +62,210 @@ namespace TencentCloud
                     /**
                      * 获取Project ID of the instance.
                      * @return ProjectId Project ID of the instance.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID of the instance.
-                     * @param ProjectId Project ID of the instance.
+                     * @param _projectId Project ID of the instance.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Launch configuration ID
                      * @return LaunchConfigurationId Launch configuration ID
+                     * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
                      * 设置Launch configuration ID
-                     * @param LaunchConfigurationId Launch configuration ID
+                     * @param _launchConfigurationId Launch configuration ID
+                     * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
 
                     /**
                      * 判断参数 LaunchConfigurationId 是否已赋值
                      * @return LaunchConfigurationId 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationIdHasBeenSet() const;
 
                     /**
                      * 获取Launch configuration name.
                      * @return LaunchConfigurationName Launch configuration name.
+                     * 
                      */
                     std::string GetLaunchConfigurationName() const;
 
                     /**
                      * 设置Launch configuration name.
-                     * @param LaunchConfigurationName Launch configuration name.
+                     * @param _launchConfigurationName Launch configuration name.
+                     * 
                      */
                     void SetLaunchConfigurationName(const std::string& _launchConfigurationName);
 
                     /**
                      * 判断参数 LaunchConfigurationName 是否已赋值
                      * @return LaunchConfigurationName 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationNameHasBeenSet() const;
 
                     /**
                      * 获取Instance model.
                      * @return InstanceType Instance model.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance model.
-                     * @param InstanceType Instance model.
+                     * @param _instanceType Instance model.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Information of the instance's system disk configuration.
                      * @return SystemDisk Information of the instance's system disk configuration.
+                     * 
                      */
                     SystemDisk GetSystemDisk() const;
 
                     /**
                      * 设置Information of the instance's system disk configuration.
-                     * @param SystemDisk Information of the instance's system disk configuration.
+                     * @param _systemDisk Information of the instance's system disk configuration.
+                     * 
                      */
                     void SetSystemDisk(const SystemDisk& _systemDisk);
 
                     /**
                      * 判断参数 SystemDisk 是否已赋值
                      * @return SystemDisk 是否已赋值
+                     * 
                      */
                     bool SystemDiskHasBeenSet() const;
 
                     /**
                      * 获取Information of the instance's data disk configuration.
                      * @return DataDisks Information of the instance's data disk configuration.
+                     * 
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
                      * 设置Information of the instance's data disk configuration.
-                     * @param DataDisks Information of the instance's data disk configuration.
+                     * @param _dataDisks Information of the instance's data disk configuration.
+                     * 
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
                     /**
                      * 判断参数 DataDisks 是否已赋值
                      * @return DataDisks 是否已赋值
+                     * 
                      */
                     bool DataDisksHasBeenSet() const;
 
                     /**
                      * 获取Instance login settings.
                      * @return LoginSettings Instance login settings.
+                     * 
                      */
                     LimitedLoginSettings GetLoginSettings() const;
 
                     /**
                      * 设置Instance login settings.
-                     * @param LoginSettings Instance login settings.
+                     * @param _loginSettings Instance login settings.
+                     * 
                      */
                     void SetLoginSettings(const LimitedLoginSettings& _loginSettings);
 
                     /**
                      * 判断参数 LoginSettings 是否已赋值
                      * @return LoginSettings 是否已赋值
+                     * 
                      */
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
                      * 获取Information of the public network bandwidth configuration.
                      * @return InternetAccessible Information of the public network bandwidth configuration.
+                     * 
                      */
                     InternetAccessible GetInternetAccessible() const;
 
                     /**
                      * 设置Information of the public network bandwidth configuration.
-                     * @param InternetAccessible Information of the public network bandwidth configuration.
+                     * @param _internetAccessible Information of the public network bandwidth configuration.
+                     * 
                      */
                     void SetInternetAccessible(const InternetAccessible& _internetAccessible);
 
                     /**
                      * 判断参数 InternetAccessible 是否已赋值
                      * @return InternetAccessible 是否已赋值
+                     * 
                      */
                     bool InternetAccessibleHasBeenSet() const;
 
                     /**
                      * 获取Security group of the instance.
                      * @return SecurityGroupIds Security group of the instance.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Security group of the instance.
-                     * @param SecurityGroupIds Security group of the instance.
+                     * @param _securityGroupIds Security group of the instance.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Auto scaling group associated with the launch configuration.
                      * @return AutoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
+                     * 
                      */
                     std::vector<AutoScalingGroupAbstract> GetAutoScalingGroupAbstractSet() const;
 
                     /**
                      * 设置Auto scaling group associated with the launch configuration.
-                     * @param AutoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
+                     * @param _autoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
+                     * 
                      */
                     void SetAutoScalingGroupAbstractSet(const std::vector<AutoScalingGroupAbstract>& _autoScalingGroupAbstractSet);
 
                     /**
                      * 判断参数 AutoScalingGroupAbstractSet 是否已赋值
                      * @return AutoScalingGroupAbstractSet 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupAbstractSetHasBeenSet() const;
 
@@ -244,92 +274,107 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserData Custom data.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserData() const;
 
                     /**
                      * 设置Custom data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserData Custom data.
+                     * @param _userData Custom data.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserData(const std::string& _userData);
 
                     /**
                      * 判断参数 UserData 是否已赋值
                      * @return UserData 是否已赋值
+                     * 
                      */
                     bool UserDataHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the launch configuration.
                      * @return CreatedTime Creation time of the launch configuration.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time of the launch configuration.
-                     * @param CreatedTime Creation time of the launch configuration.
+                     * @param _createdTime Creation time of the launch configuration.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Conditions of enhancement services for the instance and their settings.
                      * @return EnhancedService Conditions of enhancement services for the instance and their settings.
+                     * 
                      */
                     EnhancedService GetEnhancedService() const;
 
                     /**
                      * 设置Conditions of enhancement services for the instance and their settings.
-                     * @param EnhancedService Conditions of enhancement services for the instance and their settings.
+                     * @param _enhancedService Conditions of enhancement services for the instance and their settings.
+                     * 
                      */
                     void SetEnhancedService(const EnhancedService& _enhancedService);
 
                     /**
                      * 判断参数 EnhancedService 是否已赋值
                      * @return EnhancedService 是否已赋值
+                     * 
                      */
                     bool EnhancedServiceHasBeenSet() const;
 
                     /**
                      * 获取Image ID.
                      * @return ImageId Image ID.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID.
-                     * @param ImageId Image ID.
+                     * @param _imageId Image ID.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
                      * @return LaunchConfigurationStatus Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
+                     * 
                      */
                     std::string GetLaunchConfigurationStatus() const;
 
                     /**
                      * 设置Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
-                     * @param LaunchConfigurationStatus Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
+                     * @param _launchConfigurationStatus Current status of the launch configuration. Value range: <br><li>NORMAL: normal <br><li>IMAGE_ABNORMAL: Exception with the image of the launch configuration <br><li>CBS_SNAP_ABNORMAL: Exception with the data disk snapshot of the launch configuration <br><li>SECURITY_GROUP_ABNORMAL: Exception with the security group of the launch configuration<br>
+                     * 
                      */
                     void SetLaunchConfigurationStatus(const std::string& _launchConfigurationStatus);
 
                     /**
                      * 判断参数 LaunchConfigurationStatus 是否已赋值
                      * @return LaunchConfigurationStatus 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationStatusHasBeenSet() const;
 
@@ -340,6 +385,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
 <br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
 <br><li>SPOTPAID: spot instance
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
@@ -347,15 +393,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
 <br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
 <br><li>SPOTPAID: spot instance
-                     * @param InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+                     * @param _instanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
 <br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
 <br><li>SPOTPAID: spot instance
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
@@ -364,56 +412,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InstanceMarketOptionsRequest GetInstanceMarketOptions() const;
 
                     /**
                      * 设置Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
+                     * @param _instanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceMarketOptions(const InstanceMarketOptionsRequest& _instanceMarketOptions);
 
                     /**
                      * 判断参数 InstanceMarketOptions 是否已赋值
                      * @return InstanceMarketOptions 是否已赋值
+                     * 
                      */
                     bool InstanceMarketOptionsHasBeenSet() const;
 
                     /**
                      * 获取List of instance models.
                      * @return InstanceTypes List of instance models.
+                     * 
                      */
                     std::vector<std::string> GetInstanceTypes() const;
 
                     /**
                      * 设置List of instance models.
-                     * @param InstanceTypes List of instance models.
+                     * @param _instanceTypes List of instance models.
+                     * 
                      */
                     void SetInstanceTypes(const std::vector<std::string>& _instanceTypes);
 
                     /**
                      * 判断参数 InstanceTypes 是否已赋值
                      * @return InstanceTypes 是否已赋值
+                     * 
                      */
                     bool InstanceTypesHasBeenSet() const;
 
                     /**
                      * 获取List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
                      * @return InstanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+                     * 
                      */
                     std::vector<InstanceTag> GetInstanceTags() const;
 
                     /**
                      * 设置List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
-                     * @param InstanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+                     * @param _instanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+                     * 
                      */
                     void SetInstanceTags(const std::vector<InstanceTag>& _instanceTags);
 
                     /**
                      * 判断参数 InstanceTags 是否已赋值
                      * @return InstanceTags 是否已赋值
+                     * 
                      */
                     bool InstanceTagsHasBeenSet() const;
 
@@ -422,146 +479,170 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Tag list.
+                     * @param _tags Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Version
                      * @return VersionNumber Version
+                     * 
                      */
                     int64_t GetVersionNumber() const;
 
                     /**
                      * 设置Version
-                     * @param VersionNumber Version
+                     * @param _versionNumber Version
+                     * 
                      */
                     void SetVersionNumber(const int64_t& _versionNumber);
 
                     /**
                      * 判断参数 VersionNumber 是否已赋值
                      * @return VersionNumber 是否已赋值
+                     * 
                      */
                     bool VersionNumberHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdatedTime Update time
+                     * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdatedTime Update time
+                     * @param _updatedTime Update time
+                     * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
 
                     /**
                      * 判断参数 UpdatedTime 是否已赋值
                      * @return UpdatedTime 是否已赋值
+                     * 
                      */
                     bool UpdatedTimeHasBeenSet() const;
 
                     /**
                      * 获取CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
                      * @return CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 
                      */
                     std::string GetCamRoleName() const;
 
                     /**
                      * 设置CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
-                     * @param CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * @param _camRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+                     * 
                      */
                     void SetCamRoleName(const std::string& _camRoleName);
 
                     /**
                      * 判断参数 CamRoleName 是否已赋值
                      * @return CamRoleName 是否已赋值
+                     * 
                      */
                     bool CamRoleNameHasBeenSet() const;
 
                     /**
                      * 获取Value of InstanceTypesCheckPolicy upon the last operation.
                      * @return LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
+                     * 
                      */
                     std::string GetLastOperationInstanceTypesCheckPolicy() const;
 
                     /**
                      * 设置Value of InstanceTypesCheckPolicy upon the last operation.
-                     * @param LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
+                     * @param _lastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
+                     * 
                      */
                     void SetLastOperationInstanceTypesCheckPolicy(const std::string& _lastOperationInstanceTypesCheckPolicy);
 
                     /**
                      * 判断参数 LastOperationInstanceTypesCheckPolicy 是否已赋值
                      * @return LastOperationInstanceTypesCheckPolicy 是否已赋值
+                     * 
                      */
                     bool LastOperationInstanceTypesCheckPolicyHasBeenSet() const;
 
                     /**
                      * 获取CVM hostname settings.
                      * @return HostNameSettings CVM hostname settings.
+                     * 
                      */
                     HostNameSettings GetHostNameSettings() const;
 
                     /**
                      * 设置CVM hostname settings.
-                     * @param HostNameSettings CVM hostname settings.
+                     * @param _hostNameSettings CVM hostname settings.
+                     * 
                      */
                     void SetHostNameSettings(const HostNameSettings& _hostNameSettings);
 
                     /**
                      * 判断参数 HostNameSettings 是否已赋值
                      * @return HostNameSettings 是否已赋值
+                     * 
                      */
                     bool HostNameSettingsHasBeenSet() const;
 
                     /**
                      * 获取Settings of CVM instance names
                      * @return InstanceNameSettings Settings of CVM instance names
+                     * 
                      */
                     InstanceNameSettings GetInstanceNameSettings() const;
 
                     /**
                      * 设置Settings of CVM instance names
-                     * @param InstanceNameSettings Settings of CVM instance names
+                     * @param _instanceNameSettings Settings of CVM instance names
+                     * 
                      */
                     void SetInstanceNameSettings(const InstanceNameSettings& _instanceNameSettings);
 
                     /**
                      * 判断参数 InstanceNameSettings 是否已赋值
                      * @return InstanceNameSettings 是否已赋值
+                     * 
                      */
                     bool InstanceNameSettingsHasBeenSet() const;
 
                     /**
                      * 获取Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
                      * @return InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
                      * 设置Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-                     * @param InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * @param _instanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
                     /**
                      * 判断参数 InstanceChargePrepaid 是否已赋值
                      * @return InstanceChargePrepaid 是否已赋值
+                     * 
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
 
@@ -572,6 +653,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+                     * 
                      */
                     std::string GetDiskTypePolicy() const;
 
@@ -579,15 +661,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
-                     * @param DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+                     * @param _diskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+                     * 
                      */
                     void SetDiskTypePolicy(const std::string& _diskTypePolicy);
 
                     /**
                      * 判断参数 DiskTypePolicy 是否已赋值
                      * @return DiskTypePolicy 是否已赋值
+                     * 
                      */
                     bool DiskTypePolicyHasBeenSet() const;
 
@@ -596,38 +680,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field is default to empty
                      * @return HpcClusterId HPC ID<br>
 Note: This field is default to empty
+                     * 
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
                      * 设置HPC ID<br>
 Note: This field is default to empty
-                     * @param HpcClusterId HPC ID<br>
+                     * @param _hpcClusterId HPC ID<br>
 Note: This field is default to empty
+                     * 
                      */
                     void SetHpcClusterId(const std::string& _hpcClusterId);
 
                     /**
                      * 判断参数 HpcClusterId 是否已赋值
                      * @return HpcClusterId 是否已赋值
+                     * 
                      */
                     bool HpcClusterIdHasBeenSet() const;
 
                     /**
                      * 获取IPv6 public network bandwidth configuration.
                      * @return IPv6InternetAccessible IPv6 public network bandwidth configuration.
+                     * 
                      */
                     IPv6InternetAccessible GetIPv6InternetAccessible() const;
 
                     /**
                      * 设置IPv6 public network bandwidth configuration.
-                     * @param IPv6InternetAccessible IPv6 public network bandwidth configuration.
+                     * @param _iPv6InternetAccessible IPv6 public network bandwidth configuration.
+                     * 
                      */
                     void SetIPv6InternetAccessible(const IPv6InternetAccessible& _iPv6InternetAccessible);
 
                     /**
                      * 判断参数 IPv6InternetAccessible 是否已赋值
                      * @return IPv6InternetAccessible 是否已赋值
+                     * 
                      */
                     bool IPv6InternetAccessibleHasBeenSet() const;
 

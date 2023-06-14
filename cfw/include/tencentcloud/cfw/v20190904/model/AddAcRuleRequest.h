@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取-1: lowest priority; 1: highest priority
                      * @return OrderIndex -1: lowest priority; 1: highest priority
+                     * 
                      */
                     std::string GetOrderIndex() const;
 
                     /**
                      * 设置-1: lowest priority; 1: highest priority
-                     * @param OrderIndex -1: lowest priority; 1: highest priority
+                     * @param _orderIndex -1: lowest priority; 1: highest priority
+                     * 
                      */
                     void SetOrderIndex(const std::string& _orderIndex);
 
                     /**
                      * 判断参数 OrderIndex 是否已赋值
                      * @return OrderIndex 是否已赋值
+                     * 
                      */
                     bool OrderIndexHasBeenSet() const;
 
@@ -69,6 +72,7 @@ log: observe
 accept: allow
 drop: deny
 log: observe
+                     * 
                      */
                     std::string GetRuleAction() const;
 
@@ -77,16 +81,18 @@ log: observe
 accept: allow
 drop: deny
 log: observe
-                     * @param RuleAction The action that Cloud Firewall performs on the traffic. Valid values:
+                     * @param _ruleAction The action that Cloud Firewall performs on the traffic. Valid values:
 accept: allow
 drop: deny
 log: observe
+                     * 
                      */
                     void SetRuleAction(const std::string& _ruleAction);
 
                     /**
                      * 判断参数 RuleAction 是否已赋值
                      * @return RuleAction 是否已赋值
+                     * 
                      */
                     bool RuleActionHasBeenSet() const;
 
@@ -97,6 +103,7 @@ out: outgoing traffic access control
                      * @return Direction The traffic direction for access control rules. Valid values:
 in: incoming traffic access control
 out: outgoing traffic access control
+                     * 
                      */
                     std::string GetDirection() const;
 
@@ -104,33 +111,38 @@ out: outgoing traffic access control
                      * 设置The traffic direction for access control rules. Valid values:
 in: incoming traffic access control
 out: outgoing traffic access control
-                     * @param Direction The traffic direction for access control rules. Valid values:
+                     * @param _direction The traffic direction for access control rules. Valid values:
 in: incoming traffic access control
 out: outgoing traffic access control
+                     * 
                      */
                     void SetDirection(const std::string& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取The description of access control rules.
                      * @return Description The description of access control rules.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置The description of access control rules.
-                     * @param Description The description of access control rules.
+                     * @param _description The description of access control rules.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -147,6 +159,7 @@ location: source region
 template: CFW address template
 instance: instance ID
 vendor: Cloud vendor
+                     * 
                      */
                     std::string GetSourceType() const;
 
@@ -157,18 +170,20 @@ location: source region
 template: CFW address template
 instance: instance ID
 vendor: Cloud vendor
-                     * @param SourceType The type of source address in access control rules. Valid values:
+                     * @param _sourceType The type of source address in access control rules. Valid values:
 net: source IP or range (IP or CIDR)
 location: source region
 template: CFW address template
 instance: instance ID
 vendor: Cloud vendor
+                     * 
                      */
                     void SetSourceType(const std::string& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
@@ -201,6 +216,7 @@ For example, ins-xxxxx
 
 When `SourceType` is `vendor`, `SourceContent` is the cloud service provider.
 Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`. 
+                     * 
                      */
                     std::string GetSourceContent() const;
 
@@ -219,7 +235,7 @@ For example, ins-xxxxx
 
 When `SourceType` is `vendor`, `SourceContent` is the cloud service provider.
 Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`. 
-                     * @param SourceContent The source address in the access control policy. 
+                     * @param _sourceContent The source address in the access control policy. 
 When `SourceType` is `net`, `SourceContent` is the source IP or CIDR block.
 For example: 1.1.1.0/24
 
@@ -233,12 +249,14 @@ For example, ins-xxxxx
 
 When `SourceType` is `vendor`, `SourceContent` is the cloud service provider.
 Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`. 
+                     * 
                      */
                     void SetSourceContent(const std::string& _sourceContent);
 
                     /**
                      * 判断参数 SourceContent 是否已赋值
                      * @return SourceContent 是否已赋值
+                     * 
                      */
                     bool SourceContentHasBeenSet() const;
 
@@ -257,6 +275,7 @@ template: CFW address template
 instance: instance ID
 vendor: Cloud vendor
 domain: Domain name or IP.
+                     * 
                      */
                     std::string GetDestType() const;
 
@@ -268,19 +287,21 @@ template: CFW address template
 instance: instance ID
 vendor: Cloud vendor
 domain: Domain name or IP.
-                     * @param DestType The type of destination address in access control rules. Valid values:
+                     * @param _destType The type of destination address in access control rules. Valid values:
 net: destination IP or range (IP or CIDR)
 location: source region
 template: CFW address template
 instance: instance ID
 vendor: Cloud vendor
 domain: Domain name or IP.
+                     * 
                      */
                     void SetDestType(const std::string& _destType);
 
                     /**
                      * 判断参数 DestType 是否已赋值
                      * @return DestType 是否已赋值
+                     * 
                      */
                     bool DestTypeHasBeenSet() const;
 
@@ -319,6 +340,7 @@ For example, *.qq.com
 
 When `DestType`, `DestContent` is the selected cloud service provider.
 Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`. 
+                     * 
                      */
                     std::string GetDestContent() const;
 
@@ -340,7 +362,7 @@ For example, *.qq.com
 
 When `DestType`, `DestContent` is the selected cloud service provider.
 Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`. 
-                     * @param DestContent The destination address in the access control policy. 
+                     * @param _destContent The destination address in the access control policy. 
 When `DestType` is `net`, `DestContent` is the destination IP or CIDR block.
 For example: 1.1.1.0/24
 
@@ -357,12 +379,14 @@ For example, *.qq.com
 
 When `DestType`, `DestContent` is the selected cloud service provider.
 Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`. 
+                     * 
                      */
                     void SetDestContent(const std::string& _destContent);
 
                     /**
                      * 判断参数 DestContent 是否已赋值
                      * @return DestContent 是否已赋值
+                     * 
                      */
                     bool DestContentHasBeenSet() const;
 
@@ -373,6 +397,7 @@ Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`.
                      * @return Port The port to apply access control rules. Valid values:
 -1/-1: all ports
 80,443: 80 or 443
+                     * 
                      */
                     std::string GetPort() const;
 
@@ -380,33 +405,38 @@ Values: `aws`, `huawei`, `tencent`, `aliyun`, `azure` and `all`.
                      * 设置The port to apply access control rules. Valid values:
 -1/-1: all ports
 80,443: 80 or 443
-                     * @param Port The port to apply access control rules. Valid values:
+                     * @param _port The port to apply access control rules. Valid values:
 -1/-1: all ports
 80,443: 80 or 443
+                     * 
                      */
                     void SetPort(const std::string& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取The protocol type of traffic in access control rules. Valid value: TCP. Only TCP is supported for edge firewall rules. If this parameter is not specified, it defaults to TCP.
                      * @return Protocol The protocol type of traffic in access control rules. Valid value: TCP. Only TCP is supported for edge firewall rules. If this parameter is not specified, it defaults to TCP.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The protocol type of traffic in access control rules. Valid value: TCP. Only TCP is supported for edge firewall rules. If this parameter is not specified, it defaults to TCP.
-                     * @param Protocol The protocol type of traffic in access control rules. Valid value: TCP. Only TCP is supported for edge firewall rules. If this parameter is not specified, it defaults to TCP.
+                     * @param _protocol The protocol type of traffic in access control rules. Valid value: TCP. Only TCP is supported for edge firewall rules. If this parameter is not specified, it defaults to TCP.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -417,6 +447,7 @@ TLS/SSL
                      * @return ApplicationName The Layer 7 protocol. Valid values:
 HTTP/HTTPS
 TLS/SSL
+                     * 
                      */
                     std::string GetApplicationName() const;
 
@@ -424,15 +455,17 @@ TLS/SSL
                      * 设置The Layer 7 protocol. Valid values:
 HTTP/HTTPS
 TLS/SSL
-                     * @param ApplicationName The Layer 7 protocol. Valid values:
+                     * @param _applicationName The Layer 7 protocol. Valid values:
 HTTP/HTTPS
 TLS/SSL
+                     * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
 
                     /**
                      * 判断参数 ApplicationName 是否已赋值
                      * @return ApplicationName 是否已赋值
+                     * 
                      */
                     bool ApplicationNameHasBeenSet() const;
 
@@ -441,20 +474,23 @@ TLS/SSL
 true: enable; false: disable
                      * @return Enable Indicates whether to enable the rules. Default: enable. Valid values:
 true: enable; false: disable
+                     * 
                      */
                     std::string GetEnable() const;
 
                     /**
                      * 设置Indicates whether to enable the rules. Default: enable. Valid values:
 true: enable; false: disable
-                     * @param Enable Indicates whether to enable the rules. Default: enable. Valid values:
+                     * @param _enable Indicates whether to enable the rules. Default: enable. Valid values:
 true: enable; false: disable
+                     * 
                      */
                     void SetEnable(const std::string& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

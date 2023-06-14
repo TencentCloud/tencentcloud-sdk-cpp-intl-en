@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Database username
                      * @return UserName Database username
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Database username
-                     * @param UserName Database username
+                     * @param _userName Database username
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Account permission change information
                      * @return DBPrivileges Account permission change information
+                     * 
                      */
                     std::vector<DBPrivilegeModifyInfo> GetDBPrivileges() const;
 
                     /**
                      * 设置Account permission change information
-                     * @param DBPrivileges Account permission change information
+                     * @param _dBPrivileges Account permission change information
+                     * 
                      */
                     void SetDBPrivileges(const std::vector<DBPrivilegeModifyInfo>& _dBPrivileges);
 
                     /**
                      * 判断参数 DBPrivileges 是否已赋值
                      * @return DBPrivileges 是否已赋值
+                     * 
                      */
                     bool DBPrivilegesHasBeenSet() const;
 
                     /**
                      * 获取Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
                      * @return IsAdmin Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
+                     * 
                      */
                     bool GetIsAdmin() const;
 
                     /**
                      * 设置Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
-                     * @param IsAdmin Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
+                     * @param _isAdmin Whether the account has the admin permission. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. The admin permission is disabled by default).
+                     * 
                      */
                     void SetIsAdmin(const bool& _isAdmin);
 
                     /**
                      * 判断参数 IsAdmin 是否已赋值
                      * @return IsAdmin 是否已赋值
+                     * 
                      */
                     bool IsAdminHasBeenSet() const;
 
                     /**
                      * 获取Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
                      * @return AccountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+                     * 
                      */
                     std::string GetAccountType() const;
 
                     /**
                      * 设置Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
-                     * @param AccountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+                     * @param _accountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+                     * 
                      */
                     void SetAccountType(const std::string& _accountType);
 
                     /**
                      * 判断参数 AccountType 是否已赋值
                      * @return AccountType 是否已赋值
+                     * 
                      */
                     bool AccountTypeHasBeenSet() const;
 

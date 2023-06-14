@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of regions
                      * @return Count Total number of regions
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Region information
                      * @return GeoIp Region information
+                     * 
                      */
                     std::vector<GeoIp> GetGeoIp() const;
 
                     /**
                      * 判断参数 GeoIp 是否已赋值
                      * @return GeoIp 是否已赋值
+                     * 
                      */
                     bool GeoIpHasBeenSet() const;
 

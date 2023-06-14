@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Record name
                      * @return Name Record name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Record name
-                     * @param Name Record name
+                     * @param _name Record name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Cname CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Cname CNAME address
+                     * @param _cname CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 
@@ -95,6 +101,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `active`: Activated
 `moved`: Not activated
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -103,16 +110,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `active`: Activated
 `moved`: Not activated
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Status Status
+                     * @param _status Status
 `active`: Activated
 `moved`: Not activated
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

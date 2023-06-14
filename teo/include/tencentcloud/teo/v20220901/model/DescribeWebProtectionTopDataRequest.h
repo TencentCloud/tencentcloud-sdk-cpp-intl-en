@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The start time.
                      * @return StartTime The start time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time.
-                     * @param StartTime The start time.
+                     * @param _startTime The start time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time.
                      * @return EndTime The end time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time.
-                     * @param EndTime The end time.
+                     * @param _endTime The end time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -92,6 +98,7 @@ namespace TencentCloud
 <li>`ccAcl_requestNum_url`: Top-ranked URLs by custom rule requests.</li>
 <li>`ccAcl_requestNum_cip`: Top-ranked client IPs by custom rule execution requests.</li>
 <li>`ccAcl_cipRequestNum_region`: Top-ranked clients by custom rule execution requests.</li>
+                     * 
                      */
                     std::string GetMetricName() const;
 
@@ -102,18 +109,20 @@ namespace TencentCloud
 <li>`ccAcl_requestNum_url`: Top-ranked URLs by custom rule requests.</li>
 <li>`ccAcl_requestNum_cip`: Top-ranked client IPs by custom rule execution requests.</li>
 <li>`ccAcl_cipRequestNum_region`: Top-ranked clients by custom rule execution requests.</li>
-                     * @param MetricName List of statistical metric. Values:
+                     * @param _metricName List of statistical metric. Values:
 <li>`ccRate_requestNum_url`: Top-ranked URLs by rate limiting requests.</li>
 <li>`ccRate_cipRequestNum_region`: Top-ranked client IPs by rate limiting requests.</li>
 <li>`ccAcl_requestNum_url`: Top-ranked URLs by custom rule requests.</li>
 <li>`ccAcl_requestNum_cip`: Top-ranked client IPs by custom rule execution requests.</li>
 <li>`ccAcl_cipRequestNum_region`: Top-ranked clients by custom rule execution requests.</li>
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
@@ -128,6 +137,7 @@ namespace TencentCloud
 <li>`5min`: 5 minute;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+                     * 
                      */
                     std::string GetInterval() const;
 
@@ -137,71 +147,82 @@ namespace TencentCloud
 <li>`5min`: 5 minute;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-                     * @param Interval The query time granularity. Values:
+                     * @param _interval The query time granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minute;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取List of sites to be queried. All sites will be selected if this field is not specified.
                      * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * @param _zoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
                      * @return Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-                     * @param Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * @param _domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
                      * @return Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
-                     * @param Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * @param _limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -210,20 +231,23 @@ namespace TencentCloud
 <li>`action`: The action;</li>
                      * @return QueryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
 <li>`action`: The action;</li>
+                     * 
                      */
                     std::vector<QueryCondition> GetQueryCondition() const;
 
                     /**
                      * 设置The key of the parameter QueryCondition, which is used to specify a filter. Values:
 <li>`action`: The action;</li>
-                     * @param QueryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
+                     * @param _queryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
 <li>`action`: The action;</li>
+                     * 
                      */
                     void SetQueryCondition(const std::vector<QueryCondition>& _queryCondition);
 
                     /**
                      * 判断参数 QueryCondition 是否已赋值
                      * @return QueryCondition 是否已赋值
+                     * 
                      */
                     bool QueryConditionHasBeenSet() const;
 
@@ -234,6 +258,7 @@ namespace TencentCloud
                      * @return Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -241,15 +266,17 @@ namespace TencentCloud
                      * 设置Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     * @param Area Data storage region. Values:
+                     * @param _area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether it is enabled
                      * @return Enabled Whether it is enabled
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether it is enabled
-                     * @param Enabled Whether it is enabled
+                     * @param _enabled Whether it is enabled
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取CWP version. Valid values: `0` (CWP Pro), `1` (CWP Pro)
                      * @return Version CWP version. Valid values: `0` (CWP Pro), `1` (CWP Pro)
+                     * 
                      */
                     int64_t GetVersion() const;
 
                     /**
                      * 设置CWP version. Valid values: `0` (CWP Pro), `1` (CWP Pro)
-                     * @param Version CWP version. Valid values: `0` (CWP Pro), `1` (CWP Pro)
+                     * @param _version CWP version. Valid values: `0` (CWP Pro), `1` (CWP Pro)
+                     * 
                      */
                     void SetVersion(const int64_t& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 

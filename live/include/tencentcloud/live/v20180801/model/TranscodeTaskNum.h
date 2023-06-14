@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The time of query.
                      * @return Time The time of query.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置The time of query.
-                     * @param Time The time of query.
+                     * @param _time The time of query.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取The bitrate.
                      * @return CodeRate The bitrate.
+                     * 
                      */
                     uint64_t GetCodeRate() const;
 
                     /**
                      * 设置The bitrate.
-                     * @param CodeRate The bitrate.
+                     * @param _codeRate The bitrate.
+                     * 
                      */
                     void SetCodeRate(const uint64_t& _codeRate);
 
                     /**
                      * 判断参数 CodeRate 是否已赋值
                      * @return CodeRate 是否已赋值
+                     * 
                      */
                     bool CodeRateHasBeenSet() const;
 
                     /**
                      * 获取The number of tasks.
                      * @return Num The number of tasks.
+                     * 
                      */
                     uint64_t GetNum() const;
 
                     /**
                      * 设置The number of tasks.
-                     * @param Num The number of tasks.
+                     * @param _num The number of tasks.
+                     * 
                      */
                     void SetNum(const uint64_t& _num);
 
                     /**
                      * 判断参数 Num 是否已赋值
                      * @return Num 是否已赋值
+                     * 
                      */
                     bool NumHasBeenSet() const;
 

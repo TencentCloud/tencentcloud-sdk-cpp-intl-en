@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Account ID corresponding to the custom multi-factor verification Token
                      * @return Uin Account ID corresponding to the custom multi-factor verification Token
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 

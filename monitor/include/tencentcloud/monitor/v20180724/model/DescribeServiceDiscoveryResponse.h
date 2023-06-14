@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServiceDiscoverySet List of returned scrape configurations
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ServiceDiscoveryItem> GetServiceDiscoverySet() const;
 
                     /**
                      * 判断参数 ServiceDiscoverySet 是否已赋值
                      * @return ServiceDiscoverySet 是否已赋值
+                     * 
                      */
                     bool ServiceDiscoverySetHasBeenSet() const;
 

@@ -54,54 +54,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a content audit template.
                      * @return Definition Unique ID of a content audit template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Unique ID of a content audit template.
-                     * @param Definition Unique ID of a content audit template.
+                     * @param _definition Unique ID of a content audit template.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Name of a content audit template. Length limit: 64 characters.
                      * @return Name Name of a content audit template. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a content audit template. Length limit: 64 characters.
-                     * @param Name Name of a content audit template. Length limit: 64 characters.
+                     * @param _name Name of a content audit template. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description of a content audit template. Length limit: 256 characters.
                      * @return Comment Description of a content audit template. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Description of a content audit template. Length limit: 256 characters.
-                     * @param Comment Description of a content audit template. Length limit: 256 characters.
+                     * @param _comment Description of a content audit template. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -110,20 +119,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PornConfigure Porn information detection control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PornConfigureInfo GetPornConfigure() const;
 
                     /**
                      * 设置Porn information detection control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PornConfigure Porn information detection control parameter.
+                     * @param _pornConfigure Porn information detection control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPornConfigure(const PornConfigureInfo& _pornConfigure);
 
                     /**
                      * 判断参数 PornConfigure 是否已赋值
                      * @return PornConfigure 是否已赋值
+                     * 
                      */
                     bool PornConfigureHasBeenSet() const;
 
@@ -132,20 +144,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TerrorismConfigure The parameters for detecting sensitive information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
                      * 设置The parameters for detecting sensitive information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TerrorismConfigure The parameters for detecting sensitive information.
+                     * @param _terrorismConfigure The parameters for detecting sensitive information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
 
                     /**
                      * 判断参数 TerrorismConfigure 是否已赋值
                      * @return TerrorismConfigure 是否已赋值
+                     * 
                      */
                     bool TerrorismConfigureHasBeenSet() const;
 
@@ -154,20 +169,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PoliticalConfigure The parameters for detecting sensitive information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
                      * 设置The parameters for detecting sensitive information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PoliticalConfigure The parameters for detecting sensitive information.
+                     * @param _politicalConfigure The parameters for detecting sensitive information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
 
                     /**
                      * 判断参数 PoliticalConfigure 是否已赋值
                      * @return PoliticalConfigure 是否已赋值
+                     * 
                      */
                     bool PoliticalConfigureHasBeenSet() const;
 
@@ -180,6 +198,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProhibitedConfigureInfo GetProhibitedConfigure() const;
 
@@ -188,16 +207,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+                     * @param _prohibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfo& _prohibitedConfigure);
 
                     /**
                      * 判断参数 ProhibitedConfigure 是否已赋值
                      * @return ProhibitedConfigure 是否已赋值
+                     * 
                      */
                     bool ProhibitedConfigureHasBeenSet() const;
 
@@ -206,56 +227,65 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserDefineConfigure Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     UserDefineConfigureInfo GetUserDefineConfigure() const;
 
                     /**
                      * 设置Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserDefineConfigure Custom content audit control parameter.
+                     * @param _userDefineConfigure Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfo& _userDefineConfigure);
 
                     /**
                      * 判断参数 UserDefineConfigure 是否已赋值
                      * @return UserDefineConfigure 是否已赋值
+                     * 
                      */
                     bool UserDefineConfigureHasBeenSet() const;
 
                     /**
                      * 获取Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      * @return CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @param _createTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
                      * @return UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * @param _updateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -268,6 +298,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 * Preset
 * Custom
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -276,16 +307,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 * Preset
 * Custom
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Type The template type. Valid values:
+                     * @param _type The template type. Valid values:
 * Preset
 * Custom
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

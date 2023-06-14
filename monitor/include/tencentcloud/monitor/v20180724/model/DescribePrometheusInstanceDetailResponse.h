@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID
                      * @return SubnetId Subnet ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -112,12 +120,14 @@ namespace TencentCloud
 `6`: Service suspended
 `8`: Suspending service for overdue payment
 `9`: Service suspended for overdue payment
+                     * 
                      */
                     int64_t GetInstanceStatus() const;
 
                     /**
                      * 判断参数 InstanceStatus 是否已赋值
                      * @return InstanceStatus 是否已赋值
+                     * 
                      */
                     bool InstanceStatusHasBeenSet() const;
 
@@ -138,12 +148,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `4`: Assigning
 `5`: Failed to assign
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetChargeStatus() const;
 
                     /**
                      * 判断参数 ChargeStatus 是否已赋值
                      * @return ChargeStatus 是否已赋值
+                     * 
                      */
                     bool ChargeStatusHasBeenSet() const;
 
@@ -154,12 +166,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return EnableGrafana Whether Grafana is enabled
 `0`: Disabled
 `1`: Enabled
+                     * 
                      */
                     int64_t GetEnableGrafana() const;
 
                     /**
                      * 判断参数 EnableGrafana 是否已赋值
                      * @return EnableGrafana 是否已赋值
+                     * 
                      */
                     bool EnableGrafanaHasBeenSet() const;
 
@@ -168,12 +182,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GrafanaURL Grafana dashboard URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGrafanaURL() const;
 
                     /**
                      * 判断参数 GrafanaURL 是否已赋值
                      * @return GrafanaURL 是否已赋值
+                     * 
                      */
                     bool GrafanaURLHasBeenSet() const;
 
@@ -186,12 +202,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 `2`: Monthly subscription
 `3`: Pay-as-you-go
+                     * 
                      */
                     int64_t GetInstanceChargeType() const;
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
@@ -200,12 +218,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SpecName Specification name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSpecName() const;
 
                     /**
                      * 判断参数 SpecName 是否已赋值
                      * @return SpecName 是否已赋值
+                     * 
                      */
                     bool SpecNameHasBeenSet() const;
 
@@ -214,12 +234,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataRetentionTime Storage period
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDataRetentionTime() const;
 
                     /**
                      * 判断参数 DataRetentionTime 是否已赋值
                      * @return DataRetentionTime 是否已赋值
+                     * 
                      */
                     bool DataRetentionTimeHasBeenSet() const;
 
@@ -228,12 +250,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time of the purchased instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -252,12 +276,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Auto-renewal prohibited
 `-1`: Invalid
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 

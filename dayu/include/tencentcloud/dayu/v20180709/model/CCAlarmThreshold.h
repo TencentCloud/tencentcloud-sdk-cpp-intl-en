@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取CC alarm threshold
                      * @return AlarmThreshold CC alarm threshold
+                     * 
                      */
                     uint64_t GetAlarmThreshold() const;
 
                     /**
                      * 设置CC alarm threshold
-                     * @param AlarmThreshold CC alarm threshold
+                     * @param _alarmThreshold CC alarm threshold
+                     * 
                      */
                     void SetAlarmThreshold(const uint64_t& _alarmThreshold);
 
                     /**
                      * 判断参数 AlarmThreshold 是否已赋值
                      * @return AlarmThreshold 是否已赋值
+                     * 
                      */
                     bool AlarmThresholdHasBeenSet() const;
 

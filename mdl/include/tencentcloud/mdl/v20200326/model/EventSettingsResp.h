@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Only `INPUT_SWITCH` is supported currently.
                      * @return EventType Only `INPUT_SWITCH` is supported currently.
+                     * 
                      */
                     std::string GetEventType() const;
 
                     /**
                      * 设置Only `INPUT_SWITCH` is supported currently.
-                     * @param EventType Only `INPUT_SWITCH` is supported currently.
+                     * @param _eventType Only `INPUT_SWITCH` is supported currently.
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
                      * @return InputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+                     * 
                      */
                     std::string GetInputAttachment() const;
 
                     /**
                      * 设置ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
-                     * @param InputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+                     * @param _inputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+                     * 
                      */
                     void SetInputAttachment(const std::string& _inputAttachment);
 
                     /**
                      * 判断参数 InputAttachment 是否已赋值
                      * @return InputAttachment 是否已赋值
+                     * 
                      */
                     bool InputAttachmentHasBeenSet() const;
 
                     /**
                      * 获取Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
                      * @return OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+                     * 
                      */
                     std::string GetOutputGroupName() const;
 
                     /**
                      * 设置Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
-                     * @param OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+                     * @param _outputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+                     * 
                      */
                     void SetOutputGroupName(const std::string& _outputGroupName);
 
                     /**
                      * 判断参数 OutputGroupName 是否已赋值
                      * @return OutputGroupName 是否已赋值
+                     * 
                      */
                     bool OutputGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
                      * @return ManifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+                     * 
                      */
                     std::string GetManifestName() const;
 
                     /**
                      * 设置Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
-                     * @param ManifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+                     * @param _manifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+                     * 
                      */
                     void SetManifestName(const std::string& _manifestName);
 
                     /**
                      * 判断参数 ManifestName 是否已赋值
                      * @return ManifestName 是否已赋值
+                     * 
                      */
                     bool ManifestNameHasBeenSet() const;
 
                     /**
                      * 获取URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
                      * @return Destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+                     * 
                      */
                     std::vector<EventSettingsDestinationResp> GetDestinations() const;
 
                     /**
                      * 设置URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
-                     * @param Destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+                     * @param _destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+                     * 
                      */
                     void SetDestinations(const std::vector<EventSettingsDestinationResp>& _destinations);
 
                     /**
                      * 判断参数 Destinations 是否已赋值
                      * @return Destinations 是否已赋值
+                     * 
                      */
                     bool DestinationsHasBeenSet() const;
 

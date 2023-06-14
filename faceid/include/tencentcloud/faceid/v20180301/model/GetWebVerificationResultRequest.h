@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
                      * @return BizToken The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+                     * 
                      */
                     std::string GetBizToken() const;
 
                     /**
                      * 设置The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
-                     * @param BizToken The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+                     * @param _bizToken The token for the web-based verification, which is generated with the `ApplyWebVerificationToken` API.
+                     * 
                      */
                     void SetBizToken(const std::string& _bizToken);
 
                     /**
                      * 判断参数 BizToken 是否已赋值
                      * @return BizToken 是否已赋值
+                     * 
                      */
                     bool BizTokenHasBeenSet() const;
 

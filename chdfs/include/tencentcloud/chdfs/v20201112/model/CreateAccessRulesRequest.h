@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Multiple permission rules (up to 10)
                      * @return AccessRules Multiple permission rules (up to 10)
+                     * 
                      */
                     std::vector<AccessRule> GetAccessRules() const;
 
                     /**
                      * 设置Multiple permission rules (up to 10)
-                     * @param AccessRules Multiple permission rules (up to 10)
+                     * @param _accessRules Multiple permission rules (up to 10)
+                     * 
                      */
                     void SetAccessRules(const std::vector<AccessRule>& _accessRules);
 
                     /**
                      * 判断参数 AccessRules 是否已赋值
                      * @return AccessRules 是否已赋值
+                     * 
                      */
                     bool AccessRulesHasBeenSet() const;
 
                     /**
                      * 获取Permission group ID
                      * @return AccessGroupId Permission group ID
+                     * 
                      */
                     std::string GetAccessGroupId() const;
 
                     /**
                      * 设置Permission group ID
-                     * @param AccessGroupId Permission group ID
+                     * @param _accessGroupId Permission group ID
+                     * 
                      */
                     void SetAccessGroupId(const std::string& _accessGroupId);
 
                     /**
                      * 判断参数 AccessGroupId 是否已赋值
                      * @return AccessGroupId 是否已赋值
+                     * 
                      */
                     bool AccessGroupIdHasBeenSet() const;
 

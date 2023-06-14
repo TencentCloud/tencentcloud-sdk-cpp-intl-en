@@ -46,144 +46,168 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
                      * @return Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
-                     * @param Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * @param _business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Resource ID
                      * @return Id Resource ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Resource ID
-                     * @param Id Resource ID
+                     * @param _id Resource ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Statistical period in seconds. Valid values: 300, 1800, 3600, 21600, and 86400.
                      * @return Period Statistical period in seconds. Valid values: 300, 1800, 3600, 21600, and 86400.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Statistical period in seconds. Valid values: 300, 1800, 3600, 21600, and 86400.
-                     * @param Period Statistical period in seconds. Valid values: 300, 1800, 3600, 21600, and 86400.
+                     * @param _period Statistical period in seconds. Valid values: 300, 1800, 3600, 21600, and 86400.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Statistics start time
                      * @return StartTime Statistics start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Statistics start time
-                     * @param StartTime Statistics start time
+                     * @param _startTime Statistics start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistics end time
                      * @return EndTime Statistics end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Statistics end time
-                     * @param EndTime Statistics end time
+                     * @param _endTime Statistics end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistical mode, which only supports sum.
                      * @return Statistics Statistical mode, which only supports sum.
+                     * 
                      */
                     std::string GetStatistics() const;
 
                     /**
                      * 设置Statistical mode, which only supports sum.
-                     * @param Statistics Statistical mode, which only supports sum.
+                     * @param _statistics Statistical mode, which only supports sum.
+                     * 
                      */
                     void SetStatistics(const std::string& _statistics);
 
                     /**
                      * 判断参数 Statistics 是否已赋值
                      * @return Statistics 是否已赋值
+                     * 
                      */
                     bool StatisticsHasBeenSet() const;
 
                     /**
                      * 获取Protocol and port list, which is valid when the statistical dimension is the number of connections. Valid protocols: TCP, UDP, HTTP, and HTTPS.
                      * @return ProtoInfo Protocol and port list, which is valid when the statistical dimension is the number of connections. Valid protocols: TCP, UDP, HTTP, and HTTPS.
+                     * 
                      */
                     std::vector<ProtocolPort> GetProtoInfo() const;
 
                     /**
                      * 设置Protocol and port list, which is valid when the statistical dimension is the number of connections. Valid protocols: TCP, UDP, HTTP, and HTTPS.
-                     * @param ProtoInfo Protocol and port list, which is valid when the statistical dimension is the number of connections. Valid protocols: TCP, UDP, HTTP, and HTTPS.
+                     * @param _protoInfo Protocol and port list, which is valid when the statistical dimension is the number of connections. Valid protocols: TCP, UDP, HTTP, and HTTPS.
+                     * 
                      */
                     void SetProtoInfo(const std::vector<ProtocolPort>& _protoInfo);
 
                     /**
                      * 判断参数 ProtoInfo 是否已赋值
                      * @return ProtoInfo 是否已赋值
+                     * 
                      */
                     bool ProtoInfoHasBeenSet() const;
 
                     /**
                      * 获取Specific domain name query
                      * @return Domain Specific domain name query
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Specific domain name query
-                     * @param Domain Specific domain name query
+                     * @param _domain Specific domain name query
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

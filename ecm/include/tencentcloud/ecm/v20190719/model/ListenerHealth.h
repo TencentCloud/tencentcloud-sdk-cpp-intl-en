@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerId Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListenerId Listener ID
+                     * @param _listenerId Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerName Listener name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置Listener name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListenerName Listener name
+                     * @param _listenerName Listener name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListenerName(const std::string& _listenerName);
 
                     /**
                      * 判断参数 ListenerName 是否已赋值
                      * @return ListenerName 是否已赋值
+                     * 
                      */
                     bool ListenerNameHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Protocol Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol Listener protocol
+                     * @param _protocol Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Listener port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Listener port
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Listener port
+                     * @param _port Listener port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Rules List of forwarding rules of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RuleHealth> GetRules() const;
 
                     /**
                      * 设置List of forwarding rules of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Rules List of forwarding rules of the listener
+                     * @param _rules List of forwarding rules of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRules(const std::vector<RuleHealth>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

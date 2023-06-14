@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether the check is passed
                      * @return CheckPass Whether the check is passed
+                     * 
                      */
                     bool GetCheckPass() const;
 
                     /**
                      * 设置Whether the check is passed
-                     * @param CheckPass Whether the check is passed
+                     * @param _checkPass Whether the check is passed
+                     * 
                      */
                     void SetCheckPass(const bool& _checkPass);
 
                     /**
                      * 判断参数 CheckPass 是否已赋值
                      * @return CheckPass 是否已赋值
+                     * 
                      */
                     bool CheckPassHasBeenSet() const;
 
                     /**
                      * 获取Array of check items
                      * @return Items Array of check items
+                     * 
                      */
                     std::vector<InstanceUpgradePreCheckResultItem> GetItems() const;
 
                     /**
                      * 设置Array of check items
-                     * @param Items Array of check items
+                     * @param _items Array of check items
+                     * 
                      */
                     void SetItems(const std::vector<InstanceUpgradePreCheckResultItem>& _items);
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 
                     /**
                      * 获取List of independent pods on this node
                      * @return SinglePods List of independent pods on this node
+                     * 
                      */
                     std::vector<std::string> GetSinglePods() const;
 
                     /**
                      * 设置List of independent pods on this node
-                     * @param SinglePods List of independent pods on this node
+                     * @param _singlePods List of independent pods on this node
+                     * 
                      */
                     void SetSinglePods(const std::vector<std::string>& _singlePods);
 
                     /**
                      * 判断参数 SinglePods 是否已赋值
                      * @return SinglePods 是否已赋值
+                     * 
                      */
                     bool SinglePodsHasBeenSet() const;
 

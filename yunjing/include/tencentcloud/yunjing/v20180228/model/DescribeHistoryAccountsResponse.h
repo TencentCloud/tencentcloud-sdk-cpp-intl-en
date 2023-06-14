@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of records in account change history list.
                      * @return TotalCount Total number of records in account change history list.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Account change history data array.
                      * @return HistoryAccounts Account change history data array.
+                     * 
                      */
                     std::vector<HistoryAccount> GetHistoryAccounts() const;
 
                     /**
                      * 判断参数 HistoryAccounts 是否已赋值
                      * @return HistoryAccounts 是否已赋值
+                     * 
                      */
                     bool HistoryAccountsHasBeenSet() const;
 

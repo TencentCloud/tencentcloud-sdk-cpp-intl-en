@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Assignment version information
                      * @return Version Assignment version information
+                     * 
                      */
                     int64_t GetVersion() const;
 
                     /**
                      * 设置Assignment version information
-                     * @param Version Assignment version information
+                     * @param _version Assignment version information
+                     * 
                      */
                     void SetVersion(const int64_t& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Topics Topic information list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<GroupInfoTopics> GetTopics() const;
 
                     /**
                      * 设置Topic information list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Topics Topic information list
+                     * @param _topics Topic information list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopics(const std::vector<GroupInfoTopics>& _topics);
 
                     /**
                      * 判断参数 Topics 是否已赋值
                      * @return Topics 是否已赋值
+                     * 
                      */
                     bool TopicsHasBeenSet() const;
 

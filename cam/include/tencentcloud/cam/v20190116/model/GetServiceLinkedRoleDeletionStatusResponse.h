@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Status: NOT_STARTED, IN_PROGRESS, SUCCEEDED, FAILED
                      * @return Status Status: NOT_STARTED, IN_PROGRESS, SUCCEEDED, FAILED
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Reasons why the deletion failed.
                      * @return Reason Reasons why the deletion failed.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 
@@ -72,12 +76,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceType Service type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
@@ -86,12 +92,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceName Service name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 

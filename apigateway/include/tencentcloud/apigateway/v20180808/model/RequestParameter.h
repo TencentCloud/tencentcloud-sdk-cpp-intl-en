@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Request parameter name
                      * @return Name Request parameter name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Request parameter name
-                     * @param Name Request parameter name
+                     * @param _name Request parameter name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Desc Description
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description
-                     * @param Desc Description
+                     * @param _desc Description
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
                     /**
                      * 获取Parameter position
                      * @return Position Parameter position
+                     * 
                      */
                     std::string GetPosition() const;
 
                     /**
                      * 设置Parameter position
-                     * @param Position Parameter position
+                     * @param _position Parameter position
+                     * 
                      */
                     void SetPosition(const std::string& _position);
 
                     /**
                      * 判断参数 Position 是否已赋值
                      * @return Position 是否已赋值
+                     * 
                      */
                     bool PositionHasBeenSet() const;
 
                     /**
                      * 获取Parameter type
                      * @return Type Parameter type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Parameter type
-                     * @param Type Parameter type
+                     * @param _type Parameter type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Default value
                      * @return DefaultValue Default value
+                     * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
                      * 设置Default value
-                     * @param DefaultValue Default value
+                     * @param _defaultValue Default value
+                     * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
 
                     /**
                      * 判断参数 DefaultValue 是否已赋值
                      * @return DefaultValue 是否已赋值
+                     * 
                      */
                     bool DefaultValueHasBeenSet() const;
 
                     /**
                      * 获取Whether it is required
                      * @return Required Whether it is required
+                     * 
                      */
                     bool GetRequired() const;
 
                     /**
                      * 设置Whether it is required
-                     * @param Required Whether it is required
+                     * @param _required Whether it is required
+                     * 
                      */
                     void SetRequired(const bool& _required);
 
                     /**
                      * 判断参数 Required 是否已赋值
                      * @return Required 是否已赋值
+                     * 
                      */
                     bool RequiredHasBeenSet() const;
 

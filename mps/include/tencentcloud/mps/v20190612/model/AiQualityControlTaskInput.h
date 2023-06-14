@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Definition The ID of the quality control template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置The ID of the quality control template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Definition The ID of the quality control template.
+                     * @param _definition The ID of the quality control template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ChannelExtPara The channel extension parameter, which is a serialized JSON string.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetChannelExtPara() const;
 
                     /**
                      * 设置The channel extension parameter, which is a serialized JSON string.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ChannelExtPara The channel extension parameter, which is a serialized JSON string.
+                     * @param _channelExtPara The channel extension parameter, which is a serialized JSON string.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChannelExtPara(const std::string& _channelExtPara);
 
                     /**
                      * 判断参数 ChannelExtPara 是否已赋值
                      * @return ChannelExtPara 是否已赋值
+                     * 
                      */
                     bool ChannelExtParaHasBeenSet() const;
 

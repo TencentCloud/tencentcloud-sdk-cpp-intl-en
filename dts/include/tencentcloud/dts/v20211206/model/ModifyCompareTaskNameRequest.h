@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return JobId Migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Migration task ID
-                     * @param JobId Migration task ID
+                     * @param _jobId Migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
                      * @return CompareTaskId Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
+                     * 
                      */
                     std::string GetCompareTaskId() const;
 
                     /**
                      * 设置Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
-                     * @param CompareTaskId Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
+                     * @param _compareTaskId Data consistency check task ID in the format of `dts-8yv4w2i1-cmp-37skmii9`
+                     * 
                      */
                     void SetCompareTaskId(const std::string& _compareTaskId);
 
                     /**
                      * 判断参数 CompareTaskId 是否已赋值
                      * @return CompareTaskId 是否已赋值
+                     * 
                      */
                     bool CompareTaskIdHasBeenSet() const;
 
                     /**
                      * 获取Data consistency check task name
                      * @return TaskName Data consistency check task name
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Data consistency check task name
-                     * @param TaskName Data consistency check task name
+                     * @param _taskName Data consistency check task name
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 

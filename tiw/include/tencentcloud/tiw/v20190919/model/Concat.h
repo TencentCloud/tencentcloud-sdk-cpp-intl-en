@@ -51,38 +51,44 @@ namespace TencentCloud
 If the video splicing feature is enabled, the real-time recording service will splice multiple video clips resulting from the pause into one video.
                      * @return Enabled Whether to enable the video splicing feature
 If the video splicing feature is enabled, the real-time recording service will splice multiple video clips resulting from the pause into one video.
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether to enable the video splicing feature
 If the video splicing feature is enabled, the real-time recording service will splice multiple video clips resulting from the pause into one video.
-                     * @param Enabled Whether to enable the video splicing feature
+                     * @param _enabled Whether to enable the video splicing feature
 If the video splicing feature is enabled, the real-time recording service will splice multiple video clips resulting from the pause into one video.
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Download address of the padding image used during video splicing. If it is not specified, a pure black image is used by default.
                      * @return Image Download address of the padding image used during video splicing. If it is not specified, a pure black image is used by default.
+                     * 
                      */
                     std::string GetImage() const;
 
                     /**
                      * 设置Download address of the padding image used during video splicing. If it is not specified, a pure black image is used by default.
-                     * @param Image Download address of the padding image used during video splicing. If it is not specified, a pure black image is used by default.
+                     * @param _image Download address of the padding image used during video splicing. If it is not specified, a pure black image is used by default.
+                     * 
                      */
                     void SetImage(const std::string& _image);
 
                     /**
                      * 判断参数 Image 是否已赋值
                      * @return Image 是否已赋值
+                     * 
                      */
                     bool ImageHasBeenSet() const;
 

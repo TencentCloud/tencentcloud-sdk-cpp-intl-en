@@ -55,6 +55,7 @@ DB: Database name.
 SrcIp: Client IP;
 User: Database account;
 DB: Database name.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -63,16 +64,18 @@ DB: Database name.
 SrcIp: Client IP;
 User: Database account;
 DB: Database name.
-                     * @param Type Filter parameter names. Valid values:
+                     * @param _type Filter parameter names. Valid values:
 SrcIp: Client IP;
 User: Database account;
 DB: Database name.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -87,6 +90,7 @@ DB: Database name.
 `EXC`: Exclude;
 `EQ`: Equal to;
 `NEQ`: Not equal to.
+                     * 
                      */
                     std::string GetCompare() const;
 
@@ -96,35 +100,40 @@ DB: Database name.
 `EXC`: Exclude;
 `EQ`: Equal to;
 `NEQ`: Not equal to.
-                     * @param Compare Filter match type. Valid value:
+                     * @param _compare Filter match type. Valid value:
 `INC`: Include;
 `EXC`: Exclude;
 `EQ`: Equal to;
 `NEQ`: Not equal to.
+                     * 
                      */
                     void SetCompare(const std::string& _compare);
 
                     /**
                      * 判断参数 Compare 是否已赋值
                      * @return Compare 是否已赋值
+                     * 
                      */
                     bool CompareHasBeenSet() const;
 
                     /**
                      * 获取Filter match value
                      * @return Value Filter match value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Filter match value
-                     * @param Value Filter match value
+                     * @param _value Filter match value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

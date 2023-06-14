@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Image information.
                      * @return Blueprint Image information.
+                     * 
                      */
                     Blueprint GetBlueprint() const;
 
                     /**
                      * 设置Image information.
-                     * @param Blueprint Image information.
+                     * @param _blueprint Image information.
+                     * 
                      */
                     void SetBlueprint(const Blueprint& _blueprint);
 
                     /**
                      * 判断参数 Blueprint 是否已赋值
                      * @return Blueprint 是否已赋值
+                     * 
                      */
                     bool BlueprintHasBeenSet() const;
 
                     /**
                      * 获取Software list.
                      * @return SoftwareSet Software list.
+                     * 
                      */
                     std::vector<Software> GetSoftwareSet() const;
 
                     /**
                      * 设置Software list.
-                     * @param SoftwareSet Software list.
+                     * @param _softwareSet Software list.
+                     * 
                      */
                     void SetSoftwareSet(const std::vector<Software>& _softwareSet);
 
                     /**
                      * 判断参数 SoftwareSet 是否已赋值
                      * @return SoftwareSet 是否已赋值
+                     * 
                      */
                     bool SoftwareSetHasBeenSet() const;
 
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

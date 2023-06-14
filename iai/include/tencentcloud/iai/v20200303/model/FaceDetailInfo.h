@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Position of the detected face frame.
                      * @return FaceRect Position of the detected face frame.
+                     * 
                      */
                     FaceRect GetFaceRect() const;
 
                     /**
                      * 设置Position of the detected face frame.
-                     * @param FaceRect Position of the detected face frame.
+                     * @param _faceRect Position of the detected face frame.
+                     * 
                      */
                     void SetFaceRect(const FaceRect& _faceRect);
 
                     /**
                      * 判断参数 FaceRect 是否已赋值
                      * @return FaceRect 是否已赋值
+                     * 
                      */
                     bool FaceRectHasBeenSet() const;
 
@@ -77,6 +80,7 @@ emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
 nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
 If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
+                     * 
                      */
                     FaceDetailAttributesInfo GetFaceDetailAttributesInfo() const;
 
@@ -86,17 +90,19 @@ emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
 nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
 If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
-                     * @param FaceDetailAttributesInfo Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
+                     * @param _faceDetailAttributesInfo Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
 nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
 If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
+                     * 
                      */
                     void SetFaceDetailAttributesInfo(const FaceDetailAttributesInfo& _faceDetailAttributesInfo);
 
                     /**
                      * 判断参数 FaceDetailAttributesInfo 是否已赋值
                      * @return FaceDetailAttributesInfo 是否已赋值
+                     * 
                      */
                     bool FaceDetailAttributesInfoHasBeenSet() const;
 

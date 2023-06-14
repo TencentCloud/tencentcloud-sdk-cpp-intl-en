@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Page number, beginning from 1
                      * @return Page Page number, beginning from 1
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number, beginning from 1
-                     * @param Page Page number, beginning from 1
+                     * @param _page Page number, beginning from 1
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of lines per page, no greater than 200
                      * @return Rp Number of lines per page, no greater than 200
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置Number of lines per page, no greater than 200
-                     * @param Rp Number of lines per page, no greater than 200
+                     * @param _rp Number of lines per page, no greater than 200
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 
                     /**
                      * 获取A parameter used to filter the list of roles under a tag.
                      * @return Tags A parameter used to filter the list of roles under a tag.
+                     * 
                      */
                     std::vector<RoleTags> GetTags() const;
 
                     /**
                      * 设置A parameter used to filter the list of roles under a tag.
-                     * @param Tags A parameter used to filter the list of roles under a tag.
+                     * @param _tags A parameter used to filter the list of roles under a tag.
+                     * 
                      */
                     void SetTags(const std::vector<RoleTags>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取The timestamp (seconds).
                      * @return Timestamp The timestamp (seconds).
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 设置The timestamp (seconds).
-                     * @param Timestamp The timestamp (seconds).
+                     * @param _timestamp The timestamp (seconds).
+                     * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
                     /**
                      * 获取Whether it is an input or output.
                      * @return Type Whether it is an input or output.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Whether it is an input or output.
-                     * @param Type Whether it is an input or output.
+                     * @param _type Whether it is an input or output.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The input or output ID.
                      * @return InputOutputId The input or output ID.
+                     * 
                      */
                     std::string GetInputOutputId() const;
 
                     /**
                      * 设置The input or output ID.
-                     * @param InputOutputId The input or output ID.
+                     * @param _inputOutputId The input or output ID.
+                     * 
                      */
                     void SetInputOutputId(const std::string& _inputOutputId);
 
                     /**
                      * 判断参数 InputOutputId 是否已赋值
                      * @return InputOutputId 是否已赋值
+                     * 
                      */
                     bool InputOutputIdHasBeenSet() const;
 
                     /**
                      * 获取The protocol.
                      * @return Protocol The protocol.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The protocol.
-                     * @param Protocol The protocol.
+                     * @param _protocol The protocol.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取The event code.
                      * @return EventCode The event code.
+                     * 
                      */
                     std::string GetEventCode() const;
 
                     /**
                      * 设置The event code.
-                     * @param EventCode The event code.
+                     * @param _eventCode The event code.
+                     * 
                      */
                     void SetEventCode(const std::string& _eventCode);
 
                     /**
                      * 判断参数 EventCode 是否已赋值
                      * @return EventCode 是否已赋值
+                     * 
                      */
                     bool EventCodeHasBeenSet() const;
 
                     /**
                      * 获取The event information.
                      * @return EventMessage The event information.
+                     * 
                      */
                     std::string GetEventMessage() const;
 
                     /**
                      * 设置The event information.
-                     * @param EventMessage The event information.
+                     * @param _eventMessage The event information.
+                     * 
                      */
                     void SetEventMessage(const std::string& _eventMessage);
 
                     /**
                      * 判断参数 EventMessage 是否已赋值
                      * @return EventMessage 是否已赋值
+                     * 
                      */
                     bool EventMessageHasBeenSet() const;
 
                     /**
                      * 获取The peer IP.
                      * @return RemoteIp The peer IP.
+                     * 
                      */
                     std::string GetRemoteIp() const;
 
                     /**
                      * 设置The peer IP.
-                     * @param RemoteIp The peer IP.
+                     * @param _remoteIp The peer IP.
+                     * 
                      */
                     void SetRemoteIp(const std::string& _remoteIp);
 
                     /**
                      * 判断参数 RemoteIp 是否已赋值
                      * @return RemoteIp 是否已赋值
+                     * 
                      */
                     bool RemoteIpHasBeenSet() const;
 
                     /**
                      * 获取The peer port.
                      * @return RemotePort The peer port.
+                     * 
                      */
                     std::string GetRemotePort() const;
 
                     /**
                      * 设置The peer port.
-                     * @param RemotePort The peer port.
+                     * @param _remotePort The peer port.
+                     * 
                      */
                     void SetRemotePort(const std::string& _remotePort);
 
                     /**
                      * 判断参数 RemotePort 是否已赋值
                      * @return RemotePort 是否已赋值
+                     * 
                      */
                     bool RemotePortHasBeenSet() const;
 
                     /**
                      * 获取Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
                      * @return Pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+                     * 
                      */
                     std::string GetPipeline() const;
 
                     /**
                      * 设置Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
-                     * @param Pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+                     * @param _pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+                     * 
                      */
                     void SetPipeline(const std::string& _pipeline);
 
                     /**
                      * 判断参数 Pipeline 是否已赋值
                      * @return Pipeline 是否已赋值
+                     * 
                      */
                     bool PipelineHasBeenSet() const;
 
                     /**
                      * 获取The input or output name.
                      * @return InputOutputName The input or output name.
+                     * 
                      */
                     std::string GetInputOutputName() const;
 
                     /**
                      * 设置The input or output name.
-                     * @param InputOutputName The input or output name.
+                     * @param _inputOutputName The input or output name.
+                     * 
                      */
                     void SetInputOutputName(const std::string& _inputOutputName);
 
                     /**
                      * 判断参数 InputOutputName 是否已赋值
                      * @return InputOutputName 是否已赋值
+                     * 
                      */
                     bool InputOutputNameHasBeenSet() const;
 

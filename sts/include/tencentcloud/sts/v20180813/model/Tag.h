@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Tag key. It’s up to 128 characters and case-sensitive.
                      * @return Key Tag key. It’s up to 128 characters and case-sensitive.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Tag key. It’s up to 128 characters and case-sensitive.
-                     * @param Key Tag key. It’s up to 128 characters and case-sensitive.
+                     * @param _key Tag key. It’s up to 128 characters and case-sensitive.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Tag value. It’s up to 256 characters and case-sensitive.
                      * @return Value Tag value. It’s up to 256 characters and case-sensitive.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Tag value. It’s up to 256 characters and case-sensitive.
-                     * @param Value Tag value. It’s up to 256 characters and case-sensitive.
+                     * @param _value Tag value. It’s up to 256 characters and case-sensitive.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

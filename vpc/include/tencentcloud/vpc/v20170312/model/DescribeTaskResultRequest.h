@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID. Either TaskId or DealName must be entered.
                      * @return TaskId Async task ID. Either TaskId or DealName must be entered.
+                     * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 设置Async task ID. Either TaskId or DealName must be entered.
-                     * @param TaskId Async task ID. Either TaskId or DealName must be entered.
+                     * @param _taskId Async task ID. Either TaskId or DealName must be entered.
+                     * 
                      */
                     void SetTaskId(const uint64_t& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Billing order No. Either TaskId or DealName must be entered.
                      * @return DealName Billing order No. Either TaskId or DealName must be entered.
+                     * 
                      */
                     std::string GetDealName() const;
 
                     /**
                      * 设置Billing order No. Either TaskId or DealName must be entered.
-                     * @param DealName Billing order No. Either TaskId or DealName must be entered.
+                     * @param _dealName Billing order No. Either TaskId or DealName must be entered.
+                     * 
                      */
                     void SetDealName(const std::string& _dealName);
 
                     /**
                      * 判断参数 DealName 是否已赋值
                      * @return DealName 是否已赋值
+                     * 
                      */
                     bool DealNameHasBeenSet() const;
 

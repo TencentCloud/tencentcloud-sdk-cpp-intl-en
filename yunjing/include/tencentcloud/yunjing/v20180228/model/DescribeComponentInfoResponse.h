@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Component ID.
                      * @return Id Component ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Component name.
                      * @return ComponentName Component name.
+                     * 
                      */
                     std::string GetComponentName() const;
 
                     /**
                      * 判断参数 ComponentName 是否已赋值
                      * @return ComponentName 是否已赋值
+                     * 
                      */
                     bool ComponentNameHasBeenSet() const;
 
@@ -74,36 +78,42 @@ namespace TencentCloud
                      * @return ComponentType Component type.
 <li>WEB: web component</li>
 <li>SYSTEM: system component</li>
+                     * 
                      */
                     std::string GetComponentType() const;
 
                     /**
                      * 判断参数 ComponentType 是否已赋值
                      * @return ComponentType 是否已赋值
+                     * 
                      */
                     bool ComponentTypeHasBeenSet() const;
 
                     /**
                      * 获取Component's official website.
                      * @return Homepage Component's official website.
+                     * 
                      */
                     std::string GetHomepage() const;
 
                     /**
                      * 判断参数 Homepage 是否已赋值
                      * @return Homepage 是否已赋值
+                     * 
                      */
                     bool HomepageHasBeenSet() const;
 
                     /**
                      * 获取Component description.
                      * @return Description Component description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

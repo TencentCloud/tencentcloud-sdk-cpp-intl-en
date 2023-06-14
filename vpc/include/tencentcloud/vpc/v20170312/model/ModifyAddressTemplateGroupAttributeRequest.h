@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取IP address template group instance ID, such as `ipmg-2uw6ujo6`.
                      * @return AddressTemplateGroupId IP address template group instance ID, such as `ipmg-2uw6ujo6`.
+                     * 
                      */
                     std::string GetAddressTemplateGroupId() const;
 
                     /**
                      * 设置IP address template group instance ID, such as `ipmg-2uw6ujo6`.
-                     * @param AddressTemplateGroupId IP address template group instance ID, such as `ipmg-2uw6ujo6`.
+                     * @param _addressTemplateGroupId IP address template group instance ID, such as `ipmg-2uw6ujo6`.
+                     * 
                      */
                     void SetAddressTemplateGroupId(const std::string& _addressTemplateGroupId);
 
                     /**
                      * 判断参数 AddressTemplateGroupId 是否已赋值
                      * @return AddressTemplateGroupId 是否已赋值
+                     * 
                      */
                     bool AddressTemplateGroupIdHasBeenSet() const;
 
                     /**
                      * 获取IP address template group name.
                      * @return AddressTemplateGroupName IP address template group name.
+                     * 
                      */
                     std::string GetAddressTemplateGroupName() const;
 
                     /**
                      * 设置IP address template group name.
-                     * @param AddressTemplateGroupName IP address template group name.
+                     * @param _addressTemplateGroupName IP address template group name.
+                     * 
                      */
                     void SetAddressTemplateGroupName(const std::string& _addressTemplateGroupName);
 
                     /**
                      * 判断参数 AddressTemplateGroupName 是否已赋值
                      * @return AddressTemplateGroupName 是否已赋值
+                     * 
                      */
                     bool AddressTemplateGroupNameHasBeenSet() const;
 
                     /**
                      * 获取IP address template instance ID, such as `ipm-mdunqeb6`.
                      * @return AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
+                     * 
                      */
                     std::vector<std::string> GetAddressTemplateIds() const;
 
                     /**
                      * 设置IP address template instance ID, such as `ipm-mdunqeb6`.
-                     * @param AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
+                     * @param _addressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
+                     * 
                      */
                     void SetAddressTemplateIds(const std::vector<std::string>& _addressTemplateIds);
 
                     /**
                      * 判断参数 AddressTemplateIds 是否已赋值
                      * @return AddressTemplateIds 是否已赋值
+                     * 
                      */
                     bool AddressTemplateIdsHasBeenSet() const;
 

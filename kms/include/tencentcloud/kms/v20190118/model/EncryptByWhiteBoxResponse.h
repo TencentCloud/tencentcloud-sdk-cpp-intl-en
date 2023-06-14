@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded initialization vector, which will be used by the encryption algorithm. If this parameter is passed in by the caller, it will be returned as-is; otherwise, the backend service will generate a random one and return it.
                      * @return InitializationVector Base64-encoded initialization vector, which will be used by the encryption algorithm. If this parameter is passed in by the caller, it will be returned as-is; otherwise, the backend service will generate a random one and return it.
+                     * 
                      */
                     std::string GetInitializationVector() const;
 
                     /**
                      * 判断参数 InitializationVector 是否已赋值
                      * @return InitializationVector 是否已赋值
+                     * 
                      */
                     bool InitializationVectorHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded ciphertext after encryption
                      * @return CipherText Base64-encoded ciphertext after encryption
+                     * 
                      */
                     std::string GetCipherText() const;
 
                     /**
                      * 判断参数 CipherText 是否已赋值
                      * @return CipherText 是否已赋值
+                     * 
                      */
                     bool CipherTextHasBeenSet() const;
 

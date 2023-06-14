@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of instances meeting the filter condition.
                      * @return TotalCount The number of instances meeting the filter condition.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Classiclink instance.
                      * @return ClassicLinkInstanceSet Classiclink instance.
+                     * 
                      */
                     std::vector<ClassicLinkInstance> GetClassicLinkInstanceSet() const;
 
                     /**
                      * 判断参数 ClassicLinkInstanceSet 是否已赋值
                      * @return ClassicLinkInstanceSet 是否已赋值
+                     * 
                      */
                     bool ClassicLinkInstanceSetHasBeenSet() const;
 

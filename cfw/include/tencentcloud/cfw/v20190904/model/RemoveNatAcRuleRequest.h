@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取UUIDs of the rules to delete, which can be obtained by querying the rule list. Note: If [-1] is passed in, all rules are deleted.
                      * @return RuleUuid UUIDs of the rules to delete, which can be obtained by querying the rule list. Note: If [-1] is passed in, all rules are deleted.
+                     * 
                      */
                     std::vector<int64_t> GetRuleUuid() const;
 
                     /**
                      * 设置UUIDs of the rules to delete, which can be obtained by querying the rule list. Note: If [-1] is passed in, all rules are deleted.
-                     * @param RuleUuid UUIDs of the rules to delete, which can be obtained by querying the rule list. Note: If [-1] is passed in, all rules are deleted.
+                     * @param _ruleUuid UUIDs of the rules to delete, which can be obtained by querying the rule list. Note: If [-1] is passed in, all rules are deleted.
+                     * 
                      */
                     void SetRuleUuid(const std::vector<int64_t>& _ruleUuid);
 
                     /**
                      * 判断参数 RuleUuid 是否已赋值
                      * @return RuleUuid 是否已赋值
+                     * 
                      */
                     bool RuleUuidHasBeenSet() const;
 
                     /**
                      * 获取Rule direction. Valid values: 1: inbound; 0: outbound.
                      * @return Direction Rule direction. Valid values: 1: inbound; 0: outbound.
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Rule direction. Valid values: 1: inbound; 0: outbound.
-                     * @param Direction Rule direction. Valid values: 1: inbound; 0: outbound.
+                     * @param _direction Rule direction. Valid values: 1: inbound; 0: outbound.
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 

@@ -55,6 +55,7 @@ namespace TencentCloud
 `staticpack`: non-BGP package
 `insurance`: guarantee package
 ]
+                     * 
                      */
                     std::string GetPackType() const;
 
@@ -63,34 +64,39 @@ namespace TencentCloud
 `staticpack`: non-BGP package
 `insurance`: guarantee package
 ]
-                     * @param PackType Package type. Valid values:
+                     * @param _packType Package type. Valid values:
 `staticpack`: non-BGP package
 `insurance`: guarantee package
 ]
+                     * 
                      */
                     void SetPackType(const std::string& _packType);
 
                     /**
                      * 判断参数 PackType 是否已赋值
                      * @return PackType 是否已赋值
+                     * 
                      */
                     bool PackTypeHasBeenSet() const;
 
                     /**
                      * 获取Package ID
                      * @return PackId Package ID
+                     * 
                      */
                     std::string GetPackId() const;
 
                     /**
                      * 设置Package ID
-                     * @param PackId Package ID
+                     * @param _packId Package ID
+                     * 
                      */
                     void SetPackId(const std::string& _packId);
 
                     /**
                      * 判断参数 PackId 是否已赋值
                      * @return PackId 是否已赋值
+                     * 
                      */
                     bool PackIdHasBeenSet() const;
 

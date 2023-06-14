@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Watermark ID
                      * @return Id Watermark ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Watermark ID
-                     * @param Id Watermark ID
+                     * @param _id Watermark ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Watermark name
                      * @return Name Watermark name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Watermark name
-                     * @param Name Watermark name
+                     * @param _name Watermark name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
                      * @return ImageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+                     * 
                      */
                     CreateImageSettings GetImageSettings() const;
 
                     /**
                      * 设置Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
-                     * @param ImageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+                     * @param _imageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+                     * 
                      */
                     void SetImageSettings(const CreateImageSettings& _imageSettings);
 
                     /**
                      * 判断参数 ImageSettings 是否已赋值
                      * @return ImageSettings 是否已赋值
+                     * 
                      */
                     bool ImageSettingsHasBeenSet() const;
 
                     /**
                      * 获取Watermark text settings. This parameter is valid if `Type` is `TEXT`.
                      * @return TextSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+                     * 
                      */
                     CreateTextSettings GetTextSettings() const;
 
                     /**
                      * 设置Watermark text settings. This parameter is valid if `Type` is `TEXT`.
-                     * @param TextSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+                     * @param _textSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+                     * 
                      */
                     void SetTextSettings(const CreateTextSettings& _textSettings);
 
                     /**
                      * 判断参数 TextSettings 是否已赋值
                      * @return TextSettings 是否已赋值
+                     * 
                      */
                     bool TextSettingsHasBeenSet() const;
 

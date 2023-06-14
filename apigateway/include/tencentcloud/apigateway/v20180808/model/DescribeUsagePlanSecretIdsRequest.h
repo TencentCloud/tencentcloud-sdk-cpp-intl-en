@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of bound usage plan.
                      * @return UsagePlanId Unique ID of bound usage plan.
+                     * 
                      */
                     std::string GetUsagePlanId() const;
 
                     /**
                      * 设置Unique ID of bound usage plan.
-                     * @param UsagePlanId Unique ID of bound usage plan.
+                     * @param _usagePlanId Unique ID of bound usage plan.
+                     * 
                      */
                     void SetUsagePlanId(const std::string& _usagePlanId);
 
                     /**
                      * 判断参数 UsagePlanId 是否已赋值
                      * @return UsagePlanId 是否已赋值
+                     * 
                      */
                     bool UsagePlanIdHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 20. Maximum value: 100.
                      * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

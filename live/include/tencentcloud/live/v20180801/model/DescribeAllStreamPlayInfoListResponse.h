@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The time point queried, whose value is the same as that of the corresponding request parameter.
                      * @return QueryTime The time point queried, whose value is the same as that of the corresponding request parameter.
+                     * 
                      */
                     std::string GetQueryTime() const;
 
                     /**
                      * 判断参数 QueryTime 是否已赋值
                      * @return QueryTime 是否已赋值
+                     * 
                      */
                     bool QueryTimeHasBeenSet() const;
 
                     /**
                      * 获取The playback data.
                      * @return DataInfoList The playback data.
+                     * 
                      */
                     std::vector<MonitorStreamPlayInfo> GetDataInfoList() const;
 
                     /**
                      * 判断参数 DataInfoList 是否已赋值
                      * @return DataInfoList 是否已赋值
+                     * 
                      */
                     bool DataInfoListHasBeenSet() const;
 

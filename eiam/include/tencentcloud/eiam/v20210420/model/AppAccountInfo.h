@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Account ID.
                      * @return AccountId Account ID.
+                     * 
                      */
                     std::string GetAccountId() const;
 
                     /**
                      * 设置Account ID.
-                     * @param AccountId Account ID.
+                     * @param _accountId Account ID.
+                     * 
                      */
                     void SetAccountId(const std::string& _accountId);
 
                     /**
                      * 判断参数 AccountId 是否已赋值
                      * @return AccountId 是否已赋值
+                     * 
                      */
                     bool AccountIdHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AccountName Account name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAccountName() const;
 
                     /**
                      * 设置Account name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AccountName Account name.
+                     * @param _accountName Account name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAccountName(const std::string& _accountName);
 
                     /**
                      * 判断参数 AccountName 是否已赋值
                      * @return AccountName 是否已赋值
+                     * 
                      */
                     bool AccountNameHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserList User information list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LinkUserInfo> GetUserList() const;
 
                     /**
                      * 设置User information list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserList User information list.
+                     * @param _userList User information list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserList(const std::vector<LinkUserInfo>& _userList);
 
                     /**
                      * 判断参数 UserList 是否已赋值
                      * @return UserList 是否已赋值
+                     * 
                      */
                     bool UserListHasBeenSet() const;
 
@@ -114,20 +123,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Description.
+                     * @param _description Description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -136,20 +148,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedDate Creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedDate() const;
 
                     /**
                      * 设置Creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedDate Creation time.
+                     * @param _createdDate Creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedDate(const std::string& _createdDate);
 
                     /**
                      * 判断参数 CreatedDate 是否已赋值
                      * @return CreatedDate 是否已赋值
+                     * 
                      */
                     bool CreatedDateHasBeenSet() const;
 

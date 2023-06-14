@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable smart frame interpolation. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Whether to enable smart frame interpolation. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
-                     * @param Switch Whether to enable smart frame interpolation. Valid values:
+                     * @param _switch Whether to enable smart frame interpolation. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
                      * @return Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * 
                      */
                     int64_t GetFps() const;
 
                     /**
                      * 设置The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
-                     * @param Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * @param _fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * 
                      */
                     void SetFps(const int64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 

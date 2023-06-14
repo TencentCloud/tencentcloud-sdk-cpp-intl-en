@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取MD5 checksum of the file
                      * @return MD5 MD5 checksum of the file
+                     * 
                      */
                     std::string GetMD5() const;
 
                     /**
                      * 设置MD5 checksum of the file
-                     * @param MD5 MD5 checksum of the file
+                     * @param _mD5 MD5 checksum of the file
+                     * 
                      */
                     void SetMD5(const std::string& _mD5);
 
                     /**
                      * 判断参数 MD5 是否已赋值
                      * @return MD5 是否已赋值
+                     * 
                      */
                     bool MD5HasBeenSet() const;
 
                     /**
                      * 获取Switch. Valid values: `true` (on); `false` (off).
                      * @return Status Switch. Valid values: `true` (on); `false` (off).
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Switch. Valid values: `true` (on); `false` (off).
-                     * @param Status Switch. Valid values: `true` (on); `false` (off).
+                     * @param _status Switch. Valid values: `true` (on); `false` (off).
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Product name, which cannot be same as that of an existing product. Naming rule: [a-zA-Z0-9:_-]{1,32}.
                      * @return ProductName Product name, which cannot be same as that of an existing product. Naming rule: [a-zA-Z0-9:_-]{1,32}.
+                     * 
                      */
                     std::string GetProductName() const;
 
                     /**
                      * 设置Product name, which cannot be same as that of an existing product. Naming rule: [a-zA-Z0-9:_-]{1,32}.
-                     * @param ProductName Product name, which cannot be same as that of an existing product. Naming rule: [a-zA-Z0-9:_-]{1,32}.
+                     * @param _productName Product name, which cannot be same as that of an existing product. Naming rule: [a-zA-Z0-9:_-]{1,32}.
+                     * 
                      */
                     void SetProductName(const std::string& _productName);
 
                     /**
                      * 判断参数 ProductName 是否已赋值
                      * @return ProductName 是否已赋值
+                     * 
                      */
                     bool ProductNameHasBeenSet() const;
 
                     /**
                      * 获取Product properties
                      * @return ProductProperties Product properties
+                     * 
                      */
                     ProductProperties GetProductProperties() const;
 
                     /**
                      * 设置Product properties
-                     * @param ProductProperties Product properties
+                     * @param _productProperties Product properties
+                     * 
                      */
                     void SetProductProperties(const ProductProperties& _productProperties);
 
                     /**
                      * 判断参数 ProductProperties 是否已赋值
                      * @return ProductProperties 是否已赋值
+                     * 
                      */
                     bool ProductPropertiesHasBeenSet() const;
 
                     /**
                      * 获取Skey, which is required to create a CLAA product.
                      * @return Skey Skey, which is required to create a CLAA product.
+                     * 
                      */
                     std::string GetSkey() const;
 
                     /**
                      * 设置Skey, which is required to create a CLAA product.
-                     * @param Skey Skey, which is required to create a CLAA product.
+                     * @param _skey Skey, which is required to create a CLAA product.
+                     * 
                      */
                     void SetSkey(const std::string& _skey);
 
                     /**
                      * 判断参数 Skey 是否已赋值
                      * @return Skey 是否已赋值
+                     * 
                      */
                     bool SkeyHasBeenSet() const;
 

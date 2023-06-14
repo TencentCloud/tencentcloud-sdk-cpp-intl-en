@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return NamespaceName Namespace name
+                     * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param NamespaceName Namespace name
+                     * @param _namespaceName Namespace name
+                     * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
 
                     /**
                      * 判断参数 NamespaceName 是否已赋值
                      * @return NamespaceName 是否已赋值
+                     * 
                      */
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
                      * 获取Access level. Valid values: True: Public; False: Private.
                      * @return IsPublic Access level. Valid values: True: Public; False: Private.
+                     * 
                      */
                     bool GetIsPublic() const;
 
                     /**
                      * 设置Access level. Valid values: True: Public; False: Private.
-                     * @param IsPublic Access level. Valid values: True: Public; False: Private.
+                     * @param _isPublic Access level. Valid values: True: Public; False: Private.
+                     * 
                      */
                     void SetIsPublic(const bool& _isPublic);
 
                     /**
                      * 判断参数 IsPublic 是否已赋值
                      * @return IsPublic 是否已赋值
+                     * 
                      */
                     bool IsPublicHasBeenSet() const;
 

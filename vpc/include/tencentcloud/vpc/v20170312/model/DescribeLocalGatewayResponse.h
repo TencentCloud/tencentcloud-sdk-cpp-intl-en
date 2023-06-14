@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information set of local gateways
                      * @return LocalGatewaySet Information set of local gateways
+                     * 
                      */
                     std::vector<LocalGateway> GetLocalGatewaySet() const;
 
                     /**
                      * 判断参数 LocalGatewaySet 是否已赋值
                      * @return LocalGatewaySet 是否已赋值
+                     * 
                      */
                     bool LocalGatewaySetHasBeenSet() const;
 
                     /**
                      * 获取Total number of local gateways
                      * @return TotalCount Total number of local gateways
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
                      * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
                      * 设置Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
-                     * @param NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * @param _namespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
                      * @return Ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * 
                      */
                     uint64_t GetTtl() const;
 
                     /**
                      * 设置Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
-                     * @param Ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * @param _ttl Retention time of unconsumed messages in milliseconds. Value range: 60 seconds–15 days
+                     * 
                      */
                     void SetTtl(const uint64_t& _ttl);
 
                     /**
                      * 判断参数 Ttl 是否已赋值
                      * @return Ttl 是否已赋值
+                     * 
                      */
                     bool TtlHasBeenSet() const;
 
                     /**
                      * 获取Retention time for persisted messages in milliseconds
                      * @return RetentionTime Retention time for persisted messages in milliseconds
+                     * 
                      */
                     uint64_t GetRetentionTime() const;
 
                     /**
                      * 设置Retention time for persisted messages in milliseconds
-                     * @param RetentionTime Retention time for persisted messages in milliseconds
+                     * @param _retentionTime Retention time for persisted messages in milliseconds
+                     * 
                      */
                     void SetRetentionTime(const uint64_t& _retentionTime);
 
                     /**
                      * 判断参数 RetentionTime 是否已赋值
                      * @return RetentionTime 是否已赋值
+                     * 
                      */
                     bool RetentionTimeHasBeenSet() const;
 
                     /**
                      * 获取Remarks (up to 128 characters)
                      * @return Remark Remarks (up to 128 characters)
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks (up to 128 characters)
-                     * @param Remark Remarks (up to 128 characters)
+                     * @param _remark Remarks (up to 128 characters)
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

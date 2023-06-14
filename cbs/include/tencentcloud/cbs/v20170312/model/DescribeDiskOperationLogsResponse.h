@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of cloud disk operation logs.
                      * @return DiskOperationLogSet List of cloud disk operation logs.
+                     * 
                      */
                     std::vector<DiskOperationLog> GetDiskOperationLogSet() const;
 
                     /**
                      * 判断参数 DiskOperationLogSet 是否已赋值
                      * @return DiskOperationLogSet 是否已赋值
+                     * 
                      */
                     bool DiskOperationLogSetHasBeenSet() const;
 

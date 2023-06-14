@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Target type
                      * @return Type Target type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Target type
-                     * @param Type Target type
+                     * @param _type Target type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Target ID
                      * @return TargetId Target ID
+                     * 
                      */
                     std::string GetTargetId() const;
 
                     /**
                      * 设置Target ID
-                     * @param TargetId Target ID
+                     * @param _targetId Target ID
+                     * 
                      */
                     void SetTargetId(const std::string& _targetId);
 
                     /**
                      * 判断参数 TargetId 是否已赋值
                      * @return TargetId 是否已赋值
+                     * 
                      */
                     bool TargetIdHasBeenSet() const;
 
                     /**
                      * 获取Target description
                      * @return TargetDescription Target description
+                     * 
                      */
                     TargetDescription GetTargetDescription() const;
 
                     /**
                      * 设置Target description
-                     * @param TargetDescription Target description
+                     * @param _targetDescription Target description
+                     * 
                      */
                     void SetTargetDescription(const TargetDescription& _targetDescription);
 
                     /**
                      * 判断参数 TargetDescription 是否已赋值
                      * @return TargetDescription 是否已赋值
+                     * 
                      */
                     bool TargetDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Event rule ID
                      * @return RuleId Event rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Event rule ID
-                     * @param RuleId Event rule ID
+                     * @param _ruleId Event rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -142,20 +157,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EnableBatchDelivery Enables batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnableBatchDelivery() const;
 
                     /**
                      * 设置Enables batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EnableBatchDelivery Enables batch delivery
+                     * @param _enableBatchDelivery Enables batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnableBatchDelivery(const bool& _enableBatchDelivery);
 
                     /**
                      * 判断参数 EnableBatchDelivery 是否已赋值
                      * @return EnableBatchDelivery 是否已赋值
+                     * 
                      */
                     bool EnableBatchDeliveryHasBeenSet() const;
 
@@ -164,20 +182,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BatchTimeout Maximum waiting time for batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBatchTimeout() const;
 
                     /**
                      * 设置Maximum waiting time for batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BatchTimeout Maximum waiting time for batch delivery
+                     * @param _batchTimeout Maximum waiting time for batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBatchTimeout(const int64_t& _batchTimeout);
 
                     /**
                      * 判断参数 BatchTimeout 是否已赋值
                      * @return BatchTimeout 是否已赋值
+                     * 
                      */
                     bool BatchTimeoutHasBeenSet() const;
 
@@ -186,20 +207,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BatchEventCount Maximum number of events in batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBatchEventCount() const;
 
                     /**
                      * 设置Maximum number of events in batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BatchEventCount Maximum number of events in batch delivery
+                     * @param _batchEventCount Maximum number of events in batch delivery
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBatchEventCount(const int64_t& _batchEventCount);
 
                     /**
                      * 判断参数 BatchEventCount 是否已赋值
                      * @return BatchEventCount 是否已赋值
+                     * 
                      */
                     bool BatchEventCountHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Keyword for query
                      * @return SearchWord Keyword for query
+                     * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
                      * 设置Keyword for query
-                     * @param SearchWord Keyword for query
+                     * @param _searchWord Keyword for query
+                     * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
 
                     /**
                      * 判断参数 SearchWord 是否已赋值
                      * @return SearchWord 是否已赋值
+                     * 
                      */
                     bool SearchWordHasBeenSet() const;
 
                     /**
                      * 获取Query offset, which defaults to `0`.
                      * @return Offset Query offset, which defaults to `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Query offset, which defaults to `0`.
-                     * @param Offset Query offset, which defaults to `0`.
+                     * @param _offset Query offset, which defaults to `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
                      * @return Limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
-                     * @param Limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+                     * @param _limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

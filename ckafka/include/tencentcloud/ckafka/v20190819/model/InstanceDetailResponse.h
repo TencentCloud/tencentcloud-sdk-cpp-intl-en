@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Total number of eligible instances
                      * @return TotalCount Total number of eligible instances
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of eligible instances
-                     * @param TotalCount Total number of eligible instances
+                     * @param _totalCount Total number of eligible instances
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of eligible instance details
                      * @return InstanceList List of eligible instance details
+                     * 
                      */
                     std::vector<InstanceDetail> GetInstanceList() const;
 
                     /**
                      * 设置List of eligible instance details
-                     * @param InstanceList List of eligible instance details
+                     * @param _instanceList List of eligible instance details
+                     * 
                      */
                     void SetInstanceList(const std::vector<InstanceDetail>& _instanceList);
 
                     /**
                      * 判断参数 InstanceList 是否已赋值
                      * @return InstanceList 是否已赋值
+                     * 
                      */
                     bool InstanceListHasBeenSet() const;
 

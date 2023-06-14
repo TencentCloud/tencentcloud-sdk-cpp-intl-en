@@ -49,48 +49,56 @@ namespace TencentCloud
                     /**
                      * 获取The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TeacherLogo The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WatermarkConfig GetTeacherLogo() const;
 
                     /**
                      * 判断参数 TeacherLogo 是否已赋值
                      * @return TeacherLogo 是否已赋值
+                     * 
                      */
                     bool TeacherLogoHasBeenSet() const;
 
                     /**
                      * 获取The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BoardLogo The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WatermarkConfig GetBoardLogo() const;
 
                     /**
                      * 判断参数 BoardLogo 是否已赋值
                      * @return BoardLogo 是否已赋值
+                     * 
                      */
                     bool BoardLogoHasBeenSet() const;
 
                     /**
                      * 获取The background image. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackgroundPicture The background image. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     BackgroundPictureConfig GetBackgroundPicture() const;
 
                     /**
                      * 判断参数 BackgroundPicture 是否已赋值
                      * @return BackgroundPicture 是否已赋值
+                     * 
                      */
                     bool BackgroundPictureHasBeenSet() const;
 
                     /**
                      * 获取The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TextMarkConfig GetText() const;
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 

@@ -68,6 +68,7 @@ namespace TencentCloud
 <li>AiContentReview: Content moderation</li>
 <li>AIRecognition: Content recognition</li>
 <li>AIAnalysis: Content analysis</li>
+                     * 
                      */
                     std::string GetActivityType() const;
 
@@ -82,7 +83,7 @@ namespace TencentCloud
 <li>AiContentReview: Content moderation</li>
 <li>AIRecognition: Content recognition</li>
 <li>AIAnalysis: Content analysis</li>
-                     * @param ActivityType The type of the scheme’s subtask.
+                     * @param _activityType The type of the scheme’s subtask.
 <li>Transcode: Transcoding</li>
 <li>SampleSnapshot: Sampled screenshot</li>
 <li>AnimatedGraphics: Animated image generating</li>
@@ -92,30 +93,35 @@ namespace TencentCloud
 <li>AiContentReview: Content moderation</li>
 <li>AIRecognition: Content recognition</li>
 <li>AIAnalysis: Content analysis</li>
+                     * 
                      */
                     void SetActivityType(const std::string& _activityType);
 
                     /**
                      * 判断参数 ActivityType 是否已赋值
                      * @return ActivityType 是否已赋值
+                     * 
                      */
                     bool ActivityTypeHasBeenSet() const;
 
                     /**
                      * 获取The execution results of the subtasks of the scheme.
                      * @return ActivityResItem The execution results of the subtasks of the scheme.
+                     * 
                      */
                     ActivityResItem GetActivityResItem() const;
 
                     /**
                      * 设置The execution results of the subtasks of the scheme.
-                     * @param ActivityResItem The execution results of the subtasks of the scheme.
+                     * @param _activityResItem The execution results of the subtasks of the scheme.
+                     * 
                      */
                     void SetActivityResItem(const ActivityResItem& _activityResItem);
 
                     /**
                      * 判断参数 ActivityResItem 是否已赋值
                      * @return ActivityResItem 是否已赋值
+                     * 
                      */
                     bool ActivityResItemHasBeenSet() const;
 

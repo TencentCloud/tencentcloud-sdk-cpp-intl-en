@@ -50,12 +50,14 @@ namespace TencentCloud
                      * @return Offline CWP deactivation alarm status:
 <li>OPEN: alarm enabled</li>
 <li>CLOSE: alarm disabled</li>
+                     * 
                      */
                     std::string GetOffline() const;
 
                     /**
                      * 判断参数 Offline 是否已赋值
                      * @return Offline 是否已赋值
+                     * 
                      */
                     bool OfflineHasBeenSet() const;
 
@@ -66,12 +68,14 @@ namespace TencentCloud
                      * @return Malware Trojan discovery alarm status:
 <li>OPEN: alarm enabled</li>
 <li>CLOSE: alarm disabled</li>
+                     * 
                      */
                     std::string GetMalware() const;
 
                     /**
                      * 判断参数 Malware 是否已赋值
                      * @return Malware 是否已赋值
+                     * 
                      */
                     bool MalwareHasBeenSet() const;
 
@@ -82,12 +86,14 @@ namespace TencentCloud
                      * @return NonlocalLogin Unusual login location discovery alarm status:
 <li>OPEN: alarm enabled</li>
 <li>CLOSE: alarm disabled</li>
+                     * 
                      */
                     std::string GetNonlocalLogin() const;
 
                     /**
                      * 判断参数 NonlocalLogin 是否已赋值
                      * @return NonlocalLogin 是否已赋值
+                     * 
                      */
                     bool NonlocalLoginHasBeenSet() const;
 
@@ -98,12 +104,14 @@ namespace TencentCloud
                      * @return CrackSuccess Brute force attack success alarm status:
 <li>OPEN: alarm enabled</li>
 <li>CLOSE: alarm disabled</li>
+                     * 
                      */
                     std::string GetCrackSuccess() const;
 
                     /**
                      * 判断参数 CrackSuccess 是否已赋值
                      * @return CrackSuccess 是否已赋值
+                     * 
                      */
                     bool CrackSuccessHasBeenSet() const;
 

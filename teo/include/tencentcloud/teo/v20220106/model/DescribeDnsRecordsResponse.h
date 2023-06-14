@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Used for paginated query by total count
                      * @return TotalCount Used for paginated query by total count
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of DNS records
                      * @return Records List of DNS records
+                     * 
                      */
                     std::vector<DnsRecord> GetRecords() const;
 
                     /**
                      * 判断参数 Records 是否已赋值
                      * @return Records 是否已赋值
+                     * 
                      */
                     bool RecordsHasBeenSet() const;
 

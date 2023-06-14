@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Alias list
                      * @return Aliases Alias list
+                     * 
                      */
                     std::vector<Alias> GetAliases() const;
 
                     /**
                      * 判断参数 Aliases 是否已赋值
                      * @return Aliases 是否已赋值
+                     * 
                      */
                     bool AliasesHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of aliases
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

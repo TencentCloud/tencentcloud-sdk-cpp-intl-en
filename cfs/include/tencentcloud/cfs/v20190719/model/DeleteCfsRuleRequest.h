@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Permission group ID
                      * @return PGroupId Permission group ID
+                     * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
                      * 设置Permission group ID
-                     * @param PGroupId Permission group ID
+                     * @param _pGroupId Permission group ID
+                     * 
                      */
                     void SetPGroupId(const std::string& _pGroupId);
 
                     /**
                      * 判断参数 PGroupId 是否已赋值
                      * @return PGroupId 是否已赋值
+                     * 
                      */
                     bool PGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

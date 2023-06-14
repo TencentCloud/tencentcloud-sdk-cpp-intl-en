@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Callback address of the real-time recording event. If no callback address is set, this field is null.
                      * @return Callback Callback address of the real-time recording event. If no callback address is set, this field is null.
+                     * 
                      */
                     std::string GetCallback() const;
 
                     /**
                      * 判断参数 Callback 是否已赋值
                      * @return Callback 是否已赋值
+                     * 
                      */
                     bool CallbackHasBeenSet() const;
 
                     /**
                      * 获取Authentication key of the real-time recording callback
                      * @return CallbackKey Authentication key of the real-time recording callback
+                     * 
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 判断参数 CallbackKey 是否已赋值
                      * @return CallbackKey 是否已赋值
+                     * 
                      */
                     bool CallbackKeyHasBeenSet() const;
 

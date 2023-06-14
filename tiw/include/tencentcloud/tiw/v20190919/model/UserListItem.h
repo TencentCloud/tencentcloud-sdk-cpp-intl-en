@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取User ID in the room.
                      * @return UserId User ID in the room.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID in the room.
-                     * @param UserId User ID in the room.
+                     * @param _userId User ID in the room.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取The first time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
                      * @return StartTime The first time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置The first time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
-                     * @param StartTime The first time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
+                     * @param _startTime The first time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The last time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
                      * @return EndTime The last time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置The last time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
-                     * @param EndTime The last time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
+                     * @param _endTime The last time when the user ID appeared during the queried period, which is a Unix timestamp in milliseconds.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

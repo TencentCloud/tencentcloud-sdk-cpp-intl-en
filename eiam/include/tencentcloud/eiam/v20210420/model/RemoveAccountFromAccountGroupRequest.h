@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Account group ID
                      * @return AccountGroupId Account group ID
+                     * 
                      */
                     std::string GetAccountGroupId() const;
 
                     /**
                      * 设置Account group ID
-                     * @param AccountGroupId Account group ID
+                     * @param _accountGroupId Account group ID
+                     * 
                      */
                     void SetAccountGroupId(const std::string& _accountGroupId);
 
                     /**
                      * 判断参数 AccountGroupId 是否已赋值
                      * @return AccountGroupId 是否已赋值
+                     * 
                      */
                     bool AccountGroupIdHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of the accounts to be removed.
                      * @return AccountIds List of IDs of the accounts to be removed.
+                     * 
                      */
                     std::vector<std::string> GetAccountIds() const;
 
                     /**
                      * 设置List of IDs of the accounts to be removed.
-                     * @param AccountIds List of IDs of the accounts to be removed.
+                     * @param _accountIds List of IDs of the accounts to be removed.
+                     * 
                      */
                     void SetAccountIds(const std::vector<std::string>& _accountIds);
 
                     /**
                      * 判断参数 AccountIds 是否已赋值
                      * @return AccountIds 是否已赋值
+                     * 
                      */
                     bool AccountIdsHasBeenSet() const;
 

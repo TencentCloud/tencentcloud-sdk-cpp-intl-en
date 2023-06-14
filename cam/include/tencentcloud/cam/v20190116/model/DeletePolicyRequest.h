@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Array. Array elements are policy IDs. Policies can be deleted in a batch
                      * @return PolicyId Array. Array elements are policy IDs. Policies can be deleted in a batch
+                     * 
                      */
                     std::vector<uint64_t> GetPolicyId() const;
 
                     /**
                      * 设置Array. Array elements are policy IDs. Policies can be deleted in a batch
-                     * @param PolicyId Array. Array elements are policy IDs. Policies can be deleted in a batch
+                     * @param _policyId Array. Array elements are policy IDs. Policies can be deleted in a batch
+                     * 
                      */
                     void SetPolicyId(const std::vector<uint64_t>& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 

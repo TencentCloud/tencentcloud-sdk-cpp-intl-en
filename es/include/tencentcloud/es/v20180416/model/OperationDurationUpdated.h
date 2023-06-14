@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
                      * @return Periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+                     * 
                      */
                     std::vector<uint64_t> GetPeriods() const;
 
                     /**
                      * 设置Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-                     * @param Periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+                     * @param _periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+                     * 
                      */
                     void SetPeriods(const std::vector<uint64_t>& _periods);
 
                     /**
                      * 判断参数 Periods 是否已赋值
                      * @return Periods 是否已赋值
+                     * 
                      */
                     bool PeriodsHasBeenSet() const;
 
                     /**
                      * 获取The maintenance start time
                      * @return TimeStart The maintenance start time
+                     * 
                      */
                     std::string GetTimeStart() const;
 
                     /**
                      * 设置The maintenance start time
-                     * @param TimeStart The maintenance start time
+                     * @param _timeStart The maintenance start time
+                     * 
                      */
                     void SetTimeStart(const std::string& _timeStart);
 
                     /**
                      * 判断参数 TimeStart 是否已赋值
                      * @return TimeStart 是否已赋值
+                     * 
                      */
                     bool TimeStartHasBeenSet() const;
 
                     /**
                      * 获取The maintenance end time
                      * @return TimeEnd The maintenance end time
+                     * 
                      */
                     std::string GetTimeEnd() const;
 
                     /**
                      * 设置The maintenance end time
-                     * @param TimeEnd The maintenance end time
+                     * @param _timeEnd The maintenance end time
+                     * 
                      */
                     void SetTimeEnd(const std::string& _timeEnd);
 
                     /**
                      * 判断参数 TimeEnd 是否已赋值
                      * @return TimeEnd 是否已赋值
+                     * 
                      */
                     bool TimeEndHasBeenSet() const;
 
                     /**
                      * 获取The time zone expressed in UTC.
                      * @return TimeZone The time zone expressed in UTC.
+                     * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
                      * 设置The time zone expressed in UTC.
-                     * @param TimeZone The time zone expressed in UTC.
+                     * @param _timeZone The time zone expressed in UTC.
+                     * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
 
                     /**
                      * 判断参数 TimeZone 是否已赋值
                      * @return TimeZone 是否已赋值
+                     * 
                      */
                     bool TimeZoneHasBeenSet() const;
 
                     /**
                      * 获取The array of ES cluster IDs
                      * @return MoreInstances The array of ES cluster IDs
+                     * 
                      */
                     std::vector<std::string> GetMoreInstances() const;
 
                     /**
                      * 设置The array of ES cluster IDs
-                     * @param MoreInstances The array of ES cluster IDs
+                     * @param _moreInstances The array of ES cluster IDs
+                     * 
                      */
                     void SetMoreInstances(const std::vector<std::string>& _moreInstances);
 
                     /**
                      * 判断参数 MoreInstances 是否已赋值
                      * @return MoreInstances 是否已赋值
+                     * 
                      */
                     bool MoreInstancesHasBeenSet() const;
 

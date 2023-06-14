@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a specified time point screencapturing template.
                      * @return Definition Unique ID of a specified time point screencapturing template.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Unique ID of a specified time point screencapturing template.
-                     * @param Definition Unique ID of a specified time point screencapturing template.
+                     * @param _definition Unique ID of a specified time point screencapturing template.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return Type Template type. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -78,51 +82,59 @@ namespace TencentCloud
                      * 设置Template type. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
-                     * @param Type Template type. Valid values:
+                     * @param _type Template type. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Name of a specified time point screencapturing template.
                      * @return Name Name of a specified time point screencapturing template.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a specified time point screencapturing template.
-                     * @param Name Name of a specified time point screencapturing template.
+                     * @param _name Name of a specified time point screencapturing template.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Template description.
                      * @return Comment Template description.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Template description.
-                     * @param Comment Template description.
+                     * @param _comment Template description.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -139,6 +151,7 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
+                     * 
                      */
                     uint64_t GetWidth() const;
 
@@ -149,18 +162,20 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
-                     * @param Width Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
+                     * @param _width Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -177,6 +192,7 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
+                     * 
                      */
                     uint64_t GetHeight() const;
 
@@ -187,18 +203,20 @@ Default value: 0.
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
-                     * @param Height Maximum value of the height (or short side) of a screenshot in px. Value range: 0 and [128, 4,096].
+                     * @param _height Maximum value of the height (or short side) of a screenshot in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
 <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
 <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
 Default value: 0.
+                     * 
                      */
                     void SetHeight(const uint64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -211,6 +229,7 @@ Default value: open.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
+                     * 
                      */
                     std::string GetResolutionAdaptive() const;
 
@@ -219,70 +238,81 @@ Default value: open.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
-                     * @param ResolutionAdaptive Resolution adaption. Valid values:
+                     * @param _resolutionAdaptive Resolution adaption. Valid values:
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
+                     * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
 
                     /**
                      * 判断参数 ResolutionAdaptive 是否已赋值
                      * @return ResolutionAdaptive 是否已赋值
+                     * 
                      */
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
                      * 获取Image format.
                      * @return Format Image format.
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Image format.
-                     * @param Format Image format.
+                     * @param _format Image format.
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -299,6 +329,7 @@ Default value: black.
 <li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
 <li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
+                     * 
                      */
                     std::string GetFillType() const;
 
@@ -309,18 +340,20 @@ Default value: black.
 <li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
 <li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
-                     * @param FillType The fill mode, or the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+                     * @param _fillType The fill mode, or the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
 <li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
 <li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
 <li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
 <li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
+                     * 
                      */
                     void SetFillType(const std::string& _fillType);
 
                     /**
                      * 判断参数 FillType 是否已赋值
                      * @return FillType 是否已赋值
+                     * 
                      */
                     bool FillTypeHasBeenSet() const;
 

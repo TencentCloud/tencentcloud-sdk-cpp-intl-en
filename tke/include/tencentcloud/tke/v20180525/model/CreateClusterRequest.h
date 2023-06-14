@@ -53,162 +53,189 @@ namespace TencentCloud
                     /**
                      * 获取Container networking configuration information for the cluster
                      * @return ClusterCIDRSettings Container networking configuration information for the cluster
+                     * 
                      */
                     ClusterCIDRSettings GetClusterCIDRSettings() const;
 
                     /**
                      * 设置Container networking configuration information for the cluster
-                     * @param ClusterCIDRSettings Container networking configuration information for the cluster
+                     * @param _clusterCIDRSettings Container networking configuration information for the cluster
+                     * 
                      */
                     void SetClusterCIDRSettings(const ClusterCIDRSettings& _clusterCIDRSettings);
 
                     /**
                      * 判断参数 ClusterCIDRSettings 是否已赋值
                      * @return ClusterCIDRSettings 是否已赋值
+                     * 
                      */
                     bool ClusterCIDRSettingsHasBeenSet() const;
 
                     /**
                      * 获取Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
                      * @return ClusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
-                     * @param ClusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
+                     * @param _clusterType Cluster type. Managed cluster: MANAGED_CLUSTER; self-deployed cluster: INDEPENDENT_CLUSTER.
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
                      * 获取Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
                      * @return RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
+                     * 
                      */
                     std::vector<RunInstancesForNode> GetRunInstancesForNode() const;
 
                     /**
                      * 设置Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
-                     * @param RunInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
+                     * @param _runInstancesForNode Pass-through parameter for CVM creation in the format of a JSON string. For more information, see the API for [creating a CVM instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1).
+                     * 
                      */
                     void SetRunInstancesForNode(const std::vector<RunInstancesForNode>& _runInstancesForNode);
 
                     /**
                      * 判断参数 RunInstancesForNode 是否已赋值
                      * @return RunInstancesForNode 是否已赋值
+                     * 
                      */
                     bool RunInstancesForNodeHasBeenSet() const;
 
                     /**
                      * 获取Basic configuration information of the cluster
                      * @return ClusterBasicSettings Basic configuration information of the cluster
+                     * 
                      */
                     ClusterBasicSettings GetClusterBasicSettings() const;
 
                     /**
                      * 设置Basic configuration information of the cluster
-                     * @param ClusterBasicSettings Basic configuration information of the cluster
+                     * @param _clusterBasicSettings Basic configuration information of the cluster
+                     * 
                      */
                     void SetClusterBasicSettings(const ClusterBasicSettings& _clusterBasicSettings);
 
                     /**
                      * 判断参数 ClusterBasicSettings 是否已赋值
                      * @return ClusterBasicSettings 是否已赋值
+                     * 
                      */
                     bool ClusterBasicSettingsHasBeenSet() const;
 
                     /**
                      * 获取Advanced configuration information of the cluster
                      * @return ClusterAdvancedSettings Advanced configuration information of the cluster
+                     * 
                      */
                     ClusterAdvancedSettings GetClusterAdvancedSettings() const;
 
                     /**
                      * 设置Advanced configuration information of the cluster
-                     * @param ClusterAdvancedSettings Advanced configuration information of the cluster
+                     * @param _clusterAdvancedSettings Advanced configuration information of the cluster
+                     * 
                      */
                     void SetClusterAdvancedSettings(const ClusterAdvancedSettings& _clusterAdvancedSettings);
 
                     /**
                      * 判断参数 ClusterAdvancedSettings 是否已赋值
                      * @return ClusterAdvancedSettings 是否已赋值
+                     * 
                      */
                     bool ClusterAdvancedSettingsHasBeenSet() const;
 
                     /**
                      * 获取Advanced configuration information of the node
                      * @return InstanceAdvancedSettings Advanced configuration information of the node
+                     * 
                      */
                     InstanceAdvancedSettings GetInstanceAdvancedSettings() const;
 
                     /**
                      * 设置Advanced configuration information of the node
-                     * @param InstanceAdvancedSettings Advanced configuration information of the node
+                     * @param _instanceAdvancedSettings Advanced configuration information of the node
+                     * 
                      */
                     void SetInstanceAdvancedSettings(const InstanceAdvancedSettings& _instanceAdvancedSettings);
 
                     /**
                      * 判断参数 InstanceAdvancedSettings 是否已赋值
                      * @return InstanceAdvancedSettings 是否已赋值
+                     * 
                      */
                     bool InstanceAdvancedSettingsHasBeenSet() const;
 
                     /**
                      * 获取The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
                      * @return ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
+                     * 
                      */
                     std::vector<ExistedInstancesForNode> GetExistedInstancesForNode() const;
 
                     /**
                      * 设置The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
-                     * @param ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
+                     * @param _existedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
+                     * 
                      */
                     void SetExistedInstancesForNode(const std::vector<ExistedInstancesForNode>& _existedInstancesForNode);
 
                     /**
                      * 判断参数 ExistedInstancesForNode 是否已赋值
                      * @return ExistedInstancesForNode 是否已赋值
+                     * 
                      */
                     bool ExistedInstancesForNodeHasBeenSet() const;
 
                     /**
                      * 获取CVM type and the corresponding data disk mounting configuration information.
                      * @return InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
+                     * 
                      */
                     std::vector<InstanceDataDiskMountSetting> GetInstanceDataDiskMountSettings() const;
 
                     /**
                      * 设置CVM type and the corresponding data disk mounting configuration information.
-                     * @param InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
+                     * @param _instanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
+                     * 
                      */
                     void SetInstanceDataDiskMountSettings(const std::vector<InstanceDataDiskMountSetting>& _instanceDataDiskMountSettings);
 
                     /**
                      * 判断参数 InstanceDataDiskMountSettings 是否已赋值
                      * @return InstanceDataDiskMountSettings 是否已赋值
+                     * 
                      */
                     bool InstanceDataDiskMountSettingsHasBeenSet() const;
 
                     /**
                      * 获取Information of the add-on to be installed
                      * @return ExtensionAddons Information of the add-on to be installed
+                     * 
                      */
                     std::vector<ExtensionAddon> GetExtensionAddons() const;
 
                     /**
                      * 设置Information of the add-on to be installed
-                     * @param ExtensionAddons Information of the add-on to be installed
+                     * @param _extensionAddons Information of the add-on to be installed
+                     * 
                      */
                     void SetExtensionAddons(const std::vector<ExtensionAddon>& _extensionAddons);
 
                     /**
                      * 判断参数 ExtensionAddons 是否已赋值
                      * @return ExtensionAddons 是否已赋值
+                     * 
                      */
                     bool ExtensionAddonsHasBeenSet() const;
 

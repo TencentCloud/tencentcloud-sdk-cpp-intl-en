@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return DBInstanceId Instance ID.
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param DBInstanceId Instance ID.
+                     * @param _dBInstanceId Instance ID.
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
                      * @return BackupSetId Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
+                     * 
                      */
                     std::string GetBackupSetId() const;
 
                     /**
                      * 设置Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
-                     * @param BackupSetId Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
+                     * @param _backupSetId Basic backup set ID. Either this parameter or `RecoveryTargetTime` must be passed in. If both are passed in, only this parameter takes effect.
+                     * 
                      */
                     void SetBackupSetId(const std::string& _backupSetId);
 
                     /**
                      * 判断参数 BackupSetId 是否已赋值
                      * @return BackupSetId 是否已赋值
+                     * 
                      */
                     bool BackupSetIdHasBeenSet() const;
 
                     /**
                      * 获取Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
                      * @return RecoveryTargetTime Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
+                     * 
                      */
                     std::string GetRecoveryTargetTime() const;
 
                     /**
                      * 设置Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
-                     * @param RecoveryTargetTime Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
+                     * @param _recoveryTargetTime Restoration time (UTC+8). Either this parameter or `BackupSetId` must be passed in.
+                     * 
                      */
                     void SetRecoveryTargetTime(const std::string& _recoveryTargetTime);
 
                     /**
                      * 判断参数 RecoveryTargetTime 是否已赋值
                      * @return RecoveryTargetTime 是否已赋值
+                     * 
                      */
                     bool RecoveryTargetTimeHasBeenSet() const;
 

@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MsgRateIn Production rate (messages/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetMsgRateIn() const;
 
                     /**
                      * 判断参数 MsgRateIn 是否已赋值
                      * @return MsgRateIn 是否已赋值
+                     * 
                      */
                     bool MsgRateInHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MsgThroughputIn Production rate (byte/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetMsgThroughputIn() const;
 
                     /**
                      * 判断参数 MsgThroughputIn 是否已赋值
                      * @return MsgThroughputIn 是否已赋值
+                     * 
                      */
                     bool MsgThroughputInHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PublisherCount The number of producers.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPublisherCount() const;
 
                     /**
                      * 判断参数 PublisherCount 是否已赋值
                      * @return PublisherCount 是否已赋值
+                     * 
                      */
                     bool PublisherCountHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StorageSize Message storage size in bytes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStorageSize() const;
 
                     /**
                      * 判断参数 StorageSize 是否已赋值
                      * @return StorageSize 是否已赋值
+                     * 
                      */
                     bool StorageSizeHasBeenSet() const;
 

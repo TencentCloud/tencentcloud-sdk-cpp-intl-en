@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of `tdsqlshard-ow728lmc`
                      * @return InstanceId Instance ID in the format of `tdsqlshard-ow728lmc`
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of `tdsqlshard-ow728lmc`
-                     * @param InstanceId Instance ID in the format of `tdsqlshard-ow728lmc`
+                     * @param _instanceId Instance ID in the format of `tdsqlshard-ow728lmc`
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the data encryption (Once enabled, it can’t be disabled). Valid values: `1` (Yes), `0` (No. Default).
                      * @return EncryptEnabled Whether to enable the data encryption (Once enabled, it can’t be disabled). Valid values: `1` (Yes), `0` (No. Default).
+                     * 
                      */
                     int64_t GetEncryptEnabled() const;
 
                     /**
                      * 设置Whether to enable the data encryption (Once enabled, it can’t be disabled). Valid values: `1` (Yes), `0` (No. Default).
-                     * @param EncryptEnabled Whether to enable the data encryption (Once enabled, it can’t be disabled). Valid values: `1` (Yes), `0` (No. Default).
+                     * @param _encryptEnabled Whether to enable the data encryption (Once enabled, it can’t be disabled). Valid values: `1` (Yes), `0` (No. Default).
+                     * 
                      */
                     void SetEncryptEnabled(const int64_t& _encryptEnabled);
 
                     /**
                      * 判断参数 EncryptEnabled 是否已赋值
                      * @return EncryptEnabled 是否已赋值
+                     * 
                      */
                     bool EncryptEnabledHasBeenSet() const;
 

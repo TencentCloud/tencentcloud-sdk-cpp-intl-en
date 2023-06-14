@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The set of queried push tasks.
                      * @return WhiteboardPushTaskSet The set of queried push tasks.
+                     * 
                      */
                     std::vector<WhiteboardPushTaskSearchResult> GetWhiteboardPushTaskSet() const;
 
                     /**
                      * 判断参数 WhiteboardPushTaskSet 是否已赋值
                      * @return WhiteboardPushTaskSet 是否已赋值
+                     * 
                      */
                     bool WhiteboardPushTaskSetHasBeenSet() const;
 
                     /**
                      * 获取Number of push tasks.
                      * @return TotalCount Number of push tasks.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

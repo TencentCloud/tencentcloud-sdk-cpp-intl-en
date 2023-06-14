@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JobSet List of tasks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Job> GetJobSet() const;
 
                     /**
                      * 判断参数 JobSet 是否已赋值
                      * @return JobSet 是否已赋值
+                     * 
                      */
                     bool JobSetHasBeenSet() const;
 

@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Mount point ID
                      * @return MountPointId Mount point ID
+                     * 
                      */
                     std::string GetMountPointId() const;
 
                     /**
                      * 设置Mount point ID
-                     * @param MountPointId Mount point ID
+                     * @param _mountPointId Mount point ID
+                     * 
                      */
                     void SetMountPointId(const std::string& _mountPointId);
 
                     /**
                      * 判断参数 MountPointId 是否已赋值
                      * @return MountPointId 是否已赋值
+                     * 
                      */
                     bool MountPointIdHasBeenSet() const;
 
                     /**
                      * 获取Mount point name
                      * @return MountPointName Mount point name
+                     * 
                      */
                     std::string GetMountPointName() const;
 
                     /**
                      * 设置Mount point name
-                     * @param MountPointName Mount point name
+                     * @param _mountPointName Mount point name
+                     * 
                      */
                     void SetMountPointName(const std::string& _mountPointName);
 
                     /**
                      * 判断参数 MountPointName 是否已赋值
                      * @return MountPointName 是否已赋值
+                     * 
                      */
                     bool MountPointNameHasBeenSet() const;
 
                     /**
                      * 获取File system ID
                      * @return FileSystemId File system ID
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 设置File system ID
-                     * @param FileSystemId File system ID
+                     * @param _fileSystemId File system ID
+                     * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
                      * 获取Mount point status (1: enabled; 2: disabled)
                      * @return Status Mount point status (1: enabled; 2: disabled)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Mount point status (1: enabled; 2: disabled)
-                     * @param Status Mount point status (1: enabled; 2: disabled)
+                     * @param _status Mount point status (1: enabled; 2: disabled)
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of the bound permission groups
                      * @return AccessGroupIds List of IDs of the bound permission groups
+                     * 
                      */
                     std::vector<std::string> GetAccessGroupIds() const;
 
                     /**
                      * 设置List of IDs of the bound permission groups
-                     * @param AccessGroupIds List of IDs of the bound permission groups
+                     * @param _accessGroupIds List of IDs of the bound permission groups
+                     * 
                      */
                     void SetAccessGroupIds(const std::vector<std::string>& _accessGroupIds);
 
                     /**
                      * 判断参数 AccessGroupIds 是否已赋值
                      * @return AccessGroupIds 是否已赋值
+                     * 
                      */
                     bool AccessGroupIdsHasBeenSet() const;
 

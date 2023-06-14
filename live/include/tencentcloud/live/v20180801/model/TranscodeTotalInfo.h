@@ -51,38 +51,44 @@ namespace TencentCloud
 Example: 2019-03-01 00:00:00
                      * @return Time Usage time (Beijing time)
 Example: 2019-03-01 00:00:00
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Usage time (Beijing time)
 Example: 2019-03-01 00:00:00
-                     * @param Time Usage time (Beijing time)
+                     * @param _time Usage time (Beijing time)
 Example: 2019-03-01 00:00:00
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Transcoding duration in minutes
                      * @return Duration Transcoding duration in minutes
+                     * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
                      * 设置Transcoding duration in minutes
-                     * @param Duration Transcoding duration in minutes
+                     * @param _duration Transcoding duration in minutes
+                     * 
                      */
                     void SetDuration(const uint64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
@@ -99,6 +105,7 @@ Examples:
 `liveprocessor_H265`: live transcoding-H265
 `topspeed_H264`: top speed codec-H264
 `topspeed_H265`: top speed codec-H265
+                     * 
                      */
                     std::string GetModuleCodec() const;
 
@@ -109,18 +116,20 @@ Examples:
 `liveprocessor_H265`: live transcoding-H265
 `topspeed_H264`: top speed codec-H264
 `topspeed_H265`: top speed codec-H265
-                     * @param ModuleCodec Codec, with modules
+                     * @param _moduleCodec Codec, with modules
 Examples:
 `liveprocessor_H264`: live transcoding-H264
 `liveprocessor_H265`: live transcoding-H265
 `topspeed_H264`: top speed codec-H264
 `topspeed_H265`: top speed codec-H265
+                     * 
                      */
                     void SetModuleCodec(const std::string& _moduleCodec);
 
                     /**
                      * 判断参数 ModuleCodec 是否已赋值
                      * @return ModuleCodec 是否已赋值
+                     * 
                      */
                     bool ModuleCodecHasBeenSet() const;
 
@@ -129,20 +138,23 @@ Examples:
 Example: 540*480
                      * @return Resolution Resolution
 Example: 540*480
+                     * 
                      */
                     std::string GetResolution() const;
 
                     /**
                      * 设置Resolution
 Example: 540*480
-                     * @param Resolution Resolution
+                     * @param _resolution Resolution
 Example: 540*480
+                     * 
                      */
                     void SetResolution(const std::string& _resolution);
 
                     /**
                      * 判断参数 Resolution 是否已赋值
                      * @return Resolution 是否已赋值
+                     * 
                      */
                     bool ResolutionHasBeenSet() const;
 

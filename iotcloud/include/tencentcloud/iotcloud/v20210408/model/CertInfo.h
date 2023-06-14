@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Certificate name
                      * @return CertName Certificate name
+                     * 
                      */
                     std::string GetCertName() const;
 
                     /**
                      * 设置Certificate name
-                     * @param CertName Certificate name
+                     * @param _certName Certificate name
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 
                     /**
                      * 获取Hex sequence number of a certificate
                      * @return CertSN Hex sequence number of a certificate
+                     * 
                      */
                     std::string GetCertSN() const;
 
                     /**
                      * 设置Hex sequence number of a certificate
-                     * @param CertSN Hex sequence number of a certificate
+                     * @param _certSN Hex sequence number of a certificate
+                     * 
                      */
                     void SetCertSN(const std::string& _certSN);
 
                     /**
                      * 判断参数 CertSN 是否已赋值
                      * @return CertSN 是否已赋值
+                     * 
                      */
                     bool CertSNHasBeenSet() const;
 
                     /**
                      * 获取Certificate issuer
                      * @return IssuerName Certificate issuer
+                     * 
                      */
                     std::string GetIssuerName() const;
 
                     /**
                      * 设置Certificate issuer
-                     * @param IssuerName Certificate issuer
+                     * @param _issuerName Certificate issuer
+                     * 
                      */
                     void SetIssuerName(const std::string& _issuerName);
 
                     /**
                      * 判断参数 IssuerName 是否已赋值
                      * @return IssuerName 是否已赋值
+                     * 
                      */
                     bool IssuerNameHasBeenSet() const;
 
                     /**
                      * 获取Certificate subject
                      * @return Subject Certificate subject
+                     * 
                      */
                     std::string GetSubject() const;
 
                     /**
                      * 设置Certificate subject
-                     * @param Subject Certificate subject
+                     * @param _subject Certificate subject
+                     * 
                      */
                     void SetSubject(const std::string& _subject);
 
                     /**
                      * 判断参数 Subject 是否已赋值
                      * @return Subject 是否已赋值
+                     * 
                      */
                     bool SubjectHasBeenSet() const;
 
                     /**
                      * 获取Certificate creation time (timestamp in milliseconds)
                      * @return CreateTime Certificate creation time (timestamp in milliseconds)
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Certificate creation time (timestamp in milliseconds)
-                     * @param CreateTime Certificate creation time (timestamp in milliseconds)
+                     * @param _createTime Certificate creation time (timestamp in milliseconds)
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Certificate effective time (timestamp in milliseconds)
                      * @return EffectiveTime Certificate effective time (timestamp in milliseconds)
+                     * 
                      */
                     uint64_t GetEffectiveTime() const;
 
                     /**
                      * 设置Certificate effective time (timestamp in milliseconds)
-                     * @param EffectiveTime Certificate effective time (timestamp in milliseconds)
+                     * @param _effectiveTime Certificate effective time (timestamp in milliseconds)
+                     * 
                      */
                     void SetEffectiveTime(const uint64_t& _effectiveTime);
 
                     /**
                      * 判断参数 EffectiveTime 是否已赋值
                      * @return EffectiveTime 是否已赋值
+                     * 
                      */
                     bool EffectiveTimeHasBeenSet() const;
 
                     /**
                      * 获取Certificate expiration time (timestamp in milliseconds)
                      * @return ExpireTime Certificate expiration time (timestamp in milliseconds)
+                     * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
                      * 设置Certificate expiration time (timestamp in milliseconds)
-                     * @param ExpireTime Certificate expiration time (timestamp in milliseconds)
+                     * @param _expireTime Certificate expiration time (timestamp in milliseconds)
+                     * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取X.509 certificate content
                      * @return CertText X.509 certificate content
+                     * 
                      */
                     std::string GetCertText() const;
 
                     /**
                      * 设置X.509 certificate content
-                     * @param CertText X.509 certificate content
+                     * @param _certText X.509 certificate content
+                     * 
                      */
                     void SetCertText(const std::string& _certText);
 
                     /**
                      * 判断参数 CertText 是否已赋值
                      * @return CertText 是否已赋值
+                     * 
                      */
                     bool CertTextHasBeenSet() const;
 

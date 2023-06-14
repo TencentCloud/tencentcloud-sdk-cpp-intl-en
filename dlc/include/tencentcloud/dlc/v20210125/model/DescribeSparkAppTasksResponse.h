@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tasks Task result (this field has been disused)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskResponseInfo GetTasks() const;
 
                     /**
                      * 判断参数 Tasks 是否已赋值
                      * @return Tasks 是否已赋值
+                     * 
                      */
                     bool TasksHasBeenSet() const;
 
                     /**
                      * 获取Total number of tasks
                      * @return TotalCount Total number of tasks
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SparkAppTasks List of task results
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TaskResponseInfo> GetSparkAppTasks() const;
 
                     /**
                      * 判断参数 SparkAppTasks 是否已赋值
                      * @return SparkAppTasks 是否已赋值
+                     * 
                      */
                     bool SparkAppTasksHasBeenSet() const;
 

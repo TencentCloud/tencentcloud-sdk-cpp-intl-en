@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of alarm policy conditions.
                      * @return Conditions List of alarm policy conditions.
+                     * 
                      */
                     std::vector<DescribePolicyConditionListCondition> GetConditions() const;
 
                     /**
                      * 判断参数 Conditions 是否已赋值
                      * @return Conditions 是否已赋值
+                     * 
                      */
                     bool ConditionsHasBeenSet() const;
 

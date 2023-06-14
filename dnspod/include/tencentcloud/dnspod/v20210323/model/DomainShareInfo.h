@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Account with which the domain is shared
                      * @return ShareTo Account with which the domain is shared
+                     * 
                      */
                     std::string GetShareTo() const;
 
                     /**
                      * 设置Account with which the domain is shared
-                     * @param ShareTo Account with which the domain is shared
+                     * @param _shareTo Account with which the domain is shared
+                     * 
                      */
                     void SetShareTo(const std::string& _shareTo);
 
                     /**
                      * 判断参数 ShareTo 是否已赋值
                      * @return ShareTo 是否已赋值
+                     * 
                      */
                     bool ShareToHasBeenSet() const;
 
                     /**
                      * 获取Sharing mode. Valid values: `rw` (read/write), `r` (read-only).
                      * @return Mode Sharing mode. Valid values: `rw` (read/write), `r` (read-only).
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Sharing mode. Valid values: `rw` (read/write), `r` (read-only).
-                     * @param Mode Sharing mode. Valid values: `rw` (read/write), `r` (read-only).
+                     * @param _mode Sharing mode. Valid values: `rw` (read/write), `r` (read-only).
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Sharing status. Valid values: `enabled` (shared successfully); `pending` (the account shared to does not exist and is pending registration).
                      * @return Status Sharing status. Valid values: `enabled` (shared successfully); `pending` (the account shared to does not exist and is pending registration).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Sharing status. Valid values: `enabled` (shared successfully); `pending` (the account shared to does not exist and is pending registration).
-                     * @param Status Sharing status. Valid values: `enabled` (shared successfully); `pending` (the account shared to does not exist and is pending registration).
+                     * @param _status Sharing status. Valid values: `enabled` (shared successfully); `pending` (the account shared to does not exist and is pending registration).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

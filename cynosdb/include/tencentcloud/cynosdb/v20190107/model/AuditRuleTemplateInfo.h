@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Rule template ID
                      * @return RuleTemplateId Rule template ID
+                     * 
                      */
                     std::string GetRuleTemplateId() const;
 
                     /**
                      * 设置Rule template ID
-                     * @param RuleTemplateId Rule template ID
+                     * @param _ruleTemplateId Rule template ID
+                     * 
                      */
                     void SetRuleTemplateId(const std::string& _ruleTemplateId);
 
                     /**
                      * 判断参数 RuleTemplateId 是否已赋值
                      * @return RuleTemplateId 是否已赋值
+                     * 
                      */
                     bool RuleTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Rule template name
                      * @return RuleTemplateName Rule template name
+                     * 
                      */
                     std::string GetRuleTemplateName() const;
 
                     /**
                      * 设置Rule template name
-                     * @param RuleTemplateName Rule template name
+                     * @param _ruleTemplateName Rule template name
+                     * 
                      */
                     void SetRuleTemplateName(const std::string& _ruleTemplateName);
 
                     /**
                      * 判断参数 RuleTemplateName 是否已赋值
                      * @return RuleTemplateName 是否已赋值
+                     * 
                      */
                     bool RuleTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Filter of the rule template
                      * @return RuleFilters Filter of the rule template
+                     * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
                      * 设置Filter of the rule template
-                     * @param RuleFilters Filter of the rule template
+                     * @param _ruleFilters Filter of the rule template
+                     * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
 
                     /**
                      * 判断参数 RuleFilters 是否已赋值
                      * @return RuleFilters 是否已赋值
+                     * 
                      */
                     bool RuleFiltersHasBeenSet() const;
 
@@ -106,38 +115,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Description of a rule template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description of a rule template
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Description Description of a rule template
+                     * @param _description Description of a rule template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Creation time of a rule template
                      * @return CreateAt Creation time of a rule template
+                     * 
                      */
                     std::string GetCreateAt() const;
 
                     /**
                      * 设置Creation time of a rule template
-                     * @param CreateAt Creation time of a rule template
+                     * @param _createAt Creation time of a rule template
+                     * 
                      */
                     void SetCreateAt(const std::string& _createAt);
 
                     /**
                      * 判断参数 CreateAt 是否已赋值
                      * @return CreateAt 是否已赋值
+                     * 
                      */
                     bool CreateAtHasBeenSet() const;
 

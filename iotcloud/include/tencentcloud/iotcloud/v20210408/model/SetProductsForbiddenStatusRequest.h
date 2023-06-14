@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of products to enable or disable
                      * @return ProductId List of products to enable or disable
+                     * 
                      */
                     std::vector<std::string> GetProductId() const;
 
                     /**
                      * 设置List of products to enable or disable
-                     * @param ProductId List of products to enable or disable
+                     * @param _productId List of products to enable or disable
+                     * 
                      */
                     void SetProductId(const std::vector<std::string>& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取`0`: enable; `1`: disable
                      * @return Status `0`: enable; `1`: disable
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置`0`: enable; `1`: disable
-                     * @param Status `0`: enable; `1`: disable
+                     * @param _status `0`: enable; `1`: disable
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TopicName Topic name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TopicName Topic name.
+                     * @param _topicName Topic name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
@@ -95,38 +101,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ReturnCode Status code.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReturnCode() const;
 
                     /**
                      * 设置Status code.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ReturnCode Status code.
+                     * @param _returnCode Status code.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReturnCode(const std::string& _returnCode);
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取Message status.
                      * @return Message Message status.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Message status.
-                     * @param Message Message status.
+                     * @param _message Message status.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

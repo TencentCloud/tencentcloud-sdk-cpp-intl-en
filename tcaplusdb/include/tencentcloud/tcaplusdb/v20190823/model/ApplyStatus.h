@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Value format: cluster ID-application ID
                      * @return ApplicationId Value format: cluster ID-application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Value format: cluster ID-application ID
-                     * @param ApplicationId Value format: cluster ID-application ID
+                     * @param _applicationId Value format: cluster ID-application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Status. Valid values: `-1` (canceled), `0` (pending approval), `1` (application approved and task submitted), `2` (rejected). Only applications in the pending approval status can be updated.
                      * @return ApplicationStatus Status. Valid values: `-1` (canceled), `0` (pending approval), `1` (application approved and task submitted), `2` (rejected). Only applications in the pending approval status can be updated.
+                     * 
                      */
                     int64_t GetApplicationStatus() const;
 
                     /**
                      * 设置Status. Valid values: `-1` (canceled), `0` (pending approval), `1` (application approved and task submitted), `2` (rejected). Only applications in the pending approval status can be updated.
-                     * @param ApplicationStatus Status. Valid values: `-1` (canceled), `0` (pending approval), `1` (application approved and task submitted), `2` (rejected). Only applications in the pending approval status can be updated.
+                     * @param _applicationStatus Status. Valid values: `-1` (canceled), `0` (pending approval), `1` (application approved and task submitted), `2` (rejected). Only applications in the pending approval status can be updated.
+                     * 
                      */
                     void SetApplicationStatus(const int64_t& _applicationStatus);
 
                     /**
                      * 判断参数 ApplicationStatus 是否已赋值
                      * @return ApplicationStatus 是否已赋值
+                     * 
                      */
                     bool ApplicationStatusHasBeenSet() const;
 
                     /**
                      * 获取Application type
                      * @return ApplicationType Application type
+                     * 
                      */
                     int64_t GetApplicationType() const;
 
                     /**
                      * 设置Application type
-                     * @param ApplicationType Application type
+                     * @param _applicationType Application type
+                     * 
                      */
                     void SetApplicationType(const int64_t& _applicationType);
 
                     /**
                      * 判断参数 ApplicationType 是否已赋值
                      * @return ApplicationType 是否已赋值
+                     * 
                      */
                     bool ApplicationTypeHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

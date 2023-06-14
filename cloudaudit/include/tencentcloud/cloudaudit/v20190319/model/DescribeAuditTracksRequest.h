@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Page number
                      * @return PageNumber Page number
+                     * 
                      */
                     uint64_t GetPageNumber() const;
 
                     /**
                      * 设置Page number
-                     * @param PageNumber Page number
+                     * @param _pageNumber Page number
+                     * 
                      */
                     void SetPageNumber(const uint64_t& _pageNumber);
 
                     /**
                      * 判断参数 PageNumber 是否已赋值
                      * @return PageNumber 是否已赋值
+                     * 
                      */
                     bool PageNumberHasBeenSet() const;
 
                     /**
                      * 获取The number of tracking sets per page
                      * @return PageSize The number of tracking sets per page
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置The number of tracking sets per page
-                     * @param PageSize The number of tracking sets per page
+                     * @param _pageSize The number of tracking sets per page
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

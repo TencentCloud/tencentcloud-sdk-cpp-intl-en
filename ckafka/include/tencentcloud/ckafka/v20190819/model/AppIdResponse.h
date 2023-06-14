@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible `AppId`
                      * @return TotalCount Number of eligible `AppId`
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of eligible `AppId`
-                     * @param TotalCount Number of eligible `AppId`
+                     * @param _totalCount Number of eligible `AppId`
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AppIdList List of eligible `AppId`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetAppIdList() const;
 
                     /**
                      * 设置List of eligible `AppId`
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AppIdList List of eligible `AppId`
+                     * @param _appIdList List of eligible `AppId`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAppIdList(const std::vector<int64_t>& _appIdList);
 
                     /**
                      * 判断参数 AppIdList 是否已赋值
                      * @return AppIdList 是否已赋值
+                     * 
                      */
                     bool AppIdListHasBeenSet() const;
 

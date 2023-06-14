@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID.
                      * @return ServiceId Unique service ID.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID.
-                     * @param ServiceId Unique service ID.
+                     * @param _serviceId Unique service ID.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique API ID.
                      * @return ApiId Unique API ID.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique API ID.
-                     * @param ApiId Unique API ID.
+                     * @param _apiId Unique API ID.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
                     /**
                      * 获取API description
                      * @return ApiDesc API description
+                     * 
                      */
                     std::string GetApiDesc() const;
 
                     /**
                      * 设置API description
-                     * @param ApiDesc API description
+                     * @param _apiDesc API description
+                     * 
                      */
                     void SetApiDesc(const std::string& _apiDesc);
 
                     /**
                      * 判断参数 ApiDesc 是否已赋值
                      * @return ApiDesc 是否已赋值
+                     * 
                      */
                     bool ApiDescHasBeenSet() const;
 
                     /**
                      * 获取API path.
                      * @return Path API path.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置API path.
-                     * @param Path API path.
+                     * @param _path API path.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取API method.
                      * @return Method API method.
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置API method.
-                     * @param Method API method.
+                     * @param _method API method.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
                     /**
                      * 获取Service creation time.
                      * @return CreatedTime Service creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Service creation time.
-                     * @param CreatedTime Service creation time.
+                     * @param _createdTime Service creation time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Service modification time.
                      * @return ModifiedTime Service modification time.
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 设置Service modification time.
-                     * @param ModifiedTime Service modification time.
+                     * @param _modifiedTime Service modification time.
+                     * 
                      */
                     void SetModifiedTime(const std::string& _modifiedTime);
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 
@@ -178,20 +199,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiName API name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiName() const;
 
                     /**
                      * 设置API name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiName API name.
+                     * @param _apiName API name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiName(const std::string& _apiName);
 
                     /**
                      * 判断参数 ApiName 是否已赋值
                      * @return ApiName 是否已赋值
+                     * 
                      */
                     bool ApiNameHasBeenSet() const;
 
@@ -200,20 +224,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UniqVpcId Unique VPC ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置Unique VPC ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UniqVpcId Unique VPC ID.
+                     * @param _uniqVpcId Unique VPC ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
@@ -222,20 +249,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiType API type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiType() const;
 
                     /**
                      * 设置API type.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiType API type.
+                     * @param _apiType API type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiType(const std::string& _apiType);
 
                     /**
                      * 判断参数 ApiType 是否已赋值
                      * @return ApiType 是否已赋值
+                     * 
                      */
                     bool ApiTypeHasBeenSet() const;
 
@@ -244,20 +274,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Protocol API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol API protocol.
+                     * @param _protocol API protocol.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -266,20 +299,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsDebugAfterCharge Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsDebugAfterCharge() const;
 
                     /**
                      * 设置Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsDebugAfterCharge Whether to enable debugging after purchase.
+                     * @param _isDebugAfterCharge Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDebugAfterCharge(const bool& _isDebugAfterCharge);
 
                     /**
                      * 判断参数 IsDebugAfterCharge 是否已赋值
                      * @return IsDebugAfterCharge 是否已赋值
+                     * 
                      */
                     bool IsDebugAfterChargeHasBeenSet() const;
 
@@ -288,20 +324,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthType Authorization type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthType() const;
 
                     /**
                      * 设置Authorization type.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthType Authorization type.
+                     * @param _authType Authorization type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthType(const std::string& _authType);
 
                     /**
                      * 判断参数 AuthType 是否已赋值
                      * @return AuthType 是否已赋值
+                     * 
                      */
                     bool AuthTypeHasBeenSet() const;
 
@@ -310,20 +349,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiBusinessType API business type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiBusinessType() const;
 
                     /**
                      * 设置API business type.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiBusinessType API business type.
+                     * @param _apiBusinessType API business type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiBusinessType(const std::string& _apiBusinessType);
 
                     /**
                      * 判断参数 ApiBusinessType 是否已赋值
                      * @return ApiBusinessType 是否已赋值
+                     * 
                      */
                     bool ApiBusinessTypeHasBeenSet() const;
 
@@ -332,20 +374,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthRelationApiId Unique ID of associated authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthRelationApiId() const;
 
                     /**
                      * 设置Unique ID of associated authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthRelationApiId Unique ID of associated authorization API.
+                     * @param _authRelationApiId Unique ID of associated authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthRelationApiId(const std::string& _authRelationApiId);
 
                     /**
                      * 判断参数 AuthRelationApiId 是否已赋值
                      * @return AuthRelationApiId 是否已赋值
+                     * 
                      */
                     bool AuthRelationApiIdHasBeenSet() const;
 
@@ -354,20 +399,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RelationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRelationBuniessApiIds() const;
 
                     /**
                      * 设置List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RelationBuniessApiIds List of business APIs associated with authorization API.
+                     * @param _relationBuniessApiIds List of business APIs associated with authorization API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRelationBuniessApiIds(const std::vector<std::string>& _relationBuniessApiIds);
 
                     /**
                      * 判断参数 RelationBuniessApiIds 是否已赋值
                      * @return RelationBuniessApiIds 是否已赋值
+                     * 
                      */
                     bool RelationBuniessApiIdsHasBeenSet() const;
 
@@ -376,20 +424,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OauthConfig OAuth configuration information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OauthConfig GetOauthConfig() const;
 
                     /**
                      * 设置OAuth configuration information.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OauthConfig OAuth configuration information.
+                     * @param _oauthConfig OAuth configuration information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOauthConfig(const OauthConfig& _oauthConfig);
 
                     /**
                      * 判断参数 OauthConfig 是否已赋值
                      * @return OauthConfig 是否已赋值
+                     * 
                      */
                     bool OauthConfigHasBeenSet() const;
 
@@ -398,20 +449,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TokenLocation Token storage position, which is an OAuth 2.0 API request.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTokenLocation() const;
 
                     /**
                      * 设置Token storage position, which is an OAuth 2.0 API request.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TokenLocation Token storage position, which is an OAuth 2.0 API request.
+                     * @param _tokenLocation Token storage position, which is an OAuth 2.0 API request.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTokenLocation(const std::string& _tokenLocation);
 
                     /**
                      * 判断参数 TokenLocation 是否已赋值
                      * @return TokenLocation 是否已赋值
+                     * 
                      */
                     bool TokenLocationHasBeenSet() const;
 

@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Cloud disk unit price.
                      * @return OriginalDiskPrice Cloud disk unit price.
+                     * 
                      */
                     double GetOriginalDiskPrice() const;
 
                     /**
                      * 设置Cloud disk unit price.
-                     * @param OriginalDiskPrice Cloud disk unit price.
+                     * @param _originalDiskPrice Cloud disk unit price.
+                     * 
                      */
                     void SetOriginalDiskPrice(const double& _originalDiskPrice);
 
                     /**
                      * 判断参数 OriginalDiskPrice 是否已赋值
                      * @return OriginalDiskPrice 是否已赋值
+                     * 
                      */
                     bool OriginalDiskPriceHasBeenSet() const;
 
                     /**
                      * 获取Total cloud disk price.
                      * @return OriginalPrice Total cloud disk price.
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Total cloud disk price.
-                     * @param OriginalPrice Total cloud disk price.
+                     * @param _originalPrice Total cloud disk price.
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discount.
                      * @return Discount Discount.
+                     * 
                      */
                     double GetDiscount() const;
 
                     /**
                      * 设置Discount.
-                     * @param Discount Discount.
+                     * @param _discount Discount.
+                     * 
                      */
                     void SetDiscount(const double& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discounted total price.
                      * @return DiscountPrice Discounted total price.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted total price.
-                     * @param DiscountPrice Discounted total price.
+                     * @param _discountPrice Discounted total price.
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
                      * 获取Detailed billing items
                      * @return DetailPrices Detailed billing items
+                     * 
                      */
                     std::vector<DetailPrice> GetDetailPrices() const;
 
                     /**
                      * 设置Detailed billing items
-                     * @param DetailPrices Detailed billing items
+                     * @param _detailPrices Detailed billing items
+                     * 
                      */
                     void SetDetailPrices(const std::vector<DetailPrice>& _detailPrices);
 
                     /**
                      * 判断参数 DetailPrices 是否已赋值
                      * @return DetailPrices 是否已赋值
+                     * 
                      */
                     bool DetailPricesHasBeenSet() const;
 

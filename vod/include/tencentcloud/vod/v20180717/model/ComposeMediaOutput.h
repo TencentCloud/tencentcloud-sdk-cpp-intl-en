@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Filename of up to 64 characters.
                      * @return FileName Filename of up to 64 characters.
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename of up to 64 characters.
-                     * @param FileName Filename of up to 64 characters.
+                     * @param _fileName Filename of up to 64 characters.
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Description, which can contain up to 128 characters.
                      * @return Description Description, which can contain up to 128 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description, which can contain up to 128 characters.
-                     * @param Description Description, which can contain up to 128 characters.
+                     * @param _description Description, which can contain up to 128 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -89,56 +95,65 @@ namespace TencentCloud
 <li>Default value: 0, which means "Other".</li>
                      * @return ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, which means "Other".</li>
+                     * 
                      */
                     int64_t GetClassId() const;
 
                     /**
                      * 设置Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, which means "Other".</li>
-                     * @param ClassId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
+                     * @param _classId Category ID, which is used to categorize the media for management. A category can be created and its ID can be obtained by using the [category creating](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API.
 <li>Default value: 0, which means "Other".</li>
+                     * 
                      */
                     void SetClassId(const int64_t& _classId);
 
                     /**
                      * 判断参数 ClassId 是否已赋值
                      * @return ClassId 是否已赋值
+                     * 
                      */
                     bool ClassIdHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return ExpireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param ExpireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _expireTime Expiration time of output media file in ISO 8601 format, after which the file will be deleted. Files will never expire by default. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Container. Valid values: mp4, mp3. mp3 is for audio files.
                      * @return Container Container. Valid values: mp4, mp3. mp3 is for audio files.
+                     * 
                      */
                     std::string GetContainer() const;
 
                     /**
                      * 设置Container. Valid values: mp4, mp3. mp3 is for audio files.
-                     * @param Container Container. Valid values: mp4, mp3. mp3 is for audio files.
+                     * @param _container Container. Valid values: mp4, mp3. mp3 is for audio files.
+                     * 
                      */
                     void SetContainer(const std::string& _container);
 
                     /**
                      * 判断参数 Container 是否已赋值
                      * @return Container 是否已赋值
+                     * 
                      */
                     bool ContainerHasBeenSet() const;
 
@@ -147,20 +162,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VideoStream Information of output video.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OutputVideoStream GetVideoStream() const;
 
                     /**
                      * 设置Information of output video.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VideoStream Information of output video.
+                     * @param _videoStream Information of output video.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVideoStream(const OutputVideoStream& _videoStream);
 
                     /**
                      * 判断参数 VideoStream 是否已赋值
                      * @return VideoStream 是否已赋值
+                     * 
                      */
                     bool VideoStreamHasBeenSet() const;
 
@@ -169,20 +187,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AudioStream Information of output audio.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OutputAudioStream GetAudioStream() const;
 
                     /**
                      * 设置Information of output audio.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AudioStream Information of output audio.
+                     * @param _audioStream Information of output audio.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAudioStream(const OutputAudioStream& _audioStream);
 
                     /**
                      * 判断参数 AudioStream 是否已赋值
                      * @return AudioStream 是否已赋值
+                     * 
                      */
                     bool AudioStreamHasBeenSet() const;
 
@@ -195,6 +216,7 @@ Default value: 0.
 <li>0: retain</li>
 <li>1: remove</li>
 Default value: 0.
+                     * 
                      */
                     int64_t GetRemoveVideo() const;
 
@@ -203,16 +225,18 @@ Default value: 0.
 <li>0: retain</li>
 <li>1: remove</li>
 Default value: 0.
-                     * @param RemoveVideo Whether to remove video data. Valid values:
+                     * @param _removeVideo Whether to remove video data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
 Default value: 0.
+                     * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
 
                     /**
                      * 判断参数 RemoveVideo 是否已赋值
                      * @return RemoveVideo 是否已赋值
+                     * 
                      */
                     bool RemoveVideoHasBeenSet() const;
 
@@ -225,6 +249,7 @@ Default value: 0.
 <li>0: retain</li>
 <li>1: remove</li>
 Default value: 0.
+                     * 
                      */
                     int64_t GetRemoveAudio() const;
 
@@ -233,16 +258,18 @@ Default value: 0.
 <li>0: retain</li>
 <li>1: remove</li>
 Default value: 0.
-                     * @param RemoveAudio Whether to remove audio data. Valid values:
+                     * @param _removeAudio Whether to remove audio data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
 Default value: 0.
+                     * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
 
                     /**
                      * 判断参数 RemoveAudio 是否已赋值
                      * @return RemoveAudio 是否已赋值
+                     * 
                      */
                     bool RemoveAudioHasBeenSet() const;
 

@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Shippers Shipping rule list
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ShipperInfo> GetShippers() const;
 
                     /**
                      * 判断参数 Shippers 是否已赋值
                      * @return Shippers 是否已赋值
+                     * 
                      */
                     bool ShippersHasBeenSet() const;
 
                     /**
                      * 获取Total number of results obtained in this query
                      * @return TotalCount Total number of results obtained in this query
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

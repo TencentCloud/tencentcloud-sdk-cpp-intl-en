@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Error code. `ok` is returned if the conversion rate is successfully reported.
                      * @return Code Error code. `ok` is returned if the conversion rate is successfully reported.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Error code. `ok` is returned if the conversion rate is successfully reported.
-                     * @param Code Error code. `ok` is returned if the conversion rate is successfully reported.
+                     * @param _code Error code. `ok` is returned if the conversion rate is successfully reported.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取Error code description.
                      * @return Message Error code description.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error code description.
-                     * @param Message Error code description.
+                     * @param _message Error code description.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

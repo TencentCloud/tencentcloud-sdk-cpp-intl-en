@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Pipeline push information
                      * @return Infos Pipeline push information
+                     * 
                      */
                     PipelineLogInfo GetInfos() const;
 
                     /**
                      * 判断参数 Infos 是否已赋值
                      * @return Infos 是否已赋值
+                     * 
                      */
                     bool InfosHasBeenSet() const;
 

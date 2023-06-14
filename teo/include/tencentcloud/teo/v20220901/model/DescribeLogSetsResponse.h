@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogSetList List of logsets.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LogSetInfo> GetLogSetList() const;
 
                     /**
                      * 判断参数 LogSetList 是否已赋值
                      * @return LogSetList 是否已赋值
+                     * 
                      */
                     bool LogSetListHasBeenSet() const;
 
                     /**
                      * 获取Total number of query results.
                      * @return TotalCount Total number of query results.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

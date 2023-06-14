@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取File path. `OwnerUin` information of the root account should be entered in this field.
                      * @return Path File path. `OwnerUin` information of the root account should be entered in this field.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置File path. `OwnerUin` information of the root account should be entered in this field.
-                     * @param Path File path. `OwnerUin` information of the root account should be entered in this field.
+                     * @param _path File path. `OwnerUin` information of the root account should be entered in this field.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Record offset. Default value: 0.
                      * @return Offset Record offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Record offset. Default value: 0.
-                     * @param Offset Record offset. Default value: 0.
+                     * @param _offset Record offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned for a single request. Default value: 20.
                      * @return Limit Number of results to be returned for a single request. Default value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned for a single request. Default value: 20.
-                     * @param Limit Number of results to be returned for a single request. Default value: 20.
+                     * @param _limit Number of results to be returned for a single request. Default value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

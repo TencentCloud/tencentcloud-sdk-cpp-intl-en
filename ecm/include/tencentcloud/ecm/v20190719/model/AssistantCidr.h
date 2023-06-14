@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID, such as `vpc-6v2ht8q5`
                      * @return VpcId VPC instance ID, such as `vpc-6v2ht8q5`
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID, such as `vpc-6v2ht8q5`
-                     * @param VpcId VPC instance ID, such as `vpc-6v2ht8q5`
+                     * @param _vpcId VPC instance ID, such as `vpc-6v2ht8q5`
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Secondary CIDR, such as `172.16.0.0/16`
                      * @return CidrBlock Secondary CIDR, such as `172.16.0.0/16`
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置Secondary CIDR, such as `172.16.0.0/16`
-                     * @param CidrBlock Secondary CIDR, such as `172.16.0.0/16`
+                     * @param _cidrBlock Secondary CIDR, such as `172.16.0.0/16`
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Secondary CIDR block type. 0: general secondary CIDR block; 1: container secondary CIDR block. Default value: 0.
                      * @return AssistantType Secondary CIDR block type. 0: general secondary CIDR block; 1: container secondary CIDR block. Default value: 0.
+                     * 
                      */
                     uint64_t GetAssistantType() const;
 
                     /**
                      * 设置Secondary CIDR block type. 0: general secondary CIDR block; 1: container secondary CIDR block. Default value: 0.
-                     * @param AssistantType Secondary CIDR block type. 0: general secondary CIDR block; 1: container secondary CIDR block. Default value: 0.
+                     * @param _assistantType Secondary CIDR block type. 0: general secondary CIDR block; 1: container secondary CIDR block. Default value: 0.
+                     * 
                      */
                     void SetAssistantType(const uint64_t& _assistantType);
 
                     /**
                      * 判断参数 AssistantType 是否已赋值
                      * @return AssistantType 是否已赋值
+                     * 
                      */
                     bool AssistantTypeHasBeenSet() const;
 
@@ -108,6 +117,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return SubnetSet Subnets divided by the secondary CIDR block.
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Subnet> GetSubnetSet() const;
 
@@ -115,15 +125,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Subnets divided by the secondary CIDR block.
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubnetSet Subnets divided by the secondary CIDR block.
+                     * @param _subnetSet Subnets divided by the secondary CIDR block.
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubnetSet(const std::vector<Subnet>& _subnetSet);
 
                     /**
                      * 判断参数 SubnetSet 是否已赋值
                      * @return SubnetSet 是否已赋值
+                     * 
                      */
                     bool SubnetSetHasBeenSet() const;
 

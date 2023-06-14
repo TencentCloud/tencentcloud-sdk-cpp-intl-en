@@ -61,6 +61,7 @@ namespace TencentCloud
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
 <li>VoicePorn</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -70,89 +71,103 @@ namespace TencentCloud
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
 <li>VoicePorn</li>
-                     * @param Type The type of moderation result. Valid values:
+                     * @param _type The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
 <li>VoicePorn</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
                      * @return ImagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+                     * 
                      */
                     std::vector<LiveStreamAiReviewImagePornResult> GetImagePornResultSet() const;
 
                     /**
                      * 设置Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
-                     * @param ImagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+                     * @param _imagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+                     * 
                      */
                     void SetImagePornResultSet(const std::vector<LiveStreamAiReviewImagePornResult>& _imagePornResultSet);
 
                     /**
                      * 判断参数 ImagePornResultSet 是否已赋值
                      * @return ImagePornResultSet 是否已赋值
+                     * 
                      */
                     bool ImagePornResultSetHasBeenSet() const;
 
                     /**
                      * 获取The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
                      * @return ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+                     * 
                      */
                     std::vector<LiveStreamAiReviewImageTerrorismResult> GetImageTerrorismResultSet() const;
 
                     /**
                      * 设置The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
-                     * @param ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+                     * @param _imageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+                     * 
                      */
                     void SetImageTerrorismResultSet(const std::vector<LiveStreamAiReviewImageTerrorismResult>& _imageTerrorismResultSet);
 
                     /**
                      * 判断参数 ImageTerrorismResultSet 是否已赋值
                      * @return ImageTerrorismResultSet 是否已赋值
+                     * 
                      */
                     bool ImageTerrorismResultSetHasBeenSet() const;
 
                     /**
                      * 获取The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
                      * @return ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+                     * 
                      */
                     std::vector<LiveStreamAiReviewImagePoliticalResult> GetImagePoliticalResultSet() const;
 
                     /**
                      * 设置The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
-                     * @param ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+                     * @param _imagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+                     * 
                      */
                     void SetImagePoliticalResultSet(const std::vector<LiveStreamAiReviewImagePoliticalResult>& _imagePoliticalResultSet);
 
                     /**
                      * 判断参数 ImagePoliticalResultSet 是否已赋值
                      * @return ImagePoliticalResultSet 是否已赋值
+                     * 
                      */
                     bool ImagePoliticalResultSetHasBeenSet() const;
 
                     /**
                      * 获取The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
                      * @return VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+                     * 
                      */
                     std::vector<LiveStreamAiReviewVoicePornResult> GetVoicePornResultSet() const;
 
                     /**
                      * 设置The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
-                     * @param VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+                     * @param _voicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+                     * 
                      */
                     void SetVoicePornResultSet(const std::vector<LiveStreamAiReviewVoicePornResult>& _voicePornResultSet);
 
                     /**
                      * 判断参数 VoicePornResultSet 是否已赋值
                      * @return VoicePornResultSet 是否已赋值
+                     * 
                      */
                     bool VoicePornResultSetHasBeenSet() const;
 

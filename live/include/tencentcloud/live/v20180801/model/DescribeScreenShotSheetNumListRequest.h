@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
                      * @return StartTime Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
-                     * @param StartTime Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+                     * @param _startTime Start time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
                      * @return EndTime End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
-                     * @param EndTime End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
+                     * @param _endTime End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
                      * @return Zone Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
-                     * @param Zone Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
+                     * @param _zone Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Push domain name (data at the domain name level after November 1, 2019 can be queried).
                      * @return PushDomains Push domain name (data at the domain name level after November 1, 2019 can be queried).
+                     * 
                      */
                     std::vector<std::string> GetPushDomains() const;
 
                     /**
                      * 设置Push domain name (data at the domain name level after November 1, 2019 can be queried).
-                     * @param PushDomains Push domain name (data at the domain name level after November 1, 2019 can be queried).
+                     * @param _pushDomains Push domain name (data at the domain name level after November 1, 2019 can be queried).
+                     * 
                      */
                     void SetPushDomains(const std::vector<std::string>& _pushDomains);
 
                     /**
                      * 判断参数 PushDomains 是否已赋值
                      * @return PushDomains 是否已赋值
+                     * 
                      */
                     bool PushDomainsHasBeenSet() const;
 
                     /**
                      * 获取Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
                      * @return Granularity Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
+                     * 
                      */
                     std::string GetGranularity() const;
 
                     /**
                      * 设置Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
-                     * @param Granularity Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
+                     * @param _granularity Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
+                     * 
                      */
                     void SetGranularity(const std::string& _granularity);
 
                     /**
                      * 判断参数 Granularity 是否已赋值
                      * @return Granularity 是否已赋值
+                     * 
                      */
                     bool GranularityHasBeenSet() const;
 

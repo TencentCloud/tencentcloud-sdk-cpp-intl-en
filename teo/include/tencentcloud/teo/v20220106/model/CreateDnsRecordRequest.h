@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Record type
                      * @return Type Record type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Record type
-                     * @param Type Record type
+                     * @param _type Record type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Record name
                      * @return Name Record name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Record name
-                     * @param Name Record name
+                     * @param _name Record name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Record content
                      * @return Content Record content
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Record content
-                     * @param Content Record content
+                     * @param _content Record content
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
                      * @return Mode Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
-                     * @param Mode Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
+                     * @param _mode Proxy mode. Valid values: `dns_only`, `cdn_only`, and `secure_cdn`.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Ttl 
+                     * 
                      */
                     int64_t GetTtl() const;
 
                     /**
                      * 设置
-                     * @param Ttl 
+                     * @param _ttl 
+                     * 
                      */
                     void SetTtl(const int64_t& _ttl);
 
                     /**
                      * 判断参数 Ttl 是否已赋值
                      * @return Ttl 是否已赋值
+                     * 
                      */
                     bool TtlHasBeenSet() const;
 
                     /**
                      * 获取Priority
                      * @return Priority Priority
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 设置Priority
-                     * @param Priority Priority
+                     * @param _priority Priority
+                     * 
                      */
                     void SetPriority(const int64_t& _priority);
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 

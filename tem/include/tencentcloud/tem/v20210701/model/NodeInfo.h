@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Node name
                      * @return Name Node name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node name
-                     * @param Name Node name
+                     * @param _name Node name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Zone Availability zone of the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone of the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Zone Availability zone of the node
+                     * @param _zone Availability zone of the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SubnetId Node subnet ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Node subnet ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SubnetId Node subnet ID
+                     * @param _subnetId Node subnet ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AvailableIpCount Number of available IPs
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAvailableIpCount() const;
 
                     /**
                      * 设置Number of available IPs
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AvailableIpCount Number of available IPs
+                     * @param _availableIpCount Number of available IPs
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAvailableIpCount(const std::string& _availableIpCount);
 
                     /**
                      * 判断参数 AvailableIpCount 是否已赋值
                      * @return AvailableIpCount 是否已赋值
+                     * 
                      */
                     bool AvailableIpCountHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Cidr CIDR block
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCidr() const;
 
                     /**
                      * 设置CIDR block
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Cidr CIDR block
+                     * @param _cidr CIDR block
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCidr(const std::string& _cidr);
 
                     /**
                      * 判断参数 Cidr 是否已赋值
                      * @return Cidr 是否已赋值
+                     * 
                      */
                     bool CidrHasBeenSet() const;
 

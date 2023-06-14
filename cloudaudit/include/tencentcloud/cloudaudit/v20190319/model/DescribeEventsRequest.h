@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Start timestamp in seconds (cannot be 90 days after the current time).
                      * @return StartTime Start timestamp in seconds (cannot be 90 days after the current time).
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置Start timestamp in seconds (cannot be 90 days after the current time).
-                     * @param StartTime Start timestamp in seconds (cannot be 90 days after the current time).
+                     * @param _startTime Start timestamp in seconds (cannot be 90 days after the current time).
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End timestamp in seconds (the time range for query is less than 30 days).
                      * @return EndTime End timestamp in seconds (the time range for query is less than 30 days).
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置End timestamp in seconds (the time range for query is less than 30 days).
-                     * @param EndTime End timestamp in seconds (the time range for query is less than 30 days).
+                     * @param _endTime End timestamp in seconds (the time range for query is less than 30 days).
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Credential for viewing more logs.
                      * @return NextToken Credential for viewing more logs.
+                     * 
                      */
                     uint64_t GetNextToken() const;
 
                     /**
                      * 设置Credential for viewing more logs.
-                     * @param NextToken Credential for viewing more logs.
+                     * @param _nextToken Credential for viewing more logs.
+                     * 
                      */
                     void SetNextToken(const uint64_t& _nextToken);
 
                     /**
                      * 判断参数 NextToken 是否已赋值
                      * @return NextToken 是否已赋值
+                     * 
                      */
                     bool NextTokenHasBeenSet() const;
 
                     /**
                      * 获取Max number of returned logs (up to 50).
                      * @return MaxResults Max number of returned logs (up to 50).
+                     * 
                      */
                     uint64_t GetMaxResults() const;
 
                     /**
                      * 设置Max number of returned logs (up to 50).
-                     * @param MaxResults Max number of returned logs (up to 50).
+                     * @param _maxResults Max number of returned logs (up to 50).
+                     * 
                      */
                     void SetMaxResults(const uint64_t& _maxResults);
 
                     /**
                      * 判断参数 MaxResults 是否已赋值
                      * @return MaxResults 是否已赋值
+                     * 
                      */
                     bool MaxResultsHasBeenSet() const;
 
                     /**
                      * 获取Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
                      * @return LookupAttributes Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
+                     * 
                      */
                     std::vector<LookupAttribute> GetLookupAttributes() const;
 
                     /**
                      * 设置Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
-                     * @param LookupAttributes Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
+                     * @param _lookupAttributes Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
+                     * 
                      */
                     void SetLookupAttributes(const std::vector<LookupAttribute>& _lookupAttributes);
 
                     /**
                      * 判断参数 LookupAttributes 是否已赋值
                      * @return LookupAttributes 是否已赋值
+                     * 
                      */
                     bool LookupAttributesHasBeenSet() const;
 
                     /**
                      * 获取Whether to return the IP location. `1`: yes, `0`: no.
                      * @return IsReturnLocation Whether to return the IP location. `1`: yes, `0`: no.
+                     * 
                      */
                     uint64_t GetIsReturnLocation() const;
 
                     /**
                      * 设置Whether to return the IP location. `1`: yes, `0`: no.
-                     * @param IsReturnLocation Whether to return the IP location. `1`: yes, `0`: no.
+                     * @param _isReturnLocation Whether to return the IP location. `1`: yes, `0`: no.
+                     * 
                      */
                     void SetIsReturnLocation(const uint64_t& _isReturnLocation);
 
                     /**
                      * 判断参数 IsReturnLocation 是否已赋值
                      * @return IsReturnLocation 是否已赋值
+                     * 
                      */
                     bool IsReturnLocationHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取URL of a video.
                      * @return Url URL of a video.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of a video.
-                     * @param Url URL of a video.
+                     * @param _url URL of a video.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

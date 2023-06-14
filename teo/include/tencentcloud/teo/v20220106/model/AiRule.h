@@ -53,6 +53,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Mode `smart_status_close`: Disable; `smart_status_open`: Block;
 `smart_status_observe`: Observe.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
@@ -60,15 +61,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置`smart_status_close`: Disable; `smart_status_open`: Block;
 `smart_status_observe`: Observe.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mode `smart_status_close`: Disable; `smart_status_open`: Block;
+                     * @param _mode `smart_status_close`: Disable; `smart_status_open`: Block;
 `smart_status_observe`: Observe.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 

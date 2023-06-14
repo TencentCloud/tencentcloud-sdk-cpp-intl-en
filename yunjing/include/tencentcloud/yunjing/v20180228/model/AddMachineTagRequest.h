@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Server ID
                      * @return Quuid Server ID
+                     * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Server ID
-                     * @param Quuid Server ID
+                     * @param _quuid Server ID
+                     * 
                      */
                     void SetQuuid(const std::string& _quuid);
 
                     /**
                      * 判断参数 Quuid 是否已赋值
                      * @return Quuid 是否已赋值
+                     * 
                      */
                     bool QuuidHasBeenSet() const;
 
                     /**
                      * 获取Tag ID
                      * @return TagId Tag ID
+                     * 
                      */
                     uint64_t GetTagId() const;
 
                     /**
                      * 设置Tag ID
-                     * @param TagId Tag ID
+                     * @param _tagId Tag ID
+                     * 
                      */
                     void SetTagId(const uint64_t& _tagId);
 
                     /**
                      * 判断参数 TagId 是否已赋值
                      * @return TagId 是否已赋值
+                     * 
                      */
                     bool TagIdHasBeenSet() const;
 
                     /**
                      * 获取Server region
                      * @return MRegion Server region
+                     * 
                      */
                     std::string GetMRegion() const;
 
                     /**
                      * 设置Server region
-                     * @param MRegion Server region
+                     * @param _mRegion Server region
+                     * 
                      */
                     void SetMRegion(const std::string& _mRegion);
 
                     /**
                      * 判断参数 MRegion 是否已赋值
                      * @return MRegion 是否已赋值
+                     * 
                      */
                     bool MRegionHasBeenSet() const;
 
                     /**
                      * 获取Server type (`CVM` or `BM`)
                      * @return MArea Server type (`CVM` or `BM`)
+                     * 
                      */
                     std::string GetMArea() const;
 
                     /**
                      * 设置Server type (`CVM` or `BM`)
-                     * @param MArea Server type (`CVM` or `BM`)
+                     * @param _mArea Server type (`CVM` or `BM`)
+                     * 
                      */
                     void SetMArea(const std::string& _mArea);
 
                     /**
                      * 判断参数 MArea 是否已赋值
                      * @return MArea 是否已赋值
+                     * 
                      */
                     bool MAreaHasBeenSet() const;
 

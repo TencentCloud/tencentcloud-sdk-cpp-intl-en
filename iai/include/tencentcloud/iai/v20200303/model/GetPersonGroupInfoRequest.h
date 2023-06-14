@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
                      * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
-                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param _personId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
                     /**
                      * 获取Starting number. Default value: 0.
                      * @return Offset Starting number. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting number. Default value: 0.
-                     * @param Offset Starting number. Default value: 0.
+                     * @param _offset Starting number. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 10. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

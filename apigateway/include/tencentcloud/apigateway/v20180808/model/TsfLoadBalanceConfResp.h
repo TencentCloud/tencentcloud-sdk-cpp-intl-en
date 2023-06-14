@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsLoadBalance Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsLoadBalance() const;
 
                     /**
                      * 设置Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsLoadBalance Whether load balancing is enabled.
+                     * @param _isLoadBalance Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsLoadBalance(const bool& _isLoadBalance);
 
                     /**
                      * 判断参数 IsLoadBalance 是否已赋值
                      * @return IsLoadBalance 是否已赋值
+                     * 
                      */
                     bool IsLoadBalanceHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Method Load balancing method.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Load balancing method.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Method Load balancing method.
+                     * @param _method Load balancing method.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SessionStickRequired Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSessionStickRequired() const;
 
                     /**
                      * 设置Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SessionStickRequired Whether session persistence is enabled.
+                     * @param _sessionStickRequired Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSessionStickRequired(const bool& _sessionStickRequired);
 
                     /**
                      * 判断参数 SessionStickRequired 是否已赋值
                      * @return SessionStickRequired 是否已赋值
+                     * 
                      */
                     bool SessionStickRequiredHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SessionStickTimeout Session persistence timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSessionStickTimeout() const;
 
                     /**
                      * 设置Session persistence timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SessionStickTimeout Session persistence timeout period.
+                     * @param _sessionStickTimeout Session persistence timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSessionStickTimeout(const int64_t& _sessionStickTimeout);
 
                     /**
                      * 判断参数 SessionStickTimeout 是否已赋值
                      * @return SessionStickTimeout 是否已赋值
+                     * 
                      */
                     bool SessionStickTimeoutHasBeenSet() const;
 

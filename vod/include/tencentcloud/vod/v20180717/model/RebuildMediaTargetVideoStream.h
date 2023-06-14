@@ -57,6 +57,7 @@ The default codec is H.264.
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
 The default codec is H.264.
+                     * 
                      */
                     std::string GetCodec() const;
 
@@ -66,17 +67,19 @@ The default codec is H.264.
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
 The default codec is H.264.
-                     * @param Codec The video codec. Valid values:
+                     * @param _codec The video codec. Valid values:
 <li>`libx264`: H.264</li>
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
 The default codec is H.264.
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 
@@ -85,38 +88,44 @@ The default codec is H.264.
 If the value is `0`, the original video bitrate will be used.
                      * @return Bitrate The video bitrate (Kbps). Value range: 0 and 128-35000.
 If the value is `0`, the original video bitrate will be used.
+                     * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
                      * 设置The video bitrate (Kbps). Value range: 0 and 128-35000.
 If the value is `0`, the original video bitrate will be used.
-                     * @param Bitrate The video bitrate (Kbps). Value range: 0 and 128-35000.
+                     * @param _bitrate The video bitrate (Kbps). Value range: 0 and 128-35000.
 If the value is `0`, the original video bitrate will be used.
+                     * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
 
                     /**
                      * 判断参数 Bitrate 是否已赋值
                      * @return Bitrate 是否已赋值
+                     * 
                      */
                     bool BitrateHasBeenSet() const;
 
                     /**
                      * 获取The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
                      * @return Fps The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
+                     * 
                      */
                     int64_t GetFps() const;
 
                     /**
                      * 设置The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
-                     * @param Fps The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
+                     * @param _fps The video frame rate (Hz). Value range: 0-100. If the value is `0`, the original video frame rate will be used.
+                     * 
                      */
                     void SetFps(const int64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 
@@ -131,6 +140,7 @@ Default value: `open`.
 <li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 
 Default value: `open`.
+                     * 
                      */
                     std::string GetResolutionAdaptive() const;
 
@@ -140,17 +150,19 @@ Default value: `open`.
 <li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 
 Default value: `open`.
-                     * @param ResolutionAdaptive Resolution adaption. Valid values:
+                     * @param _resolutionAdaptive Resolution adaption. Valid values:
 <li>`open`: Enable. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
 <li>`close`: Disable. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 
 Default value: `open`.
+                     * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
 
                     /**
                      * 判断参数 ResolutionAdaptive 是否已赋值
                      * @return ResolutionAdaptive 是否已赋值
+                     * 
                      */
                     bool ResolutionAdaptiveHasBeenSet() const;
 
@@ -169,6 +181,7 @@ Default value: `0`.
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
+                     * 
                      */
                     int64_t GetWidth() const;
 
@@ -180,19 +193,21 @@ Default value: `0`.
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-                     * @param Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
+                     * @param _width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -211,6 +226,7 @@ Default value: `0`.
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
+                     * 
                      */
                     int64_t GetHeight() const;
 
@@ -222,19 +238,21 @@ Default value: `0`.
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-                     * @param Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
+                     * @param _height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -249,6 +267,7 @@ Default value: `stretch`.
 <li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
 
 Default value: `stretch`.
+                     * 
                      */
                     std::string GetFillType() const;
 
@@ -258,17 +277,19 @@ Default value: `stretch`.
 <li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
 
 Default value: `stretch`.
-                     * @param FillType The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
+                     * @param _fillType The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
 <li>`stretch`: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
 <li>`black`: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
 
 Default value: `stretch`.
+                     * 
                      */
                     void SetFillType(const std::string& _fillType);
 
                     /**
                      * 判断参数 FillType 是否已赋值
                      * @return FillType 是否已赋值
+                     * 
                      */
                     bool FillTypeHasBeenSet() const;
 
@@ -277,20 +298,23 @@ Default value: `stretch`.
 If this parameter is `0` or left empty, the interval will be determined by the system.
                      * @return Gop The number of frames between two I-frames. Valid values: 0 and 1-100000.
 If this parameter is `0` or left empty, the interval will be determined by the system.
+                     * 
                      */
                     int64_t GetGop() const;
 
                     /**
                      * 设置The number of frames between two I-frames. Valid values: 0 and 1-100000.
 If this parameter is `0` or left empty, the interval will be determined by the system.
-                     * @param Gop The number of frames between two I-frames. Valid values: 0 and 1-100000.
+                     * @param _gop The number of frames between two I-frames. Valid values: 0 and 1-100000.
 If this parameter is `0` or left empty, the interval will be determined by the system.
+                     * 
                      */
                     void SetGop(const int64_t& _gop);
 
                     /**
                      * 判断参数 Gop 是否已赋值
                      * @return Gop 是否已赋值
+                     * 
                      */
                     bool GopHasBeenSet() const;
 

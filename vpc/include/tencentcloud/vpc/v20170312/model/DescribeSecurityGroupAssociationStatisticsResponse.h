@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Statistics on the instances associated with a security group.
                      * @return SecurityGroupAssociationStatisticsSet Statistics on the instances associated with a security group.
+                     * 
                      */
                     std::vector<SecurityGroupAssociationStatistics> GetSecurityGroupAssociationStatisticsSet() const;
 
                     /**
                      * 判断参数 SecurityGroupAssociationStatisticsSet 是否已赋值
                      * @return SecurityGroupAssociationStatisticsSet 是否已赋值
+                     * 
                      */
                     bool SecurityGroupAssociationStatisticsSetHasBeenSet() const;
 

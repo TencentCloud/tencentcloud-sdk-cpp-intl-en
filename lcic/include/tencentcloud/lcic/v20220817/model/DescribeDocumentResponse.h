@@ -46,168 +46,196 @@ namespace TencentCloud
                     /**
                      * 获取The document ID.
                      * @return DocumentId The document ID.
+                     * 
                      */
                     std::string GetDocumentId() const;
 
                     /**
                      * 判断参数 DocumentId 是否已赋值
                      * @return DocumentId 是否已赋值
+                     * 
                      */
                     bool DocumentIdHasBeenSet() const;
 
                     /**
                      * 获取The document’s original URL.
                      * @return DocumentUrl The document’s original URL.
+                     * 
                      */
                     std::string GetDocumentUrl() const;
 
                     /**
                      * 判断参数 DocumentUrl 是否已赋值
                      * @return DocumentUrl 是否已赋值
+                     * 
                      */
                     bool DocumentUrlHasBeenSet() const;
 
                     /**
                      * 获取The document title.
                      * @return DocumentName The document title.
+                     * 
                      */
                     std::string GetDocumentName() const;
 
                     /**
                      * 判断参数 DocumentName 是否已赋值
                      * @return DocumentName 是否已赋值
+                     * 
                      */
                     bool DocumentNameHasBeenSet() const;
 
                     /**
                      * 获取The user ID of the document’s owner.
                      * @return Owner The user ID of the document’s owner.
+                     * 
                      */
                     std::string GetOwner() const;
 
                     /**
                      * 判断参数 Owner 是否已赋值
                      * @return Owner 是否已赋值
+                     * 
                      */
                     bool OwnerHasBeenSet() const;
 
                     /**
                      * 获取The application ID.
                      * @return SdkAppId The application ID.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The document access type.
                      * @return Permission The document access type.
+                     * 
                      */
                     uint64_t GetPermission() const;
 
                     /**
                      * 判断参数 Permission 是否已赋值
                      * @return Permission 是否已赋值
+                     * 
                      */
                     bool PermissionHasBeenSet() const;
 
                     /**
                      * 获取The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
                      * @return TranscodeResult The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
+                     * 
                      */
                     std::string GetTranscodeResult() const;
 
                     /**
                      * 判断参数 TranscodeResult 是否已赋值
                      * @return TranscodeResult 是否已赋值
+                     * 
                      */
                     bool TranscodeResultHasBeenSet() const;
 
                     /**
                      * 获取The transcoding type.
                      * @return TranscodeType The transcoding type.
+                     * 
                      */
                     uint64_t GetTranscodeType() const;
 
                     /**
                      * 判断参数 TranscodeType 是否已赋值
                      * @return TranscodeType 是否已赋值
+                     * 
                      */
                     bool TranscodeTypeHasBeenSet() const;
 
                     /**
                      * 获取The transcoding progress. Value range: 0-100.
                      * @return TranscodeProgress The transcoding progress. Value range: 0-100.
+                     * 
                      */
                     uint64_t GetTranscodeProgress() const;
 
                     /**
                      * 判断参数 TranscodeProgress 是否已赋值
                      * @return TranscodeProgress 是否已赋值
+                     * 
                      */
                     bool TranscodeProgressHasBeenSet() const;
 
                     /**
                      * 获取The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
                      * @return TranscodeState The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
+                     * 
                      */
                     uint64_t GetTranscodeState() const;
 
                     /**
                      * 判断参数 TranscodeState 是否已赋值
                      * @return TranscodeState 是否已赋值
+                     * 
                      */
                     bool TranscodeStateHasBeenSet() const;
 
                     /**
                      * 获取The error message for failed transcoding.
                      * @return TranscodeInfo The error message for failed transcoding.
+                     * 
                      */
                     std::string GetTranscodeInfo() const;
 
                     /**
                      * 判断参数 TranscodeInfo 是否已赋值
                      * @return TranscodeInfo 是否已赋值
+                     * 
                      */
                     bool TranscodeInfoHasBeenSet() const;
 
                     /**
                      * 获取The document type.
                      * @return DocumentType The document type.
+                     * 
                      */
                     std::string GetDocumentType() const;
 
                     /**
                      * 判断参数 DocumentType 是否已赋值
                      * @return DocumentType 是否已赋值
+                     * 
                      */
                     bool DocumentTypeHasBeenSet() const;
 
                     /**
                      * 获取The document size (bytes).
                      * @return DocumentSize The document size (bytes).
+                     * 
                      */
                     uint64_t GetDocumentSize() const;
 
                     /**
                      * 判断参数 DocumentSize 是否已赋值
                      * @return DocumentSize 是否已赋值
+                     * 
                      */
                     bool DocumentSizeHasBeenSet() const;
 
                     /**
                      * 获取The time (Unix timestamp) when the document was last updated.
                      * @return UpdateTime The time (Unix timestamp) when the document was last updated.
+                     * 
                      */
                     uint64_t GetUpdateTime() const;
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

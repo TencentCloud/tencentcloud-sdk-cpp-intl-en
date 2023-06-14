@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Check task execution status. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BriefMsg Check task result message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBriefMsg() const;
 
                     /**
                      * 判断参数 BriefMsg 是否已赋值
                      * @return BriefMsg 是否已赋值
+                     * 
                      */
                     bool BriefMsgHasBeenSet() const;
 
@@ -77,24 +81,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepInfo Check step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CheckStep> GetStepInfo() const;
 
                     /**
                      * 判断参数 StepInfo 是否已赋值
                      * @return StepInfo 是否已赋值
+                     * 
                      */
                     bool StepInfoHasBeenSet() const;
 
                     /**
                      * 获取Check result. Valid values: `checkPass`, `checkNotPass`.
                      * @return CheckFlag Check result. Valid values: `checkPass`, `checkNotPass`.
+                     * 
                      */
                     std::string GetCheckFlag() const;
 
                     /**
                      * 判断参数 CheckFlag 是否已赋值
                      * @return CheckFlag 是否已赋值
+                     * 
                      */
                     bool CheckFlagHasBeenSet() const;
 

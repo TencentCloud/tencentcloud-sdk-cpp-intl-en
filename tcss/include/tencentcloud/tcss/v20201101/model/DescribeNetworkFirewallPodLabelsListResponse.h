@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of cluster Pods
                      * @return TotalCount Total number of cluster Pods
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PodList Details of the cluster Pod
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<NetworkClusterPodInfo> GetPodList() const;
 
                     /**
                      * 判断参数 PodList 是否已赋值
                      * @return PodList 是否已赋值
+                     * 
                      */
                     bool PodListHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取List of weights to be modified in batches
                      * @return ModifyList List of weights to be modified in batches
+                     * 
                      */
                     std::vector<TargetsWeightRule> GetModifyList() const;
 
                     /**
                      * 设置List of weights to be modified in batches
-                     * @param ModifyList List of weights to be modified in batches
+                     * @param _modifyList List of weights to be modified in batches
+                     * 
                      */
                     void SetModifyList(const std::vector<TargetsWeightRule>& _modifyList);
 
                     /**
                      * 判断参数 ModifyList 是否已赋值
                      * @return ModifyList 是否已赋值
+                     * 
                      */
                     bool ModifyListHasBeenSet() const;
 

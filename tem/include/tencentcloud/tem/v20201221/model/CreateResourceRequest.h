@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Namespace ID
                      * @return NamespaceId Namespace ID
+                     * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
                      * 设置Namespace ID
-                     * @param NamespaceId Namespace ID
+                     * @param _namespaceId Namespace ID
+                     * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Resource type. Valid values: CFS (file system), CLS (log service), TSE_SRE (registry)
                      * @return ResourceType Resource type. Valid values: CFS (file system), CLS (log service), TSE_SRE (registry)
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type. Valid values: CFS (file system), CLS (log service), TSE_SRE (registry)
-                     * @param ResourceType Resource type. Valid values: CFS (file system), CLS (log service), TSE_SRE (registry)
+                     * @param _resourceType Resource type. Valid values: CFS (file system), CLS (log service), TSE_SRE (registry)
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Resource ID
                      * @return ResourceId Resource ID
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Resource ID
-                     * @param ResourceId Resource ID
+                     * @param _resourceId Resource ID
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 

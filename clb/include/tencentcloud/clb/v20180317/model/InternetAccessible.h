@@ -51,38 +51,44 @@ namespace TencentCloud
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
                      * @return InternetChargeType TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
+                     * 
                      */
                     std::string GetInternetChargeType() const;
 
                     /**
                      * 设置TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
-                     * @param InternetChargeType TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
+                     * @param _internetChargeType TRAFFIC_POSTPAID_BY_HOUR: hourly pay-as-you-go by traffic; BANDWIDTH_POSTPAID_BY_HOUR: hourly pay-as-you-go by bandwidth;
 BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is supported only if the ISP is specified)
+                     * 
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
 
                     /**
                      * 判断参数 InternetChargeType 是否已赋值
                      * @return InternetChargeType 是否已赋值
+                     * 
                      */
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
                      * @return InternetMaxBandwidthOut Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
-                     * @param InternetMaxBandwidthOut Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+                     * @param _internetMaxBandwidthOut Maximum outbound bandwidth in Mbps, which applies only to public network CLB. Value range: 0-65,535. Default value: 10.
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
@@ -91,20 +97,23 @@ BANDWIDTH_PACKAGE: billed by bandwidth package (currently, this method is suppor
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BandwidthpkgSubType Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBandwidthpkgSubType() const;
 
                     /**
                      * 设置Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BandwidthpkgSubType Bandwidth package type, such as SINGLEISP
+                     * @param _bandwidthpkgSubType Bandwidth package type, such as SINGLEISP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBandwidthpkgSubType(const std::string& _bandwidthpkgSubType);
 
                     /**
                      * 判断参数 BandwidthpkgSubType 是否已赋值
                      * @return BandwidthpkgSubType 是否已赋值
+                     * 
                      */
                     bool BandwidthpkgSubTypeHasBeenSet() const;
 

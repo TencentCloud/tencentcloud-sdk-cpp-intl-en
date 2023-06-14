@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return DomainGrade Domain level.
 + Original plan. Valid values: `D_FREE` (Free Plan); `D_PLUS` (Individual Plus Plan); `D_EXTRA` (Enterprise 1 Plan); `D_EXPERT` (Enterprise 2 Plan); `D_ULTRA` (Enterprise 3 Plan).
 + New plan. Valid values: `DP_FREE` (Free Version); `DP_PLUS` (Professional); `DP_EXTRA` (Enterprise Basic); `DP_EXPERT` (Enterprise); `DP_ULTRA` (Ultimate).
+                     * 
                      */
                     std::string GetDomainGrade() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Domain level.
 + Original plan. Valid values: `D_FREE` (Free Plan); `D_PLUS` (Individual Plus Plan); `D_EXTRA` (Enterprise 1 Plan); `D_EXPERT` (Enterprise 2 Plan); `D_ULTRA` (Enterprise 3 Plan).
 + New plan. Valid values: `DP_FREE` (Free Version); `DP_PLUS` (Professional); `DP_EXTRA` (Enterprise Basic); `DP_EXPERT` (Enterprise); `DP_ULTRA` (Ultimate).
-                     * @param DomainGrade Domain level.
+                     * @param _domainGrade Domain level.
 + Original plan. Valid values: `D_FREE` (Free Plan); `D_PLUS` (Individual Plus Plan); `D_EXTRA` (Enterprise 1 Plan); `D_EXPERT` (Enterprise 2 Plan); `D_ULTRA` (Enterprise 3 Plan).
 + New plan. Valid values: `DP_FREE` (Free Version); `DP_PLUS` (Professional); `DP_EXTRA` (Enterprise Basic); `DP_EXPERT` (Enterprise); `DP_ULTRA` (Ultimate).
+                     * 
                      */
                     void SetDomainGrade(const std::string& _domainGrade);
 
                     /**
                      * 判断参数 DomainGrade 是否已赋值
                      * @return DomainGrade 是否已赋值
+                     * 
                      */
                     bool DomainGradeHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
                      * 设置Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskId(const int64_t& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Start time
+                     * @param _startTime Start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskType Task type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskType() const;
 
                     /**
                      * 设置Task type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskType Task type
+                     * @param _taskType Task type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskType(const std::string& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProjectId Project ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Progress Task progress
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetProgress() const;
 
                     /**
                      * 设置Task progress
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Progress Task progress
+                     * @param _progress Task progress
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProgress(const double& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime End time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime End time
+                     * @param _endTime End time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Result Task status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetResult() const;
 
                     /**
                      * 设置Task status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Result Task status
+                     * @param _result Task status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResult(const int64_t& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

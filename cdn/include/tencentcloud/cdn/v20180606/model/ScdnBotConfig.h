@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `on` and `off`.
                      * @return Switch Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Valid values: `on` and `off`.
-                     * @param Switch Valid values: `on` and `off`.
+                     * @param _switch Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return BotCookie Bot cookie policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BotCookie> GetBotCookie() const;
 
                     /**
                      * 设置Bot cookie policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param BotCookie Bot cookie policy
+                     * @param _botCookie Bot cookie policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBotCookie(const std::vector<BotCookie>& _botCookie);
 
                     /**
                      * 判断参数 BotCookie 是否已赋值
                      * @return BotCookie 是否已赋值
+                     * 
                      */
                     bool BotCookieHasBeenSet() const;
 
@@ -93,20 +99,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return BotJavaScript Bot JS policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BotJavaScript> GetBotJavaScript() const;
 
                     /**
                      * 设置Bot JS policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param BotJavaScript Bot JS policy
+                     * @param _botJavaScript Bot JS policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBotJavaScript(const std::vector<BotJavaScript>& _botJavaScript);
 
                     /**
                      * 判断参数 BotJavaScript 是否已赋值
                      * @return BotJavaScript 是否已赋值
+                     * 
                      */
                     bool BotJavaScriptHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Tracking set status. 1: enabled, 0: disabled
                      * @return AuditStatus Tracking set status. 1: enabled, 0: disabled
+                     * 
                      */
                     int64_t GetAuditStatus() const;
 
                     /**
                      * 设置Tracking set status. 1: enabled, 0: disabled
-                     * @param AuditStatus Tracking set status. 1: enabled, 0: disabled
+                     * @param _auditStatus Tracking set status. 1: enabled, 0: disabled
+                     * 
                      */
                     void SetAuditStatus(const int64_t& _auditStatus);
 
                     /**
                      * 判断参数 AuditStatus 是否已赋值
                      * @return AuditStatus 是否已赋值
+                     * 
                      */
                     bool AuditStatusHasBeenSet() const;
 
                     /**
                      * 获取COS bucket name
                      * @return CosBucketName COS bucket name
+                     * 
                      */
                     std::string GetCosBucketName() const;
 
                     /**
                      * 设置COS bucket name
-                     * @param CosBucketName COS bucket name
+                     * @param _cosBucketName COS bucket name
+                     * 
                      */
                     void SetCosBucketName(const std::string& _cosBucketName);
 
                     /**
                      * 判断参数 CosBucketName 是否已赋值
                      * @return CosBucketName 是否已赋值
+                     * 
                      */
                     bool CosBucketNameHasBeenSet() const;
 
                     /**
                      * 获取Tracking set name
                      * @return AuditName Tracking set name
+                     * 
                      */
                     std::string GetAuditName() const;
 
                     /**
                      * 设置Tracking set name
-                     * @param AuditName Tracking set name
+                     * @param _auditName Tracking set name
+                     * 
                      */
                     void SetAuditName(const std::string& _auditName);
 
                     /**
                      * 判断参数 AuditName 是否已赋值
                      * @return AuditName 是否已赋值
+                     * 
                      */
                     bool AuditNameHasBeenSet() const;
 
                     /**
                      * 获取Log prefix
                      * @return LogFilePrefix Log prefix
+                     * 
                      */
                     std::string GetLogFilePrefix() const;
 
                     /**
                      * 设置Log prefix
-                     * @param LogFilePrefix Log prefix
+                     * @param _logFilePrefix Log prefix
+                     * 
                      */
                     void SetLogFilePrefix(const std::string& _logFilePrefix);
 
                     /**
                      * 判断参数 LogFilePrefix 是否已赋值
                      * @return LogFilePrefix 是否已赋值
+                     * 
                      */
                     bool LogFilePrefixHasBeenSet() const;
 

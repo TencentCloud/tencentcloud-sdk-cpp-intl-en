@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tables Data table list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DatabaseTables> GetTables() const;
 
                     /**
                      * 判断参数 Tables 是否已赋值
                      * @return Tables 是否已赋值
+                     * 
                      */
                     bool TablesHasBeenSet() const;
 

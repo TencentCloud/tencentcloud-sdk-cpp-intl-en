@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Push task ID.
                      * @return TaskId Push task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Backup Result parameters of the backup task.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackup() const;
 
                     /**
                      * 判断参数 Backup 是否已赋值
                      * @return Backup 是否已赋值
+                     * 
                      */
                     bool BackupHasBeenSet() const;
 

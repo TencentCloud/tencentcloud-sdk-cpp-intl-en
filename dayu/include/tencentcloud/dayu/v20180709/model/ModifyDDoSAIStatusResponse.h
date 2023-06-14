@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取AI protection status. Valid values: [on, off]
                      * @return DDoSAI AI protection status. Valid values: [on, off]
+                     * 
                      */
                     std::string GetDDoSAI() const;
 
                     /**
                      * 判断参数 DDoSAI 是否已赋值
                      * @return DDoSAI 是否已赋值
+                     * 
                      */
                     bool DDoSAIHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

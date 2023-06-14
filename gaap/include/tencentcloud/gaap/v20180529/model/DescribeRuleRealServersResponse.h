@@ -48,48 +48,56 @@ namespace TencentCloud
                     /**
                      * 获取Quantity of origin servers that can be bound
                      * @return TotalCount Quantity of origin servers that can be bound
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information list of origin servers that can be bound
                      * @return RealServerSet Information list of origin servers that can be bound
+                     * 
                      */
                     std::vector<RealServer> GetRealServerSet() const;
 
                     /**
                      * 判断参数 RealServerSet 是否已赋值
                      * @return RealServerSet 是否已赋值
+                     * 
                      */
                     bool RealServerSetHasBeenSet() const;
 
                     /**
                      * 获取Quantity of bound origin servers
                      * @return BindRealServerTotalCount Quantity of bound origin servers
+                     * 
                      */
                     uint64_t GetBindRealServerTotalCount() const;
 
                     /**
                      * 判断参数 BindRealServerTotalCount 是否已赋值
                      * @return BindRealServerTotalCount 是否已赋值
+                     * 
                      */
                     bool BindRealServerTotalCountHasBeenSet() const;
 
                     /**
                      * 获取Bound origin server information list
                      * @return BindRealServerSet Bound origin server information list
+                     * 
                      */
                     std::vector<BindRealServer> GetBindRealServerSet() const;
 
                     /**
                      * 判断参数 BindRealServerSet 是否已赋值
                      * @return BindRealServerSet 是否已赋值
+                     * 
                      */
                     bool BindRealServerSetHasBeenSet() const;
 

@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
                      * @return Name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param Name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * @param _name Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Number of partitions, which should be greater than 0.
                      * @return PartitionNum Number of partitions, which should be greater than 0.
+                     * 
                      */
                     int64_t GetPartitionNum() const;
 
                     /**
                      * 设置Number of partitions, which should be greater than 0.
-                     * @param PartitionNum Number of partitions, which should be greater than 0.
+                     * @param _partitionNum Number of partitions, which should be greater than 0.
+                     * 
                      */
                     void SetPartitionNum(const int64_t& _partitionNum);
 
                     /**
                      * 判断参数 PartitionNum 是否已赋值
                      * @return PartitionNum 是否已赋值
+                     * 
                      */
                     bool PartitionNumHasBeenSet() const;
 
                     /**
                      * 获取Message retention period in milliseconds. The current minimum value is 60,000 ms.
                      * @return RetentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
+                     * 
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
                      * 设置Message retention period in milliseconds. The current minimum value is 60,000 ms.
-                     * @param RetentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
+                     * @param _retentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
+                     * 
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
 
                     /**
                      * 判断参数 RetentionMs 是否已赋值
                      * @return RetentionMs 是否已赋值
+                     * 
                      */
                     bool RetentionMsHasBeenSet() const;
 
                     /**
                      * 获取Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
                      * @return Note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     std::string GetNote() const;
 
                     /**
                      * 设置Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param Note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * @param _note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     void SetNote(const std::string& _note);
 
                     /**
                      * 判断参数 Note 是否已赋值
                      * @return Note 是否已赋值
+                     * 
                      */
                     bool NoteHasBeenSet() const;
 
                     /**
                      * 获取Tag list
                      * @return Tags Tag list
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list
-                     * @param Tags Tag list
+                     * @param _tags Tag list
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Name of the Secret.
                      * @return SecretName Name of the Secret.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取Version ID of the Secret.
                      * @return VersionId Version ID of the Secret.
+                     * 
                      */
                     std::string GetVersionId() const;
 
                     /**
                      * 判断参数 VersionId 是否已赋值
                      * @return VersionId 是否已赋值
+                     * 
                      */
                     bool VersionIdHasBeenSet() const;
 

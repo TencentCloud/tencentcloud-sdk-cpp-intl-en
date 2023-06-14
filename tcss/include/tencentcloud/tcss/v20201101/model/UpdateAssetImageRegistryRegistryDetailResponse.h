@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HealthCheckErr Connection error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHealthCheckErr() const;
 
                     /**
                      * 判断参数 HealthCheckErr 是否已赋值
                      * @return HealthCheckErr 是否已赋值
+                     * 
                      */
                     bool HealthCheckErrHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NameRepeatErr Name error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNameRepeatErr() const;
 
                     /**
                      * 判断参数 NameRepeatErr 是否已赋值
                      * @return NameRepeatErr 是否已赋值
+                     * 
                      */
                     bool NameRepeatErrHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegistryId Unique repository ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRegistryId() const;
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 

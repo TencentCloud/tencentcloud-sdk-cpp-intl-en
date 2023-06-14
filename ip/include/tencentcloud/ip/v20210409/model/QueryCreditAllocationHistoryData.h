@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Allocation time
                      * @return AllocatedTime Allocation time
+                     * 
                      */
                     std::string GetAllocatedTime() const;
 
                     /**
                      * 设置Allocation time
-                     * @param AllocatedTime Allocation time
+                     * @param _allocatedTime Allocation time
+                     * 
                      */
                     void SetAllocatedTime(const std::string& _allocatedTime);
 
                     /**
                      * 判断参数 AllocatedTime 是否已赋值
                      * @return AllocatedTime 是否已赋值
+                     * 
                      */
                     bool AllocatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Operator
                      * @return Operator Operator
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Operator
-                     * @param Operator Operator
+                     * @param _operator Operator
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Allocated credit value
                      * @return Credit Allocated credit value
+                     * 
                      */
                     double GetCredit() const;
 
                     /**
                      * 设置Allocated credit value
-                     * @param Credit Allocated credit value
+                     * @param _credit Allocated credit value
+                     * 
                      */
                     void SetCredit(const double& _credit);
 
                     /**
                      * 判断参数 Credit 是否已赋值
                      * @return Credit 是否已赋值
+                     * 
                      */
                     bool CreditHasBeenSet() const;
 
                     /**
                      * 获取The allocated total credit
                      * @return AllocatedCredit The allocated total credit
+                     * 
                      */
                     double GetAllocatedCredit() const;
 
                     /**
                      * 设置The allocated total credit
-                     * @param AllocatedCredit The allocated total credit
+                     * @param _allocatedCredit The allocated total credit
+                     * 
                      */
                     void SetAllocatedCredit(const double& _allocatedCredit);
 
                     /**
                      * 判断参数 AllocatedCredit 是否已赋值
                      * @return AllocatedCredit 是否已赋值
+                     * 
                      */
                     bool AllocatedCreditHasBeenSet() const;
 

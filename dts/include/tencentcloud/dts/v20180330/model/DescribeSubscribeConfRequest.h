@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Subscription instance ID
                      * @return SubscribeId Subscription instance ID
+                     * 
                      */
                     std::string GetSubscribeId() const;
 
                     /**
                      * 设置Subscription instance ID
-                     * @param SubscribeId Subscription instance ID
+                     * @param _subscribeId Subscription instance ID
+                     * 
                      */
                     void SetSubscribeId(const std::string& _subscribeId);
 
                     /**
                      * 判断参数 SubscribeId 是否已赋值
                      * @return SubscribeId 是否已赋值
+                     * 
                      */
                     bool SubscribeIdHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取EMR cluster ID
                      * @return InstanceId EMR cluster ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置EMR cluster ID
-                     * @param InstanceId EMR cluster ID
+                     * @param _instanceId EMR cluster ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The original scheduler: `fair`
                      * @return OldValue The original scheduler: `fair`
+                     * 
                      */
                     std::string GetOldValue() const;
 
                     /**
                      * 设置The original scheduler: `fair`
-                     * @param OldValue The original scheduler: `fair`
+                     * @param _oldValue The original scheduler: `fair`
+                     * 
                      */
                     void SetOldValue(const std::string& _oldValue);
 
                     /**
                      * 判断参数 OldValue 是否已赋值
                      * @return OldValue 是否已赋值
+                     * 
                      */
                     bool OldValueHasBeenSet() const;
 
                     /**
                      * 获取The new scheduler: `capacity`
                      * @return NewValue The new scheduler: `capacity`
+                     * 
                      */
                     std::string GetNewValue() const;
 
                     /**
                      * 设置The new scheduler: `capacity`
-                     * @param NewValue The new scheduler: `capacity`
+                     * @param _newValue The new scheduler: `capacity`
+                     * 
                      */
                     void SetNewValue(const std::string& _newValue);
 
                     /**
                      * 判断参数 NewValue 是否已赋值
                      * @return NewValue 是否已赋值
+                     * 
                      */
                     bool NewValueHasBeenSet() const;
 

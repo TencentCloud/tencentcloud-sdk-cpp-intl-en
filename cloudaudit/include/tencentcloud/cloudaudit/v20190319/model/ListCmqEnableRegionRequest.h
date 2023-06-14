@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Website type. zh: Chinese mainland (default); en: outside Chinese mainland.
                      * @return WebsiteType Website type. zh: Chinese mainland (default); en: outside Chinese mainland.
+                     * 
                      */
                     std::string GetWebsiteType() const;
 
                     /**
                      * 设置Website type. zh: Chinese mainland (default); en: outside Chinese mainland.
-                     * @param WebsiteType Website type. zh: Chinese mainland (default); en: outside Chinese mainland.
+                     * @param _websiteType Website type. zh: Chinese mainland (default); en: outside Chinese mainland.
+                     * 
                      */
                     void SetWebsiteType(const std::string& _websiteType);
 
                     /**
                      * 判断参数 WebsiteType 是否已赋值
                      * @return WebsiteType 是否已赋值
+                     * 
                      */
                     bool WebsiteTypeHasBeenSet() const;
 

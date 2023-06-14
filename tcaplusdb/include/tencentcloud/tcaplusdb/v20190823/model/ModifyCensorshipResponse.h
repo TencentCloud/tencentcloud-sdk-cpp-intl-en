@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -60,24 +62,28 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Uins Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetUins() const;
 
                     /**
                      * 判断参数 Uins 是否已赋值
                      * @return Uins 是否已赋值
+                     * 
                      */
                     bool UinsHasBeenSet() const;
 
                     /**
                      * 获取Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
                      * @return Censorship Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
+                     * 
                      */
                     int64_t GetCensorship() const;
 
                     /**
                      * 判断参数 Censorship 是否已赋值
                      * @return Censorship 是否已赋值
+                     * 
                      */
                     bool CensorshipHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
                      * @return TotalConcurrencyMem Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
+                     * 
                      */
                     uint64_t GetTotalConcurrencyMem() const;
 
                     /**
                      * 设置Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
-                     * @param TotalConcurrencyMem Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
+                     * @param _totalConcurrencyMem Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
+                     * 
                      */
                     void SetTotalConcurrencyMem(const uint64_t& _totalConcurrencyMem);
 
                     /**
                      * 判断参数 TotalConcurrencyMem 是否已赋值
                      * @return TotalConcurrencyMem 是否已赋值
+                     * 
                      */
                     bool TotalConcurrencyMemHasBeenSet() const;
 
                     /**
                      * 获取Namespace. Default value: `default`
                      * @return Namespace Namespace. Default value: `default`
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace. Default value: `default`
-                     * @param Namespace Namespace. Default value: `default`
+                     * @param _namespace Namespace. Default value: `default`
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The details of the registrant profile.
                      * @return Template The details of the registrant profile.
+                     * 
                      */
                     IntlTemplateInfo GetTemplate() const;
 
                     /**
                      * 判断参数 Template 是否已赋值
                      * @return Template 是否已赋值
+                     * 
                      */
                     bool TemplateHasBeenSet() const;
 

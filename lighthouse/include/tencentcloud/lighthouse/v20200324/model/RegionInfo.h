@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Region name, such as `ap-guangzhou`.
                      * @return Region Region name, such as `ap-guangzhou`.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region name, such as `ap-guangzhou`.
-                     * @param Region Region name, such as `ap-guangzhou`.
+                     * @param _region Region name, such as `ap-guangzhou`.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Region description, such as South China (Guangzhou).
                      * @return RegionName Region description, such as South China (Guangzhou).
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region description, such as South China (Guangzhou).
-                     * @param RegionName Region description, such as South China (Guangzhou).
+                     * @param _regionName Region description, such as South China (Guangzhou).
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Region availability status. Its value can only be `AVAILABLE`.
                      * @return RegionState Region availability status. Its value can only be `AVAILABLE`.
+                     * 
                      */
                     std::string GetRegionState() const;
 
                     /**
                      * 设置Region availability status. Its value can only be `AVAILABLE`.
-                     * @param RegionState Region availability status. Its value can only be `AVAILABLE`.
+                     * @param _regionState Region availability status. Its value can only be `AVAILABLE`.
+                     * 
                      */
                     void SetRegionState(const std::string& _regionState);
 
                     /**
                      * 判断参数 RegionState 是否已赋值
                      * @return RegionState 是否已赋值
+                     * 
                      */
                     bool RegionStateHasBeenSet() const;
 
                     /**
                      * 获取Whether the region is in the Chinese mainland
                      * @return IsChinaMainland Whether the region is in the Chinese mainland
+                     * 
                      */
                     bool GetIsChinaMainland() const;
 
                     /**
                      * 设置Whether the region is in the Chinese mainland
-                     * @param IsChinaMainland Whether the region is in the Chinese mainland
+                     * @param _isChinaMainland Whether the region is in the Chinese mainland
+                     * 
                      */
                     void SetIsChinaMainland(const bool& _isChinaMainland);
 
                     /**
                      * 判断参数 IsChinaMainland 是否已赋值
                      * @return IsChinaMainland 是否已赋值
+                     * 
                      */
                     bool IsChinaMainlandHasBeenSet() const;
 

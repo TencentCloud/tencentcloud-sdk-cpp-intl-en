@@ -49,270 +49,315 @@ namespace TencentCloud
                     /**
                      * 获取Network bandwidth cap
                      * @return MaxBandwidth Network bandwidth cap
+                     * 
                      */
                     int64_t GetMaxBandwidth() const;
 
                     /**
                      * 设置Network bandwidth cap
-                     * @param MaxBandwidth Network bandwidth cap
+                     * @param _maxBandwidth Network bandwidth cap
+                     * 
                      */
                     void SetMaxBandwidth(const int64_t& _maxBandwidth);
 
                     /**
                      * 判断参数 MaxBandwidth 是否已赋值
                      * @return MaxBandwidth 是否已赋值
+                     * 
                      */
                     bool MaxBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Upper limit of the data disk size
                      * @return MaxSystemDiskSize Upper limit of the data disk size
+                     * 
                      */
                     int64_t GetMaxSystemDiskSize() const;
 
                     /**
                      * 设置Upper limit of the data disk size
-                     * @param MaxSystemDiskSize Upper limit of the data disk size
+                     * @param _maxSystemDiskSize Upper limit of the data disk size
+                     * 
                      */
                     void SetMaxSystemDiskSize(const int64_t& _maxSystemDiskSize);
 
                     /**
                      * 判断参数 MaxSystemDiskSize 是否已赋值
                      * @return MaxSystemDiskSize 是否已赋值
+                     * 
                      */
                     bool MaxSystemDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Lower limit of the network bandwidth
                      * @return MinBandwidth Lower limit of the network bandwidth
+                     * 
                      */
                     int64_t GetMinBandwidth() const;
 
                     /**
                      * 设置Lower limit of the network bandwidth
-                     * @param MinBandwidth Lower limit of the network bandwidth
+                     * @param _minBandwidth Lower limit of the network bandwidth
+                     * 
                      */
                     void SetMinBandwidth(const int64_t& _minBandwidth);
 
                     /**
                      * 判断参数 MinBandwidth 是否已赋值
                      * @return MinBandwidth 是否已赋值
+                     * 
                      */
                     bool MinBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Lower limit of the data disk size
                      * @return MinSystemDiskSize Lower limit of the data disk size
+                     * 
                      */
                     int64_t GetMinSystemDiskSize() const;
 
                     /**
                      * 设置Lower limit of the data disk size
-                     * @param MinSystemDiskSize Lower limit of the data disk size
+                     * @param _minSystemDiskSize Lower limit of the data disk size
+                     * 
                      */
                     void SetMinSystemDiskSize(const int64_t& _minSystemDiskSize);
 
                     /**
                      * 判断参数 MinSystemDiskSize 是否已赋值
                      * @return MinSystemDiskSize 是否已赋值
+                     * 
                      */
                     bool MinSystemDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Maximum data disk size
                      * @return MaxDataDiskSize Maximum data disk size
+                     * 
                      */
                     int64_t GetMaxDataDiskSize() const;
 
                     /**
                      * 设置Maximum data disk size
-                     * @param MaxDataDiskSize Maximum data disk size
+                     * @param _maxDataDiskSize Maximum data disk size
+                     * 
                      */
                     void SetMaxDataDiskSize(const int64_t& _maxDataDiskSize);
 
                     /**
                      * 判断参数 MaxDataDiskSize 是否已赋值
                      * @return MaxDataDiskSize 是否已赋值
+                     * 
                      */
                     bool MaxDataDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Minimum data disk size
                      * @return MinDataDiskSize Minimum data disk size
+                     * 
                      */
                     int64_t GetMinDataDiskSize() const;
 
                     /**
                      * 设置Minimum data disk size
-                     * @param MinDataDiskSize Minimum data disk size
+                     * @param _minDataDiskSize Minimum data disk size
+                     * 
                      */
                     void SetMinDataDiskSize(const int64_t& _minDataDiskSize);
 
                     /**
                      * 判断参数 MinDataDiskSize 是否已赋值
                      * @return MinDataDiskSize 是否已赋值
+                     * 
                      */
                     bool MinDataDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Suggested bandwidth
                      * @return SuggestBandwidth Suggested bandwidth
+                     * 
                      */
                     int64_t GetSuggestBandwidth() const;
 
                     /**
                      * 设置Suggested bandwidth
-                     * @param SuggestBandwidth Suggested bandwidth
+                     * @param _suggestBandwidth Suggested bandwidth
+                     * 
                      */
                     void SetSuggestBandwidth(const int64_t& _suggestBandwidth);
 
                     /**
                      * 判断参数 SuggestBandwidth 是否已赋值
                      * @return SuggestBandwidth 是否已赋值
+                     * 
                      */
                     bool SuggestBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Suggested disk size
                      * @return SuggestDataDiskSize Suggested disk size
+                     * 
                      */
                     int64_t GetSuggestDataDiskSize() const;
 
                     /**
                      * 设置Suggested disk size
-                     * @param SuggestDataDiskSize Suggested disk size
+                     * @param _suggestDataDiskSize Suggested disk size
+                     * 
                      */
                     void SetSuggestDataDiskSize(const int64_t& _suggestDataDiskSize);
 
                     /**
                      * 判断参数 SuggestDataDiskSize 是否已赋值
                      * @return SuggestDataDiskSize 是否已赋值
+                     * 
                      */
                     bool SuggestDataDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Suggested system disk size
                      * @return SuggestSystemDiskSize Suggested system disk size
+                     * 
                      */
                     int64_t GetSuggestSystemDiskSize() const;
 
                     /**
                      * 设置Suggested system disk size
-                     * @param SuggestSystemDiskSize Suggested system disk size
+                     * @param _suggestSystemDiskSize Suggested system disk size
+                     * 
                      */
                     void SetSuggestSystemDiskSize(const int64_t& _suggestSystemDiskSize);
 
                     /**
                      * 判断参数 SuggestSystemDiskSize 是否已赋值
                      * @return SuggestSystemDiskSize 是否已赋值
+                     * 
                      */
                     bool SuggestSystemDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Peak number of CPU cores
                      * @return MaxVcpu Peak number of CPU cores
+                     * 
                      */
                     int64_t GetMaxVcpu() const;
 
                     /**
                      * 设置Peak number of CPU cores
-                     * @param MaxVcpu Peak number of CPU cores
+                     * @param _maxVcpu Peak number of CPU cores
+                     * 
                      */
                     void SetMaxVcpu(const int64_t& _maxVcpu);
 
                     /**
                      * 判断参数 MaxVcpu 是否已赋值
                      * @return MaxVcpu 是否已赋值
+                     * 
                      */
                     bool MaxVcpuHasBeenSet() const;
 
                     /**
                      * 获取Minimum number of CPU cores
                      * @return MinVcpu Minimum number of CPU cores
+                     * 
                      */
                     int64_t GetMinVcpu() const;
 
                     /**
                      * 设置Minimum number of CPU cores
-                     * @param MinVcpu Minimum number of CPU cores
+                     * @param _minVcpu Minimum number of CPU cores
+                     * 
                      */
                     void SetMinVcpu(const int64_t& _minVcpu);
 
                     /**
                      * 判断参数 MinVcpu 是否已赋值
                      * @return MinVcpu 是否已赋值
+                     * 
                      */
                     bool MinVcpuHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of CPU cores per request
                      * @return MaxVcpuPerReq Maximum number of CPU cores per request
+                     * 
                      */
                     int64_t GetMaxVcpuPerReq() const;
 
                     /**
                      * 设置Maximum number of CPU cores per request
-                     * @param MaxVcpuPerReq Maximum number of CPU cores per request
+                     * @param _maxVcpuPerReq Maximum number of CPU cores per request
+                     * 
                      */
                     void SetMaxVcpuPerReq(const int64_t& _maxVcpuPerReq);
 
                     /**
                      * 判断参数 MaxVcpuPerReq 是否已赋值
                      * @return MaxVcpuPerReq 是否已赋值
+                     * 
                      */
                     bool MaxVcpuPerReqHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth increment
                      * @return PerBandwidth Bandwidth increment
+                     * 
                      */
                     int64_t GetPerBandwidth() const;
 
                     /**
                      * 设置Bandwidth increment
-                     * @param PerBandwidth Bandwidth increment
+                     * @param _perBandwidth Bandwidth increment
+                     * 
                      */
                     void SetPerBandwidth(const int64_t& _perBandwidth);
 
                     /**
                      * 判断参数 PerBandwidth 是否已赋值
                      * @return PerBandwidth 是否已赋值
+                     * 
                      */
                     bool PerBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Data disk increment
                      * @return PerDataDisk Data disk increment
+                     * 
                      */
                     int64_t GetPerDataDisk() const;
 
                     /**
                      * 设置Data disk increment
-                     * @param PerDataDisk Data disk increment
+                     * @param _perDataDisk Data disk increment
+                     * 
                      */
                     void SetPerDataDisk(const int64_t& _perDataDisk);
 
                     /**
                      * 判断参数 PerDataDisk 是否已赋值
                      * @return PerDataDisk 是否已赋值
+                     * 
                      */
                     bool PerDataDiskHasBeenSet() const;
 
                     /**
                      * 获取Total number of modules
                      * @return MaxModuleNum Total number of modules
+                     * 
                      */
                     int64_t GetMaxModuleNum() const;
 
                     /**
                      * 设置Total number of modules
-                     * @param MaxModuleNum Total number of modules
+                     * @param _maxModuleNum Total number of modules
+                     * 
                      */
                     void SetMaxModuleNum(const int64_t& _maxModuleNum);
 
                     /**
                      * 判断参数 MaxModuleNum 是否已赋值
                      * @return MaxModuleNum 是否已赋值
+                     * 
                      */
                     bool MaxModuleNumHasBeenSet() const;
 

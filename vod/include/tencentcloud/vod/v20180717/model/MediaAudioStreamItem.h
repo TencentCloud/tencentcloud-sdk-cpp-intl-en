@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Bitrate Bitrate of audio stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
                      * 设置Bitrate of audio stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Bitrate Bitrate of audio stream in bps.
+                     * @param _bitrate Bitrate of audio stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
 
                     /**
                      * 判断参数 Bitrate 是否已赋值
                      * @return Bitrate 是否已赋值
+                     * 
                      */
                     bool BitrateHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SamplingRate Sample rate of audio stream in Hz.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSamplingRate() const;
 
                     /**
                      * 设置Sample rate of audio stream in Hz.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SamplingRate Sample rate of audio stream in Hz.
+                     * @param _samplingRate Sample rate of audio stream in Hz.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSamplingRate(const int64_t& _samplingRate);
 
                     /**
                      * 判断参数 SamplingRate 是否已赋值
                      * @return SamplingRate 是否已赋值
+                     * 
                      */
                     bool SamplingRateHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Codec Audio stream encoder, such as aac.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCodec() const;
 
                     /**
                      * 设置Audio stream encoder, such as aac.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Codec Audio stream encoder, such as aac.
+                     * @param _codec Audio stream encoder, such as aac.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 

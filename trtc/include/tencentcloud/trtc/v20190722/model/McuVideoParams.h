@@ -52,36 +52,42 @@ namespace TencentCloud
                     /**
                      * 获取The video encoding parameters.
                      * @return VideoEncode The video encoding parameters.
+                     * 
                      */
                     VideoEncode GetVideoEncode() const;
 
                     /**
                      * 设置The video encoding parameters.
-                     * @param VideoEncode The video encoding parameters.
+                     * @param _videoEncode The video encoding parameters.
+                     * 
                      */
                     void SetVideoEncode(const VideoEncode& _videoEncode);
 
                     /**
                      * 判断参数 VideoEncode 是否已赋值
                      * @return VideoEncode 是否已赋值
+                     * 
                      */
                     bool VideoEncodeHasBeenSet() const;
 
                     /**
                      * 获取The layout parameters.
                      * @return LayoutParams The layout parameters.
+                     * 
                      */
                     McuLayoutParams GetLayoutParams() const;
 
                     /**
                      * 设置The layout parameters.
-                     * @param LayoutParams The layout parameters.
+                     * @param _layoutParams The layout parameters.
+                     * 
                      */
                     void SetLayoutParams(const McuLayoutParams& _layoutParams);
 
                     /**
                      * 判断参数 LayoutParams 是否已赋值
                      * @return LayoutParams 是否已赋值
+                     * 
                      */
                     bool LayoutParamsHasBeenSet() const;
 
@@ -102,6 +108,7 @@ Blue: 0x99CCFF
 Black: 0x000000
 White: 0xFFFFFF
 Grey: 0x999999
+                     * 
                      */
                     std::string GetBackGroundColor() const;
 
@@ -114,7 +121,7 @@ Blue: 0x99CCFF
 Black: 0x000000
 White: 0xFFFFFF
 Grey: 0x999999
-                     * @param BackGroundColor The canvas color. Below are the values for some common colors:
+                     * @param _backGroundColor The canvas color. Below are the values for some common colors:
 Red: 0xcc0033
 Yellow: 0xcc9900
 Green: 0xcccc33
@@ -122,48 +129,56 @@ Blue: 0x99CCFF
 Black: 0x000000
 White: 0xFFFFFF
 Grey: 0x999999
+                     * 
                      */
                     void SetBackGroundColor(const std::string& _backGroundColor);
 
                     /**
                      * 判断参数 BackGroundColor 是否已赋值
                      * @return BackGroundColor 是否已赋值
+                     * 
                      */
                     bool BackGroundColorHasBeenSet() const;
 
                     /**
                      * 获取The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
                      * @return BackgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+                     * 
                      */
                     std::string GetBackgroundImageUrl() const;
 
                     /**
                      * 设置The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
-                     * @param BackgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+                     * @param _backgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+                     * 
                      */
                     void SetBackgroundImageUrl(const std::string& _backgroundImageUrl);
 
                     /**
                      * 判断参数 BackgroundImageUrl 是否已赋值
                      * @return BackgroundImageUrl 是否已赋值
+                     * 
                      */
                     bool BackgroundImageUrlHasBeenSet() const;
 
                     /**
                      * 获取The watermark information for the mixed stream.
                      * @return WaterMarkList The watermark information for the mixed stream.
+                     * 
                      */
                     std::vector<McuWaterMarkParams> GetWaterMarkList() const;
 
                     /**
                      * 设置The watermark information for the mixed stream.
-                     * @param WaterMarkList The watermark information for the mixed stream.
+                     * @param _waterMarkList The watermark information for the mixed stream.
+                     * 
                      */
                     void SetWaterMarkList(const std::vector<McuWaterMarkParams>& _waterMarkList);
 
                     /**
                      * 判断参数 WaterMarkList 是否已赋值
                      * @return WaterMarkList 是否已赋值
+                     * 
                      */
                     bool WaterMarkListHasBeenSet() const;
 

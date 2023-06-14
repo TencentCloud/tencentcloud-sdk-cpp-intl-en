@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Number of package IPs
                      * @return IpCount Number of package IPs
+                     * 
                      */
                     uint64_t GetIpCount() const;
 
                     /**
                      * 设置Number of package IPs
-                     * @param IpCount Number of package IPs
+                     * @param _ipCount Number of package IPs
+                     * 
                      */
                     void SetIpCount(const uint64_t& _ipCount);
 
                     /**
                      * 判断参数 IpCount 是否已赋值
                      * @return IpCount 是否已赋值
+                     * 
                      */
                     bool IpCountHasBeenSet() const;
 
                     /**
                      * 获取Auto-renewal flag
                      * @return AutoRenewFlag Auto-renewal flag
+                     * 
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
                      * 设置Auto-renewal flag
-                     * @param AutoRenewFlag Auto-renewal flag
+                     * @param _autoRenewFlag Auto-renewal flag
+                     * 
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Current expiration time
                      * @return CurDeadline Current expiration time
+                     * 
                      */
                     std::string GetCurDeadline() const;
 
                     /**
                      * 设置Current expiration time
-                     * @param CurDeadline Current expiration time
+                     * @param _curDeadline Current expiration time
+                     * 
                      */
                     void SetCurDeadline(const std::string& _curDeadline);
 
                     /**
                      * 判断参数 CurDeadline 是否已赋值
                      * @return CurDeadline 是否已赋值
+                     * 
                      */
                     bool CurDeadlineHasBeenSet() const;
 

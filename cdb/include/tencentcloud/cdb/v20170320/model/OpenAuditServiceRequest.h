@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取TencentDB for MySQL instance ID
                      * @return InstanceId TencentDB for MySQL instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TencentDB for MySQL instance ID
-                     * @param InstanceId TencentDB for MySQL instance ID
+                     * @param _instanceId TencentDB for MySQL instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
 365: 365 days (a year);
 1095: 1095 days (three years);
 1825: 1825 days (five years).
+                     * 
                      */
                     uint64_t GetLogExpireDay() const;
 
@@ -86,19 +90,21 @@ namespace TencentCloud
 365: 365 days (a year);
 1095: 1095 days (three years);
 1825: 1825 days (five years).
-                     * @param LogExpireDay Retention period of audit logs. Valid values:
+                     * @param _logExpireDay Retention period of audit logs. Valid values:
 7: seven days (a week);
 30: 30 days (a month);
 180: 180 days (six months);
 365: 365 days (a year);
 1095: 1095 days (three years);
 1825: 1825 days (five years).
+                     * 
                      */
                     void SetLogExpireDay(const uint64_t& _logExpireDay);
 
                     /**
                      * 判断参数 LogExpireDay 是否已赋值
                      * @return LogExpireDay 是否已赋值
+                     * 
                      */
                     bool LogExpireDayHasBeenSet() const;
 
@@ -117,6 +123,7 @@ namespace TencentCloud
 365: 365 days (a year);
 1095: 1095 days (three years);
 1825: 1825 days (five years).
+                     * 
                      */
                     uint64_t GetHighLogExpireDay() const;
 
@@ -128,19 +135,21 @@ namespace TencentCloud
 365: 365 days (a year);
 1095: 1095 days (three years);
 1825: 1825 days (five years).
-                     * @param HighLogExpireDay Retention period of high-frequency audit logs. Valid values:
+                     * @param _highLogExpireDay Retention period of high-frequency audit logs. Valid values:
 7: seven days (a week);
 30: 30 days (a month);
 180: 180 days (six months);
 365: 365 days (a year);
 1095: 1095 days (three years);
 1825: 1825 days (five years).
+                     * 
                      */
                     void SetHighLogExpireDay(const uint64_t& _highLogExpireDay);
 
                     /**
                      * 判断参数 HighLogExpireDay 是否已赋值
                      * @return HighLogExpireDay 是否已赋值
+                     * 
                      */
                     bool HighLogExpireDayHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-abcdefgh”.
                      * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable CAM authentication (`true`: Yes; `false`: No)
                      * @return EnableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
+                     * 
                      */
                     bool GetEnableSSOCamCheck() const;
 
                     /**
                      * 设置Whether to enable CAM authentication (`true`: Yes; `false`: No)
-                     * @param EnableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
+                     * @param _enableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
+                     * 
                      */
                     void SetEnableSSOCamCheck(const bool& _enableSSOCamCheck);
 
                     /**
                      * 判断参数 EnableSSOCamCheck 是否已赋值
                      * @return EnableSSOCamCheck 是否已赋值
+                     * 
                      */
                     bool EnableSSOCamCheckHasBeenSet() const;
 

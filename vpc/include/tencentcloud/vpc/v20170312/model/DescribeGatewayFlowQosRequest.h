@@ -51,6 +51,7 @@ VPN gateway instance, such as `vpn-ltjahce6`.
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
+                     * 
                      */
                     std::string GetGatewayId() const;
 
@@ -59,70 +60,81 @@ VPN gateway instance, such as `vpn-ltjahce6`.
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
-                     * @param GatewayId Gateway instance ID. Supported types:
+                     * @param _gatewayId Gateway instance ID. Supported types:
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
+                     * 
                      */
                     void SetGatewayId(const std::string& _gatewayId);
 
                     /**
                      * 判断参数 GatewayId 是否已赋值
                      * @return GatewayId 是否已赋值
+                     * 
                      */
                     bool GatewayIdHasBeenSet() const;
 
                     /**
                      * 获取CVM private IP addresses with limited bandwidth.
                      * @return IpAddresses CVM private IP addresses with limited bandwidth.
+                     * 
                      */
                     std::vector<std::string> GetIpAddresses() const;
 
                     /**
                      * 设置CVM private IP addresses with limited bandwidth.
-                     * @param IpAddresses CVM private IP addresses with limited bandwidth.
+                     * @param _ipAddresses CVM private IP addresses with limited bandwidth.
+                     * 
                      */
                     void SetIpAddresses(const std::vector<std::string>& _ipAddresses);
 
                     /**
                      * 判断参数 IpAddresses 是否已赋值
                      * @return IpAddresses 是否已赋值
+                     * 
                      */
                     bool IpAddressesHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

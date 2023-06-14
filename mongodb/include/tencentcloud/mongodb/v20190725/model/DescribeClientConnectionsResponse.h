@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Client connection information, including client IP and number of connections
                      * @return Clients Client connection information, including client IP and number of connections
+                     * 
                      */
                     std::vector<ClientConnection> GetClients() const;
 
                     /**
                      * 判断参数 Clients 是否已赋值
                      * @return Clients 是否已赋值
+                     * 
                      */
                     bool ClientsHasBeenSet() const;
 
                     /**
                      * 获取The total number of records that meet the query condition, which can be used for paginated queries.
                      * @return TotalCount The total number of records that meet the query condition, which can be used for paginated queries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

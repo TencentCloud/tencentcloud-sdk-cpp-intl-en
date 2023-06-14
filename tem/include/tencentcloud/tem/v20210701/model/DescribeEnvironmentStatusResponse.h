@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of environment status
                      * @return Result List of environment status
+                     * 
                      */
                     std::vector<NamespaceStatusInfo> GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

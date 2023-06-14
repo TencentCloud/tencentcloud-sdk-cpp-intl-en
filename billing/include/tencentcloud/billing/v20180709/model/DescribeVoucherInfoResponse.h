@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of vouchers.
                      * @return TotalCount The total number of vouchers.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The total voucher balance. The value of this parameter is the total balance (USD, rounded to 8 decimal places) multiplied by 100,000,000.
                      * @return TotalBalance The total voucher balance. The value of this parameter is the total balance (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+                     * 
                      */
                     int64_t GetTotalBalance() const;
 
                     /**
                      * 判断参数 TotalBalance 是否已赋值
                      * @return TotalBalance 是否已赋值
+                     * 
                      */
                     bool TotalBalanceHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return VoucherInfos The voucher information.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<VoucherInfos> GetVoucherInfos() const;
 
                     /**
                      * 判断参数 VoucherInfos 是否已赋值
                      * @return VoucherInfos 是否已赋值
+                     * 
                      */
                     bool VoucherInfosHasBeenSet() const;
 

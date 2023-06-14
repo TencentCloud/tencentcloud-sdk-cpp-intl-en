@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Code Compatibility flag status code.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetCode() const;
 
                     /**
                      * 设置Compatibility flag status code.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Code Compatibility flag status code.
+                     * @param _code Compatibility flag status code.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCode(const int64_t& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 

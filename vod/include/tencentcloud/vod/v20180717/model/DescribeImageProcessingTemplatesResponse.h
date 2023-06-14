@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of records that meet the conditions.
                      * @return TotalCount The total number of records that meet the conditions.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The information of the queried image processing templates.
                      * @return ImageProcessingTemplateSet The information of the queried image processing templates.
+                     * 
                      */
                     std::vector<ImageProcessingTemplate> GetImageProcessingTemplateSet() const;
 
                     /**
                      * 判断参数 ImageProcessingTemplateSet 是否已赋值
                      * @return ImageProcessingTemplateSet 是否已赋值
+                     * 
                      */
                     bool ImageProcessingTemplateSetHasBeenSet() const;
 

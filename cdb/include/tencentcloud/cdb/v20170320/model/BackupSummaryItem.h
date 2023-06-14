@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of automatic data backups of an instance.
                      * @return AutoBackupCount Number of automatic data backups of an instance.
+                     * 
                      */
                     int64_t GetAutoBackupCount() const;
 
                     /**
                      * 设置Number of automatic data backups of an instance.
-                     * @param AutoBackupCount Number of automatic data backups of an instance.
+                     * @param _autoBackupCount Number of automatic data backups of an instance.
+                     * 
                      */
                     void SetAutoBackupCount(const int64_t& _autoBackupCount);
 
                     /**
                      * 判断参数 AutoBackupCount 是否已赋值
                      * @return AutoBackupCount 是否已赋值
+                     * 
                      */
                     bool AutoBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Capacity of automatic data backups of an instance.
                      * @return AutoBackupVolume Capacity of automatic data backups of an instance.
+                     * 
                      */
                     int64_t GetAutoBackupVolume() const;
 
                     /**
                      * 设置Capacity of automatic data backups of an instance.
-                     * @param AutoBackupVolume Capacity of automatic data backups of an instance.
+                     * @param _autoBackupVolume Capacity of automatic data backups of an instance.
+                     * 
                      */
                     void SetAutoBackupVolume(const int64_t& _autoBackupVolume);
 
                     /**
                      * 判断参数 AutoBackupVolume 是否已赋值
                      * @return AutoBackupVolume 是否已赋值
+                     * 
                      */
                     bool AutoBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Number of manual data backups of an instance.
                      * @return ManualBackupCount Number of manual data backups of an instance.
+                     * 
                      */
                     int64_t GetManualBackupCount() const;
 
                     /**
                      * 设置Number of manual data backups of an instance.
-                     * @param ManualBackupCount Number of manual data backups of an instance.
+                     * @param _manualBackupCount Number of manual data backups of an instance.
+                     * 
                      */
                     void SetManualBackupCount(const int64_t& _manualBackupCount);
 
                     /**
                      * 判断参数 ManualBackupCount 是否已赋值
                      * @return ManualBackupCount 是否已赋值
+                     * 
                      */
                     bool ManualBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Capacity of manual data backups of an instance.
                      * @return ManualBackupVolume Capacity of manual data backups of an instance.
+                     * 
                      */
                     int64_t GetManualBackupVolume() const;
 
                     /**
                      * 设置Capacity of manual data backups of an instance.
-                     * @param ManualBackupVolume Capacity of manual data backups of an instance.
+                     * @param _manualBackupVolume Capacity of manual data backups of an instance.
+                     * 
                      */
                     void SetManualBackupVolume(const int64_t& _manualBackupVolume);
 
                     /**
                      * 判断参数 ManualBackupVolume 是否已赋值
                      * @return ManualBackupVolume 是否已赋值
+                     * 
                      */
                     bool ManualBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total number of data backups of an instance (including automatic backups and manual backups).
                      * @return DataBackupCount Total number of data backups of an instance (including automatic backups and manual backups).
+                     * 
                      */
                     int64_t GetDataBackupCount() const;
 
                     /**
                      * 设置Total number of data backups of an instance (including automatic backups and manual backups).
-                     * @param DataBackupCount Total number of data backups of an instance (including automatic backups and manual backups).
+                     * @param _dataBackupCount Total number of data backups of an instance (including automatic backups and manual backups).
+                     * 
                      */
                     void SetDataBackupCount(const int64_t& _dataBackupCount);
 
                     /**
                      * 判断参数 DataBackupCount 是否已赋值
                      * @return DataBackupCount 是否已赋值
+                     * 
                      */
                     bool DataBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Total capacity of data backups of an instance.
                      * @return DataBackupVolume Total capacity of data backups of an instance.
+                     * 
                      */
                     int64_t GetDataBackupVolume() const;
 
                     /**
                      * 设置Total capacity of data backups of an instance.
-                     * @param DataBackupVolume Total capacity of data backups of an instance.
+                     * @param _dataBackupVolume Total capacity of data backups of an instance.
+                     * 
                      */
                     void SetDataBackupVolume(const int64_t& _dataBackupVolume);
 
                     /**
                      * 判断参数 DataBackupVolume 是否已赋值
                      * @return DataBackupVolume 是否已赋值
+                     * 
                      */
                     bool DataBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Number of log backups of an instance.
                      * @return BinlogBackupCount Number of log backups of an instance.
+                     * 
                      */
                     int64_t GetBinlogBackupCount() const;
 
                     /**
                      * 设置Number of log backups of an instance.
-                     * @param BinlogBackupCount Number of log backups of an instance.
+                     * @param _binlogBackupCount Number of log backups of an instance.
+                     * 
                      */
                     void SetBinlogBackupCount(const int64_t& _binlogBackupCount);
 
                     /**
                      * 判断参数 BinlogBackupCount 是否已赋值
                      * @return BinlogBackupCount 是否已赋值
+                     * 
                      */
                     bool BinlogBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Capacity of log backups of an instance.
                      * @return BinlogBackupVolume Capacity of log backups of an instance.
+                     * 
                      */
                     int64_t GetBinlogBackupVolume() const;
 
                     /**
                      * 设置Capacity of log backups of an instance.
-                     * @param BinlogBackupVolume Capacity of log backups of an instance.
+                     * @param _binlogBackupVolume Capacity of log backups of an instance.
+                     * 
                      */
                     void SetBinlogBackupVolume(const int64_t& _binlogBackupVolume);
 
                     /**
                      * 判断参数 BinlogBackupVolume 是否已赋值
                      * @return BinlogBackupVolume 是否已赋值
+                     * 
                      */
                     bool BinlogBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total capacity of backups of an instance (including data backups and log backups).
                      * @return BackupVolume Total capacity of backups of an instance (including data backups and log backups).
+                     * 
                      */
                     int64_t GetBackupVolume() const;
 
                     /**
                      * 设置Total capacity of backups of an instance (including data backups and log backups).
-                     * @param BackupVolume Total capacity of backups of an instance (including data backups and log backups).
+                     * @param _backupVolume Total capacity of backups of an instance (including data backups and log backups).
+                     * 
                      */
                     void SetBackupVolume(const int64_t& _backupVolume);
 
                     /**
                      * 判断参数 BackupVolume 是否已赋值
                      * @return BackupVolume 是否已赋值
+                     * 
                      */
                     bool BackupVolumeHasBeenSet() const;
 

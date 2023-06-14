@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IndexMetaField Index metadata field
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     IndexMetaField GetIndexMetaField() const;
 
                     /**
                      * 判断参数 IndexMetaField 是否已赋值
                      * @return IndexMetaField 是否已赋值
+                     * 
                      */
                     bool IndexMetaFieldHasBeenSet() const;
 

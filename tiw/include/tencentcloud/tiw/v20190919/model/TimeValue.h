@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Unix timestamp in seconds.
                      * @return Time Unix timestamp in seconds.
+                     * 
                      */
                     uint64_t GetTime() const;
 
                     /**
                      * 设置Unix timestamp in seconds.
-                     * @param Time Unix timestamp in seconds.
+                     * @param _time Unix timestamp in seconds.
+                     * 
                      */
                     void SetTime(const uint64_t& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Current value of the queried metric.
                      * @return Value Current value of the queried metric.
+                     * 
                      */
                     double GetValue() const;
 
                     /**
                      * 设置Current value of the queried metric.
-                     * @param Value Current value of the queried metric.
+                     * @param _value Current value of the queried metric.
+                     * 
                      */
                     void SetValue(const double& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

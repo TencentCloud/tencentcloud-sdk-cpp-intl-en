@@ -48,132 +48,154 @@ namespace TencentCloud
                     /**
                      * 获取Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
                      * @return ProIspInfoList Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
+                     * 
                      */
                     std::vector<ProIspPlayCodeDataInfo> GetProIspInfoList() const;
 
                     /**
                      * 判断参数 ProIspInfoList 是否已赋值
                      * @return ProIspInfoList 是否已赋值
+                     * 
                      */
                     bool ProIspInfoListHasBeenSet() const;
 
                     /**
                      * 获取Total occurrences of all status codes.
                      * @return TotalCodeAll Total occurrences of all status codes.
+                     * 
                      */
                     uint64_t GetTotalCodeAll() const;
 
                     /**
                      * 判断参数 TotalCodeAll 是否已赋值
                      * @return TotalCodeAll 是否已赋值
+                     * 
                      */
                     bool TotalCodeAllHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 4xx status codes.
                      * @return TotalCode4xx Occurrences of 4xx status codes.
+                     * 
                      */
                     uint64_t GetTotalCode4xx() const;
 
                     /**
                      * 判断参数 TotalCode4xx 是否已赋值
                      * @return TotalCode4xx 是否已赋值
+                     * 
                      */
                     bool TotalCode4xxHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 5xx status codes.
                      * @return TotalCode5xx Occurrences of 5xx status codes.
+                     * 
                      */
                     uint64_t GetTotalCode5xx() const;
 
                     /**
                      * 判断参数 TotalCode5xx 是否已赋值
                      * @return TotalCode5xx 是否已赋值
+                     * 
                      */
                     bool TotalCode5xxHasBeenSet() const;
 
                     /**
                      * 获取Total occurrences of each status code.
                      * @return TotalCodeList Total occurrences of each status code.
+                     * 
                      */
                     std::vector<PlayCodeTotalInfo> GetTotalCodeList() const;
 
                     /**
                      * 判断参数 TotalCodeList 是否已赋值
                      * @return TotalCodeList 是否已赋值
+                     * 
                      */
                     bool TotalCodeListHasBeenSet() const;
 
                     /**
                      * 获取Page number.
                      * @return PageNum Page number.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page.
                      * @return PageSize Number of entries per page.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Total number of pages.
                      * @return TotalPage Total number of pages.
+                     * 
                      */
                     uint64_t GetTotalPage() const;
 
                     /**
                      * 判断参数 TotalPage 是否已赋值
                      * @return TotalPage 是否已赋值
+                     * 
                      */
                     bool TotalPageHasBeenSet() const;
 
                     /**
                      * 获取Total number of results.
                      * @return TotalNum Total number of results.
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 2xx status codes.
                      * @return TotalCode2xx Occurrences of 2xx status codes.
+                     * 
                      */
                     uint64_t GetTotalCode2xx() const;
 
                     /**
                      * 判断参数 TotalCode2xx 是否已赋值
                      * @return TotalCode2xx 是否已赋值
+                     * 
                      */
                     bool TotalCode2xxHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 3xx status codes.
                      * @return TotalCode3xx Occurrences of 3xx status codes.
+                     * 
                      */
                     uint64_t GetTotalCode3xx() const;
 
                     /**
                      * 判断参数 TotalCode3xx 是否已赋值
                      * @return TotalCode3xx 是否已赋值
+                     * 
                      */
                     bool TotalCode3xxHasBeenSet() const;
 

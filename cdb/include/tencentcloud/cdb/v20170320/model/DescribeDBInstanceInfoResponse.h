@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name.
                      * @return InstanceName Instance name.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Whether encryption is enabled. YES: enabled, NO: not enabled.
                      * @return Encryption Whether encryption is enabled. YES: enabled, NO: not enabled.
+                     * 
                      */
                     std::string GetEncryption() const;
 
                     /**
                      * 判断参数 Encryption 是否已赋值
                      * @return Encryption 是否已赋值
+                     * 
                      */
                     bool EncryptionHasBeenSet() const;
 
@@ -84,12 +90,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyId Encryption key ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
@@ -98,12 +106,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyRegion Key region.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyRegion() const;
 
                     /**
                      * 判断参数 KeyRegion 是否已赋值
                      * @return KeyRegion 是否已赋值
+                     * 
                      */
                     bool KeyRegionHasBeenSet() const;
 
@@ -112,12 +122,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetDefaultKmsRegion() const;
 
                     /**
                      * 判断参数 DefaultKmsRegion 是否已赋值
                      * @return DefaultKmsRegion 是否已赋值
+                     * 
                      */
                     bool DefaultKmsRegionHasBeenSet() const;
 

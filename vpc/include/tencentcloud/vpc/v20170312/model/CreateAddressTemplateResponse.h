@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The template object of the IP address.
                      * @return AddressTemplate The template object of the IP address.
+                     * 
                      */
                     AddressTemplate GetAddressTemplate() const;
 
                     /**
                      * 判断参数 AddressTemplate 是否已赋值
                      * @return AddressTemplate 是否已赋值
+                     * 
                      */
                     bool AddressTemplateHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Policy name
                      * @return PolicyName Policy name
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name
-                     * @param PolicyName Policy name
+                     * @param _policyName Policy name
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
@@ -94,6 +100,7 @@ namespace TencentCloud
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     int64_t GetFromPolicyRule() const;
 
@@ -105,19 +112,21 @@ namespace TencentCloud
 `2`: Reject all.
 
 `3`: Custom.
-                     * @param FromPolicyRule Inbound rule
+                     * @param _fromPolicyRule Inbound rule
 
 `1`: Allow all.
 
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     void SetFromPolicyRule(const int64_t& _fromPolicyRule);
 
                     /**
                      * 判断参数 FromPolicyRule 是否已赋值
                      * @return FromPolicyRule 是否已赋值
+                     * 
                      */
                     bool FromPolicyRuleHasBeenSet() const;
 
@@ -136,6 +145,7 @@ namespace TencentCloud
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     int64_t GetToPolicyRule() const;
 
@@ -147,91 +157,105 @@ namespace TencentCloud
 `2`: Reject all.
 
 `3`: Custom.
-                     * @param ToPolicyRule Outbound rule
+                     * @param _toPolicyRule Outbound rule
 
 `1`: Allow all.
 
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     void SetToPolicyRule(const int64_t& _toPolicyRule);
 
                     /**
                      * 判断参数 ToPolicyRule 是否已赋值
                      * @return ToPolicyRule 是否已赋值
+                     * 
                      */
                     bool ToPolicyRuleHasBeenSet() const;
 
                     /**
                      * 获取Pod selector
                      * @return PodSelector Pod selector
+                     * 
                      */
                     std::string GetPodSelector() const;
 
                     /**
                      * 设置Pod selector
-                     * @param PodSelector Pod selector
+                     * @param _podSelector Pod selector
+                     * 
                      */
                     void SetPodSelector(const std::string& _podSelector);
 
                     /**
                      * 判断参数 PodSelector 是否已赋值
                      * @return PodSelector 是否已赋值
+                     * 
                      */
                     bool PodSelectorHasBeenSet() const;
 
                     /**
                      * 获取Namespace
                      * @return Namespace Namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace
-                     * @param Namespace Namespace
+                     * @param _namespace Namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Policy description
                      * @return Description Policy description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Policy description
-                     * @param Description Policy description
+                     * @param _description Policy description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Custom rule
                      * @return CustomPolicy Custom rule
+                     * 
                      */
                     std::vector<NetworkCustomPolicy> GetCustomPolicy() const;
 
                     /**
                      * 设置Custom rule
-                     * @param CustomPolicy Custom rule
+                     * @param _customPolicy Custom rule
+                     * 
                      */
                     void SetCustomPolicy(const std::vector<NetworkCustomPolicy>& _customPolicy);
 
                     /**
                      * 判断参数 CustomPolicy 是否已赋值
                      * @return CustomPolicy 是否已赋值
+                     * 
                      */
                     bool CustomPolicyHasBeenSet() const;
 

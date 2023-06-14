@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Attack source IP
                      * @return SrcIp Attack source IP
+                     * 
                      */
                     std::string GetSrcIp() const;
 
                     /**
                      * 设置Attack source IP
-                     * @param SrcIp Attack source IP
+                     * @param _srcIp Attack source IP
+                     * 
                      */
                     void SetSrcIp(const std::string& _srcIp);
 
                     /**
                      * 判断参数 SrcIp 是否已赋值
                      * @return SrcIp 是否已赋值
+                     * 
                      */
                     bool SrcIpHasBeenSet() const;
 
                     /**
                      * 获取Province (valid for Mainland China)
                      * @return Province Province (valid for Mainland China)
+                     * 
                      */
                     std::string GetProvince() const;
 
                     /**
                      * 设置Province (valid for Mainland China)
-                     * @param Province Province (valid for Mainland China)
+                     * @param _province Province (valid for Mainland China)
+                     * 
                      */
                     void SetProvince(const std::string& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
                     /**
                      * 获取Country/region
                      * @return Nation Country/region
+                     * 
                      */
                     std::string GetNation() const;
 
                     /**
                      * 设置Country/region
-                     * @param Nation Country/region
+                     * @param _nation Country/region
+                     * 
                      */
                     void SetNation(const std::string& _nation);
 
                     /**
                      * 判断参数 Nation 是否已赋值
                      * @return Nation 是否已赋值
+                     * 
                      */
                     bool NationHasBeenSet() const;
 
                     /**
                      * 获取Total number of attack packets
                      * @return PacketSum Total number of attack packets
+                     * 
                      */
                     uint64_t GetPacketSum() const;
 
                     /**
                      * 设置Total number of attack packets
-                     * @param PacketSum Total number of attack packets
+                     * @param _packetSum Total number of attack packets
+                     * 
                      */
                     void SetPacketSum(const uint64_t& _packetSum);
 
                     /**
                      * 判断参数 PacketSum 是否已赋值
                      * @return PacketSum 是否已赋值
+                     * 
                      */
                     bool PacketSumHasBeenSet() const;
 
                     /**
                      * 获取Total attack traffic
                      * @return PacketLen Total attack traffic
+                     * 
                      */
                     uint64_t GetPacketLen() const;
 
                     /**
                      * 设置Total attack traffic
-                     * @param PacketLen Total attack traffic
+                     * @param _packetLen Total attack traffic
+                     * 
                      */
                     void SetPacketLen(const uint64_t& _packetLen);
 
                     /**
                      * 判断参数 PacketLen 是否已赋值
                      * @return PacketLen 是否已赋值
+                     * 
                      */
                     bool PacketLenHasBeenSet() const;
 

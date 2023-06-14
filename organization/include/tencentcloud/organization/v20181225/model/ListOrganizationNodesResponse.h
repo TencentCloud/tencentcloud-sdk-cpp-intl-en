@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Organizational unit list
                      * @return Nodes Organizational unit list
+                     * 
                      */
                     std::vector<OrgNode> GetNodes() const;
 
                     /**
                      * 判断参数 Nodes 是否已赋值
                      * @return Nodes 是否已赋值
+                     * 
                      */
                     bool NodesHasBeenSet() const;
 

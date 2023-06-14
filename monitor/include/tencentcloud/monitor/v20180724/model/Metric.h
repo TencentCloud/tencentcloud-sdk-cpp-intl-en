@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Alarm policy type
                      * @return Namespace Alarm policy type
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Alarm policy type
-                     * @param Namespace Alarm policy type
+                     * @param _namespace Alarm policy type
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Metric name
                      * @return MetricName Metric name
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric name
-                     * @param MetricName Metric name
+                     * @param _metricName Metric name
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Metric display name
                      * @return Description Metric display name
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Metric display name
-                     * @param Description Metric display name
+                     * @param _description Metric display name
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Minimum value
                      * @return Min Minimum value
+                     * 
                      */
                     double GetMin() const;
 
                     /**
                      * 设置Minimum value
-                     * @param Min Minimum value
+                     * @param _min Minimum value
+                     * 
                      */
                     void SetMin(const double& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
                     /**
                      * 获取Maximum value
                      * @return Max Maximum value
+                     * 
                      */
                     double GetMax() const;
 
                     /**
                      * 设置Maximum value
-                     * @param Max Maximum value
+                     * @param _max Maximum value
+                     * 
                      */
                     void SetMax(const double& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
                     /**
                      * 获取Dimension list
                      * @return Dimensions Dimension list
+                     * 
                      */
                     std::vector<std::string> GetDimensions() const;
 
                     /**
                      * 设置Dimension list
-                     * @param Dimensions Dimension list
+                     * @param _dimensions Dimension list
+                     * 
                      */
                     void SetDimensions(const std::vector<std::string>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
                     /**
                      * 获取Unit
                      * @return Unit Unit
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置Unit
-                     * @param Unit Unit
+                     * @param _unit Unit
+                     * 
                      */
                     void SetUnit(const std::string& _unit);
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 
@@ -178,20 +199,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MetricConfig Metric configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MetricConfig GetMetricConfig() const;
 
                     /**
                      * 设置Metric configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MetricConfig Metric configuration
+                     * @param _metricConfig Metric configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetricConfig(const MetricConfig& _metricConfig);
 
                     /**
                      * 判断参数 MetricConfig 是否已赋值
                      * @return MetricConfig 是否已赋值
+                     * 
                      */
                     bool MetricConfigHasBeenSet() const;
 
@@ -200,20 +224,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IsAdvanced Whether it is an advanced metric. 1: Yes; 0: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsAdvanced() const;
 
                     /**
                      * 设置Whether it is an advanced metric. 1: Yes; 0: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsAdvanced Whether it is an advanced metric. 1: Yes; 0: No.
+                     * @param _isAdvanced Whether it is an advanced metric. 1: Yes; 0: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsAdvanced(const int64_t& _isAdvanced);
 
                     /**
                      * 判断参数 IsAdvanced 是否已赋值
                      * @return IsAdvanced 是否已赋值
+                     * 
                      */
                     bool IsAdvancedHasBeenSet() const;
 
@@ -222,20 +249,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IsOpen Whether the advanced metric feature is enabled. 1: Yes; 0: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsOpen() const;
 
                     /**
                      * 设置Whether the advanced metric feature is enabled. 1: Yes; 0: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsOpen Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+                     * @param _isOpen Whether the advanced metric feature is enabled. 1: Yes; 0: No.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsOpen(const int64_t& _isOpen);
 
                     /**
                      * 判断参数 IsOpen 是否已赋值
                      * @return IsOpen 是否已赋值
+                     * 
                      */
                     bool IsOpenHasBeenSet() const;
 
@@ -244,20 +274,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ProductId Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProductId() const;
 
                     /**
                      * 设置Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProductId Integration center product ID.
+                     * @param _productId Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProductId(const int64_t& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 

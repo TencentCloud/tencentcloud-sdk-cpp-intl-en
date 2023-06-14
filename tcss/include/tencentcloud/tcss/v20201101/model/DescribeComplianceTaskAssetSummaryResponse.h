@@ -55,24 +55,28 @@ namespace TencentCloud
 `USER_UNINIT`: Not initialized.
 `USER_INITIALIZING`: Initializing.
 `USER_NORMAL`: Normal.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取List of aggregated information of each type of asset
                      * @return AssetSummaryList List of aggregated information of each type of asset
+                     * 
                      */
                     std::vector<ComplianceAssetSummary> GetAssetSummaryList() const;
 
                     /**
                      * 判断参数 AssetSummaryList 是否已赋值
                      * @return AssetSummaryList 是否已赋值
+                     * 
                      */
                     bool AssetSummaryListHasBeenSet() const;
 

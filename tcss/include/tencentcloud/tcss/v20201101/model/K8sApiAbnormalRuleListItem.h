@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return RuleID Rule ID
+                     * 
                      */
                     std::string GetRuleID() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleID Rule ID
+                     * @param _ruleID Rule ID
+                     * 
                      */
                     void SetRuleID(const std::string& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
                     /**
                      * 获取Rule name
                      * @return RuleName Rule name
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
-                     * @param RuleName Rule name
+                     * @param _ruleName Rule name
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -89,6 +95,7 @@ RT_USER User defined
                      * @return RuleType Rule type
 RT_SYSTEM System rules
 RT_USER User defined
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -96,87 +103,101 @@ RT_USER User defined
                      * 设置Rule type
 RT_SYSTEM System rules
 RT_USER User defined
-                     * @param RuleType Rule type
+                     * @param _ruleType Rule type
 RT_SYSTEM System rules
 RT_USER User defined
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Total number of affected clusters
                      * @return EffectClusterCount Total number of affected clusters
+                     * 
                      */
                     uint64_t GetEffectClusterCount() const;
 
                     /**
                      * 设置Total number of affected clusters
-                     * @param EffectClusterCount Total number of affected clusters
+                     * @param _effectClusterCount Total number of affected clusters
+                     * 
                      */
                     void SetEffectClusterCount(const uint64_t& _effectClusterCount);
 
                     /**
                      * 判断参数 EffectClusterCount 是否已赋值
                      * @return EffectClusterCount 是否已赋值
+                     * 
                      */
                     bool EffectClusterCountHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Edit account
                      * @return OprUin Edit account
+                     * 
                      */
                     std::string GetOprUin() const;
 
                     /**
                      * 设置Edit account
-                     * @param OprUin Edit account
+                     * @param _oprUin Edit account
+                     * 
                      */
                     void SetOprUin(const std::string& _oprUin);
 
                     /**
                      * 判断参数 OprUin 是否已赋值
                      * @return OprUin 是否已赋值
+                     * 
                      */
                     bool OprUinHasBeenSet() const;
 
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

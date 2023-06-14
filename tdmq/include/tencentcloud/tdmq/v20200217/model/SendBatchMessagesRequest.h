@@ -45,162 +45,189 @@ namespace TencentCloud
                     /**
                      * 获取Name of the topic to which to send the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
                      * @return Topic Name of the topic to which to send the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置Name of the topic to which to send the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
-                     * @param Topic Name of the topic to which to send the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
+                     * @param _topic Name of the topic to which to send the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 
                     /**
                      * 获取Content of the message to be sent
                      * @return Payload Content of the message to be sent
+                     * 
                      */
                     std::string GetPayload() const;
 
                     /**
                      * 设置Content of the message to be sent
-                     * @param Payload Content of the message to be sent
+                     * @param _payload Content of the message to be sent
+                     * 
                      */
                     void SetPayload(const std::string& _payload);
 
                     /**
                      * 判断参数 Payload 是否已赋值
                      * @return Payload 是否已赋值
+                     * 
                      */
                     bool PayloadHasBeenSet() const;
 
                     /**
                      * 获取String-Type token, which is optional and will be automatically obtained by the system.
                      * @return StringToken String-Type token, which is optional and will be automatically obtained by the system.
+                     * 
                      */
                     std::string GetStringToken() const;
 
                     /**
                      * 设置String-Type token, which is optional and will be automatically obtained by the system.
-                     * @param StringToken String-Type token, which is optional and will be automatically obtained by the system.
+                     * @param _stringToken String-Type token, which is optional and will be automatically obtained by the system.
+                     * 
                      */
                     void SetStringToken(const std::string& _stringToken);
 
                     /**
                      * 判断参数 StringToken 是否已赋值
                      * @return StringToken 是否已赋值
+                     * 
                      */
                     bool StringTokenHasBeenSet() const;
 
                     /**
                      * 获取Producer name, which must be globally unique. If it is not configured, the system will automatically generate one.
                      * @return ProducerName Producer name, which must be globally unique. If it is not configured, the system will automatically generate one.
+                     * 
                      */
                     std::string GetProducerName() const;
 
                     /**
                      * 设置Producer name, which must be globally unique. If it is not configured, the system will automatically generate one.
-                     * @param ProducerName Producer name, which must be globally unique. If it is not configured, the system will automatically generate one.
+                     * @param _producerName Producer name, which must be globally unique. If it is not configured, the system will automatically generate one.
+                     * 
                      */
                     void SetProducerName(const std::string& _producerName);
 
                     /**
                      * 判断参数 ProducerName 是否已赋值
                      * @return ProducerName 是否已赋值
+                     * 
                      */
                     bool ProducerNameHasBeenSet() const;
 
                     /**
                      * 获取Message sending timeout period in seconds. Default value: 30s
                      * @return SendTimeout Message sending timeout period in seconds. Default value: 30s
+                     * 
                      */
                     int64_t GetSendTimeout() const;
 
                     /**
                      * 设置Message sending timeout period in seconds. Default value: 30s
-                     * @param SendTimeout Message sending timeout period in seconds. Default value: 30s
+                     * @param _sendTimeout Message sending timeout period in seconds. Default value: 30s
+                     * 
                      */
                     void SetSendTimeout(const int64_t& _sendTimeout);
 
                     /**
                      * 判断参数 SendTimeout 是否已赋值
                      * @return SendTimeout 是否已赋值
+                     * 
                      */
                     bool SendTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of produced messages which can be cached in the memory. Default value: 1000
                      * @return MaxPendingMessages Maximum number of produced messages which can be cached in the memory. Default value: 1000
+                     * 
                      */
                     int64_t GetMaxPendingMessages() const;
 
                     /**
                      * 设置Maximum number of produced messages which can be cached in the memory. Default value: 1000
-                     * @param MaxPendingMessages Maximum number of produced messages which can be cached in the memory. Default value: 1000
+                     * @param _maxPendingMessages Maximum number of produced messages which can be cached in the memory. Default value: 1000
+                     * 
                      */
                     void SetMaxPendingMessages(const int64_t& _maxPendingMessages);
 
                     /**
                      * 判断参数 MaxPendingMessages 是否已赋值
                      * @return MaxPendingMessages 是否已赋值
+                     * 
                      */
                     bool MaxPendingMessagesHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of messages in each batch. Default value: 1000 messages/batch
                      * @return BatchingMaxMessages Maximum number of messages in each batch. Default value: 1000 messages/batch
+                     * 
                      */
                     int64_t GetBatchingMaxMessages() const;
 
                     /**
                      * 设置Maximum number of messages in each batch. Default value: 1000 messages/batch
-                     * @param BatchingMaxMessages Maximum number of messages in each batch. Default value: 1000 messages/batch
+                     * @param _batchingMaxMessages Maximum number of messages in each batch. Default value: 1000 messages/batch
+                     * 
                      */
                     void SetBatchingMaxMessages(const int64_t& _batchingMaxMessages);
 
                     /**
                      * 判断参数 BatchingMaxMessages 是否已赋值
                      * @return BatchingMaxMessages 是否已赋值
+                     * 
                      */
                     bool BatchingMaxMessagesHasBeenSet() const;
 
                     /**
                      * 获取Maximum wait time for each batch, after which the batch will be sent no matter whether the specified number or size of messages in the batch is reached. Default value: 10 ms
                      * @return BatchingMaxPublishDelay Maximum wait time for each batch, after which the batch will be sent no matter whether the specified number or size of messages in the batch is reached. Default value: 10 ms
+                     * 
                      */
                     int64_t GetBatchingMaxPublishDelay() const;
 
                     /**
                      * 设置Maximum wait time for each batch, after which the batch will be sent no matter whether the specified number or size of messages in the batch is reached. Default value: 10 ms
-                     * @param BatchingMaxPublishDelay Maximum wait time for each batch, after which the batch will be sent no matter whether the specified number or size of messages in the batch is reached. Default value: 10 ms
+                     * @param _batchingMaxPublishDelay Maximum wait time for each batch, after which the batch will be sent no matter whether the specified number or size of messages in the batch is reached. Default value: 10 ms
+                     * 
                      */
                     void SetBatchingMaxPublishDelay(const int64_t& _batchingMaxPublishDelay);
 
                     /**
                      * 判断参数 BatchingMaxPublishDelay 是否已赋值
                      * @return BatchingMaxPublishDelay 是否已赋值
+                     * 
                      */
                     bool BatchingMaxPublishDelayHasBeenSet() const;
 
                     /**
                      * 获取Maximum allowed size of messages in each batch. Default value: 128 KB
                      * @return BatchingMaxBytes Maximum allowed size of messages in each batch. Default value: 128 KB
+                     * 
                      */
                     int64_t GetBatchingMaxBytes() const;
 
                     /**
                      * 设置Maximum allowed size of messages in each batch. Default value: 128 KB
-                     * @param BatchingMaxBytes Maximum allowed size of messages in each batch. Default value: 128 KB
+                     * @param _batchingMaxBytes Maximum allowed size of messages in each batch. Default value: 128 KB
+                     * 
                      */
                     void SetBatchingMaxBytes(const int64_t& _batchingMaxBytes);
 
                     /**
                      * 判断参数 BatchingMaxBytes 是否已赋值
                      * @return BatchingMaxBytes 是否已赋值
+                     * 
                      */
                     bool BatchingMaxBytesHasBeenSet() const;
 

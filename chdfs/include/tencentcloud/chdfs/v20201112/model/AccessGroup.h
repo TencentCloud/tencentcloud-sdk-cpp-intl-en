@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Permission group ID
                      * @return AccessGroupId Permission group ID
+                     * 
                      */
                     std::string GetAccessGroupId() const;
 
                     /**
                      * 设置Permission group ID
-                     * @param AccessGroupId Permission group ID
+                     * @param _accessGroupId Permission group ID
+                     * 
                      */
                     void SetAccessGroupId(const std::string& _accessGroupId);
 
                     /**
                      * 判断参数 AccessGroupId 是否已赋值
                      * @return AccessGroupId 是否已赋值
+                     * 
                      */
                     bool AccessGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Permission group name
                      * @return AccessGroupName Permission group name
+                     * 
                      */
                     std::string GetAccessGroupName() const;
 
                     /**
                      * 设置Permission group name
-                     * @param AccessGroupName Permission group name
+                     * @param _accessGroupName Permission group name
+                     * 
                      */
                     void SetAccessGroupName(const std::string& _accessGroupName);
 
                     /**
                      * 判断参数 AccessGroupName 是否已赋值
                      * @return AccessGroupName 是否已赋值
+                     * 
                      */
                     bool AccessGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Permission group description
                      * @return Description Permission group description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Permission group description
-                     * @param Description Permission group description
+                     * @param _description Permission group description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取VPC type (1: CVM; 2: BM 1.0)
                      * @return VpcType VPC type (1: CVM; 2: BM 1.0)
+                     * 
                      */
                     uint64_t GetVpcType() const;
 
                     /**
                      * 设置VPC type (1: CVM; 2: BM 1.0)
-                     * @param VpcType VPC type (1: CVM; 2: BM 1.0)
+                     * @param _vpcType VPC type (1: CVM; 2: BM 1.0)
+                     * 
                      */
                     void SetVpcType(const uint64_t& _vpcType);
 
                     /**
                      * 判断参数 VpcType 是否已赋值
                      * @return VpcType 是否已赋值
+                     * 
                      */
                     bool VpcTypeHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 

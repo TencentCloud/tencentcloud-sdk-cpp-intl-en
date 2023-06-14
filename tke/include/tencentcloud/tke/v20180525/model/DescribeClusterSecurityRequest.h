@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
                      * @return ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
-                     * @param ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
+                     * @param _clusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

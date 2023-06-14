@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Globally unique CMK ID
                      * @return KeyId Globally unique CMK ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Globally unique CMK ID
-                     * @param KeyId Globally unique CMK ID
+                     * @param _keyId Globally unique CMK ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 

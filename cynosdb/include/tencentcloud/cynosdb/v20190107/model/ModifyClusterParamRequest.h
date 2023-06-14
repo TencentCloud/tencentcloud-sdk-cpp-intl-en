@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
                      * @return ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+                     * 
                      */
                     std::vector<ParamItem> GetParamList() const;
 
                     /**
                      * 设置List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
-                     * @param ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+                     * @param _paramList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+                     * 
                      */
                     void SetParamList(const std::vector<ParamItem>& _paramList);
 
                     /**
                      * 判断参数 ParamList 是否已赋值
                      * @return ParamList 是否已赋值
+                     * 
                      */
                     bool ParamListHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `yes` (execute during maintenance time), `no` (execute now)
                      * @return IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
                      * 设置Valid values: `yes` (execute during maintenance time), `no` (execute now)
-                     * @param IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * @param _isInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
 
                     /**
                      * 判断参数 IsInMaintainPeriod 是否已赋值
                      * @return IsInMaintainPeriod 是否已赋值
+                     * 
                      */
                     bool IsInMaintainPeriodHasBeenSet() const;
 

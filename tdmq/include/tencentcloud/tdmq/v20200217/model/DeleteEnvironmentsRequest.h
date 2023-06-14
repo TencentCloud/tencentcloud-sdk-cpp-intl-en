@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of environments (namespaces). Up to 20 environments can be deleted at a time.
                      * @return EnvironmentIds Array of environments (namespaces). Up to 20 environments can be deleted at a time.
+                     * 
                      */
                     std::vector<std::string> GetEnvironmentIds() const;
 
                     /**
                      * 设置Array of environments (namespaces). Up to 20 environments can be deleted at a time.
-                     * @param EnvironmentIds Array of environments (namespaces). Up to 20 environments can be deleted at a time.
+                     * @param _environmentIds Array of environments (namespaces). Up to 20 environments can be deleted at a time.
+                     * 
                      */
                     void SetEnvironmentIds(const std::vector<std::string>& _environmentIds);
 
                     /**
                      * 判断参数 EnvironmentIds 是否已赋值
                      * @return EnvironmentIds 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdsHasBeenSet() const;
 
                     /**
                      * 获取Pulsar cluster ID
                      * @return ClusterId Pulsar cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Pulsar cluster ID
-                     * @param ClusterId Pulsar cluster ID
+                     * @param _clusterId Pulsar cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

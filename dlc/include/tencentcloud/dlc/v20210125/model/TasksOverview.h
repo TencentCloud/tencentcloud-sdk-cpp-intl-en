@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The number of tasks in queue.
                      * @return TaskQueuedCount The number of tasks in queue.
+                     * 
                      */
                     int64_t GetTaskQueuedCount() const;
 
                     /**
                      * 设置The number of tasks in queue.
-                     * @param TaskQueuedCount The number of tasks in queue.
+                     * @param _taskQueuedCount The number of tasks in queue.
+                     * 
                      */
                     void SetTaskQueuedCount(const int64_t& _taskQueuedCount);
 
                     /**
                      * 判断参数 TaskQueuedCount 是否已赋值
                      * @return TaskQueuedCount 是否已赋值
+                     * 
                      */
                     bool TaskQueuedCountHasBeenSet() const;
 
                     /**
                      * 获取The number of initialized tasks.
                      * @return TaskInitCount The number of initialized tasks.
+                     * 
                      */
                     int64_t GetTaskInitCount() const;
 
                     /**
                      * 设置The number of initialized tasks.
-                     * @param TaskInitCount The number of initialized tasks.
+                     * @param _taskInitCount The number of initialized tasks.
+                     * 
                      */
                     void SetTaskInitCount(const int64_t& _taskInitCount);
 
                     /**
                      * 判断参数 TaskInitCount 是否已赋值
                      * @return TaskInitCount 是否已赋值
+                     * 
                      */
                     bool TaskInitCountHasBeenSet() const;
 
                     /**
                      * 获取The number of tasks in progress.
                      * @return TaskRunningCount The number of tasks in progress.
+                     * 
                      */
                     int64_t GetTaskRunningCount() const;
 
                     /**
                      * 设置The number of tasks in progress.
-                     * @param TaskRunningCount The number of tasks in progress.
+                     * @param _taskRunningCount The number of tasks in progress.
+                     * 
                      */
                     void SetTaskRunningCount(const int64_t& _taskRunningCount);
 
                     /**
                      * 判断参数 TaskRunningCount 是否已赋值
                      * @return TaskRunningCount 是否已赋值
+                     * 
                      */
                     bool TaskRunningCountHasBeenSet() const;
 
                     /**
                      * 获取The total number of tasks in this time range.
                      * @return TotalTaskCount The total number of tasks in this time range.
+                     * 
                      */
                     int64_t GetTotalTaskCount() const;
 
                     /**
                      * 设置The total number of tasks in this time range.
-                     * @param TotalTaskCount The total number of tasks in this time range.
+                     * @param _totalTaskCount The total number of tasks in this time range.
+                     * 
                      */
                     void SetTotalTaskCount(const int64_t& _totalTaskCount);
 
                     /**
                      * 判断参数 TotalTaskCount 是否已赋值
                      * @return TotalTaskCount 是否已赋值
+                     * 
                      */
                     bool TotalTaskCountHasBeenSet() const;
 

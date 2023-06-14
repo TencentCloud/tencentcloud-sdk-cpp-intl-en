@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return FaceReviewInfo Parameters for custom facial recognition
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     UserDefineFaceReviewTemplateInfo GetFaceReviewInfo() const;
 
                     /**
                      * 设置Parameters for custom facial recognition
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param FaceReviewInfo Parameters for custom facial recognition
+                     * @param _faceReviewInfo Parameters for custom facial recognition
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfo& _faceReviewInfo);
 
                     /**
                      * 判断参数 FaceReviewInfo 是否已赋值
                      * @return FaceReviewInfo 是否已赋值
+                     * 
                      */
                     bool FaceReviewInfoHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return AsrReviewInfo Parameters for custom ASR-based recognition
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     UserDefineAsrTextReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
                      * 设置Parameters for custom ASR-based recognition
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param AsrReviewInfo Parameters for custom ASR-based recognition
+                     * @param _asrReviewInfo Parameters for custom ASR-based recognition
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfo& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return OcrReviewInfo Parameters for custom OCR-based recognition
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     UserDefineOcrTextReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
                      * 设置Parameters for custom OCR-based recognition
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param OcrReviewInfo Parameters for custom OCR-based recognition
+                     * @param _ocrReviewInfo Parameters for custom OCR-based recognition
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfo& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

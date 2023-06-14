@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取IP to be queried
                      * @return Ip IP to be queried
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP to be queried
-                     * @param Ip IP to be queried
+                     * @param _ip IP to be queried
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
@@ -72,6 +75,7 @@ no: non-Tencent Cloud CDN node
                      * @return Platform IP ownership:
 yes: Tencent Cloud CDN node
 no: non-Tencent Cloud CDN node
+                     * 
                      */
                     std::string GetPlatform() const;
 
@@ -79,15 +83,17 @@ no: non-Tencent Cloud CDN node
                      * 设置IP ownership:
 yes: Tencent Cloud CDN node
 no: non-Tencent Cloud CDN node
-                     * @param Platform IP ownership:
+                     * @param _platform IP ownership:
 yes: Tencent Cloud CDN node
 no: non-Tencent Cloud CDN node
+                     * 
                      */
                     void SetPlatform(const std::string& _platform);
 
                     /**
                      * 判断参数 Platform 是否已赋值
                      * @return Platform 是否已赋值
+                     * 
                      */
                     bool PlatformHasBeenSet() const;
 
@@ -96,38 +102,44 @@ no: non-Tencent Cloud CDN node
 unknown: unknown node location
                      * @return Location Node district/country
 unknown: unknown node location
+                     * 
                      */
                     std::string GetLocation() const;
 
                     /**
                      * 设置Node district/country
 unknown: unknown node location
-                     * @param Location Node district/country
+                     * @param _location Node district/country
 unknown: unknown node location
+                     * 
                      */
                     void SetLocation(const std::string& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 
                     /**
                      * 获取Activation and deactivation history of the node.
                      * @return History Activation and deactivation history of the node.
+                     * 
                      */
                     std::vector<CdnIpHistory> GetHistory() const;
 
                     /**
                      * 设置Activation and deactivation history of the node.
-                     * @param History Activation and deactivation history of the node.
+                     * @param _history Activation and deactivation history of the node.
+                     * 
                      */
                     void SetHistory(const std::vector<CdnIpHistory>& _history);
 
                     /**
                      * 判断参数 History 是否已赋值
                      * @return History 是否已赋值
+                     * 
                      */
                     bool HistoryHasBeenSet() const;
 
@@ -140,6 +152,7 @@ unknown: unknown node location
 `mainland`: Acceleration nodes inside the Chinese mainland
 `overseas`: Acceleration nodes outside the Chinese mainland
 `unknown`: Service region unknown
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -148,16 +161,18 @@ unknown: unknown node location
 `mainland`: Acceleration nodes inside the Chinese mainland
 `overseas`: Acceleration nodes outside the Chinese mainland
 `unknown`: Service region unknown
-                     * @param Area Node region
+                     * @param _area Node region
 `mainland`: Acceleration nodes inside the Chinese mainland
 `overseas`: Acceleration nodes outside the Chinese mainland
 `unknown`: Service region unknown
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -166,20 +181,23 @@ unknown: unknown node location
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return City City where the nodes reside
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCity() const;
 
                     /**
                      * 设置City where the nodes reside
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param City City where the nodes reside
+                     * @param _city City where the nodes reside
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCity(const std::string& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 

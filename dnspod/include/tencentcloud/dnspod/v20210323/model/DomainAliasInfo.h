@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Domain alias ID
                      * @return Id Domain alias ID
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Domain alias ID
-                     * @param Id Domain alias ID
+                     * @param _id Domain alias ID
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Domain alias
                      * @return DomainAlias Domain alias
+                     * 
                      */
                     std::string GetDomainAlias() const;
 
                     /**
                      * 设置Domain alias
-                     * @param DomainAlias Domain alias
+                     * @param _domainAlias Domain alias
+                     * 
                      */
                     void SetDomainAlias(const std::string& _domainAlias);
 
                     /**
                      * 判断参数 DomainAlias 是否已赋值
                      * @return DomainAlias 是否已赋值
+                     * 
                      */
                     bool DomainAliasHasBeenSet() const;
 

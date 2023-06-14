@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimerId Unique ID of the policy. When it’s filled in, the policy will be updated.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTimerId() const;
 
                     /**
                      * 设置Unique ID of the policy. When it’s filled in, the policy will be updated.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimerId Unique ID of the policy. When it’s filled in, the policy will be updated.
+                     * @param _timerId Unique ID of the policy. When it’s filled in, the policy will be updated.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimerId(const std::string& _timerId);
 
                     /**
                      * 判断参数 TimerId 是否已赋值
                      * @return TimerId 是否已赋值
+                     * 
                      */
                     bool TimerIdHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimerName Scheduled scaling policy name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTimerName() const;
 
                     /**
                      * 设置Scheduled scaling policy name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimerName Scheduled scaling policy name
+                     * @param _timerName Scheduled scaling policy name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimerName(const std::string& _timerName);
 
                     /**
                      * 判断参数 TimerName 是否已赋值
                      * @return TimerName 是否已赋值
+                     * 
                      */
                     bool TimerNameHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimerStatus Scheduled scaling policy status. `0`: Undefined, `1`: Not started, 2: Activated, `3`: Stopped, `4`: Expired
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimerStatus() const;
 
                     /**
                      * 设置Scheduled scaling policy status. `0`: Undefined, `1`: Not started, 2: Activated, `3`: Stopped, `4`: Expired
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimerStatus Scheduled scaling policy status. `0`: Undefined, `1`: Not started, 2: Activated, `3`: Stopped, `4`: Expired
+                     * @param _timerStatus Scheduled scaling policy status. `0`: Undefined, `1`: Not started, 2: Activated, `3`: Stopped, `4`: Expired
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimerStatus(const int64_t& _timerStatus);
 
                     /**
                      * 判断参数 TimerStatus 是否已赋值
                      * @return TimerStatus 是否已赋值
+                     * 
                      */
                     bool TimerStatusHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimerFleetCapacity The capacity configurations of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     TimerFleetCapacity GetTimerFleetCapacity() const;
 
                     /**
                      * 设置The capacity configurations of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimerFleetCapacity The capacity configurations of the scheduled scaling policy
+                     * @param _timerFleetCapacity The capacity configurations of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimerFleetCapacity(const TimerFleetCapacity& _timerFleetCapacity);
 
                     /**
                      * 判断参数 TimerFleetCapacity 是否已赋值
                      * @return TimerFleetCapacity 是否已赋值
+                     * 
                      */
                     bool TimerFleetCapacityHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimerConfiguration The recurrence pattern of auto-scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     TimerConfiguration GetTimerConfiguration() const;
 
                     /**
                      * 设置The recurrence pattern of auto-scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimerConfiguration The recurrence pattern of auto-scaling
+                     * @param _timerConfiguration The recurrence pattern of auto-scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimerConfiguration(const TimerConfiguration& _timerConfiguration);
 
                     /**
                      * 判断参数 TimerConfiguration 是否已赋值
                      * @return TimerConfiguration 是否已赋值
+                     * 
                      */
                     bool TimerConfigurationHasBeenSet() const;
 

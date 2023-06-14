@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of lists describing CLB instance details.
                      * @return TotalCount Total number of lists describing CLB instance details.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerDetailSet List of CLB instance details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LoadBalancerDetail> GetLoadBalancerDetailSet() const;
 
                     /**
                      * 判断参数 LoadBalancerDetailSet 是否已赋值
                      * @return LoadBalancerDetailSet 是否已赋值
+                     * 
                      */
                     bool LoadBalancerDetailSetHasBeenSet() const;
 

@@ -46,84 +46,98 @@ namespace TencentCloud
                     /**
                      * 获取Pending escape event
                      * @return UnhandledEscapeCnt Pending escape event
+                     * 
                      */
                     uint64_t GetUnhandledEscapeCnt() const;
 
                     /**
                      * 判断参数 UnhandledEscapeCnt 是否已赋值
                      * @return UnhandledEscapeCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledEscapeCntHasBeenSet() const;
 
                     /**
                      * 获取Pending reverse shell event
                      * @return UnhandledReverseShellCnt Pending reverse shell event
+                     * 
                      */
                     uint64_t GetUnhandledReverseShellCnt() const;
 
                     /**
                      * 判断参数 UnhandledReverseShellCnt 是否已赋值
                      * @return UnhandledReverseShellCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledReverseShellCntHasBeenSet() const;
 
                     /**
                      * 获取Pending high-risk syscall
                      * @return UnhandledRiskSyscallCnt Pending high-risk syscall
+                     * 
                      */
                     uint64_t GetUnhandledRiskSyscallCnt() const;
 
                     /**
                      * 判断参数 UnhandledRiskSyscallCnt 是否已赋值
                      * @return UnhandledRiskSyscallCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledRiskSyscallCntHasBeenSet() const;
 
                     /**
                      * 获取Pending abnormal process
                      * @return UnhandledAbnormalProcessCnt Pending abnormal process
+                     * 
                      */
                     uint64_t GetUnhandledAbnormalProcessCnt() const;
 
                     /**
                      * 判断参数 UnhandledAbnormalProcessCnt 是否已赋值
                      * @return UnhandledAbnormalProcessCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledAbnormalProcessCntHasBeenSet() const;
 
                     /**
                      * 获取Pending file tampering event
                      * @return UnhandledFileCnt Pending file tampering event
+                     * 
                      */
                     uint64_t GetUnhandledFileCnt() const;
 
                     /**
                      * 判断参数 UnhandledFileCnt 是否已赋值
                      * @return UnhandledFileCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledFileCntHasBeenSet() const;
 
                     /**
                      * 获取Pending trojan event
                      * @return UnhandledVirusEventCnt Pending trojan event
+                     * 
                      */
                     uint64_t GetUnhandledVirusEventCnt() const;
 
                     /**
                      * 判断参数 UnhandledVirusEventCnt 是否已赋值
                      * @return UnhandledVirusEventCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledVirusEventCntHasBeenSet() const;
 
                     /**
                      * 获取Unhandled malicious outgoing connections
                      * @return UnhandledMaliciousConnectionEventCnt Unhandled malicious outgoing connections
+                     * 
                      */
                     uint64_t GetUnhandledMaliciousConnectionEventCnt() const;
 
                     /**
                      * 判断参数 UnhandledMaliciousConnectionEventCnt 是否已赋值
                      * @return UnhandledMaliciousConnectionEventCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledMaliciousConnectionEventCntHasBeenSet() const;
 
@@ -132,12 +146,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UnhandledK8sApiEventCnt Unhandled K8sApi events
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetUnhandledK8sApiEventCnt() const;
 
                     /**
                      * 判断参数 UnhandledK8sApiEventCnt 是否已赋值
                      * @return UnhandledK8sApiEventCnt 是否已赋值
+                     * 
                      */
                     bool UnhandledK8sApiEventCntHasBeenSet() const;
 

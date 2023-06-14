@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The private domain ID
                      * @return ZoneId The private domain ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The DNS record IDs.
                      * @return RecordIds The DNS record IDs.
+                     * 
                      */
                     std::vector<int64_t> GetRecordIds() const;
 
                     /**
                      * 判断参数 RecordIds 是否已赋值
                      * @return RecordIds 是否已赋值
+                     * 
                      */
                     bool RecordIdsHasBeenSet() const;
 
                     /**
                      * 获取`enabled`: Enabled; `disabled`: Disabled.
                      * @return Status `enabled`: Enabled; `disabled`: Disabled.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

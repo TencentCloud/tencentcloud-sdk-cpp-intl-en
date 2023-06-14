@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyMetadatas List of returned attribute information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<KeyMetadata> GetKeyMetadatas() const;
 
                     /**
                      * 判断参数 KeyMetadatas 是否已赋值
                      * @return KeyMetadatas 是否已赋值
+                     * 
                      */
                     bool KeyMetadatasHasBeenSet() const;
 

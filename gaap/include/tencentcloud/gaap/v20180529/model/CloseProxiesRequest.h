@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Connection instance ID; It’s an old parameter, please switch to ProxyIds.
                      * @return InstanceIds Connection instance ID; It’s an old parameter, please switch to ProxyIds.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Connection instance ID; It’s an old parameter, please switch to ProxyIds.
-                     * @param InstanceIds Connection instance ID; It’s an old parameter, please switch to ProxyIds.
+                     * @param _instanceIds Connection instance ID; It’s an old parameter, please switch to ProxyIds.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
@@ -65,38 +68,44 @@ namespace TencentCloud
 For more information, please see How to Ensure Idempotence.
                      * @return ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
 For more information, please see How to Ensure Idempotence.
+                     * 
                      */
                     std::string GetClientToken() const;
 
                     /**
                      * 设置A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
 For more information, please see How to Ensure Idempotence.
-                     * @param ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
+                     * @param _clientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
 For more information, please see How to Ensure Idempotence.
+                     * 
                      */
                     void SetClientToken(const std::string& _clientToken);
 
                     /**
                      * 判断参数 ClientToken 是否已赋值
                      * @return ClientToken 是否已赋值
+                     * 
                      */
                     bool ClientTokenHasBeenSet() const;
 
                     /**
                      * 获取Connection instance ID; It’s a new parameter.
                      * @return ProxyIds Connection instance ID; It’s a new parameter.
+                     * 
                      */
                     std::vector<std::string> GetProxyIds() const;
 
                     /**
                      * 设置Connection instance ID; It’s a new parameter.
-                     * @param ProxyIds Connection instance ID; It’s a new parameter.
+                     * @param _proxyIds Connection instance ID; It’s a new parameter.
+                     * 
                      */
                     void SetProxyIds(const std::vector<std::string>& _proxyIds);
 
                     /**
                      * 判断参数 ProxyIds 是否已赋值
                      * @return ProxyIds 是否已赋值
+                     * 
                      */
                     bool ProxyIdsHasBeenSet() const;
 

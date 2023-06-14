@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The account identifier.
                      * @return AccountIdentifier The account identifier.
+                     * 
                      */
                     std::string GetAccountIdentifier() const;
 
                     /**
                      * 设置The account identifier.
-                     * @param AccountIdentifier The account identifier.
+                     * @param _accountIdentifier The account identifier.
+                     * 
                      */
                     void SetAccountIdentifier(const std::string& _accountIdentifier);
 
                     /**
                      * 判断参数 AccountIdentifier 是否已赋值
                      * @return AccountIdentifier 是否已赋值
+                     * 
                      */
                     bool AccountIdentifierHasBeenSet() const;
 
                     /**
                      * 获取The chain ID.
                      * @return ChainID The chain ID.
+                     * 
                      */
                     std::string GetChainID() const;
 
                     /**
                      * 设置The chain ID.
-                     * @param ChainID The chain ID.
+                     * @param _chainID The chain ID.
+                     * 
                      */
                     void SetChainID(const std::string& _chainID);
 
                     /**
                      * 判断参数 ChainID 是否已赋值
                      * @return ChainID 是否已赋值
+                     * 
                      */
                     bool ChainIDHasBeenSet() const;
 
                     /**
                      * 获取The DID.
                      * @return Did The DID.
+                     * 
                      */
                     std::string GetDid() const;
 
                     /**
                      * 设置The DID.
-                     * @param Did The DID.
+                     * @param _did The DID.
+                     * 
                      */
                     void SetDid(const std::string& _did);
 
                     /**
                      * 判断参数 Did 是否已赋值
                      * @return Did 是否已赋值
+                     * 
                      */
                     bool DidHasBeenSet() const;
 
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The group name.
                      * @return GroupName The group name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置The group name.
-                     * @param GroupName The group name.
+                     * @param _groupName The group name.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 

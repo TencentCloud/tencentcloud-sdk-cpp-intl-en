@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the Reserved Instance purchased.
                      * @return ReservedInstanceId The ID of the Reserved Instance purchased.
+                     * 
                      */
                     std::string GetReservedInstanceId() const;
 
                     /**
                      * 判断参数 ReservedInstanceId 是否已赋值
                      * @return ReservedInstanceId 是否已赋值
+                     * 
                      */
                     bool ReservedInstanceIdHasBeenSet() const;
 

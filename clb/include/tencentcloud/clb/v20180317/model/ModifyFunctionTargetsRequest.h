@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB listener ID
                      * @return ListenerId CLB listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID
-                     * @param ListenerId CLB listener ID
+                     * @param _listenerId CLB listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取The backend cloud functions to modify
                      * @return FunctionTargets The backend cloud functions to modify
+                     * 
                      */
                     std::vector<FunctionTarget> GetFunctionTargets() const;
 
                     /**
                      * 设置The backend cloud functions to modify
-                     * @param FunctionTargets The backend cloud functions to modify
+                     * @param _functionTargets The backend cloud functions to modify
+                     * 
                      */
                     void SetFunctionTargets(const std::vector<FunctionTarget>& _functionTargets);
 
                     /**
                      * 判断参数 FunctionTargets 是否已赋值
                      * @return FunctionTargets 是否已赋值
+                     * 
                      */
                     bool FunctionTargetsHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
                      * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
-                     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
+                     * @param _locationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or `Domain`+`Url`.
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
                     /**
                      * 获取Target rule domain name. This parameter does not take effect if `LocationId` is specified.
                      * @return Domain Target rule domain name. This parameter does not take effect if `LocationId` is specified.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Target rule domain name. This parameter does not take effect if `LocationId` is specified.
-                     * @param Domain Target rule domain name. This parameter does not take effect if `LocationId` is specified.
+                     * @param _domain Target rule domain name. This parameter does not take effect if `LocationId` is specified.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Target rule URL. This parameter does not take effect if `LocationId` is specified.
                      * @return Url Target rule URL. This parameter does not take effect if `LocationId` is specified.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Target rule URL. This parameter does not take effect if `LocationId` is specified.
-                     * @param Url Target rule URL. This parameter does not take effect if `LocationId` is specified.
+                     * @param _url Target rule URL. This parameter does not take effect if `LocationId` is specified.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

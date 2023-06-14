@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Time interval of health check
                      * @return DelayLoop Time interval of health check
+                     * 
                      */
                     uint64_t GetDelayLoop() const;
 
                     /**
                      * 设置Time interval of health check
-                     * @param DelayLoop Time interval of health check
+                     * @param _delayLoop Time interval of health check
+                     * 
                      */
                     void SetDelayLoop(const uint64_t& _delayLoop);
 
                     /**
                      * 判断参数 DelayLoop 是否已赋值
                      * @return DelayLoop 是否已赋值
+                     * 
                      */
                     bool DelayLoopHasBeenSet() const;
 
                     /**
                      * 获取Response timeout of health check
                      * @return ConnectTimeout Response timeout of health check
+                     * 
                      */
                     uint64_t GetConnectTimeout() const;
 
                     /**
                      * 设置Response timeout of health check
-                     * @param ConnectTimeout Response timeout of health check
+                     * @param _connectTimeout Response timeout of health check
+                     * 
                      */
                     void SetConnectTimeout(const uint64_t& _connectTimeout);
 
                     /**
                      * 判断参数 ConnectTimeout 是否已赋值
                      * @return ConnectTimeout 是否已赋值
+                     * 
                      */
                     bool ConnectTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Check path of health check
                      * @return Path Check path of health check
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Check path of health check
-                     * @param Path Check path of health check
+                     * @param _path Check path of health check
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Health check method: GET/HEAD
                      * @return Method Health check method: GET/HEAD
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Health check method: GET/HEAD
-                     * @param Method Health check method: GET/HEAD
+                     * @param _method Health check method: GET/HEAD
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
                     /**
                      * 获取Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
                      * @return StatusCode Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
+                     * 
                      */
                     std::vector<uint64_t> GetStatusCode() const;
 
                     /**
                      * 设置Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
-                     * @param StatusCode Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
+                     * @param _statusCode Return code indicting normal origin servers. Value range: [100, 200, 300, 400, 500]
+                     * 
                      */
                     void SetStatusCode(const std::vector<uint64_t>& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 You cannot modify this parameter when calling ModifyRuleAttribute API.
                      * @return Domain Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
-                     * @param Domain Domain name to be performed health check
+                     * @param _domain Domain name to be performed health check
 You cannot modify this parameter when calling ModifyRuleAttribute API.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -163,20 +181,23 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return FailedCountInter Origin server failure check frequency
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFailedCountInter() const;
 
                     /**
                      * 设置Origin server failure check frequency
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param FailedCountInter Origin server failure check frequency
+                     * @param _failedCountInter Origin server failure check frequency
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedCountInter(const uint64_t& _failedCountInter);
 
                     /**
                      * 判断参数 FailedCountInter 是否已赋值
                      * @return FailedCountInter 是否已赋值
+                     * 
                      */
                     bool FailedCountInterHasBeenSet() const;
 
@@ -185,20 +206,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return FailedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFailedThreshold() const;
 
                     /**
                      * 设置Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param FailedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
+                     * @param _failedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedThreshold(const uint64_t& _failedThreshold);
 
                     /**
                      * 判断参数 FailedThreshold 是否已赋值
                      * @return FailedThreshold 是否已赋值
+                     * 
                      */
                     bool FailedThresholdHasBeenSet() const;
 
@@ -207,20 +231,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return BlockInter Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetBlockInter() const;
 
                     /**
                      * 设置Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param BlockInter Duration to block requests targeting the origin server after a failed health check
+                     * @param _blockInter Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBlockInter(const uint64_t& _blockInter);
 
                     /**
                      * 判断参数 BlockInter 是否已赋值
                      * @return BlockInter 是否已赋值
+                     * 
                      */
                     bool BlockInterHasBeenSet() const;
 

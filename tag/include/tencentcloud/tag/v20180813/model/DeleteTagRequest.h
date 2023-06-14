@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The tag key to be deleted.
                      * @return TagKey The tag key to be deleted.
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置The tag key to be deleted.
-                     * @param TagKey The tag key to be deleted.
+                     * @param _tagKey The tag key to be deleted.
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取The tag value to be deleted.
                      * @return TagValue The tag value to be deleted.
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置The tag value to be deleted.
-                     * @param TagValue The tag value to be deleted.
+                     * @param _tagValue The tag value to be deleted.
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 

@@ -46,162 +46,189 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceID Instance ID
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceID Instance ID
+                     * @param _instanceID Instance ID
+                     * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Domain
                      * @return Domain Domain
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain
-                     * @param Domain Domain
+                     * @param _domain Domain
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Username
                      * @return User Username
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置Username
-                     * @param User Username
+                     * @param _user Username
+                     * 
                      */
                     void SetUser(const std::string& _user);
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
                     /**
                      * 获取Password
                      * @return Password Password
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password
-                     * @param Password Password
+                     * @param _password Password
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取List of log types
                      * @return LogTypeList List of log types
+                     * 
                      */
                     std::vector<SecLogDeliveryKafkaSettingInfo> GetLogTypeList() const;
 
                     /**
                      * 设置List of log types
-                     * @param LogTypeList List of log types
+                     * @param _logTypeList List of log types
+                     * 
                      */
                     void SetLogTypeList(const std::vector<SecLogDeliveryKafkaSettingInfo>& _logTypeList);
 
                     /**
                      * 判断参数 LogTypeList 是否已赋值
                      * @return LogTypeList 是否已赋值
+                     * 
                      */
                     bool LogTypeListHasBeenSet() const;
 
                     /**
                      * 获取Access type
                      * @return AccessType Access type
+                     * 
                      */
                     int64_t GetAccessType() const;
 
                     /**
                      * 设置Access type
-                     * @param AccessType Access type
+                     * @param _accessType Access type
+                     * 
                      */
                     void SetAccessType(const int64_t& _accessType);
 
                     /**
                      * 判断参数 AccessType 是否已赋值
                      * @return AccessType 是否已赋值
+                     * 
                      */
                     bool AccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Kafka version number
                      * @return KafkaVersion Kafka version number
+                     * 
                      */
                     std::string GetKafkaVersion() const;
 
                     /**
                      * 设置Kafka version number
-                     * @param KafkaVersion Kafka version number
+                     * @param _kafkaVersion Kafka version number
+                     * 
                      */
                     void SetKafkaVersion(const std::string& _kafkaVersion);
 
                     /**
                      * 判断参数 KafkaVersion 是否已赋值
                      * @return KafkaVersion 是否已赋值
+                     * 
                      */
                     bool KafkaVersionHasBeenSet() const;
 
                     /**
                      * 获取Region ID
                      * @return RegionID Region ID
+                     * 
                      */
                     std::string GetRegionID() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionID Region ID
+                     * @param _regionID Region ID
+                     * 
                      */
                     void SetRegionID(const std::string& _regionID);
 
                     /**
                      * 判断参数 RegionID 是否已赋值
                      * @return RegionID 是否已赋值
+                     * 
                      */
                     bool RegionIDHasBeenSet() const;
 

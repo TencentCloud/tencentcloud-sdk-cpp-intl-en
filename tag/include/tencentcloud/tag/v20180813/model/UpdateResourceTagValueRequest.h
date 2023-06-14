@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Tag key associated with the resource.
                      * @return TagKey Tag key associated with the resource.
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key associated with the resource.
-                     * @param TagKey Tag key associated with the resource.
+                     * @param _tagKey Tag key associated with the resource.
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取Modified tag value.
                      * @return TagValue Modified tag value.
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Modified tag value.
-                     * @param TagValue Modified tag value.
+                     * @param _tagValue Modified tag value.
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 
                     /**
                      * 获取[Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
                      * @return Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * 
                      */
                     std::string GetResource() const;
 
                     /**
                      * 设置[Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
-                     * @param Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * @param _resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -70,6 +73,7 @@ abort: stopping the task
 pause: pausing the task
 resume: continuing the task
 abort: stopping the task
+                     * 
                      */
                     std::string GetOperation() const;
 
@@ -78,16 +82,18 @@ abort: stopping the task
 pause: pausing the task
 resume: continuing the task
 abort: stopping the task
-                     * @param Operation create: starting an upgrade task
+                     * @param _operation create: starting an upgrade task
 pause: pausing the task
 resume: continuing the task
 abort: stopping the task
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
@@ -100,6 +106,7 @@ major: in-place upgrade of major version
 reset: the reinstallation and upgrade of major version
 hot: the hot upgrade of minor version
 major: in-place upgrade of major version
+                     * 
                      */
                     std::string GetUpgradeType() const;
 
@@ -108,106 +115,123 @@ major: in-place upgrade of major version
 reset: the reinstallation and upgrade of major version
 hot: the hot upgrade of minor version
 major: in-place upgrade of major version
-                     * @param UpgradeType Upgrade type. It’s only required when `Operation` is set as `create`.
+                     * @param _upgradeType Upgrade type. It’s only required when `Operation` is set as `create`.
 reset: the reinstallation and upgrade of major version
 hot: the hot upgrade of minor version
 major: in-place upgrade of major version
+                     * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
 
                     /**
                      * 判断参数 UpgradeType 是否已赋值
                      * @return UpgradeType 是否已赋值
+                     * 
                      */
                     bool UpgradeTypeHasBeenSet() const;
 
                     /**
                      * 获取List of nodes that need to upgrade
                      * @return InstanceIds List of nodes that need to upgrade
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of nodes that need to upgrade
-                     * @param InstanceIds List of nodes that need to upgrade
+                     * @param _instanceIds List of nodes that need to upgrade
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取This parameter is used when the node joins the cluster again. Refer to the API of creating one or more cluster nodes.
                      * @return ResetParam This parameter is used when the node joins the cluster again. Refer to the API of creating one or more cluster nodes.
+                     * 
                      */
                     UpgradeNodeResetParam GetResetParam() const;
 
                     /**
                      * 设置This parameter is used when the node joins the cluster again. Refer to the API of creating one or more cluster nodes.
-                     * @param ResetParam This parameter is used when the node joins the cluster again. Refer to the API of creating one or more cluster nodes.
+                     * @param _resetParam This parameter is used when the node joins the cluster again. Refer to the API of creating one or more cluster nodes.
+                     * 
                      */
                     void SetResetParam(const UpgradeNodeResetParam& _resetParam);
 
                     /**
                      * 判断参数 ResetParam 是否已赋值
                      * @return ResetParam 是否已赋值
+                     * 
                      */
                     bool ResetParamHasBeenSet() const;
 
                     /**
                      * 获取Whether to skip the pre-upgrade check of the node
                      * @return SkipPreCheck Whether to skip the pre-upgrade check of the node
+                     * 
                      */
                     bool GetSkipPreCheck() const;
 
                     /**
                      * 设置Whether to skip the pre-upgrade check of the node
-                     * @param SkipPreCheck Whether to skip the pre-upgrade check of the node
+                     * @param _skipPreCheck Whether to skip the pre-upgrade check of the node
+                     * 
                      */
                     void SetSkipPreCheck(const bool& _skipPreCheck);
 
                     /**
                      * 判断参数 SkipPreCheck 是否已赋值
                      * @return SkipPreCheck 是否已赋值
+                     * 
                      */
                     bool SkipPreCheckHasBeenSet() const;
 
                     /**
                      * 获取The maximum tolerable proportion of unavailable pods
                      * @return MaxNotReadyPercent The maximum tolerable proportion of unavailable pods
+                     * 
                      */
                     double GetMaxNotReadyPercent() const;
 
                     /**
                      * 设置The maximum tolerable proportion of unavailable pods
-                     * @param MaxNotReadyPercent The maximum tolerable proportion of unavailable pods
+                     * @param _maxNotReadyPercent The maximum tolerable proportion of unavailable pods
+                     * 
                      */
                     void SetMaxNotReadyPercent(const double& _maxNotReadyPercent);
 
                     /**
                      * 判断参数 MaxNotReadyPercent 是否已赋值
                      * @return MaxNotReadyPercent 是否已赋值
+                     * 
                      */
                     bool MaxNotReadyPercentHasBeenSet() const;
 
                     /**
                      * 获取Whether to upgrade node runtime. Values: `true`, `false` (default).
                      * @return UpgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     * 
                      */
                     bool GetUpgradeRunTime() const;
 
                     /**
                      * 设置Whether to upgrade node runtime. Values: `true`, `false` (default).
-                     * @param UpgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     * @param _upgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     * 
                      */
                     void SetUpgradeRunTime(const bool& _upgradeRunTime);
 
                     /**
                      * 判断参数 UpgradeRunTime 是否已赋值
                      * @return UpgradeRunTime 是否已赋值
+                     * 
                      */
                     bool UpgradeRunTimeHasBeenSet() const;
 

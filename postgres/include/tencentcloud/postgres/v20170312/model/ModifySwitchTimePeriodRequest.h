@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the instance waiting for a switch
                      * @return DBInstanceId The ID of the instance waiting for a switch
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置The ID of the instance waiting for a switch
-                     * @param DBInstanceId The ID of the instance waiting for a switch
+                     * @param _dBInstanceId The ID of the instance waiting for a switch
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Valid value: `0` (switch immediately)
                      * @return SwitchTag Valid value: `0` (switch immediately)
+                     * 
                      */
                     uint64_t GetSwitchTag() const;
 
                     /**
                      * 设置Valid value: `0` (switch immediately)
-                     * @param SwitchTag Valid value: `0` (switch immediately)
+                     * @param _switchTag Valid value: `0` (switch immediately)
+                     * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
 
                     /**
                      * 判断参数 SwitchTag 是否已赋值
                      * @return SwitchTag 是否已赋值
+                     * 
                      */
                     bool SwitchTagHasBeenSet() const;
 

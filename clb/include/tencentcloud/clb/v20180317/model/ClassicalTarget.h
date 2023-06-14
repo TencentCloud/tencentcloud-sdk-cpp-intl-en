@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Real server type. Value range: CVM, ENI (coming soon)
                      * @return Type Real server type. Value range: CVM, ENI (coming soon)
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Real server type. Value range: CVM, ENI (coming soon)
-                     * @param Type Real server type. Value range: CVM, ENI (coming soon)
+                     * @param _type Real server type. Value range: CVM, ENI (coming soon)
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
                      * @return InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
-                     * @param InstanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
+                     * @param _instanceId Unique ID of a real server, which can be obtained from the unInstanceId field in the return of the DescribeInstances API
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
                      * @return Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+                     * 
                      */
                     int64_t GetWeight() const;
 
                     /**
                      * 设置Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
-                     * @param Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+                     * @param _weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+                     * 
                      */
                     void SetWeight(const int64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublicIpAddresses Public IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
                      * 设置Public IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublicIpAddresses Public IP of a real server
+                     * @param _publicIpAddresses Public IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
 
                     /**
                      * 判断参数 PublicIpAddresses 是否已赋值
                      * @return PublicIpAddresses 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressesHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrivateIpAddresses Private IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置Private IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateIpAddresses Private IP of a real server
+                     * @param _privateIpAddresses Private IP of a real server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Real server instance names
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Real server instance names
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceName Real server instance names
+                     * @param _instanceName Real server instance names
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -173,6 +191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return RunFlag Real server status
 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRunFlag() const;
 
@@ -180,15 +199,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Real server status
 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RunFlag Real server status
+                     * @param _runFlag Real server status
 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRunFlag(const int64_t& _runFlag);
 
                     /**
                      * 判断参数 RunFlag 是否已赋值
                      * @return RunFlag 是否已赋值
+                     * 
                      */
                     bool RunFlagHasBeenSet() const;
 

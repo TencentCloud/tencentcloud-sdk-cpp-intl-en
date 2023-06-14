@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability ID array.
                      * @return Ids Vulnerability ID array.
+                     * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
                      * 设置Vulnerability ID array.
-                     * @param Ids Vulnerability ID array.
+                     * @param _ids Vulnerability ID array.
+                     * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

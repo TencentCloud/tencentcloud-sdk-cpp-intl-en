@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Node display name
                      * @return DisplayName Node display name
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Node display name
-                     * @param DisplayName Node display name
+                     * @param _displayName Node display name
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID
                      * @return SubnetId Subnet ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID
-                     * @param SubnetId Subnet ID
+                     * @param _subnetId Subnet ID
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Tencent Cloud tags
                      * @return Tags Tencent Cloud tags
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tencent Cloud tags
-                     * @param Tags Tencent Cloud tags
+                     * @param _tags Tencent Cloud tags
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

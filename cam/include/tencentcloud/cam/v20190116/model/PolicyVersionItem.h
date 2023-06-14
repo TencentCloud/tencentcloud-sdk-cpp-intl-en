@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VersionId Policy version ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetVersionId() const;
 
                     /**
                      * 设置Policy version ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VersionId Policy version ID
+                     * @param _versionId Policy version ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersionId(const uint64_t& _versionId);
 
                     /**
                      * 判断参数 VersionId 是否已赋值
                      * @return VersionId 是否已赋值
+                     * 
                      */
                     bool VersionIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateDate Policy version creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateDate() const;
 
                     /**
                      * 设置Policy version creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateDate Policy version creation time
+                     * @param _createDate Policy version creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateDate(const std::string& _createDate);
 
                     /**
                      * 判断参数 CreateDate 是否已赋值
                      * @return CreateDate 是否已赋值
+                     * 
                      */
                     bool CreateDateHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsDefaultVersion Whether it is the operative version. 0: no, 1: yes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsDefaultVersion() const;
 
                     /**
                      * 设置Whether it is the operative version. 0: no, 1: yes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsDefaultVersion Whether it is the operative version. 0: no, 1: yes
+                     * @param _isDefaultVersion Whether it is the operative version. 0: no, 1: yes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDefaultVersion(const int64_t& _isDefaultVersion);
 
                     /**
                      * 判断参数 IsDefaultVersion 是否已赋值
                      * @return IsDefaultVersion 是否已赋值
+                     * 
                      */
                     bool IsDefaultVersionHasBeenSet() const;
 

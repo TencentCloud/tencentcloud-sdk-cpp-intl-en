@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Type
                      * @return Type Type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type
-                     * @param Type Type
+                     * @param _type Type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Count
                      * @return Count Count
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Count
-                     * @param Count Count
+                     * @param _count Count
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Size
                      * @return Size Size
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Size
-                     * @param Size Size
+                     * @param _size Size
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
                     /**
                      * 获取Timestamp
                      * @return Updatetime Timestamp
+                     * 
                      */
                     int64_t GetUpdatetime() const;
 
                     /**
                      * 设置Timestamp
-                     * @param Updatetime Timestamp
+                     * @param _updatetime Timestamp
+                     * 
                      */
                     void SetUpdatetime(const int64_t& _updatetime);
 
                     /**
                      * 判断参数 Updatetime 是否已赋值
                      * @return Updatetime 是否已赋值
+                     * 
                      */
                     bool UpdatetimeHasBeenSet() const;
 

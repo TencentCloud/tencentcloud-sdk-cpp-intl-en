@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The application ID.
                      * @return SdkAppId The application ID.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID.
-                     * @param SdkAppId The application ID.
+                     * @param _sdkAppId The application ID.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
                      * @return Scenes The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
+                     * 
                      */
                     std::vector<std::string> GetScenes() const;
 
                     /**
                      * 设置The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
-                     * @param Scenes The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
+                     * @param _scenes The custom elements (for which a scene has been configured) to delete. If this is empty, all custom elements will be deleted.
+                     * 
                      */
                     void SetScenes(const std::vector<std::string>& _scenes);
 
                     /**
                      * 判断参数 Scenes 是否已赋值
                      * @return Scenes 是否已赋值
+                     * 
                      */
                     bool ScenesHasBeenSet() const;
 

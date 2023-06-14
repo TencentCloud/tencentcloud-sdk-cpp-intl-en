@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
                      * @return Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
-                     * @param Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * @param _switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Array of objects in blocklist/allowlist configuration
                      * @return UserAllowBlockIp Array of objects in blocklist/allowlist configuration
+                     * 
                      */
                     std::vector<DDoSUserAllowBlockIP> GetUserAllowBlockIp() const;
 
                     /**
                      * 设置Array of objects in blocklist/allowlist configuration
-                     * @param UserAllowBlockIp Array of objects in blocklist/allowlist configuration
+                     * @param _userAllowBlockIp Array of objects in blocklist/allowlist configuration
+                     * 
                      */
                     void SetUserAllowBlockIp(const std::vector<DDoSUserAllowBlockIP>& _userAllowBlockIp);
 
                     /**
                      * 判断参数 UserAllowBlockIp 是否已赋值
                      * @return UserAllowBlockIp 是否已赋值
+                     * 
                      */
                     bool UserAllowBlockIpHasBeenSet() const;
 

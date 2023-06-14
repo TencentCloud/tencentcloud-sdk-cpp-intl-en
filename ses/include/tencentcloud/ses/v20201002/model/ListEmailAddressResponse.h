@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EmailSenders Details of sender addresses.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<EmailSender> GetEmailSenders() const;
 
                     /**
                      * 判断参数 EmailSenders 是否已赋值
                      * @return EmailSenders 是否已赋值
+                     * 
                      */
                     bool EmailSendersHasBeenSet() const;
 

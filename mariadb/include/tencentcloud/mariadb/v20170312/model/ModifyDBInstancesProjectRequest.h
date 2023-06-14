@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of instances to be modified. The ID is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
                      * @return InstanceIds List of IDs of instances to be modified. The ID is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of IDs of instances to be modified. The ID is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
-                     * @param InstanceIds List of IDs of instances to be modified. The ID is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
+                     * @param _instanceIds List of IDs of instances to be modified. The ID is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
                      * @return ProjectId ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
-                     * @param ProjectId ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
+                     * @param _projectId ID of the project to be assigned, which can be obtained through the `DescribeProjects` API.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 

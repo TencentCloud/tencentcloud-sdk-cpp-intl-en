@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
                      * @return EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+                     * 
                      */
                     std::string GetEventBusName() const;
 
                     /**
                      * 设置Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
-                     * @param EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+                     * @param _eventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+                     * 
                      */
                     void SetEventBusName(const std::string& _eventBusName);
 
                     /**
                      * 判断参数 EventBusName 是否已赋值
                      * @return EventBusName 是否已赋值
+                     * 
                      */
                     bool EventBusNameHasBeenSet() const;
 
                     /**
                      * 获取Event bus description, which can contain up to 200 characters of any type.
                      * @return Description Event bus description, which can contain up to 200 characters of any type.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Event bus description, which can contain up to 200 characters of any type.
-                     * @param Description Event bus description, which can contain up to 200 characters of any type.
+                     * @param _description Event bus description, which can contain up to 200 characters of any type.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Log retention period
                      * @return SaveDays Log retention period
+                     * 
                      */
                     int64_t GetSaveDays() const;
 
                     /**
                      * 设置Log retention period
-                     * @param SaveDays Log retention period
+                     * @param _saveDays Log retention period
+                     * 
                      */
                     void SetSaveDays(const int64_t& _saveDays);
 
                     /**
                      * 判断参数 SaveDays 是否已赋值
                      * @return SaveDays 是否已赋值
+                     * 
                      */
                     bool SaveDaysHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable log storage
                      * @return EnableStore Whether to enable log storage
+                     * 
                      */
                     bool GetEnableStore() const;
 
                     /**
                      * 设置Whether to enable log storage
-                     * @param EnableStore Whether to enable log storage
+                     * @param _enableStore Whether to enable log storage
+                     * 
                      */
                     void SetEnableStore(const bool& _enableStore);
 
                     /**
                      * 判断参数 EnableStore 是否已赋值
                      * @return EnableStore 是否已赋值
+                     * 
                      */
                     bool EnableStoreHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Private IP of server.
                      * @return MachineIp Private IP of server.
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Private IP of server.
-                     * @param MachineIp Private IP of server.
+                     * @param _machineIp Private IP of server.
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability name.
                      * @return VulName Vulnerability name.
+                     * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 设置Vulnerability name.
-                     * @param VulName Vulnerability name.
+                     * @param _vulName Vulnerability name.
+                     * 
                      */
                     void SetVulName(const std::string& _vulName);
 
                     /**
                      * 判断参数 VulName 是否已赋值
                      * @return VulName 是否已赋值
+                     * 
                      */
                     bool VulNameHasBeenSet() const;
 
@@ -91,6 +97,7 @@ namespace TencentCloud
 <li> WEB: web vulnerability</li>
 <li> SYSTEM: system component vulnerability</li>
 <li> BASELINE: security baseline</li>
+                     * 
                      */
                     std::string GetVulType() const;
 
@@ -99,34 +106,39 @@ namespace TencentCloud
 <li> WEB: web vulnerability</li>
 <li> SYSTEM: system component vulnerability</li>
 <li> BASELINE: security baseline</li>
-                     * @param VulType Vulnerability type.
+                     * @param _vulType Vulnerability type.
 <li> WEB: web vulnerability</li>
 <li> SYSTEM: system component vulnerability</li>
 <li> BASELINE: security baseline</li>
+                     * 
                      */
                     void SetVulType(const std::string& _vulType);
 
                     /**
                      * 判断参数 VulType 是否已赋值
                      * @return VulType 是否已赋值
+                     * 
                      */
                     bool VulTypeHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability description.
                      * @return Description Vulnerability description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Vulnerability description.
-                     * @param Description Vulnerability description.
+                     * @param _description Vulnerability description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -139,6 +151,7 @@ namespace TencentCloud
 <li> UN_OPERATED: to be processed</li>
 <li> SCANING: scanning</li>
 <li> FIXED: fixed</li>
+                     * 
                      */
                     std::string GetVulStatus() const;
 
@@ -147,34 +160,39 @@ namespace TencentCloud
 <li> UN_OPERATED: to be processed</li>
 <li> SCANING: scanning</li>
 <li> FIXED: fixed</li>
-                     * @param VulStatus Vulnerability status.
+                     * @param _vulStatus Vulnerability status.
 <li> UN_OPERATED: to be processed</li>
 <li> SCANING: scanning</li>
 <li> FIXED: fixed</li>
+                     * 
                      */
                     void SetVulStatus(const std::string& _vulStatus);
 
                     /**
                      * 判断参数 VulStatus 是否已赋值
                      * @return VulStatus 是否已赋值
+                     * 
                      */
                     bool VulStatusHasBeenSet() const;
 
                     /**
                      * 获取Last scanned time.
                      * @return LastScanTime Last scanned time.
+                     * 
                      */
                     std::string GetLastScanTime() const;
 
                     /**
                      * 设置Last scanned time.
-                     * @param LastScanTime Last scanned time.
+                     * @param _lastScanTime Last scanned time.
+                     * 
                      */
                     void SetLastScanTime(const std::string& _lastScanTime);
 
                     /**
                      * 判断参数 LastScanTime 是否已赋值
                      * @return LastScanTime 是否已赋值
+                     * 
                      */
                     bool LastScanTimeHasBeenSet() const;
 

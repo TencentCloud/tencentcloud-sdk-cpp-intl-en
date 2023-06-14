@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Type The dynamic range information. Valid values:
 <li>`SDR`: Standard Dynamic Range</li>
 <li>`HDR`: High Dynamic Range</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置The dynamic range information. Valid values:
 <li>`SDR`: Standard Dynamic Range</li>
 <li>`HDR`: High Dynamic Range</li>
-                     * @param Type The dynamic range information. Valid values:
+                     * @param _type The dynamic range information. Valid values:
 <li>`SDR`: Standard Dynamic Range</li>
 <li>`HDR`: High Dynamic Range</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -79,6 +82,7 @@ namespace TencentCloud
                      * @return HDRType The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
+                     * 
                      */
                     std::string GetHDRType() const;
 
@@ -86,15 +90,17 @@ namespace TencentCloud
                      * 设置The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
-                     * @param HDRType The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
+                     * @param _hDRType The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
+                     * 
                      */
                     void SetHDRType(const std::string& _hDRType);
 
                     /**
                      * 判断参数 HDRType 是否已赋值
                      * @return HDRType 是否已赋值
+                     * 
                      */
                     bool HDRTypeHasBeenSet() const;
 

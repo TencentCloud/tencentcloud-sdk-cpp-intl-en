@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取`TopicId` created by the CLS console
                      * @return FromTopicId `TopicId` created by the CLS console
+                     * 
                      */
                     std::string GetFromTopicId() const;
 
                     /**
                      * 设置`TopicId` created by the CLS console
-                     * @param FromTopicId `TopicId` created by the CLS console
+                     * @param _fromTopicId `TopicId` created by the CLS console
+                     * 
                      */
                     void SetFromTopicId(const std::string& _fromTopicId);
 
                     /**
                      * 判断参数 FromTopicId 是否已赋值
                      * @return FromTopicId 是否已赋值
+                     * 
                      */
                     bool FromTopicIdHasBeenSet() const;
 
                     /**
                      * 获取Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
                      * @return Compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+                     * 
                      */
                     int64_t GetCompression() const;
 
                     /**
                      * 设置Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
-                     * @param Compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+                     * @param _compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+                     * 
                      */
                     void SetCompression(const int64_t& _compression);
 
                     /**
                      * 判断参数 Compression 是否已赋值
                      * @return Compression 是否已赋值
+                     * 
                      */
                     bool CompressionHasBeenSet() const;
 

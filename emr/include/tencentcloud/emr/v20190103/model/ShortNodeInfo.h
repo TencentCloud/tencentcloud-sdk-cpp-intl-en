@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NodeType Node type: Master/Core/Task/Router/Common
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetNodeType() const;
 
                     /**
                      * 设置Node type: Master/Core/Task/Router/Common
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NodeType Node type: Master/Core/Task/Router/Common
+                     * @param _nodeType Node type: Master/Core/Task/Router/Common
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNodeType(const std::string& _nodeType);
 
                     /**
                      * 判断参数 NodeType 是否已赋值
                      * @return NodeType 是否已赋值
+                     * 
                      */
                     bool NodeTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NodeSize Number of nodes
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetNodeSize() const;
 
                     /**
                      * 设置Number of nodes
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NodeSize Number of nodes
+                     * @param _nodeSize Number of nodes
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNodeSize(const uint64_t& _nodeSize);
 
                     /**
                      * 判断参数 NodeSize 是否已赋值
                      * @return NodeSize 是否已赋值
+                     * 
                      */
                     bool NodeSizeHasBeenSet() const;
 

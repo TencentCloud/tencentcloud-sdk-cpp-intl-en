@@ -51,56 +51,65 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return SecondaryInputId ID of the backup input
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetSecondaryInputId() const;
 
                     /**
                      * 设置ID of the backup input
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param SecondaryInputId ID of the backup input
+                     * @param _secondaryInputId ID of the backup input
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetSecondaryInputId(const std::string& _secondaryInputId);
 
                     /**
                      * 判断参数 SecondaryInputId 是否已赋值
                      * @return SecondaryInputId 是否已赋值
+                     * 
                      */
                     bool SecondaryInputIdHasBeenSet() const;
 
                     /**
                      * 获取The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
                      * @return LossThreshold The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
+                     * 
                      */
                     int64_t GetLossThreshold() const;
 
                     /**
                      * 设置The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
-                     * @param LossThreshold The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
+                     * @param _lossThreshold The wait time (ms) for triggering failover after the primary input becomes unavailable. Value range: [1000, 86400000]. Default value: `3000`
+                     * 
                      */
                     void SetLossThreshold(const int64_t& _lossThreshold);
 
                     /**
                      * 判断参数 LossThreshold 是否已赋值
                      * @return LossThreshold 是否已赋值
+                     * 
                      */
                     bool LossThresholdHasBeenSet() const;
 
                     /**
                      * 获取Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
                      * @return RecoverBehavior Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
+                     * 
                      */
                     std::string GetRecoverBehavior() const;
 
                     /**
                      * 设置Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
-                     * @param RecoverBehavior Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
+                     * @param _recoverBehavior Failover policy. Valid values: `CURRENT_PREFERRED` (default), `PRIMARY_PREFERRED`
+                     * 
                      */
                     void SetRecoverBehavior(const std::string& _recoverBehavior);
 
                     /**
                      * 判断参数 RecoverBehavior 是否已赋值
                      * @return RecoverBehavior 是否已赋值
+                     * 
                      */
                     bool RecoverBehaviorHasBeenSet() const;
 

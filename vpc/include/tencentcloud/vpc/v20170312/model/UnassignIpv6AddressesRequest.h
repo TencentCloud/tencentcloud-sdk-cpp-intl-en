@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the ENI instance, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The `ID` of the ENI instance, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
                      * @return Ipv6Addresses The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
+                     * 
                      */
                     std::vector<Ipv6Address> GetIpv6Addresses() const;
 
                     /**
                      * 设置The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
-                     * @param Ipv6Addresses The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
+                     * @param _ipv6Addresses The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
+                     * 
                      */
                     void SetIpv6Addresses(const std::vector<Ipv6Address>& _ipv6Addresses);
 
                     /**
                      * 判断参数 Ipv6Addresses 是否已赋值
                      * @return Ipv6Addresses 是否已赋值
+                     * 
                      */
                     bool Ipv6AddressesHasBeenSet() const;
 

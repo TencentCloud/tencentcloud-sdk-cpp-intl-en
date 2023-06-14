@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
 
 * ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
 
 * ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
-                     * @param Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+                     * @param _switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
 
 * ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Cname Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Cname Shared CNAME to be configured
+                     * @param _cname Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 

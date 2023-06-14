@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The domain ID.
                      * @return DomainId The domain ID.
+                     * 
                      */
                     std::string GetDomainId() const;
 
                     /**
                      * 设置The domain ID.
-                     * @param DomainId The domain ID.
+                     * @param _domainId The domain ID.
+                     * 
                      */
                     void SetDomainId(const std::string& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 

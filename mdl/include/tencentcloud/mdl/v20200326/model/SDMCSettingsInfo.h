@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取User ID in the SDMC DRM system
                      * @return Uid User ID in the SDMC DRM system
+                     * 
                      */
                     std::string GetUid() const;
 
                     /**
                      * 设置User ID in the SDMC DRM system
-                     * @param Uid User ID in the SDMC DRM system
+                     * @param _uid User ID in the SDMC DRM system
+                     * 
                      */
                     void SetUid(const std::string& _uid);
 
                     /**
                      * 判断参数 Uid 是否已赋值
                      * @return Uid 是否已赋值
+                     * 
                      */
                     bool UidHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Default value: `31` (audio + SD + HD + UHD1 + UHD2)
 `16`: UHD2
 
 Default value: `31` (audio + SD + HD + UHD1 + UHD2)
+                     * 
                      */
                     int64_t GetTracks() const;
 
@@ -93,7 +97,7 @@ Default value: `31` (audio + SD + HD + UHD1 + UHD2)
 `16`: UHD2
 
 Default value: `31` (audio + SD + HD + UHD1 + UHD2)
-                     * @param Tracks Tracks of the SDMC DRM system. This parameter is valid for DASH output groups.
+                     * @param _tracks Tracks of the SDMC DRM system. This parameter is valid for DASH output groups.
 `1`: audio
 `2`: SD
 `4`: HD
@@ -101,84 +105,98 @@ Default value: `31` (audio + SD + HD + UHD1 + UHD2)
 `16`: UHD2
 
 Default value: `31` (audio + SD + HD + UHD1 + UHD2)
+                     * 
                      */
                     void SetTracks(const int64_t& _tracks);
 
                     /**
                      * 判断参数 Tracks 是否已赋值
                      * @return Tracks 是否已赋值
+                     * 
                      */
                     bool TracksHasBeenSet() const;
 
                     /**
                      * 获取Key ID in the SDMC DRM system; required
                      * @return SecretId Key ID in the SDMC DRM system; required
+                     * 
                      */
                     std::string GetSecretId() const;
 
                     /**
                      * 设置Key ID in the SDMC DRM system; required
-                     * @param SecretId Key ID in the SDMC DRM system; required
+                     * @param _secretId Key ID in the SDMC DRM system; required
+                     * 
                      */
                     void SetSecretId(const std::string& _secretId);
 
                     /**
                      * 判断参数 SecretId 是否已赋值
                      * @return SecretId 是否已赋值
+                     * 
                      */
                     bool SecretIdHasBeenSet() const;
 
                     /**
                      * 获取Key in the SDMC DRM system; required
                      * @return SecretKey Key in the SDMC DRM system; required
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Key in the SDMC DRM system; required
-                     * @param SecretKey Key in the SDMC DRM system; required
+                     * @param _secretKey Key in the SDMC DRM system; required
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
                     /**
                      * 获取Key request URL of the SDMC DRM system, which is `https://uat.multidrm.tv/cpix/2.2/getcontentkey` by default
                      * @return Url Key request URL of the SDMC DRM system, which is `https://uat.multidrm.tv/cpix/2.2/getcontentkey` by default
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Key request URL of the SDMC DRM system, which is `https://uat.multidrm.tv/cpix/2.2/getcontentkey` by default
-                     * @param Url Key request URL of the SDMC DRM system, which is `https://uat.multidrm.tv/cpix/2.2/getcontentkey` by default
+                     * @param _url Key request URL of the SDMC DRM system, which is `https://uat.multidrm.tv/cpix/2.2/getcontentkey` by default
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Token name in an SDMC key request URL, which is `token` by default
                      * @return TokenName Token name in an SDMC key request URL, which is `token` by default
+                     * 
                      */
                     std::string GetTokenName() const;
 
                     /**
                      * 设置Token name in an SDMC key request URL, which is `token` by default
-                     * @param TokenName Token name in an SDMC key request URL, which is `token` by default
+                     * @param _tokenName Token name in an SDMC key request URL, which is `token` by default
+                     * 
                      */
                     void SetTokenName(const std::string& _tokenName);
 
                     /**
                      * 判断参数 TokenName 是否已赋值
                      * @return TokenName 是否已赋值
+                     * 
                      */
                     bool TokenNameHasBeenSet() const;
 

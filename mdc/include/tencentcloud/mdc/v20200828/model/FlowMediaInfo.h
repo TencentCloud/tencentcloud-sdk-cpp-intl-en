@@ -51,108 +51,126 @@ namespace TencentCloud
                     /**
                      * 获取The timestamp (seconds).
                      * @return Timestamp The timestamp (seconds).
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 设置The timestamp (seconds).
-                     * @param Timestamp The timestamp (seconds).
+                     * @param _timestamp The timestamp (seconds).
+                     * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
                     /**
                      * 获取The total bandwidth.
                      * @return Network The total bandwidth.
+                     * 
                      */
                     int64_t GetNetwork() const;
 
                     /**
                      * 设置The total bandwidth.
-                     * @param Network The total bandwidth.
+                     * @param _network The total bandwidth.
+                     * 
                      */
                     void SetNetwork(const int64_t& _network);
 
                     /**
                      * 判断参数 Network 是否已赋值
                      * @return Network 是否已赋值
+                     * 
                      */
                     bool NetworkHasBeenSet() const;
 
                     /**
                      * 获取The video data of the flow.
                      * @return Video The video data of the flow.
+                     * 
                      */
                     std::vector<FlowMediaVideo> GetVideo() const;
 
                     /**
                      * 设置The video data of the flow.
-                     * @param Video The video data of the flow.
+                     * @param _video The video data of the flow.
+                     * 
                      */
                     void SetVideo(const std::vector<FlowMediaVideo>& _video);
 
                     /**
                      * 判断参数 Video 是否已赋值
                      * @return Video 是否已赋值
+                     * 
                      */
                     bool VideoHasBeenSet() const;
 
                     /**
                      * 获取The audio data of the flow.
                      * @return Audio The audio data of the flow.
+                     * 
                      */
                     std::vector<FlowMediaAudio> GetAudio() const;
 
                     /**
                      * 设置The audio data of the flow.
-                     * @param Audio The audio data of the flow.
+                     * @param _audio The audio data of the flow.
+                     * 
                      */
                     void SetAudio(const std::vector<FlowMediaAudio>& _audio);
 
                     /**
                      * 判断参数 Audio 是否已赋值
                      * @return Audio 是否已赋值
+                     * 
                      */
                     bool AudioHasBeenSet() const;
 
                     /**
                      * 获取The ID of a push session.
                      * @return SessionId The ID of a push session.
+                     * 
                      */
                     std::string GetSessionId() const;
 
                     /**
                      * 设置The ID of a push session.
-                     * @param SessionId The ID of a push session.
+                     * @param _sessionId The ID of a push session.
+                     * 
                      */
                     void SetSessionId(const std::string& _sessionId);
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 
                     /**
                      * 获取The client IP.
                      * @return ClientIp The client IP.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置The client IP.
-                     * @param ClientIp The client IP.
+                     * @param _clientIp The client IP.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 

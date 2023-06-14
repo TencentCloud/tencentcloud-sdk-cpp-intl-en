@@ -66,6 +66,7 @@ namespace TencentCloud
 <li>`DockerStatus` - String - Optional - Docker installation status. Values: `ALL`; `INSTALL` (Installed); `UNINSTALL` (Not installed)</li>
 <li>`ProjectID` - String - Optional - Project ID</li>
 <li>`Tag:xxx(tag:key)` - String - Optional - Tag key-value pair; Example: `Filters":[{"Name":"tag:tke-kind","Values":["service"]}]`</li>
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
@@ -81,7 +82,7 @@ namespace TencentCloud
 <li>`DockerStatus` - String - Optional - Docker installation status. Values: `ALL`; `INSTALL` (Installed); `UNINSTALL` (Not installed)</li>
 <li>`ProjectID` - String - Optional - Project ID</li>
 <li>`Tag:xxx(tag:key)` - String - Optional - Tag key-value pair; Example: `Filters":[{"Name":"tag:tke-kind","Values":["service"]}]`</li>
-                     * @param Filters Filters.
+                     * @param _filters Filters.
 <li>`Status` - String - Optional - Agent status. Values: `ALL`; `UNINSTALL` (Not installed); `OFFLINE`, `ONLINE`. Default to `All` if it's not specified. </li>
 <li>`HostName` - String - Optional - Server name</li>
 <li>`Group - String - Optional - Server group</li>
@@ -92,102 +93,119 @@ namespace TencentCloud
 <li>`DockerStatus` - String - Optional - Docker installation status. Values: `ALL`; `INSTALL` (Installed); `UNINSTALL` (Not installed)</li>
 <li>`ProjectID` - String - Optional - Project ID</li>
 <li>`Tag:xxx(tag:key)` - String - Optional - Tag key-value pair; Example: `Filters":[{"Name":"tag:tke-kind","Values":["service"]}]`</li>
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Limit Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Limit Offset. Default value: `0`.
+                     * @param _limit Offset. Default value: `0`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The number of results to return. Default value: 10. Maximum value: 10,000.
                      * @return Offset The number of results to return. Default value: 10. Maximum value: 10,000.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The number of results to return. Default value: 10. Maximum value: 10,000.
-                     * @param Offset The number of results to return. Default value: 10. Maximum value: 10,000.
+                     * @param _offset The number of results to return. Default value: 10. Maximum value: 10,000.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return By Sorting field
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field
-                     * @param By Sorting field
+                     * @param _by Sorting field
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `asc`, `desc`.
                      * @return Order Valid values: `asc`, `desc`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Valid values: `asc`, `desc`.
-                     * @param Order Valid values: `asc`, `desc`.
+                     * @param _order Valid values: `asc`, `desc`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Export field
                      * @return ExportField Export field
+                     * 
                      */
                     std::vector<std::string> GetExportField() const;
 
                     /**
                      * 设置Export field
-                     * @param ExportField Export field
+                     * @param _exportField Export field
+                     * 
                      */
                     void SetExportField(const std::vector<std::string>& _exportField);
 
                     /**
                      * 判断参数 ExportField 是否已赋值
                      * @return ExportField 是否已赋值
+                     * 
                      */
                     bool ExportFieldHasBeenSet() const;
 

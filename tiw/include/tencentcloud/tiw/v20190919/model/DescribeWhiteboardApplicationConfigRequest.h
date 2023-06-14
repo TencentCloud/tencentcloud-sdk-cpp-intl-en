@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ transcode: Document transcoding.
                      * @return TaskTypes Task types to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
+                     * 
                      */
                     std::vector<std::string> GetTaskTypes() const;
 
@@ -74,33 +78,38 @@ transcode: Document transcoding.
                      * 设置Task types to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
-                     * @param TaskTypes Task types to be queried.
+                     * @param _taskTypes Task types to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
+                     * 
                      */
                     void SetTaskTypes(const std::vector<std::string>& _taskTypes);
 
                     /**
                      * 判断参数 TaskTypes 是否已赋值
                      * @return TaskTypes 是否已赋值
+                     * 
                      */
                     bool TaskTypesHasBeenSet() const;
 
                     /**
                      * 获取SdkAppIds to be used to query configurations.
                      * @return SdkAppIds SdkAppIds to be used to query configurations.
+                     * 
                      */
                     std::vector<int64_t> GetSdkAppIds() const;
 
                     /**
                      * 设置SdkAppIds to be used to query configurations.
-                     * @param SdkAppIds SdkAppIds to be used to query configurations.
+                     * @param _sdkAppIds SdkAppIds to be used to query configurations.
+                     * 
                      */
                     void SetSdkAppIds(const std::vector<int64_t>& _sdkAppIds);
 
                     /**
                      * 判断参数 SdkAppIds 是否已赋值
                      * @return SdkAppIds 是否已赋值
+                     * 
                      */
                     bool SdkAppIdsHasBeenSet() const;
 

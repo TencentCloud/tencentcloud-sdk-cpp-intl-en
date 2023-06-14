@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Attribute name. Up to 32 ASCII characters are allowed.
                      * @return Key Attribute name. Up to 32 ASCII characters are allowed.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Attribute name. Up to 32 ASCII characters are allowed.
-                     * @param Key Attribute name. Up to 32 ASCII characters are allowed.
+                     * @param _key Attribute name. Up to 32 ASCII characters are allowed.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Attribute value. Up to 96 ASCII characters are allowed.
                      * @return Value Attribute value. Up to 96 ASCII characters are allowed.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Attribute value. Up to 96 ASCII characters are allowed.
-                     * @param Value Attribute value. Up to 96 ASCII characters are allowed.
+                     * @param _value Attribute value. Up to 96 ASCII characters are allowed.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

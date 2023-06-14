@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Recipient group ID
                      * @return ReceiverId Recipient group ID
+                     * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
                      * 设置Recipient group ID
-                     * @param ReceiverId Recipient group ID
+                     * @param _receiverId Recipient group ID
+                     * 
                      */
                     void SetReceiverId(const uint64_t& _receiverId);
 
                     /**
                      * 判断参数 ReceiverId 是否已赋值
                      * @return ReceiverId 是否已赋值
+                     * 
                      */
                     bool ReceiverIdHasBeenSet() const;
 
                     /**
                      * 获取Email address
                      * @return Emails Email address
+                     * 
                      */
                     std::vector<std::string> GetEmails() const;
 
                     /**
                      * 设置Email address
-                     * @param Emails Email address
+                     * @param _emails Email address
+                     * 
                      */
                     void SetEmails(const std::vector<std::string>& _emails);
 
                     /**
                      * 判断参数 Emails 是否已赋值
                      * @return Emails 是否已赋值
+                     * 
                      */
                     bool EmailsHasBeenSet() const;
 

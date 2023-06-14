@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Returned results for the query
                      * @return Result Returned results for the query
+                     * 
                      */
                     ZoneResponse GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

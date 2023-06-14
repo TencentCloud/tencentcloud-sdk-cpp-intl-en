@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Topic ID
                      * @return TopicId Topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Topic ID
-                     * @param TopicId Topic ID
+                     * @param _topicId Topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name
                      * @return TopicName Topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-                     * @param TopicName Topic name
+                     * @param _topicName Topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable publishing
                      * @return Enabled Whether to enable publishing
+                     * 
                      */
                     int64_t GetEnabled() const;
 
                     /**
                      * 设置Whether to enable publishing
-                     * @param Enabled Whether to enable publishing
+                     * @param _enabled Whether to enable publishing
+                     * 
                      */
                     void SetEnabled(const int64_t& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CreateTime Creation time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Channel Either `cdn` or `ecdn`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetChannel() const;
 
                     /**
                      * 设置Either `cdn` or `ecdn`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Channel Either `cdn` or `ecdn`.
+                     * @param _channel Either `cdn` or `ecdn`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetChannel(const std::string& _channel);
 
                     /**
                      * 判断参数 Channel 是否已赋值
                      * @return Channel 是否已赋值
+                     * 
                      */
                     bool ChannelHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Deleted Whether the logset has been removed from CLS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDeleted() const;
 
                     /**
                      * 设置Whether the logset has been removed from CLS
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Deleted Whether the logset has been removed from CLS
+                     * @param _deleted Whether the logset has been removed from CLS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDeleted(const std::string& _deleted);
 
                     /**
                      * 判断参数 Deleted 是否已赋值
                      * @return Deleted 是否已赋值
+                     * 
                      */
                     bool DeletedHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Contact name, which needs to be unique and can contain 2-60 characters, supporting uppercase and lowercase letters, numbers, and underline “_”. It cannot start with “_”.
                      * @return Name Contact name, which needs to be unique and can contain 2-60 characters, supporting uppercase and lowercase letters, numbers, and underline “_”. It cannot start with “_”.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Contact name, which needs to be unique and can contain 2-60 characters, supporting uppercase and lowercase letters, numbers, and underline “_”. It cannot start with “_”.
-                     * @param Name Contact name, which needs to be unique and can contain 2-60 characters, supporting uppercase and lowercase letters, numbers, and underline “_”. It cannot start with “_”.
+                     * @param _name Contact name, which needs to be unique and can contain 2-60 characters, supporting uppercase and lowercase letters, numbers, and underline “_”. It cannot start with “_”.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Email address, which can contain uppercase and lowercase letters, numbers, and underline “_”, and cannot start with “_”.
                      * @return ContactInfo Email address, which can contain uppercase and lowercase letters, numbers, and underline “_”, and cannot start with “_”.
+                     * 
                      */
                     std::string GetContactInfo() const;
 
                     /**
                      * 设置Email address, which can contain uppercase and lowercase letters, numbers, and underline “_”, and cannot start with “_”.
-                     * @param ContactInfo Email address, which can contain uppercase and lowercase letters, numbers, and underline “_”, and cannot start with “_”.
+                     * @param _contactInfo Email address, which can contain uppercase and lowercase letters, numbers, and underline “_”, and cannot start with “_”.
+                     * 
                      */
                     void SetContactInfo(const std::string& _contactInfo);
 
                     /**
                      * 判断参数 ContactInfo 是否已赋值
                      * @return ContactInfo 是否已赋值
+                     * 
                      */
                     bool ContactInfoHasBeenSet() const;
 
                     /**
                      * 获取Service type, which is fixed to “mysql”.
                      * @return Product Service type, which is fixed to “mysql”.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type, which is fixed to “mysql”.
-                     * @param Product Service type, which is fixed to “mysql”.
+                     * @param _product Service type, which is fixed to “mysql”.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

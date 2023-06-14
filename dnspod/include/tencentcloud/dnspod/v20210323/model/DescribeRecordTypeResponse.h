@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取List of record types
                      * @return TypeList List of record types
+                     * 
                      */
                     std::vector<std::string> GetTypeList() const;
 
                     /**
                      * 判断参数 TypeList 是否已赋值
                      * @return TypeList 是否已赋值
+                     * 
                      */
                     bool TypeListHasBeenSet() const;
 

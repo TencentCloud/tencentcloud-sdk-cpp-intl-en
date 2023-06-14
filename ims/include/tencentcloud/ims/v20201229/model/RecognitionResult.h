@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Label Value: `Scene`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置Value: `Scene`
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Label Value: `Scene`
+                     * @param _label Value: `Scene`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Tags Hit tags under the `Label`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RecognitionTag> GetTags() const;
 
                     /**
                      * 设置Hit tags under the `Label`
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Tags Hit tags under the `Label`
+                     * @param _tags Hit tags under the `Label`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<RecognitionTag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

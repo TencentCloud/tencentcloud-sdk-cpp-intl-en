@@ -52,6 +52,7 @@ Sender <email address>
                      * @return FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
 To display the sender name, enter the address in the following format: 
 Sender <email address>
+                     * 
                      */
                     std::string GetFromEmailAddress() const;
 
@@ -59,195 +60,227 @@ Sender <email address>
                      * 设置Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
 To display the sender name, enter the address in the following format: 
 Sender <email address>
-                     * @param FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+                     * @param _fromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
 To display the sender name, enter the address in the following format: 
 Sender <email address>
+                     * 
                      */
                     void SetFromEmailAddress(const std::string& _fromEmailAddress);
 
                     /**
                      * 判断参数 FromEmailAddress 是否已赋值
                      * @return FromEmailAddress 是否已赋值
+                     * 
                      */
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
                      * 获取Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
                      * @return Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+                     * 
                      */
                     std::vector<std::string> GetDestination() const;
 
                     /**
                      * 设置Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
-                     * @param Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+                     * @param _destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+                     * 
                      */
                     void SetDestination(const std::vector<std::string>& _destination);
 
                     /**
                      * 判断参数 Destination 是否已赋值
                      * @return Destination 是否已赋值
+                     * 
                      */
                     bool DestinationHasBeenSet() const;
 
                     /**
                      * 获取Email subject.
                      * @return Subject Email subject.
+                     * 
                      */
                     std::string GetSubject() const;
 
                     /**
                      * 设置Email subject.
-                     * @param Subject Email subject.
+                     * @param _subject Email subject.
+                     * 
                      */
                     void SetSubject(const std::string& _subject);
 
                     /**
                      * 判断参数 Subject 是否已赋值
                      * @return Subject 是否已赋值
+                     * 
                      */
                     bool SubjectHasBeenSet() const;
 
                     /**
                      * 获取Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * 
                      */
                     std::string GetReplyToAddresses() const;
 
                     /**
                      * 设置Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
-                     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * @param _replyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * 
                      */
                     void SetReplyToAddresses(const std::string& _replyToAddresses);
 
                     /**
                      * 判断参数 ReplyToAddresses 是否已赋值
                      * @return ReplyToAddresses 是否已赋值
+                     * 
                      */
                     bool ReplyToAddressesHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Cc 
+                     * 
                      */
                     std::vector<std::string> GetCc() const;
 
                     /**
                      * 设置
-                     * @param Cc 
+                     * @param _cc 
+                     * 
                      */
                     void SetCc(const std::vector<std::string>& _cc);
 
                     /**
                      * 判断参数 Cc 是否已赋值
                      * @return Cc 是否已赋值
+                     * 
                      */
                     bool CcHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Bcc 
+                     * 
                      */
                     std::vector<std::string> GetBcc() const;
 
                     /**
                      * 设置
-                     * @param Bcc 
+                     * @param _bcc 
+                     * 
                      */
                     void SetBcc(const std::vector<std::string>& _bcc);
 
                     /**
                      * 判断参数 Bcc 是否已赋值
                      * @return Bcc 是否已赋值
+                     * 
                      */
                     bool BccHasBeenSet() const;
 
                     /**
                      * 获取Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
                      * @return Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+                     * 
                      */
                     Template GetTemplate() const;
 
                     /**
                      * 设置Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
-                     * @param Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+                     * @param _template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+                     * 
                      */
                     void SetTemplate(const Template& _template);
 
                     /**
                      * 判断参数 Template 是否已赋值
                      * @return Template 是否已赋值
+                     * 
                      */
                     bool TemplateHasBeenSet() const;
 
                     /**
                      * 获取Disused
                      * @return Simple Disused
+                     * 
                      */
                     Simple GetSimple() const;
 
                     /**
                      * 设置Disused
-                     * @param Simple Disused
+                     * @param _simple Disused
+                     * 
                      */
                     void SetSimple(const Simple& _simple);
 
                     /**
                      * 判断参数 Simple 是否已赋值
                      * @return Simple 是否已赋值
+                     * 
                      */
                     bool SimpleHasBeenSet() const;
 
                     /**
                      * 获取Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
                      * @return Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+                     * 
                      */
                     std::vector<Attachment> GetAttachments() const;
 
                     /**
                      * 设置Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
-                     * @param Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+                     * @param _attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+                     * 
                      */
                     void SetAttachments(const std::vector<Attachment>& _attachments);
 
                     /**
                      * 判断参数 Attachments 是否已赋值
                      * @return Attachments 是否已赋值
+                     * 
                      */
                     bool AttachmentsHasBeenSet() const;
 
                     /**
                      * 获取Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
                      * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * 
                      */
                     std::string GetUnsubscribe() const;
 
                     /**
                      * 设置Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
-                     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * @param _unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * 
                      */
                     void SetUnsubscribe(const std::string& _unsubscribe);
 
                     /**
                      * 判断参数 Unsubscribe 是否已赋值
                      * @return Unsubscribe 是否已赋值
+                     * 
                      */
                     bool UnsubscribeHasBeenSet() const;
 
                     /**
                      * 获取Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
                      * @return TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     * 
                      */
                     uint64_t GetTriggerType() const;
 
                     /**
                      * 设置Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
-                     * @param TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     * @param _triggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     * 
                      */
                     void SetTriggerType(const uint64_t& _triggerType);
 
                     /**
                      * 判断参数 TriggerType 是否已赋值
                      * @return TriggerType 是否已赋值
+                     * 
                      */
                     bool TriggerTypeHasBeenSet() const;
 

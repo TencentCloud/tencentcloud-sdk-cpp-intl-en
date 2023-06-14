@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The Unix timestamp (seconds) when the event occurred.
                      * @return Timestamp The Unix timestamp (seconds) when the event occurred.
+                     * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
                      * 设置The Unix timestamp (seconds) when the event occurred.
-                     * @param Timestamp The Unix timestamp (seconds) when the event occurred.
+                     * @param _timestamp The Unix timestamp (seconds) when the event occurred.
+                     * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
                      * @return EventType The event type. Valid values:
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+                     * 
                      */
                     std::string GetEventType() const;
 
                     /**
                      * 设置The event type. Valid values:
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
-                     * @param EventType The event type. Valid values:
+                     * @param _eventType The event type. Valid values:
 `RoomStart`: The class started. `RoomEnd`: The class ended. `MemberJoin`: A user joined. `MemberQuit`: A user left. `RecordFinish`: Recording is finished.
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
@@ -92,20 +98,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventData The details of the event, including the room ID and the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EventDataInfo GetEventData() const;
 
                     /**
                      * 设置The details of the event, including the room ID and the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EventData The details of the event, including the room ID and the user to whom the event occurred.
+                     * @param _eventData The details of the event, including the room ID and the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventData(const EventDataInfo& _eventData);
 
                     /**
                      * 判断参数 EventData 是否已赋值
                      * @return EventData 是否已赋值
+                     * 
                      */
                     bool EventDataHasBeenSet() const;
 

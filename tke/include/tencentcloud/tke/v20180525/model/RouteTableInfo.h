@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Route table name.
                      * @return RouteTableName Route table name.
+                     * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
                      * 设置Route table name.
-                     * @param RouteTableName Route table name.
+                     * @param _routeTableName Route table name.
+                     * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
 
                     /**
                      * 判断参数 RouteTableName 是否已赋值
                      * @return RouteTableName 是否已赋值
+                     * 
                      */
                     bool RouteTableNameHasBeenSet() const;
 
                     /**
                      * 获取Route table CIDR.
                      * @return RouteTableCidrBlock Route table CIDR.
+                     * 
                      */
                     std::string GetRouteTableCidrBlock() const;
 
                     /**
                      * 设置Route table CIDR.
-                     * @param RouteTableCidrBlock Route table CIDR.
+                     * @param _routeTableCidrBlock Route table CIDR.
+                     * 
                      */
                     void SetRouteTableCidrBlock(const std::string& _routeTableCidrBlock);
 
                     /**
                      * 判断参数 RouteTableCidrBlock 是否已赋值
                      * @return RouteTableCidrBlock 是否已赋值
+                     * 
                      */
                     bool RouteTableCidrBlockHasBeenSet() const;
 
                     /**
                      * 获取VPC instance ID.
                      * @return VpcId VPC instance ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID.
-                     * @param VpcId VPC instance ID.
+                     * @param _vpcId VPC instance ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 

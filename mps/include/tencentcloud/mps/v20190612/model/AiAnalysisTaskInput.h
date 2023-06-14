@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Video content analysis template ID.
                      * @return Definition Video content analysis template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Video content analysis template ID.
-                     * @param Definition Video content analysis template ID.
+                     * @param _definition Video content analysis template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ExtendedParameter An extended parameter, whose value is a stringfied JSON.
 Note: This parameter is for customers with special requirements. It needs to be customized offline.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExtendedParameter() const;
 
@@ -78,15 +82,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置An extended parameter, whose value is a stringfied JSON.
 Note: This parameter is for customers with special requirements. It needs to be customized offline.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExtendedParameter An extended parameter, whose value is a stringfied JSON.
+                     * @param _extendedParameter An extended parameter, whose value is a stringfied JSON.
 Note: This parameter is for customers with special requirements. It needs to be customized offline.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtendedParameter(const std::string& _extendedParameter);
 
                     /**
                      * 判断参数 ExtendedParameter 是否已赋值
                      * @return ExtendedParameter 是否已赋值
+                     * 
                      */
                     bool ExtendedParameterHasBeenSet() const;
 

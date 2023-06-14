@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Security policy ID
                      * @return PolicyId Security policy ID
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Security policy ID
-                     * @param PolicyId Security policy ID
+                     * @param _policyId Security policy ID
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取List of access rules
                      * @return RuleList List of access rules
+                     * 
                      */
                     std::vector<SecurityPolicyRuleIn> GetRuleList() const;
 
                     /**
                      * 设置List of access rules
-                     * @param RuleList List of access rules
+                     * @param _ruleList List of access rules
+                     * 
                      */
                     void SetRuleList(const std::vector<SecurityPolicyRuleIn>& _ruleList);
 
                     /**
                      * 判断参数 RuleList 是否已赋值
                      * @return RuleList 是否已赋值
+                     * 
                      */
                     bool RuleListHasBeenSet() const;
 

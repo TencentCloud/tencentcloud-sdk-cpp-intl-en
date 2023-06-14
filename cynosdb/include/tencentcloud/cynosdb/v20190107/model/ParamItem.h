@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Parameter name
                      * @return ParamName Parameter name
+                     * 
                      */
                     std::string GetParamName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param ParamName Parameter name
+                     * @param _paramName Parameter name
+                     * 
                      */
                     void SetParamName(const std::string& _paramName);
 
                     /**
                      * 判断参数 ParamName 是否已赋值
                      * @return ParamName 是否已赋值
+                     * 
                      */
                     bool ParamNameHasBeenSet() const;
 
                     /**
                      * 获取New value
                      * @return CurrentValue New value
+                     * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
                      * 设置New value
-                     * @param CurrentValue New value
+                     * @param _currentValue New value
+                     * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
                     /**
                      * 判断参数 CurrentValue 是否已赋值
                      * @return CurrentValue 是否已赋值
+                     * 
                      */
                     bool CurrentValueHasBeenSet() const;
 
                     /**
                      * 获取Original value
                      * @return OldValue Original value
+                     * 
                      */
                     std::string GetOldValue() const;
 
                     /**
                      * 设置Original value
-                     * @param OldValue Original value
+                     * @param _oldValue Original value
+                     * 
                      */
                     void SetOldValue(const std::string& _oldValue);
 
                     /**
                      * 判断参数 OldValue 是否已赋值
                      * @return OldValue 是否已赋值
+                     * 
                      */
                     bool OldValueHasBeenSet() const;
 

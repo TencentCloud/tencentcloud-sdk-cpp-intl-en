@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Customer asset ID
                      * @return CustomerAssetId Customer asset ID
+                     * 
                      */
                     uint64_t GetCustomerAssetId() const;
 
                     /**
                      * 设置Customer asset ID
-                     * @param CustomerAssetId Customer asset ID
+                     * @param _customerAssetId Customer asset ID
+                     * 
                      */
                     void SetCustomerAssetId(const uint64_t& _customerAssetId);
 
                     /**
                      * 判断参数 CustomerAssetId 是否已赋值
                      * @return CustomerAssetId 是否已赋值
+                     * 
                      */
                     bool CustomerAssetIdHasBeenSet() const;
 

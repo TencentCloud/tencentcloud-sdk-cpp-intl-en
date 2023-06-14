@@ -55,6 +55,7 @@ Currently, other recipient types are not supported.
 <br><li> `Uin`: user ID
 <br><li> `Group`: user group ID
 Currently, other recipient types are not supported.
+                     * 
                      */
                     std::string GetReceiverType() const;
 
@@ -63,34 +64,39 @@ Currently, other recipient types are not supported.
 <br><li> `Uin`: user ID
 <br><li> `Group`: user group ID
 Currently, other recipient types are not supported.
-                     * @param ReceiverType Recipient type. Valid values:
+                     * @param _receiverType Recipient type. Valid values:
 <br><li> `Uin`: user ID
 <br><li> `Group`: user group ID
 Currently, other recipient types are not supported.
+                     * 
                      */
                     void SetReceiverType(const std::string& _receiverType);
 
                     /**
                      * 判断参数 ReceiverType 是否已赋值
                      * @return ReceiverType 是否已赋值
+                     * 
                      */
                     bool ReceiverTypeHasBeenSet() const;
 
                     /**
                      * 获取Recipient
                      * @return ReceiverIds Recipient
+                     * 
                      */
                     std::vector<int64_t> GetReceiverIds() const;
 
                     /**
                      * 设置Recipient
-                     * @param ReceiverIds Recipient
+                     * @param _receiverIds Recipient
+                     * 
                      */
                     void SetReceiverIds(const std::vector<int64_t>& _receiverIds);
 
                     /**
                      * 判断参数 ReceiverIds 是否已赋值
                      * @return ReceiverIds 是否已赋值
+                     * 
                      */
                     bool ReceiverIdsHasBeenSet() const;
 
@@ -105,6 +111,7 @@ Currently, other recipient types are not supported.
 <br><li> `Sms`: SMS
 <br><li> `WeChat`: WeChat
 <br><li> `Phone`: phone
+                     * 
                      */
                     std::vector<std::string> GetReceiverChannels() const;
 
@@ -114,71 +121,82 @@ Currently, other recipient types are not supported.
 <br><li> `Sms`: SMS
 <br><li> `WeChat`: WeChat
 <br><li> `Phone`: phone
-                     * @param ReceiverChannels Notification method
+                     * @param _receiverChannels Notification method
 <br><li> `Email`: email
 <br><li> `Sms`: SMS
 <br><li> `WeChat`: WeChat
 <br><li> `Phone`: phone
+                     * 
                      */
                     void SetReceiverChannels(const std::vector<std::string>& _receiverChannels);
 
                     /**
                      * 判断参数 ReceiverChannels 是否已赋值
                      * @return ReceiverChannels 是否已赋值
+                     * 
                      */
                     bool ReceiverChannelsHasBeenSet() const;
 
                     /**
                      * 获取Start time for allowed message receipt
                      * @return StartTime Start time for allowed message receipt
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time for allowed message receipt
-                     * @param StartTime Start time for allowed message receipt
+                     * @param _startTime Start time for allowed message receipt
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time for allowed message receipt
                      * @return EndTime End time for allowed message receipt
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time for allowed message receipt
-                     * @param EndTime End time for allowed message receipt
+                     * @param _endTime End time for allowed message receipt
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Index
                      * @return Index Index
+                     * 
                      */
                     int64_t GetIndex() const;
 
                     /**
                      * 设置Index
-                     * @param Index Index
+                     * @param _index Index
+                     * 
                      */
                     void SetIndex(const int64_t& _index);
 
                     /**
                      * 判断参数 Index 是否已赋值
                      * @return Index 是否已赋值
+                     * 
                      */
                     bool IndexHasBeenSet() const;
 

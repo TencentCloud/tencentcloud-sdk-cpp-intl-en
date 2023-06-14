@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取DNS query volume in the current statistical dimension
                      * @return Num DNS query volume in the current statistical dimension
+                     * 
                      */
                     uint64_t GetNum() const;
 
                     /**
                      * 设置DNS query volume in the current statistical dimension
-                     * @param Num DNS query volume in the current statistical dimension
+                     * @param _num DNS query volume in the current statistical dimension
+                     * 
                      */
                     void SetNum(const uint64_t& _num);
 
                     /**
                      * 判断参数 Num 是否已赋值
                      * @return Num 是否已赋值
+                     * 
                      */
                     bool NumHasBeenSet() const;
 
                     /**
                      * 获取Collection date for daily collection
                      * @return DateKey Collection date for daily collection
+                     * 
                      */
                     std::string GetDateKey() const;
 
                     /**
                      * 设置Collection date for daily collection
-                     * @param DateKey Collection date for daily collection
+                     * @param _dateKey Collection date for daily collection
+                     * 
                      */
                     void SetDateKey(const std::string& _dateKey);
 
                     /**
                      * 判断参数 DateKey 是否已赋值
                      * @return DateKey 是否已赋值
+                     * 
                      */
                     bool DateKeyHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HourKey The last hour (0–23) for hourly collection. For example, if `HourKey` is `23`, the DNS query volume in the statistical period of 22:00–23:00 will be collected.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetHourKey() const;
 
                     /**
                      * 设置The last hour (0–23) for hourly collection. For example, if `HourKey` is `23`, the DNS query volume in the statistical period of 22:00–23:00 will be collected.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HourKey The last hour (0–23) for hourly collection. For example, if `HourKey` is `23`, the DNS query volume in the statistical period of 22:00–23:00 will be collected.
+                     * @param _hourKey The last hour (0–23) for hourly collection. For example, if `HourKey` is `23`, the DNS query volume in the statistical period of 22:00–23:00 will be collected.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHourKey(const uint64_t& _hourKey);
 
                     /**
                      * 判断参数 HourKey 是否已赋值
                      * @return HourKey 是否已赋值
+                     * 
                      */
                     bool HourKeyHasBeenSet() const;
 

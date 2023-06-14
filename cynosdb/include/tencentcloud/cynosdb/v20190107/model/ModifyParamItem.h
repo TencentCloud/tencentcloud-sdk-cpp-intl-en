@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Parameter name
                      * @return ParamName Parameter name
+                     * 
                      */
                     std::string GetParamName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param ParamName Parameter name
+                     * @param _paramName Parameter name
+                     * 
                      */
                     void SetParamName(const std::string& _paramName);
 
                     /**
                      * 判断参数 ParamName 是否已赋值
                      * @return ParamName 是否已赋值
+                     * 
                      */
                     bool ParamNameHasBeenSet() const;
 
                     /**
                      * 获取Current parameter value
                      * @return CurrentValue Current parameter value
+                     * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
                      * 设置Current parameter value
-                     * @param CurrentValue Current parameter value
+                     * @param _currentValue Current parameter value
+                     * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
                     /**
                      * 判断参数 CurrentValue 是否已赋值
                      * @return CurrentValue 是否已赋值
+                     * 
                      */
                     bool CurrentValueHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OldValue Old parameter value, which is used only in output parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOldValue() const;
 
                     /**
                      * 设置Old parameter value, which is used only in output parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OldValue Old parameter value, which is used only in output parameters.
+                     * @param _oldValue Old parameter value, which is used only in output parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOldValue(const std::string& _oldValue);
 
                     /**
                      * 判断参数 OldValue 是否已赋值
                      * @return OldValue 是否已赋值
+                     * 
                      */
                     bool OldValueHasBeenSet() const;
 

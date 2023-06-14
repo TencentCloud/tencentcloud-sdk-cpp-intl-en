@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Dimension
                      * @return Key Dimension
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Dimension
-                     * @param Key Dimension
+                     * @param _key Dimension
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Operator. Valid values: eq (equal to), ne (not equal to), in
                      * @return Operator Operator. Valid values: eq (equal to), ne (not equal to), in
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Operator. Valid values: eq (equal to), ne (not equal to), in
-                     * @param Operator Operator. Valid values: eq (equal to), ne (not equal to), in
+                     * @param _operator Operator. Valid values: eq (equal to), ne (not equal to), in
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Dimension value. If `Operator` is `eq` or `ne`, only the first element will be used
                      * @return Value Dimension value. If `Operator` is `eq` or `ne`, only the first element will be used
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
                      * 设置Dimension value. If `Operator` is `eq` or `ne`, only the first element will be used
-                     * @param Value Dimension value. If `Operator` is `eq` or `ne`, only the first element will be used
+                     * @param _value Dimension value. If `Operator` is `eq` or `ne`, only the first element will be used
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

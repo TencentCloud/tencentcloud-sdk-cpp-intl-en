@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
                      * @return SelectRowsPerTable Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
+                     * 
                      */
                     int64_t GetSelectRowsPerTable() const;
 
                     /**
                      * 设置Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
-                     * @param SelectRowsPerTable Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
+                     * @param _selectRowsPerTable Data content check parameter, which refers to the proportion of the rows selected for data comparison in all the rows of the table. Value: an integer between 1 and 100.
+                     * 
                      */
                     void SetSelectRowsPerTable(const int64_t& _selectRowsPerTable);
 
                     /**
                      * 判断参数 SelectRowsPerTable 是否已赋值
                      * @return SelectRowsPerTable 是否已赋值
+                     * 
                      */
                     bool SelectRowsPerTableHasBeenSet() const;
 
                     /**
                      * 获取Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
                      * @return TablesSelectAll Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
+                     * 
                      */
                     int64_t GetTablesSelectAll() const;
 
                     /**
                      * 设置Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
-                     * @param TablesSelectAll Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
+                     * @param _tablesSelectAll Data content check parameter, which refers to the proportion of the tables selected for data detection in all the tables. Value: an integer between 1 and 100.
+                     * 
                      */
                     void SetTablesSelectAll(const int64_t& _tablesSelectAll);
 
                     /**
                      * 判断参数 TablesSelectAll 是否已赋值
                      * @return TablesSelectAll 是否已赋值
+                     * 
                      */
                     bool TablesSelectAllHasBeenSet() const;
 
                     /**
                      * 获取Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
                      * @return TablesSelectCount Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
+                     * 
                      */
                     int64_t GetTablesSelectCount() const;
 
                     /**
                      * 设置Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
-                     * @param TablesSelectCount Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
+                     * @param _tablesSelectCount Data quantity check parameter, which checks whether the numbers of rows are identical. It refers to the proportion of the tables selected for quantity check in all the tables. Value: an integer between 1 and 100.
+                     * 
                      */
                     void SetTablesSelectCount(const int64_t& _tablesSelectCount);
 
                     /**
                      * 判断参数 TablesSelectCount 是否已赋值
                      * @return TablesSelectCount 是否已赋值
+                     * 
                      */
                     bool TablesSelectCountHasBeenSet() const;
 

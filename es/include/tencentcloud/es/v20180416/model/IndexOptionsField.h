@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ExpireMaxAge Max age for expiry purpose
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetExpireMaxAge() const;
 
                     /**
                      * 设置Max age for expiry purpose
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ExpireMaxAge Max age for expiry purpose
+                     * @param _expireMaxAge Max age for expiry purpose
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetExpireMaxAge(const std::string& _expireMaxAge);
 
                     /**
                      * 判断参数 ExpireMaxAge 是否已赋值
                      * @return ExpireMaxAge 是否已赋值
+                     * 
                      */
                     bool ExpireMaxAgeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ExpireMaxSize Max size for expiry purpose
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetExpireMaxSize() const;
 
                     /**
                      * 设置Max size for expiry purpose
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ExpireMaxSize Max size for expiry purpose
+                     * @param _expireMaxSize Max size for expiry purpose
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetExpireMaxSize(const std::string& _expireMaxSize);
 
                     /**
                      * 判断参数 ExpireMaxSize 是否已赋值
                      * @return ExpireMaxSize 是否已赋值
+                     * 
                      */
                     bool ExpireMaxSizeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RolloverMaxAge Rollover cycle
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRolloverMaxAge() const;
 
                     /**
                      * 设置Rollover cycle
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RolloverMaxAge Rollover cycle
+                     * @param _rolloverMaxAge Rollover cycle
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRolloverMaxAge(const std::string& _rolloverMaxAge);
 
                     /**
                      * 判断参数 RolloverMaxAge 是否已赋值
                      * @return RolloverMaxAge 是否已赋值
+                     * 
                      */
                     bool RolloverMaxAgeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RolloverDynamic Whether to enable the dynamic rollover
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRolloverDynamic() const;
 
                     /**
                      * 设置Whether to enable the dynamic rollover
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RolloverDynamic Whether to enable the dynamic rollover
+                     * @param _rolloverDynamic Whether to enable the dynamic rollover
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRolloverDynamic(const std::string& _rolloverDynamic);
 
                     /**
                      * 判断参数 RolloverDynamic 是否已赋值
                      * @return RolloverDynamic 是否已赋值
+                     * 
                      */
                     bool RolloverDynamicHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ShardNumDynamic Whether to enable dynamic sharding
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetShardNumDynamic() const;
 
                     /**
                      * 设置Whether to enable dynamic sharding
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ShardNumDynamic Whether to enable dynamic sharding
+                     * @param _shardNumDynamic Whether to enable dynamic sharding
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetShardNumDynamic(const std::string& _shardNumDynamic);
 
                     /**
                      * 判断参数 ShardNumDynamic 是否已赋值
                      * @return ShardNumDynamic 是否已赋值
+                     * 
                      */
                     bool ShardNumDynamicHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TimestampField Timestamp field
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetTimestampField() const;
 
                     /**
                      * 设置Timestamp field
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TimestampField Timestamp field
+                     * @param _timestampField Timestamp field
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTimestampField(const std::string& _timestampField);
 
                     /**
                      * 判断参数 TimestampField 是否已赋值
                      * @return TimestampField 是否已赋值
+                     * 
                      */
                     bool TimestampFieldHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return WriteMode Write mode
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetWriteMode() const;
 
                     /**
                      * 设置Write mode
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param WriteMode Write mode
+                     * @param _writeMode Write mode
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetWriteMode(const std::string& _writeMode);
 
                     /**
                      * 判断参数 WriteMode 是否已赋值
                      * @return WriteMode 是否已赋值
+                     * 
                      */
                     bool WriteModeHasBeenSet() const;
 

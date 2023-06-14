@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Tag name.
                      * @return Tag Tag name.
+                     * 
                      */
                     std::string GetTag() const;
 
                     /**
                      * 设置Tag name.
-                     * @param Tag Tag name.
+                     * @param _tag Tag name.
+                     * 
                      */
                     void SetTag(const std::string& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
                     /**
                      * 获取Confidence of tag between 0 and 100.
                      * @return Confidence Confidence of tag between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of tag between 0 and 100.
-                     * @param Confidence Confidence of tag between 0 and 100.
+                     * @param _confidence Confidence of tag between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 

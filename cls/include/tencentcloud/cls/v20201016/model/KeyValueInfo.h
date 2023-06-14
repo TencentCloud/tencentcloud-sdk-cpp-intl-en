@@ -62,6 +62,7 @@ For a metadata field, set its `Key` to be consistent with the one for log upload
 2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
 3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
 4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
+                     * 
                      */
                     std::string GetKey() const;
 
@@ -73,37 +74,42 @@ For a metadata field, set its `Key` to be consistent with the one for log upload
 2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
 3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
 4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
-                     * @param Key Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+                     * @param _key Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
 
 Note:
 For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
 2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
 3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
 4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Field index description information
                      * @return Value Field index description information
+                     * 
                      */
                     ValueInfo GetValue() const;
 
                     /**
                      * 设置Field index description information
-                     * @param Value Field index description information
+                     * @param _value Field index description information
+                     * 
                      */
                     void SetValue(const ValueInfo& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

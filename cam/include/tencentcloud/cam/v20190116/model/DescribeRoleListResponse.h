@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return List Role details list
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<RoleInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
                     /**
                      * 获取Total number of roles
                      * @return TotalNum Total number of roles
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 

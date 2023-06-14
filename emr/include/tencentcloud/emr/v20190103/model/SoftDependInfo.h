@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The component name.
                      * @return SoftName The component name.
+                     * 
                      */
                     std::string GetSoftName() const;
 
                     /**
                      * 设置The component name.
-                     * @param SoftName The component name.
+                     * @param _softName The component name.
+                     * 
                      */
                     void SetSoftName(const std::string& _softName);
 
                     /**
                      * 判断参数 SoftName 是否已赋值
                      * @return SoftName 是否已赋值
+                     * 
                      */
                     bool SoftNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the component is required.
                      * @return Required Whether the component is required.
+                     * 
                      */
                     bool GetRequired() const;
 
                     /**
                      * 设置Whether the component is required.
-                     * @param Required Whether the component is required.
+                     * @param _required Whether the component is required.
+                     * 
                      */
                     void SetRequired(const bool& _required);
 
                     /**
                      * 判断参数 Required 是否已赋值
                      * @return Required 是否已赋值
+                     * 
                      */
                     bool RequiredHasBeenSet() const;
 

@@ -58,6 +58,7 @@ A specific domain name: This indicates the details of this domain name
 multiDomains: This indicates the aggregate details of multiple domain names
 Project ID: This displays the ID of the specifically queried project
 all: This indicates the details at the account level
+                     * 
                      */
                     std::string GetResource() const;
 
@@ -67,35 +68,40 @@ A specific domain name: This indicates the details of this domain name
 multiDomains: This indicates the aggregate details of multiple domain names
 Project ID: This displays the ID of the specifically queried project
 all: This indicates the details at the account level
-                     * @param Resource Resource name, which is classified as follows based on different query conditions:
+                     * @param _resource Resource name, which is classified as follows based on different query conditions:
 A specific domain name: This indicates the details of this domain name
 multiDomains: This indicates the aggregate details of multiple domain names
 Project ID: This displays the ID of the specifically queried project
 all: This indicates the details at the account level
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取Detailed sorting results
                      * @return DetailData Detailed sorting results
+                     * 
                      */
                     std::vector<TopDetailData> GetDetailData() const;
 
                     /**
                      * 设置Detailed sorting results
-                     * @param DetailData Detailed sorting results
+                     * @param _detailData Detailed sorting results
+                     * 
                      */
                     void SetDetailData(const std::vector<TopDetailData>& _detailData);
 
                     /**
                      * 判断参数 DetailData 是否已赋值
                      * @return DetailData 是否已赋值
+                     * 
                      */
                     bool DetailDataHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of an intelligent highlight generating task. Valid values:
 <li>ON: enable an intelligent highlight generating task;</li>
 <li>OFF: disable an intelligent highlight generating task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of an intelligent highlight generating task. Valid values:
 <li>ON: enable an intelligent highlight generating task;</li>
 <li>OFF: disable an intelligent highlight generating task.</li>
-                     * @param Switch Switch of an intelligent highlight generating task. Valid values:
+                     * @param _switch Switch of an intelligent highlight generating task. Valid values:
 <li>ON: enable an intelligent highlight generating task;</li>
 <li>OFF: disable an intelligent highlight generating task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

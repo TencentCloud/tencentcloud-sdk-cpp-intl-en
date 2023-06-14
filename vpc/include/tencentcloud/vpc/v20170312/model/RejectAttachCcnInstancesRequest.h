@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-f49l6u0z`.
                      * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-f49l6u0z`.
-                     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * @param _ccnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取The list of instances whose association is rejected.
                      * @return Instances The list of instances whose association is rejected.
+                     * 
                      */
                     std::vector<CcnInstance> GetInstances() const;
 
                     /**
                      * 设置The list of instances whose association is rejected.
-                     * @param Instances The list of instances whose association is rejected.
+                     * @param _instances The list of instances whose association is rejected.
+                     * 
                      */
                     void SetInstances(const std::vector<CcnInstance>& _instances);
 
                     /**
                      * 判断参数 Instances 是否已赋值
                      * @return Instances 是否已赋值
+                     * 
                      */
                     bool InstancesHasBeenSet() const;
 

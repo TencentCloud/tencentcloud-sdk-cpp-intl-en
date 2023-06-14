@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取User-side IP range.
                      * @return Cidr User-side IP range.
+                     * 
                      */
                     std::string GetCidr() const;
 
                     /**
                      * 设置User-side IP range.
-                     * @param Cidr User-side IP range.
+                     * @param _cidr User-side IP range.
+                     * 
                      */
                     void SetCidr(const std::string& _cidr);
 
                     /**
                      * 判断参数 Cidr 是否已赋值
                      * @return Cidr 是否已赋值
+                     * 
                      */
                     bool CidrHasBeenSet() const;
 

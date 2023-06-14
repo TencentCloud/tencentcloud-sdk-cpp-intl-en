@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of tag retention policies
                      * @return RetentionPolicyList List of tag retention policies
+                     * 
                      */
                     std::vector<RetentionPolicy> GetRetentionPolicyList() const;
 
                     /**
                      * 判断参数 RetentionPolicyList 是否已赋值
                      * @return RetentionPolicyList 是否已赋值
+                     * 
                      */
                     bool RetentionPolicyListHasBeenSet() const;
 
                     /**
                      * 获取Total number of tag retention policies
                      * @return TotalCount Total number of tag retention policies
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

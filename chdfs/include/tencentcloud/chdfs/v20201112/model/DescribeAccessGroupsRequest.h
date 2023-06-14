@@ -47,38 +47,44 @@ namespace TencentCloud
 Note: either `VpcId` or `OwnerUin` can be specified as the input parameter
                      * @return VpcId VPC ID
 Note: either `VpcId` or `OwnerUin` can be specified as the input parameter
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
 Note: either `VpcId` or `OwnerUin` can be specified as the input parameter
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
 Note: either `VpcId` or `OwnerUin` can be specified as the input parameter
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Resource owner `Uin`
                      * @return OwnerUin Resource owner `Uin`
+                     * 
                      */
                     uint64_t GetOwnerUin() const;
 
                     /**
                      * 设置Resource owner `Uin`
-                     * @param OwnerUin Resource owner `Uin`
+                     * @param _ownerUin Resource owner `Uin`
+                     * 
                      */
                     void SetOwnerUin(const uint64_t& _ownerUin);
 
                     /**
                      * 判断参数 OwnerUin 是否已赋值
                      * @return OwnerUin 是否已赋值
+                     * 
                      */
                     bool OwnerUinHasBeenSet() const;
 

@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableName Table name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableName Table name
+                     * @param _tableName Table name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableInstanceId Table instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableInstanceId() const;
 
                     /**
                      * 设置Table instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableInstanceId Table instance ID
+                     * @param _tableInstanceId Table instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableInstanceId(const std::string& _tableInstanceId);
 
                     /**
                      * 判断参数 TableInstanceId 是否已赋值
                      * @return TableInstanceId 是否已赋值
+                     * 
                      */
                     bool TableInstanceIdHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableType Table data structure type, such as `GENERIC` or `LIST`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableType() const;
 
                     /**
                      * 设置Table data structure type, such as `GENERIC` or `LIST`
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableType Table data structure type, such as `GENERIC` or `LIST`
+                     * @param _tableType Table data structure type, such as `GENERIC` or `LIST`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableType(const std::string& _tableType);
 
                     /**
                      * 判断参数 TableType 是否已赋值
                      * @return TableType 是否已赋值
+                     * 
                      */
                     bool TableTypeHasBeenSet() const;
 
@@ -120,20 +129,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableIdlType Table data interface description language (IDL) type, such as `PROTO` or `TDR`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableIdlType() const;
 
                     /**
                      * 设置Table data interface description language (IDL) type, such as `PROTO` or `TDR`
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableIdlType Table data interface description language (IDL) type, such as `PROTO` or `TDR`
+                     * @param _tableIdlType Table data interface description language (IDL) type, such as `PROTO` or `TDR`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableIdlType(const std::string& _tableIdlType);
 
                     /**
                      * 判断参数 TableIdlType 是否已赋值
                      * @return TableIdlType 是否已赋值
+                     * 
                      */
                     bool TableIdlTypeHasBeenSet() const;
 
@@ -142,20 +154,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClusterId ID of the cluster where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterId ID of the cluster where a table resides
+                     * @param _clusterId ID of the cluster where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -164,20 +179,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClusterName Name of the cluster where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Name of the cluster where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterName Name of the cluster where a table resides
+                     * @param _clusterName Name of the cluster where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
@@ -186,20 +204,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableGroupId ID of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置ID of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableGroupId ID of the table group where a table resides
+                     * @param _tableGroupId ID of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
@@ -208,20 +229,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableGroupName Name of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableGroupName() const;
 
                     /**
                      * 设置Name of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableGroupName Name of the table group where a table resides
+                     * @param _tableGroupName Name of the table group where a table resides
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableGroupName(const std::string& _tableGroupName);
 
                     /**
                      * 判断参数 TableGroupName 是否已赋值
                      * @return TableGroupName 是否已赋值
+                     * 
                      */
                     bool TableGroupNameHasBeenSet() const;
 
@@ -230,20 +254,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyStruct JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyStruct() const;
 
                     /**
                      * 设置JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeyStruct JSON string of table's primary key field structure
+                     * @param _keyStruct JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeyStruct(const std::string& _keyStruct);
 
                     /**
                      * 判断参数 KeyStruct 是否已赋值
                      * @return KeyStruct 是否已赋值
+                     * 
                      */
                     bool KeyStructHasBeenSet() const;
 
@@ -252,20 +279,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ValueStruct JSON string of table non-primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetValueStruct() const;
 
                     /**
                      * 设置JSON string of table non-primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ValueStruct JSON string of table non-primary key field structure
+                     * @param _valueStruct JSON string of table non-primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValueStruct(const std::string& _valueStruct);
 
                     /**
                      * 判断参数 ValueStruct 是否已赋值
                      * @return ValueStruct 是否已赋值
+                     * 
                      */
                     bool ValueStructHasBeenSet() const;
 
@@ -274,20 +304,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ShardingKeySet Table shardkey set, which is valid for PROTO-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetShardingKeySet() const;
 
                     /**
                      * 设置Table shardkey set, which is valid for PROTO-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ShardingKeySet Table shardkey set, which is valid for PROTO-type tables
+                     * @param _shardingKeySet Table shardkey set, which is valid for PROTO-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetShardingKeySet(const std::string& _shardingKeySet);
 
                     /**
                      * 判断参数 ShardingKeySet 是否已赋值
                      * @return ShardingKeySet 是否已赋值
+                     * 
                      */
                     bool ShardingKeySetHasBeenSet() const;
 
@@ -296,20 +329,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IndexStruct Table index key field set, which is valid for PROTO-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIndexStruct() const;
 
                     /**
                      * 设置Table index key field set, which is valid for PROTO-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IndexStruct Table index key field set, which is valid for PROTO-type tables
+                     * @param _indexStruct Table index key field set, which is valid for PROTO-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIndexStruct(const std::string& _indexStruct);
 
                     /**
                      * 判断参数 IndexStruct 是否已赋值
                      * @return IndexStruct 是否已赋值
+                     * 
                      */
                     bool IndexStructHasBeenSet() const;
 
@@ -318,20 +354,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListElementNum Number of LIST-type table elements
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetListElementNum() const;
 
                     /**
                      * 设置Number of LIST-type table elements
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListElementNum Number of LIST-type table elements
+                     * @param _listElementNum Number of LIST-type table elements
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListElementNum(const uint64_t& _listElementNum);
 
                     /**
                      * 判断参数 ListElementNum 是否已赋值
                      * @return ListElementNum 是否已赋值
+                     * 
                      */
                     bool ListElementNumHasBeenSet() const;
 
@@ -340,20 +379,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IdlFiles Information list of IDL files associated with table
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IdlFileInfo> GetIdlFiles() const;
 
                     /**
                      * 设置Information list of IDL files associated with table
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IdlFiles Information list of IDL files associated with table
+                     * @param _idlFiles Information list of IDL files associated with table
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIdlFiles(const std::vector<IdlFileInfo>& _idlFiles);
 
                     /**
                      * 判断参数 IdlFiles 是否已赋值
                      * @return IdlFiles 是否已赋值
+                     * 
                      */
                     bool IdlFilesHasBeenSet() const;
 
@@ -362,20 +404,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ReservedVolume Reserved table capacity in GB
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetReservedVolume() const;
 
                     /**
                      * 设置Reserved table capacity in GB
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReservedVolume Reserved table capacity in GB
+                     * @param _reservedVolume Reserved table capacity in GB
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReservedVolume(const int64_t& _reservedVolume);
 
                     /**
                      * 判断参数 ReservedVolume 是否已赋值
                      * @return ReservedVolume 是否已赋值
+                     * 
                      */
                     bool ReservedVolumeHasBeenSet() const;
 
@@ -384,20 +429,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ReservedReadQps Reserved table read QPS
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetReservedReadQps() const;
 
                     /**
                      * 设置Reserved table read QPS
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReservedReadQps Reserved table read QPS
+                     * @param _reservedReadQps Reserved table read QPS
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReservedReadQps(const int64_t& _reservedReadQps);
 
                     /**
                      * 判断参数 ReservedReadQps 是否已赋值
                      * @return ReservedReadQps 是否已赋值
+                     * 
                      */
                     bool ReservedReadQpsHasBeenSet() const;
 
@@ -406,20 +454,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ReservedWriteQps Reserved table write QPS
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetReservedWriteQps() const;
 
                     /**
                      * 设置Reserved table write QPS
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReservedWriteQps Reserved table write QPS
+                     * @param _reservedWriteQps Reserved table write QPS
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReservedWriteQps(const int64_t& _reservedWriteQps);
 
                     /**
                      * 判断参数 ReservedWriteQps 是否已赋值
                      * @return ReservedWriteQps 是否已赋值
+                     * 
                      */
                     bool ReservedWriteQpsHasBeenSet() const;
 
@@ -428,20 +479,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableSize Actual table data size in MB
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTableSize() const;
 
                     /**
                      * 设置Actual table data size in MB
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableSize Actual table data size in MB
+                     * @param _tableSize Actual table data size in MB
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableSize(const int64_t& _tableSize);
 
                     /**
                      * 判断参数 TableSize 是否已赋值
                      * @return TableSize 是否已赋值
+                     * 
                      */
                     bool TableSizeHasBeenSet() const;
 
@@ -450,20 +504,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Status Table status
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Table status
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status Table status
+                     * @param _status Table status
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -472,20 +529,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Table creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Table creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Table creation time
+                     * @param _createdTime Table creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -494,20 +554,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UpdatedTime Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
                      * 设置Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UpdatedTime Table's last modified time
+                     * @param _updatedTime Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
 
                     /**
                      * 判断参数 UpdatedTime 是否已赋值
                      * @return UpdatedTime 是否已赋值
+                     * 
                      */
                     bool UpdatedTimeHasBeenSet() const;
 
@@ -516,20 +579,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Memo Table remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMemo() const;
 
                     /**
                      * 设置Table remarks
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Memo Table remarks
+                     * @param _memo Table remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMemo(const std::string& _memo);
 
                     /**
                      * 判断参数 Memo 是否已赋值
                      * @return Memo 是否已赋值
+                     * 
                      */
                     bool MemoHasBeenSet() const;
 
@@ -538,20 +604,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Error Error message
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ErrorInfo GetError() const;
 
                     /**
                      * 设置Error message
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Error Error message
+                     * @param _error Error message
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetError(const ErrorInfo& _error);
 
                     /**
                      * 判断参数 Error 是否已赋值
                      * @return Error 是否已赋值
+                     * 
                      */
                     bool ErrorHasBeenSet() const;
 
@@ -560,20 +629,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAccessId TcaplusDB SDK data access ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiAccessId() const;
 
                     /**
                      * 设置TcaplusDB SDK data access ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAccessId TcaplusDB SDK data access ID
+                     * @param _apiAccessId TcaplusDB SDK data access ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAccessId(const std::string& _apiAccessId);
 
                     /**
                      * 判断参数 ApiAccessId 是否已赋值
                      * @return ApiAccessId 是否已赋值
+                     * 
                      */
                     bool ApiAccessIdHasBeenSet() const;
 
@@ -582,20 +654,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SortFieldNum Number of SORTLIST-type table sort fields
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSortFieldNum() const;
 
                     /**
                      * 设置Number of SORTLIST-type table sort fields
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SortFieldNum Number of SORTLIST-type table sort fields
+                     * @param _sortFieldNum Number of SORTLIST-type table sort fields
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSortFieldNum(const int64_t& _sortFieldNum);
 
                     /**
                      * 判断参数 SortFieldNum 是否已赋值
                      * @return SortFieldNum 是否已赋值
+                     * 
                      */
                     bool SortFieldNumHasBeenSet() const;
 
@@ -604,20 +679,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SortRule Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSortRule() const;
 
                     /**
                      * 设置Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SortRule Sort order of SORTLIST-type tables
+                     * @param _sortRule Sort order of SORTLIST-type tables
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSortRule(const int64_t& _sortRule);
 
                     /**
                      * 判断参数 SortRule 是否已赋值
                      * @return SortRule 是否已赋值
+                     * 
                      */
                     bool SortRuleHasBeenSet() const;
 
@@ -626,20 +704,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DbClusterInfoStruct Information about global indexes, table caching, or data subscription
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDbClusterInfoStruct() const;
 
                     /**
                      * 设置Information about global indexes, table caching, or data subscription
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DbClusterInfoStruct Information about global indexes, table caching, or data subscription
+                     * @param _dbClusterInfoStruct Information about global indexes, table caching, or data subscription
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDbClusterInfoStruct(const std::string& _dbClusterInfoStruct);
 
                     /**
                      * 判断参数 DbClusterInfoStruct 是否已赋值
                      * @return DbClusterInfoStruct 是否已赋值
+                     * 
                      */
                     bool DbClusterInfoStructHasBeenSet() const;
 
@@ -648,20 +729,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTxhBackupExpireDay() const;
 
                     /**
                      * 设置The number of days after which the table Txh backup files will be expire and deleted.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
+                     * @param _txhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTxhBackupExpireDay(const uint64_t& _txhBackupExpireDay);
 
                     /**
                      * 判断参数 TxhBackupExpireDay 是否已赋值
                      * @return TxhBackupExpireDay 是否已赋值
+                     * 
                      */
                     bool TxhBackupExpireDayHasBeenSet() const;
 
@@ -670,20 +754,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SyncTableInfo Cached information of the table
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SyncTableInfo GetSyncTableInfo() const;
 
                     /**
                      * 设置Cached information of the table
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SyncTableInfo Cached information of the table
+                     * @param _syncTableInfo Cached information of the table
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSyncTableInfo(const SyncTableInfo& _syncTableInfo);
 
                     /**
                      * 判断参数 SyncTableInfo 是否已赋值
                      * @return SyncTableInfo 是否已赋值
+                     * 
                      */
                     bool SyncTableInfoHasBeenSet() const;
 

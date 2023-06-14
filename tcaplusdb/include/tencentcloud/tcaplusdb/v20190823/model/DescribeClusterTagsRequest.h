@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The list of cluster IDs
                      * @return ClusterIds The list of cluster IDs
+                     * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
                      * 设置The list of cluster IDs
-                     * @param ClusterIds The list of cluster IDs
+                     * @param _clusterIds The list of cluster IDs
+                     * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
                     /**
                      * 判断参数 ClusterIds 是否已赋值
                      * @return ClusterIds 是否已赋值
+                     * 
                      */
                     bool ClusterIdsHasBeenSet() const;
 

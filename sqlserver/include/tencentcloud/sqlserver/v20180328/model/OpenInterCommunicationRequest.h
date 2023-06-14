@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取IDs of instances with interwoking group enabled
                      * @return InstanceIdSet IDs of instances with interwoking group enabled
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置IDs of instances with interwoking group enabled
-                     * @param InstanceIdSet IDs of instances with interwoking group enabled
+                     * @param _instanceIdSet IDs of instances with interwoking group enabled
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 

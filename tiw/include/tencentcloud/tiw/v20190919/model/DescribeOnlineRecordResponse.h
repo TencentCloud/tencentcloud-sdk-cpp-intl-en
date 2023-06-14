@@ -57,24 +57,28 @@ namespace TencentCloud
 - USER_CALL: The API for stopping recording is called.
 - EXCEPTION: An exception occurred.
 - FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
+                     * 
                      */
                     std::string GetFinishReason() const;
 
                     /**
                      * 判断参数 FinishReason 是否已赋值
                      * @return FinishReason 是否已赋值
+                     * 
                      */
                     bool FinishReasonHasBeenSet() const;
 
                     /**
                      * 获取ID of the recording task to be queried.
                      * @return TaskId ID of the recording task to be queried.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -91,132 +95,154 @@ namespace TencentCloud
 - PAUSED: recording is paused.
 - STOPPED: recording is stopped, and the recorded video is being processed and uploaded.
 - FINISHED: the recorded video has been processed and uploaded, and the recording result is generated.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Room ID
                      * @return RoomId Room ID
+                     * 
                      */
                     int64_t GetRoomId() const;
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Group ID of the whiteboard
                      * @return GroupId Group ID of the whiteboard
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the recording user
                      * @return RecordUserId ID of the recording user
+                     * 
                      */
                     std::string GetRecordUserId() const;
 
                     /**
                      * 判断参数 RecordUserId 是否已赋值
                      * @return RecordUserId 是否已赋值
+                     * 
                      */
                     bool RecordUserIdHasBeenSet() const;
 
                     /**
                      * 获取Actual recording start time, which is a UNIX timestamp in seconds
                      * @return RecordStartTime Actual recording start time, which is a UNIX timestamp in seconds
+                     * 
                      */
                     int64_t GetRecordStartTime() const;
 
                     /**
                      * 判断参数 RecordStartTime 是否已赋值
                      * @return RecordStartTime 是否已赋值
+                     * 
                      */
                     bool RecordStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Actual recording stop time, which is a UNIX timestamp in seconds
                      * @return RecordStopTime Actual recording stop time, which is a UNIX timestamp in seconds
+                     * 
                      */
                     int64_t GetRecordStopTime() const;
 
                     /**
                      * 判断参数 RecordStopTime 是否已赋值
                      * @return RecordStopTime 是否已赋值
+                     * 
                      */
                     bool RecordStopTimeHasBeenSet() const;
 
                     /**
                      * 获取Total video playback duration, in milliseconds
                      * @return TotalTime Total video playback duration, in milliseconds
+                     * 
                      */
                     int64_t GetTotalTime() const;
 
                     /**
                      * 判断参数 TotalTime 是否已赋值
                      * @return TotalTime 是否已赋值
+                     * 
                      */
                     bool TotalTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of exceptions during recording
                      * @return ExceptionCnt Number of exceptions during recording
+                     * 
                      */
                     int64_t GetExceptionCnt() const;
 
                     /**
                      * 判断参数 ExceptionCnt 是否已赋值
                      * @return ExceptionCnt 是否已赋值
+                     * 
                      */
                     bool ExceptionCntHasBeenSet() const;
 
                     /**
                      * 获取Duration to be deleted in the spliced video. This parameter is valid only when the video splicing feature is enabled.
                      * @return OmittedDurations Duration to be deleted in the spliced video. This parameter is valid only when the video splicing feature is enabled.
+                     * 
                      */
                     std::vector<OmittedDuration> GetOmittedDurations() const;
 
                     /**
                      * 判断参数 OmittedDurations 是否已赋值
                      * @return OmittedDurations 是否已赋值
+                     * 
                      */
                     bool OmittedDurationsHasBeenSet() const;
 
                     /**
                      * 获取List of recorded videos
                      * @return VideoInfos List of recorded videos
+                     * 
                      */
                     std::vector<VideoInfo> GetVideoInfos() const;
 
                     /**
                      * 判断参数 VideoInfos 是否已赋值
                      * @return VideoInfos 是否已赋值
+                     * 
                      */
                     bool VideoInfosHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return ReplayUrl 
+                     * 
                      */
                     std::string GetReplayUrl() const;
 
                     /**
                      * 判断参数 ReplayUrl 是否已赋值
                      * @return ReplayUrl 是否已赋值
+                     * 
                      */
                     bool ReplayUrlHasBeenSet() const;
 
@@ -225,12 +251,14 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Interrupts Number of video stream interruptions during recording.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Interrupt> GetInterrupts() const;
 
                     /**
                      * 判断参数 Interrupts 是否已赋值
                      * @return Interrupts 是否已赋值
+                     * 
                      */
                     bool InterruptsHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Environment (namespace) name.
                      * @return EnvironmentId Environment (namespace) name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment (namespace) name.
-                     * @param EnvironmentId Environment (namespace) name.
+                     * @param _environmentId Environment (namespace) name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name. If the topic is a partitioned topic, you need to specify the partition; otherwise, messages will be sent to partition 0 by default, such as `my_topic-partition-0`.
                      * @return TopicName Topic name. If the topic is a partitioned topic, you need to specify the partition; otherwise, messages will be sent to partition 0 by default, such as `my_topic-partition-0`.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name. If the topic is a partitioned topic, you need to specify the partition; otherwise, messages will be sent to partition 0 by default, such as `my_topic-partition-0`.
-                     * @param TopicName Topic name. If the topic is a partitioned topic, you need to specify the partition; otherwise, messages will be sent to partition 0 by default, such as `my_topic-partition-0`.
+                     * @param _topicName Topic name. If the topic is a partitioned topic, you need to specify the partition; otherwise, messages will be sent to partition 0 by default, such as `my_topic-partition-0`.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Message content, which cannot be empty and can contain up to 5,242,880 bytes.
                      * @return MsgContent Message content, which cannot be empty and can contain up to 5,242,880 bytes.
+                     * 
                      */
                     std::string GetMsgContent() const;
 
                     /**
                      * 设置Message content, which cannot be empty and can contain up to 5,242,880 bytes.
-                     * @param MsgContent Message content, which cannot be empty and can contain up to 5,242,880 bytes.
+                     * @param _msgContent Message content, which cannot be empty and can contain up to 5,242,880 bytes.
+                     * 
                      */
                     void SetMsgContent(const std::string& _msgContent);
 
                     /**
                      * 判断参数 MsgContent 是否已赋值
                      * @return MsgContent 是否已赋值
+                     * 
                      */
                     bool MsgContentHasBeenSet() const;
 
                     /**
                      * 获取Pulsar cluster ID
                      * @return ClusterId Pulsar cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Pulsar cluster ID
-                     * @param ClusterId Pulsar cluster ID
+                     * @param _clusterId Pulsar cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The region of the SQS queue.
                      * @return SQSRegion The region of the SQS queue.
+                     * 
                      */
                     std::string GetSQSRegion() const;
 
                     /**
                      * 设置The region of the SQS queue.
-                     * @param SQSRegion The region of the SQS queue.
+                     * @param _sQSRegion The region of the SQS queue.
+                     * 
                      */
                     void SetSQSRegion(const std::string& _sQSRegion);
 
                     /**
                      * 判断参数 SQSRegion 是否已赋值
                      * @return SQSRegion 是否已赋值
+                     * 
                      */
                     bool SQSRegionHasBeenSet() const;
 
                     /**
                      * 获取The name of the SQS queue.
                      * @return SQSQueueName The name of the SQS queue.
+                     * 
                      */
                     std::string GetSQSQueueName() const;
 
                     /**
                      * 设置The name of the SQS queue.
-                     * @param SQSQueueName The name of the SQS queue.
+                     * @param _sQSQueueName The name of the SQS queue.
+                     * 
                      */
                     void SetSQSQueueName(const std::string& _sQSQueueName);
 
                     /**
                      * 判断参数 SQSQueueName 是否已赋值
                      * @return SQSQueueName 是否已赋值
+                     * 
                      */
                     bool SQSQueueNameHasBeenSet() const;
 
                     /**
                      * 获取The key ID required to read from/write to the SQS queue.
                      * @return S3SecretId The key ID required to read from/write to the SQS queue.
+                     * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
                      * 设置The key ID required to read from/write to the SQS queue.
-                     * @param S3SecretId The key ID required to read from/write to the SQS queue.
+                     * @param _s3SecretId The key ID required to read from/write to the SQS queue.
+                     * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
 
                     /**
                      * 判断参数 S3SecretId 是否已赋值
                      * @return S3SecretId 是否已赋值
+                     * 
                      */
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
                      * 获取The key required to read from/write to the SQS queue.
                      * @return S3SecretKey The key required to read from/write to the SQS queue.
+                     * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
                      * 设置The key required to read from/write to the SQS queue.
-                     * @param S3SecretKey The key required to read from/write to the SQS queue.
+                     * @param _s3SecretKey The key required to read from/write to the SQS queue.
+                     * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
 
                     /**
                      * 判断参数 S3SecretKey 是否已赋值
                      * @return S3SecretKey 是否已赋值
+                     * 
                      */
                     bool S3SecretKeyHasBeenSet() const;
 

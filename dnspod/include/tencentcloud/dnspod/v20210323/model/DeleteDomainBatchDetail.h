@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The domain ID.
                      * @return DomainId The domain ID.
+                     * 
                      */
                     uint64_t GetDomainId() const;
 
                     /**
                      * 设置The domain ID.
-                     * @param DomainId The domain ID.
+                     * @param _domainId The domain ID.
+                     * 
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 
                     /**
                      * 获取The domain name.
                      * @return Domain The domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The domain name.
-                     * @param Domain The domain name.
+                     * @param _domain The domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -87,56 +93,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Error The error message.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetError() const;
 
                     /**
                      * 设置The error message.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Error The error message.
+                     * @param _error The error message.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetError(const std::string& _error);
 
                     /**
                      * 判断参数 Error 是否已赋值
                      * @return Error 是否已赋值
+                     * 
                      */
                     bool ErrorHasBeenSet() const;
 
                     /**
                      * 获取The domain deletion status.
                      * @return Status The domain deletion status.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置The domain deletion status.
-                     * @param Status The domain deletion status.
+                     * @param _status The domain deletion status.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The operation.
                      * @return Operation The operation.
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置The operation.
-                     * @param Operation The operation.
+                     * @param _operation The operation.
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 

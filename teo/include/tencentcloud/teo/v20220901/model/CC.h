@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch WAF switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置WAF switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch WAF switch. Values:
+                     * @param _switch WAF switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取ID of the policy
                      * @return PolicyId ID of the policy
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置ID of the policy
-                     * @param PolicyId ID of the policy
+                     * @param _policyId ID of the policy
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable artifact removal. Valid values:
 <li>`ON`</li>
 <li>`OFF</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable artifact removal. Valid values:
 <li>`ON`</li>
 <li>`OFF</li>
-                     * @param Switch Whether to enable artifact removal. Valid values:
+                     * @param _switch Whether to enable artifact removal. Valid values:
 <li>`ON`</li>
 <li>`OFF</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Default value: `weak`.
 <li>`weak`</li>
 <li>`strong`</li>
 Default value: `weak`.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -89,16 +93,18 @@ Default value: `weak`.
 <li>`weak`</li>
 <li>`strong`</li>
 Default value: `weak`.
-                     * @param Type The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
+                     * @param _type The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`weak`</li>
 <li>`strong`</li>
 Default value: `weak`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

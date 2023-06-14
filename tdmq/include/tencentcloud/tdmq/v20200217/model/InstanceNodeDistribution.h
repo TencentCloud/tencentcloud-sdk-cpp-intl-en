@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取AZ
                      * @return ZoneName AZ
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置AZ
-                     * @param ZoneName AZ
+                     * @param _zoneName AZ
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取AZ ID
                      * @return ZoneId AZ ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置AZ ID
-                     * @param ZoneId AZ ID
+                     * @param _zoneId AZ ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes
                      * @return NodeCount Number of nodes
+                     * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
                      * 设置Number of nodes
-                     * @param NodeCount Number of nodes
+                     * @param _nodeCount Number of nodes
+                     * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
 
                     /**
                      * 判断参数 NodeCount 是否已赋值
                      * @return NodeCount 是否已赋值
+                     * 
                      */
                     bool NodeCountHasBeenSet() const;
 

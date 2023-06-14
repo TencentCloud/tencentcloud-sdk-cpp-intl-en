@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of pages
                      * @return TotalCount Total number of pages
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Logset list
                      * @return Logsets Logset list
+                     * 
                      */
                     std::vector<LogsetInfo> GetLogsets() const;
 
                     /**
                      * 判断参数 Logsets 是否已赋值
                      * @return Logsets 是否已赋值
+                     * 
                      */
                     bool LogsetsHasBeenSet() const;
 

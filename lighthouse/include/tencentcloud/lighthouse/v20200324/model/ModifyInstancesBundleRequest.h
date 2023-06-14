@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
                      * @return InstanceIds IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
-                     * @param InstanceIds IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
+                     * @param _instanceIds IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
                      * @return BundleId ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetBundleId() const;
 
                     /**
                      * 设置ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
-                     * @param BundleId ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
+                     * @param _bundleId ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
+                     * 
                      */
                     void SetBundleId(const std::string& _bundleId);
 
                     /**
                      * 判断参数 BundleId 是否已赋值
                      * @return BundleId 是否已赋值
+                     * 
                      */
                     bool BundleIdHasBeenSet() const;
 
@@ -87,6 +93,7 @@ Default value: `false`.
 `true`: Deduct from existing vouchers automatically 
 `false`: Do not deduct from existing vouchers automatically 
 Default value: `false`.
+                     * 
                      */
                     bool GetAutoVoucher() const;
 
@@ -95,16 +102,18 @@ Default value: `false`.
 `true`: Deduct from existing vouchers automatically 
 `false`: Do not deduct from existing vouchers automatically 
 Default value: `false`.
-                     * @param AutoVoucher Whether to use existing vouchers under the current account automatically. Valid values: 
+                     * @param _autoVoucher Whether to use existing vouchers under the current account automatically. Valid values: 
 `true`: Deduct from existing vouchers automatically 
 `false`: Do not deduct from existing vouchers automatically 
 Default value: `false`.
+                     * 
                      */
                     void SetAutoVoucher(const bool& _autoVoucher);
 
                     /**
                      * 判断参数 AutoVoucher 是否已赋值
                      * @return AutoVoucher 是否已赋值
+                     * 
                      */
                     bool AutoVoucherHasBeenSet() const;
 

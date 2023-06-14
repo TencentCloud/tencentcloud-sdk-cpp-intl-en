@@ -47,164 +47,191 @@ namespace TencentCloud
 It corresponds to the value of the `issuer` field in the `Openid-configuration` provided by the enterprise IdP.
                      * @return IdentityUrl OpenID Connect IdP URL.
 It corresponds to the value of the `issuer` field in the `Openid-configuration` provided by the enterprise IdP.
+                     * 
                      */
                     std::string GetIdentityUrl() const;
 
                     /**
                      * 设置OpenID Connect IdP URL.
 It corresponds to the value of the `issuer` field in the `Openid-configuration` provided by the enterprise IdP.
-                     * @param IdentityUrl OpenID Connect IdP URL.
+                     * @param _identityUrl OpenID Connect IdP URL.
 It corresponds to the value of the `issuer` field in the `Openid-configuration` provided by the enterprise IdP.
+                     * 
                      */
                     void SetIdentityUrl(const std::string& _identityUrl);
 
                     /**
                      * 判断参数 IdentityUrl 是否已赋值
                      * @return IdentityUrl 是否已赋值
+                     * 
                      */
                     bool IdentityUrlHasBeenSet() const;
 
                     /**
                      * 获取Signature public key, which is used to verify the OpenID Connect IdP's ID token and must be Base64-encoded. For the security of your account, we recommend you rotate it regularly.
                      * @return IdentityKey Signature public key, which is used to verify the OpenID Connect IdP's ID token and must be Base64-encoded. For the security of your account, we recommend you rotate it regularly.
+                     * 
                      */
                     std::string GetIdentityKey() const;
 
                     /**
                      * 设置Signature public key, which is used to verify the OpenID Connect IdP's ID token and must be Base64-encoded. For the security of your account, we recommend you rotate it regularly.
-                     * @param IdentityKey Signature public key, which is used to verify the OpenID Connect IdP's ID token and must be Base64-encoded. For the security of your account, we recommend you rotate it regularly.
+                     * @param _identityKey Signature public key, which is used to verify the OpenID Connect IdP's ID token and must be Base64-encoded. For the security of your account, we recommend you rotate it regularly.
+                     * 
                      */
                     void SetIdentityKey(const std::string& _identityKey);
 
                     /**
                      * 判断参数 IdentityKey 是否已赋值
                      * @return IdentityKey 是否已赋值
+                     * 
                      */
                     bool IdentityKeyHasBeenSet() const;
 
                     /**
                      * 获取Client ID registered with the OpenID Connect IdP.
                      * @return ClientId Client ID registered with the OpenID Connect IdP.
+                     * 
                      */
                     std::string GetClientId() const;
 
                     /**
                      * 设置Client ID registered with the OpenID Connect IdP.
-                     * @param ClientId Client ID registered with the OpenID Connect IdP.
+                     * @param _clientId Client ID registered with the OpenID Connect IdP.
+                     * 
                      */
                     void SetClientId(const std::string& _clientId);
 
                     /**
                      * 判断参数 ClientId 是否已赋值
                      * @return ClientId 是否已赋值
+                     * 
                      */
                     bool ClientIdHasBeenSet() const;
 
                     /**
                      * 获取OpenID Connect IdP authorization endpoint. It corresponds to the value of the `authorization_endpoint` field in the `Openid-configuration` provided by the enterprise IdP.
                      * @return AuthorizationEndpoint OpenID Connect IdP authorization endpoint. It corresponds to the value of the `authorization_endpoint` field in the `Openid-configuration` provided by the enterprise IdP.
+                     * 
                      */
                     std::string GetAuthorizationEndpoint() const;
 
                     /**
                      * 设置OpenID Connect IdP authorization endpoint. It corresponds to the value of the `authorization_endpoint` field in the `Openid-configuration` provided by the enterprise IdP.
-                     * @param AuthorizationEndpoint OpenID Connect IdP authorization endpoint. It corresponds to the value of the `authorization_endpoint` field in the `Openid-configuration` provided by the enterprise IdP.
+                     * @param _authorizationEndpoint OpenID Connect IdP authorization endpoint. It corresponds to the value of the `authorization_endpoint` field in the `Openid-configuration` provided by the enterprise IdP.
+                     * 
                      */
                     void SetAuthorizationEndpoint(const std::string& _authorizationEndpoint);
 
                     /**
                      * 判断参数 AuthorizationEndpoint 是否已赋值
                      * @return AuthorizationEndpoint 是否已赋值
+                     * 
                      */
                     bool AuthorizationEndpointHasBeenSet() const;
 
                     /**
                      * 获取Authorization response type, which is always `id_token`.
                      * @return ResponseType Authorization response type, which is always `id_token`.
+                     * 
                      */
                     std::string GetResponseType() const;
 
                     /**
                      * 设置Authorization response type, which is always `id_token`.
-                     * @param ResponseType Authorization response type, which is always `id_token`.
+                     * @param _responseType Authorization response type, which is always `id_token`.
+                     * 
                      */
                     void SetResponseType(const std::string& _responseType);
 
                     /**
                      * 判断参数 ResponseType 是否已赋值
                      * @return ResponseType 是否已赋值
+                     * 
                      */
                     bool ResponseTypeHasBeenSet() const;
 
                     /**
                      * 获取Authorization response mode. Valid values: form_post (recommended); fragment.
                      * @return ResponseMode Authorization response mode. Valid values: form_post (recommended); fragment.
+                     * 
                      */
                     std::string GetResponseMode() const;
 
                     /**
                      * 设置Authorization response mode. Valid values: form_post (recommended); fragment.
-                     * @param ResponseMode Authorization response mode. Valid values: form_post (recommended); fragment.
+                     * @param _responseMode Authorization response mode. Valid values: form_post (recommended); fragment.
+                     * 
                      */
                     void SetResponseMode(const std::string& _responseMode);
 
                     /**
                      * 判断参数 ResponseMode 是否已赋值
                      * @return ResponseMode 是否已赋值
+                     * 
                      */
                     bool ResponseModeHasBeenSet() const;
 
                     /**
                      * 获取Mapping field name. It indicates which field in the `id_token` of the IdP is mapped to the username of a sub-user. It is usually the `sub` or `name` field
                      * @return MappingFiled Mapping field name. It indicates which field in the `id_token` of the IdP is mapped to the username of a sub-user. It is usually the `sub` or `name` field
+                     * 
                      */
                     std::string GetMappingFiled() const;
 
                     /**
                      * 设置Mapping field name. It indicates which field in the `id_token` of the IdP is mapped to the username of a sub-user. It is usually the `sub` or `name` field
-                     * @param MappingFiled Mapping field name. It indicates which field in the `id_token` of the IdP is mapped to the username of a sub-user. It is usually the `sub` or `name` field
+                     * @param _mappingFiled Mapping field name. It indicates which field in the `id_token` of the IdP is mapped to the username of a sub-user. It is usually the `sub` or `name` field
+                     * 
                      */
                     void SetMappingFiled(const std::string& _mappingFiled);
 
                     /**
                      * 判断参数 MappingFiled 是否已赋值
                      * @return MappingFiled 是否已赋值
+                     * 
                      */
                     bool MappingFiledHasBeenSet() const;
 
                     /**
                      * 获取Authorization information scope. Valid values: openid (default); email; profile.
                      * @return Scope Authorization information scope. Valid values: openid (default); email; profile.
+                     * 
                      */
                     std::vector<std::string> GetScope() const;
 
                     /**
                      * 设置Authorization information scope. Valid values: openid (default); email; profile.
-                     * @param Scope Authorization information scope. Valid values: openid (default); email; profile.
+                     * @param _scope Authorization information scope. Valid values: openid (default); email; profile.
+                     * 
                      */
                     void SetScope(const std::vector<std::string>& _scope);
 
                     /**
                      * 判断参数 Scope 是否已赋值
                      * @return Scope 是否已赋值
+                     * 
                      */
                     bool ScopeHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

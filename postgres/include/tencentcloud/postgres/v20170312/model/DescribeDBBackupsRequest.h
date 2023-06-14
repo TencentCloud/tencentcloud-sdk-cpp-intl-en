@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-4wdeb0zv.
                      * @return DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-4wdeb0zv.
-                     * @param DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
+                     * @param _dBInstanceId Instance ID in the format of postgres-4wdeb0zv.
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup mode (1: full). Currently, only full backup is supported. The value is 1.
                      * @return Type Backup mode (1: full). Currently, only full backup is supported. The value is 1.
+                     * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置Backup mode (1: full). Currently, only full backup is supported. The value is 1.
-                     * @param Type Backup mode (1: full). Currently, only full backup is supported. The value is 1.
+                     * @param _type Backup mode (1: full). Currently, only full backup is supported. The value is 1.
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
                      * @return StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
-                     * @param StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+                     * @param _startTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Query end time in the format of 2018-06-10 17:06:38
                      * @return EndTime Query end time in the format of 2018-06-10 17:06:38
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Query end time in the format of 2018-06-10 17:06:38
-                     * @param EndTime Query end time in the format of 2018-06-10 17:06:38
+                     * @param _endTime Query end time in the format of 2018-06-10 17:06:38
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
                      * @return Limit Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
-                     * @param Limit Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
+                     * @param _limit Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number for data return in paged query. Pagination starts from 0. Default value: 0.
                      * @return Offset Page number for data return in paged query. Pagination starts from 0. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number for data return in paged query. Pagination starts from 0. Default value: 0.
-                     * @param Offset Page number for data return in paged query. Pagination starts from 0. Default value: 0.
+                     * @param _offset Page number for data return in paged query. Pagination starts from 0. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Whether the log list has come to an end. `true`: Yes. Pagination is not required.
                      * @return ListOver Whether the log list has come to an end. `true`: Yes. Pagination is not required.
+                     * 
                      */
                     bool GetListOver() const;
 
                     /**
                      * 判断参数 ListOver 是否已赋值
                      * @return ListOver 是否已赋值
+                     * 
                      */
                     bool ListOverHasBeenSet() const;
 
                     /**
                      * 获取Credential for viewing more logs.
                      * @return NextToken Credential for viewing more logs.
+                     * 
                      */
                     uint64_t GetNextToken() const;
 
                     /**
                      * 判断参数 NextToken 是否已赋值
                      * @return NextToken 是否已赋值
+                     * 
                      */
                     bool NextTokenHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Events Logset.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Event> GetEvents() const;
 
                     /**
                      * 判断参数 Events 是否已赋值
                      * @return Events 是否已赋值
+                     * 
                      */
                     bool EventsHasBeenSet() const;
 
@@ -87,12 +93,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取ID of the fleet to be bound with the policy
                      * @return FleetId ID of the fleet to be bound with the policy
+                     * 
                      */
                     std::string GetFleetId() const;
 
                     /**
                      * 设置ID of the fleet to be bound with the policy
-                     * @param FleetId ID of the fleet to be bound with the policy
+                     * @param _fleetId ID of the fleet to be bound with the policy
+                     * 
                      */
                     void SetFleetId(const std::string& _fleetId);
 
                     /**
                      * 判断参数 FleetId 是否已赋值
                      * @return FleetId 是否已赋值
+                     * 
                      */
                     bool FleetIdHasBeenSet() const;
 
                     /**
                      * 获取Scheduled scaling policy name
                      * @return TimerName Scheduled scaling policy name
+                     * 
                      */
                     std::string GetTimerName() const;
 
                     /**
                      * 设置Scheduled scaling policy name
-                     * @param TimerName Scheduled scaling policy name
+                     * @param _timerName Scheduled scaling policy name
+                     * 
                      */
                     void SetTimerName(const std::string& _timerName);
 
                     /**
                      * 判断参数 TimerName 是否已赋值
                      * @return TimerName 是否已赋值
+                     * 
                      */
                     bool TimerNameHasBeenSet() const;
 
                     /**
                      * 获取Start time of the scheduled scaling policy
                      * @return BeginTime Start time of the scheduled scaling policy
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time of the scheduled scaling policy
-                     * @param BeginTime Start time of the scheduled scaling policy
+                     * @param _beginTime Start time of the scheduled scaling policy
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the scheduled scaling policy
                      * @return EndTime End time of the scheduled scaling policy
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the scheduled scaling policy
-                     * @param EndTime End time of the scheduled scaling policy
+                     * @param _endTime End time of the scheduled scaling policy
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset
                      * @return Offset Pagination offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset
-                     * @param Offset Pagination offset
+                     * @param _offset Pagination offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page
                      * @return Limit Number of entries per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page
-                     * @param Limit Number of entries per page
+                     * @param _limit Number of entries per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

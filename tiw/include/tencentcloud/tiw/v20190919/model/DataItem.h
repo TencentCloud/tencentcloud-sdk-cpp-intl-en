@@ -56,6 +56,7 @@ yyyy-mm-dd HH:MM:SS
 yyyy-mm
 yyyy-mm-dd
 yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     std::string GetTime() const;
 
@@ -64,52 +65,60 @@ yyyy-mm-dd HH:MM:SS
 yyyy-mm
 yyyy-mm-dd
 yyyy-mm-dd HH:MM:SS
-                     * @param Time Time. The following formats are supported:
+                     * @param _time Time. The following formats are supported:
 yyyy-mm
 yyyy-mm-dd
 yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Values required for drawing charts.
                      * @return Value Values required for drawing charts.
+                     * 
                      */
                     int64_t GetValue() const;
 
                     /**
                      * 设置Values required for drawing charts.
-                     * @param Value Values required for drawing charts.
+                     * @param _value Values required for drawing charts.
+                     * 
                      */
                     void SetValue(const int64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Details of the values.
                      * @return Details Details of the values.
+                     * 
                      */
                     std::vector<Detail> GetDetails() const;
 
                     /**
                      * 设置Details of the values.
-                     * @param Details Details of the values.
+                     * @param _details Details of the values.
+                     * 
                      */
                     void SetDetails(const std::vector<Detail>& _details);
 
                     /**
                      * 判断参数 Details 是否已赋值
                      * @return Details 是否已赋值
+                     * 
                      */
                     bool DetailsHasBeenSet() const;
 

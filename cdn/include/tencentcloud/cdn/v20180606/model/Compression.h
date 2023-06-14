@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Smart compression configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Smart compression configuration switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Smart compression configuration switch
+                     * @param _switch Smart compression configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CompressionRules Compression rules array
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<CompressionRule> GetCompressionRules() const;
 
                     /**
                      * 设置Compression rules array
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CompressionRules Compression rules array
+                     * @param _compressionRules Compression rules array
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCompressionRules(const std::vector<CompressionRule>& _compressionRules);
 
                     /**
                      * 判断参数 CompressionRules 是否已赋值
                      * @return CompressionRules 是否已赋值
+                     * 
                      */
                     bool CompressionRulesHasBeenSet() const;
 

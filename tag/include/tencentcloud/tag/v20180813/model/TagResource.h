@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Tag key.
                      * @return TagKey Tag key.
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key.
-                     * @param TagKey Tag key.
+                     * @param _tagKey Tag key.
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取Tag value.
                      * @return TagValue Tag value.
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value.
-                     * @param TagValue Tag value.
+                     * @param _tagValue Tag value.
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 
                     /**
                      * 获取Resource ID.
                      * @return ResourceId Resource ID.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Resource ID.
-                     * @param ResourceId Resource ID.
+                     * @param _resourceId Resource ID.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Tag key MD5 value.
                      * @return TagKeyMd5 Tag key MD5 value.
+                     * 
                      */
                     std::string GetTagKeyMd5() const;
 
                     /**
                      * 设置Tag key MD5 value.
-                     * @param TagKeyMd5 Tag key MD5 value.
+                     * @param _tagKeyMd5 Tag key MD5 value.
+                     * 
                      */
                     void SetTagKeyMd5(const std::string& _tagKeyMd5);
 
                     /**
                      * 判断参数 TagKeyMd5 是否已赋值
                      * @return TagKeyMd5 是否已赋值
+                     * 
                      */
                     bool TagKeyMd5HasBeenSet() const;
 
                     /**
                      * 获取Tag value MD5 value.
                      * @return TagValueMd5 Tag value MD5 value.
+                     * 
                      */
                     std::string GetTagValueMd5() const;
 
                     /**
                      * 设置Tag value MD5 value.
-                     * @param TagValueMd5 Tag value MD5 value.
+                     * @param _tagValueMd5 Tag value MD5 value.
+                     * 
                      */
                     void SetTagValueMd5(const std::string& _tagValueMd5);
 
                     /**
                      * 判断参数 TagValueMd5 是否已赋值
                      * @return TagValueMd5 是否已赋值
+                     * 
                      */
                     bool TagValueMd5HasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values found.
                      * @return ServiceType Resource type
 Note: this field may return null, indicating that no valid values found.
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Resource type
 Note: this field may return null, indicating that no valid values found.
-                     * @param ServiceType Resource type
+                     * @param _serviceType Resource type
 Note: this field may return null, indicating that no valid values found.
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 

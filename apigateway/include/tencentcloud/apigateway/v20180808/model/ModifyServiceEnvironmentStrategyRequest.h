@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID.
                      * @return ServiceId Unique service ID.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID.
-                     * @param ServiceId Unique service ID.
+                     * @param _serviceId Unique service ID.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Throttling value.
                      * @return Strategy Throttling value.
+                     * 
                      */
                     int64_t GetStrategy() const;
 
                     /**
                      * 设置Throttling value.
-                     * @param Strategy Throttling value.
+                     * @param _strategy Throttling value.
+                     * 
                      */
                     void SetStrategy(const int64_t& _strategy);
 
                     /**
                      * 判断参数 Strategy 是否已赋值
                      * @return Strategy 是否已赋值
+                     * 
                      */
                     bool StrategyHasBeenSet() const;
 
                     /**
                      * 获取Environment list.
                      * @return EnvironmentNames Environment list.
+                     * 
                      */
                     std::vector<std::string> GetEnvironmentNames() const;
 
                     /**
                      * 设置Environment list.
-                     * @param EnvironmentNames Environment list.
+                     * @param _environmentNames Environment list.
+                     * 
                      */
                     void SetEnvironmentNames(const std::vector<std::string>& _environmentNames);
 
                     /**
                      * 判断参数 EnvironmentNames 是否已赋值
                      * @return EnvironmentNames 是否已赋值
+                     * 
                      */
                     bool EnvironmentNamesHasBeenSet() const;
 

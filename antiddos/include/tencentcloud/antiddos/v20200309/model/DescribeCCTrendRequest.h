@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
-                     * @param Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
+                     * @param _business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Instance IP
                      * @return Ip Instance IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Instance IP
-                     * @param Ip Instance IP
+                     * @param _ip Instance IP
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Sampling period. Valid values: `300` (5 minutes), `3600` (one hour), `86400` (one day)
                      * @return Period Sampling period. Valid values: `300` (5 minutes), `3600` (one hour), `86400` (one day)
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Sampling period. Valid values: `300` (5 minutes), `3600` (one hour), `86400` (one day)
-                     * @param Period Sampling period. Valid values: `300` (5 minutes), `3600` (one hour), `86400` (one day)
+                     * @param _period Sampling period. Valid values: `300` (5 minutes), `3600` (one hour), `86400` (one day)
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Beginning of the time range for the query
                      * @return StartTime Beginning of the time range for the query
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Beginning of the time range for the query
-                     * @param StartTime Beginning of the time range for the query
+                     * @param _startTime Beginning of the time range for the query
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End of the time range for the query
                      * @return EndTime End of the time range for the query
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End of the time range for the query
-                     * @param EndTime End of the time range for the query
+                     * @param _endTime End of the time range for the query
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
                      * @return MetricName Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
-                     * @param MetricName Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
+                     * @param _metricName Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取(Optional) Domain name
                      * @return Domain (Optional) Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置(Optional) Domain name
-                     * @param Domain (Optional) Domain name
+                     * @param _domain (Optional) Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Instance ID. Leave this field empty when `Business` is `basic`, as basic protection does not require an instance.
                      * @return Id Instance ID. Leave this field empty when `Business` is `basic`, as basic protection does not require an instance.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Instance ID. Leave this field empty when `Business` is `basic`, as basic protection does not require an instance.
-                     * @param Id Instance ID. Leave this field empty when `Business` is `basic`, as basic protection does not require an instance.
+                     * @param _id Instance ID. Leave this field empty when `Business` is `basic`, as basic protection does not require an instance.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

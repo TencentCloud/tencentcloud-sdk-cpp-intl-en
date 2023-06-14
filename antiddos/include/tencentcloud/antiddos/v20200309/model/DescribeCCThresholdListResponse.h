@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of cleansing threshold policies
                      * @return Total Total number of cleansing threshold policies
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Details of cleansing threshold policies
                      * @return ThresholdList Details of cleansing threshold policies
+                     * 
                      */
                     std::vector<CCThresholdPolicy> GetThresholdList() const;
 
                     /**
                      * 判断参数 ThresholdList 是否已赋值
                      * @return ThresholdList 是否已赋值
+                     * 
                      */
                     bool ThresholdListHasBeenSet() const;
 

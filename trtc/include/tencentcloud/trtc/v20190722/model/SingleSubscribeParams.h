@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The stream information.
                      * @return UserMediaStream The stream information.
+                     * 
                      */
                     UserMediaStream GetUserMediaStream() const;
 
                     /**
                      * 设置The stream information.
-                     * @param UserMediaStream The stream information.
+                     * @param _userMediaStream The stream information.
+                     * 
                      */
                     void SetUserMediaStream(const UserMediaStream& _userMediaStream);
 
                     /**
                      * 判断参数 UserMediaStream 是否已赋值
                      * @return UserMediaStream 是否已赋值
+                     * 
                      */
                     bool UserMediaStreamHasBeenSet() const;
 

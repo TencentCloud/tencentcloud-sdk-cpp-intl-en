@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Database name
                      * @return TableSchema Database name
+                     * 
                      */
                     std::string GetTableSchema() const;
 
                     /**
                      * 设置Database name
-                     * @param TableSchema Database name
+                     * @param _tableSchema Database name
+                     * 
                      */
                     void SetTableSchema(const std::string& _tableSchema);
 
                     /**
                      * 判断参数 TableSchema 是否已赋值
                      * @return TableSchema 是否已赋值
+                     * 
                      */
                     bool TableSchemaHasBeenSet() const;
 
                     /**
                      * 获取Space metric value in a unit of time interval
                      * @return SeriesData Space metric value in a unit of time interval
+                     * 
                      */
                     MonitorMetricSeriesData GetSeriesData() const;
 
                     /**
                      * 设置Space metric value in a unit of time interval
-                     * @param SeriesData Space metric value in a unit of time interval
+                     * @param _seriesData Space metric value in a unit of time interval
+                     * 
                      */
                     void SetSeriesData(const MonitorMetricSeriesData& _seriesData);
 
                     /**
                      * 判断参数 SeriesData 是否已赋值
                      * @return SeriesData 是否已赋值
+                     * 
                      */
                     bool SeriesDataHasBeenSet() const;
 

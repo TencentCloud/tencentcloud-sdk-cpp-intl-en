@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
                      * @return InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
-                     * @param InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+                     * @param _instanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Release the monthly subscribed data disks attached to the instance
                      * @return ReleasePrepaidDataDisks Release the monthly subscribed data disks attached to the instance
+                     * 
                      */
                     bool GetReleasePrepaidDataDisks() const;
 
                     /**
                      * 设置Release the monthly subscribed data disks attached to the instance
-                     * @param ReleasePrepaidDataDisks Release the monthly subscribed data disks attached to the instance
+                     * @param _releasePrepaidDataDisks Release the monthly subscribed data disks attached to the instance
+                     * 
                      */
                     void SetReleasePrepaidDataDisks(const bool& _releasePrepaidDataDisks);
 
                     /**
                      * 判断参数 ReleasePrepaidDataDisks 是否已赋值
                      * @return ReleasePrepaidDataDisks 是否已赋值
+                     * 
                      */
                     bool ReleasePrepaidDataDisksHasBeenSet() const;
 

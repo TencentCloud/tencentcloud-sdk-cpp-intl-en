@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Sub-user list
                      * @return SubAccounts Sub-user list
+                     * 
                      */
                     std::vector<SubAccountUser> GetSubAccounts() const;
 
                     /**
                      * 判断参数 SubAccounts 是否已赋值
                      * @return SubAccounts 是否已赋值
+                     * 
                      */
                     bool SubAccountsHasBeenSet() const;
 

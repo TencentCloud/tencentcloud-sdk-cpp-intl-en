@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cloud disk backup point.
                      * @return DiskBackupId ID of the cloud disk backup point.
+                     * 
                      */
                     std::string GetDiskBackupId() const;
 
                     /**
                      * 判断参数 DiskBackupId 是否已赋值
                      * @return DiskBackupId 是否已赋值
+                     * 
                      */
                     bool DiskBackupIdHasBeenSet() const;
 

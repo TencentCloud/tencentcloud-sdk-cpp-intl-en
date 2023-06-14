@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID
                      * @return VpcId VPC instance ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID
-                     * @param VpcId VPC instance ID
+                     * @param _vpcId VPC instance ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet instance ID
                      * @return SubnetId Subnet instance ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID
-                     * @param SubnetId Subnet instance ID
+                     * @param _subnetId Subnet instance ID
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取IP address
                      * @return IpAddress IP address
+                     * 
                      */
                     std::string GetIpAddress() const;
 
                     /**
                      * 设置IP address
-                     * @param IpAddress IP address
+                     * @param _ipAddress IP address
+                     * 
                      */
                     void SetIpAddress(const std::string& _ipAddress);
 
                     /**
                      * 判断参数 IpAddress 是否已赋值
                      * @return IpAddress 是否已赋值
+                     * 
                      */
                     bool IpAddressHasBeenSet() const;
 
                     /**
                      * 获取Resource type
                      * @return ResourceType Resource type
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type
-                     * @param ResourceType Resource type
+                     * @param _resourceType Resource type
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Resource ID
                      * @return ResourceId Resource ID
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Resource ID
-                     * @param ResourceId Resource ID
+                     * @param _resourceId Resource ID
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 

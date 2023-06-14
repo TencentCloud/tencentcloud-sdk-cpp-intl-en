@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
                      * @return HaVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
+                     * 
                      */
                     std::string GetHaVipId() const;
 
                     /**
                      * 设置The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
-                     * @param HaVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
+                     * @param _haVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
+                     * 
                      */
                     void SetHaVipId(const std::string& _haVipId);
 
                     /**
                      * 判断参数 HaVipId 是否已赋值
                      * @return HaVipId 是否已赋值
+                     * 
                      */
                     bool HaVipIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the `HAVIP`.
                      * @return HaVipName The name of the `HAVIP`.
+                     * 
                      */
                     std::string GetHaVipName() const;
 
                     /**
                      * 设置The name of the `HAVIP`.
-                     * @param HaVipName The name of the `HAVIP`.
+                     * @param _haVipName The name of the `HAVIP`.
+                     * 
                      */
                     void SetHaVipName(const std::string& _haVipName);
 
                     /**
                      * 判断参数 HaVipName 是否已赋值
                      * @return HaVipName 是否已赋值
+                     * 
                      */
                     bool HaVipNameHasBeenSet() const;
 
                     /**
                      * 获取The virtual IP address.
                      * @return Vip The virtual IP address.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置The virtual IP address.
-                     * @param Vip The virtual IP address.
+                     * @param _vip The virtual IP address.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取The `ID` of the VPC to which the `HAVIP` belongs.
                      * @return VpcId The `ID` of the VPC to which the `HAVIP` belongs.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of the VPC to which the `HAVIP` belongs.
-                     * @param VpcId The `ID` of the VPC to which the `HAVIP` belongs.
+                     * @param _vpcId The `ID` of the VPC to which the `HAVIP` belongs.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The `ID` of the subnet to which the `HAVIP` belongs.
                      * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置The `ID` of the subnet to which the `HAVIP` belongs.
-                     * @param SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * @param _subnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The `ID` of the ENI associated with the `HAVIP`.
                      * @return NetworkInterfaceId The `ID` of the ENI associated with the `HAVIP`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The `ID` of the ENI associated with the `HAVIP`.
-                     * @param NetworkInterfaceId The `ID` of the ENI associated with the `HAVIP`.
+                     * @param _networkInterfaceId The `ID` of the ENI associated with the `HAVIP`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取The `ID` of the bound instance.
                      * @return InstanceId The `ID` of the bound instance.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The `ID` of the bound instance.
-                     * @param InstanceId The `ID` of the bound instance.
+                     * @param _instanceId The `ID` of the bound instance.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Bound `EIP`.
                      * @return AddressIp Bound `EIP`.
+                     * 
                      */
                     std::string GetAddressIp() const;
 
                     /**
                      * 设置Bound `EIP`.
-                     * @param AddressIp Bound `EIP`.
+                     * @param _addressIp Bound `EIP`.
+                     * 
                      */
                     void SetAddressIp(const std::string& _addressIp);
 
                     /**
                      * 判断参数 AddressIp 是否已赋值
                      * @return AddressIp 是否已赋值
+                     * 
                      */
                     bool AddressIpHasBeenSet() const;
 
@@ -197,6 +221,7 @@ namespace TencentCloud
                      * @return State Status:
 <li>`AVAILABLE`: Operating</li>
 <li>`UNBIND`: Not bound</li>
+                     * 
                      */
                     std::string GetState() const;
 
@@ -204,51 +229,59 @@ namespace TencentCloud
                      * 设置Status:
 <li>`AVAILABLE`: Operating</li>
 <li>`UNBIND`: Not bound</li>
-                     * @param State Status:
+                     * @param _state Status:
 <li>`AVAILABLE`: Operating</li>
 <li>`UNBIND`: Not bound</li>
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Creation Time.
                      * @return CreatedTime Creation Time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation Time.
-                     * @param CreatedTime Creation Time.
+                     * @param _createdTime Creation Time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Identifier for businesses that use HAVIP.
                      * @return Business Identifier for businesses that use HAVIP.
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Identifier for businesses that use HAVIP.
-                     * @param Business Identifier for businesses that use HAVIP.
+                     * @param _business Identifier for businesses that use HAVIP.
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 

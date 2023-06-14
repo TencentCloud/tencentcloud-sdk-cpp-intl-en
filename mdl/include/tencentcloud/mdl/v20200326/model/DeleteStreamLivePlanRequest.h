@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the channel whose event is to be deleted
                      * @return ChannelId ID of the channel whose event is to be deleted
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置ID of the channel whose event is to be deleted
-                     * @param ChannelId ID of the channel whose event is to be deleted
+                     * @param _channelId ID of the channel whose event is to be deleted
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the event to delete
                      * @return EventName Name of the event to delete
+                     * 
                      */
                     std::string GetEventName() const;
 
                     /**
                      * 设置Name of the event to delete
-                     * @param EventName Name of the event to delete
+                     * @param _eventName Name of the event to delete
+                     * 
                      */
                     void SetEventName(const std::string& _eventName);
 
                     /**
                      * 判断参数 EventName 是否已赋值
                      * @return EventName 是否已赋值
+                     * 
                      */
                     bool EventNameHasBeenSet() const;
 

@@ -51,72 +51,84 @@ namespace TencentCloud
                     /**
                      * 获取Namespace name
                      * @return Name Namespace name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param Name Namespace name
+                     * @param _name Namespace name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreationTime Creation time
+                     * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreationTime Creation time
+                     * @param _creationTime Creation time
+                     * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
 
                     /**
                      * 判断参数 CreationTime 是否已赋值
                      * @return CreationTime 是否已赋值
+                     * 
                      */
                     bool CreationTimeHasBeenSet() const;
 
                     /**
                      * 获取Access level
                      * @return Public Access level
+                     * 
                      */
                     bool GetPublic() const;
 
                     /**
                      * 设置Access level
-                     * @param Public Access level
+                     * @param _public Access level
+                     * 
                      */
                     void SetPublic(const bool& _public);
 
                     /**
                      * 判断参数 Public 是否已赋值
                      * @return Public 是否已赋值
+                     * 
                      */
                     bool PublicHasBeenSet() const;
 
                     /**
                      * 获取Namespace ID
                      * @return NamespaceId Namespace ID
+                     * 
                      */
                     int64_t GetNamespaceId() const;
 
                     /**
                      * 设置Namespace ID
-                     * @param NamespaceId Namespace ID
+                     * @param _namespaceId Namespace ID
+                     * 
                      */
                     void SetNamespaceId(const int64_t& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
@@ -125,20 +137,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagSpecification Cloud tag of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TagSpecification GetTagSpecification() const;
 
                     /**
                      * 设置Cloud tag of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagSpecification Cloud tag of the instance
+                     * @param _tagSpecification Cloud tag of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSpecification(const TagSpecification& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 
@@ -147,20 +162,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Metadata Namespace metadata
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<KeyValueString> GetMetadata() const;
 
                     /**
                      * 设置Namespace metadata
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Metadata Namespace metadata
+                     * @param _metadata Namespace metadata
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetadata(const std::vector<KeyValueString>& _metadata);
 
                     /**
                      * 判断参数 Metadata 是否已赋值
                      * @return Metadata 是否已赋值
+                     * 
                      */
                     bool MetadataHasBeenSet() const;
 

@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取The IP range type of the firewall. Values: `VpcSelf` (VPC IP range preferred); `Assis` (Secondary IP range preferred); `Custom` (Custom IP range)
                      * @return FwCidrType The IP range type of the firewall. Values: `VpcSelf` (VPC IP range preferred); `Assis` (Secondary IP range preferred); `Custom` (Custom IP range)
+                     * 
                      */
                     std::string GetFwCidrType() const;
 
                     /**
                      * 设置The IP range type of the firewall. Values: `VpcSelf` (VPC IP range preferred); `Assis` (Secondary IP range preferred); `Custom` (Custom IP range)
-                     * @param FwCidrType The IP range type of the firewall. Values: `VpcSelf` (VPC IP range preferred); `Assis` (Secondary IP range preferred); `Custom` (Custom IP range)
+                     * @param _fwCidrType The IP range type of the firewall. Values: `VpcSelf` (VPC IP range preferred); `Assis` (Secondary IP range preferred); `Custom` (Custom IP range)
+                     * 
                      */
                     void SetFwCidrType(const std::string& _fwCidrType);
 
                     /**
                      * 判断参数 FwCidrType 是否已赋值
                      * @return FwCidrType 是否已赋值
+                     * 
                      */
                     bool FwCidrTypeHasBeenSet() const;
 
                     /**
                      * 获取The IP segment assigned for each VPC.
                      * @return FwCidrLst The IP segment assigned for each VPC.
+                     * 
                      */
                     std::vector<FwVpcCidr> GetFwCidrLst() const;
 
                     /**
                      * 设置The IP segment assigned for each VPC.
-                     * @param FwCidrLst The IP segment assigned for each VPC.
+                     * @param _fwCidrLst The IP segment assigned for each VPC.
+                     * 
                      */
                     void SetFwCidrLst(const std::vector<FwVpcCidr>& _fwCidrLst);
 
                     /**
                      * 判断参数 FwCidrLst 是否已赋值
                      * @return FwCidrLst 是否已赋值
+                     * 
                      */
                     bool FwCidrLstHasBeenSet() const;
 
                     /**
                      * 获取The IP segment used by other firewalls. Specify this if you want to assign a dedicated segment for the firewall.
                      * @return ComFwCidr The IP segment used by other firewalls. Specify this if you want to assign a dedicated segment for the firewall.
+                     * 
                      */
                     std::string GetComFwCidr() const;
 
                     /**
                      * 设置The IP segment used by other firewalls. Specify this if you want to assign a dedicated segment for the firewall.
-                     * @param ComFwCidr The IP segment used by other firewalls. Specify this if you want to assign a dedicated segment for the firewall.
+                     * @param _comFwCidr The IP segment used by other firewalls. Specify this if you want to assign a dedicated segment for the firewall.
+                     * 
                      */
                     void SetComFwCidr(const std::string& _comFwCidr);
 
                     /**
                      * 判断参数 ComFwCidr 是否已赋值
                      * @return ComFwCidr 是否已赋值
+                     * 
                      */
                     bool ComFwCidrHasBeenSet() const;
 

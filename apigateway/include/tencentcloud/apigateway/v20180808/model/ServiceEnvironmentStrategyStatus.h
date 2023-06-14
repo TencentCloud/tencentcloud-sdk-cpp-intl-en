@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of throttling policies.
+                     * @param _totalCount Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EnvironmentList Throttling policy list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ServiceEnvironmentStrategy> GetEnvironmentList() const;
 
                     /**
                      * 设置Throttling policy list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EnvironmentList Throttling policy list.
+                     * @param _environmentList Throttling policy list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentList(const std::vector<ServiceEnvironmentStrategy>& _environmentList);
 
                     /**
                      * 判断参数 EnvironmentList 是否已赋值
                      * @return EnvironmentList 是否已赋值
+                     * 
                      */
                     bool EnvironmentListHasBeenSet() const;
 

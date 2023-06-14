@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取CA certificate name
                      * @return CertName CA certificate name
+                     * 
                      */
                     std::string GetCertName() const;
 
                     /**
                      * 设置CA certificate name
-                     * @param CertName CA certificate name
+                     * @param _certName CA certificate name
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 
                     /**
                      * 获取CA certificate content
                      * @return CertText CA certificate content
+                     * 
                      */
                     std::string GetCertText() const;
 
                     /**
                      * 设置CA certificate content
-                     * @param CertText CA certificate content
+                     * @param _certText CA certificate content
+                     * 
                      */
                     void SetCertText(const std::string& _certText);
 
                     /**
                      * 判断参数 CertText 是否已赋值
                      * @return CertText 是否已赋值
+                     * 
                      */
                     bool CertTextHasBeenSet() const;
 
                     /**
                      * 获取Content verifying the CA certificate
                      * @return VerifyCertText Content verifying the CA certificate
+                     * 
                      */
                     std::string GetVerifyCertText() const;
 
                     /**
                      * 设置Content verifying the CA certificate
-                     * @param VerifyCertText Content verifying the CA certificate
+                     * @param _verifyCertText Content verifying the CA certificate
+                     * 
                      */
                     void SetVerifyCertText(const std::string& _verifyCertText);
 
                     /**
                      * 判断参数 VerifyCertText 是否已赋值
                      * @return VerifyCertText 是否已赋值
+                     * 
                      */
                     bool VerifyCertTextHasBeenSet() const;
 

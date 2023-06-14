@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The listening port of the applicaiton
                      * @return Port The listening port of the applicaiton
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置The listening port of the applicaiton
-                     * @param Port The listening port of the applicaiton
+                     * @param _port The listening port of the applicaiton
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取URL path for monitoring
                      * @return Path URL path for monitoring
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置URL path for monitoring
-                     * @param Path URL path for monitoring
+                     * @param _path URL path for monitoring
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Maintenance days of the week
                      * @return MaintainWeekDays Maintenance days of the week
+                     * 
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
                      * 判断参数 MaintainWeekDays 是否已赋值
                      * @return MaintainWeekDays 是否已赋值
+                     * 
                      */
                     bool MaintainWeekDaysHasBeenSet() const;
 
                     /**
                      * 获取Maintenance start time in seconds
                      * @return MaintainStartTime Maintenance start time in seconds
+                     * 
                      */
                     int64_t GetMaintainStartTime() const;
 
                     /**
                      * 判断参数 MaintainStartTime 是否已赋值
                      * @return MaintainStartTime 是否已赋值
+                     * 
                      */
                     bool MaintainStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Maintenance duration in seconds
                      * @return MaintainDuration Maintenance duration in seconds
+                     * 
                      */
                     int64_t GetMaintainDuration() const;
 
                     /**
                      * 判断参数 MaintainDuration 是否已赋值
                      * @return MaintainDuration 是否已赋值
+                     * 
                      */
                     bool MaintainDurationHasBeenSet() const;
 

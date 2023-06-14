@@ -46,144 +46,168 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Log topic name
                      * @return TopicName Log topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Log topic name
-                     * @param TopicName Log topic name
+                     * @param _topicName Log topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
                      * @return Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
-                     * @param Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
+                     * @param _tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Whether to start collection for this log topic
                      * @return Status Whether to start collection for this log topic
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Whether to start collection for this log topic
-                     * @param Status Whether to start collection for this log topic
+                     * @param _status Whether to start collection for this log topic
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable automatic split
                      * @return AutoSplit Whether to enable automatic split
+                     * 
                      */
                     bool GetAutoSplit() const;
 
                     /**
                      * 设置Whether to enable automatic split
-                     * @param AutoSplit Whether to enable automatic split
+                     * @param _autoSplit Whether to enable automatic split
+                     * 
                      */
                     void SetAutoSplit(const bool& _autoSplit);
 
                     /**
                      * 判断参数 AutoSplit 是否已赋值
                      * @return AutoSplit 是否已赋值
+                     * 
                      */
                     bool AutoSplitHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of partitions to split into for this topic if automatic split is enabled
                      * @return MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
+                     * 
                      */
                     int64_t GetMaxSplitPartitions() const;
 
                     /**
                      * 设置Maximum number of partitions to split into for this topic if automatic split is enabled
-                     * @param MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
+                     * @param _maxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
+                     * 
                      */
                     void SetMaxSplitPartitions(const int64_t& _maxSplitPartitions);
 
                     /**
                      * 判断参数 MaxSplitPartitions 是否已赋值
                      * @return MaxSplitPartitions 是否已赋值
+                     * 
                      */
                     bool MaxSplitPartitionsHasBeenSet() const;
 
                     /**
                      * 获取Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
                      * @return Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
-                     * @param Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+                     * @param _period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Log topic description
                      * @return Describes Log topic description
+                     * 
                      */
                     std::string GetDescribes() const;
 
                     /**
                      * 设置Log topic description
-                     * @param Describes Log topic description
+                     * @param _describes Log topic description
+                     * 
                      */
                     void SetDescribes(const std::string& _describes);
 
                     /**
                      * 判断参数 Describes 是否已赋值
                      * @return Describes 是否已赋值
+                     * 
                      */
                     bool DescribesHasBeenSet() const;
 
@@ -192,38 +216,44 @@ namespace TencentCloud
 A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
                      * @return HotPeriod `0`: Disable log transitioning.
 A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     * 
                      */
                     uint64_t GetHotPeriod() const;
 
                     /**
                      * 设置`0`: Disable log transitioning.
 A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
-                     * @param HotPeriod `0`: Disable log transitioning.
+                     * @param _hotPeriod `0`: Disable log transitioning.
 A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     * 
                      */
                     void SetHotPeriod(const uint64_t& _hotPeriod);
 
                     /**
                      * 判断参数 HotPeriod 是否已赋值
                      * @return HotPeriod 是否已赋值
+                     * 
                      */
                     bool HotPeriodHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
                      * @return IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * 
                      */
                     bool GetIsWebTracking() const;
 
                     /**
                      * 设置Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
-                     * @param IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * @param _isWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * 
                      */
                     void SetIsWebTracking(const bool& _isWebTracking);
 
                     /**
                      * 判断参数 IsWebTracking 是否已赋值
                      * @return IsWebTracking 是否已赋值
+                     * 
                      */
                     bool IsWebTrackingHasBeenSet() const;
 

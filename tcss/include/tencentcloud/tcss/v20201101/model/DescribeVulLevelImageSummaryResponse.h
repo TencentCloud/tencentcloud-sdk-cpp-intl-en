@@ -46,120 +46,140 @@ namespace TencentCloud
                     /**
                      * 获取Percentage of high-risk vulnerabilities in the latest local images
                      * @return HighLevelVulLocalImagePercent Percentage of high-risk vulnerabilities in the latest local images
+                     * 
                      */
                     double GetHighLevelVulLocalImagePercent() const;
 
                     /**
                      * 判断参数 HighLevelVulLocalImagePercent 是否已赋值
                      * @return HighLevelVulLocalImagePercent 是否已赋值
+                     * 
                      */
                     bool HighLevelVulLocalImagePercentHasBeenSet() const;
 
                     /**
                      * 获取Percentage of medium-risk vulnerabilities in the latest local images
                      * @return MediumLevelVulLocalImagePercent Percentage of medium-risk vulnerabilities in the latest local images
+                     * 
                      */
                     double GetMediumLevelVulLocalImagePercent() const;
 
                     /**
                      * 判断参数 MediumLevelVulLocalImagePercent 是否已赋值
                      * @return MediumLevelVulLocalImagePercent 是否已赋值
+                     * 
                      */
                     bool MediumLevelVulLocalImagePercentHasBeenSet() const;
 
                     /**
                      * 获取Percentage of low-risk vulnerabilities in the latest local images
                      * @return LowLevelVulLocalImagePercent Percentage of low-risk vulnerabilities in the latest local images
+                     * 
                      */
                     double GetLowLevelVulLocalImagePercent() const;
 
                     /**
                      * 判断参数 LowLevelVulLocalImagePercent 是否已赋值
                      * @return LowLevelVulLocalImagePercent 是否已赋值
+                     * 
                      */
                     bool LowLevelVulLocalImagePercentHasBeenSet() const;
 
                     /**
                      * 获取Percentage of critical vulnerabilities in the latest local images
                      * @return CriticalLevelVulLocalImagePercent Percentage of critical vulnerabilities in the latest local images
+                     * 
                      */
                     double GetCriticalLevelVulLocalImagePercent() const;
 
                     /**
                      * 判断参数 CriticalLevelVulLocalImagePercent 是否已赋值
                      * @return CriticalLevelVulLocalImagePercent 是否已赋值
+                     * 
                      */
                     bool CriticalLevelVulLocalImagePercentHasBeenSet() const;
 
                     /**
                      * 获取Number of affected local images on the latest version
                      * @return LocalNewestImageCount Number of affected local images on the latest version
+                     * 
                      */
                     int64_t GetLocalNewestImageCount() const;
 
                     /**
                      * 判断参数 LocalNewestImageCount 是否已赋值
                      * @return LocalNewestImageCount 是否已赋值
+                     * 
                      */
                     bool LocalNewestImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of affected repository images on the latest version
                      * @return RegistryNewestImageCount Number of affected repository images on the latest version
+                     * 
                      */
                     int64_t GetRegistryNewestImageCount() const;
 
                     /**
                      * 判断参数 RegistryNewestImageCount 是否已赋值
                      * @return RegistryNewestImageCount 是否已赋值
+                     * 
                      */
                     bool RegistryNewestImageCountHasBeenSet() const;
 
                     /**
                      * 获取Percentage of high-risk vulnerabilities in the latest repository image
                      * @return HighLevelVulRegistryImagePercent Percentage of high-risk vulnerabilities in the latest repository image
+                     * 
                      */
                     double GetHighLevelVulRegistryImagePercent() const;
 
                     /**
                      * 判断参数 HighLevelVulRegistryImagePercent 是否已赋值
                      * @return HighLevelVulRegistryImagePercent 是否已赋值
+                     * 
                      */
                     bool HighLevelVulRegistryImagePercentHasBeenSet() const;
 
                     /**
                      * 获取Percentage of medium-risk vulnerabilities in the latest repository image
                      * @return MediumLevelVulRegistryImagePercent Percentage of medium-risk vulnerabilities in the latest repository image
+                     * 
                      */
                     double GetMediumLevelVulRegistryImagePercent() const;
 
                     /**
                      * 判断参数 MediumLevelVulRegistryImagePercent 是否已赋值
                      * @return MediumLevelVulRegistryImagePercent 是否已赋值
+                     * 
                      */
                     bool MediumLevelVulRegistryImagePercentHasBeenSet() const;
 
                     /**
                      * 获取Percentage of low-risk vulnerabilities in the latest repository image
                      * @return LowLevelVulRegistryImagePercent Percentage of low-risk vulnerabilities in the latest repository image
+                     * 
                      */
                     double GetLowLevelVulRegistryImagePercent() const;
 
                     /**
                      * 判断参数 LowLevelVulRegistryImagePercent 是否已赋值
                      * @return LowLevelVulRegistryImagePercent 是否已赋值
+                     * 
                      */
                     bool LowLevelVulRegistryImagePercentHasBeenSet() const;
 
                     /**
                      * 获取Percentage of critical vulnerabilities in the latest repository image
                      * @return CriticalLevelVulRegistryImagePercent Percentage of critical vulnerabilities in the latest repository image
+                     * 
                      */
                     double GetCriticalLevelVulRegistryImagePercent() const;
 
                     /**
                      * 判断参数 CriticalLevelVulRegistryImagePercent 是否已赋值
                      * @return CriticalLevelVulRegistryImagePercent 是否已赋值
+                     * 
                      */
                     bool CriticalLevelVulRegistryImagePercentHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Queries the ID of the ENI instance, such as `eni-pxir56ns`. Each request supports a maximum of 100 instances. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
                      * @return NetworkInterfaceIds Queries the ID of the ENI instance, such as `eni-pxir56ns`. Each request supports a maximum of 100 instances. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     std::vector<std::string> GetNetworkInterfaceIds() const;
 
                     /**
                      * 设置Queries the ID of the ENI instance, such as `eni-pxir56ns`. Each request supports a maximum of 100 instances. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
-                     * @param NetworkInterfaceIds Queries the ID of the ENI instance, such as `eni-pxir56ns`. Each request supports a maximum of 100 instances. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * @param _networkInterfaceIds Queries the ID of the ENI instance, such as `eni-pxir56ns`. Each request supports a maximum of 100 instances. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     void SetNetworkInterfaceIds(const std::vector<std::string>& _networkInterfaceIds);
 
                     /**
                      * 判断参数 NetworkInterfaceIds 是否已赋值
                      * @return NetworkInterfaceIds 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdsHasBeenSet() const;
 
@@ -86,6 +89,7 @@ address-ip - String - (Filter) Private IPv4 address.
 tag-key - String - Required: no - (Filter) Filter by tag key. For directions, see Sample 2.
 tag:tag-key - String - Required: no - (Filter) Filter by tag key-value pair. Replace `tag-key` with the specific tag key. For directions, see Sample 3.
 is-primary - Boolean - Required: no - (Filter) Filter by whether it is a primary ENI. true: filter only by primary ENI; false: filter only by secondary ENI. If this parameter is not specified, filtering by both primary and secondary ENIs will be used.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -102,7 +106,7 @@ address-ip - String - (Filter) Private IPv4 address.
 tag-key - String - Required: no - (Filter) Filter by tag key. For directions, see Sample 2.
 tag:tag-key - String - Required: no - (Filter) Filter by tag key-value pair. Replace `tag-key` with the specific tag key. For directions, see Sample 3.
 is-primary - Boolean - Required: no - (Filter) Filter by whether it is a primary ENI. true: filter only by primary ENI; false: filter only by secondary ENI. If this parameter is not specified, filtering by both primary and secondary ENIs will be used.
-                     * @param Filters Filter. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
 vpc-id - String - (Filter) VPC instance ID, such as `vpc-f49l6u0z`.
 subnet-id - String - (Filter) Subnet instance ID, such as `subnet-f49l6u0z`.
 network-interface-id - String - (Filter) ENI instance ID, such as `eni-5k56k7k7`.
@@ -114,66 +118,77 @@ address-ip - String - (Filter) Private IPv4 address.
 tag-key - String - Required: no - (Filter) Filter by tag key. For directions, see Sample 2.
 tag:tag-key - String - Required: no - (Filter) Filter by tag key-value pair. Replace `tag-key` with the specific tag key. For directions, see Sample 3.
 is-primary - Boolean - Required: no - (Filter) Filter by whether it is a primary ENI. true: filter only by primary ENI; false: filter only by secondary ENI. If this parameter is not specified, filtering by both primary and secondary ENIs will be used.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 20. Maximum value: 100.
                      * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取ECM region, such as `ap-xian-ecm`.
                      * @return EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region, such as `ap-xian-ecm`.
-                     * @param EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * @param _ecmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 

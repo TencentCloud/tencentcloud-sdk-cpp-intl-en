@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Default Default value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetDefault() const;
 
                     /**
                      * 设置Default value.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Default Default value.
+                     * @param _default Default value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetDefault(const std::string& _default);
 
                     /**
                      * 判断参数 Default 是否已赋值
                      * @return Default 是否已赋值
+                     * 
                      */
                     bool DefaultHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Fixed Fixed value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetFixed() const;
 
                     /**
                      * 设置Fixed value.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Fixed Fixed value.
+                     * @param _fixed Fixed value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetFixed(const std::string& _fixed);
 
                     /**
                      * 判断参数 Fixed 是否已赋值
                      * @return Fixed 是否已赋值
+                     * 
                      */
                     bool FixedHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Max Maximum value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetMax() const;
 
                     /**
                      * 设置Maximum value.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Max Maximum value.
+                     * @param _max Maximum value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetMax(const std::string& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
@@ -117,38 +126,44 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Min Minimum value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetMin() const;
 
                     /**
                      * 设置Minimum value.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Min Minimum value.
+                     * @param _min Minimum value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetMin(const std::string& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
                     /**
                      * 获取Required or not.
                      * @return Need Required or not.
+                     * 
                      */
                     bool GetNeed() const;
 
                     /**
                      * 设置Required or not.
-                     * @param Need Required or not.
+                     * @param _need Required or not.
+                     * 
                      */
                     void SetNeed(const bool& _need);
 
                     /**
                      * 判断参数 Need 是否已赋值
                      * @return Need 是否已赋值
+                     * 
                      */
                     bool NeedHasBeenSet() const;
 

@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Results This field is used to return the task creation result. For the specific output content, see the detailed description of the `TaskResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TaskResult> GetResults() const;
 
                     /**
                      * 判断参数 Results 是否已赋值
                      * @return Results 是否已赋值
+                     * 
                      */
                     bool ResultsHasBeenSet() const;
 

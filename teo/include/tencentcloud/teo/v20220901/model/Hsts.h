@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable the configuration. Values:
+                     * @param _switch Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxAge() const;
 
                     /**
                      * 设置The MaxAge value in seconds. Maximum value: `86400` (one day)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MaxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
+                     * @param _maxAge The MaxAge value in seconds. Maximum value: `86400` (one day)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxAge(const int64_t& _maxAge);
 
                     /**
                      * 判断参数 MaxAge 是否已赋值
                      * @return MaxAge 是否已赋值
+                     * 
                      */
                     bool MaxAgeHasBeenSet() const;
 
@@ -103,6 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIncludeSubDomains() const;
 
@@ -111,16 +118,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IncludeSubDomains Whether to contain subdomain names. Values:
+                     * @param _includeSubDomains Whether to contain subdomain names. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIncludeSubDomains(const std::string& _includeSubDomains);
 
                     /**
                      * 判断参数 IncludeSubDomains 是否已赋值
                      * @return IncludeSubDomains 是否已赋值
+                     * 
                      */
                     bool IncludeSubDomainsHasBeenSet() const;
 
@@ -133,6 +142,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPreload() const;
 
@@ -141,16 +151,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Preload Whether to enable preloading. Values:
+                     * @param _preload Whether to enable preloading. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPreload(const std::string& _preload);
 
                     /**
                      * 判断参数 Preload 是否已赋值
                      * @return Preload 是否已赋值
+                     * 
                      */
                     bool PreloadHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Rule name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
                      * @return RuleName Rule name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
-                     * @param RuleName Rule name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
+                     * @param _ruleName Rule name. It can contain up to 128 bytes, supporting [a-zA-Z0-9-\.]*.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Rule script. Up to 65535 bytes are allowed.
                      * @return RuleScript Rule script. Up to 65535 bytes are allowed.
+                     * 
                      */
                     std::string GetRuleScript() const;
 
                     /**
                      * 设置Rule script. Up to 65535 bytes are allowed.
-                     * @param RuleScript Rule script. Up to 65535 bytes are allowed.
+                     * @param _ruleScript Rule script. Up to 65535 bytes are allowed.
+                     * 
                      */
                     void SetRuleScript(const std::string& _ruleScript);
 
                     /**
                      * 判断参数 RuleScript 是否已赋值
                      * @return RuleScript 是否已赋值
+                     * 
                      */
                     bool RuleScriptHasBeenSet() const;
 
                     /**
                      * 获取Rule description. Up to 1024 bytes are allowed.
                      * @return RuleDesc Rule description. Up to 1024 bytes are allowed.
+                     * 
                      */
                     std::string GetRuleDesc() const;
 
                     /**
                      * 设置Rule description. Up to 1024 bytes are allowed.
-                     * @param RuleDesc Rule description. Up to 1024 bytes are allowed.
+                     * @param _ruleDesc Rule description. Up to 1024 bytes are allowed.
+                     * 
                      */
                     void SetRuleDesc(const std::string& _ruleDesc);
 
                     /**
                      * 判断参数 RuleDesc 是否已赋值
                      * @return RuleDesc 是否已赋值
+                     * 
                      */
                     bool RuleDescHasBeenSet() const;
 
                     /**
                      * 获取Tag. It is an array of key-value structure. Up to 50 tags can be associated.
                      * @return Tags Tag. It is an array of key-value structure. Up to 50 tags can be associated.
+                     * 
                      */
                     std::vector<StringKV> GetTags() const;
 
                     /**
                      * 设置Tag. It is an array of key-value structure. Up to 50 tags can be associated.
-                     * @param Tags Tag. It is an array of key-value structure. Up to 50 tags can be associated.
+                     * @param _tags Tag. It is an array of key-value structure. Up to 50 tags can be associated.
+                     * 
                      */
                     void SetTags(const std::vector<StringKV>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be queried.
                      * @return ServiceId Unique ID of the service to be queried.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be queried.
-                     * @param ServiceId Unique ID of the service to be queried.
+                     * @param _serviceId Unique ID of the service to be queried.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 

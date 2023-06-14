@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Association array
                      * @return Associations Association array
+                     * 
                      */
                     std::vector<TargetGroupAssociation> GetAssociations() const;
 
                     /**
                      * 设置Association array
-                     * @param Associations Association array
+                     * @param _associations Association array
+                     * 
                      */
                     void SetAssociations(const std::vector<TargetGroupAssociation>& _associations);
 
                     /**
                      * 判断参数 Associations 是否已赋值
                      * @return Associations 是否已赋值
+                     * 
                      */
                     bool AssociationsHasBeenSet() const;
 

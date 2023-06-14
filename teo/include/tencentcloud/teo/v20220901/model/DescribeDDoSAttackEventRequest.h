@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the query period.
                      * @return StartTime Start time of the query period.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the query period.
-                     * @param StartTime Start time of the query period.
+                     * @param _startTime Start time of the query period.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the query period.
                      * @return EndTime End time of the query period.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the query period.
-                     * @param EndTime End time of the query period.
+                     * @param _endTime End time of the query period.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取List of DDoS policy IDs. All policies are selected if this field is not specified.
                      * @return PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
+                     * 
                      */
                     std::vector<int64_t> GetPolicyIds() const;
 
                     /**
                      * 设置List of DDoS policy IDs. All policies are selected if this field is not specified.
-                     * @param PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
+                     * @param _policyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
+                     * 
                      */
                     void SetPolicyIds(const std::vector<int64_t>& _policyIds);
 
                     /**
                      * 判断参数 PolicyIds 是否已赋值
                      * @return PolicyIds 是否已赋值
+                     * 
                      */
                     bool PolicyIdsHasBeenSet() const;
 
                     /**
                      * 获取(Required) List of sites. No query results are returned if this field is not specified.
                      * @return ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置(Required) List of sites. No query results are returned if this field is not specified.
-                     * @param ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
+                     * @param _zoneIds (Required) List of sites. No query results are returned if this field is not specified.
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取Limit on paginated queries. Default value: 20. Maximum value: 1000.
                      * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit on paginated queries. Default value: 20. Maximum value: 1000.
-                     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The page offset. Default value: 0.
                      * @return Offset The page offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The page offset. Default value: 0.
-                     * @param Offset The page offset. Default value: 0.
+                     * @param _offset The page offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Whether to display the details.
                      * @return ShowDetail Whether to display the details.
+                     * 
                      */
                     bool GetShowDetail() const;
 
                     /**
                      * 设置Whether to display the details.
-                     * @param ShowDetail Whether to display the details.
+                     * @param _showDetail Whether to display the details.
+                     * 
                      */
                     void SetShowDetail(const bool& _showDetail);
 
                     /**
                      * 判断参数 ShowDetail 是否已赋值
                      * @return ShowDetail 是否已赋值
+                     * 
                      */
                     bool ShowDetailHasBeenSet() const;
 
@@ -177,6 +198,7 @@ namespace TencentCloud
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -185,16 +207,18 @@ namespace TencentCloud
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-                     * @param Area Geolocation scope. Values: 
+                     * @param _area Geolocation scope. Values: 
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -205,6 +229,7 @@ namespace TencentCloud
                      * @return OrderBy The sorting field. Values: 
 <li>`MaxBandWidth`: Peak bandwidth</li>
 <li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
@@ -212,15 +237,17 @@ namespace TencentCloud
                      * 设置The sorting field. Values: 
 <li>`MaxBandWidth`: Peak bandwidth</li>
 <li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
-                     * @param OrderBy The sorting field. Values: 
+                     * @param _orderBy The sorting field. Values: 
 <li>`MaxBandWidth`: Peak bandwidth</li>
 <li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
@@ -231,6 +258,7 @@ namespace TencentCloud
                      * @return OrderType The sorting method. Values: 
 <Li>`asc`: Ascending</li>
 <li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+                     * 
                      */
                     std::string GetOrderType() const;
 
@@ -238,15 +266,17 @@ namespace TencentCloud
                      * 设置The sorting method. Values: 
 <Li>`asc`: Ascending</li>
 <li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
-                     * @param OrderType The sorting method. Values: 
+                     * @param _orderType The sorting method. Values: 
 <Li>`asc`: Ascending</li>
 <li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+                     * 
                      */
                     void SetOrderType(const std::string& _orderType);
 
                     /**
                      * 判断参数 OrderType 是否已赋值
                      * @return OrderType 是否已赋值
+                     * 
                      */
                     bool OrderTypeHasBeenSet() const;
 

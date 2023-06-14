@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Usage plan ID.
                      * @return UsagePlanId Usage plan ID.
+                     * 
                      */
                     std::string GetUsagePlanId() const;
 
                     /**
                      * 设置Usage plan ID.
-                     * @param UsagePlanId Usage plan ID.
+                     * @param _usagePlanId Usage plan ID.
+                     * 
                      */
                     void SetUsagePlanId(const std::string& _usagePlanId);
 
                     /**
                      * 判断参数 UsagePlanId 是否已赋值
                      * @return UsagePlanId 是否已赋值
+                     * 
                      */
                     bool UsagePlanIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the service to be demoted.
                      * @return ServiceId Unique ID of the service to be demoted.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be demoted.
-                     * @param ServiceId Unique ID of the service to be demoted.
+                     * @param _serviceId Unique ID of the service to be demoted.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Environment name.
                      * @return Environment Environment name.
+                     * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
                      * 设置Environment name.
-                     * @param Environment Environment name.
+                     * @param _environment Environment name.
+                     * 
                      */
                     void SetEnvironment(const std::string& _environment);
 
                     /**
                      * 判断参数 Environment 是否已赋值
                      * @return Environment 是否已赋值
+                     * 
                      */
                     bool EnvironmentHasBeenSet() const;
 

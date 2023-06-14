@@ -45,216 +45,252 @@ namespace TencentCloud
                     /**
                      * 获取The domain for which DNS records are to be obtained.
                      * @return Domain The domain for which DNS records are to be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The domain for which DNS records are to be obtained.
-                     * @param Domain The domain for which DNS records are to be obtained.
+                     * @param _domain The domain for which DNS records are to be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      * @return DomainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     uint64_t GetDomainId() const;
 
                     /**
                      * 设置The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
-                     * @param DomainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @param _domainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 
                     /**
                      * 获取The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
                      * @return Subdomain The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
+                     * 
                      */
                     std::string GetSubdomain() const;
 
                     /**
                      * 设置The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
-                     * @param Subdomain The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
+                     * @param _subdomain The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
+                     * 
                      */
                     void SetSubdomain(const std::string& _subdomain);
 
                     /**
                      * 判断参数 Subdomain 是否已赋值
                      * @return Subdomain 是否已赋值
+                     * 
                      */
                     bool SubdomainHasBeenSet() const;
 
                     /**
                      * 获取The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
                      * @return RecordType The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
+                     * 
                      */
                     std::string GetRecordType() const;
 
                     /**
                      * 设置The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
-                     * @param RecordType The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
+                     * @param _recordType The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
+                     * 
                      */
                     void SetRecordType(const std::string& _recordType);
 
                     /**
                      * 判断参数 RecordType 是否已赋值
                      * @return RecordType 是否已赋值
+                     * 
                      */
                     bool RecordTypeHasBeenSet() const;
 
                     /**
                      * 获取The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      * @return RecordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * 
                      */
                     std::string GetRecordLine() const;
 
                     /**
                      * 设置The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
-                     * @param RecordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * @param _recordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * 
                      */
                     void SetRecordLine(const std::string& _recordLine);
 
                     /**
                      * 判断参数 RecordLine 是否已赋值
                      * @return RecordLine 是否已赋值
+                     * 
                      */
                     bool RecordLineHasBeenSet() const;
 
                     /**
                      * 获取The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      * @return RecordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * 
                      */
                     std::string GetRecordLineId() const;
 
                     /**
                      * 设置The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
-                     * @param RecordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * @param _recordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * 
                      */
                     void SetRecordLineId(const std::string& _recordLineId);
 
                     /**
                      * 判断参数 RecordLineId 是否已赋值
                      * @return RecordLineId 是否已赋值
+                     * 
                      */
                     bool RecordLineIdHasBeenSet() const;
 
                     /**
                      * 获取The group ID passed in to get DNS records in the group.
                      * @return GroupId The group ID passed in to get DNS records in the group.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID passed in to get DNS records in the group.
-                     * @param GroupId The group ID passed in to get DNS records in the group.
+                     * @param _groupId The group ID passed in to get DNS records in the group.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The keyword for searching for DNS records. Host headers and record values are supported.
                      * @return Keyword The keyword for searching for DNS records. Host headers and record values are supported.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置The keyword for searching for DNS records. Host headers and record values are supported.
-                     * @param Keyword The keyword for searching for DNS records. Host headers and record values are supported.
+                     * @param _keyword The keyword for searching for DNS records. Host headers and record values are supported.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
                      * @return SortField The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
+                     * 
                      */
                     std::string GetSortField() const;
 
                     /**
                      * 设置The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
-                     * @param SortField The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
+                     * @param _sortField The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
+                     * 
                      */
                     void SetSortField(const std::string& _sortField);
 
                     /**
                      * 判断参数 SortField 是否已赋值
                      * @return SortField 是否已赋值
+                     * 
                      */
                     bool SortFieldHasBeenSet() const;
 
                     /**
                      * 获取The sorting type. Valid values: `ASC` (ascending, default), `DESC` (descending).
                      * @return SortType The sorting type. Valid values: `ASC` (ascending, default), `DESC` (descending).
+                     * 
                      */
                     std::string GetSortType() const;
 
                     /**
                      * 设置The sorting type. Valid values: `ASC` (ascending, default), `DESC` (descending).
-                     * @param SortType The sorting type. Valid values: `ASC` (ascending, default), `DESC` (descending).
+                     * @param _sortType The sorting type. Valid values: `ASC` (ascending, default), `DESC` (descending).
+                     * 
                      */
                     void SetSortType(const std::string& _sortType);
 
                     /**
                      * 判断参数 SortType 是否已赋值
                      * @return SortType 是否已赋值
+                     * 
                      */
                     bool SortTypeHasBeenSet() const;
 
                     /**
                      * 获取The offset. Default value: `0`.
                      * @return Offset The offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The offset. Default value: `0`.
-                     * @param Offset The offset. Default value: `0`.
+                     * @param _offset The offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The limit. It defaults to 100 and can be up to 3,000.
                      * @return Limit The limit. It defaults to 100 and can be up to 3,000.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The limit. It defaults to 100 and can be up to 3,000.
-                     * @param Limit The limit. It defaults to 100 and can be up to 3,000.
+                     * @param _limit The limit. It defaults to 100 and can be up to 3,000.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the listener to be deleted
                      * @return ListenerId ID of the listener to be deleted
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置ID of the listener to be deleted
-                     * @param ListenerId ID of the listener to be deleted
+                     * @param _listenerId ID of the listener to be deleted
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 

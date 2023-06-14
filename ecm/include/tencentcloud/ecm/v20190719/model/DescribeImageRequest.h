@@ -60,6 +60,7 @@ PUBLIC_IMAGE: public image created by Tencent Cloud
 instance-type -String - Required: no - (Filter) Filter supported images by model.
 image-name - String - Required: no - (Filter) Fuzzy match by image name. You can provide only one value.
 image-os - String - Required: no - (Filter) Fuzzy match by image system name. You can provide only one value.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -72,7 +73,7 @@ PUBLIC_IMAGE: public image created by Tencent Cloud
 instance-type -String - Required: no - (Filter) Filter supported images by model.
 image-name - String - Required: no - (Filter) Fuzzy match by image name. You can provide only one value.
 image-os - String - Required: no - (Filter) Fuzzy match by image system name. You can provide only one value.
-                     * @param Filters Filter. Each request can contain up to 10 `Filters`. The detailed filters are as follows:
+                     * @param _filters Filter. Each request can contain up to 10 `Filters`. The detailed filters are as follows:
 image-id - String - Required: no - (Filter) Filter by image ID.
 image-type - String - Required: no - (Filter) Filter by image type. Valid values:
 PRIVATE_IMAGE: private image created by the current account 
@@ -80,48 +81,56 @@ PUBLIC_IMAGE: public image created by Tencent Cloud
 instance-type -String - Required: no - (Filter) Filter supported images by model.
 image-name - String - Required: no - (Filter) Fuzzy match by image name. You can provide only one value.
 image-os - String - Required: no - (Filter) Fuzzy match by image system name. You can provide only one value.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
                      * @return Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
-                     * @param Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
+                     * @param _offset Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

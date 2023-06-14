@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取API path, such as `/path`.
                      * @return Path API path, such as `/path`.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置API path, such as `/path`.
-                     * @param Path API path, such as `/path`.
+                     * @param _path API path, such as `/path`.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取API request method, such as `GET`.
                      * @return Method API request method, such as `GET`.
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置API request method, such as `GET`.
-                     * @param Method API request method, such as `GET`.
+                     * @param _method API request method, such as `GET`.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 

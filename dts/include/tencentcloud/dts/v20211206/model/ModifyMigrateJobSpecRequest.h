@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return JobId Task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Task ID
-                     * @param JobId Task ID
+                     * @param _jobId Task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取New instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
                      * @return NewInstanceClass New instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * 
                      */
                     std::string GetNewInstanceClass() const;
 
                     /**
                      * 设置New instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
-                     * @param NewInstanceClass New instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * @param _newInstanceClass New instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * 
                      */
                     void SetNewInstanceClass(const std::string& _newInstanceClass);
 
                     /**
                      * 判断参数 NewInstanceClass 是否已赋值
                      * @return NewInstanceClass 是否已赋值
+                     * 
                      */
                     bool NewInstanceClassHasBeenSet() const;
 

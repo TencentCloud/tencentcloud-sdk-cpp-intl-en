@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Primary key ID
                      * @return ID Primary key ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Primary key ID
-                     * @param ID Primary key ID
+                     * @param _iD Primary key ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectID Project ID
+                     * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectID Project ID
+                     * @param _projectID Project ID
+                     * 
                      */
                     void SetProjectID(const int64_t& _projectID);
 
                     /**
                      * 判断参数 ProjectID 是否已赋值
                      * @return ProjectID 是否已赋值
+                     * 
                      */
                     bool ProjectIDHasBeenSet() const;
 
                     /**
                      * 获取API
                      * @return ProjectInterface API
+                     * 
                      */
                     std::string GetProjectInterface() const;
 
                     /**
                      * 设置API
-                     * @param ProjectInterface API
+                     * @param _projectInterface API
+                     * 
                      */
                     void SetProjectInterface(const std::string& _projectInterface);
 
                     /**
                      * 判断参数 ProjectInterface 是否已赋值
                      * @return ProjectInterface 是否已赋值
+                     * 
                      */
                     bool ProjectInterfaceHasBeenSet() const;
 
                     /**
                      * 获取Reporting rate
                      * @return ReportRate Reporting rate
+                     * 
                      */
                     int64_t GetReportRate() const;
 
                     /**
                      * 设置Reporting rate
-                     * @param ReportRate Reporting rate
+                     * @param _reportRate Reporting rate
+                     * 
                      */
                     void SetReportRate(const int64_t& _reportRate);
 
                     /**
                      * 判断参数 ReportRate 是否已赋值
                      * @return ReportRate 是否已赋值
+                     * 
                      */
                     bool ReportRateHasBeenSet() const;
 
                     /**
                      * 获取Reporting type. 1: reporting rate; 2: reporting count limit
                      * @return ReportType Reporting type. 1: reporting rate; 2: reporting count limit
+                     * 
                      */
                     int64_t GetReportType() const;
 
                     /**
                      * 设置Reporting type. 1: reporting rate; 2: reporting count limit
-                     * @param ReportType Reporting type. 1: reporting rate; 2: reporting count limit
+                     * @param _reportType Reporting type. 1: reporting rate; 2: reporting count limit
+                     * 
                      */
                     void SetReportType(const int64_t& _reportType);
 
                     /**
                      * 判断参数 ReportType 是否已赋值
                      * @return ReportType 是否已赋值
+                     * 
                      */
                     bool ReportTypeHasBeenSet() const;
 

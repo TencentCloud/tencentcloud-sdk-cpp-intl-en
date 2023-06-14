@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Total entries
                      * @return Total Total entries
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取List data
                      * @return Data List data
+                     * 
                      */
                     std::vector<SwitchListsData> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Region list
                      * @return AreaLists Region list
+                     * 
                      */
                     std::vector<std::string> GetAreaLists() const;
 
                     /**
                      * 判断参数 AreaLists 是否已赋值
                      * @return AreaLists 是否已赋值
+                     * 
                      */
                     bool AreaListsHasBeenSet() const;
 
@@ -85,12 +91,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return OnNum Number of enabled firewalls
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetOnNum() const;
 
                     /**
                      * 判断参数 OnNum 是否已赋值
                      * @return OnNum 是否已赋值
+                     * 
                      */
                     bool OnNumHasBeenSet() const;
 
@@ -99,12 +107,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return OffNum Number of disabled firewalls
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetOffNum() const;
 
                     /**
                      * 判断参数 OffNum 是否已赋值
                      * @return OffNum 是否已赋值
+                     * 
                      */
                     bool OffNumHasBeenSet() const;
 

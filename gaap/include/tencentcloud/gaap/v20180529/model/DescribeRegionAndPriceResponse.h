@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取Total number of origin server regions
                      * @return TotalCount Total number of origin server regions
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of origin server region details
                      * @return DestRegionSet List of origin server region details
+                     * 
                      */
                     std::vector<RegionDetail> GetDestRegionSet() const;
 
                     /**
                      * 判断参数 DestRegionSet 是否已赋值
                      * @return DestRegionSet 是否已赋值
+                     * 
                      */
                     bool DestRegionSetHasBeenSet() const;
 
                     /**
                      * 获取Connection bandwidth price gradient
                      * @return BandwidthUnitPrice Connection bandwidth price gradient
+                     * 
                      */
                     std::vector<BandwidthPriceGradient> GetBandwidthUnitPrice() const;
 
                     /**
                      * 判断参数 BandwidthUnitPrice 是否已赋值
                      * @return BandwidthUnitPrice 是否已赋值
+                     * 
                      */
                     bool BandwidthUnitPriceHasBeenSet() const;
 
@@ -88,12 +94,14 @@ USD (United States Dollar)
                      * @return Currency Currency type of bandwidth price:
 CNY (Chinese Yuan)
 USD (United States Dollar)
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 

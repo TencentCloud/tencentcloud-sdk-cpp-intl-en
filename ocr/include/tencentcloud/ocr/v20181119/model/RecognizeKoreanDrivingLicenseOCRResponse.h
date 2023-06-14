@@ -46,132 +46,154 @@ namespace TencentCloud
                     /**
                      * 获取The ID card number.
                      * @return ID The ID card number.
+                     * 
                      */
                     std::string GetID() const;
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取The license number.
                      * @return LicenseNumber The license number.
+                     * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
                      * 判断参数 LicenseNumber 是否已赋值
                      * @return LicenseNumber 是否已赋值
+                     * 
                      */
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
                      * 获取The resident registration number.
                      * @return Number The resident registration number.
+                     * 
                      */
                     std::string GetNumber() const;
 
                     /**
                      * 判断参数 Number 是否已赋值
                      * @return Number 是否已赋值
+                     * 
                      */
                     bool NumberHasBeenSet() const;
 
                     /**
                      * 获取The license class type.
                      * @return Type The license class type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The address.
                      * @return Address The address.
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取The name.
                      * @return Name The name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The renewal period.
                      * @return AptitudeTesDate The renewal period.
+                     * 
                      */
                     std::string GetAptitudeTesDate() const;
 
                     /**
                      * 判断参数 AptitudeTesDate 是否已赋值
                      * @return AptitudeTesDate 是否已赋值
+                     * 
                      */
                     bool AptitudeTesDateHasBeenSet() const;
 
                     /**
                      * 获取The issue date.
                      * @return DateOfIssue The issue date.
+                     * 
                      */
                     std::string GetDateOfIssue() const;
 
                     /**
                      * 判断参数 DateOfIssue 是否已赋值
                      * @return DateOfIssue 是否已赋值
+                     * 
                      */
                     bool DateOfIssueHasBeenSet() const;
 
                     /**
                      * 获取The Base64-encoded identity photo.
                      * @return Photo The Base64-encoded identity photo.
+                     * 
                      */
                     std::string GetPhoto() const;
 
                     /**
                      * 判断参数 Photo 是否已赋值
                      * @return Photo 是否已赋值
+                     * 
                      */
                     bool PhotoHasBeenSet() const;
 
                     /**
                      * 获取The gender.
                      * @return Sex The gender.
+                     * 
                      */
                     std::string GetSex() const;
 
                     /**
                      * 判断参数 Sex 是否已赋值
                      * @return Sex 是否已赋值
+                     * 
                      */
                     bool SexHasBeenSet() const;
 
                     /**
                      * 获取The birth date in the format of dd/mm/yyyy.
                      * @return Birthday The birth date in the format of dd/mm/yyyy.
+                     * 
                      */
                     std::string GetBirthday() const;
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the row filter policy, which can be obtained using the `DescribeUserInfo` or `DescribeWorkGroupInfo` API.
                      * @return PolicyId The ID of the row filter policy, which can be obtained using the `DescribeUserInfo` or `DescribeWorkGroupInfo` API.
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置The ID of the row filter policy, which can be obtained using the `DescribeUserInfo` or `DescribeWorkGroupInfo` API.
-                     * @param PolicyId The ID of the row filter policy, which can be obtained using the `DescribeUserInfo` or `DescribeWorkGroupInfo` API.
+                     * @param _policyId The ID of the row filter policy, which can be obtained using the `DescribeUserInfo` or `DescribeWorkGroupInfo` API.
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取The new filter policy.
                      * @return Policy The new filter policy.
+                     * 
                      */
                     Policy GetPolicy() const;
 
                     /**
                      * 设置The new filter policy.
-                     * @param Policy The new filter policy.
+                     * @param _policy The new filter policy.
+                     * 
                      */
                     void SetPolicy(const Policy& _policy);
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPN gateway instance.
                      * @return VpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     std::string GetVpnGatewayId() const;
 
                     /**
                      * 设置The ID of the VPN gateway instance.
-                     * @param VpnGatewayId The ID of the VPN gateway instance.
+                     * @param _vpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     void SetVpnGatewayId(const std::string& _vpnGatewayId);
 
                     /**
                      * 判断参数 VpnGatewayId 是否已赋值
                      * @return VpnGatewayId 是否已赋值
+                     * 
                      */
                     bool VpnGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity
                      * @return Limit The returned quantity
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity
-                     * @param Limit The returned quantity
+                     * @param _limit The returned quantity
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

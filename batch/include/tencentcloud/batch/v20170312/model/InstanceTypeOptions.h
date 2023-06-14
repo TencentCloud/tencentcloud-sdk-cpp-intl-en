@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Number of CPU cores
                      * @return CPU Number of CPU cores
+                     * 
                      */
                     uint64_t GetCPU() const;
 
                     /**
                      * 设置Number of CPU cores
-                     * @param CPU Number of CPU cores
+                     * @param _cPU Number of CPU cores
+                     * 
                      */
                     void SetCPU(const uint64_t& _cPU);
 
                     /**
                      * 判断参数 CPU 是否已赋值
                      * @return CPU 是否已赋值
+                     * 
                      */
                     bool CPUHasBeenSet() const;
 
                     /**
                      * 获取Memory size in GB.
                      * @return Memory Memory size in GB.
+                     * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
                      * 设置Memory size in GB.
-                     * @param Memory Memory size in GB.
+                     * @param _memory Memory size in GB.
+                     * 
                      */
                     void SetMemory(const uint64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Instance model category. Values: `ALL` (default), `GENERAL`, `GENERAL_2`, `GENERAL_3`, `COMPUTE`, `COMPUTE_2`, and `COMPUTE_3`. 
                      * @return InstanceCategories Instance model category. Values: `ALL` (default), `GENERAL`, `GENERAL_2`, `GENERAL_3`, `COMPUTE`, `COMPUTE_2`, and `COMPUTE_3`. 
+                     * 
                      */
                     std::vector<std::string> GetInstanceCategories() const;
 
                     /**
                      * 设置Instance model category. Values: `ALL` (default), `GENERAL`, `GENERAL_2`, `GENERAL_3`, `COMPUTE`, `COMPUTE_2`, and `COMPUTE_3`. 
-                     * @param InstanceCategories Instance model category. Values: `ALL` (default), `GENERAL`, `GENERAL_2`, `GENERAL_3`, `COMPUTE`, `COMPUTE_2`, and `COMPUTE_3`. 
+                     * @param _instanceCategories Instance model category. Values: `ALL` (default), `GENERAL`, `GENERAL_2`, `GENERAL_3`, `COMPUTE`, `COMPUTE_2`, and `COMPUTE_3`. 
+                     * 
                      */
                     void SetInstanceCategories(const std::vector<std::string>& _instanceCategories);
 
                     /**
                      * 判断参数 InstanceCategories 是否已赋值
                      * @return InstanceCategories 是否已赋值
+                     * 
                      */
                     bool InstanceCategoriesHasBeenSet() const;
 

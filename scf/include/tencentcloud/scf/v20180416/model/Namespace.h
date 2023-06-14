@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Creation time of the namespace
                      * @return ModTime Creation time of the namespace
+                     * 
                      */
                     std::string GetModTime() const;
 
                     /**
                      * 设置Creation time of the namespace
-                     * @param ModTime Creation time of the namespace
+                     * @param _modTime Creation time of the namespace
+                     * 
                      */
                     void SetModTime(const std::string& _modTime);
 
                     /**
                      * 判断参数 ModTime 是否已赋值
                      * @return ModTime 是否已赋值
+                     * 
                      */
                     bool ModTimeHasBeenSet() const;
 
                     /**
                      * 获取Modification time of the namespace
                      * @return AddTime Modification time of the namespace
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置Modification time of the namespace
-                     * @param AddTime Modification time of the namespace
+                     * @param _addTime Modification time of the namespace
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
                     /**
                      * 获取Namespace description
                      * @return Description Namespace description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Namespace description
-                     * @param Description Namespace description
+                     * @param _description Namespace description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return Name Namespace name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param Name Namespace name
+                     * @param _name Namespace name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
                      * @return Type The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
-                     * @param Type The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
+                     * @param _type The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

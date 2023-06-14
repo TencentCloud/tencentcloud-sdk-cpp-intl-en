@@ -47,20 +47,23 @@ namespace TencentCloud
 The time span cannot exceed 90 days.
                      * @return StartTime Query start time, such as 2019-12-13 00:00:00.
 The time span cannot exceed 90 days.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Query start time, such as 2019-12-13 00:00:00.
 The time span cannot exceed 90 days.
-                     * @param StartTime Query start time, such as 2019-12-13 00:00:00.
+                     * @param _startTime Query start time, such as 2019-12-13 00:00:00.
 The time span cannot exceed 90 days.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ The time span cannot exceed 90 days.
 The time span cannot exceed 90 days.
                      * @return EndTime Query end time, such as 2019-12-13 23:59:59.
 The time span cannot exceed 90 days.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Query end time, such as 2019-12-13 23:59:59.
 The time span cannot exceed 90 days.
-                     * @param EndTime Query end time, such as 2019-12-13 23:59:59.
+                     * @param _endTime Query end time, such as 2019-12-13 23:59:59.
 The time span cannot exceed 90 days.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -95,6 +101,7 @@ request: number of requests
 flux: traffic (in bytes)
 bandwidth: bandwidth (in bps)
 request: number of requests
+                     * 
                      */
                     std::vector<std::string> GetMetrics() const;
 
@@ -103,34 +110,39 @@ request: number of requests
 flux: traffic (in bytes)
 bandwidth: bandwidth (in bps)
 request: number of requests
-                     * @param Metrics Statistical metric names:
+                     * @param _metrics Statistical metric names:
 flux: traffic (in bytes)
 bandwidth: bandwidth (in bps)
 request: number of requests
+                     * 
                      */
                     void SetMetrics(const std::vector<std::string>& _metrics);
 
                     /**
                      * 判断参数 Metrics 是否已赋值
                      * @return Metrics 是否已赋值
+                     * 
                      */
                     bool MetricsHasBeenSet() const;
 
                     /**
                      * 获取Specifies the list of domain names to be queried
                      * @return Domains Specifies the list of domain names to be queried
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置Specifies the list of domain names to be queried
-                     * @param Domains Specifies the list of domain names to be queried
+                     * @param _domains Specifies the list of domain names to be queried
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
@@ -139,56 +151,65 @@ request: number of requests
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
                      * @return Projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+                     * 
                      */
                     std::vector<int64_t> GetProjects() const;
 
                     /**
                      * 设置Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
-                     * @param Projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
+                     * @param _projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+                     * 
                      */
                     void SetProjects(const std::vector<int64_t>& _projects);
 
                     /**
                      * 判断参数 Projects 是否已赋值
                      * @return Projects 是否已赋值
+                     * 
                      */
                     bool ProjectsHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset. Default value: 0.
                      * @return Offset Pagination offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset. Default value: 0.
-                     * @param Offset Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Default value: 1000. Maximum value: 3,000.
                      * @return Limit Number of entries per page. Default value: 1000. Maximum value: 3,000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Default value: 1000. Maximum value: 3,000.
-                     * @param Limit Number of entries per page. Default value: 1000. Maximum value: 3,000.
+                     * @param _limit Number of entries per page. Default value: 1000. Maximum value: 3,000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -203,6 +224,7 @@ mainland: Chinese mainland
 oversea: outside the Chinese mainland
 global: global
 Default value: global
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -212,17 +234,19 @@ mainland: Chinese mainland
 oversea: outside the Chinese mainland
 global: global
 Default value: global
-                     * @param Area Statistical areas:
+                     * @param _area Statistical areas:
 mainland: Chinese mainland
 oversea: outside the Chinese mainland
 global: global
 Default value: global
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

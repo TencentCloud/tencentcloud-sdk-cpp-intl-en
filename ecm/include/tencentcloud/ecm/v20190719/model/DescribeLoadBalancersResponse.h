@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of eligible CLB instances. This value is independent of the `Limit` in the input parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerSet Array of returned CLB instances.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LoadBalancer> GetLoadBalancerSet() const;
 
                     /**
                      * 判断参数 LoadBalancerSet 是否已赋值
                      * @return LoadBalancerSet 是否已赋值
+                     * 
                      */
                     bool LoadBalancerSetHasBeenSet() const;
 

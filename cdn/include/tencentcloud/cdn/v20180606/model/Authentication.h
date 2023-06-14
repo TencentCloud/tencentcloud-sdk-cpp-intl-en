@@ -59,6 +59,7 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 `on`: Enable
 `off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -67,16 +68,18 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 `on`: Enable
 `off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
-                     * @param Switch Hotlink protection configuration switch
+                     * @param _switch Hotlink protection configuration switch
 `on`: Enable
 `off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -85,20 +88,23 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeA Timestamp hotlink protection mode A configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AuthenticationTypeA GetTypeA() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode A configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TypeA Timestamp hotlink protection mode A configuration
+                     * @param _typeA Timestamp hotlink protection mode A configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTypeA(const AuthenticationTypeA& _typeA);
 
                     /**
                      * 判断参数 TypeA 是否已赋值
                      * @return TypeA 是否已赋值
+                     * 
                      */
                     bool TypeAHasBeenSet() const;
 
@@ -107,20 +113,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AuthenticationTypeB GetTypeB() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
+                     * @param _typeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTypeB(const AuthenticationTypeB& _typeB);
 
                     /**
                      * 判断参数 TypeB 是否已赋值
                      * @return TypeB 是否已赋值
+                     * 
                      */
                     bool TypeBHasBeenSet() const;
 
@@ -129,20 +138,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeC Timestamp hotlink protection mode C configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AuthenticationTypeC GetTypeC() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode C configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TypeC Timestamp hotlink protection mode C configuration
+                     * @param _typeC Timestamp hotlink protection mode C configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTypeC(const AuthenticationTypeC& _typeC);
 
                     /**
                      * 判断参数 TypeC 是否已赋值
                      * @return TypeC 是否已赋值
+                     * 
                      */
                     bool TypeCHasBeenSet() const;
 
@@ -151,20 +163,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeD Timestamp hotlink protection mode D configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AuthenticationTypeD GetTypeD() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode D configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TypeD Timestamp hotlink protection mode D configuration
+                     * @param _typeD Timestamp hotlink protection mode D configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTypeD(const AuthenticationTypeD& _typeD);
 
                     /**
                      * 判断参数 TypeD 是否已赋值
                      * @return TypeD 是否已赋值
+                     * 
                      */
                     bool TypeDHasBeenSet() const;
 

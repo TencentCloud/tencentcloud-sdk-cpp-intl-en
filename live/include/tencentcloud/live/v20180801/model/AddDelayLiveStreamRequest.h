@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
                      * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
-                     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * @param _appName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Delay time in seconds, up to 600s.
                      * @return DelayTime Delay time in seconds, up to 600s.
+                     * 
                      */
                     uint64_t GetDelayTime() const;
 
                     /**
                      * 设置Delay time in seconds, up to 600s.
-                     * @param DelayTime Delay time in seconds, up to 600s.
+                     * @param _delayTime Delay time in seconds, up to 600s.
+                     * 
                      */
                     void SetDelayTime(const uint64_t& _delayTime);
 
                     /**
                      * 判断参数 DelayTime 是否已赋值
                      * @return DelayTime 是否已赋值
+                     * 
                      */
                     bool DelayTimeHasBeenSet() const;
 
@@ -123,6 +135,7 @@ Notes:
 Notes:
 1. The configuration will expire after 7 days by default and can last up to 7 days.
 2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     std::string GetExpireTime() const;
 
@@ -131,16 +144,18 @@ Notes:
 Notes:
 1. The configuration will expire after 7 days by default and can last up to 7 days.
 2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param ExpireTime Expiration time of the configured delayed playback in UTC format, such as 2018-11-29T19:00:00Z.
+                     * @param _expireTime Expiration time of the configured delayed playback in UTC format, such as 2018-11-29T19:00:00Z.
 Notes:
 1. The configuration will expire after 7 days by default and can last up to 7 days.
 2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 

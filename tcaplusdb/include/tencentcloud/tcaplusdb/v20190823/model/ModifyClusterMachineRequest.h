@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the machines at the storage layer (tcapsvr)
                      * @return ServerList Information of the machines at the storage layer (tcapsvr)
+                     * 
                      */
                     std::vector<MachineInfo> GetServerList() const;
 
                     /**
                      * 设置Information of the machines at the storage layer (tcapsvr)
-                     * @param ServerList Information of the machines at the storage layer (tcapsvr)
+                     * @param _serverList Information of the machines at the storage layer (tcapsvr)
+                     * 
                      */
                     void SetServerList(const std::vector<MachineInfo>& _serverList);
 
                     /**
                      * 判断参数 ServerList 是否已赋值
                      * @return ServerList 是否已赋值
+                     * 
                      */
                     bool ServerListHasBeenSet() const;
 
                     /**
                      * 获取Information of the machines at the access layer (tcaproxy)
                      * @return ProxyList Information of the machines at the access layer (tcaproxy)
+                     * 
                      */
                     std::vector<MachineInfo> GetProxyList() const;
 
                     /**
                      * 设置Information of the machines at the access layer (tcaproxy)
-                     * @param ProxyList Information of the machines at the access layer (tcaproxy)
+                     * @param _proxyList Information of the machines at the access layer (tcaproxy)
+                     * 
                      */
                     void SetProxyList(const std::vector<MachineInfo>& _proxyList);
 
                     /**
                      * 判断参数 ProxyList 是否已赋值
                      * @return ProxyList 是否已赋值
+                     * 
                      */
                     bool ProxyListHasBeenSet() const;
 
                     /**
                      * 获取Cluster type. Valid values: `1` (standard), `2` (dedicated)
                      * @return ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     * 
                      */
                     int64_t GetClusterType() const;
 
                     /**
                      * 设置Cluster type. Valid values: `1` (standard), `2` (dedicated)
-                     * @param ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     * @param _clusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+                     * 
                      */
                     void SetClusterType(const int64_t& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 

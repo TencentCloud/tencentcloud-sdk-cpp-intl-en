@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return JobId Migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Migration task ID
-                     * @param JobId Migration task ID
+                     * @param _jobId Migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取New migration task name
                      * @return JobName New migration task name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置New migration task name
-                     * @param JobName New migration task name
+                     * @param _jobName New migration task name
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Key of the taint
                      * @return Key Key of the taint
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Key of the taint
-                     * @param Key Key of the taint
+                     * @param _key Key of the taint
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Value of the taint
                      * @return Value Value of the taint
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value of the taint
-                     * @param Value Value of the taint
+                     * @param _value Value of the taint
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Effect of the taint
                      * @return Effect Effect of the taint
+                     * 
                      */
                     std::string GetEffect() const;
 
                     /**
                      * 设置Effect of the taint
-                     * @param Effect Effect of the taint
+                     * @param _effect Effect of the taint
+                     * 
                      */
                     void SetEffect(const std::string& _effect);
 
                     /**
                      * 判断参数 Effect 是否已赋值
                      * @return Effect 是否已赋值
+                     * 
                      */
                     bool EffectHasBeenSet() const;
 

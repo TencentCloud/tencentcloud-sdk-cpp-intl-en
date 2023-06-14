@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of instance launch templates.
                      * @return TotalCount Total number of instance launch templates.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Set of instance launch template versions.
                      * @return LaunchTemplateVersionSet Set of instance launch template versions.
+                     * 
                      */
                     std::vector<LaunchTemplateVersionInfo> GetLaunchTemplateVersionSet() const;
 
                     /**
                      * 判断参数 LaunchTemplateVersionSet 是否已赋值
                      * @return LaunchTemplateVersionSet 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateVersionSetHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取User list of the room.
                      * @return UserList User list of the room.
+                     * 
                      */
                     std::vector<UserListItem> GetUserList() const;
 
                     /**
                      * 判断参数 UserList 是否已赋值
                      * @return UserList 是否已赋值
+                     * 
                      */
                     bool UserListHasBeenSet() const;
 

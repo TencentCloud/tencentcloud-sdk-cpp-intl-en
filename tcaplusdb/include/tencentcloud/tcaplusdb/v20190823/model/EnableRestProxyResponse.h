@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取RestProxy status. Valid values: 0 (disabled), 1 (enabling), 2 (enabled), 3 (disabling).
                      * @return RestProxyStatus RestProxy status. Valid values: 0 (disabled), 1 (enabling), 2 (enabled), 3 (disabling).
+                     * 
                      */
                     uint64_t GetRestProxyStatus() const;
 
                     /**
                      * 判断参数 RestProxyStatus 是否已赋值
                      * @return RestProxyStatus 是否已赋值
+                     * 
                      */
                     bool RestProxyStatusHasBeenSet() const;
 
                     /**
                      * 获取`TaskId` is in the format of `AppInstanceId-taskId`, used to identify tasks of different clusters.
                      * @return TaskId `TaskId` is in the format of `AppInstanceId-taskId`, used to identify tasks of different clusters.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Constant parameter name, which is used only if `ServiceType` is `HTTP`.
                      * @return Name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Constant parameter name, which is used only if `ServiceType` is `HTTP`.
-                     * @param Name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+                     * @param _name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Constant parameter description, which is used only if `ServiceType` is `HTTP`.
                      * @return Desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Constant parameter description, which is used only if `ServiceType` is `HTTP`.
-                     * @param Desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+                     * @param _desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
                     /**
                      * 获取Constant parameter position, which is used only if `ServiceType` is `HTTP`.
                      * @return Position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     std::string GetPosition() const;
 
                     /**
                      * 设置Constant parameter position, which is used only if `ServiceType` is `HTTP`.
-                     * @param Position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+                     * @param _position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     void SetPosition(const std::string& _position);
 
                     /**
                      * 判断参数 Position 是否已赋值
                      * @return Position 是否已赋值
+                     * 
                      */
                     bool PositionHasBeenSet() const;
 
                     /**
                      * 获取Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
                      * @return DefaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
                      * 设置Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
-                     * @param DefaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+                     * @param _defaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+                     * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
 
                     /**
                      * 判断参数 DefaultValue 是否已赋值
                      * @return DefaultValue 是否已赋值
+                     * 
                      */
                     bool DefaultValueHasBeenSet() const;
 

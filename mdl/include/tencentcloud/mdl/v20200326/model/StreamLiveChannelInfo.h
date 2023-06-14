@@ -56,90 +56,105 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return Id Channel ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param Id Channel ID
+                     * @param _id Channel ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Channel status
                      * @return State Channel status
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置Channel status
-                     * @param State Channel status
+                     * @param _state Channel status
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Information of attached inputs
                      * @return AttachedInputs Information of attached inputs
+                     * 
                      */
                     std::vector<AttachedInput> GetAttachedInputs() const;
 
                     /**
                      * 设置Information of attached inputs
-                     * @param AttachedInputs Information of attached inputs
+                     * @param _attachedInputs Information of attached inputs
+                     * 
                      */
                     void SetAttachedInputs(const std::vector<AttachedInput>& _attachedInputs);
 
                     /**
                      * 判断参数 AttachedInputs 是否已赋值
                      * @return AttachedInputs 是否已赋值
+                     * 
                      */
                     bool AttachedInputsHasBeenSet() const;
 
                     /**
                      * 获取Information of output groups
                      * @return OutputGroups Information of output groups
+                     * 
                      */
                     std::vector<StreamLiveOutputGroupsInfo> GetOutputGroups() const;
 
                     /**
                      * 设置Information of output groups
-                     * @param OutputGroups Information of output groups
+                     * @param _outputGroups Information of output groups
+                     * 
                      */
                     void SetOutputGroups(const std::vector<StreamLiveOutputGroupsInfo>& _outputGroups);
 
                     /**
                      * 判断参数 OutputGroups 是否已赋值
                      * @return OutputGroups 是否已赋值
+                     * 
                      */
                     bool OutputGroupsHasBeenSet() const;
 
                     /**
                      * 获取Channel name
                      * @return Name Channel name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Channel name
-                     * @param Name Channel name
+                     * @param _name Channel name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -148,20 +163,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return AudioTemplates Audio transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<AudioTemplateInfo> GetAudioTemplates() const;
 
                     /**
                      * 设置Audio transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param AudioTemplates Audio transcoding templates
+                     * @param _audioTemplates Audio transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAudioTemplates(const std::vector<AudioTemplateInfo>& _audioTemplates);
 
                     /**
                      * 判断参数 AudioTemplates 是否已赋值
                      * @return AudioTemplates 是否已赋值
+                     * 
                      */
                     bool AudioTemplatesHasBeenSet() const;
 
@@ -170,20 +188,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return VideoTemplates Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<VideoTemplateInfo> GetVideoTemplates() const;
 
                     /**
                      * 设置Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param VideoTemplates Video transcoding templates
+                     * @param _videoTemplates Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetVideoTemplates(const std::vector<VideoTemplateInfo>& _videoTemplates);
 
                     /**
                      * 判断参数 VideoTemplates 是否已赋值
                      * @return VideoTemplates 是否已赋值
+                     * 
                      */
                     bool VideoTemplatesHasBeenSet() const;
 
@@ -192,20 +213,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return AVTemplates Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<AVTemplate> GetAVTemplates() const;
 
                     /**
                      * 设置Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param AVTemplates Audio/Video transcoding templates
+                     * @param _aVTemplates Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAVTemplates(const std::vector<AVTemplate>& _aVTemplates);
 
                     /**
                      * 判断参数 AVTemplates 是否已赋值
                      * @return AVTemplates 是否已赋值
+                     * 
                      */
                     bool AVTemplatesHasBeenSet() const;
 
@@ -214,20 +238,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return PlanSettings Event settings
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     PlanSettings GetPlanSettings() const;
 
                     /**
                      * 设置Event settings
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param PlanSettings Event settings
+                     * @param _planSettings Event settings
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPlanSettings(const PlanSettings& _planSettings);
 
                     /**
                      * 判断参数 PlanSettings 是否已赋值
                      * @return PlanSettings 是否已赋值
+                     * 
                      */
                     bool PlanSettingsHasBeenSet() const;
 
@@ -236,20 +263,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EventNotifySettings The callback settings.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     EventNotifySetting GetEventNotifySettings() const;
 
                     /**
                      * 设置The callback settings.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EventNotifySettings The callback settings.
+                     * @param _eventNotifySettings The callback settings.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEventNotifySettings(const EventNotifySetting& _eventNotifySettings);
 
                     /**
                      * 判断参数 EventNotifySettings 是否已赋值
                      * @return EventNotifySettings 是否已赋值
+                     * 
                      */
                     bool EventNotifySettingsHasBeenSet() const;
 

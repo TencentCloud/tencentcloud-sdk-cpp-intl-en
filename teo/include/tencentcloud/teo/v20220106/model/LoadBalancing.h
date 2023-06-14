@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancingId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancingId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancingId CLB instance ID
+                     * @param _loadBalancingId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancingId(const std::string& _loadBalancingId);
 
                     /**
                      * 判断参数 LoadBalancingId 是否已赋值
                      * @return LoadBalancingId 是否已赋值
+                     * 
                      */
                     bool LoadBalancingIdHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Subdomain name. You can use @ to represent the root domain.
                      * @return Host Subdomain name. You can use @ to represent the root domain.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Subdomain name. You can use @ to represent the root domain.
-                     * @param Host Subdomain name. You can use @ to represent the root domain.
+                     * @param _host Subdomain name. You can use @ to represent the root domain.
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
@@ -108,6 +117,7 @@ namespace TencentCloud
                      * @return Type Proxy mode. Valid values:
 `dns_only`: Only DNS
 `proxied`: Enable proxy
+                     * 
                      */
                     std::string GetType() const;
 
@@ -115,105 +125,122 @@ namespace TencentCloud
                      * 设置Proxy mode. Valid values:
 `dns_only`: Only DNS
 `proxied`: Enable proxy
-                     * @param Type Proxy mode. Valid values:
+                     * @param _type Proxy mode. Valid values:
 `dns_only`: Only DNS
 `proxied`: Enable proxy
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Indicates DNS TTL time when `Type=dns_only`
                      * @return TTL Indicates DNS TTL time when `Type=dns_only`
+                     * 
                      */
                     uint64_t GetTTL() const;
 
                     /**
                      * 设置Indicates DNS TTL time when `Type=dns_only`
-                     * @param TTL Indicates DNS TTL time when `Type=dns_only`
+                     * @param _tTL Indicates DNS TTL time when `Type=dns_only`
+                     * 
                      */
                     void SetTTL(const uint64_t& _tTL);
 
                     /**
                      * 判断参数 TTL 是否已赋值
                      * @return TTL 是否已赋值
+                     * 
                      */
                     bool TTLHasBeenSet() const;
 
                     /**
                      * 获取ID of the origin group used
                      * @return OriginId ID of the origin group used
+                     * 
                      */
                     std::vector<std::string> GetOriginId() const;
 
                     /**
                      * 设置ID of the origin group used
-                     * @param OriginId ID of the origin group used
+                     * @param _originId ID of the origin group used
+                     * 
                      */
                     void SetOriginId(const std::vector<std::string>& _originId);
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the origin server used
                      * @return Origin Information of the origin server used
+                     * 
                      */
                     std::vector<OriginGroup> GetOrigin() const;
 
                     /**
                      * 设置Information of the origin server used
-                     * @param Origin Information of the origin server used
+                     * @param _origin Information of the origin server used
+                     * 
                      */
                     void SetOrigin(const std::vector<OriginGroup>& _origin);
 
                     /**
                      * 判断参数 Origin 是否已赋值
                      * @return Origin 是否已赋值
+                     * 
                      */
                     bool OriginHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -222,20 +249,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Cname Schedules domain names
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置Schedules domain names
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Cname Schedules domain names
+                     * @param _cname Schedules domain names
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 

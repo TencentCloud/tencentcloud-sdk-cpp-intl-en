@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Site name
                      * @return Name Site name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Site name
-                     * @param Name Site name
+                     * @param _name Site name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -68,6 +71,7 @@ namespace TencentCloud
                      * @return Type Access mode. Valid values:
 - `full` (default): Access via NS
 - `partial`: Access via CNAME
+                     * 
                      */
                     std::string GetType() const;
 
@@ -75,51 +79,59 @@ namespace TencentCloud
                      * 设置Access mode. Valid values:
 - `full` (default): Access via NS
 - `partial`: Access via CNAME
-                     * @param Type Access mode. Valid values:
+                     * @param _type Access mode. Valid values:
 - `full` (default): Access via NS
 - `partial`: Access via CNAME
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to skip resolution record scanning
                      * @return JumpStart Specifies whether to skip resolution record scanning
+                     * 
                      */
                     bool GetJumpStart() const;
 
                     /**
                      * 设置Specifies whether to skip resolution record scanning
-                     * @param JumpStart Specifies whether to skip resolution record scanning
+                     * @param _jumpStart Specifies whether to skip resolution record scanning
+                     * 
                      */
                     void SetJumpStart(const bool& _jumpStart);
 
                     /**
                      * 判断参数 JumpStart 是否已赋值
                      * @return JumpStart 是否已赋值
+                     * 
                      */
                     bool JumpStartHasBeenSet() const;
 
                     /**
                      * 获取Resource tag
                      * @return Tags Resource tag
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Resource tag
-                     * @param Tags Resource tag
+                     * @param _tags Resource tag
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -45,162 +45,189 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
                      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
                      * @return Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+                     * 
                      */
                     std::vector<std::string> GetMonday() const;
 
                     /**
                      * 设置Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
-                     * @param Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+                     * @param _monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+                     * 
                      */
                     void SetMonday(const std::vector<std::string>& _monday);
 
                     /**
                      * 判断参数 Monday 是否已赋值
                      * @return Monday 是否已赋值
+                     * 
                      */
                     bool MondayHasBeenSet() const;
 
                     /**
                      * 获取Maintenance window on Tuesday. At least one time window is required in a week.
                      * @return Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
+                     * 
                      */
                     std::vector<std::string> GetTuesday() const;
 
                     /**
                      * 设置Maintenance window on Tuesday. At least one time window is required in a week.
-                     * @param Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
+                     * @param _tuesday Maintenance window on Tuesday. At least one time window is required in a week.
+                     * 
                      */
                     void SetTuesday(const std::vector<std::string>& _tuesday);
 
                     /**
                      * 判断参数 Tuesday 是否已赋值
                      * @return Tuesday 是否已赋值
+                     * 
                      */
                     bool TuesdayHasBeenSet() const;
 
                     /**
                      * 获取Maintenance window on Wednesday. At least one time window is required in a week.
                      * @return Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
+                     * 
                      */
                     std::vector<std::string> GetWednesday() const;
 
                     /**
                      * 设置Maintenance window on Wednesday. At least one time window is required in a week.
-                     * @param Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
+                     * @param _wednesday Maintenance window on Wednesday. At least one time window is required in a week.
+                     * 
                      */
                     void SetWednesday(const std::vector<std::string>& _wednesday);
 
                     /**
                      * 判断参数 Wednesday 是否已赋值
                      * @return Wednesday 是否已赋值
+                     * 
                      */
                     bool WednesdayHasBeenSet() const;
 
                     /**
                      * 获取Maintenance window on Thursday. At least one time window is required in a week.
                      * @return Thursday Maintenance window on Thursday. At least one time window is required in a week.
+                     * 
                      */
                     std::vector<std::string> GetThursday() const;
 
                     /**
                      * 设置Maintenance window on Thursday. At least one time window is required in a week.
-                     * @param Thursday Maintenance window on Thursday. At least one time window is required in a week.
+                     * @param _thursday Maintenance window on Thursday. At least one time window is required in a week.
+                     * 
                      */
                     void SetThursday(const std::vector<std::string>& _thursday);
 
                     /**
                      * 判断参数 Thursday 是否已赋值
                      * @return Thursday 是否已赋值
+                     * 
                      */
                     bool ThursdayHasBeenSet() const;
 
                     /**
                      * 获取Maintenance window on Friday. At least one time window is required in a week.
                      * @return Friday Maintenance window on Friday. At least one time window is required in a week.
+                     * 
                      */
                     std::vector<std::string> GetFriday() const;
 
                     /**
                      * 设置Maintenance window on Friday. At least one time window is required in a week.
-                     * @param Friday Maintenance window on Friday. At least one time window is required in a week.
+                     * @param _friday Maintenance window on Friday. At least one time window is required in a week.
+                     * 
                      */
                     void SetFriday(const std::vector<std::string>& _friday);
 
                     /**
                      * 判断参数 Friday 是否已赋值
                      * @return Friday 是否已赋值
+                     * 
                      */
                     bool FridayHasBeenSet() const;
 
                     /**
                      * 获取Maintenance window on Saturday. At least one time window is required in a week.
                      * @return Saturday Maintenance window on Saturday. At least one time window is required in a week.
+                     * 
                      */
                     std::vector<std::string> GetSaturday() const;
 
                     /**
                      * 设置Maintenance window on Saturday. At least one time window is required in a week.
-                     * @param Saturday Maintenance window on Saturday. At least one time window is required in a week.
+                     * @param _saturday Maintenance window on Saturday. At least one time window is required in a week.
+                     * 
                      */
                     void SetSaturday(const std::vector<std::string>& _saturday);
 
                     /**
                      * 判断参数 Saturday 是否已赋值
                      * @return Saturday 是否已赋值
+                     * 
                      */
                     bool SaturdayHasBeenSet() const;
 
                     /**
                      * 获取Maintenance window on Sunday. At least one time window is required in a week.
                      * @return Sunday Maintenance window on Sunday. At least one time window is required in a week.
+                     * 
                      */
                     std::vector<std::string> GetSunday() const;
 
                     /**
                      * 设置Maintenance window on Sunday. At least one time window is required in a week.
-                     * @param Sunday Maintenance window on Sunday. At least one time window is required in a week.
+                     * @param _sunday Maintenance window on Sunday. At least one time window is required in a week.
+                     * 
                      */
                     void SetSunday(const std::vector<std::string>& _sunday);
 
                     /**
                      * 判断参数 Sunday 是否已赋值
                      * @return Sunday 是否已赋值
+                     * 
                      */
                     bool SundayHasBeenSet() const;
 
                     /**
                      * 获取Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
                      * @return MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+                     * 
                      */
                     uint64_t GetMaxDelayTime() const;
 
                     /**
                      * 设置Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
-                     * @param MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+                     * @param _maxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+                     * 
                      */
                     void SetMaxDelayTime(const uint64_t& _maxDelayTime);
 
                     /**
                      * 判断参数 MaxDelayTime 是否已赋值
                      * @return MaxDelayTime 是否已赋值
+                     * 
                      */
                     bool MaxDelayTimeHasBeenSet() const;
 

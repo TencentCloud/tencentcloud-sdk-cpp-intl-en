@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PosId Rack unit
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPosId() const;
 
                     /**
                      * 设置Rack unit
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PosId Rack unit
+                     * @param _posId Rack unit
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPosId(const std::string& _posId);
 
                     /**
                      * 判断参数 PosId 是否已赋值
                      * @return PosId 是否已赋值
+                     * 
                      */
                     bool PosIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RackId Rack
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRackId() const;
 
                     /**
                      * 设置Rack
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RackId Rack
+                     * @param _rackId Rack
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRackId(const std::string& _rackId);
 
                     /**
                      * 判断参数 RackId 是否已赋值
                      * @return RackId 是否已赋值
+                     * 
                      */
                     bool RackIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SwitchId Switch
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitchId() const;
 
                     /**
                      * 设置Switch
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SwitchId Switch
+                     * @param _switchId Switch
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitchId(const std::string& _switchId);
 
                     /**
                      * 判断参数 SwitchId 是否已赋值
                      * @return SwitchId 是否已赋值
+                     * 
                      */
                     bool SwitchIdHasBeenSet() const;
 

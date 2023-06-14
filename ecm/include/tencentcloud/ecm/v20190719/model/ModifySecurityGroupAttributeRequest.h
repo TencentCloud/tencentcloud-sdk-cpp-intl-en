@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
                      * @return SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
-                     * @param SecurityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
+                     * @param _securityGroupId Security group instance ID, such as `esg-33ocnj9n`, which can be obtained through the `DescribeSecurityGroups` API.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Security group name, which can be customized with up to 60 characters.
                      * @return GroupName Security group name, which can be customized with up to 60 characters.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Security group name, which can be customized with up to 60 characters.
-                     * @param GroupName Security group name, which can be customized with up to 60 characters.
+                     * @param _groupName Security group name, which can be customized with up to 60 characters.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Security group remarks, which can contain up to 100 characters.
                      * @return GroupDescription Security group remarks, which can contain up to 100 characters.
+                     * 
                      */
                     std::string GetGroupDescription() const;
 
                     /**
                      * 设置Security group remarks, which can contain up to 100 characters.
-                     * @param GroupDescription Security group remarks, which can contain up to 100 characters.
+                     * @param _groupDescription Security group remarks, which can contain up to 100 characters.
+                     * 
                      */
                     void SetGroupDescription(const std::string& _groupDescription);
 
                     /**
                      * 判断参数 GroupDescription 是否已赋值
                      * @return GroupDescription 是否已赋值
+                     * 
                      */
                     bool GroupDescriptionHasBeenSet() const;
 

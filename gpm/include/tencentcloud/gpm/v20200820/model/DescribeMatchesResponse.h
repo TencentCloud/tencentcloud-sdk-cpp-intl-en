@@ -49,72 +49,84 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MatchInfoList Matchmaking information list
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<MatchInfo> GetMatchInfoList() const;
 
                     /**
                      * 判断参数 MatchInfoList 是否已赋值
                      * @return MatchInfoList 是否已赋值
+                     * 
                      */
                     bool MatchInfoListHasBeenSet() const;
 
                     /**
                      * 获取Total number of results
                      * @return TotalCount Total number of results
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The current page number. The first page will be returned by default if this parameter is left empty.
                      * @return PageNumber The current page number. The first page will be returned by default if this parameter is left empty.
+                     * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
                      * 判断参数 PageNumber 是否已赋值
                      * @return PageNumber 是否已赋值
+                     * 
                      */
                     bool PageNumberHasBeenSet() const;
 
                     /**
                      * 获取The number of matches per page. If this parameter is left empty, 30 matches are displayed per page by default. Maximum value: 30
                      * @return PageSize The number of matches per page. If this parameter is left empty, 30 matches are displayed per page by default. Maximum value: 30
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Query type (optional). Valid values: matchName (query by match name), matchCode (query by matchCode), ruleName (query by rule name), and tag (query by tag key/value)
                      * @return SearchType Query type (optional). Valid values: matchName (query by match name), matchCode (query by matchCode), ruleName (query by rule name), and tag (query by tag key/value)
+                     * 
                      */
                     std::string GetSearchType() const;
 
                     /**
                      * 判断参数 SearchType 是否已赋值
                      * @return SearchType 是否已赋值
+                     * 
                      */
                     bool SearchTypeHasBeenSet() const;
 
                     /**
                      * 获取Keyword for querying (optional)
                      * @return Keyword Keyword for querying (optional)
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

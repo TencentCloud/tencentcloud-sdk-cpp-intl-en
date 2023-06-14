@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of instance details.
                      * @return NetworkInterfaceSet List of instance details.
+                     * 
                      */
                     std::vector<NetworkInterface> GetNetworkInterfaceSet() const;
 
                     /**
                      * 判断参数 NetworkInterfaceSet 是否已赋值
                      * @return NetworkInterfaceSet 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceSetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible instances.
                      * @return TotalCount Number of eligible instances.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

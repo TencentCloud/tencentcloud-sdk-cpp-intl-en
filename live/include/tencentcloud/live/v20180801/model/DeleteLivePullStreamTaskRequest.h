@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The task ID.
                      * @return TaskId The task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The task ID.
-                     * @param TaskId The task ID.
+                     * @param _taskId The task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取The operator.
                      * @return Operator The operator.
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置The operator.
-                     * @param Operator The operator.
+                     * @param _operator The operator.
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 

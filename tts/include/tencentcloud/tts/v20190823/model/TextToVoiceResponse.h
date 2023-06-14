@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded WAV/MP3 audio data
                      * @return Audio Base64-encoded WAV/MP3 audio data
+                     * 
                      */
                     std::string GetAudio() const;
 
                     /**
                      * 判断参数 Audio 是否已赋值
                      * @return Audio 是否已赋值
+                     * 
                      */
                     bool AudioHasBeenSet() const;
 
                     /**
                      * 获取The `SessionId` of a request
                      * @return SessionId The `SessionId` of a request
+                     * 
                      */
                     std::string GetSessionId() const;
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 
                     /**
                      * 获取Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
                      * @return Subtitles Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+                     * 
                      */
                     std::vector<Subtitle> GetSubtitles() const;
 
                     /**
                      * 判断参数 Subtitles 是否已赋值
                      * @return Subtitles 是否已赋值
+                     * 
                      */
                     bool SubtitlesHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerId Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListenerId Listener ID
+                     * @param _listenerId Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Protocol Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol Listener protocol
+                     * @param _protocol Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Listener port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Listener port
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Listener port
+                     * @param _port Listener port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Targets List of real servers bound to the CLB instance
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Backend> GetTargets() const;
 
                     /**
                      * 设置List of real servers bound to the CLB instance
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Targets List of real servers bound to the CLB instance
+                     * @param _targets List of real servers bound to the CLB instance
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargets(const std::vector<Backend>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 

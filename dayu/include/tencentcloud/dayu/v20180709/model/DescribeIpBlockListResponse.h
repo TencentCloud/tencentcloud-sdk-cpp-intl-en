@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Blocked IP list
                      * @return List Blocked IP list
+                     * 
                      */
                     std::vector<IpBlockData> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

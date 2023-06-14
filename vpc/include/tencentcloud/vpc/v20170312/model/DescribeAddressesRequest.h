@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The list of unique IDs of EIPs in the format of `eip-11112222`. `AddressIds` and `Filters.address-id` cannot be specified at the same time.
                      * @return AddressIds The list of unique IDs of EIPs in the format of `eip-11112222`. `AddressIds` and `Filters.address-id` cannot be specified at the same time.
+                     * 
                      */
                     std::vector<std::string> GetAddressIds() const;
 
                     /**
                      * 设置The list of unique IDs of EIPs in the format of `eip-11112222`. `AddressIds` and `Filters.address-id` cannot be specified at the same time.
-                     * @param AddressIds The list of unique IDs of EIPs in the format of `eip-11112222`. `AddressIds` and `Filters.address-id` cannot be specified at the same time.
+                     * @param _addressIds The list of unique IDs of EIPs in the format of `eip-11112222`. `AddressIds` and `Filters.address-id` cannot be specified at the same time.
+                     * 
                      */
                     void SetAddressIds(const std::vector<std::string>& _addressIds);
 
                     /**
                      * 判断参数 AddressIds 是否已赋值
                      * @return AddressIds 是否已赋值
+                     * 
                      */
                     bool AddressIdsHasBeenSet() const;
 
@@ -92,6 +95,7 @@ namespace TencentCloud
 <li> tag-key - String - Optional - Filter by tag key.</li>
 <li> tag-value - String - Optional - Filter by tag value.</li>
 <li> tag:tag-key - String - Optional - Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -111,7 +115,7 @@ namespace TencentCloud
 <li> tag-key - String - Optional - Filter by tag key.</li>
 <li> tag-value - String - Optional - Filter by tag value.</li>
 <li> tag:tag-key - String - Optional - Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
-                     * @param Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+                     * @param _filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> address-id - String - Optional - Filter by unique EIP ID, such as `eip-11112222`.</li>
 <li> address-name - String - Optional - Filter by EIP name. Fuzzy filtering is not supported.</li>
 <li> address-ip - String - Optional - Filter by EIP address.</li>
@@ -126,48 +130,56 @@ namespace TencentCloud
 <li> tag-key - String - Optional - Filter by tag key.</li>
 <li> tag-value - String - Optional - Filter by tag value.</li>
 <li> tag:tag-key - String - Optional - Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
                      * @return Offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
-                     * @param Offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+                     * @param _offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

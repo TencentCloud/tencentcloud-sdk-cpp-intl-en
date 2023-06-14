@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnterpriseInstanceName TCR Enterprise instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEnterpriseInstanceName() const;
 
                     /**
                      * 设置TCR Enterprise instance name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnterpriseInstanceName TCR Enterprise instance name
+                     * @param _enterpriseInstanceName TCR Enterprise instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnterpriseInstanceName(const std::string& _enterpriseInstanceName);
 
                     /**
                      * 判断参数 EnterpriseInstanceName 是否已赋值
                      * @return EnterpriseInstanceName 是否已赋值
+                     * 
                      */
                     bool EnterpriseInstanceNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnterpriseInstanceChargeType TCR Enterprise billing mode. `0`: Pay-as-you-go 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEnterpriseInstanceChargeType() const;
 
                     /**
                      * 设置TCR Enterprise billing mode. `0`: Pay-as-you-go 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnterpriseInstanceChargeType TCR Enterprise billing mode. `0`: Pay-as-you-go 
+                     * @param _enterpriseInstanceChargeType TCR Enterprise billing mode. `0`: Pay-as-you-go 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnterpriseInstanceChargeType(const int64_t& _enterpriseInstanceChargeType);
 
                     /**
                      * 判断参数 EnterpriseInstanceChargeType 是否已赋值
                      * @return EnterpriseInstanceChargeType 是否已赋值
+                     * 
                      */
                     bool EnterpriseInstanceChargeTypeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnterpriseInstanceType Edition of the TCR Enterprise. Values: `basic`, `standard`, `premium` (Advanced edition)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEnterpriseInstanceType() const;
 
                     /**
                      * 设置Edition of the TCR Enterprise. Values: `basic`, `standard`, `premium` (Advanced edition)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnterpriseInstanceType Edition of the TCR Enterprise. Values: `basic`, `standard`, `premium` (Advanced edition)
+                     * @param _enterpriseInstanceType Edition of the TCR Enterprise. Values: `basic`, `standard`, `premium` (Advanced edition)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnterpriseInstanceType(const std::string& _enterpriseInstanceType);
 
                     /**
                      * 判断参数 EnterpriseInstanceType 是否已赋值
                      * @return EnterpriseInstanceType 是否已赋值
+                     * 
                      */
                     bool EnterpriseInstanceTypeHasBeenSet() const;
 

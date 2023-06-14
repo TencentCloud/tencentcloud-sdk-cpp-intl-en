@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Replica AZ region code
                      * @return SlaveZone Replica AZ region code
+                     * 
                      */
                     std::string GetSlaveZone() const;
 
                     /**
                      * 设置Replica AZ region code
-                     * @param SlaveZone Replica AZ region code
+                     * @param _slaveZone Replica AZ region code
+                     * 
                      */
                     void SetSlaveZone(const std::string& _slaveZone);
 
                     /**
                      * 判断参数 SlaveZone 是否已赋值
                      * @return SlaveZone 是否已赋值
+                     * 
                      */
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
                      * 获取Replica AZ
                      * @return SlaveZoneName Replica AZ
+                     * 
                      */
                     std::string GetSlaveZoneName() const;
 
                     /**
                      * 设置Replica AZ
-                     * @param SlaveZoneName Replica AZ
+                     * @param _slaveZoneName Replica AZ
+                     * 
                      */
                     void SetSlaveZoneName(const std::string& _slaveZoneName);
 
                     /**
                      * 判断参数 SlaveZoneName 是否已赋值
                      * @return SlaveZoneName 是否已赋值
+                     * 
                      */
                     bool SlaveZoneNameHasBeenSet() const;
 

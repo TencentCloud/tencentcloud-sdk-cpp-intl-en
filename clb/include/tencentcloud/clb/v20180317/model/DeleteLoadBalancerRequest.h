@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of IDs of the CLB instances to be deleted. Array length limit: 20.
                      * @return LoadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20.
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置Array of IDs of the CLB instances to be deleted. Array length limit: 20.
-                     * @param LoadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20.
+                     * @param _loadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20.
+                     * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 

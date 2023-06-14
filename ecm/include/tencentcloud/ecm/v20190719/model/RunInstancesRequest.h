@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取List of AZs in which to create instances, the number of instances to be created, and the ISPs. You can create up to 100 instances in a region at a time.
                      * @return ZoneInstanceCountISPSet List of AZs in which to create instances, the number of instances to be created, and the ISPs. You can create up to 100 instances in a region at a time.
+                     * 
                      */
                     std::vector<ZoneInstanceCountISP> GetZoneInstanceCountISPSet() const;
 
                     /**
                      * 设置List of AZs in which to create instances, the number of instances to be created, and the ISPs. You can create up to 100 instances in a region at a time.
-                     * @param ZoneInstanceCountISPSet List of AZs in which to create instances, the number of instances to be created, and the ISPs. You can create up to 100 instances in a region at a time.
+                     * @param _zoneInstanceCountISPSet List of AZs in which to create instances, the number of instances to be created, and the ISPs. You can create up to 100 instances in a region at a time.
+                     * 
                      */
                     void SetZoneInstanceCountISPSet(const std::vector<ZoneInstanceCountISP>& _zoneInstanceCountISPSet);
 
                     /**
                      * 判断参数 ZoneInstanceCountISPSet 是否已赋值
                      * @return ZoneInstanceCountISPSet 是否已赋值
+                     * 
                      */
                     bool ZoneInstanceCountISPSetHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 The password of a Linux instance must contain 8–30 characters in at least two of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]. The password of a Windows instance must contain 12–30 characters in at least three of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /].
                      * @return Password Instance login password. Different OS types have different limits on password complexity as detailed below:
 The password of a Linux instance must contain 8–30 characters in at least two of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]. The password of a Windows instance must contain 12–30 characters in at least three of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /].
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Instance login password. Different OS types have different limits on password complexity as detailed below:
 The password of a Linux instance must contain 8–30 characters in at least two of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]. The password of a Windows instance must contain 12–30 characters in at least three of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /].
-                     * @param Password Instance login password. Different OS types have different limits on password complexity as detailed below:
+                     * @param _password Instance login password. Different OS types have different limits on password complexity as detailed below:
 The password of a Linux instance must contain 8–30 characters in at least two of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]. The password of a Windows instance must contain 12–30 characters in at least three of the following character types: letters, digits, and special symbols [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /].
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
@@ -94,6 +100,7 @@ The password of a Linux instance must contain 8–30 characters in at least two 
                      * @return InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
 1. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used.
 2. If you don't specify this parameter or specify it as `0` without specifying the module, the value of `InternetMaxBandwidthIn` will be used
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
@@ -101,51 +108,59 @@ The password of a Linux instance must contain 8–30 characters in at least two 
                      * 设置Public network outbound bandwidth cap in Mbps.
 1. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used.
 2. If you don't specify this parameter or specify it as `0` without specifying the module, the value of `InternetMaxBandwidthIn` will be used
-                     * @param InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+                     * @param _internetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
 1. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used.
 2. If you don't specify this parameter or specify it as `0` without specifying the module, the value of `InternetMaxBandwidthIn` will be used
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取Module ID. If you don't specify this parameter, you must specify the `ImageId`, `InstanceType`, `DataDiskSize`, and `InternetMaxBandwidthOut` parameters
                      * @return ModuleId Module ID. If you don't specify this parameter, you must specify the `ImageId`, `InstanceType`, `DataDiskSize`, and `InternetMaxBandwidthOut` parameters
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID. If you don't specify this parameter, you must specify the `ImageId`, `InstanceType`, `DataDiskSize`, and `InternetMaxBandwidthOut` parameters
-                     * @param ModuleId Module ID. If you don't specify this parameter, you must specify the `ImageId`, `InstanceType`, `DataDiskSize`, and `InternetMaxBandwidthOut` parameters
+                     * @param _moduleId Module ID. If you don't specify this parameter, you must specify the `ImageId`, `InstanceType`, `DataDiskSize`, and `InternetMaxBandwidthOut` parameters
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 
                     /**
                      * 获取Image ID. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
                      * @return ImageId Image ID. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
-                     * @param ImageId Image ID. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
+                     * @param _imageId Image ID. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
@@ -164,6 +179,7 @@ You can specify multiple pattern strings `{R:x}`.
 If you purchase multiple instances and don't specify the pattern string, the instance display names will be suffixed with 1, 2...n, where `n` indicates the number of the purchased instances. For example, if you specify `server_` and purchase 2 instances, the instance display names will be `server\_1` and `server\_2` respectively.
 If the purchased instances belong to different regions or ISPs, the above rules will apply to each region and ISP independently.
 It can contain up to 60 characters (including pattern string).
+                     * 
                      */
                     std::string GetInstanceName() const;
 
@@ -175,19 +191,21 @@ You can specify multiple pattern strings `{R:x}`.
 If you purchase multiple instances and don't specify the pattern string, the instance display names will be suffixed with 1, 2...n, where `n` indicates the number of the purchased instances. For example, if you specify `server_` and purchase 2 instances, the instance display names will be `server\_1` and `server\_2` respectively.
 If the purchased instances belong to different regions or ISPs, the above rules will apply to each region and ISP independently.
 It can contain up to 60 characters (including pattern string).
-                     * @param InstanceName Instance display name.
+                     * @param _instanceName Instance display name.
 If this parameter is not specified, `Not named` will be displayed by default.
 If you purchase multiple instances and specify the pattern string `{R:x}`, display names will be generated based on `[x, x+n-1]`, where `n` is the number of the purchased instances. For example, if you specify `server\_{R:3}` and purchase 1 instance, the display name will be `server\_3`, and if you purchase 2 instances, the display names will be `server\_3` and `server\_4` respectively.
 You can specify multiple pattern strings `{R:x}`.
 If you purchase multiple instances and don't specify the pattern string, the instance display names will be suffixed with 1, 2...n, where `n` indicates the number of the purchased instances. For example, if you specify `server_` and purchase 2 instances, the instance display names will be `server\_1` and `server\_2` respectively.
 If the purchased instances belong to different regions or ISPs, the above rules will apply to each region and ISP independently.
 It can contain up to 60 characters (including pattern string).
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -200,6 +218,7 @@ Other types (such as Linux) of instances: the name should be a combination of 2 
 `HostName` cannot start or end with a dot or hyphen and cannot contain consecutive dots or hyphens.
 Windows instance: the name can contain 2–15 letters, digits, and hyphens but not dots or only digits.
 Other types (such as Linux) of instances: the name should be a combination of 2 to 60 characters, supporting multiple dots. A string between two dots can contain letters, digits, and hyphens.
+                     * 
                      */
                     std::string GetHostName() const;
 
@@ -208,160 +227,186 @@ Other types (such as Linux) of instances: the name should be a combination of 2 
 `HostName` cannot start or end with a dot or hyphen and cannot contain consecutive dots or hyphens.
 Windows instance: the name can contain 2–15 letters, digits, and hyphens but not dots or only digits.
 Other types (such as Linux) of instances: the name should be a combination of 2 to 60 characters, supporting multiple dots. A string between two dots can contain letters, digits, and hyphens.
-                     * @param HostName Server name
+                     * @param _hostName Server name
 `HostName` cannot start or end with a dot or hyphen and cannot contain consecutive dots or hyphens.
 Windows instance: the name can contain 2–15 letters, digits, and hyphens but not dots or only digits.
 Other types (such as Linux) of instances: the name should be a combination of 2 to 60 characters, supporting multiple dots. A string between two dots can contain letters, digits, and hyphens.
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
                     /**
                      * 获取The string used to ensure the idempotency of the request. Currently, it is a reserved parameter; therefore, do not use it.
                      * @return ClientToken The string used to ensure the idempotency of the request. Currently, it is a reserved parameter; therefore, do not use it.
+                     * 
                      */
                     std::string GetClientToken() const;
 
                     /**
                      * 设置The string used to ensure the idempotency of the request. Currently, it is a reserved parameter; therefore, do not use it.
-                     * @param ClientToken The string used to ensure the idempotency of the request. Currently, it is a reserved parameter; therefore, do not use it.
+                     * @param _clientToken The string used to ensure the idempotency of the request. Currently, it is a reserved parameter; therefore, do not use it.
+                     * 
                      */
                     void SetClientToken(const std::string& _clientToken);
 
                     /**
                      * 判断参数 ClientToken 是否已赋值
                      * @return ClientToken 是否已赋值
+                     * 
                      */
                     bool ClientTokenHasBeenSet() const;
 
                     /**
                      * 获取Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled for public images by default.
                      * @return EnhancedService Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled for public images by default.
+                     * 
                      */
                     EnhancedService GetEnhancedService() const;
 
                     /**
                      * 设置Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled for public images by default.
-                     * @param EnhancedService Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled for public images by default.
+                     * @param _enhancedService Enhanced services. You can use this parameter to specify whether to enable services such as Cloud Security and Cloud Monitor. If this parameter is not specified, Cloud Monitor and Cloud Security will be enabled for public images by default.
+                     * 
                      */
                     void SetEnhancedService(const EnhancedService& _enhancedService);
 
                     /**
                      * 判断参数 EnhancedService 是否已赋值
                      * @return EnhancedService 是否已赋值
+                     * 
                      */
                     bool EnhancedServiceHasBeenSet() const;
 
                     /**
                      * 获取Tag list
                      * @return TagSpecification Tag list
+                     * 
                      */
                     std::vector<TagSpecification> GetTagSpecification() const;
 
                     /**
                      * 设置Tag list
-                     * @param TagSpecification Tag list
+                     * @param _tagSpecification Tag list
+                     * 
                      */
                     void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 
                     /**
                      * 获取The user data provided to the instance, which needs to be Base64-encoded with a maximum size of 16 KB
                      * @return UserData The user data provided to the instance, which needs to be Base64-encoded with a maximum size of 16 KB
+                     * 
                      */
                     std::string GetUserData() const;
 
                     /**
                      * 设置The user data provided to the instance, which needs to be Base64-encoded with a maximum size of 16 KB
-                     * @param UserData The user data provided to the instance, which needs to be Base64-encoded with a maximum size of 16 KB
+                     * @param _userData The user data provided to the instance, which needs to be Base64-encoded with a maximum size of 16 KB
+                     * 
                      */
                     void SetUserData(const std::string& _userData);
 
                     /**
                      * 判断参数 UserData 是否已赋值
                      * @return UserData 是否已赋值
+                     * 
                      */
                     bool UserDataHasBeenSet() const;
 
                     /**
                      * 获取Model. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
                      * @return InstanceType Model. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Model. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
-                     * @param InstanceType Model. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
+                     * @param _instanceType Model. If you don't specify this parameter or specify it as null, the default value under the corresponding module will be used.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Data disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
                      * @return DataDiskSize Data disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
+                     * 
                      */
                     int64_t GetDataDiskSize() const;
 
                     /**
                      * 设置Data disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
-                     * @param DataDiskSize Data disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
+                     * @param _dataDiskSize Data disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
+                     * 
                      */
                     void SetDataDiskSize(const int64_t& _dataDiskSize);
 
                     /**
                      * 判断参数 DataDiskSize 是否已赋值
                      * @return DataDiskSize 是否已赋值
+                     * 
                      */
                     bool DataDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API. If this parameter is not specified, the default security group will be bound by default.
                      * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API. If this parameter is not specified, the default security group will be bound by default.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API. If this parameter is not specified, the default security group will be bound by default.
-                     * @param SecurityGroupIds Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API. If this parameter is not specified, the default security group will be bound by default.
+                     * @param _securityGroupIds Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API. If this parameter is not specified, the default security group will be bound by default.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取System disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
                      * @return SystemDiskSize System disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
+                     * 
                      */
                     uint64_t GetSystemDiskSize() const;
 
                     /**
                      * 设置System disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
-                     * @param SystemDiskSize System disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
+                     * @param _systemDiskSize System disk size in GB. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used
+                     * 
                      */
                     void SetSystemDiskSize(const uint64_t& _systemDiskSize);
 
                     /**
                      * 判断参数 SystemDiskSize 是否已赋值
                      * @return SystemDiskSize 是否已赋值
+                     * 
                      */
                     bool SystemDiskSizeHasBeenSet() const;
 
@@ -372,6 +417,7 @@ Other types (such as Linux) of instances: the name should be a combination of 2 
                      * @return InternetMaxBandwidthIn Public network inbound bandwidth cap in Mbps.
 1. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used.
 2. If you don't specify this parameter or specify it as `0` without specifying the module, the value of `InternetMaxBandwidthOut` will be used
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthIn() const;
 
@@ -379,15 +425,17 @@ Other types (such as Linux) of instances: the name should be a combination of 2 
                      * 设置Public network inbound bandwidth cap in Mbps.
 1. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used.
 2. If you don't specify this parameter or specify it as `0` without specifying the module, the value of `InternetMaxBandwidthOut` will be used
-                     * @param InternetMaxBandwidthIn Public network inbound bandwidth cap in Mbps.
+                     * @param _internetMaxBandwidthIn Public network inbound bandwidth cap in Mbps.
 1. If you don't specify this parameter or specify it as `0`, the default value under the corresponding module will be used.
 2. If you don't specify this parameter or specify it as `0` without specifying the module, the value of `InternetMaxBandwidthOut` will be used
+                     * 
                      */
                     void SetInternetMaxBandwidthIn(const int64_t& _internetMaxBandwidthIn);
 
                     /**
                      * 判断参数 InternetMaxBandwidthIn 是否已赋值
                      * @return InternetMaxBandwidthIn 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthInHasBeenSet() const;
 
@@ -402,6 +450,7 @@ If this field is left empty, `0` will be selected by default for non-GNR models,
 1: hourly postpaid at the unit price of xx USD/instance/hour. This billing mode applies only to GNR models. To enable it, submit a ticket for application;
 2: monthly postpaid at the unit price of xx USD/instance/month. This billing mode applies only to GNR models;
 If this field is left empty, `0` will be selected by default for non-GNR models, and `2` will be selected by default for GNR models.
+                     * 
                      */
                     int64_t GetInstanceChargeType() const;
 
@@ -411,35 +460,40 @@ If this field is left empty, `0` will be selected by default for non-GNR models,
 1: hourly postpaid at the unit price of xx USD/instance/hour. This billing mode applies only to GNR models. To enable it, submit a ticket for application;
 2: monthly postpaid at the unit price of xx USD/instance/month. This billing mode applies only to GNR models;
 If this field is left empty, `0` will be selected by default for non-GNR models, and `2` will be selected by default for GNR models.
-                     * @param InstanceChargeType Instance billing type. Valid values:
+                     * @param _instanceChargeType Instance billing type. Valid values:
 0: postpaid by resource usage, where the daily peak usage of the CPU, memory, and disk will be calculated. This billing mode applies only to non-GNR models;
 1: hourly postpaid at the unit price of xx USD/instance/hour. This billing mode applies only to GNR models. To enable it, submit a ticket for application;
 2: monthly postpaid at the unit price of xx USD/instance/month. This billing mode applies only to GNR models;
 If this field is left empty, `0` will be selected by default for non-GNR models, and `2` will be selected by default for GNR models.
+                     * 
                      */
                     void SetInstanceChargeType(const int64_t& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Key pair.
                      * @return KeyIds Key pair.
+                     * 
                      */
                     std::vector<std::string> GetKeyIds() const;
 
                     /**
                      * 设置Key pair.
-                     * @param KeyIds Key pair.
+                     * @param _keyIds Key pair.
+                     * 
                      */
                     void SetKeyIds(const std::vector<std::string>& _keyIds);
 
                     /**
                      * 判断参数 KeyIds 是否已赋值
                      * @return KeyIds 是否已赋值
+                     * 
                      */
                     bool KeyIdsHasBeenSet() const;
 
@@ -456,6 +510,7 @@ FALSE: no
 
 Default value: FALSE.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeepImageLogin() const;
 
@@ -466,54 +521,62 @@ FALSE: no
 
 Default value: FALSE.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeepImageLogin Whether to keep the original settings for the image. You cannot specify this parameter if `Password` or `KeyIds.N` is specified. You can specify this parameter as `TRUE` only when you create an instance by using a custom image, shared image, or image imported from an external resource. Valid values:
+                     * @param _keepImageLogin Whether to keep the original settings for the image. You cannot specify this parameter if `Password` or `KeyIds.N` is specified. You can specify this parameter as `TRUE` only when you create an instance by using a custom image, shared image, or image imported from an external resource. Valid values:
 TRUE: yes
 FALSE: no
 
 Default value: FALSE.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeepImageLogin(const std::string& _keepImageLogin);
 
                     /**
                      * 判断参数 KeepImageLogin 是否已赋值
                      * @return KeepImageLogin 是否已赋值
+                     * 
                      */
                     bool KeepImageLoginHasBeenSet() const;
 
                     /**
                      * 获取System disk information.
                      * @return SystemDisk System disk information.
+                     * 
                      */
                     SystemDisk GetSystemDisk() const;
 
                     /**
                      * 设置System disk information.
-                     * @param SystemDisk System disk information.
+                     * @param _systemDisk System disk information.
+                     * 
                      */
                     void SetSystemDisk(const SystemDisk& _systemDisk);
 
                     /**
                      * 判断参数 SystemDisk 是否已赋值
                      * @return SystemDisk 是否已赋值
+                     * 
                      */
                     bool SystemDiskHasBeenSet() const;
 
                     /**
                      * 获取Data disk information.
                      * @return DataDisks Data disk information.
+                     * 
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
                      * 设置Data disk information.
-                     * @param DataDisks Data disk information.
+                     * @param _dataDisks Data disk information.
+                     * 
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
                     /**
                      * 判断参数 DataDisks 是否已赋值
                      * @return DataDisks 是否已赋值
+                     * 
                      */
                     bool DataDisksHasBeenSet() const;
 

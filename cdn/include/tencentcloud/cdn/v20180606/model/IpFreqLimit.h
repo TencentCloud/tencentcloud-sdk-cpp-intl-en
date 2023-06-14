@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch IP access limit configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置IP access limit configuration switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch IP access limit configuration switch
+                     * @param _switch IP access limit configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -79,6 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Qps Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetQps() const;
 
@@ -86,15 +90,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Qps Sets the limited number of requests per second
+                     * @param _qps Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetQps(const int64_t& _qps);
 
                     /**
                      * 判断参数 Qps 是否已赋值
                      * @return Qps 是否已赋值
+                     * 
                      */
                     bool QpsHasBeenSet() const;
 

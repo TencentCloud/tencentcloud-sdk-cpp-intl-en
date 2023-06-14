@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The domains skipped due to certificate mismatch.
                      * @return MismatchedDomainNames The domains skipped due to certificate mismatch.
+                     * 
                      */
                     std::vector<std::string> GetMismatchedDomainNames() const;
 
                     /**
                      * 判断参数 MismatchedDomainNames 是否已赋值
                      * @return MismatchedDomainNames 是否已赋值
+                     * 
                      */
                     bool MismatchedDomainNamesHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Errors The domains that the API failed to bind, including those in `MismatchedDomainNames`, and the error information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BatchDomainOperateErrors> GetErrors() const;
 
                     /**
                      * 判断参数 Errors 是否已赋值
                      * @return Errors 是否已赋值
+                     * 
                      */
                     bool ErrorsHasBeenSet() const;
 

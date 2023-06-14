@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The name of the recognized field.
                      * @return AutoName The name of the recognized field.
+                     * 
                      */
                     std::string GetAutoName() const;
 
                     /**
                      * 设置The name of the recognized field.
-                     * @param AutoName The name of the recognized field.
+                     * @param _autoName The name of the recognized field.
+                     * 
                      */
                     void SetAutoName(const std::string& _autoName);
 
                     /**
                      * 判断参数 AutoName 是否已赋值
                      * @return AutoName 是否已赋值
+                     * 
                      */
                     bool AutoNameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConfigName The name of a defined field (the key passed in).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConfigName() const;
 
                     /**
                      * 设置The name of a defined field (the key passed in).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConfigName The name of a defined field (the key passed in).
+                     * @param _configName The name of a defined field (the key passed in).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfigName(const std::string& _configName);
 
                     /**
                      * 判断参数 ConfigName 是否已赋值
                      * @return ConfigName 是否已赋值
+                     * 
                      */
                     bool ConfigNameHasBeenSet() const;
 

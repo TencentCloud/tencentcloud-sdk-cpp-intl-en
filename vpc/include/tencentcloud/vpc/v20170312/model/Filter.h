@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
                      * @return Name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
-                     * @param Name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
+                     * @param _name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
                      * @return Values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
-                     * @param Values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
+                     * @param _values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`. For a `bool` parameter, the valid values include `TRUE` and `FALSE`.
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

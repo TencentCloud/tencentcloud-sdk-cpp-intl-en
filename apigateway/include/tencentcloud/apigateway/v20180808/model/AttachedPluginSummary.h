@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Total number of bound plug-ins
                      * @return TotalCount Total number of bound plug-ins
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of bound plug-ins
-                     * @param TotalCount Total number of bound plug-ins
+                     * @param _totalCount Total number of bound plug-ins
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information of bound plug-ins
                      * @return PluginSummary Information of bound plug-ins
+                     * 
                      */
                     std::vector<AttachedPluginInfo> GetPluginSummary() const;
 
                     /**
                      * 设置Information of bound plug-ins
-                     * @param PluginSummary Information of bound plug-ins
+                     * @param _pluginSummary Information of bound plug-ins
+                     * 
                      */
                     void SetPluginSummary(const std::vector<AttachedPluginInfo>& _pluginSummary);
 
                     /**
                      * 判断参数 PluginSummary 是否已赋值
                      * @return PluginSummary 是否已赋值
+                     * 
                      */
                     bool PluginSummaryHasBeenSet() const;
 

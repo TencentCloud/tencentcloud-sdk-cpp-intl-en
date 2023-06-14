@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return Id Rule ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param Id Rule ID
+                     * @param _id Rule ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Rule priority before change
                      * @return OrderIndex Rule priority before change
+                     * 
                      */
                     uint64_t GetOrderIndex() const;
 
                     /**
                      * 设置Rule priority before change
-                     * @param OrderIndex Rule priority before change
+                     * @param _orderIndex Rule priority before change
+                     * 
                      */
                     void SetOrderIndex(const uint64_t& _orderIndex);
 
                     /**
                      * 判断参数 OrderIndex 是否已赋值
                      * @return OrderIndex 是否已赋值
+                     * 
                      */
                     bool OrderIndexHasBeenSet() const;
 
                     /**
                      * 获取Rule priority after change
                      * @return NewOrderIndex Rule priority after change
+                     * 
                      */
                     uint64_t GetNewOrderIndex() const;
 
                     /**
                      * 设置Rule priority after change
-                     * @param NewOrderIndex Rule priority after change
+                     * @param _newOrderIndex Rule priority after change
+                     * 
                      */
                     void SetNewOrderIndex(const uint64_t& _newOrderIndex);
 
                     /**
                      * 判断参数 NewOrderIndex 是否已赋值
                      * @return NewOrderIndex 是否已赋值
+                     * 
                      */
                     bool NewOrderIndexHasBeenSet() const;
 

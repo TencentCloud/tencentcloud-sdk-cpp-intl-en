@@ -61,6 +61,7 @@ namespace TencentCloud
 <li>`uri`: HTTP request URI</li>
 <li>`body_raw`: HTTP request body</li>
 <li>`body_json`: JSON HTTP request body</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -72,19 +73,21 @@ namespace TencentCloud
 <li>`uri`: HTTP request URI</li>
 <li>`body_raw`: HTTP request body</li>
 <li>`body_json`: JSON HTTP request body</li>
-                     * @param Type The field type. Values:
+                     * @param _type The field type. Values:
 <li>`header_fields`: HTTP request header</li>
 <li>`cookie`: HTTP request cookie</li>
 <li>`query_string`: Query string in the HTTP request URL</li>
 <li>`uri`: HTTP request URI</li>
 <li>`body_raw`: HTTP request body</li>
 <li>`body_json`: JSON HTTP request body</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -105,6 +108,7 @@ namespace TencentCloud
 <li>`keys`: All keys</li>
 <li>`values`: Values of all keys</li>
 <li>`key_value`: Key and its value</li>
+                     * 
                      */
                     std::string GetSelector() const;
 
@@ -117,7 +121,7 @@ namespace TencentCloud
 <li>`keys`: All keys</li>
 <li>`values`: Values of all keys</li>
 <li>`key_value`: Key and its value</li>
-                     * @param Selector The specific field. Values:
+                     * @param _selector The specific field. Values:
 <li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
 <li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
 <li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
@@ -125,12 +129,14 @@ namespace TencentCloud
 <li>`keys`: All keys</li>
 <li>`values`: Values of all keys</li>
 <li>`key_value`: Key and its value</li>
+                     * 
                      */
                     void SetSelector(const std::string& _selector);
 
                     /**
                      * 判断参数 Selector 是否已赋值
                      * @return Selector 是否已赋值
+                     * 
                      */
                     bool SelectorHasBeenSet() const;
 
@@ -141,6 +147,7 @@ namespace TencentCloud
                      * @return MatchFromType The match method used to match the key. Values:
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 
                      */
                     std::string GetMatchFromType() const;
 
@@ -148,15 +155,17 @@ namespace TencentCloud
                      * 设置The match method used to match the key. Values:
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
-                     * @param MatchFromType The match method used to match the key. Values:
+                     * @param _matchFromType The match method used to match the key. Values:
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 
                      */
                     void SetMatchFromType(const std::string& _matchFromType);
 
                     /**
                      * 判断参数 MatchFromType 是否已赋值
                      * @return MatchFromType 是否已赋值
+                     * 
                      */
                     bool MatchFromTypeHasBeenSet() const;
 
@@ -165,20 +174,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MatchFrom The value that matches the key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetMatchFrom() const;
 
                     /**
                      * 设置The value that matches the key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MatchFrom The value that matches the key.
+                     * @param _matchFrom The value that matches the key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMatchFrom(const std::vector<std::string>& _matchFrom);
 
                     /**
                      * 判断参数 MatchFrom 是否已赋值
                      * @return MatchFrom 是否已赋值
+                     * 
                      */
                     bool MatchFromHasBeenSet() const;
 
@@ -189,6 +201,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return MatchContentType The match method used to match the content.
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 
                      */
                     std::string GetMatchContentType() const;
 
@@ -196,15 +209,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置The match method used to match the content.
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
-                     * @param MatchContentType The match method used to match the content.
+                     * @param _matchContentType The match method used to match the content.
 <li>`equal`: Exact match</li>
 <li>`wildcard`: Wildcard match (only asterisks)</li>
+                     * 
                      */
                     void SetMatchContentType(const std::string& _matchContentType);
 
                     /**
                      * 判断参数 MatchContentType 是否已赋值
                      * @return MatchContentType 是否已赋值
+                     * 
                      */
                     bool MatchContentTypeHasBeenSet() const;
 
@@ -213,20 +228,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MatchContent The value that matches the content.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetMatchContent() const;
 
                     /**
                      * 设置The value that matches the content.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MatchContent The value that matches the content.
+                     * @param _matchContent The value that matches the content.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMatchContent(const std::vector<std::string>& _matchContent);
 
                     /**
                      * 判断参数 MatchContent 是否已赋值
                      * @return MatchContent 是否已赋值
+                     * 
                      */
                     bool MatchContentHasBeenSet() const;
 

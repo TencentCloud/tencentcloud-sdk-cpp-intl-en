@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Height Subimage height of image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Subimage height of image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Height Subimage height of image sprite.
+                     * @param _height Subimage height of image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Width Subimage width of image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Subimage width of image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Width Subimage width of image sprite.
+                     * @param _width Subimage width of image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of subimages in each image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of subimages in each image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of subimages in each image sprite.
+                     * @param _totalCount Total number of subimages in each image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageUrlSet Address of each image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetImageUrlSet() const;
 
                     /**
                      * 设置Address of each image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ImageUrlSet Address of each image sprite.
+                     * @param _imageUrlSet Address of each image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageUrlSet(const std::vector<std::string>& _imageUrlSet);
 
                     /**
                      * 判断参数 ImageUrlSet 是否已赋值
                      * @return ImageUrlSet 是否已赋值
+                     * 
                      */
                     bool ImageUrlSetHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetWebVttUrl() const;
 
                     /**
                      * 设置Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+                     * @param _webVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWebVttUrl(const std::string& _webVttUrl);
 
                     /**
                      * 判断参数 WebVttUrl 是否已赋值
                      * @return WebVttUrl 是否已赋值
+                     * 
                      */
                     bool WebVttUrlHasBeenSet() const;
 

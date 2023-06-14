@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique primary key used to identify the message
                      * @return MessageID Unique primary key used to identify the message
+                     * 
                      */
                     std::string GetMessageID() const;
 
                     /**
                      * 判断参数 MessageID 是否已赋值
                      * @return MessageID 是否已赋值
+                     * 
                      */
                     bool MessageIDHasBeenSet() const;
 
                     /**
                      * 获取Content of the received message
                      * @return MessagePayload Content of the received message
+                     * 
                      */
                     std::string GetMessagePayload() const;
 
                     /**
                      * 判断参数 MessagePayload 是否已赋值
                      * @return MessagePayload 是否已赋值
+                     * 
                      */
                     bool MessagePayloadHasBeenSet() const;
 
                     /**
                      * 获取Provided to the `Ack` API and used to acknowledge messages in the topic
                      * @return AckTopic Provided to the `Ack` API and used to acknowledge messages in the topic
+                     * 
                      */
                     std::string GetAckTopic() const;
 
                     /**
                      * 判断参数 AckTopic 是否已赋值
                      * @return AckTopic 是否已赋值
+                     * 
                      */
                     bool AckTopicHasBeenSet() const;
 
@@ -84,12 +90,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ErrorMsg Returned error message. If it is an empty string, no error occurred.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 
@@ -98,12 +106,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubName Returned subscriber name, which will be used when an acknowledgment consumer is created.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubName() const;
 
                     /**
                      * 判断参数 SubName 是否已赋值
                      * @return SubName 是否已赋值
+                     * 
                      */
                     bool SubNameHasBeenSet() const;
 
@@ -112,12 +122,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MessageIDList MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessageIDList() const;
 
                     /**
                      * 判断参数 MessageIDList 是否已赋值
                      * @return MessageIDList 是否已赋值
+                     * 
                      */
                     bool MessageIDListHasBeenSet() const;
 
@@ -126,12 +138,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MessagesPayload Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessagesPayload() const;
 
                     /**
                      * 判断参数 MessagesPayload 是否已赋值
                      * @return MessagesPayload 是否已赋值
+                     * 
                      */
                     bool MessagesPayloadHasBeenSet() const;
 

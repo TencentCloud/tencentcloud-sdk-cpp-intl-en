@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Address Address
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置Address
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Address Address
+                     * @param _address Address
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Ip IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Ip IP address
+                     * @param _ip IP address
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Port Port number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Port number
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Port Port number
+                     * @param _port Port number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Status Status
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Status Status
+                     * @param _status Status
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return NetType Network type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNetType() const;
 
                     /**
                      * 设置Network type
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param NetType Network type
+                     * @param _netType Network type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNetType(const std::string& _netType);
 
                     /**
                      * 判断参数 NetType 是否已赋值
                      * @return NetType 是否已赋值
+                     * 
                      */
                     bool NetTypeHasBeenSet() const;
 

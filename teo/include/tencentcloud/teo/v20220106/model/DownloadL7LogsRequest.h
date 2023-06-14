@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Start time. It must conform to the RFC3339 standard.
                      * @return StartTime Start time. It must conform to the RFC3339 standard.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time. It must conform to the RFC3339 standard.
-                     * @param StartTime Start time. It must conform to the RFC3339 standard.
+                     * @param _startTime Start time. It must conform to the RFC3339 standard.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time. It must conform to the RFC3339 standard.
                      * @return EndTime End time. It must conform to the RFC3339 standard.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time. It must conform to the RFC3339 standard.
-                     * @param EndTime End time. It must conform to the RFC3339 standard.
+                     * @param _endTime End time. It must conform to the RFC3339 standard.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page
                      * @return PageSize Number of entries per page
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page
-                     * @param PageSize Number of entries per page
+                     * @param _pageSize Number of entries per page
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Current page
                      * @return PageNo Current page
+                     * 
                      */
                     int64_t GetPageNo() const;
 
                     /**
                      * 设置Current page
-                     * @param PageNo Current page
+                     * @param _pageNo Current page
+                     * 
                      */
                     void SetPageNo(const int64_t& _pageNo);
 
                     /**
                      * 判断参数 PageNo 是否已赋值
                      * @return PageNo 是否已赋值
+                     * 
                      */
                     bool PageNoHasBeenSet() const;
 
                     /**
                      * 获取Array of site names
                      * @return Zones Array of site names
+                     * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
                      * 设置Array of site names
-                     * @param Zones Array of site names
+                     * @param _zones Array of site names
+                     * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
                     /**
                      * 判断参数 Zones 是否已赋值
                      * @return Zones 是否已赋值
+                     * 
                      */
                     bool ZonesHasBeenSet() const;
 
                     /**
                      * 获取Array of subdomain names
                      * @return Domains Array of subdomain names
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置Array of subdomain names
-                     * @param Domains Array of subdomain names
+                     * @param _domains Array of subdomain names
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 

@@ -50,198 +50,231 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding protocol. Valid values: [TCP, UDP]
                      * @return Protocol Forwarding protocol. Valid values: [TCP, UDP]
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Forwarding protocol. Valid values: [TCP, UDP]
-                     * @param Protocol Forwarding protocol. Valid values: [TCP, UDP]
+                     * @param _protocol Forwarding protocol. Valid values: [TCP, UDP]
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Forwarding port
                      * @return VirtualPort Forwarding port
+                     * 
                      */
                     uint64_t GetVirtualPort() const;
 
                     /**
                      * 设置Forwarding port
-                     * @param VirtualPort Forwarding port
+                     * @param _virtualPort Forwarding port
+                     * 
                      */
                     void SetVirtualPort(const uint64_t& _virtualPort);
 
                     /**
                      * 判断参数 VirtualPort 是否已赋值
                      * @return VirtualPort 是否已赋值
+                     * 
                      */
                     bool VirtualPortHasBeenSet() const;
 
                     /**
                      * 获取Real server port
                      * @return SourcePort Real server port
+                     * 
                      */
                     uint64_t GetSourcePort() const;
 
                     /**
                      * 设置Real server port
-                     * @param SourcePort Real server port
+                     * @param _sourcePort Real server port
+                     * 
                      */
                     void SetSourcePort(const uint64_t& _sourcePort);
 
                     /**
                      * 判断参数 SourcePort 是否已赋值
                      * @return SourcePort 是否已赋值
+                     * 
                      */
                     bool SourcePortHasBeenSet() const;
 
                     /**
                      * 获取Forwarding method. Valid values: [1 (forwarding via domain name), 2 (forwarding via IP)]
                      * @return SourceType Forwarding method. Valid values: [1 (forwarding via domain name), 2 (forwarding via IP)]
+                     * 
                      */
                     uint64_t GetSourceType() const;
 
                     /**
                      * 设置Forwarding method. Valid values: [1 (forwarding via domain name), 2 (forwarding via IP)]
-                     * @param SourceType Forwarding method. Valid values: [1 (forwarding via domain name), 2 (forwarding via IP)]
+                     * @param _sourceType Forwarding method. Valid values: [1 (forwarding via domain name), 2 (forwarding via IP)]
+                     * 
                      */
                     void SetSourceType(const uint64_t& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Session persistence duration in seconds
                      * @return KeepTime Session persistence duration in seconds
+                     * 
                      */
                     uint64_t GetKeepTime() const;
 
                     /**
                      * 设置Session persistence duration in seconds
-                     * @param KeepTime Session persistence duration in seconds
+                     * @param _keepTime Session persistence duration in seconds
+                     * 
                      */
                     void SetKeepTime(const uint64_t& _keepTime);
 
                     /**
                      * 判断参数 KeepTime 是否已赋值
                      * @return KeepTime 是否已赋值
+                     * 
                      */
                     bool KeepTimeHasBeenSet() const;
 
                     /**
                      * 获取Forward list
                      * @return SourceList Forward list
+                     * 
                      */
                     std::vector<L4RuleSource> GetSourceList() const;
 
                     /**
                      * 设置Forward list
-                     * @param SourceList Forward list
+                     * @param _sourceList Forward list
+                     * 
                      */
                     void SetSourceList(const std::vector<L4RuleSource>& _sourceList);
 
                     /**
                      * 判断参数 SourceList 是否已赋值
                      * @return SourceList 是否已赋值
+                     * 
                      */
                     bool SourceListHasBeenSet() const;
 
                     /**
                      * 获取Load balancing method. Valid values: [1 (weighted round robin), 2 (source IP hash)]
                      * @return LbType Load balancing method. Valid values: [1 (weighted round robin), 2 (source IP hash)]
+                     * 
                      */
                     uint64_t GetLbType() const;
 
                     /**
                      * 设置Load balancing method. Valid values: [1 (weighted round robin), 2 (source IP hash)]
-                     * @param LbType Load balancing method. Valid values: [1 (weighted round robin), 2 (source IP hash)]
+                     * @param _lbType Load balancing method. Valid values: [1 (weighted round robin), 2 (source IP hash)]
+                     * 
                      */
                     void SetLbType(const uint64_t& _lbType);
 
                     /**
                      * 判断参数 LbType 是否已赋值
                      * @return LbType 是否已赋值
+                     * 
                      */
                     bool LbTypeHasBeenSet() const;
 
                     /**
                      * 获取Session persistence status. Valid values: [0 (disabled), 1 (enabled)];
                      * @return KeepEnable Session persistence status. Valid values: [0 (disabled), 1 (enabled)];
+                     * 
                      */
                     uint64_t GetKeepEnable() const;
 
                     /**
                      * 设置Session persistence status. Valid values: [0 (disabled), 1 (enabled)];
-                     * @param KeepEnable Session persistence status. Valid values: [0 (disabled), 1 (enabled)];
+                     * @param _keepEnable Session persistence status. Valid values: [0 (disabled), 1 (enabled)];
+                     * 
                      */
                     void SetKeepEnable(const uint64_t& _keepEnable);
 
                     /**
                      * 判断参数 KeepEnable 是否已赋值
                      * @return KeepEnable 是否已赋值
+                     * 
                      */
                     bool KeepEnableHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Rule description
                      * @return RuleName Rule description
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule description
-                     * @param RuleName Rule description
+                     * @param _ruleName Rule description
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Watermark removal status. Valid values: [0 (disabled), 1 (enabled)]
                      * @return RemoveSwitch Watermark removal status. Valid values: [0 (disabled), 1 (enabled)]
+                     * 
                      */
                     uint64_t GetRemoveSwitch() const;
 
                     /**
                      * 设置Watermark removal status. Valid values: [0 (disabled), 1 (enabled)]
-                     * @param RemoveSwitch Watermark removal status. Valid values: [0 (disabled), 1 (enabled)]
+                     * @param _removeSwitch Watermark removal status. Valid values: [0 (disabled), 1 (enabled)]
+                     * 
                      */
                     void SetRemoveSwitch(const uint64_t& _removeSwitch);
 
                     /**
                      * 判断参数 RemoveSwitch 是否已赋值
                      * @return RemoveSwitch 是否已赋值
+                     * 
                      */
                     bool RemoveSwitchHasBeenSet() const;
 

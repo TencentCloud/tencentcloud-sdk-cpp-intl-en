@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
                      * @return InstanceId ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
-                     * @param InstanceId ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
+                     * @param _instanceId ID of an instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

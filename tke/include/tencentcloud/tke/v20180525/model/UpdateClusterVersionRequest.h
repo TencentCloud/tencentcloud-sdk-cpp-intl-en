@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The version that needs to upgrade to
                      * @return DstVersion The version that needs to upgrade to
+                     * 
                      */
                     std::string GetDstVersion() const;
 
                     /**
                      * 设置The version that needs to upgrade to
-                     * @param DstVersion The version that needs to upgrade to
+                     * @param _dstVersion The version that needs to upgrade to
+                     * 
                      */
                     void SetDstVersion(const std::string& _dstVersion);
 
                     /**
                      * 判断参数 DstVersion 是否已赋值
                      * @return DstVersion 是否已赋值
+                     * 
                      */
                     bool DstVersionHasBeenSet() const;
 
                     /**
                      * 获取Cluster custom parameter
                      * @return ExtraArgs Cluster custom parameter
+                     * 
                      */
                     ClusterExtraArgs GetExtraArgs() const;
 
                     /**
                      * 设置Cluster custom parameter
-                     * @param ExtraArgs Cluster custom parameter
+                     * @param _extraArgs Cluster custom parameter
+                     * 
                      */
                     void SetExtraArgs(const ClusterExtraArgs& _extraArgs);
 
                     /**
                      * 判断参数 ExtraArgs 是否已赋值
                      * @return ExtraArgs 是否已赋值
+                     * 
                      */
                     bool ExtraArgsHasBeenSet() const;
 
                     /**
                      * 获取The maximum tolerable number of unavailable pods
                      * @return MaxNotReadyPercent The maximum tolerable number of unavailable pods
+                     * 
                      */
                     double GetMaxNotReadyPercent() const;
 
                     /**
                      * 设置The maximum tolerable number of unavailable pods
-                     * @param MaxNotReadyPercent The maximum tolerable number of unavailable pods
+                     * @param _maxNotReadyPercent The maximum tolerable number of unavailable pods
+                     * 
                      */
                     void SetMaxNotReadyPercent(const double& _maxNotReadyPercent);
 
                     /**
                      * 判断参数 MaxNotReadyPercent 是否已赋值
                      * @return MaxNotReadyPercent 是否已赋值
+                     * 
                      */
                     bool MaxNotReadyPercentHasBeenSet() const;
 
                     /**
                      * 获取Whether to skip the precheck
                      * @return SkipPreCheck Whether to skip the precheck
+                     * 
                      */
                     bool GetSkipPreCheck() const;
 
                     /**
                      * 设置Whether to skip the precheck
-                     * @param SkipPreCheck Whether to skip the precheck
+                     * @param _skipPreCheck Whether to skip the precheck
+                     * 
                      */
                     void SetSkipPreCheck(const bool& _skipPreCheck);
 
                     /**
                      * 判断参数 SkipPreCheck 是否已赋值
                      * @return SkipPreCheck 是否已赋值
+                     * 
                      */
                     bool SkipPreCheckHasBeenSet() const;
 

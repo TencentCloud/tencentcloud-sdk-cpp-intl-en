@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability name
                      * @return VulName Vulnerability name
+                     * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 设置Vulnerability name
-                     * @param VulName Vulnerability name
+                     * @param _vulName Vulnerability name
+                     * 
                      */
                     void SetVulName(const std::string& _vulName);
 
                     /**
                      * 判断参数 VulName 是否已赋值
                      * @return VulName 是否已赋值
+                     * 
                      */
                     bool VulNameHasBeenSet() const;
 
                     /**
                      * 获取Severity. Valid values: `CRITICAL` (critical); `HIGH` (high);`MIDDLE` (medium);`LOW` (low).
                      * @return Level Severity. Valid values: `CRITICAL` (critical); `HIGH` (high);`MIDDLE` (medium);`LOW` (low).
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Severity. Valid values: `CRITICAL` (critical); `HIGH` (high);`MIDDLE` (medium);`LOW` (low).
-                     * @param Level Severity. Valid values: `CRITICAL` (critical); `HIGH` (high);`MIDDLE` (medium);`LOW` (low).
+                     * @param _level Severity. Valid values: `CRITICAL` (critical); `HIGH` (high);`MIDDLE` (medium);`LOW` (low).
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
                     /**
                      * 获取Number of affected images
                      * @return AffectedImageCount Number of affected images
+                     * 
                      */
                     int64_t GetAffectedImageCount() const;
 
                     /**
                      * 设置Number of affected images
-                     * @param AffectedImageCount Number of affected images
+                     * @param _affectedImageCount Number of affected images
+                     * 
                      */
                     void SetAffectedImageCount(const int64_t& _affectedImageCount);
 
                     /**
                      * 判断参数 AffectedImageCount 是否已赋值
                      * @return AffectedImageCount 是否已赋值
+                     * 
                      */
                     bool AffectedImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of affected containers
                      * @return AffectedContainerCount Number of affected containers
+                     * 
                      */
                     int64_t GetAffectedContainerCount() const;
 
                     /**
                      * 设置Number of affected containers
-                     * @param AffectedContainerCount Number of affected containers
+                     * @param _affectedContainerCount Number of affected containers
+                     * 
                      */
                     void SetAffectedContainerCount(const int64_t& _affectedContainerCount);
 
                     /**
                      * 判断参数 AffectedContainerCount 是否已赋值
                      * @return AffectedContainerCount 是否已赋值
+                     * 
                      */
                     bool AffectedContainerCountHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability ID
                      * @return ID Vulnerability ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Vulnerability ID
-                     * @param ID Vulnerability ID
+                     * @param _iD Vulnerability ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取POC ID
                      * @return PocID POC ID
+                     * 
                      */
                     std::string GetPocID() const;
 
                     /**
                      * 设置POC ID
-                     * @param PocID POC ID
+                     * @param _pocID POC ID
+                     * 
                      */
                     void SetPocID(const std::string& _pocID);
 
                     /**
                      * 判断参数 PocID 是否已赋值
                      * @return PocID 是否已赋值
+                     * 
                      */
                     bool PocIDHasBeenSet() const;
 

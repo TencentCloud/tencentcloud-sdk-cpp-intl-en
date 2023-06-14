@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Database engine name, which is `redis` for this API.
                      * @return Product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Database engine name, which is `redis` for this API.
-                     * @param Product Database engine name, which is `redis` for this API.
+                     * @param _product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取ID of the security group to be associated in the format of sg-efil73jd.
                      * @return SecurityGroupId ID of the security group to be associated in the format of sg-efil73jd.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置ID of the security group to be associated in the format of sg-efil73jd.
-                     * @param SecurityGroupId ID of the security group to be associated in the format of sg-efil73jd.
+                     * @param _securityGroupId ID of the security group to be associated in the format of sg-efil73jd.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
                      * @return InstanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
-                     * @param InstanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+                     * @param _instanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

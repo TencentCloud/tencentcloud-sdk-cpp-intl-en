@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Region.
                      * @return Region Region.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region.
-                     * @param Region Region.
+                     * @param _region Region.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Logset ID.
                      * @return LogSetId Logset ID.
+                     * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
                      * 设置Logset ID.
-                     * @param LogSetId Logset ID.
+                     * @param _logSetId Logset ID.
+                     * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
 
                     /**
                      * 判断参数 LogSetId 是否已赋值
                      * @return LogSetId 是否已赋值
+                     * 
                      */
                     bool LogSetIdHasBeenSet() const;
 
                     /**
                      * 获取Topic ID.
                      * @return TopicId Topic ID.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Topic ID.
-                     * @param TopicId Topic ID.
+                     * @param _topicId Topic ID.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Status. Valid values: `0` (disabled), `1` (enabled). Default value: `1` (enabled). This parameter can be left empty.
                      * @return Enable Status. Valid values: `0` (disabled), `1` (enabled). Default value: `1` (enabled). This parameter can be left empty.
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Status. Valid values: `0` (disabled), `1` (enabled). Default value: `1` (enabled). This parameter can be left empty.
-                     * @param Enable Status. Valid values: `0` (disabled), `1` (enabled). Default value: `1` (enabled). This parameter can be left empty.
+                     * @param _enable Status. Valid values: `0` (disabled), `1` (enabled). Default value: `1` (enabled). This parameter can be left empty.
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

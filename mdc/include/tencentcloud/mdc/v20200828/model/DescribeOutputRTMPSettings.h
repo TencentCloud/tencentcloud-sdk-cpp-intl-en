@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IdleTimeout Idle timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIdleTimeout() const;
 
                     /**
                      * 设置Idle timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IdleTimeout Idle timeout period.
+                     * @param _idleTimeout Idle timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIdleTimeout(const int64_t& _idleTimeout);
 
                     /**
                      * 判断参数 IdleTimeout 是否已赋值
                      * @return IdleTimeout 是否已赋值
+                     * 
                      */
                     bool IdleTimeoutHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ChunkSize Chunk size.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetChunkSize() const;
 
                     /**
                      * 设置Chunk size.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ChunkSize Chunk size.
+                     * @param _chunkSize Chunk size.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChunkSize(const int64_t& _chunkSize);
 
                     /**
                      * 判断参数 ChunkSize 是否已赋值
                      * @return ChunkSize 是否已赋值
+                     * 
                      */
                     bool ChunkSizeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Destinations Destination address information list of RTMP push.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RTMPAddressDestination> GetDestinations() const;
 
                     /**
                      * 设置Destination address information list of RTMP push.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Destinations Destination address information list of RTMP push.
+                     * @param _destinations Destination address information list of RTMP push.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDestinations(const std::vector<RTMPAddressDestination>& _destinations);
 
                     /**
                      * 判断参数 Destinations 是否已赋值
                      * @return Destinations 是否已赋值
+                     * 
                      */
                     bool DestinationsHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The application ID, such as `1400xxxxxx`.
                      * @return SdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID, such as `1400xxxxxx`.
-                     * @param SdkAppId The application ID, such as `1400xxxxxx`.
+                     * @param _sdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 Note: Only data in the last 14 days can be queried.
                      * @return StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
-                     * @param StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
+                     * @param _startTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -87,20 +93,23 @@ Note: Only data in the last 14 days can be queried.
 Note: Data is collected on a daily basis. To query the data of a day, make sure the end time is later than 00:00 on that day. Otherwise, no data will be returned. For example, to query the data on the 20th, the end time must be later than 00:00 on the 20th.
                      * @return EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time should preferably be more than 24 hours apart.
 Note: Data is collected on a daily basis. To query the data of a day, make sure the end time is later than 00:00 on that day. Otherwise, no data will be returned. For example, to query the data on the 20th, the end time must be later than 00:00 on the 20th.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time should preferably be more than 24 hours apart.
 Note: Data is collected on a daily basis. To query the data of a day, make sure the end time is later than 00:00 on that day. Otherwise, no data will be returned. For example, to query the data on the 20th, the end time must be later than 00:00 on the 20th.
-                     * @param EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time should preferably be more than 24 hours apart.
+                     * @param _endTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time should preferably be more than 24 hours apart.
 Note: Data is collected on a daily basis. To query the data of a day, make sure the end time is later than 00:00 on that day. Otherwise, no data will be returned. For example, to query the data on the 20th, the end time must be later than 00:00 on the 20th.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

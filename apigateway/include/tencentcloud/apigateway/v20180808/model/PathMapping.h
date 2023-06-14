@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Path.
                      * @return Path Path.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Path.
-                     * @param Path Path.
+                     * @param _path Path.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Release environment. Valid values: test, prepub, release.
                      * @return Environment Release environment. Valid values: test, prepub, release.
+                     * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
                      * 设置Release environment. Valid values: test, prepub, release.
-                     * @param Environment Release environment. Valid values: test, prepub, release.
+                     * @param _environment Release environment. Valid values: test, prepub, release.
+                     * 
                      */
                     void SetEnvironment(const std::string& _environment);
 
                     /**
                      * 判断参数 Environment 是否已赋值
                      * @return Environment 是否已赋值
+                     * 
                      */
                     bool EnvironmentHasBeenSet() const;
 

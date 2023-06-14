@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PublicIPAddressInfo Public IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PublicIPAddressInfo GetPublicIPAddressInfo() const;
 
                     /**
                      * 设置Public IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PublicIPAddressInfo Public IP information of the instance.
+                     * @param _publicIPAddressInfo Public IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicIPAddressInfo(const PublicIPAddressInfo& _publicIPAddressInfo);
 
                     /**
                      * 判断参数 PublicIPAddressInfo 是否已赋值
                      * @return PublicIPAddressInfo 是否已赋值
+                     * 
                      */
                     bool PublicIPAddressInfoHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PrivateIPAddressInfo Private IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PrivateIPAddressInfo GetPrivateIPAddressInfo() const;
 
                     /**
                      * 设置Private IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateIPAddressInfo Private IP information of the instance.
+                     * @param _privateIPAddressInfo Private IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateIPAddressInfo(const PrivateIPAddressInfo& _privateIPAddressInfo);
 
                     /**
                      * 判断参数 PrivateIPAddressInfo 是否已赋值
                      * @return PrivateIPAddressInfo 是否已赋值
+                     * 
                      */
                     bool PrivateIPAddressInfoHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PublicIPv6AddressInfo Public IPv6 information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PublicIPAddressInfo GetPublicIPv6AddressInfo() const;
 
                     /**
                      * 设置Public IPv6 information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PublicIPv6AddressInfo Public IPv6 information of the instance.
+                     * @param _publicIPv6AddressInfo Public IPv6 information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicIPv6AddressInfo(const PublicIPAddressInfo& _publicIPv6AddressInfo);
 
                     /**
                      * 判断参数 PublicIPv6AddressInfo 是否已赋值
                      * @return PublicIPv6AddressInfo 是否已赋值
+                     * 
                      */
                     bool PublicIPv6AddressInfoHasBeenSet() const;
 

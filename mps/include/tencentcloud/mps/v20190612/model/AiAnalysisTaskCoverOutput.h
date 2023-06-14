@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取List of intelligently generated covers.
                      * @return CoverSet List of intelligently generated covers.
+                     * 
                      */
                     std::vector<MediaAiAnalysisCoverItem> GetCoverSet() const;
 
                     /**
                      * 设置List of intelligently generated covers.
-                     * @param CoverSet List of intelligently generated covers.
+                     * @param _coverSet List of intelligently generated covers.
+                     * 
                      */
                     void SetCoverSet(const std::vector<MediaAiAnalysisCoverItem>& _coverSet);
 
                     /**
                      * 判断参数 CoverSet 是否已赋值
                      * @return CoverSet 是否已赋值
+                     * 
                      */
                     bool CoverSetHasBeenSet() const;
 
                     /**
                      * 获取Storage location of intelligently generated cover.
                      * @return OutputStorage Storage location of intelligently generated cover.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置Storage location of intelligently generated cover.
-                     * @param OutputStorage Storage location of intelligently generated cover.
+                     * @param _outputStorage Storage location of intelligently generated cover.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 

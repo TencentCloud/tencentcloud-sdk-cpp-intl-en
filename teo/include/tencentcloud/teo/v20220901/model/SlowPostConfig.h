@@ -55,6 +55,7 @@ namespace TencentCloud
                      * @return Switch Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -62,15 +63,17 @@ namespace TencentCloud
                      * 设置Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Values:
+                     * @param _switch Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -79,20 +82,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FirstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     FirstPartConfig GetFirstPartConfig() const;
 
                     /**
                      * 设置Detect slow attacks by the transfer period of the first 8 KB of requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FirstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
+                     * @param _firstPartConfig Detect slow attacks by the transfer period of the first 8 KB of requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFirstPartConfig(const FirstPartConfig& _firstPartConfig);
 
                     /**
                      * 判断参数 FirstPartConfig 是否已赋值
                      * @return FirstPartConfig 是否已赋值
+                     * 
                      */
                     bool FirstPartConfigHasBeenSet() const;
 
@@ -101,20 +107,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SlowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     SlowRateConfig GetSlowRateConfig() const;
 
                     /**
                      * 设置Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SlowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
+                     * @param _slowRateConfig Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSlowRateConfig(const SlowRateConfig& _slowRateConfig);
 
                     /**
                      * 判断参数 SlowRateConfig 是否已赋值
                      * @return SlowRateConfig 是否已赋值
+                     * 
                      */
                     bool SlowRateConfigHasBeenSet() const;
 
@@ -127,6 +136,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`monitor`: Observe</li>
 <li>`drop`: Block the request</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -135,16 +145,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`monitor`: Observe</li>
 <li>`drop`: Block the request</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Action The action to taken when a slow attack is detected. Values:
+                     * @param _action The action to taken when a slow attack is detected. Values:
 <li>`monitor`: Observe</li>
 <li>`drop`: Block the request</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -153,20 +165,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleId ID of the rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
                      * 设置ID of the rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RuleId ID of the rule
+                     * @param _ruleId ID of the rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

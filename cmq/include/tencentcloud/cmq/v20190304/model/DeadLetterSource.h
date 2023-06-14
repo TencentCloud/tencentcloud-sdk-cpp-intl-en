@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return QueueId QueueId
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetQueueId() const;
 
                     /**
                      * 设置QueueId
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param QueueId QueueId
+                     * @param _queueId QueueId
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQueueId(const std::string& _queueId);
 
                     /**
                      * 判断参数 QueueId 是否已赋值
                      * @return QueueId 是否已赋值
+                     * 
                      */
                     bool QueueIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return QueueName QueueName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置QueueName
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param QueueName QueueName
+                     * @param _queueName QueueName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 

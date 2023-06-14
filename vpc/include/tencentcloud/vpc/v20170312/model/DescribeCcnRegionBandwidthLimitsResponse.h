@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The outbound bandwidth caps of all regions connected with the specified CCN instance
                      * @return CcnRegionBandwidthLimitSet The outbound bandwidth caps of all regions connected with the specified CCN instance
+                     * 
                      */
                     std::vector<CcnRegionBandwidthLimit> GetCcnRegionBandwidthLimitSet() const;
 
                     /**
                      * 判断参数 CcnRegionBandwidthLimitSet 是否已赋值
                      * @return CcnRegionBandwidthLimitSet 是否已赋值
+                     * 
                      */
                     bool CcnRegionBandwidthLimitSetHasBeenSet() const;
 

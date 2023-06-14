@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Microservice cluster.
                      * @return ClusterId Microservice cluster.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Microservice cluster.
-                     * @param ClusterId Microservice cluster.
+                     * @param _clusterId Microservice cluster.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Microservice namespace.
                      * @return NamespaceId Microservice namespace.
+                     * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
                      * 设置Microservice namespace.
-                     * @param NamespaceId Microservice namespace.
+                     * @param _namespaceId Microservice namespace.
+                     * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Microservice name.
                      * @return MicroServiceName Microservice name.
+                     * 
                      */
                     std::string GetMicroServiceName() const;
 
                     /**
                      * 设置Microservice name.
-                     * @param MicroServiceName Microservice name.
+                     * @param _microServiceName Microservice name.
+                     * 
                      */
                     void SetMicroServiceName(const std::string& _microServiceName);
 
                     /**
                      * 判断参数 MicroServiceName 是否已赋值
                      * @return MicroServiceName 是否已赋值
+                     * 
                      */
                     bool MicroServiceNameHasBeenSet() const;
 

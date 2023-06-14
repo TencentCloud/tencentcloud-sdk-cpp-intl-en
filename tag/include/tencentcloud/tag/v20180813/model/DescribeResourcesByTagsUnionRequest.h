@@ -46,144 +46,168 @@ namespace TencentCloud
                     /**
                      * 获取Tag filtering arrays.
                      * @return TagFilters Tag filtering arrays.
+                     * 
                      */
                     std::vector<TagFilter> GetTagFilters() const;
 
                     /**
                      * 设置Tag filtering arrays.
-                     * @param TagFilters Tag filtering arrays.
+                     * @param _tagFilters Tag filtering arrays.
+                     * 
                      */
                     void SetTagFilters(const std::vector<TagFilter>& _tagFilters);
 
                     /**
                      * 判断参数 TagFilters 是否已赋值
                      * @return TagFilters 是否已赋值
+                     * 
                      */
                     bool TagFiltersHasBeenSet() const;
 
                     /**
                      * 获取Tag creator uin.
                      * @return CreateUin Tag creator uin.
+                     * 
                      */
                     uint64_t GetCreateUin() const;
 
                     /**
                      * 设置Tag creator uin.
-                     * @param CreateUin Tag creator uin.
+                     * @param _createUin Tag creator uin.
+                     * 
                      */
                     void SetCreateUin(const uint64_t& _createUin);
 
                     /**
                      * 判断参数 CreateUin 是否已赋值
                      * @return CreateUin 是否已赋值
+                     * 
                      */
                     bool CreateUinHasBeenSet() const;
 
                     /**
                      * 获取Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
                      * @return Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
-                     * @param Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+                     * @param _offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Page size. The default value is 15.
                      * @return Limit Page size. The default value is 15.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Page size. The default value is 15.
-                     * @param Limit Page size. The default value is 15.
+                     * @param _limit Page size. The default value is 15.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Resource prefix.
                      * @return ResourcePrefix Resource prefix.
+                     * 
                      */
                     std::string GetResourcePrefix() const;
 
                     /**
                      * 设置Resource prefix.
-                     * @param ResourcePrefix Resource prefix.
+                     * @param _resourcePrefix Resource prefix.
+                     * 
                      */
                     void SetResourcePrefix(const std::string& _resourcePrefix);
 
                     /**
                      * 判断参数 ResourcePrefix 是否已赋值
                      * @return ResourcePrefix 是否已赋值
+                     * 
                      */
                     bool ResourcePrefixHasBeenSet() const;
 
                     /**
                      * 获取Unique resource ID.
                      * @return ResourceId Unique resource ID.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Unique resource ID.
-                     * @param ResourceId Unique resource ID.
+                     * @param _resourceId Unique resource ID.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取The resource’s region.
                      * @return ResourceRegion The resource’s region.
+                     * 
                      */
                     std::string GetResourceRegion() const;
 
                     /**
                      * 设置The resource’s region.
-                     * @param ResourceRegion The resource’s region.
+                     * @param _resourceRegion The resource’s region.
+                     * 
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
 
                     /**
                      * 判断参数 ResourceRegion 是否已赋值
                      * @return ResourceRegion 是否已赋值
+                     * 
                      */
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
                      * 获取Service type
                      * @return ServiceType Service type
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Service type
-                     * @param ServiceType Service type
+                     * @param _serviceType Service type
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 

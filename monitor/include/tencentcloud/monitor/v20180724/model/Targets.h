@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Total The total count
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 设置The total count
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Total The total count
+                     * @param _total The total count
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotal(const uint64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Up Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetUp() const;
 
                     /**
                      * 设置Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Up Number of online targets
+                     * @param _up Number of online targets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUp(const uint64_t& _up);
 
                     /**
                      * 判断参数 Up 是否已赋值
                      * @return Up 是否已赋值
+                     * 
                      */
                     bool UpHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Down Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDown() const;
 
                     /**
                      * 设置Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Down Number of offline targets
+                     * @param _down Number of offline targets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDown(const uint64_t& _down);
 
                     /**
                      * 判断参数 Down 是否已赋值
                      * @return Down 是否已赋值
+                     * 
                      */
                     bool DownHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Unknown Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetUnknown() const;
 
                     /**
                      * 设置Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Unknown Number of unknown status
+                     * @param _unknown Number of unknown status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnknown(const uint64_t& _unknown);
 
                     /**
                      * 判断参数 Unknown 是否已赋值
                      * @return Unknown 是否已赋值
+                     * 
                      */
                     bool UnknownHasBeenSet() const;
 

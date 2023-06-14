@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The JSON data of the claim protocol type (CPT).
                      * @return CptJsonData The JSON data of the claim protocol type (CPT).
+                     * 
                      */
                     std::string GetCptJsonData() const;
 
                     /**
                      * 判断参数 CptJsonData 是否已赋值
                      * @return CptJsonData 是否已赋值
+                     * 
                      */
                     bool CptJsonDataHasBeenSet() const;
 

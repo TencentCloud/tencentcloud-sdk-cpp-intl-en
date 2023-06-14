@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of CLB instances to be queried.
                      * @return LoadBalancerIds List of IDs of CLB instances to be queried.
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置List of IDs of CLB instances to be queried.
-                     * @param LoadBalancerIds List of IDs of CLB instances to be queried.
+                     * @param _loadBalancerIds List of IDs of CLB instances to be queried.
+                     * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 

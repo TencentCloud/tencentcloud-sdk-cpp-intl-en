@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserId User ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserId User ID, which is globally unique and can contain up to 64 characters.
+                     * @param _userId User ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DisplayName Nickname, which can contain up to 64 characters and is the same as the username by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Nickname, which can contain up to 64 characters and is the same as the username by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DisplayName Nickname, which can contain up to 64 characters and is the same as the username by default.
+                     * @param _displayName Nickname, which can contain up to 64 characters and is the same as the username by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserName Username.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserName Username.
+                     * @param _userName Username.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Phone User's mobile number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPhone() const;
 
                     /**
                      * 设置User's mobile number.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Phone User's mobile number.
+                     * @param _phone User's mobile number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPhone(const std::string& _phone);
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Email Email address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 设置Email address.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Email Email address.
+                     * @param _email Email address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEmail(const std::string& _email);
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Status User status.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置User status.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status User status.
+                     * @param _status User status.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DataSource Data source.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDataSource() const;
 
                     /**
                      * 设置Data source.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DataSource Data source.
+                     * @param _dataSource Data source.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataSource(const std::string& _dataSource);
 
                     /**
                      * 判断参数 DataSource 是否已赋值
                      * @return DataSource 是否已赋值
+                     * 
                      */
                     bool DataSourceHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible instances.
                      * @return TotalCount Number of eligible instances.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Route table object.
                      * @return RouteTableSet Route table object.
+                     * 
                      */
                     std::vector<RouteTable> GetRouteTableSet() const;
 
                     /**
                      * 判断参数 RouteTableSet 是否已赋值
                      * @return RouteTableSet 是否已赋值
+                     * 
                      */
                     bool RouteTableSetHasBeenSet() const;
 

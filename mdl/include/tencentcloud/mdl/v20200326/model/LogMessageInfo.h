@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StreamInfo Push information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     StreamInfo GetStreamInfo() const;
 
                     /**
                      * 设置Push information.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StreamInfo Push information.
+                     * @param _streamInfo Push information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStreamInfo(const StreamInfo& _streamInfo);
 
                     /**
                      * 判断参数 StreamInfo 是否已赋值
                      * @return StreamInfo 是否已赋值
+                     * 
                      */
                     bool StreamInfoHasBeenSet() const;
 

@@ -50,12 +50,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return OverviewData Matchmaking statistics overview
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     ReportOverviewData GetOverviewData() const;
 
                     /**
                      * 判断参数 OverviewData 是否已赋值
                      * @return OverviewData 是否已赋值
+                     * 
                      */
                     bool OverviewDataHasBeenSet() const;
 
@@ -64,12 +66,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return TrendData Trend data of the number of matchmaking requests
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     ReportTrendData GetTrendData() const;
 
                     /**
                      * 判断参数 TrendData 是否已赋值
                      * @return TrendData 是否已赋值
+                     * 
                      */
                     bool TrendDataHasBeenSet() const;
 

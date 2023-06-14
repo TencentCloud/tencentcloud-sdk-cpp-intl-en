@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScrapeJobSet List of tasks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusScrapeJob> GetScrapeJobSet() const;
 
                     /**
                      * 判断参数 ScrapeJobSet 是否已赋值
                      * @return ScrapeJobSet 是否已赋值
+                     * 
                      */
                     bool ScrapeJobSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of tasks
                      * @return TotalCount Total number of tasks
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

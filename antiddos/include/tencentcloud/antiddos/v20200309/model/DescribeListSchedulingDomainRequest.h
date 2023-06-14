@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Starting offset of the page. Value: (number of pages – 1) * items per page.
                      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the page. Value: (number of pages – 1) * items per page.
-                     * @param Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * @param _offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
                      * @return Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
-                     * @param Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * @param _limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Scheduling domain name filter
                      * @return FilterDomain Scheduling domain name filter
+                     * 
                      */
                     std::string GetFilterDomain() const;
 
                     /**
                      * 设置Scheduling domain name filter
-                     * @param FilterDomain Scheduling domain name filter
+                     * @param _filterDomain Scheduling domain name filter
+                     * 
                      */
                     void SetFilterDomain(const std::string& _filterDomain);
 
                     /**
                      * 判断参数 FilterDomain 是否已赋值
                      * @return FilterDomain 是否已赋值
+                     * 
                      */
                     bool FilterDomainHasBeenSet() const;
 

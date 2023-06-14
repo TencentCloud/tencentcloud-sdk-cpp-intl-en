@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SourceIpTranslationNatRuleSet Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SourceIpTranslationNatRule> GetSourceIpTranslationNatRuleSet() const;
 
                     /**
                      * 判断参数 SourceIpTranslationNatRuleSet 是否已赋值
                      * @return SourceIpTranslationNatRuleSet 是否已赋值
+                     * 
                      */
                     bool SourceIpTranslationNatRuleSetHasBeenSet() const;
 
                     /**
                      * 获取The number of eligible object arrays of a NAT gateway's forwarding rules.
                      * @return TotalCount The number of eligible object arrays of a NAT gateway's forwarding rules.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

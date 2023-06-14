@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataId Data ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDataId() const;
 
                     /**
                      * 设置Data ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DataId Data ID
+                     * @param _dataId Data ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataId(const std::string& _dataId);
 
                     /**
                      * 判断参数 DataId 是否已赋值
                      * @return DataId 是否已赋值
+                     * 
                      */
                     bool DataIdHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BizType Service type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBizType() const;
 
                     /**
                      * 设置Service type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BizType Service type
+                     * @param _bizType Service type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBizType(const std::string& _bizType);
 
                     /**
                      * 判断参数 BizType 是否已赋值
                      * @return BizType 是否已赋值
+                     * 
                      */
                     bool BizTypeHasBeenSet() const;
 
@@ -120,20 +129,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Task name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Task name
+                     * @param _name Task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -142,20 +154,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
+                     * @param _status Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -164,20 +179,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Task type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Task type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type Task type
+                     * @param _type Task type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -186,20 +204,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Suggestion Suggestion
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
                      * 设置Suggestion
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion Suggestion
+                     * @param _suggestion Suggestion
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -208,20 +229,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Labels Tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TaskLabel> GetLabels() const;
 
                     /**
                      * 设置Tag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Labels Tag
+                     * @param _labels Tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabels(const std::vector<TaskLabel>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
@@ -230,20 +254,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MediaInfo Media information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaInfo GetMediaInfo() const;
 
                     /**
                      * 设置Media information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MediaInfo Media information
+                     * @param _mediaInfo Media information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMediaInfo(const MediaInfo& _mediaInfo);
 
                     /**
                      * 判断参数 MediaInfo 是否已赋值
                      * @return MediaInfo 是否已赋值
+                     * 
                      */
                     bool MediaInfoHasBeenSet() const;
 
@@ -252,20 +279,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InputInfo Input information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InputInfo GetInputInfo() const;
 
                     /**
                      * 设置Input information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InputInfo Input information
+                     * @param _inputInfo Input information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInputInfo(const InputInfo& _inputInfo);
 
                     /**
                      * 判断参数 InputInfo 是否已赋值
                      * @return InputInfo 是否已赋值
+                     * 
                      */
                     bool InputInfoHasBeenSet() const;
 
@@ -274,20 +304,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreatedAt Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedAt Creation time
+                     * @param _createdAt Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 
@@ -296,20 +329,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdatedAt Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdatedAt() const;
 
                     /**
                      * 设置Update time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdatedAt Update time
+                     * @param _updatedAt Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdatedAt(const std::string& _updatedAt);
 
                     /**
                      * 判断参数 UpdatedAt 是否已赋值
                      * @return UpdatedAt 是否已赋值
+                     * 
                      */
                     bool UpdatedAtHasBeenSet() const;
 

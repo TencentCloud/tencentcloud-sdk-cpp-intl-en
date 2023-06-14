@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The horizontal offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
                      * @return LocationX The horizontal offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+                     * 
                      */
                     uint64_t GetLocationX() const;
 
                     /**
                      * 设置The horizontal offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
-                     * @param LocationX The horizontal offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+                     * @param _locationX The horizontal offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+                     * 
                      */
                     void SetLocationX(const uint64_t& _locationX);
 
                     /**
                      * 判断参数 LocationX 是否已赋值
                      * @return LocationX 是否已赋值
+                     * 
                      */
                     bool LocationXHasBeenSet() const;
 
                     /**
                      * 获取The vertical offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
                      * @return LocationY The vertical offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+                     * 
                      */
                     uint64_t GetLocationY() const;
 
                     /**
                      * 设置The vertical offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
-                     * @param LocationY The vertical offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+                     * @param _locationY The vertical offset (pixels) of the starting point for cropping. This parameter must be greater than 0.
+                     * 
                      */
                     void SetLocationY(const uint64_t& _locationY);
 
                     /**
                      * 判断参数 LocationY 是否已赋值
                      * @return LocationY 是否已赋值
+                     * 
                      */
                     bool LocationYHasBeenSet() const;
 
                     /**
                      * 获取The video width (pixels) after cropping. The sum of this parameter and `LocationX` cannot be greater than 10000.
                      * @return Width The video width (pixels) after cropping. The sum of this parameter and `LocationX` cannot be greater than 10000.
+                     * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
                      * 设置The video width (pixels) after cropping. The sum of this parameter and `LocationX` cannot be greater than 10000.
-                     * @param Width The video width (pixels) after cropping. The sum of this parameter and `LocationX` cannot be greater than 10000.
+                     * @param _width The video width (pixels) after cropping. The sum of this parameter and `LocationX` cannot be greater than 10000.
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取The video height (pixels) after cropping. The sum of this parameter and `LocationY` cannot be greater than 10000.
                      * @return Height The video height (pixels) after cropping. The sum of this parameter and `LocationY` cannot be greater than 10000.
+                     * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
                      * 设置The video height (pixels) after cropping. The sum of this parameter and `LocationY` cannot be greater than 10000.
-                     * @param Height The video height (pixels) after cropping. The sum of this parameter and `LocationY` cannot be greater than 10000.
+                     * @param _height The video height (pixels) after cropping. The sum of this parameter and `LocationY` cannot be greater than 10000.
+                     * 
                      */
                     void SetHeight(const uint64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 

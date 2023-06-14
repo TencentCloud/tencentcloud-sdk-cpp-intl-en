@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取SAML identity provider name
                      * @return Name SAML identity provider name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置SAML identity provider name
-                     * @param Name SAML identity provider name
+                     * @param _name SAML identity provider name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取SAML identity provider description
                      * @return Description SAML identity provider description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置SAML identity provider description
-                     * @param Description SAML identity provider description
+                     * @param _description SAML identity provider description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取SAML identity provider metadata document (Base64)
                      * @return SAMLMetadataDocument SAML identity provider metadata document (Base64)
+                     * 
                      */
                     std::string GetSAMLMetadataDocument() const;
 
                     /**
                      * 设置SAML identity provider metadata document (Base64)
-                     * @param SAMLMetadataDocument SAML identity provider metadata document (Base64)
+                     * @param _sAMLMetadataDocument SAML identity provider metadata document (Base64)
+                     * 
                      */
                     void SetSAMLMetadataDocument(const std::string& _sAMLMetadataDocument);
 
                     /**
                      * 判断参数 SAMLMetadataDocument 是否已赋值
                      * @return SAMLMetadataDocument 是否已赋值
+                     * 
                      */
                     bool SAMLMetadataDocumentHasBeenSet() const;
 

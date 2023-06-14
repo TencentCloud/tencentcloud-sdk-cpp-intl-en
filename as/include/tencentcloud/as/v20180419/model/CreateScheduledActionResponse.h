@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Scheduled task ID
                      * @return ScheduledActionId Scheduled task ID
+                     * 
                      */
                     std::string GetScheduledActionId() const;
 
                     /**
                      * 判断参数 ScheduledActionId 是否已赋值
                      * @return ScheduledActionId 是否已赋值
+                     * 
                      */
                     bool ScheduledActionIdHasBeenSet() const;
 

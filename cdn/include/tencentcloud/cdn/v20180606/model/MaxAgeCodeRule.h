@@ -51,38 +51,44 @@ namespace TencentCloud
 `clear`: Clear the cache-control header.
                      * @return Action Action to execute.
 `clear`: Clear the cache-control header.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action to execute.
 `clear`: Clear the cache-control header.
-                     * @param Action Action to execute.
+                     * @param _action Action to execute.
 `clear`: Clear the cache-control header.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Specifies the HTTP status code in the range 400-599.
                      * @return StatusCodes Specifies the HTTP status code in the range 400-599.
+                     * 
                      */
                     std::vector<std::string> GetStatusCodes() const;
 
                     /**
                      * 设置Specifies the HTTP status code in the range 400-599.
-                     * @param StatusCodes Specifies the HTTP status code in the range 400-599.
+                     * @param _statusCodes Specifies the HTTP status code in the range 400-599.
+                     * 
                      */
                     void SetStatusCodes(const std::vector<std::string>& _statusCodes);
 
                     /**
                      * 判断参数 StatusCodes 是否已赋值
                      * @return StatusCodes 是否已赋值
+                     * 
                      */
                     bool StatusCodesHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Purge task ID
                      * @return TaskId Purge task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Purge task ID
-                     * @param TaskId Purge task ID
+                     * @param _taskId Purge task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Purged URL
                      * @return Url Purged URL
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Purged URL
-                     * @param Url Purged URL
+                     * @param _url Purged URL
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -91,6 +97,7 @@ namespace TencentCloud
 `fail`: Purge failed
 `done`: Purge succeeded
 `process`: Purge in progress
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -99,16 +106,18 @@ namespace TencentCloud
 `fail`: Purge failed
 `done`: Purge succeeded
 `process`: Purge in progress
-                     * @param Status Purge task status
+                     * @param _status Purge task status
 `fail`: Purge failed
 `done`: Purge succeeded
 `process`: Purge in progress
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -119,6 +128,7 @@ namespace TencentCloud
                      * @return PurgeType Purge type
 `url`: URL purge
 `path`: directory purge
+                     * 
                      */
                     std::string GetPurgeType() const;
 
@@ -126,15 +136,17 @@ namespace TencentCloud
                      * 设置Purge type
 `url`: URL purge
 `path`: directory purge
-                     * @param PurgeType Purge type
+                     * @param _purgeType Purge type
 `url`: URL purge
 `path`: directory purge
+                     * 
                      */
                     void SetPurgeType(const std::string& _purgeType);
 
                     /**
                      * 判断参数 PurgeType 是否已赋值
                      * @return PurgeType 是否已赋值
+                     * 
                      */
                     bool PurgeTypeHasBeenSet() const;
 
@@ -145,6 +157,7 @@ namespace TencentCloud
                      * @return FlushType Purge method
 `flush`: purges updated resources; this type is available only for directory purges
 `delete`: Purge all resources
+                     * 
                      */
                     std::string GetFlushType() const;
 
@@ -152,33 +165,38 @@ namespace TencentCloud
                      * 设置Purge method
 `flush`: purges updated resources; this type is available only for directory purges
 `delete`: Purge all resources
-                     * @param FlushType Purge method
+                     * @param _flushType Purge method
 `flush`: purges updated resources; this type is available only for directory purges
 `delete`: Purge all resources
+                     * 
                      */
                     void SetFlushType(const std::string& _flushType);
 
                     /**
                      * 判断参数 FlushType 是否已赋值
                      * @return FlushType 是否已赋值
+                     * 
                      */
                     bool FlushTypeHasBeenSet() const;
 
                     /**
                      * 获取Purge task submission time
                      * @return CreateTime Purge task submission time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Purge task submission time
-                     * @param CreateTime Purge task submission time
+                     * @param _createTime Purge task submission time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

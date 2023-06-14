@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Documents 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DocumentInfo> GetDocuments() const;
 
                     /**
                      * 判断参数 Documents 是否已赋值
                      * @return Documents 是否已赋值
+                     * 
                      */
                     bool DocumentsHasBeenSet() const;
 
                     /**
                      * 获取The total number of records that meet the conditions.
                      * @return Total The total number of records that meet the conditions.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

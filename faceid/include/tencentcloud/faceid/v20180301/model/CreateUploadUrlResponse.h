@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The URL for uploading contents with the `HTTP PUT` method.
                      * @return UploadUrl The URL for uploading contents with the `HTTP PUT` method.
+                     * 
                      */
                     std::string GetUploadUrl() const;
 
                     /**
                      * 判断参数 UploadUrl 是否已赋值
                      * @return UploadUrl 是否已赋值
+                     * 
                      */
                     bool UploadUrlHasBeenSet() const;
 
                     /**
                      * 获取The resource URL obtained after this upload is completed and to be passed in where it is required later.
                      * @return ResourceUrl The resource URL obtained after this upload is completed and to be passed in where it is required later.
+                     * 
                      */
                     std::string GetResourceUrl() const;
 
                     /**
                      * 判断参数 ResourceUrl 是否已赋值
                      * @return ResourceUrl 是否已赋值
+                     * 
                      */
                     bool ResourceUrlHasBeenSet() const;
 
                     /**
                      * 获取The point in time when the upload/download link expires, which is a 10-bit Unix timestamp.
                      * @return ExpiredTimestamp The point in time when the upload/download link expires, which is a 10-bit Unix timestamp.
+                     * 
                      */
                     int64_t GetExpiredTimestamp() const;
 
                     /**
                      * 判断参数 ExpiredTimestamp 是否已赋值
                      * @return ExpiredTimestamp 是否已赋值
+                     * 
                      */
                     bool ExpiredTimestampHasBeenSet() const;
 

@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取MatchCode
                      * @return MatchCode MatchCode
+                     * 
                      */
                     std::string GetMatchCode() const;
 
                     /**
                      * 设置MatchCode
-                     * @param MatchCode MatchCode
+                     * @param _matchCode MatchCode
+                     * 
                      */
                     void SetMatchCode(const std::string& _matchCode);
 
                     /**
                      * 判断参数 MatchCode 是否已赋值
                      * @return MatchCode 是否已赋值
+                     * 
                      */
                     bool MatchCodeHasBeenSet() const;
 
                     /**
                      * 获取Match name
                      * @return MatchName Match name
+                     * 
                      */
                     std::string GetMatchName() const;
 
                     /**
                      * 设置Match name
-                     * @param MatchName Match name
+                     * @param _matchName Match name
+                     * 
                      */
                     void SetMatchName(const std::string& _matchName);
 
                     /**
                      * 判断参数 MatchName 是否已赋值
                      * @return MatchName 是否已赋值
+                     * 
                      */
                     bool MatchNameHasBeenSet() const;
 
@@ -88,110 +94,128 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MatchDesc Matchmaking description
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetMatchDesc() const;
 
                     /**
                      * 设置Matchmaking description
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param MatchDesc Matchmaking description
+                     * @param _matchDesc Matchmaking description
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetMatchDesc(const std::string& _matchDesc);
 
                     /**
                      * 判断参数 MatchDesc 是否已赋值
                      * @return MatchDesc 是否已赋值
+                     * 
                      */
                     bool MatchDescHasBeenSet() const;
 
                     /**
                      * 获取RuleCode
                      * @return RuleCode RuleCode
+                     * 
                      */
                     std::string GetRuleCode() const;
 
                     /**
                      * 设置RuleCode
-                     * @param RuleCode RuleCode
+                     * @param _ruleCode RuleCode
+                     * 
                      */
                     void SetRuleCode(const std::string& _ruleCode);
 
                     /**
                      * 判断参数 RuleCode 是否已赋值
                      * @return RuleCode 是否已赋值
+                     * 
                      */
                     bool RuleCodeHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Timeout period
                      * @return Timeout Timeout period
+                     * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
                      * 设置Timeout period
-                     * @param Timeout Timeout period
+                     * @param _timeout Timeout period
+                     * 
                      */
                     void SetTimeout(const int64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Receiving notification address
                      * @return NotifyUrl Receiving notification address
+                     * 
                      */
                     std::string GetNotifyUrl() const;
 
                     /**
                      * 设置Receiving notification address
-                     * @param NotifyUrl Receiving notification address
+                     * @param _notifyUrl Receiving notification address
+                     * 
                      */
                     void SetNotifyUrl(const std::string& _notifyUrl);
 
                     /**
                      * 判断参数 NotifyUrl 是否已赋值
                      * @return NotifyUrl 是否已赋值
+                     * 
                      */
                     bool NotifyUrlHasBeenSet() const;
 
                     /**
                      * 获取Whether to request server resources for the match results. 0: no, 1: request GSE resources
                      * @return ServerType Whether to request server resources for the match results. 0: no, 1: request GSE resources
+                     * 
                      */
                     int64_t GetServerType() const;
 
                     /**
                      * 设置Whether to request server resources for the match results. 0: no, 1: request GSE resources
-                     * @param ServerType Whether to request server resources for the match results. 0: no, 1: request GSE resources
+                     * @param _serverType Whether to request server resources for the match results. 0: no, 1: request GSE resources
+                     * 
                      */
                     void SetServerType(const int64_t& _serverType);
 
                     /**
                      * 判断参数 ServerType 是否已赋值
                      * @return ServerType 是否已赋值
+                     * 
                      */
                     bool ServerTypeHasBeenSet() const;
 
@@ -200,20 +224,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ServerRegion Region of the server queue
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetServerRegion() const;
 
                     /**
                      * 设置Region of the server queue
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param ServerRegion Region of the server queue
+                     * @param _serverRegion Region of the server queue
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetServerRegion(const std::string& _serverRegion);
 
                     /**
                      * 判断参数 ServerRegion 是否已赋值
                      * @return ServerRegion 是否已赋值
+                     * 
                      */
                     bool ServerRegionHasBeenSet() const;
 
@@ -222,20 +249,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ServerQueue Server queue
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetServerQueue() const;
 
                     /**
                      * 设置Server queue
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param ServerQueue Server queue
+                     * @param _serverQueue Server queue
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetServerQueue(const std::string& _serverQueue);
 
                     /**
                      * 判断参数 ServerQueue 是否已赋值
                      * @return ServerQueue 是否已赋值
+                     * 
                      */
                     bool ServerQueueHasBeenSet() const;
 
@@ -244,20 +274,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return CustomPushData Custom push data
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetCustomPushData() const;
 
                     /**
                      * 设置Custom push data
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param CustomPushData Custom push data
+                     * @param _customPushData Custom push data
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetCustomPushData(const std::string& _customPushData);
 
                     /**
                      * 判断参数 CustomPushData 是否已赋值
                      * @return CustomPushData 是否已赋值
+                     * 
                      */
                     bool CustomPushDataHasBeenSet() const;
 
@@ -266,20 +299,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ServerSessionData Game server session data
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetServerSessionData() const;
 
                     /**
                      * 设置Game server session data
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param ServerSessionData Game server session data
+                     * @param _serverSessionData Game server session data
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetServerSessionData(const std::string& _serverSessionData);
 
                     /**
                      * 判断参数 ServerSessionData 是否已赋值
                      * @return ServerSessionData 是否已赋值
+                     * 
                      */
                     bool ServerSessionDataHasBeenSet() const;
 
@@ -288,38 +324,44 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return GameProperties Game attributes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<StringKV> GetGameProperties() const;
 
                     /**
                      * 设置Game attributes
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param GameProperties Game attributes
+                     * @param _gameProperties Game attributes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetGameProperties(const std::vector<StringKV>& _gameProperties);
 
                     /**
                      * 判断参数 GameProperties 是否已赋值
                      * @return GameProperties 是否已赋值
+                     * 
                      */
                     bool GamePropertiesHasBeenSet() const;
 
                     /**
                      * 获取Enable or disable the log. 0: disable, 1: enable
                      * @return LogSwitch Enable or disable the log. 0: disable, 1: enable
+                     * 
                      */
                     int64_t GetLogSwitch() const;
 
                     /**
                      * 设置Enable or disable the log. 0: disable, 1: enable
-                     * @param LogSwitch Enable or disable the log. 0: disable, 1: enable
+                     * @param _logSwitch Enable or disable the log. 0: disable, 1: enable
+                     * 
                      */
                     void SetLogSwitch(const int64_t& _logSwitch);
 
                     /**
                      * 判断参数 LogSwitch 是否已赋值
                      * @return LogSwitch 是否已赋值
+                     * 
                      */
                     bool LogSwitchHasBeenSet() const;
 
@@ -328,20 +370,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LogsetId Logset ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置Logset ID
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LogsetId Logset ID
+                     * @param _logsetId Logset ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
@@ -350,20 +395,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LogsetName Logset name
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LogsetName Logset name
+                     * @param _logsetName Logset name
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
@@ -372,20 +420,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LogTopicId Log topic ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetLogTopicId() const;
 
                     /**
                      * 设置Log topic ID
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LogTopicId Log topic ID
+                     * @param _logTopicId Log topic ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLogTopicId(const std::string& _logTopicId);
 
                     /**
                      * 判断参数 LogTopicId 是否已赋值
                      * @return LogTopicId 是否已赋值
+                     * 
                      */
                     bool LogTopicIdHasBeenSet() const;
 
@@ -394,20 +445,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LogTopicName Log topic name
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetLogTopicName() const;
 
                     /**
                      * 设置Log topic name
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LogTopicName Log topic name
+                     * @param _logTopicName Log topic name
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLogTopicName(const std::string& _logTopicName);
 
                     /**
                      * 判断参数 LogTopicName 是否已赋值
                      * @return LogTopicName 是否已赋值
+                     * 
                      */
                     bool LogTopicNameHasBeenSet() const;
 
@@ -416,20 +470,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Tags Tag
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<StringKV> GetTags() const;
 
                     /**
                      * 设置Tag
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Tags Tag
+                     * @param _tags Tag
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetTags(const std::vector<StringKV>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -438,20 +495,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Region Region
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Region Region
+                     * @param _region Region
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -460,20 +520,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return AppId User AppId
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetAppId() const;
 
                     /**
                      * 设置User AppId
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param AppId User AppId
+                     * @param _appId User AppId
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetAppId(const std::string& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
@@ -482,20 +545,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Uin User root account UIN
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置User root account UIN
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Uin User root account UIN
+                     * @param _uin User root account UIN
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetUin(const std::string& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
@@ -504,20 +570,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return CreateUin Create user account UIN
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetCreateUin() const;
 
                     /**
                      * 设置Create user account UIN
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param CreateUin Create user account UIN
+                     * @param _createUin Create user account UIN
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetCreateUin(const std::string& _createUin);
 
                     /**
                      * 判断参数 CreateUin 是否已赋值
                      * @return CreateUin 是否已赋值
+                     * 
                      */
                     bool CreateUinHasBeenSet() const;
 
@@ -526,20 +595,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return RuleName Rule Name
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule Name
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param RuleName Rule Name
+                     * @param _ruleName Rule Name
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -548,20 +620,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LogStatus Log status. 0: normal, 1: the log set does not exist, 2: the log topic does not exist, 3: neither the log set nor the log topic exists.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetLogStatus() const;
 
                     /**
                      * 设置Log status. 0: normal, 1: the log set does not exist, 2: the log topic does not exist, 3: neither the log set nor the log topic exists.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LogStatus Log status. 0: normal, 1: the log set does not exist, 2: the log topic does not exist, 3: neither the log set nor the log topic exists.
+                     * @param _logStatus Log status. 0: normal, 1: the log set does not exist, 2: the log topic does not exist, 3: neither the log set nor the log topic exists.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLogStatus(const int64_t& _logStatus);
 
                     /**
                      * 判断参数 LogStatus 是否已赋值
                      * @return LogStatus 是否已赋值
+                     * 
                      */
                     bool LogStatusHasBeenSet() const;
 

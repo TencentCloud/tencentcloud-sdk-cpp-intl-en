@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a backup file
                      * @return Id Unique ID of a backup file
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Unique ID of a backup file
-                     * @param Id Unique ID of a backup file
+                     * @param _id Unique ID of a backup file
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Backup file name
                      * @return FileName Backup file name
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Backup file name
-                     * @param FileName Backup file name
+                     * @param _fileName Backup file name
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取File size in KB
                      * @return Size File size in KB
+                     * 
                      */
                     uint64_t GetSize() const;
 
                     /**
                      * 设置File size in KB
-                     * @param Size File size in KB
+                     * @param _size File size in KB
+                     * 
                      */
                     void SetSize(const uint64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
                     /**
                      * 获取Name of the database corresponding to the backup file
                      * @return DBs Name of the database corresponding to the backup file
+                     * 
                      */
                     std::vector<std::string> GetDBs() const;
 
                     /**
                      * 设置Name of the database corresponding to the backup file
-                     * @param DBs Name of the database corresponding to the backup file
+                     * @param _dBs Name of the database corresponding to the backup file
+                     * 
                      */
                     void SetDBs(const std::vector<std::string>& _dBs);
 
                     /**
                      * 判断参数 DBs 是否已赋值
                      * @return DBs 是否已赋值
+                     * 
                      */
                     bool DBsHasBeenSet() const;
 
                     /**
                      * 获取Download address
                      * @return DownloadLink Download address
+                     * 
                      */
                     std::string GetDownloadLink() const;
 
                     /**
                      * 设置Download address
-                     * @param DownloadLink Download address
+                     * @param _downloadLink Download address
+                     * 
                      */
                     void SetDownloadLink(const std::string& _downloadLink);
 
                     /**
                      * 判断参数 DownloadLink 是否已赋值
                      * @return DownloadLink 是否已赋值
+                     * 
                      */
                     bool DownloadLinkHasBeenSet() const;
 
                     /**
                      * 获取The code of the region where current instance resides
                      * @return Region The code of the region where current instance resides
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置The code of the region where current instance resides
-                     * @param Region The code of the region where current instance resides
+                     * @param _region The code of the region where current instance resides
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取The target region and download address of cross-region backup
                      * @return CrossBackupAddr The target region and download address of cross-region backup
+                     * 
                      */
                     std::vector<CrossBackupAddr> GetCrossBackupAddr() const;
 
                     /**
                      * 设置The target region and download address of cross-region backup
-                     * @param CrossBackupAddr The target region and download address of cross-region backup
+                     * @param _crossBackupAddr The target region and download address of cross-region backup
+                     * 
                      */
                     void SetCrossBackupAddr(const std::vector<CrossBackupAddr>& _crossBackupAddr);
 
                     /**
                      * 判断参数 CrossBackupAddr 是否已赋值
                      * @return CrossBackupAddr 是否已赋值
+                     * 
                      */
                     bool CrossBackupAddrHasBeenSet() const;
 

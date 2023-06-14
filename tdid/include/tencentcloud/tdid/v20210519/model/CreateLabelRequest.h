@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The label name.
                      * @return LabelName The label name.
+                     * 
                      */
                     std::string GetLabelName() const;
 
                     /**
                      * 设置The label name.
-                     * @param LabelName The label name.
+                     * @param _labelName The label name.
+                     * 
                      */
                     void SetLabelName(const std::string& _labelName);
 
                     /**
                      * 判断参数 LabelName 是否已赋值
                      * @return LabelName 是否已赋值
+                     * 
                      */
                     bool LabelNameHasBeenSet() const;
 
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 

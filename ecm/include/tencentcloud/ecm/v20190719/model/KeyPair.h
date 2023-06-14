@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyId Key pair ID, which is the unique identifier of a key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Key pair ID, which is the unique identifier of a key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeyId Key pair ID, which is the unique identifier of a key pair.
+                     * @param _keyId Key pair ID, which is the unique identifier of a key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyName Key pair name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Key pair name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeyName Key pair name.
+                     * @param _keyName Key pair name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProjectId Project ID of the key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID of the key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectId Project ID of the key pair.
+                     * @param _projectId Project ID of the key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Key pair description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Key pair description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Key pair description.
+                     * @param _description Key pair description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PublicKey Public key (in plain text) of key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Public key (in plain text) of key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PublicKey Public key (in plain text) of key pair.
+                     * @param _publicKey Public key (in plain text) of key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PrivateKey Private key (in plaintext) of a key pair. Tencent Cloud do not store private keys. Therefore, keep them secure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPrivateKey() const;
 
                     /**
                      * 设置Private key (in plaintext) of a key pair. Tencent Cloud do not store private keys. Therefore, keep them secure.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateKey Private key (in plaintext) of a key pair. Tencent Cloud do not store private keys. Therefore, keep them secure.
+                     * @param _privateKey Private key (in plaintext) of a key pair. Tencent Cloud do not store private keys. Therefore, keep them secure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateKey(const std::string& _privateKey);
 
                     /**
                      * 判断参数 PrivateKey 是否已赋值
                      * @return PrivateKey 是否已赋值
+                     * 
                      */
                     bool PrivateKeyHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AssociatedInstanceIds List of IDs of the instances associated with the key.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAssociatedInstanceIds() const;
 
                     /**
                      * 设置List of IDs of the instances associated with the key.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AssociatedInstanceIds List of IDs of the instances associated with the key.
+                     * @param _associatedInstanceIds List of IDs of the instances associated with the key.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAssociatedInstanceIds(const std::vector<std::string>& _associatedInstanceIds);
 
                     /**
                      * 判断参数 AssociatedInstanceIds 是否已赋值
                      * @return AssociatedInstanceIds 是否已赋值
+                     * 
                      */
                     bool AssociatedInstanceIdsHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _createdTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 

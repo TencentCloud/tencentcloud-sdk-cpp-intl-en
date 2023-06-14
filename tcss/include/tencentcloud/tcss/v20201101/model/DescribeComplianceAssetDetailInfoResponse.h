@@ -51,12 +51,14 @@ namespace TencentCloud
                     /**
                      * 获取Asset details
                      * @return AssetDetailInfo Asset details
+                     * 
                      */
                     ComplianceAssetDetailInfo GetAssetDetailInfo() const;
 
                     /**
                      * 判断参数 AssetDetailInfo 是否已赋值
                      * @return AssetDetailInfo 是否已赋值
+                     * 
                      */
                     bool AssetDetailInfoHasBeenSet() const;
 
@@ -65,12 +67,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainerDetailInfo This field is returned when the asset is a container.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComplianceContainerDetailInfo GetContainerDetailInfo() const;
 
                     /**
                      * 判断参数 ContainerDetailInfo 是否已赋值
                      * @return ContainerDetailInfo 是否已赋值
+                     * 
                      */
                     bool ContainerDetailInfoHasBeenSet() const;
 
@@ -79,12 +83,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageDetailInfo This field is returned when the asset is an image.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComplianceImageDetailInfo GetImageDetailInfo() const;
 
                     /**
                      * 判断参数 ImageDetailInfo 是否已赋值
                      * @return ImageDetailInfo 是否已赋值
+                     * 
                      */
                     bool ImageDetailInfoHasBeenSet() const;
 
@@ -93,12 +99,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostDetailInfo This field is returned when the asset is a server.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComplianceHostDetailInfo GetHostDetailInfo() const;
 
                     /**
                      * 判断参数 HostDetailInfo 是否已赋值
                      * @return HostDetailInfo 是否已赋值
+                     * 
                      */
                     bool HostDetailInfoHasBeenSet() const;
 
@@ -107,12 +115,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return K8SDetailInfo This field is returned when the asset is a K8s asset.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComplianceK8SDetailInfo GetK8SDetailInfo() const;
 
                     /**
                      * 判断参数 K8SDetailInfo 是否已赋值
                      * @return K8SDetailInfo 是否已赋值
+                     * 
                      */
                     bool K8SDetailInfoHasBeenSet() const;
 

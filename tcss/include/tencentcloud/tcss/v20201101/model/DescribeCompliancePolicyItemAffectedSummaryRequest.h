@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取`CustomerPolicyItemId` returned by `DescribeComplianceTaskPolicyItemSummaryList`, which indicates the check item ID.
                      * @return CustomerPolicyItemId `CustomerPolicyItemId` returned by `DescribeComplianceTaskPolicyItemSummaryList`, which indicates the check item ID.
+                     * 
                      */
                     uint64_t GetCustomerPolicyItemId() const;
 
                     /**
                      * 设置`CustomerPolicyItemId` returned by `DescribeComplianceTaskPolicyItemSummaryList`, which indicates the check item ID.
-                     * @param CustomerPolicyItemId `CustomerPolicyItemId` returned by `DescribeComplianceTaskPolicyItemSummaryList`, which indicates the check item ID.
+                     * @param _customerPolicyItemId `CustomerPolicyItemId` returned by `DescribeComplianceTaskPolicyItemSummaryList`, which indicates the check item ID.
+                     * 
                      */
                     void SetCustomerPolicyItemId(const uint64_t& _customerPolicyItemId);
 
                     /**
                      * 判断参数 CustomerPolicyItemId 是否已赋值
                      * @return CustomerPolicyItemId 是否已赋值
+                     * 
                      */
                     bool CustomerPolicyItemIdHasBeenSet() const;
 

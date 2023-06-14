@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
                      * @return DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+                     * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
                      * 设置The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
-                     * @param DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+                     * @param _directConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+                     * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
 
                     /**
                      * 判断参数 DirectConnectGatewayId 是否已赋值
                      * @return DirectConnectGatewayId 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayIdHasBeenSet() const;
 

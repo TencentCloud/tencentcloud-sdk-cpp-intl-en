@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
                      * @return BestFrameUrl Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
+                     * 
                      */
                     std::string GetBestFrameUrl() const;
 
                     /**
                      * 判断参数 BestFrameUrl 是否已赋值
                      * @return BestFrameUrl 是否已赋值
+                     * 
                      */
                     bool BestFrameUrlHasBeenSet() const;
 
                     /**
                      * 获取MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
                      * @return BestFrameMd5 MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
+                     * 
                      */
                     std::string GetBestFrameMd5() const;
 
                     /**
                      * 判断参数 BestFrameMd5 是否已赋值
                      * @return BestFrameMd5 是否已赋值
+                     * 
                      */
                     bool BestFrameMd5HasBeenSet() const;
 
                     /**
                      * 获取Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
                      * @return Result Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取Service result description
                      * @return Description Service result description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
                      * @return Sim Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
+                     * 
                      */
                     double GetSim() const;
 
                     /**
                      * 判断参数 Sim 是否已赋值
                      * @return Sim 是否已赋值
+                     * 
                      */
                     bool SimHasBeenSet() const;
 

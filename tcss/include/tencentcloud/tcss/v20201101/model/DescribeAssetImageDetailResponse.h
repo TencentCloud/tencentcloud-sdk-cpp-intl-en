@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Image size
                      * @return Size Image size
+                     * 
                      */
                     uint64_t GetSize() const;
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
@@ -96,12 +104,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostCnt Number of associated servers
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetHostCnt() const;
 
                     /**
                      * 判断参数 HostCnt 是否已赋值
                      * @return HostCnt 是否已赋值
+                     * 
                      */
                     bool HostCntHasBeenSet() const;
 
@@ -110,12 +120,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainerCnt Number of associated containers
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetContainerCnt() const;
 
                     /**
                      * 判断参数 ContainerCnt 是否已赋值
                      * @return ContainerCnt 是否已赋值
+                     * 
                      */
                     bool ContainerCntHasBeenSet() const;
 
@@ -124,12 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanTime Last scan time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScanTime() const;
 
                     /**
                      * 判断参数 ScanTime 是否已赋值
                      * @return ScanTime 是否已赋值
+                     * 
                      */
                     bool ScanTimeHasBeenSet() const;
 
@@ -138,12 +152,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulCnt Number of vulnerabilities
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetVulCnt() const;
 
                     /**
                      * 判断参数 VulCnt 是否已赋值
                      * @return VulCnt 是否已赋值
+                     * 
                      */
                     bool VulCntHasBeenSet() const;
 
@@ -152,12 +168,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskCnt Number of risky behaviors
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRiskCnt() const;
 
                     /**
                      * 判断参数 RiskCnt 是否已赋值
                      * @return RiskCnt 是否已赋值
+                     * 
                      */
                     bool RiskCntHasBeenSet() const;
 
@@ -166,36 +184,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SensitiveInfoCnt Number of sensitive data items
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSensitiveInfoCnt() const;
 
                     /**
                      * 判断参数 SensitiveInfoCnt 是否已赋值
                      * @return SensitiveInfoCnt 是否已赋值
+                     * 
                      */
                     bool SensitiveInfoCntHasBeenSet() const;
 
                     /**
                      * 获取Whether it is a trusted image
                      * @return IsTrustImage Whether it is a trusted image
+                     * 
                      */
                     bool GetIsTrustImage() const;
 
                     /**
                      * 判断参数 IsTrustImage 是否已赋值
                      * @return IsTrustImage 是否已赋值
+                     * 
                      */
                     bool IsTrustImageHasBeenSet() const;
 
                     /**
                      * 获取Image system
                      * @return OsName Image system
+                     * 
                      */
                     std::string GetOsName() const;
 
                     /**
                      * 判断参数 OsName 是否已赋值
                      * @return OsName 是否已赋值
+                     * 
                      */
                     bool OsNameHasBeenSet() const;
 
@@ -204,12 +228,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AgentError Image scan error in the agent
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAgentError() const;
 
                     /**
                      * 判断参数 AgentError 是否已赋值
                      * @return AgentError 是否已赋值
+                     * 
                      */
                     bool AgentErrorHasBeenSet() const;
 
@@ -218,12 +244,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanError Image scan error on the backend
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScanError() const;
 
                     /**
                      * 判断参数 ScanError 是否已赋值
                      * @return ScanError 是否已赋值
+                     * 
                      */
                     bool ScanErrorHasBeenSet() const;
 
@@ -232,12 +260,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Architecture System architecture
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetArchitecture() const;
 
                     /**
                      * 判断参数 Architecture 是否已赋值
                      * @return Architecture 是否已赋值
+                     * 
                      */
                     bool ArchitectureHasBeenSet() const;
 
@@ -246,12 +276,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Author Author
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthor() const;
 
                     /**
                      * 判断参数 Author 是否已赋值
                      * @return Author 是否已赋值
+                     * 
                      */
                     bool AuthorHasBeenSet() const;
 
@@ -260,12 +292,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BuildHistory Build history
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBuildHistory() const;
 
                     /**
                      * 判断参数 BuildHistory 是否已赋值
                      * @return BuildHistory 是否已赋值
+                     * 
                      */
                     bool BuildHistoryHasBeenSet() const;
 
@@ -274,12 +308,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanVirusProgress Trojan scanning progress
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetScanVirusProgress() const;
 
                     /**
                      * 判断参数 ScanVirusProgress 是否已赋值
                      * @return ScanVirusProgress 是否已赋值
+                     * 
                      */
                     bool ScanVirusProgressHasBeenSet() const;
 
@@ -288,12 +324,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanVulProgress Vulnerability scan progress
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetScanVulProgress() const;
 
                     /**
                      * 判断参数 ScanVulProgress 是否已赋值
                      * @return ScanVulProgress 是否已赋值
+                     * 
                      */
                     bool ScanVulProgressHasBeenSet() const;
 
@@ -302,12 +340,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanRiskProgress Sensitive data scanning progress
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetScanRiskProgress() const;
 
                     /**
                      * 判断参数 ScanRiskProgress 是否已赋值
                      * @return ScanRiskProgress 是否已赋值
+                     * 
                      */
                     bool ScanRiskProgressHasBeenSet() const;
 
@@ -316,12 +356,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanVirusError Trojan scan error
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScanVirusError() const;
 
                     /**
                      * 判断参数 ScanVirusError 是否已赋值
                      * @return ScanVirusError 是否已赋值
+                     * 
                      */
                     bool ScanVirusErrorHasBeenSet() const;
 
@@ -330,12 +372,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanVulError Vulnerability scan error
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScanVulError() const;
 
                     /**
                      * 判断参数 ScanVulError 是否已赋值
                      * @return ScanVulError 是否已赋值
+                     * 
                      */
                     bool ScanVulErrorHasBeenSet() const;
 
@@ -344,12 +388,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanRiskError Sensitive data error
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScanRiskError() const;
 
                     /**
                      * 判断参数 ScanRiskError 是否已赋值
                      * @return ScanRiskError 是否已赋值
+                     * 
                      */
                     bool ScanRiskErrorHasBeenSet() const;
 
@@ -358,12 +404,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanStatus Image scanning status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScanStatus() const;
 
                     /**
                      * 判断参数 ScanStatus 是否已赋值
                      * @return ScanStatus 是否已赋值
+                     * 
                      */
                     bool ScanStatusHasBeenSet() const;
 
@@ -372,12 +420,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VirusCnt Number of viruses and trojans
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetVirusCnt() const;
 
                     /**
                      * 判断参数 VirusCnt 是否已赋值
                      * @return VirusCnt 是否已赋值
+                     * 
                      */
                     bool VirusCntHasBeenSet() const;
 
@@ -386,12 +436,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Image scanning status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -400,24 +452,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RemainScanTime Remaining scan time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRemainScanTime() const;
 
                     /**
                      * 判断参数 RemainScanTime 是否已赋值
                      * @return RemainScanTime 是否已赋值
+                     * 
                      */
                     bool RemainScanTimeHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `1` (licensed); `0` (unlicensed).
                      * @return IsAuthorized Valid values: `1` (licensed); `0` (unlicensed).
+                     * 
                      */
                     int64_t GetIsAuthorized() const;
 
                     /**
                      * 判断参数 IsAuthorized 是否已赋值
                      * @return IsAuthorized 是否已赋值
+                     * 
                      */
                     bool IsAuthorizedHasBeenSet() const;
 

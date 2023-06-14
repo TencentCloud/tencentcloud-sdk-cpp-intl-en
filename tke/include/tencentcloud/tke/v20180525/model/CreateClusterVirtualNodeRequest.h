@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Node pool
                      * @return NodePoolId Node pool
+                     * 
                      */
                     std::string GetNodePoolId() const;
 
                     /**
                      * 设置Node pool
-                     * @param NodePoolId Node pool
+                     * @param _nodePoolId Node pool
+                     * 
                      */
                     void SetNodePoolId(const std::string& _nodePoolId);
 
                     /**
                      * 判断参数 NodePoolId 是否已赋值
                      * @return NodePoolId 是否已赋值
+                     * 
                      */
                     bool NodePoolIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet
                      * @return SubnetId Subnet
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet
-                     * @param SubnetId Subnet
+                     * @param _subnetId Subnet
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取List of subnet IDs (this parameter and `SubnetId` are mutually exclusive)
                      * @return SubnetIds List of subnet IDs (this parameter and `SubnetId` are mutually exclusive)
+                     * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
                      * 设置List of subnet IDs (this parameter and `SubnetId` are mutually exclusive)
-                     * @param SubnetIds List of subnet IDs (this parameter and `SubnetId` are mutually exclusive)
+                     * @param _subnetIds List of subnet IDs (this parameter and `SubnetId` are mutually exclusive)
+                     * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
                      * 获取List of virtual nodes
                      * @return VirtualNodes List of virtual nodes
+                     * 
                      */
                     std::vector<VirtualNodeSpec> GetVirtualNodes() const;
 
                     /**
                      * 设置List of virtual nodes
-                     * @param VirtualNodes List of virtual nodes
+                     * @param _virtualNodes List of virtual nodes
+                     * 
                      */
                     void SetVirtualNodes(const std::vector<VirtualNodeSpec>& _virtualNodes);
 
                     /**
                      * 判断参数 VirtualNodes 是否已赋值
                      * @return VirtualNodes 是否已赋值
+                     * 
                      */
                     bool VirtualNodesHasBeenSet() const;
 

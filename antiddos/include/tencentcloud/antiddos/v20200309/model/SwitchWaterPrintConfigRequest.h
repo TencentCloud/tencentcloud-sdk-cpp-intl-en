@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Watermark status. `1`: enabled; `0`: disabled.
                      * @return OpenStatus Watermark status. `1`: enabled; `0`: disabled.
+                     * 
                      */
                     int64_t GetOpenStatus() const;
 
                     /**
                      * 设置Watermark status. `1`: enabled; `0`: disabled.
-                     * @param OpenStatus Watermark status. `1`: enabled; `0`: disabled.
+                     * @param _openStatus Watermark status. `1`: enabled; `0`: disabled.
+                     * 
                      */
                     void SetOpenStatus(const int64_t& _openStatus);
 
                     /**
                      * 判断参数 OpenStatus 是否已赋值
                      * @return OpenStatus 是否已赋值
+                     * 
                      */
                     bool OpenStatusHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
                      * @return CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     * 
                      */
                     int64_t GetCloudSdkProxy() const;
 
                     /**
                      * 设置Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
-                     * @param CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     * @param _cloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     * 
                      */
                     void SetCloudSdkProxy(const int64_t& _cloudSdkProxy);
 
                     /**
                      * 判断参数 CloudSdkProxy 是否已赋值
                      * @return CloudSdkProxy 是否已赋值
+                     * 
                      */
                     bool CloudSdkProxyHasBeenSet() const;
 

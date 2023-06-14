@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DdlObject DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDdlObject() const;
 
                     /**
                      * 设置DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DdlObject DDL type, such as database, table, view, and index.
+                     * @param _ddlObject DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDdlObject(const std::string& _ddlObject);
 
                     /**
                      * 判断参数 DdlObject 是否已赋值
                      * @return DdlObject 是否已赋值
+                     * 
                      */
                     bool DdlObjectHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetDdlValue() const;
 
                     /**
                      * 设置DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
+                     * @param _ddlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDdlValue(const std::vector<std::string>& _ddlValue);
 
                     /**
                      * 判断参数 DdlValue 是否已赋值
                      * @return DdlValue 是否已赋值
+                     * 
                      */
                     bool DdlValueHasBeenSet() const;
 

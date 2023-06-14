@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable custom name servers. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Whether to enable custom name servers. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable custom name servers. Values:
+                     * @param _switch Whether to enable custom name servers. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取List of custom name servers
                      * @return Servers List of custom name servers
+                     * 
                      */
                     std::vector<std::string> GetServers() const;
 
                     /**
                      * 设置List of custom name servers
-                     * @param Servers List of custom name servers
+                     * @param _servers List of custom name servers
+                     * 
                      */
                     void SetServers(const std::vector<std::string>& _servers);
 
                     /**
                      * 判断参数 Servers 是否已赋值
                      * @return Servers 是否已赋值
+                     * 
                      */
                     bool ServersHasBeenSet() const;
 

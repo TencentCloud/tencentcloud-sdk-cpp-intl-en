@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of unlicensed repository images
                      * @return RegistryImageCnt Number of unlicensed repository images
+                     * 
                      */
                     uint64_t GetRegistryImageCnt() const;
 
                     /**
                      * 判断参数 RegistryImageCnt 是否已赋值
                      * @return RegistryImageCnt 是否已赋值
+                     * 
                      */
                     bool RegistryImageCntHasBeenSet() const;
 
                     /**
                      * 获取Number of unlicensed local images
                      * @return LocalImageCnt Number of unlicensed local images
+                     * 
                      */
                     uint64_t GetLocalImageCnt() const;
 
                     /**
                      * 判断参数 LocalImageCnt 是否已赋值
                      * @return LocalImageCnt 是否已赋值
+                     * 
                      */
                     bool LocalImageCntHasBeenSet() const;
 
                     /**
                      * 获取Number of unused image security scan licenses
                      * @return UnusedAuthorizedCnt Number of unused image security scan licenses
+                     * 
                      */
                     uint64_t GetUnusedAuthorizedCnt() const;
 
                     /**
                      * 判断参数 UnusedAuthorizedCnt 是否已赋值
                      * @return UnusedAuthorizedCnt 是否已赋值
+                     * 
                      */
                     bool UnusedAuthorizedCntHasBeenSet() const;
 

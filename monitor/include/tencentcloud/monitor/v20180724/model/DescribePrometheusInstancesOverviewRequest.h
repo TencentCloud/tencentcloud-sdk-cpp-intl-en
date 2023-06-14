@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Page offset
                      * @return Offset Page offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page offset
-                     * @param Offset Page offset
+                     * @param _offset Page offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page
                      * @return Limit Number of results per page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page
-                     * @param Limit Number of results per page
+                     * @param _limit Number of results per page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return Filters Instance filter. Valid values:
 `ID`: Filter by instance ID 
 `Name`: Filter by instance name
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -93,15 +100,17 @@ namespace TencentCloud
                      * 设置Instance filter. Valid values:
 `ID`: Filter by instance ID 
 `Name`: Filter by instance name
-                     * @param Filters Instance filter. Valid values:
+                     * @param _filters Instance filter. Valid values:
 `ID`: Filter by instance ID 
 `Name`: Filter by instance name
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

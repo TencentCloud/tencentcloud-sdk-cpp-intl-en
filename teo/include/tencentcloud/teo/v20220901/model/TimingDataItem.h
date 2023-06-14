@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The query time recorded in seconds using UNIX timestamp.
                      * @return Timestamp The query time recorded in seconds using UNIX timestamp.
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 设置The query time recorded in seconds using UNIX timestamp.
-                     * @param Timestamp The query time recorded in seconds using UNIX timestamp.
+                     * @param _timestamp The query time recorded in seconds using UNIX timestamp.
+                     * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
                     /**
                      * 获取The value.
                      * @return Value The value.
+                     * 
                      */
                     int64_t GetValue() const;
 
                     /**
                      * 设置The value.
-                     * @param Value The value.
+                     * @param _value The value.
+                     * 
                      */
                     void SetValue(const int64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

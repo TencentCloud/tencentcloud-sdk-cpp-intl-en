@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Shell address
                      * @return Webshell Shell address
+                     * 
                      */
                     std::string GetWebshell() const;
 
                     /**
                      * 设置Shell address
-                     * @param Webshell Shell address
+                     * @param _webshell Shell address
+                     * 
                      */
                     void SetWebshell(const std::string& _webshell);
 
                     /**
                      * 判断参数 Webshell 是否已赋值
                      * @return Webshell 是否已赋值
+                     * 
                      */
                     bool WebshellHasBeenSet() const;
 
                     /**
                      * 获取Pod ID
                      * @return PodId Pod ID
+                     * 
                      */
                     std::string GetPodId() const;
 
                     /**
                      * 设置Pod ID
-                     * @param PodId Pod ID
+                     * @param _podId Pod ID
+                     * 
                      */
                     void SetPodId(const std::string& _podId);
 
                     /**
                      * 判断参数 PodId 是否已赋值
                      * @return PodId 是否已赋值
+                     * 
                      */
                     bool PodIdHasBeenSet() const;
 
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Pod IP.
                      * @return PodIp Pod IP.
+                     * 
                      */
                     std::string GetPodIp() const;
 
                     /**
                      * 设置Pod IP.
-                     * @param PodIp Pod IP.
+                     * @param _podIp Pod IP.
+                     * 
                      */
                     void SetPodIp(const std::string& _podIp);
 
                     /**
                      * 判断参数 PodIp 是否已赋值
                      * @return PodIp 是否已赋值
+                     * 
                      */
                     bool PodIpHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return Zone Availability zone.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param Zone Availability zone.
+                     * @param _zone Availability zone.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -163,20 +181,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return DeployVersion Deployed version.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDeployVersion() const;
 
                     /**
                      * 设置Deployed version.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param DeployVersion Deployed version.
+                     * @param _deployVersion Deployed version.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDeployVersion(const std::string& _deployVersion);
 
                     /**
                      * 判断参数 DeployVersion 是否已赋值
                      * @return DeployVersion 是否已赋值
+                     * 
                      */
                     bool DeployVersionHasBeenSet() const;
 
@@ -185,20 +206,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: This is field may return `null`, indicating that no valid value can be obtained.
                      * @return RestartCount Number of Restarts
 Note: This is field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetRestartCount() const;
 
                     /**
                      * 设置Number of Restarts
 Note: This is field may return `null`, indicating that no valid value can be obtained.
-                     * @param RestartCount Number of Restarts
+                     * @param _restartCount Number of Restarts
 Note: This is field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRestartCount(const int64_t& _restartCount);
 
                     /**
                      * 判断参数 RestartCount 是否已赋值
                      * @return RestartCount 是否已赋值
+                     * 
                      */
                     bool RestartCountHasBeenSet() const;
 

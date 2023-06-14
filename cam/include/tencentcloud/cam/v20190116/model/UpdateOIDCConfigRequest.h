@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取IdP URL.
                      * @return IdentityUrl IdP URL.
+                     * 
                      */
                     std::string GetIdentityUrl() const;
 
                     /**
                      * 设置IdP URL.
-                     * @param IdentityUrl IdP URL.
+                     * @param _identityUrl IdP URL.
+                     * 
                      */
                     void SetIdentityUrl(const std::string& _identityUrl);
 
                     /**
                      * 判断参数 IdentityUrl 是否已赋值
                      * @return IdentityUrl 是否已赋值
+                     * 
                      */
                     bool IdentityUrlHasBeenSet() const;
 
                     /**
                      * 获取Public key for signature, which must be Base64-encoded.
                      * @return IdentityKey Public key for signature, which must be Base64-encoded.
+                     * 
                      */
                     std::string GetIdentityKey() const;
 
                     /**
                      * 设置Public key for signature, which must be Base64-encoded.
-                     * @param IdentityKey Public key for signature, which must be Base64-encoded.
+                     * @param _identityKey Public key for signature, which must be Base64-encoded.
+                     * 
                      */
                     void SetIdentityKey(const std::string& _identityKey);
 
                     /**
                      * 判断参数 IdentityKey 是否已赋值
                      * @return IdentityKey 是否已赋值
+                     * 
                      */
                     bool IdentityKeyHasBeenSet() const;
 
                     /**
                      * 获取Client ID.
                      * @return ClientId Client ID.
+                     * 
                      */
                     std::vector<std::string> GetClientId() const;
 
                     /**
                      * 设置Client ID.
-                     * @param ClientId Client ID.
+                     * @param _clientId Client ID.
+                     * 
                      */
                     void SetClientId(const std::vector<std::string>& _clientId);
 
                     /**
                      * 判断参数 ClientId 是否已赋值
                      * @return ClientId 是否已赋值
+                     * 
                      */
                     bool ClientIdHasBeenSet() const;
 
                     /**
                      * 获取Name.
                      * @return Name Name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name.
-                     * @param Name Name.
+                     * @param _name Name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description.
                      * @return Description Description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description.
-                     * @param Description Description.
+                     * @param _description Description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

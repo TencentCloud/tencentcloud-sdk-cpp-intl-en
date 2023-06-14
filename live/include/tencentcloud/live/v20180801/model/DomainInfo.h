@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取LVB domain name.
                      * @return Name LVB domain name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置LVB domain name.
-                     * @param Name LVB domain name.
+                     * @param _name LVB domain name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return Type Domain name type:
 0: push.
 1: playback.
+                     * 
                      */
                     uint64_t GetType() const;
 
@@ -78,15 +82,17 @@ namespace TencentCloud
                      * 设置Domain name type:
 0: push.
 1: playback.
-                     * @param Type Domain name type:
+                     * @param _type Domain name type:
 0: push.
 1: playback.
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -97,6 +103,7 @@ namespace TencentCloud
                      * @return Status Domain name status:
 0: deactivated.
 1: activated.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
@@ -104,15 +111,17 @@ namespace TencentCloud
                      * 设置Domain name status:
 0: deactivated.
 1: activated.
-                     * @param Status Domain name status:
+                     * @param _status Domain name status:
 0: deactivated.
 1: activated.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -121,20 +130,23 @@ namespace TencentCloud
 Note: Beijing time (UTC+8) is used.
                      * @return CreateTime The time when the domain was added.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The time when the domain was added.
 Note: Beijing time (UTC+8) is used.
-                     * @param CreateTime The time when the domain was added.
+                     * @param _createTime The time when the domain was added.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -145,6 +157,7 @@ Note: Beijing time (UTC+8) is used.
                      * @return BCName Whether there is a CNAME record pointing to a fixed rule domain name:
 0: no.
 1: yes.
+                     * 
                      */
                     uint64_t GetBCName() const;
 
@@ -152,33 +165,38 @@ Note: Beijing time (UTC+8) is used.
                      * 设置Whether there is a CNAME record pointing to a fixed rule domain name:
 0: no.
 1: yes.
-                     * @param BCName Whether there is a CNAME record pointing to a fixed rule domain name:
+                     * @param _bCName Whether there is a CNAME record pointing to a fixed rule domain name:
 0: no.
 1: yes.
+                     * 
                      */
                     void SetBCName(const uint64_t& _bCName);
 
                     /**
                      * 判断参数 BCName 是否已赋值
                      * @return BCName 是否已赋值
+                     * 
                      */
                     bool BCNameHasBeenSet() const;
 
                     /**
                      * 获取Domain name corresponding to CNAME record.
                      * @return TargetDomain Domain name corresponding to CNAME record.
+                     * 
                      */
                     std::string GetTargetDomain() const;
 
                     /**
                      * 设置Domain name corresponding to CNAME record.
-                     * @param TargetDomain Domain name corresponding to CNAME record.
+                     * @param _targetDomain Domain name corresponding to CNAME record.
+                     * 
                      */
                     void SetTargetDomain(const std::string& _targetDomain);
 
                     /**
                      * 判断参数 TargetDomain 是否已赋值
                      * @return TargetDomain 是否已赋值
+                     * 
                      */
                     bool TargetDomainHasBeenSet() const;
 
@@ -191,6 +209,7 @@ Note: Beijing time (UTC+8) is used.
 1: in Mainland China.
 2: global.
 3: outside Mainland China.
+                     * 
                      */
                     int64_t GetPlayType() const;
 
@@ -199,16 +218,18 @@ Note: Beijing time (UTC+8) is used.
 1: in Mainland China.
 2: global.
 3: outside Mainland China.
-                     * @param PlayType Playback region. This parameter is valid only if `Type` is 1.
+                     * @param _playType Playback region. This parameter is valid only if `Type` is 1.
 1: in Mainland China.
 2: global.
 3: outside Mainland China.
+                     * 
                      */
                     void SetPlayType(const int64_t& _playType);
 
                     /**
                      * 判断参数 PlayType 是否已赋值
                      * @return PlayType 是否已赋值
+                     * 
                      */
                     bool PlayTypeHasBeenSet() const;
 
@@ -219,6 +240,7 @@ Note: Beijing time (UTC+8) is used.
                      * @return IsDelayLive Whether it is LCB:
 0: LVB.
 1: LCB.
+                     * 
                      */
                     int64_t GetIsDelayLive() const;
 
@@ -226,51 +248,59 @@ Note: Beijing time (UTC+8) is used.
                      * 设置Whether it is LCB:
 0: LVB.
 1: LCB.
-                     * @param IsDelayLive Whether it is LCB:
+                     * @param _isDelayLive Whether it is LCB:
 0: LVB.
 1: LCB.
+                     * 
                      */
                     void SetIsDelayLive(const int64_t& _isDelayLive);
 
                     /**
                      * 判断参数 IsDelayLive 是否已赋值
                      * @return IsDelayLive 是否已赋值
+                     * 
                      */
                     bool IsDelayLiveHasBeenSet() const;
 
                     /**
                      * 获取Information of currently used CNAME record.
                      * @return CurrentCName Information of currently used CNAME record.
+                     * 
                      */
                     std::string GetCurrentCName() const;
 
                     /**
                      * 设置Information of currently used CNAME record.
-                     * @param CurrentCName Information of currently used CNAME record.
+                     * @param _currentCName Information of currently used CNAME record.
+                     * 
                      */
                     void SetCurrentCName(const std::string& _currentCName);
 
                     /**
                      * 判断参数 CurrentCName 是否已赋值
                      * @return CurrentCName 是否已赋值
+                     * 
                      */
                     bool CurrentCNameHasBeenSet() const;
 
                     /**
                      * 获取Disused parameter, which can be ignored.
                      * @return RentTag Disused parameter, which can be ignored.
+                     * 
                      */
                     int64_t GetRentTag() const;
 
                     /**
                      * 设置Disused parameter, which can be ignored.
-                     * @param RentTag Disused parameter, which can be ignored.
+                     * @param _rentTag Disused parameter, which can be ignored.
+                     * 
                      */
                     void SetRentTag(const int64_t& _rentTag);
 
                     /**
                      * 判断参数 RentTag 是否已赋值
                      * @return RentTag 是否已赋值
+                     * 
                      */
                     bool RentTagHasBeenSet() const;
 
@@ -279,20 +309,23 @@ Note: Beijing time (UTC+8) is used.
 Note: Beijing time (UTC+8) is used.
                      * @return RentExpireTime A disused parameter.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetRentExpireTime() const;
 
                     /**
                      * 设置A disused parameter.
 Note: Beijing time (UTC+8) is used.
-                     * @param RentExpireTime A disused parameter.
+                     * @param _rentExpireTime A disused parameter.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetRentExpireTime(const std::string& _rentExpireTime);
 
                     /**
                      * 判断参数 RentExpireTime 是否已赋值
                      * @return RentExpireTime 是否已赋值
+                     * 
                      */
                     bool RentExpireTimeHasBeenSet() const;
 
@@ -303,6 +336,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return IsMiniProgramLive 0: LVB.
 1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsMiniProgramLive() const;
 
@@ -310,15 +344,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置0: LVB.
 1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsMiniProgramLive 0: LVB.
+                     * @param _isMiniProgramLive 0: LVB.
 1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsMiniProgramLive(const int64_t& _isMiniProgramLive);
 
                     /**
                      * 判断参数 IsMiniProgramLive 是否已赋值
                      * @return IsMiniProgramLive 是否已赋值
+                     * 
                      */
                     bool IsMiniProgramLiveHasBeenSet() const;
 

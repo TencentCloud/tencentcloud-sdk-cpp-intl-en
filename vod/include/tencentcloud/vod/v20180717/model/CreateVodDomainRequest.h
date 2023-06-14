@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Domain name to add to VOD. Note: a wildcard domain name is not supported.
                      * @return Domain Domain name to add to VOD. Note: a wildcard domain name is not supported.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name to add to VOD. Note: a wildcard domain name is not supported.
-                     * @param Domain Domain name to add to VOD. Note: a wildcard domain name is not supported.
+                     * @param _domain Domain name to add to VOD. Note: a wildcard domain name is not supported.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
@@ -89,6 +95,7 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
 <li>`Outside Chinese Mainland`</li>
 <li>`Global`</li>
 If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+                     * 
                      */
                     std::string GetAccelerateArea() const;
 
@@ -98,17 +105,19 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
 <li>`Outside Chinese Mainland`</li>
 <li>`Global`</li>
 If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
-                     * @param AccelerateArea Region to enable acceleration. Valid values:
+                     * @param _accelerateArea Region to enable acceleration. Valid values:
 <li>`Chinese Mainland`</li>
 <li>`Outside Chinese Mainland`</li>
 <li>`Global`</li>
 If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+                     * 
                      */
                     void SetAccelerateArea(const std::string& _accelerateArea);
 
                     /**
                      * 判断参数 AccelerateArea 是否已赋值
                      * @return AccelerateArea 是否已赋值
+                     * 
                      */
                     bool AccelerateAreaHasBeenSet() const;
 

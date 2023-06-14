@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
                      * @return Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
-                     * @param Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * @param _switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取DDoS port filtering parameters
                      * @return Acl DDoS port filtering parameters
+                     * 
                      */
                     std::vector<DDoSAcl> GetAcl() const;
 
                     /**
                      * 设置DDoS port filtering parameters
-                     * @param Acl DDoS port filtering parameters
+                     * @param _acl DDoS port filtering parameters
+                     * 
                      */
                     void SetAcl(const std::vector<DDoSAcl>& _acl);
 
                     /**
                      * 判断参数 Acl 是否已赋值
                      * @return Acl 是否已赋值
+                     * 
                      */
                     bool AclHasBeenSet() const;
 

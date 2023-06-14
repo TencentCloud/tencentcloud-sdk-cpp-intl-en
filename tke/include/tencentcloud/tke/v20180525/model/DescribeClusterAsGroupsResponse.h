@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of scaling groups associated with the cluster
                      * @return TotalCount Total number of scaling groups associated with the cluster
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Cluster-associated scaling group list
                      * @return ClusterAsGroupSet Cluster-associated scaling group list
+                     * 
                      */
                     std::vector<ClusterAsGroup> GetClusterAsGroupSet() const;
 
                     /**
                      * 判断参数 ClusterAsGroupSet 是否已赋值
                      * @return ClusterAsGroupSet 是否已赋值
+                     * 
                      */
                     bool ClusterAsGroupSetHasBeenSet() const;
 

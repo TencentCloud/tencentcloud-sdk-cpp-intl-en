@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
-                     * @param Switch Whether to enable banding removal. Valid values:
+                     * @param _switch Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Default value: `0.0`.
                      * @return Intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
+                     * 
                      */
                     double GetIntensity() const;
 
                     /**
                      * 设置The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
-                     * @param Intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+                     * @param _intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
+                     * 
                      */
                     void SetIntensity(const double& _intensity);
 
                     /**
                      * 判断参数 Intensity 是否已赋值
                      * @return Intensity 是否已赋值
+                     * 
                      */
                     bool IntensityHasBeenSet() const;
 
@@ -101,6 +107,7 @@ Default value: `normal`.
                      * @return Type The banding removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`normal`</li>
 Default value: `normal`.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -108,15 +115,17 @@ Default value: `normal`.
                      * 设置The banding removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`normal`</li>
 Default value: `normal`.
-                     * @param Type The banding removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
+                     * @param _type The banding removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`normal`</li>
 Default value: `normal`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

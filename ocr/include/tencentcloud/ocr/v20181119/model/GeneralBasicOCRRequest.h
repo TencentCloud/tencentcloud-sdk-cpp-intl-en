@@ -47,20 +47,23 @@ namespace TencentCloud
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
                      * @return ImageBase64 Base64-encoded value of image/PDF.
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+                     * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
                      * 设置Base64-encoded value of image/PDF.
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
-                     * @param ImageBase64 Base64-encoded value of image/PDF.
+                     * @param _imageBase64 Base64-encoded value of image/PDF.
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+                     * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
                     /**
                      * 判断参数 ImageBase64 是否已赋值
                      * @return ImageBase64 是否已赋值
+                     * 
                      */
                     bool ImageBase64HasBeenSet() const;
 
@@ -71,6 +74,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                      * @return ImageUrl URL address of image/PDF. (This field is not supported outside Chinese mainland)
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
@@ -78,33 +82,38 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                      * 设置URL address of image/PDF. (This field is not supported outside Chinese mainland)
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @param ImageUrl URL address of image/PDF. (This field is not supported outside Chinese mainland)
+                     * @param _imageUrl URL address of image/PDF. (This field is not supported outside Chinese mainland)
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 
                     /**
                      * 获取Reserved field.
                      * @return Scene Reserved field.
+                     * 
                      */
                     std::string GetScene() const;
 
                     /**
                      * 设置Reserved field.
-                     * @param Scene Reserved field.
+                     * @param _scene Reserved field.
+                     * 
                      */
                     void SetScene(const std::string& _scene);
 
                     /**
                      * 判断参数 Scene 是否已赋值
                      * @return Scene 是否已赋值
+                     * 
                      */
                     bool SceneHasBeenSet() const;
 
@@ -161,6 +170,7 @@ Valid values:
 `tha`: Thai
 `hi`: Hindi
 `ara`: Arabic
+                     * 
                      */
                     std::string GetLanguageType() const;
 
@@ -191,7 +201,7 @@ Valid values:
 `tha`: Thai
 `hi`: Hindi
 `ara`: Arabic
-                     * @param LanguageType Language to recognize
+                     * @param _languageType Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
 `zh`: Chinese-English mix
@@ -217,66 +227,77 @@ Valid values:
 `tha`: Thai
 `hi`: Hindi
 `ara`: Arabic
+                     * 
                      */
                     void SetLanguageType(const std::string& _languageType);
 
                     /**
                      * 判断参数 LanguageType 是否已赋值
                      * @return LanguageType 是否已赋值
+                     * 
                      */
                     bool LanguageTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
                      * @return IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     * 
                      */
                     bool GetIsPdf() const;
 
                     /**
                      * 设置Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
-                     * @param IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     * @param _isPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+                     * 
                      */
                     void SetIsPdf(const bool& _isPdf);
 
                     /**
                      * 判断参数 IsPdf 是否已赋值
                      * @return IsPdf 是否已赋值
+                     * 
                      */
                     bool IsPdfHasBeenSet() const;
 
                     /**
                      * 获取Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
                      * @return PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     * 
                      */
                     uint64_t GetPdfPageNumber() const;
 
                     /**
                      * 设置Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
-                     * @param PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     * @param _pdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+                     * 
                      */
                     void SetPdfPageNumber(const uint64_t& _pdfPageNumber);
 
                     /**
                      * 判断参数 PdfPageNumber 是否已赋值
                      * @return PdfPageNumber 是否已赋值
+                     * 
                      */
                     bool PdfPageNumberHasBeenSet() const;
 
                     /**
                      * 获取Whether to return the character information. Default value: `false`
                      * @return IsWords Whether to return the character information. Default value: `false`
+                     * 
                      */
                     bool GetIsWords() const;
 
                     /**
                      * 设置Whether to return the character information. Default value: `false`
-                     * @param IsWords Whether to return the character information. Default value: `false`
+                     * @param _isWords Whether to return the character information. Default value: `false`
+                     * 
                      */
                     void SetIsWords(const bool& _isWords);
 
                     /**
                      * 判断参数 IsWords 是否已赋值
                      * @return IsWords 是否已赋值
+                     * 
                      */
                     bool IsWordsHasBeenSet() const;
 

@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Plugin ID
                      * @return PluginId Plugin ID
+                     * 
                      */
                     std::string GetPluginId() const;
 
                     /**
                      * 设置Plugin ID
-                     * @param PluginId Plugin ID
+                     * @param _pluginId Plugin ID
+                     * 
                      */
                     void SetPluginId(const std::string& _pluginId);
 
                     /**
                      * 判断参数 PluginId 是否已赋值
                      * @return PluginId 是否已赋值
+                     * 
                      */
                     bool PluginIdHasBeenSet() const;
 
                     /**
                      * 获取Environment information
                      * @return Environment Environment information
+                     * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
                      * 设置Environment information
-                     * @param Environment Environment information
+                     * @param _environment Environment information
+                     * 
                      */
                     void SetEnvironment(const std::string& _environment);
 
                     /**
                      * 判断参数 Environment 是否已赋值
                      * @return Environment 是否已赋值
+                     * 
                      */
                     bool EnvironmentHasBeenSet() const;
 
                     /**
                      * 获取Binding time
                      * @return AttachedTime Binding time
+                     * 
                      */
                     std::string GetAttachedTime() const;
 
                     /**
                      * 设置Binding time
-                     * @param AttachedTime Binding time
+                     * @param _attachedTime Binding time
+                     * 
                      */
                     void SetAttachedTime(const std::string& _attachedTime);
 
                     /**
                      * 判断参数 AttachedTime 是否已赋值
                      * @return AttachedTime 是否已赋值
+                     * 
                      */
                     bool AttachedTimeHasBeenSet() const;
 
                     /**
                      * 获取Plugin name
                      * @return PluginName Plugin name
+                     * 
                      */
                     std::string GetPluginName() const;
 
                     /**
                      * 设置Plugin name
-                     * @param PluginName Plugin name
+                     * @param _pluginName Plugin name
+                     * 
                      */
                     void SetPluginName(const std::string& _pluginName);
 
                     /**
                      * 判断参数 PluginName 是否已赋值
                      * @return PluginName 是否已赋值
+                     * 
                      */
                     bool PluginNameHasBeenSet() const;
 
                     /**
                      * 获取Plugin type
                      * @return PluginType Plugin type
+                     * 
                      */
                     std::string GetPluginType() const;
 
                     /**
                      * 设置Plugin type
-                     * @param PluginType Plugin type
+                     * @param _pluginType Plugin type
+                     * 
                      */
                     void SetPluginType(const std::string& _pluginType);
 
                     /**
                      * 判断参数 PluginType 是否已赋值
                      * @return PluginType 是否已赋值
+                     * 
                      */
                     bool PluginTypeHasBeenSet() const;
 
                     /**
                      * 获取Plugin description
                      * @return Description Plugin description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Plugin description
-                     * @param Description Plugin description
+                     * @param _description Plugin description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Plugin definition statement
                      * @return PluginData Plugin definition statement
+                     * 
                      */
                     std::string GetPluginData() const;
 
                     /**
                      * 设置Plugin definition statement
-                     * @param PluginData Plugin definition statement
+                     * @param _pluginData Plugin definition statement
+                     * 
                      */
                     void SetPluginData(const std::string& _pluginData);
 
                     /**
                      * 判断参数 PluginData 是否已赋值
                      * @return PluginData 是否已赋值
+                     * 
                      */
                     bool PluginDataHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The NAT gateway ID.
                      * @return NatGatewayId The NAT gateway ID.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The NAT gateway ID.
-                     * @param NatGatewayId The NAT gateway ID.
+                     * @param _natGatewayId The NAT gateway ID.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
                      * @return DryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+                     * 
                      */
                     bool GetDryRun() const;
 
                     /**
                      * 设置Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
-                     * @param DryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+                     * @param _dryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+                     * 
                      */
                     void SetDryRun(const bool& _dryRun);
 
                     /**
                      * 判断参数 DryRun 是否已赋值
                      * @return DryRun 是否已赋值
+                     * 
                      */
                     bool DryRunHasBeenSet() const;
 

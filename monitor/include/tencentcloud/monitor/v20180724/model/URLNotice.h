@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return URL Callback URL, which can contain up to 256 characters
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetURL() const;
 
                     /**
                      * 设置Callback URL, which can contain up to 256 characters
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param URL Callback URL, which can contain up to 256 characters
+                     * @param _uRL Callback URL, which can contain up to 256 characters
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetURL(const std::string& _uRL);
 
                     /**
                      * 判断参数 URL 是否已赋值
                      * @return URL 是否已赋值
+                     * 
                      */
                     bool URLHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsValid Whether verification is passed. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsValid() const;
 
                     /**
                      * 设置Whether verification is passed. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsValid Whether verification is passed. Valid values: 0 (no), 1 (yes)
+                     * @param _isValid Whether verification is passed. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsValid(const int64_t& _isValid);
 
                     /**
                      * 判断参数 IsValid 是否已赋值
                      * @return IsValid 是否已赋值
+                     * 
                      */
                     bool IsValidHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ValidationCode Verification code
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetValidationCode() const;
 
                     /**
                      * 设置Verification code
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ValidationCode Verification code
+                     * @param _validationCode Verification code
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValidationCode(const std::string& _validationCode);
 
                     /**
                      * 判断参数 ValidationCode 是否已赋值
                      * @return ValidationCode 是否已赋值
+                     * 
                      */
                     bool ValidationCodeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StartTime Start time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param StartTime Start time of the notification in seconds, which is calculated from 00:00:00.
+                     * @param _startTime Start time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EndTime End time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EndTime End time of the notification in seconds, which is calculated from 00:00:00.
+                     * @param _endTime End time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetWeekday() const;
 
                     /**
                      * 设置Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+                     * @param _weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWeekday(const std::vector<int64_t>& _weekday);
 
                     /**
                      * 判断参数 Weekday 是否已赋值
                      * @return Weekday 是否已赋值
+                     * 
                      */
                     bool WeekdayHasBeenSet() const;
 

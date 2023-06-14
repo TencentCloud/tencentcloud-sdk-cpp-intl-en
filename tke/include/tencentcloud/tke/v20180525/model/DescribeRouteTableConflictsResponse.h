@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether there is a conflict in the route table.
                      * @return HasConflict Whether there is a conflict in the route table.
+                     * 
                      */
                     bool GetHasConflict() const;
 
                     /**
                      * 判断参数 HasConflict 是否已赋值
                      * @return HasConflict 是否已赋值
+                     * 
                      */
                     bool HasConflictHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RouteTableConflictSet Route table conflict list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RouteTableConflict> GetRouteTableConflictSet() const;
 
                     /**
                      * 判断参数 RouteTableConflictSet 是否已赋值
                      * @return RouteTableConflictSet 是否已赋值
+                     * 
                      */
                     bool RouteTableConflictSetHasBeenSet() const;
 

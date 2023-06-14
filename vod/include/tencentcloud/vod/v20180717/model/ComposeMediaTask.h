@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Task ID.
                      * @return TaskId Task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID.
-                     * @param TaskId Task ID.
+                     * @param _taskId Task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -76,6 +79,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -84,16 +88,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status Task flow status. Valid values:
+                     * @param _status Task flow status. Valid values:
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -106,6 +112,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
@@ -114,16 +121,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ErrCode Error code
+                     * @param _errCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
@@ -132,38 +141,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Message Error message.
+                     * @param _message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Progress of a media file composing task. Value range: [0, 100]
                      * @return Progress Progress of a media file composing task. Value range: [0, 100]
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Progress of a media file composing task. Value range: [0, 100]
-                     * @param Progress Progress of a media file composing task. Value range: [0, 100]
+                     * @param _progress Progress of a media file composing task. Value range: [0, 100]
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
@@ -172,20 +187,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Input Input of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComposeMediaTaskInput GetInput() const;
 
                     /**
                      * 设置Input of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Input Input of media file composing task.
+                     * @param _input Input of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInput(const ComposeMediaTaskInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
@@ -194,20 +212,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Output Output of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComposeMediaTaskOutput GetOutput() const;
 
                     /**
                      * 设置Output of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of media file composing task.
+                     * @param _output Output of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutput(const ComposeMediaTaskOutput& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 
@@ -216,56 +237,65 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return MetaData The metadata of the output video.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
                      * 设置The metadata of the output video.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param MetaData The metadata of the output video.
+                     * @param _metaData The metadata of the output video.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
 
                     /**
                      * 判断参数 MetaData 是否已赋值
                      * @return MetaData 是否已赋值
+                     * 
                      */
                     bool MetaDataHasBeenSet() const;
 
                     /**
                      * 获取ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
                      * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * 
                      */
                     std::string GetSessionId() const;
 
                     /**
                      * 设置ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
-                     * @param SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * @param _sessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+                     * 
                      */
                     void SetSessionId(const std::string& _sessionId);
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 
                     /**
                      * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
                      * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
                      * 设置The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-                     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * @param _sessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+                     * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
                     /**
                      * 判断参数 SessionContext 是否已赋值
                      * @return SessionContext 是否已赋值
+                     * 
                      */
                     bool SessionContextHasBeenSet() const;
 

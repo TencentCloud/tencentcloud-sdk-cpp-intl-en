@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Standard output redirection path
                      * @return StdoutRedirectPath Standard output redirection path
+                     * 
                      */
                     std::string GetStdoutRedirectPath() const;
 
                     /**
                      * 设置Standard output redirection path
-                     * @param StdoutRedirectPath Standard output redirection path
+                     * @param _stdoutRedirectPath Standard output redirection path
+                     * 
                      */
                     void SetStdoutRedirectPath(const std::string& _stdoutRedirectPath);
 
                     /**
                      * 判断参数 StdoutRedirectPath 是否已赋值
                      * @return StdoutRedirectPath 是否已赋值
+                     * 
                      */
                     bool StdoutRedirectPathHasBeenSet() const;
 
                     /**
                      * 获取Standard error redirection path
                      * @return StderrRedirectPath Standard error redirection path
+                     * 
                      */
                     std::string GetStderrRedirectPath() const;
 
                     /**
                      * 设置Standard error redirection path
-                     * @param StderrRedirectPath Standard error redirection path
+                     * @param _stderrRedirectPath Standard error redirection path
+                     * 
                      */
                     void SetStderrRedirectPath(const std::string& _stderrRedirectPath);
 
                     /**
                      * 判断参数 StderrRedirectPath 是否已赋值
                      * @return StderrRedirectPath 是否已赋值
+                     * 
                      */
                     bool StderrRedirectPathHasBeenSet() const;
 
                     /**
                      * 获取Standard output redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
                      * @return StdoutRedirectFileName Standard output redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     std::string GetStdoutRedirectFileName() const;
 
                     /**
                      * 设置Standard output redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
-                     * @param StdoutRedirectFileName Standard output redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * @param _stdoutRedirectFileName Standard output redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     void SetStdoutRedirectFileName(const std::string& _stdoutRedirectFileName);
 
                     /**
                      * 判断参数 StdoutRedirectFileName 是否已赋值
                      * @return StdoutRedirectFileName 是否已赋值
+                     * 
                      */
                     bool StdoutRedirectFileNameHasBeenSet() const;
 
                     /**
                      * 获取Standard error redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
                      * @return StderrRedirectFileName Standard error redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     std::string GetStderrRedirectFileName() const;
 
                     /**
                      * 设置Standard error redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
-                     * @param StderrRedirectFileName Standard error redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * @param _stderrRedirectFileName Standard error redirection file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     void SetStderrRedirectFileName(const std::string& _stderrRedirectFileName);
 
                     /**
                      * 判断参数 StderrRedirectFileName 是否已赋值
                      * @return StderrRedirectFileName 是否已赋值
+                     * 
                      */
                     bool StderrRedirectFileNameHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Endpoint ID
                      * @return EndPointId Endpoint ID
+                     * 
                      */
                     std::string GetEndPointId() const;
 
                     /**
                      * 设置Endpoint ID
-                     * @param EndPointId Endpoint ID
+                     * @param _endPointId Endpoint ID
+                     * 
                      */
                     void SetEndPointId(const std::string& _endPointId);
 
                     /**
                      * 判断参数 EndPointId 是否已赋值
                      * @return EndPointId 是否已赋值
+                     * 
                      */
                     bool EndPointIdHasBeenSet() const;
 
                     /**
                      * 获取Endpoint name
                      * @return EndPointName Endpoint name
+                     * 
                      */
                     std::string GetEndPointName() const;
 
                     /**
                      * 设置Endpoint name
-                     * @param EndPointName Endpoint name
+                     * @param _endPointName Endpoint name
+                     * 
                      */
                     void SetEndPointName(const std::string& _endPointName);
 
                     /**
                      * 判断参数 EndPointName 是否已赋值
                      * @return EndPointName 是否已赋值
+                     * 
                      */
                     bool EndPointNameHasBeenSet() const;
 
                     /**
                      * 获取List of security group IDs
                      * @return SecurityGroupIds List of security group IDs
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置List of security group IDs
-                     * @param SecurityGroupIds List of security group IDs
+                     * @param _securityGroupIds List of security group IDs
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 

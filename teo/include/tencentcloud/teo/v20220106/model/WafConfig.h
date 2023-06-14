@@ -51,72 +51,84 @@ namespace TencentCloud
                     /**
                      * 获取Switch
                      * @return Switch Switch
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch
-                     * @param Switch Switch
+                     * @param _switch Switch
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Protection level: `loose`, `normal`, `strict`, `stricter`, `custom`
                      * @return Level Protection level: `loose`, `normal`, `strict`, `stricter`, `custom`
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Protection level: `loose`, `normal`, `strict`, `stricter`, `custom`
-                     * @param Level Protection level: `loose`, `normal`, `strict`, `stricter`, `custom`
+                     * @param _level Protection level: `loose`, `normal`, `strict`, `stricter`, `custom`
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
                     /**
                      * 获取Mode: `block`, `observe`, `close`
                      * @return Mode Mode: `block`, `observe`, `close`
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Mode: `block`, `observe`, `close`
-                     * @param Mode Mode: `block`, `observe`, `close`
+                     * @param _mode Mode: `block`, `observe`, `close`
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取WAF rule allowlist/blocklist
                      * @return WafRules WAF rule allowlist/blocklist
+                     * 
                      */
                     WafRule GetWafRules() const;
 
                     /**
                      * 设置WAF rule allowlist/blocklist
-                     * @param WafRules WAF rule allowlist/blocklist
+                     * @param _wafRules WAF rule allowlist/blocklist
+                     * 
                      */
                     void SetWafRules(const WafRule& _wafRules);
 
                     /**
                      * 判断参数 WafRules 是否已赋值
                      * @return WafRules 是否已赋值
+                     * 
                      */
                     bool WafRulesHasBeenSet() const;
 
@@ -125,20 +137,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AiRule AI rule engine
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AiRule GetAiRule() const;
 
                     /**
                      * 设置AI rule engine
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AiRule AI rule engine
+                     * @param _aiRule AI rule engine
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAiRule(const AiRule& _aiRule);
 
                     /**
                      * 判断参数 AiRule 是否已赋值
                      * @return AiRule 是否已赋值
+                     * 
                      */
                     bool AiRuleHasBeenSet() const;
 

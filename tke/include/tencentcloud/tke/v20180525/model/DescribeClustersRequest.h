@@ -48,56 +48,65 @@ namespace TencentCloud
 all clusters under the account will be obtained)
                      * @return ClusterIds Cluster ID list (When it is empty,
 all clusters under the account will be obtained)
+                     * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
                      * 设置Cluster ID list (When it is empty,
 all clusters under the account will be obtained)
-                     * @param ClusterIds Cluster ID list (When it is empty,
+                     * @param _clusterIds Cluster ID list (When it is empty,
 all clusters under the account will be obtained)
+                     * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
                     /**
                      * 判断参数 ClusterIds 是否已赋值
                      * @return ClusterIds 是否已赋值
+                     * 
                      */
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0
                      * @return Offset Offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0
-                     * @param Offset Offset. Default value: 0
+                     * @param _offset Offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of output entries. Default value: 20
                      * @return Limit Maximum number of output entries. Default value: 20
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of output entries. Default value: 20
-                     * @param Limit Maximum number of output entries. Default value: 20
+                     * @param _limit Maximum number of output entries. Default value: 20
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -180,6 +189,7 @@ all clusters under the account will be obtained)
     Filters by key-value pairs of tags
     Type: String
     Required: No
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -223,7 +233,7 @@ all clusters under the account will be obtained)
     Filters by key-value pairs of tags
     Type: String
     Required: No
-                     * @param Filters ·  ClusterName
+                     * @param _filters ·  ClusterName
     Filters by the cluster name
     Type: String
     Required: No
@@ -262,30 +272,35 @@ all clusters under the account will be obtained)
     Filters by key-value pairs of tags
     Type: String
     Required: No
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Cluster type, such as `MANAGED_CLUSTER`
                      * @return ClusterType Cluster type, such as `MANAGED_CLUSTER`
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Cluster type, such as `MANAGED_CLUSTER`
-                     * @param ClusterType Cluster type, such as `MANAGED_CLUSTER`
+                     * @param _clusterType Cluster type, such as `MANAGED_CLUSTER`
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 

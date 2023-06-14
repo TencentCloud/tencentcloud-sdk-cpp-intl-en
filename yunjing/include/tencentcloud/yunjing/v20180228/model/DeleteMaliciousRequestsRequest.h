@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Malicious request record ID array. Maximum value: 100 entries.
                      * @return Ids Malicious request record ID array. Maximum value: 100 entries.
+                     * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
                      * 设置Malicious request record ID array. Maximum value: 100 entries.
-                     * @param Ids Malicious request record ID array. Maximum value: 100 entries.
+                     * @param _ids Malicious request record ID array. Maximum value: 100 entries.
+                     * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

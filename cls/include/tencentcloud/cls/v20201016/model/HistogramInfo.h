@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The number of logs within the statistical period
                      * @return Count The number of logs within the statistical period
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置The number of logs within the statistical period
-                     * @param Count The number of logs within the statistical period
+                     * @param _count The number of logs within the statistical period
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Unix timestamp rounded by `period`, in milliseconds
                      * @return BTime Unix timestamp rounded by `period`, in milliseconds
+                     * 
                      */
                     int64_t GetBTime() const;
 
                     /**
                      * 设置Unix timestamp rounded by `period`, in milliseconds
-                     * @param BTime Unix timestamp rounded by `period`, in milliseconds
+                     * @param _bTime Unix timestamp rounded by `period`, in milliseconds
+                     * 
                      */
                     void SetBTime(const int64_t& _bTime);
 
                     /**
                      * 判断参数 BTime 是否已赋值
                      * @return BTime 是否已赋值
+                     * 
                      */
                     bool BTimeHasBeenSet() const;
 

@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取The total snapshot size of the user
                      * @return TotalSize The total snapshot size of the user
+                     * 
                      */
                     double GetTotalSize() const;
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 
                     /**
                      * 获取The total billed snapshot size of the user
                      * @return RealTradeSize The total billed snapshot size of the user
+                     * 
                      */
                     double GetRealTradeSize() const;
 
                     /**
                      * 判断参数 RealTradeSize 是否已赋值
                      * @return RealTradeSize 是否已赋值
+                     * 
                      */
                     bool RealTradeSizeHasBeenSet() const;
 
                     /**
                      * 获取Free tier of snapshot
                      * @return FreeQuota Free tier of snapshot
+                     * 
                      */
                     double GetFreeQuota() const;
 
                     /**
                      * 判断参数 FreeQuota 是否已赋值
                      * @return FreeQuota 是否已赋值
+                     * 
                      */
                     bool FreeQuotaHasBeenSet() const;
 
                     /**
                      * 获取Total number of snapshots
                      * @return TotalNums Total number of snapshots
+                     * 
                      */
                     int64_t GetTotalNums() const;
 
                     /**
                      * 判断参数 TotalNums 是否已赋值
                      * @return TotalNums 是否已赋值
+                     * 
                      */
                     bool TotalNumsHasBeenSet() const;
 

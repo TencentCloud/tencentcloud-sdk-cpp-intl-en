@@ -62,20 +62,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FrameRate Frame interpolation configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FrameRateConfig GetFrameRate() const;
 
                     /**
                      * 设置Frame interpolation configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FrameRate Frame interpolation configuration.
+                     * @param _frameRate Frame interpolation configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFrameRate(const FrameRateConfig& _frameRate);
 
                     /**
                      * 判断参数 FrameRate 是否已赋值
                      * @return FrameRate 是否已赋值
+                     * 
                      */
                     bool FrameRateHasBeenSet() const;
 
@@ -84,20 +87,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SuperResolution Super resolution configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SuperResolutionConfig GetSuperResolution() const;
 
                     /**
                      * 设置Super resolution configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SuperResolution Super resolution configuration.
+                     * @param _superResolution Super resolution configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuperResolution(const SuperResolutionConfig& _superResolution);
 
                     /**
                      * 判断参数 SuperResolution 是否已赋值
                      * @return SuperResolution 是否已赋值
+                     * 
                      */
                     bool SuperResolutionHasBeenSet() const;
 
@@ -106,20 +112,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Hdr HDR configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     HdrConfig GetHdr() const;
 
                     /**
                      * 设置HDR configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Hdr HDR configuration.
+                     * @param _hdr HDR configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHdr(const HdrConfig& _hdr);
 
                     /**
                      * 判断参数 Hdr 是否已赋值
                      * @return Hdr 是否已赋值
+                     * 
                      */
                     bool HdrHasBeenSet() const;
 
@@ -128,20 +137,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Denoise Image noise removal configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VideoDenoiseConfig GetDenoise() const;
 
                     /**
                      * 设置Image noise removal configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Denoise Image noise removal configuration.
+                     * @param _denoise Image noise removal configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDenoise(const VideoDenoiseConfig& _denoise);
 
                     /**
                      * 判断参数 Denoise 是否已赋值
                      * @return Denoise 是否已赋值
+                     * 
                      */
                     bool DenoiseHasBeenSet() const;
 
@@ -150,20 +162,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageQualityEnhance Overall enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ImageQualityEnhanceConfig GetImageQualityEnhance() const;
 
                     /**
                      * 设置Overall enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImageQualityEnhance Overall enhancement configuration.
+                     * @param _imageQualityEnhance Overall enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageQualityEnhance(const ImageQualityEnhanceConfig& _imageQualityEnhance);
 
                     /**
                      * 判断参数 ImageQualityEnhance 是否已赋值
                      * @return ImageQualityEnhance 是否已赋值
+                     * 
                      */
                     bool ImageQualityEnhanceHasBeenSet() const;
 
@@ -172,20 +187,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ColorEnhance Color enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ColorEnhanceConfig GetColorEnhance() const;
 
                     /**
                      * 设置Color enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ColorEnhance Color enhancement configuration.
+                     * @param _colorEnhance Color enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetColorEnhance(const ColorEnhanceConfig& _colorEnhance);
 
                     /**
                      * 判断参数 ColorEnhance 是否已赋值
                      * @return ColorEnhance 是否已赋值
+                     * 
                      */
                     bool ColorEnhanceHasBeenSet() const;
 
@@ -194,20 +212,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SharpEnhance Detail enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SharpEnhanceConfig GetSharpEnhance() const;
 
                     /**
                      * 设置Detail enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SharpEnhance Detail enhancement configuration.
+                     * @param _sharpEnhance Detail enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSharpEnhance(const SharpEnhanceConfig& _sharpEnhance);
 
                     /**
                      * 判断参数 SharpEnhance 是否已赋值
                      * @return SharpEnhance 是否已赋值
+                     * 
                      */
                     bool SharpEnhanceHasBeenSet() const;
 
@@ -216,20 +237,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FaceEnhance Face enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FaceEnhanceConfig GetFaceEnhance() const;
 
                     /**
                      * 设置Face enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FaceEnhance Face enhancement configuration.
+                     * @param _faceEnhance Face enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFaceEnhance(const FaceEnhanceConfig& _faceEnhance);
 
                     /**
                      * 判断参数 FaceEnhance 是否已赋值
                      * @return FaceEnhance 是否已赋值
+                     * 
                      */
                     bool FaceEnhanceHasBeenSet() const;
 
@@ -238,20 +262,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LowLightEnhance Low-light enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     LowLightEnhanceConfig GetLowLightEnhance() const;
 
                     /**
                      * 设置Low-light enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LowLightEnhance Low-light enhancement configuration.
+                     * @param _lowLightEnhance Low-light enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLowLightEnhance(const LowLightEnhanceConfig& _lowLightEnhance);
 
                     /**
                      * 判断参数 LowLightEnhance 是否已赋值
                      * @return LowLightEnhance 是否已赋值
+                     * 
                      */
                     bool LowLightEnhanceHasBeenSet() const;
 
@@ -260,20 +287,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScratchRepair Banding removal configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ScratchRepairConfig GetScratchRepair() const;
 
                     /**
                      * 设置Banding removal configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ScratchRepair Banding removal configuration.
+                     * @param _scratchRepair Banding removal configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScratchRepair(const ScratchRepairConfig& _scratchRepair);
 
                     /**
                      * 判断参数 ScratchRepair 是否已赋值
                      * @return ScratchRepair 是否已赋值
+                     * 
                      */
                     bool ScratchRepairHasBeenSet() const;
 
@@ -282,20 +312,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ArtifactRepair Artifact removal (smoothing) configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ArtifactRepairConfig GetArtifactRepair() const;
 
                     /**
                      * 设置Artifact removal (smoothing) configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ArtifactRepair Artifact removal (smoothing) configuration.
+                     * @param _artifactRepair Artifact removal (smoothing) configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetArtifactRepair(const ArtifactRepairConfig& _artifactRepair);
 
                     /**
                      * 判断参数 ArtifactRepair 是否已赋值
                      * @return ArtifactRepair 是否已赋值
+                     * 
                      */
                     bool ArtifactRepairHasBeenSet() const;
 

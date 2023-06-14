@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取List of content audit results.
                      * @return ResultSet List of content audit results.
+                     * 
                      */
                     std::vector<LiveStreamAiReviewResultItem> GetResultSet() const;
 
                     /**
                      * 设置List of content audit results.
-                     * @param ResultSet List of content audit results.
+                     * @param _resultSet List of content audit results.
+                     * 
                      */
                     void SetResultSet(const std::vector<LiveStreamAiReviewResultItem>& _resultSet);
 
                     /**
                      * 判断参数 ResultSet 是否已赋值
                      * @return ResultSet 是否已赋值
+                     * 
                      */
                     bool ResultSetHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Image ID.
                      * @return ImageId Image ID.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID.
-                     * @param ImageId Image ID.
+                     * @param _imageId Image ID.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Image description.
                      * @return ImageDescription Image description.
+                     * 
                      */
                     std::string GetImageDescription() const;
 
                     /**
                      * 设置Image description.
-                     * @param ImageDescription Image description.
+                     * @param _imageDescription Image description.
+                     * 
                      */
                     void SetImageDescription(const std::string& _imageDescription);
 
                     /**
                      * 判断参数 ImageDescription 是否已赋值
                      * @return ImageDescription 是否已赋值
+                     * 
                      */
                     bool ImageDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Source region
                      * @return SourceRegion Source region
+                     * 
                      */
                     std::string GetSourceRegion() const;
 
                     /**
                      * 设置Source region
-                     * @param SourceRegion Source region
+                     * @param _sourceRegion Source region
+                     * 
                      */
                     void SetSourceRegion(const std::string& _sourceRegion);
 
                     /**
                      * 判断参数 SourceRegion 是否已赋值
                      * @return SourceRegion 是否已赋值
+                     * 
                      */
                     bool SourceRegionHasBeenSet() const;
 

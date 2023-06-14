@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of deleted files.
                      * @return FileIdSet List of IDs of deleted files.
+                     * 
                      */
                     std::vector<std::string> GetFileIdSet() const;
 
                     /**
                      * 设置List of IDs of deleted files.
-                     * @param FileIdSet List of IDs of deleted files.
+                     * @param _fileIdSet List of IDs of deleted files.
+                     * 
                      */
                     void SetFileIdSet(const std::vector<std::string>& _fileIdSet);
 
                     /**
                      * 判断参数 FileIdSet 是否已赋值
                      * @return FileIdSet 是否已赋值
+                     * 
                      */
                     bool FileIdSetHasBeenSet() const;
 
                     /**
                      * 获取The information of the files deleted.
                      * @return FileDeleteResultInfo The information of the files deleted.
+                     * 
                      */
                     std::vector<FileDeleteResultItem> GetFileDeleteResultInfo() const;
 
                     /**
                      * 设置The information of the files deleted.
-                     * @param FileDeleteResultInfo The information of the files deleted.
+                     * @param _fileDeleteResultInfo The information of the files deleted.
+                     * 
                      */
                     void SetFileDeleteResultInfo(const std::vector<FileDeleteResultItem>& _fileDeleteResultInfo);
 
                     /**
                      * 判断参数 FileDeleteResultInfo 是否已赋值
                      * @return FileDeleteResultInfo 是否已赋值
+                     * 
                      */
                     bool FileDeleteResultInfoHasBeenSet() const;
 

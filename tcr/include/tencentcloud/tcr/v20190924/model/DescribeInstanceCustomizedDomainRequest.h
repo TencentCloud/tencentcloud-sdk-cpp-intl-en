@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Primary instance ID
                      * @return RegistryId Primary instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Primary instance ID
-                     * @param RegistryId Primary instance ID
+                     * @param _registryId Primary instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Pagination limit
                      * @return Limit Pagination limit
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination limit
-                     * @param Limit Pagination limit
+                     * @param _limit Pagination limit
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset
                      * @return Offset Pagination offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset
-                     * @param Offset Pagination offset
+                     * @param _offset Pagination offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

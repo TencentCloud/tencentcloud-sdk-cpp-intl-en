@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Username
                      * @return UserName Username
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username
-                     * @param UserName Username
+                     * @param _userName Username
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取The group to which the user belongs
                      * @return UserGroup The group to which the user belongs
+                     * 
                      */
                     std::string GetUserGroup() const;
 
                     /**
                      * 设置The group to which the user belongs
-                     * @param UserGroup The group to which the user belongs
+                     * @param _userGroup The group to which the user belongs
+                     * 
                      */
                     void SetUserGroup(const std::string& _userGroup);
 
                     /**
                      * 判断参数 UserGroup 是否已赋值
                      * @return UserGroup 是否已赋值
+                     * 
                      */
                     bool UserGroupHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return PassWord 
+                     * 
                      */
                     std::string GetPassWord() const;
 
                     /**
                      * 设置
-                     * @param PassWord 
+                     * @param _passWord 
+                     * 
                      */
                     void SetPassWord(const std::string& _passWord);
 
                     /**
                      * 判断参数 PassWord 是否已赋值
                      * @return PassWord 是否已赋值
+                     * 
                      */
                     bool PassWordHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return ReMark 
+                     * 
                      */
                     std::string GetReMark() const;
 
                     /**
                      * 设置
-                     * @param ReMark 
+                     * @param _reMark 
+                     * 
                      */
                     void SetReMark(const std::string& _reMark);
 
                     /**
                      * 判断参数 ReMark 是否已赋值
                      * @return ReMark 是否已赋值
+                     * 
                      */
                     bool ReMarkHasBeenSet() const;
 

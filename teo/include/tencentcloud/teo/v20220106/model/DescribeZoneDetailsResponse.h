@@ -50,24 +50,28 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return Id Site ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Site name
                      * @return Name Site name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -76,12 +80,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OriginalNameServers List of name servers used
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
                      * 判断参数 OriginalNameServers 是否已赋值
                      * @return OriginalNameServers 是否已赋值
+                     * 
                      */
                     bool OriginalNameServersHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NameServers List of name servers assigned to users by Tencent Cloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetNameServers() const;
 
                     /**
                      * 判断参数 NameServers 是否已赋值
                      * @return NameServers 是否已赋值
+                     * 
                      */
                     bool NameServersHasBeenSet() const;
 
@@ -110,12 +118,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `pending`: The name server is not switched.
 - `moved`: The name server is moved.
 - `deactivated`: The name server is blocked.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -126,24 +136,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Type Specifies how the site is connected to EdgeOne.
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether the site is disabled
                      * @return Paused Indicates whether the site is disabled
+                     * 
                      */
                     bool GetPaused() const;
 
                     /**
                      * 判断参数 Paused 是否已赋值
                      * @return Paused 是否已赋值
+                     * 
                      */
                     bool PausedHasBeenSet() const;
 
@@ -154,12 +168,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return CnameSpeedUp Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable
+                     * 
                      */
                     std::string GetCnameSpeedUp() const;
 
                     /**
                      * 判断参数 CnameSpeedUp 是否已赋值
                      * @return CnameSpeedUp 是否已赋值
+                     * 
                      */
                     bool CnameSpeedUpHasBeenSet() const;
 
@@ -172,12 +188,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `finished`: The site is verified.
 - `pending`: The site is waiting for verification.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCnameStatus() const;
 
                     /**
                      * 判断参数 CnameStatus 是否已赋值
                      * @return CnameStatus 是否已赋值
+                     * 
                      */
                     bool CnameStatusHasBeenSet() const;
 
@@ -186,24 +204,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Resource tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Area 
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -212,36 +234,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Resources Billable resource
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Resource> GetResources() const;
 
                     /**
                      * 判断参数 Resources 是否已赋值
                      * @return Resources 是否已赋值
+                     * 
                      */
                     bool ResourcesHasBeenSet() const;
 
                     /**
                      * 获取Site modification date
                      * @return ModifiedOn Site modification date
+                     * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
                      * 判断参数 ModifiedOn 是否已赋值
                      * @return ModifiedOn 是否已赋值
+                     * 
                      */
                     bool ModifiedOnHasBeenSet() const;
 
                     /**
                      * 获取Site creation date
                      * @return CreatedOn Site creation date
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
@@ -250,12 +278,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return VanityNameServers User-defined name server information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     VanityNameServers GetVanityNameServers() const;
 
                     /**
                      * 判断参数 VanityNameServers 是否已赋值
                      * @return VanityNameServers 是否已赋值
+                     * 
                      */
                     bool VanityNameServersHasBeenSet() const;
 
@@ -264,12 +294,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return VanityNameServersIps User-defined name server IP information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<VanityNameServersIps> GetVanityNameServersIps() const;
 
                     /**
                      * 判断参数 VanityNameServersIps 是否已赋值
                      * @return VanityNameServersIps 是否已赋值
+                     * 
                      */
                     bool VanityNameServersIpsHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
+                     * @param _switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

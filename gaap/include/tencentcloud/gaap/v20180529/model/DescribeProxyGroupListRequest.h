@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Offset. The default value is 0.
                      * @return Offset Offset. The default value is 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * @param _offset Offset. The default value is 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. The default value is 20. The maximum value is 100.
                      * @return Limit Number of returned results. The default value is 20. The maximum value is 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. The default value is 20. The maximum value is 100.
-                     * @param Limit Number of returned results. The default value is 20. The maximum value is 100.
+                     * @param _limit Number of returned results. The default value is 20. The maximum value is 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -89,6 +95,7 @@ Other values: specified project
 -1: all projects of this user
 0: default project
 Other values: specified project
+                     * 
                      */
                     int64_t GetProjectId() const;
 
@@ -97,16 +104,18 @@ Other values: specified project
 -1: all projects of this user
 0: default project
 Other values: specified project
-                     * @param ProjectId Project ID. Value range:
+                     * @param _projectId Project ID. Value range:
 -1: all projects of this user
 0: default project
 Other values: specified project
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -119,6 +128,7 @@ Each request can have a maximum of 5 filter conditions for `Filter.Values`.
 Each request can have a maximum of 5 filter conditions for `Filter.Values`.
 `RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
 `PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -127,16 +137,18 @@ Each request can have a maximum of 5 filter conditions for `Filter.Values`.
 Each request can have a maximum of 5 filter conditions for `Filter.Values`.
 `RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
 `PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
-                     * @param Filters Filter condition   
+                     * @param _filters Filter condition   
 Each request can have a maximum of 5 filter conditions for `Filter.Values`.
 `RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
 `PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
@@ -145,20 +157,23 @@ Each request can have a maximum of 5 filter conditions for `Filter.Values`.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
                      * @return TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
+                     * 
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
                      * 设置Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
-                     * @param TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
+                     * @param _tagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
+                     * 
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Add-on name
                      * @return AddonName Add-on name
+                     * 
                      */
                     std::string GetAddonName() const;
 
                     /**
                      * 设置Add-on name
-                     * @param AddonName Add-on name
+                     * @param _addonName Add-on name
+                     * 
                      */
                     void SetAddonName(const std::string& _addonName);
 
                     /**
                      * 判断参数 AddonName 是否已赋值
                      * @return AddonName 是否已赋值
+                     * 
                      */
                     bool AddonNameHasBeenSet() const;
 
                     /**
                      * 获取Add-on information (description of the add-on resource object in JSON string format)
                      * @return AddonParam Add-on information (description of the add-on resource object in JSON string format)
+                     * 
                      */
                     std::string GetAddonParam() const;
 
                     /**
                      * 设置Add-on information (description of the add-on resource object in JSON string format)
-                     * @param AddonParam Add-on information (description of the add-on resource object in JSON string format)
+                     * @param _addonParam Add-on information (description of the add-on resource object in JSON string format)
+                     * 
                      */
                     void SetAddonParam(const std::string& _addonParam);
 
                     /**
                      * 判断参数 AddonParam 是否已赋值
                      * @return AddonParam 是否已赋值
+                     * 
                      */
                     bool AddonParamHasBeenSet() const;
 

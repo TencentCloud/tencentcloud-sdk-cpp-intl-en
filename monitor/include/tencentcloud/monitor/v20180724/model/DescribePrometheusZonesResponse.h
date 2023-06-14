@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZoneSet Region list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusZoneItem> GetZoneSet() const;
 
                     /**
                      * 判断参数 ZoneSet 是否已赋值
                      * @return ZoneSet 是否已赋值
+                     * 
                      */
                     bool ZoneSetHasBeenSet() const;
 

@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取The stream name.
                      * @return StreamName The stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置The stream name.
-                     * @param StreamName The stream name.
+                     * @param _streamName The stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
                      * @return StartTime The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
-                     * @param StartTime The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
+                     * @param _startTime The start time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
                      * @return EndTime The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
-                     * @param EndTime The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+                     * @param _endTime The end time (UTC+8) in the format of “yyyy-mm-dd HH:MM:SS”. You can query data from the past seven days for a period of preferably not longer than three hours.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The push domain.
                      * @return PushDomain The push domain.
+                     * 
                      */
                     std::string GetPushDomain() const;
 
                     /**
                      * 设置The push domain.
-                     * @param PushDomain The push domain.
+                     * @param _pushDomain The push domain.
+                     * 
                      */
                     void SetPushDomain(const std::string& _pushDomain);
 
                     /**
                      * 判断参数 PushDomain 是否已赋值
                      * @return PushDomain 是否已赋值
+                     * 
                      */
                     bool PushDomainHasBeenSet() const;
 
                     /**
                      * 获取The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
                      * @return AppName The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
-                     * @param AppName The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
+                     * @param _appName The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 

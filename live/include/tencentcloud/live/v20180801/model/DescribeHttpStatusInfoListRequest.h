@@ -47,20 +47,23 @@ namespace TencentCloud
 Format: yyyy-mm-dd HH:MM:SS.
                      * @return StartTime Start time (Beijing time).
 Format: yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time (Beijing time).
 Format: yyyy-mm-dd HH:MM:SS.
-                     * @param StartTime Start time (Beijing time).
+                     * @param _startTime Start time (Beijing time).
 Format: yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Note: data in the last 3 months can be queried and the query period is up to 1 d
                      * @return EndTime End time (Beijing time).
 Format: yyyy-mm-dd HH:MM:SS.
 Note: data in the last 3 months can be queried and the query period is up to 1 day.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -78,33 +82,38 @@ Note: data in the last 3 months can be queried and the query period is up to 1 d
                      * 设置End time (Beijing time).
 Format: yyyy-mm-dd HH:MM:SS.
 Note: data in the last 3 months can be queried and the query period is up to 1 day.
-                     * @param EndTime End time (Beijing time).
+                     * @param _endTime End time (Beijing time).
 Format: yyyy-mm-dd HH:MM:SS.
 Note: data in the last 3 months can be queried and the query period is up to 1 day.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name list.
                      * @return PlayDomains Playback domain name list.
+                     * 
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
                      * 设置Playback domain name list.
-                     * @param PlayDomains Playback domain name list.
+                     * @param _playDomains Playback domain name list.
+                     * 
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
                     /**
                      * 判断参数 PlayDomains 是否已赋值
                      * @return PlayDomains 是否已赋值
+                     * 
                      */
                     bool PlayDomainsHasBeenSet() const;
 

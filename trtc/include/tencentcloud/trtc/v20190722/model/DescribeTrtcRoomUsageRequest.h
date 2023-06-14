@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The `SDKAppID` of the room.
                      * @return SdkAppid The `SDKAppID` of the room.
+                     * 
                      */
                     uint64_t GetSdkAppid() const;
 
                     /**
                      * 设置The `SDKAppID` of the room.
-                     * @param SdkAppid The `SDKAppID` of the room.
+                     * @param _sdkAppid The `SDKAppID` of the room.
+                     * 
                      */
                     void SetSdkAppid(const uint64_t& _sdkAppid);
 
                     /**
                      * 判断参数 SdkAppid 是否已赋值
                      * @return SdkAppid 是否已赋值
+                     * 
                      */
                     bool SdkAppidHasBeenSet() const;
 
                     /**
                      * 获取The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
                      * @return StartTime The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
-                     * @param StartTime The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
+                     * @param _startTime The start time in the format of `YYYY-MM-DD HH:MM` (accurate to the minute).
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
                      * @return EndTime The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
-                     * @param EndTime The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
+                     * @param _endTime The end time in the format of `YYYY-MM-DD HH:MM`. The start and end time cannot be more than 24 hours apart.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

@@ -49,24 +49,28 @@ namespace TencentCloud
                     /**
                      * 获取Cluster information
                      * @return ClusterInfo Cluster information
+                     * 
                      */
                     RocketMQClusterInfo GetClusterInfo() const;
 
                     /**
                      * 判断参数 ClusterInfo 是否已赋值
                      * @return ClusterInfo 是否已赋值
+                     * 
                      */
                     bool ClusterInfoHasBeenSet() const;
 
                     /**
                      * 获取Cluster configuration
                      * @return ClusterConfig Cluster configuration
+                     * 
                      */
                     RocketMQClusterConfig GetClusterConfig() const;
 
                     /**
                      * 判断参数 ClusterConfig 是否已赋值
                      * @return ClusterConfig 是否已赋值
+                     * 
                      */
                     bool ClusterConfigHasBeenSet() const;
 
@@ -75,12 +79,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClusterStats Recent cluster usage
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RocketMQClusterRecentStats GetClusterStats() const;
 
                     /**
                      * 判断参数 ClusterStats 是否已赋值
                      * @return ClusterStats 是否已赋值
+                     * 
                      */
                     bool ClusterStatsHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取IP string
                      * @return IP IP string
+                     * 
                      */
                     std::string GetIP() const;
 
                     /**
                      * 设置IP string
-                     * @param IP IP string
+                     * @param _iP IP string
+                     * 
                      */
                     void SetIP(const std::string& _iP);
 
                     /**
                      * 判断参数 IP 是否已赋值
                      * @return IP 是否已赋值
+                     * 
                      */
                     bool IPHasBeenSet() const;
 
                     /**
                      * 获取Network provider. `BGP`: Tencent Cloud BGP (default); `CMCC`: China Mobile; `CUCC`: China Unicom; `CTCC`: China Telecom.
                      * @return Provider Network provider. `BGP`: Tencent Cloud BGP (default); `CMCC`: China Mobile; `CUCC`: China Unicom; `CTCC`: China Telecom.
+                     * 
                      */
                     std::string GetProvider() const;
 
                     /**
                      * 设置Network provider. `BGP`: Tencent Cloud BGP (default); `CMCC`: China Mobile; `CUCC`: China Unicom; `CTCC`: China Telecom.
-                     * @param Provider Network provider. `BGP`: Tencent Cloud BGP (default); `CMCC`: China Mobile; `CUCC`: China Unicom; `CTCC`: China Telecom.
+                     * @param _provider Network provider. `BGP`: Tencent Cloud BGP (default); `CMCC`: China Mobile; `CUCC`: China Unicom; `CTCC`: China Telecom.
+                     * 
                      */
                     void SetProvider(const std::string& _provider);
 
                     /**
                      * 判断参数 Provider 是否已赋值
                      * @return Provider 是否已赋值
+                     * 
                      */
                     bool ProviderHasBeenSet() const;
 
                     /**
                      * 获取Max bandwidth
                      * @return Bandwidth Max bandwidth
+                     * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
                      * 设置Max bandwidth
-                     * @param Bandwidth Max bandwidth
+                     * @param _bandwidth Max bandwidth
+                     * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 

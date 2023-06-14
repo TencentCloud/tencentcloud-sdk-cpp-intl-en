@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Output name.
                      * @return Name Output name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Output name.
-                     * @param Name Output name.
+                     * @param _name Output name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -72,6 +75,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return AudioTemplateNames Audio transcoding template name array.
 Quantity limit: [0,1] for RTMP; [0,20] for others.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAudioTemplateNames() const;
 
@@ -79,15 +83,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Audio transcoding template name array.
 Quantity limit: [0,1] for RTMP; [0,20] for others.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AudioTemplateNames Audio transcoding template name array.
+                     * @param _audioTemplateNames Audio transcoding template name array.
 Quantity limit: [0,1] for RTMP; [0,20] for others.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAudioTemplateNames(const std::vector<std::string>& _audioTemplateNames);
 
                     /**
                      * 判断参数 AudioTemplateNames 是否已赋值
                      * @return AudioTemplateNames 是否已赋值
+                     * 
                      */
                     bool AudioTemplateNamesHasBeenSet() const;
 
@@ -96,38 +102,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VideoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetVideoTemplateNames() const;
 
                     /**
                      * 设置Video transcoding template name array. Quantity limit: [0,1].
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VideoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
+                     * @param _videoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVideoTemplateNames(const std::vector<std::string>& _videoTemplateNames);
 
                     /**
                      * 判断参数 VideoTemplateNames 是否已赋值
                      * @return VideoTemplateNames 是否已赋值
+                     * 
                      */
                     bool VideoTemplateNamesHasBeenSet() const;
 
                     /**
                      * 获取SCTE-35 information configuration.
                      * @return Scte35Settings SCTE-35 information configuration.
+                     * 
                      */
                     Scte35SettingsInfo GetScte35Settings() const;
 
                     /**
                      * 设置SCTE-35 information configuration.
-                     * @param Scte35Settings SCTE-35 information configuration.
+                     * @param _scte35Settings SCTE-35 information configuration.
+                     * 
                      */
                     void SetScte35Settings(const Scte35SettingsInfo& _scte35Settings);
 
                     /**
                      * 判断参数 Scte35Settings 是否已赋值
                      * @return Scte35Settings 是否已赋值
+                     * 
                      */
                     bool Scte35SettingsHasBeenSet() const;
 
@@ -136,20 +148,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetAVTemplateNames() const;
 
                     /**
                      * 设置Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+                     * @param _aVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAVTemplateNames(const std::vector<std::string>& _aVTemplateNames);
 
                     /**
                      * 判断参数 AVTemplateNames 是否已赋值
                      * @return AVTemplateNames 是否已赋值
+                     * 
                      */
                     bool AVTemplateNamesHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Compute environment ID
                      * @return EnvId Compute environment ID
+                     * 
                      */
                     std::string GetEnvId() const;
 
                     /**
                      * 设置Compute environment ID
-                     * @param EnvId Compute environment ID
+                     * @param _envId Compute environment ID
+                     * 
                      */
                     void SetEnvId(const std::string& _envId);
 
                     /**
                      * 判断参数 EnvId 是否已赋值
                      * @return EnvId 是否已赋值
+                     * 
                      */
                     bool EnvIdHasBeenSet() const;
 
                     /**
                      * 获取Compute node ID
                      * @return ComputeNodeId Compute node ID
+                     * 
                      */
                     std::string GetComputeNodeId() const;
 
                     /**
                      * 设置Compute node ID
-                     * @param ComputeNodeId Compute node ID
+                     * @param _computeNodeId Compute node ID
+                     * 
                      */
                     void SetComputeNodeId(const std::string& _computeNodeId);
 
                     /**
                      * 判断参数 ComputeNodeId 是否已赋值
                      * @return ComputeNodeId 是否已赋值
+                     * 
                      */
                     bool ComputeNodeIdHasBeenSet() const;
 

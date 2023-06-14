@@ -47,20 +47,23 @@ namespace TencentCloud
 Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
                      * @return PhoneNumberSet A parameter used to query mobile numbers in E.164 format (+[country/region code][subscriber number]). Up to 200 mobile numbers can be queried at a time.
 Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+                     * 
                      */
                     std::vector<std::string> GetPhoneNumberSet() const;
 
                     /**
                      * 设置A parameter used to query mobile numbers in E.164 format (+[country/region code][subscriber number]). Up to 200 mobile numbers can be queried at a time.
 Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
-                     * @param PhoneNumberSet A parameter used to query mobile numbers in E.164 format (+[country/region code][subscriber number]). Up to 200 mobile numbers can be queried at a time.
+                     * @param _phoneNumberSet A parameter used to query mobile numbers in E.164 format (+[country/region code][subscriber number]). Up to 200 mobile numbers can be queried at a time.
 Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+                     * 
                      */
                     void SetPhoneNumberSet(const std::vector<std::string>& _phoneNumberSet);
 
                     /**
                      * 判断参数 PhoneNumberSet 是否已赋值
                      * @return PhoneNumberSet 是否已赋值
+                     * 
                      */
                     bool PhoneNumberSetHasBeenSet() const;
 

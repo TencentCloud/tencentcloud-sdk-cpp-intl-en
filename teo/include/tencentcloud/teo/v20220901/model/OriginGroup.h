@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The site name.
                      * @return ZoneName The site name.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置The site name.
-                     * @param ZoneName The site name.
+                     * @param _zoneName The site name.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取The ID of the origin group.
                      * @return OriginGroupId The ID of the origin group.
+                     * 
                      */
                     std::string GetOriginGroupId() const;
 
                     /**
                      * 设置The ID of the origin group.
-                     * @param OriginGroupId The ID of the origin group.
+                     * @param _originGroupId The ID of the origin group.
+                     * 
                      */
                     void SetOriginGroupId(const std::string& _originGroupId);
 
                     /**
                      * 判断参数 OriginGroupId 是否已赋值
                      * @return OriginGroupId 是否已赋值
+                     * 
                      */
                     bool OriginGroupIdHasBeenSet() const;
 
@@ -110,6 +119,7 @@ namespace TencentCloud
 <li>`self`: Customer origin</li>
 <li>`third_party`: Third-party origin</li>
 <li>`cos`: Tencent Cloud COS origin</li>
+                     * 
                      */
                     std::string GetOriginType() const;
 
@@ -118,34 +128,39 @@ namespace TencentCloud
 <li>`self`: Customer origin</li>
 <li>`third_party`: Third-party origin</li>
 <li>`cos`: Tencent Cloud COS origin</li>
-                     * @param OriginType The origin type. Values:
+                     * @param _originType The origin type. Values:
 <li>`self`: Customer origin</li>
 <li>`third_party`: Third-party origin</li>
 <li>`cos`: Tencent Cloud COS origin</li>
+                     * 
                      */
                     void SetOriginType(const std::string& _originType);
 
                     /**
                      * 判断参数 OriginType 是否已赋值
                      * @return OriginType 是否已赋值
+                     * 
                      */
                     bool OriginTypeHasBeenSet() const;
 
                     /**
                      * 获取The name of the origin group.
                      * @return OriginGroupName The name of the origin group.
+                     * 
                      */
                     std::string GetOriginGroupName() const;
 
                     /**
                      * 设置The name of the origin group.
-                     * @param OriginGroupName The name of the origin group.
+                     * @param _originGroupName The name of the origin group.
+                     * 
                      */
                     void SetOriginGroupName(const std::string& _originGroupName);
 
                     /**
                      * 判断参数 OriginGroupName 是否已赋值
                      * @return OriginGroupName 是否已赋值
+                     * 
                      */
                     bool OriginGroupNameHasBeenSet() const;
 
@@ -158,6 +173,7 @@ namespace TencentCloud
 <li>`area`: Configure by region.</li>
 <li>`weight`: Configure by weight.</li>
 <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+                     * 
                      */
                     std::string GetConfigurationType() const;
 
@@ -166,52 +182,60 @@ namespace TencentCloud
 <li>`area`: Configure by region.</li>
 <li>`weight`: Configure by weight.</li>
 <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
-                     * @param ConfigurationType The origin configuration type when `OriginType=self`. Values:
+                     * @param _configurationType The origin configuration type when `OriginType=self`. Values:
 <li>`area`: Configure by region.</li>
 <li>`weight`: Configure by weight.</li>
 <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
+                     * 
                      */
                     void SetConfigurationType(const std::string& _configurationType);
 
                     /**
                      * 判断参数 ConfigurationType 是否已赋值
                      * @return ConfigurationType 是否已赋值
+                     * 
                      */
                     bool ConfigurationTypeHasBeenSet() const;
 
                     /**
                      * 获取The origin record information.
                      * @return OriginRecords The origin record information.
+                     * 
                      */
                     std::vector<OriginRecord> GetOriginRecords() const;
 
                     /**
                      * 设置The origin record information.
-                     * @param OriginRecords The origin record information.
+                     * @param _originRecords The origin record information.
+                     * 
                      */
                     void SetOriginRecords(const std::vector<OriginRecord>& _originRecords);
 
                     /**
                      * 判断参数 OriginRecords 是否已赋值
                      * @return OriginRecords 是否已赋值
+                     * 
                      */
                     bool OriginRecordsHasBeenSet() const;
 
                     /**
                      * 获取The update time of the origin group.
                      * @return UpdateTime The update time of the origin group.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The update time of the origin group.
-                     * @param UpdateTime The update time of the origin group.
+                     * @param _updateTime The update time of the origin group.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -220,20 +244,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return HostHeader The origin domain when `OriginType=self`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetHostHeader() const;
 
                     /**
                      * 设置The origin domain when `OriginType=self`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param HostHeader The origin domain when `OriginType=self`.
+                     * @param _hostHeader The origin domain when `OriginType=self`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHostHeader(const std::string& _hostHeader);
 
                     /**
                      * 判断参数 HostHeader 是否已赋值
                      * @return HostHeader 是否已赋值
+                     * 
                      */
                     bool HostHeaderHasBeenSet() const;
 

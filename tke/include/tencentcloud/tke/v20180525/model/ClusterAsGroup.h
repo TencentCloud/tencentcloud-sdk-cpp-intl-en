@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Scaling group ID
                      * @return AutoScalingGroupId Scaling group ID
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Scaling group ID
-                     * @param AutoScalingGroupId Scaling group ID
+                     * @param _autoScalingGroupId Scaling group ID
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
                      * @return Status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
-                     * @param Status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
+                     * @param _status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid value was found.
                      * @return IsUnschedulable Whether the node is set to unschedulable
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     bool GetIsUnschedulable() const;
 
                     /**
                      * 设置Whether the node is set to unschedulable
 Note: this field may return null, indicating that no valid value was found.
-                     * @param IsUnschedulable Whether the node is set to unschedulable
+                     * @param _isUnschedulable Whether the node is set to unschedulable
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetIsUnschedulable(const bool& _isUnschedulable);
 
                     /**
                      * 判断参数 IsUnschedulable 是否已赋值
                      * @return IsUnschedulable 是否已赋值
+                     * 
                      */
                     bool IsUnschedulableHasBeenSet() const;
 
@@ -110,38 +119,44 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return Labels Scaling group label list
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Scaling group label list
 Note: this field may return null, indicating that no valid value was found.
-                     * @param Labels Scaling group label list
+                     * @param _labels Scaling group label list
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreatedTime Creation time
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreatedTime Creation time
+                     * @param _createdTime Creation time
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 

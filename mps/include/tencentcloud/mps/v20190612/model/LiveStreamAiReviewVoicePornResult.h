@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Start PTS time of a suspected segment in seconds.
                      * @return StartPtsTime Start PTS time of a suspected segment in seconds.
+                     * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
                      * 设置Start PTS time of a suspected segment in seconds.
-                     * @param StartPtsTime Start PTS time of a suspected segment in seconds.
+                     * @param _startPtsTime Start PTS time of a suspected segment in seconds.
+                     * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
 
                     /**
                      * 判断参数 StartPtsTime 是否已赋值
                      * @return StartPtsTime 是否已赋值
+                     * 
                      */
                     bool StartPtsTimeHasBeenSet() const;
 
                     /**
                      * 获取End PTS time of a suspected segment in seconds.
                      * @return EndPtsTime End PTS time of a suspected segment in seconds.
+                     * 
                      */
                     double GetEndPtsTime() const;
 
                     /**
                      * 设置End PTS time of a suspected segment in seconds.
-                     * @param EndPtsTime End PTS time of a suspected segment in seconds.
+                     * @param _endPtsTime End PTS time of a suspected segment in seconds.
+                     * 
                      */
                     void SetEndPtsTime(const double& _endPtsTime);
 
                     /**
                      * 判断参数 EndPtsTime 是否已赋值
                      * @return EndPtsTime 是否已赋值
+                     * 
                      */
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
                      * 获取Score of a suspected porn segment.
                      * @return Confidence Score of a suspected porn segment.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Score of a suspected porn segment.
-                     * @param Confidence Score of a suspected porn segment.
+                     * @param _confidence Score of a suspected porn segment.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -109,6 +118,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -117,16 +127,18 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+                     * @param _suggestion Suggestion for porn information detection of a suspected segment. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -135,20 +147,23 @@ namespace TencentCloud
 <li>sexual_moan: Sexual moans.</li>
                      * @return Label Tag of the detected porn information in video. Valid values:
 <li>sexual_moan: Sexual moans.</li>
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置Tag of the detected porn information in video. Valid values:
 <li>sexual_moan: Sexual moans.</li>
-                     * @param Label Tag of the detected porn information in video. Valid values:
+                     * @param _label Tag of the detected porn information in video. Valid values:
 <li>sexual_moan: Sexual moans.</li>
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 

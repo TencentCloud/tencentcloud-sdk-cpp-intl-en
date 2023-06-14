@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取This parameter has been disused. Use `Instances` instead.
                      * @return InstanceSet This parameter has been disused. Use `Instances` instead.
+                     * 
                      */
                     std::vector<GrafanaInstanceInfo> GetInstanceSet() const;
 
                     /**
                      * 判断参数 InstanceSet 是否已赋值
                      * @return InstanceSet 是否已赋值
+                     * 
                      */
                     bool InstanceSetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible instances
                      * @return TotalCount Number of eligible instances
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of instances
                      * @return Instances List of instances
+                     * 
                      */
                     std::vector<GrafanaInstanceInfo> GetInstances() const;
 
                     /**
                      * 判断参数 Instances 是否已赋值
                      * @return Instances 是否已赋值
+                     * 
                      */
                     bool InstancesHasBeenSet() const;
 

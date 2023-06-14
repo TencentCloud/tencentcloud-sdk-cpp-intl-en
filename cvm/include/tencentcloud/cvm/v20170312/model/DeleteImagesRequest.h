@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取List of the IDs of the instances to be deleted.
                      * @return ImageIds List of the IDs of the instances to be deleted.
+                     * 
                      */
                     std::vector<std::string> GetImageIds() const;
 
                     /**
                      * 设置List of the IDs of the instances to be deleted.
-                     * @param ImageIds List of the IDs of the instances to be deleted.
+                     * @param _imageIds List of the IDs of the instances to be deleted.
+                     * 
                      */
                     void SetImageIds(const std::vector<std::string>& _imageIds);
 
                     /**
                      * 判断参数 ImageIds 是否已赋值
                      * @return ImageIds 是否已赋值
+                     * 
                      */
                     bool ImageIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to delete the snapshot associated with the image
                      * @return DeleteBindedSnap Whether to delete the snapshot associated with the image
+                     * 
                      */
                     bool GetDeleteBindedSnap() const;
 
                     /**
                      * 设置Whether to delete the snapshot associated with the image
-                     * @param DeleteBindedSnap Whether to delete the snapshot associated with the image
+                     * @param _deleteBindedSnap Whether to delete the snapshot associated with the image
+                     * 
                      */
                     void SetDeleteBindedSnap(const bool& _deleteBindedSnap);
 
                     /**
                      * 判断参数 DeleteBindedSnap 是否已赋值
                      * @return DeleteBindedSnap 是否已赋值
+                     * 
                      */
                     bool DeleteBindedSnapHasBeenSet() const;
 
                     /**
                      * 获取Check whether deleting an image is supported
                      * @return DryRun Check whether deleting an image is supported
+                     * 
                      */
                     bool GetDryRun() const;
 
                     /**
                      * 设置Check whether deleting an image is supported
-                     * @param DryRun Check whether deleting an image is supported
+                     * @param _dryRun Check whether deleting an image is supported
+                     * 
                      */
                     void SetDryRun(const bool& _dryRun);
 
                     /**
                      * 判断参数 DryRun 是否已赋值
                      * @return DryRun 是否已赋值
+                     * 
                      */
                     bool DryRunHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Subdomain name
                      * @return Host Subdomain name
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 

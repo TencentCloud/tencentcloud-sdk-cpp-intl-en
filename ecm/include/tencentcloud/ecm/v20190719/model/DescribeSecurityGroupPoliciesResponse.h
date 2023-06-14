@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Security group policy set.
                      * @return SecurityGroupPolicySet Security group policy set.
+                     * 
                      */
                     SecurityGroupPolicySet GetSecurityGroupPolicySet() const;
 
                     /**
                      * 判断参数 SecurityGroupPolicySet 是否已赋值
                      * @return SecurityGroupPolicySet 是否已赋值
+                     * 
                      */
                     bool SecurityGroupPolicySetHasBeenSet() const;
 

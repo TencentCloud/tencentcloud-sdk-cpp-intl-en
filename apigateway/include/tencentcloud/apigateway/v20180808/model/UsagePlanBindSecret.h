@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AccessKeyId Key ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
                      * 设置Key ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AccessKeyId Key ID.
+                     * @param _accessKeyId Key ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
 
                     /**
                      * 判断参数 AccessKeyId 是否已赋值
                      * @return AccessKeyId 是否已赋值
+                     * 
                      */
                     bool AccessKeyIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SecretName Key name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Key name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SecretName Key name.
+                     * @param _secretName Key name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Status Key status. 0: disabled. 1: enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Key status. 0: disabled. 1: enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status Key status. 0: disabled. 1: enabled.
+                     * @param _status Key status. 0: disabled. 1: enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

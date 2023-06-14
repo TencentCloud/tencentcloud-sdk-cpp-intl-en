@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取The user ID.
                      * @return UserId The user ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user ID.
-                     * @param UserId The user ID.
+                     * @param _userId The user ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取The abnormal experience ID.
                      * @return ExperienceId The abnormal experience ID.
+                     * 
                      */
                     uint64_t GetExperienceId() const;
 
                     /**
                      * 设置The abnormal experience ID.
-                     * @param ExperienceId The abnormal experience ID.
+                     * @param _experienceId The abnormal experience ID.
+                     * 
                      */
                     void SetExperienceId(const uint64_t& _experienceId);
 
                     /**
                      * 判断参数 ExperienceId 是否已赋值
                      * @return ExperienceId 是否已赋值
+                     * 
                      */
                     bool ExperienceIdHasBeenSet() const;
 
                     /**
                      * 获取The room ID (string).
                      * @return RoomId The room ID (string).
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置The room ID (string).
-                     * @param RoomId The room ID (string).
+                     * @param _roomId The room ID (string).
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The possible error events.
                      * @return AbnormalEventList The possible error events.
+                     * 
                      */
                     std::vector<AbnormalEvent> GetAbnormalEventList() const;
 
                     /**
                      * 设置The possible error events.
-                     * @param AbnormalEventList The possible error events.
+                     * @param _abnormalEventList The possible error events.
+                     * 
                      */
                     void SetAbnormalEventList(const std::vector<AbnormalEvent>& _abnormalEventList);
 
                     /**
                      * 判断参数 AbnormalEventList 是否已赋值
                      * @return AbnormalEventList 是否已赋值
+                     * 
                      */
                     bool AbnormalEventListHasBeenSet() const;
 
                     /**
                      * 获取The report time.
                      * @return EventTime The report time.
+                     * 
                      */
                     uint64_t GetEventTime() const;
 
                     /**
                      * 设置The report time.
-                     * @param EventTime The report time.
+                     * @param _eventTime The report time.
+                     * 
                      */
                     void SetEventTime(const uint64_t& _eventTime);
 
                     /**
                      * 判断参数 EventTime 是否已赋值
                      * @return EventTime 是否已赋值
+                     * 
                      */
                     bool EventTimeHasBeenSet() const;
 

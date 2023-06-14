@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of eligible modules.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ModuleItemSet List of module details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ModuleItem> GetModuleItemSet() const;
 
                     /**
                      * 判断参数 ModuleItemSet 是否已赋值
                      * @return ModuleItemSet 是否已赋值
+                     * 
                      */
                     bool ModuleItemSetHasBeenSet() const;
 

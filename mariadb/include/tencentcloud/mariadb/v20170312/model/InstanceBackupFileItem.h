@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Instance status
                      * @return InstanceStatus Instance status
+                     * 
                      */
                     int64_t GetInstanceStatus() const;
 
                     /**
                      * 设置Instance status
-                     * @param InstanceStatus Instance status
+                     * @param _instanceStatus Instance status
+                     * 
                      */
                     void SetInstanceStatus(const int64_t& _instanceStatus);
 
                     /**
                      * 判断参数 InstanceStatus 是否已赋值
                      * @return InstanceStatus 是否已赋值
+                     * 
                      */
                     bool InstanceStatusHasBeenSet() const;
 
@@ -105,146 +114,170 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ShardId Shard ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetShardId() const;
 
                     /**
                      * 设置Shard ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ShardId Shard ID
+                     * @param _shardId Shard ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetShardId(const std::string& _shardId);
 
                     /**
                      * 判断参数 ShardId 是否已赋值
                      * @return ShardId 是否已赋值
+                     * 
                      */
                     bool ShardIdHasBeenSet() const;
 
                     /**
                      * 获取File path
                      * @return FilePath File path
+                     * 
                      */
                     std::string GetFilePath() const;
 
                     /**
                      * 设置File path
-                     * @param FilePath File path
+                     * @param _filePath File path
+                     * 
                      */
                     void SetFilePath(const std::string& _filePath);
 
                     /**
                      * 判断参数 FilePath 是否已赋值
                      * @return FilePath 是否已赋值
+                     * 
                      */
                     bool FilePathHasBeenSet() const;
 
                     /**
                      * 获取File name
                      * @return FileName File name
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置File name
-                     * @param FileName File name
+                     * @param _fileName File name
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取File size
                      * @return FileSize File size
+                     * 
                      */
                     int64_t GetFileSize() const;
 
                     /**
                      * 设置File size
-                     * @param FileSize File size
+                     * @param _fileSize File size
+                     * 
                      */
                     void SetFileSize(const int64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
                      * @return FileSize 是否已赋值
+                     * 
                      */
                     bool FileSizeHasBeenSet() const;
 
                     /**
                      * 获取Backup type. Valid values: `Data` (data backup), `Binlog` (Binlog backup), `Errlog` (error log), `Slowlog` (slow log).
                      * @return BackupType Backup type. Valid values: `Data` (data backup), `Binlog` (Binlog backup), `Errlog` (error log), `Slowlog` (slow log).
+                     * 
                      */
                     std::string GetBackupType() const;
 
                     /**
                      * 设置Backup type. Valid values: `Data` (data backup), `Binlog` (Binlog backup), `Errlog` (error log), `Slowlog` (slow log).
-                     * @param BackupType Backup type. Valid values: `Data` (data backup), `Binlog` (Binlog backup), `Errlog` (error log), `Slowlog` (slow log).
+                     * @param _backupType Backup type. Valid values: `Data` (data backup), `Binlog` (Binlog backup), `Errlog` (error log), `Slowlog` (slow log).
+                     * 
                      */
                     void SetBackupType(const std::string& _backupType);
 
                     /**
                      * 判断参数 BackupType 是否已赋值
                      * @return BackupType 是否已赋值
+                     * 
                      */
                     bool BackupTypeHasBeenSet() const;
 
                     /**
                      * 获取Manual backup. Valid values: `0` (no), `1` (yes).
                      * @return ManualBackup Manual backup. Valid values: `0` (no), `1` (yes).
+                     * 
                      */
                     int64_t GetManualBackup() const;
 
                     /**
                      * 设置Manual backup. Valid values: `0` (no), `1` (yes).
-                     * @param ManualBackup Manual backup. Valid values: `0` (no), `1` (yes).
+                     * @param _manualBackup Manual backup. Valid values: `0` (no), `1` (yes).
+                     * 
                      */
                     void SetManualBackup(const int64_t& _manualBackup);
 
                     /**
                      * 判断参数 ManualBackup 是否已赋值
                      * @return ManualBackup 是否已赋值
+                     * 
                      */
                     bool ManualBackupHasBeenSet() const;
 
                     /**
                      * 获取Backup start time
                      * @return StartTime Backup start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Backup start time
-                     * @param StartTime Backup start time
+                     * @param _startTime Backup start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Backup end time
                      * @return EndTime Backup end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Backup end time
-                     * @param EndTime Backup end time
+                     * @param _endTime Backup end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

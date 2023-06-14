@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Video splicing task ID.
                      * @return TaskId Video splicing task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Video splicing task ID.
-                     * @param TaskId Video splicing task ID.
+                     * @param _taskId Video splicing task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Information of source file for video splicing.
                      * @return FileInfoSet Information of source file for video splicing.
+                     * 
                      */
                     std::vector<ConcatFileInfo2017> GetFileInfoSet() const;
 
                     /**
                      * 设置Information of source file for video splicing.
-                     * @param FileInfoSet Information of source file for video splicing.
+                     * @param _fileInfoSet Information of source file for video splicing.
+                     * 
                      */
                     void SetFileInfoSet(const std::vector<ConcatFileInfo2017>& _fileInfoSet);
 
                     /**
                      * 判断参数 FileInfoSet 是否已赋值
                      * @return FileInfoSet 是否已赋值
+                     * 
                      */
                     bool FileInfoSetHasBeenSet() const;
 

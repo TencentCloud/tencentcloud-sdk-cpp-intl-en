@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The answer. Bits are used to indicate the options chosen. For example, `0x1` indicates that option A is chosen; `0x11` indicates that A and B are chosen, and so on.
                      * @return Answer The answer. Bits are used to indicate the options chosen. For example, `0x1` indicates that option A is chosen; `0x11` indicates that A and B are chosen, and so on.
+                     * 
                      */
                     int64_t GetAnswer() const;
 
                     /**
                      * 设置The answer. Bits are used to indicate the options chosen. For example, `0x1` indicates that option A is chosen; `0x11` indicates that A and B are chosen, and so on.
-                     * @param Answer The answer. Bits are used to indicate the options chosen. For example, `0x1` indicates that option A is chosen; `0x11` indicates that A and B are chosen, and so on.
+                     * @param _answer The answer. Bits are used to indicate the options chosen. For example, `0x1` indicates that option A is chosen; `0x11` indicates that A and B are chosen, and so on.
+                     * 
                      */
                     void SetAnswer(const int64_t& _answer);
 
                     /**
                      * 判断参数 Answer 是否已赋值
                      * @return Answer 是否已赋值
+                     * 
                      */
                     bool AnswerHasBeenSet() const;
 
                     /**
                      * 获取The number of users that submitted the answer.
                      * @return Count The number of users that submitted the answer.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置The number of users that submitted the answer.
-                     * @param Count The number of users that submitted the answer.
+                     * @param _count The number of users that submitted the answer.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

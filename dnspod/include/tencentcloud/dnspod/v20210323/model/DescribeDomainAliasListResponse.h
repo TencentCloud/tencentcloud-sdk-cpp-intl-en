@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of domain aliases
                      * @return DomainAliasList List of domain aliases
+                     * 
                      */
                     std::vector<DomainAliasInfo> GetDomainAliasList() const;
 
                     /**
                      * 判断参数 DomainAliasList 是否已赋值
                      * @return DomainAliasList 是否已赋值
+                     * 
                      */
                     bool DomainAliasListHasBeenSet() const;
 

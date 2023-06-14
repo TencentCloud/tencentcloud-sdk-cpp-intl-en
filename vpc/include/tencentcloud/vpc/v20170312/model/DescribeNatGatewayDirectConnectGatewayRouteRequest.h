@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the NAT gateway
                      * @return NatGatewayId Unique ID of the NAT gateway
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置Unique ID of the NAT gateway
-                     * @param NatGatewayId Unique ID of the NAT gateway
+                     * @param _natGatewayId Unique ID of the NAT gateway
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of VPC
                      * @return VpcId Unique ID of VPC
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Unique ID of VPC
-                     * @param VpcId Unique ID of VPC
+                     * @param _vpcId Unique ID of VPC
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Valid range: 0-200
                      * @return Limit Valid range: 0-200
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Valid range: 0-200
-                     * @param Limit Valid range: 0-200
+                     * @param _limit Valid range: 0-200
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Greater than 0
                      * @return Offset Greater than 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Greater than 0
-                     * @param Offset Greater than 0
+                     * @param _offset Greater than 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

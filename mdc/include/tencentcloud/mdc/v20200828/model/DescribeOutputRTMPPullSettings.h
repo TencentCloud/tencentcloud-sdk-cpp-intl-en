@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ServerUrls List of pull URLs
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribeOutputRTMPPullServerUrl> GetServerUrls() const;
 
                     /**
                      * 设置List of pull URLs
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ServerUrls List of pull URLs
+                     * @param _serverUrls List of pull URLs
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetServerUrls(const std::vector<DescribeOutputRTMPPullServerUrl>& _serverUrls);
 
                     /**
                      * 判断参数 ServerUrls 是否已赋值
                      * @return ServerUrls 是否已赋值
+                     * 
                      */
                     bool ServerUrlsHasBeenSet() const;
 

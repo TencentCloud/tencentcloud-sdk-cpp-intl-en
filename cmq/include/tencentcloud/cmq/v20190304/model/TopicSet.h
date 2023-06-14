@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TopicId TopicId
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置TopicId
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TopicId TopicId
+                     * @param _topicId TopicId
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TopicName TopicName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置TopicName
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TopicName TopicName
+                     * @param _topicName TopicName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MsgRetentionSeconds MsgRetentionSeconds
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMsgRetentionSeconds() const;
 
                     /**
                      * 设置MsgRetentionSeconds
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgRetentionSeconds MsgRetentionSeconds
+                     * @param _msgRetentionSeconds MsgRetentionSeconds
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsgRetentionSeconds(const uint64_t& _msgRetentionSeconds);
 
                     /**
                      * 判断参数 MsgRetentionSeconds 是否已赋值
                      * @return MsgRetentionSeconds 是否已赋值
+                     * 
                      */
                     bool MsgRetentionSecondsHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxMsgSize MaxMsgSize
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMaxMsgSize() const;
 
                     /**
                      * 设置MaxMsgSize
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxMsgSize MaxMsgSize
+                     * @param _maxMsgSize MaxMsgSize
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxMsgSize(const uint64_t& _maxMsgSize);
 
                     /**
                      * 判断参数 MaxMsgSize 是否已赋值
                      * @return MaxMsgSize 是否已赋值
+                     * 
                      */
                     bool MaxMsgSizeHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Qps Qps
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetQps() const;
 
                     /**
                      * 设置Qps
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Qps Qps
+                     * @param _qps Qps
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQps(const uint64_t& _qps);
 
                     /**
                      * 判断参数 Qps 是否已赋值
                      * @return Qps 是否已赋值
+                     * 
                      */
                     bool QpsHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FilterType FilterType
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFilterType() const;
 
                     /**
                      * 设置FilterType
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FilterType FilterType
+                     * @param _filterType FilterType
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFilterType(const uint64_t& _filterType);
 
                     /**
                      * 判断参数 FilterType 是否已赋值
                      * @return FilterType 是否已赋值
+                     * 
                      */
                     bool FilterTypeHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime CreateTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置CreateTime
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime CreateTime
+                     * @param _createTime CreateTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifyTime LastModifyTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetLastModifyTime() const;
 
                     /**
                      * 设置LastModifyTime
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastModifyTime LastModifyTime
+                     * @param _lastModifyTime LastModifyTime
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastModifyTime(const uint64_t& _lastModifyTime);
 
                     /**
                      * 判断参数 LastModifyTime 是否已赋值
                      * @return LastModifyTime 是否已赋值
+                     * 
                      */
                     bool LastModifyTimeHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MsgCount MsgCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMsgCount() const;
 
                     /**
                      * 设置MsgCount
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgCount MsgCount
+                     * @param _msgCount MsgCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsgCount(const uint64_t& _msgCount);
 
                     /**
                      * 判断参数 MsgCount 是否已赋值
                      * @return MsgCount 是否已赋值
+                     * 
                      */
                     bool MsgCountHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateUin CreateUin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCreateUin() const;
 
                     /**
                      * 设置CreateUin
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateUin CreateUin
+                     * @param _createUin CreateUin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateUin(const uint64_t& _createUin);
 
                     /**
                      * 判断参数 CreateUin 是否已赋值
                      * @return CreateUin 是否已赋值
+                     * 
                      */
                     bool CreateUinHasBeenSet() const;
 
@@ -272,20 +302,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tags
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tags
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Tags
+                     * @param _tags Tags
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -294,20 +327,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Trace Whether to enable message trace for a topic. true: yes, false: no
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetTrace() const;
 
                     /**
                      * 设置Whether to enable message trace for a topic. true: yes, false: no
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Trace Whether to enable message trace for a topic. true: yes, false: no
+                     * @param _trace Whether to enable message trace for a topic. true: yes, false: no
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTrace(const bool& _trace);
 
                     /**
                      * 判断参数 Trace 是否已赋值
                      * @return Trace 是否已赋值
+                     * 
                      */
                     bool TraceHasBeenSet() const;
 

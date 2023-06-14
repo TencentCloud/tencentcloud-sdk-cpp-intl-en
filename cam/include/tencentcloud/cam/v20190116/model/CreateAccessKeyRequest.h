@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
                      * @return TargetUin UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
+                     * 
                      */
                     uint64_t GetTargetUin() const;
 
                     /**
                      * 设置UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
-                     * @param TargetUin UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
+                     * @param _targetUin UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
+                     * 
                      */
                     void SetTargetUin(const uint64_t& _targetUin);
 
                     /**
                      * 判断参数 TargetUin 是否已赋值
                      * @return TargetUin 是否已赋值
+                     * 
                      */
                     bool TargetUinHasBeenSet() const;
 

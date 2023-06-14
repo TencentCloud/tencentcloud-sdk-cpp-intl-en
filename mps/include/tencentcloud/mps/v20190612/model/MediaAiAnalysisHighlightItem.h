@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取The URL of the highlight segments.
                      * @return HighlightPath The URL of the highlight segments.
+                     * 
                      */
                     std::string GetHighlightPath() const;
 
                     /**
                      * 设置The URL of the highlight segments.
-                     * @param HighlightPath The URL of the highlight segments.
+                     * @param _highlightPath The URL of the highlight segments.
+                     * 
                      */
                     void SetHighlightPath(const std::string& _highlightPath);
 
                     /**
                      * 判断参数 HighlightPath 是否已赋值
                      * @return HighlightPath 是否已赋值
+                     * 
                      */
                     bool HighlightPathHasBeenSet() const;
 
                     /**
                      * 获取The URL of the thumbnail.
                      * @return CovImgPath The URL of the thumbnail.
+                     * 
                      */
                     std::string GetCovImgPath() const;
 
                     /**
                      * 设置The URL of the thumbnail.
-                     * @param CovImgPath The URL of the thumbnail.
+                     * @param _covImgPath The URL of the thumbnail.
+                     * 
                      */
                     void SetCovImgPath(const std::string& _covImgPath);
 
                     /**
                      * 判断参数 CovImgPath 是否已赋值
                      * @return CovImgPath 是否已赋值
+                     * 
                      */
                     bool CovImgPathHasBeenSet() const;
 
                     /**
                      * 获取The confidence score. Value range: 0-100.
                      * @return Confidence The confidence score. Value range: 0-100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置The confidence score. Value range: 0-100.
-                     * @param Confidence The confidence score. Value range: 0-100.
+                     * @param _confidence The confidence score. Value range: 0-100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取The duration of the highlights.
                      * @return Duration The duration of the highlights.
+                     * 
                      */
                     double GetDuration() const;
 
                     /**
                      * 设置The duration of the highlights.
-                     * @param Duration The duration of the highlights.
+                     * @param _duration The duration of the highlights.
+                     * 
                      */
                     void SetDuration(const double& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取A list of the highlight segments.
                      * @return SegmentSet A list of the highlight segments.
+                     * 
                      */
                     std::vector<HighlightSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置A list of the highlight segments.
-                     * @param SegmentSet A list of the highlight segments.
+                     * @param _segmentSet A list of the highlight segments.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<HighlightSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

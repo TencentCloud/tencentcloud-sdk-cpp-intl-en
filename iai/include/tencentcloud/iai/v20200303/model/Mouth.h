@@ -52,20 +52,23 @@ namespace TencentCloud
 The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
                      * @return MouthOpen Whether the mouth is open.
 The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+                     * 
                      */
                     AttributeItem GetMouthOpen() const;
 
                     /**
                      * 设置Whether the mouth is open.
 The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
-                     * @param MouthOpen Whether the mouth is open.
+                     * @param _mouthOpen Whether the mouth is open.
 The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+                     * 
                      */
                     void SetMouthOpen(const AttributeItem& _mouthOpen);
 
                     /**
                      * 判断参数 MouthOpen 是否已赋值
                      * @return MouthOpen 是否已赋值
+                     * 
                      */
                     bool MouthOpenHasBeenSet() const;
 

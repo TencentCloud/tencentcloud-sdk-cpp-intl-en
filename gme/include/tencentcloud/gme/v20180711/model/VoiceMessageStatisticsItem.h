@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取DAUs of Voice Message Service
                      * @return Dau DAUs of Voice Message Service
+                     * 
                      */
                     uint64_t GetDau() const;
 
                     /**
                      * 设置DAUs of Voice Message Service
-                     * @param Dau DAUs of Voice Message Service
+                     * @param _dau DAUs of Voice Message Service
+                     * 
                      */
                     void SetDau(const uint64_t& _dau);
 
                     /**
                      * 判断参数 Dau 是否已赋值
                      * @return Dau 是否已赋值
+                     * 
                      */
                     bool DauHasBeenSet() const;
 

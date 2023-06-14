@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Container ID on the server
                      * @return ContainerId Container ID on the server
+                     * 
                      */
                     std::string GetContainerId() const;
 
                     /**
                      * 设置Container ID on the server
-                     * @param ContainerId Container ID on the server
+                     * @param _containerId Container ID on the server
+                     * 
                      */
                     void SetContainerId(const std::string& _containerId);
 
                     /**
                      * 判断参数 ContainerId 是否已赋值
                      * @return ContainerId 是否已赋值
+                     * 
                      */
                     bool ContainerIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PodName Pod name of the container
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPodName() const;
 
                     /**
                      * 设置Pod name of the container
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PodName Pod name of the container
+                     * @param _podName Pod name of the container
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPodName(const std::string& _podName);
 
                     /**
                      * 判断参数 PodName 是否已赋值
                      * @return PodName 是否已赋值
+                     * 
                      */
                     bool PodNameHasBeenSet() const;
 

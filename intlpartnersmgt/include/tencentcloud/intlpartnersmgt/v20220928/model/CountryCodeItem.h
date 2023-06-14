@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Country/region name in English
                      * @return EnName Country/region name in English
+                     * 
                      */
                     std::string GetEnName() const;
 
                     /**
                      * 设置Country/region name in English
-                     * @param EnName Country/region name in English
+                     * @param _enName Country/region name in English
+                     * 
                      */
                     void SetEnName(const std::string& _enName);
 
                     /**
                      * 判断参数 EnName 是否已赋值
                      * @return EnName 是否已赋值
+                     * 
                      */
                     bool EnNameHasBeenSet() const;
 
                     /**
                      * 获取Country/region name in Chinese
                      * @return Name Country/region name in Chinese
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Country/region name in Chinese
-                     * @param Name Country/region name in Chinese
+                     * @param _name Country/region name in Chinese
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return IOS2 
+                     * 
                      */
                     std::string GetIOS2() const;
 
                     /**
                      * 设置
-                     * @param IOS2 
+                     * @param _iOS2 
+                     * 
                      */
                     void SetIOS2(const std::string& _iOS2);
 
                     /**
                      * 判断参数 IOS2 是否已赋值
                      * @return IOS2 是否已赋值
+                     * 
                      */
                     bool IOS2HasBeenSet() const;
 
                     /**
                      * 获取
                      * @return IOS3 
+                     * 
                      */
                     std::string GetIOS3() const;
 
                     /**
                      * 设置
-                     * @param IOS3 
+                     * @param _iOS3 
+                     * 
                      */
                     void SetIOS3(const std::string& _iOS3);
 
                     /**
                      * 判断参数 IOS3 是否已赋值
                      * @return IOS3 是否已赋值
+                     * 
                      */
                     bool IOS3HasBeenSet() const;
 
                     /**
                      * 获取International dialing code
                      * @return Code International dialing code
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置International dialing code
-                     * @param Code International dialing code
+                     * @param _code International dialing code
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 

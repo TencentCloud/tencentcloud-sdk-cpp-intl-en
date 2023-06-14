@@ -52,20 +52,23 @@ Used by actions: DescribeSdkAppIdUsers.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SdkAppId 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SdkAppId 
+                     * @param _sdkAppId 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserId 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserId 
+                     * @param _userId 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name 
+                     * @param _name 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Avatar 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAvatar() const;
 
                     /**
                      * 设置
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Avatar 
+                     * @param _avatar 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAvatar(const std::string& _avatar);
 
                     /**
                      * 判断参数 Avatar 是否已赋值
                      * @return Avatar 是否已赋值
+                     * 
                      */
                     bool AvatarHasBeenSet() const;
 

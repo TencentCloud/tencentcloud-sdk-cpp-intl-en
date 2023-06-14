@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Health check type. Valid values: `HttpGet`, `TcpSocket`, `Exec`
                      * @return Type Health check type. Valid values: `HttpGet`, `TcpSocket`, `Exec`
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Health check type. Valid values: `HttpGet`, `TcpSocket`, `Exec`
-                     * @param Type Health check type. Valid values: `HttpGet`, `TcpSocket`, `Exec`
+                     * @param _type Health check type. Valid values: `HttpGet`, `TcpSocket`, `Exec`
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The protocol type. It’s only valid when the health check type is `HttpGet`.
                      * @return Protocol The protocol type. It’s only valid when the health check type is `HttpGet`.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The protocol type. It’s only valid when the health check type is `HttpGet`.
-                     * @param Protocol The protocol type. It’s only valid when the health check type is `HttpGet`.
+                     * @param _protocol The protocol type. It’s only valid when the health check type is `HttpGet`.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取The request path. It’s only valid when the health check type is `HttpGet`.
                      * @return Path The request path. It’s only valid when the health check type is `HttpGet`.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置The request path. It’s only valid when the health check type is `HttpGet`.
-                     * @param Path The request path. It’s only valid when the health check type is `HttpGet`.
+                     * @param _path The request path. It’s only valid when the health check type is `HttpGet`.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取The script to be executed. It’s only valid when the health check type is `Exec`.
                      * @return Exec The script to be executed. It’s only valid when the health check type is `Exec`.
+                     * 
                      */
                     std::string GetExec() const;
 
                     /**
                      * 设置The script to be executed. It’s only valid when the health check type is `Exec`.
-                     * @param Exec The script to be executed. It’s only valid when the health check type is `Exec`.
+                     * @param _exec The script to be executed. It’s only valid when the health check type is `Exec`.
+                     * 
                      */
                     void SetExec(const std::string& _exec);
 
                     /**
                      * 判断参数 Exec 是否已赋值
                      * @return Exec 是否已赋值
+                     * 
                      */
                     bool ExecHasBeenSet() const;
 
                     /**
                      * 获取The request port. It’s only valid when the health check type is `HttpGet` or `TcpSocket `.
                      * @return Port The request port. It’s only valid when the health check type is `HttpGet` or `TcpSocket `.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置The request port. It’s only valid when the health check type is `HttpGet` or `TcpSocket `.
-                     * @param Port The request port. It’s only valid when the health check type is `HttpGet` or `TcpSocket `.
+                     * @param _port The request port. It’s only valid when the health check type is `HttpGet` or `TcpSocket `.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取The initial delay for health check in seconds. Default: `0`
                      * @return InitialDelaySeconds The initial delay for health check in seconds. Default: `0`
+                     * 
                      */
                     int64_t GetInitialDelaySeconds() const;
 
                     /**
                      * 设置The initial delay for health check in seconds. Default: `0`
-                     * @param InitialDelaySeconds The initial delay for health check in seconds. Default: `0`
+                     * @param _initialDelaySeconds The initial delay for health check in seconds. Default: `0`
+                     * 
                      */
                     void SetInitialDelaySeconds(const int64_t& _initialDelaySeconds);
 
                     /**
                      * 判断参数 InitialDelaySeconds 是否已赋值
                      * @return InitialDelaySeconds 是否已赋值
+                     * 
                      */
                     bool InitialDelaySecondsHasBeenSet() const;
 
                     /**
                      * 获取Timeout period in seconds. Default: `1`
                      * @return TimeoutSeconds Timeout period in seconds. Default: `1`
+                     * 
                      */
                     int64_t GetTimeoutSeconds() const;
 
                     /**
                      * 设置Timeout period in seconds. Default: `1`
-                     * @param TimeoutSeconds Timeout period in seconds. Default: `1`
+                     * @param _timeoutSeconds Timeout period in seconds. Default: `1`
+                     * 
                      */
                     void SetTimeoutSeconds(const int64_t& _timeoutSeconds);
 
                     /**
                      * 判断参数 TimeoutSeconds 是否已赋值
                      * @return TimeoutSeconds 是否已赋值
+                     * 
                      */
                     bool TimeoutSecondsHasBeenSet() const;
 
                     /**
                      * 获取Interval period in seconds. Default: `10`
                      * @return PeriodSeconds Interval period in seconds. Default: `10`
+                     * 
                      */
                     int64_t GetPeriodSeconds() const;
 
                     /**
                      * 设置Interval period in seconds. Default: `10`
-                     * @param PeriodSeconds Interval period in seconds. Default: `10`
+                     * @param _periodSeconds Interval period in seconds. Default: `10`
+                     * 
                      */
                     void SetPeriodSeconds(const int64_t& _periodSeconds);
 
                     /**
                      * 判断参数 PeriodSeconds 是否已赋值
                      * @return PeriodSeconds 是否已赋值
+                     * 
                      */
                     bool PeriodSecondsHasBeenSet() const;
 

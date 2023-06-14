@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
-                     * @param Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * @param _business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param Id Anti-DDoS instance ID
+                     * @param _id Anti-DDoS instance ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -98,6 +104,7 @@ outtraffic: outbound traffic;
 alltraffic: sum of inbound and outbound traffic;
 inpkg: inbound packet rate;
 outpkg: outbound packet rate;
+                     * 
                      */
                     std::string GetMetricName() const;
 
@@ -111,7 +118,7 @@ outtraffic: outbound traffic;
 alltraffic: sum of inbound and outbound traffic;
 inpkg: inbound packet rate;
 outpkg: outbound packet rate;
-                     * @param MetricName Metric name. Valid values:
+                     * @param _metricName Metric name. Valid values:
 connum: number of active TCP connections;
 new_conn: number of new TCP connections;
 inactive_conn: number of inactive connections;
@@ -120,66 +127,77 @@ outtraffic: outbound traffic;
 alltraffic: sum of inbound and outbound traffic;
 inpkg: inbound packet rate;
 outpkg: outbound packet rate;
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Statistical time granularity in seconds (300: 5-minute, 3600: hourly, 86400: daily)
                      * @return Period Statistical time granularity in seconds (300: 5-minute, 3600: hourly, 86400: daily)
+                     * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 设置Statistical time granularity in seconds (300: 5-minute, 3600: hourly, 86400: daily)
-                     * @param Period Statistical time granularity in seconds (300: 5-minute, 3600: hourly, 86400: daily)
+                     * @param _period Statistical time granularity in seconds (300: 5-minute, 3600: hourly, 86400: daily)
+                     * 
                      */
                     void SetPeriod(const uint64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Statistics start time. The second part is kept at 0, and the minute part is a multiple of 5
                      * @return StartTime Statistics start time. The second part is kept at 0, and the minute part is a multiple of 5
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Statistics start time. The second part is kept at 0, and the minute part is a multiple of 5
-                     * @param StartTime Statistics start time. The second part is kept at 0, and the minute part is a multiple of 5
+                     * @param _startTime Statistics start time. The second part is kept at 0, and the minute part is a multiple of 5
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistics end time. The second part is kept at 0, and the minute part is a multiple of 5
                      * @return EndTime Statistics end time. The second part is kept at 0, and the minute part is a multiple of 5
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Statistics end time. The second part is kept at 0, and the minute part is a multiple of 5
-                     * @param EndTime Statistics end time. The second part is kept at 0, and the minute part is a multiple of 5
+                     * @param _endTime Statistics end time. The second part is kept at 0, and the minute part is a multiple of 5
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -192,6 +210,7 @@ avg: average;
 max: maximum value;
 min: minimum value;
 avg: average;
+                     * 
                      */
                     std::string GetStatistics() const;
 
@@ -200,52 +219,60 @@ avg: average;
 max: maximum value;
 min: minimum value;
 avg: average;
-                     * @param Statistics Statistical method. Valid values:
+                     * @param _statistics Statistical method. Valid values:
 max: maximum value;
 min: minimum value;
 avg: average;
+                     * 
                      */
                     void SetStatistics(const std::string& _statistics);
 
                     /**
                      * 判断参数 Statistics 是否已赋值
                      * @return Statistics 是否已赋值
+                     * 
                      */
                     bool StatisticsHasBeenSet() const;
 
                     /**
                      * 获取Protocol port array
                      * @return ProtocolPort Protocol port array
+                     * 
                      */
                     std::vector<ProtocolPort> GetProtocolPort() const;
 
                     /**
                      * 设置Protocol port array
-                     * @param ProtocolPort Protocol port array
+                     * @param _protocolPort Protocol port array
+                     * 
                      */
                     void SetProtocolPort(const std::vector<ProtocolPort>& _protocolPort);
 
                     /**
                      * 判断参数 ProtocolPort 是否已赋值
                      * @return ProtocolPort 是否已赋值
+                     * 
                      */
                     bool ProtocolPortHasBeenSet() const;
 
                     /**
                      * 获取Resource instance IP, which is required only if `Business` is `net` (Anti-DDoS Ultimate), because an Anti-DDoS Ultimate instance has multiple IPs;
                      * @return Ip Resource instance IP, which is required only if `Business` is `net` (Anti-DDoS Ultimate), because an Anti-DDoS Ultimate instance has multiple IPs;
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Resource instance IP, which is required only if `Business` is `net` (Anti-DDoS Ultimate), because an Anti-DDoS Ultimate instance has multiple IPs;
-                     * @param Ip Resource instance IP, which is required only if `Business` is `net` (Anti-DDoS Ultimate), because an Anti-DDoS Ultimate instance has multiple IPs;
+                     * @param _ip Resource instance IP, which is required only if `Business` is `net` (Anti-DDoS Ultimate), because an Anti-DDoS Ultimate instance has multiple IPs;
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 

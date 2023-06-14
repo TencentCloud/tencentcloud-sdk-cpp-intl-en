@@ -52,96 +52,112 @@ namespace TencentCloud
 `Pending`: To be purchased.
 `Normal`: Purchased.
 `Isolate`: Isolated.
+                     * 
                      */
                     std::string GetBuyStatus() const;
 
                     /**
                      * 判断参数 BuyStatus 是否已赋值
                      * @return BuyStatus 是否已赋值
+                     * 
                      */
                     bool BuyStatusHasBeenSet() const;
 
                     /**
                      * 获取Storage period in months
                      * @return LogSaveMonth Storage period in months
+                     * 
                      */
                     int64_t GetLogSaveMonth() const;
 
                     /**
                      * 判断参数 LogSaveMonth 是否已赋值
                      * @return LogSaveMonth 是否已赋值
+                     * 
                      */
                     bool LogSaveMonthHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Storage capacity (GB)
                      * @return LogCapacity Storage capacity (GB)
+                     * 
                      */
                     uint64_t GetLogCapacity() const;
 
                     /**
                      * 判断参数 LogCapacity 是否已赋值
                      * @return LogCapacity 是否已赋值
+                     * 
                      */
                     bool LogCapacityHasBeenSet() const;
 
                     /**
                      * 获取Resource ID
                      * @return ResourceID Resource ID
+                     * 
                      */
                     std::string GetResourceID() const;
 
                     /**
                      * 判断参数 ResourceID 是否已赋值
                      * @return ResourceID 是否已赋值
+                     * 
                      */
                     bool ResourceIDHasBeenSet() const;
 
                     /**
                      * 获取Whether it has been purchased before. Valid values: `false` (no); `true` (yes).
                      * @return IsPurchased Whether it has been purchased before. Valid values: `false` (no); `true` (yes).
+                     * 
                      */
                     bool GetIsPurchased() const;
 
                     /**
                      * 判断参数 IsPurchased 是否已赋值
                      * @return IsPurchased 是否已赋值
+                     * 
                      */
                     bool IsPurchasedHasBeenSet() const;
 
                     /**
                      * 获取Trial storage capacity (GB)
                      * @return TrialCapacity Trial storage capacity (GB)
+                     * 
                      */
                     uint64_t GetTrialCapacity() const;
 
                     /**
                      * 判断参数 TrialCapacity 是否已赋值
                      * @return TrialCapacity 是否已赋值
+                     * 
                      */
                     bool TrialCapacityHasBeenSet() const;
 

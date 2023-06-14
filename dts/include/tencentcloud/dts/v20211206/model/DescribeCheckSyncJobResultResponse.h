@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepCount Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepCount() const;
 
                     /**
                      * 判断参数 StepCount 是否已赋值
                      * @return StepCount 是否已赋值
+                     * 
                      */
                     bool StepCountHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepCur The current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepCur() const;
 
                     /**
                      * 判断参数 StepCur 是否已赋值
                      * @return StepCur 是否已赋值
+                     * 
                      */
                     bool StepCurHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Progress Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepInfos Step information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<StepInfo> GetStepInfos() const;
 
                     /**
                      * 判断参数 StepInfos 是否已赋值
                      * @return StepInfos 是否已赋值
+                     * 
                      */
                     bool StepInfosHasBeenSet() const;
 

@@ -55,6 +55,7 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-                     * @param Switch Whether to enable the feature. Valid values:
+                     * @param _switch Whether to enable the feature. Valid values:
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -89,6 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>strong</li>
 Default value: weak.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -99,18 +103,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>strong</li>
 Default value: weak.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type The strength. Valid values:
+                     * @param _type The strength. Valid values:
 <li>weak</li>
 <li>normal</li>
 <li>strong</li>
 Default value: weak.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

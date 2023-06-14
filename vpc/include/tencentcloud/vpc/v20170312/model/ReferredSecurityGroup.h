@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Security group instance ID.
                      * @return SecurityGroupId Security group instance ID.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置Security group instance ID.
-                     * @param SecurityGroupId Security group instance ID.
+                     * @param _securityGroupId Security group instance ID.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取IDs of all referred security group instances.
                      * @return ReferredSecurityGroupIds IDs of all referred security group instances.
+                     * 
                      */
                     std::vector<std::string> GetReferredSecurityGroupIds() const;
 
                     /**
                      * 设置IDs of all referred security group instances.
-                     * @param ReferredSecurityGroupIds IDs of all referred security group instances.
+                     * @param _referredSecurityGroupIds IDs of all referred security group instances.
+                     * 
                      */
                     void SetReferredSecurityGroupIds(const std::vector<std::string>& _referredSecurityGroupIds);
 
                     /**
                      * 判断参数 ReferredSecurityGroupIds 是否已赋值
                      * @return ReferredSecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool ReferredSecurityGroupIdsHasBeenSet() const;
 

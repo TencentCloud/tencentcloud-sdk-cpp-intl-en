@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Organizational unit ID
                      * @return NodeId Organizational unit ID
+                     * 
                      */
                     uint64_t GetNodeId() const;
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 

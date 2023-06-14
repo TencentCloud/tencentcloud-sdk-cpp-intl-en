@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
                      * @return ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * 
                      */
                     std::string GetResourceDescription() const;
 
                     /**
                      * 设置Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
-                     * @param ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * @param _resourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * 
                      */
                     void SetResourceDescription(const std::string& _resourceDescription);
 
                     /**
                      * 判断参数 ResourceDescription 是否已赋值
                      * @return ResourceDescription 是否已赋值
+                     * 
                      */
                     bool ResourceDescriptionHasBeenSet() const;
 
@@ -72,20 +75,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return APIGWParams API Gateway parameters
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     APIGWParams GetAPIGWParams() const;
 
                     /**
                      * 设置API Gateway parameters
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param APIGWParams API Gateway parameters
+                     * @param _aPIGWParams API Gateway parameters
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAPIGWParams(const APIGWParams& _aPIGWParams);
 
                     /**
                      * 判断参数 APIGWParams 是否已赋值
                      * @return APIGWParams 是否已赋值
+                     * 
                      */
                     bool APIGWParamsHasBeenSet() const;
 
@@ -94,20 +100,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CkafkaParams CKafka parameters
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CkafkaParams GetCkafkaParams() const;
 
                     /**
                      * 设置CKafka parameters
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CkafkaParams CKafka parameters
+                     * @param _ckafkaParams CKafka parameters
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCkafkaParams(const CkafkaParams& _ckafkaParams);
 
                     /**
                      * 判断参数 CkafkaParams 是否已赋值
                      * @return CkafkaParams 是否已赋值
+                     * 
                      */
                     bool CkafkaParamsHasBeenSet() const;
 
@@ -116,20 +125,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DTSParams Data Transfer Service (DTS) connector information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     DTSParams GetDTSParams() const;
 
                     /**
                      * 设置Data Transfer Service (DTS) connector information
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DTSParams Data Transfer Service (DTS) connector information
+                     * @param _dTSParams Data Transfer Service (DTS) connector information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDTSParams(const DTSParams& _dTSParams);
 
                     /**
                      * 判断参数 DTSParams 是否已赋值
                      * @return DTSParams 是否已赋值
+                     * 
                      */
                     bool DTSParamsHasBeenSet() const;
 

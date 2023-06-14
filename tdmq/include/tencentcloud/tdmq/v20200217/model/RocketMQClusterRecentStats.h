@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Number of topics
                      * @return TopicNum Number of topics
+                     * 
                      */
                     uint64_t GetTopicNum() const;
 
                     /**
                      * 设置Number of topics
-                     * @param TopicNum Number of topics
+                     * @param _topicNum Number of topics
+                     * 
                      */
                     void SetTopicNum(const uint64_t& _topicNum);
 
                     /**
                      * 判断参数 TopicNum 是否已赋值
                      * @return TopicNum 是否已赋值
+                     * 
                      */
                     bool TopicNumHasBeenSet() const;
 
                     /**
                      * 获取Number of produced messages
                      * @return ProducedMsgNum Number of produced messages
+                     * 
                      */
                     uint64_t GetProducedMsgNum() const;
 
                     /**
                      * 设置Number of produced messages
-                     * @param ProducedMsgNum Number of produced messages
+                     * @param _producedMsgNum Number of produced messages
+                     * 
                      */
                     void SetProducedMsgNum(const uint64_t& _producedMsgNum);
 
                     /**
                      * 判断参数 ProducedMsgNum 是否已赋值
                      * @return ProducedMsgNum 是否已赋值
+                     * 
                      */
                     bool ProducedMsgNumHasBeenSet() const;
 
                     /**
                      * 获取Number of consumed messages
                      * @return ConsumedMsgNum Number of consumed messages
+                     * 
                      */
                     uint64_t GetConsumedMsgNum() const;
 
                     /**
                      * 设置Number of consumed messages
-                     * @param ConsumedMsgNum Number of consumed messages
+                     * @param _consumedMsgNum Number of consumed messages
+                     * 
                      */
                     void SetConsumedMsgNum(const uint64_t& _consumedMsgNum);
 
                     /**
                      * 判断参数 ConsumedMsgNum 是否已赋值
                      * @return ConsumedMsgNum 是否已赋值
+                     * 
                      */
                     bool ConsumedMsgNumHasBeenSet() const;
 
                     /**
                      * 获取Number of retained messages
                      * @return AccumulativeMsgNum Number of retained messages
+                     * 
                      */
                     uint64_t GetAccumulativeMsgNum() const;
 
                     /**
                      * 设置Number of retained messages
-                     * @param AccumulativeMsgNum Number of retained messages
+                     * @param _accumulativeMsgNum Number of retained messages
+                     * 
                      */
                     void SetAccumulativeMsgNum(const uint64_t& _accumulativeMsgNum);
 
                     /**
                      * 判断参数 AccumulativeMsgNum 是否已赋值
                      * @return AccumulativeMsgNum 是否已赋值
+                     * 
                      */
                     bool AccumulativeMsgNumHasBeenSet() const;
 

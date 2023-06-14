@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Time
                      * @return Date Time
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Time
-                     * @param Date Time
+                     * @param _date Time
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
                     /**
                      * 获取Operator UIN
                      * @return OperatorUin Operator UIN
+                     * 
                      */
                     std::string GetOperatorUin() const;
 
                     /**
                      * 设置Operator UIN
-                     * @param OperatorUin Operator UIN
+                     * @param _operatorUin Operator UIN
+                     * 
                      */
                     void SetOperatorUin(const std::string& _operatorUin);
 
                     /**
                      * 判断参数 OperatorUin 是否已赋值
                      * @return OperatorUin 是否已赋值
+                     * 
                      */
                     bool OperatorUinHasBeenSet() const;
 
                     /**
                      * 获取Log content
                      * @return Content Log content
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Log content
-                     * @param Content Log content
+                     * @param _content Log content
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

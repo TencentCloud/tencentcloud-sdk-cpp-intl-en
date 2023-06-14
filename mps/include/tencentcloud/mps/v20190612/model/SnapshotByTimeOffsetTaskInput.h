@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of a time point screencapturing template.
                      * @return Definition ID of a time point screencapturing template.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置ID of a time point screencapturing template.
-                     * @param Definition ID of a time point screencapturing template.
+                     * @param _definition ID of a time point screencapturing template.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
                      * @return ExtTimeOffsetSet List of screenshot time points in the format of `s` or `%`:
 <li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
 <li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
+                     * 
                      */
                     std::vector<std::string> GetExtTimeOffsetSet() const;
 
@@ -81,33 +85,38 @@ namespace TencentCloud
                      * 设置List of screenshot time points in the format of `s` or `%`:
 <li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
 <li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
-                     * @param ExtTimeOffsetSet List of screenshot time points in the format of `s` or `%`:
+                     * @param _extTimeOffsetSet List of screenshot time points in the format of `s` or `%`:
 <li>If the string ends in `s`, it means that the time point is in seconds; for example, `3.5s` means that the time point is the 3.5th second;</li>
 <li>If the string ends in `%`, it means that the time point is the specified percentage of the video duration; for example, `10%` means that the time point is 10% of the video duration.</li>
+                     * 
                      */
                     void SetExtTimeOffsetSet(const std::vector<std::string>& _extTimeOffsetSet);
 
                     /**
                      * 判断参数 ExtTimeOffsetSet 是否已赋值
                      * @return ExtTimeOffsetSet 是否已赋值
+                     * 
                      */
                     bool ExtTimeOffsetSetHasBeenSet() const;
 
                     /**
                      * 获取List of time points of screenshots in <font color=red>seconds</font>.
                      * @return TimeOffsetSet List of time points of screenshots in <font color=red>seconds</font>.
+                     * 
                      */
                     std::vector<double> GetTimeOffsetSet() const;
 
                     /**
                      * 设置List of time points of screenshots in <font color=red>seconds</font>.
-                     * @param TimeOffsetSet List of time points of screenshots in <font color=red>seconds</font>.
+                     * @param _timeOffsetSet List of time points of screenshots in <font color=red>seconds</font>.
+                     * 
                      */
                     void SetTimeOffsetSet(const std::vector<double>& _timeOffsetSet);
 
                     /**
                      * 判断参数 TimeOffsetSet 是否已赋值
                      * @return TimeOffsetSet 是否已赋值
+                     * 
                      */
                     bool TimeOffsetSetHasBeenSet() const;
 
@@ -116,20 +125,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WatermarkSet List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
                      * 设置List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param WatermarkSet List of up to 10 image or text watermarks.
+                     * @param _watermarkSet List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
 
                     /**
                      * 判断参数 WatermarkSet 是否已赋值
                      * @return WatermarkSet 是否已赋值
+                     * 
                      */
                     bool WatermarkSetHasBeenSet() const;
 
@@ -138,38 +150,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OutputStorage Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OutputStorage Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @param _outputStorage Target bucket of a generated time point screenshot file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 
                     /**
                      * 获取Output path to a generated time point screenshot, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
                      * @return OutputObjectPath Output path to a generated time point screenshot, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
+                     * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
                      * 设置Output path to a generated time point screenshot, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
-                     * @param OutputObjectPath Output path to a generated time point screenshot, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
+                     * @param _outputObjectPath Output path to a generated time point screenshot, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`.
+                     * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
 
                     /**
                      * 判断参数 OutputObjectPath 是否已赋值
                      * @return OutputObjectPath 是否已赋值
+                     * 
                      */
                     bool OutputObjectPathHasBeenSet() const;
 
@@ -178,20 +196,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ObjectNumberFormat Rule of the `{number}` variable in the time point screenshot output path.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
                      * 设置Rule of the `{number}` variable in the time point screenshot output path.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ObjectNumberFormat Rule of the `{number}` variable in the time point screenshot output path.
+                     * @param _objectNumberFormat Rule of the `{number}` variable in the time point screenshot output path.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetObjectNumberFormat(const NumberFormat& _objectNumberFormat);
 
                     /**
                      * 判断参数 ObjectNumberFormat 是否已赋值
                      * @return ObjectNumberFormat 是否已赋值
+                     * 
                      */
                     bool ObjectNumberFormatHasBeenSet() const;
 

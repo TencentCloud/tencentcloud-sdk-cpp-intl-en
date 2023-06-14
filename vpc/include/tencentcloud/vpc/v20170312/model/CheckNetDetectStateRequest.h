@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The array of detection destination IPv4 addresses, which contains at most two IP addresses.
                      * @return DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+                     * 
                      */
                     std::vector<std::string> GetDetectDestinationIp() const;
 
                     /**
                      * 设置The array of detection destination IPv4 addresses, which contains at most two IP addresses.
-                     * @param DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+                     * @param _detectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+                     * 
                      */
                     void SetDetectDestinationIp(const std::vector<std::string>& _detectDestinationIp);
 
                     /**
                      * 判断参数 DetectDestinationIp 是否已赋值
                      * @return DetectDestinationIp 是否已赋值
+                     * 
                      */
                     bool DetectDestinationIpHasBeenSet() const;
 
@@ -73,6 +76,7 @@ DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
+                     * 
                      */
                     std::string GetNextHopType() const;
 
@@ -83,18 +87,20 @@ DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
-                     * @param NextHopType The type of the next hop. Currently supported types are:
+                     * @param _nextHopType The type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
+                     * 
                      */
                     void SetNextHopType(const std::string& _nextHopType);
 
                     /**
                      * 判断参数 NextHopType 是否已赋值
                      * @return NextHopType 是否已赋值
+                     * 
                      */
                     bool NextHopTypeHasBeenSet() const;
 
@@ -111,6 +117,7 @@ If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direc
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+                     * 
                      */
                     std::string GetNextHopDestination() const;
 
@@ -121,90 +128,104 @@ If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direc
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-                     * @param NextHopDestination The next-hop destination gateway. The value is related to NextHopType.
+                     * @param _nextHopDestination The next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
+                     * 
                      */
                     void SetNextHopDestination(const std::string& _nextHopDestination);
 
                     /**
                      * 判断参数 NextHopDestination 是否已赋值
                      * @return NextHopDestination 是否已赋值
+                     * 
                      */
                     bool NextHopDestinationHasBeenSet() const;
 
                     /**
                      * 获取ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
                      * @return NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+                     * 
                      */
                     std::string GetNetDetectId() const;
 
                     /**
                      * 设置ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
-                     * @param NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+                     * @param _netDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+                     * 
                      */
                     void SetNetDetectId(const std::string& _netDetectId);
 
                     /**
                      * 判断参数 NetDetectId 是否已赋值
                      * @return NetDetectId 是否已赋值
+                     * 
                      */
                     bool NetDetectIdHasBeenSet() const;
 
                     /**
                      * 获取ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
                      * @return VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-                     * @param VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * @param _vpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
                      * @return SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-                     * @param SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * @param _subnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
                      * @return NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * 
                      */
                     std::string GetNetDetectName() const;
 
                     /**
                      * 设置The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
-                     * @param NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * @param _netDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+                     * 
                      */
                     void SetNetDetectName(const std::string& _netDetectName);
 
                     /**
                      * 判断参数 NetDetectName 是否已赋值
                      * @return NetDetectName 是否已赋值
+                     * 
                      */
                     bool NetDetectNameHasBeenSet() const;
 

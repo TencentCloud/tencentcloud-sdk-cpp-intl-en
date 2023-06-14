@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProjectId Project of the Cluster
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClusterName Cluster name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClusterDesc Cluster description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterDesc() const;
 
                     /**
                      * 判断参数 ClusterDesc 是否已赋值
                      * @return ClusterDesc 是否已赋值
+                     * 
                      */
                     bool ClusterDescHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterLevel Cluster specification
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterLevel() const;
 
                     /**
                      * 判断参数 ClusterLevel 是否已赋值
                      * @return ClusterLevel 是否已赋值
+                     * 
                      */
                     bool ClusterLevelHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AutoUpgradeClusterLevel Auto-upgrades cluster specification
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AutoUpgradeClusterLevel GetAutoUpgradeClusterLevel() const;
 
                     /**
                      * 判断参数 AutoUpgradeClusterLevel 是否已赋值
                      * @return AutoUpgradeClusterLevel 是否已赋值
+                     * 
                      */
                     bool AutoUpgradeClusterLevelHasBeenSet() const;
 
@@ -119,12 +129,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return QGPUShareEnable Whether to enable qGPU Sharing
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetQGPUShareEnable() const;
 
                     /**
                      * 判断参数 QGPUShareEnable 是否已赋值
                      * @return QGPUShareEnable 是否已赋值
+                     * 
                      */
                     bool QGPUShareEnableHasBeenSet() const;
 

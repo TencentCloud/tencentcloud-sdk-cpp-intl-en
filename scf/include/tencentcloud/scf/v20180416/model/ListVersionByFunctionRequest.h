@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Function Name
                      * @return FunctionName Function Name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function Name
-                     * @param FunctionName Function Name
+                     * @param _functionName Function Name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取The namespace where the function locates
                      * @return Namespace The namespace where the function locates
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置The namespace where the function locates
-                     * @param Namespace The namespace where the function locates
+                     * @param _namespace The namespace where the function locates
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Data offset. The default value is `0`.
                      * @return Offset Data offset. The default value is `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. The default value is `0`.
-                     * @param Offset Data offset. The default value is `0`.
+                     * @param _offset Data offset. The default value is `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Return data length. The default value is `20`.
                      * @return Limit Return data length. The default value is `20`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Return data length. The default value is `20`.
-                     * @param Limit Return data length. The default value is `20`.
+                     * @param _limit Return data length. The default value is `20`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
                      * @return Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
-                     * @param Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+                     * @param _order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
                      * @return OrderBy It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
-                     * @param OrderBy It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+                     * @param _orderBy It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 

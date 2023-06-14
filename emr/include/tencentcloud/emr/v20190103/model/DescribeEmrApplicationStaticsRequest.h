@@ -45,198 +45,231 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return InstanceId Cluster ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param InstanceId Cluster ID
+                     * @param _instanceId Cluster ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Start time in the format of timestamp. Unit: seconds.
                      * @return StartTime Start time in the format of timestamp. Unit: seconds.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time in the format of timestamp. Unit: seconds.
-                     * @param StartTime Start time in the format of timestamp. Unit: seconds.
+                     * @param _startTime Start time in the format of timestamp. Unit: seconds.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time in the format of timestamp. Unit: seconds.
                      * @return EndTime End time in the format of timestamp. Unit: seconds.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End time in the format of timestamp. Unit: seconds.
-                     * @param EndTime End time in the format of timestamp. Unit: seconds.
+                     * @param _endTime End time in the format of timestamp. Unit: seconds.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Queue name used for filtering
                      * @return Queues Queue name used for filtering
+                     * 
                      */
                     std::vector<std::string> GetQueues() const;
 
                     /**
                      * 设置Queue name used for filtering
-                     * @param Queues Queue name used for filtering
+                     * @param _queues Queue name used for filtering
+                     * 
                      */
                     void SetQueues(const std::vector<std::string>& _queues);
 
                     /**
                      * 判断参数 Queues 是否已赋值
                      * @return Queues 是否已赋值
+                     * 
                      */
                     bool QueuesHasBeenSet() const;
 
                     /**
                      * 获取Username used for filtering
                      * @return Users Username used for filtering
+                     * 
                      */
                     std::vector<std::string> GetUsers() const;
 
                     /**
                      * 设置Username used for filtering
-                     * @param Users Username used for filtering
+                     * @param _users Username used for filtering
+                     * 
                      */
                     void SetUsers(const std::vector<std::string>& _users);
 
                     /**
                      * 判断参数 Users 是否已赋值
                      * @return Users 是否已赋值
+                     * 
                      */
                     bool UsersHasBeenSet() const;
 
                     /**
                      * 获取Application type used for filtering
                      * @return ApplicationTypes Application type used for filtering
+                     * 
                      */
                     std::vector<std::string> GetApplicationTypes() const;
 
                     /**
                      * 设置Application type used for filtering
-                     * @param ApplicationTypes Application type used for filtering
+                     * @param _applicationTypes Application type used for filtering
+                     * 
                      */
                     void SetApplicationTypes(const std::vector<std::string>& _applicationTypes);
 
                     /**
                      * 判断参数 ApplicationTypes 是否已赋值
                      * @return ApplicationTypes 是否已赋值
+                     * 
                      */
                     bool ApplicationTypesHasBeenSet() const;
 
                     /**
                      * 获取Group field. Valid values: `queue`, `user`, and `applicationType`.
                      * @return GroupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
+                     * 
                      */
                     std::vector<std::string> GetGroupBy() const;
 
                     /**
                      * 设置Group field. Valid values: `queue`, `user`, and `applicationType`.
-                     * @param GroupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
+                     * @param _groupBy Group field. Valid values: `queue`, `user`, and `applicationType`.
+                     * 
                      */
                     void SetGroupBy(const std::vector<std::string>& _groupBy);
 
                     /**
                      * 判断参数 GroupBy 是否已赋值
                      * @return GroupBy 是否已赋值
+                     * 
                      */
                     bool GroupByHasBeenSet() const;
 
                     /**
                      * 获取Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
                      * @return OrderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
-                     * @param OrderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+                     * @param _orderBy Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Order type. Valid values: `0` (descending) and `1`(ascending).
                      * @return IsAsc Order type. Valid values: `0` (descending) and `1`(ascending).
+                     * 
                      */
                     int64_t GetIsAsc() const;
 
                     /**
                      * 设置Order type. Valid values: `0` (descending) and `1`(ascending).
-                     * @param IsAsc Order type. Valid values: `0` (descending) and `1`(ascending).
+                     * @param _isAsc Order type. Valid values: `0` (descending) and `1`(ascending).
+                     * 
                      */
                     void SetIsAsc(const int64_t& _isAsc);
 
                     /**
                      * 判断参数 IsAsc 是否已赋值
                      * @return IsAsc 是否已赋值
+                     * 
                      */
                     bool IsAscHasBeenSet() const;
 
                     /**
                      * 获取Page number
                      * @return Offset Page number
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number
-                     * @param Offset Page number
+                     * @param _offset Page number
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Page limit
                      * @return Limit Page limit
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Page limit
-                     * @param Limit Page limit
+                     * @param _limit Page limit
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

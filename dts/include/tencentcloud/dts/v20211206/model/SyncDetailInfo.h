@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepAll() const;
 
                     /**
                      * 设置Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepAll Total number of steps
+                     * @param _stepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepAll(const uint64_t& _stepAll);
 
                     /**
                      * 判断参数 StepAll 是否已赋值
                      * @return StepAll 是否已赋值
+                     * 
                      */
                     bool StepAllHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepNow Current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepNow() const;
 
                     /**
                      * 设置Current step
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepNow Current step
+                     * @param _stepNow Current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepNow(const uint64_t& _stepNow);
 
                     /**
                      * 判断参数 StepNow 是否已赋值
                      * @return StepNow 是否已赋值
+                     * 
                      */
                     bool StepNowHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Progress Overall progress
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Overall progress
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Progress Overall progress
+                     * @param _progress Overall progress
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CurrentStepProgress Progress of the current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCurrentStepProgress() const;
 
                     /**
                      * 设置Progress of the current step
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CurrentStepProgress Progress of the current step
+                     * @param _currentStepProgress Progress of the current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCurrentStepProgress(const int64_t& _currentStepProgress);
 
                     /**
                      * 判断参数 CurrentStepProgress 是否已赋值
                      * @return CurrentStepProgress 是否已赋值
+                     * 
                      */
                     bool CurrentStepProgressHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MasterSlaveDistance Data volume difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMasterSlaveDistance() const;
 
                     /**
                      * 设置Data volume difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MasterSlaveDistance Data volume difference between the sync source and target
+                     * @param _masterSlaveDistance Data volume difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterSlaveDistance(const int64_t& _masterSlaveDistance);
 
                     /**
                      * 判断参数 MasterSlaveDistance 是否已赋值
                      * @return MasterSlaveDistance 是否已赋值
+                     * 
                      */
                     bool MasterSlaveDistanceHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SecondsBehindMaster Time difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSecondsBehindMaster() const;
 
                     /**
                      * 设置Time difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SecondsBehindMaster Time difference between the sync source and target
+                     * @param _secondsBehindMaster Time difference between the sync source and target
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecondsBehindMaster(const int64_t& _secondsBehindMaster);
 
                     /**
                      * 判断参数 SecondsBehindMaster 是否已赋值
                      * @return SecondsBehindMaster 是否已赋值
+                     * 
                      */
                     bool SecondsBehindMasterHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Message Overall description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Overall description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Message Overall description
+                     * @param _message Overall description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepInfos Step details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<StepInfo> GetStepInfos() const;
 
                     /**
                      * 设置Step details
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepInfos Step details
+                     * @param _stepInfos Step details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepInfos(const std::vector<StepInfo>& _stepInfos);
 
                     /**
                      * 判断参数 StepInfos 是否已赋值
                      * @return StepInfos 是否已赋值
+                     * 
                      */
                     bool StepInfosHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CauseOfCompareDisable Cause of the failure of initiating data consistency check
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCauseOfCompareDisable() const;
 
                     /**
                      * 设置Cause of the failure of initiating data consistency check
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CauseOfCompareDisable Cause of the failure of initiating data consistency check
+                     * @param _causeOfCompareDisable Cause of the failure of initiating data consistency check
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCauseOfCompareDisable(const std::string& _causeOfCompareDisable);
 
                     /**
                      * 判断参数 CauseOfCompareDisable 是否已赋值
                      * @return CauseOfCompareDisable 是否已赋值
+                     * 
                      */
                     bool CauseOfCompareDisableHasBeenSet() const;
 

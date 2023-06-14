@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取List of maintenance time windows on Monday.
                      * @return Monday List of maintenance time windows on Monday.
+                     * 
                      */
                     std::vector<std::string> GetMonday() const;
 
                     /**
                      * 判断参数 Monday 是否已赋值
                      * @return Monday 是否已赋值
+                     * 
                      */
                     bool MondayHasBeenSet() const;
 
                     /**
                      * 获取List of maintenance time windows on Tuesday.
                      * @return Tuesday List of maintenance time windows on Tuesday.
+                     * 
                      */
                     std::vector<std::string> GetTuesday() const;
 
                     /**
                      * 判断参数 Tuesday 是否已赋值
                      * @return Tuesday 是否已赋值
+                     * 
                      */
                     bool TuesdayHasBeenSet() const;
 
                     /**
                      * 获取List of maintenance time windows on Wednesday.
                      * @return Wednesday List of maintenance time windows on Wednesday.
+                     * 
                      */
                     std::vector<std::string> GetWednesday() const;
 
                     /**
                      * 判断参数 Wednesday 是否已赋值
                      * @return Wednesday 是否已赋值
+                     * 
                      */
                     bool WednesdayHasBeenSet() const;
 
                     /**
                      * 获取List of maintenance time windows on Thursday.
                      * @return Thursday List of maintenance time windows on Thursday.
+                     * 
                      */
                     std::vector<std::string> GetThursday() const;
 
                     /**
                      * 判断参数 Thursday 是否已赋值
                      * @return Thursday 是否已赋值
+                     * 
                      */
                     bool ThursdayHasBeenSet() const;
 
                     /**
                      * 获取List of maintenance time windows on Friday.
                      * @return Friday List of maintenance time windows on Friday.
+                     * 
                      */
                     std::vector<std::string> GetFriday() const;
 
                     /**
                      * 判断参数 Friday 是否已赋值
                      * @return Friday 是否已赋值
+                     * 
                      */
                     bool FridayHasBeenSet() const;
 
                     /**
                      * 获取List of maintenance time windows on Saturday.
                      * @return Saturday List of maintenance time windows on Saturday.
+                     * 
                      */
                     std::vector<std::string> GetSaturday() const;
 
                     /**
                      * 判断参数 Saturday 是否已赋值
                      * @return Saturday 是否已赋值
+                     * 
                      */
                     bool SaturdayHasBeenSet() const;
 
                     /**
                      * 获取List of maintenance time windows on Sunday.
                      * @return Sunday List of maintenance time windows on Sunday.
+                     * 
                      */
                     std::vector<std::string> GetSunday() const;
 
                     /**
                      * 判断参数 Sunday 是否已赋值
                      * @return Sunday 是否已赋值
+                     * 
                      */
                     bool SundayHasBeenSet() const;
 
                     /**
                      * 获取Maximum data delay threshold
                      * @return MaxDelayTime Maximum data delay threshold
+                     * 
                      */
                     uint64_t GetMaxDelayTime() const;
 
                     /**
                      * 判断参数 MaxDelayTime 是否已赋值
                      * @return MaxDelayTime 是否已赋值
+                     * 
                      */
                     bool MaxDelayTimeHasBeenSet() const;
 

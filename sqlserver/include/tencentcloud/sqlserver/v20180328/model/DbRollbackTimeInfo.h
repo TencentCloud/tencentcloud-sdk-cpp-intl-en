@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Database name
                      * @return DBName Database name
+                     * 
                      */
                     std::string GetDBName() const;
 
                     /**
                      * 设置Database name
-                     * @param DBName Database name
+                     * @param _dBName Database name
+                     * 
                      */
                     void SetDBName(const std::string& _dBName);
 
                     /**
                      * 判断参数 DBName 是否已赋值
                      * @return DBName 是否已赋值
+                     * 
                      */
                     bool DBNameHasBeenSet() const;
 
                     /**
                      * 获取Start time of time range available for rollback
                      * @return StartTime Start time of time range available for rollback
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of time range available for rollback
-                     * @param StartTime Start time of time range available for rollback
+                     * @param _startTime Start time of time range available for rollback
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of time range available for rollback
                      * @return EndTime End time of time range available for rollback
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of time range available for rollback
-                     * @param EndTime End time of time range available for rollback
+                     * @param _endTime End time of time range available for rollback
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

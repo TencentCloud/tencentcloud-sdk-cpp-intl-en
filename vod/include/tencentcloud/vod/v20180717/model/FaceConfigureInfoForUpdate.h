@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of face recognition task. Valid values:
 <li>ON: enables intelligent face recognition task;</li>
 <li>OFF: disables intelligent face recognition task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Switch of face recognition task. Valid values:
 <li>ON: enables intelligent face recognition task;</li>
 <li>OFF: disables intelligent face recognition task.</li>
-                     * @param Switch Switch of face recognition task. Valid values:
+                     * @param _switch Switch of face recognition task. Valid values:
 <li>ON: enables intelligent face recognition task;</li>
 <li>OFF: disables intelligent face recognition task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
                      * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+                     * 
                      */
                     double GetScore() const;
 
                     /**
                      * 设置Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
-                     * @param Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+                     * @param _score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+                     * 
                      */
                     void SetScore(const double& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -99,6 +105,7 @@ namespace TencentCloud
 <li>`entertainment`: people in the entertainment industry</li>
 <li>`sport`: sports celebrities</li>
 <li>`politician`: politically sensitive people</li>
+                     * 
                      */
                     std::vector<std::string> GetDefaultLibraryLabelSet() const;
 
@@ -107,16 +114,18 @@ namespace TencentCloud
 <li>`entertainment`: people in the entertainment industry</li>
 <li>`sport`: sports celebrities</li>
 <li>`politician`: politically sensitive people</li>
-                     * @param DefaultLibraryLabelSet Default face filter labels, which specify the types of faces to return. If this parameter is left empty or an empty value is entered, the recognition results for all labels are returned. Valid values:
+                     * @param _defaultLibraryLabelSet Default face filter labels, which specify the types of faces to return. If this parameter is left empty or an empty value is entered, the recognition results for all labels are returned. Valid values:
 <li>`entertainment`: people in the entertainment industry</li>
 <li>`sport`: sports celebrities</li>
 <li>`politician`: politically sensitive people</li>
+                     * 
                      */
                     void SetDefaultLibraryLabelSet(const std::vector<std::string>& _defaultLibraryLabelSet);
 
                     /**
                      * 判断参数 DefaultLibraryLabelSet 是否已赋值
                      * @return DefaultLibraryLabelSet 是否已赋值
+                     * 
                      */
                     bool DefaultLibraryLabelSetHasBeenSet() const;
 
@@ -125,20 +134,23 @@ namespace TencentCloud
 You can specify up to 100 labels, with each containing up to 16 characters.
                      * @return UserDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
 You can specify up to 100 labels, with each containing up to 16 characters.
+                     * 
                      */
                     std::vector<std::string> GetUserDefineLibraryLabelSet() const;
 
                     /**
                      * 设置Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
 You can specify up to 100 labels, with each containing up to 16 characters.
-                     * @param UserDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+                     * @param _userDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
 You can specify up to 100 labels, with each containing up to 16 characters.
+                     * 
                      */
                     void SetUserDefineLibraryLabelSet(const std::vector<std::string>& _userDefineLibraryLabelSet);
 
                     /**
                      * 判断参数 UserDefineLibraryLabelSet 是否已赋值
                      * @return UserDefineLibraryLabelSet 是否已赋值
+                     * 
                      */
                     bool UserDefineLibraryLabelSetHasBeenSet() const;
 
@@ -151,6 +163,7 @@ You can specify up to 100 labels, with each containing up to 16 characters.
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>
 <li>All: both default and custom figure libraries will be used.</li>
+                     * 
                      */
                     std::string GetFaceLibrary() const;
 
@@ -159,16 +172,18 @@ You can specify up to 100 labels, with each containing up to 16 characters.
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>
 <li>All: both default and custom figure libraries will be used.</li>
-                     * @param FaceLibrary Figure library. Valid values:
+                     * @param _faceLibrary Figure library. Valid values:
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>
 <li>All: both default and custom figure libraries will be used.</li>
+                     * 
                      */
                     void SetFaceLibrary(const std::string& _faceLibrary);
 
                     /**
                      * 判断参数 FaceLibrary 是否已赋值
                      * @return FaceLibrary 是否已赋值
+                     * 
                      */
                     bool FaceLibraryHasBeenSet() const;
 

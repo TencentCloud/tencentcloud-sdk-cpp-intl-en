@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The route table instance ID, such as `rtb-azd4dt1c`.
                      * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置The route table instance ID, such as `rtb-azd4dt1c`.
-                     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * @param _routeTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
                      * 获取Route table name.
                      * @return RouteTableName Route table name.
+                     * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
                      * 设置Route table name.
-                     * @param RouteTableName Route table name.
+                     * @param _routeTableName Route table name.
+                     * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
 
                     /**
                      * 判断参数 RouteTableName 是否已赋值
                      * @return RouteTableName 是否已赋值
+                     * 
                      */
                     bool RouteTableNameHasBeenSet() const;
 

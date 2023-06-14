@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ES instance ID
                      * @return InstanceId ES instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ES instance ID
-                     * @param InstanceId ES instance ID
+                     * @param _instanceId ES instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

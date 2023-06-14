@@ -52,20 +52,23 @@ namespace TencentCloud
 The `Type` values of the `AttributeItem` include: 0: light; 1: thick.
                      * @return EyebrowDensity Eyebrow thickness.
 The `Type` values of the `AttributeItem` include: 0: light; 1: thick.
+                     * 
                      */
                     AttributeItem GetEyebrowDensity() const;
 
                     /**
                      * 设置Eyebrow thickness.
 The `Type` values of the `AttributeItem` include: 0: light; 1: thick.
-                     * @param EyebrowDensity Eyebrow thickness.
+                     * @param _eyebrowDensity Eyebrow thickness.
 The `Type` values of the `AttributeItem` include: 0: light; 1: thick.
+                     * 
                      */
                     void SetEyebrowDensity(const AttributeItem& _eyebrowDensity);
 
                     /**
                      * 判断参数 EyebrowDensity 是否已赋值
                      * @return EyebrowDensity 是否已赋值
+                     * 
                      */
                     bool EyebrowDensityHasBeenSet() const;
 
@@ -74,20 +77,23 @@ The `Type` values of the `AttributeItem` include: 0: light; 1: thick.
 The `Type` values of the `AttributeItem` include: 0: flat; 1: curved.
                      * @return EyebrowCurve Eyebrow curve.
 The `Type` values of the `AttributeItem` include: 0: flat; 1: curved.
+                     * 
                      */
                     AttributeItem GetEyebrowCurve() const;
 
                     /**
                      * 设置Eyebrow curve.
 The `Type` values of the `AttributeItem` include: 0: flat; 1: curved.
-                     * @param EyebrowCurve Eyebrow curve.
+                     * @param _eyebrowCurve Eyebrow curve.
 The `Type` values of the `AttributeItem` include: 0: flat; 1: curved.
+                     * 
                      */
                     void SetEyebrowCurve(const AttributeItem& _eyebrowCurve);
 
                     /**
                      * 判断参数 EyebrowCurve 是否已赋值
                      * @return EyebrowCurve 是否已赋值
+                     * 
                      */
                     bool EyebrowCurveHasBeenSet() const;
 
@@ -96,20 +102,23 @@ The `Type` values of the `AttributeItem` include: 0: flat; 1: curved.
 The `Type` values of the `AttributeItem` include: 0: short; 1: long.
                      * @return EyebrowLength Eyebrow length.
 The `Type` values of the `AttributeItem` include: 0: short; 1: long.
+                     * 
                      */
                     AttributeItem GetEyebrowLength() const;
 
                     /**
                      * 设置Eyebrow length.
 The `Type` values of the `AttributeItem` include: 0: short; 1: long.
-                     * @param EyebrowLength Eyebrow length.
+                     * @param _eyebrowLength Eyebrow length.
 The `Type` values of the `AttributeItem` include: 0: short; 1: long.
+                     * 
                      */
                     void SetEyebrowLength(const AttributeItem& _eyebrowLength);
 
                     /**
                      * 判断参数 EyebrowLength 是否已赋值
                      * @return EyebrowLength 是否已赋值
+                     * 
                      */
                     bool EyebrowLengthHasBeenSet() const;
 

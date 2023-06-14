@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessStartUser Process initiator
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProcessStartUser() const;
 
                     /**
                      * 设置Process initiator
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProcessStartUser Process initiator
+                     * @param _processStartUser Process initiator
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProcessStartUser(const std::string& _processStartUser);
 
                     /**
                      * 判断参数 ProcessStartUser 是否已赋值
                      * @return ProcessStartUser 是否已赋值
+                     * 
                      */
                     bool ProcessStartUserHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessUserGroup Process user group
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProcessUserGroup() const;
 
                     /**
                      * 设置Process user group
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProcessUserGroup Process user group
+                     * @param _processUserGroup Process user group
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProcessUserGroup(const std::string& _processUserGroup);
 
                     /**
                      * 判断参数 ProcessUserGroup 是否已赋值
                      * @return ProcessUserGroup 是否已赋值
+                     * 
                      */
                     bool ProcessUserGroupHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessPath Process path
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProcessPath() const;
 
                     /**
                      * 设置Process path
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProcessPath Process path
+                     * @param _processPath Process path
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProcessPath(const std::string& _processPath);
 
                     /**
                      * 判断参数 ProcessPath 是否已赋值
                      * @return ProcessPath 是否已赋值
+                     * 
                      */
                     bool ProcessPathHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessParam Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProcessParam() const;
 
                     /**
                      * 设置Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProcessParam Process command line parameter
+                     * @param _processParam Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProcessParam(const std::string& _processParam);
 
                     /**
                      * 判断参数 ProcessParam 是否已赋值
                      * @return ProcessParam 是否已赋值
+                     * 
                      */
                     bool ProcessParamHasBeenSet() const;
 

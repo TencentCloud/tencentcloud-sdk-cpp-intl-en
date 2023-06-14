@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Auto scaling group ID
                      * @return AutoScalingGroupId Auto scaling group ID
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Auto scaling group ID
-                     * @param AutoScalingGroupId Auto scaling group ID
+                     * @param _autoScalingGroupId Auto scaling group ID
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Desired capacity
                      * @return DesiredCapacity Desired capacity
+                     * 
                      */
                     uint64_t GetDesiredCapacity() const;
 
                     /**
                      * 设置Desired capacity
-                     * @param DesiredCapacity Desired capacity
+                     * @param _desiredCapacity Desired capacity
+                     * 
                      */
                     void SetDesiredCapacity(const uint64_t& _desiredCapacity);
 
                     /**
                      * 判断参数 DesiredCapacity 是否已赋值
                      * @return DesiredCapacity 是否已赋值
+                     * 
                      */
                     bool DesiredCapacityHasBeenSet() const;
 
                     /**
                      * 获取Minimum number of instances. Value range: 0-2000.
                      * @return MinSize Minimum number of instances. Value range: 0-2000.
+                     * 
                      */
                     uint64_t GetMinSize() const;
 
                     /**
                      * 设置Minimum number of instances. Value range: 0-2000.
-                     * @param MinSize Minimum number of instances. Value range: 0-2000.
+                     * @param _minSize Minimum number of instances. Value range: 0-2000.
+                     * 
                      */
                     void SetMinSize(const uint64_t& _minSize);
 
                     /**
                      * 判断参数 MinSize 是否已赋值
                      * @return MinSize 是否已赋值
+                     * 
                      */
                     bool MinSizeHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of instances. Value range: 0-2000.
                      * @return MaxSize Maximum number of instances. Value range: 0-2000.
+                     * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum number of instances. Value range: 0-2000.
-                     * @param MaxSize Maximum number of instances. Value range: 0-2000.
+                     * @param _maxSize Maximum number of instances. Value range: 0-2000.
+                     * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The confidence score for the detection of sensitive information. Value range: 0-100.
                      * @return Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置The confidence score for the detection of sensitive information. Value range: 0-100.
-                     * @param Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+                     * @param _confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -82,16 +86,18 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion The suggestion for handling the sensitive information detected. Valid values:
+                     * @param _suggestion The suggestion for handling the sensitive information detected. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -106,6 +112,7 @@ violation_photo:
 <li>violation_photo (banned icons)</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician</li>
+                     * 
                      */
                     std::string GetLabel() const;
 
@@ -115,35 +122,40 @@ violation_photo:
 <li>violation_photo (banned icons)</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician</li>
-                     * @param Label The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+                     * @param _label The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
 violation_photo:
 <li>violation_photo (banned icons)</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician</li>
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
                     /**
                      * 获取The video segments that contain sensitive information.
                      * @return SegmentSet The video segments that contain sensitive information.
+                     * 
                      */
                     std::vector<MediaContentReviewPoliticalSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置The video segments that contain sensitive information.
-                     * @param SegmentSet The video segments that contain sensitive information.
+                     * @param _segmentSet The video segments that contain sensitive information.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewPoliticalSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

@@ -52,54 +52,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable CWP.
                      * @return SecurityService Whether to enable CWP.
+                     * 
                      */
                     RunSecurityServiceEnabled GetSecurityService() const;
 
                     /**
                      * 设置Whether to enable CWP.
-                     * @param SecurityService Whether to enable CWP.
+                     * @param _securityService Whether to enable CWP.
+                     * 
                      */
                     void SetSecurityService(const RunSecurityServiceEnabled& _securityService);
 
                     /**
                      * 判断参数 SecurityService 是否已赋值
                      * @return SecurityService 是否已赋值
+                     * 
                      */
                     bool SecurityServiceHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable CM.
                      * @return MonitorService Whether to enable CM.
+                     * 
                      */
                     RunMonitorServiceEnabled GetMonitorService() const;
 
                     /**
                      * 设置Whether to enable CM.
-                     * @param MonitorService Whether to enable CM.
+                     * @param _monitorService Whether to enable CM.
+                     * 
                      */
                     void SetMonitorService(const RunMonitorServiceEnabled& _monitorService);
 
                     /**
                      * 判断参数 MonitorService 是否已赋值
                      * @return MonitorService 是否已赋值
+                     * 
                      */
                     bool MonitorServiceHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable IP direct access. If this parameter is not specified, IP direct access will be enabled by default for Linux images and is currently not supported for Windows images.
                      * @return EIPDirectService Whether to enable IP direct access. If this parameter is not specified, IP direct access will be enabled by default for Linux images and is currently not supported for Windows images.
+                     * 
                      */
                     RunEIPDirectServiceEnabled GetEIPDirectService() const;
 
                     /**
                      * 设置Whether to enable IP direct access. If this parameter is not specified, IP direct access will be enabled by default for Linux images and is currently not supported for Windows images.
-                     * @param EIPDirectService Whether to enable IP direct access. If this parameter is not specified, IP direct access will be enabled by default for Linux images and is currently not supported for Windows images.
+                     * @param _eIPDirectService Whether to enable IP direct access. If this parameter is not specified, IP direct access will be enabled by default for Linux images and is currently not supported for Windows images.
+                     * 
                      */
                     void SetEIPDirectService(const RunEIPDirectServiceEnabled& _eIPDirectService);
 
                     /**
                      * 判断参数 EIPDirectService 是否已赋值
                      * @return EIPDirectService 是否已赋值
+                     * 
                      */
                     bool EIPDirectServiceHasBeenSet() const;
 

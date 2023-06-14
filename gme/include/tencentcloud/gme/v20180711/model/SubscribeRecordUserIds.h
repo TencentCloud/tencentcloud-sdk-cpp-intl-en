@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
                      * @return UnSubscribeUserIds Blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will not be subscribed to.
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
+                     * 
                      */
                     std::vector<std::string> GetUnSubscribeUserIds() const;
 
                     /**
                      * 设置Blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will not be subscribed to.
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
-                     * @param UnSubscribeUserIds Blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will not be subscribed to.
+                     * @param _unSubscribeUserIds Blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will not be subscribed to.
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
+                     * 
                      */
                     void SetUnSubscribeUserIds(const std::vector<std::string>& _unSubscribeUserIds);
 
                     /**
                      * 判断参数 UnSubscribeUserIds 是否已赋值
                      * @return UnSubscribeUserIds 是否已赋值
+                     * 
                      */
                     bool UnSubscribeUserIdsHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` a
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
                      * @return SubscribeUserIds Allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will be subscribed to.
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
+                     * 
                      */
                     std::vector<std::string> GetSubscribeUserIds() const;
 
                     /**
                      * 设置Allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will be subscribed to.
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
-                     * @param SubscribeUserIds Allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will be subscribed to.
+                     * @param _subscribeUserIds Allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audio streams of users 1, 2, and 3. If this parameter is left empty, the audio streams of all users (max 20) in the room will be subscribed to.
 Note: You cannot specify `UnSubscribeAudioUserIds` and `SubscribeAudioUserIds` at the same time.
+                     * 
                      */
                     void SetSubscribeUserIds(const std::vector<std::string>& _subscribeUserIds);
 
                     /**
                      * 判断参数 SubscribeUserIds 是否已赋值
                      * @return SubscribeUserIds 是否已赋值
+                     * 
                      */
                     bool SubscribeUserIdsHasBeenSet() const;
 

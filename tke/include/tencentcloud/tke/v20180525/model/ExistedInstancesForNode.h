@@ -51,72 +51,84 @@ namespace TencentCloud
                     /**
                      * 获取Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
                      * @return NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
+                     * 
                      */
                     std::string GetNodeRole() const;
 
                     /**
                      * 设置Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
-                     * @param NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
+                     * @param _nodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
+                     * 
                      */
                     void SetNodeRole(const std::string& _nodeRole);
 
                     /**
                      * 判断参数 NodeRole 是否已赋值
                      * @return NodeRole 是否已赋值
+                     * 
                      */
                     bool NodeRoleHasBeenSet() const;
 
                     /**
                      * 获取Reinstallation parameter of existing instances
                      * @return ExistedInstancesPara Reinstallation parameter of existing instances
+                     * 
                      */
                     ExistedInstancesPara GetExistedInstancesPara() const;
 
                     /**
                      * 设置Reinstallation parameter of existing instances
-                     * @param ExistedInstancesPara Reinstallation parameter of existing instances
+                     * @param _existedInstancesPara Reinstallation parameter of existing instances
+                     * 
                      */
                     void SetExistedInstancesPara(const ExistedInstancesPara& _existedInstancesPara);
 
                     /**
                      * 判断参数 ExistedInstancesPara 是否已赋值
                      * @return ExistedInstancesPara 是否已赋值
+                     * 
                      */
                     bool ExistedInstancesParaHasBeenSet() const;
 
                     /**
                      * 获取Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
                      * @return InstanceAdvancedSettingsOverride Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+                     * 
                      */
                     InstanceAdvancedSettings GetInstanceAdvancedSettingsOverride() const;
 
                     /**
                      * 设置Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
-                     * @param InstanceAdvancedSettingsOverride Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+                     * @param _instanceAdvancedSettingsOverride Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+                     * 
                      */
                     void SetInstanceAdvancedSettingsOverride(const InstanceAdvancedSettings& _instanceAdvancedSettingsOverride);
 
                     /**
                      * 判断参数 InstanceAdvancedSettingsOverride 是否已赋值
                      * @return InstanceAdvancedSettingsOverride 是否已赋值
+                     * 
                      */
                     bool InstanceAdvancedSettingsOverrideHasBeenSet() const;
 
                     /**
                      * 获取When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
                      * @return DesiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     * 
                      */
                     std::vector<int64_t> GetDesiredPodNumbers() const;
 
                     /**
                      * 设置When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-                     * @param DesiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     * @param _desiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     * 
                      */
                     void SetDesiredPodNumbers(const std::vector<int64_t>& _desiredPodNumbers);
 
                     /**
                      * 判断参数 DesiredPodNumbers 是否已赋值
                      * @return DesiredPodNumbers 是否已赋值
+                     * 
                      */
                     bool DesiredPodNumbersHasBeenSet() const;
 

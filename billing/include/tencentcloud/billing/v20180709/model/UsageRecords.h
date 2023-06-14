@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
                      * @return UsedAmount The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+                     * 
                      */
                     int64_t GetUsedAmount() const;
 
                     /**
                      * 设置The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
-                     * @param UsedAmount The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+                     * @param _usedAmount The amount used. The value of this parameter is the amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+                     * 
                      */
                     void SetUsedAmount(const int64_t& _usedAmount);
 
                     /**
                      * 判断参数 UsedAmount 是否已赋值
                      * @return UsedAmount 是否已赋值
+                     * 
                      */
                     bool UsedAmountHasBeenSet() const;
 
                     /**
                      * 获取The time when the voucher was used.
                      * @return UsedTime The time when the voucher was used.
+                     * 
                      */
                     std::string GetUsedTime() const;
 
                     /**
                      * 设置The time when the voucher was used.
-                     * @param UsedTime The time when the voucher was used.
+                     * @param _usedTime The time when the voucher was used.
+                     * 
                      */
                     void SetUsedTime(const std::string& _usedTime);
 
                     /**
                      * 判断参数 UsedTime 是否已赋值
                      * @return UsedTime 是否已赋值
+                     * 
                      */
                     bool UsedTimeHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UsageDetails The details of the product purchased.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<UsageDetails> GetUsageDetails() const;
 
                     /**
                      * 设置The details of the product purchased.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UsageDetails The details of the product purchased.
+                     * @param _usageDetails The details of the product purchased.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUsageDetails(const std::vector<UsageDetails>& _usageDetails);
 
                     /**
                      * 判断参数 UsageDetails 是否已赋值
                      * @return UsageDetails 是否已赋值
+                     * 
                      */
                     bool UsageDetailsHasBeenSet() const;
 

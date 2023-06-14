@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Symmetric encryption algorithms supported in this region
                      * @return SymmetricAlgorithms Symmetric encryption algorithms supported in this region
+                     * 
                      */
                     std::vector<AlgorithmInfo> GetSymmetricAlgorithms() const;
 
                     /**
                      * 判断参数 SymmetricAlgorithms 是否已赋值
                      * @return SymmetricAlgorithms 是否已赋值
+                     * 
                      */
                     bool SymmetricAlgorithmsHasBeenSet() const;
 
                     /**
                      * 获取Asymmetric encryption algorithms supported in this region
                      * @return AsymmetricAlgorithms Asymmetric encryption algorithms supported in this region
+                     * 
                      */
                     std::vector<AlgorithmInfo> GetAsymmetricAlgorithms() const;
 
                     /**
                      * 判断参数 AsymmetricAlgorithms 是否已赋值
                      * @return AsymmetricAlgorithms 是否已赋值
+                     * 
                      */
                     bool AsymmetricAlgorithmsHasBeenSet() const;
 
                     /**
                      * 获取Asymmetric signature verification algorithms supported in the current region
                      * @return AsymmetricSignVerifyAlgorithms Asymmetric signature verification algorithms supported in the current region
+                     * 
                      */
                     std::vector<AlgorithmInfo> GetAsymmetricSignVerifyAlgorithms() const;
 
                     /**
                      * 判断参数 AsymmetricSignVerifyAlgorithms 是否已赋值
                      * @return AsymmetricSignVerifyAlgorithms 是否已赋值
+                     * 
                      */
                     bool AsymmetricSignVerifyAlgorithmsHasBeenSet() const;
 

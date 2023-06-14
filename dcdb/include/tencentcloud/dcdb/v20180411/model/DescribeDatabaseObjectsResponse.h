@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Passed through from input parameters.
                      * @return InstanceId Passed through from input parameters.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Database name.
                      * @return DbName Database name.
+                     * 
                      */
                     std::string GetDbName() const;
 
                     /**
                      * 判断参数 DbName 是否已赋值
                      * @return DbName 是否已赋值
+                     * 
                      */
                     bool DbNameHasBeenSet() const;
 
                     /**
                      * 获取Table list.
                      * @return Tables Table list.
+                     * 
                      */
                     std::vector<DatabaseTable> GetTables() const;
 
                     /**
                      * 判断参数 Tables 是否已赋值
                      * @return Tables 是否已赋值
+                     * 
                      */
                     bool TablesHasBeenSet() const;
 
                     /**
                      * 获取View list.
                      * @return Views View list.
+                     * 
                      */
                     std::vector<DatabaseView> GetViews() const;
 
                     /**
                      * 判断参数 Views 是否已赋值
                      * @return Views 是否已赋值
+                     * 
                      */
                     bool ViewsHasBeenSet() const;
 
                     /**
                      * 获取Stored procedure list.
                      * @return Procs Stored procedure list.
+                     * 
                      */
                     std::vector<DatabaseProcedure> GetProcs() const;
 
                     /**
                      * 判断参数 Procs 是否已赋值
                      * @return Procs 是否已赋值
+                     * 
                      */
                     bool ProcsHasBeenSet() const;
 
                     /**
                      * 获取Function list.
                      * @return Funcs Function list.
+                     * 
                      */
                     std::vector<DatabaseFunction> GetFuncs() const;
 
                     /**
                      * 判断参数 Funcs 是否已赋值
                      * @return Funcs 是否已赋值
+                     * 
                      */
                     bool FuncsHasBeenSet() const;
 

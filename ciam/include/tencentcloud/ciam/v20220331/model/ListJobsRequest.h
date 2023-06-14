@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取List of task IDs. If this parameter is empty, all tasks will be returned.
                      * @return JobIds List of task IDs. If this parameter is empty, all tasks will be returned.
+                     * 
                      */
                     std::vector<std::string> GetJobIds() const;
 
                     /**
                      * 设置List of task IDs. If this parameter is empty, all tasks will be returned.
-                     * @param JobIds List of task IDs. If this parameter is empty, all tasks will be returned.
+                     * @param _jobIds List of task IDs. If this parameter is empty, all tasks will be returned.
+                     * 
                      */
                     void SetJobIds(const std::vector<std::string>& _jobIds);
 
                     /**
                      * 判断参数 JobIds 是否已赋值
                      * @return JobIds 是否已赋值
+                     * 
                      */
                     bool JobIdsHasBeenSet() const;
 

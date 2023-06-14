@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return DBInstanceId Instance ID
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param DBInstanceId Instance ID
+                     * @param _dBInstanceId Instance ID
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
                      * @return TargetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
+                     * 
                      */
                     std::string GetTargetDBKernelVersion() const;
 
                     /**
                      * 设置Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
-                     * @param TargetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
+                     * @param _targetDBKernelVersion Target kernel version, which can be obtained in the `AvailableUpgradeTarget` field returned by the `DescribeDBVersions` API.
+                     * 
                      */
                     void SetTargetDBKernelVersion(const std::string& _targetDBKernelVersion);
 
                     /**
                      * 判断参数 TargetDBKernelVersion 是否已赋值
                      * @return TargetDBKernelVersion 是否已赋值
+                     * 
                      */
                     bool TargetDBKernelVersionHasBeenSet() const;
 
@@ -87,6 +93,7 @@ namespace TencentCloud
 `0` (default value): Switch now.
 `1`: Switch at the specified time.
 `2`: Switch in the maintenance time.
+                     * 
                      */
                     uint64_t GetSwitchTag() const;
 
@@ -95,52 +102,60 @@ namespace TencentCloud
 `0` (default value): Switch now.
 `1`: Switch at the specified time.
 `2`: Switch in the maintenance time.
-                     * @param SwitchTag Switch time after the kernel version upgrade. Valid values:
+                     * @param _switchTag Switch time after the kernel version upgrade. Valid values:
 `0` (default value): Switch now.
 `1`: Switch at the specified time.
 `2`: Switch in the maintenance time.
+                     * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
 
                     /**
                      * 判断参数 SwitchTag 是否已赋值
                      * @return SwitchTag 是否已赋值
+                     * 
                      */
                     bool SwitchTagHasBeenSet() const;
 
                     /**
                      * 获取Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
                      * @return SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
+                     * 
                      */
                     std::string GetSwitchStartTime() const;
 
                     /**
                      * 设置Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
-                     * @param SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
+                     * @param _switchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is `0` or `2`, this parameter is invalid.
+                     * 
                      */
                     void SetSwitchStartTime(const std::string& _switchStartTime);
 
                     /**
                      * 判断参数 SwitchStartTime 是否已赋值
                      * @return SwitchStartTime 是否已赋值
+                     * 
                      */
                     bool SwitchStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
                      * @return SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
+                     * 
                      */
                     std::string GetSwitchEndTime() const;
 
                     /**
                      * 设置Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
-                     * @param SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
+                     * @param _switchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is `0` or `2`, this parameter is invalid. The difference between `SwitchStartTime` and `SwitchEndTime` cannot be less than 30 minutes.
+                     * 
                      */
                     void SetSwitchEndTime(const std::string& _switchEndTime);
 
                     /**
                      * 判断参数 SwitchEndTime 是否已赋值
                      * @return SwitchEndTime 是否已赋值
+                     * 
                      */
                     bool SwitchEndTimeHasBeenSet() const;
 
@@ -151,6 +166,7 @@ namespace TencentCloud
                      * @return DryRun Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
 `true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
 `false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
+                     * 
                      */
                     bool GetDryRun() const;
 
@@ -158,15 +174,17 @@ namespace TencentCloud
                      * 设置Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
 `true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
 `false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
-                     * @param DryRun Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
+                     * @param _dryRun Whether to perform a precheck on the current operation of upgrading the instance kernel version. Valid values:
 `true`: Performs a precheck without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
 `false` (default value): Sends a normal request and upgrades the kernel version directly after the check is passed.
+                     * 
                      */
                     void SetDryRun(const bool& _dryRun);
 
                     /**
                      * 判断参数 DryRun 是否已赋值
                      * @return DryRun 是否已赋值
+                     * 
                      */
                     bool DryRunHasBeenSet() const;
 

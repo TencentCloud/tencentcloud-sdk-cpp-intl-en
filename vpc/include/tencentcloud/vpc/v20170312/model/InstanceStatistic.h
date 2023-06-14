@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Type of instance
                      * @return InstanceType Type of instance
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Type of instance
-                     * @param InstanceType Type of instance
+                     * @param _instanceType Type of instance
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of instances
                      * @return InstanceCount Number of instances
+                     * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
                      * 设置Number of instances
-                     * @param InstanceCount Number of instances
+                     * @param _instanceCount Number of instances
+                     * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
 
                     /**
                      * 判断参数 InstanceCount 是否已赋值
                      * @return InstanceCount 是否已赋值
+                     * 
                      */
                     bool InstanceCountHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartAt Task start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartAt() const;
 
                     /**
                      * 设置Task start time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartAt Task start time
+                     * @param _startAt Task start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartAt(const std::string& _startAt);
 
                     /**
                      * 判断参数 StartAt 是否已赋值
                      * @return StartAt 是否已赋值
+                     * 
                      */
                     bool StartAtHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndAt Task end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndAt() const;
 
                     /**
                      * 设置Task end time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndAt Task end time
+                     * @param _endAt Task end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndAt(const std::string& _endAt);
 
                     /**
                      * 判断参数 EndAt 是否已赋值
                      * @return EndAt 是否已赋值
+                     * 
                      */
                     bool EndAtHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Progress Task step information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProcessProgress GetProgress() const;
 
                     /**
                      * 设置Task step information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Progress Task step information
+                     * @param _progress Task step information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProgress(const ProcessProgress& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 

@@ -53,234 +53,273 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of video content recognition template.
                      * @return Definition Unique ID of video content recognition template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Unique ID of video content recognition template.
-                     * @param Definition Unique ID of video content recognition template.
+                     * @param _definition Unique ID of video content recognition template.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Video content recognition template name. Length limit: 64 characters.
                      * @return Name Video content recognition template name. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Video content recognition template name. Length limit: 64 characters.
-                     * @param Name Video content recognition template name. Length limit: 64 characters.
+                     * @param _name Video content recognition template name. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description of video content recognition template. Length limit: 256 characters.
                      * @return Comment Description of video content recognition template. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Description of video content recognition template. Length limit: 256 characters.
-                     * @param Comment Description of video content recognition template. Length limit: 256 characters.
+                     * @param _comment Description of video content recognition template. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of video opening and ending credits recognition.
                      * @return HeadTailConfigure Control parameter of video opening and ending credits recognition.
+                     * 
                      */
                     HeadTailConfigureInfoForUpdate GetHeadTailConfigure() const;
 
                     /**
                      * 设置Control parameter of video opening and ending credits recognition.
-                     * @param HeadTailConfigure Control parameter of video opening and ending credits recognition.
+                     * @param _headTailConfigure Control parameter of video opening and ending credits recognition.
+                     * 
                      */
                     void SetHeadTailConfigure(const HeadTailConfigureInfoForUpdate& _headTailConfigure);
 
                     /**
                      * 判断参数 HeadTailConfigure 是否已赋值
                      * @return HeadTailConfigure 是否已赋值
+                     * 
                      */
                     bool HeadTailConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of video splitting recognition.
                      * @return SegmentConfigure Control parameter of video splitting recognition.
+                     * 
                      */
                     SegmentConfigureInfoForUpdate GetSegmentConfigure() const;
 
                     /**
                      * 设置Control parameter of video splitting recognition.
-                     * @param SegmentConfigure Control parameter of video splitting recognition.
+                     * @param _segmentConfigure Control parameter of video splitting recognition.
+                     * 
                      */
                     void SetSegmentConfigure(const SegmentConfigureInfoForUpdate& _segmentConfigure);
 
                     /**
                      * 判断参数 SegmentConfigure 是否已赋值
                      * @return SegmentConfigure 是否已赋值
+                     * 
                      */
                     bool SegmentConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of face recognition.
                      * @return FaceConfigure Control parameter of face recognition.
+                     * 
                      */
                     FaceConfigureInfoForUpdate GetFaceConfigure() const;
 
                     /**
                      * 设置Control parameter of face recognition.
-                     * @param FaceConfigure Control parameter of face recognition.
+                     * @param _faceConfigure Control parameter of face recognition.
+                     * 
                      */
                     void SetFaceConfigure(const FaceConfigureInfoForUpdate& _faceConfigure);
 
                     /**
                      * 判断参数 FaceConfigure 是否已赋值
                      * @return FaceConfigure 是否已赋值
+                     * 
                      */
                     bool FaceConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of full text recognition.
                      * @return OcrFullTextConfigure Control parameter of full text recognition.
+                     * 
                      */
                     OcrFullTextConfigureInfoForUpdate GetOcrFullTextConfigure() const;
 
                     /**
                      * 设置Control parameter of full text recognition.
-                     * @param OcrFullTextConfigure Control parameter of full text recognition.
+                     * @param _ocrFullTextConfigure Control parameter of full text recognition.
+                     * 
                      */
                     void SetOcrFullTextConfigure(const OcrFullTextConfigureInfoForUpdate& _ocrFullTextConfigure);
 
                     /**
                      * 判断参数 OcrFullTextConfigure 是否已赋值
                      * @return OcrFullTextConfigure 是否已赋值
+                     * 
                      */
                     bool OcrFullTextConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of text keyword recognition.
                      * @return OcrWordsConfigure Control parameter of text keyword recognition.
+                     * 
                      */
                     OcrWordsConfigureInfoForUpdate GetOcrWordsConfigure() const;
 
                     /**
                      * 设置Control parameter of text keyword recognition.
-                     * @param OcrWordsConfigure Control parameter of text keyword recognition.
+                     * @param _ocrWordsConfigure Control parameter of text keyword recognition.
+                     * 
                      */
                     void SetOcrWordsConfigure(const OcrWordsConfigureInfoForUpdate& _ocrWordsConfigure);
 
                     /**
                      * 判断参数 OcrWordsConfigure 是否已赋值
                      * @return OcrWordsConfigure 是否已赋值
+                     * 
                      */
                     bool OcrWordsConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of full speech recognition.
                      * @return AsrFullTextConfigure Control parameter of full speech recognition.
+                     * 
                      */
                     AsrFullTextConfigureInfoForUpdate GetAsrFullTextConfigure() const;
 
                     /**
                      * 设置Control parameter of full speech recognition.
-                     * @param AsrFullTextConfigure Control parameter of full speech recognition.
+                     * @param _asrFullTextConfigure Control parameter of full speech recognition.
+                     * 
                      */
                     void SetAsrFullTextConfigure(const AsrFullTextConfigureInfoForUpdate& _asrFullTextConfigure);
 
                     /**
                      * 判断参数 AsrFullTextConfigure 是否已赋值
                      * @return AsrFullTextConfigure 是否已赋值
+                     * 
                      */
                     bool AsrFullTextConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of speech keyword recognition.
                      * @return AsrWordsConfigure Control parameter of speech keyword recognition.
+                     * 
                      */
                     AsrWordsConfigureInfoForUpdate GetAsrWordsConfigure() const;
 
                     /**
                      * 设置Control parameter of speech keyword recognition.
-                     * @param AsrWordsConfigure Control parameter of speech keyword recognition.
+                     * @param _asrWordsConfigure Control parameter of speech keyword recognition.
+                     * 
                      */
                     void SetAsrWordsConfigure(const AsrWordsConfigureInfoForUpdate& _asrWordsConfigure);
 
                     /**
                      * 判断参数 AsrWordsConfigure 是否已赋值
                      * @return AsrWordsConfigure 是否已赋值
+                     * 
                      */
                     bool AsrWordsConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of object recognition.
                      * @return ObjectConfigure Control parameter of object recognition.
+                     * 
                      */
                     ObjectConfigureInfoForUpdate GetObjectConfigure() const;
 
                     /**
                      * 设置Control parameter of object recognition.
-                     * @param ObjectConfigure Control parameter of object recognition.
+                     * @param _objectConfigure Control parameter of object recognition.
+                     * 
                      */
                     void SetObjectConfigure(const ObjectConfigureInfoForUpdate& _objectConfigure);
 
                     /**
                      * 判断参数 ObjectConfigure 是否已赋值
                      * @return ObjectConfigure 是否已赋值
+                     * 
                      */
                     bool ObjectConfigureHasBeenSet() const;
 
                     /**
                      * 获取Frame capturing interval in seconds. Minimum value: 0.5 seconds.
                      * @return ScreenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+                     * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
                      * 设置Frame capturing interval in seconds. Minimum value: 0.5 seconds.
-                     * @param ScreenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+                     * @param _screenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+                     * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
 
                     /**
                      * 判断参数 ScreenshotInterval 是否已赋值
                      * @return ScreenshotInterval 是否已赋值
+                     * 
                      */
                     bool ScreenshotIntervalHasBeenSet() const;
 

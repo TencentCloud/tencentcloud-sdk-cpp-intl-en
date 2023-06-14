@@ -59,6 +59,7 @@ The default value is -1.
 4: connection SSL certificate.
 -1: all types.
 The default value is -1.
+                     * 
                      */
                     int64_t GetCertificateType() const;
 
@@ -71,7 +72,7 @@ The default value is -1.
 4: connection SSL certificate.
 -1: all types.
 The default value is -1.
-                     * @param CertificateType Certificate type. Where:
+                     * @param _certificateType Certificate type. Where:
 0: basic authentication configuration;
 1: client CA certificate;
 2: server SSL certificate;
@@ -79,48 +80,56 @@ The default value is -1.
 4: connection SSL certificate.
 -1: all types.
 The default value is -1.
+                     * 
                      */
                     void SetCertificateType(const int64_t& _certificateType);
 
                     /**
                      * 判断参数 CertificateType 是否已赋值
                      * @return CertificateType 是否已赋值
+                     * 
                      */
                     bool CertificateTypeHasBeenSet() const;
 
                     /**
                      * 获取Offset. The default value is 0.
                      * @return Offset Offset. The default value is 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * @param _offset Offset. The default value is 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Quantity limit. The default value is 20.
                      * @return Limit Quantity limit. The default value is 20.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Quantity limit. The default value is 20.
-                     * @param Limit Quantity limit. The default value is 20.
+                     * @param _limit Quantity limit. The default value is 20.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

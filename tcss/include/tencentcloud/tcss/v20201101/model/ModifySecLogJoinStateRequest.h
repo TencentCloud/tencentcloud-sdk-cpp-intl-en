@@ -51,6 +51,7 @@ K8s API: k8s_api
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
+                     * 
                      */
                     std::string GetLogType() const;
 
@@ -59,34 +60,39 @@ K8s API: k8s_api
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
-                     * @param LogType Log type
+                     * @param _logType Log type
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
                     /**
                      * 获取Status. Valid values: `true` (enabled); `false` (disabled).
                      * @return State Status. Valid values: `true` (enabled); `false` (disabled).
+                     * 
                      */
                     bool GetState() const;
 
                     /**
                      * 设置Status. Valid values: `true` (enabled); `false` (disabled).
-                     * @param State Status. Valid values: `true` (enabled); `false` (disabled).
+                     * @param _state Status. Valid values: `true` (enabled); `false` (disabled).
+                     * 
                      */
                     void SetState(const bool& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 

@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies for which ports to create listeners. Each port corresponds to a new listener
                      * @return Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
+                     * 
                      */
                     std::vector<int64_t> GetPorts() const;
 
                     /**
                      * 设置Specifies for which ports to create listeners. Each port corresponds to a new listener
-                     * @param Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
+                     * @param _ports Specifies for which ports to create listeners. Each port corresponds to a new listener
+                     * 
                      */
                     void SetPorts(const std::vector<int64_t>& _ports);
 
                     /**
                      * 判断参数 Ports 是否已赋值
                      * @return Ports 是否已赋值
+                     * 
                      */
                     bool PortsHasBeenSet() const;
 
                     /**
                      * 获取Listener protocol. Valid values: TCP, UDP
                      * @return Protocol Listener protocol. Valid values: TCP, UDP
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Listener protocol. Valid values: TCP, UDP
-                     * @param Protocol Listener protocol. Valid values: TCP, UDP
+                     * @param _protocol Listener protocol. Valid values: TCP, UDP
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
                      * @return ListenerNames List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
+                     * 
                      */
                     std::vector<std::string> GetListenerNames() const;
 
                     /**
                      * 设置List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
-                     * @param ListenerNames List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
+                     * @param _listenerNames List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
+                     * 
                      */
                     void SetListenerNames(const std::vector<std::string>& _listenerNames);
 
                     /**
                      * 判断参数 ListenerNames 是否已赋值
                      * @return ListenerNames 是否已赋值
+                     * 
                      */
                     bool ListenerNamesHasBeenSet() const;
 
                     /**
                      * 获取Health check parameters
                      * @return HealthCheck Health check parameters
+                     * 
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
                      * 设置Health check parameters
-                     * @param HealthCheck Health check parameters
+                     * @param _healthCheck Health check parameters
+                     * 
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
 
                     /**
                      * 判断参数 HealthCheck 是否已赋值
                      * @return HealthCheck 是否已赋值
+                     * 
                      */
                     bool HealthCheckHasBeenSet() const;
 
                     /**
                      * 获取Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
                      * @return SessionExpireTime Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+                     * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
                      * 设置Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
-                     * @param SessionExpireTime Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+                     * @param _sessionExpireTime Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+                     * 
                      */
                     void SetSessionExpireTime(const int64_t& _sessionExpireTime);
 
                     /**
                      * 判断参数 SessionExpireTime 是否已赋值
                      * @return SessionExpireTime 是否已赋值
+                     * 
                      */
                     bool SessionExpireTimeHasBeenSet() const;
 
@@ -156,56 +174,65 @@ namespace TencentCloud
 They represent weighted round robin and least connections, respectively. Default value: WRR.
                      * @return Scheduler Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
+                     * 
                      */
                     std::string GetScheduler() const;
 
                     /**
                      * 设置Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
-                     * @param Scheduler Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
+                     * @param _scheduler Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
+                     * 
                      */
                     void SetScheduler(const std::string& _scheduler);
 
                     /**
                      * 判断参数 Scheduler 是否已赋值
                      * @return Scheduler 是否已赋值
+                     * 
                      */
                     bool SchedulerHasBeenSet() const;
 
                     /**
                      * 获取Session persistence type. Valid values: NORMAL: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
                      * @return SessionType Session persistence type. Valid values: NORMAL: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     * 
                      */
                     std::string GetSessionType() const;
 
                     /**
                      * 设置Session persistence type. Valid values: NORMAL: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
-                     * @param SessionType Session persistence type. Valid values: NORMAL: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     * @param _sessionType Session persistence type. Valid values: NORMAL: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
+                     * 
                      */
                     void SetSessionType(const std::string& _sessionType);
 
                     /**
                      * 判断参数 SessionType 是否已赋值
                      * @return SessionType 是否已赋值
+                     * 
                      */
                     bool SessionTypeHasBeenSet() const;
 
                     /**
                      * 获取End ports of port ranges, which must be the same as `Ports` in length.
                      * @return EndPorts End ports of port ranges, which must be the same as `Ports` in length.
+                     * 
                      */
                     std::vector<int64_t> GetEndPorts() const;
 
                     /**
                      * 设置End ports of port ranges, which must be the same as `Ports` in length.
-                     * @param EndPorts End ports of port ranges, which must be the same as `Ports` in length.
+                     * @param _endPorts End ports of port ranges, which must be the same as `Ports` in length.
+                     * 
                      */
                     void SetEndPorts(const std::vector<int64_t>& _endPorts);
 
                     /**
                      * 判断参数 EndPorts 是否已赋值
                      * @return EndPorts 是否已赋值
+                     * 
                      */
                     bool EndPortsHasBeenSet() const;
 

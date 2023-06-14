@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Keyword Returns the hit keywords.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Returns the hit keywords.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Keyword Returns the hit keywords.
+                     * @param _keyword Returns the hit keywords.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubLabel Returns the sub-tags.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
                      * 设置Returns the sub-tags.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubLabel Returns the sub-tags.
+                     * @param _subLabel Returns the sub-tags.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
 
                     /**
                      * 判断参数 SubLabel 是否已赋值
                      * @return SubLabel 是否已赋值
+                     * 
                      */
                     bool SubLabelHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Score Returns the score for the sub-label
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置Returns the score for the sub-label
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Score Returns the score for the sub-label
+                     * @param _score Returns the score for the sub-label
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 

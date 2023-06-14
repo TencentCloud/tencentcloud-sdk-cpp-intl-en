@@ -54,6 +54,7 @@ namespace TencentCloud
 <li>end-point-name - String - (Filter condition) Endpoint instance name.</li>
 <li> end-point-id - String - (Filter condition) Endpoint instance ID.</li>
 <li> vpc-id - String - (Filter condition) VPC instance ID.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -63,71 +64,82 @@ namespace TencentCloud
 <li>end-point-name - String - (Filter condition) Endpoint instance name.</li>
 <li> end-point-id - String - (Filter condition) Endpoint instance ID.</li>
 <li> vpc-id - String - (Filter condition) VPC instance ID.</li>
-                     * @param Filters Filter condition
+                     * @param _filters Filter condition
 <li> end-point-service-id - String - (Filter condition) Endpoint service ID.</li>
 <li>end-point-name - String - (Filter condition) Endpoint instance name.</li>
 <li> end-point-id - String - (Filter condition) Endpoint instance ID.</li>
 <li> vpc-id - String - (Filter condition) VPC instance ID.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page; default value: 20; maximum value: 100.
                      * @return Limit Number of results per page; default value: 20; maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page; default value: 20; maximum value: 100.
-                     * @param Limit Number of results per page; default value: 20; maximum value: 100.
+                     * @param _limit Number of results per page; default value: 20; maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Endpoint ID list
                      * @return EndPointId Endpoint ID list
+                     * 
                      */
                     std::vector<std::string> GetEndPointId() const;
 
                     /**
                      * 设置Endpoint ID list
-                     * @param EndPointId Endpoint ID list
+                     * @param _endPointId Endpoint ID list
+                     * 
                      */
                     void SetEndPointId(const std::vector<std::string>& _endPointId);
 
                     /**
                      * 判断参数 EndPointId 是否已赋值
                      * @return EndPointId 是否已赋值
+                     * 
                      */
                     bool EndPointIdHasBeenSet() const;
 

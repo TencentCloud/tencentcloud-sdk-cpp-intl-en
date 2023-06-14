@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the bulk task.
                      * @return Id The ID of the bulk task.
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置The ID of the bulk task.
-                     * @param Id The ID of the bulk task.
+                     * @param _id The ID of the bulk task.
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取The task status.
                      * @return Status The task status.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置The task status.
-                     * @param Status The task status.
+                     * @param _status The task status.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The reason.
                      * @return Reason The reason.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置The reason.
-                     * @param Reason The reason.
+                     * @param _reason The reason.
+                     * 
                      */
                     void SetReason(const std::string& _reason);
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 
                     /**
                      * 获取The reason, expressed in Chinese.
                      * @return ReasonZh The reason, expressed in Chinese.
+                     * 
                      */
                     std::string GetReasonZh() const;
 
                     /**
                      * 设置The reason, expressed in Chinese.
-                     * @param ReasonZh The reason, expressed in Chinese.
+                     * @param _reasonZh The reason, expressed in Chinese.
+                     * 
                      */
                     void SetReasonZh(const std::string& _reasonZh);
 
                     /**
                      * 判断参数 ReasonZh 是否已赋值
                      * @return ReasonZh 是否已赋值
+                     * 
                      */
                     bool ReasonZhHasBeenSet() const;
 

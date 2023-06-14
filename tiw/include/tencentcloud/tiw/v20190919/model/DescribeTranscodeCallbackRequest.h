@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the application
                      * @return SdkAppId SdkAppId of the application
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the application
-                     * @param SdkAppId SdkAppId of the application
+                     * @param _sdkAppId SdkAppId of the application
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 

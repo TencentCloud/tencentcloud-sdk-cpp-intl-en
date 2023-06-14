@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Result Usage plan binding details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     UsagePlanEnvironmentStatus GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

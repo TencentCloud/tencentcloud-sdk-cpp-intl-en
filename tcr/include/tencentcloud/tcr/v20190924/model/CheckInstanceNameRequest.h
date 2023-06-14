@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of the instance to be created
                      * @return RegistryName Name of the instance to be created
+                     * 
                      */
                     std::string GetRegistryName() const;
 
                     /**
                      * 设置Name of the instance to be created
-                     * @param RegistryName Name of the instance to be created
+                     * @param _registryName Name of the instance to be created
+                     * 
                      */
                     void SetRegistryName(const std::string& _registryName);
 
                     /**
                      * 判断参数 RegistryName 是否已赋值
                      * @return RegistryName 是否已赋值
+                     * 
                      */
                     bool RegistryNameHasBeenSet() const;
 

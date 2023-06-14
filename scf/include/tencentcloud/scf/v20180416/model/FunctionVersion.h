@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Function version name
                      * @return Version Function version name
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Function version name
-                     * @param Version Function version name
+                     * @param _version Function version name
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values is found.
                      * @return Description Version description
 Note: This field may return null, indicating that no valid values is found.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Version description
 Note: This field may return null, indicating that no valid values is found.
-                     * @param Description Version description
+                     * @param _description Version description
 Note: This field may return null, indicating that no valid values is found.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return null, indicating that no valid values is found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return AddTime The creation time
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置The creation time
 Note: This field may return null, indicating that no valid value was found.
-                     * @param AddTime The creation time
+                     * @param _addTime The creation time
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ModTime Update time
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetModTime() const;
 
                     /**
                      * 设置Update time
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ModTime Update time
+                     * @param _modTime Update time
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetModTime(const std::string& _modTime);
 
                     /**
                      * 判断参数 ModTime 是否已赋值
                      * @return ModTime 是否已赋值
+                     * 
                      */
                     bool ModTimeHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Status Version status
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Version status
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Status Version status
+                     * @param _status Version status
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

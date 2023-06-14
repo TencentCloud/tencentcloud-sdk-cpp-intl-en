@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the RO group to be deleted
                      * @return ReadOnlyGroupId ID of the RO group to be deleted
+                     * 
                      */
                     std::string GetReadOnlyGroupId() const;
 
                     /**
                      * 设置ID of the RO group to be deleted
-                     * @param ReadOnlyGroupId ID of the RO group to be deleted
+                     * @param _readOnlyGroupId ID of the RO group to be deleted
+                     * 
                      */
                     void SetReadOnlyGroupId(const std::string& _readOnlyGroupId);
 
                     /**
                      * 判断参数 ReadOnlyGroupId 是否已赋值
                      * @return ReadOnlyGroupId 是否已赋值
+                     * 
                      */
                     bool ReadOnlyGroupIdHasBeenSet() const;
 

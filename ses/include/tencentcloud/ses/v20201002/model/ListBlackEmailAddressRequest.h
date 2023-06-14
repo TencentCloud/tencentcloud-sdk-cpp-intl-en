@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Start date in the format of `YYYY-MM-DD`
                      * @return StartDate Start date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     std::string GetStartDate() const;
 
                     /**
                      * 设置Start date in the format of `YYYY-MM-DD`
-                     * @param StartDate Start date in the format of `YYYY-MM-DD`
+                     * @param _startDate Start date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     void SetStartDate(const std::string& _startDate);
 
                     /**
                      * 判断参数 StartDate 是否已赋值
                      * @return StartDate 是否已赋值
+                     * 
                      */
                     bool StartDateHasBeenSet() const;
 
                     /**
                      * 获取End date in the format of `YYYY-MM-DD`
                      * @return EndDate End date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置End date in the format of `YYYY-MM-DD`
-                     * @param EndDate End date in the format of `YYYY-MM-DD`
+                     * @param _endDate End date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 
                     /**
                      * 获取Common parameter. It must be used with `Offset`.
                      * @return Limit Common parameter. It must be used with `Offset`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Common parameter. It must be used with `Offset`.
-                     * @param Limit Common parameter. It must be used with `Offset`.
+                     * @param _limit Common parameter. It must be used with `Offset`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
                      * @return Offset Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
-                     * @param Offset Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
+                     * @param _offset Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取You can specify an email address to query.
                      * @return EmailAddress You can specify an email address to query.
+                     * 
                      */
                     std::string GetEmailAddress() const;
 
                     /**
                      * 设置You can specify an email address to query.
-                     * @param EmailAddress You can specify an email address to query.
+                     * @param _emailAddress You can specify an email address to query.
+                     * 
                      */
                     void SetEmailAddress(const std::string& _emailAddress);
 
                     /**
                      * 判断参数 EmailAddress 是否已赋值
                      * @return EmailAddress 是否已赋值
+                     * 
                      */
                     bool EmailAddressHasBeenSet() const;
 
                     /**
                      * 获取You can specify a task ID to query.
                      * @return TaskID You can specify a task ID to query.
+                     * 
                      */
                     std::string GetTaskID() const;
 
                     /**
                      * 设置You can specify a task ID to query.
-                     * @param TaskID You can specify a task ID to query.
+                     * @param _taskID You can specify a task ID to query.
+                     * 
                      */
                     void SetTaskID(const std::string& _taskID);
 
                     /**
                      * 判断参数 TaskID 是否已赋值
                      * @return TaskID 是否已赋值
+                     * 
                      */
                     bool TaskIDHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RegionId Region information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetRegionId() const;
 
                     /**
                      * 设置Region information
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RegionId Region information
+                     * @param _regionId Region information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRegionId(const std::vector<int64_t>& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
+                     * @param _switch Whether to remove all settings when empty strings are passed in. Default value: `off` (remove)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

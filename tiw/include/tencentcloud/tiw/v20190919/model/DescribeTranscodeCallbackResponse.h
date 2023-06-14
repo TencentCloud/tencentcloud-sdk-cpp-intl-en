@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Document transcoding callback address
                      * @return Callback Document transcoding callback address
+                     * 
                      */
                     std::string GetCallback() const;
 
                     /**
                      * 判断参数 Callback 是否已赋值
                      * @return Callback 是否已赋值
+                     * 
                      */
                     bool CallbackHasBeenSet() const;
 
                     /**
                      * 获取Authentication key of the document transcoding callback
                      * @return CallbackKey Authentication key of the document transcoding callback
+                     * 
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 判断参数 CallbackKey 是否已赋值
                      * @return CallbackKey 是否已赋值
+                     * 
                      */
                     bool CallbackKeyHasBeenSet() const;
 

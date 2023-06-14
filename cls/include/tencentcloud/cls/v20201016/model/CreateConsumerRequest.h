@@ -47,90 +47,105 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID to bind
                      * @return TopicId Log topic ID to bind
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID to bind
-                     * @param TopicId Log topic ID to bind
+                     * @param _topicId Log topic ID to bind
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to ship log metadata. Default value: `true`
                      * @return NeedContent Whether to ship log metadata. Default value: `true`
+                     * 
                      */
                     bool GetNeedContent() const;
 
                     /**
                      * 设置Whether to ship log metadata. Default value: `true`
-                     * @param NeedContent Whether to ship log metadata. Default value: `true`
+                     * @param _needContent Whether to ship log metadata. Default value: `true`
+                     * 
                      */
                     void SetNeedContent(const bool& _needContent);
 
                     /**
                      * 判断参数 NeedContent 是否已赋值
                      * @return NeedContent 是否已赋值
+                     * 
                      */
                     bool NeedContentHasBeenSet() const;
 
                     /**
                      * 获取Metadata to ship if `NeedContent` is `true`
                      * @return Content Metadata to ship if `NeedContent` is `true`
+                     * 
                      */
                     ConsumerContent GetContent() const;
 
                     /**
                      * 设置Metadata to ship if `NeedContent` is `true`
-                     * @param Content Metadata to ship if `NeedContent` is `true`
+                     * @param _content Metadata to ship if `NeedContent` is `true`
+                     * 
                      */
                     void SetContent(const ConsumerContent& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取CKafka information
                      * @return Ckafka CKafka information
+                     * 
                      */
                     Ckafka GetCkafka() const;
 
                     /**
                      * 设置CKafka information
-                     * @param Ckafka CKafka information
+                     * @param _ckafka CKafka information
+                     * 
                      */
                     void SetCkafka(const Ckafka& _ckafka);
 
                     /**
                      * 判断参数 Ckafka 是否已赋值
                      * @return Ckafka 是否已赋值
+                     * 
                      */
                     bool CkafkaHasBeenSet() const;
 
                     /**
                      * 获取Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
                      * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * 
                      */
                     int64_t GetCompression() const;
 
                     /**
                      * 设置Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-                     * @param Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * @param _compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * 
                      */
                     void SetCompression(const int64_t& _compression);
 
                     /**
                      * 判断参数 Compression 是否已赋值
                      * @return Compression 是否已赋值
+                     * 
                      */
                     bool CompressionHasBeenSet() const;
 

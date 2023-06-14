@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Backup file ID
                      * @return BackupId Backup file ID
+                     * 
                      */
                     int64_t GetBackupId() const;
 
                     /**
                      * 设置Backup file ID
-                     * @param BackupId Backup file ID
+                     * @param _backupId Backup file ID
+                     * 
                      */
                     void SetBackupId(const int64_t& _backupId);
 
                     /**
                      * 判断参数 BackupId 是否已赋值
                      * @return BackupId 是否已赋值
+                     * 
                      */
                     bool BackupIdHasBeenSet() const;
 
                     /**
                      * 获取Backup name, which can contain up to 60 characters.
                      * @return BackupName Backup name, which can contain up to 60 characters.
+                     * 
                      */
                     std::string GetBackupName() const;
 
                     /**
                      * 设置Backup name, which can contain up to 60 characters.
-                     * @param BackupName Backup name, which can contain up to 60 characters.
+                     * @param _backupName Backup name, which can contain up to 60 characters.
+                     * 
                      */
                     void SetBackupName(const std::string& _backupName);
 
                     /**
                      * 判断参数 BackupName 是否已赋值
                      * @return BackupName 是否已赋值
+                     * 
                      */
                     bool BackupNameHasBeenSet() const;
 

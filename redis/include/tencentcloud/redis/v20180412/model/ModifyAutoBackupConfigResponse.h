@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Automatic backup type: 1 (scheduled rollback)
                      * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
+                     * 
                      */
                     int64_t GetAutoBackupType() const;
 
                     /**
                      * 判断参数 AutoBackupType 是否已赋值
                      * @return AutoBackupType 是否已赋值
+                     * 
                      */
                     bool AutoBackupTypeHasBeenSet() const;
 
                     /**
                      * 获取Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
                      * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+                     * 
                      */
                     std::vector<std::string> GetWeekDays() const;
 
                     /**
                      * 判断参数 WeekDays 是否已赋值
                      * @return WeekDays 是否已赋值
+                     * 
                      */
                     bool WeekDaysHasBeenSet() const;
 
                     /**
                      * 获取Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
                      * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * 
                      */
                     std::string GetTimePeriod() const;
 
                     /**
                      * 判断参数 TimePeriod 是否已赋值
                      * @return TimePeriod 是否已赋值
+                     * 
                      */
                     bool TimePeriodHasBeenSet() const;
 
                     /**
                      * 获取Retention time of full backup files in days
                      * @return BackupStorageDays Retention time of full backup files in days
+                     * 
                      */
                     int64_t GetBackupStorageDays() const;
 
                     /**
                      * 判断参数 BackupStorageDays 是否已赋值
                      * @return BackupStorageDays 是否已赋值
+                     * 
                      */
                     bool BackupStorageDaysHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Configuration ID.
                      * @return UconfigId Configuration ID.
+                     * 
                      */
                     std::string GetUconfigId() const;
 
                     /**
                      * 设置Configuration ID.
-                     * @param UconfigId Configuration ID.
+                     * @param _uconfigId Configuration ID.
+                     * 
                      */
                     void SetUconfigId(const std::string& _uconfigId);
 
                     /**
                      * 判断参数 UconfigId 是否已赋值
                      * @return UconfigId 是否已赋值
+                     * 
                      */
                     bool UconfigIdHasBeenSet() const;
 
                     /**
                      * 获取Configuration type.
                      * @return ConfigType Configuration type.
+                     * 
                      */
                     std::string GetConfigType() const;
 
                     /**
                      * 设置Configuration type.
-                     * @param ConfigType Configuration type.
+                     * @param _configType Configuration type.
+                     * 
                      */
                     void SetConfigType(const std::string& _configType);
 
                     /**
                      * 判断参数 ConfigType 是否已赋值
                      * @return ConfigType 是否已赋值
+                     * 
                      */
                     bool ConfigTypeHasBeenSet() const;
 
@@ -87,74 +93,86 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ConfigName Configuration name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConfigName() const;
 
                     /**
                      * 设置Configuration name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ConfigName Configuration name.
+                     * @param _configName Configuration name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfigName(const std::string& _configName);
 
                     /**
                      * 判断参数 ConfigName 是否已赋值
                      * @return ConfigName 是否已赋值
+                     * 
                      */
                     bool ConfigNameHasBeenSet() const;
 
                     /**
                      * 获取Configuration content.
                      * @return ConfigContent Configuration content.
+                     * 
                      */
                     std::string GetConfigContent() const;
 
                     /**
                      * 设置Configuration content.
-                     * @param ConfigContent Configuration content.
+                     * @param _configContent Configuration content.
+                     * 
                      */
                     void SetConfigContent(const std::string& _configContent);
 
                     /**
                      * 判断参数 ConfigContent 是否已赋值
                      * @return ConfigContent 是否已赋值
+                     * 
                      */
                     bool ConfigContentHasBeenSet() const;
 
                     /**
                      * 获取Creates configuration time.
                      * @return CreateTimestamp Creates configuration time.
+                     * 
                      */
                     std::string GetCreateTimestamp() const;
 
                     /**
                      * 设置Creates configuration time.
-                     * @param CreateTimestamp Creates configuration time.
+                     * @param _createTimestamp Creates configuration time.
+                     * 
                      */
                     void SetCreateTimestamp(const std::string& _createTimestamp);
 
                     /**
                      * 判断参数 CreateTimestamp 是否已赋值
                      * @return CreateTimestamp 是否已赋值
+                     * 
                      */
                     bool CreateTimestampHasBeenSet() const;
 
                     /**
                      * 获取Modifies configuration time.
                      * @return UpdateTimestamp Modifies configuration time.
+                     * 
                      */
                     std::string GetUpdateTimestamp() const;
 
                     /**
                      * 设置Modifies configuration time.
-                     * @param UpdateTimestamp Modifies configuration time.
+                     * @param _updateTimestamp Modifies configuration time.
+                     * 
                      */
                     void SetUpdateTimestamp(const std::string& _updateTimestamp);
 
                     /**
                      * 判断参数 UpdateTimestamp 是否已赋值
                      * @return UpdateTimestamp 是否已赋值
+                     * 
                      */
                     bool UpdateTimestampHasBeenSet() const;
 

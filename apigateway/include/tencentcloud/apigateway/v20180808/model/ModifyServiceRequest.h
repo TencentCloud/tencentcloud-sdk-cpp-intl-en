@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be modified.
                      * @return ServiceId Unique ID of the service to be modified.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be modified.
-                     * @param ServiceId Unique ID of the service to be modified.
+                     * @param _serviceId Unique ID of the service to be modified.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Service name after modification.
                      * @return ServiceName Service name after modification.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Service name after modification.
-                     * @param ServiceName Service name after modification.
+                     * @param _serviceName Service name after modification.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
                     /**
                      * 获取Service description after modification.
                      * @return ServiceDesc Service description after modification.
+                     * 
                      */
                     std::string GetServiceDesc() const;
 
                     /**
                      * 设置Service description after modification.
-                     * @param ServiceDesc Service description after modification.
+                     * @param _serviceDesc Service description after modification.
+                     * 
                      */
                     void SetServiceDesc(const std::string& _serviceDesc);
 
                     /**
                      * 判断参数 ServiceDesc 是否已赋值
                      * @return ServiceDesc 是否已赋值
+                     * 
                      */
                     bool ServiceDescHasBeenSet() const;
 
                     /**
                      * 获取Service frontend request type after modification, such as `http`, `https`, and `http&https`.
                      * @return Protocol Service frontend request type after modification, such as `http`, `https`, and `http&https`.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Service frontend request type after modification, such as `http`, `https`, and `http&https`.
-                     * @param Protocol Service frontend request type after modification, such as `http`, `https`, and `http&https`.
+                     * @param _protocol Service frontend request type after modification, such as `http`, `https`, and `http&https`.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
                      * @return NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+                     * 
                      */
                     std::vector<std::string> GetNetTypes() const;
 
                     /**
                      * 设置Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
-                     * @param NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+                     * @param _netTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+                     * 
                      */
                     void SetNetTypes(const std::vector<std::string>& _netTypes);
 
                     /**
                      * 判断参数 NetTypes 是否已赋值
                      * @return NetTypes 是否已赋值
+                     * 
                      */
                     bool NetTypesHasBeenSet() const;
 

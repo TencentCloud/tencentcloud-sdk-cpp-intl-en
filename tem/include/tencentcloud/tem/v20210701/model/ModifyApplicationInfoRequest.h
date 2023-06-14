@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Application ID
                      * @return ApplicationId Application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 
                     /**
                      * 获取(Disused) Whether to enable the call chain. 
                      * @return EnableTracing (Disused) Whether to enable the call chain. 
+                     * 
                      */
                     uint64_t GetEnableTracing() const;
 
                     /**
                      * 设置(Disused) Whether to enable the call chain. 
-                     * @param EnableTracing (Disused) Whether to enable the call chain. 
+                     * @param _enableTracing (Disused) Whether to enable the call chain. 
+                     * 
                      */
                     void SetEnableTracing(const uint64_t& _enableTracing);
 
                     /**
                      * 判断参数 EnableTracing 是否已赋值
                      * @return EnableTracing 是否已赋值
+                     * 
                      */
                     bool EnableTracingHasBeenSet() const;
 

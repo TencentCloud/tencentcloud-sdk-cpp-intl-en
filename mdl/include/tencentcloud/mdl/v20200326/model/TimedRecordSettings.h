@@ -53,6 +53,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return AutoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
 If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetAutoClear() const;
 
@@ -60,15 +61,17 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 设置Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
 If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param AutoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
+                     * @param _autoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
 If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAutoClear(const std::string& _autoClear);
 
                     /**
                      * 判断参数 AutoClear 是否已赋值
                      * @return AutoClear 是否已赋值
+                     * 
                      */
                     bool AutoClearHasBeenSet() const;
 

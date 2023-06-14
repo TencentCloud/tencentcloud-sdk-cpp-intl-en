@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取The file ID.
                      * @return FileId The file ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The file ID.
-                     * @param FileId The file ID.
+                     * @param _fileId The file ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取The file type, such as MP4 or MP3.
                      * @return FileType The file type, such as MP4 or MP3.
+                     * 
                      */
                     std::string GetFileType() const;
 
                     /**
                      * 设置The file type, such as MP4 or MP3.
-                     * @param FileType The file type, such as MP4 or MP3.
+                     * @param _fileType The file type, such as MP4 or MP3.
+                     * 
                      */
                     void SetFileType(const std::string& _fileType);
 
                     /**
                      * 判断参数 FileType 是否已赋值
                      * @return FileType 是否已赋值
+                     * 
                      */
                     bool FileTypeHasBeenSet() const;
 
                     /**
                      * 获取The playback URL of the output file.
                      * @return FileUrl The playback URL of the output file.
+                     * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
                      * 设置The playback URL of the output file.
-                     * @param FileUrl The playback URL of the output file.
+                     * @param _fileUrl The playback URL of the output file.
+                     * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
 
                     /**
                      * 判断参数 FileUrl 是否已赋值
                      * @return FileUrl 是否已赋值
+                     * 
                      */
                     bool FileUrlHasBeenSet() const;
 
                     /**
                      * 获取The filename, which can be up to 64 characters long.
                      * @return MediaName The filename, which can be up to 64 characters long.
+                     * 
                      */
                     std::string GetMediaName() const;
 
                     /**
                      * 设置The filename, which can be up to 64 characters long.
-                     * @param MediaName The filename, which can be up to 64 characters long.
+                     * @param _mediaName The filename, which can be up to 64 characters long.
+                     * 
                      */
                     void SetMediaName(const std::string& _mediaName);
 
                     /**
                      * 判断参数 MediaName 是否已赋值
                      * @return MediaName 是否已赋值
+                     * 
                      */
                     bool MediaNameHasBeenSet() const;
 
                     /**
                      * 获取The metadata of the video, including size, duration, video stream information, and audio stream information.
                      * @return MetaData The metadata of the video, including size, duration, video stream information, and audio stream information.
+                     * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
                      * 设置The metadata of the video, including size, duration, video stream information, and audio stream information.
-                     * @param MetaData The metadata of the video, including size, duration, video stream information, and audio stream information.
+                     * @param _metaData The metadata of the video, including size, duration, video stream information, and audio stream information.
+                     * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
 
                     /**
                      * 判断参数 MetaData 是否已赋值
                      * @return MetaData 是否已赋值
+                     * 
                      */
                     bool MetaDataHasBeenSet() const;
 

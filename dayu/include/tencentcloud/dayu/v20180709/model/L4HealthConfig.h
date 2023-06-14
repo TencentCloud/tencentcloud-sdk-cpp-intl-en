@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding protocol. Valid values: [TCP, UDP]
                      * @return Protocol Forwarding protocol. Valid values: [TCP, UDP]
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Forwarding protocol. Valid values: [TCP, UDP]
-                     * @param Protocol Forwarding protocol. Valid values: [TCP, UDP]
+                     * @param _protocol Forwarding protocol. Valid values: [TCP, UDP]
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Forwarding port
                      * @return VirtualPort Forwarding port
+                     * 
                      */
                     uint64_t GetVirtualPort() const;
 
                     /**
                      * 设置Forwarding port
-                     * @param VirtualPort Forwarding port
+                     * @param _virtualPort Forwarding port
+                     * 
                      */
                     void SetVirtualPort(const uint64_t& _virtualPort);
 
                     /**
                      * 判断参数 VirtualPort 是否已赋值
                      * @return VirtualPort 是否已赋值
+                     * 
                      */
                     bool VirtualPortHasBeenSet() const;
 
                     /**
                      * 获取1: enabled, 0: disabled
                      * @return Enable 1: enabled, 0: disabled
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置1: enabled, 0: disabled
-                     * @param Enable 1: enabled, 0: disabled
+                     * @param _enable 1: enabled, 0: disabled
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Response timeout period in seconds
                      * @return TimeOut Response timeout period in seconds
+                     * 
                      */
                     uint64_t GetTimeOut() const;
 
                     /**
                      * 设置Response timeout period in seconds
-                     * @param TimeOut Response timeout period in seconds
+                     * @param _timeOut Response timeout period in seconds
+                     * 
                      */
                     void SetTimeOut(const uint64_t& _timeOut);
 
                     /**
                      * 判断参数 TimeOut 是否已赋值
                      * @return TimeOut 是否已赋值
+                     * 
                      */
                     bool TimeOutHasBeenSet() const;
 
                     /**
                      * 获取Detection interval in seconds
                      * @return Interval Detection interval in seconds
+                     * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
                      * 设置Detection interval in seconds
-                     * @param Interval Detection interval in seconds
+                     * @param _interval Detection interval in seconds
+                     * 
                      */
                     void SetInterval(const uint64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Unhealthy threshold in times.
                      * @return KickNum Unhealthy threshold in times.
+                     * 
                      */
                     uint64_t GetKickNum() const;
 
                     /**
                      * 设置Unhealthy threshold in times.
-                     * @param KickNum Unhealthy threshold in times.
+                     * @param _kickNum Unhealthy threshold in times.
+                     * 
                      */
                     void SetKickNum(const uint64_t& _kickNum);
 
                     /**
                      * 判断参数 KickNum 是否已赋值
                      * @return KickNum 是否已赋值
+                     * 
                      */
                     bool KickNumHasBeenSet() const;
 
                     /**
                      * 获取Healthy threshold in times.
                      * @return AliveNum Healthy threshold in times.
+                     * 
                      */
                     uint64_t GetAliveNum() const;
 
                     /**
                      * 设置Healthy threshold in times.
-                     * @param AliveNum Healthy threshold in times.
+                     * @param _aliveNum Healthy threshold in times.
+                     * 
                      */
                     void SetAliveNum(const uint64_t& _aliveNum);
 
                     /**
                      * 判断参数 AliveNum 是否已赋值
                      * @return AliveNum 是否已赋值
+                     * 
                      */
                     bool AliveNumHasBeenSet() const;
 
                     /**
                      * 获取Session persistence duration in seconds
                      * @return KeepTime Session persistence duration in seconds
+                     * 
                      */
                     uint64_t GetKeepTime() const;
 
                     /**
                      * 设置Session persistence duration in seconds
-                     * @param KeepTime Session persistence duration in seconds
+                     * @param _keepTime Session persistence duration in seconds
+                     * 
                      */
                     void SetKeepTime(const uint64_t& _keepTime);
 
                     /**
                      * 判断参数 KeepTime 是否已赋值
                      * @return KeepTime 是否已赋值
+                     * 
                      */
                     bool KeepTimeHasBeenSet() const;
 

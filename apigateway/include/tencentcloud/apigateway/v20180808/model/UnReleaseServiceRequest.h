@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be deactivated.
                      * @return ServiceId Unique ID of the service to be deactivated.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be deactivated.
-                     * @param ServiceId Unique ID of the service to be deactivated.
+                     * @param _serviceId Unique ID of the service to be deactivated.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
                      * @return EnvironmentName Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
-                     * @param EnvironmentName Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * @param _environmentName Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取List of APIs to be deactivated, which is a reserved field.
                      * @return ApiIds List of APIs to be deactivated, which is a reserved field.
+                     * 
                      */
                     std::vector<std::string> GetApiIds() const;
 
                     /**
                      * 设置List of APIs to be deactivated, which is a reserved field.
-                     * @param ApiIds List of APIs to be deactivated, which is a reserved field.
+                     * @param _apiIds List of APIs to be deactivated, which is a reserved field.
+                     * 
                      */
                     void SetApiIds(const std::vector<std::string>& _apiIds);
 
                     /**
                      * 判断参数 ApiIds 是否已赋值
                      * @return ApiIds 是否已赋值
+                     * 
                      */
                     bool ApiIdsHasBeenSet() const;
 

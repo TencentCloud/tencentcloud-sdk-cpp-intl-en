@@ -48,12 +48,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of mappings.
                      * @return MapInfoList Array of mappings.
+                     * 
                      */
                     std::vector<MapInfo> GetMapInfoList() const;
 
                     /**
                      * 判断参数 MapInfoList 是否已赋值
                      * @return MapInfoList 是否已赋值
+                     * 
                      */
                     bool MapInfoListHasBeenSet() const;
 
@@ -62,12 +64,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ServerRegionRelation Mapping relationship between server region ID and sub-region ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<RegionMapRelation> GetServerRegionRelation() const;
 
                     /**
                      * 判断参数 ServerRegionRelation 是否已赋值
                      * @return ServerRegionRelation 是否已赋值
+                     * 
                      */
                     bool ServerRegionRelationHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ClientRegionRelation Mapping relationship between client region ID and sub-region ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<RegionMapRelation> GetClientRegionRelation() const;
 
                     /**
                      * 判断参数 ClientRegionRelation 是否已赋值
                      * @return ClientRegionRelation 是否已赋值
+                     * 
                      */
                     bool ClientRegionRelationHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of logs that meet query conditions
                      * @return AllTotal Total number of logs that meet query conditions
+                     * 
                      */
                     uint64_t GetAllTotal() const;
 
                     /**
                      * 判断参数 AllTotal 是否已赋值
                      * @return AllTotal 是否已赋值
+                     * 
                      */
                     bool AllTotalHasBeenSet() const;
 
                     /**
                      * 获取Number of logs returned for this request
                      * @return TotalCount Number of logs returned for this request
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OperateLogs Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<OperationLog> GetOperateLogs() const;
 
                     /**
                      * 判断参数 OperateLogs 是否已赋值
                      * @return OperateLogs 是否已赋值
+                     * 
                      */
                     bool OperateLogsHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Filter method. Valid values: `=`, `!=`, `in`.
                      * @return Type Filter method. Valid values: `=`, `!=`, `in`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Filter method. Valid values: `=`, `!=`, `in`.
-                     * @param Type Filter method. Valid values: `=`, `!=`, `in`.
+                     * @param _type Filter method. Valid values: `=`, `!=`, `in`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Filter dimension name
                      * @return Key Filter dimension name
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Filter dimension name
-                     * @param Key Filter dimension name
+                     * @param _key Filter dimension name
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Filter value. For the `in` filter method, separate multiple values by comma.
                      * @return Value Filter value. For the `in` filter method, separate multiple values by comma.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Filter value. For the `in` filter method, separate multiple values by comma.
-                     * @param Value Filter value. For the `in` filter method, separate multiple values by comma.
+                     * @param _value Filter value. For the `in` filter method, separate multiple values by comma.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Filter name
                      * @return Name Filter name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Filter name
-                     * @param Name Filter name
+                     * @param _name Filter name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Filter value range
                      * @return Values Filter value range
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Filter value range
-                     * @param Values Filter value range
+                     * @param _values Filter value range
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

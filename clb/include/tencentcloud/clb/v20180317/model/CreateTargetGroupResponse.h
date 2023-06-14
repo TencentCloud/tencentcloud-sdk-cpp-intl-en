@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID generated after target group creation
                      * @return TargetGroupId ID generated after target group creation
+                     * 
                      */
                     std::string GetTargetGroupId() const;
 
                     /**
                      * 判断参数 TargetGroupId 是否已赋值
                      * @return TargetGroupId 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID list. Each request can contain up to 100 instances at a time.
                      * @return InstanceIds Instance ID list. Each request can contain up to 100 instances at a time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Instance ID list. Each request can contain up to 100 instances at a time.
-                     * @param InstanceIds Instance ID list. Each request can contain up to 100 instances at a time.
+                     * @param _instanceIds Instance ID list. Each request can contain up to 100 instances at a time.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to allow login with the default key pair. Valid values: YES: yes; NO: no.
                      * @return PermitLogin Whether to allow login with the default key pair. Valid values: YES: yes; NO: no.
+                     * 
                      */
                     std::string GetPermitLogin() const;
 
                     /**
                      * 设置Whether to allow login with the default key pair. Valid values: YES: yes; NO: no.
-                     * @param PermitLogin Whether to allow login with the default key pair. Valid values: YES: yes; NO: no.
+                     * @param _permitLogin Whether to allow login with the default key pair. Valid values: YES: yes; NO: no.
+                     * 
                      */
                     void SetPermitLogin(const std::string& _permitLogin);
 
                     /**
                      * 判断参数 PermitLogin 是否已赋值
                      * @return PermitLogin 是否已赋值
+                     * 
                      */
                     bool PermitLoginHasBeenSet() const;
 

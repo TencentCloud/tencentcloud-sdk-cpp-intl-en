@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Access command information
                      * @return Data Access command information
+                     * 
                      */
                     std::vector<SourceCommand> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

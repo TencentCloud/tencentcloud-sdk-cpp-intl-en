@@ -47,228 +47,266 @@ namespace TencentCloud
                     /**
                      * 获取Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
                      * @return StartTimeMin Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+                     * 
                      */
                     int64_t GetStartTimeMin() const;
 
                     /**
                      * 判断参数 StartTimeMin 是否已赋值
                      * @return StartTimeMin 是否已赋值
+                     * 
                      */
                     bool StartTimeMinHasBeenSet() const;
 
                     /**
                      * 获取Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
                      * @return StartTimeMax Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
+                     * 
                      */
                     int64_t GetStartTimeMax() const;
 
                     /**
                      * 判断参数 StartTimeMax 是否已赋值
                      * @return StartTimeMax 是否已赋值
+                     * 
                      */
                     bool StartTimeMaxHasBeenSet() const;
 
                     /**
                      * 获取Backup file retention period in days.
                      * @return BackupExpireDays Backup file retention period in days.
+                     * 
                      */
                     int64_t GetBackupExpireDays() const;
 
                     /**
                      * 判断参数 BackupExpireDays 是否已赋值
                      * @return BackupExpireDays 是否已赋值
+                     * 
                      */
                     bool BackupExpireDaysHasBeenSet() const;
 
                     /**
                      * 获取Backup mode. Value range: physical, logical
                      * @return BackupMethod Backup mode. Value range: physical, logical
+                     * 
                      */
                     std::string GetBackupMethod() const;
 
                     /**
                      * 判断参数 BackupMethod 是否已赋值
                      * @return BackupMethod 是否已赋值
+                     * 
                      */
                     bool BackupMethodHasBeenSet() const;
 
                     /**
                      * 获取Binlog file retention period in days.
                      * @return BinlogExpireDays Binlog file retention period in days.
+                     * 
                      */
                     int64_t GetBinlogExpireDays() const;
 
                     /**
                      * 判断参数 BinlogExpireDays 是否已赋值
                      * @return BinlogExpireDays 是否已赋值
+                     * 
                      */
                     bool BinlogExpireDaysHasBeenSet() const;
 
                     /**
                      * 获取Time window for automatic instance backup.
                      * @return BackupTimeWindow Time window for automatic instance backup.
+                     * 
                      */
                     CommonTimeWindow GetBackupTimeWindow() const;
 
                     /**
                      * 判断参数 BackupTimeWindow 是否已赋值
                      * @return BackupTimeWindow 是否已赋值
+                     * 
                      */
                     bool BackupTimeWindowHasBeenSet() const;
 
                     /**
                      * 获取Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
                      * @return EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+                     * 
                      */
                     std::string GetEnableBackupPeriodSave() const;
 
                     /**
                      * 判断参数 EnableBackupPeriodSave 是否已赋值
                      * @return EnableBackupPeriodSave 是否已赋值
+                     * 
                      */
                     bool EnableBackupPeriodSaveHasBeenSet() const;
 
                     /**
                      * 获取Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
                      * @return BackupPeriodSaveDays Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+                     * 
                      */
                     int64_t GetBackupPeriodSaveDays() const;
 
                     /**
                      * 判断参数 BackupPeriodSaveDays 是否已赋值
                      * @return BackupPeriodSaveDays 是否已赋值
+                     * 
                      */
                     bool BackupPeriodSaveDaysHasBeenSet() const;
 
                     /**
                      * 获取Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
                      * @return BackupPeriodSaveInterval Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+                     * 
                      */
                     std::string GetBackupPeriodSaveInterval() const;
 
                     /**
                      * 判断参数 BackupPeriodSaveInterval 是否已赋值
                      * @return BackupPeriodSaveInterval 是否已赋值
+                     * 
                      */
                     bool BackupPeriodSaveIntervalHasBeenSet() const;
 
                     /**
                      * 获取Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
                      * @return BackupPeriodSaveCount Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+                     * 
                      */
                     int64_t GetBackupPeriodSaveCount() const;
 
                     /**
                      * 判断参数 BackupPeriodSaveCount 是否已赋值
                      * @return BackupPeriodSaveCount 是否已赋值
+                     * 
                      */
                     bool BackupPeriodSaveCountHasBeenSet() const;
 
                     /**
                      * 获取The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
                      * @return StartBackupPeriodSaveDate The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+                     * 
                      */
                     std::string GetStartBackupPeriodSaveDate() const;
 
                     /**
                      * 判断参数 StartBackupPeriodSaveDate 是否已赋值
                      * @return StartBackupPeriodSaveDate 是否已赋值
+                     * 
                      */
                     bool StartBackupPeriodSaveDateHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
                      * @return EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 
                      */
                     std::string GetEnableBackupArchive() const;
 
                     /**
                      * 判断参数 EnableBackupArchive 是否已赋值
                      * @return EnableBackupArchive 是否已赋值
+                     * 
                      */
                     bool EnableBackupArchiveHasBeenSet() const;
 
                     /**
                      * 获取The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
                      * @return BackupArchiveDays The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     * 
                      */
                     int64_t GetBackupArchiveDays() const;
 
                     /**
                      * 判断参数 BackupArchiveDays 是否已赋值
                      * @return BackupArchiveDays 是否已赋值
+                     * 
                      */
                     bool BackupArchiveDaysHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
                      * @return EnableBinlogArchive Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 
                      */
                     std::string GetEnableBinlogArchive() const;
 
                     /**
                      * 判断参数 EnableBinlogArchive 是否已赋值
                      * @return EnableBinlogArchive 是否已赋值
+                     * 
                      */
                     bool EnableBinlogArchiveHasBeenSet() const;
 
                     /**
                      * 获取The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
                      * @return BinlogArchiveDays The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     * 
                      */
                     int64_t GetBinlogArchiveDays() const;
 
                     /**
                      * 判断参数 BinlogArchiveDays 是否已赋值
                      * @return BinlogArchiveDays 是否已赋值
+                     * 
                      */
                     bool BinlogArchiveDaysHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
                      * @return EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 
                      */
                     std::string GetEnableBackupStandby() const;
 
                     /**
                      * 判断参数 EnableBackupStandby 是否已赋值
                      * @return EnableBackupStandby 是否已赋值
+                     * 
                      */
                     bool EnableBackupStandbyHasBeenSet() const;
 
                     /**
                      * 获取The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
                      * @return BackupStandbyDays The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     * 
                      */
                     int64_t GetBackupStandbyDays() const;
 
                     /**
                      * 判断参数 BackupStandbyDays 是否已赋值
                      * @return BackupStandbyDays 是否已赋值
+                     * 
                      */
                     bool BackupStandbyDaysHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
                      * @return EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * 
                      */
                     std::string GetEnableBinlogStandby() const;
 
                     /**
                      * 判断参数 EnableBinlogStandby 是否已赋值
                      * @return EnableBinlogStandby 是否已赋值
+                     * 
                      */
                     bool EnableBinlogStandbyHasBeenSet() const;
 
                     /**
                      * 获取The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
                      * @return BinlogStandbyDays The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     * 
                      */
                     int64_t GetBinlogStandbyDays() const;
 
                     /**
                      * 判断参数 BinlogStandbyDays 是否已赋值
                      * @return BinlogStandbyDays 是否已赋值
+                     * 
                      */
                     bool BinlogStandbyDaysHasBeenSet() const;
 

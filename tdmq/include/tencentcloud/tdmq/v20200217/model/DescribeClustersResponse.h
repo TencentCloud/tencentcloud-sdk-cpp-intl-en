@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of clusters.
                      * @return TotalCount The number of clusters.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Cluster information list
                      * @return ClusterSet Cluster information list
+                     * 
                      */
                     std::vector<Cluster> GetClusterSet() const;
 
                     /**
                      * 判断参数 ClusterSet 是否已赋值
                      * @return ClusterSet 是否已赋值
+                     * 
                      */
                     bool ClusterSetHasBeenSet() const;
 

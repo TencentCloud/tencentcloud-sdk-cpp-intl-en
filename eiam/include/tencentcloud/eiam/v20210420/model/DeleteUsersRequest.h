@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
                      * @return DeleteIdList List of IDs of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+                     * 
                      */
                     std::vector<std::string> GetDeleteIdList() const;
 
                     /**
                      * 设置List of IDs of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
-                     * @param DeleteIdList List of IDs of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+                     * @param _deleteIdList List of IDs of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+                     * 
                      */
                     void SetDeleteIdList(const std::vector<std::string>& _deleteIdList);
 
                     /**
                      * 判断参数 DeleteIdList 是否已赋值
                      * @return DeleteIdList 是否已赋值
+                     * 
                      */
                     bool DeleteIdListHasBeenSet() const;
 
                     /**
                      * 获取List of usernames of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
                      * @return DeleteNameList List of usernames of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+                     * 
                      */
                     std::vector<std::string> GetDeleteNameList() const;
 
                     /**
                      * 设置List of usernames of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
-                     * @param DeleteNameList List of usernames of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+                     * @param _deleteNameList List of usernames of the users to be deleted. You need to specify at least `DeleteIdList` or `DeleteNameList`. If both are specified, `DeleteNameList` will be used first.
+                     * 
                      */
                     void SetDeleteNameList(const std::vector<std::string>& _deleteNameList);
 
                     /**
                      * 判断参数 DeleteNameList 是否已赋值
                      * @return DeleteNameList 是否已赋值
+                     * 
                      */
                     bool DeleteNameListHasBeenSet() const;
 

@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Activity ID
                      * @return ActivityId Activity ID
+                     * 
                      */
                     std::string GetActivityId() const;
 
                     /**
                      * 设置Activity ID
-                     * @param ActivityId Activity ID
+                     * @param _activityId Activity ID
+                     * 
                      */
                     void SetActivityId(const std::string& _activityId);
 
                     /**
                      * 判断参数 ActivityId 是否已赋值
                      * @return ActivityId 是否已赋值
+                     * 
                      */
                     bool ActivityIdHasBeenSet() const;
 
                     /**
                      * 获取Compute node ID
                      * @return ComputeNodeId Compute node ID
+                     * 
                      */
                     std::string GetComputeNodeId() const;
 
                     /**
                      * 设置Compute node ID
-                     * @param ComputeNodeId Compute node ID
+                     * @param _computeNodeId Compute node ID
+                     * 
                      */
                     void SetComputeNodeId(const std::string& _computeNodeId);
 
                     /**
                      * 判断参数 ComputeNodeId 是否已赋值
                      * @return ComputeNodeId 是否已赋值
+                     * 
                      */
                     bool ComputeNodeIdHasBeenSet() const;
 
                     /**
                      * 获取Activity type. Values: `CREATE_COMPUTE_NODE`, `TERMINATE_COMPUTE_NODE`
                      * @return ComputeNodeActivityType Activity type. Values: `CREATE_COMPUTE_NODE`, `TERMINATE_COMPUTE_NODE`
+                     * 
                      */
                     std::string GetComputeNodeActivityType() const;
 
                     /**
                      * 设置Activity type. Values: `CREATE_COMPUTE_NODE`, `TERMINATE_COMPUTE_NODE`
-                     * @param ComputeNodeActivityType Activity type. Values: `CREATE_COMPUTE_NODE`, `TERMINATE_COMPUTE_NODE`
+                     * @param _computeNodeActivityType Activity type. Values: `CREATE_COMPUTE_NODE`, `TERMINATE_COMPUTE_NODE`
+                     * 
                      */
                     void SetComputeNodeActivityType(const std::string& _computeNodeActivityType);
 
                     /**
                      * 判断参数 ComputeNodeActivityType 是否已赋值
                      * @return ComputeNodeActivityType 是否已赋值
+                     * 
                      */
                     bool ComputeNodeActivityTypeHasBeenSet() const;
 
                     /**
                      * 获取Compute environment ID
                      * @return EnvId Compute environment ID
+                     * 
                      */
                     std::string GetEnvId() const;
 
                     /**
                      * 设置Compute environment ID
-                     * @param EnvId Compute environment ID
+                     * @param _envId Compute environment ID
+                     * 
                      */
                     void SetEnvId(const std::string& _envId);
 
                     /**
                      * 判断参数 EnvId 是否已赋值
                      * @return EnvId 是否已赋值
+                     * 
                      */
                     bool EnvIdHasBeenSet() const;
 
                     /**
                      * 获取Cause of the activity
                      * @return Cause Cause of the activity
+                     * 
                      */
                     std::string GetCause() const;
 
                     /**
                      * 设置Cause of the activity
-                     * @param Cause Cause of the activity
+                     * @param _cause Cause of the activity
+                     * 
                      */
                     void SetCause(const std::string& _cause);
 
                     /**
                      * 判断参数 Cause 是否已赋值
                      * @return Cause 是否已赋值
+                     * 
                      */
                     bool CauseHasBeenSet() const;
 
                     /**
                      * 获取Activity state
                      * @return ActivityState Activity state
+                     * 
                      */
                     std::string GetActivityState() const;
 
                     /**
                      * 设置Activity state
-                     * @param ActivityState Activity state
+                     * @param _activityState Activity state
+                     * 
                      */
                     void SetActivityState(const std::string& _activityState);
 
                     /**
                      * 判断参数 ActivityState 是否已赋值
                      * @return ActivityState 是否已赋值
+                     * 
                      */
                     bool ActivityStateHasBeenSet() const;
 
                     /**
                      * 获取Reason of going to this state
                      * @return StateReason Reason of going to this state
+                     * 
                      */
                     std::string GetStateReason() const;
 
                     /**
                      * 设置Reason of going to this state
-                     * @param StateReason Reason of going to this state
+                     * @param _stateReason Reason of going to this state
+                     * 
                      */
                     void SetStateReason(const std::string& _stateReason);
 
                     /**
                      * 判断参数 StateReason 是否已赋值
                      * @return StateReason 是否已赋值
+                     * 
                      */
                     bool StateReasonHasBeenSet() const;
 
                     /**
                      * 获取Activity start time
                      * @return StartTime Activity start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Activity start time
-                     * @param StartTime Activity start time
+                     * @param _startTime Activity start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -195,20 +219,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EndTime Activity end time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Activity end time
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EndTime Activity end time
+                     * @param _endTime Activity end time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -217,20 +244,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceId CVM instance ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置CVM instance ID
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstanceId CVM instance ID
+                     * @param _instanceId CVM instance ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

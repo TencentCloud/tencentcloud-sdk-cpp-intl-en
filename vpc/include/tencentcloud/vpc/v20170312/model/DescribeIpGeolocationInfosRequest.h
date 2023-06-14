@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
                      * @return AddressIps The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
+                     * 
                      */
                     std::vector<std::string> GetAddressIps() const;
 
                     /**
                      * 设置The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
-                     * @param AddressIps The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
+                     * @param _addressIps The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
+                     * 
                      */
                     void SetAddressIps(const std::vector<std::string>& _addressIps);
 
                     /**
                      * 判断参数 AddressIps 是否已赋值
                      * @return AddressIps 是否已赋值
+                     * 
                      */
                     bool AddressIpsHasBeenSet() const;
 
                     /**
                      * 获取Fields of the IP addresses to be queried.
                      * @return Fields Fields of the IP addresses to be queried.
+                     * 
                      */
                     IpField GetFields() const;
 
                     /**
                      * 设置Fields of the IP addresses to be queried.
-                     * @param Fields Fields of the IP addresses to be queried.
+                     * @param _fields Fields of the IP addresses to be queried.
+                     * 
                      */
                     void SetFields(const IpField& _fields);
 
                     /**
                      * 判断参数 Fields 是否已赋值
                      * @return Fields 是否已赋值
+                     * 
                      */
                     bool FieldsHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return Info List of timeout parameter configuration
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<CacheInfoInfo> GetInfo() const;
 
                     /**
                      * 设置List of timeout parameter configuration
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param Info List of timeout parameter configuration
+                     * @param _info List of timeout parameter configuration
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInfo(const std::vector<CacheInfoInfo>& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

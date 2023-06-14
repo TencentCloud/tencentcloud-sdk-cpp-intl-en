@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
                      * @return CosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * 
                      */
                     std::string GetCosFileURI() const;
 
                     /**
                      * 设置The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
-                     * @param CosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * @param _cosFileURI The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+                     * 
                      */
                     void SetCosFileURI(const std::string& _cosFileURI);
 
                     /**
                      * 判断参数 CosFileURI 是否已赋值
                      * @return CosFileURI 是否已赋值
+                     * 
                      */
                     bool CosFileURIHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 <li>`resourceAfter`: After node initialization</li>
 <li>`clusterAfter`: After cluster start</li>
 <li>`clusterBefore`: Before cluster start</li>
+                     * 
                      */
                     std::string GetExecutionMoment() const;
 
@@ -81,52 +85,60 @@ namespace TencentCloud
 <li>`resourceAfter`: After node initialization</li>
 <li>`clusterAfter`: After cluster start</li>
 <li>`clusterBefore`: Before cluster start</li>
-                     * @param ExecutionMoment The execution time of the bootstrap action script. Valid values:
+                     * @param _executionMoment The execution time of the bootstrap action script. Valid values:
 <li>`resourceAfter`: After node initialization</li>
 <li>`clusterAfter`: After cluster start</li>
 <li>`clusterBefore`: Before cluster start</li>
+                     * 
                      */
                     void SetExecutionMoment(const std::string& _executionMoment);
 
                     /**
                      * 判断参数 ExecutionMoment 是否已赋值
                      * @return ExecutionMoment 是否已赋值
+                     * 
                      */
                     bool ExecutionMomentHasBeenSet() const;
 
                     /**
                      * 获取The execution script parameter. The parameter format must comply with standard shell specifications.
                      * @return Args The execution script parameter. The parameter format must comply with standard shell specifications.
+                     * 
                      */
                     std::vector<std::string> GetArgs() const;
 
                     /**
                      * 设置The execution script parameter. The parameter format must comply with standard shell specifications.
-                     * @param Args The execution script parameter. The parameter format must comply with standard shell specifications.
+                     * @param _args The execution script parameter. The parameter format must comply with standard shell specifications.
+                     * 
                      */
                     void SetArgs(const std::vector<std::string>& _args);
 
                     /**
                      * 判断参数 Args 是否已赋值
                      * @return Args 是否已赋值
+                     * 
                      */
                     bool ArgsHasBeenSet() const;
 
                     /**
                      * 获取The script file name.
                      * @return CosFileName The script file name.
+                     * 
                      */
                     std::string GetCosFileName() const;
 
                     /**
                      * 设置The script file name.
-                     * @param CosFileName The script file name.
+                     * @param _cosFileName The script file name.
+                     * 
                      */
                     void SetCosFileName(const std::string& _cosFileName);
 
                     /**
                      * 判断参数 CosFileName 是否已赋值
                      * @return CosFileName 是否已赋值
+                     * 
                      */
                     bool CosFileNameHasBeenSet() const;
 

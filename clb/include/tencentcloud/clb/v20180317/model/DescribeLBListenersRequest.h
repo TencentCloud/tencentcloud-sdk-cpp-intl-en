@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取List of private network IPs to be queried.
                      * @return Backends List of private network IPs to be queried.
+                     * 
                      */
                     std::vector<LbRsItem> GetBackends() const;
 
                     /**
                      * 设置List of private network IPs to be queried.
-                     * @param Backends List of private network IPs to be queried.
+                     * @param _backends List of private network IPs to be queried.
+                     * 
                      */
                     void SetBackends(const std::vector<LbRsItem>& _backends);
 
                     /**
                      * 判断参数 Backends 是否已赋值
                      * @return Backends 是否已赋值
+                     * 
                      */
                     bool BackendsHasBeenSet() const;
 

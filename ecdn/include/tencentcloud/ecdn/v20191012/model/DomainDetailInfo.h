@@ -59,54 +59,63 @@ namespace TencentCloud
                     /**
                      * 获取Domain name ID.
                      * @return ResourceId Domain name ID.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Domain name ID.
-                     * @param ResourceId Domain name ID.
+                     * @param _resourceId Domain name ID.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Tencent Cloud account ID.
                      * @return AppId Tencent Cloud account ID.
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 设置Tencent Cloud account ID.
-                     * @param AppId Tencent Cloud account ID.
+                     * @param _appId Tencent Cloud account ID.
+                     * 
                      */
                     void SetAppId(const int64_t& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取Acceleration domain name.
                      * @return Domain Acceleration domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Acceleration domain name.
-                     * @param Domain Acceleration domain name.
+                     * @param _domain Acceleration domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -115,110 +124,128 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Cname Domain name CNAME.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置Domain name CNAME.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Cname Domain name CNAME.
+                     * @param _cname Domain name CNAME.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 
                     /**
                      * 获取Domain name status. Valid values: pending (reviewing), rejected (rejected), processing (deploying after approval), online (enabled), offline (disabled), deleted (deleted).
                      * @return Status Domain name status. Valid values: pending (reviewing), rejected (rejected), processing (deploying after approval), online (enabled), offline (disabled), deleted (deleted).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Domain name status. Valid values: pending (reviewing), rejected (rejected), processing (deploying after approval), online (enabled), offline (disabled), deleted (deleted).
-                     * @param Status Domain name status. Valid values: pending (reviewing), rejected (rejected), processing (deploying after approval), online (enabled), offline (disabled), deleted (deleted).
+                     * @param _status Domain name status. Valid values: pending (reviewing), rejected (rejected), processing (deploying after approval), online (enabled), offline (disabled), deleted (deleted).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Project ID.
                      * @return ProjectId Project ID.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID.
-                     * @param ProjectId Project ID.
+                     * @param _projectId Project ID.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name creation time.
                      * @return CreateTime Domain name creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Domain name creation time.
-                     * @param CreateTime Domain name creation time.
+                     * @param _createTime Domain name creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Domain name update time.
                      * @return UpdateTime Domain name update time.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Domain name update time.
-                     * @param UpdateTime Domain name update time.
+                     * @param _updateTime Domain name update time.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Origin server configuration.
                      * @return Origin Origin server configuration.
+                     * 
                      */
                     Origin GetOrigin() const;
 
                     /**
                      * 设置Origin server configuration.
-                     * @param Origin Origin server configuration.
+                     * @param _origin Origin server configuration.
+                     * 
                      */
                     void SetOrigin(const Origin& _origin);
 
                     /**
                      * 判断参数 Origin 是否已赋值
                      * @return Origin 是否已赋值
+                     * 
                      */
                     bool OriginHasBeenSet() const;
 
@@ -227,20 +254,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
                      * 设置IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IpFilter IP blocklist/allowlist configuration.
+                     * @param _ipFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
 
                     /**
                      * 判断参数 IpFilter 是否已赋值
                      * @return IpFilter 是否已赋值
+                     * 
                      */
                     bool IpFilterHasBeenSet() const;
 
@@ -249,20 +279,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IpFreqLimit IP access limit configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     IpFreqLimit GetIpFreqLimit() const;
 
                     /**
                      * 设置IP access limit configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IpFreqLimit IP access limit configuration.
+                     * @param _ipFreqLimit IP access limit configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpFreqLimit(const IpFreqLimit& _ipFreqLimit);
 
                     /**
                      * 判断参数 IpFreqLimit 是否已赋值
                      * @return IpFreqLimit 是否已赋值
+                     * 
                      */
                     bool IpFreqLimitHasBeenSet() const;
 
@@ -271,20 +304,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResponseHeader Origin server response header configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ResponseHeader GetResponseHeader() const;
 
                     /**
                      * 设置Origin server response header configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResponseHeader Origin server response header configuration.
+                     * @param _responseHeader Origin server response header configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResponseHeader(const ResponseHeader& _responseHeader);
 
                     /**
                      * 判断参数 ResponseHeader 是否已赋值
                      * @return ResponseHeader 是否已赋值
+                     * 
                      */
                     bool ResponseHeaderHasBeenSet() const;
 
@@ -293,20 +329,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CacheKey Node caching configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CacheKey GetCacheKey() const;
 
                     /**
                      * 设置Node caching configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CacheKey Node caching configuration.
+                     * @param _cacheKey Node caching configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCacheKey(const CacheKey& _cacheKey);
 
                     /**
                      * 判断参数 CacheKey 是否已赋值
                      * @return CacheKey 是否已赋值
+                     * 
                      */
                     bool CacheKeyHasBeenSet() const;
 
@@ -315,20 +354,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Cache Caching rule configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Cache GetCache() const;
 
                     /**
                      * 设置Caching rule configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Cache Caching rule configuration.
+                     * @param _cache Caching rule configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCache(const Cache& _cache);
 
                     /**
                      * 判断参数 Cache 是否已赋值
                      * @return Cache 是否已赋值
+                     * 
                      */
                     bool CacheHasBeenSet() const;
 
@@ -337,20 +379,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Https HTTPS configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Https GetHttps() const;
 
                     /**
                      * 设置HTTPS configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Https HTTPS configuration.
+                     * @param _https HTTPS configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttps(const Https& _https);
 
                     /**
                      * 判断参数 Https 是否已赋值
                      * @return Https 是否已赋值
+                     * 
                      */
                     bool HttpsHasBeenSet() const;
 
@@ -359,20 +404,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Disable Domain name blockage status. Valid values: normal (normal), overdue (service is suspended due to arrears), quota (trial traffic package is used up), malicious (malicious user), ddos (DDoS attack), idle (no traffic), unlicensed (no ICP filing), capping (bandwidth cap reached), readonly (read-only).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisable() const;
 
                     /**
                      * 设置Domain name blockage status. Valid values: normal (normal), overdue (service is suspended due to arrears), quota (trial traffic package is used up), malicious (malicious user), ddos (DDoS attack), idle (no traffic), unlicensed (no ICP filing), capping (bandwidth cap reached), readonly (read-only).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Disable Domain name blockage status. Valid values: normal (normal), overdue (service is suspended due to arrears), quota (trial traffic package is used up), malicious (malicious user), ddos (DDoS attack), idle (no traffic), unlicensed (no ICP filing), capping (bandwidth cap reached), readonly (read-only).
+                     * @param _disable Domain name blockage status. Valid values: normal (normal), overdue (service is suspended due to arrears), quota (trial traffic package is used up), malicious (malicious user), ddos (DDoS attack), idle (no traffic), unlicensed (no ICP filing), capping (bandwidth cap reached), readonly (read-only).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisable(const std::string& _disable);
 
                     /**
                      * 判断参数 Disable 是否已赋值
                      * @return Disable 是否已赋值
+                     * 
                      */
                     bool DisableHasBeenSet() const;
 
@@ -381,20 +429,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ForceRedirect Forced access protocol redirection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ForceRedirect GetForceRedirect() const;
 
                     /**
                      * 设置Forced access protocol redirection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ForceRedirect Forced access protocol redirection configuration.
+                     * @param _forceRedirect Forced access protocol redirection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetForceRedirect(const ForceRedirect& _forceRedirect);
 
                     /**
                      * 判断参数 ForceRedirect 是否已赋值
                      * @return ForceRedirect 是否已赋值
+                     * 
                      */
                     bool ForceRedirectHasBeenSet() const;
 
@@ -403,20 +454,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Area Acceleration region. Valid values: mainland, overseas, global.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Acceleration region. Valid values: mainland, overseas, global.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Area Acceleration region. Valid values: mainland, overseas, global.
+                     * @param _area Acceleration region. Valid values: mainland, overseas, global.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -425,20 +479,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Readonly Domain name lock status. normal: not locked; global: globally locked.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReadonly() const;
 
                     /**
                      * 设置Domain name lock status. normal: not locked; global: globally locked.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Readonly Domain name lock status. normal: not locked; global: globally locked.
+                     * @param _readonly Domain name lock status. normal: not locked; global: globally locked.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReadonly(const std::string& _readonly);
 
                     /**
                      * 判断参数 Readonly 是否已赋值
                      * @return Readonly 是否已赋值
+                     * 
                      */
                     bool ReadonlyHasBeenSet() const;
 
@@ -447,20 +504,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Tag Domain name tag
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTag() const;
 
                     /**
                      * 设置Domain name tag
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Tag Domain name tag
+                     * @param _tag Domain name tag
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTag(const std::vector<Tag>& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
@@ -469,20 +529,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return WebSocket WebSocket configuration.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     WebSocket GetWebSocket() const;
 
                     /**
                      * 设置WebSocket configuration.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param WebSocket WebSocket configuration.
+                     * @param _webSocket WebSocket configuration.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWebSocket(const WebSocket& _webSocket);
 
                     /**
                      * 判断参数 WebSocket 是否已赋值
                      * @return WebSocket 是否已赋值
+                     * 
                      */
                     bool WebSocketHasBeenSet() const;
 

@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Instance login settings.
                      * @return LoginSettings Instance login settings.
+                     * 
                      */
                     LoginSettings GetLoginSettings() const;
 
                     /**
                      * 设置Instance login settings.
-                     * @param LoginSettings Instance login settings.
+                     * @param _loginSettings Instance login settings.
+                     * 
                      */
                     void SetLoginSettings(const LoginSettings& _loginSettings);
 
                     /**
                      * 判断参数 LoginSettings 是否已赋值
                      * @return LoginSettings 是否已赋值
+                     * 
                      */
                     bool LoginSettingsHasBeenSet() const;
 

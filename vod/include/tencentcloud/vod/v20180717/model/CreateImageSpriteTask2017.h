@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Image sprite generating task ID.
                      * @return TaskId Image sprite generating task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Image sprite generating task ID.
-                     * @param TaskId Image sprite generating task ID.
+                     * @param _taskId Image sprite generating task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -73,6 +76,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
@@ -81,16 +85,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ErrCode Error code
+                     * @param _errCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Message Error message.
+                     * @param _message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileId ID of generated image sprite file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置ID of generated image sprite file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileId ID of generated image sprite file.
+                     * @param _fileId ID of generated image sprite file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -143,20 +155,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Definition Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Definition Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -165,20 +180,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of subimages in image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of subimages in image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of subimages in image sprite.
+                     * @param _totalCount Total number of subimages in image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const uint64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -187,20 +205,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageSpriteUrlSet Address of output image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetImageSpriteUrlSet() const;
 
                     /**
                      * 设置Address of output image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ImageSpriteUrlSet Address of output image sprite.
+                     * @param _imageSpriteUrlSet Address of output image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageSpriteUrlSet(const std::vector<std::string>& _imageSpriteUrlSet);
 
                     /**
                      * 判断参数 ImageSpriteUrlSet 是否已赋值
                      * @return ImageSpriteUrlSet 是否已赋值
+                     * 
                      */
                     bool ImageSpriteUrlSetHasBeenSet() const;
 
@@ -209,20 +230,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetWebVttUrl() const;
 
                     /**
                      * 设置Address of WebVtt file for the position-time relationship among subimages in an image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite.
+                     * @param _webVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWebVttUrl(const std::string& _webVttUrl);
 
                     /**
                      * 判断参数 WebVttUrl 是否已赋值
                      * @return WebVttUrl 是否已赋值
+                     * 
                      */
                     bool WebVttUrlHasBeenSet() const;
 

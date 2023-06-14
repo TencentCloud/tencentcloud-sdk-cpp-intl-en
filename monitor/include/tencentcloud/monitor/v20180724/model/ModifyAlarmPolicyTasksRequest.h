@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Module name. Enter "monitor" here
                      * @return Module Module name. Enter "monitor" here
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Module name. Enter "monitor" here
-                     * @param Module Module name. Enter "monitor" here
+                     * @param _module Module name. Enter "monitor" here
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy ID
                      * @return PolicyId Alarm policy ID
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Alarm policy ID
-                     * @param PolicyId Alarm policy ID
+                     * @param _policyId Alarm policy ID
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取List of tasks triggered by alarm policy. If this parameter is left empty, it indicates to unbind all tasks
                      * @return TriggerTasks List of tasks triggered by alarm policy. If this parameter is left empty, it indicates to unbind all tasks
+                     * 
                      */
                     std::vector<AlarmPolicyTriggerTask> GetTriggerTasks() const;
 
                     /**
                      * 设置List of tasks triggered by alarm policy. If this parameter is left empty, it indicates to unbind all tasks
-                     * @param TriggerTasks List of tasks triggered by alarm policy. If this parameter is left empty, it indicates to unbind all tasks
+                     * @param _triggerTasks List of tasks triggered by alarm policy. If this parameter is left empty, it indicates to unbind all tasks
+                     * 
                      */
                     void SetTriggerTasks(const std::vector<AlarmPolicyTriggerTask>& _triggerTasks);
 
                     /**
                      * 判断参数 TriggerTasks 是否已赋值
                      * @return TriggerTasks 是否已赋值
+                     * 
                      */
                     bool TriggerTasksHasBeenSet() const;
 

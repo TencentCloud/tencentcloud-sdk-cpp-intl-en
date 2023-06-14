@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of operation limits.
                      * @return DeniedActions List of operation limits.
+                     * 
                      */
                     std::vector<DeniedAction> GetDeniedActions() const;
 
                     /**
                      * 设置List of operation limits.
-                     * @param DeniedActions List of operation limits.
+                     * @param _deniedActions List of operation limits.
+                     * 
                      */
                     void SetDeniedActions(const std::vector<DeniedAction>& _deniedActions);
 
                     /**
                      * 判断参数 DeniedActions 是否已赋值
                      * @return DeniedActions 是否已赋值
+                     * 
                      */
                     bool DeniedActionsHasBeenSet() const;
 

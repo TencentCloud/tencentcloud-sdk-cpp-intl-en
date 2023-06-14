@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of users associated with the User Group
                      * @return TotalNum Total number of users associated with the User Group
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 
                     /**
                      * 获取Sub-user information
                      * @return UserInfo Sub-user information
+                     * 
                      */
                     std::vector<GroupMemberInfo> GetUserInfo() const;
 
                     /**
                      * 判断参数 UserInfo 是否已赋值
                      * @return UserInfo 是否已赋值
+                     * 
                      */
                     bool UserInfoHasBeenSet() const;
 

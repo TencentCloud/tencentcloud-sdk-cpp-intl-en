@@ -55,6 +55,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `on`: Do not cache
 `off`: Cache
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `on`: Do not cache
 `off`: Cache
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Switch Whether to cache the configuration
+                     * @param _switch Whether to cache the configuration
 `on`: Do not cache
 `off`: Cache
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

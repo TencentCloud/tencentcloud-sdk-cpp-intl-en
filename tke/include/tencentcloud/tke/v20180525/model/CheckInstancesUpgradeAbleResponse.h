@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取The current minor version of cluster Master
                      * @return ClusterVersion The current minor version of cluster Master
+                     * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
                      * 判断参数 ClusterVersion 是否已赋值
                      * @return ClusterVersion 是否已赋值
+                     * 
                      */
                     bool ClusterVersionHasBeenSet() const;
 
                     /**
                      * 获取The latest minor version of cluster Master corresponding major version
                      * @return LatestVersion The latest minor version of cluster Master corresponding major version
+                     * 
                      */
                     std::string GetLatestVersion() const;
 
                     /**
                      * 判断参数 LatestVersion 是否已赋值
                      * @return LatestVersion 是否已赋值
+                     * 
                      */
                     bool LatestVersionHasBeenSet() const;
 
@@ -74,12 +78,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return UpgradeAbleInstances List of nodes that can be upgraded
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<UpgradeAbleInstancesItem> GetUpgradeAbleInstances() const;
 
                     /**
                      * 判断参数 UpgradeAbleInstances 是否已赋值
                      * @return UpgradeAbleInstances 是否已赋值
+                     * 
                      */
                     bool UpgradeAbleInstancesHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Total Total number
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -102,12 +110,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UnavailableVersionReason Reason why the upgrade is not available
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UnavailableReason> GetUnavailableVersionReason() const;
 
                     /**
                      * 判断参数 UnavailableVersionReason 是否已赋值
                      * @return UnavailableVersionReason 是否已赋值
+                     * 
                      */
                     bool UnavailableVersionReasonHasBeenSet() const;
 

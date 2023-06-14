@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Channel name
                      * @return Name Channel name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Channel name
-                     * @param Name Channel name
+                     * @param _name Channel name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Channel protocol. Valid values: HLS, DASH
                      * @return Protocol Channel protocol. Valid values: HLS, DASH
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Channel protocol. Valid values: HLS, DASH
-                     * @param Protocol Channel protocol. Valid values: HLS, DASH
+                     * @param _protocol Channel protocol. Valid values: HLS, DASH
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Cache configuration
                      * @return CacheInfo Cache configuration
+                     * 
                      */
                     CacheInfo GetCacheInfo() const;
 
                     /**
                      * 设置Cache configuration
-                     * @param CacheInfo Cache configuration
+                     * @param _cacheInfo Cache configuration
+                     * 
                      */
                     void SetCacheInfo(const CacheInfo& _cacheInfo);
 
                     /**
                      * 判断参数 CacheInfo 是否已赋值
                      * @return CacheInfo 是否已赋值
+                     * 
                      */
                     bool CacheInfoHasBeenSet() const;
 

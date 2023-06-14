@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Filter field name
                      * @return Name Filter field name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Filter field name
-                     * @param Name Filter field name
+                     * @param _name Filter field name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Filter field value
                      * @return Value Filter field value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Filter field value
-                     * @param Value Filter field value
+                     * @param _value Filter field value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Filter field value
                      * @return Values Filter field value
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Filter field value
-                     * @param Values Filter field value
+                     * @param _values Filter field value
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

@@ -52,12 +52,14 @@ forbid: forbidden.
 active: active
 inactive: Inactive
 forbid: forbidden.
+                     * 
                      */
                     std::string GetStreamState() const;
 
                     /**
                      * 判断参数 StreamState 是否已赋值
                      * @return StreamState 是否已赋值
+                     * 
                      */
                     bool StreamStateHasBeenSet() const;
 

@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Instance group name ID.
                      * @return InstanceGroupId Instance group name ID.
+                     * 
                      */
                     int64_t GetInstanceGroupId() const;
 
                     /**
                      * 设置Instance group name ID.
-                     * @param InstanceGroupId Instance group name ID.
+                     * @param _instanceGroupId Instance group name ID.
+                     * 
                      */
                     void SetInstanceGroupId(const int64_t& _instanceGroupId);
 
                     /**
                      * 判断参数 InstanceGroupId 是否已赋值
                      * @return InstanceGroupId 是否已赋值
+                     * 
                      */
                     bool InstanceGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Policy type view name.
                      * @return ViewName Policy type view name.
+                     * 
                      */
                     std::string GetViewName() const;
 
                     /**
                      * 设置Policy type view name.
-                     * @param ViewName Policy type view name.
+                     * @param _viewName Policy type view name.
+                     * 
                      */
                     void SetViewName(const std::string& _viewName);
 
                     /**
                      * 判断参数 ViewName 是否已赋值
                      * @return ViewName 是否已赋值
+                     * 
                      */
                     bool ViewNameHasBeenSet() const;
 
                     /**
                      * 获取Uin that was last edited.
                      * @return LastEditUin Uin that was last edited.
+                     * 
                      */
                     std::string GetLastEditUin() const;
 
                     /**
                      * 设置Uin that was last edited.
-                     * @param LastEditUin Uin that was last edited.
+                     * @param _lastEditUin Uin that was last edited.
+                     * 
                      */
                     void SetLastEditUin(const std::string& _lastEditUin);
 
                     /**
                      * 判断参数 LastEditUin 是否已赋值
                      * @return LastEditUin 是否已赋值
+                     * 
                      */
                     bool LastEditUinHasBeenSet() const;
 
                     /**
                      * 获取Instance group name.
                      * @return GroupName Instance group name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Instance group name.
-                     * @param GroupName Instance group name.
+                     * @param _groupName Instance group name.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Number of instances.
                      * @return InstanceSum Number of instances.
+                     * 
                      */
                     int64_t GetInstanceSum() const;
 
                     /**
                      * 设置Number of instances.
-                     * @param InstanceSum Number of instances.
+                     * @param _instanceSum Number of instances.
+                     * 
                      */
                     void SetInstanceSum(const int64_t& _instanceSum);
 
                     /**
                      * 判断参数 InstanceSum 是否已赋值
                      * @return InstanceSum 是否已赋值
+                     * 
                      */
                     bool InstanceSumHasBeenSet() const;
 
                     /**
                      * 获取Update time.
                      * @return UpdateTime Update time.
+                     * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
-                     * @param UpdateTime Update time.
+                     * @param _updateTime Update time.
+                     * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return InsertTime Creation time.
+                     * 
                      */
                     int64_t GetInsertTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param InsertTime Creation time.
+                     * @param _insertTime Creation time.
+                     * 
                      */
                     void SetInsertTime(const int64_t& _insertTime);
 
                     /**
                      * 判断参数 InsertTime 是否已赋值
                      * @return InsertTime 是否已赋值
+                     * 
                      */
                     bool InsertTimeHasBeenSet() const;
 

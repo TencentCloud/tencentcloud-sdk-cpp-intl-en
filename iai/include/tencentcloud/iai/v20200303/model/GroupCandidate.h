@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Group ID.
                      * @return GroupId Group ID.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Group ID.
-                     * @param GroupId Group ID.
+                     * @param _groupId Group ID.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Most matching candidate recognized
                      * @return Candidates Most matching candidate recognized
+                     * 
                      */
                     std::vector<Candidate> GetCandidates() const;
 
                     /**
                      * 设置Most matching candidate recognized
-                     * @param Candidates Most matching candidate recognized
+                     * @param _candidates Most matching candidate recognized
+                     * 
                      */
                     void SetCandidates(const std::vector<Candidate>& _candidates);
 
                     /**
                      * 判断参数 Candidates 是否已赋值
                      * @return Candidates 是否已赋值
+                     * 
                      */
                     bool CandidatesHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Record
                      * @return Records Record
+                     * 
                      */
                     std::vector<ConfigData> GetRecords() const;
 
                     /**
                      * 设置Record
-                     * @param Records Record
+                     * @param _records Record
+                     * 
                      */
                     void SetRecords(const std::vector<ConfigData>& _records);
 
                     /**
                      * 判断参数 Records 是否已赋值
                      * @return Records 是否已赋值
+                     * 
                      */
                     bool RecordsHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ContinueToken Paging cursor
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContinueToken() const;
 
                     /**
                      * 设置Paging cursor
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ContinueToken Paging cursor
+                     * @param _continueToken Paging cursor
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContinueToken(const std::string& _continueToken);
 
                     /**
                      * 判断参数 ContinueToken 是否已赋值
                      * @return ContinueToken 是否已赋值
+                     * 
                      */
                     bool ContinueTokenHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RemainingCount Remaining number
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRemainingCount() const;
 
                     /**
                      * 设置Remaining number
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RemainingCount Remaining number
+                     * @param _remainingCount Remaining number
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemainingCount(const int64_t& _remainingCount);
 
                     /**
                      * 判断参数 RemainingCount 是否已赋值
                      * @return RemainingCount 是否已赋值
+                     * 
                      */
                     bool RemainingCountHasBeenSet() const;
 

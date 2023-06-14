@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Security event message array.
                      * @return SecurityDynamics Security event message array.
+                     * 
                      */
                     std::vector<SecurityDynamic> GetSecurityDynamics() const;
 
                     /**
                      * 判断参数 SecurityDynamics 是否已赋值
                      * @return SecurityDynamics 是否已赋值
+                     * 
                      */
                     bool SecurityDynamicsHasBeenSet() const;
 
                     /**
                      * 获取Total number of records.
                      * @return TotalCount Total number of records.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

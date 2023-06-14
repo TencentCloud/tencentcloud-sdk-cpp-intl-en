@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GroupExDescriptionIndex Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetGroupExDescriptionIndex() const;
 
                     /**
                      * 设置Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GroupExDescriptionIndex Custom group description field index, whose value starts from 0.
+                     * @param _groupExDescriptionIndex Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupExDescriptionIndex(const uint64_t& _groupExDescriptionIndex);
 
                     /**
                      * 判断参数 GroupExDescriptionIndex 是否已赋值
                      * @return GroupExDescriptionIndex 是否已赋值
+                     * 
                      */
                     bool GroupExDescriptionIndexHasBeenSet() const;
 
                     /**
                      * 获取Content of the custom group description field to be updated
                      * @return GroupExDescription Content of the custom group description field to be updated
+                     * 
                      */
                     std::string GetGroupExDescription() const;
 
                     /**
                      * 设置Content of the custom group description field to be updated
-                     * @param GroupExDescription Content of the custom group description field to be updated
+                     * @param _groupExDescription Content of the custom group description field to be updated
+                     * 
                      */
                     void SetGroupExDescription(const std::string& _groupExDescription);
 
                     /**
                      * 判断参数 GroupExDescription 是否已赋值
                      * @return GroupExDescription 是否已赋值
+                     * 
                      */
                     bool GroupExDescriptionHasBeenSet() const;
 

@@ -50,24 +50,28 @@ namespace TencentCloud
                      * @return Status Scan status
 - `doing`: Scanning
 - `done`: Scanned
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Number of DNS records added after scanning
                      * @return RecordsAdded Number of DNS records added after scanning
+                     * 
                      */
                     int64_t GetRecordsAdded() const;
 
                     /**
                      * 判断参数 RecordsAdded 是否已赋值
                      * @return RecordsAdded 是否已赋值
+                     * 
                      */
                     bool RecordsAddedHasBeenSet() const;
 

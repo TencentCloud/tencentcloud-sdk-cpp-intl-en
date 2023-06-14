@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of accessed servers
                      * @return Count Number of accessed servers
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of accessed servers
-                     * @param Count Number of accessed servers
+                     * @param _count Number of accessed servers
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
                      * @return IsJoined Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
+                     * 
                      */
                     bool GetIsJoined() const;
 
                     /**
                      * 设置Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
-                     * @param IsJoined Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
+                     * @param _isJoined Whether it is accessed. Valid values: `true` (accessed); `false` (not accessed).
+                     * 
                      */
                     void SetIsJoined(const bool& _isJoined);
 
                     /**
                      * 判断参数 IsJoined 是否已赋值
                      * @return IsJoined 是否已赋值
+                     * 
                      */
                     bool IsJoinedHasBeenSet() const;
 
@@ -93,6 +99,7 @@ Container bash: "container_bash"
 Container startup: "container_launch"
 K8s API: "k8s_api"
 )
+                     * 
                      */
                     std::string GetLogType() const;
 
@@ -102,17 +109,19 @@ Container bash: "container_bash"
 Container startup: "container_launch"
 K8s API: "k8s_api"
 )
-                     * @param LogType Log type (
+                     * @param _logType Log type (
 Container bash: "container_bash"
 Container startup: "container_launch"
 K8s API: "k8s_api"
 )
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 

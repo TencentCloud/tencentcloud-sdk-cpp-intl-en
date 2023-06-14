@@ -46,198 +46,231 @@ namespace TencentCloud
                     /**
                      * 获取Custom service name.
                      * @return ServiceName Custom service name.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Custom service name.
-                     * @param ServiceName Custom service name.
+                     * @param _serviceName Custom service name.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
                     /**
                      * 获取Service frontend request type, such as `http`, `https`, and `http&https`.
                      * @return Protocol Service frontend request type, such as `http`, `https`, and `http&https`.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Service frontend request type, such as `http`, `https`, and `http&https`.
-                     * @param Protocol Service frontend request type, such as `http`, `https`, and `http&https`.
+                     * @param _protocol Service frontend request type, such as `http`, `https`, and `http&https`.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Custom service description.
                      * @return ServiceDesc Custom service description.
+                     * 
                      */
                     std::string GetServiceDesc() const;
 
                     /**
                      * 设置Custom service description.
-                     * @param ServiceDesc Custom service description.
+                     * @param _serviceDesc Custom service description.
+                     * 
                      */
                     void SetServiceDesc(const std::string& _serviceDesc);
 
                     /**
                      * 判断参数 ServiceDesc 是否已赋值
                      * @return ServiceDesc 是否已赋值
+                     * 
                      */
                     bool ServiceDescHasBeenSet() const;
 
                     /**
                      * 获取Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
                      * @return ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
+                     * 
                      */
                     std::string GetExclusiveSetName() const;
 
                     /**
                      * 设置Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
-                     * @param ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
+                     * @param _exclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
+                     * 
                      */
                     void SetExclusiveSetName(const std::string& _exclusiveSetName);
 
                     /**
                      * 判断参数 ExclusiveSetName 是否已赋值
                      * @return ExclusiveSetName 是否已赋值
+                     * 
                      */
                     bool ExclusiveSetNameHasBeenSet() const;
 
                     /**
                      * 获取Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
                      * @return NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+                     * 
                      */
                     std::vector<std::string> GetNetTypes() const;
 
                     /**
                      * 设置Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
-                     * @param NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+                     * @param _netTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+                     * 
                      */
                     void SetNetTypes(const std::vector<std::string>& _netTypes);
 
                     /**
                      * 判断参数 NetTypes 是否已赋值
                      * @return NetTypes 是否已赋值
+                     * 
                      */
                     bool NetTypesHasBeenSet() const;
 
                     /**
                      * 获取IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
                      * @return IpVersion IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
+                     * 
                      */
                     std::string GetIpVersion() const;
 
                     /**
                      * 设置IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
-                     * @param IpVersion IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
+                     * @param _ipVersion IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
+                     * 
                      */
                     void SetIpVersion(const std::string& _ipVersion);
 
                     /**
                      * 判断参数 IpVersion 是否已赋值
                      * @return IpVersion 是否已赋值
+                     * 
                      */
                     bool IpVersionHasBeenSet() const;
 
                     /**
                      * 获取Cluster name, which is reserved and used by the `tsf serverless` type.
                      * @return SetServerName Cluster name, which is reserved and used by the `tsf serverless` type.
+                     * 
                      */
                     std::string GetSetServerName() const;
 
                     /**
                      * 设置Cluster name, which is reserved and used by the `tsf serverless` type.
-                     * @param SetServerName Cluster name, which is reserved and used by the `tsf serverless` type.
+                     * @param _setServerName Cluster name, which is reserved and used by the `tsf serverless` type.
+                     * 
                      */
                     void SetSetServerName(const std::string& _setServerName);
 
                     /**
                      * 判断参数 SetServerName 是否已赋值
                      * @return SetServerName 是否已赋值
+                     * 
                      */
                     bool SetServerNameHasBeenSet() const;
 
                     /**
                      * 获取User type, which is reserved and can be used by `serverless` users.
                      * @return AppIdType User type, which is reserved and can be used by `serverless` users.
+                     * 
                      */
                     std::string GetAppIdType() const;
 
                     /**
                      * 设置User type, which is reserved and can be used by `serverless` users.
-                     * @param AppIdType User type, which is reserved and can be used by `serverless` users.
+                     * @param _appIdType User type, which is reserved and can be used by `serverless` users.
+                     * 
                      */
                     void SetAppIdType(const std::string& _appIdType);
 
                     /**
                      * 判断参数 AppIdType 是否已赋值
                      * @return AppIdType 是否已赋值
+                     * 
                      */
                     bool AppIdTypeHasBeenSet() const;
 
                     /**
                      * 获取Tag information.
                      * @return Tags Tag information.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag information.
-                     * @param Tags Tag information.
+                     * @param _tags Tag information.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Dedicated instance ID
                      * @return InstanceId Dedicated instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Dedicated instance ID
-                     * @param InstanceId Dedicated instance ID
+                     * @param _instanceId Dedicated instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取VPC attribute
                      * @return UniqVpcId VPC attribute
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC attribute
-                     * @param UniqVpcId VPC attribute
+                     * @param _uniqVpcId VPC attribute
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 

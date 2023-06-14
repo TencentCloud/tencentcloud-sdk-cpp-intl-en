@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Media file ID.
                      * @return FileId Media file ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Media file ID.
-                     * @param FileId Media file ID.
+                     * @param _fileId Media file ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return MediaBasicInfo 
+                     * 
                      */
                     MediaBasicInfo GetMediaBasicInfo() const;
 
                     /**
                      * 设置
-                     * @param MediaBasicInfo 
+                     * @param _mediaBasicInfo 
+                     * 
                      */
                     void SetMediaBasicInfo(const MediaBasicInfo& _mediaBasicInfo);
 
                     /**
                      * 判断参数 MediaBasicInfo 是否已赋值
                      * @return MediaBasicInfo 是否已赋值
+                     * 
                      */
                     bool MediaBasicInfoHasBeenSet() const;
 

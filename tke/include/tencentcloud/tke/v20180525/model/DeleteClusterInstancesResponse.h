@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取IDs of deleted instances
                      * @return SuccInstanceIds IDs of deleted instances
+                     * 
                      */
                     std::vector<std::string> GetSuccInstanceIds() const;
 
                     /**
                      * 判断参数 SuccInstanceIds 是否已赋值
                      * @return SuccInstanceIds 是否已赋值
+                     * 
                      */
                     bool SuccInstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取IDs of instances failed to be deleted
                      * @return FailedInstanceIds IDs of instances failed to be deleted
+                     * 
                      */
                     std::vector<std::string> GetFailedInstanceIds() const;
 
                     /**
                      * 判断参数 FailedInstanceIds 是否已赋值
                      * @return FailedInstanceIds 是否已赋值
+                     * 
                      */
                     bool FailedInstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取IDs of instances that cannot be found
                      * @return NotFoundInstanceIds IDs of instances that cannot be found
+                     * 
                      */
                     std::vector<std::string> GetNotFoundInstanceIds() const;
 
                     /**
                      * 判断参数 NotFoundInstanceIds 是否已赋值
                      * @return NotFoundInstanceIds 是否已赋值
+                     * 
                      */
                     bool NotFoundInstanceIdsHasBeenSet() const;
 

@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceId Instance ID.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstancePrice Price query information.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     InstancePrice GetInstancePrice() const;
 
                     /**
                      * 设置Price query information.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstancePrice Price query information.
+                     * @param _instancePrice Price query information.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstancePrice(const InstancePrice& _instancePrice);
 
                     /**
                      * 判断参数 InstancePrice 是否已赋值
                      * @return InstancePrice 是否已赋值
+                     * 
                      */
                     bool InstancePriceHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DiscountDetail> GetDiscountDetail() const;
 
                     /**
                      * 设置Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+                     * @param _discountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiscountDetail(const std::vector<DiscountDetail>& _discountDetail);
 
                     /**
                      * 判断参数 DiscountDetail 是否已赋值
                      * @return DiscountDetail 是否已赋值
+                     * 
                      */
                     bool DiscountDetailHasBeenSet() const;
 

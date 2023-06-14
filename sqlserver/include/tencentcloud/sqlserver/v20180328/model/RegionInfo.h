@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Region ID in the format of ap-guangzhou
                      * @return Region Region ID in the format of ap-guangzhou
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region ID in the format of ap-guangzhou
-                     * @param Region Region ID in the format of ap-guangzhou
+                     * @param _region Region ID in the format of ap-guangzhou
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return RegionName Region name
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name
-                     * @param RegionName Region name
+                     * @param _regionName Region name
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Numeric ID of region
                      * @return RegionId Numeric ID of region
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Numeric ID of region
-                     * @param RegionId Numeric ID of region
+                     * @param _regionId Numeric ID of region
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
                      * @return RegionState Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
+                     * 
                      */
                     std::string GetRegionState() const;
 
                     /**
                      * 设置Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
-                     * @param RegionState Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
+                     * @param _regionState Current purchasability of this region. UNAVAILABLE: not purchasable, AVAILABLE: purchasable
+                     * 
                      */
                     void SetRegionState(const std::string& _regionState);
 
                     /**
                      * 判断参数 RegionState 是否已赋值
                      * @return RegionState 是否已赋值
+                     * 
                      */
                     bool RegionStateHasBeenSet() const;
 

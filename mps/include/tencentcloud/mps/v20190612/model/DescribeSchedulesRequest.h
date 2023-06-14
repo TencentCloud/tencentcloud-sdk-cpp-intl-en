@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The IDs of the schemes to query. Array length limit: 100.
                      * @return ScheduleIds The IDs of the schemes to query. Array length limit: 100.
+                     * 
                      */
                     std::vector<int64_t> GetScheduleIds() const;
 
                     /**
                      * 设置The IDs of the schemes to query. Array length limit: 100.
-                     * @param ScheduleIds The IDs of the schemes to query. Array length limit: 100.
+                     * @param _scheduleIds The IDs of the schemes to query. Array length limit: 100.
+                     * 
                      */
                     void SetScheduleIds(const std::vector<int64_t>& _scheduleIds);
 
                     /**
                      * 判断参数 ScheduleIds 是否已赋值
                      * @return ScheduleIds 是否已赋值
+                     * 
                      */
                     bool ScheduleIdsHasBeenSet() const;
 
@@ -69,6 +72,7 @@ If you do not specify this parameter or leave it empty, all schemes will be retu
 <li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
 <li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
 If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+                     * 
                      */
                     std::string GetTriggerType() const;
 
@@ -77,16 +81,18 @@ If you do not specify this parameter or leave it empty, all schemes will be retu
 <li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
 <li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
 If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
-                     * @param TriggerType The trigger type. Valid values:
+                     * @param _triggerType The trigger type. Valid values:
 <li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
 <li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
 If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+                     * 
                      */
                     void SetTriggerType(const std::string& _triggerType);
 
                     /**
                      * 判断参数 TriggerType 是否已赋值
                      * @return TriggerType 是否已赋值
+                     * 
                      */
                     bool TriggerTypeHasBeenSet() const;
 
@@ -99,6 +105,7 @@ If you do not specify this parameter, all schemes will be returned regardless of
 <li>`Enabled`</li>
 <li>`Disabled`</li>
 If you do not specify this parameter, all schemes will be returned regardless of the status.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -107,52 +114,60 @@ If you do not specify this parameter, all schemes will be returned regardless of
 <li>`Enabled`</li>
 <li>`Disabled`</li>
 If you do not specify this parameter, all schemes will be returned regardless of the status.
-                     * @param Status The scheme status. Valid values:
+                     * @param _status The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
 If you do not specify this parameter, all schemes will be returned regardless of the status.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The pagination offset. Default value: 0.
                      * @return Offset The pagination offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The pagination offset. Default value: 0.
-                     * @param Offset The pagination offset. Default value: 0.
+                     * @param _offset The pagination offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records to return. Default value: 10. Maximum value: 100.
                      * @return Limit The maximum number of records to return. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of records to return. Default value: 10. Maximum value: 100.
-                     * @param Limit The maximum number of records to return. Default value: 10. Maximum value: 100.
+                     * @param _limit The maximum number of records to return. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -48,48 +48,56 @@ namespace TencentCloud
                     /**
                      * 获取Alarm policy type of Tencent Cloud service (disused)
                      * @return QceNamespaces Alarm policy type of Tencent Cloud service (disused)
+                     * 
                      */
                     CommonNamespace GetQceNamespaces() const;
 
                     /**
                      * 判断参数 QceNamespaces 是否已赋值
                      * @return QceNamespaces 是否已赋值
+                     * 
                      */
                     bool QceNamespacesHasBeenSet() const;
 
                     /**
                      * 获取Other alarm policy type (disused)
                      * @return CustomNamespaces Other alarm policy type (disused)
+                     * 
                      */
                     CommonNamespace GetCustomNamespaces() const;
 
                     /**
                      * 判断参数 CustomNamespaces 是否已赋值
                      * @return CustomNamespaces 是否已赋值
+                     * 
                      */
                     bool CustomNamespacesHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy type of Tencent Cloud service
                      * @return QceNamespacesNew Alarm policy type of Tencent Cloud service
+                     * 
                      */
                     std::vector<CommonNamespace> GetQceNamespacesNew() const;
 
                     /**
                      * 判断参数 QceNamespacesNew 是否已赋值
                      * @return QceNamespacesNew 是否已赋值
+                     * 
                      */
                     bool QceNamespacesNewHasBeenSet() const;
 
                     /**
                      * 获取Other alarm policy type (not supported currently)
                      * @return CustomNamespacesNew Other alarm policy type (not supported currently)
+                     * 
                      */
                     std::vector<CommonNamespace> GetCustomNamespacesNew() const;
 
                     /**
                      * 判断参数 CustomNamespacesNew 是否已赋值
                      * @return CustomNamespacesNew 是否已赋值
+                     * 
                      */
                     bool CustomNamespacesNewHasBeenSet() const;
 
@@ -98,12 +106,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CommonNamespaces General alarm policy type, including TAPM, RUM, and CAT.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CommonNamespaceNew> GetCommonNamespaces() const;
 
                     /**
                      * 判断参数 CommonNamespaces 是否已赋值
                      * @return CommonNamespaces 是否已赋值
+                     * 
                      */
                     bool CommonNamespacesHasBeenSet() const;
 

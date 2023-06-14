@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible SQL files.
                      * @return TotalCount Number of eligible SQL files.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of returned SQL files.
                      * @return Items List of returned SQL files.
+                     * 
                      */
                     std::vector<SqlFileInfo> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

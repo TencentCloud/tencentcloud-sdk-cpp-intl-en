@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID of the source table
                      * @return SrcTableClusterId Cluster ID of the source table
+                     * 
                      */
                     std::string GetSrcTableClusterId() const;
 
                     /**
                      * 设置Cluster ID of the source table
-                     * @param SrcTableClusterId Cluster ID of the source table
+                     * @param _srcTableClusterId Cluster ID of the source table
+                     * 
                      */
                     void SetSrcTableClusterId(const std::string& _srcTableClusterId);
 
                     /**
                      * 判断参数 SrcTableClusterId 是否已赋值
                      * @return SrcTableClusterId 是否已赋值
+                     * 
                      */
                     bool SrcTableClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Table group ID of the source table
                      * @return SrcTableGroupId Table group ID of the source table
+                     * 
                      */
                     std::string GetSrcTableGroupId() const;
 
                     /**
                      * 设置Table group ID of the source table
-                     * @param SrcTableGroupId Table group ID of the source table
+                     * @param _srcTableGroupId Table group ID of the source table
+                     * 
                      */
                     void SetSrcTableGroupId(const std::string& _srcTableGroupId);
 
                     /**
                      * 判断参数 SrcTableGroupId 是否已赋值
                      * @return SrcTableGroupId 是否已赋值
+                     * 
                      */
                     bool SrcTableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Source table name
                      * @return SrcTableName Source table name
+                     * 
                      */
                     std::string GetSrcTableName() const;
 
                     /**
                      * 设置Source table name
-                     * @param SrcTableName Source table name
+                     * @param _srcTableName Source table name
+                     * 
                      */
                     void SetSrcTableName(const std::string& _srcTableName);
 
                     /**
                      * 判断参数 SrcTableName 是否已赋值
                      * @return SrcTableName 是否已赋值
+                     * 
                      */
                     bool SrcTableNameHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID of the target table
                      * @return DstTableClusterId Cluster ID of the target table
+                     * 
                      */
                     std::string GetDstTableClusterId() const;
 
                     /**
                      * 设置Cluster ID of the target table
-                     * @param DstTableClusterId Cluster ID of the target table
+                     * @param _dstTableClusterId Cluster ID of the target table
+                     * 
                      */
                     void SetDstTableClusterId(const std::string& _dstTableClusterId);
 
                     /**
                      * 判断参数 DstTableClusterId 是否已赋值
                      * @return DstTableClusterId 是否已赋值
+                     * 
                      */
                     bool DstTableClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Table group ID of the target table
                      * @return DstTableGroupId Table group ID of the target table
+                     * 
                      */
                     std::string GetDstTableGroupId() const;
 
                     /**
                      * 设置Table group ID of the target table
-                     * @param DstTableGroupId Table group ID of the target table
+                     * @param _dstTableGroupId Table group ID of the target table
+                     * 
                      */
                     void SetDstTableGroupId(const std::string& _dstTableGroupId);
 
                     /**
                      * 判断参数 DstTableGroupId 是否已赋值
                      * @return DstTableGroupId 是否已赋值
+                     * 
                      */
                     bool DstTableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Target table name
                      * @return DstTableName Target table name
+                     * 
                      */
                     std::string GetDstTableName() const;
 
                     /**
                      * 设置Target table name
-                     * @param DstTableName Target table name
+                     * @param _dstTableName Target table name
+                     * 
                      */
                     void SetDstTableName(const std::string& _dstTableName);
 
                     /**
                      * 判断参数 DstTableName 是否已赋值
                      * @return DstTableName 是否已赋值
+                     * 
                      */
                     bool DstTableNameHasBeenSet() const;
 
                     /**
                      * 获取Source table ID
                      * @return SrcTableInstanceId Source table ID
+                     * 
                      */
                     std::string GetSrcTableInstanceId() const;
 
                     /**
                      * 设置Source table ID
-                     * @param SrcTableInstanceId Source table ID
+                     * @param _srcTableInstanceId Source table ID
+                     * 
                      */
                     void SetSrcTableInstanceId(const std::string& _srcTableInstanceId);
 
                     /**
                      * 判断参数 SrcTableInstanceId 是否已赋值
                      * @return SrcTableInstanceId 是否已赋值
+                     * 
                      */
                     bool SrcTableInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Target table ID
                      * @return DstTableInstanceId Target table ID
+                     * 
                      */
                     std::string GetDstTableInstanceId() const;
 
                     /**
                      * 设置Target table ID
-                     * @param DstTableInstanceId Target table ID
+                     * @param _dstTableInstanceId Target table ID
+                     * 
                      */
                     void SetDstTableInstanceId(const std::string& _dstTableInstanceId);
 
                     /**
                      * 判断参数 DstTableInstanceId 是否已赋值
                      * @return DstTableInstanceId 是否已赋值
+                     * 
                      */
                     bool DstTableInstanceIdHasBeenSet() const;
 

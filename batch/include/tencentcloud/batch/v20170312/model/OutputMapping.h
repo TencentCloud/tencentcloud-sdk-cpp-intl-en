@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Source path
                      * @return SourcePath Source path
+                     * 
                      */
                     std::string GetSourcePath() const;
 
                     /**
                      * 设置Source path
-                     * @param SourcePath Source path
+                     * @param _sourcePath Source path
+                     * 
                      */
                     void SetSourcePath(const std::string& _sourcePath);
 
                     /**
                      * 判断参数 SourcePath 是否已赋值
                      * @return SourcePath 是否已赋值
+                     * 
                      */
                     bool SourcePathHasBeenSet() const;
 
                     /**
                      * 获取Destination path
                      * @return DestinationPath Destination path
+                     * 
                      */
                     std::string GetDestinationPath() const;
 
                     /**
                      * 设置Destination path
-                     * @param DestinationPath Destination path
+                     * @param _destinationPath Destination path
+                     * 
                      */
                     void SetDestinationPath(const std::string& _destinationPath);
 
                     /**
                      * 判断参数 DestinationPath 是否已赋值
                      * @return DestinationPath 是否已赋值
+                     * 
                      */
                     bool DestinationPathHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return OutputMappingOption Output mapping options
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     OutputMappingOption GetOutputMappingOption() const;
 
                     /**
                      * 设置Output mapping options
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param OutputMappingOption Output mapping options
+                     * @param _outputMappingOption Output mapping options
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetOutputMappingOption(const OutputMappingOption& _outputMappingOption);
 
                     /**
                      * 判断参数 OutputMappingOption 是否已赋值
                      * @return OutputMappingOption 是否已赋值
+                     * 
                      */
                     bool OutputMappingOptionHasBeenSet() const;
 

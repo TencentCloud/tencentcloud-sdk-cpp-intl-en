@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取AZ ID in the format of ap-guangzhou-1
                      * @return Zone AZ ID in the format of ap-guangzhou-1
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ ID in the format of ap-guangzhou-1
-                     * @param Zone AZ ID in the format of ap-guangzhou-1
+                     * @param _zone AZ ID in the format of ap-guangzhou-1
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
                      * @return InstanceType The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
-                     * @param InstanceType The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     * @param _instanceType The type of instances to be purchased. Valid values: HA (High-Availability Edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (Basic Edition)
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 

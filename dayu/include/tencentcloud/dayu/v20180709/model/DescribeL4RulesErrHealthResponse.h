@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of exceptional rules
                      * @return Total Total number of exceptional rules
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Exceptional rule list. Returned value description: `Key` is the rule ID, while `Value` is the exceptional IP. Multiple IPs are separated by ","
                      * @return ErrHealths Exceptional rule list. Returned value description: `Key` is the rule ID, while `Value` is the exceptional IP. Multiple IPs are separated by ","
+                     * 
                      */
                     std::vector<KeyValue> GetErrHealths() const;
 
                     /**
                      * 判断参数 ErrHealths 是否已赋值
                      * @return ErrHealths 是否已赋值
+                     * 
                      */
                     bool ErrHealthsHasBeenSet() const;
 
@@ -84,12 +88,14 @@ If `key` is `VirtualPort`, `Value` indicates the forwarding port of a rule;
 If `Key` is `ErrMessage`, `Value` indicates the exception message for health check;
 Exception message for health check in the format of `"SourceIp:1.1.1.1|SourcePort:1234|AbnormalStatTime:1570689065|AbnormalReason:connection time out|Interval:20|CheckNum:6|FailNum:6"`. Multiple error messages for the source IP should be separated by `,`,
 SourceIp: real server IP, SourcePort: real server port, AbnormalStatTime: exception time, AbnormalReason: cause of exception, Interval: check frequency, CheckNum: number of checks, FailNum: number of failures;
+                     * 
                      */
                     std::vector<KeyValueRecord> GetExtErrHealths() const;
 
                     /**
                      * 判断参数 ExtErrHealths 是否已赋值
                      * @return ExtErrHealths 是否已赋值
+                     * 
                      */
                     bool ExtErrHealthsHasBeenSet() const;
 

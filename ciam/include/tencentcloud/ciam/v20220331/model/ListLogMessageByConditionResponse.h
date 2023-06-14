@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number
                      * @return Total Total number
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Pagination object
                      * @return Pageable Pagination object
+                     * 
                      */
                     Pageable GetPageable() const;
 
                     /**
                      * 判断参数 Pageable 是否已赋值
                      * @return Pageable 是否已赋值
+                     * 
                      */
                     bool PageableHasBeenSet() const;
 
@@ -74,12 +78,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Content List of logs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LogMessage> GetContent() const;
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

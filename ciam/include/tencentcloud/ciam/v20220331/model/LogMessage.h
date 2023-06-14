@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Log ID
                      * @return LogId Log ID
+                     * 
                      */
                     std::string GetLogId() const;
 
                     /**
                      * 设置Log ID
-                     * @param LogId Log ID
+                     * @param _logId Log ID
+                     * 
                      */
                     void SetLogId(const std::string& _logId);
 
                     /**
                      * 判断参数 LogId 是否已赋值
                      * @return LogId 是否已赋值
+                     * 
                      */
                     bool LogIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TenantId Tenant ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTenantId() const;
 
                     /**
                      * 设置Tenant ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TenantId Tenant ID
+                     * @param _tenantId Tenant ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTenantId(const std::string& _tenantId);
 
                     /**
                      * 判断参数 TenantId 是否已赋值
                      * @return TenantId 是否已赋值
+                     * 
                      */
                     bool TenantIdHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserStoreId User pool ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User pool ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserStoreId User pool ID
+                     * @param _userStoreId User pool ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventCode Event code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEventCode() const;
 
                     /**
                      * 设置Event code
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EventCode Event code
+                     * @param _eventCode Event code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventCode(const std::string& _eventCode);
 
                     /**
                      * 判断参数 EventCode 是否已赋值
                      * @return EventCode 是否已赋值
+                     * 
                      */
                     bool EventCodeHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventDate Event timestamp in milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEventDate() const;
 
                     /**
                      * 设置Event timestamp in milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EventDate Event timestamp in milliseconds
+                     * @param _eventDate Event timestamp in milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventDate(const int64_t& _eventDate);
 
                     /**
                      * 判断参数 EventDate 是否已赋值
                      * @return EventDate 是否已赋值
+                     * 
                      */
                     bool EventDateHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Description Description
+                     * @param _description Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -185,6 +203,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li> **TENANT** </li>  Tenant
 <li> **USER** </li>  User
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetParticipant() const;
 
@@ -194,17 +213,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li> **TENANT** </li>  Tenant
 <li> **USER** </li>  User
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Participant Event participant
+                     * @param _participant Event participant
 
 <li> **TENANT** </li>  Tenant
 <li> **USER** </li>  User
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParticipant(const std::string& _participant);
 
                     /**
                      * 判断参数 Participant 是否已赋值
                      * @return Participant 是否已赋值
+                     * 
                      */
                     bool ParticipantHasBeenSet() const;
 
@@ -213,20 +234,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationClientId Application `clientId`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationClientId() const;
 
                     /**
                      * 设置Application `clientId`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ApplicationClientId Application `clientId`
+                     * @param _applicationClientId Application `clientId`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationClientId(const std::string& _applicationClientId);
 
                     /**
                      * 判断参数 ApplicationClientId 是否已赋值
                      * @return ApplicationClientId 是否已赋值
+                     * 
                      */
                     bool ApplicationClientIdHasBeenSet() const;
 
@@ -235,20 +259,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationName Application name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ApplicationName Application name
+                     * @param _applicationName Application name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
 
                     /**
                      * 判断参数 ApplicationName 是否已赋值
                      * @return ApplicationName 是否已赋值
+                     * 
                      */
                     bool ApplicationNameHasBeenSet() const;
 
@@ -257,20 +284,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuthSourceId Authentication source ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthSourceId() const;
 
                     /**
                      * 设置Authentication source ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AuthSourceId Authentication source ID
+                     * @param _authSourceId Authentication source ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthSourceId(const std::string& _authSourceId);
 
                     /**
                      * 判断参数 AuthSourceId 是否已赋值
                      * @return AuthSourceId 是否已赋值
+                     * 
                      */
                     bool AuthSourceIdHasBeenSet() const;
 
@@ -279,20 +309,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuthSourceName Authentication source name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthSourceName() const;
 
                     /**
                      * 设置Authentication source name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AuthSourceName Authentication source name
+                     * @param _authSourceName Authentication source name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthSourceName(const std::string& _authSourceName);
 
                     /**
                      * 判断参数 AuthSourceName 是否已赋值
                      * @return AuthSourceName 是否已赋值
+                     * 
                      */
                     bool AuthSourceNameHasBeenSet() const;
 
@@ -301,20 +334,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuthSourceType Authentication source type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthSourceType() const;
 
                     /**
                      * 设置Authentication source type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AuthSourceType Authentication source type
+                     * @param _authSourceType Authentication source type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthSourceType(const std::string& _authSourceType);
 
                     /**
                      * 判断参数 AuthSourceType 是否已赋值
                      * @return AuthSourceType 是否已赋值
+                     * 
                      */
                     bool AuthSourceTypeHasBeenSet() const;
 
@@ -323,20 +359,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuthSourceCategory Authentication source category
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthSourceCategory() const;
 
                     /**
                      * 设置Authentication source category
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AuthSourceCategory Authentication source category
+                     * @param _authSourceCategory Authentication source category
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthSourceCategory(const std::string& _authSourceCategory);
 
                     /**
                      * 判断参数 AuthSourceCategory 是否已赋值
                      * @return AuthSourceCategory 是否已赋值
+                     * 
                      */
                     bool AuthSourceCategoryHasBeenSet() const;
 
@@ -345,20 +384,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Ip IP address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Ip IP address
+                     * @param _ip IP address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
@@ -367,20 +409,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserAgent User agent
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserAgent() const;
 
                     /**
                      * 设置User agent
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserAgent User agent
+                     * @param _userAgent User agent
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserAgent(const std::string& _userAgent);
 
                     /**
                      * 判断参数 UserAgent 是否已赋值
                      * @return UserAgent 是否已赋值
+                     * 
                      */
                     bool UserAgentHasBeenSet() const;
 
@@ -389,20 +434,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserId User ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserId User ID
+                     * @param _userId User ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -411,20 +459,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Detail Details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDetail() const;
 
                     /**
                      * 设置Details
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Detail Details
+                     * @param _detail Details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetail(const std::string& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 

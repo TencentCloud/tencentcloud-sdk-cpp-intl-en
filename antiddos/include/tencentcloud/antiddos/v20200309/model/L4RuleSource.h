@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取IP or domain name for forwarding.
                      * @return Source IP or domain name for forwarding.
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置IP or domain name for forwarding.
-                     * @param Source IP or domain name for forwarding.
+                     * @param _source IP or domain name for forwarding.
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Weight. Value range: [0,100].
                      * @return Weight Weight. Value range: [0,100].
+                     * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
                      * 设置Weight. Value range: [0,100].
-                     * @param Weight Weight. Value range: [0,100].
+                     * @param _weight Weight. Value range: [0,100].
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Port 8000
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置8000
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Port 8000
+                     * @param _port 8000
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetBackup() const;
 
                     /**
                      * 设置Secondary origin server. `1`: secondary origin server; `0`: general origin server.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+                     * @param _backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackup(const uint64_t& _backup);
 
                     /**
                      * 判断参数 Backup 是否已赋值
                      * @return Backup 是否已赋值
+                     * 
                      */
                     bool BackupHasBeenSet() const;
 

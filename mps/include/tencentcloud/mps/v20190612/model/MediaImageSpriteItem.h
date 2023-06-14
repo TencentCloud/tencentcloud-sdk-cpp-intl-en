@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * @return Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Subimage height of an image sprite.
                      * @return Height Subimage height of an image sprite.
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Subimage height of an image sprite.
-                     * @param Height Subimage height of an image sprite.
+                     * @param _height Subimage height of an image sprite.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取Subimage width of an image sprite.
                      * @return Width Subimage width of an image sprite.
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Subimage width of an image sprite.
-                     * @param Width Subimage width of an image sprite.
+                     * @param _width Subimage width of an image sprite.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Total number of subimages in each image sprite.
                      * @return TotalCount Total number of subimages in each image sprite.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of subimages in each image sprite.
-                     * @param TotalCount Total number of subimages in each image sprite.
+                     * @param _totalCount Total number of subimages in each image sprite.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Path to each image sprite.
                      * @return ImagePathSet Path to each image sprite.
+                     * 
                      */
                     std::vector<std::string> GetImagePathSet() const;
 
                     /**
                      * 设置Path to each image sprite.
-                     * @param ImagePathSet Path to each image sprite.
+                     * @param _imagePathSet Path to each image sprite.
+                     * 
                      */
                     void SetImagePathSet(const std::vector<std::string>& _imagePathSet);
 
                     /**
                      * 判断参数 ImagePathSet 是否已赋值
                      * @return ImagePathSet 是否已赋值
+                     * 
                      */
                     bool ImagePathSetHasBeenSet() const;
 
                     /**
                      * 获取Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
                      * @return WebVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+                     * 
                      */
                     std::string GetWebVttPath() const;
 
                     /**
                      * 设置Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-                     * @param WebVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+                     * @param _webVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+                     * 
                      */
                     void SetWebVttPath(const std::string& _webVttPath);
 
                     /**
                      * 判断参数 WebVttPath 是否已赋值
                      * @return WebVttPath 是否已赋值
+                     * 
                      */
                     bool WebVttPathHasBeenSet() const;
 
                     /**
                      * 获取Storage location of an image sprite file.
                      * @return Storage Storage location of an image sprite file.
+                     * 
                      */
                     TaskOutputStorage GetStorage() const;
 
                     /**
                      * 设置Storage location of an image sprite file.
-                     * @param Storage Storage location of an image sprite file.
+                     * @param _storage Storage location of an image sprite file.
+                     * 
                      */
                     void SetStorage(const TaskOutputStorage& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 

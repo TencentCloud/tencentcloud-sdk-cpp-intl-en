@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of a network detection instance, such as `netd-12345678`.
                      * @return NetDetectId The `ID` of a network detection instance, such as `netd-12345678`.
+                     * 
                      */
                     std::string GetNetDetectId() const;
 
                     /**
                      * 设置The `ID` of a network detection instance, such as `netd-12345678`.
-                     * @param NetDetectId The `ID` of a network detection instance, such as `netd-12345678`.
+                     * @param _netDetectId The `ID` of a network detection instance, such as `netd-12345678`.
+                     * 
                      */
                     void SetNetDetectId(const std::string& _netDetectId);
 
                     /**
                      * 判断参数 NetDetectId 是否已赋值
                      * @return NetDetectId 是否已赋值
+                     * 
                      */
                     bool NetDetectIdHasBeenSet() const;
 

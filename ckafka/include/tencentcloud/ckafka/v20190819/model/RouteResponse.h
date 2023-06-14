@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Routers Route information list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Route> GetRouters() const;
 
                     /**
                      * 设置Route information list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Routers Route information list
+                     * @param _routers Route information list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouters(const std::vector<Route>& _routers);
 
                     /**
                      * 判断参数 Routers 是否已赋值
                      * @return Routers 是否已赋值
+                     * 
                      */
                     bool RoutersHasBeenSet() const;
 

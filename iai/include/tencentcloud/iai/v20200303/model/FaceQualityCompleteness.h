@@ -53,6 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Eyebrow Eyebrow completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,80], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEyebrow() const;
 
@@ -60,15 +61,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Eyebrow completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,80], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Eyebrow Eyebrow completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
+                     * @param _eyebrow Eyebrow completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,80], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEyebrow(const int64_t& _eyebrow);
 
                     /**
                      * 判断参数 Eyebrow 是否已赋值
                      * @return Eyebrow 是否已赋值
+                     * 
                      */
                     bool EyebrowHasBeenSet() const;
 
@@ -79,6 +82,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Eye Eye completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,80], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEye() const;
 
@@ -86,15 +90,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Eye completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,80], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Eye Eye completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
+                     * @param _eye Eye completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,80], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEye(const int64_t& _eye);
 
                     /**
                      * 判断参数 Eye 是否已赋值
                      * @return Eye 是否已赋值
+                     * 
                      */
                     bool EyeHasBeenSet() const;
 
@@ -105,6 +111,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Nose Nose completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,60], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetNose() const;
 
@@ -112,15 +119,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Nose completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,60], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Nose Nose completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
+                     * @param _nose Nose completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,60], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNose(const int64_t& _nose);
 
                     /**
                      * 判断参数 Nose 是否已赋值
                      * @return Nose 是否已赋值
+                     * 
                      */
                     bool NoseHasBeenSet() const;
 
@@ -131,6 +140,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Cheek Cheek completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,70], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCheek() const;
 
@@ -138,15 +148,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Cheek completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,70], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Cheek Cheek completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
+                     * @param _cheek Cheek completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,70], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheek(const int64_t& _cheek);
 
                     /**
                      * 判断参数 Cheek 是否已赋值
                      * @return Cheek 是否已赋值
+                     * 
                      */
                     bool CheekHasBeenSet() const;
 
@@ -157,6 +169,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Mouth Mouth completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,50], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMouth() const;
 
@@ -164,15 +177,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Mouth completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,50], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Mouth Mouth completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
+                     * @param _mouth Mouth completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,50], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMouth(const int64_t& _mouth);
 
                     /**
                      * 判断参数 Mouth 是否已赋值
                      * @return Mouth 是否已赋值
+                     * 
                      */
                     bool MouthHasBeenSet() const;
 
@@ -183,6 +198,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Chin Chin completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,70], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetChin() const;
 
@@ -190,15 +206,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Chin completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,70], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Chin Chin completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
+                     * @param _chin Chin completeness. Value range: [0,100]. The higher the score, the higher the completeness. 
 Reference range: [0,70], which means incomplete.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChin(const int64_t& _chin);
 
                     /**
                      * 判断参数 Chin 是否已赋值
                      * @return Chin 是否已赋值
+                     * 
                      */
                     bool ChinHasBeenSet() const;
 

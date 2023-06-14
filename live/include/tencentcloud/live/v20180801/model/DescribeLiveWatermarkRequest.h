@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Watermark ID returned by the `DescribeLiveWatermarks` API.
                      * @return WatermarkId Watermark ID returned by the `DescribeLiveWatermarks` API.
+                     * 
                      */
                     uint64_t GetWatermarkId() const;
 
                     /**
                      * 设置Watermark ID returned by the `DescribeLiveWatermarks` API.
-                     * @param WatermarkId Watermark ID returned by the `DescribeLiveWatermarks` API.
+                     * @param _watermarkId Watermark ID returned by the `DescribeLiveWatermarks` API.
+                     * 
                      */
                     void SetWatermarkId(const uint64_t& _watermarkId);
 
                     /**
                      * 判断参数 WatermarkId 是否已赋值
                      * @return WatermarkId 是否已赋值
+                     * 
                      */
                     bool WatermarkIdHasBeenSet() const;
 

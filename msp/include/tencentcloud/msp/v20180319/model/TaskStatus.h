@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Migration status
                      * @return Status Migration status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Migration status
-                     * @param Status Migration status
+                     * @param _status Migration status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Migration progress
                      * @return Progress Migration progress
+                     * 
                      */
                     std::string GetProgress() const;
 
                     /**
                      * 设置Migration progress
-                     * @param Progress Migration progress
+                     * @param _progress Migration progress
+                     * 
                      */
                     void SetProgress(const std::string& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Migration date
                      * @return UpdateTime Migration date
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Migration date
-                     * @param UpdateTime Migration date
+                     * @param _updateTime Migration date
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

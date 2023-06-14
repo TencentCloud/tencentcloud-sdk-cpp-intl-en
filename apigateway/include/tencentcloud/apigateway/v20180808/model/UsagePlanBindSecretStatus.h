@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of keys bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of keys bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of keys bound to usage plan.
+                     * @param _totalCount Number of keys bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AccessKeyList List of key details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UsagePlanBindSecret> GetAccessKeyList() const;
 
                     /**
                      * 设置List of key details.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AccessKeyList List of key details.
+                     * @param _accessKeyList List of key details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAccessKeyList(const std::vector<UsagePlanBindSecret>& _accessKeyList);
 
                     /**
                      * 判断参数 AccessKeyList 是否已赋值
                      * @return AccessKeyList 是否已赋值
+                     * 
                      */
                     bool AccessKeyListHasBeenSet() const;
 

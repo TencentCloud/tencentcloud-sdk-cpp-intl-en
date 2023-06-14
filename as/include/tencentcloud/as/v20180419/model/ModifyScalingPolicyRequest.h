@@ -46,180 +46,210 @@ namespace TencentCloud
                     /**
                      * 获取Alarm policy ID.
                      * @return AutoScalingPolicyId Alarm policy ID.
+                     * 
                      */
                     std::string GetAutoScalingPolicyId() const;
 
                     /**
                      * 设置Alarm policy ID.
-                     * @param AutoScalingPolicyId Alarm policy ID.
+                     * @param _autoScalingPolicyId Alarm policy ID.
+                     * 
                      */
                     void SetAutoScalingPolicyId(const std::string& _autoScalingPolicyId);
 
                     /**
                      * 判断参数 AutoScalingPolicyId 是否已赋值
                      * @return AutoScalingPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoScalingPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy name.
                      * @return ScalingPolicyName Alarm policy name.
+                     * 
                      */
                     std::string GetScalingPolicyName() const;
 
                     /**
                      * 设置Alarm policy name.
-                     * @param ScalingPolicyName Alarm policy name.
+                     * @param _scalingPolicyName Alarm policy name.
+                     * 
                      */
                     void SetScalingPolicyName(const std::string& _scalingPolicyName);
 
                     /**
                      * 判断参数 ScalingPolicyName 是否已赋值
                      * @return ScalingPolicyName 是否已赋值
+                     * 
                      */
                     bool ScalingPolicyNameHasBeenSet() const;
 
                     /**
                      * 获取The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
                      * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * 
                      */
                     std::string GetAdjustmentType() const;
 
                     /**
                      * 设置The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
-                     * @param AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * @param _adjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * 
                      */
                     void SetAdjustmentType(const std::string& _adjustmentType);
 
                     /**
                      * 判断参数 AdjustmentType 是否已赋值
                      * @return AdjustmentType 是否已赋值
+                     * 
                      */
                     bool AdjustmentTypeHasBeenSet() const;
 
                     /**
                      * 获取Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
                      * @return AdjustmentValue Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
+                     * 
                      */
                     int64_t GetAdjustmentValue() const;
 
                     /**
                      * 设置Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
-                     * @param AdjustmentValue Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
+                     * @param _adjustmentValue Specifies how to adjust the number of desired capacity when the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Values: <br><li>`AdjustmentType`=`CHANGE_IN_CAPACITY`: Number of instances to add (positive number) or remove (negative number). </li> <li>`AdjustmentType`=`EXACT_CAPACITY`: Set the desired capacity to the specified number. It must be ≥ 0. </li> <li>`AdjustmentType`=`PERCENT_CHANGE_IN_CAPACITY`: Percentage of instance number. Add instances (positive value) or remove instances (negative value) accordingly.
+                     * 
                      */
                     void SetAdjustmentValue(const int64_t& _adjustmentValue);
 
                     /**
                      * 判断参数 AdjustmentValue 是否已赋值
                      * @return AdjustmentValue 是否已赋值
+                     * 
                      */
                     bool AdjustmentValueHasBeenSet() const;
 
                     /**
                      * 获取Cooldown period (in seconds). It’s only available when `ScalingPolicyType` is `Simple`.
                      * @return Cooldown Cooldown period (in seconds). It’s only available when `ScalingPolicyType` is `Simple`.
+                     * 
                      */
                     uint64_t GetCooldown() const;
 
                     /**
                      * 设置Cooldown period (in seconds). It’s only available when `ScalingPolicyType` is `Simple`.
-                     * @param Cooldown Cooldown period (in seconds). It’s only available when `ScalingPolicyType` is `Simple`.
+                     * @param _cooldown Cooldown period (in seconds). It’s only available when `ScalingPolicyType` is `Simple`.
+                     * 
                      */
                     void SetCooldown(const uint64_t& _cooldown);
 
                     /**
                      * 判断参数 Cooldown 是否已赋值
                      * @return Cooldown 是否已赋值
+                     * 
                      */
                     bool CooldownHasBeenSet() const;
 
                     /**
                      * 获取Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
                      * @return MetricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+                     * 
                      */
                     MetricAlarm GetMetricAlarm() const;
 
                     /**
                      * 设置Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
-                     * @param MetricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+                     * @param _metricAlarm Alarm monitoring metric. It’s only available when `ScalingPolicyType` is `Simple`.
+                     * 
                      */
                     void SetMetricAlarm(const MetricAlarm& _metricAlarm);
 
                     /**
                      * 判断参数 MetricAlarm 是否已赋值
                      * @return MetricAlarm 是否已赋值
+                     * 
                      */
                     bool MetricAlarmHasBeenSet() const;
 
                     /**
                      * 获取Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
                      * @return PredefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+                     * 
                      */
                     std::string GetPredefinedMetricType() const;
 
                     /**
                      * 设置Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
-                     * @param PredefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+                     * @param _predefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+                     * 
                      */
                     void SetPredefinedMetricType(const std::string& _predefinedMetricType);
 
                     /**
                      * 判断参数 PredefinedMetricType 是否已赋值
                      * @return PredefinedMetricType 是否已赋值
+                     * 
                      */
                     bool PredefinedMetricTypeHasBeenSet() const;
 
                     /**
                      * 获取Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
                      * @return TargetValue Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+                     * 
                      */
                     uint64_t GetTargetValue() const;
 
                     /**
                      * 设置Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
-                     * @param TargetValue Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+                     * @param _targetValue Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+                     * 
                      */
                     void SetTargetValue(const uint64_t& _targetValue);
 
                     /**
                      * 判断参数 TargetValue 是否已赋值
                      * @return TargetValue 是否已赋值
+                     * 
                      */
                     bool TargetValueHasBeenSet() const;
 
                     /**
                      * 获取Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
                      * @return EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+                     * 
                      */
                     uint64_t GetEstimatedInstanceWarmup() const;
 
                     /**
                      * 设置Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
-                     * @param EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+                     * @param _estimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+                     * 
                      */
                     void SetEstimatedInstanceWarmup(const uint64_t& _estimatedInstanceWarmup);
 
                     /**
                      * 判断参数 EstimatedInstanceWarmup 是否已赋值
                      * @return EstimatedInstanceWarmup 是否已赋值
+                     * 
                      */
                     bool EstimatedInstanceWarmupHasBeenSet() const;
 
                     /**
                      * 获取Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
                      * @return DisableScaleIn Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+                     * 
                      */
                     bool GetDisableScaleIn() const;
 
                     /**
                      * 设置Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
-                     * @param DisableScaleIn Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+                     * @param _disableScaleIn Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+                     * 
                      */
                     void SetDisableScaleIn(const bool& _disableScaleIn);
 
                     /**
                      * 判断参数 DisableScaleIn 是否已赋值
                      * @return DisableScaleIn 是否已赋值
+                     * 
                      */
                     bool DisableScaleInHasBeenSet() const;
 
@@ -228,20 +258,23 @@ namespace TencentCloud
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
                      * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
+                     * 
                      */
                     std::vector<std::string> GetNotificationUserGroupIds() const;
 
                     /**
                      * 设置Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
-                     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * @param _notificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
+                     * 
                      */
                     void SetNotificationUserGroupIds(const std::vector<std::string>& _notificationUserGroupIds);
 
                     /**
                      * 判断参数 NotificationUserGroupIds 是否已赋值
                      * @return NotificationUserGroupIds 是否已赋值
+                     * 
                      */
                     bool NotificationUserGroupIdsHasBeenSet() const;
 

@@ -47,20 +47,23 @@ namespace TencentCloud
 Leave it empty for the first request.
                      * @return PaginationToken The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
+                     * 
                      */
                     std::string GetPaginationToken() const;
 
                     /**
                      * 设置The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
-                     * @param PaginationToken The token value of the next page obtained from the response of the previous page.
+                     * @param _paginationToken The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
+                     * 
                      */
                     void SetPaginationToken(const std::string& _paginationToken);
 
                     /**
                      * 判断参数 PaginationToken 是否已赋值
                      * @return PaginationToken 是否已赋值
+                     * 
                      */
                     bool PaginationTokenHasBeenSet() const;
 
@@ -69,20 +72,23 @@ Leave it empty for the first request.
 Default value: 50.
                      * @return MaxResults Number of data entries to return per page (up to 1,000).
 Default value: 50.
+                     * 
                      */
                     uint64_t GetMaxResults() const;
 
                     /**
                      * 设置Number of data entries to return per page (up to 1,000).
 Default value: 50.
-                     * @param MaxResults Number of data entries to return per page (up to 1,000).
+                     * @param _maxResults Number of data entries to return per page (up to 1,000).
 Default value: 50.
+                     * 
                      */
                     void SetMaxResults(const uint64_t& _maxResults);
 
                     /**
                      * 判断参数 MaxResults 是否已赋值
                      * @return MaxResults 是否已赋值
+                     * 
                      */
                     bool MaxResultsHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of rule IDs
                      * @return RuleId List of rule IDs
+                     * 
                      */
                     std::vector<int64_t> GetRuleId() const;
 
                     /**
                      * 设置List of rule IDs
-                     * @param RuleId List of rule IDs
+                     * @param _ruleId List of rule IDs
+                     * 
                      */
                     void SetRuleId(const std::vector<int64_t>& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

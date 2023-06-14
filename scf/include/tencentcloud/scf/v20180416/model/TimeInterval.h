@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time (inclusive) in the format of "%Y-%m-%d %H:%M:%S"
                      * @return Start Start time (inclusive) in the format of "%Y-%m-%d %H:%M:%S"
+                     * 
                      */
                     std::string GetStart() const;
 
                     /**
                      * 设置Start time (inclusive) in the format of "%Y-%m-%d %H:%M:%S"
-                     * @param Start Start time (inclusive) in the format of "%Y-%m-%d %H:%M:%S"
+                     * @param _start Start time (inclusive) in the format of "%Y-%m-%d %H:%M:%S"
+                     * 
                      */
                     void SetStart(const std::string& _start);
 
                     /**
                      * 判断参数 Start 是否已赋值
                      * @return Start 是否已赋值
+                     * 
                      */
                     bool StartHasBeenSet() const;
 
                     /**
                      * 获取End time (exclusive) in the format of "%Y-%m-%d %H:%M:%S"
                      * @return End End time (exclusive) in the format of "%Y-%m-%d %H:%M:%S"
+                     * 
                      */
                     std::string GetEnd() const;
 
                     /**
                      * 设置End time (exclusive) in the format of "%Y-%m-%d %H:%M:%S"
-                     * @param End End time (exclusive) in the format of "%Y-%m-%d %H:%M:%S"
+                     * @param _end End time (exclusive) in the format of "%Y-%m-%d %H:%M:%S"
+                     * 
                      */
                     void SetEnd(const std::string& _end);
 
                     /**
                      * 判断参数 End 是否已赋值
                      * @return End 是否已赋值
+                     * 
                      */
                     bool EndHasBeenSet() const;
 

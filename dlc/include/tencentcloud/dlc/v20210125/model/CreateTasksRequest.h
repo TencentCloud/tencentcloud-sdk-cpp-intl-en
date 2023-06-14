@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
                      * @return DatabaseName Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
+                     * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
                      * 设置Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
-                     * @param DatabaseName Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
+                     * @param _databaseName Database name. If there is a database name in the SQL statement, the database in the SQL statement will be used first; otherwise, the database specified by this parameter will be used (note: when submitting the database creation SQL statement, passed in an empty string for this field).
+                     * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
 
                     /**
                      * 判断参数 DatabaseName 是否已赋值
                      * @return DatabaseName 是否已赋值
+                     * 
                      */
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
                      * 获取SQL task information
                      * @return Tasks SQL task information
+                     * 
                      */
                     TasksInfo GetTasks() const;
 
                     /**
                      * 设置SQL task information
-                     * @param Tasks SQL task information
+                     * @param _tasks SQL task information
+                     * 
                      */
                     void SetTasks(const TasksInfo& _tasks);
 
                     /**
                      * 判断参数 Tasks 是否已赋值
                      * @return Tasks 是否已赋值
+                     * 
                      */
                     bool TasksHasBeenSet() const;
 
                     /**
                      * 获取Data source name. Default value: DataLakeCatalog.
                      * @return DatasourceConnectionName Data source name. Default value: DataLakeCatalog.
+                     * 
                      */
                     std::string GetDatasourceConnectionName() const;
 
                     /**
                      * 设置Data source name. Default value: DataLakeCatalog.
-                     * @param DatasourceConnectionName Data source name. Default value: DataLakeCatalog.
+                     * @param _datasourceConnectionName Data source name. Default value: DataLakeCatalog.
+                     * 
                      */
                     void SetDatasourceConnectionName(const std::string& _datasourceConnectionName);
 
                     /**
                      * 判断参数 DatasourceConnectionName 是否已赋值
                      * @return DatasourceConnectionName 是否已赋值
+                     * 
                      */
                     bool DatasourceConnectionNameHasBeenSet() const;
 
                     /**
                      * 获取Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
                      * @return DataEngineName Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
+                     * 
                      */
                     std::string GetDataEngineName() const;
 
                     /**
                      * 设置Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
-                     * @param DataEngineName Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
+                     * @param _dataEngineName Compute engine name. If this parameter is not specified, the task will be submitted to the default engine.
+                     * 
                      */
                     void SetDataEngineName(const std::string& _dataEngineName);
 
                     /**
                      * 判断参数 DataEngineName 是否已赋值
                      * @return DataEngineName 是否已赋值
+                     * 
                      */
                     bool DataEngineNameHasBeenSet() const;
 

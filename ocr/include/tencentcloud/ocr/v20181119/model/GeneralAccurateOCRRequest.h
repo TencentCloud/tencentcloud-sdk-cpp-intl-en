@@ -49,6 +49,7 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
                      * @return ImageBase64 Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 
                      */
                     std::string GetImageBase64() const;
 
@@ -56,15 +57,17 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
                      * 设置Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-                     * @param ImageBase64 Base64-encoded value of image.
+                     * @param _imageBase64 Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+                     * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
                     /**
                      * 判断参数 ImageBase64 是否已赋值
                      * @return ImageBase64 是否已赋值
+                     * 
                      */
                     bool ImageBase64HasBeenSet() const;
 
@@ -75,6 +78,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                      * @return ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
@@ -82,87 +86,101 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
                      * 设置URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @param ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
+                     * @param _imageUrl URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 
                     /**
                      * 获取Whether to return the character information. Default value: `false`
                      * @return IsWords Whether to return the character information. Default value: `false`
+                     * 
                      */
                     bool GetIsWords() const;
 
                     /**
                      * 设置Whether to return the character information. Default value: `false`
-                     * @param IsWords Whether to return the character information. Default value: `false`
+                     * @param _isWords Whether to return the character information. Default value: `false`
+                     * 
                      */
                     void SetIsWords(const bool& _isWords);
 
                     /**
                      * 判断参数 IsWords 是否已赋值
                      * @return IsWords 是否已赋值
+                     * 
                      */
                     bool IsWordsHasBeenSet() const;
 
                     /**
                      * 获取Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
                      * @return EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+                     * 
                      */
                     bool GetEnableDetectSplit() const;
 
                     /**
                      * 设置Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
-                     * @param EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+                     * @param _enableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+                     * 
                      */
                     void SetEnableDetectSplit(const bool& _enableDetectSplit);
 
                     /**
                      * 判断参数 EnableDetectSplit 是否已赋值
                      * @return EnableDetectSplit 是否已赋值
+                     * 
                      */
                     bool EnableDetectSplitHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
                      * @return IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+                     * 
                      */
                     bool GetIsPdf() const;
 
                     /**
                      * 设置Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
-                     * @param IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+                     * @param _isPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+                     * 
                      */
                     void SetIsPdf(const bool& _isPdf);
 
                     /**
                      * 判断参数 IsPdf 是否已赋值
                      * @return IsPdf 是否已赋值
+                     * 
                      */
                     bool IsPdfHasBeenSet() const;
 
                     /**
                      * 获取Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
                      * @return PdfPageNumber Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+                     * 
                      */
                     uint64_t GetPdfPageNumber() const;
 
                     /**
                      * 设置Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
-                     * @param PdfPageNumber Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+                     * @param _pdfPageNumber Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+                     * 
                      */
                     void SetPdfPageNumber(const uint64_t& _pdfPageNumber);
 
                     /**
                      * 判断参数 PdfPageNumber 是否已赋值
                      * @return PdfPageNumber 是否已赋值
+                     * 
                      */
                     bool PdfPageNumberHasBeenSet() const;
 

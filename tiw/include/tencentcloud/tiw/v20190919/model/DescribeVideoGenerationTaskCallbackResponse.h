@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Callback URL for recording video generation.
                      * @return Callback Callback URL for recording video generation.
+                     * 
                      */
                     std::string GetCallback() const;
 
                     /**
                      * 判断参数 Callback 是否已赋值
                      * @return Callback 是否已赋值
+                     * 
                      */
                     bool CallbackHasBeenSet() const;
 
                     /**
                      * 获取Callback authentication key for recording video generation.
                      * @return CallbackKey Callback authentication key for recording video generation.
+                     * 
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 判断参数 CallbackKey 是否已赋值
                      * @return CallbackKey 是否已赋值
+                     * 
                      */
                     bool CallbackKeyHasBeenSet() const;
 

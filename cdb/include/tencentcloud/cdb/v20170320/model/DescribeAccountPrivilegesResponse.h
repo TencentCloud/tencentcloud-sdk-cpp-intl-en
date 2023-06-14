@@ -49,48 +49,56 @@ namespace TencentCloud
                     /**
                      * 获取Array of global permissions.
                      * @return GlobalPrivileges Array of global permissions.
+                     * 
                      */
                     std::vector<std::string> GetGlobalPrivileges() const;
 
                     /**
                      * 判断参数 GlobalPrivileges 是否已赋值
                      * @return GlobalPrivileges 是否已赋值
+                     * 
                      */
                     bool GlobalPrivilegesHasBeenSet() const;
 
                     /**
                      * 获取Array of database permissions.
                      * @return DatabasePrivileges Array of database permissions.
+                     * 
                      */
                     std::vector<DatabasePrivilege> GetDatabasePrivileges() const;
 
                     /**
                      * 判断参数 DatabasePrivileges 是否已赋值
                      * @return DatabasePrivileges 是否已赋值
+                     * 
                      */
                     bool DatabasePrivilegesHasBeenSet() const;
 
                     /**
                      * 获取Array of table permissions in the database.
                      * @return TablePrivileges Array of table permissions in the database.
+                     * 
                      */
                     std::vector<TablePrivilege> GetTablePrivileges() const;
 
                     /**
                      * 判断参数 TablePrivileges 是否已赋值
                      * @return TablePrivileges 是否已赋值
+                     * 
                      */
                     bool TablePrivilegesHasBeenSet() const;
 
                     /**
                      * 获取Array of column permissions in the table.
                      * @return ColumnPrivileges Array of column permissions in the table.
+                     * 
                      */
                     std::vector<ColumnPrivilege> GetColumnPrivileges() const;
 
                     /**
                      * 判断参数 ColumnPrivileges 是否已赋值
                      * @return ColumnPrivileges 是否已赋值
+                     * 
                      */
                     bool ColumnPrivilegesHasBeenSet() const;
 

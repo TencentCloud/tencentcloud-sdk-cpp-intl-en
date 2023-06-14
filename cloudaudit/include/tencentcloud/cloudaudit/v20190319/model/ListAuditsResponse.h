@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuditSummarys Set of queried tracking set summaries
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AuditSummary> GetAuditSummarys() const;
 
                     /**
                      * 判断参数 AuditSummarys 是否已赋值
                      * @return AuditSummarys 是否已赋值
+                     * 
                      */
                     bool AuditSummarysHasBeenSet() const;
 

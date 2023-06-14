@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
                      * @return PluginName Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+                     * 
                      */
                     std::string GetPluginName() const;
 
                     /**
                      * 设置Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
-                     * @param PluginName Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+                     * @param _pluginName Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+                     * 
                      */
                     void SetPluginName(const std::string& _pluginName);
 
                     /**
                      * 判断参数 PluginName 是否已赋值
                      * @return PluginName 是否已赋值
+                     * 
                      */
                     bool PluginNameHasBeenSet() const;
 
                     /**
                      * 获取Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
                      * @return PluginType Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
+                     * 
                      */
                     std::string GetPluginType() const;
 
                     /**
                      * 设置Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
-                     * @param PluginType Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
+                     * @param _pluginType Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
+                     * 
                      */
                     void SetPluginType(const std::string& _pluginType);
 
                     /**
                      * 判断参数 PluginType 是否已赋值
                      * @return PluginType 是否已赋值
+                     * 
                      */
                     bool PluginTypeHasBeenSet() const;
 
                     /**
                      * 获取Plugin definition statement in json format
                      * @return PluginData Plugin definition statement in json format
+                     * 
                      */
                     std::string GetPluginData() const;
 
                     /**
                      * 设置Plugin definition statement in json format
-                     * @param PluginData Plugin definition statement in json format
+                     * @param _pluginData Plugin definition statement in json format
+                     * 
                      */
                     void SetPluginData(const std::string& _pluginData);
 
                     /**
                      * 判断参数 PluginData 是否已赋值
                      * @return PluginData 是否已赋值
+                     * 
                      */
                     bool PluginDataHasBeenSet() const;
 
                     /**
                      * 获取Plugin description within 200 characters
                      * @return Description Plugin description within 200 characters
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Plugin description within 200 characters
-                     * @param Description Plugin description within 200 characters
+                     * @param _description Plugin description within 200 characters
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Label
                      * @return Tags Label
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Label
-                     * @param Tags Label
+                     * @param _tags Label
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

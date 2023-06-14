@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MessageType The message type. `0`: Text; `1`: Image.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMessageType() const;
 
                     /**
                      * 设置The message type. `0`: Text; `1`: Image.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MessageType The message type. `0`: Text; `1`: Image.
+                     * @param _messageType The message type. `0`: Text; `1`: Image.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessageType(const int64_t& _messageType);
 
                     /**
                      * 判断参数 MessageType 是否已赋值
                      * @return MessageType 是否已赋值
+                     * 
                      */
                     bool MessageTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TextMessage The text. This parameter is valid if `MessageType` is `0`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTextMessage() const;
 
                     /**
                      * 设置The text. This parameter is valid if `MessageType` is `0`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TextMessage The text. This parameter is valid if `MessageType` is `0`.
+                     * @param _textMessage The text. This parameter is valid if `MessageType` is `0`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTextMessage(const std::string& _textMessage);
 
                     /**
                      * 判断参数 TextMessage 是否已赋值
                      * @return TextMessage 是否已赋值
+                     * 
                      */
                     bool TextMessageHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageMessage The image URL. This parameter is valid if `MessageType` is `1`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageMessage() const;
 
                     /**
                      * 设置The image URL. This parameter is valid if `MessageType` is `1`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImageMessage The image URL. This parameter is valid if `MessageType` is `1`.
+                     * @param _imageMessage The image URL. This parameter is valid if `MessageType` is `1`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageMessage(const std::string& _imageMessage);
 
                     /**
                      * 判断参数 ImageMessage 是否已赋值
                      * @return ImageMessage 是否已赋值
+                     * 
                      */
                     bool ImageMessageHasBeenSet() const;
 

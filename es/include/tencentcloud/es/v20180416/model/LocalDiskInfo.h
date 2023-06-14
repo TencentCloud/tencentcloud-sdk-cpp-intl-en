@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
                      * @return LocalDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+                     * 
                      */
                     std::string GetLocalDiskType() const;
 
                     /**
                      * 设置Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
-                     * @param LocalDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+                     * @param _localDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+                     * 
                      */
                     void SetLocalDiskType(const std::string& _localDiskType);
 
                     /**
                      * 判断参数 LocalDiskType 是否已赋值
                      * @return LocalDiskType 是否已赋值
+                     * 
                      */
                     bool LocalDiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Size of a single local disk
                      * @return LocalDiskSize Size of a single local disk
+                     * 
                      */
                     uint64_t GetLocalDiskSize() const;
 
                     /**
                      * 设置Size of a single local disk
-                     * @param LocalDiskSize Size of a single local disk
+                     * @param _localDiskSize Size of a single local disk
+                     * 
                      */
                     void SetLocalDiskSize(const uint64_t& _localDiskSize);
 
                     /**
                      * 判断参数 LocalDiskSize 是否已赋值
                      * @return LocalDiskSize 是否已赋值
+                     * 
                      */
                     bool LocalDiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Number of local disks
                      * @return LocalDiskCount Number of local disks
+                     * 
                      */
                     uint64_t GetLocalDiskCount() const;
 
                     /**
                      * 设置Number of local disks
-                     * @param LocalDiskCount Number of local disks
+                     * @param _localDiskCount Number of local disks
+                     * 
                      */
                     void SetLocalDiskCount(const uint64_t& _localDiskCount);
 
                     /**
                      * 判断参数 LocalDiskCount 是否已赋值
                      * @return LocalDiskCount 是否已赋值
+                     * 
                      */
                     bool LocalDiskCountHasBeenSet() const;
 

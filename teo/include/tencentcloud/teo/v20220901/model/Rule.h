@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Feature to be executed.
                      * @return Actions Feature to be executed.
+                     * 
                      */
                     std::vector<Action> GetActions() const;
 
                     /**
                      * 设置Feature to be executed.
-                     * @param Actions Feature to be executed.
+                     * @param _actions Feature to be executed.
+                     * 
                      */
                     void SetActions(const std::vector<Action>& _actions);
 
                     /**
                      * 判断参数 Actions 是否已赋值
                      * @return Actions 是否已赋值
+                     * 
                      */
                     bool ActionsHasBeenSet() const;
 
@@ -72,38 +75,44 @@ namespace TencentCloud
 Note: If any condition in the array is met, the feature will run.
                      * @return Conditions Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
+                     * 
                      */
                     std::vector<RuleAndConditions> GetConditions() const;
 
                     /**
                      * 设置Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
-                     * @param Conditions Feature execution conditions.
+                     * @param _conditions Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
+                     * 
                      */
                     void SetConditions(const std::vector<RuleAndConditions>& _conditions);
 
                     /**
                      * 判断参数 Conditions 是否已赋值
                      * @return Conditions 是否已赋值
+                     * 
                      */
                     bool ConditionsHasBeenSet() const;
 
                     /**
                      * 获取The nested rule.
                      * @return SubRules The nested rule.
+                     * 
                      */
                     std::vector<SubRuleItem> GetSubRules() const;
 
                     /**
                      * 设置The nested rule.
-                     * @param SubRules The nested rule.
+                     * @param _subRules The nested rule.
+                     * 
                      */
                     void SetSubRules(const std::vector<SubRuleItem>& _subRules);
 
                     /**
                      * 判断参数 SubRules 是否已赋值
                      * @return SubRules 是否已赋值
+                     * 
                      */
                     bool SubRulesHasBeenSet() const;
 

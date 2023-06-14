@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AgentSet List of agents
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusAgent> GetAgentSet() const;
 
                     /**
                      * 判断参数 AgentSet 是否已赋值
                      * @return AgentSet 是否已赋值
+                     * 
                      */
                     bool AgentSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of agents
                      * @return TotalCount Total number of agents
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

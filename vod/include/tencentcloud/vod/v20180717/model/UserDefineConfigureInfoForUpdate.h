@@ -52,54 +52,63 @@ namespace TencentCloud
                     /**
                      * 获取Parameters for custom facial recognition
                      * @return FaceReviewInfo Parameters for custom facial recognition
+                     * 
                      */
                     UserDefineFaceReviewTemplateInfoForUpdate GetFaceReviewInfo() const;
 
                     /**
                      * 设置Parameters for custom facial recognition
-                     * @param FaceReviewInfo Parameters for custom facial recognition
+                     * @param _faceReviewInfo Parameters for custom facial recognition
+                     * 
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfoForUpdate& _faceReviewInfo);
 
                     /**
                      * 判断参数 FaceReviewInfo 是否已赋值
                      * @return FaceReviewInfo 是否已赋值
+                     * 
                      */
                     bool FaceReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for custom ASR-based recognition
                      * @return AsrReviewInfo Parameters for custom ASR-based recognition
+                     * 
                      */
                     UserDefineAsrTextReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
                      * 设置Parameters for custom ASR-based recognition
-                     * @param AsrReviewInfo Parameters for custom ASR-based recognition
+                     * @param _asrReviewInfo Parameters for custom ASR-based recognition
+                     * 
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfoForUpdate& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for custom OCR-based recognition
                      * @return OcrReviewInfo Parameters for custom OCR-based recognition
+                     * 
                      */
                     UserDefineOcrTextReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
                      * 设置Parameters for custom OCR-based recognition
-                     * @param OcrReviewInfo Parameters for custom OCR-based recognition
+                     * @param _ocrReviewInfo Parameters for custom OCR-based recognition
+                     * 
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

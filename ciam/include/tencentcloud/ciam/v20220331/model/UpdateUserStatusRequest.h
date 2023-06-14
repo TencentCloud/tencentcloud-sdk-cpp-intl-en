@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取User ID
                      * @return UserId User ID
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID
-                     * @param UserId User ID
+                     * @param _userId User ID
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
 <li> **NORMAL** </li>	  Normal
 <li> **LOCK** </li>  Locked
 <li> **FREEZE** </li>	  Frozen
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -98,17 +105,19 @@ namespace TencentCloud
 <li> **NORMAL** </li>	  Normal
 <li> **LOCK** </li>  Locked
 <li> **FREEZE** </li>	  Frozen
-                     * @param Status User status
+                     * @param _status User status
 
 <li> **NORMAL** </li>	  Normal
 <li> **LOCK** </li>  Locked
 <li> **FREEZE** </li>	  Frozen
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of log access types
                      * @return List List of log access types
+                     * 
                      */
                     std::vector<SecLogJoinInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

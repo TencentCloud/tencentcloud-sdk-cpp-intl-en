@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Horizontal coordinate
                      * @return X Horizontal coordinate
+                     * 
                      */
                     int64_t GetX() const;
 
                     /**
                      * 设置Horizontal coordinate
-                     * @param X Horizontal coordinate
+                     * @param _x Horizontal coordinate
+                     * 
                      */
                     void SetX(const int64_t& _x);
 
                     /**
                      * 判断参数 X 是否已赋值
                      * @return X 是否已赋值
+                     * 
                      */
                     bool XHasBeenSet() const;
 
                     /**
                      * 获取Vertical coordinate
                      * @return Y Vertical coordinate
+                     * 
                      */
                     int64_t GetY() const;
 
                     /**
                      * 设置Vertical coordinate
-                     * @param Y Vertical coordinate
+                     * @param _y Vertical coordinate
+                     * 
                      */
                     void SetY(const int64_t& _y);
 
                     /**
                      * 判断参数 Y 是否已赋值
                      * @return Y 是否已赋值
+                     * 
                      */
                     bool YHasBeenSet() const;
 

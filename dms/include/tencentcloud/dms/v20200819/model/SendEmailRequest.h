@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Sender
                      * @return FromAddress Sender
+                     * 
                      */
                     std::string GetFromAddress() const;
 
                     /**
                      * 设置Sender
-                     * @param FromAddress Sender
+                     * @param _fromAddress Sender
+                     * 
                      */
                     void SetFromAddress(const std::string& _fromAddress);
 
                     /**
                      * 判断参数 FromAddress 是否已赋值
                      * @return FromAddress 是否已赋值
+                     * 
                      */
                     bool FromAddressHasBeenSet() const;
 
                     /**
                      * 获取Recipient
                      * @return ToAddress Recipient
+                     * 
                      */
                     std::string GetToAddress() const;
 
                     /**
                      * 设置Recipient
-                     * @param ToAddress Recipient
+                     * @param _toAddress Recipient
+                     * 
                      */
                     void SetToAddress(const std::string& _toAddress);
 
                     /**
                      * 判断参数 ToAddress 是否已赋值
                      * @return ToAddress 是否已赋值
+                     * 
                      */
                     bool ToAddressHasBeenSet() const;
 
                     /**
                      * 获取Email summary
                      * @return Subject Email summary
+                     * 
                      */
                     std::string GetSubject() const;
 
                     /**
                      * 设置Email summary
-                     * @param Subject Email summary
+                     * @param _subject Email summary
+                     * 
                      */
                     void SetSubject(const std::string& _subject);
 
                     /**
                      * 判断参数 Subject 是否已赋值
                      * @return Subject 是否已赋值
+                     * 
                      */
                     bool SubjectHasBeenSet() const;
 
                     /**
                      * 获取Sender name
                      * @return FromName Sender name
+                     * 
                      */
                     std::string GetFromName() const;
 
                     /**
                      * 设置Sender name
-                     * @param FromName Sender name
+                     * @param _fromName Sender name
+                     * 
                      */
                     void SetFromName(const std::string& _fromName);
 
                     /**
                      * 判断参数 FromName 是否已赋值
                      * @return FromName 是否已赋值
+                     * 
                      */
                     bool FromNameHasBeenSet() const;
 
                     /**
                      * 获取Reply-to address
                      * @return ReplyAddress Reply-to address
+                     * 
                      */
                     std::string GetReplyAddress() const;
 
                     /**
                      * 设置Reply-to address
-                     * @param ReplyAddress Reply-to address
+                     * @param _replyAddress Reply-to address
+                     * 
                      */
                     void SetReplyAddress(const std::string& _replyAddress);
 
                     /**
                      * 判断参数 ReplyAddress 是否已赋值
                      * @return ReplyAddress 是否已赋值
+                     * 
                      */
                     bool ReplyAddressHasBeenSet() const;
 
                     /**
                      * 获取The body of an HTML email
                      * @return HtmlContent The body of an HTML email
+                     * 
                      */
                     std::string GetHtmlContent() const;
 
                     /**
                      * 设置The body of an HTML email
-                     * @param HtmlContent The body of an HTML email
+                     * @param _htmlContent The body of an HTML email
+                     * 
                      */
                     void SetHtmlContent(const std::string& _htmlContent);
 
                     /**
                      * 判断参数 HtmlContent 是否已赋值
                      * @return HtmlContent 是否已赋值
+                     * 
                      */
                     bool HtmlContentHasBeenSet() const;
 
                     /**
                      * 获取The body of a plain-text email
                      * @return TextContent The body of a plain-text email
+                     * 
                      */
                     std::string GetTextContent() const;
 
                     /**
                      * 设置The body of a plain-text email
-                     * @param TextContent The body of a plain-text email
+                     * @param _textContent The body of a plain-text email
+                     * 
                      */
                     void SetTextContent(const std::string& _textContent);
 
                     /**
                      * 判断参数 TextContent 是否已赋值
                      * @return TextContent 是否已赋值
+                     * 
                      */
                     bool TextContentHasBeenSet() const;
 

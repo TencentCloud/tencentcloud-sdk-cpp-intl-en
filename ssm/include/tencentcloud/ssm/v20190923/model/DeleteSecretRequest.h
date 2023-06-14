@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of the Secret to be deleted.
                      * @return SecretName Name of the Secret to be deleted.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of the Secret to be deleted.
-                     * @param SecretName Name of the Secret to be deleted.
+                     * @param _secretName Name of the Secret to be deleted.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 For an SSH key secret, this field can only be `0`.
                      * @return RecoveryWindowInDays Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
 For an SSH key secret, this field can only be `0`.
+                     * 
                      */
                     uint64_t GetRecoveryWindowInDays() const;
 
                     /**
                      * 设置Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
 For an SSH key secret, this field can only be `0`.
-                     * @param RecoveryWindowInDays Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+                     * @param _recoveryWindowInDays Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
 For an SSH key secret, this field can only be `0`.
+                     * 
                      */
                     void SetRecoveryWindowInDays(const uint64_t& _recoveryWindowInDays);
 
                     /**
                      * 判断参数 RecoveryWindowInDays 是否已赋值
                      * @return RecoveryWindowInDays 是否已赋值
+                     * 
                      */
                     bool RecoveryWindowInDaysHasBeenSet() const;
 
@@ -89,6 +95,7 @@ For an SSH key secret, this field can only be `0`.
                      * @return CleanSSHKey Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
 `True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
 `False`: only deletes the SSH key information in the secret.
+                     * 
                      */
                     bool GetCleanSSHKey() const;
 
@@ -96,15 +103,17 @@ For an SSH key secret, this field can only be `0`.
                      * 设置Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
 `True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
 `False`: only deletes the SSH key information in the secret.
-                     * @param CleanSSHKey Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+                     * @param _cleanSSHKey Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
 `True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
 `False`: only deletes the SSH key information in the secret.
+                     * 
                      */
                     void SetCleanSSHKey(const bool& _cleanSSHKey);
 
                     /**
                      * 判断参数 CleanSSHKey 是否已赋值
                      * @return CleanSSHKey 是否已赋值
+                     * 
                      */
                     bool CleanSSHKeyHasBeenSet() const;
 

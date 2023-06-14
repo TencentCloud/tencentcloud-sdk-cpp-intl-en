@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable scheduled scan
                      * @return EnableScan Whether to enable scheduled scan
+                     * 
                      */
                     bool GetEnableScan() const;
 
                     /**
                      * 设置Whether to enable scheduled scan
-                     * @param EnableScan Whether to enable scheduled scan
+                     * @param _enableScan Whether to enable scheduled scan
+                     * 
                      */
                     void SetEnableScan(const bool& _enableScan);
 
                     /**
                      * 判断参数 EnableScan 是否已赋值
                      * @return EnableScan 是否已赋值
+                     * 
                      */
                     bool EnableScanHasBeenSet() const;
 
                     /**
                      * 获取Scan all paths
                      * @return ScanPathAll Scan all paths
+                     * 
                      */
                     bool GetScanPathAll() const;
 
                     /**
                      * 设置Scan all paths
-                     * @param ScanPathAll Scan all paths
+                     * @param _scanPathAll Scan all paths
+                     * 
                      */
                     void SetScanPathAll(const bool& _scanPathAll);
 
                     /**
                      * 判断参数 ScanPathAll 是否已赋值
                      * @return ScanPathAll 是否已赋值
+                     * 
                      */
                     bool ScanPathAllHasBeenSet() const;
 
                     /**
                      * 获取Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following; the scope cannot be greater than `1`).
                      * @return ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following; the scope cannot be greater than `1`).
+                     * 
                      */
                     uint64_t GetScanPathType() const;
 
                     /**
                      * 设置Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following; the scope cannot be greater than `1`).
-                     * @param ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following; the scope cannot be greater than `1`).
+                     * @param _scanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following; the scope cannot be greater than `1`).
+                     * 
                      */
                     void SetScanPathType(const uint64_t& _scanPathType);
 
                     /**
                      * 判断参数 ScanPathType 是否已赋值
                      * @return ScanPathType 是否已赋值
+                     * 
                      */
                     bool ScanPathTypeHasBeenSet() const;
 
                     /**
                      * 获取Specified path to be excluded or scanned
                      * @return ScanPath Specified path to be excluded or scanned
+                     * 
                      */
                     std::vector<std::string> GetScanPath() const;
 
                     /**
                      * 设置Specified path to be excluded or scanned
-                     * @param ScanPath Specified path to be excluded or scanned
+                     * @param _scanPath Specified path to be excluded or scanned
+                     * 
                      */
                     void SetScanPath(const std::vector<std::string>& _scanPath);
 
                     /**
                      * 判断参数 ScanPath 是否已赋值
                      * @return ScanPath 是否已赋值
+                     * 
                      */
                     bool ScanPathHasBeenSet() const;
 
@@ -125,6 +137,7 @@ namespace TencentCloud
 `SCAN_PATH_DEFAULT`: Scan the default path
 `SCAN_PATH_USER_DEFINE`: Scan the custom path
 
+                     * 
                      */
                     std::string GetScanPathMode() const;
 
@@ -134,17 +147,19 @@ namespace TencentCloud
 `SCAN_PATH_DEFAULT`: Scan the default path
 `SCAN_PATH_USER_DEFINE`: Scan the custom path
 
-                     * @param ScanPathMode Path scanning mode: 
+                     * @param _scanPathMode Path scanning mode: 
 `SCAN_PATH_ALL`: Scan all paths
 `SCAN_PATH_DEFAULT`: Scan the default path
 `SCAN_PATH_USER_DEFINE`: Scan the custom path
 
+                     * 
                      */
                     void SetScanPathMode(const std::string& _scanPathMode);
 
                     /**
                      * 判断参数 ScanPathMode 是否已赋值
                      * @return ScanPathMode 是否已赋值
+                     * 
                      */
                     bool ScanPathModeHasBeenSet() const;
 

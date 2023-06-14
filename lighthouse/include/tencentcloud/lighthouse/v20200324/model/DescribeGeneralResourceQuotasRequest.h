@@ -67,6 +67,7 @@ namespace TencentCloud
 - `FREE_BLUEPRINT`: Free custom image
 - `DATA_DISK`: Data disk
 - `FIREWALL_RULE`: Firewall rules
+                     * 
                      */
                     std::vector<std::string> GetResourceNames() const;
 
@@ -83,7 +84,7 @@ namespace TencentCloud
 - `FREE_BLUEPRINT`: Free custom image
 - `DATA_DISK`: Data disk
 - `FIREWALL_RULE`: Firewall rules
-                     * @param ResourceNames Resource name list. Values:
+                     * @param _resourceNames Resource name list. Values:
 - `GENERAL_BUNDLE_INSTANCE`: General bundle
 - `STORAGE_BUNDLE_INSTANCE`:  Storage bundle 
 - `ENTERPRISE_BUNDLE_INSTANCE`: Enterprise bundle 
@@ -95,12 +96,14 @@ namespace TencentCloud
 - `FREE_BLUEPRINT`: Free custom image
 - `DATA_DISK`: Data disk
 - `FIREWALL_RULE`: Firewall rules
+                     * 
                      */
                     void SetResourceNames(const std::vector<std::string>& _resourceNames);
 
                     /**
                      * 判断参数 ResourceNames 是否已赋值
                      * @return ResourceNames 是否已赋值
+                     * 
                      */
                     bool ResourceNamesHasBeenSet() const;
 

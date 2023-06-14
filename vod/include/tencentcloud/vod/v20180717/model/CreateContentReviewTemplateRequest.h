@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
+                     * 
                      */
                     std::string GetReviewWallSwitch() const;
 
@@ -61,123 +62,143 @@ namespace TencentCloud
                      * 设置Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
-                     * @param ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+                     * @param _reviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
+                     * 
                      */
                     void SetReviewWallSwitch(const std::string& _reviewWallSwitch);
 
                     /**
                      * 判断参数 ReviewWallSwitch 是否已赋值
                      * @return ReviewWallSwitch 是否已赋值
+                     * 
                      */
                     bool ReviewWallSwitchHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Name of an intelligent content recognition template. Length limit: 64 characters.
                      * @return Name Name of an intelligent content recognition template. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of an intelligent content recognition template. Length limit: 64 characters.
-                     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters.
+                     * @param _name Name of an intelligent content recognition template. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description of an intelligent content recognition template. Length limit: 256 characters.
                      * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Description of an intelligent content recognition template. Length limit: 256 characters.
-                     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+                     * @param _comment Description of an intelligent content recognition template. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
                     /**
                      * 获取Control parameter for porn information.
                      * @return PornConfigure Control parameter for porn information.
+                     * 
                      */
                     PornConfigureInfo GetPornConfigure() const;
 
                     /**
                      * 设置Control parameter for porn information.
-                     * @param PornConfigure Control parameter for porn information.
+                     * @param _pornConfigure Control parameter for porn information.
+                     * 
                      */
                     void SetPornConfigure(const PornConfigureInfo& _pornConfigure);
 
                     /**
                      * 判断参数 PornConfigure 是否已赋值
                      * @return PornConfigure 是否已赋值
+                     * 
                      */
                     bool PornConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter for terrorism information.
                      * @return TerrorismConfigure Control parameter for terrorism information.
+                     * 
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
                      * 设置Control parameter for terrorism information.
-                     * @param TerrorismConfigure Control parameter for terrorism information.
+                     * @param _terrorismConfigure Control parameter for terrorism information.
+                     * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
 
                     /**
                      * 判断参数 TerrorismConfigure 是否已赋值
                      * @return TerrorismConfigure 是否已赋值
+                     * 
                      */
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter for politically sensitive information.
                      * @return PoliticalConfigure Control parameter for politically sensitive information.
+                     * 
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
                      * 设置Control parameter for politically sensitive information.
-                     * @param PoliticalConfigure Control parameter for politically sensitive information.
+                     * @param _politicalConfigure Control parameter for politically sensitive information.
+                     * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
 
                     /**
                      * 判断参数 PoliticalConfigure 是否已赋值
                      * @return PoliticalConfigure 是否已赋值
+                     * 
                      */
                     bool PoliticalConfigureHasBeenSet() const;
 
@@ -188,6 +209,7 @@ namespace TencentCloud
                      * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
+                     * 
                      */
                     ProhibitedConfigureInfo GetProhibitedConfigure() const;
 
@@ -195,51 +217,59 @@ namespace TencentCloud
                      * 设置Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-                     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+                     * @param _prohibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
+                     * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfo& _prohibitedConfigure);
 
                     /**
                      * 判断参数 ProhibitedConfigure 是否已赋值
                      * @return ProhibitedConfigure 是否已赋值
+                     * 
                      */
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter for custom intelligent content recognition.
                      * @return UserDefineConfigure Control parameter for custom intelligent content recognition.
+                     * 
                      */
                     UserDefineConfigureInfo GetUserDefineConfigure() const;
 
                     /**
                      * 设置Control parameter for custom intelligent content recognition.
-                     * @param UserDefineConfigure Control parameter for custom intelligent content recognition.
+                     * @param _userDefineConfigure Control parameter for custom intelligent content recognition.
+                     * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfo& _userDefineConfigure);
 
                     /**
                      * 判断参数 UserDefineConfigure 是否已赋值
                      * @return UserDefineConfigure 是否已赋值
+                     * 
                      */
                     bool UserDefineConfigureHasBeenSet() const;
 
                     /**
                      * 获取Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
                      * @return ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
                      * 设置Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
-                     * @param ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * @param _screenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
 
                     /**
                      * 判断参数 ScreenshotInterval 是否已赋值
                      * @return ScreenshotInterval 是否已赋值
+                     * 
                      */
                     bool ScreenshotIntervalHasBeenSet() const;
 

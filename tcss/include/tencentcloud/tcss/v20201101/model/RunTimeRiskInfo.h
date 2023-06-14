@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Number
                      * @return Cnt Number
+                     * 
                      */
                     uint64_t GetCnt() const;
 
                     /**
                      * 设置Number
-                     * @param Cnt Number
+                     * @param _cnt Number
+                     * 
                      */
                     void SetCnt(const uint64_t& _cnt);
 
                     /**
                      * 判断参数 Cnt 是否已赋值
                      * @return Cnt 是否已赋值
+                     * 
                      */
                     bool CntHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
 `HIGH`: High.
 `MEDIUM`: Medium.
 `LOW`: Low.
+                     * 
                      */
                     std::string GetLevel() const;
 
@@ -84,17 +88,19 @@ namespace TencentCloud
 `HIGH`: High.
 `MEDIUM`: Medium.
 `LOW`: Low.
-                     * @param Level Risk level:
+                     * @param _level Risk level:
 `CRITICAL`: Critical.
 `HIGH`: High.
 `MEDIUM`: Medium.
 `LOW`: Low.
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 

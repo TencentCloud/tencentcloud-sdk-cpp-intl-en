@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The initial number of records, default value: 0
                      * @return Offset The initial number of records, default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The initial number of records, default value: 0
-                     * @param Offset The initial number of records, default value: 0
+                     * @param _offset The initial number of records, default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of records returned, default value: 500
                      * @return Limit The number of records returned, default value: 500
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of records returned, default value: 500
-                     * @param Limit The number of records returned, default value: 500
+                     * @param _limit The number of records returned, default value: 500
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

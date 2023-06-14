@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取User group ID.
                      * @return UserGroupId User group ID.
+                     * 
                      */
                     std::string GetUserGroupId() const;
 
                     /**
                      * 设置User group ID.
-                     * @param UserGroupId User group ID.
+                     * @param _userGroupId User group ID.
+                     * 
                      */
                     void SetUserGroupId(const std::string& _userGroupId);
 
                     /**
                      * 判断参数 UserGroupId 是否已赋值
                      * @return UserGroupId 是否已赋值
+                     * 
                      */
                     bool UserGroupIdHasBeenSet() const;
 
                     /**
                      * 获取User group name.
                      * @return UserGroupName User group name.
+                     * 
                      */
                     std::string GetUserGroupName() const;
 
                     /**
                      * 设置User group name.
-                     * @param UserGroupName User group name.
+                     * @param _userGroupName User group name.
+                     * 
                      */
                     void SetUserGroupName(const std::string& _userGroupName);
 
                     /**
                      * 判断参数 UserGroupName 是否已赋值
                      * @return UserGroupName 是否已赋值
+                     * 
                      */
                     bool UserGroupNameHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifiedDate Last update time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastModifiedDate() const;
 
                     /**
                      * 设置Last update time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastModifiedDate Last update time in ISO 8601 format.
+                     * @param _lastModifiedDate Last update time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastModifiedDate(const std::string& _lastModifiedDate);
 
                     /**
                      * 判断参数 LastModifiedDate 是否已赋值
                      * @return LastModifiedDate 是否已赋值
+                     * 
                      */
                     bool LastModifiedDateHasBeenSet() const;
 

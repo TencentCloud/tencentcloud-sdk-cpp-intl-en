@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Organization node name, which can contain up to 64 characters.
                      * @return DisplayName Organization node name, which can contain up to 64 characters.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Organization node name, which can contain up to 64 characters.
-                     * @param DisplayName Organization node name, which can contain up to 64 characters.
+                     * @param _displayName Organization node name, which can contain up to 64 characters.
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
                     /**
                      * 获取Parent organization node ID. If this parameter is left empty, the organization will be created under the root organization node by default.
                      * @return ParentOrgNodeId Parent organization node ID. If this parameter is left empty, the organization will be created under the root organization node by default.
+                     * 
                      */
                     std::string GetParentOrgNodeId() const;
 
                     /**
                      * 设置Parent organization node ID. If this parameter is left empty, the organization will be created under the root organization node by default.
-                     * @param ParentOrgNodeId Parent organization node ID. If this parameter is left empty, the organization will be created under the root organization node by default.
+                     * @param _parentOrgNodeId Parent organization node ID. If this parameter is left empty, the organization will be created under the root organization node by default.
+                     * 
                      */
                     void SetParentOrgNodeId(const std::string& _parentOrgNodeId);
 
                     /**
                      * 判断参数 ParentOrgNodeId 是否已赋值
                      * @return ParentOrgNodeId 是否已赋值
+                     * 
                      */
                     bool ParentOrgNodeIdHasBeenSet() const;
 
                     /**
                      * 获取Organization node description.
                      * @return Description Organization node description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Organization node description.
-                     * @param Description Organization node description.
+                     * @param _description Organization node description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
                      * @return CustomizedOrgNodeId External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+                     * 
                      */
                     std::string GetCustomizedOrgNodeId() const;
 
                     /**
                      * 设置External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
-                     * @param CustomizedOrgNodeId External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+                     * @param _customizedOrgNodeId External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+                     * 
                      */
                     void SetCustomizedOrgNodeId(const std::string& _customizedOrgNodeId);
 
                     /**
                      * 判断参数 CustomizedOrgNodeId 是否已赋值
                      * @return CustomizedOrgNodeId 是否已赋值
+                     * 
                      */
                     bool CustomizedOrgNodeIdHasBeenSet() const;
 

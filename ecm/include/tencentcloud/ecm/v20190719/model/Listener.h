@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerId CLB listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListenerId CLB listener ID
+                     * @param _listenerId CLB listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Protocol Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol Listener protocol
+                     * @param _protocol Listener protocol
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Listener port.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Listener port.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Listener port.
+                     * @param _port Listener port.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HealthCheck Health check information of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
                      * 设置Health check information of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HealthCheck Health check information of the listener
+                     * @param _healthCheck Health check information of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
 
                     /**
                      * 判断参数 HealthCheck 是否已赋值
                      * @return HealthCheck 是否已赋值
+                     * 
                      */
                     bool HealthCheckHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Scheduler Request scheduling method
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScheduler() const;
 
                     /**
                      * 设置Request scheduling method
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Scheduler Request scheduling method
+                     * @param _scheduler Request scheduling method
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScheduler(const std::string& _scheduler);
 
                     /**
                      * 判断参数 Scheduler 是否已赋值
                      * @return Scheduler 是否已赋值
+                     * 
                      */
                     bool SchedulerHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SessionExpireTime Session persistence time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
                      * 设置Session persistence time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SessionExpireTime Session persistence time
+                     * @param _sessionExpireTime Session persistence time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSessionExpireTime(const int64_t& _sessionExpireTime);
 
                     /**
                      * 判断参数 SessionExpireTime 是否已赋值
                      * @return SessionExpireTime 是否已赋值
+                     * 
                      */
                     bool SessionExpireTimeHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerName Listener name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置Listener name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListenerName Listener name
+                     * @param _listenerName Listener name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListenerName(const std::string& _listenerName);
 
                     /**
                      * 判断参数 ListenerName 是否已赋值
                      * @return ListenerName 是否已赋值
+                     * 
                      */
                     bool ListenerNameHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Listener creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Listener creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Listener creation time
+                     * @param _createTime Listener creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SessionType Session type of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSessionType() const;
 
                     /**
                      * 设置Session type of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SessionType Session type of the listener
+                     * @param _sessionType Session type of the listener
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSessionType(const std::string& _sessionType);
 
                     /**
                      * 判断参数 SessionType 是否已赋值
                      * @return SessionType 是否已赋值
+                     * 
                      */
                     bool SessionTypeHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EndPort End port of the port range
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEndPort() const;
 
                     /**
                      * 设置End port of the port range
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EndPort End port of the port range
+                     * @param _endPort End port of the port range
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndPort(const int64_t& _endPort);
 
                     /**
                      * 判断参数 EndPort 是否已赋值
                      * @return EndPort 是否已赋值
+                     * 
                      */
                     bool EndPortHasBeenSet() const;
 

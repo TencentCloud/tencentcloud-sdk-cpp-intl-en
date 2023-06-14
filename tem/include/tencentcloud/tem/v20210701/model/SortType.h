@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of the sorting field
                      * @return Key Name of the sorting field
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Name of the sorting field
-                     * @param Key Name of the sorting field
+                     * @param _key Name of the sorting field
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取`0`: Ascending; `1`: Descending 
                      * @return Type `0`: Ascending; `1`: Descending 
+                     * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置`0`: Ascending; `1`: Descending 
-                     * @param Type `0`: Ascending; `1`: Descending 
+                     * @param _type `0`: Ascending; `1`: Descending 
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

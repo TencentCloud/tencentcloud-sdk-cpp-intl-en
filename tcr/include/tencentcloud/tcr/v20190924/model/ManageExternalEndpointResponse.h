@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 

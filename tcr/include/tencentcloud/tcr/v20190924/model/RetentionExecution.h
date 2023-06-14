@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Execution ID
                      * @return ExecutionId Execution ID
+                     * 
                      */
                     int64_t GetExecutionId() const;
 
                     /**
                      * 设置Execution ID
-                     * @param ExecutionId Execution ID
+                     * @param _executionId Execution ID
+                     * 
                      */
                     void SetExecutionId(const int64_t& _executionId);
 
                     /**
                      * 判断参数 ExecutionId 是否已赋值
                      * @return ExecutionId 是否已赋值
+                     * 
                      */
                     bool ExecutionIdHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RetentionId Rule ID
+                     * 
                      */
                     int64_t GetRetentionId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RetentionId Rule ID
+                     * @param _retentionId Rule ID
+                     * 
                      */
                     void SetRetentionId(const int64_t& _retentionId);
 
                     /**
                      * 判断参数 RetentionId 是否已赋值
                      * @return RetentionId 是否已赋值
+                     * 
                      */
                     bool RetentionIdHasBeenSet() const;
 
                     /**
                      * 获取Execution start time
                      * @return StartTime Execution start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Execution start time
-                     * @param StartTime Execution start time
+                     * @param _startTime Execution start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Execution end time
                      * @return EndTime Execution end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Execution end time
-                     * @param EndTime Execution end time
+                     * @param _endTime Execution end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Execution status. Valid values: Failed, Succeed, Stopped, InProgress.
                      * @return Status Execution status. Valid values: Failed, Succeed, Stopped, InProgress.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Execution status. Valid values: Failed, Succeed, Stopped, InProgress.
-                     * @param Status Execution status. Valid values: Failed, Succeed, Stopped, InProgress.
+                     * @param _status Execution status. Valid values: Failed, Succeed, Stopped, InProgress.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

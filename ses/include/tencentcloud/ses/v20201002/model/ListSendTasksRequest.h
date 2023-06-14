@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Offset, starting from 0. The value is an integer. `0` means to skip 0 entries.
                      * @return Offset Offset, starting from 0. The value is an integer. `0` means to skip 0 entries.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, starting from 0. The value is an integer. `0` means to skip 0 entries.
-                     * @param Offset Offset, starting from 0. The value is an integer. `0` means to skip 0 entries.
+                     * @param _offset Offset, starting from 0. The value is an integer. `0` means to skip 0 entries.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of records to query. The value is an integer not exceeding 100.
                      * @return Limit Number of records to query. The value is an integer not exceeding 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of records to query. The value is an integer not exceeding 100.
-                     * @param Limit Number of records to query. The value is an integer not exceeding 100.
+                     * @param _limit Number of records to query. The value is an integer not exceeding 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent. To query tasks in all states, do not pass in this parameter.
                      * @return Status Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent. To query tasks in all states, do not pass in this parameter.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent. To query tasks in all states, do not pass in this parameter.
-                     * @param Status Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent. To query tasks in all states, do not pass in this parameter.
+                     * @param _status Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent. To query tasks in all states, do not pass in this parameter.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Recipient group ID
                      * @return ReceiverId Recipient group ID
+                     * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
                      * 设置Recipient group ID
-                     * @param ReceiverId Recipient group ID
+                     * @param _receiverId Recipient group ID
+                     * 
                      */
                     void SetReceiverId(const uint64_t& _receiverId);
 
                     /**
                      * 判断参数 ReceiverId 是否已赋值
                      * @return ReceiverId 是否已赋值
+                     * 
                      */
                     bool ReceiverIdHasBeenSet() const;
 
                     /**
                      * 获取Task type. `1`: immediate; `2`: scheduled; `3`: recurring. To query tasks of all types, do not pass in this parameter.
                      * @return TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring. To query tasks of all types, do not pass in this parameter.
+                     * 
                      */
                     uint64_t GetTaskType() const;
 
                     /**
                      * 设置Task type. `1`: immediate; `2`: scheduled; `3`: recurring. To query tasks of all types, do not pass in this parameter.
-                     * @param TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring. To query tasks of all types, do not pass in this parameter.
+                     * @param _taskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring. To query tasks of all types, do not pass in this parameter.
+                     * 
                      */
                     void SetTaskType(const uint64_t& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 

@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. Valid values: `bgpip-multip` (Anti-DDoS Pro) and `bgpip` (Anti-DDoS Advanced).
                      * @return Business Anti-DDoS service type. Valid values: `bgpip-multip` (Anti-DDoS Pro) and `bgpip` (Anti-DDoS Advanced).
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. Valid values: `bgpip-multip` (Anti-DDoS Pro) and `bgpip` (Anti-DDoS Advanced).
-                     * @param Business Anti-DDoS service type. Valid values: `bgpip-multip` (Anti-DDoS Pro) and `bgpip` (Anti-DDoS Advanced).
+                     * @param _business Anti-DDoS service type. Valid values: `bgpip-multip` (Anti-DDoS Pro) and `bgpip` (Anti-DDoS Advanced).
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Starting offset of the page. Value: (number of pages – 1) * items per page.
                      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the page. Value: (number of pages – 1) * items per page.
-                     * @param Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * @param _offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results returned in one page
                      * @return Limit Number of results returned in one page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results returned in one page
-                     * @param Limit Number of results returned in one page
+                     * @param _limit Number of results returned in one page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取IP address, which is required when an Anti-DDoS Advanced instance is used.
                      * @return Ip IP address, which is required when an Anti-DDoS Advanced instance is used.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address, which is required when an Anti-DDoS Advanced instance is used.
-                     * @param Ip IP address, which is required when an Anti-DDoS Advanced instance is used.
+                     * @param _ip IP address, which is required when an Anti-DDoS Advanced instance is used.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Domain name, which is required when an Anti-DDoS Advanced instance is used.
                      * @return Domain Domain name, which is required when an Anti-DDoS Advanced instance is used.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name, which is required when an Anti-DDoS Advanced instance is used.
-                     * @param Domain Domain name, which is required when an Anti-DDoS Advanced instance is used.
+                     * @param _domain Domain name, which is required when an Anti-DDoS Advanced instance is used.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Protocol, which is required when an Anti-DDoS Advanced instance is used.
                      * @return Protocol Protocol, which is required when an Anti-DDoS Advanced instance is used.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol, which is required when an Anti-DDoS Advanced instance is used.
-                     * @param Protocol Protocol, which is required when an Anti-DDoS Advanced instance is used.
+                     * @param _protocol Protocol, which is required when an Anti-DDoS Advanced instance is used.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

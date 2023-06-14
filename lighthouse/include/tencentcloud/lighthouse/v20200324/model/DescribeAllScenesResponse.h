@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of scenes
                      * @return SceneInfoSet List of scenes
+                     * 
                      */
                     std::vector<SceneInfo> GetSceneInfoSet() const;
 
                     /**
                      * 判断参数 SceneInfoSet 是否已赋值
                      * @return SceneInfoSet 是否已赋值
+                     * 
                      */
                     bool SceneInfoSetHasBeenSet() const;
 
                     /**
                      * 获取Total count of scenes
                      * @return TotalCount Total count of scenes
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

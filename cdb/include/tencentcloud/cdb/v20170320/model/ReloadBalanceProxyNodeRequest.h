@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Proxy group ID
                      * @return ProxyGroupId Proxy group ID
+                     * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
                      * 设置Proxy group ID
-                     * @param ProxyGroupId Proxy group ID
+                     * @param _proxyGroupId Proxy group ID
+                     * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
 
                     /**
                      * 判断参数 ProxyGroupId 是否已赋值
                      * @return ProxyGroupId 是否已赋值
+                     * 
                      */
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Address ID of the proxy group
                      * @return ProxyAddressId Address ID of the proxy group
+                     * 
                      */
                     std::string GetProxyAddressId() const;
 
                     /**
                      * 设置Address ID of the proxy group
-                     * @param ProxyAddressId Address ID of the proxy group
+                     * @param _proxyAddressId Address ID of the proxy group
+                     * 
                      */
                     void SetProxyAddressId(const std::string& _proxyAddressId);
 
                     /**
                      * 判断参数 ProxyAddressId 是否已赋值
                      * @return ProxyAddressId 是否已赋值
+                     * 
                      */
                     bool ProxyAddressIdHasBeenSet() const;
 

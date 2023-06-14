@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalPeriod Total number of years of the certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalPeriod() const;
 
                     /**
                      * 设置Total number of years of the certificate
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalPeriod Total number of years of the certificate
+                     * @param _totalPeriod Total number of years of the certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalPeriod(const int64_t& _totalPeriod);
 
                     /**
                      * 判断参数 TotalPeriod 是否已赋值
                      * @return TotalPeriod 是否已赋值
+                     * 
                      */
                     bool TotalPeriodHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NowPeriod Current year of the certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetNowPeriod() const;
 
                     /**
                      * 设置Current year of the certificate
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NowPeriod Current year of the certificate
+                     * @param _nowPeriod Current year of the certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNowPeriod(const int64_t& _nowPeriod);
 
                     /**
                      * 判断参数 NowPeriod 是否已赋值
                      * @return NowPeriod 是否已赋值
+                     * 
                      */
                     bool NowPeriodHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ManagerId Certificate prereview manager ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetManagerId() const;
 
                     /**
                      * 设置Certificate prereview manager ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ManagerId Certificate prereview manager ID
+                     * @param _managerId Certificate prereview manager ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetManagerId(const std::string& _managerId);
 
                     /**
                      * 判断参数 ManagerId 是否已赋值
                      * @return ManagerId 是否已赋值
+                     * 
                      */
                     bool ManagerIdHasBeenSet() const;
 

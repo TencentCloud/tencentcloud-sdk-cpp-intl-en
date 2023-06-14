@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Set of topic details and replicas
                      * @return TopicInSyncReplicaList Set of topic details and replicas
+                     * 
                      */
                     std::vector<TopicInSyncReplicaInfo> GetTopicInSyncReplicaList() const;
 
                     /**
                      * 设置Set of topic details and replicas
-                     * @param TopicInSyncReplicaList Set of topic details and replicas
+                     * @param _topicInSyncReplicaList Set of topic details and replicas
+                     * 
                      */
                     void SetTopicInSyncReplicaList(const std::vector<TopicInSyncReplicaInfo>& _topicInSyncReplicaList);
 
                     /**
                      * 判断参数 TopicInSyncReplicaList 是否已赋值
                      * @return TopicInSyncReplicaList 是否已赋值
+                     * 
                      */
                     bool TopicInSyncReplicaListHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number
-                     * @param TotalCount Total number
+                     * @param _totalCount Total number
+                     * 
                      */
                     void SetTotalCount(const uint64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

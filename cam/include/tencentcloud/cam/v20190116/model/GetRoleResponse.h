@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Role details
                      * @return RoleInfo Role details
+                     * 
                      */
                     RoleInfo GetRoleInfo() const;
 
                     /**
                      * 判断参数 RoleInfo 是否已赋值
                      * @return RoleInfo 是否已赋值
+                     * 
                      */
                     bool RoleInfoHasBeenSet() const;
 

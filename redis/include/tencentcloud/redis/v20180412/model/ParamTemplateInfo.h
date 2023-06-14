@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Parameter template ID
                      * @return TemplateId Parameter template ID
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置Parameter template ID
-                     * @param TemplateId Parameter template ID
+                     * @param _templateId Parameter template ID
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Parameter template name
                      * @return Name Parameter template name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter template name
-                     * @param Name Parameter template name
+                     * @param _name Parameter template name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Parameter template description
                      * @return Description Parameter template description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Parameter template description
-                     * @param Description Parameter template description
+                     * @param _description Parameter template description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -123,6 +132,7 @@ namespace TencentCloud
 - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
 - `15`: Redis 6.2 Memory Edition (Standard Architecture).
 - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 
                      */
                     uint64_t GetProductType() const;
 
@@ -138,7 +148,7 @@ namespace TencentCloud
 - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
 - `15`: Redis 6.2 Memory Edition (Standard Architecture).
 - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
-                     * @param ProductType Instance type
+                     * @param _productType Instance type
 - `2`: Redis 2.8 Memory Edition (Standard Architecture).
 - `3`: CKV 3.2 Memory Edition (Standard Architecture).
 - `4`: CKV 3.2 Memory Edition (Cluster Architecture).
@@ -149,12 +159,14 @@ namespace TencentCloud
 - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
 - `15`: Redis 6.2 Memory Edition (Standard Architecture).
 - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 
                      */
                     void SetProductType(const uint64_t& _productType);
 
                     /**
                      * 判断参数 ProductType 是否已赋值
                      * @return ProductType 是否已赋值
+                     * 
                      */
                     bool ProductTypeHasBeenSet() const;
 

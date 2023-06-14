@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
                      * @return PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * 
                      */
                     std::string GetPublicNetworkChargeType() const;
 
                     /**
                      * 设置Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
-                     * @param PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * @param _publicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+                     * 
                      */
                     void SetPublicNetworkChargeType(const std::string& _publicNetworkChargeType);
 
                     /**
                      * 判断参数 PublicNetworkChargeType 是否已赋值
                      * @return PublicNetworkChargeType 是否已赋值
+                     * 
                      */
                     bool PublicNetworkChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Public network bandwidth in MB
                      * @return PublicNetworkMonthly Public network bandwidth in MB
+                     * 
                      */
                     int64_t GetPublicNetworkMonthly() const;
 
                     /**
                      * 设置Public network bandwidth in MB
-                     * @param PublicNetworkMonthly Public network bandwidth in MB
+                     * @param _publicNetworkMonthly Public network bandwidth in MB
+                     * 
                      */
                     void SetPublicNetworkMonthly(const int64_t& _publicNetworkMonthly);
 
                     /**
                      * 判断参数 PublicNetworkMonthly 是否已赋值
                      * @return PublicNetworkMonthly 是否已赋值
+                     * 
                      */
                     bool PublicNetworkMonthlyHasBeenSet() const;
 

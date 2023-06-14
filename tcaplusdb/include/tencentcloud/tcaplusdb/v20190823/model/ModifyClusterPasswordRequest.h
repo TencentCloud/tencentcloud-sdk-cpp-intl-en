@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster for which to modify the password
                      * @return ClusterId ID of the cluster for which to modify the password
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster for which to modify the password
-                     * @param ClusterId ID of the cluster for which to modify the password
+                     * @param _clusterId ID of the cluster for which to modify the password
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Old cluster password
                      * @return OldPassword Old cluster password
+                     * 
                      */
                     std::string GetOldPassword() const;
 
                     /**
                      * 设置Old cluster password
-                     * @param OldPassword Old cluster password
+                     * @param _oldPassword Old cluster password
+                     * 
                      */
                     void SetOldPassword(const std::string& _oldPassword);
 
                     /**
                      * 判断参数 OldPassword 是否已赋值
                      * @return OldPassword 是否已赋值
+                     * 
                      */
                     bool OldPasswordHasBeenSet() const;
 
                     /**
                      * 获取Expected expiration time of old cluster password
                      * @return OldPasswordExpireTime Expected expiration time of old cluster password
+                     * 
                      */
                     std::string GetOldPasswordExpireTime() const;
 
                     /**
                      * 设置Expected expiration time of old cluster password
-                     * @param OldPasswordExpireTime Expected expiration time of old cluster password
+                     * @param _oldPasswordExpireTime Expected expiration time of old cluster password
+                     * 
                      */
                     void SetOldPasswordExpireTime(const std::string& _oldPasswordExpireTime);
 
                     /**
                      * 判断参数 OldPasswordExpireTime 是否已赋值
                      * @return OldPasswordExpireTime 是否已赋值
+                     * 
                      */
                     bool OldPasswordExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
                      * @return NewPassword New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
+                     * 
                      */
                     std::string GetNewPassword() const;
 
                     /**
                      * 设置New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
-                     * @param NewPassword New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
+                     * @param _newPassword New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
+                     * 
                      */
                     void SetNewPassword(const std::string& _newPassword);
 
                     /**
                      * 判断参数 NewPassword 是否已赋值
                      * @return NewPassword 是否已赋值
+                     * 
                      */
                     bool NewPasswordHasBeenSet() const;
 
                     /**
                      * 获取Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
                      * @return Mode Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
-                     * @param Mode Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
+                     * @param _mode Update mode. 1: updates password, 2: updates old password expiration time. Default value: 1
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 

@@ -89,450 +89,525 @@ namespace TencentCloud
                     /**
                      * 获取Domain name
                      * @return Domain Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-                     * @param Domain Domain name
+                     * @param _domain Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Origin server configuration
                      * @return Origin Origin server configuration
+                     * 
                      */
                     Origin GetOrigin() const;
 
                     /**
                      * 设置Origin server configuration
-                     * @param Origin Origin server configuration
+                     * @param _origin Origin server configuration
+                     * 
                      */
                     void SetOrigin(const Origin& _origin);
 
                     /**
                      * 判断参数 Origin 是否已赋值
                      * @return Origin 是否已赋值
+                     * 
                      */
                     bool OriginHasBeenSet() const;
 
                     /**
                      * 获取IP blocklist/allowlist configuration
                      * @return IpFilter IP blocklist/allowlist configuration
+                     * 
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
                      * 设置IP blocklist/allowlist configuration
-                     * @param IpFilter IP blocklist/allowlist configuration
+                     * @param _ipFilter IP blocklist/allowlist configuration
+                     * 
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
 
                     /**
                      * 判断参数 IpFilter 是否已赋值
                      * @return IpFilter 是否已赋值
+                     * 
                      */
                     bool IpFilterHasBeenSet() const;
 
                     /**
                      * 获取IP access limit configuration
                      * @return IpFreqLimit IP access limit configuration
+                     * 
                      */
                     IpFreqLimit GetIpFreqLimit() const;
 
                     /**
                      * 设置IP access limit configuration
-                     * @param IpFreqLimit IP access limit configuration
+                     * @param _ipFreqLimit IP access limit configuration
+                     * 
                      */
                     void SetIpFreqLimit(const IpFreqLimit& _ipFreqLimit);
 
                     /**
                      * 判断参数 IpFreqLimit 是否已赋值
                      * @return IpFreqLimit 是否已赋值
+                     * 
                      */
                     bool IpFreqLimitHasBeenSet() const;
 
                     /**
                      * 获取Status code cache configuration
                      * @return StatusCodeCache Status code cache configuration
+                     * 
                      */
                     StatusCodeCache GetStatusCodeCache() const;
 
                     /**
                      * 设置Status code cache configuration
-                     * @param StatusCodeCache Status code cache configuration
+                     * @param _statusCodeCache Status code cache configuration
+                     * 
                      */
                     void SetStatusCodeCache(const StatusCodeCache& _statusCodeCache);
 
                     /**
                      * 判断参数 StatusCodeCache 是否已赋值
                      * @return StatusCodeCache 是否已赋值
+                     * 
                      */
                     bool StatusCodeCacheHasBeenSet() const;
 
                     /**
                      * 获取Smart compression configuration
                      * @return Compression Smart compression configuration
+                     * 
                      */
                     Compression GetCompression() const;
 
                     /**
                      * 设置Smart compression configuration
-                     * @param Compression Smart compression configuration
+                     * @param _compression Smart compression configuration
+                     * 
                      */
                     void SetCompression(const Compression& _compression);
 
                     /**
                      * 判断参数 Compression 是否已赋值
                      * @return Compression 是否已赋值
+                     * 
                      */
                     bool CompressionHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth cap configuration
                      * @return BandwidthAlert Bandwidth cap configuration
+                     * 
                      */
                     BandwidthAlert GetBandwidthAlert() const;
 
                     /**
                      * 设置Bandwidth cap configuration
-                     * @param BandwidthAlert Bandwidth cap configuration
+                     * @param _bandwidthAlert Bandwidth cap configuration
+                     * 
                      */
                     void SetBandwidthAlert(const BandwidthAlert& _bandwidthAlert);
 
                     /**
                      * 判断参数 BandwidthAlert 是否已赋值
                      * @return BandwidthAlert 是否已赋值
+                     * 
                      */
                     bool BandwidthAlertHasBeenSet() const;
 
                     /**
                      * 获取Range GETs configuration
                      * @return RangeOriginPull Range GETs configuration
+                     * 
                      */
                     RangeOriginPull GetRangeOriginPull() const;
 
                     /**
                      * 设置Range GETs configuration
-                     * @param RangeOriginPull Range GETs configuration
+                     * @param _rangeOriginPull Range GETs configuration
+                     * 
                      */
                     void SetRangeOriginPull(const RangeOriginPull& _rangeOriginPull);
 
                     /**
                      * 判断参数 RangeOriginPull 是否已赋值
                      * @return RangeOriginPull 是否已赋值
+                     * 
                      */
                     bool RangeOriginPullHasBeenSet() const;
 
                     /**
                      * 获取301/302 origin-pull follow-redirect configuration
                      * @return FollowRedirect 301/302 origin-pull follow-redirect configuration
+                     * 
                      */
                     FollowRedirect GetFollowRedirect() const;
 
                     /**
                      * 设置301/302 origin-pull follow-redirect configuration
-                     * @param FollowRedirect 301/302 origin-pull follow-redirect configuration
+                     * @param _followRedirect 301/302 origin-pull follow-redirect configuration
+                     * 
                      */
                     void SetFollowRedirect(const FollowRedirect& _followRedirect);
 
                     /**
                      * 判断参数 FollowRedirect 是否已赋值
                      * @return FollowRedirect 是否已赋值
+                     * 
                      */
                     bool FollowRedirectHasBeenSet() const;
 
                     /**
                      * 获取Error code redirect configuration (This feature is in beta and not generally available yet.)
                      * @return ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
+                     * 
                      */
                     ErrorPage GetErrorPage() const;
 
                     /**
                      * 设置Error code redirect configuration (This feature is in beta and not generally available yet.)
-                     * @param ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
+                     * @param _errorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
+                     * 
                      */
                     void SetErrorPage(const ErrorPage& _errorPage);
 
                     /**
                      * 判断参数 ErrorPage 是否已赋值
                      * @return ErrorPage 是否已赋值
+                     * 
                      */
                     bool ErrorPageHasBeenSet() const;
 
                     /**
                      * 获取Request header configuration
                      * @return RequestHeader Request header configuration
+                     * 
                      */
                     RequestHeader GetRequestHeader() const;
 
                     /**
                      * 设置Request header configuration
-                     * @param RequestHeader Request header configuration
+                     * @param _requestHeader Request header configuration
+                     * 
                      */
                     void SetRequestHeader(const RequestHeader& _requestHeader);
 
                     /**
                      * 判断参数 RequestHeader 是否已赋值
                      * @return RequestHeader 是否已赋值
+                     * 
                      */
                     bool RequestHeaderHasBeenSet() const;
 
                     /**
                      * 获取Response header configuration
                      * @return ResponseHeader Response header configuration
+                     * 
                      */
                     ResponseHeader GetResponseHeader() const;
 
                     /**
                      * 设置Response header configuration
-                     * @param ResponseHeader Response header configuration
+                     * @param _responseHeader Response header configuration
+                     * 
                      */
                     void SetResponseHeader(const ResponseHeader& _responseHeader);
 
                     /**
                      * 判断参数 ResponseHeader 是否已赋值
                      * @return ResponseHeader 是否已赋值
+                     * 
                      */
                     bool ResponseHeaderHasBeenSet() const;
 
                     /**
                      * 获取Download speed configuration
                      * @return DownstreamCapping Download speed configuration
+                     * 
                      */
                     DownstreamCapping GetDownstreamCapping() const;
 
                     /**
                      * 设置Download speed configuration
-                     * @param DownstreamCapping Download speed configuration
+                     * @param _downstreamCapping Download speed configuration
+                     * 
                      */
                     void SetDownstreamCapping(const DownstreamCapping& _downstreamCapping);
 
                     /**
                      * 判断参数 DownstreamCapping 是否已赋值
                      * @return DownstreamCapping 是否已赋值
+                     * 
                      */
                     bool DownstreamCappingHasBeenSet() const;
 
                     /**
                      * 获取Node cache key configuration
                      * @return CacheKey Node cache key configuration
+                     * 
                      */
                     CacheKey GetCacheKey() const;
 
                     /**
                      * 设置Node cache key configuration
-                     * @param CacheKey Node cache key configuration
+                     * @param _cacheKey Node cache key configuration
+                     * 
                      */
                     void SetCacheKey(const CacheKey& _cacheKey);
 
                     /**
                      * 判断参数 CacheKey 是否已赋值
                      * @return CacheKey 是否已赋值
+                     * 
                      */
                     bool CacheKeyHasBeenSet() const;
 
                     /**
                      * 获取Header cache configuration
                      * @return ResponseHeaderCache Header cache configuration
+                     * 
                      */
                     ResponseHeaderCache GetResponseHeaderCache() const;
 
                     /**
                      * 设置Header cache configuration
-                     * @param ResponseHeaderCache Header cache configuration
+                     * @param _responseHeaderCache Header cache configuration
+                     * 
                      */
                     void SetResponseHeaderCache(const ResponseHeaderCache& _responseHeaderCache);
 
                     /**
                      * 判断参数 ResponseHeaderCache 是否已赋值
                      * @return ResponseHeaderCache 是否已赋值
+                     * 
                      */
                     bool ResponseHeaderCacheHasBeenSet() const;
 
                     /**
                      * 获取Video dragging configuration
                      * @return VideoSeek Video dragging configuration
+                     * 
                      */
                     VideoSeek GetVideoSeek() const;
 
                     /**
                      * 设置Video dragging configuration
-                     * @param VideoSeek Video dragging configuration
+                     * @param _videoSeek Video dragging configuration
+                     * 
                      */
                     void SetVideoSeek(const VideoSeek& _videoSeek);
 
                     /**
                      * 判断参数 VideoSeek 是否已赋值
                      * @return VideoSeek 是否已赋值
+                     * 
                      */
                     bool VideoSeekHasBeenSet() const;
 
                     /**
                      * 获取Cache expiration time configuration
                      * @return Cache Cache expiration time configuration
+                     * 
                      */
                     Cache GetCache() const;
 
                     /**
                      * 设置Cache expiration time configuration
-                     * @param Cache Cache expiration time configuration
+                     * @param _cache Cache expiration time configuration
+                     * 
                      */
                     void SetCache(const Cache& _cache);
 
                     /**
                      * 判断参数 Cache 是否已赋值
                      * @return Cache 是否已赋值
+                     * 
                      */
                     bool CacheHasBeenSet() const;
 
                     /**
                      * 获取(Disused) Cross-border linkage optimization\
                      * @return OriginPullOptimization (Disused) Cross-border linkage optimization\
+                     * 
                      */
                     OriginPullOptimization GetOriginPullOptimization() const;
 
                     /**
                      * 设置(Disused) Cross-border linkage optimization\
-                     * @param OriginPullOptimization (Disused) Cross-border linkage optimization\
+                     * @param _originPullOptimization (Disused) Cross-border linkage optimization\
+                     * 
                      */
                     void SetOriginPullOptimization(const OriginPullOptimization& _originPullOptimization);
 
                     /**
                      * 判断参数 OriginPullOptimization 是否已赋值
                      * @return OriginPullOptimization 是否已赋值
+                     * 
                      */
                     bool OriginPullOptimizationHasBeenSet() const;
 
                     /**
                      * 获取HTTPS acceleration configuration
                      * @return Https HTTPS acceleration configuration
+                     * 
                      */
                     Https GetHttps() const;
 
                     /**
                      * 设置HTTPS acceleration configuration
-                     * @param Https HTTPS acceleration configuration
+                     * @param _https HTTPS acceleration configuration
+                     * 
                      */
                     void SetHttps(const Https& _https);
 
                     /**
                      * 判断参数 Https 是否已赋值
                      * @return Https 是否已赋值
+                     * 
                      */
                     bool HttpsHasBeenSet() const;
 
                     /**
                      * 获取Timestamp hotlink protection configuration
                      * @return Authentication Timestamp hotlink protection configuration
+                     * 
                      */
                     Authentication GetAuthentication() const;
 
                     /**
                      * 设置Timestamp hotlink protection configuration
-                     * @param Authentication Timestamp hotlink protection configuration
+                     * @param _authentication Timestamp hotlink protection configuration
+                     * 
                      */
                     void SetAuthentication(const Authentication& _authentication);
 
                     /**
                      * 判断参数 Authentication 是否已赋值
                      * @return Authentication 是否已赋值
+                     * 
                      */
                     bool AuthenticationHasBeenSet() const;
 
                     /**
                      * 获取SEO configuration
                      * @return Seo SEO configuration
+                     * 
                      */
                     Seo GetSeo() const;
 
                     /**
                      * 设置SEO configuration
-                     * @param Seo SEO configuration
+                     * @param _seo SEO configuration
+                     * 
                      */
                     void SetSeo(const Seo& _seo);
 
                     /**
                      * 判断参数 Seo 是否已赋值
                      * @return Seo 是否已赋值
+                     * 
                      */
                     bool SeoHasBeenSet() const;
 
                     /**
                      * 获取Protocol redirect configuration
                      * @return ForceRedirect Protocol redirect configuration
+                     * 
                      */
                     ForceRedirect GetForceRedirect() const;
 
                     /**
                      * 设置Protocol redirect configuration
-                     * @param ForceRedirect Protocol redirect configuration
+                     * @param _forceRedirect Protocol redirect configuration
+                     * 
                      */
                     void SetForceRedirect(const ForceRedirect& _forceRedirect);
 
                     /**
                      * 判断参数 ForceRedirect 是否已赋值
                      * @return ForceRedirect 是否已赋值
+                     * 
                      */
                     bool ForceRedirectHasBeenSet() const;
 
                     /**
                      * 获取Referer configuration
                      * @return Referer Referer configuration
+                     * 
                      */
                     Referer GetReferer() const;
 
                     /**
                      * 设置Referer configuration
-                     * @param Referer Referer configuration
+                     * @param _referer Referer configuration
+                     * 
                      */
                     void SetReferer(const Referer& _referer);
 
                     /**
                      * 判断参数 Referer 是否已赋值
                      * @return Referer 是否已赋值
+                     * 
                      */
                     bool RefererHasBeenSet() const;
 
                     /**
                      * 获取Browser cache configuration (This feature is in beta and not generally available yet.)
                      * @return MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
+                     * 
                      */
                     MaxAge GetMaxAge() const;
 
                     /**
                      * 设置Browser cache configuration (This feature is in beta and not generally available yet.)
-                     * @param MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
+                     * @param _maxAge Browser cache configuration (This feature is in beta and not generally available yet.)
+                     * 
                      */
                     void SetMaxAge(const MaxAge& _maxAge);
 
                     /**
                      * 判断参数 MaxAge 是否已赋值
                      * @return MaxAge 是否已赋值
+                     * 
                      */
                     bool MaxAgeHasBeenSet() const;
 
@@ -541,20 +616,23 @@ namespace TencentCloud
 Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
                      * @return SpecificConfig Specific-region special configuration
 Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+                     * 
                      */
                     SpecificConfig GetSpecificConfig() const;
 
                     /**
                      * 设置Specific-region special configuration
 Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
-                     * @param SpecificConfig Specific-region special configuration
+                     * @param _specificConfig Specific-region special configuration
 Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+                     * 
                      */
                     void SetSpecificConfig(const SpecificConfig& _specificConfig);
 
                     /**
                      * 判断参数 SpecificConfig 是否已赋值
                      * @return SpecificConfig 是否已赋值
+                     * 
                      */
                     bool SpecificConfigHasBeenSet() const;
 
@@ -567,6 +645,7 @@ Applicable to cases where the acceleration domain name configuration differs for
 `web`: Static acceleration
 `download`: Download acceleration
 `media`: Streaming media VOD acceleration
+                     * 
                      */
                     std::string GetServiceType() const;
 
@@ -575,16 +654,18 @@ Applicable to cases where the acceleration domain name configuration differs for
 `web`: Static acceleration
 `download`: Download acceleration
 `media`: Streaming media VOD acceleration
-                     * @param ServiceType Domain name service type
+                     * @param _serviceType Domain name service type
 `web`: Static acceleration
 `download`: Download acceleration
 `media`: Streaming media VOD acceleration
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
@@ -599,6 +680,7 @@ After switching to global acceleration, configurations of the domain name will b
 `overseas`: Acceleration outside the Chinese mainland
 `global`: Acceleration over the globe
 After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -608,395 +690,460 @@ After switching to global acceleration, configurations of the domain name will b
 `overseas`: Acceleration outside the Chinese mainland
 `global`: Acceleration over the globe
 After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
-                     * @param Area Domain name acceleration region
+                     * @param _area Domain name acceleration region
 `mainland`: Acceleration inside the Chinese mainland
 `overseas`: Acceleration outside the Chinese mainland
 `global`: Acceleration over the globe
 After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Origin-pull timeout configuration
                      * @return OriginPullTimeout Origin-pull timeout configuration
+                     * 
                      */
                     OriginPullTimeout GetOriginPullTimeout() const;
 
                     /**
                      * 设置Origin-pull timeout configuration
-                     * @param OriginPullTimeout Origin-pull timeout configuration
+                     * @param _originPullTimeout Origin-pull timeout configuration
+                     * 
                      */
                     void SetOriginPullTimeout(const OriginPullTimeout& _originPullTimeout);
 
                     /**
                      * 判断参数 OriginPullTimeout 是否已赋值
                      * @return OriginPullTimeout 是否已赋值
+                     * 
                      */
                     bool OriginPullTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Access authentication for S3 origin
                      * @return AwsPrivateAccess Access authentication for S3 origin
+                     * 
                      */
                     AwsPrivateAccess GetAwsPrivateAccess() const;
 
                     /**
                      * 设置Access authentication for S3 origin
-                     * @param AwsPrivateAccess Access authentication for S3 origin
+                     * @param _awsPrivateAccess Access authentication for S3 origin
+                     * 
                      */
                     void SetAwsPrivateAccess(const AwsPrivateAccess& _awsPrivateAccess);
 
                     /**
                      * 判断参数 AwsPrivateAccess 是否已赋值
                      * @return AwsPrivateAccess 是否已赋值
+                     * 
                      */
                     bool AwsPrivateAccessHasBeenSet() const;
 
                     /**
                      * 获取UA blocklist/allowlist configuration
                      * @return UserAgentFilter UA blocklist/allowlist configuration
+                     * 
                      */
                     UserAgentFilter GetUserAgentFilter() const;
 
                     /**
                      * 设置UA blocklist/allowlist configuration
-                     * @param UserAgentFilter UA blocklist/allowlist configuration
+                     * @param _userAgentFilter UA blocklist/allowlist configuration
+                     * 
                      */
                     void SetUserAgentFilter(const UserAgentFilter& _userAgentFilter);
 
                     /**
                      * 判断参数 UserAgentFilter 是否已赋值
                      * @return UserAgentFilter 是否已赋值
+                     * 
                      */
                     bool UserAgentFilterHasBeenSet() const;
 
                     /**
                      * 获取Access control
                      * @return AccessControl Access control
+                     * 
                      */
                     AccessControl GetAccessControl() const;
 
                     /**
                      * 设置Access control
-                     * @param AccessControl Access control
+                     * @param _accessControl Access control
+                     * 
                      */
                     void SetAccessControl(const AccessControl& _accessControl);
 
                     /**
                      * 判断参数 AccessControl 是否已赋值
                      * @return AccessControl 是否已赋值
+                     * 
                      */
                     bool AccessControlHasBeenSet() const;
 
                     /**
                      * 获取URL rewriting configuration
                      * @return UrlRedirect URL rewriting configuration
+                     * 
                      */
                     UrlRedirect GetUrlRedirect() const;
 
                     /**
                      * 设置URL rewriting configuration
-                     * @param UrlRedirect URL rewriting configuration
+                     * @param _urlRedirect URL rewriting configuration
+                     * 
                      */
                     void SetUrlRedirect(const UrlRedirect& _urlRedirect);
 
                     /**
                      * 判断参数 UrlRedirect 是否已赋值
                      * @return UrlRedirect 是否已赋值
+                     * 
                      */
                     bool UrlRedirectHasBeenSet() const;
 
                     /**
                      * 获取Access port configuration
                      * @return AccessPort Access port configuration
+                     * 
                      */
                     std::vector<int64_t> GetAccessPort() const;
 
                     /**
                      * 设置Access port configuration
-                     * @param AccessPort Access port configuration
+                     * @param _accessPort Access port configuration
+                     * 
                      */
                     void SetAccessPort(const std::vector<int64_t>& _accessPort);
 
                     /**
                      * 判断参数 AccessPort 是否已赋值
                      * @return AccessPort 是否已赋值
+                     * 
                      */
                     bool AccessPortHasBeenSet() const;
 
                     /**
                      * 获取Timestamp hotlink protection advanced configuration (allowlist feature)
                      * @return AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+                     * 
                      */
                     AdvancedAuthentication GetAdvancedAuthentication() const;
 
                     /**
                      * 设置Timestamp hotlink protection advanced configuration (allowlist feature)
-                     * @param AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+                     * @param _advancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+                     * 
                      */
                     void SetAdvancedAuthentication(const AdvancedAuthentication& _advancedAuthentication);
 
                     /**
                      * 判断参数 AdvancedAuthentication 是否已赋值
                      * @return AdvancedAuthentication 是否已赋值
+                     * 
                      */
                     bool AdvancedAuthenticationHasBeenSet() const;
 
                     /**
                      * 获取Origin-pull authentication advanced configuration (allowlist feature)
                      * @return OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+                     * 
                      */
                     OriginAuthentication GetOriginAuthentication() const;
 
                     /**
                      * 设置Origin-pull authentication advanced configuration (allowlist feature)
-                     * @param OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+                     * @param _originAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+                     * 
                      */
                     void SetOriginAuthentication(const OriginAuthentication& _originAuthentication);
 
                     /**
                      * 判断参数 OriginAuthentication 是否已赋值
                      * @return OriginAuthentication 是否已赋值
+                     * 
                      */
                     bool OriginAuthenticationHasBeenSet() const;
 
                     /**
                      * 获取IPv6 access configuration
                      * @return Ipv6Access IPv6 access configuration
+                     * 
                      */
                     Ipv6Access GetIpv6Access() const;
 
                     /**
                      * 设置IPv6 access configuration
-                     * @param Ipv6Access IPv6 access configuration
+                     * @param _ipv6Access IPv6 access configuration
+                     * 
                      */
                     void SetIpv6Access(const Ipv6Access& _ipv6Access);
 
                     /**
                      * 判断参数 Ipv6Access 是否已赋值
                      * @return Ipv6Access 是否已赋值
+                     * 
                      */
                     bool Ipv6AccessHasBeenSet() const;
 
                     /**
                      * 获取Offline cache
                      * @return OfflineCache Offline cache
+                     * 
                      */
                     OfflineCache GetOfflineCache() const;
 
                     /**
                      * 设置Offline cache
-                     * @param OfflineCache Offline cache
+                     * @param _offlineCache Offline cache
+                     * 
                      */
                     void SetOfflineCache(const OfflineCache& _offlineCache);
 
                     /**
                      * 判断参数 OfflineCache 是否已赋值
                      * @return OfflineCache 是否已赋值
+                     * 
                      */
                     bool OfflineCacheHasBeenSet() const;
 
                     /**
                      * 获取Merging pull requests
                      * @return OriginCombine Merging pull requests
+                     * 
                      */
                     OriginCombine GetOriginCombine() const;
 
                     /**
                      * 设置Merging pull requests
-                     * @param OriginCombine Merging pull requests
+                     * @param _originCombine Merging pull requests
+                     * 
                      */
                     void SetOriginCombine(const OriginCombine& _originCombine);
 
                     /**
                      * 判断参数 OriginCombine 是否已赋值
                      * @return OriginCombine 是否已赋值
+                     * 
                      */
                     bool OriginCombineHasBeenSet() const;
 
                     /**
                      * 获取Post transport configuration
                      * @return PostMaxSize Post transport configuration
+                     * 
                      */
                     PostSize GetPostMaxSize() const;
 
                     /**
                      * 设置Post transport configuration
-                     * @param PostMaxSize Post transport configuration
+                     * @param _postMaxSize Post transport configuration
+                     * 
                      */
                     void SetPostMaxSize(const PostSize& _postMaxSize);
 
                     /**
                      * 判断参数 PostMaxSize 是否已赋值
                      * @return PostMaxSize 是否已赋值
+                     * 
                      */
                     bool PostMaxSizeHasBeenSet() const;
 
                     /**
                      * 获取QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
                      * @return Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * 
                      */
                     Quic GetQuic() const;
 
                     /**
                      * 设置QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
-                     * @param Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * @param _quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * 
                      */
                     void SetQuic(const Quic& _quic);
 
                     /**
                      * 判断参数 Quic 是否已赋值
                      * @return Quic 是否已赋值
+                     * 
                      */
                     bool QuicHasBeenSet() const;
 
                     /**
                      * 获取Access authentication for OSS origin
                      * @return OssPrivateAccess Access authentication for OSS origin
+                     * 
                      */
                     OssPrivateAccess GetOssPrivateAccess() const;
 
                     /**
                      * 设置Access authentication for OSS origin
-                     * @param OssPrivateAccess Access authentication for OSS origin
+                     * @param _ossPrivateAccess Access authentication for OSS origin
+                     * 
                      */
                     void SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess);
 
                     /**
                      * 判断参数 OssPrivateAccess 是否已赋值
                      * @return OssPrivateAccess 是否已赋值
+                     * 
                      */
                     bool OssPrivateAccessHasBeenSet() const;
 
                     /**
                      * 获取WebSocket configuration
                      * @return WebSocket WebSocket configuration
+                     * 
                      */
                     WebSocket GetWebSocket() const;
 
                     /**
                      * 设置WebSocket configuration
-                     * @param WebSocket WebSocket configuration
+                     * @param _webSocket WebSocket configuration
+                     * 
                      */
                     void SetWebSocket(const WebSocket& _webSocket);
 
                     /**
                      * 判断参数 WebSocket 是否已赋值
                      * @return WebSocket 是否已赋值
+                     * 
                      */
                     bool WebSocketHasBeenSet() const;
 
                     /**
                      * 获取Remote authentication configuration
                      * @return RemoteAuthentication Remote authentication configuration
+                     * 
                      */
                     RemoteAuthentication GetRemoteAuthentication() const;
 
                     /**
                      * 设置Remote authentication configuration
-                     * @param RemoteAuthentication Remote authentication configuration
+                     * @param _remoteAuthentication Remote authentication configuration
+                     * 
                      */
                     void SetRemoteAuthentication(const RemoteAuthentication& _remoteAuthentication);
 
                     /**
                      * 判断参数 RemoteAuthentication 是否已赋值
                      * @return RemoteAuthentication 是否已赋值
+                     * 
                      */
                     bool RemoteAuthenticationHasBeenSet() const;
 
                     /**
                      * 获取Shared CNAME configuration (only available to beta users)
                      * @return ShareCname Shared CNAME configuration (only available to beta users)
+                     * 
                      */
                     ShareCname GetShareCname() const;
 
                     /**
                      * 设置Shared CNAME configuration (only available to beta users)
-                     * @param ShareCname Shared CNAME configuration (only available to beta users)
+                     * @param _shareCname Shared CNAME configuration (only available to beta users)
+                     * 
                      */
                     void SetShareCname(const ShareCname& _shareCname);
 
                     /**
                      * 判断参数 ShareCname 是否已赋值
                      * @return ShareCname 是否已赋值
+                     * 
                      */
                     bool ShareCnameHasBeenSet() const;
 
                     /**
                      * 获取Access authentication for Huawei Cloud OBS origin
                      * @return HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+                     * 
                      */
                     HwPrivateAccess GetHwPrivateAccess() const;
 
                     /**
                      * 设置Access authentication for Huawei Cloud OBS origin
-                     * @param HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+                     * @param _hwPrivateAccess Access authentication for Huawei Cloud OBS origin
+                     * 
                      */
                     void SetHwPrivateAccess(const HwPrivateAccess& _hwPrivateAccess);
 
                     /**
                      * 判断参数 HwPrivateAccess 是否已赋值
                      * @return HwPrivateAccess 是否已赋值
+                     * 
                      */
                     bool HwPrivateAccessHasBeenSet() const;
 
                     /**
                      * 获取Access authentication for QiNiu Cloud Kodo origin
                      * @return QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+                     * 
                      */
                     QnPrivateAccess GetQnPrivateAccess() const;
 
                     /**
                      * 设置Access authentication for QiNiu Cloud Kodo origin
-                     * @param QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+                     * @param _qnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+                     * 
                      */
                     void SetQnPrivateAccess(const QnPrivateAccess& _qnPrivateAccess);
 
                     /**
                      * 判断参数 QnPrivateAccess 是否已赋值
                      * @return QnPrivateAccess 是否已赋值
+                     * 
                      */
                     bool QnPrivateAccessHasBeenSet() const;
 
                     /**
                      * 获取Origin-pull authentication for other origins
                      * @return OthersPrivateAccess Origin-pull authentication for other origins
+                     * 
                      */
                     OthersPrivateAccess GetOthersPrivateAccess() const;
 
                     /**
                      * 设置Origin-pull authentication for other origins
-                     * @param OthersPrivateAccess Origin-pull authentication for other origins
+                     * @param _othersPrivateAccess Origin-pull authentication for other origins
+                     * 
                      */
                     void SetOthersPrivateAccess(const OthersPrivateAccess& _othersPrivateAccess);
 
                     /**
                      * 判断参数 OthersPrivateAccess 是否已赋值
                      * @return OthersPrivateAccess 是否已赋值
+                     * 
                      */
                     bool OthersPrivateAccessHasBeenSet() const;
 
                     /**
                      * 获取HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
                      * @return HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * 
                      */
                     HttpsBilling GetHttpsBilling() const;
 
                     /**
                      * 设置HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
-                     * @param HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * @param _httpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * 
                      */
                     void SetHttpsBilling(const HttpsBilling& _httpsBilling);
 
                     /**
                      * 判断参数 HttpsBilling 是否已赋值
                      * @return HttpsBilling 是否已赋值
+                     * 
                      */
                     bool HttpsBillingHasBeenSet() const;
 

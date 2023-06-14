@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
                      * @return DealNames List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
+                     * 
                      */
                     std::vector<std::string> GetDealNames() const;
 
                     /**
                      * 设置List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
-                     * @param DealNames List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
+                     * @param _dealNames List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
+                     * 
                      */
                     void SetDealNames(const std::vector<std::string>& _dealNames);
 
                     /**
                      * 判断参数 DealNames 是否已赋值
                      * @return DealNames 是否已赋值
+                     * 
                      */
                     bool DealNamesHasBeenSet() const;
 

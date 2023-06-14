@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Function array
                      * @return Functions Function array
+                     * 
                      */
                     std::vector<std::string> GetFunctions() const;
 
                     /**
                      * 设置Function array
-                     * @param Functions Function array
+                     * @param _functions Function array
+                     * 
                      */
                     void SetFunctions(const std::vector<std::string>& _functions);
 
                     /**
                      * 判断参数 Functions 是否已赋值
                      * @return Functions 是否已赋值
+                     * 
                      */
                     bool FunctionsHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return Namespace Namespace name
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace name
-                     * @param Namespace Namespace name
+                     * @param _namespace Namespace name
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Number of functions in namespace
                      * @return FunctionsCount Number of functions in namespace
+                     * 
                      */
                     int64_t GetFunctionsCount() const;
 
                     /**
                      * 设置Number of functions in namespace
-                     * @param FunctionsCount Number of functions in namespace
+                     * @param _functionsCount Number of functions in namespace
+                     * 
                      */
                     void SetFunctionsCount(const int64_t& _functionsCount);
 
                     /**
                      * 判断参数 FunctionsCount 是否已赋值
                      * @return FunctionsCount 是否已赋值
+                     * 
                      */
                     bool FunctionsCountHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TotalConcurrencyMem Total memory quota of the namespace
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalConcurrencyMem() const;
 
                     /**
                      * 设置Total memory quota of the namespace
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TotalConcurrencyMem Total memory quota of the namespace
+                     * @param _totalConcurrencyMem Total memory quota of the namespace
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalConcurrencyMem(const int64_t& _totalConcurrencyMem);
 
                     /**
                      * 判断参数 TotalConcurrencyMem 是否已赋值
                      * @return TotalConcurrencyMem 是否已赋值
+                     * 
                      */
                     bool TotalConcurrencyMemHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalAllocatedConcurrencyMem Concurrency usage of the namespace
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTotalAllocatedConcurrencyMem() const;
 
                     /**
                      * 设置Concurrency usage of the namespace
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TotalAllocatedConcurrencyMem Concurrency usage of the namespace
+                     * @param _totalAllocatedConcurrencyMem Concurrency usage of the namespace
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTotalAllocatedConcurrencyMem(const int64_t& _totalAllocatedConcurrencyMem);
 
                     /**
                      * 判断参数 TotalAllocatedConcurrencyMem 是否已赋值
                      * @return TotalAllocatedConcurrencyMem 是否已赋值
+                     * 
                      */
                     bool TotalAllocatedConcurrencyMemHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalAllocatedProvisionedMem Provisioned concurrency usage of the namespace
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTotalAllocatedProvisionedMem() const;
 
                     /**
                      * 设置Provisioned concurrency usage of the namespace
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TotalAllocatedProvisionedMem Provisioned concurrency usage of the namespace
+                     * @param _totalAllocatedProvisionedMem Provisioned concurrency usage of the namespace
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTotalAllocatedProvisionedMem(const int64_t& _totalAllocatedProvisionedMem);
 
                     /**
                      * 判断参数 TotalAllocatedProvisionedMem 是否已赋值
                      * @return TotalAllocatedProvisionedMem 是否已赋值
+                     * 
                      */
                     bool TotalAllocatedProvisionedMemHasBeenSet() const;
 

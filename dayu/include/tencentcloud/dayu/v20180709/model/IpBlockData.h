@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取IP
                      * @return Ip IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP
-                     * @param Ip IP
+                     * @param _ip IP
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Status (Blocked: blocked, UnBlocking: unblocking, UnBlockFailed: unblocking failed)
                      * @return Status Status (Blocked: blocked, UnBlocking: unblocking, UnBlockFailed: unblocking failed)
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status (Blocked: blocked, UnBlocking: unblocking, UnBlockFailed: unblocking failed)
-                     * @param Status Status (Blocked: blocked, UnBlocking: unblocking, UnBlockFailed: unblocking failed)
+                     * @param _status Status (Blocked: blocked, UnBlocking: unblocking, UnBlockFailed: unblocking failed)
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Blocked time
                      * @return BlockTime Blocked time
+                     * 
                      */
                     std::string GetBlockTime() const;
 
                     /**
                      * 设置Blocked time
-                     * @param BlockTime Blocked time
+                     * @param _blockTime Blocked time
+                     * 
                      */
                     void SetBlockTime(const std::string& _blockTime);
 
                     /**
                      * 判断参数 BlockTime 是否已赋值
                      * @return BlockTime 是否已赋值
+                     * 
                      */
                     bool BlockTimeHasBeenSet() const;
 
                     /**
                      * 获取Unblocked time (estimated)
                      * @return UnBlockTime Unblocked time (estimated)
+                     * 
                      */
                     std::string GetUnBlockTime() const;
 
                     /**
                      * 设置Unblocked time (estimated)
-                     * @param UnBlockTime Unblocked time (estimated)
+                     * @param _unBlockTime Unblocked time (estimated)
+                     * 
                      */
                     void SetUnBlockTime(const std::string& _unBlockTime);
 
                     /**
                      * 判断参数 UnBlockTime 是否已赋值
                      * @return UnBlockTime 是否已赋值
+                     * 
                      */
                     bool UnBlockTimeHasBeenSet() const;
 
                     /**
                      * 获取Type of the unblocking action (`user`: self-service unblocking, `auto`: automatic unblocking, `update`: unblocking by service upgrading, `bind`: unblocking by binding Anti-DDoS Pro instance)
                      * @return ActionType Type of the unblocking action (`user`: self-service unblocking, `auto`: automatic unblocking, `update`: unblocking by service upgrading, `bind`: unblocking by binding Anti-DDoS Pro instance)
+                     * 
                      */
                     std::string GetActionType() const;
 
                     /**
                      * 设置Type of the unblocking action (`user`: self-service unblocking, `auto`: automatic unblocking, `update`: unblocking by service upgrading, `bind`: unblocking by binding Anti-DDoS Pro instance)
-                     * @param ActionType Type of the unblocking action (`user`: self-service unblocking, `auto`: automatic unblocking, `update`: unblocking by service upgrading, `bind`: unblocking by binding Anti-DDoS Pro instance)
+                     * @param _actionType Type of the unblocking action (`user`: self-service unblocking, `auto`: automatic unblocking, `update`: unblocking by service upgrading, `bind`: unblocking by binding Anti-DDoS Pro instance)
+                     * 
                      */
                     void SetActionType(const std::string& _actionType);
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 

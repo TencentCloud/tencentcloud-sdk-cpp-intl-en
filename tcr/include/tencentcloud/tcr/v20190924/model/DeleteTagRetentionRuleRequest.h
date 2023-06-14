@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Primary instance ID
                      * @return RegistryId Primary instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Primary instance ID
-                     * @param RegistryId Primary instance ID
+                     * @param _registryId Primary instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Tag retention rule ID
                      * @return RetentionId Tag retention rule ID
+                     * 
                      */
                     int64_t GetRetentionId() const;
 
                     /**
                      * 设置Tag retention rule ID
-                     * @param RetentionId Tag retention rule ID
+                     * @param _retentionId Tag retention rule ID
+                     * 
                      */
                     void SetRetentionId(const int64_t& _retentionId);
 
                     /**
                      * 判断参数 RetentionId 是否已赋值
                      * @return RetentionId 是否已赋值
+                     * 
                      */
                     bool RetentionIdHasBeenSet() const;
 

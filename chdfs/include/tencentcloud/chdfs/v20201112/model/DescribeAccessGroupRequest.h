@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Permission group ID
                      * @return AccessGroupId Permission group ID
+                     * 
                      */
                     std::string GetAccessGroupId() const;
 
                     /**
                      * 设置Permission group ID
-                     * @param AccessGroupId Permission group ID
+                     * @param _accessGroupId Permission group ID
+                     * 
                      */
                     void SetAccessGroupId(const std::string& _accessGroupId);
 
                     /**
                      * 判断参数 AccessGroupId 是否已赋值
                      * @return AccessGroupId 是否已赋值
+                     * 
                      */
                     bool AccessGroupIdHasBeenSet() const;
 

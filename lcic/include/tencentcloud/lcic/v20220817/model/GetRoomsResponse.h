@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of rooms.
                      * @return Total The total number of rooms.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取The room list.
                      * @return Rooms The room list.
+                     * 
                      */
                     std::vector<RoomItem> GetRooms() const;
 
                     /**
                      * 判断参数 Rooms 是否已赋值
                      * @return Rooms 是否已赋值
+                     * 
                      */
                     bool RoomsHasBeenSet() const;
 

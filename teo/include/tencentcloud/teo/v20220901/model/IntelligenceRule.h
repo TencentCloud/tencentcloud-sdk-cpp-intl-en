@@ -56,6 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -64,16 +65,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Switch. Values:
+                     * @param _switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -82,20 +85,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IntelligenceRuleItems Items in a bot intelligence rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IntelligenceRuleItem> GetIntelligenceRuleItems() const;
 
                     /**
                      * 设置Items in a bot intelligence rule
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IntelligenceRuleItems Items in a bot intelligence rule
+                     * @param _intelligenceRuleItems Items in a bot intelligence rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIntelligenceRuleItems(const std::vector<IntelligenceRuleItem>& _intelligenceRuleItems);
 
                     /**
                      * 判断参数 IntelligenceRuleItems 是否已赋值
                      * @return IntelligenceRuleItems 是否已赋值
+                     * 
                      */
                     bool IntelligenceRuleItemsHasBeenSet() const;
 

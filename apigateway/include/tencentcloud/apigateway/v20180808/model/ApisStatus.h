@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible APIs.
                      * @return TotalCount Number of eligible APIs.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of eligible APIs.
-                     * @param TotalCount Number of eligible APIs.
+                     * @param _totalCount Number of eligible APIs.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取API list.
                      * @return ApiIdStatusSet API list.
+                     * 
                      */
                     std::vector<DesApisStatus> GetApiIdStatusSet() const;
 
                     /**
                      * 设置API list.
-                     * @param ApiIdStatusSet API list.
+                     * @param _apiIdStatusSet API list.
+                     * 
                      */
                     void SetApiIdStatusSet(const std::vector<DesApisStatus>& _apiIdStatusSet);
 
                     /**
                      * 判断参数 ApiIdStatusSet 是否已赋值
                      * @return ApiIdStatusSet 是否已赋值
+                     * 
                      */
                     bool ApiIdStatusSetHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StartTimeOffset Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StartTimeOffset Start time offset of suspected segment in seconds.
+                     * @param _startTimeOffset Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EndTimeOffset End time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EndTimeOffset End time offset of suspected segment in seconds.
+                     * @param _endTimeOffset End time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Confidence Confidence of suspected segment.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of suspected segment.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Confidence Confidence of suspected segment.
+                     * @param _confidence Confidence of suspected segment.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -121,6 +130,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -129,16 +139,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion Processing suggestion for the detected suspicious content. Valid values:
+                     * @param _suggestion Processing suggestion for the detected suspicious content. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeywordSet List of suspected keywords.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetKeywordSet() const;
 
                     /**
                      * 设置List of suspected keywords.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeywordSet List of suspected keywords.
+                     * @param _keywordSet List of suspected keywords.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeywordSet(const std::vector<std::string>& _keywordSet);
 
                     /**
                      * 判断参数 KeywordSet 是否已赋值
                      * @return KeywordSet 是否已赋值
+                     * 
                      */
                     bool KeywordSetHasBeenSet() const;
 

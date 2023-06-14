@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The alias domain name.
                      * @return AliasName The alias domain name.
+                     * 
                      */
                     std::string GetAliasName() const;
 
                     /**
                      * 设置The alias domain name.
-                     * @param AliasName The alias domain name.
+                     * @param _aliasName The alias domain name.
+                     * 
                      */
                     void SetAliasName(const std::string& _aliasName);
 
                     /**
                      * 判断参数 AliasName 是否已赋值
                      * @return AliasName 是否已赋值
+                     * 
                      */
                     bool AliasNameHasBeenSet() const;
 
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The target domain name.
                      * @return TargetName The target domain name.
+                     * 
                      */
                     std::string GetTargetName() const;
 
                     /**
                      * 设置The target domain name.
-                     * @param TargetName The target domain name.
+                     * @param _targetName The target domain name.
+                     * 
                      */
                     void SetTargetName(const std::string& _targetName);
 
                     /**
                      * 判断参数 TargetName 是否已赋值
                      * @return TargetName 是否已赋值
+                     * 
                      */
                     bool TargetNameHasBeenSet() const;
 
@@ -111,6 +120,7 @@ namespace TencentCloud
 <li>`pending`: Deploying</li>
 <li>`conflict`: Reclaimed</li>
 <li>`stop`: Stopped</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -120,17 +130,19 @@ namespace TencentCloud
 <li>`pending`: Deploying</li>
 <li>`conflict`: Reclaimed</li>
 <li>`stop`: Stopped</li>
-                     * @param Status Status of the alias domain name. Values:
+                     * @param _status Status of the alias domain name. Values:
 <li>`active`: Activated</li>
 <li>`pending`: Deploying</li>
 <li>`conflict`: Reclaimed</li>
 <li>`stop`: Stopped</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -143,6 +155,7 @@ namespace TencentCloud
 <li>`0`: Not blocked</li>
 <li>`11`: Blocked due to regulatory compliance</li>
 <li>`14`: Blocked due to ICP filing not obtained</li>
+                     * 
                      */
                     int64_t GetForbidMode() const;
 
@@ -151,52 +164,60 @@ namespace TencentCloud
 <li>`0`: Not blocked</li>
 <li>`11`: Blocked due to regulatory compliance</li>
 <li>`14`: Blocked due to ICP filing not obtained</li>
-                     * @param ForbidMode The blocking mode. Values:
+                     * @param _forbidMode The blocking mode. Values:
 <li>`0`: Not blocked</li>
 <li>`11`: Blocked due to regulatory compliance</li>
 <li>`14`: Blocked due to ICP filing not obtained</li>
+                     * 
                      */
                     void SetForbidMode(const int64_t& _forbidMode);
 
                     /**
                      * 判断参数 ForbidMode 是否已赋值
                      * @return ForbidMode 是否已赋值
+                     * 
                      */
                     bool ForbidModeHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the alias domain name.
                      * @return CreatedOn Creation time of the alias domain name.
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置Creation time of the alias domain name.
-                     * @param CreatedOn Creation time of the alias domain name.
+                     * @param _createdOn Creation time of the alias domain name.
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
                     /**
                      * 获取Modification time of the alias domain name.
                      * @return ModifiedOn Modification time of the alias domain name.
+                     * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
                      * 设置Modification time of the alias domain name.
-                     * @param ModifiedOn Modification time of the alias domain name.
+                     * @param _modifiedOn Modification time of the alias domain name.
+                     * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
 
                     /**
                      * 判断参数 ModifiedOn 是否已赋值
                      * @return ModifiedOn 是否已赋值
+                     * 
                      */
                     bool ModifiedOnHasBeenSet() const;
 

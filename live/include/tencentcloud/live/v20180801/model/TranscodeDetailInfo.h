@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
                      * @return StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
-                     * @param StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+                     * @param _startTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
                      * @return EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
-                     * @param EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+                     * @param _endTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
                      * @return Duration Transcoding duration in minutes.
 Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
+                     * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
                      * 设置Transcoding duration in minutes.
 Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
-                     * @param Duration Transcoding duration in minutes.
+                     * @param _duration Transcoding duration in minutes.
 Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
+                     * 
                      */
                     void SetDuration(const uint64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
@@ -135,6 +147,7 @@ liveprocessor_H264: LVB transcoding - H264,
 liveprocessor_H265: LVB transcoding - H265,
 topspeed_H264: top speed codec - H264,
 topspeed_H265: top speed codec - H265.
+                     * 
                      */
                     std::string GetModuleCodec() const;
 
@@ -145,90 +158,104 @@ liveprocessor_H264: LVB transcoding - H264,
 liveprocessor_H265: LVB transcoding - H265,
 topspeed_H264: top speed codec - H264,
 topspeed_H265: top speed codec - H265.
-                     * @param ModuleCodec Codec with modules,
+                     * @param _moduleCodec Codec with modules,
 Example:
 liveprocessor_H264: LVB transcoding - H264,
 liveprocessor_H265: LVB transcoding - H265,
 topspeed_H264: top speed codec - H264,
 topspeed_H265: top speed codec - H265.
+                     * 
                      */
                     void SetModuleCodec(const std::string& _moduleCodec);
 
                     /**
                      * 判断参数 ModuleCodec 是否已赋值
                      * @return ModuleCodec 是否已赋值
+                     * 
                      */
                     bool ModuleCodecHasBeenSet() const;
 
                     /**
                      * 获取Bitrate.
                      * @return Bitrate Bitrate.
+                     * 
                      */
                     uint64_t GetBitrate() const;
 
                     /**
                      * 设置Bitrate.
-                     * @param Bitrate Bitrate.
+                     * @param _bitrate Bitrate.
+                     * 
                      */
                     void SetBitrate(const uint64_t& _bitrate);
 
                     /**
                      * 判断参数 Bitrate 是否已赋值
                      * @return Bitrate 是否已赋值
+                     * 
                      */
                     bool BitrateHasBeenSet() const;
 
                     /**
                      * 获取The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
                      * @return Type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
-                     * @param Type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
+                     * @param _type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return PushDomain Push domain name.
+                     * 
                      */
                     std::string GetPushDomain() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param PushDomain Push domain name.
+                     * @param _pushDomain Push domain name.
+                     * 
                      */
                     void SetPushDomain(const std::string& _pushDomain);
 
                     /**
                      * 判断参数 PushDomain 是否已赋值
                      * @return PushDomain 是否已赋值
+                     * 
                      */
                     bool PushDomainHasBeenSet() const;
 
                     /**
                      * 获取Resolution.
                      * @return Resolution Resolution.
+                     * 
                      */
                     std::string GetResolution() const;
 
                     /**
                      * 设置Resolution.
-                     * @param Resolution Resolution.
+                     * @param _resolution Resolution.
+                     * 
                      */
                     void SetResolution(const std::string& _resolution);
 
                     /**
                      * 判断参数 Resolution 是否已赋值
                      * @return Resolution 是否已赋值
+                     * 
                      */
                     bool ResolutionHasBeenSet() const;
 
@@ -239,6 +266,7 @@ topspeed_H265: top speed codec - H265.
                      * @return MainlandOrOversea The region. Valid values:
 `Mainland`: Inside the Chinese mainland.
 `Overseas`: Outside the Chinese mainland.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
@@ -246,15 +274,17 @@ topspeed_H265: top speed codec - H265.
                      * 设置The region. Valid values:
 `Mainland`: Inside the Chinese mainland.
 `Overseas`: Outside the Chinese mainland.
-                     * @param MainlandOrOversea The region. Valid values:
+                     * @param _mainlandOrOversea The region. Valid values:
 `Mainland`: Inside the Chinese mainland.
 `Overseas`: Outside the Chinese mainland.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 

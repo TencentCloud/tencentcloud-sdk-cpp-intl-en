@@ -48,198 +48,231 @@ namespace TencentCloud
                     /**
                      * 获取Template ID obtained through the `DescribeRecordTemplates` API.
                      * @return TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID obtained through the `DescribeRecordTemplates` API.
-                     * @param TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
+                     * @param _templateId Template ID obtained through the `DescribeRecordTemplates` API.
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Template name.
                      * @return TemplateName Template name.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name.
-                     * @param TemplateName Template name.
+                     * @param _templateName Template name.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Message description
                      * @return Description Message description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Message description
-                     * @param Description Message description
+                     * @param _description Message description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取FLV recording parameter, which is set when FLV recording is enabled.
                      * @return FlvParam FLV recording parameter, which is set when FLV recording is enabled.
+                     * 
                      */
                     RecordParam GetFlvParam() const;
 
                     /**
                      * 设置FLV recording parameter, which is set when FLV recording is enabled.
-                     * @param FlvParam FLV recording parameter, which is set when FLV recording is enabled.
+                     * @param _flvParam FLV recording parameter, which is set when FLV recording is enabled.
+                     * 
                      */
                     void SetFlvParam(const RecordParam& _flvParam);
 
                     /**
                      * 判断参数 FlvParam 是否已赋值
                      * @return FlvParam 是否已赋值
+                     * 
                      */
                     bool FlvParamHasBeenSet() const;
 
                     /**
                      * 获取HLS recording parameter, which is set when HLS recording is enabled.
                      * @return HlsParam HLS recording parameter, which is set when HLS recording is enabled.
+                     * 
                      */
                     RecordParam GetHlsParam() const;
 
                     /**
                      * 设置HLS recording parameter, which is set when HLS recording is enabled.
-                     * @param HlsParam HLS recording parameter, which is set when HLS recording is enabled.
+                     * @param _hlsParam HLS recording parameter, which is set when HLS recording is enabled.
+                     * 
                      */
                     void SetHlsParam(const RecordParam& _hlsParam);
 
                     /**
                      * 判断参数 HlsParam 是否已赋值
                      * @return HlsParam 是否已赋值
+                     * 
                      */
                     bool HlsParamHasBeenSet() const;
 
                     /**
                      * 获取MP4 recording parameter, which is set when MP4 recording is enabled.
                      * @return Mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
+                     * 
                      */
                     RecordParam GetMp4Param() const;
 
                     /**
                      * 设置MP4 recording parameter, which is set when MP4 recording is enabled.
-                     * @param Mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
+                     * @param _mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
+                     * 
                      */
                     void SetMp4Param(const RecordParam& _mp4Param);
 
                     /**
                      * 判断参数 Mp4Param 是否已赋值
                      * @return Mp4Param 是否已赋值
+                     * 
                      */
                     bool Mp4ParamHasBeenSet() const;
 
                     /**
                      * 获取AAC recording parameter, which is set when AAC recording is enabled.
                      * @return AacParam AAC recording parameter, which is set when AAC recording is enabled.
+                     * 
                      */
                     RecordParam GetAacParam() const;
 
                     /**
                      * 设置AAC recording parameter, which is set when AAC recording is enabled.
-                     * @param AacParam AAC recording parameter, which is set when AAC recording is enabled.
+                     * @param _aacParam AAC recording parameter, which is set when AAC recording is enabled.
+                     * 
                      */
                     void SetAacParam(const RecordParam& _aacParam);
 
                     /**
                      * 判断参数 AacParam 是否已赋值
                      * @return AacParam 是否已赋值
+                     * 
                      */
                     bool AacParamHasBeenSet() const;
 
                     /**
                      * 获取Custom HLS recording parameter.
                      * @return HlsSpecialParam Custom HLS recording parameter.
+                     * 
                      */
                     HlsSpecialParam GetHlsSpecialParam() const;
 
                     /**
                      * 设置Custom HLS recording parameter.
-                     * @param HlsSpecialParam Custom HLS recording parameter.
+                     * @param _hlsSpecialParam Custom HLS recording parameter.
+                     * 
                      */
                     void SetHlsSpecialParam(const HlsSpecialParam& _hlsSpecialParam);
 
                     /**
                      * 判断参数 HlsSpecialParam 是否已赋值
                      * @return HlsSpecialParam 是否已赋值
+                     * 
                      */
                     bool HlsSpecialParamHasBeenSet() const;
 
                     /**
                      * 获取MP3 recording parameter, which is set when MP3 recording is enabled.
                      * @return Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
+                     * 
                      */
                     RecordParam GetMp3Param() const;
 
                     /**
                      * 设置MP3 recording parameter, which is set when MP3 recording is enabled.
-                     * @param Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
+                     * @param _mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
+                     * 
                      */
                     void SetMp3Param(const RecordParam& _mp3Param);
 
                     /**
                      * 判断参数 Mp3Param 是否已赋值
                      * @return Mp3Param 是否已赋值
+                     * 
                      */
                     bool Mp3ParamHasBeenSet() const;
 
                     /**
                      * 获取Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
                      * @return RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     * 
                      */
                     bool GetRemoveWatermark() const;
 
                     /**
                      * 设置Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
-                     * @param RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     * @param _removeWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     * 
                      */
                     void SetRemoveWatermark(const bool& _removeWatermark);
 
                     /**
                      * 判断参数 RemoveWatermark 是否已赋值
                      * @return RemoveWatermark 是否已赋值
+                     * 
                      */
                     bool RemoveWatermarkHasBeenSet() const;
 
                     /**
                      * 获取A special parameter for FLV recording.
                      * @return FlvSpecialParam A special parameter for FLV recording.
+                     * 
                      */
                     FlvSpecialParam GetFlvSpecialParam() const;
 
                     /**
                      * 设置A special parameter for FLV recording.
-                     * @param FlvSpecialParam A special parameter for FLV recording.
+                     * @param _flvSpecialParam A special parameter for FLV recording.
+                     * 
                      */
                     void SetFlvSpecialParam(const FlvSpecialParam& _flvSpecialParam);
 
                     /**
                      * 判断参数 FlvSpecialParam 是否已赋值
                      * @return FlvSpecialParam 是否已赋值
+                     * 
                      */
                     bool FlvSpecialParamHasBeenSet() const;
 

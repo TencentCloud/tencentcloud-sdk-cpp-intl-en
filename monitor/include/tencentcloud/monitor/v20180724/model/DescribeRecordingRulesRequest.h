@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Prometheus instance ID
                      * @return InstanceId Prometheus instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Prometheus instance ID
-                     * @param InstanceId Prometheus instance ID
+                     * @param _instanceId Prometheus instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -123,6 +135,7 @@ namespace TencentCloud
 <li>1=RuleDeleted</li>
 <li>2=RuleEnabled</li>
 <li>3=RuleDisabled</li>
+                     * 
                      */
                     int64_t GetRuleState() const;
 
@@ -131,34 +144,39 @@ namespace TencentCloud
 <li>1=RuleDeleted</li>
 <li>2=RuleEnabled</li>
 <li>3=RuleDisabled</li>
-                     * @param RuleState Rule status code. Valid values:
+                     * @param _ruleState Rule status code. Valid values:
 <li>1=RuleDeleted</li>
 <li>2=RuleEnabled</li>
 <li>3=RuleDisabled</li>
+                     * 
                      */
                     void SetRuleState(const int64_t& _ruleState);
 
                     /**
                      * 判断参数 RuleState 是否已赋值
                      * @return RuleState 是否已赋值
+                     * 
                      */
                     bool RuleStateHasBeenSet() const;
 
                     /**
                      * 获取Rule name
                      * @return Name Rule name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Rule name
-                     * @param Name Rule name
+                     * @param _name Rule name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

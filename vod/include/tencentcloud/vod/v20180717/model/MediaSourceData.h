@@ -60,6 +60,7 @@ namespace TencentCloud
 <li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
 <li>`WebPageRecord`: panoramic recording </li>
 <li>`Unknown`: unknown source</li>
+                     * 
                      */
                     std::string GetSourceType() const;
 
@@ -70,18 +71,20 @@ namespace TencentCloud
 <li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
 <li>`WebPageRecord`: panoramic recording </li>
 <li>`Unknown`: unknown source</li>
-                     * @param SourceType Source of a media file:
+                     * @param _sourceType Source of a media file:
 <li>`Record`: recording, such as live or time-shift recording</li>
 <li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
 <li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
 <li>`WebPageRecord`: panoramic recording </li>
 <li>`Unknown`: unknown source</li>
+                     * 
                      */
                     void SetSourceType(const std::string& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
@@ -90,20 +93,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SourceContext Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSourceContext() const;
 
                     /**
                      * 设置Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SourceContext Field passed through when a file is created.
+                     * @param _sourceContext Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSourceContext(const std::string& _sourceContext);
 
                     /**
                      * 判断参数 SourceContext 是否已赋值
                      * @return SourceContext 是否已赋值
+                     * 
                      */
                     bool SourceContextHasBeenSet() const;
 
@@ -112,20 +118,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TrtcRecordInfo The TRTC recording information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TrtcRecordInfo GetTrtcRecordInfo() const;
 
                     /**
                      * 设置The TRTC recording information.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TrtcRecordInfo The TRTC recording information.
+                     * @param _trtcRecordInfo The TRTC recording information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTrtcRecordInfo(const TrtcRecordInfo& _trtcRecordInfo);
 
                     /**
                      * 判断参数 TrtcRecordInfo 是否已赋值
                      * @return TrtcRecordInfo 是否已赋值
+                     * 
                      */
                     bool TrtcRecordInfoHasBeenSet() const;
 

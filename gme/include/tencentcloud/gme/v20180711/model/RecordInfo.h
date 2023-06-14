@@ -50,72 +50,84 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取User ID. The value is `0` in mixed streams recording mode.
                      * @return UserId User ID. The value is `0` in mixed streams recording mode.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID. The value is `0` in mixed streams recording mode.
-                     * @param UserId User ID. The value is `0` in mixed streams recording mode.
+                     * @param _userId User ID. The value is `0` in mixed streams recording mode.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Recording filename.
                      * @return FileName Recording filename.
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Recording filename.
-                     * @param FileName Recording filename.
+                     * @param _fileName Recording filename.
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Recording start time, which is a Unix timestamp. Example: 1234567868.
                      * @return RecordBeginTime Recording start time, which is a Unix timestamp. Example: 1234567868.
+                     * 
                      */
                     uint64_t GetRecordBeginTime() const;
 
                     /**
                      * 设置Recording start time, which is a Unix timestamp. Example: 1234567868.
-                     * @param RecordBeginTime Recording start time, which is a Unix timestamp. Example: 1234567868.
+                     * @param _recordBeginTime Recording start time, which is a Unix timestamp. Example: 1234567868.
+                     * 
                      */
                     void SetRecordBeginTime(const uint64_t& _recordBeginTime);
 
                     /**
                      * 判断参数 RecordBeginTime 是否已赋值
                      * @return RecordBeginTime 是否已赋值
+                     * 
                      */
                     bool RecordBeginTimeHasBeenSet() const;
 
                     /**
                      * 获取Recording status. Valid values: `2`: recording; `10`: to be transcoded; `11`: transcoding; `12`: uploading; `13`: uploaded; `14`: user notified.
                      * @return RecordStatus Recording status. Valid values: `2`: recording; `10`: to be transcoded; `11`: transcoding; `12`: uploading; `13`: uploaded; `14`: user notified.
+                     * 
                      */
                     uint64_t GetRecordStatus() const;
 
                     /**
                      * 设置Recording status. Valid values: `2`: recording; `10`: to be transcoded; `11`: transcoding; `12`: uploading; `13`: uploaded; `14`: user notified.
-                     * @param RecordStatus Recording status. Valid values: `2`: recording; `10`: to be transcoded; `11`: transcoding; `12`: uploading; `13`: uploaded; `14`: user notified.
+                     * @param _recordStatus Recording status. Valid values: `2`: recording; `10`: to be transcoded; `11`: transcoding; `12`: uploading; `13`: uploaded; `14`: user notified.
+                     * 
                      */
                     void SetRecordStatus(const uint64_t& _recordStatus);
 
                     /**
                      * 判断参数 RecordStatus 是否已赋值
                      * @return RecordStatus 是否已赋值
+                     * 
                      */
                     bool RecordStatusHasBeenSet() const;
 

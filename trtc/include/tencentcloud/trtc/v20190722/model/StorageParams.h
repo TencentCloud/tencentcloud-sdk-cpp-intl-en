@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
                      * @return CloudStorage The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
+                     * 
                      */
                     CloudStorage GetCloudStorage() const;
 
                     /**
                      * 设置The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
-                     * @param CloudStorage The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
+                     * @param _cloudStorage The account information for third-party storage. Please note that if you save files to COS, a recording-to-COS fee will be incurred. For details, see the document "Billing of On-Cloud Recording". If you save files to VOD, there won't be such a fee.
+                     * 
                      */
                     void SetCloudStorage(const CloudStorage& _cloudStorage);
 
                     /**
                      * 判断参数 CloudStorage 是否已赋值
                      * @return CloudStorage 是否已赋值
+                     * 
                      */
                     bool CloudStorageHasBeenSet() const;
 
                     /**
                      * 获取The account information for VOD storage.
                      * @return CloudVod The account information for VOD storage.
+                     * 
                      */
                     CloudVod GetCloudVod() const;
 
                     /**
                      * 设置The account information for VOD storage.
-                     * @param CloudVod The account information for VOD storage.
+                     * @param _cloudVod The account information for VOD storage.
+                     * 
                      */
                     void SetCloudVod(const CloudVod& _cloudVod);
 
                     /**
                      * 判断参数 CloudVod 是否已赋值
                      * @return CloudVod 是否已赋值
+                     * 
                      */
                     bool CloudVodHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Configuration of the scheduled scaling policy
                      * @return TimerScalingPolicy Configuration of the scheduled scaling policy
+                     * 
                      */
                     TimerScalingPolicy GetTimerScalingPolicy() const;
 
                     /**
                      * 设置Configuration of the scheduled scaling policy
-                     * @param TimerScalingPolicy Configuration of the scheduled scaling policy
+                     * @param _timerScalingPolicy Configuration of the scheduled scaling policy
+                     * 
                      */
                     void SetTimerScalingPolicy(const TimerScalingPolicy& _timerScalingPolicy);
 
                     /**
                      * 判断参数 TimerScalingPolicy 是否已赋值
                      * @return TimerScalingPolicy 是否已赋值
+                     * 
                      */
                     bool TimerScalingPolicyHasBeenSet() const;
 

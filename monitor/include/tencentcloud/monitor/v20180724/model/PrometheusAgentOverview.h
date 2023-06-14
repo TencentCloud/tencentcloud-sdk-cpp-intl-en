@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster type
                      * @return ClusterType Cluster type
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Cluster type
-                     * @param ClusterType Cluster type
+                     * @param _clusterType Cluster type
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -90,6 +96,7 @@ namespace TencentCloud
                      * @return Status Agent status. Valid values: 
 `normal`
 `abnormal`
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -97,33 +104,38 @@ namespace TencentCloud
                      * 设置Agent status. Valid values: 
 `normal`
 `abnormal`
-                     * @param Status Agent status. Valid values: 
+                     * @param _status Agent status. Valid values: 
 `normal`
 `abnormal`
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
@@ -134,6 +146,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ExternalLabels External labels
 External labels, which will be attached to all metrics in this cluster
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Label> GetExternalLabels() const;
 
@@ -141,15 +154,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置External labels
 External labels, which will be attached to all metrics in this cluster
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExternalLabels External labels
+                     * @param _externalLabels External labels
 External labels, which will be attached to all metrics in this cluster
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExternalLabels(const std::vector<Label>& _externalLabels);
 
                     /**
                      * 判断参数 ExternalLabels 是否已赋值
                      * @return ExternalLabels 是否已赋值
+                     * 
                      */
                     bool ExternalLabelsHasBeenSet() const;
 
@@ -158,20 +173,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Region Cluster region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Cluster region
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Region Cluster region
+                     * @param _region Cluster region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -180,20 +198,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcId ID of the VPC where the cluster resides
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置ID of the VPC where the cluster resides
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VpcId ID of the VPC where the cluster resides
+                     * @param _vpcId ID of the VPC where the cluster resides
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
@@ -202,20 +223,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailedReason Recorded information of failed operations, such as association.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFailedReason() const;
 
                     /**
                      * 设置Recorded information of failed operations, such as association.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FailedReason Recorded information of failed operations, such as association.
+                     * @param _failedReason Recorded information of failed operations, such as association.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedReason(const std::string& _failedReason);
 
                     /**
                      * 判断参数 FailedReason 是否已赋值
                      * @return FailedReason 是否已赋值
+                     * 
                      */
                     bool FailedReasonHasBeenSet() const;
 
@@ -224,20 +248,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Agent name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Agent name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Agent name
+                     * @param _name Agent name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

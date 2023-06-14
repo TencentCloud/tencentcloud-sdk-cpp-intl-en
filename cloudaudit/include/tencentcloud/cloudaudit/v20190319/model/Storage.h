@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Storage type (Valid values: cos, cls)
                      * @return StorageType Storage type (Valid values: cos, cls)
+                     * 
                      */
                     std::string GetStorageType() const;
 
                     /**
                      * 设置Storage type (Valid values: cos, cls)
-                     * @param StorageType Storage type (Valid values: cos, cls)
+                     * @param _storageType Storage type (Valid values: cos, cls)
+                     * 
                      */
                     void SetStorageType(const std::string& _storageType);
 
                     /**
                      * 判断参数 StorageType 是否已赋值
                      * @return StorageType 是否已赋值
+                     * 
                      */
                     bool StorageTypeHasBeenSet() const;
 
                     /**
                      * 获取Storage region
                      * @return StorageRegion Storage region
+                     * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
                      * 设置Storage region
-                     * @param StorageRegion Storage region
+                     * @param _storageRegion Storage region
+                     * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
 
                     /**
                      * 判断参数 StorageRegion 是否已赋值
                      * @return StorageRegion 是否已赋值
+                     * 
                      */
                     bool StorageRegionHasBeenSet() const;
 
                     /**
                      * 获取Storage name. For COS, the storage name is the custom bucket name, which can contain up to 50 lowercase letters, digits, and hyphens. It cannot contain "-APPID" and cannot start or end with a hyphen. For CLS, the storage name is the log topic ID, which can contain 1-50 characters.
                      * @return StorageName Storage name. For COS, the storage name is the custom bucket name, which can contain up to 50 lowercase letters, digits, and hyphens. It cannot contain "-APPID" and cannot start or end with a hyphen. For CLS, the storage name is the log topic ID, which can contain 1-50 characters.
+                     * 
                      */
                     std::string GetStorageName() const;
 
                     /**
                      * 设置Storage name. For COS, the storage name is the custom bucket name, which can contain up to 50 lowercase letters, digits, and hyphens. It cannot contain "-APPID" and cannot start or end with a hyphen. For CLS, the storage name is the log topic ID, which can contain 1-50 characters.
-                     * @param StorageName Storage name. For COS, the storage name is the custom bucket name, which can contain up to 50 lowercase letters, digits, and hyphens. It cannot contain "-APPID" and cannot start or end with a hyphen. For CLS, the storage name is the log topic ID, which can contain 1-50 characters.
+                     * @param _storageName Storage name. For COS, the storage name is the custom bucket name, which can contain up to 50 lowercase letters, digits, and hyphens. It cannot contain "-APPID" and cannot start or end with a hyphen. For CLS, the storage name is the log topic ID, which can contain 1-50 characters.
+                     * 
                      */
                     void SetStorageName(const std::string& _storageName);
 
                     /**
                      * 判断参数 StorageName 是否已赋值
                      * @return StorageName 是否已赋值
+                     * 
                      */
                     bool StorageNameHasBeenSet() const;
 
                     /**
                      * 获取Storage directory prefix. The COS log file prefix can only contain 3-40 letters and digits.
                      * @return StoragePrefix Storage directory prefix. The COS log file prefix can only contain 3-40 letters and digits.
+                     * 
                      */
                     std::string GetStoragePrefix() const;
 
                     /**
                      * 设置Storage directory prefix. The COS log file prefix can only contain 3-40 letters and digits.
-                     * @param StoragePrefix Storage directory prefix. The COS log file prefix can only contain 3-40 letters and digits.
+                     * @param _storagePrefix Storage directory prefix. The COS log file prefix can only contain 3-40 letters and digits.
+                     * 
                      */
                     void SetStoragePrefix(const std::string& _storagePrefix);
 
                     /**
                      * 判断参数 StoragePrefix 是否已赋值
                      * @return StoragePrefix 是否已赋值
+                     * 
                      */
                     bool StoragePrefixHasBeenSet() const;
 

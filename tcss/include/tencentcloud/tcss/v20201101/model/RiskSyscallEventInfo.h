@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Process name
                      * @return ProcessName Process name
+                     * 
                      */
                     std::string GetProcessName() const;
 
                     /**
                      * 设置Process name
-                     * @param ProcessName Process name
+                     * @param _processName Process name
+                     * 
                      */
                     void SetProcessName(const std::string& _processName);
 
                     /**
                      * 判断参数 ProcessName 是否已赋值
                      * @return ProcessName 是否已赋值
+                     * 
                      */
                     bool ProcessNameHasBeenSet() const;
 
                     /**
                      * 获取Process path
                      * @return ProcessPath Process path
+                     * 
                      */
                     std::string GetProcessPath() const;
 
                     /**
                      * 设置Process path
-                     * @param ProcessPath Process path
+                     * @param _processPath Process path
+                     * 
                      */
                     void SetProcessPath(const std::string& _processPath);
 
                     /**
                      * 判断参数 ProcessPath 是否已赋值
                      * @return ProcessPath 是否已赋值
+                     * 
                      */
                     bool ProcessPathHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Container ID
                      * @return ContainerId Container ID
+                     * 
                      */
                     std::string GetContainerId() const;
 
                     /**
                      * 设置Container ID
-                     * @param ContainerId Container ID
+                     * @param _containerId Container ID
+                     * 
                      */
                     void SetContainerId(const std::string& _containerId);
 
                     /**
                      * 判断参数 ContainerId 是否已赋值
                      * @return ContainerId 是否已赋值
+                     * 
                      */
                     bool ContainerIdHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Container name
                      * @return ContainerName Container name
+                     * 
                      */
                     std::string GetContainerName() const;
 
                     /**
                      * 设置Container name
-                     * @param ContainerName Container name
+                     * @param _containerName Container name
+                     * 
                      */
                     void SetContainerName(const std::string& _containerName);
 
                     /**
                      * 判断参数 ContainerName 是否已赋值
                      * @return ContainerName 是否已赋值
+                     * 
                      */
                     bool ContainerNameHasBeenSet() const;
 
                     /**
                      * 获取Generation time
                      * @return FoundTime Generation time
+                     * 
                      */
                     std::string GetFoundTime() const;
 
                     /**
                      * 设置Generation time
-                     * @param FoundTime Generation time
+                     * @param _foundTime Generation time
+                     * 
                      */
                     void SetFoundTime(const std::string& _foundTime);
 
                     /**
                      * 判断参数 FoundTime 是否已赋值
                      * @return FoundTime 是否已赋值
+                     * 
                      */
                     bool FoundTimeHasBeenSet() const;
 
                     /**
                      * 获取Event solution
                      * @return Solution Event solution
+                     * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Event solution
-                     * @param Solution Event solution
+                     * @param _solution Event solution
+                     * 
                      */
                     void SetSolution(const std::string& _solution);
 
                     /**
                      * 判断参数 Solution 是否已赋值
                      * @return Solution 是否已赋值
+                     * 
                      */
                     bool SolutionHasBeenSet() const;
 
                     /**
                      * 获取Event description
                      * @return Description Event description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Event description
-                     * @param Description Event description
+                     * @param _description Event description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Syscall name
                      * @return SyscallName Syscall name
+                     * 
                      */
                     std::string GetSyscallName() const;
 
                     /**
                      * 设置Syscall name
-                     * @param SyscallName Syscall name
+                     * @param _syscallName Syscall name
+                     * 
                      */
                     void SetSyscallName(const std::string& _syscallName);
 
                     /**
                      * 判断参数 SyscallName 是否已赋值
                      * @return SyscallName 是否已赋值
+                     * 
                      */
                     bool SyscallNameHasBeenSet() const;
 
@@ -235,6 +265,7 @@ namespace TencentCloud
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
     `EVENT_ADD_WHITE`: Allowed.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -243,142 +274,165 @@ namespace TencentCloud
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
     `EVENT_ADD_WHITE`: Allowed.
-                     * @param Status Status. `EVENT_UNDEAL`: Pending.
+                     * @param _status Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
     `EVENT_ADD_WHITE`: Allowed.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Event ID
                      * @return EventId Event ID
+                     * 
                      */
                     std::string GetEventId() const;
 
                     /**
                      * 设置Event ID
-                     * @param EventId Event ID
+                     * @param _eventId Event ID
+                     * 
                      */
                     void SetEventId(const std::string& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Node name
                      * @return NodeName Node name
+                     * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 设置Node name
-                     * @param NodeName Node name
+                     * @param _nodeName Node name
+                     * 
                      */
                     void SetNodeName(const std::string& _nodeName);
 
                     /**
                      * 判断参数 NodeName 是否已赋值
                      * @return NodeName 是否已赋值
+                     * 
                      */
                     bool NodeNameHasBeenSet() const;
 
                     /**
                      * 获取Pod (instance) name
                      * @return PodName Pod (instance) name
+                     * 
                      */
                     std::string GetPodName() const;
 
                     /**
                      * 设置Pod (instance) name
-                     * @param PodName Pod (instance) name
+                     * @param _podName Pod (instance) name
+                     * 
                      */
                     void SetPodName(const std::string& _podName);
 
                     /**
                      * 判断参数 PodName 是否已赋值
                      * @return PodName 是否已赋值
+                     * 
                      */
                     bool PodNameHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Whether the system monitoring rule name exists
                      * @return RuleExist Whether the system monitoring rule name exists
+                     * 
                      */
                     bool GetRuleExist() const;
 
                     /**
                      * 设置Whether the system monitoring rule name exists
-                     * @param RuleExist Whether the system monitoring rule name exists
+                     * @param _ruleExist Whether the system monitoring rule name exists
+                     * 
                      */
                     void SetRuleExist(const bool& _ruleExist);
 
                     /**
                      * 判断参数 RuleExist 是否已赋值
                      * @return RuleExist 是否已赋值
+                     * 
                      */
                     bool RuleExistHasBeenSet() const;
 
                     /**
                      * 获取Number of events
                      * @return EventCount Number of events
+                     * 
                      */
                     int64_t GetEventCount() const;
 
                     /**
                      * 设置Number of events
-                     * @param EventCount Number of events
+                     * @param _eventCount Number of events
+                     * 
                      */
                     void SetEventCount(const int64_t& _eventCount);
 
                     /**
                      * 判断参数 EventCount 是否已赋值
                      * @return EventCount 是否已赋值
+                     * 
                      */
                     bool EventCountHasBeenSet() const;
 
                     /**
                      * 获取Last generation time
                      * @return LatestFoundTime Last generation time
+                     * 
                      */
                     std::string GetLatestFoundTime() const;
 
                     /**
                      * 设置Last generation time
-                     * @param LatestFoundTime Last generation time
+                     * @param _latestFoundTime Last generation time
+                     * 
                      */
                     void SetLatestFoundTime(const std::string& _latestFoundTime);
 
                     /**
                      * 判断参数 LatestFoundTime 是否已赋值
                      * @return LatestFoundTime 是否已赋值
+                     * 
                      */
                     bool LatestFoundTimeHasBeenSet() const;
 
@@ -397,6 +451,7 @@ namespace TencentCloud
 `ISOLATE_FAILED`: 	Isolation failed.
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
+                     * 
                      */
                     std::string GetContainerNetStatus() const;
 
@@ -408,19 +463,21 @@ namespace TencentCloud
 `ISOLATE_FAILED`: 	Isolation failed.
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
-                     * @param ContainerNetStatus Network status
+                     * @param _containerNetStatus Network status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
 `ISOLATING`: 		Isolating.
 `ISOLATE_FAILED`: 	Isolation failed.
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
+                     * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
 
                     /**
                      * 判断参数 ContainerNetStatus 是否已赋值
                      * @return ContainerNetStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetStatusHasBeenSet() const;
 
@@ -441,6 +498,7 @@ namespace TencentCloud
 "SHARED_HOST"         // The container shares the network with the server.
 "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 "UNKNOW"              // The reason is unknown.
+                     * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
@@ -453,7 +511,7 @@ namespace TencentCloud
 "SHARED_HOST"         // The container shares the network with the server.
 "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 "UNKNOW"              // The reason is unknown.
-                     * @param ContainerNetSubStatus Sub-status of the container
+                     * @param _containerNetSubStatus Sub-status of the container
 "AGENT_OFFLINE"       // The agent is offline.
 "NODE_DESTROYED"      // The node is terminated.
 "CONTAINER_EXITED"    // The container exited.
@@ -461,30 +519,35 @@ namespace TencentCloud
 "SHARED_HOST"         // The container shares the network with the server.
 "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 "UNKNOW"              // The reason is unknown.
+                     * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
 
                     /**
                      * 判断参数 ContainerNetSubStatus 是否已赋值
                      * @return ContainerNetSubStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
                      * 获取Container isolation operation source
                      * @return ContainerIsolateOperationSrc Container isolation operation source
+                     * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
                      * 设置Container isolation operation source
-                     * @param ContainerIsolateOperationSrc Container isolation operation source
+                     * @param _containerIsolateOperationSrc Container isolation operation source
+                     * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
 
                     /**
                      * 判断参数 ContainerIsolateOperationSrc 是否已赋值
                      * @return ContainerIsolateOperationSrc 是否已赋值
+                     * 
                      */
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
@@ -505,6 +568,7 @@ namespace TencentCloud
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+                     * 
                      */
                     std::string GetContainerStatus() const;
 
@@ -517,7 +581,7 @@ namespace TencentCloud
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
-                     * @param ContainerStatus Container status
+                     * @param _containerStatus Container status
 `RUNNING`: Running.
 `PAUSED`: Paused.
 `STOPPED`: Stopped.
@@ -525,12 +589,14 @@ namespace TencentCloud
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+                     * 
                      */
                     void SetContainerStatus(const std::string& _containerStatus);
 
                     /**
                      * 判断参数 ContainerStatus 是否已赋值
                      * @return ContainerStatus 是否已赋值
+                     * 
                      */
                     bool ContainerStatusHasBeenSet() const;
 

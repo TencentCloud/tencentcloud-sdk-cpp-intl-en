@@ -84,6 +84,7 @@ subnet-id String      Required: no      (Filter) Filter by instance subnet ID.
 
 If the `Filters` parameter is not specified, the information of all relevant instances will be queried.
 Each request can contain up to 5 `Filter.Values`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -108,7 +109,7 @@ subnet-id String      Required: no      (Filter) Filter by instance subnet ID.
 
 If the `Filters` parameter is not specified, the information of all relevant instances will be queried.
 Each request can contain up to 5 `Filter.Values`.
-                     * @param Filters Filter.
+                     * @param _filters Filter.
 zone      String      Required: no     (Filter) Filter by AZ abbreviation.
 zone-name      String      Required: no     (Filter) Filter by AZ name. Fuzzy match is supported.
 module-id      String      Required: no     (Filter) Filter by module ID.
@@ -128,48 +129,56 @@ subnet-id String      Required: no      (Filter) Filter by instance subnet ID.
 
 If the `Filters` parameter is not specified, the information of all relevant instances will be queried.
 Each request can contain up to 5 `Filter.Values`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20 (if the number of query results is greater than or equal to 20). Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20 (if the number of query results is greater than or equal to 20). Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20 (if the number of query results is greater than or equal to 20). Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20 (if the number of query results is greater than or equal to 20). Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20 (if the number of query results is greater than or equal to 20). Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -182,6 +191,7 @@ If this parameter is not specified, instances will be sorted by creation time by
 timestamp: sort by instance creation time.
 Note: you can sort only by creation time currently. More sort criteria may be supported in the future.
 If this parameter is not specified, instances will be sorted by creation time by default.
+                     * 
                      */
                     std::string GetOrderByField() const;
 
@@ -190,34 +200,39 @@ If this parameter is not specified, instances will be sorted by creation time by
 timestamp: sort by instance creation time.
 Note: you can sort only by creation time currently. More sort criteria may be supported in the future.
 If this parameter is not specified, instances will be sorted by creation time by default.
-                     * @param OrderByField Specified sort by field. Currently, valid values are as follows:
+                     * @param _orderByField Specified sort by field. Currently, valid values are as follows:
 timestamp: sort by instance creation time.
 Note: you can sort only by creation time currently. More sort criteria may be supported in the future.
 If this parameter is not specified, instances will be sorted by creation time by default.
+                     * 
                      */
                     void SetOrderByField(const std::string& _orderByField);
 
                     /**
                      * 判断参数 OrderByField 是否已赋值
                      * @return OrderByField 是否已赋值
+                     * 
                      */
                     bool OrderByFieldHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
                      * @return OrderDirection Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
+                     * 
                      */
                     int64_t GetOrderDirection() const;
 
                     /**
                      * 设置Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
-                     * @param OrderDirection Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
+                     * @param _orderDirection Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
+                     * 
                      */
                     void SetOrderDirection(const int64_t& _orderDirection);
 
                     /**
                      * 判断参数 OrderDirection 是否已赋值
                      * @return OrderDirection 是否已赋值
+                     * 
                      */
                     bool OrderDirectionHasBeenSet() const;
 

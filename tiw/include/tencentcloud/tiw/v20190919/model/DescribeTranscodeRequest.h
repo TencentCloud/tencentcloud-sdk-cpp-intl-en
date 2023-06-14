@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the customer
                      * @return SdkAppId SdkAppId of the customer
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the customer
-                     * @param SdkAppId SdkAppId of the customer
+                     * @param _sdkAppId SdkAppId of the customer
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the document transcoding task
                      * @return TaskId Unique ID of the document transcoding task
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Unique ID of the document transcoding task
-                     * @param TaskId Unique ID of the document transcoding task
+                     * @param _taskId Unique ID of the document transcoding task
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

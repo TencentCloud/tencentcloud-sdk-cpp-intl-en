@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible instances
                      * @return TotalCount Number of eligible instances
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Items List of rule template details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AuditRuleTemplateInfo> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

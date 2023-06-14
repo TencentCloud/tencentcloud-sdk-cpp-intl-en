@@ -53,6 +53,7 @@ namespace TencentCloud
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     std::vector<std::string> GetAssetTypeSet() const;
 
@@ -62,17 +63,19 @@ namespace TencentCloud
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
-                     * @param AssetTypeSet List of asset types
+                     * @param _assetTypeSet List of asset types
 `ASSET_CONTAINER`: Container.
 `ASSET_IMAGE`: Image.
 `ASSET_HOST`: Server.
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     void SetAssetTypeSet(const std::vector<std::string>& _assetTypeSet);
 
                     /**
                      * 判断参数 AssetTypeSet 是否已赋值
                      * @return AssetTypeSet 是否已赋值
+                     * 
                      */
                     bool AssetTypeSetHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Media file composing task ID, which can be used to query the status of composing task (with task type being `MakeMedia`).
                      * @return TaskId Media file composing task ID, which can be used to query the status of composing task (with task type being `MakeMedia`).
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Client time in RFC 3339 format
                      * @return StartTime Client time in RFC 3339 format
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Client time in RFC 3339 format
-                     * @param StartTime Client time in RFC 3339 format
+                     * @param _startTime Client time in RFC 3339 format
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Client time in RFC 3339 format
                      * @return EndTime Client time in RFC 3339 format
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Client time in RFC 3339 format
-                     * @param EndTime Client time in RFC 3339 format
+                     * @param _endTime Client time in RFC 3339 format
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Time series-type access traffic metric
                      * @return MetricName Time series-type access traffic metric
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Time series-type access traffic metric
-                     * @param MetricName Time series-type access traffic metric
+                     * @param _metricName Time series-type access traffic metric
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Top N. 0 indicates to return the full data.
                      * @return Limit Top N. 0 indicates to return the full data.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Top N. 0 indicates to return the full data.
-                     * @param Limit Top N. 0 indicates to return the full data.
+                     * @param _limit Top N. 0 indicates to return the full data.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Time interval. Valid values: {min, 5min, hour, day, week}
                      * @return Interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Time interval. Valid values: {min, 5min, hour, day, week}
-                     * @param Interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * @param _interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Array of `ZoneId` values
                      * @return ZoneIds Array of `ZoneId` values
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置Array of `ZoneId` values
-                     * @param ZoneIds Array of `ZoneId` values
+                     * @param _zoneIds Array of `ZoneId` values
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取Filter
                      * @return Filters Filter
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter
-                     * @param Filters Filter
+                     * @param _filters Filter
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

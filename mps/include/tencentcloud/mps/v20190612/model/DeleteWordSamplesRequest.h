@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Keyword. Array length limit: 100 words.
                      * @return Keywords Keyword. Array length limit: 100 words.
+                     * 
                      */
                     std::vector<std::string> GetKeywords() const;
 
                     /**
                      * 设置Keyword. Array length limit: 100 words.
-                     * @param Keywords Keyword. Array length limit: 100 words.
+                     * @param _keywords Keyword. Array length limit: 100 words.
+                     * 
                      */
                     void SetKeywords(const std::vector<std::string>& _keywords);
 
                     /**
                      * 判断参数 Keywords 是否已赋值
                      * @return Keywords 是否已赋值
+                     * 
                      */
                     bool KeywordsHasBeenSet() const;
 

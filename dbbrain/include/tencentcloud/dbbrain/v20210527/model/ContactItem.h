@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Recipient ID.
                      * @return Id Recipient ID.
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Recipient ID.
-                     * @param Id Recipient ID.
+                     * @param _id Recipient ID.
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Recipient name.
                      * @return Name Recipient name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Recipient name.
-                     * @param Name Recipient name.
+                     * @param _name Recipient name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Recipient email.
                      * @return Mail Recipient email.
+                     * 
                      */
                     std::string GetMail() const;
 
                     /**
                      * 设置Recipient email.
-                     * @param Mail Recipient email.
+                     * @param _mail Recipient email.
+                     * 
                      */
                     void SetMail(const std::string& _mail);
 
                     /**
                      * 判断参数 Mail 是否已赋值
                      * @return Mail 是否已赋值
+                     * 
                      */
                     bool MailHasBeenSet() const;
 

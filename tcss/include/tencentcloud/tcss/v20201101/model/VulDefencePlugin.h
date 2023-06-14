@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取PID of the Java process
                      * @return PID PID of the Java process
+                     * 
                      */
                     int64_t GetPID() const;
 
                     /**
                      * 设置PID of the Java process
-                     * @param PID PID of the Java process
+                     * @param _pID PID of the Java process
+                     * 
                      */
                     void SetPID(const int64_t& _pID);
 
                     /**
                      * 判断参数 PID 是否已赋值
                      * @return PID 是否已赋值
+                     * 
                      */
                     bool PIDHasBeenSet() const;
 
                     /**
                      * 获取Main class name of the process
                      * @return MainClass Main class name of the process
+                     * 
                      */
                     std::string GetMainClass() const;
 
                     /**
                      * 设置Main class name of the process
-                     * @param MainClass Main class name of the process
+                     * @param _mainClass Main class name of the process
+                     * 
                      */
                     void SetMainClass(const std::string& _mainClass);
 
                     /**
                      * 判断参数 MainClass 是否已赋值
                      * @return MainClass 是否已赋值
+                     * 
                      */
                     bool MainClassHasBeenSet() const;
 
                     /**
                      * 获取Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
                      * @return Status Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
-                     * @param Status Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+                     * @param _status Plugin status. Valid values: `INJECTING` (injecting); `SUCCESS` (injected successfully); `FAIL` (injection failed); `TIMEOUT` (plugin timed out); `QUIT` (plugin exited).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Error log
                      * @return ErrorLog Error log
+                     * 
                      */
                     std::string GetErrorLog() const;
 
                     /**
                      * 设置Error log
-                     * @param ErrorLog Error log
+                     * @param _errorLog Error log
+                     * 
                      */
                     void SetErrorLog(const std::string& _errorLog);
 
                     /**
                      * 判断参数 ErrorLog 是否已赋值
                      * @return ErrorLog 是否已赋值
+                     * 
                      */
                     bool ErrorLogHasBeenSet() const;
 

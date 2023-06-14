@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Invocation request ID
                      * @return InvokeRequestId Invocation request ID
+                     * 
                      */
                     std::string GetInvokeRequestId() const;
 
                     /**
                      * 设置Invocation request ID
-                     * @param InvokeRequestId Invocation request ID
+                     * @param _invokeRequestId Invocation request ID
+                     * 
                      */
                     void SetInvokeRequestId(const std::string& _invokeRequestId);
 
                     /**
                      * 判断参数 InvokeRequestId 是否已赋值
                      * @return InvokeRequestId 是否已赋值
+                     * 
                      */
                     bool InvokeRequestIdHasBeenSet() const;
 
                     /**
                      * 获取Invocation type
                      * @return InvokeType Invocation type
+                     * 
                      */
                     std::string GetInvokeType() const;
 
                     /**
                      * 设置Invocation type
-                     * @param InvokeType Invocation type
+                     * @param _invokeType Invocation type
+                     * 
                      */
                     void SetInvokeType(const std::string& _invokeType);
 
                     /**
                      * 判断参数 InvokeType 是否已赋值
                      * @return InvokeType 是否已赋值
+                     * 
                      */
                     bool InvokeTypeHasBeenSet() const;
 
                     /**
                      * 获取Function version
                      * @return Qualifier Function version
+                     * 
                      */
                     std::string GetQualifier() const;
 
                     /**
                      * 设置Function version
-                     * @param Qualifier Function version
+                     * @param _qualifier Function version
+                     * 
                      */
                     void SetQualifier(const std::string& _qualifier);
 
                     /**
                      * 判断参数 Qualifier 是否已赋值
                      * @return Qualifier 是否已赋值
+                     * 
                      */
                     bool QualifierHasBeenSet() const;
 
                     /**
                      * 获取Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
                      * @return Status Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
-                     * @param Status Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
+                     * @param _status Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
                      * @return StartTime Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
-                     * @param StartTime Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
+                     * @param _startTime Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
                      * @return EndTime Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
-                     * @param EndTime Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
+                     * @param _endTime Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

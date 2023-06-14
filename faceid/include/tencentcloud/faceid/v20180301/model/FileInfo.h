@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The URL for downloading the file
                      * @return Url The URL for downloading the file
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The URL for downloading the file
-                     * @param Url The URL for downloading the file
+                     * @param _url The URL for downloading the file
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取The 32-bit MD5 checksum of the file
                      * @return MD5 The 32-bit MD5 checksum of the file
+                     * 
                      */
                     std::string GetMD5() const;
 
                     /**
                      * 设置The 32-bit MD5 checksum of the file
-                     * @param MD5 The 32-bit MD5 checksum of the file
+                     * @param _mD5 The 32-bit MD5 checksum of the file
+                     * 
                      */
                     void SetMD5(const std::string& _mD5);
 
                     /**
                      * 判断参数 MD5 是否已赋值
                      * @return MD5 是否已赋值
+                     * 
                      */
                     bool MD5HasBeenSet() const;
 
                     /**
                      * 获取The file size
                      * @return Size The file size
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置The file size
-                     * @param Size The file size
+                     * @param _size The file size
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 

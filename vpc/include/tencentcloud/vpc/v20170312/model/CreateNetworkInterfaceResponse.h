@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取ENI instance.
                      * @return NetworkInterface ENI instance.
+                     * 
                      */
                     NetworkInterface GetNetworkInterface() const;
 
                     /**
                      * 判断参数 NetworkInterface 是否已赋值
                      * @return NetworkInterface 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceHasBeenSet() const;
 

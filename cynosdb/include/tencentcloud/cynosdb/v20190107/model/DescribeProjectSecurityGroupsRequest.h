@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Maximum entries returned per page
                      * @return Limit Maximum entries returned per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum entries returned per page
-                     * @param Limit Maximum entries returned per page
+                     * @param _limit Maximum entries returned per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Search by keyword
                      * @return SearchKey Search by keyword
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Search by keyword
-                     * @param SearchKey Search by keyword
+                     * @param _searchKey Search by keyword
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 

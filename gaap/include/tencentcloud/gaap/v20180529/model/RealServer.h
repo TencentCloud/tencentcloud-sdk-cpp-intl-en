@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Origin server IP or domain name
                      * @return RealServerIP Origin server IP or domain name
+                     * 
                      */
                     std::string GetRealServerIP() const;
 
                     /**
                      * 设置Origin server IP or domain name
-                     * @param RealServerIP Origin server IP or domain name
+                     * @param _realServerIP Origin server IP or domain name
+                     * 
                      */
                     void SetRealServerIP(const std::string& _realServerIP);
 
                     /**
                      * 判断参数 RealServerIP 是否已赋值
                      * @return RealServerIP 是否已赋值
+                     * 
                      */
                     bool RealServerIPHasBeenSet() const;
 
                     /**
                      * 获取Origin server ID
                      * @return RealServerId Origin server ID
+                     * 
                      */
                     std::string GetRealServerId() const;
 
                     /**
                      * 设置Origin server ID
-                     * @param RealServerId Origin server ID
+                     * @param _realServerId Origin server ID
+                     * 
                      */
                     void SetRealServerId(const std::string& _realServerId);
 
                     /**
                      * 判断参数 RealServerId 是否已赋值
                      * @return RealServerId 是否已赋值
+                     * 
                      */
                     bool RealServerIdHasBeenSet() const;
 
                     /**
                      * 获取Origin server name
                      * @return RealServerName Origin server name
+                     * 
                      */
                     std::string GetRealServerName() const;
 
                     /**
                      * 设置Origin server name
-                     * @param RealServerName Origin server name
+                     * @param _realServerName Origin server name
+                     * 
                      */
                     void SetRealServerName(const std::string& _realServerName);
 
                     /**
                      * 判断参数 RealServerName 是否已赋值
                      * @return RealServerName 是否已赋值
+                     * 
                      */
                     bool RealServerNameHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
                      * @return InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     * 
                      */
                     int64_t GetInBanBlacklist() const;
 
                     /**
                      * 设置Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
-                     * @param InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     * @param _inBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     * 
                      */
                     void SetInBanBlacklist(const int64_t& _inBanBlacklist);
 
                     /**
                      * 判断参数 InBanBlacklist 是否已赋值
                      * @return InBanBlacklist 是否已赋值
+                     * 
                      */
                     bool InBanBlacklistHasBeenSet() const;
 

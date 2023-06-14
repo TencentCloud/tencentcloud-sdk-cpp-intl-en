@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 20 instances can be specified at the same time.
                      * @return InstanceIds IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 20 instances can be specified at the same time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 20 instances can be specified at the same time.
-                     * @param InstanceIds IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 20 instances can be specified at the same time.
+                     * @param _instanceIds IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 20 instances can be specified at the same time.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
@@ -69,6 +72,7 @@ Default value: `TRUE`.
 `TRUE`: Return the mounted data disks at the same time 
 `FALSE`: Do not return the mounted data disks at the same time 
 Default value: `TRUE`.
+                     * 
                      */
                     bool GetIsolateDataDisk() const;
 
@@ -77,16 +81,18 @@ Default value: `TRUE`.
 `TRUE`: Return the mounted data disks at the same time 
 `FALSE`: Do not return the mounted data disks at the same time 
 Default value: `TRUE`.
-                     * @param IsolateDataDisk Whether to return data disks mounted on the instance together with the instance. Valid values: 
+                     * @param _isolateDataDisk Whether to return data disks mounted on the instance together with the instance. Valid values: 
 `TRUE`: Return the mounted data disks at the same time 
 `FALSE`: Do not return the mounted data disks at the same time 
 Default value: `TRUE`.
+                     * 
                      */
                     void SetIsolateDataDisk(const bool& _isolateDataDisk);
 
                     /**
                      * 判断参数 IsolateDataDisk 是否已赋值
                      * @return IsolateDataDisk 是否已赋值
+                     * 
                      */
                     bool IsolateDataDiskHasBeenSet() const;
 

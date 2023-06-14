@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Source addresses.
                      * @return UserHost Source addresses.
+                     * 
                      */
                     std::string GetUserHost() const;
 
                     /**
                      * 设置Source addresses.
-                     * @param UserHost Source addresses.
+                     * @param _userHost Source addresses.
+                     * 
                      */
                     void SetUserHost(const std::string& _userHost);
 
                     /**
                      * 判断参数 UserHost 是否已赋值
                      * @return UserHost 是否已赋值
+                     * 
                      */
                     bool UserHostHasBeenSet() const;
 
                     /**
                      * 获取Proportion (in %) of slow logs from this source address to the total number of slow logs.
                      * @return Ratio Proportion (in %) of slow logs from this source address to the total number of slow logs.
+                     * 
                      */
                     double GetRatio() const;
 
                     /**
                      * 设置Proportion (in %) of slow logs from this source address to the total number of slow logs.
-                     * @param Ratio Proportion (in %) of slow logs from this source address to the total number of slow logs.
+                     * @param _ratio Proportion (in %) of slow logs from this source address to the total number of slow logs.
+                     * 
                      */
                     void SetRatio(const double& _ratio);
 
                     /**
                      * 判断参数 Ratio 是否已赋值
                      * @return Ratio 是否已赋值
+                     * 
                      */
                     bool RatioHasBeenSet() const;
 
                     /**
                      * 获取Number of slow logs from this source address.
                      * @return Count Number of slow logs from this source address.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of slow logs from this source address.
-                     * @param Count Number of slow logs from this source address.
+                     * @param _count Number of slow logs from this source address.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

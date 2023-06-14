@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Compute environment ID
                      * @return EnvId Compute environment ID
+                     * 
                      */
                     std::string GetEnvId() const;
 
                     /**
                      * 设置Compute environment ID
-                     * @param EnvId Compute environment ID
+                     * @param _envId Compute environment ID
+                     * 
                      */
                     void SetEnvId(const std::string& _envId);
 
                     /**
                      * 判断参数 EnvId 是否已赋值
                      * @return EnvId 是否已赋值
+                     * 
                      */
                     bool EnvIdHasBeenSet() const;
 
                     /**
                      * 获取Number of desired compute nodes
                      * @return DesiredComputeNodeCount Number of desired compute nodes
+                     * 
                      */
                     int64_t GetDesiredComputeNodeCount() const;
 
                     /**
                      * 设置Number of desired compute nodes
-                     * @param DesiredComputeNodeCount Number of desired compute nodes
+                     * @param _desiredComputeNodeCount Number of desired compute nodes
+                     * 
                      */
                     void SetDesiredComputeNodeCount(const int64_t& _desiredComputeNodeCount);
 
                     /**
                      * 判断参数 DesiredComputeNodeCount 是否已赋值
                      * @return DesiredComputeNodeCount 是否已赋值
+                     * 
                      */
                     bool DesiredComputeNodeCountHasBeenSet() const;
 
                     /**
                      * 获取Compute environment name
                      * @return EnvName Compute environment name
+                     * 
                      */
                     std::string GetEnvName() const;
 
                     /**
                      * 设置Compute environment name
-                     * @param EnvName Compute environment name
+                     * @param _envName Compute environment name
+                     * 
                      */
                     void SetEnvName(const std::string& _envName);
 
                     /**
                      * 判断参数 EnvName 是否已赋值
                      * @return EnvName 是否已赋值
+                     * 
                      */
                     bool EnvNameHasBeenSet() const;
 
                     /**
                      * 获取Compute environment description
                      * @return EnvDescription Compute environment description
+                     * 
                      */
                     std::string GetEnvDescription() const;
 
                     /**
                      * 设置Compute environment description
-                     * @param EnvDescription Compute environment description
+                     * @param _envDescription Compute environment description
+                     * 
                      */
                     void SetEnvDescription(const std::string& _envDescription);
 
                     /**
                      * 判断参数 EnvDescription 是否已赋值
                      * @return EnvDescription 是否已赋值
+                     * 
                      */
                     bool EnvDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Compute environment attributes
                      * @return EnvData Compute environment attributes
+                     * 
                      */
                     ComputeEnvData GetEnvData() const;
 
                     /**
                      * 设置Compute environment attributes
-                     * @param EnvData Compute environment attributes
+                     * @param _envData Compute environment attributes
+                     * 
                      */
                     void SetEnvData(const ComputeEnvData& _envData);
 
                     /**
                      * 判断参数 EnvData 是否已赋值
                      * @return EnvData 是否已赋值
+                     * 
                      */
                     bool EnvDataHasBeenSet() const;
 

@@ -47,108 +47,126 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Node pool ID
                      * @return NodePoolId Node pool ID
+                     * 
                      */
                     std::string GetNodePoolId() const;
 
                     /**
                      * 设置Node pool ID
-                     * @param NodePoolId Node pool ID
+                     * @param _nodePoolId Node pool ID
+                     * 
                      */
                     void SetNodePoolId(const std::string& _nodePoolId);
 
                     /**
                      * 判断参数 NodePoolId 是否已赋值
                      * @return NodePoolId 是否已赋值
+                     * 
                      */
                     bool NodePoolIdHasBeenSet() const;
 
                     /**
                      * 获取Node pool name
                      * @return Name Node pool name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node pool name
-                     * @param Name Node pool name
+                     * @param _name Node pool name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Virtual node labels
                      * @return Labels Virtual node labels
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Virtual node labels
-                     * @param Labels Virtual node labels
+                     * @param _labels Virtual node labels
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
                     /**
                      * 获取Virtual node taint
                      * @return Taints Virtual node taint
+                     * 
                      */
                     std::vector<Taint> GetTaints() const;
 
                     /**
                      * 设置Virtual node taint
-                     * @param Taints Virtual node taint
+                     * @param _taints Virtual node taint
+                     * 
                      */
                     void SetTaints(const std::vector<Taint>& _taints);
 
                     /**
                      * 判断参数 Taints 是否已赋值
                      * @return Taints 是否已赋值
+                     * 
                      */
                     bool TaintsHasBeenSet() const;
 
                     /**
                      * 获取Setting of deletion protection
                      * @return DeletionProtection Setting of deletion protection
+                     * 
                      */
                     bool GetDeletionProtection() const;
 
                     /**
                      * 设置Setting of deletion protection
-                     * @param DeletionProtection Setting of deletion protection
+                     * @param _deletionProtection Setting of deletion protection
+                     * 
                      */
                     void SetDeletionProtection(const bool& _deletionProtection);
 
                     /**
                      * 判断参数 DeletionProtection 是否已赋值
                      * @return DeletionProtection 是否已赋值
+                     * 
                      */
                     bool DeletionProtectionHasBeenSet() const;
 

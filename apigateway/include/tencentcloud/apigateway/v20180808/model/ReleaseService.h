@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ReleaseDesc Release remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReleaseDesc() const;
 
                     /**
                      * 设置Release remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReleaseDesc Release remarks.
+                     * @param _releaseDesc Release remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReleaseDesc(const std::string& _releaseDesc);
 
                     /**
                      * 判断参数 ReleaseDesc 是否已赋值
                      * @return ReleaseDesc 是否已赋值
+                     * 
                      */
                     bool ReleaseDescHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ReleaseVersion Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReleaseVersion() const;
 
                     /**
                      * 设置Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReleaseVersion Published version ID.
+                     * @param _releaseVersion Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReleaseVersion(const std::string& _releaseVersion);
 
                     /**
                      * 判断参数 ReleaseVersion 是否已赋值
                      * @return ReleaseVersion 是否已赋值
+                     * 
                      */
                     bool ReleaseVersionHasBeenSet() const;
 

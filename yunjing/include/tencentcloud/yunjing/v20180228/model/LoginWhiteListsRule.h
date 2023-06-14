@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Whitelisted location
                      * @return Places Whitelisted location
+                     * 
                      */
                     std::vector<Place> GetPlaces() const;
 
                     /**
                      * 设置Whitelisted location
-                     * @param Places Whitelisted location
+                     * @param _places Whitelisted location
+                     * 
                      */
                     void SetPlaces(const std::vector<Place>& _places);
 
                     /**
                      * 判断参数 Places 是否已赋值
                      * @return Places 是否已赋值
+                     * 
                      */
                     bool PlacesHasBeenSet() const;
 
                     /**
                      * 获取Whitelisted IPs (separated by commas). This parameter can be an IP range.
                      * @return SrcIp Whitelisted IPs (separated by commas). This parameter can be an IP range.
+                     * 
                      */
                     std::string GetSrcIp() const;
 
                     /**
                      * 设置Whitelisted IPs (separated by commas). This parameter can be an IP range.
-                     * @param SrcIp Whitelisted IPs (separated by commas). This parameter can be an IP range.
+                     * @param _srcIp Whitelisted IPs (separated by commas). This parameter can be an IP range.
+                     * 
                      */
                     void SetSrcIp(const std::string& _srcIp);
 
                     /**
                      * 判断参数 SrcIp 是否已赋值
                      * @return SrcIp 是否已赋值
+                     * 
                      */
                     bool SrcIpHasBeenSet() const;
 
                     /**
                      * 获取Whitelisted usernames (separated by commas)
                      * @return UserName Whitelisted usernames (separated by commas)
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Whitelisted usernames (separated by commas)
-                     * @param UserName Whitelisted usernames (separated by commas)
+                     * @param _userName Whitelisted usernames (separated by commas)
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Whether this rule is applied to all servers under the current account
                      * @return IsGlobal Whether this rule is applied to all servers under the current account
+                     * 
                      */
                     bool GetIsGlobal() const;
 
                     /**
                      * 设置Whether this rule is applied to all servers under the current account
-                     * @param IsGlobal Whether this rule is applied to all servers under the current account
+                     * @param _isGlobal Whether this rule is applied to all servers under the current account
+                     * 
                      */
                     void SetIsGlobal(const bool& _isGlobal);
 
                     /**
                      * 判断参数 IsGlobal 是否已赋值
                      * @return IsGlobal 是否已赋值
+                     * 
                      */
                     bool IsGlobalHasBeenSet() const;
 
                     /**
                      * 获取Server for which the allowlist takes effect
                      * @return HostIp Server for which the allowlist takes effect
+                     * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Server for which the allowlist takes effect
-                     * @param HostIp Server for which the allowlist takes effect
+                     * @param _hostIp Server for which the allowlist takes effect
+                     * 
                      */
                     void SetHostIp(const std::string& _hostIp);
 
                     /**
                      * 判断参数 HostIp 是否已赋值
                      * @return HostIp 是否已赋值
+                     * 
                      */
                     bool HostIpHasBeenSet() const;
 
                     /**
                      * 获取Rule ID, used for rule updating
                      * @return Id Rule ID, used for rule updating
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Rule ID, used for rule updating
-                     * @param Id Rule ID, used for rule updating
+                     * @param _id Rule ID, used for rule updating
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

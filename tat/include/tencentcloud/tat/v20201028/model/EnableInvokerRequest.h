@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the invoker to be enabled.
                      * @return InvokerId ID of the invoker to be enabled.
+                     * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
                      * 设置ID of the invoker to be enabled.
-                     * @param InvokerId ID of the invoker to be enabled.
+                     * @param _invokerId ID of the invoker to be enabled.
+                     * 
                      */
                     void SetInvokerId(const std::string& _invokerId);
 
                     /**
                      * 判断参数 InvokerId 是否已赋值
                      * @return InvokerId 是否已赋值
+                     * 
                      */
                     bool InvokerIdHasBeenSet() const;
 

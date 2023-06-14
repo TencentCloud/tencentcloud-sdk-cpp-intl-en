@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Total number of pending containers at risk
                      * @return RiskContainerEventCount Total number of pending containers at risk
+                     * 
                      */
                     int64_t GetRiskContainerEventCount() const;
 
                     /**
                      * 设置Total number of pending containers at risk
-                     * @param RiskContainerEventCount Total number of pending containers at risk
+                     * @param _riskContainerEventCount Total number of pending containers at risk
+                     * 
                      */
                     void SetRiskContainerEventCount(const int64_t& _riskContainerEventCount);
 
                     /**
                      * 判断参数 RiskContainerEventCount 是否已赋值
                      * @return RiskContainerEventCount 是否已赋值
+                     * 
                      */
                     bool RiskContainerEventCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of pending program privilege escalation events
                      * @return ProcessPrivilegeEventCount Total number of pending program privilege escalation events
+                     * 
                      */
                     int64_t GetProcessPrivilegeEventCount() const;
 
                     /**
                      * 设置Total number of pending program privilege escalation events
-                     * @param ProcessPrivilegeEventCount Total number of pending program privilege escalation events
+                     * @param _processPrivilegeEventCount Total number of pending program privilege escalation events
+                     * 
                      */
                     void SetProcessPrivilegeEventCount(const int64_t& _processPrivilegeEventCount);
 
                     /**
                      * 判断参数 ProcessPrivilegeEventCount 是否已赋值
                      * @return ProcessPrivilegeEventCount 是否已赋值
+                     * 
                      */
                     bool ProcessPrivilegeEventCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of pending container escape events
                      * @return ContainerEscapeEventCount Total number of pending container escape events
+                     * 
                      */
                     int64_t GetContainerEscapeEventCount() const;
 
                     /**
                      * 设置Total number of pending container escape events
-                     * @param ContainerEscapeEventCount Total number of pending container escape events
+                     * @param _containerEscapeEventCount Total number of pending container escape events
+                     * 
                      */
                     void SetContainerEscapeEventCount(const int64_t& _containerEscapeEventCount);
 
                     /**
                      * 判断参数 ContainerEscapeEventCount 是否已赋值
                      * @return ContainerEscapeEventCount 是否已赋值
+                     * 
                      */
                     bool ContainerEscapeEventCountHasBeenSet() const;
 
                     /**
                      * 获取Date
                      * @return Date Date
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Date
-                     * @param Date Date
+                     * @param _date Date
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 

@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取The output container format. Valid values: `mp4`, `flv`, `hls`.
                      * @return Container The output container format. Valid values: `mp4`, `flv`, `hls`.
+                     * 
                      */
                     std::string GetContainer() const;
 
                     /**
                      * 设置The output container format. Valid values: `mp4`, `flv`, `hls`.
-                     * @param Container The output container format. Valid values: `mp4`, `flv`, `hls`.
+                     * @param _container The output container format. Valid values: `mp4`, `flv`, `hls`.
+                     * 
                      */
                     void SetContainer(const std::string& _container);
 
                     /**
                      * 判断参数 Container 是否已赋值
                      * @return Container 是否已赋值
+                     * 
                      */
                     bool ContainerHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取The remaster template name.
                      * @return Name The remaster template name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The remaster template name.
-                     * @param Name The remaster template name.
+                     * @param _name The remaster template name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The template description.
                      * @return Comment The template description.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The template description.
-                     * @param Comment The template description.
+                     * @param _comment The template description.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
                     /**
                      * 获取The video remaster parameters.
                      * @return RebuildVideoInfo The video remaster parameters.
+                     * 
                      */
                     RebuildVideoInfo GetRebuildVideoInfo() const;
 
                     /**
                      * 设置The video remaster parameters.
-                     * @param RebuildVideoInfo The video remaster parameters.
+                     * @param _rebuildVideoInfo The video remaster parameters.
+                     * 
                      */
                     void SetRebuildVideoInfo(const RebuildVideoInfo& _rebuildVideoInfo);
 
                     /**
                      * 判断参数 RebuildVideoInfo 是否已赋值
                      * @return RebuildVideoInfo 是否已赋值
+                     * 
                      */
                     bool RebuildVideoInfoHasBeenSet() const;
 
                     /**
                      * 获取The audio remaster parameters.
                      * @return RebuildAudioInfo The audio remaster parameters.
+                     * 
                      */
                     RebuildAudioInfo GetRebuildAudioInfo() const;
 
                     /**
                      * 设置The audio remaster parameters.
-                     * @param RebuildAudioInfo The audio remaster parameters.
+                     * @param _rebuildAudioInfo The audio remaster parameters.
+                     * 
                      */
                     void SetRebuildAudioInfo(const RebuildAudioInfo& _rebuildAudioInfo);
 
                     /**
                      * 判断参数 RebuildAudioInfo 是否已赋值
                      * @return RebuildAudioInfo 是否已赋值
+                     * 
                      */
                     bool RebuildAudioInfoHasBeenSet() const;
 
                     /**
                      * 获取The output video parameters.
                      * @return TargetVideoInfo The output video parameters.
+                     * 
                      */
                     RebuildMediaTargetVideoStream GetTargetVideoInfo() const;
 
                     /**
                      * 设置The output video parameters.
-                     * @param TargetVideoInfo The output video parameters.
+                     * @param _targetVideoInfo The output video parameters.
+                     * 
                      */
                     void SetTargetVideoInfo(const RebuildMediaTargetVideoStream& _targetVideoInfo);
 
                     /**
                      * 判断参数 TargetVideoInfo 是否已赋值
                      * @return TargetVideoInfo 是否已赋值
+                     * 
                      */
                     bool TargetVideoInfoHasBeenSet() const;
 
                     /**
                      * 获取The output audio parameters.
                      * @return TargetAudioInfo The output audio parameters.
+                     * 
                      */
                     RebuildMediaTargetAudioStream GetTargetAudioInfo() const;
 
                     /**
                      * 设置The output audio parameters.
-                     * @param TargetAudioInfo The output audio parameters.
+                     * @param _targetAudioInfo The output audio parameters.
+                     * 
                      */
                     void SetTargetAudioInfo(const RebuildMediaTargetAudioStream& _targetAudioInfo);
 
                     /**
                      * 判断参数 TargetAudioInfo 是否已赋值
                      * @return TargetAudioInfo 是否已赋值
+                     * 
                      */
                     bool TargetAudioInfoHasBeenSet() const;
 
@@ -199,6 +223,7 @@ Default value: 0.
 <li>`0`: No</li>
 <li>`1`: Yes</li>
 Default value: 0.
+                     * 
                      */
                     int64_t GetRemoveVideo() const;
 
@@ -207,16 +232,18 @@ Default value: 0.
 <li>`0`: No</li>
 <li>`1`: Yes</li>
 Default value: 0.
-                     * @param RemoveVideo Whether to remove video data. Valid values:
+                     * @param _removeVideo Whether to remove video data. Valid values:
 <li>`0`: No</li>
 <li>`1`: Yes</li>
 Default value: 0.
+                     * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
 
                     /**
                      * 判断参数 RemoveVideo 是否已赋值
                      * @return RemoveVideo 是否已赋值
+                     * 
                      */
                     bool RemoveVideoHasBeenSet() const;
 
@@ -229,6 +256,7 @@ Default value: 0.
 <li>`0`: No</li>
 <li>`1`: Yes</li>
 Default value: 0.
+                     * 
                      */
                     std::string GetRemoveAudio() const;
 
@@ -237,16 +265,18 @@ Default value: 0.
 <li>`0`: No</li>
 <li>`1`: Yes</li>
 Default value: 0.
-                     * @param RemoveAudio Whether to remove audio data. Valid values:
+                     * @param _removeAudio Whether to remove audio data. Valid values:
 <li>`0`: No</li>
 <li>`1`: Yes</li>
 Default value: 0.
+                     * 
                      */
                     void SetRemoveAudio(const std::string& _removeAudio);
 
                     /**
                      * 判断参数 RemoveAudio 是否已赋值
                      * @return RemoveAudio 是否已赋值
+                     * 
                      */
                     bool RemoveAudioHasBeenSet() const;
 

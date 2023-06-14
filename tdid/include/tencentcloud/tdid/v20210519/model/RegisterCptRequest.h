@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The JSON data of the credential claim type (CPT).
                      * @return CptJson The JSON data of the credential claim type (CPT).
+                     * 
                      */
                     std::string GetCptJson() const;
 
                     /**
                      * 设置The JSON data of the credential claim type (CPT).
-                     * @param CptJson The JSON data of the credential claim type (CPT).
+                     * @param _cptJson The JSON data of the credential claim type (CPT).
+                     * 
                      */
                     void SetCptJson(const std::string& _cptJson);
 
                     /**
                      * 判断参数 CptJson 是否已赋值
                      * @return CptJson 是否已赋值
+                     * 
                      */
                     bool CptJsonHasBeenSet() const;
 
                     /**
                      * 获取If you do not specify this, the ID will auto increment.
                      * @return CptId If you do not specify this, the ID will auto increment.
+                     * 
                      */
                     uint64_t GetCptId() const;
 
                     /**
                      * 设置If you do not specify this, the ID will auto increment.
-                     * @param CptId If you do not specify this, the ID will auto increment.
+                     * @param _cptId If you do not specify this, the ID will auto increment.
+                     * 
                      */
                     void SetCptId(const uint64_t& _cptId);
 
                     /**
                      * 判断参数 CptId 是否已赋值
                      * @return CptId 是否已赋值
+                     * 
                      */
                     bool CptIdHasBeenSet() const;
 

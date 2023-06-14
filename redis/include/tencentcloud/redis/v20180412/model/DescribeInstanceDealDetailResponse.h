@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Order details
                      * @return DealDetails Order details
+                     * 
                      */
                     std::vector<TradeDealDetail> GetDealDetails() const;
 
                     /**
                      * 判断参数 DealDetails 是否已赋值
                      * @return DealDetails 是否已赋值
+                     * 
                      */
                     bool DealDetailsHasBeenSet() const;
 

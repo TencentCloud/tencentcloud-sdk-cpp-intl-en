@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Namespace name.
                      * @return EnvironmentId Namespace name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Namespace name.
-                     * @param EnvironmentId Namespace name.
+                     * @param _environmentId Namespace name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
                      * @return MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
+                     * 
                      */
                     uint64_t GetMsgTTL() const;
 
                     /**
                      * 设置Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
-                     * @param MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
+                     * @param _msgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
+                     * 
                      */
                     void SetMsgTTL(const uint64_t& _msgTTL);
 
                     /**
                      * 判断参数 MsgTTL 是否已赋值
                      * @return MsgTTL 是否已赋值
+                     * 
                      */
                     bool MsgTTLHasBeenSet() const;
 
                     /**
                      * 获取Remarks (up to 128 characters).
                      * @return Remark Remarks (up to 128 characters).
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks (up to 128 characters).
-                     * @param Remark Remarks (up to 128 characters).
+                     * @param _remark Remarks (up to 128 characters).
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Message retention policy
                      * @return RetentionPolicy Message retention policy
+                     * 
                      */
                     RetentionPolicy GetRetentionPolicy() const;
 
                     /**
                      * 设置Message retention policy
-                     * @param RetentionPolicy Message retention policy
+                     * @param _retentionPolicy Message retention policy
+                     * 
                      */
                     void SetRetentionPolicy(const RetentionPolicy& _retentionPolicy);
 
                     /**
                      * 判断参数 RetentionPolicy 是否已赋值
                      * @return RetentionPolicy 是否已赋值
+                     * 
                      */
                     bool RetentionPolicyHasBeenSet() const;
 

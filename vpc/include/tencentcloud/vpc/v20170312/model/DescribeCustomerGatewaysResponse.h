@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Customer gateway object list
                      * @return CustomerGatewaySet Customer gateway object list
+                     * 
                      */
                     std::vector<CustomerGateway> GetCustomerGatewaySet() const;
 
                     /**
                      * 判断参数 CustomerGatewaySet 是否已赋值
                      * @return CustomerGatewaySet 是否已赋值
+                     * 
                      */
                     bool CustomerGatewaySetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible instances
                      * @return TotalCount Number of eligible instances
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

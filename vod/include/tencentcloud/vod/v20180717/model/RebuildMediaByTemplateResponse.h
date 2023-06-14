@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the remaster task. You need to provide this ID to query the task status.
                      * @return TaskId The ID of the remaster task. You need to provide this ID to query the task status.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

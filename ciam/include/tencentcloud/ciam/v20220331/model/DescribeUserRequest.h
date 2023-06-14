@@ -48,90 +48,105 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取Pagination data
                      * @return Pageable Pagination data
+                     * 
                      */
                     Pageable GetPageable() const;
 
                     /**
                      * 设置Pagination data
-                     * @param Pageable Pagination data
+                     * @param _pageable Pagination data
+                     * 
                      */
                     void SetPageable(const Pageable& _pageable);
 
                     /**
                      * 判断参数 Pageable 是否已赋值
                      * @return Pageable 是否已赋值
+                     * 
                      */
                     bool PageableHasBeenSet() const;
 
                     /**
                      * 获取Query condition (`propertycode` and `propertykey`)
                      * @return Filters Query condition (`propertycode` and `propertykey`)
+                     * 
                      */
                     std::vector<QueryUserFilter> GetFilters() const;
 
                     /**
                      * 设置Query condition (`propertycode` and `propertykey`)
-                     * @param Filters Query condition (`propertycode` and `propertykey`)
+                     * @param _filters Query condition (`propertycode` and `propertykey`)
+                     * 
                      */
                     void SetFilters(const std::vector<QueryUserFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Whether the plaintext is returned
                      * @return Original Whether the plaintext is returned
+                     * 
                      */
                     bool GetOriginal() const;
 
                     /**
                      * 设置Whether the plaintext is returned
-                     * @param Original Whether the plaintext is returned
+                     * @param _original Whether the plaintext is returned
+                     * 
                      */
                     void SetOriginal(const bool& _original);
 
                     /**
                      * 判断参数 Original 是否已赋值
                      * @return Original 是否已赋值
+                     * 
                      */
                     bool OriginalHasBeenSet() const;
 
                     /**
                      * 获取Sorting configuration
                      * @return Sort Sorting configuration
+                     * 
                      */
                     Sort GetSort() const;
 
                     /**
                      * 设置Sorting configuration
-                     * @param Sort Sorting configuration
+                     * @param _sort Sorting configuration
+                     * 
                      */
                     void SetSort(const Sort& _sort);
 
                     /**
                      * 判断参数 Sort 是否已赋值
                      * @return Sort 是否已赋值
+                     * 
                      */
                     bool SortHasBeenSet() const;
 

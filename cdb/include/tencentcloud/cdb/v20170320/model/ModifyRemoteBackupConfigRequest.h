@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Remote data backup. Valid values:`off` (disable), `on` (enable).
                      * @return RemoteBackupSave Remote data backup. Valid values:`off` (disable), `on` (enable).
+                     * 
                      */
                     std::string GetRemoteBackupSave() const;
 
                     /**
                      * 设置Remote data backup. Valid values:`off` (disable), `on` (enable).
-                     * @param RemoteBackupSave Remote data backup. Valid values:`off` (disable), `on` (enable).
+                     * @param _remoteBackupSave Remote data backup. Valid values:`off` (disable), `on` (enable).
+                     * 
                      */
                     void SetRemoteBackupSave(const std::string& _remoteBackupSave);
 
                     /**
                      * 判断参数 RemoteBackupSave 是否已赋值
                      * @return RemoteBackupSave 是否已赋值
+                     * 
                      */
                     bool RemoteBackupSaveHasBeenSet() const;
 
                     /**
                      * 获取Remote log backup. Valid values: `off` (disable), `on` (enable). Only when the parameter `RemoteBackupSave` is `on`, the `RemoteBinlogSave` parameter can be set to `on`.
                      * @return RemoteBinlogSave Remote log backup. Valid values: `off` (disable), `on` (enable). Only when the parameter `RemoteBackupSave` is `on`, the `RemoteBinlogSave` parameter can be set to `on`.
+                     * 
                      */
                     std::string GetRemoteBinlogSave() const;
 
                     /**
                      * 设置Remote log backup. Valid values: `off` (disable), `on` (enable). Only when the parameter `RemoteBackupSave` is `on`, the `RemoteBinlogSave` parameter can be set to `on`.
-                     * @param RemoteBinlogSave Remote log backup. Valid values: `off` (disable), `on` (enable). Only when the parameter `RemoteBackupSave` is `on`, the `RemoteBinlogSave` parameter can be set to `on`.
+                     * @param _remoteBinlogSave Remote log backup. Valid values: `off` (disable), `on` (enable). Only when the parameter `RemoteBackupSave` is `on`, the `RemoteBinlogSave` parameter can be set to `on`.
+                     * 
                      */
                     void SetRemoteBinlogSave(const std::string& _remoteBinlogSave);
 
                     /**
                      * 判断参数 RemoteBinlogSave 是否已赋值
                      * @return RemoteBinlogSave 是否已赋值
+                     * 
                      */
                     bool RemoteBinlogSaveHasBeenSet() const;
 
                     /**
                      * 获取The custom backup region list
                      * @return RemoteRegion The custom backup region list
+                     * 
                      */
                     std::vector<std::string> GetRemoteRegion() const;
 
                     /**
                      * 设置The custom backup region list
-                     * @param RemoteRegion The custom backup region list
+                     * @param _remoteRegion The custom backup region list
+                     * 
                      */
                     void SetRemoteRegion(const std::vector<std::string>& _remoteRegion);
 
                     /**
                      * 判断参数 RemoteRegion 是否已赋值
                      * @return RemoteRegion 是否已赋值
+                     * 
                      */
                     bool RemoteRegionHasBeenSet() const;
 
                     /**
                      * 获取Remote backup retention period in days
                      * @return ExpireDays Remote backup retention period in days
+                     * 
                      */
                     int64_t GetExpireDays() const;
 
                     /**
                      * 设置Remote backup retention period in days
-                     * @param ExpireDays Remote backup retention period in days
+                     * @param _expireDays Remote backup retention period in days
+                     * 
                      */
                     void SetExpireDays(const int64_t& _expireDays);
 
                     /**
                      * 判断参数 ExpireDays 是否已赋值
                      * @return ExpireDays 是否已赋值
+                     * 
                      */
                     bool ExpireDaysHasBeenSet() const;
 

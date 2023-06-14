@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Database character set list
                      * @return DatabaseCharsets Database character set list
+                     * 
                      */
                     std::vector<std::string> GetDatabaseCharsets() const;
 
                     /**
                      * 判断参数 DatabaseCharsets 是否已赋值
                      * @return DatabaseCharsets 是否已赋值
+                     * 
                      */
                     bool DatabaseCharsetsHasBeenSet() const;
 

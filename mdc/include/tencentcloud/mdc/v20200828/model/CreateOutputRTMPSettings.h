@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The relay destination addresses. One or two addresses are allowed.
                      * @return Destinations The relay destination addresses. One or two addresses are allowed.
+                     * 
                      */
                     std::vector<CreateOutputRtmpSettingsDestinations> GetDestinations() const;
 
                     /**
                      * 设置The relay destination addresses. One or two addresses are allowed.
-                     * @param Destinations The relay destination addresses. One or two addresses are allowed.
+                     * @param _destinations The relay destination addresses. One or two addresses are allowed.
+                     * 
                      */
                     void SetDestinations(const std::vector<CreateOutputRtmpSettingsDestinations>& _destinations);
 
                     /**
                      * 判断参数 Destinations 是否已赋值
                      * @return Destinations 是否已赋值
+                     * 
                      */
                     bool DestinationsHasBeenSet() const;
 
                     /**
                      * 获取The RTMP chunk size. Value range: [4096, 40960].
                      * @return ChunkSize The RTMP chunk size. Value range: [4096, 40960].
+                     * 
                      */
                     int64_t GetChunkSize() const;
 
                     /**
                      * 设置The RTMP chunk size. Value range: [4096, 40960].
-                     * @param ChunkSize The RTMP chunk size. Value range: [4096, 40960].
+                     * @param _chunkSize The RTMP chunk size. Value range: [4096, 40960].
+                     * 
                      */
                     void SetChunkSize(const int64_t& _chunkSize);
 
                     /**
                      * 判断参数 ChunkSize 是否已赋值
                      * @return ChunkSize 是否已赋值
+                     * 
                      */
                     bool ChunkSizeHasBeenSet() const;
 

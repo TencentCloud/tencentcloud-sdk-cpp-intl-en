@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Constraint type, such as `enum` and `section`
                      * @return Type Constraint type, such as `enum` and `section`
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Constraint type, such as `enum` and `section`
-                     * @param Type Constraint type, such as `enum` and `section`
+                     * @param _type Constraint type, such as `enum` and `section`
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取List of valid values when constraint type is `enum`
                      * @return Enum List of valid values when constraint type is `enum`
+                     * 
                      */
                     std::string GetEnum() const;
 
                     /**
                      * 设置List of valid values when constraint type is `enum`
-                     * @param Enum List of valid values when constraint type is `enum`
+                     * @param _enum List of valid values when constraint type is `enum`
+                     * 
                      */
                     void SetEnum(const std::string& _enum);
 
                     /**
                      * 判断参数 Enum 是否已赋值
                      * @return Enum 是否已赋值
+                     * 
                      */
                     bool EnumHasBeenSet() const;
 
@@ -88,38 +94,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Range Range when constraint type is `section`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ConstraintRange GetRange() const;
 
                     /**
                      * 设置Range when constraint type is `section`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Range Range when constraint type is `section`
+                     * @param _range Range when constraint type is `section`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRange(const ConstraintRange& _range);
 
                     /**
                      * 判断参数 Range 是否已赋值
                      * @return Range 是否已赋值
+                     * 
                      */
                     bool RangeHasBeenSet() const;
 
                     /**
                      * 获取List of valid values when constraint type is `string`
                      * @return String List of valid values when constraint type is `string`
+                     * 
                      */
                     std::string GetString() const;
 
                     /**
                      * 设置List of valid values when constraint type is `string`
-                     * @param String List of valid values when constraint type is `string`
+                     * @param _string List of valid values when constraint type is `string`
+                     * 
                      */
                     void SetString(const std::string& _string);
 
                     /**
                      * 判断参数 String 是否已赋值
                      * @return String 是否已赋值
+                     * 
                      */
                     bool StringHasBeenSet() const;
 

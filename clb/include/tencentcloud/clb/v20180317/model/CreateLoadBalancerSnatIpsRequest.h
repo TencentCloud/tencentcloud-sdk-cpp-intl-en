@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a CLB instance, e.g., lb-12345678.
                      * @return LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置Unique ID of a CLB instance, e.g., lb-12345678.
-                     * @param LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * @param _loadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
                      * @return SnatIps Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+                     * 
                      */
                     std::vector<SnatIp> GetSnatIps() const;
 
                     /**
                      * 设置Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
-                     * @param SnatIps Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+                     * @param _snatIps Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+                     * 
                      */
                     void SetSnatIps(const std::vector<SnatIp>& _snatIps);
 
                     /**
                      * 判断参数 SnatIps 是否已赋值
                      * @return SnatIps 是否已赋值
+                     * 
                      */
                     bool SnatIpsHasBeenSet() const;
 
                     /**
                      * 获取Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
                      * @return Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
+                     * 
                      */
                     uint64_t GetNumber() const;
 
                     /**
                      * 设置Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
-                     * @param Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
+                     * @param _number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
+                     * 
                      */
                     void SetNumber(const uint64_t& _number);
 
                     /**
                      * 判断参数 Number 是否已赋值
                      * @return Number 是否已赋值
+                     * 
                      */
                     bool NumberHasBeenSet() const;
 

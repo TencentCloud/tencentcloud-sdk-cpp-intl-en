@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID
                      * @return ProxyUid Unique ID
+                     * 
                      */
                     std::string GetProxyUid() const;
 
                     /**
                      * 设置Unique ID
-                     * @param ProxyUid Unique ID
+                     * @param _proxyUid Unique ID
+                     * 
                      */
                     void SetProxyUid(const std::string& _proxyUid);
 
                     /**
                      * 判断参数 ProxyUid 是否已赋值
                      * @return ProxyUid 是否已赋值
+                     * 
                      */
                     bool ProxyUidHasBeenSet() const;
 
                     /**
                      * 获取Machine type
                      * @return MachineType Machine type
+                     * 
                      */
                     std::string GetMachineType() const;
 
                     /**
                      * 设置Machine type
-                     * @param MachineType Machine type
+                     * @param _machineType Machine type
+                     * 
                      */
                     void SetMachineType(const std::string& _machineType);
 
                     /**
                      * 判断参数 MachineType 是否已赋值
                      * @return MachineType 是否已赋值
+                     * 
                      */
                     bool MachineTypeHasBeenSet() const;
 
                     /**
                      * 获取The number of proxy resources to be assigned
                      * @return AvailableCount The number of proxy resources to be assigned
+                     * 
                      */
                     int64_t GetAvailableCount() const;
 
                     /**
                      * 设置The number of proxy resources to be assigned
-                     * @param AvailableCount The number of proxy resources to be assigned
+                     * @param _availableCount The number of proxy resources to be assigned
+                     * 
                      */
                     void SetAvailableCount(const int64_t& _availableCount);
 
                     /**
                      * 判断参数 AvailableCount 是否已赋值
                      * @return AvailableCount 是否已赋值
+                     * 
                      */
                     bool AvailableCountHasBeenSet() const;
 

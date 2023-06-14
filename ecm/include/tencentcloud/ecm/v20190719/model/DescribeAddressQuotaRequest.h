@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 

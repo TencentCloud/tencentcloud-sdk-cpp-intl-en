@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Records
                      * @return Records Records
+                     * 
                      */
                     std::vector<TemNamespaceInfo> GetRecords() const;
 
                     /**
                      * 设置Records
-                     * @param Records Records
+                     * @param _records Records
+                     * 
                      */
                     void SetRecords(const std::vector<TemNamespaceInfo>& _records);
 
                     /**
                      * 判断参数 Records 是否已赋值
                      * @return Records 是否已赋值
+                     * 
                      */
                     bool RecordsHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return Total Total number
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 设置Total number
-                     * @param Total Total number
+                     * @param _total Total number
+                     * 
                      */
                     void SetTotal(const int64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Number of items
                      * @return Size Number of items
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Number of items
-                     * @param Size Number of items
+                     * @param _size Number of items
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
                     /**
                      * 获取Number of pages
                      * @return Pages Number of pages
+                     * 
                      */
                     int64_t GetPages() const;
 
                     /**
                      * 设置Number of pages
-                     * @param Pages Number of pages
+                     * @param _pages Number of pages
+                     * 
                      */
                     void SetPages(const int64_t& _pages);
 
                     /**
                      * 判断参数 Pages 是否已赋值
                      * @return Pages 是否已赋值
+                     * 
                      */
                     bool PagesHasBeenSet() const;
 

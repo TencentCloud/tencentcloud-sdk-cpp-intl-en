@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取File system
                      * @return FileSystem File system
+                     * 
                      */
                     FileSystem GetFileSystem() const;
 
                     /**
                      * 判断参数 FileSystem 是否已赋值
                      * @return FileSystem 是否已赋值
+                     * 
                      */
                     bool FileSystemHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return CapacityUsed Used capacity of the file system, in bytes
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetCapacityUsed() const;
 
                     /**
                      * 判断参数 CapacityUsed 是否已赋值
                      * @return CapacityUsed 是否已赋值
+                     * 
                      */
                     bool CapacityUsedHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ArchiveCapacityUsed Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetArchiveCapacityUsed() const;
 
                     /**
                      * 判断参数 ArchiveCapacityUsed 是否已赋值
                      * @return ArchiveCapacityUsed 是否已赋值
+                     * 
                      */
                     bool ArchiveCapacityUsedHasBeenSet() const;
 
@@ -89,12 +95,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StandardCapacityUsed Used STANDARD capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStandardCapacityUsed() const;
 
                     /**
                      * 判断参数 StandardCapacityUsed 是否已赋值
                      * @return StandardCapacityUsed 是否已赋值
+                     * 
                      */
                     bool StandardCapacityUsedHasBeenSet() const;
 
@@ -103,12 +111,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return DegradeCapacityUsed Used STANDARD_IA capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetDegradeCapacityUsed() const;
 
                     /**
                      * 判断参数 DegradeCapacityUsed 是否已赋值
                      * @return DegradeCapacityUsed 是否已赋值
+                     * 
                      */
                     bool DegradeCapacityUsedHasBeenSet() const;
 
@@ -117,12 +127,14 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DeepArchiveCapacityUsed COS DEEP ARCHIVE storage usage, in bytes
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDeepArchiveCapacityUsed() const;
 
                     /**
                      * 判断参数 DeepArchiveCapacityUsed 是否已赋值
                      * @return DeepArchiveCapacityUsed 是否已赋值
+                     * 
                      */
                     bool DeepArchiveCapacityUsedHasBeenSet() const;
 
@@ -131,12 +143,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IntelligentCapacityUsed COS INTELLIGENT TIERING storage usage, in bytes
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetIntelligentCapacityUsed() const;
 
                     /**
                      * 判断参数 IntelligentCapacityUsed 是否已赋值
                      * @return IntelligentCapacityUsed 是否已赋值
+                     * 
                      */
                     bool IntelligentCapacityUsedHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取
                      * @return Subdomain 
+                     * 
                      */
                     std::string GetSubdomain() const;
 
                     /**
                      * 设置
-                     * @param Subdomain 
+                     * @param _subdomain 
+                     * 
                      */
                     void SetSubdomain(const std::string& _subdomain);
 
                     /**
                      * 判断参数 Subdomain 是否已赋值
                      * @return Subdomain 是否已赋值
+                     * 
                      */
                     bool SubdomainHasBeenSet() const;
 
                     /**
                      * 获取The record type.
                      * @return RecordType The record type.
+                     * 
                      */
                     std::string GetRecordType() const;
 
                     /**
                      * 设置The record type.
-                     * @param RecordType The record type.
+                     * @param _recordType The record type.
+                     * 
                      */
                     void SetRecordType(const std::string& _recordType);
 
                     /**
                      * 判断参数 RecordType 是否已赋值
                      * @return RecordType 是否已赋值
+                     * 
                      */
                     bool RecordTypeHasBeenSet() const;
 
                     /**
                      * 获取The record value.
                      * @return RecordValue The record value.
+                     * 
                      */
                     std::string GetRecordValue() const;
 
                     /**
                      * 设置The record value.
-                     * @param RecordValue The record value.
+                     * @param _recordValue The record value.
+                     * 
                      */
                     void SetRecordValue(const std::string& _recordValue);
 
                     /**
                      * 判断参数 RecordValue 是否已赋值
                      * @return RecordValue 是否已赋值
+                     * 
                      */
                     bool RecordValueHasBeenSet() const;
 

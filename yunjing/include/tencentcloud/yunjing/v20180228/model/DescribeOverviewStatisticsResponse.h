@@ -46,84 +46,98 @@ namespace TencentCloud
                     /**
                      * 获取Number of online servers.
                      * @return OnlineMachineNum Number of online servers.
+                     * 
                      */
                     uint64_t GetOnlineMachineNum() const;
 
                     /**
                      * 判断参数 OnlineMachineNum 是否已赋值
                      * @return OnlineMachineNum 是否已赋值
+                     * 
                      */
                     bool OnlineMachineNumHasBeenSet() const;
 
                     /**
                      * 获取Number of servers activated CWP Pro.
                      * @return ProVersionMachineNum Number of servers activated CWP Pro.
+                     * 
                      */
                     uint64_t GetProVersionMachineNum() const;
 
                     /**
                      * 判断参数 ProVersionMachineNum 是否已赋值
                      * @return ProVersionMachineNum 是否已赋值
+                     * 
                      */
                     bool ProVersionMachineNumHasBeenSet() const;
 
                     /**
                      * 获取Number of trojan files.
                      * @return MalwareNum Number of trojan files.
+                     * 
                      */
                     uint64_t GetMalwareNum() const;
 
                     /**
                      * 判断参数 MalwareNum 是否已赋值
                      * @return MalwareNum 是否已赋值
+                     * 
                      */
                     bool MalwareNumHasBeenSet() const;
 
                     /**
                      * 获取Number of unusual login locations.
                      * @return NonlocalLoginNum Number of unusual login locations.
+                     * 
                      */
                     uint64_t GetNonlocalLoginNum() const;
 
                     /**
                      * 判断参数 NonlocalLoginNum 是否已赋值
                      * @return NonlocalLoginNum 是否已赋值
+                     * 
                      */
                     bool NonlocalLoginNumHasBeenSet() const;
 
                     /**
                      * 获取Number of successful brute force attacks.
                      * @return BruteAttackSuccessNum Number of successful brute force attacks.
+                     * 
                      */
                     uint64_t GetBruteAttackSuccessNum() const;
 
                     /**
                      * 判断参数 BruteAttackSuccessNum 是否已赋值
                      * @return BruteAttackSuccessNum 是否已赋值
+                     * 
                      */
                     bool BruteAttackSuccessNumHasBeenSet() const;
 
                     /**
                      * 获取Number of vulnerabilities.
                      * @return VulNum Number of vulnerabilities.
+                     * 
                      */
                     uint64_t GetVulNum() const;
 
                     /**
                      * 判断参数 VulNum 是否已赋值
                      * @return VulNum 是否已赋值
+                     * 
                      */
                     bool VulNumHasBeenSet() const;
 
                     /**
                      * 获取Security baseline number
                      * @return BaseLineNum Security baseline number
+                     * 
                      */
                     uint64_t GetBaseLineNum() const;
 
                     /**
                      * 判断参数 BaseLineNum 是否已赋值
                      * @return BaseLineNum 是否已赋值
+                     * 
                      */
                     bool BaseLineNumHasBeenSet() const;
 

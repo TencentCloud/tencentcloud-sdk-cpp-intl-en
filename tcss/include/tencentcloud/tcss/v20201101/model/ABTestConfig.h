@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Canary project name
                      * @return ProjectName Canary project name
+                     * 
                      */
                     std::string GetProjectName() const;
 
                     /**
                      * 设置Canary project name
-                     * @param ProjectName Canary project name
+                     * @param _projectName Canary project name
+                     * 
                      */
                     void SetProjectName(const std::string& _projectName);
 
                     /**
                      * 判断参数 ProjectName 是否已赋值
                      * @return ProjectName 是否已赋值
+                     * 
                      */
                     bool ProjectNameHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `true` (in canary upgrade); `false` (not in canary upgrade).
                      * @return Status Valid values: `true` (in canary upgrade); `false` (not in canary upgrade).
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Valid values: `true` (in canary upgrade); `false` (not in canary upgrade).
-                     * @param Status Valid values: `true` (in canary upgrade); `false` (not in canary upgrade).
+                     * @param _status Valid values: `true` (in canary upgrade); `false` (not in canary upgrade).
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Default policy: ACCEPT or DROP
                      * @return DefaultAction Default policy: ACCEPT or DROP
+                     * 
                      */
                     std::string GetDefaultAction() const;
 
                     /**
                      * 设置Default policy: ACCEPT or DROP
-                     * @param DefaultAction Default policy: ACCEPT or DROP
+                     * @param _defaultAction Default policy: ACCEPT or DROP
+                     * 
                      */
                     void SetDefaultAction(const std::string& _defaultAction);
 
                     /**
                      * 判断参数 DefaultAction 是否已赋值
                      * @return DefaultAction 是否已赋值
+                     * 
                      */
                     bool DefaultActionHasBeenSet() const;
 
                     /**
                      * 获取Acceleration connection ID
                      * @return ProxyId Acceleration connection ID
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Acceleration connection ID
-                     * @param ProxyId Acceleration connection ID
+                     * @param _proxyId Acceleration connection ID
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
                     /**
                      * 获取Connection group ID
                      * @return GroupId Connection group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Connection group ID
-                     * @param GroupId Connection group ID
+                     * @param _groupId Connection group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 

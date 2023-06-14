@@ -59,6 +59,7 @@ namespace TencentCloud
 <li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
 
 
+                     * 
                      */
                     std::string GetType() const;
 
@@ -68,17 +69,19 @@ namespace TencentCloud
 <li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
 
 
-                     * @param Type The trigger type. Valid values:
+                     * @param _type The trigger type. Valid values:
 <li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
 <li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
 
 
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -87,20 +90,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CosFileUploadTrigger GetCosFileUploadTrigger() const;
 
                     /**
                      * 设置This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
+                     * @param _cosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCosFileUploadTrigger(const CosFileUploadTrigger& _cosFileUploadTrigger);
 
                     /**
                      * 判断参数 CosFileUploadTrigger 是否已赋值
                      * @return CosFileUploadTrigger 是否已赋值
+                     * 
                      */
                     bool CosFileUploadTriggerHasBeenSet() const;
 
@@ -113,6 +119,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AwsS3FileUploadTrigger GetAwsS3FileUploadTrigger() const;
 
@@ -121,16 +128,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+                     * @param _awsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
 
 Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAwsS3FileUploadTrigger(const AwsS3FileUploadTrigger& _awsS3FileUploadTrigger);
 
                     /**
                      * 判断参数 AwsS3FileUploadTrigger 是否已赋值
                      * @return AwsS3FileUploadTrigger 是否已赋值
+                     * 
                      */
                     bool AwsS3FileUploadTriggerHasBeenSet() const;
 

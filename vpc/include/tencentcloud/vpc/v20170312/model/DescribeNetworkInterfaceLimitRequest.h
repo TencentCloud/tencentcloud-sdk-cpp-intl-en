@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of a CVM instance or ENI to query
                      * @return InstanceId ID of a CVM instance or ENI to query
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of a CVM instance or ENI to query
-                     * @param InstanceId ID of a CVM instance or ENI to query
+                     * @param _instanceId ID of a CVM instance or ENI to query
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

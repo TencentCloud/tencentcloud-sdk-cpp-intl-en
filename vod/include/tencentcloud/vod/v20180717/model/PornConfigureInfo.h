@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return ImgReviewInfo Parameters for recognition of pornographic content in images
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     PornImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
                      * 设置Parameters for recognition of pornographic content in images
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param ImgReviewInfo Parameters for recognition of pornographic content in images
+                     * @param _imgReviewInfo Parameters for recognition of pornographic content in images
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetImgReviewInfo(const PornImgReviewTemplateInfo& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     PornAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
                      * 设置Parameters for ASR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+                     * @param _asrReviewInfo Parameters for ASR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetAsrReviewInfo(const PornAsrReviewTemplateInfo& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     PornOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
                      * 设置Parameters for OCR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+                     * @param _ocrReviewInfo Parameters for OCR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetOcrReviewInfo(const PornOcrReviewTemplateInfo& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

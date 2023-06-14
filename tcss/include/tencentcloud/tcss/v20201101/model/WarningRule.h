@@ -75,6 +75,7 @@ Runtime security - Abnormal file access: `RUNTIME_PROCESS`.
 Runtime security - High-risk syscall: `RUNTIME_SYSCALL`.
 Runtime security - Reverse shell: `RUNTIME_REVERSE_SHELL`.
 Runtime security - Trojan: `RUNTIME_VIRUS`.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -93,7 +94,7 @@ Runtime security - Abnormal file access: `RUNTIME_PROCESS`.
 Runtime security - High-risk syscall: `RUNTIME_SYSCALL`.
 Runtime security - Reverse shell: `RUNTIME_REVERSE_SHELL`.
 Runtime security - Trojan: `RUNTIME_VIRUS`.
-                     * @param Type Alert event type:
+                     * @param _type Alert event type:
 Image repository security - Trojan: `IMG_REG_VIRUS`.
 Image repository security - Vulnerability: `IMG_REG_VUL`.
 Image repository security - Sensitive data: `IMG_REG_RISK`.
@@ -107,12 +108,14 @@ Runtime security - Abnormal file access: `RUNTIME_PROCESS`.
 Runtime security - High-risk syscall: `RUNTIME_SYSCALL`.
 Runtime security - Reverse shell: `RUNTIME_REVERSE_SHELL`.
 Runtime security - Trojan: `RUNTIME_VIRUS`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -123,6 +126,7 @@ Runtime security - Trojan: `RUNTIME_VIRUS`.
                      * @return Switch Switch status:
 `ON`: On.
 `OFF`: Off.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -130,51 +134,59 @@ Runtime security - Trojan: `RUNTIME_VIRUS`.
                      * 设置Switch status:
 `ON`: On.
 `OFF`: Off.
-                     * @param Switch Switch status:
+                     * @param _switch Switch status:
 `ON`: On.
 `OFF`: Off.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Alert start time in the format of "HH:mm"
                      * @return BeginTime Alert start time in the format of "HH:mm"
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Alert start time in the format of "HH:mm"
-                     * @param BeginTime Alert start time in the format of "HH:mm"
+                     * @param _beginTime Alert start time in the format of "HH:mm"
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取Alert end time in the format of "HH:mm"
                      * @return EndTime Alert end time in the format of "HH:mm"
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Alert end time in the format of "HH:mm"
-                     * @param EndTime Alert end time in the format of "HH:mm"
+                     * @param _endTime Alert end time in the format of "HH:mm"
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -187,6 +199,7 @@ If level control does not take effect for the alert type, pass in `1`.
 The control switch can be high, medium, or low, corresponding to the third, second, and first binary bit, respectively. Valid values: `0` (off); `1` (on).
 For example, if the high and medium levels indicate to enable the alert and the low level indicates to disable it, the binary value is `110`.
 If level control does not take effect for the alert type, pass in `1`.
+                     * 
                      */
                     std::string GetControlBits() const;
 
@@ -195,16 +208,18 @@ If level control does not take effect for the alert type, pass in `1`.
 The control switch can be high, medium, or low, corresponding to the third, second, and first binary bit, respectively. Valid values: `0` (off); `1` (on).
 For example, if the high and medium levels indicate to enable the alert and the low level indicates to disable it, the binary value is `110`.
 If level control does not take effect for the alert type, pass in `1`.
-                     * @param ControlBits Alert level policy control. Each binary bit represents a meaning, and the value is passed as a string.
+                     * @param _controlBits Alert level policy control. Each binary bit represents a meaning, and the value is passed as a string.
 The control switch can be high, medium, or low, corresponding to the third, second, and first binary bit, respectively. Valid values: `0` (off); `1` (on).
 For example, if the high and medium levels indicate to enable the alert and the low level indicates to disable it, the binary value is `110`.
 If level control does not take effect for the alert type, pass in `1`.
+                     * 
                      */
                     void SetControlBits(const std::string& _controlBits);
 
                     /**
                      * 判断参数 ControlBits 是否已赋值
                      * @return ControlBits 是否已赋值
+                     * 
                      */
                     bool ControlBitsHasBeenSet() const;
 

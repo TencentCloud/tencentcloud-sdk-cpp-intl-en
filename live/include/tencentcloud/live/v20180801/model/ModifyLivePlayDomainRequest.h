@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Playback domain name.
                      * @return DomainName Playback domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Playback domain name.
-                     * @param DomainName Playback domain name.
+                     * @param _domainName Playback domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
                      * @return PlayType Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
+                     * 
                      */
                     int64_t GetPlayType() const;
 
                     /**
                      * 设置Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
-                     * @param PlayType Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
+                     * @param _playType Pull domain name type. 1: Mainland China. 2: global, 3: outside Mainland China
+                     * 
                      */
                     void SetPlayType(const int64_t& _playType);
 
                     /**
                      * 判断参数 PlayType 是否已赋值
                      * @return PlayType 是否已赋值
+                     * 
                      */
                     bool PlayTypeHasBeenSet() const;
 

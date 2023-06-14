@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取CWP agent `UUID` array.
                      * @return Uuids CWP agent `UUID` array.
+                     * 
                      */
                     std::vector<std::string> GetUuids() const;
 
                     /**
                      * 设置CWP agent `UUID` array.
-                     * @param Uuids CWP agent `UUID` array.
+                     * @param _uuids CWP agent `UUID` array.
+                     * 
                      */
                     void SetUuids(const std::vector<std::string>& _uuids);
 
                     /**
                      * 判断参数 Uuids 是否已赋值
                      * @return Uuids 是否已赋值
+                     * 
                      */
                     bool UuidsHasBeenSet() const;
 
                     /**
                      * 获取Login region information array.
                      * @return Places Login region information array.
+                     * 
                      */
                     std::vector<Place> GetPlaces() const;
 
                     /**
                      * 设置Login region information array.
-                     * @param Places Login region information array.
+                     * @param _places Login region information array.
+                     * 
                      */
                     void SetPlaces(const std::vector<Place>& _places);
 
                     /**
                      * 判断参数 Places 是否已赋值
                      * @return Places 是否已赋值
+                     * 
                      */
                     bool PlacesHasBeenSet() const;
 

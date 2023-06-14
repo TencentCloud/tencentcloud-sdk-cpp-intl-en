@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The pay-as-you-go billing method. Unit: CNY.
                      * @return UnitPrice The pay-as-you-go billing method. Unit: CNY.
+                     * 
                      */
                     double GetUnitPrice() const;
 
                     /**
                      * 设置The pay-as-you-go billing method. Unit: CNY.
-                     * @param UnitPrice The pay-as-you-go billing method. Unit: CNY.
+                     * @param _unitPrice The pay-as-you-go billing method. Unit: CNY.
+                     * 
                      */
                     void SetUnitPrice(const double& _unitPrice);
 
                     /**
                      * 判断参数 UnitPrice 是否已赋值
                      * @return UnitPrice 是否已赋值
+                     * 
                      */
                     bool UnitPriceHasBeenSet() const;
 
                     /**
                      * 获取Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
                      * @return ChargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
+                     * 
                      */
                     std::string GetChargeUnit() const;
 
                     /**
                      * 设置Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
-                     * @param ChargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
+                     * @param _chargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
+                     * 
                      */
                     void SetChargeUnit(const std::string& _chargeUnit);
 
                     /**
                      * 判断参数 ChargeUnit 是否已赋值
                      * @return ChargeUnit 是否已赋值
+                     * 
                      */
                     bool ChargeUnitHasBeenSet() const;
 
                     /**
                      * 获取Original price of the prepaid product. Unit: CNY.
                      * @return OriginalPrice Original price of the prepaid product. Unit: CNY.
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Original price of the prepaid product. Unit: CNY.
-                     * @param OriginalPrice Original price of the prepaid product. Unit: CNY.
+                     * @param _originalPrice Original price of the prepaid product. Unit: CNY.
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discount price of the prepaid product. Unit: CNY.
                      * @return DiscountPrice Discount price of the prepaid product. Unit: CNY.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Discount price of the prepaid product. Unit: CNY.
-                     * @param DiscountPrice Discount price of the prepaid product. Unit: CNY.
+                     * @param _discountPrice Discount price of the prepaid product. Unit: CNY.
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 

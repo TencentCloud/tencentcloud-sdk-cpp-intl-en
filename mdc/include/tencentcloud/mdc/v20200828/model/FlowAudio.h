@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The frame rate.
                      * @return Fps The frame rate.
+                     * 
                      */
                     int64_t GetFps() const;
 
                     /**
                      * 设置The frame rate.
-                     * @param Fps The frame rate.
+                     * @param _fps The frame rate.
+                     * 
                      */
                     void SetFps(const int64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 
                     /**
                      * 获取The bitrate (bps).
                      * @return Rate The bitrate (bps).
+                     * 
                      */
                     int64_t GetRate() const;
 
                     /**
                      * 设置The bitrate (bps).
-                     * @param Rate The bitrate (bps).
+                     * @param _rate The bitrate (bps).
+                     * 
                      */
                     void SetRate(const int64_t& _rate);
 
                     /**
                      * 判断参数 Rate 是否已赋值
                      * @return Rate 是否已赋值
+                     * 
                      */
                     bool RateHasBeenSet() const;
 
                     /**
                      * 获取The audio PID.
                      * @return Pid The audio PID.
+                     * 
                      */
                     int64_t GetPid() const;
 
                     /**
                      * 设置The audio PID.
-                     * @param Pid The audio PID.
+                     * @param _pid The audio PID.
+                     * 
                      */
                     void SetPid(const int64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 

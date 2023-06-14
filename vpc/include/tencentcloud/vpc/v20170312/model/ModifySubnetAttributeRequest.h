@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Subnet instance ID, such as `subnet-pxir56ns`.
                      * @return SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID, such as `subnet-pxir56ns`.
-                     * @param SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
+                     * @param _subnetId Subnet instance ID, such as `subnet-pxir56ns`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The subnet name. The maximum length is 60 bytes.
                      * @return SubnetName The subnet name. The maximum length is 60 bytes.
+                     * 
                      */
                     std::string GetSubnetName() const;
 
                     /**
                      * 设置The subnet name. The maximum length is 60 bytes.
-                     * @param SubnetName The subnet name. The maximum length is 60 bytes.
+                     * @param _subnetName The subnet name. The maximum length is 60 bytes.
+                     * 
                      */
                     void SetSubnetName(const std::string& _subnetName);
 
                     /**
                      * 判断参数 SubnetName 是否已赋值
                      * @return SubnetName 是否已赋值
+                     * 
                      */
                     bool SubnetNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the subnet has broadcast enabled.
                      * @return EnableBroadcast Whether the subnet has broadcast enabled.
+                     * 
                      */
                     std::string GetEnableBroadcast() const;
 
                     /**
                      * 设置Whether the subnet has broadcast enabled.
-                     * @param EnableBroadcast Whether the subnet has broadcast enabled.
+                     * @param _enableBroadcast Whether the subnet has broadcast enabled.
+                     * 
                      */
                     void SetEnableBroadcast(const std::string& _enableBroadcast);
 
                     /**
                      * 判断参数 EnableBroadcast 是否已赋值
                      * @return EnableBroadcast 是否已赋值
+                     * 
                      */
                     bool EnableBroadcastHasBeenSet() const;
 

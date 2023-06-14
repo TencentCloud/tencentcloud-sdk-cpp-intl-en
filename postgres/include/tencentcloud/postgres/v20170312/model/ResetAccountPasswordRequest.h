@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-4wdeb0zv
                      * @return DBInstanceId Instance ID in the format of postgres-4wdeb0zv
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-4wdeb0zv
-                     * @param DBInstanceId Instance ID in the format of postgres-4wdeb0zv
+                     * @param _dBInstanceId Instance ID in the format of postgres-4wdeb0zv
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance account name
                      * @return UserName Instance account name
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Instance account name
-                     * @param UserName Instance account name
+                     * @param _userName Instance account name
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取New password corresponding to `UserName` account
                      * @return Password New password corresponding to `UserName` account
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置New password corresponding to `UserName` account
-                     * @param Password New password corresponding to `UserName` account
+                     * @param _password New password corresponding to `UserName` account
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

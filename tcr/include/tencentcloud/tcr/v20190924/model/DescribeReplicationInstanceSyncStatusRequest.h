@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Master instance ID
                      * @return RegistryId Master instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Master instance ID
-                     * @param RegistryId Master instance ID
+                     * @param _registryId Master instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Replication instance ID
                      * @return ReplicationRegistryId Replication instance ID
+                     * 
                      */
                     std::string GetReplicationRegistryId() const;
 
                     /**
                      * 设置Replication instance ID
-                     * @param ReplicationRegistryId Replication instance ID
+                     * @param _replicationRegistryId Replication instance ID
+                     * 
                      */
                     void SetReplicationRegistryId(const std::string& _replicationRegistryId);
 
                     /**
                      * 判断参数 ReplicationRegistryId 是否已赋值
                      * @return ReplicationRegistryId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Region ID of the replication instance
                      * @return ReplicationRegionId Region ID of the replication instance
+                     * 
                      */
                     uint64_t GetReplicationRegionId() const;
 
                     /**
                      * 设置Region ID of the replication instance
-                     * @param ReplicationRegionId Region ID of the replication instance
+                     * @param _replicationRegionId Region ID of the replication instance
+                     * 
                      */
                     void SetReplicationRegionId(const uint64_t& _replicationRegionId);
 
                     /**
                      * 判断参数 ReplicationRegionId 是否已赋值
                      * @return ReplicationRegionId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegionIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to show the synchronization log
                      * @return ShowReplicationLog Whether to show the synchronization log
+                     * 
                      */
                     bool GetShowReplicationLog() const;
 
                     /**
                      * 设置Whether to show the synchronization log
-                     * @param ShowReplicationLog Whether to show the synchronization log
+                     * @param _showReplicationLog Whether to show the synchronization log
+                     * 
                      */
                     void SetShowReplicationLog(const bool& _showReplicationLog);
 
                     /**
                      * 判断参数 ShowReplicationLog 是否已赋值
                      * @return ShowReplicationLog 是否已赋值
+                     * 
                      */
                     bool ShowReplicationLogHasBeenSet() const;
 
                     /**
                      * 获取Page offset for log display. Default value: 0
                      * @return Offset Page offset for log display. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page offset for log display. Default value: 0
-                     * @param Offset Page offset for log display. Default value: 0
+                     * @param _offset Page offset for log display. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of output entries. Default value: 5, maximum value: 20.
                      * @return Limit Maximum number of output entries. Default value: 5, maximum value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of output entries. Default value: 5, maximum value: 20.
-                     * @param Limit Maximum number of output entries. Default value: 5, maximum value: 20.
+                     * @param _limit Maximum number of output entries. Default value: 5, maximum value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

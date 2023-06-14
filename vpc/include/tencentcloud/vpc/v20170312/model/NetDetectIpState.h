@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The destination IPv4 address of network detection.
                      * @return DetectDestinationIp The destination IPv4 address of network detection.
+                     * 
                      */
                     std::string GetDetectDestinationIp() const;
 
                     /**
                      * 设置The destination IPv4 address of network detection.
-                     * @param DetectDestinationIp The destination IPv4 address of network detection.
+                     * @param _detectDestinationIp The destination IPv4 address of network detection.
+                     * 
                      */
                     void SetDetectDestinationIp(const std::string& _detectDestinationIp);
 
                     /**
                      * 判断参数 DetectDestinationIp 是否已赋值
                      * @return DetectDestinationIp 是否已赋值
+                     * 
                      */
                     bool DetectDestinationIpHasBeenSet() const;
 
@@ -77,6 +80,7 @@ namespace TencentCloud
 -2: packet loss occurred when outbound traffic is blocked by the ACL;
 -3: packet loss occurred when inbound traffic is blocked by the ACL;
 -4: other errors.
+                     * 
                      */
                     int64_t GetState() const;
 
@@ -87,54 +91,62 @@ namespace TencentCloud
 -2: packet loss occurred when outbound traffic is blocked by the ACL;
 -3: packet loss occurred when inbound traffic is blocked by the ACL;
 -4: other errors.
-                     * @param State The detection result.
+                     * @param _state The detection result.
 0: successful;
 -1: no packet loss occurred during routing;
 -2: packet loss occurred when outbound traffic is blocked by the ACL;
 -3: packet loss occurred when inbound traffic is blocked by the ACL;
 -4: other errors.
+                     * 
                      */
                     void SetState(const int64_t& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取The latency. Unit: ms.
                      * @return Delay The latency. Unit: ms.
+                     * 
                      */
                     uint64_t GetDelay() const;
 
                     /**
                      * 设置The latency. Unit: ms.
-                     * @param Delay The latency. Unit: ms.
+                     * @param _delay The latency. Unit: ms.
+                     * 
                      */
                     void SetDelay(const uint64_t& _delay);
 
                     /**
                      * 判断参数 Delay 是否已赋值
                      * @return Delay 是否已赋值
+                     * 
                      */
                     bool DelayHasBeenSet() const;
 
                     /**
                      * 获取The packet loss rate.
                      * @return PacketLossRate The packet loss rate.
+                     * 
                      */
                     uint64_t GetPacketLossRate() const;
 
                     /**
                      * 设置The packet loss rate.
-                     * @param PacketLossRate The packet loss rate.
+                     * @param _packetLossRate The packet loss rate.
+                     * 
                      */
                     void SetPacketLossRate(const uint64_t& _packetLossRate);
 
                     /**
                      * 判断参数 PacketLossRate 是否已赋值
                      * @return PacketLossRate 是否已赋值
+                     * 
                      */
                     bool PacketLossRateHasBeenSet() const;
 

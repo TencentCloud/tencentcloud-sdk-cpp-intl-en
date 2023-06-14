@@ -52,20 +52,23 @@ namespace TencentCloud
 <li>Volume: volume adjustment.</li>
                      * @return Type Audio operation type. Valid values:
 <li>Volume: volume adjustment.</li>
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Audio operation type. Valid values:
 <li>Volume: volume adjustment.</li>
-                     * @param Type Audio operation type. Valid values:
+                     * @param _type Audio operation type. Valid values:
 <li>Volume: volume adjustment.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -74,20 +77,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VolumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AudioVolumeParam GetVolumeParam() const;
 
                     /**
                      * 设置Volume adjustment parameter, which is valid if `Type` is `Volume`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VolumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
+                     * @param _volumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVolumeParam(const AudioVolumeParam& _volumeParam);
 
                     /**
                      * 判断参数 VolumeParam 是否已赋值
                      * @return VolumeParam 是否已赋值
+                     * 
                      */
                     bool VolumeParamHasBeenSet() const;
 

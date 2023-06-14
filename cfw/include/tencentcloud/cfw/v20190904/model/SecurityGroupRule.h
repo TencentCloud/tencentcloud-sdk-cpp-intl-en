@@ -61,6 +61,7 @@ instance: asset instance (ins-123456)
 resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
+                     * 
                      */
                     std::string GetSourceContent() const;
 
@@ -72,37 +73,42 @@ instance: asset instance (ins-123456)
 resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
-                     * @param SourceContent Source example:
+                     * @param _sourceContent Source example:
 net: IP/CIDR (192.168.0.2)
 template: parameter template (ipm-dyodhpby)
 instance: asset instance (ins-123456)
 resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
+                     * 
                      */
                     void SetSourceContent(const std::string& _sourceContent);
 
                     /**
                      * 判断参数 SourceContent 是否已赋值
                      * @return SourceContent 是否已赋值
+                     * 
                      */
                     bool SourceContentHasBeenSet() const;
 
                     /**
                      * 获取Access source type. Valid values: net|template|instance|resourcegroup|tag|region
                      * @return SourceType Access source type. Valid values: net|template|instance|resourcegroup|tag|region
+                     * 
                      */
                     std::string GetSourceType() const;
 
                     /**
                      * 设置Access source type. Valid values: net|template|instance|resourcegroup|tag|region
-                     * @param SourceType Access source type. Valid values: net|template|instance|resourcegroup|tag|region
+                     * @param _sourceType Access source type. Valid values: net|template|instance|resourcegroup|tag|region
+                     * 
                      */
                     void SetSourceType(const std::string& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
@@ -121,6 +127,7 @@ instance: asset instance (ins-123456)
 resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
+                     * 
                      */
                     std::string GetDestContent() const;
 
@@ -132,37 +139,42 @@ instance: asset instance (ins-123456)
 resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
-                     * @param DestContent Destination example:
+                     * @param _destContent Destination example:
 net: IP/CIDR (192.168.0.2)
 template: parameter template (ipm-dyodhpby)
 instance: asset instance (ins-123456)
 resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
+                     * 
                      */
                     void SetDestContent(const std::string& _destContent);
 
                     /**
                      * 判断参数 DestContent 是否已赋值
                      * @return DestContent 是否已赋值
+                     * 
                      */
                     bool DestContentHasBeenSet() const;
 
                     /**
                      * 获取Access destination type. Valid values: net|template|instance|resourcegroup|tag|region
                      * @return DestType Access destination type. Valid values: net|template|instance|resourcegroup|tag|region
+                     * 
                      */
                     std::string GetDestType() const;
 
                     /**
                      * 设置Access destination type. Valid values: net|template|instance|resourcegroup|tag|region
-                     * @param DestType Access destination type. Valid values: net|template|instance|resourcegroup|tag|region
+                     * @param _destType Access destination type. Valid values: net|template|instance|resourcegroup|tag|region
+                     * 
                      */
                     void SetDestType(const std::string& _destType);
 
                     /**
                      * 判断参数 DestType 是否已赋值
                      * @return DestType 是否已赋值
+                     * 
                      */
                     bool DestTypeHasBeenSet() const;
 
@@ -173,6 +185,7 @@ drop: deny
                      * @return RuleAction The action that Cloud Firewall performs on the traffic. Valid values:
 accept: allow
 drop: deny
+                     * 
                      */
                     std::string GetRuleAction() const;
 
@@ -180,51 +193,59 @@ drop: deny
                      * 设置The action that Cloud Firewall performs on the traffic. Valid values:
 accept: allow
 drop: deny
-                     * @param RuleAction The action that Cloud Firewall performs on the traffic. Valid values:
+                     * @param _ruleAction The action that Cloud Firewall performs on the traffic. Valid values:
 accept: allow
 drop: deny
+                     * 
                      */
                     void SetRuleAction(const std::string& _ruleAction);
 
                     /**
                      * 判断参数 RuleAction 是否已赋值
                      * @return RuleAction 是否已赋值
+                     * 
                      */
                     bool RuleActionHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Rule priority. -1: lowest; 1: highest
                      * @return OrderIndex Rule priority. -1: lowest; 1: highest
+                     * 
                      */
                     std::string GetOrderIndex() const;
 
                     /**
                      * 设置Rule priority. -1: lowest; 1: highest
-                     * @param OrderIndex Rule priority. -1: lowest; 1: highest
+                     * @param _orderIndex Rule priority. -1: lowest; 1: highest
+                     * 
                      */
                     void SetOrderIndex(const std::string& _orderIndex);
 
                     /**
                      * 判断参数 OrderIndex 是否已赋值
                      * @return OrderIndex 是否已赋值
+                     * 
                      */
                     bool OrderIndexHasBeenSet() const;
 
@@ -233,20 +254,23 @@ drop: deny
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Protocol Protocol. TCP/UDP/ICMP/ANY
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol. TCP/UDP/ICMP/ANY
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Protocol Protocol. TCP/UDP/ICMP/ANY
+                     * @param _protocol Protocol. TCP/UDP/ICMP/ANY
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -259,6 +283,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 -1/-1: all ports
 80: port 80
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetPort() const;
 
@@ -267,16 +292,18 @@ Note: This field may return `null`, indicating that no valid value was found.
 -1/-1: all ports
 80: port 80
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Port The port to apply access control rules. Valid values:
+                     * @param _port The port to apply access control rules. Valid values:
 -1/-1: all ports
 80: port 80
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPort(const std::string& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -285,56 +312,65 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ServiceTemplateId Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetServiceTemplateId() const;
 
                     /**
                      * 设置Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ServiceTemplateId Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
+                     * @param _serviceTemplateId Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetServiceTemplateId(const std::string& _serviceTemplateId);
 
                     /**
                      * 判断参数 ServiceTemplateId 是否已赋值
                      * @return ServiceTemplateId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the rule
                      * @return Id The unique ID of the rule
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置The unique ID of the rule
-                     * @param Id The unique ID of the rule
+                     * @param _id The unique ID of the rule
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Rule status. true: enabled; false: disabled
                      * @return Enable Rule status. true: enabled; false: disabled
+                     * 
                      */
                     std::string GetEnable() const;
 
                     /**
                      * 设置Rule status. true: enabled; false: disabled
-                     * @param Enable Rule status. true: enabled; false: disabled
+                     * @param _enable Rule status. true: enabled; false: disabled
+                     * 
                      */
                     void SetEnable(const std::string& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

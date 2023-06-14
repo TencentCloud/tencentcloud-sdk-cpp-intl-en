@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Number of instance CPU cores
                      * @return Cpu Number of instance CPU cores
+                     * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
                      * 设置Number of instance CPU cores
-                     * @param Cpu Number of instance CPU cores
+                     * @param _cpu Number of instance CPU cores
+                     * 
                      */
                     void SetCpu(const uint64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Instance memory in GB
                      * @return Memory Instance memory in GB
+                     * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
                      * 设置Instance memory in GB
-                     * @param Memory Instance memory in GB
+                     * @param _memory Instance memory in GB
+                     * 
                      */
                     void SetMemory(const uint64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Maximum instance storage capacity GB
                      * @return MaxStorageSize Maximum instance storage capacity GB
+                     * 
                      */
                     uint64_t GetMaxStorageSize() const;
 
                     /**
                      * 设置Maximum instance storage capacity GB
-                     * @param MaxStorageSize Maximum instance storage capacity GB
+                     * @param _maxStorageSize Maximum instance storage capacity GB
+                     * 
                      */
                     void SetMaxStorageSize(const uint64_t& _maxStorageSize);
 
                     /**
                      * 判断参数 MaxStorageSize 是否已赋值
                      * @return MaxStorageSize 是否已赋值
+                     * 
                      */
                     bool MaxStorageSizeHasBeenSet() const;
 
                     /**
                      * 获取Minimum instance storage capacity GB
                      * @return MinStorageSize Minimum instance storage capacity GB
+                     * 
                      */
                     uint64_t GetMinStorageSize() const;
 
                     /**
                      * 设置Minimum instance storage capacity GB
-                     * @param MinStorageSize Minimum instance storage capacity GB
+                     * @param _minStorageSize Minimum instance storage capacity GB
+                     * 
                      */
                     void SetMinStorageSize(const uint64_t& _minStorageSize);
 
                     /**
                      * 判断参数 MinStorageSize 是否已赋值
                      * @return MinStorageSize 是否已赋值
+                     * 
                      */
                     bool MinStorageSizeHasBeenSet() const;
 
                     /**
                      * 获取Whether there is an inventory.
                      * @return HasStock Whether there is an inventory.
+                     * 
                      */
                     bool GetHasStock() const;
 
                     /**
                      * 设置Whether there is an inventory.
-                     * @param HasStock Whether there is an inventory.
+                     * @param _hasStock Whether there is an inventory.
+                     * 
                      */
                     void SetHasStock(const bool& _hasStock);
 
                     /**
                      * 判断参数 HasStock 是否已赋值
                      * @return HasStock 是否已赋值
+                     * 
                      */
                     bool HasStockHasBeenSet() const;
 
                     /**
                      * 获取Machine type
                      * @return MachineType Machine type
+                     * 
                      */
                     std::string GetMachineType() const;
 
                     /**
                      * 设置Machine type
-                     * @param MachineType Machine type
+                     * @param _machineType Machine type
+                     * 
                      */
                     void SetMachineType(const std::string& _machineType);
 
                     /**
                      * 判断参数 MachineType 是否已赋值
                      * @return MachineType 是否已赋值
+                     * 
                      */
                     bool MachineTypeHasBeenSet() const;
 
                     /**
                      * 获取Maximum IOPS
                      * @return MaxIops Maximum IOPS
+                     * 
                      */
                     int64_t GetMaxIops() const;
 
                     /**
                      * 设置Maximum IOPS
-                     * @param MaxIops Maximum IOPS
+                     * @param _maxIops Maximum IOPS
+                     * 
                      */
                     void SetMaxIops(const int64_t& _maxIops);
 
                     /**
                      * 判断参数 MaxIops 是否已赋值
                      * @return MaxIops 是否已赋值
+                     * 
                      */
                     bool MaxIopsHasBeenSet() const;
 
                     /**
                      * 获取Maximum bandwidth
                      * @return MaxIoBandWidth Maximum bandwidth
+                     * 
                      */
                     int64_t GetMaxIoBandWidth() const;
 
                     /**
                      * 设置Maximum bandwidth
-                     * @param MaxIoBandWidth Maximum bandwidth
+                     * @param _maxIoBandWidth Maximum bandwidth
+                     * 
                      */
                     void SetMaxIoBandWidth(const int64_t& _maxIoBandWidth);
 
                     /**
                      * 判断参数 MaxIoBandWidth 是否已赋值
                      * @return MaxIoBandWidth 是否已赋值
+                     * 
                      */
                     bool MaxIoBandWidthHasBeenSet() const;
 
@@ -196,20 +220,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZoneStockInfos Inventory information in a region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ZoneStockInfo> GetZoneStockInfos() const;
 
                     /**
                      * 设置Inventory information in a region
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneStockInfos Inventory information in a region
+                     * @param _zoneStockInfos Inventory information in a region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneStockInfos(const std::vector<ZoneStockInfo>& _zoneStockInfos);
 
                     /**
                      * 判断参数 ZoneStockInfos 是否已赋值
                      * @return ZoneStockInfos 是否已赋值
+                     * 
                      */
                     bool ZoneStockInfosHasBeenSet() const;
 
@@ -218,20 +245,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StockCount Quantity in stock
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStockCount() const;
 
                     /**
                      * 设置Quantity in stock
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StockCount Quantity in stock
+                     * @param _stockCount Quantity in stock
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStockCount(const int64_t& _stockCount);
 
                     /**
                      * 判断参数 StockCount 是否已赋值
                      * @return StockCount 是否已赋值
+                     * 
                      */
                     bool StockCountHasBeenSet() const;
 

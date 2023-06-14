@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task to be canceled.
                      * @return TaskId This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task to be canceled.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task to be canceled.
-                     * @param TaskId This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task to be canceled.
+                     * @param _taskId This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task to be canceled.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

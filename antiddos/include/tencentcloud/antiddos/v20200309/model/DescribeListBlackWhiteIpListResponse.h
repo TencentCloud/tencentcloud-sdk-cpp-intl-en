@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of lists
                      * @return Total Total number of lists
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取IP blocklist/allowlist
                      * @return IpList IP blocklist/allowlist
+                     * 
                      */
                     std::vector<BlackWhiteIpRelation> GetIpList() const;
 
                     /**
                      * 判断参数 IpList 是否已赋值
                      * @return IpList 是否已赋值
+                     * 
                      */
                     bool IpListHasBeenSet() const;
 

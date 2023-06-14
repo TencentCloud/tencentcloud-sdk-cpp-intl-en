@@ -45,180 +45,210 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return JobId Migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Migration task ID
-                     * @param JobId Migration task ID
+                     * @param _jobId Migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Check task ID
                      * @return CompareTaskId Check task ID
+                     * 
                      */
                     std::string GetCompareTaskId() const;
 
                     /**
                      * 设置Check task ID
-                     * @param CompareTaskId Check task ID
+                     * @param _compareTaskId Check task ID
+                     * 
                      */
                     void SetCompareTaskId(const std::string& _compareTaskId);
 
                     /**
                      * 判断参数 CompareTaskId 是否已赋值
                      * @return CompareTaskId 是否已赋值
+                     * 
                      */
                     bool CompareTaskIdHasBeenSet() const;
 
                     /**
                      * 获取Number of inconsistent objects to be returned
                      * @return DifferenceLimit Number of inconsistent objects to be returned
+                     * 
                      */
                     uint64_t GetDifferenceLimit() const;
 
                     /**
                      * 设置Number of inconsistent objects to be returned
-                     * @param DifferenceLimit Number of inconsistent objects to be returned
+                     * @param _differenceLimit Number of inconsistent objects to be returned
+                     * 
                      */
                     void SetDifferenceLimit(const uint64_t& _differenceLimit);
 
                     /**
                      * 判断参数 DifferenceLimit 是否已赋值
                      * @return DifferenceLimit 是否已赋值
+                     * 
                      */
                     bool DifferenceLimitHasBeenSet() const;
 
                     /**
                      * 获取Offset of inconsistent objects
                      * @return DifferenceOffset Offset of inconsistent objects
+                     * 
                      */
                     uint64_t GetDifferenceOffset() const;
 
                     /**
                      * 设置Offset of inconsistent objects
-                     * @param DifferenceOffset Offset of inconsistent objects
+                     * @param _differenceOffset Offset of inconsistent objects
+                     * 
                      */
                     void SetDifferenceOffset(const uint64_t& _differenceOffset);
 
                     /**
                      * 判断参数 DifferenceOffset 是否已赋值
                      * @return DifferenceOffset 是否已赋值
+                     * 
                      */
                     bool DifferenceOffsetHasBeenSet() const;
 
                     /**
                      * 获取Search criterion: Inconsistent database name
                      * @return DifferenceDB Search criterion: Inconsistent database name
+                     * 
                      */
                     std::string GetDifferenceDB() const;
 
                     /**
                      * 设置Search criterion: Inconsistent database name
-                     * @param DifferenceDB Search criterion: Inconsistent database name
+                     * @param _differenceDB Search criterion: Inconsistent database name
+                     * 
                      */
                     void SetDifferenceDB(const std::string& _differenceDB);
 
                     /**
                      * 判断参数 DifferenceDB 是否已赋值
                      * @return DifferenceDB 是否已赋值
+                     * 
                      */
                     bool DifferenceDBHasBeenSet() const;
 
                     /**
                      * 获取Search criterion: Inconsistent table name
                      * @return DifferenceTable Search criterion: Inconsistent table name
+                     * 
                      */
                     std::string GetDifferenceTable() const;
 
                     /**
                      * 设置Search criterion: Inconsistent table name
-                     * @param DifferenceTable Search criterion: Inconsistent table name
+                     * @param _differenceTable Search criterion: Inconsistent table name
+                     * 
                      */
                     void SetDifferenceTable(const std::string& _differenceTable);
 
                     /**
                      * 判断参数 DifferenceTable 是否已赋值
                      * @return DifferenceTable 是否已赋值
+                     * 
                      */
                     bool DifferenceTableHasBeenSet() const;
 
                     /**
                      * 获取Number of unchecked objects to be returned
                      * @return SkippedLimit Number of unchecked objects to be returned
+                     * 
                      */
                     uint64_t GetSkippedLimit() const;
 
                     /**
                      * 设置Number of unchecked objects to be returned
-                     * @param SkippedLimit Number of unchecked objects to be returned
+                     * @param _skippedLimit Number of unchecked objects to be returned
+                     * 
                      */
                     void SetSkippedLimit(const uint64_t& _skippedLimit);
 
                     /**
                      * 判断参数 SkippedLimit 是否已赋值
                      * @return SkippedLimit 是否已赋值
+                     * 
                      */
                     bool SkippedLimitHasBeenSet() const;
 
                     /**
                      * 获取Offset of unchecked objects
                      * @return SkippedOffset Offset of unchecked objects
+                     * 
                      */
                     uint64_t GetSkippedOffset() const;
 
                     /**
                      * 设置Offset of unchecked objects
-                     * @param SkippedOffset Offset of unchecked objects
+                     * @param _skippedOffset Offset of unchecked objects
+                     * 
                      */
                     void SetSkippedOffset(const uint64_t& _skippedOffset);
 
                     /**
                      * 判断参数 SkippedOffset 是否已赋值
                      * @return SkippedOffset 是否已赋值
+                     * 
                      */
                     bool SkippedOffsetHasBeenSet() const;
 
                     /**
                      * 获取Search criterion: Unchecked database name
                      * @return SkippedDB Search criterion: Unchecked database name
+                     * 
                      */
                     std::string GetSkippedDB() const;
 
                     /**
                      * 设置Search criterion: Unchecked database name
-                     * @param SkippedDB Search criterion: Unchecked database name
+                     * @param _skippedDB Search criterion: Unchecked database name
+                     * 
                      */
                     void SetSkippedDB(const std::string& _skippedDB);
 
                     /**
                      * 判断参数 SkippedDB 是否已赋值
                      * @return SkippedDB 是否已赋值
+                     * 
                      */
                     bool SkippedDBHasBeenSet() const;
 
                     /**
                      * 获取Search criterion: Unchecked table name
                      * @return SkippedTable Search criterion: Unchecked table name
+                     * 
                      */
                     std::string GetSkippedTable() const;
 
                     /**
                      * 设置Search criterion: Unchecked table name
-                     * @param SkippedTable Search criterion: Unchecked table name
+                     * @param _skippedTable Search criterion: Unchecked table name
+                     * 
                      */
                     void SetSkippedTable(const std::string& _skippedTable);
 
                     /**
                      * 判断参数 SkippedTable 是否已赋值
                      * @return SkippedTable 是否已赋值
+                     * 
                      */
                     bool SkippedTableHasBeenSet() const;
 

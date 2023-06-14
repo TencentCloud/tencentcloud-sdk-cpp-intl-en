@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterID Cluster ID
+                     * 
                      */
                     std::string GetClusterID() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterID Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
                      */
                     void SetClusterID(const std::string& _clusterID);
 
                     /**
                      * 判断参数 ClusterID 是否已赋值
                      * @return ClusterID 是否已赋值
+                     * 
                      */
                     bool ClusterIDHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartAt Start time
+                     * 
                      */
                     std::string GetStartAt() const;
 
                     /**
                      * 设置Start time
-                     * @param StartAt Start time
+                     * @param _startAt Start time
+                     * 
                      */
                     void SetStartAt(const std::string& _startAt);
 
                     /**
                      * 判断参数 StartAt 是否已赋值
                      * @return StartAt 是否已赋值
+                     * 
                      */
                     bool StartAtHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndAt End time
+                     * 
                      */
                     std::string GetEndAt() const;
 
                     /**
                      * 设置End time
-                     * @param EndAt End time
+                     * @param _endAt End time
+                     * 
                      */
                     void SetEndAt(const std::string& _endAt);
 
                     /**
                      * 判断参数 EndAt 是否已赋值
                      * @return EndAt 是否已赋值
+                     * 
                      */
                     bool EndAtHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`
                      * @return Offset Offset. Default value: `0`
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`
-                     * @param Offset Offset. Default value: `0`
+                     * @param _offset Offset. Default value: `0`
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of output entries. Default value: `20`
                      * @return Limit Maximum number of output entries. Default value: `20`
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of output entries. Default value: `20`
-                     * @param Limit Maximum number of output entries. Default value: `20`
+                     * @param _limit Maximum number of output entries. Default value: `20`
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The start time
                      * @return BeginTime The start time
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置The start time
-                     * @param BeginTime The start time
+                     * @param _beginTime The start time
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time
                      * @return EndTime The end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time
-                     * @param EndTime The end time
+                     * @param _endTime The end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The average execution time threshold of slow query in ms.
                      * @return MinQueryTime The average execution time threshold of slow query in ms.
+                     * 
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
                      * 设置The average execution time threshold of slow query in ms.
-                     * @param MinQueryTime The average execution time threshold of slow query in ms.
+                     * @param _minQueryTime The average execution time threshold of slow query in ms.
+                     * 
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
 
                     /**
                      * 判断参数 MinQueryTime 是否已赋值
                      * @return MinQueryTime 是否已赋值
+                     * 
                      */
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of slow queries displayed per page. Default value: `20`.
                      * @return Limit Number of slow queries displayed per page. Default value: `20`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of slow queries displayed per page. Default value: `20`.
-                     * @param Limit Number of slow queries displayed per page. Default value: `20`.
+                     * @param _limit Number of slow queries displayed per page. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Slow query offset, which is an integral multiple of `Limit`.
                      * @return Offset Slow query offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Slow query offset, which is an integral multiple of `Limit`.
-                     * @param Offset Slow query offset, which is an integral multiple of `Limit`.
+                     * @param _offset Slow query offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
                      * @return Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * 
                      */
                     std::string GetRole() const;
 
                     /**
                      * 设置Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
-                     * @param Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * @param _role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * 
                      */
                     void SetRole(const std::string& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 

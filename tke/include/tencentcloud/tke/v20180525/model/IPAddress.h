@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Type. Valid values: `advertise`, `public`, and others
                      * @return Type Type. Valid values: `advertise`, `public`, and others
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type. Valid values: `advertise`, `public`, and others
-                     * @param Type Type. Valid values: `advertise`, `public`, and others
+                     * @param _type Type. Valid values: `advertise`, `public`, and others
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取IP Address
                      * @return Ip IP Address
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP Address
-                     * @param Ip IP Address
+                     * @param _ip IP Address
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Network port
                      * @return Port Network port
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Network port
-                     * @param Port Network port
+                     * @param _port Network port
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Subscription set. Up to 20 subscriptions can be deleted at a time.
                      * @return SubscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
+                     * 
                      */
                     std::vector<SubscriptionTopic> GetSubscriptionTopicSets() const;
 
                     /**
                      * 设置Subscription set. Up to 20 subscriptions can be deleted at a time.
-                     * @param SubscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
+                     * @param _subscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
+                     * 
                      */
                     void SetSubscriptionTopicSets(const std::vector<SubscriptionTopic>& _subscriptionTopicSets);
 
                     /**
                      * 判断参数 SubscriptionTopicSets 是否已赋值
                      * @return SubscriptionTopicSets 是否已赋值
+                     * 
                      */
                     bool SubscriptionTopicSetsHasBeenSet() const;
 
                     /**
                      * 获取Pulsar cluster ID.
                      * @return ClusterId Pulsar cluster ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Pulsar cluster ID.
-                     * @param ClusterId Pulsar cluster ID.
+                     * @param _clusterId Pulsar cluster ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Environment (namespace) name.
                      * @return EnvironmentId Environment (namespace) name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment (namespace) name.
-                     * @param EnvironmentId Environment (namespace) name.
+                     * @param _environmentId Environment (namespace) name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to forcibly delete a subscription. Default value: `false`.
                      * @return Force Whether to forcibly delete a subscription. Default value: `false`.
+                     * 
                      */
                     bool GetForce() const;
 
                     /**
                      * 设置Whether to forcibly delete a subscription. Default value: `false`.
-                     * @param Force Whether to forcibly delete a subscription. Default value: `false`.
+                     * @param _force Whether to forcibly delete a subscription. Default value: `false`.
+                     * 
                      */
                     void SetForce(const bool& _force);
 
                     /**
                      * 判断参数 Force 是否已赋值
                      * @return Force 是否已赋值
+                     * 
                      */
                     bool ForceHasBeenSet() const;
 

@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Log context information set
                      * @return LogContextInfos Log context information set
+                     * 
                      */
                     std::vector<LogContextInfo> GetLogContextInfos() const;
 
                     /**
                      * 判断参数 LogContextInfos 是否已赋值
                      * @return LogContextInfos 是否已赋值
+                     * 
                      */
                     bool LogContextInfosHasBeenSet() const;
 
                     /**
                      * 获取Whether the previous logs have been returned
                      * @return PrevOver Whether the previous logs have been returned
+                     * 
                      */
                     bool GetPrevOver() const;
 
                     /**
                      * 判断参数 PrevOver 是否已赋值
                      * @return PrevOver 是否已赋值
+                     * 
                      */
                     bool PrevOverHasBeenSet() const;
 
                     /**
                      * 获取Whether the next logs have been returned
                      * @return NextOver Whether the next logs have been returned
+                     * 
                      */
                     bool GetNextOver() const;
 
                     /**
                      * 判断参数 NextOver 是否已赋值
                      * @return NextOver 是否已赋值
+                     * 
                      */
                     bool NextOverHasBeenSet() const;
 

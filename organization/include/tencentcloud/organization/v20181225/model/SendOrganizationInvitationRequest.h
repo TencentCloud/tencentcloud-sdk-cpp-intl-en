@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取UIN of the invitee
                      * @return InviteUin UIN of the invitee
+                     * 
                      */
                     uint64_t GetInviteUin() const;
 
                     /**
                      * 设置UIN of the invitee
-                     * @param InviteUin UIN of the invitee
+                     * @param _inviteUin UIN of the invitee
+                     * 
                      */
                     void SetInviteUin(const uint64_t& _inviteUin);
 
                     /**
                      * 判断参数 InviteUin 是否已赋值
                      * @return InviteUin 是否已赋值
+                     * 
                      */
                     bool InviteUinHasBeenSet() const;
 
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Notes
                      * @return Remark Notes
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Notes
-                     * @param Remark Notes
+                     * @param _remark Notes
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

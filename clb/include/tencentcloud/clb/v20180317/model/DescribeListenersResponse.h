@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Listener list
                      * @return Listeners Listener list
+                     * 
                      */
                     std::vector<Listener> GetListeners() const;
 
                     /**
                      * 判断参数 Listeners 是否已赋值
                      * @return Listeners 是否已赋值
+                     * 
                      */
                     bool ListenersHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of listeners (with filters of port, protocol, and listener ID applied).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

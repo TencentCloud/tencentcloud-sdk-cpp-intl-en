@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return Time Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param Time Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _time Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth in Mbps.
                      * @return Bandwidth Bandwidth in Mbps.
+                     * 
                      */
                     double GetBandwidth() const;
 
                     /**
                      * 设置Bandwidth in Mbps.
-                     * @param Bandwidth Bandwidth in Mbps.
+                     * @param _bandwidth Bandwidth in Mbps.
+                     * 
                      */
                     void SetBandwidth(const double& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取Traffic in MB.
                      * @return Flux Traffic in MB.
+                     * 
                      */
                     double GetFlux() const;
 
                     /**
                      * 设置Traffic in MB.
-                     * @param Flux Traffic in MB.
+                     * @param _flux Traffic in MB.
+                     * 
                      */
                     void SetFlux(const double& _flux);
 
                     /**
                      * 判断参数 Flux 是否已赋值
                      * @return Flux 是否已赋值
+                     * 
                      */
                     bool FluxHasBeenSet() const;
 
                     /**
                      * 获取Number of requests.
                      * @return Request Number of requests.
+                     * 
                      */
                     uint64_t GetRequest() const;
 
                     /**
                      * 设置Number of requests.
-                     * @param Request Number of requests.
+                     * @param _request Number of requests.
+                     * 
                      */
                     void SetRequest(const uint64_t& _request);
 
                     /**
                      * 判断参数 Request 是否已赋值
                      * @return Request 是否已赋值
+                     * 
                      */
                     bool RequestHasBeenSet() const;
 
                     /**
                      * 获取Number of online viewers.
                      * @return Online Number of online viewers.
+                     * 
                      */
                     uint64_t GetOnline() const;
 
                     /**
                      * 设置Number of online viewers.
-                     * @param Online Number of online viewers.
+                     * @param _online Number of online viewers.
+                     * 
                      */
                     void SetOnline(const uint64_t& _online);
 
                     /**
                      * 判断参数 Online 是否已赋值
                      * @return Online 是否已赋值
+                     * 
                      */
                     bool OnlineHasBeenSet() const;
 

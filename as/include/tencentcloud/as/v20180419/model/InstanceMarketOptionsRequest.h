@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Bidding-related options
                      * @return SpotOptions Bidding-related options
+                     * 
                      */
                     SpotMarketOptions GetSpotOptions() const;
 
                     /**
                      * 设置Bidding-related options
-                     * @param SpotOptions Bidding-related options
+                     * @param _spotOptions Bidding-related options
+                     * 
                      */
                     void SetSpotOptions(const SpotMarketOptions& _spotOptions);
 
                     /**
                      * 判断参数 SpotOptions 是否已赋值
                      * @return SpotOptions 是否已赋值
+                     * 
                      */
                     bool SpotOptionsHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MarketType Market option type. Currently, this only supports the value "spot"
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMarketType() const;
 
                     /**
                      * 设置Market option type. Currently, this only supports the value "spot"
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MarketType Market option type. Currently, this only supports the value "spot"
+                     * @param _marketType Market option type. Currently, this only supports the value "spot"
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMarketType(const std::string& _marketType);
 
                     /**
                      * 判断参数 MarketType 是否已赋值
                      * @return MarketType 是否已赋值
+                     * 
                      */
                     bool MarketTypeHasBeenSet() const;
 

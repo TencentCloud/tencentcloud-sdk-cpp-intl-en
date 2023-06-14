@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PlayerSession Player session
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PlayerSession GetPlayerSession() const;
 
                     /**
                      * 判断参数 PlayerSession 是否已赋值
                      * @return PlayerSession 是否已赋值
+                     * 
                      */
                     bool PlayerSessionHasBeenSet() const;
 

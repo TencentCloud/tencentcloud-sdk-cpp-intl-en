@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The template ID.
                      * @return TemplateId The template ID.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置The template ID.
-                     * @param TemplateId The template ID.
+                     * @param _templateId The template ID.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取The template name.
                      * @return TemplateName The template name.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置The template name.
-                     * @param TemplateName The template name.
+                     * @param _templateName The template name.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Log collection configuration in json form
                      * @return LogConfig Log collection configuration in json form
+                     * 
                      */
                     std::string GetLogConfig() const;
 
                     /**
                      * 设置Log collection configuration in json form
-                     * @param LogConfig Log collection configuration in json form
+                     * @param _logConfig Log collection configuration in json form
+                     * 
                      */
                     void SetLogConfig(const std::string& _logConfig);
 
                     /**
                      * 判断参数 LogConfig 是否已赋值
                      * @return LogConfig 是否已赋值
+                     * 
                      */
                     bool LogConfigHasBeenSet() const;
 
                     /**
                      * 获取CLS logset ID
                      * @return LogsetId CLS logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置CLS logset ID
-                     * @param LogsetId CLS logset ID
+                     * @param _logsetId CLS logset ID
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 

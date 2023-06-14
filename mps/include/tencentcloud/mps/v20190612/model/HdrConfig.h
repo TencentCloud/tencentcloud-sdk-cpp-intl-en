@@ -55,6 +55,7 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-                     * @param Switch Whether to enable the feature. Valid values:
+                     * @param _switch Whether to enable the feature. Valid values:
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -91,6 +94,7 @@ Default value: HDR10.
 Note: The video codec must be `libx265`.
 Note: The bit depth for video encoding is 10 bits.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -102,19 +106,21 @@ Default value: HDR10.
 Note: The video codec must be `libx265`.
 Note: The bit depth for video encoding is 10 bits.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type The strength. Valid values:
+                     * @param _type The strength. Valid values:
 <li>HDR10</li>
 <li>HLG</li>
 Default value: HDR10.
 Note: The video codec must be `libx265`.
 Note: The bit depth for video encoding is 10 bits.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

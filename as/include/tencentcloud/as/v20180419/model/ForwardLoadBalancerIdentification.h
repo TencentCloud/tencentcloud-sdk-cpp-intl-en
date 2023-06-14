@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the CLB
                      * @return LoadBalancerId ID of the CLB
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置ID of the CLB
-                     * @param LoadBalancerId ID of the CLB
+                     * @param _loadBalancerId ID of the CLB
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Application CLB listener ID
                      * @return ListenerId Application CLB listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Application CLB listener ID
-                     * @param ListenerId Application CLB listener ID
+                     * @param _listenerId Application CLB listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取ID of a forwarding rule. This parameter is required for layer-7 listeners.
                      * @return LocationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置ID of a forwarding rule. This parameter is required for layer-7 listeners.
-                     * @param LocationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+                     * @param _locationId ID of a forwarding rule. This parameter is required for layer-7 listeners.
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 

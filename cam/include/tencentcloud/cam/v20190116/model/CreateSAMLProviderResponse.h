@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取SAML identity provider resource descriptor
                      * @return ProviderArn SAML identity provider resource descriptor
+                     * 
                      */
                     std::string GetProviderArn() const;
 
                     /**
                      * 判断参数 ProviderArn 是否已赋值
                      * @return ProviderArn 是否已赋值
+                     * 
                      */
                     bool ProviderArnHasBeenSet() const;
 

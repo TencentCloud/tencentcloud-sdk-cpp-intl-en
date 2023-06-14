@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Region information
                      * @return Region Region information
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region information
-                     * @param Region Region information
+                     * @param _region Region information
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Creation time in milliseconds
                      * @return CreateTime Creation time in milliseconds
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time in milliseconds
-                     * @param CreateTime Creation time in milliseconds
+                     * @param _createTime Creation time in milliseconds
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -124,56 +136,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Remark Cluster remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Cluster remarks
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Cluster remarks
+                     * @param _remark Cluster remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Public network access address
                      * @return PublicEndPoint Public network access address
+                     * 
                      */
                     std::string GetPublicEndPoint() const;
 
                     /**
                      * 设置Public network access address
-                     * @param PublicEndPoint Public network access address
+                     * @param _publicEndPoint Public network access address
+                     * 
                      */
                     void SetPublicEndPoint(const std::string& _publicEndPoint);
 
                     /**
                      * 判断参数 PublicEndPoint 是否已赋值
                      * @return PublicEndPoint 是否已赋值
+                     * 
                      */
                     bool PublicEndPointHasBeenSet() const;
 
                     /**
                      * 获取VPC access address
                      * @return VpcEndPoint VPC access address
+                     * 
                      */
                     std::string GetVpcEndPoint() const;
 
                     /**
                      * 设置VPC access address
-                     * @param VpcEndPoint VPC access address
+                     * @param _vpcEndPoint VPC access address
+                     * 
                      */
                     void SetVpcEndPoint(const std::string& _vpcEndPoint);
 
                     /**
                      * 判断参数 VpcEndPoint 是否已赋值
                      * @return VpcEndPoint 是否已赋值
+                     * 
                      */
                     bool VpcEndPointHasBeenSet() const;
 
@@ -182,20 +203,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SupportNamespaceEndpoint Whether the namespace access point is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSupportNamespaceEndpoint() const;
 
                     /**
                      * 设置Whether the namespace access point is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SupportNamespaceEndpoint Whether the namespace access point is supported.
+                     * @param _supportNamespaceEndpoint Whether the namespace access point is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSupportNamespaceEndpoint(const bool& _supportNamespaceEndpoint);
 
                     /**
                      * 判断参数 SupportNamespaceEndpoint 是否已赋值
                      * @return SupportNamespaceEndpoint 是否已赋值
+                     * 
                      */
                     bool SupportNamespaceEndpointHasBeenSet() const;
 
@@ -204,20 +228,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vpcs VPC Information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<VpcConfig> GetVpcs() const;
 
                     /**
                      * 设置VPC Information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Vpcs VPC Information
+                     * @param _vpcs VPC Information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcs(const std::vector<VpcConfig>& _vpcs);
 
                     /**
                      * 判断参数 Vpcs 是否已赋值
                      * @return Vpcs 是否已赋值
+                     * 
                      */
                     bool VpcsHasBeenSet() const;
 
@@ -226,20 +253,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsVip Whether it is an exclusive instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsVip() const;
 
                     /**
                      * 设置Whether it is an exclusive instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsVip Whether it is an exclusive instance
+                     * @param _isVip Whether it is an exclusive instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsVip(const bool& _isVip);
 
                     /**
                      * 判断参数 IsVip 是否已赋值
                      * @return IsVip 是否已赋值
+                     * 
                      */
                     bool IsVipHasBeenSet() const;
 
@@ -248,20 +278,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RocketMQFlag TDMQ for RocketMQ cluster type flag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetRocketMQFlag() const;
 
                     /**
                      * 设置TDMQ for RocketMQ cluster type flag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RocketMQFlag TDMQ for RocketMQ cluster type flag
+                     * @param _rocketMQFlag TDMQ for RocketMQ cluster type flag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRocketMQFlag(const bool& _rocketMQFlag);
 
                     /**
                      * 判断参数 RocketMQFlag 是否已赋值
                      * @return RocketMQFlag 是否已赋值
+                     * 
                      */
                     bool RocketMQFlagHasBeenSet() const;
 
@@ -270,20 +303,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+                     * @param _status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -292,20 +328,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolateTime Service suspension time in milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsolateTime() const;
 
                     /**
                      * 设置Service suspension time in milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsolateTime Service suspension time in milliseconds
+                     * @param _isolateTime Service suspension time in milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsolateTime(const int64_t& _isolateTime);
 
                     /**
                      * 判断参数 IsolateTime 是否已赋值
                      * @return IsolateTime 是否已赋值
+                     * 
                      */
                     bool IsolateTimeHasBeenSet() const;
 
@@ -314,20 +353,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HttpPublicEndpoint HTTP-based public network access address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHttpPublicEndpoint() const;
 
                     /**
                      * 设置HTTP-based public network access address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HttpPublicEndpoint HTTP-based public network access address
+                     * @param _httpPublicEndpoint HTTP-based public network access address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttpPublicEndpoint(const std::string& _httpPublicEndpoint);
 
                     /**
                      * 判断参数 HttpPublicEndpoint 是否已赋值
                      * @return HttpPublicEndpoint 是否已赋值
+                     * 
                      */
                     bool HttpPublicEndpointHasBeenSet() const;
 
@@ -336,20 +378,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HttpVpcEndpoint HTTP-based VPC access address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHttpVpcEndpoint() const;
 
                     /**
                      * 设置HTTP-based VPC access address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HttpVpcEndpoint HTTP-based VPC access address
+                     * @param _httpVpcEndpoint HTTP-based VPC access address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttpVpcEndpoint(const std::string& _httpVpcEndpoint);
 
                     /**
                      * 判断参数 HttpVpcEndpoint 是否已赋值
                      * @return HttpVpcEndpoint 是否已赋值
+                     * 
                      */
                     bool HttpVpcEndpointHasBeenSet() const;
 

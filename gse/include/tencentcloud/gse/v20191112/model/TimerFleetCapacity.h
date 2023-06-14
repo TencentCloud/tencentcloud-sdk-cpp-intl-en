@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return FleetId ID of the fleet to be bound with the policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFleetId() const;
 
                     /**
                      * 设置ID of the fleet to be bound with the policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param FleetId ID of the fleet to be bound with the policy
+                     * @param _fleetId ID of the fleet to be bound with the policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFleetId(const std::string& _fleetId);
 
                     /**
                      * 判断参数 FleetId 是否已赋值
                      * @return FleetId 是否已赋值
+                     * 
                      */
                     bool FleetIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DesiredInstances Desired number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDesiredInstances() const;
 
                     /**
                      * 设置Desired number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DesiredInstances Desired number of instances
+                     * @param _desiredInstances Desired number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDesiredInstances(const int64_t& _desiredInstances);
 
                     /**
                      * 判断参数 DesiredInstances 是否已赋值
                      * @return DesiredInstances 是否已赋值
+                     * 
                      */
                     bool DesiredInstancesHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MinSize Minimum number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMinSize() const;
 
                     /**
                      * 设置Minimum number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MinSize Minimum number of instances
+                     * @param _minSize Minimum number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMinSize(const int64_t& _minSize);
 
                     /**
                      * 判断参数 MinSize 是否已赋值
                      * @return MinSize 是否已赋值
+                     * 
                      */
                     bool MinSizeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MaxSize Maximum number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MaxSize Maximum number of instances
+                     * @param _maxSize Maximum number of instances
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ScalingInterval Scaling cooldown period, in minutes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScalingInterval() const;
 
                     /**
                      * 设置Scaling cooldown period, in minutes
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ScalingInterval Scaling cooldown period, in minutes
+                     * @param _scalingInterval Scaling cooldown period, in minutes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScalingInterval(const int64_t& _scalingInterval);
 
                     /**
                      * 判断参数 ScalingInterval 是否已赋值
                      * @return ScalingInterval 是否已赋值
+                     * 
                      */
                     bool ScalingIntervalHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ScalingType Scaling type. `1`: manual, `2`: automatic, `0`: undefined
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScalingType() const;
 
                     /**
                      * 设置Scaling type. `1`: manual, `2`: automatic, `0`: undefined
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ScalingType Scaling type. `1`: manual, `2`: automatic, `0`: undefined
+                     * @param _scalingType Scaling type. `1`: manual, `2`: automatic, `0`: undefined
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScalingType(const int64_t& _scalingType);
 
                     /**
                      * 判断参数 ScalingType 是否已赋值
                      * @return ScalingType 是否已赋值
+                     * 
                      */
                     bool ScalingTypeHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TargetConfiguration Configuration of target tracking scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     TargetConfiguration GetTargetConfiguration() const;
 
                     /**
                      * 设置Configuration of target tracking scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TargetConfiguration Configuration of target tracking scaling
+                     * @param _targetConfiguration Configuration of target tracking scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargetConfiguration(const TargetConfiguration& _targetConfiguration);
 
                     /**
                      * 判断参数 TargetConfiguration 是否已赋值
                      * @return TargetConfiguration 是否已赋值
+                     * 
                      */
                     bool TargetConfigurationHasBeenSet() const;
 

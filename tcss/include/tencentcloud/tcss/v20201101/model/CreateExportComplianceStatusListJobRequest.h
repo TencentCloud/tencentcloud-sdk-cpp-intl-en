@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Asset type of the information to be exported
                      * @return AssetType Asset type of the information to be exported
+                     * 
                      */
                     std::string GetAssetType() const;
 
                     /**
                      * 设置Asset type of the information to be exported
-                     * @param AssetType Asset type of the information to be exported
+                     * @param _assetType Asset type of the information to be exported
+                     * 
                      */
                     void SetAssetType(const std::string& _assetType);
 
                     /**
                      * 判断参数 AssetType 是否已赋值
                      * @return AssetType 是否已赋值
+                     * 
                      */
                     bool AssetTypeHasBeenSet() const;
 
                     /**
                      * 获取Export by check item or asset. Valid values: `true` (export by asset); `false` (export by check item).
                      * @return ExportByAsset Export by check item or asset. Valid values: `true` (export by asset); `false` (export by check item).
+                     * 
                      */
                     bool GetExportByAsset() const;
 
                     /**
                      * 设置Export by check item or asset. Valid values: `true` (export by asset); `false` (export by check item).
-                     * @param ExportByAsset Export by check item or asset. Valid values: `true` (export by asset); `false` (export by check item).
+                     * @param _exportByAsset Export by check item or asset. Valid values: `true` (export by asset); `false` (export by check item).
+                     * 
                      */
                     void SetExportByAsset(const bool& _exportByAsset);
 
                     /**
                      * 判断参数 ExportByAsset 是否已赋值
                      * @return ExportByAsset 是否已赋值
+                     * 
                      */
                     bool ExportByAssetHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `true` (export all); `false` (export based on the `IdList`).
                      * @return ExportAll Valid values: `true` (export all); `false` (export based on the `IdList`).
+                     * 
                      */
                     bool GetExportAll() const;
 
                     /**
                      * 设置Valid values: `true` (export all); `false` (export based on the `IdList`).
-                     * @param ExportAll Valid values: `true` (export all); `false` (export based on the `IdList`).
+                     * @param _exportAll Valid values: `true` (export all); `false` (export based on the `IdList`).
+                     * 
                      */
                     void SetExportAll(const bool& _exportAll);
 
                     /**
                      * 判断参数 ExportAll 是否已赋值
                      * @return ExportAll 是否已赋值
+                     * 
                      */
                     bool ExportAllHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
                      * @return IdList List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
+                     * 
                      */
                     std::vector<uint64_t> GetIdList() const;
 
                     /**
                      * 设置List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
-                     * @param IdList List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
+                     * @param _idList List of IDs of assets or check items to be exported, which is determined by the value of `ExportByAsset`.
+                     * 
                      */
                     void SetIdList(const std::vector<uint64_t>& _idList);
 
                     /**
                      * 判断参数 IdList 是否已赋值
                      * @return IdList 是否已赋值
+                     * 
                      */
                     bool IdListHasBeenSet() const;
 

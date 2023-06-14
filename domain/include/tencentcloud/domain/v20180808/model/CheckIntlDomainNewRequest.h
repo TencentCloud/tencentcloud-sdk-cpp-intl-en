@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The name of the domain to be checked.
                      * @return Domain The name of the domain to be checked.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The name of the domain to be checked.
-                     * @param Domain The name of the domain to be checked.
+                     * @param _domain The name of the domain to be checked.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Period, in years. If this parameter is left empty, premium domains cannot be queried.
                      * @return Period Period, in years. If this parameter is left empty, premium domains cannot be queried.
+                     * 
                      */
                     std::string GetPeriod() const;
 
                     /**
                      * 设置Period, in years. If this parameter is left empty, premium domains cannot be queried.
-                     * @param Period Period, in years. If this parameter is left empty, premium domains cannot be queried.
+                     * @param _period Period, in years. If this parameter is left empty, premium domains cannot be queried.
+                     * 
                      */
                     void SetPeriod(const std::string& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Array of IDs of the CLB listeners to be queried
                      * @return ListenerIds Array of IDs of the CLB listeners to be queried
+                     * 
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
                      * 设置Array of IDs of the CLB listeners to be queried
-                     * @param ListenerIds Array of IDs of the CLB listeners to be queried
+                     * @param _listenerIds Array of IDs of the CLB listeners to be queried
+                     * 
                      */
                     void SetListenerIds(const std::vector<std::string>& _listenerIds);
 
                     /**
                      * 判断参数 ListenerIds 是否已赋值
                      * @return ListenerIds 是否已赋值
+                     * 
                      */
                     bool ListenerIdsHasBeenSet() const;
 
                     /**
                      * 获取Protocol type of the listener to be queried. Valid values: TCP, UDP.
                      * @return Protocol Protocol type of the listener to be queried. Valid values: TCP, UDP.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol type of the listener to be queried. Valid values: TCP, UDP.
-                     * @param Protocol Protocol type of the listener to be queried. Valid values: TCP, UDP.
+                     * @param _protocol Protocol type of the listener to be queried. Valid values: TCP, UDP.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Port of the listener to be queried
                      * @return Port Port of the listener to be queried
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Port of the listener to be queried
-                     * @param Port Port of the listener to be queried
+                     * @param _port Port of the listener to be queried
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

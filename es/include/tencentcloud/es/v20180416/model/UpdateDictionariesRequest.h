@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取ES instance ID
                      * @return InstanceId ES instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ES instance ID
-                     * @param InstanceId ES instance ID
+                     * @param _instanceId ES instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取COS address of the main dictionary for the IK analyzer
                      * @return IkMainDicts COS address of the main dictionary for the IK analyzer
+                     * 
                      */
                     std::vector<std::string> GetIkMainDicts() const;
 
                     /**
                      * 设置COS address of the main dictionary for the IK analyzer
-                     * @param IkMainDicts COS address of the main dictionary for the IK analyzer
+                     * @param _ikMainDicts COS address of the main dictionary for the IK analyzer
+                     * 
                      */
                     void SetIkMainDicts(const std::vector<std::string>& _ikMainDicts);
 
                     /**
                      * 判断参数 IkMainDicts 是否已赋值
                      * @return IkMainDicts 是否已赋值
+                     * 
                      */
                     bool IkMainDictsHasBeenSet() const;
 
                     /**
                      * 获取COS address of the stopword dictionary for the IK analyzer
                      * @return IkStopwords COS address of the stopword dictionary for the IK analyzer
+                     * 
                      */
                     std::vector<std::string> GetIkStopwords() const;
 
                     /**
                      * 设置COS address of the stopword dictionary for the IK analyzer
-                     * @param IkStopwords COS address of the stopword dictionary for the IK analyzer
+                     * @param _ikStopwords COS address of the stopword dictionary for the IK analyzer
+                     * 
                      */
                     void SetIkStopwords(const std::vector<std::string>& _ikStopwords);
 
                     /**
                      * 判断参数 IkStopwords 是否已赋值
                      * @return IkStopwords 是否已赋值
+                     * 
                      */
                     bool IkStopwordsHasBeenSet() const;
 
                     /**
                      * 获取COS address of the synonym dictionary
                      * @return Synonym COS address of the synonym dictionary
+                     * 
                      */
                     std::vector<std::string> GetSynonym() const;
 
                     /**
                      * 设置COS address of the synonym dictionary
-                     * @param Synonym COS address of the synonym dictionary
+                     * @param _synonym COS address of the synonym dictionary
+                     * 
                      */
                     void SetSynonym(const std::vector<std::string>& _synonym);
 
                     /**
                      * 判断参数 Synonym 是否已赋值
                      * @return Synonym 是否已赋值
+                     * 
                      */
                     bool SynonymHasBeenSet() const;
 
                     /**
                      * 获取COS address of the QQ dictionary
                      * @return QQDict COS address of the QQ dictionary
+                     * 
                      */
                     std::vector<std::string> GetQQDict() const;
 
                     /**
                      * 设置COS address of the QQ dictionary
-                     * @param QQDict COS address of the QQ dictionary
+                     * @param _qQDict COS address of the QQ dictionary
+                     * 
                      */
                     void SetQQDict(const std::vector<std::string>& _qQDict);
 
                     /**
                      * 判断参数 QQDict 是否已赋值
                      * @return QQDict 是否已赋值
+                     * 
                      */
                     bool QQDictHasBeenSet() const;
 
                     /**
                      * 获取`0` (default): Install, `1`: Delete
                      * @return UpdateType `0` (default): Install, `1`: Delete
+                     * 
                      */
                     int64_t GetUpdateType() const;
 
                     /**
                      * 设置`0` (default): Install, `1`: Delete
-                     * @param UpdateType `0` (default): Install, `1`: Delete
+                     * @param _updateType `0` (default): Install, `1`: Delete
+                     * 
                      */
                     void SetUpdateType(const int64_t& _updateType);
 
                     /**
                      * 判断参数 UpdateType 是否已赋值
                      * @return UpdateType 是否已赋值
+                     * 
                      */
                     bool UpdateTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to force restart the cluster. The default value is `false`.
                      * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
+                     * 
                      */
                     bool GetForceRestart() const;
 
                     /**
                      * 设置Whether to force restart the cluster. The default value is `false`.
-                     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
+                     * @param _forceRestart Whether to force restart the cluster. The default value is `false`.
+                     * 
                      */
                     void SetForceRestart(const bool& _forceRestart);
 
                     /**
                      * 判断参数 ForceRestart 是否已赋值
                      * @return ForceRestart 是否已赋值
+                     * 
                      */
                     bool ForceRestartHasBeenSet() const;
 

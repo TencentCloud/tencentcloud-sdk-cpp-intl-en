@@ -58,6 +58,7 @@ A single domain name: Queries domain name details by a domain name. The details 
 Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
 Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
 `all`: Account-level data, which is aggregated details of all domain names of an account.
+                     * 
                      */
                     std::string GetResource() const;
 
@@ -67,35 +68,40 @@ A single domain name: Queries domain name details by a domain name. The details 
 Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
 Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
 `all`: Account-level data, which is aggregated details of all domain names of an account.
-                     * @param Resource Resource name. 
+                     * @param _resource Resource name. 
 A single domain name: Queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true`.
 Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
 Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
 `all`: Account-level data, which is aggregated details of all domain names of an account.
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取Data details of a resource
                      * @return CdnData Data details of a resource
+                     * 
                      */
                     std::vector<CdnData> GetCdnData() const;
 
                     /**
                      * 设置Data details of a resource
-                     * @param CdnData Data details of a resource
+                     * @param _cdnData Data details of a resource
+                     * 
                      */
                     void SetCdnData(const std::vector<CdnData>& _cdnData);
 
                     /**
                      * 判断参数 CdnData 是否已赋值
                      * @return CdnData 是否已赋值
+                     * 
                      */
                     bool CdnDataHasBeenSet() const;
 

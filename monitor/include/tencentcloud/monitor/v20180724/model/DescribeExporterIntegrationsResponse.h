@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of integration configurations
                      * @return IntegrationSet List of integration configurations
+                     * 
                      */
                     std::vector<IntegrationConfiguration> GetIntegrationSet() const;
 
                     /**
                      * 判断参数 IntegrationSet 是否已赋值
                      * @return IntegrationSet 是否已赋值
+                     * 
                      */
                     bool IntegrationSetHasBeenSet() const;
 

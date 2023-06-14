@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordList The number of sessions recorded.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TimeShiftRecord> GetRecordList() const;
 
                     /**
                      * 判断参数 RecordList 是否已赋值
                      * @return RecordList 是否已赋值
+                     * 
                      */
                     bool RecordListHasBeenSet() const;
 

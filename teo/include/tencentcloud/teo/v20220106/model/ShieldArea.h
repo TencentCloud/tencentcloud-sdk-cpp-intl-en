@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site (top-level domain name)
                      * @return ZoneId ID of the site (top-level domain name)
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site (top-level domain name)
-                     * @param ZoneId ID of the site (top-level domain name)
+                     * @param _zoneId ID of the site (top-level domain name)
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Type of protected resource. Values: `domain` and `application`.
                      * @return Type Type of protected resource. Values: `domain` and `application`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of protected resource. Values: `domain` and `application`.
-                     * @param Type Type of protected resource. Values: `domain` and `application`.
+                     * @param _type Type of protected resource. Values: `domain` and `application`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -106,20 +115,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EntityName Layer-4 proxy name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEntityName() const;
 
                     /**
                      * 设置Layer-4 proxy name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param EntityName Layer-4 proxy name
+                     * @param _entityName Layer-4 proxy name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetEntityName(const std::string& _entityName);
 
                     /**
                      * 判断参数 EntityName 是否已赋值
                      * @return EntityName 是否已赋值
+                     * 
                      */
                     bool EntityNameHasBeenSet() const;
 
@@ -128,20 +140,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Application Layer-7 domain name parameters
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<DDoSApplication> GetApplication() const;
 
                     /**
                      * 设置Layer-7 domain name parameters
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Application Layer-7 domain name parameters
+                     * @param _application Layer-7 domain name parameters
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetApplication(const std::vector<DDoSApplication>& _application);
 
                     /**
                      * 判断参数 Application 是否已赋值
                      * @return Application 是否已赋值
+                     * 
                      */
                     bool ApplicationHasBeenSet() const;
 
@@ -150,20 +165,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TcpNum Number of layer-4 TCP forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTcpNum() const;
 
                     /**
                      * 设置Number of layer-4 TCP forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TcpNum Number of layer-4 TCP forwarding rules
+                     * @param _tcpNum Number of layer-4 TCP forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTcpNum(const int64_t& _tcpNum);
 
                     /**
                      * 判断参数 TcpNum 是否已赋值
                      * @return TcpNum 是否已赋值
+                     * 
                      */
                     bool TcpNumHasBeenSet() const;
 
@@ -172,20 +190,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UdpNum Number of layer-4 UDP forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetUdpNum() const;
 
                     /**
                      * 设置Number of layer-4 UDP forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UdpNum Number of layer-4 UDP forwarding rules
+                     * @param _udpNum Number of layer-4 UDP forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUdpNum(const int64_t& _udpNum);
 
                     /**
                      * 判断参数 UdpNum 是否已赋值
                      * @return UdpNum 是否已赋值
+                     * 
                      */
                     bool UdpNumHasBeenSet() const;
 
@@ -194,20 +215,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Entity Name of the protected resource
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置Name of the protected resource
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Entity Name of the protected resource
+                     * @param _entity Name of the protected resource
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
@@ -216,20 +240,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Share Whether the shared resource is used. Values: `true` (yes) and `false` (no). The proxy mode cannot be switched when the shared resource is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetShare() const;
 
                     /**
                      * 设置Whether the shared resource is used. Values: `true` (yes) and `false` (no). The proxy mode cannot be switched when the shared resource is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Share Whether the shared resource is used. Values: `true` (yes) and `false` (no). The proxy mode cannot be switched when the shared resource is used.
+                     * @param _share Whether the shared resource is used. Values: `true` (yes) and `false` (no). The proxy mode cannot be switched when the shared resource is used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetShare(const bool& _share);
 
                     /**
                      * 判断参数 Share 是否已赋值
                      * @return Share 是否已赋值
+                     * 
                      */
                     bool ShareHasBeenSet() const;
 

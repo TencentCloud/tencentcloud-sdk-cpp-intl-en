@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible entries.
                      * @return TotalCount Number of eligible entries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of image sprite generating template details.
                      * @return ImageSpriteTemplateSet List of image sprite generating template details.
+                     * 
                      */
                     std::vector<ImageSpriteTemplate> GetImageSpriteTemplateSet() const;
 
                     /**
                      * 判断参数 ImageSpriteTemplateSet 是否已赋值
                      * @return ImageSpriteTemplateSet 是否已赋值
+                     * 
                      */
                     bool ImageSpriteTemplateSetHasBeenSet() const;
 

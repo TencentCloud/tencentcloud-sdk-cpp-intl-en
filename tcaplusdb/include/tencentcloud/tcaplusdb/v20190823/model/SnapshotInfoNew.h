@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the table group where the table resides
                      * @return TableGroupId The ID of the table group where the table resides
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置The ID of the table group where the table resides
-                     * @param TableGroupId The ID of the table group where the table resides
+                     * @param _tableGroupId The ID of the table group where the table resides
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Table name
                      * @return TableName Table name
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
-                     * @param TableName Table name
+                     * @param _tableName Table name
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
                     /**
                      * 获取Snapshot name
                      * @return SnapshotName Snapshot name
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置Snapshot name
-                     * @param SnapshotName Snapshot name
+                     * @param _snapshotName Snapshot name
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
                      * 获取Snapshot expiration time
                      * @return SnapshotDeadTime Snapshot expiration time
+                     * 
                      */
                     std::string GetSnapshotDeadTime() const;
 
                     /**
                      * 设置Snapshot expiration time
-                     * @param SnapshotDeadTime Snapshot expiration time
+                     * @param _snapshotDeadTime Snapshot expiration time
+                     * 
                      */
                     void SetSnapshotDeadTime(const std::string& _snapshotDeadTime);
 
                     /**
                      * 判断参数 SnapshotDeadTime 是否已赋值
                      * @return SnapshotDeadTime 是否已赋值
+                     * 
                      */
                     bool SnapshotDeadTimeHasBeenSet() const;
 

@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取String ID of the CLB instance.
                      * @return LoadBalancerId String ID of the CLB instance.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置String ID of the CLB instance.
-                     * @param LoadBalancerId String ID of the CLB instance.
+                     * @param _loadBalancerId String ID of the CLB instance.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取VIP of the CLB instance.
                      * @return Vip VIP of the CLB instance.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置VIP of the CLB instance.
-                     * @param Vip VIP of the CLB instance.
+                     * @param _vip VIP of the CLB instance.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Listener rule.
                      * @return Listeners Listener rule.
+                     * 
                      */
                     std::vector<ListenerItem> GetListeners() const;
 
                     /**
                      * 设置Listener rule.
-                     * @param Listeners Listener rule.
+                     * @param _listeners Listener rule.
+                     * 
                      */
                     void SetListeners(const std::vector<ListenerItem>& _listeners);
 
                     /**
                      * 判断参数 Listeners 是否已赋值
                      * @return Listeners 是否已赋值
+                     * 
                      */
                     bool ListenersHasBeenSet() const;
 
                     /**
                      * 获取Region of the CLB instance
                      * @return Region Region of the CLB instance
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region of the CLB instance
-                     * @param Region Region of the CLB instance
+                     * @param _region Region of the CLB instance
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

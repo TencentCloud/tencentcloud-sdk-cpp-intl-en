@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Gets filtering fields of instance list
                      * @return Filter Gets filtering fields of instance list
+                     * 
                      */
                     std::vector<NatFwFilter> GetFilter() const;
 
                     /**
                      * 设置Gets filtering fields of instance list
-                     * @param Filter Gets filtering fields of instance list
+                     * @param _filter Gets filtering fields of instance list
+                     * 
                      */
                     void SetFilter(const std::vector<NatFwFilter>& _filter);
 
                     /**
                      * 判断参数 Filter 是否已赋值
                      * @return Filter 是否已赋值
+                     * 
                      */
                     bool FilterHasBeenSet() const;
 
                     /**
                      * 获取Page number
                      * @return Offset Page number
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number
-                     * @param Offset Page number
+                     * @param _offset Page number
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Page length
                      * @return Limit Page length
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Page length
-                     * @param Limit Page length
+                     * @param _limit Page length
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

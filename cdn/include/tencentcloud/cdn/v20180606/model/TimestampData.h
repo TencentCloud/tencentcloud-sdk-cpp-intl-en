@@ -51,38 +51,44 @@ namespace TencentCloud
 For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
                      * @return Time The start point of the sampling period. 
 For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置The start point of the sampling period. 
 For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
-                     * @param Time The start point of the sampling period. 
+                     * @param _time The start point of the sampling period. 
 For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Data value
                      * @return Value Data value
+                     * 
                      */
                     double GetValue() const;
 
                     /**
                      * 设置Data value
-                     * @param Value Data value
+                     * @param _value Data value
+                     * 
                      */
                     void SetValue(const double& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Environment ID
                      * @return EnvironmentId Environment ID
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Application ID
                      * @return ApplicationId Application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Application name
                      * @return ApplicationName Application name
+                     * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name
-                     * @param ApplicationName Application name
+                     * @param _applicationName Application name
+                     * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
 
                     /**
                      * 判断参数 ApplicationName 是否已赋值
                      * @return ApplicationName 是否已赋值
+                     * 
                      */
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
                      * 获取Name of the rule
                      * @return Name Name of the rule
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the rule
-                     * @param Name Name of the rule
+                     * @param _name Name of the rule
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Default value: 20
                      * @return Limit Number of entries per page. Default value: 20
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Default value: 20
-                     * @param Limit Number of entries per page. Default value: 20
+                     * @param _limit Number of entries per page. Default value: 20
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Paging cursor
                      * @return ContinueToken Paging cursor
+                     * 
                      */
                     std::string GetContinueToken() const;
 
                     /**
                      * 设置Paging cursor
-                     * @param ContinueToken Paging cursor
+                     * @param _continueToken Paging cursor
+                     * 
                      */
                     void SetContinueToken(const std::string& _continueToken);
 
                     /**
                      * 判断参数 ContinueToken 是否已赋值
                      * @return ContinueToken 是否已赋值
+                     * 
                      */
                     bool ContinueTokenHasBeenSet() const;
 

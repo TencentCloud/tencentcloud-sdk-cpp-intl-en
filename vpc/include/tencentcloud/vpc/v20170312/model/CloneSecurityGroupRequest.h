@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
                      * @return SecurityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
-                     * @param SecurityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+                     * @param _securityGroupId ID of the security group to be cloned, such as `sg-33ocnj9n`. This can be obtained through the `DescribeSecurityGroups` API.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
                      * @return GroupName The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
-                     * @param GroupName The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
+                     * @param _groupName The name of security group clone. You can enter any name within 60 characters. If this parameter is left empty, the security group clone will use the name of the source security group.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
                      * @return GroupDescription Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
+                     * 
                      */
                     std::string GetGroupDescription() const;
 
                     /**
                      * 设置Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
-                     * @param GroupDescription Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
+                     * @param _groupDescription Description of the security group clone. You can enter up to 100 characters. If this parameter is left empty, the security group clone will use the description of the source security group.
+                     * 
                      */
                     void SetGroupDescription(const std::string& _groupDescription);
 
                     /**
                      * 判断参数 GroupDescription 是否已赋值
                      * @return GroupDescription 是否已赋值
+                     * 
                      */
                     bool GroupDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
                      * @return ProjectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+                     * 
                      */
                     std::string GetProjectId() const;
 
                     /**
                      * 设置Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
-                     * @param ProjectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+                     * @param _projectId Project ID of the security group clone. The default is 0. You can query it on the project management page of the Tencent Cloud console.
+                     * 
                      */
                     void SetProjectId(const std::string& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
                      * @return RemoteRegion The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
+                     * 
                      */
                     std::string GetRemoteRegion() const;
 
                     /**
                      * 设置The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
-                     * @param RemoteRegion The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
+                     * @param _remoteRegion The region of the source security group for a cross-region clone. For example, to clone the security group in Guangzhou to Shanghai, set it to `ap-guangzhou`.
+                     * 
                      */
                     void SetRemoteRegion(const std::string& _remoteRegion);
 
                     /**
                      * 判断参数 RemoteRegion 是否已赋值
                      * @return RemoteRegion 是否已赋值
+                     * 
                      */
                     bool RemoteRegionHasBeenSet() const;
 

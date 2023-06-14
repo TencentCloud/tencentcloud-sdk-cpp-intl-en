@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Initial offset of the query. Default value: `0`.
                      * @return Offset Initial offset of the query. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Initial offset of the query. Default value: `0`.
-                     * @param Offset Initial offset of the query. Default value: `0`.
+                     * @param _offset Initial offset of the query. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned by the query. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned by the query. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned by the query. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results to be returned by the query. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results to be returned by the query. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query filter. The `Name` field can be "Namespace".
                      * @return Filters Query filter. The `Name` field can be "Namespace".
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
                      * 设置Query filter. The `Name` field can be "Namespace".
-                     * @param Filters Query filter. The `Name` field can be "Namespace".
+                     * @param _filters Query filter. The `Name` field can be "Namespace".
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

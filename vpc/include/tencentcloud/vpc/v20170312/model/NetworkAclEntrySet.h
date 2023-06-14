@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Inbound rules.
                      * @return Ingress Inbound rules.
+                     * 
                      */
                     std::vector<NetworkAclEntry> GetIngress() const;
 
                     /**
                      * 设置Inbound rules.
-                     * @param Ingress Inbound rules.
+                     * @param _ingress Inbound rules.
+                     * 
                      */
                     void SetIngress(const std::vector<NetworkAclEntry>& _ingress);
 
                     /**
                      * 判断参数 Ingress 是否已赋值
                      * @return Ingress 是否已赋值
+                     * 
                      */
                     bool IngressHasBeenSet() const;
 
                     /**
                      * 获取Outbound rules.
                      * @return Egress Outbound rules.
+                     * 
                      */
                     std::vector<NetworkAclEntry> GetEgress() const;
 
                     /**
                      * 设置Outbound rules.
-                     * @param Egress Outbound rules.
+                     * @param _egress Outbound rules.
+                     * 
                      */
                     void SetEgress(const std::vector<NetworkAclEntry>& _egress);
 
                     /**
                      * 判断参数 Egress 是否已赋值
                      * @return Egress 是否已赋值
+                     * 
                      */
                     bool EgressHasBeenSet() const;
 

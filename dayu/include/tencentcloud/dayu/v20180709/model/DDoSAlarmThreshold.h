@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Alarm threshold type. 1: inbound traffic, 2: cleansed traffic
                      * @return AlarmType Alarm threshold type. 1: inbound traffic, 2: cleansed traffic
+                     * 
                      */
                     uint64_t GetAlarmType() const;
 
                     /**
                      * 设置Alarm threshold type. 1: inbound traffic, 2: cleansed traffic
-                     * @param AlarmType Alarm threshold type. 1: inbound traffic, 2: cleansed traffic
+                     * @param _alarmType Alarm threshold type. 1: inbound traffic, 2: cleansed traffic
+                     * 
                      */
                     void SetAlarmType(const uint64_t& _alarmType);
 
                     /**
                      * 判断参数 AlarmType 是否已赋值
                      * @return AlarmType 是否已赋值
+                     * 
                      */
                     bool AlarmTypeHasBeenSet() const;
 
                     /**
                      * 获取Alarm threshold, which should be greater than 0 (currently scheduled value)
                      * @return AlarmThreshold Alarm threshold, which should be greater than 0 (currently scheduled value)
+                     * 
                      */
                     uint64_t GetAlarmThreshold() const;
 
                     /**
                      * 设置Alarm threshold, which should be greater than 0 (currently scheduled value)
-                     * @param AlarmThreshold Alarm threshold, which should be greater than 0 (currently scheduled value)
+                     * @param _alarmThreshold Alarm threshold, which should be greater than 0 (currently scheduled value)
+                     * 
                      */
                     void SetAlarmThreshold(const uint64_t& _alarmThreshold);
 
                     /**
                      * 判断参数 AlarmThreshold 是否已赋值
                      * @return AlarmThreshold 是否已赋值
+                     * 
                      */
                     bool AlarmThresholdHasBeenSet() const;
 

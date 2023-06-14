@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The domain ID.
                      * @return DomainId The domain ID.
+                     * 
                      */
                     std::string GetDomainId() const;
 
                     /**
                      * 设置The domain ID.
-                     * @param DomainId The domain ID.
+                     * @param _domainId The domain ID.
+                     * 
                      */
                     void SetDomainId(const std::string& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable auto-renewal. Valid values: `1` (enable), `2` (disable).
                      * @return AutoRenew Whether to enable auto-renewal. Valid values: `1` (enable), `2` (disable).
+                     * 
                      */
                     int64_t GetAutoRenew() const;
 
                     /**
                      * 设置Whether to enable auto-renewal. Valid values: `1` (enable), `2` (disable).
-                     * @param AutoRenew Whether to enable auto-renewal. Valid values: `1` (enable), `2` (disable).
+                     * @param _autoRenew Whether to enable auto-renewal. Valid values: `1` (enable), `2` (disable).
+                     * 
                      */
                     void SetAutoRenew(const int64_t& _autoRenew);
 
                     /**
                      * 判断参数 AutoRenew 是否已赋值
                      * @return AutoRenew 是否已赋值
+                     * 
                      */
                     bool AutoRenewHasBeenSet() const;
 

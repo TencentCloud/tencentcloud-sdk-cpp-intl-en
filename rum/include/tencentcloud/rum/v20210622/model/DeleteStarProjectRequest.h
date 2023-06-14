@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID, such as taw-123
                      * @return InstanceID Instance ID, such as taw-123
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置Instance ID, such as taw-123
-                     * @param InstanceID Instance ID, such as taw-123
+                     * @param _instanceID Instance ID, such as taw-123
+                     * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ID Project ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ID Project ID
+                     * @param _iD Project ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

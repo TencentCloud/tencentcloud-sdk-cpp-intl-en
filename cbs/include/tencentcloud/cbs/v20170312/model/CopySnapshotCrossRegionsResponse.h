@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Result of the cross-region replication task. The ID of the new snapshot replica is returned if the request succeeds. Otherwise `Error` is returned.
                      * @return SnapshotCopyResultSet Result of the cross-region replication task. The ID of the new snapshot replica is returned if the request succeeds. Otherwise `Error` is returned.
+                     * 
                      */
                     std::vector<SnapshotCopyResult> GetSnapshotCopyResultSet() const;
 
                     /**
                      * 判断参数 SnapshotCopyResultSet 是否已赋值
                      * @return SnapshotCopyResultSet 是否已赋值
+                     * 
                      */
                     bool SnapshotCopyResultSetHasBeenSet() const;
 

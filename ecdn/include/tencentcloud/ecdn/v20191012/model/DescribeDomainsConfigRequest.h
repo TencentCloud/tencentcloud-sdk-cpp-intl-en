@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Pagination offset address. Default value: 0.
                      * @return Offset Pagination offset address. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset address. Default value: 0.
-                     * @param Offset Pagination offset address. Default value: 0.
+                     * @param _offset Pagination offset address. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of domain names per page. Default value: 100.
                      * @return Limit Number of domain names per page. Default value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of domain names per page. Default value: 100.
-                     * @param Limit Number of domain names per page. Default value: 100.
+                     * @param _limit Number of domain names per page. Default value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query filter.
                      * @return Filters Query filter.
+                     * 
                      */
                     std::vector<DomainFilter> GetFilters() const;
 
                     /**
                      * 设置Query filter.
-                     * @param Filters Query filter.
+                     * @param _filters Query filter.
+                     * 
                      */
                     void SetFilters(const std::vector<DomainFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Query result sorting rule.
                      * @return Sort Query result sorting rule.
+                     * 
                      */
                     Sort GetSort() const;
 
                     /**
                      * 设置Query result sorting rule.
-                     * @param Sort Query result sorting rule.
+                     * @param _sort Query result sorting rule.
+                     * 
                      */
                     void SetSort(const Sort& _sort);
 
                     /**
                      * 判断参数 Sort 是否已赋值
                      * @return Sort 是否已赋值
+                     * 
                      */
                     bool SortHasBeenSet() const;
 

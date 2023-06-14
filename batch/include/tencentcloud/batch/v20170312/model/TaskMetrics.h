@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Number of submitted tasks
                      * @return SubmittedCount Number of submitted tasks
+                     * 
                      */
                     int64_t GetSubmittedCount() const;
 
                     /**
                      * 设置Number of submitted tasks
-                     * @param SubmittedCount Number of submitted tasks
+                     * @param _submittedCount Number of submitted tasks
+                     * 
                      */
                     void SetSubmittedCount(const int64_t& _submittedCount);
 
                     /**
                      * 判断参数 SubmittedCount 是否已赋值
                      * @return SubmittedCount 是否已赋值
+                     * 
                      */
                     bool SubmittedCountHasBeenSet() const;
 
                     /**
                      * 获取Number of pending tasks
                      * @return PendingCount Number of pending tasks
+                     * 
                      */
                     int64_t GetPendingCount() const;
 
                     /**
                      * 设置Number of pending tasks
-                     * @param PendingCount Number of pending tasks
+                     * @param _pendingCount Number of pending tasks
+                     * 
                      */
                     void SetPendingCount(const int64_t& _pendingCount);
 
                     /**
                      * 判断参数 PendingCount 是否已赋值
                      * @return PendingCount 是否已赋值
+                     * 
                      */
                     bool PendingCountHasBeenSet() const;
 
                     /**
                      * 获取Number of Runnable tasks
                      * @return RunnableCount Number of Runnable tasks
+                     * 
                      */
                     int64_t GetRunnableCount() const;
 
                     /**
                      * 设置Number of Runnable tasks
-                     * @param RunnableCount Number of Runnable tasks
+                     * @param _runnableCount Number of Runnable tasks
+                     * 
                      */
                     void SetRunnableCount(const int64_t& _runnableCount);
 
                     /**
                      * 判断参数 RunnableCount 是否已赋值
                      * @return RunnableCount 是否已赋值
+                     * 
                      */
                     bool RunnableCountHasBeenSet() const;
 
                     /**
                      * 获取Number of starting tasks
                      * @return StartingCount Number of starting tasks
+                     * 
                      */
                     int64_t GetStartingCount() const;
 
                     /**
                      * 设置Number of starting tasks
-                     * @param StartingCount Number of starting tasks
+                     * @param _startingCount Number of starting tasks
+                     * 
                      */
                     void SetStartingCount(const int64_t& _startingCount);
 
                     /**
                      * 判断参数 StartingCount 是否已赋值
                      * @return StartingCount 是否已赋值
+                     * 
                      */
                     bool StartingCountHasBeenSet() const;
 
                     /**
                      * 获取Number of running tasks
                      * @return RunningCount Number of running tasks
+                     * 
                      */
                     int64_t GetRunningCount() const;
 
                     /**
                      * 设置Number of running tasks
-                     * @param RunningCount Number of running tasks
+                     * @param _runningCount Number of running tasks
+                     * 
                      */
                     void SetRunningCount(const int64_t& _runningCount);
 
                     /**
                      * 判断参数 RunningCount 是否已赋值
                      * @return RunningCount 是否已赋值
+                     * 
                      */
                     bool RunningCountHasBeenSet() const;
 
                     /**
                      * 获取Number of successful tasks
                      * @return SucceedCount Number of successful tasks
+                     * 
                      */
                     int64_t GetSucceedCount() const;
 
                     /**
                      * 设置Number of successful tasks
-                     * @param SucceedCount Number of successful tasks
+                     * @param _succeedCount Number of successful tasks
+                     * 
                      */
                     void SetSucceedCount(const int64_t& _succeedCount);
 
                     /**
                      * 判断参数 SucceedCount 是否已赋值
                      * @return SucceedCount 是否已赋值
+                     * 
                      */
                     bool SucceedCountHasBeenSet() const;
 
                     /**
                      * 获取Number of failed and interrupted tasks
                      * @return FailedInterruptedCount Number of failed and interrupted tasks
+                     * 
                      */
                     int64_t GetFailedInterruptedCount() const;
 
                     /**
                      * 设置Number of failed and interrupted tasks
-                     * @param FailedInterruptedCount Number of failed and interrupted tasks
+                     * @param _failedInterruptedCount Number of failed and interrupted tasks
+                     * 
                      */
                     void SetFailedInterruptedCount(const int64_t& _failedInterruptedCount);
 
                     /**
                      * 判断参数 FailedInterruptedCount 是否已赋值
                      * @return FailedInterruptedCount 是否已赋值
+                     * 
                      */
                     bool FailedInterruptedCountHasBeenSet() const;
 
                     /**
                      * 获取Failed count
                      * @return FailedCount Failed count
+                     * 
                      */
                     int64_t GetFailedCount() const;
 
                     /**
                      * 设置Failed count
-                     * @param FailedCount Failed count
+                     * @param _failedCount Failed count
+                     * 
                      */
                     void SetFailedCount(const int64_t& _failedCount);
 
                     /**
                      * 判断参数 FailedCount 是否已赋值
                      * @return FailedCount 是否已赋值
+                     * 
                      */
                     bool FailedCountHasBeenSet() const;
 

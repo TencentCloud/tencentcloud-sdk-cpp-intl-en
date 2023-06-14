@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Image ID list, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
                      * @return BlueprintIds Image ID list, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+                     * 
                      */
                     std::vector<std::string> GetBlueprintIds() const;
 
                     /**
                      * 设置Image ID list, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
-                     * @param BlueprintIds Image ID list, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+                     * @param _blueprintIds Image ID list, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetBlueprintIds(const std::vector<std::string>& _blueprintIds);
 
                     /**
                      * 判断参数 BlueprintIds 是否已赋值
                      * @return BlueprintIds 是否已赋值
+                     * 
                      */
                     bool BlueprintIdsHasBeenSet() const;
 

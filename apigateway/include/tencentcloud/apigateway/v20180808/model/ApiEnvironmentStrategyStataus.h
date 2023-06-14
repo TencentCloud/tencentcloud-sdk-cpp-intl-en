@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of throttling policies bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of throttling policies bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of throttling policies bound to API.
+                     * @param _totalCount Number of throttling policies bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiEnvironmentStrategySet List of throttling policies bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiEnvironmentStrategy> GetApiEnvironmentStrategySet() const;
 
                     /**
                      * 设置List of throttling policies bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiEnvironmentStrategySet List of throttling policies bound to API.
+                     * @param _apiEnvironmentStrategySet List of throttling policies bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiEnvironmentStrategySet(const std::vector<ApiEnvironmentStrategy>& _apiEnvironmentStrategySet);
 
                     /**
                      * 判断参数 ApiEnvironmentStrategySet 是否已赋值
                      * @return ApiEnvironmentStrategySet 是否已赋值
+                     * 
                      */
                     bool ApiEnvironmentStrategySetHasBeenSet() const;
 

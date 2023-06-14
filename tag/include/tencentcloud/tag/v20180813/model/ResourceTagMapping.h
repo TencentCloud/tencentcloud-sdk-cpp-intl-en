@@ -52,38 +52,44 @@ namespace TencentCloud
 For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
                      * @return Resource Six-segment resource description. Tencent Cloud uses a six-segment value to describe a resource.
 For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
+                     * 
                      */
                     std::string GetResource() const;
 
                     /**
                      * 设置Six-segment resource description. Tencent Cloud uses a six-segment value to describe a resource.
 For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
-                     * @param Resource Six-segment resource description. Tencent Cloud uses a six-segment value to describe a resource.
+                     * @param _resource Six-segment resource description. Tencent Cloud uses a six-segment value to describe a resource.
 For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取List of tags associated with the resource
                      * @return Tags List of tags associated with the resource
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of tags associated with the resource
-                     * @param Tags List of tags associated with the resource
+                     * @param _tags List of tags associated with the resource
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

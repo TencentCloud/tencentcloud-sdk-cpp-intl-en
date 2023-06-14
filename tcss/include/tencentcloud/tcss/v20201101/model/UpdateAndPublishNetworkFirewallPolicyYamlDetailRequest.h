@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Policy ID
                      * @return Id Policy ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param Id Policy ID
+                     * @param _id Policy ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded NetworkPolicy YAML string
                      * @return Yaml Base64-encoded NetworkPolicy YAML string
+                     * 
                      */
                     std::string GetYaml() const;
 
                     /**
                      * 设置Base64-encoded NetworkPolicy YAML string
-                     * @param Yaml Base64-encoded NetworkPolicy YAML string
+                     * @param _yaml Base64-encoded NetworkPolicy YAML string
+                     * 
                      */
                     void SetYaml(const std::string& _yaml);
 
                     /**
                      * 判断参数 Yaml 是否已赋值
                      * @return Yaml 是否已赋值
+                     * 
                      */
                     bool YamlHasBeenSet() const;
 
                     /**
                      * 获取Policy description
                      * @return Description Policy description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Policy description
-                     * @param Description Policy description
+                     * @param _description Policy description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

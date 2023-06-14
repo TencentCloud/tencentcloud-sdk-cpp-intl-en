@@ -50,24 +50,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Events Event list
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribeProductEventListEvents> GetEvents() const;
 
                     /**
                      * 判断参数 Events 是否已赋值
                      * @return Events 是否已赋值
+                     * 
                      */
                     bool EventsHasBeenSet() const;
 
                     /**
                      * 获取Event statistics.
                      * @return OverView Event statistics.
+                     * 
                      */
                     DescribeProductEventListOverView GetOverView() const;
 
                     /**
                      * 判断参数 OverView 是否已赋值
                      * @return OverView 是否已赋值
+                     * 
                      */
                     bool OverViewHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Total Total number of events.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

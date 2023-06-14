@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -87,6 +93,7 @@ namespace TencentCloud
                      * @return Filters Filter
 <li>Level- String - Required: No - Vulnerability level</li>
 <li>Name - String - Required: No - Vulnerability name</li>
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
@@ -94,87 +101,101 @@ namespace TencentCloud
                      * 设置Filter
 <li>Level- String - Required: No - Vulnerability level</li>
 <li>Name - String - Required: No - Vulnerability name</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>Level- String - Required: No - Vulnerability level</li>
 <li>Name - String - Required: No - Vulnerability name</li>
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageInfo Image ID
+                     * 
                      */
                     ImageInfo GetImageInfo() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageInfo Image ID
+                     * @param _imageInfo Image ID
+                     * 
                      */
                     void SetImageInfo(const ImageInfo& _imageInfo);
 
                     /**
                      * 判断参数 ImageInfo 是否已赋值
                      * @return ImageInfo 是否已赋值
+                     * 
                      */
                     bool ImageInfoHasBeenSet() const;
 
                     /**
                      * 获取Sorting field: `Level`.
                      * @return By Sorting field: `Level`.
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field: `Level`.
-                     * @param By Sorting field: `Level`.
+                     * @param _by Sorting field: `Level`.
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `+`, `-`.
                      * @return Order Sorting order. Valid values: `+`, `-`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order. Valid values: `+`, `-`.
-                     * @param Order Sorting order. Valid values: `+`, `-`.
+                     * @param _order Sorting order. Valid values: `+`, `-`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return Id Image ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Image ID
-                     * @param Id Image ID
+                     * @param _id Image ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

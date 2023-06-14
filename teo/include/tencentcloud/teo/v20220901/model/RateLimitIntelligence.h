@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable configuration. Values:
+                     * @param _switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -79,6 +82,7 @@ namespace TencentCloud
                      * @return Action Action to be executed. Values:
 <li>`monitor`: Observe</li>
 <li>`alg`: Challenge</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -86,33 +90,38 @@ namespace TencentCloud
                      * 设置Action to be executed. Values:
 <li>`monitor`: Observe</li>
 <li>`alg`: Challenge</li>
-                     * @param Action Action to be executed. Values:
+                     * @param _action Action to be executed. Values:
 <li>`monitor`: Observe</li>
 <li>`alg`: Challenge</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取The rule ID, which is only used as a response parameter.
                      * @return RuleId The rule ID, which is only used as a response parameter.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置The rule ID, which is only used as a response parameter.
-                     * @param RuleId The rule ID, which is only used as a response parameter.
+                     * @param _ruleId The rule ID, which is only used as a response parameter.
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

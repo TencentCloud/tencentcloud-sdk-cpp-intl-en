@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取ID of the created cluster check task. `0` indicates that the creation failed.
                      * @return TaskId ID of the created cluster check task. `0` indicates that the creation failed.
+                     * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Result of creating the check task. Valid values: `Succ`, `Failed`.
                      * @return CreateResult Result of creating the check task. Valid values: `Succ`, `Failed`.
+                     * 
                      */
                     std::string GetCreateResult() const;
 
                     /**
                      * 判断参数 CreateResult 是否已赋值
                      * @return CreateResult 是否已赋值
+                     * 
                      */
                     bool CreateResultHasBeenSet() const;
 

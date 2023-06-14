@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Referer blacklist/whitelist configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Referer blacklist/whitelist configuration switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Referer blacklist/whitelist configuration switch
+                     * @param _switch Referer blacklist/whitelist configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RefererRules Referer blacklist/whitelist configuration rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<RefererRule> GetRefererRules() const;
 
                     /**
                      * 设置Referer blacklist/whitelist configuration rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RefererRules Referer blacklist/whitelist configuration rule
+                     * @param _refererRules Referer blacklist/whitelist configuration rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRefererRules(const std::vector<RefererRule>& _refererRules);
 
                     /**
                      * 判断参数 RefererRules 是否已赋值
                      * @return RefererRules 是否已赋值
+                     * 
                      */
                     bool RefererRulesHasBeenSet() const;
 

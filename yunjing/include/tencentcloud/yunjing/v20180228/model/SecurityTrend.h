@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Event time.
                      * @return Date Event time.
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Event time.
-                     * @param Date Event time.
+                     * @param _date Event time.
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
                     /**
                      * 获取Number of events.
                      * @return EventNum Number of events.
+                     * 
                      */
                     uint64_t GetEventNum() const;
 
                     /**
                      * 设置Number of events.
-                     * @param EventNum Number of events.
+                     * @param _eventNum Number of events.
+                     * 
                      */
                     void SetEventNum(const uint64_t& _eventNum);
 
                     /**
                      * 判断参数 EventNum 是否已赋值
                      * @return EventNum 是否已赋值
+                     * 
                      */
                     bool EventNumHasBeenSet() const;
 

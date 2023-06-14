@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Date for query, such as `2021-05-27`. You can select a date as early as in the last 30 days for query.
                      * @return Date Date for query, such as `2021-05-27`. You can select a date as early as in the last 30 days for query.
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Date for query, such as `2021-05-27`. You can select a date as early as in the last 30 days for query.
-                     * @param Date Date for query, such as `2021-05-27`. You can select a date as early as in the last 30 days for query.
+                     * @param _date Date for query, such as `2021-05-27`. You can select a date as early as in the last 30 days for query.
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid value: `redis` (TencentDB for Redis).
                      * @return Product Service type. Valid value: `redis` (TencentDB for Redis).
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid value: `redis` (TencentDB for Redis).
-                     * @param Product Service type. Valid value: `redis` (TencentDB for Redis).
+                     * @param _product Service type. Valid value: `redis` (TencentDB for Redis).
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取The number of queried items. Default value: `20`. Max value: `100`.
                      * @return Limit The number of queried items. Default value: `20`. Max value: `100`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of queried items. Default value: `20`. Max value: `100`.
-                     * @param Limit The number of queried items. Default value: `20`. Max value: `100`.
+                     * @param _limit The number of queried items. Default value: `20`. Max value: `100`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -52,36 +52,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      * @return InstanceId Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * @param InstanceId Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param _instanceId Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Database account, including username and host address.
                      * @return Accounts Database account, including username and host address.
+                     * 
                      */
                     std::vector<Account> GetAccounts() const;
 
                     /**
                      * 设置Database account, including username and host address.
-                     * @param Accounts Database account, including username and host address.
+                     * @param _accounts Database account, including username and host address.
+                     * 
                      */
                     void SetAccounts(const std::vector<Account>& _accounts);
 
                     /**
                      * 判断参数 Accounts 是否已赋值
                      * @return Accounts 是否已赋值
+                     * 
                      */
                     bool AccountsHasBeenSet() const;
 
@@ -90,20 +96,23 @@ namespace TencentCloud
 Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
                      * @return GlobalPrivileges Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
 Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
+                     * 
                      */
                     std::vector<std::string> GetGlobalPrivileges() const;
 
                     /**
                      * 设置Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
 Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
-                     * @param GlobalPrivileges Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+                     * @param _globalPrivileges Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
 Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
+                     * 
                      */
                     void SetGlobalPrivileges(const std::vector<std::string>& _globalPrivileges);
 
                     /**
                      * 判断参数 GlobalPrivileges 是否已赋值
                      * @return GlobalPrivileges 是否已赋值
+                     * 
                      */
                     bool GlobalPrivilegesHasBeenSet() const;
 
@@ -112,20 +121,23 @@ Note: if the parameter is left empty, no change will be made to the granted glob
 Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
                      * @return DatabasePrivileges Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
 Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     std::vector<DatabasePrivilege> GetDatabasePrivileges() const;
 
                     /**
                      * 设置Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
 Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
-                     * @param DatabasePrivileges Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+                     * @param _databasePrivileges Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
 Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     void SetDatabasePrivileges(const std::vector<DatabasePrivilege>& _databasePrivileges);
 
                     /**
                      * 判断参数 DatabasePrivileges 是否已赋值
                      * @return DatabasePrivileges 是否已赋值
+                     * 
                      */
                     bool DatabasePrivilegesHasBeenSet() const;
 
@@ -134,20 +146,23 @@ Note: if the parameter is left empty, no change will be made to the granted data
 Note: if the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
                      * @return TablePrivileges Database table permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
 Note: if the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     std::vector<TablePrivilege> GetTablePrivileges() const;
 
                     /**
                      * 设置Database table permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
 Note: if the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
-                     * @param TablePrivileges Database table permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
+                     * @param _tablePrivileges Database table permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
 Note: if the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     void SetTablePrivileges(const std::vector<TablePrivilege>& _tablePrivileges);
 
                     /**
                      * 判断参数 TablePrivileges 是否已赋值
                      * @return TablePrivileges 是否已赋值
+                     * 
                      */
                     bool TablePrivilegesHasBeenSet() const;
 
@@ -156,20 +171,23 @@ Note: if the parameter is not passed in, no change will be made to the granted t
 Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
                      * @return ColumnPrivileges Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
 Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     std::vector<ColumnPrivilege> GetColumnPrivileges() const;
 
                     /**
                      * 设置Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
 Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
-                     * @param ColumnPrivileges Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
+                     * @param _columnPrivileges Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
 Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     void SetColumnPrivileges(const std::vector<ColumnPrivilege>& _columnPrivileges);
 
                     /**
                      * 判断参数 ColumnPrivileges 是否已赋值
                      * @return ColumnPrivileges 是否已赋值
+                     * 
                      */
                     bool ColumnPrivilegesHasBeenSet() const;
 
@@ -178,20 +196,23 @@ Note: if the parameter is left empty, no change will be made to the granted colu
 Note: if the parameter is not passed in, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
                      * @return ViewPrivileges Database view permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
 Note: if the parameter is not passed in, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     std::vector<ViewPrivileges> GetViewPrivileges() const;
 
                     /**
                      * 设置Database view permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
 Note: if the parameter is not passed in, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
-                     * @param ViewPrivileges Database view permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
+                     * @param _viewPrivileges Database view permission. Valid values of `Privileges`: `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `CREATE`, `DROP`, `REFERENCES`, `INDEX`, `ALTER`, `CREATE VIEW`, `SHOW VIEW`, `TRIGGER`.
 Note: if the parameter is not passed in, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     void SetViewPrivileges(const std::vector<ViewPrivileges>& _viewPrivileges);
 
                     /**
                      * 判断参数 ViewPrivileges 是否已赋值
                      * @return ViewPrivileges 是否已赋值
+                     * 
                      */
                     bool ViewPrivilegesHasBeenSet() const;
 
@@ -200,20 +221,23 @@ Note: if the parameter is not passed in, no change will be made to the granted v
 Note: if the parameter is not passed in, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
                      * @return FunctionPrivileges Database function permissions. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
 Note: if the parameter is not passed in, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     std::vector<FunctionPrivilege> GetFunctionPrivileges() const;
 
                     /**
                      * 设置Database function permissions. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
 Note: if the parameter is not passed in, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
-                     * @param FunctionPrivileges Database function permissions. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
+                     * @param _functionPrivileges Database function permissions. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
 Note: if the parameter is not passed in, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     void SetFunctionPrivileges(const std::vector<FunctionPrivilege>& _functionPrivileges);
 
                     /**
                      * 判断参数 FunctionPrivileges 是否已赋值
                      * @return FunctionPrivileges 是否已赋值
+                     * 
                      */
                     bool FunctionPrivilegesHasBeenSet() const;
 
@@ -222,20 +246,23 @@ Note: if the parameter is not passed in, no change will be made to the granted f
 Note: if the parameter is not passed in, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
                      * @return ProcedurePrivileges Database stored procedure permission. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
 Note: if the parameter is not passed in, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     std::vector<ProcedurePrivilege> GetProcedurePrivileges() const;
 
                     /**
                      * 设置Database stored procedure permission. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
 Note: if the parameter is not passed in, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
-                     * @param ProcedurePrivileges Database stored procedure permission. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
+                     * @param _procedurePrivileges Database stored procedure permission. Valid values of `Privileges`: `ALTER ROUTINE`, `EXECUTE`.
 Note: if the parameter is not passed in, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
+                     * 
                      */
                     void SetProcedurePrivileges(const std::vector<ProcedurePrivilege>& _procedurePrivileges);
 
                     /**
                      * 判断参数 ProcedurePrivileges 是否已赋值
                      * @return ProcedurePrivileges 是否已赋值
+                     * 
                      */
                     bool ProcedurePrivilegesHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Message Error message.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Message Error message.
+                     * @param _message Error message.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

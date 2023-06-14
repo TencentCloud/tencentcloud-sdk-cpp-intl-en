@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取Information list of all IDL files uploaded and verified in this request
                      * @return IdlFiles Information list of all IDL files uploaded and verified in this request
+                     * 
                      */
                     std::vector<IdlFileInfo> GetIdlFiles() const;
 
                     /**
                      * 判断参数 IdlFiles 是否已赋值
                      * @return IdlFiles 是否已赋值
+                     * 
                      */
                     bool IdlFilesHasBeenSet() const;
 
                     /**
                      * 获取Number of valid tables parsed by reading IDL description file, excluding tables already created
                      * @return TotalCount Number of valid tables parsed by reading IDL description file, excluding tables already created
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of valid tables parsed by reading IDL description file, excluding tables already created
                      * @return TableInfos List of valid tables parsed by reading IDL description file, excluding tables already created
+                     * 
                      */
                     std::vector<ParsedTableInfoNew> GetTableInfos() const;
 
                     /**
                      * 判断参数 TableInfos 是否已赋值
                      * @return TableInfos 是否已赋值
+                     * 
                      */
                     bool TableInfosHasBeenSet() const;
 

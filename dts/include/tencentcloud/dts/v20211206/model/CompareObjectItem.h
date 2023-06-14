@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DbName Database name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDbName() const;
 
                     /**
                      * 设置Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DbName Database name
+                     * @param _dbName Database name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDbName(const std::string& _dbName);
 
                     /**
                      * 判断参数 DbName 是否已赋值
                      * @return DbName 是否已赋值
+                     * 
                      */
                     bool DbNameHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DbMode Database selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDbMode() const;
 
                     /**
                      * 设置Database selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DbMode Database selection mode. Valid values: `all`, `partial`.
+                     * @param _dbMode Database selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDbMode(const std::string& _dbMode);
 
                     /**
                      * 判断参数 DbMode 是否已赋值
                      * @return DbMode 是否已赋值
+                     * 
                      */
                     bool DbModeHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SchemaName Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSchemaName() const;
 
                     /**
                      * 设置Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SchemaName Schema name
+                     * @param _schemaName Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSchemaName(const std::string& _schemaName);
 
                     /**
                      * 判断参数 SchemaName 是否已赋值
                      * @return SchemaName 是否已赋值
+                     * 
                      */
                     bool SchemaNameHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TableMode Schema selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableMode() const;
 
                     /**
                      * 设置Schema selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TableMode Schema selection mode. Valid values: `all`, `partial`.
+                     * @param _tableMode Schema selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableMode(const std::string& _tableMode);
 
                     /**
                      * 判断参数 TableMode 是否已赋值
                      * @return TableMode 是否已赋值
+                     * 
                      */
                     bool TableModeHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tables Table configuration for data consistency check, which is required if `TableMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CompareTableItem> GetTables() const;
 
                     /**
                      * 设置Table configuration for data consistency check, which is required if `TableMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tables Table configuration for data consistency check, which is required if `TableMode` is `partial`.
+                     * @param _tables Table configuration for data consistency check, which is required if `TableMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTables(const std::vector<CompareTableItem>& _tables);
 
                     /**
                      * 判断参数 Tables 是否已赋值
                      * @return Tables 是否已赋值
+                     * 
                      */
                     bool TablesHasBeenSet() const;
 
@@ -163,20 +178,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ViewMode View selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetViewMode() const;
 
                     /**
                      * 设置View selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ViewMode View selection mode. Valid values: `all`, `partial`.
+                     * @param _viewMode View selection mode. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetViewMode(const std::string& _viewMode);
 
                     /**
                      * 判断参数 ViewMode 是否已赋值
                      * @return ViewMode 是否已赋值
+                     * 
                      */
                     bool ViewModeHasBeenSet() const;
 
@@ -185,20 +203,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CompareViewItem> GetViews() const;
 
                     /**
                      * 设置View configuration for data consistency check, which is required if `ViewMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
+                     * @param _views View configuration for data consistency check, which is required if `ViewMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetViews(const std::vector<CompareViewItem>& _views);
 
                     /**
                      * 判断参数 Views 是否已赋值
                      * @return Views 是否已赋值
+                     * 
                      */
                     bool ViewsHasBeenSet() const;
 

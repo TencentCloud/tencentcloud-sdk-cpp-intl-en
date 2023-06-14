@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取PolicyId
                      * @return PolicyIndex PolicyId
+                     * 
                      */
                     int64_t GetPolicyIndex() const;
 
                     /**
                      * 设置PolicyId
-                     * @param PolicyIndex PolicyId
+                     * @param _policyIndex PolicyId
+                     * 
                      */
                     void SetPolicyIndex(const int64_t& _policyIndex);
 
                     /**
                      * 判断参数 PolicyIndex 是否已赋值
                      * @return PolicyIndex 是否已赋值
+                     * 
                      */
                     bool PolicyIndexHasBeenSet() const;
 
                     /**
                      * 获取Allowed IP, such as `192.168.0.0/24`
                      * @return CidrBlock Allowed IP, such as `192.168.0.0/24`
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置Allowed IP, such as `192.168.0.0/24`
-                     * @param CidrBlock Allowed IP, such as `192.168.0.0/24`
+                     * @param _cidrBlock Allowed IP, such as `192.168.0.0/24`
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Description Remarks
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Remarks
-                     * @param Description Remarks
+                     * @param _description Remarks
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

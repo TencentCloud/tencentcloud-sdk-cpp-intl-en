@@ -55,6 +55,7 @@ namespace TencentCloud
                      * @return Type Exception mode. Values:
 <li>`complete`: Skip the exception rule for full requests.</li>
 <li>`partial`: Skip the exception rule for partial requests.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -62,15 +63,17 @@ namespace TencentCloud
                      * 设置Exception mode. Values:
 <li>`complete`: Skip the exception rule for full requests.</li>
 <li>`partial`: Skip the exception rule for partial requests.</li>
-                     * @param Type Exception mode. Values:
+                     * @param _type Exception mode. Values:
 <li>`complete`: Skip the exception rule for full requests.</li>
 <li>`partial`: Skip the exception rule for partial requests.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -89,6 +92,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>`cc`: CC attack defense</li>
 <li>`bot`: Bot protection</li>
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetModules() const;
 
@@ -100,19 +104,21 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>`cc`: CC attack defense</li>
 <li>`bot`: Bot protection</li>
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Modules The module to be activated. Values:
+                     * @param _modules The module to be activated. Values:
 <li>`waf`: Tencent Cloud-managed rules</li>
 <li>`rate`: Rate limiting rules</li>
 <li>`acl`: Custom rule</li>
 <li>`cc`: CC attack defense</li>
 <li>`bot`: Bot protection</li>
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetModules(const std::vector<std::string>& _modules);
 
                     /**
                      * 判断参数 Modules 是否已赋值
                      * @return Modules 是否已赋值
+                     * 
                      */
                     bool ModulesHasBeenSet() const;
 
@@ -121,20 +127,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<PartialModule> GetPartialModules() const;
 
                     /**
                      * 设置Module settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+                     * @param _partialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPartialModules(const std::vector<PartialModule>& _partialModules);
 
                     /**
                      * 判断参数 PartialModules 是否已赋值
                      * @return PartialModules 是否已赋值
+                     * 
                      */
                     bool PartialModulesHasBeenSet() const;
 
@@ -143,20 +152,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<SkipCondition> GetSkipConditions() const;
 
                     /**
                      * 设置Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+                     * @param _skipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSkipConditions(const std::vector<SkipCondition>& _skipConditions);
 
                     /**
                      * 判断参数 SkipConditions 是否已赋值
                      * @return SkipConditions 是否已赋值
+                     * 
                      */
                     bool SkipConditionsHasBeenSet() const;
 

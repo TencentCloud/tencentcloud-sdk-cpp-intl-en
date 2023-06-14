@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 

@@ -47,56 +47,65 @@ namespace TencentCloud
 Note: only one of `AccessGroupId`, `FileSystemId`, and `OwnerUin` can be specified as the input parameter
                      * @return FileSystemId File system ID
 Note: only one of `AccessGroupId`, `FileSystemId`, and `OwnerUin` can be specified as the input parameter
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 设置File system ID
 Note: only one of `AccessGroupId`, `FileSystemId`, and `OwnerUin` can be specified as the input parameter
-                     * @param FileSystemId File system ID
+                     * @param _fileSystemId File system ID
 Note: only one of `AccessGroupId`, `FileSystemId`, and `OwnerUin` can be specified as the input parameter
+                     * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
                      * 获取Permission group ID
                      * @return AccessGroupId Permission group ID
+                     * 
                      */
                     std::string GetAccessGroupId() const;
 
                     /**
                      * 设置Permission group ID
-                     * @param AccessGroupId Permission group ID
+                     * @param _accessGroupId Permission group ID
+                     * 
                      */
                     void SetAccessGroupId(const std::string& _accessGroupId);
 
                     /**
                      * 判断参数 AccessGroupId 是否已赋值
                      * @return AccessGroupId 是否已赋值
+                     * 
                      */
                     bool AccessGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Resource owner `Uin`
                      * @return OwnerUin Resource owner `Uin`
+                     * 
                      */
                     uint64_t GetOwnerUin() const;
 
                     /**
                      * 设置Resource owner `Uin`
-                     * @param OwnerUin Resource owner `Uin`
+                     * @param _ownerUin Resource owner `Uin`
+                     * 
                      */
                     void SetOwnerUin(const uint64_t& _ownerUin);
 
                     /**
                      * 判断参数 OwnerUin 是否已赋值
                      * @return OwnerUin 是否已赋值
+                     * 
                      */
                     bool OwnerUinHasBeenSet() const;
 

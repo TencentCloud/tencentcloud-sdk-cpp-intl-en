@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Switch Authentication switch, which can be on or off.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Authentication switch, which can be on or off.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Switch Authentication switch, which can be on or off.
+                     * @param _switch Authentication switch, which can be on or off.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TypeA Authentication type configuration A
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     OriginAuthenticationTypeA GetTypeA() const;
 
                     /**
                      * 设置Authentication type configuration A
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TypeA Authentication type configuration A
+                     * @param _typeA Authentication type configuration A
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeA(const OriginAuthenticationTypeA& _typeA);
 
                     /**
                      * 判断参数 TypeA 是否已赋值
                      * @return TypeA 是否已赋值
+                     * 
                      */
                     bool TypeAHasBeenSet() const;
 

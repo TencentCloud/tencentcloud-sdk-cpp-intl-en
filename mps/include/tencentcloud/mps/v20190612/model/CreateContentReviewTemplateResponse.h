@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the content moderation template.
                      * @return Definition The unique ID of the content moderation template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

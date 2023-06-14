@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterVersion Cluster version
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
                      * 判断参数 ClusterVersion 是否已赋值
                      * @return ClusterVersion 是否已赋值
+                     * 
                      */
                     bool ClusterVersionHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AvailableExtraArgs Available custom parameters
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     EdgeAvailableExtraArgs GetAvailableExtraArgs() const;
 
                     /**
                      * 判断参数 AvailableExtraArgs 是否已赋值
                      * @return AvailableExtraArgs 是否已赋值
+                     * 
                      */
                     bool AvailableExtraArgsHasBeenSet() const;
 

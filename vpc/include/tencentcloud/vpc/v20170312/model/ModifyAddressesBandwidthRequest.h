@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取List of EIP IDs, such as “eip-xxxx”.
                      * @return AddressIds List of EIP IDs, such as “eip-xxxx”.
+                     * 
                      */
                     std::vector<std::string> GetAddressIds() const;
 
                     /**
                      * 设置List of EIP IDs, such as “eip-xxxx”.
-                     * @param AddressIds List of EIP IDs, such as “eip-xxxx”.
+                     * @param _addressIds List of EIP IDs, such as “eip-xxxx”.
+                     * 
                      */
                     void SetAddressIds(const std::vector<std::string>& _addressIds);
 
                     /**
                      * 判断参数 AddressIds 是否已赋值
                      * @return AddressIds 是否已赋值
+                     * 
                      */
                     bool AddressIdsHasBeenSet() const;
 
                     /**
                      * 获取Target bandwidth value adjustment
                      * @return InternetMaxBandwidthOut Target bandwidth value adjustment
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置Target bandwidth value adjustment
-                     * @param InternetMaxBandwidthOut Target bandwidth value adjustment
+                     * @param _internetMaxBandwidthOut Target bandwidth value adjustment
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取(Disused) The start time of the monthly bandwidth subscription
                      * @return StartTime (Disused) The start time of the monthly bandwidth subscription
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置(Disused) The start time of the monthly bandwidth subscription
-                     * @param StartTime (Disused) The start time of the monthly bandwidth subscription
+                     * @param _startTime (Disused) The start time of the monthly bandwidth subscription
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取(Disused) The end time of the monthly bandwidth subscription
                      * @return EndTime (Disused) The end time of the monthly bandwidth subscription
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置(Disused) The end time of the monthly bandwidth subscription
-                     * @param EndTime (Disused) The end time of the monthly bandwidth subscription
+                     * @param _endTime (Disused) The end time of the monthly bandwidth subscription
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

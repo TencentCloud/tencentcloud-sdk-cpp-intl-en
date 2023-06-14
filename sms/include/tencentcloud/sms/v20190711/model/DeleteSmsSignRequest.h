@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of signature to be deleted.
                      * @return SignId ID of signature to be deleted.
+                     * 
                      */
                     uint64_t GetSignId() const;
 
                     /**
                      * 设置ID of signature to be deleted.
-                     * @param SignId ID of signature to be deleted.
+                     * @param _signId ID of signature to be deleted.
+                     * 
                      */
                     void SetSignId(const uint64_t& _signId);
 
                     /**
                      * 判断参数 SignId 是否已赋值
                      * @return SignId 是否已赋值
+                     * 
                      */
                     bool SignIdHasBeenSet() const;
 

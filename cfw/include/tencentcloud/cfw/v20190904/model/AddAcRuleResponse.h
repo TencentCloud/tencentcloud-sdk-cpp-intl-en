@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取UUID of the new rule
                      * @return RuleUuid UUID of the new rule
+                     * 
                      */
                     int64_t GetRuleUuid() const;
 
                     /**
                      * 判断参数 RuleUuid 是否已赋值
                      * @return RuleUuid 是否已赋值
+                     * 
                      */
                     bool RuleUuidHasBeenSet() const;
 
                     /**
                      * 获取0: operation successful; -1: operation failed
                      * @return ReturnCode 0: operation successful; -1: operation failed
+                     * 
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取success: operation successful; failed: operation failed
                      * @return ReturnMsg success: operation successful; failed: operation failed
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 

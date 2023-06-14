@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Length 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetLength() const;
 
                     /**
                      * 设置0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Length 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid
+                     * @param _length 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLength(const int64_t& _length);
 
                     /**
                      * 判断参数 Length 是否已赋值
                      * @return Length 是否已赋值
+                     * 
                      */
                     bool LengthHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Bang 0: with bangs, 1: no bangs
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBang() const;
 
                     /**
                      * 设置0: with bangs, 1: no bangs
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Bang 0: with bangs, 1: no bangs
+                     * @param _bang 0: with bangs, 1: no bangs
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBang(const int64_t& _bang);
 
                     /**
                      * 判断参数 Bang 是否已赋值
                      * @return Bang 是否已赋值
+                     * 
                      */
                     bool BangHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Color 0: black, 1: golden, 2: brown, 3: gray
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetColor() const;
 
                     /**
                      * 设置0: black, 1: golden, 2: brown, 3: gray
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Color 0: black, 1: golden, 2: brown, 3: gray
+                     * @param _color 0: black, 1: golden, 2: brown, 3: gray
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetColor(const int64_t& _color);
 
                     /**
                      * 判断参数 Color 是否已赋值
                      * @return Color 是否已赋值
+                     * 
                      */
                     bool ColorHasBeenSet() const;
 

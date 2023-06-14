@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Count Number of cloud disks in this type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of cloud disks in this type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Count Number of cloud disks in this type
+                     * @param _count Number of cloud disks in this type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Type Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Type Disk type
+                     * @param _type Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Volume Cloud disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetVolume() const;
 
                     /**
                      * 设置Cloud disk size
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Volume Cloud disk size
+                     * @param _volume Cloud disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVolume(const int64_t& _volume);
 
                     /**
                      * 判断参数 Volume 是否已赋值
                      * @return Volume 是否已赋值
+                     * 
                      */
                     bool VolumeHasBeenSet() const;
 

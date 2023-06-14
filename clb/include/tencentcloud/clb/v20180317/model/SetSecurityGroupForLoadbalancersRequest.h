@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Security group ID, such as sg-12345678
                      * @return SecurityGroup Security group ID, such as sg-12345678
+                     * 
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
                      * 设置Security group ID, such as sg-12345678
-                     * @param SecurityGroup Security group ID, such as sg-12345678
+                     * @param _securityGroup Security group ID, such as sg-12345678
+                     * 
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
 
                     /**
                      * 判断参数 SecurityGroup 是否已赋值
                      * @return SecurityGroup 是否已赋值
+                     * 
                      */
                     bool SecurityGroupHasBeenSet() const;
 
@@ -65,38 +68,44 @@ namespace TencentCloud
 DEL: unbind a security group
                      * @return OperationType ADD: bind a security group;
 DEL: unbind a security group
+                     * 
                      */
                     std::string GetOperationType() const;
 
                     /**
                      * 设置ADD: bind a security group;
 DEL: unbind a security group
-                     * @param OperationType ADD: bind a security group;
+                     * @param _operationType ADD: bind a security group;
 DEL: unbind a security group
+                     * 
                      */
                     void SetOperationType(const std::string& _operationType);
 
                     /**
                      * 判断参数 OperationType 是否已赋值
                      * @return OperationType 是否已赋值
+                     * 
                      */
                     bool OperationTypeHasBeenSet() const;
 
                     /**
                      * 获取Array of CLB instance IDs
                      * @return LoadBalancerIds Array of CLB instance IDs
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置Array of CLB instance IDs
-                     * @param LoadBalancerIds Array of CLB instance IDs
+                     * @param _loadBalancerIds Array of CLB instance IDs
+                     * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 

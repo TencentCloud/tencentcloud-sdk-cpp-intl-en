@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取ENI
                      * @return Interface ENI
+                     * 
                      */
                     std::string GetInterface() const;
 
                     /**
                      * 设置ENI
-                     * @param Interface ENI
+                     * @param _interface ENI
+                     * 
                      */
                     void SetInterface(const std::string& _interface);
 
                     /**
                      * 判断参数 Interface 是否已赋值
                      * @return Interface 是否已赋值
+                     * 
                      */
                     bool InterfaceHasBeenSet() const;
 
                     /**
                      * 获取Name of the name
                      * @return NodeName Name of the name
+                     * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 设置Name of the name
-                     * @param NodeName Name of the name
+                     * @param _nodeName Name of the name
+                     * 
                      */
                     void SetNodeName(const std::string& _nodeName);
 
                     /**
                      * 判断参数 NodeName 是否已赋值
                      * @return NodeName 是否已赋值
+                     * 
                      */
                     bool NodeNameHasBeenSet() const;
 
                     /**
                      * 获取Node configuration in JSON format 
                      * @return Config Node configuration in JSON format 
+                     * 
                      */
                     std::string GetConfig() const;
 
                     /**
                      * 设置Node configuration in JSON format 
-                     * @param Config Node configuration in JSON format 
+                     * @param _config Node configuration in JSON format 
+                     * 
                      */
                     void SetConfig(const std::string& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
                     /**
                      * 获取A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
                      * @return ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     * 
                      */
                     std::string GetScriptVersion() const;
 
                     /**
                      * 设置A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
-                     * @param ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     * @param _scriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     * 
                      */
                     void SetScriptVersion(const std::string& _scriptVersion);
 
                     /**
                      * 判断参数 ScriptVersion 是否已赋值
                      * @return ScriptVersion 是否已赋值
+                     * 
                      */
                     bool ScriptVersionHasBeenSet() const;
 

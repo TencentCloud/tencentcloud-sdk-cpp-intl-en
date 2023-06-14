@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FirstQueryInterval FirstQueryInterval
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFirstQueryInterval() const;
 
                     /**
                      * 设置FirstQueryInterval
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FirstQueryInterval FirstQueryInterval
+                     * @param _firstQueryInterval FirstQueryInterval
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFirstQueryInterval(const uint64_t& _firstQueryInterval);
 
                     /**
                      * 判断参数 FirstQueryInterval 是否已赋值
                      * @return FirstQueryInterval 是否已赋值
+                     * 
                      */
                     bool FirstQueryIntervalHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxQueryCount MaxQueryCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMaxQueryCount() const;
 
                     /**
                      * 设置MaxQueryCount
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxQueryCount MaxQueryCount
+                     * @param _maxQueryCount MaxQueryCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxQueryCount(const uint64_t& _maxQueryCount);
 
                     /**
                      * 判断参数 MaxQueryCount 是否已赋值
                      * @return MaxQueryCount 是否已赋值
+                     * 
                      */
                     bool MaxQueryCountHasBeenSet() const;
 

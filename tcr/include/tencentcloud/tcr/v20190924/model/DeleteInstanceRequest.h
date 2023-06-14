@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to delete the bucket. Default value: false.
                      * @return DeleteBucket Whether to delete the bucket. Default value: false.
+                     * 
                      */
                     bool GetDeleteBucket() const;
 
                     /**
                      * 设置Whether to delete the bucket. Default value: false.
-                     * @param DeleteBucket Whether to delete the bucket. Default value: false.
+                     * @param _deleteBucket Whether to delete the bucket. Default value: false.
+                     * 
                      */
                     void SetDeleteBucket(const bool& _deleteBucket);
 
                     /**
                      * 判断参数 DeleteBucket 是否已赋值
                      * @return DeleteBucket 是否已赋值
+                     * 
                      */
                     bool DeleteBucketHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the `dryRun` mode. Default value: false.
                      * @return DryRun Whether to enable the `dryRun` mode. Default value: false.
+                     * 
                      */
                     bool GetDryRun() const;
 
                     /**
                      * 设置Whether to enable the `dryRun` mode. Default value: false.
-                     * @param DryRun Whether to enable the `dryRun` mode. Default value: false.
+                     * @param _dryRun Whether to enable the `dryRun` mode. Default value: false.
+                     * 
                      */
                     void SetDryRun(const bool& _dryRun);
 
                     /**
                      * 判断参数 DryRun 是否已赋值
                      * @return DryRun 是否已赋值
+                     * 
                      */
                     bool DryRunHasBeenSet() const;
 

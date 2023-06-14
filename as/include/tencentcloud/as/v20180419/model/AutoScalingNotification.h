@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Auto scaling group ID.
                      * @return AutoScalingGroupId Auto scaling group ID.
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Auto scaling group ID.
-                     * @param AutoScalingGroupId Auto scaling group ID.
+                     * @param _autoScalingGroupId Auto scaling group ID.
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取List of user group IDs.
                      * @return NotificationUserGroupIds List of user group IDs.
+                     * 
                      */
                     std::vector<std::string> GetNotificationUserGroupIds() const;
 
                     /**
                      * 设置List of user group IDs.
-                     * @param NotificationUserGroupIds List of user group IDs.
+                     * @param _notificationUserGroupIds List of user group IDs.
+                     * 
                      */
                     void SetNotificationUserGroupIds(const std::vector<std::string>& _notificationUserGroupIds);
 
                     /**
                      * 判断参数 NotificationUserGroupIds 是否已赋值
                      * @return NotificationUserGroupIds 是否已赋值
+                     * 
                      */
                     bool NotificationUserGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取List of notification events.
                      * @return NotificationTypes List of notification events.
+                     * 
                      */
                     std::vector<std::string> GetNotificationTypes() const;
 
                     /**
                      * 设置List of notification events.
-                     * @param NotificationTypes List of notification events.
+                     * @param _notificationTypes List of notification events.
+                     * 
                      */
                     void SetNotificationTypes(const std::vector<std::string>& _notificationTypes);
 
                     /**
                      * 判断参数 NotificationTypes 是否已赋值
                      * @return NotificationTypes 是否已赋值
+                     * 
                      */
                     bool NotificationTypesHasBeenSet() const;
 
                     /**
                      * 获取Event notification ID.
                      * @return AutoScalingNotificationId Event notification ID.
+                     * 
                      */
                     std::string GetAutoScalingNotificationId() const;
 
                     /**
                      * 设置Event notification ID.
-                     * @param AutoScalingNotificationId Event notification ID.
+                     * @param _autoScalingNotificationId Event notification ID.
+                     * 
                      */
                     void SetAutoScalingNotificationId(const std::string& _autoScalingNotificationId);
 
                     /**
                      * 判断参数 AutoScalingNotificationId 是否已赋值
                      * @return AutoScalingNotificationId 是否已赋值
+                     * 
                      */
                     bool AutoScalingNotificationIdHasBeenSet() const;
 
                     /**
                      * 获取Notification receiver type.
                      * @return TargetType Notification receiver type.
+                     * 
                      */
                     std::string GetTargetType() const;
 
                     /**
                      * 设置Notification receiver type.
-                     * @param TargetType Notification receiver type.
+                     * @param _targetType Notification receiver type.
+                     * 
                      */
                     void SetTargetType(const std::string& _targetType);
 
                     /**
                      * 判断参数 TargetType 是否已赋值
                      * @return TargetType 是否已赋值
+                     * 
                      */
                     bool TargetTypeHasBeenSet() const;
 
                     /**
                      * 获取CMQ queue name.
                      * @return QueueName CMQ queue name.
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置CMQ queue name.
-                     * @param QueueName CMQ queue name.
+                     * @param _queueName CMQ queue name.
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取CMQ topic name.
                      * @return TopicName CMQ topic name.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置CMQ topic name.
-                     * @param TopicName CMQ topic name.
+                     * @param _topicName CMQ topic name.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 

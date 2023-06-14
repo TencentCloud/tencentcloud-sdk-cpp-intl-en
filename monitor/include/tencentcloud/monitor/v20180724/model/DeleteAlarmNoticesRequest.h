@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Module name. Enter "monitor" here
                      * @return Module Module name. Enter "monitor" here
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Module name. Enter "monitor" here
-                     * @param Module Module name. Enter "monitor" here
+                     * @param _module Module name. Enter "monitor" here
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Alarm notification template ID list
                      * @return NoticeIds Alarm notification template ID list
+                     * 
                      */
                     std::vector<std::string> GetNoticeIds() const;
 
                     /**
                      * 设置Alarm notification template ID list
-                     * @param NoticeIds Alarm notification template ID list
+                     * @param _noticeIds Alarm notification template ID list
+                     * 
                      */
                     void SetNoticeIds(const std::vector<std::string>& _noticeIds);
 
                     /**
                      * 判断参数 NoticeIds 是否已赋值
                      * @return NoticeIds 是否已赋值
+                     * 
                      */
                     bool NoticeIdsHasBeenSet() const;
 
                     /**
                      * 获取Binding between a notification template and a policy
                      * @return NoticeBindPolicys Binding between a notification template and a policy
+                     * 
                      */
                     std::vector<NoticeBindPolicys> GetNoticeBindPolicys() const;
 
                     /**
                      * 设置Binding between a notification template and a policy
-                     * @param NoticeBindPolicys Binding between a notification template and a policy
+                     * @param _noticeBindPolicys Binding between a notification template and a policy
+                     * 
                      */
                     void SetNoticeBindPolicys(const std::vector<NoticeBindPolicys>& _noticeBindPolicys);
 
                     /**
                      * 判断参数 NoticeBindPolicys 是否已赋值
                      * @return NoticeBindPolicys 是否已赋值
+                     * 
                      */
                     bool NoticeBindPolicysHasBeenSet() const;
 

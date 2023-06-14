@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Topic name.
                      * @return Name Topic name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Topic name.
-                     * @param Name Topic name.
+                     * @param _name Topic name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
                      * @return Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
-                     * @param Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     * @param _type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The number of subscription groups
                      * @return GroupNum The number of subscription groups
+                     * 
                      */
                     uint64_t GetGroupNum() const;
 
                     /**
                      * 设置The number of subscription groups
-                     * @param GroupNum The number of subscription groups
+                     * @param _groupNum The number of subscription groups
+                     * 
                      */
                     void SetGroupNum(const uint64_t& _groupNum);
 
                     /**
                      * 判断参数 GroupNum 是否已赋值
                      * @return GroupNum 是否已赋值
+                     * 
                      */
                     bool GroupNumHasBeenSet() const;
 
@@ -105,74 +114,86 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Description.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Description.
+                     * @param _remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取The number of read/write partitions.
                      * @return PartitionNum The number of read/write partitions.
+                     * 
                      */
                     uint64_t GetPartitionNum() const;
 
                     /**
                      * 设置The number of read/write partitions.
-                     * @param PartitionNum The number of read/write partitions.
+                     * @param _partitionNum The number of read/write partitions.
+                     * 
                      */
                     void SetPartitionNum(const uint64_t& _partitionNum);
 
                     /**
                      * 判断参数 PartitionNum 是否已赋值
                      * @return PartitionNum 是否已赋值
+                     * 
                      */
                     bool PartitionNumHasBeenSet() const;
 
                     /**
                      * 获取Creation time in milliseconds.
                      * @return CreateTime Creation time in milliseconds.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time in milliseconds.
-                     * @param CreateTime Creation time in milliseconds.
+                     * @param _createTime Creation time in milliseconds.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Creation time in milliseconds.
                      * @return UpdateTime Creation time in milliseconds.
+                     * 
                      */
                     uint64_t GetUpdateTime() const;
 
                     /**
                      * 设置Creation time in milliseconds.
-                     * @param UpdateTime Creation time in milliseconds.
+                     * @param _updateTime Creation time in milliseconds.
+                     * 
                      */
                     void SetUpdateTime(const uint64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

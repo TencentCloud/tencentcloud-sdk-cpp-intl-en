@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Brute force attack event ID array.
                      * @return Ids Brute force attack event ID array.
+                     * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
                      * 设置Brute force attack event ID array.
-                     * @param Ids Brute force attack event ID array.
+                     * @param _ids Brute force attack event ID array.
+                     * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

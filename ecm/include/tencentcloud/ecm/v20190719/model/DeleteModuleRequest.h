@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Module ID, such as `em-qn46snq8`.
                      * @return ModuleId Module ID, such as `em-qn46snq8`.
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID, such as `em-qn46snq8`.
-                     * @param ModuleId Module ID, such as `em-qn46snq8`.
+                     * @param _moduleId Module ID, such as `em-qn46snq8`.
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 

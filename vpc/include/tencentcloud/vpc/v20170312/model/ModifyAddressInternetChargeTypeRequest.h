@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique EIP ID, such as "eip-xxxx"
                      * @return AddressId Unique EIP ID, such as "eip-xxxx"
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置Unique EIP ID, such as "eip-xxxx"
-                     * @param AddressId Unique EIP ID, such as "eip-xxxx"
+                     * @param _addressId Unique EIP ID, such as "eip-xxxx"
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 
                     /**
                      * 获取The target billing method. It can be `BANDWIDTH_PREPAID_BY_MONTH` or `TRAFFIC_POSTPAID_BY_HOUR`
                      * @return InternetChargeType The target billing method. It can be `BANDWIDTH_PREPAID_BY_MONTH` or `TRAFFIC_POSTPAID_BY_HOUR`
+                     * 
                      */
                     std::string GetInternetChargeType() const;
 
                     /**
                      * 设置The target billing method. It can be `BANDWIDTH_PREPAID_BY_MONTH` or `TRAFFIC_POSTPAID_BY_HOUR`
-                     * @param InternetChargeType The target billing method. It can be `BANDWIDTH_PREPAID_BY_MONTH` or `TRAFFIC_POSTPAID_BY_HOUR`
+                     * @param _internetChargeType The target billing method. It can be `BANDWIDTH_PREPAID_BY_MONTH` or `TRAFFIC_POSTPAID_BY_HOUR`
+                     * 
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
 
                     /**
                      * 判断参数 InternetChargeType 是否已赋值
                      * @return InternetChargeType 是否已赋值
+                     * 
                      */
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取The target bandwidth value
                      * @return InternetMaxBandwidthOut The target bandwidth value
+                     * 
                      */
                     uint64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置The target bandwidth value
-                     * @param InternetMaxBandwidthOut The target bandwidth value
+                     * @param _internetMaxBandwidthOut The target bandwidth value
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const uint64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取Billing details of monthly-subscribed network bandwidth. This parameter is required if the target billing method is `BANDWIDTH_PREPAID_BY_MONTH`.
                      * @return AddressChargePrepaid Billing details of monthly-subscribed network bandwidth. This parameter is required if the target billing method is `BANDWIDTH_PREPAID_BY_MONTH`.
+                     * 
                      */
                     AddressChargePrepaid GetAddressChargePrepaid() const;
 
                     /**
                      * 设置Billing details of monthly-subscribed network bandwidth. This parameter is required if the target billing method is `BANDWIDTH_PREPAID_BY_MONTH`.
-                     * @param AddressChargePrepaid Billing details of monthly-subscribed network bandwidth. This parameter is required if the target billing method is `BANDWIDTH_PREPAID_BY_MONTH`.
+                     * @param _addressChargePrepaid Billing details of monthly-subscribed network bandwidth. This parameter is required if the target billing method is `BANDWIDTH_PREPAID_BY_MONTH`.
+                     * 
                      */
                     void SetAddressChargePrepaid(const AddressChargePrepaid& _addressChargePrepaid);
 
                     /**
                      * 判断参数 AddressChargePrepaid 是否已赋值
                      * @return AddressChargePrepaid 是否已赋值
+                     * 
                      */
                     bool AddressChargePrepaidHasBeenSet() const;
 

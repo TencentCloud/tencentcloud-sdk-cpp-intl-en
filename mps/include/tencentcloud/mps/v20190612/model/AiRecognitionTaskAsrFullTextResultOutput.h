@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取List of full speech recognition segments.
                      * @return SegmentSet List of full speech recognition segments.
+                     * 
                      */
                     std::vector<AiRecognitionTaskAsrFullTextSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of full speech recognition segments.
-                     * @param SegmentSet List of full speech recognition segments.
+                     * @param _segmentSet List of full speech recognition segments.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskAsrFullTextSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 
                     /**
                      * 获取Subtitles file address.
                      * @return SubtitlePath Subtitles file address.
+                     * 
                      */
                     std::string GetSubtitlePath() const;
 
                     /**
                      * 设置Subtitles file address.
-                     * @param SubtitlePath Subtitles file address.
+                     * @param _subtitlePath Subtitles file address.
+                     * 
                      */
                     void SetSubtitlePath(const std::string& _subtitlePath);
 
                     /**
                      * 判断参数 SubtitlePath 是否已赋值
                      * @return SubtitlePath 是否已赋值
+                     * 
                      */
                     bool SubtitlePathHasBeenSet() const;
 
                     /**
                      * 获取Subtitles file storage location.
                      * @return OutputStorage Subtitles file storage location.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置Subtitles file storage location.
-                     * @param OutputStorage Subtitles file storage location.
+                     * @param _outputStorage Subtitles file storage location.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 

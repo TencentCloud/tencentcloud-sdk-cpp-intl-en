@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the task
                      * @return BeginTime Start time of the task
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time of the task
-                     * @param BeginTime Start time of the task
+                     * @param _beginTime Start time of the task
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取Task recurrence in hours
                      * @return IntervalTime Task recurrence in hours
+                     * 
                      */
                     uint64_t GetIntervalTime() const;
 
                     /**
                      * 设置Task recurrence in hours
-                     * @param IntervalTime Task recurrence in hours
+                     * @param _intervalTime Task recurrence in hours
+                     * 
                      */
                     void SetIntervalTime(const uint64_t& _intervalTime);
 
                     /**
                      * 判断参数 IntervalTime 是否已赋值
                      * @return IntervalTime 是否已赋值
+                     * 
                      */
                     bool IntervalTimeHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
                      * @return TermCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     * 
                      */
                     uint64_t GetTermCycle() const;
 
                     /**
                      * 设置Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
-                     * @param TermCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     * @param _termCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     * 
                      */
                     void SetTermCycle(const uint64_t& _termCycle);
 
                     /**
                      * 判断参数 TermCycle 是否已赋值
                      * @return TermCycle 是否已赋值
+                     * 
                      */
                     bool TermCycleHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported.
                      * @return ImageContent The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported.
+                     * 
                      */
                     std::string GetImageContent() const;
 
                     /**
                      * 设置The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported.
-                     * @param ImageContent The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported.
+                     * @param _imageContent The [Base64](https://tools.ietf.org/html/rfc4648) encoded string of a watermark image. Only JPEG, PNG, and GIF images are supported.
+                     * 
                      */
                     void SetImageContent(const std::string& _imageContent);
 
                     /**
                      * 判断参数 ImageContent 是否已赋值
                      * @return ImageContent 是否已赋值
+                     * 
                      */
                     bool ImageContentHasBeenSet() const;
 
@@ -73,6 +76,7 @@ Default value: 10%.
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width. For example, `10%` means that `Width` is 10% of the video width;</li>
 <li>If the string ends in px, the `Width` of the watermark will be in pixels. For example, `100px` means that `Width` is 100 pixels. Value range: [8, 4096].</li>
 Default value: 10%.
+                     * 
                      */
                     std::string GetWidth() const;
 
@@ -81,16 +85,18 @@ Default value: 10%.
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width. For example, `10%` means that `Width` is 10% of the video width;</li>
 <li>If the string ends in px, the `Width` of the watermark will be in pixels. For example, `100px` means that `Width` is 100 pixels. Value range: [8, 4096].</li>
 Default value: 10%.
-                     * @param Width Watermark width. % and px formats are supported:
+                     * @param _width Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width. For example, `10%` means that `Width` is 10% of the video width;</li>
 <li>If the string ends in px, the `Width` of the watermark will be in pixels. For example, `100px` means that `Width` is 100 pixels. Value range: [8, 4096].</li>
 Default value: 10%.
+                     * 
                      */
                     void SetWidth(const std::string& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -103,6 +109,7 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px. Valid values: 0 or [8,4096].</li>
 Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+                     * 
                      */
                     std::string GetHeight() const;
 
@@ -111,16 +118,18 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px. Valid values: 0 or [8,4096].</li>
 Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
-                     * @param Height Watermark height. % and px formats are supported:
+                     * @param _height Watermark height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px. Valid values: 0 or [8,4096].</li>
 Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+                     * 
                      */
                     void SetHeight(const std::string& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -133,6 +142,7 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+                     * 
                      */
                     std::string GetRepeatType() const;
 
@@ -141,16 +151,18 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
-                     * @param RepeatType Repeat type of an animated watermark. Valid values:
+                     * @param _repeatType Repeat type of an animated watermark. Valid values:
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+                     * 
                      */
                     void SetRepeatType(const std::string& _repeatType);
 
                     /**
                      * 判断参数 RepeatType 是否已赋值
                      * @return RepeatType 是否已赋值
+                     * 
                      */
                     bool RepeatTypeHasBeenSet() const;
 

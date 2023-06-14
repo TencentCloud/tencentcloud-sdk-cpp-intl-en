@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
     b. Uppercase letters (A–Z)
     c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * 
                      */
                     std::string GetPassword() const;
 
@@ -86,37 +90,42 @@ namespace TencentCloud
     b. Uppercase letters (A–Z)
     c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-                     * @param Password 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+                     * @param _password 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
 2. It cannot start with a slash (/).
 3. It must contain characters in at least two of the following types:
     a. Lowercase letters (a–z)
     b. Uppercase letters (A–Z)
     c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Node information of a single-AZ deployed instance
                      * @return ShardIds Node information of a single-AZ deployed instance
+                     * 
                      */
                     std::vector<int64_t> GetShardIds() const;
 
                     /**
                      * 设置Node information of a single-AZ deployed instance
-                     * @param ShardIds Node information of a single-AZ deployed instance
+                     * @param _shardIds Node information of a single-AZ deployed instance
+                     * 
                      */
                     void SetShardIds(const std::vector<int64_t>& _shardIds);
 
                     /**
                      * 判断参数 ShardIds 是否已赋值
                      * @return ShardIds 是否已赋值
+                     * 
                      */
                     bool ShardIdsHasBeenSet() const;
 

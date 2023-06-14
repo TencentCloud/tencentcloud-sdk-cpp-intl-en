@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Resource type, for example `CBS`
                      * @return ResourceType Resource type, for example `CBS`
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type, for example `CBS`
-                     * @param ResourceType Resource type, for example `CBS`
+                     * @param _resourceType Resource type, for example `CBS`
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
                      * @return DeleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+                     * 
                      */
                     std::string GetDeleteMode() const;
 
                     /**
                      * 设置Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
-                     * @param DeleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+                     * @param _deleteMode Specifies the policy to deal with resources in the cluster when the cluster is deleted. It can be `terminate` or `retain`.
+                     * 
                      */
                     void SetDeleteMode(const std::string& _deleteMode);
 
                     /**
                      * 判断参数 DeleteMode 是否已赋值
                      * @return DeleteMode 是否已赋值
+                     * 
                      */
                     bool DeleteModeHasBeenSet() const;
 

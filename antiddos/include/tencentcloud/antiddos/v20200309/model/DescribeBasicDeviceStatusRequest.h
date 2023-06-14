@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IP resources
                      * @return IpList List of IP resources
+                     * 
                      */
                     std::vector<std::string> GetIpList() const;
 
                     /**
                      * 设置List of IP resources
-                     * @param IpList List of IP resources
+                     * @param _ipList List of IP resources
+                     * 
                      */
                     void SetIpList(const std::vector<std::string>& _ipList);
 
                     /**
                      * 判断参数 IpList 是否已赋值
                      * @return IpList 是否已赋值
+                     * 
                      */
                     bool IpListHasBeenSet() const;
 

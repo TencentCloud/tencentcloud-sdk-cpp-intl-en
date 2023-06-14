@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The consortium ID.
                      * @return ConsortiumId The consortium ID.
+                     * 
                      */
                     uint64_t GetConsortiumId() const;
 
                     /**
                      * 设置The consortium ID.
-                     * @param ConsortiumId The consortium ID.
+                     * @param _consortiumId The consortium ID.
+                     * 
                      */
                     void SetConsortiumId(const uint64_t& _consortiumId);
 
                     /**
                      * 判断参数 ConsortiumId 是否已赋值
                      * @return ConsortiumId 是否已赋值
+                     * 
                      */
                     bool ConsortiumIdHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Acceleration domain name
                      * @return Domain Acceleration domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Acceleration domain name
-                     * @param Domain Acceleration domain name
+                     * @param _domain Acceleration domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -69,6 +72,7 @@ If this parameter is left empty, edge server information will be returned by def
 `edge`: Edge server
 `last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
+                     * 
                      */
                     std::string GetLayer() const;
 
@@ -77,16 +81,18 @@ If this parameter is left empty, edge server information will be returned by def
 `edge`: Edge server
 `last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
-                     * @param Layer Node type.
+                     * @param _layer Node type.
 `edge`: Edge server
 `last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
+                     * 
                      */
                     void SetLayer(const std::string& _layer);
 
                     /**
                      * 判断参数 Layer 是否已赋值
                      * @return Layer 是否已赋值
+                     * 
                      */
                     bool LayerHasBeenSet() const;
 
@@ -99,6 +105,7 @@ If this parameter is left empty, edge server information will be returned by def
 `mainland`: Nodes in the Chinese mainland
 `overseas`: Nodes outside the Chinese mainland
 `global`: Global nodes
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -107,70 +114,81 @@ If this parameter is left empty, edge server information will be returned by def
 `mainland`: Nodes in the Chinese mainland
 `overseas`: Nodes outside the Chinese mainland
 `global`: Global nodes
-                     * @param Area Specifies a region to query.
+                     * @param _area Specifies a region to query.
 `mainland`: Nodes in the Chinese mainland
 `overseas`: Nodes outside the Chinese mainland
 `global`: Global nodes
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Whether to return a value as an IP range
                      * @return Segment Whether to return a value as an IP range
+                     * 
                      */
                     bool GetSegment() const;
 
                     /**
                      * 设置Whether to return a value as an IP range
-                     * @param Segment Whether to return a value as an IP range
+                     * @param _segment Whether to return a value as an IP range
+                     * 
                      */
                     void SetSegment(const bool& _segment);
 
                     /**
                      * 判断参数 Segment 是否已赋值
                      * @return Segment 是否已赋值
+                     * 
                      */
                     bool SegmentHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return ShowIpv6 
+                     * 
                      */
                     bool GetShowIpv6() const;
 
                     /**
                      * 设置
-                     * @param ShowIpv6 
+                     * @param _showIpv6 
+                     * 
                      */
                     void SetShowIpv6(const bool& _showIpv6);
 
                     /**
                      * 判断参数 ShowIpv6 是否已赋值
                      * @return ShowIpv6 是否已赋值
+                     * 
                      */
                     bool ShowIpv6HasBeenSet() const;
 
                     /**
                      * 获取Whether to abbreviate the IPv6 address.
                      * @return AbbreviationIpv6 Whether to abbreviate the IPv6 address.
+                     * 
                      */
                     bool GetAbbreviationIpv6() const;
 
                     /**
                      * 设置Whether to abbreviate the IPv6 address.
-                     * @param AbbreviationIpv6 Whether to abbreviate the IPv6 address.
+                     * @param _abbreviationIpv6 Whether to abbreviate the IPv6 address.
+                     * 
                      */
                     void SetAbbreviationIpv6(const bool& _abbreviationIpv6);
 
                     /**
                      * 判断参数 AbbreviationIpv6 是否已赋值
                      * @return AbbreviationIpv6 是否已赋值
+                     * 
                      */
                     bool AbbreviationIpv6HasBeenSet() const;
 

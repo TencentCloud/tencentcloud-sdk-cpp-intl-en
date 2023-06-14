@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The LVB domain name bound successfully
                      * @return LVBDomain The LVB domain name bound successfully
+                     * 
                      */
                     std::string GetLVBDomain() const;
 
                     /**
                      * 判断参数 LVBDomain 是否已赋值
                      * @return LVBDomain 是否已赋值
+                     * 
                      */
                     bool LVBDomainHasBeenSet() const;
 

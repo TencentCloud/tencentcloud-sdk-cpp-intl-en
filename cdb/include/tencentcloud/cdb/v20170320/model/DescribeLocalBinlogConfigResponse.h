@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Binlog retention policy of the instance.
                      * @return LocalBinlogConfig Binlog retention policy of the instance.
+                     * 
                      */
                     LocalBinlogConfig GetLocalBinlogConfig() const;
 
                     /**
                      * 判断参数 LocalBinlogConfig 是否已赋值
                      * @return LocalBinlogConfig 是否已赋值
+                     * 
                      */
                     bool LocalBinlogConfigHasBeenSet() const;
 
                     /**
                      * 获取Default binlog retention policy in the region.
                      * @return LocalBinlogConfigDefault Default binlog retention policy in the region.
+                     * 
                      */
                     LocalBinlogConfigDefault GetLocalBinlogConfigDefault() const;
 
                     /**
                      * 判断参数 LocalBinlogConfigDefault 是否已赋值
                      * @return LocalBinlogConfigDefault 是否已赋值
+                     * 
                      */
                     bool LocalBinlogConfigDefaultHasBeenSet() const;
 

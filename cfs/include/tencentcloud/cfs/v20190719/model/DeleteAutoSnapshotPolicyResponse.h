@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot policy ID
                      * @return AutoSnapshotPolicyId Snapshot policy ID
+                     * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
                      * 判断参数 AutoSnapshotPolicyId 是否已赋值
                      * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 

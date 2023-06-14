@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取List of layer-4 forwarding listeners
                      * @return Layer4Listeners List of layer-4 forwarding listeners
+                     * 
                      */
                     std::vector<Layer4Rule> GetLayer4Listeners() const;
 
                     /**
                      * 判断参数 Layer4Listeners 是否已赋值
                      * @return Layer4Listeners 是否已赋值
+                     * 
                      */
                     bool Layer4ListenersHasBeenSet() const;
 
                     /**
                      * 获取List of layer-7 forwarding listeners
                      * @return Layer7Listeners List of layer-7 forwarding listeners
+                     * 
                      */
                     std::vector<Layer7Rule> GetLayer7Listeners() const;
 
                     /**
                      * 判断参数 Layer7Listeners 是否已赋值
                      * @return Layer7Listeners 是否已赋值
+                     * 
                      */
                     bool Layer7ListenersHasBeenSet() const;
 

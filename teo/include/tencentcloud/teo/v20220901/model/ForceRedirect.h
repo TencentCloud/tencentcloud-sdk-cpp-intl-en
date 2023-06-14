@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable force HTTPS redirect. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable force HTTPS redirect. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable force HTTPS redirect. Values:
+                     * @param _switch Whether to enable force HTTPS redirect. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`301`: 301 redirect</li>
 <li>`302`: 302 redirect</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRedirectStatusCode() const;
 
@@ -89,16 +93,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`301`: 301 redirect</li>
 <li>`302`: 302 redirect</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RedirectStatusCode Redirect status code. Values:
+                     * @param _redirectStatusCode Redirect status code. Values:
 <li>`301`: 301 redirect</li>
 <li>`302`: 302 redirect</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRedirectStatusCode(const int64_t& _redirectStatusCode);
 
                     /**
                      * 判断参数 RedirectStatusCode 是否已赋值
                      * @return RedirectStatusCode 是否已赋值
+                     * 
                      */
                     bool RedirectStatusCodeHasBeenSet() const;
 

@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The query dimension value.
                      * @return TypeKey The query dimension value.
+                     * 
                      */
                     std::string GetTypeKey() const;
 
                     /**
                      * 设置The query dimension value.
-                     * @param TypeKey The query dimension value.
+                     * @param _typeKey The query dimension value.
+                     * 
                      */
                     void SetTypeKey(const std::string& _typeKey);
 
                     /**
                      * 判断参数 TypeKey 是否已赋值
                      * @return TypeKey 是否已赋值
+                     * 
                      */
                     bool TypeKeyHasBeenSet() const;
 
                     /**
                      * 获取Top data rankings
                      * @return DetailData Top data rankings
+                     * 
                      */
                     std::vector<TopDetailData> GetDetailData() const;
 
                     /**
                      * 设置Top data rankings
-                     * @param DetailData Top data rankings
+                     * @param _detailData Top data rankings
+                     * 
                      */
                     void SetDetailData(const std::vector<TopDetailData>& _detailData);
 
                     /**
                      * 判断参数 DetailData 是否已赋值
                      * @return DetailData 是否已赋值
+                     * 
                      */
                     bool DetailDataHasBeenSet() const;
 

@@ -53,36 +53,42 @@ namespace TencentCloud
                     /**
                      * 获取Input ID.
                      * @return InputId Input ID.
+                     * 
                      */
                     std::string GetInputId() const;
 
                     /**
                      * 设置Input ID.
-                     * @param InputId Input ID.
+                     * @param _inputId Input ID.
+                     * 
                      */
                     void SetInputId(const std::string& _inputId);
 
                     /**
                      * 判断参数 InputId 是否已赋值
                      * @return InputId 是否已赋值
+                     * 
                      */
                     bool InputIdHasBeenSet() const;
 
                     /**
                      * 获取Input name.
                      * @return InputName Input name.
+                     * 
                      */
                     std::string GetInputName() const;
 
                     /**
                      * 设置Input name.
-                     * @param InputName Input name.
+                     * @param _inputName Input name.
+                     * 
                      */
                     void SetInputName(const std::string& _inputName);
 
                     /**
                      * 判断参数 InputName 是否已赋值
                      * @return InputName 是否已赋值
+                     * 
                      */
                     bool InputNameHasBeenSet() const;
 
@@ -91,74 +97,86 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Input description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Input description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Input description.
+                     * @param _description Input description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Input protocol.
                      * @return Protocol Input protocol.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Input protocol.
-                     * @param Protocol Input protocol.
+                     * @param _protocol Input protocol.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Input address list.
                      * @return InputAddressList Input address list.
+                     * 
                      */
                     std::vector<InputAddress> GetInputAddressList() const;
 
                     /**
                      * 设置Input address list.
-                     * @param InputAddressList Input address list.
+                     * @param _inputAddressList Input address list.
+                     * 
                      */
                     void SetInputAddressList(const std::vector<InputAddress>& _inputAddressList);
 
                     /**
                      * 判断参数 InputAddressList 是否已赋值
                      * @return InputAddressList 是否已赋值
+                     * 
                      */
                     bool InputAddressListHasBeenSet() const;
 
                     /**
                      * 获取Input IP allowlist.
                      * @return AllowIpList Input IP allowlist.
+                     * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
                      * 设置Input IP allowlist.
-                     * @param AllowIpList Input IP allowlist.
+                     * @param _allowIpList Input IP allowlist.
+                     * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
 
                     /**
                      * 判断参数 AllowIpList 是否已赋值
                      * @return AllowIpList 是否已赋值
+                     * 
                      */
                     bool AllowIpListHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SRTSettings SRT configuration information of input.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribeInputSRTSettings GetSRTSettings() const;
 
                     /**
                      * 设置SRT configuration information of input.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SRTSettings SRT configuration information of input.
+                     * @param _sRTSettings SRT configuration information of input.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSRTSettings(const DescribeInputSRTSettings& _sRTSettings);
 
                     /**
                      * 判断参数 SRTSettings 是否已赋值
                      * @return SRTSettings 是否已赋值
+                     * 
                      */
                     bool SRTSettingsHasBeenSet() const;
 
@@ -189,56 +210,65 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RTPSettings RTP configuration information of input.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribeInputRTPSettings GetRTPSettings() const;
 
                     /**
                      * 设置RTP configuration information of input.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RTPSettings RTP configuration information of input.
+                     * @param _rTPSettings RTP configuration information of input.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRTPSettings(const DescribeInputRTPSettings& _rTPSettings);
 
                     /**
                      * 判断参数 RTPSettings 是否已赋值
                      * @return RTPSettings 是否已赋值
+                     * 
                      */
                     bool RTPSettingsHasBeenSet() const;
 
                     /**
                      * 获取Input region.
                      * @return InputRegion Input region.
+                     * 
                      */
                     std::string GetInputRegion() const;
 
                     /**
                      * 设置Input region.
-                     * @param InputRegion Input region.
+                     * @param _inputRegion Input region.
+                     * 
                      */
                     void SetInputRegion(const std::string& _inputRegion);
 
                     /**
                      * 判断参数 InputRegion 是否已赋值
                      * @return InputRegion 是否已赋值
+                     * 
                      */
                     bool InputRegionHasBeenSet() const;
 
                     /**
                      * 获取RTMP configuration information of an input
                      * @return RTMPSettings RTMP configuration information of an input
+                     * 
                      */
                     DescribeInputRTMPSettings GetRTMPSettings() const;
 
                     /**
                      * 设置RTMP configuration information of an input
-                     * @param RTMPSettings RTMP configuration information of an input
+                     * @param _rTMPSettings RTMP configuration information of an input
+                     * 
                      */
                     void SetRTMPSettings(const DescribeInputRTMPSettings& _rTMPSettings);
 
                     /**
                      * 判断参数 RTMPSettings 是否已赋值
                      * @return RTMPSettings 是否已赋值
+                     * 
                      */
                     bool RTMPSettingsHasBeenSet() const;
 
@@ -247,20 +277,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return FailOver Input failover
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetFailOver() const;
 
                     /**
                      * 设置Input failover
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param FailOver Input failover
+                     * @param _failOver Input failover
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetFailOver(const std::string& _failOver);
 
                     /**
                      * 判断参数 FailOver 是否已赋值
                      * @return FailOver 是否已赋值
+                     * 
                      */
                     bool FailOverHasBeenSet() const;
 

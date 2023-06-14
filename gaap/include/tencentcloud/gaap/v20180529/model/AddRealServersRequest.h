@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Project ID corresponding to origin server
                      * @return ProjectId Project ID corresponding to origin server
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID corresponding to origin server
-                     * @param ProjectId Project ID corresponding to origin server
+                     * @param _projectId Project ID corresponding to origin server
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取IP or domain name corresponding to origin server
                      * @return RealServerIP IP or domain name corresponding to origin server
+                     * 
                      */
                     std::vector<std::string> GetRealServerIP() const;
 
                     /**
                      * 设置IP or domain name corresponding to origin server
-                     * @param RealServerIP IP or domain name corresponding to origin server
+                     * @param _realServerIP IP or domain name corresponding to origin server
+                     * 
                      */
                     void SetRealServerIP(const std::vector<std::string>& _realServerIP);
 
                     /**
                      * 判断参数 RealServerIP 是否已赋值
                      * @return RealServerIP 是否已赋值
+                     * 
                      */
                     bool RealServerIPHasBeenSet() const;
 
                     /**
                      * 获取Name of the origin server
                      * @return RealServerName Name of the origin server
+                     * 
                      */
                     std::string GetRealServerName() const;
 
                     /**
                      * 设置Name of the origin server
-                     * @param RealServerName Name of the origin server
+                     * @param _realServerName Name of the origin server
+                     * 
                      */
                     void SetRealServerName(const std::string& _realServerName);
 
                     /**
                      * 判断参数 RealServerName 是否已赋值
                      * @return RealServerName 是否已赋值
+                     * 
                      */
                     bool RealServerNameHasBeenSet() const;
 
                     /**
                      * 获取List of tags
                      * @return TagSet List of tags
+                     * 
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
                      * 设置List of tags
-                     * @param TagSet List of tags
+                     * @param _tagSet List of tags
+                     * 
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 

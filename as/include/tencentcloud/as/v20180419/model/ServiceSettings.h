@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
                      * @return ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
+                     * 
                      */
                     bool GetReplaceMonitorUnhealthy() const;
 
                     /**
                      * 设置Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
-                     * @param ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
+                     * @param _replaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
+                     * 
                      */
                     void SetReplaceMonitorUnhealthy(const bool& _replaceMonitorUnhealthy);
 
                     /**
                      * 判断参数 ReplaceMonitorUnhealthy 是否已赋值
                      * @return ReplaceMonitorUnhealthy 是否已赋值
+                     * 
                      */
                     bool ReplaceMonitorUnhealthyHasBeenSet() const;
 
@@ -73,6 +76,7 @@ Default value: CLASSIC_SCALING
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
 WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
 Default value: CLASSIC_SCALING
+                     * 
                      */
                     std::string GetScalingMode() const;
 
@@ -81,34 +85,39 @@ Default value: CLASSIC_SCALING
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
 WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
 Default value: CLASSIC_SCALING
-                     * @param ScalingMode Valid values: 
+                     * @param _scalingMode Valid values: 
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
 WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
 Default value: CLASSIC_SCALING
+                     * 
                      */
                     void SetScalingMode(const std::string& _scalingMode);
 
                     /**
                      * 判断参数 ScalingMode 是否已赋值
                      * @return ScalingMode 是否已赋值
+                     * 
                      */
                     bool ScalingModeHasBeenSet() const;
 
                     /**
                      * 获取Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
                      * @return ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     * 
                      */
                     bool GetReplaceLoadBalancerUnhealthy() const;
 
                     /**
                      * 设置Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
-                     * @param ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     * @param _replaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+                     * 
                      */
                     void SetReplaceLoadBalancerUnhealthy(const bool& _replaceLoadBalancerUnhealthy);
 
                     /**
                      * 判断参数 ReplaceLoadBalancerUnhealthy 是否已赋值
                      * @return ReplaceLoadBalancerUnhealthy 是否已赋值
+                     * 
                      */
                     bool ReplaceLoadBalancerUnhealthyHasBeenSet() const;
 

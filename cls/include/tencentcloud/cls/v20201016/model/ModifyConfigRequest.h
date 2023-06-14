@@ -47,144 +47,168 @@ namespace TencentCloud
                     /**
                      * 获取Collection rule configuration ID
                      * @return ConfigId Collection rule configuration ID
+                     * 
                      */
                     std::string GetConfigId() const;
 
                     /**
                      * 设置Collection rule configuration ID
-                     * @param ConfigId Collection rule configuration ID
+                     * @param _configId Collection rule configuration ID
+                     * 
                      */
                     void SetConfigId(const std::string& _configId);
 
                     /**
                      * 判断参数 ConfigId 是否已赋值
                      * @return ConfigId 是否已赋值
+                     * 
                      */
                     bool ConfigIdHasBeenSet() const;
 
                     /**
                      * 获取Collection rule configuration name
                      * @return Name Collection rule configuration name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Collection rule configuration name
-                     * @param Name Collection rule configuration name
+                     * @param _name Collection rule configuration name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Log collection path containing the filename
                      * @return Path Log collection path containing the filename
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Log collection path containing the filename
-                     * @param Path Log collection path containing the filename
+                     * @param _path Log collection path containing the filename
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Type of the log to be collected. Valid values: `json_log`: log in JSON format; `delimiter_log`: log in delimited format; `minimalist_log`: minimalist log; `multiline_log`: log in multi-line format; `fullregex_log`: log in full regex format. Default value: `minimalist_log`
                      * @return LogType Type of the log to be collected. Valid values: `json_log`: log in JSON format; `delimiter_log`: log in delimited format; `minimalist_log`: minimalist log; `multiline_log`: log in multi-line format; `fullregex_log`: log in full regex format. Default value: `minimalist_log`
+                     * 
                      */
                     std::string GetLogType() const;
 
                     /**
                      * 设置Type of the log to be collected. Valid values: `json_log`: log in JSON format; `delimiter_log`: log in delimited format; `minimalist_log`: minimalist log; `multiline_log`: log in multi-line format; `fullregex_log`: log in full regex format. Default value: `minimalist_log`
-                     * @param LogType Type of the log to be collected. Valid values: `json_log`: log in JSON format; `delimiter_log`: log in delimited format; `minimalist_log`: minimalist log; `multiline_log`: log in multi-line format; `fullregex_log`: log in full regex format. Default value: `minimalist_log`
+                     * @param _logType Type of the log to be collected. Valid values: `json_log`: log in JSON format; `delimiter_log`: log in delimited format; `minimalist_log`: minimalist log; `multiline_log`: log in multi-line format; `fullregex_log`: log in full regex format. Default value: `minimalist_log`
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
                     /**
                      * 获取Extraction rule. If `ExtractRule` is set, `LogType` must be set.
                      * @return ExtractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set.
+                     * 
                      */
                     ExtractRuleInfo GetExtractRule() const;
 
                     /**
                      * 设置Extraction rule. If `ExtractRule` is set, `LogType` must be set.
-                     * @param ExtractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set.
+                     * @param _extractRule Extraction rule. If `ExtractRule` is set, `LogType` must be set.
+                     * 
                      */
                     void SetExtractRule(const ExtractRuleInfo& _extractRule);
 
                     /**
                      * 判断参数 ExtractRule 是否已赋值
                      * @return ExtractRule 是否已赋值
+                     * 
                      */
                     bool ExtractRuleHasBeenSet() const;
 
                     /**
                      * 获取Collection path blocklist
                      * @return ExcludePaths Collection path blocklist
+                     * 
                      */
                     std::vector<ExcludePathInfo> GetExcludePaths() const;
 
                     /**
                      * 设置Collection path blocklist
-                     * @param ExcludePaths Collection path blocklist
+                     * @param _excludePaths Collection path blocklist
+                     * 
                      */
                     void SetExcludePaths(const std::vector<ExcludePathInfo>& _excludePaths);
 
                     /**
                      * 判断参数 ExcludePaths 是否已赋值
                      * @return ExcludePaths 是否已赋值
+                     * 
                      */
                     bool ExcludePathsHasBeenSet() const;
 
                     /**
                      * 获取Log topic (TopicId) associated with collection configuration
                      * @return Output Log topic (TopicId) associated with collection configuration
+                     * 
                      */
                     std::string GetOutput() const;
 
                     /**
                      * 设置Log topic (TopicId) associated with collection configuration
-                     * @param Output Log topic (TopicId) associated with collection configuration
+                     * @param _output Log topic (TopicId) associated with collection configuration
+                     * 
                      */
                     void SetOutput(const std::string& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 
                     /**
                      * 获取Custom parsing string, which is a serialized JSON string
                      * @return UserDefineRule Custom parsing string, which is a serialized JSON string
+                     * 
                      */
                     std::string GetUserDefineRule() const;
 
                     /**
                      * 设置Custom parsing string, which is a serialized JSON string
-                     * @param UserDefineRule Custom parsing string, which is a serialized JSON string
+                     * @param _userDefineRule Custom parsing string, which is a serialized JSON string
+                     * 
                      */
                     void SetUserDefineRule(const std::string& _userDefineRule);
 
                     /**
                      * 判断参数 UserDefineRule 是否已赋值
                      * @return UserDefineRule 是否已赋值
+                     * 
                      */
                     bool UserDefineRuleHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Method to validate client behavior.
                      * @return Name Method to validate client behavior.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Method to validate client behavior.
-                     * @param Name Method to validate client behavior.
+                     * @param _name Method to validate client behavior.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>`low` (default): Low</li>
 <li>`middle`: Medium</li>
 <li>`high`: High</li>
+                     * 
                      */
                     std::string GetWorkLevel() const;
 
@@ -82,88 +86,102 @@ namespace TencentCloud
 <li>`low` (default): Low</li>
 <li>`middle`: Medium</li>
 <li>`high`: High</li>
-                     * @param WorkLevel Proof-of-work strength. Values:
+                     * @param _workLevel Proof-of-work strength. Values:
 <li>`low` (default): Low</li>
 <li>`middle`: Medium</li>
 <li>`high`: High</li>
+                     * 
                      */
                     void SetWorkLevel(const std::string& _workLevel);
 
                     /**
                      * 判断参数 WorkLevel 是否已赋值
                      * @return WorkLevel 是否已赋值
+                     * 
                      */
                     bool WorkLevelHasBeenSet() const;
 
                     /**
                      * 获取Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
                      * @return ExecuteMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+                     * 
                      */
                     int64_t GetExecuteMode() const;
 
                     /**
                      * 设置Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
-                     * @param ExecuteMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+                     * @param _executeMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+                     * 
                      */
                     void SetExecuteMode(const int64_t& _executeMode);
 
                     /**
                      * 判断参数 ExecuteMode 是否已赋值
                      * @return ExecuteMode 是否已赋值
+                     * 
                      */
                     bool ExecuteModeHasBeenSet() const;
 
                     /**
                      * 获取The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
                      * @return InvalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+                     * 
                      */
                     int64_t GetInvalidStatTime() const;
 
                     /**
                      * 设置The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
-                     * @param InvalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+                     * @param _invalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+                     * 
                      */
                     void SetInvalidStatTime(const int64_t& _invalidStatTime);
 
                     /**
                      * 判断参数 InvalidStatTime 是否已赋值
                      * @return InvalidStatTime 是否已赋值
+                     * 
                      */
                     bool InvalidStatTimeHasBeenSet() const;
 
                     /**
                      * 获取The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
                      * @return InvalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+                     * 
                      */
                     int64_t GetInvalidThreshold() const;
 
                     /**
                      * 设置The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
-                     * @param InvalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+                     * @param _invalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+                     * 
                      */
                     void SetInvalidThreshold(const int64_t& _invalidThreshold);
 
                     /**
                      * 判断参数 InvalidThreshold 是否已赋值
                      * @return InvalidThreshold 是否已赋值
+                     * 
                      */
                     bool InvalidThresholdHasBeenSet() const;
 
                     /**
                      * 获取Client behavior validation results.
                      * @return AlgDetectResults Client behavior validation results.
+                     * 
                      */
                     std::vector<AlgDetectResult> GetAlgDetectResults() const;
 
                     /**
                      * 设置Client behavior validation results.
-                     * @param AlgDetectResults Client behavior validation results.
+                     * @param _algDetectResults Client behavior validation results.
+                     * 
                      */
                     void SetAlgDetectResults(const std::vector<AlgDetectResult>& _algDetectResults);
 
                     /**
                      * 判断参数 AlgDetectResults 是否已赋值
                      * @return AlgDetectResults 是否已赋值
+                     * 
                      */
                     bool AlgDetectResultsHasBeenSet() const;
 

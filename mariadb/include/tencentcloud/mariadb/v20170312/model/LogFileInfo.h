@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Last modified time of log
                      * @return Mtime Last modified time of log
+                     * 
                      */
                     uint64_t GetMtime() const;
 
                     /**
                      * 设置Last modified time of log
-                     * @param Mtime Last modified time of log
+                     * @param _mtime Last modified time of log
+                     * 
                      */
                     void SetMtime(const uint64_t& _mtime);
 
                     /**
                      * 判断参数 Mtime 是否已赋值
                      * @return Mtime 是否已赋值
+                     * 
                      */
                     bool MtimeHasBeenSet() const;
 
                     /**
                      * 获取File length
                      * @return Length File length
+                     * 
                      */
                     uint64_t GetLength() const;
 
                     /**
                      * 设置File length
-                     * @param Length File length
+                     * @param _length File length
+                     * 
                      */
                     void SetLength(const uint64_t& _length);
 
                     /**
                      * 判断参数 Length 是否已赋值
                      * @return Length 是否已赋值
+                     * 
                      */
                     bool LengthHasBeenSet() const;
 
                     /**
                      * 获取Uniform resource identifier (URI) used during log download
                      * @return Uri Uniform resource identifier (URI) used during log download
+                     * 
                      */
                     std::string GetUri() const;
 
                     /**
                      * 设置Uniform resource identifier (URI) used during log download
-                     * @param Uri Uniform resource identifier (URI) used during log download
+                     * @param _uri Uniform resource identifier (URI) used during log download
+                     * 
                      */
                     void SetUri(const std::string& _uri);
 
                     /**
                      * 判断参数 Uri 是否已赋值
                      * @return Uri 是否已赋值
+                     * 
                      */
                     bool UriHasBeenSet() const;
 
                     /**
                      * 获取Filename
                      * @return FileName Filename
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename
-                     * @param FileName Filename
+                     * @param _fileName Filename
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 

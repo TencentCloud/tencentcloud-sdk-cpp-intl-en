@@ -57,6 +57,7 @@ Note: when a download URL of other media files is used as the material source an
 <li>ID of VOD media files</li>
 <li>Download URL of other media files.</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+                     * 
                      */
                     std::string GetSourceMedia() const;
 
@@ -65,52 +66,60 @@ Note: when a download URL of other media files is used as the material source an
 <li>ID of VOD media files</li>
 <li>Download URL of other media files.</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
-                     * @param SourceMedia Source of media material for video segment, which can be:
+                     * @param _sourceMedia Source of media material for video segment, which can be:
 <li>ID of VOD media files</li>
 <li>Download URL of other media files.</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+                     * 
                      */
                     void SetSourceMedia(const std::string& _sourceMedia);
 
                     /**
                      * 判断参数 SourceMedia 是否已赋值
                      * @return SourceMedia 是否已赋值
+                     * 
                      */
                     bool SourceMediaHasBeenSet() const;
 
                     /**
                      * 获取Start time of video segment in material file in seconds. Default value: 0.
                      * @return SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
+                     * 
                      */
                     double GetSourceMediaStartTime() const;
 
                     /**
                      * 设置Start time of video segment in material file in seconds. Default value: 0.
-                     * @param SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
+                     * @param _sourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
+                     * 
                      */
                     void SetSourceMediaStartTime(const double& _sourceMediaStartTime);
 
                     /**
                      * 判断参数 SourceMediaStartTime 是否已赋值
                      * @return SourceMediaStartTime 是否已赋值
+                     * 
                      */
                     bool SourceMediaStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
                      * @return Duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+                     * 
                      */
                     double GetDuration() const;
 
                     /**
                      * 设置Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
-                     * @param Duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+                     * @param _duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+                     * 
                      */
                     void SetDuration(const double& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
@@ -121,6 +130,7 @@ Note: when a download URL of other media files is used as the material source an
                      * @return TargetDuration The target video duration, in seconds.
 <li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
 <li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+                     * 
                      */
                     double GetTargetDuration() const;
 
@@ -128,15 +138,17 @@ Note: when a download URL of other media files is used as the material source an
                      * 设置The target video duration, in seconds.
 <li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
 <li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
-                     * @param TargetDuration The target video duration, in seconds.
+                     * @param _targetDuration The target video duration, in seconds.
 <li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
 <li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+                     * 
                      */
                     void SetTargetDuration(const double& _targetDuration);
 
                     /**
                      * 判断参数 TargetDuration 是否已赋值
                      * @return TargetDuration 是否已赋值
+                     * 
                      */
                     bool TargetDurationHasBeenSet() const;
 
@@ -147,6 +159,7 @@ Default value: Center.
                      * @return CoordinateOrigin Video origin position. Valid values:
 <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
 Default value: Center.
+                     * 
                      */
                     std::string GetCoordinateOrigin() const;
 
@@ -154,15 +167,17 @@ Default value: Center.
                      * 设置Video origin position. Valid values:
 <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
 Default value: Center.
-                     * @param CoordinateOrigin Video origin position. Valid values:
+                     * @param _coordinateOrigin Video origin position. Valid values:
 <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
 Default value: Center.
+                     * 
                      */
                     void SetCoordinateOrigin(const std::string& _coordinateOrigin);
 
                     /**
                      * 判断参数 CoordinateOrigin 是否已赋值
                      * @return CoordinateOrigin 是否已赋值
+                     * 
                      */
                     bool CoordinateOriginHasBeenSet() const;
 
@@ -175,6 +190,7 @@ Default value: 0 px.
 <li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
 <li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     std::string GetXPos() const;
 
@@ -183,16 +199,18 @@ Default value: 0 px.
 <li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
 <li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
 Default value: 0 px.
-                     * @param XPos The horizontal position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
+                     * @param _xPos The horizontal position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
 <li>If the string ends in %, the `XPos` of the video segment will be at the position of the specified percentage of the canvas width; for example, `10%` means that `XPos` is 10% of the canvas width.</li>
 <li>If the string ends in px, the `XPos` of the video segment will be in px; for example, `100px` means that `XPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     void SetXPos(const std::string& _xPos);
 
                     /**
                      * 判断参数 XPos 是否已赋值
                      * @return XPos 是否已赋值
+                     * 
                      */
                     bool XPosHasBeenSet() const;
 
@@ -205,6 +223,7 @@ Default value: 0 px.
 <li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
 <li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     std::string GetYPos() const;
 
@@ -213,16 +232,18 @@ Default value: 0 px.
 <li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
 <li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
 Default value: 0 px.
-                     * @param YPos The vertical position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
+                     * @param _yPos The vertical position of the origin of the video segment relative to the origin of the canvas. % and px formats are supported:
 <li>If the string ends in %, the `YPos` of the video segment will be at the position of the specified percentage of the canvas height; for example, `10%` means that `YPos` is 10% of the canvas height.</li>
 <li>If the string ends in px, the `YPos` of the video segment will be in px; for example, `100px` means that `YPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     void SetYPos(const std::string& _yPos);
 
                     /**
                      * 判断参数 YPos 是否已赋值
                      * @return YPos 是否已赋值
+                     * 
                      */
                     bool YPosHasBeenSet() const;
 
@@ -239,6 +260,7 @@ Default value: 0 px.
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+                     * 
                      */
                     std::string GetWidth() const;
 
@@ -249,18 +271,20 @@ Default value: 0 px.
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
-                     * @param Width Video segment width. % and px formats are supported:
+                     * @param _width Video segment width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the video segment will be the specified percentage of the canvas width; for example, `10%` means that `Width` is 10% of the canvas width.</li>
 <li>If the string ends in px, the `Width` of the video segment will be in px; for example, `100px` means that `Width` is 100 px.</li>
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+                     * 
                      */
                     void SetWidth(const std::string& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -277,6 +301,7 @@ Default value: 0 px.
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+                     * 
                      */
                     std::string GetHeight() const;
 
@@ -287,18 +312,20 @@ Default value: 0 px.
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
-                     * @param Height Video segment height. % and px formats are supported:
+                     * @param _height Video segment height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the video segment will be the specified percentage of the canvas height; for example, `10%` means that `Height` is 10% of the canvas height;
 </li><li>If the string ends in px, the `Height` of the video segment will be in px; for example, `100px` means that `Height` is 100 px.</li>
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
+                     * 
                      */
                     void SetHeight(const std::string& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -307,20 +334,23 @@ Default value: 0 px.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AudioOperations Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AudioTransform> GetAudioOperations() const;
 
                     /**
                      * 设置Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AudioOperations Operation on audio such as muting.
+                     * @param _audioOperations Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAudioOperations(const std::vector<AudioTransform>& _audioOperations);
 
                     /**
                      * 判断参数 AudioOperations 是否已赋值
                      * @return AudioOperations 是否已赋值
+                     * 
                      */
                     bool AudioOperationsHasBeenSet() const;
 
@@ -329,20 +359,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageOperations Operation on video image such as image rotation.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ImageTransform> GetImageOperations() const;
 
                     /**
                      * 设置Operation on video image such as image rotation.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ImageOperations Operation on video image such as image rotation.
+                     * @param _imageOperations Operation on video image such as image rotation.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageOperations(const std::vector<ImageTransform>& _imageOperations);
 
                     /**
                      * 判断参数 ImageOperations 是否已赋值
                      * @return ImageOperations 是否已赋值
+                     * 
                      */
                     bool ImageOperationsHasBeenSet() const;
 

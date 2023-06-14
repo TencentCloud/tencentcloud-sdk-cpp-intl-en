@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Current cluster status
                      * @return Phase Current cluster status
+                     * 
                      */
                     std::string GetPhase() const;
 
                     /**
                      * 判断参数 Phase 是否已赋值
                      * @return Phase 是否已赋值
+                     * 
                      */
                     bool PhaseHasBeenSet() const;
 
                     /**
                      * 获取Array of cluster processes
                      * @return Conditions Array of cluster processes
+                     * 
                      */
                     std::vector<ClusterCondition> GetConditions() const;
 
                     /**
                      * 判断参数 Conditions 是否已赋值
                      * @return Conditions 是否已赋值
+                     * 
                      */
                     bool ConditionsHasBeenSet() const;
 

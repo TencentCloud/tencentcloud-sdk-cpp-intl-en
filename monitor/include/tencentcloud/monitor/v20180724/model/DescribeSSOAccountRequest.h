@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-abcdefgh”.
                      * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Filter by account ID such as “10000”
                      * @return UserId Filter by account ID such as “10000”
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置Filter by account ID such as “10000”
-                     * @param UserId Filter by account ID such as “10000”
+                     * @param _userId Filter by account ID such as “10000”
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 

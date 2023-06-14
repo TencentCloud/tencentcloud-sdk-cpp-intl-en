@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The claim protocol type (CPT) ID.
                      * @return CptId The claim protocol type (CPT) ID.
+                     * 
                      */
                     uint64_t GetCptId() const;
 
                     /**
                      * 设置The claim protocol type (CPT) ID.
-                     * @param CptId The claim protocol type (CPT) ID.
+                     * @param _cptId The claim protocol type (CPT) ID.
+                     * 
                      */
                     void SetCptId(const uint64_t& _cptId);
 
                     /**
                      * 判断参数 CptId 是否已赋值
                      * @return CptId 是否已赋值
+                     * 
                      */
                     bool CptIdHasBeenSet() const;
 
                     /**
                      * 获取The DID of the issuer.
                      * @return Issuer The DID of the issuer.
+                     * 
                      */
                     std::string GetIssuer() const;
 
                     /**
                      * 设置The DID of the issuer.
-                     * @param Issuer The DID of the issuer.
+                     * @param _issuer The DID of the issuer.
+                     * 
                      */
                     void SetIssuer(const std::string& _issuer);
 
                     /**
                      * 判断参数 Issuer 是否已赋值
                      * @return Issuer 是否已赋值
+                     * 
                      */
                     bool IssuerHasBeenSet() const;
 
                     /**
                      * 获取The expiration time.
                      * @return ExpirationDate The expiration time.
+                     * 
                      */
                     std::string GetExpirationDate() const;
 
                     /**
                      * 设置The expiration time.
-                     * @param ExpirationDate The expiration time.
+                     * @param _expirationDate The expiration time.
+                     * 
                      */
                     void SetExpirationDate(const std::string& _expirationDate);
 
                     /**
                      * 判断参数 ExpirationDate 是否已赋值
                      * @return ExpirationDate 是否已赋值
+                     * 
                      */
                     bool ExpirationDateHasBeenSet() const;
 
                     /**
                      * 获取The claim.
                      * @return ClaimJson The claim.
+                     * 
                      */
                     std::string GetClaimJson() const;
 
                     /**
                      * 设置The claim.
-                     * @param ClaimJson The claim.
+                     * @param _claimJson The claim.
+                     * 
                      */
                     void SetClaimJson(const std::string& _claimJson);
 
                     /**
                      * 判断参数 ClaimJson 是否已赋值
                      * @return ClaimJson 是否已赋值
+                     * 
                      */
                     bool ClaimJsonHasBeenSet() const;
 

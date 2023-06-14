@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Records Record
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LogConfig> GetRecords() const;
 
                     /**
                      * 设置Record
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Records Record
+                     * @param _records Record
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecords(const std::vector<LogConfig>& _records);
 
                     /**
                      * 判断参数 Records 是否已赋值
                      * @return Records 是否已赋值
+                     * 
                      */
                     bool RecordsHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ContinueToken Paging cursor
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContinueToken() const;
 
                     /**
                      * 设置Paging cursor
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ContinueToken Paging cursor
+                     * @param _continueToken Paging cursor
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContinueToken(const std::string& _continueToken);
 
                     /**
                      * 判断参数 ContinueToken 是否已赋值
                      * @return ContinueToken 是否已赋值
+                     * 
                      */
                     bool ContinueTokenHasBeenSet() const;
 

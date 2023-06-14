@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Node instance ID
                      * @return InstanceID Node instance ID
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置Node instance ID
-                     * @param InstanceID Node instance ID
+                     * @param _instanceID Node instance ID
+                     * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 
@@ -83,6 +86,7 @@ done: completed
 timeout: timed out
 aborted: canceled
 pending: not started
+                     * 
                      */
                     std::string GetLifeState() const;
 
@@ -95,7 +99,7 @@ done: completed
 timeout: timed out
 aborted: canceled
 pending: not started
-                     * @param LifeState Task lifecycle
+                     * @param _lifeState Task lifecycle
 process: running
 paused: stopped
 pausing: stopping
@@ -103,12 +107,14 @@ done: completed
 timeout: timed out
 aborted: canceled
 pending: not started
+                     * 
                      */
                     void SetLifeState(const std::string& _lifeState);
 
                     /**
                      * 判断参数 LifeState 是否已赋值
                      * @return LifeState 是否已赋值
+                     * 
                      */
                     bool LifeStateHasBeenSet() const;
 
@@ -117,20 +123,23 @@ pending: not started
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return StartAt Upgrade start time
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetStartAt() const;
 
                     /**
                      * 设置Upgrade start time
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param StartAt Upgrade start time
+                     * @param _startAt Upgrade start time
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetStartAt(const std::string& _startAt);
 
                     /**
                      * 判断参数 StartAt 是否已赋值
                      * @return StartAt 是否已赋值
+                     * 
                      */
                     bool StartAtHasBeenSet() const;
 
@@ -139,56 +148,65 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return EndAt Upgrade end time
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetEndAt() const;
 
                     /**
                      * 设置Upgrade end time
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param EndAt Upgrade end time
+                     * @param _endAt Upgrade end time
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetEndAt(const std::string& _endAt);
 
                     /**
                      * 判断参数 EndAt 是否已赋值
                      * @return EndAt 是否已赋值
+                     * 
                      */
                     bool EndAtHasBeenSet() const;
 
                     /**
                      * 获取Check result before upgrading
                      * @return CheckResult Check result before upgrading
+                     * 
                      */
                     InstanceUpgradePreCheckResult GetCheckResult() const;
 
                     /**
                      * 设置Check result before upgrading
-                     * @param CheckResult Check result before upgrading
+                     * @param _checkResult Check result before upgrading
+                     * 
                      */
                     void SetCheckResult(const InstanceUpgradePreCheckResult& _checkResult);
 
                     /**
                      * 判断参数 CheckResult 是否已赋值
                      * @return CheckResult 是否已赋值
+                     * 
                      */
                     bool CheckResultHasBeenSet() const;
 
                     /**
                      * 获取Upgrade steps details
                      * @return Detail Upgrade steps details
+                     * 
                      */
                     std::vector<TaskStepInfo> GetDetail() const;
 
                     /**
                      * 设置Upgrade steps details
-                     * @param Detail Upgrade steps details
+                     * @param _detail Upgrade steps details
+                     * 
                      */
                     void SetDetail(const std::vector<TaskStepInfo>& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 

@@ -56,6 +56,7 @@ db-instance-name: filter by instance name (in string format)
 db-project-id: filter by project ID (in integer format)
 db-pay-mode: filter by billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -66,90 +67,104 @@ db-instance-name: filter by instance name (in string format)
 db-project-id: filter by project ID (in integer format)
 db-pay-mode: filter by billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
-                     * @param Filters Filter instances using one or more criteria. Valid filter names:
+                     * @param _filters Filter instances using one or more criteria. Valid filter names:
 db-instance-id: filter by instance ID (in string format)
 db-instance-name: filter by instance name (in string format)
 db-project-id: filter by project ID (in integer format)
 db-pay-mode: filter by billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of results returned per page. Value range: 1-100. Default: `10`
                      * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of results returned per page. Value range: 1-100. Default: `10`
-                     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * @param _limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Data offset, which starts from 0.
                      * @return Offset Data offset, which starts from 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset, which starts from 0.
-                     * @param Offset Data offset, which starts from 0.
+                     * @param _offset Data offset, which starts from 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
                      * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
-                     * @param OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * @param _orderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending)
                      * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting order. Valid values: `asc` (ascending), `desc` (descending)
-                     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * @param _orderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

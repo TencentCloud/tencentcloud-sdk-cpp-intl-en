@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The service information.
                      * @return Task The service information.
+                     * 
                      */
                     Task GetTask() const;
 
                     /**
                      * 判断参数 Task 是否已赋值
                      * @return Task 是否已赋值
+                     * 
                      */
                     bool TaskHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Local IP range
                      * @return LocalCidrBlock Local IP range
+                     * 
                      */
                     std::string GetLocalCidrBlock() const;
 
                     /**
                      * 设置Local IP range
-                     * @param LocalCidrBlock Local IP range
+                     * @param _localCidrBlock Local IP range
+                     * 
                      */
                     void SetLocalCidrBlock(const std::string& _localCidrBlock);
 
                     /**
                      * 判断参数 LocalCidrBlock 是否已赋值
                      * @return LocalCidrBlock 是否已赋值
+                     * 
                      */
                     bool LocalCidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Opposite IP range
                      * @return RemoteCidrBlock Opposite IP range
+                     * 
                      */
                     std::vector<std::string> GetRemoteCidrBlock() const;
 
                     /**
                      * 设置Opposite IP range
-                     * @param RemoteCidrBlock Opposite IP range
+                     * @param _remoteCidrBlock Opposite IP range
+                     * 
                      */
                     void SetRemoteCidrBlock(const std::vector<std::string>& _remoteCidrBlock);
 
                     /**
                      * 判断参数 RemoteCidrBlock 是否已赋值
                      * @return RemoteCidrBlock 是否已赋值
+                     * 
                      */
                     bool RemoteCidrBlockHasBeenSet() const;
 

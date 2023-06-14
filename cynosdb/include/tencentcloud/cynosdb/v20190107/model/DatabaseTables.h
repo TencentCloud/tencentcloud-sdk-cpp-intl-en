@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Database Database name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Database Database name
+                     * @param _database Database name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tables Table name list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTables() const;
 
                     /**
                      * 设置Table name list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tables Table name list
+                     * @param _tables Table name list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTables(const std::vector<std::string>& _tables);
 
                     /**
                      * 判断参数 Tables 是否已赋值
                      * @return Tables 是否已赋值
+                     * 
                      */
                     bool TablesHasBeenSet() const;
 

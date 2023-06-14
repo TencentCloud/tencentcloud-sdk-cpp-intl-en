@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible images.
                      * @return TotalCount Number of eligible images.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Image reset information list
                      * @return ResetInstanceBlueprintSet Image reset information list
+                     * 
                      */
                     std::vector<ResetInstanceBlueprint> GetResetInstanceBlueprintSet() const;
 
                     /**
                      * 判断参数 ResetInstanceBlueprintSet 是否已赋值
                      * @return ResetInstanceBlueprintSet 是否已赋值
+                     * 
                      */
                     bool ResetInstanceBlueprintSetHasBeenSet() const;
 

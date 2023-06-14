@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取`ParquetKeyInfo` array
                      * @return ParquetKeyInfo `ParquetKeyInfo` array
+                     * 
                      */
                     std::vector<ParquetKeyInfo> GetParquetKeyInfo() const;
 
                     /**
                      * 设置`ParquetKeyInfo` array
-                     * @param ParquetKeyInfo `ParquetKeyInfo` array
+                     * @param _parquetKeyInfo `ParquetKeyInfo` array
+                     * 
                      */
                     void SetParquetKeyInfo(const std::vector<ParquetKeyInfo>& _parquetKeyInfo);
 
                     /**
                      * 判断参数 ParquetKeyInfo 是否已赋值
                      * @return ParquetKeyInfo 是否已赋值
+                     * 
                      */
                     bool ParquetKeyInfoHasBeenSet() const;
 

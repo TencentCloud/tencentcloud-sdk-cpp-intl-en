@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of figure.
                      * @return Id Unique ID of figure.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Unique ID of figure.
-                     * @param Id Unique ID of figure.
+                     * @param _id Unique ID of figure.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
                      * @return Type Figure library type, indicating to which figure library the recognized figure belongs:
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -79,51 +83,59 @@ namespace TencentCloud
                      * 设置Figure library type, indicating to which figure library the recognized figure belongs:
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>
-                     * @param Type Figure library type, indicating to which figure library the recognized figure belongs:
+                     * @param _type Figure library type, indicating to which figure library the recognized figure belongs:
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Figure name.
                      * @return Name Figure name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Figure name.
-                     * @param Name Figure name.
+                     * @param _name Figure name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Result set of segments that contain a figure.
                      * @return SegmentSet Result set of segments that contain a figure.
+                     * 
                      */
                     std::vector<AiRecognitionTaskFaceSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置Result set of segments that contain a figure.
-                     * @param SegmentSet Result set of segments that contain a figure.
+                     * @param _segmentSet Result set of segments that contain a figure.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskFaceSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

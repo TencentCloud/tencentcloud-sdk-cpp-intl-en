@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable face enhancement. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable face enhancement. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
-                     * @param Switch Whether to enable face enhancement. Valid values:
+                     * @param _switch Whether to enable face enhancement. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Default value: `0.0`.
                      * @return Intensity The face enhancement strength. This parameter is valid only if `Switch` is `ON`. Value range: 0.0 – 1.0.
 Default value: `0.0`.
+                     * 
                      */
                     double GetIntensity() const;
 
                     /**
                      * 设置The face enhancement strength. This parameter is valid only if `Switch` is `ON`. Value range: 0.0 – 1.0.
 Default value: `0.0`.
-                     * @param Intensity The face enhancement strength. This parameter is valid only if `Switch` is `ON`. Value range: 0.0 – 1.0.
+                     * @param _intensity The face enhancement strength. This parameter is valid only if `Switch` is `ON`. Value range: 0.0 – 1.0.
 Default value: `0.0`.
+                     * 
                      */
                     void SetIntensity(const double& _intensity);
 
                     /**
                      * 判断参数 Intensity 是否已赋值
                      * @return Intensity 是否已赋值
+                     * 
                      */
                     bool IntensityHasBeenSet() const;
 

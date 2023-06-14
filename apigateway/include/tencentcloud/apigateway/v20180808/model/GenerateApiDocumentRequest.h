@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID of the document to be created.
                      * @return ServiceId Unique service ID of the document to be created.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of the document to be created.
-                     * @param ServiceId Unique service ID of the document to be created.
+                     * @param _serviceId Unique service ID of the document to be created.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Environment of the service for which to create an SDK.
                      * @return GenEnvironment Environment of the service for which to create an SDK.
+                     * 
                      */
                     std::string GetGenEnvironment() const;
 
                     /**
                      * 设置Environment of the service for which to create an SDK.
-                     * @param GenEnvironment Environment of the service for which to create an SDK.
+                     * @param _genEnvironment Environment of the service for which to create an SDK.
+                     * 
                      */
                     void SetGenEnvironment(const std::string& _genEnvironment);
 
                     /**
                      * 判断参数 GenEnvironment 是否已赋值
                      * @return GenEnvironment 是否已赋值
+                     * 
                      */
                     bool GenEnvironmentHasBeenSet() const;
 
                     /**
                      * 获取Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
                      * @return GenLanguage Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
+                     * 
                      */
                     std::string GetGenLanguage() const;
 
                     /**
                      * 设置Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
-                     * @param GenLanguage Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
+                     * @param _genLanguage Programming language of the SDK to be created. Currently, only Python and JavaScript are supported.
+                     * 
                      */
                     void SetGenLanguage(const std::string& _genLanguage);
 
                     /**
                      * 判断参数 GenLanguage 是否已赋值
                      * @return GenLanguage 是否已赋值
+                     * 
                      */
                     bool GenLanguageHasBeenSet() const;
 

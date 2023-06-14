@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
                      * @return Offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
-                     * @param Offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+                     * @param _offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
                      * @return Limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
-                     * @param Limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * @param _limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filter by `QueueName`
                      * @return QueueName Filter by `QueueName`
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置Filter by `QueueName`
-                     * @param QueueName Filter by `QueueName`
+                     * @param _queueName Filter by `QueueName`
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取Filter by CMQ queue name.
                      * @return QueueNameList Filter by CMQ queue name.
+                     * 
                      */
                     std::vector<std::string> GetQueueNameList() const;
 
                     /**
                      * 设置Filter by CMQ queue name.
-                     * @param QueueNameList Filter by CMQ queue name.
+                     * @param _queueNameList Filter by CMQ queue name.
+                     * 
                      */
                     void SetQueueNameList(const std::vector<std::string>& _queueNameList);
 
                     /**
                      * 判断参数 QueueNameList 是否已赋值
                      * @return QueueNameList 是否已赋值
+                     * 
                      */
                     bool QueueNameListHasBeenSet() const;
 
                     /**
                      * 获取For filtering by tag, this parameter must be set to `true`.
                      * @return IsTagFilter For filtering by tag, this parameter must be set to `true`.
+                     * 
                      */
                     bool GetIsTagFilter() const;
 
                     /**
                      * 设置For filtering by tag, this parameter must be set to `true`.
-                     * @param IsTagFilter For filtering by tag, this parameter must be set to `true`.
+                     * @param _isTagFilter For filtering by tag, this parameter must be set to `true`.
+                     * 
                      */
                     void SetIsTagFilter(const bool& _isTagFilter);
 
                     /**
                      * 判断参数 IsTagFilter 是否已赋值
                      * @return IsTagFilter 是否已赋值
+                     * 
                      */
                     bool IsTagFilterHasBeenSet() const;
 
                     /**
                      * 获取Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
                      * @return Filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
-                     * @param Filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
+                     * @param _filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

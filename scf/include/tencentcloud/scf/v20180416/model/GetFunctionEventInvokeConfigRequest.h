@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Function name
                      * @return FunctionName Function name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name
-                     * @param FunctionName Function name
+                     * @param _functionName Function name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function namespace. Default value: default
                      * @return Namespace Function namespace. Default value: default
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace. Default value: default
-                     * @param Namespace Function namespace. Default value: default
+                     * @param _namespace Function namespace. Default value: default
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Function version. Default value: $LATEST
                      * @return Qualifier Function version. Default value: $LATEST
+                     * 
                      */
                     std::string GetQualifier() const;
 
                     /**
                      * 设置Function version. Default value: $LATEST
-                     * @param Qualifier Function version. Default value: $LATEST
+                     * @param _qualifier Function version. Default value: $LATEST
+                     * 
                      */
                     void SetQualifier(const std::string& _qualifier);
 
                     /**
                      * 判断参数 Qualifier 是否已赋值
                      * @return Qualifier 是否已赋值
+                     * 
                      */
                     bool QualifierHasBeenSet() const;
 

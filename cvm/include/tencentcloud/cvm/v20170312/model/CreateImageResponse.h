@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return ImageId Image ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 

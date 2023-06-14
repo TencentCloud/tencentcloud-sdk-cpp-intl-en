@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Environment variable name
                      * @return Name Environment variable name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Environment variable name
-                     * @param Name Environment variable name
+                     * @param _name Environment variable name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Environment variable value
                      * @return Value Environment variable value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Environment variable value
-                     * @param Value Environment variable value
+                     * @param _value Environment variable value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

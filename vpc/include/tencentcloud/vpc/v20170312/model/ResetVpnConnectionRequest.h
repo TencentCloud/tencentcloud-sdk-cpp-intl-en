@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPN gateway instance.
                      * @return VpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     std::string GetVpnGatewayId() const;
 
                     /**
                      * 设置The ID of the VPN gateway instance.
-                     * @param VpnGatewayId The ID of the VPN gateway instance.
+                     * @param _vpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     void SetVpnGatewayId(const std::string& _vpnGatewayId);
 
                     /**
                      * 判断参数 VpnGatewayId 是否已赋值
                      * @return VpnGatewayId 是否已赋值
+                     * 
                      */
                     bool VpnGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
                      * @return VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+                     * 
                      */
                     std::string GetVpnConnectionId() const;
 
                     /**
                      * 设置The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
-                     * @param VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+                     * @param _vpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+                     * 
                      */
                     void SetVpnConnectionId(const std::string& _vpnConnectionId);
 
                     /**
                      * 判断参数 VpnConnectionId 是否已赋值
                      * @return VpnConnectionId 是否已赋值
+                     * 
                      */
                     bool VpnConnectionIdHasBeenSet() const;
 

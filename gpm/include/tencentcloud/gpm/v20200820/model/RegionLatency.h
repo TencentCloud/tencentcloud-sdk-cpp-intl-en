@@ -79,6 +79,7 @@ na-ashburn          Eastern US (Virginia)
 ap-bangkok           Asia Pacific (Bangkok)
 eu-moscow           Europe (Moscow)
 ap-tokyo           Asia Pacific (Tokyo)
+                     * 
                      */
                     std::string GetRegion() const;
 
@@ -99,7 +100,7 @@ na-ashburn          Eastern US (Virginia)
 ap-bangkok           Asia Pacific (Bangkok)
 eu-moscow           Europe (Moscow)
 ap-tokyo           Asia Pacific (Tokyo)
-                     * @param Region Region
+                     * @param _region Region
 ap-beijing          North China (Beijing)
 ap-chengdu          Southwest China (Chengdu)
 ap-guangzhou           South China (Guangzhou)
@@ -115,30 +116,35 @@ na-ashburn          Eastern US (Virginia)
 ap-bangkok           Asia Pacific (Bangkok)
 eu-moscow           Europe (Moscow)
 ap-tokyo           Asia Pacific (Tokyo)
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Delay time in ms. Value range: 0 - 999999
                      * @return Latency Delay time in ms. Value range: 0 - 999999
+                     * 
                      */
                     uint64_t GetLatency() const;
 
                     /**
                      * 设置Delay time in ms. Value range: 0 - 999999
-                     * @param Latency Delay time in ms. Value range: 0 - 999999
+                     * @param _latency Delay time in ms. Value range: 0 - 999999
+                     * 
                      */
                     void SetLatency(const uint64_t& _latency);
 
                     /**
                      * 判断参数 Latency 是否已赋值
                      * @return Latency 是否已赋值
+                     * 
                      */
                     bool LatencyHasBeenSet() const;
 

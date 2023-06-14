@@ -48,20 +48,23 @@ namespace TencentCloud
 You cannot specify `SnapshotIds` and `Filters` at the same time.
                      * @return SnapshotIds List of IDs of snapshots to be queried.
 You cannot specify `SnapshotIds` and `Filters` at the same time.
+                     * 
                      */
                     std::vector<std::string> GetSnapshotIds() const;
 
                     /**
                      * 设置List of IDs of snapshots to be queried.
 You cannot specify `SnapshotIds` and `Filters` at the same time.
-                     * @param SnapshotIds List of IDs of snapshots to be queried.
+                     * @param _snapshotIds List of IDs of snapshots to be queried.
 You cannot specify `SnapshotIds` and `Filters` at the same time.
+                     * 
                      */
                     void SetSnapshotIds(const std::vector<std::string>& _snapshotIds);
 
                     /**
                      * 判断参数 SnapshotIds 是否已赋值
                      * @return SnapshotIds 是否已赋值
+                     * 
                      */
                     bool SnapshotIdsHasBeenSet() const;
 
@@ -94,6 +97,7 @@ Required: no
 Type: String
 Required: no
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `SnapshotIds` and `Filters` at the same time.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -112,7 +116,7 @@ Required: no
 Type: String
 Required: no
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `SnapshotIds` and `Filters` at the same time.
-                     * @param Filters Filter list.
+                     * @param _filters Filter list.
 <li>snapshot-id</li>Filter by **snapshot ID**.
 Type: String
 Required: no
@@ -126,48 +130,56 @@ Required: no
 Type: String
 Required: no
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`. You cannot specify both `SnapshotIds` and `Filters` at the same time.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Target version
                      * @return EdgeVersion Target version
+                     * 
                      */
                     std::string GetEdgeVersion() const;
 
                     /**
                      * 设置Target version
-                     * @param EdgeVersion Target version
+                     * @param _edgeVersion Target version
+                     * 
                      */
                     void SetEdgeVersion(const std::string& _edgeVersion);
 
                     /**
                      * 判断参数 EdgeVersion 是否已赋值
                      * @return EdgeVersion 是否已赋值
+                     * 
                      */
                     bool EdgeVersionHasBeenSet() const;
 
                     /**
                      * 获取Prefix of the image repository of a custom edge component
                      * @return RegistryPrefix Prefix of the image repository of a custom edge component
+                     * 
                      */
                     std::string GetRegistryPrefix() const;
 
                     /**
                      * 设置Prefix of the image repository of a custom edge component
-                     * @param RegistryPrefix Prefix of the image repository of a custom edge component
+                     * @param _registryPrefix Prefix of the image repository of a custom edge component
+                     * 
                      */
                     void SetRegistryPrefix(const std::string& _registryPrefix);
 
                     /**
                      * 判断参数 RegistryPrefix 是否已赋值
                      * @return RegistryPrefix 是否已赋值
+                     * 
                      */
                     bool RegistryPrefixHasBeenSet() const;
 
                     /**
                      * 获取Whether to skip precheck
                      * @return SkipPreCheck Whether to skip precheck
+                     * 
                      */
                     bool GetSkipPreCheck() const;
 
                     /**
                      * 设置Whether to skip precheck
-                     * @param SkipPreCheck Whether to skip precheck
+                     * @param _skipPreCheck Whether to skip precheck
+                     * 
                      */
                     void SetSkipPreCheck(const bool& _skipPreCheck);
 
                     /**
                      * 判断参数 SkipPreCheck 是否已赋值
                      * @return SkipPreCheck 是否已赋值
+                     * 
                      */
                     bool SkipPreCheckHasBeenSet() const;
 

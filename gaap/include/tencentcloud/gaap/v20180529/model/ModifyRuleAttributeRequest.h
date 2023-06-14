@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Listener ID
                      * @return ListenerId Listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID
-                     * @param ListenerId Listener ID
+                     * @param _listenerId Listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule ID
                      * @return RuleId Forwarding rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Forwarding rule ID
-                     * @param RuleId Forwarding rule ID
+                     * @param _ruleId Forwarding rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * 
                      */
                     std::string GetScheduler() const;
 
                     /**
                      * 设置The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
-                     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @param _scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * 
                      */
                     void SetScheduler(const std::string& _scheduler);
 
                     /**
                      * 判断参数 Scheduler 是否已赋值
                      * @return Scheduler 是否已赋值
+                     * 
                      */
                     bool SchedulerHasBeenSet() const;
 
@@ -104,6 +113,7 @@ namespace TencentCloud
                      * @return HealthCheck Whether to enable the origin server health check:
 1: enable;
 0: disable.
+                     * 
                      */
                     uint64_t GetHealthCheck() const;
 
@@ -111,51 +121,59 @@ namespace TencentCloud
                      * 设置Whether to enable the origin server health check:
 1: enable;
 0: disable.
-                     * @param HealthCheck Whether to enable the origin server health check:
+                     * @param _healthCheck Whether to enable the origin server health check:
 1: enable;
 0: disable.
+                     * 
                      */
                     void SetHealthCheck(const uint64_t& _healthCheck);
 
                     /**
                      * 判断参数 HealthCheck 是否已赋值
                      * @return HealthCheck 是否已赋值
+                     * 
                      */
                     bool HealthCheckHasBeenSet() const;
 
                     /**
                      * 获取Health check configuration parameters
                      * @return CheckParams Health check configuration parameters
+                     * 
                      */
                     RuleCheckParams GetCheckParams() const;
 
                     /**
                      * 设置Health check configuration parameters
-                     * @param CheckParams Health check configuration parameters
+                     * @param _checkParams Health check configuration parameters
+                     * 
                      */
                     void SetCheckParams(const RuleCheckParams& _checkParams);
 
                     /**
                      * 判断参数 CheckParams 是否已赋值
                      * @return CheckParams 是否已赋值
+                     * 
                      */
                     bool CheckParamsHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule path
                      * @return Path Forwarding rule path
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Forwarding rule path
-                     * @param Path Forwarding rule path
+                     * @param _path Forwarding rule path
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
@@ -164,20 +182,23 @@ namespace TencentCloud
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
                      * @return ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
+                     * 
                      */
                     std::string GetForwardProtocol() const;
 
                     /**
                      * 设置Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
-                     * @param ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
+                     * @param _forwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
+                     * 
                      */
                     void SetForwardProtocol(const std::string& _forwardProtocol);
 
                     /**
                      * 判断参数 ForwardProtocol 是否已赋值
                      * @return ForwardProtocol 是否已赋值
+                     * 
                      */
                     bool ForwardProtocolHasBeenSet() const;
 
@@ -186,74 +207,86 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
 If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
                      * @return ForwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+                     * 
                      */
                     std::string GetForwardHost() const;
 
                     /**
                      * 设置The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
-                     * @param ForwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+                     * @param _forwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+                     * 
                      */
                     void SetForwardHost(const std::string& _forwardHost);
 
                     /**
                      * 判断参数 ForwardHost 是否已赋值
                      * @return ForwardHost 是否已赋值
+                     * 
                      */
                     bool ForwardHostHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
                      * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     * 
                      */
                     std::string GetServerNameIndicationSwitch() const;
 
                     /**
                      * 设置Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
-                     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     * @param _serverNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     * 
                      */
                     void SetServerNameIndicationSwitch(const std::string& _serverNameIndicationSwitch);
 
                     /**
                      * 判断参数 ServerNameIndicationSwitch 是否已赋值
                      * @return ServerNameIndicationSwitch 是否已赋值
+                     * 
                      */
                     bool ServerNameIndicationSwitchHasBeenSet() const;
 
                     /**
                      * 获取Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
                      * @return ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     * 
                      */
                     std::string GetServerNameIndication() const;
 
                     /**
                      * 设置Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
-                     * @param ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     * @param _serverNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     * 
                      */
                     void SetServerNameIndication(const std::string& _serverNameIndication);
 
                     /**
                      * 判断参数 ServerNameIndication 是否已赋值
                      * @return ServerNameIndication 是否已赋值
+                     * 
                      */
                     bool ServerNameIndicationHasBeenSet() const;
 
                     /**
                      * 获取Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
                      * @return ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     * 
                      */
                     std::string GetForcedRedirect() const;
 
                     /**
                      * 设置Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
-                     * @param ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     * @param _forcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     * 
                      */
                     void SetForcedRedirect(const std::string& _forcedRedirect);
 
                     /**
                      * 判断参数 ForcedRedirect 是否已赋值
                      * @return ForcedRedirect 是否已赋值
+                     * 
                      */
                     bool ForcedRedirectHasBeenSet() const;
 

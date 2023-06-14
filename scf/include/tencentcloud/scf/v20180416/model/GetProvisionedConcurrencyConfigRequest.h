@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Name of the function for which to get the provisioned concurrency details.
                      * @return FunctionName Name of the function for which to get the provisioned concurrency details.
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Name of the function for which to get the provisioned concurrency details.
-                     * @param FunctionName Name of the function for which to get the provisioned concurrency details.
+                     * @param _functionName Name of the function for which to get the provisioned concurrency details.
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function namespace. Default value: default.
                      * @return Namespace Function namespace. Default value: default.
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace. Default value: default.
-                     * @param Namespace Function namespace. Default value: default.
+                     * @param _namespace Function namespace. Default value: default.
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Function version number. If this parameter is left empty, the provisioned concurrency information of all function versions will be returned.
                      * @return Qualifier Function version number. If this parameter is left empty, the provisioned concurrency information of all function versions will be returned.
+                     * 
                      */
                     std::string GetQualifier() const;
 
                     /**
                      * 设置Function version number. If this parameter is left empty, the provisioned concurrency information of all function versions will be returned.
-                     * @param Qualifier Function version number. If this parameter is left empty, the provisioned concurrency information of all function versions will be returned.
+                     * @param _qualifier Function version number. If this parameter is left empty, the provisioned concurrency information of all function versions will be returned.
+                     * 
                      */
                     void SetQualifier(const std::string& _qualifier);
 
                     /**
                      * 判断参数 Qualifier 是否已赋值
                      * @return Qualifier 是否已赋值
+                     * 
                      */
                     bool QualifierHasBeenSet() const;
 

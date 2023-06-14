@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of an adaptive bitrate streaming template.
                      * @return Definition Unique ID of an adaptive bitrate streaming template.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Unique ID of an adaptive bitrate streaming template.
-                     * @param Definition Unique ID of an adaptive bitrate streaming template.
+                     * @param _definition Unique ID of an adaptive bitrate streaming template.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Template name. Length limit: 64 characters.
                      * @return Name Template name. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Template name. Length limit: 64 characters.
-                     * @param Name Template name. Length limit: 64 characters.
+                     * @param _name Template name. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return Format Adaptive bitrate streaming format. Valid values:
 <li>HLS,</li>
 <li>MPEG-DASH.</li>
+                     * 
                      */
                     std::string GetFormat() const;
 
@@ -93,15 +100,17 @@ namespace TencentCloud
                      * 设置Adaptive bitrate streaming format. Valid values:
 <li>HLS,</li>
 <li>MPEG-DASH.</li>
-                     * @param Format Adaptive bitrate streaming format. Valid values:
+                     * @param _format Adaptive bitrate streaming format. Valid values:
 <li>HLS,</li>
 <li>MPEG-DASH.</li>
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
@@ -112,6 +121,7 @@ namespace TencentCloud
                      * @return DisableHigherVideoBitrate Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
+                     * 
                      */
                     uint64_t GetDisableHigherVideoBitrate() const;
 
@@ -119,15 +129,17 @@ namespace TencentCloud
                      * 设置Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
-                     * @param DisableHigherVideoBitrate Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
+                     * @param _disableHigherVideoBitrate Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
+                     * 
                      */
                     void SetDisableHigherVideoBitrate(const uint64_t& _disableHigherVideoBitrate);
 
                     /**
                      * 判断参数 DisableHigherVideoBitrate 是否已赋值
                      * @return DisableHigherVideoBitrate 是否已赋值
+                     * 
                      */
                     bool DisableHigherVideoBitrateHasBeenSet() const;
 
@@ -138,6 +150,7 @@ namespace TencentCloud
                      * @return DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
+                     * 
                      */
                     uint64_t GetDisableHigherVideoResolution() const;
 
@@ -145,15 +158,17 @@ namespace TencentCloud
                      * 设置Whether to prohibit transcoding from low resolution to high resolution. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
-                     * @param DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
+                     * @param _disableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
+                     * 
                      */
                     void SetDisableHigherVideoResolution(const uint64_t& _disableHigherVideoResolution);
 
                     /**
                      * 判断参数 DisableHigherVideoResolution 是否已赋值
                      * @return DisableHigherVideoResolution 是否已赋值
+                     * 
                      */
                     bool DisableHigherVideoResolutionHasBeenSet() const;
 
@@ -162,38 +177,44 @@ namespace TencentCloud
 Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
                      * @return StreamInfos Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
 Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+                     * 
                      */
                     std::vector<AdaptiveStreamTemplate> GetStreamInfos() const;
 
                     /**
                      * 设置Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
 Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
-                     * @param StreamInfos Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
+                     * @param _streamInfos Parameter information of input streams for transcoding to adaptive bitrate streaming. Up to 10 streams can be input.
 Note: the frame rate of each stream must be consistent; otherwise, the frame rate of the first stream is used as the output frame rate.
+                     * 
                      */
                     void SetStreamInfos(const std::vector<AdaptiveStreamTemplate>& _streamInfos);
 
                     /**
                      * 判断参数 StreamInfos 是否已赋值
                      * @return StreamInfos 是否已赋值
+                     * 
                      */
                     bool StreamInfosHasBeenSet() const;
 
                     /**
                      * 获取Template description. Length limit: 256 characters.
                      * @return Comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Template description. Length limit: 256 characters.
-                     * @param Comment Template description. Length limit: 256 characters.
+                     * @param _comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 

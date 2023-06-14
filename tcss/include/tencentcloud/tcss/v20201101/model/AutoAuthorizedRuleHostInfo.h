@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Server ID
                      * @return HostID Server ID
+                     * 
                      */
                     std::string GetHostID() const;
 
                     /**
                      * 设置Server ID
-                     * @param HostID Server ID
+                     * @param _hostID Server ID
+                     * 
                      */
                     void SetHostID(const std::string& _hostID);
 
                     /**
                      * 判断参数 HostID 是否已赋值
                      * @return HostID 是否已赋值
+                     * 
                      */
                     bool HostIDHasBeenSet() const;
 
                     /**
                      * 获取Server IP, which is the private IP
                      * @return HostIP Server IP, which is the private IP
+                     * 
                      */
                     std::string GetHostIP() const;
 
                     /**
                      * 设置Server IP, which is the private IP
-                     * @param HostIP Server IP, which is the private IP
+                     * @param _hostIP Server IP, which is the private IP
+                     * 
                      */
                     void SetHostIP(const std::string& _hostIP);
 
                     /**
                      * 判断参数 HostIP 是否已赋值
                      * @return HostIP 是否已赋值
+                     * 
                      */
                     bool HostIPHasBeenSet() const;
 
                     /**
                      * 获取Server name
                      * @return HostName Server name
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Server name
-                     * @param HostName Server name
+                     * @param _hostName Server name
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
                     /**
                      * 获取Number of images
                      * @return ImageCnt Number of images
+                     * 
                      */
                     uint64_t GetImageCnt() const;
 
                     /**
                      * 设置Number of images
-                     * @param ImageCnt Number of images
+                     * @param _imageCnt Number of images
+                     * 
                      */
                     void SetImageCnt(const uint64_t& _imageCnt);
 
                     /**
                      * 判断参数 ImageCnt 是否已赋值
                      * @return ImageCnt 是否已赋值
+                     * 
                      */
                     bool ImageCntHasBeenSet() const;
 
                     /**
                      * 获取Number of containers
                      * @return ContainerCnt Number of containers
+                     * 
                      */
                     uint64_t GetContainerCnt() const;
 
                     /**
                      * 设置Number of containers
-                     * @param ContainerCnt Number of containers
+                     * @param _containerCnt Number of containers
+                     * 
                      */
                     void SetContainerCnt(const uint64_t& _containerCnt);
 
                     /**
                      * 判断参数 ContainerCnt 是否已赋值
                      * @return ContainerCnt 是否已赋值
+                     * 
                      */
                     bool ContainerCntHasBeenSet() const;
 
                     /**
                      * 获取Public IP
                      * @return PublicIp Public IP
+                     * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
                      * 设置Public IP
-                     * @param PublicIp Public IP
+                     * @param _publicIp Public IP
+                     * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
 
                     /**
                      * 判断参数 PublicIp 是否已赋值
                      * @return PublicIp 是否已赋值
+                     * 
                      */
                     bool PublicIpHasBeenSet() const;
 
                     /**
                      * 获取Server instance ID
                      * @return InstanceID Server instance ID
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置Server instance ID
-                     * @param InstanceID Server instance ID
+                     * @param _instanceID Server instance ID
+                     * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 
                     /**
                      * 获取Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
                      * @return MachineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+                     * 
                      */
                     std::string GetMachineType() const;
 
                     /**
                      * 设置Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
-                     * @param MachineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+                     * @param _machineType Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+                     * 
                      */
                     void SetMachineType(const std::string& _machineType);
 
                     /**
                      * 判断参数 MachineType 是否已赋值
                      * @return MachineType 是否已赋值
+                     * 
                      */
                     bool MachineTypeHasBeenSet() const;
 
                     /**
                      * 获取Docker version
                      * @return DockerVersion Docker version
+                     * 
                      */
                     std::string GetDockerVersion() const;
 
                     /**
                      * 设置Docker version
-                     * @param DockerVersion Docker version
+                     * @param _dockerVersion Docker version
+                     * 
                      */
                     void SetDockerVersion(const std::string& _dockerVersion);
 
                     /**
                      * 判断参数 DockerVersion 是否已赋值
                      * @return DockerVersion 是否已赋值
+                     * 
                      */
                     bool DockerVersionHasBeenSet() const;
 
                     /**
                      * 获取Agent status
                      * @return Status Agent status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Agent status
-                     * @param Status Agent status
+                     * @param _status Agent status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

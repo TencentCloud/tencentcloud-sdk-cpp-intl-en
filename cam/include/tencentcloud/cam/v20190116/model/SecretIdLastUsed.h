@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Key ID.
                      * @return SecretId Key ID.
+                     * 
                      */
                     std::string GetSecretId() const;
 
                     /**
                      * 设置Key ID.
-                     * @param SecretId Key ID.
+                     * @param _secretId Key ID.
+                     * 
                      */
                     void SetSecretId(const std::string& _secretId);
 
                     /**
                      * 判断参数 SecretId 是否已赋值
                      * @return SecretId 是否已赋值
+                     * 
                      */
                     bool SecretIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return LastUsedDate The date when the key ID was last used (the value is obtained one day later).
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetLastUsedDate() const;
 
                     /**
                      * 设置The date when the key ID was last used (the value is obtained one day later).
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param LastUsedDate The date when the key ID was last used (the value is obtained one day later).
+                     * @param _lastUsedDate The date when the key ID was last used (the value is obtained one day later).
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetLastUsedDate(const std::string& _lastUsedDate);
 
                     /**
                      * 判断参数 LastUsedDate 是否已赋值
                      * @return LastUsedDate 是否已赋值
+                     * 
                      */
                     bool LastUsedDateHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastSecretUsedDate The most recent date the key was accessed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetLastSecretUsedDate() const;
 
                     /**
                      * 设置The most recent date the key was accessed
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LastSecretUsedDate The most recent date the key was accessed
+                     * @param _lastSecretUsedDate The most recent date the key was accessed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastSecretUsedDate(const uint64_t& _lastSecretUsedDate);
 
                     /**
                      * 判断参数 LastSecretUsedDate 是否已赋值
                      * @return LastSecretUsedDate 是否已赋值
+                     * 
                      */
                     bool LastSecretUsedDateHasBeenSet() const;
 

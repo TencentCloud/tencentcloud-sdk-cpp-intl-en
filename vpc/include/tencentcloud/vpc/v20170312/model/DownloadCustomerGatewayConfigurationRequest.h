@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPN gateway instance.
                      * @return VpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     std::string GetVpnGatewayId() const;
 
                     /**
                      * 设置The ID of the VPN gateway instance.
-                     * @param VpnGatewayId The ID of the VPN gateway instance.
+                     * @param _vpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     void SetVpnGatewayId(const std::string& _vpnGatewayId);
 
                     /**
                      * 判断参数 VpnGatewayId 是否已赋值
                      * @return VpnGatewayId 是否已赋值
+                     * 
                      */
                     bool VpnGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
                      * @return VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+                     * 
                      */
                     std::string GetVpnConnectionId() const;
 
                     /**
                      * 设置The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
-                     * @param VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+                     * @param _vpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+                     * 
                      */
                     void SetVpnConnectionId(const std::string& _vpnConnectionId);
 
                     /**
                      * 判断参数 VpnConnectionId 是否已赋值
                      * @return VpnConnectionId 是否已赋值
+                     * 
                      */
                     bool VpnConnectionIdHasBeenSet() const;
 
                     /**
                      * 获取Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
                      * @return CustomerGatewayVendor Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
+                     * 
                      */
                     CustomerGatewayVendor GetCustomerGatewayVendor() const;
 
                     /**
                      * 设置Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
-                     * @param CustomerGatewayVendor Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
+                     * @param _customerGatewayVendor Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
+                     * 
                      */
                     void SetCustomerGatewayVendor(const CustomerGatewayVendor& _customerGatewayVendor);
 
                     /**
                      * 判断参数 CustomerGatewayVendor 是否已赋值
                      * @return CustomerGatewayVendor 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayVendorHasBeenSet() const;
 
                     /**
                      * 获取Name of the physical API for tunnel access device.
                      * @return InterfaceName Name of the physical API for tunnel access device.
+                     * 
                      */
                     std::string GetInterfaceName() const;
 
                     /**
                      * 设置Name of the physical API for tunnel access device.
-                     * @param InterfaceName Name of the physical API for tunnel access device.
+                     * @param _interfaceName Name of the physical API for tunnel access device.
+                     * 
                      */
                     void SetInterfaceName(const std::string& _interfaceName);
 
                     /**
                      * 判断参数 InterfaceName 是否已赋值
                      * @return InterfaceName 是否已赋值
+                     * 
                      */
                     bool InterfaceNameHasBeenSet() const;
 

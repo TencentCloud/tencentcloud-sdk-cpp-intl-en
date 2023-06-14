@@ -53,6 +53,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * @return SecretKey The key for signature calculation
 6-32 characters. Only digits and letters are allowed. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecretKey() const;
 
@@ -60,15 +61,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * 设置The key for signature calculation
 6-32 characters. Only digits and letters are allowed. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SecretKey The key for signature calculation
+                     * @param _secretKey The key for signature calculation
 6-32 characters. Only digits and letters are allowed. 
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Unit: second. The maximum value is 630720000.
                      * @return ExpireTime Signature expiration time
 Unit: second. The maximum value is 630720000.
+                     * 
                      */
                     int64_t GetExpireTime() const;
 
                     /**
                      * 设置Signature expiration time
 Unit: second. The maximum value is 630720000.
-                     * @param ExpireTime Signature expiration time
+                     * @param _expireTime Signature expiration time
 Unit: second. The maximum value is 630720000.
+                     * 
                      */
                     void SetExpireTime(const int64_t& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Unit: second. The maximum value is 630720000.
 If it contains an asterisk (*), this indicates all files.
                      * @return FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
+                     * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
                      * 设置File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
-                     * @param FileExtensions File extension list settings determining if authentication should be performed
+                     * @param _fileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
+                     * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
 
                     /**
                      * 判断参数 FileExtensions 是否已赋值
                      * @return FileExtensions 是否已赋值
+                     * 
                      */
                     bool FileExtensionsHasBeenSet() const;
 
@@ -121,20 +130,23 @@ If it contains an asterisk (*), this indicates all files.
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
                      * @return FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
+                     * 
                      */
                     std::string GetFilterType() const;
 
                     /**
                      * 设置whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
-                     * @param FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * @param _filterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
+                     * 
                      */
                     void SetFilterType(const std::string& _filterType);
 
                     /**
                      * 判断参数 FilterType 是否已赋值
                      * @return FilterType 是否已赋值
+                     * 
                      */
                     bool FilterTypeHasBeenSet() const;
 
@@ -145,6 +157,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return BackupSecretKey Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetBackupSecretKey() const;
 
@@ -152,15 +165,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param BackupSecretKey Backup key, which is used to calculate a signature.
+                     * @param _backupSecretKey Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
 
                     /**
                      * 判断参数 BackupSecretKey 是否已赋值
                      * @return BackupSecretKey 是否已赋值
+                     * 
                      */
                     bool BackupSecretKeyHasBeenSet() const;
 

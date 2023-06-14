@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of IPs
                      * @return IpList List of IPs
+                     * 
                      */
                     std::vector<std::string> GetIpList() const;
 
                     /**
                      * 设置List of IPs
-                     * @param IpList List of IPs
+                     * @param _ipList List of IPs
+                     * 
                      */
                     void SetIpList(const std::vector<std::string>& _ipList);
 
                     /**
                      * 判断参数 IpList 是否已赋值
                      * @return IpList 是否已赋值
+                     * 
                      */
                     bool IpListHasBeenSet() const;
 
                     /**
                      * 获取IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
                      * @return Type IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
-                     * @param Type IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
+                     * @param _type IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

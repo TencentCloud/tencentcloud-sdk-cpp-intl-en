@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Image ID, such as `img-gvbnzy6f`
                      * @return ImageId Image ID, such as `img-gvbnzy6f`
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID, such as `img-gvbnzy6f`
-                     * @param ImageId Image ID, such as `img-gvbnzy6f`
+                     * @param _imageId Image ID, such as `img-gvbnzy6f`
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ It can contain up to 20 characters.
                      * @return ImageName Image name, which must meet the following requirements:
 It can contain up to 20 characters.
 - The image name cannot be the same as existing image names.
+                     * 
                      */
                     std::string GetImageName() const;
 
@@ -74,15 +78,17 @@ It can contain up to 20 characters.
                      * 设置Image name, which must meet the following requirements:
 It can contain up to 20 characters.
 - The image name cannot be the same as existing image names.
-                     * @param ImageName Image name, which must meet the following requirements:
+                     * @param _imageName Image name, which must meet the following requirements:
 It can contain up to 20 characters.
 - The image name cannot be the same as existing image names.
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
@@ -91,20 +97,23 @@ It can contain up to 20 characters.
 - It cannot exceed 60 characters.
                      * @return ImageDescription Image description, which must meet the following requirements:
 - It cannot exceed 60 characters.
+                     * 
                      */
                     std::string GetImageDescription() const;
 
                     /**
                      * 设置Image description, which must meet the following requirements:
 - It cannot exceed 60 characters.
-                     * @param ImageDescription Image description, which must meet the following requirements:
+                     * @param _imageDescription Image description, which must meet the following requirements:
 - It cannot exceed 60 characters.
+                     * 
                      */
                     void SetImageDescription(const std::string& _imageDescription);
 
                     /**
                      * 判断参数 ImageDescription 是否已赋值
                      * @return ImageDescription 是否已赋值
+                     * 
                      */
                     bool ImageDescriptionHasBeenSet() const;
 

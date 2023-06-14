@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Domain name
                      * @return Domain Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-                     * @param Domain Domain name
+                     * @param _domain Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Protocol. Value: `https`.
                      * @return Protocol Protocol. Value: `https`.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol. Value: `https`.
-                     * @param Protocol Protocol. Value: `https`.
+                     * @param _protocol Protocol. Value: `https`.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Status. Valid values: `0` (disabled), `1` (enabled).
                      * @return CCEnable Status. Valid values: `0` (disabled), `1` (enabled).
+                     * 
                      */
                     int64_t GetCCEnable() const;
 
                     /**
                      * 设置Status. Valid values: `0` (disabled), `1` (enabled).
-                     * @param CCEnable Status. Valid values: `0` (disabled), `1` (enabled).
+                     * @param _cCEnable Status. Valid values: `0` (disabled), `1` (enabled).
+                     * 
                      */
                     void SetCCEnable(const int64_t& _cCEnable);
 
                     /**
                      * 判断参数 CCEnable 是否已赋值
                      * @return CCEnable 是否已赋值
+                     * 
                      */
                     bool CCEnableHasBeenSet() const;
 
                     /**
                      * 获取CC protection threshold
                      * @return CCThreshold CC protection threshold
+                     * 
                      */
                     int64_t GetCCThreshold() const;
 
                     /**
                      * 设置CC protection threshold
-                     * @param CCThreshold CC protection threshold
+                     * @param _cCThreshold CC protection threshold
+                     * 
                      */
                     void SetCCThreshold(const int64_t& _cCThreshold);
 
                     /**
                      * 判断参数 CCThreshold 是否已赋值
                      * @return CCThreshold 是否已赋值
+                     * 
                      */
                     bool CCThresholdHasBeenSet() const;
 

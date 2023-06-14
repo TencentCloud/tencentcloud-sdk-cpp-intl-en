@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取List of POC IDs
                      * @return List List of POC IDs
+                     * 
                      */
                     std::vector<ModifyIgnoreVul> GetList() const;
 
                     /**
                      * 设置List of POC IDs
-                     * @param List List of POC IDs
+                     * @param _list List of POC IDs
+                     * 
                      */
                     void SetList(const std::vector<ModifyIgnoreVul>& _list);
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

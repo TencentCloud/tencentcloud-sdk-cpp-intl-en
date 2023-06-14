@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The client IP.
                      * @return ClientIp The client IP.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置The client IP.
-                     * @param ClientIp The client IP.
+                     * @param _clientIp The client IP.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取The rule type.
                      * @return RuleType The rule type.
+                     * 
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置The rule type.
-                     * @param RuleType The rule type.
+                     * @param _ruleType The rule type.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId The rule ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置The rule ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleId The rule ID.
+                     * @param _ruleId The rule ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description The rule description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置The rule description.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Description The rule description.
+                     * @param _description The rule description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -133,6 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return IpStatus The blocking status. Values:
 <li>`block`: Block;</li>
 <li>`allow`: Allow.</li>
+                     * 
                      */
                     std::string GetIpStatus() const;
 
@@ -140,51 +153,59 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The blocking status. Values:
 <li>`block`: Block;</li>
 <li>`allow`: Allow.</li>
-                     * @param IpStatus The blocking status. Values:
+                     * @param _ipStatus The blocking status. Values:
 <li>`block`: Block;</li>
 <li>`allow`: Allow.</li>
+                     * 
                      */
                     void SetIpStatus(const std::string& _ipStatus);
 
                     /**
                      * 判断参数 IpStatus 是否已赋值
                      * @return IpStatus 是否已赋值
+                     * 
                      */
                     bool IpStatusHasBeenSet() const;
 
                     /**
                      * 获取The blocking time recorded in UNIX timestamp.
                      * @return BlockTime The blocking time recorded in UNIX timestamp.
+                     * 
                      */
                     int64_t GetBlockTime() const;
 
                     /**
                      * 设置The blocking time recorded in UNIX timestamp.
-                     * @param BlockTime The blocking time recorded in UNIX timestamp.
+                     * @param _blockTime The blocking time recorded in UNIX timestamp.
+                     * 
                      */
                     void SetBlockTime(const int64_t& _blockTime);
 
                     /**
                      * 判断参数 BlockTime 是否已赋值
                      * @return BlockTime 是否已赋值
+                     * 
                      */
                     bool BlockTimeHasBeenSet() const;
 
                     /**
                      * 获取The data entry ID.
                      * @return Id The data entry ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置The data entry ID.
-                     * @param Id The data entry ID.
+                     * @param _id The data entry ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

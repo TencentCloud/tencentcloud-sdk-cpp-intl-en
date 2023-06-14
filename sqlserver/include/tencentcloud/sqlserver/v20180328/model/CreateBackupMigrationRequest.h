@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of imported target instance
                      * @return InstanceId ID of imported target instance
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of imported target instance
-                     * @param InstanceId ID of imported target instance
+                     * @param _instanceId ID of imported target instance
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Migration task restoration type. FULL: full backup restoration, FULL_LOG: full backup and transaction log restoration, FULL_DIFF: full backup and differential backup restoration
                      * @return RecoveryType Migration task restoration type. FULL: full backup restoration, FULL_LOG: full backup and transaction log restoration, FULL_DIFF: full backup and differential backup restoration
+                     * 
                      */
                     std::string GetRecoveryType() const;
 
                     /**
                      * 设置Migration task restoration type. FULL: full backup restoration, FULL_LOG: full backup and transaction log restoration, FULL_DIFF: full backup and differential backup restoration
-                     * @param RecoveryType Migration task restoration type. FULL: full backup restoration, FULL_LOG: full backup and transaction log restoration, FULL_DIFF: full backup and differential backup restoration
+                     * @param _recoveryType Migration task restoration type. FULL: full backup restoration, FULL_LOG: full backup and transaction log restoration, FULL_DIFF: full backup and differential backup restoration
+                     * 
                      */
                     void SetRecoveryType(const std::string& _recoveryType);
 
                     /**
                      * 判断参数 RecoveryType 是否已赋值
                      * @return RecoveryType 是否已赋值
+                     * 
                      */
                     bool RecoveryTypeHasBeenSet() const;
 
                     /**
                      * 获取Backup upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
                      * @return UploadType Backup upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
+                     * 
                      */
                     std::string GetUploadType() const;
 
                     /**
                      * 设置Backup upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
-                     * @param UploadType Backup upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
+                     * @param _uploadType Backup upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
+                     * 
                      */
                     void SetUploadType(const std::string& _uploadType);
 
                     /**
                      * 判断参数 UploadType 是否已赋值
                      * @return UploadType 是否已赋值
+                     * 
                      */
                     bool UploadTypeHasBeenSet() const;
 
                     /**
                      * 获取Task name
                      * @return MigrationName Task name
+                     * 
                      */
                     std::string GetMigrationName() const;
 
                     /**
                      * 设置Task name
-                     * @param MigrationName Task name
+                     * @param _migrationName Task name
+                     * 
                      */
                     void SetMigrationName(const std::string& _migrationName);
 
                     /**
                      * 判断参数 MigrationName 是否已赋值
                      * @return MigrationName 是否已赋值
+                     * 
                      */
                     bool MigrationNameHasBeenSet() const;
 
                     /**
                      * 获取If the UploadType is COS_URL, fill in the URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
                      * @return BackupFiles If the UploadType is COS_URL, fill in the URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * 
                      */
                     std::vector<std::string> GetBackupFiles() const;
 
                     /**
                      * 设置If the UploadType is COS_URL, fill in the URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
-                     * @param BackupFiles If the UploadType is COS_URL, fill in the URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * @param _backupFiles If the UploadType is COS_URL, fill in the URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * 
                      */
                     void SetBackupFiles(const std::vector<std::string>& _backupFiles);
 
                     /**
                      * 判断参数 BackupFiles 是否已赋值
                      * @return BackupFiles 是否已赋值
+                     * 
                      */
                     bool BackupFilesHasBeenSet() const;
 

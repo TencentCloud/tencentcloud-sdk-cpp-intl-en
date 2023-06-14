@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Monitoring metric.
                      * @return Series Monitoring metric.
+                     * 
                      */
                     std::vector<MonitorFloatMetric> GetSeries() const;
 
                     /**
                      * 设置Monitoring metric.
-                     * @param Series Monitoring metric.
+                     * @param _series Monitoring metric.
+                     * 
                      */
                     void SetSeries(const std::vector<MonitorFloatMetric>& _series);
 
                     /**
                      * 判断参数 Series 是否已赋值
                      * @return Series 是否已赋值
+                     * 
                      */
                     bool SeriesHasBeenSet() const;
 
                     /**
                      * 获取Timestamp corresponding to monitoring metric.
                      * @return Timestamp Timestamp corresponding to monitoring metric.
+                     * 
                      */
                     std::vector<int64_t> GetTimestamp() const;
 
                     /**
                      * 设置Timestamp corresponding to monitoring metric.
-                     * @param Timestamp Timestamp corresponding to monitoring metric.
+                     * @param _timestamp Timestamp corresponding to monitoring metric.
+                     * 
                      */
                     void SetTimestamp(const std::vector<int64_t>& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 

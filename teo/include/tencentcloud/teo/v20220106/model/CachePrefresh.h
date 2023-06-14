@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Configuration switch
                      * @return Switch Configuration switch
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Configuration switch
-                     * @param Switch Configuration switch
+                     * @param _switch Configuration switch
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Percent Cache prefresh percentage. Values: 1-99
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPercent() const;
 
                     /**
                      * 设置Cache prefresh percentage. Values: 1-99
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Percent Cache prefresh percentage. Values: 1-99
+                     * @param _percent Cache prefresh percentage. Values: 1-99
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPercent(const int64_t& _percent);
 
                     /**
                      * 判断参数 Percent 是否已赋值
                      * @return Percent 是否已赋值
+                     * 
                      */
                     bool PercentHasBeenSet() const;
 

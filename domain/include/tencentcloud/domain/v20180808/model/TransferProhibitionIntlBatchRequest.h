@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The domain array.
                      * @return Domains The domain array.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domain array.
-                     * @param Domains The domain array.
+                     * @param _domains The domain array.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable transfer prohibition. Valid values: `true` (enable), `false` (disable).
                      * @return Status Whether to enable transfer prohibition. Valid values: `true` (enable), `false` (disable).
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Whether to enable transfer prohibition. Valid values: `true` (enable), `false` (disable).
-                     * @param Status Whether to enable transfer prohibition. Valid values: `true` (enable), `false` (disable).
+                     * @param _status Whether to enable transfer prohibition. Valid values: `true` (enable), `false` (disable).
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

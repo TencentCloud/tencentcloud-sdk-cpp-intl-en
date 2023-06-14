@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of real server lists
                      * @return TotalCount Total number of real server lists
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Real server list
                      * @return CrossTargetSet Real server list
+                     * 
                      */
                     std::vector<CrossTargets> GetCrossTargetSet() const;
 
                     /**
                      * 判断参数 CrossTargetSet 是否已赋值
                      * @return CrossTargetSet 是否已赋值
+                     * 
                      */
                     bool CrossTargetSetHasBeenSet() const;
 

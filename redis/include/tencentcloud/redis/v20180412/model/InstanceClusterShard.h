@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The name of a shard node
                      * @return ShardName The name of a shard node
+                     * 
                      */
                     std::string GetShardName() const;
 
                     /**
                      * 设置The name of a shard node
-                     * @param ShardName The name of a shard node
+                     * @param _shardName The name of a shard node
+                     * 
                      */
                     void SetShardName(const std::string& _shardName);
 
                     /**
                      * 判断参数 ShardName 是否已赋值
                      * @return ShardName 是否已赋值
+                     * 
                      */
                     bool ShardNameHasBeenSet() const;
 
                     /**
                      * 获取The serial number of a shard node
                      * @return ShardId The serial number of a shard node
+                     * 
                      */
                     std::string GetShardId() const;
 
                     /**
                      * 设置The serial number of a shard node
-                     * @param ShardId The serial number of a shard node
+                     * @param _shardId The serial number of a shard node
+                     * 
                      */
                     void SetShardId(const std::string& _shardId);
 
                     /**
                      * 判断参数 ShardId 是否已赋值
                      * @return ShardId 是否已赋值
+                     * 
                      */
                     bool ShardIdHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
                      * @return Role The role of a shard node
 - `0`: Master node.
 - `1`: Replica node.
+                     * 
                      */
                     int64_t GetRole() const;
 
@@ -96,105 +103,122 @@ namespace TencentCloud
                      * 设置The role of a shard node
 - `0`: Master node.
 - `1`: Replica node.
-                     * @param Role The role of a shard node
+                     * @param _role The role of a shard node
 - `0`: Master node.
 - `1`: Replica node.
+                     * 
                      */
                     void SetRole(const int64_t& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 
                     /**
                      * 获取Number of keys
                      * @return Keys Number of keys
+                     * 
                      */
                     int64_t GetKeys() const;
 
                     /**
                      * 设置Number of keys
-                     * @param Keys Number of keys
+                     * @param _keys Number of keys
+                     * 
                      */
                     void SetKeys(const int64_t& _keys);
 
                     /**
                      * 判断参数 Keys 是否已赋值
                      * @return Keys 是否已赋值
+                     * 
                      */
                     bool KeysHasBeenSet() const;
 
                     /**
                      * 获取Slot information
                      * @return Slots Slot information
+                     * 
                      */
                     std::string GetSlots() const;
 
                     /**
                      * 设置Slot information
-                     * @param Slots Slot information
+                     * @param _slots Slot information
+                     * 
                      */
                     void SetSlots(const std::string& _slots);
 
                     /**
                      * 判断参数 Slots 是否已赋值
                      * @return Slots 是否已赋值
+                     * 
                      */
                     bool SlotsHasBeenSet() const;
 
                     /**
                      * 获取Used Capacity
                      * @return Storage Used Capacity
+                     * 
                      */
                     int64_t GetStorage() const;
 
                     /**
                      * 设置Used Capacity
-                     * @param Storage Used Capacity
+                     * @param _storage Used Capacity
+                     * 
                      */
                     void SetStorage(const int64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Capacity slope
                      * @return StorageSlope Capacity slope
+                     * 
                      */
                     double GetStorageSlope() const;
 
                     /**
                      * 设置Capacity slope
-                     * @param StorageSlope Capacity slope
+                     * @param _storageSlope Capacity slope
+                     * 
                      */
                     void SetStorageSlope(const double& _storageSlope);
 
                     /**
                      * 判断参数 StorageSlope 是否已赋值
                      * @return StorageSlope 是否已赋值
+                     * 
                      */
                     bool StorageSlopeHasBeenSet() const;
 
                     /**
                      * 获取Instance runtime node ID
                      * @return Runid Instance runtime node ID
+                     * 
                      */
                     std::string GetRunid() const;
 
                     /**
                      * 设置Instance runtime node ID
-                     * @param Runid Instance runtime node ID
+                     * @param _runid Instance runtime node ID
+                     * 
                      */
                     void SetRunid(const std::string& _runid);
 
                     /**
                      * 判断参数 Runid 是否已赋值
                      * @return Runid 是否已赋值
+                     * 
                      */
                     bool RunidHasBeenSet() const;
 
@@ -205,6 +229,7 @@ namespace TencentCloud
                      * @return Connected Service status
 - `0`: Down.
 - `1`: On.
+                     * 
                      */
                     int64_t GetConnected() const;
 
@@ -212,15 +237,17 @@ namespace TencentCloud
                      * 设置Service status
 - `0`: Down.
 - `1`: On.
-                     * @param Connected Service status
+                     * @param _connected Service status
 - `0`: Down.
 - `1`: On.
+                     * 
                      */
                     void SetConnected(const int64_t& _connected);
 
                     /**
                      * 判断参数 Connected 是否已赋值
                      * @return Connected 是否已赋值
+                     * 
                      */
                     bool ConnectedHasBeenSet() const;
 

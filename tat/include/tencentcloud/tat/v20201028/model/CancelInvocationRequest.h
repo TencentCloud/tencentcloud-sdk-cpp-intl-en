@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Execution activity ID
                      * @return InvocationId Execution activity ID
+                     * 
                      */
                     std::string GetInvocationId() const;
 
                     /**
                      * 设置Execution activity ID
-                     * @param InvocationId Execution activity ID
+                     * @param _invocationId Execution activity ID
+                     * 
                      */
                     void SetInvocationId(const std::string& _invocationId);
 
                     /**
                      * 判断参数 InvocationId 是否已赋值
                      * @return InvocationId 是否已赋值
+                     * 
                      */
                     bool InvocationIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return InstanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
 <li> `CVM`
 <li> `LIGHTHOUSE`
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
 <li> `CVM`
 <li> `LIGHTHOUSE`
-                     * @param InstanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
+                     * @param _instanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
 <li> `CVM`
 <li> `LIGHTHOUSE`
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

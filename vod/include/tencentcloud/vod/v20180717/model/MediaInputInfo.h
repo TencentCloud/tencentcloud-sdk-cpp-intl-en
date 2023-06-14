@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Video URL.
                      * @return Url Video URL.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Video URL.
-                     * @param Url Video URL.
+                     * @param _url Video URL.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Video name.
                      * @return Name Video name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Video name.
-                     * @param Name Video name.
+                     * @param _name Video name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Custom video ID.
                      * @return Id Custom video ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Custom video ID.
-                     * @param Id Custom video ID.
+                     * @param _id Custom video ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

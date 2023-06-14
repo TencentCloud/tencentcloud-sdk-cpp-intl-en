@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Application name
                      * @return AppName Application name
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Application name
-                     * @param AppName Application name
+                     * @param _appName Application name
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Tencent Cloud project ID. Default value: 0, which means that the default project is used.
                      * @return ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Tencent Cloud project ID. Default value: 0, which means that the default project is used.
-                     * @param ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
+                     * @param _projectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取List of engines to be supported. All values are selected by default.
                      * @return EngineList List of engines to be supported. All values are selected by default.
+                     * 
                      */
                     std::vector<std::string> GetEngineList() const;
 
                     /**
                      * 设置List of engines to be supported. All values are selected by default.
-                     * @param EngineList List of engines to be supported. All values are selected by default.
+                     * @param _engineList List of engines to be supported. All values are selected by default.
+                     * 
                      */
                     void SetEngineList(const std::vector<std::string>& _engineList);
 
                     /**
                      * 判断参数 EngineList 是否已赋值
                      * @return EngineList 是否已赋值
+                     * 
                      */
                     bool EngineListHasBeenSet() const;
 
                     /**
                      * 获取Service region list. All values are selected by default.
                      * @return RegionList Service region list. All values are selected by default.
+                     * 
                      */
                     std::vector<std::string> GetRegionList() const;
 
                     /**
                      * 设置Service region list. All values are selected by default.
-                     * @param RegionList Service region list. All values are selected by default.
+                     * @param _regionList Service region list. All values are selected by default.
+                     * 
                      */
                     void SetRegionList(const std::vector<std::string>& _regionList);
 
                     /**
                      * 判断参数 RegionList 是否已赋值
                      * @return RegionList 是否已赋值
+                     * 
                      */
                     bool RegionListHasBeenSet() const;
 
                     /**
                      * 获取Configuration information of Voice Chat
                      * @return RealtimeSpeechConf Configuration information of Voice Chat
+                     * 
                      */
                     RealtimeSpeechConf GetRealtimeSpeechConf() const;
 
                     /**
                      * 设置Configuration information of Voice Chat
-                     * @param RealtimeSpeechConf Configuration information of Voice Chat
+                     * @param _realtimeSpeechConf Configuration information of Voice Chat
+                     * 
                      */
                     void SetRealtimeSpeechConf(const RealtimeSpeechConf& _realtimeSpeechConf);
 
                     /**
                      * 判断参数 RealtimeSpeechConf 是否已赋值
                      * @return RealtimeSpeechConf 是否已赋值
+                     * 
                      */
                     bool RealtimeSpeechConfHasBeenSet() const;
 
                     /**
                      * 获取Configuration information of Voice Message Service
                      * @return VoiceMessageConf Configuration information of Voice Message Service
+                     * 
                      */
                     VoiceMessageConf GetVoiceMessageConf() const;
 
                     /**
                      * 设置Configuration information of Voice Message Service
-                     * @param VoiceMessageConf Configuration information of Voice Message Service
+                     * @param _voiceMessageConf Configuration information of Voice Message Service
+                     * 
                      */
                     void SetVoiceMessageConf(const VoiceMessageConf& _voiceMessageConf);
 
                     /**
                      * 判断参数 VoiceMessageConf 是否已赋值
                      * @return VoiceMessageConf 是否已赋值
+                     * 
                      */
                     bool VoiceMessageConfHasBeenSet() const;
 
                     /**
                      * 获取Configuration information of Voice Analysis Service
                      * @return VoiceFilterConf Configuration information of Voice Analysis Service
+                     * 
                      */
                     VoiceFilterConf GetVoiceFilterConf() const;
 
                     /**
                      * 设置Configuration information of Voice Analysis Service
-                     * @param VoiceFilterConf Configuration information of Voice Analysis Service
+                     * @param _voiceFilterConf Configuration information of Voice Analysis Service
+                     * 
                      */
                     void SetVoiceFilterConf(const VoiceFilterConf& _voiceFilterConf);
 
                     /**
                      * 判断参数 VoiceFilterConf 是否已赋值
                      * @return VoiceFilterConf 是否已赋值
+                     * 
                      */
                     bool VoiceFilterConfHasBeenSet() const;
 
                     /**
                      * 获取List of tags to be added
                      * @return Tags List of tags to be added
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of tags to be added
-                     * @param Tags List of tags to be added
+                     * @param _tags List of tags to be added
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

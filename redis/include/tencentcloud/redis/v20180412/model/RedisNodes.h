@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Node ID
                      * @return NodeId Node ID
+                     * 
                      */
                     std::string GetNodeId() const;
 
                     /**
                      * 设置Node ID
-                     * @param NodeId Node ID
+                     * @param _nodeId Node ID
+                     * 
                      */
                     void SetNodeId(const std::string& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 
                     /**
                      * 获取Node role
                      * @return NodeRole Node role
+                     * 
                      */
                     std::string GetNodeRole() const;
 
                     /**
                      * 设置Node role
-                     * @param NodeRole Node role
+                     * @param _nodeRole Node role
+                     * 
                      */
                     void SetNodeRole(const std::string& _nodeRole);
 
                     /**
                      * 判断参数 NodeRole 是否已赋值
                      * @return NodeRole 是否已赋值
+                     * 
                      */
                     bool NodeRoleHasBeenSet() const;
 
                     /**
                      * 获取Shard ID
                      * @return ClusterId Shard ID
+                     * 
                      */
                     int64_t GetClusterId() const;
 
                     /**
                      * 设置Shard ID
-                     * @param ClusterId Shard ID
+                     * @param _clusterId Shard ID
+                     * 
                      */
                     void SetClusterId(const int64_t& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取AZ ID
                      * @return ZoneId AZ ID
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置AZ ID
-                     * @param ZoneId AZ ID
+                     * @param _zoneId AZ ID
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of intelligently generated category.
                      * @return Classification Name of intelligently generated category.
+                     * 
                      */
                     std::string GetClassification() const;
 
                     /**
                      * 设置Name of intelligently generated category.
-                     * @param Classification Name of intelligently generated category.
+                     * @param _classification Name of intelligently generated category.
+                     * 
                      */
                     void SetClassification(const std::string& _classification);
 
                     /**
                      * 判断参数 Classification 是否已赋值
                      * @return Classification 是否已赋值
+                     * 
                      */
                     bool ClassificationHasBeenSet() const;
 
                     /**
                      * 获取Confidence of intelligently generated category between 0 and 100.
                      * @return Confidence Confidence of intelligently generated category between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of intelligently generated category between 0 and 100.
-                     * @param Confidence Confidence of intelligently generated category between 0 and 100.
+                     * @param _confidence Confidence of intelligently generated category between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 

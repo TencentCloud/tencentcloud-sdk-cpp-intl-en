@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the project to be deleted
                      * @return ID ID of the project to be deleted
+                     * 
                      */
                     uint64_t GetID() const;
 
                     /**
                      * 设置ID of the project to be deleted
-                     * @param ID ID of the project to be deleted
+                     * @param _iD ID of the project to be deleted
+                     * 
                      */
                     void SetID(const uint64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

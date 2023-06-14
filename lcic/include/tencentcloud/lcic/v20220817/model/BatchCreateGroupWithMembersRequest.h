@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The information of the groups to create. Array length limit: 256.
                      * @return GroupBaseInfos The information of the groups to create. Array length limit: 256.
+                     * 
                      */
                     std::vector<GroupBaseInfo> GetGroupBaseInfos() const;
 
                     /**
                      * 设置The information of the groups to create. Array length limit: 256.
-                     * @param GroupBaseInfos The information of the groups to create. Array length limit: 256.
+                     * @param _groupBaseInfos The information of the groups to create. Array length limit: 256.
+                     * 
                      */
                     void SetGroupBaseInfos(const std::vector<GroupBaseInfo>& _groupBaseInfos);
 
                     /**
                      * 判断参数 GroupBaseInfos 是否已赋值
                      * @return GroupBaseInfos 是否已赋值
+                     * 
                      */
                     bool GroupBaseInfosHasBeenSet() const;
 
                     /**
                      * 获取The group members. Array length limit: 200.
                      * @return MemberIds The group members. Array length limit: 200.
+                     * 
                      */
                     std::vector<std::string> GetMemberIds() const;
 
                     /**
                      * 设置The group members. Array length limit: 200.
-                     * @param MemberIds The group members. Array length limit: 200.
+                     * @param _memberIds The group members. Array length limit: 200.
+                     * 
                      */
                     void SetMemberIds(const std::vector<std::string>& _memberIds);
 
                     /**
                      * 判断参数 MemberIds 是否已赋值
                      * @return MemberIds 是否已赋值
+                     * 
                      */
                     bool MemberIdsHasBeenSet() const;
 

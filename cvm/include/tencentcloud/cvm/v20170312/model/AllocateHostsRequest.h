@@ -48,126 +48,147 @@ namespace TencentCloud
                     /**
                      * 获取Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
                      * @return Placement Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
-                     * @param Placement Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
+                     * @param _placement Instance location. This parameter is used to specify the attributes of an instance, such as its availability zone and project.
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取A string used to ensure the idempotency of the request.
                      * @return ClientToken A string used to ensure the idempotency of the request.
+                     * 
                      */
                     std::string GetClientToken() const;
 
                     /**
                      * 设置A string used to ensure the idempotency of the request.
-                     * @param ClientToken A string used to ensure the idempotency of the request.
+                     * @param _clientToken A string used to ensure the idempotency of the request.
+                     * 
                      */
                     void SetClientToken(const std::string& _clientToken);
 
                     /**
                      * 判断参数 ClientToken 是否已赋值
                      * @return ClientToken 是否已赋值
+                     * 
                      */
                     bool ClientTokenHasBeenSet() const;
 
                     /**
                      * 获取Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
                      * @return HostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * 
                      */
                     ChargePrepaid GetHostChargePrepaid() const;
 
                     /**
                      * 设置Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
-                     * @param HostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * @param _hostChargePrepaid Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+                     * 
                      */
                     void SetHostChargePrepaid(const ChargePrepaid& _hostChargePrepaid);
 
                     /**
                      * 判断参数 HostChargePrepaid 是否已赋值
                      * @return HostChargePrepaid 是否已赋值
+                     * 
                      */
                     bool HostChargePrepaidHasBeenSet() const;
 
                     /**
                      * 获取Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
                      * @return HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+                     * 
                      */
                     std::string GetHostChargeType() const;
 
                     /**
                      * 设置Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
-                     * @param HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+                     * @param _hostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+                     * 
                      */
                     void SetHostChargeType(const std::string& _hostChargeType);
 
                     /**
                      * 判断参数 HostChargeType 是否已赋值
                      * @return HostChargeType 是否已赋值
+                     * 
                      */
                     bool HostChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取CDH instance model. Default value: `HS1`.
                      * @return HostType CDH instance model. Default value: `HS1`.
+                     * 
                      */
                     std::string GetHostType() const;
 
                     /**
                      * 设置CDH instance model. Default value: `HS1`.
-                     * @param HostType CDH instance model. Default value: `HS1`.
+                     * @param _hostType CDH instance model. Default value: `HS1`.
+                     * 
                      */
                     void SetHostType(const std::string& _hostType);
 
                     /**
                      * 判断参数 HostType 是否已赋值
                      * @return HostType 是否已赋值
+                     * 
                      */
                     bool HostTypeHasBeenSet() const;
 
                     /**
                      * 获取Quantity of CDH instances purchased. Default value: 1.
                      * @return HostCount Quantity of CDH instances purchased. Default value: 1.
+                     * 
                      */
                     uint64_t GetHostCount() const;
 
                     /**
                      * 设置Quantity of CDH instances purchased. Default value: 1.
-                     * @param HostCount Quantity of CDH instances purchased. Default value: 1.
+                     * @param _hostCount Quantity of CDH instances purchased. Default value: 1.
+                     * 
                      */
                     void SetHostCount(const uint64_t& _hostCount);
 
                     /**
                      * 判断参数 HostCount 是否已赋值
                      * @return HostCount 是否已赋值
+                     * 
                      */
                     bool HostCountHasBeenSet() const;
 
                     /**
                      * 获取Tag description. You can specify the parameter to associate a tag with an instance.
                      * @return TagSpecification Tag description. You can specify the parameter to associate a tag with an instance.
+                     * 
                      */
                     std::vector<TagSpecification> GetTagSpecification() const;
 
                     /**
                      * 设置Tag description. You can specify the parameter to associate a tag with an instance.
-                     * @param TagSpecification Tag description. You can specify the parameter to associate a tag with an instance.
+                     * @param _tagSpecification Tag description. You can specify the parameter to associate a tag with an instance.
+                     * 
                      */
                     void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Client IP allowed for access
                      * @return AuthClientIp Client IP allowed for access
+                     * 
                      */
                     std::string GetAuthClientIp() const;
 
                     /**
                      * 设置Client IP allowed for access
-                     * @param AuthClientIp Client IP allowed for access
+                     * @param _authClientIp Client IP allowed for access
+                     * 
                      */
                     void SetAuthClientIp(const std::string& _authClientIp);
 
                     /**
                      * 判断参数 AuthClientIp 是否已赋值
                      * @return AuthClientIp 是否已赋值
+                     * 
                      */
                     bool AuthClientIpHasBeenSet() const;
 
                     /**
                      * 获取Read/write permission. ro: read-only; rw: read & write
                      * @return RWPermission Read/write permission. ro: read-only; rw: read & write
+                     * 
                      */
                     std::string GetRWPermission() const;
 
                     /**
                      * 设置Read/write permission. ro: read-only; rw: read & write
-                     * @param RWPermission Read/write permission. ro: read-only; rw: read & write
+                     * @param _rWPermission Read/write permission. ro: read-only; rw: read & write
+                     * 
                      */
                     void SetRWPermission(const std::string& _rWPermission);
 
                     /**
                      * 判断参数 RWPermission 是否已赋值
                      * @return RWPermission 是否已赋值
+                     * 
                      */
                     bool RWPermissionHasBeenSet() const;
 
                     /**
                      * 获取User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
                      * @return UserPermission User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+                     * 
                      */
                     std::string GetUserPermission() const;
 
                     /**
                      * 设置User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
-                     * @param UserPermission User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+                     * @param _userPermission User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+                     * 
                      */
                     void SetUserPermission(const std::string& _userPermission);
 
                     /**
                      * 判断参数 UserPermission 是否已赋值
                      * @return UserPermission 是否已赋值
+                     * 
                      */
                     bool UserPermissionHasBeenSet() const;
 
                     /**
                      * 获取Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
                      * @return Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 设置Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
-                     * @param Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * @param _priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+                     * 
                      */
                     void SetPriority(const int64_t& _priority);
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 

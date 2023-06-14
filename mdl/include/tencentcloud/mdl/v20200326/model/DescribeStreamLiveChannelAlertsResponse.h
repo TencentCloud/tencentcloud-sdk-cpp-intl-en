@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Alarm information of the channel’s two pipelines
                      * @return Infos Alarm information of the channel’s two pipelines
+                     * 
                      */
                     ChannelAlertInfos GetInfos() const;
 
                     /**
                      * 判断参数 Infos 是否已赋值
                      * @return Infos 是否已赋值
+                     * 
                      */
                     bool InfosHasBeenSet() const;
 

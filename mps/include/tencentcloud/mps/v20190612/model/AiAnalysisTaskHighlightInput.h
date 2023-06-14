@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the intelligent highlight generation template.
                      * @return Definition The ID of the intelligent highlight generation template.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置The ID of the intelligent highlight generation template.
-                     * @param Definition The ID of the intelligent highlight generation template.
+                     * @param _definition The ID of the intelligent highlight generation template.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

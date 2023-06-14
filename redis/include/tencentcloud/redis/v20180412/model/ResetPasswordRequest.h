@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Redis instance ID
                      * @return InstanceId Redis instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Redis instance ID
-                     * @param InstanceId Redis instance ID
+                     * @param _instanceId Redis instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
                      * @return Password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
-                     * @param Password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+                     * @param _password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
                      * @return NoAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+                     * 
                      */
                     bool GetNoAuth() const;
 
                     /**
                      * 设置Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
-                     * @param NoAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+                     * @param _noAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+                     * 
                      */
                     void SetNoAuth(const bool& _noAuth);
 
                     /**
                      * 判断参数 NoAuth 是否已赋值
                      * @return NoAuth 是否已赋值
+                     * 
                      */
                     bool NoAuthHasBeenSet() const;
 

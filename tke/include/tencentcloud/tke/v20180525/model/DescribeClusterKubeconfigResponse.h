@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Sub-account kubeconfig file, used to access the cluster kube-apiserver directly
                      * @return Kubeconfig Sub-account kubeconfig file, used to access the cluster kube-apiserver directly
+                     * 
                      */
                     std::string GetKubeconfig() const;
 
                     /**
                      * 判断参数 Kubeconfig 是否已赋值
                      * @return Kubeconfig 是否已赋值
+                     * 
                      */
                     bool KubeconfigHasBeenSet() const;
 

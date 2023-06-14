@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Async request ID, which is used to query the running status of the process.
                      * @return AsyncRequestId Async request ID, which is used to query the running status of the process.
+                     * 
                      */
                     std::string GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

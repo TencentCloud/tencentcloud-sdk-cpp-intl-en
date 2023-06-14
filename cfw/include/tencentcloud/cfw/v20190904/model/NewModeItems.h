@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取VPC list for the Create New mode
                      * @return VpcList VPC list for the Create New mode
+                     * 
                      */
                     std::vector<std::string> GetVpcList() const;
 
                     /**
                      * 设置VPC list for the Create New mode
-                     * @param VpcList VPC list for the Create New mode
+                     * @param _vpcList VPC list for the Create New mode
+                     * 
                      */
                     void SetVpcList(const std::vector<std::string>& _vpcList);
 
                     /**
                      * 判断参数 VpcList 是否已赋值
                      * @return VpcList 是否已赋值
+                     * 
                      */
                     bool VpcListHasBeenSet() const;
 
                     /**
                      * 获取The list of egress public EIPs bound for the Create New mode. Either Eips or AddCount is required.
                      * @return Eips The list of egress public EIPs bound for the Create New mode. Either Eips or AddCount is required.
+                     * 
                      */
                     std::vector<std::string> GetEips() const;
 
                     /**
                      * 设置The list of egress public EIPs bound for the Create New mode. Either Eips or AddCount is required.
-                     * @param Eips The list of egress public EIPs bound for the Create New mode. Either Eips or AddCount is required.
+                     * @param _eips The list of egress public EIPs bound for the Create New mode. Either Eips or AddCount is required.
+                     * 
                      */
                     void SetEips(const std::vector<std::string>& _eips);
 
                     /**
                      * 判断参数 Eips 是否已赋值
                      * @return Eips 是否已赋值
+                     * 
                      */
                     bool EipsHasBeenSet() const;
 
                     /**
                      * 获取The number of egress public EIPs newly bound for the Create New mode. Either Eips or AddCount is required.
                      * @return AddCount The number of egress public EIPs newly bound for the Create New mode. Either Eips or AddCount is required.
+                     * 
                      */
                     int64_t GetAddCount() const;
 
                     /**
                      * 设置The number of egress public EIPs newly bound for the Create New mode. Either Eips or AddCount is required.
-                     * @param AddCount The number of egress public EIPs newly bound for the Create New mode. Either Eips or AddCount is required.
+                     * @param _addCount The number of egress public EIPs newly bound for the Create New mode. Either Eips or AddCount is required.
+                     * 
                      */
                     void SetAddCount(const int64_t& _addCount);
 
                     /**
                      * 判断参数 AddCount 是否已赋值
                      * @return AddCount 是否已赋值
+                     * 
                      */
                     bool AddCountHasBeenSet() const;
 

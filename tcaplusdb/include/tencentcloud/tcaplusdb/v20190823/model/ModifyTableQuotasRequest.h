@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where the table to be scaled resides
                      * @return ClusterId ID of the cluster where the table to be scaled resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where the table to be scaled resides
-                     * @param ClusterId ID of the cluster where the table to be scaled resides
+                     * @param _clusterId ID of the cluster where the table to be scaled resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of quotas of tables selected for modification
                      * @return TableQuotas List of quotas of tables selected for modification
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetTableQuotas() const;
 
                     /**
                      * 设置List of quotas of tables selected for modification
-                     * @param TableQuotas List of quotas of tables selected for modification
+                     * @param _tableQuotas List of quotas of tables selected for modification
+                     * 
                      */
                     void SetTableQuotas(const std::vector<SelectedTableInfoNew>& _tableQuotas);
 
                     /**
                      * 判断参数 TableQuotas 是否已赋值
                      * @return TableQuotas 是否已赋值
+                     * 
                      */
                     bool TableQuotasHasBeenSet() const;
 

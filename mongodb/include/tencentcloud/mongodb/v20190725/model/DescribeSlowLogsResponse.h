@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of slow logs
                      * @return Count Total number of slow logs
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Slow log details
                      * @return SlowLogs Slow log details
+                     * 
                      */
                     std::vector<std::string> GetSlowLogs() const;
 
                     /**
                      * 判断参数 SlowLogs 是否已赋值
                      * @return SlowLogs 是否已赋值
+                     * 
                      */
                     bool SlowLogsHasBeenSet() const;
 

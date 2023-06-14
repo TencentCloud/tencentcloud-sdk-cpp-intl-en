@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeId Organization node ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetNodeId() const;
 
                     /**
                      * 设置Organization node ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NodeId Organization node ID
+                     * @param _nodeId Organization node ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNodeId(const int64_t& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Name
+                     * @param _name Name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ParentNodeId Parent node ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetParentNodeId() const;
 
                     /**
                      * 设置Parent node ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ParentNodeId Parent node ID
+                     * @param _parentNodeId Parent node ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParentNodeId(const int64_t& _parentNodeId);
 
                     /**
                      * 判断参数 ParentNodeId 是否已赋值
                      * @return ParentNodeId 是否已赋值
+                     * 
                      */
                     bool ParentNodeIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Remarks
+                     * @param _remark Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

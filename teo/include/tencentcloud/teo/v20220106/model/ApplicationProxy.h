@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ProxyId ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ProxyId ID of the proxy
+                     * @param _proxyId ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -76,6 +79,7 @@ Instance name when `ProxyType=instance`
                      * @return ProxyName Name of the proxy:
 Domain name or subdomain name when `ProxyType=hostname`
 Instance name when `ProxyType=instance`
+                     * 
                      */
                     std::string GetProxyName() const;
 
@@ -83,15 +87,17 @@ Instance name when `ProxyType=instance`
                      * 设置Name of the proxy:
 Domain name or subdomain name when `ProxyType=hostname`
 Instance name when `ProxyType=instance`
-                     * @param ProxyName Name of the proxy:
+                     * @param _proxyName Name of the proxy:
 Domain name or subdomain name when `ProxyType=hostname`
 Instance name when `ProxyType=instance`
+                     * 
                      */
                     void SetProxyName(const std::string& _proxyName);
 
                     /**
                      * 判断参数 ProxyName 是否已赋值
                      * @return ProxyName 是否已赋值
+                     * 
                      */
                     bool ProxyNameHasBeenSet() const;
 
@@ -102,6 +108,7 @@ Instance name when `ProxyType=instance`
                      * @return PlatType Scheduling mode:
 `ip`: Anycast IP
 `domain`: CNAME
+                     * 
                      */
                     std::string GetPlatType() const;
 
@@ -109,105 +116,122 @@ Instance name when `ProxyType=instance`
                      * 设置Scheduling mode:
 `ip`: Anycast IP
 `domain`: CNAME
-                     * @param PlatType Scheduling mode:
+                     * @param _platType Scheduling mode:
 `ip`: Anycast IP
 `domain`: CNAME
+                     * 
                      */
                     void SetPlatType(const std::string& _platType);
 
                     /**
                      * 判断参数 PlatType 是否已赋值
                      * @return PlatType 是否已赋值
+                     * 
                      */
                     bool PlatTypeHasBeenSet() const;
 
                     /**
                      * 获取`0`: Disable security protection; `1`: Enable security protection.
                      * @return SecurityType `0`: Disable security protection; `1`: Enable security protection.
+                     * 
                      */
                     int64_t GetSecurityType() const;
 
                     /**
                      * 设置`0`: Disable security protection; `1`: Enable security protection.
-                     * @param SecurityType `0`: Disable security protection; `1`: Enable security protection.
+                     * @param _securityType `0`: Disable security protection; `1`: Enable security protection.
+                     * 
                      */
                     void SetSecurityType(const int64_t& _securityType);
 
                     /**
                      * 判断参数 SecurityType 是否已赋值
                      * @return SecurityType 是否已赋值
+                     * 
                      */
                     bool SecurityTypeHasBeenSet() const;
 
                     /**
                      * 获取`0`: Disable acceleration; `1`: Enable acceleration.
                      * @return AccelerateType `0`: Disable acceleration; `1`: Enable acceleration.
+                     * 
                      */
                     int64_t GetAccelerateType() const;
 
                     /**
                      * 设置`0`: Disable acceleration; `1`: Enable acceleration.
-                     * @param AccelerateType `0`: Disable acceleration; `1`: Enable acceleration.
+                     * @param _accelerateType `0`: Disable acceleration; `1`: Enable acceleration.
+                     * 
                      */
                     void SetAccelerateType(const int64_t& _accelerateType);
 
                     /**
                      * 判断参数 AccelerateType 是否已赋值
                      * @return AccelerateType 是否已赋值
+                     * 
                      */
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
                      * 获取This field is moved to `Rule.ForwardClientIp`.
                      * @return ForwardClientIp This field is moved to `Rule.ForwardClientIp`.
+                     * 
                      */
                     std::string GetForwardClientIp() const;
 
                     /**
                      * 设置This field is moved to `Rule.ForwardClientIp`.
-                     * @param ForwardClientIp This field is moved to `Rule.ForwardClientIp`.
+                     * @param _forwardClientIp This field is moved to `Rule.ForwardClientIp`.
+                     * 
                      */
                     void SetForwardClientIp(const std::string& _forwardClientIp);
 
                     /**
                      * 判断参数 ForwardClientIp 是否已赋值
                      * @return ForwardClientIp 是否已赋值
+                     * 
                      */
                     bool ForwardClientIpHasBeenSet() const;
 
                     /**
                      * 获取This field is moved to `Rule.SessionPersist`.
                      * @return SessionPersist This field is moved to `Rule.SessionPersist`.
+                     * 
                      */
                     bool GetSessionPersist() const;
 
                     /**
                      * 设置This field is moved to `Rule.SessionPersist`.
-                     * @param SessionPersist This field is moved to `Rule.SessionPersist`.
+                     * @param _sessionPersist This field is moved to `Rule.SessionPersist`.
+                     * 
                      */
                     void SetSessionPersist(const bool& _sessionPersist);
 
                     /**
                      * 判断参数 SessionPersist 是否已赋值
                      * @return SessionPersist 是否已赋值
+                     * 
                      */
                     bool SessionPersistHasBeenSet() const;
 
                     /**
                      * 获取Rule list
                      * @return Rule Rule list
+                     * 
                      */
                     std::vector<ApplicationProxyRule> GetRule() const;
 
                     /**
                      * 设置Rule list
-                     * @param Rule Rule list
+                     * @param _rule Rule list
+                     * 
                      */
                     void SetRule(const std::vector<ApplicationProxyRule>& _rule);
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 
@@ -226,6 +250,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `stopping`: Disabling
 `fail`: Deployment/Disabling failed
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -237,19 +262,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `stopping`: Disabling
 `fail`: Deployment/Disabling failed
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Status Status:
+                     * @param _status Status:
 `online`: Enable
 `offline`: Disable
 `progress`: Deploying
 `stopping`: Disabling
 `fail`: Deployment/Disabling failed
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -258,20 +285,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ScheduleValue Scheduling information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetScheduleValue() const;
 
                     /**
                      * 设置Scheduling information
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ScheduleValue Scheduling information
+                     * @param _scheduleValue Scheduling information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetScheduleValue(const std::vector<std::string>& _scheduleValue);
 
                     /**
                      * 判断参数 ScheduleValue 是否已赋值
                      * @return ScheduleValue 是否已赋值
+                     * 
                      */
                     bool ScheduleValueHasBeenSet() const;
 
@@ -280,20 +310,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpdateTime Update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -302,20 +335,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ZoneId Site ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -324,20 +360,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ZoneName Site name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置Site name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ZoneName Site name
+                     * @param _zoneName Site name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
@@ -346,20 +385,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SessionPersistTime Session persistence duration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
                      * 设置Session persistence duration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SessionPersistTime Session persistence duration
+                     * @param _sessionPersistTime Session persistence duration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
 
                     /**
                      * 判断参数 SessionPersistTime 是否已赋值
                      * @return SessionPersistTime 是否已赋值
+                     * 
                      */
                     bool SessionPersistTimeHasBeenSet() const;
 
@@ -372,6 +414,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `hostname`: Create by subdomain name
 `instance`: Create by instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProxyType() const;
 
@@ -380,16 +423,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `hostname`: Create by subdomain name
 `instance`: Create by instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProxyType Specifies how a layer-4 proxy is created.
+                     * @param _proxyType Specifies how a layer-4 proxy is created.
 `hostname`: Create by subdomain name
 `instance`: Create by instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProxyType(const std::string& _proxyType);
 
                     /**
                      * 判断参数 ProxyType 是否已赋值
                      * @return ProxyType 是否已赋值
+                     * 
                      */
                     bool ProxyTypeHasBeenSet() const;
 
@@ -402,6 +447,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ProxyName` indicates a specified domain name;
 `HostId` indicates a unique ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHostId() const;
 
@@ -410,16 +456,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ProxyName` indicates a specified domain name;
 `HostId` indicates a unique ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HostId When `ProxyType=hostname`:
+                     * @param _hostId When `ProxyType=hostname`:
 `ProxyName` indicates a specified domain name;
 `HostId` indicates a unique ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHostId(const std::string& _hostId);
 
                     /**
                      * 判断参数 HostId 是否已赋值
                      * @return HostId 是否已赋值
+                     * 
                      */
                     bool HostIdHasBeenSet() const;
 

@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Plugin ID
                      * @return PluginId Plugin ID
+                     * 
                      */
                     std::string GetPluginId() const;
 
                     /**
                      * 设置Plugin ID
-                     * @param PluginId Plugin ID
+                     * @param _pluginId Plugin ID
+                     * 
                      */
                     void SetPluginId(const std::string& _pluginId);
 
                     /**
                      * 判断参数 PluginId 是否已赋值
                      * @return PluginId 是否已赋值
+                     * 
                      */
                     bool PluginIdHasBeenSet() const;
 
                     /**
                      * 获取Plugin name
                      * @return PluginName Plugin name
+                     * 
                      */
                     std::string GetPluginName() const;
 
                     /**
                      * 设置Plugin name
-                     * @param PluginName Plugin name
+                     * @param _pluginName Plugin name
+                     * 
                      */
                     void SetPluginName(const std::string& _pluginName);
 
                     /**
                      * 判断参数 PluginName 是否已赋值
                      * @return PluginName 是否已赋值
+                     * 
                      */
                     bool PluginNameHasBeenSet() const;
 
                     /**
                      * 获取Plugin type
                      * @return PluginType Plugin type
+                     * 
                      */
                     std::string GetPluginType() const;
 
                     /**
                      * 设置Plugin type
-                     * @param PluginType Plugin type
+                     * @param _pluginType Plugin type
+                     * 
                      */
                     void SetPluginType(const std::string& _pluginType);
 
                     /**
                      * 判断参数 PluginType 是否已赋值
                      * @return PluginType 是否已赋值
+                     * 
                      */
                     bool PluginTypeHasBeenSet() const;
 
                     /**
                      * 获取Plugin definition statement
                      * @return PluginData Plugin definition statement
+                     * 
                      */
                     std::string GetPluginData() const;
 
                     /**
                      * 设置Plugin definition statement
-                     * @param PluginData Plugin definition statement
+                     * @param _pluginData Plugin definition statement
+                     * 
                      */
                     void SetPluginData(const std::string& _pluginData);
 
                     /**
                      * 判断参数 PluginData 是否已赋值
                      * @return PluginData 是否已赋值
+                     * 
                      */
                     bool PluginDataHasBeenSet() const;
 
@@ -124,56 +136,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Plugin description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Plugin description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Plugin description
+                     * @param _description Plugin description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Plugin creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
                      * @return CreatedTime Plugin creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Plugin creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
-                     * @param CreatedTime Plugin creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _createdTime Plugin creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Plugin modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
                      * @return ModifiedTime Plugin modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 设置Plugin modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
-                     * @param ModifiedTime Plugin modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
+                     * @param _modifiedTime Plugin modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
+                     * 
                      */
                     void SetModifiedTime(const std::string& _modifiedTime);
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 
@@ -182,20 +203,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AttachedApiTotalCount Total number of APIs bound with the plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAttachedApiTotalCount() const;
 
                     /**
                      * 设置Total number of APIs bound with the plugin
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AttachedApiTotalCount Total number of APIs bound with the plugin
+                     * @param _attachedApiTotalCount Total number of APIs bound with the plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttachedApiTotalCount(const int64_t& _attachedApiTotalCount);
 
                     /**
                      * 判断参数 AttachedApiTotalCount 是否已赋值
                      * @return AttachedApiTotalCount 是否已赋值
+                     * 
                      */
                     bool AttachedApiTotalCountHasBeenSet() const;
 
@@ -204,20 +228,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AttachedApis Information of the API bound with the plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AttachedApiInfo> GetAttachedApis() const;
 
                     /**
                      * 设置Information of the API bound with the plugin
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AttachedApis Information of the API bound with the plugin
+                     * @param _attachedApis Information of the API bound with the plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttachedApis(const std::vector<AttachedApiInfo>& _attachedApis);
 
                     /**
                      * 判断参数 AttachedApis 是否已赋值
                      * @return AttachedApis 是否已赋值
+                     * 
                      */
                     bool AttachedApisHasBeenSet() const;
 

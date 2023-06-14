@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Total batches
                      * @return TotalBatchCount Total batches
+                     * 
                      */
                     int64_t GetTotalBatchCount() const;
 
                     /**
                      * 设置Total batches
-                     * @param TotalBatchCount Total batches
+                     * @param _totalBatchCount Total batches
+                     * 
                      */
                     void SetTotalBatchCount(const int64_t& _totalBatchCount);
 
                     /**
                      * 判断参数 TotalBatchCount 是否已赋值
                      * @return TotalBatchCount 是否已赋值
+                     * 
                      */
                     bool TotalBatchCountHasBeenSet() const;
 
                     /**
                      * 获取Number of instances for the beta batch
                      * @return BetaBatchNum Number of instances for the beta batch
+                     * 
                      */
                     int64_t GetBetaBatchNum() const;
 
                     /**
                      * 设置Number of instances for the beta batch
-                     * @param BetaBatchNum Number of instances for the beta batch
+                     * @param _betaBatchNum Number of instances for the beta batch
+                     * 
                      */
                     void SetBetaBatchNum(const int64_t& _betaBatchNum);
 
                     /**
                      * 判断参数 BetaBatchNum 是否已赋值
                      * @return BetaBatchNum 是否已赋值
+                     * 
                      */
                     bool BetaBatchNumHasBeenSet() const;
 
                     /**
                      * 获取Batch deploy policy. `0`: automatically; `1`: manually. If you use beta batch, the policy for beta batch must be `0`. The policy specified here only applies to the rest batches.
                      * @return DeployStrategyType Batch deploy policy. `0`: automatically; `1`: manually. If you use beta batch, the policy for beta batch must be `0`. The policy specified here only applies to the rest batches.
+                     * 
                      */
                     int64_t GetDeployStrategyType() const;
 
                     /**
                      * 设置Batch deploy policy. `0`: automatically; `1`: manually. If you use beta batch, the policy for beta batch must be `0`. The policy specified here only applies to the rest batches.
-                     * @param DeployStrategyType Batch deploy policy. `0`: automatically; `1`: manually. If you use beta batch, the policy for beta batch must be `0`. The policy specified here only applies to the rest batches.
+                     * @param _deployStrategyType Batch deploy policy. `0`: automatically; `1`: manually. If you use beta batch, the policy for beta batch must be `0`. The policy specified here only applies to the rest batches.
+                     * 
                      */
                     void SetDeployStrategyType(const int64_t& _deployStrategyType);
 
                     /**
                      * 判断参数 DeployStrategyType 是否已赋值
                      * @return DeployStrategyType 是否已赋值
+                     * 
                      */
                     bool DeployStrategyTypeHasBeenSet() const;
 
                     /**
                      * 获取Interval between batches
                      * @return BatchInterval Interval between batches
+                     * 
                      */
                     int64_t GetBatchInterval() const;
 
                     /**
                      * 设置Interval between batches
-                     * @param BatchInterval Interval between batches
+                     * @param _batchInterval Interval between batches
+                     * 
                      */
                     void SetBatchInterval(const int64_t& _batchInterval);
 
                     /**
                      * 判断参数 BatchInterval 是否已赋值
                      * @return BatchInterval 是否已赋值
+                     * 
                      */
                     bool BatchIntervalHasBeenSet() const;
 

@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取List of non-stop words
                      * @return MainDict List of non-stop words
+                     * 
                      */
                     std::vector<DictInfo> GetMainDict() const;
 
                     /**
                      * 设置List of non-stop words
-                     * @param MainDict List of non-stop words
+                     * @param _mainDict List of non-stop words
+                     * 
                      */
                     void SetMainDict(const std::vector<DictInfo>& _mainDict);
 
                     /**
                      * 判断参数 MainDict 是否已赋值
                      * @return MainDict 是否已赋值
+                     * 
                      */
                     bool MainDictHasBeenSet() const;
 
                     /**
                      * 获取List of stop words
                      * @return Stopwords List of stop words
+                     * 
                      */
                     std::vector<DictInfo> GetStopwords() const;
 
                     /**
                      * 设置List of stop words
-                     * @param Stopwords List of stop words
+                     * @param _stopwords List of stop words
+                     * 
                      */
                     void SetStopwords(const std::vector<DictInfo>& _stopwords);
 
                     /**
                      * 判断参数 Stopwords 是否已赋值
                      * @return Stopwords 是否已赋值
+                     * 
                      */
                     bool StopwordsHasBeenSet() const;
 
                     /**
                      * 获取QQ dictionary list
                      * @return QQDict QQ dictionary list
+                     * 
                      */
                     std::vector<DictInfo> GetQQDict() const;
 
                     /**
                      * 设置QQ dictionary list
-                     * @param QQDict QQ dictionary list
+                     * @param _qQDict QQ dictionary list
+                     * 
                      */
                     void SetQQDict(const std::vector<DictInfo>& _qQDict);
 
                     /**
                      * 判断参数 QQDict 是否已赋值
                      * @return QQDict 是否已赋值
+                     * 
                      */
                     bool QQDictHasBeenSet() const;
 
                     /**
                      * 获取Synonym dictionary list
                      * @return Synonym Synonym dictionary list
+                     * 
                      */
                     std::vector<DictInfo> GetSynonym() const;
 
                     /**
                      * 设置Synonym dictionary list
-                     * @param Synonym Synonym dictionary list
+                     * @param _synonym Synonym dictionary list
+                     * 
                      */
                     void SetSynonym(const std::vector<DictInfo>& _synonym);
 
                     /**
                      * 判断参数 Synonym 是否已赋值
                      * @return Synonym 是否已赋值
+                     * 
                      */
                     bool SynonymHasBeenSet() const;
 
                     /**
                      * 获取Update dictionary type
                      * @return UpdateType Update dictionary type
+                     * 
                      */
                     std::string GetUpdateType() const;
 
                     /**
                      * 设置Update dictionary type
-                     * @param UpdateType Update dictionary type
+                     * @param _updateType Update dictionary type
+                     * 
                      */
                     void SetUpdateType(const std::string& _updateType);
 
                     /**
                      * 判断参数 UpdateType 是否已赋值
                      * @return UpdateType 是否已赋值
+                     * 
                      */
                     bool UpdateTypeHasBeenSet() const;
 

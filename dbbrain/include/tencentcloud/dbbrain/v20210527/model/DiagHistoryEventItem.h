@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Diagnosis type.
                      * @return DiagType Diagnosis type.
+                     * 
                      */
                     std::string GetDiagType() const;
 
                     /**
                      * 设置Diagnosis type.
-                     * @param DiagType Diagnosis type.
+                     * @param _diagType Diagnosis type.
+                     * 
                      */
                     void SetDiagType(const std::string& _diagType);
 
                     /**
                      * 判断参数 DiagType 是否已赋值
                      * @return DiagType 是否已赋值
+                     * 
                      */
                     bool DiagTypeHasBeenSet() const;
 
                     /**
                      * 获取End time.
                      * @return EndTime End time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time.
-                     * @param EndTime End time.
+                     * @param _endTime End time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Start time.
                      * @return StartTime Start time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time.
-                     * @param StartTime Start time.
+                     * @param _startTime Start time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Unique event ID.
                      * @return EventId Unique event ID.
+                     * 
                      */
                     int64_t GetEventId() const;
 
                     /**
                      * 设置Unique event ID.
-                     * @param EventId Unique event ID.
+                     * @param _eventId Unique event ID.
+                     * 
                      */
                     void SetEventId(const int64_t& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
                      * @return Severity Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
+                     * 
                      */
                     int64_t GetSeverity() const;
 
                     /**
                      * 设置Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
-                     * @param Severity Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
+                     * @param _severity Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
+                     * 
                      */
                     void SetSeverity(const int64_t& _severity);
 
                     /**
                      * 判断参数 Severity 是否已赋值
                      * @return Severity 是否已赋值
+                     * 
                      */
                     bool SeverityHasBeenSet() const;
 
                     /**
                      * 获取Diagnosis summary.
                      * @return Outline Diagnosis summary.
+                     * 
                      */
                     std::string GetOutline() const;
 
                     /**
                      * 设置Diagnosis summary.
-                     * @param Outline Diagnosis summary.
+                     * @param _outline Diagnosis summary.
+                     * 
                      */
                     void SetOutline(const std::string& _outline);
 
                     /**
                      * 判断参数 Outline 是否已赋值
                      * @return Outline 是否已赋值
+                     * 
                      */
                     bool OutlineHasBeenSet() const;
 
                     /**
                      * 获取Diagnosis item description.
                      * @return DiagItem Diagnosis item description.
+                     * 
                      */
                     std::string GetDiagItem() const;
 
                     /**
                      * 设置Diagnosis item description.
-                     * @param DiagItem Diagnosis item description.
+                     * @param _diagItem Diagnosis item description.
+                     * 
                      */
                     void SetDiagItem(const std::string& _diagItem);
 
                     /**
                      * 判断参数 DiagItem 是否已赋值
                      * @return DiagItem 是否已赋值
+                     * 
                      */
                     bool DiagItemHasBeenSet() const;
 
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -195,38 +219,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Metric Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Metric Reserved field.
+                     * @param _metric Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
                     /**
                      * 获取Region.
                      * @return Region Region.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region.
-                     * @param Region Region.
+                     * @param _region Region.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

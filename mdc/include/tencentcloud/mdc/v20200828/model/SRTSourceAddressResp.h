@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The peer IP.
                      * @return Ip The peer IP.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置The peer IP.
-                     * @param Ip The peer IP.
+                     * @param _ip The peer IP.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取The peer port.
                      * @return Port The peer port.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置The peer port.
-                     * @param Port The peer port.
+                     * @param _port The peer port.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

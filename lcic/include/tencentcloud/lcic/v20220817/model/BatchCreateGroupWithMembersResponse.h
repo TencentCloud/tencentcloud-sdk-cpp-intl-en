@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The IDs of the groups created, which are in the same order as the elements in the request parameter `GroupBaseInfos.N`.
                      * @return GroupIds The IDs of the groups created, which are in the same order as the elements in the request parameter `GroupBaseInfos.N`.
+                     * 
                      */
                     std::vector<std::string> GetGroupIds() const;
 
                     /**
                      * 判断参数 GroupIds 是否已赋值
                      * @return GroupIds 是否已赋值
+                     * 
                      */
                     bool GroupIdsHasBeenSet() const;
 

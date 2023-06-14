@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Number of connections in connection group
                      * @return ProxyNum Number of connections in connection group
+                     * 
                      */
                     int64_t GetProxyNum() const;
 
                     /**
                      * 设置Number of connections in connection group
-                     * @param ProxyNum Number of connections in connection group
+                     * @param _proxyNum Number of connections in connection group
+                     * 
                      */
                     void SetProxyNum(const int64_t& _proxyNum);
 
                     /**
                      * 判断参数 ProxyNum 是否已赋值
                      * @return ProxyNum 是否已赋值
+                     * 
                      */
                     bool ProxyNumHasBeenSet() const;
 
@@ -115,6 +124,7 @@ namespace TencentCloud
 `4`: Terminating
 `11`: Migrating
 `12`: Deploying
+                     * 
                      */
                     int64_t GetStatus() const;
 
@@ -125,90 +135,104 @@ namespace TencentCloud
 `4`: Terminating
 `11`: Migrating
 `12`: Deploying
-                     * @param Status Connection group status:
+                     * @param _status Connection group status:
 `0`: Running normally
 `1`: Creating
 `4`: Terminating
 `11`: Migrating
 `12`: Deploying
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Owner UIN
                      * @return OwnerUin Owner UIN
+                     * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
                      * 设置Owner UIN
-                     * @param OwnerUin Owner UIN
+                     * @param _ownerUin Owner UIN
+                     * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
 
                     /**
                      * 判断参数 OwnerUin 是否已赋值
                      * @return OwnerUin 是否已赋值
+                     * 
                      */
                     bool OwnerUinHasBeenSet() const;
 
                     /**
                      * 获取Creation UIN
                      * @return CreateUin Creation UIN
+                     * 
                      */
                     std::string GetCreateUin() const;
 
                     /**
                      * 设置Creation UIN
-                     * @param CreateUin Creation UIN
+                     * @param _createUin Creation UIN
+                     * 
                      */
                     void SetCreateUin(const std::string& _createUin);
 
                     /**
                      * 判断参数 CreateUin 是否已赋值
                      * @return CreateUin 是否已赋值
+                     * 
                      */
                     bool CreateUinHasBeenSet() const;
 
                     /**
                      * 获取Connection name
                      * @return GroupName Connection name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Connection name
-                     * @param GroupName Connection name
+                     * @param _groupName Connection name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Default IP of domain name resolution for connection groups
                      * @return DnsDefaultIp Default IP of domain name resolution for connection groups
+                     * 
                      */
                     std::string GetDnsDefaultIp() const;
 
                     /**
                      * 设置Default IP of domain name resolution for connection groups
-                     * @param DnsDefaultIp Default IP of domain name resolution for connection groups
+                     * @param _dnsDefaultIp Default IP of domain name resolution for connection groups
+                     * 
                      */
                     void SetDnsDefaultIp(const std::string& _dnsDefaultIp);
 
                     /**
                      * 判断参数 DnsDefaultIp 是否已赋值
                      * @return DnsDefaultIp 是否已赋值
+                     * 
                      */
                     bool DnsDefaultIpHasBeenSet() const;
 
@@ -217,74 +241,86 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Connection group domain name
+                     * @param _domain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Target region
                      * @return RealServerRegionInfo Target region
+                     * 
                      */
                     RegionDetail GetRealServerRegionInfo() const;
 
                     /**
                      * 设置Target region
-                     * @param RealServerRegionInfo Target region
+                     * @param _realServerRegionInfo Target region
+                     * 
                      */
                     void SetRealServerRegionInfo(const RegionDetail& _realServerRegionInfo);
 
                     /**
                      * 判断参数 RealServerRegionInfo 是否已赋值
                      * @return RealServerRegionInfo 是否已赋值
+                     * 
                      */
                     bool RealServerRegionInfoHasBeenSet() const;
 
                     /**
                      * 获取Whether it is an old connection group, i.e., those created before August 3, 2018.
                      * @return IsOldGroup Whether it is an old connection group, i.e., those created before August 3, 2018.
+                     * 
                      */
                     bool GetIsOldGroup() const;
 
                     /**
                      * 设置Whether it is an old connection group, i.e., those created before August 3, 2018.
-                     * @param IsOldGroup Whether it is an old connection group, i.e., those created before August 3, 2018.
+                     * @param _isOldGroup Whether it is an old connection group, i.e., those created before August 3, 2018.
+                     * 
                      */
                     void SetIsOldGroup(const bool& _isOldGroup);
 
                     /**
                      * 判断参数 IsOldGroup 是否已赋值
                      * @return IsOldGroup 是否已赋值
+                     * 
                      */
                     bool IsOldGroupHasBeenSet() const;
 
                     /**
                      * 获取Connection group ID
                      * @return GroupId Connection group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Connection group ID
-                     * @param GroupId Connection group ID
+                     * @param _groupId Connection group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
@@ -293,20 +329,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagSet Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
                      * 设置Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagSet Tag list
+                     * @param _tagSet Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
@@ -315,20 +354,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyId Security policy ID. This field exists if security policies are set.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Security policy ID. This field exists if security policies are set.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PolicyId Security policy ID. This field exists if security policies are set.
+                     * @param _policyId Security policy ID. This field exists if security policies are set.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
@@ -337,20 +379,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Connection group version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Connection group version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version Connection group version
+                     * @param _version Connection group version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -359,20 +404,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetClientIPMethod() const;
 
                     /**
                      * 设置Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+                     * @param _clientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientIPMethod(const std::vector<int64_t>& _clientIPMethod);
 
                     /**
                      * 判断参数 ClientIPMethod 是否已赋值
                      * @return ClientIPMethod 是否已赋值
+                     * 
                      */
                     bool ClientIPMethodHasBeenSet() const;
 
@@ -381,20 +429,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIPAddressVersion() const;
 
                     /**
                      * 设置IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * @param _iPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIPAddressVersion(const std::string& _iPAddressVersion);
 
                     /**
                      * 判断参数 IPAddressVersion 是否已赋值
                      * @return IPAddressVersion 是否已赋值
+                     * 
                      */
                     bool IPAddressVersionHasBeenSet() const;
 
@@ -403,20 +454,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPackageType() const;
 
                     /**
                      * 设置Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+                     * @param _packageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPackageType(const std::string& _packageType);
 
                     /**
                      * 判断参数 PackageType 是否已赋值
                      * @return PackageType 是否已赋值
+                     * 
                      */
                     bool PackageTypeHasBeenSet() const;
 
@@ -429,6 +483,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: Disable
 `1`: Enable
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHttp3Supported() const;
 
@@ -437,16 +492,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: Disable
 `1`: Enable
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+                     * @param _http3Supported Specifies whether to enable HTTP3. Valid values:
 `0`: Disable
 `1`: Enable
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
                     /**
                      * 判断参数 Http3Supported 是否已赋值
                      * @return Http3Supported 是否已赋值
+                     * 
                      */
                     bool Http3SupportedHasBeenSet() const;
 
@@ -477,6 +534,7 @@ Each bit in the bitmap represents a feature:
 7th bit: QoS acceleration.
 Note: This field may return null, indicating that no valid values can be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFeatureBitmap() const;
 
@@ -494,7 +552,7 @@ Each bit in the bitmap represents a feature:
 7th bit: QoS acceleration.
 Note: This field may return null, indicating that no valid values can be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FeatureBitmap Feature bitmap. Valid values:
+                     * @param _featureBitmap Feature bitmap. Valid values:
 `0`: Feature not supported
 `1`: Feature supported
 Each bit in the bitmap represents a feature:
@@ -507,12 +565,14 @@ Each bit in the bitmap represents a feature:
 7th bit: QoS acceleration.
 Note: This field may return null, indicating that no valid values can be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFeatureBitmap(const int64_t& _featureBitmap);
 
                     /**
                      * 判断参数 FeatureBitmap 是否已赋值
                      * @return FeatureBitmap 是否已赋值
+                     * 
                      */
                     bool FeatureBitmapHasBeenSet() const;
 

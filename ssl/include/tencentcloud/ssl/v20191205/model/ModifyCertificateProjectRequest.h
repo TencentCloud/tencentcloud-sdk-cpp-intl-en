@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
                      * @return CertificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+                     * 
                      */
                     std::vector<std::string> GetCertificateIdList() const;
 
                     /**
                      * 设置ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
-                     * @param CertificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+                     * @param _certificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+                     * 
                      */
                     void SetCertificateIdList(const std::vector<std::string>& _certificateIdList);
 
                     /**
                      * 判断参数 CertificateIdList 是否已赋值
                      * @return CertificateIdList 是否已赋值
+                     * 
                      */
                     bool CertificateIdListHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 

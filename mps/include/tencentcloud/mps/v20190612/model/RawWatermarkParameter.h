@@ -52,20 +52,23 @@ namespace TencentCloud
 <li>image: image watermark.</li>
                      * @return Type Watermark type. Valid values:
 <li>image: image watermark.</li>
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Watermark type. Valid values:
 <li>image: image watermark.</li>
-                     * @param Type Watermark type. Valid values:
+                     * @param _type Watermark type. Valid values:
 <li>image: image watermark.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -76,6 +79,7 @@ Default value: TopLeft.
                      * @return CoordinateOrigin Origin position, which currently can only be:
 <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
 Default value: TopLeft.
+                     * 
                      */
                     std::string GetCoordinateOrigin() const;
 
@@ -83,15 +87,17 @@ Default value: TopLeft.
                      * 设置Origin position, which currently can only be:
 <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
 Default value: TopLeft.
-                     * @param CoordinateOrigin Origin position, which currently can only be:
+                     * @param _coordinateOrigin Origin position, which currently can only be:
 <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text.</li>
 Default value: TopLeft.
+                     * 
                      */
                     void SetCoordinateOrigin(const std::string& _coordinateOrigin);
 
                     /**
                      * 判断参数 CoordinateOrigin 是否已赋值
                      * @return CoordinateOrigin 是否已赋值
+                     * 
                      */
                     bool CoordinateOriginHasBeenSet() const;
 
@@ -104,6 +110,7 @@ Default value: 0 px.
 <li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
 <li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     std::string GetXPos() const;
 
@@ -112,16 +119,18 @@ Default value: 0 px.
 <li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
 <li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
 Default value: 0 px.
-                     * @param XPos The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
+                     * @param _xPos The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
 <li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
 <li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     void SetXPos(const std::string& _xPos);
 
                     /**
                      * 判断参数 XPos 是否已赋值
                      * @return XPos 是否已赋值
+                     * 
                      */
                     bool XPosHasBeenSet() const;
 
@@ -134,6 +143,7 @@ Default value: 0 px.
 <li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
 <li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     std::string GetYPos() const;
 
@@ -142,34 +152,39 @@ Default value: 0 px.
 <li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
 <li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
 Default value: 0 px.
-                     * @param YPos The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
+                     * @param _yPos The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
 <li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
 <li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
 Default value: 0 px.
+                     * 
                      */
                     void SetYPos(const std::string& _yPos);
 
                     /**
                      * 判断参数 YPos 是否已赋值
                      * @return YPos 是否已赋值
+                     * 
                      */
                     bool YPosHasBeenSet() const;
 
                     /**
                      * 获取Image watermark template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
                      * @return ImageTemplate Image watermark template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
+                     * 
                      */
                     RawImageWatermarkInput GetImageTemplate() const;
 
                     /**
                      * 设置Image watermark template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
-                     * @param ImageTemplate Image watermark template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
+                     * @param _imageTemplate Image watermark template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
+                     * 
                      */
                     void SetImageTemplate(const RawImageWatermarkInput& _imageTemplate);
 
                     /**
                      * 判断参数 ImageTemplate 是否已赋值
                      * @return ImageTemplate 是否已赋值
+                     * 
                      */
                     bool ImageTemplateHasBeenSet() const;
 

@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationIds List of IDs of the applications accessible to the user group.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetApplicationIds() const;
 
                     /**
                      * 判断参数 ApplicationIds 是否已赋值
                      * @return ApplicationIds 是否已赋值
+                     * 
                      */
                     bool ApplicationIdsHasBeenSet() const;
 

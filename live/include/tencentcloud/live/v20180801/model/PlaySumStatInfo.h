@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Domain name or stream ID.
                      * @return Name Domain name or stream ID.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Domain name or stream ID.
-                     * @param Name Domain name or stream ID.
+                     * @param _name Domain name or stream ID.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Calculation formula: average download speed per minute.
                      * @return AvgFluxPerSecond Average download speed,
 In MB/s.
 Calculation formula: average download speed per minute.
+                     * 
                      */
                     double GetAvgFluxPerSecond() const;
 
@@ -78,51 +82,59 @@ Calculation formula: average download speed per minute.
                      * 设置Average download speed,
 In MB/s.
 Calculation formula: average download speed per minute.
-                     * @param AvgFluxPerSecond Average download speed,
+                     * @param _avgFluxPerSecond Average download speed,
 In MB/s.
 Calculation formula: average download speed per minute.
+                     * 
                      */
                     void SetAvgFluxPerSecond(const double& _avgFluxPerSecond);
 
                     /**
                      * 判断参数 AvgFluxPerSecond 是否已赋值
                      * @return AvgFluxPerSecond 是否已赋值
+                     * 
                      */
                     bool AvgFluxPerSecondHasBeenSet() const;
 
                     /**
                      * 获取Total traffic in MB.
                      * @return TotalFlux Total traffic in MB.
+                     * 
                      */
                     double GetTotalFlux() const;
 
                     /**
                      * 设置Total traffic in MB.
-                     * @param TotalFlux Total traffic in MB.
+                     * @param _totalFlux Total traffic in MB.
+                     * 
                      */
                     void SetTotalFlux(const double& _totalFlux);
 
                     /**
                      * 判断参数 TotalFlux 是否已赋值
                      * @return TotalFlux 是否已赋值
+                     * 
                      */
                     bool TotalFluxHasBeenSet() const;
 
                     /**
                      * 获取Total number of requests.
                      * @return TotalRequest Total number of requests.
+                     * 
                      */
                     uint64_t GetTotalRequest() const;
 
                     /**
                      * 设置Total number of requests.
-                     * @param TotalRequest Total number of requests.
+                     * @param _totalRequest Total number of requests.
+                     * 
                      */
                     void SetTotalRequest(const uint64_t& _totalRequest);
 
                     /**
                      * 判断参数 TotalRequest 是否已赋值
                      * @return TotalRequest 是否已赋值
+                     * 
                      */
                     bool TotalRequestHasBeenSet() const;
 

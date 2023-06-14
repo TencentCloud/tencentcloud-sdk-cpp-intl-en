@@ -52,54 +52,63 @@ If multiple values exist in one filter, the logical relationship between these v
                     /**
                      * 获取Filter name
                      * @return Name Filter name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Filter name
-                     * @param Name Filter name
+                     * @param _name Filter name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取One or more filter values
                      * @return Values One or more filter values
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置One or more filter values
-                     * @param Values One or more filter values
+                     * @param _values One or more filter values
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 
                     /**
                      * 获取Whether to use fuzzy query
                      * @return ExactMatch Whether to use fuzzy query
+                     * 
                      */
                     bool GetExactMatch() const;
 
                     /**
                      * 设置Whether to use fuzzy query
-                     * @param ExactMatch Whether to use fuzzy query
+                     * @param _exactMatch Whether to use fuzzy query
+                     * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
 
                     /**
                      * 判断参数 ExactMatch 是否已赋值
                      * @return ExactMatch 是否已赋值
+                     * 
                      */
                     bool ExactMatchHasBeenSet() const;
 

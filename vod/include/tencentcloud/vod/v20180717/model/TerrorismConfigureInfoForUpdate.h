@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Parameters for recognition of terrorism content in images
                      * @return ImgReviewInfo Parameters for recognition of terrorism content in images
+                     * 
                      */
                     TerrorismImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
                      * 设置Parameters for recognition of terrorism content in images
-                     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
+                     * @param _imgReviewInfo Parameters for recognition of terrorism content in images
+                     * 
                      */
                     void SetImgReviewInfo(const TerrorismImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Parameters for OCR-based recognition of terrorism content
                      * @return OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+                     * 
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
                      * 设置Parameters for OCR-based recognition of terrorism content
-                     * @param OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+                     * @param _ocrReviewInfo Parameters for OCR-based recognition of terrorism content
+                     * 
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

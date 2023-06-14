@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取SAML metadata document.
                      * @return SAMLMetadata SAML metadata document.
+                     * 
                      */
                     std::string GetSAMLMetadata() const;
 
                     /**
                      * 判断参数 SAMLMetadata 是否已赋值
                      * @return SAMLMetadata 是否已赋值
+                     * 
                      */
                     bool SAMLMetadataHasBeenSet() const;
 
                     /**
                      * 获取Status. `0`: not set, `1`: enabled, `2`: disabled.
                      * @return Status Status. `0`: not set, `1`: enabled, `2`: disabled.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

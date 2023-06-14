@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of elastic cloud disks attached to the instance
                      * @return AttachedDiskCount Number of elastic cloud disks attached to the instance
+                     * 
                      */
                     int64_t GetAttachedDiskCount() const;
 
                     /**
                      * 设置Number of elastic cloud disks attached to the instance
-                     * @param AttachedDiskCount Number of elastic cloud disks attached to the instance
+                     * @param _attachedDiskCount Number of elastic cloud disks attached to the instance
+                     * 
                      */
                     void SetAttachedDiskCount(const int64_t& _attachedDiskCount);
 
                     /**
                      * 判断参数 AttachedDiskCount 是否已赋值
                      * @return AttachedDiskCount 是否已赋值
+                     * 
                      */
                     bool AttachedDiskCountHasBeenSet() const;
 
                     /**
                      * 获取Upper limit of attached elastic cloud disks
                      * @return MaxAttachCount Upper limit of attached elastic cloud disks
+                     * 
                      */
                     int64_t GetMaxAttachCount() const;
 
                     /**
                      * 设置Upper limit of attached elastic cloud disks
-                     * @param MaxAttachCount Upper limit of attached elastic cloud disks
+                     * @param _maxAttachCount Upper limit of attached elastic cloud disks
+                     * 
                      */
                     void SetMaxAttachCount(const int64_t& _maxAttachCount);
 
                     /**
                      * 判断参数 MaxAttachCount 是否已赋值
                      * @return MaxAttachCount 是否已赋值
+                     * 
                      */
                     bool MaxAttachCountHasBeenSet() const;
 

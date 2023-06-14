@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Region blocking configuration. The configuration ID should be cleared when you set this parameter.
                      * @return DDoSGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+                     * 
                      */
                     DDoSGeoIPBlockConfig GetDDoSGeoIPBlockConfig() const;
 
                     /**
                      * 设置Region blocking configuration. The configuration ID should be cleared when you set this parameter.
-                     * @param DDoSGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+                     * @param _dDoSGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+                     * 
                      */
                     void SetDDoSGeoIPBlockConfig(const DDoSGeoIPBlockConfig& _dDoSGeoIPBlockConfig);
 
                     /**
                      * 判断参数 DDoSGeoIPBlockConfig 是否已赋值
                      * @return DDoSGeoIPBlockConfig 是否已赋值
+                     * 
                      */
                     bool DDoSGeoIPBlockConfigHasBeenSet() const;
 

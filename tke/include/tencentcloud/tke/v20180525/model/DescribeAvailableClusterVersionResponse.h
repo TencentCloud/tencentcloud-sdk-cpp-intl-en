@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Versions Upgradable cluster version
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetVersions() const;
 
                     /**
                      * 判断参数 Versions 是否已赋值
                      * @return Versions 是否已赋值
+                     * 
                      */
                     bool VersionsHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Clusters Cluster information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<ClusterVersion> GetClusters() const;
 
                     /**
                      * 判断参数 Clusters 是否已赋值
                      * @return Clusters 是否已赋值
+                     * 
                      */
                     bool ClustersHasBeenSet() const;
 

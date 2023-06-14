@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取0: Create new; 1: Use existing
                      * @return Mode 0: Create new; 1: Use existing
+                     * 
                      */
                     uint64_t GetMode() const;
 
                     /**
                      * 设置0: Create new; 1: Use existing
-                     * @param Mode 0: Create new; 1: Use existing
+                     * @param _mode 0: Create new; 1: Use existing
+                     * 
                      */
                     void SetMode(const uint64_t& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Operation type. Valid values: add, del, and modify.
                      * @return OperationType Operation type. Valid values: add, del, and modify.
+                     * 
                      */
                     std::string GetOperationType() const;
 
                     /**
                      * 设置Operation type. Valid values: add, del, and modify.
-                     * @param OperationType Operation type. Valid values: add, del, and modify.
+                     * @param _operationType Operation type. Valid values: add, del, and modify.
+                     * 
                      */
                     void SetOperationType(const std::string& _operationType);
 
                     /**
                      * 判断参数 OperationType 是否已赋值
                      * @return OperationType 是否已赋值
+                     * 
                      */
                     bool OperationTypeHasBeenSet() const;
 
                     /**
                      * 获取Firewall instance ID. This field is required.
                      * @return CfwInstance Firewall instance ID. This field is required.
+                     * 
                      */
                     std::string GetCfwInstance() const;
 
                     /**
                      * 设置Firewall instance ID. This field is required.
-                     * @param CfwInstance Firewall instance ID. This field is required.
+                     * @param _cfwInstance Firewall instance ID. This field is required.
+                     * 
                      */
                     void SetCfwInstance(const std::string& _cfwInstance);
 
                     /**
                      * 判断参数 CfwInstance 是否已赋值
                      * @return CfwInstance 是否已赋值
+                     * 
                      */
                     bool CfwInstanceHasBeenSet() const;
 
                     /**
                      * 获取List of added/deleted DNAT rules
                      * @return AddOrDelDnatRules List of added/deleted DNAT rules
+                     * 
                      */
                     std::vector<CfwNatDnatRule> GetAddOrDelDnatRules() const;
 
                     /**
                      * 设置List of added/deleted DNAT rules
-                     * @param AddOrDelDnatRules List of added/deleted DNAT rules
+                     * @param _addOrDelDnatRules List of added/deleted DNAT rules
+                     * 
                      */
                     void SetAddOrDelDnatRules(const std::vector<CfwNatDnatRule>& _addOrDelDnatRules);
 
                     /**
                      * 判断参数 AddOrDelDnatRules 是否已赋值
                      * @return AddOrDelDnatRules 是否已赋值
+                     * 
                      */
                     bool AddOrDelDnatRulesHasBeenSet() const;
 
                     /**
                      * 获取Original DNAT rule before change
                      * @return OriginDnat Original DNAT rule before change
+                     * 
                      */
                     CfwNatDnatRule GetOriginDnat() const;
 
                     /**
                      * 设置Original DNAT rule before change
-                     * @param OriginDnat Original DNAT rule before change
+                     * @param _originDnat Original DNAT rule before change
+                     * 
                      */
                     void SetOriginDnat(const CfwNatDnatRule& _originDnat);
 
                     /**
                      * 判断参数 OriginDnat 是否已赋值
                      * @return OriginDnat 是否已赋值
+                     * 
                      */
                     bool OriginDnatHasBeenSet() const;
 
                     /**
                      * 获取New DNAT rule after change
                      * @return NewDnat New DNAT rule after change
+                     * 
                      */
                     CfwNatDnatRule GetNewDnat() const;
 
                     /**
                      * 设置New DNAT rule after change
-                     * @param NewDnat New DNAT rule after change
+                     * @param _newDnat New DNAT rule after change
+                     * 
                      */
                     void SetNewDnat(const CfwNatDnatRule& _newDnat);
 
                     /**
                      * 判断参数 NewDnat 是否已赋值
                      * @return NewDnat 是否已赋值
+                     * 
                      */
                     bool NewDnatHasBeenSet() const;
 

@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Room ID to be used to query logs.
                      * @return RoomId Room ID to be used to query logs.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置Room ID to be used to query logs.
-                     * @param RoomId Room ID to be used to query logs.
+                     * @param _roomId Room ID to be used to query logs.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取User ID to be used to query logs.
                      * @return UserId User ID to be used to query logs.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID to be used to query logs.
-                     * @param UserId User ID to be used to query logs.
+                     * @param _userId User ID to be used to query logs.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
                      * @return TimeRange Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
+                     * 
                      */
                     std::vector<int64_t> GetTimeRange() const;
 
                     /**
                      * 设置Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
-                     * @param TimeRange Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
+                     * @param _timeRange Query period, which consists of two Unix timestamps in milliseconds. The first indicates the start time and the second the end time.
+                     * 
                      */
                     void SetTimeRange(const std::vector<int64_t>& _timeRange);
 
                     /**
                      * 判断参数 TimeRange 是否已赋值
                      * @return TimeRange 是否已赋值
+                     * 
                      */
                     bool TimeRangeHasBeenSet() const;
 
                     /**
                      * 获取Interval for aggregating log number queries. Example values: `5m`, `1h`, `4h`
                      * @return AggregationInterval Interval for aggregating log number queries. Example values: `5m`, `1h`, `4h`
+                     * 
                      */
                     std::string GetAggregationInterval() const;
 
                     /**
                      * 设置Interval for aggregating log number queries. Example values: `5m`, `1h`, `4h`
-                     * @param AggregationInterval Interval for aggregating log number queries. Example values: `5m`, `1h`, `4h`
+                     * @param _aggregationInterval Interval for aggregating log number queries. Example values: `5m`, `1h`, `4h`
+                     * 
                      */
                     void SetAggregationInterval(const std::string& _aggregationInterval);
 
                     /**
                      * 判断参数 AggregationInterval 是否已赋值
                      * @return AggregationInterval 是否已赋值
+                     * 
                      */
                     bool AggregationIntervalHasBeenSet() const;
 
                     /**
                      * 获取Extra query conditions.
                      * @return Query Extra query conditions.
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Extra query conditions.
-                     * @param Query Extra query conditions.
+                     * @param _query Extra query conditions.
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to sort results in ascending order of time.
                      * @return Ascending Specifies whether to sort results in ascending order of time.
+                     * 
                      */
                     bool GetAscending() const;
 
                     /**
                      * 设置Specifies whether to sort results in ascending order of time.
-                     * @param Ascending Specifies whether to sort results in ascending order of time.
+                     * @param _ascending Specifies whether to sort results in ascending order of time.
+                     * 
                      */
                     void SetAscending(const bool& _ascending);
 
                     /**
                      * 判断参数 Ascending 是否已赋值
                      * @return Ascending 是否已赋值
+                     * 
                      */
                     bool AscendingHasBeenSet() const;
 
                     /**
                      * 获取Context key used for recursive extraction. Obtain this parameter in the response to the last request.
                      * @return Context Context key used for recursive extraction. Obtain this parameter in the response to the last request.
+                     * 
                      */
                     std::string GetContext() const;
 
                     /**
                      * 设置Context key used for recursive extraction. Obtain this parameter in the response to the last request.
-                     * @param Context Context key used for recursive extraction. Obtain this parameter in the response to the last request.
+                     * @param _context Context key used for recursive extraction. Obtain this parameter in the response to the last request.
+                     * 
                      */
                     void SetContext(const std::string& _context);
 
                     /**
                      * 判断参数 Context 是否已赋值
                      * @return Context 是否已赋值
+                     * 
                      */
                     bool ContextHasBeenSet() const;
 

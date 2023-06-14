@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-f49l6u0z`.
                      * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-f49l6u0z`.
-                     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * @param _ccnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
@@ -68,6 +71,7 @@ namespace TencentCloud
                      * @return Filters The filter condition.
 <li>sregion - String - (Filter condition) Filter by the source region, such as 'ap-guangzhou'.</li>
 <li>dregion - String - (Filter condition) Filter by the destination region, such as 'ap-shanghai-bm'.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -75,87 +79,101 @@ namespace TencentCloud
                      * 设置The filter condition.
 <li>sregion - String - (Filter condition) Filter by the source region, such as 'ap-guangzhou'.</li>
 <li>dregion - String - (Filter condition) Filter by the destination region, such as 'ap-shanghai-bm'.</li>
-                     * @param Filters The filter condition.
+                     * @param _filters The filter condition.
 <li>sregion - String - (Filter condition) Filter by the source region, such as 'ap-guangzhou'.</li>
 <li>dregion - String - (Filter condition) Filter by the destination region, such as 'ap-shanghai-bm'.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
                      * @return SortedBy The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
+                     * 
                      */
                     std::string GetSortedBy() const;
 
                     /**
                      * 设置The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
-                     * @param SortedBy The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
+                     * @param _sortedBy The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
+                     * 
                      */
                     void SetSortedBy(const std::string& _sortedBy);
 
                     /**
                      * 判断参数 SortedBy 是否已赋值
                      * @return SortedBy 是否已赋值
+                     * 
                      */
                     bool SortedByHasBeenSet() const;
 
                     /**
                      * 获取The offset.
                      * @return Offset The offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The offset.
-                     * @param Offset The offset.
+                     * @param _offset The offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity.
                      * @return Limit The returned quantity.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity.
-                     * @param Limit The returned quantity.
+                     * @param _limit The returned quantity.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取In ascending or descending order. Valid values: 'ASC' and 'DESC'.
                      * @return OrderBy In ascending or descending order. Valid values: 'ASC' and 'DESC'.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置In ascending or descending order. Valid values: 'ASC' and 'DESC'.
-                     * @param OrderBy In ascending or descending order. Valid values: 'ASC' and 'DESC'.
+                     * @param _orderBy In ascending or descending order. Valid values: 'ASC' and 'DESC'.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 

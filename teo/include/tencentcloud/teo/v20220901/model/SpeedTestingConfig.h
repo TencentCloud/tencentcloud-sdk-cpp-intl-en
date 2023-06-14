@@ -61,6 +61,7 @@ namespace TencentCloud
 <li>`4`: Port performance</li>
 <li>`5`: Network quality</li>
 <li>`6`: Audio/Video experience</li>
+                     * 
                      */
                     int64_t GetTaskType() const;
 
@@ -72,73 +73,84 @@ namespace TencentCloud
 <li>`4`: Port performance</li>
 <li>`5`: Network quality</li>
 <li>`6`: Audio/Video experience</li>
-                     * @param TaskType The task type. Values:
+                     * @param _taskType The task type. Values:
 <li>`1`: Page performance</li>
 <li>`2`: File uploads</li>
 <li>`3`: File downloads</li>
 <li>`4`: Port performance</li>
 <li>`5`: Network quality</li>
 <li>`6`: Audio/Video experience</li>
+                     * 
                      */
                     void SetTaskType(const int64_t& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取The URL.
                      * @return Url The URL.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The URL.
-                     * @param Url The URL.
+                     * @param _url The URL.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取The user agent.
                      * @return UA The user agent.
+                     * 
                      */
                     std::string GetUA() const;
 
                     /**
                      * 设置The user agent.
-                     * @param UA The user agent.
+                     * @param _uA The user agent.
+                     * 
                      */
                     void SetUA(const std::string& _uA);
 
                     /**
                      * 判断参数 UA 是否已赋值
                      * @return UA 是否已赋值
+                     * 
                      */
                     bool UAHasBeenSet() const;
 
                     /**
                      * 获取The network type.
                      * @return Connectivity The network type.
+                     * 
                      */
                     std::string GetConnectivity() const;
 
                     /**
                      * 设置The network type.
-                     * @param Connectivity The network type.
+                     * @param _connectivity The network type.
+                     * 
                      */
                     void SetConnectivity(const std::string& _connectivity);
 
                     /**
                      * 判断参数 Connectivity 是否已赋值
                      * @return Connectivity 是否已赋值
+                     * 
                      */
                     bool ConnectivityHasBeenSet() const;
 

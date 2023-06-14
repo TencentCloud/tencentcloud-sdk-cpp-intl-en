@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DefendStatus Protection status. 0: disabled, 1: enabled
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDefendStatus() const;
 
                     /**
                      * 判断参数 DefendStatus 是否已赋值
                      * @return DefendStatus 是否已赋值
+                     * 
                      */
                     bool DefendStatusHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UndefendExpire Expiration time of temporary protection disablement. This field is empty if the protection is in enabled status;
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUndefendExpire() const;
 
                     /**
                      * 判断参数 UndefendExpire 是否已赋值
                      * @return UndefendExpire 是否已赋值
+                     * 
                      */
                     bool UndefendExpireHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ShowFlag Console feature display field. 1: displays console features, 0: hides console features
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetShowFlag() const;
 
                     /**
                      * 判断参数 ShowFlag 是否已赋值
                      * @return ShowFlag 是否已赋值
+                     * 
                      */
                     bool ShowFlagHasBeenSet() const;
 

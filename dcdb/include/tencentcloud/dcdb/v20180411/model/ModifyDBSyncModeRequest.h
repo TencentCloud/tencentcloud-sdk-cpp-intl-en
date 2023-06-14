@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
                      * @return InstanceId ID of the instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
-                     * @param InstanceId ID of the instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
+                     * @param _instanceId ID of the instance for which to modify the sync mode. The ID is in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Sync mode. Valid values: `0` (async), `1` (strong sync), `2` (downgradable strong sync).
                      * @return SyncMode Sync mode. Valid values: `0` (async), `1` (strong sync), `2` (downgradable strong sync).
+                     * 
                      */
                     int64_t GetSyncMode() const;
 
                     /**
                      * 设置Sync mode. Valid values: `0` (async), `1` (strong sync), `2` (downgradable strong sync).
-                     * @param SyncMode Sync mode. Valid values: `0` (async), `1` (strong sync), `2` (downgradable strong sync).
+                     * @param _syncMode Sync mode. Valid values: `0` (async), `1` (strong sync), `2` (downgradable strong sync).
+                     * 
                      */
                     void SetSyncMode(const int64_t& _syncMode);
 
                     /**
                      * 判断参数 SyncMode 是否已赋值
                      * @return SyncMode 是否已赋值
+                     * 
                      */
                     bool SyncModeHasBeenSet() const;
 

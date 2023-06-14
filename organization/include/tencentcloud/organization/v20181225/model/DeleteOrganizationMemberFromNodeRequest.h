@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取UIN of the member to be deleted
                      * @return MemberUin UIN of the member to be deleted
+                     * 
                      */
                     uint64_t GetMemberUin() const;
 
                     /**
                      * 设置UIN of the member to be deleted
-                     * @param MemberUin UIN of the member to be deleted
+                     * @param _memberUin UIN of the member to be deleted
+                     * 
                      */
                     void SetMemberUin(const uint64_t& _memberUin);
 
                     /**
                      * 判断参数 MemberUin 是否已赋值
                      * @return MemberUin 是否已赋值
+                     * 
                      */
                     bool MemberUinHasBeenSet() const;
 
                     /**
                      * 获取Organizational unit ID
                      * @return NodeId Organizational unit ID
+                     * 
                      */
                     uint64_t GetNodeId() const;
 
                     /**
                      * 设置Organizational unit ID
-                     * @param NodeId Organizational unit ID
+                     * @param _nodeId Organizational unit ID
+                     * 
                      */
                     void SetNodeId(const uint64_t& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 

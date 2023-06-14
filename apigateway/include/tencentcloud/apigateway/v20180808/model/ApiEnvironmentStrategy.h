@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Unique API ID.
                      * @return ApiId Unique API ID.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique API ID.
-                     * @param ApiId Unique API ID.
+                     * @param _apiId Unique API ID.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
                     /**
                      * 获取Custom API name.
                      * @return ApiName Custom API name.
+                     * 
                      */
                     std::string GetApiName() const;
 
                     /**
                      * 设置Custom API name.
-                     * @param ApiName Custom API name.
+                     * @param _apiName Custom API name.
+                     * 
                      */
                     void SetApiName(const std::string& _apiName);
 
                     /**
                      * 判断参数 ApiName 是否已赋值
                      * @return ApiName 是否已赋值
+                     * 
                      */
                     bool ApiNameHasBeenSet() const;
 
                     /**
                      * 获取API path, such as `/path`.
                      * @return Path API path, such as `/path`.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置API path, such as `/path`.
-                     * @param Path API path, such as `/path`.
+                     * @param _path API path, such as `/path`.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取API method, such as `GET`.
                      * @return Method API method, such as `GET`.
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置API method, such as `GET`.
-                     * @param Method API method, such as `GET`.
+                     * @param _method API method, such as `GET`.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
                     /**
                      * 获取Environment throttling information.
                      * @return EnvironmentStrategySet Environment throttling information.
+                     * 
                      */
                     std::vector<EnvironmentStrategy> GetEnvironmentStrategySet() const;
 
                     /**
                      * 设置Environment throttling information.
-                     * @param EnvironmentStrategySet Environment throttling information.
+                     * @param _environmentStrategySet Environment throttling information.
+                     * 
                      */
                     void SetEnvironmentStrategySet(const std::vector<EnvironmentStrategy>& _environmentStrategySet);
 
                     /**
                      * 判断参数 EnvironmentStrategySet 是否已赋值
                      * @return EnvironmentStrategySet 是否已赋值
+                     * 
                      */
                     bool EnvironmentStrategySetHasBeenSet() const;
 

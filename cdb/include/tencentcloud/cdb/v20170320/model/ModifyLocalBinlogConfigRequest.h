@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
                      * @return SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+                     * 
                      */
                     int64_t GetSaveHours() const;
 
                     /**
                      * 设置Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
-                     * @param SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+                     * @param _saveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+                     * 
                      */
                     void SetSaveHours(const int64_t& _saveHours);
 
                     /**
                      * 判断参数 SaveHours 是否已赋值
                      * @return SaveHours 是否已赋值
+                     * 
                      */
                     bool SaveHoursHasBeenSet() const;
 
                     /**
                      * 获取Space utilization of local binlog. Value range: [30,50].
                      * @return MaxUsage Space utilization of local binlog. Value range: [30,50].
+                     * 
                      */
                     int64_t GetMaxUsage() const;
 
                     /**
                      * 设置Space utilization of local binlog. Value range: [30,50].
-                     * @param MaxUsage Space utilization of local binlog. Value range: [30,50].
+                     * @param _maxUsage Space utilization of local binlog. Value range: [30,50].
+                     * 
                      */
                     void SetMaxUsage(const int64_t& _maxUsage);
 
                     /**
                      * 判断参数 MaxUsage 是否已赋值
                      * @return MaxUsage 是否已赋值
+                     * 
                      */
                     bool MaxUsageHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Current protection status value. Valid values: [0 (disabled), 1 (enabled)]
                      * @return Status Current protection status value. Valid values: [0 (disabled), 1 (enabled)]
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

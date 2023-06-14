@@ -49,234 +49,273 @@ namespace TencentCloud
                     /**
                      * 获取duration
                      * @return StaticDuration duration
+                     * 
                      */
                     std::string GetStaticDuration() const;
 
                     /**
                      * 设置duration
-                     * @param StaticDuration duration
+                     * @param _staticDuration duration
+                     * 
                      */
                     void SetStaticDuration(const std::string& _staticDuration);
 
                     /**
                      * 判断参数 StaticDuration 是否已赋值
                      * @return StaticDuration 是否已赋值
+                     * 
                      */
                     bool StaticDurationHasBeenSet() const;
 
                     /**
                      * 获取pv
                      * @return PagePv pv
+                     * 
                      */
                     std::string GetPagePv() const;
 
                     /**
                      * 设置pv
-                     * @param PagePv pv
+                     * @param _pagePv pv
+                     * 
                      */
                     void SetPagePv(const std::string& _pagePv);
 
                     /**
                      * 判断参数 PagePv 是否已赋值
                      * @return PagePv 是否已赋值
+                     * 
                      */
                     bool PagePvHasBeenSet() const;
 
                     /**
                      * 获取Failure
                      * @return ApiFail Failure
+                     * 
                      */
                     std::string GetApiFail() const;
 
                     /**
                      * 设置Failure
-                     * @param ApiFail Failure
+                     * @param _apiFail Failure
+                     * 
                      */
                     void SetApiFail(const std::string& _apiFail);
 
                     /**
                      * 判断参数 ApiFail 是否已赋值
                      * @return ApiFail 是否已赋值
+                     * 
                      */
                     bool ApiFailHasBeenSet() const;
 
                     /**
                      * 获取Request
                      * @return ApiNum Request
+                     * 
                      */
                     std::string GetApiNum() const;
 
                     /**
                      * 设置Request
-                     * @param ApiNum Request
+                     * @param _apiNum Request
+                     * 
                      */
                     void SetApiNum(const std::string& _apiNum);
 
                     /**
                      * 判断参数 ApiNum 是否已赋值
                      * @return ApiNum 是否已赋值
+                     * 
                      */
                     bool ApiNumHasBeenSet() const;
 
                     /**
                      * 获取fail
                      * @return StaticFail fail
+                     * 
                      */
                     std::string GetStaticFail() const;
 
                     /**
                      * 设置fail
-                     * @param StaticFail fail
+                     * @param _staticFail fail
+                     * 
                      */
                     void SetStaticFail(const std::string& _staticFail);
 
                     /**
                      * 判断参数 StaticFail 是否已赋值
                      * @return StaticFail 是否已赋值
+                     * 
                      */
                     bool StaticFailHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectID Project ID
+                     * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectID Project ID
+                     * @param _projectID Project ID
+                     * 
                      */
                     void SetProjectID(const int64_t& _projectID);
 
                     /**
                      * 判断参数 ProjectID 是否已赋值
                      * @return ProjectID 是否已赋值
+                     * 
                      */
                     bool ProjectIDHasBeenSet() const;
 
                     /**
                      * 获取uv
                      * @return PageUv uv
+                     * 
                      */
                     std::string GetPageUv() const;
 
                     /**
                      * 设置uv
-                     * @param PageUv uv
+                     * @param _pageUv uv
+                     * 
                      */
                     void SetPageUv(const std::string& _pageUv);
 
                     /**
                      * 判断参数 PageUv 是否已赋值
                      * @return PageUv 是否已赋值
+                     * 
                      */
                     bool PageUvHasBeenSet() const;
 
                     /**
                      * 获取Number of requests
                      * @return ApiDuration Number of requests
+                     * 
                      */
                     std::string GetApiDuration() const;
 
                     /**
                      * 设置Number of requests
-                     * @param ApiDuration Number of requests
+                     * @param _apiDuration Number of requests
+                     * 
                      */
                     void SetApiDuration(const std::string& _apiDuration);
 
                     /**
                      * 判断参数 ApiDuration 是否已赋值
                      * @return ApiDuration 是否已赋值
+                     * 
                      */
                     bool ApiDurationHasBeenSet() const;
 
                     /**
                      * 获取Score
                      * @return Score Score
+                     * 
                      */
                     std::string GetScore() const;
 
                     /**
                      * 设置Score
-                     * @param Score Score
+                     * @param _score Score
+                     * 
                      */
                     void SetScore(const std::string& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
                     /**
                      * 获取error
                      * @return PageError error
+                     * 
                      */
                     std::string GetPageError() const;
 
                     /**
                      * 设置error
-                     * @param PageError error
+                     * @param _pageError error
+                     * 
                      */
                     void SetPageError(const std::string& _pageError);
 
                     /**
                      * 判断参数 PageError 是否已赋值
                      * @return PageError 是否已赋值
+                     * 
                      */
                     bool PageErrorHasBeenSet() const;
 
                     /**
                      * 获取num
                      * @return StaticNum num
+                     * 
                      */
                     std::string GetStaticNum() const;
 
                     /**
                      * 设置num
-                     * @param StaticNum num
+                     * @param _staticNum num
+                     * 
                      */
                     void SetStaticNum(const std::string& _staticNum);
 
                     /**
                      * 判断参数 StaticNum 是否已赋值
                      * @return StaticNum 是否已赋值
+                     * 
                      */
                     bool StaticNumHasBeenSet() const;
 
                     /**
                      * 获取num
                      * @return RecordNum num
+                     * 
                      */
                     int64_t GetRecordNum() const;
 
                     /**
                      * 设置num
-                     * @param RecordNum num
+                     * @param _recordNum num
+                     * 
                      */
                     void SetRecordNum(const int64_t& _recordNum);
 
                     /**
                      * 判断参数 RecordNum 是否已赋值
                      * @return RecordNum 是否已赋值
+                     * 
                      */
                     bool RecordNumHasBeenSet() const;
 
                     /**
                      * 获取Duration
                      * @return PageDuration Duration
+                     * 
                      */
                     std::string GetPageDuration() const;
 
                     /**
                      * 设置Duration
-                     * @param PageDuration Duration
+                     * @param _pageDuration Duration
+                     * 
                      */
                     void SetPageDuration(const std::string& _pageDuration);
 
                     /**
                      * 判断参数 PageDuration 是否已赋值
                      * @return PageDuration 是否已赋值
+                     * 
                      */
                     bool PageDurationHasBeenSet() const;
 
@@ -285,20 +324,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Time
+                     * @param _createTime Time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

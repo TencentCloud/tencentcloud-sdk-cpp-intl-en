@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取White-box key information list
                      * @return KeyInfos White-box key information list
+                     * 
                      */
                     std::vector<WhiteboxKeyInfo> GetKeyInfos() const;
 
                     /**
                      * 判断参数 KeyInfos 是否已赋值
                      * @return KeyInfos 是否已赋值
+                     * 
                      */
                     bool KeyInfosHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total white-box keys.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

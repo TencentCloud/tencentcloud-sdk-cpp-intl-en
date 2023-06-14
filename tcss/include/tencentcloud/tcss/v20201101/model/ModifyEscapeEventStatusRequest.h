@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of event IDs
                      * @return EventIdSet List of event IDs
+                     * 
                      */
                     std::vector<std::string> GetEventIdSet() const;
 
                     /**
                      * 设置List of event IDs
-                     * @param EventIdSet List of event IDs
+                     * @param _eventIdSet List of event IDs
+                     * 
                      */
                     void SetEventIdSet(const std::vector<std::string>& _eventIdSet);
 
                     /**
                      * 判断参数 EventIdSet 是否已赋值
                      * @return EventIdSet 是否已赋值
+                     * 
                      */
                     bool EventIdSetHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 `EVENT_IGNORE`: Ignored.
 `EVENT_DELETE`: Deleted.
 `EVENT_ADD_WHITE`: Allowed.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -83,54 +87,62 @@ namespace TencentCloud
 `EVENT_IGNORE`: Ignored.
 `EVENT_DELETE`: Deleted.
 `EVENT_ADD_WHITE`: Allowed.
-                     * @param Status Event status:
+                     * @param _status Event status:
 `EVENT_UNDEAL`: Pending (Unignored).
 `EVENT_DEALED`: Processed.
 `EVENT_IGNORE`: Ignored.
 `EVENT_DELETE`: Deleted.
 `EVENT_ADD_WHITE`: Allowed.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Array of allowed image IDs
                      * @return ImageIDs Array of allowed image IDs
+                     * 
                      */
                     std::vector<std::string> GetImageIDs() const;
 
                     /**
                      * 设置Array of allowed image IDs
-                     * @param ImageIDs Array of allowed image IDs
+                     * @param _imageIDs Array of allowed image IDs
+                     * 
                      */
                     void SetImageIDs(const std::vector<std::string>& _imageIDs);
 
                     /**
                      * 判断参数 ImageIDs 是否已赋值
                      * @return ImageIDs 是否已赋值
+                     * 
                      */
                     bool ImageIDsHasBeenSet() const;
 
@@ -151,6 +163,7 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
+                     * 
                      */
                     std::vector<std::string> GetEventType() const;
 
@@ -163,7 +176,7 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
-                     * @param EventType Allowed event type
+                     * @param _eventType Allowed event type
    `ESCAPE_CGROUPS`: Cgroup escape.
    `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
    `ESCAPE_DOCKER_API`: Docker API access escape.
@@ -171,12 +184,14 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
+                     * 
                      */
                     void SetEventType(const std::vector<std::string>& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 

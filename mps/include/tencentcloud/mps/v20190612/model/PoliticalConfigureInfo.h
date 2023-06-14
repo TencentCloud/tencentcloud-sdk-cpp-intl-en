@@ -52,54 +52,63 @@ namespace TencentCloud
                     /**
                      * 获取The parameters for detecting sensitive information in images.
                      * @return ImgReviewInfo The parameters for detecting sensitive information in images.
+                     * 
                      */
                     PoliticalImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
                      * 设置The parameters for detecting sensitive information in images.
-                     * @param ImgReviewInfo The parameters for detecting sensitive information in images.
+                     * @param _imgReviewInfo The parameters for detecting sensitive information in images.
+                     * 
                      */
                     void SetImgReviewInfo(const PoliticalImgReviewTemplateInfo& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取The parameters for detecting sensitive information based on ASR.
                      * @return AsrReviewInfo The parameters for detecting sensitive information based on ASR.
+                     * 
                      */
                     PoliticalAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
                      * 设置The parameters for detecting sensitive information based on ASR.
-                     * @param AsrReviewInfo The parameters for detecting sensitive information based on ASR.
+                     * @param _asrReviewInfo The parameters for detecting sensitive information based on ASR.
+                     * 
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfo& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取The parameters for detecting sensitive information based on OCR.
                      * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * 
                      */
                     PoliticalOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
                      * 设置The parameters for detecting sensitive information based on OCR.
-                     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * @param _ocrReviewInfo The parameters for detecting sensitive information based on OCR.
+                     * 
                      */
                     void SetOcrReviewInfo(const PoliticalOcrReviewTemplateInfo& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

@@ -47,126 +47,147 @@ namespace TencentCloud
                     /**
                      * 获取Unique CLB ID
                      * @return LoadBalancerId Unique CLB ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置Unique CLB ID
-                     * @param LoadBalancerId Unique CLB ID
+                     * @param _loadBalancerId Unique CLB ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB instance name
                      * @return LoadBalancerName CLB instance name
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name
-                     * @param LoadBalancerName CLB instance name
+                     * @param _loadBalancerName CLB instance name
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
                      * 获取The backend service information of cross-region binding 1.0
                      * @return TargetRegionInfo The backend service information of cross-region binding 1.0
+                     * 
                      */
                     TargetRegionInfo GetTargetRegionInfo() const;
 
                     /**
                      * 设置The backend service information of cross-region binding 1.0
-                     * @param TargetRegionInfo The backend service information of cross-region binding 1.0
+                     * @param _targetRegionInfo The backend service information of cross-region binding 1.0
+                     * 
                      */
                     void SetTargetRegionInfo(const TargetRegionInfo& _targetRegionInfo);
 
                     /**
                      * 判断参数 TargetRegionInfo 是否已赋值
                      * @return TargetRegionInfo 是否已赋值
+                     * 
                      */
                     bool TargetRegionInfoHasBeenSet() const;
 
                     /**
                      * 获取Network billing parameter
                      * @return InternetChargeInfo Network billing parameter
+                     * 
                      */
                     InternetAccessible GetInternetChargeInfo() const;
 
                     /**
                      * 设置Network billing parameter
-                     * @param InternetChargeInfo Network billing parameter
+                     * @param _internetChargeInfo Network billing parameter
+                     * 
                      */
                     void SetInternetChargeInfo(const InternetAccessible& _internetChargeInfo);
 
                     /**
                      * 判断参数 InternetChargeInfo 是否已赋值
                      * @return InternetChargeInfo 是否已赋值
+                     * 
                      */
                     bool InternetChargeInfoHasBeenSet() const;
 
                     /**
                      * 获取Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
                      * @return LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+                     * 
                      */
                     bool GetLoadBalancerPassToTarget() const;
 
                     /**
                      * 设置Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
-                     * @param LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+                     * @param _loadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+                     * 
                      */
                     void SetLoadBalancerPassToTarget(const bool& _loadBalancerPassToTarget);
 
                     /**
                      * 判断参数 LoadBalancerPassToTarget 是否已赋值
                      * @return LoadBalancerPassToTarget 是否已赋值
+                     * 
                      */
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable cross-region binding 2.0
                      * @return SnatPro Whether to enable cross-region binding 2.0
+                     * 
                      */
                     bool GetSnatPro() const;
 
                     /**
                      * 设置Whether to enable cross-region binding 2.0
-                     * @param SnatPro Whether to enable cross-region binding 2.0
+                     * @param _snatPro Whether to enable cross-region binding 2.0
+                     * 
                      */
                     void SetSnatPro(const bool& _snatPro);
 
                     /**
                      * 判断参数 SnatPro 是否已赋值
                      * @return SnatPro 是否已赋值
+                     * 
                      */
                     bool SnatProHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to enable deletion protection.
                      * @return DeleteProtect Specifies whether to enable deletion protection.
+                     * 
                      */
                     bool GetDeleteProtect() const;
 
                     /**
                      * 设置Specifies whether to enable deletion protection.
-                     * @param DeleteProtect Specifies whether to enable deletion protection.
+                     * @param _deleteProtect Specifies whether to enable deletion protection.
+                     * 
                      */
                     void SetDeleteProtect(const bool& _deleteProtect);
 
                     /**
                      * 判断参数 DeleteProtect 是否已赋值
                      * @return DeleteProtect 是否已赋值
+                     * 
                      */
                     bool DeleteProtectHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Recipient group ID
                      * @return ReceiverId Recipient group ID
+                     * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
                      * 设置Recipient group ID
-                     * @param ReceiverId Recipient group ID
+                     * @param _receiverId Recipient group ID
+                     * 
                      */
                     void SetReceiverId(const uint64_t& _receiverId);
 
                     /**
                      * 判断参数 ReceiverId 是否已赋值
                      * @return ReceiverId 是否已赋值
+                     * 
                      */
                     bool ReceiverIdHasBeenSet() const;
 
                     /**
                      * 获取Recipient group name
                      * @return ReceiversName Recipient group name
+                     * 
                      */
                     std::string GetReceiversName() const;
 
                     /**
                      * 设置Recipient group name
-                     * @param ReceiversName Recipient group name
+                     * @param _receiversName Recipient group name
+                     * 
                      */
                     void SetReceiversName(const std::string& _receiversName);
 
                     /**
                      * 判断参数 ReceiversName 是否已赋值
                      * @return ReceiversName 是否已赋值
+                     * 
                      */
                     bool ReceiversNameHasBeenSet() const;
 
                     /**
                      * 获取Total number of recipient email addresses
                      * @return Count Total number of recipient email addresses
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Total number of recipient email addresses
-                     * @param Count Total number of recipient email addresses
+                     * @param _count Total number of recipient email addresses
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return Desc Recipient group description
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Recipient group description
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Desc Recipient group description
+                     * @param _desc Recipient group description
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
@@ -127,38 +139,44 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return ReceiversStatus Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetReceiversStatus() const;
 
                     /**
                      * 设置Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param ReceiversStatus Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
+                     * @param _receiversStatus Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetReceiversStatus(const uint64_t& _receiversStatus);
 
                     /**
                      * 判断参数 ReceiversStatus 是否已赋值
                      * @return ReceiversStatus 是否已赋值
+                     * 
                      */
                     bool ReceiversStatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time, such as 2021-09-28 16:40:35
                      * @return CreateTime Creation time, such as 2021-09-28 16:40:35
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time, such as 2021-09-28 16:40:35
-                     * @param CreateTime Creation time, such as 2021-09-28 16:40:35
+                     * @param _createTime Creation time, such as 2021-09-28 16:40:35
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

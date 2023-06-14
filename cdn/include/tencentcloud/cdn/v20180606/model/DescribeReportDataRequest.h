@@ -51,6 +51,7 @@ If the report type is `monthly`, the start time must be the first day of the mon
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
 If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -59,16 +60,18 @@ If the report type is `monthly`, the start time must be the first day of the mon
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
 If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
-                     * @param StartTime Query the start time in the format of `yyyy-MM-dd`
+                     * @param _startTime Query the start time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
 If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -81,6 +84,7 @@ If the report type is `monthly`, the start time must be the first day of the mon
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
 If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -89,16 +93,18 @@ If the report type is `monthly`, the start time must be the first day of the mon
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
 If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
-                     * @param EndTime Query the end time in the format of `yyyy-MM-dd`
+                     * @param _endTime Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
 If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -111,6 +117,7 @@ monthly: monthly report (calendar month)
 daily: daily report
 weekly: weekly report (Monday to Sunday)
 monthly: monthly report (calendar month)
+                     * 
                      */
                     std::string GetReportType() const;
 
@@ -119,16 +126,18 @@ monthly: monthly report (calendar month)
 daily: daily report
 weekly: weekly report (Monday to Sunday)
 monthly: monthly report (calendar month)
-                     * @param ReportType Report type
+                     * @param _reportType Report type
 daily: daily report
 weekly: weekly report (Monday to Sunday)
 monthly: monthly report (calendar month)
+                     * 
                      */
                     void SetReportType(const std::string& _reportType);
 
                     /**
                      * 判断参数 ReportType 是否已赋值
                      * @return ReportType 是否已赋值
+                     * 
                      */
                     bool ReportTypeHasBeenSet() const;
 
@@ -139,6 +148,7 @@ monthly: monthly report (calendar month)
                      * @return Area Domain name acceleration region
 `mainland`: Regions within the Chinese mainland
 `overseas`: Regions outside the Chinese mainland
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -146,69 +156,80 @@ monthly: monthly report (calendar month)
                      * 设置Domain name acceleration region
 `mainland`: Regions within the Chinese mainland
 `overseas`: Regions outside the Chinese mainland
-                     * @param Area Domain name acceleration region
+                     * @param _area Domain name acceleration region
 `mainland`: Regions within the Chinese mainland
 `overseas`: Regions outside the Chinese mainland
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of data entries. Default value: 1000.
                      * @return Limit Number of data entries. Default value: 1000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of data entries. Default value: 1000.
-                     * @param Limit Number of data entries. Default value: 1000.
+                     * @param _limit Number of data entries. Default value: 1000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filters by project ID
                      * @return Project Filters by project ID
+                     * 
                      */
                     int64_t GetProject() const;
 
                     /**
                      * 设置Filters by project ID
-                     * @param Project Filters by project ID
+                     * @param _project Filters by project ID
+                     * 
                      */
                     void SetProject(const int64_t& _project);
 
                     /**
                      * 判断参数 Project 是否已赋值
                      * @return Project 是否已赋值
+                     * 
                      */
                     bool ProjectHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取CHC instance ID
                      * @return ChcId CHC instance ID
+                     * 
                      */
                     std::string GetChcId() const;
 
                     /**
                      * 设置CHC instance ID
-                     * @param ChcId CHC instance ID
+                     * @param _chcId CHC instance ID
+                     * 
                      */
                     void SetChcId(const std::string& _chcId);
 
                     /**
                      * 判断参数 ChcId 是否已赋值
                      * @return ChcId 是否已赋值
+                     * 
                      */
                     bool ChcIdHasBeenSet() const;
 
                     /**
                      * 获取CHC instance status
                      * @return State CHC instance status
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置CHC instance status
-                     * @param State CHC instance status
+                     * @param _state CHC instance status
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Actions not allowed for the current CHC instance
                      * @return DenyActions Actions not allowed for the current CHC instance
+                     * 
                      */
                     std::vector<std::string> GetDenyActions() const;
 
                     /**
                      * 设置Actions not allowed for the current CHC instance
-                     * @param DenyActions Actions not allowed for the current CHC instance
+                     * @param _denyActions Actions not allowed for the current CHC instance
+                     * 
                      */
                     void SetDenyActions(const std::vector<std::string>& _denyActions);
 
                     /**
                      * 判断参数 DenyActions 是否已赋值
                      * @return DenyActions 是否已赋值
+                     * 
                      */
                     bool DenyActionsHasBeenSet() const;
 

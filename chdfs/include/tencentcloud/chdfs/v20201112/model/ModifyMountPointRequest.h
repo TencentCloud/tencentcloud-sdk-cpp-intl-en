@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Mount point ID
                      * @return MountPointId Mount point ID
+                     * 
                      */
                     std::string GetMountPointId() const;
 
                     /**
                      * 设置Mount point ID
-                     * @param MountPointId Mount point ID
+                     * @param _mountPointId Mount point ID
+                     * 
                      */
                     void SetMountPointId(const std::string& _mountPointId);
 
                     /**
                      * 判断参数 MountPointId 是否已赋值
                      * @return MountPointId 是否已赋值
+                     * 
                      */
                     bool MountPointIdHasBeenSet() const;
 
                     /**
                      * 获取Mount point name
                      * @return MountPointName Mount point name
+                     * 
                      */
                     std::string GetMountPointName() const;
 
                     /**
                      * 设置Mount point name
-                     * @param MountPointName Mount point name
+                     * @param _mountPointName Mount point name
+                     * 
                      */
                     void SetMountPointName(const std::string& _mountPointName);
 
                     /**
                      * 判断参数 MountPointName 是否已赋值
                      * @return MountPointName 是否已赋值
+                     * 
                      */
                     bool MountPointNameHasBeenSet() const;
 
                     /**
                      * 获取Mount point status
                      * @return MountPointStatus Mount point status
+                     * 
                      */
                     uint64_t GetMountPointStatus() const;
 
                     /**
                      * 设置Mount point status
-                     * @param MountPointStatus Mount point status
+                     * @param _mountPointStatus Mount point status
+                     * 
                      */
                     void SetMountPointStatus(const uint64_t& _mountPointStatus);
 
                     /**
                      * 判断参数 MountPointStatus 是否已赋值
                      * @return MountPointStatus 是否已赋值
+                     * 
                      */
                     bool MountPointStatusHasBeenSet() const;
 

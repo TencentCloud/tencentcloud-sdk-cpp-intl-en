@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Sampled screencapturing template ID.
                      * @return Definition Sampled screencapturing template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Sampled screencapturing template ID.
-                     * @param Definition Sampled screencapturing template ID.
+                     * @param _definition Sampled screencapturing template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
                      * 设置List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WatermarkSet List of up to 10 image or text watermarks.
+                     * @param _watermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
 
                     /**
                      * 判断参数 WatermarkSet 是否已赋值
                      * @return WatermarkSet 是否已赋值
+                     * 
                      */
                     bool WatermarkSetHasBeenSet() const;
 

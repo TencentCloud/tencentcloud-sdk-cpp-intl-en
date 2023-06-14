@@ -52,20 +52,23 @@ namespace TencentCloud
 The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
                      * @return Length Hair length information.
 The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+                     * 
                      */
                     AttributeItem GetLength() const;
 
                     /**
                      * 设置Hair length information.
 The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
-                     * @param Length Hair length information.
+                     * @param _length Hair length information.
 The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+                     * 
                      */
                     void SetLength(const AttributeItem& _length);
 
                     /**
                      * 判断参数 Length 是否已赋值
                      * @return Length 是否已赋值
+                     * 
                      */
                     bool LengthHasBeenSet() const;
 
@@ -74,20 +77,23 @@ The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: med
 The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
                      * @return Bang Bang information.
 The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
+                     * 
                      */
                     AttributeItem GetBang() const;
 
                     /**
                      * 设置Bang information.
 The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
-                     * @param Bang Bang information.
+                     * @param _bang Bang information.
 The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
+                     * 
                      */
                     void SetBang(const AttributeItem& _bang);
 
                     /**
                      * 判断参数 Bang 是否已赋值
                      * @return Bang 是否已赋值
+                     * 
                      */
                     bool BangHasBeenSet() const;
 
@@ -96,20 +102,23 @@ The `Type` values of the `AttributeItem` include: 0: no bang; 1: bang detected.
 The `Type` values of the `AttributeItem` include: 0: black; 1: golden; 2: brown; 3: gray.
                      * @return Color Hair color information.
 The `Type` values of the `AttributeItem` include: 0: black; 1: golden; 2: brown; 3: gray.
+                     * 
                      */
                     AttributeItem GetColor() const;
 
                     /**
                      * 设置Hair color information.
 The `Type` values of the `AttributeItem` include: 0: black; 1: golden; 2: brown; 3: gray.
-                     * @param Color Hair color information.
+                     * @param _color Hair color information.
 The `Type` values of the `AttributeItem` include: 0: black; 1: golden; 2: brown; 3: gray.
+                     * 
                      */
                     void SetColor(const AttributeItem& _color);
 
                     /**
                      * 判断参数 Color 是否已赋值
                      * @return Color 是否已赋值
+                     * 
                      */
                     bool ColorHasBeenSet() const;
 

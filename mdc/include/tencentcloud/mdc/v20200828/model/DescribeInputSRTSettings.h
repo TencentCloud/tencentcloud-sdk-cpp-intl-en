@@ -52,146 +52,170 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mode The SRT mode.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置The SRT mode.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mode The SRT mode.
+                     * @param _mode The SRT mode.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Stream ID.
                      * @return StreamId Stream ID.
+                     * 
                      */
                     std::string GetStreamId() const;
 
                     /**
                      * 设置Stream ID.
-                     * @param StreamId Stream ID.
+                     * @param _streamId Stream ID.
+                     * 
                      */
                     void SetStreamId(const std::string& _streamId);
 
                     /**
                      * 判断参数 StreamId 是否已赋值
                      * @return StreamId 是否已赋值
+                     * 
                      */
                     bool StreamIdHasBeenSet() const;
 
                     /**
                      * 获取Latency.
                      * @return Latency Latency.
+                     * 
                      */
                     int64_t GetLatency() const;
 
                     /**
                      * 设置Latency.
-                     * @param Latency Latency.
+                     * @param _latency Latency.
+                     * 
                      */
                     void SetLatency(const int64_t& _latency);
 
                     /**
                      * 判断参数 Latency 是否已赋值
                      * @return Latency 是否已赋值
+                     * 
                      */
                     bool LatencyHasBeenSet() const;
 
                     /**
                      * 获取Receive latency.
                      * @return RecvLatency Receive latency.
+                     * 
                      */
                     int64_t GetRecvLatency() const;
 
                     /**
                      * 设置Receive latency.
-                     * @param RecvLatency Receive latency.
+                     * @param _recvLatency Receive latency.
+                     * 
                      */
                     void SetRecvLatency(const int64_t& _recvLatency);
 
                     /**
                      * 判断参数 RecvLatency 是否已赋值
                      * @return RecvLatency 是否已赋值
+                     * 
                      */
                     bool RecvLatencyHasBeenSet() const;
 
                     /**
                      * 获取Peer latency.
                      * @return PeerLatency Peer latency.
+                     * 
                      */
                     int64_t GetPeerLatency() const;
 
                     /**
                      * 设置Peer latency.
-                     * @param PeerLatency Peer latency.
+                     * @param _peerLatency Peer latency.
+                     * 
                      */
                     void SetPeerLatency(const int64_t& _peerLatency);
 
                     /**
                      * 判断参数 PeerLatency 是否已赋值
                      * @return PeerLatency 是否已赋值
+                     * 
                      */
                     bool PeerLatencyHasBeenSet() const;
 
                     /**
                      * 获取Peer idle timeout period.
                      * @return PeerIdleTimeout Peer idle timeout period.
+                     * 
                      */
                     int64_t GetPeerIdleTimeout() const;
 
                     /**
                      * 设置Peer idle timeout period.
-                     * @param PeerIdleTimeout Peer idle timeout period.
+                     * @param _peerIdleTimeout Peer idle timeout period.
+                     * 
                      */
                     void SetPeerIdleTimeout(const int64_t& _peerIdleTimeout);
 
                     /**
                      * 判断参数 PeerIdleTimeout 是否已赋值
                      * @return PeerIdleTimeout 是否已赋值
+                     * 
                      */
                     bool PeerIdleTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Decryption key.
                      * @return Passphrase Decryption key.
+                     * 
                      */
                     std::string GetPassphrase() const;
 
                     /**
                      * 设置Decryption key.
-                     * @param Passphrase Decryption key.
+                     * @param _passphrase Decryption key.
+                     * 
                      */
                     void SetPassphrase(const std::string& _passphrase);
 
                     /**
                      * 判断参数 Passphrase 是否已赋值
                      * @return Passphrase 是否已赋值
+                     * 
                      */
                     bool PassphraseHasBeenSet() const;
 
                     /**
                      * 获取Key length.
                      * @return PbKeyLen Key length.
+                     * 
                      */
                     int64_t GetPbKeyLen() const;
 
                     /**
                      * 设置Key length.
-                     * @param PbKeyLen Key length.
+                     * @param _pbKeyLen Key length.
+                     * 
                      */
                     void SetPbKeyLen(const int64_t& _pbKeyLen);
 
                     /**
                      * 判断参数 PbKeyLen 是否已赋值
                      * @return PbKeyLen 是否已赋值
+                     * 
                      */
                     bool PbKeyLenHasBeenSet() const;
 
@@ -200,20 +224,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SourceAddresses The SRT peer address.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<SRTSourceAddressResp> GetSourceAddresses() const;
 
                     /**
                      * 设置The SRT peer address.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SourceAddresses The SRT peer address.
+                     * @param _sourceAddresses The SRT peer address.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSourceAddresses(const std::vector<SRTSourceAddressResp>& _sourceAddresses);
 
                     /**
                      * 判断参数 SourceAddresses 是否已赋值
                      * @return SourceAddresses 是否已赋值
+                     * 
                      */
                     bool SourceAddressesHasBeenSet() const;
 

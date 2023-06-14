@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of purchasable specification and region information
                      * @return DataResult List of purchasable specification and region information
+                     * 
                      */
                     CdbZoneDataResult GetDataResult() const;
 
                     /**
                      * 判断参数 DataResult 是否已赋值
                      * @return DataResult 是否已赋值
+                     * 
                      */
                     bool DataResultHasBeenSet() const;
 

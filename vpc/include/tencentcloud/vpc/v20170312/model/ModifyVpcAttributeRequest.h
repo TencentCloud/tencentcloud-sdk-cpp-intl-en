@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Security group can be named freely, but cannot exceed 60 characters.
                      * @return VpcId Security group can be named freely, but cannot exceed 60 characters.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Security group can be named freely, but cannot exceed 60 characters.
-                     * @param VpcId Security group can be named freely, but cannot exceed 60 characters.
+                     * @param _vpcId Security group can be named freely, but cannot exceed 60 characters.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取VPC can be named freely, but the maximum length is 60 characters.
                      * @return VpcName VPC can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置VPC can be named freely, but the maximum length is 60 characters.
-                     * @param VpcName VPC can be named freely, but the maximum length is 60 characters.
+                     * @param _vpcName VPC can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     void SetVpcName(const std::string& _vpcName);
 
                     /**
                      * 判断参数 VpcName 是否已赋值
                      * @return VpcName 是否已赋值
+                     * 
                      */
                     bool VpcNameHasBeenSet() const;
 
                     /**
                      * 获取Whether multicast is enabled. `true`: Enabled. `false`: Off.
                      * @return EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
+                     * 
                      */
                     std::string GetEnableMulticast() const;
 
                     /**
                      * 设置Whether multicast is enabled. `true`: Enabled. `false`: Off.
-                     * @param EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
+                     * @param _enableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
+                     * 
                      */
                     void SetEnableMulticast(const std::string& _enableMulticast);
 
                     /**
                      * 判断参数 EnableMulticast 是否已赋值
                      * @return EnableMulticast 是否已赋值
+                     * 
                      */
                     bool EnableMulticastHasBeenSet() const;
 
                     /**
                      * 获取DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
                      * @return DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
+                     * 
                      */
                     std::vector<std::string> GetDnsServers() const;
 
                     /**
                      * 设置DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
-                     * @param DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
+                     * @param _dnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
+                     * 
                      */
                     void SetDnsServers(const std::vector<std::string>& _dnsServers);
 
                     /**
                      * 判断参数 DnsServers 是否已赋值
                      * @return DnsServers 是否已赋值
+                     * 
                      */
                     bool DnsServersHasBeenSet() const;
 
                     /**
                      * 获取Domain name
                      * @return DomainName Domain name
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name
-                     * @param DomainName Domain name
+                     * @param _domainName Domain name
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 

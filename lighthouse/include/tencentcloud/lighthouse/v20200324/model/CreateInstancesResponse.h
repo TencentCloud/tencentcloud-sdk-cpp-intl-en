@@ -50,12 +50,14 @@ You can call `DescribeInstances` API, and find the instance ID in the `Instances
                      * @return InstanceIdSet List of IDs created by using this API. The returning of IDs does not mean that the instances are created successfully.
 
 You can call `DescribeInstances` API, and find the instance ID in the `InstancesSet` returned to check its status. If the `status` is `running`, the instance is created successfully.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 

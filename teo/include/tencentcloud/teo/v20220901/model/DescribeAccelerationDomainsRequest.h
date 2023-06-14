@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
                      * @return ZoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
-                     * @param ZoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+                     * @param _zoneId Site ID of the accelerated domain name. If it’s not specified, all accelerated domain names under the site are returned.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -76,6 +79,7 @@ namespace TencentCloud
 <li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
 <li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
 <li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+                     * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
@@ -87,19 +91,21 @@ namespace TencentCloud
 <li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
 <li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
 <li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
-                     * @param Filters Filters. Each filter can have up to 20 entries. See below for details: 
+                     * @param _filters Filters. Each filter can have up to 20 entries. See below for details: 
 <li>`domain-name`:<br>   <strong>Accelerated domain name</strong><br>   Type: String<br>Required: No 
 <li>`origin-type`:<br>   <strong>Type of the origin</strong><br>   Type: String<br>   Required: No 
 <li>`origin`:<br>   <strong>Primary origin</strong><br>   Type: String<br>   Required: No 
 <li>`backup-origin`:<br>   <strong>Secondary origin</strong><br>   Type: String<br>   Required: No 
 <li>`domain-cname`:<br>   <strong>Accelerated CNAME</strong><br>   Type: String<br>   Required: No 
 <li>`share-cname`:<br>   <strong> Shared CNAME</strong><br>   Type: String<br>   Required: No
+                     * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
@@ -110,6 +116,7 @@ namespace TencentCloud
                      * @return Direction The sorting order. Values:
 <li>`asc`: Ascending order.</li>
 <li>`desc`: Descending order.</li>Default value: `asc`.
+                     * 
                      */
                     std::string GetDirection() const;
 
@@ -117,15 +124,17 @@ namespace TencentCloud
                      * 设置The sorting order. Values:
 <li>`asc`: Ascending order.</li>
 <li>`desc`: Descending order.</li>Default value: `asc`.
-                     * @param Direction The sorting order. Values:
+                     * @param _direction The sorting order. Values:
 <li>`asc`: Ascending order.</li>
 <li>`desc`: Descending order.</li>Default value: `asc`.
+                     * 
                      */
                     void SetDirection(const std::string& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
@@ -136,6 +145,7 @@ namespace TencentCloud
                      * @return Match The match mode. Values:
 <li>`all`: Return all matches.</li>
 <li>`any`: Return any match.</li>Default value: `all`.
+                     * 
                      */
                     std::string GetMatch() const;
 
@@ -143,51 +153,59 @@ namespace TencentCloud
                      * 设置The match mode. Values:
 <li>`all`: Return all matches.</li>
 <li>`any`: Return any match.</li>Default value: `all`.
-                     * @param Match The match mode. Values:
+                     * @param _match The match mode. Values:
 <li>`all`: Return all matches.</li>
 <li>`any`: Return any match.</li>Default value: `all`.
+                     * 
                      */
                     void SetMatch(const std::string& _match);
 
                     /**
                      * 判断参数 Match 是否已赋值
                      * @return Match 是否已赋值
+                     * 
                      */
                     bool MatchHasBeenSet() const;
 
                     /**
                      * 获取Limit on paginated queries. Default value: 20. Maximum value: 200.
                      * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit on paginated queries. Default value: 20. Maximum value: 200.
-                     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset for paginated queries. Default value: 0.
                      * @return Offset Offset for paginated queries. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset for paginated queries. Default value: 0.
-                     * @param Offset Offset for paginated queries. Default value: 0.
+                     * @param _offset Offset for paginated queries. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -200,6 +218,7 @@ namespace TencentCloud
 <li>`created_on`: Creation time of the accelerated domain name.</li>
 <li>`domain-name`: Acceleration domain name.</li>
 </li>Default value: `domain-name`.
+                     * 
                      */
                     std::string GetOrder() const;
 
@@ -208,16 +227,18 @@ namespace TencentCloud
 <li>`created_on`: Creation time of the accelerated domain name.</li>
 <li>`domain-name`: Acceleration domain name.</li>
 </li>Default value: `domain-name`.
-                     * @param Order The sorting criteria. Values:
+                     * @param _order The sorting criteria. Values:
 <li>`created_on`: Creation time of the accelerated domain name.</li>
 <li>`domain-name`: Acceleration domain name.</li>
 </li>Default value: `domain-name`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 

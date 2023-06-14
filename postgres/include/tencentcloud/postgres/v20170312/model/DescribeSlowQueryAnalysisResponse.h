@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of query results.
                      * @return TotalCount The total number of query results.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Detailed analysis.
                      * @return Detail Detailed analysis.
+                     * 
                      */
                     Detail GetDetail() const;
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 

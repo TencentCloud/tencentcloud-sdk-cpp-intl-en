@@ -46,144 +46,168 @@ namespace TencentCloud
                     /**
                      * 获取Total capacity of data backups in bytes in the current region (including automatic backups and manual backups).
                      * @return DataBackupVolume Total capacity of data backups in bytes in the current region (including automatic backups and manual backups).
+                     * 
                      */
                     int64_t GetDataBackupVolume() const;
 
                     /**
                      * 判断参数 DataBackupVolume 是否已赋值
                      * @return DataBackupVolume 是否已赋值
+                     * 
                      */
                     bool DataBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total number of data backups in the current region.
                      * @return DataBackupCount Total number of data backups in the current region.
+                     * 
                      */
                     int64_t GetDataBackupCount() const;
 
                     /**
                      * 判断参数 DataBackupCount 是否已赋值
                      * @return DataBackupCount 是否已赋值
+                     * 
                      */
                     bool DataBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Total capacity of automatic backups in the current region.
                      * @return AutoBackupVolume Total capacity of automatic backups in the current region.
+                     * 
                      */
                     int64_t GetAutoBackupVolume() const;
 
                     /**
                      * 判断参数 AutoBackupVolume 是否已赋值
                      * @return AutoBackupVolume 是否已赋值
+                     * 
                      */
                     bool AutoBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total number of automatic backups in the current region.
                      * @return AutoBackupCount Total number of automatic backups in the current region.
+                     * 
                      */
                     int64_t GetAutoBackupCount() const;
 
                     /**
                      * 判断参数 AutoBackupCount 是否已赋值
                      * @return AutoBackupCount 是否已赋值
+                     * 
                      */
                     bool AutoBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Total capacity of manual backups in the current region.
                      * @return ManualBackupVolume Total capacity of manual backups in the current region.
+                     * 
                      */
                     int64_t GetManualBackupVolume() const;
 
                     /**
                      * 判断参数 ManualBackupVolume 是否已赋值
                      * @return ManualBackupVolume 是否已赋值
+                     * 
                      */
                     bool ManualBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total number of manual backups in the current region.
                      * @return ManualBackupCount Total number of manual backups in the current region.
+                     * 
                      */
                     int64_t GetManualBackupCount() const;
 
                     /**
                      * 判断参数 ManualBackupCount 是否已赋值
                      * @return ManualBackupCount 是否已赋值
+                     * 
                      */
                     bool ManualBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Total capacity of remote backups
                      * @return RemoteBackupVolume Total capacity of remote backups
+                     * 
                      */
                     int64_t GetRemoteBackupVolume() const;
 
                     /**
                      * 判断参数 RemoteBackupVolume 是否已赋值
                      * @return RemoteBackupVolume 是否已赋值
+                     * 
                      */
                     bool RemoteBackupVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total number of remote backups
                      * @return RemoteBackupCount Total number of remote backups
+                     * 
                      */
                     int64_t GetRemoteBackupCount() const;
 
                     /**
                      * 判断参数 RemoteBackupCount 是否已赋值
                      * @return RemoteBackupCount 是否已赋值
+                     * 
                      */
                     bool RemoteBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Total capacity of archive backups in the current region
                      * @return DataBackupArchiveVolume Total capacity of archive backups in the current region
+                     * 
                      */
                     int64_t GetDataBackupArchiveVolume() const;
 
                     /**
                      * 判断参数 DataBackupArchiveVolume 是否已赋值
                      * @return DataBackupArchiveVolume 是否已赋值
+                     * 
                      */
                     bool DataBackupArchiveVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total number of archive backups in the current region
                      * @return DataBackupArchiveCount Total number of archive backups in the current region
+                     * 
                      */
                     int64_t GetDataBackupArchiveCount() const;
 
                     /**
                      * 判断参数 DataBackupArchiveCount 是否已赋值
                      * @return DataBackupArchiveCount 是否已赋值
+                     * 
                      */
                     bool DataBackupArchiveCountHasBeenSet() const;
 
                     /**
                      * 获取Total backup capacity of standard storage in current region
                      * @return DataBackupStandbyVolume Total backup capacity of standard storage in current region
+                     * 
                      */
                     int64_t GetDataBackupStandbyVolume() const;
 
                     /**
                      * 判断参数 DataBackupStandbyVolume 是否已赋值
                      * @return DataBackupStandbyVolume 是否已赋值
+                     * 
                      */
                     bool DataBackupStandbyVolumeHasBeenSet() const;
 
                     /**
                      * 获取Total number of standard storage backups in current region
                      * @return DataBackupStandbyCount Total number of standard storage backups in current region
+                     * 
                      */
                     int64_t GetDataBackupStandbyCount() const;
 
                     /**
                      * 判断参数 DataBackupStandbyCount 是否已赋值
                      * @return DataBackupStandbyCount 是否已赋值
+                     * 
                      */
                     bool DataBackupStandbyCountHasBeenSet() const;
 

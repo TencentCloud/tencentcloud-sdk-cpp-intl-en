@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
@@ -69,6 +72,7 @@ namespace TencentCloud
 
 <li> **phoneNumber** </li>	  Mobile number
 <li> **email** </li>  Email
+                     * 
                      */
                     std::string GetPropertyCode() const;
 
@@ -77,52 +81,60 @@ namespace TencentCloud
 
 <li> **phoneNumber** </li>	  Mobile number
 <li> **email** </li>  Email
-                     * @param PropertyCode Query attribute
+                     * @param _propertyCode Query attribute
 
 <li> **phoneNumber** </li>	  Mobile number
 <li> **email** </li>  Email
+                     * 
                      */
                     void SetPropertyCode(const std::string& _propertyCode);
 
                     /**
                      * 判断参数 PropertyCode 是否已赋值
                      * @return PropertyCode 是否已赋值
+                     * 
                      */
                     bool PropertyCodeHasBeenSet() const;
 
                     /**
                      * 获取Attribute value
                      * @return PropertyValue Attribute value
+                     * 
                      */
                     std::string GetPropertyValue() const;
 
                     /**
                      * 设置Attribute value
-                     * @param PropertyValue Attribute value
+                     * @param _propertyValue Attribute value
+                     * 
                      */
                     void SetPropertyValue(const std::string& _propertyValue);
 
                     /**
                      * 判断参数 PropertyValue 是否已赋值
                      * @return PropertyValue 是否已赋值
+                     * 
                      */
                     bool PropertyValueHasBeenSet() const;
 
                     /**
                      * 获取Whether the content is passed through
                      * @return Original Whether the content is passed through
+                     * 
                      */
                     bool GetOriginal() const;
 
                     /**
                      * 设置Whether the content is passed through
-                     * @param Original Whether the content is passed through
+                     * @param _original Whether the content is passed through
+                     * 
                      */
                     void SetOriginal(const bool& _original);
 
                     /**
                      * 判断参数 Original 是否已赋值
                      * @return Original 是否已赋值
+                     * 
                      */
                     bool OriginalHasBeenSet() const;
 

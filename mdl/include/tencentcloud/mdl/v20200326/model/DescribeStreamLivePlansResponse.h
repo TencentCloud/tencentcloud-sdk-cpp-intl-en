@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return Infos List of event information
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<PlanResp> GetInfos() const;
 
                     /**
                      * 判断参数 Infos 是否已赋值
                      * @return Infos 是否已赋值
+                     * 
                      */
                     bool InfosHasBeenSet() const;
 

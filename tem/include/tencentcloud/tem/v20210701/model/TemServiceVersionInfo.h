@@ -66,252 +66,294 @@ namespace TencentCloud
                     /**
                      * 获取Version ID
                      * @return VersionId Version ID
+                     * 
                      */
                     std::string GetVersionId() const;
 
                     /**
                      * 设置Version ID
-                     * @param VersionId Version ID
+                     * @param _versionId Version ID
+                     * 
                      */
                     void SetVersionId(const std::string& _versionId);
 
                     /**
                      * 判断参数 VersionId 是否已赋值
                      * @return VersionId 是否已赋值
+                     * 
                      */
                     bool VersionIdHasBeenSet() const;
 
                     /**
                      * 获取Application ID
                      * @return ApplicationId Application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Deployment mode
                      * @return DeployMode Deployment mode
+                     * 
                      */
                     std::string GetDeployMode() const;
 
                     /**
                      * 设置Deployment mode
-                     * @param DeployMode Deployment mode
+                     * @param _deployMode Deployment mode
+                     * 
                      */
                     void SetDeployMode(const std::string& _deployMode);
 
                     /**
                      * 判断参数 DeployMode 是否已赋值
                      * @return DeployMode 是否已赋值
+                     * 
                      */
                     bool DeployModeHasBeenSet() const;
 
                     /**
                      * 获取JDK version
                      * @return JdkVersion JDK version
+                     * 
                      */
                     std::string GetJdkVersion() const;
 
                     /**
                      * 设置JDK version
-                     * @param JdkVersion JDK version
+                     * @param _jdkVersion JDK version
+                     * 
                      */
                     void SetJdkVersion(const std::string& _jdkVersion);
 
                     /**
                      * 判断参数 JdkVersion 是否已赋值
                      * @return JdkVersion 是否已赋值
+                     * 
                      */
                     bool JdkVersionHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Deployed version
                      * @return DeployVersion Deployed version
+                     * 
                      */
                     std::string GetDeployVersion() const;
 
                     /**
                      * 设置Deployed version
-                     * @param DeployVersion Deployed version
+                     * @param _deployVersion Deployed version
+                     * 
                      */
                     void SetDeployVersion(const std::string& _deployVersion);
 
                     /**
                      * 判断参数 DeployVersion 是否已赋值
                      * @return DeployVersion 是否已赋值
+                     * 
                      */
                     bool DeployVersionHasBeenSet() const;
 
                     /**
                      * 获取Publish mode
                      * @return PublishMode Publish mode
+                     * 
                      */
                     std::string GetPublishMode() const;
 
                     /**
                      * 设置Publish mode
-                     * @param PublishMode Publish mode
+                     * @param _publishMode Publish mode
+                     * 
                      */
                     void SetPublishMode(const std::string& _publishMode);
 
                     /**
                      * 判断参数 PublishMode 是否已赋值
                      * @return PublishMode 是否已赋值
+                     * 
                      */
                     bool PublishModeHasBeenSet() const;
 
                     /**
                      * 获取Launch parameter
                      * @return JvmOpts Launch parameter
+                     * 
                      */
                     std::string GetJvmOpts() const;
 
                     /**
                      * 设置Launch parameter
-                     * @param JvmOpts Launch parameter
+                     * @param _jvmOpts Launch parameter
+                     * 
                      */
                     void SetJvmOpts(const std::string& _jvmOpts);
 
                     /**
                      * 判断参数 JvmOpts 是否已赋值
                      * @return JvmOpts 是否已赋值
+                     * 
                      */
                     bool JvmOptsHasBeenSet() const;
 
                     /**
                      * 获取Number of initial pods
                      * @return InitPodNum Number of initial pods
+                     * 
                      */
                     int64_t GetInitPodNum() const;
 
                     /**
                      * 设置Number of initial pods
-                     * @param InitPodNum Number of initial pods
+                     * @param _initPodNum Number of initial pods
+                     * 
                      */
                     void SetInitPodNum(const int64_t& _initPodNum);
 
                     /**
                      * 判断参数 InitPodNum 是否已赋值
                      * @return InitPodNum 是否已赋值
+                     * 
                      */
                     bool InitPodNumHasBeenSet() const;
 
                     /**
                      * 获取CPU specification
                      * @return CpuSpec CPU specification
+                     * 
                      */
                     double GetCpuSpec() const;
 
                     /**
                      * 设置CPU specification
-                     * @param CpuSpec CPU specification
+                     * @param _cpuSpec CPU specification
+                     * 
                      */
                     void SetCpuSpec(const double& _cpuSpec);
 
                     /**
                      * 判断参数 CpuSpec 是否已赋值
                      * @return CpuSpec 是否已赋值
+                     * 
                      */
                     bool CpuSpecHasBeenSet() const;
 
                     /**
                      * 获取Memory specification
                      * @return MemorySpec Memory specification
+                     * 
                      */
                     double GetMemorySpec() const;
 
                     /**
                      * 设置Memory specification
-                     * @param MemorySpec Memory specification
+                     * @param _memorySpec Memory specification
+                     * 
                      */
                     void SetMemorySpec(const double& _memorySpec);
 
                     /**
                      * 判断参数 MemorySpec 是否已赋值
                      * @return MemorySpec 是否已赋值
+                     * 
                      */
                     bool MemorySpecHasBeenSet() const;
 
                     /**
                      * 获取Image path
                      * @return ImgRepo Image path
+                     * 
                      */
                     std::string GetImgRepo() const;
 
                     /**
                      * 设置Image path
-                     * @param ImgRepo Image path
+                     * @param _imgRepo Image path
+                     * 
                      */
                     void SetImgRepo(const std::string& _imgRepo);
 
                     /**
                      * 判断参数 ImgRepo 是否已赋值
                      * @return ImgRepo 是否已赋值
+                     * 
                      */
                     bool ImgRepoHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImgName Image name
+                     * 
                      */
                     std::string GetImgName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImgName Image name
+                     * @param _imgName Image name
+                     * 
                      */
                     void SetImgName(const std::string& _imgName);
 
                     /**
                      * 判断参数 ImgName 是否已赋值
                      * @return ImgName 是否已赋值
+                     * 
                      */
                     bool ImgNameHasBeenSet() const;
 
                     /**
                      * 获取Image version
                      * @return ImgVersion Image version
+                     * 
                      */
                     std::string GetImgVersion() const;
 
                     /**
                      * 设置Image version
-                     * @param ImgVersion Image version
+                     * @param _imgVersion Image version
+                     * 
                      */
                     void SetImgVersion(const std::string& _imgVersion);
 
                     /**
                      * 判断参数 ImgVersion 是否已赋值
                      * @return ImgVersion 是否已赋值
+                     * 
                      */
                     bool ImgVersionHasBeenSet() const;
 
@@ -320,146 +362,170 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EsInfo Scaling configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EsInfo GetEsInfo() const;
 
                     /**
                      * 设置Scaling configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EsInfo Scaling configuration
+                     * @param _esInfo Scaling configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEsInfo(const EsInfo& _esInfo);
 
                     /**
                      * 判断参数 EsInfo 是否已赋值
                      * @return EsInfo 是否已赋值
+                     * 
                      */
                     bool EsInfoHasBeenSet() const;
 
                     /**
                      * 获取Environment configuration
                      * @return EnvConf Environment configuration
+                     * 
                      */
                     std::vector<Pair> GetEnvConf() const;
 
                     /**
                      * 设置Environment configuration
-                     * @param EnvConf Environment configuration
+                     * @param _envConf Environment configuration
+                     * 
                      */
                     void SetEnvConf(const std::vector<Pair>& _envConf);
 
                     /**
                      * 判断参数 EnvConf 是否已赋值
                      * @return EnvConf 是否已赋值
+                     * 
                      */
                     bool EnvConfHasBeenSet() const;
 
                     /**
                      * 获取Storage configuration
                      * @return StorageConfs Storage configuration
+                     * 
                      */
                     std::vector<StorageConf> GetStorageConfs() const;
 
                     /**
                      * 设置Storage configuration
-                     * @param StorageConfs Storage configuration
+                     * @param _storageConfs Storage configuration
+                     * 
                      */
                     void SetStorageConfs(const std::vector<StorageConf>& _storageConfs);
 
                     /**
                      * 判断参数 StorageConfs 是否已赋值
                      * @return StorageConfs 是否已赋值
+                     * 
                      */
                     bool StorageConfsHasBeenSet() const;
 
                     /**
                      * 获取Running status
                      * @return Status Running status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Running status
-                     * @param Status Running status
+                     * @param _status Running status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取VPC
                      * @return Vpc VPC
+                     * 
                      */
                     std::string GetVpc() const;
 
                     /**
                      * 设置VPC
-                     * @param Vpc VPC
+                     * @param _vpc VPC
+                     * 
                      */
                     void SetVpc(const std::string& _vpc);
 
                     /**
                      * 判断参数 Vpc 是否已赋值
                      * @return Vpc 是否已赋值
+                     * 
                      */
                     bool VpcHasBeenSet() const;
 
                     /**
                      * 获取Subnets
                      * @return SubnetId Subnets
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnets
-                     * @param SubnetId Subnets
+                     * @param _subnetId Subnets
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateDate Creation time
+                     * 
                      */
                     std::string GetCreateDate() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateDate Creation time
+                     * @param _createDate Creation time
+                     * 
                      */
                     void SetCreateDate(const std::string& _createDate);
 
                     /**
                      * 判断参数 CreateDate 是否已赋值
                      * @return CreateDate 是否已赋值
+                     * 
                      */
                     bool CreateDateHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModifyDate Modification time
+                     * 
                      */
                     std::string GetModifyDate() const;
 
                     /**
                      * 设置Modification time
-                     * @param ModifyDate Modification time
+                     * @param _modifyDate Modification time
+                     * 
                      */
                     void SetModifyDate(const std::string& _modifyDate);
 
                     /**
                      * 判断参数 ModifyDate 是否已赋值
                      * @return ModifyDate 是否已赋值
+                     * 
                      */
                     bool ModifyDateHasBeenSet() const;
 
@@ -468,20 +534,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StorageMountConfs Mounting configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<StorageMountConf> GetStorageMountConfs() const;
 
                     /**
                      * 设置Mounting configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StorageMountConfs Mounting configuration
+                     * @param _storageMountConfs Mounting configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStorageMountConfs(const std::vector<StorageMountConf>& _storageMountConfs);
 
                     /**
                      * 判断参数 StorageMountConfs 是否已赋值
                      * @return StorageMountConfs 是否已赋值
+                     * 
                      */
                     bool StorageMountConfsHasBeenSet() const;
 
@@ -490,20 +559,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return VersionName Version name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Version name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param VersionName Version name
+                     * @param _versionName Version name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 
@@ -512,20 +584,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LogOutputConf Log output configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     LogOutputConf GetLogOutputConf() const;
 
                     /**
                      * 设置Log output configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LogOutputConf Log output configuration
+                     * @param _logOutputConf Log output configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogOutputConf(const LogOutputConf& _logOutputConf);
 
                     /**
                      * 判断参数 LogOutputConf 是否已赋值
                      * @return LogOutputConf 是否已赋值
+                     * 
                      */
                     bool LogOutputConfHasBeenSet() const;
 
@@ -534,20 +609,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ApplicationName Application name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ApplicationName Application name
+                     * @param _applicationName Application name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
 
                     /**
                      * 判断参数 ApplicationName 是否已赋值
                      * @return ApplicationName 是否已赋值
+                     * 
                      */
                     bool ApplicationNameHasBeenSet() const;
 
@@ -556,20 +634,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ApplicationDescription Application description
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationDescription() const;
 
                     /**
                      * 设置Application description
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ApplicationDescription Application description
+                     * @param _applicationDescription Application description
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationDescription(const std::string& _applicationDescription);
 
                     /**
                      * 判断参数 ApplicationDescription 是否已赋值
                      * @return ApplicationDescription 是否已赋值
+                     * 
                      */
                     bool ApplicationDescriptionHasBeenSet() const;
 
@@ -578,20 +659,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnvironmentName Environment name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnvironmentName Environment name
+                     * @param _environmentName Environment name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
@@ -600,20 +684,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnvironmentId Environment ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
@@ -622,20 +709,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PublicDomain Public network address
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicDomain() const;
 
                     /**
                      * 设置Public network address
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PublicDomain Public network address
+                     * @param _publicDomain Public network address
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicDomain(const std::string& _publicDomain);
 
                     /**
                      * 判断参数 PublicDomain 是否已赋值
                      * @return PublicDomain 是否已赋值
+                     * 
                      */
                     bool PublicDomainHasBeenSet() const;
 
@@ -644,20 +734,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnablePublicAccess Whether to enable public network access
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnablePublicAccess() const;
 
                     /**
                      * 设置Whether to enable public network access
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnablePublicAccess Whether to enable public network access
+                     * @param _enablePublicAccess Whether to enable public network access
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnablePublicAccess(const bool& _enablePublicAccess);
 
                     /**
                      * 判断参数 EnablePublicAccess 是否已赋值
                      * @return EnablePublicAccess 是否已赋值
+                     * 
                      */
                     bool EnablePublicAccessHasBeenSet() const;
 
@@ -666,20 +759,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CurrentInstances Number of current instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCurrentInstances() const;
 
                     /**
                      * 设置Number of current instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CurrentInstances Number of current instances
+                     * @param _currentInstances Number of current instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCurrentInstances(const int64_t& _currentInstances);
 
                     /**
                      * 判断参数 CurrentInstances 是否已赋值
                      * @return CurrentInstances 是否已赋值
+                     * 
                      */
                     bool CurrentInstancesHasBeenSet() const;
 
@@ -688,20 +784,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ExpectedInstances Number of expected instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetExpectedInstances() const;
 
                     /**
                      * 设置Number of expected instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ExpectedInstances Number of expected instances
+                     * @param _expectedInstances Number of expected instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpectedInstances(const int64_t& _expectedInstances);
 
                     /**
                      * 判断参数 ExpectedInstances 是否已赋值
                      * @return ExpectedInstances 是否已赋值
+                     * 
                      */
                     bool ExpectedInstancesHasBeenSet() const;
 
@@ -710,20 +809,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CodingLanguage Programming Language
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCodingLanguage() const;
 
                     /**
                      * 设置Programming Language
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CodingLanguage Programming Language
+                     * @param _codingLanguage Programming Language
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCodingLanguage(const std::string& _codingLanguage);
 
                     /**
                      * 判断参数 CodingLanguage 是否已赋值
                      * @return CodingLanguage 是否已赋值
+                     * 
                      */
                     bool CodingLanguageHasBeenSet() const;
 
@@ -732,20 +834,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PkgName Program package name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPkgName() const;
 
                     /**
                      * 设置Program package name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PkgName Program package name
+                     * @param _pkgName Program package name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPkgName(const std::string& _pkgName);
 
                     /**
                      * 判断参数 PkgName 是否已赋值
                      * @return PkgName 是否已赋值
+                     * 
                      */
                     bool PkgNameHasBeenSet() const;
 
@@ -754,20 +859,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EsEnable Whether to enable auto scaling
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEsEnable() const;
 
                     /**
                      * 设置Whether to enable auto scaling
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EsEnable Whether to enable auto scaling
+                     * @param _esEnable Whether to enable auto scaling
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEsEnable(const int64_t& _esEnable);
 
                     /**
                      * 判断参数 EsEnable 是否已赋值
                      * @return EsEnable 是否已赋值
+                     * 
                      */
                     bool EsEnableHasBeenSet() const;
 
@@ -776,20 +884,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EsStrategy Auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEsStrategy() const;
 
                     /**
                      * 设置Auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EsStrategy Auto scaling policy
+                     * @param _esStrategy Auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEsStrategy(const int64_t& _esStrategy);
 
                     /**
                      * 判断参数 EsStrategy 是否已赋值
                      * @return EsStrategy 是否已赋值
+                     * 
                      */
                     bool EsStrategyHasBeenSet() const;
 
@@ -798,20 +909,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ImageTag Image tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageTag() const;
 
                     /**
                      * 设置Image tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ImageTag Image tag
+                     * @param _imageTag Image tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageTag(const std::string& _imageTag);
 
                     /**
                      * 判断参数 ImageTag 是否已赋值
                      * @return ImageTag 是否已赋值
+                     * 
                      */
                     bool ImageTagHasBeenSet() const;
 
@@ -820,20 +934,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LogEnable Whether to enable logging
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetLogEnable() const;
 
                     /**
                      * 设置Whether to enable logging
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LogEnable Whether to enable logging
+                     * @param _logEnable Whether to enable logging
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogEnable(const int64_t& _logEnable);
 
                     /**
                      * 判断参数 LogEnable 是否已赋值
                      * @return LogEnable 是否已赋值
+                     * 
                      */
                     bool LogEnableHasBeenSet() const;
 
@@ -842,20 +959,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return MinAliveInstances Minimum number of instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMinAliveInstances() const;
 
                     /**
                      * 设置Minimum number of instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param MinAliveInstances Minimum number of instances
+                     * @param _minAliveInstances Minimum number of instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMinAliveInstances(const std::string& _minAliveInstances);
 
                     /**
                      * 判断参数 MinAliveInstances 是否已赋值
                      * @return MinAliveInstances 是否已赋值
+                     * 
                      */
                     bool MinAliveInstancesHasBeenSet() const;
 
@@ -864,20 +984,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SecurityGroupIds Security group IDs
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Security group IDs
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SecurityGroupIds Security group IDs
+                     * @param _securityGroupIds Security group IDs
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
@@ -886,20 +1009,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ImageCommand Image command
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageCommand() const;
 
                     /**
                      * 设置Image command
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ImageCommand Image command
+                     * @param _imageCommand Image command
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageCommand(const std::string& _imageCommand);
 
                     /**
                      * 判断参数 ImageCommand 是否已赋值
                      * @return ImageCommand 是否已赋值
+                     * 
                      */
                     bool ImageCommandHasBeenSet() const;
 
@@ -908,20 +1034,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ImageArgs Image command parameters
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetImageArgs() const;
 
                     /**
                      * 设置Image command parameters
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ImageArgs Image command parameters
+                     * @param _imageArgs Image command parameters
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageArgs(const std::vector<std::string>& _imageArgs);
 
                     /**
                      * 判断参数 ImageArgs 是否已赋值
                      * @return ImageArgs 是否已赋值
+                     * 
                      */
                     bool ImageArgsHasBeenSet() const;
 
@@ -930,20 +1059,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UseRegistryDefaultConfig Whether to use the default registry configurations
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetUseRegistryDefaultConfig() const;
 
                     /**
                      * 设置Whether to use the default registry configurations
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UseRegistryDefaultConfig Whether to use the default registry configurations
+                     * @param _useRegistryDefaultConfig Whether to use the default registry configurations
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUseRegistryDefaultConfig(const bool& _useRegistryDefaultConfig);
 
                     /**
                      * 判断参数 UseRegistryDefaultConfig 是否已赋值
                      * @return UseRegistryDefaultConfig 是否已赋值
+                     * 
                      */
                     bool UseRegistryDefaultConfigHasBeenSet() const;
 
@@ -952,20 +1084,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Service EKS access configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     EksService GetService() const;
 
                     /**
                      * 设置EKS access configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Service EKS access configuration
+                     * @param _service EKS access configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetService(const EksService& _service);
 
                     /**
                      * 判断参数 Service 是否已赋值
                      * @return Service 是否已赋值
+                     * 
                      */
                     bool ServiceHasBeenSet() const;
 
@@ -974,20 +1109,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SettingConfs Mounting configurations
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MountedSettingConf> GetSettingConfs() const;
 
                     /**
                      * 设置Mounting configurations
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SettingConfs Mounting configurations
+                     * @param _settingConfs Mounting configurations
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSettingConfs(const std::vector<MountedSettingConf>& _settingConfs);
 
                     /**
                      * 判断参数 SettingConfs 是否已赋值
                      * @return SettingConfs 是否已赋值
+                     * 
                      */
                     bool SettingConfsHasBeenSet() const;
 
@@ -996,20 +1134,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LogConfs Log path information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetLogConfs() const;
 
                     /**
                      * 设置Log path information
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LogConfs Log path information
+                     * @param _logConfs Log path information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogConfs(const std::vector<std::string>& _logConfs);
 
                     /**
                      * 判断参数 LogConfs 是否已赋值
                      * @return LogConfs 是否已赋值
+                     * 
                      */
                     bool LogConfsHasBeenSet() const;
 
@@ -1018,20 +1159,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PostStart The script to execute right after the startup
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPostStart() const;
 
                     /**
                      * 设置The script to execute right after the startup
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PostStart The script to execute right after the startup
+                     * @param _postStart The script to execute right after the startup
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPostStart(const std::string& _postStart);
 
                     /**
                      * 判断参数 PostStart 是否已赋值
                      * @return PostStart 是否已赋值
+                     * 
                      */
                     bool PostStartHasBeenSet() const;
 
@@ -1040,20 +1184,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PreStop The script to run before stop
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPreStop() const;
 
                     /**
                      * 设置The script to run before stop
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PreStop The script to run before stop
+                     * @param _preStop The script to run before stop
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPreStop(const std::string& _preStop);
 
                     /**
                      * 判断参数 PreStop 是否已赋值
                      * @return PreStop 是否已赋值
+                     * 
                      */
                     bool PreStopHasBeenSet() const;
 
@@ -1062,20 +1209,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Liveness Configuration of aliveness probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     HealthCheckConfig GetLiveness() const;
 
                     /**
                      * 设置Configuration of aliveness probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Liveness Configuration of aliveness probe
+                     * @param _liveness Configuration of aliveness probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLiveness(const HealthCheckConfig& _liveness);
 
                     /**
                      * 判断参数 Liveness 是否已赋值
                      * @return Liveness 是否已赋值
+                     * 
                      */
                     bool LivenessHasBeenSet() const;
 
@@ -1084,20 +1234,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Readiness Configuration of readiness probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     HealthCheckConfig GetReadiness() const;
 
                     /**
                      * 设置Configuration of readiness probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Readiness Configuration of readiness probe
+                     * @param _readiness Configuration of readiness probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReadiness(const HealthCheckConfig& _readiness);
 
                     /**
                      * 判断参数 Readiness 是否已赋值
                      * @return Readiness 是否已赋值
+                     * 
                      */
                     bool ReadinessHasBeenSet() const;
 
@@ -1106,20 +1259,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return HorizontalAutoscaler Auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<HorizontalAutoscaler> GetHorizontalAutoscaler() const;
 
                     /**
                      * 设置Auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param HorizontalAutoscaler Auto scaling policy
+                     * @param _horizontalAutoscaler Auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHorizontalAutoscaler(const std::vector<HorizontalAutoscaler>& _horizontalAutoscaler);
 
                     /**
                      * 判断参数 HorizontalAutoscaler 是否已赋值
                      * @return HorizontalAutoscaler 是否已赋值
+                     * 
                      */
                     bool HorizontalAutoscalerHasBeenSet() const;
 
@@ -1128,20 +1284,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CronHorizontalAutoscaler Scheduled auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CronHorizontalAutoscaler> GetCronHorizontalAutoscaler() const;
 
                     /**
                      * 设置Scheduled auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CronHorizontalAutoscaler Scheduled auto scaling policy
+                     * @param _cronHorizontalAutoscaler Scheduled auto scaling policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCronHorizontalAutoscaler(const std::vector<CronHorizontalAutoscaler>& _cronHorizontalAutoscaler);
 
                     /**
                      * 判断参数 CronHorizontalAutoscaler 是否已赋值
                      * @return CronHorizontalAutoscaler 是否已赋值
+                     * 
                      */
                     bool CronHorizontalAutoscalerHasBeenSet() const;
 
@@ -1150,20 +1309,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Zones Availability zone of the application
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
                      * 设置Availability zone of the application
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Zones Availability zone of the application
+                     * @param _zones Availability zone of the application
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
                     /**
                      * 判断参数 Zones 是否已赋值
                      * @return Zones 是否已赋值
+                     * 
                      */
                     bool ZonesHasBeenSet() const;
 
@@ -1172,20 +1334,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LastDeployDate The latest deployment time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastDeployDate() const;
 
                     /**
                      * 设置The latest deployment time
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LastDeployDate The latest deployment time
+                     * @param _lastDeployDate The latest deployment time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastDeployDate(const std::string& _lastDeployDate);
 
                     /**
                      * 判断参数 LastDeployDate 是否已赋值
                      * @return LastDeployDate 是否已赋值
+                     * 
                      */
                     bool LastDeployDateHasBeenSet() const;
 
@@ -1194,20 +1359,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LastDeploySuccessDate The latest successful deployment time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastDeploySuccessDate() const;
 
                     /**
                      * 设置The latest successful deployment time
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LastDeploySuccessDate The latest successful deployment time
+                     * @param _lastDeploySuccessDate The latest successful deployment time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastDeploySuccessDate(const std::string& _lastDeploySuccessDate);
 
                     /**
                      * 判断参数 LastDeploySuccessDate 是否已赋值
                      * @return LastDeploySuccessDate 是否已赋值
+                     * 
                      */
                     bool LastDeploySuccessDateHasBeenSet() const;
 
@@ -1216,20 +1384,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return NodeInfos Information of the node whether the application is deployed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<NodeInfo> GetNodeInfos() const;
 
                     /**
                      * 设置Information of the node whether the application is deployed
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param NodeInfos Information of the node whether the application is deployed
+                     * @param _nodeInfos Information of the node whether the application is deployed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNodeInfos(const std::vector<NodeInfo>& _nodeInfos);
 
                     /**
                      * 判断参数 NodeInfos 是否已赋值
                      * @return NodeInfos 是否已赋值
+                     * 
                      */
                     bool NodeInfosHasBeenSet() const;
 
@@ -1238,20 +1409,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ImageType Image type. Values: `0` (Demo image), `1` (Normal image)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetImageType() const;
 
                     /**
                      * 设置Image type. Values: `0` (Demo image), `1` (Normal image)
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ImageType Image type. Values: `0` (Demo image), `1` (Normal image)
+                     * @param _imageType Image type. Values: `0` (Demo image), `1` (Normal image)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageType(const int64_t& _imageType);
 
                     /**
                      * 判断参数 ImageType 是否已赋值
                      * @return ImageType 是否已赋值
+                     * 
                      */
                     bool ImageTypeHasBeenSet() const;
 
@@ -1260,20 +1434,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnableTracing Whether to 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetEnableTracing() const;
 
                     /**
                      * 设置Whether to 
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnableTracing Whether to 
+                     * @param _enableTracing Whether to 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnableTracing(const uint64_t& _enableTracing);
 
                     /**
                      * 判断参数 EnableTracing 是否已赋值
                      * @return EnableTracing 是否已赋值
+                     * 
                      */
                     bool EnableTracingHasBeenSet() const;
 
@@ -1282,20 +1459,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnableTracingReport (Disused) Whether to enable linkage tracing and report. It only takes effect when EnableTracing = `1`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetEnableTracingReport() const;
 
                     /**
                      * 设置(Disused) Whether to enable linkage tracing and report. It only takes effect when EnableTracing = `1`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnableTracingReport (Disused) Whether to enable linkage tracing and report. It only takes effect when EnableTracing = `1`.
+                     * @param _enableTracingReport (Disused) Whether to enable linkage tracing and report. It only takes effect when EnableTracing = `1`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnableTracingReport(const uint64_t& _enableTracingReport);
 
                     /**
                      * 判断参数 EnableTracingReport 是否已赋值
                      * @return EnableTracingReport 是否已赋值
+                     * 
                      */
                     bool EnableTracingReportHasBeenSet() const;
 
@@ -1304,20 +1484,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RepoType Image type. `0`: Individual image; `1`: Enterprise image; `2`: Public image
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRepoType() const;
 
                     /**
                      * 设置Image type. `0`: Individual image; `1`: Enterprise image; `2`: Public image
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RepoType Image type. `0`: Individual image; `1`: Enterprise image; `2`: Public image
+                     * @param _repoType Image type. `0`: Individual image; `1`: Enterprise image; `2`: Public image
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRepoType(const uint64_t& _repoType);
 
                     /**
                      * 判断参数 RepoType 是否已赋值
                      * @return RepoType 是否已赋值
+                     * 
                      */
                     bool RepoTypeHasBeenSet() const;
 
@@ -1326,20 +1509,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return BatchDeployStatus Status of batch deployment: `batch_updating`, `batch_updating_waiting_confirm`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBatchDeployStatus() const;
 
                     /**
                      * 设置Status of batch deployment: `batch_updating`, `batch_updating_waiting_confirm`
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param BatchDeployStatus Status of batch deployment: `batch_updating`, `batch_updating_waiting_confirm`
+                     * @param _batchDeployStatus Status of batch deployment: `batch_updating`, `batch_updating_waiting_confirm`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBatchDeployStatus(const std::string& _batchDeployStatus);
 
                     /**
                      * 判断参数 BatchDeployStatus 是否已赋值
                      * @return BatchDeployStatus 是否已赋值
+                     * 
                      */
                     bool BatchDeployStatusHasBeenSet() const;
 
@@ -1348,20 +1534,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ApmInstanceId APM instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApmInstanceId() const;
 
                     /**
                      * 设置APM instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ApmInstanceId APM instance ID
+                     * @param _apmInstanceId APM instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApmInstanceId(const std::string& _apmInstanceId);
 
                     /**
                      * 判断参数 ApmInstanceId 是否已赋值
                      * @return ApmInstanceId 是否已赋值
+                     * 
                      */
                     bool ApmInstanceIdHasBeenSet() const;
 
@@ -1370,20 +1559,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return WorkloadInfo Workload information 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     WorkloadInfo GetWorkloadInfo() const;
 
                     /**
                      * 设置Workload information 
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param WorkloadInfo Workload information 
+                     * @param _workloadInfo Workload information 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWorkloadInfo(const WorkloadInfo& _workloadInfo);
 
                     /**
                      * 判断参数 WorkloadInfo 是否已赋值
                      * @return WorkloadInfo 是否已赋值
+                     * 
                      */
                     bool WorkloadInfoHasBeenSet() const;
 
@@ -1392,20 +1584,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SpeedUp Whether to enable application acceleration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSpeedUp() const;
 
                     /**
                      * 设置Whether to enable application acceleration
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SpeedUp Whether to enable application acceleration
+                     * @param _speedUp Whether to enable application acceleration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpeedUp(const bool& _speedUp);
 
                     /**
                      * 判断参数 SpeedUp 是否已赋值
                      * @return SpeedUp 是否已赋值
+                     * 
                      */
                     bool SpeedUpHasBeenSet() const;
 
@@ -1414,20 +1609,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StartupProbe Configuration of the startup probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     HealthCheckConfig GetStartupProbe() const;
 
                     /**
                      * 设置Configuration of the startup probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StartupProbe Configuration of the startup probe
+                     * @param _startupProbe Configuration of the startup probe
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartupProbe(const HealthCheckConfig& _startupProbe);
 
                     /**
                      * 判断参数 StartupProbe 是否已赋值
                      * @return StartupProbe 是否已赋值
+                     * 
                      */
                     bool StartupProbeHasBeenSet() const;
 
@@ -1440,6 +1638,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 - ALPINE
 - CENTOS
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOsFlavour() const;
 
@@ -1448,16 +1647,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 - ALPINE
 - CENTOS
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param OsFlavour OS version. Values:
+                     * @param _osFlavour OS version. Values:
 - ALPINE
 - CENTOS
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOsFlavour(const std::string& _osFlavour);
 
                     /**
                      * 判断参数 OsFlavour 是否已赋值
                      * @return OsFlavour 是否已赋值
+                     * 
                      */
                     bool OsFlavourHasBeenSet() const;
 
@@ -1466,20 +1667,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RepoServer Image repository server
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRepoServer() const;
 
                     /**
                      * 设置Image repository server
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RepoServer Image repository server
+                     * @param _repoServer Image repository server
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRepoServer(const std::string& _repoServer);
 
                     /**
                      * 判断参数 RepoServer 是否已赋值
                      * @return RepoServer 是否已赋值
+                     * 
                      */
                     bool RepoServerHasBeenSet() const;
 
@@ -1488,20 +1692,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UnderDeploying Whether the application is being deployed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetUnderDeploying() const;
 
                     /**
                      * 设置Whether the application is being deployed
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UnderDeploying Whether the application is being deployed
+                     * @param _underDeploying Whether the application is being deployed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnderDeploying(const bool& _underDeploying);
 
                     /**
                      * 判断参数 UnderDeploying 是否已赋值
                      * @return UnderDeploying 是否已赋值
+                     * 
                      */
                     bool UnderDeployingHasBeenSet() const;
 
@@ -1510,20 +1717,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnablePrometheusConf Whether to enable application metric monitoring 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EnablePrometheusConf GetEnablePrometheusConf() const;
 
                     /**
                      * 设置Whether to enable application metric monitoring 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnablePrometheusConf Whether to enable application metric monitoring 
+                     * @param _enablePrometheusConf Whether to enable application metric monitoring 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnablePrometheusConf(const EnablePrometheusConf& _enablePrometheusConf);
 
                     /**
                      * 判断参数 EnablePrometheusConf 是否已赋值
                      * @return EnablePrometheusConf 是否已赋值
+                     * 
                      */
                     bool EnablePrometheusConfHasBeenSet() const;
 
@@ -1532,20 +1742,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StoppedManually Whether it’s stopped manually
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetStoppedManually() const;
 
                     /**
                      * 设置Whether it’s stopped manually
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StoppedManually Whether it’s stopped manually
+                     * @param _stoppedManually Whether it’s stopped manually
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStoppedManually(const bool& _stoppedManually);
 
                     /**
                      * 判断参数 StoppedManually 是否已赋值
                      * @return StoppedManually 是否已赋值
+                     * 
                      */
                     bool StoppedManuallyHasBeenSet() const;
 
@@ -1554,20 +1767,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TcrInstanceId TCR instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTcrInstanceId() const;
 
                     /**
                      * 设置TCR instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TcrInstanceId TCR instance ID
+                     * @param _tcrInstanceId TCR instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTcrInstanceId(const std::string& _tcrInstanceId);
 
                     /**
                      * 判断参数 TcrInstanceId 是否已赋值
                      * @return TcrInstanceId 是否已赋值
+                     * 
                      */
                     bool TcrInstanceIdHasBeenSet() const;
 
@@ -1578,6 +1794,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return EnableMetrics `1`: Automatically enable metrics collection (open-telemetry)
 `0`: Disable metrics collection
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEnableMetrics() const;
 
@@ -1585,15 +1802,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置`1`: Automatically enable metrics collection (open-telemetry)
 `0`: Disable metrics collection
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnableMetrics `1`: Automatically enable metrics collection (open-telemetry)
+                     * @param _enableMetrics `1`: Automatically enable metrics collection (open-telemetry)
 `0`: Disable metrics collection
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnableMetrics(const int64_t& _enableMetrics);
 
                     /**
                      * 判断参数 EnableMetrics 是否已赋值
                      * @return EnableMetrics 是否已赋值
+                     * 
                      */
                     bool EnableMetricsHasBeenSet() const;
 
@@ -1602,20 +1821,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return AppId User AppId
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetAppId() const;
 
                     /**
                      * 设置User AppId
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param AppId User AppId
+                     * @param _appId User AppId
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAppId(const std::string& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
@@ -1624,20 +1846,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return SubAccountUin Sub Account UIN
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetSubAccountUin() const;
 
                     /**
                      * 设置Sub Account UIN
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param SubAccountUin Sub Account UIN
+                     * @param _subAccountUin Sub Account UIN
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetSubAccountUin(const std::string& _subAccountUin);
 
                     /**
                      * 判断参数 SubAccountUin 是否已赋值
                      * @return SubAccountUin 是否已赋值
+                     * 
                      */
                     bool SubAccountUinHasBeenSet() const;
 
@@ -1646,20 +1871,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Uin User UIN
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置User UIN
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Uin User UIN
+                     * @param _uin User UIN
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUin(const std::string& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
@@ -1668,20 +1896,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Region Region
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Region Region
+                     * @param _region Region
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -1690,20 +1921,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return GroupId Application group ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Application group ID
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param GroupId Application group ID
+                     * @param _groupId Application group ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
@@ -1712,20 +1946,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EnableRegistry Whether to enable registry
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetEnableRegistry() const;
 
                     /**
                      * 设置Whether to enable registry
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EnableRegistry Whether to enable registry
+                     * @param _enableRegistry Whether to enable registry
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEnableRegistry(const int64_t& _enableRegistry);
 
                     /**
                      * 判断参数 EnableRegistry 是否已赋值
                      * @return EnableRegistry 是否已赋值
+                     * 
                      */
                     bool EnableRegistryHasBeenSet() const;
 
@@ -1734,20 +1971,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return AutoscalerList Array of scaling rules
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Autoscaler> GetAutoscalerList() const;
 
                     /**
                      * 设置Array of scaling rules
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param AutoscalerList Array of scaling rules
+                     * @param _autoscalerList Array of scaling rules
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAutoscalerList(const std::vector<Autoscaler>& _autoscalerList);
 
                     /**
                      * 判断参数 AutoscalerList 是否已赋值
                      * @return AutoscalerList 是否已赋值
+                     * 
                      */
                     bool AutoscalerListHasBeenSet() const;
 
@@ -1756,20 +1996,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Modifier Modifier
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetModifier() const;
 
                     /**
                      * 设置Modifier
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Modifier Modifier
+                     * @param _modifier Modifier
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetModifier(const std::string& _modifier);
 
                     /**
                      * 判断参数 Modifier 是否已赋值
                      * @return Modifier 是否已赋值
+                     * 
                      */
                     bool ModifierHasBeenSet() const;
 
@@ -1778,20 +2021,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Creator Creator
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetCreator() const;
 
                     /**
                      * 设置Creator
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Creator Creator
+                     * @param _creator Creator
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetCreator(const std::string& _creator);
 
                     /**
                      * 判断参数 Creator 是否已赋值
                      * @return Creator 是否已赋值
+                     * 
                      */
                     bool CreatorHasBeenSet() const;
 
@@ -1800,20 +2046,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return DeployStrategyConf Deployment strategy
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     DeployStrategyConf GetDeployStrategyConf() const;
 
                     /**
                      * 设置Deployment strategy
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param DeployStrategyConf Deployment strategy
+                     * @param _deployStrategyConf Deployment strategy
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetDeployStrategyConf(const DeployStrategyConf& _deployStrategyConf);
 
                     /**
                      * 判断参数 DeployStrategyConf 是否已赋值
                      * @return DeployStrategyConf 是否已赋值
+                     * 
                      */
                     bool DeployStrategyConfHasBeenSet() const;
 
@@ -1822,20 +2071,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return PodList List of pods
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     DescribeRunPodPage GetPodList() const;
 
                     /**
                      * 设置List of pods
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param PodList List of pods
+                     * @param _podList List of pods
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPodList(const DescribeRunPodPage& _podList);
 
                     /**
                      * 判断参数 PodList 是否已赋值
                      * @return PodList 是否已赋值
+                     * 
                      */
                     bool PodListHasBeenSet() const;
 
@@ -1844,20 +2096,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ConfEdited Whether the configuration has been changed during deployment
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     bool GetConfEdited() const;
 
                     /**
                      * 设置Whether the configuration has been changed during deployment
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ConfEdited Whether the configuration has been changed during deployment
+                     * @param _confEdited Whether the configuration has been changed during deployment
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetConfEdited(const bool& _confEdited);
 
                     /**
                      * 判断参数 ConfEdited 是否已赋值
                      * @return ConfEdited 是否已赋值
+                     * 
                      */
                     bool ConfEditedHasBeenSet() const;
 
@@ -1866,20 +2121,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Tags Tag
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Tags Tag
+                     * @param _tags Tag
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -1888,20 +2146,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PreStopEncoded Whether to encode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPreStopEncoded() const;
 
                     /**
                      * 设置Whether to encode
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PreStopEncoded Whether to encode
+                     * @param _preStopEncoded Whether to encode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPreStopEncoded(const std::string& _preStopEncoded);
 
                     /**
                      * 判断参数 PreStopEncoded 是否已赋值
                      * @return PreStopEncoded 是否已赋值
+                     * 
                      */
                     bool PreStopEncodedHasBeenSet() const;
 
@@ -1910,20 +2171,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PostStartEncoded Whether to encode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPostStartEncoded() const;
 
                     /**
                      * 设置Whether to encode
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PostStartEncoded Whether to encode
+                     * @param _postStartEncoded Whether to encode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPostStartEncoded(const std::string& _postStartEncoded);
 
                     /**
                      * 判断参数 PostStartEncoded 是否已赋值
                      * @return PostStartEncoded 是否已赋值
+                     * 
                      */
                     bool PostStartEncodedHasBeenSet() const;
 

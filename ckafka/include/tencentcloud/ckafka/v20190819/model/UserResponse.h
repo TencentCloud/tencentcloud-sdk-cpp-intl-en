@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Users List of eligible users
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<User> GetUsers() const;
 
                     /**
                      * 设置List of eligible users
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Users List of eligible users
+                     * @param _users List of eligible users
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUsers(const std::vector<User>& _users);
 
                     /**
                      * 判断参数 Users 是否已赋值
                      * @return Users 是否已赋值
+                     * 
                      */
                     bool UsersHasBeenSet() const;
 
                     /**
                      * 获取Total number of eligible users
                      * @return TotalCount Total number of eligible users
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of eligible users
-                     * @param TotalCount Total number of eligible users
+                     * @param _totalCount Total number of eligible users
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

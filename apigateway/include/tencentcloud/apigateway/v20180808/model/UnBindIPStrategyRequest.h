@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be unbound.
                      * @return ServiceId Unique ID of the service to be unbound.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be unbound.
-                     * @param ServiceId Unique ID of the service to be unbound.
+                     * @param _serviceId Unique ID of the service to be unbound.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the IP policy to be unbound.
                      * @return StrategyId Unique ID of the IP policy to be unbound.
+                     * 
                      */
                     std::string GetStrategyId() const;
 
                     /**
                      * 设置Unique ID of the IP policy to be unbound.
-                     * @param StrategyId Unique ID of the IP policy to be unbound.
+                     * @param _strategyId Unique ID of the IP policy to be unbound.
+                     * 
                      */
                     void SetStrategyId(const std::string& _strategyId);
 
                     /**
                      * 判断参数 StrategyId 是否已赋值
                      * @return StrategyId 是否已赋值
+                     * 
                      */
                     bool StrategyIdHasBeenSet() const;
 
                     /**
                      * 获取Environment to be unbound.
                      * @return EnvironmentName Environment to be unbound.
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment to be unbound.
-                     * @param EnvironmentName Environment to be unbound.
+                     * @param _environmentName Environment to be unbound.
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取List of APIs to be unbound.
                      * @return UnBindApiIds List of APIs to be unbound.
+                     * 
                      */
                     std::vector<std::string> GetUnBindApiIds() const;
 
                     /**
                      * 设置List of APIs to be unbound.
-                     * @param UnBindApiIds List of APIs to be unbound.
+                     * @param _unBindApiIds List of APIs to be unbound.
+                     * 
                      */
                     void SetUnBindApiIds(const std::vector<std::string>& _unBindApiIds);
 
                     /**
                      * 判断参数 UnBindApiIds 是否已赋值
                      * @return UnBindApiIds 是否已赋值
+                     * 
                      */
                     bool UnBindApiIdsHasBeenSet() const;
 

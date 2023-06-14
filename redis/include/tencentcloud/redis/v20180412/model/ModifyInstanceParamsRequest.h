@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of instance parameters modified
                      * @return InstanceParams List of instance parameters modified
+                     * 
                      */
                     std::vector<InstanceParam> GetInstanceParams() const;
 
                     /**
                      * 设置List of instance parameters modified
-                     * @param InstanceParams List of instance parameters modified
+                     * @param _instanceParams List of instance parameters modified
+                     * 
                      */
                     void SetInstanceParams(const std::vector<InstanceParam>& _instanceParams);
 
                     /**
                      * 判断参数 InstanceParams 是否已赋值
                      * @return InstanceParams 是否已赋值
+                     * 
                      */
                     bool InstanceParamsHasBeenSet() const;
 

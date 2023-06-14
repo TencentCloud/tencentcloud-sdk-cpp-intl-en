@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Version number of the layer created in this request
                      * @return LayerVersion Version number of the layer created in this request
+                     * 
                      */
                     int64_t GetLayerVersion() const;
 
                     /**
                      * 判断参数 LayerVersion 是否已赋值
                      * @return LayerVersion 是否已赋值
+                     * 
                      */
                     bool LayerVersionHasBeenSet() const;
 

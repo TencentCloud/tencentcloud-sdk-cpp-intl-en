@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Analysis name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Analysis name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Analysis name
+                     * @param _name Analysis name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type of data being analyzed. Valid values: `query`, `field`, `original`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of data being analyzed. Valid values: `query`, `field`, `original`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type Type of data being analyzed. Valid values: `query`, `field`, `original`
+                     * @param _type Type of data being analyzed. Valid values: `query`, `field`, `original`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Content Analysis content
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Analysis content
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Content Analysis content
+                     * @param _content Analysis content
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConfigInfo Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AlarmAnalysisConfig> GetConfigInfo() const;
 
                     /**
                      * 设置Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConfigInfo Configuration
+                     * @param _configInfo Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfigInfo(const std::vector<AlarmAnalysisConfig>& _configInfo);
 
                     /**
                      * 判断参数 ConfigInfo 是否已赋值
                      * @return ConfigInfo 是否已赋值
+                     * 
                      */
                     bool ConfigInfoHasBeenSet() const;
 

@@ -52,56 +52,65 @@ namespace TencentCloud
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
                      * @return CoverSet List of intelligently generated thumbnails
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+                     * 
                      */
                     std::vector<MediaAiAnalysisCoverItem> GetCoverSet() const;
 
                     /**
                      * 设置List of intelligently generated thumbnails
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
-                     * @param CoverSet List of intelligently generated thumbnails
+                     * @param _coverSet List of intelligently generated thumbnails
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+                     * 
                      */
                     void SetCoverSet(const std::vector<MediaAiAnalysisCoverItem>& _coverSet);
 
                     /**
                      * 判断参数 CoverSet 是否已赋值
                      * @return CoverSet 是否已赋值
+                     * 
                      */
                     bool CoverSetHasBeenSet() const;
 
                     /**
                      * 获取URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
                      * @return CoverSetFileUrl URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+                     * 
                      */
                     std::string GetCoverSetFileUrl() const;
 
                     /**
                      * 设置URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
-                     * @param CoverSetFileUrl URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+                     * @param _coverSetFileUrl URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+                     * 
                      */
                     void SetCoverSetFileUrl(const std::string& _coverSetFileUrl);
 
                     /**
                      * 判断参数 CoverSetFileUrl 是否已赋值
                      * @return CoverSetFileUrl 是否已赋值
+                     * 
                      */
                     bool CoverSetFileUrlHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      * @return CoverSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 
                      */
                     std::string GetCoverSetFileUrlExpireTime() const;
 
                     /**
                      * 设置Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @param CoverSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @param _coverSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 
                      */
                     void SetCoverSetFileUrlExpireTime(const std::string& _coverSetFileUrlExpireTime);
 
                     /**
                      * 判断参数 CoverSetFileUrlExpireTime 是否已赋值
                      * @return CoverSetFileUrlExpireTime 是否已赋值
+                     * 
                      */
                     bool CoverSetFileUrlExpireTimeHasBeenSet() const;
 

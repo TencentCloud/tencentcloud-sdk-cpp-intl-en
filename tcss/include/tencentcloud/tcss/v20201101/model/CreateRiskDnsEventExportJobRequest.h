@@ -74,6 +74,7 @@ namespace TencentCloud
 <li>`HostName` - String - Optional - Server name. </li>
 <li>`HostIP` - String - Optional - Private IP. </li>
 <li>`PublicIP` - String - Optional - Public IP. </li>
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
@@ -93,7 +94,7 @@ namespace TencentCloud
 <li>`HostName` - String - Optional - Server name. </li>
 <li>`HostIP` - String - Optional - Private IP. </li>
 <li>`PublicIP` - String - Optional - Public IP. </li>
-                     * @param Filters Filters.
+                     * @param _filters Filters.
 <li>`EventStatus` - String - Optional - Event status. Values: `EVENT_UNDEAL` (Pending); `EVENT_DEALED` (Handled); `EVENT_IGNORE` (Ignored); `EVENT_ADD_WHITE` (Added to the allowlist)</li>
 <li>`ContainerStatus` - String - Optional - Container running status. `CREATED`, `RUNNING`, `PAUSED`, `STOPPED`, `RESTARTING`: `REMOVING`, `DESTROYED (Terminated)</li>
 <li>`ContainerNetStatus` - String - Optional - Container network status. Values: `NORMAL`, `ISOLATED`, `ISOLATE_FAILED` (Isolation failed`; `RESTORE_FAILED` (Failed to restore from isolation), `RESTORING` (Restoring); `ISOLATING`</li>
@@ -108,84 +109,98 @@ namespace TencentCloud
 <li>`HostName` - String - Optional - Server name. </li>
 <li>`HostIP` - String - Optional - Private IP. </li>
 <li>`PublicIP` - String - Optional - Public IP. </li>
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The number of results displayed per page. The maximum value is 100,000.
                      * @return Limit The number of results displayed per page. The maximum value is 100,000.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of results displayed per page. The maximum value is 100,000.
-                     * @param Limit The number of results displayed per page. The maximum value is 100,000.
+                     * @param _limit The number of results displayed per page. The maximum value is 100,000.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0
                      * @return Offset Offset. Default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0
-                     * @param Offset Offset. Default value: 0
+                     * @param _offset Offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sort order: `asc`, `desc`
                      * @return Order Sort order: `asc`, `desc`
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sort order: `asc`, `desc`
-                     * @param Order Sort order: `asc`, `desc`
+                     * @param _order Sort order: `asc`, `desc`
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field: Number of events: EventCount
                      * @return By Sorting field: Number of events: EventCount
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field: Number of events: EventCount
-                     * @param By Sorting field: Number of events: EventCount
+                     * @param _by Sorting field: Number of events: EventCount
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 

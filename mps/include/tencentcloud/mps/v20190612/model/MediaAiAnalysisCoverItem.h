@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Storage path of intelligently generated cover.
                      * @return CoverPath Storage path of intelligently generated cover.
+                     * 
                      */
                     std::string GetCoverPath() const;
 
                     /**
                      * 设置Storage path of intelligently generated cover.
-                     * @param CoverPath Storage path of intelligently generated cover.
+                     * @param _coverPath Storage path of intelligently generated cover.
+                     * 
                      */
                     void SetCoverPath(const std::string& _coverPath);
 
                     /**
                      * 判断参数 CoverPath 是否已赋值
                      * @return CoverPath 是否已赋值
+                     * 
                      */
                     bool CoverPathHasBeenSet() const;
 
                     /**
                      * 获取Confidence of intelligently generated cover between 0 and 100.
                      * @return Confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of intelligently generated cover between 0 and 100.
-                     * @param Confidence Confidence of intelligently generated cover between 0 and 100.
+                     * @param _confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 

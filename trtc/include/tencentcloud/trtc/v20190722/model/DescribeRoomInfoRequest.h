@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The application ID, such as `1400xxxxxx`.
                      * @return SdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID, such as `1400xxxxxx`.
-                     * @param SdkAppId The application ID, such as `1400xxxxxx`.
+                     * @param _sdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 Note: Only data in the last 14 days can be queried.
                      * @return StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
-                     * @param StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
+                     * @param _startTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -87,38 +93,44 @@ Note: Only data in the last 14 days can be queried.
 Note: The end and start time cannot be more than 24 hours apart.
                      * @return EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: The end and start time cannot be more than 24 hours apart.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: The end and start time cannot be more than 24 hours apart.
-                     * @param EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
+                     * @param _endTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: The end and start time cannot be more than 24 hours apart.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The room ID, such as `223`.
                      * @return RoomId The room ID, such as `223`.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置The room ID, such as `223`.
-                     * @param RoomId The room ID, such as `223`.
+                     * @param _roomId The room ID, such as `223`.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: The end and start time cannot be more than 24 hours apart.
 Note: If `PageNumber` or `PageSize` is not specified, 10 records will be returned.
                      * @return PageNumber The page number. The default is 0.
 Note: If `PageNumber` or `PageSize` is not specified, 10 records will be returned.
+                     * 
                      */
                     uint64_t GetPageNumber() const;
 
                     /**
                      * 设置The page number. The default is 0.
 Note: If `PageNumber` or `PageSize` is not specified, 10 records will be returned.
-                     * @param PageNumber The page number. The default is 0.
+                     * @param _pageNumber The page number. The default is 0.
 Note: If `PageNumber` or `PageSize` is not specified, 10 records will be returned.
+                     * 
                      */
                     void SetPageNumber(const uint64_t& _pageNumber);
 
                     /**
                      * 判断参数 PageNumber 是否已赋值
                      * @return PageNumber 是否已赋值
+                     * 
                      */
                     bool PageNumberHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: If `PageNumber` or `PageSize` is not specified, 10 records will be returne
 Value range: 1-100.
                      * @return PageSize The number of records per page. The default is `10`.
 Value range: 1-100.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置The number of records per page. The default is `10`.
 Value range: 1-100.
-                     * @param PageSize The number of records per page. The default is `10`.
+                     * @param _pageSize The number of records per page. The default is `10`.
 Value range: 1-100.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

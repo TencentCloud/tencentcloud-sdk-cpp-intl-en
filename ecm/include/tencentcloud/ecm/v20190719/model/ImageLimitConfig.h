@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Supported maximum image size in GB, including custom image size for import and central cloud image size.
                      * @return MaxImageSize Supported maximum image size in GB, including custom image size for import and central cloud image size.
+                     * 
                      */
                     int64_t GetMaxImageSize() const;
 
                     /**
                      * 设置Supported maximum image size in GB, including custom image size for import and central cloud image size.
-                     * @param MaxImageSize Supported maximum image size in GB, including custom image size for import and central cloud image size.
+                     * @param _maxImageSize Supported maximum image size in GB, including custom image size for import and central cloud image size.
+                     * 
                      */
                     void SetMaxImageSize(const int64_t& _maxImageSize);
 
                     /**
                      * 判断参数 MaxImageSize 是否已赋值
                      * @return MaxImageSize 是否已赋值
+                     * 
                      */
                     bool MaxImageSizeHasBeenSet() const;
 

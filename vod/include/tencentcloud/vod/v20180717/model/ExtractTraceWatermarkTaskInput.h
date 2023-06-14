@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The URL of the media on which digital watermark extraction is to be performed.
                      * @return Url The URL of the media on which digital watermark extraction is to be performed.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The URL of the media on which digital watermark extraction is to be performed.
-                     * @param Url The URL of the media on which digital watermark extraction is to be performed.
+                     * @param _url The URL of the media on which digital watermark extraction is to be performed.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

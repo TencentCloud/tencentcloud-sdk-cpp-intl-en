@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the NAT gateway, such as `nat-df45454`.
                      * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The ID of the NAT gateway, such as `nat-df45454`.
-                     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * @param _natGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The NAT gateway name, such as `test_nat`.
                      * @return NatGatewayName The NAT gateway name, such as `test_nat`.
+                     * 
                      */
                     std::string GetNatGatewayName() const;
 
                     /**
                      * 设置The NAT gateway name, such as `test_nat`.
-                     * @param NatGatewayName The NAT gateway name, such as `test_nat`.
+                     * @param _natGatewayName The NAT gateway name, such as `test_nat`.
+                     * 
                      */
                     void SetNatGatewayName(const std::string& _natGatewayName);
 
                     /**
                      * 判断参数 NatGatewayName 是否已赋值
                      * @return NatGatewayName 是否已赋值
+                     * 
                      */
                     bool NatGatewayNameHasBeenSet() const;
 
                     /**
                      * 获取The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
                      * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
+                     * 
                      */
                     uint64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
-                     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
+                     * @param _internetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const uint64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取Whether to modify the security group bound to the NAT gateway
                      * @return ModifySecurityGroup Whether to modify the security group bound to the NAT gateway
+                     * 
                      */
                     bool GetModifySecurityGroup() const;
 
                     /**
                      * 设置Whether to modify the security group bound to the NAT gateway
-                     * @param ModifySecurityGroup Whether to modify the security group bound to the NAT gateway
+                     * @param _modifySecurityGroup Whether to modify the security group bound to the NAT gateway
+                     * 
                      */
                     void SetModifySecurityGroup(const bool& _modifySecurityGroup);
 
                     /**
                      * 判断参数 ModifySecurityGroup 是否已赋值
                      * @return ModifySecurityGroup 是否已赋值
+                     * 
                      */
                     bool ModifySecurityGroupHasBeenSet() const;
 
                     /**
                      * 获取The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
                      * @return SecurityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
-                     * @param SecurityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     * @param _securityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 

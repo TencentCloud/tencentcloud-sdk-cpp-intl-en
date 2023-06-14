@@ -47,84 +47,98 @@ namespace TencentCloud
                     /**
                      * 获取Security group ID
                      * @return InstanceId Security group ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Snapshot policy IDs
                      * @return SnapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     std::string GetSnapshotPolicyId() const;
 
                     /**
                      * 判断参数 SnapshotPolicyId 是否已赋值
                      * @return SnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool SnapshotPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Snapshot file ID
                      * @return SnapshotFileId Snapshot file ID
+                     * 
                      */
                     std::string GetSnapshotFileId() const;
 
                     /**
                      * 判断参数 SnapshotFileId 是否已赋值
                      * @return SnapshotFileId 是否已赋值
+                     * 
                      */
                     bool SnapshotFileIdHasBeenSet() const;
 
                     /**
                      * 获取Backup time
                      * @return BackupTime Backup time
+                     * 
                      */
                     std::string GetBackupTime() const;
 
                     /**
                      * 判断参数 BackupTime 是否已赋值
                      * @return BackupTime 是否已赋值
+                     * 
                      */
                     bool BackupTimeHasBeenSet() const;
 
                     /**
                      * 获取Operator
                      * @return Operator Operator
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Original data
                      * @return OriginalData Original data
+                     * 
                      */
                     std::vector<SecurityGroupPolicy> GetOriginalData() const;
 
                     /**
                      * 判断参数 OriginalData 是否已赋值
                      * @return OriginalData 是否已赋值
+                     * 
                      */
                     bool OriginalDataHasBeenSet() const;
 
                     /**
                      * 获取Backup data
                      * @return BackupData Backup data
+                     * 
                      */
                     std::vector<SecurityGroupPolicy> GetBackupData() const;
 
                     /**
                      * 判断参数 BackupData 是否已赋值
                      * @return BackupData 是否已赋值
+                     * 
                      */
                     bool BackupDataHasBeenSet() const;
 

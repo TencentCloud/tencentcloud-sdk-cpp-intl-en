@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The flow log information.
                      * @return FlowLog The flow log information.
+                     * 
                      */
                     std::vector<FlowLog> GetFlowLog() const;
 
                     /**
                      * 判断参数 FlowLog 是否已赋值
                      * @return FlowLog 是否已赋值
+                     * 
                      */
                     bool FlowLogHasBeenSet() const;
 

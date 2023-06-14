@@ -51,48 +51,56 @@ namespace TencentCloud
                     /**
                      * 获取Basic information of the event
                      * @return EventBaseInfo Basic information of the event
+                     * 
                      */
                     RunTimeEventBaseInfo GetEventBaseInfo() const;
 
                     /**
                      * 判断参数 EventBaseInfo 是否已赋值
                      * @return EventBaseInfo 是否已赋值
+                     * 
                      */
                     bool EventBaseInfoHasBeenSet() const;
 
                     /**
                      * 获取Process information
                      * @return ProcessInfo Process information
+                     * 
                      */
                     ProcessDetailInfo GetProcessInfo() const;
 
                     /**
                      * 判断参数 ProcessInfo 是否已赋值
                      * @return ProcessInfo 是否已赋值
+                     * 
                      */
                     bool ProcessInfoHasBeenSet() const;
 
                     /**
                      * 获取Parent process information
                      * @return ParentProcessInfo Parent process information
+                     * 
                      */
                     ProcessDetailBaseInfo GetParentProcessInfo() const;
 
                     /**
                      * 判断参数 ParentProcessInfo 是否已赋值
                      * @return ParentProcessInfo 是否已赋值
+                     * 
                      */
                     bool ParentProcessInfoHasBeenSet() const;
 
                     /**
                      * 获取Event description
                      * @return EventDetail Event description
+                     * 
                      */
                     ReverseShellEventDescription GetEventDetail() const;
 
                     /**
                      * 判断参数 EventDetail 是否已赋值
                      * @return EventDetail 是否已赋值
+                     * 
                      */
                     bool EventDetailHasBeenSet() const;
 
@@ -101,12 +109,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AncestorProcessInfo Ancestor process information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProcessBaseInfo GetAncestorProcessInfo() const;
 
                     /**
                      * 判断参数 AncestorProcessInfo 是否已赋值
                      * @return AncestorProcessInfo 是否已赋值
+                     * 
                      */
                     bool AncestorProcessInfoHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Workflow ID.
                      * @return WorkflowId Workflow ID.
+                     * 
                      */
                     int64_t GetWorkflowId() const;
 
                     /**
                      * 判断参数 WorkflowId 是否已赋值
                      * @return WorkflowId 是否已赋值
+                     * 
                      */
                     bool WorkflowIdHasBeenSet() const;
 

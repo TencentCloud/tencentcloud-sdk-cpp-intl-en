@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Event rule ID
                      * @return RuleId Event rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Event rule ID
-                     * @param RuleId Event rule ID
+                     * @param _ruleId Event rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Delivery target ID
                      * @return TargetId Delivery target ID
+                     * 
                      */
                     std::string GetTargetId() const;
 
                     /**
                      * 设置Delivery target ID
-                     * @param TargetId Delivery target ID
+                     * @param _targetId Delivery target ID
+                     * 
                      */
                     void SetTargetId(const std::string& _targetId);
 
                     /**
                      * 判断参数 TargetId 是否已赋值
                      * @return TargetId 是否已赋值
+                     * 
                      */
                     bool TargetIdHasBeenSet() const;
 
                     /**
                      * 获取Enables batch delivery
                      * @return EnableBatchDelivery Enables batch delivery
+                     * 
                      */
                     bool GetEnableBatchDelivery() const;
 
                     /**
                      * 设置Enables batch delivery
-                     * @param EnableBatchDelivery Enables batch delivery
+                     * @param _enableBatchDelivery Enables batch delivery
+                     * 
                      */
                     void SetEnableBatchDelivery(const bool& _enableBatchDelivery);
 
                     /**
                      * 判断参数 EnableBatchDelivery 是否已赋值
                      * @return EnableBatchDelivery 是否已赋值
+                     * 
                      */
                     bool EnableBatchDeliveryHasBeenSet() const;
 
                     /**
                      * 获取Maximum waiting time for batch delivery
                      * @return BatchTimeout Maximum waiting time for batch delivery
+                     * 
                      */
                     int64_t GetBatchTimeout() const;
 
                     /**
                      * 设置Maximum waiting time for batch delivery
-                     * @param BatchTimeout Maximum waiting time for batch delivery
+                     * @param _batchTimeout Maximum waiting time for batch delivery
+                     * 
                      */
                     void SetBatchTimeout(const int64_t& _batchTimeout);
 
                     /**
                      * 判断参数 BatchTimeout 是否已赋值
                      * @return BatchTimeout 是否已赋值
+                     * 
                      */
                     bool BatchTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of events in batch delivery
                      * @return BatchEventCount Maximum number of events in batch delivery
+                     * 
                      */
                     int64_t GetBatchEventCount() const;
 
                     /**
                      * 设置Maximum number of events in batch delivery
-                     * @param BatchEventCount Maximum number of events in batch delivery
+                     * @param _batchEventCount Maximum number of events in batch delivery
+                     * 
                      */
                     void SetBatchEventCount(const int64_t& _batchEventCount);
 
                     /**
                      * 判断参数 BatchEventCount 是否已赋值
                      * @return BatchEventCount 是否已赋值
+                     * 
                      */
                     bool BatchEventCountHasBeenSet() const;
 

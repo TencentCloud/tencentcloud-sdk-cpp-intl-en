@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Weekly CWP Pro report list array.
                      * @return WeeklyReports Weekly CWP Pro report list array.
+                     * 
                      */
                     std::vector<WeeklyReport> GetWeeklyReports() const;
 
                     /**
                      * 判断参数 WeeklyReports 是否已赋值
                      * @return WeeklyReports 是否已赋值
+                     * 
                      */
                     bool WeeklyReportsHasBeenSet() const;
 
                     /**
                      * 获取Total number of records.
                      * @return TotalCount Total number of records.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

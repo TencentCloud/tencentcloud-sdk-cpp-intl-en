@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of cluster audits
                      * @return TotalCount Total number of cluster audits
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Audit details of the cluster
                      * @return AuditList Audit details of the cluster
+                     * 
                      */
                     std::vector<NetworkAuditRecord> GetAuditList() const;
 
                     /**
                      * 判断参数 AuditList 是否已赋值
                      * @return AuditList 是否已赋值
+                     * 
                      */
                     bool AuditListHasBeenSet() const;
 

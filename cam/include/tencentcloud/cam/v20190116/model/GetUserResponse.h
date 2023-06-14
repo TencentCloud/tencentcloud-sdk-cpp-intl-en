@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Sub-user UIN
                      * @return Uin Sub-user UIN
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取Sub-user username
                      * @return Name Sub-user username
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Sub-user UID
                      * @return Uid Sub-user UID
+                     * 
                      */
                     uint64_t GetUid() const;
 
                     /**
                      * 判断参数 Uid 是否已赋值
                      * @return Uid 是否已赋值
+                     * 
                      */
                     bool UidHasBeenSet() const;
 
@@ -84,60 +90,70 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Remark Sub-user remarks
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
                      * @return ConsoleLogin Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
+                     * 
                      */
                     uint64_t GetConsoleLogin() const;
 
                     /**
                      * 判断参数 ConsoleLogin 是否已赋值
                      * @return ConsoleLogin 是否已赋值
+                     * 
                      */
                     bool ConsoleLoginHasBeenSet() const;
 
                     /**
                      * 获取Mobile number
                      * @return PhoneNum Mobile number
+                     * 
                      */
                     std::string GetPhoneNum() const;
 
                     /**
                      * 判断参数 PhoneNum 是否已赋值
                      * @return PhoneNum 是否已赋值
+                     * 
                      */
                     bool PhoneNumHasBeenSet() const;
 
                     /**
                      * 获取Country/Area code
                      * @return CountryCode Country/Area code
+                     * 
                      */
                     std::string GetCountryCode() const;
 
                     /**
                      * 判断参数 CountryCode 是否已赋值
                      * @return CountryCode 是否已赋值
+                     * 
                      */
                     bool CountryCodeHasBeenSet() const;
 
                     /**
                      * 获取Email
                      * @return Email Email
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 
@@ -146,12 +162,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecentlyLoginIP Last login IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRecentlyLoginIP() const;
 
                     /**
                      * 判断参数 RecentlyLoginIP 是否已赋值
                      * @return RecentlyLoginIP 是否已赋值
+                     * 
                      */
                     bool RecentlyLoginIPHasBeenSet() const;
 
@@ -160,12 +178,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecentlyLoginTime Last login time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRecentlyLoginTime() const;
 
                     /**
                      * 判断参数 RecentlyLoginTime 是否已赋值
                      * @return RecentlyLoginTime 是否已赋值
+                     * 
                      */
                     bool RecentlyLoginTimeHasBeenSet() const;
 

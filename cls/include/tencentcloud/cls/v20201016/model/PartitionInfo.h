@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Partition ID
                      * @return PartitionId Partition ID
+                     * 
                      */
                     int64_t GetPartitionId() const;
 
                     /**
                      * 设置Partition ID
-                     * @param PartitionId Partition ID
+                     * @param _partitionId Partition ID
+                     * 
                      */
                     void SetPartitionId(const int64_t& _partitionId);
 
                     /**
                      * 判断参数 PartitionId 是否已赋值
                      * @return PartitionId 是否已赋值
+                     * 
                      */
                     bool PartitionIdHasBeenSet() const;
 
                     /**
                      * 获取Partition status. Valid values: `readwrite`, `readonly`
                      * @return Status Partition status. Valid values: `readwrite`, `readonly`
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Partition status. Valid values: `readwrite`, `readonly`
-                     * @param Status Partition status. Valid values: `readwrite`, `readonly`
+                     * @param _status Partition status. Valid values: `readwrite`, `readonly`
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Partition hash start key
                      * @return InclusiveBeginKey Partition hash start key
+                     * 
                      */
                     std::string GetInclusiveBeginKey() const;
 
                     /**
                      * 设置Partition hash start key
-                     * @param InclusiveBeginKey Partition hash start key
+                     * @param _inclusiveBeginKey Partition hash start key
+                     * 
                      */
                     void SetInclusiveBeginKey(const std::string& _inclusiveBeginKey);
 
                     /**
                      * 判断参数 InclusiveBeginKey 是否已赋值
                      * @return InclusiveBeginKey 是否已赋值
+                     * 
                      */
                     bool InclusiveBeginKeyHasBeenSet() const;
 
                     /**
                      * 获取Partition hash end key
                      * @return ExclusiveEndKey Partition hash end key
+                     * 
                      */
                     std::string GetExclusiveEndKey() const;
 
                     /**
                      * 设置Partition hash end key
-                     * @param ExclusiveEndKey Partition hash end key
+                     * @param _exclusiveEndKey Partition hash end key
+                     * 
                      */
                     void SetExclusiveEndKey(const std::string& _exclusiveEndKey);
 
                     /**
                      * 判断参数 ExclusiveEndKey 是否已赋值
                      * @return ExclusiveEndKey 是否已赋值
+                     * 
                      */
                     bool ExclusiveEndKeyHasBeenSet() const;
 
                     /**
                      * 获取Partition creation time
                      * @return CreateTime Partition creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Partition creation time
-                     * @param CreateTime Partition creation time
+                     * @param _createTime Partition creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return LastWriteTime Last modified of read-only partition
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastWriteTime() const;
 
                     /**
                      * 设置Last modified of read-only partition
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param LastWriteTime Last modified of read-only partition
+                     * @param _lastWriteTime Last modified of read-only partition
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastWriteTime(const std::string& _lastWriteTime);
 
                     /**
                      * 判断参数 LastWriteTime 是否已赋值
                      * @return LastWriteTime 是否已赋值
+                     * 
                      */
                     bool LastWriteTimeHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Contact ID.
                      * @return Id Contact ID.
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Contact ID.
-                     * @param Id Contact ID.
+                     * @param _id Contact ID.
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Contact name.
                      * @return Name Contact name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Contact name.
-                     * @param Name Contact name.
+                     * @param _name Contact name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The email address of the contact.
                      * @return Mail The email address of the contact.
+                     * 
                      */
                     std::string GetMail() const;
 
                     /**
                      * 设置The email address of the contact.
-                     * @param Mail The email address of the contact.
+                     * @param _mail The email address of the contact.
+                     * 
                      */
                     void SetMail(const std::string& _mail);
 
                     /**
                      * 判断参数 Mail 是否已赋值
                      * @return Mail 是否已赋值
+                     * 
                      */
                     bool MailHasBeenSet() const;
 

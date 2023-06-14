@@ -47,180 +47,210 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
                      * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * @param _vpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the ENI. The maximum length is 60 characters.
                      * @return NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
+                     * 
                      */
                     std::string GetNetworkInterfaceName() const;
 
                     /**
                      * 设置The name of the ENI. The maximum length is 60 characters.
-                     * @param NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
+                     * @param _networkInterfaceName The name of the ENI. The maximum length is 60 characters.
+                     * 
                      */
                     void SetNetworkInterfaceName(const std::string& _networkInterfaceName);
 
                     /**
                      * 判断参数 NetworkInterfaceName 是否已赋值
                      * @return NetworkInterfaceName 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceNameHasBeenSet() const;
 
                     /**
                      * 获取The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
                      * @return SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
-                     * @param SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
+                     * @param _subnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取ENI description can be named freely, but the maximum length is 60 characters.
                      * @return NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     std::string GetNetworkInterfaceDescription() const;
 
                     /**
                      * 设置ENI description can be named freely, but the maximum length is 60 characters.
-                     * @param NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
+                     * @param _networkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     void SetNetworkInterfaceDescription(const std::string& _networkInterfaceDescription);
 
                     /**
                      * 判断参数 NetworkInterfaceDescription 是否已赋值
                      * @return NetworkInterfaceDescription 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceDescriptionHasBeenSet() const;
 
                     /**
                      * 获取The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
                      * @return SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+                     * 
                      */
                     uint64_t GetSecondaryPrivateIpAddressCount() const;
 
                     /**
                      * 设置The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
-                     * @param SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+                     * @param _secondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+                     * 
                      */
                     void SetSecondaryPrivateIpAddressCount(const uint64_t& _secondaryPrivateIpAddressCount);
 
                     /**
                      * 判断参数 SecondaryPrivateIpAddressCount 是否已赋值
                      * @return SecondaryPrivateIpAddressCount 是否已赋值
+                     * 
                      */
                     bool SecondaryPrivateIpAddressCountHasBeenSet() const;
 
                     /**
                      * 获取IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
                      * @return QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 
                      */
                     std::string GetQosLevel() const;
 
                     /**
                      * 设置IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
-                     * @param QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * @param _qosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 
                      */
                     void SetQosLevel(const std::string& _qosLevel);
 
                     /**
                      * 判断参数 QosLevel 是否已赋值
                      * @return QosLevel 是否已赋值
+                     * 
                      */
                     bool QosLevelHasBeenSet() const;
 
                     /**
                      * 获取Specifies the security group to be bound with, such as ['sg-1dd51d'].
                      * @return SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Specifies the security group to be bound with, such as ['sg-1dd51d'].
-                     * @param SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
+                     * @param _securityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取The information of the specified private IPs. You can specify a maximum of 10 each time.
                      * @return PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+                     * 
                      */
                     std::vector<PrivateIpAddressSpecification> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置The information of the specified private IPs. You can specify a maximum of 10 each time.
-                     * @param PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+                     * @param _privateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<PrivateIpAddressSpecification>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 
                     /**
                      * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
                      * @return TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     * 
                      */
                     std::string GetTrunkingFlag() const;
 
                     /**
                      * 设置Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
-                     * @param TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     * @param _trunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     * 
                      */
                     void SetTrunkingFlag(const std::string& _trunkingFlag);
 
                     /**
                      * 判断参数 TrunkingFlag 是否已赋值
                      * @return TrunkingFlag 是否已赋值
+                     * 
                      */
                     bool TrunkingFlagHasBeenSet() const;
 

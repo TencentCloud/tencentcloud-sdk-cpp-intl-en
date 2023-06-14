@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
                      * @return Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
-                     * @param Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
+                     * @param _name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Whether video is needed. `0`: not needed; `1`: needed
                      * @return NeedVideo Whether video is needed. `0`: not needed; `1`: needed
+                     * 
                      */
                     uint64_t GetNeedVideo() const;
 
                     /**
                      * 设置Whether video is needed. `0`: not needed; `1`: needed
-                     * @param NeedVideo Whether video is needed. `0`: not needed; `1`: needed
+                     * @param _needVideo Whether video is needed. `0`: not needed; `1`: needed
+                     * 
                      */
                     void SetNeedVideo(const uint64_t& _needVideo);
 
                     /**
                      * 判断参数 NeedVideo 是否已赋值
                      * @return NeedVideo 是否已赋值
+                     * 
                      */
                     bool NeedVideoHasBeenSet() const;
 
                     /**
                      * 获取Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
                      * @return Vcodec Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
+                     * 
                      */
                     std::string GetVcodec() const;
 
                     /**
                      * 设置Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
-                     * @param Vcodec Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
+                     * @param _vcodec Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
+                     * 
                      */
                     void SetVcodec(const std::string& _vcodec);
 
                     /**
                      * 判断参数 Vcodec 是否已赋值
                      * @return Vcodec 是否已赋值
+                     * 
                      */
                     bool VcodecHasBeenSet() const;
 
                     /**
                      * 获取Video width. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video width will be used.
                      * @return Width Video width. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video width will be used.
+                     * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
                      * 设置Video width. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video width will be used.
-                     * @param Width Video width. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video width will be used.
+                     * @param _width Video width. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video width will be used.
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Video height. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video height will be used.
                      * @return Height Video height. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video height will be used.
+                     * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
                      * 设置Video height. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video height will be used.
-                     * @param Height Video height. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video height will be used.
+                     * @param _height Video height. Value range: (0, 3000]. The value must be an integer multiple of 4. If this parameter is left empty, the original video height will be used.
+                     * 
                      */
                     void SetHeight(const uint64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
                      * @return Fps Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+                     * 
                      */
                     uint64_t GetFps() const;
 
                     /**
                      * 设置Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
-                     * @param Fps Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+                     * @param _fps Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+                     * 
                      */
                     void SetFps(const uint64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable top speed codec transcoding. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
                      * @return TopSpeed Whether to enable top speed codec transcoding. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+                     * 
                      */
                     std::string GetTopSpeed() const;
 
                     /**
                      * 设置Whether to enable top speed codec transcoding. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-                     * @param TopSpeed Whether to enable top speed codec transcoding. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+                     * @param _topSpeed Whether to enable top speed codec transcoding. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+                     * 
                      */
                     void SetTopSpeed(const std::string& _topSpeed);
 
                     /**
                      * 判断参数 TopSpeed 是否已赋值
                      * @return TopSpeed 是否已赋值
+                     * 
                      */
                     bool TopSpeedHasBeenSet() const;
 
                     /**
                      * 获取Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
                      * @return BitrateCompressionRatio Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
+                     * 
                      */
                     uint64_t GetBitrateCompressionRatio() const;
 
                     /**
                      * 设置Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
-                     * @param BitrateCompressionRatio Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
+                     * @param _bitrateCompressionRatio Compression ratio for top speed codec transcoding. Value range: [0, 50]. The lower the compression ratio, the higher the image quality.
+                     * 
                      */
                     void SetBitrateCompressionRatio(const uint64_t& _bitrateCompressionRatio);
 
                     /**
                      * 判断参数 BitrateCompressionRatio 是否已赋值
                      * @return BitrateCompressionRatio 是否已赋值
+                     * 
                      */
                     bool BitrateCompressionRatioHasBeenSet() const;
 
                     /**
                      * 获取Whether audio is needed. `0`: not needed; `1`: needed
                      * @return NeedAudio Whether audio is needed. `0`: not needed; `1`: needed
+                     * 
                      */
                     int64_t GetNeedAudio() const;
 
                     /**
                      * 设置Whether audio is needed. `0`: not needed; `1`: needed
-                     * @param NeedAudio Whether audio is needed. `0`: not needed; `1`: needed
+                     * @param _needAudio Whether audio is needed. `0`: not needed; `1`: needed
+                     * 
                      */
                     void SetNeedAudio(const int64_t& _needAudio);
 
                     /**
                      * 判断参数 NeedAudio 是否已赋值
                      * @return NeedAudio 是否已赋值
+                     * 
                      */
                     bool NeedAudioHasBeenSet() const;
 
                     /**
                      * 获取Audio codec. Valid value: `AAC` (default)
                      * @return Acodec Audio codec. Valid value: `AAC` (default)
+                     * 
                      */
                     std::string GetAcodec() const;
 
                     /**
                      * 设置Audio codec. Valid value: `AAC` (default)
-                     * @param Acodec Audio codec. Valid value: `AAC` (default)
+                     * @param _acodec Audio codec. Valid value: `AAC` (default)
+                     * 
                      */
                     void SetAcodec(const std::string& _acodec);
 
                     /**
                      * 判断参数 Acodec 是否已赋值
                      * @return Acodec 是否已赋值
+                     * 
                      */
                     bool AcodecHasBeenSet() const;
 
@@ -231,92 +261,107 @@ namespace TencentCloud
 Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
                      * @return AudioBitrate Audio bitrate. If this parameter is left empty, the original bitrate will be used.
 Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
+                     * 
                      */
                     uint64_t GetAudioBitrate() const;
 
                     /**
                      * 设置Audio bitrate. If this parameter is left empty, the original bitrate will be used.
 Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
-                     * @param AudioBitrate Audio bitrate. If this parameter is left empty, the original bitrate will be used.
+                     * @param _audioBitrate Audio bitrate. If this parameter is left empty, the original bitrate will be used.
 Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
+                     * 
                      */
                     void SetAudioBitrate(const uint64_t& _audioBitrate);
 
                     /**
                      * 判断参数 AudioBitrate 是否已赋值
                      * @return AudioBitrate 是否已赋值
+                     * 
                      */
                     bool AudioBitrateHasBeenSet() const;
 
                     /**
                      * 获取Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
                      * @return VideoBitrate Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
+                     * 
                      */
                     uint64_t GetVideoBitrate() const;
 
                     /**
                      * 设置Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
-                     * @param VideoBitrate Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
+                     * @param _videoBitrate Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
+                     * 
                      */
                     void SetVideoBitrate(const uint64_t& _videoBitrate);
 
                     /**
                      * 判断参数 VideoBitrate 是否已赋值
                      * @return VideoBitrate 是否已赋值
+                     * 
                      */
                     bool VideoBitrateHasBeenSet() const;
 
                     /**
                      * 获取Bitrate control mode. Valid values: `CBR`, `ABR` (default)
                      * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * 
                      */
                     std::string GetRateControlMode() const;
 
                     /**
                      * 设置Bitrate control mode. Valid values: `CBR`, `ABR` (default)
-                     * @param RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * @param _rateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+                     * 
                      */
                     void SetRateControlMode(const std::string& _rateControlMode);
 
                     /**
                      * 判断参数 RateControlMode 是否已赋值
                      * @return RateControlMode 是否已赋值
+                     * 
                      */
                     bool RateControlModeHasBeenSet() const;
 
                     /**
                      * 获取Watermark ID
                      * @return WatermarkId Watermark ID
+                     * 
                      */
                     std::string GetWatermarkId() const;
 
                     /**
                      * 设置Watermark ID
-                     * @param WatermarkId Watermark ID
+                     * @param _watermarkId Watermark ID
+                     * 
                      */
                     void SetWatermarkId(const std::string& _watermarkId);
 
                     /**
                      * 判断参数 WatermarkId 是否已赋值
                      * @return WatermarkId 是否已赋值
+                     * 
                      */
                     bool WatermarkIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to convert audio to text. `0` (default): No; `1`: Yes.
                      * @return SmartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     * 
                      */
                     uint64_t GetSmartSubtitles() const;
 
                     /**
                      * 设置Whether to convert audio to text. `0` (default): No; `1`: Yes.
-                     * @param SmartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     * @param _smartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     * 
                      */
                     void SetSmartSubtitles(const uint64_t& _smartSubtitles);
 
                     /**
                      * 判断参数 SmartSubtitles 是否已赋值
                      * @return SmartSubtitles 是否已赋值
+                     * 
                      */
                     bool SmartSubtitlesHasBeenSet() const;
 
@@ -335,6 +380,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
 `chs2chs`: Chinese speech to Chinese text.   
 `chs2eng`: Chinese speech to English text. 
 `chs2chseng`: Chinese speech to Chinese and English text.
+                     * 
                      */
                     std::string GetSubtitleConfiguration() const;
 
@@ -346,19 +392,21 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
 `chs2chs`: Chinese speech to Chinese text.   
 `chs2eng`: Chinese speech to English text. 
 `chs2chseng`: Chinese speech to Chinese and English text.
-                     * @param SubtitleConfiguration The subtitle settings. Currently, the following subtitles are supported:
+                     * @param _subtitleConfiguration The subtitle settings. Currently, the following subtitles are supported:
 `eng2eng`: English speech to English text.
 `eng2chs`: English speech to Chinese text. 
 `eng2chseng`: English speech to English and Chinese text. 
 `chs2chs`: Chinese speech to Chinese text.   
 `chs2eng`: Chinese speech to English text. 
 `chs2chseng`: Chinese speech to Chinese and English text.
+                     * 
                      */
                     void SetSubtitleConfiguration(const std::string& _subtitleConfiguration);
 
                     /**
                      * 判断参数 SubtitleConfiguration 是否已赋值
                      * @return SubtitleConfiguration 是否已赋值
+                     * 
                      */
                     bool SubtitleConfigurationHasBeenSet() const;
 

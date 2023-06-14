@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The maximum number of times you can modify the instance configurations (degrading the configurations)
                      * @return InstanceOperationLimitSet The maximum number of times you can modify the instance configurations (degrading the configurations)
+                     * 
                      */
                     std::vector<OperationCountLimit> GetInstanceOperationLimitSet() const;
 
                     /**
                      * 判断参数 InstanceOperationLimitSet 是否已赋值
                      * @return InstanceOperationLimitSet 是否已赋值
+                     * 
                      */
                     bool InstanceOperationLimitSetHasBeenSet() const;
 

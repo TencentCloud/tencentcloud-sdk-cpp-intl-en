@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Custom name of the name server
                      * @return Name Custom name of the name server
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Custom name of the name server
-                     * @param Name Custom name of the name server
+                     * @param _name Custom name of the name server
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取IPv4 address of the custom name server
                      * @return IPv4 IPv4 address of the custom name server
+                     * 
                      */
                     std::string GetIPv4() const;
 
                     /**
                      * 设置IPv4 address of the custom name server
-                     * @param IPv4 IPv4 address of the custom name server
+                     * @param _iPv4 IPv4 address of the custom name server
+                     * 
                      */
                     void SetIPv4(const std::string& _iPv4);
 
                     /**
                      * 判断参数 IPv4 是否已赋值
                      * @return IPv4 是否已赋值
+                     * 
                      */
                     bool IPv4HasBeenSet() const;
 

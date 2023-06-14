@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
                      * @return CiphertextBlob Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
+                     * 
                      */
                     std::string GetCiphertextBlob() const;
 
                     /**
                      * 判断参数 CiphertextBlob 是否已赋值
                      * @return CiphertextBlob 是否已赋值
+                     * 
                      */
                     bool CiphertextBlobHasBeenSet() const;
 
                     /**
                      * 获取Globally unique ID of the CMK used for encryption
                      * @return KeyId Globally unique ID of the CMK used for encryption
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 

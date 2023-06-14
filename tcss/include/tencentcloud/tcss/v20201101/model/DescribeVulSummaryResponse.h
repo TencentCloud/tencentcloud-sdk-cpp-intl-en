@@ -46,132 +46,154 @@ namespace TencentCloud
                     /**
                      * 获取Total number of vulnerabilities
                      * @return VulTotalCount Total number of vulnerabilities
+                     * 
                      */
                     int64_t GetVulTotalCount() const;
 
                     /**
                      * 判断参数 VulTotalCount 是否已赋值
                      * @return VulTotalCount 是否已赋值
+                     * 
                      */
                     bool VulTotalCountHasBeenSet() const;
 
                     /**
                      * 获取Number of critical and high-risk vulnerabilities
                      * @return SeriousVulCount Number of critical and high-risk vulnerabilities
+                     * 
                      */
                     int64_t GetSeriousVulCount() const;
 
                     /**
                      * 判断参数 SeriousVulCount 是否已赋值
                      * @return SeriousVulCount 是否已赋值
+                     * 
                      */
                     bool SeriousVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of high-priority vulnerabilities
                      * @return SuggestVulCount Number of high-priority vulnerabilities
+                     * 
                      */
                     int64_t GetSuggestVulCount() const;
 
                     /**
                      * 判断参数 SuggestVulCount 是否已赋值
                      * @return SuggestVulCount 是否已赋值
+                     * 
                      */
                     bool SuggestVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of vulnerabilities with POC or EXP
                      * @return PocExpLevelVulCount Number of vulnerabilities with POC or EXP
+                     * 
                      */
                     int64_t GetPocExpLevelVulCount() const;
 
                     /**
                      * 判断参数 PocExpLevelVulCount 是否已赋值
                      * @return PocExpLevelVulCount 是否已赋值
+                     * 
                      */
                     bool PocExpLevelVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of vulnerabilities with remote EXP
                      * @return RemoteExpLevelVulCount Number of vulnerabilities with remote EXP
+                     * 
                      */
                     int64_t GetRemoteExpLevelVulCount() const;
 
                     /**
                      * 判断参数 RemoteExpLevelVulCount 是否已赋值
                      * @return RemoteExpLevelVulCount 是否已赋值
+                     * 
                      */
                     bool RemoteExpLevelVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of images on the latest version affected by critical or high-risk vulnerabilities
                      * @return SeriousVulNewestImageCount Number of images on the latest version affected by critical or high-risk vulnerabilities
+                     * 
                      */
                     int64_t GetSeriousVulNewestImageCount() const;
 
                     /**
                      * 判断参数 SeriousVulNewestImageCount 是否已赋值
                      * @return SeriousVulNewestImageCount 是否已赋值
+                     * 
                      */
                     bool SeriousVulNewestImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of high-priority system vulnerabilities
                      * @return SystemVulnerabilityFocusCount Number of high-priority system vulnerabilities
+                     * 
                      */
                     int64_t GetSystemVulnerabilityFocusCount() const;
 
                     /**
                      * 判断参数 SystemVulnerabilityFocusCount 是否已赋值
                      * @return SystemVulnerabilityFocusCount 是否已赋值
+                     * 
                      */
                     bool SystemVulnerabilityFocusCountHasBeenSet() const;
 
                     /**
                      * 获取Number of high-priority web vulnerabilities
                      * @return WebVulnerabilityFocusCount Number of high-priority web vulnerabilities
+                     * 
                      */
                     int64_t GetWebVulnerabilityFocusCount() const;
 
                     /**
                      * 判断参数 WebVulnerabilityFocusCount 是否已赋值
                      * @return WebVulnerabilityFocusCount 是否已赋值
+                     * 
                      */
                     bool WebVulnerabilityFocusCountHasBeenSet() const;
 
                     /**
                      * 获取Number of affected local images
                      * @return SeriousVulnerabilityLocalImageCount Number of affected local images
+                     * 
                      */
                     int64_t GetSeriousVulnerabilityLocalImageCount() const;
 
                     /**
                      * 判断参数 SeriousVulnerabilityLocalImageCount 是否已赋值
                      * @return SeriousVulnerabilityLocalImageCount 是否已赋值
+                     * 
                      */
                     bool SeriousVulnerabilityLocalImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of affected repository images
                      * @return SeriousVulnerabilityRegistryImageCount Number of affected repository images
+                     * 
                      */
                     int64_t GetSeriousVulnerabilityRegistryImageCount() const;
 
                     /**
                      * 判断参数 SeriousVulnerabilityRegistryImageCount 是否已赋值
                      * @return SeriousVulnerabilityRegistryImageCount 是否已赋值
+                     * 
                      */
                     bool SeriousVulnerabilityRegistryImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of emergency vulnerabilities
                      * @return EmergencyVulnerabilityCount Number of emergency vulnerabilities
+                     * 
                      */
                     int64_t GetEmergencyVulnerabilityCount() const;
 
                     /**
                      * 判断参数 EmergencyVulnerabilityCount 是否已赋值
                      * @return EmergencyVulnerabilityCount 是否已赋值
+                     * 
                      */
                     bool EmergencyVulnerabilityCountHasBeenSet() const;
 

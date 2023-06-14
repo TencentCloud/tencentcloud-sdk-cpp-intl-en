@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Log export task Id.
                      * @return AsyncRequestId Log export task Id.
+                     * 
                      */
                     uint64_t GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

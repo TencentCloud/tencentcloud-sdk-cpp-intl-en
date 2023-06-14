@@ -50,72 +50,84 @@ Used by actions: BatchRegister.
                     /**
                      * 获取The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SdkAppId The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The username.  Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name The username.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The username.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name The username.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _name The username.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginId The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginId() const;
 
                     /**
                      * 设置The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginId The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _originId The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginId(const std::string& _originId);
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 
                     /**
                      * 获取The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Avatar The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAvatar() const;
 
                     /**
                      * 设置The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Avatar The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _avatar The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAvatar(const std::string& _avatar);
 
                     /**
                      * 判断参数 Avatar 是否已赋值
                      * @return Avatar 是否已赋值
+                     * 
                      */
                     bool AvatarHasBeenSet() const;
 

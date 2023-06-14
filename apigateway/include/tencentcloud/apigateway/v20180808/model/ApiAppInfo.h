@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAppName Application name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiAppName() const;
 
                     /**
                      * 设置Application name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAppName Application name
+                     * @param _apiAppName Application name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAppName(const std::string& _apiAppName);
 
                     /**
                      * 判断参数 ApiAppName 是否已赋值
                      * @return ApiAppName 是否已赋值
+                     * 
                      */
                     bool ApiAppNameHasBeenSet() const;
 
                     /**
                      * 获取Application ID
                      * @return ApiAppId Application ID
+                     * 
                      */
                     std::string GetApiAppId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApiAppId Application ID
+                     * @param _apiAppId Application ID
+                     * 
                      */
                     void SetApiAppId(const std::string& _apiAppId);
 
                     /**
                      * 判断参数 ApiAppId 是否已赋值
                      * @return ApiAppId 是否已赋值
+                     * 
                      */
                     bool ApiAppIdHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAppSecret Application SECRET
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiAppSecret() const;
 
                     /**
                      * 设置Application SECRET
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAppSecret Application SECRET
+                     * @param _apiAppSecret Application SECRET
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAppSecret(const std::string& _apiAppSecret);
 
                     /**
                      * 判断参数 ApiAppSecret 是否已赋值
                      * @return ApiAppSecret 是否已赋值
+                     * 
                      */
                     bool ApiAppSecretHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAppDesc Application description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiAppDesc() const;
 
                     /**
                      * 设置Application description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAppDesc Application description
+                     * @param _apiAppDesc Application description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAppDesc(const std::string& _apiAppDesc);
 
                     /**
                      * 判断参数 ApiAppDesc 是否已赋值
                      * @return ApiAppDesc 是否已赋值
+                     * 
                      */
                     bool ApiAppDescHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _createdTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ModifiedTime Modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 设置Modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ModifiedTime Modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _modifiedTime Modification time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetModifiedTime(const std::string& _modifiedTime);
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 
@@ -179,20 +197,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAppKey Application KEY
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiAppKey() const;
 
                     /**
                      * 设置Application KEY
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAppKey Application KEY
+                     * @param _apiAppKey Application KEY
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAppKey(const std::string& _apiAppKey);
 
                     /**
                      * 判断参数 ApiAppKey 是否已赋值
                      * @return ApiAppKey 是否已赋值
+                     * 
                      */
                     bool ApiAppKeyHasBeenSet() const;
 

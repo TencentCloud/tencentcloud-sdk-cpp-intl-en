@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Supported operating system types of imported images.
                      * @return ImportImageOsListSupported Supported operating system types of imported images.
+                     * 
                      */
                     ImageOsList GetImportImageOsListSupported() const;
 
                     /**
                      * 判断参数 ImportImageOsListSupported 是否已赋值
                      * @return ImportImageOsListSupported 是否已赋值
+                     * 
                      */
                     bool ImportImageOsListSupportedHasBeenSet() const;
 
                     /**
                      * 获取Supported operating system versions of imported images. 
                      * @return ImportImageOsVersionSet Supported operating system versions of imported images. 
+                     * 
                      */
                     std::vector<OsVersion> GetImportImageOsVersionSet() const;
 
                     /**
                      * 判断参数 ImportImageOsVersionSet 是否已赋值
                      * @return ImportImageOsVersionSet 是否已赋值
+                     * 
                      */
                     bool ImportImageOsVersionSetHasBeenSet() const;
 

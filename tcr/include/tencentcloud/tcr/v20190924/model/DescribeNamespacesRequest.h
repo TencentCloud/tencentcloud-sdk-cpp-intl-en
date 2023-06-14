@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Specified namespace. If this parameter is left empty, all namespaces will be queried.
                      * @return NamespaceName Specified namespace. If this parameter is left empty, all namespaces will be queried.
+                     * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
                      * 设置Specified namespace. If this parameter is left empty, all namespaces will be queried.
-                     * @param NamespaceName Specified namespace. If this parameter is left empty, all namespaces will be queried.
+                     * @param _namespaceName Specified namespace. If this parameter is left empty, all namespaces will be queried.
+                     * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
 
                     /**
                      * 判断参数 NamespaceName 是否已赋值
                      * @return NamespaceName 是否已赋值
+                     * 
                      */
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page
                      * @return Limit Number of entries per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page
-                     * @param Limit Number of entries per page
+                     * @param _limit Number of entries per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page offset (page number from which to return the results)
                      * @return Offset Page offset (page number from which to return the results)
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page offset (page number from which to return the results)
-                     * @param Offset Page offset (page number from which to return the results)
+                     * @param _offset Page offset (page number from which to return the results)
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Whether to list all namespaces
                      * @return All Whether to list all namespaces
+                     * 
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置Whether to list all namespaces
-                     * @param All Whether to list all namespaces
+                     * @param _all Whether to list all namespaces
+                     * 
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
+                     * 
                      */
                     bool AllHasBeenSet() const;
 
                     /**
                      * 获取Filters
                      * @return Filters Filters
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filters
-                     * @param Filters Filters
+                     * @param _filters Filters
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Whether to query only namespaces for which the KMS image signature is enabled
                      * @return KmsSignPolicy Whether to query only namespaces for which the KMS image signature is enabled
+                     * 
                      */
                     bool GetKmsSignPolicy() const;
 
                     /**
                      * 设置Whether to query only namespaces for which the KMS image signature is enabled
-                     * @param KmsSignPolicy Whether to query only namespaces for which the KMS image signature is enabled
+                     * @param _kmsSignPolicy Whether to query only namespaces for which the KMS image signature is enabled
+                     * 
                      */
                     void SetKmsSignPolicy(const bool& _kmsSignPolicy);
 
                     /**
                      * 判断参数 KmsSignPolicy 是否已赋值
                      * @return KmsSignPolicy 是否已赋值
+                     * 
                      */
                     bool KmsSignPolicyHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Check item ID
                      * @return CustomerPolicyItemId Check item ID
+                     * 
                      */
                     uint64_t GetCustomerPolicyItemId() const;
 
                     /**
                      * 设置Check item ID
-                     * @param CustomerPolicyItemId Check item ID
+                     * @param _customerPolicyItemId Check item ID
+                     * 
                      */
                     void SetCustomerPolicyItemId(const uint64_t& _customerPolicyItemId);
 
                     /**
                      * 判断参数 CustomerPolicyItemId 是否已赋值
                      * @return CustomerPolicyItemId 是否已赋值
+                     * 
                      */
                     bool CustomerPolicyItemIdHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of assets to be ignored in the specified check item. If it is empty, it indicates all.
                      * @return CustomerAssetItemIdSet List of IDs of assets to be ignored in the specified check item. If it is empty, it indicates all.
+                     * 
                      */
                     std::vector<uint64_t> GetCustomerAssetItemIdSet() const;
 
                     /**
                      * 设置List of IDs of assets to be ignored in the specified check item. If it is empty, it indicates all.
-                     * @param CustomerAssetItemIdSet List of IDs of assets to be ignored in the specified check item. If it is empty, it indicates all.
+                     * @param _customerAssetItemIdSet List of IDs of assets to be ignored in the specified check item. If it is empty, it indicates all.
+                     * 
                      */
                     void SetCustomerAssetItemIdSet(const std::vector<uint64_t>& _customerAssetItemIdSet);
 
                     /**
                      * 判断参数 CustomerAssetItemIdSet 是否已赋值
                      * @return CustomerAssetItemIdSet 是否已赋值
+                     * 
                      */
                     bool CustomerAssetItemIdSetHasBeenSet() const;
 

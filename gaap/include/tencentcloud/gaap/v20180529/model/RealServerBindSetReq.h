@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Origin server ID
                      * @return RealServerId Origin server ID
+                     * 
                      */
                     std::string GetRealServerId() const;
 
                     /**
                      * 设置Origin server ID
-                     * @param RealServerId Origin server ID
+                     * @param _realServerId Origin server ID
+                     * 
                      */
                     void SetRealServerId(const std::string& _realServerId);
 
                     /**
                      * 判断参数 RealServerId 是否已赋值
                      * @return RealServerId 是否已赋值
+                     * 
                      */
                     bool RealServerIdHasBeenSet() const;
 
                     /**
                      * 获取Origin server port
                      * @return RealServerPort Origin server port
+                     * 
                      */
                     uint64_t GetRealServerPort() const;
 
                     /**
                      * 设置Origin server port
-                     * @param RealServerPort Origin server port
+                     * @param _realServerPort Origin server port
+                     * 
                      */
                     void SetRealServerPort(const uint64_t& _realServerPort);
 
                     /**
                      * 判断参数 RealServerPort 是否已赋值
                      * @return RealServerPort 是否已赋值
+                     * 
                      */
                     bool RealServerPortHasBeenSet() const;
 
                     /**
                      * 获取Origin server IP
                      * @return RealServerIP Origin server IP
+                     * 
                      */
                     std::string GetRealServerIP() const;
 
                     /**
                      * 设置Origin server IP
-                     * @param RealServerIP Origin server IP
+                     * @param _realServerIP Origin server IP
+                     * 
                      */
                     void SetRealServerIP(const std::string& _realServerIP);
 
                     /**
                      * 判断参数 RealServerIP 是否已赋值
                      * @return RealServerIP 是否已赋值
+                     * 
                      */
                     bool RealServerIPHasBeenSet() const;
 
                     /**
                      * 获取Origin server weight
                      * @return RealServerWeight Origin server weight
+                     * 
                      */
                     uint64_t GetRealServerWeight() const;
 
                     /**
                      * 设置Origin server weight
-                     * @param RealServerWeight Origin server weight
+                     * @param _realServerWeight Origin server weight
+                     * 
                      */
                     void SetRealServerWeight(const uint64_t& _realServerWeight);
 
                     /**
                      * 判断参数 RealServerWeight 是否已赋值
                      * @return RealServerWeight 是否已赋值
+                     * 
                      */
                     bool RealServerWeightHasBeenSet() const;
 
                     /**
                      * 获取Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
                      * @return RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     * 
                      */
                     std::string GetRealServerFailoverRole() const;
 
                     /**
                      * 设置Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
-                     * @param RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     * @param _realServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     * 
                      */
                     void SetRealServerFailoverRole(const std::string& _realServerFailoverRole);
 
                     /**
                      * 判断参数 RealServerFailoverRole 是否已赋值
                      * @return RealServerFailoverRole 是否已赋值
+                     * 
                      */
                     bool RealServerFailoverRoleHasBeenSet() const;
 

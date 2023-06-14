@@ -52,36 +52,42 @@ namespace TencentCloud
                     /**
                      * 获取Switch
                      * @return Switch Switch
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch
-                     * @param Switch Switch
+                     * @param _switch Switch
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Rate limit rule
                      * @return UserRules Rate limit rule
+                     * 
                      */
                     std::vector<RateLimitUserRule> GetUserRules() const;
 
                     /**
                      * 设置Rate limit rule
-                     * @param UserRules Rate limit rule
+                     * @param _userRules Rate limit rule
+                     * 
                      */
                     void SetUserRules(const std::vector<RateLimitUserRule>& _userRules);
 
                     /**
                      * 判断参数 UserRules 是否已赋值
                      * @return UserRules 是否已赋值
+                     * 
                      */
                     bool UserRulesHasBeenSet() const;
 
@@ -90,20 +96,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Template Default template
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     RateLimitTemplate GetTemplate() const;
 
                     /**
                      * 设置Default template
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Template Default template
+                     * @param _template Default template
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTemplate(const RateLimitTemplate& _template);
 
                     /**
                      * 判断参数 Template 是否已赋值
                      * @return Template 是否已赋值
+                     * 
                      */
                     bool TemplateHasBeenSet() const;
 
@@ -112,20 +121,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Intelligence Client filtering
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RateLimitIntelligence GetIntelligence() const;
 
                     /**
                      * 设置Client filtering
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Intelligence Client filtering
+                     * @param _intelligence Client filtering
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIntelligence(const RateLimitIntelligence& _intelligence);
 
                     /**
                      * 判断参数 Intelligence 是否已赋值
                      * @return Intelligence 是否已赋值
+                     * 
                      */
                     bool IntelligenceHasBeenSet() const;
 

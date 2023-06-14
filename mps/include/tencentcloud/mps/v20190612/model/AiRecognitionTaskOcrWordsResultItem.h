@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Text keyword.
                      * @return Word Text keyword.
+                     * 
                      */
                     std::string GetWord() const;
 
                     /**
                      * 设置Text keyword.
-                     * @param Word Text keyword.
+                     * @param _word Text keyword.
+                     * 
                      */
                     void SetWord(const std::string& _word);
 
                     /**
                      * 判断参数 Word 是否已赋值
                      * @return Word 是否已赋值
+                     * 
                      */
                     bool WordHasBeenSet() const;
 
                     /**
                      * 获取List of segments that contain a text keyword.
                      * @return SegmentSet List of segments that contain a text keyword.
+                     * 
                      */
                     std::vector<AiRecognitionTaskOcrWordsSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of segments that contain a text keyword.
-                     * @param SegmentSet List of segments that contain a text keyword.
+                     * @param _segmentSet List of segments that contain a text keyword.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskOcrWordsSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

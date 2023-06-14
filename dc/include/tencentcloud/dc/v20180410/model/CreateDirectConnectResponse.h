@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Connection ID.
                      * @return DirectConnectIdSet Connection ID.
+                     * 
                      */
                     std::vector<std::string> GetDirectConnectIdSet() const;
 
                     /**
                      * 判断参数 DirectConnectIdSet 是否已赋值
                      * @return DirectConnectIdSet 是否已赋值
+                     * 
                      */
                     bool DirectConnectIdSetHasBeenSet() const;
 

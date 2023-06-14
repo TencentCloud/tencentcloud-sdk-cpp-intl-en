@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
                      * @return IsDefaultMapping Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
+                     * 
                      */
                     bool GetIsDefaultMapping() const;
 
                     /**
                      * 设置Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
-                     * @param IsDefaultMapping Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
+                     * @param _isDefaultMapping Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
+                     * 
                      */
                     void SetIsDefaultMapping(const bool& _isDefaultMapping);
 
                     /**
                      * 判断参数 IsDefaultMapping 是否已赋值
                      * @return IsDefaultMapping 是否已赋值
+                     * 
                      */
                     bool IsDefaultMappingHasBeenSet() const;
 
                     /**
                      * 获取Custom path mapping list.
                      * @return PathMappingSet Custom path mapping list.
+                     * 
                      */
                     std::vector<PathMapping> GetPathMappingSet() const;
 
                     /**
                      * 设置Custom path mapping list.
-                     * @param PathMappingSet Custom path mapping list.
+                     * @param _pathMappingSet Custom path mapping list.
+                     * 
                      */
                     void SetPathMappingSet(const std::vector<PathMapping>& _pathMappingSet);
 
                     /**
                      * 判断参数 PathMappingSet 是否已赋值
                      * @return PathMappingSet 是否已赋值
+                     * 
                      */
                     bool PathMappingSetHasBeenSet() const;
 

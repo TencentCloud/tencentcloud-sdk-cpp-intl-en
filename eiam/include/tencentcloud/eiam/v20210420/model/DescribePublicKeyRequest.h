@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Application ID, which is globally unique.
                      * @return ApplicationId Application ID, which is globally unique.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID, which is globally unique.
-                     * @param ApplicationId Application ID, which is globally unique.
+                     * @param _applicationId Application ID, which is globally unique.
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 

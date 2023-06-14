@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UseTKEDefault Use TKE default issuer and jwksuri
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetUseTKEDefault() const;
 
                     /**
                      * 设置Use TKE default issuer and jwksuri
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UseTKEDefault Use TKE default issuer and jwksuri
+                     * @param _useTKEDefault Use TKE default issuer and jwksuri
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUseTKEDefault(const bool& _useTKEDefault);
 
                     /**
                      * 判断参数 UseTKEDefault 是否已赋值
                      * @return UseTKEDefault 是否已赋值
+                     * 
                      */
                     bool UseTKEDefaultHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Issuer service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIssuer() const;
 
                     /**
                      * 设置service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Issuer service-account-issuer
+                     * @param _issuer service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIssuer(const std::string& _issuer);
 
                     /**
                      * 判断参数 Issuer 是否已赋值
                      * @return Issuer 是否已赋值
+                     * 
                      */
                     bool IssuerHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return JWKSURI service-account-jwks-uri
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetJWKSURI() const;
 
                     /**
                      * 设置service-account-jwks-uri
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param JWKSURI service-account-jwks-uri
+                     * @param _jWKSURI service-account-jwks-uri
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetJWKSURI(const std::string& _jWKSURI);
 
                     /**
                      * 判断参数 JWKSURI 是否已赋值
                      * @return JWKSURI 是否已赋值
+                     * 
                      */
                     bool JWKSURIHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AutoCreateDiscoveryAnonymousAuth If it is set to `true`, a RABC rule is automatically created to allow anonymous users to access `/.well-known/openid-configuration` and `/openid/v1/jwks`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAutoCreateDiscoveryAnonymousAuth() const;
 
                     /**
                      * 设置If it is set to `true`, a RABC rule is automatically created to allow anonymous users to access `/.well-known/openid-configuration` and `/openid/v1/jwks`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AutoCreateDiscoveryAnonymousAuth If it is set to `true`, a RABC rule is automatically created to allow anonymous users to access `/.well-known/openid-configuration` and `/openid/v1/jwks`.
+                     * @param _autoCreateDiscoveryAnonymousAuth If it is set to `true`, a RABC rule is automatically created to allow anonymous users to access `/.well-known/openid-configuration` and `/openid/v1/jwks`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoCreateDiscoveryAnonymousAuth(const bool& _autoCreateDiscoveryAnonymousAuth);
 
                     /**
                      * 判断参数 AutoCreateDiscoveryAnonymousAuth 是否已赋值
                      * @return AutoCreateDiscoveryAnonymousAuth 是否已赋值
+                     * 
                      */
                     bool AutoCreateDiscoveryAnonymousAuthHasBeenSet() const;
 

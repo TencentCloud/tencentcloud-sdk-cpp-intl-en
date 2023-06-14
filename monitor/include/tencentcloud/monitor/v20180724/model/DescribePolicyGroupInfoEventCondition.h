@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Event ID.
                      * @return EventId Event ID.
+                     * 
                      */
                     int64_t GetEventId() const;
 
                     /**
                      * 设置Event ID.
-                     * @param EventId Event ID.
+                     * @param _eventId Event ID.
+                     * 
                      */
                     void SetEventId(const int64_t& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Event alarm rule ID.
                      * @return RuleId Event alarm rule ID.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置Event alarm rule ID.
-                     * @param RuleId Event alarm rule ID.
+                     * @param _ruleId Event alarm rule ID.
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Event name.
                      * @return EventShowName Event name.
+                     * 
                      */
                     std::string GetEventShowName() const;
 
                     /**
                      * 设置Event name.
-                     * @param EventShowName Event name.
+                     * @param _eventShowName Event name.
+                     * 
                      */
                     void SetEventShowName(const std::string& _eventShowName);
 
                     /**
                      * 判断参数 EventShowName 是否已赋值
                      * @return EventShowName 是否已赋值
+                     * 
                      */
                     bool EventShowNameHasBeenSet() const;
 
                     /**
                      * 获取Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
                      * @return AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+                     * 
                      */
                     int64_t GetAlarmNotifyPeriod() const;
 
                     /**
                      * 设置Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
-                     * @param AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+                     * @param _alarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+                     * 
                      */
                     void SetAlarmNotifyPeriod(const int64_t& _alarmNotifyPeriod);
 
                     /**
                      * 判断参数 AlarmNotifyPeriod 是否已赋值
                      * @return AlarmNotifyPeriod 是否已赋值
+                     * 
                      */
                     bool AlarmNotifyPeriodHasBeenSet() const;
 
                     /**
                      * 获取Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
                      * @return AlarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+                     * 
                      */
                     int64_t GetAlarmNotifyType() const;
 
                     /**
                      * 设置Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
-                     * @param AlarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+                     * @param _alarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+                     * 
                      */
                     void SetAlarmNotifyType(const int64_t& _alarmNotifyType);
 
                     /**
                      * 判断参数 AlarmNotifyType 是否已赋值
                      * @return AlarmNotifyType 是否已赋值
+                     * 
                      */
                     bool AlarmNotifyTypeHasBeenSet() const;
 

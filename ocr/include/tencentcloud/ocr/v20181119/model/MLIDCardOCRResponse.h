@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取ID number
                      * @return ID ID number
+                     * 
                      */
                     std::string GetID() const;
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Full name
                      * @return Name Full name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Address
                      * @return Address Address
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取Gender
                      * @return Sex Gender
+                     * 
                      */
                     std::string GetSex() const;
 
                     /**
                      * 判断参数 Sex 是否已赋值
                      * @return Sex 是否已赋值
+                     * 
                      */
                     bool SexHasBeenSet() const;
 
@@ -102,24 +110,28 @@ namespace TencentCloud
 -9102 Alarm for photocopied certificate
 -9106 Alarm for covered certificate
 -9107 Alarm for blurry image
+                     * 
                      */
                     std::vector<int64_t> GetWarn() const;
 
                     /**
                      * 判断参数 Warn 是否已赋值
                      * @return Warn 是否已赋值
+                     * 
                      */
                     bool WarnHasBeenSet() const;
 
                     /**
                      * 获取Identity photo
                      * @return Image Identity photo
+                     * 
                      */
                     std::string GetImage() const;
 
                     /**
                      * 判断参数 Image 是否已赋值
                      * @return Image 是否已赋值
+                     * 
                      */
                     bool ImageHasBeenSet() const;
 
@@ -138,12 +150,14 @@ with the confidence of a field recognition result returned in the following form
     Confidence:0.9999
   }
 }
+                     * 
                      */
                     std::string GetAdvancedInfo() const;
 
                     /**
                      * 判断参数 AdvancedInfo 是否已赋值
                      * @return AdvancedInfo 是否已赋值
+                     * 
                      */
                     bool AdvancedInfoHasBeenSet() const;
 
@@ -164,24 +178,28 @@ MyKAS    Temporary ID card
 POLIS  Police card
 IKAD   Work permit
 MyKid   Kid card
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
                      * @return Birthday Date of birth. This field is available only for work permits (i-Kad) and ID cards (MyKad).
+                     * 
                      */
                     std::string GetBirthday() const;
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 

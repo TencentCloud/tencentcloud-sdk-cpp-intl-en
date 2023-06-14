@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of a Secret whose detailed information is to be obtained.
                      * @return SecretName Name of a Secret whose detailed information is to be obtained.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of a Secret whose detailed information is to be obtained.
-                     * @param SecretName Name of a Secret whose detailed information is to be obtained.
+                     * @param _secretName Name of a Secret whose detailed information is to be obtained.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Offset, starting from 0
                      * @return Offset Offset, starting from 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, starting from 0
-                     * @param Offset Offset, starting from 0
+                     * @param _offset Offset, starting from 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries returned per page. Valid range: 10–250.
                      * @return Limit Number of entries returned per page. Valid range: 10–250.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries returned per page. Valid range: 10–250.
-                     * @param Limit Number of entries returned per page. Valid range: 10–250.
+                     * @param _limit Number of entries returned per page. Valid range: 10–250.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

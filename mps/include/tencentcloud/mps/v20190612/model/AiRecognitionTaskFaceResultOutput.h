@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Intelligent face recognition result set.
                      * @return ResultSet Intelligent face recognition result set.
+                     * 
                      */
                     std::vector<AiRecognitionTaskFaceResultItem> GetResultSet() const;
 
                     /**
                      * 设置Intelligent face recognition result set.
-                     * @param ResultSet Intelligent face recognition result set.
+                     * @param _resultSet Intelligent face recognition result set.
+                     * 
                      */
                     void SetResultSet(const std::vector<AiRecognitionTaskFaceResultItem>& _resultSet);
 
                     /**
                      * 判断参数 ResultSet 是否已赋值
                      * @return ResultSet 是否已赋值
+                     * 
                      */
                     bool ResultSetHasBeenSet() const;
 

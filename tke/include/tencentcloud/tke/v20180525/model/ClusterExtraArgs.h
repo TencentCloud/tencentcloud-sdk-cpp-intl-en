@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetKubeAPIServer() const;
 
                     /**
                      * 设置kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+                     * @param _kubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetKubeAPIServer(const std::vector<std::string>& _kubeAPIServer);
 
                     /**
                      * 判断参数 KubeAPIServer 是否已赋值
                      * @return KubeAPIServer 是否已赋值
+                     * 
                      */
                     bool KubeAPIServerHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
                      * @return KubeControllerManager kube-controller-manager custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetKubeControllerManager() const;
 
                     /**
                      * 设置kube-controller-manager custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
-                     * @param KubeControllerManager kube-controller-manager custom parameter
+                     * @param _kubeControllerManager kube-controller-manager custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetKubeControllerManager(const std::vector<std::string>& _kubeControllerManager);
 
                     /**
                      * 判断参数 KubeControllerManager 是否已赋值
                      * @return KubeControllerManager 是否已赋值
+                     * 
                      */
                     bool KubeControllerManagerHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
                      * @return KubeScheduler kube-scheduler custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetKubeScheduler() const;
 
                     /**
                      * 设置kube-scheduler custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
-                     * @param KubeScheduler kube-scheduler custom parameter
+                     * @param _kubeScheduler kube-scheduler custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetKubeScheduler(const std::vector<std::string>& _kubeScheduler);
 
                     /**
                      * 判断参数 KubeScheduler 是否已赋值
                      * @return KubeScheduler 是否已赋值
+                     * 
                      */
                     bool KubeSchedulerHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Etcd etcd custom parameter, which is only effective for self-deployed cluster.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetEtcd() const;
 
                     /**
                      * 设置etcd custom parameter, which is only effective for self-deployed cluster.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Etcd etcd custom parameter, which is only effective for self-deployed cluster.
+                     * @param _etcd etcd custom parameter, which is only effective for self-deployed cluster.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetEtcd(const std::vector<std::string>& _etcd);
 
                     /**
                      * 判断参数 Etcd 是否已赋值
                      * @return Etcd 是否已赋值
+                     * 
                      */
                     bool EtcdHasBeenSet() const;
 

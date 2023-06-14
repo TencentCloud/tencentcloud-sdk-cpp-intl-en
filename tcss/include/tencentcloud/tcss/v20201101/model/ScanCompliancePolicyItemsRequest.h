@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of customer check items to be scanned again
                      * @return CustomerPolicyItemIdSet List of customer check items to be scanned again
+                     * 
                      */
                     std::vector<uint64_t> GetCustomerPolicyItemIdSet() const;
 
                     /**
                      * 设置List of customer check items to be scanned again
-                     * @param CustomerPolicyItemIdSet List of customer check items to be scanned again
+                     * @param _customerPolicyItemIdSet List of customer check items to be scanned again
+                     * 
                      */
                     void SetCustomerPolicyItemIdSet(const std::vector<uint64_t>& _customerPolicyItemIdSet);
 
                     /**
                      * 判断参数 CustomerPolicyItemIdSet 是否已赋值
                      * @return CustomerPolicyItemIdSet 是否已赋值
+                     * 
                      */
                     bool CustomerPolicyItemIdSetHasBeenSet() const;
 

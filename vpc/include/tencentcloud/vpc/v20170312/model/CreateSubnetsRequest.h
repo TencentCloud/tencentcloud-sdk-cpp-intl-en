@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
                      * @return VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
-                     * @param VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+                     * @param _vpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The subnet object list.
                      * @return Subnets The subnet object list.
+                     * 
                      */
                     std::vector<SubnetInput> GetSubnets() const;
 
                     /**
                      * 设置The subnet object list.
-                     * @param Subnets The subnet object list.
+                     * @param _subnets The subnet object list.
+                     * 
                      */
                     void SetSubnets(const std::vector<SubnetInput>& _subnets);
 
                     /**
                      * 判断参数 Subnets 是否已赋值
                      * @return Subnets 是否已赋值
+                     * 
                      */
                     bool SubnetsHasBeenSet() const;
 
                     /**
                      * 获取Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取ID of the CDC instance to which the subnets will be created
                      * @return CdcId ID of the CDC instance to which the subnets will be created
+                     * 
                      */
                     std::string GetCdcId() const;
 
                     /**
                      * 设置ID of the CDC instance to which the subnets will be created
-                     * @param CdcId ID of the CDC instance to which the subnets will be created
+                     * @param _cdcId ID of the CDC instance to which the subnets will be created
+                     * 
                      */
                     void SetCdcId(const std::string& _cdcId);
 
                     /**
                      * 判断参数 CdcId 是否已赋值
                      * @return CdcId 是否已赋值
+                     * 
                      */
                     bool CdcIdHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of queried full backups
                      * @return TotalCount Number of queried full backups
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of full backup details
                      * @return BaseBackupSet List of full backup details
+                     * 
                      */
                     std::vector<BaseBackup> GetBaseBackupSet() const;
 
                     /**
                      * 判断参数 BaseBackupSet 是否已赋值
                      * @return BaseBackupSet 是否已赋值
+                     * 
                      */
                     bool BaseBackupSetHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Result of the request. `Success` indicates that the configurations are updated.
                      * @return Result Result of the request. `Success` indicates that the configurations are updated.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Whether health check is enabled.
                      * @return IsHealthCheck Whether health check is enabled.
+                     * 
                      */
                     bool GetIsHealthCheck() const;
 
                     /**
                      * 设置Whether health check is enabled.
-                     * @param IsHealthCheck Whether health check is enabled.
+                     * @param _isHealthCheck Whether health check is enabled.
+                     * 
                      */
                     void SetIsHealthCheck(const bool& _isHealthCheck);
 
                     /**
                      * 判断参数 IsHealthCheck 是否已赋值
                      * @return IsHealthCheck 是否已赋值
+                     * 
                      */
                     bool IsHealthCheckHasBeenSet() const;
 
                     /**
                      * 获取Health check threshold.
                      * @return RequestVolumeThreshold Health check threshold.
+                     * 
                      */
                     int64_t GetRequestVolumeThreshold() const;
 
                     /**
                      * 设置Health check threshold.
-                     * @param RequestVolumeThreshold Health check threshold.
+                     * @param _requestVolumeThreshold Health check threshold.
+                     * 
                      */
                     void SetRequestVolumeThreshold(const int64_t& _requestVolumeThreshold);
 
                     /**
                      * 判断参数 RequestVolumeThreshold 是否已赋值
                      * @return RequestVolumeThreshold 是否已赋值
+                     * 
                      */
                     bool RequestVolumeThresholdHasBeenSet() const;
 
                     /**
                      * 获取Window size.
                      * @return SleepWindowInMilliseconds Window size.
+                     * 
                      */
                     int64_t GetSleepWindowInMilliseconds() const;
 
                     /**
                      * 设置Window size.
-                     * @param SleepWindowInMilliseconds Window size.
+                     * @param _sleepWindowInMilliseconds Window size.
+                     * 
                      */
                     void SetSleepWindowInMilliseconds(const int64_t& _sleepWindowInMilliseconds);
 
                     /**
                      * 判断参数 SleepWindowInMilliseconds 是否已赋值
                      * @return SleepWindowInMilliseconds 是否已赋值
+                     * 
                      */
                     bool SleepWindowInMillisecondsHasBeenSet() const;
 
                     /**
                      * 获取Threshold percentage.
                      * @return ErrorThresholdPercentage Threshold percentage.
+                     * 
                      */
                     int64_t GetErrorThresholdPercentage() const;
 
                     /**
                      * 设置Threshold percentage.
-                     * @param ErrorThresholdPercentage Threshold percentage.
+                     * @param _errorThresholdPercentage Threshold percentage.
+                     * 
                      */
                     void SetErrorThresholdPercentage(const int64_t& _errorThresholdPercentage);
 
                     /**
                      * 判断参数 ErrorThresholdPercentage 是否已赋值
                      * @return ErrorThresholdPercentage 是否已赋值
+                     * 
                      */
                     bool ErrorThresholdPercentageHasBeenSet() const;
 

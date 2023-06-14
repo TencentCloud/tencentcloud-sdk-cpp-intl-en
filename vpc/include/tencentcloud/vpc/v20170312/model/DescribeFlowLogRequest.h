@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the VPC instance.
                      * @return VpcId ID of the VPC instance.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置ID of the VPC instance.
-                     * @param VpcId ID of the VPC instance.
+                     * @param _vpcId ID of the VPC instance.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the flow log.
                      * @return FlowLogId The unique ID of the flow log.
+                     * 
                      */
                     std::string GetFlowLogId() const;
 
                     /**
                      * 设置The unique ID of the flow log.
-                     * @param FlowLogId The unique ID of the flow log.
+                     * @param _flowLogId The unique ID of the flow log.
+                     * 
                      */
                     void SetFlowLogId(const std::string& _flowLogId);
 
                     /**
                      * 判断参数 FlowLogId 是否已赋值
                      * @return FlowLogId 是否已赋值
+                     * 
                      */
                     bool FlowLogIdHasBeenSet() const;
 

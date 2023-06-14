@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the partition to be split
                      * @return PartitionId ID of the partition to be split
+                     * 
                      */
                     int64_t GetPartitionId() const;
 
                     /**
                      * 设置ID of the partition to be split
-                     * @param PartitionId ID of the partition to be split
+                     * @param _partitionId ID of the partition to be split
+                     * 
                      */
                     void SetPartitionId(const int64_t& _partitionId);
 
                     /**
                      * 判断参数 PartitionId 是否已赋值
                      * @return PartitionId 是否已赋值
+                     * 
                      */
                     bool PartitionIdHasBeenSet() const;
 
                     /**
                      * 获取Partition split hash key position, which is meaningful only if `Number=2` is set
                      * @return SplitKey Partition split hash key position, which is meaningful only if `Number=2` is set
+                     * 
                      */
                     std::string GetSplitKey() const;
 
                     /**
                      * 设置Partition split hash key position, which is meaningful only if `Number=2` is set
-                     * @param SplitKey Partition split hash key position, which is meaningful only if `Number=2` is set
+                     * @param _splitKey Partition split hash key position, which is meaningful only if `Number=2` is set
+                     * 
                      */
                     void SetSplitKey(const std::string& _splitKey);
 
                     /**
                      * 判断参数 SplitKey 是否已赋值
                      * @return SplitKey 是否已赋值
+                     * 
                      */
                     bool SplitKeyHasBeenSet() const;
 
                     /**
                      * 获取Number of partitions to split into, which is optional. Default value: 2
                      * @return Number Number of partitions to split into, which is optional. Default value: 2
+                     * 
                      */
                     int64_t GetNumber() const;
 
                     /**
                      * 设置Number of partitions to split into, which is optional. Default value: 2
-                     * @param Number Number of partitions to split into, which is optional. Default value: 2
+                     * @param _number Number of partitions to split into, which is optional. Default value: 2
+                     * 
                      */
                     void SetNumber(const int64_t& _number);
 
                     /**
                      * 判断参数 Number 是否已赋值
                      * @return Number 是否已赋值
+                     * 
                      */
                     bool NumberHasBeenSet() const;
 

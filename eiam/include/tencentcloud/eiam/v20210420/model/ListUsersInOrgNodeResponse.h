@@ -50,12 +50,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeChildUserInfo User information list under the organization sub-node.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<OrgNodeChildUserInfo> GetOrgNodeChildUserInfo() const;
 
                     /**
                      * 判断参数 OrgNodeChildUserInfo 是否已赋值
                      * @return OrgNodeChildUserInfo 是否已赋值
+                     * 
                      */
                     bool OrgNodeChildUserInfoHasBeenSet() const;
 
@@ -64,12 +66,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeId Organization node ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeId() const;
 
                     /**
                      * 判断参数 OrgNodeId 是否已赋值
                      * @return OrgNodeId 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdHasBeenSet() const;
 
@@ -78,12 +82,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserInfo User information list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UserInfo> GetUserInfo() const;
 
                     /**
                      * 判断参数 UserInfo 是否已赋值
                      * @return UserInfo 是否已赋值
+                     * 
                      */
                     bool UserInfoHasBeenSet() const;
 
@@ -92,12 +98,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalUserNum Total number of users under the current organization node.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalUserNum() const;
 
                     /**
                      * 判断参数 TotalUserNum 是否已赋值
                      * @return TotalUserNum 是否已赋值
+                     * 
                      */
                     bool TotalUserNumHasBeenSet() const;
 
@@ -106,12 +114,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeIdPath Organization ID path.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeIdPath() const;
 
                     /**
                      * 判断参数 OrgNodeIdPath 是否已赋值
                      * @return OrgNodeIdPath 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdPathHasBeenSet() const;
 
@@ -120,12 +130,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeNamePath Organization name path.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeNamePath() const;
 
                     /**
                      * 判断参数 OrgNodeNamePath 是否已赋值
                      * @return OrgNodeNamePath 是否已赋值
+                     * 
                      */
                     bool OrgNodeNamePathHasBeenSet() const;
 

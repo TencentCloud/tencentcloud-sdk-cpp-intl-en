@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
                      * @return VodSessionKey VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
+                     * 
                      */
                     std::string GetVodSessionKey() const;
 
                     /**
                      * 设置VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
-                     * @param VodSessionKey VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
+                     * @param _vodSessionKey VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
+                     * 
                      */
                     void SetVodSessionKey(const std::string& _vodSessionKey);
 
                     /**
                      * 判断参数 VodSessionKey 是否已赋值
                      * @return VodSessionKey 是否已赋值
+                     * 
                      */
                     bool VodSessionKeyHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 

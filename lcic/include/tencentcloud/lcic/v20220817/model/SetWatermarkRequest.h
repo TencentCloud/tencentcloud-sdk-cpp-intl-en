@@ -45,252 +45,294 @@ namespace TencentCloud
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
                      * @return TeacherUrl The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
+                     * 
                      */
                     std::string GetTeacherUrl() const;
 
                     /**
                      * 设置The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
-                     * @param TeacherUrl The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
+                     * @param _teacherUrl The URL of the watermark for the teacher’s video. If you pass in an empty string, the teacher’s video will not have a watermark.
+                     * 
                      */
                     void SetTeacherUrl(const std::string& _teacherUrl);
 
                     /**
                      * 判断参数 TeacherUrl 是否已赋值
                      * @return TeacherUrl 是否已赋值
+                     * 
                      */
                     bool TeacherUrlHasBeenSet() const;
 
                     /**
                      * 获取The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
                      * @return BoardUrl The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
+                     * 
                      */
                     std::string GetBoardUrl() const;
 
                     /**
                      * 设置The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
-                     * @param BoardUrl The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
+                     * @param _boardUrl The URL of the watermark for the whiteboard. If you pass in an empty string, the whiteboard video will not have a watermark.
+                     * 
                      */
                     void SetBoardUrl(const std::string& _boardUrl);
 
                     /**
                      * 判断参数 BoardUrl 是否已赋值
                      * @return BoardUrl 是否已赋值
+                     * 
                      */
                     bool BoardUrlHasBeenSet() const;
 
                     /**
                      * 获取The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
                      * @return VideoUrl The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
+                     * 
                      */
                     std::string GetVideoUrl() const;
 
                     /**
                      * 设置The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
-                     * @param VideoUrl The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
+                     * @param _videoUrl The image displayed when there is no video. If you pass in an empty string, no images will be displayed.
+                     * 
                      */
                     void SetVideoUrl(const std::string& _videoUrl);
 
                     /**
                      * 判断参数 VideoUrl 是否已赋值
                      * @return VideoUrl 是否已赋值
+                     * 
                      */
                     bool VideoUrlHasBeenSet() const;
 
                     /**
                      * 获取The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      * @return BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     double GetBoardW() const;
 
                     /**
                      * 设置The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
-                     * @param BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * @param _boardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     void SetBoardW(const double& _boardW);
 
                     /**
                      * 判断参数 BoardW 是否已赋值
                      * @return BoardW 是否已赋值
+                     * 
                      */
                     bool BoardWHasBeenSet() const;
 
                     /**
                      * 获取The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      * @return BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     double GetBoardH() const;
 
                     /**
                      * 设置The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
-                     * @param BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * @param _boardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     void SetBoardH(const double& _boardH);
 
                     /**
                      * 判断参数 BoardH 是否已赋值
                      * @return BoardH 是否已赋值
+                     * 
                      */
                     bool BoardHHasBeenSet() const;
 
                     /**
                      * 获取The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      * @return BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 
                      */
                     double GetBoardX() const;
 
                     /**
                      * 设置The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-                     * @param BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * @param _boardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 
                      */
                     void SetBoardX(const double& _boardX);
 
                     /**
                      * 判断参数 BoardX 是否已赋值
                      * @return BoardX 是否已赋值
+                     * 
                      */
                     bool BoardXHasBeenSet() const;
 
                     /**
                      * 获取The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      * @return BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 
                      */
                     double GetBoardY() const;
 
                     /**
                      * 设置The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
-                     * @param BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * @param _boardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 
                      */
                     void SetBoardY(const double& _boardY);
 
                     /**
                      * 判断参数 BoardY 是否已赋值
                      * @return BoardY 是否已赋值
+                     * 
                      */
                     bool BoardYHasBeenSet() const;
 
                     /**
                      * 获取The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      * @return TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     double GetTeacherW() const;
 
                     /**
                      * 设置The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
-                     * @param TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * @param _teacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     void SetTeacherW(const double& _teacherW);
 
                     /**
                      * 判断参数 TeacherW 是否已赋值
                      * @return TeacherW 是否已赋值
+                     * 
                      */
                     bool TeacherWHasBeenSet() const;
 
                     /**
                      * 获取The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      * @return TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     double GetTeacherH() const;
 
                     /**
                      * 设置The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
-                     * @param TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * @param _teacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * 
                      */
                     void SetTeacherH(const double& _teacherH);
 
                     /**
                      * 判断参数 TeacherH 是否已赋值
                      * @return TeacherH 是否已赋值
+                     * 
                      */
                     bool TeacherHHasBeenSet() const;
 
                     /**
                      * 获取The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      * @return TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 
                      */
                     double GetTeacherX() const;
 
                     /**
                      * 设置The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-                     * @param TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * @param _teacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 
                      */
                     void SetTeacherX(const double& _teacherX);
 
                     /**
                      * 判断参数 TeacherX 是否已赋值
                      * @return TeacherX 是否已赋值
+                     * 
                      */
                     bool TeacherXHasBeenSet() const;
 
                     /**
                      * 获取The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      * @return TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 
                      */
                     double GetTeacherY() const;
 
                     /**
                      * 设置The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
-                     * @param TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * @param _teacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 
                      */
                     void SetTeacherY(const double& _teacherY);
 
                     /**
                      * 判断参数 TeacherY 是否已赋值
                      * @return TeacherY 是否已赋值
+                     * 
                      */
                     bool TeacherYHasBeenSet() const;
 
                     /**
                      * 获取The watermark text. If you pass in an empty string, there will be no text.
                      * @return Text The watermark text. If you pass in an empty string, there will be no text.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置The watermark text. If you pass in an empty string, there will be no text.
-                     * @param Text The watermark text. If you pass in an empty string, there will be no text.
+                     * @param _text The watermark text. If you pass in an empty string, there will be no text.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
                     /**
                      * 获取The watermark text color.
                      * @return TextColor The watermark text color.
+                     * 
                      */
                     std::string GetTextColor() const;
 
                     /**
                      * 设置The watermark text color.
-                     * @param TextColor The watermark text color.
+                     * @param _textColor The watermark text color.
+                     * 
                      */
                     void SetTextColor(const std::string& _textColor);
 
                     /**
                      * 判断参数 TextColor 是否已赋值
                      * @return TextColor 是否已赋值
+                     * 
                      */
                     bool TextColorHasBeenSet() const;
 

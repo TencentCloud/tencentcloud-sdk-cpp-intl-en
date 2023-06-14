@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Protocol port template instance ID, such as `ppm-529nwwj8`.
                      * @return ServiceTemplateId Protocol port template instance ID, such as `ppm-529nwwj8`.
+                     * 
                      */
                     std::string GetServiceTemplateId() const;
 
                     /**
                      * 设置Protocol port template instance ID, such as `ppm-529nwwj8`.
-                     * @param ServiceTemplateId Protocol port template instance ID, such as `ppm-529nwwj8`.
+                     * @param _serviceTemplateId Protocol port template instance ID, such as `ppm-529nwwj8`.
+                     * 
                      */
                     void SetServiceTemplateId(const std::string& _serviceTemplateId);
 
                     /**
                      * 判断参数 ServiceTemplateId 是否已赋值
                      * @return ServiceTemplateId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Protocol port template name.
                      * @return ServiceTemplateName Protocol port template name.
+                     * 
                      */
                     std::string GetServiceTemplateName() const;
 
                     /**
                      * 设置Protocol port template name.
-                     * @param ServiceTemplateName Protocol port template name.
+                     * @param _serviceTemplateName Protocol port template name.
+                     * 
                      */
                     void SetServiceTemplateName(const std::string& _serviceTemplateName);
 
                     /**
                      * 判断参数 ServiceTemplateName 是否已赋值
                      * @return ServiceTemplateName 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
                      * @return Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * 
                      */
                     std::vector<std::string> GetServices() const;
 
                     /**
                      * 设置It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
-                     * @param Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * @param _services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * 
                      */
                     void SetServices(const std::vector<std::string>& _services);
 
                     /**
                      * 判断参数 Services 是否已赋值
                      * @return Services 是否已赋值
+                     * 
                      */
                     bool ServicesHasBeenSet() const;
 
                     /**
                      * 获取Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
                      * @return ServicesExtra Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * 
                      */
                     std::vector<ServicesInfo> GetServicesExtra() const;
 
                     /**
                      * 设置Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
-                     * @param ServicesExtra Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * @param _servicesExtra Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+                     * 
                      */
                     void SetServicesExtra(const std::vector<ServicesInfo>& _servicesExtra);
 
                     /**
                      * 判断参数 ServicesExtra 是否已赋值
                      * @return ServicesExtra 是否已赋值
+                     * 
                      */
                     bool ServicesExtraHasBeenSet() const;
 

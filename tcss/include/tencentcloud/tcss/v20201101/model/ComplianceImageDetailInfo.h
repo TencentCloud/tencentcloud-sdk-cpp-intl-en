@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Image ID on the server
                      * @return ImageId Image ID on the server
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID on the server
-                     * @param ImageId Image ID on the server
+                     * @param _imageId Image ID on the server
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Image tag
                      * @return ImageTag Image tag
+                     * 
                      */
                     std::string GetImageTag() const;
 
                     /**
                      * 设置Image tag
-                     * @param ImageTag Image tag
+                     * @param _imageTag Image tag
+                     * 
                      */
                     void SetImageTag(const std::string& _imageTag);
 
                     /**
                      * 判断参数 ImageTag 是否已赋值
                      * @return ImageTag 是否已赋值
+                     * 
                      */
                     bool ImageTagHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Repository Path of the remote repository of the image
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRepository() const;
 
                     /**
                      * 设置Path of the remote repository of the image
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Repository Path of the remote repository of the image
+                     * @param _repository Path of the remote repository of the image
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRepository(const std::string& _repository);
 
                     /**
                      * 判断参数 Repository 是否已赋值
                      * @return Repository 是否已赋值
+                     * 
                      */
                     bool RepositoryHasBeenSet() const;
 

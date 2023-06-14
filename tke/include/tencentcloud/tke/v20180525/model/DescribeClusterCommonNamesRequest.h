@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Sub-account. Up to 50 sub-accounts can be passed in at a time.
                      * @return SubaccountUins Sub-account. Up to 50 sub-accounts can be passed in at a time.
+                     * 
                      */
                     std::vector<std::string> GetSubaccountUins() const;
 
                     /**
                      * 设置Sub-account. Up to 50 sub-accounts can be passed in at a time.
-                     * @param SubaccountUins Sub-account. Up to 50 sub-accounts can be passed in at a time.
+                     * @param _subaccountUins Sub-account. Up to 50 sub-accounts can be passed in at a time.
+                     * 
                      */
                     void SetSubaccountUins(const std::vector<std::string>& _subaccountUins);
 
                     /**
                      * 判断参数 SubaccountUins 是否已赋值
                      * @return SubaccountUins 是否已赋值
+                     * 
                      */
                     bool SubaccountUinsHasBeenSet() const;
 
                     /**
                      * 获取Role ID. Up to 50 role IDs can be passed in at a time.
                      * @return RoleIds Role ID. Up to 50 role IDs can be passed in at a time.
+                     * 
                      */
                     std::vector<std::string> GetRoleIds() const;
 
                     /**
                      * 设置Role ID. Up to 50 role IDs can be passed in at a time.
-                     * @param RoleIds Role ID. Up to 50 role IDs can be passed in at a time.
+                     * @param _roleIds Role ID. Up to 50 role IDs can be passed in at a time.
+                     * 
                      */
                     void SetRoleIds(const std::vector<std::string>& _roleIds);
 
                     /**
                      * 判断参数 RoleIds 是否已赋值
                      * @return RoleIds 是否已赋值
+                     * 
                      */
                     bool RoleIdsHasBeenSet() const;
 

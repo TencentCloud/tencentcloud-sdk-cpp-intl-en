@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Database information
                      * @return Items Database information
+                     * 
                      */
                     std::vector<std::string> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

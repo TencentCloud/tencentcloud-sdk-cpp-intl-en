@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of dcdbt-ow728lmc.
                      * @return InstanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of dcdbt-ow728lmc.
-                     * @param InstanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * @param _instanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Shard ID list.
                      * @return ShardInstanceIds Shard ID list.
+                     * 
                      */
                     std::vector<std::string> GetShardInstanceIds() const;
 
                     /**
                      * 设置Shard ID list.
-                     * @param ShardInstanceIds Shard ID list.
+                     * @param _shardInstanceIds Shard ID list.
+                     * 
                      */
                     void SetShardInstanceIds(const std::vector<std::string>& _shardInstanceIds);
 
                     /**
                      * 判断参数 ShardInstanceIds 是否已赋值
                      * @return ShardInstanceIds 是否已赋值
+                     * 
                      */
                     bool ShardInstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0
                      * @return Offset Offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0
-                     * @param Offset Offset. Default value: 0
+                     * @param _offset Offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Sort by field. Only `createtime` is supported currently.
                      * @return OrderBy Sort by field. Only `createtime` is supported currently.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sort by field. Only `createtime` is supported currently.
-                     * @param OrderBy Sort by field. Only `createtime` is supported currently.
+                     * @param _orderBy Sort by field. Only `createtime` is supported currently.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: desc, asc
                      * @return OrderByType Sorting order. Valid values: desc, asc
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting order. Valid values: desc, asc
-                     * @param OrderByType Sorting order. Valid values: desc, asc
+                     * @param _orderByType Sorting order. Valid values: desc, asc
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

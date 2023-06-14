@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Compliance standard ID
                      * @return StandardId Compliance standard ID
+                     * 
                      */
                     uint64_t GetStandardId() const;
 
                     /**
                      * 设置Compliance standard ID
-                     * @param StandardId Compliance standard ID
+                     * @param _standardId Compliance standard ID
+                     * 
                      */
                     void SetStandardId(const uint64_t& _standardId);
 
                     /**
                      * 判断参数 StandardId 是否已赋值
                      * @return StandardId 是否已赋值
+                     * 
                      */
                     bool StandardIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the compliance standard
                      * @return Enable Whether to enable the compliance standard
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Whether to enable the compliance standard
-                     * @param Enable Whether to enable the compliance standard
+                     * @param _enable Whether to enable the compliance standard
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

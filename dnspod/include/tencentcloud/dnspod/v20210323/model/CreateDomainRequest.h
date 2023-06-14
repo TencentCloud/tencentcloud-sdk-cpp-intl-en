@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Domain
                      * @return Domain Domain
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain
-                     * @param Domain Domain
+                     * @param _domain Domain
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
                      * @return GroupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
-                     * @param GroupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+                     * @param _groupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Whether the domain is starred. Valid values: yes, no.
                      * @return IsMark Whether the domain is starred. Valid values: yes, no.
+                     * 
                      */
                     std::string GetIsMark() const;
 
                     /**
                      * 设置Whether the domain is starred. Valid values: yes, no.
-                     * @param IsMark Whether the domain is starred. Valid values: yes, no.
+                     * @param _isMark Whether the domain is starred. Valid values: yes, no.
+                     * 
                      */
                     void SetIsMark(const std::string& _isMark);
 
                     /**
                      * 判断参数 IsMark 是否已赋值
                      * @return IsMark 是否已赋值
+                     * 
                      */
                     bool IsMarkHasBeenSet() const;
 

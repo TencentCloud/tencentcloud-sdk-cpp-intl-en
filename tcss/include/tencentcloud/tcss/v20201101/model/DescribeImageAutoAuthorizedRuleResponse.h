@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
                      * @return IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * 
                      */
                     int64_t GetIsEnabled() const;
 
                     /**
                      * 判断参数 IsEnabled 是否已赋值
                      * @return IsEnabled 是否已赋值
+                     * 
                      */
                     bool IsEnabledHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RangeType Scope. Valid values: `MANUAL` (specified servers); `ALL` (all images).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRangeType() const;
 
                     /**
                      * 判断参数 RangeType 是否已赋值
                      * @return RangeType 是否已赋值
+                     * 
                      */
                     bool RangeTypeHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostCount Number of servers when the scope is `MANUAL`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHostCount() const;
 
                     /**
                      * 判断参数 HostCount 是否已赋值
                      * @return HostCount 是否已赋值
+                     * 
                      */
                     bool HostCountHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaxDailyCount Maximum number of image licenses per day. `0`: Unlimited.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxDailyCount() const;
 
                     /**
                      * 判断参数 MaxDailyCount 是否已赋值
                      * @return MaxDailyCount 是否已赋值
+                     * 
                      */
                     bool MaxDailyCountHasBeenSet() const;
 
@@ -102,12 +110,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId Rule ID, which is `0` if not specified.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

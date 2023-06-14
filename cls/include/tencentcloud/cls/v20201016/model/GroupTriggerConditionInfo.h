@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of the field for triggering by group
                      * @return Key Name of the field for triggering by group
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Name of the field for triggering by group
-                     * @param Key Name of the field for triggering by group
+                     * @param _key Name of the field for triggering by group
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Value of the field for triggering by group
                      * @return Value Value of the field for triggering by group
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value of the field for triggering by group
-                     * @param Value Value of the field for triggering by group
+                     * @param _value Value of the field for triggering by group
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

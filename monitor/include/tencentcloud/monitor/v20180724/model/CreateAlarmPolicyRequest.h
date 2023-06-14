@@ -52,342 +52,399 @@ namespace TencentCloud
                     /**
                      * 获取Value fixed at "monitor"
                      * @return Module Value fixed at "monitor"
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Value fixed at "monitor"
-                     * @param Module Value fixed at "monitor"
+                     * @param _module Value fixed at "monitor"
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Policy name, which can contain up to 20 characters
                      * @return PolicyName Policy name, which can contain up to 20 characters
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name, which can contain up to 20 characters
-                     * @param PolicyName Policy name, which can contain up to 20 characters
+                     * @param _policyName Policy name, which can contain up to 20 characters
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
                     /**
                      * 获取Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
                      * @return MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+                     * 
                      */
                     std::string GetMonitorType() const;
 
                     /**
                      * 设置Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
-                     * @param MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+                     * @param _monitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+                     * 
                      */
                     void SetMonitorType(const std::string& _monitorType);
 
                     /**
                      * 判断参数 MonitorType 是否已赋值
                      * @return MonitorType 是否已赋值
+                     * 
                      */
                     bool MonitorTypeHasBeenSet() const;
 
                     /**
                      * 获取Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
                      * @return Namespace Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
-                     * @param Namespace Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
+                     * @param _namespace Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Remarks with up to 100 letters, digits, underscores, and hyphens
                      * @return Remark Remarks with up to 100 letters, digits, underscores, and hyphens
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks with up to 100 letters, digits, underscores, and hyphens
-                     * @param Remark Remarks with up to 100 letters, digits, underscores, and hyphens
+                     * @param _remark Remarks with up to 100 letters, digits, underscores, and hyphens
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
                      * @return Enable Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
-                     * @param Enable Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
+                     * @param _enable Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
                      * @return ProjectId Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
-                     * @param ProjectId Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
+                     * @param _projectId Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
                      * @return ConditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
+                     * 
                      */
                     int64_t GetConditionTemplateId() const;
 
                     /**
                      * 设置Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
-                     * @param ConditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
+                     * @param _conditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
+                     * 
                      */
                     void SetConditionTemplateId(const int64_t& _conditionTemplateId);
 
                     /**
                      * 判断参数 ConditionTemplateId 是否已赋值
                      * @return ConditionTemplateId 是否已赋值
+                     * 
                      */
                     bool ConditionTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
                      * @return Condition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+                     * 
                      */
                     AlarmPolicyCondition GetCondition() const;
 
                     /**
                      * 设置Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
-                     * @param Condition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+                     * @param _condition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+                     * 
                      */
                     void SetCondition(const AlarmPolicyCondition& _condition);
 
                     /**
                      * 判断参数 Condition 是否已赋值
                      * @return Condition 是否已赋值
+                     * 
                      */
                     bool ConditionHasBeenSet() const;
 
                     /**
                      * 获取Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
                      * @return EventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+                     * 
                      */
                     AlarmPolicyEventCondition GetEventCondition() const;
 
                     /**
                      * 设置Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
-                     * @param EventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+                     * @param _eventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+                     * 
                      */
                     void SetEventCondition(const AlarmPolicyEventCondition& _eventCondition);
 
                     /**
                      * 判断参数 EventCondition 是否已赋值
                      * @return EventCondition 是否已赋值
+                     * 
                      */
                     bool EventConditionHasBeenSet() const;
 
                     /**
                      * 获取List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
                      * @return NoticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+                     * 
                      */
                     std::vector<std::string> GetNoticeIds() const;
 
                     /**
                      * 设置List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
-                     * @param NoticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+                     * @param _noticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+                     * 
                      */
                     void SetNoticeIds(const std::vector<std::string>& _noticeIds);
 
                     /**
                      * 判断参数 NoticeIds 是否已赋值
                      * @return NoticeIds 是否已赋值
+                     * 
                      */
                     bool NoticeIdsHasBeenSet() const;
 
                     /**
                      * 获取Triggered task list
                      * @return TriggerTasks Triggered task list
+                     * 
                      */
                     std::vector<AlarmPolicyTriggerTask> GetTriggerTasks() const;
 
                     /**
                      * 设置Triggered task list
-                     * @param TriggerTasks Triggered task list
+                     * @param _triggerTasks Triggered task list
+                     * 
                      */
                     void SetTriggerTasks(const std::vector<AlarmPolicyTriggerTask>& _triggerTasks);
 
                     /**
                      * 判断参数 TriggerTasks 是否已赋值
                      * @return TriggerTasks 是否已赋值
+                     * 
                      */
                     bool TriggerTasksHasBeenSet() const;
 
                     /**
                      * 获取Global filter.
                      * @return Filter Global filter.
+                     * 
                      */
                     AlarmPolicyFilter GetFilter() const;
 
                     /**
                      * 设置Global filter.
-                     * @param Filter Global filter.
+                     * @param _filter Global filter.
+                     * 
                      */
                     void SetFilter(const AlarmPolicyFilter& _filter);
 
                     /**
                      * 判断参数 Filter 是否已赋值
                      * @return Filter 是否已赋值
+                     * 
                      */
                     bool FilterHasBeenSet() const;
 
                     /**
                      * 获取Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
                      * @return GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+                     * 
                      */
                     std::vector<std::string> GetGroupBy() const;
 
                     /**
                      * 设置Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
-                     * @param GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+                     * @param _groupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+                     * 
                      */
                     void SetGroupBy(const std::vector<std::string>& _groupBy);
 
                     /**
                      * 判断参数 GroupBy 是否已赋值
                      * @return GroupBy 是否已赋值
+                     * 
                      */
                     bool GroupByHasBeenSet() const;
 
                     /**
                      * 获取Tags bound to a template
                      * @return Tags Tags bound to a template
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tags bound to a template
-                     * @param Tags Tags bound to a template
+                     * @param _tags Tags bound to a template
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Log alarm information
                      * @return LogAlarmReqInfo Log alarm information
+                     * 
                      */
                     LogAlarmReq GetLogAlarmReqInfo() const;
 
                     /**
                      * 设置Log alarm information
-                     * @param LogAlarmReqInfo Log alarm information
+                     * @param _logAlarmReqInfo Log alarm information
+                     * 
                      */
                     void SetLogAlarmReqInfo(const LogAlarmReq& _logAlarmReqInfo);
 
                     /**
                      * 判断参数 LogAlarmReqInfo 是否已赋值
                      * @return LogAlarmReqInfo 是否已赋值
+                     * 
                      */
                     bool LogAlarmReqInfoHasBeenSet() const;
 
                     /**
                      * 获取Notification rules for different alarm levels
                      * @return HierarchicalNotices Notification rules for different alarm levels
+                     * 
                      */
                     std::vector<AlarmHierarchicalNotice> GetHierarchicalNotices() const;
 
                     /**
                      * 设置Notification rules for different alarm levels
-                     * @param HierarchicalNotices Notification rules for different alarm levels
+                     * @param _hierarchicalNotices Notification rules for different alarm levels
+                     * 
                      */
                     void SetHierarchicalNotices(const std::vector<AlarmHierarchicalNotice>& _hierarchicalNotices);
 
                     /**
                      * 判断参数 HierarchicalNotices 是否已赋值
                      * @return HierarchicalNotices 是否已赋值
+                     * 
                      */
                     bool HierarchicalNoticesHasBeenSet() const;
 
                     /**
                      * 获取A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
                      * @return MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     * 
                      */
                     int64_t GetMigrateFlag() const;
 
                     /**
                      * 设置A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
-                     * @param MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     * @param _migrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     * 
                      */
                     void SetMigrateFlag(const int64_t& _migrateFlag);
 
                     /**
                      * 判断参数 MigrateFlag 是否已赋值
                      * @return MigrateFlag 是否已赋值
+                     * 
                      */
                     bool MigrateFlagHasBeenSet() const;
 
                     /**
                      * 获取The alert configured for an event
                      * @return EbSubject The alert configured for an event
+                     * 
                      */
                     std::string GetEbSubject() const;
 
                     /**
                      * 设置The alert configured for an event
-                     * @param EbSubject The alert configured for an event
+                     * @param _ebSubject The alert configured for an event
+                     * 
                      */
                     void SetEbSubject(const std::string& _ebSubject);
 
                     /**
                      * 判断参数 EbSubject 是否已赋值
                      * @return EbSubject 是否已赋值
+                     * 
                      */
                     bool EbSubjectHasBeenSet() const;
 

@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of connections.
                      * @return TotalCount Number of connections.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Connection instance information list; It’s an old parameter, please switch to ProxySet.
                      * @return InstanceSet Connection instance information list; It’s an old parameter, please switch to ProxySet.
+                     * 
                      */
                     std::vector<ProxyInfo> GetInstanceSet() const;
 
                     /**
                      * 判断参数 InstanceSet 是否已赋值
                      * @return InstanceSet 是否已赋值
+                     * 
                      */
                     bool InstanceSetHasBeenSet() const;
 
                     /**
                      * 获取Connection instance information list; It’s a new parameter.
                      * @return ProxySet Connection instance information list; It’s a new parameter.
+                     * 
                      */
                     std::vector<ProxyInfo> GetProxySet() const;
 
                     /**
                      * 判断参数 ProxySet 是否已赋值
                      * @return ProxySet 是否已赋值
+                     * 
                      */
                     bool ProxySetHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The bandwidth package resource type, including `Address`, and `LoadBalance`
                      * @return ResourceType The bandwidth package resource type, including `Address`, and `LoadBalance`
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置The bandwidth package resource type, including `Address`, and `LoadBalance`
-                     * @param ResourceType The bandwidth package resource type, including `Address`, and `LoadBalance`
+                     * @param _resourceType The bandwidth package resource type, including `Address`, and `LoadBalance`
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
                      * @return ResourceId The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
-                     * @param ResourceId The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
+                     * @param _resourceId The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取The bandwidth package resource IP.
                      * @return AddressIp The bandwidth package resource IP.
+                     * 
                      */
                     std::string GetAddressIp() const;
 
                     /**
                      * 设置The bandwidth package resource IP.
-                     * @param AddressIp The bandwidth package resource IP.
+                     * @param _addressIp The bandwidth package resource IP.
+                     * 
                      */
                     void SetAddressIp(const std::string& _addressIp);
 
                     /**
                      * 判断参数 AddressIp 是否已赋值
                      * @return AddressIp 是否已赋值
+                     * 
                      */
                     bool AddressIpHasBeenSet() const;
 

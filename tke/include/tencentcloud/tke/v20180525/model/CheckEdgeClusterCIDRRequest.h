@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster VPC ID
                      * @return VpcId Cluster VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Cluster VPC ID
-                     * @param VpcId Cluster VPC ID
+                     * @param _vpcId Cluster VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster Pod CIDR block
                      * @return PodCIDR Cluster Pod CIDR block
+                     * 
                      */
                     std::string GetPodCIDR() const;
 
                     /**
                      * 设置Cluster Pod CIDR block
-                     * @param PodCIDR Cluster Pod CIDR block
+                     * @param _podCIDR Cluster Pod CIDR block
+                     * 
                      */
                     void SetPodCIDR(const std::string& _podCIDR);
 
                     /**
                      * 判断参数 PodCIDR 是否已赋值
                      * @return PodCIDR 是否已赋值
+                     * 
                      */
                     bool PodCIDRHasBeenSet() const;
 
                     /**
                      * 获取Cluster service CIDR block
                      * @return ServiceCIDR Cluster service CIDR block
+                     * 
                      */
                     std::string GetServiceCIDR() const;
 
                     /**
                      * 设置Cluster service CIDR block
-                     * @param ServiceCIDR Cluster service CIDR block
+                     * @param _serviceCIDR Cluster service CIDR block
+                     * 
                      */
                     void SetServiceCIDR(const std::string& _serviceCIDR);
 
                     /**
                      * 判断参数 ServiceCIDR 是否已赋值
                      * @return ServiceCIDR 是否已赋值
+                     * 
                      */
                     bool ServiceCIDRHasBeenSet() const;
 

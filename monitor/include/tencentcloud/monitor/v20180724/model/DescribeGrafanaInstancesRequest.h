@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Offset for query
                      * @return Offset Offset for query
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset for query
-                     * @param Offset Offset for query
+                     * @param _offset Offset for query
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of items to be queried
                      * @return Limit Number of items to be queried
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of items to be queried
-                     * @param Limit Number of items to be queried
+                     * @param _limit Number of items to be queried
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Array of TCMG instance IDs
                      * @return InstanceIds Array of TCMG instance IDs
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Array of TCMG instance IDs
-                     * @param InstanceIds Array of TCMG instance IDs
+                     * @param _instanceIds Array of TCMG instance IDs
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取TCMG instance name, which can be fuzzily matched by prefix.
                      * @return InstanceName TCMG instance name, which can be fuzzily matched by prefix.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置TCMG instance name, which can be fuzzily matched by prefix.
-                     * @param InstanceName TCMG instance name, which can be fuzzily matched by prefix.
+                     * @param _instanceName TCMG instance name, which can be fuzzily matched by prefix.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Query status
                      * @return InstanceStatus Query status
+                     * 
                      */
                     std::vector<int64_t> GetInstanceStatus() const;
 
                     /**
                      * 设置Query status
-                     * @param InstanceStatus Query status
+                     * @param _instanceStatus Query status
+                     * 
                      */
                     void SetInstanceStatus(const std::vector<int64_t>& _instanceStatus);
 
                     /**
                      * 判断参数 InstanceStatus 是否已赋值
                      * @return InstanceStatus 是否已赋值
+                     * 
                      */
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
                      * 获取Array of tag filters
                      * @return TagFilters Array of tag filters
+                     * 
                      */
                     std::vector<PrometheusTag> GetTagFilters() const;
 
                     /**
                      * 设置Array of tag filters
-                     * @param TagFilters Array of tag filters
+                     * @param _tagFilters Array of tag filters
+                     * 
                      */
                     void SetTagFilters(const std::vector<PrometheusTag>& _tagFilters);
 
                     /**
                      * 判断参数 TagFilters 是否已赋值
                      * @return TagFilters 是否已赋值
+                     * 
                      */
                     bool TagFiltersHasBeenSet() const;
 

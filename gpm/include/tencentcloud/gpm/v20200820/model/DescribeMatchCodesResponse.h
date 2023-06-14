@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MatchCodes MatchCode
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<MatchCodeAttr> GetMatchCodes() const;
 
                     /**
                      * 判断参数 MatchCodes 是否已赋值
                      * @return MatchCodes 是否已赋值
+                     * 
                      */
                     bool MatchCodesHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return TotalCount The total number of queried MatchCodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

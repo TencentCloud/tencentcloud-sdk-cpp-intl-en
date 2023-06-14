@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Log topic name
                      * @return TopicName Log topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Log topic name
-                     * @param TopicName Log topic name
+                     * @param _topicName Log topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Logset ID
                      * @return LogsetId Logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置Logset ID
-                     * @param LogsetId Logset ID
+                     * @param _logsetId Logset ID
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
                      * @return Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+                     * 
                      */
                     std::string GetChannel() const;
 
                     /**
                      * 设置Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
-                     * @param Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+                     * @param _channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+                     * 
                      */
                     void SetChannel(const std::string& _channel);
 
                     /**
                      * 判断参数 Channel 是否已赋值
                      * @return Channel 是否已赋值
+                     * 
                      */
                     bool ChannelHasBeenSet() const;
 
                     /**
                      * 获取Domain name region information
                      * @return DomainAreaConfigs Domain name region information
+                     * 
                      */
                     std::vector<DomainAreaConfig> GetDomainAreaConfigs() const;
 
                     /**
                      * 设置Domain name region information
-                     * @param DomainAreaConfigs Domain name region information
+                     * @param _domainAreaConfigs Domain name region information
+                     * 
                      */
                     void SetDomainAreaConfigs(const std::vector<DomainAreaConfig>& _domainAreaConfigs);
 
                     /**
                      * 判断参数 DomainAreaConfigs 是否已赋值
                      * @return DomainAreaConfigs 是否已赋值
+                     * 
                      */
                     bool DomainAreaConfigsHasBeenSet() const;
 

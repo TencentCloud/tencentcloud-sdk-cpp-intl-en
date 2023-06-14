@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The moderation template ID.
                      * @return Definition The moderation template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置The moderation template ID.
-                     * @param Definition The moderation template ID.
+                     * @param _definition The moderation template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -73,6 +76,7 @@ If this parameter is not specified or an empty array is passed in, `Media` will 
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
 If this parameter is not specified or an empty array is passed in, `Media` will be used.
+                     * 
                      */
                     std::vector<std::string> GetReviewContents() const;
 
@@ -81,16 +85,18 @@ If this parameter is not specified or an empty array is passed in, `Media` will 
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
 If this parameter is not specified or an empty array is passed in, `Media` will be used.
-                     * @param ReviewContents The type of moderated content. Valid values:
+                     * @param _reviewContents The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
 If this parameter is not specified or an empty array is passed in, `Media` will be used.
+                     * 
                      */
                     void SetReviewContents(const std::vector<std::string>& _reviewContents);
 
                     /**
                      * 判断参数 ReviewContents 是否已赋值
                      * @return ReviewContents 是否已赋值
+                     * 
                      */
                     bool ReviewContentsHasBeenSet() const;
 

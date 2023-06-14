@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Custom usage plan name.
                      * @return UsagePlanName Custom usage plan name.
+                     * 
                      */
                     std::string GetUsagePlanName() const;
 
                     /**
                      * 设置Custom usage plan name.
-                     * @param UsagePlanName Custom usage plan name.
+                     * @param _usagePlanName Custom usage plan name.
+                     * 
                      */
                     void SetUsagePlanName(const std::string& _usagePlanName);
 
                     /**
                      * 判断参数 UsagePlanName 是否已赋值
                      * @return UsagePlanName 是否已赋值
+                     * 
                      */
                     bool UsagePlanNameHasBeenSet() const;
 
                     /**
                      * 获取Custom usage plan description.
                      * @return UsagePlanDesc Custom usage plan description.
+                     * 
                      */
                     std::string GetUsagePlanDesc() const;
 
                     /**
                      * 设置Custom usage plan description.
-                     * @param UsagePlanDesc Custom usage plan description.
+                     * @param _usagePlanDesc Custom usage plan description.
+                     * 
                      */
                     void SetUsagePlanDesc(const std::string& _usagePlanDesc);
 
                     /**
                      * 判断参数 UsagePlanDesc 是否已赋值
                      * @return UsagePlanDesc 是否已赋值
+                     * 
                      */
                     bool UsagePlanDescHasBeenSet() const;
 
                     /**
                      * 获取Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
                      * @return MaxRequestNum Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
+                     * 
                      */
                     int64_t GetMaxRequestNum() const;
 
                     /**
                      * 设置Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
-                     * @param MaxRequestNum Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
+                     * @param _maxRequestNum Total number of requests allowed. Valid values: -1, [1,99999999]. The default value is `-1`, which indicates no limit.
+                     * 
                      */
                     void SetMaxRequestNum(const int64_t& _maxRequestNum);
 
                     /**
                      * 判断参数 MaxRequestNum 是否已赋值
                      * @return MaxRequestNum 是否已赋值
+                     * 
                      */
                     bool MaxRequestNumHasBeenSet() const;
 
                     /**
                      * 获取Limit of requests per second. Valid values: -1, [1,2000]. The default value is `-1`, which indicates no limit.
                      * @return MaxRequestNumPreSec Limit of requests per second. Valid values: -1, [1,2000]. The default value is `-1`, which indicates no limit.
+                     * 
                      */
                     int64_t GetMaxRequestNumPreSec() const;
 
                     /**
                      * 设置Limit of requests per second. Valid values: -1, [1,2000]. The default value is `-1`, which indicates no limit.
-                     * @param MaxRequestNumPreSec Limit of requests per second. Valid values: -1, [1,2000]. The default value is `-1`, which indicates no limit.
+                     * @param _maxRequestNumPreSec Limit of requests per second. Valid values: -1, [1,2000]. The default value is `-1`, which indicates no limit.
+                     * 
                      */
                     void SetMaxRequestNumPreSec(const int64_t& _maxRequestNumPreSec);
 
                     /**
                      * 判断参数 MaxRequestNumPreSec 是否已赋值
                      * @return MaxRequestNumPreSec 是否已赋值
+                     * 
                      */
                     bool MaxRequestNumPreSecHasBeenSet() const;
 

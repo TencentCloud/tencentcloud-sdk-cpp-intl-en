@@ -46,84 +46,98 @@ namespace TencentCloud
                     /**
                      * 获取IdP type. 11: Role IdP.
                      * @return ProviderType IdP type. 11: Role IdP.
+                     * 
                      */
                     uint64_t GetProviderType() const;
 
                     /**
                      * 判断参数 ProviderType 是否已赋值
                      * @return ProviderType 是否已赋值
+                     * 
                      */
                     bool ProviderTypeHasBeenSet() const;
 
                     /**
                      * 获取IdP URL.
                      * @return IdentityUrl IdP URL.
+                     * 
                      */
                     std::string GetIdentityUrl() const;
 
                     /**
                      * 判断参数 IdentityUrl 是否已赋值
                      * @return IdentityUrl 是否已赋值
+                     * 
                      */
                     bool IdentityUrlHasBeenSet() const;
 
                     /**
                      * 获取Public key for signature.
                      * @return IdentityKey Public key for signature.
+                     * 
                      */
                     std::string GetIdentityKey() const;
 
                     /**
                      * 判断参数 IdentityKey 是否已赋值
                      * @return IdentityKey 是否已赋值
+                     * 
                      */
                     bool IdentityKeyHasBeenSet() const;
 
                     /**
                      * 获取Client ID.
                      * @return ClientId Client ID.
+                     * 
                      */
                     std::vector<std::string> GetClientId() const;
 
                     /**
                      * 判断参数 ClientId 是否已赋值
                      * @return ClientId 是否已赋值
+                     * 
                      */
                     bool ClientIdHasBeenSet() const;
 
                     /**
                      * 获取Status. 0: Not set; 2: Disabled; 11: Enabled.
                      * @return Status Status. 0: Not set; 2: Disabled; 11: Enabled.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Description.
                      * @return Description Description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Name.
                      * @return Name Name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

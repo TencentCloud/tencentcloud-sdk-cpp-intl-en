@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the rule
                      * @return RuleId ID of the rule
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置ID of the rule
-                     * @param RuleId ID of the rule
+                     * @param _ruleId ID of the rule
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Rule description
                      * @return Description Rule description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description
-                     * @param Description Rule description
+                     * @param _description Rule description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Rule type
                      * @return RuleTypeName Rule type
+                     * 
                      */
                     std::string GetRuleTypeName() const;
 
                     /**
                      * 设置Rule type
-                     * @param RuleTypeName Rule type
+                     * @param _ruleTypeName Rule type
+                     * 
                      */
                     void SetRuleTypeName(const std::string& _ruleTypeName);
 
                     /**
                      * 判断参数 RuleTypeName 是否已赋值
                      * @return RuleTypeName 是否已赋值
+                     * 
                      */
                     bool RuleTypeNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the rule is enabled
                      * @return Status Whether the rule is enabled
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Whether the rule is enabled
-                     * @param Status Whether the rule is enabled
+                     * @param _status Whether the rule is enabled
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

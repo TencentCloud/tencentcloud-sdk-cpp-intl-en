@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MessageId messageID, which must be globally unique and is the metadata information used to identify the message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessageId() const;
 
                     /**
                      * 判断参数 MessageId 是否已赋值
                      * @return MessageId 是否已赋值
+                     * 
                      */
                     bool MessageIdHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ErrorMsg Returned error message. If an empty string is returned, no error occurred.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 

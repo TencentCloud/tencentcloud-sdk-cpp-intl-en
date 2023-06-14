@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取The input ID.
                      * @return InputID The input ID.
+                     * 
                      */
                     std::string GetInputID() const;
 
                     /**
                      * 设置The input ID.
-                     * @param InputID The input ID.
+                     * @param _inputID The input ID.
+                     * 
                      */
                     void SetInputID(const std::string& _inputID);
 
                     /**
                      * 判断参数 InputID 是否已赋值
                      * @return InputID 是否已赋值
+                     * 
                      */
                     bool InputIDHasBeenSet() const;
 
                     /**
                      * 获取The input name.
                      * @return InputName The input name.
+                     * 
                      */
                     std::string GetInputName() const;
 
                     /**
                      * 设置The input name.
-                     * @param InputName The input name.
+                     * @param _inputName The input name.
+                     * 
                      */
                     void SetInputName(const std::string& _inputName);
 
                     /**
                      * 判断参数 InputName 是否已赋值
                      * @return InputName 是否已赋值
+                     * 
                      */
                     bool InputNameHasBeenSet() const;
 
                     /**
                      * 获取The input protocol.
                      * @return Protocol The input protocol.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The input protocol.
-                     * @param Protocol The input protocol.
+                     * @param _protocol The input protocol.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取The stream status of the input.
                      * @return InputStreamInfoList The stream status of the input.
+                     * 
                      */
                     std::vector<InputStreamInfo> GetInputStreamInfoList() const;
 
                     /**
                      * 设置The stream status of the input.
-                     * @param InputStreamInfoList The stream status of the input.
+                     * @param _inputStreamInfoList The stream status of the input.
+                     * 
                      */
                     void SetInputStreamInfoList(const std::vector<InputStreamInfo>& _inputStreamInfoList);
 
                     /**
                      * 判断参数 InputStreamInfoList 是否已赋值
                      * @return InputStreamInfoList 是否已赋值
+                     * 
                      */
                     bool InputStreamInfoListHasBeenSet() const;
 

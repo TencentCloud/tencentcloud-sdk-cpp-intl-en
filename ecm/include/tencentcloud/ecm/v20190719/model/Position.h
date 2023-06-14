@@ -55,108 +55,126 @@ namespace TencentCloud
                     /**
                      * 获取Zone information of the instance.
                      * @return ZoneInfo Zone information of the instance.
+                     * 
                      */
                     ZoneInfo GetZoneInfo() const;
 
                     /**
                      * 设置Zone information of the instance.
-                     * @param ZoneInfo Zone information of the instance.
+                     * @param _zoneInfo Zone information of the instance.
+                     * 
                      */
                     void SetZoneInfo(const ZoneInfo& _zoneInfo);
 
                     /**
                      * 判断参数 ZoneInfo 是否已赋值
                      * @return ZoneInfo 是否已赋值
+                     * 
                      */
                     bool ZoneInfoHasBeenSet() const;
 
                     /**
                      * 获取Country/Region information of the instance.
                      * @return Country Country/Region information of the instance.
+                     * 
                      */
                     Country GetCountry() const;
 
                     /**
                      * 设置Country/Region information of the instance.
-                     * @param Country Country/Region information of the instance.
+                     * @param _country Country/Region information of the instance.
+                     * 
                      */
                     void SetCountry(const Country& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
                     /**
                      * 获取Area information of the instance.
                      * @return Area Area information of the instance.
+                     * 
                      */
                     Area GetArea() const;
 
                     /**
                      * 设置Area information of the instance.
-                     * @param Area Area information of the instance.
+                     * @param _area Area information of the instance.
+                     * 
                      */
                     void SetArea(const Area& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Province/State information of the instance.
                      * @return Province Province/State information of the instance.
+                     * 
                      */
                     Province GetProvince() const;
 
                     /**
                      * 设置Province/State information of the instance.
-                     * @param Province Province/State information of the instance.
+                     * @param _province Province/State information of the instance.
+                     * 
                      */
                     void SetProvince(const Province& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
                     /**
                      * 获取City information of the instance.
                      * @return City City information of the instance.
+                     * 
                      */
                     City GetCity() const;
 
                     /**
                      * 设置City information of the instance.
-                     * @param City City information of the instance.
+                     * @param _city City information of the instance.
+                     * 
                      */
                     void SetCity(const City& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 
                     /**
                      * 获取Region information of the instance.
                      * @return RegionInfo Region information of the instance.
+                     * 
                      */
                     RegionInfo GetRegionInfo() const;
 
                     /**
                      * 设置Region information of the instance.
-                     * @param RegionInfo Region information of the instance.
+                     * @param _regionInfo Region information of the instance.
+                     * 
                      */
                     void SetRegionInfo(const RegionInfo& _regionInfo);
 
                     /**
                      * 判断参数 RegionInfo 是否已赋值
                      * @return RegionInfo 是否已赋值
+                     * 
                      */
                     bool RegionInfoHasBeenSet() const;
 

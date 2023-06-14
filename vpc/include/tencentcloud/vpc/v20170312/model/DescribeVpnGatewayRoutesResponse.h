@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Destination routes of the VPN gateway
                      * @return Routes Destination routes of the VPN gateway
+                     * 
                      */
                     std::vector<VpnGatewayRoute> GetRoutes() const;
 
                     /**
                      * 判断参数 Routes 是否已赋值
                      * @return Routes 是否已赋值
+                     * 
                      */
                     bool RoutesHasBeenSet() const;
 

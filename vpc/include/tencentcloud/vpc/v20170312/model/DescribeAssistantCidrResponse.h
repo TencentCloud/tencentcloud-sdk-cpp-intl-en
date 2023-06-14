@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return AssistantCidrSet A set of eligible secondary CIDR blocks
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<AssistantCidr> GetAssistantCidrSet() const;
 
                     /**
                      * 判断参数 AssistantCidrSet 是否已赋值
                      * @return AssistantCidrSet 是否已赋值
+                     * 
                      */
                     bool AssistantCidrSetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible instances.
                      * @return TotalCount Number of eligible instances.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

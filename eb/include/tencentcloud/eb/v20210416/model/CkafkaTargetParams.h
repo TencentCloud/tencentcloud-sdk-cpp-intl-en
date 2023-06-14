@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取CKafka topic to be delivered to
                      * @return TopicName CKafka topic to be delivered to
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置CKafka topic to be delivered to
-                     * @param TopicName CKafka topic to be delivered to
+                     * @param _topicName CKafka topic to be delivered to
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Retry policy
                      * @return RetryPolicy Retry policy
+                     * 
                      */
                     RetryPolicy GetRetryPolicy() const;
 
                     /**
                      * 设置Retry policy
-                     * @param RetryPolicy Retry policy
+                     * @param _retryPolicy Retry policy
+                     * 
                      */
                     void SetRetryPolicy(const RetryPolicy& _retryPolicy);
 
                     /**
                      * 判断参数 RetryPolicy 是否已赋值
                      * @return RetryPolicy 是否已赋值
+                     * 
                      */
                     bool RetryPolicyHasBeenSet() const;
 

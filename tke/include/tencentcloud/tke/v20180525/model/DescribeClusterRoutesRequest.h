@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Route table name.
                      * @return RouteTableName Route table name.
+                     * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
                      * 设置Route table name.
-                     * @param RouteTableName Route table name.
+                     * @param _routeTableName Route table name.
+                     * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
 
                     /**
                      * 判断参数 RouteTableName 是否已赋值
                      * @return RouteTableName 是否已赋值
+                     * 
                      */
                     bool RouteTableNameHasBeenSet() const;
 
                     /**
                      * 获取Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
                      * @return Filters Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
-                     * @param Filters Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+                     * @param _filters Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

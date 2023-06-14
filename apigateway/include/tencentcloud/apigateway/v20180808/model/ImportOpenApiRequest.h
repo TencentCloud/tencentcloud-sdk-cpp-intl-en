@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the service associated with the API
                      * @return ServiceId The unique ID of the service associated with the API
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置The unique ID of the service associated with the API
-                     * @param ServiceId The unique ID of the service associated with the API
+                     * @param _serviceId The unique ID of the service associated with the API
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Content of the openAPI
                      * @return Content Content of the openAPI
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Content of the openAPI
-                     * @param Content Content of the openAPI
+                     * @param _content Content of the openAPI
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Format of the content. Values: `YAML` (default), `JSON`
                      * @return EncodeType Format of the content. Values: `YAML` (default), `JSON`
+                     * 
                      */
                     std::string GetEncodeType() const;
 
                     /**
                      * 设置Format of the content. Values: `YAML` (default), `JSON`
-                     * @param EncodeType Format of the content. Values: `YAML` (default), `JSON`
+                     * @param _encodeType Format of the content. Values: `YAML` (default), `JSON`
+                     * 
                      */
                     void SetEncodeType(const std::string& _encodeType);
 
                     /**
                      * 判断参数 EncodeType 是否已赋值
                      * @return EncodeType 是否已赋值
+                     * 
                      */
                     bool EncodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Version of the content. It can only be `openAPI` for now.
                      * @return ContentVersion Version of the content. It can only be `openAPI` for now.
+                     * 
                      */
                     std::string GetContentVersion() const;
 
                     /**
                      * 设置Version of the content. It can only be `openAPI` for now.
-                     * @param ContentVersion Version of the content. It can only be `openAPI` for now.
+                     * @param _contentVersion Version of the content. It can only be `openAPI` for now.
+                     * 
                      */
                     void SetContentVersion(const std::string& _contentVersion);
 
                     /**
                      * 判断参数 ContentVersion 是否已赋值
                      * @return ContentVersion 是否已赋值
+                     * 
                      */
                     bool ContentVersionHasBeenSet() const;
 

@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Starting position of queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default.
                      * @return Offset Starting position of queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting position of queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default.
-                     * @param Offset Starting position of queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default.
+                     * @param _offset Starting position of queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
                      * @return Limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
-                     * @param Limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * @param _limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Currently, only filtering by `TopicName` is supported, and only one filter value can be entered
                      * @return Filters Currently, only filtering by `TopicName` is supported, and only one filter value can be entered
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Currently, only filtering by `TopicName` is supported, and only one filter value can be entered
-                     * @param Filters Currently, only filtering by `TopicName` is supported, and only one filter value can be entered
+                     * @param _filters Currently, only filtering by `TopicName` is supported, and only one filter value can be entered
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Tag match
                      * @return TagKey Tag match
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag match
-                     * @param TagKey Tag match
+                     * @param _tagKey Tag match
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取Exact match by `TopicName`
                      * @return TopicName Exact match by `TopicName`
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Exact match by `TopicName`
-                     * @param TopicName Exact match by `TopicName`
+                     * @param _topicName Exact match by `TopicName`
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 

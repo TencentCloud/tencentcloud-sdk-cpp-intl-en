@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取CHC instance ID
                      * @return ChcIds CHC instance ID
+                     * 
                      */
                     std::vector<std::string> GetChcIds() const;
 
                     /**
                      * 设置CHC instance ID
-                     * @param ChcIds CHC instance ID
+                     * @param _chcIds CHC instance ID
+                     * 
                      */
                     void SetChcIds(const std::vector<std::string>& _chcIds);
 
                     /**
                      * 判断参数 ChcIds 是否已赋值
                      * @return ChcIds 是否已赋值
+                     * 
                      */
                     bool ChcIdsHasBeenSet() const;
 
                     /**
                      * 获取Deployment network information
                      * @return DeployVirtualPrivateCloud Deployment network information
+                     * 
                      */
                     VirtualPrivateCloud GetDeployVirtualPrivateCloud() const;
 
                     /**
                      * 设置Deployment network information
-                     * @param DeployVirtualPrivateCloud Deployment network information
+                     * @param _deployVirtualPrivateCloud Deployment network information
+                     * 
                      */
                     void SetDeployVirtualPrivateCloud(const VirtualPrivateCloud& _deployVirtualPrivateCloud);
 
                     /**
                      * 判断参数 DeployVirtualPrivateCloud 是否已赋值
                      * @return DeployVirtualPrivateCloud 是否已赋值
+                     * 
                      */
                     bool DeployVirtualPrivateCloudHasBeenSet() const;
 
                     /**
                      * 获取Deployment network security group list
                      * @return DeploySecurityGroupIds Deployment network security group list
+                     * 
                      */
                     std::vector<std::string> GetDeploySecurityGroupIds() const;
 
                     /**
                      * 设置Deployment network security group list
-                     * @param DeploySecurityGroupIds Deployment network security group list
+                     * @param _deploySecurityGroupIds Deployment network security group list
+                     * 
                      */
                     void SetDeploySecurityGroupIds(const std::vector<std::string>& _deploySecurityGroupIds);
 
                     /**
                      * 判断参数 DeploySecurityGroupIds 是否已赋值
                      * @return DeploySecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool DeploySecurityGroupIdsHasBeenSet() const;
 

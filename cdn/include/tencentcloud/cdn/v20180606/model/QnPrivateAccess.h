@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Switch. Valid values: `on`, `off`.
                      * @return Switch Switch. Valid values: `on`, `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch. Valid values: `on`, `off`.
-                     * @param Switch Switch. Valid values: `on`, `off`.
+                     * @param _switch Switch. Valid values: `on`, `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -69,38 +72,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AccessKey Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
                      * 设置Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AccessKey Access ID
+                     * @param _accessKey Access ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
 
                     /**
                      * 判断参数 AccessKey 是否已赋值
                      * @return AccessKey 是否已赋值
+                     * 
                      */
                     bool AccessKeyHasBeenSet() const;
 
                     /**
                      * 获取Key
                      * @return SecretKey Key
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Key
-                     * @param SecretKey Key
+                     * @param _secretKey Key
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 

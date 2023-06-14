@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
                      * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
-                     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+                     * @param _instanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
                      * @return BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+                     * 
                      */
                     std::string GetBackupId() const;
 
                     /**
                      * 设置Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
-                     * @param BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+                     * @param _backupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+                     * 
                      */
                     void SetBackupId(const std::string& _backupId);
 
                     /**
                      * 判断参数 BackupId 是否已赋值
                      * @return BackupId 是否已赋值
+                     * 
                      */
                     bool BackupIdHasBeenSet() const;
 
                     /**
                      * 获取Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
                      * @return Password Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
-                     * @param Password Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
+                     * @param _password Instance password, which needs to be validated during instance restoration (this parameter is not required for password-free instances)
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

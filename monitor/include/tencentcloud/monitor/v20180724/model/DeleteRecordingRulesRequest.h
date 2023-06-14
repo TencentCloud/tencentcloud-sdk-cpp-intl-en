@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of rule IDs
                      * @return RuleIds List of rule IDs
+                     * 
                      */
                     std::vector<std::string> GetRuleIds() const;
 
                     /**
                      * 设置List of rule IDs
-                     * @param RuleIds List of rule IDs
+                     * @param _ruleIds List of rule IDs
+                     * 
                      */
                     void SetRuleIds(const std::vector<std::string>& _ruleIds);
 
                     /**
                      * 判断参数 RuleIds 是否已赋值
                      * @return RuleIds 是否已赋值
+                     * 
                      */
                     bool RuleIdsHasBeenSet() const;
 
                     /**
                      * 获取Prometheus instance ID
                      * @return InstanceId Prometheus instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Prometheus instance ID
-                     * @param InstanceId Prometheus instance ID
+                     * @param _instanceId Prometheus instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

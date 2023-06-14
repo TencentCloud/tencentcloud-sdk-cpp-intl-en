@@ -50,6 +50,7 @@ namespace TencentCloud
                      * @return Filters Filter conditions
 <li>`RuleType` - String  - Optional - Rule type</li>
 <li>`Status` - String - Optional - Status</li>
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
@@ -57,69 +58,80 @@ namespace TencentCloud
                      * 设置Filter conditions
 <li>`RuleType` - String  - Optional - Rule type</li>
 <li>`Status` - String - Optional - Status</li>
-                     * @param Filters Filter conditions
+                     * @param _filters Filter conditions
 <li>`RuleType` - String  - Optional - Rule type</li>
 <li>`Status` - String - Optional - Status</li>
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Sorting order
                      * @return Order Sorting order
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order
-                     * @param Order Sorting order
+                     * @param _order Sorting order
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return By Sorting field
+                     * 
                      */
                     std::vector<std::string> GetBy() const;
 
                     /**
                      * 设置Sorting field
-                     * @param By Sorting field
+                     * @param _by Sorting field
+                     * 
                      */
                     void SetBy(const std::vector<std::string>& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Fields to export
                      * @return ExportField Fields to export
+                     * 
                      */
                     std::vector<std::string> GetExportField() const;
 
                     /**
                      * 设置Fields to export
-                     * @param ExportField Fields to export
+                     * @param _exportField Fields to export
+                     * 
                      */
                     void SetExportField(const std::vector<std::string>& _exportField);
 
                     /**
                      * 判断参数 ExportField 是否已赋值
                      * @return ExportField 是否已赋值
+                     * 
                      */
                     bool ExportFieldHasBeenSet() const;
 

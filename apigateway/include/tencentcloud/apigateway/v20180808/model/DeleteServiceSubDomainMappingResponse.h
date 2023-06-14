@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether the path mapping of the custom domain name is successfully deleted.
                      * @return Result Whether the path mapping of the custom domain name is successfully deleted.
+                     * 
                      */
                     bool GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

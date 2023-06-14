@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Product description
                      * @return ProductDescription Product description
+                     * 
                      */
                     std::string GetProductDescription() const;
 
                     /**
                      * 设置Product description
-                     * @param ProductDescription Product description
+                     * @param _productDescription Product description
+                     * 
                      */
                     void SetProductDescription(const std::string& _productDescription);
 
                     /**
                      * 判断参数 ProductDescription 是否已赋值
                      * @return ProductDescription 是否已赋值
+                     * 
                      */
                     bool ProductDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Authentication type. `1` (default): certificate; `2`: signature
                      * @return EncryptionType Authentication type. `1` (default): certificate; `2`: signature
+                     * 
                      */
                     std::string GetEncryptionType() const;
 
                     /**
                      * 设置Authentication type. `1` (default): certificate; `2`: signature
-                     * @param EncryptionType Authentication type. `1` (default): certificate; `2`: signature
+                     * @param _encryptionType Authentication type. `1` (default): certificate; `2`: signature
+                     * 
                      */
                     void SetEncryptionType(const std::string& _encryptionType);
 
                     /**
                      * 判断参数 EncryptionType 是否已赋值
                      * @return EncryptionType 是否已赋值
+                     * 
                      */
                     bool EncryptionTypeHasBeenSet() const;
 
                     /**
                      * 获取Product region. Valid value: `gz` (Guangzhou)
                      * @return Region Product region. Valid value: `gz` (Guangzhou)
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Product region. Valid value: `gz` (Guangzhou)
-                     * @param Region Product region. Valid value: `gz` (Guangzhou)
+                     * @param _region Product region. Valid value: `gz` (Guangzhou)
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -105,236 +114,275 @@ namespace TencentCloud
 `0` (default): general; `2`: NB-IoT; `3`: LoRa gateway; `4`: LoRa; `5`: general gateway
                      * @return ProductType Product type. Valid values:
 `0` (default): general; `2`: NB-IoT; `3`: LoRa gateway; `4`: LoRa; `5`: general gateway
+                     * 
                      */
                     uint64_t GetProductType() const;
 
                     /**
                      * 设置Product type. Valid values:
 `0` (default): general; `2`: NB-IoT; `3`: LoRa gateway; `4`: LoRa; `5`: general gateway
-                     * @param ProductType Product type. Valid values:
+                     * @param _productType Product type. Valid values:
 `0` (default): general; `2`: NB-IoT; `3`: LoRa gateway; `4`: LoRa; `5`: general gateway
+                     * 
                      */
                     void SetProductType(const uint64_t& _productType);
 
                     /**
                      * 判断参数 ProductType 是否已赋值
                      * @return ProductType 是否已赋值
+                     * 
                      */
                     bool ProductTypeHasBeenSet() const;
 
                     /**
                      * 获取Data format. Valid values: `json` (default), `custom`
                      * @return Format Data format. Valid values: `json` (default), `custom`
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Data format. Valid values: `json` (default), `custom`
-                     * @param Format Data format. Valid values: `json` (default), `custom`
+                     * @param _format Data format. Valid values: `json` (default), `custom`
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取Platform of the product. Default value: `0`
                      * @return Platform Platform of the product. Default value: `0`
+                     * 
                      */
                     std::string GetPlatform() const;
 
                     /**
                      * 设置Platform of the product. Default value: `0`
-                     * @param Platform Platform of the product. Default value: `0`
+                     * @param _platform Platform of the product. Default value: `0`
+                     * 
                      */
                     void SetPlatform(const std::string& _platform);
 
                     /**
                      * 判断参数 Platform 是否已赋值
                      * @return Platform 是否已赋值
+                     * 
                      */
                     bool PlatformHasBeenSet() const;
 
                     /**
                      * 获取AppEUI at the LoRa product operator, required only for LoRa products
                      * @return Appeui AppEUI at the LoRa product operator, required only for LoRa products
+                     * 
                      */
                     std::string GetAppeui() const;
 
                     /**
                      * 设置AppEUI at the LoRa product operator, required only for LoRa products
-                     * @param Appeui AppEUI at the LoRa product operator, required only for LoRa products
+                     * @param _appeui AppEUI at the LoRa product operator, required only for LoRa products
+                     * 
                      */
                     void SetAppeui(const std::string& _appeui);
 
                     /**
                      * 判断参数 Appeui 是否已赋值
                      * @return Appeui 是否已赋值
+                     * 
                      */
                     bool AppeuiHasBeenSet() const;
 
                     /**
                      * 获取ID of the Thing Specification Language (TSL) model bound to the product. `-1` means no models are bound.
                      * @return ModelId ID of the Thing Specification Language (TSL) model bound to the product. `-1` means no models are bound.
+                     * 
                      */
                     std::string GetModelId() const;
 
                     /**
                      * 设置ID of the Thing Specification Language (TSL) model bound to the product. `-1` means no models are bound.
-                     * @param ModelId ID of the Thing Specification Language (TSL) model bound to the product. `-1` means no models are bound.
+                     * @param _modelId ID of the Thing Specification Language (TSL) model bound to the product. `-1` means no models are bound.
+                     * 
                      */
                     void SetModelId(const std::string& _modelId);
 
                     /**
                      * 判断参数 ModelId 是否已赋值
                      * @return ModelId 是否已赋值
+                     * 
                      */
                     bool ModelIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the TSL model bound to the product
                      * @return ModelName Name of the TSL model bound to the product
+                     * 
                      */
                     std::string GetModelName() const;
 
                     /**
                      * 设置Name of the TSL model bound to the product
-                     * @param ModelName Name of the TSL model bound to the product
+                     * @param _modelName Name of the TSL model bound to the product
+                     * 
                      */
                     void SetModelName(const std::string& _modelName);
 
                     /**
                      * 判断参数 ModelName 是否已赋值
                      * @return ModelName 是否已赋值
+                     * 
                      */
                     bool ModelNameHasBeenSet() const;
 
                     /**
                      * 获取Product key, which is specific to suite products
                      * @return ProductKey Product key, which is specific to suite products
+                     * 
                      */
                     std::string GetProductKey() const;
 
                     /**
                      * 设置Product key, which is specific to suite products
-                     * @param ProductKey Product key, which is specific to suite products
+                     * @param _productKey Product key, which is specific to suite products
+                     * 
                      */
                     void SetProductKey(const std::string& _productKey);
 
                     /**
                      * 判断参数 ProductKey 是否已赋值
                      * @return ProductKey 是否已赋值
+                     * 
                      */
                     bool ProductKeyHasBeenSet() const;
 
                     /**
                      * 获取Dynamic registration type. `0`: disable; `1`: preset device names; `2`: generate device names dynamically
                      * @return RegisterType Dynamic registration type. `0`: disable; `1`: preset device names; `2`: generate device names dynamically
+                     * 
                      */
                     uint64_t GetRegisterType() const;
 
                     /**
                      * 设置Dynamic registration type. `0`: disable; `1`: preset device names; `2`: generate device names dynamically
-                     * @param RegisterType Dynamic registration type. `0`: disable; `1`: preset device names; `2`: generate device names dynamically
+                     * @param _registerType Dynamic registration type. `0`: disable; `1`: preset device names; `2`: generate device names dynamically
+                     * 
                      */
                     void SetRegisterType(const uint64_t& _registerType);
 
                     /**
                      * 判断参数 RegisterType 是否已赋值
                      * @return RegisterType 是否已赋值
+                     * 
                      */
                     bool RegisterTypeHasBeenSet() const;
 
                     /**
                      * 获取Dynamic registration product key
                      * @return ProductSecret Dynamic registration product key
+                     * 
                      */
                     std::string GetProductSecret() const;
 
                     /**
                      * 设置Dynamic registration product key
-                     * @param ProductSecret Dynamic registration product key
+                     * @param _productSecret Dynamic registration product key
+                     * 
                      */
                     void SetProductSecret(const std::string& _productSecret);
 
                     /**
                      * 判断参数 ProductSecret 是否已赋值
                      * @return ProductSecret 是否已赋值
+                     * 
                      */
                     bool ProductSecretHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of devices that can be dynamically created when `RegisterType` is set to `2`
                      * @return RegisterLimit The maximum number of devices that can be dynamically created when `RegisterType` is set to `2`
+                     * 
                      */
                     uint64_t GetRegisterLimit() const;
 
                     /**
                      * 设置The maximum number of devices that can be dynamically created when `RegisterType` is set to `2`
-                     * @param RegisterLimit The maximum number of devices that can be dynamically created when `RegisterType` is set to `2`
+                     * @param _registerLimit The maximum number of devices that can be dynamically created when `RegisterType` is set to `2`
+                     * 
                      */
                     void SetRegisterLimit(const uint64_t& _registerLimit);
 
                     /**
                      * 判断参数 RegisterLimit 是否已赋值
                      * @return RegisterLimit 是否已赋值
+                     * 
                      */
                     bool RegisterLimitHasBeenSet() const;
 
                     /**
                      * 获取Original product ID of a transferred product. This parameter is empty for products that are not transferred.
                      * @return OriginProductId Original product ID of a transferred product. This parameter is empty for products that are not transferred.
+                     * 
                      */
                     std::string GetOriginProductId() const;
 
                     /**
                      * 设置Original product ID of a transferred product. This parameter is empty for products that are not transferred.
-                     * @param OriginProductId Original product ID of a transferred product. This parameter is empty for products that are not transferred.
+                     * @param _originProductId Original product ID of a transferred product. This parameter is empty for products that are not transferred.
+                     * 
                      */
                     void SetOriginProductId(const std::string& _originProductId);
 
                     /**
                      * 判断参数 OriginProductId 是否已赋值
                      * @return OriginProductId 是否已赋值
+                     * 
                      */
                     bool OriginProductIdHasBeenSet() const;
 
                     /**
                      * 获取Private CA certificate name
                      * @return PrivateCAName Private CA certificate name
+                     * 
                      */
                     std::string GetPrivateCAName() const;
 
                     /**
                      * 设置Private CA certificate name
-                     * @param PrivateCAName Private CA certificate name
+                     * @param _privateCAName Private CA certificate name
+                     * 
                      */
                     void SetPrivateCAName(const std::string& _privateCAName);
 
                     /**
                      * 判断参数 PrivateCAName 是否已赋值
                      * @return PrivateCAName 是否已赋值
+                     * 
                      */
                     bool PrivateCANameHasBeenSet() const;
 
                     /**
                      * 获取Original user ID of a transferred product. This parameter is empty for products that are not transferred.
                      * @return OriginUserId Original user ID of a transferred product. This parameter is empty for products that are not transferred.
+                     * 
                      */
                     uint64_t GetOriginUserId() const;
 
                     /**
                      * 设置Original user ID of a transferred product. This parameter is empty for products that are not transferred.
-                     * @param OriginUserId Original user ID of a transferred product. This parameter is empty for products that are not transferred.
+                     * @param _originUserId Original user ID of a transferred product. This parameter is empty for products that are not transferred.
+                     * 
                      */
                     void SetOriginUserId(const uint64_t& _originUserId);
 
                     /**
                      * 判断参数 OriginUserId 是否已赋值
                      * @return OriginUserId 是否已赋值
+                     * 
                      */
                     bool OriginUserIdHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Number of custom images. Default value: 1.
                      * @return BlueprintCount Number of custom images. Default value: 1.
+                     * 
                      */
                     int64_t GetBlueprintCount() const;
 
                     /**
                      * 设置Number of custom images. Default value: 1.
-                     * @param BlueprintCount Number of custom images. Default value: 1.
+                     * @param _blueprintCount Number of custom images. Default value: 1.
+                     * 
                      */
                     void SetBlueprintCount(const int64_t& _blueprintCount);
 
                     /**
                      * 判断参数 BlueprintCount 是否已赋值
                      * @return BlueprintCount 是否已赋值
+                     * 
                      */
                     bool BlueprintCountHasBeenSet() const;
 

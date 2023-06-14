@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID of the IP policy to be deleted.
                      * @return ServiceId Unique service ID of the IP policy to be deleted.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of the IP policy to be deleted.
-                     * @param ServiceId Unique service ID of the IP policy to be deleted.
+                     * @param _serviceId Unique service ID of the IP policy to be deleted.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the IP policy to be deleted.
                      * @return StrategyId Unique ID of the IP policy to be deleted.
+                     * 
                      */
                     std::string GetStrategyId() const;
 
                     /**
                      * 设置Unique ID of the IP policy to be deleted.
-                     * @param StrategyId Unique ID of the IP policy to be deleted.
+                     * @param _strategyId Unique ID of the IP policy to be deleted.
+                     * 
                      */
                     void SetStrategyId(const std::string& _strategyId);
 
                     /**
                      * 判断参数 StrategyId 是否已赋值
                      * @return StrategyId 是否已赋值
+                     * 
                      */
                     bool StrategyIdHasBeenSet() const;
 

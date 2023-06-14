@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The translation outcome.
                      * @return TargetText The translation outcome.
+                     * 
                      */
                     std::string GetTargetText() const;
 
                     /**
                      * 判断参数 TargetText 是否已赋值
                      * @return TargetText 是否已赋值
+                     * 
                      */
                     bool TargetTextHasBeenSet() const;
 
                     /**
                      * 获取The source language. See the request parameter `Source` for details.
                      * @return Source The source language. See the request parameter `Source` for details.
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取The target language. See the request parameter `Target` for details.
                      * @return Target The target language. See the request parameter `Target` for details.
+                     * 
                      */
                     std::string GetTarget() const;
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 

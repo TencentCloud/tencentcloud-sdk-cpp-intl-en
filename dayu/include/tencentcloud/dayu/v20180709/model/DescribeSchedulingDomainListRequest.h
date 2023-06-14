@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Number of items in a page. Returned results are not paged if you enter '0'.
                      * @return Limit Number of items in a page. Returned results are not paged if you enter '0'.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of items in a page. Returned results are not paged if you enter '0'.
-                     * @param Limit Number of items in a page. Returned results are not paged if you enter '0'.
+                     * @param _limit Number of items in a page. Returned results are not paged if you enter '0'.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Starting offset of the page. Value: (number of pages - 1) * items per page
                      * @return Offset Starting offset of the page. Value: (number of pages - 1) * items per page
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the page. Value: (number of pages - 1) * items per page
-                     * @param Offset Starting offset of the page. Value: (number of pages - 1) * items per page
+                     * @param _offset Starting offset of the page. Value: (number of pages - 1) * items per page
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取(Optional) Filter by specific domain name
                      * @return Domain (Optional) Filter by specific domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置(Optional) Filter by specific domain name
-                     * @param Domain (Optional) Filter by specific domain name
+                     * @param _domain (Optional) Filter by specific domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

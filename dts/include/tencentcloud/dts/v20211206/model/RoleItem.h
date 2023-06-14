@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RoleName Role name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RoleName Role name
+                     * @param _roleName Role name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NewRoleName Role name after migration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNewRoleName() const;
 
                     /**
                      * 设置Role name after migration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NewRoleName Role name after migration
+                     * @param _newRoleName Role name after migration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNewRoleName(const std::string& _newRoleName);
 
                     /**
                      * 判断参数 NewRoleName 是否已赋值
                      * @return NewRoleName 是否已赋值
+                     * 
                      */
                     bool NewRoleNameHasBeenSet() const;
 

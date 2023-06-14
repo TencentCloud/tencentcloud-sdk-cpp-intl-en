@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether the virtual zone is included.–
                      * @return IncludeVirtualZones Whether the virtual zone is included.–
+                     * 
                      */
                     bool GetIncludeVirtualZones() const;
 
                     /**
                      * 设置Whether the virtual zone is included.–
-                     * @param IncludeVirtualZones Whether the virtual zone is included.–
+                     * @param _includeVirtualZones Whether the virtual zone is included.–
+                     * 
                      */
                     void SetIncludeVirtualZones(const bool& _includeVirtualZones);
 
                     /**
                      * 判断参数 IncludeVirtualZones 是否已赋值
                      * @return IncludeVirtualZones 是否已赋值
+                     * 
                      */
                     bool IncludeVirtualZonesHasBeenSet() const;
 
                     /**
                      * 获取Whether to display all AZs in a region and the user’s permissions in each AZ.
                      * @return ShowPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+                     * 
                      */
                     bool GetShowPermission() const;
 
                     /**
                      * 设置Whether to display all AZs in a region and the user’s permissions in each AZ.
-                     * @param ShowPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+                     * @param _showPermission Whether to display all AZs in a region and the user’s permissions in each AZ.
+                     * 
                      */
                     void SetShowPermission(const bool& _showPermission);
 
                     /**
                      * 判断参数 ShowPermission 是否已赋值
                      * @return ShowPermission 是否已赋值
+                     * 
                      */
                     bool ShowPermissionHasBeenSet() const;
 

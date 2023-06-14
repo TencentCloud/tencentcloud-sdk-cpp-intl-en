@@ -59,6 +59,7 @@ namespace TencentCloud
 `middle`: medium protection
 `high`: strict protection
 ]
+                     * 
                      */
                     std::string GetDDoSLevel() const;
 
@@ -68,35 +69,40 @@ namespace TencentCloud
 `middle`: medium protection
 `high`: strict protection
 ]
-                     * @param DDoSLevel DDoS protection level:
+                     * @param _dDoSLevel DDoS protection level:
 `low`: loose protection
 `middle`: medium protection
 `high`: strict protection
 ]
+                     * 
                      */
                     void SetDDoSLevel(const std::string& _dDoSLevel);
 
                     /**
                      * 判断参数 DDoSLevel 是否已赋值
                      * @return DDoSLevel 是否已赋值
+                     * 
                      */
                     bool DDoSLevelHasBeenSet() const;
 
                     /**
                      * 获取DDoS cleansing threshold (in Mbps)
                      * @return DDoSThreshold DDoS cleansing threshold (in Mbps)
+                     * 
                      */
                     uint64_t GetDDoSThreshold() const;
 
                     /**
                      * 设置DDoS cleansing threshold (in Mbps)
-                     * @param DDoSThreshold DDoS cleansing threshold (in Mbps)
+                     * @param _dDoSThreshold DDoS cleansing threshold (in Mbps)
+                     * 
                      */
                     void SetDDoSThreshold(const uint64_t& _dDoSThreshold);
 
                     /**
                      * 判断参数 DDoSThreshold 是否已赋值
                      * @return DDoSThreshold 是否已赋值
+                     * 
                      */
                     bool DDoSThresholdHasBeenSet() const;
 
@@ -109,6 +115,7 @@ namespace TencentCloud
 `on`: enabled
 `off`: disabled
 ]
+                     * 
                      */
                     std::string GetDDoSAI() const;
 
@@ -117,16 +124,18 @@ namespace TencentCloud
 `on`: enabled
 `off`: disabled
 ]
-                     * @param DDoSAI DDoS AI protection switch:
+                     * @param _dDoSAI DDoS AI protection switch:
 `on`: enabled
 `off`: disabled
 ]
+                     * 
                      */
                     void SetDDoSAI(const std::string& _dDoSAI);
 
                     /**
                      * 判断参数 DDoSAI 是否已赋值
                      * @return DDoSAI 是否已赋值
+                     * 
                      */
                     bool DDoSAIHasBeenSet() const;
 
@@ -139,6 +148,7 @@ namespace TencentCloud
 `0`: disabled
 `1`: enabled
 ]
+                     * 
                      */
                     uint64_t GetCCEnable() const;
 
@@ -147,70 +157,81 @@ namespace TencentCloud
 `0`: disabled
 `1`: enabled
 ]
-                     * @param CCEnable CC cleansing switch
+                     * @param _cCEnable CC cleansing switch
 `0`: disabled
 `1`: enabled
 ]
+                     * 
                      */
                     void SetCCEnable(const uint64_t& _cCEnable);
 
                     /**
                      * 判断参数 CCEnable 是否已赋值
                      * @return CCEnable 是否已赋值
+                     * 
                      */
                     bool CCEnableHasBeenSet() const;
 
                     /**
                      * 获取CC cleansing threshold (in QPS)
                      * @return CCThreshold CC cleansing threshold (in QPS)
+                     * 
                      */
                     uint64_t GetCCThreshold() const;
 
                     /**
                      * 设置CC cleansing threshold (in QPS)
-                     * @param CCThreshold CC cleansing threshold (in QPS)
+                     * @param _cCThreshold CC cleansing threshold (in QPS)
+                     * 
                      */
                     void SetCCThreshold(const uint64_t& _cCThreshold);
 
                     /**
                      * 判断参数 CCThreshold 是否已赋值
                      * @return CCThreshold 是否已赋值
+                     * 
                      */
                     bool CCThresholdHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance configured
                      * @return InstanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     std::vector<InstanceRelation> GetInstanceDetailList() const;
 
                     /**
                      * 设置Anti-DDoS instance configured
-                     * @param InstanceDetailList Anti-DDoS instance configured
+                     * @param _instanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     void SetInstanceDetailList(const std::vector<InstanceRelation>& _instanceDetailList);
 
                     /**
                      * 判断参数 InstanceDetailList 是否已赋值
                      * @return InstanceDetailList 是否已赋值
+                     * 
                      */
                     bool InstanceDetailListHasBeenSet() const;
 
                     /**
                      * 获取Domain name and protocol protection thresholds
                      * @return ListenerCcThresholdList Domain name and protocol protection thresholds
+                     * 
                      */
                     std::vector<ListenerCcThreholdConfig> GetListenerCcThresholdList() const;
 
                     /**
                      * 设置Domain name and protocol protection thresholds
-                     * @param ListenerCcThresholdList Domain name and protocol protection thresholds
+                     * @param _listenerCcThresholdList Domain name and protocol protection thresholds
+                     * 
                      */
                     void SetListenerCcThresholdList(const std::vector<ListenerCcThreholdConfig>& _listenerCcThresholdList);
 
                     /**
                      * 判断参数 ListenerCcThresholdList 是否已赋值
                      * @return ListenerCcThresholdList 是否已赋值
+                     * 
                      */
                     bool ListenerCcThresholdListHasBeenSet() const;
 
@@ -219,20 +240,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SynFloodThreshold SYN traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSynFloodThreshold() const;
 
                     /**
                      * 设置SYN traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SynFloodThreshold SYN traffic threshold
+                     * @param _synFloodThreshold SYN traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSynFloodThreshold(const uint64_t& _synFloodThreshold);
 
                     /**
                      * 判断参数 SynFloodThreshold 是否已赋值
                      * @return SynFloodThreshold 是否已赋值
+                     * 
                      */
                     bool SynFloodThresholdHasBeenSet() const;
 
@@ -241,20 +265,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SynFloodPktThreshold SYN packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSynFloodPktThreshold() const;
 
                     /**
                      * 设置SYN packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SynFloodPktThreshold SYN packet threshold
+                     * @param _synFloodPktThreshold SYN packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSynFloodPktThreshold(const uint64_t& _synFloodPktThreshold);
 
                     /**
                      * 判断参数 SynFloodPktThreshold 是否已赋值
                      * @return SynFloodPktThreshold 是否已赋值
+                     * 
                      */
                     bool SynFloodPktThresholdHasBeenSet() const;
 
@@ -263,20 +290,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UdpFloodThreshold UDP traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetUdpFloodThreshold() const;
 
                     /**
                      * 设置UDP traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UdpFloodThreshold UDP traffic threshold
+                     * @param _udpFloodThreshold UDP traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUdpFloodThreshold(const uint64_t& _udpFloodThreshold);
 
                     /**
                      * 判断参数 UdpFloodThreshold 是否已赋值
                      * @return UdpFloodThreshold 是否已赋值
+                     * 
                      */
                     bool UdpFloodThresholdHasBeenSet() const;
 
@@ -285,20 +315,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UdpFloodPktThreshold UDP packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetUdpFloodPktThreshold() const;
 
                     /**
                      * 设置UDP packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UdpFloodPktThreshold UDP packet threshold
+                     * @param _udpFloodPktThreshold UDP packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUdpFloodPktThreshold(const uint64_t& _udpFloodPktThreshold);
 
                     /**
                      * 判断参数 UdpFloodPktThreshold 是否已赋值
                      * @return UdpFloodPktThreshold 是否已赋值
+                     * 
                      */
                     bool UdpFloodPktThresholdHasBeenSet() const;
 
@@ -307,20 +340,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AckFloodThreshold ACK traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAckFloodThreshold() const;
 
                     /**
                      * 设置ACK traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AckFloodThreshold ACK traffic threshold
+                     * @param _ackFloodThreshold ACK traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAckFloodThreshold(const uint64_t& _ackFloodThreshold);
 
                     /**
                      * 判断参数 AckFloodThreshold 是否已赋值
                      * @return AckFloodThreshold 是否已赋值
+                     * 
                      */
                     bool AckFloodThresholdHasBeenSet() const;
 
@@ -329,20 +365,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AckFloodPktThreshold ACK packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAckFloodPktThreshold() const;
 
                     /**
                      * 设置ACK packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AckFloodPktThreshold ACK packet threshold
+                     * @param _ackFloodPktThreshold ACK packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAckFloodPktThreshold(const uint64_t& _ackFloodPktThreshold);
 
                     /**
                      * 判断参数 AckFloodPktThreshold 是否已赋值
                      * @return AckFloodPktThreshold 是否已赋值
+                     * 
                      */
                     bool AckFloodPktThresholdHasBeenSet() const;
 
@@ -351,20 +390,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SynAckFloodThreshold SYNACK traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSynAckFloodThreshold() const;
 
                     /**
                      * 设置SYNACK traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SynAckFloodThreshold SYNACK traffic threshold
+                     * @param _synAckFloodThreshold SYNACK traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSynAckFloodThreshold(const uint64_t& _synAckFloodThreshold);
 
                     /**
                      * 判断参数 SynAckFloodThreshold 是否已赋值
                      * @return SynAckFloodThreshold 是否已赋值
+                     * 
                      */
                     bool SynAckFloodThresholdHasBeenSet() const;
 
@@ -373,20 +415,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SynAckFloodPktThreshold SYNACK packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSynAckFloodPktThreshold() const;
 
                     /**
                      * 设置SYNACK packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SynAckFloodPktThreshold SYNACK packet threshold
+                     * @param _synAckFloodPktThreshold SYNACK packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSynAckFloodPktThreshold(const uint64_t& _synAckFloodPktThreshold);
 
                     /**
                      * 判断参数 SynAckFloodPktThreshold 是否已赋值
                      * @return SynAckFloodPktThreshold 是否已赋值
+                     * 
                      */
                     bool SynAckFloodPktThresholdHasBeenSet() const;
 
@@ -395,20 +440,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RstFloodThreshold RST traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRstFloodThreshold() const;
 
                     /**
                      * 设置RST traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RstFloodThreshold RST traffic threshold
+                     * @param _rstFloodThreshold RST traffic threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRstFloodThreshold(const uint64_t& _rstFloodThreshold);
 
                     /**
                      * 判断参数 RstFloodThreshold 是否已赋值
                      * @return RstFloodThreshold 是否已赋值
+                     * 
                      */
                     bool RstFloodThresholdHasBeenSet() const;
 
@@ -417,20 +465,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RstFloodPktThreshold RST packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRstFloodPktThreshold() const;
 
                     /**
                      * 设置RST packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RstFloodPktThreshold RST packet threshold
+                     * @param _rstFloodPktThreshold RST packet threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRstFloodPktThreshold(const uint64_t& _rstFloodPktThreshold);
 
                     /**
                      * 判断参数 RstFloodPktThreshold 是否已赋值
                      * @return RstFloodPktThreshold 是否已赋值
+                     * 
                      */
                     bool RstFloodPktThresholdHasBeenSet() const;
 

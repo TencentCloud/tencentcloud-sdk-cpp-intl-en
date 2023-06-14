@@ -45,234 +45,273 @@ namespace TencentCloud
                     /**
                      * 获取Connection ID.
                      * @return DirectConnectId Connection ID.
+                     * 
                      */
                     std::string GetDirectConnectId() const;
 
                     /**
                      * 设置Connection ID.
-                     * @param DirectConnectId Connection ID.
+                     * @param _directConnectId Connection ID.
+                     * 
                      */
                     void SetDirectConnectId(const std::string& _directConnectId);
 
                     /**
                      * 判断参数 DirectConnectId 是否已赋值
                      * @return DirectConnectId 是否已赋值
+                     * 
                      */
                     bool DirectConnectIdHasBeenSet() const;
 
                     /**
                      * 获取Connection name.
                      * @return DirectConnectName Connection name.
+                     * 
                      */
                     std::string GetDirectConnectName() const;
 
                     /**
                      * 设置Connection name.
-                     * @param DirectConnectName Connection name.
+                     * @param _directConnectName Connection name.
+                     * 
                      */
                     void SetDirectConnectName(const std::string& _directConnectName);
 
                     /**
                      * 判断参数 DirectConnectName 是否已赋值
                      * @return DirectConnectName 是否已赋值
+                     * 
                      */
                     bool DirectConnectNameHasBeenSet() const;
 
                     /**
                      * 获取Circuit code of a connection, which is provided by the ISP or connection provider.
                      * @return CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
+                     * 
                      */
                     std::string GetCircuitCode() const;
 
                     /**
                      * 设置Circuit code of a connection, which is provided by the ISP or connection provider.
-                     * @param CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
+                     * @param _circuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
+                     * 
                      */
                     void SetCircuitCode(const std::string& _circuitCode);
 
                     /**
                      * 判断参数 CircuitCode 是否已赋值
                      * @return CircuitCode 是否已赋值
+                     * 
                      */
                     bool CircuitCodeHasBeenSet() const;
 
                     /**
                      * 获取VLAN for connection debugging.
                      * @return Vlan VLAN for connection debugging.
+                     * 
                      */
                     int64_t GetVlan() const;
 
                     /**
                      * 设置VLAN for connection debugging.
-                     * @param Vlan VLAN for connection debugging.
+                     * @param _vlan VLAN for connection debugging.
+                     * 
                      */
                     void SetVlan(const int64_t& _vlan);
 
                     /**
                      * 判断参数 Vlan 是否已赋值
                      * @return Vlan 是否已赋值
+                     * 
                      */
                     bool VlanHasBeenSet() const;
 
                     /**
                      * 获取Tencent-side IP address for connection debugging.
                      * @return TencentAddress Tencent-side IP address for connection debugging.
+                     * 
                      */
                     std::string GetTencentAddress() const;
 
                     /**
                      * 设置Tencent-side IP address for connection debugging.
-                     * @param TencentAddress Tencent-side IP address for connection debugging.
+                     * @param _tencentAddress Tencent-side IP address for connection debugging.
+                     * 
                      */
                     void SetTencentAddress(const std::string& _tencentAddress);
 
                     /**
                      * 判断参数 TencentAddress 是否已赋值
                      * @return TencentAddress 是否已赋值
+                     * 
                      */
                     bool TencentAddressHasBeenSet() const;
 
                     /**
                      * 获取User-side IP address for connection debugging.
                      * @return CustomerAddress User-side IP address for connection debugging.
+                     * 
                      */
                     std::string GetCustomerAddress() const;
 
                     /**
                      * 设置User-side IP address for connection debugging.
-                     * @param CustomerAddress User-side IP address for connection debugging.
+                     * @param _customerAddress User-side IP address for connection debugging.
+                     * 
                      */
                     void SetCustomerAddress(const std::string& _customerAddress);
 
                     /**
                      * 判断参数 CustomerAddress 是否已赋值
                      * @return CustomerAddress 是否已赋值
+                     * 
                      */
                     bool CustomerAddressHasBeenSet() const;
 
                     /**
                      * 获取Name of connection applicant, which is obtained from the account system by default.
                      * @return CustomerName Name of connection applicant, which is obtained from the account system by default.
+                     * 
                      */
                     std::string GetCustomerName() const;
 
                     /**
                      * 设置Name of connection applicant, which is obtained from the account system by default.
-                     * @param CustomerName Name of connection applicant, which is obtained from the account system by default.
+                     * @param _customerName Name of connection applicant, which is obtained from the account system by default.
+                     * 
                      */
                     void SetCustomerName(const std::string& _customerName);
 
                     /**
                      * 判断参数 CustomerName 是否已赋值
                      * @return CustomerName 是否已赋值
+                     * 
                      */
                     bool CustomerNameHasBeenSet() const;
 
                     /**
                      * 获取Email address of connection applicant, which is obtained from the account system by default.
                      * @return CustomerContactMail Email address of connection applicant, which is obtained from the account system by default.
+                     * 
                      */
                     std::string GetCustomerContactMail() const;
 
                     /**
                      * 设置Email address of connection applicant, which is obtained from the account system by default.
-                     * @param CustomerContactMail Email address of connection applicant, which is obtained from the account system by default.
+                     * @param _customerContactMail Email address of connection applicant, which is obtained from the account system by default.
+                     * 
                      */
                     void SetCustomerContactMail(const std::string& _customerContactMail);
 
                     /**
                      * 判断参数 CustomerContactMail 是否已赋值
                      * @return CustomerContactMail 是否已赋值
+                     * 
                      */
                     bool CustomerContactMailHasBeenSet() const;
 
                     /**
                      * 获取Contact number of connection applicant, which is obtained from the account system by default.
                      * @return CustomerContactNumber Contact number of connection applicant, which is obtained from the account system by default.
+                     * 
                      */
                     std::string GetCustomerContactNumber() const;
 
                     /**
                      * 设置Contact number of connection applicant, which is obtained from the account system by default.
-                     * @param CustomerContactNumber Contact number of connection applicant, which is obtained from the account system by default.
+                     * @param _customerContactNumber Contact number of connection applicant, which is obtained from the account system by default.
+                     * 
                      */
                     void SetCustomerContactNumber(const std::string& _customerContactNumber);
 
                     /**
                      * 判断参数 CustomerContactNumber 是否已赋值
                      * @return CustomerContactNumber 是否已赋值
+                     * 
                      */
                     bool CustomerContactNumberHasBeenSet() const;
 
                     /**
                      * 获取Fault reporting contact person.
                      * @return FaultReportContactPerson Fault reporting contact person.
+                     * 
                      */
                     std::string GetFaultReportContactPerson() const;
 
                     /**
                      * 设置Fault reporting contact person.
-                     * @param FaultReportContactPerson Fault reporting contact person.
+                     * @param _faultReportContactPerson Fault reporting contact person.
+                     * 
                      */
                     void SetFaultReportContactPerson(const std::string& _faultReportContactPerson);
 
                     /**
                      * 判断参数 FaultReportContactPerson 是否已赋值
                      * @return FaultReportContactPerson 是否已赋值
+                     * 
                      */
                     bool FaultReportContactPersonHasBeenSet() const;
 
                     /**
                      * 获取Fault reporting contact number.
                      * @return FaultReportContactNumber Fault reporting contact number.
+                     * 
                      */
                     std::string GetFaultReportContactNumber() const;
 
                     /**
                      * 设置Fault reporting contact number.
-                     * @param FaultReportContactNumber Fault reporting contact number.
+                     * @param _faultReportContactNumber Fault reporting contact number.
+                     * 
                      */
                     void SetFaultReportContactNumber(const std::string& _faultReportContactNumber);
 
                     /**
                      * 判断参数 FaultReportContactNumber 是否已赋值
                      * @return FaultReportContactNumber 是否已赋值
+                     * 
                      */
                     bool FaultReportContactNumberHasBeenSet() const;
 
                     /**
                      * 获取Whether the connection applicant has signed the service agreement.
                      * @return SignLaw Whether the connection applicant has signed the service agreement.
+                     * 
                      */
                     bool GetSignLaw() const;
 
                     /**
                      * 设置Whether the connection applicant has signed the service agreement.
-                     * @param SignLaw Whether the connection applicant has signed the service agreement.
+                     * @param _signLaw Whether the connection applicant has signed the service agreement.
+                     * 
                      */
                     void SetSignLaw(const bool& _signLaw);
 
                     /**
                      * 判断参数 SignLaw 是否已赋值
                      * @return SignLaw 是否已赋值
+                     * 
                      */
                     bool SignLawHasBeenSet() const;
 
                     /**
                      * 获取Connection’s bandwidth
                      * @return Bandwidth Connection’s bandwidth
+                     * 
                      */
                     uint64_t GetBandwidth() const;
 
                     /**
                      * 设置Connection’s bandwidth
-                     * @param Bandwidth Connection’s bandwidth
+                     * @param _bandwidth Connection’s bandwidth
+                     * 
                      */
                     void SetBandwidth(const uint64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 

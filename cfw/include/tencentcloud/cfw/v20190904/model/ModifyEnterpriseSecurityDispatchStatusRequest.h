@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Status. Values: `0` (Publish now), `1` (Stop publishing)
                      * @return Status Status. Values: `0` (Publish now), `1` (Stop publishing)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Status. Values: `0` (Publish now), `1` (Stop publishing)
-                     * @param Status Status. Values: `0` (Publish now), `1` (Stop publishing)
+                     * @param _status Status. Values: `0` (Publish now), `1` (Stop publishing)
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

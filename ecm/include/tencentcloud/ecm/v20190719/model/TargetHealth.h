@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IP Private IP of the target
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIP() const;
 
                     /**
                      * 设置Private IP of the target
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IP Private IP of the target
+                     * @param _iP Private IP of the target
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIP(const std::string& _iP);
 
                     /**
                      * 判断参数 IP 是否已赋值
                      * @return IP 是否已赋值
+                     * 
                      */
                     bool IPHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Port bound to the target
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Port bound to the target
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Port bound to the target
+                     * @param _port Port bound to the target
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HealthStatus Current health status. Valid values: true: healthy; false: unhealthy (e.g., check not started, checking, or exceptional status). CLB instance will route traffic to only healthy real servers whose weights are greater than 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetHealthStatus() const;
 
                     /**
                      * 设置Current health status. Valid values: true: healthy; false: unhealthy (e.g., check not started, checking, or exceptional status). CLB instance will route traffic to only healthy real servers whose weights are greater than 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HealthStatus Current health status. Valid values: true: healthy; false: unhealthy (e.g., check not started, checking, or exceptional status). CLB instance will route traffic to only healthy real servers whose weights are greater than 0.
+                     * @param _healthStatus Current health status. Valid values: true: healthy; false: unhealthy (e.g., check not started, checking, or exceptional status). CLB instance will route traffic to only healthy real servers whose weights are greater than 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHealthStatus(const bool& _healthStatus);
 
                     /**
                      * 判断参数 HealthStatus 是否已赋值
                      * @return HealthStatus 是否已赋值
+                     * 
                      */
                     bool HealthStatusHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TargetId Instance ID of the target
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTargetId() const;
 
                     /**
                      * 设置Instance ID of the target
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TargetId Instance ID of the target
+                     * @param _targetId Instance ID of the target
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargetId(const std::string& _targetId);
 
                     /**
                      * 判断参数 TargetId 是否已赋值
                      * @return TargetId 是否已赋值
+                     * 
                      */
                     bool TargetIdHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HealthStatusDetail Detailed information of the current health status. Valid values: Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status; Close: health check not configured.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHealthStatusDetail() const;
 
                     /**
                      * 设置Detailed information of the current health status. Valid values: Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status; Close: health check not configured.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HealthStatusDetail Detailed information of the current health status. Valid values: Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status; Close: health check not configured.
+                     * @param _healthStatusDetail Detailed information of the current health status. Valid values: Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status; Close: health check not configured.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHealthStatusDetail(const std::string& _healthStatusDetail);
 
                     /**
                      * 判断参数 HealthStatusDetail 是否已赋值
                      * @return HealthStatusDetail 是否已赋值
+                     * 
                      */
                     bool HealthStatusDetailHasBeenSet() const;
 

@@ -62,6 +62,7 @@ namespace TencentCloud
 `ASSET_HOST`: Server.
 
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     std::string GetAssetType() const;
 
@@ -75,7 +76,7 @@ namespace TencentCloud
 `ASSET_HOST`: Server.
 
 `ASSET_K8S`: K8s asset.
-                     * @param AssetType Asset type, which indicates to only query check items related to the specified asset type.
+                     * @param _assetType Asset type, which indicates to only query check items related to the specified asset type.
 
 `ASSET_CONTAINER`: Container.
 
@@ -84,48 +85,56 @@ namespace TencentCloud
 `ASSET_HOST`: Server.
 
 `ASSET_K8S`: K8s asset.
+                     * 
                      */
                     void SetAssetType(const std::string& _assetType);
 
                     /**
                      * 判断参数 AssetType 是否已赋值
                      * @return AssetType 是否已赋值
+                     * 
                      */
                     bool AssetTypeHasBeenSet() const;
 
                     /**
                      * 获取Initial offset. Default value: `0`.
                      * @return Offset Initial offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Initial offset. Default value: `0`.
-                     * @param Offset Initial offset. Default value: `0`.
+                     * @param _offset Initial offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -138,6 +147,7 @@ Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
 Name - String
 Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
 `ClusterName` is also available for K8s assets.
+                     * 
                      */
                     std::vector<ComplianceFilters> GetFilters() const;
 
@@ -146,16 +156,18 @@ Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
 Name - String
 Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
 `ClusterName` is also available for K8s assets.
-                     * @param Filters Filter
+                     * @param _filters Filter
 Name - String
 Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
 `ClusterName` is also available for K8s assets.
+                     * 
                      */
                     void SetFilters(const std::vector<ComplianceFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

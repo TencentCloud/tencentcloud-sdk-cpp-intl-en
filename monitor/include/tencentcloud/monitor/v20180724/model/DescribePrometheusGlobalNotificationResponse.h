@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Notification Global alert notification channel
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PrometheusNotificationItem GetNotification() const;
 
                     /**
                      * 判断参数 Notification 是否已赋值
                      * @return Notification 是否已赋值
+                     * 
                      */
                     bool NotificationHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of custom rules
                      * @return Total Total number of custom rules
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Policy list
                      * @return Policys Policy list
+                     * 
                      */
                     std::vector<CCPolicy> GetPolicys() const;
 
                     /**
                      * 判断参数 Policys 是否已赋值
                      * @return Policys 是否已赋值
+                     * 
                      */
                     bool PolicysHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Watermarking rule list.
                      * @return Rules Watermarking rule list.
+                     * 
                      */
                     std::vector<RuleInfo> GetRules() const;
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

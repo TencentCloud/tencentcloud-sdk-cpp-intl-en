@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID. The task status can be queried through the `DescribeFlow` API.
                      * @return FlowId Async task ID. The task status can be queried through the `DescribeFlow` API.
+                     * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 

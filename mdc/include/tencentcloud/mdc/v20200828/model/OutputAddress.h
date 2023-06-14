@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Output destination IP.
                      * @return Ip Output destination IP.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Output destination IP.
-                     * @param Ip Output destination IP.
+                     * @param _ip Output destination IP.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 

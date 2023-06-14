@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible accounts
                      * @return TotalCount Number of eligible accounts
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Details of eligible accounts
                      * @return Items Details of eligible accounts
+                     * 
                      */
                     std::vector<AccountInfo> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of instance connections
                      * @return MaxUserConnections The maximum number of instance connections
+                     * 
                      */
                     int64_t GetMaxUserConnections() const;
 
                     /**
                      * 判断参数 MaxUserConnections 是否已赋值
                      * @return MaxUserConnections 是否已赋值
+                     * 
                      */
                     bool MaxUserConnectionsHasBeenSet() const;
 

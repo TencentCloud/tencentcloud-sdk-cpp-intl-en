@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Region Region of the database
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region of the database
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Region Region of the database
+                     * @param _region Region of the database
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AccessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAccessType() const;
 
                     /**
                      * 设置Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AccessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
+                     * @param _accessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAccessType(const std::string& _accessType);
 
                     /**
                      * 判断参数 AccessType 是否已赋值
                      * @return AccessType 是否已赋值
+                     * 
                      */
                     bool AccessTypeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatabaseType() const;
 
                     /**
                      * 设置Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
+                     * @param _databaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabaseType(const std::string& _databaseType);
 
                     /**
                      * 判断参数 DatabaseType 是否已赋值
                      * @return DatabaseType 是否已赋值
+                     * 
                      */
                     bool DatabaseTypeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Info Database information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Endpoint> GetInfo() const;
 
                     /**
                      * 设置Database information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Info Database information
+                     * @param _info Database information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInfo(const std::vector<Endpoint>& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

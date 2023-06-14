@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Command
                      * @return Cmd Command
+                     * 
                      */
                     std::string GetCmd() const;
 
                     /**
                      * 设置Command
-                     * @param Cmd Command
+                     * @param _cmd Command
+                     * 
                      */
                     void SetCmd(const std::string& _cmd);
 
                     /**
                      * 判断参数 Cmd 是否已赋值
                      * @return Cmd 是否已赋值
+                     * 
                      */
                     bool CmdHasBeenSet() const;
 
                     /**
                      * 获取Duration
                      * @return Took Duration
+                     * 
                      */
                     int64_t GetTook() const;
 
                     /**
                      * 设置Duration
-                     * @param Took Duration
+                     * @param _took Duration
+                     * 
                      */
                     void SetTook(const int64_t& _took);
 
                     /**
                      * 判断参数 Took 是否已赋值
                      * @return Took 是否已赋值
+                     * 
                      */
                     bool TookHasBeenSet() const;
 

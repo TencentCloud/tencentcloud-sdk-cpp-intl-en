@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The domain that the API failed to operate.
                      * @return DomainName The domain that the API failed to operate.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置The domain that the API failed to operate.
-                     * @param DomainName The domain that the API failed to operate.
+                     * @param _domainName The domain that the API failed to operate.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取The API 3.0 error code.
                      * @return Code The API 3.0 error code.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置The API 3.0 error code.
-                     * @param Code The API 3.0 error code.
+                     * @param _code The API 3.0 error code.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取The API 3.0 error message.
                      * @return Message The API 3.0 error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置The API 3.0 error message.
-                     * @param Message The API 3.0 error message.
+                     * @param _message The API 3.0 error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

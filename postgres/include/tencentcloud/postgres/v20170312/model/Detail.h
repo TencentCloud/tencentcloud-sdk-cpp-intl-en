@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The total execution time (in ms) of all slow query statements during the specified period of time
                      * @return TotalTime The total execution time (in ms) of all slow query statements during the specified period of time
+                     * 
                      */
                     double GetTotalTime() const;
 
                     /**
                      * 设置The total execution time (in ms) of all slow query statements during the specified period of time
-                     * @param TotalTime The total execution time (in ms) of all slow query statements during the specified period of time
+                     * @param _totalTime The total execution time (in ms) of all slow query statements during the specified period of time
+                     * 
                      */
                     void SetTotalTime(const double& _totalTime);
 
                     /**
                      * 判断参数 TotalTime 是否已赋值
                      * @return TotalTime 是否已赋值
+                     * 
                      */
                     bool TotalTimeHasBeenSet() const;
 
                     /**
                      * 获取The total number of all slow query statements during the specified period of time
                      * @return TotalCallNum The total number of all slow query statements during the specified period of time
+                     * 
                      */
                     uint64_t GetTotalCallNum() const;
 
                     /**
                      * 设置The total number of all slow query statements during the specified period of time
-                     * @param TotalCallNum The total number of all slow query statements during the specified period of time
+                     * @param _totalCallNum The total number of all slow query statements during the specified period of time
+                     * 
                      */
                     void SetTotalCallNum(const uint64_t& _totalCallNum);
 
                     /**
                      * 判断参数 TotalCallNum 是否已赋值
                      * @return TotalCallNum 是否已赋值
+                     * 
                      */
                     bool TotalCallNumHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AnalysisItems The statistical analysis list of slow queries
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AnalysisItems> GetAnalysisItems() const;
 
                     /**
                      * 设置The statistical analysis list of slow queries
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AnalysisItems The statistical analysis list of slow queries
+                     * @param _analysisItems The statistical analysis list of slow queries
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnalysisItems(const std::vector<AnalysisItems>& _analysisItems);
 
                     /**
                      * 判断参数 AnalysisItems 是否已赋值
                      * @return AnalysisItems 是否已赋值
+                     * 
                      */
                     bool AnalysisItemsHasBeenSet() const;
 

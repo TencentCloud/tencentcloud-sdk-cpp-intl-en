@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取CKafka instance ID
                      * @return InstanceId CKafka instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置CKafka instance ID
-                     * @param InstanceId CKafka instance ID
+                     * @param _instanceId CKafka instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取CKafka topic name
                      * @return TopicName CKafka topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置CKafka topic name
-                     * @param TopicName CKafka topic name
+                     * @param _topicName CKafka topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 

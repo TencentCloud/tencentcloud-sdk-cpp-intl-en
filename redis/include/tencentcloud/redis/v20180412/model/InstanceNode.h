@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Id
                      * @return Id Id
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Id
-                     * @param Id Id
+                     * @param _id Id
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Node details
                      * @return InstanceClusterNode Node details
+                     * 
                      */
                     std::vector<InstanceClusterNode> GetInstanceClusterNode() const;
 
                     /**
                      * 设置Node details
-                     * @param InstanceClusterNode Node details
+                     * @param _instanceClusterNode Node details
+                     * 
                      */
                     void SetInstanceClusterNode(const std::vector<InstanceClusterNode>& _instanceClusterNode);
 
                     /**
                      * 判断参数 InstanceClusterNode 是否已赋值
                      * @return InstanceClusterNode 是否已赋值
+                     * 
                      */
                     bool InstanceClusterNodeHasBeenSet() const;
 

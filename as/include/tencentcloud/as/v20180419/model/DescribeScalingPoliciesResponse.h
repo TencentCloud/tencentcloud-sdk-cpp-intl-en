@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of AS alarm trigger policy details.
                      * @return ScalingPolicySet List of AS alarm trigger policy details.
+                     * 
                      */
                     std::vector<ScalingPolicy> GetScalingPolicySet() const;
 
                     /**
                      * 判断参数 ScalingPolicySet 是否已赋值
                      * @return ScalingPolicySet 是否已赋值
+                     * 
                      */
                     bool ScalingPolicySetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible notifications.
                      * @return TotalCount Number of eligible notifications.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

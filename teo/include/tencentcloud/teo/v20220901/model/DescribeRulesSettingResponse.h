@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
                      * @return Actions List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+                     * 
                      */
                     std::vector<RulesSettingAction> GetActions() const;
 
                     /**
                      * 判断参数 Actions 是否已赋值
                      * @return Actions 是否已赋值
+                     * 
                      */
                     bool ActionsHasBeenSet() const;
 

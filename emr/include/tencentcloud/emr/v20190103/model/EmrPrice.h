@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
                      * 设置The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginalCost The published price.
+                     * @param _originalCost The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
 
                     /**
                      * 判断参数 OriginalCost 是否已赋值
                      * @return OriginalCost 是否已赋值
+                     * 
                      */
                     bool OriginalCostHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiscountCost The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiscountCost() const;
 
                     /**
                      * 设置The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DiscountCost The discounted price.
+                     * @param _discountCost The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiscountCost(const std::string& _discountCost);
 
                     /**
                      * 判断参数 DiscountCost 是否已赋值
                      * @return DiscountCost 是否已赋值
+                     * 
                      */
                     bool DiscountCostHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Unit The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Unit The unit of the billable item.
+                     * @param _unit The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnit(const std::string& _unit);
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PriceSpec The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PriceResource GetPriceSpec() const;
 
                     /**
                      * 设置The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PriceSpec The queried spec.
+                     * @param _priceSpec The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPriceSpec(const PriceResource& _priceSpec);
 
                     /**
                      * 判断参数 PriceSpec 是否已赋值
                      * @return PriceSpec 是否已赋值
+                     * 
                      */
                     bool PriceSpecHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SupportSpotPaid Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSupportSpotPaid() const;
 
                     /**
                      * 设置Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SupportSpotPaid Whether spot instances are supported.
+                     * @param _supportSpotPaid Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSupportSpotPaid(const bool& _supportSpotPaid);
 
                     /**
                      * 判断参数 SupportSpotPaid 是否已赋值
                      * @return SupportSpotPaid 是否已赋值
+                     * 
                      */
                     bool SupportSpotPaidHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Update progress. Valid values: `doing` (updating); `success` (updated successfully); `failed` (failed to update).
                      * @return Status Update progress. Valid values: `doing` (updating); `success` (updated successfully); `failed` (failed to update).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Err Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErr() const;
 
                     /**
                      * 判断参数 Err 是否已赋值
                      * @return Err 是否已赋值
+                     * 
                      */
                     bool ErrHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Cluster instance ID
                      * @return InstanceId Cluster instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Cluster instance ID
-                     * @param InstanceId Cluster instance ID
+                     * @param _instanceId Cluster instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
+                     * 
                      */
                     uint64_t GetLogType() const;
 
@@ -80,107 +84,124 @@ namespace TencentCloud
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
-                     * @param LogType Log type. Default value: 1
+                     * @param _logType Log type. Default value: 1
 <li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
+                     * 
                      */
                     void SetLogType(const uint64_t& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
                     /**
                      * 获取Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
                      * @return SearchKey Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
-                     * @param SearchKey Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
+                     * @param _searchKey Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 
                     /**
                      * 获取Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
                      * @return StartTime Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
-                     * @param StartTime Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+                     * @param _startTime Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
                      * @return EndTime Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
-                     * @param EndTime Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+                     * @param _endTime Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Pagination start value. Default value: 0
                      * @return Offset Pagination start value. Default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination start value. Default value: 0
-                     * @param Offset Pagination start value. Default value: 0
+                     * @param _offset Pagination start value. Default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Default value: 100. Maximum value: 100
                      * @return Limit Number of entries per page. Default value: 100. Maximum value: 100
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Default value: 100. Maximum value: 100
-                     * @param Limit Number of entries per page. Default value: 100. Maximum value: 100
+                     * @param _limit Number of entries per page. Default value: 100. Maximum value: 100
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -191,6 +212,7 @@ namespace TencentCloud
                      * @return OrderByType Time sorting order. Default value: 0
 <li>0: descending</li>
 <li>1: ascending</li>
+                     * 
                      */
                     uint64_t GetOrderByType() const;
 
@@ -198,15 +220,17 @@ namespace TencentCloud
                      * 设置Time sorting order. Default value: 0
 <li>0: descending</li>
 <li>1: ascending</li>
-                     * @param OrderByType Time sorting order. Default value: 0
+                     * @param _orderByType Time sorting order. Default value: 0
 <li>0: descending</li>
 <li>1: ascending</li>
+                     * 
                      */
                     void SetOrderByType(const uint64_t& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Organization node ID.
                      * @return OrgNodeId Organization node ID.
+                     * 
                      */
                     std::string GetOrgNodeId() const;
 
                     /**
                      * 设置Organization node ID.
-                     * @param OrgNodeId Organization node ID.
+                     * @param _orgNodeId Organization node ID.
+                     * 
                      */
                     void SetOrgNodeId(const std::string& _orgNodeId);
 
                     /**
                      * 判断参数 OrgNodeId 是否已赋值
                      * @return OrgNodeId 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdHasBeenSet() const;
 

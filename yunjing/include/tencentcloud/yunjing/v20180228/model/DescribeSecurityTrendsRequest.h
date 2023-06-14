@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time.
                      * @return BeginDate Start time.
+                     * 
                      */
                     std::string GetBeginDate() const;
 
                     /**
                      * 设置Start time.
-                     * @param BeginDate Start time.
+                     * @param _beginDate Start time.
+                     * 
                      */
                     void SetBeginDate(const std::string& _beginDate);
 
                     /**
                      * 判断参数 BeginDate 是否已赋值
                      * @return BeginDate 是否已赋值
+                     * 
                      */
                     bool BeginDateHasBeenSet() const;
 
                     /**
                      * 获取End time.
                      * @return EndDate End time.
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置End time.
-                     * @param EndDate End time.
+                     * @param _endDate End time.
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 

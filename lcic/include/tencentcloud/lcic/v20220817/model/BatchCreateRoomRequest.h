@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The information of the rooms to create.
                      * @return RoomInfos The information of the rooms to create.
+                     * 
                      */
                     std::vector<RoomInfo> GetRoomInfos() const;
 
                     /**
                      * 设置The information of the rooms to create.
-                     * @param RoomInfos The information of the rooms to create.
+                     * @param _roomInfos The information of the rooms to create.
+                     * 
                      */
                     void SetRoomInfos(const std::vector<RoomInfo>& _roomInfos);
 
                     /**
                      * 判断参数 RoomInfos 是否已赋值
                      * @return RoomInfos 是否已赋值
+                     * 
                      */
                     bool RoomInfosHasBeenSet() const;
 

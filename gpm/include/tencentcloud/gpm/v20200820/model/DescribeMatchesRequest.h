@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取The current page number. If this parameter is left empty, all queried matches will be obtained.
                      * @return PageNumber The current page number. If this parameter is left empty, all queried matches will be obtained.
+                     * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
                      * 设置The current page number. If this parameter is left empty, all queried matches will be obtained.
-                     * @param PageNumber The current page number. If this parameter is left empty, all queried matches will be obtained.
+                     * @param _pageNumber The current page number. If this parameter is left empty, all queried matches will be obtained.
+                     * 
                      */
                     void SetPageNumber(const int64_t& _pageNumber);
 
                     /**
                      * 判断参数 PageNumber 是否已赋值
                      * @return PageNumber 是否已赋值
+                     * 
                      */
                     bool PageNumberHasBeenSet() const;
 
                     /**
                      * 获取Number of matchmaking lists per page. If this parameter is left empty, all queried matches will be obtained.
                      * @return PageSize Number of matchmaking lists per page. If this parameter is left empty, all queried matches will be obtained.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置Number of matchmaking lists per page. If this parameter is left empty, all queried matches will be obtained.
-                     * @param PageSize Number of matchmaking lists per page. If this parameter is left empty, all queried matches will be obtained.
+                     * @param _pageSize Number of matchmaking lists per page. If this parameter is left empty, all queried matches will be obtained.
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Query type (optional). Valid values: match (query by matchCode or matchName), rule (query by ruleCode or ruleName), and other types (not filtered)
                      * @return SearchType Query type (optional). Valid values: match (query by matchCode or matchName), rule (query by ruleCode or ruleName), and other types (not filtered)
+                     * 
                      */
                     std::string GetSearchType() const;
 
                     /**
                      * 设置Query type (optional). Valid values: match (query by matchCode or matchName), rule (query by ruleCode or ruleName), and other types (not filtered)
-                     * @param SearchType Query type (optional). Valid values: match (query by matchCode or matchName), rule (query by ruleCode or ruleName), and other types (not filtered)
+                     * @param _searchType Query type (optional). Valid values: match (query by matchCode or matchName), rule (query by ruleCode or ruleName), and other types (not filtered)
+                     * 
                      */
                     void SetSearchType(const std::string& _searchType);
 
                     /**
                      * 判断参数 SearchType 是否已赋值
                      * @return SearchType 是否已赋值
+                     * 
                      */
                     bool SearchTypeHasBeenSet() const;
 
                     /**
                      * 获取Keyword. Enter a keyword about SearchType to query.
                      * @return Keyword Keyword. Enter a keyword about SearchType to query.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Keyword. Enter a keyword about SearchType to query.
-                     * @param Keyword Keyword. Enter a keyword about SearchType to query.
+                     * @param _keyword Keyword. Enter a keyword about SearchType to query.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取Tags. Enter a tag for querying.
                      * @return Tags Tags. Enter a tag for querying.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tags. Enter a tag for querying.
-                     * @param Tags Tags. Enter a tag for querying.
+                     * @param _tags Tags. Enter a tag for querying.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

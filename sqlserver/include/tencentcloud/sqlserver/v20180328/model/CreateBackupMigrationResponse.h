@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Backup import task ID
                      * @return BackupMigrationId Backup import task ID
+                     * 
                      */
                     std::string GetBackupMigrationId() const;
 
                     /**
                      * 判断参数 BackupMigrationId 是否已赋值
                      * @return BackupMigrationId 是否已赋值
+                     * 
                      */
                     bool BackupMigrationIdHasBeenSet() const;
 

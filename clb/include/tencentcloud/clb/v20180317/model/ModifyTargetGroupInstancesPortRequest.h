@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Target group ID
                      * @return TargetGroupId Target group ID
+                     * 
                      */
                     std::string GetTargetGroupId() const;
 
                     /**
                      * 设置Target group ID
-                     * @param TargetGroupId Target group ID
+                     * @param _targetGroupId Target group ID
+                     * 
                      */
                     void SetTargetGroupId(const std::string& _targetGroupId);
 
                     /**
                      * 判断参数 TargetGroupId 是否已赋值
                      * @return TargetGroupId 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Array of servers for which to modify ports
                      * @return TargetGroupInstances Array of servers for which to modify ports
+                     * 
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
                      * 设置Array of servers for which to modify ports
-                     * @param TargetGroupInstances Array of servers for which to modify ports
+                     * @param _targetGroupInstances Array of servers for which to modify ports
+                     * 
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
 
                     /**
                      * 判断参数 TargetGroupInstances 是否已赋值
                      * @return TargetGroupInstances 是否已赋值
+                     * 
                      */
                     bool TargetGroupInstancesHasBeenSet() const;
 

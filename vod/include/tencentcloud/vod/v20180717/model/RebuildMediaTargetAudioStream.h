@@ -77,6 +77,7 @@ If `Container` is `mp4` or `flv`, the valid values are:
 <li>`mp2`</li>
 If `Container` is `hls`, the valid value is:
 <li>`libfdk_aac`</li>
+                     * 
                      */
                     std::string GetCodec() const;
 
@@ -96,7 +97,7 @@ If `Container` is `mp4` or `flv`, the valid values are:
 <li>`mp2`</li>
 If `Container` is `hls`, the valid value is:
 <li>`libfdk_aac`</li>
-                     * @param Codec The audio codec.
+                     * @param _codec The audio codec.
 If `Container` is `mp3`, the valid value is:
 <li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
@@ -111,12 +112,14 @@ If `Container` is `mp4` or `flv`, the valid values are:
 <li>`mp2`</li>
 If `Container` is `hls`, the valid value is:
 <li>`libfdk_aac`</li>
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 
@@ -125,20 +128,23 @@ If `Container` is `hls`, the valid value is:
 If the value is `0`, the original audio bitrate will be used.
                      * @return Bitrate The audio bitrate, in Kbps. Value range: 0 and 26-256.
 If the value is `0`, the original audio bitrate will be used.
+                     * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
                      * 设置The audio bitrate, in Kbps. Value range: 0 and 26-256.
 If the value is `0`, the original audio bitrate will be used.
-                     * @param Bitrate The audio bitrate, in Kbps. Value range: 0 and 26-256.
+                     * @param _bitrate The audio bitrate, in Kbps. Value range: 0 and 26-256.
 If the value is `0`, the original audio bitrate will be used.
+                     * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
 
                     /**
                      * 判断参数 Bitrate 是否已赋值
                      * @return Bitrate 是否已赋值
+                     * 
                      */
                     bool BitrateHasBeenSet() const;
 
@@ -155,6 +161,7 @@ Unit: Hz.
 <li>`48000`</li>
 
 Unit: Hz.
+                     * 
                      */
                     int64_t GetSampleRate() const;
 
@@ -165,18 +172,20 @@ Unit: Hz.
 <li>`48000`</li>
 
 Unit: Hz.
-                     * @param SampleRate The audio sample rate. Valid values:
+                     * @param _sampleRate The audio sample rate. Valid values:
 <li>`32000`</li>
 <li>`44100`</li>
 <li>`48000`</li>
 
 Unit: Hz.
+                     * 
                      */
                     void SetSampleRate(const int64_t& _sampleRate);
 
                     /**
                      * 判断参数 SampleRate 是否已赋值
                      * @return SampleRate 是否已赋值
+                     * 
                      */
                     bool SampleRateHasBeenSet() const;
 
@@ -195,6 +204,7 @@ Default value: `2`.
 
 You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
 Default value: `2`.
+                     * 
                      */
                     int64_t GetAudioChannel() const;
 
@@ -206,19 +216,21 @@ Default value: `2`.
 
 You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
 Default value: `2`.
-                     * @param AudioChannel The audio channels. Valid values:
+                     * @param _audioChannel The audio channels. Valid values:
 <li>`1`: Mono-channel</li>
 <li>`2`: Dual-channel</li>
 <li>`6`: Stereo</li>
 
 You cannot set this parameter to `6` if the container format is an audio format (FLAC, OGG, MP3, M4A).
 Default value: `2`.
+                     * 
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
 
                     /**
                      * 判断参数 AudioChannel 是否已赋值
                      * @return AudioChannel 是否已赋值
+                     * 
                      */
                     bool AudioChannelHasBeenSet() const;
 

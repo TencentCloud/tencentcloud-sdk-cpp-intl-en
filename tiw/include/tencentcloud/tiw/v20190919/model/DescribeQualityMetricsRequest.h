@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Start time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
                      * @return StartTime Start time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
-                     * @param StartTime Start time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
+                     * @param _startTime Start time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
                      * @return EndTime End time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
-                     * @param EndTime End time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
+                     * @param _endTime End time, which is a Unix timestamp in seconds. The time length cannot exceed seven days.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -121,6 +130,7 @@ namespace TencentCloud
   - verify_sdk_success_rate: The success rate of SDK verification, in percentage.
   - verify_sdk_in_one_second_rate: The rate of SDK verification completed within one second, in percentage.
   - verify_sdk_cost_avg: The average time taken by each SDK verification, in milliseconds.
+                     * 
                      */
                     std::string GetMetric() const;
 
@@ -137,7 +147,7 @@ namespace TencentCloud
   - verify_sdk_success_rate: The success rate of SDK verification, in percentage.
   - verify_sdk_in_one_second_rate: The rate of SDK verification completed within one second, in percentage.
   - verify_sdk_cost_avg: The average time taken by each SDK verification, in milliseconds.
-                     * @param Metric Metrics to be queried. Valid values:
+                     * @param _metric Metrics to be queried. Valid values:
   - image_load_total_count: The number of image loads.
   - image_load_fail_count: The number of image load failures.
   - image_load_success_rate: The success rate of image loading, in percentage.
@@ -149,30 +159,35 @@ namespace TencentCloud
   - verify_sdk_success_rate: The success rate of SDK verification, in percentage.
   - verify_sdk_in_one_second_rate: The rate of SDK verification completed within one second, in percentage.
   - verify_sdk_cost_avg: The average time taken by each SDK verification, in milliseconds.
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
                     /**
                      * 获取Aggregation interval. Valid value: `1h`.
                      * @return Interval Aggregation interval. Valid value: `1h`.
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Aggregation interval. Valid value: `1h`.
-                     * @param Interval Aggregation interval. Valid value: `1h`.
+                     * @param _interval Aggregation interval. Valid value: `1h`.
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 

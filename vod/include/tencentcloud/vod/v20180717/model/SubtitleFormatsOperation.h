@@ -55,6 +55,7 @@ namespace TencentCloud
 <li>add: Add the formats specified by `Formats`.</li>
 <li>delete: Delete the formats specified by `Formats`.<l/i>
 <li>reset: Reset the format list to formats specified by `Formats`.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -63,16 +64,18 @@ namespace TencentCloud
 <li>add: Add the formats specified by `Formats`.</li>
 <li>delete: Delete the formats specified by `Formats`.<l/i>
 <li>reset: Reset the format list to formats specified by `Formats`.</li>
-                     * @param Type The modification type. Valid values:
+                     * @param _type The modification type. Valid values:
 <li>add: Add the formats specified by `Formats`.</li>
 <li>delete: Delete the formats specified by `Formats`.<l/i>
 <li>reset: Reset the format list to formats specified by `Formats`.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -83,6 +86,7 @@ namespace TencentCloud
                      * @return Formats The subtitle format list. Valid values:
 <li>vtt</li>
 <li>srt</li>
+                     * 
                      */
                     std::vector<std::string> GetFormats() const;
 
@@ -90,15 +94,17 @@ namespace TencentCloud
                      * 设置The subtitle format list. Valid values:
 <li>vtt</li>
 <li>srt</li>
-                     * @param Formats The subtitle format list. Valid values:
+                     * @param _formats The subtitle format list. Valid values:
 <li>vtt</li>
 <li>srt</li>
+                     * 
                      */
                     void SetFormats(const std::vector<std::string>& _formats);
 
                     /**
                      * 判断参数 Formats 是否已赋值
                      * @return Formats 是否已赋值
+                     * 
                      */
                     bool FormatsHasBeenSet() const;
 

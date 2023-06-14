@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取1: enabled, 0: disabled
                      * @return Enable 1: enabled, 0: disabled
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置1: enabled, 0: disabled
-                     * @param Enable 1: enabled, 0: disabled
+                     * @param _enable 1: enabled, 0: disabled
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Response timeout period in seconds
                      * @return TimeOut Response timeout period in seconds
+                     * 
                      */
                     uint64_t GetTimeOut() const;
 
                     /**
                      * 设置Response timeout period in seconds
-                     * @param TimeOut Response timeout period in seconds
+                     * @param _timeOut Response timeout period in seconds
+                     * 
                      */
                     void SetTimeOut(const uint64_t& _timeOut);
 
                     /**
                      * 判断参数 TimeOut 是否已赋值
                      * @return TimeOut 是否已赋值
+                     * 
                      */
                     bool TimeOutHasBeenSet() const;
 
                     /**
                      * 获取Detection interval in seconds, which must be greater than the response timeout period
                      * @return Interval Detection interval in seconds, which must be greater than the response timeout period
+                     * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
                      * 设置Detection interval in seconds, which must be greater than the response timeout period
-                     * @param Interval Detection interval in seconds, which must be greater than the response timeout period
+                     * @param _interval Detection interval in seconds, which must be greater than the response timeout period
+                     * 
                      */
                     void SetInterval(const uint64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Unhealthy threshold in times
                      * @return KickNum Unhealthy threshold in times
+                     * 
                      */
                     uint64_t GetKickNum() const;
 
                     /**
                      * 设置Unhealthy threshold in times
-                     * @param KickNum Unhealthy threshold in times
+                     * @param _kickNum Unhealthy threshold in times
+                     * 
                      */
                     void SetKickNum(const uint64_t& _kickNum);
 
                     /**
                      * 判断参数 KickNum 是否已赋值
                      * @return KickNum 是否已赋值
+                     * 
                      */
                     bool KickNumHasBeenSet() const;
 
                     /**
                      * 获取Healthy threshold in times.
                      * @return AliveNum Healthy threshold in times.
+                     * 
                      */
                     uint64_t GetAliveNum() const;
 
                     /**
                      * 设置Healthy threshold in times.
-                     * @param AliveNum Healthy threshold in times.
+                     * @param _aliveNum Healthy threshold in times.
+                     * 
                      */
                     void SetAliveNum(const uint64_t& _aliveNum);
 
                     /**
                      * 判断参数 AliveNum 是否已赋值
                      * @return AliveNum 是否已赋值
+                     * 
                      */
                     bool AliveNumHasBeenSet() const;
 

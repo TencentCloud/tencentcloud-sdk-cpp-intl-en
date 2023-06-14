@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
                      * @return PolicyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
+                     * 
                      */
                     std::string GetPolicyAction() const;
 
                     /**
                      * 设置Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
-                     * @param PolicyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
+                     * @param _policyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
+                     * 
                      */
                     void SetPolicyAction(const std::string& _policyAction);
 
                     /**
                      * 判断参数 PolicyAction 是否已赋值
                      * @return PolicyAction 是否已赋值
+                     * 
                      */
                     bool PolicyActionHasBeenSet() const;
 
                     /**
                      * 获取Policy records
                      * @return PolicyList Policy records
+                     * 
                      */
                     std::vector<CCPrecisionPlyRecord> GetPolicyList() const;
 
                     /**
                      * 设置Policy records
-                     * @param PolicyList Policy records
+                     * @param _policyList Policy records
+                     * 
                      */
                     void SetPolicyList(const std::vector<CCPrecisionPlyRecord>& _policyList);
 
                     /**
                      * 判断参数 PolicyList 是否已赋值
                      * @return PolicyList 是否已赋值
+                     * 
                      */
                     bool PolicyListHasBeenSet() const;
 

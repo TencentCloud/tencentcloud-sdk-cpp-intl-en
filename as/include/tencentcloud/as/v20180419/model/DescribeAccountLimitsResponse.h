@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Maximum number of launch configurations allowed for creation by the user account
                      * @return MaxNumberOfLaunchConfigurations Maximum number of launch configurations allowed for creation by the user account
+                     * 
                      */
                     int64_t GetMaxNumberOfLaunchConfigurations() const;
 
                     /**
                      * 判断参数 MaxNumberOfLaunchConfigurations 是否已赋值
                      * @return MaxNumberOfLaunchConfigurations 是否已赋值
+                     * 
                      */
                     bool MaxNumberOfLaunchConfigurationsHasBeenSet() const;
 
                     /**
                      * 获取Current number of launch configurations under the user account
                      * @return NumberOfLaunchConfigurations Current number of launch configurations under the user account
+                     * 
                      */
                     int64_t GetNumberOfLaunchConfigurations() const;
 
                     /**
                      * 判断参数 NumberOfLaunchConfigurations 是否已赋值
                      * @return NumberOfLaunchConfigurations 是否已赋值
+                     * 
                      */
                     bool NumberOfLaunchConfigurationsHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of auto scaling groups allowed for creation by the user account
                      * @return MaxNumberOfAutoScalingGroups Maximum number of auto scaling groups allowed for creation by the user account
+                     * 
                      */
                     int64_t GetMaxNumberOfAutoScalingGroups() const;
 
                     /**
                      * 判断参数 MaxNumberOfAutoScalingGroups 是否已赋值
                      * @return MaxNumberOfAutoScalingGroups 是否已赋值
+                     * 
                      */
                     bool MaxNumberOfAutoScalingGroupsHasBeenSet() const;
 
                     /**
                      * 获取Current number of auto scaling groups under the user account
                      * @return NumberOfAutoScalingGroups Current number of auto scaling groups under the user account
+                     * 
                      */
                     int64_t GetNumberOfAutoScalingGroups() const;
 
                     /**
                      * 判断参数 NumberOfAutoScalingGroups 是否已赋值
                      * @return NumberOfAutoScalingGroups 是否已赋值
+                     * 
                      */
                     bool NumberOfAutoScalingGroupsHasBeenSet() const;
 

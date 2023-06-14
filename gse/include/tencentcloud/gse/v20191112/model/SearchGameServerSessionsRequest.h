@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Alias ID
                      * @return AliasId Alias ID
+                     * 
                      */
                     std::string GetAliasId() const;
 
                     /**
                      * 设置Alias ID
-                     * @param AliasId Alias ID
+                     * @param _aliasId Alias ID
+                     * 
                      */
                     void SetAliasId(const std::string& _aliasId);
 
                     /**
                      * 判断参数 AliasId 是否已赋值
                      * @return AliasId 是否已赋值
+                     * 
                      */
                     bool AliasIdHasBeenSet() const;
 
                     /**
                      * 获取Fleet ID
                      * @return FleetId Fleet ID
+                     * 
                      */
                     std::string GetFleetId() const;
 
                     /**
                      * 设置Fleet ID
-                     * @param FleetId Fleet ID
+                     * @param _fleetId Fleet ID
+                     * 
                      */
                     void SetFleetId(const std::string& _fleetId);
 
                     /**
                      * 判断参数 FleetId 是否已赋值
                      * @return FleetId 是否已赋值
+                     * 
                      */
                     bool FleetIdHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of entries in a single query
                      * @return Limit Maximum number of entries in a single query
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of entries in a single query
-                     * @param Limit Maximum number of entries in a single query
+                     * @param _limit Maximum number of entries in a single query
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     std::string GetNextToken() const;
 
                     /**
                      * 设置Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
-                     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * @param _nextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     void SetNextToken(const std::string& _nextToken);
 
                     /**
                      * 判断参数 NextToken 是否已赋值
                      * @return NextToken 是否已赋值
+                     * 
                      */
                     bool NextTokenHasBeenSet() const;
 
@@ -189,6 +201,7 @@ searching for game sessions that meets the following game server session attribu
         }
     ]
 }
+                     * 
                      */
                     std::string GetFilterExpression() const;
 
@@ -230,7 +243,7 @@ searching for game sessions that meets the following game server session attribu
         }
     ]
 }
-                     * @param FilterExpression Search filter expression. Valid values:
+                     * @param _filterExpression Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
 maximumSessions: maximum number of player sessions in `Number` type
@@ -267,12 +280,14 @@ searching for game sessions that meets the following game server session attribu
         }
     ]
 }
+                     * 
                      */
                     void SetFilterExpression(const std::string& _filterExpression);
 
                     /**
                      * 判断参数 FilterExpression 是否已赋值
                      * @return FilterExpression 是否已赋值
+                     * 
                      */
                     bool FilterExpressionHasBeenSet() const;
 
@@ -291,6 +306,7 @@ gameServerSessionId: game session ID in `String` type
 maximumSessions: maximum number of player sessions in `Number` type
 creationTimeMillis: creation time in milliseconds in `Number` type
 playerSessionCount: current number of player sessions in `Number` type
+                     * 
                      */
                     std::string GetSortExpression() const;
 
@@ -302,19 +318,21 @@ gameServerSessionId: game session ID in `String` type
 maximumSessions: maximum number of player sessions in `Number` type
 creationTimeMillis: creation time in milliseconds in `Number` type
 playerSessionCount: current number of player sessions in `Number` type
-                     * @param SortExpression Sorting keyword
+                     * @param _sortExpression Sorting keyword
 Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
 maximumSessions: maximum number of player sessions in `Number` type
 creationTimeMillis: creation time in milliseconds in `Number` type
 playerSessionCount: current number of player sessions in `Number` type
+                     * 
                      */
                     void SetSortExpression(const std::string& _sortExpression);
 
                     /**
                      * 判断参数 SortExpression 是否已赋值
                      * @return SortExpression 是否已赋值
+                     * 
                      */
                     bool SortExpressionHasBeenSet() const;
 

@@ -47,92 +47,107 @@ namespace TencentCloud
 
                      * @return SdkAppId The SDKAppID assigned by LCIC.
 
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
 
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
 
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The start time. The default start time is 30 minutes before the current time.
                      * @return StartTime The start time. The default start time is 30 minutes before the current time.
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置The start time. The default start time is 30 minutes before the current time.
-                     * @param StartTime The start time. The default start time is 30 minutes before the current time.
+                     * @param _startTime The start time. The default start time is 30 minutes before the current time.
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time. The default end time is 30 minutes after the current time.
                      * @return EndTime The end time. The default end time is 30 minutes after the current time.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置The end time. The default end time is 30 minutes after the current time.
-                     * @param EndTime The end time. The default end time is 30 minutes after the current time.
+                     * @param _endTime The end time. The default end time is 30 minutes after the current time.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The page to return records from. Pagination starts from 1.
                      * @return Page The page to return records from. Pagination starts from 1.
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置The page to return records from. Pagination starts from 1.
-                     * @param Page The page to return records from. Pagination starts from 1.
+                     * @param _page The page to return records from. Pagination starts from 1.
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取The number of records per page. The default is 10.
                      * @return Limit The number of records per page. The default is 10.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of records per page. The default is 10.
-                     * @param Limit The number of records per page. The default is 10.
+                     * @param _limit The number of records per page. The default is 10.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

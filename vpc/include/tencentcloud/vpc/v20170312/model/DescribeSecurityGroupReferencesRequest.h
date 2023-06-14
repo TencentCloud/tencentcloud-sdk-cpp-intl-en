@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取A set of security group instance IDs, e.g. ['sg-12345678']
                      * @return SecurityGroupIds A set of security group instance IDs, e.g. ['sg-12345678']
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置A set of security group instance IDs, e.g. ['sg-12345678']
-                     * @param SecurityGroupIds A set of security group instance IDs, e.g. ['sg-12345678']
+                     * @param _securityGroupIds A set of security group instance IDs, e.g. ['sg-12345678']
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 

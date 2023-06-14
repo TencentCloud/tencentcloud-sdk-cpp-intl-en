@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Bidding price
                      * @return MaxPrice Bidding price
+                     * 
                      */
                     std::string GetMaxPrice() const;
 
                     /**
                      * 设置Bidding price
-                     * @param MaxPrice Bidding price
+                     * @param _maxPrice Bidding price
+                     * 
                      */
                     void SetMaxPrice(const std::string& _maxPrice);
 
                     /**
                      * 判断参数 MaxPrice 是否已赋值
                      * @return MaxPrice 是否已赋值
+                     * 
                      */
                     bool MaxPriceHasBeenSet() const;
 
                     /**
                      * 获取Bidding request type. Currently only "one-time" is supported.
                      * @return SpotInstanceType Bidding request type. Currently only "one-time" is supported.
+                     * 
                      */
                     std::string GetSpotInstanceType() const;
 
                     /**
                      * 设置Bidding request type. Currently only "one-time" is supported.
-                     * @param SpotInstanceType Bidding request type. Currently only "one-time" is supported.
+                     * @param _spotInstanceType Bidding request type. Currently only "one-time" is supported.
+                     * 
                      */
                     void SetSpotInstanceType(const std::string& _spotInstanceType);
 
                     /**
                      * 判断参数 SpotInstanceType 是否已赋值
                      * @return SpotInstanceType 是否已赋值
+                     * 
                      */
                     bool SpotInstanceTypeHasBeenSet() const;
 

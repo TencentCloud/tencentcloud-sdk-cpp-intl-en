@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of vulnerabilities that can be prevented
                      * @return List List of vulnerabilities that can be prevented
+                     * 
                      */
                     std::vector<SupportDefenceVul> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

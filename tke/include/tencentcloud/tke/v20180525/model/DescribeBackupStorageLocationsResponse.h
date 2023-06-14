@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return BackupStorageLocationSet Detailed information of the backup repository 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BackupStorageLocation> GetBackupStorageLocationSet() const;
 
                     /**
                      * 判断参数 BackupStorageLocationSet 是否已赋值
                      * @return BackupStorageLocationSet 是否已赋值
+                     * 
                      */
                     bool BackupStorageLocationSetHasBeenSet() const;
 

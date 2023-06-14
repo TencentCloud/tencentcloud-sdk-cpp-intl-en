@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
                      * @return PluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+                     * 
                      */
                     std::vector<std::string> GetPluginIds() const;
 
                     /**
                      * 设置Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
-                     * @param PluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+                     * @param _pluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+                     * 
                      */
                     void SetPluginIds(const std::vector<std::string>& _pluginIds);
 
                     /**
                      * 判断参数 PluginIds 是否已赋值
                      * @return PluginIds 是否已赋值
+                     * 
                      */
                     bool PluginIdsHasBeenSet() const;
 
                     /**
                      * 获取TCMG instance ID, such as “grafana-abcdefg”.
                      * @return InstanceId TCMG instance ID, such as “grafana-abcdefg”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-abcdefg”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefg”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-abcdefg”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

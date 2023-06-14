@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Permission group ID
                      * @return AccessGroupId Permission group ID
+                     * 
                      */
                     std::string GetAccessGroupId() const;
 
                     /**
                      * 设置Permission group ID
-                     * @param AccessGroupId Permission group ID
+                     * @param _accessGroupId Permission group ID
+                     * 
                      */
                     void SetAccessGroupId(const std::string& _accessGroupId);
 
                     /**
                      * 判断参数 AccessGroupId 是否已赋值
                      * @return AccessGroupId 是否已赋值
+                     * 
                      */
                     bool AccessGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Permission group name
                      * @return AccessGroupName Permission group name
+                     * 
                      */
                     std::string GetAccessGroupName() const;
 
                     /**
                      * 设置Permission group name
-                     * @param AccessGroupName Permission group name
+                     * @param _accessGroupName Permission group name
+                     * 
                      */
                     void SetAccessGroupName(const std::string& _accessGroupName);
 
                     /**
                      * 判断参数 AccessGroupName 是否已赋值
                      * @return AccessGroupName 是否已赋值
+                     * 
                      */
                     bool AccessGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Permission group description
                      * @return Description Permission group description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Permission group description
-                     * @param Description Permission group description
+                     * @param _description Permission group description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

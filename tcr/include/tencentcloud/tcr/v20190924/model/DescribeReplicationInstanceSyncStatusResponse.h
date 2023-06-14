@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Synchronization status
                      * @return ReplicationStatus Synchronization status
+                     * 
                      */
                     std::string GetReplicationStatus() const;
 
                     /**
                      * 判断参数 ReplicationStatus 是否已赋值
                      * @return ReplicationStatus 是否已赋值
+                     * 
                      */
                     bool ReplicationStatusHasBeenSet() const;
 
                     /**
                      * 获取Synchronization completion time
                      * @return ReplicationTime Synchronization completion time
+                     * 
                      */
                     std::string GetReplicationTime() const;
 
                     /**
                      * 判断参数 ReplicationTime 是否已赋值
                      * @return ReplicationTime 是否已赋值
+                     * 
                      */
                     bool ReplicationTimeHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ReplicationLog Synchronization log
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReplicationLog GetReplicationLog() const;
 
                     /**
                      * 判断参数 ReplicationLog 是否已赋值
                      * @return ReplicationLog 是否已赋值
+                     * 
                      */
                     bool ReplicationLogHasBeenSet() const;
 

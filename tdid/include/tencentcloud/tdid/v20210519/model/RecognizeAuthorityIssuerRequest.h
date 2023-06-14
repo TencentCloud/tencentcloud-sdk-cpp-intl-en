@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The DID.
                      * @return Did The DID.
+                     * 
                      */
                     std::string GetDid() const;
 
                     /**
                      * 设置The DID.
-                     * @param Did The DID.
+                     * @param _did The DID.
+                     * 
                      */
                     void SetDid(const std::string& _did);
 
                     /**
                      * 判断参数 Did 是否已赋值
                      * @return Did 是否已赋值
+                     * 
                      */
                     bool DidHasBeenSet() const;
 

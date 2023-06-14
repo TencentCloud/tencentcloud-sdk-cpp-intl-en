@@ -51,6 +51,7 @@ K8s API: k8s_api
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
+                     * 
                      */
                     std::string GetLogType() const;
 
@@ -59,52 +60,60 @@ K8s API: k8s_api
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
-                     * @param LogType Log type
+                     * @param _logType Log type
 Container bash: container_bash
 Container startup: container_launch
 K8s API: k8s_api
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
                     /**
                      * 获取List of QUuids of bound servers
                      * @return BindList List of QUuids of bound servers
+                     * 
                      */
                     std::vector<std::string> GetBindList() const;
 
                     /**
                      * 设置List of QUuids of bound servers
-                     * @param BindList List of QUuids of bound servers
+                     * @param _bindList List of QUuids of bound servers
+                     * 
                      */
                     void SetBindList(const std::vector<std::string>& _bindList);
 
                     /**
                      * 判断参数 BindList 是否已赋值
                      * @return BindList 是否已赋值
+                     * 
                      */
                     bool BindListHasBeenSet() const;
 
                     /**
                      * 获取List of QUuids of servers to be unbound
                      * @return UnBindList List of QUuids of servers to be unbound
+                     * 
                      */
                     std::vector<std::string> GetUnBindList() const;
 
                     /**
                      * 设置List of QUuids of servers to be unbound
-                     * @param UnBindList List of QUuids of servers to be unbound
+                     * @param _unBindList List of QUuids of servers to be unbound
+                     * 
                      */
                     void SetUnBindList(const std::vector<std::string>& _unBindList);
 
                     /**
                      * 判断参数 UnBindList 是否已赋值
                      * @return UnBindList 是否已赋值
+                     * 
                      */
                     bool UnBindListHasBeenSet() const;
 

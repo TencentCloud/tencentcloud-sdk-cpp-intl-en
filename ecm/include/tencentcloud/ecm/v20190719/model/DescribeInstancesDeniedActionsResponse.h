@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Prohibited operations for the instance
                      * @return InstanceOperatorSet Prohibited operations for the instance
+                     * 
                      */
                     std::vector<InstanceOperator> GetInstanceOperatorSet() const;
 
                     /**
                      * 判断参数 InstanceOperatorSet 是否已赋值
                      * @return InstanceOperatorSet 是否已赋值
+                     * 
                      */
                     bool InstanceOperatorSetHasBeenSet() const;
 

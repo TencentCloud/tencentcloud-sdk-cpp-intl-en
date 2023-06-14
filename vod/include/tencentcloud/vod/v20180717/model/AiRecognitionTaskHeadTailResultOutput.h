@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Confidence of recognized opening credits. Value range: 0-100.
                      * @return HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
+                     * 
                      */
                     double GetHeadConfidence() const;
 
                     /**
                      * 设置Confidence of recognized opening credits. Value range: 0-100.
-                     * @param HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
+                     * @param _headConfidence Confidence of recognized opening credits. Value range: 0-100.
+                     * 
                      */
                     void SetHeadConfidence(const double& _headConfidence);
 
                     /**
                      * 判断参数 HeadConfidence 是否已赋值
                      * @return HeadConfidence 是否已赋值
+                     * 
                      */
                     bool HeadConfidenceHasBeenSet() const;
 
                     /**
                      * 获取End time point of video opening credits in seconds.
                      * @return HeadTimeOffset End time point of video opening credits in seconds.
+                     * 
                      */
                     double GetHeadTimeOffset() const;
 
                     /**
                      * 设置End time point of video opening credits in seconds.
-                     * @param HeadTimeOffset End time point of video opening credits in seconds.
+                     * @param _headTimeOffset End time point of video opening credits in seconds.
+                     * 
                      */
                     void SetHeadTimeOffset(const double& _headTimeOffset);
 
                     /**
                      * 判断参数 HeadTimeOffset 是否已赋值
                      * @return HeadTimeOffset 是否已赋值
+                     * 
                      */
                     bool HeadTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取Confidence of recognized closing credits. Value range: 0-100.
                      * @return TailConfidence Confidence of recognized closing credits. Value range: 0-100.
+                     * 
                      */
                     double GetTailConfidence() const;
 
                     /**
                      * 设置Confidence of recognized closing credits. Value range: 0-100.
-                     * @param TailConfidence Confidence of recognized closing credits. Value range: 0-100.
+                     * @param _tailConfidence Confidence of recognized closing credits. Value range: 0-100.
+                     * 
                      */
                     void SetTailConfidence(const double& _tailConfidence);
 
                     /**
                      * 判断参数 TailConfidence 是否已赋值
                      * @return TailConfidence 是否已赋值
+                     * 
                      */
                     bool TailConfidenceHasBeenSet() const;
 
                     /**
                      * 获取Start time point of video closing credits in seconds.
                      * @return TailTimeOffset Start time point of video closing credits in seconds.
+                     * 
                      */
                     double GetTailTimeOffset() const;
 
                     /**
                      * 设置Start time point of video closing credits in seconds.
-                     * @param TailTimeOffset Start time point of video closing credits in seconds.
+                     * @param _tailTimeOffset Start time point of video closing credits in seconds.
+                     * 
                      */
                     void SetTailTimeOffset(const double& _tailTimeOffset);
 
                     /**
                      * 判断参数 TailTimeOffset 是否已赋值
                      * @return TailTimeOffset 是否已赋值
+                     * 
                      */
                     bool TailTimeOffsetHasBeenSet() const;
 

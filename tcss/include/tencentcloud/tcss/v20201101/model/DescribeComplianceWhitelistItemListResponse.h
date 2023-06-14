@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Allowlist
                      * @return WhitelistItemSet Allowlist
+                     * 
                      */
                     std::vector<ComplianceWhitelistItem> GetWhitelistItemSet() const;
 
                     /**
                      * 判断参数 WhitelistItemSet 是否已赋值
                      * @return WhitelistItemSet 是否已赋值
+                     * 
                      */
                     bool WhitelistItemSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of allowed items
                      * @return TotalCount Total number of allowed items
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

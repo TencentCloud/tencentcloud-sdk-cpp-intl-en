@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Query start time, such as 2019-12-13 00:00:00
                      * @return StartTime Query start time, such as 2019-12-13 00:00:00
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Query start time, such as 2019-12-13 00:00:00
-                     * @param StartTime Query start time, such as 2019-12-13 00:00:00
+                     * @param _startTime Query start time, such as 2019-12-13 00:00:00
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Query end time, such as 2019-12-13 23:59:59
                      * @return EndTime Query end time, such as 2019-12-13 23:59:59
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Query end time, such as 2019-12-13 23:59:59
-                     * @param EndTime Query end time, such as 2019-12-13 23:59:59
+                     * @param _endTime Query end time, such as 2019-12-13 23:59:59
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -95,6 +101,7 @@ request: number of requests
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
+                     * 
                      */
                     std::vector<std::string> GetMetrics() const;
 
@@ -107,7 +114,7 @@ request: number of requests
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-                     * @param Metrics Specifies the query metric, which can be:
+                     * @param _metrics Specifies the query metric, which can be:
 flux: traffic (in bytes)
 bandwidth: bandwidth (in bps)
 request: number of requests
@@ -115,12 +122,14 @@ request: number of requests
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
+                     * 
                      */
                     void SetMetrics(const std::vector<std::string>& _metrics);
 
                     /**
                      * 判断参数 Metrics 是否已赋值
                      * @return Metrics 是否已赋值
+                     * 
                      */
                     bool MetricsHasBeenSet() const;
 
@@ -135,6 +144,7 @@ request: number of requests
 2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
 4 to 7 days: `30`, `60`, `120`, `240`, `1440`
 8 to 31 days: `60`, `120`, `240`, `1440`
+                     * 
                      */
                     int64_t GetInterval() const;
 
@@ -144,17 +154,19 @@ request: number of requests
 2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
 4 to 7 days: `30`, `60`, `120`, `240`, `1440`
 8 to 31 days: `60`, `120`, `240`, `1440`
-                     * @param Interval Sampling interval in minutes. The available options vary for different query period. See below: 
+                     * @param _interval Sampling interval in minutes. The available options vary for different query period. See below: 
 1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
 2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
 4 to 7 days: `30`, `60`, `120`, `240`, `1440`
 8 to 31 days: `60`, `120`, `240`, `1440`
+                     * 
                      */
                     void SetInterval(const int64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
@@ -165,6 +177,7 @@ Up to 30 acceleration domain names can be queried at a time.
                      * @return Domains Specifies the list of domain names to be queried
 
 Up to 30 acceleration domain names can be queried at a time.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
@@ -172,15 +185,17 @@ Up to 30 acceleration domain names can be queried at a time.
                      * 设置Specifies the list of domain names to be queried
 
 Up to 30 acceleration domain names can be queried at a time.
-                     * @param Domains Specifies the list of domain names to be queried
+                     * @param _domains Specifies the list of domain names to be queried
 
 Up to 30 acceleration domain names can be queried at a time.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
@@ -189,20 +204,23 @@ Up to 30 acceleration domain names can be queried at a time.
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
                      * @return Projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+                     * 
                      */
                     std::vector<int64_t> GetProjects() const;
 
                     /**
                      * 设置Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
-                     * @param Projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
+                     * @param _projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+                     * 
                      */
                     void SetProjects(const std::vector<int64_t>& _projects);
 
                     /**
                      * 判断参数 Projects 是否已赋值
                      * @return Projects 是否已赋值
+                     * 
                      */
                     bool ProjectsHasBeenSet() const;
 
@@ -217,6 +235,7 @@ mainland: Chinese mainland
 oversea: outside the Chinese mainland
 global: global
 Default value: global
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -226,17 +245,19 @@ mainland: Chinese mainland
 oversea: outside the Chinese mainland
 global: global
 Default value: global
-                     * @param Area Statistical areas:
+                     * @param _area Statistical areas:
 mainland: Chinese mainland
 oversea: outside the Chinese mainland
 global: global
 Default value: global
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

@@ -47,144 +47,168 @@ namespace TencentCloud
                     /**
                      * 获取ID of the environment
                      * @return EnvironmentId ID of the environment
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置ID of the environment
-                     * @param EnvironmentId ID of the environment
+                     * @param _environmentId ID of the environment
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Pagination limit
                      * @return Limit Pagination limit
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination limit
-                     * @param Limit Pagination limit
+                     * @param _limit Pagination limit
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset
                      * @return Offset Pagination offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset
-                     * @param Offset Pagination offset
+                     * @param _offset Pagination offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Source channel. Please keep the default value.
                      * @return SourceChannel Source channel. Please keep the default value.
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel. Please keep the default value.
-                     * @param SourceChannel Source channel. Please keep the default value.
+                     * @param _sourceChannel Source channel. Please keep the default value.
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 
                     /**
                      * 获取Application ID
                      * @return ApplicationId Application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Keyword for searching.
                      * @return Keyword Keyword for searching.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Keyword for searching.
-                     * @param Keyword Keyword for searching.
+                     * @param _keyword Keyword for searching.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取Filters for query 
                      * @return Filters Filters for query 
+                     * 
                      */
                     std::vector<QueryFilter> GetFilters() const;
 
                     /**
                      * 设置Filters for query 
-                     * @param Filters Filters for query 
+                     * @param _filters Filters for query 
+                     * 
                      */
                     void SetFilters(const std::vector<QueryFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return SortInfo Sorting field
+                     * 
                      */
                     SortType GetSortInfo() const;
 
                     /**
                      * 设置Sorting field
-                     * @param SortInfo Sorting field
+                     * @param _sortInfo Sorting field
+                     * 
                      */
                     void SetSortInfo(const SortType& _sortInfo);
 
                     /**
                      * 判断参数 SortInfo 是否已赋值
                      * @return SortInfo 是否已赋值
+                     * 
                      */
                     bool SortInfoHasBeenSet() const;
 

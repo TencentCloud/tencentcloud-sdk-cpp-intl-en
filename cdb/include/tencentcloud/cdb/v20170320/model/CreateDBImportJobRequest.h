@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
                      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取TencentDB username
                      * @return User TencentDB username
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置TencentDB username
-                     * @param User TencentDB username
+                     * @param _user TencentDB username
+                     * 
                      */
                     void SetUser(const std::string& _user);
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
                     /**
                      * 获取Filename. The file must be a .sql file uploaded to Tencent Cloud.
                      * @return FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename. The file must be a .sql file uploaded to Tencent Cloud.
-                     * @param FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     * @param _fileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Password of a TencentDB instance user account
                      * @return Password Password of a TencentDB instance user account
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password of a TencentDB instance user account
-                     * @param Password Password of a TencentDB instance user account
+                     * @param _password Password of a TencentDB instance user account
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Name of the target database. If this parameter is not passed in, no database is specified.
                      * @return DbName Name of the target database. If this parameter is not passed in, no database is specified.
+                     * 
                      */
                     std::string GetDbName() const;
 
                     /**
                      * 设置Name of the target database. If this parameter is not passed in, no database is specified.
-                     * @param DbName Name of the target database. If this parameter is not passed in, no database is specified.
+                     * @param _dbName Name of the target database. If this parameter is not passed in, no database is specified.
+                     * 
                      */
                     void SetDbName(const std::string& _dbName);
 
                     /**
                      * 判断参数 DbName 是否已赋值
                      * @return DbName 是否已赋值
+                     * 
                      */
                     bool DbNameHasBeenSet() const;
 
                     /**
                      * 获取URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
                      * @return CosUrl URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     * 
                      */
                     std::string GetCosUrl() const;
 
                     /**
                      * 设置URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
-                     * @param CosUrl URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     * @param _cosUrl URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     * 
                      */
                     void SetCosUrl(const std::string& _cosUrl);
 
                     /**
                      * 判断参数 CosUrl 是否已赋值
                      * @return CosUrl 是否已赋值
+                     * 
                      */
                     bool CosUrlHasBeenSet() const;
 

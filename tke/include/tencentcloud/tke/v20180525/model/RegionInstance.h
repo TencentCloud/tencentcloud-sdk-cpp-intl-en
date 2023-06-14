@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RegionName Region name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RegionName Region name
+                     * @param _regionName Region name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RegionId Region ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Status Region status
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Region status
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status Region status
+                     * @param _status Region status
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FeatureGates Status of region-related features (return all attributes in JSON format)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFeatureGates() const;
 
                     /**
                      * 设置Status of region-related features (return all attributes in JSON format)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FeatureGates Status of region-related features (return all attributes in JSON format)
+                     * @param _featureGates Status of region-related features (return all attributes in JSON format)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFeatureGates(const std::string& _featureGates);
 
                     /**
                      * 判断参数 FeatureGates 是否已赋值
                      * @return FeatureGates 是否已赋值
+                     * 
                      */
                     bool FeatureGatesHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Alias Region abbreviation
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAlias() const;
 
                     /**
                      * 设置Region abbreviation
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Alias Region abbreviation
+                     * @param _alias Region abbreviation
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlias(const std::string& _alias);
 
                     /**
                      * 判断参数 Alias 是否已赋值
                      * @return Alias 是否已赋值
+                     * 
                      */
                     bool AliasHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Remark Whitelisted location
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Whitelisted location
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Whitelisted location
+                     * @param _remark Whitelisted location
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

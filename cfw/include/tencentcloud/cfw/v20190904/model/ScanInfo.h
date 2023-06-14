@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Scanning result information
                      * @return ScanResultInfo Scanning result information
+                     * 
                      */
                     ScanResultInfo GetScanResultInfo() const;
 
                     /**
                      * 设置Scanning result information
-                     * @param ScanResultInfo Scanning result information
+                     * @param _scanResultInfo Scanning result information
+                     * 
                      */
                     void SetScanResultInfo(const ScanResultInfo& _scanResultInfo);
 
                     /**
                      * 判断参数 ScanResultInfo 是否已赋值
                      * @return ScanResultInfo 是否已赋值
+                     * 
                      */
                     bool ScanResultInfoHasBeenSet() const;
 
                     /**
                      * 获取Scanning status. 0: scanning; 1: completed; 2: auto scanning unselected
                      * @return ScanStatus Scanning status. 0: scanning; 1: completed; 2: auto scanning unselected
+                     * 
                      */
                     int64_t GetScanStatus() const;
 
                     /**
                      * 设置Scanning status. 0: scanning; 1: completed; 2: auto scanning unselected
-                     * @param ScanStatus Scanning status. 0: scanning; 1: completed; 2: auto scanning unselected
+                     * @param _scanStatus Scanning status. 0: scanning; 1: completed; 2: auto scanning unselected
+                     * 
                      */
                     void SetScanStatus(const int64_t& _scanStatus);
 
                     /**
                      * 判断参数 ScanStatus 是否已赋值
                      * @return ScanStatus 是否已赋值
+                     * 
                      */
                     bool ScanStatusHasBeenSet() const;
 
                     /**
                      * 获取Progress
                      * @return ScanPercent Progress
+                     * 
                      */
                     double GetScanPercent() const;
 
                     /**
                      * 设置Progress
-                     * @param ScanPercent Progress
+                     * @param _scanPercent Progress
+                     * 
                      */
                     void SetScanPercent(const double& _scanPercent);
 
                     /**
                      * 判断参数 ScanPercent 是否已赋值
                      * @return ScanPercent 是否已赋值
+                     * 
                      */
                     bool ScanPercentHasBeenSet() const;
 
                     /**
                      * 获取Estimated completion time
                      * @return ScanTime Estimated completion time
+                     * 
                      */
                     std::string GetScanTime() const;
 
                     /**
                      * 设置Estimated completion time
-                     * @param ScanTime Estimated completion time
+                     * @param _scanTime Estimated completion time
+                     * 
                      */
                     void SetScanTime(const std::string& _scanTime);
 
                     /**
                      * 判断参数 ScanTime 是否已赋值
                      * @return ScanTime 是否已赋值
+                     * 
                      */
                     bool ScanTimeHasBeenSet() const;
 

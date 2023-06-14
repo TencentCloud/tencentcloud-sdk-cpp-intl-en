@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Array of instance types. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
                      * @return ProductTypes Array of instance types. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
+                     * 
                      */
                     std::vector<int64_t> GetProductTypes() const;
 
                     /**
                      * 设置Array of instance types. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
-                     * @param ProductTypes Array of instance types. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
+                     * @param _productTypes Array of instance types. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
+                     * 
                      */
                     void SetProductTypes(const std::vector<int64_t>& _productTypes);
 
                     /**
                      * 判断参数 ProductTypes 是否已赋值
                      * @return ProductTypes 是否已赋值
+                     * 
                      */
                     bool ProductTypesHasBeenSet() const;
 
                     /**
                      * 获取Array of template names.
                      * @return TemplateNames Array of template names.
+                     * 
                      */
                     std::vector<std::string> GetTemplateNames() const;
 
                     /**
                      * 设置Array of template names.
-                     * @param TemplateNames Array of template names.
+                     * @param _templateNames Array of template names.
+                     * 
                      */
                     void SetTemplateNames(const std::vector<std::string>& _templateNames);
 
                     /**
                      * 判断参数 TemplateNames 是否已赋值
                      * @return TemplateNames 是否已赋值
+                     * 
                      */
                     bool TemplateNamesHasBeenSet() const;
 
                     /**
                      * 获取Array of template IDs.
                      * @return TemplateIds Array of template IDs.
+                     * 
                      */
                     std::vector<std::string> GetTemplateIds() const;
 
                     /**
                      * 设置Array of template IDs.
-                     * @param TemplateIds Array of template IDs.
+                     * @param _templateIds Array of template IDs.
+                     * 
                      */
                     void SetTemplateIds(const std::vector<std::string>& _templateIds);
 
                     /**
                      * 判断参数 TemplateIds 是否已赋值
                      * @return TemplateIds 是否已赋值
+                     * 
                      */
                     bool TemplateIdsHasBeenSet() const;
 

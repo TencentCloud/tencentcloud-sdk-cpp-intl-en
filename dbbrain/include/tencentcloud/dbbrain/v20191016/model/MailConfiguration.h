@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
                      * @return SendMail Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
+                     * 
                      */
                     int64_t GetSendMail() const;
 
                     /**
                      * 设置Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
-                     * @param SendMail Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
+                     * @param _sendMail Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
+                     * 
                      */
                     void SetSendMail(const int64_t& _sendMail);
 
                     /**
                      * 判断参数 SendMail 是否已赋值
                      * @return SendMail 是否已赋值
+                     * 
                      */
                     bool SendMailHasBeenSet() const;
 
                     /**
                      * 获取Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
                      * @return Region Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
+                     * 
                      */
                     std::vector<std::string> GetRegion() const;
 
                     /**
                      * 设置Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
-                     * @param Region Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
+                     * @param _region Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
+                     * 
                      */
                     void SetRegion(const std::vector<std::string>& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
                      * @return HealthStatus Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
+                     * 
                      */
                     std::vector<std::string> GetHealthStatus() const;
 
                     /**
                      * 设置Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
-                     * @param HealthStatus Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
+                     * @param _healthStatus Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
+                     * 
                      */
                     void SetHealthStatus(const std::vector<std::string>& _healthStatus);
 
                     /**
                      * 判断参数 HealthStatus 是否已赋值
                      * @return HealthStatus 是否已赋值
+                     * 
                      */
                     bool HealthStatusHasBeenSet() const;
 
                     /**
                      * 获取Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
                      * @return ContactPerson Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
+                     * 
                      */
                     std::vector<int64_t> GetContactPerson() const;
 
                     /**
                      * 设置Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
-                     * @param ContactPerson Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
+                     * @param _contactPerson Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
+                     * 
                      */
                     void SetContactPerson(const std::vector<int64_t>& _contactPerson);
 
                     /**
                      * 判断参数 ContactPerson 是否已赋值
                      * @return ContactPerson 是否已赋值
+                     * 
                      */
                     bool ContactPersonHasBeenSet() const;
 
                     /**
                      * 获取Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
                      * @return ContactGroup Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
+                     * 
                      */
                     std::vector<int64_t> GetContactGroup() const;
 
                     /**
                      * 设置Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
-                     * @param ContactGroup Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
+                     * @param _contactGroup Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
+                     * 
                      */
                     void SetContactGroup(const std::vector<int64_t>& _contactGroup);
 
                     /**
                      * 判断参数 ContactGroup 是否已赋值
                      * @return ContactGroup 是否已赋值
+                     * 
                      */
                     bool ContactGroupHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the log topic.
                      * @return TopicId ID of the log topic.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置ID of the log topic.
-                     * @param TopicId ID of the log topic.
+                     * @param _topicId ID of the log topic.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
                      * @return Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-                     * @param Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
+                     * @param _status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
                      * @return Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-                     * @param Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
+                     * @param _enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

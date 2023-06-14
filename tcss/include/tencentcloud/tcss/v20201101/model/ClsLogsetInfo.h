@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Logset ID
                      * @return LogsetID Logset ID
+                     * 
                      */
                     std::string GetLogsetID() const;
 
                     /**
                      * 设置Logset ID
-                     * @param LogsetID Logset ID
+                     * @param _logsetID Logset ID
+                     * 
                      */
                     void SetLogsetID(const std::string& _logsetID);
 
                     /**
                      * 判断参数 LogsetID 是否已赋值
                      * @return LogsetID 是否已赋值
+                     * 
                      */
                     bool LogsetIDHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogsetName Logset name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogsetName Logset name
+                     * @param _logsetName Logset name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicList List of CLS topics
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ClsTopicInfo> GetTopicList() const;
 
                     /**
                      * 设置List of CLS topics
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TopicList List of CLS topics
+                     * @param _topicList List of CLS topics
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicList(const std::vector<ClsTopicInfo>& _topicList);
 
                     /**
                      * 判断参数 TopicList 是否已赋值
                      * @return TopicList 是否已赋值
+                     * 
                      */
                     bool TopicListHasBeenSet() const;
 

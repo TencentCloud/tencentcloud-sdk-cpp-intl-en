@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Image import status. Valid values: PENDING, PROCESSING, SUCCESS, FAILED
                      * @return State Image import status. Valid values: PENDING, PROCESSING, SUCCESS, FAILED
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置Image import status. Valid values: PENDING, PROCESSING, SUCCESS, FAILED
-                     * @param State Image import status. Valid values: PENDING, PROCESSING, SUCCESS, FAILED
+                     * @param _state Image import status. Valid values: PENDING, PROCESSING, SUCCESS, FAILED
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
@@ -69,56 +72,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Cause of import failure (FAILED)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Cause of import failure (FAILED)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Message Cause of import failure (FAILED)
+                     * @param _message Cause of import failure (FAILED)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

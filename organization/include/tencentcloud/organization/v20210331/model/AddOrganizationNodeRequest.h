@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
                      * @return ParentNodeId Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * 
                      */
                     uint64_t GetParentNodeId() const;
 
                     /**
                      * 设置Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
-                     * @param ParentNodeId Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * @param _parentNodeId Parent node ID, which can be obtained through the `DescribeOrganizationNodes` API.
+                     * 
                      */
                     void SetParentNodeId(const uint64_t& _parentNodeId);
 
                     /**
                      * 判断参数 ParentNodeId 是否已赋值
                      * @return ParentNodeId 是否已赋值
+                     * 
                      */
                     bool ParentNodeIdHasBeenSet() const;
 
                     /**
                      * 获取Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
                      * @return Name Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
-                     * @param Name Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
+                     * @param _name Node name, which can contain up to 40 letters, digits, and symbols `+@&._[]-`.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Remarks.
                      * @return Remark Remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks.
-                     * @param Remark Remarks.
+                     * @param _remark Remarks.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

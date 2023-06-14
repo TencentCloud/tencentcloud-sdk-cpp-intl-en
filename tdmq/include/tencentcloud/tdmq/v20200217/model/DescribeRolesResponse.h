@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of records.
                      * @return TotalCount Number of records.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Array of roles.
                      * @return RoleSets Array of roles.
+                     * 
                      */
                     std::vector<Role> GetRoleSets() const;
 
                     /**
                      * 判断参数 RoleSets 是否已赋值
                      * @return RoleSets 是否已赋值
+                     * 
                      */
                     bool RoleSetsHasBeenSet() const;
 

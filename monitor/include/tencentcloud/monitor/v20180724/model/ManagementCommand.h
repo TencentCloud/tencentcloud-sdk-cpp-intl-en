@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Install Agent installation command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstall() const;
 
                     /**
                      * 设置Agent installation command
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Install Agent installation command
+                     * @param _install Agent installation command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstall(const std::string& _install);
 
                     /**
                      * 判断参数 Install 是否已赋值
                      * @return Install 是否已赋值
+                     * 
                      */
                     bool InstallHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Restart Agent restart command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRestart() const;
 
                     /**
                      * 设置Agent restart command
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Restart Agent restart command
+                     * @param _restart Agent restart command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRestart(const std::string& _restart);
 
                     /**
                      * 判断参数 Restart 是否已赋值
                      * @return Restart 是否已赋值
+                     * 
                      */
                     bool RestartHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Stop Agent stop command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStop() const;
 
                     /**
                      * 设置Agent stop command
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Stop Agent stop command
+                     * @param _stop Agent stop command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStop(const std::string& _stop);
 
                     /**
                      * 判断参数 Stop 是否已赋值
                      * @return Stop 是否已赋值
+                     * 
                      */
                     bool StopHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StatusCheck Agent status detection command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatusCheck() const;
 
                     /**
                      * 设置Agent status detection command
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StatusCheck Agent status detection command
+                     * @param _statusCheck Agent status detection command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatusCheck(const std::string& _statusCheck);
 
                     /**
                      * 判断参数 StatusCheck 是否已赋值
                      * @return StatusCheck 是否已赋值
+                     * 
                      */
                     bool StatusCheckHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogCheck Agent log detection command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogCheck() const;
 
                     /**
                      * 设置Agent log detection command
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogCheck Agent log detection command
+                     * @param _logCheck Agent log detection command
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogCheck(const std::string& _logCheck);
 
                     /**
                      * 判断参数 LogCheck 是否已赋值
                      * @return LogCheck 是否已赋值
+                     * 
                      */
                     bool LogCheckHasBeenSet() const;
 

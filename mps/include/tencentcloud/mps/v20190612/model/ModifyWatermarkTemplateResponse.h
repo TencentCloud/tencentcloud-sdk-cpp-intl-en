@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Image watermark address. This field is valid only when `ImageTemplate.ImageContent` is non-empty.
                      * @return ImageUrl Image watermark address. This field is valid only when `ImageTemplate.ImageContent` is non-empty.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 

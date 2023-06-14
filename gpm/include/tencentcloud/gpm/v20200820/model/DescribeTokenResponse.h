@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MatchToken The token corresponding to the current MatchCode. If the current MatchCode does not have a token, this parameter may not obtain a valid value.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetMatchToken() const;
 
                     /**
                      * 判断参数 MatchToken 是否已赋值
                      * @return MatchToken 是否已赋值
+                     * 
                      */
                     bool MatchTokenHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return CompatibleSpan The time period during which GPM will continuously push the original token in seconds when the token is replaced.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     uint64_t GetCompatibleSpan() const;
 
                     /**
                      * 判断参数 CompatibleSpan 是否已赋值
                      * @return CompatibleSpan 是否已赋值
+                     * 
                      */
                     bool CompatibleSpanHasBeenSet() const;
 

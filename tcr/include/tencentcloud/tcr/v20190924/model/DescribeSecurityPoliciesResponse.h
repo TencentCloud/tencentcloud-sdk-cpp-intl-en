@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SecurityPolicySet Instance security policy group
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SecurityPolicy> GetSecurityPolicySet() const;
 
                     /**
                      * 判断参数 SecurityPolicySet 是否已赋值
                      * @return SecurityPolicySet 是否已赋值
+                     * 
                      */
                     bool SecurityPolicySetHasBeenSet() const;
 

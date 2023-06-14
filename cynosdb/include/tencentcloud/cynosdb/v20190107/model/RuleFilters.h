@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
                      * @return Type Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
-                     * @param Type Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
+                     * @param _type Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
                      * @return Compare Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
+                     * 
                      */
                     std::string GetCompare() const;
 
                     /**
                      * 设置Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
-                     * @param Compare Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
+                     * @param _compare Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
+                     * 
                      */
                     void SetCompare(const std::string& _compare);
 
                     /**
                      * 判断参数 Compare 是否已赋值
                      * @return Compare 是否已赋值
+                     * 
                      */
                     bool CompareHasBeenSet() const;
 
                     /**
                      * 获取Filter match value of the audit rule
                      * @return Value Filter match value of the audit rule
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
                      * 设置Filter match value of the audit rule
-                     * @param Value Filter match value of the audit rule
+                     * @param _value Filter match value of the audit rule
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

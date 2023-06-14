@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GameServerSession Game server session
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     GameServerSession GetGameServerSession() const;
 
                     /**
                      * 判断参数 GameServerSession 是否已赋值
                      * @return GameServerSession 是否已赋值
+                     * 
                      */
                     bool GameServerSessionHasBeenSet() const;
 

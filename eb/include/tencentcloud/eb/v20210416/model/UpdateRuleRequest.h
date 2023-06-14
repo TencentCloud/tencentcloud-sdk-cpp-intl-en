@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Event rule ID
                      * @return RuleId Event rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Event rule ID
-                     * @param RuleId Event rule ID
+                     * @param _ruleId Event rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Switch.
                      * @return Enable Switch.
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Switch.
-                     * @param Enable Switch.
+                     * @param _enable Switch.
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Rule description, which can contain up to 200 characters of any type.
                      * @return Description Rule description, which can contain up to 200 characters of any type.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description, which can contain up to 200 characters of any type.
-                     * @param Description Rule description, which can contain up to 200 characters of any type.
+                     * @param _description Rule description, which can contain up to 200 characters of any type.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
                      * @return EventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     * 
                      */
                     std::string GetEventPattern() const;
 
                     /**
                      * 设置See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
-                     * @param EventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     * @param _eventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     * 
                      */
                     void SetEventPattern(const std::string& _eventPattern);
 
                     /**
                      * 判断参数 EventPattern 是否已赋值
                      * @return EventPattern 是否已赋值
+                     * 
                      */
                     bool EventPatternHasBeenSet() const;
 
                     /**
                      * 获取Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
                      * @return RuleName Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
-                     * @param RuleName Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * @param _ruleName Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 

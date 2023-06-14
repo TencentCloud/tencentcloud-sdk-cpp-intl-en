@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of "cmgo-p8vnipr5"
                      * @return InstanceId Instance ID in the format of "cmgo-p8vnipr5"
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of "cmgo-p8vnipr5"
-                     * @param InstanceId Instance ID in the format of "cmgo-p8vnipr5"
+                     * @param _instanceId Instance ID in the format of "cmgo-p8vnipr5"
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

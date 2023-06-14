@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
                      * @return Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
-                     * @param Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * @param _business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 

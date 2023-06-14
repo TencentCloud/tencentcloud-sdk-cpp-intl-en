@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Start time offset of a recognition segment in seconds.
                      * @return StartTimeOffset Start time offset of a recognition segment in seconds.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of a recognition segment in seconds.
-                     * @param StartTimeOffset Start time offset of a recognition segment in seconds.
+                     * @param _startTimeOffset Start time offset of a recognition segment in seconds.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取End time offset of a recognition segment in seconds.
                      * @return EndTimeOffset End time offset of a recognition segment in seconds.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time offset of a recognition segment in seconds.
-                     * @param EndTimeOffset End time offset of a recognition segment in seconds.
+                     * @param _endTimeOffset End time offset of a recognition segment in seconds.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取Recognition segment result set.
                      * @return TextSet Recognition segment result set.
+                     * 
                      */
                     std::vector<AiRecognitionTaskOcrFullTextSegmentTextItem> GetTextSet() const;
 
                     /**
                      * 设置Recognition segment result set.
-                     * @param TextSet Recognition segment result set.
+                     * @param _textSet Recognition segment result set.
+                     * 
                      */
                     void SetTextSet(const std::vector<AiRecognitionTaskOcrFullTextSegmentTextItem>& _textSet);
 
                     /**
                      * 判断参数 TextSet 是否已赋值
                      * @return TextSet 是否已赋值
+                     * 
                      */
                     bool TextSetHasBeenSet() const;
 

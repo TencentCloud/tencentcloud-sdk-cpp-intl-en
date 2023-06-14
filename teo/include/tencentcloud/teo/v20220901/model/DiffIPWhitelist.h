@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取The latest intermediate IPs.
                      * @return LatestIPWhitelist The latest intermediate IPs.
+                     * 
                      */
                     IPWhitelist GetLatestIPWhitelist() const;
 
                     /**
                      * 设置The latest intermediate IPs.
-                     * @param LatestIPWhitelist The latest intermediate IPs.
+                     * @param _latestIPWhitelist The latest intermediate IPs.
+                     * 
                      */
                     void SetLatestIPWhitelist(const IPWhitelist& _latestIPWhitelist);
 
                     /**
                      * 判断参数 LatestIPWhitelist 是否已赋值
                      * @return LatestIPWhitelist 是否已赋值
+                     * 
                      */
                     bool LatestIPWhitelistHasBeenSet() const;
 
                     /**
                      * 获取The intermediate IPs added to the existing list.
                      * @return AddedIPWhitelist The intermediate IPs added to the existing list.
+                     * 
                      */
                     IPWhitelist GetAddedIPWhitelist() const;
 
                     /**
                      * 设置The intermediate IPs added to the existing list.
-                     * @param AddedIPWhitelist The intermediate IPs added to the existing list.
+                     * @param _addedIPWhitelist The intermediate IPs added to the existing list.
+                     * 
                      */
                     void SetAddedIPWhitelist(const IPWhitelist& _addedIPWhitelist);
 
                     /**
                      * 判断参数 AddedIPWhitelist 是否已赋值
                      * @return AddedIPWhitelist 是否已赋值
+                     * 
                      */
                     bool AddedIPWhitelistHasBeenSet() const;
 
                     /**
                      * 获取The intermediate IPs removed from the existing list.
                      * @return RemovedIPWhitelist The intermediate IPs removed from the existing list.
+                     * 
                      */
                     IPWhitelist GetRemovedIPWhitelist() const;
 
                     /**
                      * 设置The intermediate IPs removed from the existing list.
-                     * @param RemovedIPWhitelist The intermediate IPs removed from the existing list.
+                     * @param _removedIPWhitelist The intermediate IPs removed from the existing list.
+                     * 
                      */
                     void SetRemovedIPWhitelist(const IPWhitelist& _removedIPWhitelist);
 
                     /**
                      * 判断参数 RemovedIPWhitelist 是否已赋值
                      * @return RemovedIPWhitelist 是否已赋值
+                     * 
                      */
                     bool RemovedIPWhitelistHasBeenSet() const;
 
                     /**
                      * 获取The intermediate IPs that remain unchanged.
                      * @return NoChangeIPWhitelist The intermediate IPs that remain unchanged.
+                     * 
                      */
                     IPWhitelist GetNoChangeIPWhitelist() const;
 
                     /**
                      * 设置The intermediate IPs that remain unchanged.
-                     * @param NoChangeIPWhitelist The intermediate IPs that remain unchanged.
+                     * @param _noChangeIPWhitelist The intermediate IPs that remain unchanged.
+                     * 
                      */
                     void SetNoChangeIPWhitelist(const IPWhitelist& _noChangeIPWhitelist);
 
                     /**
                      * 判断参数 NoChangeIPWhitelist 是否已赋值
                      * @return NoChangeIPWhitelist 是否已赋值
+                     * 
                      */
                     bool NoChangeIPWhitelistHasBeenSet() const;
 

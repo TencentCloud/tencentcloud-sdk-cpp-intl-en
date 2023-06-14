@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Query dimension value
                      * @return TypeKey Query dimension value
+                     * 
                      */
                     std::string GetTypeKey() const;
 
                     /**
                      * 设置Query dimension value
-                     * @param TypeKey Query dimension value
+                     * @param _typeKey Query dimension value
+                     * 
                      */
                     void SetTypeKey(const std::string& _typeKey);
 
                     /**
                      * 判断参数 TypeKey 是否已赋值
                      * @return TypeKey 是否已赋值
+                     * 
                      */
                     bool TypeKeyHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TypeValue Detailed time series data
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TimingTypeValue> GetTypeValue() const;
 
                     /**
                      * 设置Detailed time series data
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TypeValue Detailed time series data
+                     * @param _typeValue Detailed time series data
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTypeValue(const std::vector<TimingTypeValue>& _typeValue);
 
                     /**
                      * 判断参数 TypeValue 是否已赋值
                      * @return TypeValue 是否已赋值
+                     * 
                      */
                     bool TypeValueHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Data Usage of the service (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetData() const;
 
                     /**
                      * 设置Usage of the service (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Data Usage of the service (in seconds)
+                     * @param _data Usage of the service (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetData(const double& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

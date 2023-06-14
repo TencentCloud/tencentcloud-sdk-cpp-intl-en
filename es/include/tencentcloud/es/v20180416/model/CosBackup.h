@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable auto-backup to COS
                      * @return IsAutoBackup Whether to enable auto-backup to COS
+                     * 
                      */
                     bool GetIsAutoBackup() const;
 
                     /**
                      * 设置Whether to enable auto-backup to COS
-                     * @param IsAutoBackup Whether to enable auto-backup to COS
+                     * @param _isAutoBackup Whether to enable auto-backup to COS
+                     * 
                      */
                     void SetIsAutoBackup(const bool& _isAutoBackup);
 
                     /**
                      * 判断参数 IsAutoBackup 是否已赋值
                      * @return IsAutoBackup 是否已赋值
+                     * 
                      */
                     bool IsAutoBackupHasBeenSet() const;
 
                     /**
                      * 获取Auto-backup time (accurate down to the hour), such as "22:00"
                      * @return BackupTime Auto-backup time (accurate down to the hour), such as "22:00"
+                     * 
                      */
                     std::string GetBackupTime() const;
 
                     /**
                      * 设置Auto-backup time (accurate down to the hour), such as "22:00"
-                     * @param BackupTime Auto-backup time (accurate down to the hour), such as "22:00"
+                     * @param _backupTime Auto-backup time (accurate down to the hour), such as "22:00"
+                     * 
                      */
                     void SetBackupTime(const std::string& _backupTime);
 
                     /**
                      * 判断参数 BackupTime 是否已赋值
                      * @return BackupTime 是否已赋值
+                     * 
                      */
                     bool BackupTimeHasBeenSet() const;
 

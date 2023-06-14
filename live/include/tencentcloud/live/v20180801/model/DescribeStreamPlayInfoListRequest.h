@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
                      * @return StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-                     * @param StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+                     * @param _startTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 The start time and end time cannot be more than 24 hours apart and must be within the past month.
                      * @return EndTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
 The start time and end time cannot be more than 24 hours apart and must be within the past month.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
 The start time and end time cannot be more than 24 hours apart and must be within the past month.
-                     * @param EndTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+                     * @param _endTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
 The start time and end time cannot be more than 24 hours apart and must be within the past month.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -87,20 +93,23 @@ The start time and end time cannot be more than 24 hours apart and must be withi
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
                      * @return PlayDomain Playback domain name,
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
+                     * 
                      */
                     std::string GetPlayDomain() const;
 
                     /**
                      * 设置Playback domain name,
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
-                     * @param PlayDomain Playback domain name,
+                     * @param _playDomain Playback domain name,
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
+                     * 
                      */
                     void SetPlayDomain(const std::string& _playDomain);
 
                     /**
                      * 判断参数 PlayDomain 是否已赋值
                      * @return PlayDomain 是否已赋值
+                     * 
                      */
                     bool PlayDomainHasBeenSet() const;
 
@@ -109,20 +118,23 @@ If this parameter is left empty, data of live streams of all playback domain nam
 If this parameter is left empty, full playback data will be queried.
                      * @return StreamName Stream name (exact match).
 If this parameter is left empty, full playback data will be queried.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name (exact match).
 If this parameter is left empty, full playback data will be queried.
-                     * @param StreamName Stream name (exact match).
+                     * @param _streamName Stream name (exact match).
 If this parameter is left empty, full playback data will be queried.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
@@ -133,6 +145,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                      * @return AppName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
 If it is left empty, the full playback data will be queried.
 Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
+                     * 
                      */
                     std::string GetAppName() const;
 
@@ -140,33 +153,38 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                      * 设置Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
 If it is left empty, the full playback data will be queried.
 Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
-                     * @param AppName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
+                     * @param _appName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
 If it is left empty, the full playback data will be queried.
 Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
                      * @return ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
-                     * @param ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * @param _serviceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Version number of the new instance launch template.
                      * @return LaunchTemplateVersionNumber Version number of the new instance launch template.
+                     * 
                      */
                     int64_t GetLaunchTemplateVersionNumber() const;
 
                     /**
                      * 判断参数 LaunchTemplateVersionNumber 是否已赋值
                      * @return LaunchTemplateVersionNumber 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateVersionNumberHasBeenSet() const;
 

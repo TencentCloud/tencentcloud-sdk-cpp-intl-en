@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Host Second-level domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Second-level domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Host Second-level domain name
+                     * @param _host Second-level domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `process`: Deployment in progress
 `online`: Normal
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -91,18 +95,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `process`: Deployment in progress
 `online`: Normal
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Status Status of the domain name
+                     * @param _status Status of the domain name
 `init`: NS to be switched
 `offline`: Site acceleration not enabled with DNS
 `process`: Deployment in progress
 `online`: Normal
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -111,20 +117,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AccelerateType Site acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `SecurityType`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAccelerateType() const;
 
                     /**
                      * 设置Site acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `SecurityType`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AccelerateType Site acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `SecurityType`.
+                     * @param _accelerateType Site acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `SecurityType`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAccelerateType(const std::string& _accelerateType);
 
                     /**
                      * 判断参数 AccelerateType 是否已赋值
                      * @return AccelerateType 是否已赋值
+                     * 
                      */
                     bool AccelerateTypeHasBeenSet() const;
 
@@ -133,20 +142,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SecurityType Security acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `AccelerateType`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSecurityType() const;
 
                     /**
                      * 设置Security acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `AccelerateType`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SecurityType Security acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `AccelerateType`.
+                     * @param _securityType Security acceleration switch. `on`: Enable site acceleration; `off`: Disable site acceleration. This field can be used together with `AccelerateType`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSecurityType(const std::string& _securityType);
 
                     /**
                      * 判断参数 SecurityType 是否已赋值
                      * @return SecurityType 是否已赋值
+                     * 
                      */
                     bool SecurityTypeHasBeenSet() const;
 

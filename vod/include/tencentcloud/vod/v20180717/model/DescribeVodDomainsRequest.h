@@ -47,74 +47,86 @@ namespace TencentCloud
 <li>Maximum number of domain names listed: 20</li>
                      * @return Domains List of domain names. If this parameter is left empty, all domain names will be listed.
 <li>Maximum number of domain names listed: 20</li>
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置List of domain names. If this parameter is left empty, all domain names will be listed.
 <li>Maximum number of domain names listed: 20</li>
-                     * @param Domains List of domain names. If this parameter is left empty, all domain names will be listed.
+                     * @param _domains List of domain names. If this parameter is left empty, all domain names will be listed.
 <li>Maximum number of domain names listed: 20</li>
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Maximum results to return for pulling paginated queries. Default value: 20
                      * @return Limit Maximum results to return for pulling paginated queries. Default value: 20
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum results to return for pulling paginated queries. Default value: 20
-                     * @param Limit Maximum results to return for pulling paginated queries. Default value: 20
+                     * @param _limit Maximum results to return for pulling paginated queries. Default value: 20
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number offset from the beginning of paginated queries. Default value: 0
                      * @return Offset Page number offset from the beginning of paginated queries. Default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page number offset from the beginning of paginated queries. Default value: 0
-                     * @param Offset Page number offset from the beginning of paginated queries. Default value: 0
+                     * @param _offset Page number offset from the beginning of paginated queries. Default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
                      * @return SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-                     * @param SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * @param _subAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 

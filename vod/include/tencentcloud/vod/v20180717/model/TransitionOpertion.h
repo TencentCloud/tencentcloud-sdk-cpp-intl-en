@@ -141,6 +141,7 @@ namespace TencentCloud
 </ul>
 </li>
 </ul>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -192,7 +193,7 @@ namespace TencentCloud
 </ul>
 </li>
 </ul>
-                     * @param Type Transition type. Valid values:
+                     * @param _type Transition type. Valid values:
 <ul>
 <li>Video image transition operation, which is used for transition with video image between two video segments:
 <ul>
@@ -239,12 +240,14 @@ namespace TencentCloud
 </ul>
 </li>
 </ul>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

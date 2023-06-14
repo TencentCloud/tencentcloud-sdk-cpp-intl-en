@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Specifies whether to enable rule engine
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Specifies whether to enable rule engine
 `on`: Enable
 `off`: Disable
-                     * @param Switch Specifies whether to enable rule engine
+                     * @param _switch Specifies whether to enable rule engine
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Content Rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Content Rule
+                     * @param _content Rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the instances to be shut down. You can request up to 100 instances in a region at a time.
                      * @return InstanceIdSet List of IDs of the instances to be shut down. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置List of IDs of the instances to be shut down. You can request up to 100 instances in a region at a time.
-                     * @param InstanceIdSet List of IDs of the instances to be shut down. You can request up to 100 instances in a region at a time.
+                     * @param _instanceIdSet List of IDs of the instances to be shut down. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取Whether to force shut down the instance after it failed to be shut down normally. Default value: false: no.
                      * @return ForceStop Whether to force shut down the instance after it failed to be shut down normally. Default value: false: no.
+                     * 
                      */
                     bool GetForceStop() const;
 
                     /**
                      * 设置Whether to force shut down the instance after it failed to be shut down normally. Default value: false: no.
-                     * @param ForceStop Whether to force shut down the instance after it failed to be shut down normally. Default value: false: no.
+                     * @param _forceStop Whether to force shut down the instance after it failed to be shut down normally. Default value: false: no.
+                     * 
                      */
                     void SetForceStop(const bool& _forceStop);
 
                     /**
                      * 判断参数 ForceStop 是否已赋值
                      * @return ForceStop 是否已赋值
+                     * 
                      */
                     bool ForceStopHasBeenSet() const;
 
@@ -89,6 +95,7 @@ SOFT_FIRST: perform a forced shutdown in case of a failure of the normal shutdow
 HARD: forced shutdown;
 SOFT: Soft shutdown;
 Default value: SOFT.
+                     * 
                      */
                     std::string GetStopType() const;
 
@@ -98,17 +105,19 @@ SOFT_FIRST: perform a forced shutdown in case of a failure of the normal shutdow
 HARD: forced shutdown;
 SOFT: Soft shutdown;
 Default value: SOFT.
-                     * @param StopType Instance shutdown mode. Valid values:
+                     * @param _stopType Instance shutdown mode. Valid values:
 SOFT_FIRST: perform a forced shutdown in case of a failure of the normal shutdown;
 HARD: forced shutdown;
 SOFT: Soft shutdown;
 Default value: SOFT.
+                     * 
                      */
                     void SetStopType(const std::string& _stopType);
 
                     /**
                      * 判断参数 StopType 是否已赋值
                      * @return StopType 是否已赋值
+                     * 
                      */
                     bool StopTypeHasBeenSet() const;
 

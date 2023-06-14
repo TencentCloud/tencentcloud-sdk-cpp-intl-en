@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Address URL of custom GPU driver address
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置URL of custom GPU driver address
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Address URL of custom GPU driver address
+                     * @param _address URL of custom GPU driver address
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 

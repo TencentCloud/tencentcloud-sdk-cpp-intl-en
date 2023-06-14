@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Name of the rule
                      * @return RuleName Name of the rule
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Name of the rule
-                     * @param RuleName Name of the rule
+                     * @param _ruleName Name of the rule
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Action
                      * @return Action Action
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action
-                     * @param Action Action
+                     * @param _action Action
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Status of the rule
                      * @return RuleStatus Status of the rule
+                     * 
                      */
                     std::string GetRuleStatus() const;
 
                     /**
                      * 设置Status of the rule
-                     * @param RuleStatus Status of the rule
+                     * @param _ruleStatus Status of the rule
+                     * 
                      */
                     void SetRuleStatus(const std::string& _ruleStatus);
 
                     /**
                      * 判断参数 RuleStatus 是否已赋值
                      * @return RuleStatus 是否已赋值
+                     * 
                      */
                     bool RuleStatusHasBeenSet() const;
 
                     /**
                      * 获取ACL rule
                      * @return Conditions ACL rule
+                     * 
                      */
                     std::vector<ACLCondition> GetConditions() const;
 
                     /**
                      * 设置ACL rule
-                     * @param Conditions ACL rule
+                     * @param _conditions ACL rule
+                     * 
                      */
                     void SetConditions(const std::vector<ACLCondition>& _conditions);
 
                     /**
                      * 判断参数 Conditions 是否已赋值
                      * @return Conditions 是否已赋值
+                     * 
                      */
                     bool ConditionsHasBeenSet() const;
 
                     /**
                      * 获取Priority of the rule
                      * @return RulePriority Priority of the rule
+                     * 
                      */
                     int64_t GetRulePriority() const;
 
                     /**
                      * 设置Priority of the rule
-                     * @param RulePriority Priority of the rule
+                     * @param _rulePriority Priority of the rule
+                     * 
                      */
                     void SetRulePriority(const int64_t& _rulePriority);
 
                     /**
                      * 判断参数 RulePriority 是否已赋值
                      * @return RulePriority 是否已赋值
+                     * 
                      */
                     bool RulePriorityHasBeenSet() const;
 
@@ -142,20 +157,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleID ID of the rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置ID of the rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RuleID ID of the rule
+                     * @param _ruleID ID of the rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
@@ -164,20 +182,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpdateTime Update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -186,20 +207,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PunishTime IP blocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
                      * 设置IP blocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PunishTime IP blocking time
+                     * @param _punishTime IP blocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
 
                     /**
                      * 判断参数 PunishTime 是否已赋值
                      * @return PunishTime 是否已赋值
+                     * 
                      */
                     bool PunishTimeHasBeenSet() const;
 
@@ -208,20 +232,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PunishTimeUnit IP blocking time unit
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetPunishTimeUnit() const;
 
                     /**
                      * 设置IP blocking time unit
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PunishTimeUnit IP blocking time unit
+                     * @param _punishTimeUnit IP blocking time unit
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPunishTimeUnit(const std::string& _punishTimeUnit);
 
                     /**
                      * 判断参数 PunishTimeUnit 是否已赋值
                      * @return PunishTimeUnit 是否已赋值
+                     * 
                      */
                     bool PunishTimeUnitHasBeenSet() const;
 
@@ -230,20 +257,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Name Name of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Name Name of the custom block page
+                     * @param _name Name of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -252,20 +282,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PageId ID of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPageId() const;
 
                     /**
                      * 设置ID of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PageId ID of the custom block page
+                     * @param _pageId ID of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPageId(const int64_t& _pageId);
 
                     /**
                      * 判断参数 PageId 是否已赋值
                      * @return PageId 是否已赋值
+                     * 
                      */
                     bool PageIdHasBeenSet() const;
 
@@ -274,20 +307,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RedirectUrl Redirection URL, which must be a subdomain name of the site
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置Redirection URL, which must be a subdomain name of the site
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RedirectUrl Redirection URL, which must be a subdomain name of the site
+                     * @param _redirectUrl Redirection URL, which must be a subdomain name of the site
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
                     /**
                      * 判断参数 RedirectUrl 是否已赋值
                      * @return RedirectUrl 是否已赋值
+                     * 
                      */
                     bool RedirectUrlHasBeenSet() const;
 
@@ -296,20 +332,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ResponseCode Return code configured on the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetResponseCode() const;
 
                     /**
                      * 设置Return code configured on the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ResponseCode Return code configured on the custom block page
+                     * @param _responseCode Return code configured on the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetResponseCode(const int64_t& _responseCode);
 
                     /**
                      * 判断参数 ResponseCode 是否已赋值
                      * @return ResponseCode 是否已赋值
+                     * 
                      */
                     bool ResponseCodeHasBeenSet() const;
 

@@ -80,6 +80,7 @@ Type: Integer
 Unit: second
 Required: no
 Valid value: 31536000 (1 year)
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -102,7 +103,7 @@ Type: Integer
 Unit: second
 Required: no
 Valid value: 31536000 (1 year)
-                     * @param Filters zone
+                     * @param _filters zone
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
 Required: no
@@ -120,12 +121,14 @@ Type: Integer
 Unit: second
 Required: no
 Valid value: 31536000 (1 year)
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

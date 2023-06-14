@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of query results.
                      * @return TotalCount Total number of query results.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EntityList List of available shipping entities.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetEntityList() const;
 
                     /**
                      * 判断参数 EntityList 是否已赋值
                      * @return EntityList 是否已赋值
+                     * 
                      */
                     bool EntityListHasBeenSet() const;
 

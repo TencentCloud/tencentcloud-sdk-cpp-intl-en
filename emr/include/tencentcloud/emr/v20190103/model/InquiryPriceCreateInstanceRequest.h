@@ -53,20 +53,23 @@ namespace TencentCloud
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
                      * @return TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
                      * 设置Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-                     * @param TimeUnit Time unit of instance purchase duration. Valid values:
+                     * @param _timeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
 
                     /**
                      * 判断参数 TimeUnit 是否已赋值
                      * @return TimeUnit 是否已赋值
+                     * 
                      */
                     bool TimeUnitHasBeenSet() const;
 
@@ -77,6 +80,7 @@ namespace TencentCloud
                      * @return TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
 <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+                     * 
                      */
                     uint64_t GetTimeSpan() const;
 
@@ -84,33 +88,38 @@ namespace TencentCloud
                      * 设置Purchase duration of instance, which needs to be used together with `TimeUnit`.
 <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
-                     * @param TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
+                     * @param _timeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
 <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+                     * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
 
                     /**
                      * 判断参数 TimeSpan 是否已赋值
                      * @return TimeSpan 是否已赋值
+                     * 
                      */
                     bool TimeSpanHasBeenSet() const;
 
                     /**
                      * 获取Currency.
                      * @return Currency Currency.
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 设置Currency.
-                     * @param Currency Currency.
+                     * @param _currency Currency.
+                     * 
                      */
                     void SetCurrency(const std::string& _currency);
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 
@@ -119,20 +128,23 @@ namespace TencentCloud
 <li>0: pay-as-you-go.</li>
                      * @return PayMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
+                     * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
                      * 设置Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
-                     * @param PayMode Instance billing mode. Valid values:
+                     * @param _payMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
+                     * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -143,6 +155,7 @@ namespace TencentCloud
                      * @return SupportHA Whether to enable high availability of node. Valid values:
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
+                     * 
                      */
                     uint64_t GetSupportHA() const;
 
@@ -150,15 +163,17 @@ namespace TencentCloud
                      * 设置Whether to enable high availability of node. Valid values:
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
-                     * @param SupportHA Whether to enable high availability of node. Valid values:
+                     * @param _supportHA Whether to enable high availability of node. Valid values:
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
+                     * 
                      */
                     void SetSupportHA(const uint64_t& _supportHA);
 
                     /**
                      * 判断参数 SupportHA 是否已赋值
                      * @return SupportHA 是否已赋值
+                     * 
                      */
                     bool SupportHAHasBeenSet() const;
 
@@ -173,6 +188,7 @@ namespace TencentCloud
 <li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * 
                      */
                     std::vector<std::string> GetSoftware() const;
 
@@ -182,71 +198,82 @@ namespace TencentCloud
 <li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
-                     * @param Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
+                     * @param _software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
 <li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+                     * 
                      */
                     void SetSoftware(const std::vector<std::string>& _software);
 
                     /**
                      * 判断参数 Software 是否已赋值
                      * @return Software 是否已赋值
+                     * 
                      */
                     bool SoftwareHasBeenSet() const;
 
                     /**
                      * 获取Node specification queried for price.
                      * @return ResourceSpec Node specification queried for price.
+                     * 
                      */
                     NewResourceSpec GetResourceSpec() const;
 
                     /**
                      * 设置Node specification queried for price.
-                     * @param ResourceSpec Node specification queried for price.
+                     * @param _resourceSpec Node specification queried for price.
+                     * 
                      */
                     void SetResourceSpec(const NewResourceSpec& _resourceSpec);
 
                     /**
                      * 判断参数 ResourceSpec 是否已赋值
                      * @return ResourceSpec 是否已赋值
+                     * 
                      */
                     bool ResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
                      * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @param _placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
                      * @return VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * 
                      */
                     VPCSettings GetVPCSettings() const;
 
                     /**
                      * 设置Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     * @param VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * @param _vPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * 
                      */
                     void SetVPCSettings(const VPCSettings& _vPCSettings);
 
                     /**
                      * 判断参数 VPCSettings 是否已赋值
                      * @return VPCSettings 是否已赋值
+                     * 
                      */
                     bool VPCSettingsHasBeenSet() const;
 
@@ -259,6 +286,7 @@ namespace TencentCloud
 <li>EMR_DEFAULT_META: the cluster creates one by default.</li>
 <li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
 <li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+                     * 
                      */
                     std::string GetMetaType() const;
 
@@ -267,52 +295,60 @@ namespace TencentCloud
 <li>EMR_DEFAULT_META: the cluster creates one by default.</li>
 <li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
 <li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
-                     * @param MetaType Hive-shared metadatabase type. Valid values:
+                     * @param _metaType Hive-shared metadatabase type. Valid values:
 <li>EMR_DEFAULT_META: the cluster creates one by default.</li>
 <li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
 <li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+                     * 
                      */
                     void SetMetaType(const std::string& _metaType);
 
                     /**
                      * 判断参数 MetaType 是否已赋值
                      * @return MetaType 是否已赋值
+                     * 
                      */
                     bool MetaTypeHasBeenSet() const;
 
                     /**
                      * 获取EMR-MetaDB instance
                      * @return UnifyMetaInstanceId EMR-MetaDB instance
+                     * 
                      */
                     std::string GetUnifyMetaInstanceId() const;
 
                     /**
                      * 设置EMR-MetaDB instance
-                     * @param UnifyMetaInstanceId EMR-MetaDB instance
+                     * @param _unifyMetaInstanceId EMR-MetaDB instance
+                     * 
                      */
                     void SetUnifyMetaInstanceId(const std::string& _unifyMetaInstanceId);
 
                     /**
                      * 判断参数 UnifyMetaInstanceId 是否已赋值
                      * @return UnifyMetaInstanceId 是否已赋值
+                     * 
                      */
                     bool UnifyMetaInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Custom MetaDB instance information
                      * @return MetaDBInfo Custom MetaDB instance information
+                     * 
                      */
                     CustomMetaInfo GetMetaDBInfo() const;
 
                     /**
                      * 设置Custom MetaDB instance information
-                     * @param MetaDBInfo Custom MetaDB instance information
+                     * @param _metaDBInfo Custom MetaDB instance information
+                     * 
                      */
                     void SetMetaDBInfo(const CustomMetaInfo& _metaDBInfo);
 
                     /**
                      * 判断参数 MetaDBInfo 是否已赋值
                      * @return MetaDBInfo 是否已赋值
+                     * 
                      */
                     bool MetaDBInfoHasBeenSet() const;
 
@@ -327,6 +363,7 @@ namespace TencentCloud
 <li>2: EMR v2.0.1.</li>
 <li>4: EMR v2.1.0.</li>
 <li>7: EMR v3.0.0.</li>
+                     * 
                      */
                     uint64_t GetProductId() const;
 
@@ -336,17 +373,19 @@ namespace TencentCloud
 <li>2: EMR v2.0.1.</li>
 <li>4: EMR v2.1.0.</li>
 <li>7: EMR v3.0.0.</li>
-                     * @param ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
+                     * @param _productId Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1.</li>
 <li>2: EMR v2.0.1.</li>
 <li>4: EMR v2.1.0.</li>
 <li>7: EMR v3.0.0.</li>
+                     * 
                      */
                     void SetProductId(const uint64_t& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
@@ -361,6 +400,7 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+                     * 
                      */
                     std::string GetSceneName() const;
 
@@ -370,71 +410,82 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
-                     * @param SceneName Scenario-based values:
+                     * @param _sceneName Scenario-based values:
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+                     * 
                      */
                     void SetSceneName(const std::string& _sceneName);
 
                     /**
                      * 判断参数 SceneName 是否已赋值
                      * @return SceneName 是否已赋值
+                     * 
                      */
                     bool SceneNameHasBeenSet() const;
 
                     /**
                      * 获取Shared component information
                      * @return ExternalService Shared component information
+                     * 
                      */
                     std::vector<ExternalService> GetExternalService() const;
 
                     /**
                      * 设置Shared component information
-                     * @param ExternalService Shared component information
+                     * @param _externalService Shared component information
+                     * 
                      */
                     void SetExternalService(const std::vector<ExternalService>& _externalService);
 
                     /**
                      * 判断参数 ExternalService 是否已赋值
                      * @return ExternalService 是否已赋值
+                     * 
                      */
                     bool ExternalServiceHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return VersionID 
+                     * 
                      */
                     uint64_t GetVersionID() const;
 
                     /**
                      * 设置
-                     * @param VersionID 
+                     * @param _versionID 
+                     * 
                      */
                     void SetVersionID(const uint64_t& _versionID);
 
                     /**
                      * 判断参数 VersionID 是否已赋值
                      * @return VersionID 是否已赋值
+                     * 
                      */
                     bool VersionIDHasBeenSet() const;
 
                     /**
                      * 获取AZ specs
                      * @return MultiZoneSettings AZ specs
+                     * 
                      */
                     std::vector<MultiZoneSetting> GetMultiZoneSettings() const;
 
                     /**
                      * 设置AZ specs
-                     * @param MultiZoneSettings AZ specs
+                     * @param _multiZoneSettings AZ specs
+                     * 
                      */
                     void SetMultiZoneSettings(const std::vector<MultiZoneSetting>& _multiZoneSettings);
 
                     /**
                      * 判断参数 MultiZoneSettings 是否已赋值
                      * @return MultiZoneSettings 是否已赋值
+                     * 
                      */
                     bool MultiZoneSettingsHasBeenSet() const;
 

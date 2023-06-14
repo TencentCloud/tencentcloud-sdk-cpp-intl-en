@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetDetectStateSet The array of network detection verification results that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<NetDetectState> GetNetDetectStateSet() const;
 
                     /**
                      * 判断参数 NetDetectStateSet 是否已赋值
                      * @return NetDetectStateSet 是否已赋值
+                     * 
                      */
                     bool NetDetectStateSetHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount The number of network detection verification results that meet requirements.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

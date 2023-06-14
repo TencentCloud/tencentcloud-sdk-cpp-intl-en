@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
                      * @return SourceText The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+                     * 
                      */
                     std::string GetSourceText() const;
 
                     /**
                      * 设置The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
-                     * @param SourceText The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+                     * @param _sourceText The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+                     * 
                      */
                     void SetSourceText(const std::string& _sourceText);
 
                     /**
                      * 判断参数 SourceText 是否已赋值
                      * @return SourceText 是否已赋值
+                     * 
                      */
                     bool SourceTextHasBeenSet() const;
 
@@ -101,6 +104,7 @@ th: Thai
 ms: Malay
 ar: Arabic
 hi: Hindi
+                     * 
                      */
                     std::string GetSource() const;
 
@@ -125,7 +129,7 @@ th: Thai
 ms: Malay
 ar: Arabic
 hi: Hindi
-                     * @param Source Supported source languages:
+                     * @param _source Supported source languages:
 auto: Automatic language detection
 zh: Simplified Chinese
 zh_TW: Traditional Chinese
@@ -145,12 +149,14 @@ th: Thai
 ms: Malay
 ar: Arabic
 hi: Hindi
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
@@ -195,6 +201,7 @@ hi: Hindi
 <li>ms (Malay): zh (Simplified Chinese) and en (English)</li
 <li>ar (Arabic): en (English)</li>
 <li>hi (Hindi): en (English)</li
+                     * 
                      */
                     std::string GetTarget() const;
 
@@ -219,7 +226,7 @@ hi: Hindi
 <li>ms (Malay): zh (Simplified Chinese) and en (English)</li
 <li>ar (Arabic): en (English)</li>
 <li>hi (Hindi): en (English)</li
-                     * @param Target Supported target languages for the above source languages:
+                     * @param _target Supported target languages for the above source languages:
 
 <li> zh (Simplified Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
 <li> zh-TW (Traditional Chinese): en (English), ja (Japanese), ko (Korean), fr (French), es (Spanish), it (Italian), de (German), tr (Turkish), ru (Russian), pt (Portuguese), vi (Vietnamese), id (Bahasa Indonesian), th (Thai), and ms (Malay)</li>
@@ -239,48 +246,56 @@ hi: Hindi
 <li>ms (Malay): zh (Simplified Chinese) and en (English)</li
 <li>ar (Arabic): en (English)</li>
 <li>hi (Hindi): en (English)</li
+                     * 
                      */
                     void SetTarget(const std::string& _target);
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 
                     /**
                      * 获取The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
                      * @return ProjectId The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
-                     * @param ProjectId The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
+                     * @param _projectId The project ID, which can be obtained from **Console -> Account Center -> Project Management**. If no one is set, enter the default project ID `0`.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
                      * @return UntranslatedText The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
+                     * 
                      */
                     std::string GetUntranslatedText() const;
 
                     /**
                      * 设置The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
-                     * @param UntranslatedText The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
+                     * @param _untranslatedText The parameter used to mark the text content that needs to remain untranslated, such as special symbols and names of people and places. You can set only one word for this parameter in each request. Only nouns (like names of people and places) are supported, and verbs or phrases may cause poor translation outcomes.
+                     * 
                      */
                     void SetUntranslatedText(const std::string& _untranslatedText);
 
                     /**
                      * 判断参数 UntranslatedText 是否已赋值
                      * @return UntranslatedText 是否已赋值
+                     * 
                      */
                     bool UntranslatedTextHasBeenSet() const;
 

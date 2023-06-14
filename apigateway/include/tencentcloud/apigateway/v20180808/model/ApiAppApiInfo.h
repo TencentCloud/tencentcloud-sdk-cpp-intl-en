@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAppName Application name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiAppName() const;
 
                     /**
                      * 设置Application name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAppName Application name
+                     * @param _apiAppName Application name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAppName(const std::string& _apiAppName);
 
                     /**
                      * 判断参数 ApiAppName 是否已赋值
                      * @return ApiAppName 是否已赋值
+                     * 
                      */
                     bool ApiAppNameHasBeenSet() const;
 
                     /**
                      * 获取Application ID
                      * @return ApiAppId Application ID
+                     * 
                      */
                     std::string GetApiAppId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApiAppId Application ID
+                     * @param _apiAppId Application ID
+                     * 
                      */
                     void SetApiAppId(const std::string& _apiAppId);
 
                     /**
                      * 判断参数 ApiAppId 是否已赋值
                      * @return ApiAppId 是否已赋值
+                     * 
                      */
                     bool ApiAppIdHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiId API ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置API ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiId API ID
+                     * @param _apiId API ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiName API name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiName() const;
 
                     /**
                      * 设置API name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiName API name
+                     * @param _apiName API name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiName(const std::string& _apiName);
 
                     /**
                      * 判断参数 ApiName 是否已赋值
                      * @return ApiName 是否已赋值
+                     * 
                      */
                     bool ApiNameHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceId Service ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Service ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceId Service ID
+                     * @param _serviceId Service ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthorizedTime Binding authorization time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthorizedTime() const;
 
                     /**
                      * 设置Binding authorization time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthorizedTime Binding authorization time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _authorizedTime Binding authorization time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthorizedTime(const std::string& _authorizedTime);
 
                     /**
                      * 判断参数 AuthorizedTime 是否已赋值
                      * @return AuthorizedTime 是否已赋值
+                     * 
                      */
                     bool AuthorizedTimeHasBeenSet() const;
 
@@ -179,20 +197,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiRegion API region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiRegion() const;
 
                     /**
                      * 设置API region
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiRegion API region
+                     * @param _apiRegion API region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiRegion(const std::string& _apiRegion);
 
                     /**
                      * 判断参数 ApiRegion 是否已赋值
                      * @return ApiRegion 是否已赋值
+                     * 
                      */
                     bool ApiRegionHasBeenSet() const;
 
@@ -201,20 +222,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EnvironmentName Authorized binding environment
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Authorized binding environment
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EnvironmentName Authorized binding environment
+                     * @param _environmentName Authorized binding environment
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 

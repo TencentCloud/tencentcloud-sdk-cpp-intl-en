@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Most matching candidate recognized
                      * @return Candidates Most matching candidate recognized
+                     * 
                      */
                     std::vector<Candidate> GetCandidates() const;
 
                     /**
                      * 设置Most matching candidate recognized
-                     * @param Candidates Most matching candidate recognized
+                     * @param _candidates Most matching candidate recognized
+                     * 
                      */
                     void SetCandidates(const std::vector<Candidate>& _candidates);
 
                     /**
                      * 判断参数 Candidates 是否已赋值
                      * @return Candidates 是否已赋值
+                     * 
                      */
                     bool CandidatesHasBeenSet() const;
 
                     /**
                      * 获取Position of detected face frame
                      * @return FaceRect Position of detected face frame
+                     * 
                      */
                     FaceRect GetFaceRect() const;
 
                     /**
                      * 设置Position of detected face frame
-                     * @param FaceRect Position of detected face frame
+                     * @param _faceRect Position of detected face frame
+                     * 
                      */
                     void SetFaceRect(const FaceRect& _faceRect);
 
                     /**
                      * 判断参数 FaceRect 是否已赋值
                      * @return FaceRect 是否已赋值
+                     * 
                      */
                     bool FaceRectHasBeenSet() const;
 
                     /**
                      * 获取The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
                      * @return RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * 
                      */
                     int64_t GetRetCode() const;
 
                     /**
                      * 设置The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
-                     * @param RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * @param _retCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * 
                      */
                     void SetRetCode(const int64_t& _retCode);
 
                     /**
                      * 判断参数 RetCode 是否已赋值
                      * @return RetCode 是否已赋值
+                     * 
                      */
                     bool RetCodeHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取CVM instance ID.
                      * @return InstanceId CVM instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置CVM instance ID.
-                     * @param InstanceId CVM instance ID.
+                     * @param _instanceId CVM instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The serial number of ENI in the CVM instance.
                      * @return DeviceIndex The serial number of ENI in the CVM instance.
+                     * 
                      */
                     uint64_t GetDeviceIndex() const;
 
                     /**
                      * 设置The serial number of ENI in the CVM instance.
-                     * @param DeviceIndex The serial number of ENI in the CVM instance.
+                     * @param _deviceIndex The serial number of ENI in the CVM instance.
+                     * 
                      */
                     void SetDeviceIndex(const uint64_t& _deviceIndex);
 
                     /**
                      * 判断参数 DeviceIndex 是否已赋值
                      * @return DeviceIndex 是否已赋值
+                     * 
                      */
                     bool DeviceIndexHasBeenSet() const;
 
                     /**
                      * 获取The account information of the CVM owner.
                      * @return InstanceAccountId The account information of the CVM owner.
+                     * 
                      */
                     std::string GetInstanceAccountId() const;
 
                     /**
                      * 设置The account information of the CVM owner.
-                     * @param InstanceAccountId The account information of the CVM owner.
+                     * @param _instanceAccountId The account information of the CVM owner.
+                     * 
                      */
                     void SetInstanceAccountId(const std::string& _instanceAccountId);
 
                     /**
                      * 判断参数 InstanceAccountId 是否已赋值
                      * @return InstanceAccountId 是否已赋值
+                     * 
                      */
                     bool InstanceAccountIdHasBeenSet() const;
 
                     /**
                      * 获取Binding time
                      * @return AttachTime Binding time
+                     * 
                      */
                     std::string GetAttachTime() const;
 
                     /**
                      * 设置Binding time
-                     * @param AttachTime Binding time
+                     * @param _attachTime Binding time
+                     * 
                      */
                     void SetAttachTime(const std::string& _attachTime);
 
                     /**
                      * 判断参数 AttachTime 是否已赋值
                      * @return AttachTime 是否已赋值
+                     * 
                      */
                     bool AttachTimeHasBeenSet() const;
 

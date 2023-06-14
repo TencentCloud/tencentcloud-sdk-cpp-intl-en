@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Traffic package IDs. Multiple values can be used.
                      * @return TrafficPackageIds Traffic package IDs. Multiple values can be used.
+                     * 
                      */
                     std::vector<std::string> GetTrafficPackageIds() const;
 
                     /**
                      * 设置Traffic package IDs. Multiple values can be used.
-                     * @param TrafficPackageIds Traffic package IDs. Multiple values can be used.
+                     * @param _trafficPackageIds Traffic package IDs. Multiple values can be used.
+                     * 
                      */
                     void SetTrafficPackageIds(const std::vector<std::string>& _trafficPackageIds);
 
                     /**
                      * 判断参数 TrafficPackageIds 是否已赋值
                      * @return TrafficPackageIds 是否已赋值
+                     * 
                      */
                     bool TrafficPackageIdsHasBeenSet() const;
 
@@ -70,6 +73,7 @@ namespace TencentCloud
 <li> `traffic-package_id` - String - Optional - Filter by the traffic package ID.</li>
 <li> `traffic-package-name` - String - Optional - Filter by the traffic package name. Fuzzy match is not supported.</li>
 <li> `status` - String - Optional - Filter by the traffic package status. Values: [AVAILABLE|EXPIRED|EXHAUSTED].</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -78,52 +82,60 @@ namespace TencentCloud
 <li> `traffic-package_id` - String - Optional - Filter by the traffic package ID.</li>
 <li> `traffic-package-name` - String - Optional - Filter by the traffic package name. Fuzzy match is not supported.</li>
 <li> `status` - String - Optional - Filter by the traffic package status. Values: [AVAILABLE|EXPIRED|EXHAUSTED].</li>
-                     * @param Filters Each request can have up to 10 `Filters`. `TrafficPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
+                     * @param _filters Each request can have up to 10 `Filters`. `TrafficPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
 <li> `traffic-package_id` - String - Optional - Filter by the traffic package ID.</li>
 <li> `traffic-package-name` - String - Optional - Filter by the traffic package name. Fuzzy match is not supported.</li>
 <li> `status` - String - Optional - Filter by the traffic package status. Values: [AVAILABLE|EXPIRED|EXHAUSTED].</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter
                      * @return Offset Pagination parameter
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination parameter
-                     * @param Offset Pagination parameter
+                     * @param _offset Pagination parameter
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter
                      * @return Limit Pagination parameter
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Pagination parameter
-                     * @param Limit Pagination parameter
+                     * @param _limit Pagination parameter
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the product to which the device belongs
                      * @return ProductId ID of the product to which the device belongs
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置ID of the product to which the device belongs
-                     * @param ProductId ID of the product to which the device belongs
+                     * @param _productId ID of the product to which the device belongs
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the device to delete
                      * @return DeviceName Name of the device to delete
+                     * 
                      */
                     std::string GetDeviceName() const;
 
                     /**
                      * 设置Name of the device to delete
-                     * @param DeviceName Name of the device to delete
+                     * @param _deviceName Name of the device to delete
+                     * 
                      */
                     void SetDeviceName(const std::string& _deviceName);
 
                     /**
                      * 判断参数 DeviceName 是否已赋值
                      * @return DeviceName 是否已赋值
+                     * 
                      */
                     bool DeviceNameHasBeenSet() const;
 
                     /**
                      * 获取Skey, which is required to delete a LoRa device or LoRa gateway device
                      * @return Skey Skey, which is required to delete a LoRa device or LoRa gateway device
+                     * 
                      */
                     std::string GetSkey() const;
 
                     /**
                      * 设置Skey, which is required to delete a LoRa device or LoRa gateway device
-                     * @param Skey Skey, which is required to delete a LoRa device or LoRa gateway device
+                     * @param _skey Skey, which is required to delete a LoRa device or LoRa gateway device
+                     * 
                      */
                     void SetSkey(const std::string& _skey);
 
                     /**
                      * 判断参数 Skey 是否已赋值
                      * @return Skey 是否已赋值
+                     * 
                      */
                     bool SkeyHasBeenSet() const;
 

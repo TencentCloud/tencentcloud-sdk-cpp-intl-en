@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the NAT gateway, such as `nat-df45454`.
                      * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The ID of the NAT gateway, such as `nat-df45454`.
-                     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * @param _natGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 

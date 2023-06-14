@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique cluster ID
                      * @return ClusterId Unique cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Unique cluster ID
-                     * @param ClusterId Unique cluster ID
+                     * @param _clusterId Unique cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClusterName Cluster name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Zone Cluster AZ, such as ap-guangzhou-1
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Cluster AZ, such as ap-guangzhou-1
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Zone Cluster AZ, such as ap-guangzhou-1
+                     * @param _zone Cluster AZ, such as ap-guangzhou-1
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 

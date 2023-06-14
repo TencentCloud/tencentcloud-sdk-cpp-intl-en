@@ -47,90 +47,105 @@ namespace TencentCloud
                     /**
                      * 获取Query type. Valid values: User: user; UserGroup: user group; OrgNode: organization.
                      * @return EntityType Query type. Valid values: User: user; UserGroup: user group; OrgNode: organization.
+                     * 
                      */
                     std::string GetEntityType() const;
 
                     /**
                      * 设置Query type. Valid values: User: user; UserGroup: user group; OrgNode: organization.
-                     * @param EntityType Query type. Valid values: User: user; UserGroup: user group; OrgNode: organization.
+                     * @param _entityType Query type. Valid values: User: user; UserGroup: user group; OrgNode: organization.
+                     * 
                      */
                     void SetEntityType(const std::string& _entityType);
 
                     /**
                      * 判断参数 EntityType 是否已赋值
                      * @return EntityType 是否已赋值
+                     * 
                      */
                     bool EntityTypeHasBeenSet() const;
 
                     /**
                      * 获取Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
                      * @return SearchCondition Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
+                     * 
                      */
                     AuthorizationInfoSearchCriteria GetSearchCondition() const;
 
                     /**
                      * 设置Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
-                     * @param SearchCondition Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
+                     * @param _searchCondition Search criterion. You can combine multiple search criteria and search in multiple data ranges. In addition, multiple query methods such as full match, partial match, and range match are supported. Specifically, double quotation marks ("") indicate full match, an asterisk (*) at the end of the field indicates partial match, and an empty field indicates to query the full table by default.
+                     * 
                      */
                     void SetSearchCondition(const AuthorizationInfoSearchCriteria& _searchCondition);
 
                     /**
                      * 判断参数 SearchCondition 是否已赋值
                      * @return SearchCondition 是否已赋值
+                     * 
                      */
                     bool SearchConditionHasBeenSet() const;
 
                     /**
                      * 获取Set of sort criteria. You can sort the results by last modification time (lastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by application name.
                      * @return Sort Set of sort criteria. You can sort the results by last modification time (lastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by application name.
+                     * 
                      */
                     SortCondition GetSort() const;
 
                     /**
                      * 设置Set of sort criteria. You can sort the results by last modification time (lastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by application name.
-                     * @param Sort Set of sort criteria. You can sort the results by last modification time (lastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by application name.
+                     * @param _sort Set of sort criteria. You can sort the results by last modification time (lastModifiedDate). If this field is left empty, the results will be sorted in alphabetical order by application name.
+                     * 
                      */
                     void SetSort(const SortCondition& _sort);
 
                     /**
                      * 判断参数 Sort 是否已赋值
                      * @return Sort 是否已赋值
+                     * 
                      */
                     bool SortHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
                      * @return Offset Pagination offset. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
-                     * @param Offset Pagination offset. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+                     * @param _offset Pagination offset. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
                      * @return Limit Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
-                     * @param Limit Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+                     * @param _limit Number of results read per page. The `Offset` and `Limit` fields need to be used together; otherwise, the query results will not be paginated.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

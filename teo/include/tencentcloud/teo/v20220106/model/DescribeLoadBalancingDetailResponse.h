@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancingId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancingId() const;
 
                     /**
                      * 判断参数 LoadBalancingId 是否已赋值
                      * @return LoadBalancingId 是否已赋值
+                     * 
                      */
                     bool LoadBalancingIdHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Subdomain name. You can use @ to represent the root domain.
                      * @return Host Subdomain name. You can use @ to represent the root domain.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
@@ -87,72 +93,84 @@ namespace TencentCloud
                      * @return Type Proxy mode. Valid values:
 `dns_only`: Only DNS
 `proxied`: Enable proxy
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Indicates DNS TTL time when `Type=dns_only`
                      * @return TTL Indicates DNS TTL time when `Type=dns_only`
+                     * 
                      */
                     uint64_t GetTTL() const;
 
                     /**
                      * 判断参数 TTL 是否已赋值
                      * @return TTL 是否已赋值
+                     * 
                      */
                     bool TTLHasBeenSet() const;
 
                     /**
                      * 获取ID of the origin group used
                      * @return OriginId ID of the origin group used
+                     * 
                      */
                     std::vector<std::string> GetOriginId() const;
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the origin server used
                      * @return Origin Information of the origin server used
+                     * 
                      */
                     std::vector<OriginGroup> GetOrigin() const;
 
                     /**
                      * 判断参数 Origin 是否已赋值
                      * @return Origin 是否已赋值
+                     * 
                      */
                     bool OriginHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Status of the task
                      * @return Status Status of the task
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -161,12 +179,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Cname Schedules domain names
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 

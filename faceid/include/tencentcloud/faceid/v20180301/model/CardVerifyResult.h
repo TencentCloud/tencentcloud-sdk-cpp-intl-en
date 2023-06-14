@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether the authentication or OCR process is successful.
                      * @return IsPass Whether the authentication or OCR process is successful.
+                     * 
                      */
                     bool GetIsPass() const;
 
                     /**
                      * 设置Whether the authentication or OCR process is successful.
-                     * @param IsPass Whether the authentication or OCR process is successful.
+                     * @param _isPass Whether the authentication or OCR process is successful.
+                     * 
                      */
                     void SetIsPass(const bool& _isPass);
 
                     /**
                      * 判断参数 IsPass 是否已赋值
                      * @return IsPass 是否已赋值
+                     * 
                      */
                     bool IsPassHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CardVideo The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     FileInfo GetCardVideo() const;
 
                     /**
                      * 设置The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param CardVideo The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
+                     * @param _cardVideo The download URL of the video used for identity document verification, which is valid for 10 minutes. This parameter is returned only if video-based identity document verification is enabled.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCardVideo(const FileInfo& _cardVideo);
 
                     /**
                      * 判断参数 CardVideo 是否已赋值
                      * @return CardVideo 是否已赋值
+                     * 
                      */
                     bool CardVideoHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CardImage The download URL of the identity document image, which is valid for 10 minutes.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     FileInfo GetCardImage() const;
 
                     /**
                      * 设置The download URL of the identity document image, which is valid for 10 minutes.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param CardImage The download URL of the identity document image, which is valid for 10 minutes.
+                     * @param _cardImage The download URL of the identity document image, which is valid for 10 minutes.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCardImage(const FileInfo& _cardImage);
 
                     /**
                      * 判断参数 CardImage 是否已赋值
                      * @return CardImage 是否已赋值
+                     * 
                      */
                     bool CardImageHasBeenSet() const;
 
@@ -286,6 +295,7 @@ When the value of `IdCardType` is `MLIDPassport`:
 - IssuingCountry (string): Issuing country.
 - NationalityCode (string): Country/region code.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     FileInfo GetCardInfoOcrJson() const;
 
@@ -378,7 +388,7 @@ When the value of `IdCardType` is `MLIDPassport`:
 - IssuingCountry (string): Issuing country.
 - NationalityCode (string): Country/region code.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param CardInfoOcrJson The OCR result (in JSON) of the identity document image. If verification or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
+                     * @param _cardInfoOcrJson The OCR result (in JSON) of the identity document image. If verification or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
 (1) Hong Kong (China) identity card
 When the value of `IdCardType` is `HK`:
 - CnName (string): Name in Chinese.
@@ -466,30 +476,35 @@ When the value of `IdCardType` is `MLIDPassport`:
 - IssuingCountry (string): Issuing country.
 - NationalityCode (string): Country/region code.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCardInfoOcrJson(const FileInfo& _cardInfoOcrJson);
 
                     /**
                      * 判断参数 CardInfoOcrJson 是否已赋值
                      * @return CardInfoOcrJson 是否已赋值
+                     * 
                      */
                     bool CardInfoOcrJsonHasBeenSet() const;
 
                     /**
                      * 获取The request ID of a single process.
                      * @return RequestId The request ID of a single process.
+                     * 
                      */
                     std::string GetRequestId() const;
 
                     /**
                      * 设置The request ID of a single process.
-                     * @param RequestId The request ID of a single process.
+                     * @param _requestId The request ID of a single process.
+                     * 
                      */
                     void SetRequestId(const std::string& _requestId);
 
                     /**
                      * 判断参数 RequestId 是否已赋值
                      * @return RequestId 是否已赋值
+                     * 
                      */
                     bool RequestIdHasBeenSet() const;
 

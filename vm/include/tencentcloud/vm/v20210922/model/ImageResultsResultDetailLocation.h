@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return X X-coordinate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetX() const;
 
                     /**
                      * 设置X-coordinate
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param X X-coordinate
+                     * @param _x X-coordinate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetX(const double& _x);
 
                     /**
                      * 判断参数 X 是否已赋值
                      * @return X 是否已赋值
+                     * 
                      */
                     bool XHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Y Y-coordinate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetY() const;
 
                     /**
                      * 设置Y-coordinate
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Y Y-coordinate
+                     * @param _y Y-coordinate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetY(const double& _y);
 
                     /**
                      * 判断参数 Y 是否已赋值
                      * @return Y 是否已赋值
+                     * 
                      */
                     bool YHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Width Width
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Width
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Width Width
+                     * @param _width Width
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Height Height
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Height
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Height Height
+                     * @param _height Height
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Rotate Rotation angle
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetRotate() const;
 
                     /**
                      * 设置Rotation angle
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Rotate Rotation angle
+                     * @param _rotate Rotation angle
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRotate(const double& _rotate);
 
                     /**
                      * 判断参数 Rotate 是否已赋值
                      * @return Rotate 是否已赋值
+                     * 
                      */
                     bool RotateHasBeenSet() const;
 

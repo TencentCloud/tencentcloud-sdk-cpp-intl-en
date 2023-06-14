@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible entries.
                      * @return TotalCount Number of eligible entries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of task flow template details.
                      * @return ProcedureTemplateSet List of task flow template details.
+                     * 
                      */
                     std::vector<ProcedureTemplate> GetProcedureTemplateSet() const;
 
                     /**
                      * 判断参数 ProcedureTemplateSet 是否已赋值
                      * @return ProcedureTemplateSet 是否已赋值
+                     * 
                      */
                     bool ProcedureTemplateSetHasBeenSet() const;
 

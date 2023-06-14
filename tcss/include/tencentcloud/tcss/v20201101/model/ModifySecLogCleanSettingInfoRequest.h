@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Minimum storage (50-99) for triggering clearing
                      * @return ReservesLimit Minimum storage (50-99) for triggering clearing
+                     * 
                      */
                     uint64_t GetReservesLimit() const;
 
                     /**
                      * 设置Minimum storage (50-99) for triggering clearing
-                     * @param ReservesLimit Minimum storage (50-99) for triggering clearing
+                     * @param _reservesLimit Minimum storage (50-99) for triggering clearing
+                     * 
                      */
                     void SetReservesLimit(const uint64_t& _reservesLimit);
 
                     /**
                      * 判断参数 ReservesLimit 是否已赋值
                      * @return ReservesLimit 是否已赋值
+                     * 
                      */
                     bool ReservesLimitHasBeenSet() const;
 
                     /**
                      * 获取Storage limit (greater than 0 and smaller than `ReservesLimit`) for stopping clearing
                      * @return ReservesDeadline Storage limit (greater than 0 and smaller than `ReservesLimit`) for stopping clearing
+                     * 
                      */
                     uint64_t GetReservesDeadline() const;
 
                     /**
                      * 设置Storage limit (greater than 0 and smaller than `ReservesLimit`) for stopping clearing
-                     * @param ReservesDeadline Storage limit (greater than 0 and smaller than `ReservesLimit`) for stopping clearing
+                     * @param _reservesDeadline Storage limit (greater than 0 and smaller than `ReservesLimit`) for stopping clearing
+                     * 
                      */
                     void SetReservesDeadline(const uint64_t& _reservesDeadline);
 
                     /**
                      * 判断参数 ReservesDeadline 是否已赋值
                      * @return ReservesDeadline 是否已赋值
+                     * 
                      */
                     bool ReservesDeadlineHasBeenSet() const;
 
                     /**
                      * 获取Storage period (no less than one day) for triggering clearing
                      * @return DayLimit Storage period (no less than one day) for triggering clearing
+                     * 
                      */
                     uint64_t GetDayLimit() const;
 
                     /**
                      * 设置Storage period (no less than one day) for triggering clearing
-                     * @param DayLimit Storage period (no less than one day) for triggering clearing
+                     * @param _dayLimit Storage period (no less than one day) for triggering clearing
+                     * 
                      */
                     void SetDayLimit(const uint64_t& _dayLimit);
 
                     /**
                      * 判断参数 DayLimit 是否已赋值
                      * @return DayLimit 是否已赋值
+                     * 
                      */
                     bool DayLimitHasBeenSet() const;
 

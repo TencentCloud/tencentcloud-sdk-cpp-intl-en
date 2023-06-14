@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Private IP address.
                      * @return PrivateIpAddress Private IP address.
+                     * 
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
                      * 设置Private IP address.
-                     * @param PrivateIpAddress Private IP address.
+                     * @param _privateIpAddress Private IP address.
+                     * 
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
                     /**
                      * 判断参数 PrivateIpAddress 是否已赋值
                      * @return PrivateIpAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressHasBeenSet() const;
 
                     /**
                      * 获取Whether it is a primary IP.
                      * @return Primary Whether it is a primary IP.
+                     * 
                      */
                     bool GetPrimary() const;
 
                     /**
                      * 设置Whether it is a primary IP.
-                     * @param Primary Whether it is a primary IP.
+                     * @param _primary Whether it is a primary IP.
+                     * 
                      */
                     void SetPrimary(const bool& _primary);
 
                     /**
                      * 判断参数 Primary 是否已赋值
                      * @return Primary 是否已赋值
+                     * 
                      */
                     bool PrimaryHasBeenSet() const;
 
                     /**
                      * 获取Public IP address.
                      * @return PublicIpAddress Public IP address.
+                     * 
                      */
                     std::string GetPublicIpAddress() const;
 
                     /**
                      * 设置Public IP address.
-                     * @param PublicIpAddress Public IP address.
+                     * @param _publicIpAddress Public IP address.
+                     * 
                      */
                     void SetPublicIpAddress(const std::string& _publicIpAddress);
 
                     /**
                      * 判断参数 PublicIpAddress 是否已赋值
                      * @return PublicIpAddress 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressHasBeenSet() const;
 
                     /**
                      * 获取EIP instance ID, such as `eip-11112222`.
                      * @return AddressId EIP instance ID, such as `eip-11112222`.
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置EIP instance ID, such as `eip-11112222`.
-                     * @param AddressId EIP instance ID, such as `eip-11112222`.
+                     * @param _addressId EIP instance ID, such as `eip-11112222`.
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 
                     /**
                      * 获取Private IP description.
                      * @return Description Private IP description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Private IP description.
-                     * @param Description Private IP description.
+                     * @param _description Private IP description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Whether the public IP is blocked.
                      * @return IsWanIpBlocked Whether the public IP is blocked.
+                     * 
                      */
                     bool GetIsWanIpBlocked() const;
 
                     /**
                      * 设置Whether the public IP is blocked.
-                     * @param IsWanIpBlocked Whether the public IP is blocked.
+                     * @param _isWanIpBlocked Whether the public IP is blocked.
+                     * 
                      */
                     void SetIsWanIpBlocked(const bool& _isWanIpBlocked);
 
                     /**
                      * 判断参数 IsWanIpBlocked 是否已赋值
                      * @return IsWanIpBlocked 是否已赋值
+                     * 
                      */
                     bool IsWanIpBlockedHasBeenSet() const;
 
@@ -165,6 +183,7 @@ PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
+                     * 
                      */
                     std::string GetState() const;
 
@@ -174,35 +193,40 @@ PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
-                     * @param State IP status:
+                     * @param _state IP status:
 PENDING: Creating
 MIGRATING: Migrating
 DELETING: Deleting
 AVAILABLE: Available
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
                      * @return QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 
                      */
                     std::string GetQosLevel() const;
 
                     /**
                      * 设置IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
-                     * @param QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * @param _qosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * 
                      */
                     void SetQosLevel(const std::string& _qosLevel);
 
                     /**
                      * 判断参数 QosLevel 是否已赋值
                      * @return QosLevel 是否已赋值
+                     * 
                      */
                     bool QosLevelHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the group to modify.
                      * @return GroupId The ID of the group to modify.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置The ID of the group to modify.
-                     * @param GroupId The ID of the group to modify.
+                     * @param _groupId The ID of the group to modify.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The user ID of the teacher.
                      * @return TeacherId The user ID of the teacher.
+                     * 
                      */
                     std::string GetTeacherId() const;
 
                     /**
                      * 设置The user ID of the teacher.
-                     * @param TeacherId The user ID of the teacher.
+                     * @param _teacherId The user ID of the teacher.
+                     * 
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
                     /**
                      * 判断参数 TeacherId 是否已赋值
                      * @return TeacherId 是否已赋值
+                     * 
                      */
                     bool TeacherIdHasBeenSet() const;
 
                     /**
                      * 获取The new group name.
                      * @return GroupName The new group name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置The new group name.
-                     * @param GroupName The new group name.
+                     * @param _groupName The new group name.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 

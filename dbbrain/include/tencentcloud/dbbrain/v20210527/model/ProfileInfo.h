@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Email language, such as `en`.
                      * @return Language Email language, such as `en`.
+                     * 
                      */
                     std::string GetLanguage() const;
 
                     /**
                      * 设置Email language, such as `en`.
-                     * @param Language Email language, such as `en`.
+                     * @param _language Email language, such as `en`.
+                     * 
                      */
                     void SetLanguage(const std::string& _language);
 
                     /**
                      * 判断参数 Language 是否已赋值
                      * @return Language 是否已赋值
+                     * 
                      */
                     bool LanguageHasBeenSet() const;
 
                     /**
                      * 获取Email template content.
                      * @return MailConfiguration Email template content.
+                     * 
                      */
                     MailConfiguration GetMailConfiguration() const;
 
                     /**
                      * 设置Email template content.
-                     * @param MailConfiguration Email template content.
+                     * @param _mailConfiguration Email template content.
+                     * 
                      */
                     void SetMailConfiguration(const MailConfiguration& _mailConfiguration);
 
                     /**
                      * 判断参数 MailConfiguration 是否已赋值
                      * @return MailConfiguration 是否已赋值
+                     * 
                      */
                     bool MailConfigurationHasBeenSet() const;
 

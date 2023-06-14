@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Cidr Local CIDR block, including subnet CIDR block and secondary CIDR block
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCidr() const;
 
                     /**
                      * 设置Local CIDR block, including subnet CIDR block and secondary CIDR block
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Cidr Local CIDR block, including subnet CIDR block and secondary CIDR block
+                     * @param _cidr Local CIDR block, including subnet CIDR block and secondary CIDR block
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCidr(const std::string& _cidr);
 
                     /**
                      * 判断参数 Cidr 是否已赋值
                      * @return Cidr 是否已赋值
+                     * 
                      */
                     bool CidrHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PublishedToVbc Whether the routing policy of the VPC subnet is published to CCN.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetPublishedToVbc() const;
 
                     /**
                      * 设置Whether the routing policy of the VPC subnet is published to CCN.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PublishedToVbc Whether the routing policy of the VPC subnet is published to CCN.
+                     * @param _publishedToVbc Whether the routing policy of the VPC subnet is published to CCN.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublishedToVbc(const bool& _publishedToVbc);
 
                     /**
                      * 判断参数 PublishedToVbc 是否已赋值
                      * @return PublishedToVbc 是否已赋值
+                     * 
                      */
                     bool PublishedToVbcHasBeenSet() const;
 

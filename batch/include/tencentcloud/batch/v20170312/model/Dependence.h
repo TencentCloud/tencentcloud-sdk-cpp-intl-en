@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Dependency start task name 
                      * @return StartTask Dependency start task name 
+                     * 
                      */
                     std::string GetStartTask() const;
 
                     /**
                      * 设置Dependency start task name 
-                     * @param StartTask Dependency start task name 
+                     * @param _startTask Dependency start task name 
+                     * 
                      */
                     void SetStartTask(const std::string& _startTask);
 
                     /**
                      * 判断参数 StartTask 是否已赋值
                      * @return StartTask 是否已赋值
+                     * 
                      */
                     bool StartTaskHasBeenSet() const;
 
                     /**
                      * 获取Dependency end task name 
                      * @return EndTask Dependency end task name 
+                     * 
                      */
                     std::string GetEndTask() const;
 
                     /**
                      * 设置Dependency end task name 
-                     * @param EndTask Dependency end task name 
+                     * @param _endTask Dependency end task name 
+                     * 
                      */
                     void SetEndTask(const std::string& _endTask);
 
                     /**
                      * 判断参数 EndTask 是否已赋值
                      * @return EndTask 是否已赋值
+                     * 
                      */
                     bool EndTaskHasBeenSet() const;
 

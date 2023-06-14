@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZhiTong Whether to enable VIP direct connection
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetZhiTong() const;
 
                     /**
                      * 设置Whether to enable VIP direct connection
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ZhiTong Whether to enable VIP direct connection
+                     * @param _zhiTong Whether to enable VIP direct connection
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZhiTong(const bool& _zhiTong);
 
                     /**
                      * 判断参数 ZhiTong 是否已赋值
                      * @return ZhiTong 是否已赋值
+                     * 
                      */
                     bool ZhiTongHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TgwGroupName TgwGroup name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTgwGroupName() const;
 
                     /**
                      * 设置TgwGroup name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TgwGroupName TgwGroup name
+                     * @param _tgwGroupName TgwGroup name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTgwGroupName(const std::string& _tgwGroupName);
 
                     /**
                      * 判断参数 TgwGroupName 是否已赋值
                      * @return TgwGroupName 是否已赋值
+                     * 
                      */
                     bool TgwGroupNameHasBeenSet() const;
 

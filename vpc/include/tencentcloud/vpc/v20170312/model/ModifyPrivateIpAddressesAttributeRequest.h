@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the ENI instance, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The ID of the ENI instance, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取The specified private IP information.
                      * @return PrivateIpAddresses The specified private IP information.
+                     * 
                      */
                     std::vector<PrivateIpAddressSpecification> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置The specified private IP information.
-                     * @param PrivateIpAddresses The specified private IP information.
+                     * @param _privateIpAddresses The specified private IP information.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<PrivateIpAddressSpecification>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 

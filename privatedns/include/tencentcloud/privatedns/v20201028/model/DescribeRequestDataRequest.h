@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Request volume statistics start time in the format of 2020-11-22 00:00:00
                      * @return TimeRangeBegin Request volume statistics start time in the format of 2020-11-22 00:00:00
+                     * 
                      */
                     std::string GetTimeRangeBegin() const;
 
                     /**
                      * 设置Request volume statistics start time in the format of 2020-11-22 00:00:00
-                     * @param TimeRangeBegin Request volume statistics start time in the format of 2020-11-22 00:00:00
+                     * @param _timeRangeBegin Request volume statistics start time in the format of 2020-11-22 00:00:00
+                     * 
                      */
                     void SetTimeRangeBegin(const std::string& _timeRangeBegin);
 
                     /**
                      * 判断参数 TimeRangeBegin 是否已赋值
                      * @return TimeRangeBegin 是否已赋值
+                     * 
                      */
                     bool TimeRangeBeginHasBeenSet() const;
 
                     /**
                      * 获取Filter parameter:
                      * @return Filters Filter parameter:
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter parameter:
-                     * @param Filters Filter parameter:
+                     * @param _filters Filter parameter:
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Request volume statistics end time in the format of 2020-11-22 23:59:59
                      * @return TimeRangeEnd Request volume statistics end time in the format of 2020-11-22 23:59:59
+                     * 
                      */
                     std::string GetTimeRangeEnd() const;
 
                     /**
                      * 设置Request volume statistics end time in the format of 2020-11-22 23:59:59
-                     * @param TimeRangeEnd Request volume statistics end time in the format of 2020-11-22 23:59:59
+                     * @param _timeRangeEnd Request volume statistics end time in the format of 2020-11-22 23:59:59
+                     * 
                      */
                     void SetTimeRangeEnd(const std::string& _timeRangeEnd);
 
                     /**
                      * 判断参数 TimeRangeEnd 是否已赋值
                      * @return TimeRangeEnd 是否已赋值
+                     * 
                      */
                     bool TimeRangeEndHasBeenSet() const;
 

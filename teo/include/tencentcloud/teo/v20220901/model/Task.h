@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取ID of the task.
                      * @return JobId ID of the task.
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置ID of the task.
-                     * @param JobId ID of the task.
+                     * @param _jobId ID of the task.
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Status of the task.
                      * @return Status Status of the task.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status of the task.
-                     * @param Status Status of the task.
+                     * @param _status Status of the task.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Resource.
                      * @return Target Resource.
+                     * 
                      */
                     std::string GetTarget() const;
 
                     /**
                      * 设置Resource.
-                     * @param Target Resource.
+                     * @param _target Resource.
+                     * 
                      */
                     void SetTarget(const std::string& _target);
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 
                     /**
                      * 获取Type of the task.
                      * @return Type Type of the task.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of the task.
-                     * @param Type Type of the task.
+                     * @param _type Type of the task.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the task.
                      * @return CreateTime Creation time of the task.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of the task.
-                     * @param CreateTime Creation time of the task.
+                     * @param _createTime Creation time of the task.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Completion time of the task.
                      * @return UpdateTime Completion time of the task.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Completion time of the task.
-                     * @param UpdateTime Completion time of the task.
+                     * @param _updateTime Completion time of the task.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

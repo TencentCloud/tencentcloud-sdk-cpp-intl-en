@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取TCP port range, such as ["2000-3000","3500-4000"]
                      * @return TcpPortList TCP port range, such as ["2000-3000","3500-4000"]
+                     * 
                      */
                     std::vector<std::string> GetTcpPortList() const;
 
                     /**
                      * 设置TCP port range, such as ["2000-3000","3500-4000"]
-                     * @param TcpPortList TCP port range, such as ["2000-3000","3500-4000"]
+                     * @param _tcpPortList TCP port range, such as ["2000-3000","3500-4000"]
+                     * 
                      */
                     void SetTcpPortList(const std::vector<std::string>& _tcpPortList);
 
                     /**
                      * 判断参数 TcpPortList 是否已赋值
                      * @return TcpPortList 是否已赋值
+                     * 
                      */
                     bool TcpPortListHasBeenSet() const;
 
                     /**
                      * 获取UDP port range, such as ["2000-3000","3500-4000"]
                      * @return UdpPortList UDP port range, such as ["2000-3000","3500-4000"]
+                     * 
                      */
                     std::vector<std::string> GetUdpPortList() const;
 
                     /**
                      * 设置UDP port range, such as ["2000-3000","3500-4000"]
-                     * @param UdpPortList UDP port range, such as ["2000-3000","3500-4000"]
+                     * @param _udpPortList UDP port range, such as ["2000-3000","3500-4000"]
+                     * 
                      */
                     void SetUdpPortList(const std::vector<std::string>& _udpPortList);
 
                     /**
                      * 判断参数 UdpPortList 是否已赋值
                      * @return UdpPortList 是否已赋值
+                     * 
                      */
                     bool UdpPortListHasBeenSet() const;
 
                     /**
                      * 获取Watermark offset. Value range: [0, 100)
                      * @return Offset Watermark offset. Value range: [0, 100)
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Watermark offset. Value range: [0, 100)
-                     * @param Offset Watermark offset. Value range: [0, 100)
+                     * @param _offset Watermark offset. Value range: [0, 100)
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically remove. Valid values: [0 (no), 1 (yes)]
                      * @return RemoveSwitch Whether to automatically remove. Valid values: [0 (no), 1 (yes)]
+                     * 
                      */
                     uint64_t GetRemoveSwitch() const;
 
                     /**
                      * 设置Whether to automatically remove. Valid values: [0 (no), 1 (yes)]
-                     * @param RemoveSwitch Whether to automatically remove. Valid values: [0 (no), 1 (yes)]
+                     * @param _removeSwitch Whether to automatically remove. Valid values: [0 (no), 1 (yes)]
+                     * 
                      */
                     void SetRemoveSwitch(const uint64_t& _removeSwitch);
 
                     /**
                      * 判断参数 RemoveSwitch 是否已赋值
                      * @return RemoveSwitch 是否已赋值
+                     * 
                      */
                     bool RemoveSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether it is enabled. Valid values: [0 (no), 1 (yes)]
                      * @return OpenStatus Whether it is enabled. Valid values: [0 (no), 1 (yes)]
+                     * 
                      */
                     uint64_t GetOpenStatus() const;
 
                     /**
                      * 设置Whether it is enabled. Valid values: [0 (no), 1 (yes)]
-                     * @param OpenStatus Whether it is enabled. Valid values: [0 (no), 1 (yes)]
+                     * @param _openStatus Whether it is enabled. Valid values: [0 (no), 1 (yes)]
+                     * 
                      */
                     void SetOpenStatus(const uint64_t& _openStatus);
 
                     /**
                      * 判断参数 OpenStatus 是否已赋值
                      * @return OpenStatus 是否已赋值
+                     * 
                      */
                     bool OpenStatusHasBeenSet() const;
 

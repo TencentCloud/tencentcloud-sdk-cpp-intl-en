@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileName Filename excluding extension
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename excluding extension
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileName Filename excluding extension
+                     * @param _fileName Filename excluding extension
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileType Data interface description language (IDL) type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFileType() const;
 
                     /**
                      * 设置Data interface description language (IDL) type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileType Data interface description language (IDL) type
+                     * @param _fileType Data interface description language (IDL) type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileType(const std::string& _fileType);
 
                     /**
                      * 判断参数 FileType 是否已赋值
                      * @return FileType 是否已赋值
+                     * 
                      */
                     bool FileTypeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileExtType File extension
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFileExtType() const;
 
                     /**
                      * 设置File extension
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileExtType File extension
+                     * @param _fileExtType File extension
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileExtType(const std::string& _fileExtType);
 
                     /**
                      * 判断参数 FileExtType 是否已赋值
                      * @return FileExtType 是否已赋值
+                     * 
                      */
                     bool FileExtTypeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileSize File size in bytes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFileSize() const;
 
                     /**
                      * 设置File size in bytes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileSize File size in bytes
+                     * @param _fileSize File size in bytes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileSize(const int64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
                      * @return FileSize 是否已赋值
+                     * 
                      */
                     bool FileSizeHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileId File ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFileId() const;
 
                     /**
                      * 设置File ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileId File ID
+                     * @param _fileId File ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileId(const int64_t& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Error Error message
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ErrorInfo GetError() const;
 
                     /**
                      * 设置Error message
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Error Error message
+                     * @param _error Error message
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetError(const ErrorInfo& _error);
 
                     /**
                      * 判断参数 Error 是否已赋值
                      * @return Error 是否已赋值
+                     * 
                      */
                     bool ErrorHasBeenSet() const;
 

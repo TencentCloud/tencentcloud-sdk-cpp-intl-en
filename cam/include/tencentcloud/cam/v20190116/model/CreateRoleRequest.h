@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Role name
                      * @return RoleName Role name
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name
-                     * @param RoleName Role name
+                     * @param _roleName Role name
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
                     /**
                      * 获取Policy document
                      * @return PolicyDocument Policy document
+                     * 
                      */
                     std::string GetPolicyDocument() const;
 
                     /**
                      * 设置Policy document
-                     * @param PolicyDocument Policy document
+                     * @param _policyDocument Policy document
+                     * 
                      */
                     void SetPolicyDocument(const std::string& _policyDocument);
 
                     /**
                      * 判断参数 PolicyDocument 是否已赋值
                      * @return PolicyDocument 是否已赋值
+                     * 
                      */
                     bool PolicyDocumentHasBeenSet() const;
 
                     /**
                      * 获取Role description
                      * @return Description Role description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Role description
-                     * @param Description Role description
+                     * @param _description Role description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Whether login is allowed. 1: yes, 0: no
                      * @return ConsoleLogin Whether login is allowed. 1: yes, 0: no
+                     * 
                      */
                     uint64_t GetConsoleLogin() const;
 
                     /**
                      * 设置Whether login is allowed. 1: yes, 0: no
-                     * @param ConsoleLogin Whether login is allowed. 1: yes, 0: no
+                     * @param _consoleLogin Whether login is allowed. 1: yes, 0: no
+                     * 
                      */
                     void SetConsoleLogin(const uint64_t& _consoleLogin);
 
                     /**
                      * 判断参数 ConsoleLogin 是否已赋值
                      * @return ConsoleLogin 是否已赋值
+                     * 
                      */
                     bool ConsoleLoginHasBeenSet() const;
 
                     /**
                      * 获取The maximum validity period of the temporary key for creating a role (range: 0-43200)
                      * @return SessionDuration The maximum validity period of the temporary key for creating a role (range: 0-43200)
+                     * 
                      */
                     uint64_t GetSessionDuration() const;
 
                     /**
                      * 设置The maximum validity period of the temporary key for creating a role (range: 0-43200)
-                     * @param SessionDuration The maximum validity period of the temporary key for creating a role (range: 0-43200)
+                     * @param _sessionDuration The maximum validity period of the temporary key for creating a role (range: 0-43200)
+                     * 
                      */
                     void SetSessionDuration(const uint64_t& _sessionDuration);
 
                     /**
                      * 判断参数 SessionDuration 是否已赋值
                      * @return SessionDuration 是否已赋值
+                     * 
                      */
                     bool SessionDurationHasBeenSet() const;
 
                     /**
                      * 获取Tags bound to the role.
                      * @return Tags Tags bound to the role.
+                     * 
                      */
                     std::vector<RoleTags> GetTags() const;
 
                     /**
                      * 设置Tags bound to the role.
-                     * @param Tags Tags bound to the role.
+                     * @param _tags Tags bound to the role.
+                     * 
                      */
                     void SetTags(const std::vector<RoleTags>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

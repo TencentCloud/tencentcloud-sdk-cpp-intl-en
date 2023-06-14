@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The target region of cross-region backup
                      * @return CrossRegion The target region of cross-region backup
+                     * 
                      */
                     std::string GetCrossRegion() const;
 
                     /**
                      * 设置The target region of cross-region backup
-                     * @param CrossRegion The target region of cross-region backup
+                     * @param _crossRegion The target region of cross-region backup
+                     * 
                      */
                     void SetCrossRegion(const std::string& _crossRegion);
 
                     /**
                      * 判断参数 CrossRegion 是否已赋值
                      * @return CrossRegion 是否已赋值
+                     * 
                      */
                     bool CrossRegionHasBeenSet() const;
 
                     /**
                      * 获取The address used to download the cross-region backup over a private network
                      * @return CrossInternalAddr The address used to download the cross-region backup over a private network
+                     * 
                      */
                     std::string GetCrossInternalAddr() const;
 
                     /**
                      * 设置The address used to download the cross-region backup over a private network
-                     * @param CrossInternalAddr The address used to download the cross-region backup over a private network
+                     * @param _crossInternalAddr The address used to download the cross-region backup over a private network
+                     * 
                      */
                     void SetCrossInternalAddr(const std::string& _crossInternalAddr);
 
                     /**
                      * 判断参数 CrossInternalAddr 是否已赋值
                      * @return CrossInternalAddr 是否已赋值
+                     * 
                      */
                     bool CrossInternalAddrHasBeenSet() const;
 
                     /**
                      * 获取The address used to download the cross-region backup over a public network
                      * @return CrossExternalAddr The address used to download the cross-region backup over a public network
+                     * 
                      */
                     std::string GetCrossExternalAddr() const;
 
                     /**
                      * 设置The address used to download the cross-region backup over a public network
-                     * @param CrossExternalAddr The address used to download the cross-region backup over a public network
+                     * @param _crossExternalAddr The address used to download the cross-region backup over a public network
+                     * 
                      */
                     void SetCrossExternalAddr(const std::string& _crossExternalAddr);
 
                     /**
                      * 判断参数 CrossExternalAddr 是否已赋值
                      * @return CrossExternalAddr 是否已赋值
+                     * 
                      */
                     bool CrossExternalAddrHasBeenSet() const;
 

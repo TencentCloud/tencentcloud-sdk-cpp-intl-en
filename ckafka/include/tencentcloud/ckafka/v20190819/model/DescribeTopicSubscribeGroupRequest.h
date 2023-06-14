@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name
                      * @return TopicName Topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-                     * @param TopicName Topic name
+                     * @param _topicName Topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Starting position of paging
                      * @return Offset Starting position of paging
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting position of paging
-                     * @param Offset Starting position of paging
+                     * @param _offset Starting position of paging
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page
                      * @return Limit Number of results per page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page
-                     * @param Limit Number of results per page
+                     * @param _limit Number of results per page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

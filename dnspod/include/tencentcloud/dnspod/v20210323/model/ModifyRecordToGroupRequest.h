@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Domain
                      * @return Domain Domain
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain
-                     * @param Domain Domain
+                     * @param _domain Domain
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Group ID
                      * @return GroupId Group ID
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置Group ID
-                     * @param GroupId Group ID
+                     * @param _groupId Group ID
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Record ID. Separate multiple IDs by vertical bar ("|").
                      * @return RecordId Record ID. Separate multiple IDs by vertical bar ("|").
+                     * 
                      */
                     std::string GetRecordId() const;
 
                     /**
                      * 设置Record ID. Separate multiple IDs by vertical bar ("|").
-                     * @param RecordId Record ID. Separate multiple IDs by vertical bar ("|").
+                     * @param _recordId Record ID. Separate multiple IDs by vertical bar ("|").
+                     * 
                      */
                     void SetRecordId(const std::string& _recordId);
 
                     /**
                      * 判断参数 RecordId 是否已赋值
                      * @return RecordId 是否已赋值
+                     * 
                      */
                     bool RecordIdHasBeenSet() const;
 
                     /**
                      * 获取The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
                      * @return DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+                     * 
                      */
                     uint64_t GetDomainId() const;
 
                     /**
                      * 设置The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
-                     * @param DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+                     * @param _domainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored.
+                     * 
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 

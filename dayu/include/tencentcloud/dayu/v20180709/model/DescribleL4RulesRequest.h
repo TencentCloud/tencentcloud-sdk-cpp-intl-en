@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
-                     * @param Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * @param _business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param Id Anti-DDoS instance ID
+                     * @param _id Anti-DDoS instance ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Rule ID, which is optional. If this field is entered, the specified rule will be obtained
                      * @return RuleIdList Rule ID, which is optional. If this field is entered, the specified rule will be obtained
+                     * 
                      */
                     std::vector<std::string> GetRuleIdList() const;
 
                     /**
                      * 设置Rule ID, which is optional. If this field is entered, the specified rule will be obtained
-                     * @param RuleIdList Rule ID, which is optional. If this field is entered, the specified rule will be obtained
+                     * @param _ruleIdList Rule ID, which is optional. If this field is entered, the specified rule will be obtained
+                     * 
                      */
                     void SetRuleIdList(const std::vector<std::string>& _ruleIdList);
 
                     /**
                      * 判断参数 RuleIdList 是否已赋值
                      * @return RuleIdList 是否已赋值
+                     * 
                      */
                     bool RuleIdListHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. A value of 0 means no pagination
                      * @return Limit Number of entries per page. A value of 0 means no pagination
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. A value of 0 means no pagination
-                     * @param Limit Number of entries per page. A value of 0 means no pagination
+                     * @param _limit Number of entries per page. A value of 0 means no pagination
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page start offset, whose value is (page number - 1) * number of entries per page
                      * @return Offset Page start offset, whose value is (page number - 1) * number of entries per page
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page start offset, whose value is (page number - 1) * number of entries per page
-                     * @param Offset Page start offset, whose value is (page number - 1) * number of entries per page
+                     * @param _offset Page start offset, whose value is (page number - 1) * number of entries per page
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

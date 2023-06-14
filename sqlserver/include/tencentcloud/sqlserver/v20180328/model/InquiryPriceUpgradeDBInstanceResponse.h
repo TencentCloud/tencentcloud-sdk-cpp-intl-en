@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
                      * @return OriginalPrice Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+                     * 
                      */
                     int64_t GetOriginalPrice() const;
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
                      * @return Price The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+                     * 
                      */
                     int64_t GetPrice() const;
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 

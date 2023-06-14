@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Cloud disk ID.
                      * @return DiskId Cloud disk ID.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Cloud disk ID.
-                     * @param DiskId Cloud disk ID.
+                     * @param _diskId Cloud disk ID.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk unit price.
                      * @return OriginalDiskPrice Cloud disk unit price.
+                     * 
                      */
                     double GetOriginalDiskPrice() const;
 
                     /**
                      * 设置Cloud disk unit price.
-                     * @param OriginalDiskPrice Cloud disk unit price.
+                     * @param _originalDiskPrice Cloud disk unit price.
+                     * 
                      */
                     void SetOriginalDiskPrice(const double& _originalDiskPrice);
 
                     /**
                      * 判断参数 OriginalDiskPrice 是否已赋值
                      * @return OriginalDiskPrice 是否已赋值
+                     * 
                      */
                     bool OriginalDiskPriceHasBeenSet() const;
 
                     /**
                      * 获取Total price of cloud disk
                      * @return OriginalPrice Total price of cloud disk
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Total price of cloud disk
-                     * @param OriginalPrice Total price of cloud disk
+                     * @param _originalPrice Total price of cloud disk
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discount.
                      * @return Discount Discount.
+                     * 
                      */
                     double GetDiscount() const;
 
                     /**
                      * 设置Discount.
-                     * @param Discount Discount.
+                     * @param _discount Discount.
+                     * 
                      */
                     void SetDiscount(const double& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discounted total price.
                      * @return DiscountPrice Discounted total price.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted total price.
-                     * @param DiscountPrice Discounted total price.
+                     * @param _discountPrice Discounted total price.
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceId ID of the instance to which the data disk is mounted.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance to which the data disk is mounted.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstanceId ID of the instance to which the data disk is mounted.
+                     * @param _instanceId ID of the instance to which the data disk is mounted.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

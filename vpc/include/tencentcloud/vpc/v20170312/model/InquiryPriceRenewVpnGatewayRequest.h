@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPN gateway instance.
                      * @return VpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     std::string GetVpnGatewayId() const;
 
                     /**
                      * 设置The ID of the VPN gateway instance.
-                     * @param VpnGatewayId The ID of the VPN gateway instance.
+                     * @param _vpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     void SetVpnGatewayId(const std::string& _vpnGatewayId);
 
                     /**
                      * 判断参数 VpnGatewayId 是否已赋值
                      * @return VpnGatewayId 是否已赋值
+                     * 
                      */
                     bool VpnGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies the purchased validity period, whether to enable auto-renewal. This parameter is required for monthly-subscription instances.
                      * @return InstanceChargePrepaid Specifies the purchased validity period, whether to enable auto-renewal. This parameter is required for monthly-subscription instances.
+                     * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
                      * 设置Specifies the purchased validity period, whether to enable auto-renewal. This parameter is required for monthly-subscription instances.
-                     * @param InstanceChargePrepaid Specifies the purchased validity period, whether to enable auto-renewal. This parameter is required for monthly-subscription instances.
+                     * @param _instanceChargePrepaid Specifies the purchased validity period, whether to enable auto-renewal. This parameter is required for monthly-subscription instances.
+                     * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
                     /**
                      * 判断参数 InstanceChargePrepaid 是否已赋值
                      * @return InstanceChargePrepaid 是否已赋值
+                     * 
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of usage plans bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of usage plans bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of usage plans bound to service.
+                     * @param _totalCount Total number of usage plans bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceUsagePlanList List of usage plans bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiUsagePlan> GetServiceUsagePlanList() const;
 
                     /**
                      * 设置List of usage plans bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceUsagePlanList List of usage plans bound to service.
+                     * @param _serviceUsagePlanList List of usage plans bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceUsagePlanList(const std::vector<ApiUsagePlan>& _serviceUsagePlanList);
 
                     /**
                      * 判断参数 ServiceUsagePlanList 是否已赋值
                      * @return ServiceUsagePlanList 是否已赋值
+                     * 
                      */
                     bool ServiceUsagePlanListHasBeenSet() const;
 

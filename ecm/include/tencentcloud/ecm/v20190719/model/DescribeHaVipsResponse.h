@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible objects.
                      * @return TotalCount Number of eligible objects.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HaVipSet Array of HAVIP objects.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<HaVip> GetHaVipSet() const;
 
                     /**
                      * 判断参数 HaVipSet 是否已赋值
                      * @return HaVipSet 是否已赋值
+                     * 
                      */
                     bool HaVipSetHasBeenSet() const;
 

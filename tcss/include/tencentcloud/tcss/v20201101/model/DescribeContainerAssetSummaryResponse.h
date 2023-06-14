@@ -46,132 +46,154 @@ namespace TencentCloud
                     /**
                      * 获取Total number of containers
                      * @return ContainerTotalCnt Total number of containers
+                     * 
                      */
                     uint64_t GetContainerTotalCnt() const;
 
                     /**
                      * 判断参数 ContainerTotalCnt 是否已赋值
                      * @return ContainerTotalCnt 是否已赋值
+                     * 
                      */
                     bool ContainerTotalCntHasBeenSet() const;
 
                     /**
                      * 获取Number of running containers
                      * @return ContainerRunningCnt Number of running containers
+                     * 
                      */
                     uint64_t GetContainerRunningCnt() const;
 
                     /**
                      * 判断参数 ContainerRunningCnt 是否已赋值
                      * @return ContainerRunningCnt 是否已赋值
+                     * 
                      */
                     bool ContainerRunningCntHasBeenSet() const;
 
                     /**
                      * 获取Number of suspended containers
                      * @return ContainerPauseCnt Number of suspended containers
+                     * 
                      */
                     uint64_t GetContainerPauseCnt() const;
 
                     /**
                      * 判断参数 ContainerPauseCnt 是否已赋值
                      * @return ContainerPauseCnt 是否已赋值
+                     * 
                      */
                     bool ContainerPauseCntHasBeenSet() const;
 
                     /**
                      * 获取Number of stopped containers
                      * @return ContainerStopped Number of stopped containers
+                     * 
                      */
                     uint64_t GetContainerStopped() const;
 
                     /**
                      * 判断参数 ContainerStopped 是否已赋值
                      * @return ContainerStopped 是否已赋值
+                     * 
                      */
                     bool ContainerStoppedHasBeenSet() const;
 
                     /**
                      * 获取Number of local images
                      * @return ImageCnt Number of local images
+                     * 
                      */
                     uint64_t GetImageCnt() const;
 
                     /**
                      * 判断参数 ImageCnt 是否已赋值
                      * @return ImageCnt 是否已赋值
+                     * 
                      */
                     bool ImageCntHasBeenSet() const;
 
                     /**
                      * 获取Number of server nodes
                      * @return HostCnt Number of server nodes
+                     * 
                      */
                     uint64_t GetHostCnt() const;
 
                     /**
                      * 判断参数 HostCnt 是否已赋值
                      * @return HostCnt 是否已赋值
+                     * 
                      */
                     bool HostCntHasBeenSet() const;
 
                     /**
                      * 获取Number of running nodes on the server
                      * @return HostRunningCnt Number of running nodes on the server
+                     * 
                      */
                     uint64_t GetHostRunningCnt() const;
 
                     /**
                      * 判断参数 HostRunningCnt 是否已赋值
                      * @return HostRunningCnt 是否已赋值
+                     * 
                      */
                     bool HostRunningCntHasBeenSet() const;
 
                     /**
                      * 获取Number of offline nodes on the server
                      * @return HostOfflineCnt Number of offline nodes on the server
+                     * 
                      */
                     uint64_t GetHostOfflineCnt() const;
 
                     /**
                      * 判断参数 HostOfflineCnt 是否已赋值
                      * @return HostOfflineCnt 是否已赋值
+                     * 
                      */
                     bool HostOfflineCntHasBeenSet() const;
 
                     /**
                      * 获取Number of image repositories
                      * @return ImageRegistryCnt Number of image repositories
+                     * 
                      */
                     uint64_t GetImageRegistryCnt() const;
 
                     /**
                      * 判断参数 ImageRegistryCnt 是否已赋值
                      * @return ImageRegistryCnt 是否已赋值
+                     * 
                      */
                     bool ImageRegistryCntHasBeenSet() const;
 
                     /**
                      * 获取Total number of images
                      * @return ImageTotalCnt Total number of images
+                     * 
                      */
                     uint64_t GetImageTotalCnt() const;
 
                     /**
                      * 判断参数 ImageTotalCnt 是否已赋值
                      * @return ImageTotalCnt 是否已赋值
+                     * 
                      */
                     bool ImageTotalCntHasBeenSet() const;
 
                     /**
                      * 获取Number of servers not installed with the agent
                      * @return HostUnInstallCnt Number of servers not installed with the agent
+                     * 
                      */
                     uint64_t GetHostUnInstallCnt() const;
 
                     /**
                      * 判断参数 HostUnInstallCnt 是否已赋值
                      * @return HostUnInstallCnt 是否已赋值
+                     * 
                      */
                     bool HostUnInstallCntHasBeenSet() const;
 

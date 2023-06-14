@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot ID
                      * @return SnapshotId Snapshot ID
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
                      * 获取Operation log
                      * @return SnapshotOperates Operation log
+                     * 
                      */
                     std::vector<SnapshotOperateLog> GetSnapshotOperates() const;
 
                     /**
                      * 判断参数 SnapshotOperates 是否已赋值
                      * @return SnapshotOperates 是否已赋值
+                     * 
                      */
                     bool SnapshotOperatesHasBeenSet() const;
 

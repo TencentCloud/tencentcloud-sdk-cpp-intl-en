@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Number of vulnerabilities.
                      * @return VulNum Number of vulnerabilities.
+                     * 
                      */
                     uint64_t GetVulNum() const;
 
                     /**
                      * 判断参数 VulNum 是否已赋值
                      * @return VulNum 是否已赋值
+                     * 
                      */
                     bool VulNumHasBeenSet() const;
 
                     /**
                      * 获取Number of servers activated CWP Pro
                      * @return ProVersionNum Number of servers activated CWP Pro
+                     * 
                      */
                     uint64_t GetProVersionNum() const;
 
                     /**
                      * 判断参数 ProVersionNum 是否已赋值
                      * @return ProVersionNum 是否已赋值
+                     * 
                      */
                     bool ProVersionNumHasBeenSet() const;
 
                     /**
                      * 获取Number of affected activated CWP Pro.
                      * @return ImpactedHostNum Number of affected activated CWP Pro.
+                     * 
                      */
                     uint64_t GetImpactedHostNum() const;
 
                     /**
                      * 判断参数 ImpactedHostNum 是否已赋值
                      * @return ImpactedHostNum 是否已赋值
+                     * 
                      */
                     bool ImpactedHostNumHasBeenSet() const;
 
                     /**
                      * 获取Total number of servers.
                      * @return HostNum Total number of servers.
+                     * 
                      */
                     uint64_t GetHostNum() const;
 
                     /**
                      * 判断参数 HostNum 是否已赋值
                      * @return HostNum 是否已赋值
+                     * 
                      */
                     bool HostNumHasBeenSet() const;
 
                     /**
                      * 获取Number of servers on CWP Basic.
                      * @return BasicVersionNum Number of servers on CWP Basic.
+                     * 
                      */
                     uint64_t GetBasicVersionNum() const;
 
                     /**
                      * 判断参数 BasicVersionNum 是否已赋值
                      * @return BasicVersionNum 是否已赋值
+                     * 
                      */
                     bool BasicVersionNumHasBeenSet() const;
 

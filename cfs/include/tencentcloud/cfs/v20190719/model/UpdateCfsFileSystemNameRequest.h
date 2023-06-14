@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取File system ID
                      * @return FileSystemId File system ID
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 设置File system ID
-                     * @param FileSystemId File system ID
+                     * @param _fileSystemId File system ID
+                     * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
                      * 获取Custom file system name
                      * @return FsName Custom file system name
+                     * 
                      */
                     std::string GetFsName() const;
 
                     /**
                      * 设置Custom file system name
-                     * @param FsName Custom file system name
+                     * @param _fsName Custom file system name
+                     * 
                      */
                     void SetFsName(const std::string& _fsName);
 
                     /**
                      * 判断参数 FsName 是否已赋值
                      * @return FsName 是否已赋值
+                     * 
                      */
                     bool FsNameHasBeenSet() const;
 

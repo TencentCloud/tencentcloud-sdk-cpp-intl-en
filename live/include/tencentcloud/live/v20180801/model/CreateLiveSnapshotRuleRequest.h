@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Template ID.
                      * @return TemplateId Template ID.
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-                     * @param TemplateId Template ID.
+                     * @param _templateId Template ID.
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
                      * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
-                     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * @param _appName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
@@ -101,20 +110,23 @@ namespace TencentCloud
 Note: if this parameter is a non-empty string, the rule will take effect only for the particular stream.
                      * @return StreamName Stream name.
 Note: if this parameter is a non-empty string, the rule will take effect only for the particular stream.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
 Note: if this parameter is a non-empty string, the rule will take effect only for the particular stream.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
 Note: if this parameter is a non-empty string, the rule will take effect only for the particular stream.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 

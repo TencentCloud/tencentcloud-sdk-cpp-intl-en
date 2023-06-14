@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Alarm notification template details
                      * @return Notice Alarm notification template details
+                     * 
                      */
                     AlarmNotice GetNotice() const;
 
                     /**
                      * 判断参数 Notice 是否已赋值
                      * @return Notice 是否已赋值
+                     * 
                      */
                     bool NoticeHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Details of the abnormal process policy
                      * @return RuleDetail Details of the abnormal process policy
+                     * 
                      */
                     AbnormalProcessRuleInfo GetRuleDetail() const;
 
                     /**
                      * 判断参数 RuleDetail 是否已赋值
                      * @return RuleDetail 是否已赋值
+                     * 
                      */
                     bool RuleDetailHasBeenSet() const;
 

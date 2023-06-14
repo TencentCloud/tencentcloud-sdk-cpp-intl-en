@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagKey The tag key.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置The tag key.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagKey The tag key.
+                     * @param _tagKey The tag key.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagValue The tag value.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置The tag value.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagValue The tag value.
+                     * @param _tagValue The tag value.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 

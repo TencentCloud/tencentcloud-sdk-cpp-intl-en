@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Target API
                      * @return TargetAction Target API
+                     * 
                      */
                     std::string GetTargetAction() const;
 
                     /**
                      * 设置Target API
-                     * @param TargetAction Target API
+                     * @param _targetAction Target API
+                     * 
                      */
                     void SetTargetAction(const std::string& _targetAction);
 
                     /**
                      * 判断参数 TargetAction 是否已赋值
                      * @return TargetAction 是否已赋值
+                     * 
                      */
                     bool TargetActionHasBeenSet() const;
 

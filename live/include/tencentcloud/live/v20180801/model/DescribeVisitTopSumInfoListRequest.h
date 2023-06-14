@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _startTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -65,56 +68,65 @@ namespace TencentCloud
 The time span is (0,4 hours]. Data for the last day can be queried.
                      * @return EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
 The time span is (0,4 hours]. Data for the last day can be queried.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End point in time in the format of `yyyy-mm-dd HH:MM:SS`
 The time span is (0,4 hours]. Data for the last day can be queried.
-                     * @param EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+                     * @param _endTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
 The time span is (0,4 hours]. Data for the last day can be queried.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth metric. Valid values: "Domain", "StreamId".
                      * @return TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
+                     * 
                      */
                     std::string GetTopIndex() const;
 
                     /**
                      * 设置Bandwidth metric. Valid values: "Domain", "StreamId".
-                     * @param TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
+                     * @param _topIndex Bandwidth metric. Valid values: "Domain", "StreamId".
+                     * 
                      */
                     void SetTopIndex(const std::string& _topIndex);
 
                     /**
                      * 判断参数 TopIndex 是否已赋值
                      * @return TopIndex 是否已赋值
+                     * 
                      */
                     bool TopIndexHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name. If this parameter is left empty, full data will be queried by default.
                      * @return PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
+                     * 
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
                      * 设置Playback domain name. If this parameter is left empty, full data will be queried by default.
-                     * @param PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
+                     * @param _playDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
+                     * 
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
                     /**
                      * 判断参数 PlayDomains 是否已赋值
                      * @return PlayDomains 是否已赋值
+                     * 
                      */
                     bool PlayDomainsHasBeenSet() const;
 
@@ -125,6 +137,7 @@ Default value: 1.
                      * @return PageNum Page number,
 Value range: [1,1000],
 Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
@@ -132,15 +145,17 @@ Default value: 1.
                      * 设置Page number,
 Value range: [1,1000],
 Default value: 1.
-                     * @param PageNum Page number,
+                     * @param _pageNum Page number,
 Value range: [1,1000],
 Default value: 1.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -149,38 +164,44 @@ Default value: 1.
 Default value: 20.
                      * @return PageSize Number of entries per page. Value range: [1,1000].
 Default value: 20.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page. Value range: [1,1000].
 Default value: 20.
-                     * @param PageSize Number of entries per page. Value range: [1,1000].
+                     * @param _pageSize Number of entries per page. Value range: [1,1000].
 Default value: 20.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
                      * @return OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+                     * 
                      */
                     std::string GetOrderParam() const;
 
                     /**
                      * 设置Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
-                     * @param OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+                     * @param _orderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+                     * 
                      */
                     void SetOrderParam(const std::string& _orderParam);
 
                     /**
                      * 判断参数 OrderParam 是否已赋值
                      * @return OrderParam 是否已赋值
+                     * 
                      */
                     bool OrderParamHasBeenSet() const;
 

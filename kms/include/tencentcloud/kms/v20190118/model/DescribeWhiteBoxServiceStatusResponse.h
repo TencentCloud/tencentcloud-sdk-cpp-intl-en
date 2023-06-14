@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether the user's white-box key service is available
                      * @return ServiceEnabled Whether the user's white-box key service is available
+                     * 
                      */
                     bool GetServiceEnabled() const;
 
                     /**
                      * 判断参数 ServiceEnabled 是否已赋值
                      * @return ServiceEnabled 是否已赋值
+                     * 
                      */
                     bool ServiceEnabledHasBeenSet() const;
 

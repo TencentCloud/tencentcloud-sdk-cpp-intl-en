@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Types of the real server address, such as IP or domain name.
                      * @return RealServer Types of the real server address, such as IP or domain name.
+                     * 
                      */
                     std::string GetRealServer() const;
 
                     /**
                      * 设置Types of the real server address, such as IP or domain name.
-                     * @param RealServer Types of the real server address, such as IP or domain name.
+                     * @param _realServer Types of the real server address, such as IP or domain name.
+                     * 
                      */
                     void SetRealServer(const std::string& _realServer);
 
                     /**
                      * 判断参数 RealServer 是否已赋值
                      * @return RealServer 是否已赋值
+                     * 
                      */
                     bool RealServerHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 `1`: domain name
 `2`: IP
 ]
+                     * 
                      */
                     int64_t GetRsType() const;
 
@@ -81,52 +85,60 @@ namespace TencentCloud
 `1`: domain name
 `2`: IP
 ]
-                     * @param RsType Types of the real server address:
+                     * @param _rsType Types of the real server address:
 `1`: domain name
 `2`: IP
 ]
+                     * 
                      */
                     void SetRsType(const int64_t& _rsType);
 
                     /**
                      * 判断参数 RsType 是否已赋值
                      * @return RsType 是否已赋值
+                     * 
                      */
                     bool RsTypeHasBeenSet() const;
 
                     /**
                      * 获取Forward weight of the real server. Value range: 1–100.
                      * @return Weight Forward weight of the real server. Value range: 1–100.
+                     * 
                      */
                     int64_t GetWeight() const;
 
                     /**
                      * 设置Forward weight of the real server. Value range: 1–100.
-                     * @param Weight Forward weight of the real server. Value range: 1–100.
+                     * @param _weight Forward weight of the real server. Value range: 1–100.
+                     * 
                      */
                     void SetWeight(const int64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 
                     /**
                      * 获取Port number. Value range: 0-65535.
                      * @return Port Port number. Value range: 0-65535.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Port number. Value range: 0-65535.
-                     * @param Port Port number. Value range: 0-65535.
+                     * @param _port Port number. Value range: 0-65535.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

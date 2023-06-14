@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID list. Each request can contain up to 100 instances at a time.
                      * @return InstanceIds Instance ID list. Each request can contain up to 100 instances at a time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Instance ID list. Each request can contain up to 100 instances at a time.
-                     * @param InstanceIds Instance ID list. Each request can contain up to 100 instances at a time.
+                     * @param _instanceIds Instance ID list. Each request can contain up to 100 instances at a time.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
@@ -67,6 +70,7 @@ The password of a `WINDOWS` instance must contain 12–30 characters in at least
                      * @return Password Login password of the instance(s). The password requirements vary among different operating systems:
 The password of a `LINUX_UNIX` instance must contain 8–30 characters (above 12 characters preferably) in at least three of the following types and cannot begin with "/": <br><li>Lowercase letters: [a–z]<br><li>Uppercase letters: [A–Z]<br><li>Digits: 0–9<br><li>Special symbols: ()\`~!@#$%^&\*-+=\_|{}[]:;'<>,.?/</li>
 The password of a `WINDOWS` instance must contain 12–30 characters in at least three of the following types and cannot begin with "/" or include the username: <br><li>Lowercase letters: [a–z]<br><li>Uppercase letters: [A–Z]<br><li>Digits: 0–9<br><li>Special symbols: ()\`~!@#$%^&\*-+=\_|{}[]:;' <>,.?/<br><li>If both `LINUX_UNIX` and `WINDOWS` instances exist, the requirements for password complexity of `WINDOWS` instances shall prevail.
+                     * 
                      */
                     std::string GetPassword() const;
 
@@ -74,33 +78,38 @@ The password of a `WINDOWS` instance must contain 12–30 characters in at least
                      * 设置Login password of the instance(s). The password requirements vary among different operating systems:
 The password of a `LINUX_UNIX` instance must contain 8–30 characters (above 12 characters preferably) in at least three of the following types and cannot begin with "/": <br><li>Lowercase letters: [a–z]<br><li>Uppercase letters: [A–Z]<br><li>Digits: 0–9<br><li>Special symbols: ()\`~!@#$%^&\*-+=\_|{}[]:;'<>,.?/</li>
 The password of a `WINDOWS` instance must contain 12–30 characters in at least three of the following types and cannot begin with "/" or include the username: <br><li>Lowercase letters: [a–z]<br><li>Uppercase letters: [A–Z]<br><li>Digits: 0–9<br><li>Special symbols: ()\`~!@#$%^&\*-+=\_|{}[]:;' <>,.?/<br><li>If both `LINUX_UNIX` and `WINDOWS` instances exist, the requirements for password complexity of `WINDOWS` instances shall prevail.
-                     * @param Password Login password of the instance(s). The password requirements vary among different operating systems:
+                     * @param _password Login password of the instance(s). The password requirements vary among different operating systems:
 The password of a `LINUX_UNIX` instance must contain 8–30 characters (above 12 characters preferably) in at least three of the following types and cannot begin with "/": <br><li>Lowercase letters: [a–z]<br><li>Uppercase letters: [A–Z]<br><li>Digits: 0–9<br><li>Special symbols: ()\`~!@#$%^&\*-+=\_|{}[]:;'<>,.?/</li>
 The password of a `WINDOWS` instance must contain 12–30 characters in at least three of the following types and cannot begin with "/" or include the username: <br><li>Lowercase letters: [a–z]<br><li>Uppercase letters: [A–Z]<br><li>Digits: 0–9<br><li>Special symbols: ()\`~!@#$%^&\*-+=\_|{}[]:;' <>,.?/<br><li>If both `LINUX_UNIX` and `WINDOWS` instances exist, the requirements for password complexity of `WINDOWS` instances shall prevail.
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取OS username of the instance for which you want to reset the password, which can contain up to 64 characters.
                      * @return UserName OS username of the instance for which you want to reset the password, which can contain up to 64 characters.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置OS username of the instance for which you want to reset the password, which can contain up to 64 characters.
-                     * @param UserName OS username of the instance for which you want to reset the password, which can contain up to 64 characters.
+                     * @param _userName OS username of the instance for which you want to reset the password, which can contain up to 64 characters.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 

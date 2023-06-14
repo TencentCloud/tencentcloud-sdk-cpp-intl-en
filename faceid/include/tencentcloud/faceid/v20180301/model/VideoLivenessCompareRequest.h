@@ -49,6 +49,7 @@ The image must be stored in a COS bucket in the region where the FaceID service 
                      * @return ImageUrl The URL of the photo for face comparison. The downloaded image after Base64 encoding can be up to 3 MB and must be in JPG or PNG.
 
 The image must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate an image URL by using `CreateUploadUrl` or purchase the COS service.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
@@ -56,33 +57,38 @@ The image must be stored in a COS bucket in the region where the FaceID service 
                      * 设置The URL of the photo for face comparison. The downloaded image after Base64 encoding can be up to 3 MB and must be in JPG or PNG.
 
 The image must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate an image URL by using `CreateUploadUrl` or purchase the COS service.
-                     * @param ImageUrl The URL of the photo for face comparison. The downloaded image after Base64 encoding can be up to 3 MB and must be in JPG or PNG.
+                     * @param _imageUrl The URL of the photo for face comparison. The downloaded image after Base64 encoding can be up to 3 MB and must be in JPG or PNG.
 
 The image must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate an image URL by using `CreateUploadUrl` or purchase the COS service.
+                     * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 
                     /**
                      * 获取The 32-bit MD5 checksum of the image for comparison
                      * @return ImageMd5 The 32-bit MD5 checksum of the image for comparison
+                     * 
                      */
                     std::string GetImageMd5() const;
 
                     /**
                      * 设置The 32-bit MD5 checksum of the image for comparison
-                     * @param ImageMd5 The 32-bit MD5 checksum of the image for comparison
+                     * @param _imageMd5 The 32-bit MD5 checksum of the image for comparison
+                     * 
                      */
                     void SetImageMd5(const std::string& _imageMd5);
 
                     /**
                      * 判断参数 ImageMd5 是否已赋值
                      * @return ImageMd5 是否已赋值
+                     * 
                      */
                     bool ImageMd5HasBeenSet() const;
 
@@ -93,6 +99,7 @@ The video must be stored in a COS bucket in the region where the FaceID service 
                      * @return VideoUrl The URL of the video for liveness detection. The downloaded video after Base64 encoding can be up to 8 MB and must be in MP4, AVI, or FLV. It takes no more than 4s to download the video.
 
 The video must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate a video URL by using `CreateUploadUrl` or purchase the COS service.
+                     * 
                      */
                     std::string GetVideoUrl() const;
 
@@ -100,33 +107,38 @@ The video must be stored in a COS bucket in the region where the FaceID service 
                      * 设置The URL of the video for liveness detection. The downloaded video after Base64 encoding can be up to 8 MB and must be in MP4, AVI, or FLV. It takes no more than 4s to download the video.
 
 The video must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate a video URL by using `CreateUploadUrl` or purchase the COS service.
-                     * @param VideoUrl The URL of the video for liveness detection. The downloaded video after Base64 encoding can be up to 8 MB and must be in MP4, AVI, or FLV. It takes no more than 4s to download the video.
+                     * @param _videoUrl The URL of the video for liveness detection. The downloaded video after Base64 encoding can be up to 8 MB and must be in MP4, AVI, or FLV. It takes no more than 4s to download the video.
 
 The video must be stored in a COS bucket in the region where the FaceID service resides to ensure a higher download speed and better stability. You can generate a video URL by using `CreateUploadUrl` or purchase the COS service.
+                     * 
                      */
                     void SetVideoUrl(const std::string& _videoUrl);
 
                     /**
                      * 判断参数 VideoUrl 是否已赋值
                      * @return VideoUrl 是否已赋值
+                     * 
                      */
                     bool VideoUrlHasBeenSet() const;
 
                     /**
                      * 获取The 32-bit MD5 checksum of the video
                      * @return VideoMd5 The 32-bit MD5 checksum of the video
+                     * 
                      */
                     std::string GetVideoMd5() const;
 
                     /**
                      * 设置The 32-bit MD5 checksum of the video
-                     * @param VideoMd5 The 32-bit MD5 checksum of the video
+                     * @param _videoMd5 The 32-bit MD5 checksum of the video
+                     * 
                      */
                     void SetVideoMd5(const std::string& _videoMd5);
 
                     /**
                      * 判断参数 VideoMd5 是否已赋值
                      * @return VideoMd5 是否已赋值
+                     * 
                      */
                     bool VideoMd5HasBeenSet() const;
 
@@ -135,20 +147,23 @@ The video must be stored in a COS bucket in the region where the FaceID service 
 `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
                      * @return LivenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
 `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+                     * 
                      */
                     std::string GetLivenessType() const;
 
                     /**
                      * 设置The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
 `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
-                     * @param LivenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
+                     * @param _livenessType The liveness detection type. Valid values: `LIP`, `ACTION`, and `SILENT`.
 `LIP`: Numeric mode; `ACTION`: Motion mode; `SILENT`: silent mode. Select one of them.
+                     * 
                      */
                     void SetLivenessType(const std::string& _livenessType);
 
                     /**
                      * 判断参数 LivenessType 是否已赋值
                      * @return LivenessType 是否已赋值
+                     * 
                      */
                     bool LivenessTypeHasBeenSet() const;
 
@@ -159,6 +174,7 @@ SILENT parameter: Null.
                      * @return ValidateData LIP parameter: Pass in a custom 4-digit verification code.
 ACTION parameter: Pass in a custom action sequence (`2,1` or `1,2`).
 SILENT parameter: Null.
+                     * 
                      */
                     std::string GetValidateData() const;
 
@@ -166,15 +182,17 @@ SILENT parameter: Null.
                      * 设置LIP parameter: Pass in a custom 4-digit verification code.
 ACTION parameter: Pass in a custom action sequence (`2,1` or `1,2`).
 SILENT parameter: Null.
-                     * @param ValidateData LIP parameter: Pass in a custom 4-digit verification code.
+                     * @param _validateData LIP parameter: Pass in a custom 4-digit verification code.
 ACTION parameter: Pass in a custom action sequence (`2,1` or `1,2`).
 SILENT parameter: Null.
+                     * 
                      */
                     void SetValidateData(const std::string& _validateData);
 
                     /**
                      * 判断参数 ValidateData 是否已赋值
                      * @return ValidateData 是否已赋值
+                     * 
                      */
                     bool ValidateDataHasBeenSet() const;
 

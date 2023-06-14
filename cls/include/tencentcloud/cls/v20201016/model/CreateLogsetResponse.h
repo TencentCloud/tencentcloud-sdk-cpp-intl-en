@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Logset ID
                      * @return LogsetId Logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 

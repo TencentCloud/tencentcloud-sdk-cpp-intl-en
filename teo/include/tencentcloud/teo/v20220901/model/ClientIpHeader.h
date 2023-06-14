@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable the configuration. Values:
+                     * @param _switch Whether to enable the configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -79,6 +82,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return HeaderName The name of the HTTP header that contains the client IP, which is used for forwarding.
 If this field is not specified, the default value `X-Forwarded-IP` will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeaderName() const;
 
@@ -86,15 +90,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The name of the HTTP header that contains the client IP, which is used for forwarding.
 If this field is not specified, the default value `X-Forwarded-IP` will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HeaderName The name of the HTTP header that contains the client IP, which is used for forwarding.
+                     * @param _headerName The name of the HTTP header that contains the client IP, which is used for forwarding.
 If this field is not specified, the default value `X-Forwarded-IP` will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaderName(const std::string& _headerName);
 
                     /**
                      * 判断参数 HeaderName 是否已赋值
                      * @return HeaderName 是否已赋值
+                     * 
                      */
                     bool HeaderNameHasBeenSet() const;
 

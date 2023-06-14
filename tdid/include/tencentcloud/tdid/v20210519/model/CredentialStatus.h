@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The credential ID.
                      * @return CredentialId The credential ID.
+                     * 
                      */
                     std::string GetCredentialId() const;
 
                     /**
                      * 设置The credential ID.
-                     * @param CredentialId The credential ID.
+                     * @param _credentialId The credential ID.
+                     * 
                      */
                     void SetCredentialId(const std::string& _credentialId);
 
                     /**
                      * 判断参数 CredentialId 是否已赋值
                      * @return CredentialId 是否已赋值
+                     * 
                      */
                     bool CredentialIdHasBeenSet() const;
 
                     /**
                      * 获取The credential status. `0`: Invalid; `1`: Valid.
                      * @return Status The credential status. `0`: Invalid; `1`: Valid.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置The credential status. `0`: Invalid; `1`: Valid.
-                     * @param Status The credential status. `0`: Invalid; `1`: Valid.
+                     * @param _status The credential status. `0`: Invalid; `1`: Valid.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The DID of the issuer.
                      * @return Issuer The DID of the issuer.
+                     * 
                      */
                     std::string GetIssuer() const;
 
                     /**
                      * 设置The DID of the issuer.
-                     * @param Issuer The DID of the issuer.
+                     * @param _issuer The DID of the issuer.
+                     * 
                      */
                     void SetIssuer(const std::string& _issuer);
 
                     /**
                      * 判断参数 Issuer 是否已赋值
                      * @return Issuer 是否已赋值
+                     * 
                      */
                     bool IssuerHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Digest A summary of the credential.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDigest() const;
 
                     /**
                      * 设置A summary of the credential.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Digest A summary of the credential.
+                     * @param _digest A summary of the credential.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDigest(const std::string& _digest);
 
                     /**
                      * 判断参数 Digest 是否已赋值
                      * @return Digest 是否已赋值
+                     * 
                      */
                     bool DigestHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Signature The credential signature.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSignature() const;
 
                     /**
                      * 设置The credential signature.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Signature The credential signature.
+                     * @param _signature The credential signature.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSignature(const std::string& _signature);
 
                     /**
                      * 判断参数 Signature 是否已赋值
                      * @return Signature 是否已赋值
+                     * 
                      */
                     bool SignatureHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TimeStamp The last updated timestamp.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTimeStamp() const;
 
                     /**
                      * 设置The last updated timestamp.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimeStamp The last updated timestamp.
+                     * @param _timeStamp The last updated timestamp.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimeStamp(const uint64_t& _timeStamp);
 
                     /**
                      * 判断参数 TimeStamp 是否已赋值
                      * @return TimeStamp 是否已赋值
+                     * 
                      */
                     bool TimeStampHasBeenSet() const;
 

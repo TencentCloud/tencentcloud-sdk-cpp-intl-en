@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPN gateway instance.
                      * @return VpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     std::string GetVpnGatewayId() const;
 
                     /**
                      * 设置The ID of the VPN gateway instance.
-                     * @param VpnGatewayId The ID of the VPN gateway instance.
+                     * @param _vpnGatewayId The ID of the VPN gateway instance.
+                     * 
                      */
                     void SetVpnGatewayId(const std::string& _vpnGatewayId);
 
                     /**
                      * 判断参数 VpnGatewayId 是否已赋值
                      * @return VpnGatewayId 是否已赋值
+                     * 
                      */
                     bool VpnGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The VPN gateway name. The maximum length is 60 bytes.
                      * @return VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
+                     * 
                      */
                     std::string GetVpnGatewayName() const;
 
                     /**
                      * 设置The VPN gateway name. The maximum length is 60 bytes.
-                     * @param VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
+                     * @param _vpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
+                     * 
                      */
                     void SetVpnGatewayName(const std::string& _vpnGatewayName);
 
                     /**
                      * 判断参数 VpnGatewayName 是否已赋值
                      * @return VpnGatewayName 是否已赋值
+                     * 
                      */
                     bool VpnGatewayNameHasBeenSet() const;
 
                     /**
                      * 获取VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
                      * @return InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
-                     * @param InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * @param _instanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 

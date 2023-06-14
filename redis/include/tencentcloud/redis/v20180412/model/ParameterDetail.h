@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Parameter name
                      * @return Name Parameter name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param Name Parameter name
+                     * @param _name Parameter name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Parameter Type
                      * @return ParamType Parameter Type
+                     * 
                      */
                     std::string GetParamType() const;
 
                     /**
                      * 设置Parameter Type
-                     * @param ParamType Parameter Type
+                     * @param _paramType Parameter Type
+                     * 
                      */
                     void SetParamType(const std::string& _paramType);
 
                     /**
                      * 判断参数 ParamType 是否已赋值
                      * @return ParamType 是否已赋值
+                     * 
                      */
                     bool ParamTypeHasBeenSet() const;
 
                     /**
                      * 获取Default value of the parameter
                      * @return Default Default value of the parameter
+                     * 
                      */
                     std::string GetDefault() const;
 
                     /**
                      * 设置Default value of the parameter
-                     * @param Default Default value of the parameter
+                     * @param _default Default value of the parameter
+                     * 
                      */
                     void SetDefault(const std::string& _default);
 
                     /**
                      * 判断参数 Default 是否已赋值
                      * @return Default 是否已赋值
+                     * 
                      */
                     bool DefaultHasBeenSet() const;
 
                     /**
                      * 获取Parameter description
                      * @return Description Parameter description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Parameter description
-                     * @param Description Parameter description
+                     * @param _description Parameter description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Current value of the parameter
                      * @return CurrentValue Current value of the parameter
+                     * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
                      * 设置Current value of the parameter
-                     * @param CurrentValue Current value of the parameter
+                     * @param _currentValue Current value of the parameter
+                     * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
                     /**
                      * 判断参数 CurrentValue 是否已赋值
                      * @return CurrentValue 是否已赋值
+                     * 
                      */
                     bool CurrentValueHasBeenSet() const;
 
@@ -143,6 +158,7 @@ namespace TencentCloud
                      * @return NeedReboot Whether to restart the database for the modified parameters to take effect
 - `0`: No restart.
 - `1`: Restart required.
+                     * 
                      */
                     int64_t GetNeedReboot() const;
 
@@ -150,15 +166,17 @@ namespace TencentCloud
                      * 设置Whether to restart the database for the modified parameters to take effect
 - `0`: No restart.
 - `1`: Restart required.
-                     * @param NeedReboot Whether to restart the database for the modified parameters to take effect
+                     * @param _needReboot Whether to restart the database for the modified parameters to take effect
 - `0`: No restart.
 - `1`: Restart required.
+                     * 
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
 
                     /**
                      * 判断参数 NeedReboot 是否已赋值
                      * @return NeedReboot 是否已赋值
+                     * 
                      */
                     bool NeedRebootHasBeenSet() const;
 
@@ -167,20 +185,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Max Maximum value of the parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMax() const;
 
                     /**
                      * 设置Maximum value of the parameter
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Max Maximum value of the parameter
+                     * @param _max Maximum value of the parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMax(const std::string& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
@@ -189,20 +210,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Min Minimum value of the parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMin() const;
 
                     /**
                      * 设置Minimum value of the parameter
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Min Minimum value of the parameter
+                     * @param _min Minimum value of the parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMin(const std::string& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
@@ -211,20 +235,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
                      * 设置Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
+                     * @param _enumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
 
                     /**
                      * 判断参数 EnumValue 是否已赋值
                      * @return EnumValue 是否已赋值
+                     * 
                      */
                     bool EnumValueHasBeenSet() const;
 

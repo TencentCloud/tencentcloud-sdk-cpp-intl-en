@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies the replica server to switched to. Valid values: `first` (the first replica server), `second` (the second replica server). Default value: `first`. `second` is valid only for a multi-AZ instance.
                      * @return DstSlave Specifies the replica server to switched to. Valid values: `first` (the first replica server), `second` (the second replica server). Default value: `first`. `second` is valid only for a multi-AZ instance.
+                     * 
                      */
                     std::string GetDstSlave() const;
 
                     /**
                      * 设置Specifies the replica server to switched to. Valid values: `first` (the first replica server), `second` (the second replica server). Default value: `first`. `second` is valid only for a multi-AZ instance.
-                     * @param DstSlave Specifies the replica server to switched to. Valid values: `first` (the first replica server), `second` (the second replica server). Default value: `first`. `second` is valid only for a multi-AZ instance.
+                     * @param _dstSlave Specifies the replica server to switched to. Valid values: `first` (the first replica server), `second` (the second replica server). Default value: `first`. `second` is valid only for a multi-AZ instance.
+                     * 
                      */
                     void SetDstSlave(const std::string& _dstSlave);
 
                     /**
                      * 判断参数 DstSlave 是否已赋值
                      * @return DstSlave 是否已赋值
+                     * 
                      */
                     bool DstSlaveHasBeenSet() const;
 
                     /**
                      * 获取Whether to force the switch. Valid values: `True`, `False` (default). If this parameter is set to `True`, instance data may be lost during the switch.
                      * @return ForceSwitch Whether to force the switch. Valid values: `True`, `False` (default). If this parameter is set to `True`, instance data may be lost during the switch.
+                     * 
                      */
                     bool GetForceSwitch() const;
 
                     /**
                      * 设置Whether to force the switch. Valid values: `True`, `False` (default). If this parameter is set to `True`, instance data may be lost during the switch.
-                     * @param ForceSwitch Whether to force the switch. Valid values: `True`, `False` (default). If this parameter is set to `True`, instance data may be lost during the switch.
+                     * @param _forceSwitch Whether to force the switch. Valid values: `True`, `False` (default). If this parameter is set to `True`, instance data may be lost during the switch.
+                     * 
                      */
                     void SetForceSwitch(const bool& _forceSwitch);
 
                     /**
                      * 判断参数 ForceSwitch 是否已赋值
                      * @return ForceSwitch 是否已赋值
+                     * 
                      */
                     bool ForceSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
                      * @return WaitSwitch Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
+                     * 
                      */
                     bool GetWaitSwitch() const;
 
                     /**
                      * 设置Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
-                     * @param WaitSwitch Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
+                     * @param _waitSwitch Whether to perform the switch during a time window. Valid values: `True`, `False` (default). If `ForceSwitch` is set to `True`, this parameter is invalid.
+                     * 
                      */
                     void SetWaitSwitch(const bool& _waitSwitch);
 
                     /**
                      * 判断参数 WaitSwitch 是否已赋值
                      * @return WaitSwitch 是否已赋值
+                     * 
                      */
                     bool WaitSwitchHasBeenSet() const;
 

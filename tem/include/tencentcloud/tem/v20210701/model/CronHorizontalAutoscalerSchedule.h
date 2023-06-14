@@ -53,6 +53,7 @@ Example:
                      * @return StartAt Triggering time, in the format of HH:MM
 Example:
 00:00 (Trigger at midnight)
+                     * 
                      */
                     std::string GetStartAt() const;
 
@@ -60,15 +61,17 @@ Example:
                      * 设置Triggering time, in the format of HH:MM
 Example:
 00:00 (Trigger at midnight)
-                     * @param StartAt Triggering time, in the format of HH:MM
+                     * @param _startAt Triggering time, in the format of HH:MM
 Example:
 00:00 (Trigger at midnight)
+                     * 
                      */
                     void SetStartAt(const std::string& _startAt);
 
                     /**
                      * 判断参数 StartAt 是否已赋值
                      * @return StartAt 是否已赋值
+                     * 
                      */
                     bool StartAtHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Example:
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TargetReplicas Number of target pods (less than 50)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTargetReplicas() const;
 
                     /**
                      * 设置Number of target pods (less than 50)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TargetReplicas Number of target pods (less than 50)
+                     * @param _targetReplicas Number of target pods (less than 50)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargetReplicas(const int64_t& _targetReplicas);
 
                     /**
                      * 判断参数 TargetReplicas 是否已赋值
                      * @return TargetReplicas 是否已赋值
+                     * 
                      */
                     bool TargetReplicasHasBeenSet() const;
 

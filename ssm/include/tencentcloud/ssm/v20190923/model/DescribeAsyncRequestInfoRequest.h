@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID.
                      * @return FlowID Async task ID.
+                     * 
                      */
                     int64_t GetFlowID() const;
 
                     /**
                      * 设置Async task ID.
-                     * @param FlowID Async task ID.
+                     * @param _flowID Async task ID.
+                     * 
                      */
                     void SetFlowID(const int64_t& _flowID);
 
                     /**
                      * 判断参数 FlowID 是否已赋值
                      * @return FlowID 是否已赋值
+                     * 
                      */
                     bool FlowIDHasBeenSet() const;
 

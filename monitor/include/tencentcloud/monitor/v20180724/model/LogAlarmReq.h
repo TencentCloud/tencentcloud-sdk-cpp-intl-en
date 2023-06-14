@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取APM instance ID
                      * @return InstanceId APM instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置APM instance ID
-                     * @param InstanceId APM instance ID
+                     * @param _instanceId APM instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Search condition
                      * @return Filter Search condition
+                     * 
                      */
                     std::vector<LogFilterInfo> GetFilter() const;
 
                     /**
                      * 设置Search condition
-                     * @param Filter Search condition
+                     * @param _filter Search condition
+                     * 
                      */
                     void SetFilter(const std::vector<LogFilterInfo>& _filter);
 
                     /**
                      * 判断参数 Filter 是否已赋值
                      * @return Filter 是否已赋值
+                     * 
                      */
                     bool FilterHasBeenSet() const;
 
                     /**
                      * 获取The switch to enable/disable alarm merging
                      * @return AlarmMerge The switch to enable/disable alarm merging
+                     * 
                      */
                     std::string GetAlarmMerge() const;
 
                     /**
                      * 设置The switch to enable/disable alarm merging
-                     * @param AlarmMerge The switch to enable/disable alarm merging
+                     * @param _alarmMerge The switch to enable/disable alarm merging
+                     * 
                      */
                     void SetAlarmMerge(const std::string& _alarmMerge);
 
                     /**
                      * 判断参数 AlarmMerge 是否已赋值
                      * @return AlarmMerge 是否已赋值
+                     * 
                      */
                     bool AlarmMergeHasBeenSet() const;
 
                     /**
                      * 获取Alarm merging time
                      * @return AlarmMergeTime Alarm merging time
+                     * 
                      */
                     std::string GetAlarmMergeTime() const;
 
                     /**
                      * 设置Alarm merging time
-                     * @param AlarmMergeTime Alarm merging time
+                     * @param _alarmMergeTime Alarm merging time
+                     * 
                      */
                     void SetAlarmMergeTime(const std::string& _alarmMergeTime);
 
                     /**
                      * 判断参数 AlarmMergeTime 是否已赋值
                      * @return AlarmMergeTime 是否已赋值
+                     * 
                      */
                     bool AlarmMergeTimeHasBeenSet() const;
 

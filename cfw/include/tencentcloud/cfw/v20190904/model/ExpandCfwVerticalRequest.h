@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取nat: NAT firewall, ew: east-west firewall
                      * @return FwType nat: NAT firewall, ew: east-west firewall
+                     * 
                      */
                     std::string GetFwType() const;
 
                     /**
                      * 设置nat: NAT firewall, ew: east-west firewall
-                     * @param FwType nat: NAT firewall, ew: east-west firewall
+                     * @param _fwType nat: NAT firewall, ew: east-west firewall
+                     * 
                      */
                     void SetFwType(const std::string& _fwType);
 
                     /**
                      * 判断参数 FwType 是否已赋值
                      * @return FwType 是否已赋值
+                     * 
                      */
                     bool FwTypeHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth value
                      * @return Width Bandwidth value
+                     * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
                      * 设置Bandwidth value
-                     * @param Width Bandwidth value
+                     * @param _width Bandwidth value
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Firewall instance ID
                      * @return CfwInstance Firewall instance ID
+                     * 
                      */
                     std::string GetCfwInstance() const;
 
                     /**
                      * 设置Firewall instance ID
-                     * @param CfwInstance Firewall instance ID
+                     * @param _cfwInstance Firewall instance ID
+                     * 
                      */
                     void SetCfwInstance(const std::string& _cfwInstance);
 
                     /**
                      * 判断参数 CfwInstance 是否已赋值
                      * @return CfwInstance 是否已赋值
+                     * 
                      */
                     bool CfwInstanceHasBeenSet() const;
 

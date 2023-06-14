@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the document transcoding task, which is used to query the task progress and transcoding result
                      * @return TaskId Unique ID of the document transcoding task, which is used to query the task progress and transcoding result
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

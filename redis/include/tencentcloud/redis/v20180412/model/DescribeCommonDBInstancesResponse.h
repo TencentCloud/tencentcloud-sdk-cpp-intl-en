@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of instances
                      * @return TotalCount Number of instances
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Instance information
                      * @return InstanceDetails Instance information
+                     * 
                      */
                     std::vector<RedisCommonInstanceList> GetInstanceDetails() const;
 
                     /**
                      * 判断参数 InstanceDetails 是否已赋值
                      * @return InstanceDetails 是否已赋值
+                     * 
                      */
                     bool InstanceDetailsHasBeenSet() const;
 

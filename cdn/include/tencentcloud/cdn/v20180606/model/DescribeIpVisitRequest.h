@@ -47,20 +47,23 @@ namespace TencentCloud
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the first returned entry will be 2018-09-04 10:40:00.
                      * @return StartTime Query start time, such as 2018-09-04 10:40:10; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the first returned entry will be 2018-09-04 10:40:00.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Query start time, such as 2018-09-04 10:40:10; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the first returned entry will be 2018-09-04 10:40:00.
-                     * @param StartTime Query start time, such as 2018-09-04 10:40:10; the returned result is later than or equal to the specified time.
+                     * @param _startTime Query start time, such as 2018-09-04 10:40:10; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the first returned entry will be 2018-09-04 10:40:00.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -69,38 +72,44 @@ According to the specified time granularity, forward rounding is applied; for ex
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the last returned entry will be 2018-09-04 10:40:00.
                      * @return EndTime Query end time, such as 2018-09-04 10:40:10; the returned result is earlier than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the last returned entry will be 2018-09-04 10:40:00.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Query end time, such as 2018-09-04 10:40:10; the returned result is earlier than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the last returned entry will be 2018-09-04 10:40:00.
-                     * @param EndTime Query end time, such as 2018-09-04 10:40:10; the returned result is earlier than or equal to the specified time.
+                     * @param _endTime Query end time, such as 2018-09-04 10:40:10; the returned result is earlier than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:10 and the query time granularity is 5 minutes, the time for the last returned entry will be 2018-09-04 10:40:00.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
                      * @return Domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
-                     * @param Domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
+                     * @param _domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
@@ -109,20 +118,23 @@ According to the specified time granularity, forward rounding is applied; for ex
 Please note that if domain names are specified, this parameter will be ignored.
                      * @return Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
+                     * 
                      */
                     int64_t GetProject() const;
 
                     /**
                      * 设置Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
-                     * @param Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
+                     * @param _project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
+                     * 
                      */
                     void SetProject(const int64_t& _project);
 
                     /**
                      * 判断参数 Project 是否已赋值
                      * @return Project 是否已赋值
+                     * 
                      */
                     bool ProjectHasBeenSet() const;
 
@@ -133,6 +145,7 @@ day: 1 day. If the query period is longer than 24 hours, `day` will be used by d
                      * @return Interval Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
+                     * 
                      */
                     std::string GetInterval() const;
 
@@ -140,15 +153,17 @@ day: 1 day. If the query period is longer than 24 hours, `day` will be used by d
                      * 设置Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
-                     * @param Interval Sampling interval in minutes. The available options vary for different query period. See below: 
+                     * @param _interval Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 

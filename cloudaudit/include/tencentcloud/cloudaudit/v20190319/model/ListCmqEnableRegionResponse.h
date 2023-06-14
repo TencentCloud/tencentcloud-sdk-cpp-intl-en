@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取CloudAudit-enabled CMQ AZs
                      * @return EnableRegions CloudAudit-enabled CMQ AZs
+                     * 
                      */
                     std::vector<CmqRegionInfo> GetEnableRegions() const;
 
                     /**
                      * 判断参数 EnableRegions 是否已赋值
                      * @return EnableRegions 是否已赋值
+                     * 
                      */
                     bool EnableRegionsHasBeenSet() const;
 

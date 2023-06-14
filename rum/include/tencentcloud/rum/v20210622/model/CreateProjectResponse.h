@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Project ID
                      * @return ID Project ID
+                     * 
                      */
                     uint64_t GetID() const;
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Unique project key
                      * @return Key Unique project key
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 

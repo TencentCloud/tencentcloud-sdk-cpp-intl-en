@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Label Malicious bot, which is used to tag bad bots
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置Malicious bot, which is used to tag bad bots
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Label Malicious bot, which is used to tag bad bots
+                     * @param _label Malicious bot, which is used to tag bad bots
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Action Action
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Action Action
+                     * @param _action Action
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 

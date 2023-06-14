@@ -52,72 +52,84 @@ namespace TencentCloud
                     /**
                      * 获取Compute environment management type
                      * @return EnvType Compute environment management type
+                     * 
                      */
                     std::string GetEnvType() const;
 
                     /**
                      * 设置Compute environment management type
-                     * @param EnvType Compute environment management type
+                     * @param _envType Compute environment management type
+                     * 
                      */
                     void SetEnvType(const std::string& _envType);
 
                     /**
                      * 判断参数 EnvType 是否已赋值
                      * @return EnvType 是否已赋值
+                     * 
                      */
                     bool EnvTypeHasBeenSet() const;
 
                     /**
                      * 获取Compute environment's parameters
                      * @return EnvData Compute environment's parameters
+                     * 
                      */
                     EnvData GetEnvData() const;
 
                     /**
                      * 设置Compute environment's parameters
-                     * @param EnvData Compute environment's parameters
+                     * @param _envData Compute environment's parameters
+                     * 
                      */
                     void SetEnvData(const EnvData& _envData);
 
                     /**
                      * 判断参数 EnvData 是否已赋值
                      * @return EnvData 是否已赋值
+                     * 
                      */
                     bool EnvDataHasBeenSet() const;
 
                     /**
                      * 获取Data disk mounting option
                      * @return MountDataDisks Data disk mounting option
+                     * 
                      */
                     std::vector<MountDataDisk> GetMountDataDisks() const;
 
                     /**
                      * 设置Data disk mounting option
-                     * @param MountDataDisks Data disk mounting option
+                     * @param _mountDataDisks Data disk mounting option
+                     * 
                      */
                     void SetMountDataDisks(const std::vector<MountDataDisk>& _mountDataDisks);
 
                     /**
                      * 判断参数 MountDataDisks 是否已赋值
                      * @return MountDataDisks 是否已赋值
+                     * 
                      */
                     bool MountDataDisksHasBeenSet() const;
 
                     /**
                      * 获取Agent running mode; applicable for Windows
                      * @return AgentRunningMode Agent running mode; applicable for Windows
+                     * 
                      */
                     AgentRunningMode GetAgentRunningMode() const;
 
                     /**
                      * 设置Agent running mode; applicable for Windows
-                     * @param AgentRunningMode Agent running mode; applicable for Windows
+                     * @param _agentRunningMode Agent running mode; applicable for Windows
+                     * 
                      */
                     void SetAgentRunningMode(const AgentRunningMode& _agentRunningMode);
 
                     /**
                      * 判断参数 AgentRunningMode 是否已赋值
                      * @return AgentRunningMode 是否已赋值
+                     * 
                      */
                     bool AgentRunningModeHasBeenSet() const;
 

@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Network policy direction. Valid values: `FROM`, `TO`.
                      * @return Direction Network policy direction. Valid values: `FROM`, `TO`.
+                     * 
                      */
                     std::string GetDirection() const;
 
                     /**
                      * 设置Network policy direction. Valid values: `FROM`, `TO`.
-                     * @param Direction Network policy direction. Valid values: `FROM`, `TO`.
+                     * @param _direction Network policy direction. Valid values: `FROM`, `TO`.
+                     * 
                      */
                     void SetDirection(const std::string& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Ports Network policy port
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<NetworkPorts> GetPorts() const;
 
                     /**
                      * 设置Network policy port
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Ports Network policy port
+                     * @param _ports Network policy port
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPorts(const std::vector<NetworkPorts>& _ports);
 
                     /**
                      * 判断参数 Ports 是否已赋值
                      * @return Ports 是否已赋值
+                     * 
                      */
                     bool PortsHasBeenSet() const;
 
@@ -113,6 +119,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 `unPublishEdit`: To be enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<NetworkPeer> GetPeer() const;
 
@@ -129,7 +136,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 `unPublishEdit`: To be enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Peer Network policy object
+                     * @param _peer Network policy object
 
 `PublishedNoConfirm`: Enabled and to be confirmed.
 
@@ -141,12 +148,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
 `unPublishEdit`: To be enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPeer(const std::vector<NetworkPeer>& _peer);
 
                     /**
                      * 判断参数 Peer 是否已赋值
                      * @return Peer 是否已赋值
+                     * 
                      */
                     bool PeerHasBeenSet() const;
 

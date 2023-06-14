@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Module name, which is fixed at "monitor"
                      * @return Module Module name, which is fixed at "monitor"
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Module name, which is fixed at "monitor"
-                     * @param Module Module name, which is fixed at "monitor"
+                     * @param _module Module name, which is fixed at "monitor"
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy ID
                      * @return PolicyId Alarm policy ID
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Alarm policy ID
-                     * @param PolicyId Alarm policy ID
+                     * @param _policyId Alarm policy ID
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Status. Valid values: 0 (disabled), 1 (enabled)
                      * @return Enable Status. Valid values: 0 (disabled), 1 (enabled)
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Status. Valid values: 0 (disabled), 1 (enabled)
-                     * @param Enable Status. Valid values: 0 (disabled), 1 (enabled)
+                     * @param _enable Status. Valid values: 0 (disabled), 1 (enabled)
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of nodes
                      * @return NodeNum Number of nodes
+                     * 
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
                      * 设置Number of nodes
-                     * @param NodeNum Number of nodes
+                     * @param _nodeNum Number of nodes
+                     * 
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
 
                     /**
                      * 判断参数 NodeNum 是否已赋值
                      * @return NodeNum 是否已赋值
+                     * 
                      */
                     bool NodeNumHasBeenSet() const;
 
                     /**
                      * 获取Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
                      * @return NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 
                      */
                     std::string GetNodeType() const;
 
                     /**
                      * 设置Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-                     * @param NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * @param _nodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+                     * 
                      */
                     void SetNodeType(const std::string& _nodeType);
 
                     /**
                      * 判断参数 NodeType 是否已赋值
                      * @return NodeType 是否已赋值
+                     * 
                      */
                     bool NodeTypeHasBeenSet() const;
 
@@ -92,6 +98,7 @@ Default value: `hotData`
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
 Default value: `hotData`
+                     * 
                      */
                     std::string GetType() const;
 
@@ -100,52 +107,60 @@ Default value: `hotData`
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
 Default value: `hotData`
-                     * @param Type Node type<li>`hotData`: hot data node</li>
+                     * @param _type Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
 Default value: `hotData`
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
                      * @return DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
-                     * @param DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+                     * @param _diskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Node disk size in GB
                      * @return DiskSize Node disk size in GB
+                     * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
                      * 设置Node disk size in GB
-                     * @param DiskSize Node disk size in GB
+                     * @param _diskSize Node disk size in GB
+                     * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
@@ -154,56 +169,65 @@ Default value: `hotData`
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LocalDiskInfo Local disk information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     LocalDiskInfo GetLocalDiskInfo() const;
 
                     /**
                      * 设置Local disk information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LocalDiskInfo Local disk information
+                     * @param _localDiskInfo Local disk information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLocalDiskInfo(const LocalDiskInfo& _localDiskInfo);
 
                     /**
                      * 判断参数 LocalDiskInfo 是否已赋值
                      * @return LocalDiskInfo 是否已赋值
+                     * 
                      */
                     bool LocalDiskInfoHasBeenSet() const;
 
                     /**
                      * 获取Number of node disks
                      * @return DiskCount Number of node disks
+                     * 
                      */
                     uint64_t GetDiskCount() const;
 
                     /**
                      * 设置Number of node disks
-                     * @param DiskCount Number of node disks
+                     * @param _diskCount Number of node disks
+                     * 
                      */
                     void SetDiskCount(const uint64_t& _diskCount);
 
                     /**
                      * 判断参数 DiskCount 是否已赋值
                      * @return DiskCount 是否已赋值
+                     * 
                      */
                     bool DiskCountHasBeenSet() const;
 
                     /**
                      * 获取Whether to encrypt node disk. 0: no (default); 1: yes.
                      * @return DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+                     * 
                      */
                     uint64_t GetDiskEncrypt() const;
 
                     /**
                      * 设置Whether to encrypt node disk. 0: no (default); 1: yes.
-                     * @param DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+                     * @param _diskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+                     * 
                      */
                     void SetDiskEncrypt(const uint64_t& _diskEncrypt);
 
                     /**
                      * 判断参数 DiskEncrypt 是否已赋值
                      * @return DiskEncrypt 是否已赋值
+                     * 
                      */
                     bool DiskEncryptHasBeenSet() const;
 
@@ -212,20 +236,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CpuNum CPU number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCpuNum() const;
 
                     /**
                      * 设置CPU number
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CpuNum CPU number
+                     * @param _cpuNum CPU number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCpuNum(const uint64_t& _cpuNum);
 
                     /**
                      * 判断参数 CpuNum 是否已赋值
                      * @return CpuNum 是否已赋值
+                     * 
                      */
                     bool CpuNumHasBeenSet() const;
 
@@ -234,20 +261,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MemSize Memory size in GB
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
                      * 设置Memory size in GB
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MemSize Memory size in GB
+                     * @param _memSize Memory size in GB
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMemSize(const int64_t& _memSize);
 
                     /**
                      * 判断参数 MemSize 是否已赋值
                      * @return MemSize 是否已赋值
+                     * 
                      */
                     bool MemSizeHasBeenSet() const;
 
@@ -256,20 +286,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskEnhance /
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDiskEnhance() const;
 
                     /**
                      * 设置/
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DiskEnhance /
+                     * @param _diskEnhance /
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskEnhance(const int64_t& _diskEnhance);
 
                     /**
                      * 判断参数 DiskEnhance 是否已赋值
                      * @return DiskEnhance 是否已赋值
+                     * 
                      */
                     bool DiskEnhanceHasBeenSet() const;
 

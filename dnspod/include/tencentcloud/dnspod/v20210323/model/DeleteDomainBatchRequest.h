@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The domain array.
                      * @return DomainList The domain array.
+                     * 
                      */
                     std::vector<std::string> GetDomainList() const;
 
                     /**
                      * 设置The domain array.
-                     * @param DomainList The domain array.
+                     * @param _domainList The domain array.
+                     * 
                      */
                     void SetDomainList(const std::vector<std::string>& _domainList);
 
                     /**
                      * 判断参数 DomainList 是否已赋值
                      * @return DomainList 是否已赋值
+                     * 
                      */
                     bool DomainListHasBeenSet() const;
 

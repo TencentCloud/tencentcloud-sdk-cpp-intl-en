@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Big key size distribution details
                      * @return Data Big key size distribution details
+                     * 
                      */
                     std::vector<DelayDistribution> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

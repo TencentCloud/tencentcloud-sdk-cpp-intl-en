@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Confidence. Value range: 0–100
                      * @return Confidence Confidence. Value range: 0–100
+                     * 
                      */
                     int64_t GetConfidence() const;
 
                     /**
                      * 设置Confidence. Value range: 0–100
-                     * @param Confidence Confidence. Value range: 0–100
+                     * @param _confidence Confidence. Value range: 0–100
+                     * 
                      */
                     void SetConfidence(const int64_t& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取A possible character
                      * @return Character A possible character
+                     * 
                      */
                     std::string GetCharacter() const;
 
                     /**
                      * 设置A possible character
-                     * @param Character A possible character
+                     * @param _character A possible character
+                     * 
                      */
                     void SetCharacter(const std::string& _character);
 
                     /**
                      * 判断参数 Character 是否已赋值
                      * @return Character 是否已赋值
+                     * 
                      */
                     bool CharacterHasBeenSet() const;
 

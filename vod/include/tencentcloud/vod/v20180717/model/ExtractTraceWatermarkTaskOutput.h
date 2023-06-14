@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
                      * @return Uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+                     * 
                      */
                     std::string GetUv() const;
 
                     /**
                      * 设置The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
-                     * @param Uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+                     * @param _uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+                     * 
                      */
                     void SetUv(const std::string& _uv);
 
                     /**
                      * 判断参数 Uv 是否已赋值
                      * @return Uv 是否已赋值
+                     * 
                      */
                     bool UvHasBeenSet() const;
 
                     /**
                      * 获取This parameter has been deprecated.
                      * @return Uid This parameter has been deprecated.
+                     * 
                      */
                     std::string GetUid() const;
 
                     /**
                      * 设置This parameter has been deprecated.
-                     * @param Uid This parameter has been deprecated.
+                     * @param _uid This parameter has been deprecated.
+                     * 
                      */
                     void SetUid(const std::string& _uid);
 
                     /**
                      * 判断参数 Uid 是否已赋值
                      * @return Uid 是否已赋值
+                     * 
                      */
                     bool UidHasBeenSet() const;
 

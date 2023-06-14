@@ -52,6 +52,7 @@ namespace TencentCloud
 <li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
 <li>service-name - String - (Filter condition) Endpoint service instance name.</li>
 <li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -60,70 +61,81 @@ namespace TencentCloud
 <li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
 <li>service-name - String - (Filter condition) Endpoint service instance name.</li>
 <li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
-                     * @param Filters Filter condition
+                     * @param _filters Filter condition
 <li> service-id - String - (Filter condition) Unique endpoint service ID.</li>
 <li>service-name - String - (Filter condition) Endpoint service instance name.</li>
 <li>service-instance-id - String - (Filter condition) Unique real server ID in the format of `lb-xxx`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page; default value: 20; maximum value: 100.
                      * @return Limit Number of results per page; default value: 20; maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page; default value: 20; maximum value: 100.
-                     * @param Limit Number of results per page; default value: 20; maximum value: 100.
+                     * @param _limit Number of results per page; default value: 20; maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Endpoint service ID
                      * @return EndPointServiceIds Endpoint service ID
+                     * 
                      */
                     std::vector<std::string> GetEndPointServiceIds() const;
 
                     /**
                      * 设置Endpoint service ID
-                     * @param EndPointServiceIds Endpoint service ID
+                     * @param _endPointServiceIds Endpoint service ID
+                     * 
                      */
                     void SetEndPointServiceIds(const std::vector<std::string>& _endPointServiceIds);
 
                     /**
                      * 判断参数 EndPointServiceIds 是否已赋值
                      * @return EndPointServiceIds 是否已赋值
+                     * 
                      */
                     bool EndPointServiceIdsHasBeenSet() const;
 

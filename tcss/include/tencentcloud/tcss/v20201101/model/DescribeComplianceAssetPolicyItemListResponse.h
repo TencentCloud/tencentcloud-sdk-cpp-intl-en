@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of check items, which is `0` if the baseline check is not enabled.
                      * @return TotalCount Total number of check items, which is `0` if the baseline check is not enabled.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of check items of an asset
                      * @return AssetPolicyItemList List of check items of an asset
+                     * 
                      */
                     std::vector<ComplianceAssetPolicyItem> GetAssetPolicyItemList() const;
 
                     /**
                      * 判断参数 AssetPolicyItemList 是否已赋值
                      * @return AssetPolicyItemList 是否已赋值
+                     * 
                      */
                     bool AssetPolicyItemListHasBeenSet() const;
 

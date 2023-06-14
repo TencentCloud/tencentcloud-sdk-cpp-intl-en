@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SummaryOverview Payment mode details in the customer bill data totaled by payment mode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PayModeSummaryOverviewItem> GetSummaryOverview() const;
 
                     /**
                      * 判断参数 SummaryOverview 是否已赋值
                      * @return SummaryOverview 是否已赋值
+                     * 
                      */
                     bool SummaryOverviewHasBeenSet() const;
 

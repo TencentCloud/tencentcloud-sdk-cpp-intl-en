@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the queried cloud disk.
                      * @return DiskId The ID of the queried cloud disk.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置The ID of the queried cloud disk.
-                     * @param DiskId The ID of the queried cloud disk.
+                     * @param _diskId The ID of the queried cloud disk.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 

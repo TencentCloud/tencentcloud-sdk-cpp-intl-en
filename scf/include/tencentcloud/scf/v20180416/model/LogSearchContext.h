@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     std::string GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const std::string& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Log record number
                      * @return Limit Log record number
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Log record number
-                     * @param Limit Log record number
+                     * @param _limit Log record number
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Log keyword
                      * @return Keyword Log keyword
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Log keyword
-                     * @param Keyword Log keyword
+                     * @param _keyword Log keyword
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取Log type. The value is `Application` (default) or `Platform`.
                      * @return Type Log type. The value is `Application` (default) or `Platform`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Log type. The value is `Application` (default) or `Platform`.
-                     * @param Type Log type. The value is `Application` (default) or `Platform`.
+                     * @param _type Log type. The value is `Application` (default) or `Platform`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

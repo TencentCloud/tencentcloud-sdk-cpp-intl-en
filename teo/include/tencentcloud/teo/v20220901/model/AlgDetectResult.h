@@ -67,6 +67,7 @@ namespace TencentCloud
 <li>`timeout`: JS validation timed out</li>
 <li>`not_browser`: Invalid browser</li>
 <li>`is_bot`: Bot client</li>
+                     * 
                      */
                     std::string GetResult() const;
 
@@ -81,7 +82,7 @@ namespace TencentCloud
 <li>`timeout`: JS validation timed out</li>
 <li>`not_browser`: Invalid browser</li>
 <li>`is_bot`: Bot client</li>
-                     * @param Result The validation result. Values:
+                     * @param _result The validation result. Values:
 <li>`invalid`: Invalid Cookie</li>
 <li>`cookie_empty`: No Cookie/Cookie expired</li>
 <li>`js_empty`: Client JS disabled</li>
@@ -91,12 +92,14 @@ namespace TencentCloud
 <li>`timeout`: JS validation timed out</li>
 <li>`not_browser`: Invalid browser</li>
 <li>`is_bot`: Bot client</li>
+                     * 
                      */
                     void SetResult(const std::string& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
@@ -113,6 +116,7 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -123,18 +127,20 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
-                     * @param Action The action. Values:
+                     * @param _action The action. Values:
 <li>`drop`: Block</li>
 <li>`monitor`: Observe</li>
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 

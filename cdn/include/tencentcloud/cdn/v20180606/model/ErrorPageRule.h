@@ -51,20 +51,23 @@ namespace TencentCloud
 Supports 400, 403, 404, 500.
                      * @return StatusCode Status code
 Supports 400, 403, 404, 500.
+                     * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
                      * 设置Status code
 Supports 400, 403, 404, 500.
-                     * @param StatusCode Status code
+                     * @param _statusCode Status code
 Supports 400, 403, 404, 500.
+                     * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Supports 400, 403, 404, 500.
 Supports 301 or 302.
                      * @return RedirectCode Redirect status code settings
 Supports 301 or 302.
+                     * 
                      */
                     int64_t GetRedirectCode() const;
 
                     /**
                      * 设置Redirect status code settings
 Supports 301 or 302.
-                     * @param RedirectCode Redirect status code settings
+                     * @param _redirectCode Redirect status code settings
 Supports 301 or 302.
+                     * 
                      */
                     void SetRedirectCode(const int64_t& _redirectCode);
 
                     /**
                      * 判断参数 RedirectCode 是否已赋值
                      * @return RedirectCode 是否已赋值
+                     * 
                      */
                     bool RedirectCodeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Supports 301 or 302.
 Requires a full redirect path, such as https://www.test.com/error.html.
                      * @return RedirectUrl Redirect URL
 Requires a full redirect path, such as https://www.test.com/error.html.
+                     * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置Redirect URL
 Requires a full redirect path, such as https://www.test.com/error.html.
-                     * @param RedirectUrl Redirect URL
+                     * @param _redirectUrl Redirect URL
 Requires a full redirect path, such as https://www.test.com/error.html.
+                     * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
                     /**
                      * 判断参数 RedirectUrl 是否已赋值
                      * @return RedirectUrl 是否已赋值
+                     * 
                      */
                     bool RedirectUrlHasBeenSet() const;
 

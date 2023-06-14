@@ -47,20 +47,23 @@ namespace TencentCloud
 In the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return StartTime Start time (Beijing time),
 In the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time (Beijing time),
 In the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param StartTime Start time (Beijing time),
+                     * @param _startTime Start time (Beijing time),
 In the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      * @return EndTime End time (Beijing time),
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -78,15 +82,17 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      * 设置End time (Beijing time),
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
-                     * @param EndTime End time (Beijing time),
+                     * @param _endTime End time (Beijing time),
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -95,74 +101,86 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
 1: 1-minute granularity.
                      * @return Granularity Query granularity:
 1: 1-minute granularity.
+                     * 
                      */
                     uint64_t GetGranularity() const;
 
                     /**
                      * 设置Query granularity:
 1: 1-minute granularity.
-                     * @param Granularity Query granularity:
+                     * @param _granularity Query granularity:
 1: 1-minute granularity.
+                     * 
                      */
                     void SetGranularity(const uint64_t& _granularity);
 
                     /**
                      * 判断参数 Granularity 是否已赋值
                      * @return Granularity 是否已赋值
+                     * 
                      */
                     bool GranularityHasBeenSet() const;
 
                     /**
                      * 获取Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
                      * @return StatType Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
+                     * 
                      */
                     std::string GetStatType() const;
 
                     /**
                      * 设置Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
-                     * @param StatType Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
+                     * @param _statType Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
+                     * 
                      */
                     void SetStatType(const std::string& _statType);
 
                     /**
                      * 判断参数 StatType 是否已赋值
                      * @return StatType 是否已赋值
+                     * 
                      */
                     bool StatTypeHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name list.
                      * @return PlayDomains Playback domain name list.
+                     * 
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
                      * 设置Playback domain name list.
-                     * @param PlayDomains Playback domain name list.
+                     * @param _playDomains Playback domain name list.
+                     * 
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
                     /**
                      * 判断参数 PlayDomains 是否已赋值
                      * @return PlayDomains 是否已赋值
+                     * 
                      */
                     bool PlayDomainsHasBeenSet() const;
 
                     /**
                      * 获取Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
                      * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
                     /**
                      * 设置Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
-                     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * @param _mainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 

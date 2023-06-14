@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Storage type. Only `COS` is supported.
                      * @return Scene Storage type. Only `COS` is supported.
+                     * 
                      */
                     std::string GetScene() const;
 
                     /**
                      * 设置Storage type. Only `COS` is supported.
-                     * @param Scene Storage type. Only `COS` is supported.
+                     * @param _scene Storage type. Only `COS` is supported.
+                     * 
                      */
                     void SetScene(const std::string& _scene);
 
                     /**
                      * 判断参数 Scene 是否已赋值
                      * @return Scene 是否已赋值
+                     * 
                      */
                     bool SceneHasBeenSet() const;
 
                     /**
                      * 获取Number of concurrent workers
                      * @return WorkerNum Number of concurrent workers
+                     * 
                      */
                     int64_t GetWorkerNum() const;
 
                     /**
                      * 设置Number of concurrent workers
-                     * @param WorkerNum Number of concurrent workers
+                     * @param _workerNum Number of concurrent workers
+                     * 
                      */
                     void SetWorkerNum(const int64_t& _workerNum);
 
                     /**
                      * 判断参数 WorkerNum 是否已赋值
                      * @return WorkerNum 是否已赋值
+                     * 
                      */
                     bool WorkerNumHasBeenSet() const;
 
                     /**
                      * 获取Size of a worker part, in MB.
                      * @return WorkerPartSize Size of a worker part, in MB.
+                     * 
                      */
                     int64_t GetWorkerPartSize() const;
 
                     /**
                      * 设置Size of a worker part, in MB.
-                     * @param WorkerPartSize Size of a worker part, in MB.
+                     * @param _workerPartSize Size of a worker part, in MB.
+                     * 
                      */
                     void SetWorkerPartSize(const int64_t& _workerPartSize);
 
                     /**
                      * 判断参数 WorkerPartSize 是否已赋值
                      * @return WorkerPartSize 是否已赋值
+                     * 
                      */
                     bool WorkerPartSizeHasBeenSet() const;
 

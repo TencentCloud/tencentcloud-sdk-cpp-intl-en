@@ -48,12 +48,14 @@ namespace TencentCloud
                     /**
                      * 获取The total number of slow query statements during the specified period of time.
                      * @return TotalCount The total number of slow query statements during the specified period of time.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -62,12 +64,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DurationAnalysis Analysis of the execution time of slow query statements by classifying them to different time ranges. These slow query statements fall within the query range you specified in the request parameters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DurationAnalysis> GetDurationAnalysis() const;
 
                     /**
                      * 判断参数 DurationAnalysis 是否已赋值
                      * @return DurationAnalysis 是否已赋值
+                     * 
                      */
                     bool DurationAnalysisHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RawSlowQueryList The list of slow query details during the specified period of time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RawSlowQuery> GetRawSlowQueryList() const;
 
                     /**
                      * 判断参数 RawSlowQueryList 是否已赋值
                      * @return RawSlowQueryList 是否已赋值
+                     * 
                      */
                     bool RawSlowQueryListHasBeenSet() const;
 

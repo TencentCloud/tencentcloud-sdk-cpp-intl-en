@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of pending high-risk events of abnormal processes
                      * @return HighLevelEventCount Number of pending high-risk events of abnormal processes
+                     * 
                      */
                     int64_t GetHighLevelEventCount() const;
 
                     /**
                      * 判断参数 HighLevelEventCount 是否已赋值
                      * @return HighLevelEventCount 是否已赋值
+                     * 
                      */
                     bool HighLevelEventCountHasBeenSet() const;
 
                     /**
                      * 获取Number of pending medium-risk events of abnormal processes
                      * @return MediumLevelEventCount Number of pending medium-risk events of abnormal processes
+                     * 
                      */
                     int64_t GetMediumLevelEventCount() const;
 
                     /**
                      * 判断参数 MediumLevelEventCount 是否已赋值
                      * @return MediumLevelEventCount 是否已赋值
+                     * 
                      */
                     bool MediumLevelEventCountHasBeenSet() const;
 
                     /**
                      * 获取Number of pending low-risk events of abnormal processes
                      * @return LowLevelEventCount Number of pending low-risk events of abnormal processes
+                     * 
                      */
                     int64_t GetLowLevelEventCount() const;
 
                     /**
                      * 判断参数 LowLevelEventCount 是否已赋值
                      * @return LowLevelEventCount 是否已赋值
+                     * 
                      */
                     bool LowLevelEventCountHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Pagination parameter, which specifies the offset.
                      * @return Offset Pagination parameter, which specifies the offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination parameter, which specifies the offset.
-                     * @param Offset Pagination parameter, which specifies the offset.
+                     * @param _offset Pagination parameter, which specifies the offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter, which specifies the number of sites returned in each page.
                      * @return Limit Pagination parameter, which specifies the number of sites returned in each page.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination parameter, which specifies the number of sites returned in each page.
-                     * @param Limit Pagination parameter, which specifies the number of sites returned in each page.
+                     * @param _limit Pagination parameter, which specifies the number of sites returned in each page.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query condition filter, which supports complex type.
                      * @return Filters Query condition filter, which supports complex type.
+                     * 
                      */
                     std::vector<ZoneFilter> GetFilters() const;
 
                     /**
                      * 设置Query condition filter, which supports complex type.
-                     * @param Filters Query condition filter, which supports complex type.
+                     * @param _filters Query condition filter, which supports complex type.
+                     * 
                      */
                     void SetFilters(const std::vector<ZoneFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

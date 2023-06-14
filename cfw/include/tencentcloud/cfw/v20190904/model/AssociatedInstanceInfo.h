@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceId Instance ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceName Instance name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Type Instance type. 3: CVM instance; 4: CLB instance; 5: ENI instance; 6: Cloud database
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置Instance type. 3: CVM instance; 4: CLB instance; 5: ENI instance; 6: Cloud database
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Type Instance type. 3: CVM instance; 4: CLB instance; 5: ENI instance; 6: Cloud database
+                     * @param _type Instance type. 3: CVM instance; 4: CLB instance; 5: ENI instance; 6: Cloud database
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return VpcId VPC ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return VpcName VPC name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置VPC name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param VpcName VPC name
+                     * @param _vpcName VPC name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetVpcName(const std::string& _vpcName);
 
                     /**
                      * 判断参数 VpcName 是否已赋值
                      * @return VpcName 是否已赋值
+                     * 
                      */
                     bool VpcNameHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return PublicIp Public IP
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
                      * 设置Public IP
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param PublicIp Public IP
+                     * @param _publicIp Public IP
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
 
                     /**
                      * 判断参数 PublicIp 是否已赋值
                      * @return PublicIp 是否已赋值
+                     * 
                      */
                     bool PublicIpHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Ip Private IP
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Private IP
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Ip Private IP
+                     * @param _ip Private IP
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return SecurityGroupCount The number of associated security groups
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetSecurityGroupCount() const;
 
                     /**
                      * 设置The number of associated security groups
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param SecurityGroupCount The number of associated security groups
+                     * @param _securityGroupCount The number of associated security groups
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetSecurityGroupCount(const uint64_t& _securityGroupCount);
 
                     /**
                      * 判断参数 SecurityGroupCount 是否已赋值
                      * @return SecurityGroupCount 是否已赋值
+                     * 
                      */
                     bool SecurityGroupCountHasBeenSet() const;
 

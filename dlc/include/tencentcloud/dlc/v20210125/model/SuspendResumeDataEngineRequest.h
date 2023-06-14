@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The name of a virtual cluster.
                      * @return DataEngineName The name of a virtual cluster.
+                     * 
                      */
                     std::string GetDataEngineName() const;
 
                     /**
                      * 设置The name of a virtual cluster.
-                     * @param DataEngineName The name of a virtual cluster.
+                     * @param _dataEngineName The name of a virtual cluster.
+                     * 
                      */
                     void SetDataEngineName(const std::string& _dataEngineName);
 
                     /**
                      * 判断参数 DataEngineName 是否已赋值
                      * @return DataEngineName 是否已赋值
+                     * 
                      */
                     bool DataEngineNameHasBeenSet() const;
 
                     /**
                      * 获取The operation type: `suspend` or `resume`.
                      * @return Operate The operation type: `suspend` or `resume`.
+                     * 
                      */
                     std::string GetOperate() const;
 
                     /**
                      * 设置The operation type: `suspend` or `resume`.
-                     * @param Operate The operation type: `suspend` or `resume`.
+                     * @param _operate The operation type: `suspend` or `resume`.
+                     * 
                      */
                     void SetOperate(const std::string& _operate);
 
                     /**
                      * 判断参数 Operate 是否已赋值
                      * @return Operate 是否已赋值
+                     * 
                      */
                     bool OperateHasBeenSet() const;
 

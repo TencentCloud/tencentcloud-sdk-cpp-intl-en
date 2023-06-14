@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return RoleId Role ID
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRoleId() const;
 
                     /**
                      * 判断参数 RoleId 是否已赋值
                      * @return RoleId 是否已赋值
+                     * 
                      */
                     bool RoleIdHasBeenSet() const;
 

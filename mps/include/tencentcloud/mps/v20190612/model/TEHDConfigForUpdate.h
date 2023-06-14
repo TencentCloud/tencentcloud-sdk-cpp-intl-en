@@ -53,6 +53,7 @@ If this parameter is left blank, no modification will be made.
                      * @return Type TESHD type. Valid values:
 <li>TEHD-100: TESHD-100.</li>
 If this parameter is left blank, no modification will be made.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -60,33 +61,38 @@ If this parameter is left blank, no modification will be made.
                      * 设置TESHD type. Valid values:
 <li>TEHD-100: TESHD-100.</li>
 If this parameter is left blank, no modification will be made.
-                     * @param Type TESHD type. Valid values:
+                     * @param _type TESHD type. Valid values:
 <li>TEHD-100: TESHD-100.</li>
 If this parameter is left blank, no modification will be made.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Maximum bitrate. If this parameter is left empty, no modification will be made.
                      * @return MaxVideoBitrate Maximum bitrate. If this parameter is left empty, no modification will be made.
+                     * 
                      */
                     uint64_t GetMaxVideoBitrate() const;
 
                     /**
                      * 设置Maximum bitrate. If this parameter is left empty, no modification will be made.
-                     * @param MaxVideoBitrate Maximum bitrate. If this parameter is left empty, no modification will be made.
+                     * @param _maxVideoBitrate Maximum bitrate. If this parameter is left empty, no modification will be made.
+                     * 
                      */
                     void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
 
                     /**
                      * 判断参数 MaxVideoBitrate 是否已赋值
                      * @return MaxVideoBitrate 是否已赋值
+                     * 
                      */
                     bool MaxVideoBitrateHasBeenSet() const;
 

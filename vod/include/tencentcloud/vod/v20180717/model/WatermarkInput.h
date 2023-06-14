@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Watermarking template ID.
                      * @return Definition Watermarking template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Watermarking template ID.
-                     * @param Definition Watermarking template ID.
+                     * @param _definition Watermarking template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 VOD does not support adding text watermarks on screenshots.
                      * @return TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots.
+                     * 
                      */
                     std::string GetTextContent() const;
 
                     /**
                      * 设置Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots.
-                     * @param TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
+                     * @param _textContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots.
+                     * 
                      */
                     void SetTextContent(const std::string& _textContent);
 
                     /**
                      * 判断参数 TextContent 是否已赋值
                      * @return TextContent 是否已赋值
+                     * 
                      */
                     bool TextContentHasBeenSet() const;
 
@@ -91,20 +97,23 @@ VOD does not support adding text watermarks on screenshots.
 VOD does not support adding SVG watermarks on screenshots.
                      * @return SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots.
+                     * 
                      */
                     std::string GetSvgContent() const;
 
                     /**
                      * 设置SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots.
-                     * @param SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
+                     * @param _svgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots.
+                     * 
                      */
                     void SetSvgContent(const std::string& _svgContent);
 
                     /**
                      * 判断参数 SvgContent 是否已赋值
                      * @return SvgContent 是否已赋值
+                     * 
                      */
                     bool SvgContentHasBeenSet() const;
 
@@ -117,6 +126,7 @@ VOD does not support adding SVG watermarks on screenshots.
 <li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
@@ -125,16 +135,18 @@ VOD does not support adding SVG watermarks on screenshots.
 <li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
-                     * @param StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
+                     * @param _startTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
 <li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
@@ -147,6 +159,7 @@ VOD does not support adding SVG watermarks on screenshots.
 <li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
@@ -155,16 +168,18 @@ VOD does not support adding SVG watermarks on screenshots.
 <li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
-                     * @param EndTimeOffset End time offset of a watermark in seconds.
+                     * @param _endTimeOffset End time offset of a watermark in seconds.
 <li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
 <li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
 <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 

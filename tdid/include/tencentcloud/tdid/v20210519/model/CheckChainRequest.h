@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const int64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the DID organization.
                      * @return AgencyName The name of the DID organization.
+                     * 
                      */
                     std::string GetAgencyName() const;
 
                     /**
                      * 设置The name of the DID organization.
-                     * @param AgencyName The name of the DID organization.
+                     * @param _agencyName The name of the DID organization.
+                     * 
                      */
                     void SetAgencyName(const std::string& _agencyName);
 
                     /**
                      * 判断参数 AgencyName 是否已赋值
                      * @return AgencyName 是否已赋值
+                     * 
                      */
                     bool AgencyNameHasBeenSet() const;
 

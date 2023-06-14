@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Tencent Cloud account ID
                      * @return AppId Tencent Cloud account ID
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 设置Tencent Cloud account ID
-                     * @param AppId Tencent Cloud account ID
+                     * @param _appId Tencent Cloud account ID
+                     * 
                      */
                     void SetAppId(const int64_t& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -91,6 +97,7 @@ namespace TencentCloud
 `process`: Deploying
 `online`: Enabled
 `offline`: Disabled
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -99,34 +106,39 @@ namespace TencentCloud
 `process`: Deploying
 `online`: Enabled
 `offline`: Disabled
-                     * @param Status Acceleration service status
+                     * @param _status Acceleration service status
 `process`: Deploying
 `online`: Enabled
 `offline`: Disabled
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Domain name
                      * @return Host Domain name
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Domain name
-                     * @param Host Domain name
+                     * @param _host Domain name
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 

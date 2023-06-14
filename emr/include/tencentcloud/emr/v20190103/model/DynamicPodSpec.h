@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Minimum number of CPUs
                      * @return RequestCpu Minimum number of CPUs
+                     * 
                      */
                     double GetRequestCpu() const;
 
                     /**
                      * 设置Minimum number of CPUs
-                     * @param RequestCpu Minimum number of CPUs
+                     * @param _requestCpu Minimum number of CPUs
+                     * 
                      */
                     void SetRequestCpu(const double& _requestCpu);
 
                     /**
                      * 判断参数 RequestCpu 是否已赋值
                      * @return RequestCpu 是否已赋值
+                     * 
                      */
                     bool RequestCpuHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of CPUs
                      * @return LimitCpu Maximum number of CPUs
+                     * 
                      */
                     double GetLimitCpu() const;
 
                     /**
                      * 设置Maximum number of CPUs
-                     * @param LimitCpu Maximum number of CPUs
+                     * @param _limitCpu Maximum number of CPUs
+                     * 
                      */
                     void SetLimitCpu(const double& _limitCpu);
 
                     /**
                      * 判断参数 LimitCpu 是否已赋值
                      * @return LimitCpu 是否已赋值
+                     * 
                      */
                     bool LimitCpuHasBeenSet() const;
 
                     /**
                      * 获取Minimum memory in MB
                      * @return RequestMemory Minimum memory in MB
+                     * 
                      */
                     double GetRequestMemory() const;
 
                     /**
                      * 设置Minimum memory in MB
-                     * @param RequestMemory Minimum memory in MB
+                     * @param _requestMemory Minimum memory in MB
+                     * 
                      */
                     void SetRequestMemory(const double& _requestMemory);
 
                     /**
                      * 判断参数 RequestMemory 是否已赋值
                      * @return RequestMemory 是否已赋值
+                     * 
                      */
                     bool RequestMemoryHasBeenSet() const;
 
                     /**
                      * 获取Maximum memory in MB
                      * @return LimitMemory Maximum memory in MB
+                     * 
                      */
                     double GetLimitMemory() const;
 
                     /**
                      * 设置Maximum memory in MB
-                     * @param LimitMemory Maximum memory in MB
+                     * @param _limitMemory Maximum memory in MB
+                     * 
                      */
                     void SetLimitMemory(const double& _limitMemory);
 
                     /**
                      * 判断参数 LimitMemory 是否已赋值
                      * @return LimitMemory 是否已赋值
+                     * 
                      */
                     bool LimitMemoryHasBeenSet() const;
 

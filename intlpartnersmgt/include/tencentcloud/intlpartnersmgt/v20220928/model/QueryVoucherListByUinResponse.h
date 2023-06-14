@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Customer voucher information
                      * @return Data Customer voucher information
+                     * 
                      */
                     std::vector<QueryVoucherListByUinItem> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

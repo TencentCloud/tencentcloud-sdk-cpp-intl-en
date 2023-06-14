@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable the resource scheduling feature
                      * @return OpenSwitch Whether to enable the resource scheduling feature
+                     * 
                      */
                     bool GetOpenSwitch() const;
 
                     /**
                      * 判断参数 OpenSwitch 是否已赋值
                      * @return OpenSwitch 是否已赋值
+                     * 
                      */
                     bool OpenSwitchHasBeenSet() const;
 
                     /**
                      * 获取The resource scheduler in service
                      * @return Scheduler The resource scheduler in service
+                     * 
                      */
                     std::string GetScheduler() const;
 
                     /**
                      * 判断参数 Scheduler 是否已赋值
                      * @return Scheduler 是否已赋值
+                     * 
                      */
                     bool SchedulerHasBeenSet() const;
 
                     /**
                      * 获取Fair Scheduler information
                      * @return FSInfo Fair Scheduler information
+                     * 
                      */
                     std::string GetFSInfo() const;
 
                     /**
                      * 判断参数 FSInfo 是否已赋值
                      * @return FSInfo 是否已赋值
+                     * 
                      */
                     bool FSInfoHasBeenSet() const;
 
                     /**
                      * 获取Capacity Scheduler information
                      * @return CSInfo Capacity Scheduler information
+                     * 
                      */
                     std::string GetCSInfo() const;
 
                     /**
                      * 判断参数 CSInfo 是否已赋值
                      * @return CSInfo 是否已赋值
+                     * 
                      */
                     bool CSInfoHasBeenSet() const;
 

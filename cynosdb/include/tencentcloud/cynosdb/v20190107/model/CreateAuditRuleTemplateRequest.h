@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Audit rule
                      * @return RuleFilters Audit rule
+                     * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
                      * 设置Audit rule
-                     * @param RuleFilters Audit rule
+                     * @param _ruleFilters Audit rule
+                     * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
 
                     /**
                      * 判断参数 RuleFilters 是否已赋值
                      * @return RuleFilters 是否已赋值
+                     * 
                      */
                     bool RuleFiltersHasBeenSet() const;
 
                     /**
                      * 获取Rule template name
                      * @return RuleTemplateName Rule template name
+                     * 
                      */
                     std::string GetRuleTemplateName() const;
 
                     /**
                      * 设置Rule template name
-                     * @param RuleTemplateName Rule template name
+                     * @param _ruleTemplateName Rule template name
+                     * 
                      */
                     void SetRuleTemplateName(const std::string& _ruleTemplateName);
 
                     /**
                      * 判断参数 RuleTemplateName 是否已赋值
                      * @return RuleTemplateName 是否已赋值
+                     * 
                      */
                     bool RuleTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Rule template description.
                      * @return Description Rule template description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule template description.
-                     * @param Description Rule template description.
+                     * @param _description Rule template description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

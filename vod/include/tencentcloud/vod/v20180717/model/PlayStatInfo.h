@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
 <li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
 <li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+                     * 
                      */
                     std::string GetTime() const;
 
@@ -60,69 +61,80 @@ namespace TencentCloud
                      * 设置The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
 <li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
 <li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
-                     * @param Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
+                     * @param _time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
 <li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
 <li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取The ID of the media file.
                      * @return FileId The ID of the media file.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The ID of the media file.
-                     * @param FileId The ID of the media file.
+                     * @param _fileId The ID of the media file.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取The playback times.
                      * @return PlayTimes The playback times.
+                     * 
                      */
                     uint64_t GetPlayTimes() const;
 
                     /**
                      * 设置The playback times.
-                     * @param PlayTimes The playback times.
+                     * @param _playTimes The playback times.
+                     * 
                      */
                     void SetPlayTimes(const uint64_t& _playTimes);
 
                     /**
                      * 判断参数 PlayTimes 是否已赋值
                      * @return PlayTimes 是否已赋值
+                     * 
                      */
                     bool PlayTimesHasBeenSet() const;
 
                     /**
                      * 获取The traffic (in bytes) consumed for playback.
                      * @return Traffic The traffic (in bytes) consumed for playback.
+                     * 
                      */
                     uint64_t GetTraffic() const;
 
                     /**
                      * 设置The traffic (in bytes) consumed for playback.
-                     * @param Traffic The traffic (in bytes) consumed for playback.
+                     * @param _traffic The traffic (in bytes) consumed for playback.
+                     * 
                      */
                     void SetTraffic(const uint64_t& _traffic);
 
                     /**
                      * 判断参数 Traffic 是否已赋值
                      * @return Traffic 是否已赋值
+                     * 
                      */
                     bool TrafficHasBeenSet() const;
 

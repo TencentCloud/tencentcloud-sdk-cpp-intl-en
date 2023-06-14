@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancingId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancingId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancingId CLB instance ID
+                     * @param _loadBalancingId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancingId(const std::string& _loadBalancingId);
 
                     /**
                      * 判断参数 LoadBalancingId 是否已赋值
                      * @return LoadBalancingId 是否已赋值
+                     * 
                      */
                     bool LoadBalancingIdHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return Type Proxy mode.
 `dns_only`: Only DNS
 `proxied`: Enable proxy
+                     * 
                      */
                     std::string GetType() const;
 
@@ -92,51 +99,59 @@ namespace TencentCloud
                      * 设置Proxy mode.
 `dns_only`: Only DNS
 `proxied`: Enable proxy
-                     * @param Type Proxy mode.
+                     * @param _type Proxy mode.
 `dns_only`: Only DNS
 `proxied`: Enable proxy
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取ID of the origin group used
                      * @return OriginId ID of the origin group used
+                     * 
                      */
                     std::vector<std::string> GetOriginId() const;
 
                     /**
                      * 设置ID of the origin group used
-                     * @param OriginId ID of the origin group used
+                     * @param _originId ID of the origin group used
+                     * 
                      */
                     void SetOriginId(const std::vector<std::string>& _originId);
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 
                     /**
                      * 获取Indicates DNS TTL time when `Type=dns_only`
                      * @return TTL Indicates DNS TTL time when `Type=dns_only`
+                     * 
                      */
                     uint64_t GetTTL() const;
 
                     /**
                      * 设置Indicates DNS TTL time when `Type=dns_only`
-                     * @param TTL Indicates DNS TTL time when `Type=dns_only`
+                     * @param _tTL Indicates DNS TTL time when `Type=dns_only`
+                     * 
                      */
                     void SetTTL(const uint64_t& _tTL);
 
                     /**
                      * 判断参数 TTL 是否已赋值
                      * @return TTL 是否已赋值
+                     * 
                      */
                     bool TTLHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Custom layer-7 CC protection rule parameters. If custom CC protection rule is not enabled, an empty array will be returned.
                      * @return RuleConfig Custom layer-7 CC protection rule parameters. If custom CC protection rule is not enabled, an empty array will be returned.
+                     * 
                      */
                     std::vector<CCRuleConfig> GetRuleConfig() const;
 
                     /**
                      * 判断参数 RuleConfig 是否已赋值
                      * @return RuleConfig 是否已赋值
+                     * 
                      */
                     bool RuleConfigHasBeenSet() const;
 

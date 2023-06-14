@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SoftInfo Software information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSoftInfo() const;
 
                     /**
                      * 设置Software information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SoftInfo Software information
+                     * @param _softInfo Software information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSoftInfo(const std::vector<std::string>& _softInfo);
 
                     /**
                      * 判断参数 SoftInfo 是否已赋值
                      * @return SoftInfo 是否已赋值
+                     * 
                      */
                     bool SoftInfoHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MasterNodeSize Number of master nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMasterNodeSize() const;
 
                     /**
                      * 设置Number of master nodes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MasterNodeSize Number of master nodes
+                     * @param _masterNodeSize Number of master nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterNodeSize(const int64_t& _masterNodeSize);
 
                     /**
                      * 判断参数 MasterNodeSize 是否已赋值
                      * @return MasterNodeSize 是否已赋值
+                     * 
                      */
                     bool MasterNodeSizeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CoreNodeSize Number of core nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCoreNodeSize() const;
 
                     /**
                      * 设置Number of core nodes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CoreNodeSize Number of core nodes
+                     * @param _coreNodeSize Number of core nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoreNodeSize(const int64_t& _coreNodeSize);
 
                     /**
                      * 判断参数 CoreNodeSize 是否已赋值
                      * @return CoreNodeSize 是否已赋值
+                     * 
                      */
                     bool CoreNodeSizeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TaskNodeSize Number of task nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTaskNodeSize() const;
 
                     /**
                      * 设置Number of task nodes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TaskNodeSize Number of task nodes
+                     * @param _taskNodeSize Number of task nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskNodeSize(const int64_t& _taskNodeSize);
 
                     /**
                      * 判断参数 TaskNodeSize 是否已赋值
                      * @return TaskNodeSize 是否已赋值
+                     * 
                      */
                     bool TaskNodeSizeHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ComNodeSize Number of common nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetComNodeSize() const;
 
                     /**
                      * 设置Number of common nodes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ComNodeSize Number of common nodes
+                     * @param _comNodeSize Number of common nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComNodeSize(const int64_t& _comNodeSize);
 
                     /**
                      * 判断参数 ComNodeSize 是否已赋值
                      * @return ComNodeSize 是否已赋值
+                     * 
                      */
                     bool ComNodeSizeHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MasterResource Master node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OutterResource GetMasterResource() const;
 
                     /**
                      * 设置Master node resource
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MasterResource Master node resource
+                     * @param _masterResource Master node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterResource(const OutterResource& _masterResource);
 
                     /**
                      * 判断参数 MasterResource 是否已赋值
                      * @return MasterResource 是否已赋值
+                     * 
                      */
                     bool MasterResourceHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CoreResource Core node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OutterResource GetCoreResource() const;
 
                     /**
                      * 设置Core node resource
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CoreResource Core node resource
+                     * @param _coreResource Core node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoreResource(const OutterResource& _coreResource);
 
                     /**
                      * 判断参数 CoreResource 是否已赋值
                      * @return CoreResource 是否已赋值
+                     * 
                      */
                     bool CoreResourceHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TaskResource Task node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OutterResource GetTaskResource() const;
 
                     /**
                      * 设置Task node resource
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TaskResource Task node resource
+                     * @param _taskResource Task node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskResource(const OutterResource& _taskResource);
 
                     /**
                      * 判断参数 TaskResource 是否已赋值
                      * @return TaskResource 是否已赋值
+                     * 
                      */
                     bool TaskResourceHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ComResource Common node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OutterResource GetComResource() const;
 
                     /**
                      * 设置Common node resource
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ComResource Common node resource
+                     * @param _comResource Common node resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComResource(const OutterResource& _comResource);
 
                     /**
                      * 判断参数 ComResource 是否已赋值
                      * @return ComResource 是否已赋值
+                     * 
                      */
                     bool ComResourceHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OnCos Whether COS is used
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetOnCos() const;
 
                     /**
                      * 设置Whether COS is used
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OnCos Whether COS is used
+                     * @param _onCos Whether COS is used
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOnCos(const bool& _onCos);
 
                     /**
                      * 判断参数 OnCos 是否已赋值
                      * @return OnCos 是否已赋值
+                     * 
                      */
                     bool OnCosHasBeenSet() const;
 
@@ -272,20 +302,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ChargeType Billing mode
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
                      * 设置Billing mode
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ChargeType Billing mode
+                     * @param _chargeType Billing mode
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
@@ -294,20 +327,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RouterNodeSize Number of router nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRouterNodeSize() const;
 
                     /**
                      * 设置Number of router nodes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RouterNodeSize Number of router nodes
+                     * @param _routerNodeSize Number of router nodes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouterNodeSize(const int64_t& _routerNodeSize);
 
                     /**
                      * 判断参数 RouterNodeSize 是否已赋值
                      * @return RouterNodeSize 是否已赋值
+                     * 
                      */
                     bool RouterNodeSizeHasBeenSet() const;
 
@@ -316,20 +352,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SupportHA Whether HA is supported
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSupportHA() const;
 
                     /**
                      * 设置Whether HA is supported
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SupportHA Whether HA is supported
+                     * @param _supportHA Whether HA is supported
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSupportHA(const bool& _supportHA);
 
                     /**
                      * 判断参数 SupportHA 是否已赋值
                      * @return SupportHA 是否已赋值
+                     * 
                      */
                     bool SupportHAHasBeenSet() const;
 
@@ -338,20 +377,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SecurityOn Whether secure mode is supported
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSecurityOn() const;
 
                     /**
                      * 设置Whether secure mode is supported
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SecurityOn Whether secure mode is supported
+                     * @param _securityOn Whether secure mode is supported
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecurityOn(const bool& _securityOn);
 
                     /**
                      * 判断参数 SecurityOn 是否已赋值
                      * @return SecurityOn 是否已赋值
+                     * 
                      */
                     bool SecurityOnHasBeenSet() const;
 
@@ -360,20 +402,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SecurityGroup Security group name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
                      * 设置Security group name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SecurityGroup Security group name
+                     * @param _securityGroup Security group name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
 
                     /**
                      * 判断参数 SecurityGroup 是否已赋值
                      * @return SecurityGroup 是否已赋值
+                     * 
                      */
                     bool SecurityGroupHasBeenSet() const;
 
@@ -382,20 +427,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CbsEncrypt Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCbsEncrypt() const;
 
                     /**
                      * 设置Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CbsEncrypt Whether to enable CBS encryption
+                     * @param _cbsEncrypt Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCbsEncrypt(const int64_t& _cbsEncrypt);
 
                     /**
                      * 判断参数 CbsEncrypt 是否已赋值
                      * @return CbsEncrypt 是否已赋值
+                     * 
                      */
                     bool CbsEncryptHasBeenSet() const;
 
@@ -404,20 +452,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return ApplicationRole Custom application role
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetApplicationRole() const;
 
                     /**
                      * 设置Custom application role
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param ApplicationRole Custom application role
+                     * @param _applicationRole Custom application role
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetApplicationRole(const std::string& _applicationRole);
 
                     /**
                      * 判断参数 ApplicationRole 是否已赋值
                      * @return ApplicationRole 是否已赋值
+                     * 
                      */
                     bool ApplicationRoleHasBeenSet() const;
 
@@ -426,20 +477,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return SecurityGroups Security groups
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroups() const;
 
                     /**
                      * 设置Security groups
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param SecurityGroups Security groups
+                     * @param _securityGroups Security groups
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
 
                     /**
                      * 判断参数 SecurityGroups 是否已赋值
                      * @return SecurityGroups 是否已赋值
+                     * 
                      */
                     bool SecurityGroupsHasBeenSet() const;
 
@@ -448,20 +502,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PublicKeyId SSH key ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicKeyId() const;
 
                     /**
                      * 设置SSH key ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PublicKeyId SSH key ID
+                     * @param _publicKeyId SSH key ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicKeyId(const std::string& _publicKeyId);
 
                     /**
                      * 判断参数 PublicKeyId 是否已赋值
                      * @return PublicKeyId 是否已赋值
+                     * 
                      */
                     bool PublicKeyIdHasBeenSet() const;
 

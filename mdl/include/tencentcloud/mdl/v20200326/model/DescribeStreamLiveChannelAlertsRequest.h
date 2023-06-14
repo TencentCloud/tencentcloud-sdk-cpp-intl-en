@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return ChannelId Channel ID
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param ChannelId Channel ID
+                     * @param _channelId Channel ID
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 

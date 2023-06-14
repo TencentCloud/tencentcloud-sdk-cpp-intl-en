@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return LessThan The maximum weight
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetLessThan() const;
 
                     /**
                      * 设置The maximum weight
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param LessThan The maximum weight
+                     * @param _lessThan The maximum weight
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetLessThan(const uint64_t& _lessThan);
 
                     /**
                      * 判断参数 LessThan 是否已赋值
                      * @return LessThan 是否已赋值
+                     * 
                      */
                     bool LessThanHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Weight Weight
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
                      * 设置Weight
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param Weight Weight
+                     * @param _weight Weight
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

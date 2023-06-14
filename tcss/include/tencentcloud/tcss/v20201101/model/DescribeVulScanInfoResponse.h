@@ -46,156 +46,182 @@ namespace TencentCloud
                     /**
                      * 获取Total number of local images scanned this time
                      * @return LocalImageScanCount Total number of local images scanned this time
+                     * 
                      */
                     int64_t GetLocalImageScanCount() const;
 
                     /**
                      * 判断参数 LocalImageScanCount 是否已赋值
                      * @return LocalImageScanCount 是否已赋值
+                     * 
                      */
                     bool LocalImageScanCountHasBeenSet() const;
 
                     /**
                      * 获取Number of ignored vulnerabilities
                      * @return IgnoreVulCount Number of ignored vulnerabilities
+                     * 
                      */
                     int64_t GetIgnoreVulCount() const;
 
                     /**
                      * 判断参数 IgnoreVulCount 是否已赋值
                      * @return IgnoreVulCount 是否已赋值
+                     * 
                      */
                     bool IgnoreVulCountHasBeenSet() const;
 
                     /**
                      * 获取Start time of the vulnerability scan
                      * @return ScanStartTime Start time of the vulnerability scan
+                     * 
                      */
                     std::string GetScanStartTime() const;
 
                     /**
                      * 判断参数 ScanStartTime 是否已赋值
                      * @return ScanStartTime 是否已赋值
+                     * 
                      */
                     bool ScanStartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the vulnerability scan
                      * @return ScanEndTime End time of the vulnerability scan
+                     * 
                      */
                     std::string GetScanEndTime() const;
 
                     /**
                      * 判断参数 ScanEndTime 是否已赋值
                      * @return ScanEndTime 是否已赋值
+                     * 
                      */
                     bool ScanEndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of images found to be at risk
                      * @return FoundRiskImageCount Number of images found to be at risk
+                     * 
                      */
                     int64_t GetFoundRiskImageCount() const;
 
                     /**
                      * 判断参数 FoundRiskImageCount 是否已赋值
                      * @return FoundRiskImageCount 是否已赋值
+                     * 
                      */
                     bool FoundRiskImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of vulnerabilities found in local images
                      * @return FoundVulCount Number of vulnerabilities found in local images
+                     * 
                      */
                     int64_t GetFoundVulCount() const;
 
                     /**
                      * 判断参数 FoundVulCount 是否已赋值
                      * @return FoundVulCount 是否已赋值
+                     * 
                      */
                     bool FoundVulCountHasBeenSet() const;
 
                     /**
                      * 获取Scanning progress
                      * @return ScanProgress Scanning progress
+                     * 
                      */
                     double GetScanProgress() const;
 
                     /**
                      * 判断参数 ScanProgress 是否已赋值
                      * @return ScanProgress 是否已赋值
+                     * 
                      */
                     bool ScanProgressHasBeenSet() const;
 
                     /**
                      * 获取Total number of repository images scanned this time
                      * @return RegistryImageScanCount Total number of repository images scanned this time
+                     * 
                      */
                     int64_t GetRegistryImageScanCount() const;
 
                     /**
                      * 判断参数 RegistryImageScanCount 是否已赋值
                      * @return RegistryImageScanCount 是否已赋值
+                     * 
                      */
                     bool RegistryImageScanCountHasBeenSet() const;
 
                     /**
                      * 获取ID of the last task to scan local images for vulnerabilities
                      * @return LocalTaskID ID of the last task to scan local images for vulnerabilities
+                     * 
                      */
                     int64_t GetLocalTaskID() const;
 
                     /**
                      * 判断参数 LocalTaskID 是否已赋值
                      * @return LocalTaskID 是否已赋值
+                     * 
                      */
                     bool LocalTaskIDHasBeenSet() const;
 
                     /**
                      * 获取Scanning status. Valid values: `NOT_SCAN` (not scanned); `SCANNING` (scanning); `SCANNED` (scanned); `CANCELED` (stopped).
                      * @return Status Scanning status. Valid values: `NOT_SCAN` (not scanned); `SCANNING` (scanning); `SCANNED` (scanned); `CANCELED` (stopped).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Remaining time in seconds
                      * @return RemainingTime Remaining time in seconds
+                     * 
                      */
                     double GetRemainingTime() const;
 
                     /**
                      * 判断参数 RemainingTime 是否已赋值
                      * @return RemainingTime 是否已赋值
+                     * 
                      */
                     bool RemainingTimeHasBeenSet() const;
 
                     /**
                      * 获取ID of the last task to scan repository images for vulnerabilities
                      * @return RegistryTaskID ID of the last task to scan repository images for vulnerabilities
+                     * 
                      */
                     int64_t GetRegistryTaskID() const;
 
                     /**
                      * 判断参数 RegistryTaskID 是否已赋值
                      * @return RegistryTaskID 是否已赋值
+                     * 
                      */
                     bool RegistryTaskIDHasBeenSet() const;
 
                     /**
                      * 获取Number of vulnerabilities found in the repository
                      * @return RegistryFoundVulCount Number of vulnerabilities found in the repository
+                     * 
                      */
                     int64_t GetRegistryFoundVulCount() const;
 
                     /**
                      * 判断参数 RegistryFoundVulCount 是否已赋值
                      * @return RegistryFoundVulCount 是否已赋值
+                     * 
                      */
                     bool RegistryFoundVulCountHasBeenSet() const;
 

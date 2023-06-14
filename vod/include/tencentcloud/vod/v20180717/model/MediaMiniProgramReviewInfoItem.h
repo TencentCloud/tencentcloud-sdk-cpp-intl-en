@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
                      * @return Definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
-                     * @param Definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
+                     * @param _definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Video metadata.
                      * @return MetaData Video metadata.
+                     * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
                      * 设置Video metadata.
-                     * @param MetaData Video metadata.
+                     * @param _metaData Video metadata.
+                     * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
 
                     /**
                      * 判断参数 MetaData 是否已赋值
                      * @return MetaData 是否已赋值
+                     * 
                      */
                     bool MetaDataHasBeenSet() const;
 
@@ -89,20 +95,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Url Video playback address for WeChat Mini Program audit
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Video playback address for WeChat Mini Program audit
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Url Video playback address for WeChat Mini Program audit
+                     * @param _url Video playback address for WeChat Mini Program audit
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -113,6 +122,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return ReviewResult Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
+                     * 
                      */
                     std::string GetReviewResult() const;
 
@@ -120,15 +130,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
-                     * @param ReviewResult Status of video release on WeChat Mini Program
+                     * @param _reviewResult Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
+                     * 
                      */
                     void SetReviewResult(const std::string& _reviewResult);
 
                     /**
                      * 判断参数 ReviewResult 是否已赋值
                      * @return ReviewResult 是否已赋值
+                     * 
                      */
                     bool ReviewResultHasBeenSet() const;
 
@@ -137,20 +149,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ReviewSummary WeChat Mini Program audit element.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaMiniProgramReviewElem> GetReviewSummary() const;
 
                     /**
                      * 设置WeChat Mini Program audit element.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReviewSummary WeChat Mini Program audit element.
+                     * @param _reviewSummary WeChat Mini Program audit element.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReviewSummary(const std::vector<MediaMiniProgramReviewElem>& _reviewSummary);
 
                     /**
                      * 判断参数 ReviewSummary 是否已赋值
                      * @return ReviewSummary 是否已赋值
+                     * 
                      */
                     bool ReviewSummaryHasBeenSet() const;
 

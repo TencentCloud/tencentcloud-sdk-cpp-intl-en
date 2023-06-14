@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Key pair `ID`, the unique identifier of a key pair.
                      * @return KeyId Key pair `ID`, the unique identifier of a key pair.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Key pair `ID`, the unique identifier of a key pair.
-                     * @param KeyId Key pair `ID`, the unique identifier of a key pair.
+                     * @param _keyId Key pair `ID`, the unique identifier of a key pair.
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Key pair name.
                      * @return KeyName Key pair name.
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Key pair name.
-                     * @param KeyName Key pair name.
+                     * @param _keyName Key pair name.
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 
                     /**
                      * 获取`ID` of the project to which a key pair belongs.
                      * @return ProjectId `ID` of the project to which a key pair belongs.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置`ID` of the project to which a key pair belongs.
-                     * @param ProjectId `ID` of the project to which a key pair belongs.
+                     * @param _projectId `ID` of the project to which a key pair belongs.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Key pair description.
                      * @return Description Key pair description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Key pair description.
-                     * @param Description Key pair description.
+                     * @param _description Key pair description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Content of public key in a key pair.
                      * @return PublicKey Content of public key in a key pair.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Content of public key in a key pair.
-                     * @param PublicKey Content of public key in a key pair.
+                     * @param _publicKey Content of public key in a key pair.
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
                      * @return PrivateKey Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+                     * 
                      */
                     std::string GetPrivateKey() const;
 
                     /**
                      * 设置Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
-                     * @param PrivateKey Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+                     * @param _privateKey Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
+                     * 
                      */
                     void SetPrivateKey(const std::string& _privateKey);
 
                     /**
                      * 判断参数 PrivateKey 是否已赋值
                      * @return PrivateKey 是否已赋值
+                     * 
                      */
                     bool PrivateKeyHasBeenSet() const;
 
                     /**
                      * 获取`ID` list of instances associated with a key.
                      * @return AssociatedInstanceIds `ID` list of instances associated with a key.
+                     * 
                      */
                     std::vector<std::string> GetAssociatedInstanceIds() const;
 
                     /**
                      * 设置`ID` list of instances associated with a key.
-                     * @param AssociatedInstanceIds `ID` list of instances associated with a key.
+                     * @param _associatedInstanceIds `ID` list of instances associated with a key.
+                     * 
                      */
                     void SetAssociatedInstanceIds(const std::vector<std::string>& _associatedInstanceIds);
 
                     /**
                      * 判断参数 AssociatedInstanceIds 是否已赋值
                      * @return AssociatedInstanceIds 是否已赋值
+                     * 
                      */
                     bool AssociatedInstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
                      * @return CreatedTime Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
-                     * @param CreatedTime Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+                     * @param _createdTime Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -196,20 +220,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Tags The list of tags bound to the key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置The list of tags bound to the key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Tags The list of tags bound to the key.
+                     * @param _tags The list of tags bound to the key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

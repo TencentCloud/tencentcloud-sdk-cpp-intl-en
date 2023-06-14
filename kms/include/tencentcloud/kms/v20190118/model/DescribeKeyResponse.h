@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return KeyMetadata Key attribute information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     KeyMetadata GetKeyMetadata() const;
 
                     /**
                      * 判断参数 KeyMetadata 是否已赋值
                      * @return KeyMetadata 是否已赋值
+                     * 
                      */
                     bool KeyMetadataHasBeenSet() const;
 

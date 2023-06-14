@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyNodeId Proxy node ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetProxyNodeId() const;
 
                     /**
                      * 设置Proxy node ID
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ProxyNodeId Proxy node ID
+                     * @param _proxyNodeId Proxy node ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProxyNodeId(const std::string& _proxyNodeId);
 
                     /**
                      * 判断参数 ProxyNodeId 是否已赋值
                      * @return ProxyNodeId 是否已赋值
+                     * 
                      */
                     bool ProxyNodeIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyNodeConnections Current number of connections to the node
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetProxyNodeConnections() const;
 
                     /**
                      * 设置Current number of connections to the node
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ProxyNodeConnections Current number of connections to the node
+                     * @param _proxyNodeConnections Current number of connections to the node
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProxyNodeConnections(const uint64_t& _proxyNodeConnections);
 
                     /**
                      * 判断参数 ProxyNodeConnections 是否已赋值
                      * @return ProxyNodeConnections 是否已赋值
+                     * 
                      */
                     bool ProxyNodeConnectionsHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyNodeCpu CPU
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetProxyNodeCpu() const;
 
                     /**
                      * 设置CPU
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ProxyNodeCpu CPU
+                     * @param _proxyNodeCpu CPU
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProxyNodeCpu(const uint64_t& _proxyNodeCpu);
 
                     /**
                      * 判断参数 ProxyNodeCpu 是否已赋值
                      * @return ProxyNodeCpu 是否已赋值
+                     * 
                      */
                     bool ProxyNodeCpuHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyNodeMem Memory
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetProxyNodeMem() const;
 
                     /**
                      * 设置Memory
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ProxyNodeMem Memory
+                     * @param _proxyNodeMem Memory
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProxyNodeMem(const uint64_t& _proxyNodeMem);
 
                     /**
                      * 判断参数 ProxyNodeMem 是否已赋值
                      * @return ProxyNodeMem 是否已赋值
+                     * 
                      */
                     bool ProxyNodeMemHasBeenSet() const;
 
@@ -151,6 +163,7 @@ destroy (destroyed)
 recovering (recovering from fault)
 error (failed)
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetProxyStatus() const;
 
@@ -163,7 +176,7 @@ destroy (destroyed)
 recovering (recovering from fault)
 error (failed)
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ProxyStatus Node status:
+                     * @param _proxyStatus Node status:
 init (applying)
 online (active)
 offline (inactive)
@@ -171,12 +184,14 @@ destroy (destroyed)
 recovering (recovering from fault)
 error (failed)
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProxyStatus(const std::string& _proxyStatus);
 
                     /**
                      * 判断参数 ProxyStatus 是否已赋值
                      * @return ProxyStatus 是否已赋值
+                     * 
                      */
                     bool ProxyStatusHasBeenSet() const;
 

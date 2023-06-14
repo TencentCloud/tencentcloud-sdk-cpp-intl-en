@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取DDoS policy group ID
                      * @return PolicyId DDoS policy group ID
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置DDoS policy group ID
-                     * @param PolicyId DDoS policy group ID
+                     * @param _policyId DDoS policy group ID
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Maximum attack bandwidth
                      * @return AttackMaxBandWidth Maximum attack bandwidth
+                     * 
                      */
                     int64_t GetAttackMaxBandWidth() const;
 
                     /**
                      * 设置Maximum attack bandwidth
-                     * @param AttackMaxBandWidth Maximum attack bandwidth
+                     * @param _attackMaxBandWidth Maximum attack bandwidth
+                     * 
                      */
                     void SetAttackMaxBandWidth(const int64_t& _attackMaxBandWidth);
 
                     /**
                      * 判断参数 AttackMaxBandWidth 是否已赋值
                      * @return AttackMaxBandWidth 是否已赋值
+                     * 
                      */
                     bool AttackMaxBandWidthHasBeenSet() const;
 
                     /**
                      * 获取Attack time in seconds
                      * @return AttackTime Attack time in seconds
+                     * 
                      */
                     int64_t GetAttackTime() const;
 
                     /**
                      * 设置Attack time in seconds
-                     * @param AttackTime Attack time in seconds
+                     * @param _attackTime Attack time in seconds
+                     * 
                      */
                     void SetAttackTime(const int64_t& _attackTime);
 
                     /**
                      * 判断参数 AttackTime 是否已赋值
                      * @return AttackTime 是否已赋值
+                     * 
                      */
                     bool AttackTimeHasBeenSet() const;
 

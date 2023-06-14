@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of affected images
                      * @return List List of affected images
+                     * 
                      */
                     std::vector<VulAffectedImageInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
                     /**
                      * 获取Total number of images
                      * @return TotalCount Total number of images
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

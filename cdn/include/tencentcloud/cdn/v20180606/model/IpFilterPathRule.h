@@ -55,6 +55,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetFilterType() const;
 
@@ -63,16 +64,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FilterType IP blocklist/allowlist type
+                     * @param _filterType IP blocklist/allowlist type
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFilterType(const std::string& _filterType);
 
                     /**
                      * 判断参数 FilterType 是否已赋值
                      * @return FilterType 是否已赋值
+                     * 
                      */
                     bool FilterTypeHasBeenSet() const;
 
@@ -85,6 +88,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFilters() const;
 
@@ -93,16 +97,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Filters IP blocklist/allowlist list
+                     * @param _filters IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
@@ -119,6 +125,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `directory`: Effective for specified paths
 `path`: Effective for specified absolute paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -129,18 +136,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `directory`: Effective for specified paths
 `path`: Effective for specified absolute paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `all`: Effective for all files
 `file`: Effective for specified file suffixes
 `directory`: Effective for specified paths
 `path`: Effective for specified absolute paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -157,6 +166,7 @@ For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -167,18 +177,20 @@ For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RulePaths Content for each RuleType:
+                     * @param _rulePaths Content for each RuleType:
 For `all`, enter an asterisk (*).
 For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 

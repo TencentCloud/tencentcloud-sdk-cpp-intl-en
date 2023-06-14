@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Video dragging switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Video dragging switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Video dragging switch
+                     * @param _switch Video dragging switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationAccounts List of the user's accounts under authorized applications
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetApplicationAccounts() const;
 
                     /**
                      * 设置List of the user's accounts under authorized applications
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApplicationAccounts List of the user's accounts under authorized applications
+                     * @param _applicationAccounts List of the user's accounts under authorized applications
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationAccounts(const std::vector<std::string>& _applicationAccounts);
 
                     /**
                      * 判断参数 ApplicationAccounts 是否已赋值
                      * @return ApplicationAccounts 是否已赋值
+                     * 
                      */
                     bool ApplicationAccountsHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationId Application ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApplicationId Application ID, which is globally unique.
+                     * @param _applicationId Application ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InheritedForm List of IDs of the user's user groups and organization nodes that have access to the application.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InheritedForm GetInheritedForm() const;
 
                     /**
                      * 设置List of IDs of the user's user groups and organization nodes that have access to the application.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InheritedForm List of IDs of the user's user groups and organization nodes that have access to the application.
+                     * @param _inheritedForm List of IDs of the user's user groups and organization nodes that have access to the application.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInheritedForm(const InheritedForm& _inheritedForm);
 
                     /**
                      * 判断参数 InheritedForm 是否已赋值
                      * @return InheritedForm 是否已赋值
+                     * 
                      */
                     bool InheritedFormHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationName Application name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApplicationName Application name.
+                     * @param _applicationName Application name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
 
                     /**
                      * 判断参数 ApplicationName 是否已赋值
                      * @return ApplicationName 是否已赋值
+                     * 
                      */
                     bool ApplicationNameHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedDate Application creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedDate() const;
 
                     /**
                      * 设置Application creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedDate Application creation time.
+                     * @param _createdDate Application creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedDate(const std::string& _createdDate);
 
                     /**
                      * 判断参数 CreatedDate 是否已赋值
                      * @return CreatedDate 是否已赋值
+                     * 
                      */
                     bool CreatedDateHasBeenSet() const;
 

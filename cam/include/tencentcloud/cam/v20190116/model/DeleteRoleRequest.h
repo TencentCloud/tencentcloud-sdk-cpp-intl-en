@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Role ID, used to specify a role. Input either `RoleId` or `RoleName`
                      * @return RoleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     std::string GetRoleId() const;
 
                     /**
                      * 设置Role ID, used to specify a role. Input either `RoleId` or `RoleName`
-                     * @param RoleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+                     * @param _roleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     void SetRoleId(const std::string& _roleId);
 
                     /**
                      * 判断参数 RoleId 是否已赋值
                      * @return RoleId 是否已赋值
+                     * 
                      */
                     bool RoleIdHasBeenSet() const;
 
                     /**
                      * 获取Role name, used to specify a role. Input either `RoleId` or `RoleName`
                      * @return RoleName Role name, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name, used to specify a role. Input either `RoleId` or `RoleName`
-                     * @param RoleName Role name, used to specify a role. Input either `RoleId` or `RoleName`
+                     * @param _roleName Role name, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 

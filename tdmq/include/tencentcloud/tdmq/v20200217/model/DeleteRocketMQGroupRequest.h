@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return NamespaceId Namespace name
+                     * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
                      * 设置Namespace name
-                     * @param NamespaceId Namespace name
+                     * @param _namespaceId Namespace name
+                     * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Consumer group name
                      * @return GroupId Consumer group name
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Consumer group name
-                     * @param GroupId Consumer group name
+                     * @param _groupId Consumer group name
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 

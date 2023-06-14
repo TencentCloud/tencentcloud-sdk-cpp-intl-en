@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Parameter template ID
                      * @return TemplateId Parameter template ID
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Parameter template ID
-                     * @param TemplateId Parameter template ID
+                     * @param _templateId Parameter template ID
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Parameter template name
                      * @return Name Parameter template name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter template name
-                     * @param Name Parameter template name
+                     * @param _name Parameter template name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Parameter template description
                      * @return Description Parameter template description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Parameter template description
-                     * @param Description Parameter template description
+                     * @param _description Parameter template description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Instance engine version
                      * @return EngineVersion Instance engine version
+                     * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
                      * 设置Instance engine version
-                     * @param EngineVersion Instance engine version
+                     * @param _engineVersion Instance engine version
+                     * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
                     /**
                      * 判断参数 EngineVersion 是否已赋值
                      * @return EngineVersion 是否已赋值
+                     * 
                      */
                     bool EngineVersionHasBeenSet() const;
 
                     /**
                      * 获取Parameter template type
                      * @return TemplateType Parameter template type
+                     * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
                      * 设置Parameter template type
-                     * @param TemplateType Parameter template type
+                     * @param _templateType Parameter template type
+                     * 
                      */
                     void SetTemplateType(const std::string& _templateType);
 
                     /**
                      * 判断参数 TemplateType 是否已赋值
                      * @return TemplateType 是否已赋值
+                     * 
                      */
                     bool TemplateTypeHasBeenSet() const;
 

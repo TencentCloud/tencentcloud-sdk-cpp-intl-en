@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return TaskId Task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the container to be stopped. If it is left empty, the entire task will be stopped.
                      * @return ContainerIds ID of the container to be stopped. If it is left empty, the entire task will be stopped.
+                     * 
                      */
                     std::vector<std::string> GetContainerIds() const;
 
                     /**
                      * 设置ID of the container to be stopped. If it is left empty, the entire task will be stopped.
-                     * @param ContainerIds ID of the container to be stopped. If it is left empty, the entire task will be stopped.
+                     * @param _containerIds ID of the container to be stopped. If it is left empty, the entire task will be stopped.
+                     * 
                      */
                     void SetContainerIds(const std::vector<std::string>& _containerIds);
 
                     /**
                      * 判断参数 ContainerIds 是否已赋值
                      * @return ContainerIds 是否已赋值
+                     * 
                      */
                     bool ContainerIdsHasBeenSet() const;
 

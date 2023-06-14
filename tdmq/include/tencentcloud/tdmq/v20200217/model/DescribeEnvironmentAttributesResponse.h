@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days).
                      * @return MsgTTL TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days).
+                     * 
                      */
                     uint64_t GetMsgTTL() const;
 
                     /**
                      * 判断参数 MsgTTL 是否已赋值
                      * @return MsgTTL 是否已赋值
+                     * 
                      */
                     bool MsgTTLHasBeenSet() const;
 
                     /**
                      * 获取Consumption rate limit in bytes/second. 0: unlimited.
                      * @return RateInByte Consumption rate limit in bytes/second. 0: unlimited.
+                     * 
                      */
                     uint64_t GetRateInByte() const;
 
                     /**
                      * 判断参数 RateInByte 是否已赋值
                      * @return RateInByte 是否已赋值
+                     * 
                      */
                     bool RateInByteHasBeenSet() const;
 
                     /**
                      * 获取Consumption rate limit in messages/second. 0: unlimited.
                      * @return RateInSize Consumption rate limit in messages/second. 0: unlimited.
+                     * 
                      */
                     uint64_t GetRateInSize() const;
 
                     /**
                      * 判断参数 RateInSize 是否已赋值
                      * @return RateInSize 是否已赋值
+                     * 
                      */
                     bool RateInSizeHasBeenSet() const;
 
                     /**
                      * 获取Retention policy for consumed messages in hours. 0: deleted immediately after consumption.
                      * @return RetentionHours Retention policy for consumed messages in hours. 0: deleted immediately after consumption.
+                     * 
                      */
                     uint64_t GetRetentionHours() const;
 
                     /**
                      * 判断参数 RetentionHours 是否已赋值
                      * @return RetentionHours 是否已赋值
+                     * 
                      */
                     bool RetentionHoursHasBeenSet() const;
 
                     /**
                      * 获取Retention policy for consumed messages in GB. 0: deleted immediately after consumption.
                      * @return RetentionSize Retention policy for consumed messages in GB. 0: deleted immediately after consumption.
+                     * 
                      */
                     uint64_t GetRetentionSize() const;
 
                     /**
                      * 判断参数 RetentionSize 是否已赋值
                      * @return RetentionSize 是否已赋值
+                     * 
                      */
                     bool RetentionSizeHasBeenSet() const;
 
                     /**
                      * 获取Environment (namespace) name.
                      * @return EnvironmentId Environment (namespace) name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Number of replicas.
                      * @return Replicas Number of replicas.
+                     * 
                      */
                     uint64_t GetReplicas() const;
 
                     /**
                      * 判断参数 Replicas 是否已赋值
                      * @return Replicas 是否已赋值
+                     * 
                      */
                     bool ReplicasHasBeenSet() const;
 
                     /**
                      * 获取Remarks.
                      * @return Remark Remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of affected nodes
                      * @return TotalCount Total number of affected nodes
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of affected nodes
                      * @return AffectedNodeList List of affected nodes
+                     * 
                      */
                     std::vector<AffectedNodeItem> GetAffectedNodeList() const;
 
                     /**
                      * 判断参数 AffectedNodeList 是否已赋值
                      * @return AffectedNodeList 是否已赋值
+                     * 
                      */
                     bool AffectedNodeListHasBeenSet() const;
 

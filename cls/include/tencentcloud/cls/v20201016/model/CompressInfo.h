@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
                      * @return Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
-                     * @param Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+                     * @param _format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 

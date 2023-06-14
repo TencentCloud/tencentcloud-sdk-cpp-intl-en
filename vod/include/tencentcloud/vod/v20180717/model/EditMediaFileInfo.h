@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Video ID.
                      * @return FileId Video ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Video ID.
-                     * @param FileId Video ID.
+                     * @param _fileId Video ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StartTimeOffset Start time offset of video clipping in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of video clipping in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StartTimeOffset Start time offset of video clipping in seconds.
+                     * @param _startTimeOffset Start time offset of video clipping in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EndTimeOffset End time offset of video clipping in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time offset of video clipping in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EndTimeOffset End time offset of video clipping in seconds.
+                     * @param _endTimeOffset End time offset of video clipping in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 

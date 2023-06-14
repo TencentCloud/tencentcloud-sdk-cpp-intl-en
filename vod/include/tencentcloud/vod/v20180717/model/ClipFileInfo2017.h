@@ -55,6 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
@@ -63,16 +64,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ErrCode Error code
+                     * @param _errCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
@@ -81,20 +84,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Error description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Message Error description.
+                     * @param _message Error description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -103,20 +109,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileId Output target file ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Output target file ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileId Output target file ID.
+                     * @param _fileId Output target file ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -125,20 +134,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileUrl Output target file address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
                      * 设置Output target file address.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileUrl Output target file address.
+                     * @param _fileUrl Output target file address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
 
                     /**
                      * 判断参数 FileUrl 是否已赋值
                      * @return FileUrl 是否已赋值
+                     * 
                      */
                     bool FileUrlHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileType Output target file type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFileType() const;
 
                     /**
                      * 设置Output target file type.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileType Output target file type.
+                     * @param _fileType Output target file type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileType(const std::string& _fileType);
 
                     /**
                      * 判断参数 FileType 是否已赋值
                      * @return FileType 是否已赋值
+                     * 
                      */
                     bool FileTypeHasBeenSet() const;
 

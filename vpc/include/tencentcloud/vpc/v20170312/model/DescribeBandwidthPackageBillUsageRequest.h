@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the pay-as-you-go bandwidth package.
                      * @return BandwidthPackageId Unique ID of the pay-as-you-go bandwidth package.
+                     * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
                      * 设置Unique ID of the pay-as-you-go bandwidth package.
-                     * @param BandwidthPackageId Unique ID of the pay-as-you-go bandwidth package.
+                     * @param _bandwidthPackageId Unique ID of the pay-as-you-go bandwidth package.
+                     * 
                      */
                     void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
 
                     /**
                      * 判断参数 BandwidthPackageId 是否已赋值
                      * @return BandwidthPackageId 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
 

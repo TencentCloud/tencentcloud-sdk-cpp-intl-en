@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Result value of instance deisolation. A returned value of 0 indicates success.
                      * @return Code Result value of instance deisolation. A returned value of 0 indicates success.
+                     * 
                      */
                     int64_t GetCode() const;
 
                     /**
                      * 设置Result value of instance deisolation. A returned value of 0 indicates success.
-                     * @param Code Result value of instance deisolation. A returned value of 0 indicates success.
+                     * @param _code Result value of instance deisolation. A returned value of 0 indicates success.
+                     * 
                      */
                     void SetCode(const int64_t& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取Error message for instance deisolation.
                      * @return Message Error message for instance deisolation.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message for instance deisolation.
-                     * @param Message Error message for instance deisolation.
+                     * @param _message Error message for instance deisolation.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

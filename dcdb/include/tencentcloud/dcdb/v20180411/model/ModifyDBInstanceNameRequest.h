@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of tdsql-hdaprz0v
                      * @return InstanceId Instance ID in the format of tdsql-hdaprz0v
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of tdsql-hdaprz0v
-                     * @param InstanceId Instance ID in the format of tdsql-hdaprz0v
+                     * @param _instanceId Instance ID in the format of tdsql-hdaprz0v
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 

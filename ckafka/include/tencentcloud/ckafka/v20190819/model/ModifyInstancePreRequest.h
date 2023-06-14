@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance name.
                      * @return InstanceId Instance name.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance name.
-                     * @param InstanceId Instance name.
+                     * @param _instanceId Instance name.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Estimated disk capacity, which can be increased by increment.
                      * @return DiskSize Estimated disk capacity, which can be increased by increment.
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Estimated disk capacity, which can be increased by increment.
-                     * @param DiskSize Estimated disk capacity, which can be increased by increment.
+                     * @param _diskSize Estimated disk capacity, which can be increased by increment.
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Estimated bandwidth, which can be increased by increment.
                      * @return BandWidth Estimated bandwidth, which can be increased by increment.
+                     * 
                      */
                     int64_t GetBandWidth() const;
 
                     /**
                      * 设置Estimated bandwidth, which can be increased by increment.
-                     * @param BandWidth Estimated bandwidth, which can be increased by increment.
+                     * @param _bandWidth Estimated bandwidth, which can be increased by increment.
+                     * 
                      */
                     void SetBandWidth(const int64_t& _bandWidth);
 
                     /**
                      * 判断参数 BandWidth 是否已赋值
                      * @return BandWidth 是否已赋值
+                     * 
                      */
                     bool BandWidthHasBeenSet() const;
 
                     /**
                      * 获取Estimated partition count, which can be increased by increment.
                      * @return Partition Estimated partition count, which can be increased by increment.
+                     * 
                      */
                     int64_t GetPartition() const;
 
                     /**
                      * 设置Estimated partition count, which can be increased by increment.
-                     * @param Partition Estimated partition count, which can be increased by increment.
+                     * @param _partition Estimated partition count, which can be increased by increment.
+                     * 
                      */
                     void SetPartition(const int64_t& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 

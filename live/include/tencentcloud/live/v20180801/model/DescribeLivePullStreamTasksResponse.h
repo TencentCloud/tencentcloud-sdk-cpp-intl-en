@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取The information of stream pulling tasks.
                      * @return TaskInfos The information of stream pulling tasks.
+                     * 
                      */
                     std::vector<PullStreamTaskInfo> GetTaskInfos() const;
 
                     /**
                      * 判断参数 TaskInfos 是否已赋值
                      * @return TaskInfos 是否已赋值
+                     * 
                      */
                     bool TaskInfosHasBeenSet() const;
 
                     /**
                      * 获取The page number.
                      * @return PageNum The page number.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取The number of records per page.
                      * @return PageSize The number of records per page.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取The total number of records.
                      * @return TotalNum The total number of records.
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 
                     /**
                      * 获取The total number of pages.
                      * @return TotalPage The total number of pages.
+                     * 
                      */
                     uint64_t GetTotalPage() const;
 
                     /**
                      * 判断参数 TotalPage 是否已赋值
                      * @return TotalPage 是否已赋值
+                     * 
                      */
                     bool TotalPageHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of tasks allowed.
                      * @return LimitTaskNum The maximum number of tasks allowed.
+                     * 
                      */
                     uint64_t GetLimitTaskNum() const;
 
                     /**
                      * 判断参数 LimitTaskNum 是否已赋值
                      * @return LimitTaskNum 是否已赋值
+                     * 
                      */
                     bool LimitTaskNumHasBeenSet() const;
 

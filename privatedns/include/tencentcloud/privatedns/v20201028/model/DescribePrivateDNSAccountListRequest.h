@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Pagination offset, starting from `0`
                      * @return Offset Pagination offset, starting from `0`
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset, starting from `0`
-                     * @param Offset Pagination offset, starting from `0`
+                     * @param _offset Pagination offset, starting from `0`
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Maximum value: `100`. Default value: `20`
                      * @return Limit Number of entries per page. Maximum value: `100`. Default value: `20`
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Maximum value: `100`. Default value: `20`
-                     * @param Limit Number of entries per page. Maximum value: `100`. Default value: `20`
+                     * @param _limit Number of entries per page. Maximum value: `100`. Default value: `20`
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filter parameters
                      * @return Filters Filter parameters
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter parameters
-                     * @param Filters Filter parameters
+                     * @param _filters Filter parameters
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

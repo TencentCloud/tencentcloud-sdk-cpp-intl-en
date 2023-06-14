@@ -56,180 +56,210 @@ namespace TencentCloud
                     /**
                      * 获取Resource bound to policy
                      * @return Resources Resource bound to policy
+                     * 
                      */
                     std::vector<ResourceIp> GetResources() const;
 
                     /**
                      * 设置Resource bound to policy
-                     * @param Resources Resource bound to policy
+                     * @param _resources Resource bound to policy
+                     * 
                      */
                     void SetResources(const std::vector<ResourceIp>& _resources);
 
                     /**
                      * 判断参数 Resources 是否已赋值
                      * @return Resources 是否已赋值
+                     * 
                      */
                     bool ResourcesHasBeenSet() const;
 
                     /**
                      * 获取Disabled protocol
                      * @return DropOptions Disabled protocol
+                     * 
                      */
                     DDoSPolicyDropOption GetDropOptions() const;
 
                     /**
                      * 设置Disabled protocol
-                     * @param DropOptions Disabled protocol
+                     * @param _dropOptions Disabled protocol
+                     * 
                      */
                     void SetDropOptions(const DDoSPolicyDropOption& _dropOptions);
 
                     /**
                      * 判断参数 DropOptions 是否已赋值
                      * @return DropOptions 是否已赋值
+                     * 
                      */
                     bool DropOptionsHasBeenSet() const;
 
                     /**
                      * 获取Disabled port
                      * @return PortLimits Disabled port
+                     * 
                      */
                     std::vector<DDoSPolicyPortLimit> GetPortLimits() const;
 
                     /**
                      * 设置Disabled port
-                     * @param PortLimits Disabled port
+                     * @param _portLimits Disabled port
+                     * 
                      */
                     void SetPortLimits(const std::vector<DDoSPolicyPortLimit>& _portLimits);
 
                     /**
                      * 判断参数 PortLimits 是否已赋值
                      * @return PortLimits 是否已赋值
+                     * 
                      */
                     bool PortLimitsHasBeenSet() const;
 
                     /**
                      * 获取Packet filter
                      * @return PacketFilters Packet filter
+                     * 
                      */
                     std::vector<DDoSPolicyPacketFilter> GetPacketFilters() const;
 
                     /**
                      * 设置Packet filter
-                     * @param PacketFilters Packet filter
+                     * @param _packetFilters Packet filter
+                     * 
                      */
                     void SetPacketFilters(const std::vector<DDoSPolicyPacketFilter>& _packetFilters);
 
                     /**
                      * 判断参数 PacketFilters 是否已赋值
                      * @return PacketFilters 是否已赋值
+                     * 
                      */
                     bool PacketFiltersHasBeenSet() const;
 
                     /**
                      * 获取IP blocklist/allowlist
                      * @return IpBlackWhiteLists IP blocklist/allowlist
+                     * 
                      */
                     std::vector<IpBlackWhite> GetIpBlackWhiteLists() const;
 
                     /**
                      * 设置IP blocklist/allowlist
-                     * @param IpBlackWhiteLists IP blocklist/allowlist
+                     * @param _ipBlackWhiteLists IP blocklist/allowlist
+                     * 
                      */
                     void SetIpBlackWhiteLists(const std::vector<IpBlackWhite>& _ipBlackWhiteLists);
 
                     /**
                      * 判断参数 IpBlackWhiteLists 是否已赋值
                      * @return IpBlackWhiteLists 是否已赋值
+                     * 
                      */
                     bool IpBlackWhiteListsHasBeenSet() const;
 
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Policy name
                      * @return PolicyName Policy name
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name
-                     * @param PolicyName Policy name
+                     * @param _policyName Policy name
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
                     /**
                      * 获取Policy creation time
                      * @return CreateTime Policy creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Policy creation time
-                     * @param CreateTime Policy creation time
+                     * @param _createTime Policy creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Watermarking policy parameter. There can be only one policy. If there are no policies, the array is empty
                      * @return WaterPrint Watermarking policy parameter. There can be only one policy. If there are no policies, the array is empty
+                     * 
                      */
                     std::vector<WaterPrintPolicy> GetWaterPrint() const;
 
                     /**
                      * 设置Watermarking policy parameter. There can be only one policy. If there are no policies, the array is empty
-                     * @param WaterPrint Watermarking policy parameter. There can be only one policy. If there are no policies, the array is empty
+                     * @param _waterPrint Watermarking policy parameter. There can be only one policy. If there are no policies, the array is empty
+                     * 
                      */
                     void SetWaterPrint(const std::vector<WaterPrintPolicy>& _waterPrint);
 
                     /**
                      * 判断参数 WaterPrint 是否已赋值
                      * @return WaterPrint 是否已赋值
+                     * 
                      */
                     bool WaterPrintHasBeenSet() const;
 
                     /**
                      * 获取Watermark key. There can be up to two keys. If there are no policies, the array is empty
                      * @return WaterKey Watermark key. There can be up to two keys. If there are no policies, the array is empty
+                     * 
                      */
                     std::vector<WaterPrintKey> GetWaterKey() const;
 
                     /**
                      * 设置Watermark key. There can be up to two keys. If there are no policies, the array is empty
-                     * @param WaterKey Watermark key. There can be up to two keys. If there are no policies, the array is empty
+                     * @param _waterKey Watermark key. There can be up to two keys. If there are no policies, the array is empty
+                     * 
                      */
                     void SetWaterKey(const std::vector<WaterPrintKey>& _waterKey);
 
                     /**
                      * 判断参数 WaterKey 是否已赋值
                      * @return WaterKey 是否已赋值
+                     * 
                      */
                     bool WaterKeyHasBeenSet() const;
 
@@ -238,20 +268,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BoundResources Resource instance bound to policy
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetBoundResources() const;
 
                     /**
                      * 设置Resource instance bound to policy
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BoundResources Resource instance bound to policy
+                     * @param _boundResources Resource instance bound to policy
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBoundResources(const std::vector<std::string>& _boundResources);
 
                     /**
                      * 判断参数 BoundResources 是否已赋值
                      * @return BoundResources 是否已赋值
+                     * 
                      */
                     bool BoundResourcesHasBeenSet() const;
 
@@ -260,20 +293,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SceneId Policy scenario
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSceneId() const;
 
                     /**
                      * 设置Policy scenario
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SceneId Policy scenario
+                     * @param _sceneId Policy scenario
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSceneId(const std::string& _sceneId);
 
                     /**
                      * 判断参数 SceneId 是否已赋值
                      * @return SceneId 是否已赋值
+                     * 
                      */
                     bool SceneIdHasBeenSet() const;
 

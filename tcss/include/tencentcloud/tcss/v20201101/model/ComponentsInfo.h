@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetComponent() const;
 
                     /**
                      * 设置Component name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Component Component name
+                     * @param _component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComponent(const std::string& _component);
 
                     /**
                      * 判断参数 Component 是否已赋值
                      * @return Component 是否已赋值
+                     * 
                      */
                     bool ComponentHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Component version information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Component version information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version Component version information
+                     * @param _version Component version information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 

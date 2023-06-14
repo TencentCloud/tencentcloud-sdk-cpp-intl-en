@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Public key for user token verification.
                      * @return PublicKey Public key for user token verification.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Public key for user token verification.
-                     * @param PublicKey Public key for user token verification.
+                     * @param _publicKey Public key for user token verification.
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取Token delivery location.
                      * @return TokenLocation Token delivery location.
+                     * 
                      */
                     std::string GetTokenLocation() const;
 
                     /**
                      * 设置Token delivery location.
-                     * @param TokenLocation Token delivery location.
+                     * @param _tokenLocation Token delivery location.
+                     * 
                      */
                     void SetTokenLocation(const std::string& _tokenLocation);
 
                     /**
                      * 判断参数 TokenLocation 是否已赋值
                      * @return TokenLocation 是否已赋值
+                     * 
                      */
                     bool TokenLocationHasBeenSet() const;
 
                     /**
                      * 获取Redirect address, which is used to guide user logins.
                      * @return LoginRedirectUrl Redirect address, which is used to guide user logins.
+                     * 
                      */
                     std::string GetLoginRedirectUrl() const;
 
                     /**
                      * 设置Redirect address, which is used to guide user logins.
-                     * @param LoginRedirectUrl Redirect address, which is used to guide user logins.
+                     * @param _loginRedirectUrl Redirect address, which is used to guide user logins.
+                     * 
                      */
                     void SetLoginRedirectUrl(const std::string& _loginRedirectUrl);
 
                     /**
                      * 判断参数 LoginRedirectUrl 是否已赋值
                      * @return LoginRedirectUrl 是否已赋值
+                     * 
                      */
                     bool LoginRedirectUrlHasBeenSet() const;
 

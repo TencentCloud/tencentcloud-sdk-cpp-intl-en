@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MachineGroups Machine group information list
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MachineGroupInfo> GetMachineGroups() const;
 
                     /**
                      * 判断参数 MachineGroups 是否已赋值
                      * @return MachineGroups 是否已赋值
+                     * 
                      */
                     bool MachineGroupsHasBeenSet() const;
 
                     /**
                      * 获取Total number of pages
                      * @return TotalCount Total number of pages
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

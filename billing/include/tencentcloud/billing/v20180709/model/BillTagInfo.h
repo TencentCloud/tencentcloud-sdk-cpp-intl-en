@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Cost allocation tag key
                      * @return TagKey Cost allocation tag key
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Cost allocation tag key
-                     * @param TagKey Cost allocation tag key
+                     * @param _tagKey Cost allocation tag key
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取Tag value
                      * @return TagValue Tag value
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value
-                     * @param TagValue Tag value
+                     * @param _tagValue Tag value
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 

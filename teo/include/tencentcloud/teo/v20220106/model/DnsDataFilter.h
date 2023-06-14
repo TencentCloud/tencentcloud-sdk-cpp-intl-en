@@ -59,6 +59,7 @@ namespace TencentCloud
 `type`: DNS resolution type
 `code`: DNS response code
 `area`: Region of the resolution server
+                     * 
                      */
                     std::string GetName() const;
 
@@ -69,18 +70,20 @@ namespace TencentCloud
 `type`: DNS resolution type
 `code`: DNS response code
 `area`: Region of the resolution server
-                     * @param Name Parameter name. Valid values:
+                     * @param _name Parameter name. Valid values:
 `zone`: Site name
 `host`: Domain name
 `type`: DNS resolution type
 `code`: DNS response code
 `area`: Region of the resolution server
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -111,6 +114,7 @@ When `Name=code`, valid values:
 `NXDomain`: Non-existent domain in the request. It is only valid when the response is from the authoritative name server.
 `NotImp`: Request type not supported.
 `Refused`: The name server refuses to perform the requested operation for policy reasons.
+                     * 
                      */
                     std::string GetValue() const;
 
@@ -128,7 +132,7 @@ When `Name=code`, valid values:
 `NXDomain`: Non-existent domain in the request. It is only valid when the response is from the authoritative name server.
 `NotImp`: Request type not supported.
 `Refused`: The name server refuses to perform the requested operation for policy reasons.
-                     * @param Value Parameter value
+                     * @param _value Parameter value
 When `Name=area`, valid values:
 `Asia`
 `Europe`
@@ -141,12 +145,14 @@ When `Name=code`, valid values:
 `NXDomain`: Non-existent domain in the request. It is only valid when the response is from the authoritative name server.
 `NotImp`: Request type not supported.
 `Refused`: The name server refuses to perform the requested operation for policy reasons.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -177,6 +183,7 @@ When `Name=code`, valid values:
 `NXDomain`: Non-existent domain in the request. It is only valid when the response is from the authoritative name server.
 `NotImp`: Request type not supported.
 `Refused`: The name server refuses to perform the requested operation for policy reasons.
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
@@ -194,7 +201,7 @@ When `Name=code`, valid values:
 `NXDomain`: Non-existent domain in the request. It is only valid when the response is from the authoritative name server.
 `NotImp`: Request type not supported.
 `Refused`: The name server refuses to perform the requested operation for policy reasons.
-                     * @param Values Parameter value
+                     * @param _values Parameter value
 When `Name=area`, valid values:
 `Asia`
 `Europe`
@@ -207,12 +214,14 @@ When `Name=code`, valid values:
 `NXDomain`: Non-existent domain in the request. It is only valid when the response is from the authoritative name server.
 `NotImp`: Request type not supported.
 `Refused`: The name server refuses to perform the requested operation for policy reasons.
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

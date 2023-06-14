@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The total count.
                      * @return TotalCount The total count.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DomainBatchLogSet The log list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BatchDomainBuyLog> GetDomainBatchLogSet() const;
 
                     /**
                      * 判断参数 DomainBatchLogSet 是否已赋值
                      * @return DomainBatchLogSet 是否已赋值
+                     * 
                      */
                     bool DomainBatchLogSetHasBeenSet() const;
 

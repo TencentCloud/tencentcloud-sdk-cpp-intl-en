@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of trends of security events at runtime
                      * @return EventTendencySet List of trends of security events at runtime
+                     * 
                      */
                     std::vector<SecTendencyEventInfo> GetEventTendencySet() const;
 
                     /**
                      * 判断参数 EventTendencySet 是否已赋值
                      * @return EventTendencySet 是否已赋值
+                     * 
                      */
                     bool EventTendencySetHasBeenSet() const;
 

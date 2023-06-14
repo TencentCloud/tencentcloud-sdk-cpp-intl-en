@@ -52,90 +52,105 @@ namespace TencentCloud
                     /**
                      * 获取Zone list
                      * @return ZoneList Zone list
+                     * 
                      */
                     std::vector<ZoneInfo> GetZoneList() const;
 
                     /**
                      * 设置Zone list
-                     * @param ZoneList Zone list
+                     * @param _zoneList Zone list
+                     * 
                      */
                     void SetZoneList(const std::vector<ZoneInfo>& _zoneList);
 
                     /**
                      * 判断参数 ZoneList 是否已赋值
                      * @return ZoneList 是否已赋值
+                     * 
                      */
                     bool ZoneListHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of instances to be purchased
                      * @return MaxBuyInstanceNum Maximum number of instances to be purchased
+                     * 
                      */
                     int64_t GetMaxBuyInstanceNum() const;
 
                     /**
                      * 设置Maximum number of instances to be purchased
-                     * @param MaxBuyInstanceNum Maximum number of instances to be purchased
+                     * @param _maxBuyInstanceNum Maximum number of instances to be purchased
+                     * 
                      */
                     void SetMaxBuyInstanceNum(const int64_t& _maxBuyInstanceNum);
 
                     /**
                      * 判断参数 MaxBuyInstanceNum 是否已赋值
                      * @return MaxBuyInstanceNum 是否已赋值
+                     * 
                      */
                     bool MaxBuyInstanceNumHasBeenSet() const;
 
                     /**
                      * 获取Maximum bandwidth in MB/S
                      * @return MaxBandwidth Maximum bandwidth in MB/S
+                     * 
                      */
                     int64_t GetMaxBandwidth() const;
 
                     /**
                      * 设置Maximum bandwidth in MB/S
-                     * @param MaxBandwidth Maximum bandwidth in MB/S
+                     * @param _maxBandwidth Maximum bandwidth in MB/S
+                     * 
                      */
                     void SetMaxBandwidth(const int64_t& _maxBandwidth);
 
                     /**
                      * 判断参数 MaxBandwidth 是否已赋值
                      * @return MaxBandwidth 是否已赋值
+                     * 
                      */
                     bool MaxBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Pay-as-you-go unit price
                      * @return UnitPrice Pay-as-you-go unit price
+                     * 
                      */
                     Price GetUnitPrice() const;
 
                     /**
                      * 设置Pay-as-you-go unit price
-                     * @param UnitPrice Pay-as-you-go unit price
+                     * @param _unitPrice Pay-as-you-go unit price
+                     * 
                      */
                     void SetUnitPrice(const Price& _unitPrice);
 
                     /**
                      * 判断参数 UnitPrice 是否已赋值
                      * @return UnitPrice 是否已赋值
+                     * 
                      */
                     bool UnitPriceHasBeenSet() const;
 
                     /**
                      * 获取Pay-as-you-go unit message price
                      * @return MessagePrice Pay-as-you-go unit message price
+                     * 
                      */
                     Price GetMessagePrice() const;
 
                     /**
                      * 设置Pay-as-you-go unit message price
-                     * @param MessagePrice Pay-as-you-go unit message price
+                     * @param _messagePrice Pay-as-you-go unit message price
+                     * 
                      */
                     void SetMessagePrice(const Price& _messagePrice);
 
                     /**
                      * 判断参数 MessagePrice 是否已赋值
                      * @return MessagePrice 是否已赋值
+                     * 
                      */
                     bool MessagePriceHasBeenSet() const;
 
@@ -144,20 +159,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ClusterInfo Cluster information dedicated to a user
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ClusterInfo> GetClusterInfo() const;
 
                     /**
                      * 设置Cluster information dedicated to a user
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param ClusterInfo Cluster information dedicated to a user
+                     * @param _clusterInfo Cluster information dedicated to a user
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterInfo(const std::vector<ClusterInfo>& _clusterInfo);
 
                     /**
                      * 判断参数 ClusterInfo 是否已赋值
                      * @return ClusterInfo 是否已赋值
+                     * 
                      */
                     bool ClusterInfoHasBeenSet() const;
 
@@ -166,20 +184,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Standard Purchase of Standard Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStandard() const;
 
                     /**
                      * 设置Purchase of Standard Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Standard Purchase of Standard Edition configurations
+                     * @param _standard Purchase of Standard Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStandard(const std::string& _standard);
 
                     /**
                      * 判断参数 Standard 是否已赋值
                      * @return Standard 是否已赋值
+                     * 
                      */
                     bool StandardHasBeenSet() const;
 
@@ -188,20 +209,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return StandardS2 Purchase of Standard S2 Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStandardS2() const;
 
                     /**
                      * 设置Purchase of Standard S2 Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param StandardS2 Purchase of Standard S2 Edition configurations
+                     * @param _standardS2 Purchase of Standard S2 Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStandardS2(const std::string& _standardS2);
 
                     /**
                      * 判断参数 StandardS2 是否已赋值
                      * @return StandardS2 是否已赋值
+                     * 
                      */
                     bool StandardS2HasBeenSet() const;
 
@@ -210,20 +234,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Profession Purchase of Pro Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProfession() const;
 
                     /**
                      * 设置Purchase of Pro Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Profession Purchase of Pro Edition configurations
+                     * @param _profession Purchase of Pro Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProfession(const std::string& _profession);
 
                     /**
                      * 判断参数 Profession 是否已赋值
                      * @return Profession 是否已赋值
+                     * 
                      */
                     bool ProfessionHasBeenSet() const;
 
@@ -232,20 +259,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Physical Purchase of Physical Dedicated Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPhysical() const;
 
                     /**
                      * 设置Purchase of Physical Dedicated Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Physical Purchase of Physical Dedicated Edition configurations
+                     * @param _physical Purchase of Physical Dedicated Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPhysical(const std::string& _physical);
 
                     /**
                      * 判断参数 Physical 是否已赋值
                      * @return Physical 是否已赋值
+                     * 
                      */
                     bool PhysicalHasBeenSet() const;
 
@@ -254,20 +284,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PublicNetwork Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicNetwork() const;
 
                     /**
                      * 设置Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PublicNetwork Public network bandwidth.
+                     * @param _publicNetwork Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicNetwork(const std::string& _publicNetwork);
 
                     /**
                      * 判断参数 PublicNetwork 是否已赋值
                      * @return PublicNetwork 是否已赋值
+                     * 
                      */
                     bool PublicNetworkHasBeenSet() const;
 
@@ -276,20 +309,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PublicNetworkLimit Public network bandwidth configuration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicNetworkLimit() const;
 
                     /**
                      * 设置Public network bandwidth configuration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PublicNetworkLimit Public network bandwidth configuration.
+                     * @param _publicNetworkLimit Public network bandwidth configuration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicNetworkLimit(const std::string& _publicNetworkLimit);
 
                     /**
                      * 判断参数 PublicNetworkLimit 是否已赋值
                      * @return PublicNetworkLimit 是否已赋值
+                     * 
                      */
                     bool PublicNetworkLimitHasBeenSet() const;
 

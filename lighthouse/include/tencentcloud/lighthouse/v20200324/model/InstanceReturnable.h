@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether the instance can be returned.
                      * @return IsReturnable Whether the instance can be returned.
+                     * 
                      */
                     bool GetIsReturnable() const;
 
                     /**
                      * 设置Whether the instance can be returned.
-                     * @param IsReturnable Whether the instance can be returned.
+                     * @param _isReturnable Whether the instance can be returned.
+                     * 
                      */
                     void SetIsReturnable(const bool& _isReturnable);
 
                     /**
                      * 判断参数 IsReturnable 是否已赋值
                      * @return IsReturnable 是否已赋值
+                     * 
                      */
                     bool IsReturnableHasBeenSet() const;
 
                     /**
                      * 获取Error code of instance return failure.
                      * @return ReturnFailCode Error code of instance return failure.
+                     * 
                      */
                     int64_t GetReturnFailCode() const;
 
                     /**
                      * 设置Error code of instance return failure.
-                     * @param ReturnFailCode Error code of instance return failure.
+                     * @param _returnFailCode Error code of instance return failure.
+                     * 
                      */
                     void SetReturnFailCode(const int64_t& _returnFailCode);
 
                     /**
                      * 判断参数 ReturnFailCode 是否已赋值
                      * @return ReturnFailCode 是否已赋值
+                     * 
                      */
                     bool ReturnFailCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message of instance return failure.
                      * @return ReturnFailMessage Error message of instance return failure.
+                     * 
                      */
                     std::string GetReturnFailMessage() const;
 
                     /**
                      * 设置Error message of instance return failure.
-                     * @param ReturnFailMessage Error message of instance return failure.
+                     * @param _returnFailMessage Error message of instance return failure.
+                     * 
                      */
                     void SetReturnFailMessage(const std::string& _returnFailMessage);
 
                     /**
                      * 判断参数 ReturnFailMessage 是否已赋值
                      * @return ReturnFailMessage 是否已赋值
+                     * 
                      */
                     bool ReturnFailMessageHasBeenSet() const;
 

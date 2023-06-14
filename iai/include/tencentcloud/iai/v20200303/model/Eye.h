@@ -52,20 +52,23 @@ namespace TencentCloud
 The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
                      * @return Glass Whether glasses are worn.
 The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
+                     * 
                      */
                     AttributeItem GetGlass() const;
 
                     /**
                      * 设置Whether glasses are worn.
 The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
-                     * @param Glass Whether glasses are worn.
+                     * @param _glass Whether glasses are worn.
 The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
+                     * 
                      */
                     void SetGlass(const AttributeItem& _glass);
 
                     /**
                      * 判断参数 Glass 是否已赋值
                      * @return Glass 是否已赋值
+                     * 
                      */
                     bool GlassHasBeenSet() const;
 
@@ -74,20 +77,23 @@ The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glas
 The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
                      * @return EyeOpen Whether the eyes are open.
 The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+                     * 
                      */
                     AttributeItem GetEyeOpen() const;
 
                     /**
                      * 设置Whether the eyes are open.
 The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
-                     * @param EyeOpen Whether the eyes are open.
+                     * @param _eyeOpen Whether the eyes are open.
 The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+                     * 
                      */
                     void SetEyeOpen(const AttributeItem& _eyeOpen);
 
                     /**
                      * 判断参数 EyeOpen 是否已赋值
                      * @return EyeOpen 是否已赋值
+                     * 
                      */
                     bool EyeOpenHasBeenSet() const;
 
@@ -96,20 +102,23 @@ The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
 The `Type` values of the `AttributeItem` include: 0: no; 1: yes.
                      * @return EyelidType Whether the person has double eyelids.
 The `Type` values of the `AttributeItem` include: 0: no; 1: yes.
+                     * 
                      */
                     AttributeItem GetEyelidType() const;
 
                     /**
                      * 设置Whether the person has double eyelids.
 The `Type` values of the `AttributeItem` include: 0: no; 1: yes.
-                     * @param EyelidType Whether the person has double eyelids.
+                     * @param _eyelidType Whether the person has double eyelids.
 The `Type` values of the `AttributeItem` include: 0: no; 1: yes.
+                     * 
                      */
                     void SetEyelidType(const AttributeItem& _eyelidType);
 
                     /**
                      * 判断参数 EyelidType 是否已赋值
                      * @return EyelidType 是否已赋值
+                     * 
                      */
                     bool EyelidTypeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ The `Type` values of the `AttributeItem` include: 0: no; 1: yes.
 The `Type` values of the `AttributeItem` include: 0: small eyes; 1: general eyes; 2: big eyes.
                      * @return EyeSize Eye size.
 The `Type` values of the `AttributeItem` include: 0: small eyes; 1: general eyes; 2: big eyes.
+                     * 
                      */
                     AttributeItem GetEyeSize() const;
 
                     /**
                      * 设置Eye size.
 The `Type` values of the `AttributeItem` include: 0: small eyes; 1: general eyes; 2: big eyes.
-                     * @param EyeSize Eye size.
+                     * @param _eyeSize Eye size.
 The `Type` values of the `AttributeItem` include: 0: small eyes; 1: general eyes; 2: big eyes.
+                     * 
                      */
                     void SetEyeSize(const AttributeItem& _eyeSize);
 
                     /**
                      * 判断参数 EyeSize 是否已赋值
                      * @return EyeSize 是否已赋值
+                     * 
                      */
                     bool EyeSizeHasBeenSet() const;
 

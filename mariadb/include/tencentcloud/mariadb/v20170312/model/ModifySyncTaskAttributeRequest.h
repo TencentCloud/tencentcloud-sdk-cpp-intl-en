@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取IDs of tasks for which to modify the attributes. The IDs can be obtained by the return value of the `DescribeSyncTasks` API. Up to 100 tasks can be operated at a time.
                      * @return TaskIds IDs of tasks for which to modify the attributes. The IDs can be obtained by the return value of the `DescribeSyncTasks` API. Up to 100 tasks can be operated at a time.
+                     * 
                      */
                     std::vector<std::string> GetTaskIds() const;
 
                     /**
                      * 设置IDs of tasks for which to modify the attributes. The IDs can be obtained by the return value of the `DescribeSyncTasks` API. Up to 100 tasks can be operated at a time.
-                     * @param TaskIds IDs of tasks for which to modify the attributes. The IDs can be obtained by the return value of the `DescribeSyncTasks` API. Up to 100 tasks can be operated at a time.
+                     * @param _taskIds IDs of tasks for which to modify the attributes. The IDs can be obtained by the return value of the `DescribeSyncTasks` API. Up to 100 tasks can be operated at a time.
+                     * 
                      */
                     void SetTaskIds(const std::vector<std::string>& _taskIds);
 
                     /**
                      * 判断参数 TaskIds 是否已赋值
                      * @return TaskIds 是否已赋值
+                     * 
                      */
                     bool TaskIdsHasBeenSet() const;
 
                     /**
                      * 获取Task name. You can specify any name you like, but its length cannot exceed 100 characters.
                      * @return TaskName Task name. You can specify any name you like, but its length cannot exceed 100 characters.
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Task name. You can specify any name you like, but its length cannot exceed 100 characters.
-                     * @param TaskName Task name. You can specify any name you like, but its length cannot exceed 100 characters.
+                     * @param _taskName Task name. You can specify any name you like, but its length cannot exceed 100 characters.
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 

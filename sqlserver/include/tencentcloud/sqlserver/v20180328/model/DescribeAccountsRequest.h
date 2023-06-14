@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page. Value range: 1-100. Default value: 20
                      * @return Limit Number of results per page. Value range: 1-100. Default value: 20
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page. Value range: 1-100. Default value: 20
-                     * @param Limit Number of results per page. Value range: 1-100. Default value: 20
+                     * @param _limit Number of results per page. Value range: 1-100. Default value: 20
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: 0
                      * @return Offset Page number. Default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: 0
-                     * @param Offset Page number. Default value: 0
+                     * @param _offset Page number. Default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Account ID
                      * @return Name Account ID
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Account ID
-                     * @param Name Account ID
+                     * @param _name Account ID
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
                      * @return OrderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
-                     * @param OrderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     * @param _orderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
                      * @return OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
-                     * @param OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     * @param _orderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

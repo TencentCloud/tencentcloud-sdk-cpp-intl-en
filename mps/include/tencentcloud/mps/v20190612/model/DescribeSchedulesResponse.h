@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of records that meet the conditions.
                      * @return TotalCount The total number of records that meet the conditions.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The information of the schemes.
                      * @return ScheduleInfoSet The information of the schemes.
+                     * 
                      */
                     std::vector<SchedulesInfo> GetScheduleInfoSet() const;
 
                     /**
                      * 判断参数 ScheduleInfoSet 是否已赋值
                      * @return ScheduleInfoSet 是否已赋值
+                     * 
                      */
                     bool ScheduleInfoSetHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Information of the list of clusters for installation
                      * @return ClusterInfoList Information of the list of clusters for installation
+                     * 
                      */
                     std::vector<ClusterCreateComponentItem> GetClusterInfoList() const;
 
                     /**
                      * 设置Information of the list of clusters for installation
-                     * @param ClusterInfoList Information of the list of clusters for installation
+                     * @param _clusterInfoList Information of the list of clusters for installation
+                     * 
                      */
                     void SetClusterInfoList(const std::vector<ClusterCreateComponentItem>& _clusterInfoList);
 
                     /**
                      * 判断参数 ClusterInfoList 是否已赋值
                      * @return ClusterInfoList 是否已赋值
+                     * 
                      */
                     bool ClusterInfoListHasBeenSet() const;
 

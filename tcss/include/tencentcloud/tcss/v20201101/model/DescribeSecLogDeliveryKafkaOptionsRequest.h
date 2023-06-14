@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Region. If this field was left blank, return all available regions.
                      * @return RegionID Region. If this field was left blank, return all available regions.
+                     * 
                      */
                     std::string GetRegionID() const;
 
                     /**
                      * 设置Region. If this field was left blank, return all available regions.
-                     * @param RegionID Region. If this field was left blank, return all available regions.
+                     * @param _regionID Region. If this field was left blank, return all available regions.
+                     * 
                      */
                     void SetRegionID(const std::string& _regionID);
 
                     /**
                      * 判断参数 RegionID 是否已赋值
                      * @return RegionID 是否已赋值
+                     * 
                      */
                     bool RegionIDHasBeenSet() const;
 

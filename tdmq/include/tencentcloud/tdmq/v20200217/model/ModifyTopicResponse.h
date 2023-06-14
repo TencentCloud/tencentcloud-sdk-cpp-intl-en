@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of partitions
                      * @return Partitions Number of partitions
+                     * 
                      */
                     uint64_t GetPartitions() const;
 
                     /**
                      * 判断参数 Partitions 是否已赋值
                      * @return Partitions 是否已赋值
+                     * 
                      */
                     bool PartitionsHasBeenSet() const;
 
                     /**
                      * 获取Remarks (up to 128 characters).
                      * @return Remark Remarks (up to 128 characters).
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

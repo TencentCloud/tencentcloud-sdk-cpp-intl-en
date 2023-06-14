@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Number of TCP connections
                      * @return Conn Number of TCP connections
+                     * 
                      */
                     std::vector<int64_t> GetConn() const;
 
                     /**
                      * 设置Number of TCP connections
-                     * @param Conn Number of TCP connections
+                     * @param _conn Number of TCP connections
+                     * 
                      */
                     void SetConn(const std::vector<int64_t>& _conn);
 
                     /**
                      * 判断参数 Conn 是否已赋值
                      * @return Conn 是否已赋值
+                     * 
                      */
                     bool ConnHasBeenSet() const;
 
                     /**
                      * 获取ENI inbound packets per second
                      * @return PackageIn ENI inbound packets per second
+                     * 
                      */
                     std::vector<int64_t> GetPackageIn() const;
 
                     /**
                      * 设置ENI inbound packets per second
-                     * @param PackageIn ENI inbound packets per second
+                     * @param _packageIn ENI inbound packets per second
+                     * 
                      */
                     void SetPackageIn(const std::vector<int64_t>& _packageIn);
 
                     /**
                      * 判断参数 PackageIn 是否已赋值
                      * @return PackageIn 是否已赋值
+                     * 
                      */
                     bool PackageInHasBeenSet() const;
 
                     /**
                      * 获取ENI outbound packets per second
                      * @return PackageOut ENI outbound packets per second
+                     * 
                      */
                     std::vector<int64_t> GetPackageOut() const;
 
                     /**
                      * 设置ENI outbound packets per second
-                     * @param PackageOut ENI outbound packets per second
+                     * @param _packageOut ENI outbound packets per second
+                     * 
                      */
                     void SetPackageOut(const std::vector<int64_t>& _packageOut);
 
                     /**
                      * 判断参数 PackageOut 是否已赋值
                      * @return PackageOut 是否已赋值
+                     * 
                      */
                     bool PackageOutHasBeenSet() const;
 
                     /**
                      * 获取Inbound traffic in Kbps
                      * @return FlowIn Inbound traffic in Kbps
+                     * 
                      */
                     std::vector<int64_t> GetFlowIn() const;
 
                     /**
                      * 设置Inbound traffic in Kbps
-                     * @param FlowIn Inbound traffic in Kbps
+                     * @param _flowIn Inbound traffic in Kbps
+                     * 
                      */
                     void SetFlowIn(const std::vector<int64_t>& _flowIn);
 
                     /**
                      * 判断参数 FlowIn 是否已赋值
                      * @return FlowIn 是否已赋值
+                     * 
                      */
                     bool FlowInHasBeenSet() const;
 
                     /**
                      * 获取Outbound traffic in Kbps
                      * @return FlowOut Outbound traffic in Kbps
+                     * 
                      */
                     std::vector<int64_t> GetFlowOut() const;
 
                     /**
                      * 设置Outbound traffic in Kbps
-                     * @param FlowOut Outbound traffic in Kbps
+                     * @param _flowOut Outbound traffic in Kbps
+                     * 
                      */
                     void SetFlowOut(const std::vector<int64_t>& _flowOut);
 
                     /**
                      * 判断参数 FlowOut 是否已赋值
                      * @return FlowOut 是否已赋值
+                     * 
                      */
                     bool FlowOutHasBeenSet() const;
 

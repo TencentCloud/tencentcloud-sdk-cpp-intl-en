@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Shared component type, which can be EMR or CUSTOM
                      * @return ShareType Shared component type, which can be EMR or CUSTOM
+                     * 
                      */
                     std::string GetShareType() const;
 
                     /**
                      * 设置Shared component type, which can be EMR or CUSTOM
-                     * @param ShareType Shared component type, which can be EMR or CUSTOM
+                     * @param _shareType Shared component type, which can be EMR or CUSTOM
+                     * 
                      */
                     void SetShareType(const std::string& _shareType);
 
                     /**
                      * 判断参数 ShareType 是否已赋值
                      * @return ShareType 是否已赋值
+                     * 
                      */
                     bool ShareTypeHasBeenSet() const;
 
                     /**
                      * 获取Custom parameters
                      * @return CustomServiceDefineList Custom parameters
+                     * 
                      */
                     std::vector<CustomServiceDefine> GetCustomServiceDefineList() const;
 
                     /**
                      * 设置Custom parameters
-                     * @param CustomServiceDefineList Custom parameters
+                     * @param _customServiceDefineList Custom parameters
+                     * 
                      */
                     void SetCustomServiceDefineList(const std::vector<CustomServiceDefine>& _customServiceDefineList);
 
                     /**
                      * 判断参数 CustomServiceDefineList 是否已赋值
                      * @return CustomServiceDefineList 是否已赋值
+                     * 
                      */
                     bool CustomServiceDefineListHasBeenSet() const;
 
                     /**
                      * 获取Shared component name
                      * @return Service Shared component name
+                     * 
                      */
                     std::string GetService() const;
 
                     /**
                      * 设置Shared component name
-                     * @param Service Shared component name
+                     * @param _service Shared component name
+                     * 
                      */
                     void SetService(const std::string& _service);
 
                     /**
                      * 判断参数 Service 是否已赋值
                      * @return Service 是否已赋值
+                     * 
                      */
                     bool ServiceHasBeenSet() const;
 
                     /**
                      * 获取Shared component cluster
                      * @return InstanceId Shared component cluster
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Shared component cluster
-                     * @param InstanceId Shared component cluster
+                     * @param _instanceId Shared component cluster
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

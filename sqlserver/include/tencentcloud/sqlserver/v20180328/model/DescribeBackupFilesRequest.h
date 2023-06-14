@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of mssql-njj2mtpl
                      * @return InstanceId Instance ID in the format of mssql-njj2mtpl
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-njj2mtpl
-                     * @param InstanceId Instance ID in the format of mssql-njj2mtpl
+                     * @param _instanceId Instance ID in the format of mssql-njj2mtpl
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
                      * @return GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
-                     * @param GroupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+                     * @param _groupId Group ID of unarchived backup files, which can be obtained by the `DescribeBackups` API
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Number of entries to be returned per page. Value range: 1-100. Default value: `20`
                      * @return Limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries to be returned per page. Value range: 1-100. Default value: `20`
-                     * @param Limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
+                     * @param _limit Number of entries to be returned per page. Value range: 1-100. Default value: `20`
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: `0`
                      * @return Offset Page number. Default value: `0`
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: `0`
-                     * @param Offset Page number. Default value: `0`
+                     * @param _offset Page number. Default value: `0`
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
                      * @return DatabaseName Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
+                     * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
                      * 设置Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
-                     * @param DatabaseName Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
+                     * @param _databaseName Filter backups by database name. If the parameter is left empty, this filter criterion will not take effect.
+                     * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
 
                     /**
                      * 判断参数 DatabaseName 是否已赋值
                      * @return DatabaseName 是否已赋值
+                     * 
                      */
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
                      * 获取List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
                      * @return OrderBy List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
-                     * @param OrderBy List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     * @param _orderBy List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 

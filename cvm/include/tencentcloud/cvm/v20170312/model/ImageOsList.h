@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Windows Supported Windows OS
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetWindows() const;
 
                     /**
                      * 设置Supported Windows OS
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Windows Supported Windows OS
+                     * @param _windows Supported Windows OS
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWindows(const std::vector<std::string>& _windows);
 
                     /**
                      * 判断参数 Windows 是否已赋值
                      * @return Windows 是否已赋值
+                     * 
                      */
                     bool WindowsHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Linux Supported Linux OS
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetLinux() const;
 
                     /**
                      * 设置Supported Linux OS
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Linux Supported Linux OS
+                     * @param _linux Supported Linux OS
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLinux(const std::vector<std::string>& _linux);
 
                     /**
                      * 判断参数 Linux 是否已赋值
                      * @return Linux 是否已赋值
+                     * 
                      */
                     bool LinuxHasBeenSet() const;
 

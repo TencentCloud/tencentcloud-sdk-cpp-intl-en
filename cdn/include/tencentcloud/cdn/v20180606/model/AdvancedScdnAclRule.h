@@ -83,6 +83,7 @@ namespace TencentCloud
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
 `head`: Custom request header
+                     * 
                      */
                     std::string GetMatchKey() const;
 
@@ -105,7 +106,7 @@ namespace TencentCloud
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
 `head`: Custom request header
-                     * @param MatchKey Keyword. Valid values:
+                     * @param _matchKey Keyword. Valid values:
 `protocol`: HTTP protocol
 `httpVersion`: HTTP version
 `method`: request method
@@ -123,12 +124,14 @@ namespace TencentCloud
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
 `head`: Custom request header
+                     * 
                      */
                     void SetMatchKey(const std::string& _matchKey);
 
                     /**
                      * 判断参数 MatchKey 是否已赋值
                      * @return MatchKey 是否已赋值
+                     * 
                      */
                     bool MatchKeyHasBeenSet() const;
 
@@ -147,6 +150,7 @@ namespace TencentCloud
 `equal`: The same as the keyword
 `matching`: The prefix is matched
 `null`: Empty or does not exist
+                     * 
                      */
                     std::string GetLogicOperator() const;
 
@@ -158,19 +162,21 @@ namespace TencentCloud
 `equal`: The same as the keyword
 `matching`: The prefix is matched
 `null`: Empty or does not exist
-                     * @param LogicOperator Logical operator. Valid values:
+                     * @param _logicOperator Logical operator. Valid values:
 `exclude`: The keyword is not included
 `include`: The keyword is included
 `notequal`: Not the same as the keyword
 `equal`: The same as the keyword
 `matching`: The prefix is matched
 `null`: Empty or does not exist
+                     * 
                      */
                     void SetLogicOperator(const std::string& _logicOperator);
 
                     /**
                      * 判断参数 LogicOperator 是否已赋值
                      * @return LogicOperator 是否已赋值
+                     * 
                      */
                     bool LogicOperatorHasBeenSet() const;
 
@@ -605,6 +611,7 @@ When MatchKey is `ipArea`, valid values include:
 
 When MatchKey is `index`,
 valid value is `/;/index.html`.
+                     * 
                      */
                     std::vector<std::string> GetMatchValue() const;
 
@@ -824,7 +831,7 @@ When MatchKey is `ipArea`, valid values include:
 
 When MatchKey is `index`,
 valid value is `/;/index.html`.
-                     * @param MatchValue Match value
+                     * @param _matchValue Match value
 When `MatchKey` is `protocol`,
 Values: `HTTP` and `HTTPS`.
 
@@ -1039,48 +1046,56 @@ When MatchKey is `ipArea`, valid values include:
 
 When MatchKey is `index`,
 valid value is `/;/index.html`.
+                     * 
                      */
                     void SetMatchValue(const std::vector<std::string>& _matchValue);
 
                     /**
                      * 判断参数 MatchValue 是否已赋值
                      * @return MatchValue 是否已赋值
+                     * 
                      */
                     bool MatchValueHasBeenSet() const;
 
                     /**
                      * 获取Whether to distinguish uppercase or lowercase letters. `true`: case sensitive; `false`: case insensitive.
                      * @return CaseSensitive Whether to distinguish uppercase or lowercase letters. `true`: case sensitive; `false`: case insensitive.
+                     * 
                      */
                     bool GetCaseSensitive() const;
 
                     /**
                      * 设置Whether to distinguish uppercase or lowercase letters. `true`: case sensitive; `false`: case insensitive.
-                     * @param CaseSensitive Whether to distinguish uppercase or lowercase letters. `true`: case sensitive; `false`: case insensitive.
+                     * @param _caseSensitive Whether to distinguish uppercase or lowercase letters. `true`: case sensitive; `false`: case insensitive.
+                     * 
                      */
                     void SetCaseSensitive(const bool& _caseSensitive);
 
                     /**
                      * 判断参数 CaseSensitive 是否已赋值
                      * @return CaseSensitive 是否已赋值
+                     * 
                      */
                     bool CaseSensitiveHasBeenSet() const;
 
                     /**
                      * 获取This field is required when `MatchKey` is `param` or `cookie`. For `param`, it indicates a key value of the request parameter if MatchKey is `param`, while a key value of the Cookie request header if MatchKey is `cookie`.
                      * @return MatchKeyParam This field is required when `MatchKey` is `param` or `cookie`. For `param`, it indicates a key value of the request parameter if MatchKey is `param`, while a key value of the Cookie request header if MatchKey is `cookie`.
+                     * 
                      */
                     std::string GetMatchKeyParam() const;
 
                     /**
                      * 设置This field is required when `MatchKey` is `param` or `cookie`. For `param`, it indicates a key value of the request parameter if MatchKey is `param`, while a key value of the Cookie request header if MatchKey is `cookie`.
-                     * @param MatchKeyParam This field is required when `MatchKey` is `param` or `cookie`. For `param`, it indicates a key value of the request parameter if MatchKey is `param`, while a key value of the Cookie request header if MatchKey is `cookie`.
+                     * @param _matchKeyParam This field is required when `MatchKey` is `param` or `cookie`. For `param`, it indicates a key value of the request parameter if MatchKey is `param`, while a key value of the Cookie request header if MatchKey is `cookie`.
+                     * 
                      */
                     void SetMatchKeyParam(const std::string& _matchKeyParam);
 
                     /**
                      * 判断参数 MatchKeyParam 是否已赋值
                      * @return MatchKeyParam 是否已赋值
+                     * 
                      */
                     bool MatchKeyParamHasBeenSet() const;
 

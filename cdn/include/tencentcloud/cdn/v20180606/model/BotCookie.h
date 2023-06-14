@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `on` and `off`.
                      * @return Switch Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Valid values: `on` and `off`.
-                     * @param Switch Valid values: `on` and `off`.
+                     * @param _switch Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Rule type, which can only be `all` currently.
                      * @return RuleType Rule type, which can only be `all` currently.
+                     * 
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Rule type, which can only be `all` currently.
-                     * @param RuleType Rule type, which can only be `all` currently.
+                     * @param _ruleType Rule type, which can only be `all` currently.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Rule value. Valid value: `*`.
                      * @return RuleValue Rule value. Valid value: `*`.
+                     * 
                      */
                     std::vector<std::string> GetRuleValue() const;
 
                     /**
                      * 设置Rule value. Valid value: `*`.
-                     * @param RuleValue Rule value. Valid value: `*`.
+                     * @param _ruleValue Rule value. Valid value: `*`.
+                     * 
                      */
                     void SetRuleValue(const std::vector<std::string>& _ruleValue);
 
                     /**
                      * 判断参数 RuleValue 是否已赋值
                      * @return RuleValue 是否已赋值
+                     * 
                      */
                     bool RuleValueHasBeenSet() const;
 
                     /**
                      * 获取Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
                      * @return Action Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
-                     * @param Action Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
+                     * @param _action Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RedirectUrl Redirection target page
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置Redirection target page
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RedirectUrl Redirection target page
+                     * @param _redirectUrl Redirection target page
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
                     /**
                      * 判断参数 RedirectUrl 是否已赋值
                      * @return RedirectUrl 是否已赋值
+                     * 
                      */
                     bool RedirectUrlHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

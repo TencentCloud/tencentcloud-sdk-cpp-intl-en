@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CVEID Vulnerability ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCVEID() const;
 
                     /**
                      * 设置Vulnerability ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CVEID Vulnerability ID
+                     * @param _cVEID Vulnerability ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCVEID(const std::string& _cVEID);
 
                     /**
                      * 判断参数 CVEID 是否已赋值
                      * @return CVEID 是否已赋值
+                     * 
                      */
                     bool CVEIDHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return POCID POC ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPOCID() const;
 
                     /**
                      * 设置POC ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param POCID POC ID
+                     * @param _pOCID POC ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPOCID(const std::string& _pOCID);
 
                     /**
                      * 判断参数 POCID 是否已赋值
                      * @return POCID 是否已赋值
+                     * 
                      */
                     bool POCIDHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Vulnerability name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Vulnerability name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Vulnerability name
+                     * @param _name Vulnerability name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Components Component information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ComponentsInfo> GetComponents() const;
 
                     /**
                      * 设置Component information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Components Component information
+                     * @param _components Component information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComponents(const std::vector<ComponentsInfo>& _components);
 
                     /**
                      * 判断参数 Components 是否已赋值
                      * @return Components 是否已赋值
+                     * 
                      */
                     bool ComponentsHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Category Category
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCategory() const;
 
                     /**
                      * 设置Category
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Category Category
+                     * @param _category Category
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCategory(const std::string& _category);
 
                     /**
                      * 判断参数 Category 是否已赋值
                      * @return Category 是否已赋值
+                     * 
                      */
                     bool CategoryHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CategoryType Category 2
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCategoryType() const;
 
                     /**
                      * 设置Category 2
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CategoryType Category 2
+                     * @param _categoryType Category 2
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCategoryType(const std::string& _categoryType);
 
                     /**
                      * 判断参数 CategoryType 是否已赋值
                      * @return CategoryType 是否已赋值
+                     * 
                      */
                     bool CategoryTypeHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Level Risk level
+                     * @param _level Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Des Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDes() const;
 
                     /**
                      * 设置Description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Des Description
+                     * @param _des Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDes(const std::string& _des);
 
                     /**
                      * 判断参数 Des 是否已赋值
                      * @return Des 是否已赋值
+                     * 
                      */
                     bool DesHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OfficialSolution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOfficialSolution() const;
 
                     /**
                      * 设置Solution
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OfficialSolution Solution
+                     * @param _officialSolution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOfficialSolution(const std::string& _officialSolution);
 
                     /**
                      * 判断参数 OfficialSolution 是否已赋值
                      * @return OfficialSolution 是否已赋值
+                     * 
                      */
                     bool OfficialSolutionHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Reference Reference
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReference() const;
 
                     /**
                      * 设置Reference
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Reference Reference
+                     * @param _reference Reference
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReference(const std::string& _reference);
 
                     /**
                      * 判断参数 Reference 是否已赋值
                      * @return Reference 是否已赋值
+                     * 
                      */
                     bool ReferenceHasBeenSet() const;
 
@@ -272,20 +302,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefenseSolution Defense solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDefenseSolution() const;
 
                     /**
                      * 设置Defense solution
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DefenseSolution Defense solution
+                     * @param _defenseSolution Defense solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefenseSolution(const std::string& _defenseSolution);
 
                     /**
                      * 判断参数 DefenseSolution 是否已赋值
                      * @return DefenseSolution 是否已赋值
+                     * 
                      */
                     bool DefenseSolutionHasBeenSet() const;
 
@@ -294,20 +327,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubmitTime Submission time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubmitTime() const;
 
                     /**
                      * 设置Submission time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubmitTime Submission time
+                     * @param _submitTime Submission time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubmitTime(const std::string& _submitTime);
 
                     /**
                      * 判断参数 SubmitTime 是否已赋值
                      * @return SubmitTime 是否已赋值
+                     * 
                      */
                     bool SubmitTimeHasBeenSet() const;
 
@@ -316,20 +352,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CvssScore CVSS score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCvssScore() const;
 
                     /**
                      * 设置CVSS score
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CvssScore CVSS score
+                     * @param _cvssScore CVSS score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCvssScore(const std::string& _cvssScore);
 
                     /**
                      * 判断参数 CvssScore 是否已赋值
                      * @return CvssScore 是否已赋值
+                     * 
                      */
                     bool CvssScoreHasBeenSet() const;
 
@@ -338,20 +377,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CvssVector CVSS information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCvssVector() const;
 
                     /**
                      * 设置CVSS information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CvssVector CVSS information
+                     * @param _cvssVector CVSS information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCvssVector(const std::string& _cvssVector);
 
                     /**
                      * 判断参数 CvssVector 是否已赋值
                      * @return CvssVector 是否已赋值
+                     * 
                      */
                     bool CvssVectorHasBeenSet() const;
 
@@ -360,20 +402,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsSuggest Whether fix is suggested
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIsSuggest() const;
 
                     /**
                      * 设置Whether fix is suggested
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsSuggest Whether fix is suggested
+                     * @param _isSuggest Whether fix is suggested
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsSuggest(const std::string& _isSuggest);
 
                     /**
                      * 判断参数 IsSuggest 是否已赋值
                      * @return IsSuggest 是否已赋值
+                     * 
                      */
                     bool IsSuggestHasBeenSet() const;
 
@@ -382,20 +427,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixedVersions Number of the fixed version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFixedVersions() const;
 
                     /**
                      * 设置Number of the fixed version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FixedVersions Number of the fixed version
+                     * @param _fixedVersions Number of the fixed version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFixedVersions(const std::string& _fixedVersions);
 
                     /**
                      * 判断参数 FixedVersions 是否已赋值
                      * @return FixedVersions 是否已赋值
+                     * 
                      */
                     bool FixedVersionsHasBeenSet() const;
 
@@ -404,20 +452,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTag() const;
 
                     /**
                      * 设置Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
+                     * @param _tag Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTag(const std::vector<std::string>& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
@@ -426,20 +477,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetComponent() const;
 
                     /**
                      * 设置Component name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Component Component name
+                     * @param _component Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComponent(const std::string& _component);
 
                     /**
                      * 判断参数 Component 是否已赋值
                      * @return Component 是否已赋值
+                     * 
                      */
                     bool ComponentHasBeenSet() const;
 
@@ -448,20 +502,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Component version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Component version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version Component version
+                     * @param _version Component version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 

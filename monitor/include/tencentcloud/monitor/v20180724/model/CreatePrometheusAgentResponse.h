@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of a successfully created agent.
                      * @return AgentId ID of a successfully created agent.
+                     * 
                      */
                     std::string GetAgentId() const;
 
                     /**
                      * 判断参数 AgentId 是否已赋值
                      * @return AgentId 是否已赋值
+                     * 
                      */
                     bool AgentIdHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Target group ID
                      * @return TargetGroupId Target group ID
+                     * 
                      */
                     std::string GetTargetGroupId() const;
 
                     /**
                      * 设置Target group ID
-                     * @param TargetGroupId Target group ID
+                     * @param _targetGroupId Target group ID
+                     * 
                      */
                     void SetTargetGroupId(const std::string& _targetGroupId);
 
                     /**
                      * 判断参数 TargetGroupId 是否已赋值
                      * @return TargetGroupId 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Information of server to be unbound
                      * @return TargetGroupInstances Information of server to be unbound
+                     * 
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
                      * 设置Information of server to be unbound
-                     * @param TargetGroupInstances Information of server to be unbound
+                     * @param _targetGroupInstances Information of server to be unbound
+                     * 
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
 
                     /**
                      * 判断参数 TargetGroupInstances 是否已赋值
                      * @return TargetGroupInstances 是否已赋值
+                     * 
                      */
                     bool TargetGroupInstancesHasBeenSet() const;
 

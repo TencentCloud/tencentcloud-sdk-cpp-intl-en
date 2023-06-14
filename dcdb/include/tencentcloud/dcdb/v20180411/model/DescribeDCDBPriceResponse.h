@@ -50,12 +50,14 @@ namespace TencentCloud
                      * @return OriginalPrice Original price  
 * Unit: Cent (default). If the request parameter contains `AmountUnit`, see `AmountUnit` description.
 * Currency: CNY (Chinese site), USD (international site)
+                     * 
                      */
                     int64_t GetOriginalPrice() const;
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
@@ -66,12 +68,14 @@ namespace TencentCloud
                      * @return Price The actual price may be different from the original price due to discounts. 
 * Unit: Cent (default). If the request parameter contains `AmountUnit`, see `AmountUnit` description.
 * Currency: CNY (Chinese site), USD (international site)
+                     * 
                      */
                     int64_t GetPrice() const;
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 

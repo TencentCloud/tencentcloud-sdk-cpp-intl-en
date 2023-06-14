@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of recognized object.
                      * @return Name Name of recognized object.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of recognized object.
-                     * @param Name Name of recognized object.
+                     * @param _name Name of recognized object.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取List of segments that contain an object.
                      * @return SegmentSet List of segments that contain an object.
+                     * 
                      */
                     std::vector<AiRecognitionTaskObjectSeqmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of segments that contain an object.
-                     * @param SegmentSet List of segments that contain an object.
+                     * @param _segmentSet List of segments that contain an object.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskObjectSeqmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

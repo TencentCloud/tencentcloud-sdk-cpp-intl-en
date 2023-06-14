@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced).
                      * @return Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced).
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced).
-                     * @param Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced).
+                     * @param _business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced).
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID.
                      * @return Id Anti-DDoS instance ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID.
-                     * @param Id Anti-DDoS instance ID.
+                     * @param _id Anti-DDoS instance ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Domain name forwarding rule.
                      * @return Rule Domain name forwarding rule.
+                     * 
                      */
                     NewL7RuleEntry GetRule() const;
 
                     /**
                      * 设置Domain name forwarding rule.
-                     * @param Rule Domain name forwarding rule.
+                     * @param _rule Domain name forwarding rule.
+                     * 
                      */
                     void SetRule(const NewL7RuleEntry& _rule);
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 

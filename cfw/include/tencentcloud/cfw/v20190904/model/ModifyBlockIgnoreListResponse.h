@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Return message
                      * @return ReturnMsg Return message
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 
                     /**
                      * 获取Error code. 0: success; non-0: failed
                      * @return ReturnCode Error code. 0: success; non-0: failed
+                     * 
                      */
                     uint64_t GetReturnCode() const;
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 

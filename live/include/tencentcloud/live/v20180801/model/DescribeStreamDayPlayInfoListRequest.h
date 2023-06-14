@@ -47,74 +47,86 @@ namespace TencentCloud
 Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
                      * @return DayTime Date in the format of YYYY-mm-dd
 Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
+                     * 
                      */
                     std::string GetDayTime() const;
 
                     /**
                      * 设置Date in the format of YYYY-mm-dd
 Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
-                     * @param DayTime Date in the format of YYYY-mm-dd
+                     * @param _dayTime Date in the format of YYYY-mm-dd
 Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
+                     * 
                      */
                     void SetDayTime(const std::string& _dayTime);
 
                     /**
                      * 判断参数 DayTime 是否已赋值
                      * @return DayTime 是否已赋值
+                     * 
                      */
                     bool DayTimeHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name.
                      * @return PlayDomain Playback domain name.
+                     * 
                      */
                     std::string GetPlayDomain() const;
 
                     /**
                      * 设置Playback domain name.
-                     * @param PlayDomain Playback domain name.
+                     * @param _playDomain Playback domain name.
+                     * 
                      */
                     void SetPlayDomain(const std::string& _playDomain);
 
                     /**
                      * 判断参数 PlayDomain 是否已赋值
                      * @return PlayDomain 是否已赋值
+                     * 
                      */
                     bool PlayDomainHasBeenSet() const;
 
                     /**
                      * 获取Page number. Value range: [1,1000]. Default value: 1.
                      * @return PageNum Page number. Value range: [1,1000]. Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 设置Page number. Value range: [1,1000]. Default value: 1.
-                     * @param PageNum Page number. Value range: [1,1000]. Default value: 1.
+                     * @param _pageNum Page number. Value range: [1,1000]. Default value: 1.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Value range: [100,1000]. Default value: 1,000.
                      * @return PageSize Number of entries per page. Value range: [100,1000]. Default value: 1,000.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page. Value range: [100,1000]. Default value: 1,000.
-                     * @param PageSize Number of entries per page. Value range: [100,1000]. Default value: 1,000.
+                     * @param _pageSize Number of entries per page. Value range: [100,1000]. Default value: 1,000.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
@@ -127,6 +139,7 @@ Default: query data for all regions.
 Mainland: query data for Mainland China,
 Oversea: query data for regions outside Mainland China,
 Default: query data for all regions.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
@@ -135,34 +148,39 @@ Default: query data for all regions.
 Mainland: query data for Mainland China,
 Oversea: query data for regions outside Mainland China,
 Default: query data for all regions.
-                     * @param MainlandOrOversea Valid values:
+                     * @param _mainlandOrOversea Valid values:
 Mainland: query data for Mainland China,
 Oversea: query data for regions outside Mainland China,
 Default: query data for all regions.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 
                     /**
                      * 获取Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
                      * @return ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
-                     * @param ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * @param _serviceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 

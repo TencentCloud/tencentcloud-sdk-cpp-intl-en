@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of usage plans bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of usage plans bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of usage plans bound to API.
+                     * @param _totalCount Total number of usage plans bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiUsagePlanList List of usage plans bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiUsagePlan> GetApiUsagePlanList() const;
 
                     /**
                      * 设置List of usage plans bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiUsagePlanList List of usage plans bound to API.
+                     * @param _apiUsagePlanList List of usage plans bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiUsagePlanList(const std::vector<ApiUsagePlan>& _apiUsagePlanList);
 
                     /**
                      * 判断参数 ApiUsagePlanList 是否已赋值
                      * @return ApiUsagePlanList 是否已赋值
+                     * 
                      */
                     bool ApiUsagePlanListHasBeenSet() const;
 

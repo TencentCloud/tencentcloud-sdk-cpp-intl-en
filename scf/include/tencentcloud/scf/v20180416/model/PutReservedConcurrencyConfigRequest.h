@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Specifies the function of which you want to configure the reserved quota
                      * @return FunctionName Specifies the function of which you want to configure the reserved quota
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Specifies the function of which you want to configure the reserved quota
-                     * @param FunctionName Specifies the function of which you want to configure the reserved quota
+                     * @param _functionName Specifies the function of which you want to configure the reserved quota
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
                      * @return ReservedConcurrencyMem Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
+                     * 
                      */
                     uint64_t GetReservedConcurrencyMem() const;
 
                     /**
                      * 设置Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
-                     * @param ReservedConcurrencyMem Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
+                     * @param _reservedConcurrencyMem Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
+                     * 
                      */
                     void SetReservedConcurrencyMem(const uint64_t& _reservedConcurrencyMem);
 
                     /**
                      * 判断参数 ReservedConcurrencyMem 是否已赋值
                      * @return ReservedConcurrencyMem 是否已赋值
+                     * 
                      */
                     bool ReservedConcurrencyMemHasBeenSet() const;
 
                     /**
                      * 获取Function namespace. Default value: `default`
                      * @return Namespace Function namespace. Default value: `default`
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace. Default value: `default`
-                     * @param Namespace Function namespace. Default value: `default`
+                     * @param _namespace Function namespace. Default value: `default`
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

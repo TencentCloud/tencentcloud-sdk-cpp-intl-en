@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Sorting attribute.
                      * @return SortKey Sorting attribute.
+                     * 
                      */
                     std::string GetSortKey() const;
 
                     /**
                      * 设置Sorting attribute.
-                     * @param SortKey Sorting attribute.
+                     * @param _sortKey Sorting attribute.
+                     * 
                      */
                     void SetSortKey(const std::string& _sortKey);
 
                     /**
                      * 判断参数 SortKey 是否已赋值
                      * @return SortKey 是否已赋值
+                     * 
                      */
                     bool SortKeyHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: ASC: ascending order; DESC: descending order.
                      * @return SortOrder Sorting order. Valid values: ASC: ascending order; DESC: descending order.
+                     * 
                      */
                     std::string GetSortOrder() const;
 
                     /**
                      * 设置Sorting order. Valid values: ASC: ascending order; DESC: descending order.
-                     * @param SortOrder Sorting order. Valid values: ASC: ascending order; DESC: descending order.
+                     * @param _sortOrder Sorting order. Valid values: ASC: ascending order; DESC: descending order.
+                     * 
                      */
                     void SetSortOrder(const std::string& _sortOrder);
 
                     /**
                      * 判断参数 SortOrder 是否已赋值
                      * @return SortOrder 是否已赋值
+                     * 
                      */
                     bool SortOrderHasBeenSet() const;
 

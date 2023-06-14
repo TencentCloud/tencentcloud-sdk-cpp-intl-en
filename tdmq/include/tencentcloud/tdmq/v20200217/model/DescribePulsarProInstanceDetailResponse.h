@@ -49,12 +49,14 @@ namespace TencentCloud
                     /**
                      * 获取Cluster information
                      * @return ClusterInfo Cluster information
+                     * 
                      */
                     PulsarProClusterInfo GetClusterInfo() const;
 
                     /**
                      * 判断参数 ClusterInfo 是否已赋值
                      * @return ClusterInfo 是否已赋值
+                     * 
                      */
                     bool ClusterInfoHasBeenSet() const;
 
@@ -63,12 +65,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetworkAccessPointInfos Cluster network access point information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PulsarNetworkAccessPointInfo> GetNetworkAccessPointInfos() const;
 
                     /**
                      * 判断参数 NetworkAccessPointInfos 是否已赋值
                      * @return NetworkAccessPointInfos 是否已赋值
+                     * 
                      */
                     bool NetworkAccessPointInfosHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterSpecInfo Cluster specification information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PulsarProClusterSpecInfo GetClusterSpecInfo() const;
 
                     /**
                      * 判断参数 ClusterSpecInfo 是否已赋值
                      * @return ClusterSpecInfo 是否已赋值
+                     * 
                      */
                     bool ClusterSpecInfoHasBeenSet() const;
 

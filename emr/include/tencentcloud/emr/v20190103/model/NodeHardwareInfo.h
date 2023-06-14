@@ -55,20 +55,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 设置User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AppId User `APPID`
+                     * @param _appId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAppId(const int64_t& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SerialNo Serial number
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSerialNo() const;
 
                     /**
                      * 设置Serial number
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SerialNo Serial number
+                     * @param _serialNo Serial number
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSerialNo(const std::string& _serialNo);
 
                     /**
                      * 判断参数 SerialNo 是否已赋值
                      * @return SerialNo 是否已赋值
+                     * 
                      */
                     bool SerialNoHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrderNo Machine instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrderNo() const;
 
                     /**
                      * 设置Machine instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrderNo Machine instance ID
+                     * @param _orderNo Machine instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOrderNo(const std::string& _orderNo);
 
                     /**
                      * 判断参数 OrderNo 是否已赋值
                      * @return OrderNo 是否已赋值
+                     * 
                      */
                     bool OrderNoHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WanIp Public IP bound to master node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetWanIp() const;
 
                     /**
                      * 设置Public IP bound to master node
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WanIp Public IP bound to master node
+                     * @param _wanIp Public IP bound to master node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWanIp(const std::string& _wanIp);
 
                     /**
                      * 判断参数 WanIp 是否已赋值
                      * @return WanIp 是否已赋值
+                     * 
                      */
                     bool WanIpHasBeenSet() const;
 
@@ -145,6 +157,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Flag Node type. 0: common node; 1: master node;
 2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFlag() const;
 
@@ -152,15 +165,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Node type. 0: common node; 1: master node;
 2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Flag Node type. 0: common node; 1: master node;
+                     * @param _flag Node type. 0: common node; 1: master node;
 2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFlag(const int64_t& _flag);
 
                     /**
                      * 判断参数 Flag 是否已赋值
                      * @return Flag 是否已赋值
+                     * 
                      */
                     bool FlagHasBeenSet() const;
 
@@ -169,20 +184,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Spec Node specification
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSpec() const;
 
                     /**
                      * 设置Node specification
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Spec Node specification
+                     * @param _spec Node specification
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpec(const std::string& _spec);
 
                     /**
                      * 判断参数 Spec 是否已赋值
                      * @return Spec 是否已赋值
+                     * 
                      */
                     bool SpecHasBeenSet() const;
 
@@ -191,20 +209,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CpuNum Number of node cores
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCpuNum() const;
 
                     /**
                      * 设置Number of node cores
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CpuNum Number of node cores
+                     * @param _cpuNum Number of node cores
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCpuNum(const int64_t& _cpuNum);
 
                     /**
                      * 判断参数 CpuNum 是否已赋值
                      * @return CpuNum 是否已赋值
+                     * 
                      */
                     bool CpuNumHasBeenSet() const;
 
@@ -213,20 +234,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MemSize Node memory size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
                      * 设置Node memory size
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MemSize Node memory size
+                     * @param _memSize Node memory size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMemSize(const int64_t& _memSize);
 
                     /**
                      * 判断参数 MemSize 是否已赋值
                      * @return MemSize 是否已赋值
+                     * 
                      */
                     bool MemSizeHasBeenSet() const;
 
@@ -235,20 +259,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MemDesc Node memory description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMemDesc() const;
 
                     /**
                      * 设置Node memory description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MemDesc Node memory description
+                     * @param _memDesc Node memory description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMemDesc(const std::string& _memDesc);
 
                     /**
                      * 判断参数 MemDesc 是否已赋值
                      * @return MemDesc 是否已赋值
+                     * 
                      */
                     bool MemDescHasBeenSet() const;
 
@@ -257,20 +284,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RegionId Node region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Node region
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RegionId Node region
+                     * @param _regionId Node region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
@@ -279,20 +309,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ZoneId Node AZ
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置Node AZ
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneId Node AZ
+                     * @param _zoneId Node AZ
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -301,20 +334,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplyTime Application time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplyTime() const;
 
                     /**
                      * 设置Application time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApplyTime Application time
+                     * @param _applyTime Application time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplyTime(const std::string& _applyTime);
 
                     /**
                      * 判断参数 ApplyTime 是否已赋值
                      * @return ApplyTime 是否已赋值
+                     * 
                      */
                     bool ApplyTimeHasBeenSet() const;
 
@@ -323,20 +359,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FreeTime Release time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFreeTime() const;
 
                     /**
                      * 设置Release time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FreeTime Release time
+                     * @param _freeTime Release time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFreeTime(const std::string& _freeTime);
 
                     /**
                      * 判断参数 FreeTime 是否已赋值
                      * @return FreeTime 是否已赋值
+                     * 
                      */
                     bool FreeTimeHasBeenSet() const;
 
@@ -345,20 +384,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiskSize Disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiskSize() const;
 
                     /**
                      * 设置Disk size
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DiskSize Disk size
+                     * @param _diskSize Disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskSize(const std::string& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
@@ -367,20 +409,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NameTag Node description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNameTag() const;
 
                     /**
                      * 设置Node description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NameTag Node description
+                     * @param _nameTag Node description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNameTag(const std::string& _nameTag);
 
                     /**
                      * 判断参数 NameTag 是否已赋值
                      * @return NameTag 是否已赋值
+                     * 
                      */
                     bool NameTagHasBeenSet() const;
 
@@ -389,20 +434,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Services Services deployed on node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServices() const;
 
                     /**
                      * 设置Services deployed on node
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Services Services deployed on node
+                     * @param _services Services deployed on node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServices(const std::string& _services);
 
                     /**
                      * 判断参数 Services 是否已赋值
                      * @return Services 是否已赋值
+                     * 
                      */
                     bool ServicesHasBeenSet() const;
 
@@ -411,20 +459,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StorageType Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStorageType() const;
 
                     /**
                      * 设置Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StorageType Disk type
+                     * @param _storageType Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStorageType(const int64_t& _storageType);
 
                     /**
                      * 判断参数 StorageType 是否已赋值
                      * @return StorageType 是否已赋值
+                     * 
                      */
                     bool StorageTypeHasBeenSet() const;
 
@@ -433,20 +484,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RootSize System disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRootSize() const;
 
                     /**
                      * 设置System disk size
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RootSize System disk size
+                     * @param _rootSize System disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRootSize(const int64_t& _rootSize);
 
                     /**
                      * 判断参数 RootSize 是否已赋值
                      * @return RootSize 是否已赋值
+                     * 
                      */
                     bool RootSizeHasBeenSet() const;
 
@@ -455,20 +509,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ChargeType Payment type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
                      * 设置Payment type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ChargeType Payment type
+                     * @param _chargeType Payment type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
@@ -477,20 +534,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CdbIp Database IP
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCdbIp() const;
 
                     /**
                      * 设置Database IP
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CdbIp Database IP
+                     * @param _cdbIp Database IP
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCdbIp(const std::string& _cdbIp);
 
                     /**
                      * 判断参数 CdbIp 是否已赋值
                      * @return CdbIp 是否已赋值
+                     * 
                      */
                     bool CdbIpHasBeenSet() const;
 
@@ -499,20 +559,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CdbPort Database port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCdbPort() const;
 
                     /**
                      * 设置Database port
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CdbPort Database port
+                     * @param _cdbPort Database port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCdbPort(const int64_t& _cdbPort);
 
                     /**
                      * 判断参数 CdbPort 是否已赋值
                      * @return CdbPort 是否已赋值
+                     * 
                      */
                     bool CdbPortHasBeenSet() const;
 
@@ -521,20 +584,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HwDiskSize Disk capacity
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHwDiskSize() const;
 
                     /**
                      * 设置Disk capacity
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HwDiskSize Disk capacity
+                     * @param _hwDiskSize Disk capacity
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHwDiskSize(const int64_t& _hwDiskSize);
 
                     /**
                      * 判断参数 HwDiskSize 是否已赋值
                      * @return HwDiskSize 是否已赋值
+                     * 
                      */
                     bool HwDiskSizeHasBeenSet() const;
 
@@ -543,20 +609,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HwDiskSizeDesc Disk capacity description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHwDiskSizeDesc() const;
 
                     /**
                      * 设置Disk capacity description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HwDiskSizeDesc Disk capacity description
+                     * @param _hwDiskSizeDesc Disk capacity description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHwDiskSizeDesc(const std::string& _hwDiskSizeDesc);
 
                     /**
                      * 判断参数 HwDiskSizeDesc 是否已赋值
                      * @return HwDiskSizeDesc 是否已赋值
+                     * 
                      */
                     bool HwDiskSizeDescHasBeenSet() const;
 
@@ -565,20 +634,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HwMemSize Memory capacity
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHwMemSize() const;
 
                     /**
                      * 设置Memory capacity
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HwMemSize Memory capacity
+                     * @param _hwMemSize Memory capacity
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHwMemSize(const int64_t& _hwMemSize);
 
                     /**
                      * 判断参数 HwMemSize 是否已赋值
                      * @return HwMemSize 是否已赋值
+                     * 
                      */
                     bool HwMemSizeHasBeenSet() const;
 
@@ -587,20 +659,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HwMemSizeDesc Memory capacity description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHwMemSizeDesc() const;
 
                     /**
                      * 设置Memory capacity description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HwMemSizeDesc Memory capacity description
+                     * @param _hwMemSizeDesc Memory capacity description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHwMemSizeDesc(const std::string& _hwMemSizeDesc);
 
                     /**
                      * 判断参数 HwMemSizeDesc 是否已赋值
                      * @return HwMemSizeDesc 是否已赋值
+                     * 
                      */
                     bool HwMemSizeDescHasBeenSet() const;
 
@@ -609,20 +684,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Expiration time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Expiration time
+                     * @param _expireTime Expiration time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -631,20 +709,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EmrResourceId Node resource ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEmrResourceId() const;
 
                     /**
                      * 设置Node resource ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EmrResourceId Node resource ID
+                     * @param _emrResourceId Node resource ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEmrResourceId(const std::string& _emrResourceId);
 
                     /**
                      * 判断参数 EmrResourceId 是否已赋值
                      * @return EmrResourceId 是否已赋值
+                     * 
                      */
                     bool EmrResourceIdHasBeenSet() const;
 
@@ -653,20 +734,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsAutoRenew Renewal flag
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsAutoRenew() const;
 
                     /**
                      * 设置Renewal flag
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsAutoRenew Renewal flag
+                     * @param _isAutoRenew Renewal flag
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsAutoRenew(const int64_t& _isAutoRenew);
 
                     /**
                      * 判断参数 IsAutoRenew 是否已赋值
                      * @return IsAutoRenew 是否已赋值
+                     * 
                      */
                     bool IsAutoRenewHasBeenSet() const;
 
@@ -675,20 +759,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeviceClass Device flag
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeviceClass() const;
 
                     /**
                      * 设置Device flag
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeviceClass Device flag
+                     * @param _deviceClass Device flag
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeviceClass(const std::string& _deviceClass);
 
                     /**
                      * 判断参数 DeviceClass 是否已赋值
                      * @return DeviceClass 是否已赋值
+                     * 
                      */
                     bool DeviceClassHasBeenSet() const;
 
@@ -697,20 +784,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Mutable Support for configuration adjustment
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMutable() const;
 
                     /**
                      * 设置Support for configuration adjustment
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Mutable Support for configuration adjustment
+                     * @param _mutable Support for configuration adjustment
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMutable(const int64_t& _mutable);
 
                     /**
                      * 判断参数 Mutable 是否已赋值
                      * @return Mutable 是否已赋值
+                     * 
                      */
                     bool MutableHasBeenSet() const;
 
@@ -719,20 +809,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MCMultiDisk Multi-cloud disk
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MultiDiskMC> GetMCMultiDisk() const;
 
                     /**
                      * 设置Multi-cloud disk
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MCMultiDisk Multi-cloud disk
+                     * @param _mCMultiDisk Multi-cloud disk
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMCMultiDisk(const std::vector<MultiDiskMC>& _mCMultiDisk);
 
                     /**
                      * 判断参数 MCMultiDisk 是否已赋值
                      * @return MCMultiDisk 是否已赋值
+                     * 
                      */
                     bool MCMultiDiskHasBeenSet() const;
 
@@ -741,20 +834,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CdbNodeInfo Database information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CdbInfo GetCdbNodeInfo() const;
 
                     /**
                      * 设置Database information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CdbNodeInfo Database information
+                     * @param _cdbNodeInfo Database information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCdbNodeInfo(const CdbInfo& _cdbNodeInfo);
 
                     /**
                      * 判断参数 CdbNodeInfo 是否已赋值
                      * @return CdbNodeInfo 是否已赋值
+                     * 
                      */
                     bool CdbNodeInfoHasBeenSet() const;
 
@@ -763,20 +859,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Ip Private IP
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Private IP
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Ip Private IP
+                     * @param _ip Private IP
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
@@ -785,20 +884,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Destroyable Whether this node can be terminated. 1: yes, 0: no
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDestroyable() const;
 
                     /**
                      * 设置Whether this node can be terminated. 1: yes, 0: no
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Destroyable Whether this node can be terminated. 1: yes, 0: no
+                     * @param _destroyable Whether this node can be terminated. 1: yes, 0: no
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDestroyable(const int64_t& _destroyable);
 
                     /**
                      * 判断参数 Destroyable 是否已赋值
                      * @return Destroyable 是否已赋值
+                     * 
                      */
                     bool DestroyableHasBeenSet() const;
 
@@ -807,38 +909,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Tags bound to node
+                     * @param _tags Tags bound to node
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
                      * @return AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+                     * 
                      */
                     int64_t GetAutoFlag() const;
 
                     /**
                      * 设置Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
-                     * @param AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+                     * @param _autoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+                     * 
                      */
                     void SetAutoFlag(const int64_t& _autoFlag);
 
                     /**
                      * 判断参数 AutoFlag 是否已赋值
                      * @return AutoFlag 是否已赋值
+                     * 
                      */
                     bool AutoFlagHasBeenSet() const;
 
@@ -847,20 +955,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HardwareResourceType Resource type. Valid values: host, pod
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHardwareResourceType() const;
 
                     /**
                      * 设置Resource type. Valid values: host, pod
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HardwareResourceType Resource type. Valid values: host, pod
+                     * @param _hardwareResourceType Resource type. Valid values: host, pod
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHardwareResourceType(const std::string& _hardwareResourceType);
 
                     /**
                      * 判断参数 HardwareResourceType 是否已赋值
                      * @return HardwareResourceType 是否已赋值
+                     * 
                      */
                     bool HardwareResourceTypeHasBeenSet() const;
 
@@ -869,20 +980,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsDynamicSpec() const;
 
                     /**
                      * 设置Whether floating specification is used. `1`: yes; `0`: no
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+                     * @param _isDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDynamicSpec(const int64_t& _isDynamicSpec);
 
                     /**
                      * 判断参数 IsDynamicSpec 是否已赋值
                      * @return IsDynamicSpec 是否已赋值
+                     * 
                      */
                     bool IsDynamicSpecHasBeenSet() const;
 
@@ -891,20 +1005,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DynamicPodSpec Floating specification in JSON string
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDynamicPodSpec() const;
 
                     /**
                      * 设置Floating specification in JSON string
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DynamicPodSpec Floating specification in JSON string
+                     * @param _dynamicPodSpec Floating specification in JSON string
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDynamicPodSpec(const std::string& _dynamicPodSpec);
 
                     /**
                      * 判断参数 DynamicPodSpec 是否已赋值
                      * @return DynamicPodSpec 是否已赋值
+                     * 
                      */
                     bool DynamicPodSpecHasBeenSet() const;
 
@@ -913,20 +1030,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSupportModifyPayMode() const;
 
                     /**
                      * 设置Whether to support billing mode change. `0`: no; `1`: yes
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
+                     * @param _supportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSupportModifyPayMode(const int64_t& _supportModifyPayMode);
 
                     /**
                      * 判断参数 SupportModifyPayMode 是否已赋值
                      * @return SupportModifyPayMode 是否已赋值
+                     * 
                      */
                     bool SupportModifyPayModeHasBeenSet() const;
 
@@ -935,20 +1055,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RootStorageType System disk type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRootStorageType() const;
 
                     /**
                      * 设置System disk type
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RootStorageType System disk type
+                     * @param _rootStorageType System disk type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRootStorageType(const int64_t& _rootStorageType);
 
                     /**
                      * 判断参数 RootStorageType 是否已赋值
                      * @return RootStorageType 是否已赋值
+                     * 
                      */
                     bool RootStorageTypeHasBeenSet() const;
 
@@ -957,20 +1080,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Zone AZ information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ information
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Zone AZ information
+                     * @param _zone AZ information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -979,20 +1105,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SubnetInfo Subnet
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     SubnetInfo GetSubnetInfo() const;
 
                     /**
                      * 设置Subnet
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SubnetInfo Subnet
+                     * @param _subnetInfo Subnet
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSubnetInfo(const SubnetInfo& _subnetInfo);
 
                     /**
                      * 判断参数 SubnetInfo 是否已赋值
                      * @return SubnetInfo 是否已赋值
+                     * 
                      */
                     bool SubnetInfoHasBeenSet() const;
 
@@ -1001,20 +1130,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Clients Client
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetClients() const;
 
                     /**
                      * 设置Client
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Clients Client
+                     * @param _clients Client
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetClients(const std::string& _clients);
 
                     /**
                      * 判断参数 Clients 是否已赋值
                      * @return Clients 是否已赋值
+                     * 
                      */
                     bool ClientsHasBeenSet() const;
 
@@ -1023,20 +1155,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CurrentTime The current system time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCurrentTime() const;
 
                     /**
                      * 设置The current system time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CurrentTime The current system time.
+                     * @param _currentTime The current system time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCurrentTime(const std::string& _currentTime);
 
                     /**
                      * 判断参数 CurrentTime 是否已赋值
                      * @return CurrentTime 是否已赋值
+                     * 
                      */
                     bool CurrentTimeHasBeenSet() const;
 
@@ -1045,20 +1180,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsFederation() const;
 
                     /**
                      * 设置Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
+                     * @param _isFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsFederation(const int64_t& _isFederation);
 
                     /**
                      * 判断参数 IsFederation 是否已赋值
                      * @return IsFederation 是否已赋值
+                     * 
                      */
                     bool IsFederationHasBeenSet() const;
 
@@ -1067,20 +1205,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DeviceName Device name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeviceName() const;
 
                     /**
                      * 设置Device name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DeviceName Device name
+                     * @param _deviceName Device name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeviceName(const std::string& _deviceName);
 
                     /**
                      * 判断参数 DeviceName 是否已赋值
                      * @return DeviceName 是否已赋值
+                     * 
                      */
                     bool DeviceNameHasBeenSet() const;
 
@@ -1089,20 +1230,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServiceClient Service
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceClient() const;
 
                     /**
                      * 设置Service
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceClient Service
+                     * @param _serviceClient Service
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceClient(const std::string& _serviceClient);
 
                     /**
                      * 判断参数 ServiceClient 是否已赋值
                      * @return ServiceClient 是否已赋值
+                     * 
                      */
                     bool ServiceClientHasBeenSet() const;
 
@@ -1111,20 +1255,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetDisableApiTermination() const;
 
                     /**
                      * 设置Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+                     * @param _disableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisableApiTermination(const bool& _disableApiTermination);
 
                     /**
                      * 判断参数 DisableApiTermination 是否已赋值
                      * @return DisableApiTermination 是否已赋值
+                     * 
                      */
                     bool DisableApiTerminationHasBeenSet() const;
 
@@ -1133,20 +1280,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTradeVersion() const;
 
                     /**
                      * 设置The billing version. Valid values: `0` (original billing) and `1` (new billing)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
+                     * @param _tradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTradeVersion(const int64_t& _tradeVersion);
 
                     /**
                      * 判断参数 TradeVersion 是否已赋值
                      * @return TradeVersion 是否已赋值
+                     * 
                      */
                     bool TradeVersionHasBeenSet() const;
 

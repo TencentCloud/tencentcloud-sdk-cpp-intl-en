@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Backup file name
                      * @return FileName Backup file name
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Backup file name
-                     * @param FileName Backup file name
+                     * @param _fileName Backup file name
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
                      * @return FileSize Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
+                     * 
                      */
                     uint64_t GetFileSize() const;
 
                     /**
                      * 设置Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
-                     * @param FileSize Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
+                     * @param _fileSize Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
+                     * 
                      */
                     void SetFileSize(const uint64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
                      * @return FileSize 是否已赋值
+                     * 
                      */
                     bool FileSizeHasBeenSet() const;
 
                     /**
                      * 获取Address (valid for six hours) used to download the backup file over the public network
                      * @return DownloadUrl Address (valid for six hours) used to download the backup file over the public network
+                     * 
                      */
                     std::string GetDownloadUrl() const;
 
                     /**
                      * 设置Address (valid for six hours) used to download the backup file over the public network
-                     * @param DownloadUrl Address (valid for six hours) used to download the backup file over the public network
+                     * @param _downloadUrl Address (valid for six hours) used to download the backup file over the public network
+                     * 
                      */
                     void SetDownloadUrl(const std::string& _downloadUrl);
 
                     /**
                      * 判断参数 DownloadUrl 是否已赋值
                      * @return DownloadUrl 是否已赋值
+                     * 
                      */
                     bool DownloadUrlHasBeenSet() const;
 
                     /**
                      * 获取Address (valid for six hours) used to download the backup file over the private network
                      * @return InnerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
+                     * 
                      */
                     std::string GetInnerDownloadUrl() const;
 
                     /**
                      * 设置Address (valid for six hours) used to download the backup file over the private network
-                     * @param InnerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
+                     * @param _innerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
+                     * 
                      */
                     void SetInnerDownloadUrl(const std::string& _innerDownloadUrl);
 
                     /**
                      * 判断参数 InnerDownloadUrl 是否已赋值
                      * @return InnerDownloadUrl 是否已赋值
+                     * 
                      */
                     bool InnerDownloadUrlHasBeenSet() const;
 

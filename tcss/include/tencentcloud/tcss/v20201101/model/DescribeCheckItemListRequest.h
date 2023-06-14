@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of records per query
                      * @return Limit Maximum number of records per query
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of records per query
-                     * @param Limit Maximum number of records per query
+                     * @param _limit Maximum number of records per query
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Name. Valid values: `risk_level` (risk level); `risk_target` (check target and risky target); `risk_type` (risk type); `risk_attri` (risk type of the check item).
                      * @return Filters Name. Valid values: `risk_level` (risk level); `risk_target` (check target and risky target); `risk_type` (risk type); `risk_attri` (risk type of the check item).
+                     * 
                      */
                     std::vector<ComplianceFilters> GetFilters() const;
 
                     /**
                      * 设置Name. Valid values: `risk_level` (risk level); `risk_target` (check target and risky target); `risk_type` (risk type); `risk_attri` (risk type of the check item).
-                     * @param Filters Name. Valid values: `risk_level` (risk level); `risk_target` (check target and risky target); `risk_type` (risk type); `risk_attri` (risk type of the check item).
+                     * @param _filters Name. Valid values: `risk_level` (risk level); `risk_target` (check target and risky target); `risk_type` (risk type); `risk_attri` (risk type of the check item).
+                     * 
                      */
                     void SetFilters(const std::vector<ComplianceFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

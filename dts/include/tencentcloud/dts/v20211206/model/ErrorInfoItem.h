@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Code Error code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Error code
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Code Error code
+                     * @param _code Error code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Solution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Solution
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Solution Solution
+                     * @param _solution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSolution(const std::string& _solution);
 
                     /**
                      * 判断参数 Solution 是否已赋值
                      * @return Solution 是否已赋值
+                     * 
                      */
                     bool SolutionHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorLog Error log
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorLog() const;
 
                     /**
                      * 设置Error log
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrorLog Error log
+                     * @param _errorLog Error log
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorLog(const std::string& _errorLog);
 
                     /**
                      * 判断参数 ErrorLog 是否已赋值
                      * @return ErrorLog 是否已赋值
+                     * 
                      */
                     bool ErrorLogHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HelpDoc Help document
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHelpDoc() const;
 
                     /**
                      * 设置Help document
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HelpDoc Help document
+                     * @param _helpDoc Help document
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHelpDoc(const std::string& _helpDoc);
 
                     /**
                      * 判断参数 HelpDoc 是否已赋值
                      * @return HelpDoc 是否已赋值
+                     * 
                      */
                     bool HelpDocHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether it is enabled
                      * @return Enabled Whether it is enabled
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether it is enabled
-                     * @param Enabled Whether it is enabled
+                     * @param _enabled Whether it is enabled
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Domain name. It will be effective only when the public network access is enabled.
                      * @return Domain Domain name. It will be effective only when the public network access is enabled.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name. It will be effective only when the public network access is enabled.
-                     * @param Domain Domain name. It will be effective only when the public network access is enabled.
+                     * @param _domain Domain name. It will be effective only when the public network access is enabled.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The private network or public network address
                      * @return Address The private network or public network address
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置The private network or public network address
-                     * @param Address The private network or public network address
+                     * @param _address The private network or public network address
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
@@ -109,6 +118,7 @@ namespace TencentCloud
 `close`: the public network access is not enabled
 `opening`: the public network access is being enabled
 `open`: the public network access is enabled
+                     * 
                      */
                     std::string GetInternet() const;
 
@@ -117,34 +127,39 @@ namespace TencentCloud
 `close`: the public network access is not enabled
 `opening`: the public network access is being enabled
 `open`: the public network access is enabled
-                     * @param Internet Whether the public network access is enabled.
+                     * @param _internet Whether the public network access is enabled.
 `close`: the public network access is not enabled
 `opening`: the public network access is being enabled
 `open`: the public network access is enabled
+                     * 
                      */
                     void SetInternet(const std::string& _internet);
 
                     /**
                      * 判断参数 Internet 是否已赋值
                      * @return Internet 是否已赋值
+                     * 
                      */
                     bool InternetHasBeenSet() const;
 
                     /**
                      * 获取The user name of the grafana admin
                      * @return AdminUser The user name of the grafana admin
+                     * 
                      */
                     std::string GetAdminUser() const;
 
                     /**
                      * 设置The user name of the grafana admin
-                     * @param AdminUser The user name of the grafana admin
+                     * @param _adminUser The user name of the grafana admin
+                     * 
                      */
                     void SetAdminUser(const std::string& _adminUser);
 
                     /**
                      * 判断参数 AdminUser 是否已赋值
                      * @return AdminUser 是否已赋值
+                     * 
                      */
                     bool AdminUserHasBeenSet() const;
 

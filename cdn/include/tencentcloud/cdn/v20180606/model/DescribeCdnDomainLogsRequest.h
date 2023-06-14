@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Specifies a domain name for the query
                      * @return Domain Specifies a domain name for the query
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Specifies a domain name for the query
-                     * @param Domain Specifies a domain name for the query
+                     * @param _domain Specifies a domain name for the query
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Starting time, such as `2019-09-04 00:00:00`
                      * @return StartTime Starting time, such as `2019-09-04 00:00:00`
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Starting time, such as `2019-09-04 00:00:00`
-                     * @param StartTime Starting time, such as `2019-09-04 00:00:00`
+                     * @param _startTime Starting time, such as `2019-09-04 00:00:00`
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time, such as `2019-09-04 12:00:00`
                      * @return EndTime End time, such as `2019-09-04 12:00:00`
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time, such as `2019-09-04 12:00:00`
-                     * @param EndTime End time, such as `2019-09-04 12:00:00`
+                     * @param _endTime End time, such as `2019-09-04 12:00:00`
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Offset for paginated queries. Default value: 0
                      * @return Offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset for paginated queries. Default value: 0
-                     * @param Offset Offset for paginated queries. Default value: 0
+                     * @param _offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit on paginated queries. Default value: 100. Maximum value: 1,000
                      * @return Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit on paginated queries. Default value: 100. Maximum value: 1,000
-                     * @param Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
+                     * @param _limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -143,6 +158,7 @@ Default value: `mainland`.
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -152,17 +168,19 @@ Default value: `mainland`.
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
-                     * @param Area Specifies a region for the query.
+                     * @param _area Specifies a region for the query.
 `mainland`: specifies to return the download link of logs on acceleration within Mainland China;
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -171,20 +189,23 @@ Default value: `mainland`.
 `access`: Access logs.
                      * @return LogType Specifies the type of logs to download (only access logs supported).
 `access`: Access logs.
+                     * 
                      */
                     std::string GetLogType() const;
 
                     /**
                      * 设置Specifies the type of logs to download (only access logs supported).
 `access`: Access logs.
-                     * @param LogType Specifies the type of logs to download (only access logs supported).
+                     * @param _logType Specifies the type of logs to download (only access logs supported).
 `access`: Access logs.
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 

@@ -53,18 +53,21 @@ namespace TencentCloud
                     /**
                      * 获取The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
                      * @return ProductVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetProductVersion() const;
 
                     /**
                      * 设置The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
-                     * @param ProductVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
+                     * @param _productVersion The EMR version, such as `EMR-V2.3.0` that indicates the version 2.3.0 of EMR. You can query the EMR version [here](https://intl.cloud.tencent.com/document/product/589/66338?from_cn_redirect=1).
+                     * 
                      */
                     void SetProductVersion(const std::string& _productVersion);
 
                     /**
                      * 判断参数 ProductVersion 是否已赋值
                      * @return ProductVersion 是否已赋值
+                     * 
                      */
                     bool ProductVersionHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
                      * @return EnableSupportHAFlag Whether to enable high availability for nodes. Valid values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
+                     * 
                      */
                     bool GetEnableSupportHAFlag() const;
 
@@ -82,15 +86,17 @@ namespace TencentCloud
                      * 设置Whether to enable high availability for nodes. Valid values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
-                     * @param EnableSupportHAFlag Whether to enable high availability for nodes. Valid values:
+                     * @param _enableSupportHAFlag Whether to enable high availability for nodes. Valid values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
+                     * 
                      */
                     void SetEnableSupportHAFlag(const bool& _enableSupportHAFlag);
 
                     /**
                      * 判断参数 EnableSupportHAFlag 是否已赋值
                      * @return EnableSupportHAFlag 是否已赋值
+                     * 
                      */
                     bool EnableSupportHAFlagHasBeenSet() const;
 
@@ -101,6 +107,7 @@ namespace TencentCloud
                      * @return InstanceName The instance name.
 <li>Length limit: 6–36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
+                     * 
                      */
                     std::string GetInstanceName() const;
 
@@ -108,15 +115,17 @@ namespace TencentCloud
                      * 设置The instance name.
 <li>Length limit: 6–36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
-                     * @param InstanceName The instance name.
+                     * @param _instanceName The instance name.
 <li>Length limit: 6–36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -125,20 +134,23 @@ namespace TencentCloud
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
                      * @return InstanceChargeType The instance billing mode. Valid values:
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置The instance billing mode. Valid values:
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
-                     * @param InstanceChargeType The instance billing mode. Valid values:
+                     * @param _instanceChargeType The instance billing mode. Valid values:
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
@@ -149,6 +161,7 @@ namespace TencentCloud
                      * @return LoginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
 <li>If a key is set, the password will be used for login to the native component WebUI only.</li>
 <li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+                     * 
                      */
                     LoginSettings GetLoginSettings() const;
 
@@ -156,105 +169,122 @@ namespace TencentCloud
                      * 设置The instance login setting. This parameter allows you to set a login password or key for your purchased node.
 <li>If a key is set, the password will be used for login to the native component WebUI only.</li>
 <li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
-                     * @param LoginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
+                     * @param _loginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
 <li>If a key is set, the password will be used for login to the native component WebUI only.</li>
 <li>If no key is set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+                     * 
                      */
                     void SetLoginSettings(const LoginSettings& _loginSettings);
 
                     /**
                      * 判断参数 LoginSettings 是否已赋值
                      * @return LoginSettings 是否已赋值
+                     * 
                      */
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
                      * 获取The configuration of cluster application scenario and supported components.
                      * @return SceneSoftwareConfig The configuration of cluster application scenario and supported components.
+                     * 
                      */
                     SceneSoftwareConfig GetSceneSoftwareConfig() const;
 
                     /**
                      * 设置The configuration of cluster application scenario and supported components.
-                     * @param SceneSoftwareConfig The configuration of cluster application scenario and supported components.
+                     * @param _sceneSoftwareConfig The configuration of cluster application scenario and supported components.
+                     * 
                      */
                     void SetSceneSoftwareConfig(const SceneSoftwareConfig& _sceneSoftwareConfig);
 
                     /**
                      * 判断参数 SceneSoftwareConfig 是否已赋值
                      * @return SceneSoftwareConfig 是否已赋值
+                     * 
                      */
                     bool SceneSoftwareConfigHasBeenSet() const;
 
                     /**
                      * 获取The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
                      * @return InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
+                     * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
                      * 设置The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
-                     * @param InstanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
+                     * @param _instanceChargePrepaid The details of the monthly subscription, including the instance period and auto-renewal. It is required if `InstanceChargeType` is `PREPAID`.
+                     * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
                     /**
                      * 判断参数 InstanceChargePrepaid 是否已赋值
                      * @return InstanceChargePrepaid 是否已赋值
+                     * 
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
                      * 获取The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
                      * @return SecurityGroupIds The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
-                     * @param SecurityGroupIds The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
+                     * @param _securityGroupIds The ID of the security group to which the instance belongs, in the format of `sg-xxxxxxxx`. You can call the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API and obtain this parameter from the `SecurityGroupId` field in the response.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
                      * @return ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * 
                      */
                     std::vector<ScriptBootstrapActionConfig> GetScriptBootstrapActionConfig() const;
 
                     /**
                      * 设置The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
-                     * @param ScriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * @param _scriptBootstrapActionConfig The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+                     * 
                      */
                     void SetScriptBootstrapActionConfig(const std::vector<ScriptBootstrapActionConfig>& _scriptBootstrapActionConfig);
 
                     /**
                      * 判断参数 ScriptBootstrapActionConfig 是否已赋值
                      * @return ScriptBootstrapActionConfig 是否已赋值
+                     * 
                      */
                     bool ScriptBootstrapActionConfigHasBeenSet() const;
 
                     /**
                      * 获取A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
                      * @return ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+                     * 
                      */
                     std::string GetClientToken() const;
 
                     /**
                      * 设置A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
-                     * @param ClientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+                     * @param _clientToken A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+                     * 
                      */
                     void SetClientToken(const std::string& _clientToken);
 
                     /**
                      * 判断参数 ClientToken 是否已赋值
                      * @return ClientToken 是否已赋值
+                     * 
                      */
                     bool ClientTokenHasBeenSet() const;
 
@@ -265,6 +295,7 @@ namespace TencentCloud
                      * @return NeedMasterWan Whether to enable public IP access for master nodes. Valid values:
 <li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
 <li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
+                     * 
                      */
                     std::string GetNeedMasterWan() const;
 
@@ -272,15 +303,17 @@ namespace TencentCloud
                      * 设置Whether to enable public IP access for master nodes. Valid values:
 <li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
 <li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
-                     * @param NeedMasterWan Whether to enable public IP access for master nodes. Valid values:
+                     * @param _needMasterWan Whether to enable public IP access for master nodes. Valid values:
 <li>`NEED_MASTER_WAN`: Enable public IP for master nodes.</li>
 <li>`NOT_NEED_MASTER_WAN`: Disable.</li>The public IP is enabled for master nodes by default.
+                     * 
                      */
                     void SetNeedMasterWan(const std::string& _needMasterWan);
 
                     /**
                      * 判断参数 NeedMasterWan 是否已赋值
                      * @return NeedMasterWan 是否已赋值
+                     * 
                      */
                     bool NeedMasterWanHasBeenSet() const;
 
@@ -291,6 +324,7 @@ namespace TencentCloud
                      * @return EnableRemoteLoginFlag Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
+                     * 
                      */
                     bool GetEnableRemoteLoginFlag() const;
 
@@ -298,15 +332,17 @@ namespace TencentCloud
                      * 设置Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
-                     * @param EnableRemoteLoginFlag Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
+                     * @param _enableRemoteLoginFlag Whether to enable remote login over the public network. It is invalid if `SecurityGroupId` is passed in. It is disabled by default. Valid values:
 <li>`true`: Enable</li>
 <li>`false`: Disable</li>
+                     * 
                      */
                     void SetEnableRemoteLoginFlag(const bool& _enableRemoteLoginFlag);
 
                     /**
                      * 判断参数 EnableRemoteLoginFlag 是否已赋值
                      * @return EnableRemoteLoginFlag 是否已赋值
+                     * 
                      */
                     bool EnableRemoteLoginFlagHasBeenSet() const;
 
@@ -317,6 +353,7 @@ namespace TencentCloud
                      * @return EnableKerberosFlag Whether to enable Kerberos authentication. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
+                     * 
                      */
                     bool GetEnableKerberosFlag() const;
 
@@ -324,51 +361,59 @@ namespace TencentCloud
                      * 设置Whether to enable Kerberos authentication. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
-                     * @param EnableKerberosFlag Whether to enable Kerberos authentication. Valid values:
+                     * @param _enableKerberosFlag Whether to enable Kerberos authentication. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
+                     * 
                      */
                     void SetEnableKerberosFlag(const bool& _enableKerberosFlag);
 
                     /**
                      * 判断参数 EnableKerberosFlag 是否已赋值
                      * @return EnableKerberosFlag 是否已赋值
+                     * 
                      */
                     bool EnableKerberosFlagHasBeenSet() const;
 
                     /**
                      * 获取[Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
                      * @return CustomConf [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
+                     * 
                      */
                     std::string GetCustomConf() const;
 
                     /**
                      * 设置[Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
-                     * @param CustomConf [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
+                     * @param _customConf [Custom software configuration](https://intl.cloud.tencent.com/document/product/589/35655?from_cn_redirect=1?from_cn_redirect=1)
+                     * 
                      */
                     void SetCustomConf(const std::string& _customConf);
 
                     /**
                      * 判断参数 CustomConf 是否已赋值
                      * @return CustomConf 是否已赋值
+                     * 
                      */
                     bool CustomConfHasBeenSet() const;
 
                     /**
                      * 获取The tag description list. This parameter is used to bind a tag to a resource instance.
                      * @return Tags The tag description list. This parameter is used to bind a tag to a resource instance.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置The tag description list. This parameter is used to bind a tag to a resource instance.
-                     * @param Tags The tag description list. This parameter is used to bind a tag to a resource instance.
+                     * @param _tags The tag description list. This parameter is used to bind a tag to a resource instance.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -377,20 +422,23 @@ namespace TencentCloud
 You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
                      * @return DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
 You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+                     * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
                      * 设置The list of spread placement group IDs. Only one can be specified.
 You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
-                     * @param DisasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
+                     * @param _disasterRecoverGroupIds The list of spread placement group IDs. Only one can be specified.
 You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+                     * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
 
                     /**
                      * 判断参数 DisasterRecoverGroupIds 是否已赋值
                      * @return DisasterRecoverGroupIds 是否已赋值
+                     * 
                      */
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
@@ -401,6 +449,7 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                      * @return EnableCbsEncryptFlag Whether to enable the cluster-level CBS encryption. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
+                     * 
                      */
                     bool GetEnableCbsEncryptFlag() const;
 
@@ -408,15 +457,17 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
                      * 设置Whether to enable the cluster-level CBS encryption. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
-                     * @param EnableCbsEncryptFlag Whether to enable the cluster-level CBS encryption. Valid values:
+                     * @param _enableCbsEncryptFlag Whether to enable the cluster-level CBS encryption. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
+                     * 
                      */
                     void SetEnableCbsEncryptFlag(const bool& _enableCbsEncryptFlag);
 
                     /**
                      * 判断参数 EnableCbsEncryptFlag 是否已赋值
                      * @return EnableCbsEncryptFlag 是否已赋值
+                     * 
                      */
                     bool EnableCbsEncryptFlagHasBeenSet() const;
 
@@ -427,6 +478,7 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
                      * @return MetaDBInfo The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
 If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
 If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
+                     * 
                      */
                     CustomMetaDBInfo GetMetaDBInfo() const;
 
@@ -434,51 +486,59 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
                      * 设置The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
 If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
 If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
-                     * @param MetaDBInfo The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
+                     * @param _metaDBInfo The metadatabase information. If `MetaType` is `EMR_NEW_META`, `MetaDataJdbcUrl`, `MetaDataUser`, `MetaDataPass`, and `UnifyMetaInstanceId` are not required.
 If `MetaType` is `EMR_EXIT_META`, `UnifyMetaInstanceId` is required.
 If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `MetaDataPass` are required.
+                     * 
                      */
                     void SetMetaDBInfo(const CustomMetaDBInfo& _metaDBInfo);
 
                     /**
                      * 判断参数 MetaDBInfo 是否已赋值
                      * @return MetaDBInfo 是否已赋值
+                     * 
                      */
                     bool MetaDBInfoHasBeenSet() const;
 
                     /**
                      * 获取The shared component information.
                      * @return DependService The shared component information.
+                     * 
                      */
                     std::vector<DependService> GetDependService() const;
 
                     /**
                      * 设置The shared component information.
-                     * @param DependService The shared component information.
+                     * @param _dependService The shared component information.
+                     * 
                      */
                     void SetDependService(const std::vector<DependService>& _dependService);
 
                     /**
                      * 判断参数 DependService 是否已赋值
                      * @return DependService 是否已赋值
+                     * 
                      */
                     bool DependServiceHasBeenSet() const;
 
                     /**
                      * 获取The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
                      * @return ZoneResourceConfiguration The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+                     * 
                      */
                     std::vector<ZoneResourceConfiguration> GetZoneResourceConfiguration() const;
 
                     /**
                      * 设置The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
-                     * @param ZoneResourceConfiguration The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+                     * @param _zoneResourceConfiguration The node resource specs. A spec is specified for each AZ, with the first spec for the primary AZ, the second for the backup AZ, and the third for the arbitrator AZ. If the multi-AZ mode is not enabled, only one spec is required.
+                     * 
                      */
                     void SetZoneResourceConfiguration(const std::vector<ZoneResourceConfiguration>& _zoneResourceConfiguration);
 
                     /**
                      * 判断参数 ZoneResourceConfiguration 是否已赋值
                      * @return ZoneResourceConfiguration 是否已赋值
+                     * 
                      */
                     bool ZoneResourceConfigurationHasBeenSet() const;
 

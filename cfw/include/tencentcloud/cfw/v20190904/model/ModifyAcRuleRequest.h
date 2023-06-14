@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Array of rules
                      * @return Data Array of rules
+                     * 
                      */
                     std::vector<RuleInfoData> GetData() const;
 
                     /**
                      * 设置Array of rules
-                     * @param Data Array of rules
+                     * @param _data Array of rules
+                     * 
                      */
                     void SetData(const std::vector<RuleInfoData>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取EdgeId value
                      * @return EdgeId EdgeId value
+                     * 
                      */
                     std::string GetEdgeId() const;
 
                     /**
                      * 设置EdgeId value
-                     * @param EdgeId EdgeId value
+                     * @param _edgeId EdgeId value
+                     * 
                      */
                     void SetEdgeId(const std::string& _edgeId);
 
                     /**
                      * 判断参数 EdgeId 是否已赋值
                      * @return EdgeId 是否已赋值
+                     * 
                      */
                     bool EdgeIdHasBeenSet() const;
 
                     /**
                      * 获取Access rule status
                      * @return Enable Access rule status
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Access rule status
-                     * @param Enable Access rule status
+                     * @param _enable Access rule status
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取NAT region
                      * @return Area NAT region
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置NAT region
-                     * @param Area NAT region
+                     * @param _area NAT region
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

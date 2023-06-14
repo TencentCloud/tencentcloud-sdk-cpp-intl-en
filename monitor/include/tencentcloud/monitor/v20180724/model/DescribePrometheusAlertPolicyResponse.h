@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AlertRules Alert details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusAlertPolicyItem> GetAlertRules() const;
 
                     /**
                      * 判断参数 AlertRules 是否已赋值
                      * @return AlertRules 是否已赋值
+                     * 
                      */
                     bool AlertRulesHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return Total Total number
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

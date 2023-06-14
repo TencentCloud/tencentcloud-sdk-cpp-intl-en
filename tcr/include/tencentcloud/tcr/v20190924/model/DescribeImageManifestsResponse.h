@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Image manifest information
                      * @return Manifest Image manifest information
+                     * 
                      */
                     std::string GetManifest() const;
 
                     /**
                      * 判断参数 Manifest 是否已赋值
                      * @return Manifest 是否已赋值
+                     * 
                      */
                     bool ManifestHasBeenSet() const;
 
                     /**
                      * 获取Image configuration information
                      * @return Config Image configuration information
+                     * 
                      */
                     std::string GetConfig() const;
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Brute force attack array in weekly CWP Pro report.
                      * @return WeeklyReportBruteAttacks Brute force attack array in weekly CWP Pro report.
+                     * 
                      */
                     std::vector<WeeklyReportBruteAttack> GetWeeklyReportBruteAttacks() const;
 
                     /**
                      * 判断参数 WeeklyReportBruteAttacks 是否已赋值
                      * @return WeeklyReportBruteAttacks 是否已赋值
+                     * 
                      */
                     bool WeeklyReportBruteAttacksHasBeenSet() const;
 
                     /**
                      * 获取Total number of records.
                      * @return TotalCount Total number of records.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

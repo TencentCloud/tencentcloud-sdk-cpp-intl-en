@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID.
                      * @return LocationId Rule ID.
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置Rule ID.
-                     * @param LocationId Rule ID.
+                     * @param _locationId Rule ID.
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name.
                      * @return Domain Domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name.
-                     * @param Domain Domain name.
+                     * @param _domain Domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Uri
                      * @return Url Uri
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Uri
-                     * @param Url Uri
+                     * @param _url Uri
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Object bound to the real server.
                      * @return Targets Object bound to the real server.
+                     * 
                      */
                     std::vector<LbRsTargets> GetTargets() const;
 
                     /**
                      * 设置Object bound to the real server.
-                     * @param Targets Object bound to the real server.
+                     * @param _targets Object bound to the real server.
+                     * 
                      */
                     void SetTargets(const std::vector<LbRsTargets>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 

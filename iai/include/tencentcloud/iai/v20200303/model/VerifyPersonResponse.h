@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
                      * @return Score Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
+                     * 
                      */
                     double GetScore() const;
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
                     /**
                      * 获取Whether the person in the image matches the `PersonId`.
                      * @return IsMatch Whether the person in the image matches the `PersonId`.
+                     * 
                      */
                     bool GetIsMatch() const;
 
                     /**
                      * 判断参数 IsMatch 是否已赋值
                      * @return IsMatch 是否已赋值
+                     * 
                      */
                     bool IsMatchHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
                      * @return FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

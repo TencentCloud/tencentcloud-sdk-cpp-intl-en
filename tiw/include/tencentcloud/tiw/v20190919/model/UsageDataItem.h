@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Start date in the format of YYYY-MM-DD.
                      * @return Time Start date in the format of YYYY-MM-DD.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Start date in the format of YYYY-MM-DD.
-                     * @param Time Start date in the format of YYYY-MM-DD.
+                     * @param _time Start date in the format of YYYY-MM-DD.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -93,6 +99,7 @@ namespace TencentCloud
 - sp_tiw_dt: The number of pages dynamically transcoded.
 - sp_tiw_st: The number of pages statically transcoded.
 - sp_tiw_ric: The duration of real-time recording.
+                     * 
                      */
                     std::string GetSubProduct() const;
 
@@ -102,17 +109,19 @@ namespace TencentCloud
 - sp_tiw_dt: The number of pages dynamically transcoded.
 - sp_tiw_st: The number of pages statically transcoded.
 - sp_tiw_ric: The duration of real-time recording.
-                     * @param SubProduct Subproduct usage information, which is consistent with the corresponding request parameters.
+                     * @param _subProduct Subproduct usage information, which is consistent with the corresponding request parameters.
 - sp_tiw_board: The duration of use of whiteboards.
 - sp_tiw_dt: The number of pages dynamically transcoded.
 - sp_tiw_st: The number of pages statically transcoded.
 - sp_tiw_ric: The duration of real-time recording.
+                     * 
                      */
                     void SetSubProduct(const std::string& _subProduct);
 
                     /**
                      * 判断参数 SubProduct 是否已赋值
                      * @return SubProduct 是否已赋值
+                     * 
                      */
                     bool SubProductHasBeenSet() const;
 
@@ -123,6 +132,7 @@ namespace TencentCloud
                      * @return Value Usage values.
 - The unit of sp_tiw_dt and sp_tiw_st is pages.
 - The unit of sp_tiw_board and sp_tiw_ric is minutes.
+                     * 
                      */
                     double GetValue() const;
 
@@ -130,15 +140,17 @@ namespace TencentCloud
                      * 设置Usage values.
 - The unit of sp_tiw_dt and sp_tiw_st is pages.
 - The unit of sp_tiw_board and sp_tiw_ric is minutes.
-                     * @param Value Usage values.
+                     * @param _value Usage values.
 - The unit of sp_tiw_dt and sp_tiw_st is pages.
 - The unit of sp_tiw_board and sp_tiw_ric is minutes.
+                     * 
                      */
                     void SetValue(const double& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

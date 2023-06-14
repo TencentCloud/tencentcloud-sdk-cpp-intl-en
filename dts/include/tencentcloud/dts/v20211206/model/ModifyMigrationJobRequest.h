@@ -48,162 +48,189 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return JobId Task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Task ID
-                     * @param JobId Task ID
+                     * @param _jobId Task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Running mode. Valid values: `immediate`, `timed`.
                      * @return RunMode Running mode. Valid values: `immediate`, `timed`.
+                     * 
                      */
                     std::string GetRunMode() const;
 
                     /**
                      * 设置Running mode. Valid values: `immediate`, `timed`.
-                     * @param RunMode Running mode. Valid values: `immediate`, `timed`.
+                     * @param _runMode Running mode. Valid values: `immediate`, `timed`.
+                     * 
                      */
                     void SetRunMode(const std::string& _runMode);
 
                     /**
                      * 判断参数 RunMode 是否已赋值
                      * @return RunMode 是否已赋值
+                     * 
                      */
                     bool RunModeHasBeenSet() const;
 
                     /**
                      * 获取Migration task configuration options, which describe how the task performs migration.
                      * @return MigrateOption Migration task configuration options, which describe how the task performs migration.
+                     * 
                      */
                     MigrateOption GetMigrateOption() const;
 
                     /**
                      * 设置Migration task configuration options, which describe how the task performs migration.
-                     * @param MigrateOption Migration task configuration options, which describe how the task performs migration.
+                     * @param _migrateOption Migration task configuration options, which describe how the task performs migration.
+                     * 
                      */
                     void SetMigrateOption(const MigrateOption& _migrateOption);
 
                     /**
                      * 判断参数 MigrateOption 是否已赋值
                      * @return MigrateOption 是否已赋值
+                     * 
                      */
                     bool MigrateOptionHasBeenSet() const;
 
                     /**
                      * 获取Source instance information
                      * @return SrcInfo Source instance information
+                     * 
                      */
                     DBEndpointInfo GetSrcInfo() const;
 
                     /**
                      * 设置Source instance information
-                     * @param SrcInfo Source instance information
+                     * @param _srcInfo Source instance information
+                     * 
                      */
                     void SetSrcInfo(const DBEndpointInfo& _srcInfo);
 
                     /**
                      * 判断参数 SrcInfo 是否已赋值
                      * @return SrcInfo 是否已赋值
+                     * 
                      */
                     bool SrcInfoHasBeenSet() const;
 
                     /**
                      * 获取Target instance information
                      * @return DstInfo Target instance information
+                     * 
                      */
                     DBEndpointInfo GetDstInfo() const;
 
                     /**
                      * 设置Target instance information
-                     * @param DstInfo Target instance information
+                     * @param _dstInfo Target instance information
+                     * 
                      */
                     void SetDstInfo(const DBEndpointInfo& _dstInfo);
 
                     /**
                      * 判断参数 DstInfo 是否已赋值
                      * @return DstInfo 是否已赋值
+                     * 
                      */
                     bool DstInfoHasBeenSet() const;
 
                     /**
                      * 获取Migration task name, which can contain up to 128 characters.
                      * @return JobName Migration task name, which can contain up to 128 characters.
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Migration task name, which can contain up to 128 characters.
-                     * @param JobName Migration task name, which can contain up to 128 characters.
+                     * @param _jobName Migration task name, which can contain up to 128 characters.
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `timed`.
                      * @return ExpectRunTime Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `timed`.
+                     * 
                      */
                     std::string GetExpectRunTime() const;
 
                     /**
                      * 设置Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `timed`.
-                     * @param ExpectRunTime Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `timed`.
+                     * @param _expectRunTime Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `timed`.
+                     * 
                      */
                     void SetExpectRunTime(const std::string& _expectRunTime);
 
                     /**
                      * 判断参数 ExpectRunTime 是否已赋值
                      * @return ExpectRunTime 是否已赋值
+                     * 
                      */
                     bool ExpectRunTimeHasBeenSet() const;
 
                     /**
                      * 获取Tag information
                      * @return Tags Tag information
+                     * 
                      */
                     std::vector<TagItem> GetTags() const;
 
                     /**
                      * 设置Tag information
-                     * @param Tags Tag information
+                     * @param _tags Tag information
+                     * 
                      */
                     void SetTags(const std::vector<TagItem>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
                      * @return AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     * 
                      */
                     int64_t GetAutoRetryTimeRangeMinutes() const;
 
                     /**
                      * 设置Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
-                     * @param AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     * @param _autoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     * 
                      */
                     void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
 
                     /**
                      * 判断参数 AutoRetryTimeRangeMinutes 是否已赋值
                      * @return AutoRetryTimeRangeMinutes 是否已赋值
+                     * 
                      */
                     bool AutoRetryTimeRangeMinutesHasBeenSet() const;
 

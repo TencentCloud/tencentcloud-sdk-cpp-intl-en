@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Invoker ID.
                      * @return InvokerId Invoker ID.
+                     * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
                      * 设置Invoker ID.
-                     * @param InvokerId Invoker ID.
+                     * @param _invokerId Invoker ID.
+                     * 
                      */
                     void SetInvokerId(const std::string& _invokerId);
 
                     /**
                      * 判断参数 InvokerId 是否已赋值
                      * @return InvokerId 是否已赋值
+                     * 
                      */
                     bool InvokerIdHasBeenSet() const;
 
                     /**
                      * 获取Invoker name.
                      * @return Name Invoker name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Invoker name.
-                     * @param Name Invoker name.
+                     * @param _name Invoker name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Invoker type.
                      * @return Type Invoker type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Invoker type.
-                     * @param Type Invoker type.
+                     * @param _type Invoker type.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Command ID.
                      * @return CommandId Command ID.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 设置Command ID.
-                     * @param CommandId Command ID.
+                     * @param _commandId Command ID.
+                     * 
                      */
                     void SetCommandId(const std::string& _commandId);
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 
                     /**
                      * 获取Username.
                      * @return Username Username.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Username.
-                     * @param Username Username.
+                     * @param _username Username.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Custom parameters.
                      * @return Parameters Custom parameters.
+                     * 
                      */
                     std::string GetParameters() const;
 
                     /**
                      * 设置Custom parameters.
-                     * @param Parameters Custom parameters.
+                     * @param _parameters Custom parameters.
+                     * 
                      */
                     void SetParameters(const std::string& _parameters);
 
                     /**
                      * 判断参数 Parameters 是否已赋值
                      * @return Parameters 是否已赋值
+                     * 
                      */
                     bool ParametersHasBeenSet() const;
 
                     /**
                      * 获取Instance ID list.
                      * @return InstanceIds Instance ID list.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Instance ID list.
-                     * @param InstanceIds Instance ID list.
+                     * @param _instanceIds Instance ID list.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the invoker.
                      * @return Enable Whether to enable the invoker.
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Whether to enable the invoker.
-                     * @param Enable Whether to enable the invoker.
+                     * @param _enable Whether to enable the invoker.
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -196,56 +220,65 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ScheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     ScheduleSettings GetScheduleSettings() const;
 
                     /**
                      * 设置Execution schedule of the invoker. This field is returned for recurring invokers.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ScheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
+                     * @param _scheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScheduleSettings(const ScheduleSettings& _scheduleSettings);
 
                     /**
                      * 判断参数 ScheduleSettings 是否已赋值
                      * @return ScheduleSettings 是否已赋值
+                     * 
                      */
                     bool ScheduleSettingsHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return CreatedTime Creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreatedTime Creation time.
+                     * @param _createdTime Creation time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Modification time.
                      * @return UpdatedTime Modification time.
+                     * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
                      * 设置Modification time.
-                     * @param UpdatedTime Modification time.
+                     * @param _updatedTime Modification time.
+                     * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
 
                     /**
                      * 判断参数 UpdatedTime 是否已赋值
                      * @return UpdatedTime 是否已赋值
+                     * 
                      */
                     bool UpdatedTimeHasBeenSet() const;
 

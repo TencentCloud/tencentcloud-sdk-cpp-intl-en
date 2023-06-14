@@ -54,74 +54,86 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ZoneTag "master", "standby", "third-party"
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetZoneTag() const;
 
                     /**
                      * 设置"master", "standby", "third-party"
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ZoneTag "master", "standby", "third-party"
+                     * @param _zoneTag "master", "standby", "third-party"
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetZoneTag(const std::string& _zoneTag);
 
                     /**
                      * 判断参数 ZoneTag 是否已赋值
                      * @return ZoneTag 是否已赋值
+                     * 
                      */
                     bool ZoneTagHasBeenSet() const;
 
                     /**
                      * 获取None
                      * @return VPCSettings None
+                     * 
                      */
                     VPCSettings GetVPCSettings() const;
 
                     /**
                      * 设置None
-                     * @param VPCSettings None
+                     * @param _vPCSettings None
+                     * 
                      */
                     void SetVPCSettings(const VPCSettings& _vPCSettings);
 
                     /**
                      * 判断参数 VPCSettings 是否已赋值
                      * @return VPCSettings 是否已赋值
+                     * 
                      */
                     bool VPCSettingsHasBeenSet() const;
 
                     /**
                      * 获取None
                      * @return Placement None
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置None
-                     * @param Placement None
+                     * @param _placement None
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取None
                      * @return ResourceSpec None
+                     * 
                      */
                     NewResourceSpec GetResourceSpec() const;
 
                     /**
                      * 设置None
-                     * @param ResourceSpec None
+                     * @param _resourceSpec None
+                     * 
                      */
                     void SetResourceSpec(const NewResourceSpec& _resourceSpec);
 
                     /**
                      * 判断参数 ResourceSpec 是否已赋值
                      * @return ResourceSpec 是否已赋值
+                     * 
                      */
                     bool ResourceSpecHasBeenSet() const;
 

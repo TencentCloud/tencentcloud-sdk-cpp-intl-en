@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
                      * @return SimpleAesDefinition ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+                     * 
                      */
                     uint64_t GetSimpleAesDefinition() const;
 
                     /**
                      * 设置ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
-                     * @param SimpleAesDefinition ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+                     * @param _simpleAesDefinition ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+                     * 
                      */
                     void SetSimpleAesDefinition(const uint64_t& _simpleAesDefinition);
 
                     /**
                      * 判断参数 SimpleAesDefinition 是否已赋值
                      * @return SimpleAesDefinition 是否已赋值
+                     * 
                      */
                     bool SimpleAesDefinitionHasBeenSet() const;
 
                     /**
                      * 获取The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
                      * @return WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     * 
                      */
                     uint64_t GetWidevineDefinition() const;
 
                     /**
                      * 设置The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
-                     * @param WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     * @param _widevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     * 
                      */
                     void SetWidevineDefinition(const uint64_t& _widevineDefinition);
 
                     /**
                      * 判断参数 WidevineDefinition 是否已赋值
                      * @return WidevineDefinition 是否已赋值
+                     * 
                      */
                     bool WidevineDefinitionHasBeenSet() const;
 
                     /**
                      * 获取The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
                      * @return FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     * 
                      */
                     uint64_t GetFairPlayDefinition() const;
 
                     /**
                      * 设置The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
-                     * @param FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     * @param _fairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     * 
                      */
                     void SetFairPlayDefinition(const uint64_t& _fairPlayDefinition);
 
                     /**
                      * 判断参数 FairPlayDefinition 是否已赋值
                      * @return FairPlayDefinition 是否已赋值
+                     * 
                      */
                     bool FairPlayDefinitionHasBeenSet() const;
 

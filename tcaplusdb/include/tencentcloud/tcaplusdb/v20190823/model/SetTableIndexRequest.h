@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where the table resides
                      * @return ClusterId ID of the cluster where the table resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where the table resides
-                     * @param ClusterId ID of the cluster where the table resides
+                     * @param _clusterId ID of the cluster where the table resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The list of tables that need to create global indexes
                      * @return SelectedTables The list of tables that need to create global indexes
+                     * 
                      */
                     std::vector<SelectedTableWithField> GetSelectedTables() const;
 
                     /**
                      * 设置The list of tables that need to create global indexes
-                     * @param SelectedTables The list of tables that need to create global indexes
+                     * @param _selectedTables The list of tables that need to create global indexes
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableWithField>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 

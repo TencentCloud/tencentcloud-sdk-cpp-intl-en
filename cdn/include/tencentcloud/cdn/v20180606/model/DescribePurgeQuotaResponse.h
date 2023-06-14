@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取URL purge usage and quota.
                      * @return UrlPurge URL purge usage and quota.
+                     * 
                      */
                     std::vector<Quota> GetUrlPurge() const;
 
                     /**
                      * 判断参数 UrlPurge 是否已赋值
                      * @return UrlPurge 是否已赋值
+                     * 
                      */
                     bool UrlPurgeHasBeenSet() const;
 
                     /**
                      * 获取Directory purge usage and quota.
                      * @return PathPurge Directory purge usage and quota.
+                     * 
                      */
                     std::vector<Quota> GetPathPurge() const;
 
                     /**
                      * 判断参数 PathPurge 是否已赋值
                      * @return PathPurge 是否已赋值
+                     * 
                      */
                     bool PathPurgeHasBeenSet() const;
 

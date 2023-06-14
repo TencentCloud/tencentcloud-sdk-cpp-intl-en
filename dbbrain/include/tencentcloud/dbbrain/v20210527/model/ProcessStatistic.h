@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Array of session details
                      * @return Items Array of session details
+                     * 
                      */
                     std::vector<SessionItem> GetItems() const;
 
                     /**
                      * 设置Array of session details
-                     * @param Items Array of session details
+                     * @param _items Array of session details
+                     * 
                      */
                     void SetItems(const std::vector<SessionItem>& _items);
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 
                     /**
                      * 获取The total number of connections
                      * @return AllConnSum The total number of connections
+                     * 
                      */
                     int64_t GetAllConnSum() const;
 
                     /**
                      * 设置The total number of connections
-                     * @param AllConnSum The total number of connections
+                     * @param _allConnSum The total number of connections
+                     * 
                      */
                     void SetAllConnSum(const int64_t& _allConnSum);
 
                     /**
                      * 判断参数 AllConnSum 是否已赋值
                      * @return AllConnSum 是否已赋值
+                     * 
                      */
                     bool AllConnSumHasBeenSet() const;
 
                     /**
                      * 获取The total number of active connections
                      * @return ActiveConnSum The total number of active connections
+                     * 
                      */
                     int64_t GetActiveConnSum() const;
 
                     /**
                      * 设置The total number of active connections
-                     * @param ActiveConnSum The total number of active connections
+                     * @param _activeConnSum The total number of active connections
+                     * 
                      */
                     void SetActiveConnSum(const int64_t& _activeConnSum);
 
                     /**
                      * 判断参数 ActiveConnSum 是否已赋值
                      * @return ActiveConnSum 是否已赋值
+                     * 
                      */
                     bool ActiveConnSumHasBeenSet() const;
 

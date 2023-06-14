@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId Unique rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置Unique rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleId Unique rule ID
+                     * @param _ruleId Unique rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Rule description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Description Rule description
+                     * @param _description Rule description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleTypeName Rule type name: botdb (user profile)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleTypeName() const;
 
                     /**
                      * 设置Rule type name: botdb (user profile)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleTypeName Rule type name: botdb (user profile)
+                     * @param _ruleTypeName Rule type name: botdb (user profile)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleTypeName(const std::string& _ruleTypeName);
 
                     /**
                      * 判断参数 RuleTypeName 是否已赋值
                      * @return RuleTypeName 是否已赋值
+                     * 
                      */
                     bool RuleTypeNameHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClassificationId Rule feature category ID (scanner, bot behavior, etc.)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetClassificationId() const;
 
                     /**
                      * 设置Rule feature category ID (scanner, bot behavior, etc.)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClassificationId Rule feature category ID (scanner, bot behavior, etc.)
+                     * @param _classificationId Rule feature category ID (scanner, bot behavior, etc.)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassificationId(const int64_t& _classificationId);
 
                     /**
                      * 判断参数 ClassificationId 是否已赋值
                      * @return ClassificationId 是否已赋值
+                     * 
                      */
                     bool ClassificationIdHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Current rule action status (block, alg, etc.)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Current rule action status (block, alg, etc.)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Current rule action status (block, alg, etc.)
+                     * @param _status Current rule action status (block, alg, etc.)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

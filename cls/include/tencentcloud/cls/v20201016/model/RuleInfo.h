@@ -55,20 +55,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FullTextInfo GetFullText() const;
 
                     /**
                      * 设置Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+                     * @param _fullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFullText(const FullTextInfo& _fullText);
 
                     /**
                      * 判断参数 FullText 是否已赋值
                      * @return FullText 是否已赋值
+                     * 
                      */
                     bool FullTextHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RuleKeyValueInfo GetKeyValue() const;
 
                     /**
                      * 设置Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+                     * @param _keyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeyValue(const RuleKeyValueInfo& _keyValue);
 
                     /**
                      * 判断参数 KeyValue 是否已赋值
                      * @return KeyValue 是否已赋值
+                     * 
                      */
                     bool KeyValueHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RuleTagInfo GetTag() const;
 
                     /**
                      * 设置Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+                     * @param _tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTag(const RuleTagInfo& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DynamicIndex GetDynamicIndex() const;
 
                     /**
                      * 设置Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+                     * @param _dynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDynamicIndex(const DynamicIndex& _dynamicIndex);
 
                     /**
                      * 判断参数 DynamicIndex 是否已赋值
                      * @return DynamicIndex 是否已赋值
+                     * 
                      */
                     bool DynamicIndexHasBeenSet() const;
 

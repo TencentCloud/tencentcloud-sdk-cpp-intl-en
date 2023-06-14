@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of a registrant profile.
                      * @return TemplateId The unique ID of a registrant profile.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置The unique ID of a registrant profile.
-                     * @param TemplateId The unique ID of a registrant profile.
+                     * @param _templateId The unique ID of a registrant profile.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 

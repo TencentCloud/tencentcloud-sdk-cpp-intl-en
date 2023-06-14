@@ -49,6 +49,7 @@ The period between the start time and end time can be up to 90 days.
                      * @return StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
 The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -56,15 +57,17 @@ The period between the start time and end time can be up to 90 days.
                      * 设置Start time of the query, e.g., 2018-09-04 10:40:00.
 The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
-                     * @param StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+                     * @param _startTime Start time of the query, e.g., 2018-09-04 10:40:00.
 The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -75,6 +78,7 @@ The period between the start time and end time can be up to 90 days.
                      * @return EndTime End time of the query, e.g. 2018-09-04 10:40:00.
 The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -82,15 +86,17 @@ The period between the start time and end time can be up to 90 days.
                      * 设置End time of the query, e.g. 2018-09-04 10:40:00.
 The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
-                     * @param EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+                     * @param _endTime End time of the query, e.g. 2018-09-04 10:40:00.
 The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
 The period between the start time and end time can be up to 90 days.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -131,6 +137,7 @@ Specifies the status code to query. The return will be empty if the status code 
 `4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
 `5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
+                     * 
                      */
                     std::string GetMetric() const;
 
@@ -153,7 +160,7 @@ Specifies the status code to query. The return will be empty if the status code 
 `4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
 `5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
-                     * @param Metric Specifies the metric to query, which can be:
+                     * @param _metric Specifies the metric to query, which can be:
 `flux`: Traffic (in bytes)
 `fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
 `fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
@@ -171,12 +178,14 @@ Specifies the status code to query. The return will be empty if the status code 
 `4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
 `5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
@@ -189,6 +198,7 @@ If this parameter is not specified, it means to query all domain names under the
 You can specify one or more domain names.
 Up to 30 domain names can be queried in one request.
 If this parameter is not specified, it means to query all domain names under the current account.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
@@ -197,16 +207,18 @@ If this parameter is not specified, it means to query all domain names under the
 You can specify one or more domain names.
 Up to 30 domain names can be queried in one request.
 If this parameter is not specified, it means to query all domain names under the current account.
-                     * @param Domains Specifies the list of domain names to be queried
+                     * @param _domains Specifies the list of domain names to be queried
 You can specify one or more domain names.
 Up to 30 domain names can be queried in one request.
 If this parameter is not specified, it means to query all domain names under the current account.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
@@ -215,20 +227,23 @@ If this parameter is not specified, it means to query all domain names under the
 Note that `Project` will be ignored if `Domains` is specified.
                      * @return Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
 Note that `Project` will be ignored if `Domains` is specified.
+                     * 
                      */
                     int64_t GetProject() const;
 
                     /**
                      * 设置Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
 Note that `Project` will be ignored if `Domains` is specified.
-                     * @param Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+                     * @param _project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
 Note that `Project` will be ignored if `Domains` is specified.
+                     * 
                      */
                     void SetProject(const int64_t& _project);
 
                     /**
                      * 判断参数 Project 是否已赋值
                      * @return Project 是否已赋值
+                     * 
                      */
                     bool ProjectHasBeenSet() const;
 
@@ -243,6 +258,7 @@ Note that `Project` will be ignored if `Domains` is specified.
 `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
 `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
 `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
+                     * 
                      */
                     std::string GetInterval() const;
 
@@ -252,17 +268,19 @@ Note that `Project` will be ignored if `Domains` is specified.
 `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
 `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
 `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
-                     * @param Interval Sampling interval. The available options vary for different query period. See below: 
+                     * @param _interval Sampling interval. The available options vary for different query period. See below: 
 `min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
 `5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
 `hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
 `day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
@@ -271,20 +289,23 @@ Note that `Project` will be ignored if `Domains` is specified.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
                      * @return Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+                     * 
                      */
                     bool GetDetail() const;
 
                     /**
                      * 设置The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
-                     * @param Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
+                     * @param _detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+                     * 
                      */
                     void SetDetail(const bool& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 
@@ -295,6 +316,7 @@ Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
                      * @return Isp Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+                     * 
                      */
                     int64_t GetIsp() const;
 
@@ -302,15 +324,17 @@ Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
                      * 设置Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
-                     * @param Isp Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
+                     * @param _isp Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+                     * 
                      */
                     void SetIsp(const int64_t& _isp);
 
                     /**
                      * 判断参数 Isp 是否已赋值
                      * @return Isp 是否已赋值
+                     * 
                      */
                     bool IspHasBeenSet() const;
 
@@ -323,6 +347,7 @@ When `Area` is `mainland`, you can query by the province. Note that only one of 
 Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
 To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
 When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+                     * 
                      */
                     int64_t GetDistrict() const;
 
@@ -331,16 +356,18 @@ When `Area` is `mainland`, you can query by the province. Note that only one of 
 Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
 To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
 When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
-                     * @param District Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+                     * @param _district Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
 To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
 When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+                     * 
                      */
                     void SetDistrict(const int64_t& _district);
 
                     /**
                      * 判断参数 District 是否已赋值
                      * @return District 是否已赋值
+                     * 
                      */
                     bool DistrictHasBeenSet() const;
 
@@ -353,6 +380,7 @@ When `Area` is `mainland`, you can query by the province. Note that only one of 
 `all`: All protocols
 `http`: Query HTTP data
 `https`: Query HTTPS data
+                     * 
                      */
                     std::string GetProtocol() const;
 
@@ -361,34 +389,39 @@ When `Area` is `mainland`, you can query by the province. Note that only one of 
 `all`: All protocols
 `http`: Query HTTP data
 `https`: Query HTTPS data
-                     * @param Protocol Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
+                     * @param _protocol Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
 `all`: All protocols
 `http`: Query HTTP data
 `https`: Query HTTPS data
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Specifies the data source to be queried. It’s only open to beta users now. 
                      * @return DataSource Specifies the data source to be queried. It’s only open to beta users now. 
+                     * 
                      */
                     std::string GetDataSource() const;
 
                     /**
                      * 设置Specifies the data source to be queried. It’s only open to beta users now. 
-                     * @param DataSource Specifies the data source to be queried. It’s only open to beta users now. 
+                     * @param _dataSource Specifies the data source to be queried. It’s only open to beta users now. 
+                     * 
                      */
                     void SetDataSource(const std::string& _dataSource);
 
                     /**
                      * 判断参数 DataSource 是否已赋值
                      * @return DataSource 是否已赋值
+                     * 
                      */
                     bool DataSourceHasBeenSet() const;
 
@@ -405,6 +438,7 @@ Note: `ipv4` and `ipv6` are only available to beta users.
 `ipv6`: Query IPv6 data
 If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
 Note: `ipv4` and `ipv6` are only available to beta users. 
+                     * 
                      */
                     std::string GetIpProtocol() const;
 
@@ -415,18 +449,20 @@ Note: `ipv4` and `ipv6` are only available to beta users.
 `ipv6`: Query IPv6 data
 If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
 Note: `ipv4` and `ipv6` are only available to beta users. 
-                     * @param IpProtocol Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+                     * @param _ipProtocol Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
 `all`: All protocols
 `ipv4`: Query IPv4 data
 `ipv6`: Query IPv6 data
 If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
 Note: `ipv4` and `ipv6` are only available to beta users. 
+                     * 
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
 
                     /**
                      * 判断参数 IpProtocol 是否已赋值
                      * @return IpProtocol 是否已赋值
+                     * 
                      */
                     bool IpProtocolHasBeenSet() const;
 
@@ -437,6 +473,7 @@ Note: `ipv4` and `ipv6` are only available to beta users.
                      * @return Area Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
 `mainland`: Query CDN data in the Chinese mainland.
 `overseas`: Query CDN data outside the Chinese mainland.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -444,15 +481,17 @@ Note: `ipv4` and `ipv6` are only available to beta users.
                      * 设置Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
 `mainland`: Query CDN data in the Chinese mainland.
 `overseas`: Query CDN data outside the Chinese mainland.
-                     * @param Area Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+                     * @param _area Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
 `mainland`: Query CDN data in the Chinese mainland.
 `overseas`: Query CDN data outside the Chinese mainland.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -463,6 +502,7 @@ Note: `ipv4` and `ipv6` are only available to beta users.
                      * @return AreaType Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
 `server`: Query by the location of server (Tencent Cloud CDN nodes)
 `client`: Query by the location of the client (where the request devices are located)
+                     * 
                      */
                     std::string GetAreaType() const;
 
@@ -470,51 +510,59 @@ Note: `ipv4` and `ipv6` are only available to beta users.
                      * 设置Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
 `server`: Query by the location of server (Tencent Cloud CDN nodes)
 `client`: Query by the location of the client (where the request devices are located)
-                     * @param AreaType Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+                     * @param _areaType Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
 `server`: Query by the location of server (Tencent Cloud CDN nodes)
 `client`: Query by the location of the client (where the request devices are located)
+                     * 
                      */
                     void SetAreaType(const std::string& _areaType);
 
                     /**
                      * 判断参数 AreaType 是否已赋值
                      * @return AreaType 是否已赋值
+                     * 
                      */
                     bool AreaTypeHasBeenSet() const;
 
                     /**
                      * 获取Specifies the product to query, either `cdn` (default) or `ecdn`.
                      * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Specifies the product to query, either `cdn` (default) or `ecdn`.
-                     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @param _product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Specifies a time zone to query. The default time zone is UTC+08:00.
                      * @return TimeZone Specifies a time zone to query. The default time zone is UTC+08:00.
+                     * 
                      */
                     std::string GetTimeZone() const;
 
                     /**
                      * 设置Specifies a time zone to query. The default time zone is UTC+08:00.
-                     * @param TimeZone Specifies a time zone to query. The default time zone is UTC+08:00.
+                     * @param _timeZone Specifies a time zone to query. The default time zone is UTC+08:00.
+                     * 
                      */
                     void SetTimeZone(const std::string& _timeZone);
 
                     /**
                      * 判断参数 TimeZone 是否已赋值
                      * @return TimeZone 是否已赋值
+                     * 
                      */
                     bool TimeZoneHasBeenSet() const;
 

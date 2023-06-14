@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Recipient group ID, which is returned when a recipient group is created.
                      * @return ReceiverId Recipient group ID, which is returned when a recipient group is created.
+                     * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
                      * 设置Recipient group ID, which is returned when a recipient group is created.
-                     * @param ReceiverId Recipient group ID, which is returned when a recipient group is created.
+                     * @param _receiverId Recipient group ID, which is returned when a recipient group is created.
+                     * 
                      */
                     void SetReceiverId(const uint64_t& _receiverId);
 
                     /**
                      * 判断参数 ReceiverId 是否已赋值
                      * @return ReceiverId 是否已赋值
+                     * 
                      */
                     bool ReceiverIdHasBeenSet() const;
 

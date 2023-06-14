@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the usage plan to be queried.
                      * @return UsagePlanId Unique ID of the usage plan to be queried.
+                     * 
                      */
                     std::string GetUsagePlanId() const;
 
                     /**
                      * 设置Unique ID of the usage plan to be queried.
-                     * @param UsagePlanId Unique ID of the usage plan to be queried.
+                     * @param _usagePlanId Unique ID of the usage plan to be queried.
+                     * 
                      */
                     void SetUsagePlanId(const std::string& _usagePlanId);
 
                     /**
                      * 判断参数 UsagePlanId 是否已赋值
                      * @return UsagePlanId 是否已赋值
+                     * 
                      */
                     bool UsagePlanIdHasBeenSet() const;
 
                     /**
                      * 获取Binding type. Valid values: API, SERVICE. Default value: SERVICE.
                      * @return BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+                     * 
                      */
                     std::string GetBindType() const;
 
                     /**
                      * 设置Binding type. Valid values: API, SERVICE. Default value: SERVICE.
-                     * @param BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+                     * @param _bindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+                     * 
                      */
                     void SetBindType(const std::string& _bindType);
 
                     /**
                      * 判断参数 BindType 是否已赋值
                      * @return BindType 是否已赋值
+                     * 
                      */
                     bool BindTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 20. Maximum value: 100.
                      * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

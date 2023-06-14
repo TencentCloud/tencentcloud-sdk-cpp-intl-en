@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The bandwidth quota.
                      * @return Bandwidth The bandwidth quota.
+                     * 
                      */
                     uint64_t GetBandwidth() const;
 
                     /**
                      * 设置The bandwidth quota.
-                     * @param Bandwidth The bandwidth quota.
+                     * @param _bandwidth The bandwidth quota.
+                     * 
                      */
                     void SetBandwidth(const uint64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取The bandwidth quota name in Chinese.
                      * @return Cname The bandwidth quota name in Chinese.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置The bandwidth quota name in Chinese.
-                     * @param Cname The bandwidth quota name in Chinese.
+                     * @param _cname The bandwidth quota name in Chinese.
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 
                     /**
                      * 获取The bandwidth quota name in English.
                      * @return Name The bandwidth quota name in English.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The bandwidth quota name in English.
-                     * @param Name The bandwidth quota name in English.
+                     * @param _name The bandwidth quota name in English.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

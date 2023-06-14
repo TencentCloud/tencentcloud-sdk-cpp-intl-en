@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DBUser Username
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDBUser() const;
 
                     /**
                      * 设置Username
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DBUser Username
+                     * @param _dBUser Username
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDBUser(const std::string& _dBUser);
 
                     /**
                      * 判断参数 DBUser 是否已赋值
                      * @return DBUser 是否已赋值
+                     * 
                      */
                     bool DBUserHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DBPassword Password
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDBPassword() const;
 
                     /**
                      * 设置Password
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DBPassword Password
+                     * @param _dBPassword Password
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDBPassword(const std::string& _dBPassword);
 
                     /**
                      * 判断参数 DBPassword 是否已赋值
                      * @return DBPassword 是否已赋值
+                     * 
                      */
                     bool DBPasswordHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DBConnLimit The maximum number of connections
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDBConnLimit() const;
 
                     /**
                      * 设置The maximum number of connections
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DBConnLimit The maximum number of connections
+                     * @param _dBConnLimit The maximum number of connections
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDBConnLimit(const int64_t& _dBConnLimit);
 
                     /**
                      * 判断参数 DBConnLimit 是否已赋值
                      * @return DBConnLimit 是否已赋值
+                     * 
                      */
                     bool DBConnLimitHasBeenSet() const;
 

@@ -47,60 +47,70 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID list
                      * @return InstanceIds Instance ID list
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Price of instance specification in array
                      * @return Prices Price of instance specification in array
+                     * 
                      */
                     std::vector<TradePrice> GetPrices() const;
 
                     /**
                      * 判断参数 Prices 是否已赋值
                      * @return Prices 是否已赋值
+                     * 
                      */
                     bool PricesHasBeenSet() const;
 
                     /**
                      * 获取Total renewal price of compute node
                      * @return InstanceRealTotalPrice Total renewal price of compute node
+                     * 
                      */
                     int64_t GetInstanceRealTotalPrice() const;
 
                     /**
                      * 判断参数 InstanceRealTotalPrice 是否已赋值
                      * @return InstanceRealTotalPrice 是否已赋值
+                     * 
                      */
                     bool InstanceRealTotalPriceHasBeenSet() const;
 
                     /**
                      * 获取Total renewal price of storage node
                      * @return StorageRealTotalPrice Total renewal price of storage node
+                     * 
                      */
                     int64_t GetStorageRealTotalPrice() const;
 
                     /**
                      * 判断参数 StorageRealTotalPrice 是否已赋值
                      * @return StorageRealTotalPrice 是否已赋值
+                     * 
                      */
                     bool StorageRealTotalPriceHasBeenSet() const;
 

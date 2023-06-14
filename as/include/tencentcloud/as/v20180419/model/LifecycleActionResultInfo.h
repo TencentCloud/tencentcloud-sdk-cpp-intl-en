@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the lifecycle hook
                      * @return LifecycleHookId ID of the lifecycle hook
+                     * 
                      */
                     std::string GetLifecycleHookId() const;
 
                     /**
                      * 设置ID of the lifecycle hook
-                     * @param LifecycleHookId ID of the lifecycle hook
+                     * @param _lifecycleHookId ID of the lifecycle hook
+                     * 
                      */
                     void SetLifecycleHookId(const std::string& _lifecycleHookId);
 
                     /**
                      * 判断参数 LifecycleHookId 是否已赋值
                      * @return LifecycleHookId 是否已赋值
+                     * 
                      */
                     bool LifecycleHookIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance
                      * @return InstanceId ID of the instance
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance
-                     * @param InstanceId ID of the instance
+                     * @param _instanceId ID of the instance
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
                      * @return InvocationId Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+                     * 
                      */
                     std::string GetInvocationId() const;
 
                     /**
                      * 设置Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
-                     * @param InvocationId Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+                     * @param _invocationId Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+                     * 
                      */
                     void SetInvocationId(const std::string& _invocationId);
 
                     /**
                      * 判断参数 InvocationId 是否已赋值
                      * @return InvocationId 是否已赋值
+                     * 
                      */
                     bool InvocationIdHasBeenSet() const;
 
@@ -109,6 +118,7 @@ namespace TencentCloud
 <li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
+                     * 
                      */
                     std::string GetInvokeCommandResult() const;
 
@@ -117,16 +127,18 @@ namespace TencentCloud
 <li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
-                     * @param InvokeCommandResult Result of command invocation,
+                     * @param _invokeCommandResult Result of command invocation,
 <li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
 <li>`FAILED`: Failed to invoke the command</li>
 <li>`NONE`</li>
+                     * 
                      */
                     void SetInvokeCommandResult(const std::string& _invokeCommandResult);
 
                     /**
                      * 判断参数 InvokeCommandResult 是否已赋值
                      * @return InvokeCommandResult 是否已赋值
+                     * 
                      */
                     bool InvokeCommandResultHasBeenSet() const;
 
@@ -139,6 +151,7 @@ namespace TencentCloud
 <li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
 <li>FAILED: It is failed to notify CMQ/TDMQ.</li>
 <li>NONE</li>
+                     * 
                      */
                     std::string GetNotificationResult() const;
 
@@ -147,34 +160,39 @@ namespace TencentCloud
 <li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
 <li>FAILED: It is failed to notify CMQ/TDMQ.</li>
 <li>NONE</li>
-                     * @param NotificationResult Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+                     * @param _notificationResult Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
 <li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
 <li>FAILED: It is failed to notify CMQ/TDMQ.</li>
 <li>NONE</li>
+                     * 
                      */
                     void SetNotificationResult(const std::string& _notificationResult);
 
                     /**
                      * 判断参数 NotificationResult 是否已赋值
                      * @return NotificationResult 是否已赋值
+                     * 
                      */
                     bool NotificationResultHasBeenSet() const;
 
                     /**
                      * 获取Result of the lifecyle hook action. Values: CONTINUE, ABANDON
                      * @return LifecycleActionResult Result of the lifecyle hook action. Values: CONTINUE, ABANDON
+                     * 
                      */
                     std::string GetLifecycleActionResult() const;
 
                     /**
                      * 设置Result of the lifecyle hook action. Values: CONTINUE, ABANDON
-                     * @param LifecycleActionResult Result of the lifecyle hook action. Values: CONTINUE, ABANDON
+                     * @param _lifecycleActionResult Result of the lifecyle hook action. Values: CONTINUE, ABANDON
+                     * 
                      */
                     void SetLifecycleActionResult(const std::string& _lifecycleActionResult);
 
                     /**
                      * 判断参数 LifecycleActionResult 是否已赋值
                      * @return LifecycleActionResult 是否已赋值
+                     * 
                      */
                     bool LifecycleActionResultHasBeenSet() const;
 
@@ -197,6 +215,7 @@ namespace TencentCloud
 <li>COMMAND_EXEC_FINISH: Command completed</li>
 <li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
 <li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
+                     * 
                      */
                     std::string GetResultReason() const;
 
@@ -210,7 +229,7 @@ namespace TencentCloud
 <li>COMMAND_EXEC_FINISH: Command completed</li>
 <li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
 <li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
-                     * @param ResultReason Reason of the result <br>
+                     * @param _resultReason Reason of the result <br>
 <li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
 <li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
 <li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
@@ -219,12 +238,14 @@ namespace TencentCloud
 <li>COMMAND_EXEC_FINISH: Command completed</li>
 <li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
 <li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
+                     * 
                      */
                     void SetResultReason(const std::string& _resultReason);
 
                     /**
                      * 判断参数 ResultReason 是否已赋值
                      * @return ResultReason 是否已赋值
+                     * 
                      */
                     bool ResultReasonHasBeenSet() const;
 

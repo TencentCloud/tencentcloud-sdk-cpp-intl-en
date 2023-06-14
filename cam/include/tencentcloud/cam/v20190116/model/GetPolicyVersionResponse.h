@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PolicyVersion Policy version details
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PolicyVersionDetail GetPolicyVersion() const;
 
                     /**
                      * 判断参数 PolicyVersion 是否已赋值
                      * @return PolicyVersion 是否已赋值
+                     * 
                      */
                     bool PolicyVersionHasBeenSet() const;
 

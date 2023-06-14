@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of usage
                      * @return DetailSets Array of usage
+                     * 
                      */
                     std::vector<CosDetailSets> GetDetailSets() const;
 
                     /**
                      * 判断参数 DetailSets 是否已赋值
                      * @return DetailSets 是否已赋值
+                     * 
                      */
                     bool DetailSetsHasBeenSet() const;
 

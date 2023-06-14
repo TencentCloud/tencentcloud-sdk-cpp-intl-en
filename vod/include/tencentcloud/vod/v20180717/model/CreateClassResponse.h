@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Category ID
                      * @return ClassId Category ID
+                     * 
                      */
                     uint64_t GetClassId() const;
 
                     /**
                      * 判断参数 ClassId 是否已赋值
                      * @return ClassId 是否已赋值
+                     * 
                      */
                     bool ClassIdHasBeenSet() const;
 

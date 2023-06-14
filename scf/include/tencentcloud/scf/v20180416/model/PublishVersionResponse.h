@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取Function version
                      * @return FunctionVersion Function version
+                     * 
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
                      * 判断参数 FunctionVersion 是否已赋值
                      * @return FunctionVersion 是否已赋值
+                     * 
                      */
                     bool FunctionVersionHasBeenSet() const;
 
                     /**
                      * 获取Code size
                      * @return CodeSize Code size
+                     * 
                      */
                     int64_t GetCodeSize() const;
 
                     /**
                      * 判断参数 CodeSize 是否已赋值
                      * @return CodeSize 是否已赋值
+                     * 
                      */
                     bool CodeSizeHasBeenSet() const;
 
                     /**
                      * 获取Maximum available memory
                      * @return MemorySize Maximum available memory
+                     * 
                      */
                     int64_t GetMemorySize() const;
 
                     /**
                      * 判断参数 MemorySize 是否已赋值
                      * @return MemorySize 是否已赋值
+                     * 
                      */
                     bool MemorySizeHasBeenSet() const;
 
                     /**
                      * 获取Function description
                      * @return Description Function description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Function entry
                      * @return Handler Function entry
+                     * 
                      */
                     std::string GetHandler() const;
 
                     /**
                      * 判断参数 Handler 是否已赋值
                      * @return Handler 是否已赋值
+                     * 
                      */
                     bool HandlerHasBeenSet() const;
 
                     /**
                      * 获取Function timeout
                      * @return Timeout Function timeout
+                     * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Function running environment
                      * @return Runtime Function running environment
+                     * 
                      */
                     std::string GetRuntime() const;
 
                     /**
                      * 判断参数 Runtime 是否已赋值
                      * @return Runtime 是否已赋值
+                     * 
                      */
                     bool RuntimeHasBeenSet() const;
 
                     /**
                      * 获取Function namespace
                      * @return Namespace Function namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

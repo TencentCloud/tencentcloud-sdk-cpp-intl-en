@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Tag to be added or modified.
                      * @return ReplaceTags Tag to be added or modified.
+                     * 
                      */
                     std::vector<TagInfo> GetReplaceTags() const;
 
                     /**
                      * 设置Tag to be added or modified.
-                     * @param ReplaceTags Tag to be added or modified.
+                     * @param _replaceTags Tag to be added or modified.
+                     * 
                      */
                     void SetReplaceTags(const std::vector<TagInfo>& _replaceTags);
 
                     /**
                      * 判断参数 ReplaceTags 是否已赋值
                      * @return ReplaceTags 是否已赋值
+                     * 
                      */
                     bool ReplaceTagsHasBeenSet() const;
 
                     /**
                      * 获取Tag to be deleted.
                      * @return DeleteTags Tag to be deleted.
+                     * 
                      */
                     std::vector<TagInfo> GetDeleteTags() const;
 
                     /**
                      * 设置Tag to be deleted.
-                     * @param DeleteTags Tag to be deleted.
+                     * @param _deleteTags Tag to be deleted.
+                     * 
                      */
                     void SetDeleteTags(const std::vector<TagInfo>& _deleteTags);
 
                     /**
                      * 判断参数 DeleteTags 是否已赋值
                      * @return DeleteTags 是否已赋值
+                     * 
                      */
                     bool DeleteTagsHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of eligible API keys.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of eligible API keys.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of eligible API keys.
+                     * @param _totalCount Number of eligible API keys.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiKeySet API key list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiKey> GetApiKeySet() const;
 
                     /**
                      * 设置API key list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiKeySet API key list.
+                     * @param _apiKeySet API key list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiKeySet(const std::vector<ApiKey>& _apiKeySet);
 
                     /**
                      * 判断参数 ApiKeySet 是否已赋值
                      * @return ApiKeySet 是否已赋值
+                     * 
                      */
                     bool ApiKeySetHasBeenSet() const;
 

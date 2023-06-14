@@ -57,6 +57,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `follow`: Follow the protocol of the request.
 `https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetOriginPullProtocol() const;
 
@@ -66,17 +67,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `follow`: Follow the protocol of the request.
 `https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param OriginPullProtocol Origin-pull protocol.
+                     * @param _originPullProtocol Origin-pull protocol.
 `http`: Switch HTTPS requests to HTTP
 `follow`: Follow the protocol of the request.
 `https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
 
                     /**
                      * 判断参数 OriginPullProtocol 是否已赋值
                      * @return OriginPullProtocol 是否已赋值
+                     * 
                      */
                     bool OriginPullProtocolHasBeenSet() const;
 

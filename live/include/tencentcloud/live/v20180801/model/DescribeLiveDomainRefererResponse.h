@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Referer allowlist/blocklist configuration of a domain name
                      * @return RefererAuthConfig Referer allowlist/blocklist configuration of a domain name
+                     * 
                      */
                     RefererAuthConfig GetRefererAuthConfig() const;
 
                     /**
                      * 判断参数 RefererAuthConfig 是否已赋值
                      * @return RefererAuthConfig 是否已赋值
+                     * 
                      */
                     bool RefererAuthConfigHasBeenSet() const;
 

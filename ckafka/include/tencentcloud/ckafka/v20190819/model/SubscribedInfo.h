@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Subscribed topic name
                      * @return TopicName Subscribed topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Subscribed topic name
-                     * @param TopicName Subscribed topic name
+                     * @param _topicName Subscribed topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Partition Subscribed partition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetPartition() const;
 
                     /**
                      * 设置Subscribed partition
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Partition Subscribed partition
+                     * @param _partition Subscribed partition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartition(const std::vector<int64_t>& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PartitionOffset Partition offset information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PartitionOffset> GetPartitionOffset() const;
 
                     /**
                      * 设置Partition offset information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PartitionOffset Partition offset information
+                     * @param _partitionOffset Partition offset information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartitionOffset(const std::vector<PartitionOffset>& _partitionOffset);
 
                     /**
                      * 判断参数 PartitionOffset 是否已赋值
                      * @return PartitionOffset 是否已赋值
+                     * 
                      */
                     bool PartitionOffsetHasBeenSet() const;
 
@@ -114,20 +123,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TopicId ID of the subscribed topic. 
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置ID of the subscribed topic. 
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TopicId ID of the subscribed topic. 
+                     * @param _topicId ID of the subscribed topic. 
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 

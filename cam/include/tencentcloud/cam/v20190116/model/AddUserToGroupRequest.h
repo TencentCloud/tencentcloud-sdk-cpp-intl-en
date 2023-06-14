@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The association between the user group ID and the sub-user UIN/UID.
                      * @return Info The association between the user group ID and the sub-user UIN/UID.
+                     * 
                      */
                     std::vector<GroupIdOfUidInfo> GetInfo() const;
 
                     /**
                      * 设置The association between the user group ID and the sub-user UIN/UID.
-                     * @param Info The association between the user group ID and the sub-user UIN/UID.
+                     * @param _info The association between the user group ID and the sub-user UIN/UID.
+                     * 
                      */
                     void SetInfo(const std::vector<GroupIdOfUidInfo>& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

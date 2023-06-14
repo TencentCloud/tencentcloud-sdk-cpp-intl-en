@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
                      * @return Name Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
-                     * @param Name Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * @param _name Cluster name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Cluster description (up to 128 characters)
                      * @return Remark Cluster description (up to 128 characters)
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Cluster description (up to 128 characters)
-                     * @param Remark Cluster description (up to 128 characters)
+                     * @param _remark Cluster description (up to 128 characters)
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

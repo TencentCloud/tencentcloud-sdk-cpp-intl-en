@@ -69,6 +69,7 @@ namespace TencentCloud
 - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
 - `15`: Redis 6.2 Memory Edition (Standard Architecture).
 - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 
                      */
                     int64_t GetType() const;
 
@@ -84,7 +85,7 @@ namespace TencentCloud
 - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
 - `15`: Redis 6.2 Memory Edition (Standard Architecture).
 - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
-                     * @param Type Product type
+                     * @param _type Product type
 - `2`: Redis 2.8 Memory Edition (Standard Architecture).
 - `3`: CKV 3.2 Memory Edition (Standard Architecture).
 - `4`: CKV 3.2 Memory Edition (Cluster Architecture).
@@ -95,66 +96,77 @@ namespace TencentCloud
 - `9`: Redis 5.0 Memory Edition (Cluster Architecture).
 - `15`: Redis 6.2 Memory Edition (Standard Architecture).
 - `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
                      * @return TypeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
+                     * 
                      */
                     std::string GetTypeName() const;
 
                     /**
                      * 设置Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
-                     * @param TypeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
+                     * @param _typeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
+                     * 
                      */
                     void SetTypeName(const std::string& _typeName);
 
                     /**
                      * 判断参数 TypeName 是否已赋值
                      * @return TypeName 是否已赋值
+                     * 
                      */
                     bool TypeNameHasBeenSet() const;
 
                     /**
                      * 获取Minimum purchasable quantity
                      * @return MinBuyNum Minimum purchasable quantity
+                     * 
                      */
                     int64_t GetMinBuyNum() const;
 
                     /**
                      * 设置Minimum purchasable quantity
-                     * @param MinBuyNum Minimum purchasable quantity
+                     * @param _minBuyNum Minimum purchasable quantity
+                     * 
                      */
                     void SetMinBuyNum(const int64_t& _minBuyNum);
 
                     /**
                      * 判断参数 MinBuyNum 是否已赋值
                      * @return MinBuyNum 是否已赋值
+                     * 
                      */
                     bool MinBuyNumHasBeenSet() const;
 
                     /**
                      * 获取Maximum purchasable quantity
                      * @return MaxBuyNum Maximum purchasable quantity
+                     * 
                      */
                     int64_t GetMaxBuyNum() const;
 
                     /**
                      * 设置Maximum purchasable quantity
-                     * @param MaxBuyNum Maximum purchasable quantity
+                     * @param _maxBuyNum Maximum purchasable quantity
+                     * 
                      */
                     void SetMaxBuyNum(const int64_t& _maxBuyNum);
 
                     /**
                      * 判断参数 MaxBuyNum 是否已赋值
                      * @return MaxBuyNum 是否已赋值
+                     * 
                      */
                     bool MaxBuyNumHasBeenSet() const;
 
@@ -165,6 +177,7 @@ namespace TencentCloud
                      * @return Saleout Whether a product is sold out
 - `true`: Sold out.
 - `false`: Not sold out.
+                     * 
                      */
                     bool GetSaleout() const;
 
@@ -172,123 +185,143 @@ namespace TencentCloud
                      * 设置Whether a product is sold out
 - `true`: Sold out.
 - `false`: Not sold out.
-                     * @param Saleout Whether a product is sold out
+                     * @param _saleout Whether a product is sold out
 - `true`: Sold out.
 - `false`: Not sold out.
+                     * 
                      */
                     void SetSaleout(const bool& _saleout);
 
                     /**
                      * 判断参数 Saleout 是否已赋值
                      * @return Saleout 是否已赋值
+                     * 
                      */
                     bool SaleoutHasBeenSet() const;
 
                     /**
                      * 获取Product engines, including Tencent Cloud CKV and Redis Community Edition.
                      * @return Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * 
                      */
                     std::string GetEngine() const;
 
                     /**
                      * 设置Product engines, including Tencent Cloud CKV and Redis Community Edition.
-                     * @param Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * @param _engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * 
                      */
                     void SetEngine(const std::string& _engine);
 
                     /**
                      * 判断参数 Engine 是否已赋值
                      * @return Engine 是否已赋值
+                     * 
                      */
                     bool EngineHasBeenSet() const;
 
                     /**
                      * 获取Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
                      * @return Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
-                     * @param Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
+                     * @param _version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
                     /**
                      * 获取Total capacity in GB
                      * @return TotalSize Total capacity in GB
+                     * 
                      */
                     std::vector<std::string> GetTotalSize() const;
 
                     /**
                      * 设置Total capacity in GB
-                     * @param TotalSize Total capacity in GB
+                     * @param _totalSize Total capacity in GB
+                     * 
                      */
                     void SetTotalSize(const std::vector<std::string>& _totalSize);
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 
                     /**
                      * 获取Shard size in GB
                      * @return ShardSize Shard size in GB
+                     * 
                      */
                     std::vector<std::string> GetShardSize() const;
 
                     /**
                      * 设置Shard size in GB
-                     * @param ShardSize Shard size in GB
+                     * @param _shardSize Shard size in GB
+                     * 
                      */
                     void SetShardSize(const std::vector<std::string>& _shardSize);
 
                     /**
                      * 判断参数 ShardSize 是否已赋值
                      * @return ShardSize 是否已赋值
+                     * 
                      */
                     bool ShardSizeHasBeenSet() const;
 
                     /**
                      * 获取Quantity of replicas
                      * @return ReplicaNum Quantity of replicas
+                     * 
                      */
                     std::vector<std::string> GetReplicaNum() const;
 
                     /**
                      * 设置Quantity of replicas
-                     * @param ReplicaNum Quantity of replicas
+                     * @param _replicaNum Quantity of replicas
+                     * 
                      */
                     void SetReplicaNum(const std::vector<std::string>& _replicaNum);
 
                     /**
                      * 判断参数 ReplicaNum 是否已赋值
                      * @return ReplicaNum 是否已赋值
+                     * 
                      */
                     bool ReplicaNumHasBeenSet() const;
 
                     /**
                      * 获取Quantity of shards
                      * @return ShardNum Quantity of shards
+                     * 
                      */
                     std::vector<std::string> GetShardNum() const;
 
                     /**
                      * 设置Quantity of shards
-                     * @param ShardNum Quantity of shards
+                     * @param _shardNum Quantity of shards
+                     * 
                      */
                     void SetShardNum(const std::vector<std::string>& _shardNum);
 
                     /**
                      * 判断参数 ShardNum 是否已赋值
                      * @return ShardNum 是否已赋值
+                     * 
                      */
                     bool ShardNumHasBeenSet() const;
 
@@ -299,6 +332,7 @@ namespace TencentCloud
                      * @return PayMode Supported billing modes
 - `1`: Monthly subscription.
 - `0`: Pay-as-you-go.
+                     * 
                      */
                     std::string GetPayMode() const;
 
@@ -306,15 +340,17 @@ namespace TencentCloud
                      * 设置Supported billing modes
 - `1`: Monthly subscription.
 - `0`: Pay-as-you-go.
-                     * @param PayMode Supported billing modes
+                     * @param _payMode Supported billing modes
 - `1`: Monthly subscription.
 - `0`: Pay-as-you-go.
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -325,6 +361,7 @@ namespace TencentCloud
                      * @return EnableRepicaReadOnly Whether to support read-only replicas
 - `true`: Supported.
 -`false`: Not supported.
+                     * 
                      */
                     bool GetEnableRepicaReadOnly() const;
 
@@ -332,15 +369,17 @@ namespace TencentCloud
                      * 设置Whether to support read-only replicas
 - `true`: Supported.
 -`false`: Not supported.
-                     * @param EnableRepicaReadOnly Whether to support read-only replicas
+                     * @param _enableRepicaReadOnly Whether to support read-only replicas
 - `true`: Supported.
 -`false`: Not supported.
+                     * 
                      */
                     void SetEnableRepicaReadOnly(const bool& _enableRepicaReadOnly);
 
                     /**
                      * 判断参数 EnableRepicaReadOnly 是否已赋值
                      * @return EnableRepicaReadOnly 是否已赋值
+                     * 
                      */
                     bool EnableRepicaReadOnlyHasBeenSet() const;
 

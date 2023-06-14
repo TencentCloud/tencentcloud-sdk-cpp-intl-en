@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Exception diagnosis item name.
                      * @return DiagItem Exception diagnosis item name.
+                     * 
                      */
                     std::string GetDiagItem() const;
 
                     /**
                      * 设置Exception diagnosis item name.
-                     * @param DiagItem Exception diagnosis item name.
+                     * @param _diagItem Exception diagnosis item name.
+                     * 
                      */
                     void SetDiagItem(const std::string& _diagItem);
 
                     /**
                      * 判断参数 DiagItem 是否已赋值
                      * @return DiagItem 是否已赋值
+                     * 
                      */
                     bool DiagItemHasBeenSet() const;
 
                     /**
                      * 获取Diagnosis item types. Valid values: availability, maintainability, performance, and reliability.
                      * @return IssueType Diagnosis item types. Valid values: availability, maintainability, performance, and reliability.
+                     * 
                      */
                     std::string GetIssueType() const;
 
                     /**
                      * 设置Diagnosis item types. Valid values: availability, maintainability, performance, and reliability.
-                     * @param IssueType Diagnosis item types. Valid values: availability, maintainability, performance, and reliability.
+                     * @param _issueType Diagnosis item types. Valid values: availability, maintainability, performance, and reliability.
+                     * 
                      */
                     void SetIssueType(const std::string& _issueType);
 
                     /**
                      * 判断参数 IssueType 是否已赋值
                      * @return IssueType 是否已赋值
+                     * 
                      */
                     bool IssueTypeHasBeenSet() const;
 
                     /**
                      * 获取Health level. Valid values: information, reminder, alarm, serious, fatal.
                      * @return TopSeverity Health level. Valid values: information, reminder, alarm, serious, fatal.
+                     * 
                      */
                     std::string GetTopSeverity() const;
 
                     /**
                      * 设置Health level. Valid values: information, reminder, alarm, serious, fatal.
-                     * @param TopSeverity Health level. Valid values: information, reminder, alarm, serious, fatal.
+                     * @param _topSeverity Health level. Valid values: information, reminder, alarm, serious, fatal.
+                     * 
                      */
                     void SetTopSeverity(const std::string& _topSeverity);
 
                     /**
                      * 判断参数 TopSeverity 是否已赋值
                      * @return TopSeverity 是否已赋值
+                     * 
                      */
                     bool TopSeverityHasBeenSet() const;
 
                     /**
                      * 获取Number of occurrences of this exception diagnosis item.
                      * @return Count Number of occurrences of this exception diagnosis item.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of occurrences of this exception diagnosis item.
-                     * @param Count Number of occurrences of this exception diagnosis item.
+                     * @param _count Number of occurrences of this exception diagnosis item.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Scores deducted.
                      * @return ScoreLost Scores deducted.
+                     * 
                      */
                     int64_t GetScoreLost() const;
 
                     /**
                      * 设置Scores deducted.
-                     * @param ScoreLost Scores deducted.
+                     * @param _scoreLost Scores deducted.
+                     * 
                      */
                     void SetScoreLost(const int64_t& _scoreLost);
 
                     /**
                      * 判断参数 ScoreLost 是否已赋值
                      * @return ScoreLost 是否已赋值
+                     * 
                      */
                     bool ScoreLostHasBeenSet() const;
 

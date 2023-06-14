@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster for which to install the component
                      * @return ClusterId ID of the cluster for which to install the component
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster for which to install the component
-                     * @param ClusterId ID of the cluster for which to install the component
+                     * @param _clusterId ID of the cluster for which to install the component
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster region
                      * @return ClusterRegion Cluster region
+                     * 
                      */
                     std::string GetClusterRegion() const;
 
                     /**
                      * 设置Cluster region
-                     * @param ClusterRegion Cluster region
+                     * @param _clusterRegion Cluster region
+                     * 
                      */
                     void SetClusterRegion(const std::string& _clusterRegion);
 
                     /**
                      * 判断参数 ClusterRegion 是否已赋值
                      * @return ClusterRegion 是否已赋值
+                     * 
                      */
                     bool ClusterRegionHasBeenSet() const;
 

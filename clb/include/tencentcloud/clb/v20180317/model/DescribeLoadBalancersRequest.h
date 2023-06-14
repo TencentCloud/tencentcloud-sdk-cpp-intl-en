@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance IDs. There can be up to 20 IDs.
                      * @return LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置CLB instance IDs. There can be up to 20 IDs.
-                     * @param LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
+                     * @param _loadBalancerIds CLB instance IDs. There can be up to 20 IDs.
+                     * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 
@@ -66,254 +69,296 @@ namespace TencentCloud
 OPEN: public network; INTERNAL: private network.
                      * @return LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
+                     * 
                      */
                     std::string GetLoadBalancerType() const;
 
                     /**
                      * 设置CLB instance network type:
 OPEN: public network; INTERNAL: private network.
-                     * @param LoadBalancerType CLB instance network type:
+                     * @param _loadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
+                     * 
                      */
                     void SetLoadBalancerType(const std::string& _loadBalancerType);
 
                     /**
                      * 判断参数 LoadBalancerType 是否已赋值
                      * @return LoadBalancerType 是否已赋值
+                     * 
                      */
                     bool LoadBalancerTypeHasBeenSet() const;
 
                     /**
                      * 获取CLB instance type. 1: generic CLB instance; 0: classic CLB instance
                      * @return Forward CLB instance type. 1: generic CLB instance; 0: classic CLB instance
+                     * 
                      */
                     int64_t GetForward() const;
 
                     /**
                      * 设置CLB instance type. 1: generic CLB instance; 0: classic CLB instance
-                     * @param Forward CLB instance type. 1: generic CLB instance; 0: classic CLB instance
+                     * @param _forward CLB instance type. 1: generic CLB instance; 0: classic CLB instance
+                     * 
                      */
                     void SetForward(const int64_t& _forward);
 
                     /**
                      * 判断参数 Forward 是否已赋值
                      * @return Forward 是否已赋值
+                     * 
                      */
                     bool ForwardHasBeenSet() const;
 
                     /**
                      * 获取CLB instance name.
                      * @return LoadBalancerName CLB instance name.
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name.
-                     * @param LoadBalancerName CLB instance name.
+                     * @param _loadBalancerName CLB instance name.
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
                      * 获取Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
                      * @return Domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
-                     * @param Domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+                     * @param _domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取VIP address of a CLB instance (there can be multiple addresses)
                      * @return LoadBalancerVips VIP address of a CLB instance (there can be multiple addresses)
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerVips() const;
 
                     /**
                      * 设置VIP address of a CLB instance (there can be multiple addresses)
-                     * @param LoadBalancerVips VIP address of a CLB instance (there can be multiple addresses)
+                     * @param _loadBalancerVips VIP address of a CLB instance (there can be multiple addresses)
+                     * 
                      */
                     void SetLoadBalancerVips(const std::vector<std::string>& _loadBalancerVips);
 
                     /**
                      * 判断参数 LoadBalancerVips 是否已赋值
                      * @return LoadBalancerVips 是否已赋值
+                     * 
                      */
                     bool LoadBalancerVipsHasBeenSet() const;
 
                     /**
                      * 获取Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
                      * @return BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+                     * 
                      */
                     std::vector<std::string> GetBackendPublicIps() const;
 
                     /**
                      * 设置Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
-                     * @param BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+                     * @param _backendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+                     * 
                      */
                     void SetBackendPublicIps(const std::vector<std::string>& _backendPublicIps);
 
                     /**
                      * 判断参数 BackendPublicIps 是否已赋值
                      * @return BackendPublicIps 是否已赋值
+                     * 
                      */
                     bool BackendPublicIpsHasBeenSet() const;
 
                     /**
                      * 获取Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
                      * @return BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
+                     * 
                      */
                     std::vector<std::string> GetBackendPrivateIps() const;
 
                     /**
                      * 设置Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
-                     * @param BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
+                     * @param _backendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
+                     * 
                      */
                     void SetBackendPrivateIps(const std::vector<std::string>& _backendPrivateIps);
 
                     /**
                      * 判断参数 BackendPrivateIps 是否已赋值
                      * @return BackendPrivateIps 是否已赋值
+                     * 
                      */
                     bool BackendPrivateIpsHasBeenSet() const;
 
                     /**
                      * 获取Data offset. Default value: 0.
                      * @return Offset Data offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. Default value: 0.
-                     * @param Offset Data offset. Default value: 0.
+                     * @param _offset Data offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned CLB instances. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned CLB instances. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
                      * @return OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
-                     * @param OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+                     * @param _orderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取1: reverse; 0: sequential. Default value: reverse by creation time |
                      * @return OrderType 1: reverse; 0: sequential. Default value: reverse by creation time |
+                     * 
                      */
                     int64_t GetOrderType() const;
 
                     /**
                      * 设置1: reverse; 0: sequential. Default value: reverse by creation time |
-                     * @param OrderType 1: reverse; 0: sequential. Default value: reverse by creation time |
+                     * @param _orderType 1: reverse; 0: sequential. Default value: reverse by creation time |
+                     * 
                      */
                     void SetOrderType(const int64_t& _orderType);
 
                     /**
                      * 判断参数 OrderType 是否已赋值
                      * @return OrderType 是否已赋值
+                     * 
                      */
                     bool OrderTypeHasBeenSet() const;
 
                     /**
                      * 获取Search field which fuzzy matches name, domain name, or VIP.
                      * @return SearchKey Search field which fuzzy matches name, domain name, or VIP.
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Search field which fuzzy matches name, domain name, or VIP.
-                     * @param SearchKey Search field which fuzzy matches name, domain name, or VIP.
+                     * @param _searchKey Search field which fuzzy matches name, domain name, or VIP.
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 
                     /**
                      * 获取ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
                      * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
-                     * @param ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+                     * @param _projectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
                      * @return WithRs Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
+                     * 
                      */
                     int64_t GetWithRs() const;
 
                     /**
                      * 设置Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
-                     * @param WithRs Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
+                     * @param _withRs Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
+                     * 
                      */
                     void SetWithRs(const int64_t& _withRs);
 
                     /**
                      * 判断参数 WithRs 是否已赋值
                      * @return WithRs 是否已赋值
+                     * 
                      */
                     bool WithRsHasBeenSet() const;
 
@@ -322,56 +367,65 @@ OPEN: public network; INTERNAL: private network.
 Basic network does not support queries by VpcId.
                      * @return VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
-                     * @param VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
+                     * @param _vpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Security group ID, e.g., `sg-m1cc****`.
                      * @return SecurityGroup Security group ID, e.g., `sg-m1cc****`.
+                     * 
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
                      * 设置Security group ID, e.g., `sg-m1cc****`.
-                     * @param SecurityGroup Security group ID, e.g., `sg-m1cc****`.
+                     * @param _securityGroup Security group ID, e.g., `sg-m1cc****`.
+                     * 
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
 
                     /**
                      * 判断参数 SecurityGroup 是否已赋值
                      * @return SecurityGroup 是否已赋值
+                     * 
                      */
                     bool SecurityGroupHasBeenSet() const;
 
                     /**
                      * 获取Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
                      * @return MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * 
                      */
                     std::string GetMasterZone() const;
 
                     /**
                      * 设置Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
-                     * @param MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * @param _masterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+                     * 
                      */
                     void SetMasterZone(const std::string& _masterZone);
 
                     /**
                      * 判断参数 MasterZone 是否已赋值
                      * @return MasterZone 是否已赋值
+                     * 
                      */
                     bool MasterZoneHasBeenSet() const;
 
@@ -380,20 +434,23 @@ Basic network does not support queries by VpcId.
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
                      * @return Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
-                     * @param Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+                     * @param _filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

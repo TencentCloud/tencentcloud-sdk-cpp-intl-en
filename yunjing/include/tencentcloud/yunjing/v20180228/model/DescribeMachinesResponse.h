@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Server list
                      * @return Machines Server list
+                     * 
                      */
                     std::vector<Machine> GetMachines() const;
 
                     /**
                      * 判断参数 Machines 是否已赋值
                      * @return Machines 是否已赋值
+                     * 
                      */
                     bool MachinesHasBeenSet() const;
 
                     /**
                      * 获取Number of servers
                      * @return TotalCount Number of servers
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

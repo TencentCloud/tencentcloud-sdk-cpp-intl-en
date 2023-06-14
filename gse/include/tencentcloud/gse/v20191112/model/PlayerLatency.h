@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PlayerId Player ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPlayerId() const;
 
                     /**
                      * 设置Player ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PlayerId Player ID
+                     * @param _playerId Player ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPlayerId(const std::string& _playerId);
 
                     /**
                      * 判断参数 PlayerId 是否已赋值
                      * @return PlayerId 是否已赋值
+                     * 
                      */
                     bool PlayerIdHasBeenSet() const;
 
@@ -73,38 +76,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RegionIdentifier Name of region corresponding to latency
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegionIdentifier() const;
 
                     /**
                      * 设置Name of region corresponding to latency
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RegionIdentifier Name of region corresponding to latency
+                     * @param _regionIdentifier Name of region corresponding to latency
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionIdentifier(const std::string& _regionIdentifier);
 
                     /**
                      * 判断参数 RegionIdentifier 是否已赋值
                      * @return RegionIdentifier 是否已赋值
+                     * 
                      */
                     bool RegionIdentifierHasBeenSet() const;
 
                     /**
                      * 获取Latency in milliseconds
                      * @return LatencyInMilliseconds Latency in milliseconds
+                     * 
                      */
                     uint64_t GetLatencyInMilliseconds() const;
 
                     /**
                      * 设置Latency in milliseconds
-                     * @param LatencyInMilliseconds Latency in milliseconds
+                     * @param _latencyInMilliseconds Latency in milliseconds
+                     * 
                      */
                     void SetLatencyInMilliseconds(const uint64_t& _latencyInMilliseconds);
 
                     /**
                      * 判断参数 LatencyInMilliseconds 是否已赋值
                      * @return LatencyInMilliseconds 是否已赋值
+                     * 
                      */
                     bool LatencyInMillisecondsHasBeenSet() const;
 

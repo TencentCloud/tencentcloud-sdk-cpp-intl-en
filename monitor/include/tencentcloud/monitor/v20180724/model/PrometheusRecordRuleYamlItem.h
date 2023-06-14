@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance name
                      * @return Name Instance name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Instance name
-                     * @param Name Instance name
+                     * @param _name Instance name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Last update time
                      * @return UpdateTime Last update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last update time
-                     * @param UpdateTime Last update time
+                     * @param _updateTime Last update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取YAML content
                      * @return TemplateId YAML content
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置YAML content
-                     * @param TemplateId YAML content
+                     * @param _templateId YAML content
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Content If the recording rule comes from a template, `TemplateId` is the template ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置If the recording rule comes from a template, `TemplateId` is the template ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Content If the recording rule comes from a template, `TemplateId` is the template ID.
+                     * @param _content If the recording rule comes from a template, `TemplateId` is the template ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterId If the recording rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置If the recording rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterId If the recording rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
+                     * @param _clusterId If the recording rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Status
+                     * @param _status Status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -171,20 +189,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Id id
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置id
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Id id
+                     * @param _id id
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -193,20 +214,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Count Number of rules
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of rules
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Count Number of rules
+                     * @param _count Number of rules
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

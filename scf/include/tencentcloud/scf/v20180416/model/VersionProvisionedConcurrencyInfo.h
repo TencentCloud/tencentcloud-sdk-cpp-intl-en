@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Set provisioned concurrency amount.
                      * @return AllocatedProvisionedConcurrencyNum Set provisioned concurrency amount.
+                     * 
                      */
                     uint64_t GetAllocatedProvisionedConcurrencyNum() const;
 
                     /**
                      * 设置Set provisioned concurrency amount.
-                     * @param AllocatedProvisionedConcurrencyNum Set provisioned concurrency amount.
+                     * @param _allocatedProvisionedConcurrencyNum Set provisioned concurrency amount.
+                     * 
                      */
                     void SetAllocatedProvisionedConcurrencyNum(const uint64_t& _allocatedProvisionedConcurrencyNum);
 
                     /**
                      * 判断参数 AllocatedProvisionedConcurrencyNum 是否已赋值
                      * @return AllocatedProvisionedConcurrencyNum 是否已赋值
+                     * 
                      */
                     bool AllocatedProvisionedConcurrencyNumHasBeenSet() const;
 
                     /**
                      * 获取Currently available provisioned concurrency amount.
                      * @return AvailableProvisionedConcurrencyNum Currently available provisioned concurrency amount.
+                     * 
                      */
                     uint64_t GetAvailableProvisionedConcurrencyNum() const;
 
                     /**
                      * 设置Currently available provisioned concurrency amount.
-                     * @param AvailableProvisionedConcurrencyNum Currently available provisioned concurrency amount.
+                     * @param _availableProvisionedConcurrencyNum Currently available provisioned concurrency amount.
+                     * 
                      */
                     void SetAvailableProvisionedConcurrencyNum(const uint64_t& _availableProvisionedConcurrencyNum);
 
                     /**
                      * 判断参数 AvailableProvisionedConcurrencyNum 是否已赋值
                      * @return AvailableProvisionedConcurrencyNum 是否已赋值
+                     * 
                      */
                     bool AvailableProvisionedConcurrencyNumHasBeenSet() const;
 
                     /**
                      * 获取Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
                      * @return Status Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
-                     * @param Status Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
+                     * @param _status Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Status description of provisioned concurrency setting task.
                      * @return StatusReason Status description of provisioned concurrency setting task.
+                     * 
                      */
                     std::string GetStatusReason() const;
 
                     /**
                      * 设置Status description of provisioned concurrency setting task.
-                     * @param StatusReason Status description of provisioned concurrency setting task.
+                     * @param _statusReason Status description of provisioned concurrency setting task.
+                     * 
                      */
                     void SetStatusReason(const std::string& _statusReason);
 
                     /**
                      * 判断参数 StatusReason 是否已赋值
                      * @return StatusReason 是否已赋值
+                     * 
                      */
                     bool StatusReasonHasBeenSet() const;
 
                     /**
                      * 获取Function version number
                      * @return Qualifier Function version number
+                     * 
                      */
                     std::string GetQualifier() const;
 
                     /**
                      * 设置Function version number
-                     * @param Qualifier Function version number
+                     * @param _qualifier Function version number
+                     * 
                      */
                     void SetQualifier(const std::string& _qualifier);
 
                     /**
                      * 判断参数 Qualifier 是否已赋值
                      * @return Qualifier 是否已赋值
+                     * 
                      */
                     bool QualifierHasBeenSet() const;
 
@@ -142,20 +157,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TriggerActions List of scheduled provisioned concurrency scaling actions
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TriggerAction> GetTriggerActions() const;
 
                     /**
                      * 设置List of scheduled provisioned concurrency scaling actions
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TriggerActions List of scheduled provisioned concurrency scaling actions
+                     * @param _triggerActions List of scheduled provisioned concurrency scaling actions
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTriggerActions(const std::vector<TriggerAction>& _triggerActions);
 
                     /**
                      * 判断参数 TriggerActions 是否已赋值
                      * @return TriggerActions 是否已赋值
+                     * 
                      */
                     bool TriggerActionsHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The total number of records that meet the conditions.
                      * @return Total The total number of records that meet the conditions.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MemberIds 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetMemberIds() const;
 
                     /**
                      * 判断参数 MemberIds 是否已赋值
                      * @return MemberIds 是否已赋值
+                     * 
                      */
                     bool MemberIdsHasBeenSet() const;
 

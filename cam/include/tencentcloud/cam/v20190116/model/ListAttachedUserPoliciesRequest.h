@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Sub-account UIN
                      * @return TargetUin Sub-account UIN
+                     * 
                      */
                     uint64_t GetTargetUin() const;
 
                     /**
                      * 设置Sub-account UIN
-                     * @param TargetUin Sub-account UIN
+                     * @param _targetUin Sub-account UIN
+                     * 
                      */
                     void SetTargetUin(const uint64_t& _targetUin);
 
                     /**
                      * 判断参数 TargetUin 是否已赋值
                      * @return TargetUin 是否已赋值
+                     * 
                      */
                     bool TargetUinHasBeenSet() const;
 
                     /**
                      * 获取Page number, which starts from 1. Default is 1
                      * @return Page Page number, which starts from 1. Default is 1
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number, which starts from 1. Default is 1
-                     * @param Page Page number, which starts from 1. Default is 1
+                     * @param _page Page number, which starts from 1. Default is 1
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page; 20 by default
                      * @return Rp Number of entries per page; 20 by default
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置Number of entries per page; 20 by default
-                     * @param Rp Number of entries per page; 20 by default
+                     * @param _rp Number of entries per page; 20 by default
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The list of cluster major version, such as 1.18.4
                      * @return Versions The list of cluster major version, such as 1.18.4
+                     * 
                      */
                     std::vector<std::string> GetVersions() const;
 
                     /**
                      * 设置The list of cluster major version, such as 1.18.4
-                     * @param Versions The list of cluster major version, such as 1.18.4
+                     * @param _versions The list of cluster major version, such as 1.18.4
+                     * 
                      */
                     void SetVersions(const std::vector<std::string>& _versions);
 
                     /**
                      * 判断参数 Versions 是否已赋值
                      * @return Versions 是否已赋值
+                     * 
                      */
                     bool VersionsHasBeenSet() const;
 

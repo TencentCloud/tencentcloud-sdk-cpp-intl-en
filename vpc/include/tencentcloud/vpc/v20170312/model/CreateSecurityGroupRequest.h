@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Security group can be named freely, but cannot exceed 60 characters.
                      * @return GroupName Security group can be named freely, but cannot exceed 60 characters.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Security group can be named freely, but cannot exceed 60 characters.
-                     * @param GroupName Security group can be named freely, but cannot exceed 60 characters.
+                     * @param _groupName Security group can be named freely, but cannot exceed 60 characters.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取The remarks for the security group. The maximum length is 100 characters.
                      * @return GroupDescription The remarks for the security group. The maximum length is 100 characters.
+                     * 
                      */
                     std::string GetGroupDescription() const;
 
                     /**
                      * 设置The remarks for the security group. The maximum length is 100 characters.
-                     * @param GroupDescription The remarks for the security group. The maximum length is 100 characters.
+                     * @param _groupDescription The remarks for the security group. The maximum length is 100 characters.
+                     * 
                      */
                     void SetGroupDescription(const std::string& _groupDescription);
 
                     /**
                      * 判断参数 GroupDescription 是否已赋值
                      * @return GroupDescription 是否已赋值
+                     * 
                      */
                     bool GroupDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
                      * @return ProjectId Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
+                     * 
                      */
                     std::string GetProjectId() const;
 
                     /**
                      * 设置Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
-                     * @param ProjectId Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
+                     * @param _projectId Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
+                     * 
                      */
                     void SetProjectId(const std::string& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

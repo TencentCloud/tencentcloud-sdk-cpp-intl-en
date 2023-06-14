@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Content ZIP content encoded by using Base64. After the content is decoded by using Base64, it can be saved as a ZIP file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ContentType MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContentType() const;
 
                     /**
                      * 判断参数 ContentType 是否已赋值
                      * @return ContentType 是否已赋值
+                     * 
                      */
                     bool ContentTypeHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Async Process ID. Using DescribeAsyncTaskStatus to query process and status.
                      * @return TaskId Async Process ID. Using DescribeAsyncTaskStatus to query process and status.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Template ID. If you don’t have any template, please create one.
                      * @return TemplateID Template ID. If you don’t have any template, please create one.
+                     * 
                      */
                     uint64_t GetTemplateID() const;
 
                     /**
                      * 设置Template ID. If you don’t have any template, please create one.
-                     * @param TemplateID Template ID. If you don’t have any template, please create one.
+                     * @param _templateID Template ID. If you don’t have any template, please create one.
+                     * 
                      */
                     void SetTemplateID(const uint64_t& _templateID);
 
                     /**
                      * 判断参数 TemplateID 是否已赋值
                      * @return TemplateID 是否已赋值
+                     * 
                      */
                     bool TemplateIDHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Example: {"name":"xxx","age":"xx"}
                      * @return TemplateData Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
 Note: The parameter value cannot be data of a complex type such as HTML.
 Example: {"name":"xxx","age":"xx"}
+                     * 
                      */
                     std::string GetTemplateData() const;
 
@@ -78,15 +82,17 @@ Example: {"name":"xxx","age":"xx"}
                      * 设置Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
 Note: The parameter value cannot be data of a complex type such as HTML.
 Example: {"name":"xxx","age":"xx"}
-                     * @param TemplateData Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+                     * @param _templateData Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
 Note: The parameter value cannot be data of a complex type such as HTML.
 Example: {"name":"xxx","age":"xx"}
+                     * 
                      */
                     void SetTemplateData(const std::string& _templateData);
 
                     /**
                      * 判断参数 TemplateData 是否已赋值
                      * @return TemplateData 是否已赋值
+                     * 
                      */
                     bool TemplateDataHasBeenSet() const;
 

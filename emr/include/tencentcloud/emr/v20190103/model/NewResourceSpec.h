@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Describes master node resource
                      * @return MasterResourceSpec Describes master node resource
+                     * 
                      */
                     Resource GetMasterResourceSpec() const;
 
                     /**
                      * 设置Describes master node resource
-                     * @param MasterResourceSpec Describes master node resource
+                     * @param _masterResourceSpec Describes master node resource
+                     * 
                      */
                     void SetMasterResourceSpec(const Resource& _masterResourceSpec);
 
                     /**
                      * 判断参数 MasterResourceSpec 是否已赋值
                      * @return MasterResourceSpec 是否已赋值
+                     * 
                      */
                     bool MasterResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Describes core node resource
                      * @return CoreResourceSpec Describes core node resource
+                     * 
                      */
                     Resource GetCoreResourceSpec() const;
 
                     /**
                      * 设置Describes core node resource
-                     * @param CoreResourceSpec Describes core node resource
+                     * @param _coreResourceSpec Describes core node resource
+                     * 
                      */
                     void SetCoreResourceSpec(const Resource& _coreResourceSpec);
 
                     /**
                      * 判断参数 CoreResourceSpec 是否已赋值
                      * @return CoreResourceSpec 是否已赋值
+                     * 
                      */
                     bool CoreResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Describes task node resource
                      * @return TaskResourceSpec Describes task node resource
+                     * 
                      */
                     Resource GetTaskResourceSpec() const;
 
                     /**
                      * 设置Describes task node resource
-                     * @param TaskResourceSpec Describes task node resource
+                     * @param _taskResourceSpec Describes task node resource
+                     * 
                      */
                     void SetTaskResourceSpec(const Resource& _taskResourceSpec);
 
                     /**
                      * 判断参数 TaskResourceSpec 是否已赋值
                      * @return TaskResourceSpec 是否已赋值
+                     * 
                      */
                     bool TaskResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Number of master nodes
                      * @return MasterCount Number of master nodes
+                     * 
                      */
                     int64_t GetMasterCount() const;
 
                     /**
                      * 设置Number of master nodes
-                     * @param MasterCount Number of master nodes
+                     * @param _masterCount Number of master nodes
+                     * 
                      */
                     void SetMasterCount(const int64_t& _masterCount);
 
                     /**
                      * 判断参数 MasterCount 是否已赋值
                      * @return MasterCount 是否已赋值
+                     * 
                      */
                     bool MasterCountHasBeenSet() const;
 
                     /**
                      * 获取Number of core nodes
                      * @return CoreCount Number of core nodes
+                     * 
                      */
                     int64_t GetCoreCount() const;
 
                     /**
                      * 设置Number of core nodes
-                     * @param CoreCount Number of core nodes
+                     * @param _coreCount Number of core nodes
+                     * 
                      */
                     void SetCoreCount(const int64_t& _coreCount);
 
                     /**
                      * 判断参数 CoreCount 是否已赋值
                      * @return CoreCount 是否已赋值
+                     * 
                      */
                     bool CoreCountHasBeenSet() const;
 
                     /**
                      * 获取Number of task nodes
                      * @return TaskCount Number of task nodes
+                     * 
                      */
                     int64_t GetTaskCount() const;
 
                     /**
                      * 设置Number of task nodes
-                     * @param TaskCount Number of task nodes
+                     * @param _taskCount Number of task nodes
+                     * 
                      */
                     void SetTaskCount(const int64_t& _taskCount);
 
                     /**
                      * 判断参数 TaskCount 是否已赋值
                      * @return TaskCount 是否已赋值
+                     * 
                      */
                     bool TaskCountHasBeenSet() const;
 
                     /**
                      * 获取Describes common node resource
                      * @return CommonResourceSpec Describes common node resource
+                     * 
                      */
                     Resource GetCommonResourceSpec() const;
 
                     /**
                      * 设置Describes common node resource
-                     * @param CommonResourceSpec Describes common node resource
+                     * @param _commonResourceSpec Describes common node resource
+                     * 
                      */
                     void SetCommonResourceSpec(const Resource& _commonResourceSpec);
 
                     /**
                      * 判断参数 CommonResourceSpec 是否已赋值
                      * @return CommonResourceSpec 是否已赋值
+                     * 
                      */
                     bool CommonResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Number of common nodes
                      * @return CommonCount Number of common nodes
+                     * 
                      */
                     int64_t GetCommonCount() const;
 
                     /**
                      * 设置Number of common nodes
-                     * @param CommonCount Number of common nodes
+                     * @param _commonCount Number of common nodes
+                     * 
                      */
                     void SetCommonCount(const int64_t& _commonCount);
 
                     /**
                      * 判断参数 CommonCount 是否已赋值
                      * @return CommonCount 是否已赋值
+                     * 
                      */
                     bool CommonCountHasBeenSet() const;
 

@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return TaskID Task ID.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskID() const;
 
                     /**
                      * 判断参数 TaskID 是否已赋值
                      * @return TaskID 是否已赋值
+                     * 
                      */
                     bool TaskIDHasBeenSet() const;
 
@@ -67,12 +69,14 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Running: The task is running.
 Finished: The task is finished.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -81,12 +85,14 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time of the task. Unit: seconds.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -95,12 +101,14 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return FinishTime Completion time of the task. Unit: seconds.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFinishTime() const;
 
                     /**
                      * 判断参数 FinishTime 是否已赋值
                      * @return FinishTime 是否已赋值
+                     * 
                      */
                     bool FinishTimeHasBeenSet() const;
 
@@ -109,12 +117,14 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Result Task result information.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SnapshotResult GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

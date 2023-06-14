@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of unique HAVIP IDs, such as `havip-9o233uri`.
                      * @return HaVipIds Array of unique HAVIP IDs, such as `havip-9o233uri`.
+                     * 
                      */
                     std::vector<std::string> GetHaVipIds() const;
 
                     /**
                      * 设置Array of unique HAVIP IDs, such as `havip-9o233uri`.
-                     * @param HaVipIds Array of unique HAVIP IDs, such as `havip-9o233uri`.
+                     * @param _haVipIds Array of unique HAVIP IDs, such as `havip-9o233uri`.
+                     * 
                      */
                     void SetHaVipIds(const std::vector<std::string>& _haVipIds);
 
                     /**
                      * 判断参数 HaVipIds 是否已赋值
                      * @return HaVipIds 是否已赋值
+                     * 
                      */
                     bool HaVipIdsHasBeenSet() const;
 
@@ -72,6 +75,7 @@ havip-id - String - Unique HAVIP ID, such as `havip-9o233uri`.
 havip-name - String - HAVIP name.
 vpc-id - String - VPC ID of the HAVIP.
 subnet-id - String - Subnet ID of the HAVIP.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -81,71 +85,82 @@ havip-id - String - Unique HAVIP ID, such as `havip-9o233uri`.
 havip-name - String - HAVIP name.
 vpc-id - String - VPC ID of the HAVIP.
 subnet-id - String - Subnet ID of the HAVIP.
-                     * @param Filters Filter. `HaVipIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter. `HaVipIds` and `Filters` cannot be specified at the same time.
 havip-id - String - Unique HAVIP ID, such as `havip-9o233uri`.
 havip-name - String - HAVIP name.
 vpc-id - String - VPC ID of the HAVIP.
 subnet-id - String - Subnet ID of the HAVIP.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取ECM region. If this parameter is left empty, it will indicate all regions.
                      * @return EcmRegion ECM region. If this parameter is left empty, it will indicate all regions.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region. If this parameter is left empty, it will indicate all regions.
-                     * @param EcmRegion ECM region. If this parameter is left empty, it will indicate all regions.
+                     * @param _ecmRegion ECM region. If this parameter is left empty, it will indicate all regions.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 

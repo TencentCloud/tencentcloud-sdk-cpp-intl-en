@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Function name
                      * @return FunctionName Function name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name
-                     * @param FunctionName Function name
+                     * @param _functionName Function name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function namespace
                      * @return Namespace Function namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace
-                     * @param Namespace Function namespace
+                     * @param _namespace Function namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取If this parameter is provided, only aliases associated with this function version will be returned.
                      * @return FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned.
+                     * 
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
                      * 设置If this parameter is provided, only aliases associated with this function version will be returned.
-                     * @param FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned.
+                     * @param _functionVersion If this parameter is provided, only aliases associated with this function version will be returned.
+                     * 
                      */
                     void SetFunctionVersion(const std::string& _functionVersion);
 
                     /**
                      * 判断参数 FunctionVersion 是否已赋值
                      * @return FunctionVersion 是否已赋值
+                     * 
                      */
                     bool FunctionVersionHasBeenSet() const;
 
                     /**
                      * 获取Data offset. Default value: 0
                      * @return Offset Data offset. Default value: 0
+                     * 
                      */
                     std::string GetOffset() const;
 
                     /**
                      * 设置Data offset. Default value: 0
-                     * @param Offset Data offset. Default value: 0
+                     * @param _offset Data offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const std::string& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 20
                      * @return Limit Number of results to be returned. Default value: 20
+                     * 
                      */
                     std::string GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 20
-                     * @param Limit Number of results to be returned. Default value: 20
+                     * @param _limit Number of results to be returned. Default value: 20
+                     * 
                      */
                     void SetLimit(const std::string& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Status Status. `disable`: Blocked; `enable`: Unblocked.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status. `disable`: Blocked; `enable`: Unblocked.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Status Status. `disable`: Blocked; `enable`: Unblocked.
+                     * @param _status Status. `disable`: Blocked; `enable`: Unblocked.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RealUrl Corresponding URL
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRealUrl() const;
 
                     /**
                      * 设置Corresponding URL
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RealUrl Corresponding URL
+                     * @param _realUrl Corresponding URL
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRealUrl(const std::string& _realUrl);
 
                     /**
                      * 判断参数 RealUrl 是否已赋值
                      * @return RealUrl 是否已赋值
+                     * 
                      */
                     bool RealUrlHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CreateTime Creation time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpdateTime Update time.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UpdateTime Update time.
+                     * @param _updateTime Update time.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

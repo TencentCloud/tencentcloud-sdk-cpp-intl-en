@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Game server session ID. It should contain 1 to 48 ASCII characters.
                      * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * 
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
                      * 设置Game server session ID. It should contain 1 to 48 ASCII characters.
-                     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * @param _gameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * 
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
                     /**
                      * 判断参数 GameServerSessionId 是否已赋值
                      * @return GameServerSessionId 是否已赋值
+                     * 
                      */
                     bool GameServerSessionIdHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Group ID
                      * @return GroupId Group ID
+                     * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
                      * 设置Group ID
-                     * @param GroupId Group ID
+                     * @param _groupId Group ID
+                     * 
                      */
                     void SetGroupId(const int64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Group name
                      * @return GroupName Group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Group name
-                     * @param GroupName Group name
+                     * @param _groupName Group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Group type
                      * @return GroupType Group type
+                     * 
                      */
                     std::string GetGroupType() const;
 
                     /**
                      * 设置Group type
-                     * @param GroupType Group type
+                     * @param _groupType Group type
+                     * 
                      */
                     void SetGroupType(const std::string& _groupType);
 
                     /**
                      * 判断参数 GroupType 是否已赋值
                      * @return GroupType 是否已赋值
+                     * 
                      */
                     bool GroupTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of domains in the group
                      * @return Size Number of domains in the group
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Number of domains in the group
-                     * @param Size Number of domains in the group
+                     * @param _size Number of domains in the group
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 

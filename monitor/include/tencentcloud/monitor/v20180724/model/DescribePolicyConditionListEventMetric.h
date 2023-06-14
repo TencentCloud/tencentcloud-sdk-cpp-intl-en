@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Event ID.
                      * @return EventId Event ID.
+                     * 
                      */
                     int64_t GetEventId() const;
 
                     /**
                      * 设置Event ID.
-                     * @param EventId Event ID.
+                     * @param _eventId Event ID.
+                     * 
                      */
                     void SetEventId(const int64_t& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Event name.
                      * @return EventShowName Event name.
+                     * 
                      */
                     std::string GetEventShowName() const;
 
                     /**
                      * 设置Event name.
-                     * @param EventShowName Event name.
+                     * @param _eventShowName Event name.
+                     * 
                      */
                     void SetEventShowName(const std::string& _eventShowName);
 
                     /**
                      * 判断参数 EventShowName 是否已赋值
                      * @return EventShowName 是否已赋值
+                     * 
                      */
                     bool EventShowNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to recover.
                      * @return NeedRecovered Whether to recover.
+                     * 
                      */
                     bool GetNeedRecovered() const;
 
                     /**
                      * 设置Whether to recover.
-                     * @param NeedRecovered Whether to recover.
+                     * @param _needRecovered Whether to recover.
+                     * 
                      */
                     void SetNeedRecovered(const bool& _needRecovered);
 
                     /**
                      * 判断参数 NeedRecovered 是否已赋值
                      * @return NeedRecovered 是否已赋值
+                     * 
                      */
                     bool NeedRecoveredHasBeenSet() const;
 
                     /**
                      * 获取Event type, which is a reserved field. Currently, it is fixed to 2.
                      * @return Type Event type, which is a reserved field. Currently, it is fixed to 2.
+                     * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置Event type, which is a reserved field. Currently, it is fixed to 2.
-                     * @param Type Event type, which is a reserved field. Currently, it is fixed to 2.
+                     * @param _type Event type, which is a reserved field. Currently, it is fixed to 2.
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

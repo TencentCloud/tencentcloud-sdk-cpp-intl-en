@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Game server session ID. It should contain 1 to 48 ASCII characters.
                      * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * 
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
                      * 设置Game server session ID. It should contain 1 to 48 ASCII characters.
-                     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * @param _gameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
+                     * 
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
                     /**
                      * 判断参数 GameServerSessionId 是否已赋值
                      * @return GameServerSessionId 是否已赋值
+                     * 
                      */
                     bool GameServerSessionIdHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of entries in a single query
                      * @return Limit Maximum number of entries in a single query
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of entries in a single query
-                     * @param Limit Maximum number of entries in a single query
+                     * @param _limit Maximum number of entries in a single query
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
                      * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     std::string GetNextToken() const;
 
                     /**
                      * 设置Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
-                     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * @param _nextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     void SetNextToken(const std::string& _nextToken);
 
                     /**
                      * 判断参数 NextToken 是否已赋值
                      * @return NextToken 是否已赋值
+                     * 
                      */
                     bool NextTokenHasBeenSet() const;
 
                     /**
                      * 获取Player ID. It should contain 1 to 1024 ASCII characters.
                      * @return PlayerId Player ID. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     std::string GetPlayerId() const;
 
                     /**
                      * 设置Player ID. It should contain 1 to 1024 ASCII characters.
-                     * @param PlayerId Player ID. It should contain 1 to 1024 ASCII characters.
+                     * @param _playerId Player ID. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     void SetPlayerId(const std::string& _playerId);
 
                     /**
                      * 判断参数 PlayerId 是否已赋值
                      * @return PlayerId 是否已赋值
+                     * 
                      */
                     bool PlayerIdHasBeenSet() const;
 
                     /**
                      * 获取Player session ID. It should contain 1 to 1024 ASCII characters.
                      * @return PlayerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     std::string GetPlayerSessionId() const;
 
                     /**
                      * 设置Player session ID. It should contain 1 to 1024 ASCII characters.
-                     * @param PlayerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
+                     * @param _playerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     void SetPlayerSessionId(const std::string& _playerSessionId);
 
                     /**
                      * 判断参数 PlayerSessionId 是否已赋值
                      * @return PlayerSessionId 是否已赋值
+                     * 
                      */
                     bool PlayerSessionIdHasBeenSet() const;
 
                     /**
                      * 获取Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
                      * @return PlayerSessionStatusFilter Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
+                     * 
                      */
                     std::string GetPlayerSessionStatusFilter() const;
 
                     /**
                      * 设置Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
-                     * @param PlayerSessionStatusFilter Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
+                     * @param _playerSessionStatusFilter Player session status. Valid values: RESERVED, ACTIVE, COMPLETED, TIMEDOUT
+                     * 
                      */
                     void SetPlayerSessionStatusFilter(const std::string& _playerSessionStatusFilter);
 
                     /**
                      * 判断参数 PlayerSessionStatusFilter 是否已赋值
                      * @return PlayerSessionStatusFilter 是否已赋值
+                     * 
                      */
                     bool PlayerSessionStatusFilterHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The TRTC application ID.
                      * @return SdkAppId The TRTC application ID.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The TRTC application ID.
-                     * @param SdkAppId The TRTC application ID.
+                     * @param _sdkAppId The TRTC application ID.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The TRTC room ID.
                      * @return RoomId The TRTC room ID.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置The TRTC room ID.
-                     * @param RoomId The TRTC room ID.
+                     * @param _roomId The TRTC room ID.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The recording task ID.
                      * @return TaskId The recording task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The recording task ID.
-                     * @param TaskId The recording task ID.
+                     * @param _taskId The recording task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取The IDs of users whose streams are mixed.
                      * @return UserIds The IDs of users whose streams are mixed.
+                     * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
                      * 设置The IDs of users whose streams are mixed.
-                     * @param UserIds The IDs of users whose streams are mixed.
+                     * @param _userIds The IDs of users whose streams are mixed.
+                     * 
                      */
                     void SetUserIds(const std::vector<std::string>& _userIds);
 
                     /**
                      * 判断参数 UserIds 是否已赋值
                      * @return UserIds 是否已赋值
+                     * 
                      */
                     bool UserIdsHasBeenSet() const;
 

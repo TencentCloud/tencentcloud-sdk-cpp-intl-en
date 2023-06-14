@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Alert switch policy
                      * @return WarningRules Alert switch policy
+                     * 
                      */
                     std::vector<WarningRule> GetWarningRules() const;
 
                     /**
                      * 设置Alert switch policy
-                     * @param WarningRules Alert switch policy
+                     * @param _warningRules Alert switch policy
+                     * 
                      */
                     void SetWarningRules(const std::vector<WarningRule>& _warningRules);
 
                     /**
                      * 判断参数 WarningRules 是否已赋值
                      * @return WarningRules 是否已赋值
+                     * 
                      */
                     bool WarningRulesHasBeenSet() const;
 

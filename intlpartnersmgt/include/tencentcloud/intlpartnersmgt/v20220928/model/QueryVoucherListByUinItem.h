@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Customer UIN
                      * @return ClientUin Customer UIN
+                     * 
                      */
                     int64_t GetClientUin() const;
 
                     /**
                      * 设置Customer UIN
-                     * @param ClientUin Customer UIN
+                     * @param _clientUin Customer UIN
+                     * 
                      */
                     void SetClientUin(const int64_t& _clientUin);
 
                     /**
                      * 判断参数 ClientUin 是否已赋值
                      * @return ClientUin 是否已赋值
+                     * 
                      */
                     bool ClientUinHasBeenSet() const;
 
                     /**
                      * 获取The total number of vouchers
                      * @return TotalCount The total number of vouchers
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置The total number of vouchers
-                     * @param TotalCount The total number of vouchers
+                     * @param _totalCount The total number of vouchers
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Voucher details
                      * @return Data Voucher details
+                     * 
                      */
                     std::vector<QueryVoucherListByUinVoucherItem> GetData() const;
 
                     /**
                      * 设置Voucher details
-                     * @param Data Voucher details
+                     * @param _data Voucher details
+                     * 
                      */
                     void SetData(const std::vector<QueryVoucherListByUinVoucherItem>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The media processing task ID.
                      * @return TaskId The media processing task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The media processing task ID.
-                     * @param TaskId The media processing task ID.
+                     * @param _taskId The media processing task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -78,69 +82,80 @@ namespace TencentCloud
                      * 设置Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
-                     * @param Status Task flow status. Valid values:
+                     * @param _status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Error code. 0: success; other values: failure.
                      * @return ErrCode Error code. 0: success; other values: failure.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Error code. 0: success; other values: failure.
-                     * @param ErrCode Error code. 0: success; other values: failure.
+                     * @param _errCode Error code. 0: success; other values: failure.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return Message Error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
-                     * @param Message Error message.
+                     * @param _message Error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Live stream URL.
                      * @return Url Live stream URL.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Live stream URL.
-                     * @param Url Live stream URL.
+                     * @param _url Live stream URL.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

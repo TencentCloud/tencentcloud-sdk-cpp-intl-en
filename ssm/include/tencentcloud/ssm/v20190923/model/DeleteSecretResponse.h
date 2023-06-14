@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Name of deleted Secret.
                      * @return SecretName Name of deleted Secret.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取Secret deletion time, formatted as a Unix timestamp.
                      * @return DeleteTime Secret deletion time, formatted as a Unix timestamp.
+                     * 
                      */
                     int64_t GetDeleteTime() const;
 
                     /**
                      * 判断参数 DeleteTime 是否已赋值
                      * @return DeleteTime 是否已赋值
+                     * 
                      */
                     bool DeleteTimeHasBeenSet() const;
 

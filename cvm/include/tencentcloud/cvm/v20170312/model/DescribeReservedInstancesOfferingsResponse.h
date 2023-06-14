@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of Reserved Instances that meet the condition.
                      * @return TotalCount The number of Reserved Instances that meet the condition.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The list of Reserved Instances that meet the condition.
                      * @return ReservedInstancesOfferingsSet The list of Reserved Instances that meet the condition.
+                     * 
                      */
                     std::vector<ReservedInstancesOffering> GetReservedInstancesOfferingsSet() const;
 
                     /**
                      * 判断参数 ReservedInstancesOfferingsSet 是否已赋值
                      * @return ReservedInstancesOfferingsSet 是否已赋值
+                     * 
                      */
                     bool ReservedInstancesOfferingsSetHasBeenSet() const;
 

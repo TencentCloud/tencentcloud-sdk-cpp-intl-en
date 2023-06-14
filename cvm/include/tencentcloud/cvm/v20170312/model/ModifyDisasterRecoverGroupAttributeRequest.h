@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
                      * @return DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetDisasterRecoverGroupId() const;
 
                     /**
                      * 设置Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
-                     * @param DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
+                     * @param _disasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetDisasterRecoverGroupId(const std::string& _disasterRecoverGroupId);
 
                     /**
                      * 判断参数 DisasterRecoverGroupId 是否已赋值
                      * @return DisasterRecoverGroupId 是否已赋值
+                     * 
                      */
                     bool DisasterRecoverGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
                      * @return Name Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
-                     * @param Name Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+                     * @param _name Name of a spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Disaster recovery instance ID
                      * @return InstanceId Disaster recovery instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Disaster recovery instance ID
-                     * @param InstanceId Disaster recovery instance ID
+                     * @param _instanceId Disaster recovery instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

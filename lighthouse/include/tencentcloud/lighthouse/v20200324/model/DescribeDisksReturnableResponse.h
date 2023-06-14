@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of returnable cloud disks.
                      * @return DiskReturnableSet List of returnable cloud disks.
+                     * 
                      */
                     std::vector<DiskReturnable> GetDiskReturnableSet() const;
 
                     /**
                      * 判断参数 DiskReturnableSet 是否已赋值
                      * @return DiskReturnableSet 是否已赋值
+                     * 
                      */
                     bool DiskReturnableSetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible cloud disks.
                      * @return TotalCount Number of eligible cloud disks.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

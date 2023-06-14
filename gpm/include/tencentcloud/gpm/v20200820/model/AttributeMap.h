@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Map key, supporting [a-zA-Z0-9-\.]*
                      * @return Key Map key, supporting [a-zA-Z0-9-\.]*
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Map key, supporting [a-zA-Z0-9-\.]*
-                     * @param Key Map key, supporting [a-zA-Z0-9-\.]*
+                     * @param _key Map key, supporting [a-zA-Z0-9-\.]*
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Map value
                      * @return Value Map value
+                     * 
                      */
                     int64_t GetValue() const;
 
                     /**
                      * 设置Map value
-                     * @param Value Map value
+                     * @param _value Map value
+                     * 
                      */
                     void SetValue(const int64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

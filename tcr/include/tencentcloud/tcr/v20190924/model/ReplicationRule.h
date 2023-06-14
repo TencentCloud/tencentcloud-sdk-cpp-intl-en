@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Name of synchronization rule
                      * @return Name Name of synchronization rule
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of synchronization rule
-                     * @param Name Name of synchronization rule
+                     * @param _name Name of synchronization rule
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Destination namespace
                      * @return DestNamespace Destination namespace
+                     * 
                      */
                     std::string GetDestNamespace() const;
 
                     /**
                      * 设置Destination namespace
-                     * @param DestNamespace Destination namespace
+                     * @param _destNamespace Destination namespace
+                     * 
                      */
                     void SetDestNamespace(const std::string& _destNamespace);
 
                     /**
                      * 判断参数 DestNamespace 是否已赋值
                      * @return DestNamespace 是否已赋值
+                     * 
                      */
                     bool DestNamespaceHasBeenSet() const;
 
                     /**
                      * 获取Whether to override
                      * @return Override Whether to override
+                     * 
                      */
                     bool GetOverride() const;
 
                     /**
                      * 设置Whether to override
-                     * @param Override Whether to override
+                     * @param _override Whether to override
+                     * 
                      */
                     void SetOverride(const bool& _override);
 
                     /**
                      * 判断参数 Override 是否已赋值
                      * @return Override 是否已赋值
+                     * 
                      */
                     bool OverrideHasBeenSet() const;
 
                     /**
                      * 获取Synchronization filters
                      * @return Filters Synchronization filters
+                     * 
                      */
                     std::vector<ReplicationFilter> GetFilters() const;
 
                     /**
                      * 设置Synchronization filters
-                     * @param Filters Synchronization filters
+                     * @param _filters Synchronization filters
+                     * 
                      */
                     void SetFilters(const std::vector<ReplicationFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the ENI instance, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The ID of the ENI instance, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
                      * @return SourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
+                     * 
                      */
                     std::string GetSourceInstanceId() const;
 
                     /**
                      * 设置The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
-                     * @param SourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
+                     * @param _sourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
+                     * 
                      */
                     void SetSourceInstanceId(const std::string& _sourceInstanceId);
 
                     /**
                      * 判断参数 SourceInstanceId 是否已赋值
                      * @return SourceInstanceId 是否已赋值
+                     * 
                      */
                     bool SourceInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the destination CVM instance to be migrated.
                      * @return DestinationInstanceId ID of the destination CVM instance to be migrated.
+                     * 
                      */
                     std::string GetDestinationInstanceId() const;
 
                     /**
                      * 设置ID of the destination CVM instance to be migrated.
-                     * @param DestinationInstanceId ID of the destination CVM instance to be migrated.
+                     * @param _destinationInstanceId ID of the destination CVM instance to be migrated.
+                     * 
                      */
                     void SetDestinationInstanceId(const std::string& _destinationInstanceId);
 
                     /**
                      * 判断参数 DestinationInstanceId 是否已赋值
                      * @return DestinationInstanceId 是否已赋值
+                     * 
                      */
                     bool DestinationInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
                      * @return AttachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     * 
                      */
                     uint64_t GetAttachType() const;
 
                     /**
                      * 设置ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
-                     * @param AttachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     * @param _attachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+                     * 
                      */
                     void SetAttachType(const uint64_t& _attachType);
 
                     /**
                      * 判断参数 AttachType 是否已赋值
                      * @return AttachType 是否已赋值
+                     * 
                      */
                     bool AttachTypeHasBeenSet() const;
 

@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID of API.
                      * @return ServiceId Unique service ID of API.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of API.
-                     * @param ServiceId Unique service ID of API.
+                     * @param _serviceId Unique service ID of API.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Environment list.
                      * @return EnvironmentNames Environment list.
+                     * 
                      */
                     std::vector<std::string> GetEnvironmentNames() const;
 
                     /**
                      * 设置Environment list.
-                     * @param EnvironmentNames Environment list.
+                     * @param _environmentNames Environment list.
+                     * 
                      */
                     void SetEnvironmentNames(const std::vector<std::string>& _environmentNames);
 
                     /**
                      * 判断参数 EnvironmentNames 是否已赋值
                      * @return EnvironmentNames 是否已赋值
+                     * 
                      */
                     bool EnvironmentNamesHasBeenSet() const;
 
                     /**
                      * 获取Unique API ID.
                      * @return ApiId Unique API ID.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique API ID.
-                     * @param ApiId Unique API ID.
+                     * @param _apiId Unique API ID.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 20. Maximum value: 100.
                      * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of results to be returned. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

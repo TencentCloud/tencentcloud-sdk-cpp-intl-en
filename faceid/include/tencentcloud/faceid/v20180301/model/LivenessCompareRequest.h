@@ -47,20 +47,23 @@ namespace TencentCloud
 LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
                      * @return LivenessType Liveness detection type. Valid values: LIP/ACTION/SILENT.
 LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
+                     * 
                      */
                     std::string GetLivenessType() const;
 
                     /**
                      * 设置Liveness detection type. Valid values: LIP/ACTION/SILENT.
 LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
-                     * @param LivenessType Liveness detection type. Valid values: LIP/ACTION/SILENT.
+                     * @param _livenessType Liveness detection type. Valid values: LIP/ACTION/SILENT.
 LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
+                     * 
                      */
                     void SetLivenessType(const std::string& _livenessType);
 
                     /**
                      * 判断参数 LivenessType 是否已赋值
                      * @return LivenessType 是否已赋值
+                     * 
                      */
                     bool LivenessTypeHasBeenSet() const;
 
@@ -75,6 +78,7 @@ The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats
 Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
 
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+                     * 
                      */
                     std::string GetImageBase64() const;
 
@@ -84,17 +88,19 @@ The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats
 Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
 
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
-                     * @param ImageBase64 Base64 string of the image for face comparison.
+                     * @param _imageBase64 Base64 string of the image for face comparison.
 The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
 Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
 
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+                     * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
                     /**
                      * 判断参数 ImageBase64 是否已赋值
                      * @return ImageBase64 是否已赋值
+                     * 
                      */
                     bool ImageBase64HasBeenSet() const;
 
@@ -109,6 +115,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
 
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
@@ -118,17 +125,19 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
 
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @param ImageUrl URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
+                     * @param _imageUrl URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
 
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
 
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 
@@ -139,6 +148,7 @@ Silent mode: do not pass in this parameter.
                      * @return ValidateData Lip mode: set this parameter to a custom 4-digit verification code.
 Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
 Silent mode: do not pass in this parameter.
+                     * 
                      */
                     std::string GetValidateData() const;
 
@@ -146,15 +156,17 @@ Silent mode: do not pass in this parameter.
                      * 设置Lip mode: set this parameter to a custom 4-digit verification code.
 Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
 Silent mode: do not pass in this parameter.
-                     * @param ValidateData Lip mode: set this parameter to a custom 4-digit verification code.
+                     * @param _validateData Lip mode: set this parameter to a custom 4-digit verification code.
 Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
 Silent mode: do not pass in this parameter.
+                     * 
                      */
                     void SetValidateData(const std::string& _validateData);
 
                     /**
                      * 判断参数 ValidateData 是否已赋值
                      * @return ValidateData 是否已赋值
+                     * 
                      */
                     bool ValidateDataHasBeenSet() const;
 
@@ -167,6 +179,7 @@ Silent mode: do not pass in this parameter.
 {
 "BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
 }
+                     * 
                      */
                     std::string GetOptional() const;
 
@@ -175,16 +188,18 @@ Silent mode: do not pass in this parameter.
 {
 "BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
 }
-                     * @param Optional Optional configuration (a JSON string)
+                     * @param _optional Optional configuration (a JSON string)
 {
 "BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
 }
+                     * 
                      */
                     void SetOptional(const std::string& _optional);
 
                     /**
                      * 判断参数 Optional 是否已赋值
                      * @return Optional 是否已赋值
+                     * 
                      */
                     bool OptionalHasBeenSet() const;
 
@@ -199,6 +214,7 @@ The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV f
 Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
 
 Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+                     * 
                      */
                     std::string GetVideoBase64() const;
 
@@ -208,17 +224,19 @@ The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV f
 Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
 
 Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
-                     * @param VideoBase64 Base64 string of the video for liveness detection.
+                     * @param _videoBase64 Base64 string of the video for liveness detection.
 The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
 Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
 
 Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+                     * 
                      */
                     void SetVideoBase64(const std::string& _videoBase64);
 
                     /**
                      * 判断参数 VideoBase64 是否已赋值
                      * @return VideoBase64 是否已赋值
+                     * 
                      */
                     bool VideoBase64HasBeenSet() const;
 
@@ -233,6 +251,7 @@ We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can gu
 Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
 
 We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     std::string GetVideoUrl() const;
 
@@ -242,17 +261,19 @@ We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can gu
 Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
 
 We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-                     * @param VideoUrl URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
+                     * @param _videoUrl URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
 
 Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
 
 We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+                     * 
                      */
                     void SetVideoUrl(const std::string& _videoUrl);
 
                     /**
                      * 判断参数 VideoUrl 是否已赋值
                      * @return VideoUrl 是否已赋值
+                     * 
                      */
                     bool VideoUrlHasBeenSet() const;
 

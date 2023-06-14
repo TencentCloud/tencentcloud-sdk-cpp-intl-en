@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Source IP
                      * @return Ip Source IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Source IP
-                     * @param Ip Source IP
+                     * @param _ip Source IP
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Number of connections
                      * @return Conn Number of connections
+                     * 
                      */
                     int64_t GetConn() const;
 
                     /**
                      * 设置Number of connections
-                     * @param Conn Number of connections
+                     * @param _conn Number of connections
+                     * 
                      */
                     void SetConn(const int64_t& _conn);
 
                     /**
                      * 判断参数 Conn 是否已赋值
                      * @return Conn 是否已赋值
+                     * 
                      */
                     bool ConnHasBeenSet() const;
 
                     /**
                      * 获取Command
                      * @return Cmd Command
+                     * 
                      */
                     int64_t GetCmd() const;
 
                     /**
                      * 设置Command
-                     * @param Cmd Command
+                     * @param _cmd Command
+                     * 
                      */
                     void SetCmd(const int64_t& _cmd);
 
                     /**
                      * 判断参数 Cmd 是否已赋值
                      * @return Cmd 是否已赋值
+                     * 
                      */
                     bool CmdHasBeenSet() const;
 

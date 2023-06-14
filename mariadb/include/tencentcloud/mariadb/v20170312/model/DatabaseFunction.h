@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Function name
                      * @return Func Function name
+                     * 
                      */
                     std::string GetFunc() const;
 
                     /**
                      * 设置Function name
-                     * @param Func Function name
+                     * @param _func Function name
+                     * 
                      */
                     void SetFunc(const std::string& _func);
 
                     /**
                      * 判断参数 Func 是否已赋值
                      * @return Func 是否已赋值
+                     * 
                      */
                     bool FuncHasBeenSet() const;
 

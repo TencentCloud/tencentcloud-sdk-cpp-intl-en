@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Service type, which is fixed to `mysql`.
                      * @return Product Service type, which is fixed to `mysql`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type, which is fixed to `mysql`.
-                     * @param Product Service type, which is fixed to `mysql`.
+                     * @param _product Service type, which is fixed to `mysql`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Array of recipient group names. Fuzzy search is supported.
                      * @return Names Array of recipient group names. Fuzzy search is supported.
+                     * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
                      * 设置Array of recipient group names. Fuzzy search is supported.
-                     * @param Names Array of recipient group names. Fuzzy search is supported.
+                     * @param _names Array of recipient group names. Fuzzy search is supported.
+                     * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
                     /**
                      * 判断参数 Names 是否已赋值
                      * @return Names 是否已赋值
+                     * 
                      */
                     bool NamesHasBeenSet() const;
 

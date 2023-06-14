@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Area VOD storage billing region. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li>
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -60,105 +61,122 @@ namespace TencentCloud
                      * 设置VOD storage billing region. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li>
-                     * @param Area VOD storage billing region. Valid values:
+                     * @param _area VOD storage billing region. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li>
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Current total storage capacity in bytes.
                      * @return TotalStorage Current total storage capacity in bytes.
+                     * 
                      */
                     uint64_t GetTotalStorage() const;
 
                     /**
                      * 设置Current total storage capacity in bytes.
-                     * @param TotalStorage Current total storage capacity in bytes.
+                     * @param _totalStorage Current total storage capacity in bytes.
+                     * 
                      */
                     void SetTotalStorage(const uint64_t& _totalStorage);
 
                     /**
                      * 判断参数 TotalStorage 是否已赋值
                      * @return TotalStorage 是否已赋值
+                     * 
                      */
                     bool TotalStorageHasBeenSet() const;
 
                     /**
                      * 获取Current STANDARD_IA storage capacity in bytes.
                      * @return InfrequentStorage Current STANDARD_IA storage capacity in bytes.
+                     * 
                      */
                     uint64_t GetInfrequentStorage() const;
 
                     /**
                      * 设置Current STANDARD_IA storage capacity in bytes.
-                     * @param InfrequentStorage Current STANDARD_IA storage capacity in bytes.
+                     * @param _infrequentStorage Current STANDARD_IA storage capacity in bytes.
+                     * 
                      */
                     void SetInfrequentStorage(const uint64_t& _infrequentStorage);
 
                     /**
                      * 判断参数 InfrequentStorage 是否已赋值
                      * @return InfrequentStorage 是否已赋值
+                     * 
                      */
                     bool InfrequentStorageHasBeenSet() const;
 
                     /**
                      * 获取Current STANDARD storage capacity in bytes.
                      * @return StandardStorage Current STANDARD storage capacity in bytes.
+                     * 
                      */
                     uint64_t GetStandardStorage() const;
 
                     /**
                      * 设置Current STANDARD storage capacity in bytes.
-                     * @param StandardStorage Current STANDARD storage capacity in bytes.
+                     * @param _standardStorage Current STANDARD storage capacity in bytes.
+                     * 
                      */
                     void SetStandardStorage(const uint64_t& _standardStorage);
 
                     /**
                      * 判断参数 StandardStorage 是否已赋值
                      * @return StandardStorage 是否已赋值
+                     * 
                      */
                     bool StandardStorageHasBeenSet() const;
 
                     /**
                      * 获取Current ARCHIVE storage usage in bytes
                      * @return ArchiveStorage Current ARCHIVE storage usage in bytes
+                     * 
                      */
                     uint64_t GetArchiveStorage() const;
 
                     /**
                      * 设置Current ARCHIVE storage usage in bytes
-                     * @param ArchiveStorage Current ARCHIVE storage usage in bytes
+                     * @param _archiveStorage Current ARCHIVE storage usage in bytes
+                     * 
                      */
                     void SetArchiveStorage(const uint64_t& _archiveStorage);
 
                     /**
                      * 判断参数 ArchiveStorage 是否已赋值
                      * @return ArchiveStorage 是否已赋值
+                     * 
                      */
                     bool ArchiveStorageHasBeenSet() const;
 
                     /**
                      * 获取Current DEEP ARCHIVE storage usage in bytes
                      * @return DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+                     * 
                      */
                     uint64_t GetDeepArchiveStorage() const;
 
                     /**
                      * 设置Current DEEP ARCHIVE storage usage in bytes
-                     * @param DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+                     * @param _deepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+                     * 
                      */
                     void SetDeepArchiveStorage(const uint64_t& _deepArchiveStorage);
 
                     /**
                      * 判断参数 DeepArchiveStorage 是否已赋值
                      * @return DeepArchiveStorage 是否已赋值
+                     * 
                      */
                     bool DeepArchiveStorageHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The object of the direct connect gateway.
                      * @return DirectConnectGateway The object of the direct connect gateway.
+                     * 
                      */
                     DirectConnectGateway GetDirectConnectGateway() const;
 
                     /**
                      * 判断参数 DirectConnectGateway 是否已赋值
                      * @return DirectConnectGateway 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayHasBeenSet() const;
 

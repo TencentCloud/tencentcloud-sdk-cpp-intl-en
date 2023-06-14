@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID, which is used to query a specified cluster
                      * @return ClusterId Cluster ID, which is used to query a specified cluster
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID, which is used to query a specified cluster
-                     * @param ClusterId Cluster ID, which is used to query a specified cluster
+                     * @param _clusterId Cluster ID, which is used to query a specified cluster
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page
                      * @return Limit Number of results per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page
-                     * @param Limit Number of results per page
+                     * @param _limit Number of results per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page offset
                      * @return Offset Page offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page offset
-                     * @param Offset Page offset
+                     * @param _offset Page offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Table group ID used as a filter condition
                      * @return TableGroupId Table group ID used as a filter condition
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置Table group ID used as a filter condition
-                     * @param TableGroupId Table group ID used as a filter condition
+                     * @param _tableGroupId Table group ID used as a filter condition
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Table name used as a filter condition
                      * @return TableName Table name used as a filter condition
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name used as a filter condition
-                     * @param TableName Table name used as a filter condition
+                     * @param _tableName Table name used as a filter condition
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 

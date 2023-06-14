@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Array of lifecycle hooks
                      * @return LifecycleHookSet Array of lifecycle hooks
+                     * 
                      */
                     std::vector<LifecycleHook> GetLifecycleHookSet() const;
 
                     /**
                      * 判断参数 LifecycleHookSet 是否已赋值
                      * @return LifecycleHookSet 是否已赋值
+                     * 
                      */
                     bool LifecycleHookSetHasBeenSet() const;
 
                     /**
                      * 获取Total quantity
                      * @return TotalCount Total quantity
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Unhandled event type
                      * @return EventTableListStruct Unhandled event type
+                     * 
                      */
                     std::vector<UnHandleEventDetail> GetEventTableListStruct() const;
 
                     /**
                      * 设置Unhandled event type
-                     * @param EventTableListStruct Unhandled event type
+                     * @param _eventTableListStruct Unhandled event type
+                     * 
                      */
                     void SetEventTableListStruct(const std::vector<UnHandleEventDetail>& _eventTableListStruct);
 
                     /**
                      * 判断参数 EventTableListStruct 是否已赋值
                      * @return EventTableListStruct 是否已赋值
+                     * 
                      */
                     bool EventTableListStructHasBeenSet() const;
 
                     /**
                      * 获取1: yes; 0: no
                      * @return BaseLineUser 1: yes; 0: no
+                     * 
                      */
                     uint64_t GetBaseLineUser() const;
 
                     /**
                      * 设置1: yes; 0: no
-                     * @param BaseLineUser 1: yes; 0: no
+                     * @param _baseLineUser 1: yes; 0: no
+                     * 
                      */
                     void SetBaseLineUser(const uint64_t& _baseLineUser);
 
                     /**
                      * 判断参数 BaseLineUser 是否已赋值
                      * @return BaseLineUser 是否已赋值
+                     * 
                      */
                     bool BaseLineUserHasBeenSet() const;
 
                     /**
                      * 获取1: on; 0: off
                      * @return BaseLineInSwitch 1: on; 0: off
+                     * 
                      */
                     uint64_t GetBaseLineInSwitch() const;
 
                     /**
                      * 设置1: on; 0: off
-                     * @param BaseLineInSwitch 1: on; 0: off
+                     * @param _baseLineInSwitch 1: on; 0: off
+                     * 
                      */
                     void SetBaseLineInSwitch(const uint64_t& _baseLineInSwitch);
 
                     /**
                      * 判断参数 BaseLineInSwitch 是否已赋值
                      * @return BaseLineInSwitch 是否已赋值
+                     * 
                      */
                     bool BaseLineInSwitchHasBeenSet() const;
 
                     /**
                      * 获取1: on; 0: off
                      * @return BaseLineOutSwitch 1: on; 0: off
+                     * 
                      */
                     uint64_t GetBaseLineOutSwitch() const;
 
                     /**
                      * 设置1: on; 0: off
-                     * @param BaseLineOutSwitch 1: on; 0: off
+                     * @param _baseLineOutSwitch 1: on; 0: off
+                     * 
                      */
                     void SetBaseLineOutSwitch(const uint64_t& _baseLineOutSwitch);
 
                     /**
                      * 判断参数 BaseLineOutSwitch 是否已赋值
                      * @return BaseLineOutSwitch 是否已赋值
+                     * 
                      */
                     bool BaseLineOutSwitchHasBeenSet() const;
 
@@ -124,20 +136,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return VpcFwCount Number of inter-VPC firewall instances
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetVpcFwCount() const;
 
                     /**
                      * 设置Number of inter-VPC firewall instances
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param VpcFwCount Number of inter-VPC firewall instances
+                     * @param _vpcFwCount Number of inter-VPC firewall instances
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetVpcFwCount(const uint64_t& _vpcFwCount);
 
                     /**
                      * 判断参数 VpcFwCount 是否已赋值
                      * @return VpcFwCount 是否已赋值
+                     * 
                      */
                     bool VpcFwCountHasBeenSet() const;
 

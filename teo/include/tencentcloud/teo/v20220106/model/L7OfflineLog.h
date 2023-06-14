@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return LogTime Start time of the log packaging
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetLogTime() const;
 
                     /**
                      * 设置Start time of the log packaging
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param LogTime Start time of the log packaging
+                     * @param _logTime Start time of the log packaging
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetLogTime(const int64_t& _logTime);
 
                     /**
                      * 判断参数 LogTime 是否已赋值
                      * @return LogTime 是否已赋值
+                     * 
                      */
                     bool LogTimeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Domain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Domain Subdomain name
+                     * @param _domain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Size Log size, in bytes
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Log size, in bytes
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Size Log size, in bytes
+                     * @param _size Log size, in bytes
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Url Download address
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Download address
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Url Download address
+                     * @param _url Download address
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return LogPacketName Log package name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetLogPacketName() const;
 
                     /**
                      * 设置Log package name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param LogPacketName Log package name
+                     * @param _logPacketName Log package name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetLogPacketName(const std::string& _logPacketName);
 
                     /**
                      * 判断参数 LogPacketName 是否已赋值
                      * @return LogPacketName 是否已赋值
+                     * 
                      */
                     bool LogPacketNameHasBeenSet() const;
 

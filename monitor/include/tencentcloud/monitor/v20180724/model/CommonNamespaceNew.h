@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Namespace ID
                      * @return Id Namespace ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Namespace ID
-                     * @param Id Namespace ID
+                     * @param _id Namespace ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return Name Namespace name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param Name Namespace name
+                     * @param _name Namespace name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Monitoring type
                      * @return MonitorType Monitoring type
+                     * 
                      */
                     std::string GetMonitorType() const;
 
                     /**
                      * 设置Monitoring type
-                     * @param MonitorType Monitoring type
+                     * @param _monitorType Monitoring type
+                     * 
                      */
                     void SetMonitorType(const std::string& _monitorType);
 
                     /**
                      * 判断参数 MonitorType 是否已赋值
                      * @return MonitorType 是否已赋值
+                     * 
                      */
                     bool MonitorTypeHasBeenSet() const;
 
                     /**
                      * 获取Dimension information
                      * @return Dimensions Dimension information
+                     * 
                      */
                     std::vector<DimensionNew> GetDimensions() const;
 
                     /**
                      * 设置Dimension information
-                     * @param Dimensions Dimension information
+                     * @param _dimensions Dimension information
+                     * 
                      */
                     void SetDimensions(const std::vector<DimensionNew>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 

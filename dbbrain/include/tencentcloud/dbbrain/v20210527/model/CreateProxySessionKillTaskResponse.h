@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID that is returned after the session killing task is created.
                      * @return AsyncRequestId Async task ID that is returned after the session killing task is created.
+                     * 
                      */
                     int64_t GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

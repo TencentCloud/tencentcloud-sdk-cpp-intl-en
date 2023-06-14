@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Record ID
                      * @return ID Record ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Record ID
-                     * @param ID Record ID
+                     * @param _iD Record ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Image size
                      * @return ImageSize Image size
+                     * 
                      */
                     int64_t GetImageSize() const;
 
                     /**
                      * 设置Image size
-                     * @param ImageSize Image size
+                     * @param _imageSize Image size
+                     * 
                      */
                     void SetImageSize(const int64_t& _imageSize);
 
                     /**
                      * 判断参数 ImageSize 是否已赋值
                      * @return ImageSize 是否已赋值
+                     * 
                      */
                     bool ImageSizeHasBeenSet() const;
 
                     /**
                      * 获取POC ID
                      * @return PocID POC ID
+                     * 
                      */
                     std::string GetPocID() const;
 
                     /**
                      * 设置POC ID
-                     * @param PocID POC ID
+                     * @param _pocID POC ID
+                     * 
                      */
                     void SetPocID(const std::string& _pocID);
 
                     /**
                      * 判断参数 PocID 是否已赋值
                      * @return PocID 是否已赋值
+                     * 
                      */
                     bool PocIDHasBeenSet() const;
 

@@ -66,6 +66,7 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
 <li><strong>host-state</strong></li>
 <p style="padding-left: 30px;">Filter by the CDH instance status. (`PENDING`: Creating | `LAUNCH_FAILURE`: Failed to create | `RUNNING`: Running | `EXPIRED`: Expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -81,7 +82,7 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
 <li><strong>host-state</strong></li>
 <p style="padding-left: 30px;">Filter by the CDH instance status. (`PENDING`: Creating | `LAUNCH_FAILURE`: Failed to create | `RUNNING`: Running | `EXPIRED`: Expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 Each request can have up to 10 `Filters` and 5 `Filter.Values`.
-                     * @param Filters <li><strong>zone</strong></li>
+                     * @param _filters <li><strong>zone</strong></li>
 <p style="padding-left: 30px;">Filter by the availability zone, such as `ap-guangzhou-1`.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p><p style="padding-left: 30px;">Valid values: See <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Regions and Availability Zones</a></p>
 <li><strong>project-id</strong></li>
 <p style="padding-left: 30px;">Filter by the project ID. You can query the list of created projects by calling `DescribeProject` or logging in to the [CVM console](https://console.cloud.tencent.com/cvm/index). You can also call `AddProject` to create projects. The project ID is like 1002189. </p><p style="padding-left: 30px;">Type: Integer</p><p style="padding-left: 30px;">Optional</p>
@@ -92,48 +93,56 @@ Each request can have up to 10 `Filters` and 5 `Filter.Values`.
 <li><strong>host-state</strong></li>
 <p style="padding-left: 30px;">Filter by the CDH instance status. (`PENDING`: Creating | `LAUNCH_FAILURE`: Failed to create | `RUNNING`: Running | `EXPIRED`: Expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset; default value: 0.
                      * @return Offset Offset; default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset; default value: 0.
-                     * @param Offset Offset; default value: 0.
+                     * @param _offset Offset; default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results returned; default value: 20; maximum: 100.
                      * @return Limit Number of results returned; default value: 20; maximum: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results returned; default value: 20; maximum: 100.
-                     * @param Limit Number of results returned; default value: 20; maximum: 100.
+                     * @param _limit Number of results returned; default value: 20; maximum: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Group object of the protocol port template.
                      * @return ServiceTemplateGroup Group object of the protocol port template.
+                     * 
                      */
                     ServiceTemplateGroup GetServiceTemplateGroup() const;
 
                     /**
                      * 判断参数 ServiceTemplateGroup 是否已赋值
                      * @return ServiceTemplateGroup 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateGroupHasBeenSet() const;
 

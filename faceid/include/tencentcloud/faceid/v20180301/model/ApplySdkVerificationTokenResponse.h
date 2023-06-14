@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
                      * @return SdkToken The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+                     * 
                      */
                     std::string GetSdkToken() const;
 
                     /**
                      * 判断参数 SdkToken 是否已赋值
                      * @return SdkToken 是否已赋值
+                     * 
                      */
                     bool SdkTokenHasBeenSet() const;
 

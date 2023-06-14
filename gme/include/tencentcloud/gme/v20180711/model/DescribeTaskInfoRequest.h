@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Application ID.
                      * @return BizId Application ID.
+                     * 
                      */
                     uint64_t GetBizId() const;
 
                     /**
                      * 设置Application ID.
-                     * @param BizId Application ID.
+                     * @param _bizId Application ID.
+                     * 
                      */
                     void SetBizId(const uint64_t& _bizId);
 
                     /**
                      * 判断参数 BizId 是否已赋值
                      * @return BizId 是否已赋值
+                     * 
                      */
                     bool BizIdHasBeenSet() const;
 
                     /**
                      * 获取Room ID.
                      * @return RoomId Room ID.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置Room ID.
-                     * @param RoomId Room ID.
+                     * @param _roomId Room ID.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 

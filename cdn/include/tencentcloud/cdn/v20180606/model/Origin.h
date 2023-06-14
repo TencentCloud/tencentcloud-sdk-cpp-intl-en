@@ -63,6 +63,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return Origins Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetOrigins() const;
 
@@ -70,15 +71,17 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 设置Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Origins Primary origin server list
+                     * @param _origins Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetOrigins(const std::vector<std::string>& _origins);
 
                     /**
                      * 判断参数 Origins 是否已赋值
                      * @return Origins 是否已赋值
+                     * 
                      */
                     bool OriginsHasBeenSet() const;
 
@@ -131,6 +134,7 @@ ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
 The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginType() const;
 
@@ -159,7 +163,7 @@ ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
 The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param OriginType Primary origin server type
+                     * @param _originType Primary origin server type
 The following types are supported for input parameters:
 `domain`: domain name
 `domainv6`: IPv6 domain name
@@ -183,12 +187,14 @@ ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
 The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginType(const std::string& _originType);
 
                     /**
                      * 判断参数 OriginType 是否已赋值
                      * @return OriginType 是否已赋值
+                     * 
                      */
                     bool OriginTypeHasBeenSet() const;
 
@@ -201,6 +207,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetServerName() const;
 
@@ -209,16 +216,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ServerName It is required when a COS origin or third-party origin is used for acceleration.
+                     * @param _serverName It is required when a COS origin or third-party origin is used for acceleration.
 Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetServerName(const std::string& _serverName);
 
                     /**
                      * 判断参数 ServerName 是否已赋值
                      * @return ServerName 是否已赋值
+                     * 
                      */
                     bool ServerNameHasBeenSet() const;
 
@@ -229,6 +238,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
 Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCosPrivateAccess() const;
 
@@ -236,15 +246,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置When OriginType is COS, you can specify if access to private buckets is allowed.
 Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
+                     * @param _cosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
 Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCosPrivateAccess(const std::string& _cosPrivateAccess);
 
                     /**
                      * 判断参数 CosPrivateAccess 是否已赋值
                      * @return CosPrivateAccess 是否已赋值
+                     * 
                      */
                     bool CosPrivateAccessHasBeenSet() const;
 
@@ -259,6 +271,7 @@ http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetOriginPullProtocol() const;
 
@@ -268,17 +281,19 @@ http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param OriginPullProtocol Origin-pull protocol configuration
+                     * @param _originPullProtocol Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
 
                     /**
                      * 判断参数 OriginPullProtocol 是否已赋值
                      * @return OriginPullProtocol 是否已赋值
+                     * 
                      */
                     bool OriginPullProtocolHasBeenSet() const;
 
@@ -289,6 +304,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return BackupOrigins Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetBackupOrigins() const;
 
@@ -296,15 +312,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param BackupOrigins Backup origin server list
+                     * @param _backupOrigins Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBackupOrigins(const std::vector<std::string>& _backupOrigins);
 
                     /**
                      * 判断参数 BackupOrigins 是否已赋值
                      * @return BackupOrigins 是否已赋值
+                     * 
                      */
                     bool BackupOriginsHasBeenSet() const;
 
@@ -329,6 +347,7 @@ The following backup origin servers are only available to beta users. Submit an 
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetBackupOriginType() const;
 
@@ -343,7 +362,7 @@ The following backup origin servers are only available to beta users. Submit an 
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param BackupOriginType Backup origin server type, which supports the following types:
+                     * @param _backupOriginType Backup origin server type, which supports the following types:
 `domain`: Domain name
 `ip`: IP address
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
@@ -353,12 +372,14 @@ The following backup origin servers are only available to beta users. Submit an 
 `ipv6_domain`: Multiple IPv6 addresses and one domain name
 `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBackupOriginType(const std::string& _backupOriginType);
 
                     /**
                      * 判断参数 BackupOriginType 是否已赋值
                      * @return BackupOriginType 是否已赋值
+                     * 
                      */
                     bool BackupOriginTypeHasBeenSet() const;
 
@@ -367,20 +388,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return BackupServerName Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetBackupServerName() const;
 
                     /**
                      * 设置Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param BackupServerName Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
+                     * @param _backupServerName Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBackupServerName(const std::string& _backupServerName);
 
                     /**
                      * 判断参数 BackupServerName 是否已赋值
                      * @return BackupServerName 是否已赋值
+                     * 
                      */
                     bool BackupServerNameHasBeenSet() const;
 
@@ -389,20 +413,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return BasePath Origin-pull path
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetBasePath() const;
 
                     /**
                      * 设置Origin-pull path
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param BasePath Origin-pull path
+                     * @param _basePath Origin-pull path
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBasePath(const std::string& _basePath);
 
                     /**
                      * 判断参数 BasePath 是否已赋值
                      * @return BasePath 是否已赋值
+                     * 
                      */
                     bool BasePathHasBeenSet() const;
 
@@ -411,20 +438,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PathRules Origin-pull path rewriting configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<PathRule> GetPathRules() const;
 
                     /**
                      * 设置Origin-pull path rewriting configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PathRules Origin-pull path rewriting configuration
+                     * @param _pathRules Origin-pull path rewriting configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPathRules(const std::vector<PathRule>& _pathRules);
 
                     /**
                      * 判断参数 PathRules 是否已赋值
                      * @return PathRules 是否已赋值
+                     * 
                      */
                     bool PathRulesHasBeenSet() const;
 
@@ -433,20 +463,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PathBasedOrigin Path-based origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<PathBasedOriginRule> GetPathBasedOrigin() const;
 
                     /**
                      * 设置Path-based origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PathBasedOrigin Path-based origin-pull configuration
+                     * @param _pathBasedOrigin Path-based origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPathBasedOrigin(const std::vector<PathBasedOriginRule>& _pathBasedOrigin);
 
                     /**
                      * 判断参数 PathBasedOrigin 是否已赋值
                      * @return PathBasedOrigin 是否已赋值
+                     * 
                      */
                     bool PathBasedOriginHasBeenSet() const;
 
@@ -455,20 +488,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AdvanceHttps HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AdvanceHttps GetAdvanceHttps() const;
 
                     /**
                      * 设置HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AdvanceHttps HTTPS advanced origin-pull configuration
+                     * @param _advanceHttps HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAdvanceHttps(const AdvanceHttps& _advanceHttps);
 
                     /**
                      * 判断参数 AdvanceHttps 是否已赋值
                      * @return AdvanceHttps 是否已赋值
+                     * 
                      */
                     bool AdvanceHttpsHasBeenSet() const;
 
@@ -477,20 +513,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OriginCompany Object storage vendor
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetOriginCompany() const;
 
                     /**
                      * 设置Object storage vendor
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param OriginCompany Object storage vendor
+                     * @param _originCompany Object storage vendor
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetOriginCompany(const std::string& _originCompany);
 
                     /**
                      * 判断参数 OriginCompany 是否已赋值
                      * @return OriginCompany 是否已赋值
+                     * 
                      */
                     bool OriginCompanyHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Log time
                      * @return Time Log time
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Log time
-                     * @param Time Log time
+                     * @param _time Log time
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Log level
                      * @return Level Log level
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Log level
-                     * @param Level Log level
+                     * @param _level Log level
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
                     /**
                      * 获取Cluster node IP
                      * @return Ip Cluster node IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Cluster node IP
-                     * @param Ip Cluster node IP
+                     * @param _ip Cluster node IP
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Log content
                      * @return Message Log content
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Log content
-                     * @param Message Log content
+                     * @param _message Log content
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

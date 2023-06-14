@@ -48,12 +48,14 @@ namespace TencentCloud
                     /**
                      * 获取Indicates whether or not the data is ready. `0`: not ready; `1`: ready.
                      * @return Ready Indicates whether or not the data is ready. `0`: not ready; `1`: ready.
+                     * 
                      */
                     uint64_t GetReady() const;
 
                     /**
                      * 判断参数 Ready 是否已赋值
                      * @return Ready 是否已赋值
+                     * 
                      */
                     bool ReadyHasBeenSet() const;
 
@@ -62,12 +64,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SummaryOverview Details about cost distribution over different tags
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagSummaryOverviewItem> GetSummaryOverview() const;
 
                     /**
                      * 判断参数 SummaryOverview 是否已赋值
                      * @return SummaryOverview 是否已赋值
+                     * 
                      */
                     bool SummaryOverviewHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SummaryTotal Total cost
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     SummaryTotal GetSummaryTotal() const;
 
                     /**
                      * 判断参数 SummaryTotal 是否已赋值
                      * @return SummaryTotal 是否已赋值
+                     * 
                      */
                     bool SummaryTotalHasBeenSet() const;
 

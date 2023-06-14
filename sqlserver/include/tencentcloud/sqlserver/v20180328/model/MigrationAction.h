@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取All the allowed operations. Values include: view (viewing a task), modify (modifying a task), start (starting a task), incremental (creating an incremental task), delete (deleting a task), and upload (obtaining the upload permission).
                      * @return AllAction All the allowed operations. Values include: view (viewing a task), modify (modifying a task), start (starting a task), incremental (creating an incremental task), delete (deleting a task), and upload (obtaining the upload permission).
+                     * 
                      */
                     std::vector<std::string> GetAllAction() const;
 
                     /**
                      * 设置All the allowed operations. Values include: view (viewing a task), modify (modifying a task), start (starting a task), incremental (creating an incremental task), delete (deleting a task), and upload (obtaining the upload permission).
-                     * @param AllAction All the allowed operations. Values include: view (viewing a task), modify (modifying a task), start (starting a task), incremental (creating an incremental task), delete (deleting a task), and upload (obtaining the upload permission).
+                     * @param _allAction All the allowed operations. Values include: view (viewing a task), modify (modifying a task), start (starting a task), incremental (creating an incremental task), delete (deleting a task), and upload (obtaining the upload permission).
+                     * 
                      */
                     void SetAllAction(const std::vector<std::string>& _allAction);
 
                     /**
                      * 判断参数 AllAction 是否已赋值
                      * @return AllAction 是否已赋值
+                     * 
                      */
                     bool AllActionHasBeenSet() const;
 
                     /**
                      * 获取Operation allowed in the current status. If the subset of AllAction is left empty, no operations will be allowed.
                      * @return AllowedAction Operation allowed in the current status. If the subset of AllAction is left empty, no operations will be allowed.
+                     * 
                      */
                     std::vector<std::string> GetAllowedAction() const;
 
                     /**
                      * 设置Operation allowed in the current status. If the subset of AllAction is left empty, no operations will be allowed.
-                     * @param AllowedAction Operation allowed in the current status. If the subset of AllAction is left empty, no operations will be allowed.
+                     * @param _allowedAction Operation allowed in the current status. If the subset of AllAction is left empty, no operations will be allowed.
+                     * 
                      */
                     void SetAllowedAction(const std::vector<std::string>& _allowedAction);
 
                     /**
                      * 判断参数 AllowedAction 是否已赋值
                      * @return AllowedAction 是否已赋值
+                     * 
                      */
                     bool AllowedActionHasBeenSet() const;
 

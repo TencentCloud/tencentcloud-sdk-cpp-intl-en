@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of user UINs
                      * @return UserUin Array of user UINs
+                     * 
                      */
                     std::vector<std::string> GetUserUin() const;
 
                     /**
                      * 设置Array of user UINs
-                     * @param UserUin Array of user UINs
+                     * @param _userUin Array of user UINs
+                     * 
                      */
                     void SetUserUin(const std::vector<std::string>& _userUin);
 
                     /**
                      * 判断参数 UserUin 是否已赋值
                      * @return UserUin 是否已赋值
+                     * 
                      */
                     bool UserUinHasBeenSet() const;
 
                     /**
                      * 获取Endpoint service ID
                      * @return EndPointServiceId Endpoint service ID
+                     * 
                      */
                     std::string GetEndPointServiceId() const;
 
                     /**
                      * 设置Endpoint service ID
-                     * @param EndPointServiceId Endpoint service ID
+                     * @param _endPointServiceId Endpoint service ID
+                     * 
                      */
                     void SetEndPointServiceId(const std::string& _endPointServiceId);
 
                     /**
                      * 判断参数 EndPointServiceId 是否已赋值
                      * @return EndPointServiceId 是否已赋值
+                     * 
                      */
                     bool EndPointServiceIdHasBeenSet() const;
 

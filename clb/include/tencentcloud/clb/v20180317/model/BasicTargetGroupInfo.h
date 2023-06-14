@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Target group ID
                      * @return TargetGroupId Target group ID
+                     * 
                      */
                     std::string GetTargetGroupId() const;
 
                     /**
                      * 设置Target group ID
-                     * @param TargetGroupId Target group ID
+                     * @param _targetGroupId Target group ID
+                     * 
                      */
                     void SetTargetGroupId(const std::string& _targetGroupId);
 
                     /**
                      * 判断参数 TargetGroupId 是否已赋值
                      * @return TargetGroupId 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Target group name
                      * @return TargetGroupName Target group name
+                     * 
                      */
                     std::string GetTargetGroupName() const;
 
                     /**
                      * 设置Target group name
-                     * @param TargetGroupName Target group name
+                     * @param _targetGroupName Target group name
+                     * 
                      */
                     void SetTargetGroupName(const std::string& _targetGroupName);
 
                     /**
                      * 判断参数 TargetGroupName 是否已赋值
                      * @return TargetGroupName 是否已赋值
+                     * 
                      */
                     bool TargetGroupNameHasBeenSet() const;
 

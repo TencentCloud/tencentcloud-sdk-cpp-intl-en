@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
+                     * @param _instanceType The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Price Rate (original)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetPrice() const;
 
                     /**
                      * 设置Rate (original)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Price Rate (original)
+                     * @param _price Rate (original)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrice(const double& _price);
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealCost Rate (discounted)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetRealCost() const;
 
                     /**
                      * 设置Rate (discounted)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealCost Rate (discounted)
+                     * @param _realCost Rate (discounted)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealCost(const double& _realCost);
 
                     /**
                      * 判断参数 RealCost 是否已赋值
                      * @return RealCost 是否已赋值
+                     * 
                      */
                     bool RealCostHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealTotalCost Total price (discounted)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetRealTotalCost() const;
 
                     /**
                      * 设置Total price (discounted)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealTotalCost Total price (discounted)
+                     * @param _realTotalCost Total price (discounted)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealTotalCost(const double& _realTotalCost);
 
                     /**
                      * 判断参数 RealTotalCost 是否已赋值
                      * @return RealTotalCost 是否已赋值
+                     * 
                      */
                     bool RealTotalCostHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Policy Discount
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetPolicy() const;
 
                     /**
                      * 设置Discount
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Policy Discount
+                     * @param _policy Discount
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolicy(const double& _policy);
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GoodsNum Quantity
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
                      * 设置Quantity
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GoodsNum Quantity
+                     * @param _goodsNum Quantity
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
 
                     /**
                      * 判断参数 GoodsNum 是否已赋值
                      * @return GoodsNum 是否已赋值
+                     * 
                      */
                     bool GoodsNumHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Instance details
                      * @return Detail Instance details
+                     * 
                      */
                     CynosdbInstanceDetail GetDetail() const;
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 

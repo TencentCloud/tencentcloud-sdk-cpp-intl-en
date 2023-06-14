@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The domains whose information is to be modified.
                      * @return Domains The domains whose information is to be modified.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domains whose information is to be modified.
-                     * @param Domains The domains whose information is to be modified.
+                     * @param _domains The domains whose information is to be modified.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取The profile ID.
                      * @return TemplateId The profile ID.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置The profile ID.
-                     * @param TemplateId The profile ID.
+                     * @param _templateId The profile ID.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the 60-day inter-registrar transfer lock.
                      * @return LockTransfer Whether to enable the 60-day inter-registrar transfer lock.
+                     * 
                      */
                     bool GetLockTransfer() const;
 
                     /**
                      * 设置Whether to enable the 60-day inter-registrar transfer lock.
-                     * @param LockTransfer Whether to enable the 60-day inter-registrar transfer lock.
+                     * @param _lockTransfer Whether to enable the 60-day inter-registrar transfer lock.
+                     * 
                      */
                     void SetLockTransfer(const bool& _lockTransfer);
 
                     /**
                      * 判断参数 LockTransfer 是否已赋值
                      * @return LockTransfer 是否已赋值
+                     * 
                      */
                     bool LockTransferHasBeenSet() const;
 

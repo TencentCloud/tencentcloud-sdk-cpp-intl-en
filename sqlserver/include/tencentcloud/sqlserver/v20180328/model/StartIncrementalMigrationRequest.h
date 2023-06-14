@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of imported target instance
                      * @return InstanceId ID of imported target instance
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of imported target instance
-                     * @param InstanceId ID of imported target instance
+                     * @param _instanceId ID of imported target instance
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup import task ID, which is returned through the API CreateBackupMigration
                      * @return BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * 
                      */
                     std::string GetBackupMigrationId() const;
 
                     /**
                      * 设置Backup import task ID, which is returned through the API CreateBackupMigration
-                     * @param BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * @param _backupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * 
                      */
                     void SetBackupMigrationId(const std::string& _backupMigrationId);
 
                     /**
                      * 判断参数 BackupMigrationId 是否已赋值
                      * @return BackupMigrationId 是否已赋值
+                     * 
                      */
                     bool BackupMigrationIdHasBeenSet() const;
 
                     /**
                      * 获取ID of an incremental backup import task
                      * @return IncrementalMigrationId ID of an incremental backup import task
+                     * 
                      */
                     std::string GetIncrementalMigrationId() const;
 
                     /**
                      * 设置ID of an incremental backup import task
-                     * @param IncrementalMigrationId ID of an incremental backup import task
+                     * @param _incrementalMigrationId ID of an incremental backup import task
+                     * 
                      */
                     void SetIncrementalMigrationId(const std::string& _incrementalMigrationId);
 
                     /**
                      * 判断参数 IncrementalMigrationId 是否已赋值
                      * @return IncrementalMigrationId 是否已赋值
+                     * 
                      */
                     bool IncrementalMigrationIdHasBeenSet() const;
 

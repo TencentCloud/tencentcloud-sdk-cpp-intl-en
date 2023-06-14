@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The instance ID.
                      * @return InstanceId The instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The instance ID.
-                     * @param InstanceId The instance ID.
+                     * @param _instanceId The instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The list of resources to be terminated.
                      * @return CvmInstanceIds The list of resources to be terminated.
+                     * 
                      */
                     std::vector<std::string> GetCvmInstanceIds() const;
 
                     /**
                      * 设置The list of resources to be terminated.
-                     * @param CvmInstanceIds The list of resources to be terminated.
+                     * @param _cvmInstanceIds The list of resources to be terminated.
+                     * 
                      */
                     void SetCvmInstanceIds(const std::vector<std::string>& _cvmInstanceIds);
 
                     /**
                      * 判断参数 CvmInstanceIds 是否已赋值
                      * @return CvmInstanceIds 是否已赋值
+                     * 
                      */
                     bool CvmInstanceIdsHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
+                     * 
                      */
                     std::string GetNodeFlag() const;
 
@@ -98,17 +105,19 @@ namespace TencentCloud
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-                     * @param NodeFlag Valid values of node type:
+                     * @param _nodeFlag Valid values of node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
+                     * 
                      */
                     void SetNodeFlag(const std::string& _nodeFlag);
 
                     /**
                      * 判断参数 NodeFlag 是否已赋值
                      * @return NodeFlag 是否已赋值
+                     * 
                      */
                     bool NodeFlagHasBeenSet() const;
 
@@ -119,6 +128,7 @@ namespace TencentCloud
                      * @return GraceDownFlag The graceful scale-in feature. Valid values:
   <li>`true`: Enabled.</li>
   <li>`false`: Disabled.</li>
+                     * 
                      */
                     bool GetGraceDownFlag() const;
 
@@ -126,33 +136,38 @@ namespace TencentCloud
                      * 设置The graceful scale-in feature. Valid values:
   <li>`true`: Enabled.</li>
   <li>`false`: Disabled.</li>
-                     * @param GraceDownFlag The graceful scale-in feature. Valid values:
+                     * @param _graceDownFlag The graceful scale-in feature. Valid values:
   <li>`true`: Enabled.</li>
   <li>`false`: Disabled.</li>
+                     * 
                      */
                     void SetGraceDownFlag(const bool& _graceDownFlag);
 
                     /**
                      * 判断参数 GraceDownFlag 是否已赋值
                      * @return GraceDownFlag 是否已赋值
+                     * 
                      */
                     bool GraceDownFlagHasBeenSet() const;
 
                     /**
                      * 获取The graceful scale-in wait time in seconds. Value range: 60–1800.
                      * @return GraceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+                     * 
                      */
                     int64_t GetGraceDownTime() const;
 
                     /**
                      * 设置The graceful scale-in wait time in seconds. Value range: 60–1800.
-                     * @param GraceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+                     * @param _graceDownTime The graceful scale-in wait time in seconds. Value range: 60–1800.
+                     * 
                      */
                     void SetGraceDownTime(const int64_t& _graceDownTime);
 
                     /**
                      * 判断参数 GraceDownTime 是否已赋值
                      * @return GraceDownTime 是否已赋值
+                     * 
                      */
                     bool GraceDownTimeHasBeenSet() const;
 

@@ -51,144 +51,168 @@ namespace TencentCloud
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModTime Modification time
+                     * 
                      */
                     std::string GetModTime() const;
 
                     /**
                      * 设置Modification time
-                     * @param ModTime Modification time
+                     * @param _modTime Modification time
+                     * 
                      */
                     void SetModTime(const std::string& _modTime);
 
                     /**
                      * 判断参数 ModTime 是否已赋值
                      * @return ModTime 是否已赋值
+                     * 
                      */
                     bool ModTimeHasBeenSet() const;
 
                     /**
                      * 获取Switch
                      * @return Enable Switch
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Switch
-                     * @param Enable Switch
+                     * @param _enable Switch
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return AddTime Creation time
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param AddTime Creation time
+                     * @param _addTime Creation time
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Rule name
                      * @return RuleName Rule name
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
-                     * @param RuleName Rule name
+                     * @param _ruleName Rule name
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -197,20 +221,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Targets Target overview
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TargetBrief> GetTargets() const;
 
                     /**
                      * 设置Target overview
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Targets Target overview
+                     * @param _targets Target overview
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargets(const std::vector<TargetBrief>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 
@@ -219,20 +246,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeadLetterConfig DLQ rule set by the rule, which may be null
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DeadLetterConfig GetDeadLetterConfig() const;
 
                     /**
                      * 设置DLQ rule set by the rule, which may be null
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeadLetterConfig DLQ rule set by the rule, which may be null
+                     * @param _deadLetterConfig DLQ rule set by the rule, which may be null
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeadLetterConfig(const DeadLetterConfig& _deadLetterConfig);
 
                     /**
                      * 判断参数 DeadLetterConfig 是否已赋值
                      * @return DeadLetterConfig 是否已赋值
+                     * 
                      */
                     bool DeadLetterConfigHasBeenSet() const;
 

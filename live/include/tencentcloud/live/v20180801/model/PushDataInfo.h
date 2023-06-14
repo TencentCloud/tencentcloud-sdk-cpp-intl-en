@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Push path.
                      * @return AppName Push path.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path.
-                     * @param AppName Push path.
+                     * @param _appName Push path.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Push client IP.
                      * @return ClientIp Push client IP.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置Push client IP.
-                     * @param ClientIp Push client IP.
+                     * @param _clientIp Push client IP.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取IP of the server that receives the stream.
                      * @return ServerIp IP of the server that receives the stream.
+                     * 
                      */
                     std::string GetServerIp() const;
 
                     /**
                      * 设置IP of the server that receives the stream.
-                     * @param ServerIp IP of the server that receives the stream.
+                     * @param _serverIp IP of the server that receives the stream.
+                     * 
                      */
                     void SetServerIp(const std::string& _serverIp);
 
                     /**
                      * 判断参数 ServerIp 是否已赋值
                      * @return ServerIp 是否已赋值
+                     * 
                      */
                     bool ServerIpHasBeenSet() const;
 
                     /**
                      * 获取Pushed video frame rate in Hz.
                      * @return VideoFps Pushed video frame rate in Hz.
+                     * 
                      */
                     uint64_t GetVideoFps() const;
 
                     /**
                      * 设置Pushed video frame rate in Hz.
-                     * @param VideoFps Pushed video frame rate in Hz.
+                     * @param _videoFps Pushed video frame rate in Hz.
+                     * 
                      */
                     void SetVideoFps(const uint64_t& _videoFps);
 
                     /**
                      * 判断参数 VideoFps 是否已赋值
                      * @return VideoFps 是否已赋值
+                     * 
                      */
                     bool VideoFpsHasBeenSet() const;
 
                     /**
                      * 获取Video bitrate (bps) for publishing
                      * @return VideoSpeed Video bitrate (bps) for publishing
+                     * 
                      */
                     uint64_t GetVideoSpeed() const;
 
                     /**
                      * 设置Video bitrate (bps) for publishing
-                     * @param VideoSpeed Video bitrate (bps) for publishing
+                     * @param _videoSpeed Video bitrate (bps) for publishing
+                     * 
                      */
                     void SetVideoSpeed(const uint64_t& _videoSpeed);
 
                     /**
                      * 判断参数 VideoSpeed 是否已赋值
                      * @return VideoSpeed 是否已赋值
+                     * 
                      */
                     bool VideoSpeedHasBeenSet() const;
 
                     /**
                      * 获取Pushed audio frame rate in Hz.
                      * @return AudioFps Pushed audio frame rate in Hz.
+                     * 
                      */
                     uint64_t GetAudioFps() const;
 
                     /**
                      * 设置Pushed audio frame rate in Hz.
-                     * @param AudioFps Pushed audio frame rate in Hz.
+                     * @param _audioFps Pushed audio frame rate in Hz.
+                     * 
                      */
                     void SetAudioFps(const uint64_t& _audioFps);
 
                     /**
                      * 判断参数 AudioFps 是否已赋值
                      * @return AudioFps 是否已赋值
+                     * 
                      */
                     bool AudioFpsHasBeenSet() const;
 
                     /**
                      * 获取Audio bitrate (bps) for publishing
                      * @return AudioSpeed Audio bitrate (bps) for publishing
+                     * 
                      */
                     uint64_t GetAudioSpeed() const;
 
                     /**
                      * 设置Audio bitrate (bps) for publishing
-                     * @param AudioSpeed Audio bitrate (bps) for publishing
+                     * @param _audioSpeed Audio bitrate (bps) for publishing
+                     * 
                      */
                     void SetAudioSpeed(const uint64_t& _audioSpeed);
 
                     /**
                      * 判断参数 AudioSpeed 是否已赋值
                      * @return AudioSpeed 是否已赋值
+                     * 
                      */
                     bool AudioSpeedHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return PushDomain Push domain name.
+                     * 
                      */
                     std::string GetPushDomain() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param PushDomain Push domain name.
+                     * @param _pushDomain Push domain name.
+                     * 
                      */
                     void SetPushDomain(const std::string& _pushDomain);
 
                     /**
                      * 判断参数 PushDomain 是否已赋值
                      * @return PushDomain 是否已赋值
+                     * 
                      */
                     bool PushDomainHasBeenSet() const;
 
                     /**
                      * 获取Push start time.
                      * @return BeginPushTime Push start time.
+                     * 
                      */
                     std::string GetBeginPushTime() const;
 
                     /**
                      * 设置Push start time.
-                     * @param BeginPushTime Push start time.
+                     * @param _beginPushTime Push start time.
+                     * 
                      */
                     void SetBeginPushTime(const std::string& _beginPushTime);
 
                     /**
                      * 判断参数 BeginPushTime 是否已赋值
                      * @return BeginPushTime 是否已赋值
+                     * 
                      */
                     bool BeginPushTimeHasBeenSet() const;
 
@@ -231,20 +261,23 @@ namespace TencentCloud
 Example: AAC.
                      * @return Acodec Audio codec,
 Example: AAC.
+                     * 
                      */
                     std::string GetAcodec() const;
 
                     /**
                      * 设置Audio codec,
 Example: AAC.
-                     * @param Acodec Audio codec,
+                     * @param _acodec Audio codec,
 Example: AAC.
+                     * 
                      */
                     void SetAcodec(const std::string& _acodec);
 
                     /**
                      * 判断参数 Acodec 是否已赋值
                      * @return Acodec 是否已赋值
+                     * 
                      */
                     bool AcodecHasBeenSet() const;
 
@@ -253,110 +286,128 @@ Example: AAC.
 Example: H.264.
                      * @return Vcodec Video codec,
 Example: H.264.
+                     * 
                      */
                     std::string GetVcodec() const;
 
                     /**
                      * 设置Video codec,
 Example: H.264.
-                     * @param Vcodec Video codec,
+                     * @param _vcodec Video codec,
 Example: H.264.
+                     * 
                      */
                     void SetVcodec(const std::string& _vcodec);
 
                     /**
                      * 判断参数 Vcodec 是否已赋值
                      * @return Vcodec 是否已赋值
+                     * 
                      */
                     bool VcodecHasBeenSet() const;
 
                     /**
                      * 获取Resolution.
                      * @return Resolution Resolution.
+                     * 
                      */
                     std::string GetResolution() const;
 
                     /**
                      * 设置Resolution.
-                     * @param Resolution Resolution.
+                     * @param _resolution Resolution.
+                     * 
                      */
                     void SetResolution(const std::string& _resolution);
 
                     /**
                      * 判断参数 Resolution 是否已赋值
                      * @return Resolution 是否已赋值
+                     * 
                      */
                     bool ResolutionHasBeenSet() const;
 
                     /**
                      * 获取Sample rate.
                      * @return AsampleRate Sample rate.
+                     * 
                      */
                     uint64_t GetAsampleRate() const;
 
                     /**
                      * 设置Sample rate.
-                     * @param AsampleRate Sample rate.
+                     * @param _asampleRate Sample rate.
+                     * 
                      */
                     void SetAsampleRate(const uint64_t& _asampleRate);
 
                     /**
                      * 判断参数 AsampleRate 是否已赋值
                      * @return AsampleRate 是否已赋值
+                     * 
                      */
                     bool AsampleRateHasBeenSet() const;
 
                     /**
                      * 获取Audio bitrate (bps) in metadata
                      * @return MetaAudioSpeed Audio bitrate (bps) in metadata
+                     * 
                      */
                     uint64_t GetMetaAudioSpeed() const;
 
                     /**
                      * 设置Audio bitrate (bps) in metadata
-                     * @param MetaAudioSpeed Audio bitrate (bps) in metadata
+                     * @param _metaAudioSpeed Audio bitrate (bps) in metadata
+                     * 
                      */
                     void SetMetaAudioSpeed(const uint64_t& _metaAudioSpeed);
 
                     /**
                      * 判断参数 MetaAudioSpeed 是否已赋值
                      * @return MetaAudioSpeed 是否已赋值
+                     * 
                      */
                     bool MetaAudioSpeedHasBeenSet() const;
 
                     /**
                      * 获取Video bitrate (bps) in metadata
                      * @return MetaVideoSpeed Video bitrate (bps) in metadata
+                     * 
                      */
                     uint64_t GetMetaVideoSpeed() const;
 
                     /**
                      * 设置Video bitrate (bps) in metadata
-                     * @param MetaVideoSpeed Video bitrate (bps) in metadata
+                     * @param _metaVideoSpeed Video bitrate (bps) in metadata
+                     * 
                      */
                     void SetMetaVideoSpeed(const uint64_t& _metaVideoSpeed);
 
                     /**
                      * 判断参数 MetaVideoSpeed 是否已赋值
                      * @return MetaVideoSpeed 是否已赋值
+                     * 
                      */
                     bool MetaVideoSpeedHasBeenSet() const;
 
                     /**
                      * 获取Frame rate in `metadata`.
                      * @return MetaFps Frame rate in `metadata`.
+                     * 
                      */
                     uint64_t GetMetaFps() const;
 
                     /**
                      * 设置Frame rate in `metadata`.
-                     * @param MetaFps Frame rate in `metadata`.
+                     * @param _metaFps Frame rate in `metadata`.
+                     * 
                      */
                     void SetMetaFps(const uint64_t& _metaFps);
 
                     /**
                      * 判断参数 MetaFps 是否已赋值
                      * @return MetaFps 是否已赋值
+                     * 
                      */
                     bool MetaFpsHasBeenSet() const;
 

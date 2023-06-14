@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Organization ID
                      * @return OrgId Organization ID
+                     * 
                      */
                     uint64_t GetOrgId() const;
 
                     /**
                      * 设置Organization ID
-                     * @param OrgId Organization ID
+                     * @param _orgId Organization ID
+                     * 
                      */
                     void SetOrgId(const uint64_t& _orgId);
 
                     /**
                      * 判断参数 OrgId 是否已赋值
                      * @return OrgId 是否已赋值
+                     * 
                      */
                     bool OrgIdHasBeenSet() const;
 

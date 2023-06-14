@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取List of invoker IDs. Up to 100 IDs are allowed.
                      * @return InvokerIds List of invoker IDs. Up to 100 IDs are allowed.
+                     * 
                      */
                     std::vector<std::string> GetInvokerIds() const;
 
                     /**
                      * 设置List of invoker IDs. Up to 100 IDs are allowed.
-                     * @param InvokerIds List of invoker IDs. Up to 100 IDs are allowed.
+                     * @param _invokerIds List of invoker IDs. Up to 100 IDs are allowed.
+                     * 
                      */
                     void SetInvokerIds(const std::vector<std::string>& _invokerIds);
 
                     /**
                      * 判断参数 InvokerIds 是否已赋值
                      * @return InvokerIds 是否已赋值
+                     * 
                      */
                     bool InvokerIdsHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

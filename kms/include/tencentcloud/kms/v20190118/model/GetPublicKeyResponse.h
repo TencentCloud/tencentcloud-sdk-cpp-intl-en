@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique CMK ID.
                      * @return KeyId Unique CMK ID.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded public key content.
                      * @return PublicKey Base64-encoded public key content.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取Public key content in PEM format.
                      * @return PublicKeyPem Public key content in PEM format.
+                     * 
                      */
                     std::string GetPublicKeyPem() const;
 
                     /**
                      * 判断参数 PublicKeyPem 是否已赋值
                      * @return PublicKeyPem 是否已赋值
+                     * 
                      */
                     bool PublicKeyPemHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique VPC subnet ID, such as `subnet-12345678`.
                      * @return SubnetId Unique VPC subnet ID, such as `subnet-12345678`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Unique VPC subnet ID, such as `subnet-12345678`.
-                     * @param SubnetId Unique VPC subnet ID, such as `subnet-12345678`.
+                     * @param _subnetId Unique VPC subnet ID, such as `subnet-12345678`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取IP address, such as 192.168.0.1
                      * @return Ip IP address, such as 192.168.0.1
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address, such as 192.168.0.1
-                     * @param Ip IP address, such as 192.168.0.1
+                     * @param _ip IP address, such as 192.168.0.1
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 

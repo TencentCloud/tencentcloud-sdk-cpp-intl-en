@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
                      * @return AddressIds The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
+                     * 
                      */
                     std::vector<std::string> GetAddressIds() const;
 
                     /**
                      * 设置The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
-                     * @param AddressIds The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
+                     * @param _addressIds The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
+                     * 
                      */
                     void SetAddressIds(const std::vector<std::string>& _addressIds);
 
                     /**
                      * 判断参数 AddressIds 是否已赋值
                      * @return AddressIds 是否已赋值
+                     * 
                      */
                     bool AddressIdsHasBeenSet() const;
 

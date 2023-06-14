@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Environment name.
                      * @return EnvironmentName Environment name.
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment name.
-                     * @param EnvironmentName Environment name.
+                     * @param _environmentName Environment name.
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取Access path.
                      * @return Url Access path.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Access path.
-                     * @param Url Access path.
+                     * @param _url Access path.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Release status. 1: published. 0: not published.
                      * @return Status Release status. 1: published. 0: not published.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Release status. 1: published. 0: not published.
-                     * @param Status Release status. 1: published. 0: not published.
+                     * @param _status Release status. 1: published. 0: not published.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Running version.
                      * @return VersionName Running version.
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Running version.
-                     * @param VersionName Running version.
+                     * @param _versionName Running version.
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 

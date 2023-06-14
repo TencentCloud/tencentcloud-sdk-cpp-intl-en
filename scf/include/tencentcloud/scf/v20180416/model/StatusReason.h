@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Error code
                      * @return ErrorCode Error code
+                     * 
                      */
                     std::string GetErrorCode() const;
 
                     /**
                      * 设置Error code
-                     * @param ErrorCode Error code
+                     * @param _errorCode Error code
+                     * 
                      */
                     void SetErrorCode(const std::string& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message
                      * @return ErrorMessage Error message
+                     * 
                      */
                     std::string GetErrorMessage() const;
 
                     /**
                      * 设置Error message
-                     * @param ErrorMessage Error message
+                     * @param _errorMessage Error message
+                     * 
                      */
                     void SetErrorMessage(const std::string& _errorMessage);
 
                     /**
                      * 判断参数 ErrorMessage 是否已赋值
                      * @return ErrorMessage 是否已赋值
+                     * 
                      */
                     bool ErrorMessageHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Sync all
                      * @return All Sync all
+                     * 
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置Sync all
-                     * @param All Sync all
+                     * @param _all Sync all
+                     * 
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
+                     * 
                      */
                     bool AllHasBeenSet() const;
 
                     /**
                      * 获取List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
                      * @return Hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+                     * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
                      * 设置List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
-                     * @param Hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+                     * @param _hosts List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+                     * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
 
                     /**
                      * 判断参数 Hosts 是否已赋值
                      * @return Hosts 是否已赋值
+                     * 
                      */
                     bool HostsHasBeenSet() const;
 

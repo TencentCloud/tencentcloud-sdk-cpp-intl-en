@@ -52,108 +52,126 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The site name.
                      * @return ZoneName The site name.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置The site name.
-                     * @param ZoneName The site name.
+                     * @param _zoneName The site name.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取The origin information.
                      * @return OriginSpeedTestingInfo The origin information.
+                     * 
                      */
                     std::vector<SpeedTestingInfo> GetOriginSpeedTestingInfo() const;
 
                     /**
                      * 设置The origin information.
-                     * @param OriginSpeedTestingInfo The origin information.
+                     * @param _originSpeedTestingInfo The origin information.
+                     * 
                      */
                     void SetOriginSpeedTestingInfo(const std::vector<SpeedTestingInfo>& _originSpeedTestingInfo);
 
                     /**
                      * 判断参数 OriginSpeedTestingInfo 是否已赋值
                      * @return OriginSpeedTestingInfo 是否已赋值
+                     * 
                      */
                     bool OriginSpeedTestingInfoHasBeenSet() const;
 
                     /**
                      * 获取The EdgeOne information.
                      * @return ProxySpeedTestingInfo The EdgeOne information.
+                     * 
                      */
                     std::vector<SpeedTestingInfo> GetProxySpeedTestingInfo() const;
 
                     /**
                      * 设置The EdgeOne information.
-                     * @param ProxySpeedTestingInfo The EdgeOne information.
+                     * @param _proxySpeedTestingInfo The EdgeOne information.
+                     * 
                      */
                     void SetProxySpeedTestingInfo(const std::vector<SpeedTestingInfo>& _proxySpeedTestingInfo);
 
                     /**
                      * 判断参数 ProxySpeedTestingInfo 是否已赋值
                      * @return ProxySpeedTestingInfo 是否已赋值
+                     * 
                      */
                     bool ProxySpeedTestingInfoHasBeenSet() const;
 
                     /**
                      * 获取The site status.
                      * @return SpeedTestingStatus The site status.
+                     * 
                      */
                     SpeedTestingStatus GetSpeedTestingStatus() const;
 
                     /**
                      * 设置The site status.
-                     * @param SpeedTestingStatus The site status.
+                     * @param _speedTestingStatus The site status.
+                     * 
                      */
                     void SetSpeedTestingStatus(const SpeedTestingStatus& _speedTestingStatus);
 
                     /**
                      * 判断参数 SpeedTestingStatus 是否已赋值
                      * @return SpeedTestingStatus 是否已赋值
+                     * 
                      */
                     bool SpeedTestingStatusHasBeenSet() const;
 
                     /**
                      * 获取The optimization suggestions.
                      * @return OptimizeAction The optimization suggestions.
+                     * 
                      */
                     std::vector<OptimizeAction> GetOptimizeAction() const;
 
                     /**
                      * 设置The optimization suggestions.
-                     * @param OptimizeAction The optimization suggestions.
+                     * @param _optimizeAction The optimization suggestions.
+                     * 
                      */
                     void SetOptimizeAction(const std::vector<OptimizeAction>& _optimizeAction);
 
                     /**
                      * 判断参数 OptimizeAction 是否已赋值
                      * @return OptimizeAction 是否已赋值
+                     * 
                      */
                     bool OptimizeActionHasBeenSet() const;
 
@@ -162,20 +180,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyLoadTime The EdgeOne load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProxyLoadTime() const;
 
                     /**
                      * 设置The EdgeOne load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProxyLoadTime The EdgeOne load time, in milliseconds.
+                     * @param _proxyLoadTime The EdgeOne load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProxyLoadTime(const int64_t& _proxyLoadTime);
 
                     /**
                      * 判断参数 ProxyLoadTime 是否已赋值
                      * @return ProxyLoadTime 是否已赋值
+                     * 
                      */
                     bool ProxyLoadTimeHasBeenSet() const;
 
@@ -184,20 +205,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginLoadTime The origin load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetOriginLoadTime() const;
 
                     /**
                      * 设置The origin load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginLoadTime The origin load time, in milliseconds.
+                     * @param _originLoadTime The origin load time, in milliseconds.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginLoadTime(const int64_t& _originLoadTime);
 
                     /**
                      * 判断参数 OriginLoadTime 是否已赋值
                      * @return OriginLoadTime 是否已赋值
+                     * 
                      */
                     bool OriginLoadTimeHasBeenSet() const;
 

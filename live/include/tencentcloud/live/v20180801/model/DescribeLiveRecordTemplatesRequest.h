@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return IsDelayLive Whether it is an LCB template. Default value: 0.
 0: LVB.
 1: LCB.
+                     * 
                      */
                     int64_t GetIsDelayLive() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Whether it is an LCB template. Default value: 0.
 0: LVB.
 1: LCB.
-                     * @param IsDelayLive Whether it is an LCB template. Default value: 0.
+                     * @param _isDelayLive Whether it is an LCB template. Default value: 0.
 0: LVB.
 1: LCB.
+                     * 
                      */
                     void SetIsDelayLive(const int64_t& _isDelayLive);
 
                     /**
                      * 判断参数 IsDelayLive 是否已赋值
                      * @return IsDelayLive 是否已赋值
+                     * 
                      */
                     bool IsDelayLiveHasBeenSet() const;
 

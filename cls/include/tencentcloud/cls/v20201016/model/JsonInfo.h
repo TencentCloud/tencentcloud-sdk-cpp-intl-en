@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Enablement flag
                      * @return EnableTag Enablement flag
+                     * 
                      */
                     bool GetEnableTag() const;
 
                     /**
                      * 设置Enablement flag
-                     * @param EnableTag Enablement flag
+                     * @param _enableTag Enablement flag
+                     * 
                      */
                     void SetEnableTag(const bool& _enableTag);
 
                     /**
                      * 判断参数 EnableTag 是否已赋值
                      * @return EnableTag 是否已赋值
+                     * 
                      */
                     bool EnableTagHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetMetaFields() const;
 
                     /**
                      * 设置List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * @param _metaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetaFields(const std::vector<std::string>& _metaFields);
 
                     /**
                      * 判断参数 MetaFields 是否已赋值
                      * @return MetaFields 是否已赋值
+                     * 
                      */
                     bool MetaFieldsHasBeenSet() const;
 

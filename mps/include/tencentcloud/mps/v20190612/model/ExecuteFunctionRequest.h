@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of called backend API.
                      * @return FunctionName Name of called backend API.
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Name of called backend API.
-                     * @param FunctionName Name of called backend API.
+                     * @param _functionName Name of called backend API.
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取API parameter. Parameter format will depend on the actual function definition.
                      * @return FunctionArg API parameter. Parameter format will depend on the actual function definition.
+                     * 
                      */
                     std::string GetFunctionArg() const;
 
                     /**
                      * 设置API parameter. Parameter format will depend on the actual function definition.
-                     * @param FunctionArg API parameter. Parameter format will depend on the actual function definition.
+                     * @param _functionArg API parameter. Parameter format will depend on the actual function definition.
+                     * 
                      */
                     void SetFunctionArg(const std::string& _functionArg);
 
                     /**
                      * 判断参数 FunctionArg 是否已赋值
                      * @return FunctionArg 是否已赋值
+                     * 
                      */
                     bool FunctionArgHasBeenSet() const;
 

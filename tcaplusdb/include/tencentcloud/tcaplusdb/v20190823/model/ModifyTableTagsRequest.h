@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the cluster where table tags need to be modified
                      * @return ClusterId The ID of the cluster where table tags need to be modified
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The ID of the cluster where table tags need to be modified
-                     * @param ClusterId The ID of the cluster where table tags need to be modified
+                     * @param _clusterId The ID of the cluster where table tags need to be modified
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The list of tables whose tags need to be modified
                      * @return SelectedTables The list of tables whose tags need to be modified
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置The list of tables whose tags need to be modified
-                     * @param SelectedTables The list of tables whose tags need to be modified
+                     * @param _selectedTables The list of tables whose tags need to be modified
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 
                     /**
                      * 获取The list of tags to add or modify
                      * @return ReplaceTags The list of tags to add or modify
+                     * 
                      */
                     std::vector<TagInfoUnit> GetReplaceTags() const;
 
                     /**
                      * 设置The list of tags to add or modify
-                     * @param ReplaceTags The list of tags to add or modify
+                     * @param _replaceTags The list of tags to add or modify
+                     * 
                      */
                     void SetReplaceTags(const std::vector<TagInfoUnit>& _replaceTags);
 
                     /**
                      * 判断参数 ReplaceTags 是否已赋值
                      * @return ReplaceTags 是否已赋值
+                     * 
                      */
                     bool ReplaceTagsHasBeenSet() const;
 
                     /**
                      * 获取The list of tags to delete
                      * @return DeleteTags The list of tags to delete
+                     * 
                      */
                     std::vector<TagInfoUnit> GetDeleteTags() const;
 
                     /**
                      * 设置The list of tags to delete
-                     * @param DeleteTags The list of tags to delete
+                     * @param _deleteTags The list of tags to delete
+                     * 
                      */
                     void SetDeleteTags(const std::vector<TagInfoUnit>& _deleteTags);
 
                     /**
                      * 判断参数 DeleteTags 是否已赋值
                      * @return DeleteTags 是否已赋值
+                     * 
                      */
                     bool DeleteTagsHasBeenSet() const;
 

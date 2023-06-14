@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The claim protocol type (CPT) index.
                      * @return CptIndex The claim protocol type (CPT) index.
+                     * 
                      */
                     uint64_t GetCptIndex() const;
 
                     /**
                      * 设置The claim protocol type (CPT) index.
-                     * @param CptIndex The claim protocol type (CPT) index.
+                     * @param _cptIndex The claim protocol type (CPT) index.
+                     * 
                      */
                     void SetCptIndex(const uint64_t& _cptIndex);
 
                     /**
                      * 判断参数 CptIndex 是否已赋值
                      * @return CptIndex 是否已赋值
+                     * 
                      */
                     bool CptIndexHasBeenSet() const;
 

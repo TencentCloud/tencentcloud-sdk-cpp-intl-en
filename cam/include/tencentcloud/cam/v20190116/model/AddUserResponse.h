@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Sub-user UIN
                      * @return Uin Sub-user UIN
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取Sub-user username
                      * @return Name Sub-user username
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取If the combination of input parameters indicates that a random password should be generated, the generated password is returned
                      * @return Password If the combination of input parameters indicates that a random password should be generated, the generated password is returned
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Sub-user's key ID
                      * @return SecretId Sub-user's key ID
+                     * 
                      */
                     std::string GetSecretId() const;
 
                     /**
                      * 判断参数 SecretId 是否已赋值
                      * @return SecretId 是否已赋值
+                     * 
                      */
                     bool SecretIdHasBeenSet() const;
 
                     /**
                      * 获取Sub-user's secret key
                      * @return SecretKey Sub-user's secret key
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
                     /**
                      * 获取Sub-user UID
                      * @return Uid Sub-user UID
+                     * 
                      */
                     uint64_t GetUid() const;
 
                     /**
                      * 判断参数 Uid 是否已赋值
                      * @return Uid 是否已赋值
+                     * 
                      */
                     bool UidHasBeenSet() const;
 

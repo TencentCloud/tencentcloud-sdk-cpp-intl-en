@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Custom file system name
                      * @return CreationToken Custom file system name
+                     * 
                      */
                     std::string GetCreationToken() const;
 
                     /**
                      * 判断参数 CreationToken 是否已赋值
                      * @return CreationToken 是否已赋值
+                     * 
                      */
                     bool CreationTokenHasBeenSet() const;
 
                     /**
                      * 获取File system ID
                      * @return FileSystemId File system ID
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
                      * 获取Custom file system name
                      * @return FsName Custom file system name
+                     * 
                      */
                     std::string GetFsName() const;
 
                     /**
                      * 判断参数 FsName 是否已赋值
                      * @return FsName 是否已赋值
+                     * 
                      */
                     bool FsNameHasBeenSet() const;
 

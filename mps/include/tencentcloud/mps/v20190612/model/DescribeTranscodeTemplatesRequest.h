@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID filter of transcoding templates. Array length limit: 100.
                      * @return Definitions Unique ID filter of transcoding templates. Array length limit: 100.
+                     * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
                      * 设置Unique ID filter of transcoding templates. Array length limit: 100.
-                     * @param Definitions Unique ID filter of transcoding templates. Array length limit: 100.
+                     * @param _definitions Unique ID filter of transcoding templates. Array length limit: 100.
+                     * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
 
                     /**
                      * 判断参数 Definitions 是否已赋值
                      * @return Definitions 是否已赋值
+                     * 
                      */
                     bool DefinitionsHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return Type Template type filter. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置Template type filter. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
-                     * @param Type Template type filter. Valid values:
+                     * @param _type Template type filter. Valid values:
 <li>Preset: Preset template;</li>
 <li>Custom: Custom template.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -93,6 +99,7 @@ namespace TencentCloud
                      * @return ContainerType Container format filter. Valid values:
 <li>Video: Video container format that can contain both video stream and audio stream;</li>
 <li>PureAudio: Audio container format that can contain only audio stream.</li>
+                     * 
                      */
                     std::string GetContainerType() const;
 
@@ -100,15 +107,17 @@ namespace TencentCloud
                      * 设置Container format filter. Valid values:
 <li>Video: Video container format that can contain both video stream and audio stream;</li>
 <li>PureAudio: Audio container format that can contain only audio stream.</li>
-                     * @param ContainerType Container format filter. Valid values:
+                     * @param _containerType Container format filter. Valid values:
 <li>Video: Video container format that can contain both video stream and audio stream;</li>
 <li>PureAudio: Audio container format that can contain only audio stream.</li>
+                     * 
                      */
                     void SetContainerType(const std::string& _containerType);
 
                     /**
                      * 判断参数 ContainerType 是否已赋值
                      * @return ContainerType 是否已赋值
+                     * 
                      */
                     bool ContainerTypeHasBeenSet() const;
 
@@ -119,6 +128,7 @@ namespace TencentCloud
                      * @return TEHDType TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
 <li>Common: Common transcoding template;</li>
 <li>TEHD: TESHD template.</li>
+                     * 
                      */
                     std::string GetTEHDType() const;
 
@@ -126,51 +136,59 @@ namespace TencentCloud
                      * 设置TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
 <li>Common: Common transcoding template;</li>
 <li>TEHD: TESHD template.</li>
-                     * @param TEHDType TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
+                     * @param _tEHDType TESHD filter, which is used to filter common transcoding or ultra-fast HD transcoding templates. Valid values:
 <li>Common: Common transcoding template;</li>
 <li>TEHD: TESHD template.</li>
+                     * 
                      */
                     void SetTEHDType(const std::string& _tEHDType);
 
                     /**
                      * 判断参数 TEHDType 是否已赋值
                      * @return TEHDType 是否已赋值
+                     * 
                      */
                     bool TEHDTypeHasBeenSet() const;
 
                     /**
                      * 获取Paging offset. Default value: 0.
                      * @return Offset Paging offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Paging offset. Default value: 0.
-                     * @param Offset Paging offset. Default value: 0.
+                     * @param _offset Paging offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned entries. Default value: 10. Maximum value: 100.
                      * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -185,6 +203,7 @@ This parameter is left empty by default, which indicates to return all types of 
 <li>TEHD: TESHD template</li>
 <li>Enhance: Audio/Video enhancement template.</li>
 This parameter is left empty by default, which indicates to return all types of templates.
+                     * 
                      */
                     std::string GetTranscodeType() const;
 
@@ -194,17 +213,19 @@ This parameter is left empty by default, which indicates to return all types of 
 <li>TEHD: TESHD template</li>
 <li>Enhance: Audio/Video enhancement template.</li>
 This parameter is left empty by default, which indicates to return all types of templates.
-                     * @param TranscodeType The template type (replacing `TEHDType`). Valid values:
+                     * @param _transcodeType The template type (replacing `TEHDType`). Valid values:
 <li>Common: Common transcoding template</li>
 <li>TEHD: TESHD template</li>
 <li>Enhance: Audio/Video enhancement template.</li>
 This parameter is left empty by default, which indicates to return all types of templates.
+                     * 
                      */
                     void SetTranscodeType(const std::string& _transcodeType);
 
                     /**
                      * 判断参数 TranscodeType 是否已赋值
                      * @return TranscodeType 是否已赋值
+                     * 
                      */
                     bool TranscodeTypeHasBeenSet() const;
 

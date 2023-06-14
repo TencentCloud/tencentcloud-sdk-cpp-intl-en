@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Number of entries per page.
                      * @return Limit Number of entries per page.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page.
-                     * @param Limit Number of entries per page.
+                     * @param _limit Number of entries per page.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page offset.
                      * @return Offset Page offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page offset.
-                     * @param Offset Page offset.
+                     * @param _offset Page offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Direction. Valid values: 1: inbound public access; 0: outbound public access; 3: private network access; empty string: all access.
                      * @return Direction Direction. Valid values: 1: inbound public access; 0: outbound public access; 3: private network access; empty string: all access.
+                     * 
                      */
                     std::string GetDirection() const;
 
                     /**
                      * 设置Direction. Valid values: 1: inbound public access; 0: outbound public access; 3: private network access; empty string: all access.
-                     * @param Direction Direction. Valid values: 1: inbound public access; 0: outbound public access; 3: private network access; empty string: all access.
+                     * @param _direction Direction. Valid values: 1: inbound public access; 0: outbound public access; 3: private network access; empty string: all access.
+                     * 
                      */
                     void SetDirection(const std::string& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Rule type. Valid values: 1: block; 2: allow.
                      * @return RuleType Rule type. Valid values: 1: block; 2: allow.
+                     * 
                      */
                     uint64_t GetRuleType() const;
 
                     /**
                      * 设置Rule type. Valid values: 1: block; 2: allow.
-                     * @param RuleType Rule type. Valid values: 1: block; 2: allow.
+                     * @param _ruleType Rule type. Valid values: 1: block; 2: allow.
+                     * 
                      */
                     void SetRuleType(const uint64_t& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Column by which rules are sorted. Valid values: EndTime: end time; StartTime: start time; MatchTimes: number of matching times.
                      * @return Order Column by which rules are sorted. Valid values: EndTime: end time; StartTime: start time; MatchTimes: number of matching times.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Column by which rules are sorted. Valid values: EndTime: end time; StartTime: start time; MatchTimes: number of matching times.
-                     * @param Order Column by which rules are sorted. Valid values: EndTime: end time; StartTime: start time; MatchTimes: number of matching times.
+                     * @param _order Column by which rules are sorted. Valid values: EndTime: end time; StartTime: start time; MatchTimes: number of matching times.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sort order. Valid values: desc: descending; asc: ascending.
                      * @return By Sort order. Valid values: desc: descending; asc: ascending.
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sort order. Valid values: desc: descending; asc: ascending.
-                     * @param By Sort order. Valid values: desc: descending; asc: ascending.
+                     * @param _by Sort order. Valid values: desc: descending; asc: ascending.
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Search keys, in a JSON string. Valid values: {}: empty; domain: domain name; level: threat level; ignore_reason: reason for allowing access; rule_source: source of a security event; address: geographical location; common: fuzzy search.
                      * @return SearchValue Search keys, in a JSON string. Valid values: {}: empty; domain: domain name; level: threat level; ignore_reason: reason for allowing access; rule_source: source of a security event; address: geographical location; common: fuzzy search.
+                     * 
                      */
                     std::string GetSearchValue() const;
 
                     /**
                      * 设置Search keys, in a JSON string. Valid values: {}: empty; domain: domain name; level: threat level; ignore_reason: reason for allowing access; rule_source: source of a security event; address: geographical location; common: fuzzy search.
-                     * @param SearchValue Search keys, in a JSON string. Valid values: {}: empty; domain: domain name; level: threat level; ignore_reason: reason for allowing access; rule_source: source of a security event; address: geographical location; common: fuzzy search.
+                     * @param _searchValue Search keys, in a JSON string. Valid values: {}: empty; domain: domain name; level: threat level; ignore_reason: reason for allowing access; rule_source: source of a security event; address: geographical location; common: fuzzy search.
+                     * 
                      */
                     void SetSearchValue(const std::string& _searchValue);
 
                     /**
                      * 判断参数 SearchValue 是否已赋值
                      * @return SearchValue 是否已赋值
+                     * 
                      */
                     bool SearchValueHasBeenSet() const;
 

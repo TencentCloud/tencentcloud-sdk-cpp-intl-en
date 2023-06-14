@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Environment/namespace name (required).
                      * @return EnvironmentId Environment/namespace name (required).
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment/namespace name (required).
-                     * @param EnvironmentId Environment/namespace name (required).
+                     * @param _environmentId Environment/namespace name (required).
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Offset, which defaults to 0 if left empty.
                      * @return Offset Offset, which defaults to 0 if left empty.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which defaults to 0 if left empty.
-                     * @param Offset Offset, which defaults to 0 if left empty.
+                     * @param _offset Offset, which defaults to 0 if left empty.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      * @return Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
-                     * @param Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * @param _limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pulsar cluster ID (required).
                      * @return ClusterId Pulsar cluster ID (required).
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Pulsar cluster ID (required).
-                     * @param ClusterId Pulsar cluster ID (required).
+                     * @param _clusterId Pulsar cluster ID (required).
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Role name.
                      * @return RoleName Role name.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name.
-                     * @param RoleName Role name.
+                     * @param _roleName Role name.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
@@ -142,6 +157,7 @@ Required: No
 Filter by role name for exact query.
 Type: String
 Required: No
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -150,16 +166,18 @@ Required: No
 Filter by role name for exact query.
 Type: String
 Required: No
-                     * @param Filters * RoleName
+                     * @param _filters * RoleName
 Filter by role name for exact query.
 Type: String
 Required: No
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

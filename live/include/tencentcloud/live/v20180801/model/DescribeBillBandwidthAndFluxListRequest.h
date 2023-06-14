@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _startTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
                      * @return EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
-                     * @param EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
+                     * @param _endTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取LVB playback domain name. If this parameter is left empty, full data will be queried.
                      * @return PlayDomains LVB playback domain name. If this parameter is left empty, full data will be queried.
+                     * 
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
                      * 设置LVB playback domain name. If this parameter is left empty, full data will be queried.
-                     * @param PlayDomains LVB playback domain name. If this parameter is left empty, full data will be queried.
+                     * @param _playDomains LVB playback domain name. If this parameter is left empty, full data will be queried.
+                     * 
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
                     /**
                      * 判断参数 PlayDomains 是否已赋值
                      * @return PlayDomains 是否已赋值
+                     * 
                      */
                     bool PlayDomainsHasBeenSet() const;
 
@@ -107,6 +116,7 @@ Mainland: query data for Mainland China,
 Oversea: query data for regions outside Mainland China,
 Default: query data for all regions.
 Note: LEB only supports querying data for all regions.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
@@ -116,17 +126,19 @@ Mainland: query data for Mainland China,
 Oversea: query data for regions outside Mainland China,
 Default: query data for all regions.
 Note: LEB only supports querying data for all regions.
-                     * @param MainlandOrOversea Valid values:
+                     * @param _mainlandOrOversea Valid values:
 Mainland: query data for Mainland China,
 Oversea: query data for regions outside Mainland China,
 Default: query data for all regions.
 Note: LEB only supports querying data for all regions.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 
@@ -141,6 +153,7 @@ Default value: 5.
 60: 1-hour granularity (the query time span should be within one month),
 1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
+                     * 
                      */
                     uint64_t GetGranularity() const;
 
@@ -150,35 +163,40 @@ Default value: 5.
 60: 1-hour granularity (the query time span should be within one month),
 1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
-                     * @param Granularity Data granularity. Valid values:
+                     * @param _granularity Data granularity. Valid values:
 5: 5-minute granularity (the query time span should be within 1 day),
 60: 1-hour granularity (the query time span should be within one month),
 1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
+                     * 
                      */
                     void SetGranularity(const uint64_t& _granularity);
 
                     /**
                      * 判断参数 Granularity 是否已赋值
                      * @return Granularity 是否已赋值
+                     * 
                      */
                     bool GranularityHasBeenSet() const;
 
                     /**
                      * 获取Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
                      * @return ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
-                     * @param ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+                     * @param _serviceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
@@ -203,6 +221,7 @@ North America
 South America
 Middle East
 Africa
+                     * 
                      */
                     std::vector<std::string> GetRegionNames() const;
 
@@ -217,7 +236,7 @@ North America
 South America
 Middle East
 Africa
-                     * @param RegionNames Region. Valid values:
+                     * @param _regionNames Region. Valid values:
 China Mainland
 Asia Pacific I
 Asia Pacific II
@@ -227,12 +246,14 @@ North America
 South America
 Middle East
 Africa
+                     * 
                      */
                     void SetRegionNames(const std::vector<std::string>& _regionNames);
 
                     /**
                      * 判断参数 RegionNames 是否已赋值
                      * @return RegionNames 是否已赋值
+                     * 
                      */
                     bool RegionNamesHasBeenSet() const;
 

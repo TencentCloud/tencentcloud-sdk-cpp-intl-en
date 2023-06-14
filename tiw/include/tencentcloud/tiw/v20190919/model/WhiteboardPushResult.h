@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取`AUTO`: Pushing automatically stops. `USER_CALL`: The API for stopping pushing is called.
                      * @return FinishReason `AUTO`: Pushing automatically stops. `USER_CALL`: The API for stopping pushing is called.
+                     * 
                      */
                     std::string GetFinishReason() const;
 
                     /**
                      * 设置`AUTO`: Pushing automatically stops. `USER_CALL`: The API for stopping pushing is called.
-                     * @param FinishReason `AUTO`: Pushing automatically stops. `USER_CALL`: The API for stopping pushing is called.
+                     * @param _finishReason `AUTO`: Pushing automatically stops. `USER_CALL`: The API for stopping pushing is called.
+                     * 
                      */
                     void SetFinishReason(const std::string& _finishReason);
 
                     /**
                      * 判断参数 FinishReason 是否已赋值
                      * @return FinishReason 是否已赋值
+                     * 
                      */
                     bool FinishReasonHasBeenSet() const;
 
                     /**
                      * 获取Number of exceptions.
                      * @return ExceptionCnt Number of exceptions.
+                     * 
                      */
                     int64_t GetExceptionCnt() const;
 
                     /**
                      * 设置Number of exceptions.
-                     * @param ExceptionCnt Number of exceptions.
+                     * @param _exceptionCnt Number of exceptions.
+                     * 
                      */
                     void SetExceptionCnt(const int64_t& _exceptionCnt);
 
                     /**
                      * 判断参数 ExceptionCnt 是否已赋值
                      * @return ExceptionCnt 是否已赋值
+                     * 
                      */
                     bool ExceptionCntHasBeenSet() const;
 
                     /**
                      * 获取Room ID.
                      * @return RoomId Room ID.
+                     * 
                      */
                     int64_t GetRoomId() const;
 
                     /**
                      * 设置Room ID.
-                     * @param RoomId Room ID.
+                     * @param _roomId Room ID.
+                     * 
                      */
                     void SetRoomId(const int64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取IM group ID.
                      * @return GroupId IM group ID.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置IM group ID.
-                     * @param GroupId IM group ID.
+                     * @param _groupId IM group ID.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Actual push start time.
                      * @return PushStartTime Actual push start time.
+                     * 
                      */
                     int64_t GetPushStartTime() const;
 
                     /**
                      * 设置Actual push start time.
-                     * @param PushStartTime Actual push start time.
+                     * @param _pushStartTime Actual push start time.
+                     * 
                      */
                     void SetPushStartTime(const int64_t& _pushStartTime);
 
                     /**
                      * 判断参数 PushStartTime 是否已赋值
                      * @return PushStartTime 是否已赋值
+                     * 
                      */
                     bool PushStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Push end time.
                      * @return PushStopTime Push end time.
+                     * 
                      */
                     int64_t GetPushStopTime() const;
 
                     /**
                      * 设置Push end time.
-                     * @param PushStopTime Push end time.
+                     * @param _pushStopTime Push end time.
+                     * 
                      */
                     void SetPushStopTime(const int64_t& _pushStopTime);
 
                     /**
                      * 判断参数 PushStopTime 是否已赋值
                      * @return PushStopTime 是否已赋值
+                     * 
                      */
                     bool PushStopTimeHasBeenSet() const;
 
                     /**
                      * 获取IM timestamp corresponding to the first frame of the whiteboard push video. The timestamp is used for time synchronization between IM messages and the whiteboard push video during playback.
                      * @return IMSyncTime IM timestamp corresponding to the first frame of the whiteboard push video. The timestamp is used for time synchronization between IM messages and the whiteboard push video during playback.
+                     * 
                      */
                     int64_t GetIMSyncTime() const;
 
                     /**
                      * 设置IM timestamp corresponding to the first frame of the whiteboard push video. The timestamp is used for time synchronization between IM messages and the whiteboard push video during playback.
-                     * @param IMSyncTime IM timestamp corresponding to the first frame of the whiteboard push video. The timestamp is used for time synchronization between IM messages and the whiteboard push video during playback.
+                     * @param _iMSyncTime IM timestamp corresponding to the first frame of the whiteboard push video. The timestamp is used for time synchronization between IM messages and the whiteboard push video during playback.
+                     * 
                      */
                     void SetIMSyncTime(const int64_t& _iMSyncTime);
 
                     /**
                      * 判断参数 IMSyncTime 是否已赋值
                      * @return IMSyncTime 是否已赋值
+                     * 
                      */
                     bool IMSyncTimeHasBeenSet() const;
 
                     /**
                      * 获取Task execution error code.
                      * @return ErrorCode Task execution error code.
+                     * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 设置Task execution error code.
-                     * @param ErrorCode Task execution error code.
+                     * @param _errorCode Task execution error code.
+                     * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return ErrorMsg Error message.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 设置Error message.
-                     * @param ErrorMsg Error message.
+                     * @param _errorMsg Error message.
+                     * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 

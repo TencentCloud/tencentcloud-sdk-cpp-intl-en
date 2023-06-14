@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResourceId Resource ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Resource ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResourceId Resource ID
+                     * @param _resourceId Resource ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResourceType Resource type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResourceType Resource type
+                     * @param _resourceType Resource type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Resource Authorized resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResource() const;
 
                     /**
                      * 设置Authorized resource
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Resource Authorized resource
+                     * @param _resource Authorized resource
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InheritedForm Inheritance relationship
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InheritedForm GetInheritedForm() const;
 
                     /**
                      * 设置Inheritance relationship
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InheritedForm Inheritance relationship
+                     * @param _inheritedForm Inheritance relationship
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInheritedForm(const InheritedForm& _inheritedForm);
 
                     /**
                      * 判断参数 InheritedForm 是否已赋值
                      * @return InheritedForm 是否已赋值
+                     * 
                      */
                     bool InheritedFormHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationAccounts Application account
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetApplicationAccounts() const;
 
                     /**
                      * 设置Application account
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApplicationAccounts Application account
+                     * @param _applicationAccounts Application account
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationAccounts(const std::vector<std::string>& _applicationAccounts);
 
                     /**
                      * 判断参数 ApplicationAccounts 是否已赋值
                      * @return ApplicationAccounts 是否已赋值
+                     * 
                      */
                     bool ApplicationAccountsHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResourceName Resource name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceName() const;
 
                     /**
                      * 设置Resource name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResourceName Resource name
+                     * @param _resourceName Resource name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceName(const std::string& _resourceName);
 
                     /**
                      * 判断参数 ResourceName 是否已赋值
                      * @return ResourceName 是否已赋值
+                     * 
                      */
                     bool ResourceNameHasBeenSet() const;
 

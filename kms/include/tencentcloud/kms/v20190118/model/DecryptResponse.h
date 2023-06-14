@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Globally unique CMK ID
                      * @return KeyId Globally unique CMK ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
                      * @return Plaintext If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
 If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
+                     * 
                      */
                     std::string GetPlaintext() const;
 
                     /**
                      * 判断参数 Plaintext 是否已赋值
                      * @return Plaintext 是否已赋值
+                     * 
                      */
                     bool PlaintextHasBeenSet() const;
 

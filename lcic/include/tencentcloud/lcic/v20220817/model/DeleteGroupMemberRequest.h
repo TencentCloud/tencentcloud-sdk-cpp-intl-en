@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The group ID. You cannot remove members from a merged group.
                      * @return GroupId The group ID. You cannot remove members from a merged group.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置The group ID. You cannot remove members from a merged group.
-                     * @param GroupId The group ID. You cannot remove members from a merged group.
+                     * @param _groupId The group ID. You cannot remove members from a merged group.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The users. Array length limit: 200.
                      * @return MemberIds The users. Array length limit: 200.
+                     * 
                      */
                     std::vector<std::string> GetMemberIds() const;
 
                     /**
                      * 设置The users. Array length limit: 200.
-                     * @param MemberIds The users. Array length limit: 200.
+                     * @param _memberIds The users. Array length limit: 200.
+                     * 
                      */
                     void SetMemberIds(const std::vector<std::string>& _memberIds);
 
                     /**
                      * 判断参数 MemberIds 是否已赋值
                      * @return MemberIds 是否已赋值
+                     * 
                      */
                     bool MemberIdsHasBeenSet() const;
 

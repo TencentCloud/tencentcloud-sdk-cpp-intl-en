@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Customer UIN list
                      * @return ClientUins Customer UIN list
+                     * 
                      */
                     std::vector<uint64_t> GetClientUins() const;
 
                     /**
                      * 设置Customer UIN list
-                     * @param ClientUins Customer UIN list
+                     * @param _clientUins Customer UIN list
+                     * 
                      */
                     void SetClientUins(const std::vector<uint64_t>& _clientUins);
 
                     /**
                      * 判断参数 ClientUins 是否已赋值
                      * @return ClientUins 是否已赋值
+                     * 
                      */
                     bool ClientUinsHasBeenSet() const;
 
                     /**
                      * 获取Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
                      * @return Status Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
-                     * @param Status Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
+                     * @param _status Voucher status. If this parameter is not passed in, all status will be queried by default. Valid values: `Unused`, `Used`, `Expired`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

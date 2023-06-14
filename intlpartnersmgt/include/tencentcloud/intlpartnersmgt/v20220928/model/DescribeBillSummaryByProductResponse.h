@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SummaryOverview Bill details from the product dimension
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BusinessSummaryOverviewItem> GetSummaryOverview() const;
 
                     /**
                      * 判断参数 SummaryOverview 是否已赋值
                      * @return SummaryOverview 是否已赋值
+                     * 
                      */
                     bool SummaryOverviewHasBeenSet() const;
 

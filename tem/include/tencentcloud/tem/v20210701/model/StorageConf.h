@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Storage volume name
                      * @return StorageVolName Storage volume name
+                     * 
                      */
                     std::string GetStorageVolName() const;
 
                     /**
                      * 设置Storage volume name
-                     * @param StorageVolName Storage volume name
+                     * @param _storageVolName Storage volume name
+                     * 
                      */
                     void SetStorageVolName(const std::string& _storageVolName);
 
                     /**
                      * 判断参数 StorageVolName 是否已赋值
                      * @return StorageVolName 是否已赋值
+                     * 
                      */
                     bool StorageVolNameHasBeenSet() const;
 
                     /**
                      * 获取Storage volume path
                      * @return StorageVolPath Storage volume path
+                     * 
                      */
                     std::string GetStorageVolPath() const;
 
                     /**
                      * 设置Storage volume path
-                     * @param StorageVolPath Storage volume path
+                     * @param _storageVolPath Storage volume path
+                     * 
                      */
                     void SetStorageVolPath(const std::string& _storageVolPath);
 
                     /**
                      * 判断参数 StorageVolPath 是否已赋值
                      * @return StorageVolPath 是否已赋值
+                     * 
                      */
                     bool StorageVolPathHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StorageVolIp Storage volume IP
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStorageVolIp() const;
 
                     /**
                      * 设置Storage volume IP
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param StorageVolIp Storage volume IP
+                     * @param _storageVolIp Storage volume IP
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStorageVolIp(const std::string& _storageVolIp);
 
                     /**
                      * 判断参数 StorageVolIp 是否已赋值
                      * @return StorageVolIp 是否已赋值
+                     * 
                      */
                     bool StorageVolIpHasBeenSet() const;
 

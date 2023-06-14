@@ -52,6 +52,7 @@ PullPicPushLive: Images
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 PullPicPushLive: Images
+                     * 
                      */
                     std::string GetSourceType() const;
 
@@ -60,16 +61,18 @@ PullPicPushLive: Images
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 PullPicPushLive: Images
-                     * @param SourceType The source type. Valid values:
+                     * @param _sourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 PullPicPushLive: Images
+                     * 
                      */
                     void SetSourceType(const std::string& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
@@ -98,6 +101,7 @@ Notes:
 4. Supported video coding formats: H.264, H.265.
 5. Supported audio coding format: AAC.
 6. Use small video files, preferably not longer than one hour. Large files may take a long time to load or resume after pause. Relay may fail if the time consumed exceeds 15 seconds.
+                     * 
                      */
                     std::vector<std::string> GetSourceUrls() const;
 
@@ -114,7 +118,7 @@ Notes:
 4. Supported video coding formats: H.264, H.265.
 5. Supported audio coding format: AAC.
 6. Use small video files, preferably not longer than one hour. Large files may take a long time to load or resume after pause. Relay may fail if the time consumed exceeds 15 seconds.
-                     * @param SourceUrls The source URL(s).
+                     * @param _sourceUrls The source URL(s).
 If `SourceType` is `PullLivePushLive`, you can specify only one source URL.
 If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
 Supported file formats: FLV, MP4, HLS.
@@ -126,12 +130,14 @@ Notes:
 4. Supported video coding formats: H.264, H.265.
 5. Supported audio coding format: AAC.
 6. Use small video files, preferably not longer than one hour. Large files may take a long time to load or resume after pause. Relay may fail if the time consumed exceeds 15 seconds.
+                     * 
                      */
                     void SetSourceUrls(const std::vector<std::string>& _sourceUrls);
 
                     /**
                      * 判断参数 SourceUrls 是否已赋值
                      * @return SourceUrls 是否已赋值
+                     * 
                      */
                     bool SourceUrlsHasBeenSet() const;
 
@@ -142,6 +148,7 @@ Note: If the destination is not a CSS address and its format is different from t
                      * @return DomainName The push domain name.
 The pulled stream is pushed to this domain.
 Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
+                     * 
                      */
                     std::string GetDomainName() const;
 
@@ -149,15 +156,17 @@ Note: If the destination is not a CSS address and its format is different from t
                      * 设置The push domain name.
 The pulled stream is pushed to this domain.
 Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
-                     * @param DomainName The push domain name.
+                     * @param _domainName The push domain name.
 The pulled stream is pushed to this domain.
 Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -166,20 +175,23 @@ Note: If the destination is not a CSS address and its format is different from t
 The pulled stream is pushed to this application.
                      * @return AppName The application to push to.
 The pulled stream is pushed to this application.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The application to push to.
 The pulled stream is pushed to this application.
-                     * @param AppName The application to push to.
+                     * @param _appName The application to push to.
 The pulled stream is pushed to this application.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
@@ -188,20 +200,23 @@ The pulled stream is pushed to this application.
 The pulled stream is pushed under this name.
                      * @return StreamName The stream name.
 The pulled stream is pushed under this name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置The stream name.
 The pulled stream is pushed under this name.
-                     * @param StreamName The stream name.
+                     * @param _streamName The stream name.
 The pulled stream is pushed under this name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
@@ -214,6 +229,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -222,16 +238,18 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param StartTime The start time.
+                     * @param _startTime The start time.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -250,6 +268,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -261,37 +280,42 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param EndTime The end time. Notes:
+                     * @param _endTime The end time. Notes:
 1. The end time must be later than the start time.
 2. The end time and start time must be later than the current time.
 3. The end time and start time must be less than seven days apart.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The operator.
                      * @return Operator The operator.
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置The operator.
-                     * @param Operator The operator.
+                     * @param _operator The operator.
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
@@ -304,6 +328,7 @@ bak=1&test=2
 This is a custom parameter carried during push.
 Example:
 bak=1&test=2
+                     * 
                      */
                     std::string GetPushArgs() const;
 
@@ -312,16 +337,18 @@ bak=1&test=2
 This is a custom parameter carried during push.
 Example:
 bak=1&test=2
-                     * @param PushArgs The push parameter.
+                     * @param _pushArgs The push parameter.
 This is a custom parameter carried during push.
 Example:
 bak=1&test=2
+                     * 
                      */
                     void SetPushArgs(const std::string& _pushArgs);
 
                     /**
                      * 判断参数 PushArgs 是否已赋值
                      * @return PushArgs 是否已赋值
+                     * 
                      */
                     bool PushArgsHasBeenSet() const;
 
@@ -352,6 +379,7 @@ PushStreamUnstable: Push is unstable.
 PullFileFailed: Error pulling from video files.
 PushStreamFailed: Push error.
 FileEndEarly: The video file ended prematurely.
+                     * 
                      */
                     std::vector<std::string> GetCallbackEvents() const;
 
@@ -369,7 +397,7 @@ PushStreamUnstable: Push is unstable.
 PullFileFailed: Error pulling from video files.
 PushStreamFailed: Push error.
 FileEndEarly: The video file ended prematurely.
-                     * @param CallbackEvents The events to listen for. If you do not pass this parameter, all events will be listened for.
+                     * @param _callbackEvents The events to listen for. If you do not pass this parameter, all events will be listened for.
 TaskStart: Callback for starting a task
 TaskExit: Callback for ending a task
 VodSourceFileStart: Callback for starting to pull from video files
@@ -382,12 +410,14 @@ PushStreamUnstable: Push is unstable.
 PullFileFailed: Error pulling from video files.
 PushStreamFailed: Push error.
 FileEndEarly: The video file ended prematurely.
+                     * 
                      */
                     void SetCallbackEvents(const std::vector<std::string>& _callbackEvents);
 
                     /**
                      * 判断参数 CallbackEvents 是否已赋值
                      * @return CallbackEvents 是否已赋值
+                     * 
                      */
                     bool CallbackEventsHasBeenSet() const;
 
@@ -402,6 +432,7 @@ This parameter is valid only when the source is video files.
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only when the source is video files.
+                     * 
                      */
                     std::string GetVodLoopTimes() const;
 
@@ -411,17 +442,19 @@ This parameter is valid only when the source is video files.
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only when the source is video files.
-                     * @param VodLoopTimes The number of times to loop video files. Default value: -1.
+                     * @param _vodLoopTimes The number of times to loop video files. Default value: -1.
 -1: Loop indefinitely
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only when the source is video files.
+                     * 
                      */
                     void SetVodLoopTimes(const std::string& _vodLoopTimes);
 
                     /**
                      * 判断参数 VodLoopTimes 是否已赋值
                      * @return VodLoopTimes 是否已赋值
+                     * 
                      */
                     bool VodLoopTimesHasBeenSet() const;
 
@@ -436,6 +469,7 @@ ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Play the new videos after the current video is finished playing (the remaining videos in the old playlist will not be played).
 
 This parameter is valid only if the source before the change is video files.
+                     * 
                      */
                     std::string GetVodRefreshType() const;
 
@@ -445,17 +479,19 @@ ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Play the new videos after the current video is finished playing (the remaining videos in the old playlist will not be played).
 
 This parameter is valid only if the source before the change is video files.
-                     * @param VodRefreshType The behavior after the source video files (`SourceUrls`) are changed.
+                     * @param _vodRefreshType The behavior after the source video files (`SourceUrls`) are changed.
 ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Play the new videos after the current video is finished playing (the remaining videos in the old playlist will not be played).
 
 This parameter is valid only if the source before the change is video files.
+                     * 
                      */
                     void SetVodRefreshType(const std::string& _vodRefreshType);
 
                     /**
                      * 判断参数 VodRefreshType 是否已赋值
                      * @return VodRefreshType 是否已赋值
+                     * 
                      */
                     bool VodRefreshTypeHasBeenSet() const;
 
@@ -464,20 +500,23 @@ This parameter is valid only if the source before the change is video files.
 Callbacks about pull and relay events will be sent to this URL.
                      * @return CallbackUrl A custom callback URL.
 Callbacks about pull and relay events will be sent to this URL.
+                     * 
                      */
                     std::string GetCallbackUrl() const;
 
                     /**
                      * 设置A custom callback URL.
 Callbacks about pull and relay events will be sent to this URL.
-                     * @param CallbackUrl A custom callback URL.
+                     * @param _callbackUrl A custom callback URL.
 Callbacks about pull and relay events will be sent to this URL.
+                     * 
                      */
                     void SetCallbackUrl(const std::string& _callbackUrl);
 
                     /**
                      * 判断参数 CallbackUrl 是否已赋值
                      * @return CallbackUrl 是否已赋值
+                     * 
                      */
                     bool CallbackUrlHasBeenSet() const;
 
@@ -486,38 +525,44 @@ Callbacks about pull and relay events will be sent to this URL.
 For example, you can use `ignore_region` to ignore the region passed in and assign a region based on load distribution.
                      * @return ExtraCmd Other parameters.
 For example, you can use `ignore_region` to ignore the region passed in and assign a region based on load distribution.
+                     * 
                      */
                     std::string GetExtraCmd() const;
 
                     /**
                      * 设置Other parameters.
 For example, you can use `ignore_region` to ignore the region passed in and assign a region based on load distribution.
-                     * @param ExtraCmd Other parameters.
+                     * @param _extraCmd Other parameters.
 For example, you can use `ignore_region` to ignore the region passed in and assign a region based on load distribution.
+                     * 
                      */
                     void SetExtraCmd(const std::string& _extraCmd);
 
                     /**
                      * 判断参数 ExtraCmd 是否已赋值
                      * @return ExtraCmd 是否已赋值
+                     * 
                      */
                     bool ExtraCmdHasBeenSet() const;
 
                     /**
                      * 获取The remarks for a task, not longer than 512 bytes.
                      * @return Comment The remarks for a task, not longer than 512 bytes.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The remarks for a task, not longer than 512 bytes.
-                     * @param Comment The remarks for a task, not longer than 512 bytes.
+                     * @param _comment The remarks for a task, not longer than 512 bytes.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -530,6 +575,7 @@ Note: Make sure that the expiration time of the signature is later than the task
 If you specify this parameter, make sure you pass in an empty string for `DomainName`, `AppName`, and `StreamName`.
 
 Note: Make sure that the expiration time of the signature is later than the task end time.
+                     * 
                      */
                     std::string GetToUrl() const;
 
@@ -538,16 +584,18 @@ Note: Make sure that the expiration time of the signature is later than the task
 If you specify this parameter, make sure you pass in an empty string for `DomainName`, `AppName`, and `StreamName`.
 
 Note: Make sure that the expiration time of the signature is later than the task end time.
-                     * @param ToUrl The complete destination URL.
+                     * @param _toUrl The complete destination URL.
 If you specify this parameter, make sure you pass in an empty string for `DomainName`, `AppName`, and `StreamName`.
 
 Note: Make sure that the expiration time of the signature is later than the task end time.
+                     * 
                      */
                     void SetToUrl(const std::string& _toUrl);
 
                     /**
                      * 判断参数 ToUrl 是否已赋值
                      * @return ToUrl 是否已赋值
+                     * 
                      */
                     bool ToUrlHasBeenSet() const;
 
@@ -566,6 +614,7 @@ Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
 2. When pull from the primary source is interrupted, the system will pull from the backup source.
 3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+                     * 
                      */
                     std::string GetBackupSourceType() const;
 
@@ -577,19 +626,21 @@ Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
 2. When pull from the primary source is interrupted, the system will pull from the backup source.
 3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
-                     * @param BackupSourceType The backup source type.
+                     * @param _backupSourceType The backup source type.
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
 2. When pull from the primary source is interrupted, the system will pull from the backup source.
 3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+                     * 
                      */
                     void SetBackupSourceType(const std::string& _backupSourceType);
 
                     /**
                      * 判断参数 BackupSourceType 是否已赋值
                      * @return BackupSourceType 是否已赋值
+                     * 
                      */
                     bool BackupSourceTypeHasBeenSet() const;
 
@@ -598,20 +649,23 @@ Notes:
 You can specify only one backup source URL.
                      * @return BackupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
+                     * 
                      */
                     std::string GetBackupSourceUrl() const;
 
                     /**
                      * 设置The URL of the backup source.
 You can specify only one backup source URL.
-                     * @param BackupSourceUrl The URL of the backup source.
+                     * @param _backupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
+                     * 
                      */
                     void SetBackupSourceUrl(const std::string& _backupSourceUrl);
 
                     /**
                      * 判断参数 BackupSourceUrl 是否已赋值
                      * @return BackupSourceUrl 是否已赋值
+                     * 
                      */
                     bool BackupSourceUrlHasBeenSet() const;
 
@@ -626,6 +680,7 @@ Notes:
 1. You can add up to four watermarks to different locations of the video.
 2. Make sure you use publicly accessible URLs for the watermark images.
 3. Supported image formats include PNG, JPG, and GIF.
+                     * 
                      */
                     std::vector<PullPushWatermarkInfo> GetWatermarkList() const;
 
@@ -635,17 +690,19 @@ Notes:
 1. You can add up to four watermarks to different locations of the video.
 2. Make sure you use publicly accessible URLs for the watermark images.
 3. Supported image formats include PNG, JPG, and GIF.
-                     * @param WatermarkList The information of watermarks to add.
+                     * @param _watermarkList The information of watermarks to add.
 Notes:
 1. You can add up to four watermarks to different locations of the video.
 2. Make sure you use publicly accessible URLs for the watermark images.
 3. Supported image formats include PNG, JPG, and GIF.
+                     * 
                      */
                     void SetWatermarkList(const std::vector<PullPushWatermarkInfo>& _watermarkList);
 
                     /**
                      * 判断参数 WatermarkList 是否已赋值
                      * @return WatermarkList 是否已赋值
+                     * 
                      */
                     bool WatermarkListHasBeenSet() const;
 
@@ -658,6 +715,7 @@ Note: If you enable local mode, MP4 files will be downloaded to local storage, a
 0: Do not use local mode
 1: Use local mode
 Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * 
                      */
                     int64_t GetVodLocalMode() const;
 
@@ -666,16 +724,18 @@ Note: If you enable local mode, MP4 files will be downloaded to local storage, a
 0: Do not use local mode
 1: Use local mode
 Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
-                     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+                     * @param _vodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
 0: Do not use local mode
 1: Use local mode
 Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * 
                      */
                     void SetVodLocalMode(const int64_t& _vodLocalMode);
 
                     /**
                      * 判断参数 VodLocalMode 是否已赋值
                      * @return VodLocalMode 是否已赋值
+                     * 
                      */
                     bool VodLocalModeHasBeenSet() const;
 

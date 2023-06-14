@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return RedirectCode Status code
 `403` is passed in when the action is `intercept`.
 `301` is passed in when the action is `redirect`.
+                     * 
                      */
                     int64_t GetRedirectCode() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Status code
 `403` is passed in when the action is `intercept`.
 `301` is passed in when the action is `redirect`.
-                     * @param RedirectCode Status code
+                     * @param _redirectCode Status code
 `403` is passed in when the action is `intercept`.
 `301` is passed in when the action is `redirect`.
+                     * 
                      */
                     void SetRedirectCode(const int64_t& _redirectCode);
 
                     /**
                      * 判断参数 RedirectCode 是否已赋值
                      * @return RedirectCode 是否已赋值
+                     * 
                      */
                     bool RedirectCodeHasBeenSet() const;
 
                     /**
                      * 获取URL to be redirected
                      * @return RedirectUrl URL to be redirected
+                     * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置URL to be redirected
-                     * @param RedirectUrl URL to be redirected
+                     * @param _redirectUrl URL to be redirected
+                     * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
                     /**
                      * 判断参数 RedirectUrl 是否已赋值
                      * @return RedirectUrl 是否已赋值
+                     * 
                      */
                     bool RedirectUrlHasBeenSet() const;
 

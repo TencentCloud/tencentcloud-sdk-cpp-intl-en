@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Playback domain name.
                      * @return DomainName Playback domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Playback domain name.
-                     * @param DomainName Playback domain name.
+                     * @param _domainName Playback domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 If this parameter is left empty, the current value will not be modified.
                      * @return Enable Whether to enable. 0: disabled; 1: enabled.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Whether to enable. 0: disabled; 1: enabled.
 If this parameter is left empty, the current value will not be modified.
-                     * @param Enable Whether to enable. 0: disabled; 1: enabled.
+                     * @param _enable Whether to enable. 0: disabled; 1: enabled.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -87,20 +93,23 @@ If this parameter is left empty, the current value will not be modified.
 If this parameter is left empty, the current value will not be modified.
                      * @return AuthKey Authentication key.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     std::string GetAuthKey() const;
 
                     /**
                      * 设置Authentication key.
 If this parameter is left empty, the current value will not be modified.
-                     * @param AuthKey Authentication key.
+                     * @param _authKey Authentication key.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     void SetAuthKey(const std::string& _authKey);
 
                     /**
                      * 判断参数 AuthKey 是否已赋值
                      * @return AuthKey 是否已赋值
+                     * 
                      */
                     bool AuthKeyHasBeenSet() const;
 
@@ -109,20 +118,23 @@ If this parameter is left empty, the current value will not be modified.
 If this parameter is left empty, the current value will not be modified.
                      * @return AuthDelta Validity period in seconds.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     uint64_t GetAuthDelta() const;
 
                     /**
                      * 设置Validity period in seconds.
 If this parameter is left empty, the current value will not be modified.
-                     * @param AuthDelta Validity period in seconds.
+                     * @param _authDelta Validity period in seconds.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     void SetAuthDelta(const uint64_t& _authDelta);
 
                     /**
                      * 判断参数 AuthDelta 是否已赋值
                      * @return AuthDelta 是否已赋值
+                     * 
                      */
                     bool AuthDeltaHasBeenSet() const;
 
@@ -131,20 +143,23 @@ If this parameter is left empty, the current value will not be modified.
 If this parameter is left empty, the current value will not be modified.
                      * @return AuthBackKey Backup authentication key.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     std::string GetAuthBackKey() const;
 
                     /**
                      * 设置Backup authentication key.
 If this parameter is left empty, the current value will not be modified.
-                     * @param AuthBackKey Backup authentication key.
+                     * @param _authBackKey Backup authentication key.
 If this parameter is left empty, the current value will not be modified.
+                     * 
                      */
                     void SetAuthBackKey(const std::string& _authBackKey);
 
                     /**
                      * 判断参数 AuthBackKey 是否已赋值
                      * @return AuthBackKey 是否已赋值
+                     * 
                      */
                     bool AuthBackKeyHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Playback domain name.
                      * @return DomainName Playback domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Playback domain name.
-                     * @param DomainName Playback domain name.
+                     * @param _domainName Playback domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
                      * @return AppName The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
-                     * @param AppName The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
+                     * @param _appName The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Stream name. If only the domain name or path is bound, leave this parameter blank.
                      * @return StreamName Stream name. If only the domain name or path is bound, leave this parameter blank.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name. If only the domain name or path is bound, leave this parameter blank.
-                     * @param StreamName Stream name. If only the domain name or path is bound, leave this parameter blank.
+                     * @param _streamName Stream name. If only the domain name or path is bound, leave this parameter blank.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Designates an existing template ID.
                      * @return TemplateId Designates an existing template ID.
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Designates an existing template ID.
-                     * @param TemplateId Designates an existing template ID.
+                     * @param _templateId Designates an existing template ID.
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 

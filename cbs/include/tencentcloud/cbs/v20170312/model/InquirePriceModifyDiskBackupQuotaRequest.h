@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Cloud disk ID, which can be queried through the `DescribeDisks` API.
                      * @return DiskId Cloud disk ID, which can be queried through the `DescribeDisks` API.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Cloud disk ID, which can be queried through the `DescribeDisks` API.
-                     * @param DiskId Cloud disk ID, which can be queried through the `DescribeDisks` API.
+                     * @param _diskId Cloud disk ID, which can be queried through the `DescribeDisks` API.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
                      * @return DiskBackupQuota Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
+                     * 
                      */
                     uint64_t GetDiskBackupQuota() const;
 
                     /**
                      * 设置Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
-                     * @param DiskBackupQuota Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
+                     * @param _diskBackupQuota Cloud disk backup point quota after the modification, i.e., the number of backup points that a cloud disk can have.
+                     * 
                      */
                     void SetDiskBackupQuota(const uint64_t& _diskBackupQuota);
 
                     /**
                      * 判断参数 DiskBackupQuota 是否已赋值
                      * @return DiskBackupQuota 是否已赋值
+                     * 
                      */
                     bool DiskBackupQuotaHasBeenSet() const;
 

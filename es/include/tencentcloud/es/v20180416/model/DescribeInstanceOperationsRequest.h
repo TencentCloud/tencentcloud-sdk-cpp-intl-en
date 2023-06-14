@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster instance ID
                      * @return InstanceId Cluster instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Cluster instance ID
-                     * @param InstanceId Cluster instance ID
+                     * @param _instanceId Cluster instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Start time, such as "2019-03-07 16:30:39"
                      * @return StartTime Start time, such as "2019-03-07 16:30:39"
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time, such as "2019-03-07 16:30:39"
-                     * @param StartTime Start time, such as "2019-03-07 16:30:39"
+                     * @param _startTime Start time, such as "2019-03-07 16:30:39"
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time, such as "2019-03-30 20:18:03"
                      * @return EndTime End time, such as "2019-03-30 20:18:03"
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time, such as "2019-03-30 20:18:03"
-                     * @param EndTime End time, such as "2019-03-30 20:18:03"
+                     * @param _endTime End time, such as "2019-03-30 20:18:03"
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Pagination start value
                      * @return Offset Pagination start value
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination start value
-                     * @param Offset Pagination start value
+                     * @param _offset Pagination start value
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page
                      * @return Limit Number of entries per page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page
-                     * @param Limit Number of entries per page
+                     * @param _limit Number of entries per page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

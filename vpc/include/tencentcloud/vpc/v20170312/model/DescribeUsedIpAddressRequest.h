@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID.
                      * @return VpcId VPC instance ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID.
-                     * @param VpcId VPC instance ID.
+                     * @param _vpcId VPC instance ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet instance ID
                      * @return SubnetId Subnet instance ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID
-                     * @param SubnetId Subnet instance ID
+                     * @param _subnetId Subnet instance ID
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取IPs to query
                      * @return IpAddresses IPs to query
+                     * 
                      */
                     std::vector<std::string> GetIpAddresses() const;
 
                     /**
                      * 设置IPs to query
-                     * @param IpAddresses IPs to query
+                     * @param _ipAddresses IPs to query
+                     * 
                      */
                     void SetIpAddresses(const std::vector<std::string>& _ipAddresses);
 
                     /**
                      * 判断参数 IpAddresses 是否已赋值
                      * @return IpAddresses 是否已赋值
+                     * 
                      */
                     bool IpAddressesHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of requested objects.
                      * @return Limit The number of requested objects.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of requested objects.
-                     * @param Limit The number of requested objects.
+                     * @param _limit The number of requested objects.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

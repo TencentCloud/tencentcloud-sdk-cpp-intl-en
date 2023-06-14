@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PrivateIpAddressSet Private IP details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrivateIpAddressSpecification> GetPrivateIpAddressSet() const;
 
                     /**
                      * 判断参数 PrivateIpAddressSet 是否已赋值
                      * @return PrivateIpAddressSet 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressSetHasBeenSet() const;
 

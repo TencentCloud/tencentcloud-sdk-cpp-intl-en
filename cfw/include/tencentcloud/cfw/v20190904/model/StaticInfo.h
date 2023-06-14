@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Number
                      * @return Num Number
+                     * 
                      */
                     int64_t GetNum() const;
 
                     /**
                      * 设置Number
-                     * @param Num Number
+                     * @param _num Number
+                     * 
                      */
                     void SetNum(const int64_t& _num);
 
                     /**
                      * 判断参数 Num 是否已赋值
                      * @return Num 是否已赋值
+                     * 
                      */
                     bool NumHasBeenSet() const;
 
                     /**
                      * 获取Port
                      * @return Port Port
+                     * 
                      */
                     std::string GetPort() const;
 
                     /**
                      * 设置Port
-                     * @param Port Port
+                     * @param _port Port
+                     * 
                      */
                     void SetPort(const std::string& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取IP
                      * @return Ip IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP
-                     * @param Ip IP
+                     * @param _ip IP
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Address
                      * @return Address Address
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置Address
-                     * @param Address Address
+                     * @param _address Address
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取Asset ID
                      * @return InsID Asset ID
+                     * 
                      */
                     std::string GetInsID() const;
 
                     /**
                      * 设置Asset ID
-                     * @param InsID Asset ID
+                     * @param _insID Asset ID
+                     * 
                      */
                     void SetInsID(const std::string& _insID);
 
                     /**
                      * 判断参数 InsID 是否已赋值
                      * @return InsID 是否已赋值
+                     * 
                      */
                     bool InsIDHasBeenSet() const;
 
                     /**
                      * 获取Asset name
                      * @return InsName Asset name
+                     * 
                      */
                     std::string GetInsName() const;
 
                     /**
                      * 设置Asset name
-                     * @param InsName Asset name
+                     * @param _insName Asset name
+                     * 
                      */
                     void SetInsName(const std::string& _insName);
 
                     /**
                      * 判断参数 InsName 是否已赋值
                      * @return InsName 是否已赋值
+                     * 
                      */
                     bool InsNameHasBeenSet() const;
 

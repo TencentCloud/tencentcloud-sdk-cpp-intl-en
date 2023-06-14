@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID, which can be obtained from the `InstanceId` field in the returned value of the `DescribeInstances` API.
                      * @return InstanceId Instance ID, which can be obtained from the `InstanceId` field in the returned value of the `DescribeInstances` API.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID, which can be obtained from the `InstanceId` field in the returned value of the `DescribeInstances` API.
-                     * @param InstanceId Instance ID, which can be obtained from the `InstanceId` field in the returned value of the `DescribeInstances` API.
+                     * @param _instanceId Instance ID, which can be obtained from the `InstanceId` field in the returned value of the `DescribeInstances` API.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

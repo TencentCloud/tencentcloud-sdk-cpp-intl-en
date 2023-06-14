@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Task overview list.
                      * @return TaskSet Task overview list.
+                     * 
                      */
                     std::vector<TaskSimpleInfo> GetTaskSet() const;
 
                     /**
                      * 判断参数 TaskSet 是否已赋值
                      * @return TaskSet 是否已赋值
+                     * 
                      */
                     bool TaskSetHasBeenSet() const;
 
                     /**
                      * 获取Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
                      * @return ScrollToken Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
+                     * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
                      * 判断参数 ScrollToken 是否已赋值
                      * @return ScrollToken 是否已赋值
+                     * 
                      */
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
                      * 获取The total number of records that meet the conditions.
                      * @return TotalCount The total number of records that meet the conditions.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

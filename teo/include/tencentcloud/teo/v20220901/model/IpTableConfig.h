@@ -56,6 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -64,16 +65,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Switch. Values:
+                     * @param _switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -82,20 +85,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IpTableRules The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IpTableRule> GetIpTableRules() const;
 
                     /**
                      * 设置The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IpTableRules The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
+                     * @param _ipTableRules The settings of the basic access control rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpTableRules(const std::vector<IpTableRule>& _ipTableRules);
 
                     /**
                      * 判断参数 IpTableRules 是否已赋值
                      * @return IpTableRules 是否已赋值
+                     * 
                      */
                     bool IpTableRulesHasBeenSet() const;
 

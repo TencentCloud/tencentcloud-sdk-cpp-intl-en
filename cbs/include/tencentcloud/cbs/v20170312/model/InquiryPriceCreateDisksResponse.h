@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Describes the price of newly purchased cloud disks.
                      * @return DiskPrice Describes the price of newly purchased cloud disks.
+                     * 
                      */
                     Price GetDiskPrice() const;
 
                     /**
                      * 判断参数 DiskPrice 是否已赋值
                      * @return DiskPrice 是否已赋值
+                     * 
                      */
                     bool DiskPriceHasBeenSet() const;
 

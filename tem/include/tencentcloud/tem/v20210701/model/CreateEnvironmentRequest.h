@@ -46,252 +46,294 @@ namespace TencentCloud
                     /**
                      * 获取Environment name
                      * @return EnvironmentName Environment name
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment name
-                     * @param EnvironmentName Environment name
+                     * @param _environmentName Environment name
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取Environment description
                      * @return Description Environment description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Environment description
-                     * @param Description Environment description
+                     * @param _description Environment description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取VPC name
                      * @return Vpc VPC name
+                     * 
                      */
                     std::string GetVpc() const;
 
                     /**
                      * 设置VPC name
-                     * @param Vpc VPC name
+                     * @param _vpc VPC name
+                     * 
                      */
                     void SetVpc(const std::string& _vpc);
 
                     /**
                      * 判断参数 Vpc 是否已赋值
                      * @return Vpc 是否已赋值
+                     * 
                      */
                     bool VpcHasBeenSet() const;
 
                     /**
                      * 获取List of subnets
                      * @return SubnetIds List of subnets
+                     * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
                      * 设置List of subnets
-                     * @param SubnetIds List of subnets
+                     * @param _subnetIds List of subnets
+                     * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
                      * 获取Kubernetes version
                      * @return K8sVersion Kubernetes version
+                     * 
                      */
                     std::string GetK8sVersion() const;
 
                     /**
                      * 设置Kubernetes version
-                     * @param K8sVersion Kubernetes version
+                     * @param _k8sVersion Kubernetes version
+                     * 
                      */
                     void SetK8sVersion(const std::string& _k8sVersion);
 
                     /**
                      * 判断参数 K8sVersion 是否已赋值
                      * @return K8sVersion 是否已赋值
+                     * 
                      */
                     bool K8sVersionHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the TSW service
                      * @return EnableTswTraceService Whether to enable the TSW service
+                     * 
                      */
                     bool GetEnableTswTraceService() const;
 
                     /**
                      * 设置Whether to enable the TSW service
-                     * @param EnableTswTraceService Whether to enable the TSW service
+                     * @param _enableTswTraceService Whether to enable the TSW service
+                     * 
                      */
                     void SetEnableTswTraceService(const bool& _enableTswTraceService);
 
                     /**
                      * 判断参数 EnableTswTraceService 是否已赋值
                      * @return EnableTswTraceService 是否已赋值
+                     * 
                      */
                     bool EnableTswTraceServiceHasBeenSet() const;
 
                     /**
                      * 获取Tag
                      * @return Tags Tag
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag
-                     * @param Tags Tag
+                     * @param _tags Tag
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Environment type. Values: `test`, `pre`, `prod`
                      * @return EnvType Environment type. Values: `test`, `pre`, `prod`
+                     * 
                      */
                     std::string GetEnvType() const;
 
                     /**
                      * 设置Environment type. Values: `test`, `pre`, `prod`
-                     * @param EnvType Environment type. Values: `test`, `pre`, `prod`
+                     * @param _envType Environment type. Values: `test`, `pre`, `prod`
+                     * 
                      */
                     void SetEnvType(const std::string& _envType);
 
                     /**
                      * 判断参数 EnvType 是否已赋值
                      * @return EnvType 是否已赋值
+                     * 
                      */
                     bool EnvTypeHasBeenSet() const;
 
                     /**
                      * 获取The region to create the environment
                      * @return CreateRegion The region to create the environment
+                     * 
                      */
                     std::string GetCreateRegion() const;
 
                     /**
                      * 设置The region to create the environment
-                     * @param CreateRegion The region to create the environment
+                     * @param _createRegion The region to create the environment
+                     * 
                      */
                     void SetCreateRegion(const std::string& _createRegion);
 
                     /**
                      * 判断参数 CreateRegion 是否已赋值
                      * @return CreateRegion 是否已赋值
+                     * 
                      */
                     bool CreateRegionHasBeenSet() const;
 
                     /**
                      * 获取Whether to create a VPC
                      * @return SetupVpc Whether to create a VPC
+                     * 
                      */
                     bool GetSetupVpc() const;
 
                     /**
                      * 设置Whether to create a VPC
-                     * @param SetupVpc Whether to create a VPC
+                     * @param _setupVpc Whether to create a VPC
+                     * 
                      */
                     void SetSetupVpc(const bool& _setupVpc);
 
                     /**
                      * 判断参数 SetupVpc 是否已赋值
                      * @return SetupVpc 是否已赋值
+                     * 
                      */
                     bool SetupVpcHasBeenSet() const;
 
                     /**
                      * 获取Whether to create a TMP instance
                      * @return SetupPrometheus Whether to create a TMP instance
+                     * 
                      */
                     bool GetSetupPrometheus() const;
 
                     /**
                      * 设置Whether to create a TMP instance
-                     * @param SetupPrometheus Whether to create a TMP instance
+                     * @param _setupPrometheus Whether to create a TMP instance
+                     * 
                      */
                     void SetSetupPrometheus(const bool& _setupPrometheus);
 
                     /**
                      * 判断参数 SetupPrometheus 是否已赋值
                      * @return SetupPrometheus 是否已赋值
+                     * 
                      */
                     bool SetupPrometheusHasBeenSet() const;
 
                     /**
                      * 获取TMP instance ID
                      * @return PrometheusId TMP instance ID
+                     * 
                      */
                     std::string GetPrometheusId() const;
 
                     /**
                      * 设置TMP instance ID
-                     * @param PrometheusId TMP instance ID
+                     * @param _prometheusId TMP instance ID
+                     * 
                      */
                     void SetPrometheusId(const std::string& _prometheusId);
 
                     /**
                      * 判断参数 PrometheusId 是否已赋值
                      * @return PrometheusId 是否已赋值
+                     * 
                      */
                     bool PrometheusIdHasBeenSet() const;
 
                     /**
                      * 获取APM ID
                      * @return ApmId APM ID
+                     * 
                      */
                     std::string GetApmId() const;
 
                     /**
                      * 设置APM ID
-                     * @param ApmId APM ID
+                     * @param _apmId APM ID
+                     * 
                      */
                     void SetApmId(const std::string& _apmId);
 
                     /**
                      * 判断参数 ApmId 是否已赋值
                      * @return ApmId 是否已赋值
+                     * 
                      */
                     bool ApmIdHasBeenSet() const;
 

@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SucceedInstanceIds ID of the node that has successfully set the removal protection
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSucceedInstanceIds() const;
 
                     /**
                      * 判断参数 SucceedInstanceIds 是否已赋值
                      * @return SucceedInstanceIds 是否已赋值
+                     * 
                      */
                     bool SucceedInstanceIdsHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return FailedInstanceIds ID of the node that fails to set the removal protection
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFailedInstanceIds() const;
 
                     /**
                      * 判断参数 FailedInstanceIds 是否已赋值
                      * @return FailedInstanceIds 是否已赋值
+                     * 
                      */
                     bool FailedInstanceIdsHasBeenSet() const;
 

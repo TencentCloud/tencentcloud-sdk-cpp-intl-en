@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The offset value
                      * @return Offset The offset value
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The offset value
-                     * @param Offset The offset value
+                     * @param _offset The offset value
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of results returned
                      * @return Limit The maximum number of results returned
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of results returned
-                     * @param Limit The maximum number of results returned
+                     * @param _limit The maximum number of results returned
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Business field, which can be ignored.
                      * @return Business Business field, which can be ignored.
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Business field, which can be ignored.
-                     * @param Business Business field, which can be ignored.
+                     * @param _business Business field, which can be ignored.
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取CDC business field, which can be ignored.
                      * @return CdcId CDC business field, which can be ignored.
+                     * 
                      */
                     std::string GetCdcId() const;
 
                     /**
                      * 设置CDC business field, which can be ignored.
-                     * @param CdcId CDC business field, which can be ignored.
+                     * @param _cdcId CDC business field, which can be ignored.
+                     * 
                      */
                     void SetCdcId(const std::string& _cdcId);
 
                     /**
                      * 判断参数 CdcId 是否已赋值
                      * @return CdcId 是否已赋值
+                     * 
                      */
                     bool CdcIdHasBeenSet() const;
 

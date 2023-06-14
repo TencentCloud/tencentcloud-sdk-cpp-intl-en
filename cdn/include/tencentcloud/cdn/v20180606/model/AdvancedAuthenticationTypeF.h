@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SignParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSignParam() const;
 
                     /**
                      * 设置Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SignParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _signParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSignParam(const std::string& _signParam);
 
                     /**
                      * 判断参数 SignParam 是否已赋值
                      * @return SignParam 是否已赋值
+                     * 
                      */
                     bool SignParamHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimeParam Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTimeParam() const;
 
                     /**
                      * 设置Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimeParam Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _timeParam Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimeParam(const std::string& _timeParam);
 
                     /**
                      * 判断参数 TimeParam 是否已赋值
                      * @return TimeParam 是否已赋值
+                     * 
                      */
                     bool TimeParamHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TransactionParam Transaction field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTransactionParam() const;
 
                     /**
                      * 设置Transaction field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TransactionParam Transaction field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _transactionParam Transaction field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransactionParam(const std::string& _transactionParam);
 
                     /**
                      * 判断参数 TransactionParam 是否已赋值
                      * @return TransactionParam 是否已赋值
+                     * 
                      */
                     bool TransactionParamHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SecretKey CMK used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置CMK used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SecretKey CMK used for signature calculation, allowing 6 to 32 bytes of letters and digits.
+                     * @param _secretKey CMK used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return BackupSecretKey Alternative key used for signature calculation, which is used after the CMK fails in authentication. It allows 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
                      * 设置Alternative key used for signature calculation, which is used after the CMK fails in authentication. It allows 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param BackupSecretKey Alternative key used for signature calculation, which is used after the CMK fails in authentication. It allows 6 to 32 bytes of letters and digits.
+                     * @param _backupSecretKey Alternative key used for signature calculation, which is used after the CMK fails in authentication. It allows 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
 
                     /**
                      * 判断参数 BackupSecretKey 是否已赋值
                      * @return BackupSecretKey 是否已赋值
+                     * 
                      */
                     bool BackupSecretKeyHasBeenSet() const;
 

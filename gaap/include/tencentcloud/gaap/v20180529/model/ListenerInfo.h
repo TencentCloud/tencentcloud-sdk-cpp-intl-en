@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Listener ID
                      * @return ListenerId Listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID
-                     * @param ListenerId Listener ID
+                     * @param _listenerId Listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Listener name
                      * @return ListenerName Listener name
+                     * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置Listener name
-                     * @param ListenerName Listener name
+                     * @param _listenerName Listener name
+                     * 
                      */
                     void SetListenerName(const std::string& _listenerName);
 
                     /**
                      * 判断参数 ListenerName 是否已赋值
                      * @return ListenerName 是否已赋值
+                     * 
                      */
                     bool ListenerNameHasBeenSet() const;
 
                     /**
                      * 获取Listening port
                      * @return Port Listening port
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Listening port
-                     * @param Port Listening port
+                     * @param _port Listening port
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Listener protocol type
                      * @return Protocol Listener protocol type
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Listener protocol type
-                     * @param Protocol Listener protocol type
+                     * @param _protocol Listener protocol type
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

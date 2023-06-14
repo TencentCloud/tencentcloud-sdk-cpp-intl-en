@@ -51,108 +51,126 @@ namespace TencentCloud
                     /**
                      * 获取Region name
                      * @return Region Region name
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region name
-                     * @param Region Region name
+                     * @param _region Region name
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Numeric ID of a region
                      * @return RegionId Numeric ID of a region
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Numeric ID of a region
-                     * @param RegionId Numeric ID of a region
+                     * @param _regionId Numeric ID of a region
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return RegionZh Region name
+                     * 
                      */
                     std::string GetRegionZh() const;
 
                     /**
                      * 设置Region name
-                     * @param RegionZh Region name
+                     * @param _regionZh Region name
+                     * 
                      */
                     void SetRegionZh(const std::string& _regionZh);
 
                     /**
                      * 判断参数 RegionZh 是否已赋值
                      * @return RegionZh 是否已赋值
+                     * 
                      */
                     bool RegionZhHasBeenSet() const;
 
                     /**
                      * 获取List of purchasable AZs
                      * @return ZoneSet List of purchasable AZs
+                     * 
                      */
                     std::vector<SaleZone> GetZoneSet() const;
 
                     /**
                      * 设置List of purchasable AZs
-                     * @param ZoneSet List of purchasable AZs
+                     * @param _zoneSet List of purchasable AZs
+                     * 
                      */
                     void SetZoneSet(const std::vector<SaleZone>& _zoneSet);
 
                     /**
                      * 判断参数 ZoneSet 是否已赋值
                      * @return ZoneSet 是否已赋值
+                     * 
                      */
                     bool ZoneSetHasBeenSet() const;
 
                     /**
                      * 获取Engine type
                      * @return DbType Engine type
+                     * 
                      */
                     std::string GetDbType() const;
 
                     /**
                      * 设置Engine type
-                     * @param DbType Engine type
+                     * @param _dbType Engine type
+                     * 
                      */
                     void SetDbType(const std::string& _dbType);
 
                     /**
                      * 判断参数 DbType 是否已赋值
                      * @return DbType 是否已赋值
+                     * 
                      */
                     bool DbTypeHasBeenSet() const;
 
                     /**
                      * 获取Supported modules in a region
                      * @return Modules Supported modules in a region
+                     * 
                      */
                     std::vector<Module> GetModules() const;
 
                     /**
                      * 设置Supported modules in a region
-                     * @param Modules Supported modules in a region
+                     * @param _modules Supported modules in a region
+                     * 
                      */
                     void SetModules(const std::vector<Module>& _modules);
 
                     /**
                      * 判断参数 Modules 是否已赋值
                      * @return Modules 是否已赋值
+                     * 
                      */
                     bool ModulesHasBeenSet() const;
 

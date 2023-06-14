@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Layer-7 listener ID.
                      * @return ListenerId Layer-7 listener ID.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Layer-7 listener ID.
-                     * @param ListenerId Layer-7 listener ID.
+                     * @param _listenerId Layer-7 listener ID.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 

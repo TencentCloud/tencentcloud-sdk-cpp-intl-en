@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The time point in the format of `YYYY-MM-DD HH:mm:ss`. If more than one day is queried, `HH:mm:ss` is `00:00:00`.
                      * @return TimeKey The time point in the format of `YYYY-MM-DD HH:mm:ss`. If more than one day is queried, `HH:mm:ss` is `00:00:00`.
+                     * 
                      */
                     std::string GetTimeKey() const;
 
                     /**
                      * 设置The time point in the format of `YYYY-MM-DD HH:mm:ss`. If more than one day is queried, `HH:mm:ss` is `00:00:00`.
-                     * @param TimeKey The time point in the format of `YYYY-MM-DD HH:mm:ss`. If more than one day is queried, `HH:mm:ss` is `00:00:00`.
+                     * @param _timeKey The time point in the format of `YYYY-MM-DD HH:mm:ss`. If more than one day is queried, `HH:mm:ss` is `00:00:00`.
+                     * 
                      */
                     void SetTimeKey(const std::string& _timeKey);
 
                     /**
                      * 判断参数 TimeKey 是否已赋值
                      * @return TimeKey 是否已赋值
+                     * 
                      */
                     bool TimeKeyHasBeenSet() const;
 
                     /**
                      * 获取The usage (minutes). Each element of this parameter corresponds to an element of `UsageKey` in the order they are listed.
                      * @return UsageValue The usage (minutes). Each element of this parameter corresponds to an element of `UsageKey` in the order they are listed.
+                     * 
                      */
                     std::vector<double> GetUsageValue() const;
 
                     /**
                      * 设置The usage (minutes). Each element of this parameter corresponds to an element of `UsageKey` in the order they are listed.
-                     * @param UsageValue The usage (minutes). Each element of this parameter corresponds to an element of `UsageKey` in the order they are listed.
+                     * @param _usageValue The usage (minutes). Each element of this parameter corresponds to an element of `UsageKey` in the order they are listed.
+                     * 
                      */
                     void SetUsageValue(const std::vector<double>& _usageValue);
 
                     /**
                      * 判断参数 UsageValue 是否已赋值
                      * @return UsageValue 是否已赋值
+                     * 
                      */
                     bool UsageValueHasBeenSet() const;
 

@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance model information
                      * @return InstanceType Instance model information
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance model information
-                     * @param InstanceType Instance model information
+                     * @param _instanceType Instance model information
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取System disk information
                      * @return SystemDisk System disk information
+                     * 
                      */
                     SystemDisk GetSystemDisk() const;
 
                     /**
                      * 设置System disk information
-                     * @param SystemDisk System disk information
+                     * @param _systemDisk System disk information
+                     * 
                      */
                     void SetSystemDisk(const SystemDisk& _systemDisk);
 
                     /**
                      * 判断参数 SystemDisk 是否已赋值
                      * @return SystemDisk 是否已赋值
+                     * 
                      */
                     bool SystemDiskHasBeenSet() const;
 
                     /**
                      * 获取Number of instances
                      * @return InstanceCount Number of instances
+                     * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
                      * 设置Number of instances
-                     * @param InstanceCount Number of instances
+                     * @param _instanceCount Number of instances
+                     * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
 
                     /**
                      * 判断参数 InstanceCount 是否已赋值
                      * @return InstanceCount 是否已赋值
+                     * 
                      */
                     bool InstanceCountHasBeenSet() const;
 
                     /**
                      * 获取Data disk information
                      * @return DataDisk Data disk information
+                     * 
                      */
                     std::vector<DataDisk> GetDataDisk() const;
 
                     /**
                      * 设置Data disk information
-                     * @param DataDisk Data disk information
+                     * @param _dataDisk Data disk information
+                     * 
                      */
                     void SetDataDisk(const std::vector<DataDisk>& _dataDisk);
 
                     /**
                      * 判断参数 DataDisk 是否已赋值
                      * @return DataDisk 是否已赋值
+                     * 
                      */
                     bool DataDiskHasBeenSet() const;
 
@@ -127,6 +139,7 @@ If this field is left empty, `0` is selected by default for non-GNR models, and 
 `1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
 `2`: Bill by usage month of an instance. It applies only to GNR models.
 If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+                     * 
                      */
                     int64_t GetInstanceChargeType() const;
 
@@ -136,17 +149,19 @@ If this field is left empty, `0` is selected by default for non-GNR models, and 
 `1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
 `2`: Bill by usage month of an instance. It applies only to GNR models.
 If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
-                     * @param InstanceChargeType Instance billing type. Valid values:
+                     * @param _instanceChargeType Instance billing type. Valid values:
 `0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
 `1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
 `2`: Bill by usage month of an instance. It applies only to GNR models.
 If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+                     * 
                      */
                     void SetInstanceChargeType(const int64_t& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 

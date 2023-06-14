@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Watermark key ID
                      * @return KeyId Watermark key ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Watermark key ID
-                     * @param KeyId Watermark key ID
+                     * @param _keyId Watermark key ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 

@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AccessRules List of permission rules
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AccessRule> GetAccessRules() const;
 
                     /**
                      * 判断参数 AccessRules 是否已赋值
                      * @return AccessRules 是否已赋值
+                     * 
                      */
                     bool AccessRulesHasBeenSet() const;
 

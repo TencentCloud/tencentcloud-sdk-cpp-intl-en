@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance to be modified
                      * @return InstanceId ID of the instance to be modified
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance to be modified
-                     * @param InstanceId ID of the instance to be modified
+                     * @param _instanceId ID of the instance to be modified
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取New instance name (up to 255 characters)
                      * @return InstanceName New instance name (up to 255 characters)
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置New instance name (up to 255 characters)
-                     * @param InstanceName New instance name (up to 255 characters)
+                     * @param _instanceName New instance name (up to 255 characters)
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取New instance description (up to 1,024 characters)
                      * @return InstanceDesc New instance description (up to 1,024 characters)
+                     * 
                      */
                     std::string GetInstanceDesc() const;
 
                     /**
                      * 设置New instance description (up to 1,024 characters)
-                     * @param InstanceDesc New instance description (up to 1,024 characters)
+                     * @param _instanceDesc New instance description (up to 1,024 characters)
+                     * 
                      */
                     void SetInstanceDesc(const std::string& _instanceDesc);
 
                     /**
                      * 判断参数 InstanceDesc 是否已赋值
                      * @return InstanceDesc 是否已赋值
+                     * 
                      */
                     bool InstanceDescHasBeenSet() const;
 

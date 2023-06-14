@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Response for getting SMS signature information
                      * @return DescribeTemplateStatusSet Response for getting SMS signature information
+                     * 
                      */
                     std::vector<DescribeTemplateListStatus> GetDescribeTemplateStatusSet() const;
 
                     /**
                      * 判断参数 DescribeTemplateStatusSet 是否已赋值
                      * @return DescribeTemplateStatusSet 是否已赋值
+                     * 
                      */
                     bool DescribeTemplateStatusSetHasBeenSet() const;
 

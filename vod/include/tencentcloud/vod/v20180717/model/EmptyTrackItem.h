@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Duration in seconds.
                      * @return Duration Duration in seconds.
+                     * 
                      */
                     double GetDuration() const;
 
                     /**
                      * 设置Duration in seconds.
-                     * @param Duration Duration in seconds.
+                     * @param _duration Duration in seconds.
+                     * 
                      */
                     void SetDuration(const double& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 

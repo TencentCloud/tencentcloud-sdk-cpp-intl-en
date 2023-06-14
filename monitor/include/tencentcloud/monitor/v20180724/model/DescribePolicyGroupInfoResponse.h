@@ -51,120 +51,140 @@ namespace TencentCloud
                     /**
                      * 获取Policy group name.
                      * @return GroupName Policy group name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the project to which the policy group belongs.
                      * @return ProjectId ID of the project to which the policy group belongs.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Whether it is the default policy. The value 0 indicates that it is not the default policy. The value 1 indicates that it is the default policy.
                      * @return IsDefault Whether it is the default policy. The value 0 indicates that it is not the default policy. The value 1 indicates that it is the default policy.
+                     * 
                      */
                     int64_t GetIsDefault() const;
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
                     /**
                      * 获取Policy type.
                      * @return ViewName Policy type.
+                     * 
                      */
                     std::string GetViewName() const;
 
                     /**
                      * 判断参数 ViewName 是否已赋值
                      * @return ViewName 是否已赋值
+                     * 
                      */
                     bool ViewNameHasBeenSet() const;
 
                     /**
                      * 获取Policy description
                      * @return Remark Policy description
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Policy type name.
                      * @return ShowName Policy type name.
+                     * 
                      */
                     std::string GetShowName() const;
 
                     /**
                      * 判断参数 ShowName 是否已赋值
                      * @return ShowName 是否已赋值
+                     * 
                      */
                     bool ShowNameHasBeenSet() const;
 
                     /**
                      * 获取Uin that was last edited.
                      * @return LastEditUin Uin that was last edited.
+                     * 
                      */
                     std::string GetLastEditUin() const;
 
                     /**
                      * 判断参数 LastEditUin 是否已赋值
                      * @return LastEditUin 是否已赋值
+                     * 
                      */
                     bool LastEditUinHasBeenSet() const;
 
                     /**
                      * 获取Last edited time.
                      * @return UpdateTime Last edited time.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Regions supported by this policy.
                      * @return Region Regions supported by this policy.
+                     * 
                      */
                     std::vector<std::string> GetRegion() const;
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取List of policy type dimensions.
                      * @return DimensionGroup List of policy type dimensions.
+                     * 
                      */
                     std::vector<std::string> GetDimensionGroup() const;
 
                     /**
                      * 判断参数 DimensionGroup 是否已赋值
                      * @return DimensionGroup 是否已赋值
+                     * 
                      */
                     bool DimensionGroupHasBeenSet() const;
 
@@ -173,12 +193,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return ConditionsConfig Threshold rule list.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribePolicyGroupInfoCondition> GetConditionsConfig() const;
 
                     /**
                      * 判断参数 ConditionsConfig 是否已赋值
                      * @return ConditionsConfig 是否已赋值
+                     * 
                      */
                     bool ConditionsConfigHasBeenSet() const;
 
@@ -187,12 +209,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return EventConfig Product event rule list.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribePolicyGroupInfoEventCondition> GetEventConfig() const;
 
                     /**
                      * 判断参数 EventConfig 是否已赋值
                      * @return EventConfig 是否已赋值
+                     * 
                      */
                     bool EventConfigHasBeenSet() const;
 
@@ -201,12 +225,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ReceiverInfos Recipient list.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribePolicyGroupInfoReceiverInfo> GetReceiverInfos() const;
 
                     /**
                      * 判断参数 ReceiverInfos 是否已赋值
                      * @return ReceiverInfos 是否已赋值
+                     * 
                      */
                     bool ReceiverInfosHasBeenSet() const;
 
@@ -215,12 +241,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Callback User callback information.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyGroupInfoCallback GetCallback() const;
 
                     /**
                      * 判断参数 Callback 是否已赋值
                      * @return Callback 是否已赋值
+                     * 
                      */
                     bool CallbackHasBeenSet() const;
 
@@ -229,24 +257,28 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ConditionsTemp Template-based policy group.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyGroupInfoConditionTpl GetConditionsTemp() const;
 
                     /**
                      * 判断参数 ConditionsTemp 是否已赋值
                      * @return ConditionsTemp 是否已赋值
+                     * 
                      */
                     bool ConditionsTempHasBeenSet() const;
 
                     /**
                      * 获取Whether the policy can be configured as the default policy.
                      * @return CanSetDefault Whether the policy can be configured as the default policy.
+                     * 
                      */
                     bool GetCanSetDefault() const;
 
                     /**
                      * 判断参数 CanSetDefault 是否已赋值
                      * @return CanSetDefault 是否已赋值
+                     * 
                      */
                     bool CanSetDefaultHasBeenSet() const;
 
@@ -255,12 +287,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetIsUnionRule() const;
 
                     /**
                      * 判断参数 IsUnionRule 是否已赋值
                      * @return IsUnionRule 是否已赋值
+                     * 
                      */
                     bool IsUnionRuleHasBeenSet() const;
 

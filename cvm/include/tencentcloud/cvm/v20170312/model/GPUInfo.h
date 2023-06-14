@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return GPUCount Number of GPUs. 
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     double GetGPUCount() const;
 
                     /**
                      * 设置Number of GPUs. 
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param GPUCount Number of GPUs. 
+                     * @param _gPUCount Number of GPUs. 
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetGPUCount(const double& _gPUCount);
 
                     /**
                      * 判断参数 GPUCount 是否已赋值
                      * @return GPUCount 是否已赋值
+                     * 
                      */
                     bool GPUCountHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return GPUId GPU address
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::vector<std::string> GetGPUId() const;
 
                     /**
                      * 设置GPU address
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param GPUId GPU address
+                     * @param _gPUId GPU address
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetGPUId(const std::vector<std::string>& _gPUId);
 
                     /**
                      * 判断参数 GPUId 是否已赋值
                      * @return GPUId 是否已赋值
+                     * 
                      */
                     bool GPUIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return GPUType GPU type of the instance.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetGPUType() const;
 
                     /**
                      * 设置GPU type of the instance.
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param GPUType GPU type of the instance.
+                     * @param _gPUType GPU type of the instance.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetGPUType(const std::string& _gPUType);
 
                     /**
                      * 判断参数 GPUType 是否已赋值
                      * @return GPUType 是否已赋值
+                     * 
                      */
                     bool GPUTypeHasBeenSet() const;
 

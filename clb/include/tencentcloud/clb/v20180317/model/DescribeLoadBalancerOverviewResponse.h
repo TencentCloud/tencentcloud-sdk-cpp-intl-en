@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Total number of CLB instances
                      * @return TotalCount Total number of CLB instances
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Number of CLB instances that are running
                      * @return RunningCount Number of CLB instances that are running
+                     * 
                      */
                     int64_t GetRunningCount() const;
 
                     /**
                      * 判断参数 RunningCount 是否已赋值
                      * @return RunningCount 是否已赋值
+                     * 
                      */
                     bool RunningCountHasBeenSet() const;
 
                     /**
                      * 获取Number of CLB instances that are isolated
                      * @return IsolationCount Number of CLB instances that are isolated
+                     * 
                      */
                     int64_t GetIsolationCount() const;
 
                     /**
                      * 判断参数 IsolationCount 是否已赋值
                      * @return IsolationCount 是否已赋值
+                     * 
                      */
                     bool IsolationCountHasBeenSet() const;
 
                     /**
                      * 获取Number of CLB instances that are about to expire
                      * @return WillExpireCount Number of CLB instances that are about to expire
+                     * 
                      */
                     int64_t GetWillExpireCount() const;
 
                     /**
                      * 判断参数 WillExpireCount 是否已赋值
                      * @return WillExpireCount 是否已赋值
+                     * 
                      */
                     bool WillExpireCountHasBeenSet() const;
 

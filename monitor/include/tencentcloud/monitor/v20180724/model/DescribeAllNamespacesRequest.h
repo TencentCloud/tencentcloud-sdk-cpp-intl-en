@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
                      * @return SceneType Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
+                     * 
                      */
                     std::string GetSceneType() const;
 
                     /**
                      * 设置Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
-                     * @param SceneType Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
+                     * @param _sceneType Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
+                     * 
                      */
                     void SetSceneType(const std::string& _sceneType);
 
                     /**
                      * 判断参数 SceneType 是否已赋值
                      * @return SceneType 是否已赋值
+                     * 
                      */
                     bool SceneTypeHasBeenSet() const;
 
                     /**
                      * 获取Value fixed at "monitor"
                      * @return Module Value fixed at "monitor"
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Value fixed at "monitor"
-                     * @param Module Value fixed at "monitor"
+                     * @param _module Value fixed at "monitor"
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
                      * @return MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+                     * 
                      */
                     std::vector<std::string> GetMonitorTypes() const;
 
                     /**
                      * 设置Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
-                     * @param MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+                     * @param _monitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+                     * 
                      */
                     void SetMonitorTypes(const std::vector<std::string>& _monitorTypes);
 
                     /**
                      * 判断参数 MonitorTypes 是否已赋值
                      * @return MonitorTypes 是否已赋值
+                     * 
                      */
                     bool MonitorTypesHasBeenSet() const;
 
                     /**
                      * 获取Filter by namespace ID. If this parameter is left empty, all will be queried
                      * @return Ids Filter by namespace ID. If this parameter is left empty, all will be queried
+                     * 
                      */
                     std::vector<std::string> GetIds() const;
 
                     /**
                      * 设置Filter by namespace ID. If this parameter is left empty, all will be queried
-                     * @param Ids Filter by namespace ID. If this parameter is left empty, all will be queried
+                     * @param _ids Filter by namespace ID. If this parameter is left empty, all will be queried
+                     * 
                      */
                     void SetIds(const std::vector<std::string>& _ids);
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

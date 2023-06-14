@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepAll() const;
 
                     /**
                      * 设置Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepAll Total number of steps
+                     * @param _stepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepAll(const uint64_t& _stepAll);
 
                     /**
                      * 判断参数 StepAll 是否已赋值
                      * @return StepAll 是否已赋值
+                     * 
                      */
                     bool StepAllHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepNow Current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepNow() const;
 
                     /**
                      * 设置Current step
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepNow Current step
+                     * @param _stepNow Current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepNow(const uint64_t& _stepNow);
 
                     /**
                      * 判断参数 StepNow 是否已赋值
                      * @return StepNow 是否已赋值
+                     * 
                      */
                     bool StepNowHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MasterSlaveDistance Source-replica lag in MB. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMasterSlaveDistance() const;
 
                     /**
                      * 设置Source-replica lag in MB. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MasterSlaveDistance Source-replica lag in MB. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
+                     * @param _masterSlaveDistance Source-replica lag in MB. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterSlaveDistance(const int64_t& _masterSlaveDistance);
 
                     /**
                      * 判断参数 MasterSlaveDistance 是否已赋值
                      * @return MasterSlaveDistance 是否已赋值
+                     * 
                      */
                     bool MasterSlaveDistanceHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SecondsBehindMaster Source-replica lag in seconds. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSecondsBehindMaster() const;
 
                     /**
                      * 设置Source-replica lag in seconds. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SecondsBehindMaster Source-replica lag in seconds. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
+                     * @param _secondsBehindMaster Source-replica lag in seconds. This parameter takes effect only when the task is normal and is in the last step of migration or sync (binlog sync). If it is invalid, `-1` will be returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecondsBehindMaster(const int64_t& _secondsBehindMaster);
 
                     /**
                      * 判断参数 SecondsBehindMaster 是否已赋值
                      * @return SecondsBehindMaster 是否已赋值
+                     * 
                      */
                     bool SecondsBehindMasterHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepInfo Step information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<StepDetailInfo> GetStepInfo() const;
 
                     /**
                      * 设置Step information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepInfo Step information
+                     * @param _stepInfo Step information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepInfo(const std::vector<StepDetailInfo>& _stepInfo);
 
                     /**
                      * 判断参数 StepInfo 是否已赋值
                      * @return StepInfo 是否已赋值
+                     * 
                      */
                     bool StepInfoHasBeenSet() const;
 

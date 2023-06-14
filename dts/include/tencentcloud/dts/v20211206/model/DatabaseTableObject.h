@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ObjectMode Migration object type. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetObjectMode() const;
 
                     /**
                      * 设置Migration object type. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ObjectMode Migration object type. Valid values: `all`, `partial`.
+                     * @param _objectMode Migration object type. Valid values: `all`, `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetObjectMode(const std::string& _objectMode);
 
                     /**
                      * 判断参数 ObjectMode 是否已赋值
                      * @return ObjectMode 是否已赋值
+                     * 
                      */
                     bool ObjectModeHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Databases Migration object, which is required if `ObjectMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DBItem> GetDatabases() const;
 
                     /**
                      * 设置Migration object, which is required if `ObjectMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Databases Migration object, which is required if `ObjectMode` is `partial`.
+                     * @param _databases Migration object, which is required if `ObjectMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabases(const std::vector<DBItem>& _databases);
 
                     /**
                      * 判断参数 Databases 是否已赋值
                      * @return Databases 是否已赋值
+                     * 
                      */
                     bool DatabasesHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AdvancedObjects Advanced object type, such as trigger, function, procedure, and event.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAdvancedObjects() const;
 
                     /**
                      * 设置Advanced object type, such as trigger, function, procedure, and event.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AdvancedObjects Advanced object type, such as trigger, function, procedure, and event.
+                     * @param _advancedObjects Advanced object type, such as trigger, function, procedure, and event.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdvancedObjects(const std::vector<std::string>& _advancedObjects);
 
                     /**
                      * 判断参数 AdvancedObjects 是否已赋值
                      * @return AdvancedObjects 是否已赋值
+                     * 
                      */
                     bool AdvancedObjectsHasBeenSet() const;
 

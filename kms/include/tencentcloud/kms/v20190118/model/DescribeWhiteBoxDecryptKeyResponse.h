@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded white-box decryption key
                      * @return DecryptKey Base64-encoded white-box decryption key
+                     * 
                      */
                     std::string GetDecryptKey() const;
 
                     /**
                      * 判断参数 DecryptKey 是否已赋值
                      * @return DecryptKey 是否已赋值
+                     * 
                      */
                     bool DecryptKeyHasBeenSet() const;
 

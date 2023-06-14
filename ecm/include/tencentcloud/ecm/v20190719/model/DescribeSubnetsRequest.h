@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Subnet instance ID, such as `subnet-pxir56ns`. Each request supports a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
                      * @return SubnetIds Subnet instance ID, such as `subnet-pxir56ns`. Each request supports a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
                      * 设置Subnet instance ID, such as `subnet-pxir56ns`. Each request supports a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
-                     * @param SubnetIds Subnet instance ID, such as `subnet-pxir56ns`. Each request supports a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
+                     * @param _subnetIds Subnet instance ID, such as `subnet-pxir56ns`. Each request supports a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 
@@ -82,6 +85,7 @@ region - String - ECM region.
 zone - String - AZ.
 tag-key - String - Required: no - Filter by tag key.
 tag:tag-key - String - Required: no - Filter by tag key-value pair.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -96,7 +100,7 @@ region - String - ECM region.
 zone - String - AZ.
 tag-key - String - Required: no - Filter by tag key.
 tag:tag-key - String - Required: no - Filter by tag key-value pair.
-                     * @param Filters Filter. `SubnetIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter. `SubnetIds` and `Filters` cannot be specified at the same time.
 subnet-id - String - Subnet instance name.
 subnet-name - String - Subnet name. Only fuzzy query by a single value is supported.
 cidr-block - String - Subnet IP address range, such as `192.168.1.0`. Only fuzzy query by a single value is supported.
@@ -106,84 +110,98 @@ region - String - ECM region.
 zone - String - AZ.
 tag-key - String - Required: no - Filter by tag key.
 tag:tag-key - String - Required: no - Filter by tag key-value pair.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     std::string GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const std::string& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results.
                      * @return Limit Number of returned results.
+                     * 
                      */
                     std::string GetLimit() const;
 
                     /**
                      * 设置Number of returned results.
-                     * @param Limit Number of returned results.
+                     * @param _limit Number of returned results.
+                     * 
                      */
                     void SetLimit(const std::string& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取Sorting method. time: sort in reverse chronological order; default: sort by network planning.
                      * @return Sort Sorting method. time: sort in reverse chronological order; default: sort by network planning.
+                     * 
                      */
                     std::string GetSort() const;
 
                     /**
                      * 设置Sorting method. time: sort in reverse chronological order; default: sort by network planning.
-                     * @param Sort Sorting method. time: sort in reverse chronological order; default: sort by network planning.
+                     * @param _sort Sorting method. time: sort in reverse chronological order; default: sort by network planning.
+                     * 
                      */
                     void SetSort(const std::string& _sort);
 
                     /**
                      * 判断参数 Sort 是否已赋值
                      * @return Sort 是否已赋值
+                     * 
                      */
                     bool SortHasBeenSet() const;
 

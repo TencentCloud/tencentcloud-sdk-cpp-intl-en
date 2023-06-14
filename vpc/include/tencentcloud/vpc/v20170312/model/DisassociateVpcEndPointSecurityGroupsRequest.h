@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of security group IDs
                      * @return SecurityGroupIds Array of security group IDs
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Array of security group IDs
-                     * @param SecurityGroupIds Array of security group IDs
+                     * @param _securityGroupIds Array of security group IDs
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Endpoint ID
                      * @return EndPointId Endpoint ID
+                     * 
                      */
                     std::string GetEndPointId() const;
 
                     /**
                      * 设置Endpoint ID
-                     * @param EndPointId Endpoint ID
+                     * @param _endPointId Endpoint ID
+                     * 
                      */
                     void SetEndPointId(const std::string& _endPointId);
 
                     /**
                      * 判断参数 EndPointId 是否已赋值
                      * @return EndPointId 是否已赋值
+                     * 
                      */
                     bool EndPointIdHasBeenSet() const;
 

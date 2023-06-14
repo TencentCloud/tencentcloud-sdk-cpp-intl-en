@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
                      * @return SecurityGroupIds The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
-                     * @param SecurityGroupIds The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+                     * @param _securityGroupIds The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 

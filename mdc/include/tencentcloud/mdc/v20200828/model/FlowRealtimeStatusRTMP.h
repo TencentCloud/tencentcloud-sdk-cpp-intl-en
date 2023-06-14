@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The video frame rate.
                      * @return VideoFPS The video frame rate.
+                     * 
                      */
                     int64_t GetVideoFPS() const;
 
                     /**
                      * 设置The video frame rate.
-                     * @param VideoFPS The video frame rate.
+                     * @param _videoFPS The video frame rate.
+                     * 
                      */
                     void SetVideoFPS(const int64_t& _videoFPS);
 
                     /**
                      * 判断参数 VideoFPS 是否已赋值
                      * @return VideoFPS 是否已赋值
+                     * 
                      */
                     bool VideoFPSHasBeenSet() const;
 
                     /**
                      * 获取The audio frame rate.
                      * @return AudioFPS The audio frame rate.
+                     * 
                      */
                     int64_t GetAudioFPS() const;
 
                     /**
                      * 设置The audio frame rate.
-                     * @param AudioFPS The audio frame rate.
+                     * @param _audioFPS The audio frame rate.
+                     * 
                      */
                     void SetAudioFPS(const int64_t& _audioFPS);
 
                     /**
                      * 判断参数 AudioFPS 是否已赋值
                      * @return AudioFPS 是否已赋值
+                     * 
                      */
                     bool AudioFPSHasBeenSet() const;
 

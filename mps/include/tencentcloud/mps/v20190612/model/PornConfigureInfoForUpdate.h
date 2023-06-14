@@ -52,54 +52,63 @@ namespace TencentCloud
                     /**
                      * 获取Control parameter of porn information detection in image.
                      * @return ImgReviewInfo Control parameter of porn information detection in image.
+                     * 
                      */
                     PornImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
                      * 设置Control parameter of porn information detection in image.
-                     * @param ImgReviewInfo Control parameter of porn information detection in image.
+                     * @param _imgReviewInfo Control parameter of porn information detection in image.
+                     * 
                      */
                     void SetImgReviewInfo(const PornImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of porn information detection in speech.
                      * @return AsrReviewInfo Control parameter of porn information detection in speech.
+                     * 
                      */
                     PornAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
                      * 设置Control parameter of porn information detection in speech.
-                     * @param AsrReviewInfo Control parameter of porn information detection in speech.
+                     * @param _asrReviewInfo Control parameter of porn information detection in speech.
+                     * 
                      */
                     void SetAsrReviewInfo(const PornAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
 
                     /**
                      * 判断参数 AsrReviewInfo 是否已赋值
                      * @return AsrReviewInfo 是否已赋值
+                     * 
                      */
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of porn information detection in text.
                      * @return OcrReviewInfo Control parameter of porn information detection in text.
+                     * 
                      */
                     PornOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
                      * 设置Control parameter of porn information detection in text.
-                     * @param OcrReviewInfo Control parameter of porn information detection in text.
+                     * @param _ocrReviewInfo Control parameter of porn information detection in text.
+                     * 
                      */
                     void SetOcrReviewInfo(const PornOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

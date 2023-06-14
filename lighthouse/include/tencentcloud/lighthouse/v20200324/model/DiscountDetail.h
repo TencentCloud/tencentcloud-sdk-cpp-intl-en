@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Billing duration.
                      * @return TimeSpan Billing duration.
+                     * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
                      * 设置Billing duration.
-                     * @param TimeSpan Billing duration.
+                     * @param _timeSpan Billing duration.
+                     * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
 
                     /**
                      * 判断参数 TimeSpan 是否已赋值
                      * @return TimeSpan 是否已赋值
+                     * 
                      */
                     bool TimeSpanHasBeenSet() const;
 
                     /**
                      * 获取Billing unit.
                      * @return TimeUnit Billing unit.
+                     * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
                      * 设置Billing unit.
-                     * @param TimeUnit Billing unit.
+                     * @param _timeUnit Billing unit.
+                     * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
 
                     /**
                      * 判断参数 TimeUnit 是否已赋值
                      * @return TimeUnit 是否已赋值
+                     * 
                      */
                     bool TimeUnitHasBeenSet() const;
 
                     /**
                      * 获取Total price.
                      * @return TotalCost Total price.
+                     * 
                      */
                     double GetTotalCost() const;
 
                     /**
                      * 设置Total price.
-                     * @param TotalCost Total price.
+                     * @param _totalCost Total price.
+                     * 
                      */
                     void SetTotalCost(const double& _totalCost);
 
                     /**
                      * 判断参数 TotalCost 是否已赋值
                      * @return TotalCost 是否已赋值
+                     * 
                      */
                     bool TotalCostHasBeenSet() const;
 
                     /**
                      * 获取Discounted total price.
                      * @return RealTotalCost Discounted total price.
+                     * 
                      */
                     double GetRealTotalCost() const;
 
                     /**
                      * 设置Discounted total price.
-                     * @param RealTotalCost Discounted total price.
+                     * @param _realTotalCost Discounted total price.
+                     * 
                      */
                     void SetRealTotalCost(const double& _realTotalCost);
 
                     /**
                      * 判断参数 RealTotalCost 是否已赋值
                      * @return RealTotalCost 是否已赋值
+                     * 
                      */
                     bool RealTotalCostHasBeenSet() const;
 
                     /**
                      * 获取Discount.
                      * @return Discount Discount.
+                     * 
                      */
                     int64_t GetDiscount() const;
 
                     /**
                      * 设置Discount.
-                     * @param Discount Discount.
+                     * @param _discount Discount.
+                     * 
                      */
                     void SetDiscount(const int64_t& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discount details.
                      * @return PolicyDetail Discount details.
+                     * 
                      */
                     PolicyDetail GetPolicyDetail() const;
 
                     /**
                      * 设置Discount details.
-                     * @param PolicyDetail Discount details.
+                     * @param _policyDetail Discount details.
+                     * 
                      */
                     void SetPolicyDetail(const PolicyDetail& _policyDetail);
 
                     /**
                      * 判断参数 PolicyDetail 是否已赋值
                      * @return PolicyDetail 是否已赋值
+                     * 
                      */
                     bool PolicyDetailHasBeenSet() const;
 

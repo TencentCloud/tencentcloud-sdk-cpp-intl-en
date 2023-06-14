@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Description of the created consumer group.
                      * @return Result Description of the created consumer group.
+                     * 
                      */
                     JgwOperateResponse GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

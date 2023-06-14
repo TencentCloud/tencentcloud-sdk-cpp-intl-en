@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
                      * @return ClusterId The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
-                     * @param ClusterId The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
+                     * @param _clusterId The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster scaling group ID list
                      * @return AutoScalingGroupIds Cluster scaling group ID list
+                     * 
                      */
                     std::vector<std::string> GetAutoScalingGroupIds() const;
 
                     /**
                      * 设置Cluster scaling group ID list
-                     * @param AutoScalingGroupIds Cluster scaling group ID list
+                     * @param _autoScalingGroupIds Cluster scaling group ID list
+                     * 
                      */
                     void SetAutoScalingGroupIds(const std::vector<std::string>& _autoScalingGroupIds);
 
                     /**
                      * 判断参数 AutoScalingGroupIds 是否已赋值
                      * @return AutoScalingGroupIds 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to keep nodes in the scaling group. Default to **false** (not keep)
                      * @return KeepInstance Whether to keep nodes in the scaling group. Default to **false** (not keep)
+                     * 
                      */
                     bool GetKeepInstance() const;
 
                     /**
                      * 设置Whether to keep nodes in the scaling group. Default to **false** (not keep)
-                     * @param KeepInstance Whether to keep nodes in the scaling group. Default to **false** (not keep)
+                     * @param _keepInstance Whether to keep nodes in the scaling group. Default to **false** (not keep)
+                     * 
                      */
                     void SetKeepInstance(const bool& _keepInstance);
 
                     /**
                      * 判断参数 KeepInstance 是否已赋值
                      * @return KeepInstance 是否已赋值
+                     * 
                      */
                     bool KeepInstanceHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The type. Valid values: `1` (mobile number), `2` (email address).
                      * @return Type The type. Valid values: `1` (mobile number), `2` (email address).
+                     * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置The type. Valid values: `1` (mobile number), `2` (email address).
-                     * @param Type The type. Valid values: `1` (mobile number), `2` (email address).
+                     * @param _type The type. Valid values: `1` (mobile number), `2` (email address).
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The mobile number or email address.
                      * @return Code The mobile number or email address.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置The mobile number or email address.
-                     * @param Code The mobile number or email address.
+                     * @param _code The mobile number or email address.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 

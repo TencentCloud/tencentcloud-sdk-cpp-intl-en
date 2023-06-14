@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Container ID
                      * @return ContainerID Container ID
+                     * 
                      */
                     std::string GetContainerID() const;
 
                     /**
                      * 设置Container ID
-                     * @param ContainerID Container ID
+                     * @param _containerID Container ID
+                     * 
                      */
                     void SetContainerID(const std::string& _containerID);
 
                     /**
                      * 判断参数 ContainerID 是否已赋值
                      * @return ContainerID 是否已赋值
+                     * 
                      */
                     bool ContainerIDHasBeenSet() const;
 
@@ -69,6 +72,7 @@ namespace TencentCloud
 `EVENT_ISOLATE_CONTAINER`: Isolate the container.
 `EVENT_RESOTRE_CONTAINER`: Recover the container.
 )
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -77,16 +81,18 @@ namespace TencentCloud
 `EVENT_ISOLATE_CONTAINER`: Isolate the container.
 `EVENT_RESOTRE_CONTAINER`: Recover the container.
 )
-                     * @param Status Status
+                     * @param _status Status
 `EVENT_ISOLATE_CONTAINER`: Isolate the container.
 `EVENT_RESOTRE_CONTAINER`: Recover the container.
 )
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

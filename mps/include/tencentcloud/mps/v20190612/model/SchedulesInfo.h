@@ -53,18 +53,21 @@ namespace TencentCloud
                     /**
                      * 获取The scheme ID.
                      * @return ScheduleId The scheme ID.
+                     * 
                      */
                     int64_t GetScheduleId() const;
 
                     /**
                      * 设置The scheme ID.
-                     * @param ScheduleId The scheme ID.
+                     * @param _scheduleId The scheme ID.
+                     * 
                      */
                     void SetScheduleId(const int64_t& _scheduleId);
 
                     /**
                      * 判断参数 ScheduleId 是否已赋值
                      * @return ScheduleId 是否已赋值
+                     * 
                      */
                     bool ScheduleIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScheduleName The scheme name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScheduleName() const;
 
                     /**
                      * 设置The scheme name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ScheduleName The scheme name.
+                     * @param _scheduleName The scheme name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScheduleName(const std::string& _scheduleName);
 
                     /**
                      * 判断参数 ScheduleName 是否已赋值
                      * @return ScheduleName 是否已赋值
+                     * 
                      */
                     bool ScheduleNameHasBeenSet() const;
 
@@ -99,6 +105,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetStatus() const;
 
@@ -107,16 +114,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status The scheme status. Valid values:
+                     * @param _status The scheme status. Valid values:
 `Enabled`
 `Disabled`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::vector<std::string>& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -125,20 +134,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Trigger The trigger of the scheme.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WorkflowTrigger GetTrigger() const;
 
                     /**
                      * 设置The trigger of the scheme.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Trigger The trigger of the scheme.
+                     * @param _trigger The trigger of the scheme.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTrigger(const WorkflowTrigger& _trigger);
 
                     /**
                      * 判断参数 Trigger 是否已赋值
                      * @return Trigger 是否已赋值
+                     * 
                      */
                     bool TriggerHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Activities The subtasks of the scheme.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Activity> GetActivities() const;
 
                     /**
                      * 设置The subtasks of the scheme.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Activities The subtasks of the scheme.
+                     * @param _activities The subtasks of the scheme.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActivities(const std::vector<Activity>& _activities);
 
                     /**
                      * 判断参数 Activities 是否已赋值
                      * @return Activities 是否已赋值
+                     * 
                      */
                     bool ActivitiesHasBeenSet() const;
 
@@ -169,20 +184,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OutputStorage The bucket to save the output file.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置The bucket to save the output file.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OutputStorage The bucket to save the output file.
+                     * @param _outputStorage The bucket to save the output file.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 
@@ -191,20 +209,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OutputDir The directory to save the output file.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOutputDir() const;
 
                     /**
                      * 设置The directory to save the output file.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OutputDir The directory to save the output file.
+                     * @param _outputDir The directory to save the output file.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
                     /**
                      * 判断参数 OutputDir 是否已赋值
                      * @return OutputDir 是否已赋值
+                     * 
                      */
                     bool OutputDirHasBeenSet() const;
 
@@ -213,20 +234,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskNotifyConfig The notification configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskNotifyConfig GetTaskNotifyConfig() const;
 
                     /**
                      * 设置The notification configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskNotifyConfig The notification configuration.
+                     * @param _taskNotifyConfig The notification configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskNotifyConfig(const TaskNotifyConfig& _taskNotifyConfig);
 
                     /**
                      * 判断参数 TaskNotifyConfig 是否已赋值
                      * @return TaskNotifyConfig 是否已赋值
+                     * 
                      */
                     bool TaskNotifyConfigHasBeenSet() const;
 
@@ -235,20 +259,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime The creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime The creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _createTime The creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -257,20 +284,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime The last updated time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The last updated time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime The last updated time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _updateTime The last updated time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

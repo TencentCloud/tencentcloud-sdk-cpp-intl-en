@@ -55,6 +55,7 @@ namespace TencentCloud
 <li>`smart_status_close`: Disabled</li>
 <li>`smart_status_open`: Block</li>
 <li>`smart_status_observe`: Observe</li>
+                     * 
                      */
                     std::string GetMode() const;
 
@@ -63,16 +64,18 @@ namespace TencentCloud
 <li>`smart_status_close`: Disabled</li>
 <li>`smart_status_open`: Block</li>
 <li>`smart_status_observe`: Observe</li>
-                     * @param Mode The status of the AI rule engine. Values:
+                     * @param _mode The status of the AI rule engine. Values:
 <li>`smart_status_close`: Disabled</li>
 <li>`smart_status_open`: Block</li>
 <li>`smart_status_observe`: Observe</li>
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 

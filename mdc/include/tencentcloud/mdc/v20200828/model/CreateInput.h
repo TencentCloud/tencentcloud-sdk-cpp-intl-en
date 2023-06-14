@@ -51,126 +51,147 @@ namespace TencentCloud
                     /**
                      * 获取Input name, which can contain 1 to 32 letters, digits, and underscores.
                      * @return InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
+                     * 
                      */
                     std::string GetInputName() const;
 
                     /**
                      * 设置Input name, which can contain 1 to 32 letters, digits, and underscores.
-                     * @param InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
+                     * @param _inputName Input name, which can contain 1 to 32 letters, digits, and underscores.
+                     * 
                      */
                     void SetInputName(const std::string& _inputName);
 
                     /**
                      * 判断参数 InputName 是否已赋值
                      * @return InputName 是否已赋值
+                     * 
                      */
                     bool InputNameHasBeenSet() const;
 
                     /**
                      * 获取Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
                      * @return Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
-                     * @param Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+                     * @param _protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Input description. Length: [0, 255].
                      * @return Description Input description. Length: [0, 255].
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Input description. Length: [0, 255].
-                     * @param Description Input description. Length: [0, 255].
+                     * @param _description Input description. Length: [0, 255].
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Allowlist of input IPs in CIDR format.
                      * @return AllowIpList Allowlist of input IPs in CIDR format.
+                     * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
                      * 设置Allowlist of input IPs in CIDR format.
-                     * @param AllowIpList Allowlist of input IPs in CIDR format.
+                     * @param _allowIpList Allowlist of input IPs in CIDR format.
+                     * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
 
                     /**
                      * 判断参数 AllowIpList 是否已赋值
                      * @return AllowIpList 是否已赋值
+                     * 
                      */
                     bool AllowIpListHasBeenSet() const;
 
                     /**
                      * 获取SRT configuration information of input.
                      * @return SRTSettings SRT configuration information of input.
+                     * 
                      */
                     CreateInputSRTSettings GetSRTSettings() const;
 
                     /**
                      * 设置SRT configuration information of input.
-                     * @param SRTSettings SRT configuration information of input.
+                     * @param _sRTSettings SRT configuration information of input.
+                     * 
                      */
                     void SetSRTSettings(const CreateInputSRTSettings& _sRTSettings);
 
                     /**
                      * 判断参数 SRTSettings 是否已赋值
                      * @return SRTSettings 是否已赋值
+                     * 
                      */
                     bool SRTSettingsHasBeenSet() const;
 
                     /**
                      * 获取RTP configuration information of input.
                      * @return RTPSettings RTP configuration information of input.
+                     * 
                      */
                     CreateInputRTPSettings GetRTPSettings() const;
 
                     /**
                      * 设置RTP configuration information of input.
-                     * @param RTPSettings RTP configuration information of input.
+                     * @param _rTPSettings RTP configuration information of input.
+                     * 
                      */
                     void SetRTPSettings(const CreateInputRTPSettings& _rTPSettings);
 
                     /**
                      * 判断参数 RTPSettings 是否已赋值
                      * @return RTPSettings 是否已赋值
+                     * 
                      */
                     bool RTPSettingsHasBeenSet() const;
 
                     /**
                      * 获取Input failover. Valid values: `OPEN`, `CLOSE` (default)
                      * @return FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+                     * 
                      */
                     std::string GetFailOver() const;
 
                     /**
                      * 设置Input failover. Valid values: `OPEN`, `CLOSE` (default)
-                     * @param FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+                     * @param _failOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+                     * 
                      */
                     void SetFailOver(const std::string& _failOver);
 
                     /**
                      * 判断参数 FailOver 是否已赋值
                      * @return FailOver 是否已赋值
+                     * 
                      */
                     bool FailOverHasBeenSet() const;
 

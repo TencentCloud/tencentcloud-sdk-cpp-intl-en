@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Type Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
-                     * @param Type Type. Valid values:
+                     * @param _type Type. Valid values:
 <li> Rotate: image rotation.</li>
 <li> Flip: image flipping.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
                      * @return RotateAngle Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
+                     * 
                      */
                     double GetRotateAngle() const;
 
                     /**
                      * 设置Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
-                     * @param RotateAngle Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
+                     * @param _rotateAngle Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
+                     * 
                      */
                     void SetRotateAngle(const double& _rotateAngle);
 
                     /**
                      * 判断参数 RotateAngle 是否已赋值
                      * @return RotateAngle 是否已赋值
+                     * 
                      */
                     bool RotateAngleHasBeenSet() const;
 
@@ -99,6 +105,7 @@ This is valid if `Type` is `Flip`.
 <li>Horizental: horizontal flipping, i.e., horizontally mirrored.</li>
 <li>Vertical: vertical flipping, i.e., vertically mirrored.</li>
 This is valid if `Type` is `Flip`.
+                     * 
                      */
                     std::string GetFlip() const;
 
@@ -107,16 +114,18 @@ This is valid if `Type` is `Flip`.
 <li>Horizental: horizontal flipping, i.e., horizontally mirrored.</li>
 <li>Vertical: vertical flipping, i.e., vertically mirrored.</li>
 This is valid if `Type` is `Flip`.
-                     * @param Flip Image flipping action. Valid values:
+                     * @param _flip Image flipping action. Valid values:
 <li>Horizental: horizontal flipping, i.e., horizontally mirrored.</li>
 <li>Vertical: vertical flipping, i.e., vertically mirrored.</li>
 This is valid if `Type` is `Flip`.
+                     * 
                      */
                     void SetFlip(const std::string& _flip);
 
                     /**
                      * 判断参数 Flip 是否已赋值
                      * @return Flip 是否已赋值
+                     * 
                      */
                     bool FlipHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Proxy ID
                      * @return ProxyId Proxy ID
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Proxy ID
-                     * @param ProxyId Proxy ID
+                     * @param _proxyId Proxy ID
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
                     /**
                      * 获取Rule list
                      * @return Rule Rule list
+                     * 
                      */
                     std::vector<ApplicationProxyRule> GetRule() const;
 
                     /**
                      * 设置Rule list
-                     * @param Rule Rule list
+                     * @param _rule Rule list
+                     * 
                      */
                     void SetRule(const std::vector<ApplicationProxyRule>& _rule);
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 

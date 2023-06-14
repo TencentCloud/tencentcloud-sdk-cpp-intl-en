@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MachineGroups List of machine groups bound to the collection rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MachineGroupInfo> GetMachineGroups() const;
 
                     /**
                      * 判断参数 MachineGroups 是否已赋值
                      * @return MachineGroups 是否已赋值
+                     * 
                      */
                     bool MachineGroupsHasBeenSet() const;
 

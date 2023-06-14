@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible entries.
                      * @return TotalCount Number of eligible entries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TranscodeTemplateSet List of transcoding template details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TranscodeTemplate> GetTranscodeTemplateSet() const;
 
                     /**
                      * 判断参数 TranscodeTemplateSet 是否已赋值
                      * @return TranscodeTemplateSet 是否已赋值
+                     * 
                      */
                     bool TranscodeTemplateSetHasBeenSet() const;
 

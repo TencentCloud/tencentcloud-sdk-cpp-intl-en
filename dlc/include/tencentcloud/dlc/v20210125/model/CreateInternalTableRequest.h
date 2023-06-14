@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The basic table information.
                      * @return TableBaseInfo The basic table information.
+                     * 
                      */
                     TableBaseInfo GetTableBaseInfo() const;
 
                     /**
                      * 设置The basic table information.
-                     * @param TableBaseInfo The basic table information.
+                     * @param _tableBaseInfo The basic table information.
+                     * 
                      */
                     void SetTableBaseInfo(const TableBaseInfo& _tableBaseInfo);
 
                     /**
                      * 判断参数 TableBaseInfo 是否已赋值
                      * @return TableBaseInfo 是否已赋值
+                     * 
                      */
                     bool TableBaseInfoHasBeenSet() const;
 
                     /**
                      * 获取The table fields.
                      * @return Columns The table fields.
+                     * 
                      */
                     std::vector<TColumn> GetColumns() const;
 
                     /**
                      * 设置The table fields.
-                     * @param Columns The table fields.
+                     * @param _columns The table fields.
+                     * 
                      */
                     void SetColumns(const std::vector<TColumn>& _columns);
 
                     /**
                      * 判断参数 Columns 是否已赋值
                      * @return Columns 是否已赋值
+                     * 
                      */
                     bool ColumnsHasBeenSet() const;
 
                     /**
                      * 获取The table partitions.
                      * @return Partitions The table partitions.
+                     * 
                      */
                     std::vector<TPartition> GetPartitions() const;
 
                     /**
                      * 设置The table partitions.
-                     * @param Partitions The table partitions.
+                     * @param _partitions The table partitions.
+                     * 
                      */
                     void SetPartitions(const std::vector<TPartition>& _partitions);
 
                     /**
                      * 判断参数 Partitions 是否已赋值
                      * @return Partitions 是否已赋值
+                     * 
                      */
                     bool PartitionsHasBeenSet() const;
 
                     /**
                      * 获取The table properties.
                      * @return Properties The table properties.
+                     * 
                      */
                     std::vector<Property> GetProperties() const;
 
                     /**
                      * 设置The table properties.
-                     * @param Properties The table properties.
+                     * @param _properties The table properties.
+                     * 
                      */
                     void SetProperties(const std::vector<Property>& _properties);
 
                     /**
                      * 判断参数 Properties 是否已赋值
                      * @return Properties 是否已赋值
+                     * 
                      */
                     bool PropertiesHasBeenSet() const;
 

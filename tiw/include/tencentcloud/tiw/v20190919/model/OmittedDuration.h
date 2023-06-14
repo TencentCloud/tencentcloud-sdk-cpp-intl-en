@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Offset of the paused time in the spliced video, in milliseconds
                      * @return VideoTime Offset of the paused time in the spliced video, in milliseconds
+                     * 
                      */
                     int64_t GetVideoTime() const;
 
                     /**
                      * 设置Offset of the paused time in the spliced video, in milliseconds
-                     * @param VideoTime Offset of the paused time in the spliced video, in milliseconds
+                     * @param _videoTime Offset of the paused time in the spliced video, in milliseconds
+                     * 
                      */
                     void SetVideoTime(const int64_t& _videoTime);
 
                     /**
                      * 判断参数 VideoTime 是否已赋值
                      * @return VideoTime 是否已赋值
+                     * 
                      */
                     bool VideoTimeHasBeenSet() const;
 
                     /**
                      * 获取Recording pause timestamp, in milliseconds
                      * @return PauseTime Recording pause timestamp, in milliseconds
+                     * 
                      */
                     int64_t GetPauseTime() const;
 
                     /**
                      * 设置Recording pause timestamp, in milliseconds
-                     * @param PauseTime Recording pause timestamp, in milliseconds
+                     * @param _pauseTime Recording pause timestamp, in milliseconds
+                     * 
                      */
                     void SetPauseTime(const int64_t& _pauseTime);
 
                     /**
                      * 判断参数 PauseTime 是否已赋值
                      * @return PauseTime 是否已赋值
+                     * 
                      */
                     bool PauseTimeHasBeenSet() const;
 
                     /**
                      * 获取Recording resumption timestamp, in milliseconds
                      * @return ResumeTime Recording resumption timestamp, in milliseconds
+                     * 
                      */
                     int64_t GetResumeTime() const;
 
                     /**
                      * 设置Recording resumption timestamp, in milliseconds
-                     * @param ResumeTime Recording resumption timestamp, in milliseconds
+                     * @param _resumeTime Recording resumption timestamp, in milliseconds
+                     * 
                      */
                     void SetResumeTime(const int64_t& _resumeTime);
 
                     /**
                      * 判断参数 ResumeTime 是否已赋值
                      * @return ResumeTime 是否已赋值
+                     * 
                      */
                     bool ResumeTimeHasBeenSet() const;
 

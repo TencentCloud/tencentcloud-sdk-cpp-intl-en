@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Globally unique CMK ID
                      * @return KeyId Globally unique CMK ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Globally unique CMK ID
-                     * @param KeyId Globally unique CMK ID
+                     * @param _keyId Globally unique CMK ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
                      * @return KeySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
+                     * 
                      */
                     std::string GetKeySpec() const;
 
                     /**
                      * 设置Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
-                     * @param KeySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
+                     * @param _keySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
+                     * 
                      */
                     void SetKeySpec(const std::string& _keySpec);
 
                     /**
                      * 判断参数 KeySpec 是否已赋值
                      * @return KeySpec 是否已赋值
+                     * 
                      */
                     bool KeySpecHasBeenSet() const;
 
                     /**
                      * 获取Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
                      * @return NumberOfBytes Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
+                     * 
                      */
                     uint64_t GetNumberOfBytes() const;
 
                     /**
                      * 设置Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
-                     * @param NumberOfBytes Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
+                     * @param _numberOfBytes Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
+                     * 
                      */
                     void SetNumberOfBytes(const uint64_t& _numberOfBytes);
 
                     /**
                      * 判断参数 NumberOfBytes 是否已赋值
                      * @return NumberOfBytes 是否已赋值
+                     * 
                      */
                     bool NumberOfBytesHasBeenSet() const;
 
                     /**
                      * 获取JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
                      * @return EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+                     * 
                      */
                     std::string GetEncryptionContext() const;
 
                     /**
                      * 设置JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
-                     * @param EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+                     * @param _encryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+                     * 
                      */
                     void SetEncryptionContext(const std::string& _encryptionContext);
 
                     /**
                      * 判断参数 EncryptionContext 是否已赋值
                      * @return EncryptionContext 是否已赋值
+                     * 
                      */
                     bool EncryptionContextHasBeenSet() const;
 
                     /**
                      * 获取PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
                      * @return EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     * 
                      */
                     std::string GetEncryptionPublicKey() const;
 
                     /**
                      * 设置PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
-                     * @param EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     * @param _encryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+                     * 
                      */
                     void SetEncryptionPublicKey(const std::string& _encryptionPublicKey);
 
                     /**
                      * 判断参数 EncryptionPublicKey 是否已赋值
                      * @return EncryptionPublicKey 是否已赋值
+                     * 
                      */
                     bool EncryptionPublicKeyHasBeenSet() const;
 
                     /**
                      * 获取Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
                      * @return EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
+                     * 
                      */
                     std::string GetEncryptionAlgorithm() const;
 
                     /**
                      * 设置Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
-                     * @param EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
+                     * @param _encryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2` (C1C3C2 ciphertext is returned)`, `SM2_C1C3C2_ASN1` (C1C3C2 ASN1 ciphertext is returned), `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, an SM2 public key will be used by default.
+                     * 
                      */
                     void SetEncryptionAlgorithm(const std::string& _encryptionAlgorithm);
 
                     /**
                      * 判断参数 EncryptionAlgorithm 是否已赋值
                      * @return EncryptionAlgorithm 是否已赋值
+                     * 
                      */
                     bool EncryptionAlgorithmHasBeenSet() const;
 

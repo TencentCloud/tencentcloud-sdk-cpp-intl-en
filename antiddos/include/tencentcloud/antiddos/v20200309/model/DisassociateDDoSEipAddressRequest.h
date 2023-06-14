@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
                      * @return InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
-                     * @param InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * @param _instanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取EIP of the Anti-DDoS instance ID
                      * @return Eip EIP of the Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetEip() const;
 
                     /**
                      * 设置EIP of the Anti-DDoS instance ID
-                     * @param Eip EIP of the Anti-DDoS instance ID
+                     * @param _eip EIP of the Anti-DDoS instance ID
+                     * 
                      */
                     void SetEip(const std::string& _eip);
 
                     /**
                      * 判断参数 Eip 是否已赋值
                      * @return Eip 是否已赋值
+                     * 
                      */
                     bool EipHasBeenSet() const;
 

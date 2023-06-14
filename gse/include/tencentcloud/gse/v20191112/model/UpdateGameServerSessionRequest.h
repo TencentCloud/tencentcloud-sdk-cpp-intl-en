@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Game server session ID. It should contain 1 to 256 ASCII characters.
                      * @return GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * 
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
                      * 设置Game server session ID. It should contain 1 to 256 ASCII characters.
-                     * @param GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * @param _gameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
+                     * 
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
                     /**
                      * 判断参数 GameServerSessionId 是否已赋值
                      * @return GameServerSessionId 是否已赋值
+                     * 
                      */
                     bool GameServerSessionIdHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of players, which cannot be less than 0.
                      * @return MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
+                     * 
                      */
                     uint64_t GetMaximumPlayerSessionCount() const;
 
                     /**
                      * 设置The maximum number of players, which cannot be less than 0.
-                     * @param MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
+                     * @param _maximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
+                     * 
                      */
                     void SetMaximumPlayerSessionCount(const uint64_t& _maximumPlayerSessionCount);
 
                     /**
                      * 判断参数 MaximumPlayerSessionCount 是否已赋值
                      * @return MaximumPlayerSessionCount 是否已赋值
+                     * 
                      */
                     bool MaximumPlayerSessionCountHasBeenSet() const;
 
                     /**
                      * 获取Name of the game server session. It should contain 1 to 1024 ASCII characters.
                      * @return Name Name of the game server session. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the game server session. It should contain 1 to 1024 ASCII characters.
-                     * @param Name Name of the game server session. It should contain 1 to 1024 ASCII characters.
+                     * @param _name Name of the game server session. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
                      * @return PlayerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+                     * 
                      */
                     std::string GetPlayerSessionCreationPolicy() const;
 
                     /**
                      * 设置Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
-                     * @param PlayerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+                     * @param _playerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+                     * 
                      */
                     void SetPlayerSessionCreationPolicy(const std::string& _playerSessionCreationPolicy);
 
                     /**
                      * 判断参数 PlayerSessionCreationPolicy 是否已赋值
                      * @return PlayerSessionCreationPolicy 是否已赋值
+                     * 
                      */
                     bool PlayerSessionCreationPolicyHasBeenSet() const;
 
                     /**
                      * 获取Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
                      * @return ProtectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+                     * 
                      */
                     std::string GetProtectionPolicy() const;
 
                     /**
                      * 设置Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
-                     * @param ProtectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+                     * @param _protectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+                     * 
                      */
                     void SetProtectionPolicy(const std::string& _protectionPolicy);
 
                     /**
                      * 判断参数 ProtectionPolicy 是否已赋值
                      * @return ProtectionPolicy 是否已赋值
+                     * 
                      */
                     bool ProtectionPolicyHasBeenSet() const;
 

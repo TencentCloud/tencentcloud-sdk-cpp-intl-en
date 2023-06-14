@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Task ID.
                      * @return TaskId Task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID.
-                     * @param TaskId Task ID.
+                     * @param _taskId Task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
                      * @return Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
-                     * @param Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * @param _status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Video ID
                      * @return FileId Video ID
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Video ID
-                     * @param FileId Video ID
+                     * @param _fileId Video ID
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -125,6 +134,7 @@ Task types for v2017:
 <li>`Concat`: Video splicing</li>
 <li>`Clip`: Video clipping</li>
 <li>`ImageSprites`: Image sprite generating</li>
+                     * 
                      */
                     std::string GetTaskType() const;
 
@@ -141,7 +151,7 @@ Task types for v2017:
 <li>`Concat`: Video splicing</li>
 <li>`Clip`: Video clipping</li>
 <li>`ImageSprites`: Image sprite generating</li>
-                     * @param TaskType The task type. Valid values:
+                     * @param _taskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
 <li>`ReduceMediaBitrate`: Bitrate reduction</li>
@@ -153,102 +163,119 @@ Task types for v2017:
 <li>`Concat`: Video splicing</li>
 <li>`Clip`: Video clipping</li>
 <li>`ImageSprites`: Image sprite generating</li>
+                     * 
                      */
                     void SetTaskType(const std::string& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
                      * @return BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+                     * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
                      * 设置Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
-                     * @param BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+                     * @param _beginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+                     * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
 
                     /**
                      * 判断参数 BeginProcessTime 是否已赋值
                      * @return BeginProcessTime 是否已赋值
+                     * 
                      */
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
                      * @return FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+                     * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
                      * 设置End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
-                     * @param FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+                     * @param _finishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+                     * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
 
                     /**
                      * 判断参数 FinishTime 是否已赋值
                      * @return FinishTime 是否已赋值
+                     * 
                      */
                     bool FinishTimeHasBeenSet() const;
 
                     /**
                      * 获取ID used for deduplication if there was a request with the same ID in the last seven days.
                      * @return SessionId ID used for deduplication if there was a request with the same ID in the last seven days.
+                     * 
                      */
                     std::string GetSessionId() const;
 
                     /**
                      * 设置ID used for deduplication if there was a request with the same ID in the last seven days.
-                     * @param SessionId ID used for deduplication if there was a request with the same ID in the last seven days.
+                     * @param _sessionId ID used for deduplication if there was a request with the same ID in the last seven days.
+                     * 
                      */
                     void SetSessionId(const std::string& _sessionId);
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 
                     /**
                      * 获取Source context, which is used to pass through the user request information.
                      * @return SessionContext Source context, which is used to pass through the user request information.
+                     * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
                      * 设置Source context, which is used to pass through the user request information.
-                     * @param SessionContext Source context, which is used to pass through the user request information.
+                     * @param _sessionContext Source context, which is used to pass through the user request information.
+                     * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
                     /**
                      * 判断参数 SessionContext 是否已赋值
                      * @return SessionContext 是否已赋值
+                     * 
                      */
                     bool SessionContextHasBeenSet() const;
 

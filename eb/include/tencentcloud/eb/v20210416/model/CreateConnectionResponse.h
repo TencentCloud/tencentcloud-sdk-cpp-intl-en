@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Connector ID
                      * @return ConnectionId Connector ID
+                     * 
                      */
                     std::string GetConnectionId() const;
 
                     /**
                      * 判断参数 ConnectionId 是否已赋值
                      * @return ConnectionId 是否已赋值
+                     * 
                      */
                     bool ConnectionIdHasBeenSet() const;
 

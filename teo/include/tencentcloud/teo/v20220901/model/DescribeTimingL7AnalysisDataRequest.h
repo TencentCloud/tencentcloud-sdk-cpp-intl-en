@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The start time.
                      * @return StartTime The start time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time.
-                     * @param StartTime The start time.
+                     * @param _startTime The start time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time.
                      * @return EndTime The end time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time.
-                     * @param EndTime The end time.
+                     * @param _endTime The end time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -96,6 +102,7 @@ namespace TencentCloud
 <li>`l7Flow_request`: Access requests</li>
 <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
 <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
@@ -108,7 +115,7 @@ namespace TencentCloud
 <li>`l7Flow_request`: Access requests</li>
 <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
 <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
-                     * @param MetricNames The metric to query. Values:
+                     * @param _metricNames The metric to query. Values:
 <li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
 <li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
 <li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
@@ -116,12 +123,14 @@ namespace TencentCloud
 <li>`l7Flow_request`: Access requests</li>
 <li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
 <li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
@@ -130,20 +139,23 @@ namespace TencentCloud
 Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
                      * @return ZoneIds List of sites
 Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of sites
 Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
-                     * @param ZoneIds List of sites
+                     * @param _zoneIds List of sites
 Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it’s not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
@@ -158,6 +170,7 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * 
                      */
                     std::string GetInterval() const;
 
@@ -167,17 +180,19 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
-                     * @param Interval The query granularity. Values:
+                     * @param _interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
 <li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
@@ -218,6 +233,7 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`ipVersion`:<br>   Filter by the specified <strong>IP version</strong>.<br>   Values:<br>   `4`: IPv4;<br>   `6`: IPv6.</li>
 <li>`tagKey`:<br>   Filter by the specified <strong>tag key</strong></li>
 <li>`tagValue`<br>   Filter by the specified <strong>tag value</strong></li>
+                     * 
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
@@ -240,7 +256,7 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`ipVersion`:<br>   Filter by the specified <strong>IP version</strong>.<br>   Values:<br>   `4`: IPv4;<br>   `6`: IPv6.</li>
 <li>`tagKey`:<br>   Filter by the specified <strong>tag key</strong></li>
 <li>`tagValue`<br>   Filter by the specified <strong>tag value</strong></li>
-                     * @param Filters Filters
+                     * @param _filters Filters
 <li>`country`:<br>   Filter by the specified <strong>country code</strong>. <a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a> country codes are used.</li>
 <li>`province`:<br>   Filter by the specified <strong>province name</strong>. It’s only available when `Area` is `mainland`. </li>
 <li>`isp`:<br>   Filter by the specified <strong>ISP</strong>. It’s only available when `Area` is `mainland`.<br>   Values: <br>   `2`: CTCC; <br>   `26`: CUCC;<br>   `1046`: CMCC;<br>   `3947`: CTT; <br>   `38`: CERNET; <br>   `43`: GWBN;<br>   `0`: Others.</li>
@@ -258,12 +274,14 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`ipVersion`:<br>   Filter by the specified <strong>IP version</strong>.<br>   Values:<br>   `4`: IPv4;<br>   `6`: IPv6.</li>
 <li>`tagKey`:<br>   Filter by the specified <strong>tag key</strong></li>
 <li>`tagValue`<br>   Filter by the specified <strong>tag value</strong></li>
+                     * 
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
@@ -276,6 +294,7 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -284,16 +303,18 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-                     * @param Area Geolocation scope. Values:
+                     * @param _area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
 <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

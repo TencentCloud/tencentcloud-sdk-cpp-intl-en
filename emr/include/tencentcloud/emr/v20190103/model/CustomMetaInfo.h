@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
                      * @return MetaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+                     * 
                      */
                     std::string GetMetaDataJdbcUrl() const;
 
                     /**
                      * 设置JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
-                     * @param MetaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+                     * @param _metaDataJdbcUrl JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+                     * 
                      */
                     void SetMetaDataJdbcUrl(const std::string& _metaDataJdbcUrl);
 
                     /**
                      * 判断参数 MetaDataJdbcUrl 是否已赋值
                      * @return MetaDataJdbcUrl 是否已赋值
+                     * 
                      */
                     bool MetaDataJdbcUrlHasBeenSet() const;
 
                     /**
                      * 获取Custom MetaDB instance username
                      * @return MetaDataUser Custom MetaDB instance username
+                     * 
                      */
                     std::string GetMetaDataUser() const;
 
                     /**
                      * 设置Custom MetaDB instance username
-                     * @param MetaDataUser Custom MetaDB instance username
+                     * @param _metaDataUser Custom MetaDB instance username
+                     * 
                      */
                     void SetMetaDataUser(const std::string& _metaDataUser);
 
                     /**
                      * 判断参数 MetaDataUser 是否已赋值
                      * @return MetaDataUser 是否已赋值
+                     * 
                      */
                     bool MetaDataUserHasBeenSet() const;
 
                     /**
                      * 获取Custom MetaDB instance password
                      * @return MetaDataPass Custom MetaDB instance password
+                     * 
                      */
                     std::string GetMetaDataPass() const;
 
                     /**
                      * 设置Custom MetaDB instance password
-                     * @param MetaDataPass Custom MetaDB instance password
+                     * @param _metaDataPass Custom MetaDB instance password
+                     * 
                      */
                     void SetMetaDataPass(const std::string& _metaDataPass);
 
                     /**
                      * 判断参数 MetaDataPass 是否已赋值
                      * @return MetaDataPass 是否已赋值
+                     * 
                      */
                     bool MetaDataPassHasBeenSet() const;
 

@@ -49,252 +49,294 @@ namespace TencentCloud
                     /**
                      * 获取The policy index.
                      * @return Id The policy index.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置The policy index.
-                     * @param Id The policy index.
+                     * @param _id The policy index.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取The policy name.
                      * @return Name The policy name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The policy name.
-                     * @param Name The policy name.
+                     * @param _name The policy name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The service ID.
                      * @return ServiceId The service ID.
+                     * 
                      */
                     uint64_t GetServiceId() const;
 
                     /**
                      * 设置The service ID.
-                     * @param ServiceId The service ID.
+                     * @param _serviceId The service ID.
+                     * 
                      */
                     void SetServiceId(const uint64_t& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取The application ID of the contract.
                      * @return ContractAppId The application ID of the contract.
+                     * 
                      */
                     uint64_t GetContractAppId() const;
 
                     /**
                      * 设置The application ID of the contract.
-                     * @param ContractAppId The application ID of the contract.
+                     * @param _contractAppId The application ID of the contract.
+                     * 
                      */
                     void SetContractAppId(const uint64_t& _contractAppId);
 
                     /**
                      * 判断参数 ContractAppId 是否已赋值
                      * @return ContractAppId 是否已赋值
+                     * 
                      */
                     bool ContractAppIdHasBeenSet() const;
 
                     /**
                      * 获取The policy ID.
                      * @return PolicyId The policy ID.
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置The policy ID.
-                     * @param PolicyId The policy ID.
+                     * @param _policyId The policy ID.
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取The claim protocol type (CPT) ID.
                      * @return CptId The claim protocol type (CPT) ID.
+                     * 
                      */
                     uint64_t GetCptId() const;
 
                     /**
                      * 设置The claim protocol type (CPT) ID.
-                     * @param CptId The claim protocol type (CPT) ID.
+                     * @param _cptId The claim protocol type (CPT) ID.
+                     * 
                      */
                     void SetCptId(const uint64_t& _cptId);
 
                     /**
                      * 判断参数 CptId 是否已赋值
                      * @return CptId 是否已赋值
+                     * 
                      */
                     bool CptIdHasBeenSet() const;
 
                     /**
                      * 获取The JSON data.
                      * @return PolicyJson The JSON data.
+                     * 
                      */
                     std::string GetPolicyJson() const;
 
                     /**
                      * 设置The JSON data.
-                     * @param PolicyJson The JSON data.
+                     * @param _policyJson The JSON data.
+                     * 
                      */
                     void SetPolicyJson(const std::string& _policyJson);
 
                     /**
                      * 判断参数 PolicyJson 是否已赋值
                      * @return PolicyJson 是否已赋值
+                     * 
                      */
                     bool PolicyJsonHasBeenSet() const;
 
                     /**
                      * 获取The creation time.
                      * @return CreateTime The creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The creation time.
-                     * @param CreateTime The creation time.
+                     * @param _createTime The creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取The last updated time.
                      * @return UpdateTime The last updated time.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The last updated time.
-                     * @param UpdateTime The last updated time.
+                     * @param _updateTime The last updated time.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取The DID of the creator.
                      * @return CreatorDid The DID of the creator.
+                     * 
                      */
                     std::string GetCreatorDid() const;
 
                     /**
                      * 设置The DID of the creator.
-                     * @param CreatorDid The DID of the creator.
+                     * @param _creatorDid The DID of the creator.
+                     * 
                      */
                     void SetCreatorDid(const std::string& _creatorDid);
 
                     /**
                      * 判断参数 CreatorDid 是否已赋值
                      * @return CreatorDid 是否已赋值
+                     * 
                      */
                     bool CreatorDidHasBeenSet() const;
 
                     /**
                      * 获取The application name.
                      * @return AppName The application name.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The application name.
-                     * @param AppName The application name.
+                     * @param _appName The application name.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取The claim protocol type (CPT) index.
                      * @return CptIndex The claim protocol type (CPT) index.
+                     * 
                      */
                     uint64_t GetCptIndex() const;
 
                     /**
                      * 设置The claim protocol type (CPT) index.
-                     * @param CptIndex The claim protocol type (CPT) index.
+                     * @param _cptIndex The claim protocol type (CPT) index.
+                     * 
                      */
                     void SetCptIndex(const uint64_t& _cptIndex);
 
                     /**
                      * 判断参数 CptIndex 是否已赋值
                      * @return CptIndex 是否已赋值
+                     * 
                      */
                     bool CptIndexHasBeenSet() const;
 

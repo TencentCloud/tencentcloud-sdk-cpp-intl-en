@@ -52,108 +52,126 @@ namespace TencentCloud
                     /**
                      * 获取Container image address
                      * @return ContainerImage Container image address
+                     * 
                      */
                     std::string GetContainerImage() const;
 
                     /**
                      * 设置Container image address
-                     * @param ContainerImage Container image address
+                     * @param _containerImage Container image address
+                     * 
                      */
                     void SetContainerImage(const std::string& _containerImage);
 
                     /**
                      * 判断参数 ContainerImage 是否已赋值
                      * @return ContainerImage 是否已赋值
+                     * 
                      */
                     bool ContainerImageHasBeenSet() const;
 
                     /**
                      * 获取Container name
                      * @return ContainerName Container name
+                     * 
                      */
                     std::string GetContainerName() const;
 
                     /**
                      * 设置Container name
-                     * @param ContainerName Container name
+                     * @param _containerName Container name
+                     * 
                      */
                     void SetContainerName(const std::string& _containerName);
 
                     /**
                      * 判断参数 ContainerName 是否已赋值
                      * @return ContainerName 是否已赋值
+                     * 
                      */
                     bool ContainerNameHasBeenSet() const;
 
                     /**
                      * 获取List of environment variables
                      * @return Envs List of environment variables
+                     * 
                      */
                     std::vector<ContainerEnv> GetEnvs() const;
 
                     /**
                      * 设置List of environment variables
-                     * @param Envs List of environment variables
+                     * @param _envs List of environment variables
+                     * 
                      */
                     void SetEnvs(const std::vector<ContainerEnv>& _envs);
 
                     /**
                      * 判断参数 Envs 是否已赋值
                      * @return Envs 是否已赋值
+                     * 
                      */
                     bool EnvsHasBeenSet() const;
 
                     /**
                      * 获取List of mappings of container ports and host ports
                      * @return PublishPorts List of mappings of container ports and host ports
+                     * 
                      */
                     std::vector<DockerContainerPublishPort> GetPublishPorts() const;
 
                     /**
                      * 设置List of mappings of container ports and host ports
-                     * @param PublishPorts List of mappings of container ports and host ports
+                     * @param _publishPorts List of mappings of container ports and host ports
+                     * 
                      */
                     void SetPublishPorts(const std::vector<DockerContainerPublishPort>& _publishPorts);
 
                     /**
                      * 判断参数 PublishPorts 是否已赋值
                      * @return PublishPorts 是否已赋值
+                     * 
                      */
                     bool PublishPortsHasBeenSet() const;
 
                     /**
                      * 获取List of container mount volumes
                      * @return Volumes List of container mount volumes
+                     * 
                      */
                     std::vector<DockerContainerVolume> GetVolumes() const;
 
                     /**
                      * 设置List of container mount volumes
-                     * @param Volumes List of container mount volumes
+                     * @param _volumes List of container mount volumes
+                     * 
                      */
                     void SetVolumes(const std::vector<DockerContainerVolume>& _volumes);
 
                     /**
                      * 判断参数 Volumes 是否已赋值
                      * @return Volumes 是否已赋值
+                     * 
                      */
                     bool VolumesHasBeenSet() const;
 
                     /**
                      * 获取The command to run
                      * @return Command The command to run
+                     * 
                      */
                     std::string GetCommand() const;
 
                     /**
                      * 设置The command to run
-                     * @param Command The command to run
+                     * @param _command The command to run
+                     * 
                      */
                     void SetCommand(const std::string& _command);
 
                     /**
                      * 判断参数 Command 是否已赋值
                      * @return Command 是否已赋值
+                     * 
                      */
                     bool CommandHasBeenSet() const;
 

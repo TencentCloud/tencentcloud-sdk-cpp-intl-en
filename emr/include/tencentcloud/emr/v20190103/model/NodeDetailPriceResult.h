@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeType The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNodeType() const;
 
                     /**
                      * 设置The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NodeType The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
+                     * @param _nodeType The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNodeType(const std::string& _nodeType);
 
                     /**
                      * 判断参数 NodeType 是否已赋值
                      * @return NodeType 是否已赋值
+                     * 
                      */
                     bool NodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Price details by node part
                      * @return PartDetailPrice Price details by node part
+                     * 
                      */
                     std::vector<PartDetailPriceItem> GetPartDetailPrice() const;
 
                     /**
                      * 设置Price details by node part
-                     * @param PartDetailPrice Price details by node part
+                     * @param _partDetailPrice Price details by node part
+                     * 
                      */
                     void SetPartDetailPrice(const std::vector<PartDetailPriceItem>& _partDetailPrice);
 
                     /**
                      * 判断参数 PartDetailPrice 是否已赋值
                      * @return PartDetailPrice 是否已赋值
+                     * 
                      */
                     bool PartDetailPriceHasBeenSet() const;
 

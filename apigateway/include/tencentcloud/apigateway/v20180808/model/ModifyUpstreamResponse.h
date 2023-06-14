@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `NULL`, indicating that no valid value was found.
                      * @return Result Return modified upstream information
 Note: This field may return `NULL`, indicating that no valid value was found.
+                     * 
                      */
                     UpstreamInfo GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

@@ -58,20 +58,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PolicyId Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PolicyId Alarm policy ID
+                     * @param _policyId Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
@@ -80,20 +83,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PolicyName Alarm policy name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Alarm policy name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PolicyName Alarm policy name
+                     * @param _policyName Alarm policy name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
@@ -102,20 +108,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Remarks
+                     * @param _remark Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -124,20 +133,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMonitorType() const;
 
                     /**
                      * 设置Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+                     * @param _monitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMonitorType(const std::string& _monitorType);
 
                     /**
                      * 判断参数 MonitorType 是否已赋值
                      * @return MonitorType 是否已赋值
+                     * 
                      */
                     bool MonitorTypeHasBeenSet() const;
 
@@ -146,20 +158,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Enable Status. Valid values: 0 (disabled), 1 (enabled)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Status. Valid values: 0 (disabled), 1 (enabled)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Enable Status. Valid values: 0 (disabled), 1 (enabled)
+                     * @param _enable Status. Valid values: 0 (disabled), 1 (enabled)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -168,20 +183,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UseSum Number of instances bound to policy group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetUseSum() const;
 
                     /**
                      * 设置Number of instances bound to policy group
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UseSum Number of instances bound to policy group
+                     * @param _useSum Number of instances bound to policy group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUseSum(const int64_t& _useSum);
 
                     /**
                      * 判断参数 UseSum 是否已赋值
                      * @return UseSum 是否已赋值
+                     * 
                      */
                     bool UseSumHasBeenSet() const;
 
@@ -190,20 +208,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProjectId Project ID. Valid values: -1 (no project), 0 (default project)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID. Valid values: -1 (no project), 0 (default project)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectId Project ID. Valid values: -1 (no project), 0 (default project)
+                     * @param _projectId Project ID. Valid values: -1 (no project), 0 (default project)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -212,20 +233,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProjectName Project name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProjectName() const;
 
                     /**
                      * 设置Project name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProjectName Project name
+                     * @param _projectName Project name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProjectName(const std::string& _projectName);
 
                     /**
                      * 判断参数 ProjectName 是否已赋值
                      * @return ProjectName 是否已赋值
+                     * 
                      */
                     bool ProjectNameHasBeenSet() const;
 
@@ -234,20 +258,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Namespace Alarm policy type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Alarm policy type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Namespace Alarm policy type
+                     * @param _namespace Alarm policy type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
@@ -256,20 +283,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ConditionTemplateId Trigger condition template ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConditionTemplateId() const;
 
                     /**
                      * 设置Trigger condition template ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConditionTemplateId Trigger condition template ID
+                     * @param _conditionTemplateId Trigger condition template ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConditionTemplateId(const std::string& _conditionTemplateId);
 
                     /**
                      * 判断参数 ConditionTemplateId 是否已赋值
                      * @return ConditionTemplateId 是否已赋值
+                     * 
                      */
                     bool ConditionTemplateIdHasBeenSet() const;
 
@@ -278,20 +308,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Condition Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AlarmPolicyCondition GetCondition() const;
 
                     /**
                      * 设置Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Condition Metric trigger condition
+                     * @param _condition Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCondition(const AlarmPolicyCondition& _condition);
 
                     /**
                      * 判断参数 Condition 是否已赋值
                      * @return Condition 是否已赋值
+                     * 
                      */
                     bool ConditionHasBeenSet() const;
 
@@ -300,20 +333,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EventCondition Event trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AlarmPolicyEventCondition GetEventCondition() const;
 
                     /**
                      * 设置Event trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EventCondition Event trigger condition
+                     * @param _eventCondition Event trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventCondition(const AlarmPolicyEventCondition& _eventCondition);
 
                     /**
                      * 判断参数 EventCondition 是否已赋值
                      * @return EventCondition 是否已赋值
+                     * 
                      */
                     bool EventConditionHasBeenSet() const;
 
@@ -322,20 +358,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NoticeIds Notification rule ID list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetNoticeIds() const;
 
                     /**
                      * 设置Notification rule ID list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NoticeIds Notification rule ID list
+                     * @param _noticeIds Notification rule ID list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoticeIds(const std::vector<std::string>& _noticeIds);
 
                     /**
                      * 判断参数 NoticeIds 是否已赋值
                      * @return NoticeIds 是否已赋值
+                     * 
                      */
                     bool NoticeIdsHasBeenSet() const;
 
@@ -344,20 +383,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Notices Notification rule list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AlarmNotice> GetNotices() const;
 
                     /**
                      * 设置Notification rule list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Notices Notification rule list
+                     * @param _notices Notification rule list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNotices(const std::vector<AlarmNotice>& _notices);
 
                     /**
                      * 判断参数 Notices 是否已赋值
                      * @return Notices 是否已赋值
+                     * 
                      */
                     bool NoticesHasBeenSet() const;
 
@@ -366,20 +408,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TriggerTasks Triggered task list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AlarmPolicyTriggerTask> GetTriggerTasks() const;
 
                     /**
                      * 设置Triggered task list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TriggerTasks Triggered task list
+                     * @param _triggerTasks Triggered task list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTriggerTasks(const std::vector<AlarmPolicyTriggerTask>& _triggerTasks);
 
                     /**
                      * 判断参数 TriggerTasks 是否已赋值
                      * @return TriggerTasks 是否已赋值
+                     * 
                      */
                     bool TriggerTasksHasBeenSet() const;
 
@@ -390,6 +435,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return ConditionsTemp Template policy group
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ConditionsTemp GetConditionsTemp() const;
 
@@ -397,15 +443,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Template policy group
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConditionsTemp Template policy group
+                     * @param _conditionsTemp Template policy group
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConditionsTemp(const ConditionsTemp& _conditionsTemp);
 
                     /**
                      * 判断参数 ConditionsTemp 是否已赋值
                      * @return ConditionsTemp 是否已赋值
+                     * 
                      */
                     bool ConditionsTempHasBeenSet() const;
 
@@ -414,20 +462,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastEditUin `Uin` of the last modifying user
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastEditUin() const;
 
                     /**
                      * 设置`Uin` of the last modifying user
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastEditUin `Uin` of the last modifying user
+                     * @param _lastEditUin `Uin` of the last modifying user
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastEditUin(const std::string& _lastEditUin);
 
                     /**
                      * 判断参数 LastEditUin 是否已赋值
                      * @return LastEditUin 是否已赋值
+                     * 
                      */
                     bool LastEditUinHasBeenSet() const;
 
@@ -438,6 +489,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return UpdateTime Update time
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetUpdateTime() const;
 
@@ -445,15 +497,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Update time
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -464,6 +518,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return InsertTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetInsertTime() const;
 
@@ -471,15 +526,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InsertTime Creation time
+                     * @param _insertTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInsertTime(const int64_t& _insertTime);
 
                     /**
                      * 判断参数 InsertTime 是否已赋值
                      * @return InsertTime 是否已赋值
+                     * 
                      */
                     bool InsertTimeHasBeenSet() const;
 
@@ -488,20 +545,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Region Region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRegion() const;
 
                     /**
                      * 设置Region
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Region Region
+                     * @param _region Region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::vector<std::string>& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -510,20 +570,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NamespaceShowName Namespace display name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNamespaceShowName() const;
 
                     /**
                      * 设置Namespace display name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NamespaceShowName Namespace display name
+                     * @param _namespaceShowName Namespace display name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNamespaceShowName(const std::string& _namespaceShowName);
 
                     /**
                      * 判断参数 NamespaceShowName 是否已赋值
                      * @return NamespaceShowName 是否已赋值
+                     * 
                      */
                     bool NamespaceShowNameHasBeenSet() const;
 
@@ -532,20 +595,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsDefault Whether it is the default policy. Valid values: 1 (yes), 0 (no)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsDefault() const;
 
                     /**
                      * 设置Whether it is the default policy. Valid values: 1 (yes), 0 (no)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsDefault Whether it is the default policy. Valid values: 1 (yes), 0 (no)
+                     * @param _isDefault Whether it is the default policy. Valid values: 1 (yes), 0 (no)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDefault(const int64_t& _isDefault);
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
@@ -554,20 +620,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CanSetDefault Whether the default policy can be set. Valid values: 1 (yes), 0 (no)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCanSetDefault() const;
 
                     /**
                      * 设置Whether the default policy can be set. Valid values: 1 (yes), 0 (no)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CanSetDefault Whether the default policy can be set. Valid values: 1 (yes), 0 (no)
+                     * @param _canSetDefault Whether the default policy can be set. Valid values: 1 (yes), 0 (no)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCanSetDefault(const int64_t& _canSetDefault);
 
                     /**
                      * 判断参数 CanSetDefault 是否已赋值
                      * @return CanSetDefault 是否已赋值
+                     * 
                      */
                     bool CanSetDefaultHasBeenSet() const;
 
@@ -576,20 +645,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceGroupId Instance group ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetInstanceGroupId() const;
 
                     /**
                      * 设置Instance group ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceGroupId Instance group ID
+                     * @param _instanceGroupId Instance group ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceGroupId(const int64_t& _instanceGroupId);
 
                     /**
                      * 判断参数 InstanceGroupId 是否已赋值
                      * @return InstanceGroupId 是否已赋值
+                     * 
                      */
                     bool InstanceGroupIdHasBeenSet() const;
 
@@ -598,20 +670,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceSum Total number of instances in instance group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetInstanceSum() const;
 
                     /**
                      * 设置Total number of instances in instance group
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceSum Total number of instances in instance group
+                     * @param _instanceSum Total number of instances in instance group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceSum(const int64_t& _instanceSum);
 
                     /**
                      * 判断参数 InstanceSum 是否已赋值
                      * @return InstanceSum 是否已赋值
+                     * 
                      */
                     bool InstanceSumHasBeenSet() const;
 
@@ -620,20 +695,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceGroupName Instance group name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceGroupName() const;
 
                     /**
                      * 设置Instance group name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceGroupName Instance group name
+                     * @param _instanceGroupName Instance group name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceGroupName(const std::string& _instanceGroupName);
 
                     /**
                      * 判断参数 InstanceGroupName 是否已赋值
                      * @return InstanceGroupName 是否已赋值
+                     * 
                      */
                     bool InstanceGroupNameHasBeenSet() const;
 
@@ -642,20 +720,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RuleType Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RuleType Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic)
+                     * @param _ruleType Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -664,20 +745,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OriginId Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginId() const;
 
                     /**
                      * 设置Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OriginId Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
+                     * @param _originId Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginId(const std::string& _originId);
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 
@@ -686,20 +770,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TagInstances Tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagInstance> GetTagInstances() const;
 
                     /**
                      * 设置Tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TagInstances Tag
+                     * @param _tagInstances Tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagInstances(const std::vector<TagInstance>& _tagInstances);
 
                     /**
                      * 判断参数 TagInstances 是否已赋值
                      * @return TagInstances 是否已赋值
+                     * 
                      */
                     bool TagInstancesHasBeenSet() const;
 
@@ -708,20 +795,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return FilterDimensionsParam Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFilterDimensionsParam() const;
 
                     /**
                      * 设置Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param FilterDimensionsParam Information on the filter dimension associated with a policy.
+                     * @param _filterDimensionsParam Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFilterDimensionsParam(const std::string& _filterDimensionsParam);
 
                     /**
                      * 判断参数 FilterDimensionsParam 是否已赋值
                      * @return FilterDimensionsParam 是否已赋值
+                     * 
                      */
                     bool FilterDimensionsParamHasBeenSet() const;
 
@@ -730,20 +820,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IsOneClick Whether it is a quick alarm policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsOneClick() const;
 
                     /**
                      * 设置Whether it is a quick alarm policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsOneClick Whether it is a quick alarm policy.
+                     * @param _isOneClick Whether it is a quick alarm policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsOneClick(const int64_t& _isOneClick);
 
                     /**
                      * 判断参数 IsOneClick 是否已赋值
                      * @return IsOneClick 是否已赋值
+                     * 
                      */
                     bool IsOneClickHasBeenSet() const;
 
@@ -752,20 +845,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return OneClickStatus Whether the quick alarm policy is enabled.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetOneClickStatus() const;
 
                     /**
                      * 设置Whether the quick alarm policy is enabled.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param OneClickStatus Whether the quick alarm policy is enabled.
+                     * @param _oneClickStatus Whether the quick alarm policy is enabled.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOneClickStatus(const int64_t& _oneClickStatus);
 
                     /**
                      * 判断参数 OneClickStatus 是否已赋值
                      * @return OneClickStatus 是否已赋值
+                     * 
                      */
                     bool OneClickStatusHasBeenSet() const;
 
@@ -774,20 +870,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AdvancedMetricNumber The number of advanced metrics.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAdvancedMetricNumber() const;
 
                     /**
                      * 设置The number of advanced metrics.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AdvancedMetricNumber The number of advanced metrics.
+                     * @param _advancedMetricNumber The number of advanced metrics.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdvancedMetricNumber(const int64_t& _advancedMetricNumber);
 
                     /**
                      * 判断参数 AdvancedMetricNumber 是否已赋值
                      * @return AdvancedMetricNumber 是否已赋值
+                     * 
                      */
                     bool AdvancedMetricNumberHasBeenSet() const;
 
@@ -796,20 +895,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsBindAll Whether the policy is associated with all objects
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsBindAll() const;
 
                     /**
                      * 设置Whether the policy is associated with all objects
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsBindAll Whether the policy is associated with all objects
+                     * @param _isBindAll Whether the policy is associated with all objects
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsBindAll(const int64_t& _isBindAll);
 
                     /**
                      * 判断参数 IsBindAll 是否已赋值
                      * @return IsBindAll 是否已赋值
+                     * 
                      */
                     bool IsBindAllHasBeenSet() const;
 
@@ -818,20 +920,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Policy tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Policy tag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Policy tag
+                     * @param _tags Policy tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取EIP addresses. Example: 101.35.139.183
                      * @return AddressIps EIP addresses. Example: 101.35.139.183
+                     * 
                      */
                     std::vector<std::string> GetAddressIps() const;
 
                     /**
                      * 设置EIP addresses. Example: 101.35.139.183
-                     * @param AddressIps EIP addresses. Example: 101.35.139.183
+                     * @param _addressIps EIP addresses. Example: 101.35.139.183
+                     * 
                      */
                     void SetAddressIps(const std::vector<std::string>& _addressIps);
 
                     /**
                      * 判断参数 AddressIps 是否已赋值
                      * @return AddressIps 是否已赋值
+                     * 
                      */
                     bool AddressIpsHasBeenSet() const;
 

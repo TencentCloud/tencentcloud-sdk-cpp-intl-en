@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of tables for which data subscription has been enabled
                      * @return TotalCount The number of tables for which data subscription has been enabled
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The result list of tables for which data subscription has been enabled
                      * @return TableResults The result list of tables for which data subscription has been enabled
+                     * 
                      */
                     std::vector<TableResultNew> GetTableResults() const;
 
                     /**
                      * 判断参数 TableResults 是否已赋值
                      * @return TableResults 是否已赋值
+                     * 
                      */
                     bool TableResultsHasBeenSet() const;
 

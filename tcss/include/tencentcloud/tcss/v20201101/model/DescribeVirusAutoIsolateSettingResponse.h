@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Automatic isolation switch. Valid values: `true` (on); `false` (off).
                      * @return AutoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
+                     * 
                      */
                     bool GetAutoIsolateSwitch() const;
 
                     /**
                      * 判断参数 AutoIsolateSwitch 是否已赋值
                      * @return AutoIsolateSwitch 是否已赋值
+                     * 
                      */
                     bool AutoIsolateSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether the process associated with the isolated file is interrupted. Valid values: `true` (yes); `false` (no).
                      * @return IsKillProgress Whether the process associated with the isolated file is interrupted. Valid values: `true` (yes); `false` (no).
+                     * 
                      */
                     bool GetIsKillProgress() const;
 
                     /**
                      * 判断参数 IsKillProgress 是否已赋值
                      * @return IsKillProgress 是否已赋值
+                     * 
                      */
                     bool IsKillProgressHasBeenSet() const;
 

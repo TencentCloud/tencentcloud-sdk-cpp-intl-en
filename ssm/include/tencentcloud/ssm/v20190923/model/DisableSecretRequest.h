@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of the Secret to be disabled.
                      * @return SecretName Name of the Secret to be disabled.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of the Secret to be disabled.
-                     * @param SecretName Name of the Secret to be disabled.
+                     * @param _secretName Name of the Secret to be disabled.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 

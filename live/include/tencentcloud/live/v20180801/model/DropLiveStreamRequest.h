@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The stream name.
                      * @return StreamName The stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置The stream name.
-                     * @param StreamName The stream name.
+                     * @param _streamName The stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Your push domain.
                      * @return DomainName Your push domain.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Your push domain.
-                     * @param DomainName Your push domain.
+                     * @param _domainName Your push domain.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
                      * @return AppName The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
-                     * @param AppName The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
+                     * @param _appName The push path, which should be the same as `AppName` in the push and playback URL. The default value is `live`.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 

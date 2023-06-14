@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Data List of data
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<ApplicationProxy> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of records
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Quota Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetQuota() const;
 
                     /**
                      * 判断参数 Quota 是否已赋值
                      * @return Quota 是否已赋值
+                     * 
                      */
                     bool QuotaHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IpCount When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetIpCount() const;
 
                     /**
                      * 判断参数 IpCount 是否已赋值
                      * @return IpCount 是否已赋值
+                     * 
                      */
                     bool IpCountHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DomainCount When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetDomainCount() const;
 
                     /**
                      * 判断参数 DomainCount 是否已赋值
                      * @return DomainCount 是否已赋值
+                     * 
                      */
                     bool DomainCountHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Site name
                      * @return Name Site name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -62,48 +64,56 @@ namespace TencentCloud
                      * @return Status Verification status. Valid values:
 - `pending`: Verifying
 - `finished`: The site is verified.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Subdomain 
+                     * 
                      */
                     std::string GetSubdomain() const;
 
                     /**
                      * 判断参数 Subdomain 是否已赋值
                      * @return Subdomain 是否已赋值
+                     * 
                      */
                     bool SubdomainHasBeenSet() const;
 
                     /**
                      * 获取Record type
                      * @return RecordType Record type
+                     * 
                      */
                     std::string GetRecordType() const;
 
                     /**
                      * 判断参数 RecordType 是否已赋值
                      * @return RecordType 是否已赋值
+                     * 
                      */
                     bool RecordTypeHasBeenSet() const;
 
                     /**
                      * 获取Record value
                      * @return RecordValue Record value
+                     * 
                      */
                     std::string GetRecordValue() const;
 
                     /**
                      * 判断参数 RecordValue 是否已赋值
                      * @return RecordValue 是否已赋值
+                     * 
                      */
                     bool RecordValueHasBeenSet() const;
 
@@ -112,12 +122,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OriginalNameServers NS records of the domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
                      * 判断参数 OriginalNameServers 是否已赋值
                      * @return OriginalNameServers 是否已赋值
+                     * 
                      */
                     bool OriginalNameServersHasBeenSet() const;
 

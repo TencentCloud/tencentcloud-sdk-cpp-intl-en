@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Node pool ID
                      * @return NodePoolId Node pool ID
+                     * 
                      */
                     std::string GetNodePoolId() const;
 
                     /**
                      * 设置Node pool ID
-                     * @param NodePoolId Node pool ID
+                     * @param _nodePoolId Node pool ID
+                     * 
                      */
                     void SetNodePoolId(const std::string& _nodePoolId);
 
                     /**
                      * 判断参数 NodePoolId 是否已赋值
                      * @return NodePoolId 是否已赋值
+                     * 
                      */
                     bool NodePoolIdHasBeenSet() const;
 
@@ -71,56 +74,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubnetIds List of subnets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
                      * 设置List of subnets
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubnetIds List of subnets
+                     * @param _subnetIds List of subnets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
                      * 获取Node pool name
                      * @return Name Node pool name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node pool name
-                     * @param Name Node pool name
+                     * @param _name Node pool name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Node pool lifecycle status
                      * @return LifeState Node pool lifecycle status
+                     * 
                      */
                     std::string GetLifeState() const;
 
                     /**
                      * 设置Node pool lifecycle status
-                     * @param LifeState Node pool lifecycle status
+                     * @param _lifeState Node pool lifecycle status
+                     * 
                      */
                     void SetLifeState(const std::string& _lifeState);
 
                     /**
                      * 判断参数 LifeState 是否已赋值
                      * @return LifeState 是否已赋值
+                     * 
                      */
                     bool LifeStateHasBeenSet() const;
 
@@ -129,20 +141,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Labels Virtual node labels
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Virtual node labels
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Labels Virtual node labels
+                     * @param _labels Virtual node labels
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
@@ -151,20 +166,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Taints Virtual node taint
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Taint> GetTaints() const;
 
                     /**
                      * 设置Virtual node taint
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Taints Virtual node taint
+                     * @param _taints Virtual node taint
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaints(const std::vector<Taint>& _taints);
 
                     /**
                      * 判断参数 Taints 是否已赋值
                      * @return Taints 是否已赋值
+                     * 
                      */
                     bool TaintsHasBeenSet() const;
 

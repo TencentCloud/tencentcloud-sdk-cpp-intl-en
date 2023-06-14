@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Monitoring type ID
                      * @return Id Monitoring type ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Monitoring type ID
-                     * @param Id Monitoring type ID
+                     * @param _id Monitoring type ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Monitoring type
                      * @return Name Monitoring type
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Monitoring type
-                     * @param Name Monitoring type
+                     * @param _name Monitoring type
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Sort order
                      * @return SortId Sort order
+                     * 
                      */
                     int64_t GetSortId() const;
 
                     /**
                      * 设置Sort order
-                     * @param SortId Sort order
+                     * @param _sortId Sort order
+                     * 
                      */
                     void SetSortId(const int64_t& _sortId);
 
                     /**
                      * 判断参数 SortId 是否已赋值
                      * @return SortId 是否已赋值
+                     * 
                      */
                     bool SortIdHasBeenSet() const;
 

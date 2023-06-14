@@ -55,18 +55,21 @@ namespace TencentCloud
                     /**
                      * 获取Compute environment ID
                      * @return EnvId Compute environment ID
+                     * 
                      */
                     std::string GetEnvId() const;
 
                     /**
                      * 设置Compute environment ID
-                     * @param EnvId Compute environment ID
+                     * @param _envId Compute environment ID
+                     * 
                      */
                     void SetEnvId(const std::string& _envId);
 
                     /**
                      * 判断参数 EnvId 是否已赋值
                      * @return EnvId 是否已赋值
+                     * 
                      */
                     bool EnvIdHasBeenSet() const;
 
@@ -75,20 +78,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EnvName Compute environment name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEnvName() const;
 
                     /**
                      * 设置Compute environment name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EnvName Compute environment name
+                     * @param _envName Compute environment name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEnvName(const std::string& _envName);
 
                     /**
                      * 判断参数 EnvName 是否已赋值
                      * @return EnvName 是否已赋值
+                     * 
                      */
                     bool EnvNameHasBeenSet() const;
 
@@ -97,56 +103,65 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EnvDescription Compute environment description
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEnvDescription() const;
 
                     /**
                      * 设置Compute environment description
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EnvDescription Compute environment description
+                     * @param _envDescription Compute environment description
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEnvDescription(const std::string& _envDescription);
 
                     /**
                      * 判断参数 EnvDescription 是否已赋值
                      * @return EnvDescription 是否已赋值
+                     * 
                      */
                     bool EnvDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Compute environment type. Only "MANAGED" type is supported
                      * @return EnvType Compute environment type. Only "MANAGED" type is supported
+                     * 
                      */
                     std::string GetEnvType() const;
 
                     /**
                      * 设置Compute environment type. Only "MANAGED" type is supported
-                     * @param EnvType Compute environment type. Only "MANAGED" type is supported
+                     * @param _envType Compute environment type. Only "MANAGED" type is supported
+                     * 
                      */
                     void SetEnvType(const std::string& _envType);
 
                     /**
                      * 判断参数 EnvType 是否已赋值
                      * @return EnvType 是否已赋值
+                     * 
                      */
                     bool EnvTypeHasBeenSet() const;
 
                     /**
                      * 获取Compute environment parameter
                      * @return EnvData Compute environment parameter
+                     * 
                      */
                     EnvData GetEnvData() const;
 
                     /**
                      * 设置Compute environment parameter
-                     * @param EnvData Compute environment parameter
+                     * @param _envData Compute environment parameter
+                     * 
                      */
                     void SetEnvData(const EnvData& _envData);
 
                     /**
                      * 判断参数 EnvData 是否已赋值
                      * @return EnvData 是否已赋值
+                     * 
                      */
                     bool EnvDataHasBeenSet() const;
 
@@ -155,20 +170,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return MountDataDisks Data disk mounting option
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<MountDataDisk> GetMountDataDisks() const;
 
                     /**
                      * 设置Data disk mounting option
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param MountDataDisks Data disk mounting option
+                     * @param _mountDataDisks Data disk mounting option
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetMountDataDisks(const std::vector<MountDataDisk>& _mountDataDisks);
 
                     /**
                      * 判断参数 MountDataDisks 是否已赋值
                      * @return MountDataDisks 是否已赋值
+                     * 
                      */
                     bool MountDataDisksHasBeenSet() const;
 
@@ -177,20 +195,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InputMappings Input mapping
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<InputMapping> GetInputMappings() const;
 
                     /**
                      * 设置Input mapping
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InputMappings Input mapping
+                     * @param _inputMappings Input mapping
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInputMappings(const std::vector<InputMapping>& _inputMappings);
 
                     /**
                      * 判断参数 InputMappings 是否已赋值
                      * @return InputMappings 是否已赋值
+                     * 
                      */
                     bool InputMappingsHasBeenSet() const;
 
@@ -199,20 +220,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Authentications Authorization information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Authentication> GetAuthentications() const;
 
                     /**
                      * 设置Authorization information
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Authentications Authorization information
+                     * @param _authentications Authorization information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAuthentications(const std::vector<Authentication>& _authentications);
 
                     /**
                      * 判断参数 Authentications 是否已赋值
                      * @return Authentications 是否已赋值
+                     * 
                      */
                     bool AuthenticationsHasBeenSet() const;
 
@@ -221,38 +245,44 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Notifications Notification information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Notification> GetNotifications() const;
 
                     /**
                      * 设置Notification information
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Notifications Notification information
+                     * @param _notifications Notification information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetNotifications(const std::vector<Notification>& _notifications);
 
                     /**
                      * 判断参数 Notifications 是否已赋值
                      * @return Notifications 是否已赋值
+                     * 
                      */
                     bool NotificationsHasBeenSet() const;
 
                     /**
                      * 获取Number of desired compute nodes
                      * @return DesiredComputeNodeCount Number of desired compute nodes
+                     * 
                      */
                     uint64_t GetDesiredComputeNodeCount() const;
 
                     /**
                      * 设置Number of desired compute nodes
-                     * @param DesiredComputeNodeCount Number of desired compute nodes
+                     * @param _desiredComputeNodeCount Number of desired compute nodes
+                     * 
                      */
                     void SetDesiredComputeNodeCount(const uint64_t& _desiredComputeNodeCount);
 
                     /**
                      * 判断参数 DesiredComputeNodeCount 是否已赋值
                      * @return DesiredComputeNodeCount 是否已赋值
+                     * 
                      */
                     bool DesiredComputeNodeCountHasBeenSet() const;
 
@@ -261,20 +291,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Tags Tag list of the compute environment.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list of the compute environment.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Tags Tag list of the compute environment.
+                     * @param _tags Tag list of the compute environment.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

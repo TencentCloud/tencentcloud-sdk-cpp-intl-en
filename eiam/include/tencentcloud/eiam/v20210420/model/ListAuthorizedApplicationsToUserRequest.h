@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取User ID.
                      * @return UserId User ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID.
-                     * @param UserId User ID.
+                     * @param _userId User ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
                      * @return IncludeInheritedAuthorizations Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+                     * 
                      */
                     bool GetIncludeInheritedAuthorizations() const;
 
                     /**
                      * 设置Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
-                     * @param IncludeInheritedAuthorizations Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+                     * @param _includeInheritedAuthorizations Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+                     * 
                      */
                     void SetIncludeInheritedAuthorizations(const bool& _includeInheritedAuthorizations);
 
                     /**
                      * 判断参数 IncludeInheritedAuthorizations 是否已赋值
                      * @return IncludeInheritedAuthorizations 是否已赋值
+                     * 
                      */
                     bool IncludeInheritedAuthorizationsHasBeenSet() const;
 

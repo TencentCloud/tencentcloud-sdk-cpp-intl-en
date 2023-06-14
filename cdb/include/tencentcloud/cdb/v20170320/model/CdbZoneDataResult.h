@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取List of purchasable specifications
                      * @return Configs List of purchasable specifications
+                     * 
                      */
                     std::vector<CdbSellConfig> GetConfigs() const;
 
                     /**
                      * 设置List of purchasable specifications
-                     * @param Configs List of purchasable specifications
+                     * @param _configs List of purchasable specifications
+                     * 
                      */
                     void SetConfigs(const std::vector<CdbSellConfig>& _configs);
 
                     /**
                      * 判断参数 Configs 是否已赋值
                      * @return Configs 是否已赋值
+                     * 
                      */
                     bool ConfigsHasBeenSet() const;
 
                     /**
                      * 获取List of AZs in purchasable regions
                      * @return Regions List of AZs in purchasable regions
+                     * 
                      */
                     std::vector<CdbRegionSellConf> GetRegions() const;
 
                     /**
                      * 设置List of AZs in purchasable regions
-                     * @param Regions List of AZs in purchasable regions
+                     * @param _regions List of AZs in purchasable regions
+                     * 
                      */
                     void SetRegions(const std::vector<CdbRegionSellConf>& _regions);
 
                     /**
                      * 判断参数 Regions 是否已赋值
                      * @return Regions 是否已赋值
+                     * 
                      */
                     bool RegionsHasBeenSet() const;
 

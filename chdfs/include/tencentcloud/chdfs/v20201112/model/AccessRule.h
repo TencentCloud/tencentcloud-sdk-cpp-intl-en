@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Permission rule ID
                      * @return AccessRuleId Permission rule ID
+                     * 
                      */
                     uint64_t GetAccessRuleId() const;
 
                     /**
                      * 设置Permission rule ID
-                     * @param AccessRuleId Permission rule ID
+                     * @param _accessRuleId Permission rule ID
+                     * 
                      */
                     void SetAccessRuleId(const uint64_t& _accessRuleId);
 
                     /**
                      * 判断参数 AccessRuleId 是否已赋值
                      * @return AccessRuleId 是否已赋值
+                     * 
                      */
                     bool AccessRuleIdHasBeenSet() const;
 
                     /**
                      * 获取Permission rule address (IP range or IP)
                      * @return Address Permission rule address (IP range or IP)
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置Permission rule address (IP range or IP)
-                     * @param Address Permission rule address (IP range or IP)
+                     * @param _address Permission rule address (IP range or IP)
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取Permission rule access mode (1: read-only; 2: read-write)
                      * @return AccessMode Permission rule access mode (1: read-only; 2: read-write)
+                     * 
                      */
                     uint64_t GetAccessMode() const;
 
                     /**
                      * 设置Permission rule access mode (1: read-only; 2: read-write)
-                     * @param AccessMode Permission rule access mode (1: read-only; 2: read-write)
+                     * @param _accessMode Permission rule access mode (1: read-only; 2: read-write)
+                     * 
                      */
                     void SetAccessMode(const uint64_t& _accessMode);
 
                     /**
                      * 判断参数 AccessMode 是否已赋值
                      * @return AccessMode 是否已赋值
+                     * 
                      */
                     bool AccessModeHasBeenSet() const;
 
                     /**
                      * 获取Priority (value range: 1–100. The smaller the value, the higher the priority)
                      * @return Priority Priority (value range: 1–100. The smaller the value, the higher the priority)
+                     * 
                      */
                     uint64_t GetPriority() const;
 
                     /**
                      * 设置Priority (value range: 1–100. The smaller the value, the higher the priority)
-                     * @param Priority Priority (value range: 1–100. The smaller the value, the higher the priority)
+                     * @param _priority Priority (value range: 1–100. The smaller the value, the higher the priority)
+                     * 
                      */
                     void SetPriority(const uint64_t& _priority);
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

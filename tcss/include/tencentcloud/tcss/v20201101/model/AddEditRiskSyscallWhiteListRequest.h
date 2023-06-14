@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Used only when an event is added to the allowlist
                      * @return EventId Used only when an event is added to the allowlist
+                     * 
                      */
                     std::string GetEventId() const;
 
                     /**
                      * 设置Used only when an event is added to the allowlist
-                     * @param EventId Used only when an event is added to the allowlist
+                     * @param _eventId Used only when an event is added to the allowlist
+                     * 
                      */
                     void SetEventId(const std::string& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the allowed item to be added or edited. When an allowed item is added, `WhiteListInfo.id` can be empty; when an allowed item is edited, `WhiteListInfo.id` cannot be empty.
                      * @return WhiteListInfo Information of the allowed item to be added or edited. When an allowed item is added, `WhiteListInfo.id` can be empty; when an allowed item is edited, `WhiteListInfo.id` cannot be empty.
+                     * 
                      */
                     RiskSyscallWhiteListInfo GetWhiteListInfo() const;
 
                     /**
                      * 设置Information of the allowed item to be added or edited. When an allowed item is added, `WhiteListInfo.id` can be empty; when an allowed item is edited, `WhiteListInfo.id` cannot be empty.
-                     * @param WhiteListInfo Information of the allowed item to be added or edited. When an allowed item is added, `WhiteListInfo.id` can be empty; when an allowed item is edited, `WhiteListInfo.id` cannot be empty.
+                     * @param _whiteListInfo Information of the allowed item to be added or edited. When an allowed item is added, `WhiteListInfo.id` can be empty; when an allowed item is edited, `WhiteListInfo.id` cannot be empty.
+                     * 
                      */
                     void SetWhiteListInfo(const RiskSyscallWhiteListInfo& _whiteListInfo);
 
                     /**
                      * 判断参数 WhiteListInfo 是否已赋值
                      * @return WhiteListInfo 是否已赋值
+                     * 
                      */
                     bool WhiteListInfoHasBeenSet() const;
 

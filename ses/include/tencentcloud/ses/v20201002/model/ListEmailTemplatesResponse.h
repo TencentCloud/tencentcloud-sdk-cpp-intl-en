@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of email templates.
                      * @return TemplatesMetadata List of email templates.
+                     * 
                      */
                     std::vector<TemplatesMetadata> GetTemplatesMetadata() const;
 
                     /**
                      * 判断参数 TemplatesMetadata 是否已赋值
                      * @return TemplatesMetadata 是否已赋值
+                     * 
                      */
                     bool TemplatesMetadataHasBeenSet() const;
 
                     /**
                      * 获取Total number of templates
                      * @return TotalCount Total number of templates
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

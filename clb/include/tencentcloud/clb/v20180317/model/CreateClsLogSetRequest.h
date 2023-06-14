@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Logset name, which must be unique among all CLS logsets; default value: clb_logset
                      * @return LogsetName Logset name, which must be unique among all CLS logsets; default value: clb_logset
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name, which must be unique among all CLS logsets; default value: clb_logset
-                     * @param LogsetName Logset name, which must be unique among all CLS logsets; default value: clb_logset
+                     * @param _logsetName Logset name, which must be unique among all CLS logsets; default value: clb_logset
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
                     /**
                      * 获取Logset retention period (in days)
                      * @return Period Logset retention period (in days)
+                     * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 设置Logset retention period (in days)
-                     * @param Period Logset retention period (in days)
+                     * @param _period Logset retention period (in days)
+                     * 
                      */
                     void SetPeriod(const uint64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
                      * @return LogsetType Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+                     * 
                      */
                     std::string GetLogsetType() const;
 
                     /**
                      * 设置Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
-                     * @param LogsetType Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+                     * @param _logsetType Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+                     * 
                      */
                     void SetLogsetType(const std::string& _logsetType);
 
                     /**
                      * 判断参数 LogsetType 是否已赋值
                      * @return LogsetType 是否已赋值
+                     * 
                      */
                     bool LogsetTypeHasBeenSet() const;
 

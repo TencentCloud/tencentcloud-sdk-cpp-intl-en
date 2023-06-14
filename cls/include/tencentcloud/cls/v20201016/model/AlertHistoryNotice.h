@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Notification group name
                      * @return Name Notification group name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Notification group name
-                     * @param Name Notification group name
+                     * @param _name Notification group name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Notification group ID
                      * @return AlarmNoticeId Notification group ID
+                     * 
                      */
                     std::string GetAlarmNoticeId() const;
 
                     /**
                      * 设置Notification group ID
-                     * @param AlarmNoticeId Notification group ID
+                     * @param _alarmNoticeId Notification group ID
+                     * 
                      */
                     void SetAlarmNoticeId(const std::string& _alarmNoticeId);
 
                     /**
                      * 判断参数 AlarmNoticeId 是否已赋值
                      * @return AlarmNoticeId 是否已赋值
+                     * 
                      */
                     bool AlarmNoticeIdHasBeenSet() const;
 

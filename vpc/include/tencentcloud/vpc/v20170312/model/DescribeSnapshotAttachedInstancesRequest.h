@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot policy IDs
                      * @return SnapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     std::string GetSnapshotPolicyId() const;
 
                     /**
                      * 设置Snapshot policy IDs
-                     * @param SnapshotPolicyId Snapshot policy IDs
+                     * @param _snapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     void SetSnapshotPolicyId(const std::string& _snapshotPolicyId);
 
                     /**
                      * 判断参数 SnapshotPolicyId 是否已赋值
                      * @return SnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool SnapshotPolicyIdHasBeenSet() const;
 
@@ -70,6 +73,7 @@ Values:
 Values:
 <li>`instance-id`: Instance ID</li>
 <li>`instance-region`: Instance region</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -78,52 +82,60 @@ Values:
 Values:
 <li>`instance-id`: Instance ID</li>
 <li>`instance-region`: Instance region</li>
-                     * @param Filters Filters
+                     * @param _filters Filters
 Values:
 <li>`instance-id`: Instance ID</li>
 <li>`instance-region`: Instance region</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 200.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 200.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

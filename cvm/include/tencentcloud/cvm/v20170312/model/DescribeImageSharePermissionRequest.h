@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the image to be shared
                      * @return ImageId The ID of the image to be shared
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置The ID of the image to be shared
-                     * @param ImageId The ID of the image to be shared
+                     * @param _imageId The ID of the image to be shared
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 

@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Repository matching rule
                      * @return RepositoryPattern Repository matching rule
+                     * 
                      */
                     std::string GetRepositoryPattern() const;
 
                     /**
                      * 设置Repository matching rule
-                     * @param RepositoryPattern Repository matching rule
+                     * @param _repositoryPattern Repository matching rule
+                     * 
                      */
                     void SetRepositoryPattern(const std::string& _repositoryPattern);
 
                     /**
                      * 判断参数 RepositoryPattern 是否已赋值
                      * @return RepositoryPattern 是否已赋值
+                     * 
                      */
                     bool RepositoryPatternHasBeenSet() const;
 
                     /**
                      * 获取Tag matching rule
                      * @return TagPattern Tag matching rule
+                     * 
                      */
                     std::string GetTagPattern() const;
 
                     /**
                      * 设置Tag matching rule
-                     * @param TagPattern Tag matching rule
+                     * @param _tagPattern Tag matching rule
+                     * 
                      */
                     void SetTagPattern(const std::string& _tagPattern);
 
                     /**
                      * 判断参数 TagPattern 是否已赋值
                      * @return TagPattern 是否已赋值
+                     * 
                      */
                     bool TagPatternHasBeenSet() const;
 
                     /**
                      * 获取repoMatches or repoExcludes
                      * @return RepositoryDecoration repoMatches or repoExcludes
+                     * 
                      */
                     std::string GetRepositoryDecoration() const;
 
                     /**
                      * 设置repoMatches or repoExcludes
-                     * @param RepositoryDecoration repoMatches or repoExcludes
+                     * @param _repositoryDecoration repoMatches or repoExcludes
+                     * 
                      */
                     void SetRepositoryDecoration(const std::string& _repositoryDecoration);
 
                     /**
                      * 判断参数 RepositoryDecoration 是否已赋值
                      * @return RepositoryDecoration 是否已赋值
+                     * 
                      */
                     bool RepositoryDecorationHasBeenSet() const;
 
                     /**
                      * 获取matches or excludes
                      * @return TagDecoration matches or excludes
+                     * 
                      */
                     std::string GetTagDecoration() const;
 
                     /**
                      * 设置matches or excludes
-                     * @param TagDecoration matches or excludes
+                     * @param _tagDecoration matches or excludes
+                     * 
                      */
                     void SetTagDecoration(const std::string& _tagDecoration);
 
                     /**
                      * 判断参数 TagDecoration 是否已赋值
                      * @return TagDecoration 是否已赋值
+                     * 
                      */
                     bool TagDecorationHasBeenSet() const;
 
                     /**
                      * 获取Disabling rule
                      * @return Disabled Disabling rule
+                     * 
                      */
                     bool GetDisabled() const;
 
                     /**
                      * 设置Disabling rule
-                     * @param Disabled Disabling rule
+                     * @param _disabled Disabling rule
+                     * 
                      */
                     void SetDisabled(const bool& _disabled);
 
                     /**
                      * 判断参数 Disabled 是否已赋值
                      * @return Disabled 是否已赋值
+                     * 
                      */
                     bool DisabledHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace
                      * @return NsName Namespace
+                     * 
                      */
                     std::string GetNsName() const;
 
                     /**
                      * 设置Namespace
-                     * @param NsName Namespace
+                     * @param _nsName Namespace
+                     * 
                      */
                     void SetNsName(const std::string& _nsName);
 
                     /**
                      * 判断参数 NsName 是否已赋值
                      * @return NsName 是否已赋值
+                     * 
                      */
                     bool NsNameHasBeenSet() const;
 

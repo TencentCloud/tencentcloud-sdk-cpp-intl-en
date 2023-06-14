@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Maximum number of layer-7 rules that can be added for Anti-DDoS Advanced
                      * @return Count Maximum number of layer-7 rules that can be added for Anti-DDoS Advanced
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

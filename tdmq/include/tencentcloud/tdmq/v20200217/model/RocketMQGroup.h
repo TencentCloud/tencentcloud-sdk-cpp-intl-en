@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Consumer group name.
                      * @return Name Consumer group name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Consumer group name.
-                     * @param Name Consumer group name.
+                     * @param _name Consumer group name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The number of online consumers.
                      * @return ConsumerNum The number of online consumers.
+                     * 
                      */
                     uint64_t GetConsumerNum() const;
 
                     /**
                      * 设置The number of online consumers.
-                     * @param ConsumerNum The number of online consumers.
+                     * @param _consumerNum The number of online consumers.
+                     * 
                      */
                     void SetConsumerNum(const uint64_t& _consumerNum);
 
                     /**
                      * 判断参数 ConsumerNum 是否已赋值
                      * @return ConsumerNum 是否已赋值
+                     * 
                      */
                     bool ConsumerNumHasBeenSet() const;
 
                     /**
                      * 获取Consumption TPS.
                      * @return TPS Consumption TPS.
+                     * 
                      */
                     uint64_t GetTPS() const;
 
                     /**
                      * 设置Consumption TPS.
-                     * @param TPS Consumption TPS.
+                     * @param _tPS Consumption TPS.
+                     * 
                      */
                     void SetTPS(const uint64_t& _tPS);
 
                     /**
                      * 判断参数 TPS 是否已赋值
                      * @return TPS 是否已赋值
+                     * 
                      */
                     bool TPSHasBeenSet() const;
 
                     /**
                      * 获取The total number of heaped messages.
                      * @return TotalAccumulative The total number of heaped messages.
+                     * 
                      */
                     int64_t GetTotalAccumulative() const;
 
                     /**
                      * 设置The total number of heaped messages.
-                     * @param TotalAccumulative The total number of heaped messages.
+                     * @param _totalAccumulative The total number of heaped messages.
+                     * 
                      */
                     void SetTotalAccumulative(const int64_t& _totalAccumulative);
 
                     /**
                      * 判断参数 TotalAccumulative 是否已赋值
                      * @return TotalAccumulative 是否已赋值
+                     * 
                      */
                     bool TotalAccumulativeHasBeenSet() const;
 
                     /**
                      * 获取0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
                      * @return ConsumptionMode 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
+                     * 
                      */
                     int64_t GetConsumptionMode() const;
 
                     /**
                      * 设置0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
-                     * @param ConsumptionMode 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
+                     * @param _consumptionMode 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
+                     * 
                      */
                     void SetConsumptionMode(const int64_t& _consumptionMode);
 
                     /**
                      * 判断参数 ConsumptionMode 是否已赋值
                      * @return ConsumptionMode 是否已赋值
+                     * 
                      */
                     bool ConsumptionModeHasBeenSet() const;
 
                     /**
                      * 获取Whether to allow consumption.
                      * @return ReadEnabled Whether to allow consumption.
+                     * 
                      */
                     bool GetReadEnabled() const;
 
                     /**
                      * 设置Whether to allow consumption.
-                     * @param ReadEnabled Whether to allow consumption.
+                     * @param _readEnabled Whether to allow consumption.
+                     * 
                      */
                     void SetReadEnabled(const bool& _readEnabled);
 
                     /**
                      * 判断参数 ReadEnabled 是否已赋值
                      * @return ReadEnabled 是否已赋值
+                     * 
                      */
                     bool ReadEnabledHasBeenSet() const;
 
@@ -159,74 +177,86 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RetryPartitionNum The number of partitions in a retry topic.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRetryPartitionNum() const;
 
                     /**
                      * 设置The number of partitions in a retry topic.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RetryPartitionNum The number of partitions in a retry topic.
+                     * @param _retryPartitionNum The number of partitions in a retry topic.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRetryPartitionNum(const uint64_t& _retryPartitionNum);
 
                     /**
                      * 判断参数 RetryPartitionNum 是否已赋值
                      * @return RetryPartitionNum 是否已赋值
+                     * 
                      */
                     bool RetryPartitionNumHasBeenSet() const;
 
                     /**
                      * 获取Creation time in milliseconds.
                      * @return CreateTime Creation time in milliseconds.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time in milliseconds.
-                     * @param CreateTime Creation time in milliseconds.
+                     * @param _createTime Creation time in milliseconds.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Modification time in milliseconds.
                      * @return UpdateTime Modification time in milliseconds.
+                     * 
                      */
                     uint64_t GetUpdateTime() const;
 
                     /**
                      * 设置Modification time in milliseconds.
-                     * @param UpdateTime Modification time in milliseconds.
+                     * @param _updateTime Modification time in milliseconds.
+                     * 
                      */
                     void SetUpdateTime(const uint64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Client protocol.
                      * @return ClientProtocol Client protocol.
+                     * 
                      */
                     std::string GetClientProtocol() const;
 
                     /**
                      * 设置Client protocol.
-                     * @param ClientProtocol Client protocol.
+                     * @param _clientProtocol Client protocol.
+                     * 
                      */
                     void SetClientProtocol(const std::string& _clientProtocol);
 
                     /**
                      * 判断参数 ClientProtocol 是否已赋值
                      * @return ClientProtocol 是否已赋值
+                     * 
                      */
                     bool ClientProtocolHasBeenSet() const;
 
@@ -235,20 +265,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Description.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Description.
+                     * @param _remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -257,38 +290,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConsumerType Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConsumerType() const;
 
                     /**
                      * 设置Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConsumerType Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+                     * @param _consumerType Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConsumerType(const std::string& _consumerType);
 
                     /**
                      * 判断参数 ConsumerType 是否已赋值
                      * @return ConsumerType 是否已赋值
+                     * 
                      */
                     bool ConsumerTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable broadcast consumption.
                      * @return BroadcastEnabled Whether to enable broadcast consumption.
+                     * 
                      */
                     bool GetBroadcastEnabled() const;
 
                     /**
                      * 设置Whether to enable broadcast consumption.
-                     * @param BroadcastEnabled Whether to enable broadcast consumption.
+                     * @param _broadcastEnabled Whether to enable broadcast consumption.
+                     * 
                      */
                     void SetBroadcastEnabled(const bool& _broadcastEnabled);
 
                     /**
                      * 判断参数 BroadcastEnabled 是否已赋值
                      * @return BroadcastEnabled 是否已赋值
+                     * 
                      */
                     bool BroadcastEnabledHasBeenSet() const;
 
@@ -297,20 +336,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupType Group type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGroupType() const;
 
                     /**
                      * 设置Group type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupType Group type
+                     * @param _groupType Group type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupType(const std::string& _groupType);
 
                     /**
                      * 判断参数 GroupType 是否已赋值
                      * @return GroupType 是否已赋值
+                     * 
                      */
                     bool GroupTypeHasBeenSet() const;
 
@@ -319,20 +361,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RetryMaxTimes The number of retries
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRetryMaxTimes() const;
 
                     /**
                      * 设置The number of retries
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RetryMaxTimes The number of retries
+                     * @param _retryMaxTimes The number of retries
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRetryMaxTimes(const uint64_t& _retryMaxTimes);
 
                     /**
                      * 判断参数 RetryMaxTimes 是否已赋值
                      * @return RetryMaxTimes 是否已赋值
+                     * 
                      */
                     bool RetryMaxTimesHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the plugin to be modified
                      * @return PluginId ID of the plugin to be modified
+                     * 
                      */
                     std::string GetPluginId() const;
 
                     /**
                      * 设置ID of the plugin to be modified
-                     * @param PluginId ID of the plugin to be modified
+                     * @param _pluginId ID of the plugin to be modified
+                     * 
                      */
                     void SetPluginId(const std::string& _pluginId);
 
                     /**
                      * 判断参数 PluginId 是否已赋值
                      * @return PluginId 是否已赋值
+                     * 
                      */
                     bool PluginIdHasBeenSet() const;
 
                     /**
                      * 获取Plugin name to be modified. A plugin name can contain up to 50 characters out of `a-z`, `A-Z`, `0-9`, and `_`, which must begin with a letter and end with a letter or a number.
                      * @return PluginName Plugin name to be modified. A plugin name can contain up to 50 characters out of `a-z`, `A-Z`, `0-9`, and `_`, which must begin with a letter and end with a letter or a number.
+                     * 
                      */
                     std::string GetPluginName() const;
 
                     /**
                      * 设置Plugin name to be modified. A plugin name can contain up to 50 characters out of `a-z`, `A-Z`, `0-9`, and `_`, which must begin with a letter and end with a letter or a number.
-                     * @param PluginName Plugin name to be modified. A plugin name can contain up to 50 characters out of `a-z`, `A-Z`, `0-9`, and `_`, which must begin with a letter and end with a letter or a number.
+                     * @param _pluginName Plugin name to be modified. A plugin name can contain up to 50 characters out of `a-z`, `A-Z`, `0-9`, and `_`, which must begin with a letter and end with a letter or a number.
+                     * 
                      */
                     void SetPluginName(const std::string& _pluginName);
 
                     /**
                      * 判断参数 PluginName 是否已赋值
                      * @return PluginName 是否已赋值
+                     * 
                      */
                     bool PluginNameHasBeenSet() const;
 
                     /**
                      * 获取Plugin description to be modified. A description is within 200 characters.
                      * @return Description Plugin description to be modified. A description is within 200 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Plugin description to be modified. A description is within 200 characters.
-                     * @param Description Plugin description to be modified. A description is within 200 characters.
+                     * @param _description Plugin description to be modified. A description is within 200 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Plugin definition statement to be modified. The json format is supported.
                      * @return PluginData Plugin definition statement to be modified. The json format is supported.
+                     * 
                      */
                     std::string GetPluginData() const;
 
                     /**
                      * 设置Plugin definition statement to be modified. The json format is supported.
-                     * @param PluginData Plugin definition statement to be modified. The json format is supported.
+                     * @param _pluginData Plugin definition statement to be modified. The json format is supported.
+                     * 
                      */
                     void SetPluginData(const std::string& _pluginData);
 
                     /**
                      * 判断参数 PluginData 是否已赋值
                      * @return PluginData 是否已赋值
+                     * 
                      */
                     bool PluginDataHasBeenSet() const;
 

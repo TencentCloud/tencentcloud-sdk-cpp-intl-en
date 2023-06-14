@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return CfwInsId NAT instance info
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetCfwInsId() const;
 
                     /**
                      * 判断参数 CfwInsId 是否已赋值
                      * @return CfwInsId 是否已赋值
+                     * 
                      */
                     bool CfwInsIdHasBeenSet() const;
 

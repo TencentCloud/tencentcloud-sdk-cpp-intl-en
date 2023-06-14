@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: Beijing time (UTC+8) is used.
                      * @return CreateTime The rule creation time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The rule creation time.
 Note: Beijing time (UTC+8) is used.
-                     * @param CreateTime The rule creation time.
+                     * @param _createTime The rule creation time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -73,92 +76,107 @@ Note: Beijing time (UTC+8) is used.
 Note: Beijing time (UTC+8) is used.
                      * @return UpdateTime The rule update time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The rule update time.
 Note: Beijing time (UTC+8) is used.
-                     * @param UpdateTime The rule update time.
+                     * @param _updateTime The rule update time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Template ID.
                      * @return TemplateId Template ID.
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-                     * @param TemplateId Template ID.
+                     * @param _templateId Template ID.
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Push path.
                      * @return AppName Push path.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path.
-                     * @param AppName Push path.
+                     * @param _appName Push path.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 

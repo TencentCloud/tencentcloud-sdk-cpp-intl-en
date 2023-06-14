@@ -52,162 +52,189 @@ namespace TencentCloud
                     /**
                      * 获取`ID` of the `VPC` instance.
                      * @return VpcId `ID` of the `VPC` instance.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置`ID` of the `VPC` instance.
-                     * @param VpcId `ID` of the `VPC` instance.
+                     * @param _vpcId `ID` of the `VPC` instance.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取`ID` of the network ACL instance.
                      * @return NetworkAclId `ID` of the network ACL instance.
+                     * 
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
                      * 设置`ID` of the network ACL instance.
-                     * @param NetworkAclId `ID` of the network ACL instance.
+                     * @param _networkAclId `ID` of the network ACL instance.
+                     * 
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
                     /**
                      * 判断参数 NetworkAclId 是否已赋值
                      * @return NetworkAclId 是否已赋值
+                     * 
                      */
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the network ACL. The maximum length is 60 bytes.
                      * @return NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+                     * 
                      */
                     std::string GetNetworkAclName() const;
 
                     /**
                      * 设置Name of the network ACL. The maximum length is 60 bytes.
-                     * @param NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+                     * @param _networkAclName Name of the network ACL. The maximum length is 60 bytes.
+                     * 
                      */
                     void SetNetworkAclName(const std::string& _networkAclName);
 
                     /**
                      * 判断参数 NetworkAclName 是否已赋值
                      * @return NetworkAclName 是否已赋值
+                     * 
                      */
                     bool NetworkAclNameHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return CreatedTime Creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreatedTime Creation time.
+                     * @param _createdTime Creation time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Array of subnets associated with the network ACL.
                      * @return SubnetSet Array of subnets associated with the network ACL.
+                     * 
                      */
                     std::vector<Subnet> GetSubnetSet() const;
 
                     /**
                      * 设置Array of subnets associated with the network ACL.
-                     * @param SubnetSet Array of subnets associated with the network ACL.
+                     * @param _subnetSet Array of subnets associated with the network ACL.
+                     * 
                      */
                     void SetSubnetSet(const std::vector<Subnet>& _subnetSet);
 
                     /**
                      * 判断参数 SubnetSet 是否已赋值
                      * @return SubnetSet 是否已赋值
+                     * 
                      */
                     bool SubnetSetHasBeenSet() const;
 
                     /**
                      * 获取Inbound rules of the network ACL.
                      * @return IngressEntries Inbound rules of the network ACL.
+                     * 
                      */
                     std::vector<NetworkAclEntry> GetIngressEntries() const;
 
                     /**
                      * 设置Inbound rules of the network ACL.
-                     * @param IngressEntries Inbound rules of the network ACL.
+                     * @param _ingressEntries Inbound rules of the network ACL.
+                     * 
                      */
                     void SetIngressEntries(const std::vector<NetworkAclEntry>& _ingressEntries);
 
                     /**
                      * 判断参数 IngressEntries 是否已赋值
                      * @return IngressEntries 是否已赋值
+                     * 
                      */
                     bool IngressEntriesHasBeenSet() const;
 
                     /**
                      * 获取Outbound rules of the network ACL.
                      * @return EgressEntries Outbound rules of the network ACL.
+                     * 
                      */
                     std::vector<NetworkAclEntry> GetEgressEntries() const;
 
                     /**
                      * 设置Outbound rules of the network ACL.
-                     * @param EgressEntries Outbound rules of the network ACL.
+                     * @param _egressEntries Outbound rules of the network ACL.
+                     * 
                      */
                     void SetEgressEntries(const std::vector<NetworkAclEntry>& _egressEntries);
 
                     /**
                      * 判断参数 EgressEntries 是否已赋值
                      * @return EgressEntries 是否已赋值
+                     * 
                      */
                     bool EgressEntriesHasBeenSet() const;
 
                     /**
                      * 获取Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
                      * @return NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * 
                      */
                     std::string GetNetworkAclType() const;
 
                     /**
                      * 设置Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
-                     * @param NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * @param _networkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * 
                      */
                     void SetNetworkAclType(const std::string& _networkAclType);
 
                     /**
                      * 判断参数 NetworkAclType 是否已赋值
                      * @return NetworkAclType 是否已赋值
+                     * 
                      */
                     bool NetworkAclTypeHasBeenSet() const;
 
                     /**
                      * 获取Tag key-value pairs
                      * @return TagSet Tag key-value pairs
+                     * 
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
                      * 设置Tag key-value pairs
-                     * @param TagSet Tag key-value pairs
+                     * @param _tagSet Tag key-value pairs
+                     * 
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 

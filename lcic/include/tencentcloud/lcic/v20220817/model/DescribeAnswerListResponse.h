@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The total number of answers.
                      * @return Total The total number of answers.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AnswerInfo A list of the answers.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AnswerInfo> GetAnswerInfo() const;
 
                     /**
                      * 判断参数 AnswerInfo 是否已赋值
                      * @return AnswerInfo 是否已赋值
+                     * 
                      */
                     bool AnswerInfoHasBeenSet() const;
 

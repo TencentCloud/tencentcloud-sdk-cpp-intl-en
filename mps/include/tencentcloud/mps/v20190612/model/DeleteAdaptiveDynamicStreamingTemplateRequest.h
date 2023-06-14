@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of an adaptive bitrate streaming template.
                      * @return Definition Unique ID of an adaptive bitrate streaming template.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Unique ID of an adaptive bitrate streaming template.
-                     * @param Definition Unique ID of an adaptive bitrate streaming template.
+                     * @param _definition Unique ID of an adaptive bitrate streaming template.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

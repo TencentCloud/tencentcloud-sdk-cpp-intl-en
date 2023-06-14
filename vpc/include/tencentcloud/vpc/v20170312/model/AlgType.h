@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether FTP ALG is enabled
                      * @return Ftp Whether FTP ALG is enabled
+                     * 
                      */
                     bool GetFtp() const;
 
                     /**
                      * 设置Whether FTP ALG is enabled
-                     * @param Ftp Whether FTP ALG is enabled
+                     * @param _ftp Whether FTP ALG is enabled
+                     * 
                      */
                     void SetFtp(const bool& _ftp);
 
                     /**
                      * 判断参数 Ftp 是否已赋值
                      * @return Ftp 是否已赋值
+                     * 
                      */
                     bool FtpHasBeenSet() const;
 
                     /**
                      * 获取Whether SIP ALG is enabled
                      * @return Sip Whether SIP ALG is enabled
+                     * 
                      */
                     bool GetSip() const;
 
                     /**
                      * 设置Whether SIP ALG is enabled
-                     * @param Sip Whether SIP ALG is enabled
+                     * @param _sip Whether SIP ALG is enabled
+                     * 
                      */
                     void SetSip(const bool& _sip);
 
                     /**
                      * 判断参数 Sip 是否已赋值
                      * @return Sip 是否已赋值
+                     * 
                      */
                     bool SipHasBeenSet() const;
 

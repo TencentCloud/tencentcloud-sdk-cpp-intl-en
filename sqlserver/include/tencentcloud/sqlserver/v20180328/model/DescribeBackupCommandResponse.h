@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Create a backup command
                      * @return Command Create a backup command
+                     * 
                      */
                     std::string GetCommand() const;
 
                     /**
                      * 判断参数 Command 是否已赋值
                      * @return Command 是否已赋值
+                     * 
                      */
                     bool CommandHasBeenSet() const;
 

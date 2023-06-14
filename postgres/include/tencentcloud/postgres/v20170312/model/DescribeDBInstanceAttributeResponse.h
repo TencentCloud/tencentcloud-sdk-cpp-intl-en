@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Instance details.
                      * @return DBInstance Instance details.
+                     * 
                      */
                     DBInstance GetDBInstance() const;
 
                     /**
                      * 判断参数 DBInstance 是否已赋值
                      * @return DBInstance 是否已赋值
+                     * 
                      */
                     bool DBInstanceHasBeenSet() const;
 

@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Flag
                      * @return Flags Flag
+                     * 
                      */
                     int64_t GetFlags() const;
 
                     /**
                      * 设置Flag
-                     * @param Flags Flag
+                     * @param _flags Flag
+                     * 
                      */
                     void SetFlags(const int64_t& _flags);
 
                     /**
                      * 判断参数 Flags 是否已赋值
                      * @return Flags 是否已赋值
+                     * 
                      */
                     bool FlagsHasBeenSet() const;
 
                     /**
                      * 获取Encryption algorithm
                      * @return Algorithm Encryption algorithm
+                     * 
                      */
                     std::string GetAlgorithm() const;
 
                     /**
                      * 设置Encryption algorithm
-                     * @param Algorithm Encryption algorithm
+                     * @param _algorithm Encryption algorithm
+                     * 
                      */
                     void SetAlgorithm(const std::string& _algorithm);
 
                     /**
                      * 判断参数 Algorithm 是否已赋值
                      * @return Algorithm 是否已赋值
+                     * 
                      */
                     bool AlgorithmHasBeenSet() const;
 
                     /**
                      * 获取Encryption type
                      * @return KeyType Encryption type
+                     * 
                      */
                     std::string GetKeyType() const;
 
                     /**
                      * 设置Encryption type
-                     * @param KeyType Encryption type
+                     * @param _keyType Encryption type
+                     * 
                      */
                     void SetKeyType(const std::string& _keyType);
 
                     /**
                      * 判断参数 KeyType 是否已赋值
                      * @return KeyType 是否已赋值
+                     * 
                      */
                     bool KeyTypeHasBeenSet() const;
 
                     /**
                      * 获取Digest type
                      * @return DigestType Digest type
+                     * 
                      */
                     std::string GetDigestType() const;
 
                     /**
                      * 设置Digest type
-                     * @param DigestType Digest type
+                     * @param _digestType Digest type
+                     * 
                      */
                     void SetDigestType(const std::string& _digestType);
 
                     /**
                      * 判断参数 DigestType 是否已赋值
                      * @return DigestType 是否已赋值
+                     * 
                      */
                     bool DigestTypeHasBeenSet() const;
 
                     /**
                      * 获取Digest algorithm
                      * @return DigestAlgorithm Digest algorithm
+                     * 
                      */
                     std::string GetDigestAlgorithm() const;
 
                     /**
                      * 设置Digest algorithm
-                     * @param DigestAlgorithm Digest algorithm
+                     * @param _digestAlgorithm Digest algorithm
+                     * 
                      */
                     void SetDigestAlgorithm(const std::string& _digestAlgorithm);
 
                     /**
                      * 判断参数 DigestAlgorithm 是否已赋值
                      * @return DigestAlgorithm 是否已赋值
+                     * 
                      */
                     bool DigestAlgorithmHasBeenSet() const;
 
                     /**
                      * 获取Digest message
                      * @return Digest Digest message
+                     * 
                      */
                     std::string GetDigest() const;
 
                     /**
                      * 设置Digest message
-                     * @param Digest Digest message
+                     * @param _digest Digest message
+                     * 
                      */
                     void SetDigest(const std::string& _digest);
 
                     /**
                      * 判断参数 Digest 是否已赋值
                      * @return Digest 是否已赋值
+                     * 
                      */
                     bool DigestHasBeenSet() const;
 
                     /**
                      * 获取DS record value
                      * @return DS DS record value
+                     * 
                      */
                     std::string GetDS() const;
 
                     /**
                      * 设置DS record value
-                     * @param DS DS record value
+                     * @param _dS DS record value
+                     * 
                      */
                     void SetDS(const std::string& _dS);
 
                     /**
                      * 判断参数 DS 是否已赋值
                      * @return DS 是否已赋值
+                     * 
                      */
                     bool DSHasBeenSet() const;
 
                     /**
                      * 获取Key tag
                      * @return KeyTag Key tag
+                     * 
                      */
                     int64_t GetKeyTag() const;
 
                     /**
                      * 设置Key tag
-                     * @param KeyTag Key tag
+                     * @param _keyTag Key tag
+                     * 
                      */
                     void SetKeyTag(const int64_t& _keyTag);
 
                     /**
                      * 判断参数 KeyTag 是否已赋值
                      * @return KeyTag 是否已赋值
+                     * 
                      */
                     bool KeyTagHasBeenSet() const;
 
                     /**
                      * 获取Public key
                      * @return PublicKey Public key
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Public key
-                     * @param PublicKey Public key
+                     * @param _publicKey Public key
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 

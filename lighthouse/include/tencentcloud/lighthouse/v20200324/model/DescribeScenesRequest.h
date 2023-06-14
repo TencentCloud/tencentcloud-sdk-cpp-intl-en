@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取List of scene IDs
                      * @return SceneIds List of scene IDs
+                     * 
                      */
                     std::vector<std::string> GetSceneIds() const;
 
                     /**
                      * 设置List of scene IDs
-                     * @param SceneIds List of scene IDs
+                     * @param _sceneIds List of scene IDs
+                     * 
                      */
                     void SetSceneIds(const std::vector<std::string>& _sceneIds);
 
                     /**
                      * 判断参数 SceneIds 是否已赋值
                      * @return SceneIds 是否已赋值
+                     * 
                      */
                     bool SceneIdsHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0
                      * @return Offset Offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0
-                     * @param Offset Offset. Default value: 0
+                     * @param _offset Offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

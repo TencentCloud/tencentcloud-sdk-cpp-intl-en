@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Log source device
                      * @return Source Log source device
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置Log source device
-                     * @param Source Log source device
+                     * @param _source Log source device
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Collection path
                      * @return Filename Collection path
+                     * 
                      */
                     std::string GetFilename() const;
 
                     /**
                      * 设置Collection path
-                     * @param Filename Collection path
+                     * @param _filename Collection path
+                     * 
                      */
                     void SetFilename(const std::string& _filename);
 
                     /**
                      * 判断参数 Filename 是否已赋值
                      * @return Filename 是否已赋值
+                     * 
                      */
                     bool FilenameHasBeenSet() const;
 
                     /**
                      * 获取Log content
                      * @return Content Log content
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Log content
-                     * @param Content Log content
+                     * @param _content Log content
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Log package number
                      * @return PkgId Log package number
+                     * 
                      */
                     std::string GetPkgId() const;
 
                     /**
                      * 设置Log package number
-                     * @param PkgId Log package number
+                     * @param _pkgId Log package number
+                     * 
                      */
                     void SetPkgId(const std::string& _pkgId);
 
                     /**
                      * 判断参数 PkgId 是否已赋值
                      * @return PkgId 是否已赋值
+                     * 
                      */
                     bool PkgIdHasBeenSet() const;
 
                     /**
                      * 获取Log number in log package
                      * @return PkgLogId Log number in log package
+                     * 
                      */
                     int64_t GetPkgLogId() const;
 
                     /**
                      * 设置Log number in log package
-                     * @param PkgLogId Log number in log package
+                     * @param _pkgLogId Log number in log package
+                     * 
                      */
                     void SetPkgLogId(const int64_t& _pkgLogId);
 
                     /**
                      * 判断参数 PkgLogId 是否已赋值
                      * @return PkgLogId 是否已赋值
+                     * 
                      */
                     bool PkgLogIdHasBeenSet() const;
 
                     /**
                      * 获取Log timestamp
                      * @return BTime Log timestamp
+                     * 
                      */
                     int64_t GetBTime() const;
 
                     /**
                      * 设置Log timestamp
-                     * @param BTime Log timestamp
+                     * @param _bTime Log timestamp
+                     * 
                      */
                     void SetBTime(const int64_t& _bTime);
 
                     /**
                      * 判断参数 BTime 是否已赋值
                      * @return BTime 是否已赋值
+                     * 
                      */
                     bool BTimeHasBeenSet() const;
 
@@ -159,20 +177,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return HostName Source host name of logs
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Source host name of logs
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param HostName Source host name of logs
+                     * @param _hostName Source host name of logs
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
@@ -181,20 +202,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRawLog() const;
 
                     /**
                      * 设置Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+                     * @param _rawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRawLog(const std::string& _rawLog);
 
                     /**
                      * 判断参数 RawLog 是否已赋值
                      * @return RawLog 是否已赋值
+                     * 
                      */
                     bool RawLogHasBeenSet() const;
 
@@ -203,20 +227,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIndexStatus() const;
 
                     /**
                      * 设置The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+                     * @param _indexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIndexStatus(const std::string& _indexStatus);
 
                     /**
                      * 判断参数 IndexStatus 是否已赋值
                      * @return IndexStatus 是否已赋值
+                     * 
                      */
                     bool IndexStatusHasBeenSet() const;
 

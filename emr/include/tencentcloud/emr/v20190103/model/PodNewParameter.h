@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The TKE or EKS cluster ID.
                      * @return InstanceId The TKE or EKS cluster ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The TKE or EKS cluster ID.
-                     * @param InstanceId The TKE or EKS cluster ID.
+                     * @param _instanceId The TKE or EKS cluster ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -135,6 +138,7 @@ Examples:
     }
   ]
 }
+                     * 
                      */
                     std::string GetConfig() const;
 
@@ -174,7 +178,7 @@ Examples:
     }
   ]
 }
-                     * @param Config Custom permissions
+                     * @param _config Custom permissions
 Examples:
 {
   "apiVersion": "v1",
@@ -209,12 +213,14 @@ Examples:
     }
   ]
 }
+                     * 
                      */
                     void SetConfig(const std::string& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
@@ -369,6 +375,7 @@ Examples:
       }
     }
   }
+                     * 
                      */
                     std::string GetParameter() const;
 
@@ -448,7 +455,7 @@ Examples:
       }
     }
   }
-                     * @param Parameter Custom parameters
+                     * @param _parameter Custom parameters
 Examples:
 {
     "apiVersion": "apps/v1",
@@ -523,12 +530,14 @@ Examples:
       }
     }
   }
+                     * 
                      */
                     void SetParameter(const std::string& _parameter);
 
                     /**
                      * 判断参数 Parameter 是否已赋值
                      * @return Parameter 是否已赋值
+                     * 
                      */
                     bool ParameterHasBeenSet() const;
 

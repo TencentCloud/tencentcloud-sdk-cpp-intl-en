@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
                      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
                      * @return TimeRanges Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+                     * 
                      */
                     std::vector<std::string> GetTimeRanges() const;
 
                     /**
                      * 设置Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
-                     * @param TimeRanges Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+                     * @param _timeRanges Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+                     * 
                      */
                     void SetTimeRanges(const std::vector<std::string>& _timeRanges);
 
                     /**
                      * 判断参数 TimeRanges 是否已赋值
                      * @return TimeRanges 是否已赋值
+                     * 
                      */
                     bool TimeRangesHasBeenSet() const;
 
                     /**
                      * 获取Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
                      * @return Weekdays Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+                     * 
                      */
                     std::vector<std::string> GetWeekdays() const;
 
                     /**
                      * 设置Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
-                     * @param Weekdays Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+                     * @param _weekdays Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+                     * 
                      */
                     void SetWeekdays(const std::vector<std::string>& _weekdays);
 
                     /**
                      * 判断参数 Weekdays 是否已赋值
                      * @return Weekdays 是否已赋值
+                     * 
                      */
                     bool WeekdaysHasBeenSet() const;
 
                     /**
                      * 获取Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
                      * @return MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     * 
                      */
                     uint64_t GetMaxDelayTime() const;
 
                     /**
                      * 设置Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
-                     * @param MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     * @param _maxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     * 
                      */
                     void SetMaxDelayTime(const uint64_t& _maxDelayTime);
 
                     /**
                      * 判断参数 MaxDelayTime 是否已赋值
                      * @return MaxDelayTime 是否已赋值
+                     * 
                      */
                     bool MaxDelayTimeHasBeenSet() const;
 

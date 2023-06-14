@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Push domain name.
                      * @return PushDomain Push domain name.
+                     * 
                      */
                     std::string GetPushDomain() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param PushDomain Push domain name.
+                     * @param _pushDomain Push domain name.
+                     * 
                      */
                     void SetPushDomain(const std::string& _pushDomain);
 
                     /**
                      * 判断参数 PushDomain 是否已赋值
                      * @return PushDomain 是否已赋值
+                     * 
                      */
                     bool PushDomainHasBeenSet() const;
 
                     /**
                      * 获取Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
                      * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
-                     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * @param _appName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
@@ -85,6 +91,7 @@ Default value: 1.
                      * @return PageNum Number of pages,
 Value range: [1,10000],
 Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
@@ -92,15 +99,17 @@ Default value: 1.
                      * 设置Number of pages,
 Value range: [1,10000],
 Default value: 1.
-                     * @param PageNum Number of pages,
+                     * @param _pageNum Number of pages,
 Value range: [1,10000],
 Default value: 1.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -111,6 +120,7 @@ Default value: 200.
                      * @return PageSize Number of entries per page,
 Value range: [1,1000],
 Default value: 200.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
@@ -118,15 +128,17 @@ Default value: 200.
                      * 设置Number of entries per page,
 Value range: [1,1000],
 Default value: 200.
-                     * @param PageSize Number of entries per page,
+                     * @param _pageSize Number of entries per page,
 Value range: [1,1000],
 Default value: 200.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

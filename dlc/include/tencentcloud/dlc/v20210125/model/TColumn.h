@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The field name.
                      * @return Name The field name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The field name.
-                     * @param Name The field name.
+                     * @param _name The field name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The field type.
                      * @return Type The field type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The field type.
-                     * @param Type The field type.
+                     * @param _type The field type.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The field description.
                      * @return Comment The field description.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The field description.
-                     * @param Comment The field description.
+                     * @param _comment The field description.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
                     /**
                      * 获取The default field value.
                      * @return Default The default field value.
+                     * 
                      */
                     std::string GetDefault() const;
 
                     /**
                      * 设置The default field value.
-                     * @param Default The default field value.
+                     * @param _default The default field value.
+                     * 
                      */
                     void SetDefault(const std::string& _default);
 
                     /**
                      * 判断参数 Default 是否已赋值
                      * @return Default 是否已赋值
+                     * 
                      */
                     bool DefaultHasBeenSet() const;
 
                     /**
                      * 获取Whether the field is not null.
                      * @return NotNull Whether the field is not null.
+                     * 
                      */
                     bool GetNotNull() const;
 
                     /**
                      * 设置Whether the field is not null.
-                     * @param NotNull Whether the field is not null.
+                     * @param _notNull Whether the field is not null.
+                     * 
                      */
                     void SetNotNull(const bool& _notNull);
 
                     /**
                      * 判断参数 NotNull 是否已赋值
                      * @return NotNull 是否已赋值
+                     * 
                      */
                     bool NotNullHasBeenSet() const;
 

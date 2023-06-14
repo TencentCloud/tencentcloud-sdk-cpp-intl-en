@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a CLB instance, e.g., lb-12345678.
                      * @return LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置Unique ID of a CLB instance, e.g., lb-12345678.
-                     * @param LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * @param _loadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Array of the SNAT IP addresses to be deleted
                      * @return Ips Array of the SNAT IP addresses to be deleted
+                     * 
                      */
                     std::vector<std::string> GetIps() const;
 
                     /**
                      * 设置Array of the SNAT IP addresses to be deleted
-                     * @param Ips Array of the SNAT IP addresses to be deleted
+                     * @param _ips Array of the SNAT IP addresses to be deleted
+                     * 
                      */
                     void SetIps(const std::vector<std::string>& _ips);
 
                     /**
                      * 判断参数 Ips 是否已赋值
                      * @return Ips 是否已赋值
+                     * 
                      */
                     bool IpsHasBeenSet() const;
 

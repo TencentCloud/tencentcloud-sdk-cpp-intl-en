@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Node ID
                      * @return NodeId Node ID
+                     * 
                      */
                     std::string GetNodeId() const;
 
                     /**
                      * 设置Node ID
-                     * @param NodeId Node ID
+                     * @param _nodeId Node ID
+                     * 
                      */
                     void SetNodeId(const std::string& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 
                     /**
                      * 获取Node role. Valid values: `master`, `slave`
                      * @return Role Node role. Valid values: `master`, `slave`
+                     * 
                      */
                     std::string GetRole() const;
 
                     /**
                      * 设置Node role. Valid values: `master`, `slave`
-                     * @param Role Node role. Valid values: `master`, `slave`
+                     * @param _role Node role. Valid values: `master`, `slave`
+                     * 
                      */
                     void SetRole(const std::string& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 

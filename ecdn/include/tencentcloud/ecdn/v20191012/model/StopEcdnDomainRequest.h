@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Domain name to be disabled.
                      * @return Domain Domain name to be disabled.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name to be disabled.
-                     * @param Domain Domain name to be disabled.
+                     * @param _domain Domain name to be disabled.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

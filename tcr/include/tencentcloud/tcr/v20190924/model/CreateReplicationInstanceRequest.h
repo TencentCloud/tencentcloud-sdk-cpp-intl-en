@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Master instance ID
                      * @return RegistryId Master instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Master instance ID
-                     * @param RegistryId Master instance ID
+                     * @param _registryId Master instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Region ID of the replication instance
                      * @return ReplicationRegionId Region ID of the replication instance
+                     * 
                      */
                     uint64_t GetReplicationRegionId() const;
 
                     /**
                      * 设置Region ID of the replication instance
-                     * @param ReplicationRegionId Region ID of the replication instance
+                     * @param _replicationRegionId Region ID of the replication instance
+                     * 
                      */
                     void SetReplicationRegionId(const uint64_t& _replicationRegionId);
 
                     /**
                      * 判断参数 ReplicationRegionId 是否已赋值
                      * @return ReplicationRegionId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region name of the replication instance
                      * @return ReplicationRegionName Region name of the replication instance
+                     * 
                      */
                     std::string GetReplicationRegionName() const;
 
                     /**
                      * 设置Region name of the replication instance
-                     * @param ReplicationRegionName Region name of the replication instance
+                     * @param _replicationRegionName Region name of the replication instance
+                     * 
                      */
                     void SetReplicationRegionName(const std::string& _replicationRegionName);
 
                     /**
                      * 判断参数 ReplicationRegionName 是否已赋值
                      * @return ReplicationRegionName 是否已赋值
+                     * 
                      */
                     bool ReplicationRegionNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to sync TCR cloud tags to the COS Bucket
                      * @return SyncTag Whether to sync TCR cloud tags to the COS Bucket
+                     * 
                      */
                     bool GetSyncTag() const;
 
                     /**
                      * 设置Whether to sync TCR cloud tags to the COS Bucket
-                     * @param SyncTag Whether to sync TCR cloud tags to the COS Bucket
+                     * @param _syncTag Whether to sync TCR cloud tags to the COS Bucket
+                     * 
                      */
                     void SetSyncTag(const bool& _syncTag);
 
                     /**
                      * 判断参数 SyncTag 是否已赋值
                      * @return SyncTag 是否已赋值
+                     * 
                      */
                     bool SyncTagHasBeenSet() const;
 

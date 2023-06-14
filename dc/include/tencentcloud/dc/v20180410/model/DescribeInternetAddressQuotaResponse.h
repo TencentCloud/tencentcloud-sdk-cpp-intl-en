@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Ipv6PrefixLen Minimum prefix length allowed for a public IPv6 address
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIpv6PrefixLen() const;
 
                     /**
                      * 判断参数 Ipv6PrefixLen 是否已赋值
                      * @return Ipv6PrefixLen 是否已赋值
+                     * 
                      */
                     bool Ipv6PrefixLenHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Ipv4BgpQuota Quota of BGP IPv4 addresses
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIpv4BgpQuota() const;
 
                     /**
                      * 判断参数 Ipv4BgpQuota 是否已赋值
                      * @return Ipv4BgpQuota 是否已赋值
+                     * 
                      */
                     bool Ipv4BgpQuotaHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Ipv4OtherQuota Quota of non-BGP IPv4 addresses
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIpv4OtherQuota() const;
 
                     /**
                      * 判断参数 Ipv4OtherQuota 是否已赋值
                      * @return Ipv4OtherQuota 是否已赋值
+                     * 
                      */
                     bool Ipv4OtherQuotaHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Ipv4BgpNum Used number of BGP IPv4 addresses
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIpv4BgpNum() const;
 
                     /**
                      * 判断参数 Ipv4BgpNum 是否已赋值
                      * @return Ipv4BgpNum 是否已赋值
+                     * 
                      */
                     bool Ipv4BgpNumHasBeenSet() const;
 
@@ -104,12 +112,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Ipv4OtherNum Used number of non-BGP IPv4 addresses
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIpv4OtherNum() const;
 
                     /**
                      * 判断参数 Ipv4OtherNum 是否已赋值
                      * @return Ipv4OtherNum 是否已赋值
+                     * 
                      */
                     bool Ipv4OtherNumHasBeenSet() const;
 

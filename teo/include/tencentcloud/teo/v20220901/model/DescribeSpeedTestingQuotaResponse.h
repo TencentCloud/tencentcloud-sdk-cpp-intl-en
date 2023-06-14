@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The quota limit on site tests.
                      * @return SpeedTestingQuota The quota limit on site tests.
+                     * 
                      */
                     SpeedTestingQuota GetSpeedTestingQuota() const;
 
                     /**
                      * 判断参数 SpeedTestingQuota 是否已赋值
                      * @return SpeedTestingQuota 是否已赋值
+                     * 
                      */
                     bool SpeedTestingQuotaHasBeenSet() const;
 

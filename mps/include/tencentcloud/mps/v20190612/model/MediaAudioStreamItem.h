@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Bitrate Bitrate of an audio stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
                      * 设置Bitrate of an audio stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Bitrate Bitrate of an audio stream in bps.
+                     * @param _bitrate Bitrate of an audio stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
 
                     /**
                      * 判断参数 Bitrate 是否已赋值
                      * @return Bitrate 是否已赋值
+                     * 
                      */
                     bool BitrateHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SamplingRate Sample rate of an audio stream in Hz.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSamplingRate() const;
 
                     /**
                      * 设置Sample rate of an audio stream in Hz.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SamplingRate Sample rate of an audio stream in Hz.
+                     * @param _samplingRate Sample rate of an audio stream in Hz.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSamplingRate(const int64_t& _samplingRate);
 
                     /**
                      * 判断参数 SamplingRate 是否已赋值
                      * @return SamplingRate 是否已赋值
+                     * 
                      */
                     bool SamplingRateHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Codec Audio stream codec, such as aac.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCodec() const;
 
                     /**
                      * 设置Audio stream codec, such as aac.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Codec Audio stream codec, such as aac.
+                     * @param _codec Audio stream codec, such as aac.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return Channel Number of sound channels, e.g., 2
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetChannel() const;
 
                     /**
                      * 设置Number of sound channels, e.g., 2
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param Channel Number of sound channels, e.g., 2
+                     * @param _channel Number of sound channels, e.g., 2
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetChannel(const int64_t& _channel);
 
                     /**
                      * 判断参数 Channel 是否已赋值
                      * @return Channel 是否已赋值
+                     * 
                      */
                     bool ChannelHasBeenSet() const;
 

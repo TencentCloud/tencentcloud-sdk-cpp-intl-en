@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Certificate ID obtained through the `DescribeLiveCerts` API.
                      * @return CertId Certificate ID obtained through the `DescribeLiveCerts` API.
+                     * 
                      */
                     int64_t GetCertId() const;
 
                     /**
                      * 设置Certificate ID obtained through the `DescribeLiveCerts` API.
-                     * @param CertId Certificate ID obtained through the `DescribeLiveCerts` API.
+                     * @param _certId Certificate ID obtained through the `DescribeLiveCerts` API.
+                     * 
                      */
                     void SetCertId(const int64_t& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 

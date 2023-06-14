@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Whether the user is a paid user. Values: `true`, `false`.
                      * @return IsPaidUsr Whether the user is a paid user. Values: `true`, `false`.
+                     * 
                      */
                     bool GetIsPaidUsr() const;
 
                     /**
                      * 判断参数 IsPaidUsr 是否已赋值
                      * @return IsPaidUsr 是否已赋值
+                     * 
                      */
                     bool IsPaidUsrHasBeenSet() const;
 
                     /**
                      * 获取Number of resources being attacked
                      * @return AttackingCount Number of resources being attacked
+                     * 
                      */
                     int64_t GetAttackingCount() const;
 
                     /**
                      * 判断参数 AttackingCount 是否已赋值
                      * @return AttackingCount 是否已赋值
+                     * 
                      */
                     bool AttackingCountHasBeenSet() const;
 
                     /**
                      * 获取Number of resource blocked
                      * @return BlockingCount Number of resource blocked
+                     * 
                      */
                     int64_t GetBlockingCount() const;
 
                     /**
                      * 判断参数 BlockingCount 是否已赋值
                      * @return BlockingCount 是否已赋值
+                     * 
                      */
                     bool BlockingCountHasBeenSet() const;
 
                     /**
                      * 获取Number of expired resources
                      * @return ExpiredCount Number of expired resources
+                     * 
                      */
                     int64_t GetExpiredCount() const;
 
                     /**
                      * 判断参数 ExpiredCount 是否已赋值
                      * @return ExpiredCount 是否已赋值
+                     * 
                      */
                     bool ExpiredCountHasBeenSet() const;
 
                     /**
                      * 获取Total pending risk events
                      * @return Total Total pending risk events
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

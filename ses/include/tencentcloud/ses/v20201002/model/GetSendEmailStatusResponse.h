@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Status of sent emails
                      * @return EmailStatusList Status of sent emails
+                     * 
                      */
                     std::vector<SendEmailStatus> GetEmailStatusList() const;
 
                     /**
                      * 判断参数 EmailStatusList 是否已赋值
                      * @return EmailStatusList 是否已赋值
+                     * 
                      */
                     bool EmailStatusListHasBeenSet() const;
 

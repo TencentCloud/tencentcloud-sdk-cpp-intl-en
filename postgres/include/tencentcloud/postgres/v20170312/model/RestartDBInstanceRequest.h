@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-6r233v55
                      * @return DBInstanceId Instance ID in the format of postgres-6r233v55
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-6r233v55
-                     * @param DBInstanceId Instance ID in the format of postgres-6r233v55
+                     * @param _dBInstanceId Instance ID in the format of postgres-6r233v55
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 

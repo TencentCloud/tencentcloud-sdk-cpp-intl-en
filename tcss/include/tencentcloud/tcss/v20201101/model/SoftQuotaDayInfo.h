@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Deduction time
                      * @return PayTime Deduction time
+                     * 
                      */
                     std::string GetPayTime() const;
 
                     /**
                      * 设置Deduction time
-                     * @param PayTime Deduction time
+                     * @param _payTime Deduction time
+                     * 
                      */
                     void SetPayTime(const std::string& _payTime);
 
                     /**
                      * 判断参数 PayTime 是否已赋值
                      * @return PayTime 是否已赋值
+                     * 
                      */
                     bool PayTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of billed cores
                      * @return CoresCnt Number of billed cores
+                     * 
                      */
                     uint64_t GetCoresCnt() const;
 
                     /**
                      * 设置Number of billed cores
-                     * @param CoresCnt Number of billed cores
+                     * @param _coresCnt Number of billed cores
+                     * 
                      */
                     void SetCoresCnt(const uint64_t& _coresCnt);
 
                     /**
                      * 判断参数 CoresCnt 是否已赋值
                      * @return CoresCnt 是否已赋值
+                     * 
                      */
                     bool CoresCntHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Compute environment ID
                      * @return EnvId Compute environment ID
+                     * 
                      */
                     std::string GetEnvId() const;
 
                     /**
                      * 设置Compute environment ID
-                     * @param EnvId Compute environment ID
+                     * @param _envId Compute environment ID
+                     * 
                      */
                     void SetEnvId(const std::string& _envId);
 
                     /**
                      * 判断参数 EnvId 是否已赋值
                      * @return EnvId 是否已赋值
+                     * 
                      */
                     bool EnvIdHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of returned items
                      * @return Limit Maximum number of returned items
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of returned items
-                     * @param Limit Maximum number of returned items
+                     * @param _limit Maximum number of returned items
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -102,20 +111,23 @@ namespace TencentCloud
 <li> `compute-node-id` - String - Optional - Filter by the compute node ID.</li>
                      * @return Filters Filter
 <li> `compute-node-id` - String - Optional - Filter by the compute node ID.</li>
+                     * 
                      */
                     Filter GetFilters() const;
 
                     /**
                      * 设置Filter
 <li> `compute-node-id` - String - Optional - Filter by the compute node ID.</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li> `compute-node-id` - String - Optional - Filter by the compute node ID.</li>
+                     * 
                      */
                     void SetFilters(const Filter& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

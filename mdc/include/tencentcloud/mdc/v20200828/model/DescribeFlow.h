@@ -51,90 +51,105 @@ namespace TencentCloud
                     /**
                      * 获取Flow ID.
                      * @return FlowId Flow ID.
+                     * 
                      */
                     std::string GetFlowId() const;
 
                     /**
                      * 设置Flow ID.
-                     * @param FlowId Flow ID.
+                     * @param _flowId Flow ID.
+                     * 
                      */
                     void SetFlowId(const std::string& _flowId);
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
                     /**
                      * 获取Flow name.
                      * @return FlowName Flow name.
+                     * 
                      */
                     std::string GetFlowName() const;
 
                     /**
                      * 设置Flow name.
-                     * @param FlowName Flow name.
+                     * @param _flowName Flow name.
+                     * 
                      */
                     void SetFlowName(const std::string& _flowName);
 
                     /**
                      * 判断参数 FlowName 是否已赋值
                      * @return FlowName 是否已赋值
+                     * 
                      */
                     bool FlowNameHasBeenSet() const;
 
                     /**
                      * 获取Flow status. Valid values: `IDLE`, `RUNNING`
                      * @return State Flow status. Valid values: `IDLE`, `RUNNING`
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置Flow status. Valid values: `IDLE`, `RUNNING`
-                     * @param State Flow status. Valid values: `IDLE`, `RUNNING`
+                     * @param _state Flow status. Valid values: `IDLE`, `RUNNING`
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Maximum bandwidth value.
                      * @return MaxBandwidth Maximum bandwidth value.
+                     * 
                      */
                     int64_t GetMaxBandwidth() const;
 
                     /**
                      * 设置Maximum bandwidth value.
-                     * @param MaxBandwidth Maximum bandwidth value.
+                     * @param _maxBandwidth Maximum bandwidth value.
+                     * 
                      */
                     void SetMaxBandwidth(const int64_t& _maxBandwidth);
 
                     /**
                      * 判断参数 MaxBandwidth 是否已赋值
                      * @return MaxBandwidth 是否已赋值
+                     * 
                      */
                     bool MaxBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Input group.
                      * @return InputGroup Input group.
+                     * 
                      */
                     std::vector<DescribeInput> GetInputGroup() const;
 
                     /**
                      * 设置Input group.
-                     * @param InputGroup Input group.
+                     * @param _inputGroup Input group.
+                     * 
                      */
                     void SetInputGroup(const std::vector<DescribeInput>& _inputGroup);
 
                     /**
                      * 判断参数 InputGroup 是否已赋值
                      * @return InputGroup 是否已赋值
+                     * 
                      */
                     bool InputGroupHasBeenSet() const;
 
@@ -143,20 +158,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OutputGroup Output group.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DescribeOutput> GetOutputGroup() const;
 
                     /**
                      * 设置Output group.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OutputGroup Output group.
+                     * @param _outputGroup Output group.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutputGroup(const std::vector<DescribeOutput>& _outputGroup);
 
                     /**
                      * 判断参数 OutputGroup 是否已赋值
                      * @return OutputGroup 是否已赋值
+                     * 
                      */
                     bool OutputGroupHasBeenSet() const;
 

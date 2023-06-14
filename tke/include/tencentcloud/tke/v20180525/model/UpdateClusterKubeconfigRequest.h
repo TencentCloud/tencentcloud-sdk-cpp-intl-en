@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The cluster ID.
                      * @return ClusterId The cluster ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The cluster ID.
-                     * @param ClusterId The cluster ID.
+                     * @param _clusterId The cluster ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of sub-account UINs. If it’s not specified, the SubUin used to invoke this API is used.
                      * @return SubAccounts List of sub-account UINs. If it’s not specified, the SubUin used to invoke this API is used.
+                     * 
                      */
                     std::vector<std::string> GetSubAccounts() const;
 
                     /**
                      * 设置List of sub-account UINs. If it’s not specified, the SubUin used to invoke this API is used.
-                     * @param SubAccounts List of sub-account UINs. If it’s not specified, the SubUin used to invoke this API is used.
+                     * @param _subAccounts List of sub-account UINs. If it’s not specified, the SubUin used to invoke this API is used.
+                     * 
                      */
                     void SetSubAccounts(const std::vector<std::string>& _subAccounts);
 
                     /**
                      * 判断参数 SubAccounts 是否已赋值
                      * @return SubAccounts 是否已赋值
+                     * 
                      */
                     bool SubAccountsHasBeenSet() const;
 

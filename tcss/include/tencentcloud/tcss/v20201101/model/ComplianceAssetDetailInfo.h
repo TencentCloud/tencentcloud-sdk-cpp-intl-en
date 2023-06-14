@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Customer asset ID
                      * @return CustomerAssetId Customer asset ID
+                     * 
                      */
                     uint64_t GetCustomerAssetId() const;
 
                     /**
                      * 设置Customer asset ID
-                     * @param CustomerAssetId Customer asset ID
+                     * @param _customerAssetId Customer asset ID
+                     * 
                      */
                     void SetCustomerAssetId(const uint64_t& _customerAssetId);
 
                     /**
                      * 判断参数 CustomerAssetId 是否已赋值
                      * @return CustomerAssetId 是否已赋值
+                     * 
                      */
                     bool CustomerAssetIdHasBeenSet() const;
 
                     /**
                      * 获取Asset type
                      * @return AssetType Asset type
+                     * 
                      */
                     std::string GetAssetType() const;
 
                     /**
                      * 设置Asset type
-                     * @param AssetType Asset type
+                     * @param _assetType Asset type
+                     * 
                      */
                     void SetAssetType(const std::string& _assetType);
 
                     /**
                      * 判断参数 AssetType 是否已赋值
                      * @return AssetType 是否已赋值
+                     * 
                      */
                     bool AssetTypeHasBeenSet() const;
 
                     /**
                      * 获取Asset name
                      * @return AssetName Asset name
+                     * 
                      */
                     std::string GetAssetName() const;
 
                     /**
                      * 设置Asset name
-                     * @param AssetName Asset name
+                     * @param _assetName Asset name
+                     * 
                      */
                     void SetAssetName(const std::string& _assetName);
 
                     /**
                      * 判断参数 AssetName 是否已赋值
                      * @return AssetName 是否已赋值
+                     * 
                      */
                     bool AssetNameHasBeenSet() const;
 
                     /**
                      * 获取Node name of the asset
                      * @return NodeName Node name of the asset
+                     * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 设置Node name of the asset
-                     * @param NodeName Node name of the asset
+                     * @param _nodeName Node name of the asset
+                     * 
                      */
                     void SetNodeName(const std::string& _nodeName);
 
                     /**
                      * 判断参数 NodeName 是否已赋值
                      * @return NodeName 是否已赋值
+                     * 
                      */
                     bool NodeNameHasBeenSet() const;
 
                     /**
                      * 获取Server name of the asset
                      * @return HostName Server name of the asset
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Server name of the asset
-                     * @param HostName Server name of the asset
+                     * @param _hostName Server name of the asset
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
                     /**
                      * 获取Server IP of the asset
                      * @return HostIP Server IP of the asset
+                     * 
                      */
                     std::string GetHostIP() const;
 
                     /**
                      * 设置Server IP of the asset
-                     * @param HostIP Server IP of the asset
+                     * @param _hostIP Server IP of the asset
+                     * 
                      */
                     void SetHostIP(const std::string& _hostIP);
 
                     /**
                      * 判断参数 HostIP 是否已赋值
                      * @return HostIP 是否已赋值
+                     * 
                      */
                     bool HostIPHasBeenSet() const;
 
@@ -165,6 +183,7 @@ namespace TencentCloud
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     std::string GetCheckStatus() const;
 
@@ -174,53 +193,61 @@ namespace TencentCloud
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
-                     * @param CheckStatus Check status
+                     * @param _checkStatus Check status
 `CHECK_INIT`: To be checked.
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
 
                     /**
                      * 判断参数 CheckStatus 是否已赋值
                      * @return CheckStatus 是否已赋值
+                     * 
                      */
                     bool CheckStatusHasBeenSet() const;
 
                     /**
                      * 获取Number of check items that the asset passed
                      * @return PassedPolicyItemCount Number of check items that the asset passed
+                     * 
                      */
                     uint64_t GetPassedPolicyItemCount() const;
 
                     /**
                      * 设置Number of check items that the asset passed
-                     * @param PassedPolicyItemCount Number of check items that the asset passed
+                     * @param _passedPolicyItemCount Number of check items that the asset passed
+                     * 
                      */
                     void SetPassedPolicyItemCount(const uint64_t& _passedPolicyItemCount);
 
                     /**
                      * 判断参数 PassedPolicyItemCount 是否已赋值
                      * @return PassedPolicyItemCount 是否已赋值
+                     * 
                      */
                     bool PassedPolicyItemCountHasBeenSet() const;
 
                     /**
                      * 获取Number of check items that the asset failed
                      * @return FailedPolicyItemCount Number of check items that the asset failed
+                     * 
                      */
                     uint64_t GetFailedPolicyItemCount() const;
 
                     /**
                      * 设置Number of check items that the asset failed
-                     * @param FailedPolicyItemCount Number of check items that the asset failed
+                     * @param _failedPolicyItemCount Number of check items that the asset failed
+                     * 
                      */
                     void SetFailedPolicyItemCount(const uint64_t& _failedPolicyItemCount);
 
                     /**
                      * 判断参数 FailedPolicyItemCount 是否已赋值
                      * @return FailedPolicyItemCount 是否已赋值
+                     * 
                      */
                     bool FailedPolicyItemCountHasBeenSet() const;
 
@@ -229,20 +256,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastCheckTime Last check time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastCheckTime() const;
 
                     /**
                      * 设置Last check time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LastCheckTime Last check time
+                     * @param _lastCheckTime Last check time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
 
                     /**
                      * 判断参数 LastCheckTime 是否已赋值
                      * @return LastCheckTime 是否已赋值
+                     * 
                      */
                     bool LastCheckTimeHasBeenSet() const;
 
@@ -255,6 +285,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCheckResult() const;
 
@@ -263,34 +294,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CheckResult Check result. Valid values:
+                     * @param _checkResult Check result. Valid values:
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
 
                     /**
                      * 判断参数 CheckResult 是否已赋值
                      * @return CheckResult 是否已赋值
+                     * 
                      */
                     bool CheckResultHasBeenSet() const;
 
                     /**
                      * 获取Asset status
                      * @return AssetStatus Asset status
+                     * 
                      */
                     std::string GetAssetStatus() const;
 
                     /**
                      * 设置Asset status
-                     * @param AssetStatus Asset status
+                     * @param _assetStatus Asset status
+                     * 
                      */
                     void SetAssetStatus(const std::string& _assetStatus);
 
                     /**
                      * 判断参数 AssetStatus 是否已赋值
                      * @return AssetStatus 是否已赋值
+                     * 
                      */
                     bool AssetStatusHasBeenSet() const;
 
@@ -305,6 +341,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ASSET_PAUSED`: Suspended.
 `ASSET_STOPPED`: Stopped.
 `ASSET_ABNORMAL`: Abnormal.
+                     * 
                      */
                     std::string GetAssetCreateTime() const;
 
@@ -314,17 +351,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ASSET_PAUSED`: Suspended.
 `ASSET_STOPPED`: Stopped.
 `ASSET_ABNORMAL`: Abnormal.
-                     * @param AssetCreateTime Asset creation time
+                     * @param _assetCreateTime Asset creation time
 `ASSET_NORMAL`: Running.
 `ASSET_PAUSED`: Suspended.
 `ASSET_STOPPED`: Stopped.
 `ASSET_ABNORMAL`: Abnormal.
+                     * 
                      */
                     void SetAssetCreateTime(const std::string& _assetCreateTime);
 
                     /**
                      * 判断参数 AssetCreateTime 是否已赋值
                      * @return AssetCreateTime 是否已赋值
+                     * 
                      */
                     bool AssetCreateTimeHasBeenSet() const;
 

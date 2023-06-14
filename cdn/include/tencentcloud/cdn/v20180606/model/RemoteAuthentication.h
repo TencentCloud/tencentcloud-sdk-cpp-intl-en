@@ -58,6 +58,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `on`: enable
 `off`: disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -66,16 +67,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `on`: enable
 `off`: disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Switch Remote authentication switch
+                     * @param _switch Remote authentication switch
 `on`: enable
 `off`: disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -84,20 +87,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RemoteAuthenticationRules Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RemoteAuthenticationRule> GetRemoteAuthenticationRules() const;
 
                     /**
                      * 设置Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RemoteAuthenticationRules Remote authentication rule configuration
+                     * @param _remoteAuthenticationRules Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemoteAuthenticationRules(const std::vector<RemoteAuthenticationRule>& _remoteAuthenticationRules);
 
                     /**
                      * 判断参数 RemoteAuthenticationRules 是否已赋值
                      * @return RemoteAuthenticationRules 是否已赋值
+                     * 
                      */
                     bool RemoteAuthenticationRulesHasBeenSet() const;
 
@@ -106,20 +112,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Server Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServer() const;
 
                     /**
                      * 设置Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Server Remote authentication server
+                     * @param _server Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServer(const std::string& _server);
 
                     /**
                      * 判断参数 Server 是否已赋值
                      * @return Server 是否已赋值
+                     * 
                      */
                     bool ServerHasBeenSet() const;
 

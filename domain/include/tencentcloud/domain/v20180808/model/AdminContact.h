@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取The first name.
                      * @return FirstName The first name.
+                     * 
                      */
                     std::string GetFirstName() const;
 
                     /**
                      * 设置The first name.
-                     * @param FirstName The first name.
+                     * @param _firstName The first name.
+                     * 
                      */
                     void SetFirstName(const std::string& _firstName);
 
                     /**
                      * 判断参数 FirstName 是否已赋值
                      * @return FirstName 是否已赋值
+                     * 
                      */
                     bool FirstNameHasBeenSet() const;
 
                     /**
                      * 获取The last name.
                      * @return LastName The last name.
+                     * 
                      */
                     std::string GetLastName() const;
 
                     /**
                      * 设置The last name.
-                     * @param LastName The last name.
+                     * @param _lastName The last name.
+                     * 
                      */
                     void SetLastName(const std::string& _lastName);
 
                     /**
                      * 判断参数 LastName 是否已赋值
                      * @return LastName 是否已赋值
+                     * 
                      */
                     bool LastNameHasBeenSet() const;
 
                     /**
                      * 获取The country or region name, such as `CN`.
                      * @return Country The country or region name, such as `CN`.
+                     * 
                      */
                     std::string GetCountry() const;
 
                     /**
                      * 设置The country or region name, such as `CN`.
-                     * @param Country The country or region name, such as `CN`.
+                     * @param _country The country or region name, such as `CN`.
+                     * 
                      */
                     void SetCountry(const std::string& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
                     /**
                      * 获取The province or state name.
                      * @return Province The province or state name.
+                     * 
                      */
                     std::string GetProvince() const;
 
                     /**
                      * 设置The province or state name.
-                     * @param Province The province or state name.
+                     * @param _province The province or state name.
+                     * 
                      */
                     void SetProvince(const std::string& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
                     /**
                      * 获取The city name.
                      * @return City The city name.
+                     * 
                      */
                     std::string GetCity() const;
 
                     /**
                      * 设置The city name.
-                     * @param City The city name.
+                     * @param _city The city name.
+                     * 
                      */
                     void SetCity(const std::string& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 
                     /**
                      * 获取The address line 1.
                      * @return AddressLine The address line 1.
+                     * 
                      */
                     std::string GetAddressLine() const;
 
                     /**
                      * 设置The address line 1.
-                     * @param AddressLine The address line 1.
+                     * @param _addressLine The address line 1.
+                     * 
                      */
                     void SetAddressLine(const std::string& _addressLine);
 
                     /**
                      * 判断参数 AddressLine 是否已赋值
                      * @return AddressLine 是否已赋值
+                     * 
                      */
                     bool AddressLineHasBeenSet() const;
 
                     /**
                      * 获取The zip code.
                      * @return ZipCode The zip code.
+                     * 
                      */
                     std::string GetZipCode() const;
 
                     /**
                      * 设置The zip code.
-                     * @param ZipCode The zip code.
+                     * @param _zipCode The zip code.
+                     * 
                      */
                     void SetZipCode(const std::string& _zipCode);
 
                     /**
                      * 判断参数 ZipCode 是否已赋值
                      * @return ZipCode 是否已赋值
+                     * 
                      */
                     bool ZipCodeHasBeenSet() const;
 
                     /**
                      * 获取The email address.
                      * @return Email The email address.
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 设置The email address.
-                     * @param Email The email address.
+                     * @param _email The email address.
+                     * 
                      */
                     void SetEmail(const std::string& _email);
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 
                     /**
                      * 获取The mobile number, such as `+86.13600000000`.
                      * @return Phone The mobile number, such as `+86.13600000000`.
+                     * 
                      */
                     std::string GetPhone() const;
 
                     /**
                      * 设置The mobile number, such as `+86.13600000000`.
-                     * @param Phone The mobile number, such as `+86.13600000000`.
+                     * @param _phone The mobile number, such as `+86.13600000000`.
+                     * 
                      */
                     void SetPhone(const std::string& _phone);
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
@@ -213,20 +240,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompanyName The company or organization name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCompanyName() const;
 
                     /**
                      * 设置The company or organization name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CompanyName The company or organization name.
+                     * @param _companyName The company or organization name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompanyName(const std::string& _companyName);
 
                     /**
                      * 判断参数 CompanyName 是否已赋值
                      * @return CompanyName 是否已赋值
+                     * 
                      */
                     bool CompanyNameHasBeenSet() const;
 
@@ -235,20 +265,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JobTitle The job title.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetJobTitle() const;
 
                     /**
                      * 设置The job title.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param JobTitle The job title.
+                     * @param _jobTitle The job title.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetJobTitle(const std::string& _jobTitle);
 
                     /**
                      * 判断参数 JobTitle 是否已赋值
                      * @return JobTitle 是否已赋值
+                     * 
                      */
                     bool JobTitleHasBeenSet() const;
 
@@ -257,20 +290,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AddressLineTwo The address line 2.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddressLineTwo() const;
 
                     /**
                      * 设置The address line 2.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AddressLineTwo The address line 2.
+                     * @param _addressLineTwo The address line 2.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddressLineTwo(const std::string& _addressLineTwo);
 
                     /**
                      * 判断参数 AddressLineTwo 是否已赋值
                      * @return AddressLineTwo 是否已赋值
+                     * 
                      */
                     bool AddressLineTwoHasBeenSet() const;
 
@@ -279,20 +315,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Fax The fax number.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFax() const;
 
                     /**
                      * 设置The fax number.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Fax The fax number.
+                     * @param _fax The fax number.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFax(const std::string& _fax);
 
                     /**
                      * 判断参数 Fax 是否已赋值
                      * @return Fax 是否已赋值
+                     * 
                      */
                     bool FaxHasBeenSet() const;
 

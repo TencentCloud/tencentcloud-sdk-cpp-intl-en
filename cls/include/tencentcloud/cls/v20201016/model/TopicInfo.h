@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Logset ID
                      * @return LogsetId Logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置Logset ID
-                     * @param LogsetId Logset ID
+                     * @param _logsetId Logset ID
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Log topic name
                      * @return TopicName Log topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Log topic name
-                     * @param TopicName Log topic name
+                     * @param _topicName Log topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Number of topic partitions
                      * @return PartitionCount Number of topic partitions
+                     * 
                      */
                     int64_t GetPartitionCount() const;
 
                     /**
                      * 设置Number of topic partitions
-                     * @param PartitionCount Number of topic partitions
+                     * @param _partitionCount Number of topic partitions
+                     * 
                      */
                     void SetPartitionCount(const int64_t& _partitionCount);
 
                     /**
                      * 判断参数 PartitionCount 是否已赋值
                      * @return PartitionCount 是否已赋值
+                     * 
                      */
                     bool PartitionCountHasBeenSet() const;
 
                     /**
                      * 获取Whether index is enabled
                      * @return Index Whether index is enabled
+                     * 
                      */
                     bool GetIndex() const;
 
                     /**
                      * 设置Whether index is enabled
-                     * @param Index Whether index is enabled
+                     * @param _index Whether index is enabled
+                     * 
                      */
                     void SetIndex(const bool& _index);
 
                     /**
                      * 判断参数 Index 是否已赋值
                      * @return Index 是否已赋值
+                     * 
                      */
                     bool IndexHasBeenSet() const;
 
@@ -142,56 +157,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAssumerName() const;
 
                     /**
                      * 设置Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+                     * @param _assumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAssumerName(const std::string& _assumerName);
 
                     /**
                      * 判断参数 AssumerName 是否已赋值
                      * @return AssumerName 是否已赋值
+                     * 
                      */
                     bool AssumerNameHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether collection is enabled in the log topic
                      * @return Status Whether collection is enabled in the log topic
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Whether collection is enabled in the log topic
-                     * @param Status Whether collection is enabled in the log topic
+                     * @param _status Whether collection is enabled in the log topic
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -200,20 +224,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tags Information of tags bound to log topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Information of tags bound to log topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Tags Information of tags bound to log topic
+                     * @param _tags Information of tags bound to log topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -222,20 +249,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AutoSplit Whether automatic split is enabled for this topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAutoSplit() const;
 
                     /**
                      * 设置Whether automatic split is enabled for this topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AutoSplit Whether automatic split is enabled for this topic
+                     * @param _autoSplit Whether automatic split is enabled for this topic
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoSplit(const bool& _autoSplit);
 
                     /**
                      * 判断参数 AutoSplit 是否已赋值
                      * @return AutoSplit 是否已赋值
+                     * 
                      */
                     bool AutoSplitHasBeenSet() const;
 
@@ -244,20 +274,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxSplitPartitions() const;
 
                     /**
                      * 设置Maximum number of partitions to split into for this topic if automatic split is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
+                     * @param _maxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxSplitPartitions(const int64_t& _maxSplitPartitions);
 
                     /**
                      * 判断参数 MaxSplitPartitions 是否已赋值
                      * @return MaxSplitPartitions 是否已赋值
+                     * 
                      */
                     bool MaxSplitPartitionsHasBeenSet() const;
 
@@ -266,20 +299,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StorageType Log topic storage class
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStorageType() const;
 
                     /**
                      * 设置Log topic storage class
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param StorageType Log topic storage class
+                     * @param _storageType Log topic storage class
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStorageType(const std::string& _storageType);
 
                     /**
                      * 判断参数 StorageType 是否已赋值
                      * @return StorageType 是否已赋值
+                     * 
                      */
                     bool StorageTypeHasBeenSet() const;
 
@@ -288,20 +324,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+                     * @param _period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
@@ -310,20 +349,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubAssumerName() const;
 
                     /**
                      * 设置Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+                     * @param _subAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubAssumerName(const std::string& _subAssumerName);
 
                     /**
                      * 判断参数 SubAssumerName 是否已赋值
                      * @return SubAssumerName 是否已赋值
+                     * 
                      */
                     bool SubAssumerNameHasBeenSet() const;
 
@@ -332,20 +374,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Describes Log topic description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescribes() const;
 
                     /**
                      * 设置Log topic description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Describes Log topic description
+                     * @param _describes Log topic description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescribes(const std::string& _describes);
 
                     /**
                      * 判断参数 Describes 是否已赋值
                      * @return Describes 是否已赋值
+                     * 
                      */
                     bool DescribesHasBeenSet() const;
 
@@ -356,6 +401,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
 The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetHotPeriod() const;
 
@@ -363,15 +409,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
 The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+                     * @param _hotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
 The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHotPeriod(const uint64_t& _hotPeriod);
 
                     /**
                      * 判断参数 HotPeriod 是否已赋值
                      * @return HotPeriod 是否已赋值
+                     * 
                      */
                     bool HotPeriodHasBeenSet() const;
 

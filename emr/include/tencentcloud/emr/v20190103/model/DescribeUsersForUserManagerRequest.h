@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster instance ID
                      * @return InstanceId Cluster instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Cluster instance ID
-                     * @param InstanceId Cluster instance ID
+                     * @param _instanceId Cluster instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Page number
                      * @return PageNo Page number
+                     * 
                      */
                     int64_t GetPageNo() const;
 
                     /**
                      * 设置Page number
-                     * @param PageNo Page number
+                     * @param _pageNo Page number
+                     * 
                      */
                     void SetPageNo(const int64_t& _pageNo);
 
                     /**
                      * 判断参数 PageNo 是否已赋值
                      * @return PageNo 是否已赋值
+                     * 
                      */
                     bool PageNoHasBeenSet() const;
 
                     /**
                      * 获取Page size
                      * @return PageSize Page size
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置Page size
-                     * @param PageSize Page size
+                     * @param _pageSize Page size
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取User list query filter
                      * @return UserManagerFilter User list query filter
+                     * 
                      */
                     UserManagerFilter GetUserManagerFilter() const;
 
                     /**
                      * 设置User list query filter
-                     * @param UserManagerFilter User list query filter
+                     * @param _userManagerFilter User list query filter
+                     * 
                      */
                     void SetUserManagerFilter(const UserManagerFilter& _userManagerFilter);
 
                     /**
                      * 判断参数 UserManagerFilter 是否已赋值
                      * @return UserManagerFilter 是否已赋值
+                     * 
                      */
                     bool UserManagerFilterHasBeenSet() const;
 
                     /**
                      * 获取Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
                      * @return NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+                     * 
                      */
                     bool GetNeedKeytabInfo() const;
 
                     /**
                      * 设置Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
-                     * @param NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+                     * @param _needKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+                     * 
                      */
                     void SetNeedKeytabInfo(const bool& _needKeytabInfo);
 
                     /**
                      * 判断参数 NeedKeytabInfo 是否已赋值
                      * @return NeedKeytabInfo 是否已赋值
+                     * 
                      */
                     bool NeedKeytabInfoHasBeenSet() const;
 

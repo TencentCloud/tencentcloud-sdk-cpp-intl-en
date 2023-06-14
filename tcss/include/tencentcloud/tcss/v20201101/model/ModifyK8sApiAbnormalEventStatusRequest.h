@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Event ID set
                      * @return EventIDSet Event ID set
+                     * 
                      */
                     std::vector<uint64_t> GetEventIDSet() const;
 
                     /**
                      * 设置Event ID set
-                     * @param EventIDSet Event ID set
+                     * @param _eventIDSet Event ID set
+                     * 
                      */
                     void SetEventIDSet(const std::vector<uint64_t>& _eventIDSet);
 
                     /**
                      * 判断参数 EventIDSet 是否已赋值
                      * @return EventIDSet 是否已赋值
+                     * 
                      */
                     bool EventIDSetHasBeenSet() const;
 
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

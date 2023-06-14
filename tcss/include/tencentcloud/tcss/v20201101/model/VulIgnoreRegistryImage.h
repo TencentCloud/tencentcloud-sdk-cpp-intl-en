@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Record ID
                      * @return ID Record ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Record ID
-                     * @param ID Record ID
+                     * @param _iD Record ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Repository name
                      * @return RegistryName Repository name
+                     * 
                      */
                     std::string GetRegistryName() const;
 
                     /**
                      * 设置Repository name
-                     * @param RegistryName Repository name
+                     * @param _registryName Repository name
+                     * 
                      */
                     void SetRegistryName(const std::string& _registryName);
 
                     /**
                      * 判断参数 RegistryName 是否已赋值
                      * @return RegistryName 是否已赋值
+                     * 
                      */
                     bool RegistryNameHasBeenSet() const;
 
                     /**
                      * 获取Image tag
                      * @return ImageVersion Image tag
+                     * 
                      */
                     std::string GetImageVersion() const;
 
                     /**
                      * 设置Image tag
-                     * @param ImageVersion Image tag
+                     * @param _imageVersion Image tag
+                     * 
                      */
                     void SetImageVersion(const std::string& _imageVersion);
 
                     /**
                      * 判断参数 ImageVersion 是否已赋值
                      * @return ImageVersion 是否已赋值
+                     * 
                      */
                     bool ImageVersionHasBeenSet() const;
 
                     /**
                      * 获取Repository address
                      * @return RegistryPath Repository address
+                     * 
                      */
                     std::string GetRegistryPath() const;
 
                     /**
                      * 设置Repository address
-                     * @param RegistryPath Repository address
+                     * @param _registryPath Repository address
+                     * 
                      */
                     void SetRegistryPath(const std::string& _registryPath);
 
                     /**
                      * 判断参数 RegistryPath 是否已赋值
                      * @return RegistryPath 是否已赋值
+                     * 
                      */
                     bool RegistryPathHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
                     /**
                      * 获取POC ID
                      * @return PocID POC ID
+                     * 
                      */
                     std::string GetPocID() const;
 
                     /**
                      * 设置POC ID
-                     * @param PocID POC ID
+                     * @param _pocID POC ID
+                     * 
                      */
                     void SetPocID(const std::string& _pocID);
 
                     /**
                      * 判断参数 PocID 是否已赋值
                      * @return PocID 是否已赋值
+                     * 
                      */
                     bool PocIDHasBeenSet() const;
 

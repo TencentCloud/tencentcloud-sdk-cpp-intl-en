@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Number of health checks
                      * @return ProbeFailedTimes Number of health checks
+                     * 
                      */
                     int64_t GetProbeFailedTimes() const;
 
                     /**
                      * 设置Number of health checks
-                     * @param ProbeFailedTimes Number of health checks
+                     * @param _probeFailedTimes Number of health checks
+                     * 
                      */
                     void SetProbeFailedTimes(const int64_t& _probeFailedTimes);
 
                     /**
                      * 判断参数 ProbeFailedTimes 是否已赋值
                      * @return ProbeFailedTimes 是否已赋值
+                     * 
                      */
                     bool ProbeFailedTimesHasBeenSet() const;
 
                     /**
                      * 获取Health check interval
                      * @return Interval Health check interval
+                     * 
                      */
                     int64_t GetInterval() const;
 
                     /**
                      * 设置Health check interval
-                     * @param Interval Health check interval
+                     * @param _interval Health check interval
+                     * 
                      */
                     void SetInterval(const int64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取IP address for the health check
                      * @return DestinationIp IP address for the health check
+                     * 
                      */
                     std::string GetDestinationIp() const;
 
                     /**
                      * 设置IP address for the health check
-                     * @param DestinationIp IP address for the health check
+                     * @param _destinationIp IP address for the health check
+                     * 
                      */
                     void SetDestinationIp(const std::string& _destinationIp);
 
                     /**
                      * 判断参数 DestinationIp 是否已赋值
                      * @return DestinationIp 是否已赋值
+                     * 
                      */
                     bool DestinationIpHasBeenSet() const;
 

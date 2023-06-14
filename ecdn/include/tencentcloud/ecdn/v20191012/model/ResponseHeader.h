@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Custom response header switch. Valid values: on, off.
                      * @return Switch Custom response header switch. Valid values: on, off.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Custom response header switch. Valid values: on, off.
-                     * @param Switch Custom response header switch. Valid values: on, off.
+                     * @param _switch Custom response header switch. Valid values: on, off.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HeaderRules Custom response header rule array.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<HttpHeaderPathRule> GetHeaderRules() const;
 
                     /**
                      * 设置Custom response header rule array.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HeaderRules Custom response header rule array.
+                     * @param _headerRules Custom response header rule array.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaderRules(const std::vector<HttpHeaderPathRule>& _headerRules);
 
                     /**
                      * 判断参数 HeaderRules 是否已赋值
                      * @return HeaderRules 是否已赋值
+                     * 
                      */
                     bool HeaderRulesHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the product to which the device belongs
                      * @return ProductId ID of the product to which the device belongs
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置ID of the product to which the device belongs
-                     * @param ProductId ID of the product to which the device belongs
+                     * @param _productId ID of the product to which the device belongs
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取Device names
                      * @return DeviceNames Device names
+                     * 
                      */
                     std::vector<std::string> GetDeviceNames() const;
 
                     /**
                      * 设置Device names
-                     * @param DeviceNames Device names
+                     * @param _deviceNames Device names
+                     * 
                      */
                     void SetDeviceNames(const std::vector<std::string>& _deviceNames);
 
                     /**
                      * 判断参数 DeviceNames 是否已赋值
                      * @return DeviceNames 是否已赋值
+                     * 
                      */
                     bool DeviceNamesHasBeenSet() const;
 
                     /**
                      * 获取New status of the devices. `0`: disabled; `1`: enabled
                      * @return Status New status of the devices. `0`: disabled; `1`: enabled
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置New status of the devices. `0`: disabled; `1`: enabled
-                     * @param Status New status of the devices. `0`: disabled; `1`: enabled
+                     * @param _status New status of the devices. `0`: disabled; `1`: enabled
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

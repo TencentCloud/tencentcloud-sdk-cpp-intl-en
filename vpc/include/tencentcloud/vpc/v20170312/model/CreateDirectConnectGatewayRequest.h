@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The name of the direct connect gateway.
                      * @return DirectConnectGatewayName The name of the direct connect gateway.
+                     * 
                      */
                     std::string GetDirectConnectGatewayName() const;
 
                     /**
                      * 设置The name of the direct connect gateway.
-                     * @param DirectConnectGatewayName The name of the direct connect gateway.
+                     * @param _directConnectGatewayName The name of the direct connect gateway.
+                     * 
                      */
                     void SetDirectConnectGatewayName(const std::string& _directConnectGatewayName);
 
                     /**
                      * 判断参数 DirectConnectGatewayName 是否已赋值
                      * @return DirectConnectGatewayName 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayNameHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return NetworkType The type of the associated network. Valid values:
 <li>VPC</li>
 <li>CCN</li>
+                     * 
                      */
                     std::string GetNetworkType() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置The type of the associated network. Valid values:
 <li>VPC</li>
 <li>CCN</li>
-                     * @param NetworkType The type of the associated network. Valid values:
+                     * @param _networkType The type of the associated network. Valid values:
 <li>VPC</li>
 <li>CCN</li>
+                     * 
                      */
                     void SetNetworkType(const std::string& _networkType);
 
                     /**
                      * 判断参数 NetworkType 是否已赋值
                      * @return NetworkType 是否已赋值
+                     * 
                      */
                     bool NetworkTypeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ namespace TencentCloud
 <li>When the NetworkType is CCN, this value is the CCN instance ID</li>
                      * @return NetworkInstanceId <li>When the NetworkType is VPC, this value is the VPC instance ID</li>
 <li>When the NetworkType is CCN, this value is the CCN instance ID</li>
+                     * 
                      */
                     std::string GetNetworkInstanceId() const;
 
                     /**
                      * 设置<li>When the NetworkType is VPC, this value is the VPC instance ID</li>
 <li>When the NetworkType is CCN, this value is the CCN instance ID</li>
-                     * @param NetworkInstanceId <li>When the NetworkType is VPC, this value is the VPC instance ID</li>
+                     * @param _networkInstanceId <li>When the NetworkType is VPC, this value is the VPC instance ID</li>
 <li>When the NetworkType is CCN, this value is the CCN instance ID</li>
+                     * 
                      */
                     void SetNetworkInstanceId(const std::string& _networkInstanceId);
 
                     /**
                      * 判断参数 NetworkInstanceId 是否已赋值
                      * @return NetworkInstanceId 是否已赋值
+                     * 
                      */
                     bool NetworkInstanceIdHasBeenSet() const;
 
@@ -115,6 +124,7 @@ namespace TencentCloud
                      * @return GatewayType The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+                     * 
                      */
                     std::string GetGatewayType() const;
 
@@ -122,69 +132,80 @@ namespace TencentCloud
                      * 设置The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
-                     * @param GatewayType The type of the gateway. Valid values:
+                     * @param _gatewayType The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+                     * 
                      */
                     void SetGatewayType(const std::string& _gatewayType);
 
                     /**
                      * 判断参数 GatewayType 是否已赋值
                      * @return GatewayType 是否已赋值
+                     * 
                      */
                     bool GatewayTypeHasBeenSet() const;
 
                     /**
                      * 获取CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
                      * @return ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     * 
                      */
                     std::string GetModeType() const;
 
                     /**
                      * 设置CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
-                     * @param ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     * @param _modeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+                     * 
                      */
                     void SetModeType(const std::string& _modeType);
 
                     /**
                      * 判断参数 ModeType 是否已赋值
                      * @return ModeType 是否已赋值
+                     * 
                      */
                     bool ModeTypeHasBeenSet() const;
 
                     /**
                      * 获取Availability zone where the direct connect gateway resides.
                      * @return Zone Availability zone where the direct connect gateway resides.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone where the direct connect gateway resides.
-                     * @param Zone Availability zone where the direct connect gateway resides.
+                     * @param _zone Availability zone where the direct connect gateway resides.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取ID of DC highly available placement group
                      * @return HaZoneGroupId ID of DC highly available placement group
+                     * 
                      */
                     std::string GetHaZoneGroupId() const;
 
                     /**
                      * 设置ID of DC highly available placement group
-                     * @param HaZoneGroupId ID of DC highly available placement group
+                     * @param _haZoneGroupId ID of DC highly available placement group
+                     * 
                      */
                     void SetHaZoneGroupId(const std::string& _haZoneGroupId);
 
                     /**
                      * 判断参数 HaZoneGroupId 是否已赋值
                      * @return HaZoneGroupId 是否已赋值
+                     * 
                      */
                     bool HaZoneGroupIdHasBeenSet() const;
 

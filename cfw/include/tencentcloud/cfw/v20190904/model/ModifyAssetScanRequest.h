@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Scan range. 1: port; 2: port + vulnerability scan
                      * @return ScanRange Scan range. 1: port; 2: port + vulnerability scan
+                     * 
                      */
                     int64_t GetScanRange() const;
 
                     /**
                      * 设置Scan range. 1: port; 2: port + vulnerability scan
-                     * @param ScanRange Scan range. 1: port; 2: port + vulnerability scan
+                     * @param _scanRange Scan range. 1: port; 2: port + vulnerability scan
+                     * 
                      */
                     void SetScanRange(const int64_t& _scanRange);
 
                     /**
                      * 判断参数 ScanRange 是否已赋值
                      * @return ScanRange 是否已赋值
+                     * 
                      */
                     bool ScanRangeHasBeenSet() const;
 
                     /**
                      * 获取Scan mode: 'heavy', 'medium', 'light'
                      * @return ScanDeep Scan mode: 'heavy', 'medium', 'light'
+                     * 
                      */
                     std::string GetScanDeep() const;
 
                     /**
                      * 设置Scan mode: 'heavy', 'medium', 'light'
-                     * @param ScanDeep Scan mode: 'heavy', 'medium', 'light'
+                     * @param _scanDeep Scan mode: 'heavy', 'medium', 'light'
+                     * 
                      */
                     void SetScanDeep(const std::string& _scanDeep);
 
                     /**
                      * 判断参数 ScanDeep 是否已赋值
                      * @return ScanDeep 是否已赋值
+                     * 
                      */
                     bool ScanDeepHasBeenSet() const;
 
                     /**
                      * 获取Scan type. 1: scan now; 2: periodic scan
                      * @return RangeType Scan type. 1: scan now; 2: periodic scan
+                     * 
                      */
                     int64_t GetRangeType() const;
 
                     /**
                      * 设置Scan type. 1: scan now; 2: periodic scan
-                     * @param RangeType Scan type. 1: scan now; 2: periodic scan
+                     * @param _rangeType Scan type. 1: scan now; 2: periodic scan
+                     * 
                      */
                     void SetRangeType(const int64_t& _rangeType);
 
                     /**
                      * 判断参数 RangeType 是否已赋值
                      * @return RangeType 是否已赋值
+                     * 
                      */
                     bool RangeTypeHasBeenSet() const;
 
                     /**
                      * 获取Scheduled task time, required when RangeType is 2
                      * @return ScanPeriod Scheduled task time, required when RangeType is 2
+                     * 
                      */
                     std::string GetScanPeriod() const;
 
                     /**
                      * 设置Scheduled task time, required when RangeType is 2
-                     * @param ScanPeriod Scheduled task time, required when RangeType is 2
+                     * @param _scanPeriod Scheduled task time, required when RangeType is 2
+                     * 
                      */
                     void SetScanPeriod(const std::string& _scanPeriod);
 
                     /**
                      * 判断参数 ScanPeriod 是否已赋值
                      * @return ScanPeriod 是否已赋值
+                     * 
                      */
                     bool ScanPeriodHasBeenSet() const;
 
                     /**
                      * 获取Scans this field now and passes the filtered IPs
                      * @return ScanFilterIp Scans this field now and passes the filtered IPs
+                     * 
                      */
                     std::vector<std::string> GetScanFilterIp() const;
 
                     /**
                      * 设置Scans this field now and passes the filtered IPs
-                     * @param ScanFilterIp Scans this field now and passes the filtered IPs
+                     * @param _scanFilterIp Scans this field now and passes the filtered IPs
+                     * 
                      */
                     void SetScanFilterIp(const std::vector<std::string>& _scanFilterIp);
 
                     /**
                      * 判断参数 ScanFilterIp 是否已赋值
                      * @return ScanFilterIp 是否已赋值
+                     * 
                      */
                     bool ScanFilterIpHasBeenSet() const;
 
                     /**
                      * 获取1: all; 2: single
                      * @return ScanType 1: all; 2: single
+                     * 
                      */
                     int64_t GetScanType() const;
 
                     /**
                      * 设置1: all; 2: single
-                     * @param ScanType 1: all; 2: single
+                     * @param _scanType 1: all; 2: single
+                     * 
                      */
                     void SetScanType(const int64_t& _scanType);
 
                     /**
                      * 判断参数 ScanType 是否已赋值
                      * @return ScanType 是否已赋值
+                     * 
                      */
                     bool ScanTypeHasBeenSet() const;
 

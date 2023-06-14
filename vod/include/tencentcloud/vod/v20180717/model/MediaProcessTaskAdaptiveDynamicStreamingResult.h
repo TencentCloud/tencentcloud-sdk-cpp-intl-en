@@ -51,126 +51,147 @@ namespace TencentCloud
                     /**
                      * 获取Task status. Valid values: PROCESSING, SUCCESS, FAIL.
                      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * @param _status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
                      * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
                      * 设置Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-                     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * @param _errCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
 
                     /**
                      * 判断参数 ErrCodeExt 是否已赋值
                      * @return ErrCodeExt 是否已赋值
+                     * 
                      */
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
                      * 获取Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
                      * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-                     * @param ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * @param _errCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return Message Error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
-                     * @param Message Error message.
+                     * @param _message Error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取The progress of the adaptive bitrate task. Value range: 0-100.
                      * @return Progress The progress of the adaptive bitrate task. Value range: 0-100.
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置The progress of the adaptive bitrate task. Value range: 0-100.
-                     * @param Progress The progress of the adaptive bitrate task. Value range: 0-100.
+                     * @param _progress The progress of the adaptive bitrate task. Value range: 0-100.
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Input of adaptive bitrate streaming task.
                      * @return Input Input of adaptive bitrate streaming task.
+                     * 
                      */
                     AdaptiveDynamicStreamingTaskInput GetInput() const;
 
                     /**
                      * 设置Input of adaptive bitrate streaming task.
-                     * @param Input Input of adaptive bitrate streaming task.
+                     * @param _input Input of adaptive bitrate streaming task.
+                     * 
                      */
                     void SetInput(const AdaptiveDynamicStreamingTaskInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
                     /**
                      * 获取Output of adaptive bitrate streaming task.
                      * @return Output Output of adaptive bitrate streaming task.
+                     * 
                      */
                     AdaptiveDynamicStreamingInfoItem GetOutput() const;
 
                     /**
                      * 设置Output of adaptive bitrate streaming task.
-                     * @param Output Output of adaptive bitrate streaming task.
+                     * @param _output Output of adaptive bitrate streaming task.
+                     * 
                      */
                     void SetOutput(const AdaptiveDynamicStreamingInfoItem& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 

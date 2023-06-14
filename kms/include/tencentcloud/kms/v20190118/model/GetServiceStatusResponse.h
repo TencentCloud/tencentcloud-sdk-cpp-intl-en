@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether the KMS service has been activated. true: activated
                      * @return ServiceEnabled Whether the KMS service has been activated. true: activated
+                     * 
                      */
                     bool GetServiceEnabled() const;
 
                     /**
                      * 判断参数 ServiceEnabled 是否已赋值
                      * @return ServiceEnabled 是否已赋值
+                     * 
                      */
                     bool ServiceEnabledHasBeenSet() const;
 
                     /**
                      * 获取Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
                      * @return InvalidType Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+                     * 
                      */
                     int64_t GetInvalidType() const;
 
                     /**
                      * 判断参数 InvalidType 是否已赋值
                      * @return InvalidType 是否已赋值
+                     * 
                      */
                     bool InvalidTypeHasBeenSet() const;
 
                     /**
                      * 获取0: Basic Edition, 1: Ultimate Edition
                      * @return UserLevel 0: Basic Edition, 1: Ultimate Edition
+                     * 
                      */
                     uint64_t GetUserLevel() const;
 
                     /**
                      * 判断参数 UserLevel 是否已赋值
                      * @return UserLevel 是否已赋值
+                     * 
                      */
                     bool UserLevelHasBeenSet() const;
 
@@ -84,12 +90,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProExpireTime Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetProExpireTime() const;
 
                     /**
                      * 判断参数 ProExpireTime 是否已赋值
                      * @return ProExpireTime 是否已赋值
+                     * 
                      */
                     bool ProExpireTimeHasBeenSet() const;
 
@@ -98,12 +106,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProRenewFlag Whether to automatically renew Ultimate Edition. 0: no, 1: yes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetProRenewFlag() const;
 
                     /**
                      * 判断参数 ProRenewFlag 是否已赋值
                      * @return ProRenewFlag 是否已赋值
+                     * 
                      */
                     bool ProRenewFlagHasBeenSet() const;
 
@@ -112,12 +122,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProResourceId() const;
 
                     /**
                      * 判断参数 ProResourceId 是否已赋值
                      * @return ProResourceId 是否已赋值
+                     * 
                      */
                     bool ProResourceIdHasBeenSet() const;
 
@@ -126,12 +138,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ExclusiveVSMEnabled Whether to activate Managed KMS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetExclusiveVSMEnabled() const;
 
                     /**
                      * 判断参数 ExclusiveVSMEnabled 是否已赋值
                      * @return ExclusiveVSMEnabled 是否已赋值
+                     * 
                      */
                     bool ExclusiveVSMEnabledHasBeenSet() const;
 
@@ -140,12 +154,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ExclusiveHSMEnabled Whether to activate Exclusive KMS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetExclusiveHSMEnabled() const;
 
                     /**
                      * 判断参数 ExclusiveHSMEnabled 是否已赋值
                      * @return ExclusiveHSMEnabled 是否已赋值
+                     * 
                      */
                     bool ExclusiveHSMEnabledHasBeenSet() const;
 
@@ -154,12 +170,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubscriptionInfo KMS subscription information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubscriptionInfo() const;
 
                     /**
                      * 判断参数 SubscriptionInfo 是否已赋值
                      * @return SubscriptionInfo 是否已赋值
+                     * 
                      */
                     bool SubscriptionInfoHasBeenSet() const;
 

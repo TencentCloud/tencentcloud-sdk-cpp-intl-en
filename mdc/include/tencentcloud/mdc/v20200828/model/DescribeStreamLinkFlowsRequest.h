@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of the current page. Default value: `1`
                      * @return PageNum Number of the current page. Default value: `1`
+                     * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
                      * 设置Number of the current page. Default value: `1`
-                     * @param PageNum Number of the current page. Default value: `1`
+                     * @param _pageNum Number of the current page. Default value: `1`
+                     * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Default value: `10`
                      * @return PageSize Number of entries per page. Default value: `10`
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page. Default value: `10`
-                     * @param PageSize Number of entries per page. Default value: `10`
+                     * @param _pageSize Number of entries per page. Default value: `10`
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

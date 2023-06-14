@@ -52,6 +52,7 @@ namespace TencentCloud
 <li>EventType- String - Required: No - Allowed event type. Valid values: `ESCAPE_CGROUPS` (cgroup escape); `ESCAPE_TAMPER_SENSITIVE_FILE` (file tamper escape); `ESCAPE_DOCKER_API` (Docker API access escape); `ESCAPE_VUL_OCCURRED` (vulnerability exploit); `MOUNT_SENSITIVE_PTAH` (sensitive path mount); `PRIVILEGE_CONTAINER_START` (privileged container); `PRIVILEGE` (program privilege escalation escape).</li>
 <li>ImageName- string - Required: No - Image name</li>
 <li>ImageID- string - Required: No - Image ID</li>
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
@@ -60,88 +61,102 @@ namespace TencentCloud
 <li>EventType- String - Required: No - Allowed event type. Valid values: `ESCAPE_CGROUPS` (cgroup escape); `ESCAPE_TAMPER_SENSITIVE_FILE` (file tamper escape); `ESCAPE_DOCKER_API` (Docker API access escape); `ESCAPE_VUL_OCCURRED` (vulnerability exploit); `MOUNT_SENSITIVE_PTAH` (sensitive path mount); `PRIVILEGE_CONTAINER_START` (privileged container); `PRIVILEGE` (program privilege escalation escape).</li>
 <li>ImageName- string - Required: No - Image name</li>
 <li>ImageID- string - Required: No - Image ID</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>EventType- String - Required: No - Allowed event type. Valid values: `ESCAPE_CGROUPS` (cgroup escape); `ESCAPE_TAMPER_SENSITIVE_FILE` (file tamper escape); `ESCAPE_DOCKER_API` (Docker API access escape); `ESCAPE_VUL_OCCURRED` (vulnerability exploit); `MOUNT_SENSITIVE_PTAH` (sensitive path mount); `PRIVILEGE_CONTAINER_START` (privileged container); `PRIVILEGE` (program privilege escalation escape).</li>
 <li>ImageName- string - Required: No - Image name</li>
 <li>ImageID- string - Required: No - Image ID</li>
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
                      * @return Limit Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
-                     * @param Limit Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
+                     * @param _limit Number of results to be returned. Default value: `10000`. Maximum value: `10000`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `asc`, `desc`.
                      * @return Order Sorting order. Valid values: `asc`, `desc`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order. Valid values: `asc`, `desc`.
-                     * @param Order Sorting order. Valid values: `asc`, `desc`.
+                     * @param _order Sorting order. Valid values: `asc`, `desc`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field. Valid values: `HostCount` (number of servers); `ContainerCount` (number of containers); `UpdateTime` (update time).
                      * @return By Sorting field. Valid values: `HostCount` (number of servers); `ContainerCount` (number of containers); `UpdateTime` (update time).
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field. Valid values: `HostCount` (number of servers); `ContainerCount` (number of containers); `UpdateTime` (update time).
-                     * @param By Sorting field. Valid values: `HostCount` (number of servers); `ContainerCount` (number of containers); `UpdateTime` (update time).
+                     * @param _by Sorting field. Valid values: `HostCount` (number of servers); `ContainerCount` (number of containers); `UpdateTime` (update time).
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Data flow task
                      * @return Job Data flow task
+                     * 
                      */
                     Job GetJob() const;
 
                     /**
                      * 判断参数 Job 是否已赋值
                      * @return Job 是否已赋值
+                     * 
                      */
                     bool JobHasBeenSet() const;
 

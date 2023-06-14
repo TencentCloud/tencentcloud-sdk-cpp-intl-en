@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID, which is passed through from the input parameters.
                      * @return InstanceId Instance ID, which is passed through from the input parameters.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Username, which is passed through from the input parameters.
                      * @return UserName Username, which is passed through from the input parameters.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Host allowed for access, which is passed through from the input parameters.
                      * @return Host Host allowed for access, which is passed through from the input parameters.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取Passed through from the input parameters.
                      * @return ReadOnly Passed through from the input parameters.
+                     * 
                      */
                     int64_t GetReadOnly() const;
 
                     /**
                      * 判断参数 ReadOnly 是否已赋值
                      * @return ReadOnly 是否已赋值
+                     * 
                      */
                     bool ReadOnlyHasBeenSet() const;
 

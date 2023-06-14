@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Image details
                      * @return BlueprintInfo Image details
+                     * 
                      */
                     Blueprint GetBlueprintInfo() const;
 
                     /**
                      * 设置Image details
-                     * @param BlueprintInfo Image details
+                     * @param _blueprintInfo Image details
+                     * 
                      */
                     void SetBlueprintInfo(const Blueprint& _blueprintInfo);
 
                     /**
                      * 判断参数 BlueprintInfo 是否已赋值
                      * @return BlueprintInfo 是否已赋值
+                     * 
                      */
                     bool BlueprintInfoHasBeenSet() const;
 
                     /**
                      * 获取Whether the image can be reset as the target image
                      * @return IsResettable Whether the image can be reset as the target image
+                     * 
                      */
                     bool GetIsResettable() const;
 
                     /**
                      * 设置Whether the image can be reset as the target image
-                     * @param IsResettable Whether the image can be reset as the target image
+                     * @param _isResettable Whether the image can be reset as the target image
+                     * 
                      */
                     void SetIsResettable(const bool& _isResettable);
 
                     /**
                      * 判断参数 IsResettable 是否已赋值
                      * @return IsResettable 是否已赋值
+                     * 
                      */
                     bool IsResettableHasBeenSet() const;
 
                     /**
                      * 获取Non-Resettable flag. If the image is resettable, it will be ""
                      * @return NonResettableMessage Non-Resettable flag. If the image is resettable, it will be ""
+                     * 
                      */
                     std::string GetNonResettableMessage() const;
 
                     /**
                      * 设置Non-Resettable flag. If the image is resettable, it will be ""
-                     * @param NonResettableMessage Non-Resettable flag. If the image is resettable, it will be ""
+                     * @param _nonResettableMessage Non-Resettable flag. If the image is resettable, it will be ""
+                     * 
                      */
                     void SetNonResettableMessage(const std::string& _nonResettableMessage);
 
                     /**
                      * 判断参数 NonResettableMessage 是否已赋值
                      * @return NonResettableMessage 是否已赋值
+                     * 
                      */
                     bool NonResettableMessageHasBeenSet() const;
 

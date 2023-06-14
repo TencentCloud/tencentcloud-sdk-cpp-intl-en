@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The CNS address of the contract.
                      * @return Hash The CNS address of the contract.
+                     * 
                      */
                     std::string GetHash() const;
 
                     /**
                      * 设置The CNS address of the contract.
-                     * @param Hash The CNS address of the contract.
+                     * @param _hash The CNS address of the contract.
+                     * 
                      */
                     void SetHash(const std::string& _hash);
 
                     /**
                      * 判断参数 Hash 是否已赋值
                      * @return Hash 是否已赋值
+                     * 
                      */
                     bool HashHasBeenSet() const;
 

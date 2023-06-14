@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Specifies whether to enable client IP header
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Specifies whether to enable client IP header
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Specifies whether to enable client IP header
+                     * @param _switch Specifies whether to enable client IP header
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return HeaderName Name of the origin-pull client IP request header
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
                      * 设置Name of the origin-pull client IP request header
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param HeaderName Name of the origin-pull client IP request header
+                     * @param _headerName Name of the origin-pull client IP request header
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHeaderName(const std::string& _headerName);
 
                     /**
                      * 判断参数 HeaderName 是否已赋值
                      * @return HeaderName 是否已赋值
+                     * 
                      */
                     bool HeaderNameHasBeenSet() const;
 

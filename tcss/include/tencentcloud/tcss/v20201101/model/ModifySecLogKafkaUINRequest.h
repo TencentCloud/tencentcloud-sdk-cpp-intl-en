@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Target UIN
                      * @return DstUIN Target UIN
+                     * 
                      */
                     std::string GetDstUIN() const;
 
                     /**
                      * 设置Target UIN
-                     * @param DstUIN Target UIN
+                     * @param _dstUIN Target UIN
+                     * 
                      */
                     void SetDstUIN(const std::string& _dstUIN);
 
                     /**
                      * 判断参数 DstUIN 是否已赋值
                      * @return DstUIN 是否已赋值
+                     * 
                      */
                     bool DstUINHasBeenSet() const;
 

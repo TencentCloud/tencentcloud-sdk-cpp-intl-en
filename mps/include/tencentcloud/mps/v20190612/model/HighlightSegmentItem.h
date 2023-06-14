@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The confidence score.
                      * @return Confidence The confidence score.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置The confidence score.
-                     * @param Confidence The confidence score.
+                     * @param _confidence The confidence score.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取The start time offset of the segment.
                      * @return StartTimeOffset The start time offset of the segment.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置The start time offset of the segment.
-                     * @param StartTimeOffset The start time offset of the segment.
+                     * @param _startTimeOffset The start time offset of the segment.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取The end time offset of the segment.
                      * @return EndTimeOffset The end time offset of the segment.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置The end time offset of the segment.
-                     * @param EndTimeOffset The end time offset of the segment.
+                     * @param _endTimeOffset The end time offset of the segment.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 

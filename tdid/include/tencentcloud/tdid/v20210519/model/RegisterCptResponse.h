@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The claim protocol type (CPT) index.
                      * @return Id The claim protocol type (CPT) index.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取The claim protocol type (CPT) ID.
                      * @return CptId The claim protocol type (CPT) ID.
+                     * 
                      */
                     uint64_t GetCptId() const;
 
                     /**
                      * 判断参数 CptId 是否已赋值
                      * @return CptId 是否已赋值
+                     * 
                      */
                     bool CptIdHasBeenSet() const;
 

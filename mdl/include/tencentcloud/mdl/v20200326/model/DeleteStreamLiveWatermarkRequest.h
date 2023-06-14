@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Watermark ID
                      * @return Id Watermark ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Watermark ID
-                     * @param Id Watermark ID
+                     * @param _id Watermark ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

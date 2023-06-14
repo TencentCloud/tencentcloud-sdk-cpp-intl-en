@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      * @return UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-                     * @param UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * @param _userId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Public IP of user’s application client, which is used for nearby scheduling.
                      * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 
                      */
                     std::string GetUserIp() const;
 
                     /**
                      * 设置Public IP of user’s application client, which is used for nearby scheduling.
-                     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * @param _userIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 
                      */
                     void SetUserIp(const std::string& _userIp);
 
                     /**
                      * 判断参数 UserIp 是否已赋值
                      * @return UserIp 是否已赋值
+                     * 
                      */
                     bool UserIpHasBeenSet() const;
 
                     /**
                      * 获取The project ID.
                      * @return ProjectId The project ID.
+                     * 
                      */
                     std::string GetProjectId() const;
 
                     /**
                      * 设置The project ID.
-                     * @param ProjectId The project ID.
+                     * @param _projectId The project ID.
+                     * 
                      */
                     void SetProjectId(const std::string& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取The application version ID.
                      * @return ApplicationVersionId The application version ID.
+                     * 
                      */
                     std::string GetApplicationVersionId() const;
 
                     /**
                      * 设置The application version ID.
-                     * @param ApplicationVersionId The application version ID.
+                     * @param _applicationVersionId The application version ID.
+                     * 
                      */
                     void SetApplicationVersionId(const std::string& _applicationVersionId);
 
                     /**
                      * 判断参数 ApplicationVersionId 是否已赋值
                      * @return ApplicationVersionId 是否已赋值
+                     * 
                      */
                     bool ApplicationVersionIdHasBeenSet() const;
 
                     /**
                      * 获取Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
                      * @return ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
-                     * @param ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     * @param _applicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 

@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Combination of instance object dimensions
                      * @return Dimensions Combination of instance object dimensions
+                     * 
                      */
                     std::vector<Dimension> GetDimensions() const;
 
                     /**
                      * 设置Combination of instance object dimensions
-                     * @param Dimensions Combination of instance object dimensions
+                     * @param _dimensions Combination of instance object dimensions
+                     * 
                      */
                     void SetDimensions(const std::vector<Dimension>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
                     /**
                      * 获取The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
                      * @return Timestamps The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
+                     * 
                      */
                     std::vector<double> GetTimestamps() const;
 
                     /**
                      * 设置The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
-                     * @param Timestamps The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
+                     * @param _timestamps The array of timestamps indicating at which points in time there is data. Missing timestamps have no data points (i.e., missed)
+                     * 
                      */
                     void SetTimestamps(const std::vector<double>& _timestamps);
 
                     /**
                      * 判断参数 Timestamps 是否已赋值
                      * @return Timestamps 是否已赋值
+                     * 
                      */
                     bool TimestampsHasBeenSet() const;
 
                     /**
                      * 获取The array of monitoring values, which is in one-to-one correspondence to Timestamps
                      * @return Values The array of monitoring values, which is in one-to-one correspondence to Timestamps
+                     * 
                      */
                     std::vector<double> GetValues() const;
 
                     /**
                      * 设置The array of monitoring values, which is in one-to-one correspondence to Timestamps
-                     * @param Values The array of monitoring values, which is in one-to-one correspondence to Timestamps
+                     * @param _values The array of monitoring values, which is in one-to-one correspondence to Timestamps
+                     * 
                      */
                     void SetValues(const std::vector<double>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

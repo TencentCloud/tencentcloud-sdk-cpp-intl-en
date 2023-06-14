@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
                      * @return CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+                     * 
                      */
                     std::string GetCmqModel() const;
 
                     /**
                      * 设置CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
-                     * @param CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+                     * @param _cmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+                     * 
                      */
                     void SetCmqModel(const std::string& _cmqModel);
 
                     /**
                      * 判断参数 CmqModel 是否已赋值
                      * @return CmqModel 是否已赋值
+                     * 
                      */
                     bool CmqModelHasBeenSet() const;
 
                     /**
                      * 获取CMQ region, such as `sh` and `bj`.
                      * @return CmqRegion CMQ region, such as `sh` and `bj`.
+                     * 
                      */
                     std::string GetCmqRegion() const;
 
                     /**
                      * 设置CMQ region, such as `sh` and `bj`.
-                     * @param CmqRegion CMQ region, such as `sh` and `bj`.
+                     * @param _cmqRegion CMQ region, such as `sh` and `bj`.
+                     * 
                      */
                     void SetCmqRegion(const std::string& _cmqRegion);
 
                     /**
                      * 判断参数 CmqRegion 是否已赋值
                      * @return CmqRegion 是否已赋值
+                     * 
                      */
                     bool CmqRegionHasBeenSet() const;
 
                     /**
                      * 获取This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
                      * @return QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-                     * @param QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
+                     * @param _queueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
                      * @return TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
-                     * @param TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+                     * @param _topicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
@@ -125,6 +137,7 @@ namespace TencentCloud
                      * @return NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
 
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * 
                      */
                     std::string GetNotifyType() const;
 
@@ -132,33 +145,38 @@ namespace TencentCloud
                      * 设置The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
 
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * @param NotifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * @param _notifyType The notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
 
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * 
                      */
                     void SetNotifyType(const std::string& _notifyType);
 
                     /**
                      * 判断参数 NotifyType 是否已赋值
                      * @return NotifyType 是否已赋值
+                     * 
                      */
                     bool NotifyTypeHasBeenSet() const;
 
                     /**
                      * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
                      * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 
                      */
                     std::string GetNotifyUrl() const;
 
                     /**
                      * 设置HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * @param _notifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 
                      */
                     void SetNotifyUrl(const std::string& _notifyUrl);
 
                     /**
                      * 判断参数 NotifyUrl 是否已赋值
                      * @return NotifyUrl 是否已赋值
+                     * 
                      */
                     bool NotifyUrlHasBeenSet() const;
 

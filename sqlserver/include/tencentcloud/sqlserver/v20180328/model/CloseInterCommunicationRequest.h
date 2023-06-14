@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取IDs of instances with interconnection disabled
                      * @return InstanceIdSet IDs of instances with interconnection disabled
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置IDs of instances with interconnection disabled
-                     * @param InstanceIdSet IDs of instances with interconnection disabled
+                     * @param _instanceIdSet IDs of instances with interconnection disabled
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 

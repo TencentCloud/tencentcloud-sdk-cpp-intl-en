@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Set of packing quotas.
                      * @return PackingQuotaSet Set of packing quotas.
+                     * 
                      */
                     std::vector<PackingQuotaGroup> GetPackingQuotaSet() const;
 
                     /**
                      * 判断参数 PackingQuotaSet 是否已赋值
                      * @return PackingQuotaSet 是否已赋值
+                     * 
                      */
                     bool PackingQuotaSetHasBeenSet() const;
 

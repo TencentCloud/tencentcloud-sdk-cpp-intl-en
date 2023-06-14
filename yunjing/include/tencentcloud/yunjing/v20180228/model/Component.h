@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID.
                      * @return Id Unique ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Unique ID.
-                     * @param Id Unique ID.
+                     * @param _id Unique ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取CWP agent `Uuid`.
                      * @return Uuid CWP agent `Uuid`.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `Uuid`.
-                     * @param Uuid CWP agent `Uuid`.
+                     * @param _uuid CWP agent `Uuid`.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取Private IP of server.
                      * @return MachineIp Private IP of server.
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Private IP of server.
-                     * @param MachineIp Private IP of server.
+                     * @param _machineIp Private IP of server.
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
                     /**
                      * 获取Server name.
                      * @return MachineName Server name.
+                     * 
                      */
                     std::string GetMachineName() const;
 
                     /**
                      * 设置Server name.
-                     * @param MachineName Server name.
+                     * @param _machineName Server name.
+                     * 
                      */
                     void SetMachineName(const std::string& _machineName);
 
                     /**
                      * 判断参数 MachineName 是否已赋值
                      * @return MachineName 是否已赋值
+                     * 
                      */
                     bool MachineNameHasBeenSet() const;
 
                     /**
                      * 获取Component version number.
                      * @return ComponentVersion Component version number.
+                     * 
                      */
                     std::string GetComponentVersion() const;
 
                     /**
                      * 设置Component version number.
-                     * @param ComponentVersion Component version number.
+                     * @param _componentVersion Component version number.
+                     * 
                      */
                     void SetComponentVersion(const std::string& _componentVersion);
 
                     /**
                      * 判断参数 ComponentVersion 是否已赋值
                      * @return ComponentVersion 是否已赋值
+                     * 
                      */
                     bool ComponentVersionHasBeenSet() const;
 
@@ -143,6 +158,7 @@ namespace TencentCloud
                      * @return ComponentType Component type.
 <li>SYSTEM: system component</li>
 <li>WEB: web component</li>
+                     * 
                      */
                     std::string GetComponentType() const;
 
@@ -150,51 +166,59 @@ namespace TencentCloud
                      * 设置Component type.
 <li>SYSTEM: system component</li>
 <li>WEB: web component</li>
-                     * @param ComponentType Component type.
+                     * @param _componentType Component type.
 <li>SYSTEM: system component</li>
 <li>WEB: web component</li>
+                     * 
                      */
                     void SetComponentType(const std::string& _componentType);
 
                     /**
                      * 判断参数 ComponentType 是否已赋值
                      * @return ComponentType 是否已赋值
+                     * 
                      */
                     bool ComponentTypeHasBeenSet() const;
 
                     /**
                      * 获取Component name.
                      * @return ComponentName Component name.
+                     * 
                      */
                     std::string GetComponentName() const;
 
                     /**
                      * 设置Component name.
-                     * @param ComponentName Component name.
+                     * @param _componentName Component name.
+                     * 
                      */
                     void SetComponentName(const std::string& _componentName);
 
                     /**
                      * 判断参数 ComponentName 是否已赋值
                      * @return ComponentName 是否已赋值
+                     * 
                      */
                     bool ComponentNameHasBeenSet() const;
 
                     /**
                      * 获取Component detection update time.
                      * @return ModifyTime Component detection update time.
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Component detection update time.
-                     * @param ModifyTime Component detection update time.
+                     * @param _modifyTime Component detection update time.
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 

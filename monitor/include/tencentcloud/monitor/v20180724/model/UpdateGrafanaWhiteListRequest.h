@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-abcdefgh”.
                      * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
                      * @return Whitelist Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
+                     * 
                      */
                     std::vector<std::string> GetWhitelist() const;
 
                     /**
                      * 设置Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
-                     * @param Whitelist Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
+                     * @param _whitelist Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
+                     * 
                      */
                     void SetWhitelist(const std::vector<std::string>& _whitelist);
 
                     /**
                      * 判断参数 Whitelist 是否已赋值
                      * @return Whitelist 是否已赋值
+                     * 
                      */
                     bool WhitelistHasBeenSet() const;
 

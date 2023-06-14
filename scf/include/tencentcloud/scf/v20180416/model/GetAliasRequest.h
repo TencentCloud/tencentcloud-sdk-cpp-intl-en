@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Function name
                      * @return FunctionName Function name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name
-                     * @param FunctionName Function name
+                     * @param _functionName Function name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Alias name
                      * @return Name Alias name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Alias name
-                     * @param Name Alias name
+                     * @param _name Alias name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Function namespace
                      * @return Namespace Function namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace
-                     * @param Namespace Function namespace
+                     * @param _namespace Function namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

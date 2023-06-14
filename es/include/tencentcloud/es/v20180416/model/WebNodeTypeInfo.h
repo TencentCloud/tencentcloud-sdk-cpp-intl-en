@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of visual nodes. The value is always `1`.
                      * @return NodeNum Number of visual nodes. The value is always `1`.
+                     * 
                      */
                     uint64_t GetNodeNum() const;
 
                     /**
                      * 设置Number of visual nodes. The value is always `1`.
-                     * @param NodeNum Number of visual nodes. The value is always `1`.
+                     * @param _nodeNum Number of visual nodes. The value is always `1`.
+                     * 
                      */
                     void SetNodeNum(const uint64_t& _nodeNum);
 
                     /**
                      * 判断参数 NodeNum 是否已赋值
                      * @return NodeNum 是否已赋值
+                     * 
                      */
                     bool NodeNumHasBeenSet() const;
 
                     /**
                      * 获取Visual node specification
                      * @return NodeType Visual node specification
+                     * 
                      */
                     std::string GetNodeType() const;
 
                     /**
                      * 设置Visual node specification
-                     * @param NodeType Visual node specification
+                     * @param _nodeType Visual node specification
+                     * 
                      */
                     void SetNodeType(const std::string& _nodeType);
 
                     /**
                      * 判断参数 NodeType 是否已赋值
                      * @return NodeType 是否已赋值
+                     * 
                      */
                     bool NodeTypeHasBeenSet() const;
 

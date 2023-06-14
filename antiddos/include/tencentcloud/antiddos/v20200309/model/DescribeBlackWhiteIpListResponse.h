@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取IP blocklist
                      * @return BlackIpList IP blocklist
+                     * 
                      */
                     std::vector<std::string> GetBlackIpList() const;
 
                     /**
                      * 判断参数 BlackIpList 是否已赋值
                      * @return BlackIpList 是否已赋值
+                     * 
                      */
                     bool BlackIpListHasBeenSet() const;
 
                     /**
                      * 获取IP allowlist
                      * @return WhiteIpList IP allowlist
+                     * 
                      */
                     std::vector<std::string> GetWhiteIpList() const;
 
                     /**
                      * 判断参数 WhiteIpList 是否已赋值
                      * @return WhiteIpList 是否已赋值
+                     * 
                      */
                     bool WhiteIpListHasBeenSet() const;
 

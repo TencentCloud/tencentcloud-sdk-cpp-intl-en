@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserName Username.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Status User status. Valid values: NORMAL: normal; FREEZE: frozen; LOCKED: locked; NOT_ENABLED: disabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DisplayName Nickname
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description User remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -104,12 +112,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserGroupIds List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetUserGroupIds() const;
 
                     /**
                      * 判断参数 UserGroupIds 是否已赋值
                      * @return UserGroupIds 是否已赋值
+                     * 
                      */
                     bool UserGroupIdsHasBeenSet() const;
 
@@ -118,12 +128,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserId User ID, which can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -132,12 +144,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Email User's email address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 
@@ -146,12 +160,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Phone User's mobile number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPhone() const;
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
@@ -160,12 +176,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeId Unique ID of the user's primary organization.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeId() const;
 
                     /**
                      * 判断参数 OrgNodeId 是否已赋值
                      * @return OrgNodeId 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdHasBeenSet() const;
 
@@ -174,12 +192,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DataSource Data source
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDataSource() const;
 
                     /**
                      * 判断参数 DataSource 是否已赋值
                      * @return DataSource 是否已赋值
+                     * 
                      */
                     bool DataSourceHasBeenSet() const;
 
@@ -188,12 +208,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpirationTime User expiration time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpirationTime() const;
 
                     /**
                      * 判断参数 ExpirationTime 是否已赋值
                      * @return ExpirationTime 是否已赋值
+                     * 
                      */
                     bool ExpirationTimeHasBeenSet() const;
 
@@ -202,12 +224,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ActivationTime User activation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetActivationTime() const;
 
                     /**
                      * 判断参数 ActivationTime 是否已赋值
                      * @return ActivationTime 是否已赋值
+                     * 
                      */
                     bool ActivationTimeHasBeenSet() const;
 
@@ -216,12 +240,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PwdNeedReset Whether the password of the current user needs to be reset. `false` indicates no.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetPwdNeedReset() const;
 
                     /**
                      * 判断参数 PwdNeedReset 是否已赋值
                      * @return PwdNeedReset 是否已赋值
+                     * 
                      */
                     bool PwdNeedResetHasBeenSet() const;
 
@@ -230,12 +256,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SecondaryOrgNodeIdList List of IDs of the user's secondary organizations.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSecondaryOrgNodeIdList() const;
 
                     /**
                      * 判断参数 SecondaryOrgNodeIdList 是否已赋值
                      * @return SecondaryOrgNodeIdList 是否已赋值
+                     * 
                      */
                     bool SecondaryOrgNodeIdListHasBeenSet() const;
 
@@ -244,12 +272,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AdminFlag Whether the user is an admin. Valid values: 0: no; 1: yes.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAdminFlag() const;
 
                     /**
                      * 判断参数 AdminFlag 是否已赋值
                      * @return AdminFlag 是否已赋值
+                     * 
                      */
                     bool AdminFlagHasBeenSet() const;
 

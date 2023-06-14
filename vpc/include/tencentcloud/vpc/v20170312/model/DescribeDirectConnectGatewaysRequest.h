@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
                      * @return DirectConnectGatewayIds The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+                     * 
                      */
                     std::vector<std::string> GetDirectConnectGatewayIds() const;
 
                     /**
                      * 设置The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
-                     * @param DirectConnectGatewayIds The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+                     * @param _directConnectGatewayIds The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+                     * 
                      */
                     void SetDirectConnectGatewayIds(const std::vector<std::string>& _directConnectGatewayIds);
 
                     /**
                      * 判断参数 DirectConnectGatewayIds 是否已赋值
                      * @return DirectConnectGatewayIds 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayIdsHasBeenSet() const;
 
@@ -78,6 +81,7 @@ namespace TencentCloud
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
 <li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
 <li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -90,7 +94,7 @@ namespace TencentCloud
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
 <li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
 <li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
-                     * @param Filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
 <li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
 <li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
@@ -98,48 +102,56 @@ namespace TencentCloud
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
 <li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
 <li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The offset.
                      * @return Offset The offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The offset.
-                     * @param Offset The offset.
+                     * @param _offset The offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Max number of results returned
                      * @return Limit Max number of results returned
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Max number of results returned
-                     * @param Limit Max number of results returned
+                     * @param _limit Max number of results returned
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

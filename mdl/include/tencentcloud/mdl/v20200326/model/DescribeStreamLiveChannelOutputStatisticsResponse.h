@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Channel output information
                      * @return Infos Channel output information
+                     * 
                      */
                     std::vector<ChannelOutputsStatistics> GetInfos() const;
 
                     /**
                      * 判断参数 Infos 是否已赋值
                      * @return Infos 是否已赋值
+                     * 
                      */
                     bool InfosHasBeenSet() const;
 

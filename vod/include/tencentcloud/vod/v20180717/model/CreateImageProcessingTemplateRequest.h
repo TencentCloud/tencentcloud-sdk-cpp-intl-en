@@ -48,74 +48,86 @@ namespace TencentCloud
 <li>Length limit: 10.</li>
                      * @return Operations An array of image processing operations. The operations will be performed in the specified order.
 <li>Length limit: 10.</li>
+                     * 
                      */
                     std::vector<ImageOperation> GetOperations() const;
 
                     /**
                      * 设置An array of image processing operations. The operations will be performed in the specified order.
 <li>Length limit: 10.</li>
-                     * @param Operations An array of image processing operations. The operations will be performed in the specified order.
+                     * @param _operations An array of image processing operations. The operations will be performed in the specified order.
 <li>Length limit: 10.</li>
+                     * 
                      */
                     void SetOperations(const std::vector<ImageOperation>& _operations);
 
                     /**
                      * 判断参数 Operations 是否已赋值
                      * @return Operations 是否已赋值
+                     * 
                      */
                     bool OperationsHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the image processing template. Length limit: 64 characters.
                      * @return Name The name of the image processing template. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The name of the image processing template. Length limit: 64 characters.
-                     * @param Name The name of the image processing template. Length limit: 64 characters.
+                     * @param _name The name of the image processing template. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The template description. Length limit: 256 characters.
                      * @return Comment The template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The template description. Length limit: 256 characters.
-                     * @param Comment The template description. Length limit: 256 characters.
+                     * @param _comment The template description. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 

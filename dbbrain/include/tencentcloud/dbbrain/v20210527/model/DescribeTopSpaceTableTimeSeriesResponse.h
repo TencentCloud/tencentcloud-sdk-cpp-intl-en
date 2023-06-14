@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Time series list of the returned space statistics of top tables.
                      * @return TopSpaceTableTimeSeries Time series list of the returned space statistics of top tables.
+                     * 
                      */
                     std::vector<TableSpaceTimeSeries> GetTopSpaceTableTimeSeries() const;
 
                     /**
                      * 判断参数 TopSpaceTableTimeSeries 是否已赋值
                      * @return TopSpaceTableTimeSeries 是否已赋值
+                     * 
                      */
                     bool TopSpaceTableTimeSeriesHasBeenSet() const;
 

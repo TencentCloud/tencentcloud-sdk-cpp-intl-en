@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Old database name
                      * @return OldDBName Old database name
+                     * 
                      */
                     std::string GetOldDBName() const;
 
                     /**
                      * 设置Old database name
-                     * @param OldDBName Old database name
+                     * @param _oldDBName Old database name
+                     * 
                      */
                     void SetOldDBName(const std::string& _oldDBName);
 
                     /**
                      * 判断参数 OldDBName 是否已赋值
                      * @return OldDBName 是否已赋值
+                     * 
                      */
                     bool OldDBNameHasBeenSet() const;
 
                     /**
                      * 获取New name of database
                      * @return NewDBName New name of database
+                     * 
                      */
                     std::string GetNewDBName() const;
 
                     /**
                      * 设置New name of database
-                     * @param NewDBName New name of database
+                     * @param _newDBName New name of database
+                     * 
                      */
                     void SetNewDBName(const std::string& _newDBName);
 
                     /**
                      * 判断参数 NewDBName 是否已赋值
                      * @return NewDBName 是否已赋值
+                     * 
                      */
                     bool NewDBNameHasBeenSet() const;
 

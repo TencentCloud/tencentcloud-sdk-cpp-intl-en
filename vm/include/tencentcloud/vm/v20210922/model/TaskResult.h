@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataId Data ID passed when you request the data
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDataId() const;
 
                     /**
                      * 设置Data ID passed when you request the data
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DataId Data ID passed when you request the data
+                     * @param _dataId Data ID passed when you request the data
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataId(const std::string& _dataId);
 
                     /**
                      * 判断参数 DataId 是否已赋值
                      * @return DataId 是否已赋值
+                     * 
                      */
                     bool DataIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Code Error code. If `OK` is returned, it indicates the task is created successfully. You can see common error codes for more details.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Error code. If `OK` is returned, it indicates the task is created successfully. You can see common error codes for more details.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Code Error code. If `OK` is returned, it indicates the task is created successfully. You can see common error codes for more details.
+                     * @param _code Error code. If `OK` is returned, it indicates the task is created successfully. You can see common error codes for more details.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Message Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Message Error message
+                     * @param _message Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

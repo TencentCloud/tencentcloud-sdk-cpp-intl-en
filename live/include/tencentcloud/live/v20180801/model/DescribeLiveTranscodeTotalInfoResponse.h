@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return DataInfoList List of transcoding data
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::vector<TranscodeTotalInfo> GetDataInfoList() const;
 
                     /**
                      * 判断参数 DataInfoList 是否已赋值
                      * @return DataInfoList 是否已赋值
+                     * 
                      */
                     bool DataInfoListHasBeenSet() const;
 

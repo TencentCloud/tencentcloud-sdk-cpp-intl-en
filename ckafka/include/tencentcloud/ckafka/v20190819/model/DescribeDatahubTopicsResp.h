@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Total count
                      * @return TotalCount Total count
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 设置Total count
-                     * @param TotalCount Total count
+                     * @param _totalCount Total count
+                     * 
                      */
                     void SetTotalCount(const uint64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicList Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DatahubTopicDTO> GetTopicList() const;
 
                     /**
                      * 设置Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TopicList Topic list
+                     * @param _topicList Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicList(const std::vector<DatahubTopicDTO>& _topicList);
 
                     /**
                      * 判断参数 TopicList 是否已赋值
                      * @return TopicList 是否已赋值
+                     * 
                      */
                     bool TopicListHasBeenSet() const;
 

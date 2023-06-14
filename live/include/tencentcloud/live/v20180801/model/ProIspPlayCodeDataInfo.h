@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Country or region.
                      * @return CountryAreaName Country or region.
+                     * 
                      */
                     std::string GetCountryAreaName() const;
 
                     /**
                      * 设置Country or region.
-                     * @param CountryAreaName Country or region.
+                     * @param _countryAreaName Country or region.
+                     * 
                      */
                     void SetCountryAreaName(const std::string& _countryAreaName);
 
                     /**
                      * 判断参数 CountryAreaName 是否已赋值
                      * @return CountryAreaName 是否已赋值
+                     * 
                      */
                     bool CountryAreaNameHasBeenSet() const;
 
                     /**
                      * 获取District.
                      * @return ProvinceName District.
+                     * 
                      */
                     std::string GetProvinceName() const;
 
                     /**
                      * 设置District.
-                     * @param ProvinceName District.
+                     * @param _provinceName District.
+                     * 
                      */
                     void SetProvinceName(const std::string& _provinceName);
 
                     /**
                      * 判断参数 ProvinceName 是否已赋值
                      * @return ProvinceName 是否已赋值
+                     * 
                      */
                     bool ProvinceNameHasBeenSet() const;
 
                     /**
                      * 获取ISP.
                      * @return IspName ISP.
+                     * 
                      */
                     std::string GetIspName() const;
 
                     /**
                      * 设置ISP.
-                     * @param IspName ISP.
+                     * @param _ispName ISP.
+                     * 
                      */
                     void SetIspName(const std::string& _ispName);
 
                     /**
                      * 判断参数 IspName 是否已赋值
                      * @return IspName 是否已赋值
+                     * 
                      */
                     bool IspNameHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 2xx error codes.
                      * @return Code2xx Occurrences of 2xx error codes.
+                     * 
                      */
                     uint64_t GetCode2xx() const;
 
                     /**
                      * 设置Occurrences of 2xx error codes.
-                     * @param Code2xx Occurrences of 2xx error codes.
+                     * @param _code2xx Occurrences of 2xx error codes.
+                     * 
                      */
                     void SetCode2xx(const uint64_t& _code2xx);
 
                     /**
                      * 判断参数 Code2xx 是否已赋值
                      * @return Code2xx 是否已赋值
+                     * 
                      */
                     bool Code2xxHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 3xx error codes.
                      * @return Code3xx Occurrences of 3xx error codes.
+                     * 
                      */
                     uint64_t GetCode3xx() const;
 
                     /**
                      * 设置Occurrences of 3xx error codes.
-                     * @param Code3xx Occurrences of 3xx error codes.
+                     * @param _code3xx Occurrences of 3xx error codes.
+                     * 
                      */
                     void SetCode3xx(const uint64_t& _code3xx);
 
                     /**
                      * 判断参数 Code3xx 是否已赋值
                      * @return Code3xx 是否已赋值
+                     * 
                      */
                     bool Code3xxHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 4xx error codes.
                      * @return Code4xx Occurrences of 4xx error codes.
+                     * 
                      */
                     uint64_t GetCode4xx() const;
 
                     /**
                      * 设置Occurrences of 4xx error codes.
-                     * @param Code4xx Occurrences of 4xx error codes.
+                     * @param _code4xx Occurrences of 4xx error codes.
+                     * 
                      */
                     void SetCode4xx(const uint64_t& _code4xx);
 
                     /**
                      * 判断参数 Code4xx 是否已赋值
                      * @return Code4xx 是否已赋值
+                     * 
                      */
                     bool Code4xxHasBeenSet() const;
 
                     /**
                      * 获取Occurrences of 5xx error codes.
                      * @return Code5xx Occurrences of 5xx error codes.
+                     * 
                      */
                     uint64_t GetCode5xx() const;
 
                     /**
                      * 设置Occurrences of 5xx error codes.
-                     * @param Code5xx Occurrences of 5xx error codes.
+                     * @param _code5xx Occurrences of 5xx error codes.
+                     * 
                      */
                     void SetCode5xx(const uint64_t& _code5xx);
 
                     /**
                      * 判断参数 Code5xx 是否已赋值
                      * @return Code5xx 是否已赋值
+                     * 
                      */
                     bool Code5xxHasBeenSet() const;
 

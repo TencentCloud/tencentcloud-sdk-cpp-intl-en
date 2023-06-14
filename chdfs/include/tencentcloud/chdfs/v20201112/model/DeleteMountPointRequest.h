@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Mount point ID
                      * @return MountPointId Mount point ID
+                     * 
                      */
                     std::string GetMountPointId() const;
 
                     /**
                      * 设置Mount point ID
-                     * @param MountPointId Mount point ID
+                     * @param _mountPointId Mount point ID
+                     * 
                      */
                     void SetMountPointId(const std::string& _mountPointId);
 
                     /**
                      * 判断参数 MountPointId 是否已赋值
                      * @return MountPointId 是否已赋值
+                     * 
                      */
                     bool MountPointIdHasBeenSet() const;
 

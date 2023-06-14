@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubscribeIds Data subscription instance ID array
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSubscribeIds() const;
 
                     /**
                      * 判断参数 SubscribeIds 是否已赋值
                      * @return SubscribeIds 是否已赋值
+                     * 
                      */
                     bool SubscribeIdsHasBeenSet() const;
 

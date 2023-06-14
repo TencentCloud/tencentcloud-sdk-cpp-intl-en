@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取`true`: enable global acceleration; `false`: disable global acceleration
                      * @return Allowed `true`: enable global acceleration; `false`: disable global acceleration
+                     * 
                      */
                     bool GetAllowed() const;
 
                     /**
                      * 设置`true`: enable global acceleration; `false`: disable global acceleration
-                     * @param Allowed `true`: enable global acceleration; `false`: disable global acceleration
+                     * @param _allowed `true`: enable global acceleration; `false`: disable global acceleration
+                     * 
                      */
                     void SetAllowed(const bool& _allowed);
 
                     /**
                      * 判断参数 Allowed 是否已赋值
                      * @return Allowed 是否已赋值
+                     * 
                      */
                     bool AllowedHasBeenSet() const;
 

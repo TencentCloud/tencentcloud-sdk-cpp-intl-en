@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded SAML assertion
                      * @return SAMLAssertion Base64-encoded SAML assertion
+                     * 
                      */
                     std::string GetSAMLAssertion() const;
 
                     /**
                      * 设置Base64-encoded SAML assertion
-                     * @param SAMLAssertion Base64-encoded SAML assertion
+                     * @param _sAMLAssertion Base64-encoded SAML assertion
+                     * 
                      */
                     void SetSAMLAssertion(const std::string& _sAMLAssertion);
 
                     /**
                      * 判断参数 SAMLAssertion 是否已赋值
                      * @return SAMLAssertion 是否已赋值
+                     * 
                      */
                     bool SAMLAssertionHasBeenSet() const;
 
                     /**
                      * 获取Principal access description name
                      * @return PrincipalArn Principal access description name
+                     * 
                      */
                     std::string GetPrincipalArn() const;
 
                     /**
                      * 设置Principal access description name
-                     * @param PrincipalArn Principal access description name
+                     * @param _principalArn Principal access description name
+                     * 
                      */
                     void SetPrincipalArn(const std::string& _principalArn);
 
                     /**
                      * 判断参数 PrincipalArn 是否已赋值
                      * @return PrincipalArn 是否已赋值
+                     * 
                      */
                     bool PrincipalArnHasBeenSet() const;
 
                     /**
                      * 获取Role access description name
                      * @return RoleArn Role access description name
+                     * 
                      */
                     std::string GetRoleArn() const;
 
                     /**
                      * 设置Role access description name
-                     * @param RoleArn Role access description name
+                     * @param _roleArn Role access description name
+                     * 
                      */
                     void SetRoleArn(const std::string& _roleArn);
 
                     /**
                      * 判断参数 RoleArn 是否已赋值
                      * @return RoleArn 是否已赋值
+                     * 
                      */
                     bool RoleArnHasBeenSet() const;
 
                     /**
                      * 获取Session name
                      * @return RoleSessionName Session name
+                     * 
                      */
                     std::string GetRoleSessionName() const;
 
                     /**
                      * 设置Session name
-                     * @param RoleSessionName Session name
+                     * @param _roleSessionName Session name
+                     * 
                      */
                     void SetRoleSessionName(const std::string& _roleSessionName);
 
                     /**
                      * 判断参数 RoleSessionName 是否已赋值
                      * @return RoleSessionName 是否已赋值
+                     * 
                      */
                     bool RoleSessionNameHasBeenSet() const;
 
                     /**
                      * 获取The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      * @return DurationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * 
                      */
                     uint64_t GetDurationSeconds() const;
 
                     /**
                      * 设置The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
-                     * @param DurationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * @param _durationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * 
                      */
                     void SetDurationSeconds(const uint64_t& _durationSeconds);
 
                     /**
                      * 判断参数 DurationSeconds 是否已赋值
                      * @return DurationSeconds 是否已赋值
+                     * 
                      */
                     bool DurationSecondsHasBeenSet() const;
 

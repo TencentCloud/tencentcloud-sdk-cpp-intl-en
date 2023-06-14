@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the usage plan to be queried.
                      * @return UsagePlanId Unique ID of the usage plan to be queried.
+                     * 
                      */
                     std::string GetUsagePlanId() const;
 
                     /**
                      * 设置Unique ID of the usage plan to be queried.
-                     * @param UsagePlanId Unique ID of the usage plan to be queried.
+                     * @param _usagePlanId Unique ID of the usage plan to be queried.
+                     * 
                      */
                     void SetUsagePlanId(const std::string& _usagePlanId);
 
                     /**
                      * 判断参数 UsagePlanId 是否已赋值
                      * @return UsagePlanId 是否已赋值
+                     * 
                      */
                     bool UsagePlanIdHasBeenSet() const;
 

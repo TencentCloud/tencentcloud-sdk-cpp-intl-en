@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DockerVersion Docker version on the server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDockerVersion() const;
 
                     /**
                      * 设置Docker version on the server
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DockerVersion Docker version on the server
+                     * @param _dockerVersion Docker version on the server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDockerVersion(const std::string& _dockerVersion);
 
                     /**
                      * 判断参数 DockerVersion 是否已赋值
                      * @return DockerVersion 是否已赋值
+                     * 
                      */
                     bool DockerVersionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return K8SVersion K8s version on the server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetK8SVersion() const;
 
                     /**
                      * 设置K8s version on the server
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param K8SVersion K8s version on the server
+                     * @param _k8SVersion K8s version on the server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetK8SVersion(const std::string& _k8SVersion);
 
                     /**
                      * 判断参数 K8SVersion 是否已赋值
                      * @return K8SVersion 是否已赋值
+                     * 
                      */
                     bool K8SVersionHasBeenSet() const;
 

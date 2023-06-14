@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of diagnosis events.
                      * @return TotalCount Total number of diagnosis events.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Diagnosis event list.
                      * @return Items Diagnosis event list.
+                     * 
                      */
                     std::vector<DiagHistoryEventItem> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

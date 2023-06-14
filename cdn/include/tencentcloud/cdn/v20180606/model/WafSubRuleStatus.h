@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Sub-rule status. Valid values: `on` and `off`.
                      * @return Switch Sub-rule status. Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Sub-rule status. Valid values: `on` and `off`.
-                     * @param Switch Sub-rule status. Valid values: `on` and `off`.
+                     * @param _switch Sub-rule status. Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取List of rule IDs
                      * @return SubIds List of rule IDs
+                     * 
                      */
                     std::vector<int64_t> GetSubIds() const;
 
                     /**
                      * 设置List of rule IDs
-                     * @param SubIds List of rule IDs
+                     * @param _subIds List of rule IDs
+                     * 
                      */
                     void SetSubIds(const std::vector<int64_t>& _subIds);
 
                     /**
                      * 判断参数 SubIds 是否已赋值
                      * @return SubIds 是否已赋值
+                     * 
                      */
                     bool SubIdsHasBeenSet() const;
 

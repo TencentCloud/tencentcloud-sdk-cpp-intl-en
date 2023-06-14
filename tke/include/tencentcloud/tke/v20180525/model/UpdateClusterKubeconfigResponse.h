@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return UpdatedSubAccounts List of updated sub-account UINs 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetUpdatedSubAccounts() const;
 
                     /**
                      * 判断参数 UpdatedSubAccounts 是否已赋值
                      * @return UpdatedSubAccounts 是否已赋值
+                     * 
                      */
                     bool UpdatedSubAccountsHasBeenSet() const;
 

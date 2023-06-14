@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Sending result of the sync task
                      * @return Status Sending result of the sync task
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

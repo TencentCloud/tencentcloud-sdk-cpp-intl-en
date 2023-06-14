@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Repository information list
                      * @return RepositoryList Repository information list
+                     * 
                      */
                     std::vector<TcrRepositoryInfo> GetRepositoryList() const;
 
                     /**
                      * 判断参数 RepositoryList 是否已赋值
                      * @return RepositoryList 是否已赋值
+                     * 
                      */
                     bool RepositoryListHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

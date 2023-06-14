@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Name of the function for which to delete the provisioned concurrency
                      * @return FunctionName Name of the function for which to delete the provisioned concurrency
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Name of the function for which to delete the provisioned concurrency
-                     * @param FunctionName Name of the function for which to delete the provisioned concurrency
+                     * @param _functionName Name of the function for which to delete the provisioned concurrency
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function version number
                      * @return Qualifier Function version number
+                     * 
                      */
                     std::string GetQualifier() const;
 
                     /**
                      * 设置Function version number
-                     * @param Qualifier Function version number
+                     * @param _qualifier Function version number
+                     * 
                      */
                     void SetQualifier(const std::string& _qualifier);
 
                     /**
                      * 判断参数 Qualifier 是否已赋值
                      * @return Qualifier 是否已赋值
+                     * 
                      */
                     bool QualifierHasBeenSet() const;
 
                     /**
                      * 获取Function namespace. Default value: `default`
                      * @return Namespace Function namespace. Default value: `default`
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace. Default value: `default`
-                     * @param Namespace Function namespace. Default value: `default`
+                     * @param _namespace Function namespace. Default value: `default`
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

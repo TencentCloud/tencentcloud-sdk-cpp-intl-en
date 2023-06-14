@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Machine group ID
                      * @return GroupId Machine group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Machine group ID
-                     * @param GroupId Machine group ID
+                     * @param _groupId Machine group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
@@ -66,20 +69,23 @@ namespace TencentCloud
 Supported types: `ip` and `label`
                      * @return MachineGroupType Machine group type
 Supported types: `ip` and `label`
+                     * 
                      */
                     MachineGroupTypeInfo GetMachineGroupType() const;
 
                     /**
                      * 设置Machine group type
 Supported types: `ip` and `label`
-                     * @param MachineGroupType Machine group type
+                     * @param _machineGroupType Machine group type
 Supported types: `ip` and `label`
+                     * 
                      */
                     void SetMachineGroupType(const MachineGroupTypeInfo& _machineGroupType);
 
                     /**
                      * 判断参数 MachineGroupType 是否已赋值
                      * @return MachineGroupType 是否已赋值
+                     * 
                      */
                     bool MachineGroupTypeHasBeenSet() const;
 

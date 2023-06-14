@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the successfully created forwarding rule
                      * @return RuleId The ID of the successfully created forwarding rule
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

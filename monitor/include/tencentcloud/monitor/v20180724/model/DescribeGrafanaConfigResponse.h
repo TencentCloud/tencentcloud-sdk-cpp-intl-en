@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取JSON-encoded string
                      * @return Config JSON-encoded string
+                     * 
                      */
                     std::string GetConfig() const;
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 

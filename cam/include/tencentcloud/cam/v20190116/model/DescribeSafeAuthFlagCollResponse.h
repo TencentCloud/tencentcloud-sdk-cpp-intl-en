@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取Login protection settings
                      * @return LoginFlag Login protection settings
+                     * 
                      */
                     LoginActionFlag GetLoginFlag() const;
 
                     /**
                      * 判断参数 LoginFlag 是否已赋值
                      * @return LoginFlag 是否已赋值
+                     * 
                      */
                     bool LoginFlagHasBeenSet() const;
 
                     /**
                      * 获取Sensitive operation protection settings
                      * @return ActionFlag Sensitive operation protection settings
+                     * 
                      */
                     LoginActionFlag GetActionFlag() const;
 
                     /**
                      * 判断参数 ActionFlag 是否已赋值
                      * @return ActionFlag 是否已赋值
+                     * 
                      */
                     bool ActionFlagHasBeenSet() const;
 
                     /**
                      * 获取Suspicious login location protection settings
                      * @return OffsiteFlag Suspicious login location protection settings
+                     * 
                      */
                     OffsiteFlag GetOffsiteFlag() const;
 
                     /**
                      * 判断参数 OffsiteFlag 是否已赋值
                      * @return OffsiteFlag 是否已赋值
+                     * 
                      */
                     bool OffsiteFlagHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Video processing task ID.
                      * @return TaskId Video processing task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Video processing task ID.
-                     * @param TaskId Video processing task ID.
+                     * @param _taskId Video processing task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

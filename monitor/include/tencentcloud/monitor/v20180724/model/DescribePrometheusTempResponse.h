@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of templates
                      * @return Templates List of templates
+                     * 
                      */
                     std::vector<PrometheusTemp> GetTemplates() const;
 
                     /**
                      * 判断参数 Templates 是否已赋值
                      * @return Templates 是否已赋值
+                     * 
                      */
                     bool TemplatesHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return Total Total number
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

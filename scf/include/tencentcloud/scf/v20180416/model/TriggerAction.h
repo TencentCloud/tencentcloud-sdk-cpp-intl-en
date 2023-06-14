@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TriggerName Scheduled action name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTriggerName() const;
 
                     /**
                      * 设置Scheduled action name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TriggerName Scheduled action name
+                     * @param _triggerName Scheduled action name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTriggerName(const std::string& _triggerName);
 
                     /**
                      * 判断参数 TriggerName 是否已赋值
                      * @return TriggerName 是否已赋值
+                     * 
                      */
                     bool TriggerNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TriggerProvisionedConcurrencyNum Target provisioned concurrency of the scheduled scaling action 
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTriggerProvisionedConcurrencyNum() const;
 
                     /**
                      * 设置Target provisioned concurrency of the scheduled scaling action 
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TriggerProvisionedConcurrencyNum Target provisioned concurrency of the scheduled scaling action 
+                     * @param _triggerProvisionedConcurrencyNum Target provisioned concurrency of the scheduled scaling action 
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTriggerProvisionedConcurrencyNum(const uint64_t& _triggerProvisionedConcurrencyNum);
 
                     /**
                      * 判断参数 TriggerProvisionedConcurrencyNum 是否已赋值
                      * @return TriggerProvisionedConcurrencyNum 是否已赋值
+                     * 
                      */
                     bool TriggerProvisionedConcurrencyNumHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TriggerCronConfig Trigger time of the scheduled action in Cron expression. Seven fields are required and should be separated with a space.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTriggerCronConfig() const;
 
                     /**
                      * 设置Trigger time of the scheduled action in Cron expression. Seven fields are required and should be separated with a space.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TriggerCronConfig Trigger time of the scheduled action in Cron expression. Seven fields are required and should be separated with a space.
+                     * @param _triggerCronConfig Trigger time of the scheduled action in Cron expression. Seven fields are required and should be separated with a space.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTriggerCronConfig(const std::string& _triggerCronConfig);
 
                     /**
                      * 判断参数 TriggerCronConfig 是否已赋值
                      * @return TriggerCronConfig 是否已赋值
+                     * 
                      */
                     bool TriggerCronConfigHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return ProvisionedType The provision type. Value: `Default`
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetProvisionedType() const;
 
                     /**
                      * 设置The provision type. Value: `Default`
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param ProvisionedType The provision type. Value: `Default`
+                     * @param _provisionedType The provision type. Value: `Default`
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProvisionedType(const std::string& _provisionedType);
 
                     /**
                      * 判断参数 ProvisionedType 是否已赋值
                      * @return ProvisionedType 是否已赋值
+                     * 
                      */
                     bool ProvisionedTypeHasBeenSet() const;
 

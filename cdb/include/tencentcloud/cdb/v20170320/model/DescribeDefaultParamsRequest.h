@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
                      * @return EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
                      * 设置Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
-                     * @param EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * @param _engineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
                     /**
                      * 判断参数 EngineVersion 是否已赋值
                      * @return EngineVersion 是否已赋值
+                     * 
                      */
                     bool EngineVersionHasBeenSet() const;
 
                     /**
                      * 获取Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
                      * @return TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
                      * 设置Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-                     * @param TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * @param _templateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * 
                      */
                     void SetTemplateType(const std::string& _templateType);
 
                     /**
                      * 判断参数 TemplateType 是否已赋值
                      * @return TemplateType 是否已赋值
+                     * 
                      */
                     bool TemplateTypeHasBeenSet() const;
 
                     /**
                      * 获取Parameter template engine. Default value: `InnoDB`.
                      * @return EngineType Parameter template engine. Default value: `InnoDB`.
+                     * 
                      */
                     std::string GetEngineType() const;
 
                     /**
                      * 设置Parameter template engine. Default value: `InnoDB`.
-                     * @param EngineType Parameter template engine. Default value: `InnoDB`.
+                     * @param _engineType Parameter template engine. Default value: `InnoDB`.
+                     * 
                      */
                     void SetEngineType(const std::string& _engineType);
 
                     /**
                      * 判断参数 EngineType 是否已赋值
                      * @return EngineType 是否已赋值
+                     * 
                      */
                     bool EngineTypeHasBeenSet() const;
 

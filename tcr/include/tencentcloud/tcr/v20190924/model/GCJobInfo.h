@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Job ID
                      * @return ID Job ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Job ID
-                     * @param ID Job ID
+                     * @param _iD Job ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Job status
                      * @return JobStatus Job status
+                     * 
                      */
                     std::string GetJobStatus() const;
 
                     /**
                      * 设置Job status
-                     * @param JobStatus Job status
+                     * @param _jobStatus Job status
+                     * 
                      */
                     void SetJobStatus(const std::string& _jobStatus);
 
                     /**
                      * 判断参数 JobStatus 是否已赋值
                      * @return JobStatus 是否已赋值
+                     * 
                      */
                     bool JobStatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreationTime Creation time
+                     * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreationTime Creation time
+                     * @param _creationTime Creation time
+                     * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
 
                     /**
                      * 判断参数 CreationTime 是否已赋值
                      * @return CreationTime 是否已赋值
+                     * 
                      */
                     bool CreationTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Scheduling information
                      * @return Schedule Scheduling information
+                     * 
                      */
                     Schedule GetSchedule() const;
 
                     /**
                      * 设置Scheduling information
-                     * @param Schedule Scheduling information
+                     * @param _schedule Scheduling information
+                     * 
                      */
                     void SetSchedule(const Schedule& _schedule);
 
                     /**
                      * 判断参数 Schedule 是否已赋值
                      * @return Schedule 是否已赋值
+                     * 
                      */
                     bool ScheduleHasBeenSet() const;
 

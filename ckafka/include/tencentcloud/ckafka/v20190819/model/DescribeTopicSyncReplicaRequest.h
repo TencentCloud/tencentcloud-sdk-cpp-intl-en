@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name
                      * @return TopicName Topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-                     * @param TopicName Topic name
+                     * @param _topicName Topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Offset. If this parameter is left empty, 0 will be used by default.
                      * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. If this parameter is left empty, 0 will be used by default.
-                     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * @param _offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
                      * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * @param _limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filters unsynced replicas only
                      * @return OutOfSyncReplicaOnly Filters unsynced replicas only
+                     * 
                      */
                     bool GetOutOfSyncReplicaOnly() const;
 
                     /**
                      * 设置Filters unsynced replicas only
-                     * @param OutOfSyncReplicaOnly Filters unsynced replicas only
+                     * @param _outOfSyncReplicaOnly Filters unsynced replicas only
+                     * 
                      */
                     void SetOutOfSyncReplicaOnly(const bool& _outOfSyncReplicaOnly);
 
                     /**
                      * 判断参数 OutOfSyncReplicaOnly 是否已赋值
                      * @return OutOfSyncReplicaOnly 是否已赋值
+                     * 
                      */
                     bool OutOfSyncReplicaOnlyHasBeenSet() const;
 

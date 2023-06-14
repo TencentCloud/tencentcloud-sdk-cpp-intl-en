@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type Type
+                     * @param _type Type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Status
+                     * @param _status Status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublicUrl Public URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicUrl() const;
 
                     /**
                      * 设置Public URL
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublicUrl Public URL
+                     * @param _publicUrl Public URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicUrl(const std::string& _publicUrl);
 
                     /**
                      * 判断参数 PublicUrl 是否已赋值
                      * @return PublicUrl 是否已赋值
+                     * 
                      */
                     bool PublicUrlHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrivateUrl Private URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPrivateUrl() const;
 
                     /**
                      * 设置Private URL
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateUrl Private URL
+                     * @param _privateUrl Private URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateUrl(const std::string& _privateUrl);
 
                     /**
                      * 判断参数 PrivateUrl 是否已赋值
                      * @return PrivateUrl 是否已赋值
+                     * 
                      */
                     bool PrivateUrlHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublicAccess Public network access
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicAccess() const;
 
                     /**
                      * 设置Public network access
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublicAccess Public network access
+                     * @param _publicAccess Public network access
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicAccess(const std::string& _publicAccess);
 
                     /**
                      * 判断参数 PublicAccess 是否已赋值
                      * @return PublicAccess 是否已赋值
+                     * 
                      */
                     bool PublicAccessHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrivateAccess Private network access
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPrivateAccess() const;
 
                     /**
                      * 设置Private network access
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateAccess Private network access
+                     * @param _privateAccess Private network access
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateAccess(const std::string& _privateAccess);
 
                     /**
                      * 判断参数 PrivateAccess 是否已赋值
                      * @return PrivateAccess 是否已赋值
+                     * 
                      */
                     bool PrivateAccessHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version Version
+                     * @param _version Version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 

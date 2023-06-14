@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Corresponding time point
                      * @return Time Corresponding time point
+                     * 
                      */
                     uint64_t GetTime() const;
 
                     /**
                      * 设置Corresponding time point
-                     * @param Time Corresponding time point
+                     * @param _time Corresponding time point
+                     * 
                      */
                     void SetTime(const uint64_t& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Data Statistics value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetData() const;
 
                     /**
                      * 设置Statistics value
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Data Statistics value
+                     * @param _data Statistics value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetData(const double& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

@@ -49,24 +49,28 @@ namespace TencentCloud
 You can open the link to download a .gz log package that contains all log files without extension.
                      * @return DomainLogs Download link of the log package.
 You can open the link to download a .gz log package that contains all log files without extension.
+                     * 
                      */
                     std::vector<DomainLog> GetDomainLogs() const;
 
                     /**
                      * 判断参数 DomainLogs 是否已赋值
                      * @return DomainLogs 是否已赋值
+                     * 
                      */
                     bool DomainLogsHasBeenSet() const;
 
                     /**
                      * 获取Total number of entries obtained
                      * @return TotalCount Total number of entries obtained
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

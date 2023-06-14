@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Defaults to `false`, which means to obtain the kubeconfig of private network
                      * @return IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
+                     * 
                      */
                     bool GetIsExtranet() const;
 
                     /**
                      * 设置Defaults to `false`, which means to obtain the kubeconfig of private network
-                     * @param IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
+                     * @param _isExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
+                     * 
                      */
                     void SetIsExtranet(const bool& _isExtranet);
 
                     /**
                      * 判断参数 IsExtranet 是否已赋值
                      * @return IsExtranet 是否已赋值
+                     * 
                      */
                     bool IsExtranetHasBeenSet() const;
 

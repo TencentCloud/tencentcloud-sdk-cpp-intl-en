@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable low-light enhancement. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable low-light enhancement. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
-                     * @param Switch Whether to enable low-light enhancement. Valid values:
+                     * @param _switch Whether to enable low-light enhancement. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -79,6 +82,7 @@ Default value: `normal`.
                      * @return Type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
 <li>`normal`</li>
 Default value: `normal`.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -86,15 +90,17 @@ Default value: `normal`.
                      * 设置The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
 <li>`normal`</li>
 Default value: `normal`.
-                     * @param Type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
+                     * @param _type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
 <li>`normal`</li>
 Default value: `normal`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

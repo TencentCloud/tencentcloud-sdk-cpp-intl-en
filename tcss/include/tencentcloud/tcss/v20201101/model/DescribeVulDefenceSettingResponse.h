@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Whether it is enabled. Valid values: `0` (disabled); `1` (enabled).
                      * @return IsEnabled Whether it is enabled. Valid values: `0` (disabled); `1` (enabled).
+                     * 
                      */
                     int64_t GetIsEnabled() const;
 
                     /**
                      * 判断参数 IsEnabled 是否已赋值
                      * @return IsEnabled 是否已赋值
+                     * 
                      */
                     bool IsEnabledHasBeenSet() const;
 
                     /**
                      * 获取Scope of servers with exploit prevention enabled. Valid values: `0` (specified servers); `1` (all servers).
                      * @return Scope Scope of servers with exploit prevention enabled. Valid values: `0` (specified servers); `1` (all servers).
+                     * 
                      */
                     int64_t GetScope() const;
 
                     /**
                      * 判断参数 Scope 是否已赋值
                      * @return Scope 是否已赋值
+                     * 
                      */
                     bool ScopeHasBeenSet() const;
 
                     /**
                      * 获取Number of servers with exploit prevention enabled
                      * @return HostCount Number of servers with exploit prevention enabled
+                     * 
                      */
                     int64_t GetHostCount() const;
 
                     /**
                      * 判断参数 HostCount 是否已赋值
                      * @return HostCount 是否已赋值
+                     * 
                      */
                     bool HostCountHasBeenSet() const;
 
                     /**
                      * 获取Number of abnormal servers with exploit prevention enabled
                      * @return ExceptionHostCount Number of abnormal servers with exploit prevention enabled
+                     * 
                      */
                     int64_t GetExceptionHostCount() const;
 
                     /**
                      * 判断参数 ExceptionHostCount 是否已赋值
                      * @return ExceptionHostCount 是否已赋值
+                     * 
                      */
                     bool ExceptionHostCountHasBeenSet() const;
 
@@ -96,12 +104,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIDs Specified servers with exploit prevention enabled
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetHostIDs() const;
 
                     /**
                      * 判断参数 HostIDs 是否已赋值
                      * @return HostIDs 是否已赋值
+                     * 
                      */
                     bool HostIDsHasBeenSet() const;
 
@@ -110,12 +120,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostTotalCount Total number of servers with TCSS activated
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHostTotalCount() const;
 
                     /**
                      * 判断参数 HostTotalCount 是否已赋值
                      * @return HostTotalCount 是否已赋值
+                     * 
                      */
                     bool HostTotalCountHasBeenSet() const;
 
@@ -124,12 +136,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SupportDefenseVulCount Number of vulnerabilities that can be prevented
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSupportDefenseVulCount() const;
 
                     /**
                      * 判断参数 SupportDefenseVulCount 是否已赋值
                      * @return SupportDefenseVulCount 是否已赋值
+                     * 
                      */
                     bool SupportDefenseVulCountHasBeenSet() const;
 

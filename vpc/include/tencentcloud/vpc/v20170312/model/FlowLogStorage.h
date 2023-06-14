@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Storage instance ID, which is required when `StorageType` is `ckafka`.
                      * @return StorageId Storage instance ID, which is required when `StorageType` is `ckafka`.
+                     * 
                      */
                     std::string GetStorageId() const;
 
                     /**
                      * 设置Storage instance ID, which is required when `StorageType` is `ckafka`.
-                     * @param StorageId Storage instance ID, which is required when `StorageType` is `ckafka`.
+                     * @param _storageId Storage instance ID, which is required when `StorageType` is `ckafka`.
+                     * 
                      */
                     void SetStorageId(const std::string& _storageId);
 
                     /**
                      * 判断参数 StorageId 是否已赋值
                      * @return StorageId 是否已赋值
+                     * 
                      */
                     bool StorageIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return StorageTopic Topic ID, which is required when `StorageType` is `ckafka`.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetStorageTopic() const;
 
                     /**
                      * 设置Topic ID, which is required when `StorageType` is `ckafka`.
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param StorageTopic Topic ID, which is required when `StorageType` is `ckafka`.
+                     * @param _storageTopic Topic ID, which is required when `StorageType` is `ckafka`.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetStorageTopic(const std::string& _storageTopic);
 
                     /**
                      * 判断参数 StorageTopic 是否已赋值
                      * @return StorageTopic 是否已赋值
+                     * 
                      */
                     bool StorageTopicHasBeenSet() const;
 

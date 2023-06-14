@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
                      * @return InstanceId Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
-                     * @param InstanceId Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
+                     * @param _instanceId Instance ID in the format of cdb-XXXX, which is the same as that displayed in the TencentDB console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
                      * @return EncryptionStatus Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
+                     * 
                      */
                     std::string GetEncryptionStatus() const;
 
                     /**
                      * 设置Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
-                     * @param EncryptionStatus Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
+                     * @param _encryptionStatus Default encryption status for the new auto-generated physical backup files. Valid values: `on`, `off`.
+                     * 
                      */
                     void SetEncryptionStatus(const std::string& _encryptionStatus);
 
                     /**
                      * 判断参数 EncryptionStatus 是否已赋值
                      * @return EncryptionStatus 是否已赋值
+                     * 
                      */
                     bool EncryptionStatusHasBeenSet() const;
 

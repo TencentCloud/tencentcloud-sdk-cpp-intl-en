@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserGroupIds List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetUserGroupIds() const;
 
                     /**
                      * 判断参数 UserGroupIds 是否已赋值
                      * @return UserGroupIds 是否已赋值
+                     * 
                      */
                     bool UserGroupIdsHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserId User ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserGroupInfoList List of information of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UserGroupInfo> GetUserGroupInfoList() const;
 
                     /**
                      * 判断参数 UserGroupInfoList 是否已赋值
                      * @return UserGroupInfoList 是否已赋值
+                     * 
                      */
                     bool UserGroupInfoListHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of returned user group information items.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

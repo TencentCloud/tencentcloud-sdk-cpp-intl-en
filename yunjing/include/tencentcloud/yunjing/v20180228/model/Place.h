@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取City ID.
                      * @return CityId City ID.
+                     * 
                      */
                     uint64_t GetCityId() const;
 
                     /**
                      * 设置City ID.
-                     * @param CityId City ID.
+                     * @param _cityId City ID.
+                     * 
                      */
                     void SetCityId(const uint64_t& _cityId);
 
                     /**
                      * 判断参数 CityId 是否已赋值
                      * @return CityId 是否已赋值
+                     * 
                      */
                     bool CityIdHasBeenSet() const;
 
                     /**
                      * 获取Province/State ID.
                      * @return ProvinceId Province/State ID.
+                     * 
                      */
                     uint64_t GetProvinceId() const;
 
                     /**
                      * 设置Province/State ID.
-                     * @param ProvinceId Province/State ID.
+                     * @param _provinceId Province/State ID.
+                     * 
                      */
                     void SetProvinceId(const uint64_t& _provinceId);
 
                     /**
                      * 判断参数 ProvinceId 是否已赋值
                      * @return ProvinceId 是否已赋值
+                     * 
                      */
                     bool ProvinceIdHasBeenSet() const;
 
                     /**
                      * 获取Country/Region ID. Currently, only `1` (Mainland China) is supported.
                      * @return CountryId Country/Region ID. Currently, only `1` (Mainland China) is supported.
+                     * 
                      */
                     uint64_t GetCountryId() const;
 
                     /**
                      * 设置Country/Region ID. Currently, only `1` (Mainland China) is supported.
-                     * @param CountryId Country/Region ID. Currently, only `1` (Mainland China) is supported.
+                     * @param _countryId Country/Region ID. Currently, only `1` (Mainland China) is supported.
+                     * 
                      */
                     void SetCountryId(const uint64_t& _countryId);
 
                     /**
                      * 判断参数 CountryId 是否已赋值
                      * @return CountryId 是否已赋值
+                     * 
                      */
                     bool CountryIdHasBeenSet() const;
 

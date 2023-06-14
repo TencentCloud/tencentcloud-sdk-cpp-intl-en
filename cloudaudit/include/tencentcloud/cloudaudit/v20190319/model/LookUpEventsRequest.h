@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Search criteria
                      * @return LookupAttributes Search criteria
+                     * 
                      */
                     std::vector<LookupAttribute> GetLookupAttributes() const;
 
                     /**
                      * 设置Search criteria
-                     * @param LookupAttributes Search criteria
+                     * @param _lookupAttributes Search criteria
+                     * 
                      */
                     void SetLookupAttributes(const std::vector<LookupAttribute>& _lookupAttributes);
 
                     /**
                      * 判断参数 LookupAttributes 是否已赋值
                      * @return LookupAttributes 是否已赋值
+                     * 
                      */
                     bool LookupAttributesHasBeenSet() const;
 
                     /**
                      * 获取Credential for viewing more logs
                      * @return NextToken Credential for viewing more logs
+                     * 
                      */
                     std::string GetNextToken() const;
 
                     /**
                      * 设置Credential for viewing more logs
-                     * @param NextToken Credential for viewing more logs
+                     * @param _nextToken Credential for viewing more logs
+                     * 
                      */
                     void SetNextToken(const std::string& _nextToken);
 
                     /**
                      * 判断参数 NextToken 是否已赋值
                      * @return NextToken 是否已赋值
+                     * 
                      */
                     bool NextTokenHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of logs to be returned
                      * @return MaxResults Maximum number of logs to be returned
+                     * 
                      */
                     int64_t GetMaxResults() const;
 
                     /**
                      * 设置Maximum number of logs to be returned
-                     * @param MaxResults Maximum number of logs to be returned
+                     * @param _maxResults Maximum number of logs to be returned
+                     * 
                      */
                     void SetMaxResults(const int64_t& _maxResults);
 
                     /**
                      * 判断参数 MaxResults 是否已赋值
                      * @return MaxResults 是否已赋值
+                     * 
                      */
                     bool MaxResultsHasBeenSet() const;
 
                     /**
                      * 获取CloudAudit mode. Valid values: standard, quick. Default value: standard
                      * @return Mode CloudAudit mode. Valid values: standard, quick. Default value: standard
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置CloudAudit mode. Valid values: standard, quick. Default value: standard
-                     * @param Mode CloudAudit mode. Valid values: standard, quick. Default value: standard
+                     * @param _mode CloudAudit mode. Valid values: standard, quick. Default value: standard
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 

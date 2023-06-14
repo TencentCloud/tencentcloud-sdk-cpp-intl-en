@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Name Media filename.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Media filename.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Name Media filename.
+                     * @param _name Media filename.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Media file description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Media file description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Media file description.
+                     * @param _description Media file description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+                     * @param _expireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClassId Category ID of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetClassId() const;
 
                     /**
                      * 设置Category ID of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClassId Category ID of media file.
+                     * @param _classId Category ID of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassId(const int64_t& _classId);
 
                     /**
                      * 判断参数 ClassId 是否已赋值
                      * @return ClassId 是否已赋值
+                     * 
                      */
                     bool ClassIdHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClassName Category name of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClassName() const;
 
                     /**
                      * 设置Category name of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClassName Category name of media file.
+                     * @param _className Category name of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassName(const std::string& _className);
 
                     /**
                      * 判断参数 ClassName 是否已赋值
                      * @return ClassName 是否已赋值
+                     * 
                      */
                     bool ClassNameHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClassPath Category path to media file separated by "-", such as "new first-level category - new second-level category".
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClassPath() const;
 
                     /**
                      * 设置Category path to media file separated by "-", such as "new first-level category - new second-level category".
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClassPath Category path to media file separated by "-", such as "new first-level category - new second-level category".
+                     * @param _classPath Category path to media file separated by "-", such as "new first-level category - new second-level category".
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassPath(const std::string& _classPath);
 
                     /**
                      * 判断参数 ClassPath 是否已赋值
                      * @return ClassPath 是否已赋值
+                     * 
                      */
                     bool ClassPathHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CoverUrl Cover image address of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
                      * 设置Cover image address of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CoverUrl Cover image address of media file.
+                     * @param _coverUrl Cover image address of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
 
                     /**
                      * 判断参数 CoverUrl 是否已赋值
                      * @return CoverUrl 是否已赋值
+                     * 
                      */
                     bool CoverUrlHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Type Media file container, such as mp4 and flv.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Media file container, such as mp4 and flv.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Type Media file container, such as mp4 and flv.
+                     * @param _type Media file container, such as mp4 and flv.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -272,20 +302,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MediaUrl URL of source media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMediaUrl() const;
 
                     /**
                      * 设置URL of source media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MediaUrl URL of source media file.
+                     * @param _mediaUrl URL of source media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMediaUrl(const std::string& _mediaUrl);
 
                     /**
                      * 判断参数 MediaUrl 是否已赋值
                      * @return MediaUrl 是否已赋值
+                     * 
                      */
                     bool MediaUrlHasBeenSet() const;
 
@@ -294,38 +327,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SourceInfo Source information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaSourceData GetSourceInfo() const;
 
                     /**
                      * 设置Source information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SourceInfo Source information of media file.
+                     * @param _sourceInfo Source information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSourceInfo(const MediaSourceData& _sourceInfo);
 
                     /**
                      * 判断参数 SourceInfo 是否已赋值
                      * @return SourceInfo 是否已赋值
+                     * 
                      */
                     bool SourceInfoHasBeenSet() const;
 
                     /**
                      * 获取Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
                      * @return StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+                     * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
                      * 设置Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
-                     * @param StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+                     * @param _storageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+                     * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
 
                     /**
                      * 判断参数 StorageRegion 是否已赋值
                      * @return StorageRegion 是否已赋值
+                     * 
                      */
                     bool StorageRegionHasBeenSet() const;
 
@@ -334,38 +373,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TagSet Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTagSet() const;
 
                     /**
                      * 设置Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TagSet Tag information of media file.
+                     * @param _tagSet Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSet(const std::vector<std::string>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of an LVB recording file.
                      * @return Vid Unique ID of an LVB recording file.
+                     * 
                      */
                     std::string GetVid() const;
 
                     /**
                      * 设置Unique ID of an LVB recording file.
-                     * @param Vid Unique ID of an LVB recording file.
+                     * @param _vid Unique ID of an LVB recording file.
+                     * 
                      */
                     void SetVid(const std::string& _vid);
 
                     /**
                      * 判断参数 Vid 是否已赋值
                      * @return Vid 是否已赋值
+                     * 
                      */
                     bool VidHasBeenSet() const;
 
@@ -378,6 +423,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Video: video file</li>
 <li>Audio: audio file</li>
 <li>Image: image file</li>
+                     * 
                      */
                     std::string GetCategory() const;
 
@@ -386,16 +432,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Video: video file</li>
 <li>Audio: audio file</li>
 <li>Image: image file</li>
-                     * @param Category File type:
+                     * @param _category File type:
 <li>Video: video file</li>
 <li>Audio: audio file</li>
 <li>Image: image file</li>
+                     * 
                      */
                     void SetCategory(const std::string& _category);
 
                     /**
                      * 判断参数 Category 是否已赋值
                      * @return Category 是否已赋值
+                     * 
                      */
                     bool CategoryHasBeenSet() const;
 
@@ -406,6 +454,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Status The file status. Valid values: `Normal`, `Forbidden`.
 
 *Note: This field is not supported yet.	
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -413,15 +462,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置The file status. Valid values: `Normal`, `Forbidden`.
 
 *Note: This field is not supported yet.	
-                     * @param Status The file status. Valid values: `Normal`, `Forbidden`.
+                     * @param _status The file status. Valid values: `Normal`, `Forbidden`.
 
 *Note: This field is not supported yet.	
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -436,6 +487,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+                     * 
                      */
                     std::string GetStorageClass() const;
 
@@ -445,17 +497,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
-                     * @param StorageClass Storage class of a media file:
+                     * @param _storageClass Storage class of a media file:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+                     * 
                      */
                     void SetStorageClass(const std::string& _storageClass);
 
                     /**
                      * 判断参数 StorageClass 是否已赋值
                      * @return StorageClass 是否已赋值
+                     * 
                      */
                     bool StorageClassHasBeenSet() const;
 

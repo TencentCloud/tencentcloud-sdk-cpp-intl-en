@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,33 +62,38 @@ namespace TencentCloud
                      * 设置Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Switch. Values:
+                     * @param _switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取The custom rule.
                      * @return AclUserRules The custom rule.
+                     * 
                      */
                     std::vector<AclUserRule> GetAclUserRules() const;
 
                     /**
                      * 设置The custom rule.
-                     * @param AclUserRules The custom rule.
+                     * @param _aclUserRules The custom rule.
+                     * 
                      */
                     void SetAclUserRules(const std::vector<AclUserRule>& _aclUserRules);
 
                     /**
                      * 判断参数 AclUserRules 是否已赋值
                      * @return AclUserRules 是否已赋值
+                     * 
                      */
                     bool AclUserRulesHasBeenSet() const;
 
@@ -96,20 +102,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Customizes Custom managed rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<AclUserRule> GetCustomizes() const;
 
                     /**
                      * 设置Custom managed rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Customizes Custom managed rules
+                     * @param _customizes Custom managed rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCustomizes(const std::vector<AclUserRule>& _customizes);
 
                     /**
                      * 判断参数 Customizes 是否已赋值
                      * @return Customizes 是否已赋值
+                     * 
                      */
                     bool CustomizesHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded string of certificate in PEM format
                      * @return Cert Base64-encoded string of certificate in PEM format
+                     * 
                      */
                     std::string GetCert() const;
 
                     /**
                      * 设置Base64-encoded string of certificate in PEM format
-                     * @param Cert Base64-encoded string of certificate in PEM format
+                     * @param _cert Base64-encoded string of certificate in PEM format
+                     * 
                      */
                     void SetCert(const std::string& _cert);
 
                     /**
                      * 判断参数 Cert 是否已赋值
                      * @return Cert 是否已赋值
+                     * 
                      */
                     bool CertHasBeenSet() const;
 
                     /**
                      * 获取Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
                      * @return CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
-                     * @param CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * @param _certId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
                     /**
                      * 获取Product of the domain name, either `cdn` (default) or `ecdn`.
                      * @return Product Product of the domain name, either `cdn` (default) or `ecdn`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Product of the domain name, either `cdn` (default) or `ecdn`.
-                     * @param Product Product of the domain name, either `cdn` (default) or `ecdn`.
+                     * @param _product Product of the domain name, either `cdn` (default) or `ecdn`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

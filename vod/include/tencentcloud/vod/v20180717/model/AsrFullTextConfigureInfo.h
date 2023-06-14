@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
-                     * @param Switch Switch of full speech recognition task. Valid values:
+                     * @param _switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -79,6 +82,7 @@ namespace TencentCloud
                      * @return SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
 <li>vtt</li>
 <li>srt</li>
+                     * 
                      */
                     std::vector<std::string> GetSubtitleFormats() const;
 
@@ -86,15 +90,17 @@ namespace TencentCloud
                      * 设置The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
 <li>vtt</li>
 <li>srt</li>
-                     * @param SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+                     * @param _subtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
 <li>vtt</li>
 <li>srt</li>
+                     * 
                      */
                     void SetSubtitleFormats(const std::vector<std::string>& _subtitleFormats);
 
                     /**
                      * 判断参数 SubtitleFormats 是否已赋值
                      * @return SubtitleFormats 是否已赋值
+                     * 
                      */
                     bool SubtitleFormatsHasBeenSet() const;
 
@@ -107,6 +113,7 @@ namespace TencentCloud
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+                     * 
                      */
                     std::string GetSubtitleFormat() const;
 
@@ -115,16 +122,18 @@ namespace TencentCloud
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
-                     * @param SubtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+                     * @param _subtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+                     * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
 
                     /**
                      * 判断参数 SubtitleFormat 是否已赋值
                      * @return SubtitleFormat 是否已赋值
+                     * 
                      */
                     bool SubtitleFormatHasBeenSet() const;
 

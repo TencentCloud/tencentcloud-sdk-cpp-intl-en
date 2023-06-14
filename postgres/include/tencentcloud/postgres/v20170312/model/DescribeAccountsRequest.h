@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-6fego161
                      * @return DBInstanceId Instance ID in the format of postgres-6fego161
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-6fego161
-                     * @param DBInstanceId Instance ID in the format of postgres-6fego161
+                     * @param _dBInstanceId Instance ID in the format of postgres-6fego161
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of entries returned per page. Default value: 10. Value range: 1–100.
                      * @return Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries returned per page. Default value: 10. Value range: 1–100.
-                     * @param Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * @param _limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Data offset, which starts from 0.
                      * @return Offset Data offset, which starts from 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Data offset, which starts from 0.
-                     * @param Offset Data offset, which starts from 0.
+                     * @param _offset Data offset, which starts from 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
                      * @return OrderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
-                     * @param OrderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+                     * @param _orderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
                      * @return OrderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
-                     * @param OrderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+                     * @param _orderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

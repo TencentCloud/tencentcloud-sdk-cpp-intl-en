@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Log consumer type
                      * @return OutputType Log consumer type
+                     * 
                      */
                     std::string GetOutputType() const;
 
                     /**
                      * 设置Log consumer type
-                     * @param OutputType Log consumer type
+                     * @param _outputType Log consumer type
+                     * 
                      */
                     void SetOutputType(const std::string& _outputType);
 
                     /**
                      * 判断参数 OutputType 是否已赋值
                      * @return OutputType 是否已赋值
+                     * 
                      */
                     bool OutputTypeHasBeenSet() const;
 
                     /**
                      * 获取CLS logset
                      * @return ClsLogsetName CLS logset
+                     * 
                      */
                     std::string GetClsLogsetName() const;
 
                     /**
                      * 设置CLS logset
-                     * @param ClsLogsetName CLS logset
+                     * @param _clsLogsetName CLS logset
+                     * 
                      */
                     void SetClsLogsetName(const std::string& _clsLogsetName);
 
                     /**
                      * 判断参数 ClsLogsetName 是否已赋值
                      * @return ClsLogsetName 是否已赋值
+                     * 
                      */
                     bool ClsLogsetNameHasBeenSet() const;
 
                     /**
                      * 获取CLS log topic
                      * @return ClsLogTopicId CLS log topic
+                     * 
                      */
                     std::string GetClsLogTopicId() const;
 
                     /**
                      * 设置CLS log topic
-                     * @param ClsLogTopicId CLS log topic
+                     * @param _clsLogTopicId CLS log topic
+                     * 
                      */
                     void SetClsLogTopicId(const std::string& _clsLogTopicId);
 
                     /**
                      * 判断参数 ClsLogTopicId 是否已赋值
                      * @return ClsLogTopicId 是否已赋值
+                     * 
                      */
                     bool ClsLogTopicIdHasBeenSet() const;
 
                     /**
                      * 获取CLS logset ID
                      * @return ClsLogsetId CLS logset ID
+                     * 
                      */
                     std::string GetClsLogsetId() const;
 
                     /**
                      * 设置CLS logset ID
-                     * @param ClsLogsetId CLS logset ID
+                     * @param _clsLogsetId CLS logset ID
+                     * 
                      */
                     void SetClsLogsetId(const std::string& _clsLogsetId);
 
                     /**
                      * 判断参数 ClsLogsetId 是否已赋值
                      * @return ClsLogsetId 是否已赋值
+                     * 
                      */
                     bool ClsLogsetIdHasBeenSet() const;
 
                     /**
                      * 获取CLS log topic name
                      * @return ClsLogTopicName CLS log topic name
+                     * 
                      */
                     std::string GetClsLogTopicName() const;
 
                     /**
                      * 设置CLS log topic name
-                     * @param ClsLogTopicName CLS log topic name
+                     * @param _clsLogTopicName CLS log topic name
+                     * 
                      */
                     void SetClsLogTopicName(const std::string& _clsLogTopicName);
 
                     /**
                      * 判断参数 ClsLogTopicName 是否已赋值
                      * @return ClsLogTopicName 是否已赋值
+                     * 
                      */
                     bool ClsLogTopicNameHasBeenSet() const;
 

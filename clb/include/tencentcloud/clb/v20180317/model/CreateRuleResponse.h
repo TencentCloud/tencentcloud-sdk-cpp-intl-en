@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of unique IDs of created forwarding rules
                      * @return LocationIds Array of unique IDs of created forwarding rules
+                     * 
                      */
                     std::vector<std::string> GetLocationIds() const;
 
                     /**
                      * 判断参数 LocationIds 是否已赋值
                      * @return LocationIds 是否已赋值
+                     * 
                      */
                     bool LocationIdsHasBeenSet() const;
 

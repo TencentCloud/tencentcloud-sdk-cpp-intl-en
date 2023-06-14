@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of records in port list.
                      * @return TotalCount Total number of records in port list.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Port list.
                      * @return OpenPorts Port list.
+                     * 
                      */
                     std::vector<OpenPort> GetOpenPorts() const;
 
                     /**
                      * 判断参数 OpenPorts 是否已赋值
                      * @return OpenPorts 是否已赋值
+                     * 
                      */
                     bool OpenPortsHasBeenSet() const;
 

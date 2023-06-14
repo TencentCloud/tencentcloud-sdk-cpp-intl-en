@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Total rules in the list
                      * @return Total Total rules in the list
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Security group rule list data
                      * @return Data Security group rule list data
+                     * 
                      */
                     std::vector<SecurityGroupListData> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Total entries excluding the filtered ones
                      * @return AllTotal Total entries excluding the filtered ones
+                     * 
                      */
                     uint64_t GetAllTotal() const;
 
                     /**
                      * 判断参数 AllTotal 是否已赋值
                      * @return AllTotal 是否已赋值
+                     * 
                      */
                     bool AllTotalHasBeenSet() const;
 
@@ -85,12 +91,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Enable All access control rules enabled/disabled
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

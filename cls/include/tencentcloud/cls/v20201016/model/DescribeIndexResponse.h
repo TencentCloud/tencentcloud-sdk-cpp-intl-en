@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Whether it takes effect
                      * @return Status Whether it takes effect
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -73,24 +77,28 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Rule Index configuration information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     RuleInfo GetRule() const;
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 
                     /**
                      * 获取Index modification time. The default value is the index creation time.
                      * @return ModifyTime Index modification time. The default value is the index creation time.
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 
@@ -103,12 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 * `false`: Full-text indexing does not include internal fields.
 * `true`: Full-text indexing includes internal fields.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIncludeInternalFields() const;
 
                     /**
                      * 判断参数 IncludeInternalFields 是否已赋值
                      * @return IncludeInternalFields 是否已赋值
+                     * 
                      */
                     bool IncludeInternalFieldsHasBeenSet() const;
 
@@ -123,12 +133,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 * `1`: Full-text indexing includes all metadata fields.
 * `2`: Full-text indexing does not include metadata fields.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMetadataFlag() const;
 
                     /**
                      * 判断参数 MetadataFlag 是否已赋值
                      * @return MetadataFlag 是否已赋值
+                     * 
                      */
                     bool MetadataFlagHasBeenSet() const;
 

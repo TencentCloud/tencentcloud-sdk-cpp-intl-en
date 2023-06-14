@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Mode Data consistency check type. Valid values: `full`, `noCheck`, `notConfigured`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Data consistency check type. Valid values: `full`, `noCheck`, `notConfigured`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Mode Data consistency check type. Valid values: `full`, `noCheck`, `notConfigured`.
+                     * @param _mode Data consistency check type. Valid values: `full`, `noCheck`, `notConfigured`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 

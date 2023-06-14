@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Specifies the EXTERNAL CMK for which to delete the key material.
                      * @return KeyId Specifies the EXTERNAL CMK for which to delete the key material.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Specifies the EXTERNAL CMK for which to delete the key material.
-                     * @param KeyId Specifies the EXTERNAL CMK for which to delete the key material.
+                     * @param _keyId Specifies the EXTERNAL CMK for which to delete the key material.
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 

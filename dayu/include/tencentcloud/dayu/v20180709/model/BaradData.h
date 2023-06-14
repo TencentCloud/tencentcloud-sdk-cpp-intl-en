@@ -63,6 +63,7 @@ outtraffic: outbound traffic;
 alltraffic: sum of inbound and outbound traffic;
 inpkg: inbound packet rate;
 outpkg: outbound packet rate;)
+                     * 
                      */
                     std::string GetMetricName() const;
 
@@ -75,7 +76,7 @@ outtraffic: outbound traffic;
 alltraffic: sum of inbound and outbound traffic;
 inpkg: inbound packet rate;
 outpkg: outbound packet rate;)
-                     * @param MetricName Metric name (connum: number of active TCP connections;
+                     * @param _metricName Metric name (connum: number of active TCP connections;
 new_conn: number of new TCP connections;
 inactive_conn: number of inactive connections;
 intraffic: inbound traffic;
@@ -83,48 +84,56 @@ outtraffic: outbound traffic;
 alltraffic: sum of inbound and outbound traffic;
 inpkg: inbound packet rate;
 outpkg: outbound packet rate;)
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Value array
                      * @return Data Value array
+                     * 
                      */
                     std::vector<double> GetData() const;
 
                     /**
                      * 设置Value array
-                     * @param Data Value array
+                     * @param _data Value array
+                     * 
                      */
                     void SetData(const std::vector<double>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Value array size
                      * @return Count Value array size
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Value array size
-                     * @param Count Value array size
+                     * @param _count Value array size
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

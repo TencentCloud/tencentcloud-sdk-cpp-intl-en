@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Pagination parameter
                      * @return Offset Pagination parameter
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination parameter
-                     * @param Offset Pagination parameter
+                     * @param _offset Pagination parameter
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter
                      * @return Limit Pagination parameter
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Pagination parameter
-                     * @param Limit Pagination parameter
+                     * @param _limit Pagination parameter
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filter parameters
                      * @return Filters Filter parameters
+                     * 
                      */
                     std::vector<OriginFilter> GetFilters() const;
 
                     /**
                      * 设置Filter parameters
-                     * @param Filters Filter parameters
+                     * @param _filters Filter parameters
+                     * 
                      */
                     void SetFilters(const std::vector<OriginFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
@@ -102,20 +111,23 @@ namespace TencentCloud
 If it’s not specified, all origin groups will be obtained.
                      * @return ZoneId Site ID
 If it’s not specified, all origin groups will be obtained.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
 If it’s not specified, all origin groups will be obtained.
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
 If it’s not specified, all origin groups will be obtained.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 

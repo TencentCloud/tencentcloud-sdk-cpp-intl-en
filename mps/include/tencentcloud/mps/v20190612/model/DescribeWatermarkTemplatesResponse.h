@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible entries.
                      * @return TotalCount Number of eligible entries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of watermarking template details.
                      * @return WatermarkTemplateSet List of watermarking template details.
+                     * 
                      */
                     std::vector<WatermarkTemplate> GetWatermarkTemplateSet() const;
 
                     /**
                      * 判断参数 WatermarkTemplateSet 是否已赋值
                      * @return WatermarkTemplateSet 是否已赋值
+                     * 
                      */
                     bool WatermarkTemplateSetHasBeenSet() const;
 

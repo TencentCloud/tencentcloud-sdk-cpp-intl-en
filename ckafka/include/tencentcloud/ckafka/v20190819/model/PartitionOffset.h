@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Partition Partition, such as "0" or "1"
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPartition() const;
 
                     /**
                      * 设置Partition, such as "0" or "1"
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Partition Partition, such as "0" or "1"
+                     * @param _partition Partition, such as "0" or "1"
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartition(const std::string& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Offset Offset, such as 100
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset, such as 100
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Offset Offset, such as 100
+                     * @param _offset Offset, such as 100
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

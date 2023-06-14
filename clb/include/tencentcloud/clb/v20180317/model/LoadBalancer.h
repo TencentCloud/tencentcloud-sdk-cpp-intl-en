@@ -57,36 +57,42 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID.
                      * @return LoadBalancerId CLB instance ID.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID.
-                     * @param LoadBalancerId CLB instance ID.
+                     * @param _loadBalancerId CLB instance ID.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB instance name.
                      * @return LoadBalancerName CLB instance name.
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name.
-                     * @param LoadBalancerName CLB instance name.
+                     * @param _loadBalancerName CLB instance name.
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
@@ -95,38 +101,44 @@ namespace TencentCloud
 OPEN: public network; INTERNAL: private network.
                      * @return LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
+                     * 
                      */
                     std::string GetLoadBalancerType() const;
 
                     /**
                      * 设置CLB instance network type:
 OPEN: public network; INTERNAL: private network.
-                     * @param LoadBalancerType CLB instance network type:
+                     * @param _loadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
+                     * 
                      */
                     void SetLoadBalancerType(const std::string& _loadBalancerType);
 
                     /**
                      * 判断参数 LoadBalancerType 是否已赋值
                      * @return LoadBalancerType 是否已赋值
+                     * 
                      */
                     bool LoadBalancerTypeHasBeenSet() const;
 
                     /**
                      * 获取CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
                      * @return Forward CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
+                     * 
                      */
                     uint64_t GetForward() const;
 
                     /**
                      * 设置CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
-                     * @param Forward CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
+                     * @param _forward CLB type identifier. Value range: 1 (CLB); 0 (classic CLB).
+                     * 
                      */
                     void SetForward(const uint64_t& _forward);
 
                     /**
                      * 判断参数 Forward 是否已赋值
                      * @return Forward 是否已赋值
+                     * 
                      */
                     bool ForwardHasBeenSet() const;
 
@@ -135,20 +147,23 @@ OPEN: public network; INTERNAL: private network.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
+                     * @param _domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerVips List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerVips() const;
 
                     /**
                      * 设置List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LoadBalancerVips List of VIPs of a CLB instance.
+                     * @param _loadBalancerVips List of VIPs of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoadBalancerVips(const std::vector<std::string>& _loadBalancerVips);
 
                     /**
                      * 判断参数 LoadBalancerVips 是否已赋值
                      * @return LoadBalancerVips 是否已赋值
+                     * 
                      */
                     bool LoadBalancerVipsHasBeenSet() const;
 
@@ -181,6 +199,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return Status CLB instance status, including:
 0: creating; 1: running.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
@@ -188,15 +207,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置CLB instance status, including:
 0: creating; 1: running.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status CLB instance status, including:
+                     * @param _status CLB instance status, including:
 0: creating; 1: running.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime CLB instance creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置CLB instance creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime CLB instance creation time.
+                     * @param _createTime CLB instance creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -227,38 +251,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StatusTime Last status change time of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatusTime() const;
 
                     /**
                      * 设置Last status change time of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StatusTime Last status change time of a CLB instance.
+                     * @param _statusTime Last status change time of a CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatusTime(const std::string& _statusTime);
 
                     /**
                      * 判断参数 StatusTime 是否已赋值
                      * @return StatusTime 是否已赋值
+                     * 
                      */
                     bool StatusTimeHasBeenSet() const;
 
                     /**
                      * 获取ID of the project to which a CLB instance belongs. 0: default project.
                      * @return ProjectId ID of the project to which a CLB instance belongs. 0: default project.
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置ID of the project to which a CLB instance belongs. 0: default project.
-                     * @param ProjectId ID of the project to which a CLB instance belongs. 0: default project.
+                     * @param _projectId ID of the project to which a CLB instance belongs. 0: default project.
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -267,20 +297,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcId VPC ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
@@ -289,20 +322,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OpenBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetOpenBgp() const;
 
                     /**
                      * 设置Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OpenBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
+                     * @param _openBgp Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOpenBgp(const uint64_t& _openBgp);
 
                     /**
                      * 判断参数 OpenBgp 是否已赋值
                      * @return OpenBgp 是否已赋值
+                     * 
                      */
                     bool OpenBgpHasBeenSet() const;
 
@@ -311,20 +347,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Snat SNAT is enabled for all private network classic CLB created before December 2016.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSnat() const;
 
                     /**
                      * 设置SNAT is enabled for all private network classic CLB created before December 2016.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Snat SNAT is enabled for all private network classic CLB created before December 2016.
+                     * @param _snat SNAT is enabled for all private network classic CLB created before December 2016.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnat(const bool& _snat);
 
                     /**
                      * 判断参数 Snat 是否已赋值
                      * @return Snat 是否已赋值
+                     * 
                      */
                     bool SnatHasBeenSet() const;
 
@@ -333,20 +372,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Isolation 0: not isolated; 1: isolated.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetIsolation() const;
 
                     /**
                      * 设置0: not isolated; 1: isolated.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Isolation 0: not isolated; 1: isolated.
+                     * @param _isolation 0: not isolated; 1: isolated.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsolation(const uint64_t& _isolation);
 
                     /**
                      * 判断参数 Isolation 是否已赋值
                      * @return Isolation 是否已赋值
+                     * 
                      */
                     bool IsolationHasBeenSet() const;
 
@@ -355,20 +397,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLog() const;
 
                     /**
                      * 设置Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
+                     * @param _log Log information. Only the public network CLB that have HTTP or HTTPS listeners can generate logs.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLog(const std::string& _log);
 
                     /**
                      * 判断参数 Log 是否已赋值
                      * @return Log 是否已赋值
+                     * 
                      */
                     bool LogHasBeenSet() const;
 
@@ -377,20 +422,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
+                     * @param _subnetId Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -399,20 +447,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags CLB instance tag information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
                      * 设置CLB instance tag information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags CLB instance tag information
+                     * @param _tags CLB instance tag information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -421,20 +472,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SecureGroups Security group of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSecureGroups() const;
 
                     /**
                      * 设置Security group of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SecureGroups Security group of a CLB instance
+                     * @param _secureGroups Security group of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecureGroups(const std::vector<std::string>& _secureGroups);
 
                     /**
                      * 判断参数 SecureGroups 是否已赋值
                      * @return SecureGroups 是否已赋值
+                     * 
                      */
                     bool SecureGroupsHasBeenSet() const;
 
@@ -443,20 +497,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TargetRegionInfo Basic information of a backend server bound to a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TargetRegionInfo GetTargetRegionInfo() const;
 
                     /**
                      * 设置Basic information of a backend server bound to a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TargetRegionInfo Basic information of a backend server bound to a CLB instance
+                     * @param _targetRegionInfo Basic information of a backend server bound to a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargetRegionInfo(const TargetRegionInfo& _targetRegionInfo);
 
                     /**
                      * 判断参数 TargetRegionInfo 是否已赋值
                      * @return TargetRegionInfo 是否已赋值
+                     * 
                      */
                     bool TargetRegionInfoHasBeenSet() const;
 
@@ -465,20 +522,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AnycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAnycastZone() const;
 
                     /**
                      * 设置Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AnycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
+                     * @param _anycastZone Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnycastZone(const std::string& _anycastZone);
 
                     /**
                      * 判断参数 AnycastZone 是否已赋值
                      * @return AnycastZone 是否已赋值
+                     * 
                      */
                     bool AnycastZoneHasBeenSet() const;
 
@@ -487,20 +547,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AddressIPVersion IP version. Valid values: ipv4, ipv6
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddressIPVersion() const;
 
                     /**
                      * 设置IP version. Valid values: ipv4, ipv6
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AddressIPVersion IP version. Valid values: ipv4, ipv6
+                     * @param _addressIPVersion IP version. Valid values: ipv4, ipv6
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddressIPVersion(const std::string& _addressIPVersion);
 
                     /**
                      * 判断参数 AddressIPVersion 是否已赋值
                      * @return AddressIPVersion 是否已赋值
+                     * 
                      */
                     bool AddressIPVersionHasBeenSet() const;
 
@@ -509,20 +572,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NumericalVpcId VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetNumericalVpcId() const;
 
                     /**
                      * 设置VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NumericalVpcId VPC ID in a numeric form
+                     * @param _numericalVpcId VPC ID in a numeric form
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNumericalVpcId(const uint64_t& _numericalVpcId);
 
                     /**
                      * 判断参数 NumericalVpcId 是否已赋值
                      * @return NumericalVpcId 是否已赋值
+                     * 
                      */
                     bool NumericalVpcIdHasBeenSet() const;
 
@@ -531,20 +597,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VipIsp ISP to which a CLB IP address belongs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVipIsp() const;
 
                     /**
                      * 设置ISP to which a CLB IP address belongs
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VipIsp ISP to which a CLB IP address belongs
+                     * @param _vipIsp ISP to which a CLB IP address belongs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVipIsp(const std::string& _vipIsp);
 
                     /**
                      * 判断参数 VipIsp 是否已赋值
                      * @return VipIsp 是否已赋值
+                     * 
                      */
                     bool VipIspHasBeenSet() const;
 
@@ -553,20 +622,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MasterZone Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ZoneInfo GetMasterZone() const;
 
                     /**
                      * 设置Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MasterZone Primary AZ
+                     * @param _masterZone Primary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterZone(const ZoneInfo& _masterZone);
 
                     /**
                      * 判断参数 MasterZone 是否已赋值
                      * @return MasterZone 是否已赋值
+                     * 
                      */
                     bool MasterZoneHasBeenSet() const;
 
@@ -575,20 +647,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupZoneSet Secondary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ZoneInfo> GetBackupZoneSet() const;
 
                     /**
                      * 设置Secondary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BackupZoneSet Secondary AZ
+                     * @param _backupZoneSet Secondary AZ
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackupZoneSet(const std::vector<ZoneInfo>& _backupZoneSet);
 
                     /**
                      * 判断参数 BackupZoneSet 是否已赋值
                      * @return BackupZoneSet 是否已赋值
+                     * 
                      */
                     bool BackupZoneSetHasBeenSet() const;
 
@@ -597,20 +672,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolatedTime CLB instance isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIsolatedTime() const;
 
                     /**
                      * 设置CLB instance isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsolatedTime CLB instance isolation time
+                     * @param _isolatedTime CLB instance isolation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsolatedTime(const std::string& _isolatedTime);
 
                     /**
                      * 判断参数 IsolatedTime 是否已赋值
                      * @return IsolatedTime 是否已赋值
+                     * 
                      */
                     bool IsolatedTimeHasBeenSet() const;
 
@@ -619,20 +697,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime CLB instance expiration time, which takes effect only for prepaid instances
+                     * @param _expireTime CLB instance expiration time, which takes effect only for prepaid instances
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -641,20 +722,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetChargeType() const;
 
                     /**
                      * 设置Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+                     * @param _chargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChargeType(const std::string& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
@@ -663,20 +747,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetworkAttributes CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InternetAccessible GetNetworkAttributes() const;
 
                     /**
                      * 设置CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NetworkAttributes CLB instance network attributes
+                     * @param _networkAttributes CLB instance network attributes
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNetworkAttributes(const InternetAccessible& _networkAttributes);
 
                     /**
                      * 判断参数 NetworkAttributes 是否已赋值
                      * @return NetworkAttributes 是否已赋值
+                     * 
                      */
                     bool NetworkAttributesHasBeenSet() const;
 
@@ -685,20 +772,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrepaidAttributes Prepaid billing attributes of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     LBChargePrepaid GetPrepaidAttributes() const;
 
                     /**
                      * 设置Prepaid billing attributes of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PrepaidAttributes Prepaid billing attributes of a CLB instance
+                     * @param _prepaidAttributes Prepaid billing attributes of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrepaidAttributes(const LBChargePrepaid& _prepaidAttributes);
 
                     /**
                      * 判断参数 PrepaidAttributes 是否已赋值
                      * @return PrepaidAttributes 是否已赋值
+                     * 
                      */
                     bool PrepaidAttributesHasBeenSet() const;
 
@@ -707,20 +797,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogSetId Logset ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
                      * 设置Logset ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogSetId Logset ID of CLB Log Service (CLS)
+                     * @param _logSetId Logset ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
 
                     /**
                      * 判断参数 LogSetId 是否已赋值
                      * @return LogSetId 是否已赋值
+                     * 
                      */
                     bool LogSetIdHasBeenSet() const;
 
@@ -729,20 +822,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogTopicId Log topic ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogTopicId() const;
 
                     /**
                      * 设置Log topic ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogTopicId Log topic ID of CLB Log Service (CLS)
+                     * @param _logTopicId Log topic ID of CLB Log Service (CLS)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogTopicId(const std::string& _logTopicId);
 
                     /**
                      * 判断参数 LogTopicId 是否已赋值
                      * @return LogTopicId 是否已赋值
+                     * 
                      */
                     bool LogTopicIdHasBeenSet() const;
 
@@ -751,20 +847,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AddressIPv6 IPv6 address of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddressIPv6() const;
 
                     /**
                      * 设置IPv6 address of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AddressIPv6 IPv6 address of a CLB instance
+                     * @param _addressIPv6 IPv6 address of a CLB instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddressIPv6(const std::string& _addressIPv6);
 
                     /**
                      * 判断参数 AddressIPv6 是否已赋值
                      * @return AddressIPv6 是否已赋值
+                     * 
                      */
                     bool AddressIPv6HasBeenSet() const;
 
@@ -773,20 +872,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExtraInfo Reserved field which can be ignored generally.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ExtraInfo GetExtraInfo() const;
 
                     /**
                      * 设置Reserved field which can be ignored generally.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExtraInfo Reserved field which can be ignored generally.
+                     * @param _extraInfo Reserved field which can be ignored generally.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtraInfo(const ExtraInfo& _extraInfo);
 
                     /**
                      * 判断参数 ExtraInfo 是否已赋值
                      * @return ExtraInfo 是否已赋值
+                     * 
                      */
                     bool ExtraInfoHasBeenSet() const;
 
@@ -795,20 +897,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsDDos Whether an Anti-DDoS Pro instance can be bound
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsDDos() const;
 
                     /**
                      * 设置Whether an Anti-DDoS Pro instance can be bound
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsDDos Whether an Anti-DDoS Pro instance can be bound
+                     * @param _isDDos Whether an Anti-DDoS Pro instance can be bound
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDDos(const bool& _isDDos);
 
                     /**
                      * 判断参数 IsDDos 是否已赋值
                      * @return IsDDos 是否已赋值
+                     * 
                      */
                     bool IsDDosHasBeenSet() const;
 
@@ -817,20 +922,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConfigId Custom configuration ID at the CLB instance level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConfigId() const;
 
                     /**
                      * 设置Custom configuration ID at the CLB instance level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConfigId Custom configuration ID at the CLB instance level
+                     * @param _configId Custom configuration ID at the CLB instance level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfigId(const std::string& _configId);
 
                     /**
                      * 判断参数 ConfigId 是否已赋值
                      * @return ConfigId 是否已赋值
+                     * 
                      */
                     bool ConfigIdHasBeenSet() const;
 
@@ -839,20 +947,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetLoadBalancerPassToTarget() const;
 
                     /**
                      * 设置Whether a real server opens the traffic from a CLB instance to the internet
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
+                     * @param _loadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoadBalancerPassToTarget(const bool& _loadBalancerPassToTarget);
 
                     /**
                      * 判断参数 LoadBalancerPassToTarget 是否已赋值
                      * @return LoadBalancerPassToTarget 是否已赋值
+                     * 
                      */
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 
@@ -861,20 +972,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExclusiveCluster Private network dedicated cluster
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ExclusiveCluster GetExclusiveCluster() const;
 
                     /**
                      * 设置Private network dedicated cluster
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExclusiveCluster Private network dedicated cluster
+                     * @param _exclusiveCluster Private network dedicated cluster
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExclusiveCluster(const ExclusiveCluster& _exclusiveCluster);
 
                     /**
                      * 判断参数 ExclusiveCluster 是否已赋值
                      * @return ExclusiveCluster 是否已赋值
+                     * 
                      */
                     bool ExclusiveClusterHasBeenSet() const;
 
@@ -883,20 +997,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIPv6Mode() const;
 
                     /**
                      * 设置This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+                     * @param _iPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIPv6Mode(const std::string& _iPv6Mode);
 
                     /**
                      * 判断参数 IPv6Mode 是否已赋值
                      * @return IPv6Mode 是否已赋值
+                     * 
                      */
                     bool IPv6ModeHasBeenSet() const;
 
@@ -905,20 +1022,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SnatPro Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSnatPro() const;
 
                     /**
                      * 设置Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SnatPro Whether to enable SnatPro.
+                     * @param _snatPro Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnatPro(const bool& _snatPro);
 
                     /**
                      * 判断参数 SnatPro 是否已赋值
                      * @return SnatPro 是否已赋值
+                     * 
                      */
                     bool SnatProHasBeenSet() const;
 
@@ -927,20 +1047,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SnatIps `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SnatIp> GetSnatIps() const;
 
                     /**
                      * 设置`SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SnatIps `SnatIp` list after SnatPro load balancing is enabled.
+                     * @param _snatIps `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnatIps(const std::vector<SnatIp>& _snatIps);
 
                     /**
                      * 判断参数 SnatIps 是否已赋值
                      * @return SnatIps 是否已赋值
+                     * 
                      */
                     bool SnatIpsHasBeenSet() const;
 
@@ -949,20 +1072,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SlaType Specification of the LCU-supported instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSlaType() const;
 
                     /**
                      * 设置Specification of the LCU-supported instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SlaType Specification of the LCU-supported instance.
+                     * @param _slaType Specification of the LCU-supported instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSlaType(const std::string& _slaType);
 
                     /**
                      * 判断参数 SlaType 是否已赋值
                      * @return SlaType 是否已赋值
+                     * 
                      */
                     bool SlaTypeHasBeenSet() const;
 
@@ -971,20 +1097,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsBlock Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsBlock() const;
 
                     /**
                      * 设置Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsBlock Whether VIP is blocked
+                     * @param _isBlock Whether VIP is blocked
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsBlock(const bool& _isBlock);
 
                     /**
                      * 判断参数 IsBlock 是否已赋值
                      * @return IsBlock 是否已赋值
+                     * 
                      */
                     bool IsBlockHasBeenSet() const;
 
@@ -993,38 +1122,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsBlockTime Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIsBlockTime() const;
 
                     /**
                      * 设置Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsBlockTime Time blocked or unblocked
+                     * @param _isBlockTime Time blocked or unblocked
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsBlockTime(const std::string& _isBlockTime);
 
                     /**
                      * 判断参数 IsBlockTime 是否已赋值
                      * @return IsBlockTime 是否已赋值
+                     * 
                      */
                     bool IsBlockTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether the IP type is the local BGP
                      * @return LocalBgp Whether the IP type is the local BGP
+                     * 
                      */
                     bool GetLocalBgp() const;
 
                     /**
                      * 设置Whether the IP type is the local BGP
-                     * @param LocalBgp Whether the IP type is the local BGP
+                     * @param _localBgp Whether the IP type is the local BGP
+                     * 
                      */
                     void SetLocalBgp(const bool& _localBgp);
 
                     /**
                      * 判断参数 LocalBgp 是否已赋值
                      * @return LocalBgp 是否已赋值
+                     * 
                      */
                     bool LocalBgpHasBeenSet() const;
 
@@ -1033,20 +1168,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClusterTag Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterTag() const;
 
                     /**
                      * 设置Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterTag Dedicated layer-7 tag.
+                     * @param _clusterTag Dedicated layer-7 tag.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterTag(const std::string& _clusterTag);
 
                     /**
                      * 判断参数 ClusterTag 是否已赋值
                      * @return ClusterTag 是否已赋值
+                     * 
                      */
                     bool ClusterTagHasBeenSet() const;
 
@@ -1055,20 +1193,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetMixIpTarget() const;
 
                     /**
                      * 设置If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+                     * @param _mixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMixIpTarget(const bool& _mixIpTarget);
 
                     /**
                      * 判断参数 MixIpTarget 是否已赋值
                      * @return MixIpTarget 是否已赋值
+                     * 
                      */
                     bool MixIpTargetHasBeenSet() const;
 
@@ -1077,20 +1218,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Zones Availability zone of a VPC-based private network CLB instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
                      * 设置Availability zone of a VPC-based private network CLB instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Zones Availability zone of a VPC-based private network CLB instance
+                     * @param _zones Availability zone of a VPC-based private network CLB instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
                     /**
                      * 判断参数 Zones 是否已赋值
                      * @return Zones 是否已赋值
+                     * 
                      */
                     bool ZonesHasBeenSet() const;
 
@@ -1099,20 +1243,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return NfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNfvInfo() const;
 
                     /**
                      * 设置Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param NfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+                     * @param _nfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNfvInfo(const std::string& _nfvInfo);
 
                     /**
                      * 判断参数 NfvInfo 是否已赋值
                      * @return NfvInfo 是否已赋值
+                     * 
                      */
                     bool NfvInfoHasBeenSet() const;
 
@@ -1121,20 +1268,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return HealthLogSetId Health check logset ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHealthLogSetId() const;
 
                     /**
                      * 设置Health check logset ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param HealthLogSetId Health check logset ID of CLB CLS
+                     * @param _healthLogSetId Health check logset ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHealthLogSetId(const std::string& _healthLogSetId);
 
                     /**
                      * 判断参数 HealthLogSetId 是否已赋值
                      * @return HealthLogSetId 是否已赋值
+                     * 
                      */
                     bool HealthLogSetIdHasBeenSet() const;
 
@@ -1143,20 +1293,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return HealthLogTopicId Health check log topic ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHealthLogTopicId() const;
 
                     /**
                      * 设置Health check log topic ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param HealthLogTopicId Health check log topic ID of CLB CLS
+                     * @param _healthLogTopicId Health check log topic ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHealthLogTopicId(const std::string& _healthLogTopicId);
 
                     /**
                      * 判断参数 HealthLogTopicId 是否已赋值
                      * @return HealthLogTopicId 是否已赋值
+                     * 
                      */
                     bool HealthLogTopicIdHasBeenSet() const;
 
@@ -1165,20 +1318,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterIds Cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
                      * 设置Cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterIds Cluster ID.
+                     * @param _clusterIds Cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
                     /**
                      * 判断参数 ClusterIds 是否已赋值
                      * @return ClusterIds 是否已赋值
+                     * 
                      */
                     bool ClusterIdsHasBeenSet() const;
 
@@ -1187,20 +1343,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AttributeFlags CLB attribute
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAttributeFlags() const;
 
                     /**
                      * 设置CLB attribute
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AttributeFlags CLB attribute
+                     * @param _attributeFlags CLB attribute
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttributeFlags(const std::vector<std::string>& _attributeFlags);
 
                     /**
                      * 判断参数 AttributeFlags 是否已赋值
                      * @return AttributeFlags 是否已赋值
+                     * 
                      */
                     bool AttributeFlagsHasBeenSet() const;
 
@@ -1209,20 +1368,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerDomain Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLoadBalancerDomain() const;
 
                     /**
                      * 设置Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LoadBalancerDomain Domain name of the CLB instance.
+                     * @param _loadBalancerDomain Domain name of the CLB instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoadBalancerDomain(const std::string& _loadBalancerDomain);
 
                     /**
                      * 判断参数 LoadBalancerDomain 是否已赋值
                      * @return LoadBalancerDomain 是否已赋值
+                     * 
                      */
                     bool LoadBalancerDomainHasBeenSet() const;
 

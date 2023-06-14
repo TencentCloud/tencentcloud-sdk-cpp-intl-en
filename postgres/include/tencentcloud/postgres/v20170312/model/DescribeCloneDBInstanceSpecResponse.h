@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Code of the minimum specification available for purchase.
                      * @return MinSpecCode Code of the minimum specification available for purchase.
+                     * 
                      */
                     std::string GetMinSpecCode() const;
 
                     /**
                      * 判断参数 MinSpecCode 是否已赋值
                      * @return MinSpecCode 是否已赋值
+                     * 
                      */
                     bool MinSpecCodeHasBeenSet() const;
 
                     /**
                      * 获取The minimum disk capacity in GB available for purchase.
                      * @return MinStorage The minimum disk capacity in GB available for purchase.
+                     * 
                      */
                     int64_t GetMinStorage() const;
 
                     /**
                      * 判断参数 MinStorage 是否已赋值
                      * @return MinStorage 是否已赋值
+                     * 
                      */
                     bool MinStorageHasBeenSet() const;
 

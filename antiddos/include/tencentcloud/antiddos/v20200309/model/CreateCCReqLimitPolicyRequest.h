@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取IP address
                      * @return Ip IP address
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address
-                     * @param Ip IP address
+                     * @param _ip IP address
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Protocol. Valid values: `HTTP` and `HTTPS`.
                      * @return Protocol Protocol. Valid values: `HTTP` and `HTTPS`.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol. Valid values: `HTTP` and `HTTPS`.
-                     * @param Protocol Protocol. Valid values: `HTTP` and `HTTPS`.
+                     * @param _protocol Protocol. Valid values: `HTTP` and `HTTPS`.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Domain name
                      * @return Domain Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-                     * @param Domain Domain name
+                     * @param _domain Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Configuration field
                      * @return Policy Configuration field
+                     * 
                      */
                     CCReqLimitPolicyRecord GetPolicy() const;
 
                     /**
                      * 设置Configuration field
-                     * @param Policy Configuration field
+                     * @param _policy Configuration field
+                     * 
                      */
                     void SetPolicy(const CCReqLimitPolicyRecord& _policy);
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 
                     /**
                      * 获取Whether it’s a global CC frequency limit
                      * @return IsGlobal Whether it’s a global CC frequency limit
+                     * 
                      */
                     int64_t GetIsGlobal() const;
 
                     /**
                      * 设置Whether it’s a global CC frequency limit
-                     * @param IsGlobal Whether it’s a global CC frequency limit
+                     * @param _isGlobal Whether it’s a global CC frequency limit
+                     * 
                      */
                     void SetIsGlobal(const int64_t& _isGlobal);
 
                     /**
                      * 判断参数 IsGlobal 是否已赋值
                      * @return IsGlobal 是否已赋值
+                     * 
                      */
                     bool IsGlobalHasBeenSet() const;
 

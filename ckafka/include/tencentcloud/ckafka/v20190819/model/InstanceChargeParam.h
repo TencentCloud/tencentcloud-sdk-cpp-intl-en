@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
                      * @return InstanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
-                     * @param InstanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * @param _instanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Validity period, which is only required for the monthly subscription billing mode
                      * @return InstanceChargePeriod Validity period, which is only required for the monthly subscription billing mode
+                     * 
                      */
                     int64_t GetInstanceChargePeriod() const;
 
                     /**
                      * 设置Validity period, which is only required for the monthly subscription billing mode
-                     * @param InstanceChargePeriod Validity period, which is only required for the monthly subscription billing mode
+                     * @param _instanceChargePeriod Validity period, which is only required for the monthly subscription billing mode
+                     * 
                      */
                     void SetInstanceChargePeriod(const int64_t& _instanceChargePeriod);
 
                     /**
                      * 判断参数 InstanceChargePeriod 是否已赋值
                      * @return InstanceChargePeriod 是否已赋值
+                     * 
                      */
                     bool InstanceChargePeriodHasBeenSet() const;
 

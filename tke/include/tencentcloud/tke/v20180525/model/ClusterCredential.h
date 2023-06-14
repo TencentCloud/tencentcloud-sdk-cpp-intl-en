@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取CA root certificate
                      * @return CACert CA root certificate
+                     * 
                      */
                     std::string GetCACert() const;
 
                     /**
                      * 设置CA root certificate
-                     * @param CACert CA root certificate
+                     * @param _cACert CA root certificate
+                     * 
                      */
                     void SetCACert(const std::string& _cACert);
 
                     /**
                      * 判断参数 CACert 是否已赋值
                      * @return CACert 是否已赋值
+                     * 
                      */
                     bool CACertHasBeenSet() const;
 
                     /**
                      * 获取Token for authentication
                      * @return Token Token for authentication
+                     * 
                      */
                     std::string GetToken() const;
 
                     /**
                      * 设置Token for authentication
-                     * @param Token Token for authentication
+                     * @param _token Token for authentication
+                     * 
                      */
                     void SetToken(const std::string& _token);
 
                     /**
                      * 判断参数 Token 是否已赋值
                      * @return Token 是否已赋值
+                     * 
                      */
                     bool TokenHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Node ID
                      * @return NodeId Node ID
+                     * 
                      */
                     std::string GetNodeId() const;
 
                     /**
                      * 设置Node ID
-                     * @param NodeId Node ID
+                     * @param _nodeId Node ID
+                     * 
                      */
                     void SetNodeId(const std::string& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 
                     /**
                      * 获取Node role. Valid values: `master`, `slave`
                      * @return Role Node role. Valid values: `master`, `slave`
+                     * 
                      */
                     std::string GetRole() const;
 
                     /**
                      * 设置Node role. Valid values: `master`, `slave`
-                     * @param Role Node role. Valid values: `master`, `slave`
+                     * @param _role Node role. Valid values: `master`, `slave`
+                     * 
                      */
                     void SetRole(const std::string& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 
                     /**
                      * 获取The ID of the shard where the node resides
                      * @return ShardId The ID of the shard where the node resides
+                     * 
                      */
                     std::string GetShardId() const;
 
                     /**
                      * 设置The ID of the shard where the node resides
-                     * @param ShardId The ID of the shard where the node resides
+                     * @param _shardId The ID of the shard where the node resides
+                     * 
                      */
                     void SetShardId(const std::string& _shardId);
 
                     /**
                      * 判断参数 ShardId 是否已赋值
                      * @return ShardId 是否已赋值
+                     * 
                      */
                     bool ShardIdHasBeenSet() const;
 

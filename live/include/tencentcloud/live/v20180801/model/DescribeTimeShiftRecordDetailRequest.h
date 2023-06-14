@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取The push domain.
                      * @return Domain The push domain.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The push domain.
-                     * @param Domain The push domain.
+                     * @param _domain The push domain.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The push path.
                      * @return AppName The push path.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The push path.
-                     * @param AppName The push path.
+                     * @param _appName The push path.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取The stream name.
                      * @return StreamName The stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置The stream name.
-                     * @param StreamName The stream name.
+                     * @param _streamName The stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取The start time, which must be a Unix timestamp.
                      * @return StartTime The start time, which must be a Unix timestamp.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置The start time, which must be a Unix timestamp.
-                     * @param StartTime The start time, which must be a Unix timestamp.
+                     * @param _startTime The start time, which must be a Unix timestamp.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time, which must be a Unix timestamp. 
                      * @return EndTime The end time, which must be a Unix timestamp. 
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置The end time, which must be a Unix timestamp. 
-                     * @param EndTime The end time, which must be a Unix timestamp. 
+                     * @param _endTime The end time, which must be a Unix timestamp. 
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The group the push domain belongs to. You don’t need to specify this parameter if the domain doesn’t belong to any group or the group name is an empty string.
                      * @return DomainGroup The group the push domain belongs to. You don’t need to specify this parameter if the domain doesn’t belong to any group or the group name is an empty string.
+                     * 
                      */
                     std::string GetDomainGroup() const;
 
                     /**
                      * 设置The group the push domain belongs to. You don’t need to specify this parameter if the domain doesn’t belong to any group or the group name is an empty string.
-                     * @param DomainGroup The group the push domain belongs to. You don’t need to specify this parameter if the domain doesn’t belong to any group or the group name is an empty string.
+                     * @param _domainGroup The group the push domain belongs to. You don’t need to specify this parameter if the domain doesn’t belong to any group or the group name is an empty string.
+                     * 
                      */
                     void SetDomainGroup(const std::string& _domainGroup);
 
                     /**
                      * 判断参数 DomainGroup 是否已赋值
                      * @return DomainGroup 是否已赋值
+                     * 
                      */
                     bool DomainGroupHasBeenSet() const;
 
                     /**
                      * 获取The transcoding template ID. You don’t need to specify this parameter if the transcoding template ID is `0`.
                      * @return TransCodeId The transcoding template ID. You don’t need to specify this parameter if the transcoding template ID is `0`.
+                     * 
                      */
                     uint64_t GetTransCodeId() const;
 
                     /**
                      * 设置The transcoding template ID. You don’t need to specify this parameter if the transcoding template ID is `0`.
-                     * @param TransCodeId The transcoding template ID. You don’t need to specify this parameter if the transcoding template ID is `0`.
+                     * @param _transCodeId The transcoding template ID. You don’t need to specify this parameter if the transcoding template ID is `0`.
+                     * 
                      */
                     void SetTransCodeId(const uint64_t& _transCodeId);
 
                     /**
                      * 判断参数 TransCodeId 是否已赋值
                      * @return TransCodeId 是否已赋值
+                     * 
                      */
                     bool TransCodeIdHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Region, such as `ap-guangzhou`, `ap-shanghai` and `ap-beijing`
                      * @return Region Region, such as `ap-guangzhou`, `ap-shanghai` and `ap-beijing`
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region, such as `ap-guangzhou`, `ap-shanghai` and `ap-beijing`
-                     * @param Region Region, such as `ap-guangzhou`, `ap-shanghai` and `ap-beijing`
+                     * @param _region Region, such as `ap-guangzhou`, `ap-shanghai` and `ap-beijing`
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Region name, such as `South China (Guangzhou)`, `East China (Shanghai)`, and `North China (Beijing)`
                      * @return RegionName Region name, such as `South China (Guangzhou)`, `East China (Shanghai)`, and `North China (Beijing)`
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name, such as `South China (Guangzhou)`, `East China (Shanghai)`, and `North China (Beijing)`
-                     * @param RegionName Region name, such as `South China (Guangzhou)`, `East China (Shanghai)`, and `North China (Beijing)`
+                     * @param _regionName Region name, such as `South China (Guangzhou)`, `East China (Shanghai)`, and `North China (Beijing)`
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     uint64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const uint64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region code, such as `gz`, `sh`, and `bj`
                      * @return RegionCode Region code, such as `gz`, `sh`, and `bj`
+                     * 
                      */
                     std::string GetRegionCode() const;
 
                     /**
                      * 设置Region code, such as `gz`, `sh`, and `bj`
-                     * @param RegionCode Region code, such as `gz`, `sh`, and `bj`
+                     * @param _regionCode Region code, such as `gz`, `sh`, and `bj`
+                     * 
                      */
                     void SetRegionCode(const std::string& _regionCode);
 
                     /**
                      * 判断参数 RegionCode 是否已赋值
                      * @return RegionCode 是否已赋值
+                     * 
                      */
                     bool RegionCodeHasBeenSet() const;
 

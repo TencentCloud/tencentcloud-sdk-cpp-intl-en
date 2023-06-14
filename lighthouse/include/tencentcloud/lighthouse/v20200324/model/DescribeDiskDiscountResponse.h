@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Currency: CNY, USD.
                      * @return Currency Currency: CNY, USD.
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 
                     /**
                      * 获取Discount tier details. The information of each tier includes the duration, discounted quantity, total price, discounted price, and discount details (user discount, official website discount, or final discount).
                      * @return DiscountDetail Discount tier details. The information of each tier includes the duration, discounted quantity, total price, discounted price, and discount details (user discount, official website discount, or final discount).
+                     * 
                      */
                     std::vector<DiscountDetail> GetDiscountDetail() const;
 
                     /**
                      * 判断参数 DiscountDetail 是否已赋值
                      * @return DiscountDetail 是否已赋值
+                     * 
                      */
                     bool DiscountDetailHasBeenSet() const;
 

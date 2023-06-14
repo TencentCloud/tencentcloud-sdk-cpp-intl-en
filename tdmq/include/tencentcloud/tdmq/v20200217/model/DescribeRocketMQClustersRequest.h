@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The max number of returned results.
                      * @return Limit The max number of returned results.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The max number of returned results.
-                     * @param Limit The max number of returned results.
+                     * @param _limit The max number of returned results.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Search by cluster ID.
                      * @return IdKeyword Search by cluster ID.
+                     * 
                      */
                     std::string GetIdKeyword() const;
 
                     /**
                      * 设置Search by cluster ID.
-                     * @param IdKeyword Search by cluster ID.
+                     * @param _idKeyword Search by cluster ID.
+                     * 
                      */
                     void SetIdKeyword(const std::string& _idKeyword);
 
                     /**
                      * 判断参数 IdKeyword 是否已赋值
                      * @return IdKeyword 是否已赋值
+                     * 
                      */
                     bool IdKeywordHasBeenSet() const;
 
                     /**
                      * 获取Search by cluster name.
                      * @return NameKeyword Search by cluster name.
+                     * 
                      */
                     std::string GetNameKeyword() const;
 
                     /**
                      * 设置Search by cluster name.
-                     * @param NameKeyword Search by cluster name.
+                     * @param _nameKeyword Search by cluster name.
+                     * 
                      */
                     void SetNameKeyword(const std::string& _nameKeyword);
 
                     /**
                      * 判断参数 NameKeyword 是否已赋值
                      * @return NameKeyword 是否已赋值
+                     * 
                      */
                     bool NameKeywordHasBeenSet() const;
 
                     /**
                      * 获取Filter by cluster ID.
                      * @return ClusterIdList Filter by cluster ID.
+                     * 
                      */
                     std::vector<std::string> GetClusterIdList() const;
 
                     /**
                      * 设置Filter by cluster ID.
-                     * @param ClusterIdList Filter by cluster ID.
+                     * @param _clusterIdList Filter by cluster ID.
+                     * 
                      */
                     void SetClusterIdList(const std::vector<std::string>& _clusterIdList);
 
                     /**
                      * 判断参数 ClusterIdList 是否已赋值
                      * @return ClusterIdList 是否已赋值
+                     * 
                      */
                     bool ClusterIdListHasBeenSet() const;
 
                     /**
                      * 获取For filtering by tag, this parameter must be set to `true`.
                      * @return IsTagFilter For filtering by tag, this parameter must be set to `true`.
+                     * 
                      */
                     bool GetIsTagFilter() const;
 
                     /**
                      * 设置For filtering by tag, this parameter must be set to `true`.
-                     * @param IsTagFilter For filtering by tag, this parameter must be set to `true`.
+                     * @param _isTagFilter For filtering by tag, this parameter must be set to `true`.
+                     * 
                      */
                     void SetIsTagFilter(const bool& _isTagFilter);
 
                     /**
                      * 判断参数 IsTagFilter 是否已赋值
                      * @return IsTagFilter 是否已赋值
+                     * 
                      */
                     bool IsTagFilterHasBeenSet() const;
 
                     /**
                      * 获取Filter. Currently, you can filter only by tag.
                      * @return Filters Filter. Currently, you can filter only by tag.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter. Currently, you can filter only by tag.
-                     * @param Filters Filter. Currently, you can filter only by tag.
+                     * @param _filters Filter. Currently, you can filter only by tag.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

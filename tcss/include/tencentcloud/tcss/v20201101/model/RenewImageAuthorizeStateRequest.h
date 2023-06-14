@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether all images are unlicensed
                      * @return AllImages Whether all images are unlicensed
+                     * 
                      */
                     bool GetAllImages() const;
 
                     /**
                      * 设置Whether all images are unlicensed
-                     * @param AllImages Whether all images are unlicensed
+                     * @param _allImages Whether all images are unlicensed
+                     * 
                      */
                     void SetAllImages(const bool& _allImages);
 
                     /**
                      * 判断参数 AllImages 是否已赋值
                      * @return AllImages 是否已赋值
+                     * 
                      */
                     bool AllImagesHasBeenSet() const;
 
                     /**
                      * 获取Image IDs
                      * @return ImageIds Image IDs
+                     * 
                      */
                     std::vector<std::string> GetImageIds() const;
 
                     /**
                      * 设置Image IDs
-                     * @param ImageIds Image IDs
+                     * @param _imageIds Image IDs
+                     * 
                      */
                     void SetImageIds(const std::vector<std::string>& _imageIds);
 
                     /**
                      * 判断参数 ImageIds 是否已赋值
                      * @return ImageIds 是否已赋值
+                     * 
                      */
                     bool ImageIdsHasBeenSet() const;
 

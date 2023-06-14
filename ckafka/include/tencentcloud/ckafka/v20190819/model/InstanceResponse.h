@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceList List of eligible instances
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Instance> GetInstanceList() const;
 
                     /**
                      * 设置List of eligible instances
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceList List of eligible instances
+                     * @param _instanceList List of eligible instances
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceList(const std::vector<Instance>& _instanceList);
 
                     /**
                      * 判断参数 InstanceList 是否已赋值
                      * @return InstanceList 是否已赋值
+                     * 
                      */
                     bool InstanceListHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of eligible results
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of eligible results
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of eligible results
+                     * @param _totalCount Total number of eligible results
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RouteConflictSet List of routing policy conflicts.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RouteConflict> GetRouteConflictSet() const;
 
                     /**
                      * 判断参数 RouteConflictSet 是否已赋值
                      * @return RouteConflictSet 是否已赋值
+                     * 
                      */
                     bool RouteConflictSetHasBeenSet() const;
 

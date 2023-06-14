@@ -55,6 +55,7 @@ If you want to capture a complete face, you can set the negative coordinates to 
                      * @return X Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * 
                      */
                     int64_t GetX() const;
 
@@ -62,15 +63,17 @@ If you want to capture a complete face, you can set the negative coordinates to 
                      * 设置Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-                     * @param X Horizontal coordinate of the top-left vertex of the face frame.
+                     * @param _x Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * 
                      */
                     void SetX(const int64_t& _x);
 
                     /**
                      * 判断参数 X 是否已赋值
                      * @return X 是否已赋值
+                     * 
                      */
                     bool XHasBeenSet() const;
 
@@ -81,6 +84,7 @@ If you want to capture a complete face, you can set the negative coordinates to 
                      * @return Y Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * 
                      */
                     int64_t GetY() const;
 
@@ -88,51 +92,59 @@ If you want to capture a complete face, you can set the negative coordinates to 
                      * 设置Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-                     * @param Y Vertical coordinate of the top-left vertex of the face frame. 
+                     * @param _y Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+                     * 
                      */
                     void SetY(const int64_t& _y);
 
                     /**
                      * 判断参数 Y 是否已赋值
                      * @return Y 是否已赋值
+                     * 
                      */
                     bool YHasBeenSet() const;
 
                     /**
                      * 获取Face frame width.
                      * @return Width Face frame width.
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Face frame width.
-                     * @param Width Face frame width.
+                     * @param _width Face frame width.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Face frame height.
                      * @return Height Face frame height.
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Face frame height.
-                     * @param Height Face frame height.
+                     * @param _height Face frame height.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -141,20 +153,23 @@ If you want to capture a complete face, you can set the negative coordinates to 
 beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
                      * @return FaceAttributesInfo Face attributes, including gender, age, expression, 
 beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+                     * 
                      */
                     FaceAttributesInfo GetFaceAttributesInfo() const;
 
                     /**
                      * 设置Face attributes, including gender, age, expression, 
 beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
-                     * @param FaceAttributesInfo Face attributes, including gender, age, expression, 
+                     * @param _faceAttributesInfo Face attributes, including gender, age, expression, 
 beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+                     * 
                      */
                     void SetFaceAttributesInfo(const FaceAttributesInfo& _faceAttributesInfo);
 
                     /**
                      * 判断参数 FaceAttributesInfo 是否已赋值
                      * @return FaceAttributesInfo 是否已赋值
+                     * 
                      */
                     bool FaceAttributesInfoHasBeenSet() const;
 
@@ -163,20 +178,23 @@ beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will b
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FaceQualityInfo GetFaceQualityInfo() const;
 
                     /**
                      * 设置Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+                     * @param _faceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFaceQualityInfo(const FaceQualityInfo& _faceQualityInfo);
 
                     /**
                      * 判断参数 FaceQualityInfo 是否已赋值
                      * @return FaceQualityInfo 是否已赋值
+                     * 
                      */
                     bool FaceQualityInfoHasBeenSet() const;
 

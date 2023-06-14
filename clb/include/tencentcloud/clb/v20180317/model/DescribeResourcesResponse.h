@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of resources supported by the AZ
                      * @return ZoneResourceSet List of resources supported by the AZ
+                     * 
                      */
                     std::vector<ZoneResource> GetZoneResourceSet() const;
 
                     /**
                      * 判断参数 ZoneResourceSet 是否已赋值
                      * @return ZoneResourceSet 是否已赋值
+                     * 
                      */
                     bool ZoneResourceSetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries in the AZ resource list.
                      * @return TotalCount Number of entries in the AZ resource list.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

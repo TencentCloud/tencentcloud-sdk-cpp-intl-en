@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the channel for which you want to configure an event
                      * @return ChannelId ID of the channel for which you want to configure an event
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置ID of the channel for which you want to configure an event
-                     * @param ChannelId ID of the channel for which you want to configure an event
+                     * @param _channelId ID of the channel for which you want to configure an event
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 
                     /**
                      * 获取Event configuration
                      * @return Plan Event configuration
+                     * 
                      */
                     PlanReq GetPlan() const;
 
                     /**
                      * 设置Event configuration
-                     * @param Plan Event configuration
+                     * @param _plan Event configuration
+                     * 
                      */
                     void SetPlan(const PlanReq& _plan);
 
                     /**
                      * 判断参数 Plan 是否已赋值
                      * @return Plan 是否已赋值
+                     * 
                      */
                     bool PlanHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return SubProduct Subproduct usage to be queried. The following parameters are supported:
 - sp_tiw_board: The duration of use of whiteboards, in minutes.
 - sp_tiw_ric: The duration of real-time recording, in minutes.
+                     * 
                      */
                     std::string GetSubProduct() const;
 
@@ -74,105 +78,122 @@ namespace TencentCloud
                      * 设置Subproduct usage to be queried. The following parameters are supported:
 - sp_tiw_board: The duration of use of whiteboards, in minutes.
 - sp_tiw_ric: The duration of real-time recording, in minutes.
-                     * @param SubProduct Subproduct usage to be queried. The following parameters are supported:
+                     * @param _subProduct Subproduct usage to be queried. The following parameters are supported:
 - sp_tiw_board: The duration of use of whiteboards, in minutes.
 - sp_tiw_ric: The duration of real-time recording, in minutes.
+                     * 
                      */
                     void SetSubProduct(const std::string& _subProduct);
 
                     /**
                      * 判断参数 SubProduct 是否已赋值
                      * @return SubProduct 是否已赋值
+                     * 
                      */
                     bool SubProductHasBeenSet() const;
 
                     /**
                      * 获取Start date in the format of YYYY-MM-DD. The start date is included in the query period.
                      * @return StartTime Start date in the format of YYYY-MM-DD. The start date is included in the query period.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start date in the format of YYYY-MM-DD. The start date is included in the query period.
-                     * @param StartTime Start date in the format of YYYY-MM-DD. The start date is included in the query period.
+                     * @param _startTime Start date in the format of YYYY-MM-DD. The start date is included in the query period.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End date in the format of YYYY-MM-DD. The end date is included in the query period. The period queried per request cannot be longer than 31 days.
                      * @return EndTime End date in the format of YYYY-MM-DD. The end date is included in the query period. The period queried per request cannot be longer than 31 days.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End date in the format of YYYY-MM-DD. The end date is included in the query period. The period queried per request cannot be longer than 31 days.
-                     * @param EndTime End date in the format of YYYY-MM-DD. The end date is included in the query period. The period queried per request cannot be longer than 31 days.
+                     * @param _endTime End date in the format of YYYY-MM-DD. The end date is included in the query period. The period queried per request cannot be longer than 31 days.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Room IDs to be queried. If you leave this parameter empty, all room IDs are queried.
                      * @return RoomIDs Room IDs to be queried. If you leave this parameter empty, all room IDs are queried.
+                     * 
                      */
                     std::vector<uint64_t> GetRoomIDs() const;
 
                     /**
                      * 设置Room IDs to be queried. If you leave this parameter empty, all room IDs are queried.
-                     * @param RoomIDs Room IDs to be queried. If you leave this parameter empty, all room IDs are queried.
+                     * @param _roomIDs Room IDs to be queried. If you leave this parameter empty, all room IDs are queried.
+                     * 
                      */
                     void SetRoomIDs(const std::vector<uint64_t>& _roomIDs);
 
                     /**
                      * 判断参数 RoomIDs 是否已赋值
                      * @return RoomIDs 是否已赋值
+                     * 
                      */
                     bool RoomIDsHasBeenSet() const;
 
                     /**
                      * 获取Offset for query. Default value: `0`.
                      * @return Offset Offset for query. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset for query. Default value: `0`.
-                     * @param Offset Offset for query. Default value: `0`.
+                     * @param _offset Offset for query. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of entries returned per query. Default value: `20`.
                      * @return Limit Maximum number of entries returned per query. Default value: `20`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of entries returned per query. Default value: `20`.
-                     * @param Limit Maximum number of entries returned per query. Default value: `20`.
+                     * @param _limit Maximum number of entries returned per query. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

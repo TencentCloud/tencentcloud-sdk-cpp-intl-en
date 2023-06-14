@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return ProxyId Instance ID
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Instance name when `ProxyType=instance`
                      * @return ProxyName Name of the proxy:
 Domain name or subdomain name when `ProxyType=hostname`
 Instance name when `ProxyType=instance`
+                     * 
                      */
                     std::string GetProxyName() const;
 
                     /**
                      * 判断参数 ProxyName 是否已赋值
                      * @return ProxyName 是否已赋值
+                     * 
                      */
                     bool ProxyNameHasBeenSet() const;
 
@@ -79,72 +83,84 @@ Instance name when `ProxyType=instance`
                      * @return PlatType Proxy mode. Valid values:
 `ip`: Anycast IP
 `domain`: CNAME
+                     * 
                      */
                     std::string GetPlatType() const;
 
                     /**
                      * 判断参数 PlatType 是否已赋值
                      * @return PlatType 是否已赋值
+                     * 
                      */
                     bool PlatTypeHasBeenSet() const;
 
                     /**
                      * 获取`0`: Disable security protection; `1`: Enable security protection.
                      * @return SecurityType `0`: Disable security protection; `1`: Enable security protection.
+                     * 
                      */
                     int64_t GetSecurityType() const;
 
                     /**
                      * 判断参数 SecurityType 是否已赋值
                      * @return SecurityType 是否已赋值
+                     * 
                      */
                     bool SecurityTypeHasBeenSet() const;
 
                     /**
                      * 获取`0`: Disable acceleration; `1`: Enable acceleration.
                      * @return AccelerateType `0`: Disable acceleration; `1`: Enable acceleration.
+                     * 
                      */
                     int64_t GetAccelerateType() const;
 
                     /**
                      * 判断参数 AccelerateType 是否已赋值
                      * @return AccelerateType 是否已赋值
+                     * 
                      */
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
                      * 获取This field is moved to `Rule.ForwardClientIp`.
                      * @return ForwardClientIp This field is moved to `Rule.ForwardClientIp`.
+                     * 
                      */
                     std::string GetForwardClientIp() const;
 
                     /**
                      * 判断参数 ForwardClientIp 是否已赋值
                      * @return ForwardClientIp 是否已赋值
+                     * 
                      */
                     bool ForwardClientIpHasBeenSet() const;
 
                     /**
                      * 获取This field is moved to `Rule.SessionPersist`.
                      * @return SessionPersist This field is moved to `Rule.SessionPersist`.
+                     * 
                      */
                     bool GetSessionPersist() const;
 
                     /**
                      * 判断参数 SessionPersist 是否已赋值
                      * @return SessionPersist 是否已赋值
+                     * 
                      */
                     bool SessionPersistHasBeenSet() const;
 
                     /**
                      * 获取List of rules
                      * @return Rule List of rules
+                     * 
                      */
                     std::vector<ApplicationProxyRule> GetRule() const;
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 
@@ -157,72 +173,84 @@ Instance name when `ProxyType=instance`
 `online`: Enable
 `offline`: Disable
 `progress`: Deploying
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Scheduling information
                      * @return ScheduleValue Scheduling information
+                     * 
                      */
                     std::vector<std::string> GetScheduleValue() const;
 
                     /**
                      * 判断参数 ScheduleValue 是否已赋值
                      * @return ScheduleValue 是否已赋值
+                     * 
                      */
                     bool ScheduleValueHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Site name
                      * @return ZoneName Site name
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取Session persistence time
                      * @return SessionPersistTime Session persistence time
+                     * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
                      * 判断参数 SessionPersistTime 是否已赋值
                      * @return SessionPersistTime 是否已赋值
+                     * 
                      */
                     bool SessionPersistTimeHasBeenSet() const;
 
@@ -233,12 +261,14 @@ Instance name when `ProxyType=instance`
                      * @return ProxyType Specifies how a layer-4 proxy is created.
 `hostname`: Create by subdomain name
 `instance`: Create by instance
+                     * 
                      */
                     std::string GetProxyType() const;
 
                     /**
                      * 判断参数 ProxyType 是否已赋值
                      * @return ProxyType 是否已赋值
+                     * 
                      */
                     bool ProxyTypeHasBeenSet() const;
 
@@ -249,12 +279,14 @@ Instance name when `ProxyType=instance`
                      * @return HostId When `ProxyType=hostname`:
 `ProxyName` indicates a specified domain name, such as test.123.com
 `HostId` indicates a unique ID of the domain name.
+                     * 
                      */
                     std::string GetHostId() const;
 
                     /**
                      * 判断参数 HostId 是否已赋值
                      * @return HostId 是否已赋值
+                     * 
                      */
                     bool HostIdHasBeenSet() const;
 

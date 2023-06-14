@@ -74,6 +74,7 @@ namespace TencentCloud
 <li>ContainerStatus - string - Required: No - Container status. Valid values: `RUNNING`, `PAUSED`, `STOPPED`, `CREATED`, `DESTROYED`, `RESTARTING`, `REMOVING`.</li>
 <li>AutoIsolateMode - string - Required: No - Isolation method. Valid values: `MANUAL`, `AUTO`.</li>
 <li>MD5 - string - Required: No - MD5</li>
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
@@ -93,7 +94,7 @@ namespace TencentCloud
 <li>ContainerStatus - string - Required: No - Container status. Valid values: `RUNNING`, `PAUSED`, `STOPPED`, `CREATED`, `DESTROYED`, `RESTARTING`, `REMOVING`.</li>
 <li>AutoIsolateMode - string - Required: No - Isolation method. Valid values: `MANUAL`, `AUTO`.</li>
 <li>MD5 - string - Required: No - MD5</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>FileName - String - Required: No - Filename</li>
 <li>FilePath - String - Required: No - File path</li>
 <li>VirusName - String - Required: No - Virus name</li>
@@ -108,66 +109,77 @@ namespace TencentCloud
 <li>ContainerStatus - string - Required: No - Container status. Valid values: `RUNNING`, `PAUSED`, `STOPPED`, `CREATED`, `DESTROYED`, `RESTARTING`, `REMOVING`.</li>
 <li>AutoIsolateMode - string - Required: No - Isolation method. Valid values: `MANUAL`, `AUTO`.</li>
 <li>MD5 - string - Required: No - MD5</li>
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Sorting order
                      * @return Order Sorting order
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order
-                     * @param Order Sorting order
+                     * @param _order Sorting order
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return By Sorting field
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field
-                     * @param By Sorting field
+                     * @param _by Sorting field
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Export field
                      * @return ExportField Export field
+                     * 
                      */
                     std::vector<std::string> GetExportField() const;
 
                     /**
                      * 设置Export field
-                     * @param ExportField Export field
+                     * @param _exportField Export field
+                     * 
                      */
                     void SetExportField(const std::vector<std::string>& _exportField);
 
                     /**
                      * 判断参数 ExportField 是否已赋值
                      * @return ExportField 是否已赋值
+                     * 
                      */
                     bool ExportFieldHasBeenSet() const;
 

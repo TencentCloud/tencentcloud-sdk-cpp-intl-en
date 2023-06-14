@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable QUIC
                      * @return Switch Whether to enable QUIC
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable QUIC
-                     * @param Switch Whether to enable QUIC
+                     * @param _switch Whether to enable QUIC
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

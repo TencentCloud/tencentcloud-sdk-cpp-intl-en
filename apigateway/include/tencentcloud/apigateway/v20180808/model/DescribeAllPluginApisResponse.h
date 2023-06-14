@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of APIs that ca use this plugin
                      * @return Result List of APIs that ca use this plugin
+                     * 
                      */
                     ApiInfoSummary GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

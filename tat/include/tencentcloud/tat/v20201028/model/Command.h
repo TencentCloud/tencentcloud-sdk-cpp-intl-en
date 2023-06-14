@@ -50,306 +50,357 @@ namespace TencentCloud
                     /**
                      * 获取Command ID.
                      * @return CommandId Command ID.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 设置Command ID.
-                     * @param CommandId Command ID.
+                     * @param _commandId Command ID.
+                     * 
                      */
                     void SetCommandId(const std::string& _commandId);
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 
                     /**
                      * 获取Command name.
                      * @return CommandName Command name.
+                     * 
                      */
                     std::string GetCommandName() const;
 
                     /**
                      * 设置Command name.
-                     * @param CommandName Command name.
+                     * @param _commandName Command name.
+                     * 
                      */
                     void SetCommandName(const std::string& _commandName);
 
                     /**
                      * 判断参数 CommandName 是否已赋值
                      * @return CommandName 是否已赋值
+                     * 
                      */
                     bool CommandNameHasBeenSet() const;
 
                     /**
                      * 获取Command description.
                      * @return Description Command description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Command description.
-                     * @param Description Command description.
+                     * @param _description Command description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded command.
                      * @return Content Base64-encoded command.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Base64-encoded command.
-                     * @param Content Base64-encoded command.
+                     * @param _content Base64-encoded command.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Command type.
                      * @return CommandType Command type.
+                     * 
                      */
                     std::string GetCommandType() const;
 
                     /**
                      * 设置Command type.
-                     * @param CommandType Command type.
+                     * @param _commandType Command type.
+                     * 
                      */
                     void SetCommandType(const std::string& _commandType);
 
                     /**
                      * 判断参数 CommandType 是否已赋值
                      * @return CommandType 是否已赋值
+                     * 
                      */
                     bool CommandTypeHasBeenSet() const;
 
                     /**
                      * 获取Command execution path.
                      * @return WorkingDirectory Command execution path.
+                     * 
                      */
                     std::string GetWorkingDirectory() const;
 
                     /**
                      * 设置Command execution path.
-                     * @param WorkingDirectory Command execution path.
+                     * @param _workingDirectory Command execution path.
+                     * 
                      */
                     void SetWorkingDirectory(const std::string& _workingDirectory);
 
                     /**
                      * 判断参数 WorkingDirectory 是否已赋值
                      * @return WorkingDirectory 是否已赋值
+                     * 
                      */
                     bool WorkingDirectoryHasBeenSet() const;
 
                     /**
                      * 获取Command timeout period.
                      * @return Timeout Command timeout period.
+                     * 
                      */
                     uint64_t GetTimeout() const;
 
                     /**
                      * 设置Command timeout period.
-                     * @param Timeout Command timeout period.
+                     * @param _timeout Command timeout period.
+                     * 
                      */
                     void SetTimeout(const uint64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Command creation time.
                      * @return CreatedTime Command creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Command creation time.
-                     * @param CreatedTime Command creation time.
+                     * @param _createdTime Command creation time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Command update time.
                      * @return UpdatedTime Command update time.
+                     * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
                      * 设置Command update time.
-                     * @param UpdatedTime Command update time.
+                     * @param _updatedTime Command update time.
+                     * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
 
                     /**
                      * 判断参数 UpdatedTime 是否已赋值
                      * @return UpdatedTime 是否已赋值
+                     * 
                      */
                     bool UpdatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the custom parameter feature.
                      * @return EnableParameter Whether to enable the custom parameter feature.
+                     * 
                      */
                     bool GetEnableParameter() const;
 
                     /**
                      * 设置Whether to enable the custom parameter feature.
-                     * @param EnableParameter Whether to enable the custom parameter feature.
+                     * @param _enableParameter Whether to enable the custom parameter feature.
+                     * 
                      */
                     void SetEnableParameter(const bool& _enableParameter);
 
                     /**
                      * 判断参数 EnableParameter 是否已赋值
                      * @return EnableParameter 是否已赋值
+                     * 
                      */
                     bool EnableParameterHasBeenSet() const;
 
                     /**
                      * 获取Default custom parameter value.
                      * @return DefaultParameters Default custom parameter value.
+                     * 
                      */
                     std::string GetDefaultParameters() const;
 
                     /**
                      * 设置Default custom parameter value.
-                     * @param DefaultParameters Default custom parameter value.
+                     * @param _defaultParameters Default custom parameter value.
+                     * 
                      */
                     void SetDefaultParameters(const std::string& _defaultParameters);
 
                     /**
                      * 判断参数 DefaultParameters 是否已赋值
                      * @return DefaultParameters 是否已赋值
+                     * 
                      */
                     bool DefaultParametersHasBeenSet() const;
 
                     /**
                      * 获取Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
                      * @return FormattedDescription Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+                     * 
                      */
                     std::string GetFormattedDescription() const;
 
                     /**
                      * 设置Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
-                     * @param FormattedDescription Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+                     * @param _formattedDescription Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+                     * 
                      */
                     void SetFormattedDescription(const std::string& _formattedDescription);
 
                     /**
                      * 判断参数 FormattedDescription 是否已赋值
                      * @return FormattedDescription 是否已赋值
+                     * 
                      */
                     bool FormattedDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
                      * @return CreatedBy Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+                     * 
                      */
                     std::string GetCreatedBy() const;
 
                     /**
                      * 设置Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
-                     * @param CreatedBy Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+                     * @param _createdBy Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+                     * 
                      */
                     void SetCreatedBy(const std::string& _createdBy);
 
                     /**
                      * 判断参数 CreatedBy 是否已赋值
                      * @return CreatedBy 是否已赋值
+                     * 
                      */
                     bool CreatedByHasBeenSet() const;
 
                     /**
                      * 获取The list of tags bound to the command.
                      * @return Tags The list of tags bound to the command.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置The list of tags bound to the command.
-                     * @param Tags The list of tags bound to the command.
+                     * @param _tags The list of tags bound to the command.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取The user who executes the command on the instance.
                      * @return Username The user who executes the command on the instance.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置The user who executes the command on the instance.
-                     * @param Username The user who executes the command on the instance.
+                     * @param _username The user who executes the command on the instance.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取The COS bucket URL for uploading logs.
                      * @return OutputCOSBucketUrl The COS bucket URL for uploading logs.
+                     * 
                      */
                     std::string GetOutputCOSBucketUrl() const;
 
                     /**
                      * 设置The COS bucket URL for uploading logs.
-                     * @param OutputCOSBucketUrl The COS bucket URL for uploading logs.
+                     * @param _outputCOSBucketUrl The COS bucket URL for uploading logs.
+                     * 
                      */
                     void SetOutputCOSBucketUrl(const std::string& _outputCOSBucketUrl);
 
                     /**
                      * 判断参数 OutputCOSBucketUrl 是否已赋值
                      * @return OutputCOSBucketUrl 是否已赋值
+                     * 
                      */
                     bool OutputCOSBucketUrlHasBeenSet() const;
 
                     /**
                      * 获取The COS bucket directory where the logs are saved.
                      * @return OutputCOSKeyPrefix The COS bucket directory where the logs are saved.
+                     * 
                      */
                     std::string GetOutputCOSKeyPrefix() const;
 
                     /**
                      * 设置The COS bucket directory where the logs are saved.
-                     * @param OutputCOSKeyPrefix The COS bucket directory where the logs are saved.
+                     * @param _outputCOSKeyPrefix The COS bucket directory where the logs are saved.
+                     * 
                      */
                     void SetOutputCOSKeyPrefix(const std::string& _outputCOSKeyPrefix);
 
                     /**
                      * 判断参数 OutputCOSKeyPrefix 是否已赋值
                      * @return OutputCOSKeyPrefix 是否已赋值
+                     * 
                      */
                     bool OutputCOSKeyPrefixHasBeenSet() const;
 

@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether stream mixing is enabled
                      * @return Enabled Whether stream mixing is enabled
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether stream mixing is enabled
-                     * @param Enabled Whether stream mixing is enabled
+                     * @param _enabled Whether stream mixing is enabled
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Whether audio stream mixing is disabled
                      * @return DisableAudio Whether audio stream mixing is disabled
+                     * 
                      */
                     bool GetDisableAudio() const;
 
                     /**
                      * 设置Whether audio stream mixing is disabled
-                     * @param DisableAudio Whether audio stream mixing is disabled
+                     * @param _disableAudio Whether audio stream mixing is disabled
+                     * 
                      */
                     void SetDisableAudio(const bool& _disableAudio);
 
                     /**
                      * 判断参数 DisableAudio 是否已赋值
                      * @return DisableAudio 是否已赋值
+                     * 
                      */
                     bool DisableAudioHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 If the Custom field is not specified, ModelId is required.
                      * @return ModelId ID of the embedded mixed stream layout template. Valid values: 1 and 2. For more information on the differences of both values, see the sample embedded mixed stream layout template.
 If the Custom field is not specified, ModelId is required.
+                     * 
                      */
                     int64_t GetModelId() const;
 
                     /**
                      * 设置ID of the embedded mixed stream layout template. Valid values: 1 and 2. For more information on the differences of both values, see the sample embedded mixed stream layout template.
 If the Custom field is not specified, ModelId is required.
-                     * @param ModelId ID of the embedded mixed stream layout template. Valid values: 1 and 2. For more information on the differences of both values, see the sample embedded mixed stream layout template.
+                     * @param _modelId ID of the embedded mixed stream layout template. Valid values: 1 and 2. For more information on the differences of both values, see the sample embedded mixed stream layout template.
 If the Custom field is not specified, ModelId is required.
+                     * 
                      */
                     void SetModelId(const int64_t& _modelId);
 
                     /**
                      * 判断参数 ModelId 是否已赋值
                      * @return ModelId 是否已赋值
+                     * 
                      */
                     bool ModelIdHasBeenSet() const;
 
@@ -112,6 +121,7 @@ If you specify TeacherID for a user, the user's video stream will be displayed i
                      * @return TeacherId ID of a teacher account
 This field is valid only when ModelId is specified.
 If you specify TeacherID for a user, the user's video stream will be displayed in the first image of the embedded template.
+                     * 
                      */
                     std::string GetTeacherId() const;
 
@@ -119,15 +129,17 @@ If you specify TeacherID for a user, the user's video stream will be displayed i
                      * 设置ID of a teacher account
 This field is valid only when ModelId is specified.
 If you specify TeacherID for a user, the user's video stream will be displayed in the first image of the embedded template.
-                     * @param TeacherId ID of a teacher account
+                     * @param _teacherId ID of a teacher account
 This field is valid only when ModelId is specified.
 If you specify TeacherID for a user, the user's video stream will be displayed in the first image of the embedded template.
+                     * 
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
                     /**
                      * 判断参数 TeacherId 是否已赋值
                      * @return TeacherId 是否已赋值
+                     * 
                      */
                     bool TeacherIdHasBeenSet() const;
 
@@ -136,20 +148,23 @@ If you specify TeacherID for a user, the user's video stream will be displayed i
 If this parameter is available, the ModelId and TeacherId fields will be ignored.
                      * @return Custom Custom mixed stream layout parameter
 If this parameter is available, the ModelId and TeacherId fields will be ignored.
+                     * 
                      */
                     CustomLayout GetCustom() const;
 
                     /**
                      * 设置Custom mixed stream layout parameter
 If this parameter is available, the ModelId and TeacherId fields will be ignored.
-                     * @param Custom Custom mixed stream layout parameter
+                     * @param _custom Custom mixed stream layout parameter
 If this parameter is available, the ModelId and TeacherId fields will be ignored.
+                     * 
                      */
                     void SetCustom(const CustomLayout& _custom);
 
                     /**
                      * 判断参数 Custom 是否已赋值
                      * @return Custom 是否已赋值
+                     * 
                      */
                     bool CustomHasBeenSet() const;
 

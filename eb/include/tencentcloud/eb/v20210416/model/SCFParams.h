@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Maximum waiting time for batch delivery
                      * @return BatchTimeout Maximum waiting time for batch delivery
+                     * 
                      */
                     int64_t GetBatchTimeout() const;
 
                     /**
                      * 设置Maximum waiting time for batch delivery
-                     * @param BatchTimeout Maximum waiting time for batch delivery
+                     * @param _batchTimeout Maximum waiting time for batch delivery
+                     * 
                      */
                     void SetBatchTimeout(const int64_t& _batchTimeout);
 
                     /**
                      * 判断参数 BatchTimeout 是否已赋值
                      * @return BatchTimeout 是否已赋值
+                     * 
                      */
                     bool BatchTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of events in batch delivery
                      * @return BatchEventCount Maximum number of events in batch delivery
+                     * 
                      */
                     int64_t GetBatchEventCount() const;
 
                     /**
                      * 设置Maximum number of events in batch delivery
-                     * @param BatchEventCount Maximum number of events in batch delivery
+                     * @param _batchEventCount Maximum number of events in batch delivery
+                     * 
                      */
                     void SetBatchEventCount(const int64_t& _batchEventCount);
 
                     /**
                      * 判断参数 BatchEventCount 是否已赋值
                      * @return BatchEventCount 是否已赋值
+                     * 
                      */
                     bool BatchEventCountHasBeenSet() const;
 
                     /**
                      * 获取Enables batch delivery
                      * @return EnableBatchDelivery Enables batch delivery
+                     * 
                      */
                     bool GetEnableBatchDelivery() const;
 
                     /**
                      * 设置Enables batch delivery
-                     * @param EnableBatchDelivery Enables batch delivery
+                     * @param _enableBatchDelivery Enables batch delivery
+                     * 
                      */
                     void SetEnableBatchDelivery(const bool& _enableBatchDelivery);
 
                     /**
                      * 判断参数 EnableBatchDelivery 是否已赋值
                      * @return EnableBatchDelivery 是否已赋值
+                     * 
                      */
                     bool EnableBatchDeliveryHasBeenSet() const;
 

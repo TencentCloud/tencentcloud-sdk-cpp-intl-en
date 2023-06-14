@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Refresh task status. Valid values: `Task_New`, `Task_Running`, `Task_Finish`, `Task_Error`, `Task_NoExist`.
                      * @return TaskStatus Refresh task status. Valid values: `Task_New`, `Task_Running`, `Task_Finish`, `Task_Error`, `Task_NoExist`.
+                     * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 

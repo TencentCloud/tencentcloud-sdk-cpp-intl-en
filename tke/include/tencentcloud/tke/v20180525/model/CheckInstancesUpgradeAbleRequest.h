@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
                      * @return InstanceIds Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
-                     * @param InstanceIds Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
+                     * @param _instanceIds Specify the node list to check. If it’s not passed in, all nodes of the cluster will be checked.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Upgrade type
                      * @return UpgradeType Upgrade type
+                     * 
                      */
                     std::string GetUpgradeType() const;
 
                     /**
                      * 设置Upgrade type
-                     * @param UpgradeType Upgrade type
+                     * @param _upgradeType Upgrade type
+                     * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
 
                     /**
                      * 判断参数 UpgradeType 是否已赋值
                      * @return UpgradeType 是否已赋值
+                     * 
                      */
                     bool UpgradeTypeHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset
                      * @return Offset Pagination offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset
-                     * @param Offset Pagination offset
+                     * @param _offset Pagination offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Pagination limit
                      * @return Limit Pagination limit
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination limit
-                     * @param Limit Pagination limit
+                     * @param _limit Pagination limit
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filtering
                      * @return Filter Filtering
+                     * 
                      */
                     std::vector<Filter> GetFilter() const;
 
                     /**
                      * 设置Filtering
-                     * @param Filter Filtering
+                     * @param _filter Filtering
+                     * 
                      */
                     void SetFilter(const std::vector<Filter>& _filter);
 
                     /**
                      * 判断参数 Filter 是否已赋值
                      * @return Filter 是否已赋值
+                     * 
                      */
                     bool FilterHasBeenSet() const;
 

@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取ID
                      * @return Id ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置ID
-                     * @param Id ID
+                     * @param _id ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Server ID
                      * @return Quuid Server ID
+                     * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Server ID
-                     * @param Quuid Server ID
+                     * @param _quuid Server ID
+                     * 
                      */
                     void SetQuuid(const std::string& _quuid);
 
                     /**
                      * 判断参数 Quuid 是否已赋值
                      * @return Quuid 是否已赋值
+                     * 
                      */
                     bool QuuidHasBeenSet() const;
 
                     /**
                      * 获取Server name
                      * @return MachineName Server name
+                     * 
                      */
                     std::string GetMachineName() const;
 
                     /**
                      * 设置Server name
-                     * @param MachineName Server name
+                     * @param _machineName Server name
+                     * 
                      */
                     void SetMachineName(const std::string& _machineName);
 
                     /**
                      * 判断参数 MachineName 是否已赋值
                      * @return MachineName 是否已赋值
+                     * 
                      */
                     bool MachineNameHasBeenSet() const;
 
                     /**
                      * 获取Private IP of server
                      * @return MachineIp Private IP of server
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Private IP of server
-                     * @param MachineIp Private IP of server
+                     * @param _machineIp Private IP of server
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
                     /**
                      * 获取Public IP of server
                      * @return MachineWanIp Public IP of server
+                     * 
                      */
                     std::string GetMachineWanIp() const;
 
                     /**
                      * 设置Public IP of server
-                     * @param MachineWanIp Public IP of server
+                     * @param _machineWanIp Public IP of server
+                     * 
                      */
                     void SetMachineWanIp(const std::string& _machineWanIp);
 
                     /**
                      * 判断参数 MachineWanIp 是否已赋值
                      * @return MachineWanIp 是否已赋值
+                     * 
                      */
                     bool MachineWanIpHasBeenSet() const;
 
                     /**
                      * 获取Server region
                      * @return MachineRegion Server region
+                     * 
                      */
                     std::string GetMachineRegion() const;
 
                     /**
                      * 设置Server region
-                     * @param MachineRegion Server region
+                     * @param _machineRegion Server region
+                     * 
                      */
                     void SetMachineRegion(const std::string& _machineRegion);
 
                     /**
                      * 判断参数 MachineRegion 是否已赋值
                      * @return MachineRegion 是否已赋值
+                     * 
                      */
                     bool MachineRegionHasBeenSet() const;
 
                     /**
                      * 获取Server region type
                      * @return MachineType Server region type
+                     * 
                      */
                     std::string GetMachineType() const;
 
                     /**
                      * 设置Server region type
-                     * @param MachineType Server region type
+                     * @param _machineType Server region type
+                     * 
                      */
                     void SetMachineType(const std::string& _machineType);
 
                     /**
                      * 判断参数 MachineType 是否已赋值
                      * @return MachineType 是否已赋值
+                     * 
                      */
                     bool MachineTypeHasBeenSet() const;
 

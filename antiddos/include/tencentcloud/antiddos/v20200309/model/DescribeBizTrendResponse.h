@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Value at a time point on the curve
                      * @return DataList Value at a time point on the curve
+                     * 
                      */
                     std::vector<double> GetDataList() const;
 
                     /**
                      * 判断参数 DataList 是否已赋值
                      * @return DataList 是否已赋值
+                     * 
                      */
                     bool DataListHasBeenSet() const;
 
                     /**
                      * 获取Statistical dimension
                      * @return MetricName Statistical dimension
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 

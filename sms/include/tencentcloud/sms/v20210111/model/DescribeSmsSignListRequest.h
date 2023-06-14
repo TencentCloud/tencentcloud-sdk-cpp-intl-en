@@ -47,20 +47,23 @@ namespace TencentCloud
 Note: the maximum length of the array is 100 by default.
                      * @return SignIdSet Signature ID array.
 Note: the maximum length of the array is 100 by default.
+                     * 
                      */
                     std::vector<uint64_t> GetSignIdSet() const;
 
                     /**
                      * 设置Signature ID array.
 Note: the maximum length of the array is 100 by default.
-                     * @param SignIdSet Signature ID array.
+                     * @param _signIdSet Signature ID array.
 Note: the maximum length of the array is 100 by default.
+                     * 
                      */
                     void SetSignIdSet(const std::vector<uint64_t>& _signIdSet);
 
                     /**
                      * 判断参数 SignIdSet 是否已赋值
                      * @return SignIdSet 是否已赋值
+                     * 
                      */
                     bool SignIdSetHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Note: the maximum length of the array is 100 by default.
                      * @return International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -78,15 +82,17 @@ Note: the maximum length of the array is 100 by default.
                      * 设置Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
-                     * @param International Whether it is Global SMS:
+                     * @param _international Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Db Database name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDb() const;
 
                     /**
                      * 设置Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Db Database name
+                     * @param _db Database name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDb(const std::string& _db);
 
                     /**
                      * 判断参数 Db 是否已赋值
                      * @return Db 是否已赋值
+                     * 
                      */
                     bool DbHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Table Table name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTable() const;
 
                     /**
                      * 设置Table name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Table Table name
+                     * @param _table Table name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTable(const std::string& _table);
 
                     /**
                      * 判断参数 Table 是否已赋值
                      * @return Table 是否已赋值
+                     * 
                      */
                     bool TableHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Reason The cause why check is not initiated
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置The cause why check is not initiated
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Reason The cause why check is not initiated
+                     * @param _reason The cause why check is not initiated
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReason(const std::string& _reason);
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 

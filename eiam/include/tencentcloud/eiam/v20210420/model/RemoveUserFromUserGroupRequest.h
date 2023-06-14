@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the users to be added to the user group.
                      * @return UserIds List of IDs of the users to be added to the user group.
+                     * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
                      * 设置List of IDs of the users to be added to the user group.
-                     * @param UserIds List of IDs of the users to be added to the user group.
+                     * @param _userIds List of IDs of the users to be added to the user group.
+                     * 
                      */
                     void SetUserIds(const std::vector<std::string>& _userIds);
 
                     /**
                      * 判断参数 UserIds 是否已赋值
                      * @return UserIds 是否已赋值
+                     * 
                      */
                     bool UserIdsHasBeenSet() const;
 
                     /**
                      * 获取User group ID, which is globally unique.
                      * @return UserGroupId User group ID, which is globally unique.
+                     * 
                      */
                     std::string GetUserGroupId() const;
 
                     /**
                      * 设置User group ID, which is globally unique.
-                     * @param UserGroupId User group ID, which is globally unique.
+                     * @param _userGroupId User group ID, which is globally unique.
+                     * 
                      */
                     void SetUserGroupId(const std::string& _userGroupId);
 
                     /**
                      * 判断参数 UserGroupId 是否已赋值
                      * @return UserGroupId 是否已赋值
+                     * 
                      */
                     bool UserGroupIdHasBeenSet() const;
 

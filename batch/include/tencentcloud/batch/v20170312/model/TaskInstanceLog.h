@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Task instance
                      * @return TaskInstanceIndex Task instance
+                     * 
                      */
                     uint64_t GetTaskInstanceIndex() const;
 
                     /**
                      * 设置Task instance
-                     * @param TaskInstanceIndex Task instance
+                     * @param _taskInstanceIndex Task instance
+                     * 
                      */
                     void SetTaskInstanceIndex(const uint64_t& _taskInstanceIndex);
 
                     /**
                      * 判断参数 TaskInstanceIndex 是否已赋值
                      * @return TaskInstanceIndex 是否已赋值
+                     * 
                      */
                     bool TaskInstanceIndexHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StdoutLog Standard output log (Base64-encoded, up to 2048 bytes after decompression)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetStdoutLog() const;
 
                     /**
                      * 设置Standard output log (Base64-encoded, up to 2048 bytes after decompression)
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param StdoutLog Standard output log (Base64-encoded, up to 2048 bytes after decompression)
+                     * @param _stdoutLog Standard output log (Base64-encoded, up to 2048 bytes after decompression)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStdoutLog(const std::string& _stdoutLog);
 
                     /**
                      * 判断参数 StdoutLog 是否已赋值
                      * @return StdoutLog 是否已赋值
+                     * 
                      */
                     bool StdoutLogHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StderrLog Standard error log (Base64-encoded, up to 2048 bytes after decompression)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetStderrLog() const;
 
                     /**
                      * 设置Standard error log (Base64-encoded, up to 2048 bytes after decompression)
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param StderrLog Standard error log (Base64-encoded, up to 2048 bytes after decompression)
+                     * @param _stderrLog Standard error log (Base64-encoded, up to 2048 bytes after decompression)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStderrLog(const std::string& _stderrLog);
 
                     /**
                      * 判断参数 StderrLog 是否已赋值
                      * @return StderrLog 是否已赋值
+                     * 
                      */
                     bool StderrLogHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StdoutRedirectPath Standard output redirection path
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetStdoutRedirectPath() const;
 
                     /**
                      * 设置Standard output redirection path
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param StdoutRedirectPath Standard output redirection path
+                     * @param _stdoutRedirectPath Standard output redirection path
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStdoutRedirectPath(const std::string& _stdoutRedirectPath);
 
                     /**
                      * 判断参数 StdoutRedirectPath 是否已赋值
                      * @return StdoutRedirectPath 是否已赋值
+                     * 
                      */
                     bool StdoutRedirectPathHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StderrRedirectPath Standard error redirection path
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetStderrRedirectPath() const;
 
                     /**
                      * 设置Standard error redirection path
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param StderrRedirectPath Standard error redirection path
+                     * @param _stderrRedirectPath Standard error redirection path
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStderrRedirectPath(const std::string& _stderrRedirectPath);
 
                     /**
                      * 判断参数 StderrRedirectPath 是否已赋值
                      * @return StderrRedirectPath 是否已赋值
+                     * 
                      */
                     bool StderrRedirectPathHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StdoutRedirectFileName Standard output redirection file name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetStdoutRedirectFileName() const;
 
                     /**
                      * 设置Standard output redirection file name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param StdoutRedirectFileName Standard output redirection file name
+                     * @param _stdoutRedirectFileName Standard output redirection file name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStdoutRedirectFileName(const std::string& _stdoutRedirectFileName);
 
                     /**
                      * 判断参数 StdoutRedirectFileName 是否已赋值
                      * @return StdoutRedirectFileName 是否已赋值
+                     * 
                      */
                     bool StdoutRedirectFileNameHasBeenSet() const;
 
@@ -179,20 +197,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StderrRedirectFileName Standard error redirection file name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetStderrRedirectFileName() const;
 
                     /**
                      * 设置Standard error redirection file name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param StderrRedirectFileName Standard error redirection file name
+                     * @param _stderrRedirectFileName Standard error redirection file name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStderrRedirectFileName(const std::string& _stderrRedirectFileName);
 
                     /**
                      * 判断参数 StderrRedirectFileName 是否已赋值
                      * @return StderrRedirectFileName 是否已赋值
+                     * 
                      */
                     bool StderrRedirectFileNameHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where the table to be rolled back resides
                      * @return ClusterId ID of the cluster where the table to be rolled back resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where the table to be rolled back resides
-                     * @param ClusterId ID of the cluster where the table to be rolled back resides
+                     * @param _clusterId ID of the cluster where the table to be rolled back resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of tables to be rolled back
                      * @return SelectedTables List of tables to be rolled back
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置List of tables to be rolled back
-                     * @param SelectedTables List of tables to be rolled back
+                     * @param _selectedTables List of tables to be rolled back
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 
                     /**
                      * 获取Time to roll back to
                      * @return RollbackTime Time to roll back to
+                     * 
                      */
                     std::string GetRollbackTime() const;
 
                     /**
                      * 设置Time to roll back to
-                     * @param RollbackTime Time to roll back to
+                     * @param _rollbackTime Time to roll back to
+                     * 
                      */
                     void SetRollbackTime(const std::string& _rollbackTime);
 
                     /**
                      * 判断参数 RollbackTime 是否已赋值
                      * @return RollbackTime 是否已赋值
+                     * 
                      */
                     bool RollbackTimeHasBeenSet() const;
 
                     /**
                      * 获取Rollback mode. `KEYS` is supported
                      * @return Mode Rollback mode. `KEYS` is supported
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Rollback mode. `KEYS` is supported
-                     * @param Mode Rollback mode. `KEYS` is supported
+                     * @param _mode Rollback mode. `KEYS` is supported
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 

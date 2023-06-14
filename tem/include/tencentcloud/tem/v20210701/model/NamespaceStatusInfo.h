@@ -51,72 +51,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the environment
                      * @return EnvironmentId ID of the environment
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置ID of the environment
-                     * @param EnvironmentId ID of the environment
+                     * @param _environmentId ID of the environment
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Environment name
                      * @return EnvironmentName Environment name
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment name
-                     * @param EnvironmentName Environment name
+                     * @param _environmentName Environment name
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取TCB envId | EKS clusterId
                      * @return ClusterId TCB envId | EKS clusterId
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置TCB envId | EKS clusterId
-                     * @param ClusterId TCB envId | EKS clusterId
+                     * @param _clusterId TCB envId | EKS clusterId
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Environment status
                      * @return ClusterStatus Environment status
+                     * 
                      */
                     std::string GetClusterStatus() const;
 
                     /**
                      * 设置Environment status
-                     * @param ClusterStatus Environment status
+                     * @param _clusterStatus Environment status
+                     * 
                      */
                     void SetClusterStatus(const std::string& _clusterStatus);
 
                     /**
                      * 判断参数 ClusterStatus 是否已赋值
                      * @return ClusterStatus 是否已赋值
+                     * 
                      */
                     bool ClusterStatusHasBeenSet() const;
 
@@ -125,20 +137,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnvironmentStartingStatus Whether the environment is being started. `null` is returned if it’s not being started.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     TemEnvironmentStartingStatus GetEnvironmentStartingStatus() const;
 
                     /**
                      * 设置Whether the environment is being started. `null` is returned if it’s not being started.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnvironmentStartingStatus Whether the environment is being started. `null` is returned if it’s not being started.
+                     * @param _environmentStartingStatus Whether the environment is being started. `null` is returned if it’s not being started.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentStartingStatus(const TemEnvironmentStartingStatus& _environmentStartingStatus);
 
                     /**
                      * 判断参数 EnvironmentStartingStatus 是否已赋值
                      * @return EnvironmentStartingStatus 是否已赋值
+                     * 
                      */
                     bool EnvironmentStartingStatusHasBeenSet() const;
 
@@ -147,20 +162,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnvironmentStoppingStatus Whether the environment is being stopped. `null` is returned if it’s not being stopped.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     TemEnvironmentStoppingStatus GetEnvironmentStoppingStatus() const;
 
                     /**
                      * 设置Whether the environment is being stopped. `null` is returned if it’s not being stopped.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnvironmentStoppingStatus Whether the environment is being stopped. `null` is returned if it’s not being stopped.
+                     * @param _environmentStoppingStatus Whether the environment is being stopped. `null` is returned if it’s not being stopped.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentStoppingStatus(const TemEnvironmentStoppingStatus& _environmentStoppingStatus);
 
                     /**
                      * 判断参数 EnvironmentStoppingStatus 是否已赋值
                      * @return EnvironmentStoppingStatus 是否已赋值
+                     * 
                      */
                     bool EnvironmentStoppingStatusHasBeenSet() const;
 

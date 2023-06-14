@@ -58,20 +58,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return WafConfig WAF configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     WafConfig GetWafConfig() const;
 
                     /**
                      * 设置WAF configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param WafConfig WAF configuration
+                     * @param _wafConfig WAF configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetWafConfig(const WafConfig& _wafConfig);
 
                     /**
                      * 判断参数 WafConfig 是否已赋值
                      * @return WafConfig 是否已赋值
+                     * 
                      */
                     bool WafConfigHasBeenSet() const;
 
@@ -80,20 +83,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RateLimitConfig Rate limit configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     RateLimitConfig GetRateLimitConfig() const;
 
                     /**
                      * 设置Rate limit configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RateLimitConfig Rate limit configuration
+                     * @param _rateLimitConfig Rate limit configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRateLimitConfig(const RateLimitConfig& _rateLimitConfig);
 
                     /**
                      * 判断参数 RateLimitConfig 是否已赋值
                      * @return RateLimitConfig 是否已赋值
+                     * 
                      */
                     bool RateLimitConfigHasBeenSet() const;
 
@@ -102,20 +108,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DdosConfig DDoS mitigation configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DDoSConfig GetDdosConfig() const;
 
                     /**
                      * 设置DDoS mitigation configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DdosConfig DDoS mitigation configuration
+                     * @param _ddosConfig DDoS mitigation configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDdosConfig(const DDoSConfig& _ddosConfig);
 
                     /**
                      * 判断参数 DdosConfig 是否已赋值
                      * @return DdosConfig 是否已赋值
+                     * 
                      */
                     bool DdosConfigHasBeenSet() const;
 
@@ -124,20 +133,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AclConfig ACL configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AclConfig GetAclConfig() const;
 
                     /**
                      * 设置ACL configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AclConfig ACL configuration
+                     * @param _aclConfig ACL configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAclConfig(const AclConfig& _aclConfig);
 
                     /**
                      * 判断参数 AclConfig 是否已赋值
                      * @return AclConfig 是否已赋值
+                     * 
                      */
                     bool AclConfigHasBeenSet() const;
 
@@ -146,20 +158,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return BotConfig Bot configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     BotConfig GetBotConfig() const;
 
                     /**
                      * 设置Bot configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param BotConfig Bot configuration
+                     * @param _botConfig Bot configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBotConfig(const BotConfig& _botConfig);
 
                     /**
                      * 判断参数 BotConfig 是否已赋值
                      * @return BotConfig 是否已赋值
+                     * 
                      */
                     bool BotConfigHasBeenSet() const;
 
@@ -168,20 +183,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SwitchConfig Switch that controls all web security configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     SwitchConfig GetSwitchConfig() const;
 
                     /**
                      * 设置Switch that controls all web security configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SwitchConfig Switch that controls all web security configuration
+                     * @param _switchConfig Switch that controls all web security configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitchConfig(const SwitchConfig& _switchConfig);
 
                     /**
                      * 判断参数 SwitchConfig 是否已赋值
                      * @return SwitchConfig 是否已赋值
+                     * 
                      */
                     bool SwitchConfigHasBeenSet() const;
 
@@ -190,20 +208,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IpTableConfig IP blocklist/allowlist
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     IpTableConfig GetIpTableConfig() const;
 
                     /**
                      * 设置IP blocklist/allowlist
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IpTableConfig IP blocklist/allowlist
+                     * @param _ipTableConfig IP blocklist/allowlist
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpTableConfig(const IpTableConfig& _ipTableConfig);
 
                     /**
                      * 判断参数 IpTableConfig 是否已赋值
                      * @return IpTableConfig 是否已赋值
+                     * 
                      */
                     bool IpTableConfigHasBeenSet() const;
 

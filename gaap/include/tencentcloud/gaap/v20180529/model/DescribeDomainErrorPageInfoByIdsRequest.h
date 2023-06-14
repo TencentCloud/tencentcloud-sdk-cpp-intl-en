@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of custom error IDs. Up to 10 IDs are supported
                      * @return ErrorPageIds List of custom error IDs. Up to 10 IDs are supported
+                     * 
                      */
                     std::vector<std::string> GetErrorPageIds() const;
 
                     /**
                      * 设置List of custom error IDs. Up to 10 IDs are supported
-                     * @param ErrorPageIds List of custom error IDs. Up to 10 IDs are supported
+                     * @param _errorPageIds List of custom error IDs. Up to 10 IDs are supported
+                     * 
                      */
                     void SetErrorPageIds(const std::vector<std::string>& _errorPageIds);
 
                     /**
                      * 判断参数 ErrorPageIds 是否已赋值
                      * @return ErrorPageIds 是否已赋值
+                     * 
                      */
                     bool ErrorPageIdsHasBeenSet() const;
 

@@ -45,180 +45,210 @@ namespace TencentCloud
                     /**
                      * 获取Protocol
                      * @return Protocol Protocol
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol
-                     * @param Protocol Protocol
+                     * @param _protocol Protocol
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Policy
                      * @return Strategy Policy
+                     * 
                      */
                     std::string GetStrategy() const;
 
                     /**
                      * 设置Policy
-                     * @param Strategy Policy
+                     * @param _strategy Policy
+                     * 
                      */
                     void SetStrategy(const std::string& _strategy);
 
                     /**
                      * 判断参数 Strategy 是否已赋值
                      * @return Strategy 是否已赋值
+                     * 
                      */
                     bool StrategyHasBeenSet() const;
 
                     /**
                      * 获取Search value
                      * @return SearchValue Search value
+                     * 
                      */
                     std::string GetSearchValue() const;
 
                     /**
                      * 设置Search value
-                     * @param SearchValue Search value
+                     * @param _searchValue Search value
+                     * 
                      */
                     void SetSearchValue(const std::string& _searchValue);
 
                     /**
                      * 判断参数 SearchValue 是否已赋值
                      * @return SearchValue 是否已赋值
+                     * 
                      */
                     bool SearchValueHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page
                      * @return Limit Number of entries per page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page
-                     * @param Limit Number of entries per page
+                     * @param _limit Number of entries per page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether it is outbound or inbound. 1: inbound; 0: outbound
                      * @return Direction Indicates whether it is outbound or inbound. 1: inbound; 0: outbound
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Indicates whether it is outbound or inbound. 1: inbound; 0: outbound
-                     * @param Direction Indicates whether it is outbound or inbound. 1: inbound; 0: outbound
+                     * @param _direction Indicates whether it is outbound or inbound. 1: inbound; 0: outbound
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取EdgeId value
                      * @return EdgeId EdgeId value
+                     * 
                      */
                     std::string GetEdgeId() const;
 
                     /**
                      * 设置EdgeId value
-                     * @param EdgeId EdgeId value
+                     * @param _edgeId EdgeId value
+                     * 
                      */
                     void SetEdgeId(const std::string& _edgeId);
 
                     /**
                      * 判断参数 EdgeId 是否已赋值
                      * @return EdgeId 是否已赋值
+                     * 
                      */
                     bool EdgeIdHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether the rule is enabled. '0': disabled; '1': enabled. '0' by default
                      * @return Status Indicates whether the rule is enabled. '0': disabled; '1': enabled. '0' by default
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Indicates whether the rule is enabled. '0': disabled; '1': enabled. '0' by default
-                     * @param Status Indicates whether the rule is enabled. '0': disabled; '1': enabled. '0' by default
+                     * @param _status Indicates whether the rule is enabled. '0': disabled; '1': enabled. '0' by default
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return Area Region
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Region
-                     * @param Area Region
+                     * @param _area Region
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

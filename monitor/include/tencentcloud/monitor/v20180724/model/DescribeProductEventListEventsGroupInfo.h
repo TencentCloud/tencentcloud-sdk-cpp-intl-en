@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return GroupId Policy ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
                      * 设置Policy ID.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param GroupId Policy ID.
+                     * @param _groupId Policy ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetGroupId(const int64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return GroupName Policy name.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Policy name.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param GroupName Policy name.
+                     * @param _groupName Policy name.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 

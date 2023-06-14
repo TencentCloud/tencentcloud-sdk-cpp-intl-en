@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Firewall instance ID
                      * @return CfwInsId Firewall instance ID
+                     * 
                      */
                     std::string GetCfwInsId() const;
 
                     /**
                      * 判断参数 CfwInsId 是否已赋值
                      * @return CfwInsId 是否已赋值
+                     * 
                      */
                     bool CfwInsIdHasBeenSet() const;
 

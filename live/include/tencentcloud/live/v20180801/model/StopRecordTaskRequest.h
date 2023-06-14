@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Recording task ID.
                      * @return TaskId Recording task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Recording task ID.
-                     * @param TaskId Recording task ID.
+                     * @param _taskId Recording task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

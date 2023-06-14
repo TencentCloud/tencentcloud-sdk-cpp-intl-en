@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Version list
                      * @return Versions Version list
+                     * 
                      */
                     std::vector<std::string> GetVersions() const;
 
                     /**
                      * 判断参数 Versions 是否已赋值
                      * @return Versions 是否已赋值
+                     * 
                      */
                     bool VersionsHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EdgeVersionLatest Latest version of the edge cluster
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEdgeVersionLatest() const;
 
                     /**
                      * 判断参数 EdgeVersionLatest 是否已赋值
                      * @return EdgeVersionLatest 是否已赋值
+                     * 
                      */
                     bool EdgeVersionLatestHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EdgeVersionCurrent Current version of the edge cluster
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEdgeVersionCurrent() const;
 
                     /**
                      * 判断参数 EdgeVersionCurrent 是否已赋值
                      * @return EdgeVersionCurrent 是否已赋值
+                     * 
                      */
                     bool EdgeVersionCurrentHasBeenSet() const;
 

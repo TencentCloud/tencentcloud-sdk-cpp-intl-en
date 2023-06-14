@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Slow log start time
                      * @return Timestamp Slow log start time
+                     * 
                      */
                     std::string GetTimestamp() const;
 
                     /**
                      * 设置Slow log start time
-                     * @param Timestamp Slow log start time
+                     * @param _timestamp Slow log start time
+                     * 
                      */
                     void SetTimestamp(const std::string& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
                     /**
                      * 获取SQL statement
                      * @return SqlText SQL statement
+                     * 
                      */
                     std::string GetSqlText() const;
 
                     /**
                      * 设置SQL statement
-                     * @param SqlText SQL statement
+                     * @param _sqlText SQL statement
+                     * 
                      */
                     void SetSqlText(const std::string& _sqlText);
 
                     /**
                      * 判断参数 SqlText 是否已赋值
                      * @return SqlText 是否已赋值
+                     * 
                      */
                     bool SqlTextHasBeenSet() const;
 
                     /**
                      * 获取Database
                      * @return Database Database
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database
-                     * @param Database Database
+                     * @param _database Database
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserName User source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置User source
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserName User source
+                     * @param _userName User source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
@@ -127,38 +139,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserHost IP source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserHost() const;
 
                     /**
                      * 设置IP source
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserHost IP source
+                     * @param _userHost IP source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserHost(const std::string& _userHost);
 
                     /**
                      * 判断参数 UserHost 是否已赋值
                      * @return UserHost 是否已赋值
+                     * 
                      */
                     bool UserHostHasBeenSet() const;
 
                     /**
                      * 获取Execution time in seconds
                      * @return QueryTime Execution time in seconds
+                     * 
                      */
                     int64_t GetQueryTime() const;
 
                     /**
                      * 设置Execution time in seconds
-                     * @param QueryTime Execution time in seconds
+                     * @param _queryTime Execution time in seconds
+                     * 
                      */
                     void SetQueryTime(const int64_t& _queryTime);
 
                     /**
                      * 判断参数 QueryTime 是否已赋值
                      * @return QueryTime 是否已赋值
+                     * 
                      */
                     bool QueryTimeHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LockTime Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetLockTime() const;
 
                     /**
                      * 设置Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LockTime Lock time in seconds
+                     * @param _lockTime Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLockTime(const int64_t& _lockTime);
 
                     /**
                      * 判断参数 LockTime 是否已赋值
                      * @return LockTime 是否已赋值
+                     * 
                      */
                     bool LockTimeHasBeenSet() const;
 
@@ -189,20 +210,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RowsExamined Number of scanned rows
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRowsExamined() const;
 
                     /**
                      * 设置Number of scanned rows
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RowsExamined Number of scanned rows
+                     * @param _rowsExamined Number of scanned rows
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRowsExamined(const int64_t& _rowsExamined);
 
                     /**
                      * 判断参数 RowsExamined 是否已赋值
                      * @return RowsExamined 是否已赋值
+                     * 
                      */
                     bool RowsExaminedHasBeenSet() const;
 
@@ -211,20 +235,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RowsSent Number of returned rows
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRowsSent() const;
 
                     /**
                      * 设置Number of returned rows
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RowsSent Number of returned rows
+                     * @param _rowsSent Number of returned rows
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRowsSent(const int64_t& _rowsSent);
 
                     /**
                      * 判断参数 RowsSent 是否已赋值
                      * @return RowsSent 是否已赋值
+                     * 
                      */
                     bool RowsSentHasBeenSet() const;
 

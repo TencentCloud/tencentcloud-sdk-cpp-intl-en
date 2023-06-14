@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
                      * @return WebsiteType Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
+                     * 
                      */
                     std::string GetWebsiteType() const;
 
                     /**
                      * 设置Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
-                     * @param WebsiteType Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
+                     * @param _websiteType Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
+                     * 
                      */
                     void SetWebsiteType(const std::string& _websiteType);
 
                     /**
                      * 判断参数 WebsiteType 是否已赋值
                      * @return WebsiteType 是否已赋值
+                     * 
                      */
                     bool WebsiteTypeHasBeenSet() const;
 

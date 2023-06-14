@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Organization node ID, which is globally unique.
                      * @return OrgNodeId Organization node ID, which is globally unique.
+                     * 
                      */
                     std::string GetOrgNodeId() const;
 
                     /**
                      * 设置Organization node ID, which is globally unique.
-                     * @param OrgNodeId Organization node ID, which is globally unique.
+                     * @param _orgNodeId Organization node ID, which is globally unique.
+                     * 
                      */
                     void SetOrgNodeId(const std::string& _orgNodeId);
 
                     /**
                      * 判断参数 OrgNodeId 是否已赋值
                      * @return OrgNodeId 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdHasBeenSet() const;
 

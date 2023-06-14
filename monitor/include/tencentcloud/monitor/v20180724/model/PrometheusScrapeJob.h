@@ -51,56 +51,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Task name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Task name
+                     * @param _name Task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Agent ID
                      * @return AgentId Agent ID
+                     * 
                      */
                     std::string GetAgentId() const;
 
                     /**
                      * 设置Agent ID
-                     * @param AgentId Agent ID
+                     * @param _agentId Agent ID
+                     * 
                      */
                     void SetAgentId(const std::string& _agentId);
 
                     /**
                      * 判断参数 AgentId 是否已赋值
                      * @return AgentId 是否已赋值
+                     * 
                      */
                     bool AgentIdHasBeenSet() const;
 
                     /**
                      * 获取Task ID
                      * @return JobId Task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Task ID
-                     * @param JobId Task ID
+                     * @param _jobId Task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Config Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConfig() const;
 
                     /**
                      * 设置Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Config Configuration
+                     * @param _config Configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfig(const std::string& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 

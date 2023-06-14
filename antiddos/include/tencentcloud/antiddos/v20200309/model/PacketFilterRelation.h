@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Feature filtering configuration
                      * @return PacketFilterConfig Feature filtering configuration
+                     * 
                      */
                     PacketFilterConfig GetPacketFilterConfig() const;
 
                     /**
                      * 设置Feature filtering configuration
-                     * @param PacketFilterConfig Feature filtering configuration
+                     * @param _packetFilterConfig Feature filtering configuration
+                     * 
                      */
                     void SetPacketFilterConfig(const PacketFilterConfig& _packetFilterConfig);
 
                     /**
                      * 判断参数 PacketFilterConfig 是否已赋值
                      * @return PacketFilterConfig 是否已赋值
+                     * 
                      */
                     bool PacketFilterConfigHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance configured
                      * @return InstanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     std::vector<InstanceRelation> GetInstanceDetailList() const;
 
                     /**
                      * 设置Anti-DDoS instance configured
-                     * @param InstanceDetailList Anti-DDoS instance configured
+                     * @param _instanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     void SetInstanceDetailList(const std::vector<InstanceRelation>& _instanceDetailList);
 
                     /**
                      * 判断参数 InstanceDetailList 是否已赋值
                      * @return InstanceDetailList 是否已赋值
+                     * 
                      */
                     bool InstanceDetailListHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModifyTime Modification time
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Modification time
-                     * @param ModifyTime Modification time
+                     * @param _modifyTime Modification time
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 

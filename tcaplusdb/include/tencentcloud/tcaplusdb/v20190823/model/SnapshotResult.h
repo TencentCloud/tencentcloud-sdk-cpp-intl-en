@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return TableGroupId The ID of the table group where the table resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置The ID of the table group where the table resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param TableGroupId The ID of the table group where the table resides
+                     * @param _tableGroupId The ID of the table group where the table resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return TableName Table name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param TableName Table name
+                     * @param _tableName Table name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return TaskId Task ID, which is valid for the API that creates one task at a time
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID, which is valid for the API that creates one task at a time
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param TaskId Task ID, which is valid for the API that creates one task at a time
+                     * @param _taskId Task ID, which is valid for the API that creates one task at a time
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Error Error information
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     ErrorInfo GetError() const;
 
                     /**
                      * 设置Error information
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Error Error information
+                     * @param _error Error information
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetError(const ErrorInfo& _error);
 
                     /**
                      * 判断参数 Error 是否已赋值
                      * @return Error 是否已赋值
+                     * 
                      */
                     bool ErrorHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SnapshotName Snapshot name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置Snapshot name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SnapshotName Snapshot name
+                     * @param _snapshotName Snapshot name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SnapshotTime The time of the data from which the snapshot was created
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSnapshotTime() const;
 
                     /**
                      * 设置The time of the data from which the snapshot was created
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SnapshotTime The time of the data from which the snapshot was created
+                     * @param _snapshotTime The time of the data from which the snapshot was created
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotTime(const std::string& _snapshotTime);
 
                     /**
                      * 判断参数 SnapshotTime 是否已赋值
                      * @return SnapshotTime 是否已赋值
+                     * 
                      */
                     bool SnapshotTimeHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SnapshotDeadTime When the snapshot expires
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSnapshotDeadTime() const;
 
                     /**
                      * 设置When the snapshot expires
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SnapshotDeadTime When the snapshot expires
+                     * @param _snapshotDeadTime When the snapshot expires
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotDeadTime(const std::string& _snapshotDeadTime);
 
                     /**
                      * 判断参数 SnapshotDeadTime 是否已赋值
                      * @return SnapshotDeadTime 是否已赋值
+                     * 
                      */
                     bool SnapshotDeadTimeHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SnapshotCreateTime When the snapshot was created
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSnapshotCreateTime() const;
 
                     /**
                      * 设置When the snapshot was created
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SnapshotCreateTime When the snapshot was created
+                     * @param _snapshotCreateTime When the snapshot was created
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotCreateTime(const std::string& _snapshotCreateTime);
 
                     /**
                      * 判断参数 SnapshotCreateTime 是否已赋值
                      * @return SnapshotCreateTime 是否已赋值
+                     * 
                      */
                     bool SnapshotCreateTimeHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SnapshotSize Snapshot size
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSnapshotSize() const;
 
                     /**
                      * 设置Snapshot size
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SnapshotSize Snapshot size
+                     * @param _snapshotSize Snapshot size
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotSize(const uint64_t& _snapshotSize);
 
                     /**
                      * 判断参数 SnapshotSize 是否已赋值
                      * @return SnapshotSize 是否已赋值
+                     * 
                      */
                     bool SnapshotSizeHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SnapshotStatus Snapshot status. Valid values: `0` (creating), `1` (normal), `2` (deleting), `3` (expired), `4` (rolling back).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSnapshotStatus() const;
 
                     /**
                      * 设置Snapshot status. Valid values: `0` (creating), `1` (normal), `2` (deleting), `3` (expired), `4` (rolling back).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SnapshotStatus Snapshot status. Valid values: `0` (creating), `1` (normal), `2` (deleting), `3` (expired), `4` (rolling back).
+                     * @param _snapshotStatus Snapshot status. Valid values: `0` (creating), `1` (normal), `2` (deleting), `3` (expired), `4` (rolling back).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotStatus(const uint64_t& _snapshotStatus);
 
                     /**
                      * 判断参数 SnapshotStatus 是否已赋值
                      * @return SnapshotStatus 是否已赋值
+                     * 
                      */
                     bool SnapshotStatusHasBeenSet() const;
 

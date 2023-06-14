@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Array
                      * @return ScoreSet Array
+                     * 
                      */
                     std::vector<ScoreInfo> GetScoreSet() const;
 
                     /**
                      * 判断参数 ScoreSet 是否已赋值
                      * @return ScoreSet 是否已赋值
+                     * 
                      */
                     bool ScoreSetHasBeenSet() const;
 

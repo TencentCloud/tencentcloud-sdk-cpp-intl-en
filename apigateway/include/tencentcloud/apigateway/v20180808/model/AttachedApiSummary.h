@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of APIs bound with the plugin
                      * @return TotalCount Number of APIs bound with the plugin
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of APIs bound with the plugin
-                     * @param TotalCount Number of APIs bound with the plugin
+                     * @param _totalCount Number of APIs bound with the plugin
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information of the API bound with the plugin
                      * @return AttachedApis Information of the API bound with the plugin
+                     * 
                      */
                     std::vector<AttachedApiInfo> GetAttachedApis() const;
 
                     /**
                      * 设置Information of the API bound with the plugin
-                     * @param AttachedApis Information of the API bound with the plugin
+                     * @param _attachedApis Information of the API bound with the plugin
+                     * 
                      */
                     void SetAttachedApis(const std::vector<AttachedApiInfo>& _attachedApis);
 
                     /**
                      * 判断参数 AttachedApis 是否已赋值
                      * @return AttachedApis 是否已赋值
+                     * 
                      */
                     bool AttachedApisHasBeenSet() const;
 

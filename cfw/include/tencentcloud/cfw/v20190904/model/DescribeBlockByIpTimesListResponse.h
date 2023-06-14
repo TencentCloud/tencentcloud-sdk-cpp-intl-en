@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Response data
                      * @return Data Response data
+                     * 
                      */
                     std::vector<IpStatic> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

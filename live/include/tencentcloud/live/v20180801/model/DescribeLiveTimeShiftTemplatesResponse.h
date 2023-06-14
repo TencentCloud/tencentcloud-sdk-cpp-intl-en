@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The information of the templates.
                      * @return Templates The information of the templates.
+                     * 
                      */
                     std::vector<TimeShiftTemplate> GetTemplates() const;
 
                     /**
                      * 判断参数 Templates 是否已赋值
                      * @return Templates 是否已赋值
+                     * 
                      */
                     bool TemplatesHasBeenSet() const;
 

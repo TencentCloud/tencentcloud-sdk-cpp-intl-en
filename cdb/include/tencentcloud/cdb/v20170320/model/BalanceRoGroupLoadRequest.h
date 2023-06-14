@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取RO group ID in the format of `cdbrg-c1nl9rpv`.
                      * @return RoGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+                     * 
                      */
                     std::string GetRoGroupId() const;
 
                     /**
                      * 设置RO group ID in the format of `cdbrg-c1nl9rpv`.
-                     * @param RoGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+                     * @param _roGroupId RO group ID in the format of `cdbrg-c1nl9rpv`.
+                     * 
                      */
                     void SetRoGroupId(const std::string& _roGroupId);
 
                     /**
                      * 判断参数 RoGroupId 是否已赋值
                      * @return RoGroupId 是否已赋值
+                     * 
                      */
                     bool RoGroupIdHasBeenSet() const;
 

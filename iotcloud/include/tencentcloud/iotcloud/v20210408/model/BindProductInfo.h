@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Product ID
                      * @return ProductId Product ID
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置Product ID
-                     * @param ProductId Product ID
+                     * @param _productId Product ID
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取Product name
                      * @return ProductName Product name
+                     * 
                      */
                     std::string GetProductName() const;
 
                     /**
                      * 设置Product name
-                     * @param ProductName Product name
+                     * @param _productName Product name
+                     * 
                      */
                     void SetProductName(const std::string& _productName);
 
                     /**
                      * 判断参数 ProductName 是否已赋值
                      * @return ProductName 是否已赋值
+                     * 
                      */
                     bool ProductNameHasBeenSet() const;
 

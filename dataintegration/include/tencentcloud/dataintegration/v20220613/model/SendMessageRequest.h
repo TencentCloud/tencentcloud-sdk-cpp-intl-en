@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the integrated resource
                      * @return DataHubId ID of the integrated resource
+                     * 
                      */
                     std::string GetDataHubId() const;
 
                     /**
                      * 设置ID of the integrated resource
-                     * @param DataHubId ID of the integrated resource
+                     * @param _dataHubId ID of the integrated resource
+                     * 
                      */
                     void SetDataHubId(const std::string& _dataHubId);
 
                     /**
                      * 判断参数 DataHubId 是否已赋值
                      * @return DataHubId 是否已赋值
+                     * 
                      */
                     bool DataHubIdHasBeenSet() const;
 
                     /**
                      * 获取A batch of messages
                      * @return Message A batch of messages
+                     * 
                      */
                     std::vector<BatchContent> GetMessage() const;
 
                     /**
                      * 设置A batch of messages
-                     * @param Message A batch of messages
+                     * @param _message A batch of messages
+                     * 
                      */
                     void SetMessage(const std::vector<BatchContent>& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

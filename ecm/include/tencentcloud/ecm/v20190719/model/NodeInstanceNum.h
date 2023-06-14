@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of nodes
                      * @return NodeNum Number of nodes
+                     * 
                      */
                     int64_t GetNodeNum() const;
 
                     /**
                      * 设置Number of nodes
-                     * @param NodeNum Number of nodes
+                     * @param _nodeNum Number of nodes
+                     * 
                      */
                     void SetNodeNum(const int64_t& _nodeNum);
 
                     /**
                      * 判断参数 NodeNum 是否已赋值
                      * @return NodeNum 是否已赋值
+                     * 
                      */
                     bool NodeNumHasBeenSet() const;
 
                     /**
                      * 获取Number of instances
                      * @return InstanceNum Number of instances
+                     * 
                      */
                     int64_t GetInstanceNum() const;
 
                     /**
                      * 设置Number of instances
-                     * @param InstanceNum Number of instances
+                     * @param _instanceNum Number of instances
+                     * 
                      */
                     void SetInstanceNum(const int64_t& _instanceNum);
 
                     /**
                      * 判断参数 InstanceNum 是否已赋值
                      * @return InstanceNum 是否已赋值
+                     * 
                      */
                     bool InstanceNumHasBeenSet() const;
 

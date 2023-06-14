@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance IP
                      * @return EipList Instance IP
+                     * 
                      */
                     std::vector<std::string> GetEipList() const;
 
                     /**
                      * 设置Instance IP
-                     * @param EipList Instance IP
+                     * @param _eipList Instance IP
+                     * 
                      */
                     void SetEipList(const std::vector<std::string>& _eipList);
 
                     /**
                      * 判断参数 EipList 是否已赋值
                      * @return EipList 是否已赋值
+                     * 
                      */
                     bool EipListHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

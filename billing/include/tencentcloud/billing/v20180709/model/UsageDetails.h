@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ProductName The name of the product.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetProductName() const;
 
                     /**
                      * 设置The name of the product.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ProductName The name of the product.
+                     * @param _productName The name of the product.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetProductName(const std::string& _productName);
 
                     /**
                      * 判断参数 ProductName 是否已赋值
                      * @return ProductName 是否已赋值
+                     * 
                      */
                     bool ProductNameHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return SubProductName 
+                     * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
                      * 设置
-                     * @param SubProductName 
+                     * @param _subProductName 
+                     * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
 
                     /**
                      * 判断参数 SubProductName 是否已赋值
                      * @return SubProductName 是否已赋值
+                     * 
                      */
                     bool SubProductNameHasBeenSet() const;
 

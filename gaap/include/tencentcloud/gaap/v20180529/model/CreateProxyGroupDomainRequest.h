@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Connection group ID of the domain name to be enabled.
                      * @return GroupId Connection group ID of the domain name to be enabled.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Connection group ID of the domain name to be enabled.
-                     * @param GroupId Connection group ID of the domain name to be enabled.
+                     * @param _groupId Connection group ID of the domain name to be enabled.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 

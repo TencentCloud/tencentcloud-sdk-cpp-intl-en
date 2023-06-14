@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Virtual IP
                      * @return Vip Virtual IP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Virtual IP
-                     * @param Vip Virtual IP
+                     * @param _vip Virtual IP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Virtual port
                      * @return Vport Virtual port
+                     * 
                      */
                     std::string GetVport() const;
 
                     /**
                      * 设置Virtual port
-                     * @param Vport Virtual port
+                     * @param _vport Virtual port
+                     * 
                      */
                     void SetVport(const std::string& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 

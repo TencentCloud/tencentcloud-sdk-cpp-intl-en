@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取List of trends
                      * @return EventSet List of trends
+                     * 
                      */
                     std::vector<RunTimeTendencyInfo> GetEventSet() const;
 
                     /**
                      * 设置List of trends
-                     * @param EventSet List of trends
+                     * @param _eventSet List of trends
+                     * 
                      */
                     void SetEventSet(const std::vector<RunTimeTendencyInfo>& _eventSet);
 
                     /**
                      * 判断参数 EventSet 是否已赋值
                      * @return EventSet 是否已赋值
+                     * 
                      */
                     bool EventSetHasBeenSet() const;
 
@@ -82,6 +85,7 @@ ET_ABNORMAL_PROCESS: Abnormal process
 ET_ACCESS_CONTROL: File tampering
 ET_VIRUS: Trojan event
 ET_MALICIOUS_CONNECTION: Malicious connection event
+                     * 
                      */
                     std::string GetEventType() const;
 
@@ -94,7 +98,7 @@ ET_ABNORMAL_PROCESS: Abnormal process
 ET_ACCESS_CONTROL: File tampering
 ET_VIRUS: Trojan event
 ET_MALICIOUS_CONNECTION: Malicious connection event
-                     * @param EventType Event type:
+                     * @param _eventType Event type:
 ET_ESCAPE: Container escape
 ET_REVERSE_SHELL: Reverse shell
 ET_RISK_SYSCALL: High-risk system calls
@@ -102,12 +106,14 @@ ET_ABNORMAL_PROCESS: Abnormal process
 ET_ACCESS_CONTROL: File tampering
 ET_VIRUS: Trojan event
 ET_MALICIOUS_CONNECTION: Malicious connection event
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 

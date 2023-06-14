@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of directories to be purged. The protocol header must be included.
                      * @return Paths List of directories to be purged. The protocol header must be included.
+                     * 
                      */
                     std::vector<std::string> GetPaths() const;
 
                     /**
                      * 设置List of directories to be purged. The protocol header must be included.
-                     * @param Paths List of directories to be purged. The protocol header must be included.
+                     * @param _paths List of directories to be purged. The protocol header must be included.
+                     * 
                      */
                     void SetPaths(const std::vector<std::string>& _paths);
 
                     /**
                      * 判断参数 Paths 是否已赋值
                      * @return Paths 是否已赋值
+                     * 
                      */
                     bool PathsHasBeenSet() const;
 
                     /**
                      * 获取Purge type. flush: purges updated resources, delete: purges all resources.
                      * @return FlushType Purge type. flush: purges updated resources, delete: purges all resources.
+                     * 
                      */
                     std::string GetFlushType() const;
 
                     /**
                      * 设置Purge type. flush: purges updated resources, delete: purges all resources.
-                     * @param FlushType Purge type. flush: purges updated resources, delete: purges all resources.
+                     * @param _flushType Purge type. flush: purges updated resources, delete: purges all resources.
+                     * 
                      */
                     void SetFlushType(const std::string& _flushType);
 
                     /**
                      * 判断参数 FlushType 是否已赋值
                      * @return FlushType 是否已赋值
+                     * 
                      */
                     bool FlushTypeHasBeenSet() const;
 

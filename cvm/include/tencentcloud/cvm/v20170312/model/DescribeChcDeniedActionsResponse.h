@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Actions not allowed for the CHC instance
                      * @return ChcHostDeniedActionSet Actions not allowed for the CHC instance
+                     * 
                      */
                     std::vector<ChcHostDeniedActions> GetChcHostDeniedActionSet() const;
 
                     /**
                      * 判断参数 ChcHostDeniedActionSet 是否已赋值
                      * @return ChcHostDeniedActionSet 是否已赋值
+                     * 
                      */
                     bool ChcHostDeniedActionSetHasBeenSet() const;
 

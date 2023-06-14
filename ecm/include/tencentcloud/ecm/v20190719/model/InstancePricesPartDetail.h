@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取CPU price information
                      * @return CpuPrice CPU price information
+                     * 
                      */
                     PriceDetail GetCpuPrice() const;
 
                     /**
                      * 设置CPU price information
-                     * @param CpuPrice CPU price information
+                     * @param _cpuPrice CPU price information
+                     * 
                      */
                     void SetCpuPrice(const PriceDetail& _cpuPrice);
 
                     /**
                      * 判断参数 CpuPrice 是否已赋值
                      * @return CpuPrice 是否已赋值
+                     * 
                      */
                     bool CpuPriceHasBeenSet() const;
 
                     /**
                      * 获取Memory price information
                      * @return MemPrice Memory price information
+                     * 
                      */
                     PriceDetail GetMemPrice() const;
 
                     /**
                      * 设置Memory price information
-                     * @param MemPrice Memory price information
+                     * @param _memPrice Memory price information
+                     * 
                      */
                     void SetMemPrice(const PriceDetail& _memPrice);
 
                     /**
                      * 判断参数 MemPrice 是否已赋值
                      * @return MemPrice 是否已赋值
+                     * 
                      */
                     bool MemPriceHasBeenSet() const;
 
                     /**
                      * 获取Disk price information
                      * @return DisksPrice Disk price information
+                     * 
                      */
                     PriceDetail GetDisksPrice() const;
 
                     /**
                      * 设置Disk price information
-                     * @param DisksPrice Disk price information
+                     * @param _disksPrice Disk price information
+                     * 
                      */
                     void SetDisksPrice(const PriceDetail& _disksPrice);
 
                     /**
                      * 判断参数 DisksPrice 是否已赋值
                      * @return DisksPrice 是否已赋值
+                     * 
                      */
                     bool DisksPriceHasBeenSet() const;
 

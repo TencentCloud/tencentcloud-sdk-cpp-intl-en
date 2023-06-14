@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the new VPC
                      * @return NewVpcId ID of the new VPC
+                     * 
                      */
                     std::string GetNewVpcId() const;
 
                     /**
                      * 设置ID of the new VPC
-                     * @param NewVpcId ID of the new VPC
+                     * @param _newVpcId ID of the new VPC
+                     * 
                      */
                     void SetNewVpcId(const std::string& _newVpcId);
 
                     /**
                      * 判断参数 NewVpcId 是否已赋值
                      * @return NewVpcId 是否已赋值
+                     * 
                      */
                     bool NewVpcIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the new subnet
                      * @return NewSubnetId ID of the new subnet
+                     * 
                      */
                     std::string GetNewSubnetId() const;
 
                     /**
                      * 设置ID of the new subnet
-                     * @param NewSubnetId ID of the new subnet
+                     * @param _newSubnetId ID of the new subnet
+                     * 
                      */
                     void SetNewSubnetId(const std::string& _newSubnetId);
 
                     /**
                      * 判断参数 NewSubnetId 是否已赋值
                      * @return NewSubnetId 是否已赋值
+                     * 
                      */
                     bool NewSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
                      * @return OldIpRetainTime Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
+                     * 
                      */
                     int64_t GetOldIpRetainTime() const;
 
                     /**
                      * 设置Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
-                     * @param OldIpRetainTime Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
+                     * @param _oldIpRetainTime Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
+                     * 
                      */
                     void SetOldIpRetainTime(const int64_t& _oldIpRetainTime);
 
                     /**
                      * 判断参数 OldIpRetainTime 是否已赋值
                      * @return OldIpRetainTime 是否已赋值
+                     * 
                      */
                     bool OldIpRetainTimeHasBeenSet() const;
 
                     /**
                      * 获取New VIP
                      * @return Vip New VIP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置New VIP
-                     * @param Vip New VIP
+                     * @param _vip New VIP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 

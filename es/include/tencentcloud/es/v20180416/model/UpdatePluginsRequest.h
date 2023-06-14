@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of names of the plugins to be installed
                      * @return InstallPluginList List of names of the plugins to be installed
+                     * 
                      */
                     std::vector<std::string> GetInstallPluginList() const;
 
                     /**
                      * 设置List of names of the plugins to be installed
-                     * @param InstallPluginList List of names of the plugins to be installed
+                     * @param _installPluginList List of names of the plugins to be installed
+                     * 
                      */
                     void SetInstallPluginList(const std::vector<std::string>& _installPluginList);
 
                     /**
                      * 判断参数 InstallPluginList 是否已赋值
                      * @return InstallPluginList 是否已赋值
+                     * 
                      */
                     bool InstallPluginListHasBeenSet() const;
 
                     /**
                      * 获取List of names of the plugins to be uninstalled
                      * @return RemovePluginList List of names of the plugins to be uninstalled
+                     * 
                      */
                     std::vector<std::string> GetRemovePluginList() const;
 
                     /**
                      * 设置List of names of the plugins to be uninstalled
-                     * @param RemovePluginList List of names of the plugins to be uninstalled
+                     * @param _removePluginList List of names of the plugins to be uninstalled
+                     * 
                      */
                     void SetRemovePluginList(const std::vector<std::string>& _removePluginList);
 
                     /**
                      * 判断参数 RemovePluginList 是否已赋值
                      * @return RemovePluginList 是否已赋值
+                     * 
                      */
                     bool RemovePluginListHasBeenSet() const;
 
                     /**
                      * 获取Whether to force restart the cluster. The default value is `false`.
                      * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
+                     * 
                      */
                     bool GetForceRestart() const;
 
                     /**
                      * 设置Whether to force restart the cluster. The default value is `false`.
-                     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
+                     * @param _forceRestart Whether to force restart the cluster. The default value is `false`.
+                     * 
                      */
                     void SetForceRestart(const bool& _forceRestart);
 
                     /**
                      * 判断参数 ForceRestart 是否已赋值
                      * @return ForceRestart 是否已赋值
+                     * 
                      */
                     bool ForceRestartHasBeenSet() const;
 
                     /**
                      * 获取Whether to reinstall the cluster. The default value is `false`.
                      * @return ForceUpdate Whether to reinstall the cluster. The default value is `false`.
+                     * 
                      */
                     bool GetForceUpdate() const;
 
                     /**
                      * 设置Whether to reinstall the cluster. The default value is `false`.
-                     * @param ForceUpdate Whether to reinstall the cluster. The default value is `false`.
+                     * @param _forceUpdate Whether to reinstall the cluster. The default value is `false`.
+                     * 
                      */
                     void SetForceUpdate(const bool& _forceUpdate);
 
                     /**
                      * 判断参数 ForceUpdate 是否已赋值
                      * @return ForceUpdate 是否已赋值
+                     * 
                      */
                     bool ForceUpdateHasBeenSet() const;
 
                     /**
                      * 获取0: system plugin
                      * @return PluginType 0: system plugin
+                     * 
                      */
                     uint64_t GetPluginType() const;
 
                     /**
                      * 设置0: system plugin
-                     * @param PluginType 0: system plugin
+                     * @param _pluginType 0: system plugin
+                     * 
                      */
                     void SetPluginType(const uint64_t& _pluginType);
 
                     /**
                      * 判断参数 PluginType 是否已赋值
                      * @return PluginType 是否已赋值
+                     * 
                      */
                     bool PluginTypeHasBeenSet() const;
 

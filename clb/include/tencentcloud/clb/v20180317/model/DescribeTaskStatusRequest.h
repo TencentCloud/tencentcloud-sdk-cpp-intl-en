@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Request ID, i.e., the RequestId parameter returned by the API.
                      * @return TaskId Request ID, i.e., the RequestId parameter returned by the API.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Request ID, i.e., the RequestId parameter returned by the API.
-                     * @param TaskId Request ID, i.e., the RequestId parameter returned by the API.
+                     * @param _taskId Request ID, i.e., the RequestId parameter returned by the API.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 Note: Either `TaskId` or `DealName` is required.
                      * @return DealName Order ID.
 Note: Either `TaskId` or `DealName` is required.
+                     * 
                      */
                     std::string GetDealName() const;
 
                     /**
                      * 设置Order ID.
 Note: Either `TaskId` or `DealName` is required.
-                     * @param DealName Order ID.
+                     * @param _dealName Order ID.
 Note: Either `TaskId` or `DealName` is required.
+                     * 
                      */
                     void SetDealName(const std::string& _dealName);
 
                     /**
                      * 判断参数 DealName 是否已赋值
                      * @return DealName 是否已赋值
+                     * 
                      */
                     bool DealNameHasBeenSet() const;
 

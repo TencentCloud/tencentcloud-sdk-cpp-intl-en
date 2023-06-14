@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return BeginTime Start time
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time
-                     * @param BeginTime Start time
+                     * @param _beginTime Start time
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Slow query threshold in milliseconds
                      * @return MinQueryTime Slow query threshold in milliseconds
+                     * 
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
                      * 设置Slow query threshold in milliseconds
-                     * @param MinQueryTime Slow query threshold in milliseconds
+                     * @param _minQueryTime Slow query threshold in milliseconds
+                     * 
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
 
                     /**
                      * 判断参数 MinQueryTime 是否已赋值
                      * @return MinQueryTime 是否已赋值
+                     * 
                      */
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of results returned per page
                      * @return Limit Maximum number of results returned per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of results returned per page
-                     * @param Limit Maximum number of results returned per page
+                     * @param _limit Maximum number of results returned per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset, which is an integral multiple of `Limit`.
                      * @return Offset Offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which is an integral multiple of `Limit`.
-                     * @param Offset Offset, which is an integral multiple of `Limit`.
+                     * @param _offset Offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

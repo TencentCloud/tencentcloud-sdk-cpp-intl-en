@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
                      * @return Lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+                     * 
                      */
                     std::string GetLang() const;
 
                     /**
                      * 设置Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
-                     * @param Lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+                     * @param _lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+                     * 
                      */
                     void SetLang(const std::string& _lang);
 
                     /**
                      * 判断参数 Lang 是否已赋值
                      * @return Lang 是否已赋值
+                     * 
                      */
                     bool LangHasBeenSet() const;
 
                     /**
                      * 获取Abbreviation of the trusted service, which is required during querying the trusted service admin.
                      * @return Product Abbreviation of the trusted service, which is required during querying the trusted service admin.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Abbreviation of the trusted service, which is required during querying the trusted service admin.
-                     * @param Product Abbreviation of the trusted service, which is required during querying the trusted service admin.
+                     * @param _product Abbreviation of the trusted service, which is required during querying the trusted service admin.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

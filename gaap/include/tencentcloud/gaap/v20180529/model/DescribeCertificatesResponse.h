@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Server certificate list, which includes certificate ID and certificate name.
                      * @return CertificateSet Server certificate list, which includes certificate ID and certificate name.
+                     * 
                      */
                     std::vector<Certificate> GetCertificateSet() const;
 
                     /**
                      * 判断参数 CertificateSet 是否已赋值
                      * @return CertificateSet 是否已赋值
+                     * 
                      */
                     bool CertificateSetHasBeenSet() const;
 
                     /**
                      * 获取Total quantity of server certificates that match the query conditions.
                      * @return TotalCount Total quantity of server certificates that match the query conditions.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

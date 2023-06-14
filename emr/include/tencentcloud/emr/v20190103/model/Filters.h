@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Field name
                      * @return Name Field name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Field name
-                     * @param Name Field name
+                     * @param _name Field name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Filters by the field value
                      * @return Values Filters by the field value
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Filters by the field value
-                     * @param Values Filters by the field value
+                     * @param _values Filters by the field value
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

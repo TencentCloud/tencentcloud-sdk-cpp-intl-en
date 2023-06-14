@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FailListenerIdSet IDs of the listeners failed to be bound. If this parameter is empty, all listeners have been bound successfully.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFailListenerIdSet() const;
 
                     /**
                      * 判断参数 FailListenerIdSet 是否已赋值
                      * @return FailListenerIdSet 是否已赋值
+                     * 
                      */
                     bool FailListenerIdSetHasBeenSet() const;
 

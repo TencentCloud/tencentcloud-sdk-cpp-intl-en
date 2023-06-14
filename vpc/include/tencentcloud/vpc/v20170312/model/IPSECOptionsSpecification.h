@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
                      * @return EncryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+                     * 
                      */
                     std::string GetEncryptAlgorithm() const;
 
                     /**
                      * 设置Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
-                     * @param EncryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+                     * @param _encryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+                     * 
                      */
                     void SetEncryptAlgorithm(const std::string& _encryptAlgorithm);
 
                     /**
                      * 判断参数 EncryptAlgorithm 是否已赋值
                      * @return EncryptAlgorithm 是否已赋值
+                     * 
                      */
                     bool EncryptAlgorithmHasBeenSet() const;
 
                     /**
                      * 获取Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
                      * @return IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+                     * 
                      */
                     std::string GetIntegrityAlgorith() const;
 
                     /**
                      * 设置Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
-                     * @param IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+                     * @param _integrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+                     * 
                      */
                     void SetIntegrityAlgorith(const std::string& _integrityAlgorith);
 
                     /**
                      * 判断参数 IntegrityAlgorith 是否已赋值
                      * @return IntegrityAlgorith 是否已赋值
+                     * 
                      */
                     bool IntegrityAlgorithHasBeenSet() const;
 
                     /**
                      * 获取IPsec SA lifetime (in sec). Value range: 180-604800
                      * @return IPSECSaLifetimeSeconds IPsec SA lifetime (in sec). Value range: 180-604800
+                     * 
                      */
                     uint64_t GetIPSECSaLifetimeSeconds() const;
 
                     /**
                      * 设置IPsec SA lifetime (in sec). Value range: 180-604800
-                     * @param IPSECSaLifetimeSeconds IPsec SA lifetime (in sec). Value range: 180-604800
+                     * @param _iPSECSaLifetimeSeconds IPsec SA lifetime (in sec). Value range: 180-604800
+                     * 
                      */
                     void SetIPSECSaLifetimeSeconds(const uint64_t& _iPSECSaLifetimeSeconds);
 
                     /**
                      * 判断参数 IPSECSaLifetimeSeconds 是否已赋值
                      * @return IPSECSaLifetimeSeconds 是否已赋值
+                     * 
                      */
                     bool IPSECSaLifetimeSecondsHasBeenSet() const;
 
                     /**
                      * 获取PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
                      * @return PfsDhGroup PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
+                     * 
                      */
                     std::string GetPfsDhGroup() const;
 
                     /**
                      * 设置PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
-                     * @param PfsDhGroup PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
+                     * @param _pfsDhGroup PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
+                     * 
                      */
                     void SetPfsDhGroup(const std::string& _pfsDhGroup);
 
                     /**
                      * 判断参数 PfsDhGroup 是否已赋值
                      * @return PfsDhGroup 是否已赋值
+                     * 
                      */
                     bool PfsDhGroupHasBeenSet() const;
 
                     /**
                      * 获取IPsec SA lifetime (in KB). Value range: 2560-604800
                      * @return IPSECSaLifetimeTraffic IPsec SA lifetime (in KB). Value range: 2560-604800
+                     * 
                      */
                     uint64_t GetIPSECSaLifetimeTraffic() const;
 
                     /**
                      * 设置IPsec SA lifetime (in KB). Value range: 2560-604800
-                     * @param IPSECSaLifetimeTraffic IPsec SA lifetime (in KB). Value range: 2560-604800
+                     * @param _iPSECSaLifetimeTraffic IPsec SA lifetime (in KB). Value range: 2560-604800
+                     * 
                      */
                     void SetIPSECSaLifetimeTraffic(const uint64_t& _iPSECSaLifetimeTraffic);
 
                     /**
                      * 判断参数 IPSECSaLifetimeTraffic 是否已赋值
                      * @return IPSECSaLifetimeTraffic 是否已赋值
+                     * 
                      */
                     bool IPSECSaLifetimeTrafficHasBeenSet() const;
 

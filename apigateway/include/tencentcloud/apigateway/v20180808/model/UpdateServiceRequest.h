@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be switch.
                      * @return ServiceId Unique ID of the service to be switch.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be switch.
-                     * @param ServiceId Unique ID of the service to be switch.
+                     * @param _serviceId Unique ID of the service to be switch.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
                      * @return EnvironmentName Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
-                     * @param EnvironmentName Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * @param _environmentName Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取Number of the version to be switched to.
                      * @return VersionName Number of the version to be switched to.
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Number of the version to be switched to.
-                     * @param VersionName Number of the version to be switched to.
+                     * @param _versionName Number of the version to be switched to.
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 
                     /**
                      * 获取Switch description.
                      * @return UpdateDesc Switch description.
+                     * 
                      */
                     std::string GetUpdateDesc() const;
 
                     /**
                      * 设置Switch description.
-                     * @param UpdateDesc Switch description.
+                     * @param _updateDesc Switch description.
+                     * 
                      */
                     void SetUpdateDesc(const std::string& _updateDesc);
 
                     /**
                      * 判断参数 UpdateDesc 是否已赋值
                      * @return UpdateDesc 是否已赋值
+                     * 
                      */
                     bool UpdateDescHasBeenSet() const;
 

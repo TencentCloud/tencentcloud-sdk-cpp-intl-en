@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-12345678”.
                      * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-12345678”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Version alias, such as v7.4.2.
                      * @return Alias Version alias, such as v7.4.2.
+                     * 
                      */
                     std::string GetAlias() const;
 
                     /**
                      * 设置Version alias, such as v7.4.2.
-                     * @param Alias Version alias, such as v7.4.2.
+                     * @param _alias Version alias, such as v7.4.2.
+                     * 
                      */
                     void SetAlias(const std::string& _alias);
 
                     /**
                      * 判断参数 Alias 是否已赋值
                      * @return Alias 是否已赋值
+                     * 
                      */
                     bool AliasHasBeenSet() const;
 

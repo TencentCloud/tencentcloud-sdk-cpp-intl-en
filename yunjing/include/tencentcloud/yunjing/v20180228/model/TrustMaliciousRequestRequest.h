@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Malicious request record ID.
                      * @return Id Malicious request record ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Malicious request record ID.
-                     * @param Id Malicious request record ID.
+                     * @param _id Malicious request record ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

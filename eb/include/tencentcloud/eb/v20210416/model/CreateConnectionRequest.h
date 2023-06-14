@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Connector description
                      * @return ConnectionDescription Connector description
+                     * 
                      */
                     ConnectionDescription GetConnectionDescription() const;
 
                     /**
                      * 设置Connector description
-                     * @param ConnectionDescription Connector description
+                     * @param _connectionDescription Connector description
+                     * 
                      */
                     void SetConnectionDescription(const ConnectionDescription& _connectionDescription);
 
                     /**
                      * 判断参数 ConnectionDescription 是否已赋值
                      * @return ConnectionDescription 是否已赋值
+                     * 
                      */
                     bool ConnectionDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Connector name
                      * @return ConnectionName Connector name
+                     * 
                      */
                     std::string GetConnectionName() const;
 
                     /**
                      * 设置Connector name
-                     * @param ConnectionName Connector name
+                     * @param _connectionName Connector name
+                     * 
                      */
                     void SetConnectionName(const std::string& _connectionName);
 
                     /**
                      * 判断参数 ConnectionName 是否已赋值
                      * @return ConnectionName 是否已赋值
+                     * 
                      */
                     bool ConnectionNameHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable
                      * @return Enable Whether to enable
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Whether to enable
-                     * @param Enable Whether to enable
+                     * @param _enable Whether to enable
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Type of the connector
                      * @return Type Type of the connector
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of the connector
-                     * @param Type Type of the connector
+                     * @param _type Type of the connector
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

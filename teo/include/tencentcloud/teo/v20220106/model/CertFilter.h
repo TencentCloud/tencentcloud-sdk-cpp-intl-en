@@ -57,6 +57,7 @@ namespace TencentCloud
  - `certId`: Certificate ID
  - `certAlias`: Certificate alias
  - `certType: default`: Default certificate; `upload`: External certificate; `managed`: Tencent Cloud certificate.
+                     * 
                      */
                     std::string GetName() const;
 
@@ -66,35 +67,40 @@ namespace TencentCloud
  - `certId`: Certificate ID
  - `certAlias`: Certificate alias
  - `certType: default`: Default certificate; `upload`: External certificate; `managed`: Tencent Cloud certificate.
-                     * @param Name Filters by the field name. Values:
+                     * @param _name Filters by the field name. Values:
  - `host`: Domain name
  - `certId`: Certificate ID
  - `certAlias`: Certificate alias
  - `certType: default`: Default certificate; `upload`: External certificate; `managed`: Tencent Cloud certificate.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Filters by the field value
                      * @return Values Filters by the field value
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Filters by the field value
-                     * @param Values Filters by the field value
+                     * @param _values Filters by the field value
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 
@@ -103,20 +109,23 @@ namespace TencentCloud
 If it is enabled, the length of `Value` must be 1.
                      * @return Fuzzy Specifies whether to enable fuzzy query, which only supports the `host` field.
 If it is enabled, the length of `Value` must be 1.
+                     * 
                      */
                     bool GetFuzzy() const;
 
                     /**
                      * 设置Specifies whether to enable fuzzy query, which only supports the `host` field.
 If it is enabled, the length of `Value` must be 1.
-                     * @param Fuzzy Specifies whether to enable fuzzy query, which only supports the `host` field.
+                     * @param _fuzzy Specifies whether to enable fuzzy query, which only supports the `host` field.
 If it is enabled, the length of `Value` must be 1.
+                     * 
                      */
                     void SetFuzzy(const bool& _fuzzy);
 
                     /**
                      * 判断参数 Fuzzy 是否已赋值
                      * @return Fuzzy 是否已赋值
+                     * 
                      */
                     bool FuzzyHasBeenSet() const;
 

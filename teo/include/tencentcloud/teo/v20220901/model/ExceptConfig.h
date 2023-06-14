@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable configuration. Values:
+                     * @param _switch Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ExceptUserRule> GetExceptUserRules() const;
 
                     /**
                      * 设置The settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
+                     * @param _exceptUserRules The settings of the exception rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExceptUserRules(const std::vector<ExceptUserRule>& _exceptUserRules);
 
                     /**
                      * 判断参数 ExceptUserRules 是否已赋值
                      * @return ExceptUserRules 是否已赋值
+                     * 
                      */
                     bool ExceptUserRulesHasBeenSet() const;
 

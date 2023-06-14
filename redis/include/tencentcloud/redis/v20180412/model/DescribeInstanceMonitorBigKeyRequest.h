@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Request type. 1: string type; 2: all types
                      * @return ReqType Request type. 1: string type; 2: all types
+                     * 
                      */
                     int64_t GetReqType() const;
 
                     /**
                      * 设置Request type. 1: string type; 2: all types
-                     * @param ReqType Request type. 1: string type; 2: all types
+                     * @param _reqType Request type. 1: string type; 2: all types
+                     * 
                      */
                     void SetReqType(const int64_t& _reqType);
 
                     /**
                      * 判断参数 ReqType 是否已赋值
                      * @return ReqType 是否已赋值
+                     * 
                      */
                     bool ReqTypeHasBeenSet() const;
 
                     /**
                      * 获取Time, such as "20190219"
                      * @return Date Time, such as "20190219"
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Time, such as "20190219"
-                     * @param Date Time, such as "20190219"
+                     * @param _date Time, such as "20190219"
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取Unique EIP ID, such as `eip-11112222`.
                      * @return AddressId Unique EIP ID, such as `eip-11112222`.
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置Unique EIP ID, such as `eip-11112222`.
-                     * @param AddressId Unique EIP ID, such as `eip-11112222`.
+                     * @param _addressId Unique EIP ID, such as `eip-11112222`.
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 
@@ -95,6 +101,7 @@ Default value: FALSE.
 You can specify this parameter only under the following conditions:
 You can specify this parameter only when you unbind an EIP from the primary private IP of the primary ENI.
 An account can reassign a general public IP after unbinding an EIP 10 times a day. More information can be obtained through the `DescribeAddressQuota` API.
+                     * 
                      */
                     bool GetReallocateNormalPublicIp() const;
 
@@ -107,7 +114,7 @@ Default value: FALSE.
 You can specify this parameter only under the following conditions:
 You can specify this parameter only when you unbind an EIP from the primary private IP of the primary ENI.
 An account can reassign a general public IP after unbinding an EIP 10 times a day. More information can be obtained through the `DescribeAddressQuota` API.
-                     * @param ReallocateNormalPublicIp Indicates whether to assign a general public IP after unbinding an EIP. Valid values:
+                     * @param _reallocateNormalPublicIp Indicates whether to assign a general public IP after unbinding an EIP. Valid values:
 TRUE: yes
 FALSE: no.
 Default value: FALSE.
@@ -115,12 +122,14 @@ Default value: FALSE.
 You can specify this parameter only under the following conditions:
 You can specify this parameter only when you unbind an EIP from the primary private IP of the primary ENI.
 An account can reassign a general public IP after unbinding an EIP 10 times a day. More information can be obtained through the `DescribeAddressQuota` API.
+                     * 
                      */
                     void SetReallocateNormalPublicIp(const bool& _reallocateNormalPublicIp);
 
                     /**
                      * 判断参数 ReallocateNormalPublicIp 是否已赋值
                      * @return ReallocateNormalPublicIp 是否已赋值
+                     * 
                      */
                     bool ReallocateNormalPublicIpHasBeenSet() const;
 

@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Whether it is an instance supported by DBbrain. It is fixed to `true`.
                      * @return IsSupported Whether it is an instance supported by DBbrain. It is fixed to `true`.
+                     * 
                      */
                     bool GetIsSupported() const;
 
                     /**
                      * 设置Whether it is an instance supported by DBbrain. It is fixed to `true`.
-                     * @param IsSupported Whether it is an instance supported by DBbrain. It is fixed to `true`.
+                     * @param _isSupported Whether it is an instance supported by DBbrain. It is fixed to `true`.
+                     * 
                      */
                     void SetIsSupported(const bool& _isSupported);
 
                     /**
                      * 判断参数 IsSupported 是否已赋值
                      * @return IsSupported 是否已赋值
+                     * 
                      */
                     bool IsSupportedHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
                      * @return Product Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
-                     * @param Product Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
+                     * @param _product Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter indicating the offset.
                      * @return Offset Pagination parameter indicating the offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination parameter indicating the offset.
-                     * @param Offset Pagination parameter indicating the offset.
+                     * @param _offset Pagination parameter indicating the offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter. Maximum value: 100.
                      * @return Limit Pagination parameter. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination parameter. Maximum value: 100.
-                     * @param Limit Pagination parameter. Maximum value: 100.
+                     * @param _limit Pagination parameter. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query by instance name.
                      * @return InstanceNames Query by instance name.
+                     * 
                      */
                     std::vector<std::string> GetInstanceNames() const;
 
                     /**
                      * 设置Query by instance name.
-                     * @param InstanceNames Query by instance name.
+                     * @param _instanceNames Query by instance name.
+                     * 
                      */
                     void SetInstanceNames(const std::vector<std::string>& _instanceNames);
 
                     /**
                      * 判断参数 InstanceNames 是否已赋值
                      * @return InstanceNames 是否已赋值
+                     * 
                      */
                     bool InstanceNamesHasBeenSet() const;
 
                     /**
                      * 获取Query by instance ID.
                      * @return InstanceIds Query by instance ID.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Query by instance ID.
-                     * @param InstanceIds Query by instance ID.
+                     * @param _instanceIds Query by instance ID.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Query by region.
                      * @return Regions Query by region.
+                     * 
                      */
                     std::vector<std::string> GetRegions() const;
 
                     /**
                      * 设置Query by region.
-                     * @param Regions Query by region.
+                     * @param _regions Query by region.
+                     * 
                      */
                     void SetRegions(const std::vector<std::string>& _regions);
 
                     /**
                      * 判断参数 Regions 是否已赋值
                      * @return Regions 是否已赋值
+                     * 
                      */
                     bool RegionsHasBeenSet() const;
 

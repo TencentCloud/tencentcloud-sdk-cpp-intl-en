@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
                      * @return CommId The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetCommId() const;
 
                     /**
                      * 设置The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
-                     * @param CommId The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
+                     * @param _commId The unique ID of a call, whose format is `SdkAppId_CreateTime`, such as `1400xxxxxx_218695_1590065777`. `createTime` is the UNIX timestamp (seconds) when the room was created. Its value can be obtained using the [DescribeRoomInfo](https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetCommId(const std::string& _commId);
 
                     /**
                      * 判断参数 CommId 是否已赋值
                      * @return CommId 是否已赋值
+                     * 
                      */
                     bool CommIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 Note: Only data in the last 14 days can be queried.
                      * @return StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
-                     * @param StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
+                     * @param _startTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -87,74 +93,86 @@ Note: Only data in the last 14 days can be queried.
 Note: If you pass in an end time later than the room end time, the room end time will be used.
                      * @return EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: If you pass in an end time later than the room end time, the room end time will be used.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: If you pass in an end time later than the room end time, the room end time will be used.
-                     * @param EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
+                     * @param _endTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`.
 Note: If you pass in an end time later than the room end time, the room end time will be used.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The user ID.
                      * @return UserId The user ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user ID.
-                     * @param UserId The user ID.
+                     * @param _userId The user ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取The room ID, such as `223`.
                      * @return RoomId The room ID, such as `223`.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置The room ID, such as `223`.
-                     * @param RoomId The room ID, such as `223`.
+                     * @param _roomId The room ID, such as `223`.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The application ID, such as `1400xxxxxx`.
                      * @return SdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID, such as `1400xxxxxx`.
-                     * @param SdkAppId The application ID, such as `1400xxxxxx`.
+                     * @param _sdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 

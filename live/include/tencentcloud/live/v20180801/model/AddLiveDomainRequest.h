@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Domain name.
                      * @return DomainName Domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name.
-                     * @param DomainName Domain name.
+                     * @param _domainName Domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return DomainType Domain name type.
 0: push domain name.
 1: playback domain name.
+                     * 
                      */
                     uint64_t GetDomainType() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置Domain name type.
 0: push domain name.
 1: playback domain name.
-                     * @param DomainType Domain name type.
+                     * @param _domainType Domain name type.
 0: push domain name.
 1: playback domain name.
+                     * 
                      */
                     void SetDomainType(const uint64_t& _domainType);
 
                     /**
                      * 判断参数 DomainType 是否已赋值
                      * @return DomainType 是否已赋值
+                     * 
                      */
                     bool DomainTypeHasBeenSet() const;
 
@@ -97,6 +103,7 @@ Default value: 1.
 2: global.
 3: outside Mainland China.
 Default value: 1.
+                     * 
                      */
                     uint64_t GetPlayType() const;
 
@@ -106,17 +113,19 @@ Default value: 1.
 2: global.
 3: outside Mainland China.
 Default value: 1.
-                     * @param PlayType Pull domain name type:
+                     * @param _playType Pull domain name type:
 1: Mainland China.
 2: global.
 3: outside Mainland China.
 Default value: 1.
+                     * 
                      */
                     void SetPlayType(const uint64_t& _playType);
 
                     /**
                      * 判断参数 PlayType 是否已赋值
                      * @return PlayType 是否已赋值
+                     * 
                      */
                     bool PlayTypeHasBeenSet() const;
 
@@ -129,6 +138,7 @@ Default value: 0.
 0: LVB,
 1: LCB.
 Default value: 0.
+                     * 
                      */
                     int64_t GetIsDelayLive() const;
 
@@ -137,16 +147,18 @@ Default value: 0.
 0: LVB,
 1: LCB.
 Default value: 0.
-                     * @param IsDelayLive Whether it is LCB:
+                     * @param _isDelayLive Whether it is LCB:
 0: LVB,
 1: LCB.
 Default value: 0.
+                     * 
                      */
                     void SetIsDelayLive(const int64_t& _isDelayLive);
 
                     /**
                      * 判断参数 IsDelayLive 是否已赋值
                      * @return IsDelayLive 是否已赋值
+                     * 
                      */
                     bool IsDelayLiveHasBeenSet() const;
 
@@ -159,6 +171,7 @@ Default value: 0.
 0: LVB.
 1: LVB on Mini Program.
 Default value: 0.
+                     * 
                      */
                     int64_t GetIsMiniProgramLive() const;
 
@@ -167,16 +180,18 @@ Default value: 0.
 0: LVB.
 1: LVB on Mini Program.
 Default value: 0.
-                     * @param IsMiniProgramLive Whether it is LVB on Mini Program.
+                     * @param _isMiniProgramLive Whether it is LVB on Mini Program.
 0: LVB.
 1: LVB on Mini Program.
 Default value: 0.
+                     * 
                      */
                     void SetIsMiniProgramLive(const int64_t& _isMiniProgramLive);
 
                     /**
                      * 判断参数 IsMiniProgramLive 是否已赋值
                      * @return IsMiniProgramLive 是否已赋值
+                     * 
                      */
                     bool IsMiniProgramLiveHasBeenSet() const;
 
@@ -193,6 +208,7 @@ dnsCheck: Check immediately whether the verification DNS record has been added s
 fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
 dbCheck: Check whether the domain has already been verified.
 If you do not pass a value, `dbCheck` will be used.
+                     * 
                      */
                     std::string GetVerifyOwnerType() const;
 
@@ -203,18 +219,20 @@ dnsCheck: Check immediately whether the verification DNS record has been added s
 fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
 dbCheck: Check whether the domain has already been verified.
 If you do not pass a value, `dbCheck` will be used.
-                     * @param VerifyOwnerType The domain verification type.
+                     * @param _verifyOwnerType The domain verification type.
 Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
 dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
 fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
 dbCheck: Check whether the domain has already been verified.
 If you do not pass a value, `dbCheck` will be used.
+                     * 
                      */
                     void SetVerifyOwnerType(const std::string& _verifyOwnerType);
 
                     /**
                      * 判断参数 VerifyOwnerType 是否已赋值
                      * @return VerifyOwnerType 是否已赋值
+                     * 
                      */
                     bool VerifyOwnerTypeHasBeenSet() const;
 

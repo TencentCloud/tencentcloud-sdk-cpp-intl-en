@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The NAT gateway ID.
                      * @return NatGatewayId The NAT gateway ID.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The NAT gateway ID.
-                     * @param NatGatewayId The NAT gateway ID.
+                     * @param _natGatewayId The NAT gateway ID.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
                      * @return MaxConcurrentConnection Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
+                     * 
                      */
                     uint64_t GetMaxConcurrentConnection() const;
 
                     /**
                      * 设置Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
-                     * @param MaxConcurrentConnection Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
+                     * @param _maxConcurrentConnection Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
+                     * 
                      */
                     void SetMaxConcurrentConnection(const uint64_t& _maxConcurrentConnection);
 
                     /**
                      * 判断参数 MaxConcurrentConnection 是否已赋值
                      * @return MaxConcurrentConnection 是否已赋值
+                     * 
                      */
                     bool MaxConcurrentConnectionHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Switch Whether to enable this feature
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable this feature
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Whether to enable this feature
+                     * @param _switch Whether to enable this feature
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Action Action. Values: `monitor` (observe), `alg` (JS/Managed challenge)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action. Values: `monitor` (observe), `alg` (JS/Managed challenge)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Action Action. Values: `monitor` (observe), `alg` (JS/Managed challenge)
+                     * @param _action Action. Values: `monitor` (observe), `alg` (JS/Managed challenge)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 

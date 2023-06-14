@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取IP address
                      * @return Ip IP address
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address
-                     * @param Ip IP address
+                     * @param _ip IP address
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取IP mask. For a 32-bit IP address, enter `0`.
                      * @return Mask IP mask. For a 32-bit IP address, enter `0`.
+                     * 
                      */
                     uint64_t GetMask() const;
 
                     /**
                      * 设置IP mask. For a 32-bit IP address, enter `0`.
-                     * @param Mask IP mask. For a 32-bit IP address, enter `0`.
+                     * @param _mask IP mask. For a 32-bit IP address, enter `0`.
+                     * 
                      */
                     void SetMask(const uint64_t& _mask);
 
                     /**
                      * 判断参数 Mask 是否已赋值
                      * @return Mask 是否已赋值
+                     * 
                      */
                     bool MaskHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of virtual node pool IDs
                      * @return NodePoolIds List of virtual node pool IDs
+                     * 
                      */
                     std::vector<std::string> GetNodePoolIds() const;
 
                     /**
                      * 设置List of virtual node pool IDs
-                     * @param NodePoolIds List of virtual node pool IDs
+                     * @param _nodePoolIds List of virtual node pool IDs
+                     * 
                      */
                     void SetNodePoolIds(const std::vector<std::string>& _nodePoolIds);
 
                     /**
                      * 判断参数 NodePoolIds 是否已赋值
                      * @return NodePoolIds 是否已赋值
+                     * 
                      */
                     bool NodePoolIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
                      * @return Force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+                     * 
                      */
                     bool GetForce() const;
 
                     /**
                      * 设置Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
-                     * @param Force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+                     * @param _force Whether to forcibly delete the nodes with pods. Values: `true`, `false`.
+                     * 
                      */
                     void SetForce(const bool& _force);
 
                     /**
                      * 判断参数 Force 是否已赋值
                      * @return Force 是否已赋值
+                     * 
                      */
                     bool ForceHasBeenSet() const;
 

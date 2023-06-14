@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time in the format of "%Y-%m-%d %H:%M:%S".
                      * @return StartTime Start time in the format of "%Y-%m-%d %H:%M:%S".
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time in the format of "%Y-%m-%d %H:%M:%S".
-                     * @param StartTime Start time in the format of "%Y-%m-%d %H:%M:%S".
+                     * @param _startTime Start time in the format of "%Y-%m-%d %H:%M:%S".
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time in the format of "%Y-%m-%d %H:%M:%S". Data in the last 3 months can be queried, and the query period is up to 1 month.
                      * @return EndTime End time in the format of "%Y-%m-%d %H:%M:%S". Data in the last 3 months can be queried, and the query period is up to 1 month.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in the format of "%Y-%m-%d %H:%M:%S". Data in the last 3 months can be queried, and the query period is up to 1 month.
-                     * @param EndTime End time in the format of "%Y-%m-%d %H:%M:%S". Data in the last 3 months can be queried, and the query period is up to 1 month.
+                     * @param _endTime End time in the format of "%Y-%m-%d %H:%M:%S". Data in the last 3 months can be queried, and the query period is up to 1 month.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

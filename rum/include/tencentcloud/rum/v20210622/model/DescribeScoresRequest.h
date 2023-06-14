@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ID Project ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ID Project ID
+                     * @param _iD Project ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取This parameter has been disused.
                      * @return IsDemo This parameter has been disused.
+                     * 
                      */
                     int64_t GetIsDemo() const;
 
                     /**
                      * 设置This parameter has been disused.
-                     * @param IsDemo This parameter has been disused.
+                     * @param _isDemo This parameter has been disused.
+                     * 
                      */
                     void SetIsDemo(const int64_t& _isDemo);
 
                     /**
                      * 判断参数 IsDemo 是否已赋值
                      * @return IsDemo 是否已赋值
+                     * 
                      */
                     bool IsDemoHasBeenSet() const;
 

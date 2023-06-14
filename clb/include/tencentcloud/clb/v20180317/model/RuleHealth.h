@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding rule ID
                      * @return LocationId Forwarding rule ID
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置Forwarding rule ID
-                     * @param LocationId Forwarding rule ID
+                     * @param _locationId Forwarding rule ID
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain name of the forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name of the forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Domain name of the forwarding rule
+                     * @param _domain Domain name of the forwarding rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Url Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Url Forwarding rule Url
+                     * @param _url Forwarding rule Url
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -114,20 +123,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Targets Health status of the real server bound to this rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TargetHealth> GetTargets() const;
 
                     /**
                      * 设置Health status of the real server bound to this rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Targets Health status of the real server bound to this rule
+                     * @param _targets Health status of the real server bound to this rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargets(const std::vector<TargetHealth>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 

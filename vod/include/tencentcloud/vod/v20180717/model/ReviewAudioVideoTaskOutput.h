@@ -57,6 +57,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -65,16 +66,18 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion The handling suggestion. Valid values:
+                     * @param _suggestion The handling suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -85,6 +88,7 @@ namespace TencentCloud
                      * @return Label The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
 <li>Porn</li>
 <li>Terrorism</li>
+                     * 
                      */
                     std::string GetLabel() const;
 
@@ -92,15 +96,17 @@ namespace TencentCloud
                      * 设置The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
 <li>Porn</li>
 <li>Terrorism</li>
-                     * @param Label The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+                     * @param _label The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
 <li>Porn</li>
 <li>Terrorism</li>
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -115,6 +121,7 @@ namespace TencentCloud
 <li>OCR</li>
 <li>ASR</li>
 <li>Voice</li>
+                     * 
                      */
                     std::string GetForm() const;
 
@@ -124,17 +131,19 @@ namespace TencentCloud
 <li>OCR</li>
 <li>ASR</li>
 <li>Voice</li>
-                     * @param Form The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+                     * @param _form The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
 <li>Image</li>
 <li>OCR</li>
 <li>ASR</li>
 <li>Voice</li>
+                     * 
                      */
                     void SetForm(const std::string& _form);
 
                     /**
                      * 判断参数 Form 是否已赋值
                      * @return Form 是否已赋值
+                     * 
                      */
                     bool FormHasBeenSet() const;
 
@@ -143,56 +152,65 @@ namespace TencentCloud
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
                      * @return SegmentSet A list of the suspicious segments detected.
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+                     * 
                      */
                     std::vector<ReviewAudioVideoSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置A list of the suspicious segments detected.
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
-                     * @param SegmentSet A list of the suspicious segments detected.
+                     * @param _segmentSet A list of the suspicious segments detected.
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<ReviewAudioVideoSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 
                     /**
                      * 获取The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
                      * @return SegmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+                     * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
                      * 设置The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
-                     * @param SegmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+                     * @param _segmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+                     * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
 
                     /**
                      * 判断参数 SegmentSetFileUrl 是否已赋值
                      * @return SegmentSetFileUrl 是否已赋值
+                     * 
                      */
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
                      * 获取The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
                      * @return SegmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+                     * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
                      * 设置The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
-                     * @param SegmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+                     * @param _segmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+                     * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
 
                     /**
                      * 判断参数 SegmentSetFileUrlExpireTime 是否已赋值
                      * @return SegmentSetFileUrlExpireTime 是否已赋值
+                     * 
                      */
                     bool SegmentSetFileUrlExpireTimeHasBeenSet() const;
 
@@ -201,20 +219,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CoverReviewResult The thumbnail moderation result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReviewImageResult GetCoverReviewResult() const;
 
                     /**
                      * 设置The thumbnail moderation result.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CoverReviewResult The thumbnail moderation result.
+                     * @param _coverReviewResult The thumbnail moderation result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoverReviewResult(const ReviewImageResult& _coverReviewResult);
 
                     /**
                      * 判断参数 CoverReviewResult 是否已赋值
                      * @return CoverReviewResult 是否已赋值
+                     * 
                      */
                     bool CoverReviewResultHasBeenSet() const;
 

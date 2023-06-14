@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the associated instance.
                      * @return InstanceId The ID of the associated instance.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The ID of the associated instance.
-                     * @param InstanceId The ID of the associated instance.
+                     * @param _instanceId The ID of the associated instance.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The region to which the associated instance ID belongs, such as `ap-guangzhou`.
                      * @return InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+                     * 
                      */
                     std::string GetInstanceRegion() const;
 
                     /**
                      * 设置The region to which the associated instance ID belongs, such as `ap-guangzhou`.
-                     * @param InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+                     * @param _instanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+                     * 
                      */
                     void SetInstanceRegion(const std::string& _instanceRegion);
 
                     /**
                      * 判断参数 InstanceRegion 是否已赋值
                      * @return InstanceRegion 是否已赋值
+                     * 
                      */
                     bool InstanceRegionHasBeenSet() const;
 
@@ -91,6 +97,7 @@ namespace TencentCloud
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+                     * 
                      */
                     std::string GetInstanceType() const;
 
@@ -99,34 +106,39 @@ namespace TencentCloud
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
-                     * @param InstanceType The type of the associated instance. Available values are:
+                     * @param _instanceType The type of the associated instance. Available values are:
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -135,20 +147,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RouteTableId The ID of the route table associated with the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置The ID of the route table associated with the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RouteTableId The ID of the route table associated with the instance
+                     * @param _routeTableId The ID of the route table associated with the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 

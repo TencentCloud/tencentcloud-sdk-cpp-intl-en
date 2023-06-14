@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取ID of the current batch of submitted tasks
                      * @return BatchId ID of the current batch of submitted tasks
+                     * 
                      */
                     std::string GetBatchId() const;
 
                     /**
                      * 判断参数 BatchId 是否已赋值
                      * @return BatchId 是否已赋值
+                     * 
                      */
                     bool BatchIdHasBeenSet() const;
 
                     /**
                      * 获取Collection of task IDs arranged in order of execution
                      * @return TaskIdSet Collection of task IDs arranged in order of execution
+                     * 
                      */
                     std::vector<std::string> GetTaskIdSet() const;
 
                     /**
                      * 判断参数 TaskIdSet 是否已赋值
                      * @return TaskIdSet 是否已赋值
+                     * 
                      */
                     bool TaskIdSetHasBeenSet() const;
 

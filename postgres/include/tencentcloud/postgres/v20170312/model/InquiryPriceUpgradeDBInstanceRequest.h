@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance disk size in GB
                      * @return Storage Instance disk size in GB
+                     * 
                      */
                     int64_t GetStorage() const;
 
                     /**
                      * 设置Instance disk size in GB
-                     * @param Storage Instance disk size in GB
+                     * @param _storage Instance disk size in GB
+                     * 
                      */
                     void SetStorage(const int64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Instance memory size in GB
                      * @return Memory Instance memory size in GB
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Instance memory size in GB
-                     * @param Memory Instance memory size in GB
+                     * @param _memory Instance memory size in GB
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Instance ID in the format of postgres-hez4fh0v
                      * @return DBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-hez4fh0v
-                     * @param DBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * @param _dBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
                      * @return InstanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
-                     * @param InstanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+                     * @param _instanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 

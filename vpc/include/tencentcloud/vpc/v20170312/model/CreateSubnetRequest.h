@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
                      * @return VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @param VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * @param _vpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The subnet name. The maximum length is 60 bytes.
                      * @return SubnetName The subnet name. The maximum length is 60 bytes.
+                     * 
                      */
                     std::string GetSubnetName() const;
 
                     /**
                      * 设置The subnet name. The maximum length is 60 bytes.
-                     * @param SubnetName The subnet name. The maximum length is 60 bytes.
+                     * @param _subnetName The subnet name. The maximum length is 60 bytes.
+                     * 
                      */
                     void SetSubnetName(const std::string& _subnetName);
 
                     /**
                      * 判断参数 SubnetName 是否已赋值
                      * @return SubnetName 是否已赋值
+                     * 
                      */
                     bool SubnetNameHasBeenSet() const;
 
                     /**
                      * 获取The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
                      * @return CidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
-                     * @param CidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+                     * @param _cidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
                      * @return Zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
-                     * @param Zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
+                     * @param _zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取CDC instance ID
                      * @return CdcId CDC instance ID
+                     * 
                      */
                     std::string GetCdcId() const;
 
                     /**
                      * 设置CDC instance ID
-                     * @param CdcId CDC instance ID
+                     * @param _cdcId CDC instance ID
+                     * 
                      */
                     void SetCdcId(const std::string& _cdcId);
 
                     /**
                      * 判断参数 CdcId 是否已赋值
                      * @return CdcId 是否已赋值
+                     * 
                      */
                     bool CdcIdHasBeenSet() const;
 

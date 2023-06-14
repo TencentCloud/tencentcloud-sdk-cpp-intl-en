@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Time, such as "20190219"
                      * @return Date Time, such as "20190219"
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Time, such as "20190219"
-                     * @param Date Time, such as "20190219"
+                     * @param _date Time, such as "20190219"
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
                     /**
                      * 获取Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
                      * @return SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+                     * 
                      */
                     int64_t GetSpanType() const;
 
                     /**
                      * 设置Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
-                     * @param SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+                     * @param _spanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+                     * 
                      */
                     void SetSpanType(const int64_t& _spanType);
 
                     /**
                      * 判断参数 SpanType 是否已赋值
                      * @return SpanType 是否已赋值
+                     * 
                      */
                     bool SpanTypeHasBeenSet() const;
 

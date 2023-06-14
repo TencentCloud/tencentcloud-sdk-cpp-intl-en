@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Disk usage growth in MB.
                      * @return Growth Disk usage growth in MB.
+                     * 
                      */
                     int64_t GetGrowth() const;
 
                     /**
                      * 判断参数 Growth 是否已赋值
                      * @return Growth 是否已赋值
+                     * 
                      */
                     bool GrowthHasBeenSet() const;
 
                     /**
                      * 获取Available disk space in MB.
                      * @return Remain Available disk space in MB.
+                     * 
                      */
                     int64_t GetRemain() const;
 
                     /**
                      * 判断参数 Remain 是否已赋值
                      * @return Remain 是否已赋值
+                     * 
                      */
                     bool RemainHasBeenSet() const;
 
                     /**
                      * 获取Total disk space in MB.
                      * @return Total Total disk space in MB.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Estimated number of available days.
                      * @return AvailableDays Estimated number of available days.
+                     * 
                      */
                     int64_t GetAvailableDays() const;
 
                     /**
                      * 判断参数 AvailableDays 是否已赋值
                      * @return AvailableDays 是否已赋值
+                     * 
                      */
                     bool AvailableDaysHasBeenSet() const;
 

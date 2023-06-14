@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Room ID
                      * @return RoomId Room ID
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置Room ID
-                     * @param RoomId Room ID
+                     * @param _roomId Room ID
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Current page in pagination, which starts from 1.
                      * @return Page Current page in pagination, which starts from 1.
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Current page in pagination, which starts from 1.
-                     * @param Page Current page in pagination, which starts from 1.
+                     * @param _page Current page in pagination, which starts from 1.
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of data entries to return per page. Maximum value: 1000
                      * @return Limit Number of data entries to return per page. Maximum value: 1000
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of data entries to return per page. Maximum value: 1000
-                     * @param Limit Number of data entries to return per page. Maximum value: 1000
+                     * @param _limit Number of data entries to return per page. Maximum value: 1000
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

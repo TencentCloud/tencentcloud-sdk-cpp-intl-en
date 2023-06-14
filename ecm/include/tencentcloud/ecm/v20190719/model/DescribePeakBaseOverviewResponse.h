@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PeakFamilyInfoSet List of basic peaks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PeakFamilyInfo> GetPeakFamilyInfoSet() const;
 
                     /**
                      * 判断参数 PeakFamilyInfoSet 是否已赋值
                      * @return PeakFamilyInfoSet 是否已赋值
+                     * 
                      */
                     bool PeakFamilyInfoSetHasBeenSet() const;
 

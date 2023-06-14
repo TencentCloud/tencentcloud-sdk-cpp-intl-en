@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique IDs of media files
                      * @return FileIds The unique IDs of media files
+                     * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
                      * 设置The unique IDs of media files
-                     * @param FileIds The unique IDs of media files
+                     * @param _fileIds The unique IDs of media files
+                     * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
 
                     /**
                      * 判断参数 FileIds 是否已赋值
                      * @return FileIds 是否已赋值
+                     * 
                      */
                     bool FileIdsHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+                     * 
                      */
                     std::string GetStorageClass() const;
 
@@ -80,35 +84,40 @@ namespace TencentCloud
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
-                     * @param StorageClass The target storage class. Valid values:
+                     * @param _storageClass The target storage class. Valid values:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+                     * 
                      */
                     void SetStorageClass(const std::string& _storageClass);
 
                     /**
                      * 判断参数 StorageClass 是否已赋值
                      * @return StorageClass 是否已赋值
+                     * 
                      */
                     bool StorageClassHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
@@ -129,6 +138,7 @@ If the current storage class is ARCHIVE, the valid values for this parameter are
 If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
 <li>Standard</li>
 <li>Bulk</li>
+                     * 
                      */
                     std::string GetRestoreTier() const;
 
@@ -141,7 +151,7 @@ If the current storage class is ARCHIVE, the valid values for this parameter are
 If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
 <li>Standard</li>
 <li>Bulk</li>
-                     * @param RestoreTier The retrieval mode. When switching files from DEEP ARCHIVE or ARCHIVE to STANDARD, you need to specify the retrieval mode. For details, see [Data retrieval and retrieval mode](https://intl.cloud.tencent.com/document/product/266/43051#data-retrieval-and-retrieval-mode.3Ca-id.3D.22retake.22.3E.3C.2Fa.3E).
+                     * @param _restoreTier The retrieval mode. When switching files from DEEP ARCHIVE or ARCHIVE to STANDARD, you need to specify the retrieval mode. For details, see [Data retrieval and retrieval mode](https://intl.cloud.tencent.com/document/product/266/43051#data-retrieval-and-retrieval-mode.3Ca-id.3D.22retake.22.3E.3C.2Fa.3E).
 If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
 <li>Expedited</li>
 <li>Standard</li>
@@ -149,12 +159,14 @@ If the current storage class is ARCHIVE, the valid values for this parameter are
 If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
 <li>Standard</li>
 <li>Bulk</li>
+                     * 
                      */
                     void SetRestoreTier(const std::string& _restoreTier);
 
                     /**
                      * 判断参数 RestoreTier 是否已赋值
                      * @return RestoreTier 是否已赋值
+                     * 
                      */
                     bool RestoreTierHasBeenSet() const;
 

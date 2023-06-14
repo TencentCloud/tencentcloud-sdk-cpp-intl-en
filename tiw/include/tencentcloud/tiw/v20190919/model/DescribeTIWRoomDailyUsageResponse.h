@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Usage of the specified product per room during the specified query period.
                      * @return Usages Usage of the specified product per room during the specified query period.
+                     * 
                      */
                     std::vector<RoomUsageDataItem> GetUsages() const;
 
                     /**
                      * 判断参数 Usages 是否已赋值
                      * @return Usages 是否已赋值
+                     * 
                      */
                     bool UsagesHasBeenSet() const;
 
                     /**
                      * 获取Number of usage data entries.
                      * @return Total Number of usage data entries.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

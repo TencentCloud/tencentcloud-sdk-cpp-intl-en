@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Historical search records, the latest ten of which are retained.
                      * @return Data Historical search records, the latest ten of which are retained.
+                     * 
                      */
                     std::vector<std::string> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

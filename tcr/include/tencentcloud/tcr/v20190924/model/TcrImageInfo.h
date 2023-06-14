@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Hash value
                      * @return Digest Hash value
+                     * 
                      */
                     std::string GetDigest() const;
 
                     /**
                      * 设置Hash value
-                     * @param Digest Hash value
+                     * @param _digest Hash value
+                     * 
                      */
                     void SetDigest(const std::string& _digest);
 
                     /**
                      * 判断参数 Digest 是否已赋值
                      * @return Digest 是否已赋值
+                     * 
                      */
                     bool DigestHasBeenSet() const;
 
                     /**
                      * 获取Image size in bytes
                      * @return Size Image size in bytes
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Image size in bytes
-                     * @param Size Image size in bytes
+                     * @param _size Image size in bytes
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
                     /**
                      * 获取Tag name
                      * @return ImageVersion Tag name
+                     * 
                      */
                     std::string GetImageVersion() const;
 
                     /**
                      * 设置Tag name
-                     * @param ImageVersion Tag name
+                     * @param _imageVersion Tag name
+                     * 
                      */
                     void SetImageVersion(const std::string& _imageVersion);
 
                     /**
                      * 判断参数 ImageVersion 是否已赋值
                      * @return ImageVersion 是否已赋值
+                     * 
                      */
                     bool ImageVersionHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Kind Artifact type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKind() const;
 
                     /**
                      * 设置Artifact type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Kind Artifact type
+                     * @param _kind Artifact type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKind(const std::string& _kind);
 
                     /**
                      * 判断参数 Kind 是否已赋值
                      * @return Kind 是否已赋值
+                     * 
                      */
                     bool KindHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return KmsSignature KMS signature information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKmsSignature() const;
 
                     /**
                      * 设置KMS signature information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param KmsSignature KMS signature information
+                     * @param _kmsSignature KMS signature information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKmsSignature(const std::string& _kmsSignature);
 
                     /**
                      * 判断参数 KmsSignature 是否已赋值
                      * @return KmsSignature 是否已赋值
+                     * 
                      */
                     bool KmsSignatureHasBeenSet() const;
 

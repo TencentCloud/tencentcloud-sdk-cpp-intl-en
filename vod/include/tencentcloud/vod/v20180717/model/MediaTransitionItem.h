@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
                      * @return Duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
+                     * 
                      */
                     double GetDuration() const;
 
                     /**
                      * 设置Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
-                     * @param Duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
+                     * @param _duration Transition duration in seconds. For two media segments that use a transition, the start time of the second segment on the track will be automatically set to the end time of the first segment minus the transition duration.
+                     * 
                      */
                     void SetDuration(const double& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TransitionOpertion> GetTransitions() const;
 
                     /**
                      * 设置List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Transitions List of transition operations. Up to one video image or audio transition operation is supported.
+                     * @param _transitions List of transition operations. Up to one video image or audio transition operation is supported.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransitions(const std::vector<TransitionOpertion>& _transitions);
 
                     /**
                      * 判断参数 Transitions 是否已赋值
                      * @return Transitions 是否已赋值
+                     * 
                      */
                     bool TransitionsHasBeenSet() const;
 

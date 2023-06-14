@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The template ID.
                      * @return Definition The template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

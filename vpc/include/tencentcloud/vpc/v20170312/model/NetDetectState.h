@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of a network detection instance, such as netd-12345678.
                      * @return NetDetectId The ID of a network detection instance, such as netd-12345678.
+                     * 
                      */
                     std::string GetNetDetectId() const;
 
                     /**
                      * 设置The ID of a network detection instance, such as netd-12345678.
-                     * @param NetDetectId The ID of a network detection instance, such as netd-12345678.
+                     * @param _netDetectId The ID of a network detection instance, such as netd-12345678.
+                     * 
                      */
                     void SetNetDetectId(const std::string& _netDetectId);
 
                     /**
                      * 判断参数 NetDetectId 是否已赋值
                      * @return NetDetectId 是否已赋值
+                     * 
                      */
                     bool NetDetectIdHasBeenSet() const;
 
                     /**
                      * 获取The array of network detection destination IP verification results.
                      * @return NetDetectIpStateSet The array of network detection destination IP verification results.
+                     * 
                      */
                     std::vector<NetDetectIpState> GetNetDetectIpStateSet() const;
 
                     /**
                      * 设置The array of network detection destination IP verification results.
-                     * @param NetDetectIpStateSet The array of network detection destination IP verification results.
+                     * @param _netDetectIpStateSet The array of network detection destination IP verification results.
+                     * 
                      */
                     void SetNetDetectIpStateSet(const std::vector<NetDetectIpState>& _netDetectIpStateSet);
 
                     /**
                      * 判断参数 NetDetectIpStateSet 是否已赋值
                      * @return NetDetectIpStateSet 是否已赋值
+                     * 
                      */
                     bool NetDetectIpStateSetHasBeenSet() const;
 

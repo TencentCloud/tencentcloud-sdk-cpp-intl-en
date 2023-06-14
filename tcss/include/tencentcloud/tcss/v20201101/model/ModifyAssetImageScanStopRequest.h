@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return TaskID Task ID
+                     * 
                      */
                     std::string GetTaskID() const;
 
                     /**
                      * 设置Task ID
-                     * @param TaskID Task ID
+                     * @param _taskID Task ID
+                     * 
                      */
                     void SetTaskID(const std::string& _taskID);
 
                     /**
                      * 判断参数 TaskID 是否已赋值
                      * @return TaskID 是否已赋值
+                     * 
                      */
                     bool TaskIDHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return Images Image ID
+                     * 
                      */
                     std::vector<std::string> GetImages() const;
 
                     /**
                      * 设置Image ID
-                     * @param Images Image ID
+                     * @param _images Image ID
+                     * 
                      */
                     void SetImages(const std::vector<std::string>& _images);
 
                     /**
                      * 判断参数 Images 是否已赋值
                      * @return Images 是否已赋值
+                     * 
                      */
                     bool ImagesHasBeenSet() const;
 
                     /**
                      * 获取Filter
                      * @return Filters Filter
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
                      * 设置Filter
-                     * @param Filters Filter
+                     * @param _filters Filter
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Specified image IDs to be excluded
                      * @return ExcludeImageIds Specified image IDs to be excluded
+                     * 
                      */
                     std::string GetExcludeImageIds() const;
 
                     /**
                      * 设置Specified image IDs to be excluded
-                     * @param ExcludeImageIds Specified image IDs to be excluded
+                     * @param _excludeImageIds Specified image IDs to be excluded
+                     * 
                      */
                     void SetExcludeImageIds(const std::string& _excludeImageIds);
 
                     /**
                      * 判断参数 ExcludeImageIds 是否已赋值
                      * @return ExcludeImageIds 是否已赋值
+                     * 
                      */
                     bool ExcludeImageIdsHasBeenSet() const;
 

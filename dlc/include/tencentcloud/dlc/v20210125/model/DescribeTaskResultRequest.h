@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique task ID
                      * @return TaskId Unique task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Unique task ID
-                     * @param TaskId Unique task ID
+                     * @param _taskId Unique task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
                      * @return NextToken The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
+                     * 
                      */
                     std::string GetNextToken() const;
 
                     /**
                      * 设置The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
-                     * @param NextToken The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
+                     * @param _nextToken The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
+                     * 
                      */
                     void SetNextToken(const std::string& _nextToken);
 
                     /**
                      * 判断参数 NextToken 是否已赋值
                      * @return NextToken 是否已赋值
+                     * 
                      */
                     bool NextTokenHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
                      * @return MaxResults Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
+                     * 
                      */
                     int64_t GetMaxResults() const;
 
                     /**
                      * 设置Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
-                     * @param MaxResults Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
+                     * @param _maxResults Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
+                     * 
                      */
                     void SetMaxResults(const int64_t& _maxResults);
 
                     /**
                      * 判断参数 MaxResults 是否已赋值
                      * @return MaxResults 是否已赋值
+                     * 
                      */
                     bool MaxResultsHasBeenSet() const;
 

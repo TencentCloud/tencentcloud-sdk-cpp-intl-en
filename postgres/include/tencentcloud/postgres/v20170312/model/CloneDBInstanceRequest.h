@@ -47,324 +47,378 @@ namespace TencentCloud
                     /**
                      * 获取ID of the original instance to be cloned.
                      * @return DBInstanceId ID of the original instance to be cloned.
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置ID of the original instance to be cloned.
-                     * @param DBInstanceId ID of the original instance to be cloned.
+                     * @param _dBInstanceId ID of the original instance to be cloned.
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
                      * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
                      * 设置Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-                     * @param SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * @param _specCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
+                     * 
                      */
                     void SetSpecCode(const std::string& _specCode);
 
                     /**
                      * 判断参数 SpecCode 是否已赋值
                      * @return SpecCode 是否已赋值
+                     * 
                      */
                     bool SpecCodeHasBeenSet() const;
 
                     /**
                      * 获取Instance storage capacity in GB.
                      * @return Storage Instance storage capacity in GB.
+                     * 
                      */
                     int64_t GetStorage() const;
 
                     /**
                      * 设置Instance storage capacity in GB.
-                     * @param Storage Instance storage capacity in GB.
+                     * @param _storage Instance storage capacity in GB.
+                     * 
                      */
                     void SetStorage(const int64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
                      * @return Period Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
-                     * @param Period Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+                     * @param _period Valid period in months of the purchased instance. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
                      * @return AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+                     * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
                      * 设置Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
-                     * @param AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+                     * @param _autoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+                     * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取VPC ID.
                      * @return VpcId VPC ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID.
-                     * @param VpcId VPC ID.
+                     * @param _vpcId VPC ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取ID of a subnet in the VPC specified by `VpcId`.
                      * @return SubnetId ID of a subnet in the VPC specified by `VpcId`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置ID of a subnet in the VPC specified by `VpcId`.
-                     * @param SubnetId ID of a subnet in the VPC specified by `VpcId`.
+                     * @param _subnetId ID of a subnet in the VPC specified by `VpcId`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the purchased instance.
                      * @return Name Name of the purchased instance.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the purchased instance.
-                     * @param Name Name of the purchased instance.
+                     * @param _name Name of the purchased instance.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
                      * @return InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
-                     * @param InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+                     * @param _instanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Security group ID.
                      * @return SecurityGroupIds Security group ID.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Security group ID.
-                     * @param SecurityGroupIds Security group ID.
+                     * @param _securityGroupIds Security group ID.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Project ID.
                      * @return ProjectId Project ID.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID.
-                     * @param ProjectId Project ID.
+                     * @param _projectId Project ID.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取The information of tags to be bound with the purchased instance. This parameter is left empty by default.
                      * @return TagList The information of tags to be bound with the purchased instance. This parameter is left empty by default.
+                     * 
                      */
                     std::vector<Tag> GetTagList() const;
 
                     /**
                      * 设置The information of tags to be bound with the purchased instance. This parameter is left empty by default.
-                     * @param TagList The information of tags to be bound with the purchased instance. This parameter is left empty by default.
+                     * @param _tagList The information of tags to be bound with the purchased instance. This parameter is left empty by default.
+                     * 
                      */
                     void SetTagList(const std::vector<Tag>& _tagList);
 
                     /**
                      * 判断参数 TagList 是否已赋值
                      * @return TagList 是否已赋值
+                     * 
                      */
                     bool TagListHasBeenSet() const;
 
                     /**
                      * 获取This parameter is required if you purchase a multi-AZ deployed instance.
                      * @return DBNodeSet This parameter is required if you purchase a multi-AZ deployed instance.
+                     * 
                      */
                     std::vector<DBNode> GetDBNodeSet() const;
 
                     /**
                      * 设置This parameter is required if you purchase a multi-AZ deployed instance.
-                     * @param DBNodeSet This parameter is required if you purchase a multi-AZ deployed instance.
+                     * @param _dBNodeSet This parameter is required if you purchase a multi-AZ deployed instance.
+                     * 
                      */
                     void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
 
                     /**
                      * 判断参数 DBNodeSet 是否已赋值
                      * @return DBNodeSet 是否已赋值
+                     * 
                      */
                     bool DBNodeSetHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
                      * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
                      * 设置Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-                     * @param AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * @param _autoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
 
                     /**
                      * 判断参数 AutoVoucher 是否已赋值
                      * @return AutoVoucher 是否已赋值
+                     * 
                      */
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
                      * 获取Voucher ID list.
                      * @return VoucherIds Voucher ID list.
+                     * 
                      */
                     std::string GetVoucherIds() const;
 
                     /**
                      * 设置Voucher ID list.
-                     * @param VoucherIds Voucher ID list.
+                     * @param _voucherIds Voucher ID list.
+                     * 
                      */
                     void SetVoucherIds(const std::string& _voucherIds);
 
                     /**
                      * 判断参数 VoucherIds 是否已赋值
                      * @return VoucherIds 是否已赋值
+                     * 
                      */
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
                      * 获取Campaign ID.
                      * @return ActivityId Campaign ID.
+                     * 
                      */
                     int64_t GetActivityId() const;
 
                     /**
                      * 设置Campaign ID.
-                     * @param ActivityId Campaign ID.
+                     * @param _activityId Campaign ID.
+                     * 
                      */
                     void SetActivityId(const int64_t& _activityId);
 
                     /**
                      * 判断参数 ActivityId 是否已赋值
                      * @return ActivityId 是否已赋值
+                     * 
                      */
                     bool ActivityIdHasBeenSet() const;
 
                     /**
                      * 获取Basic backup set ID.
                      * @return BackupSetId Basic backup set ID.
+                     * 
                      */
                     std::string GetBackupSetId() const;
 
                     /**
                      * 设置Basic backup set ID.
-                     * @param BackupSetId Basic backup set ID.
+                     * @param _backupSetId Basic backup set ID.
+                     * 
                      */
                     void SetBackupSetId(const std::string& _backupSetId);
 
                     /**
                      * 判断参数 BackupSetId 是否已赋值
                      * @return BackupSetId 是否已赋值
+                     * 
                      */
                     bool BackupSetIdHasBeenSet() const;
 
                     /**
                      * 获取Restoration point in time.
                      * @return RecoveryTargetTime Restoration point in time.
+                     * 
                      */
                     std::string GetRecoveryTargetTime() const;
 
                     /**
                      * 设置Restoration point in time.
-                     * @param RecoveryTargetTime Restoration point in time.
+                     * @param _recoveryTargetTime Restoration point in time.
+                     * 
                      */
                     void SetRecoveryTargetTime(const std::string& _recoveryTargetTime);
 
                     /**
                      * 判断参数 RecoveryTargetTime 是否已赋值
                      * @return RecoveryTargetTime 是否已赋值
+                     * 
                      */
                     bool RecoveryTargetTimeHasBeenSet() const;
 

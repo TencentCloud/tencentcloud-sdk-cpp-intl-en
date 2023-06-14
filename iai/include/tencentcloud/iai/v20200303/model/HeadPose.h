@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Pitch. Value range: [-30,30].
                      * @return Pitch Pitch. Value range: [-30,30].
+                     * 
                      */
                     int64_t GetPitch() const;
 
                     /**
                      * 设置Pitch. Value range: [-30,30].
-                     * @param Pitch Pitch. Value range: [-30,30].
+                     * @param _pitch Pitch. Value range: [-30,30].
+                     * 
                      */
                     void SetPitch(const int64_t& _pitch);
 
                     /**
                      * 判断参数 Pitch 是否已赋值
                      * @return Pitch 是否已赋值
+                     * 
                      */
                     bool PitchHasBeenSet() const;
 
                     /**
                      * 获取Yaw. Value range: [-30,30].
                      * @return Yaw Yaw. Value range: [-30,30].
+                     * 
                      */
                     int64_t GetYaw() const;
 
                     /**
                      * 设置Yaw. Value range: [-30,30].
-                     * @param Yaw Yaw. Value range: [-30,30].
+                     * @param _yaw Yaw. Value range: [-30,30].
+                     * 
                      */
                     void SetYaw(const int64_t& _yaw);
 
                     /**
                      * 判断参数 Yaw 是否已赋值
                      * @return Yaw 是否已赋值
+                     * 
                      */
                     bool YawHasBeenSet() const;
 
                     /**
                      * 获取Roll. Value range: [-180,180].
                      * @return Roll Roll. Value range: [-180,180].
+                     * 
                      */
                     int64_t GetRoll() const;
 
                     /**
                      * 设置Roll. Value range: [-180,180].
-                     * @param Roll Roll. Value range: [-180,180].
+                     * @param _roll Roll. Value range: [-180,180].
+                     * 
                      */
                     void SetRoll(const int64_t& _roll);
 
                     /**
                      * 判断参数 Roll 是否已赋值
                      * @return Roll 是否已赋值
+                     * 
                      */
                     bool RollHasBeenSet() const;
 

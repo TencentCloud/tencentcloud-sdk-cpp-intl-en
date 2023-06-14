@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取User CNAME
                      * @return DomainName User CNAME
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置User CNAME
-                     * @param DomainName User CNAME
+                     * @param _domainName User CNAME
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Domain name
                      * @return DomainUserName Domain name
+                     * 
                      */
                     std::string GetDomainUserName() const;
 
                     /**
                      * 设置Domain name
-                     * @param DomainUserName Domain name
+                     * @param _domainUserName Domain name
+                     * 
                      */
                     void SetDomainUserName(const std::string& _domainUserName);
 
                     /**
                      * 判断参数 DomainUserName 是否已赋值
                      * @return DomainUserName 是否已赋值
+                     * 
                      */
                     bool DomainUserNameHasBeenSet() const;
 

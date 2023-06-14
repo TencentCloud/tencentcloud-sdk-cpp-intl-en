@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Phrase Filtering status. Valid values: `open`, `close`.
                      * @return Status Phrase Filtering status. Valid values: `open`, `close`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Phrase Filtering status. Valid values: `open`, `close`.
-                     * @param Status Phrase Filtering status. Valid values: `open`, `close`.
+                     * @param _status Phrase Filtering status. Valid values: `open`, `close`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

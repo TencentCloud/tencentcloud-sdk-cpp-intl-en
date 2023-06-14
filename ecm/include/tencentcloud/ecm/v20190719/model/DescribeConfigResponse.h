@@ -49,12 +49,14 @@ namespace TencentCloud
                     /**
                      * 获取Range of the network bandwidth disk size.
                      * @return NetworkStorageRange Range of the network bandwidth disk size.
+                     * 
                      */
                     NetworkStorageRange GetNetworkStorageRange() const;
 
                     /**
                      * 判断参数 NetworkStorageRange 是否已赋值
                      * @return NetworkStorageRange 是否已赋值
+                     * 
                      */
                     bool NetworkStorageRangeHasBeenSet() const;
 
@@ -63,12 +65,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageWhiteSet Image OS allowlist.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetImageWhiteSet() const;
 
                     /**
                      * 判断参数 ImageWhiteSet 是否已赋值
                      * @return ImageWhiteSet 是否已赋值
+                     * 
                      */
                     bool ImageWhiteSetHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceNetworkLimitConfigs Network quota information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<InstanceNetworkLimitConfig> GetInstanceNetworkLimitConfigs() const;
 
                     /**
                      * 判断参数 InstanceNetworkLimitConfigs 是否已赋值
                      * @return InstanceNetworkLimitConfigs 是否已赋值
+                     * 
                      */
                     bool InstanceNetworkLimitConfigsHasBeenSet() const;
 
@@ -91,24 +97,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageLimits Image quota information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ImageLimitConfig GetImageLimits() const;
 
                     /**
                      * 判断参数 ImageLimits 是否已赋值
                      * @return ImageLimits 是否已赋值
+                     * 
                      */
                     bool ImageLimitsHasBeenSet() const;
 
                     /**
                      * 获取Default IP direct access, used in scenarios with direct access parameters such as module creation and virtual machine purchase.
                      * @return DefaultIPDirect Default IP direct access, used in scenarios with direct access parameters such as module creation and virtual machine purchase.
+                     * 
                      */
                     bool GetDefaultIPDirect() const;
 
                     /**
                      * 判断参数 DefaultIPDirect 是否已赋值
                      * @return DefaultIPDirect 是否已赋值
+                     * 
                      */
                     bool DefaultIPDirectHasBeenSet() const;
 

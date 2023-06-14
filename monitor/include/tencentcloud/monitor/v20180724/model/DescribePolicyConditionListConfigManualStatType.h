@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return P5 Data aggregation method in a period of 5 seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP5() const;
 
                     /**
                      * 设置Data aggregation method in a period of 5 seconds.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P5 Data aggregation method in a period of 5 seconds.
+                     * @param _p5 Data aggregation method in a period of 5 seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP5(const std::string& _p5);
 
                     /**
                      * 判断参数 P5 是否已赋值
                      * @return P5 是否已赋值
+                     * 
                      */
                     bool P5HasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return P10 Data aggregation method in a period of 10 seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP10() const;
 
                     /**
                      * 设置Data aggregation method in a period of 10 seconds.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P10 Data aggregation method in a period of 10 seconds.
+                     * @param _p10 Data aggregation method in a period of 10 seconds.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP10(const std::string& _p10);
 
                     /**
                      * 判断参数 P10 是否已赋值
                      * @return P10 是否已赋值
+                     * 
                      */
                     bool P10HasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return P60 Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP60() const;
 
                     /**
                      * 设置Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P60 Data aggregation method in a period of 1 minute.
+                     * @param _p60 Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP60(const std::string& _p60);
 
                     /**
                      * 判断参数 P60 是否已赋值
                      * @return P60 是否已赋值
+                     * 
                      */
                     bool P60HasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return P300 Data aggregation method in a period of 5 minutes.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP300() const;
 
                     /**
                      * 设置Data aggregation method in a period of 5 minutes.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P300 Data aggregation method in a period of 5 minutes.
+                     * @param _p300 Data aggregation method in a period of 5 minutes.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP300(const std::string& _p300);
 
                     /**
                      * 判断参数 P300 是否已赋值
                      * @return P300 是否已赋值
+                     * 
                      */
                     bool P300HasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return P600 Data aggregation method in a period of 10 minutes.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP600() const;
 
                     /**
                      * 设置Data aggregation method in a period of 10 minutes.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P600 Data aggregation method in a period of 10 minutes.
+                     * @param _p600 Data aggregation method in a period of 10 minutes.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP600(const std::string& _p600);
 
                     /**
                      * 判断参数 P600 是否已赋值
                      * @return P600 是否已赋值
+                     * 
                      */
                     bool P600HasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return P1800 Data aggregation method in a period of 30 minutes.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP1800() const;
 
                     /**
                      * 设置Data aggregation method in a period of 30 minutes.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P1800 Data aggregation method in a period of 30 minutes.
+                     * @param _p1800 Data aggregation method in a period of 30 minutes.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP1800(const std::string& _p1800);
 
                     /**
                      * 判断参数 P1800 是否已赋值
                      * @return P1800 是否已赋值
+                     * 
                      */
                     bool P1800HasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return P3600 Data aggregation method in a period of 1 hour.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP3600() const;
 
                     /**
                      * 设置Data aggregation method in a period of 1 hour.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P3600 Data aggregation method in a period of 1 hour.
+                     * @param _p3600 Data aggregation method in a period of 1 hour.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP3600(const std::string& _p3600);
 
                     /**
                      * 判断参数 P3600 是否已赋值
                      * @return P3600 是否已赋值
+                     * 
                      */
                     bool P3600HasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return P86400 Data aggregation method in a period of 1 day.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetP86400() const;
 
                     /**
                      * 设置Data aggregation method in a period of 1 day.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param P86400 Data aggregation method in a period of 1 day.
+                     * @param _p86400 Data aggregation method in a period of 1 day.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetP86400(const std::string& _p86400);
 
                     /**
                      * 判断参数 P86400 是否已赋值
                      * @return P86400 是否已赋值
+                     * 
                      */
                     bool P86400HasBeenSet() const;
 

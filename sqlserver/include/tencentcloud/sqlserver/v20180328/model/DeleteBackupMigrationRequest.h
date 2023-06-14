@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Target instance ID, which is returned through the API DescribeBackupMigration.
                      * @return InstanceId Target instance ID, which is returned through the API DescribeBackupMigration.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Target instance ID, which is returned through the API DescribeBackupMigration.
-                     * @param InstanceId Target instance ID, which is returned through the API DescribeBackupMigration.
+                     * @param _instanceId Target instance ID, which is returned through the API DescribeBackupMigration.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup import task ID, which is returned through the API DescribeBackupMigration.
                      * @return BackupMigrationId Backup import task ID, which is returned through the API DescribeBackupMigration.
+                     * 
                      */
                     std::string GetBackupMigrationId() const;
 
                     /**
                      * 设置Backup import task ID, which is returned through the API DescribeBackupMigration.
-                     * @param BackupMigrationId Backup import task ID, which is returned through the API DescribeBackupMigration.
+                     * @param _backupMigrationId Backup import task ID, which is returned through the API DescribeBackupMigration.
+                     * 
                      */
                     void SetBackupMigrationId(const std::string& _backupMigrationId);
 
                     /**
                      * 判断参数 BackupMigrationId 是否已赋值
                      * @return BackupMigrationId 是否已赋值
+                     * 
                      */
                     bool BackupMigrationIdHasBeenSet() const;
 

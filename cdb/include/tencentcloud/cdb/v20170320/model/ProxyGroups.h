@@ -56,20 +56,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return BaseGroup Basic information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     BaseGroupInfo GetBaseGroup() const;
 
                     /**
                      * 设置Basic information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param BaseGroup Basic information of the proxy
+                     * @param _baseGroup Basic information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetBaseGroup(const BaseGroupInfo& _baseGroup);
 
                     /**
                      * 判断参数 BaseGroup 是否已赋值
                      * @return BaseGroup 是否已赋值
+                     * 
                      */
                     bool BaseGroupHasBeenSet() const;
 
@@ -78,20 +81,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Address Address information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::vector<Address> GetAddress() const;
 
                     /**
                      * 设置Address information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param Address Address information of the proxy
+                     * @param _address Address information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetAddress(const std::vector<Address>& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
@@ -100,20 +106,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ConnectionPoolInfo Connection pool information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     ConnectionPoolInfo GetConnectionPoolInfo() const;
 
                     /**
                      * 设置Connection pool information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ConnectionPoolInfo Connection pool information of the proxy
+                     * @param _connectionPoolInfo Connection pool information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetConnectionPoolInfo(const ConnectionPoolInfo& _connectionPoolInfo);
 
                     /**
                      * 判断参数 ConnectionPoolInfo 是否已赋值
                      * @return ConnectionPoolInfo 是否已赋值
+                     * 
                      */
                     bool ConnectionPoolInfoHasBeenSet() const;
 
@@ -122,20 +131,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyNode Node information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::vector<ProxyNodeInfo> GetProxyNode() const;
 
                     /**
                      * 设置Node information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ProxyNode Node information of the proxy
+                     * @param _proxyNode Node information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProxyNode(const std::vector<ProxyNodeInfo>& _proxyNode);
 
                     /**
                      * 判断参数 ProxyNode 是否已赋值
                      * @return ProxyNode 是否已赋值
+                     * 
                      */
                     bool ProxyNodeHasBeenSet() const;
 
@@ -144,20 +156,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return RWInstInfo Routing information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     RWInfos GetRWInstInfo() const;
 
                     /**
                      * 设置Routing information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param RWInstInfo Routing information of the proxy
+                     * @param _rWInstInfo Routing information of the proxy
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetRWInstInfo(const RWInfos& _rWInstInfo);
 
                     /**
                      * 判断参数 RWInstInfo 是否已赋值
                      * @return RWInstInfo 是否已赋值
+                     * 
                      */
                     bool RWInstInfoHasBeenSet() const;
 

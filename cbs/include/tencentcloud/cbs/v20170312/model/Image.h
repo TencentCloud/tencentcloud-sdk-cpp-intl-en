@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Image instance ID.
                      * @return ImageId Image instance ID.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image instance ID.
-                     * @param ImageId Image instance ID.
+                     * @param _imageId Image instance ID.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Image name.
                      * @return ImageName Image name.
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name.
-                     * @param ImageName Image name.
+                     * @param _imageName Image name.
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 

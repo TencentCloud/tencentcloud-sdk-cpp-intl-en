@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Count The number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置The number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Count The number of disks.
+                     * @param _count The number of disks.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
@@ -103,6 +106,7 @@ The data disk type. Valid values:
 <li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
 <li>CLOUD_TSSD: ulTra SSD</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiskType() const;
 
@@ -124,7 +128,7 @@ The data disk type. Valid values:
 <li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
 <li>CLOUD_TSSD: ulTra SSD</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DiskType The system disk type. Valid values:
+                     * @param _diskType The system disk type. Valid values:
 <li>`CLOUD_SSD`: Cloud SSD</li>
 <li>`CLOUD_PREMIUM`: Premium cloud disk</li>
 <li>`CLOUD_BASIC`: Cloud HDD</li>
@@ -141,12 +145,14 @@ The data disk type. Valid values:
 <li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
 <li>CLOUD_TSSD: ulTra SSD</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
@@ -155,20 +161,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiskSize The disk capacity in GB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置The disk capacity in GB.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DiskSize The disk capacity in GB.
+                     * @param _diskSize The disk capacity in GB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 

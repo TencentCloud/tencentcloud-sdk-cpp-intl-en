@@ -55,20 +55,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Id Alarm notification template ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Alarm notification template ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Id Alarm notification template ID
+                     * @param _id Alarm notification template ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Name Alarm notification template name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Alarm notification template name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Name Alarm notification template name
+                     * @param _name Alarm notification template name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UpdatedAt Last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdatedAt() const;
 
                     /**
                      * 设置Last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UpdatedAt Last modified time
+                     * @param _updatedAt Last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdatedAt(const std::string& _updatedAt);
 
                     /**
                      * 判断参数 UpdatedAt 是否已赋值
                      * @return UpdatedAt 是否已赋值
+                     * 
                      */
                     bool UpdatedAtHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UpdatedBy Last modified by
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdatedBy() const;
 
                     /**
                      * 设置Last modified by
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UpdatedBy Last modified by
+                     * @param _updatedBy Last modified by
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdatedBy(const std::string& _updatedBy);
 
                     /**
                      * 判断参数 UpdatedBy 是否已赋值
                      * @return UpdatedBy 是否已赋值
+                     * 
                      */
                     bool UpdatedByHasBeenSet() const;
 
@@ -143,20 +155,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NoticeType Alarm notification type. Valid values: ALARM (for unresolved alarms), OK (for resolved alarms), ALL (for all alarms)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNoticeType() const;
 
                     /**
                      * 设置Alarm notification type. Valid values: ALARM (for unresolved alarms), OK (for resolved alarms), ALL (for all alarms)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NoticeType Alarm notification type. Valid values: ALARM (for unresolved alarms), OK (for resolved alarms), ALL (for all alarms)
+                     * @param _noticeType Alarm notification type. Valid values: ALARM (for unresolved alarms), OK (for resolved alarms), ALL (for all alarms)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoticeType(const std::string& _noticeType);
 
                     /**
                      * 判断参数 NoticeType 是否已赋值
                      * @return NoticeType 是否已赋值
+                     * 
                      */
                     bool NoticeTypeHasBeenSet() const;
 
@@ -165,20 +180,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserNotices User notification list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UserNotice> GetUserNotices() const;
 
                     /**
                      * 设置User notification list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserNotices User notification list
+                     * @param _userNotices User notification list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserNotices(const std::vector<UserNotice>& _userNotices);
 
                     /**
                      * 判断参数 UserNotices 是否已赋值
                      * @return UserNotices 是否已赋值
+                     * 
                      */
                     bool UserNoticesHasBeenSet() const;
 
@@ -187,20 +205,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return URLNotices Callback notification list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<URLNotice> GetURLNotices() const;
 
                     /**
                      * 设置Callback notification list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param URLNotices Callback notification list
+                     * @param _uRLNotices Callback notification list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetURLNotices(const std::vector<URLNotice>& _uRLNotices);
 
                     /**
                      * 判断参数 URLNotices 是否已赋值
                      * @return URLNotices 是否已赋值
+                     * 
                      */
                     bool URLNoticesHasBeenSet() const;
 
@@ -209,20 +230,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsPreset Whether it is the system default notification template. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsPreset() const;
 
                     /**
                      * 设置Whether it is the system default notification template. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsPreset Whether it is the system default notification template. Valid values: 0 (no), 1 (yes)
+                     * @param _isPreset Whether it is the system default notification template. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsPreset(const int64_t& _isPreset);
 
                     /**
                      * 判断参数 IsPreset 是否已赋值
                      * @return IsPreset 是否已赋值
+                     * 
                      */
                     bool IsPresetHasBeenSet() const;
 
@@ -231,20 +255,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NoticeLanguage Notification language. Valid values: zh-CN (Chinese), en-US (English)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNoticeLanguage() const;
 
                     /**
                      * 设置Notification language. Valid values: zh-CN (Chinese), en-US (English)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NoticeLanguage Notification language. Valid values: zh-CN (Chinese), en-US (English)
+                     * @param _noticeLanguage Notification language. Valid values: zh-CN (Chinese), en-US (English)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoticeLanguage(const std::string& _noticeLanguage);
 
                     /**
                      * 判断参数 NoticeLanguage 是否已赋值
                      * @return NoticeLanguage 是否已赋值
+                     * 
                      */
                     bool NoticeLanguageHasBeenSet() const;
 
@@ -253,20 +280,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PolicyIds List of IDs of the alarm policies bound to alarm notification template
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetPolicyIds() const;
 
                     /**
                      * 设置List of IDs of the alarm policies bound to alarm notification template
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PolicyIds List of IDs of the alarm policies bound to alarm notification template
+                     * @param _policyIds List of IDs of the alarm policies bound to alarm notification template
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolicyIds(const std::vector<std::string>& _policyIds);
 
                     /**
                      * 判断参数 PolicyIds 是否已赋值
                      * @return PolicyIds 是否已赋值
+                     * 
                      */
                     bool PolicyIdsHasBeenSet() const;
 
@@ -275,20 +305,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AMPConsumerId Backend AMP consumer ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAMPConsumerId() const;
 
                     /**
                      * 设置Backend AMP consumer ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AMPConsumerId Backend AMP consumer ID.
+                     * @param _aMPConsumerId Backend AMP consumer ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAMPConsumerId(const std::string& _aMPConsumerId);
 
                     /**
                      * 判断参数 AMPConsumerId 是否已赋值
                      * @return AMPConsumerId 是否已赋值
+                     * 
                      */
                     bool AMPConsumerIdHasBeenSet() const;
 
@@ -297,20 +330,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CLSNotices Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CLSNotice> GetCLSNotices() const;
 
                     /**
                      * 设置Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CLSNotices Channel to push alarm notifications to CLS.
+                     * @param _cLSNotices Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCLSNotices(const std::vector<CLSNotice>& _cLSNotices);
 
                     /**
                      * 判断参数 CLSNotices 是否已赋值
                      * @return CLSNotices 是否已赋值
+                     * 
                      */
                     bool CLSNoticesHasBeenSet() const;
 
@@ -319,20 +355,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tags bound to a notification template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tags bound to a notification template
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Tags bound to a notification template
+                     * @param _tags Tags bound to a notification template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

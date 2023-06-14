@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Original package unit price.
                      * @return OriginalBundlePrice Original package unit price.
+                     * 
                      */
                     double GetOriginalBundlePrice() const;
 
                     /**
                      * 设置Original package unit price.
-                     * @param OriginalBundlePrice Original package unit price.
+                     * @param _originalBundlePrice Original package unit price.
+                     * 
                      */
                     void SetOriginalBundlePrice(const double& _originalBundlePrice);
 
                     /**
                      * 判断参数 OriginalBundlePrice 是否已赋值
                      * @return OriginalBundlePrice 是否已赋值
+                     * 
                      */
                     bool OriginalBundlePriceHasBeenSet() const;
 
                     /**
                      * 获取Original price.
                      * @return OriginalPrice Original price.
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Original price.
-                     * @param OriginalPrice Original price.
+                     * @param _originalPrice Original price.
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discount.
                      * @return Discount Discount.
+                     * 
                      */
                     int64_t GetDiscount() const;
 
                     /**
                      * 设置Discount.
-                     * @param Discount Discount.
+                     * @param _discount Discount.
+                     * 
                      */
                     void SetDiscount(const int64_t& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discounted price.
                      * @return DiscountPrice Discounted price.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted price.
-                     * @param DiscountPrice Discounted price.
+                     * @param _discountPrice Discounted price.
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Currency Currency unit. Valid values: `CNY` and `USD`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 设置Currency unit. Valid values: `CNY` and `USD`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Currency Currency unit. Valid values: `CNY` and `USD`.
+                     * @param _currency Currency unit. Valid values: `CNY` and `USD`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCurrency(const std::string& _currency);
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 

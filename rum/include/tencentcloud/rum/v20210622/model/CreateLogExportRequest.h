@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Project ID
                      * @return ID Project ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ID Project ID
+                     * @param _iD Project ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Log export start time
                      * @return StartTime Log export start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Log export start time
-                     * @param StartTime Log export start time
+                     * @param _startTime Log export start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Log export end time
                      * @return EndTime Log export end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Log export end time
-                     * @param EndTime Log export end time
+                     * @param _endTime Log export end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Log export search statement
                      * @return Query Log export search statement
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Log export search statement
-                     * @param Query Log export search statement
+                     * @param _query Log export search statement
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Number of logs to be exported. Maximum value: 10 million
                      * @return Count Number of logs to be exported. Maximum value: 10 million
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of logs to be exported. Maximum value: 10 million
-                     * @param Count Number of logs to be exported. Maximum value: 10 million
+                     * @param _count Number of logs to be exported. Maximum value: 10 million
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Exported log sorting order by time. Valid values: asc: ascending; desc: descending. Default value: desc
                      * @return Order Exported log sorting order by time. Valid values: asc: ascending; desc: descending. Default value: desc
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Exported log sorting order by time. Valid values: asc: ascending; desc: descending. Default value: desc
-                     * @param Order Exported log sorting order by time. Valid values: asc: ascending; desc: descending. Default value: desc
+                     * @param _order Exported log sorting order by time. Valid values: asc: ascending; desc: descending. Default value: desc
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Exported log data format. Valid values: json, csv. Default value: json
                      * @return Format Exported log data format. Valid values: json, csv. Default value: json
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Exported log data format. Valid values: json, csv. Default value: json
-                     * @param Format Exported log data format. Valid values: json, csv. Default value: json
+                     * @param _format Exported log data format. Valid values: json, csv. Default value: json
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 

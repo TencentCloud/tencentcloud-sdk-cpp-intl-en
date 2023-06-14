@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Array of CLB listener IDs
                      * @return SourceListenerIds Array of CLB listener IDs
+                     * 
                      */
                     std::vector<std::string> GetSourceListenerIds() const;
 
                     /**
                      * 设置Array of CLB listener IDs
-                     * @param SourceListenerIds Array of CLB listener IDs
+                     * @param _sourceListenerIds Array of CLB listener IDs
+                     * 
                      */
                     void SetSourceListenerIds(const std::vector<std::string>& _sourceListenerIds);
 
                     /**
                      * 判断参数 SourceListenerIds 是否已赋值
                      * @return SourceListenerIds 是否已赋值
+                     * 
                      */
                     bool SourceListenerIdsHasBeenSet() const;
 
                     /**
                      * 获取Array of CLB forwarding rule IDs
                      * @return SourceLocationIds Array of CLB forwarding rule IDs
+                     * 
                      */
                     std::vector<std::string> GetSourceLocationIds() const;
 
                     /**
                      * 设置Array of CLB forwarding rule IDs
-                     * @param SourceLocationIds Array of CLB forwarding rule IDs
+                     * @param _sourceLocationIds Array of CLB forwarding rule IDs
+                     * 
                      */
                     void SetSourceLocationIds(const std::vector<std::string>& _sourceLocationIds);
 
                     /**
                      * 判断参数 SourceLocationIds 是否已赋值
                      * @return SourceLocationIds 是否已赋值
+                     * 
                      */
                     bool SourceLocationIdsHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The quantity of mounted and mountable elastic cloud disks for each cloud virtual machine
                      * @return AttachDetail The quantity of mounted and mountable elastic cloud disks for each cloud virtual machine
+                     * 
                      */
                     std::vector<AttachDetail> GetAttachDetail() const;
 
                     /**
                      * 判断参数 AttachDetail 是否已赋值
                      * @return AttachDetail 是否已赋值
+                     * 
                      */
                     bool AttachDetailHasBeenSet() const;
 

@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Master instance ID
                      * @return RegistryId Master instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Master instance ID
-                     * @param RegistryId Master instance ID
+                     * @param _registryId Master instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Replication instance ID
                      * @return ReplicationRegistryId Replication instance ID
+                     * 
                      */
                     std::string GetReplicationRegistryId() const;
 
                     /**
                      * 设置Replication instance ID
-                     * @param ReplicationRegistryId Replication instance ID
+                     * @param _replicationRegistryId Replication instance ID
+                     * 
                      */
                     void SetReplicationRegistryId(const std::string& _replicationRegistryId);
 
                     /**
                      * 判断参数 ReplicationRegistryId 是否已赋值
                      * @return ReplicationRegistryId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Region ID of the replication instance
                      * @return ReplicationRegionId Region ID of the replication instance
+                     * 
                      */
                     uint64_t GetReplicationRegionId() const;
 
                     /**
                      * 设置Region ID of the replication instance
-                     * @param ReplicationRegionId Region ID of the replication instance
+                     * @param _replicationRegionId Region ID of the replication instance
+                     * 
                      */
                     void SetReplicationRegionId(const uint64_t& _replicationRegionId);
 
                     /**
                      * 判断参数 ReplicationRegionId 是否已赋值
                      * @return ReplicationRegionId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region name of the replication instance
                      * @return ReplicationRegionName Region name of the replication instance
+                     * 
                      */
                     std::string GetReplicationRegionName() const;
 
                     /**
                      * 设置Region name of the replication instance
-                     * @param ReplicationRegionName Region name of the replication instance
+                     * @param _replicationRegionName Region name of the replication instance
+                     * 
                      */
                     void SetReplicationRegionName(const std::string& _replicationRegionName);
 
                     /**
                      * 判断参数 ReplicationRegionName 是否已赋值
                      * @return ReplicationRegionName 是否已赋值
+                     * 
                      */
                     bool ReplicationRegionNameHasBeenSet() const;
 
                     /**
                      * 获取Status of the replication instance
                      * @return Status Status of the replication instance
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status of the replication instance
-                     * @param Status Status of the replication instance
+                     * @param _status Status of the replication instance
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreatedAt Creation time
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreatedAt Creation time
+                     * @param _createdAt Creation time
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 

@@ -47,20 +47,23 @@ namespace TencentCloud
 In the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return StartTime Start point in time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start point in time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param StartTime Start point in time (Beijing time).
+                     * @param _startTime Start point in time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      * @return EndTime End point in time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -78,123 +82,143 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      * 设置End point in time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
-                     * @param EndTime End point in time (Beijing time).
+                     * @param _endTime End point in time (Beijing time).
 In the format of `yyyy-mm-dd HH:MM:SS`.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name list. If this parameter is left empty, full data will be queried.
                      * @return PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * 
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
                      * 设置Playback domain name list. If this parameter is left empty, full data will be queried.
-                     * @param PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * @param _playDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * 
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
                     /**
                      * 判断参数 PlayDomains 是否已赋值
                      * @return PlayDomains 是否已赋值
+                     * 
                      */
                     bool PlayDomainsHasBeenSet() const;
 
                     /**
                      * 获取Number of pages. Value range: [1,1000]. Default value: 1.
                      * @return PageNum Number of pages. Value range: [1,1000]. Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 设置Number of pages. Value range: [1,1000]. Default value: 1.
-                     * @param PageNum Number of pages. Value range: [1,1000]. Default value: 1.
+                     * @param _pageNum Number of pages. Value range: [1,1000]. Default value: 1.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Value range: [1,1000]. Default value: 20.
                      * @return PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page. Value range: [1,1000]. Default value: 20.
-                     * @param PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+                     * @param _pageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
                      * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
                     /**
                      * 设置Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
-                     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * @param _mainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 
                     /**
                      * 获取Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
                      * @return GroupType Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
+                     * 
                      */
                     std::string GetGroupType() const;
 
                     /**
                      * 设置Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
-                     * @param GroupType Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
+                     * @param _groupType Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
+                     * 
                      */
                     void SetGroupType(const std::string& _groupType);
 
                     /**
                      * 判断参数 GroupType 是否已赋值
                      * @return GroupType 是否已赋值
+                     * 
                      */
                     bool GroupTypeHasBeenSet() const;
 
                     /**
                      * 获取Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
                      * @return OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+                     * 
                      */
                     std::string GetOutLanguage() const;
 
                     /**
                      * 设置Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
-                     * @param OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+                     * @param _outLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+                     * 
                      */
                     void SetOutLanguage(const std::string& _outLanguage);
 
                     /**
                      * 判断参数 OutLanguage 是否已赋值
                      * @return OutLanguage 是否已赋值
+                     * 
                      */
                     bool OutLanguageHasBeenSet() const;
 

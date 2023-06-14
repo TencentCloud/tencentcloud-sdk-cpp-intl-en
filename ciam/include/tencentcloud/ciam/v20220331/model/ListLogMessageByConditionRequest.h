@@ -47,54 +47,63 @@ namespace TencentCloud
                     /**
                      * 获取User pool ID
                      * @return UserStoreId User pool ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User pool ID
-                     * @param UserStoreId User pool ID
+                     * @param _userStoreId User pool ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取Pagination data
                      * @return Pageable Pagination data
+                     * 
                      */
                     Pageable GetPageable() const;
 
                     /**
                      * 设置Pagination data
-                     * @param Pageable Pagination data
+                     * @param _pageable Pagination data
+                     * 
                      */
                     void SetPageable(const Pageable& _pageable);
 
                     /**
                      * 判断参数 Pageable 是否已赋值
                      * @return Pageable 是否已赋值
+                     * 
                      */
                     bool PageableHasBeenSet() const;
 
                     /**
                      * 获取Start timestamp accurate to the millisecond
                      * @return StartTime Start timestamp accurate to the millisecond
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start timestamp accurate to the millisecond
-                     * @param StartTime Start timestamp accurate to the millisecond
+                     * @param _startTime Start timestamp accurate to the millisecond
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -105,6 +114,7 @@ namespace TencentCloud
                      * @return Filters Valid values of `Key`: `events`.
 
 <li> **events** </li>	Values can be one or multiple items in ["SIGNUP", "USER_UPDATE", "USER_DELETE", "USER_CREATE", "ACCOUNT_LINKING"].
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -112,15 +122,17 @@ namespace TencentCloud
                      * 设置Valid values of `Key`: `events`.
 
 <li> **events** </li>	Values can be one or multiple items in ["SIGNUP", "USER_UPDATE", "USER_DELETE", "USER_CREATE", "ACCOUNT_LINKING"].
-                     * @param Filters Valid values of `Key`: `events`.
+                     * @param _filters Valid values of `Key`: `events`.
 
 <li> **events** </li>	Values can be one or multiple items in ["SIGNUP", "USER_UPDATE", "USER_DELETE", "USER_CREATE", "ACCOUNT_LINKING"].
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

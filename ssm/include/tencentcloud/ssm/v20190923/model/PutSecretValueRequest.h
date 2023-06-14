@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of a Secret where the version is added to.
                      * @return SecretName Name of a Secret where the version is added to.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of a Secret where the version is added to.
-                     * @param SecretName Name of a Secret where the version is added to.
+                     * @param _secretName Name of a Secret where the version is added to.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
                      * @return VersionId ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * 
                      */
                     std::string GetVersionId() const;
 
                     /**
                      * 设置ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
-                     * @param VersionId ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * @param _versionId ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+                     * 
                      */
                     void SetVersionId(const std::string& _versionId);
 
                     /**
                      * 判断参数 VersionId 是否已赋值
                      * @return VersionId 是否已赋值
+                     * 
                      */
                     bool VersionIdHasBeenSet() const;
 
@@ -83,38 +89,44 @@ namespace TencentCloud
 Either `SecretBinary` or `SecretString` must be set.
                      * @return SecretBinary Base64-encoded binary credential information.
 Either `SecretBinary` or `SecretString` must be set.
+                     * 
                      */
                     std::string GetSecretBinary() const;
 
                     /**
                      * 设置Base64-encoded binary credential information.
 Either `SecretBinary` or `SecretString` must be set.
-                     * @param SecretBinary Base64-encoded binary credential information.
+                     * @param _secretBinary Base64-encoded binary credential information.
 Either `SecretBinary` or `SecretString` must be set.
+                     * 
                      */
                     void SetSecretBinary(const std::string& _secretBinary);
 
                     /**
                      * 判断参数 SecretBinary 是否已赋值
                      * @return SecretBinary 是否已赋值
+                     * 
                      */
                     bool SecretBinaryHasBeenSet() const;
 
                     /**
                      * 获取Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
                      * @return SecretString Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
+                     * 
                      */
                     std::string GetSecretString() const;
 
                     /**
                      * 设置Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
-                     * @param SecretString Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
+                     * @param _secretString Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
+                     * 
                      */
                     void SetSecretString(const std::string& _secretString);
 
                     /**
                      * 判断参数 SecretString 是否已赋值
                      * @return SecretString 是否已赋值
+                     * 
                      */
                     bool SecretStringHasBeenSet() const;
 

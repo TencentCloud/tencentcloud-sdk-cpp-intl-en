@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Region abbreviation
                      * @return Region Region abbreviation
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region abbreviation
-                     * @param Region Region abbreviation
+                     * @param _region Region abbreviation
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return RegionName Region name
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name
-                     * @param RegionName Region name
+                     * @param _regionName Region name
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Region number
                      * @return RegionId Region number
+                     * 
                      */
                     uint64_t GetRegionId() const;
 
                     /**
                      * 设置Region number
-                     * @param RegionId Region number
+                     * @param _regionId Region number
+                     * 
                      */
                     void SetRegionId(const uint64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
                      * @return RegionState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+                     * 
                      */
                     std::string GetRegionState() const;
 
                     /**
                      * 设置Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
-                     * @param RegionState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+                     * @param _regionState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+                     * 
                      */
                     void SetRegionState(const std::string& _regionState);
 
                     /**
                      * 判断参数 RegionState 是否已赋值
                      * @return RegionState 是否已赋值
+                     * 
                      */
                     bool RegionStateHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSupportInternational() const;
 
                     /**
                      * 设置Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+                     * @param _supportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSupportInternational(const uint64_t& _supportInternational);
 
                     /**
                      * 判断参数 SupportInternational 是否已赋值
                      * @return SupportInternational 是否已赋值
+                     * 
                      */
                     bool SupportInternationalHasBeenSet() const;
 

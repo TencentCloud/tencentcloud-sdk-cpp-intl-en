@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Device fingerprint list
                      * @return DeviceFingerprints Device fingerprint list
+                     * 
                      */
                     std::vector<DeviceFingerprint> GetDeviceFingerprints() const;
 
                     /**
                      * 判断参数 DeviceFingerprints 是否已赋值
                      * @return DeviceFingerprints 是否已赋值
+                     * 
                      */
                     bool DeviceFingerprintsHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Event rule
                      * @return Description Event rule
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Event rule
-                     * @param Description Event rule
+                     * @param _description Event rule
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Solution
                      * @return Solution Solution
+                     * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Solution
-                     * @param Solution Solution
+                     * @param _solution Solution
+                     * 
                      */
                     void SetSolution(const std::string& _solution);
 
                     /**
                      * 判断参数 Solution 是否已赋值
                      * @return Solution 是否已赋值
+                     * 
                      */
                     bool SolutionHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Event remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Event remarks
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Event remarks
+                     * @param _remark Event remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OperationTime Last processing time of the event
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOperationTime() const;
 
                     /**
                      * 设置Last processing time of the event
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OperationTime Last processing time of the event
+                     * @param _operationTime Last processing time of the event
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOperationTime(const std::string& _operationTime);
 
                     /**
                      * 判断参数 OperationTime 是否已赋值
                      * @return OperationTime 是否已赋值
+                     * 
                      */
                     bool OperationTimeHasBeenSet() const;
 

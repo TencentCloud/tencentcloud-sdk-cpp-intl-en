@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取VPN gateway ID
                      * @return VpnGatewayId VPN gateway ID
+                     * 
                      */
                     std::string GetVpnGatewayId() const;
 
                     /**
                      * 设置VPN gateway ID
-                     * @param VpnGatewayId VPN gateway ID
+                     * @param _vpnGatewayId VPN gateway ID
+                     * 
                      */
                     void SetVpnGatewayId(const std::string& _vpnGatewayId);
 
                     /**
                      * 判断参数 VpnGatewayId 是否已赋值
                      * @return VpnGatewayId 是否已赋值
+                     * 
                      */
                     bool VpnGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Route parameters to modify
                      * @return Routes Route parameters to modify
+                     * 
                      */
                     std::vector<VpnGatewayRouteModify> GetRoutes() const;
 
                     /**
                      * 设置Route parameters to modify
-                     * @param Routes Route parameters to modify
+                     * @param _routes Route parameters to modify
+                     * 
                      */
                     void SetRoutes(const std::vector<VpnGatewayRouteModify>& _routes);
 
                     /**
                      * 判断参数 Routes 是否已赋值
                      * @return Routes 是否已赋值
+                     * 
                      */
                     bool RoutesHasBeenSet() const;
 

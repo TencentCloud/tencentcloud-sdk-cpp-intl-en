@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID generated for consumer in consumer group by coordinator
                      * @return MemberId Unique ID generated for consumer in consumer group by coordinator
+                     * 
                      */
                     std::string GetMemberId() const;
 
                     /**
                      * 设置Unique ID generated for consumer in consumer group by coordinator
-                     * @param MemberId Unique ID generated for consumer in consumer group by coordinator
+                     * @param _memberId Unique ID generated for consumer in consumer group by coordinator
+                     * 
                      */
                     void SetMemberId(const std::string& _memberId);
 
                     /**
                      * 判断参数 MemberId 是否已赋值
                      * @return MemberId 是否已赋值
+                     * 
                      */
                     bool MemberIdHasBeenSet() const;
 
                     /**
                      * 获取`client.id` information by the client consumer SDK
                      * @return ClientId `client.id` information by the client consumer SDK
+                     * 
                      */
                     std::string GetClientId() const;
 
                     /**
                      * 设置`client.id` information by the client consumer SDK
-                     * @param ClientId `client.id` information by the client consumer SDK
+                     * @param _clientId `client.id` information by the client consumer SDK
+                     * 
                      */
                     void SetClientId(const std::string& _clientId);
 
                     /**
                      * 判断参数 ClientId 是否已赋值
                      * @return ClientId 是否已赋值
+                     * 
                      */
                     bool ClientIdHasBeenSet() const;
 
                     /**
                      * 获取Generally stores client IP address
                      * @return ClientHost Generally stores client IP address
+                     * 
                      */
                     std::string GetClientHost() const;
 
                     /**
                      * 设置Generally stores client IP address
-                     * @param ClientHost Generally stores client IP address
+                     * @param _clientHost Generally stores client IP address
+                     * 
                      */
                     void SetClientHost(const std::string& _clientHost);
 
                     /**
                      * 判断参数 ClientHost 是否已赋值
                      * @return ClientHost 是否已赋值
+                     * 
                      */
                     bool ClientHostHasBeenSet() const;
 
                     /**
                      * 获取Stores the information of partition assigned to this consumer
                      * @return Assignment Stores the information of partition assigned to this consumer
+                     * 
                      */
                     Assignment GetAssignment() const;
 
                     /**
                      * 设置Stores the information of partition assigned to this consumer
-                     * @param Assignment Stores the information of partition assigned to this consumer
+                     * @param _assignment Stores the information of partition assigned to this consumer
+                     * 
                      */
                     void SetAssignment(const Assignment& _assignment);
 
                     /**
                      * 判断参数 Assignment 是否已赋值
                      * @return Assignment 是否已赋值
+                     * 
                      */
                     bool AssignmentHasBeenSet() const;
 

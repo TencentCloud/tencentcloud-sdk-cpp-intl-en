@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Application ID.
                      * @return ApplicationId Application ID.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID.
-                     * @param ApplicationId Application ID.
+                     * @param _applicationId Application ID.
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取User ID. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
                      * @return UserId User ID. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
-                     * @param UserId User ID. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+                     * @param _userId User ID. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Username. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
                      * @return UserName Username. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
-                     * @param UserName Username. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+                     * @param _userName Username. You need to specify at least `UserName` or `UserId`. If both are specified, `UserName` will be used first.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
                      * @return IncludeInheritedAuthorizations Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+                     * 
                      */
                     bool GetIncludeInheritedAuthorizations() const;
 
                     /**
                      * 设置Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
-                     * @param IncludeInheritedAuthorizations Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+                     * @param _includeInheritedAuthorizations Whether the query scope includes the application access of the user groups and organizations associated with the user. Valid values: false: no; true: yes. Default value: false.
+                     * 
                      */
                     void SetIncludeInheritedAuthorizations(const bool& _includeInheritedAuthorizations);
 
                     /**
                      * 判断参数 IncludeInheritedAuthorizations 是否已赋值
                      * @return IncludeInheritedAuthorizations 是否已赋值
+                     * 
                      */
                     bool IncludeInheritedAuthorizationsHasBeenSet() const;
 

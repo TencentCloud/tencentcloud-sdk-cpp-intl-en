@@ -55,6 +55,7 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-                     * @param Switch Whether to enable the feature. Valid values:
+                     * @param _switch Whether to enable the feature. Valid values:
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -83,6 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return Intensity The strength. Value range: 0.0-1.0
 Default value: 0.0
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetIntensity() const;
 
@@ -90,15 +94,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The strength. Value range: 0.0-1.0
 Default value: 0.0
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Intensity The strength. Value range: 0.0-1.0
+                     * @param _intensity The strength. Value range: 0.0-1.0
 Default value: 0.0
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIntensity(const double& _intensity);
 
                     /**
                      * 判断参数 Intensity 是否已赋值
                      * @return Intensity 是否已赋值
+                     * 
                      */
                     bool IntensityHasBeenSet() const;
 

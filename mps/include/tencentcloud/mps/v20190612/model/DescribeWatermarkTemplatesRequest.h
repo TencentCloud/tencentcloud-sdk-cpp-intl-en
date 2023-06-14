@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID filter of watermarking templates. Array length limit: 100.
                      * @return Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+                     * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
                      * 设置Unique ID filter of watermarking templates. Array length limit: 100.
-                     * @param Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+                     * @param _definitions Unique ID filter of watermarking templates. Array length limit: 100.
+                     * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
 
                     /**
                      * 判断参数 Definitions 是否已赋值
                      * @return Definitions 是否已赋值
+                     * 
                      */
                     bool DefinitionsHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return Type Watermark type filter. Valid values:
 <li>image: Image watermark;</li>
 <li>text: Text watermark.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -74,33 +78,38 @@ namespace TencentCloud
                      * 设置Watermark type filter. Valid values:
 <li>image: Image watermark;</li>
 <li>text: Text watermark.</li>
-                     * @param Type Watermark type filter. Valid values:
+                     * @param _type Watermark type filter. Valid values:
 <li>image: Image watermark;</li>
 <li>text: Text watermark.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Paging offset. Default value: 0.
                      * @return Offset Paging offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Paging offset. Default value: 0.
-                     * @param Offset Paging offset. Default value: 0.
+                     * @param _offset Paging offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -111,6 +120,7 @@ namespace TencentCloud
                      * @return Limit Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
+                     * 
                      */
                     uint64_t GetLimit() const;
 
@@ -118,15 +128,17 @@ namespace TencentCloud
                      * 设置Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
-                     * @param Limit Number of returned entries
+                     * @param _limit Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

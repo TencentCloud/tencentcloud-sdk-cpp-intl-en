@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the task to scan local images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
                      * @return LocalTaskID ID of the task to scan local images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
+                     * 
                      */
                     int64_t GetLocalTaskID() const;
 
                     /**
                      * 设置ID of the task to scan local images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
-                     * @param LocalTaskID ID of the task to scan local images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
+                     * @param _localTaskID ID of the task to scan local images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
+                     * 
                      */
                     void SetLocalTaskID(const int64_t& _localTaskID);
 
                     /**
                      * 判断参数 LocalTaskID 是否已赋值
                      * @return LocalTaskID 是否已赋值
+                     * 
                      */
                     bool LocalTaskIDHasBeenSet() const;
 
                     /**
                      * 获取ID of the task to scan repository images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
                      * @return RegistryTaskID ID of the task to scan repository images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
+                     * 
                      */
                     int64_t GetRegistryTaskID() const;
 
                     /**
                      * 设置ID of the task to scan repository images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
-                     * @param RegistryTaskID ID of the task to scan repository images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
+                     * @param _registryTaskID ID of the task to scan repository images for vulnerabilities. If it is not specified, the ID of the last scan will be returned.
+                     * 
                      */
                     void SetRegistryTaskID(const int64_t& _registryTaskID);
 
                     /**
                      * 判断参数 RegistryTaskID 是否已赋值
                      * @return RegistryTaskID 是否已赋值
+                     * 
                      */
                     bool RegistryTaskIDHasBeenSet() const;
 

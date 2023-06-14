@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Network billing method.
                      * @return InternetChargeType Network billing method.
+                     * 
                      */
                     std::string GetInternetChargeType() const;
 
                     /**
                      * 设置Network billing method.
-                     * @param InternetChargeType Network billing method.
+                     * @param _internetChargeType Network billing method.
+                     * 
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
 
                     /**
                      * 判断参数 InternetChargeType 是否已赋值
                      * @return InternetChargeType 是否已赋值
+                     * 
                      */
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Description of the network billing method.
                      * @return Description Description of the network billing method.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description of the network billing method.
-                     * @param Description Description of the network billing method.
+                     * @param _description Description of the network billing method.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

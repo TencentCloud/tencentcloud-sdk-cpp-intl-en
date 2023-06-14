@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Sub-policy ID
                      * @return RuleId Sub-policy ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Sub-policy ID
-                     * @param RuleId Sub-policy ID
+                     * @param _ruleId Sub-policy ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
+                     * 
                      */
                     std::string GetRuleMode() const;
 
@@ -78,33 +82,38 @@ namespace TencentCloud
                      * 设置Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
-                     * @param RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
+                     * @param _ruleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
+                     * 
                      */
                     void SetRuleMode(const std::string& _ruleMode);
 
                     /**
                      * 判断参数 RuleMode 是否已赋值
                      * @return RuleMode 是否已赋值
+                     * 
                      */
                     bool RuleModeHasBeenSet() const;
 
                     /**
                      * 获取Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
                      * @return IsEnable Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
+                     * 
                      */
                     bool GetIsEnable() const;
 
                     /**
                      * 设置Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
-                     * @param IsEnable Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
+                     * @param _isEnable Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
+                     * 
                      */
                     void SetIsEnable(const bool& _isEnable);
 
                     /**
                      * 判断参数 IsEnable 是否已赋值
                      * @return IsEnable 是否已赋值
+                     * 
                      */
                     bool IsEnableHasBeenSet() const;
 
@@ -117,6 +126,7 @@ namespace TencentCloud
 `CHANGE_CRONTAB`: Tampering with the scheduled task.
 `CHANGE_SYS_BIN`: Tampering with the system program.
 `CHANGE_USRCFG`: Tampering with user configuration.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -125,16 +135,18 @@ namespace TencentCloud
 `CHANGE_CRONTAB`: Tampering with the scheduled task.
 `CHANGE_SYS_BIN`: Tampering with the system program.
 `CHANGE_USRCFG`: Tampering with user configuration.
-                     * @param RuleType Intrusion behavior type detected by the sub-policy
+                     * @param _ruleType Intrusion behavior type detected by the sub-policy
 `CHANGE_CRONTAB`: Tampering with the scheduled task.
 `CHANGE_SYS_BIN`: Tampering with the system program.
 `CHANGE_USRCFG`: Tampering with user configuration.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 

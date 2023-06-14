@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Number of entries per page
                      * @return Limit Number of entries per page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page
-                     * @param Limit Number of entries per page
+                     * @param _limit Number of entries per page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The starting position of paging
                      * @return Offset The starting position of paging
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The starting position of paging
-                     * @param Offset The starting position of paging
+                     * @param _offset The starting position of paging
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Filters. Valid values: `UpstreamId` and `UpstreamName`
                      * @return Filters Filters. Valid values: `UpstreamId` and `UpstreamName`
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filters. Valid values: `UpstreamId` and `UpstreamName`
-                     * @param Filters Filters. Valid values: `UpstreamId` and `UpstreamName`
+                     * @param _filters Filters. Valid values: `UpstreamId` and `UpstreamName`
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

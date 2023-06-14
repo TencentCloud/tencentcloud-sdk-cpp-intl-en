@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Game session timeout. Value range: 1-600. Unit: second.
                      * @return GameServerSessionActivationTimeoutSeconds Game session timeout. Value range: 1-600. Unit: second.
+                     * 
                      */
                     uint64_t GetGameServerSessionActivationTimeoutSeconds() const;
 
                     /**
                      * 设置Game session timeout. Value range: 1-600. Unit: second.
-                     * @param GameServerSessionActivationTimeoutSeconds Game session timeout. Value range: 1-600. Unit: second.
+                     * @param _gameServerSessionActivationTimeoutSeconds Game session timeout. Value range: 1-600. Unit: second.
+                     * 
                      */
                     void SetGameServerSessionActivationTimeoutSeconds(const uint64_t& _gameServerSessionActivationTimeoutSeconds);
 
                     /**
                      * 判断参数 GameServerSessionActivationTimeoutSeconds 是否已赋值
                      * @return GameServerSessionActivationTimeoutSeconds 是否已赋值
+                     * 
                      */
                     bool GameServerSessionActivationTimeoutSecondsHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of game sessions. Value range: 1-2,147,483,647.
                      * @return MaxConcurrentGameServerSessionActivations Maximum number of game sessions. Value range: 1-2,147,483,647.
+                     * 
                      */
                     uint64_t GetMaxConcurrentGameServerSessionActivations() const;
 
                     /**
                      * 设置Maximum number of game sessions. Value range: 1-2,147,483,647.
-                     * @param MaxConcurrentGameServerSessionActivations Maximum number of game sessions. Value range: 1-2,147,483,647.
+                     * @param _maxConcurrentGameServerSessionActivations Maximum number of game sessions. Value range: 1-2,147,483,647.
+                     * 
                      */
                     void SetMaxConcurrentGameServerSessionActivations(const uint64_t& _maxConcurrentGameServerSessionActivations);
 
                     /**
                      * 判断参数 MaxConcurrentGameServerSessionActivations 是否已赋值
                      * @return MaxConcurrentGameServerSessionActivations 是否已赋值
+                     * 
                      */
                     bool MaxConcurrentGameServerSessionActivationsHasBeenSet() const;
 
                     /**
                      * 获取Service process configuration. There must be at least one service configuration.
                      * @return ServerProcesses Service process configuration. There must be at least one service configuration.
+                     * 
                      */
                     std::vector<ServerProcesse> GetServerProcesses() const;
 
                     /**
                      * 设置Service process configuration. There must be at least one service configuration.
-                     * @param ServerProcesses Service process configuration. There must be at least one service configuration.
+                     * @param _serverProcesses Service process configuration. There must be at least one service configuration.
+                     * 
                      */
                     void SetServerProcesses(const std::vector<ServerProcesse>& _serverProcesses);
 
                     /**
                      * 判断参数 ServerProcesses 是否已赋值
                      * @return ServerProcesses 是否已赋值
+                     * 
                      */
                     bool ServerProcessesHasBeenSet() const;
 

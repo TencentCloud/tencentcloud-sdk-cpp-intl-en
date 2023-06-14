@@ -52,72 +52,84 @@ namespace TencentCloud
                     /**
                      * 获取Topic name
                      * @return TopicName Topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-                     * @param TopicName Topic name
+                     * @param _topicName Topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Topic ID
                      * @return TopicId Topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Topic ID
-                     * @param TopicId Topic ID
+                     * @param _topicId Topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Number of partitions
                      * @return PartitionNum Number of partitions
+                     * 
                      */
                     int64_t GetPartitionNum() const;
 
                     /**
                      * 设置Number of partitions
-                     * @param PartitionNum Number of partitions
+                     * @param _partitionNum Number of partitions
+                     * 
                      */
                     void SetPartitionNum(const int64_t& _partitionNum);
 
                     /**
                      * 判断参数 PartitionNum 是否已赋值
                      * @return PartitionNum 是否已赋值
+                     * 
                      */
                     bool PartitionNumHasBeenSet() const;
 
                     /**
                      * 获取Number of replicas
                      * @return ReplicaNum Number of replicas
+                     * 
                      */
                     int64_t GetReplicaNum() const;
 
                     /**
                      * 设置Number of replicas
-                     * @param ReplicaNum Number of replicas
+                     * @param _replicaNum Number of replicas
+                     * 
                      */
                     void SetReplicaNum(const int64_t& _replicaNum);
 
                     /**
                      * 判断参数 ReplicaNum 是否已赋值
                      * @return ReplicaNum 是否已赋值
+                     * 
                      */
                     bool ReplicaNumHasBeenSet() const;
 
@@ -126,74 +138,86 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Note Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNote() const;
 
                     /**
                      * 设置Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Note Remarks
+                     * @param _note Remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNote(const std::string& _note);
 
                     /**
                      * 判断参数 Note 是否已赋值
                      * @return Note 是否已赋值
+                     * 
                      */
                     bool NoteHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable IP authentication allowlist. true: yes, false: no
                      * @return EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
+                     * 
                      */
                     bool GetEnableWhiteList() const;
 
                     /**
                      * 设置Whether to enable IP authentication allowlist. true: yes, false: no
-                     * @param EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
+                     * @param _enableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
+                     * 
                      */
                     void SetEnableWhiteList(const bool& _enableWhiteList);
 
                     /**
                      * 判断参数 EnableWhiteList 是否已赋值
                      * @return EnableWhiteList 是否已赋值
+                     * 
                      */
                     bool EnableWhiteListHasBeenSet() const;
 
                     /**
                      * 获取Number of IPs in IP allowlist
                      * @return IpWhiteListCount Number of IPs in IP allowlist
+                     * 
                      */
                     int64_t GetIpWhiteListCount() const;
 
                     /**
                      * 设置Number of IPs in IP allowlist
-                     * @param IpWhiteListCount Number of IPs in IP allowlist
+                     * @param _ipWhiteListCount Number of IPs in IP allowlist
+                     * 
                      */
                     void SetIpWhiteListCount(const int64_t& _ipWhiteListCount);
 
                     /**
                      * 判断参数 IpWhiteListCount 是否已赋值
                      * @return IpWhiteListCount 是否已赋值
+                     * 
                      */
                     bool IpWhiteListCountHasBeenSet() const;
 
@@ -202,56 +226,65 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ForwardCosBucket COS bucket for data backup: address of the destination COS bucket
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetForwardCosBucket() const;
 
                     /**
                      * 设置COS bucket for data backup: address of the destination COS bucket
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ForwardCosBucket COS bucket for data backup: address of the destination COS bucket
+                     * @param _forwardCosBucket COS bucket for data backup: address of the destination COS bucket
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetForwardCosBucket(const std::string& _forwardCosBucket);
 
                     /**
                      * 判断参数 ForwardCosBucket 是否已赋值
                      * @return ForwardCosBucket 是否已赋值
+                     * 
                      */
                     bool ForwardCosBucketHasBeenSet() const;
 
                     /**
                      * 获取Status of data backup to COS. 1: not enabled, 0: enabled
                      * @return ForwardStatus Status of data backup to COS. 1: not enabled, 0: enabled
+                     * 
                      */
                     int64_t GetForwardStatus() const;
 
                     /**
                      * 设置Status of data backup to COS. 1: not enabled, 0: enabled
-                     * @param ForwardStatus Status of data backup to COS. 1: not enabled, 0: enabled
+                     * @param _forwardStatus Status of data backup to COS. 1: not enabled, 0: enabled
+                     * 
                      */
                     void SetForwardStatus(const int64_t& _forwardStatus);
 
                     /**
                      * 判断参数 ForwardStatus 是否已赋值
                      * @return ForwardStatus 是否已赋值
+                     * 
                      */
                     bool ForwardStatusHasBeenSet() const;
 
                     /**
                      * 获取Frequency of data backup to COS
                      * @return ForwardInterval Frequency of data backup to COS
+                     * 
                      */
                     int64_t GetForwardInterval() const;
 
                     /**
                      * 设置Frequency of data backup to COS
-                     * @param ForwardInterval Frequency of data backup to COS
+                     * @param _forwardInterval Frequency of data backup to COS
+                     * 
                      */
                     void SetForwardInterval(const int64_t& _forwardInterval);
 
                     /**
                      * 判断参数 ForwardInterval 是否已赋值
                      * @return ForwardInterval 是否已赋值
+                     * 
                      */
                     bool ForwardIntervalHasBeenSet() const;
 
@@ -260,20 +293,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Config Advanced configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Config GetConfig() const;
 
                     /**
                      * 设置Advanced configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Config Advanced configuration
+                     * @param _config Advanced configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfig(const Config& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
@@ -282,20 +318,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     TopicRetentionTimeConfigRsp GetRetentionTimeConfig() const;
 
                     /**
                      * 设置Message retention time configuration (for recording the latest retention time)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
+                     * @param _retentionTimeConfig Message retention time configuration (for recording the latest retention time)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRetentionTimeConfig(const TopicRetentionTimeConfigRsp& _retentionTimeConfig);
 
                     /**
                      * 判断参数 RetentionTimeConfig 是否已赋值
                      * @return RetentionTimeConfig 是否已赋值
+                     * 
                      */
                     bool RetentionTimeConfigHasBeenSet() const;
 
@@ -304,20 +343,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Status `0`: normal, `1`: deleted, `2`: deleting
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置`0`: normal, `1`: deleted, `2`: deleting
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Status `0`: normal, `1`: deleted, `2`: deleting
+                     * @param _status `0`: normal, `1`: deleted, `2`: deleting
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -326,20 +368,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Tag list
+                     * @param _tags Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

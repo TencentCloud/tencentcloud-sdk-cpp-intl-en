@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Environment variable string
                      * @return Envs Environment variable string
+                     * 
                      */
                     std::string GetEnvs() const;
 
                     /**
                      * 判断参数 Envs 是否已赋值
                      * @return Envs 是否已赋值
+                     * 
                      */
                     bool EnvsHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Module name, which is fixed at "monitor"
                      * @return Module Module name, which is fixed at "monitor"
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Module name, which is fixed at "monitor"
-                     * @param Module Module name, which is fixed at "monitor"
+                     * @param _module Module name, which is fixed at "monitor"
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy ID list
                      * @return PolicyIds Alarm policy ID list
+                     * 
                      */
                     std::vector<std::string> GetPolicyIds() const;
 
                     /**
                      * 设置Alarm policy ID list
-                     * @param PolicyIds Alarm policy ID list
+                     * @param _policyIds Alarm policy ID list
+                     * 
                      */
                     void SetPolicyIds(const std::vector<std::string>& _policyIds);
 
                     /**
                      * 判断参数 PolicyIds 是否已赋值
                      * @return PolicyIds 是否已赋值
+                     * 
                      */
                     bool PolicyIdsHasBeenSet() const;
 

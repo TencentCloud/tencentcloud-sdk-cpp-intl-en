@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Total Number of Instances
                      * @return TotalCount Total Number of Instances
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Status of all instance inspection. 0: all instance inspection enabled, 1: all instance inspection disabled
                      * @return DbScanStatus Status of all instance inspection. 0: all instance inspection enabled, 1: all instance inspection disabled
+                     * 
                      */
                     int64_t GetDbScanStatus() const;
 
                     /**
                      * 判断参数 DbScanStatus 是否已赋值
                      * @return DbScanStatus 是否已赋值
+                     * 
                      */
                     bool DbScanStatusHasBeenSet() const;
 
                     /**
                      * 获取Instance related information
                      * @return Items Instance related information
+                     * 
                      */
                     std::vector<InstanceInfo> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

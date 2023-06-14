@@ -50,12 +50,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Abstract Summary information of data consistency check
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CompareAbstractInfo GetAbstract() const;
 
                     /**
                      * 判断参数 Abstract 是否已赋值
                      * @return Abstract 是否已赋值
+                     * 
                      */
                     bool AbstractHasBeenSet() const;
 
@@ -64,12 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Detail Data consistency check details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CompareDetailInfo GetDetail() const;
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Filter type, e.g., instance ID
                      * @return FilterType Filter type, e.g., instance ID
+                     * 
                      */
                     std::string GetFilterType() const;
 
                     /**
                      * 设置Filter type, e.g., instance ID
-                     * @param FilterType Filter type, e.g., instance ID
+                     * @param _filterType Filter type, e.g., instance ID
+                     * 
                      */
                     void SetFilterType(const std::string& _filterType);
 
                     /**
                      * 判断参数 FilterType 是否已赋值
                      * @return FilterType 是否已赋值
+                     * 
                      */
                     bool FilterTypeHasBeenSet() const;
 
                     /**
                      * 获取Filtered content, separated with ","
                      * @return FilterContent Filtered content, separated with ","
+                     * 
                      */
                     std::string GetFilterContent() const;
 
                     /**
                      * 设置Filtered content, separated with ","
-                     * @param FilterContent Filtered content, separated with ","
+                     * @param _filterContent Filtered content, separated with ","
+                     * 
                      */
                     void SetFilterContent(const std::string& _filterContent);
 
                     /**
                      * 判断参数 FilterContent 是否已赋值
                      * @return FilterContent 是否已赋值
+                     * 
                      */
                     bool FilterContentHasBeenSet() const;
 

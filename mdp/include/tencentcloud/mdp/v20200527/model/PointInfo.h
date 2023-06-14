@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Channel input list.
                      * @return Inputs Channel input list.
+                     * 
                      */
                     std::vector<InputInfo> GetInputs() const;
 
                     /**
                      * 设置Channel input list.
-                     * @param Inputs Channel input list.
+                     * @param _inputs Channel input list.
+                     * 
                      */
                     void SetInputs(const std::vector<InputInfo>& _inputs);
 
                     /**
                      * 判断参数 Inputs 是否已赋值
                      * @return Inputs 是否已赋值
+                     * 
                      */
                     bool InputsHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Endpoints Channel output list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<EndpointInfo> GetEndpoints() const;
 
                     /**
                      * 设置Channel output list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Endpoints Channel output list.
+                     * @param _endpoints Channel output list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndpoints(const std::vector<EndpointInfo>& _endpoints);
 
                     /**
                      * 判断参数 Endpoints 是否已赋值
                      * @return Endpoints 是否已赋值
+                     * 
                      */
                     bool EndpointsHasBeenSet() const;
 

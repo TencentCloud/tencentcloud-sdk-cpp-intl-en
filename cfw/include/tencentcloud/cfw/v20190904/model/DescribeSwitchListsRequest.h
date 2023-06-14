@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取Firewall status. 0: disabled; 1: enabled
                      * @return Status Firewall status. 0: disabled; 1: enabled
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Firewall status. 0: disabled; 1: enabled
-                     * @param Status Firewall status. 0: disabled; 1: enabled
+                     * @param _status Firewall status. 0: disabled; 1: enabled
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Asset type, e.g. CVM/NAT/VPN/CLB/others
                      * @return Type Asset type, e.g. CVM/NAT/VPN/CLB/others
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Asset type, e.g. CVM/NAT/VPN/CLB/others
-                     * @param Type Asset type, e.g. CVM/NAT/VPN/CLB/others
+                     * @param _type Asset type, e.g. CVM/NAT/VPN/CLB/others
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Region, e.g. Shanghai, Chongqing, Guangzhou, etc.
                      * @return Area Region, e.g. Shanghai, Chongqing, Guangzhou, etc.
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Region, e.g. Shanghai, Chongqing, Guangzhou, etc.
-                     * @param Area Region, e.g. Shanghai, Chongqing, Guangzhou, etc.
+                     * @param _area Region, e.g. Shanghai, Chongqing, Guangzhou, etc.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Search value, e.g. "{"common":"106.54.189.45"}"
                      * @return SearchValue Search value, e.g. "{"common":"106.54.189.45"}"
+                     * 
                      */
                     std::string GetSearchValue() const;
 
                     /**
                      * 设置Search value, e.g. "{"common":"106.54.189.45"}"
-                     * @param SearchValue Search value, e.g. "{"common":"106.54.189.45"}"
+                     * @param _searchValue Search value, e.g. "{"common":"106.54.189.45"}"
+                     * 
                      */
                     void SetSearchValue(const std::string& _searchValue);
 
                     /**
                      * 判断参数 SearchValue 是否已赋值
                      * @return SearchValue 是否已赋值
+                     * 
                      */
                     bool SearchValueHasBeenSet() const;
 
                     /**
                      * 获取Number of entries. Default: 10
                      * @return Limit Number of entries. Default: 10
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries. Default: 10
-                     * @param Limit Number of entries. Default: 10
+                     * @param _limit Number of entries. Default: 10
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default: 0
                      * @return Offset Offset. Default: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default: 0
-                     * @param Offset Offset. Default: 0
+                     * @param _offset Offset. Default: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sort order. desc: descending; asc: ascending
                      * @return Order Sort order. desc: descending; asc: ascending
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sort order. desc: descending; asc: ascending
-                     * @param Order Sort order. desc: descending; asc: ascending
+                     * @param _order Sort order. desc: descending; asc: ascending
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field. PortTimes (number of risky ports)
                      * @return By Sorting field. PortTimes (number of risky ports)
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field. PortTimes (number of risky ports)
-                     * @param By Sorting field. PortTimes (number of risky ports)
+                     * @param _by Sorting field. PortTimes (number of risky ports)
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 

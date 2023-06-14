@@ -104,6 +104,7 @@ namespace TencentCloud
 <li>`ClientIpHeader`.</li>
 <li>`TlsVersion`.</li>
 <li>`OcspStapling`.</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -136,7 +137,7 @@ namespace TencentCloud
 <li>`ClientIpHeader`.</li>
 <li>`TlsVersion`.</li>
 <li>`OcspStapling`.</li>
-                     * @param Action Feature name. Valid values:
+                     * @param _action Feature name. Valid values:
 <li>Access URL rewrite (`AccessUrlRedirect`).</li>
 <li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
 <li>Custom error page
@@ -164,30 +165,35 @@ namespace TencentCloud
 <li>`ClientIpHeader`.</li>
 <li>`TlsVersion`.</li>
 <li>`OcspStapling`.</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Parameter information
                      * @return Properties Parameter information
+                     * 
                      */
                     std::vector<RulesProperties> GetProperties() const;
 
                     /**
                      * 设置Parameter information
-                     * @param Properties Parameter information
+                     * @param _properties Parameter information
+                     * 
                      */
                     void SetProperties(const std::vector<RulesProperties>& _properties);
 
                     /**
                      * 判断参数 Properties 是否已赋值
                      * @return Properties 是否已赋值
+                     * 
                      */
                     bool PropertiesHasBeenSet() const;
 

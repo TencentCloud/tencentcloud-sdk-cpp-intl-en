@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The object array of port forwarding rules for the NAT gateway.
                      * @return NatGatewayDestinationIpPortTranslationNatRuleSet The object array of port forwarding rules for the NAT gateway.
+                     * 
                      */
                     std::vector<NatGatewayDestinationIpPortTranslationNatRule> GetNatGatewayDestinationIpPortTranslationNatRuleSet() const;
 
                     /**
                      * 判断参数 NatGatewayDestinationIpPortTranslationNatRuleSet 是否已赋值
                      * @return NatGatewayDestinationIpPortTranslationNatRuleSet 是否已赋值
+                     * 
                      */
                     bool NatGatewayDestinationIpPortTranslationNatRuleSetHasBeenSet() const;
 
                     /**
                      * 获取The number of eligible object arrays of NAT port forwarding rules.
                      * @return TotalCount The number of eligible object arrays of NAT port forwarding rules.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

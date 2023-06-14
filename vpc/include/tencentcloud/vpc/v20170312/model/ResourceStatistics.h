@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID, such as vpc-f1xjkw1b.
                      * @return VpcId VPC instance ID, such as vpc-f1xjkw1b.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID, such as vpc-f1xjkw1b.
-                     * @param VpcId VPC instance ID, such as vpc-f1xjkw1b.
+                     * @param _vpcId VPC instance ID, such as vpc-f1xjkw1b.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet instance ID, such as `subnet-bthucmmy`.
                      * @return SubnetId Subnet instance ID, such as `subnet-bthucmmy`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID, such as `subnet-bthucmmy`.
-                     * @param SubnetId Subnet instance ID, such as `subnet-bthucmmy`.
+                     * @param _subnetId Subnet instance ID, such as `subnet-bthucmmy`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The total number of used IP addresses.
                      * @return Ip The total number of used IP addresses.
+                     * 
                      */
                     uint64_t GetIp() const;
 
                     /**
                      * 设置The total number of used IP addresses.
-                     * @param Ip The total number of used IP addresses.
+                     * @param _ip The total number of used IP addresses.
+                     * 
                      */
                     void SetIp(const uint64_t& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Information of associated resources
                      * @return ResourceStatisticsItemSet Information of associated resources
+                     * 
                      */
                     std::vector<ResourceStatisticsItem> GetResourceStatisticsItemSet() const;
 
                     /**
                      * 设置Information of associated resources
-                     * @param ResourceStatisticsItemSet Information of associated resources
+                     * @param _resourceStatisticsItemSet Information of associated resources
+                     * 
                      */
                     void SetResourceStatisticsItemSet(const std::vector<ResourceStatisticsItem>& _resourceStatisticsItemSet);
 
                     /**
                      * 判断参数 ResourceStatisticsItemSet 是否已赋值
                      * @return ResourceStatisticsItemSet 是否已赋值
+                     * 
                      */
                     bool ResourceStatisticsItemSetHasBeenSet() const;
 

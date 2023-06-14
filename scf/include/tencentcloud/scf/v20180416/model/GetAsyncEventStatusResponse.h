@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Async event status
                      * @return Result Async event status
+                     * 
                      */
                     AsyncEventStatus GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

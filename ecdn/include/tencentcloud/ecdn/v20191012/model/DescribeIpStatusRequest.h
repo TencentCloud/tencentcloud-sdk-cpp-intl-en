@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Acceleration domain name
                      * @return Domain Acceleration domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Acceleration domain name
-                     * @param Domain Acceleration domain name
+                     * @param _domain Acceleration domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -69,6 +72,7 @@ global: global nodes
 mainland: nodes in Mainland China
 overseas: nodes outside Mainland China
 global: global nodes
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -77,16 +81,18 @@ global: global nodes
 mainland: nodes in Mainland China
 overseas: nodes outside Mainland China
 global: global nodes
-                     * @param Area Target region of the query:
+                     * @param _area Target region of the query:
 mainland: nodes in Mainland China
 overseas: nodes outside Mainland China
 global: global nodes
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

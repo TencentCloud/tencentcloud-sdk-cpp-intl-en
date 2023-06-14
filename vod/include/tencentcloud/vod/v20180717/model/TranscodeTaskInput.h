@@ -53,18 +53,21 @@ namespace TencentCloud
                     /**
                      * 获取Video transcoding template ID.
                      * @return Definition Video transcoding template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Video transcoding template ID.
-                     * @param Definition Video transcoding template ID.
+                     * @param _definition Video transcoding template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -73,74 +76,86 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
                      * 设置List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WatermarkSet List of up to 10 image or text watermarks.
+                     * @param _watermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
 
                     /**
                      * 判断参数 WatermarkSet 是否已赋值
                      * @return WatermarkSet 是否已赋值
+                     * 
                      */
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
                      * 获取Digital watermark.
                      * @return TraceWatermark Digital watermark.
+                     * 
                      */
                     TraceWatermarkInput GetTraceWatermark() const;
 
                     /**
                      * 设置Digital watermark.
-                     * @param TraceWatermark Digital watermark.
+                     * @param _traceWatermark Digital watermark.
+                     * 
                      */
                     void SetTraceWatermark(const TraceWatermarkInput& _traceWatermark);
 
                     /**
                      * 判断参数 TraceWatermark 是否已赋值
                      * @return TraceWatermark 是否已赋值
+                     * 
                      */
                     bool TraceWatermarkHasBeenSet() const;
 
                     /**
                      * 获取List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
                      * @return HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     * 
                      */
                     std::vector<HeadTailTaskInput> GetHeadTailSet() const;
 
                     /**
                      * 设置List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
-                     * @param HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     * @param _headTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+                     * 
                      */
                     void SetHeadTailSet(const std::vector<HeadTailTaskInput>& _headTailSet);
 
                     /**
                      * 判断参数 HeadTailSet 是否已赋值
                      * @return HeadTailSet 是否已赋值
+                     * 
                      */
                     bool HeadTailSetHasBeenSet() const;
 
                     /**
                      * 获取List of blurs. Up to 10 ones can be supported.
                      * @return MosaicSet List of blurs. Up to 10 ones can be supported.
+                     * 
                      */
                     std::vector<MosaicInput> GetMosaicSet() const;
 
                     /**
                      * 设置List of blurs. Up to 10 ones can be supported.
-                     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
+                     * @param _mosaicSet List of blurs. Up to 10 ones can be supported.
+                     * 
                      */
                     void SetMosaicSet(const std::vector<MosaicInput>& _mosaicSet);
 
                     /**
                      * 判断参数 MosaicSet 是否已赋值
                      * @return MosaicSet 是否已赋值
+                     * 
                      */
                     bool MosaicSetHasBeenSet() const;
 
@@ -153,6 +168,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
@@ -161,16 +177,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
-                     * @param EndTimeOffset End time offset of a transcoded video, in seconds.
+                     * @param _endTimeOffset End time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
@@ -183,6 +201,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
@@ -191,16 +210,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
-                     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
+                     * @param _startTimeOffset Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 

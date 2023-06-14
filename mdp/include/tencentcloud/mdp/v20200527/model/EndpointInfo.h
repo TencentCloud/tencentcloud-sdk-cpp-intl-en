@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Endpoint name.
                      * @return Name Endpoint name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Endpoint name.
-                     * @param Name Endpoint name.
+                     * @param _name Endpoint name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Endpoint URL.
                      * @return Url Endpoint URL.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Endpoint URL.
-                     * @param Url Endpoint URL.
+                     * @param _url Endpoint URL.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Endpoint authentication information.
                      * @return AuthInfo Endpoint authentication information.
+                     * 
                      */
                     EndpointAuthInfo GetAuthInfo() const;
 
                     /**
                      * 设置Endpoint authentication information.
-                     * @param AuthInfo Endpoint authentication information.
+                     * @param _authInfo Endpoint authentication information.
+                     * 
                      */
                     void SetAuthInfo(const EndpointAuthInfo& _authInfo);
 
                     /**
                      * 判断参数 AuthInfo 是否已赋值
                      * @return AuthInfo 是否已赋值
+                     * 
                      */
                     bool AuthInfoHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the proxy
                      * @return ProxyId ID of the proxy
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 

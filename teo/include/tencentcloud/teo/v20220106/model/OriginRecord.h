@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Record value
                      * @return Record Record value
+                     * 
                      */
                     std::string GetRecord() const;
 
                     /**
                      * 设置Record value
-                     * @param Record Record value
+                     * @param _record Record value
+                     * 
                      */
                     void SetRecord(const std::string& _record);
 
                     /**
                      * 判断参数 Record 是否已赋值
                      * @return Record 是否已赋值
+                     * 
                      */
                     bool RecordHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 The default region when `Type` is not specified.
                      * @return Area A specific region when `Type=area`.
 The default region when `Type` is not specified.
+                     * 
                      */
                     std::vector<std::string> GetArea() const;
 
                     /**
                      * 设置A specific region when `Type=area`.
 The default region when `Type` is not specified.
-                     * @param Area A specific region when `Type=area`.
+                     * @param _area A specific region when `Type=area`.
 The default region when `Type` is not specified.
+                     * 
                      */
                     void SetArea(const std::vector<std::string>& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -94,6 +100,7 @@ The total weight of multiple origins in an origin group should be 100.
                      * @return Weight A specific weight when `Type=weight`.
 The value range is [1-100].
 The total weight of multiple origins in an origin group should be 100.
+                     * 
                      */
                     uint64_t GetWeight() const;
 
@@ -101,51 +108,59 @@ The total weight of multiple origins in an origin group should be 100.
                      * 设置A specific weight when `Type=weight`.
 The value range is [1-100].
 The total weight of multiple origins in an origin group should be 100.
-                     * @param Weight A specific weight when `Type=weight`.
+                     * @param _weight A specific weight when `Type=weight`.
 The value range is [1-100].
 The total weight of multiple origins in an origin group should be 100.
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 
                     /**
                      * 获取Port
                      * @return Port Port
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Port
-                     * @param Port Port
+                     * @param _port Port
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Record ID
                      * @return RecordId Record ID
+                     * 
                      */
                     std::string GetRecordId() const;
 
                     /**
                      * 设置Record ID
-                     * @param RecordId Record ID
+                     * @param _recordId Record ID
+                     * 
                      */
                     void SetRecordId(const std::string& _recordId);
 
                     /**
                      * 判断参数 RecordId 是否已赋值
                      * @return RecordId 是否已赋值
+                     * 
                      */
                     bool RecordIdHasBeenSet() const;
 
@@ -156,6 +171,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Private Specifies whether to run private origin authentication.
 It is valid only when `OriginType=third_part`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetPrivate() const;
 
@@ -163,15 +179,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Specifies whether to run private origin authentication.
 It is valid only when `OriginType=third_part`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Private Specifies whether to run private origin authentication.
+                     * @param _private Specifies whether to run private origin authentication.
 It is valid only when `OriginType=third_part`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPrivate(const bool& _private);
 
                     /**
                      * 判断参数 Private 是否已赋值
                      * @return Private 是否已赋值
+                     * 
                      */
                     bool PrivateHasBeenSet() const;
 
@@ -182,6 +200,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return PrivateParameter Private origin parameter.
 It is valid only when `Private=true`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<OriginRecordPrivateParameter> GetPrivateParameter() const;
 
@@ -189,33 +208,38 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Private origin parameter.
 It is valid only when `Private=true`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PrivateParameter Private origin parameter.
+                     * @param _privateParameter Private origin parameter.
 It is valid only when `Private=true`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPrivateParameter(const std::vector<OriginRecordPrivateParameter>& _privateParameter);
 
                     /**
                      * 判断参数 PrivateParameter 是否已赋值
                      * @return PrivateParameter 是否已赋值
+                     * 
                      */
                     bool PrivateParameterHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Proto 
+                     * 
                      */
                     std::string GetProto() const;
 
                     /**
                      * 设置
-                     * @param Proto 
+                     * @param _proto 
+                     * 
                      */
                     void SetProto(const std::string& _proto);
 
                     /**
                      * 判断参数 Proto 是否已赋值
                      * @return Proto 是否已赋值
+                     * 
                      */
                     bool ProtoHasBeenSet() const;
 

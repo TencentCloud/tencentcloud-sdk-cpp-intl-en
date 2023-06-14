@@ -50,12 +50,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ServiceAccounts ServiceAccount authentication configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     ServiceAccountAuthenticationOptions GetServiceAccounts() const;
 
                     /**
                      * 判断参数 ServiceAccounts 是否已赋值
                      * @return ServiceAccounts 是否已赋值
+                     * 
                      */
                     bool ServiceAccountsHasBeenSet() const;
 
@@ -64,12 +66,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return LatestOperationState Result of the last modification. Values: `Updating`, `Success`, `Failed` or `TimeOut`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLatestOperationState() const;
 
                     /**
                      * 判断参数 LatestOperationState 是否已赋值
                      * @return LatestOperationState 是否已赋值
+                     * 
                      */
                     bool LatestOperationStateHasBeenSet() const;
 
@@ -78,12 +82,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OIDCConfig OIDC authentication configurations
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     OIDCConfigAuthenticationOptions GetOIDCConfig() const;
 
                     /**
                      * 判断参数 OIDCConfig 是否已赋值
                      * @return OIDCConfig 是否已赋值
+                     * 
                      */
                     bool OIDCConfigHasBeenSet() const;
 

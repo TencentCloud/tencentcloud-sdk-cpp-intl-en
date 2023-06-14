@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the NAT gateway, such as `nat-df45454`.
                      * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The ID of the NAT gateway, such as `nat-df45454`.
-                     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * @param _natGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The port forwarding rule of the source NAT gateway.
                      * @return SourceNatRule The port forwarding rule of the source NAT gateway.
+                     * 
                      */
                     DestinationIpPortTranslationNatRule GetSourceNatRule() const;
 
                     /**
                      * 设置The port forwarding rule of the source NAT gateway.
-                     * @param SourceNatRule The port forwarding rule of the source NAT gateway.
+                     * @param _sourceNatRule The port forwarding rule of the source NAT gateway.
+                     * 
                      */
                     void SetSourceNatRule(const DestinationIpPortTranslationNatRule& _sourceNatRule);
 
                     /**
                      * 判断参数 SourceNatRule 是否已赋值
                      * @return SourceNatRule 是否已赋值
+                     * 
                      */
                     bool SourceNatRuleHasBeenSet() const;
 
                     /**
                      * 获取The port forwarding rule of the destination NAT gateway.
                      * @return DestinationNatRule The port forwarding rule of the destination NAT gateway.
+                     * 
                      */
                     DestinationIpPortTranslationNatRule GetDestinationNatRule() const;
 
                     /**
                      * 设置The port forwarding rule of the destination NAT gateway.
-                     * @param DestinationNatRule The port forwarding rule of the destination NAT gateway.
+                     * @param _destinationNatRule The port forwarding rule of the destination NAT gateway.
+                     * 
                      */
                     void SetDestinationNatRule(const DestinationIpPortTranslationNatRule& _destinationNatRule);
 
                     /**
                      * 判断参数 DestinationNatRule 是否已赋值
                      * @return DestinationNatRule 是否已赋值
+                     * 
                      */
                     bool DestinationNatRuleHasBeenSet() const;
 

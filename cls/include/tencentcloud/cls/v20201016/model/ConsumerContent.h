@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EnableTag Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     bool GetEnableTag() const;
 
                     /**
                      * 设置Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EnableTag Whether to ship tag information
+                     * @param _enableTag Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEnableTag(const bool& _enableTag);
 
                     /**
                      * 判断参数 EnableTag 是否已赋值
                      * @return EnableTag 是否已赋值
+                     * 
                      */
                     bool EnableTagHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetMetaFields() const;
 
                     /**
                      * 设置List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
+                     * @param _metaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetaFields(const std::vector<std::string>& _metaFields);
 
                     /**
                      * 判断参数 MetaFields 是否已赋值
                      * @return MetaFields 是否已赋值
+                     * 
                      */
                     bool MetaFieldsHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     bool GetTagJsonNotTiled() const;
 
                     /**
                      * 设置This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+                     * @param _tagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTagJsonNotTiled(const bool& _tagJsonNotTiled);
 
                     /**
                      * 判断参数 TagJsonNotTiled 是否已赋值
                      * @return TagJsonNotTiled 是否已赋值
+                     * 
                      */
                     bool TagJsonNotTiledHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimestampAccuracy() const;
 
                     /**
                      * 设置Shipping timestamp precision in seconds (default) or milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
+                     * @param _timestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimestampAccuracy(const int64_t& _timestampAccuracy);
 
                     /**
                      * 判断参数 TimestampAccuracy 是否已赋值
                      * @return TimestampAccuracy 是否已赋值
+                     * 
                      */
                     bool TimestampAccuracyHasBeenSet() const;
 

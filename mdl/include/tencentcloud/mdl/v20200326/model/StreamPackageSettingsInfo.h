@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID in StreamPackage
                      * @return Id Channel ID in StreamPackage
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID in StreamPackage
-                     * @param Id Channel ID in StreamPackage
+                     * @param _id Channel ID in StreamPackage
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

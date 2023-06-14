@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster for which you want to enable the VPC-CNI mode
                      * @return ClusterId ID of the cluster for which you want to enable the VPC-CNI mode
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster for which you want to enable the VPC-CNI mode
-                     * @param ClusterId ID of the cluster for which you want to enable the VPC-CNI mode
+                     * @param _clusterId ID of the cluster for which you want to enable the VPC-CNI mode
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

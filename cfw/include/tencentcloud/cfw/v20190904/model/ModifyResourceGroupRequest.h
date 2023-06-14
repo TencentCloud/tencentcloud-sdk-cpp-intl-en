@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Group ID
                      * @return GroupId Group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Group ID
-                     * @param GroupId Group ID
+                     * @param _groupId Group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Group name
                      * @return GroupName Group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Group name
-                     * @param GroupName Group name
+                     * @param _groupName Group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Parent group ID
                      * @return ParentId Parent group ID
+                     * 
                      */
                     std::string GetParentId() const;
 
                     /**
                      * 设置Parent group ID
-                     * @param ParentId Parent group ID
+                     * @param _parentId Parent group ID
+                     * 
                      */
                     void SetParentId(const std::string& _parentId);
 
                     /**
                      * 判断参数 ParentId 是否已赋值
                      * @return ParentId 是否已赋值
+                     * 
                      */
                     bool ParentIdHasBeenSet() const;
 

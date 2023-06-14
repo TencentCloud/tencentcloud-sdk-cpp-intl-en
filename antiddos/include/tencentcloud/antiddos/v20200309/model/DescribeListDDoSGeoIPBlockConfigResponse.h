@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of lists
                      * @return Total Total number of lists
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取List of Anti-DDoS region blocking configurations
                      * @return ConfigList List of Anti-DDoS region blocking configurations
+                     * 
                      */
                     std::vector<DDoSGeoIPBlockConfigRelation> GetConfigList() const;
 
                     /**
                      * 判断参数 ConfigList 是否已赋值
                      * @return ConfigList 是否已赋值
+                     * 
                      */
                     bool ConfigListHasBeenSet() const;
 

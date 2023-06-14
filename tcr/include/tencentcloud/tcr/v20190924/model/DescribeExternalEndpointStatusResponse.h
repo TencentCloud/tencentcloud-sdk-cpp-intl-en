@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Public network access status. Valid values: Opening, Opened, Closed.
                      * @return Status Public network access status. Valid values: Opening, Opened, Closed.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Reason Reason
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 

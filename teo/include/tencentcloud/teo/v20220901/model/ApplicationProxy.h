@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The site name.
                      * @return ZoneName The site name.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置The site name.
-                     * @param ZoneName The site name.
+                     * @param _zoneName The site name.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取The proxy ID.
                      * @return ProxyId The proxy ID.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置The proxy ID.
-                     * @param ProxyId The proxy ID.
+                     * @param _proxyId The proxy ID.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -107,20 +116,23 @@ namespace TencentCloud
 The instance name when `ProxyType=instance`.
                      * @return ProxyName The domain name or subdomain name when `ProxyType=hostname`.
 The instance name when `ProxyType=instance`.
+                     * 
                      */
                     std::string GetProxyName() const;
 
                     /**
                      * 设置The domain name or subdomain name when `ProxyType=hostname`.
 The instance name when `ProxyType=instance`.
-                     * @param ProxyName The domain name or subdomain name when `ProxyType=hostname`.
+                     * @param _proxyName The domain name or subdomain name when `ProxyType=hostname`.
 The instance name when `ProxyType=instance`.
+                     * 
                      */
                     void SetProxyName(const std::string& _proxyName);
 
                     /**
                      * 判断参数 ProxyName 是否已赋值
                      * @return ProxyName 是否已赋值
+                     * 
                      */
                     bool ProxyNameHasBeenSet() const;
 
@@ -131,6 +143,7 @@ The instance name when `ProxyType=instance`.
                      * @return ProxyType The proxy type. Values:
 <li>`hostname`: The proxy is created by subdomain name.</li>
 <li>`instance`: The proxy is created by instance.</li>
+                     * 
                      */
                     std::string GetProxyType() const;
 
@@ -138,15 +151,17 @@ The instance name when `ProxyType=instance`.
                      * 设置The proxy type. Values:
 <li>`hostname`: The proxy is created by subdomain name.</li>
 <li>`instance`: The proxy is created by instance.</li>
-                     * @param ProxyType The proxy type. Values:
+                     * @param _proxyType The proxy type. Values:
 <li>`hostname`: The proxy is created by subdomain name.</li>
 <li>`instance`: The proxy is created by instance.</li>
+                     * 
                      */
                     void SetProxyType(const std::string& _proxyType);
 
                     /**
                      * 判断参数 ProxyType 是否已赋值
                      * @return ProxyType 是否已赋值
+                     * 
                      */
                     bool ProxyTypeHasBeenSet() const;
 
@@ -157,6 +172,7 @@ The instance name when `ProxyType=instance`.
                      * @return PlatType The scheduling mode. Values:
 <li>`ip`: Schedule via Anycast IP.</li>
 <li>`domain`: Schedule via CNAME.</li>
+                     * 
                      */
                     std::string GetPlatType() const;
 
@@ -164,15 +180,17 @@ The instance name when `ProxyType=instance`.
                      * 设置The scheduling mode. Values:
 <li>`ip`: Schedule via Anycast IP.</li>
 <li>`domain`: Schedule via CNAME.</li>
-                     * @param PlatType The scheduling mode. Values:
+                     * @param _platType The scheduling mode. Values:
 <li>`ip`: Schedule via Anycast IP.</li>
 <li>`domain`: Schedule via CNAME.</li>
+                     * 
                      */
                     void SetPlatType(const std::string& _platType);
 
                     /**
                      * 判断参数 PlatType 是否已赋值
                      * @return PlatType 是否已赋值
+                     * 
                      */
                     bool PlatTypeHasBeenSet() const;
 
@@ -185,6 +203,7 @@ Default value: overseas.
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 Default value: overseas.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -193,16 +212,18 @@ Default value: overseas.
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 Default value: overseas.
-                     * @param Area Acceleration region. Values:
+                     * @param _area Acceleration region. Values:
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 Default value: overseas.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -213,6 +234,7 @@ Default value: overseas.
                      * @return SecurityType Whether to enable security protection. Values:
 <li>`0`: Disable security protection.</li>
 <li>`1`: Enable security protection.</li>
+                     * 
                      */
                     int64_t GetSecurityType() const;
 
@@ -220,15 +242,17 @@ Default value: overseas.
                      * 设置Whether to enable security protection. Values:
 <li>`0`: Disable security protection.</li>
 <li>`1`: Enable security protection.</li>
-                     * @param SecurityType Whether to enable security protection. Values:
+                     * @param _securityType Whether to enable security protection. Values:
 <li>`0`: Disable security protection.</li>
 <li>`1`: Enable security protection.</li>
+                     * 
                      */
                     void SetSecurityType(const int64_t& _securityType);
 
                     /**
                      * 判断参数 SecurityType 是否已赋值
                      * @return SecurityType 是否已赋值
+                     * 
                      */
                     bool SecurityTypeHasBeenSet() const;
 
@@ -239,6 +263,7 @@ Default value: overseas.
                      * @return AccelerateType Whether to enable acceleration. Values:
 <li>`0`: Disable acceleration.</li>
 <li>`1`: Enable acceleration.</li>
+                     * 
                      */
                     int64_t GetAccelerateType() const;
 
@@ -246,33 +271,38 @@ Default value: overseas.
                      * 设置Whether to enable acceleration. Values:
 <li>`0`: Disable acceleration.</li>
 <li>`1`: Enable acceleration.</li>
-                     * @param AccelerateType Whether to enable acceleration. Values:
+                     * @param _accelerateType Whether to enable acceleration. Values:
 <li>`0`: Disable acceleration.</li>
 <li>`1`: Enable acceleration.</li>
+                     * 
                      */
                     void SetAccelerateType(const int64_t& _accelerateType);
 
                     /**
                      * 判断参数 AccelerateType 是否已赋值
                      * @return AccelerateType 是否已赋值
+                     * 
                      */
                     bool AccelerateTypeHasBeenSet() const;
 
                     /**
                      * 获取The session persistence duration.
                      * @return SessionPersistTime The session persistence duration.
+                     * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
                      * 设置The session persistence duration.
-                     * @param SessionPersistTime The session persistence duration.
+                     * @param _sessionPersistTime The session persistence duration.
+                     * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
 
                     /**
                      * 判断参数 SessionPersistTime 是否已赋值
                      * @return SessionPersistTime 是否已赋值
+                     * 
                      */
                     bool SessionPersistTimeHasBeenSet() const;
 
@@ -289,6 +319,7 @@ Default value: overseas.
 <li>`progress`: Deploying</li>
 <li>`stopping`: Disabling</li>
 <li>`fail`: Failed to deploy or disable</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -299,18 +330,20 @@ Default value: overseas.
 <li>`progress`: Deploying</li>
 <li>`stopping`: Disabling</li>
 <li>`fail`: Failed to deploy or disable</li>
-                     * @param Status The rule status. Values:
+                     * @param _status The rule status. Values:
 <li>`online`: Enabled</li>
 <li>`offline`: Disabled</li>
 <li>`progress`: Deploying</li>
 <li>`stopping`: Disabling</li>
 <li>`fail`: Failed to deploy or disable</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -325,6 +358,7 @@ Default value: overseas.
 <li>`banning`: Blocking</li>
 <li>`recover`: Unblocked</li>
 <li>`recovering`: Unblocking</li>
+                     * 
                      */
                     std::string GetBanStatus() const;
 
@@ -334,35 +368,40 @@ Default value: overseas.
 <li>`banning`: Blocking</li>
 <li>`recover`: Unblocked</li>
 <li>`recovering`: Unblocking</li>
-                     * @param BanStatus The blocking status of the proxy. Values:
+                     * @param _banStatus The blocking status of the proxy. Values:
 <li>`banned`: Blocked</li>
 <li>`banning`: Blocking</li>
 <li>`recover`: Unblocked</li>
 <li>`recovering`: Unblocking</li>
+                     * 
                      */
                     void SetBanStatus(const std::string& _banStatus);
 
                     /**
                      * 判断参数 BanStatus 是否已赋值
                      * @return BanStatus 是否已赋值
+                     * 
                      */
                     bool BanStatusHasBeenSet() const;
 
                     /**
                      * 获取Scheduling information.
                      * @return ScheduleValue Scheduling information.
+                     * 
                      */
                     std::vector<std::string> GetScheduleValue() const;
 
                     /**
                      * 设置Scheduling information.
-                     * @param ScheduleValue Scheduling information.
+                     * @param _scheduleValue Scheduling information.
+                     * 
                      */
                     void SetScheduleValue(const std::vector<std::string>& _scheduleValue);
 
                     /**
                      * 判断参数 ScheduleValue 是否已赋值
                      * @return ScheduleValue 是否已赋值
+                     * 
                      */
                     bool ScheduleValueHasBeenSet() const;
 
@@ -371,74 +410,86 @@ Default value: overseas.
 This field indicates the unique ID of the subdomain name.
                      * @return HostId When `ProxyType=hostname`:
 This field indicates the unique ID of the subdomain name.
+                     * 
                      */
                     std::string GetHostId() const;
 
                     /**
                      * 设置When `ProxyType=hostname`:
 This field indicates the unique ID of the subdomain name.
-                     * @param HostId When `ProxyType=hostname`:
+                     * @param _hostId When `ProxyType=hostname`:
 This field indicates the unique ID of the subdomain name.
+                     * 
                      */
                     void SetHostId(const std::string& _hostId);
 
                     /**
                      * 判断参数 HostId 是否已赋值
                      * @return HostId 是否已赋值
+                     * 
                      */
                     bool HostIdHasBeenSet() const;
 
                     /**
                      * 获取The IPv6 access configuration.
                      * @return Ipv6 The IPv6 access configuration.
+                     * 
                      */
                     Ipv6 GetIpv6() const;
 
                     /**
                      * 设置The IPv6 access configuration.
-                     * @param Ipv6 The IPv6 access configuration.
+                     * @param _ipv6 The IPv6 access configuration.
+                     * 
                      */
                     void SetIpv6(const Ipv6& _ipv6);
 
                     /**
                      * 判断参数 Ipv6 是否已赋值
                      * @return Ipv6 是否已赋值
+                     * 
                      */
                     bool Ipv6HasBeenSet() const;
 
                     /**
                      * 获取The update time.
                      * @return UpdateTime The update time.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The update time.
-                     * @param UpdateTime The update time.
+                     * @param _updateTime The update time.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取List of rules.
                      * @return ApplicationProxyRules List of rules.
+                     * 
                      */
                     std::vector<ApplicationProxyRule> GetApplicationProxyRules() const;
 
                     /**
                      * 设置List of rules.
-                     * @param ApplicationProxyRules List of rules.
+                     * @param _applicationProxyRules List of rules.
+                     * 
                      */
                     void SetApplicationProxyRules(const std::vector<ApplicationProxyRule>& _applicationProxyRules);
 
                     /**
                      * 判断参数 ApplicationProxyRules 是否已赋值
                      * @return ApplicationProxyRules 是否已赋值
+                     * 
                      */
                     bool ApplicationProxyRulesHasBeenSet() const;
 

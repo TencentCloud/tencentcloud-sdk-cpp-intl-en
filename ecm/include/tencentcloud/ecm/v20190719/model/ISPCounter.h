@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取ISP name
                      * @return ProviderName ISP name
+                     * 
                      */
                     std::string GetProviderName() const;
 
                     /**
                      * 设置ISP name
-                     * @param ProviderName ISP name
+                     * @param _providerName ISP name
+                     * 
                      */
                     void SetProviderName(const std::string& _providerName);
 
                     /**
                      * 判断参数 ProviderName 是否已赋值
                      * @return ProviderName 是否已赋值
+                     * 
                      */
                     bool ProviderNameHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes
                      * @return ProviderNodeNum Number of nodes
+                     * 
                      */
                     int64_t GetProviderNodeNum() const;
 
                     /**
                      * 设置Number of nodes
-                     * @param ProviderNodeNum Number of nodes
+                     * @param _providerNodeNum Number of nodes
+                     * 
                      */
                     void SetProviderNodeNum(const int64_t& _providerNodeNum);
 
                     /**
                      * 判断参数 ProviderNodeNum 是否已赋值
                      * @return ProviderNodeNum 是否已赋值
+                     * 
                      */
                     bool ProviderNodeNumHasBeenSet() const;
 
                     /**
                      * 获取Number of instances
                      * @return ProvederInstanceNum Number of instances
+                     * 
                      */
                     int64_t GetProvederInstanceNum() const;
 
                     /**
                      * 设置Number of instances
-                     * @param ProvederInstanceNum Number of instances
+                     * @param _provederInstanceNum Number of instances
+                     * 
                      */
                     void SetProvederInstanceNum(const int64_t& _provederInstanceNum);
 
                     /**
                      * 判断参数 ProvederInstanceNum 是否已赋值
                      * @return ProvederInstanceNum 是否已赋值
+                     * 
                      */
                     bool ProvederInstanceNumHasBeenSet() const;
 
                     /**
                      * 获取Zone instance information structure array
                      * @return ZoneInstanceInfoSet Zone instance information structure array
+                     * 
                      */
                     std::vector<ZoneInstanceInfo> GetZoneInstanceInfoSet() const;
 
                     /**
                      * 设置Zone instance information structure array
-                     * @param ZoneInstanceInfoSet Zone instance information structure array
+                     * @param _zoneInstanceInfoSet Zone instance information structure array
+                     * 
                      */
                     void SetZoneInstanceInfoSet(const std::vector<ZoneInstanceInfo>& _zoneInstanceInfoSet);
 
                     /**
                      * 判断参数 ZoneInstanceInfoSet 是否已赋值
                      * @return ZoneInstanceInfoSet 是否已赋值
+                     * 
                      */
                     bool ZoneInstanceInfoSetHasBeenSet() const;
 

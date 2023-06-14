@@ -48,126 +48,147 @@ namespace TencentCloud
                     /**
                      * 获取ID of the data migration task to be modified
                      * @return JobId ID of the data migration task to be modified
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置ID of the data migration task to be modified
-                     * @param JobId ID of the data migration task to be modified
+                     * @param _jobId ID of the data migration task to be modified
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Data migration task name
                      * @return JobName Data migration task name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Data migration task name
-                     * @param JobName Data migration task name
+                     * @param _jobName Data migration task name
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Migration task configuration options
                      * @return MigrateOption Migration task configuration options
+                     * 
                      */
                     MigrateOption GetMigrateOption() const;
 
                     /**
                      * 设置Migration task configuration options
-                     * @param MigrateOption Migration task configuration options
+                     * @param _migrateOption Migration task configuration options
+                     * 
                      */
                     void SetMigrateOption(const MigrateOption& _migrateOption);
 
                     /**
                      * 判断参数 MigrateOption 是否已赋值
                      * @return MigrateOption 是否已赋值
+                     * 
                      */
                     bool MigrateOptionHasBeenSet() const;
 
                     /**
                      * 获取Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
                      * @return SrcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
+                     * 
                      */
                     std::string GetSrcAccessType() const;
 
                     /**
                      * 设置Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
-                     * @param SrcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
+                     * @param _srcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance)
+                     * 
                      */
                     void SetSrcAccessType(const std::string& _srcAccessType);
 
                     /**
                      * 判断参数 SrcAccessType 是否已赋值
                      * @return SrcAccessType 是否已赋值
+                     * 
                      */
                     bool SrcAccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance information, which is correlated with the migration task type
                      * @return SrcInfo Source instance information, which is correlated with the migration task type
+                     * 
                      */
                     SrcInfo GetSrcInfo() const;
 
                     /**
                      * 设置Source instance information, which is correlated with the migration task type
-                     * @param SrcInfo Source instance information, which is correlated with the migration task type
+                     * @param _srcInfo Source instance information, which is correlated with the migration task type
+                     * 
                      */
                     void SetSrcInfo(const SrcInfo& _srcInfo);
 
                     /**
                      * 判断参数 SrcInfo 是否已赋值
                      * @return SrcInfo 是否已赋值
+                     * 
                      */
                     bool SrcInfoHasBeenSet() const;
 
                     /**
                      * 获取Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
                      * @return DstAccessType Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
+                     * 
                      */
                     std::string GetDstAccessType() const;
 
                     /**
                      * 设置Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
-                     * @param DstAccessType Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
+                     * @param _dstAccessType Target instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance). Currently, only `cdb` is supported
+                     * 
                      */
                     void SetDstAccessType(const std::string& _dstAccessType);
 
                     /**
                      * 判断参数 DstAccessType 是否已赋值
                      * @return DstAccessType 是否已赋值
+                     * 
                      */
                     bool DstAccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Target instance information. The region where the target instance is located cannot be modified.
                      * @return DstInfo Target instance information. The region where the target instance is located cannot be modified.
+                     * 
                      */
                     DstInfo GetDstInfo() const;
 
                     /**
                      * 设置Target instance information. The region where the target instance is located cannot be modified.
-                     * @param DstInfo Target instance information. The region where the target instance is located cannot be modified.
+                     * @param _dstInfo Target instance information. The region where the target instance is located cannot be modified.
+                     * 
                      */
                     void SetDstInfo(const DstInfo& _dstInfo);
 
                     /**
                      * 判断参数 DstInfo 是否已赋值
                      * @return DstInfo 是否已赋值
+                     * 
                      */
                     bool DstInfoHasBeenSet() const;
 
@@ -188,6 +209,7 @@ For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 This field does not need to be set when the entire instance is to be migrated
+                     * 
                      */
                     std::string GetDatabaseInfo() const;
 
@@ -200,7 +222,7 @@ For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 This field does not need to be set when the entire instance is to be migrated
-                     * @param DatabaseInfo When migrating the specified table, you need to set the information of the source database table to be migrated, which should be described in JSON string format. Below are examples.
+                     * @param _databaseInfo When migrating the specified table, you need to set the information of the source database table to be migrated, which should be described in JSON string format. Below are examples.
 
 For databases with a database-table structure:
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
@@ -208,48 +230,56 @@ For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 This field does not need to be set when the entire instance is to be migrated
+                     * 
                      */
                     void SetDatabaseInfo(const std::string& _databaseInfo);
 
                     /**
                      * 判断参数 DatabaseInfo 是否已赋值
                      * @return DatabaseInfo 是否已赋值
+                     * 
                      */
                     bool DatabaseInfoHasBeenSet() const;
 
                     /**
                      * 获取Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
                      * @return SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * 
                      */
                     std::string GetSrcNodeType() const;
 
                     /**
                      * 设置Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
-                     * @param SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * @param _srcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * 
                      */
                     void SetSrcNodeType(const std::string& _srcNodeType);
 
                     /**
                      * 判断参数 SrcNodeType 是否已赋值
                      * @return SrcNodeType 是否已赋值
+                     * 
                      */
                     bool SrcNodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance information, which is correlated with the migration task type.
                      * @return SrcInfoMulti Source instance information, which is correlated with the migration task type.
+                     * 
                      */
                     std::vector<SrcInfo> GetSrcInfoMulti() const;
 
                     /**
                      * 设置Source instance information, which is correlated with the migration task type.
-                     * @param SrcInfoMulti Source instance information, which is correlated with the migration task type.
+                     * @param _srcInfoMulti Source instance information, which is correlated with the migration task type.
+                     * 
                      */
                     void SetSrcInfoMulti(const std::vector<SrcInfo>& _srcInfoMulti);
 
                     /**
                      * 判断参数 SrcInfoMulti 是否已赋值
                      * @return SrcInfoMulti 是否已赋值
+                     * 
                      */
                     bool SrcInfoMultiHasBeenSet() const;
 

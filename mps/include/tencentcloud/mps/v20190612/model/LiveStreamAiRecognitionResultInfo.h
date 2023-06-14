@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Content recognition result list.
                      * @return ResultSet Content recognition result list.
+                     * 
                      */
                     std::vector<LiveStreamAiRecognitionResultItem> GetResultSet() const;
 
                     /**
                      * 设置Content recognition result list.
-                     * @param ResultSet Content recognition result list.
+                     * @param _resultSet Content recognition result list.
+                     * 
                      */
                     void SetResultSet(const std::vector<LiveStreamAiRecognitionResultItem>& _resultSet);
 
                     /**
                      * 判断参数 ResultSet 是否已赋值
                      * @return ResultSet 是否已赋值
+                     * 
                      */
                     bool ResultSetHasBeenSet() const;
 

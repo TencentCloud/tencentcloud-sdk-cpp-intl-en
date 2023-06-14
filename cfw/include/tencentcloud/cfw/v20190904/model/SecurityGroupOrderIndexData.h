@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Current priority of enterprise security group rules
                      * @return OrderIndex Current priority of enterprise security group rules
+                     * 
                      */
                     uint64_t GetOrderIndex() const;
 
                     /**
                      * 设置Current priority of enterprise security group rules
-                     * @param OrderIndex Current priority of enterprise security group rules
+                     * @param _orderIndex Current priority of enterprise security group rules
+                     * 
                      */
                     void SetOrderIndex(const uint64_t& _orderIndex);
 
                     /**
                      * 判断参数 OrderIndex 是否已赋值
                      * @return OrderIndex 是否已赋值
+                     * 
                      */
                     bool OrderIndexHasBeenSet() const;
 
                     /**
                      * 获取New priority of enterprise security group rules
                      * @return NewOrderIndex New priority of enterprise security group rules
+                     * 
                      */
                     uint64_t GetNewOrderIndex() const;
 
                     /**
                      * 设置New priority of enterprise security group rules
-                     * @param NewOrderIndex New priority of enterprise security group rules
+                     * @param _newOrderIndex New priority of enterprise security group rules
+                     * 
                      */
                     void SetNewOrderIndex(const uint64_t& _newOrderIndex);
 
                     /**
                      * 判断参数 NewOrderIndex 是否已赋值
                      * @return NewOrderIndex 是否已赋值
+                     * 
                      */
                     bool NewOrderIndexHasBeenSet() const;
 

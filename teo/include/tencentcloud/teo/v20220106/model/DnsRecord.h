@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Record ID
                      * @return Id Record ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Record ID
-                     * @param Id Record ID
+                     * @param _id Record ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Record type
                      * @return Type Record type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Record type
-                     * @param Type Record type
+                     * @param _type Record type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Host record
                      * @return Name Host record
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Host record
-                     * @param Name Host record
+                     * @param _name Host record
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Record value
                      * @return Content Record value
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Record value
-                     * @param Content Record value
+                     * @param _content Record value
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Proxy mode
                      * @return Mode Proxy mode
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Proxy mode
-                     * @param Mode Proxy mode
+                     * @param _mode Proxy mode
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取TTL value
                      * @return Ttl TTL value
+                     * 
                      */
                     int64_t GetTtl() const;
 
                     /**
                      * 设置TTL value
-                     * @param Ttl TTL value
+                     * @param _ttl TTL value
+                     * 
                      */
                     void SetTtl(const int64_t& _ttl);
 
                     /**
                      * 判断参数 Ttl 是否已赋值
                      * @return Ttl 是否已赋值
+                     * 
                      */
                     bool TtlHasBeenSet() const;
 
@@ -159,110 +177,128 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Priority Priority
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 设置Priority
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Priority Priority
+                     * @param _priority Priority
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPriority(const int64_t& _priority);
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreatedOn Creation time
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreatedOn Creation time
+                     * @param _createdOn Creation time
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModifiedOn Modification time
+                     * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
                      * 设置Modification time
-                     * @param ModifiedOn Modification time
+                     * @param _modifiedOn Modification time
+                     * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
 
                     /**
                      * 判断参数 ModifiedOn 是否已赋值
                      * @return ModifiedOn 是否已赋值
+                     * 
                      */
                     bool ModifiedOnHasBeenSet() const;
 
                     /**
                      * 获取Domain name lock
                      * @return Locked Domain name lock
+                     * 
                      */
                     bool GetLocked() const;
 
                     /**
                      * 设置Domain name lock
-                     * @param Locked Domain name lock
+                     * @param _locked Domain name lock
+                     * 
                      */
                     void SetLocked(const bool& _locked);
 
                     /**
                      * 判断参数 Locked 是否已赋值
                      * @return Locked 是否已赋值
+                     * 
                      */
                     bool LockedHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Site name
                      * @return ZoneName Site name
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置Site name
-                     * @param ZoneName Site name
+                     * @param _zoneName Site name
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
@@ -273,6 +309,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Status Resolution status
 `active`: Activated
 `pending`: Not activated
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -280,15 +317,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Resolution status
 `active`: Activated
 `pending`: Not activated
-                     * @param Status Resolution status
+                     * @param _status Resolution status
 `active`: Activated
 `pending`: Not activated
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -297,20 +336,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Cname CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Cname CNAME address
+                     * @param _cname CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 
@@ -325,6 +367,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `security`: Security acceleration
 - `l4`: L4 proxy
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetDomainStatus() const;
 
@@ -334,17 +377,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - `security`: Security acceleration
 - `l4`: L4 proxy
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DomainStatus Which service is enabled for the domain name.
+                     * @param _domainStatus Which service is enabled for the domain name.
 - `lb`: Load balancing
 - `security`: Security acceleration
 - `l4`: L4 proxy
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomainStatus(const std::vector<std::string>& _domainStatus);
 
                     /**
                      * 判断参数 DomainStatus 是否已赋值
                      * @return DomainStatus 是否已赋值
+                     * 
                      */
                     bool DomainStatusHasBeenSet() const;
 

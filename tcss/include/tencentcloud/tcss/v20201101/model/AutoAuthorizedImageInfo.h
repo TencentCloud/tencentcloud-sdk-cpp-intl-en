@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Licensing time
                      * @return AuthorizedTime Licensing time
+                     * 
                      */
                     std::string GetAuthorizedTime() const;
 
                     /**
                      * 设置Licensing time
-                     * @param AuthorizedTime Licensing time
+                     * @param _authorizedTime Licensing time
+                     * 
                      */
                     void SetAuthorizedTime(const std::string& _authorizedTime);
 
                     /**
                      * 判断参数 AuthorizedTime 是否已赋值
                      * @return AuthorizedTime 是否已赋值
+                     * 
                      */
                     bool AuthorizedTimeHasBeenSet() const;
 
                     /**
                      * 获取Licensing result. Valid values: `SUCCESS` (success); `REACH_LIMIT` (reaching the upper limit on licenses); `LICENSE_INSUFFICIENT` (insufficient licenses).
                      * @return Status Licensing result. Valid values: `SUCCESS` (success); `REACH_LIMIT` (reaching the upper limit on licenses); `LICENSE_INSUFFICIENT` (insufficient licenses).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Licensing result. Valid values: `SUCCESS` (success); `REACH_LIMIT` (reaching the upper limit on licenses); `LICENSE_INSUFFICIENT` (insufficient licenses).
-                     * @param Status Licensing result. Valid values: `SUCCESS` (success); `REACH_LIMIT` (reaching the upper limit on licenses); `LICENSE_INSUFFICIENT` (insufficient licenses).
+                     * @param _status Licensing result. Valid values: `SUCCESS` (success); `REACH_LIMIT` (reaching the upper limit on licenses); `LICENSE_INSUFFICIENT` (insufficient licenses).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Whether it is licensed. Valid values: `1` (yes); `0` (no).
                      * @return IsAuthorized Whether it is licensed. Valid values: `1` (yes); `0` (no).
+                     * 
                      */
                     uint64_t GetIsAuthorized() const;
 
                     /**
                      * 设置Whether it is licensed. Valid values: `1` (yes); `0` (no).
-                     * @param IsAuthorized Whether it is licensed. Valid values: `1` (yes); `0` (no).
+                     * @param _isAuthorized Whether it is licensed. Valid values: `1` (yes); `0` (no).
+                     * 
                      */
                     void SetIsAuthorized(const uint64_t& _isAuthorized);
 
                     /**
                      * 判断参数 IsAuthorized 是否已赋值
                      * @return IsAuthorized 是否已赋值
+                     * 
                      */
                     bool IsAuthorizedHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Queries whether a connection with the specified configuration can be created. 1: yes; 0: no.
                      * @return CheckFlag Queries whether a connection with the specified configuration can be created. 1: yes; 0: no.
+                     * 
                      */
                     uint64_t GetCheckFlag() const;
 
                     /**
                      * 判断参数 CheckFlag 是否已赋值
                      * @return CheckFlag 是否已赋值
+                     * 
                      */
                     bool CheckFlagHasBeenSet() const;
 

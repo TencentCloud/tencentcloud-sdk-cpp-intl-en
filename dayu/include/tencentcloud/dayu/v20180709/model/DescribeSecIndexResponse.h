@@ -57,36 +57,42 @@ AttackCount: number of attacks
 BlockCount: number of blockings
 MaxMbps: attack bandwidth peak in Mbps
 IpNum: IP statistics
+                     * 
                      */
                     std::vector<KeyValue> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Start time of the current month
                      * @return BeginDate Start time of the current month
+                     * 
                      */
                     std::string GetBeginDate() const;
 
                     /**
                      * 判断参数 BeginDate 是否已赋值
                      * @return BeginDate 是否已赋值
+                     * 
                      */
                     bool BeginDateHasBeenSet() const;
 
                     /**
                      * 获取End time of the current month
                      * @return EndDate End time of the current month
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 

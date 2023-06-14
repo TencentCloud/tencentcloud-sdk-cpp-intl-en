@@ -71,6 +71,7 @@ You can also specify a status code for querying.
 `4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
 `5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 You can also specify a status code for querying.
+                     * 
                      */
                     std::string GetMetric() const;
 
@@ -86,7 +87,7 @@ You can also specify a status code for querying.
 `4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
 `5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 You can also specify a status code for querying.
-                     * @param Metric Queries by the specified metric:
+                     * @param _metric Queries by the specified metric:
 `flux`: Traffic (in bytes)
 `bandwidth`: Bandwidth (in bps)
 `request`: Number of requests
@@ -97,48 +98,56 @@ You can also specify a status code for querying.
 `4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
 `5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 You can also specify a status code for querying.
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
                     /**
                      * 获取Detailed data combination
                      * @return DetailData Detailed data combination
+                     * 
                      */
                     std::vector<TimestampData> GetDetailData() const;
 
                     /**
                      * 设置Detailed data combination
-                     * @param DetailData Detailed data combination
+                     * @param _detailData Detailed data combination
+                     * 
                      */
                     void SetDetailData(const std::vector<TimestampData>& _detailData);
 
                     /**
                      * 判断参数 DetailData 是否已赋值
                      * @return DetailData 是否已赋值
+                     * 
                      */
                     bool DetailDataHasBeenSet() const;
 
                     /**
                      * 获取Aggregate data combination
                      * @return SummarizedData Aggregate data combination
+                     * 
                      */
                     SummarizedData GetSummarizedData() const;
 
                     /**
                      * 设置Aggregate data combination
-                     * @param SummarizedData Aggregate data combination
+                     * @param _summarizedData Aggregate data combination
+                     * 
                      */
                     void SetSummarizedData(const SummarizedData& _summarizedData);
 
                     /**
                      * 判断参数 SummarizedData 是否已赋值
                      * @return SummarizedData 是否已赋值
+                     * 
                      */
                     bool SummarizedDataHasBeenSet() const;
 

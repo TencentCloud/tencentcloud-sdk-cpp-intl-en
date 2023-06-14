@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Details of the routing policy that has been deleted.
                      * @return RouteSet Details of the routing policy that has been deleted.
+                     * 
                      */
                     std::vector<Route> GetRouteSet() const;
 
                     /**
                      * 判断参数 RouteSet 是否已赋值
                      * @return RouteSet 是否已赋值
+                     * 
                      */
                     bool RouteSetHasBeenSet() const;
 

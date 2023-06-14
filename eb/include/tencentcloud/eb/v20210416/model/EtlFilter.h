@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The syntax is the same as that of `Rule`
                      * @return Filter The syntax is the same as that of `Rule`
+                     * 
                      */
                     std::string GetFilter() const;
 
                     /**
                      * 设置The syntax is the same as that of `Rule`
-                     * @param Filter The syntax is the same as that of `Rule`
+                     * @param _filter The syntax is the same as that of `Rule`
+                     * 
                      */
                     void SetFilter(const std::string& _filter);
 
                     /**
                      * 判断参数 Filter 是否已赋值
                      * @return Filter 是否已赋值
+                     * 
                      */
                     bool FilterHasBeenSet() const;
 

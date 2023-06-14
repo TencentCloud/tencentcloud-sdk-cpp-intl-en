@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID of the read-only instance.
                      * @return RoVpcId VPC ID of the read-only instance.
+                     * 
                      */
                     int64_t GetRoVpcId() const;
 
                     /**
                      * 判断参数 RoVpcId 是否已赋值
                      * @return RoVpcId 是否已赋值
+                     * 
                      */
                     bool RoVpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID of the read-only instance.
                      * @return RoSubnetId Subnet ID of the read-only instance.
+                     * 
                      */
                     int64_t GetRoSubnetId() const;
 
                     /**
                      * 判断参数 RoSubnetId 是否已赋值
                      * @return RoSubnetId 是否已赋值
+                     * 
                      */
                     bool RoSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Private IP address of the read-only instance.
                      * @return RoVip Private IP address of the read-only instance.
+                     * 
                      */
                     std::string GetRoVip() const;
 
                     /**
                      * 判断参数 RoVip 是否已赋值
                      * @return RoVip 是否已赋值
+                     * 
                      */
                     bool RoVipHasBeenSet() const;
 
                     /**
                      * 获取Private port number of the read-only instance.
                      * @return RoVport Private port number of the read-only instance.
+                     * 
                      */
                     int64_t GetRoVport() const;
 
                     /**
                      * 判断参数 RoVport 是否已赋值
                      * @return RoVport 是否已赋值
+                     * 
                      */
                     bool RoVportHasBeenSet() const;
 

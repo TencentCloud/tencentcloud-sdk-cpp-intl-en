@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Database proxy ID
                      * @return ProxyGroupId Database proxy ID
+                     * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
                      * 设置Database proxy ID
-                     * @param ProxyGroupId Database proxy ID
+                     * @param _proxyGroupId Database proxy ID
+                     * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
 
                     /**
                      * 判断参数 ProxyGroupId 是否已赋值
                      * @return ProxyGroupId 是否已赋值
+                     * 
                      */
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Current version of database proxy
                      * @return SrcProxyVersion Current version of database proxy
+                     * 
                      */
                     std::string GetSrcProxyVersion() const;
 
                     /**
                      * 设置Current version of database proxy
-                     * @param SrcProxyVersion Current version of database proxy
+                     * @param _srcProxyVersion Current version of database proxy
+                     * 
                      */
                     void SetSrcProxyVersion(const std::string& _srcProxyVersion);
 
                     /**
                      * 判断参数 SrcProxyVersion 是否已赋值
                      * @return SrcProxyVersion 是否已赋值
+                     * 
                      */
                     bool SrcProxyVersionHasBeenSet() const;
 
                     /**
                      * 获取Target version of database proxy
                      * @return DstProxyVersion Target version of database proxy
+                     * 
                      */
                     std::string GetDstProxyVersion() const;
 
                     /**
                      * 设置Target version of database proxy
-                     * @param DstProxyVersion Target version of database proxy
+                     * @param _dstProxyVersion Target version of database proxy
+                     * 
                      */
                     void SetDstProxyVersion(const std::string& _dstProxyVersion);
 
                     /**
                      * 判断参数 DstProxyVersion 是否已赋值
                      * @return DstProxyVersion 是否已赋值
+                     * 
                      */
                     bool DstProxyVersionHasBeenSet() const;
 
                     /**
                      * 获取Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)
                      * @return UpgradeTime Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)
+                     * 
                      */
                     std::string GetUpgradeTime() const;
 
                     /**
                      * 设置Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)
-                     * @param UpgradeTime Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)
+                     * @param _upgradeTime Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)
+                     * 
                      */
                     void SetUpgradeTime(const std::string& _upgradeTime);
 
                     /**
                      * 判断参数 UpgradeTime 是否已赋值
                      * @return UpgradeTime 是否已赋值
+                     * 
                      */
                     bool UpgradeTimeHasBeenSet() const;
 

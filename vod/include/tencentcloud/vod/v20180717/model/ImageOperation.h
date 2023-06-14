@@ -56,6 +56,7 @@ namespace TencentCloud
                      * @return Type The image processing type. Valid values:
 <li>`Scale`: Scaling</li>
 <li>`CenterCut`: Cropping</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -63,69 +64,80 @@ namespace TencentCloud
                      * 设置The image processing type. Valid values:
 <li>`Scale`: Scaling</li>
 <li>`CenterCut`: Cropping</li>
-                     * @param Type The image processing type. Valid values:
+                     * @param _type The image processing type. Valid values:
 <li>`Scale`: Scaling</li>
 <li>`CenterCut`: Cropping</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The scaling details. This parameter is valid only if `Type` is `Scale`.
                      * @return Scale The scaling details. This parameter is valid only if `Type` is `Scale`.
+                     * 
                      */
                     ImageScale GetScale() const;
 
                     /**
                      * 设置The scaling details. This parameter is valid only if `Type` is `Scale`.
-                     * @param Scale The scaling details. This parameter is valid only if `Type` is `Scale`.
+                     * @param _scale The scaling details. This parameter is valid only if `Type` is `Scale`.
+                     * 
                      */
                     void SetScale(const ImageScale& _scale);
 
                     /**
                      * 判断参数 Scale 是否已赋值
                      * @return Scale 是否已赋值
+                     * 
                      */
                     bool ScaleHasBeenSet() const;
 
                     /**
                      * 获取The cropping details. This parameter is valid only if `Type` is `CenterCut`.
                      * @return CenterCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+                     * 
                      */
                     ImageCenterCut GetCenterCut() const;
 
                     /**
                      * 设置The cropping details. This parameter is valid only if `Type` is `CenterCut`.
-                     * @param CenterCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+                     * @param _centerCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+                     * 
                      */
                     void SetCenterCut(const ImageCenterCut& _centerCut);
 
                     /**
                      * 判断参数 CenterCut 是否已赋值
                      * @return CenterCut 是否已赋值
+                     * 
                      */
                     bool CenterCutHasBeenSet() const;
 
                     /**
                      * 获取Image blurring. This parameter is valid only if `Type` is `Blur`.
                      * @return Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * 
                      */
                     ImageBlur GetBlur() const;
 
                     /**
                      * 设置Image blurring. This parameter is valid only if `Type` is `Blur`.
-                     * @param Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * @param _blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * 
                      */
                     void SetBlur(const ImageBlur& _blur);
 
                     /**
                      * 判断参数 Blur 是否已赋值
                      * @return Blur 是否已赋值
+                     * 
                      */
                     bool BlurHasBeenSet() const;
 

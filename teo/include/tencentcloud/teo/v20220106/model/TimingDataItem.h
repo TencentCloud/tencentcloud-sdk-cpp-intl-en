@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Timestamp Second-level timestamp
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 设置Second-level timestamp
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Timestamp Second-level timestamp
+                     * @param _timestamp Second-level timestamp
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Value Value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetValue() const;
 
                     /**
                      * 设置Value
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Value Value
+                     * @param _value Value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const int64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

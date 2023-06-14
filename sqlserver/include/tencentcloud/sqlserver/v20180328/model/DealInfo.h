@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Order name
                      * @return DealName Order name
+                     * 
                      */
                     std::string GetDealName() const;
 
                     /**
                      * 设置Order name
-                     * @param DealName Order name
+                     * @param _dealName Order name
+                     * 
                      */
                     void SetDealName(const std::string& _dealName);
 
                     /**
                      * 判断参数 DealName 是否已赋值
                      * @return DealName 是否已赋值
+                     * 
                      */
                     bool DealNameHasBeenSet() const;
 
                     /**
                      * 获取Number of items
                      * @return Count Number of items
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of items
-                     * @param Count Number of items
+                     * @param _count Number of items
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取ID of associated flow, which can be used to query the flow execution status
                      * @return FlowId ID of associated flow, which can be used to query the flow execution status
+                     * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 设置ID of associated flow, which can be used to query the flow execution status
-                     * @param FlowId ID of associated flow, which can be used to query the flow execution status
+                     * @param _flowId ID of associated flow, which can be used to query the flow execution status
+                     * 
                      */
                     void SetFlowId(const int64_t& _flowId);
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
                     /**
                      * 获取This field is required only for an order that creates an instance, indicating the ID of the instance created by the order
                      * @return InstanceIdSet This field is required only for an order that creates an instance, indicating the ID of the instance created by the order
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置This field is required only for an order that creates an instance, indicating the ID of the instance created by the order
-                     * @param InstanceIdSet This field is required only for an order that creates an instance, indicating the ID of the instance created by the order
+                     * @param _instanceIdSet This field is required only for an order that creates an instance, indicating the ID of the instance created by the order
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取Account
                      * @return OwnerUin Account
+                     * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
                      * 设置Account
-                     * @param OwnerUin Account
+                     * @param _ownerUin Account
+                     * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
 
                     /**
                      * 判断参数 OwnerUin 是否已赋值
                      * @return OwnerUin 是否已赋值
+                     * 
                      */
                     bool OwnerUinHasBeenSet() const;
 
                     /**
                      * 获取Instance billing type
                      * @return InstanceChargeType Instance billing type
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing type
-                     * @param InstanceChargeType Instance billing type
+                     * @param _instanceChargeType Instance billing type
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 

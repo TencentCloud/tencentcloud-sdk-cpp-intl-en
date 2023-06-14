@@ -46,156 +46,182 @@ namespace TencentCloud
                     /**
                      * 获取Available account balance in cents, which takes the same calculation rules as `RealBalance`, `CreditBalance`, and `RealCreditBalance`.
                      * @return Balance Available account balance in cents, which takes the same calculation rules as `RealBalance`, `CreditBalance`, and `RealCreditBalance`.
+                     * 
                      */
                     int64_t GetBalance() const;
 
                     /**
                      * 判断参数 Balance 是否已赋值
                      * @return Balance 是否已赋值
+                     * 
                      */
                     bool BalanceHasBeenSet() const;
 
                     /**
                      * 获取The UIN to query.
                      * @return Uin The UIN to query.
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取Available account balance in cents, which takes the same calculation rules as `Balance`, `CreditBalance`, and `RealCreditBalance`.
                      * @return RealBalance Available account balance in cents, which takes the same calculation rules as `Balance`, `CreditBalance`, and `RealCreditBalance`.
+                     * 
                      */
                     double GetRealBalance() const;
 
                     /**
                      * 判断参数 RealBalance 是否已赋值
                      * @return RealBalance 是否已赋值
+                     * 
                      */
                     bool RealBalanceHasBeenSet() const;
 
                     /**
                      * 获取Cash account balance in cents. Currently, this field is not applied.
                      * @return CashAccountBalance Cash account balance in cents. Currently, this field is not applied.
+                     * 
                      */
                     double GetCashAccountBalance() const;
 
                     /**
                      * 判断参数 CashAccountBalance 是否已赋值
                      * @return CashAccountBalance 是否已赋值
+                     * 
                      */
                     bool CashAccountBalanceHasBeenSet() const;
 
                     /**
                      * 获取Income account balance in cents. Currently, this field is not applied.
                      * @return IncomeIntoAccountBalance Income account balance in cents. Currently, this field is not applied.
+                     * 
                      */
                     double GetIncomeIntoAccountBalance() const;
 
                     /**
                      * 判断参数 IncomeIntoAccountBalance 是否已赋值
                      * @return IncomeIntoAccountBalance 是否已赋值
+                     * 
                      */
                     bool IncomeIntoAccountBalanceHasBeenSet() const;
 
                     /**
                      * 获取Present account balance in cents. Currently, this field is not applied.
                      * @return PresentAccountBalance Present account balance in cents. Currently, this field is not applied.
+                     * 
                      */
                     double GetPresentAccountBalance() const;
 
                     /**
                      * 判断参数 PresentAccountBalance 是否已赋值
                      * @return PresentAccountBalance 是否已赋值
+                     * 
                      */
                     bool PresentAccountBalanceHasBeenSet() const;
 
                     /**
                      * 获取Frozen amount in cents.
                      * @return FreezeAmount Frozen amount in cents.
+                     * 
                      */
                     double GetFreezeAmount() const;
 
                     /**
                      * 判断参数 FreezeAmount 是否已赋值
                      * @return FreezeAmount 是否已赋值
+                     * 
                      */
                     bool FreezeAmountHasBeenSet() const;
 
                     /**
                      * 获取Overdue amount in cents, which is when the available credit balance is negative.
                      * @return OweAmount Overdue amount in cents, which is when the available credit balance is negative.
+                     * 
                      */
                     double GetOweAmount() const;
 
                     /**
                      * 判断参数 OweAmount 是否已赋值
                      * @return OweAmount 是否已赋值
+                     * 
                      */
                     bool OweAmountHasBeenSet() const;
 
                     /**
                      * 获取Whether overdue payments are allowed. Currently, this field is not applied.
                      * @return IsAllowArrears Whether overdue payments are allowed. Currently, this field is not applied.
+                     * 
                      */
                     bool GetIsAllowArrears() const;
 
                     /**
                      * 判断参数 IsAllowArrears 是否已赋值
                      * @return IsAllowArrears 是否已赋值
+                     * 
                      */
                     bool IsAllowArrearsHasBeenSet() const;
 
                     /**
                      * 获取Whether you have a credit limit. Currently, this field is not applied.
                      * @return IsCreditLimited Whether you have a credit limit. Currently, this field is not applied.
+                     * 
                      */
                     bool GetIsCreditLimited() const;
 
                     /**
                      * 判断参数 IsCreditLimited 是否已赋值
                      * @return IsCreditLimited 是否已赋值
+                     * 
                      */
                     bool IsCreditLimitedHasBeenSet() const;
 
                     /**
                      * 获取Credit limit in cents. Credit limit－available credit balance = consumption amount
                      * @return CreditAmount Credit limit in cents. Credit limit－available credit balance = consumption amount
+                     * 
                      */
                     double GetCreditAmount() const;
 
                     /**
                      * 判断参数 CreditAmount 是否已赋值
                      * @return CreditAmount 是否已赋值
+                     * 
                      */
                     bool CreditAmountHasBeenSet() const;
 
                     /**
                      * 获取Available credit balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `RealCreditBalance`.
                      * @return CreditBalance Available credit balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `RealCreditBalance`.
+                     * 
                      */
                     double GetCreditBalance() const;
 
                     /**
                      * 判断参数 CreditBalance 是否已赋值
                      * @return CreditBalance 是否已赋值
+                     * 
                      */
                     bool CreditBalanceHasBeenSet() const;
 
                     /**
                      * 获取Available account balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `CreditBalance`.
                      * @return RealCreditBalance Available account balance in cents, which takes the same calculation rules as `Balance`, `RealBalance`, and `CreditBalance`.
+                     * 
                      */
                     double GetRealCreditBalance() const;
 
                     /**
                      * 判断参数 RealCreditBalance 是否已赋值
                      * @return RealCreditBalance 是否已赋值
+                     * 
                      */
                     bool RealCreditBalanceHasBeenSet() const;
 

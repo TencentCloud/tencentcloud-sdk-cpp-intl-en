@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Trend of pending escape events
                      * @return List Trend of pending escape events
+                     * 
                      */
                     std::vector<EscapeEventTendencyInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

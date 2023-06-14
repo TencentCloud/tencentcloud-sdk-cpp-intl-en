@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Upper limit for elastic billing. Minimum value: `500`.
                      * @return CoresCnt Upper limit for elastic billing. Minimum value: `500`.
+                     * 
                      */
                     uint64_t GetCoresCnt() const;
 
                     /**
                      * 设置Upper limit for elastic billing. Minimum value: `500`.
-                     * @param CoresCnt Upper limit for elastic billing. Minimum value: `500`.
+                     * @param _coresCnt Upper limit for elastic billing. Minimum value: `500`.
+                     * 
                      */
                     void SetCoresCnt(const uint64_t& _coresCnt);
 
                     /**
                      * 判断参数 CoresCnt 是否已赋值
                      * @return CoresCnt 是否已赋值
+                     * 
                      */
                     bool CoresCntHasBeenSet() const;
 

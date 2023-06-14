@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID.
                      * @return LoadBalancerId CLB instance ID.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID.
-                     * @param LoadBalancerId CLB instance ID.
+                     * @param _loadBalancerId CLB instance ID.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取List of listener IDs (20 IDs at most).
                      * @return ListenerIds List of listener IDs (20 IDs at most).
+                     * 
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
                      * 设置List of listener IDs (20 IDs at most).
-                     * @param ListenerIds List of listener IDs (20 IDs at most).
+                     * @param _listenerIds List of listener IDs (20 IDs at most).
+                     * 
                      */
                     void SetListenerIds(const std::vector<std::string>& _listenerIds);
 
                     /**
                      * 判断参数 ListenerIds 是否已赋值
                      * @return ListenerIds 是否已赋值
+                     * 
                      */
                     bool ListenerIdsHasBeenSet() const;
 
                     /**
                      * 获取Listener protocol type
                      * @return Protocol Listener protocol type
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Listener protocol type
-                     * @param Protocol Listener protocol type
+                     * @param _protocol Listener protocol type
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Listener port
                      * @return Port Listener port
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Listener port
-                     * @param Port Listener port
+                     * @param _port Listener port
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -122,6 +134,7 @@ namespace TencentCloud
                      * @return Filters Query the list of backend services associated with a load balancer
 <li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
 <li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -129,15 +142,17 @@ namespace TencentCloud
                      * 设置Query the list of backend services associated with a load balancer
 <li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
 <li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
-                     * @param Filters Query the list of backend services associated with a load balancer
+                     * @param _filters Query the list of backend services associated with a load balancer
 <li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
 <li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

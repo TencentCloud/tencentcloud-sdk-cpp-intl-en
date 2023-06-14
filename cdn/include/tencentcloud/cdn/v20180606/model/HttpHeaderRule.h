@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取HTTP header setting method. Valid values: `add` (add header), `set` (set header) or `del` (delete header).
                      * @return HeaderMode HTTP header setting method. Valid values: `add` (add header), `set` (set header) or `del` (delete header).
+                     * 
                      */
                     std::string GetHeaderMode() const;
 
                     /**
                      * 设置HTTP header setting method. Valid values: `add` (add header), `set` (set header) or `del` (delete header).
-                     * @param HeaderMode HTTP header setting method. Valid values: `add` (add header), `set` (set header) or `del` (delete header).
+                     * @param _headerMode HTTP header setting method. Valid values: `add` (add header), `set` (set header) or `del` (delete header).
+                     * 
                      */
                     void SetHeaderMode(const std::string& _headerMode);
 
                     /**
                      * 判断参数 HeaderMode 是否已赋值
                      * @return HeaderMode 是否已赋值
+                     * 
                      */
                     bool HeaderModeHasBeenSet() const;
 
                     /**
                      * 获取HTTP header name
                      * @return HeaderName HTTP header name
+                     * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
                      * 设置HTTP header name
-                     * @param HeaderName HTTP header name
+                     * @param _headerName HTTP header name
+                     * 
                      */
                     void SetHeaderName(const std::string& _headerName);
 
                     /**
                      * 判断参数 HeaderName 是否已赋值
                      * @return HeaderName 是否已赋值
+                     * 
                      */
                     bool HeaderNameHasBeenSet() const;
 
                     /**
                      * 获取HTTP header value
                      * @return HeaderValue HTTP header value
+                     * 
                      */
                     std::string GetHeaderValue() const;
 
                     /**
                      * 设置HTTP header value
-                     * @param HeaderValue HTTP header value
+                     * @param _headerValue HTTP header value
+                     * 
                      */
                     void SetHeaderValue(const std::string& _headerValue);
 
                     /**
                      * 判断参数 HeaderValue 是否已赋值
                      * @return HeaderValue 是否已赋值
+                     * 
                      */
                     bool HeaderValueHasBeenSet() const;
 

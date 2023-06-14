@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Project ID.
                      * @return ProjectId Project ID.
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID.
-                     * @param ProjectId Project ID.
+                     * @param _projectId Project ID.
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Project name.
                      * @return ProjectName Project name.
+                     * 
                      */
                     std::string GetProjectName() const;
 
                     /**
                      * 设置Project name.
-                     * @param ProjectName Project name.
+                     * @param _projectName Project name.
+                     * 
                      */
                     void SetProjectName(const std::string& _projectName);
 
                     /**
                      * 判断参数 ProjectName 是否已赋值
                      * @return ProjectName 是否已赋值
+                     * 
                      */
                     bool ProjectNameHasBeenSet() const;
 
                     /**
                      * 获取Creator UIN.
                      * @return CreatorUin Creator UIN.
+                     * 
                      */
                     uint64_t GetCreatorUin() const;
 
                     /**
                      * 设置Creator UIN.
-                     * @param CreatorUin Creator UIN.
+                     * @param _creatorUin Creator UIN.
+                     * 
                      */
                     void SetCreatorUin(const uint64_t& _creatorUin);
 
                     /**
                      * 判断参数 CreatorUin 是否已赋值
                      * @return CreatorUin 是否已赋值
+                     * 
                      */
                     bool CreatorUinHasBeenSet() const;
 
                     /**
                      * 获取Project description.
                      * @return ProjectInfo Project description.
+                     * 
                      */
                     std::string GetProjectInfo() const;
 
                     /**
                      * 设置Project description.
-                     * @param ProjectInfo Project description.
+                     * @param _projectInfo Project description.
+                     * 
                      */
                     void SetProjectInfo(const std::string& _projectInfo);
 
                     /**
                      * 判断参数 ProjectInfo 是否已赋值
                      * @return ProjectInfo 是否已赋值
+                     * 
                      */
                     bool ProjectInfoHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return CreateTime Creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreateTime Creation time.
+                     * @param _createTime Creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

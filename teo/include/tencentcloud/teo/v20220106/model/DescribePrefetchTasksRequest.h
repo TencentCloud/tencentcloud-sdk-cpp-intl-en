@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return JobId Task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Task ID
-                     * @param JobId Task ID
+                     * @param _jobId Task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Start time of the query
                      * @return StartTime Start time of the query
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the query
-                     * @param StartTime Start time of the query
+                     * @param _startTime Start time of the query
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the query
                      * @return EndTime End time of the query
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the query
-                     * @param EndTime End time of the query
+                     * @param _endTime End time of the query
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Offset of the query
                      * @return Offset Offset of the query
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset of the query
-                     * @param Offset Offset of the query
+                     * @param _offset Offset of the query
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of results returned
                      * @return Limit Maximum number of results returned
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of results returned
-                     * @param Limit Maximum number of results returned
+                     * @param _limit Maximum number of results returned
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -137,74 +152,86 @@ namespace TencentCloud
 `processing`, `success`, `failed`, `timeout` and `invalid`
                      * @return Statuses Statuses of tasks to be queried. Values:
 `processing`, `success`, `failed`, `timeout` and `invalid`
+                     * 
                      */
                     std::vector<std::string> GetStatuses() const;
 
                     /**
                      * 设置Statuses of tasks to be queried. Values:
 `processing`, `success`, `failed`, `timeout` and `invalid`
-                     * @param Statuses Statuses of tasks to be queried. Values:
+                     * @param _statuses Statuses of tasks to be queried. Values:
 `processing`, `success`, `failed`, `timeout` and `invalid`
+                     * 
                      */
                     void SetStatuses(const std::vector<std::string>& _statuses);
 
                     /**
                      * 判断参数 Statuses 是否已赋值
                      * @return Statuses 是否已赋值
+                     * 
                      */
                     bool StatusesHasBeenSet() const;
 
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site
-                     * @param ZoneId ID of the site
+                     * @param _zoneId ID of the site
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取List of domain names queried
                      * @return Domains List of domain names queried
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置List of domain names queried
-                     * @param Domains List of domain names queried
+                     * @param _domains List of domain names queried
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Resources queried
                      * @return Target Resources queried
+                     * 
                      */
                     std::string GetTarget() const;
 
                     /**
                      * 设置Resources queried
-                     * @param Target Resources queried
+                     * @param _target Resources queried
+                     * 
                      */
                     void SetTarget(const std::string& _target);
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 

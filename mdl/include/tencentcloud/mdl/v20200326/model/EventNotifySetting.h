@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The callback configuration for push events.
                      * @return PushEventSettings The callback configuration for push events.
+                     * 
                      */
                     PushEventSetting GetPushEventSettings() const;
 
                     /**
                      * 设置The callback configuration for push events.
-                     * @param PushEventSettings The callback configuration for push events.
+                     * @param _pushEventSettings The callback configuration for push events.
+                     * 
                      */
                     void SetPushEventSettings(const PushEventSetting& _pushEventSettings);
 
                     /**
                      * 判断参数 PushEventSettings 是否已赋值
                      * @return PushEventSettings 是否已赋值
+                     * 
                      */
                     bool PushEventSettingsHasBeenSet() const;
 

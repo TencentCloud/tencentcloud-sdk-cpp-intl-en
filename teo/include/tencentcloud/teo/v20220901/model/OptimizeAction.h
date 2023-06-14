@@ -55,6 +55,7 @@ namespace TencentCloud
 <li>`Http2`</li>
 <li>`Http3`</li>
 <li>`Brotli`</li>
+                     * 
                      */
                     std::string GetName() const;
 
@@ -63,70 +64,81 @@ namespace TencentCloud
 <li>`Http2`</li>
 <li>`Http3`</li>
 <li>`Brotli`</li>
-                     * @param Name The optimization metric. Values:
+                     * @param _name The optimization metric. Values:
 <li>`Http2`</li>
 <li>`Http3`</li>
 <li>`Brotli`</li>
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The network environment.
                      * @return Connectivity The network environment.
+                     * 
                      */
                     std::string GetConnectivity() const;
 
                     /**
                      * 设置The network environment.
-                     * @param Connectivity The network environment.
+                     * @param _connectivity The network environment.
+                     * 
                      */
                     void SetConnectivity(const std::string& _connectivity);
 
                     /**
                      * 判断参数 Connectivity 是否已赋值
                      * @return Connectivity 是否已赋值
+                     * 
                      */
                     bool ConnectivityHasBeenSet() const;
 
                     /**
                      * 获取The estimated load time, in milliseconds.
                      * @return Value The estimated load time, in milliseconds.
+                     * 
                      */
                     int64_t GetValue() const;
 
                     /**
                      * 设置The estimated load time, in milliseconds.
-                     * @param Value The estimated load time, in milliseconds.
+                     * @param _value The estimated load time, in milliseconds.
+                     * 
                      */
                     void SetValue(const int64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取The estimated improvement ratio, in %.
                      * @return Ratio The estimated improvement ratio, in %.
+                     * 
                      */
                     int64_t GetRatio() const;
 
                     /**
                      * 设置The estimated improvement ratio, in %.
-                     * @param Ratio The estimated improvement ratio, in %.
+                     * @param _ratio The estimated improvement ratio, in %.
+                     * 
                      */
                     void SetRatio(const int64_t& _ratio);
 
                     /**
                      * 判断参数 Ratio 是否已赋值
                      * @return Ratio 是否已赋值
+                     * 
                      */
                     bool RatioHasBeenSet() const;
 

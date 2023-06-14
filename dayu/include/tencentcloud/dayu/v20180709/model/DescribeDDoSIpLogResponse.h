@@ -47,60 +47,70 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type (`net`: Anti-DDoS Ultimate)
                      * @return Business Anti-DDoS service type (`net`: Anti-DDoS Ultimate)
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Resource IP
                      * @return Ip Resource IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Attack start time
                      * @return StartTime Attack start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Attack end time
                      * @return EndTime Attack end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -111,12 +121,14 @@ If `Key` is `LogMessage`, `Value` indicates the IP log content
                      * @return Data IP attack log, which is a `KeyValue` array. Valid values of `Key-Value`:
 If `Key` is `LogTime`, `Value` indicates the IP log time
 If `Key` is `LogMessage`, `Value` indicates the IP log content
+                     * 
                      */
                     std::vector<KeyValueRecord> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Port
                      * @return Port Port
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Port
-                     * @param Port Port
+                     * @param _port Port
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Weight
                      * @return Weight Weight
+                     * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
                      * 设置Weight
-                     * @param Weight Weight
+                     * @param _weight Weight
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

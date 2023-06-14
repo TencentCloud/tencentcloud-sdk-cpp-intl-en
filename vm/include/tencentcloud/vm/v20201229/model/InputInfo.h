@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Type This field indicates the file access type. Valid values: **URL** (resource link), **COS** (Tencent Cloud COS).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置This field indicates the file access type. Valid values: **URL** (resource link), **COS** (Tencent Cloud COS).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Type This field indicates the file access type. Valid values: **URL** (resource link), **COS** (Tencent Cloud COS).
+                     * @param _type This field indicates the file access type. Valid values: **URL** (resource link), **COS** (Tencent Cloud COS).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Url This field indicates the link address for file access in standard URL format.<br>Note: when `Type` is `URL`, this field will not be empty.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置This field indicates the link address for file access in standard URL format.<br>Note: when `Type` is `URL`, this field will not be empty.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Url This field indicates the link address for file access in standard URL format.<br>Note: when `Type` is `URL`, this field will not be empty.
+                     * @param _url This field indicates the link address for file access in standard URL format.<br>Note: when `Type` is `URL`, this field will not be empty.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BucketInfo This field indicates the Tencent Cloud bucket information for file access.<br>Note: when `Type` is `COS`, this field will not be empty.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBucketInfo() const;
 
                     /**
                      * 设置This field indicates the Tencent Cloud bucket information for file access.<br>Note: when `Type` is `COS`, this field will not be empty.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BucketInfo This field indicates the Tencent Cloud bucket information for file access.<br>Note: when `Type` is `COS`, this field will not be empty.
+                     * @param _bucketInfo This field indicates the Tencent Cloud bucket information for file access.<br>Note: when `Type` is `COS`, this field will not be empty.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBucketInfo(const std::string& _bucketInfo);
 
                     /**
                      * 判断参数 BucketInfo 是否已赋值
                      * @return BucketInfo 是否已赋值
+                     * 
                      */
                     bool BucketInfoHasBeenSet() const;
 

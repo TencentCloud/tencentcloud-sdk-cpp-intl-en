@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Name of the created credential.
                      * @return SecretName Name of the created credential.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error.
 Note: this field may return null, indicating that no valid values can be obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTagCode() const;
 
                     /**
                      * 判断参数 TagCode 是否已赋值
                      * @return TagCode 是否已赋值
+                     * 
                      */
                     bool TagCodeHasBeenSet() const;
 
@@ -76,24 +80,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TagMsg Tag operation return message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTagMsg() const;
 
                     /**
                      * 判断参数 TagMsg 是否已赋值
                      * @return TagMsg 是否已赋值
+                     * 
                      */
                     bool TagMsgHasBeenSet() const;
 
                     /**
                      * 获取ID of the created Tencent Cloud service credential async task.
                      * @return FlowID ID of the created Tencent Cloud service credential async task.
+                     * 
                      */
                     int64_t GetFlowID() const;
 
                     /**
                      * 判断参数 FlowID 是否已赋值
                      * @return FlowID 是否已赋值
+                     * 
                      */
                     bool FlowIDHasBeenSet() const;
 

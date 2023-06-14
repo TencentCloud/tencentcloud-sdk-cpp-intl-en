@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information on an image, including its state and attributes.
                      * @return ImageSet Information on an image, including its state and attributes.
+                     * 
                      */
                     std::vector<Image> GetImageSet() const;
 
                     /**
                      * 判断参数 ImageSet 是否已赋值
                      * @return ImageSet 是否已赋值
+                     * 
                      */
                     bool ImageSetHasBeenSet() const;
 
                     /**
                      * 获取Number of images meeting the filtering conditions.
                      * @return TotalCount Number of images meeting the filtering conditions.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Domains List of domain names connected to CDN
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CertifiedDomains List of CDN domain names with certificates configured
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetCertifiedDomains() const;
 
                     /**
                      * 判断参数 CertifiedDomains 是否已赋值
                      * @return CertifiedDomains 是否已赋值
+                     * 
                      */
                     bool CertifiedDomainsHasBeenSet() const;
 

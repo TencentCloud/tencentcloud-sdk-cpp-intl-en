@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID.
                      * @return ClusterId Cluster ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID.
-                     * @param ClusterId Cluster ID.
+                     * @param _clusterId Cluster ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name.
                      * @return Namespace Namespace name.
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace name.
-                     * @param Namespace Namespace name.
+                     * @param _namespace Namespace name.
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Topic name.
                      * @return Topic Topic name.
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置Topic name.
-                     * @param Topic Topic name.
+                     * @param _topic Topic name.
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 

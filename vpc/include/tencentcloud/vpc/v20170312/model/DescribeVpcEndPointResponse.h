@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Endpoint
                      * @return EndPointSet Endpoint
+                     * 
                      */
                     std::vector<EndPoint> GetEndPointSet() const;
 
                     /**
                      * 判断参数 EndPointSet 是否已赋值
                      * @return EndPointSet 是否已赋值
+                     * 
                      */
                     bool EndPointSetHasBeenSet() const;
 
                     /**
                      * 获取Number of matched endpoints
                      * @return TotalCount Number of matched endpoints
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

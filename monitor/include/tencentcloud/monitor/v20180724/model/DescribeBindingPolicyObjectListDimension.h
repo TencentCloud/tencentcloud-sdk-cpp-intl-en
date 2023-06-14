@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Region ID.
                      * @return RegionId Region ID.
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID.
-                     * @param RegionId Region ID.
+                     * @param _regionId Region ID.
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region abbreviation.
                      * @return Region Region abbreviation.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region abbreviation.
-                     * @param Region Region abbreviation.
+                     * @param _region Region abbreviation.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Combined JSON string of dimensions.
                      * @return Dimensions Combined JSON string of dimensions.
+                     * 
                      */
                     std::string GetDimensions() const;
 
                     /**
                      * 设置Combined JSON string of dimensions.
-                     * @param Dimensions Combined JSON string of dimensions.
+                     * @param _dimensions Combined JSON string of dimensions.
+                     * 
                      */
                     void SetDimensions(const std::string& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
                     /**
                      * 获取Combined JSON string of event dimensions.
                      * @return EventDimensions Combined JSON string of event dimensions.
+                     * 
                      */
                     std::string GetEventDimensions() const;
 
                     /**
                      * 设置Combined JSON string of event dimensions.
-                     * @param EventDimensions Combined JSON string of event dimensions.
+                     * @param _eventDimensions Combined JSON string of event dimensions.
+                     * 
                      */
                     void SetEventDimensions(const std::string& _eventDimensions);
 
                     /**
                      * 判断参数 EventDimensions 是否已赋值
                      * @return EventDimensions 是否已赋值
+                     * 
                      */
                     bool EventDimensionsHasBeenSet() const;
 

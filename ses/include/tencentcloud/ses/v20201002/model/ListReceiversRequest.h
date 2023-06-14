@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Offset, starting from 0. The value is an integer.
                      * @return Offset Offset, starting from 0. The value is an integer.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, starting from 0. The value is an integer.
-                     * @param Offset Offset, starting from 0. The value is an integer.
+                     * @param _offset Offset, starting from 0. The value is an integer.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of records to query. The value is an integer not exceeding 100.
                      * @return Limit Number of records to query. The value is an integer not exceeding 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of records to query. The value is an integer not exceeding 100.
-                     * @param Limit Number of records to query. The value is an integer not exceeding 100.
+                     * @param _limit Number of records to query. The value is an integer not exceeding 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Group status (`1`: to be uploaded; `2` uploading; `3` uploaded). To query groups in all states, do not pass in this parameter.
                      * @return Status Group status (`1`: to be uploaded; `2` uploading; `3` uploaded). To query groups in all states, do not pass in this parameter.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Group status (`1`: to be uploaded; `2` uploading; `3` uploaded). To query groups in all states, do not pass in this parameter.
-                     * @param Status Group status (`1`: to be uploaded; `2` uploading; `3` uploaded). To query groups in all states, do not pass in this parameter.
+                     * @param _status Group status (`1`: to be uploaded; `2` uploading; `3` uploaded). To query groups in all states, do not pass in this parameter.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Group name keyword for fuzzy query
                      * @return KeyWord Group name keyword for fuzzy query
+                     * 
                      */
                     std::string GetKeyWord() const;
 
                     /**
                      * 设置Group name keyword for fuzzy query
-                     * @param KeyWord Group name keyword for fuzzy query
+                     * @param _keyWord Group name keyword for fuzzy query
+                     * 
                      */
                     void SetKeyWord(const std::string& _keyWord);
 
                     /**
                      * 判断参数 KeyWord 是否已赋值
                      * @return KeyWord 是否已赋值
+                     * 
                      */
                     bool KeyWordHasBeenSet() const;
 

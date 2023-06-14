@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Tag key.
                      * @return TagKey Tag key.
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key.
-                     * @param TagKey Tag key.
+                     * @param _tagKey Tag key.
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取Tag value.
                      * @return TagValue Tag value.
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value.
-                     * @param TagValue Tag value.
+                     * @param _tagValue Tag value.
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 
                     /**
                      * 获取If deletion is allowed.
                      * @return CanDelete If deletion is allowed.
+                     * 
                      */
                     uint64_t GetCanDelete() const;
 
                     /**
                      * 设置If deletion is allowed.
-                     * @param CanDelete If deletion is allowed.
+                     * @param _canDelete If deletion is allowed.
+                     * 
                      */
                     void SetCanDelete(const uint64_t& _canDelete);
 
                     /**
                      * 判断参数 CanDelete 是否已赋值
                      * @return CanDelete 是否已赋值
+                     * 
                      */
                     bool CanDeleteHasBeenSet() const;
 

@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return FleetAttributes Server fleet attributes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<FleetAttributes> GetFleetAttributes() const;
 
                     /**
                      * 判断参数 FleetAttributes 是否已赋值
                      * @return FleetAttributes 是否已赋值
+                     * 
                      */
                     bool FleetAttributesHasBeenSet() const;
 
                     /**
                      * 获取The number of server fleets
                      * @return TotalCount The number of server fleets
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

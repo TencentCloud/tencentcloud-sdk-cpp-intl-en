@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of sub-user UINs. Up to 50 UINs are supported.
                      * @return FilterSubAccountUin List of sub-user UINs. Up to 50 UINs are supported.
+                     * 
                      */
                     std::vector<uint64_t> GetFilterSubAccountUin() const;
 
                     /**
                      * 设置List of sub-user UINs. Up to 50 UINs are supported.
-                     * @param FilterSubAccountUin List of sub-user UINs. Up to 50 UINs are supported.
+                     * @param _filterSubAccountUin List of sub-user UINs. Up to 50 UINs are supported.
+                     * 
                      */
                     void SetFilterSubAccountUin(const std::vector<uint64_t>& _filterSubAccountUin);
 
                     /**
                      * 判断参数 FilterSubAccountUin 是否已赋值
                      * @return FilterSubAccountUin 是否已赋值
+                     * 
                      */
                     bool FilterSubAccountUinHasBeenSet() const;
 

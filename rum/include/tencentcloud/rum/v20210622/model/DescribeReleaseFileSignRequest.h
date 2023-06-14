@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Timeout period. If it is not set, it will be 5 minutes by default
                      * @return Timeout Timeout period. If it is not set, it will be 5 minutes by default
+                     * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
                      * 设置Timeout period. If it is not set, it will be 5 minutes by default
-                     * @param Timeout Timeout period. If it is not set, it will be 5 minutes by default
+                     * @param _timeout Timeout period. If it is not set, it will be 5 minutes by default
+                     * 
                      */
                     void SetTimeout(const int64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
                      * @return FileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     * 
                      */
                     int64_t GetFileType() const;
 
                     /**
                      * 设置Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
-                     * @param FileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     * @param _fileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     * 
                      */
                     void SetFileType(const int64_t& _fileType);
 
                     /**
                      * 判断参数 FileType 是否已赋值
                      * @return FileType 是否已赋值
+                     * 
                      */
                     bool FileTypeHasBeenSet() const;
 

@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取List of split zones.
                      * @return LineList List of split zones.
+                     * 
                      */
                     std::vector<LineInfo> GetLineList() const;
 
                     /**
                      * 判断参数 LineList 是否已赋值
                      * @return LineList 是否已赋值
+                     * 
                      */
                     bool LineListHasBeenSet() const;
 
                     /**
                      * 获取List of split zone groups.
                      * @return LineGroupList List of split zone groups.
+                     * 
                      */
                     std::vector<LineGroupInfo> GetLineGroupList() const;
 
                     /**
                      * 判断参数 LineGroupList 是否已赋值
                      * @return LineGroupList 是否已赋值
+                     * 
                      */
                     bool LineGroupListHasBeenSet() const;
 

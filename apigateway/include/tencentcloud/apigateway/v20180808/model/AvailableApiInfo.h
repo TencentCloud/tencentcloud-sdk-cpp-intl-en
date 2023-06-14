@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取API ID
                      * @return ApiId API ID
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置API ID
-                     * @param ApiId API ID
+                     * @param _apiId API ID
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
                     /**
                      * 获取API name
                      * @return ApiName API name
+                     * 
                      */
                     std::string GetApiName() const;
 
                     /**
                      * 设置API name
-                     * @param ApiName API name
+                     * @param _apiName API name
+                     * 
                      */
                     void SetApiName(const std::string& _apiName);
 
                     /**
                      * 判断参数 ApiName 是否已赋值
                      * @return ApiName 是否已赋值
+                     * 
                      */
                     bool ApiNameHasBeenSet() const;
 
                     /**
                      * 获取API type
                      * @return ApiType API type
+                     * 
                      */
                     std::string GetApiType() const;
 
                     /**
                      * 设置API type
-                     * @param ApiType API type
+                     * @param _apiType API type
+                     * 
                      */
                     void SetApiType(const std::string& _apiType);
 
                     /**
                      * 判断参数 ApiType 是否已赋值
                      * @return ApiType 是否已赋值
+                     * 
                      */
                     bool ApiTypeHasBeenSet() const;
 
                     /**
                      * 获取API path
                      * @return Path API path
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置API path
-                     * @param Path API path
+                     * @param _path API path
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取API method
                      * @return Method API method
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置API method
-                     * @param Method API method
+                     * @param _method API method
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AttachedOtherPlugin Whether the API is bound with another plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAttachedOtherPlugin() const;
 
                     /**
                      * 设置Whether the API is bound with another plugin
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AttachedOtherPlugin Whether the API is bound with another plugin
+                     * @param _attachedOtherPlugin Whether the API is bound with another plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttachedOtherPlugin(const bool& _attachedOtherPlugin);
 
                     /**
                      * 判断参数 AttachedOtherPlugin 是否已赋值
                      * @return AttachedOtherPlugin 是否已赋值
+                     * 
                      */
                     bool AttachedOtherPluginHasBeenSet() const;
 
@@ -163,20 +181,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsAttached Whether the API is bound with the current plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsAttached() const;
 
                     /**
                      * 设置Whether the API is bound with the current plugin
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsAttached Whether the API is bound with the current plugin
+                     * @param _isAttached Whether the API is bound with the current plugin
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsAttached(const bool& _isAttached);
 
                     /**
                      * 判断参数 IsAttached 是否已赋值
                      * @return IsAttached 是否已赋值
+                     * 
                      */
                     bool IsAttachedHasBeenSet() const;
 

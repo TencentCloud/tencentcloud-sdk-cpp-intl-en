@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the media file.
                      * @return FileId The ID of the media file.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The ID of the media file.
-                     * @param FileId The ID of the media file.
+                     * @param _fileId The ID of the media file.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 

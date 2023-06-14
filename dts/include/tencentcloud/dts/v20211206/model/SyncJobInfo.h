@@ -56,20 +56,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JobId Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param JobId Sync task ID, such as `sync-btso140`.
+                     * @param _jobId Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
@@ -78,20 +81,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JobName Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param JobName Sync task name
+                     * @param _jobName Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
@@ -100,20 +106,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+                     * @param _payMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -122,20 +131,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRunMode() const;
 
                     /**
                      * 设置Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
+                     * @param _runMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRunMode(const std::string& _runMode);
 
                     /**
                      * 判断参数 RunMode 是否已赋值
                      * @return RunMode 是否已赋值
+                     * 
                      */
                     bool RunModeHasBeenSet() const;
 
@@ -144,20 +156,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpectRunTime Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpectRunTime() const;
 
                     /**
                      * 设置Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExpectRunTime Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
+                     * @param _expectRunTime Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpectRunTime(const std::string& _expectRunTime);
 
                     /**
                      * 判断参数 ExpectRunTime 是否已赋值
                      * @return ExpectRunTime 是否已赋值
+                     * 
                      */
                     bool ExpectRunTimeHasBeenSet() const;
 
@@ -166,20 +181,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AllActions All supported operations
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAllActions() const;
 
                     /**
                      * 设置All supported operations
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AllActions All supported operations
+                     * @param _allActions All supported operations
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAllActions(const std::vector<std::string>& _allActions);
 
                     /**
                      * 判断参数 AllActions 是否已赋值
                      * @return AllActions 是否已赋值
+                     * 
                      */
                     bool AllActionsHasBeenSet() const;
 
@@ -188,20 +206,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Actions Operations that can be performed under the current status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetActions() const;
 
                     /**
                      * 设置Operations that can be performed under the current status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Actions Operations that can be performed under the current status
+                     * @param _actions Operations that can be performed under the current status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActions(const std::vector<std::string>& _actions);
 
                     /**
                      * 判断参数 Actions 是否已赋值
                      * @return Actions 是否已赋值
+                     * 
                      */
                     bool ActionsHasBeenSet() const;
 
@@ -210,20 +231,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Options Sync options
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Options GetOptions() const;
 
                     /**
                      * 设置Sync options
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Options Sync options
+                     * @param _options Sync options
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOptions(const Options& _options);
 
                     /**
                      * 判断参数 Options 是否已赋值
                      * @return Options 是否已赋值
+                     * 
                      */
                     bool OptionsHasBeenSet() const;
 
@@ -232,20 +256,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Objects Sync database/table objects
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Objects GetObjects() const;
 
                     /**
                      * 设置Sync database/table objects
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Objects Sync database/table objects
+                     * @param _objects Sync database/table objects
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetObjects(const Objects& _objects);
 
                     /**
                      * 判断参数 Objects 是否已赋值
                      * @return Objects 是否已赋值
+                     * 
                      */
                     bool ObjectsHasBeenSet() const;
 
@@ -254,20 +281,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Specification Task specification
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSpecification() const;
 
                     /**
                      * 设置Task specification
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Specification Task specification
+                     * @param _specification Task specification
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpecification(const std::string& _specification);
 
                     /**
                      * 判断参数 Specification 是否已赋值
                      * @return Specification 是否已赋值
+                     * 
                      */
                     bool SpecificationHasBeenSet() const;
 
@@ -276,20 +306,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
+                     * @param _expireTime Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -298,20 +331,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcRegion Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSrcRegion() const;
 
                     /**
                      * 设置Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SrcRegion Source database region, such as `ap-guangzhou`.
+                     * @param _srcRegion Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSrcRegion(const std::string& _srcRegion);
 
                     /**
                      * 判断参数 SrcRegion 是否已赋值
                      * @return SrcRegion 是否已赋值
+                     * 
                      */
                     bool SrcRegionHasBeenSet() const;
 
@@ -320,20 +356,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSrcDatabaseType() const;
 
                     /**
                      * 设置Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SrcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+                     * @param _srcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSrcDatabaseType(const std::string& _srcDatabaseType);
 
                     /**
                      * 判断参数 SrcDatabaseType 是否已赋值
                      * @return SrcDatabaseType 是否已赋值
+                     * 
                      */
                     bool SrcDatabaseTypeHasBeenSet() const;
 
@@ -342,20 +381,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSrcAccessType() const;
 
                     /**
                      * 设置Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
+                     * @param _srcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSrcAccessType(const std::string& _srcAccessType);
 
                     /**
                      * 判断参数 SrcAccessType 是否已赋值
                      * @return SrcAccessType 是否已赋值
+                     * 
                      */
                     bool SrcAccessTypeHasBeenSet() const;
 
@@ -364,20 +406,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Endpoint GetSrcInfo() const;
 
                     /**
                      * 设置Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SrcInfo Source database information. This parameter is used by single-node databases.
+                     * @param _srcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSrcInfo(const Endpoint& _srcInfo);
 
                     /**
                      * 判断参数 SrcInfo 是否已赋值
                      * @return SrcInfo 是否已赋值
+                     * 
                      */
                     bool SrcInfoHasBeenSet() const;
 
@@ -386,20 +431,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstRegion Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDstRegion() const;
 
                     /**
                      * 设置Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DstRegion Target database region, such as `ap-guangzhou`.
+                     * @param _dstRegion Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDstRegion(const std::string& _dstRegion);
 
                     /**
                      * 判断参数 DstRegion 是否已赋值
                      * @return DstRegion 是否已赋值
+                     * 
                      */
                     bool DstRegionHasBeenSet() const;
 
@@ -408,20 +456,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDstDatabaseType() const;
 
                     /**
                      * 设置Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+                     * @param _dstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDstDatabaseType(const std::string& _dstDatabaseType);
 
                     /**
                      * 判断参数 DstDatabaseType 是否已赋值
                      * @return DstDatabaseType 是否已赋值
+                     * 
                      */
                     bool DstDatabaseTypeHasBeenSet() const;
 
@@ -430,20 +481,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDstAccessType() const;
 
                     /**
                      * 设置Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
+                     * @param _dstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDstAccessType(const std::string& _dstAccessType);
 
                     /**
                      * 判断参数 DstAccessType 是否已赋值
                      * @return DstAccessType 是否已赋值
+                     * 
                      */
                     bool DstAccessTypeHasBeenSet() const;
 
@@ -452,20 +506,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Endpoint GetDstInfo() const;
 
                     /**
                      * 设置Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DstInfo Target database information. This parameter is used by single-node databases.
+                     * @param _dstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDstInfo(const Endpoint& _dstInfo);
 
                     /**
                      * 判断参数 DstInfo 是否已赋值
                      * @return DstInfo 是否已赋值
+                     * 
                      */
                     bool DstInfoHasBeenSet() const;
 
@@ -474,20 +531,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
+                     * @param _createTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -496,20 +556,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Start time in the format of `yyyy-mm-dd hh:mm:ss`
+                     * @param _startTime Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -518,20 +581,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
+                     * @param _status Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -540,20 +606,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime End time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime End time in the format of `yyyy-mm-dd hh:mm:ss`
+                     * @param _endTime End time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -562,20 +631,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagItem> GetTags() const;
 
                     /**
                      * 设置Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Tag information
+                     * @param _tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<TagItem>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -584,20 +656,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Detail Step information of the sync task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SyncDetailInfo GetDetail() const;
 
                     /**
                      * 设置Step information of the sync task
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Detail Step information of the sync task
+                     * @param _detail Step information of the sync task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetail(const SyncDetailInfo& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 
@@ -606,20 +681,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TradeStatus Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTradeStatus() const;
 
                     /**
                      * 设置Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TradeStatus Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+                     * @param _tradeStatus Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTradeStatus(const std::string& _tradeStatus);
 
                     /**
                      * 判断参数 TradeStatus 是否已赋值
                      * @return TradeStatus 是否已赋值
+                     * 
                      */
                     bool TradeStatusHasBeenSet() const;
 
@@ -628,20 +706,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceClass() const;
 
                     /**
                      * 设置Sync link specification, such as `micro`, `small`, `medium`, and `large`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+                     * @param _instanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceClass(const std::string& _instanceClass);
 
                     /**
                      * 判断参数 InstanceClass 是否已赋值
                      * @return InstanceClass 是否已赋值
+                     * 
                      */
                     bool InstanceClassHasBeenSet() const;
 
@@ -650,20 +731,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAutoRenew() const;
 
                     /**
                      * 设置Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+                     * @param _autoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoRenew(const uint64_t& _autoRenew);
 
                     /**
                      * 判断参数 AutoRenew 是否已赋值
                      * @return AutoRenew 是否已赋值
+                     * 
                      */
                     bool AutoRenewHasBeenSet() const;
 
@@ -672,20 +756,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOfflineTime() const;
 
                     /**
                      * 设置Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+                     * @param _offlineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
 
                     /**
                      * 判断参数 OfflineTime 是否已赋值
                      * @return OfflineTime 是否已赋值
+                     * 
                      */
                     bool OfflineTimeHasBeenSet() const;
 
@@ -694,20 +781,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AutoRetryTimeRangeMinutes Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAutoRetryTimeRangeMinutes() const;
 
                     /**
                      * 设置Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AutoRetryTimeRangeMinutes Settings of automatic retry time
+                     * @param _autoRetryTimeRangeMinutes Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
 
                     /**
                      * 判断参数 AutoRetryTimeRangeMinutes 是否已赋值
                      * @return AutoRetryTimeRangeMinutes 是否已赋值
+                     * 
                      */
                     bool AutoRetryTimeRangeMinutesHasBeenSet() const;
 

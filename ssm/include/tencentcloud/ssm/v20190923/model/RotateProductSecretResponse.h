@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
                      * @return FlowID Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
+                     * 
                      */
                     int64_t GetFlowID() const;
 
                     /**
                      * 判断参数 FlowID 是否已赋值
                      * @return FlowID 是否已赋值
+                     * 
                      */
                     bool FlowIDHasBeenSet() const;
 

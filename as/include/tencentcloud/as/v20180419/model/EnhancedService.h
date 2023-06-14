@@ -52,72 +52,84 @@ namespace TencentCloud
                     /**
                      * 获取Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
                      * @return SecurityService Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
+                     * 
                      */
                     RunSecurityServiceEnabled GetSecurityService() const;
 
                     /**
                      * 设置Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
-                     * @param SecurityService Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
+                     * @param _securityService Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
+                     * 
                      */
                     void SetSecurityService(const RunSecurityServiceEnabled& _securityService);
 
                     /**
                      * 判断参数 SecurityService 是否已赋值
                      * @return SecurityService 是否已赋值
+                     * 
                      */
                     bool SecurityServiceHasBeenSet() const;
 
                     /**
                      * 获取Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
                      * @return MonitorService Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
+                     * 
                      */
                     RunMonitorServiceEnabled GetMonitorService() const;
 
                     /**
                      * 设置Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
-                     * @param MonitorService Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
+                     * @param _monitorService Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
+                     * 
                      */
                     void SetMonitorService(const RunMonitorServiceEnabled& _monitorService);
 
                     /**
                      * 判断参数 MonitorService 是否已赋值
                      * @return MonitorService 是否已赋值
+                     * 
                      */
                     bool MonitorServiceHasBeenSet() const;
 
                     /**
                      * 获取Deprecated parameter.
                      * @return AutomationService Deprecated parameter.
+                     * 
                      */
                     std::vector<RunAutomationServiceEnabled> GetAutomationService() const;
 
                     /**
                      * 设置Deprecated parameter.
-                     * @param AutomationService Deprecated parameter.
+                     * @param _automationService Deprecated parameter.
+                     * 
                      */
                     void SetAutomationService(const std::vector<RunAutomationServiceEnabled>& _automationService);
 
                     /**
                      * 判断参数 AutomationService 是否已赋值
                      * @return AutomationService 是否已赋值
+                     * 
                      */
                     bool AutomationServiceHasBeenSet() const;
 
                     /**
                      * 获取Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AutomationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     RunAutomationServiceEnabled GetAutomationToolsService() const;
 
                     /**
                      * 设置Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AutomationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param _automationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutomationToolsService(const RunAutomationServiceEnabled& _automationToolsService);
 
                     /**
                      * 判断参数 AutomationToolsService 是否已赋值
                      * @return AutomationToolsService 是否已赋值
+                     * 
                      */
                     bool AutomationToolsServiceHasBeenSet() const;
 

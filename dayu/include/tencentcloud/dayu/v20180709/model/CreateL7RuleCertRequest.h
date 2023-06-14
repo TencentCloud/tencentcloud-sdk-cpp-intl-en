@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
-                     * @param Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * @param _business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
                      * @return Id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
-                     * @param Id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
+                     * @param _id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Certificate type, which is required if the protocol is HTTPS. Valid value: [2 (Tencent Cloud-hosted certificate)]
                      * @return CertType Certificate type, which is required if the protocol is HTTPS. Valid value: [2 (Tencent Cloud-hosted certificate)]
+                     * 
                      */
                     uint64_t GetCertType() const;
 
                     /**
                      * 设置Certificate type, which is required if the protocol is HTTPS. Valid value: [2 (Tencent Cloud-hosted certificate)]
-                     * @param CertType Certificate type, which is required if the protocol is HTTPS. Valid value: [2 (Tencent Cloud-hosted certificate)]
+                     * @param _certType Certificate type, which is required if the protocol is HTTPS. Valid value: [2 (Tencent Cloud-hosted certificate)]
+                     * 
                      */
                     void SetCertType(const uint64_t& _certType);
 
                     /**
                      * 判断参数 CertType 是否已赋值
                      * @return CertType 是否已赋值
+                     * 
                      */
                     bool CertTypeHasBeenSet() const;
 
                     /**
                      * 获取If the certificate is a Tencent Cloud-hosted certificate, this field must be entered with the hosted certificate ID.
                      * @return SSLId If the certificate is a Tencent Cloud-hosted certificate, this field must be entered with the hosted certificate ID.
+                     * 
                      */
                     std::string GetSSLId() const;
 
                     /**
                      * 设置If the certificate is a Tencent Cloud-hosted certificate, this field must be entered with the hosted certificate ID.
-                     * @param SSLId If the certificate is a Tencent Cloud-hosted certificate, this field must be entered with the hosted certificate ID.
+                     * @param _sSLId If the certificate is a Tencent Cloud-hosted certificate, this field must be entered with the hosted certificate ID.
+                     * 
                      */
                     void SetSSLId(const std::string& _sSLId);
 
                     /**
                      * 判断参数 SSLId 是否已赋值
                      * @return SSLId 是否已赋值
+                     * 
                      */
                     bool SSLIdHasBeenSet() const;
 
                     /**
                      * 获取[Disused] If the certificate is an external certificate, this field must be entered with the certificate content. 
                      * @return Cert [Disused] If the certificate is an external certificate, this field must be entered with the certificate content. 
+                     * 
                      */
                     std::string GetCert() const;
 
                     /**
                      * 设置[Disused] If the certificate is an external certificate, this field must be entered with the certificate content. 
-                     * @param Cert [Disused] If the certificate is an external certificate, this field must be entered with the certificate content. 
+                     * @param _cert [Disused] If the certificate is an external certificate, this field must be entered with the certificate content. 
+                     * 
                      */
                     void SetCert(const std::string& _cert);
 
                     /**
                      * 判断参数 Cert 是否已赋值
                      * @return Cert 是否已赋值
+                     * 
                      */
                     bool CertHasBeenSet() const;
 
                     /**
                      * 获取[Disused] If the certificate is an external certificate, this field must be entered with the certificate key. 
                      * @return PrivateKey [Disused] If the certificate is an external certificate, this field must be entered with the certificate key. 
+                     * 
                      */
                     std::string GetPrivateKey() const;
 
                     /**
                      * 设置[Disused] If the certificate is an external certificate, this field must be entered with the certificate key. 
-                     * @param PrivateKey [Disused] If the certificate is an external certificate, this field must be entered with the certificate key. 
+                     * @param _privateKey [Disused] If the certificate is an external certificate, this field must be entered with the certificate key. 
+                     * 
                      */
                     void SetPrivateKey(const std::string& _privateKey);
 
                     /**
                      * 判断参数 PrivateKey 是否已赋值
                      * @return PrivateKey 是否已赋值
+                     * 
                      */
                     bool PrivateKeyHasBeenSet() const;
 

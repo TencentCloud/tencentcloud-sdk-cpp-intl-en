@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取The total number of spectators.
                      * @return Total The total number of spectators.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取The current page number.
                      * @return Page The current page number.
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取The number of records on the current page.
                      * @return Limit The number of records on the current page.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取A list of the spectators.
                      * @return UserIds A list of the spectators.
+                     * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
                      * 判断参数 UserIds 是否已赋值
                      * @return UserIds 是否已赋值
+                     * 
                      */
                     bool UserIdsHasBeenSet() const;
 

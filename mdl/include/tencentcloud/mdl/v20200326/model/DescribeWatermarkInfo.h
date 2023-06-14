@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Watermark ID
                      * @return Id Watermark ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Watermark ID
-                     * @param Id Watermark ID
+                     * @param _id Watermark ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Watermark name
                      * @return Name Watermark name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Watermark name
-                     * @param Name Watermark name
+                     * @param _name Watermark name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Watermark type. Valid values: STATIC_IMAGE, TEXT.
                      * @return Type Watermark type. Valid values: STATIC_IMAGE, TEXT.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Watermark type. Valid values: STATIC_IMAGE, TEXT.
-                     * @param Type Watermark type. Valid values: STATIC_IMAGE, TEXT.
+                     * @param _type Watermark type. Valid values: STATIC_IMAGE, TEXT.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -107,20 +116,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ImageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     DescribeImageSettings GetImageSettings() const;
 
                     /**
                      * 设置Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ImageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
+                     * @param _imageSettings Watermark image settings. This parameter is valid if `Type` is `STATIC_IMAGE`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetImageSettings(const DescribeImageSettings& _imageSettings);
 
                     /**
                      * 判断参数 ImageSettings 是否已赋值
                      * @return ImageSettings 是否已赋值
+                     * 
                      */
                     bool ImageSettingsHasBeenSet() const;
 
@@ -129,20 +141,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return TextSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     DescribeTextSettings GetTextSettings() const;
 
                     /**
                      * 设置Watermark text settings. This parameter is valid if `Type` is `TEXT`.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param TextSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
+                     * @param _textSettings Watermark text settings. This parameter is valid if `Type` is `TEXT`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTextSettings(const DescribeTextSettings& _textSettings);
 
                     /**
                      * 判断参数 TextSettings 是否已赋值
                      * @return TextSettings 是否已赋值
+                     * 
                      */
                     bool TextSettingsHasBeenSet() const;
 
@@ -151,20 +166,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UpdateTime Last modified time (UTC+0) of the watermark, in the format of `2020-01-01T12:00:00Z`
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified time (UTC+0) of the watermark, in the format of `2020-01-01T12:00:00Z`
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UpdateTime Last modified time (UTC+0) of the watermark, in the format of `2020-01-01T12:00:00Z`
+                     * @param _updateTime Last modified time (UTC+0) of the watermark, in the format of `2020-01-01T12:00:00Z`
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -173,20 +191,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return AttachedChannels List of channel IDs the watermark is bound to
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetAttachedChannels() const;
 
                     /**
                      * 设置List of channel IDs the watermark is bound to
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param AttachedChannels List of channel IDs the watermark is bound to
+                     * @param _attachedChannels List of channel IDs the watermark is bound to
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAttachedChannels(const std::vector<std::string>& _attachedChannels);
 
                     /**
                      * 判断参数 AttachedChannels 是否已赋值
                      * @return AttachedChannels 是否已赋值
+                     * 
                      */
                     bool AttachedChannelsHasBeenSet() const;
 

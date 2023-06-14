@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取IP range of the firewall. The mask must be at least /24.
                      * @return FwCidr IP range of the firewall. The mask must be at least /24.
+                     * 
                      */
                     std::string GetFwCidr() const;
 
                     /**
                      * 设置IP range of the firewall. The mask must be at least /24.
-                     * @param FwCidr IP range of the firewall. The mask must be at least /24.
+                     * @param _fwCidr IP range of the firewall. The mask must be at least /24.
+                     * 
                      */
                     void SetFwCidr(const std::string& _fwCidr);
 
                     /**
                      * 判断参数 FwCidr 是否已赋值
                      * @return FwCidr 是否已赋值
+                     * 
                      */
                     bool FwCidrHasBeenSet() const;
 

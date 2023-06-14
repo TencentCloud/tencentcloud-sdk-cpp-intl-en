@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Custom image ID.
                      * @return BlueprintId Custom image ID.
+                     * 
                      */
                     std::string GetBlueprintId() const;
 
                     /**
                      * 判断参数 BlueprintId 是否已赋值
                      * @return BlueprintId 是否已赋值
+                     * 
                      */
                     bool BlueprintIdHasBeenSet() const;
 

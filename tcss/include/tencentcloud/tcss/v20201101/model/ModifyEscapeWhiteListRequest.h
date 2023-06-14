@@ -59,6 +59,7 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
+                     * 
                      */
                     std::vector<std::string> GetEventType() const;
 
@@ -71,7 +72,7 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
-                     * @param EventType Allowed event type
+                     * @param _eventType Allowed event type
    `ESCAPE_CGROUPS`: Cgroup escape.
    `ESCAPE_TAMPER_SENSITIVE_FILE`: File tamper escape.
    `ESCAPE_DOCKER_API`: Docker API access escape.
@@ -79,30 +80,35 @@ namespace TencentCloud
    `MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `PRIVILEGE_CONTAINER_START`: Privileged container.
    `PRIVILEGE`: Program privilege escalation escape.
+                     * 
                      */
                     void SetEventType(const std::vector<std::string>& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Allowed item ID
                      * @return IDSet Allowed item ID
+                     * 
                      */
                     std::vector<int64_t> GetIDSet() const;
 
                     /**
                      * 设置Allowed item ID
-                     * @param IDSet Allowed item ID
+                     * @param _iDSet Allowed item ID
+                     * 
                      */
                     void SetIDSet(const std::vector<int64_t>& _iDSet);
 
                     /**
                      * 判断参数 IDSet 是否已赋值
                      * @return IDSet 是否已赋值
+                     * 
                      */
                     bool IDSetHasBeenSet() const;
 

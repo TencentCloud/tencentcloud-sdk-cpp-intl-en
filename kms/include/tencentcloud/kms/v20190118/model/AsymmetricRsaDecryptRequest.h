@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique CMK ID
                      * @return KeyId Unique CMK ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Unique CMK ID
-                     * @param KeyId Unique CMK ID
+                     * @param _keyId Unique CMK ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded ciphertext encrypted with `PublicKey`
                      * @return Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`
+                     * 
                      */
                     std::string GetCiphertext() const;
 
                     /**
                      * 设置Base64-encoded ciphertext encrypted with `PublicKey`
-                     * @param Ciphertext Base64-encoded ciphertext encrypted with `PublicKey`
+                     * @param _ciphertext Base64-encoded ciphertext encrypted with `PublicKey`
+                     * 
                      */
                     void SetCiphertext(const std::string& _ciphertext);
 
                     /**
                      * 判断参数 Ciphertext 是否已赋值
                      * @return Ciphertext 是否已赋值
+                     * 
                      */
                     bool CiphertextHasBeenSet() const;
 
                     /**
                      * 获取Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
                      * @return Algorithm Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
+                     * 
                      */
                     std::string GetAlgorithm() const;
 
                     /**
                      * 设置Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
-                     * @param Algorithm Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
+                     * @param _algorithm Corresponding algorithm when a public key is used for encryption. Valid values: RSAES_PKCS1_V1_5, RSAES_OAEP_SHA_1, RSAES_OAEP_SHA_256
+                     * 
                      */
                     void SetAlgorithm(const std::string& _algorithm);
 
                     /**
                      * 判断参数 Algorithm 是否已赋值
                      * @return Algorithm 是否已赋值
+                     * 
                      */
                     bool AlgorithmHasBeenSet() const;
 

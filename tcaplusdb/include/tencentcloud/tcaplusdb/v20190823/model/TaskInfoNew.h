@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return TaskId Task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Task type
                      * @return TaskType Task type
+                     * 
                      */
                     std::string GetTaskType() const;
 
                     /**
                      * 设置Task type
-                     * @param TaskType Task type
+                     * @param _taskType Task type
+                     * 
                      */
                     void SetTaskType(const std::string& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取ID of TcaplusDB internal transaction associated with task
                      * @return TransId ID of TcaplusDB internal transaction associated with task
+                     * 
                      */
                     std::string GetTransId() const;
 
                     /**
                      * 设置ID of TcaplusDB internal transaction associated with task
-                     * @param TransId ID of TcaplusDB internal transaction associated with task
+                     * @param _transId ID of TcaplusDB internal transaction associated with task
+                     * 
                      */
                     void SetTransId(const std::string& _transId);
 
                     /**
                      * 判断参数 TransId 是否已赋值
                      * @return TransId 是否已赋值
+                     * 
                      */
                     bool TransIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the cluster where a task resides
                      * @return ClusterId ID of the cluster where a task resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where a task resides
-                     * @param ClusterId ID of the cluster where a task resides
+                     * @param _clusterId ID of the cluster where a task resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the cluster where a task resides
                      * @return ClusterName Name of the cluster where a task resides
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Name of the cluster where a task resides
-                     * @param ClusterName Name of the cluster where a task resides
+                     * @param _clusterName Name of the cluster where a task resides
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Task progress
                      * @return Progress Task progress
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Task progress
-                     * @param Progress Task progress
+                     * @param _progress Task progress
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Task creation time
                      * @return StartTime Task creation time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Task creation time
-                     * @param StartTime Task creation time
+                     * @param _startTime Task creation time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Task last modified time
                      * @return UpdateTime Task last modified time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Task last modified time
-                     * @param UpdateTime Task last modified time
+                     * @param _updateTime Task last modified time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Operator
                      * @return Operator Operator
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Operator
-                     * @param Operator Operator
+                     * @param _operator Operator
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Task details
                      * @return Content Task details
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Task details
-                     * @param Content Task details
+                     * @param _content Task details
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

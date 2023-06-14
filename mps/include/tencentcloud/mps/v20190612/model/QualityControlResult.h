@@ -82,6 +82,7 @@ namespace TencentCloud
 `HighVoice`
 `NoVoice`
 `LowEvaluation` (low no-reference video quality score)
+                     * 
                      */
                     std::string GetType() const;
 
@@ -103,7 +104,7 @@ namespace TencentCloud
 `HighVoice`
 `NoVoice`
 `LowEvaluation` (low no-reference video quality score)
-                     * @param Type The issue type. Valid values:
+                     * @param _type The issue type. Valid values:
 `Jitter`
 `Blur`
 `LowLighting`
@@ -120,30 +121,35 @@ namespace TencentCloud
 `HighVoice`
 `NoVoice`
 `LowEvaluation` (low no-reference video quality score)
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The information of a checked segment in quality control.
                      * @return QualityControlItems The information of a checked segment in quality control.
+                     * 
                      */
                     std::vector<QualityControlItem> GetQualityControlItems() const;
 
                     /**
                      * 设置The information of a checked segment in quality control.
-                     * @param QualityControlItems The information of a checked segment in quality control.
+                     * @param _qualityControlItems The information of a checked segment in quality control.
+                     * 
                      */
                     void SetQualityControlItems(const std::vector<QualityControlItem>& _qualityControlItems);
 
                     /**
                      * 判断参数 QualityControlItems 是否已赋值
                      * @return QualityControlItems 是否已赋值
+                     * 
                      */
                     bool QualityControlItemsHasBeenSet() const;
 

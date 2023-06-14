@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Access source
                      * @return Ip Access source
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Access source
-                     * @param Ip Access source
+                     * @param _ip Access source
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取The number of active connections from the current access source
                      * @return ActiveConn The number of active connections from the current access source
+                     * 
                      */
                     std::string GetActiveConn() const;
 
                     /**
                      * 设置The number of active connections from the current access source
-                     * @param ActiveConn The number of active connections from the current access source
+                     * @param _activeConn The number of active connections from the current access source
+                     * 
                      */
                     void SetActiveConn(const std::string& _activeConn);
 
                     /**
                      * 判断参数 ActiveConn 是否已赋值
                      * @return ActiveConn 是否已赋值
+                     * 
                      */
                     bool ActiveConnHasBeenSet() const;
 
                     /**
                      * 获取The total number of connections from the current access source
                      * @return AllConn The total number of connections from the current access source
+                     * 
                      */
                     int64_t GetAllConn() const;
 
                     /**
                      * 设置The total number of connections from the current access source
-                     * @param AllConn The total number of connections from the current access source
+                     * @param _allConn The total number of connections from the current access source
+                     * 
                      */
                     void SetAllConn(const int64_t& _allConn);
 
                     /**
                      * 判断参数 AllConn 是否已赋值
                      * @return AllConn 是否已赋值
+                     * 
                      */
                     bool AllConnHasBeenSet() const;
 

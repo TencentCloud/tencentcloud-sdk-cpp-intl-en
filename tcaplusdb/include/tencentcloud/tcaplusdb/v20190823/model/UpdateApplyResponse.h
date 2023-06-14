@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ApplyResults List of updated applications
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApplyResult> GetApplyResults() const;
 
                     /**
                      * 判断参数 ApplyResults 是否已赋值
                      * @return ApplyResults 是否已赋值
+                     * 
                      */
                     bool ApplyResultsHasBeenSet() const;
 
                     /**
                      * 获取Total number of updated applications
                      * @return TotalCount Total number of updated applications
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

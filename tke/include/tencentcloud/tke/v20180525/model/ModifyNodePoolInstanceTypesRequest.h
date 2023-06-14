@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Node pool ID
                      * @return NodePoolId Node pool ID
+                     * 
                      */
                     std::string GetNodePoolId() const;
 
                     /**
                      * 设置Node pool ID
-                     * @param NodePoolId Node pool ID
+                     * @param _nodePoolId Node pool ID
+                     * 
                      */
                     void SetNodePoolId(const std::string& _nodePoolId);
 
                     /**
                      * 判断参数 NodePoolId 是否已赋值
                      * @return NodePoolId 是否已赋值
+                     * 
                      */
                     bool NodePoolIdHasBeenSet() const;
 
                     /**
                      * 获取List of instance types
                      * @return InstanceTypes List of instance types
+                     * 
                      */
                     std::vector<std::string> GetInstanceTypes() const;
 
                     /**
                      * 设置List of instance types
-                     * @param InstanceTypes List of instance types
+                     * @param _instanceTypes List of instance types
+                     * 
                      */
                     void SetInstanceTypes(const std::vector<std::string>& _instanceTypes);
 
                     /**
                      * 判断参数 InstanceTypes 是否已赋值
                      * @return InstanceTypes 是否已赋值
+                     * 
                      */
                     bool InstanceTypesHasBeenSet() const;
 

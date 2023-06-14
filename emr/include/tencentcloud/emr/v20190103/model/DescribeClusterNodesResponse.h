@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of queried nodes
                      * @return TotalCnt Total number of queried nodes
+                     * 
                      */
                     int64_t GetTotalCnt() const;
 
                     /**
                      * 判断参数 TotalCnt 是否已赋值
                      * @return TotalCnt 是否已赋值
+                     * 
                      */
                     bool TotalCntHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NodeList List of node details
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<NodeHardwareInfo> GetNodeList() const;
 
                     /**
                      * 判断参数 NodeList 是否已赋值
                      * @return NodeList 是否已赋值
+                     * 
                      */
                     bool NodeListHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TagKeys List of tag keys owned by user
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTagKeys() const;
 
                     /**
                      * 判断参数 TagKeys 是否已赋值
                      * @return TagKeys 是否已赋值
+                     * 
                      */
                     bool TagKeysHasBeenSet() const;
 
@@ -89,12 +95,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HardwareResourceTypeList Resource type list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetHardwareResourceTypeList() const;
 
                     /**
                      * 判断参数 HardwareResourceTypeList 是否已赋值
                      * @return HardwareResourceTypeList 是否已赋值
+                     * 
                      */
                     bool HardwareResourceTypeListHasBeenSet() const;
 

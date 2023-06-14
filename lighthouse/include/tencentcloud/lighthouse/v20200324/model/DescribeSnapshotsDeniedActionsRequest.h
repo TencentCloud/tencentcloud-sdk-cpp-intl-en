@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot ID list, which can be queried through `DescribeSnapshots`.
                      * @return SnapshotIds Snapshot ID list, which can be queried through `DescribeSnapshots`.
+                     * 
                      */
                     std::vector<std::string> GetSnapshotIds() const;
 
                     /**
                      * 设置Snapshot ID list, which can be queried through `DescribeSnapshots`.
-                     * @param SnapshotIds Snapshot ID list, which can be queried through `DescribeSnapshots`.
+                     * @param _snapshotIds Snapshot ID list, which can be queried through `DescribeSnapshots`.
+                     * 
                      */
                     void SetSnapshotIds(const std::vector<std::string>& _snapshotIds);
 
                     /**
                      * 判断参数 SnapshotIds 是否已赋值
                      * @return SnapshotIds 是否已赋值
+                     * 
                      */
                     bool SnapshotIdsHasBeenSet() const;
 

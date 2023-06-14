@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Frame-specific tag name.
                      * @return Tag Frame-specific tag name.
+                     * 
                      */
                     std::string GetTag() const;
 
                     /**
                      * 设置Frame-specific tag name.
-                     * @param Tag Frame-specific tag name.
+                     * @param _tag Frame-specific tag name.
+                     * 
                      */
                     void SetTag(const std::string& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return CategorySet 
+                     * 
                      */
                     std::vector<std::string> GetCategorySet() const;
 
                     /**
                      * 设置
-                     * @param CategorySet 
+                     * @param _categorySet 
+                     * 
                      */
                     void SetCategorySet(const std::vector<std::string>& _categorySet);
 
                     /**
                      * 判断参数 CategorySet 是否已赋值
                      * @return CategorySet 是否已赋值
+                     * 
                      */
                     bool CategorySetHasBeenSet() const;
 
                     /**
                      * 获取Confidence of intelligently generated frame-specific tag between 0 and 100.
                      * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of intelligently generated frame-specific tag between 0 and 100.
-                     * @param Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+                     * @param _confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 

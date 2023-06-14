@@ -57,6 +57,7 @@ namespace TencentCloud
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
+                     * 
                      */
                     std::string GetNodeFlag() const;
 
@@ -66,35 +67,40 @@ namespace TencentCloud
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
-                     * @param NodeFlag Valid values of node type:
+                     * @param _nodeFlag Valid values of node type:
   <li>MASTER</li>
   <li>TASK</li>
   <li>CORE</li>
   <li>ROUTER</li>
+                     * 
                      */
                     void SetNodeFlag(const std::string& _nodeFlag);
 
                     /**
                      * 判断参数 NodeFlag 是否已赋值
                      * @return NodeFlag 是否已赋值
+                     * 
                      */
                     bool NodeFlagHasBeenSet() const;
 
                     /**
                      * 获取The number of nodes.
                      * @return NodeCount The number of nodes.
+                     * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
                      * 设置The number of nodes.
-                     * @param NodeCount The number of nodes.
+                     * @param _nodeCount The number of nodes.
+                     * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
 
                     /**
                      * 判断参数 NodeCount 是否已赋值
                      * @return NodeCount 是否已赋值
+                     * 
                      */
                     bool NodeCountHasBeenSet() const;
 

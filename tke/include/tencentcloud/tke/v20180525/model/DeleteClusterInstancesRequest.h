@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of Instance IDs
                      * @return InstanceIds List of Instance IDs
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of Instance IDs
-                     * @param InstanceIds List of Instance IDs
+                     * @param _instanceIds List of Instance IDs
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
                      * @return InstanceDeleteMode Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
+                     * 
                      */
                     std::string GetInstanceDeleteMode() const;
 
                     /**
                      * 设置Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
-                     * @param InstanceDeleteMode Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
+                     * @param _instanceDeleteMode Policy used to delete an instance in the cluster: `terminate` (terminates the instance. Only available for pay-as-you-go CVMs); `retain` (only removes it from the cluster. The instance will be retained.)
+                     * 
                      */
                     void SetInstanceDeleteMode(const std::string& _instanceDeleteMode);
 
                     /**
                      * 判断参数 InstanceDeleteMode 是否已赋值
                      * @return InstanceDeleteMode 是否已赋值
+                     * 
                      */
                     bool InstanceDeleteModeHasBeenSet() const;
 
                     /**
                      * 获取Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
                      * @return ForceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
+                     * 
                      */
                     bool GetForceDelete() const;
 
                     /**
                      * 设置Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
-                     * @param ForceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
+                     * @param _forceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
+                     * 
                      */
                     void SetForceDelete(const bool& _forceDelete);
 
                     /**
                      * 判断参数 ForceDelete 是否已赋值
                      * @return ForceDelete 是否已赋值
+                     * 
                      */
                     bool ForceDeleteHasBeenSet() const;
 

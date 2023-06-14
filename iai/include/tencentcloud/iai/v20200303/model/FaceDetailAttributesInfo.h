@@ -62,20 +62,23 @@ If no types are specified in `FaceAttributesType`, the details returned by `Face
 If `FaceAttributesType` does not include `Age` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Age Age. Value range: [0,65], where 65 indicates 65 years old or above. 
 If `FaceAttributesType` does not include `Age` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     int64_t GetAge() const;
 
                     /**
                      * 设置Age. Value range: [0,65], where 65 indicates 65 years old or above. 
 If `FaceAttributesType` does not include `Age` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Age Age. Value range: [0,65], where 65 indicates 65 years old or above. 
+                     * @param _age Age. Value range: [0,65], where 65 indicates 65 years old or above. 
 If `FaceAttributesType` does not include `Age` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetAge(const int64_t& _age);
 
                     /**
                      * 判断参数 Age 是否已赋值
                      * @return Age 是否已赋值
+                     * 
                      */
                     bool AgeHasBeenSet() const;
 
@@ -84,20 +87,23 @@ If `FaceAttributesType` does not include `Age` or more than 5 faces are detected
 If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Beauty Beauty score. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     int64_t GetBeauty() const;
 
                     /**
                      * 设置Beauty score. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Beauty Beauty score. Value range: [0,100]. 
+                     * @param _beauty Beauty score. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetBeauty(const int64_t& _beauty);
 
                     /**
                      * 判断参数 Beauty 是否已赋值
                      * @return Beauty 是否已赋值
+                     * 
                      */
                     bool BeautyHasBeenSet() const;
 
@@ -108,6 +114,7 @@ If `FaceAttributesType` does not include `Emotion` or more than 5 faces are dete
                      * @return Emotion Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
 The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     AttributeItem GetEmotion() const;
 
@@ -115,15 +122,17 @@ If `FaceAttributesType` does not include `Emotion` or more than 5 faces are dete
                      * 设置Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
 The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Emotion Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
+                     * @param _emotion Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
 The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetEmotion(const AttributeItem& _emotion);
 
                     /**
                      * 判断参数 Emotion 是否已赋值
                      * @return Emotion 是否已赋值
+                     * 
                      */
                     bool EmotionHasBeenSet() const;
 
@@ -132,20 +141,23 @@ If `FaceAttributesType` does not include `Emotion` or more than 5 faces are dete
 If `FaceAttributesType` does not include `Eye` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Eye Eye information, including whether glasses are worn, whether eyes are closed, whether the person has double eyelids, and the eye size. 
 If `FaceAttributesType` does not include `Eye` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     Eye GetEye() const;
 
                     /**
                      * 设置Eye information, including whether glasses are worn, whether eyes are closed, whether the person has double eyelids, and the eye size. 
 If `FaceAttributesType` does not include `Eye` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Eye Eye information, including whether glasses are worn, whether eyes are closed, whether the person has double eyelids, and the eye size. 
+                     * @param _eye Eye information, including whether glasses are worn, whether eyes are closed, whether the person has double eyelids, and the eye size. 
 If `FaceAttributesType` does not include `Eye` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetEye(const Eye& _eye);
 
                     /**
                      * 判断参数 Eye 是否已赋值
                      * @return Eye 是否已赋值
+                     * 
                      */
                     bool EyeHasBeenSet() const;
 
@@ -154,20 +166,23 @@ If `FaceAttributesType` does not include `Eye` or more than 5 faces are detected
 If `FaceAttributesType` does not include `Eyebrow` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Eyebrow Eyebrow information, including whether the eyebrows are thick, curved, or long. 
 If `FaceAttributesType` does not include `Eyebrow` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     Eyebrow GetEyebrow() const;
 
                     /**
                      * 设置Eyebrow information, including whether the eyebrows are thick, curved, or long. 
 If `FaceAttributesType` does not include `Eyebrow` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Eyebrow Eyebrow information, including whether the eyebrows are thick, curved, or long. 
+                     * @param _eyebrow Eyebrow information, including whether the eyebrows are thick, curved, or long. 
 If `FaceAttributesType` does not include `Eyebrow` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetEyebrow(const Eyebrow& _eyebrow);
 
                     /**
                      * 判断参数 Eyebrow 是否已赋值
                      * @return Eyebrow 是否已赋值
+                     * 
                      */
                     bool EyebrowHasBeenSet() const;
 
@@ -178,6 +193,7 @@ If `FaceAttributesType` does not include `Gender` or more than 5 faces are detec
                      * @return Gender Gender information. 
 The `Type` values of the `AttributeItem` include: 0: male; 1: female.	
 If `FaceAttributesType` does not include `Gender` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     AttributeItem GetGender() const;
 
@@ -185,15 +201,17 @@ If `FaceAttributesType` does not include `Gender` or more than 5 faces are detec
                      * 设置Gender information. 
 The `Type` values of the `AttributeItem` include: 0: male; 1: female.	
 If `FaceAttributesType` does not include `Gender` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Gender Gender information. 
+                     * @param _gender Gender information. 
 The `Type` values of the `AttributeItem` include: 0: male; 1: female.	
 If `FaceAttributesType` does not include `Gender` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetGender(const AttributeItem& _gender);
 
                     /**
                      * 判断参数 Gender 是否已赋值
                      * @return Gender 是否已赋值
+                     * 
                      */
                     bool GenderHasBeenSet() const;
 
@@ -202,20 +220,23 @@ If `FaceAttributesType` does not include `Gender` or more than 5 faces are detec
 If `FaceAttributesType` does not include `Hair` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Hair Hair information, including length, bang, and color. 
 If `FaceAttributesType` does not include `Hair` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     Hair GetHair() const;
 
                     /**
                      * 设置Hair information, including length, bang, and color. 
 If `FaceAttributesType` does not include `Hair` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Hair Hair information, including length, bang, and color. 
+                     * @param _hair Hair information, including length, bang, and color. 
 If `FaceAttributesType` does not include `Hair` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetHair(const Hair& _hair);
 
                     /**
                      * 判断参数 Hair 是否已赋值
                      * @return Hair 是否已赋值
+                     * 
                      */
                     bool HairHasBeenSet() const;
 
@@ -224,20 +245,23 @@ If `FaceAttributesType` does not include `Hair` or more than 5 faces are detecte
 If `FaceAttributesType` does not include `Hat` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Hat Hat information, including whether a hat is worn, hat style, and hat color. 
 If `FaceAttributesType` does not include `Hat` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     Hat GetHat() const;
 
                     /**
                      * 设置Hat information, including whether a hat is worn, hat style, and hat color. 
 If `FaceAttributesType` does not include `Hat` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Hat Hat information, including whether a hat is worn, hat style, and hat color. 
+                     * @param _hat Hat information, including whether a hat is worn, hat style, and hat color. 
 If `FaceAttributesType` does not include `Hat` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetHat(const Hat& _hat);
 
                     /**
                      * 判断参数 Hat 是否已赋值
                      * @return Hat 是否已赋值
+                     * 
                      */
                     bool HatHasBeenSet() const;
 
@@ -246,20 +270,23 @@ If `FaceAttributesType` does not include `Hat` or more than 5 faces are detected
 If `FaceAttributesType` does not include `Headpose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return HeadPose Pose information, including the face pitch, yaw, and roll. 
 If `FaceAttributesType` does not include `Headpose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     HeadPose GetHeadPose() const;
 
                     /**
                      * 设置Pose information, including the face pitch, yaw, and roll. 
 If `FaceAttributesType` does not include `Headpose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param HeadPose Pose information, including the face pitch, yaw, and roll. 
+                     * @param _headPose Pose information, including the face pitch, yaw, and roll. 
 If `FaceAttributesType` does not include `Headpose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetHeadPose(const HeadPose& _headPose);
 
                     /**
                      * 判断参数 HeadPose 是否已赋值
                      * @return HeadPose 是否已赋值
+                     * 
                      */
                     bool HeadPoseHasBeenSet() const;
 
@@ -270,6 +297,7 @@ If `FaceAttributesType` does not include `Mask` or more than 5 faces are detecte
                      * @return Mask Mask information. 
 The `Type` values of the `AttributeItem` include: 0: no mask; 1: the mask is worn and does not cover the face; 2: the mask is worn and covers the chin; 3: the mask is worn and covers the mouth; 4: the mask is worn properly.
 If `FaceAttributesType` does not include `Mask` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     AttributeItem GetMask() const;
 
@@ -277,15 +305,17 @@ If `FaceAttributesType` does not include `Mask` or more than 5 faces are detecte
                      * 设置Mask information. 
 The `Type` values of the `AttributeItem` include: 0: no mask; 1: the mask is worn and does not cover the face; 2: the mask is worn and covers the chin; 3: the mask is worn and covers the mouth; 4: the mask is worn properly.
 If `FaceAttributesType` does not include `Mask` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Mask Mask information. 
+                     * @param _mask Mask information. 
 The `Type` values of the `AttributeItem` include: 0: no mask; 1: the mask is worn and does not cover the face; 2: the mask is worn and covers the chin; 3: the mask is worn and covers the mouth; 4: the mask is worn properly.
 If `FaceAttributesType` does not include `Mask` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetMask(const AttributeItem& _mask);
 
                     /**
                      * 判断参数 Mask 是否已赋值
                      * @return Mask 是否已赋值
+                     * 
                      */
                     bool MaskHasBeenSet() const;
 
@@ -294,20 +324,23 @@ If `FaceAttributesType` does not include `Mask` or more than 5 faces are detecte
 If `FaceAttributesType` does not include `Mouth` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Mouth Mouth information, including whether the mouth is open and the lip thickness. 
 If `FaceAttributesType` does not include `Mouth` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     Mouth GetMouth() const;
 
                     /**
                      * 设置Mouth information, including whether the mouth is open and the lip thickness. 
 If `FaceAttributesType` does not include `Mouth` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Mouth Mouth information, including whether the mouth is open and the lip thickness. 
+                     * @param _mouth Mouth information, including whether the mouth is open and the lip thickness. 
 If `FaceAttributesType` does not include `Mouth` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetMouth(const Mouth& _mouth);
 
                     /**
                      * 判断参数 Mouth 是否已赋值
                      * @return Mouth 是否已赋值
+                     * 
                      */
                     bool MouthHasBeenSet() const;
 
@@ -318,6 +351,7 @@ If `FaceAttributesType` does not include `Moustache` or more than 5 faces are de
                      * @return Moustache Beard information.
 The `Type` values of the `AttributeItem` include: 0: no beard; 1: beard detected. 
 If `FaceAttributesType` does not include `Moustache` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     AttributeItem GetMoustache() const;
 
@@ -325,15 +359,17 @@ If `FaceAttributesType` does not include `Moustache` or more than 5 faces are de
                      * 设置Beard information.
 The `Type` values of the `AttributeItem` include: 0: no beard; 1: beard detected. 
 If `FaceAttributesType` does not include `Moustache` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Moustache Beard information.
+                     * @param _moustache Beard information.
 The `Type` values of the `AttributeItem` include: 0: no beard; 1: beard detected. 
 If `FaceAttributesType` does not include `Moustache` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetMoustache(const AttributeItem& _moustache);
 
                     /**
                      * 判断参数 Moustache 是否已赋值
                      * @return Moustache 是否已赋值
+                     * 
                      */
                     bool MoustacheHasBeenSet() const;
 
@@ -344,6 +380,7 @@ If `FaceAttributesType` does not include `Nose` or more than 5 faces are detecte
                      * @return Nose Nose information. 
 The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     AttributeItem GetNose() const;
 
@@ -351,15 +388,17 @@ If `FaceAttributesType` does not include `Nose` or more than 5 faces are detecte
                      * 设置Nose information. 
 The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Nose Nose information. 
+                     * @param _nose Nose information. 
 The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetNose(const AttributeItem& _nose);
 
                     /**
                      * 判断参数 Nose 是否已赋值
                      * @return Nose 是否已赋值
+                     * 
                      */
                     bool NoseHasBeenSet() const;
 
@@ -370,6 +409,7 @@ If `FaceAttributesType` does not include `Shape` or more than 5 faces are detect
                      * @return Shape Face shape information. 
 The `Type` values of the `AttributeItem` include: 0: square; 1: triangular; 2: oval; 3: heart-shaped; 4: round.
 If `FaceAttributesType` does not include `Shape` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     AttributeItem GetShape() const;
 
@@ -377,15 +417,17 @@ If `FaceAttributesType` does not include `Shape` or more than 5 faces are detect
                      * 设置Face shape information. 
 The `Type` values of the `AttributeItem` include: 0: square; 1: triangular; 2: oval; 3: heart-shaped; 4: round.
 If `FaceAttributesType` does not include `Shape` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Shape Face shape information. 
+                     * @param _shape Face shape information. 
 The `Type` values of the `AttributeItem` include: 0: square; 1: triangular; 2: oval; 3: heart-shaped; 4: round.
 If `FaceAttributesType` does not include `Shape` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetShape(const AttributeItem& _shape);
 
                     /**
                      * 判断参数 Shape 是否已赋值
                      * @return Shape 是否已赋值
+                     * 
                      */
                     bool ShapeHasBeenSet() const;
 
@@ -396,6 +438,7 @@ If `FaceAttributesType` does not include `Skin` or more than 5 faces are detecte
                      * @return Skin Skin color information. 
 The `Type` values of the `AttributeItem` include: 0: yellow; 1: brown; 2: black; 3: white.
 If `FaceAttributesType` does not include `Skin` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     AttributeItem GetSkin() const;
 
@@ -403,15 +446,17 @@ If `FaceAttributesType` does not include `Skin` or more than 5 faces are detecte
                      * 设置Skin color information. 
 The `Type` values of the `AttributeItem` include: 0: yellow; 1: brown; 2: black; 3: white.
 If `FaceAttributesType` does not include `Skin` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Skin Skin color information. 
+                     * @param _skin Skin color information. 
 The `Type` values of the `AttributeItem` include: 0: yellow; 1: brown; 2: black; 3: white.
 If `FaceAttributesType` does not include `Skin` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetSkin(const AttributeItem& _skin);
 
                     /**
                      * 判断参数 Skin 是否已赋值
                      * @return Skin 是否已赋值
+                     * 
                      */
                     bool SkinHasBeenSet() const;
 
@@ -420,20 +465,23 @@ If `FaceAttributesType` does not include `Skin` or more than 5 faces are detecte
 If `FaceAttributesType` does not include `Smile` or more than 5 faces are detected, this parameter will still be returned but meaningless.
                      * @return Smile Smile level. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Smile` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     int64_t GetSmile() const;
 
                     /**
                      * 设置Smile level. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Smile` or more than 5 faces are detected, this parameter will still be returned but meaningless.
-                     * @param Smile Smile level. Value range: [0,100]. 
+                     * @param _smile Smile level. Value range: [0,100]. 
 If `FaceAttributesType` does not include `Smile` or more than 5 faces are detected, this parameter will still be returned but meaningless.
+                     * 
                      */
                     void SetSmile(const int64_t& _smile);
 
                     /**
                      * 判断参数 Smile 是否已赋值
                      * @return Smile 是否已赋值
+                     * 
                      */
                     bool SmileHasBeenSet() const;
 

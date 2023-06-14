@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取(Filter) filter by instance ID
                      * @return InstanceId (Filter) filter by instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置(Filter) filter by instance ID
-                     * @param InstanceId (Filter) filter by instance ID
+                     * @param _instanceId (Filter) filter by instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取(Filter) filter by instance name. Fuzzy search is supported
                      * @return SearchWord (Filter) filter by instance name. Fuzzy search is supported
+                     * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
                      * 设置(Filter) filter by instance name. Fuzzy search is supported
-                     * @param SearchWord (Filter) filter by instance name. Fuzzy search is supported
+                     * @param _searchWord (Filter) filter by instance name. Fuzzy search is supported
+                     * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
 
                     /**
                      * 判断参数 SearchWord 是否已赋值
                      * @return SearchWord 是否已赋值
+                     * 
                      */
                     bool SearchWordHasBeenSet() const;
 
                     /**
                      * 获取(Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
                      * @return Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
                      * 设置(Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-                     * @param Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * @param _status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+                     * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Offset. If this parameter is left empty, 0 will be used by default
                      * @return Offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. If this parameter is left empty, 0 will be used by default
-                     * @param Offset Offset. If this parameter is left empty, 0 will be used by default
+                     * @param _offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
                      * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+                     * @param _limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Tag key value (this field has been deprecated).
                      * @return TagKey Tag key value (this field has been deprecated).
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key value (this field has been deprecated).
-                     * @param TagKey Tag key value (this field has been deprecated).
+                     * @param _tagKey Tag key value (this field has been deprecated).
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取VPC ID.
                      * @return VpcId VPC ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID.
-                     * @param VpcId VPC ID.
+                     * @param _vpcId VPC ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 

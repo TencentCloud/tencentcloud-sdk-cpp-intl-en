@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Video playback start time, in milliseconds
                      * @return VideoPlayTime Video playback start time, in milliseconds
+                     * 
                      */
                     int64_t GetVideoPlayTime() const;
 
                     /**
                      * 设置Video playback start time, in milliseconds
-                     * @param VideoPlayTime Video playback start time, in milliseconds
+                     * @param _videoPlayTime Video playback start time, in milliseconds
+                     * 
                      */
                     void SetVideoPlayTime(const int64_t& _videoPlayTime);
 
                     /**
                      * 判断参数 VideoPlayTime 是否已赋值
                      * @return VideoPlayTime 是否已赋值
+                     * 
                      */
                     bool VideoPlayTimeHasBeenSet() const;
 
                     /**
                      * 获取Video size, in bytes
                      * @return VideoSize Video size, in bytes
+                     * 
                      */
                     int64_t GetVideoSize() const;
 
                     /**
                      * 设置Video size, in bytes
-                     * @param VideoSize Video size, in bytes
+                     * @param _videoSize Video size, in bytes
+                     * 
                      */
                     void SetVideoSize(const int64_t& _videoSize);
 
                     /**
                      * 判断参数 VideoSize 是否已赋值
                      * @return VideoSize 是否已赋值
+                     * 
                      */
                     bool VideoSizeHasBeenSet() const;
 
                     /**
                      * 获取Video format
                      * @return VideoFormat Video format
+                     * 
                      */
                     std::string GetVideoFormat() const;
 
                     /**
                      * 设置Video format
-                     * @param VideoFormat Video format
+                     * @param _videoFormat Video format
+                     * 
                      */
                     void SetVideoFormat(const std::string& _videoFormat);
 
                     /**
                      * 判断参数 VideoFormat 是否已赋值
                      * @return VideoFormat 是否已赋值
+                     * 
                      */
                     bool VideoFormatHasBeenSet() const;
 
                     /**
                      * 获取Video playback duration, in milliseconds
                      * @return VideoDuration Video playback duration, in milliseconds
+                     * 
                      */
                     int64_t GetVideoDuration() const;
 
                     /**
                      * 设置Video playback duration, in milliseconds
-                     * @param VideoDuration Video playback duration, in milliseconds
+                     * @param _videoDuration Video playback duration, in milliseconds
+                     * 
                      */
                     void SetVideoDuration(const int64_t& _videoDuration);
 
                     /**
                      * 判断参数 VideoDuration 是否已赋值
                      * @return VideoDuration 是否已赋值
+                     * 
                      */
                     bool VideoDurationHasBeenSet() const;
 
                     /**
                      * 获取Video file URL
                      * @return VideoUrl Video file URL
+                     * 
                      */
                     std::string GetVideoUrl() const;
 
                     /**
                      * 设置Video file URL
-                     * @param VideoUrl Video file URL
+                     * @param _videoUrl Video file URL
+                     * 
                      */
                     void SetVideoUrl(const std::string& _videoUrl);
 
                     /**
                      * 判断参数 VideoUrl 是否已赋值
                      * @return VideoUrl 是否已赋值
+                     * 
                      */
                     bool VideoUrlHasBeenSet() const;
 
                     /**
                      * 获取Video file ID
                      * @return VideoId Video file ID
+                     * 
                      */
                     std::string GetVideoId() const;
 
                     /**
                      * 设置Video file ID
-                     * @param VideoId Video file ID
+                     * @param _videoId Video file ID
+                     * 
                      */
                     void SetVideoId(const std::string& _videoId);
 
                     /**
                      * 判断参数 VideoId 是否已赋值
                      * @return VideoId 是否已赋值
+                     * 
                      */
                     bool VideoIdHasBeenSet() const;
 
                     /**
                      * 获取Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
                      * @return VideoType Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
+                     * 
                      */
                     int64_t GetVideoType() const;
 
                     /**
                      * 设置Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
-                     * @param VideoType Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
+                     * @param _videoType Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
+                     * 
                      */
                     void SetVideoType(const int64_t& _videoType);
 
                     /**
                      * 判断参数 VideoType 是否已赋值
                      * @return VideoType 是否已赋值
+                     * 
                      */
                     bool VideoTypeHasBeenSet() const;
 
                     /**
                      * 获取ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
                      * @return UserId ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
-                     * @param UserId ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
+                     * @param _userId ID of the user to which the camera video or screen-sharing video belongs (whiteboard video: null, mixed stream video: tic_mixstream_<Room ID>_<Mixed stream layout type>, auxiliary video: tic_substream_user ID)
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Width of the video resolution.
                      * @return Width Width of the video resolution.
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Width of the video resolution.
-                     * @param Width Width of the video resolution.
+                     * @param _width Width of the video resolution.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Height of the video resolution.
                      * @return Height Height of the video resolution.
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Height of the video resolution.
-                     * @param Height Height of the video resolution.
+                     * @param _height Height of the video resolution.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 

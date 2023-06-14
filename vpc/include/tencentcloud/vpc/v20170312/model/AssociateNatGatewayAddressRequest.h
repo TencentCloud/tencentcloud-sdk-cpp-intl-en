@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the NAT gateway, such as `nat-df45454`.
                      * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The ID of the NAT gateway, such as `nat-df45454`.
-                     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * @param _natGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
                      * @return AddressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * 
                      */
                     uint64_t GetAddressCount() const;
 
                     /**
                      * 设置The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
-                     * @param AddressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * @param _addressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * 
                      */
                     void SetAddressCount(const uint64_t& _addressCount);
 
                     /**
                      * 判断参数 AddressCount 是否已赋值
                      * @return AddressCount 是否已赋值
+                     * 
                      */
                     bool AddressCountHasBeenSet() const;
 
                     /**
                      * 获取Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
                      * @return PublicIpAddresses Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * 
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
                      * 设置Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
-                     * @param PublicIpAddresses Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * @param _publicIpAddresses Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * 
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
 
                     /**
                      * 判断参数 PublicIpAddresses 是否已赋值
                      * @return PublicIpAddresses 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressesHasBeenSet() const;
 
                     /**
                      * 获取The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
                      * @return Zone The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
-                     * @param Zone The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
+                     * @param _zone The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
                      * @return StockPublicIpAddressesBandwidthOut The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
+                     * 
                      */
                     uint64_t GetStockPublicIpAddressesBandwidthOut() const;
 
                     /**
                      * 设置The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
-                     * @param StockPublicIpAddressesBandwidthOut The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
+                     * @param _stockPublicIpAddressesBandwidthOut The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
+                     * 
                      */
                     void SetStockPublicIpAddressesBandwidthOut(const uint64_t& _stockPublicIpAddressesBandwidthOut);
 
                     /**
                      * 判断参数 StockPublicIpAddressesBandwidthOut 是否已赋值
                      * @return StockPublicIpAddressesBandwidthOut 是否已赋值
+                     * 
                      */
                     bool StockPublicIpAddressesBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
                      * @return PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * 
                      */
                     uint64_t GetPublicIpAddressesBandwidthOut() const;
 
                     /**
                      * 设置The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
-                     * @param PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * @param _publicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * 
                      */
                     void SetPublicIpAddressesBandwidthOut(const uint64_t& _publicIpAddressesBandwidthOut);
 
                     /**
                      * 判断参数 PublicIpAddressesBandwidthOut 是否已赋值
                      * @return PublicIpAddressesBandwidthOut 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressesBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
                      * @return PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+                     * 
                      */
                     bool GetPublicIpFromSameZone() const;
 
                     /**
                      * 设置Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
-                     * @param PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+                     * @param _publicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+                     * 
                      */
                     void SetPublicIpFromSameZone(const bool& _publicIpFromSameZone);
 
                     /**
                      * 判断参数 PublicIpFromSameZone 是否已赋值
                      * @return PublicIpFromSameZone 是否已赋值
+                     * 
                      */
                     bool PublicIpFromSameZoneHasBeenSet() const;
 

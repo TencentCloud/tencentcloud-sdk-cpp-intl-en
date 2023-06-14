@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Partition.
                      * @return Partition Partition.
+                     * 
                      */
                     int64_t GetPartition() const;
 
                     /**
                      * 设置Partition.
-                     * @param Partition Partition.
+                     * @param _partition Partition.
+                     * 
                      */
                     void SetPartition(const int64_t& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 
                     /**
                      * 获取Partition consumption offset.
                      * @return Offset Partition consumption offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Partition consumption offset.
-                     * @param Offset Partition consumption offset.
+                     * @param _offset Partition consumption offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

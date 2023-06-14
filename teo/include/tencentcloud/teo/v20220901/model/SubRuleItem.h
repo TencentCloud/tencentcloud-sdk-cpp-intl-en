@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Nested rule settings
                      * @return Rules Nested rule settings
+                     * 
                      */
                     std::vector<SubRule> GetRules() const;
 
                     /**
                      * 设置Nested rule settings
-                     * @param Rules Nested rule settings
+                     * @param _rules Nested rule settings
+                     * 
                      */
                     void SetRules(const std::vector<SubRule>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
                     /**
                      * 获取Tag of the rule.
                      * @return Tags Tag of the rule.
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Tag of the rule.
-                     * @param Tags Tag of the rule.
+                     * @param _tags Tag of the rule.
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be queried.
                      * @return ServiceId Unique ID of the service to be queried.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be queried.
-                     * @param ServiceId Unique ID of the service to be queried.
+                     * @param _serviceId Unique ID of the service to be queried.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Service region.
                      * @return ApiRegion Service region.
+                     * 
                      */
                     std::string GetApiRegion() const;
 
                     /**
                      * 设置Service region.
-                     * @param ApiRegion Service region.
+                     * @param _apiRegion Service region.
+                     * 
                      */
                     void SetApiRegion(const std::string& _apiRegion);
 
                     /**
                      * 判断参数 ApiRegion 是否已赋值
                      * @return ApiRegion 是否已赋值
+                     * 
                      */
                     bool ApiRegionHasBeenSet() const;
 

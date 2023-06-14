@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取URL prefetch usage and quota.
                      * @return UrlPush URL prefetch usage and quota.
+                     * 
                      */
                     std::vector<Quota> GetUrlPush() const;
 
                     /**
                      * 判断参数 UrlPush 是否已赋值
                      * @return UrlPush 是否已赋值
+                     * 
                      */
                     bool UrlPushHasBeenSet() const;
 

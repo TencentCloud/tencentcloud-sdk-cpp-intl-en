@@ -47,18 +47,21 @@ namespace TencentCloud
                     /**
                      * 获取The number of EIPs. Default: 1.
                      * @return AddressCount The number of EIPs. Default: 1.
+                     * 
                      */
                     int64_t GetAddressCount() const;
 
                     /**
                      * 设置The number of EIPs. Default: 1.
-                     * @param AddressCount The number of EIPs. Default: 1.
+                     * @param _addressCount The number of EIPs. Default: 1.
+                     * 
                      */
                     void SetAddressCount(const int64_t& _addressCount);
 
                     /**
                      * 判断参数 AddressCount 是否已赋值
                      * @return AddressCount 是否已赋值
+                     * 
                      */
                     bool AddressCountHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
 <ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
+                     * 
                      */
                     std::string GetInternetServiceProvider() const;
 
@@ -79,16 +83,18 @@ namespace TencentCloud
 <ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
-                     * @param InternetServiceProvider The EIP line type. Default: BGP.
+                     * @param _internetServiceProvider The EIP line type. Default: BGP.
 <ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
 <li>CTCC: China Telecom</li>
 <li>CUCC: China Unicom</li></ul>Note: Only certain regions support static single-line IP addresses.</li></ul>
+                     * 
                      */
                     void SetInternetServiceProvider(const std::string& _internetServiceProvider);
 
                     /**
                      * 判断参数 InternetServiceProvider 是否已赋值
                      * @return InternetServiceProvider 是否已赋值
+                     * 
                      */
                     bool InternetServiceProviderHasBeenSet() const;
 
@@ -105,6 +111,7 @@ namespace TencentCloud
 <li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
+                     * 
                      */
                     std::string GetInternetChargeType() const;
 
@@ -115,18 +122,20 @@ namespace TencentCloud
 <li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
-                     * @param InternetChargeType The EIP billing method.
+                     * @param _internetChargeType The EIP billing method.
 <ul style="margin:0"><li>For bill-by-IP account beta users, valid values: <ul><li>BANDWIDTH_PACKAGE: paid by the [bandwidth package](https://intl.cloud.tencent.com/document/product/684/15255?from_cn_redirect=1)(who must also be bandwidth package beta users)</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR: billed by hourly bandwidth on a pay-as-you-go basis</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH: monthly bandwidth subscription</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR: billed by hourly traffic on a pay-as-you-go basis</li></ul>Default value: TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>If you are not a bill-by-IP account beta user, the EIP billing is the same as that for the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
+                     * 
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
 
                     /**
                      * 判断参数 InternetChargeType 是否已赋值
                      * @return InternetChargeType 是否已赋值
+                     * 
                      */
                     bool InternetChargeTypeHasBeenSet() const;
 
@@ -143,6 +152,7 @@ namespace TencentCloud
 <li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
 <li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
@@ -153,36 +163,41 @@ namespace TencentCloud
 <li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
 <li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
-                     * @param InternetMaxBandwidthOut The EIP outbound bandwidth cap, in Mbps.
+                     * @param _internetMaxBandwidthOut The EIP outbound bandwidth cap, in Mbps.
 <ul style="margin:0"><li>For bill-by-IP account beta users, valid values:<ul><li>BANDWIDTH_PACKAGE: 1 Mbps to 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li>
 <li>BANDWIDTH_PREPAID_BY_MONTH: 1 Mbps to 200 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
 <li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
                      * @return AddressChargePrepaid A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     * 
                      */
                     AddressChargePrepaid GetAddressChargePrepaid() const;
 
                     /**
                      * 设置A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
-                     * @param AddressChargePrepaid A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     * @param _addressChargePrepaid A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
+                     * 
                      */
                     void SetAddressChargePrepaid(const AddressChargePrepaid& _addressChargePrepaid);
 
                     /**
                      * 判断参数 AddressChargePrepaid 是否已赋值
                      * @return AddressChargePrepaid 是否已赋值
+                     * 
                      */
                     bool AddressChargePrepaidHasBeenSet() const;
 
@@ -193,6 +208,7 @@ namespace TencentCloud
                      * @return AddressType The EIP type. Default: `EIP`.
 <ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
 <ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
+                     * 
                      */
                     std::string GetAddressType() const;
 
@@ -200,15 +216,17 @@ namespace TencentCloud
                      * 设置The EIP type. Default: `EIP`.
 <ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
 <ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
-                     * @param AddressType The EIP type. Default: `EIP`.
+                     * @param _addressType The EIP type. Default: `EIP`.
 <ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
 <ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
+                     * 
                      */
                     void SetAddressType(const std::string& _addressType);
 
                     /**
                      * 判断参数 AddressType 是否已赋值
                      * @return AddressType 是否已赋值
+                     * 
                      */
                     bool AddressTypeHasBeenSet() const;
 
@@ -217,20 +235,23 @@ namespace TencentCloud
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
                      * @return AnycastZone Anycast publishing region
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+                     * 
                      */
                     std::string GetAnycastZone() const;
 
                     /**
                      * 设置Anycast publishing region
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
-                     * @param AnycastZone Anycast publishing region
+                     * @param _anycastZone Anycast publishing region
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
+                     * 
                      */
                     void SetAnycastZone(const std::string& _anycastZone);
 
                     /**
                      * 判断参数 AnycastZone 是否已赋值
                      * @return AnycastZone 是否已赋值
+                     * 
                      */
                     bool AnycastZoneHasBeenSet() const;
 
@@ -243,6 +264,7 @@ Whether the Anycast EIP can be bound to CLB instances.
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
 <li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
+                     * 
                      */
                     bool GetApplicableForCLB() const;
 
@@ -251,88 +273,102 @@ Whether the Anycast EIP can be bound to CLB instances.
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
 <li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
-                     * @param ApplicableForCLB <b>**[Disused]**</b>
+                     * @param _applicableForCLB <b>**[Disused]**</b>
 Whether the Anycast EIP can be bound to CLB instances.
 <ul style="margin:0"><li>Valid for users who have activated the AIA. Values:<ul><li>TRUE: the Anycast EIP can be bound to CLB instances.</li>
 <li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
+                     * 
                      */
                     void SetApplicableForCLB(const bool& _applicableForCLB);
 
                     /**
                      * 判断参数 ApplicableForCLB 是否已赋值
                      * @return ApplicableForCLB 是否已赋值
+                     * 
                      */
                     bool ApplicableForCLBHasBeenSet() const;
 
                     /**
                      * 获取List of tags to be bound.
                      * @return Tags List of tags to be bound.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of tags to be bound.
-                     * @param Tags List of tags to be bound.
+                     * @param _tags List of tags to be bound.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
                      * @return BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
+                     * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
                      * 设置The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
-                     * @param BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
+                     * @param _bandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
+                     * 
                      */
                     void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
 
                     /**
                      * 判断参数 BandwidthPackageId 是否已赋值
                      * @return BandwidthPackageId 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
                      * 获取EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
                      * @return AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     * 
                      */
                     std::string GetAddressName() const;
 
                     /**
                      * 设置EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
-                     * @param AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     * @param _addressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+                     * 
                      */
                     void SetAddressName(const std::string& _addressName);
 
                     /**
                      * 判断参数 AddressName 是否已赋值
                      * @return AddressName 是否已赋值
+                     * 
                      */
                     bool AddressNameHasBeenSet() const;
 
                     /**
                      * 获取Network egress. It defaults to `center_egress1`.
                      * @return Egress Network egress. It defaults to `center_egress1`.
+                     * 
                      */
                     std::string GetEgress() const;
 
                     /**
                      * 设置Network egress. It defaults to `center_egress1`.
-                     * @param Egress Network egress. It defaults to `center_egress1`.
+                     * @param _egress Network egress. It defaults to `center_egress1`.
+                     * 
                      */
                     void SetEgress(const std::string& _egress);
 
                     /**
                      * 判断参数 Egress 是否已赋值
                      * @return Egress 是否已赋值
+                     * 
                      */
                     bool EgressHasBeenSet() const;
 

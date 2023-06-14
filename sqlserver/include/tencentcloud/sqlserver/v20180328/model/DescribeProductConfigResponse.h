@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Specification information array
                      * @return SpecInfoList Specification information array
+                     * 
                      */
                     std::vector<SpecInfo> GetSpecInfoList() const;
 
                     /**
                      * 判断参数 SpecInfoList 是否已赋值
                      * @return SpecInfoList 是否已赋值
+                     * 
                      */
                     bool SpecInfoListHasBeenSet() const;
 
                     /**
                      * 获取Number of date entries returned
                      * @return TotalCount Number of date entries returned
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

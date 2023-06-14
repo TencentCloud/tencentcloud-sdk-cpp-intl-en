@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Rule details
                      * @return RuleInfo Rule details
+                     * 
                      */
                     K8sApiAbnormalRuleInfo GetRuleInfo() const;
 
                     /**
                      * 设置Rule details
-                     * @param RuleInfo Rule details
+                     * @param _ruleInfo Rule details
+                     * 
                      */
                     void SetRuleInfo(const K8sApiAbnormalRuleInfo& _ruleInfo);
 
                     /**
                      * 判断参数 RuleInfo 是否已赋值
                      * @return RuleInfo 是否已赋值
+                     * 
                      */
                     bool RuleInfoHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Confidence score for the OCR-detected terrorism content. Value range: 0-100
                      * @return Confidence Confidence score for the OCR-detected terrorism content. Value range: 0-100
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence score for the OCR-detected terrorism content. Value range: 0-100
-                     * @param Confidence Confidence score for the OCR-detected terrorism content. Value range: 0-100
+                     * @param _confidence Confidence score for the OCR-detected terrorism content. Value range: 0-100
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -82,16 +86,18 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion Processing suggestion for the OCR-detected terrorism content
+                     * @param _suggestion Processing suggestion for the OCR-detected terrorism content
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -100,56 +106,65 @@ namespace TencentCloud
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      * @return SegmentSet List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * 
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-                     * @param SegmentSet List of video segments that contain OCR-detected terrorism content
+                     * @param _segmentSet List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewOcrTextSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 
                     /**
                      * 获取URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
                      * @return SegmentSetFileUrl URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
                      * 设置URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-                     * @param SegmentSetFileUrl URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @param _segmentSetFileUrl URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
 
                     /**
                      * 判断参数 SegmentSetFileUrl 是否已赋值
                      * @return SegmentSetFileUrl 是否已赋值
+                     * 
                      */
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
                      * 设置Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @param _segmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
 
                     /**
                      * 判断参数 SegmentSetFileUrlExpireTime 是否已赋值
                      * @return SegmentSetFileUrlExpireTime 是否已赋值
+                     * 
                      */
                     bool SegmentSetFileUrlExpireTimeHasBeenSet() const;
 

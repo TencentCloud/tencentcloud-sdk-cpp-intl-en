@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Enabled Whether the private LB is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether the private LB is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Enabled Whether the private LB is enabled
+                     * @param _enabled Whether the private LB is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SubnetId ID of the subnet associated with the private LB
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSubnetId() const;
 
                     /**
                      * 设置ID of the subnet associated with the private LB
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SubnetId ID of the subnet associated with the private LB
+                     * @param _subnetId ID of the subnet associated with the private LB
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubnetId(const std::vector<std::string>& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 

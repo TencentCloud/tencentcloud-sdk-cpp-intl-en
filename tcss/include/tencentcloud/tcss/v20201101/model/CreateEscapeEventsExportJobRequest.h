@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Number of results to be returned. Maximum value: `10000`.
                      * @return Limit Number of results to be returned. Maximum value: `10000`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Maximum value: `10000`.
-                     * @param Limit Number of results to be returned. Maximum value: `10000`.
+                     * @param _limit Number of results to be returned. Maximum value: `10000`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Filter parameter - status. Valid values: `EVENT_UNDEAL` (pending); `EVENT_DEALED` (processed); `EVENT_INGNORE` (ignored).
                      * @return Filters Filter parameter - status. Valid values: `EVENT_UNDEAL` (pending); `EVENT_DEALED` (processed); `EVENT_INGNORE` (ignored).
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
                     /**
                      * 设置Filter parameter - status. Valid values: `EVENT_UNDEAL` (pending); `EVENT_DEALED` (processed); `EVENT_INGNORE` (ignored).
-                     * @param Filters Filter parameter - status. Valid values: `EVENT_UNDEAL` (pending); `EVENT_DEALED` (processed); `EVENT_INGNORE` (ignored).
+                     * @param _filters Filter parameter - status. Valid values: `EVENT_UNDEAL` (pending); `EVENT_DEALED` (processed); `EVENT_INGNORE` (ignored).
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `asc`, `desc`.
                      * @return Order Valid values: `asc`, `desc`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Valid values: `asc`, `desc`.
-                     * @param Order Valid values: `asc`, `desc`.
+                     * @param _order Valid values: `asc`, `desc`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field: `latest_found_time`.
                      * @return By Sorting field: `latest_found_time`.
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field: `latest_found_time`.
-                     * @param By Sorting field: `latest_found_time`.
+                     * @param _by Sorting field: `latest_found_time`.
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Export field
                      * @return ExportField Export field
+                     * 
                      */
                     std::vector<std::string> GetExportField() const;
 
                     /**
                      * 设置Export field
-                     * @param ExportField Export field
+                     * @param _exportField Export field
+                     * 
                      */
                     void SetExportField(const std::vector<std::string>& _exportField);
 
                     /**
                      * 判断参数 ExportField 是否已赋值
                      * @return ExportField 是否已赋值
+                     * 
                      */
                     bool ExportFieldHasBeenSet() const;
 

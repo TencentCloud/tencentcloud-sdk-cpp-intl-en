@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the certificate whose order has been successfully cancelled
                      * @return CertificateId ID of the certificate whose order has been successfully cancelled
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 

@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取Pagination data
                      * @return Pageable Pagination data
+                     * 
                      */
                     Pageable GetPageable() const;
 
                     /**
                      * 设置Pagination data
-                     * @param Pageable Pagination data
+                     * @param _pageable Pagination data
+                     * 
                      */
                     void SetPageable(const Pageable& _pageable);
 
                     /**
                      * 判断参数 Pageable 是否已赋值
                      * @return Pageable 是否已赋值
+                     * 
                      */
                     bool PageableHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -97,34 +104,39 @@ namespace TencentCloud
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
-                     * @param Filters Valid values of `Key`: `condition`, `userGroupId`.
+                     * @param _filters Valid values of `Key`: `condition`, `userGroupId`.
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Whether the content is passed through
                      * @return Original Whether the content is passed through
+                     * 
                      */
                     bool GetOriginal() const;
 
                     /**
                      * 设置Whether the content is passed through
-                     * @param Original Whether the content is passed through
+                     * @param _original Whether the content is passed through
+                     * 
                      */
                     void SetOriginal(const bool& _original);
 
                     /**
                      * 判断参数 Original 是否已赋值
                      * @return Original 是否已赋值
+                     * 
                      */
                     bool OriginalHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Traffic package ID.
                      * @return TrafficPackageId Traffic package ID.
+                     * 
                      */
                     std::string GetTrafficPackageId() const;
 
                     /**
                      * 设置Traffic package ID.
-                     * @param TrafficPackageId Traffic package ID.
+                     * @param _trafficPackageId Traffic package ID.
+                     * 
                      */
                     void SetTrafficPackageId(const std::string& _trafficPackageId);
 
                     /**
                      * 判断参数 TrafficPackageId 是否已赋值
                      * @return TrafficPackageId 是否已赋值
+                     * 
                      */
                     bool TrafficPackageIdHasBeenSet() const;
 
                     /**
                      * 获取Used traffic in bytes during traffic package validity period.
                      * @return TrafficUsed Used traffic in bytes during traffic package validity period.
+                     * 
                      */
                     int64_t GetTrafficUsed() const;
 
                     /**
                      * 设置Used traffic in bytes during traffic package validity period.
-                     * @param TrafficUsed Used traffic in bytes during traffic package validity period.
+                     * @param _trafficUsed Used traffic in bytes during traffic package validity period.
+                     * 
                      */
                     void SetTrafficUsed(const int64_t& _trafficUsed);
 
                     /**
                      * 判断参数 TrafficUsed 是否已赋值
                      * @return TrafficUsed 是否已赋值
+                     * 
                      */
                     bool TrafficUsedHasBeenSet() const;
 
                     /**
                      * 获取Total traffic in bytes during traffic package validity period.
                      * @return TrafficPackageTotal Total traffic in bytes during traffic package validity period.
+                     * 
                      */
                     int64_t GetTrafficPackageTotal() const;
 
                     /**
                      * 设置Total traffic in bytes during traffic package validity period.
-                     * @param TrafficPackageTotal Total traffic in bytes during traffic package validity period.
+                     * @param _trafficPackageTotal Total traffic in bytes during traffic package validity period.
+                     * 
                      */
                     void SetTrafficPackageTotal(const int64_t& _trafficPackageTotal);
 
                     /**
                      * 判断参数 TrafficPackageTotal 是否已赋值
                      * @return TrafficPackageTotal 是否已赋值
+                     * 
                      */
                     bool TrafficPackageTotalHasBeenSet() const;
 
                     /**
                      * 获取Remaining traffic in bytes during traffic package validity period.
                      * @return TrafficPackageRemaining Remaining traffic in bytes during traffic package validity period.
+                     * 
                      */
                     int64_t GetTrafficPackageRemaining() const;
 
                     /**
                      * 设置Remaining traffic in bytes during traffic package validity period.
-                     * @param TrafficPackageRemaining Remaining traffic in bytes during traffic package validity period.
+                     * @param _trafficPackageRemaining Remaining traffic in bytes during traffic package validity period.
+                     * 
                      */
                     void SetTrafficPackageRemaining(const int64_t& _trafficPackageRemaining);
 
                     /**
                      * 判断参数 TrafficPackageRemaining 是否已赋值
                      * @return TrafficPackageRemaining 是否已赋值
+                     * 
                      */
                     bool TrafficPackageRemainingHasBeenSet() const;
 
                     /**
                      * 获取Traffic exceeding package amount in bytes during traffic package validity period.
                      * @return TrafficOverflow Traffic exceeding package amount in bytes during traffic package validity period.
+                     * 
                      */
                     int64_t GetTrafficOverflow() const;
 
                     /**
                      * 设置Traffic exceeding package amount in bytes during traffic package validity period.
-                     * @param TrafficOverflow Traffic exceeding package amount in bytes during traffic package validity period.
+                     * @param _trafficOverflow Traffic exceeding package amount in bytes during traffic package validity period.
+                     * 
                      */
                     void SetTrafficOverflow(const int64_t& _trafficOverflow);
 
                     /**
                      * 判断参数 TrafficOverflow 是否已赋值
                      * @return TrafficOverflow 是否已赋值
+                     * 
                      */
                     bool TrafficOverflowHasBeenSet() const;
 
@@ -143,6 +158,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return StartTime Start time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -150,15 +166,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Start time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Start time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
+                     * @param _startTime Start time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -169,6 +187,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return EndTime End time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -176,15 +195,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置End time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime End time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
+                     * @param _endTime End time of traffic package validity period according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -195,6 +216,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Deadline Traffic package expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeadline() const;
 
@@ -202,15 +224,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Traffic package expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Deadline Traffic package expiration time according to ISO 8601 standard. UTC time is used. 
+                     * @param _deadline Traffic package expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeadline(const std::string& _deadline);
 
                     /**
                      * 判断参数 Deadline 是否已赋值
                      * @return Deadline 是否已赋值
+                     * 
                      */
                     bool DeadlineHasBeenSet() const;
 
@@ -221,6 +245,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Status Traffic package status:
 <li>NETWORK_NORMAL: normal</li>
 <li>OVERDUE_NETWORK_DISABLED: the network is disconnected due to overdue payments</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -228,15 +253,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Traffic package status:
 <li>NETWORK_NORMAL: normal</li>
 <li>OVERDUE_NETWORK_DISABLED: the network is disconnected due to overdue payments</li>
-                     * @param Status Traffic package status:
+                     * @param _status Traffic package status:
 <li>NETWORK_NORMAL: normal</li>
 <li>OVERDUE_NETWORK_DISABLED: the network is disconnected due to overdue payments</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

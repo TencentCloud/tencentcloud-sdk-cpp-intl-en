@@ -50,162 +50,189 @@ namespace TencentCloud
                     /**
                      * 获取21 points that describe the face contour.
                      * @return FaceProfile 21 points that describe the face contour.
+                     * 
                      */
                     std::vector<Point> GetFaceProfile() const;
 
                     /**
                      * 设置21 points that describe the face contour.
-                     * @param FaceProfile 21 points that describe the face contour.
+                     * @param _faceProfile 21 points that describe the face contour.
+                     * 
                      */
                     void SetFaceProfile(const std::vector<Point>& _faceProfile);
 
                     /**
                      * 判断参数 FaceProfile 是否已赋值
                      * @return FaceProfile 是否已赋值
+                     * 
                      */
                     bool FaceProfileHasBeenSet() const;
 
                     /**
                      * 获取8 points that describe the left eye.
                      * @return LeftEye 8 points that describe the left eye.
+                     * 
                      */
                     std::vector<Point> GetLeftEye() const;
 
                     /**
                      * 设置8 points that describe the left eye.
-                     * @param LeftEye 8 points that describe the left eye.
+                     * @param _leftEye 8 points that describe the left eye.
+                     * 
                      */
                     void SetLeftEye(const std::vector<Point>& _leftEye);
 
                     /**
                      * 判断参数 LeftEye 是否已赋值
                      * @return LeftEye 是否已赋值
+                     * 
                      */
                     bool LeftEyeHasBeenSet() const;
 
                     /**
                      * 获取8 points that describe the right eye.
                      * @return RightEye 8 points that describe the right eye.
+                     * 
                      */
                     std::vector<Point> GetRightEye() const;
 
                     /**
                      * 设置8 points that describe the right eye.
-                     * @param RightEye 8 points that describe the right eye.
+                     * @param _rightEye 8 points that describe the right eye.
+                     * 
                      */
                     void SetRightEye(const std::vector<Point>& _rightEye);
 
                     /**
                      * 判断参数 RightEye 是否已赋值
                      * @return RightEye 是否已赋值
+                     * 
                      */
                     bool RightEyeHasBeenSet() const;
 
                     /**
                      * 获取8 points that describe the left eyebrow.
                      * @return LeftEyeBrow 8 points that describe the left eyebrow.
+                     * 
                      */
                     std::vector<Point> GetLeftEyeBrow() const;
 
                     /**
                      * 设置8 points that describe the left eyebrow.
-                     * @param LeftEyeBrow 8 points that describe the left eyebrow.
+                     * @param _leftEyeBrow 8 points that describe the left eyebrow.
+                     * 
                      */
                     void SetLeftEyeBrow(const std::vector<Point>& _leftEyeBrow);
 
                     /**
                      * 判断参数 LeftEyeBrow 是否已赋值
                      * @return LeftEyeBrow 是否已赋值
+                     * 
                      */
                     bool LeftEyeBrowHasBeenSet() const;
 
                     /**
                      * 获取8 points that describe the right eyebrow.
                      * @return RightEyeBrow 8 points that describe the right eyebrow.
+                     * 
                      */
                     std::vector<Point> GetRightEyeBrow() const;
 
                     /**
                      * 设置8 points that describe the right eyebrow.
-                     * @param RightEyeBrow 8 points that describe the right eyebrow.
+                     * @param _rightEyeBrow 8 points that describe the right eyebrow.
+                     * 
                      */
                     void SetRightEyeBrow(const std::vector<Point>& _rightEyeBrow);
 
                     /**
                      * 判断参数 RightEyeBrow 是否已赋值
                      * @return RightEyeBrow 是否已赋值
+                     * 
                      */
                     bool RightEyeBrowHasBeenSet() const;
 
                     /**
                      * 获取22 points that describe the mouth.
                      * @return Mouth 22 points that describe the mouth.
+                     * 
                      */
                     std::vector<Point> GetMouth() const;
 
                     /**
                      * 设置22 points that describe the mouth.
-                     * @param Mouth 22 points that describe the mouth.
+                     * @param _mouth 22 points that describe the mouth.
+                     * 
                      */
                     void SetMouth(const std::vector<Point>& _mouth);
 
                     /**
                      * 判断参数 Mouth 是否已赋值
                      * @return Mouth 是否已赋值
+                     * 
                      */
                     bool MouthHasBeenSet() const;
 
                     /**
                      * 获取13 points that describe the nose.
                      * @return Nose 13 points that describe the nose.
+                     * 
                      */
                     std::vector<Point> GetNose() const;
 
                     /**
                      * 设置13 points that describe the nose.
-                     * @param Nose 13 points that describe the nose.
+                     * @param _nose 13 points that describe the nose.
+                     * 
                      */
                     void SetNose(const std::vector<Point>& _nose);
 
                     /**
                      * 判断参数 Nose 是否已赋值
                      * @return Nose 是否已赋值
+                     * 
                      */
                     bool NoseHasBeenSet() const;
 
                     /**
                      * 获取1 point that describes the left pupil.
                      * @return LeftPupil 1 point that describes the left pupil.
+                     * 
                      */
                     std::vector<Point> GetLeftPupil() const;
 
                     /**
                      * 设置1 point that describes the left pupil.
-                     * @param LeftPupil 1 point that describes the left pupil.
+                     * @param _leftPupil 1 point that describes the left pupil.
+                     * 
                      */
                     void SetLeftPupil(const std::vector<Point>& _leftPupil);
 
                     /**
                      * 判断参数 LeftPupil 是否已赋值
                      * @return LeftPupil 是否已赋值
+                     * 
                      */
                     bool LeftPupilHasBeenSet() const;
 
                     /**
                      * 获取1 point that describes the right pupil.
                      * @return RightPupil 1 point that describes the right pupil.
+                     * 
                      */
                     std::vector<Point> GetRightPupil() const;
 
                     /**
                      * 设置1 point that describes the right pupil.
-                     * @param RightPupil 1 point that describes the right pupil.
+                     * @param _rightPupil 1 point that describes the right pupil.
+                     * 
                      */
                     void SetRightPupil(const std::vector<Point>& _rightPupil);
 
                     /**
                      * 判断参数 RightPupil 是否已赋值
                      * @return RightPupil 是否已赋值
+                     * 
                      */
                     bool RightPupilHasBeenSet() const;
 

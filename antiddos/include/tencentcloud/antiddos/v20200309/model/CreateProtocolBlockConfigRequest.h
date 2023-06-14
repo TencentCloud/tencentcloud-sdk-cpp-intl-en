@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Protocol blocking configuration
                      * @return ProtocolBlockConfig Protocol blocking configuration
+                     * 
                      */
                     ProtocolBlockConfig GetProtocolBlockConfig() const;
 
                     /**
                      * 设置Protocol blocking configuration
-                     * @param ProtocolBlockConfig Protocol blocking configuration
+                     * @param _protocolBlockConfig Protocol blocking configuration
+                     * 
                      */
                     void SetProtocolBlockConfig(const ProtocolBlockConfig& _protocolBlockConfig);
 
                     /**
                      * 判断参数 ProtocolBlockConfig 是否已赋值
                      * @return ProtocolBlockConfig 是否已赋值
+                     * 
                      */
                     bool ProtocolBlockConfigHasBeenSet() const;
 

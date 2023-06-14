@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Key
                      * @return Name Key
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Key
-                     * @param Name Key
+                     * @param _name Key
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Value
                      * @return Value Value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value
-                     * @param Value Value
+                     * @param _value Value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type Type
+                     * @param _type Type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

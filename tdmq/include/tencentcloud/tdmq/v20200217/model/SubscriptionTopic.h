@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Environment (namespace) name.
                      * @return EnvironmentId Environment (namespace) name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment (namespace) name.
-                     * @param EnvironmentId Environment (namespace) name.
+                     * @param _environmentId Environment (namespace) name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name.
                      * @return TopicName Topic name.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name.
-                     * @param TopicName Topic name.
+                     * @param _topicName Topic name.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Subscription name.
                      * @return SubscriptionName Subscription name.
+                     * 
                      */
                     std::string GetSubscriptionName() const;
 
                     /**
                      * 设置Subscription name.
-                     * @param SubscriptionName Subscription name.
+                     * @param _subscriptionName Subscription name.
+                     * 
                      */
                     void SetSubscriptionName(const std::string& _subscriptionName);
 
                     /**
                      * 判断参数 SubscriptionName 是否已赋值
                      * @return SubscriptionName 是否已赋值
+                     * 
                      */
                     bool SubscriptionNameHasBeenSet() const;
 

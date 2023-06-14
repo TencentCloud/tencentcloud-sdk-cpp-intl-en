@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable real-time monitoring
                      * @return EnableScan Whether to enable real-time monitoring
+                     * 
                      */
                     bool GetEnableScan() const;
 
                     /**
                      * 判断参数 EnableScan 是否已赋值
                      * @return EnableScan 是否已赋值
+                     * 
                      */
                     bool EnableScanHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanPathAll Scan all paths
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetScanPathAll() const;
 
                     /**
                      * 判断参数 ScanPathAll 是否已赋值
                      * @return ScanPathAll 是否已赋值
+                     * 
                      */
                     bool ScanPathAllHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetScanPathType() const;
 
                     /**
                      * 判断参数 ScanPathType 是否已赋值
                      * @return ScanPathType 是否已赋值
+                     * 
                      */
                     bool ScanPathTypeHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanPath Specified path to be excluded or scanned
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetScanPath() const;
 
                     /**
                      * 判断参数 ScanPath 是否已赋值
                      * @return ScanPath 是否已赋值
+                     * 
                      */
                     bool ScanPathHasBeenSet() const;
 
@@ -108,12 +116,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `SCAN_PATH_DEFAULT`: Scan the default path
 `SCAN_PATH_USER_DEFINE`: Scan the custom path
 
+                     * 
                      */
                     std::string GetScanPathMode() const;
 
                     /**
                      * 判断参数 ScanPathMode 是否已赋值
                      * @return ScanPathMode 是否已赋值
+                     * 
                      */
                     bool ScanPathModeHasBeenSet() const;
 

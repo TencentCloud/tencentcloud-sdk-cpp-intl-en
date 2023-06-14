@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether secondary AZ is supported
                      * @return IsSupportSlaveZone Whether secondary AZ is supported
+                     * 
                      */
                     std::string GetIsSupportSlaveZone() const;
 
                     /**
                      * 设置Whether secondary AZ is supported
-                     * @param IsSupportSlaveZone Whether secondary AZ is supported
+                     * @param _isSupportSlaveZone Whether secondary AZ is supported
+                     * 
                      */
                     void SetIsSupportSlaveZone(const std::string& _isSupportSlaveZone);
 
                     /**
                      * 判断参数 IsSupportSlaveZone 是否已赋值
                      * @return IsSupportSlaveZone 是否已赋值
+                     * 
                      */
                     bool IsSupportSlaveZoneHasBeenSet() const;
 
@@ -69,38 +72,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NonsupportSlaveZoneReason The reason why secondary AZ is not supported
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNonsupportSlaveZoneReason() const;
 
                     /**
                      * 设置The reason why secondary AZ is not supported
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NonsupportSlaveZoneReason The reason why secondary AZ is not supported
+                     * @param _nonsupportSlaveZoneReason The reason why secondary AZ is not supported
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNonsupportSlaveZoneReason(const std::string& _nonsupportSlaveZoneReason);
 
                     /**
                      * 判断参数 NonsupportSlaveZoneReason 是否已赋值
                      * @return NonsupportSlaveZoneReason 是否已赋值
+                     * 
                      */
                     bool NonsupportSlaveZoneReasonHasBeenSet() const;
 
                     /**
                      * 获取Whether read-only instance is supported
                      * @return IsSupportRo Whether read-only instance is supported
+                     * 
                      */
                     std::string GetIsSupportRo() const;
 
                     /**
                      * 设置Whether read-only instance is supported
-                     * @param IsSupportRo Whether read-only instance is supported
+                     * @param _isSupportRo Whether read-only instance is supported
+                     * 
                      */
                     void SetIsSupportRo(const std::string& _isSupportRo);
 
                     /**
                      * 判断参数 IsSupportRo 是否已赋值
                      * @return IsSupportRo 是否已赋值
+                     * 
                      */
                     bool IsSupportRoHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NonsupportRoReason The reason why read-only instance is not supported
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNonsupportRoReason() const;
 
                     /**
                      * 设置The reason why read-only instance is not supported
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NonsupportRoReason The reason why read-only instance is not supported
+                     * @param _nonsupportRoReason The reason why read-only instance is not supported
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNonsupportRoReason(const std::string& _nonsupportRoReason);
 
                     /**
                      * 判断参数 NonsupportRoReason 是否已赋值
                      * @return NonsupportRoReason 是否已赋值
+                     * 
                      */
                     bool NonsupportRoReasonHasBeenSet() const;
 

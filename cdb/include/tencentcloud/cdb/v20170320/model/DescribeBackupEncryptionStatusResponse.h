@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether the physical cold backup is enabled for the instance. Valid values: `on`, `off`.
                      * @return EncryptionStatus Whether the physical cold backup is enabled for the instance. Valid values: `on`, `off`.
+                     * 
                      */
                     std::string GetEncryptionStatus() const;
 
                     /**
                      * 判断参数 EncryptionStatus 是否已赋值
                      * @return EncryptionStatus 是否已赋值
+                     * 
                      */
                     bool EncryptionStatusHasBeenSet() const;
 

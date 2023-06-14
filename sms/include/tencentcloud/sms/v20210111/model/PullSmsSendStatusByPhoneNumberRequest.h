@@ -47,20 +47,23 @@ namespace TencentCloud
 Note: the data for the last 7 days can be pulled at most.
                      * @return BeginTime Pull start time in seconds in the format of UNIX timestamp.
 Note: the data for the last 7 days can be pulled at most.
+                     * 
                      */
                     uint64_t GetBeginTime() const;
 
                     /**
                      * 设置Pull start time in seconds in the format of UNIX timestamp.
 Note: the data for the last 7 days can be pulled at most.
-                     * @param BeginTime Pull start time in seconds in the format of UNIX timestamp.
+                     * @param _beginTime Pull start time in seconds in the format of UNIX timestamp.
 Note: the data for the last 7 days can be pulled at most.
+                     * 
                      */
                     void SetBeginTime(const uint64_t& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
@@ -69,92 +72,107 @@ Note: the data for the last 7 days can be pulled at most.
 Note: this parameter is currently fixed at 0.
                      * @return Offset Offset.
 Note: this parameter is currently fixed at 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
 Note: this parameter is currently fixed at 0.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
 Note: this parameter is currently fixed at 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of pulled entries. Maximum value: 100.
                      * @return Limit Maximum number of pulled entries. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of pulled entries. Maximum value: 100.
-                     * @param Limit Maximum number of pulled entries. Maximum value: 100.
+                     * @param _limit Maximum number of pulled entries. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Target mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
                      * @return PhoneNumber Target mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
                      * 设置Target mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-                     * @param PhoneNumber Target mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * @param _phoneNumber Target mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
 
                     /**
                      * 判断参数 PhoneNumber 是否已赋值
                      * @return PhoneNumber 是否已赋值
+                     * 
                      */
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
                      * 获取The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
                      * @return SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * 
                      */
                     std::string GetSmsSdkAppId() const;
 
                     /**
                      * 设置The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
-                     * @param SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * @param _smsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * 
                      */
                     void SetSmsSdkAppId(const std::string& _smsSdkAppId);
 
                     /**
                      * 判断参数 SmsSdkAppId 是否已赋值
                      * @return SmsSdkAppId 是否已赋值
+                     * 
                      */
                     bool SmsSdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Pull end time in seconds in the format of UNIX timestamp.
                      * @return EndTime Pull end time in seconds in the format of UNIX timestamp.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置Pull end time in seconds in the format of UNIX timestamp.
-                     * @param EndTime Pull end time in seconds in the format of UNIX timestamp.
+                     * @param _endTime Pull end time in seconds in the format of UNIX timestamp.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

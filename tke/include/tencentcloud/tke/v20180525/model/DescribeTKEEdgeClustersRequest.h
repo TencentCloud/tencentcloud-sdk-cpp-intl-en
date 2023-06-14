@@ -48,74 +48,86 @@ namespace TencentCloud
 all clusters under the account are obtained)
                      * @return ClusterIds Cluster ID list (when it is empty,
 all clusters under the account are obtained)
+                     * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
                      * 设置Cluster ID list (when it is empty,
 all clusters under the account are obtained)
-                     * @param ClusterIds Cluster ID list (when it is empty,
+                     * @param _clusterIds Cluster ID list (when it is empty,
 all clusters under the account are obtained)
+                     * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
                     /**
                      * 判断参数 ClusterIds 是否已赋值
                      * @return ClusterIds 是否已赋值
+                     * 
                      */
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`
                      * @return Offset Offset. Default value: `0`
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`
-                     * @param Offset Offset. Default value: `0`
+                     * @param _offset Offset. Default value: `0`
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of output entries. Default value: `20`
                      * @return Limit Maximum number of output entries. Default value: `20`
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of output entries. Default value: `20`
-                     * @param Limit Maximum number of output entries. Default value: `20`
+                     * @param _limit Maximum number of output entries. Default value: `20`
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filter condition (only filtering by a single ClusterName is supported)
                      * @return Filters Filter condition (only filtering by a single ClusterName is supported)
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter condition (only filtering by a single ClusterName is supported)
-                     * @param Filters Filter condition (only filtering by a single ClusterName is supported)
+                     * @param _filters Filter condition (only filtering by a single ClusterName is supported)
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

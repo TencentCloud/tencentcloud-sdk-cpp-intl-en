@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of images
                      * @return TotalCount Total number of images
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageSet Image array
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Image> GetImageSet() const;
 
                     /**
                      * 判断参数 ImageSet 是否已赋值
                      * @return ImageSet 是否已赋值
+                     * 
                      */
                     bool ImageSetHasBeenSet() const;
 

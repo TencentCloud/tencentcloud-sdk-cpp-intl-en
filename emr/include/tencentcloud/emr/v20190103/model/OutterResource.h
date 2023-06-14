@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Spec Specification
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSpec() const;
 
                     /**
                      * 设置Specification
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Spec Specification
+                     * @param _spec Specification
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpec(const std::string& _spec);
 
                     /**
                      * 判断参数 Spec 是否已赋值
                      * @return Spec 是否已赋值
+                     * 
                      */
                     bool SpecHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SpecName Specification name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSpecName() const;
 
                     /**
                      * 设置Specification name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SpecName Specification name
+                     * @param _specName Specification name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpecName(const std::string& _specName);
 
                     /**
                      * 判断参数 SpecName 是否已赋值
                      * @return SpecName 是否已赋值
+                     * 
                      */
                     bool SpecNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StorageType Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStorageType() const;
 
                     /**
                      * 设置Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StorageType Disk type
+                     * @param _storageType Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStorageType(const int64_t& _storageType);
 
                     /**
                      * 判断参数 StorageType 是否已赋值
                      * @return StorageType 是否已赋值
+                     * 
                      */
                     bool StorageTypeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiskType Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DiskType Disk type
+                     * @param _diskType Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RootSize System disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRootSize() const;
 
                     /**
                      * 设置System disk size
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RootSize System disk size
+                     * @param _rootSize System disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRootSize(const int64_t& _rootSize);
 
                     /**
                      * 判断参数 RootSize 是否已赋值
                      * @return RootSize 是否已赋值
+                     * 
                      */
                     bool RootSizeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MemSize Memory size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMemSize() const;
 
                     /**
                      * 设置Memory size
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MemSize Memory size
+                     * @param _memSize Memory size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMemSize(const int64_t& _memSize);
 
                     /**
                      * 判断参数 MemSize 是否已赋值
                      * @return MemSize 是否已赋值
+                     * 
                      */
                     bool MemSizeHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Cpu Number of CPUs
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCpu() const;
 
                     /**
                      * 设置Number of CPUs
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Cpu Number of CPUs
+                     * @param _cpu Number of CPUs
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCpu(const int64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiskSize Disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Disk size
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DiskSize Disk size
+                     * @param _diskSize Disk size
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceType Specification
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Specification
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceType Specification
+                     * @param _instanceType Specification
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 

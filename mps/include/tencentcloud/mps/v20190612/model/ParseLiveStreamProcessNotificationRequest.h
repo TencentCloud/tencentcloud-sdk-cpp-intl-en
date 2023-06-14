@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Live stream event notification obtained from CMQ.
                      * @return Content Live stream event notification obtained from CMQ.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Live stream event notification obtained from CMQ.
-                     * @param Content Live stream event notification obtained from CMQ.
+                     * @param _content Live stream event notification obtained from CMQ.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

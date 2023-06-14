@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The start.
                      * @return DisplayStart The start.
+                     * 
                      */
                     uint64_t GetDisplayStart() const;
 
                     /**
                      * 设置The start.
-                     * @param DisplayStart The start.
+                     * @param _displayStart The start.
+                     * 
                      */
                     void SetDisplayStart(const uint64_t& _displayStart);
 
                     /**
                      * 判断参数 DisplayStart 是否已赋值
                      * @return DisplayStart 是否已赋值
+                     * 
                      */
                     bool DisplayStartHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records to return.
                      * @return DisplayLength The maximum number of records to return.
+                     * 
                      */
                     uint64_t GetDisplayLength() const;
 
                     /**
                      * 设置The maximum number of records to return.
-                     * @param DisplayLength The maximum number of records to return.
+                     * @param _displayLength The maximum number of records to return.
+                     * 
                      */
                     void SetDisplayLength(const uint64_t& _displayLength);
 
                     /**
                      * 判断参数 DisplayLength 是否已赋值
                      * @return DisplayLength 是否已赋值
+                     * 
                      */
                     bool DisplayLengthHasBeenSet() const;
 
                     /**
                      * 获取The type. `0`: All CPTs; `1`: System CPTs; `2`: Authorization CPTs; `3`: General CPTs
                      * @return CptType The type. `0`: All CPTs; `1`: System CPTs; `2`: Authorization CPTs; `3`: General CPTs
+                     * 
                      */
                     uint64_t GetCptType() const;
 
                     /**
                      * 设置The type. `0`: All CPTs; `1`: System CPTs; `2`: Authorization CPTs; `3`: General CPTs
-                     * @param CptType The type. `0`: All CPTs; `1`: System CPTs; `2`: Authorization CPTs; `3`: General CPTs
+                     * @param _cptType The type. `0`: All CPTs; `1`: System CPTs; `2`: Authorization CPTs; `3`: General CPTs
+                     * 
                      */
                     void SetCptType(const uint64_t& _cptType);
 
                     /**
                      * 判断参数 CptType 是否已赋值
                      * @return CptType 是否已赋值
+                     * 
                      */
                     bool CptTypeHasBeenSet() const;
 

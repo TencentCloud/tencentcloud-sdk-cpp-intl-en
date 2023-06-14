@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the environment
                      * @return EnvironmentIds ID of the environment
+                     * 
                      */
                     std::vector<std::string> GetEnvironmentIds() const;
 
                     /**
                      * 设置ID of the environment
-                     * @param EnvironmentIds ID of the environment
+                     * @param _environmentIds ID of the environment
+                     * 
                      */
                     void SetEnvironmentIds(const std::vector<std::string>& _environmentIds);
 
                     /**
                      * 判断参数 EnvironmentIds 是否已赋值
                      * @return EnvironmentIds 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdsHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 

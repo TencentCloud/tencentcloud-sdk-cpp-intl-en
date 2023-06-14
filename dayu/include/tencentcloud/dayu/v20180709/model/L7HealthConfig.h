@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding protocol. Valid values: [http, https, http/https]
                      * @return Protocol Forwarding protocol. Valid values: [http, https, http/https]
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Forwarding protocol. Valid values: [http, https, http/https]
-                     * @param Protocol Forwarding protocol. Valid values: [http, https, http/https]
+                     * @param _protocol Forwarding protocol. Valid values: [http, https, http/https]
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Forwarding domain name
                      * @return Domain Forwarding domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Forwarding domain name
-                     * @param Domain Forwarding domain name
+                     * @param _domain Forwarding domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取1: enabled, 0: disabled
                      * @return Enable 1: enabled, 0: disabled
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置1: enabled, 0: disabled
-                     * @param Enable 1: enabled, 0: disabled
+                     * @param _enable 1: enabled, 0: disabled
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Detection interval in seconds
                      * @return Interval Detection interval in seconds
+                     * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
                      * 设置Detection interval in seconds
-                     * @param Interval Detection interval in seconds
+                     * @param _interval Detection interval in seconds
+                     * 
                      */
                     void SetInterval(const uint64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Number of exceptions in times
                      * @return KickNum Number of exceptions in times
+                     * 
                      */
                     uint64_t GetKickNum() const;
 
                     /**
                      * 设置Number of exceptions in times
-                     * @param KickNum Number of exceptions in times
+                     * @param _kickNum Number of exceptions in times
+                     * 
                      */
                     void SetKickNum(const uint64_t& _kickNum);
 
                     /**
                      * 判断参数 KickNum 是否已赋值
                      * @return KickNum 是否已赋值
+                     * 
                      */
                     bool KickNumHasBeenSet() const;
 
                     /**
                      * 获取Number of health checks in times
                      * @return AliveNum Number of health checks in times
+                     * 
                      */
                     uint64_t GetAliveNum() const;
 
                     /**
                      * 设置Number of health checks in times
-                     * @param AliveNum Number of health checks in times
+                     * @param _aliveNum Number of health checks in times
+                     * 
                      */
                     void SetAliveNum(const uint64_t& _aliveNum);
 
                     /**
                      * 判断参数 AliveNum 是否已赋值
                      * @return AliveNum 是否已赋值
+                     * 
                      */
                     bool AliveNumHasBeenSet() const;
 
                     /**
                      * 获取Health check detection method. Valid values: HEAD, GET. Default VALUE: HEAD
                      * @return Method Health check detection method. Valid values: HEAD, GET. Default VALUE: HEAD
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Health check detection method. Valid values: HEAD, GET. Default VALUE: HEAD
-                     * @param Method Health check detection method. Valid values: HEAD, GET. Default VALUE: HEAD
+                     * @param _method Health check detection method. Valid values: HEAD, GET. Default VALUE: HEAD
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
                     /**
                      * 获取Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
                      * @return StatusCode Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
+                     * 
                      */
                     uint64_t GetStatusCode() const;
 
                     /**
                      * 设置Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
-                     * @param StatusCode Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
+                     * @param _statusCode Healthy status code during health check. xx = 1, 2xx = 2, 3xx = 4, 4xx = 8, 5xx = 16. Multiple status code values are added up
+                     * 
                      */
                     void SetStatusCode(const uint64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取URL of checked directory. Default value: /
                      * @return Url URL of checked directory. Default value: /
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of checked directory. Default value: /
-                     * @param Url URL of checked directory. Default value: /
+                     * @param _url URL of checked directory. Default value: /
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

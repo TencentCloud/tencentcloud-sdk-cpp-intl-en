@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
                      * @return Total Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
+                     * 
                      */
                     std::vector<int64_t> GetTotal() const;
 
                     /**
                      * 设置Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
-                     * @param Total Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
+                     * @param _total Total memory size in KB, which is the value of `total` in the `Mem:` in the `free` command
+                     * 
                      */
                     void SetTotal(const std::vector<int64_t>& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
                      * @return Used Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
+                     * 
                      */
                     std::vector<int64_t> GetUsed() const;
 
                     /**
                      * 设置Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
-                     * @param Used Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
+                     * @param _used Used memory size in KB, which is the value of `used` in the `Mem:` row in the `free` command
+                     * 
                      */
                     void SetUsed(const std::vector<int64_t>& _used);
 
                     /**
                      * 判断参数 Used 是否已赋值
                      * @return Used 是否已赋值
+                     * 
                      */
                     bool UsedHasBeenSet() const;
 

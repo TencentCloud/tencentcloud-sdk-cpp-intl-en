@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of records returned
                      * @return TotalCount Number of records returned
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Details of instance in the interworking group
                      * @return InterInstanceSet Details of instance in the interworking group
+                     * 
                      */
                     std::vector<InterInstance> GetInterInstanceSet() const;
 
                     /**
                      * 判断参数 InterInstanceSet 是否已赋值
                      * @return InterInstanceSet 是否已赋值
+                     * 
                      */
                     bool InterInstanceSetHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Virtual node name
                      * @return Name Virtual node name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Virtual node name
-                     * @param Name Virtual node name
+                     * @param _name Virtual node name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Subnet of the virtual node
                      * @return SubnetId Subnet of the virtual node
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet of the virtual node
-                     * @param SubnetId Subnet of the virtual node
+                     * @param _subnetId Subnet of the virtual node
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Virtual node status
                      * @return Phase Virtual node status
+                     * 
                      */
                     std::string GetPhase() const;
 
                     /**
                      * 设置Virtual node status
-                     * @param Phase Virtual node status
+                     * @param _phase Virtual node status
+                     * 
                      */
                     void SetPhase(const std::string& _phase);
 
                     /**
                      * 判断参数 Phase 是否已赋值
                      * @return Phase 是否已赋值
+                     * 
                      */
                     bool PhaseHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time
+                     * @param _createdTime Creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 

@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Rule name
                      * @return RuleName Rule name
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
-                     * @param RuleName Rule name
+                     * @param _ruleName Rule name
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Rule information list
                      * @return RuleInfoList Rule information list
+                     * 
                      */
                     std::vector<K8sApiAbnormalRuleScopeInfo> GetRuleInfoList() const;
 
                     /**
                      * 设置Rule information list
-                     * @param RuleInfoList Rule information list
+                     * @param _ruleInfoList Rule information list
+                     * 
                      */
                     void SetRuleInfoList(const std::vector<K8sApiAbnormalRuleScopeInfo>& _ruleInfoList);
 
                     /**
                      * 判断参数 RuleInfoList 是否已赋值
                      * @return RuleInfoList 是否已赋值
+                     * 
                      */
                     bool RuleInfoListHasBeenSet() const;
 
                     /**
                      * 获取Effective cluster IDSet
                      * @return EffectClusterIDSet Effective cluster IDSet
+                     * 
                      */
                     std::vector<std::string> GetEffectClusterIDSet() const;
 
                     /**
                      * 设置Effective cluster IDSet
-                     * @param EffectClusterIDSet Effective cluster IDSet
+                     * @param _effectClusterIDSet Effective cluster IDSet
+                     * 
                      */
                     void SetEffectClusterIDSet(const std::vector<std::string>& _effectClusterIDSet);
 
                     /**
                      * 判断参数 EffectClusterIDSet 是否已赋值
                      * @return EffectClusterIDSet 是否已赋值
+                     * 
                      */
                     bool EffectClusterIDSetHasBeenSet() const;
 
@@ -126,6 +138,7 @@ RT_USER: User-defined rules
                      * @return RuleType Rule type
 RT_SYSTEM: System rules
 RT_USER: User-defined rules
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -133,51 +146,59 @@ RT_USER: User-defined rules
                      * 设置Rule type
 RT_SYSTEM: System rules
 RT_USER: User-defined rules
-                     * @param RuleType Rule type
+                     * @param _ruleType Rule type
 RT_SYSTEM: System rules
 RT_USER: User-defined rules
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether all clusters are effective
                      * @return EffectAllCluster Whether all clusters are effective
+                     * 
                      */
                     bool GetEffectAllCluster() const;
 
                     /**
                      * 设置Whether all clusters are effective
-                     * @param EffectAllCluster Whether all clusters are effective
+                     * @param _effectAllCluster Whether all clusters are effective
+                     * 
                      */
                     void SetEffectAllCluster(const bool& _effectAllCluster);
 
                     /**
                      * 判断参数 EffectAllCluster 是否已赋值
                      * @return EffectAllCluster 是否已赋值
+                     * 
                      */
                     bool EffectAllClusterHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleID Rule ID
+                     * 
                      */
                     std::string GetRuleID() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleID Rule ID
+                     * @param _ruleID Rule ID
+                     * 
                      */
                     void SetRuleID(const std::string& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 

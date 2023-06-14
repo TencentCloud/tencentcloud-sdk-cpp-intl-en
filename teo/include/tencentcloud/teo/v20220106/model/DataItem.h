@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Time
                      * @return Time Time
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Time
-                     * @param Time Time
+                     * @param _time Time
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Value Value
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetValue() const;
 
                     /**
                      * 设置Value
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Value Value
+                     * @param _value Value
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetValue(const uint64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

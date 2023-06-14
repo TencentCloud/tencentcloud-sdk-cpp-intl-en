@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of dcdbt-ow7t8lmc.
                      * @return InstanceId Instance ID in the format of dcdbt-ow7t8lmc.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of dcdbt-ow7t8lmc.
-                     * @param InstanceId Instance ID in the format of dcdbt-ow7t8lmc.
+                     * @param _instanceId Instance ID in the format of dcdbt-ow7t8lmc.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Database name, which can be obtained through the `DescribeDatabases` API.
                      * @return DbName Database name, which can be obtained through the `DescribeDatabases` API.
+                     * 
                      */
                     std::string GetDbName() const;
 
                     /**
                      * 设置Database name, which can be obtained through the `DescribeDatabases` API.
-                     * @param DbName Database name, which can be obtained through the `DescribeDatabases` API.
+                     * @param _dbName Database name, which can be obtained through the `DescribeDatabases` API.
+                     * 
                      */
                     void SetDbName(const std::string& _dbName);
 
                     /**
                      * 判断参数 DbName 是否已赋值
                      * @return DbName 是否已赋值
+                     * 
                      */
                     bool DbNameHasBeenSet() const;
 

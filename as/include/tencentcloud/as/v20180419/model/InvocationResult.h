@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InvocationId Execution activity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInvocationId() const;
 
                     /**
                      * 设置Execution activity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InvocationId Execution activity ID.
+                     * @param _invocationId Execution activity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInvocationId(const std::string& _invocationId);
 
                     /**
                      * 判断参数 InvocationId 是否已赋值
                      * @return InvocationId 是否已赋值
+                     * 
                      */
                     bool InvocationIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InvocationTaskId Execution task ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInvocationTaskId() const;
 
                     /**
                      * 设置Execution task ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InvocationTaskId Execution task ID.
+                     * @param _invocationTaskId Execution task ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInvocationTaskId(const std::string& _invocationTaskId);
 
                     /**
                      * 判断参数 InvocationTaskId 是否已赋值
                      * @return InvocationTaskId 是否已赋值
+                     * 
                      */
                     bool InvocationTaskIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CommandId Command ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 设置Command ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CommandId Command ID.
+                     * @param _commandId Command ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCommandId(const std::string& _commandId);
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskStatus Execution Status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
                      * 设置Execution Status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskStatus Execution Status
+                     * @param _taskStatus Execution Status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorMessage Execution exception information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorMessage() const;
 
                     /**
                      * 设置Execution exception information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrorMessage Execution exception information
+                     * @param _errorMessage Execution exception information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorMessage(const std::string& _errorMessage);
 
                     /**
                      * 判断参数 ErrorMessage 是否已赋值
                      * @return ErrorMessage 是否已赋值
+                     * 
                      */
                     bool ErrorMessageHasBeenSet() const;
 

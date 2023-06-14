@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PrivateIPAddress Private IP of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPrivateIPAddress() const;
 
                     /**
                      * 设置Private IP of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateIPAddress Private IP of the instance.
+                     * @param _privateIPAddress Private IP of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateIPAddress(const std::string& _privateIPAddress);
 
                     /**
                      * 判断参数 PrivateIPAddress 是否已赋值
                      * @return PrivateIPAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIPAddressHasBeenSet() const;
 

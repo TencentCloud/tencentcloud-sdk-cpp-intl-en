@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The task ID.
                      * @return JobId The task ID.
+                     * 
                      */
                     uint64_t GetJobId() const;
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取The array of task details.
                      * @return DetailList The array of task details.
+                     * 
                      */
                     std::vector<DeleteDomainBatchDetail> GetDetailList() const;
 
                     /**
                      * 判断参数 DetailList 是否已赋值
                      * @return DetailList 是否已赋值
+                     * 
                      */
                     bool DetailListHasBeenSet() const;
 

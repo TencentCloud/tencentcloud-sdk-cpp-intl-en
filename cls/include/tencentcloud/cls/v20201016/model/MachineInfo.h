@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Machine IP
                      * @return Ip Machine IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Machine IP
-                     * @param Ip Machine IP
+                     * @param _ip Machine IP
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Machine status. Valid values: `0`: exceptional; `1`: normal
                      * @return Status Machine status. Valid values: `0`: exceptional; `1`: normal
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Machine status. Valid values: `0`: exceptional; `1`: normal
-                     * @param Status Machine status. Valid values: `0`: exceptional; `1`: normal
+                     * @param _status Machine status. Valid values: `0`: exceptional; `1`: normal
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
                      * @return OfflineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+                     * 
                      */
                     std::string GetOfflineTime() const;
 
                     /**
                      * 设置Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
-                     * @param OfflineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+                     * @param _offlineTime Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+                     * 
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
 
                     /**
                      * 判断参数 OfflineTime 是否已赋值
                      * @return OfflineTime 是否已赋值
+                     * 
                      */
                     bool OfflineTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
                      * @return AutoUpdate Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
+                     * 
                      */
                     int64_t GetAutoUpdate() const;
 
                     /**
                      * 设置Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
-                     * @param AutoUpdate Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
+                     * @param _autoUpdate Whether to enable automatic update for the machine. Valid values: `0`: no; `1`: yes
+                     * 
                      */
                     void SetAutoUpdate(const int64_t& _autoUpdate);
 
                     /**
                      * 判断参数 AutoUpdate 是否已赋值
                      * @return AutoUpdate 是否已赋值
+                     * 
                      */
                     bool AutoUpdateHasBeenSet() const;
 
                     /**
                      * 获取Current machine version number
                      * @return Version Current machine version number
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Current machine version number
-                     * @param Version Current machine version number
+                     * @param _version Current machine version number
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
                     /**
                      * 获取Machine update feature status
                      * @return UpdateStatus Machine update feature status
+                     * 
                      */
                     int64_t GetUpdateStatus() const;
 
                     /**
                      * 设置Machine update feature status
-                     * @param UpdateStatus Machine update feature status
+                     * @param _updateStatus Machine update feature status
+                     * 
                      */
                     void SetUpdateStatus(const int64_t& _updateStatus);
 
                     /**
                      * 判断参数 UpdateStatus 是否已赋值
                      * @return UpdateStatus 是否已赋值
+                     * 
                      */
                     bool UpdateStatusHasBeenSet() const;
 
                     /**
                      * 获取Machine update result flag
                      * @return ErrCode Machine update result flag
+                     * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Machine update result flag
-                     * @param ErrCode Machine update result flag
+                     * @param _errCode Machine update result flag
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取Machine update result information
                      * @return ErrMsg Machine update result information
+                     * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
                      * 设置Machine update result information
-                     * @param ErrMsg Machine update result information
+                     * @param _errMsg Machine update result information
+                     * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
 
                     /**
                      * 判断参数 ErrMsg 是否已赋值
                      * @return ErrMsg 是否已赋值
+                     * 
                      */
                     bool ErrMsgHasBeenSet() const;
 

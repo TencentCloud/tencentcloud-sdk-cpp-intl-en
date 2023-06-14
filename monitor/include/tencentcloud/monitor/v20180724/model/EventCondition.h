@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AlarmNotifyPeriod Alarm notification frequency.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAlarmNotifyPeriod() const;
 
                     /**
                      * 设置Alarm notification frequency.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AlarmNotifyPeriod Alarm notification frequency.
+                     * @param _alarmNotifyPeriod Alarm notification frequency.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlarmNotifyPeriod(const std::string& _alarmNotifyPeriod);
 
                     /**
                      * 判断参数 AlarmNotifyPeriod 是否已赋值
                      * @return AlarmNotifyPeriod 是否已赋值
+                     * 
                      */
                     bool AlarmNotifyPeriodHasBeenSet() const;
 
@@ -73,74 +76,86 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AlarmNotifyType Predefined repeated notification policy. `0`: One-time alarm; `1`: exponential alarm; `2`: consecutive alarm
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAlarmNotifyType() const;
 
                     /**
                      * 设置Predefined repeated notification policy. `0`: One-time alarm; `1`: exponential alarm; `2`: consecutive alarm
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AlarmNotifyType Predefined repeated notification policy. `0`: One-time alarm; `1`: exponential alarm; `2`: consecutive alarm
+                     * @param _alarmNotifyType Predefined repeated notification policy. `0`: One-time alarm; `1`: exponential alarm; `2`: consecutive alarm
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlarmNotifyType(const std::string& _alarmNotifyType);
 
                     /**
                      * 判断参数 AlarmNotifyType 是否已赋值
                      * @return AlarmNotifyType 是否已赋值
+                     * 
                      */
                     bool AlarmNotifyTypeHasBeenSet() const;
 
                     /**
                      * 获取Event ID.
                      * @return EventID Event ID.
+                     * 
                      */
                     std::string GetEventID() const;
 
                     /**
                      * 设置Event ID.
-                     * @param EventID Event ID.
+                     * @param _eventID Event ID.
+                     * 
                      */
                     void SetEventID(const std::string& _eventID);
 
                     /**
                      * 判断参数 EventID 是否已赋值
                      * @return EventID 是否已赋值
+                     * 
                      */
                     bool EventIDHasBeenSet() const;
 
                     /**
                      * 获取Displayed event name.
                      * @return EventDisplayName Displayed event name.
+                     * 
                      */
                     std::string GetEventDisplayName() const;
 
                     /**
                      * 设置Displayed event name.
-                     * @param EventDisplayName Displayed event name.
+                     * @param _eventDisplayName Displayed event name.
+                     * 
                      */
                     void SetEventDisplayName(const std::string& _eventDisplayName);
 
                     /**
                      * 判断参数 EventDisplayName 是否已赋值
                      * @return EventDisplayName 是否已赋值
+                     * 
                      */
                     bool EventDisplayNameHasBeenSet() const;
 
                     /**
                      * 获取Rule ID.
                      * @return RuleID Rule ID.
+                     * 
                      */
                     std::string GetRuleID() const;
 
                     /**
                      * 设置Rule ID.
-                     * @param RuleID Rule ID.
+                     * @param _ruleID Rule ID.
+                     * 
                      */
                     void SetRuleID(const std::string& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 

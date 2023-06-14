@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
                      * @return DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
+                     * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
                      * 设置The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
-                     * @param DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
+                     * @param _directConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
+                     * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
 
                     /**
                      * 判断参数 DirectConnectGatewayId 是否已赋值
                      * @return DirectConnectGatewayId 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return CcnRouteType The route learning type of the CCN. Available values:
 <li>`BGP` - Automatic learning.</li>
 <li>`STATIC` - Static means user-configured. This is the default value.</li>
+                     * 
                      */
                     std::string GetCcnRouteType() const;
 
@@ -74,51 +78,59 @@ namespace TencentCloud
                      * 设置The route learning type of the CCN. Available values:
 <li>`BGP` - Automatic learning.</li>
 <li>`STATIC` - Static means user-configured. This is the default value.</li>
-                     * @param CcnRouteType The route learning type of the CCN. Available values:
+                     * @param _ccnRouteType The route learning type of the CCN. Available values:
 <li>`BGP` - Automatic learning.</li>
 <li>`STATIC` - Static means user-configured. This is the default value.</li>
+                     * 
                      */
                     void SetCcnRouteType(const std::string& _ccnRouteType);
 
                     /**
                      * 判断参数 CcnRouteType 是否已赋值
                      * @return CcnRouteType 是否已赋值
+                     * 
                      */
                     bool CcnRouteTypeHasBeenSet() const;
 
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity.
                      * @return Limit The returned quantity.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity.
-                     * @param Limit The returned quantity.
+                     * @param _limit The returned quantity.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

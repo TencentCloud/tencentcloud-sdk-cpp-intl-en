@@ -52,198 +52,231 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return TaskId Task ID
+                     * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 设置Task ID
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
+                     * 
                      */
                     void SetTaskId(const uint64_t& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Sender address
                      * @return FromEmailAddress Sender address
+                     * 
                      */
                     std::string GetFromEmailAddress() const;
 
                     /**
                      * 设置Sender address
-                     * @param FromEmailAddress Sender address
+                     * @param _fromEmailAddress Sender address
+                     * 
                      */
                     void SetFromEmailAddress(const std::string& _fromEmailAddress);
 
                     /**
                      * 判断参数 FromEmailAddress 是否已赋值
                      * @return FromEmailAddress 是否已赋值
+                     * 
                      */
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
                      * 获取Recipient group ID
                      * @return ReceiverId Recipient group ID
+                     * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
                      * 设置Recipient group ID
-                     * @param ReceiverId Recipient group ID
+                     * @param _receiverId Recipient group ID
+                     * 
                      */
                     void SetReceiverId(const uint64_t& _receiverId);
 
                     /**
                      * 判断参数 ReceiverId 是否已赋值
                      * @return ReceiverId 是否已赋值
+                     * 
                      */
                     bool ReceiverIdHasBeenSet() const;
 
                     /**
                      * 获取Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent
                      * @return TaskStatus Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent
+                     * 
                      */
                     uint64_t GetTaskStatus() const;
 
                     /**
                      * 设置Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent
-                     * @param TaskStatus Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent
+                     * @param _taskStatus Task status. `1`: to start; `5`: sending; `6`: sending suspended today; `7`: sending error; `10`: sent
+                     * 
                      */
                     void SetTaskStatus(const uint64_t& _taskStatus);
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 
                     /**
                      * 获取Task type. `1`: immediate; `2`: scheduled; `3`: recurring
                      * @return TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+                     * 
                      */
                     uint64_t GetTaskType() const;
 
                     /**
                      * 设置Task type. `1`: immediate; `2`: scheduled; `3`: recurring
-                     * @param TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+                     * @param _taskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+                     * 
                      */
                     void SetTaskType(const uint64_t& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of emails requested to be sent
                      * @return RequestCount Number of emails requested to be sent
+                     * 
                      */
                     uint64_t GetRequestCount() const;
 
                     /**
                      * 设置Number of emails requested to be sent
-                     * @param RequestCount Number of emails requested to be sent
+                     * @param _requestCount Number of emails requested to be sent
+                     * 
                      */
                     void SetRequestCount(const uint64_t& _requestCount);
 
                     /**
                      * 判断参数 RequestCount 是否已赋值
                      * @return RequestCount 是否已赋值
+                     * 
                      */
                     bool RequestCountHasBeenSet() const;
 
                     /**
                      * 获取Number of emails sent
                      * @return SendCount Number of emails sent
+                     * 
                      */
                     uint64_t GetSendCount() const;
 
                     /**
                      * 设置Number of emails sent
-                     * @param SendCount Number of emails sent
+                     * @param _sendCount Number of emails sent
+                     * 
                      */
                     void SetSendCount(const uint64_t& _sendCount);
 
                     /**
                      * 判断参数 SendCount 是否已赋值
                      * @return SendCount 是否已赋值
+                     * 
                      */
                     bool SendCountHasBeenSet() const;
 
                     /**
                      * 获取Number of emails cached
                      * @return CacheCount Number of emails cached
+                     * 
                      */
                     uint64_t GetCacheCount() const;
 
                     /**
                      * 设置Number of emails cached
-                     * @param CacheCount Number of emails cached
+                     * @param _cacheCount Number of emails cached
+                     * 
                      */
                     void SetCacheCount(const uint64_t& _cacheCount);
 
                     /**
                      * 判断参数 CacheCount 是否已赋值
                      * @return CacheCount 是否已赋值
+                     * 
                      */
                     bool CacheCountHasBeenSet() const;
 
                     /**
                      * 获取Task creation time
                      * @return CreateTime Task creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Task creation time
-                     * @param CreateTime Task creation time
+                     * @param _createTime Task creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Task update time
                      * @return UpdateTime Task update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Task update time
-                     * @param UpdateTime Task update time
+                     * @param _updateTime Task update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Email subject
                      * @return Subject Email subject
+                     * 
                      */
                     std::string GetSubject() const;
 
                     /**
                      * 设置Email subject
-                     * @param Subject Email subject
+                     * @param _subject Email subject
+                     * 
                      */
                     void SetSubject(const std::string& _subject);
 
                     /**
                      * 判断参数 Subject 是否已赋值
                      * @return Subject 是否已赋值
+                     * 
                      */
                     bool SubjectHasBeenSet() const;
 
@@ -252,20 +285,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return Template Template and template data
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     Template GetTemplate() const;
 
                     /**
                      * 设置Template and template data
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Template Template and template data
+                     * @param _template Template and template data
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetTemplate(const Template& _template);
 
                     /**
                      * 判断参数 Template 是否已赋值
                      * @return Template 是否已赋值
+                     * 
                      */
                     bool TemplateHasBeenSet() const;
 
@@ -274,20 +310,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return CycleParam Parameters of a recurring task
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     CycleEmailParam GetCycleParam() const;
 
                     /**
                      * 设置Parameters of a recurring task
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param CycleParam Parameters of a recurring task
+                     * @param _cycleParam Parameters of a recurring task
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetCycleParam(const CycleEmailParam& _cycleParam);
 
                     /**
                      * 判断参数 CycleParam 是否已赋值
                      * @return CycleParam 是否已赋值
+                     * 
                      */
                     bool CycleParamHasBeenSet() const;
 
@@ -296,20 +335,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return TimedParam Parameters of a scheduled task
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     TimedEmailParam GetTimedParam() const;
 
                     /**
                      * 设置Parameters of a scheduled task
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param TimedParam Parameters of a scheduled task
+                     * @param _timedParam Parameters of a scheduled task
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetTimedParam(const TimedEmailParam& _timedParam);
 
                     /**
                      * 判断参数 TimedParam 是否已赋值
                      * @return TimedParam 是否已赋值
+                     * 
                      */
                     bool TimedParamHasBeenSet() const;
 
@@ -318,38 +360,44 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return ErrMsg Task exception information
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
                      * 设置Task exception information
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param ErrMsg Task exception information
+                     * @param _errMsg Task exception information
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
 
                     /**
                      * 判断参数 ErrMsg 是否已赋值
                      * @return ErrMsg 是否已赋值
+                     * 
                      */
                     bool ErrMsgHasBeenSet() const;
 
                     /**
                      * 获取Recipient group name
                      * @return ReceiversName Recipient group name
+                     * 
                      */
                     std::string GetReceiversName() const;
 
                     /**
                      * 设置Recipient group name
-                     * @param ReceiversName Recipient group name
+                     * @param _receiversName Recipient group name
+                     * 
                      */
                     void SetReceiversName(const std::string& _receiversName);
 
                     /**
                      * 判断参数 ReceiversName 是否已赋值
                      * @return ReceiversName 是否已赋值
+                     * 
                      */
                     bool ReceiversNameHasBeenSet() const;
 

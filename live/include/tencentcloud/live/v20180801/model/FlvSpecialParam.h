@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable upload while recording. This parameter is only valid for FLV recording.
                      * @return UploadInRecording Whether to enable upload while recording. This parameter is only valid for FLV recording.
+                     * 
                      */
                     bool GetUploadInRecording() const;
 
                     /**
                      * 设置Whether to enable upload while recording. This parameter is only valid for FLV recording.
-                     * @param UploadInRecording Whether to enable upload while recording. This parameter is only valid for FLV recording.
+                     * @param _uploadInRecording Whether to enable upload while recording. This parameter is only valid for FLV recording.
+                     * 
                      */
                     void SetUploadInRecording(const bool& _uploadInRecording);
 
                     /**
                      * 判断参数 UploadInRecording 是否已赋值
                      * @return UploadInRecording 是否已赋值
+                     * 
                      */
                     bool UploadInRecordingHasBeenSet() const;
 

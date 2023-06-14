@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
                      * @return DiskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+                     * 
                      */
                     std::string GetDiskBackupId() const;
 
                     /**
                      * 设置ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
-                     * @param DiskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+                     * @param _diskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+                     * 
                      */
                     void SetDiskBackupId(const std::string& _diskBackupId);
 
                     /**
                      * 判断参数 DiskBackupId 是否已赋值
                      * @return DiskBackupId 是否已赋值
+                     * 
                      */
                     bool DiskBackupIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
                      * @return DiskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
-                     * @param DiskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+                     * @param _diskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 

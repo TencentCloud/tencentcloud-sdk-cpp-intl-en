@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of images
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageInstanceSet Image information list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ImageInstance> GetImageInstanceSet() const;
 
                     /**
                      * 判断参数 ImageInstanceSet 是否已赋值
                      * @return ImageInstanceSet 是否已赋值
+                     * 
                      */
                     bool ImageInstanceSetHasBeenSet() const;
 

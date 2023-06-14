@@ -47,108 +47,126 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID bound to the task
                      * @return TopicId Log topic ID bound to the task
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID bound to the task
-                     * @param TopicId Log topic ID bound to the task
+                     * @param _topicId Log topic ID bound to the task
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Whether the shipping task takes effect (default: no)
                      * @return Effective Whether the shipping task takes effect (default: no)
+                     * 
                      */
                     bool GetEffective() const;
 
                     /**
                      * 设置Whether the shipping task takes effect (default: no)
-                     * @param Effective Whether the shipping task takes effect (default: no)
+                     * @param _effective Whether the shipping task takes effect (default: no)
+                     * 
                      */
                     void SetEffective(const bool& _effective);
 
                     /**
                      * 判断参数 Effective 是否已赋值
                      * @return Effective 是否已赋值
+                     * 
                      */
                     bool EffectiveHasBeenSet() const;
 
                     /**
                      * 获取Whether to ship metadata. Default value: `false`
                      * @return NeedContent Whether to ship metadata. Default value: `false`
+                     * 
                      */
                     bool GetNeedContent() const;
 
                     /**
                      * 设置Whether to ship metadata. Default value: `false`
-                     * @param NeedContent Whether to ship metadata. Default value: `false`
+                     * @param _needContent Whether to ship metadata. Default value: `false`
+                     * 
                      */
                     void SetNeedContent(const bool& _needContent);
 
                     /**
                      * 判断参数 NeedContent 是否已赋值
                      * @return NeedContent 是否已赋值
+                     * 
                      */
                     bool NeedContentHasBeenSet() const;
 
                     /**
                      * 获取Metadata to ship if `NeedContent` is `true`
                      * @return Content Metadata to ship if `NeedContent` is `true`
+                     * 
                      */
                     ConsumerContent GetContent() const;
 
                     /**
                      * 设置Metadata to ship if `NeedContent` is `true`
-                     * @param Content Metadata to ship if `NeedContent` is `true`
+                     * @param _content Metadata to ship if `NeedContent` is `true`
+                     * 
                      */
                     void SetContent(const ConsumerContent& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取CKafka information
                      * @return Ckafka CKafka information
+                     * 
                      */
                     Ckafka GetCkafka() const;
 
                     /**
                      * 设置CKafka information
-                     * @param Ckafka CKafka information
+                     * @param _ckafka CKafka information
+                     * 
                      */
                     void SetCkafka(const Ckafka& _ckafka);
 
                     /**
                      * 判断参数 Ckafka 是否已赋值
                      * @return Ckafka 是否已赋值
+                     * 
                      */
                     bool CkafkaHasBeenSet() const;
 
                     /**
                      * 获取Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
                      * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * 
                      */
                     int64_t GetCompression() const;
 
                     /**
                      * 设置Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-                     * @param Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * @param _compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * 
                      */
                     void SetCompression(const int64_t& _compression);
 
                     /**
                      * 判断参数 Compression 是否已赋值
                      * @return Compression 是否已赋值
+                     * 
                      */
                     bool CompressionHasBeenSet() const;
 

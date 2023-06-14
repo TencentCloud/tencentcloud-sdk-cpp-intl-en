@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Database name
                      * @return DatabaseName Database name
+                     * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
                      * 设置Database name
-                     * @param DatabaseName Database name
+                     * @param _databaseName Database name
+                     * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
 
                     /**
                      * 判断参数 DatabaseName 是否已赋值
                      * @return DatabaseName 是否已赋值
+                     * 
                      */
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
                      * 获取Character set
                      * @return CharacterSet Character set
+                     * 
                      */
                     std::string GetCharacterSet() const;
 
                     /**
                      * 设置Character set
-                     * @param CharacterSet Character set
+                     * @param _characterSet Character set
+                     * 
                      */
                     void SetCharacterSet(const std::string& _characterSet);
 
                     /**
                      * 判断参数 CharacterSet 是否已赋值
                      * @return CharacterSet 是否已赋值
+                     * 
                      */
                     bool CharacterSetHasBeenSet() const;
 

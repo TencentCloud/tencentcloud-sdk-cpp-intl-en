@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of instance groups
                      * @return TotalCount Number of instance groups
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Instance group list
                      * @return InstanceGrpInfoList Instance group list
+                     * 
                      */
                     std::vector<CynosdbInstanceGrp> GetInstanceGrpInfoList() const;
 
                     /**
                      * 判断参数 InstanceGrpInfoList 是否已赋值
                      * @return InstanceGrpInfoList 是否已赋值
+                     * 
                      */
                     bool InstanceGrpInfoListHasBeenSet() const;
 

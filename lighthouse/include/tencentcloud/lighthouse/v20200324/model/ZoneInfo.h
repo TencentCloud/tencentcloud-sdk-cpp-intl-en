@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取AZ
                      * @return Zone AZ
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ
-                     * @param Zone AZ
+                     * @param _zone AZ
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Chinese name of AZ
                      * @return ZoneName Chinese name of AZ
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置Chinese name of AZ
-                     * @param ZoneName Chinese name of AZ
+                     * @param _zoneName Chinese name of AZ
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取AZ tags on instance purchase page
                      * @return InstanceDisplayLabel AZ tags on instance purchase page
+                     * 
                      */
                     std::string GetInstanceDisplayLabel() const;
 
                     /**
                      * 设置AZ tags on instance purchase page
-                     * @param InstanceDisplayLabel AZ tags on instance purchase page
+                     * @param _instanceDisplayLabel AZ tags on instance purchase page
+                     * 
                      */
                     void SetInstanceDisplayLabel(const std::string& _instanceDisplayLabel);
 
                     /**
                      * 判断参数 InstanceDisplayLabel 是否已赋值
                      * @return InstanceDisplayLabel 是否已赋值
+                     * 
                      */
                     bool InstanceDisplayLabelHasBeenSet() const;
 

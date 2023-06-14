@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Account name
                      * @return UserName Account name
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Account name
-                     * @param UserName Account name
+                     * @param _userName Account name
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取New remarks of account
                      * @return Remark New remarks of account
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置New remarks of account
-                     * @param Remark New remarks of account
+                     * @param _remark New remarks of account
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

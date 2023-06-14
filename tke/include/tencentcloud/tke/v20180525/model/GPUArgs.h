@@ -54,38 +54,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return MIGEnable Whether to enable MIG
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetMIGEnable() const;
 
                     /**
                      * 设置Whether to enable MIG
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param MIGEnable Whether to enable MIG
+                     * @param _mIGEnable Whether to enable MIG
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMIGEnable(const bool& _mIGEnable);
 
                     /**
                      * 判断参数 MIGEnable 是否已赋值
                      * @return MIGEnable 是否已赋值
+                     * 
                      */
                     bool MIGEnableHasBeenSet() const;
 
                     /**
                      * 获取GPU driver version
                      * @return Driver GPU driver version
+                     * 
                      */
                     DriverVersion GetDriver() const;
 
                     /**
                      * 设置GPU driver version
-                     * @param Driver GPU driver version
+                     * @param _driver GPU driver version
+                     * 
                      */
                     void SetDriver(const DriverVersion& _driver);
 
                     /**
                      * 判断参数 Driver 是否已赋值
                      * @return Driver 是否已赋值
+                     * 
                      */
                     bool DriverHasBeenSet() const;
 
@@ -94,20 +100,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CUDA CUDA version
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     DriverVersion GetCUDA() const;
 
                     /**
                      * 设置CUDA version
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CUDA CUDA version
+                     * @param _cUDA CUDA version
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCUDA(const DriverVersion& _cUDA);
 
                     /**
                      * 判断参数 CUDA 是否已赋值
                      * @return CUDA 是否已赋值
+                     * 
                      */
                     bool CUDAHasBeenSet() const;
 
@@ -116,20 +125,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CUDNN cuDNN version
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     CUDNN GetCUDNN() const;
 
                     /**
                      * 设置cuDNN version
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CUDNN cuDNN version
+                     * @param _cUDNN cuDNN version
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCUDNN(const CUDNN& _cUDNN);
 
                     /**
                      * 判断参数 CUDNN 是否已赋值
                      * @return CUDNN 是否已赋值
+                     * 
                      */
                     bool CUDNNHasBeenSet() const;
 
@@ -138,20 +150,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CustomDriver Custom GPU driver
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     CustomDriver GetCustomDriver() const;
 
                     /**
                      * 设置Custom GPU driver
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CustomDriver Custom GPU driver
+                     * @param _customDriver Custom GPU driver
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCustomDriver(const CustomDriver& _customDriver);
 
                     /**
                      * 判断参数 CustomDriver 是否已赋值
                      * @return CustomDriver 是否已赋值
+                     * 
                      */
                     bool CustomDriverHasBeenSet() const;
 

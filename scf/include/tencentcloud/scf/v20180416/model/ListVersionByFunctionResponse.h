@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Function version
                      * @return FunctionVersion Function version
+                     * 
                      */
                     std::vector<std::string> GetFunctionVersion() const;
 
                     /**
                      * 判断参数 FunctionVersion 是否已赋值
                      * @return FunctionVersion 是否已赋值
+                     * 
                      */
                     bool FunctionVersionHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values is found.
                      * @return Versions Function version list
 Note: This field may return null, indicating that no valid values is found.
+                     * 
                      */
                     std::vector<FunctionVersion> GetVersions() const;
 
                     /**
                      * 判断参数 Versions 是否已赋值
                      * @return Versions 是否已赋值
+                     * 
                      */
                     bool VersionsHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: This field may return null, indicating that no valid values is found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return TotalCount Total number of function versions
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

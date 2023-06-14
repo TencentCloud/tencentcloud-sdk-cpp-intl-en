@@ -51,90 +51,105 @@ namespace TencentCloud
                     /**
                      * 获取The session ID.
                      * @return SessionId The session ID.
+                     * 
                      */
                     std::string GetSessionId() const;
 
                     /**
                      * 设置The session ID.
-                     * @param SessionId The session ID.
+                     * @param _sessionId The session ID.
+                     * 
                      */
                     void SetSessionId(const std::string& _sessionId);
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 
                     /**
                      * 获取The peer IP.
                      * @return ClientIp The peer IP.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置The peer IP.
-                     * @param ClientIp The peer IP.
+                     * @param _clientIp The peer IP.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取The total bandwidth.
                      * @return Network The total bandwidth.
+                     * 
                      */
                     int64_t GetNetwork() const;
 
                     /**
                      * 设置The total bandwidth.
-                     * @param Network The total bandwidth.
+                     * @param _network The total bandwidth.
+                     * 
                      */
                     void SetNetwork(const int64_t& _network);
 
                     /**
                      * 判断参数 Network 是否已赋值
                      * @return Network 是否已赋值
+                     * 
                      */
                     bool NetworkHasBeenSet() const;
 
                     /**
                      * 获取The video data.
                      * @return Video The video data.
+                     * 
                      */
                     std::vector<FlowVideo> GetVideo() const;
 
                     /**
                      * 设置The video data.
-                     * @param Video The video data.
+                     * @param _video The video data.
+                     * 
                      */
                     void SetVideo(const std::vector<FlowVideo>& _video);
 
                     /**
                      * 判断参数 Video 是否已赋值
                      * @return Video 是否已赋值
+                     * 
                      */
                     bool VideoHasBeenSet() const;
 
                     /**
                      * 获取The audio data.
                      * @return Audio The audio data.
+                     * 
                      */
                     std::vector<FlowAudio> GetAudio() const;
 
                     /**
                      * 设置The audio data.
-                     * @param Audio The audio data.
+                     * @param _audio The audio data.
+                     * 
                      */
                     void SetAudio(const std::vector<FlowAudio>& _audio);
 
                     /**
                      * 判断参数 Audio 是否已赋值
                      * @return Audio 是否已赋值
+                     * 
                      */
                     bool AudioHasBeenSet() const;
 

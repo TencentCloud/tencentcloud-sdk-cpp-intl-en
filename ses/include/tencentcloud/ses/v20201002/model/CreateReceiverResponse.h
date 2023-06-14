@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Recipient group ID, by which recipient email addresses are uploaded
                      * @return ReceiverId Recipient group ID, by which recipient email addresses are uploaded
+                     * 
                      */
                     uint64_t GetReceiverId() const;
 
                     /**
                      * 判断参数 ReceiverId 是否已赋值
                      * @return ReceiverId 是否已赋值
+                     * 
                      */
                     bool ReceiverIdHasBeenSet() const;
 

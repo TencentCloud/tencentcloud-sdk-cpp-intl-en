@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Container name
                      * @return ContainerName Container name
+                     * 
                      */
                     std::string GetContainerName() const;
 
                     /**
                      * 设置Container name
-                     * @param ContainerName Container name
+                     * @param _containerName Container name
+                     * 
                      */
                     void SetContainerName(const std::string& _containerName);
 
                     /**
                      * 判断参数 ContainerName 是否已赋值
                      * @return ContainerName 是否已赋值
+                     * 
                      */
                     bool ContainerNameHasBeenSet() const;
 
                     /**
                      * 获取Container ID
                      * @return ContainerId Container ID
+                     * 
                      */
                     std::string GetContainerId() const;
 
                     /**
                      * 设置Container ID
-                     * @param ContainerId Container ID
+                     * @param _containerId Container ID
+                     * 
                      */
                     void SetContainerId(const std::string& _containerId);
 
                     /**
                      * 判断参数 ContainerId 是否已赋值
                      * @return ContainerId 是否已赋值
+                     * 
                      */
                     bool ContainerIdHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Server name
                      * @return HostName Server name
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Server name
-                     * @param HostName Server name
+                     * @param _hostName Server name
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
                     /**
                      * 获取Server IP
                      * @return HostIp Server IP
+                     * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置Server IP
-                     * @param HostIp Server IP
+                     * @param _hostIp Server IP
+                     * 
                      */
                     void SetHostIp(const std::string& _hostIp);
 
                     /**
                      * 判断参数 HostIp 是否已赋值
                      * @return HostIp 是否已赋值
+                     * 
                      */
                     bool HostIpHasBeenSet() const;
 
@@ -171,6 +189,7 @@ namespace TencentCloud
 `CANCELING`: Canceling.
 `CANCELED`: Canceled.
 `CANCEL_FAILED`: Failed to cancel.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -183,7 +202,7 @@ namespace TencentCloud
 `CANCELING`: Canceling.
 `CANCELED`: Canceled.
 `CANCEL_FAILED`: Failed to cancel.
-                     * @param Status Scanning status:
+                     * @param _status Scanning status:
 `WAIT`: Pending scanning.
 `FAILED`: Failed.
 `SCANNING`: Scanning.
@@ -191,84 +210,98 @@ namespace TencentCloud
 `CANCELING`: Canceling.
 `CANCELED`: Canceled.
 `CANCEL_FAILED`: Failed to cancel.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Check start time
                      * @return StartTime Check start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Check start time
-                     * @param StartTime Check start time
+                     * @param _startTime Check start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Check end time
                      * @return EndTime Check end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Check end time
-                     * @param EndTime Check end time
+                     * @param _endTime Check end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of risks
                      * @return RiskCnt Number of risks
+                     * 
                      */
                     uint64_t GetRiskCnt() const;
 
                     /**
                      * 设置Number of risks
-                     * @param RiskCnt Number of risks
+                     * @param _riskCnt Number of risks
+                     * 
                      */
                     void SetRiskCnt(const uint64_t& _riskCnt);
 
                     /**
                      * 判断参数 RiskCnt 是否已赋值
                      * @return RiskCnt 是否已赋值
+                     * 
                      */
                     bool RiskCntHasBeenSet() const;
 
                     /**
                      * 获取Event ID
                      * @return Id Event ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Event ID
-                     * @param Id Event ID
+                     * @param _id Event ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -301,6 +334,7 @@ namespace TencentCloud
 `MISC`: Other errors.
 `UNAUTH`: The image is not assigned with a license.
 `SEND_CANCEL_SUCCESSED`: Task submitted.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
@@ -319,7 +353,7 @@ namespace TencentCloud
 `MISC`: Other errors.
 `UNAUTH`: The image is not assigned with a license.
 `SEND_CANCEL_SUCCESSED`: Task submitted.
-                     * @param ErrorMsg Cause:
+                     * @param _errorMsg Cause:
 `SEND_SUCCESSED`: Task submitted.
 `SCAN_WAIT`: Waiting to scan...
 `OFFLINE`: Offline.
@@ -333,12 +367,14 @@ namespace TencentCloud
 `MISC`: Other errors.
 `UNAUTH`: The image is not assigned with a license.
 `SEND_CANCEL_SUCCESSED`: Task submitted.
+                     * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 

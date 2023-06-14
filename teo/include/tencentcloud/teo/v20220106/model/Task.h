@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return JobId Task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Task ID
-                     * @param JobId Task ID
+                     * @param _jobId Task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Status of the task
                      * @return Status Status of the task
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status of the task
-                     * @param Status Status of the task
+                     * @param _status Status of the task
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Resource
                      * @return Target Resource
+                     * 
                      */
                     std::string GetTarget() const;
 
                     /**
                      * 设置Resource
-                     * @param Target Resource
+                     * @param _target Resource
+                     * 
                      */
                     void SetTarget(const std::string& _target);
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 
                     /**
                      * 获取Task type
                      * @return Type Task type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Task type
-                     * @param Type Task type
+                     * @param _type Task type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Task creation time
                      * @return CreateTime Task creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Task creation time
-                     * @param CreateTime Task creation time
+                     * @param _createTime Task creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Task completion time
                      * @return UpdateTime Task completion time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Task completion time
-                     * @param UpdateTime Task completion time
+                     * @param _updateTime Task completion time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

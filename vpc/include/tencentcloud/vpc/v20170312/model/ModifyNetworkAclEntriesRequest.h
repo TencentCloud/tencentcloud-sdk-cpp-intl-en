@@ -47,54 +47,63 @@ namespace TencentCloud
                     /**
                      * 获取Network ACL instance ID, such as `acl-12345678`.
                      * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
                      * 设置Network ACL instance ID, such as `acl-12345678`.
-                     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * @param _networkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
                     /**
                      * 判断参数 NetworkAclId 是否已赋值
                      * @return NetworkAclId 是否已赋值
+                     * 
                      */
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
                      * 获取Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
                      * @return NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * 
                      */
                     NetworkAclEntrySet GetNetworkAclEntrySet() const;
 
                     /**
                      * 设置Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-                     * @param NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * @param _networkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * 
                      */
                     void SetNetworkAclEntrySet(const NetworkAclEntrySet& _networkAclEntrySet);
 
                     /**
                      * 判断参数 NetworkAclEntrySet 是否已赋值
                      * @return NetworkAclEntrySet 是否已赋值
+                     * 
                      */
                     bool NetworkAclEntrySetHasBeenSet() const;
 
                     /**
                      * 获取Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
                      * @return NetworkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * 
                      */
                     NetworkAclQuintupleEntries GetNetworkAclQuintupleSet() const;
 
                     /**
                      * 设置Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-                     * @param NetworkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * @param _networkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * 
                      */
                     void SetNetworkAclQuintupleSet(const NetworkAclQuintupleEntries& _networkAclQuintupleSet);
 
                     /**
                      * 判断参数 NetworkAclQuintupleSet 是否已赋值
                      * @return NetworkAclQuintupleSet 是否已赋值
+                     * 
                      */
                     bool NetworkAclQuintupleSetHasBeenSet() const;
 

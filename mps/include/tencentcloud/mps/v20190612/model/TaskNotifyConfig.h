@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
                      * @return CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * 
                      */
                     std::string GetCmqModel() const;
 
                     /**
                      * 设置The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
-                     * @param CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * @param _cmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * 
                      */
                     void SetCmqModel(const std::string& _cmqModel);
 
                     /**
                      * 判断参数 CmqModel 是否已赋值
                      * @return CmqModel 是否已赋值
+                     * 
                      */
                     bool CmqModelHasBeenSet() const;
 
                     /**
                      * 获取The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
                      * @return CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * 
                      */
                     std::string GetCmqRegion() const;
 
                     /**
                      * 设置The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
-                     * @param CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * @param _cmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * 
                      */
                     void SetCmqRegion(const std::string& _cmqRegion);
 
                     /**
                      * 判断参数 CmqRegion 是否已赋值
                      * @return CmqRegion 是否已赋值
+                     * 
                      */
                     bool CmqRegionHasBeenSet() const;
 
                     /**
                      * 获取The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
                      * @return TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
-                     * @param TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * @param _topicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
                      * @return QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
-                     * @param QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * @param _queueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
                      * @return NotifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+                     * 
                      */
                     std::string GetNotifyMode() const;
 
                     /**
                      * 设置Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
-                     * @param NotifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+                     * @param _notifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+                     * 
                      */
                     void SetNotifyMode(const std::string& _notifyMode);
 
                     /**
                      * 判断参数 NotifyMode 是否已赋值
                      * @return NotifyMode 是否已赋值
+                     * 
                      */
                     bool NotifyModeHasBeenSet() const;
 
@@ -152,6 +167,7 @@ namespace TencentCloud
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
 <li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * 
                      */
                     std::string GetNotifyType() const;
 
@@ -163,37 +179,42 @@ namespace TencentCloud
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
 <li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
-                     * @param NotifyType The notification type. Valid values:
+                     * @param _notifyType The notification type. Valid values:
 <li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
 <li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+                     * 
                      */
                     void SetNotifyType(const std::string& _notifyType);
 
                     /**
                      * 判断参数 NotifyType 是否已赋值
                      * @return NotifyType 是否已赋值
+                     * 
                      */
                     bool NotifyTypeHasBeenSet() const;
 
                     /**
                      * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
                      * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 
                      */
                     std::string GetNotifyUrl() const;
 
                     /**
                      * 设置HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * @param _notifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 
                      */
                     void SetNotifyUrl(const std::string& _notifyUrl);
 
                     /**
                      * 判断参数 NotifyUrl 是否已赋值
                      * @return NotifyUrl 是否已赋值
+                     * 
                      */
                     bool NotifyUrlHasBeenSet() const;
 
@@ -204,6 +225,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AwsSQS GetAwsSQS() const;
 
@@ -211,15 +233,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+                     * @param _awsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAwsSQS(const AwsSQS& _awsSQS);
 
                     /**
                      * 判断参数 AwsSQS 是否已赋值
                      * @return AwsSQS 是否已赋值
+                     * 
                      */
                     bool AwsSQSHasBeenSet() const;
 

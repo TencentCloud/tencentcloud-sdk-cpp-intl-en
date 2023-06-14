@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Mount point
                      * @return MountPoint Mount point
+                     * 
                      */
                     MountPoint GetMountPoint() const;
 
                     /**
                      * 判断参数 MountPoint 是否已赋值
                      * @return MountPoint 是否已赋值
+                     * 
                      */
                     bool MountPointHasBeenSet() const;
 

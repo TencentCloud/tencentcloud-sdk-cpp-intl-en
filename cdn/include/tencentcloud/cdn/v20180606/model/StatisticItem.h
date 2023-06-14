@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Type Type of usage limit. `total`: Cumulative usage; `moment`: Instantaneous usage.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of usage limit. `total`: Cumulative usage; `moment`: Instantaneous usage.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Type Type of usage limit. `total`: Cumulative usage; `moment`: Instantaneous usage.
+                     * @param _type Type of usage limit. `total`: Cumulative usage; `moment`: Instantaneous usage.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UnBlockTime Unblocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetUnBlockTime() const;
 
                     /**
                      * 设置Unblocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UnBlockTime Unblocking time
+                     * @param _unBlockTime Unblocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUnBlockTime(const uint64_t& _unBlockTime);
 
                     /**
                      * 判断参数 UnBlockTime 是否已赋值
                      * @return UnBlockTime 是否已赋值
+                     * 
                      */
                     bool UnBlockTimeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return BpsThreshold Bandwidth/Traffic threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetBpsThreshold() const;
 
                     /**
                      * 设置Bandwidth/Traffic threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param BpsThreshold Bandwidth/Traffic threshold
+                     * @param _bpsThreshold Bandwidth/Traffic threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBpsThreshold(const uint64_t& _bpsThreshold);
 
                     /**
                      * 判断参数 BpsThreshold 是否已赋值
                      * @return BpsThreshold 是否已赋值
+                     * 
                      */
                     bool BpsThresholdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CounterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCounterMeasure() const;
 
                     /**
                      * 设置Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CounterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
+                     * @param _counterMeasure Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCounterMeasure(const std::string& _counterMeasure);
 
                     /**
                      * 判断参数 CounterMeasure 是否已赋值
                      * @return CounterMeasure 是否已赋值
+                     * 
                      */
                     bool CounterMeasureHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AlertPercentage Threshold (in percentage) that triggers alarms
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetAlertPercentage() const;
 
                     /**
                      * 设置Threshold (in percentage) that triggers alarms
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AlertPercentage Threshold (in percentage) that triggers alarms
+                     * @param _alertPercentage Threshold (in percentage) that triggers alarms
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAlertPercentage(const uint64_t& _alertPercentage);
 
                     /**
                      * 判断参数 AlertPercentage 是否已赋值
                      * @return AlertPercentage 是否已赋值
+                     * 
                      */
                     bool AlertPercentageHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AlertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAlertSwitch() const;
 
                     /**
                      * 设置Whether to enable the alarm threshold trigger. Values: `on`, `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AlertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
+                     * @param _alertSwitch Whether to enable the alarm threshold trigger. Values: `on`, `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAlertSwitch(const std::string& _alertSwitch);
 
                     /**
                      * 判断参数 AlertSwitch 是否已赋值
                      * @return AlertSwitch 是否已赋值
+                     * 
                      */
                     bool AlertSwitchHasBeenSet() const;
 
@@ -183,38 +201,44 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Metric Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Metric Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
+                     * @param _metric Metric type. `flux`: Traffic; `bandwidth`: Bandwidth.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Cycle 
+                     * 
                      */
                     uint64_t GetCycle() const;
 
                     /**
                      * 设置
-                     * @param Cycle 
+                     * @param _cycle 
+                     * 
                      */
                     void SetCycle(const uint64_t& _cycle);
 
                     /**
                      * 判断参数 Cycle 是否已赋值
                      * @return Cycle 是否已赋值
+                     * 
                      */
                     bool CycleHasBeenSet() const;
 
@@ -223,20 +247,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to enable usage limit configuration. Values: `on`, `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable usage limit configuration. Values: `on`, `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Whether to enable usage limit configuration. Values: `on`, `off`.
+                     * @param _switch Whether to enable usage limit configuration. Values: `on`, `off`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

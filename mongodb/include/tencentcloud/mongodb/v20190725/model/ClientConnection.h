@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Client IP of a connection
                      * @return IP Client IP of a connection
+                     * 
                      */
                     std::string GetIP() const;
 
                     /**
                      * 设置Client IP of a connection
-                     * @param IP Client IP of a connection
+                     * @param _iP Client IP of a connection
+                     * 
                      */
                     void SetIP(const std::string& _iP);
 
                     /**
                      * 判断参数 IP 是否已赋值
                      * @return IP 是否已赋值
+                     * 
                      */
                     bool IPHasBeenSet() const;
 
                     /**
                      * 获取Number of connections corresponding to a client IP
                      * @return Count Number of connections corresponding to a client IP
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of connections corresponding to a client IP
-                     * @param Count Number of connections corresponding to a client IP
+                     * @param _count Number of connections corresponding to a client IP
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Whether it is the Tencent Cloud IP for automated testing
                      * @return InternalService Whether it is the Tencent Cloud IP for automated testing
+                     * 
                      */
                     bool GetInternalService() const;
 
                     /**
                      * 设置Whether it is the Tencent Cloud IP for automated testing
-                     * @param InternalService Whether it is the Tencent Cloud IP for automated testing
+                     * @param _internalService Whether it is the Tencent Cloud IP for automated testing
+                     * 
                      */
                     void SetInternalService(const bool& _internalService);
 
                     /**
                      * 判断参数 InternalService 是否已赋值
                      * @return InternalService 是否已赋值
+                     * 
                      */
                     bool InternalServiceHasBeenSet() const;
 

@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取User ID	
                      * @return UserId User ID	
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Login status token returned after successful login or registration. The token is valid for seven days.	
                      * @return Token Login status token returned after successful login or registration. The token is valid for seven days.	
+                     * 
                      */
                     std::string GetToken() const;
 
                     /**
                      * 判断参数 Token 是否已赋值
                      * @return Token 是否已赋值
+                     * 
                      */
                     bool TokenHasBeenSet() const;
 

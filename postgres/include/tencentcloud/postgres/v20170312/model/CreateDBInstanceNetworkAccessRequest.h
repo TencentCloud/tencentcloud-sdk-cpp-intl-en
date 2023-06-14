@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-6bwgamo3.
                      * @return DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-6bwgamo3.
-                     * @param DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * @param _dBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Unified VPC ID.
                      * @return VpcId Unified VPC ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Unified VPC ID.
-                     * @param VpcId Unified VPC ID.
+                     * @param _vpcId Unified VPC ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID.
                      * @return SubnetId Subnet ID.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID.
-                     * @param SubnetId Subnet ID.
+                     * @param _subnetId Subnet ID.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
                      * @return IsAssignVip Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
+                     * 
                      */
                     bool GetIsAssignVip() const;
 
                     /**
                      * 设置Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
-                     * @param IsAssignVip Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
+                     * @param _isAssignVip Whether to manually assign the VIP. Valid values: `true` (manually assign), `false` (automatically assign).
+                     * 
                      */
                     void SetIsAssignVip(const bool& _isAssignVip);
 
                     /**
                      * 判断参数 IsAssignVip 是否已赋值
                      * @return IsAssignVip 是否已赋值
+                     * 
                      */
                     bool IsAssignVipHasBeenSet() const;
 
                     /**
                      * 获取Target VIP.
                      * @return Vip Target VIP.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Target VIP.
-                     * @param Vip Target VIP.
+                     * @param _vip Target VIP.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 

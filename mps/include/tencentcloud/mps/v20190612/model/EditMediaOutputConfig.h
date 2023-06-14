@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
                      * @return Container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+                     * 
                      */
                     std::string GetContainer() const;
 
                     /**
                      * 设置Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
-                     * @param Container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+                     * @param _container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+                     * 
                      */
                     void SetContainer(const std::string& _container);
 
                     /**
                      * 判断参数 Container 是否已赋值
                      * @return Container 是否已赋值
+                     * 
                      */
                     bool ContainerHasBeenSet() const;
 
                     /**
                      * 获取The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
                      * @return Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
-                     * @param Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * @param _type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

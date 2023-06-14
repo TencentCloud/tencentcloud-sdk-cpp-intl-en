@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The registrant contact.
                      * @return RegistrantContact The registrant contact.
+                     * 
                      */
                     RegistrantContact GetRegistrantContact() const;
 
                     /**
                      * 设置The registrant contact.
-                     * @param RegistrantContact The registrant contact.
+                     * @param _registrantContact The registrant contact.
+                     * 
                      */
                     void SetRegistrantContact(const RegistrantContact& _registrantContact);
 
                     /**
                      * 判断参数 RegistrantContact 是否已赋值
                      * @return RegistrantContact 是否已赋值
+                     * 
                      */
                     bool RegistrantContactHasBeenSet() const;
 
                     /**
                      * 获取The admin contact.
                      * @return AdminContact The admin contact.
+                     * 
                      */
                     AdminContact GetAdminContact() const;
 
                     /**
                      * 设置The admin contact.
-                     * @param AdminContact The admin contact.
+                     * @param _adminContact The admin contact.
+                     * 
                      */
                     void SetAdminContact(const AdminContact& _adminContact);
 
                     /**
                      * 判断参数 AdminContact 是否已赋值
                      * @return AdminContact 是否已赋值
+                     * 
                      */
                     bool AdminContactHasBeenSet() const;
 
                     /**
                      * 获取The technical contact.
                      * @return TechnicalContact The technical contact.
+                     * 
                      */
                     TechnicalContact GetTechnicalContact() const;
 
                     /**
                      * 设置The technical contact.
-                     * @param TechnicalContact The technical contact.
+                     * @param _technicalContact The technical contact.
+                     * 
                      */
                     void SetTechnicalContact(const TechnicalContact& _technicalContact);
 
                     /**
                      * 判断参数 TechnicalContact 是否已赋值
                      * @return TechnicalContact 是否已赋值
+                     * 
                      */
                     bool TechnicalContactHasBeenSet() const;
 
                     /**
                      * 获取The contact person for bills.
                      * @return BillingContact The contact person for bills.
+                     * 
                      */
                     BillingContact GetBillingContact() const;
 
                     /**
                      * 设置The contact person for bills.
-                     * @param BillingContact The contact person for bills.
+                     * @param _billingContact The contact person for bills.
+                     * 
                      */
                     void SetBillingContact(const BillingContact& _billingContact);
 
                     /**
                      * 判断参数 BillingContact 是否已赋值
                      * @return BillingContact 是否已赋值
+                     * 
                      */
                     bool BillingContactHasBeenSet() const;
 
                     /**
                      * 获取The profile type. Valid values: `I` (individual, default), `E` (organization).
                      * @return TemplateType The profile type. Valid values: `I` (individual, default), `E` (organization).
+                     * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
                      * 设置The profile type. Valid values: `I` (individual, default), `E` (organization).
-                     * @param TemplateType The profile type. Valid values: `I` (individual, default), `E` (organization).
+                     * @param _templateType The profile type. Valid values: `I` (individual, default), `E` (organization).
+                     * 
                      */
                     void SetTemplateType(const std::string& _templateType);
 
                     /**
                      * 判断参数 TemplateType 是否已赋值
                      * @return TemplateType 是否已赋值
+                     * 
                      */
                     bool TemplateTypeHasBeenSet() const;
 

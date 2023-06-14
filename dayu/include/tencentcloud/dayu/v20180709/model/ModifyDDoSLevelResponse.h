@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Protection level. Valid values: [low,middle,high]
                      * @return DDoSLevel Protection level. Valid values: [low,middle,high]
+                     * 
                      */
                     std::string GetDDoSLevel() const;
 
                     /**
                      * 判断参数 DDoSLevel 是否已赋值
                      * @return DDoSLevel 是否已赋值
+                     * 
                      */
                     bool DDoSLevelHasBeenSet() const;
 

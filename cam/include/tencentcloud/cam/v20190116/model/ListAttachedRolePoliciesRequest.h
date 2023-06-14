@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Page number, beginning from 1
                      * @return Page Page number, beginning from 1
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number, beginning from 1
-                     * @param Page Page number, beginning from 1
+                     * @param _page Page number, beginning from 1
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of lines per page, no more than 200
                      * @return Rp Number of lines per page, no more than 200
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置Number of lines per page, no more than 200
-                     * @param Rp Number of lines per page, no more than 200
+                     * @param _rp Number of lines per page, no more than 200
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 
                     /**
                      * 获取Role ID, used to specify a role. Input either `RoleId` or `RoleName`
                      * @return RoleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     std::string GetRoleId() const;
 
                     /**
                      * 设置Role ID, used to specify a role. Input either `RoleId` or `RoleName`
-                     * @param RoleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+                     * @param _roleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     void SetRoleId(const std::string& _roleId);
 
                     /**
                      * 判断参数 RoleId 是否已赋值
                      * @return RoleId 是否已赋值
+                     * 
                      */
                     bool RoleIdHasBeenSet() const;
 
                     /**
                      * 获取Role name, used to specify a role. Input either `RoleId` or `RoleName`
                      * @return RoleName Role name, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name, used to specify a role. Input either `RoleId` or `RoleName`
-                     * @param RoleName Role name, used to specify a role. Input either `RoleId` or `RoleName`
+                     * @param _roleName Role name, used to specify a role. Input either `RoleId` or `RoleName`
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
                     /**
                      * 获取Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
                      * @return PolicyType Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
+                     * 
                      */
                     std::string GetPolicyType() const;
 
                     /**
                      * 设置Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
-                     * @param PolicyType Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
+                     * @param _policyType Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
+                     * 
                      */
                     void SetPolicyType(const std::string& _policyType);
 
                     /**
                      * 判断参数 PolicyType 是否已赋值
                      * @return PolicyType 是否已赋值
+                     * 
                      */
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
                      * 获取Search by keyword
                      * @return Keyword Search by keyword
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Search by keyword
-                     * @param Keyword Search by keyword
+                     * @param _keyword Search by keyword
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

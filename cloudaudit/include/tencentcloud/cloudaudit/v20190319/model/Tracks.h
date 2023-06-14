@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Tracking set name
                      * @return Name Tracking set name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Tracking set name
-                     * @param Name Tracking set name
+                     * @param _name Tracking set name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
                      * @return ActionType Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+                     * 
                      */
                     std::string GetActionType() const;
 
                     /**
                      * 设置Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
-                     * @param ActionType Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+                     * @param _actionType Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
+                     * 
                      */
                     void SetActionType(const std::string& _actionType);
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 
                     /**
                      * 获取The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
                      * @return ResourceType The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
-                     * @param ResourceType The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
+                     * @param _resourceType The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Tracking set status (0: Not enabled; 1: Enabled)
                      * @return Status Tracking set status (0: Not enabled; 1: Enabled)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Tracking set status (0: Not enabled; 1: Enabled)
-                     * @param Status Tracking set status (0: Not enabled; 1: Enabled)
+                     * @param _status Tracking set status (0: Not enabled; 1: Enabled)
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The list of API names of tracking set events (`*`: All)
                      * @return EventNames The list of API names of tracking set events (`*`: All)
+                     * 
                      */
                     std::vector<std::string> GetEventNames() const;
 
                     /**
                      * 设置The list of API names of tracking set events (`*`: All)
-                     * @param EventNames The list of API names of tracking set events (`*`: All)
+                     * @param _eventNames The list of API names of tracking set events (`*`: All)
+                     * 
                      */
                     void SetEventNames(const std::vector<std::string>& _eventNames);
 
                     /**
                      * 判断参数 EventNames 是否已赋值
                      * @return EventNames 是否已赋值
+                     * 
                      */
                     bool EventNamesHasBeenSet() const;
 
                     /**
                      * 获取Storage type of shipped data. Valid values: `cos`, `cls`.
                      * @return Storage Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * 
                      */
                     Storage GetStorage() const;
 
                     /**
                      * 设置Storage type of shipped data. Valid values: `cos`, `cls`.
-                     * @param Storage Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * @param _storage Storage type of shipped data. Valid values: `cos`, `cls`.
+                     * 
                      */
                     void SetStorage(const Storage& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the tracking set
                      * @return CreateTime Creation time of the tracking set
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of the tracking set
-                     * @param CreateTime Creation time of the tracking set
+                     * @param _createTime Creation time of the tracking set
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Tracking set ID
                      * @return TrackId Tracking set ID
+                     * 
                      */
                     uint64_t GetTrackId() const;
 
                     /**
                      * 设置Tracking set ID
-                     * @param TrackId Tracking set ID
+                     * @param _trackId Tracking set ID
+                     * 
                      */
                     void SetTrackId(const uint64_t& _trackId);
 
                     /**
                      * 判断参数 TrackId 是否已赋值
                      * @return TrackId 是否已赋值
+                     * 
                      */
                     bool TrackIdHasBeenSet() const;
 

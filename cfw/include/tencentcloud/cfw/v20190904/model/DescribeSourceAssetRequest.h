@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Fuzzy search
                      * @return FuzzySearch Fuzzy search
+                     * 
                      */
                     std::string GetFuzzySearch() const;
 
                     /**
                      * 设置Fuzzy search
-                     * @param FuzzySearch Fuzzy search
+                     * @param _fuzzySearch Fuzzy search
+                     * 
                      */
                     void SetFuzzySearch(const std::string& _fuzzySearch);
 
                     /**
                      * 判断参数 FuzzySearch 是否已赋值
                      * @return FuzzySearch 是否已赋值
+                     * 
                      */
                     bool FuzzySearchHasBeenSet() const;
 
                     /**
                      * 获取Asset type. 1: public network; 2: private network
                      * @return InsType Asset type. 1: public network; 2: private network
+                     * 
                      */
                     std::string GetInsType() const;
 
                     /**
                      * 设置Asset type. 1: public network; 2: private network
-                     * @param InsType Asset type. 1: public network; 2: private network
+                     * @param _insType Asset type. 1: public network; 2: private network
+                     * 
                      */
                     void SetInsType(const std::string& _insType);
 
                     /**
                      * 判断参数 InsType 是否已赋值
                      * @return InsType 是否已赋值
+                     * 
                      */
                     bool InsTypeHasBeenSet() const;
 
                     /**
                      * 获取If ChooseType is 1, grouped assets are queried; if ChooseType is not 1, non-grouped assets are queried
                      * @return ChooseType If ChooseType is 1, grouped assets are queried; if ChooseType is not 1, non-grouped assets are queried
+                     * 
                      */
                     std::string GetChooseType() const;
 
                     /**
                      * 设置If ChooseType is 1, grouped assets are queried; if ChooseType is not 1, non-grouped assets are queried
-                     * @param ChooseType If ChooseType is 1, grouped assets are queried; if ChooseType is not 1, non-grouped assets are queried
+                     * @param _chooseType If ChooseType is 1, grouped assets are queried; if ChooseType is not 1, non-grouped assets are queried
+                     * 
                      */
                     void SetChooseType(const std::string& _chooseType);
 
                     /**
                      * 判断参数 ChooseType 是否已赋值
                      * @return ChooseType 是否已赋值
+                     * 
                      */
                     bool ChooseTypeHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return Zone Region
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Region
-                     * @param Zone Region
+                     * @param _zone Region
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of results returned per page. For example, if it is set to 10, 10 results will be returned at most.
                      * @return Limit Maximum number of results returned per page. For example, if it is set to 10, 10 results will be returned at most.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of results returned per page. For example, if it is set to 10, 10 results will be returned at most.
-                     * @param Limit Maximum number of results returned per page. For example, if it is set to 10, 10 results will be returned at most.
+                     * @param _limit Maximum number of results returned per page. For example, if it is set to 10, 10 results will be returned at most.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset of search results
                      * @return Offset Offset of search results
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset of search results
-                     * @param Offset Offset of search results
+                     * @param _offset Offset of search results
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

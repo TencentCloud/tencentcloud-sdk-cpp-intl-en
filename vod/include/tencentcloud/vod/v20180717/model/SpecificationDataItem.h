@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Task specification.
                      * @return Specification Task specification.
+                     * 
                      */
                     std::string GetSpecification() const;
 
                     /**
                      * 设置Task specification.
-                     * @param Specification Task specification.
+                     * @param _specification Task specification.
+                     * 
                      */
                     void SetSpecification(const std::string& _specification);
 
                     /**
                      * 判断参数 Specification 是否已赋值
                      * @return Specification 是否已赋值
+                     * 
                      */
                     bool SpecificationHasBeenSet() const;
 
                     /**
                      * 获取Statistics.
                      * @return Data Statistics.
+                     * 
                      */
                     std::vector<TaskStatDataItem> GetData() const;
 
                     /**
                      * 设置Statistics.
-                     * @param Data Statistics.
+                     * @param _data Statistics.
+                     * 
                      */
                     void SetData(const std::vector<TaskStatDataItem>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Starting offset of the page. Value: (number of pages – 1) * items per page.
                      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the page. Value: (number of pages – 1) * items per page.
-                     * @param Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * @param _offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
                      * @return Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
-                     * @param Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * @param _limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
                      * @return FilterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * 
                      */
                     std::string GetFilterInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
-                     * @param FilterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * @param _filterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * 
                      */
                     void SetFilterInstanceId(const std::string& _filterInstanceId);
 
                     /**
                      * 判断参数 FilterInstanceId 是否已赋值
                      * @return FilterInstanceId 是否已赋值
+                     * 
                      */
                     bool FilterInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取IP filter
                      * @return FilterIp IP filter
+                     * 
                      */
                     std::string GetFilterIp() const;
 
                     /**
                      * 设置IP filter
-                     * @param FilterIp IP filter
+                     * @param _filterIp IP filter
+                     * 
                      */
                     void SetFilterIp(const std::string& _filterIp);
 
                     /**
                      * 判断参数 FilterIp 是否已赋值
                      * @return FilterIp 是否已赋值
+                     * 
                      */
                     bool FilterIpHasBeenSet() const;
 

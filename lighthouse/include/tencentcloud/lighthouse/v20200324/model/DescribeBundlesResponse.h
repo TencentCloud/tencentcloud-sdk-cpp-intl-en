@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of package details.
                      * @return BundleSet List of package details.
+                     * 
                      */
                     std::vector<Bundle> GetBundleSet() const;
 
                     /**
                      * 判断参数 BundleSet 是否已赋值
                      * @return BundleSet 是否已赋值
+                     * 
                      */
                     bool BundleSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of eligible packages, which is used for pagination.
                      * @return TotalCount Total number of eligible packages, which is used for pagination.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the VPC to which the `HAVIP` belongs.
                      * @return VpcId The `ID` of the VPC to which the `HAVIP` belongs.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of the VPC to which the `HAVIP` belongs.
-                     * @param VpcId The `ID` of the VPC to which the `HAVIP` belongs.
+                     * @param _vpcId The `ID` of the VPC to which the `HAVIP` belongs.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The `ID` of the subnet to which the `HAVIP` belongs.
                      * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置The `ID` of the subnet to which the `HAVIP` belongs.
-                     * @param SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * @param _subnetId The `ID` of the subnet to which the `HAVIP` belongs.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the `HAVIP`.
                      * @return HaVipName The name of the `HAVIP`.
+                     * 
                      */
                     std::string GetHaVipName() const;
 
                     /**
                      * 设置The name of the `HAVIP`.
-                     * @param HaVipName The name of the `HAVIP`.
+                     * @param _haVipName The name of the `HAVIP`.
+                     * 
                      */
                     void SetHaVipName(const std::string& _haVipName);
 
                     /**
                      * 判断参数 HaVipName 是否已赋值
                      * @return HaVipName 是否已赋值
+                     * 
                      */
                     bool HaVipNameHasBeenSet() const;
 
                     /**
                      * 获取The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
                      * @return Vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
-                     * @param Vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
+                     * @param _vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 

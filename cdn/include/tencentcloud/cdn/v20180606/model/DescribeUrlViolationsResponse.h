@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UrlRecordList Details of URLs in violation
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<ViolationUrl> GetUrlRecordList() const;
 
                     /**
                      * 判断参数 UrlRecordList 是否已赋值
                      * @return UrlRecordList 是否已赋值
+                     * 
                      */
                     bool UrlRecordListHasBeenSet() const;
 
                     /**
                      * 获取Total number of records, which is used for pagination.
                      * @return TotalCount Total number of records, which is used for pagination.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

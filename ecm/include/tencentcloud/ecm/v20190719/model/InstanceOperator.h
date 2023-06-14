@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeniedActions Prohibited operations for the instance
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<OperatorAction> GetDeniedActions() const;
 
                     /**
                      * 设置Prohibited operations for the instance
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeniedActions Prohibited operations for the instance
+                     * @param _deniedActions Prohibited operations for the instance
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeniedActions(const std::vector<OperatorAction>& _deniedActions);
 
                     /**
                      * 判断参数 DeniedActions 是否已赋值
                      * @return DeniedActions 是否已赋值
+                     * 
                      */
                     bool DeniedActionsHasBeenSet() const;
 

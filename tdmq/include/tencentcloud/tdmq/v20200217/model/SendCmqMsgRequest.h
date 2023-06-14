@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Queue name
                      * @return QueueName Queue name
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置Queue name
-                     * @param QueueName Queue name
+                     * @param _queueName Queue name
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取Message content
                      * @return MsgContent Message content
+                     * 
                      */
                     std::string GetMsgContent() const;
 
                     /**
                      * 设置Message content
-                     * @param MsgContent Message content
+                     * @param _msgContent Message content
+                     * 
                      */
                     void SetMsgContent(const std::string& _msgContent);
 
                     /**
                      * 判断参数 MsgContent 是否已赋值
                      * @return MsgContent 是否已赋值
+                     * 
                      */
                     bool MsgContentHasBeenSet() const;
 
                     /**
                      * 获取Delay time
                      * @return DelaySeconds Delay time
+                     * 
                      */
                     int64_t GetDelaySeconds() const;
 
                     /**
                      * 设置Delay time
-                     * @param DelaySeconds Delay time
+                     * @param _delaySeconds Delay time
+                     * 
                      */
                     void SetDelaySeconds(const int64_t& _delaySeconds);
 
                     /**
                      * 判断参数 DelaySeconds 是否已赋值
                      * @return DelaySeconds 是否已赋值
+                     * 
                      */
                     bool DelaySecondsHasBeenSet() const;
 

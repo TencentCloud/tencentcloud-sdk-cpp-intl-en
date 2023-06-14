@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The details of the virtual cluster.
                      * @return DataEngineName The details of the virtual cluster.
+                     * 
                      */
                     std::string GetDataEngineName() const;
 
                     /**
                      * 判断参数 DataEngineName 是否已赋值
                      * @return DataEngineName 是否已赋值
+                     * 
                      */
                     bool DataEngineNameHasBeenSet() const;
 

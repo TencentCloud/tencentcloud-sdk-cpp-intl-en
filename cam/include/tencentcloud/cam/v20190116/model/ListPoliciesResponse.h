@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of policies
                      * @return TotalNum Total number of policies
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 
@@ -77,12 +79,14 @@ createMode: 1 indicates a policy created based on business permissions, while ot
 Attachments: number of associated users
 ServiceType: the product the policy is associated with
 IsAttached: this value should not be null when querying if a marked entity has been associated with a policy. 0 indicates that no policy has been associated, and 1 indicates that a policy has been associated
+                     * 
                      */
                     std::vector<StrategyInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
@@ -91,12 +95,14 @@ IsAttached: this value should not be null when querying if a marked entity has b
 Note: This field may return null, indicating that no valid value was found.
                      * @return ServiceTypeList Reserved field
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetServiceTypeList() const;
 
                     /**
                      * 判断参数 ServiceTypeList 是否已赋值
                      * @return ServiceTypeList 是否已赋值
+                     * 
                      */
                     bool ServiceTypeListHasBeenSet() const;
 

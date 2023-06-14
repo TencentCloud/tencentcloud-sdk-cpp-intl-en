@@ -46,84 +46,98 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable the Basic Protection feature
                      * @return BasicRuleSwitch Whether to enable the Basic Protection feature
+                     * 
                      */
                     int64_t GetBasicRuleSwitch() const;
 
                     /**
                      * 判断参数 BasicRuleSwitch 是否已赋值
                      * @return BasicRuleSwitch 是否已赋值
+                     * 
                      */
                     bool BasicRuleSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the Security Baseline feature
                      * @return BaselineAllSwitch Whether to enable the Security Baseline feature
+                     * 
                      */
                     int64_t GetBaselineAllSwitch() const;
 
                     /**
                      * 判断参数 BaselineAllSwitch 是否已赋值
                      * @return BaselineAllSwitch 是否已赋值
+                     * 
                      */
                     bool BaselineAllSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the Treat Intelligence feature
                      * @return TiSwitch Whether to enable the Treat Intelligence feature
+                     * 
                      */
                     int64_t GetTiSwitch() const;
 
                     /**
                      * 判断参数 TiSwitch 是否已赋值
                      * @return TiSwitch 是否已赋值
+                     * 
                      */
                     bool TiSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the Virtual Patch feature
                      * @return VirtualPatchSwitch Whether to enable the Virtual Patch feature
+                     * 
                      */
                     int64_t GetVirtualPatchSwitch() const;
 
                     /**
                      * 判断参数 VirtualPatchSwitch 是否已赋值
                      * @return VirtualPatchSwitch 是否已赋值
+                     * 
                      */
                     bool VirtualPatchSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether it has been enabled before
                      * @return HistoryOpen Whether it has been enabled before
+                     * 
                      */
                     int64_t GetHistoryOpen() const;
 
                     /**
                      * 判断参数 HistoryOpen 是否已赋值
                      * @return HistoryOpen 是否已赋值
+                     * 
                      */
                     bool HistoryOpenHasBeenSet() const;
 
                     /**
                      * 获取Status code. `0`: Succeeded. Others: Failed
                      * @return ReturnCode Status code. `0`: Succeeded. Others: Failed
+                     * 
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取Status message. `success` and `fail.
                      * @return ReturnMsg Status message. `success` and `fail.
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 

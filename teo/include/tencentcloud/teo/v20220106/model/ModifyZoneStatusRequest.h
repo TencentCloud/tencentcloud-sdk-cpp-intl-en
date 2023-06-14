@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return Id Site ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Site ID
-                     * @param Id Site ID
+                     * @param _id Site ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return Paused Site status.
 - `false`: Enable the site.
 - `true`: Disable the site.
+                     * 
                      */
                     bool GetPaused() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置Site status.
 - `false`: Enable the site.
 - `true`: Disable the site.
-                     * @param Paused Site status.
+                     * @param _paused Site status.
 - `false`: Enable the site.
 - `true`: Disable the site.
+                     * 
                      */
                     void SetPaused(const bool& _paused);
 
                     /**
                      * 判断参数 Paused 是否已赋值
                      * @return Paused 是否已赋值
+                     * 
                      */
                     bool PausedHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NormalBandwidth Application bandwidth (in Mbps).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetNormalBandwidth() const;
 
                     /**
                      * 设置Application bandwidth (in Mbps).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NormalBandwidth Application bandwidth (in Mbps).
+                     * @param _normalBandwidth Application bandwidth (in Mbps).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNormalBandwidth(const uint64_t& _normalBandwidth);
 
                     /**
                      * 判断参数 NormalBandwidth 是否已赋值
                      * @return NormalBandwidth 是否已赋值
+                     * 
                      */
                     bool NormalBandwidthHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ForwardRulesLimit Number of forwarding rules
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetForwardRulesLimit() const;
 
                     /**
                      * 设置Number of forwarding rules
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ForwardRulesLimit Number of forwarding rules
+                     * @param _forwardRulesLimit Number of forwarding rules
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetForwardRulesLimit(const uint64_t& _forwardRulesLimit);
 
                     /**
                      * 判断参数 ForwardRulesLimit 是否已赋值
                      * @return ForwardRulesLimit 是否已赋值
+                     * 
                      */
                     bool ForwardRulesLimitHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AutoRenewFlag Auto-renewal flag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
                      * 设置Auto-renewal flag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AutoRenewFlag Auto-renewal flag
+                     * @param _autoRenewFlag Auto-renewal flag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CurDeadline Expiration date
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCurDeadline() const;
 
                     /**
                      * 设置Expiration date
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CurDeadline Expiration date
+                     * @param _curDeadline Expiration date
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCurDeadline(const std::string& _curDeadline);
 
                     /**
                      * 判断参数 CurDeadline 是否已赋值
                      * @return CurDeadline 是否已赋值
+                     * 
                      */
                     bool CurDeadlineHasBeenSet() const;
 

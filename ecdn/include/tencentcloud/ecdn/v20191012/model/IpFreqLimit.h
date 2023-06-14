@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取IP access limit switch. Valid values: on, off.
                      * @return Switch IP access limit switch. Valid values: on, off.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置IP access limit switch. Valid values: on, off.
-                     * @param Switch IP access limit switch. Valid values: on, off.
+                     * @param _switch IP access limit switch. Valid values: on, off.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Qps Number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetQps() const;
 
                     /**
                      * 设置Number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Qps Number of requests per second.
+                     * @param _qps Number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQps(const int64_t& _qps);
 
                     /**
                      * 判断参数 Qps 是否已赋值
                      * @return Qps 是否已赋值
+                     * 
                      */
                     bool QpsHasBeenSet() const;
 

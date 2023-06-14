@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Operation information
                      * @return Msg Operation information
+                     * 
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 判断参数 Msg 是否已赋值
                      * @return Msg 是否已赋值
+                     * 
                      */
                     bool MsgHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ID Project ID
+                     * 
                      */
                     uint64_t GetID() const;
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

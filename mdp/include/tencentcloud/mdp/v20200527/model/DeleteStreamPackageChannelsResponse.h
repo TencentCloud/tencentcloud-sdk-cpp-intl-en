@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of the information of successfully deleted channels
                      * @return SuccessInfos List of the information of successfully deleted channels
+                     * 
                      */
                     std::vector<ChannelInfo> GetSuccessInfos() const;
 
                     /**
                      * 判断参数 SuccessInfos 是否已赋值
                      * @return SuccessInfos 是否已赋值
+                     * 
                      */
                     bool SuccessInfosHasBeenSet() const;
 
                     /**
                      * 获取List of the information of the channels that failed to be deleted
                      * @return FailInfos List of the information of the channels that failed to be deleted
+                     * 
                      */
                     std::vector<ChannelInfo> GetFailInfos() const;
 
                     /**
                      * 判断参数 FailInfos 是否已赋值
                      * @return FailInfos 是否已赋值
+                     * 
                      */
                     bool FailInfosHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Date
                      * @return Date Date
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Date
-                     * @param Date Date
+                     * @param _date Date
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
                     /**
                      * 获取Total number of pending events
                      * @return PendingEventCount Total number of pending events
+                     * 
                      */
                     uint64_t GetPendingEventCount() const;
 
                     /**
                      * 设置Total number of pending events
-                     * @param PendingEventCount Total number of pending events
+                     * @param _pendingEventCount Total number of pending events
+                     * 
                      */
                     void SetPendingEventCount(const uint64_t& _pendingEventCount);
 
                     /**
                      * 判断参数 PendingEventCount 是否已赋值
                      * @return PendingEventCount 是否已赋值
+                     * 
                      */
                     bool PendingEventCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of containers at risk
                      * @return RiskContainerCount Total number of containers at risk
+                     * 
                      */
                     uint64_t GetRiskContainerCount() const;
 
                     /**
                      * 设置Total number of containers at risk
-                     * @param RiskContainerCount Total number of containers at risk
+                     * @param _riskContainerCount Total number of containers at risk
+                     * 
                      */
                     void SetRiskContainerCount(const uint64_t& _riskContainerCount);
 
                     /**
                      * 判断参数 RiskContainerCount 是否已赋值
                      * @return RiskContainerCount 是否已赋值
+                     * 
                      */
                     bool RiskContainerCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of events
                      * @return EventCount Total number of events
+                     * 
                      */
                     uint64_t GetEventCount() const;
 
                     /**
                      * 设置Total number of events
-                     * @param EventCount Total number of events
+                     * @param _eventCount Total number of events
+                     * 
                      */
                     void SetEventCount(const uint64_t& _eventCount);
 
                     /**
                      * 判断参数 EventCount 是否已赋值
                      * @return EventCount 是否已赋值
+                     * 
                      */
                     bool EventCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of isolated events
                      * @return IsolateEventCount Total number of isolated events
+                     * 
                      */
                     uint64_t GetIsolateEventCount() const;
 
                     /**
                      * 设置Total number of isolated events
-                     * @param IsolateEventCount Total number of isolated events
+                     * @param _isolateEventCount Total number of isolated events
+                     * 
                      */
                     void SetIsolateEventCount(const uint64_t& _isolateEventCount);
 
                     /**
                      * 判断参数 IsolateEventCount 是否已赋值
                      * @return IsolateEventCount 是否已赋值
+                     * 
                      */
                     bool IsolateEventCountHasBeenSet() const;
 

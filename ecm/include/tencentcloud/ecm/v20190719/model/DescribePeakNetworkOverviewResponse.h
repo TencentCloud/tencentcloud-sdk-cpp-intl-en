@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PeakNetworkRegionSet Array of network peaks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PeakNetworkRegionInfo> GetPeakNetworkRegionSet() const;
 
                     /**
                      * 判断参数 PeakNetworkRegionSet 是否已赋值
                      * @return PeakNetworkRegionSet 是否已赋值
+                     * 
                      */
                     bool PeakNetworkRegionSetHasBeenSet() const;
 

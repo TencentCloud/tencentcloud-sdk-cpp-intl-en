@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取IP of the client.
                      * @return ClientIp IP of the client.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置IP of the client.
-                     * @param ClientIp IP of the client.
+                     * @param _clientIp IP of the client.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取Maximum QPS.
                      * @return RequestMaxQps Maximum QPS.
+                     * 
                      */
                     int64_t GetRequestMaxQps() const;
 
                     /**
                      * 设置Maximum QPS.
-                     * @param RequestMaxQps Maximum QPS.
+                     * @param _requestMaxQps Maximum QPS.
+                     * 
                      */
                     void SetRequestMaxQps(const int64_t& _requestMaxQps);
 
                     /**
                      * 判断参数 RequestMaxQps 是否已赋值
                      * @return RequestMaxQps 是否已赋值
+                     * 
                      */
                     bool RequestMaxQpsHasBeenSet() const;
 
                     /**
                      * 获取Number of requests.
                      * @return RequestNum Number of requests.
+                     * 
                      */
                     int64_t GetRequestNum() const;
 
                     /**
                      * 设置Number of requests.
-                     * @param RequestNum Number of requests.
+                     * @param _requestNum Number of requests.
+                     * 
                      */
                     void SetRequestNum(const int64_t& _requestNum);
 
                     /**
                      * 判断参数 RequestNum 是否已赋值
                      * @return RequestNum 是否已赋值
+                     * 
                      */
                     bool RequestNumHasBeenSet() const;
 

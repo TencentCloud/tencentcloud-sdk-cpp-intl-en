@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Service name
                      * @return Name Service name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Service name
-                     * @param Name Service name
+                     * @param _name Service name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Available ports
                      * @return Ports Available ports
+                     * 
                      */
                     std::vector<int64_t> GetPorts() const;
 
                     /**
                      * 设置Available ports
-                     * @param Ports Available ports
+                     * @param _ports Available ports
+                     * 
                      */
                     void SetPorts(const std::vector<int64_t>& _ports);
 
                     /**
                      * 判断参数 Ports 是否已赋值
                      * @return Ports 是否已赋值
+                     * 
                      */
                     bool PortsHasBeenSet() const;
 
                     /**
                      * 获取Yaml contents
                      * @return Yaml Yaml contents
+                     * 
                      */
                     std::string GetYaml() const;
 
                     /**
                      * 设置Yaml contents
-                     * @param Yaml Yaml contents
+                     * @param _yaml Yaml contents
+                     * 
                      */
                     void SetYaml(const std::string& _yaml);
 
                     /**
                      * 判断参数 Yaml 是否已赋值
                      * @return Yaml 是否已赋值
+                     * 
                      */
                     bool YamlHasBeenSet() const;
 
@@ -106,20 +115,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return ServiceName Service name
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Service name
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param ServiceName Service name
+                     * @param _serviceName Service name
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
@@ -128,20 +140,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return VersionName Version name
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Version name
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param VersionName Version name
+                     * @param _versionName Version name
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 
@@ -150,20 +165,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return ClusterIp Private IP
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetClusterIp() const;
 
                     /**
                      * 设置Private IP
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param ClusterIp Private IP
+                     * @param _clusterIp Private IP
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetClusterIp(const std::vector<std::string>& _clusterIp);
 
                     /**
                      * 判断参数 ClusterIp 是否已赋值
                      * @return ClusterIp 是否已赋值
+                     * 
                      */
                     bool ClusterIpHasBeenSet() const;
 
@@ -172,20 +190,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return ExternalIp Public IP
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetExternalIp() const;
 
                     /**
                      * 设置Public IP
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param ExternalIp Public IP
+                     * @param _externalIp Public IP
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetExternalIp(const std::string& _externalIp);
 
                     /**
                      * 判断参数 ExternalIp 是否已赋值
                      * @return ExternalIp 是否已赋值
+                     * 
                      */
                     bool ExternalIpHasBeenSet() const;
 
@@ -200,6 +221,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 - VPC（Intra-VPC access)
 - CLUSTER (Intra-cluster access)
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -209,17 +231,19 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 - VPC（Intra-VPC access)
 - CLUSTER (Intra-cluster access)
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param Type The access type. Valid values:
+                     * @param _type The access type. Valid values:
 - EXTERNAL (internet access)
 - VPC（Intra-VPC access)
 - CLUSTER (Intra-cluster access)
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return SubnetId Subnet ID. It is filled when the access type is `VPC`.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID. It is filled when the access type is `VPC`.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param SubnetId Subnet ID. It is filled when the access type is `VPC`.
+                     * @param _subnetId Subnet ID. It is filled when the access type is `VPC`.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LoadBalanceId Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetLoadBalanceId() const;
 
                     /**
                      * 设置Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LoadBalanceId Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+                     * @param _loadBalanceId Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLoadBalanceId(const std::string& _loadBalanceId);
 
                     /**
                      * 判断参数 LoadBalanceId 是否已赋值
                      * @return LoadBalanceId 是否已赋值
+                     * 
                      */
                     bool LoadBalanceIdHasBeenSet() const;
 
@@ -272,20 +302,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return PortMappings Port Mapping
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<PortMapping> GetPortMappings() const;
 
                     /**
                      * 设置Port Mapping
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PortMappings Port Mapping
+                     * @param _portMappings Port Mapping
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPortMappings(const std::vector<PortMapping>& _portMappings);
 
                     /**
                      * 判断参数 PortMappings 是否已赋值
                      * @return PortMappings 是否已赋值
+                     * 
                      */
                     bool PortMappingsHasBeenSet() const;
 

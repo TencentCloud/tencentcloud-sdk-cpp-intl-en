@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Type. Valid values: Hourly, Daily, Weekly, Custom, Manual, Dryrun, None.
                      * @return Type Type. Valid values: Hourly, Daily, Weekly, Custom, Manual, Dryrun, None.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type. Valid values: Hourly, Daily, Weekly, Custom, Manual, Dryrun, None.
-                     * @param Type Type. Valid values: Hourly, Daily, Weekly, Custom, Manual, Dryrun, None.
+                     * @param _type Type. Valid values: Hourly, Daily, Weekly, Custom, Manual, Dryrun, None.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

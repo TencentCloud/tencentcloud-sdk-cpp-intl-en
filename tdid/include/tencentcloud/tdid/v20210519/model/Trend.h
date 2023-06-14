@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The time point.
                      * @return Time The time point.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置The time point.
-                     * @param Time The time point.
+                     * @param _time The time point.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取The count.
                      * @return Count The count.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置The count.
-                     * @param Count The count.
+                     * @param _count The count.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

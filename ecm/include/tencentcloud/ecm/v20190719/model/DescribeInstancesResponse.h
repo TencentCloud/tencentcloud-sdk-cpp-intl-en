@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Length of the list of the returned instance information.
                      * @return TotalCount Length of the list of the returned instance information.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceSet List of the returned instance information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Instance> GetInstanceSet() const;
 
                     /**
                      * 判断参数 InstanceSet 是否已赋值
                      * @return InstanceSet 是否已赋值
+                     * 
                      */
                     bool InstanceSetHasBeenSet() const;
 

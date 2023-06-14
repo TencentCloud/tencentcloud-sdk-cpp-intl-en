@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CcnAttachedInstanceSet List of instances associated with the CCN instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CcnAttachedInstance> GetCcnAttachedInstanceSet() const;
 
                     /**
                      * 判断参数 CcnAttachedInstanceSet 是否已赋值
                      * @return CcnAttachedInstanceSet 是否已赋值
+                     * 
                      */
                     bool CcnAttachedInstanceSetHasBeenSet() const;
 

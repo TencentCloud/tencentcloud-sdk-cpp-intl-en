@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Invoker name.
                      * @return Name Invoker name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Invoker name.
-                     * @param Name Invoker name.
+                     * @param _name Invoker name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Invoker type. It can only be `SCHEDULE` (recurring invokers).
                      * @return Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Invoker type. It can only be `SCHEDULE` (recurring invokers).
-                     * @param Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+                     * @param _type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Remote command ID.
                      * @return CommandId Remote command ID.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 设置Remote command ID.
-                     * @param CommandId Remote command ID.
+                     * @param _commandId Remote command ID.
+                     * 
                      */
                     void SetCommandId(const std::string& _commandId);
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance bound to the trigger. Up to 100 IDs are allowed.
                      * @return InstanceIds ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置ID of the instance bound to the trigger. Up to 100 IDs are allowed.
-                     * @param InstanceIds ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+                     * @param _instanceIds ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取The user who executes the command.
                      * @return Username The user who executes the command.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置The user who executes the command.
-                     * @param Username The user who executes the command.
+                     * @param _username The user who executes the command.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Custom parameters of the command.
                      * @return Parameters Custom parameters of the command.
+                     * 
                      */
                     std::string GetParameters() const;
 
                     /**
                      * 设置Custom parameters of the command.
-                     * @param Parameters Custom parameters of the command.
+                     * @param _parameters Custom parameters of the command.
+                     * 
                      */
                     void SetParameters(const std::string& _parameters);
 
                     /**
                      * 判断参数 Parameters 是否已赋值
                      * @return Parameters 是否已赋值
+                     * 
                      */
                     bool ParametersHasBeenSet() const;
 
                     /**
                      * 获取Settings required for a recurring invoker.
                      * @return ScheduleSettings Settings required for a recurring invoker.
+                     * 
                      */
                     ScheduleSettings GetScheduleSettings() const;
 
                     /**
                      * 设置Settings required for a recurring invoker.
-                     * @param ScheduleSettings Settings required for a recurring invoker.
+                     * @param _scheduleSettings Settings required for a recurring invoker.
+                     * 
                      */
                     void SetScheduleSettings(const ScheduleSettings& _scheduleSettings);
 
                     /**
                      * 判断参数 ScheduleSettings 是否已赋值
                      * @return ScheduleSettings 是否已赋值
+                     * 
                      */
                     bool ScheduleSettingsHasBeenSet() const;
 

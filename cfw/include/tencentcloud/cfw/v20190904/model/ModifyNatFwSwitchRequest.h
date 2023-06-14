@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Status. 0: off; 1: on
                      * @return Enable Status. 0: off; 1: on
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Status. 0: off; 1: on
-                     * @param Enable Status. 0: off; 1: on
+                     * @param _enable Status. 0: off; 1: on
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取List of firewall instance IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
                      * @return CfwInsIdList List of firewall instance IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * 
                      */
                     std::vector<std::string> GetCfwInsIdList() const;
 
                     /**
                      * 设置List of firewall instance IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
-                     * @param CfwInsIdList List of firewall instance IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * @param _cfwInsIdList List of firewall instance IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * 
                      */
                     void SetCfwInsIdList(const std::vector<std::string>& _cfwInsIdList);
 
                     /**
                      * 判断参数 CfwInsIdList 是否已赋值
                      * @return CfwInsIdList 是否已赋值
+                     * 
                      */
                     bool CfwInsIdListHasBeenSet() const;
 
                     /**
                      * 获取List of subnet IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
                      * @return SubnetIdList List of subnet IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * 
                      */
                     std::vector<std::string> GetSubnetIdList() const;
 
                     /**
                      * 设置List of subnet IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
-                     * @param SubnetIdList List of subnet IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * @param _subnetIdList List of subnet IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * 
                      */
                     void SetSubnetIdList(const std::vector<std::string>& _subnetIdList);
 
                     /**
                      * 判断参数 SubnetIdList 是否已赋值
                      * @return SubnetIdList 是否已赋值
+                     * 
                      */
                     bool SubnetIdListHasBeenSet() const;
 
                     /**
                      * 获取List of route table IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
                      * @return RouteTableIdList List of route table IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * 
                      */
                     std::vector<std::string> GetRouteTableIdList() const;
 
                     /**
                      * 设置List of route table IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
-                     * @param RouteTableIdList List of route table IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * @param _routeTableIdList List of route table IDs. Only one of CfwInsIdList, SubnetIdList, and RouteTableIdList can be passed.
+                     * 
                      */
                     void SetRouteTableIdList(const std::vector<std::string>& _routeTableIdList);
 
                     /**
                      * 判断参数 RouteTableIdList 是否已赋值
                      * @return RouteTableIdList 是否已赋值
+                     * 
                      */
                     bool RouteTableIdListHasBeenSet() const;
 

@@ -51,6 +51,7 @@ VPN gateway instance, such as `vpn-ltjahce6`.
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
+                     * 
                      */
                     std::string GetGatewayId() const;
 
@@ -59,52 +60,60 @@ VPN gateway instance, such as `vpn-ltjahce6`.
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
-                     * @param GatewayId Gateway instance ID. Supported types:
+                     * @param _gatewayId Gateway instance ID. Supported types:
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
+                     * 
                      */
                     void SetGatewayId(const std::string& _gatewayId);
 
                     /**
                      * 判断参数 GatewayId 是否已赋值
                      * @return GatewayId 是否已赋值
+                     * 
                      */
                     bool GatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
                      * @return Bandwidth Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
+                     * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
                      * 设置Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
-                     * @param Bandwidth Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
+                     * @param _bandwidth Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
+                     * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取CVM private IP addresses with limited bandwidth.
                      * @return IpAddresses CVM private IP addresses with limited bandwidth.
+                     * 
                      */
                     std::vector<std::string> GetIpAddresses() const;
 
                     /**
                      * 设置CVM private IP addresses with limited bandwidth.
-                     * @param IpAddresses CVM private IP addresses with limited bandwidth.
+                     * @param _ipAddresses CVM private IP addresses with limited bandwidth.
+                     * 
                      */
                     void SetIpAddresses(const std::vector<std::string>& _ipAddresses);
 
                     /**
                      * 判断参数 IpAddresses 是否已赋值
                      * @return IpAddresses 是否已赋值
+                     * 
                      */
                     bool IpAddressesHasBeenSet() const;
 

@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskInfo The queried task information. If the returned value is empty, the task with the entered task ID does not exist. The task result will be returned only if the task status is `2` (succeeded).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskResultInfo GetTaskInfo() const;
 
                     /**
                      * 判断参数 TaskInfo 是否已赋值
                      * @return TaskInfo 是否已赋值
+                     * 
                      */
                     bool TaskInfoHasBeenSet() const;
 

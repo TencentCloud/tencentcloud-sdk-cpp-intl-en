@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Start time offset of a suspected segment in seconds.
                      * @return StartTimeOffset Start time offset of a suspected segment in seconds.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of a suspected segment in seconds.
-                     * @param StartTimeOffset Start time offset of a suspected segment in seconds.
+                     * @param _startTimeOffset Start time offset of a suspected segment in seconds.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取End time offset of a suspected segment in seconds.
                      * @return EndTimeOffset End time offset of a suspected segment in seconds.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time offset of a suspected segment in seconds.
-                     * @param EndTimeOffset End time offset of a suspected segment in seconds.
+                     * @param _endTimeOffset End time offset of a suspected segment in seconds.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取Confidence score for the detected pornographic content
                      * @return Confidence Confidence score for the detected pornographic content
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence score for the detected pornographic content
-                     * @param Confidence Confidence score for the detected pornographic content
+                     * @param _confidence Confidence score for the detected pornographic content
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取Label for the detected pornographic content
                      * @return Label Label for the detected pornographic content
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置Label for the detected pornographic content
-                     * @param Label Label for the detected pornographic content
+                     * @param _label Label for the detected pornographic content
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -127,6 +139,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -135,16 +148,18 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion Processing suggestion for the detected pornographic content. Valid values:
+                     * @param _suggestion Processing suggestion for the detected pornographic content. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -153,56 +168,65 @@ namespace TencentCloud
  and will be deleted after `PicUrlExpireTime`).
                      * @return Url URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
-                     * @param Url URL of a suspected image (which will not be permanently stored
+                     * @param _url URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取This field has been disused. Please use `PicUrlExpireTime`.
                      * @return PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * 
                      */
                     int64_t GetPicUrlExpireTimeStamp() const;
 
                     /**
                      * 设置This field has been disused. Please use `PicUrlExpireTime`.
-                     * @param PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * @param _picUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * 
                      */
                     void SetPicUrlExpireTimeStamp(const int64_t& _picUrlExpireTimeStamp);
 
                     /**
                      * 判断参数 PicUrlExpireTimeStamp 是否已赋值
                      * @return PicUrlExpireTimeStamp 是否已赋值
+                     * 
                      */
                     bool PicUrlExpireTimeStampHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
                      * 设置Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _picUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
 
                     /**
                      * 判断参数 PicUrlExpireTime 是否已赋值
                      * @return PicUrlExpireTime 是否已赋值
+                     * 
                      */
                     bool PicUrlExpireTimeHasBeenSet() const;
 

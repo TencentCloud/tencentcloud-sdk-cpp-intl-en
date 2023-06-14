@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Customer gateway object
                      * @return CustomerGateway Customer gateway object
+                     * 
                      */
                     CustomerGateway GetCustomerGateway() const;
 
                     /**
                      * 判断参数 CustomerGateway 是否已赋值
                      * @return CustomerGateway 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayHasBeenSet() const;
 

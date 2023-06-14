@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of model configurations
                      * @return InstanceTypeConfigSet Array of model configurations
+                     * 
                      */
                     std::vector<InstanceTypeConfig> GetInstanceTypeConfigSet() const;
 
                     /**
                      * 判断参数 InstanceTypeConfigSet 是否已赋值
                      * @return InstanceTypeConfigSet 是否已赋值
+                     * 
                      */
                     bool InstanceTypeConfigSetHasBeenSet() const;
 

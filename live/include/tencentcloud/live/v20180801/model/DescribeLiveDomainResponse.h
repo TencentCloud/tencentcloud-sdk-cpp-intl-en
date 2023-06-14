@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return DomainInfo Domain name information.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     DomainInfo GetDomainInfo() const;
 
                     /**
                      * 判断参数 DomainInfo 是否已赋值
                      * @return DomainInfo 是否已赋值
+                     * 
                      */
                     bool DomainInfoHasBeenSet() const;
 

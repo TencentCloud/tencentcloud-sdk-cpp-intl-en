@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Unique event ID
                      * @return EventId Unique event ID
+                     * 
                      */
                     std::string GetEventId() const;
 
                     /**
                      * 设置Unique event ID
-                     * @param EventId Unique event ID
+                     * @param _eventId Unique event ID
+                     * 
                      */
                     void SetEventId(const std::string& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Event discovery time
                      * @return FoundTime Event discovery time
+                     * 
                      */
                     std::string GetFoundTime() const;
 
                     /**
                      * 设置Event discovery time
-                     * @param FoundTime Event discovery time
+                     * @param _foundTime Event discovery time
+                     * 
                      */
                     void SetFoundTime(const std::string& _foundTime);
 
                     /**
                      * 判断参数 FoundTime 是否已赋值
                      * @return FoundTime 是否已赋值
+                     * 
                      */
                     bool FoundTimeHasBeenSet() const;
 
                     /**
                      * 获取Container ID
                      * @return ContainerId Container ID
+                     * 
                      */
                     std::string GetContainerId() const;
 
                     /**
                      * 设置Container ID
-                     * @param ContainerId Container ID
+                     * @param _containerId Container ID
+                     * 
                      */
                     void SetContainerId(const std::string& _containerId);
 
                     /**
                      * 判断参数 ContainerId 是否已赋值
                      * @return ContainerId 是否已赋值
+                     * 
                      */
                     bool ContainerIdHasBeenSet() const;
 
                     /**
                      * 获取Container name
                      * @return ContainerName Container name
+                     * 
                      */
                     std::string GetContainerName() const;
 
                     /**
                      * 设置Container name
-                     * @param ContainerName Container name
+                     * @param _containerName Container name
+                     * 
                      */
                     void SetContainerName(const std::string& _containerName);
 
                     /**
                      * 判断参数 ContainerName 是否已赋值
                      * @return ContainerName 是否已赋值
+                     * 
                      */
                     bool ContainerNameHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Node name
                      * @return NodeName Node name
+                     * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 设置Node name
-                     * @param NodeName Node name
+                     * @param _nodeName Node name
+                     * 
                      */
                     void SetNodeName(const std::string& _nodeName);
 
                     /**
                      * 判断参数 NodeName 是否已赋值
                      * @return NodeName 是否已赋值
+                     * 
                      */
                     bool NodeNameHasBeenSet() const;
 
                     /**
                      * 获取Pod name
                      * @return PodName Pod name
+                     * 
                      */
                     std::string GetPodName() const;
 
                     /**
                      * 设置Pod name
-                     * @param PodName Pod name
+                     * @param _podName Pod name
+                     * 
                      */
                     void SetPodName(const std::string& _podName);
 
                     /**
                      * 判断参数 PodName 是否已赋值
                      * @return PodName 是否已赋值
+                     * 
                      */
                     bool PodNameHasBeenSet() const;
 
@@ -197,6 +221,7 @@ namespace TencentCloud
                      * @return Status Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -204,15 +229,17 @@ namespace TencentCloud
                      * 设置Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
-                     * @param Status Status. `EVENT_UNDEAL`: Pending.
+                     * @param _status Status. `EVENT_UNDEAL`: Pending.
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -235,6 +262,7 @@ Privileged container startup escape
 Sensitive path mount
 Malicious process startup
 File tampering
+                     * 
                      */
                     std::string GetEventName() const;
 
@@ -248,7 +276,7 @@ Privileged container startup escape
 Sensitive path mount
 Malicious process startup
 File tampering
-                     * @param EventName Event name:
+                     * @param _eventName Event name:
 Host file access escape
 Syscall escape
 Mount namespace escape
@@ -257,12 +285,14 @@ Privileged container startup escape
 Sensitive path mount
 Malicious process startup
 File tampering
+                     * 
                      */
                     void SetEventName(const std::string& _eventName);
 
                     /**
                      * 判断参数 EventName 是否已赋值
                      * @return EventName 是否已赋值
+                     * 
                      */
                     bool EventNameHasBeenSet() const;
 
@@ -281,6 +311,7 @@ File tampering
    `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
    `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `ESCAPE_SYSCALL`: Syscall escape.
+                     * 
                      */
                     std::string GetEventType() const;
 
@@ -292,55 +323,63 @@ File tampering
    `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
    `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `ESCAPE_SYSCALL`: Syscall escape.
-                     * @param EventType Event type
+                     * @param _eventType Event type
    `ESCAPE_HOST_ACESS_FILE`: Host file access escape.
    `ESCAPE_MOUNT_NAMESPACE`: Mount namespace escape.
    `ESCAPE_PRIVILEDGE`: Program privilege escalation escape.
    `ESCAPE_PRIVILEDGE_CONTAINER_START`: Privileged container startup escape.
    `ESCAPE_MOUNT_SENSITIVE_PTAH`: Sensitive path mount.
    `ESCAPE_SYSCALL`: Syscall escape.
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of events
                      * @return EventCount Number of events
+                     * 
                      */
                     int64_t GetEventCount() const;
 
                     /**
                      * 设置Number of events
-                     * @param EventCount Number of events
+                     * @param _eventCount Number of events
+                     * 
                      */
                     void SetEventCount(const int64_t& _eventCount);
 
                     /**
                      * 判断参数 EventCount 是否已赋值
                      * @return EventCount 是否已赋值
+                     * 
                      */
                     bool EventCountHasBeenSet() const;
 
                     /**
                      * 获取Last generation time
                      * @return LatestFoundTime Last generation time
+                     * 
                      */
                     std::string GetLatestFoundTime() const;
 
                     /**
                      * 设置Last generation time
-                     * @param LatestFoundTime Last generation time
+                     * @param _latestFoundTime Last generation time
+                     * 
                      */
                     void SetLatestFoundTime(const std::string& _latestFoundTime);
 
                     /**
                      * 判断参数 LatestFoundTime 是否已赋值
                      * @return LatestFoundTime 是否已赋值
+                     * 
                      */
                     bool LatestFoundTimeHasBeenSet() const;
 
@@ -349,20 +388,23 @@ File tampering
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIP Private IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHostIP() const;
 
                     /**
                      * 设置Private IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HostIP Private IP
+                     * @param _hostIP Private IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHostIP(const std::string& _hostIP);
 
                     /**
                      * 判断参数 HostIP 是否已赋值
                      * @return HostIP 是否已赋值
+                     * 
                      */
                     bool HostIPHasBeenSet() const;
 
@@ -371,20 +413,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClientIP Public IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientIP() const;
 
                     /**
                      * 设置Public IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientIP Public IP
+                     * @param _clientIP Public IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientIP(const std::string& _clientIP);
 
                     /**
                      * 判断参数 ClientIP 是否已赋值
                      * @return ClientIP 是否已赋值
+                     * 
                      */
                     bool ClientIPHasBeenSet() const;
 
@@ -405,6 +450,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContainerNetStatus() const;
 
@@ -417,7 +463,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainerNetStatus Network status
+                     * @param _containerNetStatus Network status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
 `ISOLATING`: 		Isolating.
@@ -425,12 +471,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
 
                     /**
                      * 判断参数 ContainerNetStatus 是否已赋值
                      * @return ContainerNetStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetStatusHasBeenSet() const;
 
@@ -453,6 +501,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 "UNKNOW"              // The reason is unknown.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
@@ -466,7 +515,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 "UNKNOW"              // The reason is unknown.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainerNetSubStatus Sub-status of the container
+                     * @param _containerNetSubStatus Sub-status of the container
 "AGENT_OFFLINE"       // The agent is offline.
 "NODE_DESTROYED"      // The node is terminated.
 "CONTAINER_EXITED"    // The container exited.
@@ -475,12 +524,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 "UNKNOW"              // The reason is unknown.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
 
                     /**
                      * 判断参数 ContainerNetSubStatus 是否已赋值
                      * @return ContainerNetSubStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetSubStatusHasBeenSet() const;
 
@@ -489,20 +540,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainerIsolateOperationSrc Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
                      * 设置Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainerIsolateOperationSrc Container isolation operation source
+                     * @param _containerIsolateOperationSrc Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
 
                     /**
                      * 判断参数 ContainerIsolateOperationSrc 是否已赋值
                      * @return ContainerIsolateOperationSrc 是否已赋值
+                     * 
                      */
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 

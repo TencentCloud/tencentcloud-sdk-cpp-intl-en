@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Person ID
                      * @return PersonId Person ID
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置Person ID
-                     * @param PersonId Person ID
+                     * @param _personId Person ID
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
                     /**
                      * 获取Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
                      * @return FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * 
                      */
                     std::string GetFaceId() const;
 
                     /**
                      * 设置Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
-                     * @param FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * @param _faceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * 
                      */
                     void SetFaceId(const std::string& _faceId);
 
                     /**
                      * 判断参数 FaceId 是否已赋值
                      * @return FaceId 是否已赋值
+                     * 
                      */
                     bool FaceIdHasBeenSet() const;
 
@@ -98,6 +104,7 @@ In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs co
 In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
 
 Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+                     * 
                      */
                     double GetScore() const;
 
@@ -109,19 +116,21 @@ In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs co
 In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
 
 Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
-                     * @param Score Match score of candidate. 
+                     * @param _score Match score of candidate. 
 
 In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
 In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
 In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
 
 Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+                     * 
                      */
                     void SetScore(const double& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -130,20 +139,23 @@ Generally, the score of 80 is suitable for most scenarios. We recommend choosing
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PersonName Person name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPersonName() const;
 
                     /**
                      * 设置Person name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PersonName Person name
+                     * @param _personName Person name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPersonName(const std::string& _personName);
 
                     /**
                      * 判断参数 PersonName 是否已赋值
                      * @return PersonName 是否已赋值
+                     * 
                      */
                     bool PersonNameHasBeenSet() const;
 
@@ -152,20 +164,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Gender Person gender
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetGender() const;
 
                     /**
                      * 设置Person gender
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Gender Person gender
+                     * @param _gender Person gender
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGender(const int64_t& _gender);
 
                     /**
                      * 判断参数 Gender 是否已赋值
                      * @return Gender 是否已赋值
+                     * 
                      */
                     bool GenderHasBeenSet() const;
 
@@ -174,20 +189,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PersonGroupInfos List of groups containing this person and their description fields
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PersonGroupInfo> GetPersonGroupInfos() const;
 
                     /**
                      * 设置List of groups containing this person and their description fields
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PersonGroupInfos List of groups containing this person and their description fields
+                     * @param _personGroupInfos List of groups containing this person and their description fields
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPersonGroupInfos(const std::vector<PersonGroupInfo>& _personGroupInfos);
 
                     /**
                      * 判断参数 PersonGroupInfos 是否已赋值
                      * @return PersonGroupInfos 是否已赋值
+                     * 
                      */
                     bool PersonGroupInfosHasBeenSet() const;
 

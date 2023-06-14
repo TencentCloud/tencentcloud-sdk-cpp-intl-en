@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Pod name
                      * @return PodName Pod name
+                     * 
                      */
                     std::string GetPodName() const;
 
                     /**
                      * 设置Pod name
-                     * @param PodName Pod name
+                     * @param _podName Pod name
+                     * 
                      */
                     void SetPodName(const std::string& _podName);
 
                     /**
                      * 判断参数 PodName 是否已赋值
                      * @return PodName 是否已赋值
+                     * 
                      */
                     bool PodNameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Namespace Pod space
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Pod space
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Namespace Pod space
+                     * @param _namespace Pod space
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Labels Pod label
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabels() const;
 
                     /**
                      * 设置Pod label
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Labels Pod label
+                     * @param _labels Pod label
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabels(const std::string& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WorkloadKind Pod type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetWorkloadKind() const;
 
                     /**
                      * 设置Pod type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param WorkloadKind Pod type
+                     * @param _workloadKind Pod type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWorkloadKind(const std::string& _workloadKind);
 
                     /**
                      * 判断参数 WorkloadKind 是否已赋值
                      * @return WorkloadKind 是否已赋值
+                     * 
                      */
                     bool WorkloadKindHasBeenSet() const;
 

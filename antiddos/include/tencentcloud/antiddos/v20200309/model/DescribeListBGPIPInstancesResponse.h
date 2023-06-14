@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of lists
                      * @return Total Total number of lists
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取List of Anti-DDoS Advanced instances
                      * @return InstanceList List of Anti-DDoS Advanced instances
+                     * 
                      */
                     std::vector<BGPIPInstance> GetInstanceList() const;
 
                     /**
                      * 判断参数 InstanceList 是否已赋值
                      * @return InstanceList 是否已赋值
+                     * 
                      */
                     bool InstanceListHasBeenSet() const;
 

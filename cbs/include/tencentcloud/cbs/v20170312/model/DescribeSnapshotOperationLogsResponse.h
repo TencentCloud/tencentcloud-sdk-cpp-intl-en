@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of snapshot operation logs.
                      * @return SnapshotOperationLogSet List of snapshot operation logs.
+                     * 
                      */
                     std::vector<SnapshotOperationLog> GetSnapshotOperationLogSet() const;
 
                     /**
                      * 判断参数 SnapshotOperationLogSet 是否已赋值
                      * @return SnapshotOperationLogSet 是否已赋值
+                     * 
                      */
                     bool SnapshotOperationLogSetHasBeenSet() const;
 

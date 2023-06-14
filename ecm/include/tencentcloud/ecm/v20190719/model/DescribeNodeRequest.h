@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Filter. InstanceFamily: instance family.
                      * @return Filters Filter. InstanceFamily: instance family.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter. InstanceFamily: instance family.
-                     * @param Filters Filter. InstanceFamily: instance family.
+                     * @param _filters Filter. InstanceFamily: instance family.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

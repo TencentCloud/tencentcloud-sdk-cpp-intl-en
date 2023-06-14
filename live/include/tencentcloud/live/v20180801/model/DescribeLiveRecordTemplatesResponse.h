@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Recording template information list.
                      * @return Templates Recording template information list.
+                     * 
                      */
                     std::vector<RecordTemplateInfo> GetTemplates() const;
 
                     /**
                      * 判断参数 Templates 是否已赋值
                      * @return Templates 是否已赋值
+                     * 
                      */
                     bool TemplatesHasBeenSet() const;
 

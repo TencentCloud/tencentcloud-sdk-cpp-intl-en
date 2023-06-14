@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Peak CPU
                      * @return PeakCpuNum Peak CPU
+                     * 
                      */
                     int64_t GetPeakCpuNum() const;
 
                     /**
                      * 设置Peak CPU
-                     * @param PeakCpuNum Peak CPU
+                     * @param _peakCpuNum Peak CPU
+                     * 
                      */
                     void SetPeakCpuNum(const int64_t& _peakCpuNum);
 
                     /**
                      * 判断参数 PeakCpuNum 是否已赋值
                      * @return PeakCpuNum 是否已赋值
+                     * 
                      */
                     bool PeakCpuNumHasBeenSet() const;
 
                     /**
                      * 获取Peak memory
                      * @return PeakMemoryNum Peak memory
+                     * 
                      */
                     int64_t GetPeakMemoryNum() const;
 
                     /**
                      * 设置Peak memory
-                     * @param PeakMemoryNum Peak memory
+                     * @param _peakMemoryNum Peak memory
+                     * 
                      */
                     void SetPeakMemoryNum(const int64_t& _peakMemoryNum);
 
                     /**
                      * 判断参数 PeakMemoryNum 是否已赋值
                      * @return PeakMemoryNum 是否已赋值
+                     * 
                      */
                     bool PeakMemoryNumHasBeenSet() const;
 
                     /**
                      * 获取Peak disk
                      * @return PeakStorageNum Peak disk
+                     * 
                      */
                     int64_t GetPeakStorageNum() const;
 
                     /**
                      * 设置Peak disk
-                     * @param PeakStorageNum Peak disk
+                     * @param _peakStorageNum Peak disk
+                     * 
                      */
                     void SetPeakStorageNum(const int64_t& _peakStorageNum);
 
                     /**
                      * 判断参数 PeakStorageNum 是否已赋值
                      * @return PeakStorageNum 是否已赋值
+                     * 
                      */
                     bool PeakStorageNumHasBeenSet() const;
 
                     /**
                      * 获取Recording time
                      * @return RecordTime Recording time
+                     * 
                      */
                     std::string GetRecordTime() const;
 
                     /**
                      * 设置Recording time
-                     * @param RecordTime Recording time
+                     * @param _recordTime Recording time
+                     * 
                      */
                     void SetRecordTime(const std::string& _recordTime);
 
                     /**
                      * 判断参数 RecordTime 是否已赋值
                      * @return RecordTime 是否已赋值
+                     * 
                      */
                     bool RecordTimeHasBeenSet() const;
 

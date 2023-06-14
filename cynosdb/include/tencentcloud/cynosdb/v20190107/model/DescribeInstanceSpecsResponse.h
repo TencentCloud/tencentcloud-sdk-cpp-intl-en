@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Specification information
                      * @return InstanceSpecSet Specification information
+                     * 
                      */
                     std::vector<InstanceSpec> GetInstanceSpecSet() const;
 
                     /**
                      * 判断参数 InstanceSpecSet 是否已赋值
                      * @return InstanceSpecSet 是否已赋值
+                     * 
                      */
                     bool InstanceSpecSetHasBeenSet() const;
 

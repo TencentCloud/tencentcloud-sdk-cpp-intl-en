@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
                      * @return ErrorPageId Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+                     * 
                      */
                     std::string GetErrorPageId() const;
 
                     /**
                      * 设置Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
-                     * @param ErrorPageId Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+                     * @param _errorPageId Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+                     * 
                      */
                     void SetErrorPageId(const std::string& _errorPageId);
 
                     /**
                      * 判断参数 ErrorPageId 是否已赋值
                      * @return ErrorPageId 是否已赋值
+                     * 
                      */
                     bool ErrorPageIdHasBeenSet() const;
 

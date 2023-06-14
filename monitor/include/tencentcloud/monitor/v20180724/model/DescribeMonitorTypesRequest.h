@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Module name, which is fixed at "monitor"
                      * @return Module Module name, which is fixed at "monitor"
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Module name, which is fixed at "monitor"
-                     * @param Module Module name, which is fixed at "monitor"
+                     * @param _module Module name, which is fixed at "monitor"
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 

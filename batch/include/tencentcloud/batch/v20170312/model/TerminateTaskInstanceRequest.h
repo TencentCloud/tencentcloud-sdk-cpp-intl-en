@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Job ID
                      * @return JobId Job ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Job ID
-                     * @param JobId Job ID
+                     * @param _jobId Job ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Task name
                      * @return TaskName Task name
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Task name
-                     * @param TaskName Task name
+                     * @param _taskName Task name
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 
                     /**
                      * 获取Task instance index
                      * @return TaskInstanceIndex Task instance index
+                     * 
                      */
                     int64_t GetTaskInstanceIndex() const;
 
                     /**
                      * 设置Task instance index
-                     * @param TaskInstanceIndex Task instance index
+                     * @param _taskInstanceIndex Task instance index
+                     * 
                      */
                     void SetTaskInstanceIndex(const int64_t& _taskInstanceIndex);
 
                     /**
                      * 判断参数 TaskInstanceIndex 是否已赋值
                      * @return TaskInstanceIndex 是否已赋值
+                     * 
                      */
                     bool TaskInstanceIndexHasBeenSet() const;
 

@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Slow log duration
                      * @return Duration Slow log duration
+                     * 
                      */
                     int64_t GetDuration() const;
 
                     /**
                      * 设置Slow log duration
-                     * @param Duration Slow log duration
+                     * @param _duration Slow log duration
+                     * 
                      */
                     void SetDuration(const int64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取Client address
                      * @return Client Client address
+                     * 
                      */
                     std::string GetClient() const;
 
                     /**
                      * 设置Client address
-                     * @param Client Client address
+                     * @param _client Client address
+                     * 
                      */
                     void SetClient(const std::string& _client);
 
                     /**
                      * 判断参数 Client 是否已赋值
                      * @return Client 是否已赋值
+                     * 
                      */
                     bool ClientHasBeenSet() const;
 
                     /**
                      * 获取Command
                      * @return Command Command
+                     * 
                      */
                     std::string GetCommand() const;
 
                     /**
                      * 设置Command
-                     * @param Command Command
+                     * @param _command Command
+                     * 
                      */
                     void SetCommand(const std::string& _command);
 
                     /**
                      * 判断参数 Command 是否已赋值
                      * @return Command 是否已赋值
+                     * 
                      */
                     bool CommandHasBeenSet() const;
 
                     /**
                      * 获取Command line details
                      * @return CommandLine Command line details
+                     * 
                      */
                     std::string GetCommandLine() const;
 
                     /**
                      * 设置Command line details
-                     * @param CommandLine Command line details
+                     * @param _commandLine Command line details
+                     * 
                      */
                     void SetCommandLine(const std::string& _commandLine);
 
                     /**
                      * 判断参数 CommandLine 是否已赋值
                      * @return CommandLine 是否已赋值
+                     * 
                      */
                     bool CommandLineHasBeenSet() const;
 
                     /**
                      * 获取Execution duration
                      * @return ExecuteTime Execution duration
+                     * 
                      */
                     std::string GetExecuteTime() const;
 
                     /**
                      * 设置Execution duration
-                     * @param ExecuteTime Execution duration
+                     * @param _executeTime Execution duration
+                     * 
                      */
                     void SetExecuteTime(const std::string& _executeTime);
 
                     /**
                      * 判断参数 ExecuteTime 是否已赋值
                      * @return ExecuteTime 是否已赋值
+                     * 
                      */
                     bool ExecuteTimeHasBeenSet() const;
 
                     /**
                      * 获取Node ID
                      * @return Node Node ID
+                     * 
                      */
                     std::string GetNode() const;
 
                     /**
                      * 设置Node ID
-                     * @param Node Node ID
+                     * @param _node Node ID
+                     * 
                      */
                     void SetNode(const std::string& _node);
 
                     /**
                      * 判断参数 Node 是否已赋值
                      * @return Node 是否已赋值
+                     * 
                      */
                     bool NodeHasBeenSet() const;
 

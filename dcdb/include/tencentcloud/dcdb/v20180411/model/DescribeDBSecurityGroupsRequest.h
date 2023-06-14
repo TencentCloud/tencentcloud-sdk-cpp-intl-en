@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Database engine name. Valid value: `dcdb`.
                      * @return Product Database engine name. Valid value: `dcdb`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Database engine name. Valid value: `dcdb`.
-                     * @param Product Database engine name. Valid value: `dcdb`.
+                     * @param _product Database engine name. Valid value: `dcdb`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

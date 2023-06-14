@@ -55,6 +55,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 on: enable
 off: disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 on: enable
 off: disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Cache configuration switch
+                     * @param _switch Cache configuration switch
 on: enable
 off: disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -83,6 +86,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetCacheTime() const;
 
@@ -90,15 +94,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Cache expiration time settings
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CacheTime Cache expiration time settings
+                     * @param _cacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
 
                     /**
                      * 判断参数 CacheTime 是否已赋值
                      * @return CacheTime 是否已赋值
+                     * 
                      */
                     bool CacheTimeHasBeenSet() const;
 
@@ -113,6 +119,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 This is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCompareMaxAge() const;
 
@@ -122,17 +129,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 This is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
+                     * @param _compareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
 `on`: Enable
 `off`: Disable
 This is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCompareMaxAge(const std::string& _compareMaxAge);
 
                     /**
                      * 判断参数 CompareMaxAge 是否已赋值
                      * @return CompareMaxAge 是否已赋值
+                     * 
                      */
                     bool CompareMaxAgeHasBeenSet() const;
 
@@ -147,6 +156,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIgnoreCacheControl() const;
 
@@ -156,17 +166,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param IgnoreCacheControl Force cache
+                     * @param _ignoreCacheControl Force cache
 `on`: Enable
 `off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
 
                     /**
                      * 判断参数 IgnoreCacheControl 是否已赋值
                      * @return IgnoreCacheControl 是否已赋值
+                     * 
                      */
                     bool IgnoreCacheControlHasBeenSet() const;
 
@@ -181,6 +193,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIgnoreSetCookie() const;
 
@@ -190,17 +203,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+                     * @param _ignoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
 `on`: Ignore; do not cache the header and body.
 `off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIgnoreSetCookie(const std::string& _ignoreSetCookie);
 
                     /**
                      * 判断参数 IgnoreSetCookie 是否已赋值
                      * @return IgnoreSetCookie 是否已赋值
+                     * 
                      */
                     bool IgnoreSetCookieHasBeenSet() const;
 

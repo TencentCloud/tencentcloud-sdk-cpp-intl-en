@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Application usage statistics
                      * @return AppStatistics Application usage statistics
+                     * 
                      */
                     std::vector<AppStatisticsItem> GetAppStatistics() const;
 
                     /**
                      * 设置Application usage statistics
-                     * @param AppStatistics Application usage statistics
+                     * @param _appStatistics Application usage statistics
+                     * 
                      */
                     void SetAppStatistics(const std::vector<AppStatisticsItem>& _appStatistics);
 
                     /**
                      * 判断参数 AppStatistics 是否已赋值
                      * @return AppStatistics 是否已赋值
+                     * 
                      */
                     bool AppStatisticsHasBeenSet() const;
 

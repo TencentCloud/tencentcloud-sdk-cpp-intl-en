@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of a `VPC` instance, such as `vpc-12345678`.
                      * @return VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of a `VPC` instance, such as `vpc-12345678`.
-                     * @param VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+                     * @param _vpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of a subnet instance, such as subnet-12345678.
                      * @return SubnetId The ID of a subnet instance, such as subnet-12345678.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置The ID of a subnet instance, such as subnet-12345678.
-                     * @param SubnetId The ID of a subnet instance, such as subnet-12345678.
+                     * @param _subnetId The ID of a subnet instance, such as subnet-12345678.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The name of a network detection instance. The maximum length is 60 characters.
                      * @return NetDetectName The name of a network detection instance. The maximum length is 60 characters.
+                     * 
                      */
                     std::string GetNetDetectName() const;
 
                     /**
                      * 设置The name of a network detection instance. The maximum length is 60 characters.
-                     * @param NetDetectName The name of a network detection instance. The maximum length is 60 characters.
+                     * @param _netDetectName The name of a network detection instance. The maximum length is 60 characters.
+                     * 
                      */
                     void SetNetDetectName(const std::string& _netDetectName);
 
                     /**
                      * 判断参数 NetDetectName 是否已赋值
                      * @return NetDetectName 是否已赋值
+                     * 
                      */
                     bool NetDetectNameHasBeenSet() const;
 
                     /**
                      * 获取The array of detection destination IPv4 addresses, which contains at most two IP addresses.
                      * @return DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+                     * 
                      */
                     std::vector<std::string> GetDetectDestinationIp() const;
 
                     /**
                      * 设置The array of detection destination IPv4 addresses, which contains at most two IP addresses.
-                     * @param DetectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+                     * @param _detectDestinationIp The array of detection destination IPv4 addresses, which contains at most two IP addresses.
+                     * 
                      */
                     void SetDetectDestinationIp(const std::vector<std::string>& _detectDestinationIp);
 
                     /**
                      * 判断参数 DetectDestinationIp 是否已赋值
                      * @return DetectDestinationIp 是否已赋值
+                     * 
                      */
                     bool DetectDestinationIpHasBeenSet() const;
 
@@ -129,6 +141,7 @@ namespace TencentCloud
 `NAT`: NAT gateway;
 `NORMAL_CVM`: normal CVM;
 `CCN`: CCN gateway.
+                     * 
                      */
                     std::string GetNextHopType() const;
 
@@ -140,19 +153,21 @@ namespace TencentCloud
 `NAT`: NAT gateway;
 `NORMAL_CVM`: normal CVM;
 `CCN`: CCN gateway.
-                     * @param NextHopType Type of the next hop. Valid values:
+                     * @param _nextHopType Type of the next hop. Valid values:
 `VPN`: VPN gateway;
 `DIRECTCONNECT`: direct connect gateway;
 `PEERCONNECTION`: peering connection;
 `NAT`: NAT gateway;
 `NORMAL_CVM`: normal CVM;
 `CCN`: CCN gateway.
+                     * 
                      */
                     void SetNextHopType(const std::string& _nextHopType);
 
                     /**
                      * 判断参数 NextHopType 是否已赋值
                      * @return NextHopType 是否已赋值
+                     * 
                      */
                     bool NextHopTypeHasBeenSet() const;
 
@@ -171,6 +186,7 @@ If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering 
 If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
 If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
 If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+                     * 
                      */
                     std::string GetNextHopDestination() const;
 
@@ -182,37 +198,42 @@ If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering 
 If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
 If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
 If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
-                     * @param NextHopDestination Next-hop destination gateway. Its value is determined by `NextHopType`.
+                     * @param _nextHopDestination Next-hop destination gateway. Its value is determined by `NextHopType`.
 If `NextHopType` is set to `VPN`, the parameter value is the VPN gateway ID, such as `vpngw-12345678`.
 If `NextHopType` is set to `DIRECTCONNECT`, the parameter value is the direct connect gateway ID, such as `dcg-12345678`.
 If `NextHopType` is set to `PEERCONNECTION`, the parameter value is the peering connection ID, such as `pcx-12345678`.
 If `NextHopType` is set to `NAT`, the parameter value is the NAT gateway ID, such as `nat-12345678`.
 If `NextHopType` is set to `NORMAL_CVM`, the parameter value is the IPv4 address of the CVM instance, such as `10.0.0.12`.
 If `NextHopType` is set to `CCN`, the parameter value is the CCN ID, such as `ccn-12345678`.
+                     * 
                      */
                     void SetNextHopDestination(const std::string& _nextHopDestination);
 
                     /**
                      * 判断参数 NextHopDestination 是否已赋值
                      * @return NextHopDestination 是否已赋值
+                     * 
                      */
                     bool NextHopDestinationHasBeenSet() const;
 
                     /**
                      * 获取Network detection description.
                      * @return NetDetectDescription Network detection description.
+                     * 
                      */
                     std::string GetNetDetectDescription() const;
 
                     /**
                      * 设置Network detection description.
-                     * @param NetDetectDescription Network detection description.
+                     * @param _netDetectDescription Network detection description.
+                     * 
                      */
                     void SetNetDetectDescription(const std::string& _netDetectDescription);
 
                     /**
                      * 判断参数 NetDetectDescription 是否已赋值
                      * @return NetDetectDescription 是否已赋值
+                     * 
                      */
                     bool NetDetectDescriptionHasBeenSet() const;
 

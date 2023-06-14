@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to pass through SCTE-35 information. Valid values: NO_PASSTHROUGH/PASSTHROUGH. Default value: NO_PASSTHROUGH.
                      * @return Behavior Whether to pass through SCTE-35 information. Valid values: NO_PASSTHROUGH/PASSTHROUGH. Default value: NO_PASSTHROUGH.
+                     * 
                      */
                     std::string GetBehavior() const;
 
                     /**
                      * 设置Whether to pass through SCTE-35 information. Valid values: NO_PASSTHROUGH/PASSTHROUGH. Default value: NO_PASSTHROUGH.
-                     * @param Behavior Whether to pass through SCTE-35 information. Valid values: NO_PASSTHROUGH/PASSTHROUGH. Default value: NO_PASSTHROUGH.
+                     * @param _behavior Whether to pass through SCTE-35 information. Valid values: NO_PASSTHROUGH/PASSTHROUGH. Default value: NO_PASSTHROUGH.
+                     * 
                      */
                     void SetBehavior(const std::string& _behavior);
 
                     /**
                      * 判断参数 Behavior 是否已赋值
                      * @return Behavior 是否已赋值
+                     * 
                      */
                     bool BehaviorHasBeenSet() const;
 

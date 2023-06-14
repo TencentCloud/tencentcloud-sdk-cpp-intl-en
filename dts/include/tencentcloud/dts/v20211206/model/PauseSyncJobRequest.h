@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Sync task ID
                      * @return JobId Sync task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Sync task ID
-                     * @param JobId Sync task ID
+                     * @param _jobId Sync task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 

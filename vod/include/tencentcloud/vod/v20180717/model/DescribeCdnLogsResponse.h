@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return TotalCount Total number of log download links
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OverseaCdnLogs Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CdnLogInfo> GetOverseaCdnLogs() const;
 
                     /**
                      * 判断参数 OverseaCdnLogs 是否已赋值
                      * @return OverseaCdnLogs 是否已赋值
+                     * 
                      */
                     bool OverseaCdnLogsHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DomesticCdnLogs Log download list for CDN nodes in Mainland China.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CdnLogInfo> GetDomesticCdnLogs() const;
 
                     /**
                      * 判断参数 DomesticCdnLogs 是否已赋值
                      * @return DomesticCdnLogs 是否已赋值
+                     * 
                      */
                     bool DomesticCdnLogsHasBeenSet() const;
 

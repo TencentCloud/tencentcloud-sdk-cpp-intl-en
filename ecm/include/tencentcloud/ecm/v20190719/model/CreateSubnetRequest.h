@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取ID of the VPC instance to be manipulated, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
                      * @return VpcId ID of the VPC instance to be manipulated, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置ID of the VPC instance to be manipulated, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
-                     * @param VpcId ID of the VPC instance to be manipulated, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
+                     * @param _vpcId ID of the VPC instance to be manipulated, which can be obtained from the `VpcId` field in the returned value of the `DescribeVpcs` API.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet name, which can contain up to 60 bytes.
                      * @return SubnetName Subnet name, which can contain up to 60 bytes.
+                     * 
                      */
                     std::string GetSubnetName() const;
 
                     /**
                      * 设置Subnet name, which can contain up to 60 bytes.
-                     * @param SubnetName Subnet name, which can contain up to 60 bytes.
+                     * @param _subnetName Subnet name, which can contain up to 60 bytes.
+                     * 
                      */
                     void SetSubnetName(const std::string& _subnetName);
 
                     /**
                      * 判断参数 SubnetName 是否已赋值
                      * @return SubnetName 是否已赋值
+                     * 
                      */
                     bool SubnetNameHasBeenSet() const;
 
                     /**
                      * 获取Subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
                      * @return CidrBlock Subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置Subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
-                     * @param CidrBlock Subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+                     * @param _cidrBlock Subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取AZ ID of the subnet. You can select different AZs for different subnets for cross-AZ disaster recovery.
                      * @return Zone AZ ID of the subnet. You can select different AZs for different subnets for cross-AZ disaster recovery.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ ID of the subnet. You can select different AZs for different subnets for cross-AZ disaster recovery.
-                     * @param Zone AZ ID of the subnet. You can select different AZs for different subnets for cross-AZ disaster recovery.
+                     * @param _zone AZ ID of the subnet. You can select different AZs for different subnets for cross-AZ disaster recovery.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

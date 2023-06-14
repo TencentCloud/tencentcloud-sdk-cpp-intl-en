@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ApplicationNumNeedToStop Number of applications to stop
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetApplicationNumNeedToStop() const;
 
                     /**
                      * 设置Number of applications to stop
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ApplicationNumNeedToStop Number of applications to stop
+                     * @param _applicationNumNeedToStop Number of applications to stop
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationNumNeedToStop(const int64_t& _applicationNumNeedToStop);
 
                     /**
                      * 判断参数 ApplicationNumNeedToStop 是否已赋值
                      * @return ApplicationNumNeedToStop 是否已赋值
+                     * 
                      */
                     bool ApplicationNumNeedToStopHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StoppedApplicationNum Number of stopped applications
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStoppedApplicationNum() const;
 
                     /**
                      * 设置Number of stopped applications
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StoppedApplicationNum Number of stopped applications
+                     * @param _stoppedApplicationNum Number of stopped applications
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStoppedApplicationNum(const int64_t& _stoppedApplicationNum);
 
                     /**
                      * 判断参数 StoppedApplicationNum 是否已赋值
                      * @return StoppedApplicationNum 是否已赋值
+                     * 
                      */
                     bool StoppedApplicationNumHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StopFailedApplicationNum Number of applications failed to be stopped
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStopFailedApplicationNum() const;
 
                     /**
                      * 设置Number of applications failed to be stopped
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StopFailedApplicationNum Number of applications failed to be stopped
+                     * @param _stopFailedApplicationNum Number of applications failed to be stopped
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStopFailedApplicationNum(const int64_t& _stopFailedApplicationNum);
 
                     /**
                      * 判断参数 StopFailedApplicationNum 是否已赋值
                      * @return StopFailedApplicationNum 是否已赋值
+                     * 
                      */
                     bool StopFailedApplicationNumHasBeenSet() const;
 

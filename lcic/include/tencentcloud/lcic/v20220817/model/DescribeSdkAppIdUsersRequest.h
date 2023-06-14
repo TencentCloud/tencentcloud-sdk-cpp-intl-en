@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The page to return records from. The default value is 1.
                      * @return Page The page to return records from. The default value is 1.
+                     * 
                      */
                     int64_t GetPage() const;
 
                     /**
                      * 设置The page to return records from. The default value is 1.
-                     * @param Page The page to return records from. The default value is 1.
+                     * @param _page The page to return records from. The default value is 1.
+                     * 
                      */
                     void SetPage(const int64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records to return per page. The default value is 20.
                      * @return Limit The maximum number of records to return per page. The default value is 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of records to return per page. The default value is 20.
-                     * @param Limit The maximum number of records to return per page. The default value is 20.
+                     * @param _limit The maximum number of records to return per page. The default value is 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

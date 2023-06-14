@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Operation type. Valid values: add, delete, reset.
                      * @return Type Operation type. Valid values: add, delete, reset.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Operation type. Valid values: add, delete, reset.
-                     * @param Type Operation type. Valid values: add, delete, reset.
+                     * @param _type Operation type. Valid values: add, delete, reset.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Tag. Length limit: 128 characters.
                      * @return Tags Tag. Length limit: 128 characters.
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Tag. Length limit: 128 characters.
-                     * @param Tags Tag. Length limit: 128 characters.
+                     * @param _tags Tag. Length limit: 128 characters.
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Force redirect configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Force redirect configuration switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Force redirect configuration switch
+                     * @param _switch Force redirect configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 301
 302
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetRedirectStatusCode() const;
 
@@ -89,16 +93,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 301
 302
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RedirectStatusCode Redirection status code
+                     * @param _redirectStatusCode Redirection status code
 301
 302
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRedirectStatusCode(const int64_t& _redirectStatusCode);
 
                     /**
                      * 判断参数 RedirectStatusCode 是否已赋值
                      * @return RedirectStatusCode 是否已赋值
+                     * 
                      */
                     bool RedirectStatusCodeHasBeenSet() const;
 

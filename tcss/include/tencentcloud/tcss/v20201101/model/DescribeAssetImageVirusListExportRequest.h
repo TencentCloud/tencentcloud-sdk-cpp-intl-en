@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Fields supported in the list
                      * @return ExportField Fields supported in the list
+                     * 
                      */
                     std::vector<std::string> GetExportField() const;
 
                     /**
                      * 设置Fields supported in the list
-                     * @param ExportField Fields supported in the list
+                     * @param _exportField Fields supported in the list
+                     * 
                      */
                     void SetExportField(const std::vector<std::string>& _exportField);
 
                     /**
                      * 判断参数 ExportField 是否已赋值
                      * @return ExportField 是否已赋值
+                     * 
                      */
                     bool ExportFieldHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return Filters Filter
 <li>Name- String - Required: No - Image name</li>
 <li>RiskLevel - String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
@@ -93,15 +100,17 @@ namespace TencentCloud
                      * 设置Filter
 <li>Name- String - Required: No - Image name</li>
 <li>RiskLevel - String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>Name- String - Required: No - Image name</li>
 <li>RiskLevel - String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

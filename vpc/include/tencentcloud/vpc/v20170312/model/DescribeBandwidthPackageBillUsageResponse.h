@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Current billable usage.
                      * @return BandwidthPackageBillBandwidthSet Current billable usage.
+                     * 
                      */
                     std::vector<BandwidthPackageBillBandwidth> GetBandwidthPackageBillBandwidthSet() const;
 
                     /**
                      * 判断参数 BandwidthPackageBillBandwidthSet 是否已赋值
                      * @return BandwidthPackageBillBandwidthSet 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageBillBandwidthSetHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable managed rules. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,51 +61,59 @@ namespace TencentCloud
                      * 设置Whether to enable managed rules. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable managed rules. Values:
+                     * @param _switch Whether to enable managed rules. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取IDs of the rules to be disabled.
                      * @return BlockRuleIDs IDs of the rules to be disabled.
+                     * 
                      */
                     std::vector<int64_t> GetBlockRuleIDs() const;
 
                     /**
                      * 设置IDs of the rules to be disabled.
-                     * @param BlockRuleIDs IDs of the rules to be disabled.
+                     * @param _blockRuleIDs IDs of the rules to be disabled.
+                     * 
                      */
                     void SetBlockRuleIDs(const std::vector<int64_t>& _blockRuleIDs);
 
                     /**
                      * 判断参数 BlockRuleIDs 是否已赋值
                      * @return BlockRuleIDs 是否已赋值
+                     * 
                      */
                     bool BlockRuleIDsHasBeenSet() const;
 
                     /**
                      * 获取IDs of the rules to be executed in Observe mode.
                      * @return ObserveRuleIDs IDs of the rules to be executed in Observe mode.
+                     * 
                      */
                     std::vector<int64_t> GetObserveRuleIDs() const;
 
                     /**
                      * 设置IDs of the rules to be executed in Observe mode.
-                     * @param ObserveRuleIDs IDs of the rules to be executed in Observe mode.
+                     * @param _observeRuleIDs IDs of the rules to be executed in Observe mode.
+                     * 
                      */
                     void SetObserveRuleIDs(const std::vector<int64_t>& _observeRuleIDs);
 
                     /**
                      * 判断参数 ObserveRuleIDs 是否已赋值
                      * @return ObserveRuleIDs 是否已赋值
+                     * 
                      */
                     bool ObserveRuleIDsHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取UV list
                      * @return ProjectUvSet UV list
+                     * 
                      */
                     std::vector<RumUvInfo> GetProjectUvSet() const;
 
                     /**
                      * 判断参数 ProjectUvSet 是否已赋值
                      * @return ProjectUvSet 是否已赋值
+                     * 
                      */
                     bool ProjectUvSetHasBeenSet() const;
 

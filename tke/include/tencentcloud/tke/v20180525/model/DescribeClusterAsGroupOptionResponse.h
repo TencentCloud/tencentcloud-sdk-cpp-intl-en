@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid value was found.
                      * @return ClusterAsGroupOption Cluster auto scaling attributes
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     ClusterAsGroupOption GetClusterAsGroupOption() const;
 
                     /**
                      * 判断参数 ClusterAsGroupOption 是否已赋值
                      * @return ClusterAsGroupOption 是否已赋值
+                     * 
                      */
                     bool ClusterAsGroupOptionHasBeenSet() const;
 

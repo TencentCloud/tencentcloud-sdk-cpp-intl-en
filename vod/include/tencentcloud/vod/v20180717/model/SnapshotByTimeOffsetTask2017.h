@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Screencapturing task ID.
                      * @return TaskId Screencapturing task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Screencapturing task ID.
-                     * @param TaskId Screencapturing task ID.
+                     * @param _taskId Screencapturing task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Screenshot file ID.
                      * @return FileId Screenshot file ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Screenshot file ID.
-                     * @param FileId Screenshot file ID.
+                     * @param _fileId Screenshot file ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * @return Definition screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param Definition screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition screenshot specification. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Result information of screencapturing.
                      * @return SnapshotInfoSet Result information of screencapturing.
+                     * 
                      */
                     std::vector<SnapshotByTimeOffset2017> GetSnapshotInfoSet() const;
 
                     /**
                      * 设置Result information of screencapturing.
-                     * @param SnapshotInfoSet Result information of screencapturing.
+                     * @param _snapshotInfoSet Result information of screencapturing.
+                     * 
                      */
                     void SetSnapshotInfoSet(const std::vector<SnapshotByTimeOffset2017>& _snapshotInfoSet);
 
                     /**
                      * 判断参数 SnapshotInfoSet 是否已赋值
                      * @return SnapshotInfoSet 是否已赋值
+                     * 
                      */
                     bool SnapshotInfoSetHasBeenSet() const;
 

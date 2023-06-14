@@ -51,6 +51,7 @@ namespace TencentCloud
 <li>NOTIFY_AND_AUTO_RENEW: notifies of expiration and auto-renews</li>
 <li>NOTIFY_AND_MANUAL_RENEW: notifies of expiration but does not auto-renew</li>
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW: does not notify of expiration or auto-renew</li>
+                     * 
                      */
                     std::string GetRenewFlag() const;
 
@@ -59,34 +60,39 @@ namespace TencentCloud
 <li>NOTIFY_AND_AUTO_RENEW: notifies of expiration and auto-renews</li>
 <li>NOTIFY_AND_MANUAL_RENEW: notifies of expiration but does not auto-renew</li>
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW: does not notify of expiration or auto-renew</li>
-                     * @param RenewFlag Auto-renewal flag. Valid values:
+                     * @param _renewFlag Auto-renewal flag. Valid values:
 <li>NOTIFY_AND_AUTO_RENEW: notifies of expiration and auto-renews</li>
 <li>NOTIFY_AND_MANUAL_RENEW: notifies of expiration but does not auto-renew</li>
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW: does not notify of expiration or auto-renew</li>
+                     * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Unique server ID, corresponding to `uuid` for CVM or `instanceId` for BM.
                      * @return Quuid Unique server ID, corresponding to `uuid` for CVM or `instanceId` for BM.
+                     * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Unique server ID, corresponding to `uuid` for CVM or `instanceId` for BM.
-                     * @param Quuid Unique server ID, corresponding to `uuid` for CVM or `instanceId` for BM.
+                     * @param _quuid Unique server ID, corresponding to `uuid` for CVM or `instanceId` for BM.
+                     * 
                      */
                     void SetQuuid(const std::string& _quuid);
 
                     /**
                      * 判断参数 Quuid 是否已赋值
                      * @return Quuid 是否已赋值
+                     * 
                      */
                     bool QuuidHasBeenSet() const;
 

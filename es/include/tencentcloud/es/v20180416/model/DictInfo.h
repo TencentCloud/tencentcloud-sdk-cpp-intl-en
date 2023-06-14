@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Dictionary key value
                      * @return Key Dictionary key value
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Dictionary key value
-                     * @param Key Dictionary key value
+                     * @param _key Dictionary key value
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Dictionary name
                      * @return Name Dictionary name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Dictionary name
-                     * @param Name Dictionary name
+                     * @param _name Dictionary name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Dictionary size in B
                      * @return Size Dictionary size in B
+                     * 
                      */
                     uint64_t GetSize() const;
 
                     /**
                      * 设置Dictionary size in B
-                     * @param Size Dictionary size in B
+                     * @param _size Dictionary size in B
+                     * 
                      */
                     void SetSize(const uint64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 

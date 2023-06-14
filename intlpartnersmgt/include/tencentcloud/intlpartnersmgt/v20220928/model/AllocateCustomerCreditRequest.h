@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Specific value of the credit allocated to the customer
                      * @return AddedCredit Specific value of the credit allocated to the customer
+                     * 
                      */
                     double GetAddedCredit() const;
 
                     /**
                      * 设置Specific value of the credit allocated to the customer
-                     * @param AddedCredit Specific value of the credit allocated to the customer
+                     * @param _addedCredit Specific value of the credit allocated to the customer
+                     * 
                      */
                     void SetAddedCredit(const double& _addedCredit);
 
                     /**
                      * 判断参数 AddedCredit 是否已赋值
                      * @return AddedCredit 是否已赋值
+                     * 
                      */
                     bool AddedCreditHasBeenSet() const;
 
                     /**
                      * 获取Customer UIN
                      * @return ClientUin Customer UIN
+                     * 
                      */
                     uint64_t GetClientUin() const;
 
                     /**
                      * 设置Customer UIN
-                     * @param ClientUin Customer UIN
+                     * @param _clientUin Customer UIN
+                     * 
                      */
                     void SetClientUin(const uint64_t& _clientUin);
 
                     /**
                      * 判断参数 ClientUin 是否已赋值
                      * @return ClientUin 是否已赋值
+                     * 
                      */
                     bool ClientUinHasBeenSet() const;
 

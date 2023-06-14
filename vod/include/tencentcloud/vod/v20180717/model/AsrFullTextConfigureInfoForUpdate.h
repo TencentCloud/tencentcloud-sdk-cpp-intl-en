@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,33 +62,38 @@ namespace TencentCloud
                      * 设置Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
-                     * @param Switch Switch of full speech recognition task. Valid values:
+                     * @param _switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取The modification information of the subtitle format list.
                      * @return SubtitleFormatsOperation The modification information of the subtitle format list.
+                     * 
                      */
                     SubtitleFormatsOperation GetSubtitleFormatsOperation() const;
 
                     /**
                      * 设置The modification information of the subtitle format list.
-                     * @param SubtitleFormatsOperation The modification information of the subtitle format list.
+                     * @param _subtitleFormatsOperation The modification information of the subtitle format list.
+                     * 
                      */
                     void SetSubtitleFormatsOperation(const SubtitleFormatsOperation& _subtitleFormatsOperation);
 
                     /**
                      * 判断参数 SubtitleFormatsOperation 是否已赋值
                      * @return SubtitleFormatsOperation 是否已赋值
+                     * 
                      */
                     bool SubtitleFormatsOperationHasBeenSet() const;
 
@@ -100,6 +106,7 @@ namespace TencentCloud
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+                     * 
                      */
                     std::string GetSubtitleFormat() const;
 
@@ -108,16 +115,18 @@ namespace TencentCloud
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
-                     * @param SubtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+                     * @param _subtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+                     * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
 
                     /**
                      * 判断参数 SubtitleFormat 是否已赋值
                      * @return SubtitleFormat 是否已赋值
+                     * 
                      */
                     bool SubtitleFormatHasBeenSet() const;
 

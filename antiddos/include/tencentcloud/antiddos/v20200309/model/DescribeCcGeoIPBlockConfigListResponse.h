@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of policy lists
                      * @return Total Number of policy lists
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Information of the policy list
                      * @return CcGeoIpPolicyList Information of the policy list
+                     * 
                      */
                     std::vector<CcGeoIpPolicyNew> GetCcGeoIpPolicyList() const;
 
                     /**
                      * 判断参数 CcGeoIpPolicyList 是否已赋值
                      * @return CcGeoIpPolicyList 是否已赋值
+                     * 
                      */
                     bool CcGeoIpPolicyListHasBeenSet() const;
 

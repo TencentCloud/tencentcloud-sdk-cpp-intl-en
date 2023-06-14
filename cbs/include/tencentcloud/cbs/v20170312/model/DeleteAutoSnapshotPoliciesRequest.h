@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of scheduled snapshot policy IDs to be deleted.
                      * @return AutoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+                     * 
                      */
                     std::vector<std::string> GetAutoSnapshotPolicyIds() const;
 
                     /**
                      * 设置List of scheduled snapshot policy IDs to be deleted.
-                     * @param AutoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+                     * @param _autoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+                     * 
                      */
                     void SetAutoSnapshotPolicyIds(const std::vector<std::string>& _autoSnapshotPolicyIds);
 
                     /**
                      * 判断参数 AutoSnapshotPolicyIds 是否已赋值
                      * @return AutoSnapshotPolicyIds 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicyIdsHasBeenSet() const;
 

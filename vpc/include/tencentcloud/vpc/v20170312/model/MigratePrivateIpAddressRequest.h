@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
                      * @return SourceNetworkInterfaceId ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetSourceNetworkInterfaceId() const;
 
                     /**
                      * 设置ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
-                     * @param SourceNetworkInterfaceId ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
+                     * @param _sourceNetworkInterfaceId ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetSourceNetworkInterfaceId(const std::string& _sourceNetworkInterfaceId);
 
                     /**
                      * 判断参数 SourceNetworkInterfaceId 是否已赋值
                      * @return SourceNetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool SourceNetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the destination ENI instance to be migrated.
                      * @return DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
+                     * 
                      */
                     std::string GetDestinationNetworkInterfaceId() const;
 
                     /**
                      * 设置ID of the destination ENI instance to be migrated.
-                     * @param DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
+                     * @param _destinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
+                     * 
                      */
                     void SetDestinationNetworkInterfaceId(const std::string& _destinationNetworkInterfaceId);
 
                     /**
                      * 判断参数 DestinationNetworkInterfaceId 是否已赋值
                      * @return DestinationNetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool DestinationNetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取The private IP to be migrated, such as 10.0.0.6.
                      * @return PrivateIpAddress The private IP to be migrated, such as 10.0.0.6.
+                     * 
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
                      * 设置The private IP to be migrated, such as 10.0.0.6.
-                     * @param PrivateIpAddress The private IP to be migrated, such as 10.0.0.6.
+                     * @param _privateIpAddress The private IP to be migrated, such as 10.0.0.6.
+                     * 
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
                     /**
                      * 判断参数 PrivateIpAddress 是否已赋值
                      * @return PrivateIpAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressHasBeenSet() const;
 

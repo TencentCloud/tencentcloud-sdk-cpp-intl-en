@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remind Threshold for the `Remind` level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemind() const;
 
                     /**
                      * 设置Threshold for the `Remind` level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remind Threshold for the `Remind` level
+                     * @param _remind Threshold for the `Remind` level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemind(const std::string& _remind);
 
                     /**
                      * 判断参数 Remind 是否已赋值
                      * @return Remind 是否已赋值
+                     * 
                      */
                     bool RemindHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Warn Threshold for the `Warn` level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetWarn() const;
 
                     /**
                      * 设置Threshold for the `Warn` level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Warn Threshold for the `Warn` level
+                     * @param _warn Threshold for the `Warn` level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWarn(const std::string& _warn);
 
                     /**
                      * 判断参数 Warn 是否已赋值
                      * @return Warn 是否已赋值
+                     * 
                      */
                     bool WarnHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Serious Threshold for the `Serious` level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSerious() const;
 
                     /**
                      * 设置Threshold for the `Serious` level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Serious Threshold for the `Serious` level
+                     * @param _serious Threshold for the `Serious` level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSerious(const std::string& _serious);
 
                     /**
                      * 判断参数 Serious 是否已赋值
                      * @return Serious 是否已赋值
+                     * 
                      */
                     bool SeriousHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Protocol port
                      * @return Service Protocol port
+                     * 
                      */
                     std::string GetService() const;
 
                     /**
                      * 设置Protocol port
-                     * @param Service Protocol port
+                     * @param _service Protocol port
+                     * 
                      */
                     void SetService(const std::string& _service);
 
                     /**
                      * 判断参数 Service 是否已赋值
                      * @return Service 是否已赋值
+                     * 
                      */
                     bool ServiceHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Description Remarks
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Remarks
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Description Remarks
+                     * @param _description Remarks
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

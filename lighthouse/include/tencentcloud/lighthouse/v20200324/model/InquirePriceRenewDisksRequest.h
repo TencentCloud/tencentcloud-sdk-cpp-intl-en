@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取List of cloud disk IDs.
                      * @return DiskIds List of cloud disk IDs.
+                     * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
                      * 设置List of cloud disk IDs.
-                     * @param DiskIds List of cloud disk IDs.
+                     * @param _diskIds List of cloud disk IDs.
+                     * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
 
                     /**
                      * 判断参数 DiskIds 是否已赋值
                      * @return DiskIds 是否已赋值
+                     * 
                      */
                     bool DiskIdsHasBeenSet() const;
 
                     /**
                      * 获取Parameter settings for renewing the monthly subscribed cloud disk.
                      * @return RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+                     * 
                      */
                     RenewDiskChargePrepaid GetRenewDiskChargePrepaid() const;
 
                     /**
                      * 设置Parameter settings for renewing the monthly subscribed cloud disk.
-                     * @param RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+                     * @param _renewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+                     * 
                      */
                     void SetRenewDiskChargePrepaid(const RenewDiskChargePrepaid& _renewDiskChargePrepaid);
 
                     /**
                      * 判断参数 RenewDiskChargePrepaid 是否已赋值
                      * @return RenewDiskChargePrepaid 是否已赋值
+                     * 
                      */
                     bool RenewDiskChargePrepaidHasBeenSet() const;
 

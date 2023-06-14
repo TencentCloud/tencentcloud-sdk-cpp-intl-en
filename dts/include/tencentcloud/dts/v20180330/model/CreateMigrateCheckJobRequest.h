@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Data migration task ID
                      * @return JobId Data migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Data migration task ID
-                     * @param JobId Data migration task ID
+                     * @param _jobId Data migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 

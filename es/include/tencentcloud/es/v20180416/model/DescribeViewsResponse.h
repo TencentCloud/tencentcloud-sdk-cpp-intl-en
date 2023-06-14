@@ -51,12 +51,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ClusterView Cluster view
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     ClusterView GetClusterView() const;
 
                     /**
                      * 判断参数 ClusterView 是否已赋值
                      * @return ClusterView 是否已赋值
+                     * 
                      */
                     bool ClusterViewHasBeenSet() const;
 
@@ -65,12 +67,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NodesView Node view
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<NodeView> GetNodesView() const;
 
                     /**
                      * 判断参数 NodesView 是否已赋值
                      * @return NodesView 是否已赋值
+                     * 
                      */
                     bool NodesViewHasBeenSet() const;
 
@@ -79,12 +83,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return KibanasView Kibana view
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<KibanaView> GetKibanasView() const;
 
                     /**
                      * 判断参数 KibanasView 是否已赋值
                      * @return KibanasView 是否已赋值
+                     * 
                      */
                     bool KibanasViewHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Target type
                      * @return Type Target type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Target type
-                     * @param Type Target type
+                     * @param _type Target type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Target description
                      * @return TargetDescription Target description
+                     * 
                      */
                     TargetDescription GetTargetDescription() const;
 
                     /**
                      * 设置Target description
-                     * @param TargetDescription Target description
+                     * @param _targetDescription Target description
+                     * 
                      */
                     void SetTargetDescription(const TargetDescription& _targetDescription);
 
                     /**
                      * 判断参数 TargetDescription 是否已赋值
                      * @return TargetDescription 是否已赋值
+                     * 
                      */
                     bool TargetDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Event rule ID
                      * @return RuleId Event rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Event rule ID
-                     * @param RuleId Event rule ID
+                     * @param _ruleId Event rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

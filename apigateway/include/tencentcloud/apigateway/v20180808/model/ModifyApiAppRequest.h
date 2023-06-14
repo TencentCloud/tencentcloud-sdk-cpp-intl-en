@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique application ID.
                      * @return ApiAppId Unique application ID.
+                     * 
                      */
                     std::string GetApiAppId() const;
 
                     /**
                      * 设置Unique application ID.
-                     * @param ApiAppId Unique application ID.
+                     * @param _apiAppId Unique application ID.
+                     * 
                      */
                     void SetApiAppId(const std::string& _apiAppId);
 
                     /**
                      * 判断参数 ApiAppId 是否已赋值
                      * @return ApiAppId 是否已赋值
+                     * 
                      */
                     bool ApiAppIdHasBeenSet() const;
 
                     /**
                      * 获取Modified application name
                      * @return ApiAppName Modified application name
+                     * 
                      */
                     std::string GetApiAppName() const;
 
                     /**
                      * 设置Modified application name
-                     * @param ApiAppName Modified application name
+                     * @param _apiAppName Modified application name
+                     * 
                      */
                     void SetApiAppName(const std::string& _apiAppName);
 
                     /**
                      * 判断参数 ApiAppName 是否已赋值
                      * @return ApiAppName 是否已赋值
+                     * 
                      */
                     bool ApiAppNameHasBeenSet() const;
 
                     /**
                      * 获取Modified application description
                      * @return ApiAppDesc Modified application description
+                     * 
                      */
                     std::string GetApiAppDesc() const;
 
                     /**
                      * 设置Modified application description
-                     * @param ApiAppDesc Modified application description
+                     * @param _apiAppDesc Modified application description
+                     * 
                      */
                     void SetApiAppDesc(const std::string& _apiAppDesc);
 
                     /**
                      * 判断参数 ApiAppDesc 是否已赋值
                      * @return ApiAppDesc 是否已赋值
+                     * 
                      */
                     bool ApiAppDescHasBeenSet() const;
 

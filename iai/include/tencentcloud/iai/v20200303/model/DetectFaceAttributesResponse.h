@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取Width of requested image.
                      * @return ImageWidth Width of requested image.
+                     * 
                      */
                     uint64_t GetImageWidth() const;
 
                     /**
                      * 判断参数 ImageWidth 是否已赋值
                      * @return ImageWidth 是否已赋值
+                     * 
                      */
                     bool ImageWidthHasBeenSet() const;
 
                     /**
                      * 获取Height of requested image.
                      * @return ImageHeight Height of requested image.
+                     * 
                      */
                     uint64_t GetImageHeight() const;
 
                     /**
                      * 判断参数 ImageHeight 是否已赋值
                      * @return ImageHeight 是否已赋值
+                     * 
                      */
                     bool ImageHeightHasBeenSet() const;
 
                     /**
                      * 获取Face information list.
                      * @return FaceDetailInfos Face information list.
+                     * 
                      */
                     std::vector<FaceDetailInfo> GetFaceDetailInfos() const;
 
                     /**
                      * 判断参数 FaceDetailInfos 是否已赋值
                      * @return FaceDetailInfos 是否已赋值
+                     * 
                      */
                     bool FaceDetailInfosHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

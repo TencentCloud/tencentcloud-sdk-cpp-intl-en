@@ -49,168 +49,196 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return MigrateId Migration task ID
+                     * 
                      */
                     uint64_t GetMigrateId() const;
 
                     /**
                      * 判断参数 MigrateId 是否已赋值
                      * @return MigrateId 是否已赋值
+                     * 
                      */
                     bool MigrateIdHasBeenSet() const;
 
                     /**
                      * 获取Migration task name
                      * @return MigrateName Migration task name
+                     * 
                      */
                     std::string GetMigrateName() const;
 
                     /**
                      * 判断参数 MigrateName 是否已赋值
                      * @return MigrateName 是否已赋值
+                     * 
                      */
                     bool MigrateNameHasBeenSet() const;
 
                     /**
                      * 获取User ID of migration task
                      * @return AppId User ID of migration task
+                     * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取Migration task region
                      * @return Region Migration task region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
                      * @return SourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
+                     * 
                      */
                     int64_t GetSourceType() const;
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Migration task creation time
                      * @return CreateTime Migration task creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Migration task start time
                      * @return StartTime Migration task start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Migration task end time
                      * @return EndTime Migration task end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
                      * @return Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Migration task progress
                      * @return Progress Migration task progress
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Migration type (1: structure migration, 2: data migration, 3: incremental sync)
                      * @return MigrateType Migration type (1: structure migration, 2: data migration, 3: incremental sync)
+                     * 
                      */
                     int64_t GetMigrateType() const;
 
                     /**
                      * 判断参数 MigrateType 是否已赋值
                      * @return MigrateType 是否已赋值
+                     * 
                      */
                     bool MigrateTypeHasBeenSet() const;
 
                     /**
                      * 获取Migration source
                      * @return Source Migration source
+                     * 
                      */
                     MigrateSource GetSource() const;
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Migration target
                      * @return Target Migration target
+                     * 
                      */
                     MigrateTarget GetTarget() const;
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 
                     /**
                      * 获取Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
                      * @return MigrateDBSet Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5)
+                     * 
                      */
                     std::vector<MigrateDB> GetMigrateDBSet() const;
 
                     /**
                      * 判断参数 MigrateDBSet 是否已赋值
                      * @return MigrateDBSet 是否已赋值
+                     * 
                      */
                     bool MigrateDBSetHasBeenSet() const;
 

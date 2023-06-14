@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the Pulsar cluster to be updated.
                      * @return ClusterId ID of the Pulsar cluster to be updated.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the Pulsar cluster to be updated.
-                     * @param ClusterId ID of the Pulsar cluster to be updated.
+                     * @param _clusterId ID of the Pulsar cluster to be updated.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Updated cluster name.
                      * @return ClusterName Updated cluster name.
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Updated cluster name.
-                     * @param ClusterName Updated cluster name.
+                     * @param _clusterName Updated cluster name.
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Remarks.
                      * @return Remark Remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks.
-                     * @param Remark Remarks.
+                     * @param _remark Remarks.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Enables public network access, which can only be `true`.
                      * @return PublicAccessEnabled Enables public network access, which can only be `true`.
+                     * 
                      */
                     bool GetPublicAccessEnabled() const;
 
                     /**
                      * 设置Enables public network access, which can only be `true`.
-                     * @param PublicAccessEnabled Enables public network access, which can only be `true`.
+                     * @param _publicAccessEnabled Enables public network access, which can only be `true`.
+                     * 
                      */
                     void SetPublicAccessEnabled(const bool& _publicAccessEnabled);
 
                     /**
                      * 判断参数 PublicAccessEnabled 是否已赋值
                      * @return PublicAccessEnabled 是否已赋值
+                     * 
                      */
                     bool PublicAccessEnabledHasBeenSet() const;
 

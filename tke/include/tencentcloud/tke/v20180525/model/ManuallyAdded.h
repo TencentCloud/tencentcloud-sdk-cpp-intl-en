@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Number of nodes that are being added
                      * @return Joining Number of nodes that are being added
+                     * 
                      */
                     int64_t GetJoining() const;
 
                     /**
                      * 设置Number of nodes that are being added
-                     * @param Joining Number of nodes that are being added
+                     * @param _joining Number of nodes that are being added
+                     * 
                      */
                     void SetJoining(const int64_t& _joining);
 
                     /**
                      * 判断参数 Joining 是否已赋值
                      * @return Joining 是否已赋值
+                     * 
                      */
                     bool JoiningHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes that are being initialized
                      * @return Initializing Number of nodes that are being initialized
+                     * 
                      */
                     int64_t GetInitializing() const;
 
                     /**
                      * 设置Number of nodes that are being initialized
-                     * @param Initializing Number of nodes that are being initialized
+                     * @param _initializing Number of nodes that are being initialized
+                     * 
                      */
                     void SetInitializing(const int64_t& _initializing);
 
                     /**
                      * 判断参数 Initializing 是否已赋值
                      * @return Initializing 是否已赋值
+                     * 
                      */
                     bool InitializingHasBeenSet() const;
 
                     /**
                      * 获取Number of normal nodes
                      * @return Normal Number of normal nodes
+                     * 
                      */
                     int64_t GetNormal() const;
 
                     /**
                      * 设置Number of normal nodes
-                     * @param Normal Number of normal nodes
+                     * @param _normal Number of normal nodes
+                     * 
                      */
                     void SetNormal(const int64_t& _normal);
 
                     /**
                      * 判断参数 Normal 是否已赋值
                      * @return Normal 是否已赋值
+                     * 
                      */
                     bool NormalHasBeenSet() const;
 
                     /**
                      * 获取Total number of nodes
                      * @return Total Total number of nodes
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 设置Total number of nodes
-                     * @param Total Total number of nodes
+                     * @param _total Total number of nodes
+                     * 
                      */
                     void SetTotal(const int64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Service ID.
                      * @return ServiceId Service ID.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Service ID.
-                     * @param ServiceId Service ID.
+                     * @param _serviceId Service ID.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Description.
                      * @return Description Description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description.
-                     * @param Description Description.
+                     * @param _description Description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Source channel.
                      * @return SourceChannel Source channel.
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel.
-                     * @param SourceChannel Source channel.
+                     * @param _sourceChannel Source channel.
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 

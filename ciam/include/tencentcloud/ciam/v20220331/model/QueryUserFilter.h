@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Property key
                      * @return PropertyKey Property key
+                     * 
                      */
                     std::string GetPropertyKey() const;
 
                     /**
                      * 设置Property key
-                     * @param PropertyKey Property key
+                     * @param _propertyKey Property key
+                     * 
                      */
                     void SetPropertyKey(const std::string& _propertyKey);
 
                     /**
                      * 判断参数 PropertyKey 是否已赋值
                      * @return PropertyKey 是否已赋值
+                     * 
                      */
                     bool PropertyKeyHasBeenSet() const;
 
                     /**
                      * 获取Property value
                      * @return PropertyValue Property value
+                     * 
                      */
                     std::string GetPropertyValue() const;
 
                     /**
                      * 设置Property value
-                     * @param PropertyValue Property value
+                     * @param _propertyValue Property value
+                     * 
                      */
                     void SetPropertyValue(const std::string& _propertyValue);
 
                     /**
                      * 判断参数 PropertyValue 是否已赋值
                      * @return PropertyValue 是否已赋值
+                     * 
                      */
                     bool PropertyValueHasBeenSet() const;
 
                     /**
                      * 获取Logic value. `True` or `False`
                      * @return Logic Logic value. `True` or `False`
+                     * 
                      */
                     bool GetLogic() const;
 
                     /**
                      * 设置Logic value. `True` or `False`
-                     * @param Logic Logic value. `True` or `False`
+                     * @param _logic Logic value. `True` or `False`
+                     * 
                      */
                     void SetLogic(const bool& _logic);
 
                     /**
                      * 判断参数 Logic 是否已赋值
                      * @return Logic 是否已赋值
+                     * 
                      */
                     bool LogicHasBeenSet() const;
 
                     /**
                      * 获取Operator. Values: `>`, `<`, `=`, `>=`, `<=`, `!=` and `between`. 
                      * @return OperateLogic Operator. Values: `>`, `<`, `=`, `>=`, `<=`, `!=` and `between`. 
+                     * 
                      */
                     std::string GetOperateLogic() const;
 
                     /**
                      * 设置Operator. Values: `>`, `<`, `=`, `>=`, `<=`, `!=` and `between`. 
-                     * @param OperateLogic Operator. Values: `>`, `<`, `=`, `>=`, `<=`, `!=` and `between`. 
+                     * @param _operateLogic Operator. Values: `>`, `<`, `=`, `>=`, `<=`, `!=` and `between`. 
+                     * 
                      */
                     void SetOperateLogic(const std::string& _operateLogic);
 
                     /**
                      * 判断参数 OperateLogic 是否已赋值
                      * @return OperateLogic 是否已赋值
+                     * 
                      */
                     bool OperateLogicHasBeenSet() const;
 

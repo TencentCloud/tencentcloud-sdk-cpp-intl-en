@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Blocklist
                      * @return BlockRuleIDs Blocklist
+                     * 
                      */
                     std::vector<int64_t> GetBlockRuleIDs() const;
 
                     /**
                      * 设置Blocklist
-                     * @param BlockRuleIDs Blocklist
+                     * @param _blockRuleIDs Blocklist
+                     * 
                      */
                     void SetBlockRuleIDs(const std::vector<int64_t>& _blockRuleIDs);
 
                     /**
                      * 判断参数 BlockRuleIDs 是否已赋值
                      * @return BlockRuleIDs 是否已赋值
+                     * 
                      */
                     bool BlockRuleIDsHasBeenSet() const;
 
                     /**
                      * 获取Whether the WAF rule is enabled or disabled
                      * @return Switch Whether the WAF rule is enabled or disabled
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether the WAF rule is enabled or disabled
-                     * @param Switch Whether the WAF rule is enabled or disabled
+                     * @param _switch Whether the WAF rule is enabled or disabled
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ObserveRuleIDs Observe mode
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetObserveRuleIDs() const;
 
                     /**
                      * 设置Observe mode
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ObserveRuleIDs Observe mode
+                     * @param _observeRuleIDs Observe mode
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetObserveRuleIDs(const std::vector<int64_t>& _observeRuleIDs);
 
                     /**
                      * 判断参数 ObserveRuleIDs 是否已赋值
                      * @return ObserveRuleIDs 是否已赋值
+                     * 
                      */
                     bool ObserveRuleIDsHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Mount point ID
                      * @return MountPointId Mount point ID
+                     * 
                      */
                     std::string GetMountPointId() const;
 
                     /**
                      * 设置Mount point ID
-                     * @param MountPointId Mount point ID
+                     * @param _mountPointId Mount point ID
+                     * 
                      */
                     void SetMountPointId(const std::string& _mountPointId);
 
                     /**
                      * 判断参数 MountPointId 是否已赋值
                      * @return MountPointId 是否已赋值
+                     * 
                      */
                     bool MountPointIdHasBeenSet() const;
 
                     /**
                      * 获取List of permission group IDs
                      * @return AccessGroupIds List of permission group IDs
+                     * 
                      */
                     std::vector<std::string> GetAccessGroupIds() const;
 
                     /**
                      * 设置List of permission group IDs
-                     * @param AccessGroupIds List of permission group IDs
+                     * @param _accessGroupIds List of permission group IDs
+                     * 
                      */
                     void SetAccessGroupIds(const std::vector<std::string>& _accessGroupIds);
 
                     /**
                      * 判断参数 AccessGroupIds 是否已赋值
                      * @return AccessGroupIds 是否已赋值
+                     * 
                      */
                     bool AccessGroupIdsHasBeenSet() const;
 

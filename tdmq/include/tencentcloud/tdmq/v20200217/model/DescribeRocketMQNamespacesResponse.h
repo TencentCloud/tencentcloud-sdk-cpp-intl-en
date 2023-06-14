@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of namespaces
                      * @return Namespaces List of namespaces
+                     * 
                      */
                     std::vector<RocketMQNamespace> GetNamespaces() const;
 
                     /**
                      * 判断参数 Namespaces 是否已赋值
                      * @return Namespaces 是否已赋值
+                     * 
                      */
                     bool NamespacesHasBeenSet() const;
 
                     /**
                      * 获取The total number of returned results.
                      * @return TotalCount The total number of returned results.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

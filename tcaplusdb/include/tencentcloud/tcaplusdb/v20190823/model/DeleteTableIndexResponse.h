@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of tables whose global indexes are deleted
                      * @return TotalCount The number of tables whose global indexes are deleted
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The list of global index deletion results
                      * @return TableResults The list of global index deletion results
+                     * 
                      */
                     std::vector<TableResultNew> GetTableResults() const;
 
                     /**
                      * 判断参数 TableResults 是否已赋值
                      * @return TableResults 是否已赋值
+                     * 
                      */
                     bool TableResultsHasBeenSet() const;
 

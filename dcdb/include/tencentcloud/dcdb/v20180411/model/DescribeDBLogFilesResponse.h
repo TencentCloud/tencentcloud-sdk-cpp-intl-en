@@ -47,84 +47,98 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of dcdbt-ow728lmc.
                      * @return InstanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Requested log type. Valid values: 1 (binlog); 2 (cold backup); 3 (errlog); 4 (slowlog).
                      * @return Type Requested log type. Valid values: 1 (binlog); 2 (cold backup); 3 (errlog); 4 (slowlog).
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Total number of requested logs
                      * @return Total Total number of requested logs
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取List of log files
                      * @return Files List of log files
+                     * 
                      */
                     std::vector<LogFileInfo> GetFiles() const;
 
                     /**
                      * 判断参数 Files 是否已赋值
                      * @return Files 是否已赋值
+                     * 
                      */
                     bool FilesHasBeenSet() const;
 
                     /**
                      * 获取For an instance in a VPC, this prefix plus URI can be used as the download address
                      * @return VpcPrefix For an instance in a VPC, this prefix plus URI can be used as the download address
+                     * 
                      */
                     std::string GetVpcPrefix() const;
 
                     /**
                      * 判断参数 VpcPrefix 是否已赋值
                      * @return VpcPrefix 是否已赋值
+                     * 
                      */
                     bool VpcPrefixHasBeenSet() const;
 
                     /**
                      * 获取For an instance in a common network, this prefix plus URI can be used as the download address
                      * @return NormalPrefix For an instance in a common network, this prefix plus URI can be used as the download address
+                     * 
                      */
                     std::string GetNormalPrefix() const;
 
                     /**
                      * 判断参数 NormalPrefix 是否已赋值
                      * @return NormalPrefix 是否已赋值
+                     * 
                      */
                     bool NormalPrefixHasBeenSet() const;
 
                     /**
                      * 获取Shard ID in the format of shard-7noic7tv
                      * @return ShardId Shard ID in the format of shard-7noic7tv
+                     * 
                      */
                     std::string GetShardId() const;
 
                     /**
                      * 判断参数 ShardId 是否已赋值
                      * @return ShardId 是否已赋值
+                     * 
                      */
                     bool ShardIdHasBeenSet() const;
 

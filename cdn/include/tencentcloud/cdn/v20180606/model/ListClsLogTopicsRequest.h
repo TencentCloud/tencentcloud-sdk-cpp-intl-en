@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
                      * @return Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+                     * 
                      */
                     std::string GetChannel() const;
 
                     /**
                      * 设置Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
-                     * @param Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+                     * @param _channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
+                     * 
                      */
                     void SetChannel(const std::string& _channel);
 
                     /**
                      * 判断参数 Channel 是否已赋值
                      * @return Channel 是否已赋值
+                     * 
                      */
                     bool ChannelHasBeenSet() const;
 

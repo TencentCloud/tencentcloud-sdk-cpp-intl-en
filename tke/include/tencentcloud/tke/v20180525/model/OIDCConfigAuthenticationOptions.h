@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AutoCreateOIDCConfig Creating an identity provider
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetAutoCreateOIDCConfig() const;
 
                     /**
                      * 设置Creating an identity provider
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AutoCreateOIDCConfig Creating an identity provider
+                     * @param _autoCreateOIDCConfig Creating an identity provider
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAutoCreateOIDCConfig(const bool& _autoCreateOIDCConfig);
 
                     /**
                      * 判断参数 AutoCreateOIDCConfig 是否已赋值
                      * @return AutoCreateOIDCConfig 是否已赋值
+                     * 
                      */
                     bool AutoCreateOIDCConfigHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AutoCreateClientId Creating ClientId of the identity provider
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAutoCreateClientId() const;
 
                     /**
                      * 设置Creating ClientId of the identity provider
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AutoCreateClientId Creating ClientId of the identity provider
+                     * @param _autoCreateClientId Creating ClientId of the identity provider
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAutoCreateClientId(const std::vector<std::string>& _autoCreateClientId);
 
                     /**
                      * 判断参数 AutoCreateClientId 是否已赋值
                      * @return AutoCreateClientId 是否已赋值
+                     * 
                      */
                     bool AutoCreateClientIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AutoInstallPodIdentityWebhookAddon Creating the PodIdentityWebhook component
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetAutoInstallPodIdentityWebhookAddon() const;
 
                     /**
                      * 设置Creating the PodIdentityWebhook component
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AutoInstallPodIdentityWebhookAddon Creating the PodIdentityWebhook component
+                     * @param _autoInstallPodIdentityWebhookAddon Creating the PodIdentityWebhook component
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAutoInstallPodIdentityWebhookAddon(const bool& _autoInstallPodIdentityWebhookAddon);
 
                     /**
                      * 判断参数 AutoInstallPodIdentityWebhookAddon 是否已赋值
                      * @return AutoInstallPodIdentityWebhookAddon 是否已赋值
+                     * 
                      */
                     bool AutoInstallPodIdentityWebhookAddonHasBeenSet() const;
 

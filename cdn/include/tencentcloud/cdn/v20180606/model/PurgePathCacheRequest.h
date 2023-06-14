@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of directories. The protocol header such as "http://" or "https://" needs to be included.
                      * @return Paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
+                     * 
                      */
                     std::vector<std::string> GetPaths() const;
 
                     /**
                      * 设置List of directories. The protocol header such as "http://" or "https://" needs to be included.
-                     * @param Paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
+                     * @param _paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
+                     * 
                      */
                     void SetPaths(const std::vector<std::string>& _paths);
 
                     /**
                      * 判断参数 Paths 是否已赋值
                      * @return Paths 是否已赋值
+                     * 
                      */
                     bool PathsHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return FlushType Purge type:
 `flush`: purges updated resources
 `delete`: purges all resources
+                     * 
                      */
                     std::string GetFlushType() const;
 
@@ -74,33 +78,38 @@ namespace TencentCloud
                      * 设置Purge type:
 `flush`: purges updated resources
 `delete`: purges all resources
-                     * @param FlushType Purge type:
+                     * @param _flushType Purge type:
 `flush`: purges updated resources
 `delete`: purges all resources
+                     * 
                      */
                     void SetFlushType(const std::string& _flushType);
 
                     /**
                      * 判断参数 FlushType 是否已赋值
                      * @return FlushType 是否已赋值
+                     * 
                      */
                     bool FlushTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to encode Chinese characters before purge.
                      * @return UrlEncode Whether to encode Chinese characters before purge.
+                     * 
                      */
                     bool GetUrlEncode() const;
 
                     /**
                      * 设置Whether to encode Chinese characters before purge.
-                     * @param UrlEncode Whether to encode Chinese characters before purge.
+                     * @param _urlEncode Whether to encode Chinese characters before purge.
+                     * 
                      */
                     void SetUrlEncode(const bool& _urlEncode);
 
                     /**
                      * 判断参数 UrlEncode 是否已赋值
                      * @return UrlEncode 是否已赋值
+                     * 
                      */
                     bool UrlEncodeHasBeenSet() const;
 
@@ -115,6 +124,7 @@ The acceleration region of the acceleration domain name will be purged if this p
 If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
 If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
 The specified region to purge should match the domain name’s acceleration region.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -124,17 +134,19 @@ The acceleration region of the acceleration domain name will be purged if this p
 If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
 If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
 The specified region to purge should match the domain name’s acceleration region.
-                     * @param Area Region to purge
+                     * @param _area Region to purge
 The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
 If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
 If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
 The specified region to purge should match the domain name’s acceleration region.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

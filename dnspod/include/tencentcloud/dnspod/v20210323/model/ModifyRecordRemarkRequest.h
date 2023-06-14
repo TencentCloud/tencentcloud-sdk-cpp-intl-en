@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Domain
                      * @return Domain Domain
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain
-                     * @param Domain Domain
+                     * @param _domain Domain
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
                      * @return RecordId The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * 
                      */
                     uint64_t GetRecordId() const;
 
                     /**
                      * 设置The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
-                     * @param RecordId The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * @param _recordId The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * 
                      */
                     void SetRecordId(const uint64_t& _recordId);
 
                     /**
                      * 判断参数 RecordId 是否已赋值
                      * @return RecordId 是否已赋值
+                     * 
                      */
                     bool RecordIdHasBeenSet() const;
 
                     /**
                      * 获取The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      * @return DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     uint64_t GetDomainId() const;
 
                     /**
                      * 设置The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
-                     * @param DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @param _domainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 
                     /**
                      * 获取DNS record remarks. To delete the remarks, submit empty content.
                      * @return Remark DNS record remarks. To delete the remarks, submit empty content.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置DNS record remarks. To delete the remarks, submit empty content.
-                     * @param Remark DNS record remarks. To delete the remarks, submit empty content.
+                     * @param _remark DNS record remarks. To delete the remarks, submit empty content.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

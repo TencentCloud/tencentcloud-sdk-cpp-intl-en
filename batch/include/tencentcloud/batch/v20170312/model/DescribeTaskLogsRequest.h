@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Job ID
                      * @return JobId Job ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Job ID
-                     * @param JobId Job ID
+                     * @param _jobId Job ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Task name
                      * @return TaskName Task name
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Task name
-                     * @param TaskName Task name
+                     * @param _taskName Task name
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 
                     /**
                      * 获取Set of task instances
                      * @return TaskInstanceIndexes Set of task instances
+                     * 
                      */
                     std::vector<uint64_t> GetTaskInstanceIndexes() const;
 
                     /**
                      * 设置Set of task instances
-                     * @param TaskInstanceIndexes Set of task instances
+                     * @param _taskInstanceIndexes Set of task instances
+                     * 
                      */
                     void SetTaskInstanceIndexes(const std::vector<uint64_t>& _taskInstanceIndexes);
 
                     /**
                      * 判断参数 TaskInstanceIndexes 是否已赋值
                      * @return TaskInstanceIndexes 是否已赋值
+                     * 
                      */
                     bool TaskInstanceIndexesHasBeenSet() const;
 
                     /**
                      * 获取The start point of query
                      * @return Offset The start point of query
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The start point of query
-                     * @param Offset The start point of query
+                     * @param _offset The start point of query
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of task instances returned
                      * @return Limit Maximum number of task instances returned
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of task instances returned
-                     * @param Limit Maximum number of task instances returned
+                     * @param _limit Maximum number of task instances returned
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

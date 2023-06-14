@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Enabled Whether the public LB is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether the public LB is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Enabled Whether the public LB is enabled
+                     * @param _enabled Whether the public LB is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AllowFromCidrs Public network CIDR block allowed to access
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAllowFromCidrs() const;
 
                     /**
                      * 设置Public network CIDR block allowed to access
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AllowFromCidrs Public network CIDR block allowed to access
+                     * @param _allowFromCidrs Public network CIDR block allowed to access
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAllowFromCidrs(const std::vector<std::string>& _allowFromCidrs);
 
                     /**
                      * 判断参数 AllowFromCidrs 是否已赋值
                      * @return AllowFromCidrs 是否已赋值
+                     * 
                      */
                     bool AllowFromCidrsHasBeenSet() const;
 

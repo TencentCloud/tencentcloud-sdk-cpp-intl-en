@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Cloud disk ID.
                      * @return DiskId Cloud disk ID.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Cloud disk ID.
-                     * @param DiskId Cloud disk ID.
+                     * @param _diskId Cloud disk ID.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Whether the cloud disk can be returned.
                      * @return IsReturnable Whether the cloud disk can be returned.
+                     * 
                      */
                     bool GetIsReturnable() const;
 
                     /**
                      * 设置Whether the cloud disk can be returned.
-                     * @param IsReturnable Whether the cloud disk can be returned.
+                     * @param _isReturnable Whether the cloud disk can be returned.
+                     * 
                      */
                     void SetIsReturnable(const bool& _isReturnable);
 
                     /**
                      * 判断参数 IsReturnable 是否已赋值
                      * @return IsReturnable 是否已赋值
+                     * 
                      */
                     bool IsReturnableHasBeenSet() const;
 
                     /**
                      * 获取Error code of cloud disk return failure.
                      * @return ReturnFailCode Error code of cloud disk return failure.
+                     * 
                      */
                     int64_t GetReturnFailCode() const;
 
                     /**
                      * 设置Error code of cloud disk return failure.
-                     * @param ReturnFailCode Error code of cloud disk return failure.
+                     * @param _returnFailCode Error code of cloud disk return failure.
+                     * 
                      */
                     void SetReturnFailCode(const int64_t& _returnFailCode);
 
                     /**
                      * 判断参数 ReturnFailCode 是否已赋值
                      * @return ReturnFailCode 是否已赋值
+                     * 
                      */
                     bool ReturnFailCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message of cloud disk return failure.
                      * @return ReturnFailMessage Error message of cloud disk return failure.
+                     * 
                      */
                     std::string GetReturnFailMessage() const;
 
                     /**
                      * 设置Error message of cloud disk return failure.
-                     * @param ReturnFailMessage Error message of cloud disk return failure.
+                     * @param _returnFailMessage Error message of cloud disk return failure.
+                     * 
                      */
                     void SetReturnFailMessage(const std::string& _returnFailMessage);
 
                     /**
                      * 判断参数 ReturnFailMessage 是否已赋值
                      * @return ReturnFailMessage 是否已赋值
+                     * 
                      */
                     bool ReturnFailMessageHasBeenSet() const;
 

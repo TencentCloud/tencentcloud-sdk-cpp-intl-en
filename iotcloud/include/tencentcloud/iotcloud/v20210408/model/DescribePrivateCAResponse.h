@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Details of the private CA certificate
                      * @return CA Details of the private CA certificate
+                     * 
                      */
                     CertInfo GetCA() const;
 
                     /**
                      * 判断参数 CA 是否已赋值
                      * @return CA 是否已赋值
+                     * 
                      */
                     bool CAHasBeenSet() const;
 

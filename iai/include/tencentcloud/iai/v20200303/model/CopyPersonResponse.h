@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of groups successfully added to.
                      * @return SucGroupNum Number of groups successfully added to.
+                     * 
                      */
                     uint64_t GetSucGroupNum() const;
 
                     /**
                      * 判断参数 SucGroupNum 是否已赋值
                      * @return SucGroupNum 是否已赋值
+                     * 
                      */
                     bool SucGroupNumHasBeenSet() const;
 
                     /**
                      * 获取List of groups successfully added to.
                      * @return SucGroupIds List of groups successfully added to.
+                     * 
                      */
                     std::vector<std::string> GetSucGroupIds() const;
 
                     /**
                      * 判断参数 SucGroupIds 是否已赋值
                      * @return SucGroupIds 是否已赋值
+                     * 
                      */
                     bool SucGroupIdsHasBeenSet() const;
 

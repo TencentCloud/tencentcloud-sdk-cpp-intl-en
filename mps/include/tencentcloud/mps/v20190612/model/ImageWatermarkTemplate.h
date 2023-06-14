@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Watermark image address.
                      * @return ImageUrl Watermark image address.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
                     /**
                      * 设置Watermark image address.
-                     * @param ImageUrl Watermark image address.
+                     * @param _imageUrl Watermark image address.
+                     * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return Width Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
+                     * 
                      */
                     std::string GetWidth() const;
 
@@ -78,15 +82,17 @@ namespace TencentCloud
                      * 设置Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
-                     * @param Width Watermark width. % and px formats are supported:
+                     * @param _width Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
 <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
+                     * 
                      */
                     void SetWidth(const std::string& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -99,6 +105,7 @@ namespace TencentCloud
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels.</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
+                     * 
                      */
                     std::string GetHeight() const;
 
@@ -107,16 +114,18 @@ namespace TencentCloud
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels.</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
-                     * @param Height Watermark height. % and px formats are supported:
+                     * @param _height Watermark height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height. For example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in pixels. For example, `100px` means that `Height` is 100 pixels.</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
+                     * 
                      */
                     void SetHeight(const std::string& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
@@ -129,6 +138,7 @@ namespace TencentCloud
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+                     * 
                      */
                     std::string GetRepeatType() const;
 
@@ -137,16 +147,18 @@ namespace TencentCloud
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
-                     * @param RepeatType Repeat type of an animated watermark. Valid values:
+                     * @param _repeatType Repeat type of an animated watermark. Valid values:
 <li>once: no longer appears after watermark playback ends.</li>
 <li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
 <li>repeat (default): repeats the playback until the video ends.</li>
+                     * 
                      */
                     void SetRepeatType(const std::string& _repeatType);
 
                     /**
                      * 判断参数 RepeatType 是否已赋值
                      * @return RepeatType 是否已赋值
+                     * 
                      */
                     bool RepeatTypeHasBeenSet() const;
 

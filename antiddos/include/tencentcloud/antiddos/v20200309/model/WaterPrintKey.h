@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Key version
                      * @return KeyVersion Key version
+                     * 
                      */
                     std::string GetKeyVersion() const;
 
                     /**
                      * 设置Key version
-                     * @param KeyVersion Key version
+                     * @param _keyVersion Key version
+                     * 
                      */
                     void SetKeyVersion(const std::string& _keyVersion);
 
                     /**
                      * 判断参数 KeyVersion 是否已赋值
                      * @return KeyVersion 是否已赋值
+                     * 
                      */
                     bool KeyVersionHasBeenSet() const;
 
                     /**
                      * 获取Key content
                      * @return KeyContent Key content
+                     * 
                      */
                     std::string GetKeyContent() const;
 
                     /**
                      * 设置Key content
-                     * @param KeyContent Key content
+                     * @param _keyContent Key content
+                     * 
                      */
                     void SetKeyContent(const std::string& _keyContent);
 
                     /**
                      * 判断参数 KeyContent 是否已赋值
                      * @return KeyContent 是否已赋值
+                     * 
                      */
                     bool KeyContentHasBeenSet() const;
 
                     /**
                      * 获取Key ID
                      * @return KeyId Key ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Key ID
-                     * @param KeyId Key ID
+                     * @param _keyId Key ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Key status. Valid value: `1` (enabled).
                      * @return KeyOpenStatus Key status. Valid value: `1` (enabled).
+                     * 
                      */
                     int64_t GetKeyOpenStatus() const;
 
                     /**
                      * 设置Key status. Valid value: `1` (enabled).
-                     * @param KeyOpenStatus Key status. Valid value: `1` (enabled).
+                     * @param _keyOpenStatus Key status. Valid value: `1` (enabled).
+                     * 
                      */
                     void SetKeyOpenStatus(const int64_t& _keyOpenStatus);
 
                     /**
                      * 判断参数 KeyOpenStatus 是否已赋值
                      * @return KeyOpenStatus 是否已赋值
+                     * 
                      */
                     bool KeyOpenStatusHasBeenSet() const;
 
                     /**
                      * 获取Key creation time
                      * @return CreateTime Key creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Key creation time
-                     * @param CreateTime Key creation time
+                     * @param _createTime Key creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

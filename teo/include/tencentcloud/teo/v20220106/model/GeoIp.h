@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Country name
                      * @return Country Country name
+                     * 
                      */
                     std::string GetCountry() const;
 
                     /**
                      * 设置Country name
-                     * @param Country Country name
+                     * @param _country Country name
+                     * 
                      */
                     void SetCountry(const std::string& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
                     /**
                      * 获取Continent name
                      * @return Continent Continent name
+                     * 
                      */
                     std::string GetContinent() const;
 
                     /**
                      * 设置Continent name
-                     * @param Continent Continent name
+                     * @param _continent Continent name
+                     * 
                      */
                     void SetContinent(const std::string& _continent);
 
                     /**
                      * 判断参数 Continent 是否已赋值
                      * @return Continent 是否已赋值
+                     * 
                      */
                     bool ContinentHasBeenSet() const;
 
                     /**
                      * 获取Country name in English
                      * @return CountryEn Country name in English
+                     * 
                      */
                     std::string GetCountryEn() const;
 
                     /**
                      * 设置Country name in English
-                     * @param CountryEn Country name in English
+                     * @param _countryEn Country name in English
+                     * 
                      */
                     void SetCountryEn(const std::string& _countryEn);
 
                     /**
                      * 判断参数 CountryEn 是否已赋值
                      * @return CountryEn 是否已赋值
+                     * 
                      */
                     bool CountryEnHasBeenSet() const;
 
                     /**
                      * 获取Continent name in English
                      * @return ContinentEn Continent name in English
+                     * 
                      */
                     std::string GetContinentEn() const;
 
                     /**
                      * 设置Continent name in English
-                     * @param ContinentEn Continent name in English
+                     * @param _continentEn Continent name in English
+                     * 
                      */
                     void SetContinentEn(const std::string& _continentEn);
 
                     /**
                      * 判断参数 ContinentEn 是否已赋值
                      * @return ContinentEn 是否已赋值
+                     * 
                      */
                     bool ContinentEnHasBeenSet() const;
 

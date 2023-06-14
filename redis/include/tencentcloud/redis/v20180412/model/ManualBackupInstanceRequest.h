@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
                      * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-                     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * @param _instanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup remarks
                      * @return Remark Backup remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Backup remarks
-                     * @param Remark Backup remarks
+                     * @param _remark Backup remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Retention time in days. 0 indicates the default retention time.
                      * @return StorageDays Retention time in days. 0 indicates the default retention time.
+                     * 
                      */
                     int64_t GetStorageDays() const;
 
                     /**
                      * 设置Retention time in days. 0 indicates the default retention time.
-                     * @param StorageDays Retention time in days. 0 indicates the default retention time.
+                     * @param _storageDays Retention time in days. 0 indicates the default retention time.
+                     * 
                      */
                     void SetStorageDays(const int64_t& _storageDays);
 
                     /**
                      * 判断参数 StorageDays 是否已赋值
                      * @return StorageDays 是否已赋值
+                     * 
                      */
                     bool StorageDaysHasBeenSet() const;
 

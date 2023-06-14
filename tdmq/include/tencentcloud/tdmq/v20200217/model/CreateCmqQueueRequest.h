@@ -46,306 +46,357 @@ namespace TencentCloud
                     /**
                      * 获取Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
                      * @return QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-                     * @param QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * @param _queueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
                      * @return MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * 
                      */
                     uint64_t GetMaxMsgHeapNum() const;
 
                     /**
                      * 设置Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
-                     * @param MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * @param _maxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
+                     * 
                      */
                     void SetMaxMsgHeapNum(const uint64_t& _maxMsgHeapNum);
 
                     /**
                      * 判断参数 MaxMsgHeapNum 是否已赋值
                      * @return MaxMsgHeapNum 是否已赋值
+                     * 
                      */
                     bool MaxMsgHeapNumHasBeenSet() const;
 
                     /**
                      * 获取Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
                      * @return PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+                     * 
                      */
                     uint64_t GetPollingWaitSeconds() const;
 
                     /**
                      * 设置Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-                     * @param PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+                     * @param _pollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
+                     * 
                      */
                     void SetPollingWaitSeconds(const uint64_t& _pollingWaitSeconds);
 
                     /**
                      * 判断参数 PollingWaitSeconds 是否已赋值
                      * @return PollingWaitSeconds 是否已赋值
+                     * 
                      */
                     bool PollingWaitSecondsHasBeenSet() const;
 
                     /**
                      * 获取Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
                      * @return VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+                     * 
                      */
                     uint64_t GetVisibilityTimeout() const;
 
                     /**
                      * 设置Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-                     * @param VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+                     * @param _visibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
+                     * 
                      */
                     void SetVisibilityTimeout(const uint64_t& _visibilityTimeout);
 
                     /**
                      * 判断参数 VisibilityTimeout 是否已赋值
                      * @return VisibilityTimeout 是否已赋值
+                     * 
                      */
                     bool VisibilityTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
                      * @return MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 
                      */
                     uint64_t GetMaxMsgSize() const;
 
                     /**
                      * 设置Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-                     * @param MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * @param _maxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+                     * 
                      */
                     void SetMaxMsgSize(const uint64_t& _maxMsgSize);
 
                     /**
                      * 判断参数 MaxMsgSize 是否已赋值
                      * @return MaxMsgSize 是否已赋值
+                     * 
                      */
                     bool MaxMsgSizeHasBeenSet() const;
 
                     /**
                      * 获取The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
                      * @return MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+                     * 
                      */
                     uint64_t GetMsgRetentionSeconds() const;
 
                     /**
                      * 设置The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
-                     * @param MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+                     * @param _msgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+                     * 
                      */
                     void SetMsgRetentionSeconds(const uint64_t& _msgRetentionSeconds);
 
                     /**
                      * 判断参数 MsgRetentionSeconds 是否已赋值
                      * @return MsgRetentionSeconds 是否已赋值
+                     * 
                      */
                     bool MsgRetentionSecondsHasBeenSet() const;
 
                     /**
                      * 获取Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      * @return RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * 
                      */
                     uint64_t GetRewindSeconds() const;
 
                     /**
                      * 设置Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-                     * @param RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @param _rewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * 
                      */
                     void SetRewindSeconds(const uint64_t& _rewindSeconds);
 
                     /**
                      * 判断参数 RewindSeconds 是否已赋值
                      * @return RewindSeconds 是否已赋值
+                     * 
                      */
                     bool RewindSecondsHasBeenSet() const;
 
                     /**
                      * 获取1: transaction queue; 0: general queue
                      * @return Transaction 1: transaction queue; 0: general queue
+                     * 
                      */
                     uint64_t GetTransaction() const;
 
                     /**
                      * 设置1: transaction queue; 0: general queue
-                     * @param Transaction 1: transaction queue; 0: general queue
+                     * @param _transaction 1: transaction queue; 0: general queue
+                     * 
                      */
                     void SetTransaction(const uint64_t& _transaction);
 
                     /**
                      * 判断参数 Transaction 是否已赋值
                      * @return Transaction 是否已赋值
+                     * 
                      */
                     bool TransactionHasBeenSet() const;
 
                     /**
                      * 获取First lookback interval
                      * @return FirstQueryInterval First lookback interval
+                     * 
                      */
                     uint64_t GetFirstQueryInterval() const;
 
                     /**
                      * 设置First lookback interval
-                     * @param FirstQueryInterval First lookback interval
+                     * @param _firstQueryInterval First lookback interval
+                     * 
                      */
                     void SetFirstQueryInterval(const uint64_t& _firstQueryInterval);
 
                     /**
                      * 判断参数 FirstQueryInterval 是否已赋值
                      * @return FirstQueryInterval 是否已赋值
+                     * 
                      */
                     bool FirstQueryIntervalHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of lookbacks
                      * @return MaxQueryCount Maximum number of lookbacks
+                     * 
                      */
                     uint64_t GetMaxQueryCount() const;
 
                     /**
                      * 设置Maximum number of lookbacks
-                     * @param MaxQueryCount Maximum number of lookbacks
+                     * @param _maxQueryCount Maximum number of lookbacks
+                     * 
                      */
                     void SetMaxQueryCount(const uint64_t& _maxQueryCount);
 
                     /**
                      * 判断参数 MaxQueryCount 是否已赋值
                      * @return MaxQueryCount 是否已赋值
+                     * 
                      */
                     bool MaxQueryCountHasBeenSet() const;
 
                     /**
                      * 获取Dead letter queue name
                      * @return DeadLetterQueueName Dead letter queue name
+                     * 
                      */
                     std::string GetDeadLetterQueueName() const;
 
                     /**
                      * 设置Dead letter queue name
-                     * @param DeadLetterQueueName Dead letter queue name
+                     * @param _deadLetterQueueName Dead letter queue name
+                     * 
                      */
                     void SetDeadLetterQueueName(const std::string& _deadLetterQueueName);
 
                     /**
                      * 判断参数 DeadLetterQueueName 是否已赋值
                      * @return DeadLetterQueueName 是否已赋值
+                     * 
                      */
                     bool DeadLetterQueueNameHasBeenSet() const;
 
                     /**
                      * 获取Dead letter policy. 0: message has been consumed multiple times but not deleted; 1: `Time-To-Live` has elapsed
                      * @return Policy Dead letter policy. 0: message has been consumed multiple times but not deleted; 1: `Time-To-Live` has elapsed
+                     * 
                      */
                     uint64_t GetPolicy() const;
 
                     /**
                      * 设置Dead letter policy. 0: message has been consumed multiple times but not deleted; 1: `Time-To-Live` has elapsed
-                     * @param Policy Dead letter policy. 0: message has been consumed multiple times but not deleted; 1: `Time-To-Live` has elapsed
+                     * @param _policy Dead letter policy. 0: message has been consumed multiple times but not deleted; 1: `Time-To-Live` has elapsed
+                     * 
                      */
                     void SetPolicy(const uint64_t& _policy);
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 
                     /**
                      * 获取Maximum receipt times. Value range: 1–1000
                      * @return MaxReceiveCount Maximum receipt times. Value range: 1–1000
+                     * 
                      */
                     uint64_t GetMaxReceiveCount() const;
 
                     /**
                      * 设置Maximum receipt times. Value range: 1–1000
-                     * @param MaxReceiveCount Maximum receipt times. Value range: 1–1000
+                     * @param _maxReceiveCount Maximum receipt times. Value range: 1–1000
+                     * 
                      */
                     void SetMaxReceiveCount(const uint64_t& _maxReceiveCount);
 
                     /**
                      * 判断参数 MaxReceiveCount 是否已赋值
                      * @return MaxReceiveCount 是否已赋值
+                     * 
                      */
                     bool MaxReceiveCountHasBeenSet() const;
 
                     /**
                      * 获取Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
                      * @return MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
+                     * 
                      */
                     uint64_t GetMaxTimeToLive() const;
 
                     /**
                      * 设置Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
-                     * @param MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
+                     * @param _maxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
+                     * 
                      */
                     void SetMaxTimeToLive(const uint64_t& _maxTimeToLive);
 
                     /**
                      * 判断参数 MaxTimeToLive 是否已赋值
                      * @return MaxTimeToLive 是否已赋值
+                     * 
                      */
                     bool MaxTimeToLiveHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
                      * @return Trace Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
+                     * 
                      */
                     bool GetTrace() const;
 
                     /**
                      * 设置Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
-                     * @param Trace Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
+                     * @param _trace Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
+                     * 
                      */
                     void SetTrace(const bool& _trace);
 
                     /**
                      * 判断参数 Trace 是否已赋值
                      * @return Trace 是否已赋值
+                     * 
                      */
                     bool TraceHasBeenSet() const;
 
                     /**
                      * 获取Tag array.
                      * @return Tags Tag array.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag array.
-                     * @param Tags Tag array.
+                     * @param _tags Tag array.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * 
                      */
                     uint64_t GetRetentionSizeInMB() const;
 
                     /**
                      * 设置Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-                     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @param _retentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * 
                      */
                     void SetRetentionSizeInMB(const uint64_t& _retentionSizeInMB);
 
                     /**
                      * 判断参数 RetentionSizeInMB 是否已赋值
                      * @return RetentionSizeInMB 是否已赋值
+                     * 
                      */
                     bool RetentionSizeInMBHasBeenSet() const;
 

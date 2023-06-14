@@ -50,6 +50,7 @@ namespace TencentCloud
                      * @return NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
 `BGP` 
 `HIGH_QUALITY_BGP`
+                     * 
                      */
                     std::string GetNetworkType() const;
 
@@ -57,15 +58,17 @@ namespace TencentCloud
                      * 设置The network type of the bandwidth package. Default value: `BGP`. Valid values:
 `BGP` 
 `HIGH_QUALITY_BGP`
-                     * @param NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
+                     * @param _networkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
 `BGP` 
 `HIGH_QUALITY_BGP`
+                     * 
                      */
                     void SetNetworkType(const std::string& _networkType);
 
                     /**
                      * 判断参数 NetworkType 是否已赋值
                      * @return NetworkType 是否已赋值
+                     * 
                      */
                     bool NetworkTypeHasBeenSet() const;
 
@@ -78,6 +81,7 @@ namespace TencentCloud
 <li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
 <li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
 <li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+                     * 
                      */
                     std::string GetChargeType() const;
 
@@ -86,106 +90,123 @@ namespace TencentCloud
 <li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
 <li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
 <li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
-                     * @param ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+                     * @param _chargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
 <li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
 <li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
 <li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+                     * 
                      */
                     void SetChargeType(const std::string& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取The name of the bandwidth package.
                      * @return BandwidthPackageName The name of the bandwidth package.
+                     * 
                      */
                     std::string GetBandwidthPackageName() const;
 
                     /**
                      * 设置The name of the bandwidth package.
-                     * @param BandwidthPackageName The name of the bandwidth package.
+                     * @param _bandwidthPackageName The name of the bandwidth package.
+                     * 
                      */
                     void SetBandwidthPackageName(const std::string& _bandwidthPackageName);
 
                     /**
                      * 判断参数 BandwidthPackageName 是否已赋值
                      * @return BandwidthPackageName 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageNameHasBeenSet() const;
 
                     /**
                      * 获取The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
                      * @return BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * 
                      */
                     uint64_t GetBandwidthPackageCount() const;
 
                     /**
                      * 设置The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
-                     * @param BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * @param _bandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+                     * 
                      */
                     void SetBandwidthPackageCount(const uint64_t& _bandwidthPackageCount);
 
                     /**
                      * 判断参数 BandwidthPackageCount 是否已赋值
                      * @return BandwidthPackageCount 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageCountHasBeenSet() const;
 
                     /**
                      * 获取The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
                      * @return InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
+                     * 
                      */
                     int64_t GetInternetMaxBandwidth() const;
 
                     /**
                      * 设置The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
-                     * @param InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
+                     * @param _internetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
+                     * 
                      */
                     void SetInternetMaxBandwidth(const int64_t& _internetMaxBandwidth);
 
                     /**
                      * 判断参数 InternetMaxBandwidth 是否已赋值
                      * @return InternetMaxBandwidth 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthHasBeenSet() const;
 
                     /**
                      * 获取The list of tags to be bound.
                      * @return Tags The list of tags to be bound.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置The list of tags to be bound.
-                     * @param Tags The list of tags to be bound.
+                     * @param _tags The list of tags to be bound.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
                      * @return Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
-                     * @param Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
+                     * @param _protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

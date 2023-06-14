@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Data point in time.
                      * @return Time Data point in time.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Data point in time.
-                     * @param Time Data point in time.
+                     * @param _time Data point in time.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetValue() const;
 
                     /**
                      * 设置Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+                     * @param _value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const double& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

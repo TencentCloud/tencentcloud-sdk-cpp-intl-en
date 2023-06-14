@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Automatic isolation switch. Valid values: `true` (on); `false` (off).
                      * @return AutoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
+                     * 
                      */
                     bool GetAutoIsolateSwitch() const;
 
                     /**
                      * 设置Automatic isolation switch. Valid values: `true` (on); `false` (off).
-                     * @param AutoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
+                     * @param _autoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
+                     * 
                      */
                     void SetAutoIsolateSwitch(const bool& _autoIsolateSwitch);
 
                     /**
                      * 判断参数 AutoIsolateSwitch 是否已赋值
                      * @return AutoIsolateSwitch 是否已赋值
+                     * 
                      */
                     bool AutoIsolateSwitchHasBeenSet() const;
 
                     /**
                      * 获取Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
                      * @return IsKillProgress Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
+                     * 
                      */
                     bool GetIsKillProgress() const;
 
                     /**
                      * 设置Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
-                     * @param IsKillProgress Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
+                     * @param _isKillProgress Whether to interrupt the process associated with the isolated file. Valid values: `true` (yes); `false` (no).
+                     * 
                      */
                     void SetIsKillProgress(const bool& _isKillProgress);
 
                     /**
                      * 判断参数 IsKillProgress 是否已赋值
                      * @return IsKillProgress 是否已赋值
+                     * 
                      */
                     bool IsKillProgressHasBeenSet() const;
 

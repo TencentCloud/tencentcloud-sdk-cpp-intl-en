@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the successfully added recipient.
                      * @return Id ID of the successfully added recipient.
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

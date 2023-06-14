@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Filename
                      * @return FileName Filename
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename
-                     * @param FileName Filename
+                     * @param _fileName Filename
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取File type
                      * @return FileType File type
+                     * 
                      */
                     std::string GetFileType() const;
 
                     /**
                      * 设置File type
-                     * @param FileType File type
+                     * @param _fileType File type
+                     * 
                      */
                     void SetFileType(const std::string& _fileType);
 
                     /**
                      * 判断参数 FileType 是否已赋值
                      * @return FileType 是否已赋值
+                     * 
                      */
                     bool FileTypeHasBeenSet() const;
 
                     /**
                      * 获取File size in bytes
                      * @return FileSize File size in bytes
+                     * 
                      */
                     uint64_t GetFileSize() const;
 
                     /**
                      * 设置File size in bytes
-                     * @param FileSize File size in bytes
+                     * @param _fileSize File size in bytes
+                     * 
                      */
                     void SetFileSize(const uint64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
                      * @return FileSize 是否已赋值
+                     * 
                      */
                     bool FileSizeHasBeenSet() const;
 
                     /**
                      * 获取File path
                      * @return FilePath File path
+                     * 
                      */
                     std::string GetFilePath() const;
 
                     /**
                      * 设置File path
-                     * @param FilePath File path
+                     * @param _filePath File path
+                     * 
                      */
                     void SetFilePath(const std::string& _filePath);
 
                     /**
                      * 判断参数 FilePath 是否已赋值
                      * @return FilePath 是否已赋值
+                     * 
                      */
                     bool FilePathHasBeenSet() const;
 
                     /**
                      * 获取File creation time
                      * @return FileCreateTime File creation time
+                     * 
                      */
                     std::string GetFileCreateTime() const;
 
                     /**
                      * 设置File creation time
-                     * @param FileCreateTime File creation time
+                     * @param _fileCreateTime File creation time
+                     * 
                      */
                     void SetFileCreateTime(const std::string& _fileCreateTime);
 
                     /**
                      * 判断参数 FileCreateTime 是否已赋值
                      * @return FileCreateTime 是否已赋值
+                     * 
                      */
                     bool FileCreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Time when the file is last tampered with
                      * @return LatestTamperedFileMTime Time when the file is last tampered with
+                     * 
                      */
                     std::string GetLatestTamperedFileMTime() const;
 
                     /**
                      * 设置Time when the file is last tampered with
-                     * @param LatestTamperedFileMTime Time when the file is last tampered with
+                     * @param _latestTamperedFileMTime Time when the file is last tampered with
+                     * 
                      */
                     void SetLatestTamperedFileMTime(const std::string& _latestTamperedFileMTime);
 
                     /**
                      * 判断参数 LatestTamperedFileMTime 是否已赋值
                      * @return LatestTamperedFileMTime 是否已赋值
+                     * 
                      */
                     bool LatestTamperedFileMTimeHasBeenSet() const;
 
                     /**
                      * 获取Content of the new file
                      * @return NewFile Content of the new file
+                     * 
                      */
                     std::string GetNewFile() const;
 
                     /**
                      * 设置Content of the new file
-                     * @param NewFile Content of the new file
+                     * @param _newFile Content of the new file
+                     * 
                      */
                     void SetNewFile(const std::string& _newFile);
 
                     /**
                      * 判断参数 NewFile 是否已赋值
                      * @return NewFile 是否已赋值
+                     * 
                      */
                     bool NewFileHasBeenSet() const;
 
                     /**
                      * 获取Differences between old and new files
                      * @return FileDiff Differences between old and new files
+                     * 
                      */
                     std::string GetFileDiff() const;
 
                     /**
                      * 设置Differences between old and new files
-                     * @param FileDiff Differences between old and new files
+                     * @param _fileDiff Differences between old and new files
+                     * 
                      */
                     void SetFileDiff(const std::string& _fileDiff);
 
                     /**
                      * 判断参数 FileDiff 是否已赋值
                      * @return FileDiff 是否已赋值
+                     * 
                      */
                     bool FileDiffHasBeenSet() const;
 

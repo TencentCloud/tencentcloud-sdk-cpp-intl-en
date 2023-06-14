@@ -53,38 +53,44 @@ namespace TencentCloud
 Note: If any condition in the array is met, the feature will run.
                      * @return Conditions The condition that determines if a feature should run.
 Note: If any condition in the array is met, the feature will run.
+                     * 
                      */
                     std::vector<RuleAndConditions> GetConditions() const;
 
                     /**
                      * 设置The condition that determines if a feature should run.
 Note: If any condition in the array is met, the feature will run.
-                     * @param Conditions The condition that determines if a feature should run.
+                     * @param _conditions The condition that determines if a feature should run.
 Note: If any condition in the array is met, the feature will run.
+                     * 
                      */
                     void SetConditions(const std::vector<RuleAndConditions>& _conditions);
 
                     /**
                      * 判断参数 Conditions 是否已赋值
                      * @return Conditions 是否已赋值
+                     * 
                      */
                     bool ConditionsHasBeenSet() const;
 
                     /**
                      * 获取The feature to be executed.
                      * @return Actions The feature to be executed.
+                     * 
                      */
                     std::vector<Action> GetActions() const;
 
                     /**
                      * 设置The feature to be executed.
-                     * @param Actions The feature to be executed.
+                     * @param _actions The feature to be executed.
+                     * 
                      */
                     void SetActions(const std::vector<Action>& _actions);
 
                     /**
                      * 判断参数 Actions 是否已赋值
                      * @return Actions 是否已赋值
+                     * 
                      */
                     bool ActionsHasBeenSet() const;
 

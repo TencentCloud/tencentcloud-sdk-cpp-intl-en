@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
                      * @return LaunchConfigurationId This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+                     * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
                      * 判断参数 LaunchConfigurationId 是否已赋值
                      * @return LaunchConfigurationId 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationIdHasBeenSet() const;
 

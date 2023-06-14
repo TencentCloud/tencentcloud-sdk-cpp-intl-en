@@ -51,90 +51,105 @@ namespace TencentCloud
                     /**
                      * 获取The task status. Valid values: PROCESSING, SUCCESS, FAIL.
                      * @return Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置The task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @param Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * @param _status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The error code. An empty string indicates the task is successful; any other value returned indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
                      * @return ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+                     * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
                      * 设置The error code. An empty string indicates the task is successful; any other value returned indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
-                     * @param ErrCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+                     * @param _errCodeExt The error code. An empty string indicates the task is successful; any other value returned indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+                     * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
 
                     /**
                      * 判断参数 ErrCodeExt 是否已赋值
                      * @return ErrCodeExt 是否已赋值
+                     * 
                      */
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
                      * 获取The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
                      * @return ErrCode The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
-                     * @param ErrCode The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
+                     * @param _errCode The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取The error message.
                      * @return Message The error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置The error message.
-                     * @param Message The error message.
+                     * @param _message The error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取The input of the content analysis task.
                      * @return Input The input of the content analysis task.
+                     * 
                      */
                     AiAnalysisTaskInput GetInput() const;
 
                     /**
                      * 设置The input of the content analysis task.
-                     * @param Input The input of the content analysis task.
+                     * @param _input The input of the content analysis task.
+                     * 
                      */
                     void SetInput(const AiAnalysisTaskInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
@@ -143,20 +158,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Output The output of the content analysis task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AiAnalysisResult> GetOutput() const;
 
                     /**
                      * 设置The output of the content analysis task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Output The output of the content analysis task.
+                     * @param _output The output of the content analysis task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutput(const std::vector<AiAnalysisResult>& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 

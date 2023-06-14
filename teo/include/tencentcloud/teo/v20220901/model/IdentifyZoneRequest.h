@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The site name.
                      * @return ZoneName The site name.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置The site name.
-                     * @param ZoneName The site name.
+                     * @param _zoneName The site name.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 
                      * @return Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
 
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
 
-                     * @param Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+                     * @param _domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
 
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Name of the function to be deleted
                      * @return FunctionName Name of the function to be deleted
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Name of the function to be deleted
-                     * @param FunctionName Name of the function to be deleted
+                     * @param _functionName Name of the function to be deleted
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function namespace
                      * @return Namespace Function namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace
-                     * @param Namespace Function namespace
+                     * @param _namespace Function namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取ID of the version to delete. All versions are deleted if it’s left empty.
                      * @return Qualifier ID of the version to delete. All versions are deleted if it’s left empty.
+                     * 
                      */
                     std::string GetQualifier() const;
 
                     /**
                      * 设置ID of the version to delete. All versions are deleted if it’s left empty.
-                     * @param Qualifier ID of the version to delete. All versions are deleted if it’s left empty.
+                     * @param _qualifier ID of the version to delete. All versions are deleted if it’s left empty.
+                     * 
                      */
                     void SetQualifier(const std::string& _qualifier);
 
                     /**
                      * 判断参数 Qualifier 是否已赋值
                      * @return Qualifier 是否已赋值
+                     * 
                      */
                     bool QualifierHasBeenSet() const;
 

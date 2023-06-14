@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return Id Task ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Task ID
-                     * @param Id Task ID
+                     * @param _id Task ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -79,6 +82,7 @@ namespace TencentCloud
 <li> **PROCESSING** </li>  Executing
 <li> **COMPLETED** </li>  Completed
 <li> **FAILED** </li>  Failed
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -89,18 +93,20 @@ namespace TencentCloud
 <li> **PROCESSING** </li>  Executing
 <li> **COMPLETED** </li>  Completed
 <li> **FAILED** </li>  Failed
-                     * @param Status Task status
+                     * @param _status Task status
 
 <li> **PENDING** </li>  Pending
 <li> **PROCESSING** </li>  Executing
 <li> **COMPLETED** </li>  Completed
 <li> **FAILED** </li>  Failed
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -113,6 +119,7 @@ namespace TencentCloud
 
 <li> **IMPORT_USER** </li>  User import
 <li> **EXPORT_USER** </li>  User export
+                     * 
                      */
                     std::string GetType() const;
 
@@ -121,34 +128,39 @@ namespace TencentCloud
 
 <li> **IMPORT_USER** </li>  User import
 <li> **EXPORT_USER** </li>  User export
-                     * @param Type Task type
+                     * @param _type Task type
 
 <li> **IMPORT_USER** </li>  User import
 <li> **EXPORT_USER** </li>  User export
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Task creation time
                      * @return CreatedDate Task creation time
+                     * 
                      */
                     int64_t GetCreatedDate() const;
 
                     /**
                      * 设置Task creation time
-                     * @param CreatedDate Task creation time
+                     * @param _createdDate Task creation time
+                     * 
                      */
                     void SetCreatedDate(const int64_t& _createdDate);
 
                     /**
                      * 判断参数 CreatedDate 是否已赋值
                      * @return CreatedDate 是否已赋值
+                     * 
                      */
                     bool CreatedDateHasBeenSet() const;
 
@@ -163,6 +175,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFormat() const;
 
@@ -172,17 +185,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Format Data type of the task
+                     * @param _format Data type of the task
 
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
@@ -191,20 +206,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Location Task result download address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLocation() const;
 
                     /**
                      * 设置Task result download address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Location Task result download address
+                     * @param _location Task result download address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLocation(const std::string& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 
@@ -213,20 +231,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorDetails Failure details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ErrorDetails> GetErrorDetails() const;
 
                     /**
                      * 设置Failure details
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrorDetails Failure details
+                     * @param _errorDetails Failure details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorDetails(const std::vector<ErrorDetails>& _errorDetails);
 
                     /**
                      * 判断参数 ErrorDetails 是否已赋值
                      * @return ErrorDetails 是否已赋值
+                     * 
                      */
                     bool ErrorDetailsHasBeenSet() const;
 
@@ -235,20 +256,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailedUsers Failed user
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<FailedUsers> GetFailedUsers() const;
 
                     /**
                      * 设置Failed user
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FailedUsers Failed user
+                     * @param _failedUsers Failed user
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedUsers(const std::vector<FailedUsers>& _failedUsers);
 
                     /**
                      * 判断参数 FailedUsers 是否已赋值
                      * @return FailedUsers 是否已赋值
+                     * 
                      */
                     bool FailedUsersHasBeenSet() const;
 

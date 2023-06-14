@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the connection group to be modified.
                      * @return GroupId ID of the connection group to be modified.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置ID of the connection group to be modified.
-                     * @param GroupId ID of the connection group to be modified.
+                     * @param _groupId ID of the connection group to be modified.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取New connection group name. Up to 30 characters. The extra characters will be truncated.
                      * @return GroupName New connection group name. Up to 30 characters. The extra characters will be truncated.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置New connection group name. Up to 30 characters. The extra characters will be truncated.
-                     * @param GroupName New connection group name. Up to 30 characters. The extra characters will be truncated.
+                     * @param _groupName New connection group name. Up to 30 characters. The extra characters will be truncated.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 

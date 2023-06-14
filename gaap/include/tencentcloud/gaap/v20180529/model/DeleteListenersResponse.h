@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID list of listeners failed to be deleted
                      * @return OperationFailedListenerSet ID list of listeners failed to be deleted
+                     * 
                      */
                     std::vector<std::string> GetOperationFailedListenerSet() const;
 
                     /**
                      * 判断参数 OperationFailedListenerSet 是否已赋值
                      * @return OperationFailedListenerSet 是否已赋值
+                     * 
                      */
                     bool OperationFailedListenerSetHasBeenSet() const;
 
                     /**
                      * 获取ID list of listeners deleted successfully
                      * @return OperationSucceedListenerSet ID list of listeners deleted successfully
+                     * 
                      */
                     std::vector<std::string> GetOperationSucceedListenerSet() const;
 
                     /**
                      * 判断参数 OperationSucceedListenerSet 是否已赋值
                      * @return OperationSucceedListenerSet 是否已赋值
+                     * 
                      */
                     bool OperationSucceedListenerSetHasBeenSet() const;
 
                     /**
                      * 获取ID list of invalid listeners. For example: the listener does not exist, or the instance corresponding to the listener does not match.
                      * @return InvalidStatusListenerSet ID list of invalid listeners. For example: the listener does not exist, or the instance corresponding to the listener does not match.
+                     * 
                      */
                     std::vector<std::string> GetInvalidStatusListenerSet() const;
 
                     /**
                      * 判断参数 InvalidStatusListenerSet 是否已赋值
                      * @return InvalidStatusListenerSet 是否已赋值
+                     * 
                      */
                     bool InvalidStatusListenerSetHasBeenSet() const;
 

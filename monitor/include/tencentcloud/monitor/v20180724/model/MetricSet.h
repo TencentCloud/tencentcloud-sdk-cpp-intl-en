@@ -52,144 +52,168 @@ namespace TencentCloud
                     /**
                      * 获取Namespace. Each Tencent Cloud product has a namespace
                      * @return Namespace Namespace. Each Tencent Cloud product has a namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace. Each Tencent Cloud product has a namespace
-                     * @param Namespace Namespace. Each Tencent Cloud product has a namespace
+                     * @param _namespace Namespace. Each Tencent Cloud product has a namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Metric Name
                      * @return MetricName Metric Name
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric Name
-                     * @param MetricName Metric Name
+                     * @param _metricName Metric Name
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Unit used by the metric
                      * @return Unit Unit used by the metric
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置Unit used by the metric
-                     * @param Unit Unit used by the metric
+                     * @param _unit Unit used by the metric
+                     * 
                      */
                     void SetUnit(const std::string& _unit);
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 
                     /**
                      * 获取Unit used by the metric
                      * @return UnitCname Unit used by the metric
+                     * 
                      */
                     std::string GetUnitCname() const;
 
                     /**
                      * 设置Unit used by the metric
-                     * @param UnitCname Unit used by the metric
+                     * @param _unitCname Unit used by the metric
+                     * 
                      */
                     void SetUnitCname(const std::string& _unitCname);
 
                     /**
                      * 判断参数 UnitCname 是否已赋值
                      * @return UnitCname 是否已赋值
+                     * 
                      */
                     bool UnitCnameHasBeenSet() const;
 
                     /**
                      * 获取Statistical period in seconds supported by the metric, such as 60 and 300
                      * @return Period Statistical period in seconds supported by the metric, such as 60 and 300
+                     * 
                      */
                     std::vector<int64_t> GetPeriod() const;
 
                     /**
                      * 设置Statistical period in seconds supported by the metric, such as 60 and 300
-                     * @param Period Statistical period in seconds supported by the metric, such as 60 and 300
+                     * @param _period Statistical period in seconds supported by the metric, such as 60 and 300
+                     * 
                      */
                     void SetPeriod(const std::vector<int64_t>& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Metric method during the statistical period
                      * @return Periods Metric method during the statistical period
+                     * 
                      */
                     std::vector<PeriodsSt> GetPeriods() const;
 
                     /**
                      * 设置Metric method during the statistical period
-                     * @param Periods Metric method during the statistical period
+                     * @param _periods Metric method during the statistical period
+                     * 
                      */
                     void SetPeriods(const std::vector<PeriodsSt>& _periods);
 
                     /**
                      * 判断参数 Periods 是否已赋值
                      * @return Periods 是否已赋值
+                     * 
                      */
                     bool PeriodsHasBeenSet() const;
 
                     /**
                      * 获取Meaning of the statistical metric
                      * @return Meaning Meaning of the statistical metric
+                     * 
                      */
                     MetricObjectMeaning GetMeaning() const;
 
                     /**
                      * 设置Meaning of the statistical metric
-                     * @param Meaning Meaning of the statistical metric
+                     * @param _meaning Meaning of the statistical metric
+                     * 
                      */
                     void SetMeaning(const MetricObjectMeaning& _meaning);
 
                     /**
                      * 判断参数 Meaning 是否已赋值
                      * @return Meaning 是否已赋值
+                     * 
                      */
                     bool MeaningHasBeenSet() const;
 
                     /**
                      * 获取Dimension description
                      * @return Dimensions Dimension description
+                     * 
                      */
                     std::vector<DimensionsDesc> GetDimensions() const;
 
                     /**
                      * 设置Dimension description
-                     * @param Dimensions Dimension description
+                     * @param _dimensions Dimension description
+                     * 
                      */
                     void SetDimensions(const std::vector<DimensionsDesc>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
@@ -198,20 +222,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MetricCName Metric name (in Chinese).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMetricCName() const;
 
                     /**
                      * 设置Metric name (in Chinese).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MetricCName Metric name (in Chinese).
+                     * @param _metricCName Metric name (in Chinese).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetricCName(const std::string& _metricCName);
 
                     /**
                      * 判断参数 MetricCName 是否已赋值
                      * @return MetricCName 是否已赋值
+                     * 
                      */
                     bool MetricCNameHasBeenSet() const;
 
@@ -220,20 +247,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MetricEName Metric name (in English).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMetricEName() const;
 
                     /**
                      * 设置Metric name (in English).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MetricEName Metric name (in English).
+                     * @param _metricEName Metric name (in English).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetricEName(const std::string& _metricEName);
 
                     /**
                      * 判断参数 MetricEName 是否已赋值
                      * @return MetricEName 是否已赋值
+                     * 
                      */
                     bool MetricENameHasBeenSet() const;
 

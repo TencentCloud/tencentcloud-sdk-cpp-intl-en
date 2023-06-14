@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible instance traffic package details.
                      * @return TotalCount Number of eligible instance traffic package details.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of instance traffic package details.
                      * @return InstanceTrafficPackageSet List of instance traffic package details.
+                     * 
                      */
                     std::vector<InstanceTrafficPackage> GetInstanceTrafficPackageSet() const;
 
                     /**
                      * 判断参数 InstanceTrafficPackageSet 是否已赋值
                      * @return InstanceTrafficPackageSet 是否已赋值
+                     * 
                      */
                     bool InstanceTrafficPackageSetHasBeenSet() const;
 

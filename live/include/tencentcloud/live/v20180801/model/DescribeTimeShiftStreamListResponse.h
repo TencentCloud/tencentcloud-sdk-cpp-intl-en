@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The total number of records in the specified time period.
                      * @return TotalSize The total number of records in the specified time period.
+                     * 
                      */
                     int64_t GetTotalSize() const;
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StreamList The information of the streams.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TimeShiftStreamInfo> GetStreamList() const;
 
                     /**
                      * 判断参数 StreamList 是否已赋值
                      * @return StreamList 是否已赋值
+                     * 
                      */
                     bool StreamListHasBeenSet() const;
 

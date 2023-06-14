@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SuccessCertificates List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSuccessCertificates() const;
 
                     /**
                      * 判断参数 SuccessCertificates 是否已赋值
                      * @return SuccessCertificates 是否已赋值
+                     * 
                      */
                     bool SuccessCertificatesHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FailCertificates List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFailCertificates() const;
 
                     /**
                      * 判断参数 FailCertificates 是否已赋值
                      * @return FailCertificates 是否已赋值
+                     * 
                      */
                     bool FailCertificatesHasBeenSet() const;
 

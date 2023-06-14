@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the storage layer (tcapsvr)
                      * @return ServerUid The unique ID of the storage layer (tcapsvr)
+                     * 
                      */
                     std::string GetServerUid() const;
 
                     /**
                      * 设置The unique ID of the storage layer (tcapsvr)
-                     * @param ServerUid The unique ID of the storage layer (tcapsvr)
+                     * @param _serverUid The unique ID of the storage layer (tcapsvr)
+                     * 
                      */
                     void SetServerUid(const std::string& _serverUid);
 
                     /**
                      * 判断参数 ServerUid 是否已赋值
                      * @return ServerUid 是否已赋值
+                     * 
                      */
                     bool ServerUidHasBeenSet() const;
 
                     /**
                      * 获取Machine type
                      * @return MachineType Machine type
+                     * 
                      */
                     std::string GetMachineType() const;
 
                     /**
                      * 设置Machine type
-                     * @param MachineType Machine type
+                     * @param _machineType Machine type
+                     * 
                      */
                     void SetMachineType(const std::string& _machineType);
 
                     /**
                      * 判断参数 MachineType 是否已赋值
                      * @return MachineType 是否已赋值
+                     * 
                      */
                     bool MachineTypeHasBeenSet() const;
 
                     /**
                      * 获取Memory utilization
                      * @return MemoryRate Memory utilization
+                     * 
                      */
                     int64_t GetMemoryRate() const;
 
                     /**
                      * 设置Memory utilization
-                     * @param MemoryRate Memory utilization
+                     * @param _memoryRate Memory utilization
+                     * 
                      */
                     void SetMemoryRate(const int64_t& _memoryRate);
 
                     /**
                      * 判断参数 MemoryRate 是否已赋值
                      * @return MemoryRate 是否已赋值
+                     * 
                      */
                     bool MemoryRateHasBeenSet() const;
 
                     /**
                      * 获取Disk utilization
                      * @return DiskRate Disk utilization
+                     * 
                      */
                     int64_t GetDiskRate() const;
 
                     /**
                      * 设置Disk utilization
-                     * @param DiskRate Disk utilization
+                     * @param _diskRate Disk utilization
+                     * 
                      */
                     void SetDiskRate(const int64_t& _diskRate);
 
                     /**
                      * 判断参数 DiskRate 是否已赋值
                      * @return DiskRate 是否已赋值
+                     * 
                      */
                     bool DiskRateHasBeenSet() const;
 
                     /**
                      * 获取The number of reads
                      * @return ReadNum The number of reads
+                     * 
                      */
                     int64_t GetReadNum() const;
 
                     /**
                      * 设置The number of reads
-                     * @param ReadNum The number of reads
+                     * @param _readNum The number of reads
+                     * 
                      */
                     void SetReadNum(const int64_t& _readNum);
 
                     /**
                      * 判断参数 ReadNum 是否已赋值
                      * @return ReadNum 是否已赋值
+                     * 
                      */
                     bool ReadNumHasBeenSet() const;
 
                     /**
                      * 获取The number of writes
                      * @return WriteNum The number of writes
+                     * 
                      */
                     int64_t GetWriteNum() const;
 
                     /**
                      * 设置The number of writes
-                     * @param WriteNum The number of writes
+                     * @param _writeNum The number of writes
+                     * 
                      */
                     void SetWriteNum(const int64_t& _writeNum);
 
                     /**
                      * 判断参数 WriteNum 是否已赋值
                      * @return WriteNum 是否已赋值
+                     * 
                      */
                     bool WriteNumHasBeenSet() const;
 
@@ -159,20 +177,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version Version
+                     * @param _version Version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 

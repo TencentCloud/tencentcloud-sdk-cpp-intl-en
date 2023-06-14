@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取UIN of the current account.
                      * @return Uin UIN of the current account.
+                     * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取OwnerUin of the current account.
                      * @return OwnerUin OwnerUin of the current account.
+                     * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
                      * 判断参数 OwnerUin 是否已赋值
                      * @return OwnerUin 是否已赋值
+                     * 
                      */
                     bool OwnerUinHasBeenSet() const;
 
                     /**
                      * 获取AppId of the current account.
                      * @return AppId AppId of the current account.
+                     * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 

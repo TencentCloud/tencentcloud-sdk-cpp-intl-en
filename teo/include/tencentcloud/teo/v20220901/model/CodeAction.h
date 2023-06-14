@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
                      * @return Action Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
-                     * @param Action Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
+                     * @param _action Feature name. You can call the [DescribeRulesSetting](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) API to view the requirements for entering the feature name.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Operation parameter.
                      * @return Parameters Operation parameter.
+                     * 
                      */
                     std::vector<RuleCodeActionParams> GetParameters() const;
 
                     /**
                      * 设置Operation parameter.
-                     * @param Parameters Operation parameter.
+                     * @param _parameters Operation parameter.
+                     * 
                      */
                     void SetParameters(const std::vector<RuleCodeActionParams>& _parameters);
 
                     /**
                      * 判断参数 Parameters 是否已赋值
                      * @return Parameters 是否已赋值
+                     * 
                      */
                     bool ParametersHasBeenSet() const;
 

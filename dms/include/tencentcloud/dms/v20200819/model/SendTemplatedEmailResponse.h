@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The result of creating a template email task
                      * @return Result The result of creating a template email task
+                     * 
                      */
                     bool GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

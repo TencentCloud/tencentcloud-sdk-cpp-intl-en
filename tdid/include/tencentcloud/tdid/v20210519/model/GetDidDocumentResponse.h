@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The name.
                      * @return Name The name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The DID document.
                      * @return Document The DID document.
+                     * 
                      */
                     std::string GetDocument() const;
 
                     /**
                      * 判断参数 Document 是否已赋值
                      * @return Document 是否已赋值
+                     * 
                      */
                     bool DocumentHasBeenSet() const;
 

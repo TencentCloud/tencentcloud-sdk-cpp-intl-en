@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
                      * @return Topic Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
-                     * @param Topic Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * @param _topic Topic name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 
                     /**
                      * 获取Topic namespace. Currently, you can create topics only in one single namespace.
                      * @return Namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+                     * 
                      */
                     std::vector<std::string> GetNamespaces() const;
 
                     /**
                      * 设置Topic namespace. Currently, you can create topics only in one single namespace.
-                     * @param Namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+                     * @param _namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+                     * 
                      */
                     void SetNamespaces(const std::vector<std::string>& _namespaces);
 
                     /**
                      * 判断参数 Namespaces 是否已赋值
                      * @return Namespaces 是否已赋值
+                     * 
                      */
                     bool NamespacesHasBeenSet() const;
 
                     /**
                      * 获取Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
                      * @return Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
-                     * @param Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+                     * @param _type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Topic remarks (up to 128 characters)
                      * @return Remark Topic remarks (up to 128 characters)
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Topic remarks (up to 128 characters)
-                     * @param Remark Topic remarks (up to 128 characters)
+                     * @param _remark Topic remarks (up to 128 characters)
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Number of partitions, which doesn't take effect for globally sequential messages
                      * @return PartitionNum Number of partitions, which doesn't take effect for globally sequential messages
+                     * 
                      */
                     int64_t GetPartitionNum() const;
 
                     /**
                      * 设置Number of partitions, which doesn't take effect for globally sequential messages
-                     * @param PartitionNum Number of partitions, which doesn't take effect for globally sequential messages
+                     * @param _partitionNum Number of partitions, which doesn't take effect for globally sequential messages
+                     * 
                      */
                     void SetPartitionNum(const int64_t& _partitionNum);
 
                     /**
                      * 判断参数 PartitionNum 是否已赋值
                      * @return PartitionNum 是否已赋值
+                     * 
                      */
                     bool PartitionNumHasBeenSet() const;
 

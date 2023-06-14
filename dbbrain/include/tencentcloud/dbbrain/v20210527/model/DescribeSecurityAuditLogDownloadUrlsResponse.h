@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取List of COS URLs of the export results. If the result set is large, it may be divided into multiple URLs for download.
                      * @return Urls List of COS URLs of the export results. If the result set is large, it may be divided into multiple URLs for download.
+                     * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
                      * 判断参数 Urls 是否已赋值
                      * @return Urls 是否已赋值
+                     * 
                      */
                     bool UrlsHasBeenSet() const;
 

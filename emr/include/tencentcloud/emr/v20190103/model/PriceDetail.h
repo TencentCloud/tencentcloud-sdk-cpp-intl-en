@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The node ID
                      * @return ResourceId The node ID
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置The node ID
-                     * @param ResourceId The node ID
+                     * @param _resourceId The node ID
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取The price formula
                      * @return Formula The price formula
+                     * 
                      */
                     std::string GetFormula() const;
 
                     /**
                      * 设置The price formula
-                     * @param Formula The price formula
+                     * @param _formula The price formula
+                     * 
                      */
                     void SetFormula(const std::string& _formula);
 
                     /**
                      * 判断参数 Formula 是否已赋值
                      * @return Formula 是否已赋值
+                     * 
                      */
                     bool FormulaHasBeenSet() const;
 
                     /**
                      * 获取The original price
                      * @return OriginalCost The original price
+                     * 
                      */
                     double GetOriginalCost() const;
 
                     /**
                      * 设置The original price
-                     * @param OriginalCost The original price
+                     * @param _originalCost The original price
+                     * 
                      */
                     void SetOriginalCost(const double& _originalCost);
 
                     /**
                      * 判断参数 OriginalCost 是否已赋值
                      * @return OriginalCost 是否已赋值
+                     * 
                      */
                     bool OriginalCostHasBeenSet() const;
 
                     /**
                      * 获取The discount price
                      * @return DiscountCost The discount price
+                     * 
                      */
                     double GetDiscountCost() const;
 
                     /**
                      * 设置The discount price
-                     * @param DiscountCost The discount price
+                     * @param _discountCost The discount price
+                     * 
                      */
                     void SetDiscountCost(const double& _discountCost);
 
                     /**
                      * 判断参数 DiscountCost 是否已赋值
                      * @return DiscountCost 是否已赋值
+                     * 
                      */
                     bool DiscountCostHasBeenSet() const;
 

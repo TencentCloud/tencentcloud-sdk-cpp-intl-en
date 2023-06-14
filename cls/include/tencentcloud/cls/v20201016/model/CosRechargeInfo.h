@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Id COS import configuration ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置COS import configuration ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Id COS import configuration ID.
+                     * @param _id COS import configuration ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicId ID of the log topic.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置ID of the log topic.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TopicId ID of the log topic.
+                     * @param _topicId ID of the log topic.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogsetId ID of the logset.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置ID of the logset.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogsetId ID of the logset.
+                     * @param _logsetId ID of the logset.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name COS import task name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置COS import task name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name COS import task name.
+                     * @param _name COS import task name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Bucket COS bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置COS bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Bucket COS bucket.
+                     * @param _bucket COS bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BucketRegion Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBucketRegion() const;
 
                     /**
                      * 设置Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BucketRegion Region where the COS bucket is located.
+                     * @param _bucketRegion Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBucketRegion(const std::string& _bucketRegion);
 
                     /**
                      * 判断参数 BucketRegion 是否已赋值
                      * @return BucketRegion 是否已赋值
+                     * 
                      */
                     bool BucketRegionHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Prefix The prefix of the folder where COS files are located.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPrefix() const;
 
                     /**
                      * 设置The prefix of the folder where COS files are located.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Prefix The prefix of the folder where COS files are located.
+                     * @param _prefix The prefix of the folder where COS files are located.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrefix(const std::string& _prefix);
 
                     /**
                      * 判断参数 Prefix 是否已赋值
                      * @return Prefix 是否已赋值
+                     * 
                      */
                     bool PrefixHasBeenSet() const;
 
@@ -208,6 +229,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogType() const;
 
@@ -215,15 +237,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
+                     * @param _logType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
@@ -232,20 +256,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
+                     * @param _status Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -254,20 +281,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
+                     * @param _enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -276,20 +306,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time.
+                     * @param _createTime Creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -298,20 +331,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Update time.
+                     * @param _updateTime Update time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -320,20 +356,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Progress Progress in percentage.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
                      * 设置Progress in percentage.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Progress Progress in percentage.
+                     * @param _progress Progress in percentage.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProgress(const uint64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
@@ -342,20 +381,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Compress Valid values: "" (default), "gzip", "lzop", "snappy"
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCompress() const;
 
                     /**
                      * 设置Valid values: "" (default), "gzip", "lzop", "snappy"
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Compress Valid values: "" (default), "gzip", "lzop", "snappy"
+                     * @param _compress Valid values: "" (default), "gzip", "lzop", "snappy"
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompress(const std::string& _compress);
 
                     /**
                      * 判断参数 Compress 是否已赋值
                      * @return Compress 是否已赋值
+                     * 
                      */
                     bool CompressHasBeenSet() const;
 
@@ -364,20 +406,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExtractRuleInfo See the description of the `ExtractRuleInfo` structure.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ExtractRuleInfo GetExtractRuleInfo() const;
 
                     /**
                      * 设置See the description of the `ExtractRuleInfo` structure.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExtractRuleInfo See the description of the `ExtractRuleInfo` structure.
+                     * @param _extractRuleInfo See the description of the `ExtractRuleInfo` structure.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtractRuleInfo(const ExtractRuleInfo& _extractRuleInfo);
 
                     /**
                      * 判断参数 ExtractRuleInfo 是否已赋值
                      * @return ExtractRuleInfo 是否已赋值
+                     * 
                      */
                     bool ExtractRuleInfoHasBeenSet() const;
 

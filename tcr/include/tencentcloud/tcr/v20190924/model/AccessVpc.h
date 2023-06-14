@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID
                      * @return SubnetId Subnet ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID
-                     * @param SubnetId Subnet ID
+                     * @param _subnetId Subnet ID
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Private network access status
                      * @return Status Private network access status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Private network access status
-                     * @param Status Private network access status
+                     * @param _status Private network access status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Private network access IP
                      * @return AccessIp Private network access IP
+                     * 
                      */
                     std::string GetAccessIp() const;
 
                     /**
                      * 设置Private network access IP
-                     * @param AccessIp Private network access IP
+                     * @param _accessIp Private network access IP
+                     * 
                      */
                     void SetAccessIp(const std::string& _accessIp);
 
                     /**
                      * 判断参数 AccessIp 是否已赋值
                      * @return AccessIp 是否已赋值
+                     * 
                      */
                     bool AccessIpHasBeenSet() const;
 

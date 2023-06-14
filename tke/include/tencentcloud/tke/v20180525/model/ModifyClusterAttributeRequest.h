@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Project of the Cluster
                      * @return ProjectId Project of the Cluster
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project of the Cluster
-                     * @param ProjectId Project of the Cluster
+                     * @param _projectId Project of the Cluster
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Cluster description
                      * @return ClusterDesc Cluster description
+                     * 
                      */
                     std::string GetClusterDesc() const;
 
                     /**
                      * 设置Cluster description
-                     * @param ClusterDesc Cluster description
+                     * @param _clusterDesc Cluster description
+                     * 
                      */
                     void SetClusterDesc(const std::string& _clusterDesc);
 
                     /**
                      * 判断参数 ClusterDesc 是否已赋值
                      * @return ClusterDesc 是否已赋值
+                     * 
                      */
                     bool ClusterDescHasBeenSet() const;
 
                     /**
                      * 获取Cluster specification
                      * @return ClusterLevel Cluster specification
+                     * 
                      */
                     std::string GetClusterLevel() const;
 
                     /**
                      * 设置Cluster specification
-                     * @param ClusterLevel Cluster specification
+                     * @param _clusterLevel Cluster specification
+                     * 
                      */
                     void SetClusterLevel(const std::string& _clusterLevel);
 
                     /**
                      * 判断参数 ClusterLevel 是否已赋值
                      * @return ClusterLevel 是否已赋值
+                     * 
                      */
                     bool ClusterLevelHasBeenSet() const;
 
                     /**
                      * 获取Auto-upgrades cluster specification
                      * @return AutoUpgradeClusterLevel Auto-upgrades cluster specification
+                     * 
                      */
                     AutoUpgradeClusterLevel GetAutoUpgradeClusterLevel() const;
 
                     /**
                      * 设置Auto-upgrades cluster specification
-                     * @param AutoUpgradeClusterLevel Auto-upgrades cluster specification
+                     * @param _autoUpgradeClusterLevel Auto-upgrades cluster specification
+                     * 
                      */
                     void SetAutoUpgradeClusterLevel(const AutoUpgradeClusterLevel& _autoUpgradeClusterLevel);
 
                     /**
                      * 判断参数 AutoUpgradeClusterLevel 是否已赋值
                      * @return AutoUpgradeClusterLevel 是否已赋值
+                     * 
                      */
                     bool AutoUpgradeClusterLevelHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable qGPU Sharing
                      * @return QGPUShareEnable Whether to enable qGPU Sharing
+                     * 
                      */
                     bool GetQGPUShareEnable() const;
 
                     /**
                      * 设置Whether to enable qGPU Sharing
-                     * @param QGPUShareEnable Whether to enable qGPU Sharing
+                     * @param _qGPUShareEnable Whether to enable qGPU Sharing
+                     * 
                      */
                     void SetQGPUShareEnable(const bool& _qGPUShareEnable);
 
                     /**
                      * 判断参数 QGPUShareEnable 是否已赋值
                      * @return QGPUShareEnable 是否已赋值
+                     * 
                      */
                     bool QGPUShareEnableHasBeenSet() const;
 

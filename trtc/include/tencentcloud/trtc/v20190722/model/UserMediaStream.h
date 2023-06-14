@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The user information.
                      * @return UserInfo The user information.
+                     * 
                      */
                     MixUserInfo GetUserInfo() const;
 
                     /**
                      * 设置The user information.
-                     * @param UserInfo The user information.
+                     * @param _userInfo The user information.
+                     * 
                      */
                     void SetUserInfo(const MixUserInfo& _userInfo);
 
                     /**
                      * 判断参数 UserInfo 是否已赋值
                      * @return UserInfo 是否已赋值
+                     * 
                      */
                     bool UserInfoHasBeenSet() const;
 
                     /**
                      * 获取The stream type. 0: Camera; 1: Screen sharing. If you do not pass this parameter, 0 will be used.
                      * @return StreamType The stream type. 0: Camera; 1: Screen sharing. If you do not pass this parameter, 0 will be used.
+                     * 
                      */
                     uint64_t GetStreamType() const;
 
                     /**
                      * 设置The stream type. 0: Camera; 1: Screen sharing. If you do not pass this parameter, 0 will be used.
-                     * @param StreamType The stream type. 0: Camera; 1: Screen sharing. If you do not pass this parameter, 0 will be used.
+                     * @param _streamType The stream type. 0: Camera; 1: Screen sharing. If you do not pass this parameter, 0 will be used.
+                     * 
                      */
                     void SetStreamType(const uint64_t& _streamType);
 
                     /**
                      * 判断参数 StreamType 是否已赋值
                      * @return StreamType 是否已赋值
+                     * 
                      */
                     bool StreamTypeHasBeenSet() const;
 

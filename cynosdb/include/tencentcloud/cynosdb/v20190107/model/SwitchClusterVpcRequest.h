@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取VPC ID in string
                      * @return UniqVpcId VPC ID in string
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC ID in string
-                     * @param UniqVpcId VPC ID in string
+                     * @param _uniqVpcId VPC ID in string
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID in string
                      * @return UniqSubnetId Subnet ID in string
+                     * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
                      * 设置Subnet ID in string
-                     * @param UniqSubnetId Subnet ID in string
+                     * @param _uniqSubnetId Subnet ID in string
+                     * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
 
                     /**
                      * 判断参数 UniqSubnetId 是否已赋值
                      * @return UniqSubnetId 是否已赋值
+                     * 
                      */
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Valid hours of old IP
                      * @return OldIpReserveHours Valid hours of old IP
+                     * 
                      */
                     int64_t GetOldIpReserveHours() const;
 
                     /**
                      * 设置Valid hours of old IP
-                     * @param OldIpReserveHours Valid hours of old IP
+                     * @param _oldIpReserveHours Valid hours of old IP
+                     * 
                      */
                     void SetOldIpReserveHours(const int64_t& _oldIpReserveHours);
 
                     /**
                      * 判断参数 OldIpReserveHours 是否已赋值
                      * @return OldIpReserveHours 是否已赋值
+                     * 
                      */
                     bool OldIpReserveHoursHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Bandwidth range.
                      * @return BandwidthRange Bandwidth range.
+                     * 
                      */
                     std::vector<int64_t> GetBandwidthRange() const;
 
                     /**
                      * 设置Bandwidth range.
-                     * @param BandwidthRange Bandwidth range.
+                     * @param _bandwidthRange Bandwidth range.
+                     * 
                      */
                     void SetBandwidthRange(const std::vector<int64_t>& _bandwidthRange);
 
                     /**
                      * 判断参数 BandwidthRange 是否已赋值
                      * @return BandwidthRange 是否已赋值
+                     * 
                      */
                     bool BandwidthRangeHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
                      * @return BandwidthUnitPrice Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
+                     * 
                      */
                     double GetBandwidthUnitPrice() const;
 
                     /**
                      * 设置Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
-                     * @param BandwidthUnitPrice Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
+                     * @param _bandwidthUnitPrice Bandwidth unit price within the bandwidth range. Unit: CNY/Mbps/day.
+                     * 
                      */
                     void SetBandwidthUnitPrice(const double& _bandwidthUnitPrice);
 
                     /**
                      * 判断参数 BandwidthUnitPrice 是否已赋值
                      * @return BandwidthUnitPrice 是否已赋值
+                     * 
                      */
                     bool BandwidthUnitPriceHasBeenSet() const;
 
                     /**
                      * 获取Discounted bandwidth price in CNY/Mbps/day.
                      * @return DiscountBandwidthUnitPrice Discounted bandwidth price in CNY/Mbps/day.
+                     * 
                      */
                     double GetDiscountBandwidthUnitPrice() const;
 
                     /**
                      * 设置Discounted bandwidth price in CNY/Mbps/day.
-                     * @param DiscountBandwidthUnitPrice Discounted bandwidth price in CNY/Mbps/day.
+                     * @param _discountBandwidthUnitPrice Discounted bandwidth price in CNY/Mbps/day.
+                     * 
                      */
                     void SetDiscountBandwidthUnitPrice(const double& _discountBandwidthUnitPrice);
 
                     /**
                      * 判断参数 DiscountBandwidthUnitPrice 是否已赋值
                      * @return DiscountBandwidthUnitPrice 是否已赋值
+                     * 
                      */
                     bool DiscountBandwidthUnitPriceHasBeenSet() const;
 

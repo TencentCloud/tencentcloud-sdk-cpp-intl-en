@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The word in the text that is sent.
                      * @return Text The word in the text that is sent.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置The word in the text that is sent.
-                     * @param Text The word in the text that is sent.
+                     * @param _text The word in the text that is sent.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
                     /**
                      * 获取The start timestamp of the word in the synthesized audio data, in milliseconds.
                      * @return BeginTime The start timestamp of the word in the synthesized audio data, in milliseconds.
+                     * 
                      */
                     int64_t GetBeginTime() const;
 
                     /**
                      * 设置The start timestamp of the word in the synthesized audio data, in milliseconds.
-                     * @param BeginTime The start timestamp of the word in the synthesized audio data, in milliseconds.
+                     * @param _beginTime The start timestamp of the word in the synthesized audio data, in milliseconds.
+                     * 
                      */
                     void SetBeginTime(const int64_t& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取The end timestamp of the word in the synthesized audio data, in milliseconds.
                      * @return EndTime The end timestamp of the word in the synthesized audio data, in milliseconds.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置The end timestamp of the word in the synthesized audio data, in milliseconds.
-                     * @param EndTime The end timestamp of the word in the synthesized audio data, in milliseconds.
+                     * @param _endTime The end timestamp of the word in the synthesized audio data, in milliseconds.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The start index of the character in the whole sentence, starting from 0.
                      * @return BeginIndex The start index of the character in the whole sentence, starting from 0.
+                     * 
                      */
                     int64_t GetBeginIndex() const;
 
                     /**
                      * 设置The start index of the character in the whole sentence, starting from 0.
-                     * @param BeginIndex The start index of the character in the whole sentence, starting from 0.
+                     * @param _beginIndex The start index of the character in the whole sentence, starting from 0.
+                     * 
                      */
                     void SetBeginIndex(const int64_t& _beginIndex);
 
                     /**
                      * 判断参数 BeginIndex 是否已赋值
                      * @return BeginIndex 是否已赋值
+                     * 
                      */
                     bool BeginIndexHasBeenSet() const;
 
                     /**
                      * 获取The end index of the character in the whole sentence, starting from 0.
                      * @return EndIndex The end index of the character in the whole sentence, starting from 0.
+                     * 
                      */
                     int64_t GetEndIndex() const;
 
                     /**
                      * 设置The end index of the character in the whole sentence, starting from 0.
-                     * @param EndIndex The end index of the character in the whole sentence, starting from 0.
+                     * @param _endIndex The end index of the character in the whole sentence, starting from 0.
+                     * 
                      */
                     void SetEndIndex(const int64_t& _endIndex);
 
                     /**
                      * 判断参数 EndIndex 是否已赋值
                      * @return EndIndex 是否已赋值
+                     * 
                      */
                     bool EndIndexHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Phoneme The phonemes of the word.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPhoneme() const;
 
                     /**
                      * 设置The phonemes of the word.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Phoneme The phonemes of the word.
+                     * @param _phoneme The phonemes of the word.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPhoneme(const std::string& _phoneme);
 
                     /**
                      * 判断参数 Phoneme 是否已赋值
                      * @return Phoneme 是否已赋值
+                     * 
                      */
                     bool PhonemeHasBeenSet() const;
 

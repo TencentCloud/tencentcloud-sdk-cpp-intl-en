@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Estimated timeout period (hour)
                      * @return Timeout Estimated timeout period (hour)
+                     * 
                      */
                     double GetTimeout() const;
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Number of containers scanned in parallel on a single server
                      * @return ContainerScanConcurrencyCount Number of containers scanned in parallel on a single server
+                     * 
                      */
                     uint64_t GetContainerScanConcurrencyCount() const;
 
                     /**
                      * 判断参数 ContainerScanConcurrencyCount 是否已赋值
                      * @return ContainerScanConcurrencyCount 是否已赋值
+                     * 
                      */
                     bool ContainerScanConcurrencyCountHasBeenSet() const;
 

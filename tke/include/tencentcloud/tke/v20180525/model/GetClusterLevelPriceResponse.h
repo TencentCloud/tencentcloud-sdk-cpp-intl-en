@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Discount price (unit: US cent)
                      * @return Cost Discount price (unit: US cent)
+                     * 
                      */
                     uint64_t GetCost() const;
 
                     /**
                      * 判断参数 Cost 是否已赋值
                      * @return Cost 是否已赋值
+                     * 
                      */
                     bool CostHasBeenSet() const;
 
                     /**
                      * 获取Original price (unit: US cent)
                      * @return TotalCost Original price (unit: US cent)
+                     * 
                      */
                     uint64_t GetTotalCost() const;
 
                     /**
                      * 判断参数 TotalCost 是否已赋值
                      * @return TotalCost 是否已赋值
+                     * 
                      */
                     bool TotalCostHasBeenSet() const;
 

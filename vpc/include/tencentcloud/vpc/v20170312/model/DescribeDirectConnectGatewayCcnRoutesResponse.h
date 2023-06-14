@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of objects meeting the condition.
                      * @return TotalCount The number of objects meeting the condition.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The CCN route (IDC IP range) list.
                      * @return RouteSet The CCN route (IDC IP range) list.
+                     * 
                      */
                     std::vector<DirectConnectGatewayCcnRoute> GetRouteSet() const;
 
                     /**
                      * 判断参数 RouteSet 是否已赋值
                      * @return RouteSet 是否已赋值
+                     * 
                      */
                     bool RouteSetHasBeenSet() const;
 

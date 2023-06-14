@@ -50,60 +50,70 @@ namespace TencentCloud
                     /**
                      * 获取The collection of enum parameters
                      * @return InstanceEnumParam The collection of enum parameters
+                     * 
                      */
                     std::vector<InstanceEnumParam> GetInstanceEnumParam() const;
 
                     /**
                      * 判断参数 InstanceEnumParam 是否已赋值
                      * @return InstanceEnumParam 是否已赋值
+                     * 
                      */
                     bool InstanceEnumParamHasBeenSet() const;
 
                     /**
                      * 获取The collection of integer parameters
                      * @return InstanceIntegerParam The collection of integer parameters
+                     * 
                      */
                     std::vector<InstanceIntegerParam> GetInstanceIntegerParam() const;
 
                     /**
                      * 判断参数 InstanceIntegerParam 是否已赋值
                      * @return InstanceIntegerParam 是否已赋值
+                     * 
                      */
                     bool InstanceIntegerParamHasBeenSet() const;
 
                     /**
                      * 获取The collection of text parameters
                      * @return InstanceTextParam The collection of text parameters
+                     * 
                      */
                     std::vector<InstanceTextParam> GetInstanceTextParam() const;
 
                     /**
                      * 判断参数 InstanceTextParam 是否已赋值
                      * @return InstanceTextParam 是否已赋值
+                     * 
                      */
                     bool InstanceTextParamHasBeenSet() const;
 
                     /**
                      * 获取The collection of string parameters used to represent time ranges
                      * @return InstanceMultiParam The collection of string parameters used to represent time ranges
+                     * 
                      */
                     std::vector<InstanceMultiParam> GetInstanceMultiParam() const;
 
                     /**
                      * 判断参数 InstanceMultiParam 是否已赋值
                      * @return InstanceMultiParam 是否已赋值
+                     * 
                      */
                     bool InstanceMultiParamHasBeenSet() const;
 
                     /**
                      * 获取The total number of modifiable parameters of the instance, such as 0
                      * @return TotalCount The total number of modifiable parameters of the instance, such as 0
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

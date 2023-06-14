@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AudioDenoiseInfo The noise removal parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AudioDenoiseInfo GetAudioDenoiseInfo() const;
 
                     /**
                      * 设置The noise removal parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AudioDenoiseInfo The noise removal parameters.
+                     * @param _audioDenoiseInfo The noise removal parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAudioDenoiseInfo(const AudioDenoiseInfo& _audioDenoiseInfo);
 
                     /**
                      * 判断参数 AudioDenoiseInfo 是否已赋值
                      * @return AudioDenoiseInfo 是否已赋值
+                     * 
                      */
                     bool AudioDenoiseInfoHasBeenSet() const;
 

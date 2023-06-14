@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Recognized text. For more information, please click the link on the left
                      * @return TextDetections Recognized text. For more information, please click the link on the left
+                     * 
                      */
                     std::vector<TextTable> GetTextDetections() const;
 
                     /**
                      * 判断参数 TextDetections 是否已赋值
                      * @return TextDetections 是否已赋值
+                     * 
                      */
                     bool TextDetectionsHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded Excel data.
                      * @return Data Base64-encoded Excel data.
+                     * 
                      */
                     std::string GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

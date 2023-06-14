@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetKubeAPIServer() const;
 
                     /**
                      * 设置kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+                     * @param _kubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKubeAPIServer(const std::vector<std::string>& _kubeAPIServer);
 
                     /**
                      * 判断参数 KubeAPIServer 是否已赋值
                      * @return KubeAPIServer 是否已赋值
+                     * 
                      */
                     bool KubeAPIServerHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return KubeControllerManager kube-controller-manager custom parameter
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetKubeControllerManager() const;
 
                     /**
                      * 设置kube-controller-manager custom parameter
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param KubeControllerManager kube-controller-manager custom parameter
+                     * @param _kubeControllerManager kube-controller-manager custom parameter
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKubeControllerManager(const std::vector<std::string>& _kubeControllerManager);
 
                     /**
                      * 判断参数 KubeControllerManager 是否已赋值
                      * @return KubeControllerManager 是否已赋值
+                     * 
                      */
                     bool KubeControllerManagerHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return KubeScheduler kube-scheduler custom parameter
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetKubeScheduler() const;
 
                     /**
                      * 设置kube-scheduler custom parameter
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param KubeScheduler kube-scheduler custom parameter
+                     * @param _kubeScheduler kube-scheduler custom parameter
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKubeScheduler(const std::vector<std::string>& _kubeScheduler);
 
                     /**
                      * 判断参数 KubeScheduler 是否已赋值
                      * @return KubeScheduler 是否已赋值
+                     * 
                      */
                     bool KubeSchedulerHasBeenSet() const;
 

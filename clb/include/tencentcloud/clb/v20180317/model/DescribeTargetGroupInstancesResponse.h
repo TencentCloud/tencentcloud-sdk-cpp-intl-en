@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of results returned for the current query
                      * @return TotalCount Number of results returned for the current query
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information of the bound server
                      * @return TargetGroupInstanceSet Information of the bound server
+                     * 
                      */
                     std::vector<TargetGroupBackend> GetTargetGroupInstanceSet() const;
 
                     /**
                      * 判断参数 TargetGroupInstanceSet 是否已赋值
                      * @return TargetGroupInstanceSet 是否已赋值
+                     * 
                      */
                     bool TargetGroupInstanceSetHasBeenSet() const;
 
                     /**
                      * 获取The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
                      * @return RealCount The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
+                     * 
                      */
                     uint64_t GetRealCount() const;
 
                     /**
                      * 判断参数 RealCount 是否已赋值
                      * @return RealCount 是否已赋值
+                     * 
                      */
                     bool RealCountHasBeenSet() const;
 

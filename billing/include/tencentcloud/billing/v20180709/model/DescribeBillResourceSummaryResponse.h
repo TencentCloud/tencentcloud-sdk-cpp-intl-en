@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Resource summary list
                      * @return ResourceSummarySet Resource summary list
+                     * 
                      */
                     std::vector<BillResourceSummary> GetResourceSummarySet() const;
 
                     /**
                      * 判断参数 ResourceSummarySet 是否已赋值
                      * @return ResourceSummarySet 是否已赋值
+                     * 
                      */
                     bool ResourceSummarySetHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Total Total number of resource summary lists
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

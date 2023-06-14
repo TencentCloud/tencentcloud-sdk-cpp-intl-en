@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取`HTTPS:443` listener ID
                      * @return ListenerId `HTTPS:443` listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置`HTTPS:443` listener ID
-                     * @param ListenerId `HTTPS:443` listener ID
+                     * @param _listenerId `HTTPS:443` listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
                      * @return Domains The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
-                     * @param Domains The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
+                     * @param _domains The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Redirection status code. Valid values: 301, 302, and 307.
                      * @return RewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+                     * 
                      */
                     std::vector<int64_t> GetRewriteCodes() const;
 
                     /**
                      * 设置Redirection status code. Valid values: 301, 302, and 307.
-                     * @param RewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+                     * @param _rewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+                     * 
                      */
                     void SetRewriteCodes(const std::vector<int64_t>& _rewriteCodes);
 
                     /**
                      * 判断参数 RewriteCodes 是否已赋值
                      * @return RewriteCodes 是否已赋值
+                     * 
                      */
                     bool RewriteCodesHasBeenSet() const;
 
                     /**
                      * 获取Whether the matched URL is carried in redirection.
                      * @return TakeUrls Whether the matched URL is carried in redirection.
+                     * 
                      */
                     std::vector<bool> GetTakeUrls() const;
 
                     /**
                      * 设置Whether the matched URL is carried in redirection.
-                     * @param TakeUrls Whether the matched URL is carried in redirection.
+                     * @param _takeUrls Whether the matched URL is carried in redirection.
+                     * 
                      */
                     void SetTakeUrls(const std::vector<bool>& _takeUrls);
 
                     /**
                      * 判断参数 TakeUrls 是否已赋值
                      * @return TakeUrls 是否已赋值
+                     * 
                      */
                     bool TakeUrlsHasBeenSet() const;
 

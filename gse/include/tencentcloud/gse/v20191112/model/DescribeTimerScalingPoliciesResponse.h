@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return TimerScalingPolicies Configuration of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<TimerScalingPolicy> GetTimerScalingPolicies() const;
 
                     /**
                      * 判断参数 TimerScalingPolicies 是否已赋值
                      * @return TimerScalingPolicies 是否已赋值
+                     * 
                      */
                     bool TimerScalingPoliciesHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of scheduled scaling policies
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

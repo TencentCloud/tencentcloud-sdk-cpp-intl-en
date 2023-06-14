@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Usage data required for drawing charts.
                      * @return Data Usage data required for drawing charts.
+                     * 
                      */
                     std::vector<DataItem> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

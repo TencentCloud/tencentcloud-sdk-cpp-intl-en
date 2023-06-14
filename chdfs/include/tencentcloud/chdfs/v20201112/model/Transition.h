@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Trigger time (in days)
                      * @return Days Trigger time (in days)
+                     * 
                      */
                     uint64_t GetDays() const;
 
                     /**
                      * 设置Trigger time (in days)
-                     * @param Days Trigger time (in days)
+                     * @param _days Trigger time (in days)
+                     * 
                      */
                     void SetDays(const uint64_t& _days);
 
                     /**
                      * 判断参数 Days 是否已赋值
                      * @return Days 是否已赋值
+                     * 
                      */
                     bool DaysHasBeenSet() const;
 
                     /**
                      * 获取Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
                      * @return Type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
-                     * @param Type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+                     * @param _type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

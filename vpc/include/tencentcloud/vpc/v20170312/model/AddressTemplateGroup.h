@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取IP address template group name.
                      * @return AddressTemplateGroupName IP address template group name.
+                     * 
                      */
                     std::string GetAddressTemplateGroupName() const;
 
                     /**
                      * 设置IP address template group name.
-                     * @param AddressTemplateGroupName IP address template group name.
+                     * @param _addressTemplateGroupName IP address template group name.
+                     * 
                      */
                     void SetAddressTemplateGroupName(const std::string& _addressTemplateGroupName);
 
                     /**
                      * 判断参数 AddressTemplateGroupName 是否已赋值
                      * @return AddressTemplateGroupName 是否已赋值
+                     * 
                      */
                     bool AddressTemplateGroupNameHasBeenSet() const;
 
                     /**
                      * 获取IP address template group instance ID, such as `ipmg-dih8xdbq`.
                      * @return AddressTemplateGroupId IP address template group instance ID, such as `ipmg-dih8xdbq`.
+                     * 
                      */
                     std::string GetAddressTemplateGroupId() const;
 
                     /**
                      * 设置IP address template group instance ID, such as `ipmg-dih8xdbq`.
-                     * @param AddressTemplateGroupId IP address template group instance ID, such as `ipmg-dih8xdbq`.
+                     * @param _addressTemplateGroupId IP address template group instance ID, such as `ipmg-dih8xdbq`.
+                     * 
                      */
                     void SetAddressTemplateGroupId(const std::string& _addressTemplateGroupId);
 
                     /**
                      * 判断参数 AddressTemplateGroupId 是否已赋值
                      * @return AddressTemplateGroupId 是否已赋值
+                     * 
                      */
                     bool AddressTemplateGroupIdHasBeenSet() const;
 
                     /**
                      * 获取IP address template ID.
                      * @return AddressTemplateIdSet IP address template ID.
+                     * 
                      */
                     std::vector<std::string> GetAddressTemplateIdSet() const;
 
                     /**
                      * 设置IP address template ID.
-                     * @param AddressTemplateIdSet IP address template ID.
+                     * @param _addressTemplateIdSet IP address template ID.
+                     * 
                      */
                     void SetAddressTemplateIdSet(const std::vector<std::string>& _addressTemplateIdSet);
 
                     /**
                      * 判断参数 AddressTemplateIdSet 是否已赋值
                      * @return AddressTemplateIdSet 是否已赋值
+                     * 
                      */
                     bool AddressTemplateIdSetHasBeenSet() const;
 
                     /**
                      * 获取Creation Time.
                      * @return CreatedTime Creation Time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation Time.
-                     * @param CreatedTime Creation Time.
+                     * @param _createdTime Creation Time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取IP address template instance
                      * @return AddressTemplateSet IP address template instance
+                     * 
                      */
                     std::vector<AddressTemplateItem> GetAddressTemplateSet() const;
 
                     /**
                      * 设置IP address template instance
-                     * @param AddressTemplateSet IP address template instance
+                     * @param _addressTemplateSet IP address template instance
+                     * 
                      */
                     void SetAddressTemplateSet(const std::vector<AddressTemplateItem>& _addressTemplateSet);
 
                     /**
                      * 判断参数 AddressTemplateSet 是否已赋值
                      * @return AddressTemplateSet 是否已赋值
+                     * 
                      */
                     bool AddressTemplateSetHasBeenSet() const;
 

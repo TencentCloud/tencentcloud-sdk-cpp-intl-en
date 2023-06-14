@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Group ID.
                      * @return Id Group ID.
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Group ID.
-                     * @param Id Group ID.
+                     * @param _id Group ID.
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Group name.
                      * @return Name Group name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Group name.
-                     * @param Name Group name.
+                     * @param _name Group name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Number of group members.
                      * @return MemberCount Number of group members.
+                     * 
                      */
                     int64_t GetMemberCount() const;
 
                     /**
                      * 设置Number of group members.
-                     * @param MemberCount Number of group members.
+                     * @param _memberCount Number of group members.
+                     * 
                      */
                     void SetMemberCount(const int64_t& _memberCount);
 
                     /**
                      * 判断参数 MemberCount 是否已赋值
                      * @return MemberCount 是否已赋值
+                     * 
                      */
                     bool MemberCountHasBeenSet() const;
 

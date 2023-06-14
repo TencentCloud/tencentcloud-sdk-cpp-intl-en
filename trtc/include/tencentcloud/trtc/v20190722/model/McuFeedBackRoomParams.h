@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The room ID.
                      * @return RoomId The room ID.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置The room ID.
-                     * @param RoomId The room ID.
+                     * @param _roomId The room ID.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
                      * @return RoomIdType The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
+                     * 
                      */
                     uint64_t GetRoomIdType() const;
 
                     /**
                      * 设置The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
-                     * @param RoomIdType The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
+                     * @param _roomIdType The ID type of the room to which streams are relayed. `0` indicates integer, and `1` indicates string.
+                     * 
                      */
                     void SetRoomIdType(const uint64_t& _roomIdType);
 
                     /**
                      * 判断参数 RoomIdType 是否已赋值
                      * @return RoomIdType 是否已赋值
+                     * 
                      */
                     bool RoomIdTypeHasBeenSet() const;
 
                     /**
                      * 获取The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
                      * @return UserId The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
-                     * @param UserId The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+                     * @param _userId The [user ID](https://www.tencentcloud.com/document/product/647/37714) of the relaying robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in this user ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
                      * @return UserSig The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
+                     * 
                      */
                     std::string GetUserSig() const;
 
                     /**
                      * 设置The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
-                     * @param UserSig The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
+                     * @param _userSig The signature (similar to login password) required for the relaying robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://www.tencentcloud.com/document/product/647/38104).
+                     * 
                      */
                     void SetUserSig(const std::string& _userSig);
 
                     /**
                      * 判断参数 UserSig 是否已赋值
                      * @return UserSig 是否已赋值
+                     * 
                      */
                     bool UserSigHasBeenSet() const;
 

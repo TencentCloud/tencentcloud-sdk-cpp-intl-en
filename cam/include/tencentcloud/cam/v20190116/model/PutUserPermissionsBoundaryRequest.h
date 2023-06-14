@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Sub-account `Uin`
                      * @return TargetUin Sub-account `Uin`
+                     * 
                      */
                     int64_t GetTargetUin() const;
 
                     /**
                      * 设置Sub-account `Uin`
-                     * @param TargetUin Sub-account `Uin`
+                     * @param _targetUin Sub-account `Uin`
+                     * 
                      */
                     void SetTargetUin(const int64_t& _targetUin);
 
                     /**
                      * 判断参数 TargetUin 是否已赋值
                      * @return TargetUin 是否已赋值
+                     * 
                      */
                     bool TargetUinHasBeenSet() const;
 
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 

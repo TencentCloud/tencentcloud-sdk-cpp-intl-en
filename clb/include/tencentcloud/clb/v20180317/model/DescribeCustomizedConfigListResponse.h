@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Configuration list.
                      * @return ConfigList Configuration list.
+                     * 
                      */
                     std::vector<ConfigListItem> GetConfigList() const;
 
                     /**
                      * 判断参数 ConfigList 是否已赋值
                      * @return ConfigList 是否已赋值
+                     * 
                      */
                     bool ConfigListHasBeenSet() const;
 
                     /**
                      * 获取Number of configurations.
                      * @return TotalCount Number of configurations.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

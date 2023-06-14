@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取(Filter) filter by `topicName`. Fuzzy search is supported
                      * @return SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
+                     * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
                      * 设置(Filter) filter by `topicName`. Fuzzy search is supported
-                     * @param SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
+                     * @param _searchWord (Filter) filter by `topicName`. Fuzzy search is supported
+                     * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
 
                     /**
                      * 判断参数 SearchWord 是否已赋值
                      * @return SearchWord 是否已赋值
+                     * 
                      */
                     bool SearchWordHasBeenSet() const;
 
                     /**
                      * 获取Offset. If this parameter is left empty, 0 will be used by default
                      * @return Offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. If this parameter is left empty, 0 will be used by default
-                     * @param Offset Offset. If this parameter is left empty, 0 will be used by default
+                     * @param _offset Offset. If this parameter is left empty, 0 will be used by default
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
                      * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+                     * @param _limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Name of the preset ACL rule.
                      * @return AclRuleName Name of the preset ACL rule.
+                     * 
                      */
                     std::string GetAclRuleName() const;
 
                     /**
                      * 设置Name of the preset ACL rule.
-                     * @param AclRuleName Name of the preset ACL rule.
+                     * @param _aclRuleName Name of the preset ACL rule.
+                     * 
                      */
                     void SetAclRuleName(const std::string& _aclRuleName);
 
                     /**
                      * 判断参数 AclRuleName 是否已赋值
                      * @return AclRuleName 是否已赋值
+                     * 
                      */
                     bool AclRuleNameHasBeenSet() const;
 

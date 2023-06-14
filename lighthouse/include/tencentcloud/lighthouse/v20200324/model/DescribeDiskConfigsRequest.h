@@ -52,6 +52,7 @@ Required: no
 <li>zone</li>Filter by availability zone.
 Type: String
 Required: no
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -60,16 +61,18 @@ Required: no
 <li>zone</li>Filter by availability zone.
 Type: String
 Required: no
-                     * @param Filters Filter list.
+                     * @param _filters Filter list.
 <li>zone</li>Filter by availability zone.
 Type: String
 Required: no
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

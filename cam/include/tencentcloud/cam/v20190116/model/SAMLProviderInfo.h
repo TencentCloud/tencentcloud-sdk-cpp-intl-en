@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取SAML identity provider name
                      * @return Name SAML identity provider name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置SAML identity provider name
-                     * @param Name SAML identity provider name
+                     * @param _name SAML identity provider name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取SAML identity provider description
                      * @return Description SAML identity provider description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置SAML identity provider description
-                     * @param Description SAML identity provider description
+                     * @param _description SAML identity provider description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Time SAML identity provider created
                      * @return CreateTime Time SAML identity provider created
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Time SAML identity provider created
-                     * @param CreateTime Time SAML identity provider created
+                     * @param _createTime Time SAML identity provider created
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Time SAML identity provider last modified
                      * @return ModifyTime Time SAML identity provider last modified
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Time SAML identity provider last modified
-                     * @param ModifyTime Time SAML identity provider last modified
+                     * @param _modifyTime Time SAML identity provider last modified
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 

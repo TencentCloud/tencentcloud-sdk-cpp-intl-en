@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Compatible runtimes
                      * @return CompatibleRuntime Compatible runtimes
+                     * 
                      */
                     std::string GetCompatibleRuntime() const;
 
                     /**
                      * 设置Compatible runtimes
-                     * @param CompatibleRuntime Compatible runtimes
+                     * @param _compatibleRuntime Compatible runtimes
+                     * 
                      */
                     void SetCompatibleRuntime(const std::string& _compatibleRuntime);
 
                     /**
                      * 判断参数 CompatibleRuntime 是否已赋值
                      * @return CompatibleRuntime 是否已赋值
+                     * 
                      */
                     bool CompatibleRuntimeHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit
                      * @return Limit Limit
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit
-                     * @param Limit Limit
+                     * @param _limit Limit
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query key, which fuzzily matches the name
                      * @return SearchKey Query key, which fuzzily matches the name
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Query key, which fuzzily matches the name
-                     * @param SearchKey Query key, which fuzzily matches the name
+                     * @param _searchKey Query key, which fuzzily matches the name
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 

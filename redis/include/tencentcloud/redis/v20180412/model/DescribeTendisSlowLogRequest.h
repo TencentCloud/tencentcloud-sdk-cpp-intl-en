@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of crs-ngvou0i1
                      * @return InstanceId Instance ID in the format of crs-ngvou0i1
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of crs-ngvou0i1
-                     * @param InstanceId Instance ID in the format of crs-ngvou0i1
+                     * @param _instanceId Instance ID in the format of crs-ngvou0i1
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Start time in the format of 2019-09-08 12:12:41
                      * @return BeginTime Start time in the format of 2019-09-08 12:12:41
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time in the format of 2019-09-08 12:12:41
-                     * @param BeginTime Start time in the format of 2019-09-08 12:12:41
+                     * @param _beginTime Start time in the format of 2019-09-08 12:12:41
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time in the format of 2019-09-09 12:12:41
                      * @return EndTime End time in the format of 2019-09-09 12:12:41
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in the format of 2019-09-09 12:12:41
-                     * @param EndTime End time in the format of 2019-09-09 12:12:41
+                     * @param _endTime End time in the format of 2019-09-09 12:12:41
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Slow query threshold in ms
                      * @return MinQueryTime Slow query threshold in ms
+                     * 
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
                      * 设置Slow query threshold in ms
-                     * @param MinQueryTime Slow query threshold in ms
+                     * @param _minQueryTime Slow query threshold in ms
+                     * 
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
 
                     /**
                      * 判断参数 MinQueryTime 是否已赋值
                      * @return MinQueryTime 是否已赋值
+                     * 
                      */
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of results returned per page. Default value: 20.
                      * @return Limit Maximum number of results returned per page. Default value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of results returned per page. Default value: 20.
-                     * @param Limit Maximum number of results returned per page. Default value: 20.
+                     * @param _limit Maximum number of results returned per page. Default value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset, which is an integral multiple of `Limit`.
                      * @return Offset Offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which is an integral multiple of `Limit`.
-                     * @param Offset Offset, which is an integral multiple of `Limit`.
+                     * @param _offset Offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

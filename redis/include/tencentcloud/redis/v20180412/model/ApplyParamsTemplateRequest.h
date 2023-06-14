@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of instance IDs
                      * @return InstanceIds List of instance IDs
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of instance IDs
-                     * @param InstanceIds List of instance IDs
+                     * @param _instanceIds List of instance IDs
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of the parameter template to be applied
                      * @return TemplateId ID of the parameter template to be applied
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置ID of the parameter template to be applied
-                     * @param TemplateId ID of the parameter template to be applied
+                     * @param _templateId ID of the parameter template to be applied
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 

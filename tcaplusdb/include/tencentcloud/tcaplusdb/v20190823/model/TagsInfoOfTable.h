@@ -51,90 +51,105 @@ namespace TencentCloud
                     /**
                      * 获取Table instance ID
                      * @return TableInstanceId Table instance ID
+                     * 
                      */
                     std::string GetTableInstanceId() const;
 
                     /**
                      * 设置Table instance ID
-                     * @param TableInstanceId Table instance ID
+                     * @param _tableInstanceId Table instance ID
+                     * 
                      */
                     void SetTableInstanceId(const std::string& _tableInstanceId);
 
                     /**
                      * 判断参数 TableInstanceId 是否已赋值
                      * @return TableInstanceId 是否已赋值
+                     * 
                      */
                     bool TableInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Table name
                      * @return TableName Table name
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
-                     * @param TableName Table name
+                     * @param _tableName Table name
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
                     /**
                      * 获取Table group ID
                      * @return TableGroupId Table group ID
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置Table group ID
-                     * @param TableGroupId Table group ID
+                     * @param _tableGroupId Table group ID
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Tag information
                      * @return Tags Tag information
+                     * 
                      */
                     std::vector<TagInfoUnit> GetTags() const;
 
                     /**
                      * 设置Tag information
-                     * @param Tags Tag information
+                     * @param _tags Tag information
+                     * 
                      */
                     void SetTags(const std::vector<TagInfoUnit>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Error message
                      * @return Error Error message
+                     * 
                      */
                     ErrorInfo GetError() const;
 
                     /**
                      * 设置Error message
-                     * @param Error Error message
+                     * @param _error Error message
+                     * 
                      */
                     void SetError(const ErrorInfo& _error);
 
                     /**
                      * 判断参数 Error 是否已赋值
                      * @return Error 是否已赋值
+                     * 
                      */
                     bool ErrorHasBeenSet() const;
 

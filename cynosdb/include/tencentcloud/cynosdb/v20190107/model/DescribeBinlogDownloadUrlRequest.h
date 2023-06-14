@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Binlog file ID
                      * @return BinlogId Binlog file ID
+                     * 
                      */
                     int64_t GetBinlogId() const;
 
                     /**
                      * 设置Binlog file ID
-                     * @param BinlogId Binlog file ID
+                     * @param _binlogId Binlog file ID
+                     * 
                      */
                     void SetBinlogId(const int64_t& _binlogId);
 
                     /**
                      * 判断参数 BinlogId 是否已赋值
                      * @return BinlogId 是否已赋值
+                     * 
                      */
                     bool BinlogIdHasBeenSet() const;
 

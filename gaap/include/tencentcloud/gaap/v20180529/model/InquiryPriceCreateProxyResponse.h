@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Basic price of connection in USD/day.
                      * @return ProxyDailyPrice Basic price of connection in USD/day.
+                     * 
                      */
                     double GetProxyDailyPrice() const;
 
                     /**
                      * 判断参数 ProxyDailyPrice 是否已赋值
                      * @return ProxyDailyPrice 是否已赋值
+                     * 
                      */
                     bool ProxyDailyPriceHasBeenSet() const;
 
@@ -61,36 +63,42 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BandwidthUnitPrice Tiered price of connection bandwidth.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BandwidthPriceGradient> GetBandwidthUnitPrice() const;
 
                     /**
                      * 判断参数 BandwidthUnitPrice 是否已赋值
                      * @return BandwidthUnitPrice 是否已赋值
+                     * 
                      */
                     bool BandwidthUnitPriceHasBeenSet() const;
 
                     /**
                      * 获取Discounted basic price of connection in USD/day.
                      * @return DiscountProxyDailyPrice Discounted basic price of connection in USD/day.
+                     * 
                      */
                     double GetDiscountProxyDailyPrice() const;
 
                     /**
                      * 判断参数 DiscountProxyDailyPrice 是否已赋值
                      * @return DiscountProxyDailyPrice 是否已赋值
+                     * 
                      */
                     bool DiscountProxyDailyPriceHasBeenSet() const;
 
                     /**
                      * 获取Currency, which supports CNY, USD, etc.
                      * @return Currency Currency, which supports CNY, USD, etc.
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 
@@ -99,12 +107,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FlowUnitPrice Connection traffic price in USD/GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetFlowUnitPrice() const;
 
                     /**
                      * 判断参数 FlowUnitPrice 是否已赋值
                      * @return FlowUnitPrice 是否已赋值
+                     * 
                      */
                     bool FlowUnitPriceHasBeenSet() const;
 
@@ -113,12 +123,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiscountFlowUnitPrice Discounted connection traffic price in USD/GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetDiscountFlowUnitPrice() const;
 
                     /**
                      * 判断参数 DiscountFlowUnitPrice 是否已赋值
                      * @return DiscountFlowUnitPrice 是否已赋值
+                     * 
                      */
                     bool DiscountFlowUnitPriceHasBeenSet() const;
 
@@ -127,12 +139,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return Cn2BandwidthPrice Dedicated BGP bandwidth price. Unit: USD/Mbps/day
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     double GetCn2BandwidthPrice() const;
 
                     /**
                      * 判断参数 Cn2BandwidthPrice 是否已赋值
                      * @return Cn2BandwidthPrice 是否已赋值
+                     * 
                      */
                     bool Cn2BandwidthPriceHasBeenSet() const;
 
@@ -141,12 +155,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return Cn2BandwidthPriceWithDiscount Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     double GetCn2BandwidthPriceWithDiscount() const;
 
                     /**
                      * 判断参数 Cn2BandwidthPriceWithDiscount 是否已赋值
                      * @return Cn2BandwidthPriceWithDiscount 是否已赋值
+                     * 
                      */
                     bool Cn2BandwidthPriceWithDiscountHasBeenSet() const;
 

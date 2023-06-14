@@ -51,12 +51,14 @@ Attacks: number of DDoS attacks
                      * @return Data Field value as follows:
 Days: number of days of Anti-DDoS resource use
 Attacks: number of DDoS attacks
+                     * 
                      */
                     std::vector<KeyValue> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

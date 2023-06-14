@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name.
                      * @return InstanceName Instance name.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name.
-                     * @param InstanceName Instance name.
+                     * @param _instanceName Instance name.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Private IP of the instance.
                      * @return Vip Private IP of the instance.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Private IP of the instance.
-                     * @param Vip Private IP of the instance.
+                     * @param _vip Private IP of the instance.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Private network port of the instance.
                      * @return Vport Private network port of the instance.
+                     * 
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Private network port of the instance.
-                     * @param Vport Private network port of the instance.
+                     * @param _vport Private network port of the instance.
+                     * 
                      */
                     void SetVport(const int64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
                     /**
                      * 获取Instance product.
                      * @return Product Instance product.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Instance product.
-                     * @param Product Instance product.
+                     * @param _product Instance product.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Instance engine version.
                      * @return EngineVersion Instance engine version.
+                     * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
                      * 设置Instance engine version.
-                     * @param EngineVersion Instance engine version.
+                     * @param _engineVersion Instance engine version.
+                     * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
                     /**
                      * 判断参数 EngineVersion 是否已赋值
                      * @return EngineVersion 是否已赋值
+                     * 
                      */
                     bool EngineVersionHasBeenSet() const;
 

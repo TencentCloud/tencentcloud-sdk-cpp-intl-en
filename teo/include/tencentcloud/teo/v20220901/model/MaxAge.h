@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return FollowOrigin Whether to follow the origin server. Values:
 <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
 <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+                     * 
                      */
                     std::string GetFollowOrigin() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to follow the origin server. Values:
 <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
 <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
-                     * @param FollowOrigin Whether to follow the origin server. Values:
+                     * @param _followOrigin Whether to follow the origin server. Values:
 <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
 <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+                     * 
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
 
                     /**
                      * 判断参数 FollowOrigin 是否已赋值
                      * @return FollowOrigin 是否已赋值
+                     * 
                      */
                     bool FollowOriginHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: The value `0` means not to cache.
                      * @return MaxAgeTime Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
 Note: The value `0` means not to cache.
+                     * 
                      */
                     int64_t GetMaxAgeTime() const;
 
                     /**
                      * 设置Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
 Note: The value `0` means not to cache.
-                     * @param MaxAgeTime Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
+                     * @param _maxAgeTime Specifies the maximum amount of time (in seconds). The maximum value is 365 days.
 Note: The value `0` means not to cache.
+                     * 
                      */
                     void SetMaxAgeTime(const int64_t& _maxAgeTime);
 
                     /**
                      * 判断参数 MaxAgeTime 是否已赋值
                      * @return MaxAgeTime 是否已赋值
+                     * 
                      */
                     bool MaxAgeTimeHasBeenSet() const;
 

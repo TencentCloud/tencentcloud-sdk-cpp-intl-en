@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Operating system type
                      * @return OsName Operating system type
+                     * 
                      */
                     std::string GetOsName() const;
 
                     /**
                      * 设置Operating system type
-                     * @param OsName Operating system type
+                     * @param _osName Operating system type
+                     * 
                      */
                     void SetOsName(const std::string& _osName);
 
                     /**
                      * 判断参数 OsName 是否已赋值
                      * @return OsName 是否已赋值
+                     * 
                      */
                     bool OsNameHasBeenSet() const;
 
                     /**
                      * 获取Supported operating system versions
                      * @return OsVersions Supported operating system versions
+                     * 
                      */
                     std::vector<std::string> GetOsVersions() const;
 
                     /**
                      * 设置Supported operating system versions
-                     * @param OsVersions Supported operating system versions
+                     * @param _osVersions Supported operating system versions
+                     * 
                      */
                     void SetOsVersions(const std::vector<std::string>& _osVersions);
 
                     /**
                      * 判断参数 OsVersions 是否已赋值
                      * @return OsVersions 是否已赋值
+                     * 
                      */
                     bool OsVersionsHasBeenSet() const;
 
                     /**
                      * 获取Supported operating system architecture
                      * @return Architecture Supported operating system architecture
+                     * 
                      */
                     std::vector<std::string> GetArchitecture() const;
 
                     /**
                      * 设置Supported operating system architecture
-                     * @param Architecture Supported operating system architecture
+                     * @param _architecture Supported operating system architecture
+                     * 
                      */
                     void SetArchitecture(const std::vector<std::string>& _architecture);
 
                     /**
                      * 判断参数 Architecture 是否已赋值
                      * @return Architecture 是否已赋值
+                     * 
                      */
                     bool ArchitectureHasBeenSet() const;
 

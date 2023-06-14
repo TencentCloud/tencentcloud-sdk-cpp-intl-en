@@ -52,126 +52,147 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the output to modify.
                      * @return OutputId The ID of the output to modify.
+                     * 
                      */
                     std::string GetOutputId() const;
 
                     /**
                      * 设置The ID of the output to modify.
-                     * @param OutputId The ID of the output to modify.
+                     * @param _outputId The ID of the output to modify.
+                     * 
                      */
                     void SetOutputId(const std::string& _outputId);
 
                     /**
                      * 判断参数 OutputId 是否已赋值
                      * @return OutputId 是否已赋值
+                     * 
                      */
                     bool OutputIdHasBeenSet() const;
 
                     /**
                      * 获取The output name.
                      * @return OutputName The output name.
+                     * 
                      */
                     std::string GetOutputName() const;
 
                     /**
                      * 设置The output name.
-                     * @param OutputName The output name.
+                     * @param _outputName The output name.
+                     * 
                      */
                     void SetOutputName(const std::string& _outputName);
 
                     /**
                      * 判断参数 OutputName 是否已赋值
                      * @return OutputName 是否已赋值
+                     * 
                      */
                     bool OutputNameHasBeenSet() const;
 
                     /**
                      * 获取The description of the output.
                      * @return Description The description of the output.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置The description of the output.
-                     * @param Description The description of the output.
+                     * @param _description The description of the output.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取The output protocol. Valid values: SRT, RTP, RTMP.
                      * @return Protocol The output protocol. Valid values: SRT, RTP, RTMP.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The output protocol. Valid values: SRT, RTP, RTMP.
-                     * @param Protocol The output protocol. Valid values: SRT, RTP, RTMP.
+                     * @param _protocol The output protocol. Valid values: SRT, RTP, RTMP.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取The SRT relay configuration.
                      * @return SRTSettings The SRT relay configuration.
+                     * 
                      */
                     CreateOutputSrtSettings GetSRTSettings() const;
 
                     /**
                      * 设置The SRT relay configuration.
-                     * @param SRTSettings The SRT relay configuration.
+                     * @param _sRTSettings The SRT relay configuration.
+                     * 
                      */
                     void SetSRTSettings(const CreateOutputSrtSettings& _sRTSettings);
 
                     /**
                      * 判断参数 SRTSettings 是否已赋值
                      * @return SRTSettings 是否已赋值
+                     * 
                      */
                     bool SRTSettingsHasBeenSet() const;
 
                     /**
                      * 获取The RTP relay configuration.
                      * @return RTPSettings The RTP relay configuration.
+                     * 
                      */
                     CreateOutputInfoRTPSettings GetRTPSettings() const;
 
                     /**
                      * 设置The RTP relay configuration.
-                     * @param RTPSettings The RTP relay configuration.
+                     * @param _rTPSettings The RTP relay configuration.
+                     * 
                      */
                     void SetRTPSettings(const CreateOutputInfoRTPSettings& _rTPSettings);
 
                     /**
                      * 判断参数 RTPSettings 是否已赋值
                      * @return RTPSettings 是否已赋值
+                     * 
                      */
                     bool RTPSettingsHasBeenSet() const;
 
                     /**
                      * 获取The RTMP relay configuration.
                      * @return RTMPSettings The RTMP relay configuration.
+                     * 
                      */
                     CreateOutputRTMPSettings GetRTMPSettings() const;
 
                     /**
                      * 设置The RTMP relay configuration.
-                     * @param RTMPSettings The RTMP relay configuration.
+                     * @param _rTMPSettings The RTMP relay configuration.
+                     * 
                      */
                     void SetRTMPSettings(const CreateOutputRTMPSettings& _rTMPSettings);
 
                     /**
                      * 判断参数 RTMPSettings 是否已赋值
                      * @return RTMPSettings 是否已赋值
+                     * 
                      */
                     bool RTMPSettingsHasBeenSet() const;
 
@@ -180,20 +201,23 @@ namespace TencentCloud
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
                      * @return AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+                     * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
                      * 设置The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
-                     * @param AllowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
+                     * @param _allowIpList The IP allowlist. The address must be in CIDR format, such as `0.0.0.0/0`.
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If it is left empty, there is no restriction on clients’ IP addresses.
+                     * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
 
                     /**
                      * 判断参数 AllowIpList 是否已赋值
                      * @return AllowIpList 是否已赋值
+                     * 
                      */
                     bool AllowIpListHasBeenSet() const;
 

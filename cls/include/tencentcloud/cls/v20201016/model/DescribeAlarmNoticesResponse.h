@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AlarmNotices Alarm notification template list
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AlarmNotice> GetAlarmNotices() const;
 
                     /**
                      * 判断参数 AlarmNotices 是否已赋值
                      * @return AlarmNotices 是否已赋值
+                     * 
                      */
                     bool AlarmNoticesHasBeenSet() const;
 
                     /**
                      * 获取Total number of eligible alarm notification templates
                      * @return TotalCount Total number of eligible alarm notification templates
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

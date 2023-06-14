@@ -62,6 +62,7 @@ namespace TencentCloud
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
+                     * 
                      */
                     std::string GetMode() const;
 
@@ -73,19 +74,21 @@ namespace TencentCloud
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-                     * @param Mode The mode. Values:
+                     * @param _mode The mode. Values:
 <li>`sup_loose`: Super loose</li>
 <li>`loose`: Loose</li>
 <li>`emergency`: Emergency</li>
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
@@ -96,6 +99,7 @@ namespace TencentCloud
                      * @return Action The action. Values:
 <li>`alg`: JavaScript challenge</li>
 <li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -103,33 +107,38 @@ namespace TencentCloud
                      * 设置The action. Values:
 <li>`alg`: JavaScript challenge</li>
 <li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
-                     * @param Action The action. Values:
+                     * @param _action The action. Values:
 <li>`alg`: JavaScript challenge</li>
 <li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取The settings of the rate limiting template. It is only used as an output parameter.
                      * @return RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+                     * 
                      */
                     RateLimitTemplateDetail GetRateLimitTemplateDetail() const;
 
                     /**
                      * 设置The settings of the rate limiting template. It is only used as an output parameter.
-                     * @param RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+                     * @param _rateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+                     * 
                      */
                     void SetRateLimitTemplateDetail(const RateLimitTemplateDetail& _rateLimitTemplateDetail);
 
                     /**
                      * 判断参数 RateLimitTemplateDetail 是否已赋值
                      * @return RateLimitTemplateDetail 是否已赋值
+                     * 
                      */
                     bool RateLimitTemplateDetailHasBeenSet() const;
 

@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `on` and `off`.
                      * @return Switch Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Valid values: `on` and `off`.
-                     * @param Switch Valid values: `on` and `off`.
+                     * @param _switch Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Rules Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ScdnCCRules> GetRules() const;
 
                     /**
                      * 设置Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Rules Custom CC attack defense rule
+                     * @param _rules Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRules(const std::vector<ScdnCCRules>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
@@ -93,20 +99,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AdvancedRules Advanced custom CC attack defense rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<AdvancedCCRules> GetAdvancedRules() const;
 
                     /**
                      * 设置Advanced custom CC attack defense rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AdvancedRules Advanced custom CC attack defense rule
+                     * @param _advancedRules Advanced custom CC attack defense rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAdvancedRules(const std::vector<AdvancedCCRules>& _advancedRules);
 
                     /**
                      * 判断参数 AdvancedRules 是否已赋值
                      * @return AdvancedRules 是否已赋值
+                     * 
                      */
                     bool AdvancedRulesHasBeenSet() const;
 
@@ -115,20 +124,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return GlobalAdvancedRules Global advanced CC protection rules
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AdvancedCCRules> GetGlobalAdvancedRules() const;
 
                     /**
                      * 设置Global advanced CC protection rules
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param GlobalAdvancedRules Global advanced CC protection rules
+                     * @param _globalAdvancedRules Global advanced CC protection rules
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGlobalAdvancedRules(const std::vector<AdvancedCCRules>& _globalAdvancedRules);
 
                     /**
                      * 判断参数 GlobalAdvancedRules 是否已赋值
                      * @return GlobalAdvancedRules 是否已赋值
+                     * 
                      */
                     bool GlobalAdvancedRulesHasBeenSet() const;
 

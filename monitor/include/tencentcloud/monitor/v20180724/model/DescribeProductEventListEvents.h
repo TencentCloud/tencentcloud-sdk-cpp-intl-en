@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return EventId Event ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetEventId() const;
 
                     /**
                      * 设置Event ID.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param EventId Event ID.
+                     * @param _eventId Event ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetEventId(const int64_t& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return EventCName Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEventCName() const;
 
                     /**
                      * 设置Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param EventCName Event name in Chinese.
+                     * @param _eventCName Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetEventCName(const std::string& _eventCName);
 
                     /**
                      * 判断参数 EventCName 是否已赋值
                      * @return EventCName 是否已赋值
+                     * 
                      */
                     bool EventCNameHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return EventEName Event name in English.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEventEName() const;
 
                     /**
                      * 设置Event name in English.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param EventEName Event name in English.
+                     * @param _eventEName Event name in English.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetEventEName(const std::string& _eventEName);
 
                     /**
                      * 判断参数 EventEName 是否已赋值
                      * @return EventEName 是否已赋值
+                     * 
                      */
                     bool EventENameHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return EventName Event name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEventName() const;
 
                     /**
                      * 设置Event name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param EventName Event name abbreviation.
+                     * @param _eventName Event name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetEventName(const std::string& _eventName);
 
                     /**
                      * 判断参数 EventName 是否已赋值
                      * @return EventName 是否已赋值
+                     * 
                      */
                     bool EventNameHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ProductCName Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetProductCName() const;
 
                     /**
                      * 设置Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ProductCName Product name in Chinese.
+                     * @param _productCName Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetProductCName(const std::string& _productCName);
 
                     /**
                      * 判断参数 ProductCName 是否已赋值
                      * @return ProductCName 是否已赋值
+                     * 
                      */
                     bool ProductCNameHasBeenSet() const;
 
@@ -163,20 +178,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ProductEName Product name in English.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetProductEName() const;
 
                     /**
                      * 设置Product name in English.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ProductEName Product name in English.
+                     * @param _productEName Product name in English.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetProductEName(const std::string& _productEName);
 
                     /**
                      * 判断参数 ProductEName 是否已赋值
                      * @return ProductEName 是否已赋值
+                     * 
                      */
                     bool ProductENameHasBeenSet() const;
 
@@ -185,20 +203,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ProductName Product name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetProductName() const;
 
                     /**
                      * 设置Product name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ProductName Product name abbreviation.
+                     * @param _productName Product name abbreviation.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetProductName(const std::string& _productName);
 
                     /**
                      * 判断参数 ProductName 是否已赋值
                      * @return ProductName 是否已赋值
+                     * 
                      */
                     bool ProductNameHasBeenSet() const;
 
@@ -207,20 +228,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceId Instance ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -229,20 +253,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceName Instance name.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceName Instance name.
+                     * @param _instanceName Instance name.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -251,20 +278,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ProjectId Project ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetProjectId() const;
 
                     /**
                      * 设置Project ID.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ProjectId Project ID.
+                     * @param _projectId Project ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetProjectId(const std::string& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -273,20 +303,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Region Region.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Region Region.
+                     * @param _region Region.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -295,20 +328,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Status Status.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Status Status.
+                     * @param _status Status.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -317,20 +353,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return SupportAlarm Whether to support alarms.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetSupportAlarm() const;
 
                     /**
                      * 设置Whether to support alarms.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param SupportAlarm Whether to support alarms.
+                     * @param _supportAlarm Whether to support alarms.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetSupportAlarm(const int64_t& _supportAlarm);
 
                     /**
                      * 判断参数 SupportAlarm 是否已赋值
                      * @return SupportAlarm 是否已赋值
+                     * 
                      */
                     bool SupportAlarmHasBeenSet() const;
 
@@ -339,20 +378,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Type Event type.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Event type.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Type Event type.
+                     * @param _type Event type.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -361,20 +403,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return StartTime Start time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param StartTime Start time.
+                     * @param _startTime Start time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -383,20 +428,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return UpdateTime Update time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param UpdateTime Update time.
+                     * @param _updateTime Update time.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -405,20 +453,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Dimensions Instance object information.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribeProductEventListEventsDimensions> GetDimensions() const;
 
                     /**
                      * 设置Instance object information.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Dimensions Instance object information.
+                     * @param _dimensions Instance object information.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetDimensions(const std::vector<DescribeProductEventListEventsDimensions>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
@@ -427,20 +478,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return AdditionMsg Additional information of the instance object.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribeProductEventListEventsDimensions> GetAdditionMsg() const;
 
                     /**
                      * 设置Additional information of the instance object.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param AdditionMsg Additional information of the instance object.
+                     * @param _additionMsg Additional information of the instance object.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetAdditionMsg(const std::vector<DescribeProductEventListEventsDimensions>& _additionMsg);
 
                     /**
                      * 判断参数 AdditionMsg 是否已赋值
                      * @return AdditionMsg 是否已赋值
+                     * 
                      */
                     bool AdditionMsgHasBeenSet() const;
 
@@ -449,20 +503,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return IsAlarmConfig Whether to configure alarms.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetIsAlarmConfig() const;
 
                     /**
                      * 设置Whether to configure alarms.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param IsAlarmConfig Whether to configure alarms.
+                     * @param _isAlarmConfig Whether to configure alarms.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetIsAlarmConfig(const int64_t& _isAlarmConfig);
 
                     /**
                      * 判断参数 IsAlarmConfig 是否已赋值
                      * @return IsAlarmConfig 是否已赋值
+                     * 
                      */
                     bool IsAlarmConfigHasBeenSet() const;
 
@@ -471,20 +528,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return GroupInfo Policy information.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribeProductEventListEventsGroupInfo> GetGroupInfo() const;
 
                     /**
                      * 设置Policy information.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param GroupInfo Policy information.
+                     * @param _groupInfo Policy information.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetGroupInfo(const std::vector<DescribeProductEventListEventsGroupInfo>& _groupInfo);
 
                     /**
                      * 判断参数 GroupInfo 是否已赋值
                      * @return GroupInfo 是否已赋值
+                     * 
                      */
                     bool GroupInfoHasBeenSet() const;
 
@@ -493,20 +553,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ViewName Display name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetViewName() const;
 
                     /**
                      * 设置Display name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ViewName Display name
+                     * @param _viewName Display name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetViewName(const std::string& _viewName);
 
                     /**
                      * 判断参数 ViewName 是否已赋值
                      * @return ViewName 是否已赋值
+                     * 
                      */
                     bool ViewNameHasBeenSet() const;
 

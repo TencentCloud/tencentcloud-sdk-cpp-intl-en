@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return Id Site ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Site name
                      * @return Name Site name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -75,12 +79,14 @@ namespace TencentCloud
                      * @return Status DNSSEC status.
 - `enabled`: Enabled
 - `disabled`: Disabled
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -89,24 +95,28 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Dnssec DNSSEC information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DnssecInfo GetDnssec() const;
 
                     /**
                      * 判断参数 Dnssec 是否已赋值
                      * @return Dnssec 是否已赋值
+                     * 
                      */
                     bool DnssecHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModifiedOn Modification time
+                     * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
                      * 判断参数 ModifiedOn 是否已赋值
                      * @return ModifiedOn 是否已赋值
+                     * 
                      */
                     bool ModifiedOnHasBeenSet() const;
 

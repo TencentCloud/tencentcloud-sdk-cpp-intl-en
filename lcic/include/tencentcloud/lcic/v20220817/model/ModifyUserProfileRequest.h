@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the user whose profile will be modified.
                      * @return UserId The ID of the user whose profile will be modified.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The ID of the user whose profile will be modified.
-                     * @param UserId The ID of the user whose profile will be modified.
+                     * @param _userId The ID of the user whose profile will be modified.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取The new username to use.
                      * @return Nickname The new username to use.
+                     * 
                      */
                     std::string GetNickname() const;
 
                     /**
                      * 设置The new username to use.
-                     * @param Nickname The new username to use.
+                     * @param _nickname The new username to use.
+                     * 
                      */
                     void SetNickname(const std::string& _nickname);
 
                     /**
                      * 判断参数 Nickname 是否已赋值
                      * @return Nickname 是否已赋值
+                     * 
                      */
                     bool NicknameHasBeenSet() const;
 
                     /**
                      * 获取The URL of the new profile photo.
                      * @return Avatar The URL of the new profile photo.
+                     * 
                      */
                     std::string GetAvatar() const;
 
                     /**
                      * 设置The URL of the new profile photo.
-                     * @param Avatar The URL of the new profile photo.
+                     * @param _avatar The URL of the new profile photo.
+                     * 
                      */
                     void SetAvatar(const std::string& _avatar);
 
                     /**
                      * 判断参数 Avatar 是否已赋值
                      * @return Avatar 是否已赋值
+                     * 
                      */
                     bool AvatarHasBeenSet() const;
 

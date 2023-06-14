@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of EIPs meeting the condition.
                      * @return TotalCount Number of EIPs meeting the condition.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of EIPs details.
                      * @return AddressSet List of EIPs details.
+                     * 
                      */
                     std::vector<Address> GetAddressSet() const;
 
                     /**
                      * 判断参数 AddressSet 是否已赋值
                      * @return AddressSet 是否已赋值
+                     * 
                      */
                     bool AddressSetHasBeenSet() const;
 

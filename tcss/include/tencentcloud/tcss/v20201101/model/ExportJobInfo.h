@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Job ID
                      * @return JobID Job ID
+                     * 
                      */
                     std::string GetJobID() const;
 
                     /**
                      * 设置Job ID
-                     * @param JobID Job ID
+                     * @param _jobID Job ID
+                     * 
                      */
                     void SetJobID(const std::string& _jobID);
 
                     /**
                      * 判断参数 JobID 是否已赋值
                      * @return JobID 是否已赋值
+                     * 
                      */
                     bool JobIDHasBeenSet() const;
 
                     /**
                      * 获取Job name
                      * @return JobName Job name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Job name
-                     * @param JobName Job name
+                     * @param _jobName Job name
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Source
                      * @return Source Source
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置Source
-                     * @param Source Source
+                     * @param _source Source
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Export status
                      * @return ExportStatus Export status
+                     * 
                      */
                     std::string GetExportStatus() const;
 
                     /**
                      * 设置Export status
-                     * @param ExportStatus Export status
+                     * @param _exportStatus Export status
+                     * 
                      */
                     void SetExportStatus(const std::string& _exportStatus);
 
                     /**
                      * 判断参数 ExportStatus 是否已赋值
                      * @return ExportStatus 是否已赋值
+                     * 
                      */
                     bool ExportStatusHasBeenSet() const;
 
                     /**
                      * 获取Export progress
                      * @return ExportProgress Export progress
+                     * 
                      */
                     int64_t GetExportProgress() const;
 
                     /**
                      * 设置Export progress
-                     * @param ExportProgress Export progress
+                     * @param _exportProgress Export progress
+                     * 
                      */
                     void SetExportProgress(const int64_t& _exportProgress);
 
                     /**
                      * 判断参数 ExportProgress 是否已赋值
                      * @return ExportProgress 是否已赋值
+                     * 
                      */
                     bool ExportProgressHasBeenSet() const;
 
                     /**
                      * 获取Reason for failure
                      * @return FailureMsg Reason for failure
+                     * 
                      */
                     std::string GetFailureMsg() const;
 
                     /**
                      * 设置Reason for failure
-                     * @param FailureMsg Reason for failure
+                     * @param _failureMsg Reason for failure
+                     * 
                      */
                     void SetFailureMsg(const std::string& _failureMsg);
 
                     /**
                      * 判断参数 FailureMsg 是否已赋值
                      * @return FailureMsg 是否已赋值
+                     * 
                      */
                     bool FailureMsgHasBeenSet() const;
 
                     /**
                      * 获取Timeout threshold
                      * @return Timeout Timeout threshold
+                     * 
                      */
                     std::string GetTimeout() const;
 
                     /**
                      * 设置Timeout threshold
-                     * @param Timeout Timeout threshold
+                     * @param _timeout Timeout threshold
+                     * 
                      */
                     void SetTimeout(const std::string& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Insertion time
                      * @return InsertTime Insertion time
+                     * 
                      */
                     std::string GetInsertTime() const;
 
                     /**
                      * 设置Insertion time
-                     * @param InsertTime Insertion time
+                     * @param _insertTime Insertion time
+                     * 
                      */
                     void SetInsertTime(const std::string& _insertTime);
 
                     /**
                      * 判断参数 InsertTime 是否已赋值
                      * @return InsertTime 是否已赋值
+                     * 
                      */
                     bool InsertTimeHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable SSO (`true`: Yes; `false`: No)
                      * @return EnableSSO Whether to enable SSO (`true`: Yes; `false`: No)
+                     * 
                      */
                     bool GetEnableSSO() const;
 
                     /**
                      * 设置Whether to enable SSO (`true`: Yes; `false`: No)
-                     * @param EnableSSO Whether to enable SSO (`true`: Yes; `false`: No)
+                     * @param _enableSSO Whether to enable SSO (`true`: Yes; `false`: No)
+                     * 
                      */
                     void SetEnableSSO(const bool& _enableSSO);
 
                     /**
                      * 判断参数 EnableSSO 是否已赋值
                      * @return EnableSSO 是否已赋值
+                     * 
                      */
                     bool EnableSSOHasBeenSet() const;
 
                     /**
                      * 获取TCMG instance ID, such as “grafana-abcdefgh”.
                      * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

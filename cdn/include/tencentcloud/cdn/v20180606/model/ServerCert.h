@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CertId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CertId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+                     * @param _certId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
@@ -77,6 +80,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return CertName Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCertName() const;
 
@@ -84,15 +88,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CertName Server certificate name
+                     * @param _certName Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 
@@ -103,6 +109,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Certificate Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCertificate() const;
 
@@ -110,15 +117,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Certificate Server certificate information
+                     * @param _certificate Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCertificate(const std::string& _certificate);
 
                     /**
                      * 判断参数 Certificate 是否已赋值
                      * @return Certificate 是否已赋值
+                     * 
                      */
                     bool CertificateHasBeenSet() const;
 
@@ -129,6 +138,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return PrivateKey Server key information
 This is required when uploading an external certificate.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetPrivateKey() const;
 
@@ -136,15 +146,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Server key information
 This is required when uploading an external certificate.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PrivateKey Server key information
+                     * @param _privateKey Server key information
 This is required when uploading an external certificate.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPrivateKey(const std::string& _privateKey);
 
                     /**
                      * 判断参数 PrivateKey 是否已赋值
                      * @return PrivateKey 是否已赋值
+                     * 
                      */
                     bool PrivateKeyHasBeenSet() const;
 
@@ -155,6 +167,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return ExpireTime Time when the certificate expires
 Can be left blank when used as an input parameter
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
@@ -162,15 +175,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Time when the certificate expires
 Can be left blank when used as an input parameter
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ExpireTime Time when the certificate expires
+                     * @param _expireTime Time when the certificate expires
 Can be left blank when used as an input parameter
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -181,6 +196,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return DeployTime Certificate issuance time
 Can be left blank when used as an input parameter
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDeployTime() const;
 
@@ -188,15 +204,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Certificate issuance time
 Can be left blank when used as an input parameter
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DeployTime Certificate issuance time
+                     * @param _deployTime Certificate issuance time
 Can be left blank when used as an input parameter
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDeployTime(const std::string& _deployTime);
 
                     /**
                      * 判断参数 DeployTime 是否已赋值
                      * @return DeployTime 是否已赋值
+                     * 
                      */
                     bool DeployTimeHasBeenSet() const;
 
@@ -205,20 +223,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Message Certificate remarks
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Certificate remarks
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Message Certificate remarks
+                     * @param _message Certificate remarks
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -227,20 +248,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return From Certificate source
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetFrom() const;
 
                     /**
                      * 设置Certificate source
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param From Certificate source
+                     * @param _from Certificate source
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFrom(const std::string& _from);
 
                     /**
                      * 判断参数 From 是否已赋值
                      * @return From 是否已赋值
+                     * 
                      */
                     bool FromHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
                      * 设置Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+                     * @param _connectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
 
                     /**
                      * 判断参数 ConnectionPoolType 是否已赋值
                      * @return ConnectionPoolType 是否已赋值
+                     * 
                      */
                     bool ConnectionPoolTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return MaxPoolConnectionTimeOut Maximum value of connection persistence timeout in seconds
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     int64_t GetMaxPoolConnectionTimeOut() const;
 
                     /**
                      * 设置Maximum value of connection persistence timeout in seconds
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param MaxPoolConnectionTimeOut Maximum value of connection persistence timeout in seconds
+                     * @param _maxPoolConnectionTimeOut Maximum value of connection persistence timeout in seconds
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetMaxPoolConnectionTimeOut(const int64_t& _maxPoolConnectionTimeOut);
 
                     /**
                      * 判断参数 MaxPoolConnectionTimeOut 是否已赋值
                      * @return MaxPoolConnectionTimeOut 是否已赋值
+                     * 
                      */
                     bool MaxPoolConnectionTimeOutHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return MinPoolConnectionTimeOut Minimum value of connection persistence timeout in seconds
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     int64_t GetMinPoolConnectionTimeOut() const;
 
                     /**
                      * 设置Minimum value of connection persistence timeout in seconds
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param MinPoolConnectionTimeOut Minimum value of connection persistence timeout in seconds
+                     * @param _minPoolConnectionTimeOut Minimum value of connection persistence timeout in seconds
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetMinPoolConnectionTimeOut(const int64_t& _minPoolConnectionTimeOut);
 
                     /**
                      * 判断参数 MinPoolConnectionTimeOut 是否已赋值
                      * @return MinPoolConnectionTimeOut 是否已赋值
+                     * 
                      */
                     bool MinPoolConnectionTimeOutHasBeenSet() const;
 

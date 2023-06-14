@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
                      * @return UserReceiveTime Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
+                     * 
                      */
                     uint64_t GetUserReceiveTime() const;
 
                     /**
                      * 设置Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
-                     * @param UserReceiveTime Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
+                     * @param _userReceiveTime Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
+                     * 
                      */
                     void SetUserReceiveTime(const uint64_t& _userReceiveTime);
 
                     /**
                      * 判断参数 UserReceiveTime 是否已赋值
                      * @return UserReceiveTime 是否已赋值
+                     * 
                      */
                     bool UserReceiveTimeHasBeenSet() const;
 
                     /**
                      * 获取Country (or region) code.
                      * @return CountryCode Country (or region) code.
+                     * 
                      */
                     std::string GetCountryCode() const;
 
                     /**
                      * 设置Country (or region) code.
-                     * @param CountryCode Country (or region) code.
+                     * @param _countryCode Country (or region) code.
+                     * 
                      */
                     void SetCountryCode(const std::string& _countryCode);
 
                     /**
                      * 判断参数 CountryCode 是否已赋值
                      * @return CountryCode 是否已赋值
+                     * 
                      */
                     bool CountryCodeHasBeenSet() const;
 
                     /**
                      * 获取User's mobile number in a common format such as 13711112222.
                      * @return SubscriberNumber User's mobile number in a common format such as 13711112222.
+                     * 
                      */
                     std::string GetSubscriberNumber() const;
 
                     /**
                      * 设置User's mobile number in a common format such as 13711112222.
-                     * @param SubscriberNumber User's mobile number in a common format such as 13711112222.
+                     * @param _subscriberNumber User's mobile number in a common format such as 13711112222.
+                     * 
                      */
                     void SetSubscriberNumber(const std::string& _subscriberNumber);
 
                     /**
                      * 判断参数 SubscriberNumber 是否已赋值
                      * @return SubscriberNumber 是否已赋值
+                     * 
                      */
                     bool SubscriberNumberHasBeenSet() const;
 
                     /**
                      * 获取Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
                      * @return PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
                      * 设置Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-                     * @param PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * @param _phoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
 
                     /**
                      * 判断参数 PhoneNumber 是否已赋值
                      * @return PhoneNumber 是否已赋值
+                     * 
                      */
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
                      * 获取ID of the current delivery.
                      * @return SerialNo ID of the current delivery.
+                     * 
                      */
                     std::string GetSerialNo() const;
 
                     /**
                      * 设置ID of the current delivery.
-                     * @param SerialNo ID of the current delivery.
+                     * @param _serialNo ID of the current delivery.
+                     * 
                      */
                     void SetSerialNo(const std::string& _serialNo);
 
                     /**
                      * 判断参数 SerialNo 是否已赋值
                      * @return SerialNo 是否已赋值
+                     * 
                      */
                     bool SerialNoHasBeenSet() const;
 
                     /**
                      * 获取Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
                      * @return ReportStatus Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
+                     * 
                      */
                     std::string GetReportStatus() const;
 
                     /**
                      * 设置Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
-                     * @param ReportStatus Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
+                     * @param _reportStatus Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
+                     * 
                      */
                     void SetReportStatus(const std::string& _reportStatus);
 
                     /**
                      * 判断参数 ReportStatus 是否已赋值
                      * @return ReportStatus 是否已赋值
+                     * 
                      */
                     bool ReportStatusHasBeenSet() const;
 
                     /**
                      * 获取Description of SMS receipt by user.
                      * @return Description Description of SMS receipt by user.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description of SMS receipt by user.
-                     * @param Description Description of SMS receipt by user.
+                     * @param _description Description of SMS receipt by user.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -177,20 +198,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SessionContext User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
                      * 设置User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SessionContext User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+                     * @param _sessionContext User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
                     /**
                      * 判断参数 SessionContext 是否已赋值
                      * @return SessionContext 是否已赋值
+                     * 
                      */
                     bool SessionContextHasBeenSet() const;
 

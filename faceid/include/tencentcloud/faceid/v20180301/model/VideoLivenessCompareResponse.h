@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取The similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two persons are of the same person. You can adjust the threshold according to your specific scenario (the FARs at the thresholds of 70 and 80 are 0.1% and 0.01%, respectively).
                      * @return Sim The similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two persons are of the same person. You can adjust the threshold according to your specific scenario (the FARs at the thresholds of 70 and 80 are 0.1% and 0.01%, respectively).
+                     * 
                      */
                     double GetSim() const;
 
                     /**
                      * 判断参数 Sim 是否已赋值
                      * @return Sim 是否已赋值
+                     * 
                      */
                     bool SimHasBeenSet() const;
 
                     /**
                      * 获取The service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
                      * @return Result The service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取The service result description
                      * @return Description The service result description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -85,12 +91,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BestFrame The best video screenshot after successful verification
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FileInfo GetBestFrame() const;
 
                     /**
                      * 判断参数 BestFrame 是否已赋值
                      * @return BestFrame 是否已赋值
+                     * 
                      */
                     bool BestFrameHasBeenSet() const;
 

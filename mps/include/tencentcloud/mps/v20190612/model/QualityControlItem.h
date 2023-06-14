@@ -51,56 +51,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Confidence The confidence score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetConfidence() const;
 
                     /**
                      * 设置The confidence score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Confidence The confidence score. Value range: 0-100.
+                     * @param _confidence The confidence score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfidence(const int64_t& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取The start timestamp (second) of the segment.
                      * @return StartTimeOffset The start timestamp (second) of the segment.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置The start timestamp (second) of the segment.
-                     * @param StartTimeOffset The start timestamp (second) of the segment.
+                     * @param _startTimeOffset The start timestamp (second) of the segment.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取The end timestamp (second) of the segment.
                      * @return EndTimeOffset The end timestamp (second) of the segment.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置The end timestamp (second) of the segment.
-                     * @param EndTimeOffset The end timestamp (second) of the segment.
+                     * @param _endTimeOffset The end timestamp (second) of the segment.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AreaCoordSet The coordinates (px) of the top left and bottom right corner.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
                      * 设置The coordinates (px) of the top left and bottom right corner.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AreaCoordSet The coordinates (px) of the top left and bottom right corner.
+                     * @param _areaCoordSet The coordinates (px) of the top left and bottom right corner.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
 
                     /**
                      * 判断参数 AreaCoordSet 是否已赋值
                      * @return AreaCoordSet 是否已赋值
+                     * 
                      */
                     bool AreaCoordSetHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Alert type
                      * @return MsgType Alert type
+                     * 
                      */
                     std::string GetMsgType() const;
 
                     /**
                      * 设置Alert type
-                     * @param MsgType Alert type
+                     * @param _msgType Alert type
+                     * 
                      */
                     void SetMsgType(const std::string& _msgType);
 
                     /**
                      * 判断参数 MsgType 是否已赋值
                      * @return MsgType 是否已赋值
+                     * 
                      */
                     bool MsgTypeHasBeenSet() const;
 
                     /**
                      * 获取Alert value
                      * @return MsgValue Alert value
+                     * 
                      */
                     std::string GetMsgValue() const;
 
                     /**
                      * 设置Alert value
-                     * @param MsgValue Alert value
+                     * @param _msgValue Alert value
+                     * 
                      */
                     void SetMsgValue(const std::string& _msgValue);
 
                     /**
                      * 判断参数 MsgValue 是否已赋值
                      * @return MsgValue 是否已赋值
+                     * 
                      */
                     bool MsgValueHasBeenSet() const;
 
                     /**
                      * 获取Status. Valid values: `0` (disabled); `1` (enabled).
                      * @return State Status. Valid values: `0` (disabled); `1` (enabled).
+                     * 
                      */
                     bool GetState() const;
 
                     /**
                      * 设置Status. Valid values: `0` (disabled); `1` (enabled).
-                     * @param State Status. Valid values: `0` (disabled); `1` (enabled).
+                     * @param _state Status. Valid values: `0` (disabled); `1` (enabled).
+                     * 
                      */
                     void SetState(const bool& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 

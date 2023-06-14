@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of the private CA certificate to query
                      * @return CertName Name of the private CA certificate to query
+                     * 
                      */
                     std::string GetCertName() const;
 
                     /**
                      * 设置Name of the private CA certificate to query
-                     * @param CertName Name of the private CA certificate to query
+                     * @param _certName Name of the private CA certificate to query
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 

@@ -53,6 +53,7 @@ This parameter can be left empty if DefaultParameters is set for the previewed C
 At most 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
 This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
+                     * 
                      */
                     std::string GetParameters() const;
 
@@ -62,17 +63,19 @@ This parameter can be left empty if DefaultParameters is set for the previewed C
 At most 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
 This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
-                     * @param Parameters Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+                     * @param _parameters Custom parameters for the preview. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
 `key` is the name of the custom parameter and "value" is its specified value. Both "key" and "value" are strings.
 At most 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can only contain [a-z], [A-Z], [0-9], [-_].
 This parameter can be left empty if DefaultParameters is set for the previewed CommandId.
+                     * 
                      */
                     void SetParameters(const std::string& _parameters);
 
                     /**
                      * 判断参数 Parameters 是否已赋值
                      * @return Parameters 是否已赋值
+                     * 
                      */
                     bool ParametersHasBeenSet() const;
 
@@ -81,20 +84,23 @@ This parameter can be left empty if DefaultParameters is set for the previewed C
 `CommandId` or `Content` must be specified.
                      * @return CommandId The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
 `CommandId` or `Content` must be specified.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 设置The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
 `CommandId` or `Content` must be specified.
-                     * @param CommandId The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
+                     * @param _commandId The command to be previewed. If DefaultParameters is set, it is combined with Parameters and Parameters takes priority.
 `CommandId` or `Content` must be specified.
+                     * 
                      */
                     void SetCommandId(const std::string& _commandId);
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 
@@ -103,20 +109,23 @@ This parameter can be left empty if DefaultParameters is set for the previewed C
 CommandId or Content must be specified.
                      * @return Content Base64-encoded command to be previewed. The maximum length is 64 KB.
 CommandId or Content must be specified.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Base64-encoded command to be previewed. The maximum length is 64 KB.
 CommandId or Content must be specified.
-                     * @param Content Base64-encoded command to be previewed. The maximum length is 64 KB.
+                     * @param _content Base64-encoded command to be previewed. The maximum length is 64 KB.
 CommandId or Content must be specified.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

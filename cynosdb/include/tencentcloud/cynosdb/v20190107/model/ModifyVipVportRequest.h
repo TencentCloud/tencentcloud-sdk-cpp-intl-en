@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Instance group ID
                      * @return InstanceGrpId Instance group ID
+                     * 
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
                      * 设置Instance group ID
-                     * @param InstanceGrpId Instance group ID
+                     * @param _instanceGrpId Instance group ID
+                     * 
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
 
                     /**
                      * 判断参数 InstanceGrpId 是否已赋值
                      * @return InstanceGrpId 是否已赋值
+                     * 
                      */
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
                      * 获取Target IP to be modified
                      * @return Vip Target IP to be modified
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Target IP to be modified
-                     * @param Vip Target IP to be modified
+                     * @param _vip Target IP to be modified
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Target port to be modified
                      * @return Vport Target port to be modified
+                     * 
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Target port to be modified
-                     * @param Vport Target port to be modified
+                     * @param _vport Target port to be modified
+                     * 
                      */
                     void SetVport(const int64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
@@ -119,38 +131,44 @@ namespace TencentCloud
 <li> MYSQL </li>
                      * @return DbType Database type. Valid values: 
 <li> MYSQL </li>
+                     * 
                      */
                     std::string GetDbType() const;
 
                     /**
                      * 设置Database type. Valid values: 
 <li> MYSQL </li>
-                     * @param DbType Database type. Valid values: 
+                     * @param _dbType Database type. Valid values: 
 <li> MYSQL </li>
+                     * 
                      */
                     void SetDbType(const std::string& _dbType);
 
                     /**
                      * 判断参数 DbType 是否已赋值
                      * @return DbType 是否已赋值
+                     * 
                      */
                     bool DbTypeHasBeenSet() const;
 
                     /**
                      * 获取Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
                      * @return OldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+                     * 
                      */
                     int64_t GetOldIpReserveHours() const;
 
                     /**
                      * 设置Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
-                     * @param OldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+                     * @param _oldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+                     * 
                      */
                     void SetOldIpReserveHours(const int64_t& _oldIpReserveHours);
 
                     /**
                      * 判断参数 OldIpReserveHours 是否已赋值
                      * @return OldIpReserveHours 是否已赋值
+                     * 
                      */
                     bool OldIpReserveHoursHasBeenSet() const;
 

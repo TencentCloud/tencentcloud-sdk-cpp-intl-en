@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Lifecycle rule ID
                      * @return LifeCycleRuleId Lifecycle rule ID
+                     * 
                      */
                     uint64_t GetLifeCycleRuleId() const;
 
                     /**
                      * 设置Lifecycle rule ID
-                     * @param LifeCycleRuleId Lifecycle rule ID
+                     * @param _lifeCycleRuleId Lifecycle rule ID
+                     * 
                      */
                     void SetLifeCycleRuleId(const uint64_t& _lifeCycleRuleId);
 
                     /**
                      * 判断参数 LifeCycleRuleId 是否已赋值
                      * @return LifeCycleRuleId 是否已赋值
+                     * 
                      */
                     bool LifeCycleRuleIdHasBeenSet() const;
 
                     /**
                      * 获取Lifecycle rule name
                      * @return LifeCycleRuleName Lifecycle rule name
+                     * 
                      */
                     std::string GetLifeCycleRuleName() const;
 
                     /**
                      * 设置Lifecycle rule name
-                     * @param LifeCycleRuleName Lifecycle rule name
+                     * @param _lifeCycleRuleName Lifecycle rule name
+                     * 
                      */
                     void SetLifeCycleRuleName(const std::string& _lifeCycleRuleName);
 
                     /**
                      * 判断参数 LifeCycleRuleName 是否已赋值
                      * @return LifeCycleRuleName 是否已赋值
+                     * 
                      */
                     bool LifeCycleRuleNameHasBeenSet() const;
 
                     /**
                      * 获取Lifecycle rule path (directory or file)
                      * @return Path Lifecycle rule path (directory or file)
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Lifecycle rule path (directory or file)
-                     * @param Path Lifecycle rule path (directory or file)
+                     * @param _path Lifecycle rule path (directory or file)
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取List of lifecycle rule transitions
                      * @return Transitions List of lifecycle rule transitions
+                     * 
                      */
                     std::vector<Transition> GetTransitions() const;
 
                     /**
                      * 设置List of lifecycle rule transitions
-                     * @param Transitions List of lifecycle rule transitions
+                     * @param _transitions List of lifecycle rule transitions
+                     * 
                      */
                     void SetTransitions(const std::vector<Transition>& _transitions);
 
                     /**
                      * 判断参数 Transitions 是否已赋值
                      * @return Transitions 是否已赋值
+                     * 
                      */
                     bool TransitionsHasBeenSet() const;
 
                     /**
                      * 获取Lifecycle rule status (1: enabled; 2: disabled)
                      * @return Status Lifecycle rule status (1: enabled; 2: disabled)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Lifecycle rule status (1: enabled; 2: disabled)
-                     * @param Status Lifecycle rule status (1: enabled; 2: disabled)
+                     * @param _status Lifecycle rule status (1: enabled; 2: disabled)
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

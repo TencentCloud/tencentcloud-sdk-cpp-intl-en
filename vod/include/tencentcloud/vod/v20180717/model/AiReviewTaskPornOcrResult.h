@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Task status. Valid values: PROCESSING, SUCCESS, FAIL.
                      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * @param _status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
                      * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
                      * 设置Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-                     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * @param _errCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
 
                     /**
                      * 判断参数 ErrCodeExt 是否已赋值
                      * @return ErrCodeExt 是否已赋值
+                     * 
                      */
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
                      * 获取Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
                      * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
                      * 设置Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-                     * @param ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * @param _errCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
@@ -107,38 +116,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Message Error message.
+                     * @param _message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Input for OCR-based recognition of pornographic content
                      * @return Input Input for OCR-based recognition of pornographic content
+                     * 
                      */
                     AiReviewPornOcrTaskInput GetInput() const;
 
                     /**
                      * 设置Input for OCR-based recognition of pornographic content
-                     * @param Input Input for OCR-based recognition of pornographic content
+                     * @param _input Input for OCR-based recognition of pornographic content
+                     * 
                      */
                     void SetInput(const AiReviewPornOcrTaskInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
@@ -147,38 +162,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return Output Output for OCR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     AiReviewPornOcrTaskOutput GetOutput() const;
 
                     /**
                      * 设置Output for OCR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Output Output for OCR-based recognition of pornographic content
+                     * @param _output Output for OCR-based recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetOutput(const AiReviewPornOcrTaskOutput& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 
                     /**
                      * 获取The progress of an OCR-based moderation task (pornographic content). Value range: 0-100.
                      * @return Progress The progress of an OCR-based moderation task (pornographic content). Value range: 0-100.
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置The progress of an OCR-based moderation task (pornographic content). Value range: 0-100.
-                     * @param Progress The progress of an OCR-based moderation task (pornographic content). Value range: 0-100.
+                     * @param _progress The progress of an OCR-based moderation task (pornographic content). Value range: 0-100.
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 

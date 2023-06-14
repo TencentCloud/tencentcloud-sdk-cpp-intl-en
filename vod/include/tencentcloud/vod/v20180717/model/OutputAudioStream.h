@@ -53,6 +53,7 @@ Default value: libfdk_aac.
                      * @return Codec Audio stream encoder. Valid values:
 <li>libfdk_aac: suitable for mp4 files.</li>
 Default value: libfdk_aac.
+                     * 
                      */
                     std::string GetCodec() const;
 
@@ -60,15 +61,17 @@ Default value: libfdk_aac.
                      * 设置Audio stream encoder. Valid values:
 <li>libfdk_aac: suitable for mp4 files.</li>
 Default value: libfdk_aac.
-                     * @param Codec Audio stream encoder. Valid values:
+                     * @param _codec Audio stream encoder. Valid values:
 <li>libfdk_aac: suitable for mp4 files.</li>
 Default value: libfdk_aac.
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 
@@ -87,6 +90,7 @@ Default value: 16,000.
 <li>48,000</li>
 In Hz.
 Default value: 16,000.
+                     * 
                      */
                     int64_t GetSampleRate() const;
 
@@ -98,19 +102,21 @@ Default value: 16,000.
 <li>48,000</li>
 In Hz.
 Default value: 16,000.
-                     * @param SampleRate Audio stream sample rate. Valid values:
+                     * @param _sampleRate Audio stream sample rate. Valid values:
 <li>16,000</li>
 <li>32,000</li>
 <li>44,100</li>
 <li>48,000</li>
 In Hz.
 Default value: 16,000.
+                     * 
                      */
                     void SetSampleRate(const int64_t& _sampleRate);
 
                     /**
                      * 判断参数 SampleRate 是否已赋值
                      * @return SampleRate 是否已赋值
+                     * 
                      */
                     bool SampleRateHasBeenSet() const;
 
@@ -123,6 +129,7 @@ Default value: 2.
 <li>1: mono.</li>
 <li>2: dual</li>
 Default value: 2.
+                     * 
                      */
                     int64_t GetAudioChannel() const;
 
@@ -131,16 +138,18 @@ Default value: 2.
 <li>1: mono.</li>
 <li>2: dual</li>
 Default value: 2.
-                     * @param AudioChannel Number of sound channels. Valid values:
+                     * @param _audioChannel Number of sound channels. Valid values:
 <li>1: mono.</li>
 <li>2: dual</li>
 Default value: 2.
+                     * 
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
 
                     /**
                      * 判断参数 AudioChannel 是否已赋值
                      * @return AudioChannel 是否已赋值
+                     * 
                      */
                     bool AudioChannelHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The automatically generated SQL statements.
                      * @return SQL The automatically generated SQL statements.
+                     * 
                      */
                     std::string GetSQL() const;
 
                     /**
                      * 设置The automatically generated SQL statements.
-                     * @param SQL The automatically generated SQL statements.
+                     * @param _sQL The automatically generated SQL statements.
+                     * 
                      */
                     void SetSQL(const std::string& _sQL);
 
                     /**
                      * 判断参数 SQL 是否已赋值
                      * @return SQL 是否已赋值
+                     * 
                      */
                     bool SQLHasBeenSet() const;
 

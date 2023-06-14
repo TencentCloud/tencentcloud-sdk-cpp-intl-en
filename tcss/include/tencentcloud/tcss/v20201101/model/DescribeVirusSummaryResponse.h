@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the last scan task
                      * @return TaskId ID of the last scan task
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskContainerCnt Number of containers affected by the trojan
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRiskContainerCnt() const;
 
                     /**
                      * 判断参数 RiskContainerCnt 是否已赋值
                      * @return RiskContainerCnt 是否已赋值
+                     * 
                      */
                     bool RiskContainerCntHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskCnt Number of pending risks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRiskCnt() const;
 
                     /**
                      * 判断参数 RiskCnt 是否已赋值
                      * @return RiskCnt 是否已赋值
+                     * 
                      */
                     bool RiskCntHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VirusDataBaseModifyTime Update time of the virus library
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVirusDataBaseModifyTime() const;
 
                     /**
                      * 判断参数 VirusDataBaseModifyTime 是否已赋值
                      * @return VirusDataBaseModifyTime 是否已赋值
+                     * 
                      */
                     bool VirusDataBaseModifyTimeHasBeenSet() const;
 
@@ -102,12 +110,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskContainerIncrease Increase in the number of containers affected by trojans from yesterday
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRiskContainerIncrease() const;
 
                     /**
                      * 判断参数 RiskContainerIncrease 是否已赋值
                      * @return RiskContainerIncrease 是否已赋值
+                     * 
                      */
                     bool RiskContainerIncreaseHasBeenSet() const;
 
@@ -116,12 +126,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskIncrease Increase in the number of pending risks from yesterday
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRiskIncrease() const;
 
                     /**
                      * 判断参数 RiskIncrease 是否已赋值
                      * @return RiskIncrease 是否已赋值
+                     * 
                      */
                     bool RiskIncreaseHasBeenSet() const;
 
@@ -130,12 +142,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolateIncrease Increase in the number of isolated events from yesterday
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsolateIncrease() const;
 
                     /**
                      * 判断参数 IsolateIncrease 是否已赋值
                      * @return IsolateIncrease 是否已赋值
+                     * 
                      */
                     bool IsolateIncreaseHasBeenSet() const;
 
@@ -144,12 +158,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolateCnt Total number of isolated events
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsolateCnt() const;
 
                     /**
                      * 判断参数 IsolateCnt 是否已赋值
                      * @return IsolateCnt 是否已赋值
+                     * 
                      */
                     bool IsolateCntHasBeenSet() const;
 

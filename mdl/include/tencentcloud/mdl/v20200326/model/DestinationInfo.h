@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Relay destination address. Length limit: [1,512].
                      * @return OutputUrl Relay destination address. Length limit: [1,512].
+                     * 
                      */
                     std::string GetOutputUrl() const;
 
                     /**
                      * 设置Relay destination address. Length limit: [1,512].
-                     * @param OutputUrl Relay destination address. Length limit: [1,512].
+                     * @param _outputUrl Relay destination address. Length limit: [1,512].
+                     * 
                      */
                     void SetOutputUrl(const std::string& _outputUrl);
 
                     /**
                      * 判断参数 OutputUrl 是否已赋值
                      * @return OutputUrl 是否已赋值
+                     * 
                      */
                     bool OutputUrlHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthKey Authentication key. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthKey() const;
 
                     /**
                      * 设置Authentication key. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthKey Authentication key. Length limit: [1,128].
+                     * @param _authKey Authentication key. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthKey(const std::string& _authKey);
 
                     /**
                      * 判断参数 AuthKey 是否已赋值
                      * @return AuthKey 是否已赋值
+                     * 
                      */
                     bool AuthKeyHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Username Authentication username. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Authentication username. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Username Authentication username. Length limit: [1,128].
+                     * @param _username Authentication username. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Password Authentication password. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Authentication password. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Password Authentication password. Length limit: [1,128].
+                     * @param _password Authentication password. Length limit: [1,128].
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

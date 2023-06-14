@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster specification name
                      * @return SpecName Cluster specification name
+                     * 
                      */
                     std::string GetSpecName() const;
 
                     /**
                      * 设置Cluster specification name
-                     * @param SpecName Cluster specification name
+                     * @param _specName Cluster specification name
+                     * 
                      */
                     void SetSpecName(const std::string& _specName);
 
                     /**
                      * 判断参数 SpecName 是否已赋值
                      * @return SpecName 是否已赋值
+                     * 
                      */
                     bool SpecNameHasBeenSet() const;
 
                     /**
                      * 获取Peak TPS
                      * @return MaxTps Peak TPS
+                     * 
                      */
                     uint64_t GetMaxTps() const;
 
                     /**
                      * 设置Peak TPS
-                     * @param MaxTps Peak TPS
+                     * @param _maxTps Peak TPS
+                     * 
                      */
                     void SetMaxTps(const uint64_t& _maxTps);
 
                     /**
                      * 判断参数 MaxTps 是否已赋值
                      * @return MaxTps 是否已赋值
+                     * 
                      */
                     bool MaxTpsHasBeenSet() const;
 
                     /**
                      * 获取Peak bandwidth in Mbps
                      * @return MaxBandWidth Peak bandwidth in Mbps
+                     * 
                      */
                     uint64_t GetMaxBandWidth() const;
 
                     /**
                      * 设置Peak bandwidth in Mbps
-                     * @param MaxBandWidth Peak bandwidth in Mbps
+                     * @param _maxBandWidth Peak bandwidth in Mbps
+                     * 
                      */
                     void SetMaxBandWidth(const uint64_t& _maxBandWidth);
 
                     /**
                      * 判断参数 MaxBandWidth 是否已赋值
                      * @return MaxBandWidth 是否已赋值
+                     * 
                      */
                     bool MaxBandWidthHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of namespaces
                      * @return MaxNamespaces Maximum number of namespaces
+                     * 
                      */
                     uint64_t GetMaxNamespaces() const;
 
                     /**
                      * 设置Maximum number of namespaces
-                     * @param MaxNamespaces Maximum number of namespaces
+                     * @param _maxNamespaces Maximum number of namespaces
+                     * 
                      */
                     void SetMaxNamespaces(const uint64_t& _maxNamespaces);
 
                     /**
                      * 判断参数 MaxNamespaces 是否已赋值
                      * @return MaxNamespaces 是否已赋值
+                     * 
                      */
                     bool MaxNamespacesHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of topic partitions
                      * @return MaxTopics Maximum number of topic partitions
+                     * 
                      */
                     uint64_t GetMaxTopics() const;
 
                     /**
                      * 设置Maximum number of topic partitions
-                     * @param MaxTopics Maximum number of topic partitions
+                     * @param _maxTopics Maximum number of topic partitions
+                     * 
                      */
                     void SetMaxTopics(const uint64_t& _maxTopics);
 
                     /**
                      * 判断参数 MaxTopics 是否已赋值
                      * @return MaxTopics 是否已赋值
+                     * 
                      */
                     bool MaxTopicsHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScalableTps Elastic TPS beyond the specification
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetScalableTps() const;
 
                     /**
                      * 设置Elastic TPS beyond the specification
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ScalableTps Elastic TPS beyond the specification
+                     * @param _scalableTps Elastic TPS beyond the specification
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScalableTps(const uint64_t& _scalableTps);
 
                     /**
                      * 判断参数 ScalableTps 是否已赋值
                      * @return ScalableTps 是否已赋值
+                     * 
                      */
                     bool ScalableTpsHasBeenSet() const;
 

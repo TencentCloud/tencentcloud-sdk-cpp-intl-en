@@ -61,6 +61,7 @@ Description of the possible video stream ID values:
 3. Specific user ID: the video stream of the specified user
 
 The actual recording uses the prefix match of the video stream ID. The real stream becomes the specified stream once its ID prefix matches with the stream ID.
+                     * 
                      */
                     std::string GetStreamId() const;
 
@@ -72,19 +73,21 @@ Description of the possible video stream ID values:
 3. Specific user ID: the video stream of the specified user
 
 The actual recording uses the prefix match of the video stream ID. The real stream becomes the specified stream once its ID prefix matches with the stream ID.
-                     * @param StreamId Video stream ID
+                     * @param _streamId Video stream ID
 Description of the possible video stream ID values:
 1. `tic_record_user`: the whiteboard video stream
 2. `tic_substream`: the auxiliary video stream
 3. Specific user ID: the video stream of the specified user
 
 The actual recording uses the prefix match of the video stream ID. The real stream becomes the specified stream once its ID prefix matches with the stream ID.
+                     * 
                      */
                     void SetStreamId(const std::string& _streamId);
 
                     /**
                      * 判断参数 StreamId 是否已赋值
                      * @return StreamId 是否已赋值
+                     * 
                      */
                     bool StreamIdHasBeenSet() const;
 
@@ -101,6 +104,7 @@ true: does not record this stream. This stream will not be included in the final
 false: records this stream. This stream will be included in the final recording file.
 
 Default value: false
+                     * 
                      */
                     bool GetDisableRecord() const;
 
@@ -111,18 +115,20 @@ true: does not record this stream. This stream will not be included in the final
 false: records this stream. This stream will be included in the final recording file.
 
 Default value: false
-                     * @param DisableRecord Whether to disable recording over the stream.
+                     * @param _disableRecord Whether to disable recording over the stream.
 
 true: does not record this stream. This stream will not be included in the final recording file.
 false: records this stream. This stream will be included in the final recording file.
 
 Default value: false
+                     * 
                      */
                     void SetDisableRecord(const bool& _disableRecord);
 
                     /**
                      * 判断参数 DisableRecord 是否已赋值
                      * @return DisableRecord 是否已赋值
+                     * 
                      */
                     bool DisableRecordHasBeenSet() const;
 
@@ -139,6 +145,7 @@ true: does not record the audio of the stream. In the final recording file, this
 false: the stream has both video and audio recording.
 
 Default value: false
+                     * 
                      */
                     bool GetDisableAudio() const;
 
@@ -149,18 +156,20 @@ true: does not record the audio of the stream. In the final recording file, this
 false: the stream has both video and audio recording.
 
 Default value: false
-                     * @param DisableAudio Whether to disable the audio recording of the stream.
+                     * @param _disableAudio Whether to disable the audio recording of the stream.
 
 true: does not record the audio of the stream. In the final recording file, this stream will be soundless.
 false: the stream has both video and audio recording.
 
 Default value: false
+                     * 
                      */
                     void SetDisableAudio(const bool& _disableAudio);
 
                     /**
                      * 判断参数 DisableAudio 是否已赋值
                      * @return DisableAudio 是否已赋值
+                     * 
                      */
                     bool DisableAudioHasBeenSet() const;
 
@@ -177,6 +186,7 @@ true: records only low-resolution videos. In this case, please make sure that th
 false: records only high-resolution videos.
 
 Default value: false
+                     * 
                      */
                     bool GetPullSmallVideo() const;
 
@@ -187,18 +197,20 @@ true: records only low-resolution videos. In this case, please make sure that th
 false: records only high-resolution videos.
 
 Default value: false
-                     * @param PullSmallVideo Whether to only record low-resolution stream videos.
+                     * @param _pullSmallVideo Whether to only record low-resolution stream videos.
 
 true: records only low-resolution videos. In this case, please make sure that the client pushes low-resolution videos upstream. Otherwise, the recorded video may be black. 
 false: records only high-resolution videos.
 
 Default value: false
+                     * 
                      */
                     void SetPullSmallVideo(const bool& _pullSmallVideo);
 
                     /**
                      * 判断参数 PullSmallVideo 是否已赋值
                      * @return PullSmallVideo 是否已赋值
+                     * 
                      */
                     bool PullSmallVideoHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The scaling group ID.
                      * @return AutoScalingGroupId The scaling group ID.
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置The scaling group ID.
-                     * @param AutoScalingGroupId The scaling group ID.
+                     * @param _autoScalingGroupId The scaling group ID.
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取The list of the CVM instances you want to start up.
                      * @return InstanceIds The list of the CVM instances you want to start up.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置The list of the CVM instances you want to start up.
-                     * @param InstanceIds The list of the CVM instances you want to start up.
+                     * @param _instanceIds The list of the CVM instances you want to start up.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

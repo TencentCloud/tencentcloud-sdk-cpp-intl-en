@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Download link of generated file. Generated documents will be stored in COS.
                      * @return DocumentURL Download link of generated file. Generated documents will be stored in COS.
+                     * 
                      */
                     std::string GetDocumentURL() const;
 
                     /**
                      * 设置Download link of generated file. Generated documents will be stored in COS.
-                     * @param DocumentURL Download link of generated file. Generated documents will be stored in COS.
+                     * @param _documentURL Download link of generated file. Generated documents will be stored in COS.
+                     * 
                      */
                     void SetDocumentURL(const std::string& _documentURL);
 
                     /**
                      * 判断参数 DocumentURL 是否已赋值
                      * @return DocumentURL 是否已赋值
+                     * 
                      */
                     bool DocumentURLHasBeenSet() const;
 
                     /**
                      * 获取Download link of generated SDK file. Generated SDK files will be stored in COS.
                      * @return SdkURL Download link of generated SDK file. Generated SDK files will be stored in COS.
+                     * 
                      */
                     std::string GetSdkURL() const;
 
                     /**
                      * 设置Download link of generated SDK file. Generated SDK files will be stored in COS.
-                     * @param SdkURL Download link of generated SDK file. Generated SDK files will be stored in COS.
+                     * @param _sdkURL Download link of generated SDK file. Generated SDK files will be stored in COS.
+                     * 
                      */
                     void SetSdkURL(const std::string& _sdkURL);
 
                     /**
                      * 判断参数 SdkURL 是否已赋值
                      * @return SdkURL 是否已赋值
+                     * 
                      */
                     bool SdkURLHasBeenSet() const;
 

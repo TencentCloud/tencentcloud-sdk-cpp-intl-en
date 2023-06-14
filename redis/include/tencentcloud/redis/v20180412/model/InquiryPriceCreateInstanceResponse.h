@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Price Price. Unit: USD (accurate down to the cent)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetPrice() const;
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 

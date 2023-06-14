@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
                      * @return TotalCount Total number of CLB instances that meet the filter criteria. This value is independent of the Limit in the input parameter.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Array of returned CLB instances.
                      * @return LoadBalancerSet Array of returned CLB instances.
+                     * 
                      */
                     std::vector<LoadBalancer> GetLoadBalancerSet() const;
 
                     /**
                      * 判断参数 LoadBalancerSet 是否已赋值
                      * @return LoadBalancerSet 是否已赋值
+                     * 
                      */
                     bool LoadBalancerSetHasBeenSet() const;
 

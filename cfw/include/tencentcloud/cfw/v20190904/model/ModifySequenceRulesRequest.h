@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Edge ID value
                      * @return EdgeId Edge ID value
+                     * 
                      */
                     std::string GetEdgeId() const;
 
                     /**
                      * 设置Edge ID value
-                     * @param EdgeId Edge ID value
+                     * @param _edgeId Edge ID value
+                     * 
                      */
                     void SetEdgeId(const std::string& _edgeId);
 
                     /**
                      * 判断参数 EdgeId 是否已赋值
                      * @return EdgeId 是否已赋值
+                     * 
                      */
                     bool EdgeIdHasBeenSet() const;
 
                     /**
                      * 获取Modifies data
                      * @return Data Modifies data
+                     * 
                      */
                     std::vector<SequenceData> GetData() const;
 
                     /**
                      * 设置Modifies data
-                     * @param Data Modifies data
+                     * @param _data Modifies data
+                     * 
                      */
                     void SetData(const std::vector<SequenceData>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取NAT region
                      * @return Area NAT region
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置NAT region
-                     * @param Area NAT region
+                     * @param _area NAT region
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Direction. 0: outbound; 1: inbound
                      * @return Direction Direction. 0: outbound; 1: inbound
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Direction. 0: outbound; 1: inbound
-                     * @param Direction Direction. 0: outbound; 1: inbound
+                     * @param _direction Direction. 0: outbound; 1: inbound
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 

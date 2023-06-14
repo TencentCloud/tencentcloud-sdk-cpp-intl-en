@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Customer UIN
                      * @return CustomerUin Customer UIN
+                     * 
                      */
                     uint64_t GetCustomerUin() const;
 
                     /**
                      * 设置Customer UIN
-                     * @param CustomerUin Customer UIN
+                     * @param _customerUin Customer UIN
+                     * 
                      */
                     void SetCustomerUin(const uint64_t& _customerUin);
 
                     /**
                      * 判断参数 CustomerUin 是否已赋值
                      * @return CustomerUin 是否已赋值
+                     * 
                      */
                     bool CustomerUinHasBeenSet() const;
 
                     /**
                      * 获取The queried month in “YYYY-MM” format, such as 2023-01.
                      * @return Month The queried month in “YYYY-MM” format, such as 2023-01.
+                     * 
                      */
                     std::string GetMonth() const;
 
                     /**
                      * 设置The queried month in “YYYY-MM” format, such as 2023-01.
-                     * @param Month The queried month in “YYYY-MM” format, such as 2023-01.
+                     * @param _month The queried month in “YYYY-MM” format, such as 2023-01.
+                     * 
                      */
                     void SetMonth(const std::string& _month);
 
                     /**
                      * 判断参数 Month 是否已赋值
                      * @return Month 是否已赋值
+                     * 
                      */
                     bool MonthHasBeenSet() const;
 
                     /**
                      * 获取A pagination parameter that specifies the number of entries per page
                      * @return PageSize A pagination parameter that specifies the number of entries per page
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置A pagination parameter that specifies the number of entries per page
-                     * @param PageSize A pagination parameter that specifies the number of entries per page
+                     * @param _pageSize A pagination parameter that specifies the number of entries per page
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取A pagination parameter that specifies the current page number
                      * @return Page A pagination parameter that specifies the current page number
+                     * 
                      */
                     int64_t GetPage() const;
 
                     /**
                      * 设置A pagination parameter that specifies the current page number
-                     * @param Page A pagination parameter that specifies the current page number
+                     * @param _page A pagination parameter that specifies the current page number
+                     * 
                      */
                     void SetPage(const int64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
@@ -121,6 +133,7 @@ namespace TencentCloud
                      * @return PayMode Billing mode. Valid values:
 `prePay` (Monthly subscription)
 `postPay` (Pay-as-you-go)
+                     * 
                      */
                     std::string GetPayMode() const;
 
@@ -128,15 +141,17 @@ namespace TencentCloud
                      * 设置Billing mode. Valid values:
 `prePay` (Monthly subscription)
 `postPay` (Pay-as-you-go)
-                     * @param PayMode Billing mode. Valid values:
+                     * @param _payMode Billing mode. Valid values:
 `prePay` (Monthly subscription)
 `postPay` (Pay-as-you-go)
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -193,6 +208,7 @@ namespace TencentCloud
 `pre_renew` (Monthly subscription renewal)
 `pre_upgrade` (Upgrade/Downgrade)
 `pre_downgrade` (Upgrade/Downgrade)
+                     * 
                      */
                     std::string GetActionType() const;
 
@@ -223,7 +239,7 @@ namespace TencentCloud
 `pre_renew` (Monthly subscription renewal)
 `pre_upgrade` (Upgrade/Downgrade)
 `pre_downgrade` (Upgrade/Downgrade)
-                     * @param ActionType Transaction type. Valid values:
+                     * @param _actionType Transaction type. Valid values:
 `prepay_purchase` (Purchase)
 `prepay_renew` (Renewal)
 `prepay_modify` (Upgrade/Downgrade)
@@ -249,12 +265,14 @@ namespace TencentCloud
 `pre_renew` (Monthly subscription renewal)
 `pre_upgrade` (Upgrade/Downgrade)
 `pre_downgrade` (Upgrade/Downgrade)
+                     * 
                      */
                     void SetActionType(const std::string& _actionType);
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 
@@ -267,6 +285,7 @@ namespace TencentCloud
 `0`: N/A
 `1`: Paid
 `2`: Unpaid
+                     * 
                      */
                     std::string GetIsConfirmed() const;
 
@@ -275,16 +294,18 @@ namespace TencentCloud
 `0`: N/A
 `1`: Paid
 `2`: Unpaid
-                     * @param IsConfirmed Payment status
+                     * @param _isConfirmed Payment status
 `0`: N/A
 `1`: Paid
 `2`: Unpaid
+                     * 
                      */
                     void SetIsConfirmed(const std::string& _isConfirmed);
 
                     /**
                      * 判断参数 IsConfirmed 是否已赋值
                      * @return IsConfirmed 是否已赋值
+                     * 
                      */
                     bool IsConfirmedHasBeenSet() const;
 

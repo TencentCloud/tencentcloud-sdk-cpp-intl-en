@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Status. 0: off; 1: on
                      * @return Status Status. 0: off; 1: on
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Status. 0: off; 1: on
-                     * @param Status Status. 0: off; 1: on
+                     * @param _status Status. 0: off; 1: on
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取ID of the selected firewall toggle
                      * @return FireWallVpcIds ID of the selected firewall toggle
+                     * 
                      */
                     std::vector<std::string> GetFireWallVpcIds() const;
 
                     /**
                      * 设置ID of the selected firewall toggle
-                     * @param FireWallVpcIds ID of the selected firewall toggle
+                     * @param _fireWallVpcIds ID of the selected firewall toggle
+                     * 
                      */
                     void SetFireWallVpcIds(const std::vector<std::string>& _fireWallVpcIds);
 
                     /**
                      * 判断参数 FireWallVpcIds 是否已赋值
                      * @return FireWallVpcIds 是否已赋值
+                     * 
                      */
                     bool FireWallVpcIdsHasBeenSet() const;
 

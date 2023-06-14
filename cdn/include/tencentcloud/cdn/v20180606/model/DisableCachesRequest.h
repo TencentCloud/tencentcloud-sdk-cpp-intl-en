@@ -47,20 +47,23 @@ namespace TencentCloud
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
                      * @return Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
+                     * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
                      * 设置List of URLs to be blocked (URLs must contain `http://` or `https://`).
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
-                     * @param Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
+                     * @param _urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
 Up to 100 entries can be submitted at a time and 3,000 entries per day.
+                     * 
                      */
                     void SetUrls(const std::vector<std::string>& _urls);
 
                     /**
                      * 判断参数 Urls 是否已赋值
                      * @return Urls 是否已赋值
+                     * 
                      */
                     bool UrlsHasBeenSet() const;
 

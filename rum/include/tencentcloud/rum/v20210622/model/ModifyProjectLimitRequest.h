@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Project ID
                      * @return ProjectID Project ID
+                     * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectID Project ID
+                     * @param _projectID Project ID
+                     * 
                      */
                     void SetProjectID(const int64_t& _projectID);
 
                     /**
                      * 判断参数 ProjectID 是否已赋值
                      * @return ProjectID 是否已赋值
+                     * 
                      */
                     bool ProjectIDHasBeenSet() const;
 
                     /**
                      * 获取Project API
                      * @return ProjectInterface Project API
+                     * 
                      */
                     std::string GetProjectInterface() const;
 
                     /**
                      * 设置Project API
-                     * @param ProjectInterface Project API
+                     * @param _projectInterface Project API
+                     * 
                      */
                     void SetProjectInterface(const std::string& _projectInterface);
 
                     /**
                      * 判断参数 ProjectInterface 是否已赋值
                      * @return ProjectInterface 是否已赋值
+                     * 
                      */
                     bool ProjectInterfaceHasBeenSet() const;
 
                     /**
                      * 获取Reporting rate. 10 means 10%
                      * @return ReportRate Reporting rate. 10 means 10%
+                     * 
                      */
                     int64_t GetReportRate() const;
 
                     /**
                      * 设置Reporting rate. 10 means 10%
-                     * @param ReportRate Reporting rate. 10 means 10%
+                     * @param _reportRate Reporting rate. 10 means 10%
+                     * 
                      */
                     void SetReportRate(const int64_t& _reportRate);
 
                     /**
                      * 判断参数 ReportRate 是否已赋值
                      * @return ReportRate 是否已赋值
+                     * 
                      */
                     bool ReportRateHasBeenSet() const;
 
                     /**
                      * 获取Reporting type. 1: rate; 2: number of reported data entries
                      * @return ReportType Reporting type. 1: rate; 2: number of reported data entries
+                     * 
                      */
                     int64_t GetReportType() const;
 
                     /**
                      * 设置Reporting type. 1: rate; 2: number of reported data entries
-                     * @param ReportType Reporting type. 1: rate; 2: number of reported data entries
+                     * @param _reportType Reporting type. 1: rate; 2: number of reported data entries
+                     * 
                      */
                     void SetReportType(const int64_t& _reportType);
 
                     /**
                      * 判断参数 ReportType 是否已赋值
                      * @return ReportType 是否已赋值
+                     * 
                      */
                     bool ReportTypeHasBeenSet() const;
 
                     /**
                      * 获取Primary key ID
                      * @return ID Primary key ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Primary key ID
-                     * @param ID Primary key ID
+                     * @param _iD Primary key ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

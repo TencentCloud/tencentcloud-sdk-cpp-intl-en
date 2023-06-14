@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the origin group
                      * @return OriginId ID of the origin group
+                     * 
                      */
                     std::string GetOriginId() const;
 
                     /**
                      * 设置ID of the origin group
-                     * @param OriginId ID of the origin group
+                     * @param _originId ID of the origin group
+                     * 
                      */
                     void SetOriginId(const std::string& _originId);
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the origin group
                      * @return OriginName Name of the origin group
+                     * 
                      */
                     std::string GetOriginName() const;
 
                     /**
                      * 设置Name of the origin group
-                     * @param OriginName Name of the origin group
+                     * @param _originName Name of the origin group
+                     * 
                      */
                     void SetOriginName(const std::string& _originName);
 
                     /**
                      * 判断参数 OriginName 是否已赋值
                      * @return OriginName 是否已赋值
+                     * 
                      */
                     bool OriginNameHasBeenSet() const;
 
@@ -88,6 +94,7 @@ When `OriginType=third_party/cos`, it can be left empty.
 `area`: Origin-pull by region
 `weight`: Origin-pull by weight
 When `OriginType=third_party/cos`, it can be left empty.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -96,52 +103,60 @@ When `OriginType=third_party/cos`, it can be left empty.
 `area`: Origin-pull by region
 `weight`: Origin-pull by weight
 When `OriginType=third_party/cos`, it can be left empty.
-                     * @param Type Origin-pull configuration type. This field is required when `OriginType=self`.
+                     * @param _type Origin-pull configuration type. This field is required when `OriginType=self`.
 `area`: Origin-pull by region
 `weight`: Origin-pull by weight
 When `OriginType=third_party/cos`, it can be left empty.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Origin record
                      * @return Record Origin record
+                     * 
                      */
                     std::vector<OriginRecord> GetRecord() const;
 
                     /**
                      * 设置Origin record
-                     * @param Record Origin record
+                     * @param _record Origin record
+                     * 
                      */
                     void SetRecord(const std::vector<OriginRecord>& _record);
 
                     /**
                      * 判断参数 Record 是否已赋值
                      * @return Record 是否已赋值
+                     * 
                      */
                     bool RecordHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -154,6 +169,7 @@ When `OriginType=third_party/cos`, it can be left empty.
 `self`: Customer origin
 `third_party`: Third-party origin
 `cos`: Tencent Cloud COS origin
+                     * 
                      */
                     std::string GetOriginType() const;
 
@@ -162,16 +178,18 @@ When `OriginType=third_party/cos`, it can be left empty.
 `self`: Customer origin
 `third_party`: Third-party origin
 `cos`: Tencent Cloud COS origin
-                     * @param OriginType Origin type
+                     * @param _originType Origin type
 `self`: Customer origin
 `third_party`: Third-party origin
 `cos`: Tencent Cloud COS origin
+                     * 
                      */
                     void SetOriginType(const std::string& _originType);
 
                     /**
                      * 判断参数 OriginType 是否已赋值
                      * @return OriginType 是否已赋值
+                     * 
                      */
                     bool OriginTypeHasBeenSet() const;
 

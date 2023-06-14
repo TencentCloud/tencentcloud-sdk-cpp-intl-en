@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
-                     * @param Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
+                     * @param _business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance IP
                      * @return Ip Anti-DDoS instance IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Anti-DDoS instance IP
-                     * @param Ip Anti-DDoS instance IP
+                     * @param _ip Anti-DDoS instance IP
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Metric. Valid values: [bps (attack traffic bandwidth), pps (attack packet rate)]
                      * @return MetricName Metric. Valid values: [bps (attack traffic bandwidth), pps (attack packet rate)]
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric. Valid values: [bps (attack traffic bandwidth), pps (attack packet rate)]
-                     * @param MetricName Metric. Valid values: [bps (attack traffic bandwidth), pps (attack packet rate)]
+                     * @param _metricName Metric. Valid values: [bps (attack traffic bandwidth), pps (attack packet rate)]
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Statistical granularity. Valid values: [300 (5-minute), 3600 (hourly), 86400 (daily)]
                      * @return Period Statistical granularity. Valid values: [300 (5-minute), 3600 (hourly), 86400 (daily)]
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Statistical granularity. Valid values: [300 (5-minute), 3600 (hourly), 86400 (daily)]
-                     * @param Period Statistical granularity. Valid values: [300 (5-minute), 3600 (hourly), 86400 (daily)]
+                     * @param _period Statistical granularity. Valid values: [300 (5-minute), 3600 (hourly), 86400 (daily)]
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Statistics start time
                      * @return StartTime Statistics start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Statistics start time
-                     * @param StartTime Statistics start time
+                     * @param _startTime Statistics start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistics end time
                      * @return EndTime Statistics end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Statistics end time
-                     * @param EndTime Statistics end time
+                     * @param _endTime Statistics end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
                      * @return Id Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
-                     * @param Id Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
+                     * @param _id Resource instance ID. If `Business` is `basic`, this field is not required (because Anti-DDoS Basic has no resource instance)
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

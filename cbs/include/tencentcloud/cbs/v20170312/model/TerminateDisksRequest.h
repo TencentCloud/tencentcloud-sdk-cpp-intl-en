@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of cloud disk IDs required to be returned.
                      * @return DiskIds List of cloud disk IDs required to be returned.
+                     * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
                      * 设置List of cloud disk IDs required to be returned.
-                     * @param DiskIds List of cloud disk IDs required to be returned.
+                     * @param _diskIds List of cloud disk IDs required to be returned.
+                     * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
 
                     /**
                      * 判断参数 DiskIds 是否已赋值
                      * @return DiskIds 是否已赋值
+                     * 
                      */
                     bool DiskIdsHasBeenSet() const;
 
                     /**
                      * 获取Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
                      * @return DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+                     * 
                      */
                     int64_t GetDeleteSnapshot() const;
 
                     /**
                      * 设置Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
-                     * @param DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+                     * @param _deleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+                     * 
                      */
                     void SetDeleteSnapshot(const int64_t& _deleteSnapshot);
 
                     /**
                      * 判断参数 DeleteSnapshot 是否已赋值
                      * @return DeleteSnapshot 是否已赋值
+                     * 
                      */
                     bool DeleteSnapshotHasBeenSet() const;
 

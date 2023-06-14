@@ -53,20 +53,23 @@ namespace TencentCloud
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
                      * @return State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
-                     * @param State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+                     * @param _state Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
@@ -77,6 +80,7 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
                      * @return Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
 `CustomDRMKeys` means encryption keys customized by users.
 `SDMCDRM` means the DRM key management system of SDMC.
+                     * 
                      */
                     std::string GetScheme() const;
 
@@ -84,15 +88,17 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
                      * 设置Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
 `CustomDRMKeys` means encryption keys customized by users.
 `SDMCDRM` means the DRM key management system of SDMC.
-                     * @param Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+                     * @param _scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
 `CustomDRMKeys` means encryption keys customized by users.
 `SDMCDRM` means the DRM key management system of SDMC.
+                     * 
                      */
                     void SetScheme(const std::string& _scheme);
 
                     /**
                      * 判断参数 Scheme 是否已赋值
                      * @return Scheme 是否已赋值
+                     * 
                      */
                     bool SchemeHasBeenSet() const;
 
@@ -101,20 +107,23 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
 If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
                      * @return ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
 If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+                     * 
                      */
                     std::string GetContentId() const;
 
                     /**
                      * 设置If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
 If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
-                     * @param ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+                     * @param _contentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
 If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+                     * 
                      */
                     void SetContentId(const std::string& _contentId);
 
                     /**
                      * 判断参数 ContentId 是否已赋值
                      * @return ContentId 是否已赋值
+                     * 
                      */
                     bool ContentIdHasBeenSet() const;
 
@@ -123,20 +132,23 @@ If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits,
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DrmKey> GetKeys() const;
 
                     /**
                      * 设置The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
+                     * @param _keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeys(const std::vector<DrmKey>& _keys);
 
                     /**
                      * 判断参数 Keys 是否已赋值
                      * @return Keys 是否已赋值
+                     * 
                      */
                     bool KeysHasBeenSet() const;
 
@@ -145,20 +157,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     SDMCSettingsInfo GetSDMCSettings() const;
 
                     /**
                      * 设置SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+                     * @param _sDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetSDMCSettings(const SDMCSettingsInfo& _sDMCSettings);
 
                     /**
                      * 判断参数 SDMCSettings 是否已赋值
                      * @return SDMCSettings 是否已赋值
+                     * 
                      */
                     bool SDMCSettingsHasBeenSet() const;
 
@@ -167,20 +182,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDrmType() const;
 
                     /**
                      * 设置The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+                     * @param _drmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDrmType(const std::string& _drmType);
 
                     /**
                      * 判断参数 DrmType 是否已赋值
                      * @return DrmType 是否已赋值
+                     * 
                      */
                     bool DrmTypeHasBeenSet() const;
 

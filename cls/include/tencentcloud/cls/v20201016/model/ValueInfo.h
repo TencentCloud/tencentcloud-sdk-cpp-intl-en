@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Field type. Valid values: `long`, `text`, `double`
                      * @return Type Field type. Valid values: `long`, `text`, `double`
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Field type. Valid values: `long`, `text`, `double`
-                     * @param Type Field type. Valid values: `long`, `text`, `double`
+                     * @param _type Field type. Valid values: `long`, `text`, `double`
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -73,6 +76,7 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
+                     * 
                      */
                     std::string GetTokenizer() const;
 
@@ -81,34 +85,39 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
-                     * @param Tokenizer Separator of fields. Each character represents a separator.
+                     * @param _tokenizer Separator of fields. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
 `long` and `double` fields need to be null.
 Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
+                     * 
                      */
                     void SetTokenizer(const std::string& _tokenizer);
 
                     /**
                      * 判断参数 Tokenizer 是否已赋值
                      * @return Tokenizer 是否已赋值
+                     * 
                      */
                     bool TokenizerHasBeenSet() const;
 
                     /**
                      * 获取Whether the analysis feature is enabled for the field
                      * @return SqlFlag Whether the analysis feature is enabled for the field
+                     * 
                      */
                     bool GetSqlFlag() const;
 
                     /**
                      * 设置Whether the analysis feature is enabled for the field
-                     * @param SqlFlag Whether the analysis feature is enabled for the field
+                     * @param _sqlFlag Whether the analysis feature is enabled for the field
+                     * 
                      */
                     void SetSqlFlag(const bool& _sqlFlag);
 
                     /**
                      * 判断参数 SqlFlag 是否已赋值
                      * @return SqlFlag 是否已赋值
+                     * 
                      */
                     bool SqlFlagHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetContainZH() const;
 
                     /**
                      * 设置Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+                     * @param _containZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainZH(const bool& _containZH);
 
                     /**
                      * 判断参数 ContainZH 是否已赋值
                      * @return ContainZH 是否已赋值
+                     * 
                      */
                     bool ContainZHHasBeenSet() const;
 

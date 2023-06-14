@@ -48,18 +48,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID to be upgraded in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
                      * @return InstanceId Instance ID to be upgraded in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID to be upgraded in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
-                     * @param InstanceId Instance ID to be upgraded in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
+                     * @param _instanceId Instance ID to be upgraded in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
 <li> `ADD`: Add a new shard </li> 
  <li> `EXPAND`: Upgrade the existing shads</li> 
  <li> `SPLIT`: Split data of the existing shads to the new ones</li>
+                     * 
                      */
                     std::string GetUpgradeType() const;
 
@@ -80,142 +84,165 @@ namespace TencentCloud
 <li> `ADD`: Add a new shard </li> 
  <li> `EXPAND`: Upgrade the existing shads</li> 
  <li> `SPLIT`: Split data of the existing shads to the new ones</li>
-                     * @param UpgradeType Upgrade type. Valid values: 
+                     * @param _upgradeType Upgrade type. Valid values: 
 <li> `ADD`: Add a new shard </li> 
  <li> `EXPAND`: Upgrade the existing shads</li> 
  <li> `SPLIT`: Split data of the existing shads to the new ones</li>
+                     * 
                      */
                     void SetUpgradeType(const std::string& _upgradeType);
 
                     /**
                      * 判断参数 UpgradeType 是否已赋值
                      * @return UpgradeType 是否已赋值
+                     * 
                      */
                     bool UpgradeTypeHasBeenSet() const;
 
                     /**
                      * 获取Add shards when `UpgradeType` is `ADD`.
                      * @return AddShardConfig Add shards when `UpgradeType` is `ADD`.
+                     * 
                      */
                     AddShardConfig GetAddShardConfig() const;
 
                     /**
                      * 设置Add shards when `UpgradeType` is `ADD`.
-                     * @param AddShardConfig Add shards when `UpgradeType` is `ADD`.
+                     * @param _addShardConfig Add shards when `UpgradeType` is `ADD`.
+                     * 
                      */
                     void SetAddShardConfig(const AddShardConfig& _addShardConfig);
 
                     /**
                      * 判断参数 AddShardConfig 是否已赋值
                      * @return AddShardConfig 是否已赋值
+                     * 
                      */
                     bool AddShardConfigHasBeenSet() const;
 
                     /**
                      * 获取Expand shard when `UpgradeType` is `EXPAND`.
                      * @return ExpandShardConfig Expand shard when `UpgradeType` is `EXPAND`.
+                     * 
                      */
                     ExpandShardConfig GetExpandShardConfig() const;
 
                     /**
                      * 设置Expand shard when `UpgradeType` is `EXPAND`.
-                     * @param ExpandShardConfig Expand shard when `UpgradeType` is `EXPAND`.
+                     * @param _expandShardConfig Expand shard when `UpgradeType` is `EXPAND`.
+                     * 
                      */
                     void SetExpandShardConfig(const ExpandShardConfig& _expandShardConfig);
 
                     /**
                      * 判断参数 ExpandShardConfig 是否已赋值
                      * @return ExpandShardConfig 是否已赋值
+                     * 
                      */
                     bool ExpandShardConfigHasBeenSet() const;
 
                     /**
                      * 获取Split shard when `UpgradeType` is `SPLIT`.
                      * @return SplitShardConfig Split shard when `UpgradeType` is `SPLIT`.
+                     * 
                      */
                     SplitShardConfig GetSplitShardConfig() const;
 
                     /**
                      * 设置Split shard when `UpgradeType` is `SPLIT`.
-                     * @param SplitShardConfig Split shard when `UpgradeType` is `SPLIT`.
+                     * @param _splitShardConfig Split shard when `UpgradeType` is `SPLIT`.
+                     * 
                      */
                     void SetSplitShardConfig(const SplitShardConfig& _splitShardConfig);
 
                     /**
                      * 判断参数 SplitShardConfig 是否已赋值
                      * @return SplitShardConfig 是否已赋值
+                     * 
                      */
                     bool SplitShardConfigHasBeenSet() const;
 
                     /**
                      * 获取Switch start time in the format of "2019-12-12 07:00:00", which is no less than one hour and within 3 days from the current time.
                      * @return SwitchStartTime Switch start time in the format of "2019-12-12 07:00:00", which is no less than one hour and within 3 days from the current time.
+                     * 
                      */
                     std::string GetSwitchStartTime() const;
 
                     /**
                      * 设置Switch start time in the format of "2019-12-12 07:00:00", which is no less than one hour and within 3 days from the current time.
-                     * @param SwitchStartTime Switch start time in the format of "2019-12-12 07:00:00", which is no less than one hour and within 3 days from the current time.
+                     * @param _switchStartTime Switch start time in the format of "2019-12-12 07:00:00", which is no less than one hour and within 3 days from the current time.
+                     * 
                      */
                     void SetSwitchStartTime(const std::string& _switchStartTime);
 
                     /**
                      * 判断参数 SwitchStartTime 是否已赋值
                      * @return SwitchStartTime 是否已赋值
+                     * 
                      */
                     bool SwitchStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Switch end time in the format of "2019-12-12 07:15:00", which must be later than the start time.
                      * @return SwitchEndTime Switch end time in the format of "2019-12-12 07:15:00", which must be later than the start time.
+                     * 
                      */
                     std::string GetSwitchEndTime() const;
 
                     /**
                      * 设置Switch end time in the format of "2019-12-12 07:15:00", which must be later than the start time.
-                     * @param SwitchEndTime Switch end time in the format of "2019-12-12 07:15:00", which must be later than the start time.
+                     * @param _switchEndTime Switch end time in the format of "2019-12-12 07:15:00", which must be later than the start time.
+                     * 
                      */
                     void SetSwitchEndTime(const std::string& _switchEndTime);
 
                     /**
                      * 判断参数 SwitchEndTime 是否已赋值
                      * @return SwitchEndTime 是否已赋值
+                     * 
                      */
                     bool SwitchEndTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether to retry automatically. Valid values: `0` (no), `1` (yes).
                      * @return SwitchAutoRetry Whether to retry automatically. Valid values: `0` (no), `1` (yes).
+                     * 
                      */
                     int64_t GetSwitchAutoRetry() const;
 
                     /**
                      * 设置Whether to retry automatically. Valid values: `0` (no), `1` (yes).
-                     * @param SwitchAutoRetry Whether to retry automatically. Valid values: `0` (no), `1` (yes).
+                     * @param _switchAutoRetry Whether to retry automatically. Valid values: `0` (no), `1` (yes).
+                     * 
                      */
                     void SetSwitchAutoRetry(const int64_t& _switchAutoRetry);
 
                     /**
                      * 判断参数 SwitchAutoRetry 是否已赋值
                      * @return SwitchAutoRetry 是否已赋值
+                     * 
                      */
                     bool SwitchAutoRetryHasBeenSet() const;
 
                     /**
                      * 获取The list of new AZs specified in deployment modification. The first one is the source AZ, and the rest are replica AZs.
                      * @return Zones The list of new AZs specified in deployment modification. The first one is the source AZ, and the rest are replica AZs.
+                     * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
                      * 设置The list of new AZs specified in deployment modification. The first one is the source AZ, and the rest are replica AZs.
-                     * @param Zones The list of new AZs specified in deployment modification. The first one is the source AZ, and the rest are replica AZs.
+                     * @param _zones The list of new AZs specified in deployment modification. The first one is the source AZ, and the rest are replica AZs.
+                     * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
                     /**
                      * 判断参数 Zones 是否已赋值
                      * @return Zones 是否已赋值
+                     * 
                      */
                     bool ZonesHasBeenSet() const;
 

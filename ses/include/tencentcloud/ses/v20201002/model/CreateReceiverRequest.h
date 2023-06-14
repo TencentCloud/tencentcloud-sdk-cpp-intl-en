@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Recipient group name
                      * @return ReceiversName Recipient group name
+                     * 
                      */
                     std::string GetReceiversName() const;
 
                     /**
                      * 设置Recipient group name
-                     * @param ReceiversName Recipient group name
+                     * @param _receiversName Recipient group name
+                     * 
                      */
                     void SetReceiversName(const std::string& _receiversName);
 
                     /**
                      * 判断参数 ReceiversName 是否已赋值
                      * @return ReceiversName 是否已赋值
+                     * 
                      */
                     bool ReceiversNameHasBeenSet() const;
 
                     /**
                      * 获取Recipient group description
                      * @return Desc Recipient group description
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Recipient group description
-                     * @param Desc Recipient group description
+                     * @param _desc Recipient group description
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return RuleID Rule ID
+                     * 
                      */
                     std::string GetRuleID() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleID Rule ID
+                     * @param _ruleID Rule ID
+                     * 
                      */
                     void SetRuleID(const std::string& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of results returned. Default value: 10. Maximum value: 100.
                      * @return Limit The number of results returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of results returned. Default value: 10. Maximum value: 100.
-                     * @param Limit The number of results returned. Default value: 10. Maximum value: 100.
+                     * @param _limit The number of results returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -104,6 +113,7 @@ namespace TencentCloud
                      * @return Filters Filters.
 <li>`Action` - String - Optional - Filter by action</li>
 <li>`RiskLevel` - String - Optional - Threat level</li>
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
@@ -111,15 +121,17 @@ namespace TencentCloud
                      * 设置Filters.
 <li>`Action` - String - Optional - Filter by action</li>
 <li>`RiskLevel` - String - Optional - Threat level</li>
-                     * @param Filters Filters.
+                     * @param _filters Filters.
 <li>`Action` - String - Optional - Filter by action</li>
 <li>`RiskLevel` - String - Optional - Threat level</li>
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the specified check item
                      * @return CustomerPolicyItemId ID of the specified check item
+                     * 
                      */
                     uint64_t GetCustomerPolicyItemId() const;
 
                     /**
                      * 设置ID of the specified check item
-                     * @param CustomerPolicyItemId ID of the specified check item
+                     * @param _customerPolicyItemId ID of the specified check item
+                     * 
                      */
                     void SetCustomerPolicyItemId(const uint64_t& _customerPolicyItemId);
 
                     /**
                      * 判断参数 CustomerPolicyItemId 是否已赋值
                      * @return CustomerPolicyItemId 是否已赋值
+                     * 
                      */
                     bool CustomerPolicyItemIdHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of customer assets to be scanned again
                      * @return CustomerAssetIdSet List of IDs of customer assets to be scanned again
+                     * 
                      */
                     std::vector<uint64_t> GetCustomerAssetIdSet() const;
 
                     /**
                      * 设置List of IDs of customer assets to be scanned again
-                     * @param CustomerAssetIdSet List of IDs of customer assets to be scanned again
+                     * @param _customerAssetIdSet List of IDs of customer assets to be scanned again
+                     * 
                      */
                     void SetCustomerAssetIdSet(const std::vector<uint64_t>& _customerAssetIdSet);
 
                     /**
                      * 判断参数 CustomerAssetIdSet 是否已赋值
                      * @return CustomerAssetIdSet 是否已赋值
+                     * 
                      */
                     bool CustomerAssetIdSetHasBeenSet() const;
 

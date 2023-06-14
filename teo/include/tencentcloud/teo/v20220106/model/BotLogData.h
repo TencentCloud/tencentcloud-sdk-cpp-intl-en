@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return List Data set of bot attack logs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BotLog> GetList() const;
 
                     /**
                      * 设置Data set of bot attack logs
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param List Data set of bot attack logs
+                     * @param _list Data set of bot attack logs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetList(const std::vector<BotLog>& _list);
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PageNo Current page
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPageNo() const;
 
                     /**
                      * 设置Current page
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PageNo Current page
+                     * @param _pageNo Current page
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPageNo(const int64_t& _pageNo);
 
                     /**
                      * 判断参数 PageNo 是否已赋值
                      * @return PageNo 是否已赋值
+                     * 
                      */
                     bool PageNoHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PageSize Number of items per page
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置Number of items per page
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PageSize Number of items per page
+                     * @param _pageSize Number of items per page
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Pages Total number of pages
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPages() const;
 
                     /**
                      * 设置Total number of pages
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Pages Total number of pages
+                     * @param _pages Total number of pages
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPages(const int64_t& _pages);
 
                     /**
                      * 判断参数 Pages 是否已赋值
                      * @return Pages 是否已赋值
+                     * 
                      */
                     bool PagesHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalSize Total number of items
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalSize() const;
 
                     /**
                      * 设置Total number of items
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalSize Total number of items
+                     * @param _totalSize Total number of items
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalSize(const int64_t& _totalSize);
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 

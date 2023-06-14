@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The cluster ID.
                      * @return InstanceId The cluster ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The cluster ID.
-                     * @param InstanceId The cluster ID.
+                     * @param _instanceId The cluster ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>`StartMonitor`: Start the monitor.</li>
 <li>`StopMonitor`: Stop the monitor.</li>
 
+                     * 
                      */
                     std::string GetOpType() const;
 
@@ -84,36 +88,41 @@ namespace TencentCloud
 <li>`StartMonitor`: Start the monitor.</li>
 <li>`StopMonitor`: Stop the monitor.</li>
 
-                     * @param OpType The operation type. Valid values:
+                     * @param _opType The operation type. Valid values:
 <li>`StartService`: Start services.</li>
 <li>`StopService`: Stop services.</li>
 <li>`StartMonitor`: Start the monitor.</li>
 <li>`StopMonitor`: Stop the monitor.</li>
 
+                     * 
                      */
                     void SetOpType(const std::string& _opType);
 
                     /**
                      * 判断参数 OpType 是否已赋值
                      * @return OpType 是否已赋值
+                     * 
                      */
                     bool OpTypeHasBeenSet() const;
 
                     /**
                      * 获取The operation scope.
                      * @return OpScope The operation scope.
+                     * 
                      */
                     OpScope GetOpScope() const;
 
                     /**
                      * 设置The operation scope.
-                     * @param OpScope The operation scope.
+                     * @param _opScope The operation scope.
+                     * 
                      */
                     void SetOpScope(const OpScope& _opScope);
 
                     /**
                      * 判断参数 OpScope 是否已赋值
                      * @return OpScope 是否已赋值
+                     * 
                      */
                     bool OpScopeHasBeenSet() const;
 

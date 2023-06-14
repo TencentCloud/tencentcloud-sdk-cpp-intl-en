@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Upload time
                      * @return UploadTime Upload time
+                     * 
                      */
                     std::string GetUploadTime() const;
 
                     /**
                      * 设置Upload time
-                     * @param UploadTime Upload time
+                     * @param _uploadTime Upload time
+                     * 
                      */
                     void SetUploadTime(const std::string& _uploadTime);
 
                     /**
                      * 判断参数 UploadTime 是否已赋值
                      * @return UploadTime 是否已赋值
+                     * 
                      */
                     bool UploadTimeHasBeenSet() const;
 
                     /**
                      * 获取Upload progress
                      * @return UploadInfo Upload progress
+                     * 
                      */
                     UploadInfo GetUploadInfo() const;
 
                     /**
                      * 设置Upload progress
-                     * @param UploadInfo Upload progress
+                     * @param _uploadInfo Upload progress
+                     * 
                      */
                     void SetUploadInfo(const UploadInfo& _uploadInfo);
 
                     /**
                      * 判断参数 UploadInfo 是否已赋值
                      * @return UploadInfo 是否已赋值
+                     * 
                      */
                     bool UploadInfoHasBeenSet() const;
 
                     /**
                      * 获取Filename
                      * @return FileName Filename
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename
-                     * @param FileName Filename
+                     * @param _fileName Filename
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取File size in bytes
                      * @return FileSize File size in bytes
+                     * 
                      */
                     int64_t GetFileSize() const;
 
                     /**
                      * 设置File size in bytes
-                     * @param FileSize File size in bytes
+                     * @param _fileSize File size in bytes
+                     * 
                      */
                     void SetFileSize(const int64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
                      * @return FileSize 是否已赋值
+                     * 
                      */
                     bool FileSizeHasBeenSet() const;
 
                     /**
                      * 获取Whether upload is finished. Valid values: 0 (not completed), 1 (completed)
                      * @return IsUploadFinished Whether upload is finished. Valid values: 0 (not completed), 1 (completed)
+                     * 
                      */
                     int64_t GetIsUploadFinished() const;
 
                     /**
                      * 设置Whether upload is finished. Valid values: 0 (not completed), 1 (completed)
-                     * @param IsUploadFinished Whether upload is finished. Valid values: 0 (not completed), 1 (completed)
+                     * @param _isUploadFinished Whether upload is finished. Valid values: 0 (not completed), 1 (completed)
+                     * 
                      */
                     void SetIsUploadFinished(const int64_t& _isUploadFinished);
 
                     /**
                      * 判断参数 IsUploadFinished 是否已赋值
                      * @return IsUploadFinished 是否已赋值
+                     * 
                      */
                     bool IsUploadFinishedHasBeenSet() const;
 
                     /**
                      * 获取File ID
                      * @return FileId File ID
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置File ID
-                     * @param FileId File ID
+                     * @param _fileId File ID
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 

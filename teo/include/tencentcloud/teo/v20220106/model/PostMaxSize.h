@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Specifies whether to enable custom setting of the maximum file size. 
 `off`: Disable. In this case, the max size defaults to 32 MB.
 `on`: Enable. You can set a custom max size.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Specifies whether to enable custom setting of the maximum file size. 
 `off`: Disable. In this case, the max size defaults to 32 MB.
 `on`: Enable. You can set a custom max size.
-                     * @param Switch Specifies whether to enable custom setting of the maximum file size. 
+                     * @param _switch Specifies whether to enable custom setting of the maximum file size. 
 `off`: Disable. In this case, the max size defaults to 32 MB.
 `on`: Enable. You can set a custom max size.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MaxSize Maximum size. Value range: 1-500 MB.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum size. Value range: 1-500 MB.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MaxSize Maximum size. Value range: 1-500 MB.
+                     * @param _maxSize Maximum size. Value range: 1-500 MB.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 

@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return AsyncRequestId ID of an async task request, which can be used to query the execution result of an async task.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

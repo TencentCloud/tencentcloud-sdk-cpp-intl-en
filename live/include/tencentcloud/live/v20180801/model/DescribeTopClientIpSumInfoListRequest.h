@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _startTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -65,128 +68,149 @@ namespace TencentCloud
 The time span is [0,4 hours]. Data for the last day can be queried.
                      * @return EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
 The time span is [0,4 hours]. Data for the last day can be queried.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End point in time in the format of `yyyy-mm-dd HH:MM:SS`
 The time span is [0,4 hours]. Data for the last day can be queried.
-                     * @param EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+                     * @param _endTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
 The time span is [0,4 hours]. Data for the last day can be queried.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name. If this parameter is left empty, full data will be queried by default.
                      * @return PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
+                     * 
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
                      * 设置Playback domain name. If this parameter is left empty, full data will be queried by default.
-                     * @param PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
+                     * @param _playDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
+                     * 
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
                     /**
                      * 判断参数 PlayDomains 是否已赋值
                      * @return PlayDomains 是否已赋值
+                     * 
                      */
                     bool PlayDomainsHasBeenSet() const;
 
                     /**
                      * 获取Page number. Value range: [1,1000]. Default value: 1.
                      * @return PageNum Page number. Value range: [1,1000]. Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 设置Page number. Value range: [1,1000]. Default value: 1.
-                     * @param PageNum Page number. Value range: [1,1000]. Default value: 1.
+                     * @param _pageNum Page number. Value range: [1,1000]. Default value: 1.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Value range: [1,1000]. Default value: 20.
                      * @return PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page. Value range: [1,1000]. Default value: 20.
-                     * @param PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+                     * @param _pageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Sorting metric. Valid values: TotalRequest (default value), FailedRequest, TotalFlux.
                      * @return OrderParam Sorting metric. Valid values: TotalRequest (default value), FailedRequest, TotalFlux.
+                     * 
                      */
                     std::string GetOrderParam() const;
 
                     /**
                      * 设置Sorting metric. Valid values: TotalRequest (default value), FailedRequest, TotalFlux.
-                     * @param OrderParam Sorting metric. Valid values: TotalRequest (default value), FailedRequest, TotalFlux.
+                     * @param _orderParam Sorting metric. Valid values: TotalRequest (default value), FailedRequest, TotalFlux.
+                     * 
                      */
                     void SetOrderParam(const std::string& _orderParam);
 
                     /**
                      * 判断参数 OrderParam 是否已赋值
                      * @return OrderParam 是否已赋值
+                     * 
                      */
                     bool OrderParamHasBeenSet() const;
 
                     /**
                      * 获取Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
                      * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
                     /**
                      * 设置Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
-                     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * @param _mainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 
                     /**
                      * 获取Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
                      * @return OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+                     * 
                      */
                     std::string GetOutLanguage() const;
 
                     /**
                      * 设置Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
-                     * @param OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+                     * @param _outLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+                     * 
                      */
                     void SetOutLanguage(const std::string& _outLanguage);
 
                     /**
                      * 判断参数 OutLanguage 是否已赋值
                      * @return OutLanguage 是否已赋值
+                     * 
                      */
                     bool OutLanguageHasBeenSet() const;
 

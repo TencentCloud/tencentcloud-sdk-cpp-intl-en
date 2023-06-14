@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取`DATE`: Daily; `HOUR`: Hourly
                      * @return DnsFormat `DATE`: Daily; `HOUR`: Hourly
+                     * 
                      */
                     std::string GetDnsFormat() const;
 
                     /**
                      * 设置`DATE`: Daily; `HOUR`: Hourly
-                     * @param DnsFormat `DATE`: Daily; `HOUR`: Hourly
+                     * @param _dnsFormat `DATE`: Daily; `HOUR`: Hourly
+                     * 
                      */
                     void SetDnsFormat(const std::string& _dnsFormat);
 
                     /**
                      * 判断参数 DnsFormat 是否已赋值
                      * @return DnsFormat 是否已赋值
+                     * 
                      */
                     bool DnsFormatHasBeenSet() const;
 
                     /**
                      * 获取Total DNS query volume for the current statistical period
                      * @return DnsTotal Total DNS query volume for the current statistical period
+                     * 
                      */
                     uint64_t GetDnsTotal() const;
 
                     /**
                      * 设置Total DNS query volume for the current statistical period
-                     * @param DnsTotal Total DNS query volume for the current statistical period
+                     * @param _dnsTotal Total DNS query volume for the current statistical period
+                     * 
                      */
                     void SetDnsTotal(const uint64_t& _dnsTotal);
 
                     /**
                      * 判断参数 DnsTotal 是否已赋值
                      * @return DnsTotal 是否已赋值
+                     * 
                      */
                     bool DnsTotalHasBeenSet() const;
 
                     /**
                      * 获取The queried domain
                      * @return Domain The queried domain
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The queried domain
-                     * @param Domain The queried domain
+                     * @param _domain The queried domain
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Start date of the current statistical period
                      * @return StartDate Start date of the current statistical period
+                     * 
                      */
                     std::string GetStartDate() const;
 
                     /**
                      * 设置Start date of the current statistical period
-                     * @param StartDate Start date of the current statistical period
+                     * @param _startDate Start date of the current statistical period
+                     * 
                      */
                     void SetStartDate(const std::string& _startDate);
 
                     /**
                      * 判断参数 StartDate 是否已赋值
                      * @return StartDate 是否已赋值
+                     * 
                      */
                     bool StartDateHasBeenSet() const;
 
                     /**
                      * 获取End date of the current statistical period
                      * @return EndDate End date of the current statistical period
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置End date of the current statistical period
-                     * @param EndDate End date of the current statistical period
+                     * @param _endDate End date of the current statistical period
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 
                     /**
                      * 获取Subdomain
                      * @return Subdomain Subdomain
+                     * 
                      */
                     std::string GetSubdomain() const;
 
                     /**
                      * 设置Subdomain
-                     * @param Subdomain Subdomain
+                     * @param _subdomain Subdomain
+                     * 
                      */
                     void SetSubdomain(const std::string& _subdomain);
 
                     /**
                      * 判断参数 Subdomain 是否已赋值
                      * @return Subdomain 是否已赋值
+                     * 
                      */
                     bool SubdomainHasBeenSet() const;
 

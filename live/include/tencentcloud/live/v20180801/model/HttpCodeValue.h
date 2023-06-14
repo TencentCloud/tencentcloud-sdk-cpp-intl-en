@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Time in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return Time Time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Time in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param Time Time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _time Time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Occurrences.
                      * @return Numbers Occurrences.
+                     * 
                      */
                     uint64_t GetNumbers() const;
 
                     /**
                      * 设置Occurrences.
-                     * @param Numbers Occurrences.
+                     * @param _numbers Occurrences.
+                     * 
                      */
                     void SetNumbers(const uint64_t& _numbers);
 
                     /**
                      * 判断参数 Numbers 是否已赋值
                      * @return Numbers 是否已赋值
+                     * 
                      */
                     bool NumbersHasBeenSet() const;
 
                     /**
                      * 获取Proportion.
                      * @return Percentage Proportion.
+                     * 
                      */
                     double GetPercentage() const;
 
                     /**
                      * 设置Proportion.
-                     * @param Percentage Proportion.
+                     * @param _percentage Proportion.
+                     * 
                      */
                     void SetPercentage(const double& _percentage);
 
                     /**
                      * 判断参数 Percentage 是否已赋值
                      * @return Percentage 是否已赋值
+                     * 
                      */
                     bool PercentageHasBeenSet() const;
 

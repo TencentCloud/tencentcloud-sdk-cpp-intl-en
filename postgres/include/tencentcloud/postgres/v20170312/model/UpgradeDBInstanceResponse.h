@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Transaction name.
                      * @return DealName Transaction name.
+                     * 
                      */
                     std::string GetDealName() const;
 
                     /**
                      * 判断参数 DealName 是否已赋值
                      * @return DealName 是否已赋值
+                     * 
                      */
                     bool DealNameHasBeenSet() const;
 
                     /**
                      * 获取Bill ID of frozen fees
                      * @return BillId Bill ID of frozen fees
+                     * 
                      */
                     std::string GetBillId() const;
 
                     /**
                      * 判断参数 BillId 是否已赋值
                      * @return BillId 是否已赋值
+                     * 
                      */
                     bool BillIdHasBeenSet() const;
 

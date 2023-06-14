@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Created listener ID
                      * @return ListenerId Created listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 

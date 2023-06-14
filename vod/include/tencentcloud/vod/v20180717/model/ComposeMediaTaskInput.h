@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
                      * @return Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+                     * 
                      */
                     std::vector<MediaTrack> GetTracks() const;
 
                     /**
                      * 设置List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
-                     * @param Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+                     * @param _tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+                     * 
                      */
                     void SetTracks(const std::vector<MediaTrack>& _tracks);
 
                     /**
                      * 判断参数 Tracks 是否已赋值
                      * @return Tracks 是否已赋值
+                     * 
                      */
                     bool TracksHasBeenSet() const;
 
@@ -72,38 +75,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Canvas Canvas used for composing video file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Canvas GetCanvas() const;
 
                     /**
                      * 设置Canvas used for composing video file.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Canvas Canvas used for composing video file.
+                     * @param _canvas Canvas used for composing video file.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCanvas(const Canvas& _canvas);
 
                     /**
                      * 判断参数 Canvas 是否已赋值
                      * @return Canvas 是否已赋值
+                     * 
                      */
                     bool CanvasHasBeenSet() const;
 
                     /**
                      * 获取Information of output media file.
                      * @return Output Information of output media file.
+                     * 
                      */
                     ComposeMediaOutput GetOutput() const;
 
                     /**
                      * 设置Information of output media file.
-                     * @param Output Information of output media file.
+                     * @param _output Information of output media file.
+                     * 
                      */
                     void SetOutput(const ComposeMediaOutput& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 

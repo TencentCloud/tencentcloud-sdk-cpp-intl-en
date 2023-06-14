@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取A parameter used to obtain mobile number information.
                      * @return PhoneNumberInfoSet A parameter used to obtain mobile number information.
+                     * 
                      */
                     std::vector<PhoneNumberInfo> GetPhoneNumberInfoSet() const;
 
                     /**
                      * 判断参数 PhoneNumberInfoSet 是否已赋值
                      * @return PhoneNumberInfoSet 是否已赋值
+                     * 
                      */
                     bool PhoneNumberInfoSetHasBeenSet() const;
 

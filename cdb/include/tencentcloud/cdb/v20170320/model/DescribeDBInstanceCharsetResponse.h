@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Default character set of the instance, such as "latin1" and "utf8".
                      * @return Charset Default character set of the instance, such as "latin1" and "utf8".
+                     * 
                      */
                     std::string GetCharset() const;
 
                     /**
                      * 判断参数 Charset 是否已赋值
                      * @return Charset 是否已赋值
+                     * 
                      */
                     bool CharsetHasBeenSet() const;
 

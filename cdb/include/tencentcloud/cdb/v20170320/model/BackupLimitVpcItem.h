@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The region where the backup download restrictions take effect. It must be the same as the common request parameter `Region` of the API.
                      * @return Region The region where the backup download restrictions take effect. It must be the same as the common request parameter `Region` of the API.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置The region where the backup download restrictions take effect. It must be the same as the common request parameter `Region` of the API.
-                     * @param Region The region where the backup download restrictions take effect. It must be the same as the common request parameter `Region` of the API.
+                     * @param _region The region where the backup download restrictions take effect. It must be the same as the common request parameter `Region` of the API.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取The list of VPCs used to restrict backup download
                      * @return VpcList The list of VPCs used to restrict backup download
+                     * 
                      */
                     std::vector<std::string> GetVpcList() const;
 
                     /**
                      * 设置The list of VPCs used to restrict backup download
-                     * @param VpcList The list of VPCs used to restrict backup download
+                     * @param _vpcList The list of VPCs used to restrict backup download
+                     * 
                      */
                     void SetVpcList(const std::vector<std::string>& _vpcList);
 
                     /**
                      * 判断参数 VpcList 是否已赋值
                      * @return VpcList 是否已赋值
+                     * 
                      */
                     bool VpcListHasBeenSet() const;
 

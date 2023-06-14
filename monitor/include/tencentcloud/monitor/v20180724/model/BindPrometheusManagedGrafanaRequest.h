@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Prometheus instance ID
                      * @return InstanceId Prometheus instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Prometheus instance ID
-                     * @param InstanceId Prometheus instance ID
+                     * @param _instanceId Prometheus instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Grafana instance ID
                      * @return GrafanaId Grafana instance ID
+                     * 
                      */
                     std::string GetGrafanaId() const;
 
                     /**
                      * 设置Grafana instance ID
-                     * @param GrafanaId Grafana instance ID
+                     * @param _grafanaId Grafana instance ID
+                     * 
                      */
                     void SetGrafanaId(const std::string& _grafanaId);
 
                     /**
                      * 判断参数 GrafanaId 是否已赋值
                      * @return GrafanaId 是否已赋值
+                     * 
                      */
                     bool GrafanaIdHasBeenSet() const;
 

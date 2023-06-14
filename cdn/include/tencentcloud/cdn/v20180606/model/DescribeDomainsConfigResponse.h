@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of domain names
                      * @return Domains List of domain names
+                     * 
                      */
                     std::vector<DetailDomain> GetDomains() const;
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Used for paginated queries
                      * @return TotalNumber Number of domain names that match the specified query conditions
 Used for paginated queries
+                     * 
                      */
                     int64_t GetTotalNumber() const;
 
                     /**
                      * 判断参数 TotalNumber 是否已赋值
                      * @return TotalNumber 是否已赋值
+                     * 
                      */
                     bool TotalNumberHasBeenSet() const;
 

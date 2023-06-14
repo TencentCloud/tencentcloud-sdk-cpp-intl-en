@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Audit rule ID.
                      * @return RuleId Audit rule ID.
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Audit rule ID.
-                     * @param RuleId Audit rule ID.
+                     * @param _ruleId Audit rule ID.
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Audit rule name. Fuzzy match query is supported.
                      * @return RuleName Audit rule name. Fuzzy match query is supported.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Audit rule name. Fuzzy match query is supported.
-                     * @param RuleName Audit rule name. Fuzzy match query is supported.
+                     * @param _ruleName Audit rule name. Fuzzy match query is supported.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Value range: 1-100. Default value: 20.
                      * @return Limit Number of entries per page. Value range: 1-100. Default value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Value range: 1-100. Default value: 20.
-                     * @param Limit Number of entries per page. Value range: 1-100. Default value: 20.
+                     * @param _limit Number of entries per page. Value range: 1-100. Default value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset. Default value: 0
                      * @return Offset Pagination offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset. Default value: 0
-                     * @param Offset Pagination offset. Default value: 0
+                     * @param _offset Pagination offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

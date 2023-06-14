@@ -47,20 +47,23 @@ namespace TencentCloud
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
                      * @return TimeUnit Time unit of scale-out. Valid value:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
                      * 设置Time unit of scale-out. Valid value:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-                     * @param TimeUnit Time unit of scale-out. Valid value:
+                     * @param _timeUnit Time unit of scale-out. Valid value:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
 
                     /**
                      * 判断参数 TimeUnit 是否已赋值
                      * @return TimeUnit 是否已赋值
+                     * 
                      */
                     bool TimeUnitHasBeenSet() const;
 
@@ -69,38 +72,44 @@ namespace TencentCloud
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
                      * @return TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
                      * 设置Time span of scale-out, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-                     * @param TimeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
+                     * @param _timeSpan Time span of scale-out, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
 
                     /**
                      * 判断参数 TimeSpan 是否已赋值
                      * @return TimeSpan 是否已赋值
+                     * 
                      */
                     bool TimeSpanHasBeenSet() const;
 
                     /**
                      * 获取ID of the AZ where an instance resides.
                      * @return ZoneId ID of the AZ where an instance resides.
+                     * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
                      * 设置ID of the AZ where an instance resides.
-                     * @param ZoneId ID of the AZ where an instance resides.
+                     * @param _zoneId ID of the AZ where an instance resides.
+                     * 
                      */
                     void SetZoneId(const uint64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -109,128 +118,149 @@ namespace TencentCloud
 <li>0: Pay-as-you-go.</li>
                      * @return PayMode Instance billing mode. Valid value:
 <li>0: Pay-as-you-go.</li>
+                     * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
                      * 设置Instance billing mode. Valid value:
 <li>0: Pay-as-you-go.</li>
-                     * @param PayMode Instance billing mode. Valid value:
+                     * @param _payMode Instance billing mode. Valid value:
 <li>0: Pay-as-you-go.</li>
+                     * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of core nodes to be added.
                      * @return CoreCount Number of core nodes to be added.
+                     * 
                      */
                     uint64_t GetCoreCount() const;
 
                     /**
                      * 设置Number of core nodes to be added.
-                     * @param CoreCount Number of core nodes to be added.
+                     * @param _coreCount Number of core nodes to be added.
+                     * 
                      */
                     void SetCoreCount(const uint64_t& _coreCount);
 
                     /**
                      * 判断参数 CoreCount 是否已赋值
                      * @return CoreCount 是否已赋值
+                     * 
                      */
                     bool CoreCountHasBeenSet() const;
 
                     /**
                      * 获取Number of task nodes to be added.
                      * @return TaskCount Number of task nodes to be added.
+                     * 
                      */
                     uint64_t GetTaskCount() const;
 
                     /**
                      * 设置Number of task nodes to be added.
-                     * @param TaskCount Number of task nodes to be added.
+                     * @param _taskCount Number of task nodes to be added.
+                     * 
                      */
                     void SetTaskCount(const uint64_t& _taskCount);
 
                     /**
                      * 判断参数 TaskCount 是否已赋值
                      * @return TaskCount 是否已赋值
+                     * 
                      */
                     bool TaskCountHasBeenSet() const;
 
                     /**
                      * 获取Currency.
                      * @return Currency Currency.
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 设置Currency.
-                     * @param Currency Currency.
+                     * @param _currency Currency.
+                     * 
                      */
                     void SetCurrency(const std::string& _currency);
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 
                     /**
                      * 获取Number of router nodes to be added.
                      * @return RouterCount Number of router nodes to be added.
+                     * 
                      */
                     uint64_t GetRouterCount() const;
 
                     /**
                      * 设置Number of router nodes to be added.
-                     * @param RouterCount Number of router nodes to be added.
+                     * @param _routerCount Number of router nodes to be added.
+                     * 
                      */
                     void SetRouterCount(const uint64_t& _routerCount);
 
                     /**
                      * 判断参数 RouterCount 是否已赋值
                      * @return RouterCount 是否已赋值
+                     * 
                      */
                     bool RouterCountHasBeenSet() const;
 
                     /**
                      * 获取Number of master nodes to be added.
                      * @return MasterCount Number of master nodes to be added.
+                     * 
                      */
                     uint64_t GetMasterCount() const;
 
                     /**
                      * 设置Number of master nodes to be added.
-                     * @param MasterCount Number of master nodes to be added.
+                     * @param _masterCount Number of master nodes to be added.
+                     * 
                      */
                     void SetMasterCount(const uint64_t& _masterCount);
 
                     /**
                      * 判断参数 MasterCount 是否已赋值
                      * @return MasterCount 是否已赋值
+                     * 
                      */
                     bool MasterCountHasBeenSet() const;
 

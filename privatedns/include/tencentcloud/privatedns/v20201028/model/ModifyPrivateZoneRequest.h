@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Private domain ID
                      * @return ZoneId Private domain ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Private domain ID
-                     * @param ZoneId Private domain ID
+                     * @param _zoneId Private domain ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
                      * @return DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
+                     * 
                      */
                     std::string GetDnsForwardStatus() const;
 
                     /**
                      * 设置Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
-                     * @param DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
+                     * @param _dnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
+                     * 
                      */
                     void SetDnsForwardStatus(const std::string& _dnsForwardStatus);
 
                     /**
                      * 判断参数 DnsForwardStatus 是否已赋值
                      * @return DnsForwardStatus 是否已赋值
+                     * 
                      */
                     bool DnsForwardStatusHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
                      * @return CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+                     * 
                      */
                     std::string GetCnameSpeedupStatus() const;
 
                     /**
                      * 设置Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
-                     * @param CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+                     * @param _cnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+                     * 
                      */
                     void SetCnameSpeedupStatus(const std::string& _cnameSpeedupStatus);
 
                     /**
                      * 判断参数 CnameSpeedupStatus 是否已赋值
                      * @return CnameSpeedupStatus 是否已赋值
+                     * 
                      */
                     bool CnameSpeedupStatusHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of results.
                      * @return AllCount Total number of results.
+                     * 
                      */
                     uint64_t GetAllCount() const;
 
                     /**
                      * 判断参数 AllCount 是否已赋值
                      * @return AllCount 是否已赋值
+                     * 
                      */
                     bool AllCountHasBeenSet() const;
 
                     /**
                      * 获取List of domain name details.
                      * @return DomainList List of domain name details.
+                     * 
                      */
                     std::vector<DomainInfo> GetDomainList() const;
 
                     /**
                      * 判断参数 DomainList 是否已赋值
                      * @return DomainList 是否已赋值
+                     * 
                      */
                     bool DomainListHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CreateLimitCount The number of domain names that can be added
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCreateLimitCount() const;
 
                     /**
                      * 判断参数 CreateLimitCount 是否已赋值
                      * @return CreateLimitCount 是否已赋值
+                     * 
                      */
                     bool CreateLimitCountHasBeenSet() const;
 
@@ -87,12 +93,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PlayTypeCount The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetPlayTypeCount() const;
 
                     /**
                      * 判断参数 PlayTypeCount 是否已赋值
                      * @return PlayTypeCount 是否已赋值
+                     * 
                      */
                     bool PlayTypeCountHasBeenSet() const;
 

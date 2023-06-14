@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
                      * @return ImageReviewUsageDataSet The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
+                     * 
                      */
                     std::vector<ImageReviewUsageDataItem> GetImageReviewUsageDataSet() const;
 
                     /**
                      * 判断参数 ImageReviewUsageDataSet 是否已赋值
                      * @return ImageReviewUsageDataSet 是否已赋值
+                     * 
                      */
                     bool ImageReviewUsageDataSetHasBeenSet() const;
 

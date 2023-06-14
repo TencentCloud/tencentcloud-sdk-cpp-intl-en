@@ -46,84 +46,98 @@ namespace TencentCloud
                     /**
                      * 获取Number of images
                      * @return ImageTotal Number of images
+                     * 
                      */
                     uint64_t GetImageTotal() const;
 
                     /**
                      * 判断参数 ImageTotal 是否已赋值
                      * @return ImageTotal 是否已赋值
+                     * 
                      */
                     bool ImageTotalHasBeenSet() const;
 
                     /**
                      * 获取Number of scanned images
                      * @return ImageScanCnt Number of scanned images
+                     * 
                      */
                     uint64_t GetImageScanCnt() const;
 
                     /**
                      * 判断参数 ImageScanCnt 是否已赋值
                      * @return ImageScanCnt 是否已赋值
+                     * 
                      */
                     bool ImageScanCntHasBeenSet() const;
 
                     /**
                      * 获取Scanning status
                      * @return Status Scanning status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Scanning progress, the value of which is calculated as `ImageScanCnt`/`ImageTotal` * 100.
                      * @return Schedule Scanning progress, the value of which is calculated as `ImageScanCnt`/`ImageTotal` * 100.
+                     * 
                      */
                     uint64_t GetSchedule() const;
 
                     /**
                      * 判断参数 Schedule 是否已赋值
                      * @return Schedule 是否已赋值
+                     * 
                      */
                     bool ScheduleHasBeenSet() const;
 
                     /**
                      * 获取Number of successfully scanned images
                      * @return SuccessCount Number of successfully scanned images
+                     * 
                      */
                     uint64_t GetSuccessCount() const;
 
                     /**
                      * 判断参数 SuccessCount 是否已赋值
                      * @return SuccessCount 是否已赋值
+                     * 
                      */
                     bool SuccessCountHasBeenSet() const;
 
                     /**
                      * 获取Number of risks
                      * @return RiskCount Number of risks
+                     * 
                      */
                     uint64_t GetRiskCount() const;
 
                     /**
                      * 判断参数 RiskCount 是否已赋值
                      * @return RiskCount 是否已赋值
+                     * 
                      */
                     bool RiskCountHasBeenSet() const;
 
                     /**
                      * 获取Remaining scan time
                      * @return LeftSeconds Remaining scan time
+                     * 
                      */
                     uint64_t GetLeftSeconds() const;
 
                     /**
                      * 判断参数 LeftSeconds 是否已赋值
                      * @return LeftSeconds 是否已赋值
+                     * 
                      */
                     bool LeftSecondsHasBeenSet() const;
 

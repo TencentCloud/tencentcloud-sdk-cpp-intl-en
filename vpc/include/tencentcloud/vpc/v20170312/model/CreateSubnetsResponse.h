@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The list of newly created subnets.
                      * @return SubnetSet The list of newly created subnets.
+                     * 
                      */
                     std::vector<Subnet> GetSubnetSet() const;
 
                     /**
                      * 判断参数 SubnetSet 是否已赋值
                      * @return SubnetSet 是否已赋值
+                     * 
                      */
                     bool SubnetSetHasBeenSet() const;
 

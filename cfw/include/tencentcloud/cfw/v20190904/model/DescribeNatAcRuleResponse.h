@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of entries.
                      * @return Total Total number of entries.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -61,24 +63,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Data NAT access control list data.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DescAcItem> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Total number of entries returned without filtering.
                      * @return AllTotal Total number of entries returned without filtering.
+                     * 
                      */
                     uint64_t GetAllTotal() const;
 
                     /**
                      * 判断参数 AllTotal 是否已赋值
                      * @return AllTotal 是否已赋值
+                     * 
                      */
                     bool AllTotalHasBeenSet() const;
 

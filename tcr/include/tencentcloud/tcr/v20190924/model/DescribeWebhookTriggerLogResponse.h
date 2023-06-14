@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of logs
                      * @return Logs List of logs
+                     * 
                      */
                     std::vector<WebhookTriggerLog> GetLogs() const;
 
                     /**
                      * 判断参数 Logs 是否已赋值
                      * @return Logs 是否已赋值
+                     * 
                      */
                     bool LogsHasBeenSet() const;
 

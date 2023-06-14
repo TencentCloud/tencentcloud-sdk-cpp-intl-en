@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Number of high-risk vulnerabilities
                      * @return HighLevelVulCount Number of high-risk vulnerabilities
+                     * 
                      */
                     int64_t GetHighLevelVulCount() const;
 
                     /**
                      * 判断参数 HighLevelVulCount 是否已赋值
                      * @return HighLevelVulCount 是否已赋值
+                     * 
                      */
                     bool HighLevelVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of medium-risk vulnerabilities
                      * @return MediumLevelVulCount Number of medium-risk vulnerabilities
+                     * 
                      */
                     int64_t GetMediumLevelVulCount() const;
 
                     /**
                      * 判断参数 MediumLevelVulCount 是否已赋值
                      * @return MediumLevelVulCount 是否已赋值
+                     * 
                      */
                     bool MediumLevelVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of low-risk vulnerabilities
                      * @return LowLevelVulCount Number of low-risk vulnerabilities
+                     * 
                      */
                     int64_t GetLowLevelVulCount() const;
 
                     /**
                      * 判断参数 LowLevelVulCount 是否已赋值
                      * @return LowLevelVulCount 是否已赋值
+                     * 
                      */
                     bool LowLevelVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of critical vulnerabilities
                      * @return CriticalLevelVulCount Number of critical vulnerabilities
+                     * 
                      */
                     int64_t GetCriticalLevelVulCount() const;
 
                     /**
                      * 判断参数 CriticalLevelVulCount 是否已赋值
                      * @return CriticalLevelVulCount 是否已赋值
+                     * 
                      */
                     bool CriticalLevelVulCountHasBeenSet() const;
 

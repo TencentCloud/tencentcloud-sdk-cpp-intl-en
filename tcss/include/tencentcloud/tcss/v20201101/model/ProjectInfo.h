@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Project name
                      * @return ProjectName Project name
+                     * 
                      */
                     std::string GetProjectName() const;
 
                     /**
                      * 设置Project name
-                     * @param ProjectName Project name
+                     * @param _projectName Project name
+                     * 
                      */
                     void SetProjectName(const std::string& _projectName);
 
                     /**
                      * 判断参数 ProjectName 是否已赋值
                      * @return ProjectName 是否已赋值
+                     * 
                      */
                     bool ProjectNameHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectID Project ID
+                     * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectID Project ID
+                     * @param _projectID Project ID
+                     * 
                      */
                     void SetProjectID(const int64_t& _projectID);
 
                     /**
                      * 判断参数 ProjectID 是否已赋值
                      * @return ProjectID 是否已赋值
+                     * 
                      */
                     bool ProjectIDHasBeenSet() const;
 

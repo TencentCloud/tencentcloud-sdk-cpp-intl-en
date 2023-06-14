@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Top-level domain name
                      * @return ZoneId Top-level domain name
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Top-level domain name
-                     * @param ZoneId Top-level domain name
+                     * @param _zoneId Top-level domain name
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Subdomain name/layer-4 proxy
                      * @return Entity Subdomain name/layer-4 proxy
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置Subdomain name/layer-4 proxy
-                     * @param Entity Subdomain name/layer-4 proxy
+                     * @param _entity Subdomain name/layer-4 proxy
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
                     /**
                      * 获取Total number of pages
                      * @return Page Total number of pages
+                     * 
                      */
                     int64_t GetPage() const;
 
                     /**
                      * 设置Total number of pages
-                     * @param Page Total number of pages
+                     * @param _page Total number of pages
+                     * 
                      */
                     void SetPage(const int64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of rules per page
                      * @return PerPage Number of rules per page
+                     * 
                      */
                     int64_t GetPerPage() const;
 
                     /**
                      * 设置Number of rules per page
-                     * @param PerPage Number of rules per page
+                     * @param _perPage Number of rules per page
+                     * 
                      */
                     void SetPerPage(const int64_t& _perPage);
 
                     /**
                      * 判断参数 PerPage 是否已赋值
                      * @return PerPage 是否已赋值
+                     * 
                      */
                     bool PerPageHasBeenSet() const;
 

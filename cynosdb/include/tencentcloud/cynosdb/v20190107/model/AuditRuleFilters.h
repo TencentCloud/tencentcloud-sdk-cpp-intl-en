@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Audit rule
                      * @return RuleFilters Audit rule
+                     * 
                      */
                     std::vector<RuleFilters> GetRuleFilters() const;
 
                     /**
                      * 设置Audit rule
-                     * @param RuleFilters Audit rule
+                     * @param _ruleFilters Audit rule
+                     * 
                      */
                     void SetRuleFilters(const std::vector<RuleFilters>& _ruleFilters);
 
                     /**
                      * 判断参数 RuleFilters 是否已赋值
                      * @return RuleFilters 是否已赋值
+                     * 
                      */
                     bool RuleFiltersHasBeenSet() const;
 

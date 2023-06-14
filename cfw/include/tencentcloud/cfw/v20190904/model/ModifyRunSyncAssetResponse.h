@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取0: synced successfully, 1: updating assets, 2: failed to sync by calling the API at the backend
                      * @return Status 0: synced successfully, 1: updating assets, 2: failed to sync by calling the API at the backend
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

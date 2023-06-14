@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
                      * @return SwitchTime Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
+                     * 
                      */
                     std::string GetSwitchTime() const;
 
                     /**
                      * 设置Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
-                     * @param SwitchTime Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
+                     * @param _switchTime Switch time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-09-03 01:34:31
+                     * 
                      */
                     void SetSwitchTime(const std::string& _switchTime);
 
                     /**
                      * 判断参数 SwitchTime 是否已赋值
                      * @return SwitchTime 是否已赋值
+                     * 
                      */
                     bool SwitchTimeHasBeenSet() const;
 
                     /**
                      * 获取Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
                      * @return SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
+                     * 
                      */
                     std::string GetSwitchType() const;
 
                     /**
                      * 设置Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
-                     * @param SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
+                     * @param _switchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
+                     * 
                      */
                     void SetSwitchType(const std::string& _switchType);
 
                     /**
                      * 判断参数 SwitchType 是否已赋值
                      * @return SwitchType 是否已赋值
+                     * 
                      */
                     bool SwitchTypeHasBeenSet() const;
 

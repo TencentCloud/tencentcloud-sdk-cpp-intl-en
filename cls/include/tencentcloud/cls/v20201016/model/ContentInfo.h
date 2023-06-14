@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Content format. Valid values: `json`, `csv`
                      * @return Format Content format. Valid values: `json`, `csv`
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Content format. Valid values: `json`, `csv`
-                     * @param Format Content format. Valid values: `json`, `csv`
+                     * @param _format Content format. Valid values: `json`, `csv`
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
@@ -72,20 +75,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Csv CSV format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     CsvInfo GetCsv() const;
 
                     /**
                      * 设置CSV format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Csv CSV format content description
+                     * @param _csv CSV format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCsv(const CsvInfo& _csv);
 
                     /**
                      * 判断参数 Csv 是否已赋值
                      * @return Csv 是否已赋值
+                     * 
                      */
                     bool CsvHasBeenSet() const;
 
@@ -94,20 +100,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Json JSON format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     JsonInfo GetJson() const;
 
                     /**
                      * 设置JSON format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Json JSON format content description
+                     * @param _json JSON format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetJson(const JsonInfo& _json);
 
                     /**
                      * 判断参数 Json 是否已赋值
                      * @return Json 是否已赋值
+                     * 
                      */
                     bool JsonHasBeenSet() const;
 
@@ -116,20 +125,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Parquet `Parquet` format description
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     ParquetInfo GetParquet() const;
 
                     /**
                      * 设置`Parquet` format description
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Parquet `Parquet` format description
+                     * @param _parquet `Parquet` format description
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetParquet(const ParquetInfo& _parquet);
 
                     /**
                      * 判断参数 Parquet 是否已赋值
                      * @return Parquet 是否已赋值
+                     * 
                      */
                     bool ParquetHasBeenSet() const;
 

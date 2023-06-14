@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Target user ID.
                      * @return TargetUin Target user ID.
+                     * 
                      */
                     uint64_t GetTargetUin() const;
 
                     /**
                      * 设置Target user ID.
-                     * @param TargetUin Target user ID.
+                     * @param _targetUin Target user ID.
+                     * 
                      */
                     void SetTargetUin(const uint64_t& _targetUin);
 
                     /**
                      * 判断参数 TargetUin 是否已赋值
                      * @return TargetUin 是否已赋值
+                     * 
                      */
                     bool TargetUinHasBeenSet() const;
 
                     /**
                      * 获取The number of policies displayed on each page. Value range: 1-200.
                      * @return Rp The number of policies displayed on each page. Value range: 1-200.
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置The number of policies displayed on each page. Value range: 1-200.
-                     * @param Rp The number of policies displayed on each page. Value range: 1-200.
+                     * @param _rp The number of policies displayed on each page. Value range: 1-200.
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 
                     /**
                      * 获取Page number. Value range: 1-200.
                      * @return Page Page number. Value range: 1-200.
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number. Value range: 1-200.
-                     * @param Page Page number. Value range: 1-200.
+                     * @param _page Page number. Value range: 1-200.
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取`0`: return policies that are directly associated and inherited from the user group; `1`: return policies that are directly associated; `2`: return policies inherited from the user group.
                      * @return AttachType `0`: return policies that are directly associated and inherited from the user group; `1`: return policies that are directly associated; `2`: return policies inherited from the user group.
+                     * 
                      */
                     uint64_t GetAttachType() const;
 
                     /**
                      * 设置`0`: return policies that are directly associated and inherited from the user group; `1`: return policies that are directly associated; `2`: return policies inherited from the user group.
-                     * @param AttachType `0`: return policies that are directly associated and inherited from the user group; `1`: return policies that are directly associated; `2`: return policies inherited from the user group.
+                     * @param _attachType `0`: return policies that are directly associated and inherited from the user group; `1`: return policies that are directly associated; `2`: return policies inherited from the user group.
+                     * 
                      */
                     void SetAttachType(const uint64_t& _attachType);
 
                     /**
                      * 判断参数 AttachType 是否已赋值
                      * @return AttachType 是否已赋值
+                     * 
                      */
                     bool AttachTypeHasBeenSet() const;
 
                     /**
                      * 获取Policy type.
                      * @return StrategyType Policy type.
+                     * 
                      */
                     uint64_t GetStrategyType() const;
 
                     /**
                      * 设置Policy type.
-                     * @param StrategyType Policy type.
+                     * @param _strategyType Policy type.
+                     * 
                      */
                     void SetStrategyType(const uint64_t& _strategyType);
 
                     /**
                      * 判断参数 StrategyType 是否已赋值
                      * @return StrategyType 是否已赋值
+                     * 
                      */
                     bool StrategyTypeHasBeenSet() const;
 
                     /**
                      * 获取Keyword for searching.
                      * @return Keyword Keyword for searching.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Keyword for searching.
-                     * @param Keyword Keyword for searching.
+                     * @param _keyword Keyword for searching.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

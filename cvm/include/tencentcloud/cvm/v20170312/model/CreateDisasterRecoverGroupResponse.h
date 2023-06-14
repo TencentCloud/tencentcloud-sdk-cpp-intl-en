@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取List of spread placement group IDs.
                      * @return DisasterRecoverGroupId List of spread placement group IDs.
+                     * 
                      */
                     std::string GetDisasterRecoverGroupId() const;
 
                     /**
                      * 判断参数 DisasterRecoverGroupId 是否已赋值
                      * @return DisasterRecoverGroupId 是否已赋值
+                     * 
                      */
                     bool DisasterRecoverGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
                      * @return Type Type of the spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
                      * @return Name Name of the spread placement group. The name must be 1-60 characters long and can contain both Chinese characters and English letters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of CVMs in a placement group.
                      * @return CvmQuotaTotal The maximum number of CVMs in a placement group.
+                     * 
                      */
                     int64_t GetCvmQuotaTotal() const;
 
                     /**
                      * 判断参数 CvmQuotaTotal 是否已赋值
                      * @return CvmQuotaTotal 是否已赋值
+                     * 
                      */
                     bool CvmQuotaTotalHasBeenSet() const;
 
                     /**
                      * 获取The current number of CVMs in a placement group.
                      * @return CurrentNum The current number of CVMs in a placement group.
+                     * 
                      */
                     int64_t GetCurrentNum() const;
 
                     /**
                      * 判断参数 CurrentNum 是否已赋值
                      * @return CurrentNum 是否已赋值
+                     * 
                      */
                     bool CurrentNumHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the placement group.
                      * @return CreateTime Creation time of the placement group.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

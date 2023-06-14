@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Indicates by which field to sort the returned results. Valid values: AddTime, ModTime
                      * @return OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Indicates by which field to sort the returned results. Valid values: AddTime, ModTime
-                     * @param OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime
+                     * @param _orderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC
                      * @return Order Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC
-                     * @param Order Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC
+                     * @param _order Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

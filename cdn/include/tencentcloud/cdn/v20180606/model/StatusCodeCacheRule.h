@@ -51,38 +51,44 @@ namespace TencentCloud
 Supports 403 and 404 status codes
                      * @return StatusCode HTTP status code
 Supports 403 and 404 status codes
+                     * 
                      */
                     std::string GetStatusCode() const;
 
                     /**
                      * 设置HTTP status code
 Supports 403 and 404 status codes
-                     * @param StatusCode HTTP status code
+                     * @param _statusCode HTTP status code
 Supports 403 and 404 status codes
+                     * 
                      */
                     void SetStatusCode(const std::string& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取Status code cache expiration time (in seconds)
                      * @return CacheTime Status code cache expiration time (in seconds)
+                     * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
                      * 设置Status code cache expiration time (in seconds)
-                     * @param CacheTime Status code cache expiration time (in seconds)
+                     * @param _cacheTime Status code cache expiration time (in seconds)
+                     * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
 
                     /**
                      * 判断参数 CacheTime 是否已赋值
                      * @return CacheTime 是否已赋值
+                     * 
                      */
                     bool CacheTimeHasBeenSet() const;
 

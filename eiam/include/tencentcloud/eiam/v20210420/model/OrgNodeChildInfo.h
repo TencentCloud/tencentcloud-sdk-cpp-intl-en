@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DisplayName Displayed organization node name, which can contain up to 64 characters and is the same as the organization name by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Displayed organization node name, which can contain up to 64 characters and is the same as the organization name by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DisplayName Displayed organization node name, which can contain up to 64 characters and is the same as the organization name by default.
+                     * @param _displayName Displayed organization node name, which can contain up to 64 characters and is the same as the organization name by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifiedDate Last modification time of the organization node in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastModifiedDate() const;
 
                     /**
                      * 设置Last modification time of the organization node in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastModifiedDate Last modification time of the organization node in ISO 8601 format.
+                     * @param _lastModifiedDate Last modification time of the organization node in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastModifiedDate(const std::string& _lastModifiedDate);
 
                     /**
                      * 判断参数 LastModifiedDate 是否已赋值
                      * @return LastModifiedDate 是否已赋值
+                     * 
                      */
                     bool LastModifiedDateHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CustomizedOrgNodeId External ID of the organization node, which is optional and customizable.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCustomizedOrgNodeId() const;
 
                     /**
                      * 设置External ID of the organization node, which is optional and customizable.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CustomizedOrgNodeId External ID of the organization node, which is optional and customizable.
+                     * @param _customizedOrgNodeId External ID of the organization node, which is optional and customizable.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCustomizedOrgNodeId(const std::string& _customizedOrgNodeId);
 
                     /**
                      * 判断参数 CustomizedOrgNodeId 是否已赋值
                      * @return CustomizedOrgNodeId 是否已赋值
+                     * 
                      */
                     bool CustomizedOrgNodeIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ParentOrgNodeId Parent node ID of the current organization node.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetParentOrgNodeId() const;
 
                     /**
                      * 设置Parent node ID of the current organization node.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ParentOrgNodeId Parent node ID of the current organization node.
+                     * @param _parentOrgNodeId Parent node ID of the current organization node.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParentOrgNodeId(const std::string& _parentOrgNodeId);
 
                     /**
                      * 判断参数 ParentOrgNodeId 是否已赋值
                      * @return ParentOrgNodeId 是否已赋值
+                     * 
                      */
                     bool ParentOrgNodeIdHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeId Organization node ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeId() const;
 
                     /**
                      * 设置Organization node ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrgNodeId Organization node ID, which is globally unique.
+                     * @param _orgNodeId Organization node ID, which is globally unique.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOrgNodeId(const std::string& _orgNodeId);
 
                     /**
                      * 判断参数 OrgNodeId 是否已赋值
                      * @return OrgNodeId 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DataSource Data source.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDataSource() const;
 
                     /**
                      * 设置Data source.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DataSource Data source.
+                     * @param _dataSource Data source.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataSource(const std::string& _dataSource);
 
                     /**
                      * 判断参数 DataSource 是否已赋值
                      * @return DataSource 是否已赋值
+                     * 
                      */
                     bool DataSourceHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedDate Organization node creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedDate() const;
 
                     /**
                      * 设置Organization node creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedDate Organization node creation time in ISO 8601 format.
+                     * @param _createdDate Organization node creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedDate(const std::string& _createdDate);
 
                     /**
                      * 判断参数 CreatedDate 是否已赋值
                      * @return CreatedDate 是否已赋值
+                     * 
                      */
                     bool CreatedDateHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Organization node description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Organization node description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Organization node description.
+                     * @param _description Organization node description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

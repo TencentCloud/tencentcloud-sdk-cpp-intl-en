@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Shipping task ID
                      * @return TaskId Shipping task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Shipping task ID
-                     * @param TaskId Shipping task ID
+                     * @param _taskId Shipping task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Shipping information ID
                      * @return ShipperId Shipping information ID
+                     * 
                      */
                     std::string GetShipperId() const;
 
                     /**
                      * 设置Shipping information ID
-                     * @param ShipperId Shipping information ID
+                     * @param _shipperId Shipping information ID
+                     * 
                      */
                     void SetShipperId(const std::string& _shipperId);
 
                     /**
                      * 判断参数 ShipperId 是否已赋值
                      * @return ShipperId 是否已赋值
+                     * 
                      */
                     bool ShipperIdHasBeenSet() const;
 
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Start timestamp of the current batch of shipped logs in milliseconds
                      * @return RangeStart Start timestamp of the current batch of shipped logs in milliseconds
+                     * 
                      */
                     int64_t GetRangeStart() const;
 
                     /**
                      * 设置Start timestamp of the current batch of shipped logs in milliseconds
-                     * @param RangeStart Start timestamp of the current batch of shipped logs in milliseconds
+                     * @param _rangeStart Start timestamp of the current batch of shipped logs in milliseconds
+                     * 
                      */
                     void SetRangeStart(const int64_t& _rangeStart);
 
                     /**
                      * 判断参数 RangeStart 是否已赋值
                      * @return RangeStart 是否已赋值
+                     * 
                      */
                     bool RangeStartHasBeenSet() const;
 
                     /**
                      * 获取End timestamp of the current batch of shipped logs in milliseconds
                      * @return RangeEnd End timestamp of the current batch of shipped logs in milliseconds
+                     * 
                      */
                     int64_t GetRangeEnd() const;
 
                     /**
                      * 设置End timestamp of the current batch of shipped logs in milliseconds
-                     * @param RangeEnd End timestamp of the current batch of shipped logs in milliseconds
+                     * @param _rangeEnd End timestamp of the current batch of shipped logs in milliseconds
+                     * 
                      */
                     void SetRangeEnd(const int64_t& _rangeEnd);
 
                     /**
                      * 判断参数 RangeEnd 是否已赋值
                      * @return RangeEnd 是否已赋值
+                     * 
                      */
                     bool RangeEndHasBeenSet() const;
 
                     /**
                      * 获取Start timestamp of the current shipping task in milliseconds
                      * @return StartTime Start timestamp of the current shipping task in milliseconds
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start timestamp of the current shipping task in milliseconds
-                     * @param StartTime Start timestamp of the current shipping task in milliseconds
+                     * @param _startTime Start timestamp of the current shipping task in milliseconds
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End timestamp of the current shipping task in milliseconds
                      * @return EndTime End timestamp of the current shipping task in milliseconds
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End timestamp of the current shipping task in milliseconds
-                     * @param EndTime End timestamp of the current shipping task in milliseconds
+                     * @param _endTime End timestamp of the current shipping task in milliseconds
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Result of the current shipping task. Valid values: `success`, `running`, `failed`
                      * @return Status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Result of the current shipping task. Valid values: `success`, `running`, `failed`
-                     * @param Status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+                     * @param _status Result of the current shipping task. Valid values: `success`, `running`, `failed`
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Result details
                      * @return Message Result details
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Result details
-                     * @param Message Result details
+                     * @param _message Result details
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

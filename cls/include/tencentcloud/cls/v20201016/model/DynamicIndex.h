@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Dynamic index configuration status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Dynamic index configuration status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Dynamic index configuration status
+                     * @param _status Dynamic index configuration status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

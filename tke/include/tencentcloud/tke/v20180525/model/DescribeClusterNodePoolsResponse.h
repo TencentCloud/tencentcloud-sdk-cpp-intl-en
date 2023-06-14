@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return NodePoolSet NodePools (node pool list)
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<NodePool> GetNodePoolSet() const;
 
                     /**
                      * 判断参数 NodePoolSet 是否已赋值
                      * @return NodePoolSet 是否已赋值
+                     * 
                      */
                     bool NodePoolSetHasBeenSet() const;
 
                     /**
                      * 获取Total resources
                      * @return TotalCount Total resources
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

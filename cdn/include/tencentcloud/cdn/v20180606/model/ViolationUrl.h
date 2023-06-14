@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取ID
                      * @return Id ID
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置ID
-                     * @param Id ID
+                     * @param _id ID
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Origin access URL of the resource in violation
                      * @return RealUrl Origin access URL of the resource in violation
+                     * 
                      */
                     std::string GetRealUrl() const;
 
                     /**
                      * 设置Origin access URL of the resource in violation
-                     * @param RealUrl Origin access URL of the resource in violation
+                     * @param _realUrl Origin access URL of the resource in violation
+                     * 
                      */
                     void SetRealUrl(const std::string& _realUrl);
 
                     /**
                      * 判断参数 RealUrl 是否已赋值
                      * @return RealUrl 是否已赋值
+                     * 
                      */
                     bool RealUrlHasBeenSet() const;
 
                     /**
                      * 获取Snapshot path. This is used to display a snapshot of the content in violation on the console.
                      * @return DownloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
+                     * 
                      */
                     std::string GetDownloadUrl() const;
 
                     /**
                      * 设置Snapshot path. This is used to display a snapshot of the content in violation on the console.
-                     * @param DownloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
+                     * @param _downloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
+                     * 
                      */
                     void SetDownloadUrl(const std::string& _downloadUrl);
 
                     /**
                      * 判断参数 DownloadUrl 是否已赋值
                      * @return DownloadUrl 是否已赋值
+                     * 
                      */
                     bool DownloadUrlHasBeenSet() const;
 
@@ -113,6 +122,7 @@ namespace TencentCloud
 `delay`: Processing delayed
 `reject`: Appeal dismissed. The status is still blocked.
 `complain`: Appeal in process
+                     * 
                      */
                     std::string GetUrlStatus() const;
 
@@ -123,54 +133,62 @@ namespace TencentCloud
 `delay`: Processing delayed
 `reject`: Appeal dismissed. The status is still blocked.
 `complain`: Appeal in process
-                     * @param UrlStatus Current status of the resources in violation
+                     * @param _urlStatus Current status of the resources in violation
 `forbid`: Blocked
 `release`: Unblocked
 `delay`: Processing delayed
 `reject`: Appeal dismissed. The status is still blocked.
 `complain`: Appeal in process
+                     * 
                      */
                     void SetUrlStatus(const std::string& _urlStatus);
 
                     /**
                      * 判断参数 UrlStatus 是否已赋值
                      * @return UrlStatus 是否已赋值
+                     * 
                      */
                     bool UrlStatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

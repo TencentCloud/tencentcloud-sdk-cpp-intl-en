@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Origin server header cache switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Origin server header cache switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Origin server header cache switch
+                     * @param _switch Origin server header cache switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

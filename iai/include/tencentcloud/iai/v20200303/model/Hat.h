@@ -52,20 +52,23 @@ namespace TencentCloud
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: general hat; 2: helmet; 3: security guard hat.
                      * @return Style Hat wearing status information.
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: general hat; 2: helmet; 3: security guard hat.
+                     * 
                      */
                     AttributeItem GetStyle() const;
 
                     /**
                      * 设置Hat wearing status information.
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: general hat; 2: helmet; 3: security guard hat.
-                     * @param Style Hat wearing status information.
+                     * @param _style Hat wearing status information.
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: general hat; 2: helmet; 3: security guard hat.
+                     * 
                      */
                     void SetStyle(const AttributeItem& _style);
 
                     /**
                      * 判断参数 Style 是否已赋值
                      * @return Style 是否已赋值
+                     * 
                      */
                     bool StyleHasBeenSet() const;
 
@@ -74,20 +77,23 @@ The `Type` values of the `AttributeItem` include: 0: no hat; 1: general hat; 2: 
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: red; 2: yellow; 3: blue; 4: black; 5: gray; 6: mixed colors.
                      * @return Color Hat color.
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: red; 2: yellow; 3: blue; 4: black; 5: gray; 6: mixed colors.
+                     * 
                      */
                     AttributeItem GetColor() const;
 
                     /**
                      * 设置Hat color.
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: red; 2: yellow; 3: blue; 4: black; 5: gray; 6: mixed colors.
-                     * @param Color Hat color.
+                     * @param _color Hat color.
 The `Type` values of the `AttributeItem` include: 0: no hat; 1: red; 2: yellow; 3: blue; 4: black; 5: gray; 6: mixed colors.
+                     * 
                      */
                     void SetColor(const AttributeItem& _color);
 
                     /**
                      * 判断参数 Color 是否已赋值
                      * @return Color 是否已赋值
+                     * 
                      */
                     bool ColorHasBeenSet() const;
 

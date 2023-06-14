@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Allowed operations. Valid values: `view` (view list), `remark` (modify remark), `deploy` (deploy files), `delete` (delete files).
                      * @return AllAction Allowed operations. Valid values: `view` (view list), `remark` (modify remark), `deploy` (deploy files), `delete` (delete files).
+                     * 
                      */
                     std::vector<std::string> GetAllAction() const;
 
                     /**
                      * 设置Allowed operations. Valid values: `view` (view list), `remark` (modify remark), `deploy` (deploy files), `delete` (delete files).
-                     * @param AllAction Allowed operations. Valid values: `view` (view list), `remark` (modify remark), `deploy` (deploy files), `delete` (delete files).
+                     * @param _allAction Allowed operations. Valid values: `view` (view list), `remark` (modify remark), `deploy` (deploy files), `delete` (delete files).
+                     * 
                      */
                     void SetAllAction(const std::vector<std::string>& _allAction);
 
                     /**
                      * 判断参数 AllAction 是否已赋值
                      * @return AllAction 是否已赋值
+                     * 
                      */
                     bool AllActionHasBeenSet() const;
 
                     /**
                      * 获取Operation allowed in the current status. If the subset of `AllAction` is empty, no operations will be allowed.
                      * @return AllowedAction Operation allowed in the current status. If the subset of `AllAction` is empty, no operations will be allowed.
+                     * 
                      */
                     std::vector<std::string> GetAllowedAction() const;
 
                     /**
                      * 设置Operation allowed in the current status. If the subset of `AllAction` is empty, no operations will be allowed.
-                     * @param AllowedAction Operation allowed in the current status. If the subset of `AllAction` is empty, no operations will be allowed.
+                     * @param _allowedAction Operation allowed in the current status. If the subset of `AllAction` is empty, no operations will be allowed.
+                     * 
                      */
                     void SetAllowedAction(const std::vector<std::string>& _allowedAction);
 
                     /**
                      * 判断参数 AllowedAction 是否已赋值
                      * @return AllowedAction 是否已赋值
+                     * 
                      */
                     bool AllowedActionHasBeenSet() const;
 

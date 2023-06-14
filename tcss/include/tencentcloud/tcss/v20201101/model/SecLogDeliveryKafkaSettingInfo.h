@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Log type
                      * @return LogType Log type
+                     * 
                      */
                     std::string GetLogType() const;
 
                     /**
                      * 设置Log type
-                     * @param LogType Log type
+                     * @param _logType Log type
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
                     /**
                      * 获取Topic ID
                      * @return TopicID Topic ID
+                     * 
                      */
                     std::string GetTopicID() const;
 
                     /**
                      * 设置Topic ID
-                     * @param TopicID Topic ID
+                     * @param _topicID Topic ID
+                     * 
                      */
                     void SetTopicID(const std::string& _topicID);
 
                     /**
                      * 判断参数 TopicID 是否已赋值
                      * @return TopicID 是否已赋值
+                     * 
                      */
                     bool TopicIDHasBeenSet() const;
 
@@ -87,38 +93,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicName Topic name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TopicName Topic name
+                     * @param _topicName Topic name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Delivery status. Valid values: `false` (disabled); `true` (enabled).
                      * @return State Delivery status. Valid values: `false` (disabled); `true` (enabled).
+                     * 
                      */
                     bool GetState() const;
 
                     /**
                      * 设置Delivery status. Valid values: `false` (disabled); `true` (enabled).
-                     * @param State Delivery status. Valid values: `false` (disabled); `true` (enabled).
+                     * @param _state Delivery status. Valid values: `false` (disabled); `true` (enabled).
+                     * 
                      */
                     void SetState(const bool& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 

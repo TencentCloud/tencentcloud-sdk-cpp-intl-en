@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `all products` or names of the applicable products (string). Multiple names are separated by commas.
                      * @return GoodsName Valid values: `all products` or names of the applicable products (string). Multiple names are separated by commas.
+                     * 
                      */
                     std::string GetGoodsName() const;
 
                     /**
                      * 设置Valid values: `all products` or names of the applicable products (string). Multiple names are separated by commas.
-                     * @param GoodsName Valid values: `all products` or names of the applicable products (string). Multiple names are separated by commas.
+                     * @param _goodsName Valid values: `all products` or names of the applicable products (string). Multiple names are separated by commas.
+                     * 
                      */
                     void SetGoodsName(const std::string& _goodsName);
 
                     /**
                      * 判断参数 GoodsName 是否已赋值
                      * @return GoodsName 是否已赋值
+                     * 
                      */
                     bool GoodsNameHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If `GoodsName` contains multiple product names and `PayMode` is `*`, it indicates that the voucher can be used in all billing modes for each of the products.
                      * @return PayMode Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If `GoodsName` contains multiple product names and `PayMode` is `*`, it indicates that the voucher can be used in all billing modes for each of the products.
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If `GoodsName` contains multiple product names and `PayMode` is `*`, it indicates that the voucher can be used in all billing modes for each of the products.
-                     * @param PayMode Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If `GoodsName` contains multiple product names and `PayMode` is `*`, it indicates that the voucher can be used in all billing modes for each of the products.
+                     * @param _payMode Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If `GoodsName` contains multiple product names and `PayMode` is `*`, it indicates that the voucher can be used in all billing modes for each of the products.
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 

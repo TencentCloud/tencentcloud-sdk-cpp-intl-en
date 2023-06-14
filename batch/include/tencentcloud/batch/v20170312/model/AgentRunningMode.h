@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Scenario type. Windows is supported
                      * @return Scene Scenario type. Windows is supported
+                     * 
                      */
                     std::string GetScene() const;
 
                     /**
                      * 设置Scenario type. Windows is supported
-                     * @param Scene Scenario type. Windows is supported
+                     * @param _scene Scenario type. Windows is supported
+                     * 
                      */
                     void SetScene(const std::string& _scene);
 
                     /**
                      * 判断参数 Scene 是否已赋值
                      * @return Scene 是否已赋值
+                     * 
                      */
                     bool SceneHasBeenSet() const;
 
                     /**
                      * 获取The user that runs the Agent
                      * @return User The user that runs the Agent
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置The user that runs the Agent
-                     * @param User The user that runs the Agent
+                     * @param _user The user that runs the Agent
+                     * 
                      */
                     void SetUser(const std::string& _user);
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
                     /**
                      * 获取The session that runs the Agent
                      * @return Session The session that runs the Agent
+                     * 
                      */
                     std::string GetSession() const;
 
                     /**
                      * 设置The session that runs the Agent
-                     * @param Session The session that runs the Agent
+                     * @param _session The session that runs the Agent
+                     * 
                      */
                     void SetSession(const std::string& _session);
 
                     /**
                      * 判断参数 Session 是否已赋值
                      * @return Session 是否已赋值
+                     * 
                      */
                     bool SessionHasBeenSet() const;
 

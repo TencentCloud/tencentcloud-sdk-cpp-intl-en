@@ -47,60 +47,70 @@ namespace TencentCloud
                     /**
                      * 获取Sum of all statement lock durations
                      * @return LockTimeSum Sum of all statement lock durations
+                     * 
                      */
                     double GetLockTimeSum() const;
 
                     /**
                      * 判断参数 LockTimeSum 是否已赋值
                      * @return LockTimeSum 是否已赋值
+                     * 
                      */
                     bool LockTimeSumHasBeenSet() const;
 
                     /**
                      * 获取Total number of statement queries
                      * @return QueryCount Total number of statement queries
+                     * 
                      */
                     int64_t GetQueryCount() const;
 
                     /**
                      * 判断参数 QueryCount 是否已赋值
                      * @return QueryCount 是否已赋值
+                     * 
                      */
                     bool QueryCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of results
                      * @return Total Total number of results
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Sum of all statement query durations
                      * @return QueryTimeSum Sum of all statement query durations
+                     * 
                      */
                     double GetQueryTimeSum() const;
 
                     /**
                      * 判断参数 QueryTimeSum 是否已赋值
                      * @return QueryTimeSum 是否已赋值
+                     * 
                      */
                     bool QueryTimeSumHasBeenSet() const;
 
                     /**
                      * 获取Slow query log data
                      * @return Data Slow query log data
+                     * 
                      */
                     std::vector<SlowLogData> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of instances
                      * @return TotalCount Total number of instances
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ReplicationRegistries Replication instance list
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ReplicationRegistry> GetReplicationRegistries() const;
 
                     /**
                      * 判断参数 ReplicationRegistries 是否已赋值
                      * @return ReplicationRegistries 是否已赋值
+                     * 
                      */
                     bool ReplicationRegistriesHasBeenSet() const;
 

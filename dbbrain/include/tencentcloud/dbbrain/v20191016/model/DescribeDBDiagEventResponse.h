@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Diagnosis item.
                      * @return DiagItem Diagnosis item.
+                     * 
                      */
                     std::string GetDiagItem() const;
 
                     /**
                      * 判断参数 DiagItem 是否已赋值
                      * @return DiagItem 是否已赋值
+                     * 
                      */
                     bool DiagItemHasBeenSet() const;
 
                     /**
                      * 获取Diagnosis type.
                      * @return DiagType Diagnosis type.
+                     * 
                      */
                     std::string GetDiagType() const;
 
                     /**
                      * 判断参数 DiagType 是否已赋值
                      * @return DiagType 是否已赋值
+                     * 
                      */
                     bool DiagTypeHasBeenSet() const;
 
                     /**
                      * 获取Event ID.
                      * @return EventId Event ID.
+                     * 
                      */
                     int64_t GetEventId() const;
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Event details.
                      * @return Explanation Event details.
+                     * 
                      */
                     std::string GetExplanation() const;
 
                     /**
                      * 判断参数 Explanation 是否已赋值
                      * @return Explanation 是否已赋值
+                     * 
                      */
                     bool ExplanationHasBeenSet() const;
 
                     /**
                      * 获取Summary.
                      * @return Outline Summary.
+                     * 
                      */
                     std::string GetOutline() const;
 
                     /**
                      * 判断参数 Outline 是否已赋值
                      * @return Outline 是否已赋值
+                     * 
                      */
                     bool OutlineHasBeenSet() const;
 
                     /**
                      * 获取Problem found.
                      * @return Problem Problem found.
+                     * 
                      */
                     std::string GetProblem() const;
 
                     /**
                      * 判断参数 Problem 是否已赋值
                      * @return Problem 是否已赋值
+                     * 
                      */
                     bool ProblemHasBeenSet() const;
 
                     /**
                      * 获取Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
                      * @return Severity Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
+                     * 
                      */
                     int64_t GetSeverity() const;
 
                     /**
                      * 判断参数 Severity 是否已赋值
                      * @return Severity 是否已赋值
+                     * 
                      */
                     bool SeverityHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Suggestion.
                      * @return Suggestions Suggestion.
+                     * 
                      */
                     std::string GetSuggestions() const;
 
                     /**
                      * 判断参数 Suggestions 是否已赋值
                      * @return Suggestions 是否已赋值
+                     * 
                      */
                     bool SuggestionsHasBeenSet() const;
 
@@ -156,24 +174,28 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Metric Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
                     /**
                      * 获取End time.
                      * @return EndTime End time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

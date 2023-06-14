@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Sub-user ID
                      * @return Uin Sub-user ID
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 设置Sub-user ID
-                     * @param Uin Sub-user ID
+                     * @param _uin Sub-user ID
+                     * 
                      */
                     void SetUin(const uint64_t& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取Sub-user name
                      * @return Name Sub-user name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Sub-user name
-                     * @param Name Sub-user name
+                     * @param _name Sub-user name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
                      * @return Uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
+                     * 
                      */
                     uint64_t GetUid() const;
 
                     /**
                      * 设置Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
-                     * @param Uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
+                     * @param _uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
+                     * 
                      */
                     void SetUid(const uint64_t& _uid);
 
                     /**
                      * 判断参数 Uid 是否已赋值
                      * @return Uid 是否已赋值
+                     * 
                      */
                     bool UidHasBeenSet() const;
 
                     /**
                      * 获取Sub-user remarks
                      * @return Remark Sub-user remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Sub-user remarks
-                     * @param Remark Sub-user remarks
+                     * @param _remark Sub-user remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -123,74 +135,86 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
                      * @return UserType User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
+                     * 
                      */
                     uint64_t GetUserType() const;
 
                     /**
                      * 设置User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
-                     * @param UserType User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
+                     * @param _userType User type (1: root account; 2: sub-user; 3: WeCom sub-user; 4: collaborator; 5: message recipient)
+                     * 
                      */
                     void SetUserType(const uint64_t& _userType);
 
                     /**
                      * 判断参数 UserType 是否已赋值
                      * @return UserType 是否已赋值
+                     * 
                      */
                     bool UserTypeHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return LastLoginIp 
+                     * 
                      */
                     std::string GetLastLoginIp() const;
 
                     /**
                      * 设置
-                     * @param LastLoginIp 
+                     * @param _lastLoginIp 
+                     * 
                      */
                     void SetLastLoginIp(const std::string& _lastLoginIp);
 
                     /**
                      * 判断参数 LastLoginIp 是否已赋值
                      * @return LastLoginIp 是否已赋值
+                     * 
                      */
                     bool LastLoginIpHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return LastLoginTime 
+                     * 
                      */
                     std::string GetLastLoginTime() const;
 
                     /**
                      * 设置
-                     * @param LastLoginTime 
+                     * @param _lastLoginTime 
+                     * 
                      */
                     void SetLastLoginTime(const std::string& _lastLoginTime);
 
                     /**
                      * 判断参数 LastLoginTime 是否已赋值
                      * @return LastLoginTime 是否已赋值
+                     * 
                      */
                     bool LastLoginTimeHasBeenSet() const;
 

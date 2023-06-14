@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取IP status information
                      * @return StatusList IP status information
+                     * 
                      */
                     std::vector<IPDefendStatus> GetStatusList() const;
 
                     /**
                      * 判断参数 StatusList 是否已赋值
                      * @return StatusList 是否已赋值
+                     * 
                      */
                     bool StatusListHasBeenSet() const;
 
                     /**
                      * 获取Status code
                      * @return ReturnCode Status code
+                     * 
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取Status information
                      * @return ReturnMsg Status information
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Offset, number of pages.
                      * @return Offset Offset, number of pages.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset, number of pages.
-                     * @param Offset Offset, number of pages.
+                     * @param _offset Offset, number of pages.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of MatchCodes per page
                      * @return Limit The number of MatchCodes per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of MatchCodes per page
-                     * @param Limit The number of MatchCodes per page
+                     * @param _limit The number of MatchCodes per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query by the MatchCode value (a string).
                      * @return MatchCode Query by the MatchCode value (a string).
+                     * 
                      */
                     std::string GetMatchCode() const;
 
                     /**
                      * 设置Query by the MatchCode value (a string).
-                     * @param MatchCode Query by the MatchCode value (a string).
+                     * @param _matchCode Query by the MatchCode value (a string).
+                     * 
                      */
                     void SetMatchCode(const std::string& _matchCode);
 
                     /**
                      * 判断参数 MatchCode 是否已赋值
                      * @return MatchCode 是否已赋值
+                     * 
                      */
                     bool MatchCodeHasBeenSet() const;
 

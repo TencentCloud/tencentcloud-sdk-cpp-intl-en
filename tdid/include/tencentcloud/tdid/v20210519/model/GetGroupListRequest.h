@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取`0`: Groups with no DID services; `1`: Groups with DID services.
                      * @return Status `0`: Groups with no DID services; `1`: Groups with DID services.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置`0`: Groups with no DID services; `1`: Groups with DID services.
-                     * @param Status `0`: Groups with no DID services; `1`: Groups with DID services.
+                     * @param _status `0`: Groups with no DID services; `1`: Groups with DID services.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

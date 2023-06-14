@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Count
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Count
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Count
+                     * @param _totalCount Count
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GroupList GroupList
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DescribeGroup> GetGroupList() const;
 
                     /**
                      * 设置GroupList
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GroupList GroupList
+                     * @param _groupList GroupList
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupList(const std::vector<DescribeGroup>& _groupList);
 
                     /**
                      * 判断参数 GroupList 是否已赋值
                      * @return GroupList 是否已赋值
+                     * 
                      */
                     bool GroupListHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupCountQuota Consumer group quota
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetGroupCountQuota() const;
 
                     /**
                      * 设置Consumer group quota
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupCountQuota Consumer group quota
+                     * @param _groupCountQuota Consumer group quota
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupCountQuota(const uint64_t& _groupCountQuota);
 
                     /**
                      * 判断参数 GroupCountQuota 是否已赋值
                      * @return GroupCountQuota 是否已赋值
+                     * 
                      */
                     bool GroupCountQuotaHasBeenSet() const;
 

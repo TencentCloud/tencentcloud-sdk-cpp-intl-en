@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayMode Billing mode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置Billing mode
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PayMode Billing mode
+                     * @param _payMode Billing mode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayModeName Billing mode name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPayModeName() const;
 
                     /**
                      * 设置Billing mode name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PayModeName Billing mode name
+                     * @param _payModeName Billing mode name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayModeName(const std::string& _payModeName);
 
                     /**
                      * 判断参数 PayModeName 是否已赋值
                      * @return PayModeName 是否已赋值
+                     * 
                      */
                     bool PayModeNameHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost The actual total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
                      * 设置The actual total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginalCost The actual total consumption amount accurate down to eight decimal places
+                     * @param _originalCost The actual total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
 
                     /**
                      * 判断参数 OriginalCost 是否已赋值
                      * @return OriginalCost 是否已赋值
+                     * 
                      */
                     bool OriginalCostHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Detail Bill details in each payment mode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ActionSummaryOverviewItem> GetDetail() const;
 
                     /**
                      * 设置Bill details in each payment mode
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Detail Bill details in each payment mode
+                     * @param _detail Bill details in each payment mode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetail(const std::vector<ActionSummaryOverviewItem>& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
                      * 设置The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
+                     * @param _voucherPayAmount The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
 
                     /**
                      * 判断参数 VoucherPayAmount 是否已赋值
                      * @return VoucherPayAmount 是否已赋值
+                     * 
                      */
                     bool VoucherPayAmountHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCost Total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
                      * 设置Total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCost Total consumption amount accurate down to eight decimal places
+                     * @param _totalCost Total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
 
                     /**
                      * 判断参数 TotalCost 是否已赋值
                      * @return TotalCost 是否已赋值
+                     * 
                      */
                     bool TotalCostHasBeenSet() const;
 

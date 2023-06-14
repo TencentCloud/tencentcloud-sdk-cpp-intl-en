@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the operation approval feature for this cluster. Valid values: `0` (disable), `1` (enable)
                      * @return Censorship Whether to enable the operation approval feature for this cluster. Valid values: `0` (disable), `1` (enable)
+                     * 
                      */
                     int64_t GetCensorship() const;
 
                     /**
                      * 设置Whether to enable the operation approval feature for this cluster. Valid values: `0` (disable), `1` (enable)
-                     * @param Censorship Whether to enable the operation approval feature for this cluster. Valid values: `0` (disable), `1` (enable)
+                     * @param _censorship Whether to enable the operation approval feature for this cluster. Valid values: `0` (disable), `1` (enable)
+                     * 
                      */
                     void SetCensorship(const int64_t& _censorship);
 
                     /**
                      * 判断参数 Censorship 是否已赋值
                      * @return Censorship 是否已赋值
+                     * 
                      */
                     bool CensorshipHasBeenSet() const;
 
                     /**
                      * 获取Approver UIN list
                      * @return Uins Approver UIN list
+                     * 
                      */
                     std::vector<std::string> GetUins() const;
 
                     /**
                      * 设置Approver UIN list
-                     * @param Uins Approver UIN list
+                     * @param _uins Approver UIN list
+                     * 
                      */
                     void SetUins(const std::vector<std::string>& _uins);
 
                     /**
                      * 判断参数 Uins 是否已赋值
                      * @return Uins 是否已赋值
+                     * 
                      */
                     bool UinsHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Recording rule name
                      * @return Name Recording rule name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Recording rule name
-                     * @param Name Recording rule name
+                     * @param _name Recording rule name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Recording rule group content, which is in YAML format and is Base64-encoded.
                      * @return Group Recording rule group content, which is in YAML format and is Base64-encoded.
+                     * 
                      */
                     std::string GetGroup() const;
 
                     /**
                      * 设置Recording rule group content, which is in YAML format and is Base64-encoded.
-                     * @param Group Recording rule group content, which is in YAML format and is Base64-encoded.
+                     * @param _group Recording rule group content, which is in YAML format and is Base64-encoded.
+                     * 
                      */
                     void SetGroup(const std::string& _group);
 
                     /**
                      * 判断参数 Group 是否已赋值
                      * @return Group 是否已赋值
+                     * 
                      */
                     bool GroupHasBeenSet() const;
 
                     /**
                      * 获取Prometheus instance ID
                      * @return InstanceId Prometheus instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Prometheus instance ID
-                     * @param InstanceId Prometheus instance ID
+                     * @param _instanceId Prometheus instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Prometheus recording rule ID
                      * @return RuleId Prometheus recording rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Prometheus recording rule ID
-                     * @param RuleId Prometheus recording rule ID
+                     * @param _ruleId Prometheus recording rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -125,6 +137,7 @@ Default value: 2 (enabled).
 <li>2=RuleEnabled</li>
 <li>3=RuleDisabled</li>
 Default value: 2 (enabled).
+                     * 
                      */
                     int64_t GetRuleState() const;
 
@@ -134,17 +147,19 @@ Default value: 2 (enabled).
 <li>2=RuleEnabled</li>
 <li>3=RuleDisabled</li>
 Default value: 2 (enabled).
-                     * @param RuleState Rule status code. Valid values:
+                     * @param _ruleState Rule status code. Valid values:
 <li>1=RuleDeleted</li>
 <li>2=RuleEnabled</li>
 <li>3=RuleDisabled</li>
 Default value: 2 (enabled).
+                     * 
                      */
                     void SetRuleState(const int64_t& _ruleState);
 
                     /**
                      * 判断参数 RuleState 是否已赋值
                      * @return RuleState 是否已赋值
+                     * 
                      */
                     bool RuleStateHasBeenSet() const;
 

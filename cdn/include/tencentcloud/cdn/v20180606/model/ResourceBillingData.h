@@ -58,6 +58,7 @@ When a domain name is specified: Details of the domain name
 `multiDomains`: Aggregated details of multiple domain names
 A specific project ID: ID of the specifically queried project
 `all`: Details at the account level
+                     * 
                      */
                     std::string GetResource() const;
 
@@ -67,35 +68,40 @@ When a domain name is specified: Details of the domain name
 `multiDomains`: Aggregated details of multiple domain names
 A specific project ID: ID of the specifically queried project
 `all`: Details at the account level
-                     * @param Resource Resource name, which is classified as follows based on different query filters:
+                     * @param _resource Resource name, which is classified as follows based on different query filters:
 When a domain name is specified: Details of the domain name
 `multiDomains`: Aggregated details of multiple domain names
 A specific project ID: ID of the specifically queried project
 `all`: Details at the account level
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取Billing data details
                      * @return BillingData Billing data details
+                     * 
                      */
                     std::vector<CdnData> GetBillingData() const;
 
                     /**
                      * 设置Billing data details
-                     * @param BillingData Billing data details
+                     * @param _billingData Billing data details
+                     * 
                      */
                     void SetBillingData(const std::vector<CdnData>& _billingData);
 
                     /**
                      * 判断参数 BillingData 是否已赋值
                      * @return BillingData 是否已赋值
+                     * 
                      */
                     bool BillingDataHasBeenSet() const;
 

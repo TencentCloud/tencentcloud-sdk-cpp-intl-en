@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return TimedRecordSettings Timed recording settings
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     TimedRecordSettings GetTimedRecordSettings() const;
 
                     /**
                      * 设置Timed recording settings
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param TimedRecordSettings Timed recording settings
+                     * @param _timedRecordSettings Timed recording settings
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTimedRecordSettings(const TimedRecordSettings& _timedRecordSettings);
 
                     /**
                      * 判断参数 TimedRecordSettings 是否已赋值
                      * @return TimedRecordSettings 是否已赋值
+                     * 
                      */
                     bool TimedRecordSettingsHasBeenSet() const;
 

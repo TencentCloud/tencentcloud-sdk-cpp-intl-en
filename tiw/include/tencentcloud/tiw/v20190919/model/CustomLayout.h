@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Mixed stream canvas parameter
                      * @return Canvas Mixed stream canvas parameter
+                     * 
                      */
                     Canvas GetCanvas() const;
 
                     /**
                      * 设置Mixed stream canvas parameter
-                     * @param Canvas Mixed stream canvas parameter
+                     * @param _canvas Mixed stream canvas parameter
+                     * 
                      */
                     void SetCanvas(const Canvas& _canvas);
 
                     /**
                      * 判断参数 Canvas 是否已赋值
                      * @return Canvas 是否已赋值
+                     * 
                      */
                     bool CanvasHasBeenSet() const;
 
                     /**
                      * 获取Stream layout. The layout of each stream cannot exceed the canvas area.
                      * @return InputStreamList Stream layout. The layout of each stream cannot exceed the canvas area.
+                     * 
                      */
                     std::vector<StreamLayout> GetInputStreamList() const;
 
                     /**
                      * 设置Stream layout. The layout of each stream cannot exceed the canvas area.
-                     * @param InputStreamList Stream layout. The layout of each stream cannot exceed the canvas area.
+                     * @param _inputStreamList Stream layout. The layout of each stream cannot exceed the canvas area.
+                     * 
                      */
                     void SetInputStreamList(const std::vector<StreamLayout>& _inputStreamList);
 
                     /**
                      * 判断参数 InputStreamList 是否已赋值
                      * @return InputStreamList 是否已赋值
+                     * 
                      */
                     bool InputStreamListHasBeenSet() const;
 

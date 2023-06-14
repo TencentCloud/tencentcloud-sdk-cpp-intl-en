@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Proxy group ID
                      * @return ProxyGroupId Proxy group ID
+                     * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
                      * 设置Proxy group ID
-                     * @param ProxyGroupId Proxy group ID
+                     * @param _proxyGroupId Proxy group ID
+                     * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
 
                     /**
                      * 判断参数 ProxyGroupId 是否已赋值
                      * @return ProxyGroupId 是否已赋值
+                     * 
                      */
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return UniqVpcId VPC ID
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param UniqVpcId VPC ID
+                     * @param _uniqVpcId VPC ID
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
                      * 获取VPC subnet ID
                      * @return UniqSubnetId VPC subnet ID
+                     * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
                      * 设置VPC subnet ID
-                     * @param UniqSubnetId VPC subnet ID
+                     * @param _uniqSubnetId VPC subnet ID
+                     * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
 
                     /**
                      * 判断参数 UniqSubnetId 是否已赋值
                      * @return UniqSubnetId 是否已赋值
+                     * 
                      */
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取New IP
                      * @return DstIp New IP
+                     * 
                      */
                     std::string GetDstIp() const;
 
                     /**
                      * 设置New IP
-                     * @param DstIp New IP
+                     * @param _dstIp New IP
+                     * 
                      */
                     void SetDstIp(const std::string& _dstIp);
 
                     /**
                      * 判断参数 DstIp 是否已赋值
                      * @return DstIp 是否已赋值
+                     * 
                      */
                     bool DstIpHasBeenSet() const;
 
                     /**
                      * 获取New port
                      * @return DstPort New port
+                     * 
                      */
                     uint64_t GetDstPort() const;
 
                     /**
                      * 设置New port
-                     * @param DstPort New port
+                     * @param _dstPort New port
+                     * 
                      */
                     void SetDstPort(const uint64_t& _dstPort);
 
                     /**
                      * 判断参数 DstPort 是否已赋值
                      * @return DstPort 是否已赋值
+                     * 
                      */
                     bool DstPortHasBeenSet() const;
 
                     /**
                      * 获取Valid hours of the old IP
                      * @return ReleaseDuration Valid hours of the old IP
+                     * 
                      */
                     uint64_t GetReleaseDuration() const;
 
                     /**
                      * 设置Valid hours of the old IP
-                     * @param ReleaseDuration Valid hours of the old IP
+                     * @param _releaseDuration Valid hours of the old IP
+                     * 
                      */
                     void SetReleaseDuration(const uint64_t& _releaseDuration);
 
                     /**
                      * 判断参数 ReleaseDuration 是否已赋值
                      * @return ReleaseDuration 是否已赋值
+                     * 
                      */
                     bool ReleaseDurationHasBeenSet() const;
 

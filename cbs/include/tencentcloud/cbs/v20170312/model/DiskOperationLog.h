@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取UIN of operator.
                      * @return Operator UIN of operator.
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置UIN of operator.
-                     * @param Operator UIN of operator.
+                     * @param _operator UIN of operator.
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
@@ -85,6 +88,7 @@ CBS_OPERATION_ISOLATE: Isolate
 CBS_OPERATION_MODIFY: Modify cloud disk attributes
 ASP_OPERATION_BIND: Associate scheduled snapshot policy
 ASP_OPERATION_UNBIND: Cancel associated scheduled snapshot policy
+                     * 
                      */
                     std::string GetOperation() const;
 
@@ -99,7 +103,7 @@ CBS_OPERATION_ISOLATE: Isolate
 CBS_OPERATION_MODIFY: Modify cloud disk attributes
 ASP_OPERATION_BIND: Associate scheduled snapshot policy
 ASP_OPERATION_UNBIND: Cancel associated scheduled snapshot policy
-                     * @param Operation Operation type. Value range:
+                     * @param _operation Operation type. Value range:
 CBS_OPERATION_ATTACH: Mount cloud disk
 CBS_OPERATION_DETACH: Unmount cloud disk
 CBS_OPERATION_RENEW: Renew
@@ -109,30 +113,35 @@ CBS_OPERATION_ISOLATE: Isolate
 CBS_OPERATION_MODIFY: Modify cloud disk attributes
 ASP_OPERATION_BIND: Associate scheduled snapshot policy
 ASP_OPERATION_UNBIND: Cancel associated scheduled snapshot policy
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk ID of operation.
                      * @return DiskId Cloud disk ID of operation.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Cloud disk ID of operation.
-                     * @param DiskId Cloud disk ID of operation.
+                     * @param _diskId Cloud disk ID of operation.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
@@ -145,6 +154,7 @@ PROCESSING: Operation in process
 SUCCESS: Operation successful 
 FAILED: Operation failed 
 PROCESSING: Operation in process
+                     * 
                      */
                     std::string GetOperationState() const;
 
@@ -153,52 +163,60 @@ PROCESSING: Operation in process
 SUCCESS: Operation successful 
 FAILED: Operation failed 
 PROCESSING: Operation in process
-                     * @param OperationState Status of operation. Value range:
+                     * @param _operationState Status of operation. Value range:
 SUCCESS: Operation successful 
 FAILED: Operation failed 
 PROCESSING: Operation in process
+                     * 
                      */
                     void SetOperationState(const std::string& _operationState);
 
                     /**
                      * 判断参数 OperationState 是否已赋值
                      * @return OperationState 是否已赋值
+                     * 
                      */
                     bool OperationStateHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

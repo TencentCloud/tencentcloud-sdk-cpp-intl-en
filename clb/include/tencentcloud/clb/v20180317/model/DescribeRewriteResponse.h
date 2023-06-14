@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
                      * @return RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
+                     * 
                      */
                     std::vector<RuleOutput> GetRewriteSet() const;
 
                     /**
                      * 判断参数 RewriteSet 是否已赋值
                      * @return RewriteSet 是否已赋值
+                     * 
                      */
                     bool RewriteSetHasBeenSet() const;
 

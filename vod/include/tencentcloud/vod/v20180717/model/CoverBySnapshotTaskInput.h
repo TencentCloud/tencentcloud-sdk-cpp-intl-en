@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Time point screencapturing template ID.
                      * @return Definition Time point screencapturing template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Time point screencapturing template ID.
-                     * @param Definition Time point screencapturing template ID.
+                     * @param _definition Time point screencapturing template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
                      * @return PositionType Screencapturing mode. Valid values:
 <li>Time: screencaptures by time point</li>
 <li>Percent: screencaptures by percentage</li>
+                     * 
                      */
                     std::string GetPositionType() const;
 
@@ -79,15 +83,17 @@ namespace TencentCloud
                      * 设置Screencapturing mode. Valid values:
 <li>Time: screencaptures by time point</li>
 <li>Percent: screencaptures by percentage</li>
-                     * @param PositionType Screencapturing mode. Valid values:
+                     * @param _positionType Screencapturing mode. Valid values:
 <li>Time: screencaptures by time point</li>
 <li>Percent: screencaptures by percentage</li>
+                     * 
                      */
                     void SetPositionType(const std::string& _positionType);
 
                     /**
                      * 判断参数 PositionType 是否已赋值
                      * @return PositionType 是否已赋值
+                     * 
                      */
                     bool PositionTypeHasBeenSet() const;
 
@@ -98,6 +104,7 @@ namespace TencentCloud
                      * @return PositionValue Screenshot position:
 <li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
 <li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
+                     * 
                      */
                     double GetPositionValue() const;
 
@@ -105,15 +112,17 @@ namespace TencentCloud
                      * 设置Screenshot position:
 <li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
 <li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
-                     * @param PositionValue Screenshot position:
+                     * @param _positionValue Screenshot position:
 <li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
 <li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
+                     * 
                      */
                     void SetPositionValue(const double& _positionValue);
 
                     /**
                      * 判断参数 PositionValue 是否已赋值
                      * @return PositionValue 是否已赋值
+                     * 
                      */
                     bool PositionValueHasBeenSet() const;
 
@@ -122,20 +131,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
                      * 设置List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WatermarkSet List of up to 10 image or text watermarks.
+                     * @param _watermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
 
                     /**
                      * 判断参数 WatermarkSet 是否已赋值
                      * @return WatermarkSet 是否已赋值
+                     * 
                      */
                     bool WatermarkSetHasBeenSet() const;
 

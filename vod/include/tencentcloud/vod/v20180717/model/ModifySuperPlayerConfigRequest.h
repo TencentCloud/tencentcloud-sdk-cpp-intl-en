@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Player configuration name.
                      * @return Name Player configuration name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Player configuration name.
-                     * @param Name Player configuration name.
+                     * @param _name Player configuration name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
 <li>AdaptiveDynamicStreaming</li>
 <li>Transcode</li>
 <li>Original</li>
+                     * 
                      */
                     std::string GetAudioVideoType() const;
 
@@ -97,16 +104,18 @@ namespace TencentCloud
 <li>AdaptiveDynamicStreaming</li>
 <li>Transcode</li>
 <li>Original</li>
-                     * @param AudioVideoType Type of audio/video played. Valid values:
+                     * @param _audioVideoType Type of audio/video played. Valid values:
 <li>AdaptiveDynamicStreaming</li>
 <li>Transcode</li>
 <li>Original</li>
+                     * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
 
                     /**
                      * 判断参数 AudioVideoType 是否已赋值
                      * @return AudioVideoType 是否已赋值
+                     * 
                      */
                     bool AudioVideoTypeHasBeenSet() const;
 
@@ -117,6 +126,7 @@ namespace TencentCloud
                      * @return DrmSwitch Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
+                     * 
                      */
                     std::string GetDrmSwitch() const;
 
@@ -124,123 +134,143 @@ namespace TencentCloud
                      * 设置Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-                     * @param DrmSwitch Switch of DRM-protected adaptive bitstream playback:
+                     * @param _drmSwitch Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
+                     * 
                      */
                     void SetDrmSwitch(const std::string& _drmSwitch);
 
                     /**
                      * 判断参数 DrmSwitch 是否已赋值
                      * @return DrmSwitch 是否已赋值
+                     * 
                      */
                     bool DrmSwitchHasBeenSet() const;
 
                     /**
                      * 获取ID of the unencrypted adaptive bitrate streaming template that allows output.
                      * @return AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output.
+                     * 
                      */
                     uint64_t GetAdaptiveDynamicStreamingDefinition() const;
 
                     /**
                      * 设置ID of the unencrypted adaptive bitrate streaming template that allows output.
-                     * @param AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output.
+                     * @param _adaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output.
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingDefinition(const uint64_t& _adaptiveDynamicStreamingDefinition);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingDefinition 是否已赋值
                      * @return AdaptiveDynamicStreamingDefinition 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingDefinitionHasBeenSet() const;
 
                     /**
                      * 获取Content of the DRM-protected adaptive bitrate streaming template that allows output.
                      * @return DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
+                     * 
                      */
                     DrmStreamingsInfoForUpdate GetDrmStreamingsInfo() const;
 
                     /**
                      * 设置Content of the DRM-protected adaptive bitrate streaming template that allows output.
-                     * @param DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
+                     * @param _drmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
+                     * 
                      */
                     void SetDrmStreamingsInfo(const DrmStreamingsInfoForUpdate& _drmStreamingsInfo);
 
                     /**
                      * 判断参数 DrmStreamingsInfo 是否已赋值
                      * @return DrmStreamingsInfo 是否已赋值
+                     * 
                      */
                     bool DrmStreamingsInfoHasBeenSet() const;
 
                     /**
                      * 获取ID of the transcoding template allowed for playback
                      * @return TranscodeDefinition ID of the transcoding template allowed for playback
+                     * 
                      */
                     uint64_t GetTranscodeDefinition() const;
 
                     /**
                      * 设置ID of the transcoding template allowed for playback
-                     * @param TranscodeDefinition ID of the transcoding template allowed for playback
+                     * @param _transcodeDefinition ID of the transcoding template allowed for playback
+                     * 
                      */
                     void SetTranscodeDefinition(const uint64_t& _transcodeDefinition);
 
                     /**
                      * 判断参数 TranscodeDefinition 是否已赋值
                      * @return TranscodeDefinition 是否已赋值
+                     * 
                      */
                     bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
                      * 获取ID of the image sprite generating template that allows output.
                      * @return ImageSpriteDefinition ID of the image sprite generating template that allows output.
+                     * 
                      */
                     uint64_t GetImageSpriteDefinition() const;
 
                     /**
                      * 设置ID of the image sprite generating template that allows output.
-                     * @param ImageSpriteDefinition ID of the image sprite generating template that allows output.
+                     * @param _imageSpriteDefinition ID of the image sprite generating template that allows output.
+                     * 
                      */
                     void SetImageSpriteDefinition(const uint64_t& _imageSpriteDefinition);
 
                     /**
                      * 判断参数 ImageSpriteDefinition 是否已赋值
                      * @return ImageSpriteDefinition 是否已赋值
+                     * 
                      */
                     bool ImageSpriteDefinitionHasBeenSet() const;
 
                     /**
                      * 获取Display name of player for substreams with different resolutions.
                      * @return ResolutionNames Display name of player for substreams with different resolutions.
+                     * 
                      */
                     std::vector<ResolutionNameInfo> GetResolutionNames() const;
 
                     /**
                      * 设置Display name of player for substreams with different resolutions.
-                     * @param ResolutionNames Display name of player for substreams with different resolutions.
+                     * @param _resolutionNames Display name of player for substreams with different resolutions.
+                     * 
                      */
                     void SetResolutionNames(const std::vector<ResolutionNameInfo>& _resolutionNames);
 
                     /**
                      * 判断参数 ResolutionNames 是否已赋值
                      * @return ResolutionNames 是否已赋值
+                     * 
                      */
                     bool ResolutionNamesHasBeenSet() const;
 
                     /**
                      * 获取Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
                      * @return Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
-                     * @param Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * @param _domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -253,6 +283,7 @@ namespace TencentCloud
 <li>Default: the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used;</li>
 <li>HTTP;</li>
 <li>HTTPS.</li>
+                     * 
                      */
                     std::string GetScheme() const;
 
@@ -261,34 +292,39 @@ namespace TencentCloud
 <li>Default: the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used;</li>
 <li>HTTP;</li>
 <li>HTTPS.</li>
-                     * @param Scheme Scheme used for playback. Valid values:
+                     * @param _scheme Scheme used for playback. Valid values:
 <li>Default: the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used;</li>
 <li>HTTP;</li>
 <li>HTTPS.</li>
+                     * 
                      */
                     void SetScheme(const std::string& _scheme);
 
                     /**
                      * 判断参数 Scheme 是否已赋值
                      * @return Scheme 是否已赋值
+                     * 
                      */
                     bool SchemeHasBeenSet() const;
 
                     /**
                      * 获取Template description. Length limit: 256 characters.
                      * @return Comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Template description. Length limit: 256 characters.
-                     * @param Comment Template description. Length limit: 256 characters.
+                     * @param _comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 

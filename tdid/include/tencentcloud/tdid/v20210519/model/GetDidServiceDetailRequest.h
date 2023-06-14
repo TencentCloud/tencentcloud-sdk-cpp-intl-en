@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The DID service ID.
                      * @return ServiceId The DID service ID.
+                     * 
                      */
                     uint64_t GetServiceId() const;
 
                     /**
                      * 设置The DID service ID.
-                     * @param ServiceId The DID service ID.
+                     * @param _serviceId The DID service ID.
+                     * 
                      */
                     void SetServiceId(const uint64_t& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 

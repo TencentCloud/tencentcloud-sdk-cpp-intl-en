@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Customer gateway ID, such as `cgw-2wqq41m9`. Each request can have a maximum of 100 instances. `CustomerGatewayIds` and `Filters` cannot be specified at the same time.
                      * @return CustomerGatewayIds Customer gateway ID, such as `cgw-2wqq41m9`. Each request can have a maximum of 100 instances. `CustomerGatewayIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     std::vector<std::string> GetCustomerGatewayIds() const;
 
                     /**
                      * 设置Customer gateway ID, such as `cgw-2wqq41m9`. Each request can have a maximum of 100 instances. `CustomerGatewayIds` and `Filters` cannot be specified at the same time.
-                     * @param CustomerGatewayIds Customer gateway ID, such as `cgw-2wqq41m9`. Each request can have a maximum of 100 instances. `CustomerGatewayIds` and `Filters` cannot be specified at the same time.
+                     * @param _customerGatewayIds Customer gateway ID, such as `cgw-2wqq41m9`. Each request can have a maximum of 100 instances. `CustomerGatewayIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     void SetCustomerGatewayIds(const std::vector<std::string>& _customerGatewayIds);
 
                     /**
                      * 判断参数 CustomerGatewayIds 是否已赋值
                      * @return CustomerGatewayIds 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayIdsHasBeenSet() const;
 
@@ -70,6 +73,7 @@ namespace TencentCloud
 <li>customer-gateway-id - String - (Filter condition) The unique ID of the user gateway, such as `cgw-mgp33pll`.</li>
 <li>customer-gateway-name - String - (Filter condition) The name of the user gateway, such as `test-cgw`.</li>
 <li>ip-address - String - (Filter condition) The public IP address, such as `58.211.1.12`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -78,52 +82,60 @@ namespace TencentCloud
 <li>customer-gateway-id - String - (Filter condition) The unique ID of the user gateway, such as `cgw-mgp33pll`.</li>
 <li>customer-gateway-name - String - (Filter condition) The name of the user gateway, such as `test-cgw`.</li>
 <li>ip-address - String - (Filter condition) The public IP address, such as `58.211.1.12`.</li>
-                     * @param Filters The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `CustomerGatewayIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `CustomerGatewayIds` and `Filters` cannot be specified at the same time.
 <li>customer-gateway-id - String - (Filter condition) The unique ID of the user gateway, such as `cgw-mgp33pll`.</li>
 <li>customer-gateway-name - String - (Filter condition) The name of the user gateway, such as `test-cgw`.</li>
 <li>ip-address - String - (Filter condition) The public IP address, such as `58.211.1.12`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
                      * @return Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
-                     * @param Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+                     * @param _offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

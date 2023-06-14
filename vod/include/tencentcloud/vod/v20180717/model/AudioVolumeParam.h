@@ -55,6 +55,7 @@ Default value: 0.
 <li>0: not muted.</li>
 <li>1: muted.</li>
 Default value: 0.
+                     * 
                      */
                     int64_t GetMute() const;
 
@@ -63,16 +64,18 @@ Default value: 0.
 <li>0: not muted.</li>
 <li>1: muted.</li>
 Default value: 0.
-                     * @param Mute Whether to mute. Valid values: 0, 1.
+                     * @param _mute Whether to mute. Valid values: 0, 1.
 <li>0: not muted.</li>
 <li>1: muted.</li>
 Default value: 0.
+                     * 
                      */
                     void SetMute(const int64_t& _mute);
 
                     /**
                      * 判断参数 Mute 是否已赋值
                      * @return Mute 是否已赋值
+                     * 
                      */
                     bool MuteHasBeenSet() const;
 
@@ -87,6 +90,7 @@ Default value: 0.
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
 Default value: 0.
+                     * 
                      */
                     double GetGain() const;
 
@@ -96,17 +100,19 @@ Default value: 0.
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
 Default value: 0.
-                     * @param Gain Audio gain. Value range: 0-10.
+                     * @param _gain Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
 Default value: 0.
+                     * 
                      */
                     void SetGain(const double& _gain);
 
                     /**
                      * 判断参数 Gain 是否已赋值
                      * @return Gain 是否已赋值
+                     * 
                      */
                     bool GainHasBeenSet() const;
 

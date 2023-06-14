@@ -55,20 +55,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HitFlag This field is used to return whether the moderated content hit the moderation model. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHitFlag() const;
 
                     /**
                      * 设置This field is used to return whether the moderated content hit the moderation model. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HitFlag This field is used to return whether the moderated content hit the moderation model. Valid values: 0 (**no**), 1 (**yes**).
+                     * @param _hitFlag This field is used to return whether the moderated content hit the moderation model. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHitFlag(const int64_t& _hitFlag);
 
                     /**
                      * 判断参数 HitFlag 是否已赋值
                      * @return HitFlag 是否已赋值
+                     * 
                      */
                     bool HitFlagHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Label This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Label This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+                     * @param _label This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -101,6 +107,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Suggestion This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -108,15 +115,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
+                     * @param _suggestion This field is used to return the operation suggestion. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -125,20 +134,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Score This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Score This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic.
+                     * @param _score This field is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Text This field is used to return the text information generated by recognizing an audio file with ASR. Audio files of up to **5 hours** can be recognized. If this limit is exceeded, an error will be reported by the API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置This field is used to return the text information generated by recognizing an audio file with ASR. Audio files of up to **5 hours** can be recognized. If this limit is exceeded, an error will be reported by the API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Text This field is used to return the text information generated by recognizing an audio file with ASR. Audio files of up to **5 hours** can be recognized. If this limit is exceeded, an error will be reported by the API.
+                     * @param _text This field is used to return the text information generated by recognizing an audio file with ASR. Audio files of up to **5 hours** can be recognized. If this limit is exceeded, an error will be reported by the API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
@@ -169,20 +184,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Url This field is used to return the URL where audio segments are stored, which is valid for 1 day.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置This field is used to return the URL where audio segments are stored, which is valid for 1 day.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Url This field is used to return the URL where audio segments are stored, which is valid for 1 day.
+                     * @param _url This field is used to return the URL where audio segments are stored, which is valid for 1 day.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -191,20 +209,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Duration This field is used to return the length of an audio file in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDuration() const;
 
                     /**
                      * 设置This field is used to return the length of an audio file in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Duration This field is used to return the length of an audio file in seconds.
+                     * @param _duration This field is used to return the length of an audio file in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDuration(const std::string& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
@@ -213,20 +234,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Extra This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExtra() const;
 
                     /**
                      * 设置This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Extra This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
+                     * @param _extra This field is used to return the additional information (Extra) in the input parameters. If it is not configured, an empty value will be returned by default.<br>Note: the returned information varies by customer or `Biztype`. If you need to configure this field, submit a ticket or contact the aftersales service for assistance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtra(const std::string& _extra);
 
                     /**
                      * 判断参数 Extra 是否已赋值
                      * @return Extra 是否已赋值
+                     * 
                      */
                     bool ExtraHasBeenSet() const;
 
@@ -235,20 +259,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TextResults This field is used to return the detailed moderation result of the text generated by recognizing an audio file with ASR. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AudioResultDetailTextResult> GetTextResults() const;
 
                     /**
                      * 设置This field is used to return the detailed moderation result of the text generated by recognizing an audio file with ASR. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TextResults This field is used to return the detailed moderation result of the text generated by recognizing an audio file with ASR. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
+                     * @param _textResults This field is used to return the detailed moderation result of the text generated by recognizing an audio file with ASR. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTextResults(const std::vector<AudioResultDetailTextResult>& _textResults);
 
                     /**
                      * 判断参数 TextResults 是否已赋值
                      * @return TextResults 是否已赋值
+                     * 
                      */
                     bool TextResultsHasBeenSet() const;
 
@@ -257,20 +284,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MoanResults This field is used to return the detailed moan detection result of an audio file. For the specific result, see the detailed description of the `AudioResultDetailMoanResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AudioResultDetailMoanResult> GetMoanResults() const;
 
                     /**
                      * 设置This field is used to return the detailed moan detection result of an audio file. For the specific result, see the detailed description of the `AudioResultDetailMoanResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MoanResults This field is used to return the detailed moan detection result of an audio file. For the specific result, see the detailed description of the `AudioResultDetailMoanResult` data structure.
+                     * @param _moanResults This field is used to return the detailed moan detection result of an audio file. For the specific result, see the detailed description of the `AudioResultDetailMoanResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMoanResults(const std::vector<AudioResultDetailMoanResult>& _moanResults);
 
                     /**
                      * 判断参数 MoanResults 是否已赋值
                      * @return MoanResults 是否已赋值
+                     * 
                      */
                     bool MoanResultsHasBeenSet() const;
 
@@ -279,20 +309,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LanguageResults This field is used to return the detailed minor language detection result of an audio. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AudioResultDetailLanguageResult> GetLanguageResults() const;
 
                     /**
                      * 设置This field is used to return the detailed minor language detection result of an audio. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LanguageResults This field is used to return the detailed minor language detection result of an audio. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
+                     * @param _languageResults This field is used to return the detailed minor language detection result of an audio. For the specific result, see the detailed description of the `AudioResultDetailLanguageResult` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLanguageResults(const std::vector<AudioResultDetailLanguageResult>& _languageResults);
 
                     /**
                      * 判断参数 LanguageResults 是否已赋值
                      * @return LanguageResults 是否已赋值
+                     * 
                      */
                     bool LanguageResultsHasBeenSet() const;
 
@@ -301,20 +334,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
                      * 设置This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubLabel This field is used to return a subtag under the current tag (Lable).
+                     * @param _subLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
 
                     /**
                      * 判断参数 SubLabel 是否已赋值
                      * @return SubLabel 是否已赋值
+                     * 
                      */
                     bool SubLabelHasBeenSet() const;
 
@@ -323,20 +359,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RecognitionResults List of recognized category labels
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<RecognitionResult> GetRecognitionResults() const;
 
                     /**
                      * 设置List of recognized category labels
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RecognitionResults List of recognized category labels
+                     * @param _recognitionResults List of recognized category labels
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRecognitionResults(const std::vector<RecognitionResult>& _recognitionResults);
 
                     /**
                      * 判断参数 RecognitionResults 是否已赋值
                      * @return RecognitionResults 是否已赋值
+                     * 
                      */
                     bool RecognitionResultsHasBeenSet() const;
 

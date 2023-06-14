@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Route table instance ID, such as `rtb-azd4dt1c`.
                      * @return RouteTableIds Route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     std::vector<std::string> GetRouteTableIds() const;
 
                     /**
                      * 设置Route table instance ID, such as `rtb-azd4dt1c`.
-                     * @param RouteTableIds Route table instance ID, such as `rtb-azd4dt1c`.
+                     * @param _routeTableIds Route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     void SetRouteTableIds(const std::vector<std::string>& _routeTableIds);
 
                     /**
                      * 判断参数 RouteTableIds 是否已赋值
                      * @return RouteTableIds 是否已赋值
+                     * 
                      */
                     bool RouteTableIdsHasBeenSet() const;
 
@@ -72,6 +75,7 @@ route-table-id - String - (Filter) Route table instance ID.
 route-table-name - String - (Filter) Route table name.
 vpc-id - String - (Filter) VPC instance ID, such as `vpc-f49l6u0z`.
 association.main - String - (Filter) Whether it is the main route table.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -81,71 +85,82 @@ route-table-id - String - (Filter) Route table instance ID.
 route-table-name - String - (Filter) Route table name.
 vpc-id - String - (Filter) VPC instance ID, such as `vpc-f49l6u0z`.
 association.main - String - (Filter) Whether it is the main route table.
-                     * @param Filters Filter. `RouteTableIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter. `RouteTableIds` and `Filters` cannot be specified at the same time.
 route-table-id - String - (Filter) Route table instance ID.
 route-table-name - String - (Filter) Route table name.
 vpc-id - String - (Filter) VPC instance ID, such as `vpc-f49l6u0z`.
 association.main - String - (Filter) Whether it is the main route table.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit
                      * @return Limit Limit
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Limit
-                     * @param Limit Limit
+                     * @param _limit Limit
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取ECM region. If this parameter is left empty or not specified, it will indicate all regions.
                      * @return EcmRegion ECM region. If this parameter is left empty or not specified, it will indicate all regions.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region. If this parameter is left empty or not specified, it will indicate all regions.
-                     * @param EcmRegion ECM region. If this parameter is left empty or not specified, it will indicate all regions.
+                     * @param _ecmRegion ECM region. If this parameter is left empty or not specified, it will indicate all regions.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 

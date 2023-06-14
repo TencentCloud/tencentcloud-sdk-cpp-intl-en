@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CertId Server certificate ID, which is the ID of the default certificate. If you choose to upload an external certificate for SSL certificate management, a certificate ID will be generated.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Server certificate ID, which is the ID of the default certificate. If you choose to upload an external certificate for SSL certificate management, a certificate ID will be generated.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CertId Server certificate ID, which is the ID of the default certificate. If you choose to upload an external certificate for SSL certificate management, a certificate ID will be generated.
+                     * @param _certId Server certificate ID, which is the ID of the default certificate. If you choose to upload an external certificate for SSL certificate management, a certificate ID will be generated.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Alias Certificate alias
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAlias() const;
 
                     /**
                      * 设置Certificate alias
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Alias Certificate alias
+                     * @param _alias Certificate alias
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAlias(const std::string& _alias);
 
                     /**
                      * 判断参数 Alias 是否已赋值
                      * @return Alias 是否已赋值
+                     * 
                      */
                     bool AliasHasBeenSet() const;
 
@@ -101,6 +107,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `upload`: External certificate
 `managed`: Tencent Cloud managed certificate
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -110,17 +117,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `upload`: External certificate
 `managed`: Tencent Cloud managed certificate
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Type Certificate type. Valid values:
+                     * @param _type Certificate type. Valid values:
 `default`: Default certificate
 `upload`: External certificate
 `managed`: Tencent Cloud managed certificate
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -129,20 +138,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ExpireTime Time when the certificate expires
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Time when the certificate expires
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ExpireTime Time when the certificate expires
+                     * @param _expireTime Time when the certificate expires
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -151,20 +163,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EffectiveTime Time when the certificate takes effect
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEffectiveTime() const;
 
                     /**
                      * 设置Time when the certificate takes effect
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param EffectiveTime Time when the certificate takes effect
+                     * @param _effectiveTime Time when the certificate takes effect
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetEffectiveTime(const std::string& _effectiveTime);
 
                     /**
                      * 判断参数 EffectiveTime 是否已赋值
                      * @return EffectiveTime 是否已赋值
+                     * 
                      */
                     bool EffectiveTimeHasBeenSet() const;
 
@@ -173,20 +188,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CommonName Certificate common name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCommonName() const;
 
                     /**
                      * 设置Certificate common name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CommonName Certificate common name
+                     * @param _commonName Certificate common name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCommonName(const std::string& _commonName);
 
                     /**
                      * 判断参数 CommonName 是否已赋值
                      * @return CommonName 是否已赋值
+                     * 
                      */
                     bool CommonNameHasBeenSet() const;
 
@@ -195,20 +213,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SubjectAltName Domain names added to the SAN certificate
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSubjectAltName() const;
 
                     /**
                      * 设置Domain names added to the SAN certificate
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SubjectAltName Domain names added to the SAN certificate
+                     * @param _subjectAltName Domain names added to the SAN certificate
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSubjectAltName(const std::vector<std::string>& _subjectAltName);
 
                     /**
                      * 判断参数 SubjectAltName 是否已赋值
                      * @return SubjectAltName 是否已赋值
+                     * 
                      */
                     bool SubjectAltNameHasBeenSet() const;
 
@@ -227,6 +248,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `deployed`: Certificate deployed
 `disabled`: Certificate disabled
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -238,19 +260,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `deployed`: Certificate deployed
 `disabled`: Certificate disabled
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Status Certificate status. Valid values:
+                     * @param _status Certificate status. Valid values:
 `applying`: Application in progress
 `failed`: Application failed
 `processing`: Deploying certificate
 `deployed`: Certificate deployed
 `disabled`: Certificate disabled
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -259,20 +283,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Message Returns a message to display failure causes when `Status=failed`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Returns a message to display failure causes when `Status=failed`
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Message Returns a message to display failure causes when `Status=failed`
+                     * @param _message Returns a message to display failure causes when `Status=failed`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

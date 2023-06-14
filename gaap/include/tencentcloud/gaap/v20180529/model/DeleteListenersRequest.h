@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID list of listeners to be deleted
                      * @return ListenerIds ID list of listeners to be deleted
+                     * 
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
                      * 设置ID list of listeners to be deleted
-                     * @param ListenerIds ID list of listeners to be deleted
+                     * @param _listenerIds ID list of listeners to be deleted
+                     * 
                      */
                     void SetListenerIds(const std::vector<std::string>& _listenerIds);
 
                     /**
                      * 判断参数 ListenerIds 是否已赋值
                      * @return ListenerIds 是否已赋值
+                     * 
                      */
                     bool ListenerIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
                      * @return Force Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
+                     * 
                      */
                     uint64_t GetForce() const;
 
                     /**
                      * 设置Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
-                     * @param Force Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
+                     * @param _force Whether to allow a forced deletion of listeners that have been bound to origin servers. 1: allowed; 0: not allow.
+                     * 
                      */
                     void SetForce(const uint64_t& _force);
 
                     /**
                      * 判断参数 Force 是否已赋值
                      * @return Force 是否已赋值
+                     * 
                      */
                     bool ForceHasBeenSet() const;
 
                     /**
                      * 获取Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
                      * @return GroupId Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
-                     * @param GroupId Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+                     * @param _groupId Connection group ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
                      * @return ProxyId Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
-                     * @param ProxyId Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+                     * @param _proxyId Connection ID; Either this parameter or `GroupId` must be set, but you cannot set both.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 

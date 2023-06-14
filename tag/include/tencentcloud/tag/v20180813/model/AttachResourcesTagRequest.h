@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Resource service name (the third segment in the six-segment resource description)
                      * @return ServiceType Resource service name (the third segment in the six-segment resource description)
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Resource service name (the third segment in the six-segment resource description)
-                     * @param ServiceType Resource service name (the third segment in the six-segment resource description)
+                     * @param _serviceType Resource service name (the third segment in the six-segment resource description)
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
                     /**
                      * 获取Resource ID array, which can contain up to 50 resources
                      * @return ResourceIds Resource ID array, which can contain up to 50 resources
+                     * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
                      * 设置Resource ID array, which can contain up to 50 resources
-                     * @param ResourceIds Resource ID array, which can contain up to 50 resources
+                     * @param _resourceIds Resource ID array, which can contain up to 50 resources
+                     * 
                      */
                     void SetResourceIds(const std::vector<std::string>& _resourceIds);
 
                     /**
                      * 判断参数 ResourceIds 是否已赋值
                      * @return ResourceIds 是否已赋值
+                     * 
                      */
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
                      * 获取Tag key
                      * @return TagKey Tag key
+                     * 
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key
-                     * @param TagKey Tag key
+                     * @param _tagKey Tag key
+                     * 
                      */
                     void SetTagKey(const std::string& _tagKey);
 
                     /**
                      * 判断参数 TagKey 是否已赋值
                      * @return TagKey 是否已赋值
+                     * 
                      */
                     bool TagKeyHasBeenSet() const;
 
                     /**
                      * 获取Tag value
                      * @return TagValue Tag value
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value
-                     * @param TagValue Tag value
+                     * @param _tagValue Tag value
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 
                     /**
                      * 获取Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
                      * @return ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * 
                      */
                     std::string GetResourceRegion() const;
 
                     /**
                      * 设置Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
-                     * @param ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * @param _resourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * 
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
 
                     /**
                      * 判断参数 ResourceRegion 是否已赋值
                      * @return ResourceRegion 是否已赋值
+                     * 
                      */
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
                      * 获取Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
                      * @return ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+                     * 
                      */
                     std::string GetResourcePrefix() const;
 
                     /**
                      * 设置Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
-                     * @param ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+                     * @param _resourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+                     * 
                      */
                     void SetResourcePrefix(const std::string& _resourcePrefix);
 
                     /**
                      * 判断参数 ResourcePrefix 是否已赋值
                      * @return ResourcePrefix 是否已赋值
+                     * 
                      */
                     bool ResourcePrefixHasBeenSet() const;
 

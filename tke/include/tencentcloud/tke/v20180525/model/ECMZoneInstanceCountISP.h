@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance AZ
                      * @return Zone Instance AZ
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Instance AZ
-                     * @param Zone Instance AZ
+                     * @param _zone Instance AZ
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Number of instances to be created in the current AZ
                      * @return InstanceCount Number of instances to be created in the current AZ
+                     * 
                      */
                     int64_t GetInstanceCount() const;
 
                     /**
                      * 设置Number of instances to be created in the current AZ
-                     * @param InstanceCount Number of instances to be created in the current AZ
+                     * @param _instanceCount Number of instances to be created in the current AZ
+                     * 
                      */
                     void SetInstanceCount(const int64_t& _instanceCount);
 
                     /**
                      * 判断参数 InstanceCount 是否已赋值
                      * @return InstanceCount 是否已赋值
+                     * 
                      */
                     bool InstanceCountHasBeenSet() const;
 
                     /**
                      * 获取ISP
                      * @return ISP ISP
+                     * 
                      */
                     std::string GetISP() const;
 
                     /**
                      * 设置ISP
-                     * @param ISP ISP
+                     * @param _iSP ISP
+                     * 
                      */
                     void SetISP(const std::string& _iSP);
 
                     /**
                      * 判断参数 ISP 是否已赋值
                      * @return ISP 是否已赋值
+                     * 
                      */
                     bool ISPHasBeenSet() const;
 

@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Task execution information.
                      * @return Info Task execution information.
+                     * 
                      */
                     std::string GetInfo() const;
 
                     /**
                      * 设置Task execution information.
-                     * @param Info Task execution information.
+                     * @param _info Task execution information.
+                     * 
                      */
                     void SetInfo(const std::string& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 
                     /**
                      * 获取Task execution result. Valid values: INITIAL: initializing, RUNNING: running, SUCCESS: succeeded, FAILED: failed, KILLED: terminated, REMOVED: deleted, PAUSED: paused.
                      * @return Status Task execution result. Valid values: INITIAL: initializing, RUNNING: running, SUCCESS: succeeded, FAILED: failed, KILLED: terminated, REMOVED: deleted, PAUSED: paused.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task execution result. Valid values: INITIAL: initializing, RUNNING: running, SUCCESS: succeeded, FAILED: failed, KILLED: terminated, REMOVED: deleted, PAUSED: paused.
-                     * @param Status Task execution result. Valid values: INITIAL: initializing, RUNNING: running, SUCCESS: succeeded, FAILED: failed, KILLED: terminated, REMOVED: deleted, PAUSED: paused.
+                     * @param _status Task execution result. Valid values: INITIAL: initializing, RUNNING: running, SUCCESS: succeeded, FAILED: failed, KILLED: terminated, REMOVED: deleted, PAUSED: paused.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Task execution progress. Value range: [0,100].
                      * @return Progress Task execution progress. Value range: [0,100].
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Task execution progress. Value range: [0,100].
-                     * @param Progress Task execution progress. Value range: [0,100].
+                     * @param _progress Task execution progress. Value range: [0,100].
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Task start time.
                      * @return StartTime Task start time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Task start time.
-                     * @param StartTime Task start time.
+                     * @param _startTime Task start time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Task end time.
                      * @return EndTime Task end time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Task end time.
-                     * @param EndTime Task end time.
+                     * @param _endTime Task end time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -142,20 +157,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Detail Rollback task details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RollbackInstancesInfo> GetDetail() const;
 
                     /**
                      * 设置Rollback task details.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Detail Rollback task details.
+                     * @param _detail Rollback task details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetail(const std::vector<RollbackInstancesInfo>& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 

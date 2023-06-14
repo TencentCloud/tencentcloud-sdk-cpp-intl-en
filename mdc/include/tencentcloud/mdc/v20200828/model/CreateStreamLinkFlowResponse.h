@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Information of the created flow
                      * @return Info Information of the created flow
+                     * 
                      */
                     DescribeFlow GetInfo() const;
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

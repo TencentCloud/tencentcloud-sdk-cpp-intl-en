@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取List of intelligently generated video categories.
                      * @return ClassificationSet List of intelligently generated video categories.
+                     * 
                      */
                     std::vector<MediaAiAnalysisClassificationItem> GetClassificationSet() const;
 
                     /**
                      * 设置List of intelligently generated video categories.
-                     * @param ClassificationSet List of intelligently generated video categories.
+                     * @param _classificationSet List of intelligently generated video categories.
+                     * 
                      */
                     void SetClassificationSet(const std::vector<MediaAiAnalysisClassificationItem>& _classificationSet);
 
                     /**
                      * 判断参数 ClassificationSet 是否已赋值
                      * @return ClassificationSet 是否已赋值
+                     * 
                      */
                     bool ClassificationSetHasBeenSet() const;
 

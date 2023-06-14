@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return LogSetId CLS logset ID
 <li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
 <li>To delete the log set, set this parameter to `null`.</li>
+                     * 
                      */
                     std::string GetLogSetId() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置CLS logset ID
 <li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
 <li>To delete the log set, set this parameter to `null`.</li>
-                     * @param LogSetId CLS logset ID
+                     * @param _logSetId CLS logset ID
 <li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
 <li>To delete the log set, set this parameter to `null`.</li>
+                     * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
 
                     /**
                      * 判断参数 LogSetId 是否已赋值
                      * @return LogSetId 是否已赋值
+                     * 
                      */
                     bool LogSetIdHasBeenSet() const;
 
@@ -93,6 +99,7 @@ namespace TencentCloud
                      * @return LogTopicId CLS log topic ID
 <li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
 <li>To delete the log set, set this parameter to `null`.</li>
+                     * 
                      */
                     std::string GetLogTopicId() const;
 
@@ -100,15 +107,17 @@ namespace TencentCloud
                      * 设置CLS log topic ID
 <li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
 <li>To delete the log set, set this parameter to `null`.</li>
-                     * @param LogTopicId CLS log topic ID
+                     * @param _logTopicId CLS log topic ID
 <li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
 <li>To delete the log set, set this parameter to `null`.</li>
+                     * 
                      */
                     void SetLogTopicId(const std::string& _logTopicId);
 
                     /**
                      * 判断参数 LogTopicId 是否已赋值
                      * @return LogTopicId 是否已赋值
+                     * 
                      */
                     bool LogTopicIdHasBeenSet() const;
 
@@ -121,6 +130,7 @@ Default: `ACCESS`
 <li>`ACCESS`: access logs</li>
 <li>`HEALTH`: health check logs</li>
 Default: `ACCESS`
+                     * 
                      */
                     std::string GetLogType() const;
 
@@ -129,16 +139,18 @@ Default: `ACCESS`
 <li>`ACCESS`: access logs</li>
 <li>`HEALTH`: health check logs</li>
 Default: `ACCESS`
-                     * @param LogType Log type:
+                     * @param _logType Log type:
 <li>`ACCESS`: access logs</li>
 <li>`HEALTH`: health check logs</li>
 Default: `ACCESS`
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 

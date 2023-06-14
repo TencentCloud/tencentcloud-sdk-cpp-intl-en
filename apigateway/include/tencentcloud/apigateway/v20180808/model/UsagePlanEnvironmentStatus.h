@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of environments of the service bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of environments of the service bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of environments of the service bound to usage plan.
+                     * @param _totalCount Number of environments of the service bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EnvironmentList Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UsagePlanEnvironment> GetEnvironmentList() const;
 
                     /**
                      * 设置Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EnvironmentList Environment status of services bound to usage plan.
+                     * @param _environmentList Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentList(const std::vector<UsagePlanEnvironment>& _environmentList);
 
                     /**
                      * 判断参数 EnvironmentList 是否已赋值
                      * @return EnvironmentList 是否已赋值
+                     * 
                      */
                     bool EnvironmentListHasBeenSet() const;
 

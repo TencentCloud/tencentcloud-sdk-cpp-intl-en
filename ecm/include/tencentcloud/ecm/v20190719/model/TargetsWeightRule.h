@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerId CLB listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListenerId CLB listener ID
+                     * @param _listenerId CLB listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Targets List of real servers for which to modify the weights
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Target> GetTargets() const;
 
                     /**
                      * 设置List of real servers for which to modify the weights
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Targets List of real servers for which to modify the weights
+                     * @param _targets List of real servers for which to modify the weights
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargets(const std::vector<Target>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Weight New forwarding weight of the real server. Value range: 0–100.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetWeight() const;
 
                     /**
                      * 设置New forwarding weight of the real server. Value range: 0–100.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Weight New forwarding weight of the real server. Value range: 0–100.
+                     * @param _weight New forwarding weight of the real server. Value range: 0–100.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWeight(const int64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

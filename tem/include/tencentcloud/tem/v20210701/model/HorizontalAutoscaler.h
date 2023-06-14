@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取(Optional) Minimum number of instances
                      * @return MinReplicas (Optional) Minimum number of instances
+                     * 
                      */
                     int64_t GetMinReplicas() const;
 
                     /**
                      * 设置(Optional) Minimum number of instances
-                     * @param MinReplicas (Optional) Minimum number of instances
+                     * @param _minReplicas (Optional) Minimum number of instances
+                     * 
                      */
                     void SetMinReplicas(const int64_t& _minReplicas);
 
                     /**
                      * 判断参数 MinReplicas 是否已赋值
                      * @return MinReplicas 是否已赋值
+                     * 
                      */
                     bool MinReplicasHasBeenSet() const;
 
                     /**
                      * 获取(Optional) Maximum number of instances
                      * @return MaxReplicas (Optional) Maximum number of instances
+                     * 
                      */
                     int64_t GetMaxReplicas() const;
 
                     /**
                      * 设置(Optional) Maximum number of instances
-                     * @param MaxReplicas (Optional) Maximum number of instances
+                     * @param _maxReplicas (Optional) Maximum number of instances
+                     * 
                      */
                     void SetMaxReplicas(const int64_t& _maxReplicas);
 
                     /**
                      * 判断参数 MaxReplicas 是否已赋值
                      * @return MaxReplicas 是否已赋值
+                     * 
                      */
                     bool MaxReplicasHasBeenSet() const;
 
@@ -113,6 +119,7 @@ namespace TencentCloud
 `FS_IOPS_READ`: Disk reads (count/sec)
 `FS_SIZE_WRITE`: Disk write size (MiB/s)
 `FS_SIZE_READ`: Disk read size (MiB/s)
+                     * 
                      */
                     std::string GetMetrics() const;
 
@@ -132,7 +139,7 @@ namespace TencentCloud
 `FS_IOPS_READ`: Disk reads (count/sec)
 `FS_SIZE_WRITE`: Disk write size (MiB/s)
 `FS_SIZE_READ`: Disk read size (MiB/s)
-                     * @param Metrics Metric measurement
+                     * @param _metrics Metric measurement
 `CPU`: CPU utilization (%)
 `MEMORY`: Memory utilization (%)
 `CPU_CORE_USED`: CPU usage (core)
@@ -147,48 +154,56 @@ namespace TencentCloud
 `FS_IOPS_READ`: Disk reads (count/sec)
 `FS_SIZE_WRITE`: Disk write size (MiB/s)
 `FS_SIZE_READ`: Disk read size (MiB/s)
+                     * 
                      */
                     void SetMetrics(const std::string& _metrics);
 
                     /**
                      * 判断参数 Metrics 是否已赋值
                      * @return Metrics 是否已赋值
+                     * 
                      */
                     bool MetricsHasBeenSet() const;
 
                     /**
                      * 获取The value of threshold (integer)
                      * @return Threshold The value of threshold (integer)
+                     * 
                      */
                     int64_t GetThreshold() const;
 
                     /**
                      * 设置The value of threshold (integer)
-                     * @param Threshold The value of threshold (integer)
+                     * @param _threshold The value of threshold (integer)
+                     * 
                      */
                     void SetThreshold(const int64_t& _threshold);
 
                     /**
                      * 判断参数 Threshold 是否已赋值
                      * @return Threshold 是否已赋值
+                     * 
                      */
                     bool ThresholdHasBeenSet() const;
 
                     /**
                      * 获取Whether it is enabled
                      * @return Enabled Whether it is enabled
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether it is enabled
-                     * @param Enabled Whether it is enabled
+                     * @param _enabled Whether it is enabled
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
@@ -197,20 +212,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DoubleThreshold The value of threshold (demical)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetDoubleThreshold() const;
 
                     /**
                      * 设置The value of threshold (demical)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DoubleThreshold The value of threshold (demical)
+                     * @param _doubleThreshold The value of threshold (demical)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDoubleThreshold(const double& _doubleThreshold);
 
                     /**
                      * 判断参数 DoubleThreshold 是否已赋值
                      * @return DoubleThreshold 是否已赋值
+                     * 
                      */
                     bool DoubleThresholdHasBeenSet() const;
 

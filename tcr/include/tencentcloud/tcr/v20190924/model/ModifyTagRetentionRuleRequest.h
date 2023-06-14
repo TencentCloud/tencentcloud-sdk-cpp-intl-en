@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Primary instance ID
                      * @return RegistryId Primary instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Primary instance ID
-                     * @param RegistryId Primary instance ID
+                     * @param _registryId Primary instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the original namespace
                      * @return NamespaceId ID of the original namespace
+                     * 
                      */
                     int64_t GetNamespaceId() const;
 
                     /**
                      * 设置ID of the original namespace
-                     * @param NamespaceId ID of the original namespace
+                     * @param _namespaceId ID of the original namespace
+                     * 
                      */
                     void SetNamespaceId(const int64_t& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Retention policy
                      * @return RetentionRule Retention policy
+                     * 
                      */
                     RetentionRule GetRetentionRule() const;
 
                     /**
                      * 设置Retention policy
-                     * @param RetentionRule Retention policy
+                     * @param _retentionRule Retention policy
+                     * 
                      */
                     void SetRetentionRule(const RetentionRule& _retentionRule);
 
                     /**
                      * 判断参数 RetentionRule 是否已赋值
                      * @return RetentionRule 是否已赋值
+                     * 
                      */
                     bool RetentionRuleHasBeenSet() const;
 
                     /**
                      * 获取Original execution cycle
                      * @return CronSetting Original execution cycle
+                     * 
                      */
                     std::string GetCronSetting() const;
 
                     /**
                      * 设置Original execution cycle
-                     * @param CronSetting Original execution cycle
+                     * @param _cronSetting Original execution cycle
+                     * 
                      */
                     void SetCronSetting(const std::string& _cronSetting);
 
                     /**
                      * 判断参数 CronSetting 是否已赋值
                      * @return CronSetting 是否已赋值
+                     * 
                      */
                     bool CronSettingHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RetentionId Rule ID
+                     * 
                      */
                     int64_t GetRetentionId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RetentionId Rule ID
+                     * @param _retentionId Rule ID
+                     * 
                      */
                     void SetRetentionId(const int64_t& _retentionId);
 
                     /**
                      * 判断参数 RetentionId 是否已赋值
                      * @return RetentionId 是否已赋值
+                     * 
                      */
                     bool RetentionIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to disable the rule
                      * @return Disabled Whether to disable the rule
+                     * 
                      */
                     bool GetDisabled() const;
 
                     /**
                      * 设置Whether to disable the rule
-                     * @param Disabled Whether to disable the rule
+                     * @param _disabled Whether to disable the rule
+                     * 
                      */
                     void SetDisabled(const bool& _disabled);
 
                     /**
                      * 判断参数 Disabled 是否已赋值
                      * @return Disabled 是否已赋值
+                     * 
                      */
                     bool DisabledHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Security group information
                      * @return Groups Security group information
+                     * 
                      */
                     std::vector<SecurityGroup> GetGroups() const;
 
                     /**
                      * 判断参数 Groups 是否已赋值
                      * @return Groups 是否已赋值
+                     * 
                      */
                     bool GroupsHasBeenSet() const;
 

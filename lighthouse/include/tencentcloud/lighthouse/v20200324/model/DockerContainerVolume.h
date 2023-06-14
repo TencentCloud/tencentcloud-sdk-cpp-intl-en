@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Container path
                      * @return ContainerPath Container path
+                     * 
                      */
                     std::string GetContainerPath() const;
 
                     /**
                      * 设置Container path
-                     * @param ContainerPath Container path
+                     * @param _containerPath Container path
+                     * 
                      */
                     void SetContainerPath(const std::string& _containerPath);
 
                     /**
                      * 判断参数 ContainerPath 是否已赋值
                      * @return ContainerPath 是否已赋值
+                     * 
                      */
                     bool ContainerPathHasBeenSet() const;
 
                     /**
                      * 获取Host path
                      * @return HostPath Host path
+                     * 
                      */
                     std::string GetHostPath() const;
 
                     /**
                      * 设置Host path
-                     * @param HostPath Host path
+                     * @param _hostPath Host path
+                     * 
                      */
                     void SetHostPath(const std::string& _hostPath);
 
                     /**
                      * 判断参数 HostPath 是否已赋值
                      * @return HostPath 是否已赋值
+                     * 
                      */
                     bool HostPathHasBeenSet() const;
 

@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Database account name
                      * @return AccountName Database account name
+                     * 
                      */
                     std::string GetAccountName() const;
 
                     /**
                      * 设置Database account name
-                     * @param AccountName Database account name
+                     * @param _accountName Database account name
+                     * 
                      */
                     void SetAccountName(const std::string& _accountName);
 
                     /**
                      * 判断参数 AccountName 是否已赋值
                      * @return AccountName 是否已赋值
+                     * 
                      */
                     bool AccountNameHasBeenSet() const;
 
                     /**
                      * 获取Database account description
                      * @return Description Database account description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Database account description
-                     * @param Description Database account description
+                     * @param _description Database account description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Host
                      * @return Host Host
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Host
-                     * @param Host Host
+                     * @param _host Host
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取The max connections
                      * @return MaxUserConnections The max connections
+                     * 
                      */
                     int64_t GetMaxUserConnections() const;
 
                     /**
                      * 设置The max connections
-                     * @param MaxUserConnections The max connections
+                     * @param _maxUserConnections The max connections
+                     * 
                      */
                     void SetMaxUserConnections(const int64_t& _maxUserConnections);
 
                     /**
                      * 判断参数 MaxUserConnections 是否已赋值
                      * @return MaxUserConnections 是否已赋值
+                     * 
                      */
                     bool MaxUserConnectionsHasBeenSet() const;
 

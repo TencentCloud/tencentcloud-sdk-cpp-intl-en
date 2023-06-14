@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of mssql-njj2mtpl
                      * @return InstanceId Instance ID in the format of mssql-njj2mtpl
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-njj2mtpl
-                     * @param InstanceId Instance ID in the format of mssql-njj2mtpl
+                     * @param _instanceId Instance ID in the format of mssql-njj2mtpl
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
                      * @return Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
-                     * @param Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * @param _memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
                      * @return Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * 
                      */
                     int64_t GetStorage() const;
 
                     /**
                      * 设置Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
-                     * @param Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * @param _storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * 
                      */
                     void SetStorage(const int64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
                      * @return Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     * 
                      */
                     int64_t GetCpu() const;
 
                     /**
                      * 设置The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
-                     * @param Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     * @param _cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+                     * 
                      */
                     void SetCpu(const int64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Route table name.
                      * @return RouteTableName Route table name.
+                     * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
                      * 设置Route table name.
-                     * @param RouteTableName Route table name.
+                     * @param _routeTableName Route table name.
+                     * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
 
                     /**
                      * 判断参数 RouteTableName 是否已赋值
                      * @return RouteTableName 是否已赋值
+                     * 
                      */
                     bool RouteTableNameHasBeenSet() const;
 
                     /**
                      * 获取Next hop address.
                      * @return GatewayIp Next hop address.
+                     * 
                      */
                     std::string GetGatewayIp() const;
 
                     /**
                      * 设置Next hop address.
-                     * @param GatewayIp Next hop address.
+                     * @param _gatewayIp Next hop address.
+                     * 
                      */
                     void SetGatewayIp(const std::string& _gatewayIp);
 
                     /**
                      * 判断参数 GatewayIp 是否已赋值
                      * @return GatewayIp 是否已赋值
+                     * 
                      */
                     bool GatewayIpHasBeenSet() const;
 
                     /**
                      * 获取Destination CIDR.
                      * @return DestinationCidrBlock Destination CIDR.
+                     * 
                      */
                     std::string GetDestinationCidrBlock() const;
 
                     /**
                      * 设置Destination CIDR.
-                     * @param DestinationCidrBlock Destination CIDR.
+                     * @param _destinationCidrBlock Destination CIDR.
+                     * 
                      */
                     void SetDestinationCidrBlock(const std::string& _destinationCidrBlock);
 
                     /**
                      * 判断参数 DestinationCidrBlock 是否已赋值
                      * @return DestinationCidrBlock 是否已赋值
+                     * 
                      */
                     bool DestinationCidrBlockHasBeenSet() const;
 

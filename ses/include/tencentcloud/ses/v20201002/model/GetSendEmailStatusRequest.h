@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Date sent. This parameter is required. You can only query the sending status for a single date at a time.
                      * @return RequestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+                     * 
                      */
                     std::string GetRequestDate() const;
 
                     /**
                      * 设置Date sent. This parameter is required. You can only query the sending status for a single date at a time.
-                     * @param RequestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+                     * @param _requestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+                     * 
                      */
                     void SetRequestDate(const std::string& _requestDate);
 
                     /**
                      * 判断参数 RequestDate 是否已赋值
                      * @return RequestDate 是否已赋值
+                     * 
                      */
                     bool RequestDateHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of pulled entries. Maximum value: `100`.
                      * @return Limit Maximum number of pulled entries. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of pulled entries. Maximum value: `100`.
-                     * @param Limit Maximum number of pulled entries. Maximum value: `100`.
+                     * @param _limit Maximum number of pulled entries. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The `MessageId` field returned by the `SendMail` API.
                      * @return MessageId The `MessageId` field returned by the `SendMail` API.
+                     * 
                      */
                     std::string GetMessageId() const;
 
                     /**
                      * 设置The `MessageId` field returned by the `SendMail` API.
-                     * @param MessageId The `MessageId` field returned by the `SendMail` API.
+                     * @param _messageId The `MessageId` field returned by the `SendMail` API.
+                     * 
                      */
                     void SetMessageId(const std::string& _messageId);
 
                     /**
                      * 判断参数 MessageId 是否已赋值
                      * @return MessageId 是否已赋值
+                     * 
                      */
                     bool MessageIdHasBeenSet() const;
 
                     /**
                      * 获取Recipient email address.
                      * @return ToEmailAddress Recipient email address.
+                     * 
                      */
                     std::string GetToEmailAddress() const;
 
                     /**
                      * 设置Recipient email address.
-                     * @param ToEmailAddress Recipient email address.
+                     * @param _toEmailAddress Recipient email address.
+                     * 
                      */
                     void SetToEmailAddress(const std::string& _toEmailAddress);
 
                     /**
                      * 判断参数 ToEmailAddress 是否已赋值
                      * @return ToEmailAddress 是否已赋值
+                     * 
                      */
                     bool ToEmailAddressHasBeenSet() const;
 

@@ -49,234 +49,273 @@ namespace TencentCloud
                     /**
                      * 获取Node name
                      * @return Name Node name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node name
-                     * @param Name Node name
+                     * @param _name Node name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取ID of the runtime node of the instance
                      * @return RunId ID of the runtime node of the instance
+                     * 
                      */
                     std::string GetRunId() const;
 
                     /**
                      * 设置ID of the runtime node of the instance
-                     * @param RunId ID of the runtime node of the instance
+                     * @param _runId ID of the runtime node of the instance
+                     * 
                      */
                     void SetRunId(const std::string& _runId);
 
                     /**
                      * 判断参数 RunId 是否已赋值
                      * @return RunId 是否已赋值
+                     * 
                      */
                     bool RunIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster role. 0: master; 1: replica
                      * @return Role Cluster role. 0: master; 1: replica
+                     * 
                      */
                     int64_t GetRole() const;
 
                     /**
                      * 设置Cluster role. 0: master; 1: replica
-                     * @param Role Cluster role. 0: master; 1: replica
+                     * @param _role Cluster role. 0: master; 1: replica
+                     * 
                      */
                     void SetRole(const int64_t& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 
                     /**
                      * 获取Node status. 0: readwrite; 1: read; 2: backup
                      * @return Status Node status. 0: readwrite; 1: read; 2: backup
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Node status. 0: readwrite; 1: read; 2: backup
-                     * @param Status Node status. 0: readwrite; 1: read; 2: backup
+                     * @param _status Node status. 0: readwrite; 1: read; 2: backup
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Service status. 0: down; 1: on
                      * @return Connected Service status. 0: down; 1: on
+                     * 
                      */
                     int64_t GetConnected() const;
 
                     /**
                      * 设置Service status. 0: down; 1: on
-                     * @param Connected Service status. 0: down; 1: on
+                     * @param _connected Service status. 0: down; 1: on
+                     * 
                      */
                     void SetConnected(const int64_t& _connected);
 
                     /**
                      * 判断参数 Connected 是否已赋值
                      * @return Connected 是否已赋值
+                     * 
                      */
                     bool ConnectedHasBeenSet() const;
 
                     /**
                      * 获取Node creation time
                      * @return CreateTime Node creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Node creation time
-                     * @param CreateTime Node creation time
+                     * @param _createTime Node creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Node elimination time
                      * @return DownTime Node elimination time
+                     * 
                      */
                     std::string GetDownTime() const;
 
                     /**
                      * 设置Node elimination time
-                     * @param DownTime Node elimination time
+                     * @param _downTime Node elimination time
+                     * 
                      */
                     void SetDownTime(const std::string& _downTime);
 
                     /**
                      * 判断参数 DownTime 是否已赋值
                      * @return DownTime 是否已赋值
+                     * 
                      */
                     bool DownTimeHasBeenSet() const;
 
                     /**
                      * 获取Distribution of node slots
                      * @return Slots Distribution of node slots
+                     * 
                      */
                     std::string GetSlots() const;
 
                     /**
                      * 设置Distribution of node slots
-                     * @param Slots Distribution of node slots
+                     * @param _slots Distribution of node slots
+                     * 
                      */
                     void SetSlots(const std::string& _slots);
 
                     /**
                      * 判断参数 Slots 是否已赋值
                      * @return Slots 是否已赋值
+                     * 
                      */
                     bool SlotsHasBeenSet() const;
 
                     /**
                      * 获取Distribution of node keys
                      * @return Keys Distribution of node keys
+                     * 
                      */
                     int64_t GetKeys() const;
 
                     /**
                      * 设置Distribution of node keys
-                     * @param Keys Distribution of node keys
+                     * @param _keys Distribution of node keys
+                     * 
                      */
                     void SetKeys(const int64_t& _keys);
 
                     /**
                      * 判断参数 Keys 是否已赋值
                      * @return Keys 是否已赋值
+                     * 
                      */
                     bool KeysHasBeenSet() const;
 
                     /**
                      * 获取Node QPS
                      * @return Qps Node QPS
+                     * 
                      */
                     int64_t GetQps() const;
 
                     /**
                      * 设置Node QPS
-                     * @param Qps Node QPS
+                     * @param _qps Node QPS
+                     * 
                      */
                     void SetQps(const int64_t& _qps);
 
                     /**
                      * 判断参数 Qps 是否已赋值
                      * @return Qps 是否已赋值
+                     * 
                      */
                     bool QpsHasBeenSet() const;
 
                     /**
                      * 获取Node QPS slope
                      * @return QpsSlope Node QPS slope
+                     * 
                      */
                     double GetQpsSlope() const;
 
                     /**
                      * 设置Node QPS slope
-                     * @param QpsSlope Node QPS slope
+                     * @param _qpsSlope Node QPS slope
+                     * 
                      */
                     void SetQpsSlope(const double& _qpsSlope);
 
                     /**
                      * 判断参数 QpsSlope 是否已赋值
                      * @return QpsSlope 是否已赋值
+                     * 
                      */
                     bool QpsSlopeHasBeenSet() const;
 
                     /**
                      * 获取Node storage
                      * @return Storage Node storage
+                     * 
                      */
                     int64_t GetStorage() const;
 
                     /**
                      * 设置Node storage
-                     * @param Storage Node storage
+                     * @param _storage Node storage
+                     * 
                      */
                     void SetStorage(const int64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Node storage slope
                      * @return StorageSlope Node storage slope
+                     * 
                      */
                     double GetStorageSlope() const;
 
                     /**
                      * 设置Node storage slope
-                     * @param StorageSlope Node storage slope
+                     * @param _storageSlope Node storage slope
+                     * 
                      */
                     void SetStorageSlope(const double& _storageSlope);
 
                     /**
                      * 判断参数 StorageSlope 是否已赋值
                      * @return StorageSlope 是否已赋值
+                     * 
                      */
                     bool StorageSlopeHasBeenSet() const;
 

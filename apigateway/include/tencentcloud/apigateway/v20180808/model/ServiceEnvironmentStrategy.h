@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Environment name.
                      * @return EnvironmentName Environment name.
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment name.
-                     * @param EnvironmentName Environment name.
+                     * @param _environmentName Environment name.
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取Access service environment URL.
                      * @return Url Access service environment URL.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Access service environment URL.
-                     * @param Url Access service environment URL.
+                     * @param _url Access service environment URL.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Release status.
                      * @return Status Release status.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Release status.
-                     * @param Status Release status.
+                     * @param _status Release status.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VersionName Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VersionName Published version number.
+                     * @param _versionName Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 
                     /**
                      * 获取Throttling value.
                      * @return Strategy Throttling value.
+                     * 
                      */
                     int64_t GetStrategy() const;
 
                     /**
                      * 设置Throttling value.
-                     * @param Strategy Throttling value.
+                     * @param _strategy Throttling value.
+                     * 
                      */
                     void SetStrategy(const int64_t& _strategy);
 
                     /**
                      * 判断参数 Strategy 是否已赋值
                      * @return Strategy 是否已赋值
+                     * 
                      */
                     bool StrategyHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxStrategy Maximum quota value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxStrategy() const;
 
                     /**
                      * 设置Maximum quota value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxStrategy Maximum quota value
+                     * @param _maxStrategy Maximum quota value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxStrategy(const int64_t& _maxStrategy);
 
                     /**
                      * 判断参数 MaxStrategy 是否已赋值
                      * @return MaxStrategy 是否已赋值
+                     * 
                      */
                     bool MaxStrategyHasBeenSet() const;
 

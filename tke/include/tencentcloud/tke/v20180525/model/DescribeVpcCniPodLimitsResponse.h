@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalCount The number of the models
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return PodLimitsInstanceSet The model information and the maximum supported number of Pods in the VPC-CNI mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<PodLimitsInstance> GetPodLimitsInstanceSet() const;
 
                     /**
                      * 判断参数 PodLimitsInstanceSet 是否已赋值
                      * @return PodLimitsInstanceSet 是否已赋值
+                     * 
                      */
                     bool PodLimitsInstanceSetHasBeenSet() const;
 

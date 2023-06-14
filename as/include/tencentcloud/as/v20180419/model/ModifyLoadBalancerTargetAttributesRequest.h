@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Scaling group ID
                      * @return AutoScalingGroupId Scaling group ID
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Scaling group ID
-                     * @param AutoScalingGroupId Scaling group ID
+                     * @param _autoScalingGroupId Scaling group ID
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取List of application CLBs to modify. Up to 100 CLBs allowed.
                      * @return ForwardLoadBalancers List of application CLBs to modify. Up to 100 CLBs allowed.
+                     * 
                      */
                     std::vector<ForwardLoadBalancer> GetForwardLoadBalancers() const;
 
                     /**
                      * 设置List of application CLBs to modify. Up to 100 CLBs allowed.
-                     * @param ForwardLoadBalancers List of application CLBs to modify. Up to 100 CLBs allowed.
+                     * @param _forwardLoadBalancers List of application CLBs to modify. Up to 100 CLBs allowed.
+                     * 
                      */
                     void SetForwardLoadBalancers(const std::vector<ForwardLoadBalancer>& _forwardLoadBalancers);
 
                     /**
                      * 判断参数 ForwardLoadBalancers 是否已赋值
                      * @return ForwardLoadBalancers 是否已赋值
+                     * 
                      */
                     bool ForwardLoadBalancersHasBeenSet() const;
 

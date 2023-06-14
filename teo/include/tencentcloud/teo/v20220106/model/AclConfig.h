@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Switch
                      * @return Switch Switch
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch
-                     * @param Switch Switch
+                     * @param _switch Switch
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取ACL user rule
                      * @return UserRules ACL user rule
+                     * 
                      */
                     std::vector<ACLUserRule> GetUserRules() const;
 
                     /**
                      * 设置ACL user rule
-                     * @param UserRules ACL user rule
+                     * @param _userRules ACL user rule
+                     * 
                      */
                     void SetUserRules(const std::vector<ACLUserRule>& _userRules);
 
                     /**
                      * 判断参数 UserRules 是否已赋值
                      * @return UserRules 是否已赋值
+                     * 
                      */
                     bool UserRulesHasBeenSet() const;
 

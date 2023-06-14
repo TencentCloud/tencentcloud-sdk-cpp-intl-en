@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Email configurations
                      * @return ProfileInfo Email configurations
+                     * 
                      */
                     ProfileInfo GetProfileInfo() const;
 
                     /**
                      * 设置Email configurations
-                     * @param ProfileInfo Email configurations
+                     * @param _profileInfo Email configurations
+                     * 
                      */
                     void SetProfileInfo(const ProfileInfo& _profileInfo);
 
                     /**
                      * 判断参数 ProfileInfo 是否已赋值
                      * @return ProfileInfo 是否已赋值
+                     * 
                      */
                     bool ProfileInfoHasBeenSet() const;
 
                     /**
                      * 获取Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
                      * @return ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
+                     * 
                      */
                     std::string GetProfileLevel() const;
 
                     /**
                      * 设置Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
-                     * @param ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
+                     * @param _profileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
+                     * 
                      */
                     void SetProfileLevel(const std::string& _profileLevel);
 
                     /**
                      * 判断参数 ProfileLevel 是否已赋值
                      * @return ProfileLevel 是否已赋值
+                     * 
                      */
                     bool ProfileLevelHasBeenSet() const;
 
                     /**
                      * 获取Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
                      * @return ProfileName Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+                     * 
                      */
                     std::string GetProfileName() const;
 
                     /**
                      * 设置Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
-                     * @param ProfileName Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+                     * @param _profileName Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+                     * 
                      */
                     void SetProfileName(const std::string& _profileName);
 
                     /**
                      * 判断参数 ProfileName 是否已赋值
                      * @return ProfileName 是否已赋值
+                     * 
                      */
                     bool ProfileNameHasBeenSet() const;
 
                     /**
                      * 获取Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
                      * @return ProfileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
+                     * 
                      */
                     std::string GetProfileType() const;
 
                     /**
                      * 设置Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
-                     * @param ProfileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
+                     * @param _profileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
+                     * 
                      */
                     void SetProfileType(const std::string& _profileType);
 
                     /**
                      * 判断参数 ProfileType 是否已赋值
                      * @return ProfileType 是否已赋值
+                     * 
                      */
                     bool ProfileTypeHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
                      * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
-                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+                     * @param _product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
                      * @return BindInstanceIds Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
+                     * 
                      */
                     std::vector<std::string> GetBindInstanceIds() const;
 
                     /**
                      * 设置Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
-                     * @param BindInstanceIds Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
+                     * @param _bindInstanceIds Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
+                     * 
                      */
                     void SetBindInstanceIds(const std::vector<std::string>& _bindInstanceIds);
 
                     /**
                      * 判断参数 BindInstanceIds 是否已赋值
                      * @return BindInstanceIds 是否已赋值
+                     * 
                      */
                     bool BindInstanceIdsHasBeenSet() const;
 

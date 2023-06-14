@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取ID of the task to scan local images again for vulnerabilities
                      * @return LocalTaskID ID of the task to scan local images again for vulnerabilities
+                     * 
                      */
                     int64_t GetLocalTaskID() const;
 
                     /**
                      * 判断参数 LocalTaskID 是否已赋值
                      * @return LocalTaskID 是否已赋值
+                     * 
                      */
                     bool LocalTaskIDHasBeenSet() const;
 
                     /**
                      * 获取ID of the task to scan repository images again for vulnerabilities
                      * @return RegistryTaskID ID of the task to scan repository images again for vulnerabilities
+                     * 
                      */
                     int64_t GetRegistryTaskID() const;
 
                     /**
                      * 判断参数 RegistryTaskID 是否已赋值
                      * @return RegistryTaskID 是否已赋值
+                     * 
                      */
                     bool RegistryTaskIDHasBeenSet() const;
 

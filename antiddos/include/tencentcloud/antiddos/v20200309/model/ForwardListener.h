@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The starting port for listener forwarding. Value range: 1 to 65535.
                      * @return FrontendPort The starting port for listener forwarding. Value range: 1 to 65535.
+                     * 
                      */
                     int64_t GetFrontendPort() const;
 
                     /**
                      * 设置The starting port for listener forwarding. Value range: 1 to 65535.
-                     * @param FrontendPort The starting port for listener forwarding. Value range: 1 to 65535.
+                     * @param _frontendPort The starting port for listener forwarding. Value range: 1 to 65535.
+                     * 
                      */
                     void SetFrontendPort(const int64_t& _frontendPort);
 
                     /**
                      * 判断参数 FrontendPort 是否已赋值
                      * @return FrontendPort 是否已赋值
+                     * 
                      */
                     bool FrontendPortHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 `TCP`
 `UDP`
 ]
+                     * 
                      */
                     std::string GetForwardProtocol() const;
 
@@ -81,34 +85,39 @@ namespace TencentCloud
 `TCP`
 `UDP`
 ]
-                     * @param ForwardProtocol Forwarding protocol. Valid values:
+                     * @param _forwardProtocol Forwarding protocol. Valid values:
 `TCP`
 `UDP`
 ]
+                     * 
                      */
                     void SetForwardProtocol(const std::string& _forwardProtocol);
 
                     /**
                      * 判断参数 ForwardProtocol 是否已赋值
                      * @return ForwardProtocol 是否已赋值
+                     * 
                      */
                     bool ForwardProtocolHasBeenSet() const;
 
                     /**
                      * 获取The ending port for listener forwarding. Value range: 1 to 65535.
                      * @return FrontendPortEnd The ending port for listener forwarding. Value range: 1 to 65535.
+                     * 
                      */
                     int64_t GetFrontendPortEnd() const;
 
                     /**
                      * 设置The ending port for listener forwarding. Value range: 1 to 65535.
-                     * @param FrontendPortEnd The ending port for listener forwarding. Value range: 1 to 65535.
+                     * @param _frontendPortEnd The ending port for listener forwarding. Value range: 1 to 65535.
+                     * 
                      */
                     void SetFrontendPortEnd(const int64_t& _frontendPortEnd);
 
                     /**
                      * 判断参数 FrontendPortEnd 是否已赋值
                      * @return FrontendPortEnd 是否已赋值
+                     * 
                      */
                     bool FrontendPortEndHasBeenSet() const;
 

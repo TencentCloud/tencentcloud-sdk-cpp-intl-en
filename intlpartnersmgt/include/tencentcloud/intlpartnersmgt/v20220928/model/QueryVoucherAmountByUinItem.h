@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Customer UIN
                      * @return ClientUin Customer UIN
+                     * 
                      */
                     int64_t GetClientUin() const;
 
                     /**
                      * 设置Customer UIN
-                     * @param ClientUin Customer UIN
+                     * @param _clientUin Customer UIN
+                     * 
                      */
                     void SetClientUin(const int64_t& _clientUin);
 
                     /**
                      * 判断参数 ClientUin 是否已赋值
                      * @return ClientUin 是否已赋值
+                     * 
                      */
                     bool ClientUinHasBeenSet() const;
 
                     /**
                      * 获取Voucher quota
                      * @return TotalAmount Voucher quota
+                     * 
                      */
                     double GetTotalAmount() const;
 
                     /**
                      * 设置Voucher quota
-                     * @param TotalAmount Voucher quota
+                     * @param _totalAmount Voucher quota
+                     * 
                      */
                     void SetTotalAmount(const double& _totalAmount);
 
                     /**
                      * 判断参数 TotalAmount 是否已赋值
                      * @return TotalAmount 是否已赋值
+                     * 
                      */
                     bool TotalAmountHasBeenSet() const;
 
                     /**
                      * 获取Voucher amount
                      * @return RemainAmount Voucher amount
+                     * 
                      */
                     double GetRemainAmount() const;
 
                     /**
                      * 设置Voucher amount
-                     * @param RemainAmount Voucher amount
+                     * @param _remainAmount Voucher amount
+                     * 
                      */
                     void SetRemainAmount(const double& _remainAmount);
 
                     /**
                      * 判断参数 RemainAmount 是否已赋值
                      * @return RemainAmount 是否已赋值
+                     * 
                      */
                     bool RemainAmountHasBeenSet() const;
 

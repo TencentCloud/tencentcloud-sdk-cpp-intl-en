@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ transcode: Document transcoding.
                      * @return TaskType Task type to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
+                     * 
                      */
                     std::string GetTaskType() const;
 
@@ -74,15 +78,17 @@ transcode: Document transcoding.
                      * 设置Task type to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
-                     * @param TaskType Task type to be queried.
+                     * @param _taskType Task type to be queried.
 recording: Real-time recording.
 transcode: Document transcoding.
+                     * 
                      */
                     void SetTaskType(const std::string& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 

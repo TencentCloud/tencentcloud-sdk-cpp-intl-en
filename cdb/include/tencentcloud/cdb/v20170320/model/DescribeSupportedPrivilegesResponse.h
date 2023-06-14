@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Global permissions supported by the instance
                      * @return GlobalSupportedPrivileges Global permissions supported by the instance
+                     * 
                      */
                     std::vector<std::string> GetGlobalSupportedPrivileges() const;
 
                     /**
                      * 判断参数 GlobalSupportedPrivileges 是否已赋值
                      * @return GlobalSupportedPrivileges 是否已赋值
+                     * 
                      */
                     bool GlobalSupportedPrivilegesHasBeenSet() const;
 
                     /**
                      * 获取Database permissions supported by the instance.
                      * @return DatabaseSupportedPrivileges Database permissions supported by the instance.
+                     * 
                      */
                     std::vector<std::string> GetDatabaseSupportedPrivileges() const;
 
                     /**
                      * 判断参数 DatabaseSupportedPrivileges 是否已赋值
                      * @return DatabaseSupportedPrivileges 是否已赋值
+                     * 
                      */
                     bool DatabaseSupportedPrivilegesHasBeenSet() const;
 
                     /**
                      * 获取Table permissions supported by the instance.
                      * @return TableSupportedPrivileges Table permissions supported by the instance.
+                     * 
                      */
                     std::vector<std::string> GetTableSupportedPrivileges() const;
 
                     /**
                      * 判断参数 TableSupportedPrivileges 是否已赋值
                      * @return TableSupportedPrivileges 是否已赋值
+                     * 
                      */
                     bool TableSupportedPrivilegesHasBeenSet() const;
 
                     /**
                      * 获取Column permissions supported by the instance.
                      * @return ColumnSupportedPrivileges Column permissions supported by the instance.
+                     * 
                      */
                     std::vector<std::string> GetColumnSupportedPrivileges() const;
 
                     /**
                      * 判断参数 ColumnSupportedPrivileges 是否已赋值
                      * @return ColumnSupportedPrivileges 是否已赋值
+                     * 
                      */
                     bool ColumnSupportedPrivilegesHasBeenSet() const;
 

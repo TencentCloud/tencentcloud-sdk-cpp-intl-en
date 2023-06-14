@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HealthSwitch Whether to enable health check. Valid values: 1: enable; 0: disable
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHealthSwitch() const;
 
                     /**
                      * 设置Whether to enable health check. Valid values: 1: enable; 0: disable
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HealthSwitch Whether to enable health check. Valid values: 1: enable; 0: disable
+                     * @param _healthSwitch Whether to enable health check. Valid values: 1: enable; 0: disable
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHealthSwitch(const int64_t& _healthSwitch);
 
                     /**
                      * 判断参数 HealthSwitch 是否已赋值
                      * @return HealthSwitch 是否已赋值
+                     * 
                      */
                     bool HealthSwitchHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TimeOut Health check response timeout period in seconds. Value range: 2–60. Default value: 2. The value of this parameter should be smaller than the check interval.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimeOut() const;
 
                     /**
                      * 设置Health check response timeout period in seconds. Value range: 2–60. Default value: 2. The value of this parameter should be smaller than the check interval.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TimeOut Health check response timeout period in seconds. Value range: 2–60. Default value: 2. The value of this parameter should be smaller than the check interval.
+                     * @param _timeOut Health check response timeout period in seconds. Value range: 2–60. Default value: 2. The value of this parameter should be smaller than the check interval.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimeOut(const int64_t& _timeOut);
 
                     /**
                      * 判断参数 TimeOut 是否已赋值
                      * @return TimeOut 是否已赋值
+                     * 
                      */
                     bool TimeOutHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IntervalTime Health check interval in seconds. Value range: 5–300. Default value: 5.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIntervalTime() const;
 
                     /**
                      * 设置Health check interval in seconds. Value range: 5–300. Default value: 5.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IntervalTime Health check interval in seconds. Value range: 5–300. Default value: 5.
+                     * @param _intervalTime Health check interval in seconds. Value range: 5–300. Default value: 5.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIntervalTime(const int64_t& _intervalTime);
 
                     /**
                      * 判断参数 IntervalTime 是否已赋值
                      * @return IntervalTime 是否已赋值
+                     * 
                      */
                     bool IntervalTimeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HealthNum Health threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found healthy three consecutive times, it will be considered normal.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHealthNum() const;
 
                     /**
                      * 设置Health threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found healthy three consecutive times, it will be considered normal.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param HealthNum Health threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found healthy three consecutive times, it will be considered normal.
+                     * @param _healthNum Health threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found healthy three consecutive times, it will be considered normal.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHealthNum(const int64_t& _healthNum);
 
                     /**
                      * 判断参数 HealthNum 是否已赋值
                      * @return HealthNum 是否已赋值
+                     * 
                      */
                     bool HealthNumHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UnHealthyNum Unhealthy threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it will be considered exceptional.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetUnHealthyNum() const;
 
                     /**
                      * 设置Unhealthy threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it will be considered exceptional.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UnHealthyNum Unhealthy threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it will be considered exceptional.
+                     * @param _unHealthyNum Unhealthy threshold. Value range: 2–10. Default value: 3, indicating that if a forward is found unhealthy three consecutive times, it will be considered exceptional.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnHealthyNum(const int64_t& _unHealthyNum);
 
                     /**
                      * 判断参数 UnHealthyNum 是否已赋值
                      * @return UnHealthyNum 是否已赋值
+                     * 
                      */
                     bool UnHealthyNumHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CheckPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, we recommend you leave it empty.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCheckPort() const;
 
                     /**
                      * 设置Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, we recommend you leave it empty.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CheckPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, we recommend you leave it empty.
+                     * @param _checkPort Health check port (a custom check parameter), which is the port of the real server by default. Unless you want to specify a port, we recommend you leave it empty.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckPort(const int64_t& _checkPort);
 
                     /**
                      * 判断参数 CheckPort 是否已赋值
                      * @return CheckPort 是否已赋值
+                     * 
                      */
                     bool CheckPortHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ContextType Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the input format of the health check. Valid values: HEX, TEXT. If the value is `HEX`, the characters of `SendContext` and `RecvContext` can only be selected from `0123456789ABCDEF`, and the length must be an even number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContextType() const;
 
                     /**
                      * 设置Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the input format of the health check. Valid values: HEX, TEXT. If the value is `HEX`, the characters of `SendContext` and `RecvContext` can only be selected from `0123456789ABCDEF`, and the length must be an even number.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ContextType Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the input format of the health check. Valid values: HEX, TEXT. If the value is `HEX`, the characters of `SendContext` and `RecvContext` can only be selected from `0123456789ABCDEF`, and the length must be an even number.
+                     * @param _contextType Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the input format of the health check. Valid values: HEX, TEXT. If the value is `HEX`, the characters of `SendContext` and `RecvContext` can only be selected from `0123456789ABCDEF`, and the length must be an even number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContextType(const std::string& _contextType);
 
                     /**
                      * 判断参数 ContextType 是否已赋值
                      * @return ContextType 是否已赋值
+                     * 
                      */
                     bool ContextTypeHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SendContext Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the content of the request sent by the health check. It can contain up to 500 visible ASCII characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSendContext() const;
 
                     /**
                      * 设置Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the content of the request sent by the health check. It can contain up to 500 visible ASCII characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SendContext Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the content of the request sent by the health check. It can contain up to 500 visible ASCII characters.
+                     * @param _sendContext Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the content of the request sent by the health check. It can contain up to 500 visible ASCII characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSendContext(const std::string& _sendContext);
 
                     /**
                      * 判断参数 SendContext 是否已赋值
                      * @return SendContext 是否已赋值
+                     * 
                      */
                     bool SendContextHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RecvContext Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the result returned by the health check. It can contain up to 500 visible ASCII characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRecvContext() const;
 
                     /**
                      * 设置Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the result returned by the health check. It can contain up to 500 visible ASCII characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RecvContext Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the result returned by the health check. It can contain up to 500 visible ASCII characters.
+                     * @param _recvContext Health check protocol (a custom check parameter), which is required if the value of `CheckType` is `CUSTOM`. This parameter represents the result returned by the health check. It can contain up to 500 visible ASCII characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecvContext(const std::string& _recvContext);
 
                     /**
                      * 判断参数 RecvContext 是否已赋值
                      * @return RecvContext 是否已赋值
+                     * 
                      */
                     bool RecvContextHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CheckType Health check protocol (a custom check parameter). Valid values: TCP, CUSTOM (applicable only to UDP listeners. If custom health check is used, this parameter will be required).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCheckType() const;
 
                     /**
                      * 设置Health check protocol (a custom check parameter). Valid values: TCP, CUSTOM (applicable only to UDP listeners. If custom health check is used, this parameter will be required).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CheckType Health check protocol (a custom check parameter). Valid values: TCP, CUSTOM (applicable only to UDP listeners. If custom health check is used, this parameter will be required).
+                     * @param _checkType Health check protocol (a custom check parameter). Valid values: TCP, CUSTOM (applicable only to UDP listeners. If custom health check is used, this parameter will be required).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckType(const std::string& _checkType);
 
                     /**
                      * 判断参数 CheckType 是否已赋值
                      * @return CheckType 是否已赋值
+                     * 
                      */
                     bool CheckTypeHasBeenSet() const;
 

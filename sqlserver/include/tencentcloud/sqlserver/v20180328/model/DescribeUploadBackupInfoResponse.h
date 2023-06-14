@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取Bucket name
                      * @return BucketName Bucket name
+                     * 
                      */
                     std::string GetBucketName() const;
 
                     /**
                      * 判断参数 BucketName 是否已赋值
                      * @return BucketName 是否已赋值
+                     * 
                      */
                     bool BucketNameHasBeenSet() const;
 
                     /**
                      * 获取Bucket location information
                      * @return Region Bucket location information
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Storage path
                      * @return Path Storage path
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Temporary key ID
                      * @return TmpSecretId Temporary key ID
+                     * 
                      */
                     std::string GetTmpSecretId() const;
 
                     /**
                      * 判断参数 TmpSecretId 是否已赋值
                      * @return TmpSecretId 是否已赋值
+                     * 
                      */
                     bool TmpSecretIdHasBeenSet() const;
 
                     /**
                      * 获取Temporary key (Key)
                      * @return TmpSecretKey Temporary key (Key)
+                     * 
                      */
                     std::string GetTmpSecretKey() const;
 
                     /**
                      * 判断参数 TmpSecretKey 是否已赋值
                      * @return TmpSecretKey 是否已赋值
+                     * 
                      */
                     bool TmpSecretKeyHasBeenSet() const;
 
                     /**
                      * 获取Temporary key (Token)
                      * @return XCosSecurityToken Temporary key (Token)
+                     * 
                      */
                     std::string GetXCosSecurityToken() const;
 
                     /**
                      * 判断参数 XCosSecurityToken 是否已赋值
                      * @return XCosSecurityToken 是否已赋值
+                     * 
                      */
                     bool XCosSecurityTokenHasBeenSet() const;
 
                     /**
                      * 获取Temporary key start time
                      * @return StartTime Temporary key start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Temporary key expiration time
                      * @return ExpiredTime Temporary key expiration time
+                     * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
                      * 判断参数 ExpiredTime 是否已赋值
                      * @return ExpiredTime 是否已赋值
+                     * 
                      */
                     bool ExpiredTimeHasBeenSet() const;
 

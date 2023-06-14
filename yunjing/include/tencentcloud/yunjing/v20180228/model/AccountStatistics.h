@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Username.
                      * @return Username Username.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Username.
-                     * @param Username Username.
+                     * @param _username Username.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Number of servers.
                      * @return MachineNum Number of servers.
+                     * 
                      */
                     uint64_t GetMachineNum() const;
 
                     /**
                      * 设置Number of servers.
-                     * @param MachineNum Number of servers.
+                     * @param _machineNum Number of servers.
+                     * 
                      */
                     void SetMachineNum(const uint64_t& _machineNum);
 
                     /**
                      * 判断参数 MachineNum 是否已赋值
                      * @return MachineNum 是否已赋值
+                     * 
                      */
                     bool MachineNumHasBeenSet() const;
 

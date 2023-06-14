@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
                      * @return Key DRM key, which is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置DRM key, which is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
-                     * @param Key DRM key, which is a 32-bit hexadecimal string.
+                     * @param _key DRM key, which is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
@@ -75,6 +78,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
 ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTrack() const;
 
@@ -82,15 +86,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
 ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
+                     * @param _track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
 ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTrack(const std::string& _track);
 
                     /**
                      * 判断参数 Track 是否已赋值
                      * @return Track 是否已赋值
+                     * 
                      */
                     bool TrackHasBeenSet() const;
 
@@ -101,6 +107,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return KeyId Required for Widevine encryption. It is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyId() const;
 
@@ -108,15 +115,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Required for Widevine encryption. It is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeyId Required for Widevine encryption. It is a 32-bit hexadecimal string.
+                     * @param _keyId Required for Widevine encryption. It is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
@@ -131,6 +140,7 @@ For more information about this parameter, please see:
 https://tools.ietf.org/html/rfc3826
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIv() const;
 
@@ -140,17 +150,19 @@ For more information about this parameter, please see:
 https://tools.ietf.org/html/rfc3826
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Iv Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
+                     * @param _iv Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
 For more information about this parameter, please see: 
 https://tools.ietf.org/html/rfc3826
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIv(const std::string& _iv);
 
                     /**
                      * 判断参数 Iv 是否已赋值
                      * @return Iv 是否已赋值
+                     * 
                      */
                     bool IvHasBeenSet() const;
 
@@ -159,20 +171,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeyUri() const;
 
                     /**
                      * 设置The URI of the license server when AES-128 is used. This parameter may be empty.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
+                     * @param _keyUri The URI of the license server when AES-128 is used. This parameter may be empty.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeyUri(const std::string& _keyUri);
 
                     /**
                      * 判断参数 KeyUri 是否已赋值
                      * @return KeyUri 是否已赋值
+                     * 
                      */
                     bool KeyUriHasBeenSet() const;
 

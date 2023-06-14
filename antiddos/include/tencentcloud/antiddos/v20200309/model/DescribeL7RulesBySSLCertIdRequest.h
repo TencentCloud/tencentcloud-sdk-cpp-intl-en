@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Domain name status. Valid values: `bindable`, `binded`, `opened`, `closed`, `all` (all states).
                      * @return Status Domain name status. Valid values: `bindable`, `binded`, `opened`, `closed`, `all` (all states).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Domain name status. Valid values: `bindable`, `binded`, `opened`, `closed`, `all` (all states).
-                     * @param Status Domain name status. Valid values: `bindable`, `binded`, `opened`, `closed`, `all` (all states).
+                     * @param _status Domain name status. Valid values: `bindable`, `binded`, `opened`, `closed`, `all` (all states).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取List of certificate IDs
                      * @return CertIds List of certificate IDs
+                     * 
                      */
                     std::vector<std::string> GetCertIds() const;
 
                     /**
                      * 设置List of certificate IDs
-                     * @param CertIds List of certificate IDs
+                     * @param _certIds List of certificate IDs
+                     * 
                      */
                     void SetCertIds(const std::vector<std::string>& _certIds);
 
                     /**
                      * 判断参数 CertIds 是否已赋值
                      * @return CertIds 是否已赋值
+                     * 
                      */
                     bool CertIdsHasBeenSet() const;
 

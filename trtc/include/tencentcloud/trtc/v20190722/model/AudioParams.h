@@ -55,6 +55,7 @@ namespace TencentCloud
 1: 48000 Hz (default)
 2: 44100 Hz
 3: 16000 Hz
+                     * 
                      */
                     uint64_t GetSampleRate() const;
 
@@ -63,16 +64,18 @@ namespace TencentCloud
 1: 48000 Hz (default)
 2: 44100 Hz
 3: 16000 Hz
-                     * @param SampleRate The audio sample rate.
+                     * @param _sampleRate The audio sample rate.
 1: 48000 Hz (default)
 2: 44100 Hz
 3: 16000 Hz
+                     * 
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
 
                     /**
                      * 判断参数 SampleRate 是否已赋值
                      * @return SampleRate 是否已赋值
+                     * 
                      */
                     bool SampleRateHasBeenSet() const;
 
@@ -83,6 +86,7 @@ namespace TencentCloud
                      * @return Channel The number of sound channels.
 1: Mono-channel
 2: Dual-channel (default)
+                     * 
                      */
                     uint64_t GetChannel() const;
 
@@ -90,33 +94,38 @@ namespace TencentCloud
                      * 设置The number of sound channels.
 1: Mono-channel
 2: Dual-channel (default)
-                     * @param Channel The number of sound channels.
+                     * @param _channel The number of sound channels.
 1: Mono-channel
 2: Dual-channel (default)
+                     * 
                      */
                     void SetChannel(const uint64_t& _channel);
 
                     /**
                      * 判断参数 Channel 是否已赋值
                      * @return Channel 是否已赋值
+                     * 
                      */
                     bool ChannelHasBeenSet() const;
 
                     /**
                      * 获取The audio bitrate (bps). Value range: [32000, 128000]. Default: 64000.
                      * @return BitRate The audio bitrate (bps). Value range: [32000, 128000]. Default: 64000.
+                     * 
                      */
                     uint64_t GetBitRate() const;
 
                     /**
                      * 设置The audio bitrate (bps). Value range: [32000, 128000]. Default: 64000.
-                     * @param BitRate The audio bitrate (bps). Value range: [32000, 128000]. Default: 64000.
+                     * @param _bitRate The audio bitrate (bps). Value range: [32000, 128000]. Default: 64000.
+                     * 
                      */
                     void SetBitRate(const uint64_t& _bitRate);
 
                     /**
                      * 判断参数 BitRate 是否已赋值
                      * @return BitRate 是否已赋值
+                     * 
                      */
                     bool BitRateHasBeenSet() const;
 

@@ -57,20 +57,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return CalcType Check method.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyConditionListConfigManualCalcType GetCalcType() const;
 
                     /**
                      * 设置Check method.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param CalcType Check method.
+                     * @param _calcType Check method.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetCalcType(const DescribePolicyConditionListConfigManualCalcType& _calcType);
 
                     /**
                      * 判断参数 CalcType 是否已赋值
                      * @return CalcType 是否已赋值
+                     * 
                      */
                     bool CalcTypeHasBeenSet() const;
 
@@ -79,20 +82,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return CalcValue Threshold.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyConditionListConfigManualCalcValue GetCalcValue() const;
 
                     /**
                      * 设置Threshold.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param CalcValue Threshold.
+                     * @param _calcValue Threshold.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetCalcValue(const DescribePolicyConditionListConfigManualCalcValue& _calcValue);
 
                     /**
                      * 判断参数 CalcValue 是否已赋值
                      * @return CalcValue 是否已赋值
+                     * 
                      */
                     bool CalcValueHasBeenSet() const;
 
@@ -101,20 +107,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return ContinueTime Duration.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyConditionListConfigManualContinueTime GetContinueTime() const;
 
                     /**
                      * 设置Duration.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ContinueTime Duration.
+                     * @param _continueTime Duration.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetContinueTime(const DescribePolicyConditionListConfigManualContinueTime& _continueTime);
 
                     /**
                      * 判断参数 ContinueTime 是否已赋值
                      * @return ContinueTime 是否已赋值
+                     * 
                      */
                     bool ContinueTimeHasBeenSet() const;
 
@@ -123,20 +132,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Period Data period.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyConditionListConfigManualPeriod GetPeriod() const;
 
                     /**
                      * 设置Data period.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Period Data period.
+                     * @param _period Data period.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetPeriod(const DescribePolicyConditionListConfigManualPeriod& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
@@ -145,20 +157,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return PeriodNum Number of periods.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyConditionListConfigManualPeriodNum GetPeriodNum() const;
 
                     /**
                      * 设置Number of periods.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param PeriodNum Number of periods.
+                     * @param _periodNum Number of periods.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetPeriodNum(const DescribePolicyConditionListConfigManualPeriodNum& _periodNum);
 
                     /**
                      * 判断参数 PeriodNum 是否已赋值
                      * @return PeriodNum 是否已赋值
+                     * 
                      */
                     bool PeriodNumHasBeenSet() const;
 
@@ -167,20 +182,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return StatType Statistics method.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyConditionListConfigManualStatType GetStatType() const;
 
                     /**
                      * 设置Statistics method.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param StatType Statistics method.
+                     * @param _statType Statistics method.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetStatType(const DescribePolicyConditionListConfigManualStatType& _statType);
 
                     /**
                      * 判断参数 StatType 是否已赋值
                      * @return StatType 是否已赋值
+                     * 
                      */
                     bool StatTypeHasBeenSet() const;
 

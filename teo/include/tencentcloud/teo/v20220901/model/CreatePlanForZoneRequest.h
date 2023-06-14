@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site.
                      * @return ZoneId ID of the site.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site.
-                     * @param ZoneId ID of the site.
+                     * @param _zoneId ID of the site.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -87,6 +90,7 @@ namespace TencentCloud
 <li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
 <li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
 <li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
+                     * 
                      */
                     std::string GetPlanType() const;
 
@@ -104,7 +108,7 @@ namespace TencentCloud
 <li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
 <li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
 <li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
-                     * @param PlanType The plan option. Values:
+                     * @param _planType The plan option. Values:
 <li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
 <li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
 <li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
@@ -117,12 +121,14 @@ namespace TencentCloud
 <li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
 <li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
 <li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>To get the available plan options for your account, view the output from <a href="https://intl.cloud.tencent.com/document/product/1552/80606?from_cn_redirect=1">DescribeAvailablePlans</a>.
+                     * 
                      */
                     void SetPlanType(const std::string& _planType);
 
                     /**
                      * 判断参数 PlanType 是否已赋值
                      * @return PlanType 是否已赋值
+                     * 
                      */
                     bool PlanTypeHasBeenSet() const;
 

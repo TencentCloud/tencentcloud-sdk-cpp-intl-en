@@ -50,216 +50,252 @@ namespace TencentCloud
                     /**
                      * 获取Account name
                      * @return Name Account name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Account name
-                     * @param Name Account name
+                     * @param _name Account name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Account remarks
                      * @return Remark Account remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Account remarks
-                     * @param Remark Account remarks
+                     * @param _remark Account remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Account creation time
                      * @return CreateTime Account creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Account creation time
-                     * @param CreateTime Account creation time
+                     * @param _createTime Account creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
                      * @return Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
-                     * @param Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * @param _status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Account update time
                      * @return UpdateTime Account update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Account update time
-                     * @param UpdateTime Account update time
+                     * @param _updateTime Account update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Password update time
                      * @return PassTime Password update time
+                     * 
                      */
                     std::string GetPassTime() const;
 
                     /**
                      * 设置Password update time
-                     * @param PassTime Password update time
+                     * @param _passTime Password update time
+                     * 
                      */
                     void SetPassTime(const std::string& _passTime);
 
                     /**
                      * 判断参数 PassTime 是否已赋值
                      * @return PassTime 是否已赋值
+                     * 
                      */
                     bool PassTimeHasBeenSet() const;
 
                     /**
                      * 获取Internal account status, which should be `enable` normally
                      * @return InternalStatus Internal account status, which should be `enable` normally
+                     * 
                      */
                     std::string GetInternalStatus() const;
 
                     /**
                      * 设置Internal account status, which should be `enable` normally
-                     * @param InternalStatus Internal account status, which should be `enable` normally
+                     * @param _internalStatus Internal account status, which should be `enable` normally
+                     * 
                      */
                     void SetInternalStatus(const std::string& _internalStatus);
 
                     /**
                      * 判断参数 InternalStatus 是否已赋值
                      * @return InternalStatus 是否已赋值
+                     * 
                      */
                     bool InternalStatusHasBeenSet() const;
 
                     /**
                      * 获取Information of read and write permissions of this account on relevant databases
                      * @return Dbs Information of read and write permissions of this account on relevant databases
+                     * 
                      */
                     std::vector<DBPrivilege> GetDbs() const;
 
                     /**
                      * 设置Information of read and write permissions of this account on relevant databases
-                     * @param Dbs Information of read and write permissions of this account on relevant databases
+                     * @param _dbs Information of read and write permissions of this account on relevant databases
+                     * 
                      */
                     void SetDbs(const std::vector<DBPrivilege>& _dbs);
 
                     /**
                      * 判断参数 Dbs 是否已赋值
                      * @return Dbs 是否已赋值
+                     * 
                      */
                     bool DbsHasBeenSet() const;
 
                     /**
                      * 获取Whether it is an admin account
                      * @return IsAdmin Whether it is an admin account
+                     * 
                      */
                     bool GetIsAdmin() const;
 
                     /**
                      * 设置Whether it is an admin account
-                     * @param IsAdmin Whether it is an admin account
+                     * @param _isAdmin Whether it is an admin account
+                     * 
                      */
                     void SetIsAdmin(const bool& _isAdmin);
 
                     /**
                      * 判断参数 IsAdmin 是否已赋值
                      * @return IsAdmin 是否已赋值
+                     * 
                      */
                     bool IsAdminHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
                      * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     * 
                      */
                     std::string GetAuthentication() const;
 
                     /**
                      * 设置Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
-                     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     * @param _authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     * 
                      */
                     void SetAuthentication(const std::string& _authentication);
 
                     /**
                      * 判断参数 Authentication 是否已赋值
                      * @return Authentication 是否已赋值
+                     * 
                      */
                     bool AuthenticationHasBeenSet() const;
 
                     /**
                      * 获取The host required for `win-windows authentication` account
                      * @return Host The host required for `win-windows authentication` account
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置The host required for `win-windows authentication` account
-                     * @param Host The host required for `win-windows authentication` account
+                     * @param _host The host required for `win-windows authentication` account
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
                      * @return AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     * 
                      */
                     std::string GetAccountType() const;
 
                     /**
                      * 设置Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
-                     * @param AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     * @param _accountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     * 
                      */
                     void SetAccountType(const std::string& _accountType);
 
                     /**
                      * 判断参数 AccountType 是否已赋值
                      * @return AccountType 是否已赋值
+                     * 
                      */
                     bool AccountTypeHasBeenSet() const;
 

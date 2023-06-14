@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance name. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
                      * @return DBInstanceName Instance name. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
+                     * 
                      */
                     std::string GetDBInstanceName() const;
 
                     /**
                      * 设置Instance name. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
-                     * @param DBInstanceName Instance name. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
+                     * @param _dBInstanceName Instance name. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
+                     * 
                      */
                     void SetDBInstanceName(const std::string& _dBInstanceName);
 
                     /**
                      * 判断参数 DBInstanceName 是否已赋值
                      * @return DBInstanceName 是否已赋值
+                     * 
                      */
                     bool DBInstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Instance ID. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
                      * @return DBInstanceId Instance ID. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
-                     * @param DBInstanceId Instance ID. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
+                     * @param _dBInstanceId Instance ID. Either instance name or instance ID (or both) must be passed in. If both are passed in, the instance ID will prevail.
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 

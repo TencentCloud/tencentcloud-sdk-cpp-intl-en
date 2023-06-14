@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The total number of quiz questions.
                      * @return Total The total number of quiz questions.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QuestionInfo A list of the questions.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<QuestionInfo> GetQuestionInfo() const;
 
                     /**
                      * 判断参数 QuestionInfo 是否已赋值
                      * @return QuestionInfo 是否已赋值
+                     * 
                      */
                     bool QuestionInfoHasBeenSet() const;
 

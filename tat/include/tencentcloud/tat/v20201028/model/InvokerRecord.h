@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Invoker ID.
                      * @return InvokerId Invoker ID.
+                     * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
                      * 设置Invoker ID.
-                     * @param InvokerId Invoker ID.
+                     * @param _invokerId Invoker ID.
+                     * 
                      */
                     void SetInvokerId(const std::string& _invokerId);
 
                     /**
                      * 判断参数 InvokerId 是否已赋值
                      * @return InvokerId 是否已赋值
+                     * 
                      */
                     bool InvokerIdHasBeenSet() const;
 
                     /**
                      * 获取Execution time.
                      * @return InvokeTime Execution time.
+                     * 
                      */
                     std::string GetInvokeTime() const;
 
                     /**
                      * 设置Execution time.
-                     * @param InvokeTime Execution time.
+                     * @param _invokeTime Execution time.
+                     * 
                      */
                     void SetInvokeTime(const std::string& _invokeTime);
 
                     /**
                      * 判断参数 InvokeTime 是否已赋值
                      * @return InvokeTime 是否已赋值
+                     * 
                      */
                     bool InvokeTimeHasBeenSet() const;
 
                     /**
                      * 获取Execution reason.
                      * @return Reason Execution reason.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置Execution reason.
-                     * @param Reason Execution reason.
+                     * @param _reason Execution reason.
+                     * 
                      */
                     void SetReason(const std::string& _reason);
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 
                     /**
                      * 获取Command execution ID.
                      * @return InvocationId Command execution ID.
+                     * 
                      */
                     std::string GetInvocationId() const;
 
                     /**
                      * 设置Command execution ID.
-                     * @param InvocationId Command execution ID.
+                     * @param _invocationId Command execution ID.
+                     * 
                      */
                     void SetInvocationId(const std::string& _invocationId);
 
                     /**
                      * 判断参数 InvocationId 是否已赋值
                      * @return InvocationId 是否已赋值
+                     * 
                      */
                     bool InvocationIdHasBeenSet() const;
 
                     /**
                      * 获取Trigger result.
                      * @return Result Trigger result.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 设置Trigger result.
-                     * @param Result Trigger result.
+                     * @param _result Trigger result.
+                     * 
                      */
                     void SetResult(const std::string& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

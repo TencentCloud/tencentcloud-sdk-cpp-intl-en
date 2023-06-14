@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      * @return ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
-                     * @param ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @param _proxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ When GroupId is specified, the listener will be checked whether it belongs to th
                      * @return ListenerId Filter condition. Exact query by listener ID.
 When ProxyId is specified, the listener will be checked whether it belongs to the connection.
 When GroupId is specified, the listener will be checked whether it belongs to the connection group.
+                     * 
                      */
                     std::string GetListenerId() const;
 
@@ -74,123 +78,143 @@ When GroupId is specified, the listener will be checked whether it belongs to th
                      * 设置Filter condition. Exact query by listener ID.
 When ProxyId is specified, the listener will be checked whether it belongs to the connection.
 When GroupId is specified, the listener will be checked whether it belongs to the connection group.
-                     * @param ListenerId Filter condition. Exact query by listener ID.
+                     * @param _listenerId Filter condition. Exact query by listener ID.
 When ProxyId is specified, the listener will be checked whether it belongs to the connection.
 When GroupId is specified, the listener will be checked whether it belongs to the connection group.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Filter condition. Exact query by listener name.
                      * @return ListenerName Filter condition. Exact query by listener name.
+                     * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置Filter condition. Exact query by listener name.
-                     * @param ListenerName Filter condition. Exact query by listener name.
+                     * @param _listenerName Filter condition. Exact query by listener name.
+                     * 
                      */
                     void SetListenerName(const std::string& _listenerName);
 
                     /**
                      * 判断参数 ListenerName 是否已赋值
                      * @return ListenerName 是否已赋值
+                     * 
                      */
                     bool ListenerNameHasBeenSet() const;
 
                     /**
                      * 获取Filter condition. Exact query by listener port.
                      * @return Port Filter condition. Exact query by listener port.
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Filter condition. Exact query by listener port.
-                     * @param Port Filter condition. Exact query by listener port.
+                     * @param _port Filter condition. Exact query by listener port.
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Quantity limit. The default value is 20.
                      * @return Limit Quantity limit. The default value is 20.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Quantity limit. The default value is 20.
-                     * @param Limit Quantity limit. The default value is 20.
+                     * @param _limit Quantity limit. The default value is 20.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      * @return GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
-                     * @param GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @param _groupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
                      * @return SearchValue Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
+                     * 
                      */
                     std::string GetSearchValue() const;
 
                     /**
                      * 设置Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
-                     * @param SearchValue Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
+                     * @param _searchValue Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
+                     * 
                      */
                     void SetSearchValue(const std::string& _searchValue);
 
                     /**
                      * 判断参数 SearchValue 是否已赋值
                      * @return SearchValue 是否已赋值
+                     * 
                      */
                     bool SearchValueHasBeenSet() const;
 

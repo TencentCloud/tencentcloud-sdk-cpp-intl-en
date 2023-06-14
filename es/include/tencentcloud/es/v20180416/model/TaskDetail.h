@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Task name
                      * @return Name Task name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Task name
-                     * @param Name Task name
+                     * @param _name Task name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Task progress
                      * @return Progress Task progress
+                     * 
                      */
                     double GetProgress() const;
 
                     /**
                      * 设置Task progress
-                     * @param Progress Task progress
+                     * @param _progress Task progress
+                     * 
                      */
                     void SetProgress(const double& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Task completion time
                      * @return FinishTime Task completion time
+                     * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
                      * 设置Task completion time
-                     * @param FinishTime Task completion time
+                     * @param _finishTime Task completion time
+                     * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
 
                     /**
                      * 判断参数 FinishTime 是否已赋值
                      * @return FinishTime 是否已赋值
+                     * 
                      */
                     bool FinishTimeHasBeenSet() const;
 
                     /**
                      * 获取Subtask
                      * @return SubTasks Subtask
+                     * 
                      */
                     std::vector<SubTaskDetail> GetSubTasks() const;
 
                     /**
                      * 设置Subtask
-                     * @param SubTasks Subtask
+                     * @param _subTasks Subtask
+                     * 
                      */
                     void SetSubTasks(const std::vector<SubTaskDetail>& _subTasks);
 
                     /**
                      * 判断参数 SubTasks 是否已赋值
                      * @return SubTasks 是否已赋值
+                     * 
                      */
                     bool SubTasksHasBeenSet() const;
 
@@ -124,20 +136,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ElapsedTime The task time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetElapsedTime() const;
 
                     /**
                      * 设置The task time.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ElapsedTime The task time.
+                     * @param _elapsedTime The task time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetElapsedTime(const int64_t& _elapsedTime);
 
                     /**
                      * 判断参数 ElapsedTime 是否已赋值
                      * @return ElapsedTime 是否已赋值
+                     * 
                      */
                     bool ElapsedTimeHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Whiteboard width. Valid range: [0,2560]. Default value: 1280.
                      * @return Width Whiteboard width. Valid range: [0,2560]. Default value: 1280.
+                     * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
                      * 设置Whiteboard width. Valid range: [0,2560]. Default value: 1280.
-                     * @param Width Whiteboard width. Valid range: [0,2560]. Default value: 1280.
+                     * @param _width Whiteboard width. Valid range: [0,2560]. Default value: 1280.
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Whiteboard height. Valid range: [0,2560]. Default value: 720.
                      * @return Height Whiteboard height. Valid range: [0,2560]. Default value: 720.
+                     * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
                      * 设置Whiteboard height. Valid range: [0,2560]. Default value: 720.
-                     * @param Height Whiteboard height. Valid range: [0,2560]. Default value: 720.
+                     * @param _height Whiteboard height. Valid range: [0,2560]. Default value: 720.
+                     * 
                      */
                     void SetHeight(const uint64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取Escaped JSON string of the whiteboard initial parameters, which is passed through to the Tencent Interactive Whiteboard SDK.
                      * @return InitParams Escaped JSON string of the whiteboard initial parameters, which is passed through to the Tencent Interactive Whiteboard SDK.
+                     * 
                      */
                     std::string GetInitParams() const;
 
                     /**
                      * 设置Escaped JSON string of the whiteboard initial parameters, which is passed through to the Tencent Interactive Whiteboard SDK.
-                     * @param InitParams Escaped JSON string of the whiteboard initial parameters, which is passed through to the Tencent Interactive Whiteboard SDK.
+                     * @param _initParams Escaped JSON string of the whiteboard initial parameters, which is passed through to the Tencent Interactive Whiteboard SDK.
+                     * 
                      */
                     void SetInitParams(const std::string& _initParams);
 
                     /**
                      * 判断参数 InitParams 是否已赋值
                      * @return InitParams 是否已赋值
+                     * 
                      */
                     bool InitParamsHasBeenSet() const;
 

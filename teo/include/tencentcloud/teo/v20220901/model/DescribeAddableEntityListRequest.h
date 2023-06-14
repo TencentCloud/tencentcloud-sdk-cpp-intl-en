@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site.
                      * @return ZoneId ID of the site.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site.
-                     * @param ZoneId ID of the site.
+                     * @param _zoneId ID of the site.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
 <li>`web-attack`: Web security logs;</li>
 <li>`web-rule`: Custom rule logs;</li>
 <li>`web-bot`: Bot management logs.</li>
+                     * 
                      */
                     std::string GetEntityType() const;
 
@@ -86,19 +90,21 @@ namespace TencentCloud
 <li>`web-attack`: Web security logs;</li>
 <li>`web-rule`: Custom rule logs;</li>
 <li>`web-bot`: Bot management logs.</li>
-                     * @param EntityType Type of the shipping entity. Values:
+                     * @param _entityType Type of the shipping entity. Values:
 <li>`domain`: L7 acceleration logs;</li>
 <li>`application`: L4 acceleration logs;</li>
 <li>`web-rateLiming`: Rate limiting logs;</li>
 <li>`web-attack`: Web security logs;</li>
 <li>`web-rule`: Custom rule logs;</li>
 <li>`web-bot`: Bot management logs.</li>
+                     * 
                      */
                     void SetEntityType(const std::string& _entityType);
 
                     /**
                      * 判断参数 EntityType 是否已赋值
                      * @return EntityType 是否已赋值
+                     * 
                      */
                     bool EntityTypeHasBeenSet() const;
 
@@ -109,6 +115,7 @@ namespace TencentCloud
                      * @return Area The service region. Values:
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -116,15 +123,17 @@ namespace TencentCloud
                      * 设置The service region. Values:
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
-                     * @param Area The service region. Values:
+                     * @param _area The service region. Values:
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

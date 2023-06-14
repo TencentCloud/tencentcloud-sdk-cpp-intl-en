@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Edge compute cluster ID
                      * @return ClusterId Edge compute cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Edge compute cluster ID
-                     * @param ClusterId Edge compute cluster ID
+                     * @param _clusterId Edge compute cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

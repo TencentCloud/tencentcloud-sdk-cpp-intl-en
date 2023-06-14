@@ -55,6 +55,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 `BATCH_WORKSPACE` (Default): The workspace is the workspace defined for the usage of Batch Compute. Batch Compute ensures the isolation between jobs.
 `GLOBAL_WORKSPACE`: The workspace is the instance OS space..
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetWorkspace() const;
 
@@ -63,16 +64,18 @@ Note: This field may return `null`, indicating that no valid value was found.
 `BATCH_WORKSPACE` (Default): The workspace is the workspace defined for the usage of Batch Compute. Batch Compute ensures the isolation between jobs.
 `GLOBAL_WORKSPACE`: The workspace is the instance OS space..
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Workspace The mapped output workspace on the container side for the instance.
+                     * @param _workspace The mapped output workspace on the container side for the instance.
 `BATCH_WORKSPACE` (Default): The workspace is the workspace defined for the usage of Batch Compute. Batch Compute ensures the isolation between jobs.
 `GLOBAL_WORKSPACE`: The workspace is the instance OS space..
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetWorkspace(const std::string& _workspace);
 
                     /**
                      * 判断参数 Workspace 是否已赋值
                      * @return Workspace 是否已赋值
+                     * 
                      */
                     bool WorkspaceHasBeenSet() const;
 

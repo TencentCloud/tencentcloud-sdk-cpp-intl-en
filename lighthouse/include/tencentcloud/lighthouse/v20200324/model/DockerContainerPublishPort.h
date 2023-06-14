@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Host port
                      * @return HostPort Host port
+                     * 
                      */
                     int64_t GetHostPort() const;
 
                     /**
                      * 设置Host port
-                     * @param HostPort Host port
+                     * @param _hostPort Host port
+                     * 
                      */
                     void SetHostPort(const int64_t& _hostPort);
 
                     /**
                      * 判断参数 HostPort 是否已赋值
                      * @return HostPort 是否已赋值
+                     * 
                      */
                     bool HostPortHasBeenSet() const;
 
                     /**
                      * 获取Container port
                      * @return ContainerPort Container port
+                     * 
                      */
                     int64_t GetContainerPort() const;
 
                     /**
                      * 设置Container port
-                     * @param ContainerPort Container port
+                     * @param _containerPort Container port
+                     * 
                      */
                     void SetContainerPort(const int64_t& _containerPort);
 
                     /**
                      * 判断参数 ContainerPort 是否已赋值
                      * @return ContainerPort 是否已赋值
+                     * 
                      */
                     bool ContainerPortHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Ip External IP. It defaults to 0.0.0.0.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置External IP. It defaults to 0.0.0.0.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Ip External IP. It defaults to 0.0.0.0.
+                     * @param _ip External IP. It defaults to 0.0.0.0.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
+                     * @param _protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

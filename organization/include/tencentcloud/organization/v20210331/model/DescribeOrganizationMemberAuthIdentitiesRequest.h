@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
                      * @return Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
-                     * @param Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * @param _offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit, which defaults to `10`. Value range: 1-50.
                      * @return Limit Limit, which defaults to `10`. Value range: 1-50.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit, which defaults to `10`. Value range: 1-50.
-                     * @param Limit Limit, which defaults to `10`. Value range: 1-50.
+                     * @param _limit Limit, which defaults to `10`. Value range: 1-50.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Organization member UIN.
                      * @return MemberUin Organization member UIN.
+                     * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
                      * 设置Organization member UIN.
-                     * @param MemberUin Organization member UIN.
+                     * @param _memberUin Organization member UIN.
+                     * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
 
                     /**
                      * 判断参数 MemberUin 是否已赋值
                      * @return MemberUin 是否已赋值
+                     * 
                      */
                     bool MemberUinHasBeenSet() const;
 

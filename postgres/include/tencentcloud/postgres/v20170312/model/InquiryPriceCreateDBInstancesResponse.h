@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Published price in US Cent
                      * @return OriginalPrice Published price in US Cent
+                     * 
                      */
                     uint64_t GetOriginalPrice() const;
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discounted total amount in US Cent
                      * @return Price Discounted total amount in US Cent
+                     * 
                      */
                     uint64_t GetPrice() const;
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 
                     /**
                      * 获取Currency, such as USD.
                      * @return Currency Currency, such as USD.
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 

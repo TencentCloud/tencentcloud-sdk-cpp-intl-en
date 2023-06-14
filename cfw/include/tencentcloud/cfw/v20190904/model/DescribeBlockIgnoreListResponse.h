@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取List data.
                      * @return Data List data.
+                     * 
                      */
                     std::vector<BlockIgnoreRule> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Total number of results, which is used for pagination.
                      * @return Total Total number of results, which is used for pagination.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Status code. Valid values: 0: successful; others: failed.
                      * @return ReturnCode Status code. Valid values: 0: successful; others: failed.
+                     * 
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取Status message. Valid values: success: successful query; fail: failed query.
                      * @return ReturnMsg Status message. Valid values: success: successful query; fail: failed query.
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 

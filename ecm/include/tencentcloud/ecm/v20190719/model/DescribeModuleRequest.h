@@ -58,6 +58,7 @@ image-id      String      Required: no      (Filter) Filter by image ID.
 instance-family      String      Required: no      (Filter) Filter by model family.
 security-group-id - string Required: no - (Filter) Filter by ID of the security group bound to the module.
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -69,55 +70,63 @@ image-id      String      Required: no      (Filter) Filter by image ID.
 instance-family      String      Required: no      (Filter) Filter by model family.
 security-group-id - string Required: no - (Filter) Filter by ID of the security group bound to the module.
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @param Filters Filter.
+                     * @param _filters Filter.
 module-name - string - Required: no - (Filter) Filter by module name.
 module-id - string - Required: no - (Filter) Filter by module ID.
 image-id      String      Required: no      (Filter) Filter by image ID.
 instance-family      String      Required: no      (Filter) Filter by model family.
 security-group-id - string Required: no - (Filter) Filter by ID of the security group bound to the module.
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
                      * @return Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
-                     * @param Offset Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
+                     * @param _offset Offset. Default value: 0. For more information on `Offset`, see the relevant section of the API overview.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section of the API overview.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -132,6 +141,7 @@ instance-num: sort by the number of instances.
 node-num: sort by the number of nodes.
 timestamp: sort by instance creation time.
 If this parameter is not specified, instances will be sorted by creation time by default.
+                     * 
                      */
                     std::string GetOrderByField() const;
 
@@ -141,35 +151,40 @@ instance-num: sort by the number of instances.
 node-num: sort by the number of nodes.
 timestamp: sort by instance creation time.
 If this parameter is not specified, instances will be sorted by creation time by default.
-                     * @param OrderByField Specified sort by field. Currently, valid values are as follows:
+                     * @param _orderByField Specified sort by field. Currently, valid values are as follows:
 instance-num: sort by the number of instances.
 node-num: sort by the number of nodes.
 timestamp: sort by instance creation time.
 If this parameter is not specified, instances will be sorted by creation time by default.
+                     * 
                      */
                     void SetOrderByField(const std::string& _orderByField);
 
                     /**
                      * 判断参数 OrderByField 是否已赋值
                      * @return OrderByField 是否已赋值
+                     * 
                      */
                     bool OrderByFieldHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
                      * @return OrderDirection Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
+                     * 
                      */
                     int64_t GetOrderDirection() const;
 
                     /**
                      * 设置Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
-                     * @param OrderDirection Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
+                     * @param _orderDirection Sorting order. 0: descending; 1: ascending. If this parameter is not specified, it will be descending by default.
+                     * 
                      */
                     void SetOrderDirection(const int64_t& _orderDirection);
 
                     /**
                      * 判断参数 OrderDirection 是否已赋值
                      * @return OrderDirection 是否已赋值
+                     * 
                      */
                     bool OrderDirectionHasBeenSet() const;
 

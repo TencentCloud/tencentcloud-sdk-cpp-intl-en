@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The scaling activity ID.
                      * @return ActivityId The scaling activity ID.
+                     * 
                      */
                     std::string GetActivityId() const;
 
                     /**
                      * 判断参数 ActivityId 是否已赋值
                      * @return ActivityId 是否已赋值
+                     * 
                      */
                     bool ActivityIdHasBeenSet() const;
 

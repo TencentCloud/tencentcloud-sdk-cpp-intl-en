@@ -46,84 +46,98 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID.
                      * @return ServiceId Unique service ID.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Custom service name.
                      * @return ServiceName Custom service name.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
                     /**
                      * 获取Custom service description.
                      * @return ServiceDesc Custom service description.
+                     * 
                      */
                     std::string GetServiceDesc() const;
 
                     /**
                      * 判断参数 ServiceDesc 是否已赋值
                      * @return ServiceDesc 是否已赋值
+                     * 
                      */
                     bool ServiceDescHasBeenSet() const;
 
                     /**
                      * 获取Default public domain name.
                      * @return OuterSubDomain Default public domain name.
+                     * 
                      */
                     std::string GetOuterSubDomain() const;
 
                     /**
                      * 判断参数 OuterSubDomain 是否已赋值
                      * @return OuterSubDomain 是否已赋值
+                     * 
                      */
                     bool OuterSubDomainHasBeenSet() const;
 
                     /**
                      * 获取Default VPC domain name.
                      * @return InnerSubDomain Default VPC domain name.
+                     * 
                      */
                     std::string GetInnerSubDomain() const;
 
                     /**
                      * 判断参数 InnerSubDomain 是否已赋值
                      * @return InnerSubDomain 是否已赋值
+                     * 
                      */
                     bool InnerSubDomainHasBeenSet() const;
 
                     /**
                      * 获取Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
                      * @return CreatedTime Service creation time in the format of `YYYY-MM-DDThh:mm:ssZ` according to ISO 8601 standard. UTC time is used.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Network type list. INNER: private network access; OUTER: public network access.
                      * @return NetTypes Network type list. INNER: private network access; OUTER: public network access.
+                     * 
                      */
                     std::vector<std::string> GetNetTypes() const;
 
                     /**
                      * 判断参数 NetTypes 是否已赋值
                      * @return NetTypes 是否已赋值
+                     * 
                      */
                     bool NetTypesHasBeenSet() const;
 
@@ -132,12 +146,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IpVersion IP version number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIpVersion() const;
 
                     /**
                      * 判断参数 IpVersion 是否已赋值
                      * @return IpVersion 是否已赋值
+                     * 
                      */
                     bool IpVersionHasBeenSet() const;
 

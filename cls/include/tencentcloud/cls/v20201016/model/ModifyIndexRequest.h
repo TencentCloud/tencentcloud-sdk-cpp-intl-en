@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取It does not take effect by default
                      * @return Status It does not take effect by default
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置It does not take effect by default
-                     * @param Status It does not take effect by default
+                     * @param _status It does not take effect by default
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Index rule
                      * @return Rule Index rule
+                     * 
                      */
                     RuleInfo GetRule() const;
 
                     /**
                      * 设置Index rule
-                     * @param Rule Index rule
+                     * @param _rule Index rule
+                     * 
                      */
                     void SetRule(const RuleInfo& _rule);
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 
@@ -104,6 +113,7 @@ namespace TencentCloud
                      * @return IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
 * `false`: Full-text indexing does not include internal fields.
 * `true`: Full-text indexing includes internal fields.
+                     * 
                      */
                     bool GetIncludeInternalFields() const;
 
@@ -111,15 +121,17 @@ namespace TencentCloud
                      * 设置Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
 * `false`: Full-text indexing does not include internal fields.
 * `true`: Full-text indexing includes internal fields.
-                     * @param IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+                     * @param _includeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
 * `false`: Full-text indexing does not include internal fields.
 * `true`: Full-text indexing includes internal fields.
+                     * 
                      */
                     void SetIncludeInternalFields(const bool& _includeInternalFields);
 
                     /**
                      * 判断参数 IncludeInternalFields 是否已赋值
                      * @return IncludeInternalFields 是否已赋值
+                     * 
                      */
                     bool IncludeInternalFieldsHasBeenSet() const;
 
@@ -132,6 +144,7 @@ namespace TencentCloud
 * `0`: Full-text indexing includes only metadata fields with key-value indexing enabled.
 * `1`: Full-text indexing includes all metadata fields.
 * `2`: Full-text indexing does not include metadata fields.
+                     * 
                      */
                     uint64_t GetMetadataFlag() const;
 
@@ -140,16 +153,18 @@ namespace TencentCloud
 * `0`: Full-text indexing includes only metadata fields with key-value indexing enabled.
 * `1`: Full-text indexing includes all metadata fields.
 * `2`: Full-text indexing does not include metadata fields.
-                     * @param MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+                     * @param _metadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
 * `0`: Full-text indexing includes only metadata fields with key-value indexing enabled.
 * `1`: Full-text indexing includes all metadata fields.
 * `2`: Full-text indexing does not include metadata fields.
+                     * 
                      */
                     void SetMetadataFlag(const uint64_t& _metadataFlag);
 
                     /**
                      * 判断参数 MetadataFlag 是否已赋值
                      * @return MetadataFlag 是否已赋值
+                     * 
                      */
                     bool MetadataFlagHasBeenSet() const;
 

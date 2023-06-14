@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The application ID, such as `1400xxxxxx`.
                      * @return SdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The application ID, such as `1400xxxxxx`.
-                     * @param SdkAppId The application ID, such as `1400xxxxxx`.
+                     * @param _sdkAppId The application ID, such as `1400xxxxxx`.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -65,56 +68,65 @@ namespace TencentCloud
 Note: Only data in the last 14 days can be queried.
                      * @return StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
-                     * @param StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
+                     * @param _startTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
 Note: Only data in the last 14 days can be queried.
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
                      * @return EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
-                     * @param EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+                     * @param _endTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
                      * @return RoomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
-                     * @param RoomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+                     * @param _roomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 

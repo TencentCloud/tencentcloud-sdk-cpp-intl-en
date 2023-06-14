@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取The start time.
                      * @return StartTime The start time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time.
-                     * @param StartTime The start time.
+                     * @param _startTime The start time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time.
                      * @return EndTime The end time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time.
-                     * @param EndTime The end time.
+                     * @param _endTime The end time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取List of sites to be queried. All sites will be selected if this field is not specified.
                      * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * @param _zoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
                      * @return Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-                     * @param Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * @param _domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Limit on paginated queries. Default value: 20. Maximum value: 1000.
                      * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Limit on paginated queries. Default value: 20. Maximum value: 1000.
-                     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The page offset. Default value: 0.
                      * @return Offset The page offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The page offset. Default value: 0.
-                     * @param Offset The page offset. Default value: 0.
+                     * @param _offset The page offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -178,6 +196,7 @@ namespace TencentCloud
 <li>`ua`: User agent</li>
 <li>`requestMethod`: Request method</li>
 <li>`uri`: Uniform resource identifier</li>
+                     * 
                      */
                     std::vector<QueryCondition> GetQueryCondition() const;
 
@@ -195,7 +214,7 @@ namespace TencentCloud
 <li>`ua`: User agent</li>
 <li>`requestMethod`: Request method</li>
 <li>`uri`: Uniform resource identifier</li>
-                     * @param QueryCondition Filters for the query. Values:
+                     * @param _queryCondition Filters for the query. Values:
 <li>`attackType`: Attack type</li>
 <li>`riskLevel`: Risk level</li>
 <li>`action`: Action</li>
@@ -208,12 +227,14 @@ namespace TencentCloud
 <li>`ua`: User agent</li>
 <li>`requestMethod`: Request method</li>
 <li>`uri`: Uniform resource identifier</li>
+                     * 
                      */
                     void SetQueryCondition(const std::vector<QueryCondition>& _queryCondition);
 
                     /**
                      * 判断参数 QueryCondition 是否已赋值
                      * @return QueryCondition 是否已赋值
+                     * 
                      */
                     bool QueryConditionHasBeenSet() const;
 
@@ -224,6 +245,7 @@ namespace TencentCloud
                      * @return Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -231,15 +253,17 @@ namespace TencentCloud
                      * 设置Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     * @param Area Data storage region. Values:
+                     * @param _area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

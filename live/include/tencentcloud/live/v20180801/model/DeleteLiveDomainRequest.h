@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Domain name to be deleted.
                      * @return DomainName Domain name to be deleted.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name to be deleted.
-                     * @param DomainName Domain name to be deleted.
+                     * @param _domainName Domain name to be deleted.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Type. 0: push, 1: playback.
                      * @return DomainType Type. 0: push, 1: playback.
+                     * 
                      */
                     uint64_t GetDomainType() const;
 
                     /**
                      * 设置Type. 0: push, 1: playback.
-                     * @param DomainType Type. 0: push, 1: playback.
+                     * @param _domainType Type. 0: push, 1: playback.
+                     * 
                      */
                     void SetDomainType(const uint64_t& _domainType);
 
                     /**
                      * 判断参数 DomainType 是否已赋值
                      * @return DomainType 是否已赋值
+                     * 
                      */
                     bool DomainTypeHasBeenSet() const;
 

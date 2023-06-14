@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TargetValue Ratio of reserved server session resource 
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTargetValue() const;
 
                     /**
                      * 设置Ratio of reserved server session resource 
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TargetValue Ratio of reserved server session resource 
+                     * @param _targetValue Ratio of reserved server session resource 
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargetValue(const uint64_t& _targetValue);
 
                     /**
                      * 判断参数 TargetValue 是否已赋值
                      * @return TargetValue 是否已赋值
+                     * 
                      */
                     bool TargetValueHasBeenSet() const;
 

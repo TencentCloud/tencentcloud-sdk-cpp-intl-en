@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster status
                      * @return ClusterState Cluster status
+                     * 
                      */
                     std::string GetClusterState() const;
 
                     /**
                      * 设置Cluster status
-                     * @param ClusterState Cluster status
+                     * @param _clusterState Cluster status
+                     * 
                      */
                     void SetClusterState(const std::string& _clusterState);
 
                     /**
                      * 判断参数 ClusterState 是否已赋值
                      * @return ClusterState 是否已赋值
+                     * 
                      */
                     bool ClusterStateHasBeenSet() const;
 
                     /**
                      * 获取Status of nodes in the cluster
                      * @return ClusterInstanceState Status of nodes in the cluster
+                     * 
                      */
                     std::string GetClusterInstanceState() const;
 
                     /**
                      * 设置Status of nodes in the cluster
-                     * @param ClusterInstanceState Status of nodes in the cluster
+                     * @param _clusterInstanceState Status of nodes in the cluster
+                     * 
                      */
                     void SetClusterInstanceState(const std::string& _clusterInstanceState);
 
                     /**
                      * 判断参数 ClusterInstanceState 是否已赋值
                      * @return ClusterInstanceState 是否已赋值
+                     * 
                      */
                     bool ClusterInstanceStateHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether the monitoring service is enabled for the cluster
                      * @return ClusterBMonitor Indicates whether the monitoring service is enabled for the cluster
+                     * 
                      */
                     bool GetClusterBMonitor() const;
 
                     /**
                      * 设置Indicates whether the monitoring service is enabled for the cluster
-                     * @param ClusterBMonitor Indicates whether the monitoring service is enabled for the cluster
+                     * @param _clusterBMonitor Indicates whether the monitoring service is enabled for the cluster
+                     * 
                      */
                     void SetClusterBMonitor(const bool& _clusterBMonitor);
 
                     /**
                      * 判断参数 ClusterBMonitor 是否已赋值
                      * @return ClusterBMonitor 是否已赋值
+                     * 
                      */
                     bool ClusterBMonitorHasBeenSet() const;
 
                     /**
                      * 获取Number of cluster nodes being created. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
                      * @return ClusterInitNodeNum Number of cluster nodes being created. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * 
                      */
                     int64_t GetClusterInitNodeNum() const;
 
                     /**
                      * 设置Number of cluster nodes being created. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
-                     * @param ClusterInitNodeNum Number of cluster nodes being created. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * @param _clusterInitNodeNum Number of cluster nodes being created. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * 
                      */
                     void SetClusterInitNodeNum(const int64_t& _clusterInitNodeNum);
 
                     /**
                      * 判断参数 ClusterInitNodeNum 是否已赋值
                      * @return ClusterInitNodeNum 是否已赋值
+                     * 
                      */
                     bool ClusterInitNodeNumHasBeenSet() const;
 
                     /**
                      * 获取Number of running nodes in the cluster. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
                      * @return ClusterRunningNodeNum Number of running nodes in the cluster. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * 
                      */
                     int64_t GetClusterRunningNodeNum() const;
 
                     /**
                      * 设置Number of running nodes in the cluster. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
-                     * @param ClusterRunningNodeNum Number of running nodes in the cluster. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * @param _clusterRunningNodeNum Number of running nodes in the cluster. "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * 
                      */
                     void SetClusterRunningNodeNum(const int64_t& _clusterRunningNodeNum);
 
                     /**
                      * 判断参数 ClusterRunningNodeNum 是否已赋值
                      * @return ClusterRunningNodeNum 是否已赋值
+                     * 
                      */
                     bool ClusterRunningNodeNumHasBeenSet() const;
 
                     /**
                      * 获取Number of abnormal nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
                      * @return ClusterFailedNodeNum Number of abnormal nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * 
                      */
                     int64_t GetClusterFailedNodeNum() const;
 
                     /**
                      * 设置Number of abnormal nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
-                     * @param ClusterFailedNodeNum Number of abnormal nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * @param _clusterFailedNodeNum Number of abnormal nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * 
                      */
                     void SetClusterFailedNodeNum(const int64_t& _clusterFailedNodeNum);
 
                     /**
                      * 判断参数 ClusterFailedNodeNum 是否已赋值
                      * @return ClusterFailedNodeNum 是否已赋值
+                     * 
                      */
                     bool ClusterFailedNodeNumHasBeenSet() const;
 
@@ -177,20 +198,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ClusterClosedNodeNum Number of shutdown nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     int64_t GetClusterClosedNodeNum() const;
 
                     /**
                      * 设置Number of shutdown nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ClusterClosedNodeNum Number of shutdown nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * @param _clusterClosedNodeNum Number of shutdown nodes in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetClusterClosedNodeNum(const int64_t& _clusterClosedNodeNum);
 
                     /**
                      * 判断参数 ClusterClosedNodeNum 是否已赋值
                      * @return ClusterClosedNodeNum 是否已赋值
+                     * 
                      */
                     bool ClusterClosedNodeNumHasBeenSet() const;
 
@@ -199,20 +223,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ClusterClosingNodeNum Number of nodes being shut down in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     int64_t GetClusterClosingNodeNum() const;
 
                     /**
                      * 设置Number of nodes being shut down in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ClusterClosingNodeNum Number of nodes being shut down in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
+                     * @param _clusterClosingNodeNum Number of nodes being shut down in the cluster.  "-1" indicates that the request to obtain the node status timed out. "-2" indicates that the request failed.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetClusterClosingNodeNum(const int64_t& _clusterClosingNodeNum);
 
                     /**
                      * 判断参数 ClusterClosingNodeNum 是否已赋值
                      * @return ClusterClosingNodeNum 是否已赋值
+                     * 
                      */
                     bool ClusterClosingNodeNumHasBeenSet() const;
 
@@ -221,20 +248,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ClusterDeletionProtection Indicates whether to enable cluster deletion protection
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     bool GetClusterDeletionProtection() const;
 
                     /**
                      * 设置Indicates whether to enable cluster deletion protection
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ClusterDeletionProtection Indicates whether to enable cluster deletion protection
+                     * @param _clusterDeletionProtection Indicates whether to enable cluster deletion protection
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetClusterDeletionProtection(const bool& _clusterDeletionProtection);
 
                     /**
                      * 判断参数 ClusterDeletionProtection 是否已赋值
                      * @return ClusterDeletionProtection 是否已赋值
+                     * 
                      */
                     bool ClusterDeletionProtectionHasBeenSet() const;
 
@@ -243,20 +273,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ClusterAuditEnabled Indicates whether the cluster is auditable
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     bool GetClusterAuditEnabled() const;
 
                     /**
                      * 设置Indicates whether the cluster is auditable
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ClusterAuditEnabled Indicates whether the cluster is auditable
+                     * @param _clusterAuditEnabled Indicates whether the cluster is auditable
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetClusterAuditEnabled(const bool& _clusterAuditEnabled);
 
                     /**
                      * 判断参数 ClusterAuditEnabled 是否已赋值
                      * @return ClusterAuditEnabled 是否已赋值
+                     * 
                      */
                     bool ClusterAuditEnabledHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Enterprise Registry Instance ID
                      * @return ReplicationRegistryId Enterprise Registry Instance ID
+                     * 
                      */
                     std::string GetReplicationRegistryId() const;
 
                     /**
                      * 判断参数 ReplicationRegistryId 是否已赋值
                      * @return ReplicationRegistryId 是否已赋值
+                     * 
                      */
                     bool ReplicationRegistryIdHasBeenSet() const;
 

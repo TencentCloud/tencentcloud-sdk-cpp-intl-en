@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The Tencent Cloud VOD parameters.
                      * @return TencentVod The Tencent Cloud VOD parameters.
+                     * 
                      */
                     TencentVod GetTencentVod() const;
 
                     /**
                      * 设置The Tencent Cloud VOD parameters.
-                     * @param TencentVod The Tencent Cloud VOD parameters.
+                     * @param _tencentVod The Tencent Cloud VOD parameters.
+                     * 
                      */
                     void SetTencentVod(const TencentVod& _tencentVod);
 
                     /**
                      * 判断参数 TencentVod 是否已赋值
                      * @return TencentVod 是否已赋值
+                     * 
                      */
                     bool TencentVodHasBeenSet() const;
 

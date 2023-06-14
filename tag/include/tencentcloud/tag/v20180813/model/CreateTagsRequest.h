@@ -48,20 +48,23 @@ namespace TencentCloud
 Value range of N: 0–9
                      * @return Tags Tag list.
 Value range of N: 0–9
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list.
 Value range of N: 0–9
-                     * @param Tags Tag list.
+                     * @param _tags Tag list.
 Value range of N: 0–9
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

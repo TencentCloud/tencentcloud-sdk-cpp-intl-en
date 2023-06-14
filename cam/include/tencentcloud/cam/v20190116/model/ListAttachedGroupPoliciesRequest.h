@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取User group ID
                      * @return TargetGroupId User group ID
+                     * 
                      */
                     uint64_t GetTargetGroupId() const;
 
                     /**
                      * 设置User group ID
-                     * @param TargetGroupId User group ID
+                     * @param _targetGroupId User group ID
+                     * 
                      */
                     void SetTargetGroupId(const uint64_t& _targetGroupId);
 
                     /**
                      * 判断参数 TargetGroupId 是否已赋值
                      * @return TargetGroupId 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Page number, which starts from 1. Default is 1
                      * @return Page Page number, which starts from 1. Default is 1
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number, which starts from 1. Default is 1
-                     * @param Page Page number, which starts from 1. Default is 1
+                     * @param _page Page number, which starts from 1. Default is 1
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page; 20 by default
                      * @return Rp Number of entries per page; 20 by default
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置Number of entries per page; 20 by default
-                     * @param Rp Number of entries per page; 20 by default
+                     * @param _rp Number of entries per page; 20 by default
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 
                     /**
                      * 获取Search by keyword
                      * @return Keyword Search by keyword
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Search by keyword
-                     * @param Keyword Search by keyword
+                     * @param _keyword Search by keyword
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

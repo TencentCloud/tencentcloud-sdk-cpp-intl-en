@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Playback HTTP status code.
                      * @return HttpStatus Playback HTTP status code.
+                     * 
                      */
                     std::string GetHttpStatus() const;
 
                     /**
                      * 设置Playback HTTP status code.
-                     * @param HttpStatus Playback HTTP status code.
+                     * @param _httpStatus Playback HTTP status code.
+                     * 
                      */
                     void SetHttpStatus(const std::string& _httpStatus);
 
                     /**
                      * 判断参数 HttpStatus 是否已赋值
                      * @return HttpStatus 是否已赋值
+                     * 
                      */
                     bool HttpStatusHasBeenSet() const;
 
                     /**
                      * 获取Quantity.
                      * @return Num Quantity.
+                     * 
                      */
                     uint64_t GetNum() const;
 
                     /**
                      * 设置Quantity.
-                     * @param Num Quantity.
+                     * @param _num Quantity.
+                     * 
                      */
                     void SetNum(const uint64_t& _num);
 
                     /**
                      * 判断参数 Num 是否已赋值
                      * @return Num 是否已赋值
+                     * 
                      */
                     bool NumHasBeenSet() const;
 

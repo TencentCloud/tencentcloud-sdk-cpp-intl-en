@@ -50,378 +50,441 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability CVE ID
                      * @return CVEID Vulnerability CVE ID
+                     * 
                      */
                     std::string GetCVEID() const;
 
                     /**
                      * 设置Vulnerability CVE ID
-                     * @param CVEID Vulnerability CVE ID
+                     * @param _cVEID Vulnerability CVE ID
+                     * 
                      */
                     void SetCVEID(const std::string& _cVEID);
 
                     /**
                      * 判断参数 CVEID 是否已赋值
                      * @return CVEID 是否已赋值
+                     * 
                      */
                     bool CVEIDHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability name
                      * @return VulName Vulnerability name
+                     * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 设置Vulnerability name
-                     * @param VulName Vulnerability name
+                     * @param _vulName Vulnerability name
+                     * 
                      */
                     void SetVulName(const std::string& _vulName);
 
                     /**
                      * 判断参数 VulName 是否已赋值
                      * @return VulName 是否已赋值
+                     * 
                      */
                     bool VulNameHasBeenSet() const;
 
                     /**
                      * 获取POC ID
                      * @return PocID POC ID
+                     * 
                      */
                     std::string GetPocID() const;
 
                     /**
                      * 设置POC ID
-                     * @param PocID POC ID
+                     * @param _pocID POC ID
+                     * 
                      */
                     void SetPocID(const std::string& _pocID);
 
                     /**
                      * 判断参数 PocID 是否已赋值
                      * @return PocID 是否已赋值
+                     * 
                      */
                     bool PocIDHasBeenSet() const;
 
                     /**
                      * 获取Intrusion status
                      * @return EventType Intrusion status
+                     * 
                      */
                     std::string GetEventType() const;
 
                     /**
                      * 设置Intrusion status
-                     * @param EventType Intrusion status
+                     * @param _eventType Intrusion status
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Attacker IP
                      * @return SourceIP Attacker IP
+                     * 
                      */
                     std::string GetSourceIP() const;
 
                     /**
                      * 设置Attacker IP
-                     * @param SourceIP Attacker IP
+                     * @param _sourceIP Attacker IP
+                     * 
                      */
                     void SetSourceIP(const std::string& _sourceIP);
 
                     /**
                      * 判断参数 SourceIP 是否已赋值
                      * @return SourceIP 是否已赋值
+                     * 
                      */
                     bool SourceIPHasBeenSet() const;
 
                     /**
                      * 获取Region of the attacker IP
                      * @return City Region of the attacker IP
+                     * 
                      */
                     std::string GetCity() const;
 
                     /**
                      * 设置Region of the attacker IP
-                     * @param City Region of the attacker IP
+                     * @param _city Region of the attacker IP
+                     * 
                      */
                     void SetCity(const std::string& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 
                     /**
                      * 获取Number of events
                      * @return EventCount Number of events
+                     * 
                      */
                     int64_t GetEventCount() const;
 
                     /**
                      * 设置Number of events
-                     * @param EventCount Number of events
+                     * @param _eventCount Number of events
+                     * 
                      */
                     void SetEventCount(const int64_t& _eventCount);
 
                     /**
                      * 判断参数 EventCount 是否已赋值
                      * @return EventCount 是否已赋值
+                     * 
                      */
                     bool EventCountHasBeenSet() const;
 
                     /**
                      * 获取Container ID
                      * @return ContainerID Container ID
+                     * 
                      */
                     std::string GetContainerID() const;
 
                     /**
                      * 设置Container ID
-                     * @param ContainerID Container ID
+                     * @param _containerID Container ID
+                     * 
                      */
                     void SetContainerID(const std::string& _containerID);
 
                     /**
                      * 判断参数 ContainerID 是否已赋值
                      * @return ContainerID 是否已赋值
+                     * 
                      */
                     bool ContainerIDHasBeenSet() const;
 
                     /**
                      * 获取Container name
                      * @return ContainerName Container name
+                     * 
                      */
                     std::string GetContainerName() const;
 
                     /**
                      * 设置Container name
-                     * @param ContainerName Container name
+                     * @param _containerName Container name
+                     * 
                      */
                     void SetContainerName(const std::string& _containerName);
 
                     /**
                      * 判断参数 ContainerName 是否已赋值
                      * @return ContainerName 是否已赋值
+                     * 
                      */
                     bool ContainerNameHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Processing status
                      * @return Status Processing status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Processing status
-                     * @param Status Processing status
+                     * @param _status Processing status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Attacker port
                      * @return SourcePort Attacker port
+                     * 
                      */
                     std::vector<std::string> GetSourcePort() const;
 
                     /**
                      * 设置Attacker port
-                     * @param SourcePort Attacker port
+                     * @param _sourcePort Attacker port
+                     * 
                      */
                     void SetSourcePort(const std::vector<std::string>& _sourcePort);
 
                     /**
                      * 判断参数 SourcePort 是否已赋值
                      * @return SourcePort 是否已赋值
+                     * 
                      */
                     bool SourcePortHasBeenSet() const;
 
                     /**
                      * 获取Event ID
                      * @return EventID Event ID
+                     * 
                      */
                     int64_t GetEventID() const;
 
                     /**
                      * 设置Event ID
-                     * @param EventID Event ID
+                     * @param _eventID Event ID
+                     * 
                      */
                     void SetEventID(const int64_t& _eventID);
 
                     /**
                      * 判断参数 EventID 是否已赋值
                      * @return EventID 是否已赋值
+                     * 
                      */
                     bool EventIDHasBeenSet() const;
 
                     /**
                      * 获取Server name
                      * @return HostName Server name
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Server name
-                     * @param HostName Server name
+                     * @param _hostName Server name
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
                     /**
                      * 获取Server private IP
                      * @return HostIP Server private IP
+                     * 
                      */
                     std::string GetHostIP() const;
 
                     /**
                      * 设置Server private IP
-                     * @param HostIP Server private IP
+                     * @param _hostIP Server private IP
+                     * 
                      */
                     void SetHostIP(const std::string& _hostIP);
 
                     /**
                      * 判断参数 HostIP 是否已赋值
                      * @return HostIP 是否已赋值
+                     * 
                      */
                     bool HostIPHasBeenSet() const;
 
                     /**
                      * 获取Server public IP
                      * @return PublicIP Server public IP
+                     * 
                      */
                     std::string GetPublicIP() const;
 
                     /**
                      * 设置Server public IP
-                     * @param PublicIP Server public IP
+                     * @param _publicIP Server public IP
+                     * 
                      */
                     void SetPublicIP(const std::string& _publicIP);
 
                     /**
                      * 判断参数 PublicIP 是否已赋值
                      * @return PublicIP 是否已赋值
+                     * 
                      */
                     bool PublicIPHasBeenSet() const;
 
                     /**
                      * 获取Pod name
                      * @return PodName Pod name
+                     * 
                      */
                     std::string GetPodName() const;
 
                     /**
                      * 设置Pod name
-                     * @param PodName Pod name
+                     * @param _podName Pod name
+                     * 
                      */
                     void SetPodName(const std::string& _podName);
 
                     /**
                      * 判断参数 PodName 是否已赋值
                      * @return PodName 是否已赋值
+                     * 
                      */
                     bool PodNameHasBeenSet() const;
 
                     /**
                      * 获取Harm description
                      * @return Description Harm description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Harm description
-                     * @param Description Harm description
+                     * @param _description Harm description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Fix suggestion
                      * @return OfficialSolution Fix suggestion
+                     * 
                      */
                     std::string GetOfficialSolution() const;
 
                     /**
                      * 设置Fix suggestion
-                     * @param OfficialSolution Fix suggestion
+                     * @param _officialSolution Fix suggestion
+                     * 
                      */
                     void SetOfficialSolution(const std::string& _officialSolution);
 
                     /**
                      * 判断参数 OfficialSolution 是否已赋值
                      * @return OfficialSolution 是否已赋值
+                     * 
                      */
                     bool OfficialSolutionHasBeenSet() const;
 
                     /**
                      * 获取Attack packet
                      * @return NetworkPayload Attack packet
+                     * 
                      */
                     std::string GetNetworkPayload() const;
 
                     /**
                      * 设置Attack packet
-                     * @param NetworkPayload Attack packet
+                     * @param _networkPayload Attack packet
+                     * 
                      */
                     void SetNetworkPayload(const std::string& _networkPayload);
 
                     /**
                      * 判断参数 NetworkPayload 是否已赋值
                      * @return NetworkPayload 是否已赋值
+                     * 
                      */
                     bool NetworkPayloadHasBeenSet() const;
 
@@ -430,20 +493,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PID Process PID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPID() const;
 
                     /**
                      * 设置Process PID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PID Process PID
+                     * @param _pID Process PID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPID(const int64_t& _pID);
 
                     /**
                      * 判断参数 PID 是否已赋值
                      * @return PID 是否已赋值
+                     * 
                      */
                     bool PIDHasBeenSet() const;
 
@@ -452,20 +518,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MainClass Main class name of the process
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMainClass() const;
 
                     /**
                      * 设置Main class name of the process
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MainClass Main class name of the process
+                     * @param _mainClass Main class name of the process
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMainClass(const std::string& _mainClass);
 
                     /**
                      * 判断参数 MainClass 是否已赋值
                      * @return MainClass 是否已赋值
+                     * 
                      */
                     bool MainClassHasBeenSet() const;
 
@@ -474,20 +543,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StackTrace Stack information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStackTrace() const;
 
                     /**
                      * 设置Stack information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StackTrace Stack information
+                     * @param _stackTrace Stack information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStackTrace(const std::string& _stackTrace);
 
                     /**
                      * 判断参数 StackTrace 是否已赋值
                      * @return StackTrace 是否已赋值
+                     * 
                      */
                     bool StackTraceHasBeenSet() const;
 
@@ -496,20 +568,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerAccount Listened account
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServerAccount() const;
 
                     /**
                      * 设置Listened account
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServerAccount Listened account
+                     * @param _serverAccount Listened account
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServerAccount(const std::string& _serverAccount);
 
                     /**
                      * 判断参数 ServerAccount 是否已赋值
                      * @return ServerAccount 是否已赋值
+                     * 
                      */
                     bool ServerAccountHasBeenSet() const;
 
@@ -518,20 +593,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerPort Listened port
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServerPort() const;
 
                     /**
                      * 设置Listened port
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServerPort Listened port
+                     * @param _serverPort Listened port
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServerPort(const std::string& _serverPort);
 
                     /**
                      * 判断参数 ServerPort 是否已赋值
                      * @return ServerPort 是否已赋值
+                     * 
                      */
                     bool ServerPortHasBeenSet() const;
 
@@ -540,20 +618,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerExe Process path
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServerExe() const;
 
                     /**
                      * 设置Process path
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServerExe Process path
+                     * @param _serverExe Process path
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServerExe(const std::string& _serverExe);
 
                     /**
                      * 判断参数 ServerExe 是否已赋值
                      * @return ServerExe 是否已赋值
+                     * 
                      */
                     bool ServerExeHasBeenSet() const;
 
@@ -562,20 +643,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerArg Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServerArg() const;
 
                     /**
                      * 设置Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServerArg Process command line parameter
+                     * @param _serverArg Process command line parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServerArg(const std::string& _serverArg);
 
                     /**
                      * 判断参数 ServerArg 是否已赋值
                      * @return ServerArg 是否已赋值
+                     * 
                      */
                     bool ServerArgHasBeenSet() const;
 
@@ -584,20 +668,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QUUID Server QUuid
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetQUUID() const;
 
                     /**
                      * 设置Server QUuid
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param QUUID Server QUuid
+                     * @param _qUUID Server QUuid
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQUUID(const std::string& _qUUID);
 
                     /**
                      * 判断参数 QUUID 是否已赋值
                      * @return QUUID 是否已赋值
+                     * 
                      */
                     bool QUUIDHasBeenSet() const;
 
@@ -618,6 +705,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContainerNetStatus() const;
 
@@ -630,7 +718,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainerNetStatus Isolation status
+                     * @param _containerNetStatus Isolation status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
 `ISOLATING`: 		Isolating.
@@ -638,12 +726,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
 
                     /**
                      * 判断参数 ContainerNetStatus 是否已赋值
                      * @return ContainerNetStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetStatusHasBeenSet() const;
 
@@ -666,6 +756,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 	"UNKNOW"              // The reason is unknown.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
@@ -679,7 +770,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 	"UNKNOW"              // The reason is unknown.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainerNetSubStatus Sub-status of the container
+                     * @param _containerNetSubStatus Sub-status of the container
 "AGENT_OFFLINE"       // The agent is offline.
 	"NODE_DESTROYED"      // The node is terminated.
 	"CONTAINER_EXITED"    // The container exited.
@@ -688,12 +779,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 	"UNKNOW"              // The reason is unknown.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
 
                     /**
                      * 判断参数 ContainerNetSubStatus 是否已赋值
                      * @return ContainerNetSubStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetSubStatusHasBeenSet() const;
 
@@ -702,20 +795,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ContainerIsolateOperationSrc Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
                      * 设置Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainerIsolateOperationSrc Container isolation operation source
+                     * @param _containerIsolateOperationSrc Container isolation operation source
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
 
                     /**
                      * 判断参数 ContainerIsolateOperationSrc 是否已赋值
                      * @return ContainerIsolateOperationSrc 是否已赋值
+                     * 
                      */
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
@@ -738,6 +834,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContainerStatus() const;
 
@@ -751,7 +848,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ContainerStatus Container status
+                     * @param _containerStatus Container status
 `RUNNING`: Running.
 `PAUSED`: Paused.
 `STOPPED`: Stopped.
@@ -760,12 +857,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContainerStatus(const std::string& _containerStatus);
 
                     /**
                      * 判断参数 ContainerStatus 是否已赋值
                      * @return ContainerStatus 是否已赋值
+                     * 
                      */
                     bool ContainerStatusHasBeenSet() const;
 
@@ -774,20 +873,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JNDIUrl API URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetJNDIUrl() const;
 
                     /**
                      * 设置API URL
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param JNDIUrl API URL
+                     * @param _jNDIUrl API URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetJNDIUrl(const std::string& _jNDIUrl);
 
                     /**
                      * 判断参数 JNDIUrl 是否已赋值
                      * @return JNDIUrl 是否已赋值
+                     * 
                      */
                     bool JNDIUrlHasBeenSet() const;
 
@@ -796,20 +898,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return RaspDetail RASP details
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<RaspInfo> GetRaspDetail() const;
 
                     /**
                      * 设置RASP details
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param RaspDetail RASP details
+                     * @param _raspDetail RASP details
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetRaspDetail(const std::vector<RaspInfo>& _raspDetail);
 
                     /**
                      * 判断参数 RaspDetail 是否已赋值
                      * @return RaspDetail 是否已赋值
+                     * 
                      */
                     bool RaspDetailHasBeenSet() const;
 

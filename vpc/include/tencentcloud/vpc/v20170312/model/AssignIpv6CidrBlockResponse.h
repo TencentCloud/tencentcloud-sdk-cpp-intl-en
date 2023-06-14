@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
                      * @return Ipv6CidrBlock The assigned `IPv6` IP range, such as `3402:4e00:20:1000::/56`
+                     * 
                      */
                     std::string GetIpv6CidrBlock() const;
 
                     /**
                      * 判断参数 Ipv6CidrBlock 是否已赋值
                      * @return Ipv6CidrBlock 是否已赋值
+                     * 
                      */
                     bool Ipv6CidrBlockHasBeenSet() const;
 

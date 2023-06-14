@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the key to be disabled.
                      * @return AccessKeyId ID of the key to be disabled.
+                     * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
                      * 设置ID of the key to be disabled.
-                     * @param AccessKeyId ID of the key to be disabled.
+                     * @param _accessKeyId ID of the key to be disabled.
+                     * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
 
                     /**
                      * 判断参数 AccessKeyId 是否已赋值
                      * @return AccessKeyId 是否已赋值
+                     * 
                      */
                     bool AccessKeyIdHasBeenSet() const;
 

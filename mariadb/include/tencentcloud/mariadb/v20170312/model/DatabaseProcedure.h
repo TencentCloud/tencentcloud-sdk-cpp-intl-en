@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Stored procedure name
                      * @return Proc Stored procedure name
+                     * 
                      */
                     std::string GetProc() const;
 
                     /**
                      * 设置Stored procedure name
-                     * @param Proc Stored procedure name
+                     * @param _proc Stored procedure name
+                     * 
                      */
                     void SetProc(const std::string& _proc);
 
                     /**
                      * 判断参数 Proc 是否已赋值
                      * @return Proc 是否已赋值
+                     * 
                      */
                     bool ProcHasBeenSet() const;
 

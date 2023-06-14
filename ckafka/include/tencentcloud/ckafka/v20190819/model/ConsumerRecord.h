@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Topic name
                      * @return Topic Topic name
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置Topic name
-                     * @param Topic Topic name
+                     * @param _topic Topic name
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 
                     /**
                      * 获取Partition ID
                      * @return Partition Partition ID
+                     * 
                      */
                     int64_t GetPartition() const;
 
                     /**
                      * 设置Partition ID
-                     * @param Partition Partition ID
+                     * @param _partition Partition ID
+                     * 
                      */
                     void SetPartition(const int64_t& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Key Message key
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Message key
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Key Message key
+                     * @param _key Message key
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Value Message value
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Message value
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Value Message value
+                     * @param _value Message value
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Timestamp Message timestamp
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 设置Message timestamp
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Timestamp Message timestamp
+                     * @param _timestamp Message timestamp
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
@@ -171,20 +189,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Headers Message headers
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeaders() const;
 
                     /**
                      * 设置Message headers
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Headers Message headers
+                     * @param _headers Message headers
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaders(const std::string& _headers);
 
                     /**
                      * 判断参数 Headers 是否已赋值
                      * @return Headers 是否已赋值
+                     * 
                      */
                     bool HeadersHasBeenSet() const;
 

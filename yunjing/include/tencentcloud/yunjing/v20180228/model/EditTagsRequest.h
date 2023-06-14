@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Tag name
                      * @return Name Tag name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Tag name
-                     * @param Name Tag name
+                     * @param _name Tag name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Tag ID
                      * @return Id Tag ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Tag ID
-                     * @param Id Tag ID
+                     * @param _id Tag ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取CVM instance ID
                      * @return Quuids CVM instance ID
+                     * 
                      */
                     std::vector<std::string> GetQuuids() const;
 
                     /**
                      * 设置CVM instance ID
-                     * @param Quuids CVM instance ID
+                     * @param _quuids CVM instance ID
+                     * 
                      */
                     void SetQuuids(const std::vector<std::string>& _quuids);
 
                     /**
                      * 判断参数 Quuids 是否已赋值
                      * @return Quuids 是否已赋值
+                     * 
                      */
                     bool QuuidsHasBeenSet() const;
 

@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Thread ID.
                      * @return ID Thread ID.
+                     * 
                      */
                     std::string GetID() const;
 
                     /**
                      * 设置Thread ID.
-                     * @param ID Thread ID.
+                     * @param _iD Thread ID.
+                     * 
                      */
                     void SetID(const std::string& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Thread operation account name.
                      * @return User Thread operation account name.
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置Thread operation account name.
-                     * @param User Thread operation account name.
+                     * @param _user Thread operation account name.
+                     * 
                      */
                     void SetUser(const std::string& _user);
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
                     /**
                      * 获取Thread operation host address.
                      * @return Host Thread operation host address.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Thread operation host address.
-                     * @param Host Thread operation host address.
+                     * @param _host Thread operation host address.
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取Thread operation database.
                      * @return DB Thread operation database.
+                     * 
                      */
                     std::string GetDB() const;
 
                     /**
                      * 设置Thread operation database.
-                     * @param DB Thread operation database.
+                     * @param _dB Thread operation database.
+                     * 
                      */
                     void SetDB(const std::string& _dB);
 
                     /**
                      * 判断参数 DB 是否已赋值
                      * @return DB 是否已赋值
+                     * 
                      */
                     bool DBHasBeenSet() const;
 
                     /**
                      * 获取Thread operation status.
                      * @return State Thread operation status.
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置Thread operation status.
-                     * @param State Thread operation status.
+                     * @param _state Thread operation status.
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Thread execution type.
                      * @return Command Thread execution type.
+                     * 
                      */
                     std::string GetCommand() const;
 
                     /**
                      * 设置Thread execution type.
-                     * @param Command Thread execution type.
+                     * @param _command Thread execution type.
+                     * 
                      */
                     void SetCommand(const std::string& _command);
 
                     /**
                      * 判断参数 Command 是否已赋值
                      * @return Command 是否已赋值
+                     * 
                      */
                     bool CommandHasBeenSet() const;
 
                     /**
                      * 获取Thread operation duration in seconds.
                      * @return Time Thread operation duration in seconds.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Thread operation duration in seconds.
-                     * @param Time Thread operation duration in seconds.
+                     * @param _time Thread operation duration in seconds.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Thread operation statement.
                      * @return Info Thread operation statement.
+                     * 
                      */
                     std::string GetInfo() const;
 
                     /**
                      * 设置Thread operation statement.
-                     * @param Info Thread operation statement.
+                     * @param _info Thread operation statement.
+                     * 
                      */
                     void SetInfo(const std::string& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

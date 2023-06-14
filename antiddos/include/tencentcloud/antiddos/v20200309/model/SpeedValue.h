@@ -55,6 +55,7 @@ namespace TencentCloud
 `1`: packets per second (pps)
 `2`: bits per second (bps)
 ]
+                     * 
                      */
                     uint64_t GetType() const;
 
@@ -63,34 +64,39 @@ namespace TencentCloud
 `1`: packets per second (pps)
 `2`: bits per second (bps)
 ]
-                     * @param Type Rate limit value types:
+                     * @param _type Rate limit value types:
 `1`: packets per second (pps)
 `2`: bits per second (bps)
 ]
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Value
                      * @return Value Value
+                     * 
                      */
                     uint64_t GetValue() const;
 
                     /**
                      * 设置Value
-                     * @param Value Value
+                     * @param _value Value
+                     * 
                      */
                     void SetValue(const uint64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

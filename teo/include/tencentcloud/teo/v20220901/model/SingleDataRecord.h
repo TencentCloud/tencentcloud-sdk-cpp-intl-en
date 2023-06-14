@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The query dimension value.
                      * @return TypeKey The query dimension value.
+                     * 
                      */
                     std::string GetTypeKey() const;
 
                     /**
                      * 设置The query dimension value.
-                     * @param TypeKey The query dimension value.
+                     * @param _typeKey The query dimension value.
+                     * 
                      */
                     void SetTypeKey(const std::string& _typeKey);
 
                     /**
                      * 判断参数 TypeKey 是否已赋值
                      * @return TypeKey 是否已赋值
+                     * 
                      */
                     bool TypeKeyHasBeenSet() const;
 
                     /**
                      * 获取Value of the metric under the query dimension.
                      * @return TypeValue Value of the metric under the query dimension.
+                     * 
                      */
                     std::vector<SingleTypeValue> GetTypeValue() const;
 
                     /**
                      * 设置Value of the metric under the query dimension.
-                     * @param TypeValue Value of the metric under the query dimension.
+                     * @param _typeValue Value of the metric under the query dimension.
+                     * 
                      */
                     void SetTypeValue(const std::vector<SingleTypeValue>& _typeValue);
 
                     /**
                      * 判断参数 TypeValue 是否已赋值
                      * @return TypeValue 是否已赋值
+                     * 
                      */
                     bool TypeValueHasBeenSet() const;
 

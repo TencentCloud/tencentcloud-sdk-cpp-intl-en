@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Action Action: `drop` (block), `trans` (allow), `monitor` (observe)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action: `drop` (block), `trans` (allow), `monitor` (observe)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Action Action: `drop` (block), `trans` (allow), `monitor` (observe)
+                     * @param _action Action: `drop` (block), `trans` (allow), `monitor` (observe)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MatchFrom Matches by IP or region. Values: `ip` and `area`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMatchFrom() const;
 
                     /**
                      * 设置Matches by IP or region. Values: `ip` and `area`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MatchFrom Matches by IP or region. Values: `ip` and `area`.
+                     * @param _matchFrom Matches by IP or region. Values: `ip` and `area`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
 
                     /**
                      * 判断参数 MatchFrom 是否已赋值
                      * @return MatchFrom 是否已赋值
+                     * 
                      */
                     bool MatchFromHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MatchContent Matching content
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMatchContent() const;
 
                     /**
                      * 设置Matching content
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MatchContent Matching content
+                     * @param _matchContent Matching content
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMatchContent(const std::string& _matchContent);
 
                     /**
                      * 判断参数 MatchContent 是否已赋值
                      * @return MatchContent 是否已赋值
+                     * 
                      */
                     bool MatchContentHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleID Rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置Rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleID Rule ID
+                     * @param _ruleID Rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

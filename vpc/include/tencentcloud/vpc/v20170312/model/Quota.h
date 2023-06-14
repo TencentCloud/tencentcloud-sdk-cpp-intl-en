@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
                      * @return QuotaId Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
+                     * 
                      */
                     std::string GetQuotaId() const;
 
                     /**
                      * 设置Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
-                     * @param QuotaId Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
+                     * @param _quotaId Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
+                     * 
                      */
                     void SetQuotaId(const std::string& _quotaId);
 
                     /**
                      * 判断参数 QuotaId 是否已赋值
                      * @return QuotaId 是否已赋值
+                     * 
                      */
                     bool QuotaIdHasBeenSet() const;
 
                     /**
                      * 获取Current count
                      * @return QuotaCurrent Current count
+                     * 
                      */
                     int64_t GetQuotaCurrent() const;
 
                     /**
                      * 设置Current count
-                     * @param QuotaCurrent Current count
+                     * @param _quotaCurrent Current count
+                     * 
                      */
                     void SetQuotaCurrent(const int64_t& _quotaCurrent);
 
                     /**
                      * 判断参数 QuotaCurrent 是否已赋值
                      * @return QuotaCurrent 是否已赋值
+                     * 
                      */
                     bool QuotaCurrentHasBeenSet() const;
 
                     /**
                      * 获取Quota
                      * @return QuotaLimit Quota
+                     * 
                      */
                     int64_t GetQuotaLimit() const;
 
                     /**
                      * 设置Quota
-                     * @param QuotaLimit Quota
+                     * @param _quotaLimit Quota
+                     * 
                      */
                     void SetQuotaLimit(const int64_t& _quotaLimit);
 
                     /**
                      * 判断参数 QuotaLimit 是否已赋值
                      * @return QuotaLimit 是否已赋值
+                     * 
                      */
                     bool QuotaLimitHasBeenSet() const;
 

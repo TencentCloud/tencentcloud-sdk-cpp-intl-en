@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Process name.
                      * @return ProcessName Process name.
+                     * 
                      */
                     std::string GetProcessName() const;
 
                     /**
                      * 设置Process name.
-                     * @param ProcessName Process name.
+                     * @param _processName Process name.
+                     * 
                      */
                     void SetProcessName(const std::string& _processName);
 
                     /**
                      * 判断参数 ProcessName 是否已赋值
                      * @return ProcessName 是否已赋值
+                     * 
                      */
                     bool ProcessNameHasBeenSet() const;
 
                     /**
                      * 获取Number of servers.
                      * @return MachineNum Number of servers.
+                     * 
                      */
                     uint64_t GetMachineNum() const;
 
                     /**
                      * 设置Number of servers.
-                     * @param MachineNum Number of servers.
+                     * @param _machineNum Number of servers.
+                     * 
                      */
                     void SetMachineNum(const uint64_t& _machineNum);
 
                     /**
                      * 判断参数 MachineNum 是否已赋值
                      * @return MachineNum 是否已赋值
+                     * 
                      */
                     bool MachineNumHasBeenSet() const;
 

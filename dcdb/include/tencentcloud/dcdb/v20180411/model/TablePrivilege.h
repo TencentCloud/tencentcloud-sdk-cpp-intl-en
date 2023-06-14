@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Database name
                      * @return Database Database name
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name
-                     * @param Database Database name
+                     * @param _database Database name
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
                     /**
                      * 获取Table name
                      * @return Table Table name
+                     * 
                      */
                     std::string GetTable() const;
 
                     /**
                      * 设置Table name
-                     * @param Table Table name
+                     * @param _table Table name
+                     * 
                      */
                     void SetTable(const std::string& _table);
 
                     /**
                      * 判断参数 Table 是否已赋值
                      * @return Table 是否已赋值
+                     * 
                      */
                     bool TableHasBeenSet() const;
 
                     /**
                      * 获取Permission information
                      * @return Privileges Permission information
+                     * 
                      */
                     std::vector<std::string> GetPrivileges() const;
 
                     /**
                      * 设置Permission information
-                     * @param Privileges Permission information
+                     * @param _privileges Permission information
+                     * 
                      */
                     void SetPrivileges(const std::vector<std::string>& _privileges);
 
                     /**
                      * 判断参数 Privileges 是否已赋值
                      * @return Privileges 是否已赋值
+                     * 
                      */
                     bool PrivilegesHasBeenSet() const;
 

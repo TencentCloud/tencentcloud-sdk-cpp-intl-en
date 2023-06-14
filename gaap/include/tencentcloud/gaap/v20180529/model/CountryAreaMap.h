@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Country name.
                      * @return NationCountryName Country name.
+                     * 
                      */
                     std::string GetNationCountryName() const;
 
                     /**
                      * 设置Country name.
-                     * @param NationCountryName Country name.
+                     * @param _nationCountryName Country name.
+                     * 
                      */
                     void SetNationCountryName(const std::string& _nationCountryName);
 
                     /**
                      * 判断参数 NationCountryName 是否已赋值
                      * @return NationCountryName 是否已赋值
+                     * 
                      */
                     bool NationCountryNameHasBeenSet() const;
 
                     /**
                      * 获取Country code.
                      * @return NationCountryInnerCode Country code.
+                     * 
                      */
                     std::string GetNationCountryInnerCode() const;
 
                     /**
                      * 设置Country code.
-                     * @param NationCountryInnerCode Country code.
+                     * @param _nationCountryInnerCode Country code.
+                     * 
                      */
                     void SetNationCountryInnerCode(const std::string& _nationCountryInnerCode);
 
                     /**
                      * 判断参数 NationCountryInnerCode 是否已赋值
                      * @return NationCountryInnerCode 是否已赋值
+                     * 
                      */
                     bool NationCountryInnerCodeHasBeenSet() const;
 
                     /**
                      * 获取Region name.
                      * @return GeographicalZoneName Region name.
+                     * 
                      */
                     std::string GetGeographicalZoneName() const;
 
                     /**
                      * 设置Region name.
-                     * @param GeographicalZoneName Region name.
+                     * @param _geographicalZoneName Region name.
+                     * 
                      */
                     void SetGeographicalZoneName(const std::string& _geographicalZoneName);
 
                     /**
                      * 判断参数 GeographicalZoneName 是否已赋值
                      * @return GeographicalZoneName 是否已赋值
+                     * 
                      */
                     bool GeographicalZoneNameHasBeenSet() const;
 
                     /**
                      * 获取Region code.
                      * @return GeographicalZoneInnerCode Region code.
+                     * 
                      */
                     std::string GetGeographicalZoneInnerCode() const;
 
                     /**
                      * 设置Region code.
-                     * @param GeographicalZoneInnerCode Region code.
+                     * @param _geographicalZoneInnerCode Region code.
+                     * 
                      */
                     void SetGeographicalZoneInnerCode(const std::string& _geographicalZoneInnerCode);
 
                     /**
                      * 判断参数 GeographicalZoneInnerCode 是否已赋值
                      * @return GeographicalZoneInnerCode 是否已赋值
+                     * 
                      */
                     bool GeographicalZoneInnerCodeHasBeenSet() const;
 
                     /**
                      * 获取Continent name.
                      * @return ContinentName Continent name.
+                     * 
                      */
                     std::string GetContinentName() const;
 
                     /**
                      * 设置Continent name.
-                     * @param ContinentName Continent name.
+                     * @param _continentName Continent name.
+                     * 
                      */
                     void SetContinentName(const std::string& _continentName);
 
                     /**
                      * 判断参数 ContinentName 是否已赋值
                      * @return ContinentName 是否已赋值
+                     * 
                      */
                     bool ContinentNameHasBeenSet() const;
 
                     /**
                      * 获取Continent code.
                      * @return ContinentInnerCode Continent code.
+                     * 
                      */
                     std::string GetContinentInnerCode() const;
 
                     /**
                      * 设置Continent code.
-                     * @param ContinentInnerCode Continent code.
+                     * @param _continentInnerCode Continent code.
+                     * 
                      */
                     void SetContinentInnerCode(const std::string& _continentInnerCode);
 
                     /**
                      * 判断参数 ContinentInnerCode 是否已赋值
                      * @return ContinentInnerCode 是否已赋值
+                     * 
                      */
                     bool ContinentInnerCodeHasBeenSet() const;
 
@@ -159,20 +177,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remark information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remark information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Remark information
+                     * @param _remark Remark information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

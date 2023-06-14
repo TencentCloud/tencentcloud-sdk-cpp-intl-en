@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Short order ID.
                      * @return DealIds Short order ID.
+                     * 
                      */
                     std::vector<std::string> GetDealIds() const;
 
                     /**
                      * 判断参数 DealIds 是否已赋值
                      * @return DealIds 是否已赋值
+                     * 
                      */
                     bool DealIdsHasBeenSet() const;
 
                     /**
                      * 获取Instance ID list
                      * @return InstanceIds Instance ID list
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

@@ -55,6 +55,7 @@ namespace TencentCloud
                      * @return Type The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
 <li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -62,15 +63,17 @@ namespace TencentCloud
                      * 设置The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
 <li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
-                     * @param Type The storage type for a media processing output file. Valid values:
+                     * @param _type The storage type for a media processing output file. Valid values:
 <li>`COS`: Tencent Cloud COS</li>
 <li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -79,20 +82,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     CosOutputStorage GetCosOutputStorage() const;
 
                     /**
                      * 设置The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+                     * @param _cosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCosOutputStorage(const CosOutputStorage& _cosOutputStorage);
 
                     /**
                      * 判断参数 CosOutputStorage 是否已赋值
                      * @return CosOutputStorage 是否已赋值
+                     * 
                      */
                     bool CosOutputStorageHasBeenSet() const;
 
@@ -101,20 +107,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     S3OutputStorage GetS3OutputStorage() const;
 
                     /**
                      * 设置The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+                     * @param _s3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetS3OutputStorage(const S3OutputStorage& _s3OutputStorage);
 
                     /**
                      * 判断参数 S3OutputStorage 是否已赋值
                      * @return S3OutputStorage 是否已赋值
+                     * 
                      */
                     bool S3OutputStorageHasBeenSet() const;
 

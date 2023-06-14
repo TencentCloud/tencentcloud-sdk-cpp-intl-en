@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Process type
                      * @return Type Process type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Process type
-                     * @param Type Process type
+                     * @param _type Process type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Process status
                      * @return Status Process status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Process status
-                     * @param Status Process status
+                     * @param _status Process status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LastProbeTime Last time when the status is probed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastProbeTime() const;
 
                     /**
                      * 设置Last time when the status is probed
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LastProbeTime Last time when the status is probed
+                     * @param _lastProbeTime Last time when the status is probed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastProbeTime(const std::string& _lastProbeTime);
 
                     /**
                      * 判断参数 LastProbeTime 是否已赋值
                      * @return LastProbeTime 是否已赋值
+                     * 
                      */
                     bool LastProbeTimeHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LastTransitionTime Last time when transiting to the process
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastTransitionTime() const;
 
                     /**
                      * 设置Last time when transiting to the process
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LastTransitionTime Last time when transiting to the process
+                     * @param _lastTransitionTime Last time when transiting to the process
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastTransitionTime(const std::string& _lastTransitionTime);
 
                     /**
                      * 判断参数 LastTransitionTime 是否已赋值
                      * @return LastTransitionTime 是否已赋值
+                     * 
                      */
                     bool LastTransitionTimeHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Reason Reasons for transiting to the process
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置Reasons for transiting to the process
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Reason Reasons for transiting to the process
+                     * @param _reason Reasons for transiting to the process
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReason(const std::string& _reason);
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Message More information on transition
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置More information on transition
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Message More information on transition
+                     * @param _message More information on transition
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

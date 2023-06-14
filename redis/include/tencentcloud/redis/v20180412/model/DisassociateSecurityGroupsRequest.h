@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Database engine name, which is `redis` for this API.
                      * @return Product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Database engine name, which is `redis` for this API.
-                     * @param Product Database engine name, which is `redis` for this API.
+                     * @param _product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Security group ID
                      * @return SecurityGroupId Security group ID
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置Security group ID
-                     * @param SecurityGroupId Security group ID
+                     * @param _securityGroupId Security group ID
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取List of instance IDs, which is an array of one or more instance IDs.
                      * @return InstanceIds List of instance IDs, which is an array of one or more instance IDs.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of instance IDs, which is an array of one or more instance IDs.
-                     * @param InstanceIds List of instance IDs, which is an array of one or more instance IDs.
+                     * @param _instanceIds List of instance IDs, which is an array of one or more instance IDs.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

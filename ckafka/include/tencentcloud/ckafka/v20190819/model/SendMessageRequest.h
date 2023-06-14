@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Datahub access ID.
                      * @return DataHubId Datahub access ID.
+                     * 
                      */
                     std::string GetDataHubId() const;
 
                     /**
                      * 设置Datahub access ID.
-                     * @param DataHubId Datahub access ID.
+                     * @param _dataHubId Datahub access ID.
+                     * 
                      */
                     void SetDataHubId(const std::string& _dataHubId);
 
                     /**
                      * 判断参数 DataHubId 是否已赋值
                      * @return DataHubId 是否已赋值
+                     * 
                      */
                     bool DataHubIdHasBeenSet() const;
 
                     /**
                      * 获取Content of the message that has been sent. Up to 500 messages can be sent in a single request.
                      * @return Message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+                     * 
                      */
                     std::vector<BatchContent> GetMessage() const;
 
                     /**
                      * 设置Content of the message that has been sent. Up to 500 messages can be sent in a single request.
-                     * @param Message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+                     * @param _message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+                     * 
                      */
                     void SetMessage(const std::vector<BatchContent>& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

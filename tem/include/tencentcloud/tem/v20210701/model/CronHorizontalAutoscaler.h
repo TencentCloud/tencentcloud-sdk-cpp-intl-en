@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of a scheduled scaling policy
                      * @return Name Name of a scheduled scaling policy
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a scheduled scaling policy
-                     * @param Name Name of a scheduled scaling policy
+                     * @param _name Name of a scheduled scaling policy
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -78,6 +81,7 @@ Examples:
 * * * (every day)
 * * 0-3 (every Sunday through Wednesday)
 1,11,21 * * (1st, 11th, and 21st of every month)
+                     * 
                      */
                     std::string GetPeriod() const;
 
@@ -88,72 +92,83 @@ Examples:
 * * * (every day)
 * * 0-3 (every Sunday through Wednesday)
 1,11,21 * * (1st, 11th, and 21st of every month)
-                     * @param Period Policy period
+                     * @param _period Policy period
 "* * *" indicates three ranges. The first is day, the second month, and the third week. The three parts are separated by spaces.
 Examples:
 * * * (every day)
 * * 0-3 (every Sunday through Wednesday)
 1,11,21 * * (1st, 11th, and 21st of every month)
+                     * 
                      */
                     void SetPeriod(const std::string& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Details of a scheduled scaling policy
                      * @return Schedules Details of a scheduled scaling policy
+                     * 
                      */
                     std::vector<CronHorizontalAutoscalerSchedule> GetSchedules() const;
 
                     /**
                      * 设置Details of a scheduled scaling policy
-                     * @param Schedules Details of a scheduled scaling policy
+                     * @param _schedules Details of a scheduled scaling policy
+                     * 
                      */
                     void SetSchedules(const std::vector<CronHorizontalAutoscalerSchedule>& _schedules);
 
                     /**
                      * 判断参数 Schedules 是否已赋值
                      * @return Schedules 是否已赋值
+                     * 
                      */
                     bool SchedulesHasBeenSet() const;
 
                     /**
                      * 获取Enabled or not
                      * @return Enabled Enabled or not
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Enabled or not
-                     * @param Enabled Enabled or not
+                     * @param _enabled Enabled or not
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Policy priority. The higher the value, the higher the priority. The minimum value is 0.
                      * @return Priority Policy priority. The higher the value, the higher the priority. The minimum value is 0.
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 设置Policy priority. The higher the value, the higher the priority. The minimum value is 0.
-                     * @param Priority Policy priority. The higher the value, the higher the priority. The minimum value is 0.
+                     * @param _priority Policy priority. The higher the value, the higher the priority. The minimum value is 0.
+                     * 
                      */
                     void SetPriority(const int64_t& _priority);
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 

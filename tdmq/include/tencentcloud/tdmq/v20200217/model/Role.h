@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Role name.
                      * @return RoleName Role name.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name.
-                     * @param RoleName Role name.
+                     * @param _roleName Role name.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
                     /**
                      * 获取Value of the role token.
                      * @return Token Value of the role token.
+                     * 
                      */
                     std::string GetToken() const;
 
                     /**
                      * 设置Value of the role token.
-                     * @param Token Value of the role token.
+                     * @param _token Value of the role token.
+                     * 
                      */
                     void SetToken(const std::string& _token);
 
                     /**
                      * 判断参数 Token 是否已赋值
                      * @return Token 是否已赋值
+                     * 
                      */
                     bool TokenHasBeenSet() const;
 
                     /**
                      * 获取Remarks.
                      * @return Remark Remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks.
-                     * @param Remark Remarks.
+                     * @param _remark Remarks.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return CreateTime Creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreateTime Creation time.
+                     * @param _createTime Creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time.
                      * @return UpdateTime Update time.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time.
-                     * @param UpdateTime Update time.
+                     * @param _updateTime Update time.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

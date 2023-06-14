@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Protocol port instance ID, such as `ppm-f5n1f8da`.
                      * @return ServiceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
+                     * 
                      */
                     std::string GetServiceTemplateId() const;
 
                     /**
                      * 设置Protocol port instance ID, such as `ppm-f5n1f8da`.
-                     * @param ServiceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
+                     * @param _serviceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
+                     * 
                      */
                     void SetServiceTemplateId(const std::string& _serviceTemplateId);
 
                     /**
                      * 判断参数 ServiceTemplateId 是否已赋值
                      * @return ServiceTemplateId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Template name.
                      * @return ServiceTemplateName Template name.
+                     * 
                      */
                     std::string GetServiceTemplateName() const;
 
                     /**
                      * 设置Template name.
-                     * @param ServiceTemplateName Template name.
+                     * @param _serviceTemplateName Template name.
+                     * 
                      */
                     void SetServiceTemplateName(const std::string& _serviceTemplateName);
 
                     /**
                      * 判断参数 ServiceTemplateName 是否已赋值
                      * @return ServiceTemplateName 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Protocol port information.
                      * @return ServiceSet Protocol port information.
+                     * 
                      */
                     std::vector<std::string> GetServiceSet() const;
 
                     /**
                      * 设置Protocol port information.
-                     * @param ServiceSet Protocol port information.
+                     * @param _serviceSet Protocol port information.
+                     * 
                      */
                     void SetServiceSet(const std::vector<std::string>& _serviceSet);
 
                     /**
                      * 判断参数 ServiceSet 是否已赋值
                      * @return ServiceSet 是否已赋值
+                     * 
                      */
                     bool ServiceSetHasBeenSet() const;
 
                     /**
                      * 获取Creation Time.
                      * @return CreatedTime Creation Time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation Time.
-                     * @param CreatedTime Creation Time.
+                     * @param _createdTime Creation Time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Protocol port template information with remarks
                      * @return ServiceExtraSet Protocol port template information with remarks
+                     * 
                      */
                     std::vector<ServicesInfo> GetServiceExtraSet() const;
 
                     /**
                      * 设置Protocol port template information with remarks
-                     * @param ServiceExtraSet Protocol port template information with remarks
+                     * @param _serviceExtraSet Protocol port template information with remarks
+                     * 
                      */
                     void SetServiceExtraSet(const std::vector<ServicesInfo>& _serviceExtraSet);
 
                     /**
                      * 判断参数 ServiceExtraSet 是否已赋值
                      * @return ServiceExtraSet 是否已赋值
+                     * 
                      */
                     bool ServiceExtraSetHasBeenSet() const;
 

@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Logset Logset information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     LogSetInfo GetLogset() const;
 
                     /**
                      * 设置Logset information
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Logset Logset information
+                     * @param _logset Logset information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogset(const LogSetInfo& _logset);
 
                     /**
                      * 判断参数 Logset 是否已赋值
                      * @return Logset 是否已赋值
+                     * 
                      */
                     bool LogsetHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Topics Log topic information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TopicInfo> GetTopics() const;
 
                     /**
                      * 设置Log topic information
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Topics Log topic information
+                     * @param _topics Log topic information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopics(const std::vector<TopicInfo>& _topics);
 
                     /**
                      * 判断参数 Topics 是否已赋值
                      * @return Topics 是否已赋值
+                     * 
                      */
                     bool TopicsHasBeenSet() const;
 

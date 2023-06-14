@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Value fixed at "monitor"
                      * @return Module Value fixed at "monitor"
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Value fixed at "monitor"
-                     * @param Module Value fixed at "monitor"
+                     * @param _module Value fixed at "monitor"
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Monitor type filter. Valid values: MT_QCE (Tencent Cloud service monitoring)
                      * @return MonitorType Monitor type filter. Valid values: MT_QCE (Tencent Cloud service monitoring)
+                     * 
                      */
                     std::string GetMonitorType() const;
 
                     /**
                      * 设置Monitor type filter. Valid values: MT_QCE (Tencent Cloud service monitoring)
-                     * @param MonitorType Monitor type filter. Valid values: MT_QCE (Tencent Cloud service monitoring)
+                     * @param _monitorType Monitor type filter. Valid values: MT_QCE (Tencent Cloud service monitoring)
+                     * 
                      */
                     void SetMonitorType(const std::string& _monitorType);
 
                     /**
                      * 判断参数 MonitorType 是否已赋值
                      * @return MonitorType 是否已赋值
+                     * 
                      */
                     bool MonitorTypeHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
                      * @return Namespace Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
-                     * @param Namespace Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+                     * @param _namespace Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

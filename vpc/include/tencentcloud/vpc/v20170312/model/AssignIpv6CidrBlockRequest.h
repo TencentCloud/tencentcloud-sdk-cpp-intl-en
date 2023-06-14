@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
                      * @return VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
-                     * @param VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * @param _vpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 

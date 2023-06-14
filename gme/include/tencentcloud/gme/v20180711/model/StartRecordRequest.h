@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Application ID.
                      * @return BizId Application ID.
+                     * 
                      */
                     uint64_t GetBizId() const;
 
                     /**
                      * 设置Application ID.
-                     * @param BizId Application ID.
+                     * @param _bizId Application ID.
+                     * 
                      */
                     void SetBizId(const uint64_t& _bizId);
 
                     /**
                      * 判断参数 BizId 是否已赋值
                      * @return BizId 是否已赋值
+                     * 
                      */
                     bool BizIdHasBeenSet() const;
 
                     /**
                      * 获取Room ID.
                      * @return RoomId Room ID.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置Room ID.
-                     * @param RoomId Room ID.
+                     * @param _roomId Room ID.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
                      * @return RecordMode Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+                     * 
                      */
                     uint64_t GetRecordMode() const;
 
                     /**
                      * 设置Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
-                     * @param RecordMode Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+                     * @param _recordMode Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+                     * 
                      */
                     void SetRecordMode(const uint64_t& _recordMode);
 
                     /**
                      * 判断参数 RecordMode 是否已赋值
                      * @return RecordMode 是否已赋值
+                     * 
                      */
                     bool RecordModeHasBeenSet() const;
 
                     /**
                      * 获取Allowlist or blocklist for stream subscription. If you do not specify this parameter, the audio streams of all the users in the room are subscribed to by default.
                      * @return SubscribeRecordUserIds Allowlist or blocklist for stream subscription. If you do not specify this parameter, the audio streams of all the users in the room are subscribed to by default.
+                     * 
                      */
                     SubscribeRecordUserIds GetSubscribeRecordUserIds() const;
 
                     /**
                      * 设置Allowlist or blocklist for stream subscription. If you do not specify this parameter, the audio streams of all the users in the room are subscribed to by default.
-                     * @param SubscribeRecordUserIds Allowlist or blocklist for stream subscription. If you do not specify this parameter, the audio streams of all the users in the room are subscribed to by default.
+                     * @param _subscribeRecordUserIds Allowlist or blocklist for stream subscription. If you do not specify this parameter, the audio streams of all the users in the room are subscribed to by default.
+                     * 
                      */
                     void SetSubscribeRecordUserIds(const SubscribeRecordUserIds& _subscribeRecordUserIds);
 
                     /**
                      * 判断参数 SubscribeRecordUserIds 是否已赋值
                      * @return SubscribeRecordUserIds 是否已赋值
+                     * 
                      */
                     bool SubscribeRecordUserIdsHasBeenSet() const;
 

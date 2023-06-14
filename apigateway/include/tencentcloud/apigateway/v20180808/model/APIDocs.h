@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of API documents
                      * @return TotalCount Number of API documents
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of API documents
-                     * @param TotalCount Number of API documents
+                     * @param _totalCount Number of API documents
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Basic information of API document
                      * @return APIDocSet Basic information of API document
+                     * 
                      */
                     std::vector<APIDoc> GetAPIDocSet() const;
 
                     /**
                      * 设置Basic information of API document
-                     * @param APIDocSet Basic information of API document
+                     * @param _aPIDocSet Basic information of API document
+                     * 
                      */
                     void SetAPIDocSet(const std::vector<APIDoc>& _aPIDocSet);
 
                     /**
                      * 判断参数 APIDocSet 是否已赋值
                      * @return APIDocSet 是否已赋值
+                     * 
                      */
                     bool APIDocSetHasBeenSet() const;
 

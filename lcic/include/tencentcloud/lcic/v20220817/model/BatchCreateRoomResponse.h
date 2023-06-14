@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The IDs of the rooms created, which are in the same order as they are passed in.
                      * @return RoomIds The IDs of the rooms created, which are in the same order as they are passed in.
+                     * 
                      */
                     std::vector<uint64_t> GetRoomIds() const;
 
                     /**
                      * 判断参数 RoomIds 是否已赋值
                      * @return RoomIds 是否已赋值
+                     * 
                      */
                     bool RoomIdsHasBeenSet() const;
 

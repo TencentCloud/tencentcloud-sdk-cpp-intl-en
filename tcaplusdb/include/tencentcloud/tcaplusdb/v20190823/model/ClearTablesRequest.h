@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster instance where a table resides
                      * @return ClusterId ID of the cluster instance where a table resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster instance where a table resides
-                     * @param ClusterId ID of the cluster instance where a table resides
+                     * @param _clusterId ID of the cluster instance where a table resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of information of tables to be cleared
                      * @return SelectedTables List of information of tables to be cleared
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置List of information of tables to be cleared
-                     * @param SelectedTables List of information of tables to be cleared
+                     * @param _selectedTables List of information of tables to be cleared
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 

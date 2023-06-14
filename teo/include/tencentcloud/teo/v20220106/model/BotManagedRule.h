@@ -51,56 +51,65 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ManagedIds ID of the rule to be enabled
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetManagedIds() const;
 
                     /**
                      * 设置ID of the rule to be enabled
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ManagedIds ID of the rule to be enabled
+                     * @param _managedIds ID of the rule to be enabled
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetManagedIds(const std::vector<int64_t>& _managedIds);
 
                     /**
                      * 判断参数 ManagedIds 是否已赋值
                      * @return ManagedIds 是否已赋值
+                     * 
                      */
                     bool ManagedIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of the rule being applied
                      * @return RuleID ID of the rule being applied
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置ID of the rule being applied
-                     * @param RuleID ID of the rule being applied
+                     * @param _ruleID ID of the rule being applied
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
                     /**
                      * 获取Action of the rule. Values: `drop`; `trans`; `monitor`; `alg`.
                      * @return Action Action of the rule. Values: `drop`; `trans`; `monitor`; `alg`.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action of the rule. Values: `drop`; `trans`; `monitor`; `alg`.
-                     * @param Action Action of the rule. Values: `drop`; `trans`; `monitor`; `alg`.
+                     * @param _action Action of the rule. Values: `drop`; `trans`; `monitor`; `alg`.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PunishTime The amount of time the IP is blocked
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
                      * 设置The amount of time the IP is blocked
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PunishTime The amount of time the IP is blocked
+                     * @param _punishTime The amount of time the IP is blocked
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
 
                     /**
                      * 判断参数 PunishTime 是否已赋值
                      * @return PunishTime 是否已赋值
+                     * 
                      */
                     bool PunishTimeHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PunishTimeUnit Unit of IP blocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetPunishTimeUnit() const;
 
                     /**
                      * 设置Unit of IP blocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PunishTimeUnit Unit of IP blocking time
+                     * @param _punishTimeUnit Unit of IP blocking time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPunishTimeUnit(const std::string& _punishTimeUnit);
 
                     /**
                      * 判断参数 PunishTimeUnit 是否已赋值
                      * @return PunishTimeUnit 是否已赋值
+                     * 
                      */
                     bool PunishTimeUnitHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Name Name of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Name Name of the custom block page
+                     * @param _name Name of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -175,20 +193,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PageId ID of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPageId() const;
 
                     /**
                      * 设置ID of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PageId ID of the custom block page
+                     * @param _pageId ID of the custom block page
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPageId(const int64_t& _pageId);
 
                     /**
                      * 判断参数 PageId 是否已赋值
                      * @return PageId 是否已赋值
+                     * 
                      */
                     bool PageIdHasBeenSet() const;
 
@@ -197,20 +218,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RedirectUrl Redirection URL, which must be a subdomain name of your site encoded by URLEncode
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置Redirection URL, which must be a subdomain name of your site encoded by URLEncode
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RedirectUrl Redirection URL, which must be a subdomain name of your site encoded by URLEncode
+                     * @param _redirectUrl Redirection URL, which must be a subdomain name of your site encoded by URLEncode
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
                     /**
                      * 判断参数 RedirectUrl 是否已赋值
                      * @return RedirectUrl 是否已赋值
+                     * 
                      */
                     bool RedirectUrlHasBeenSet() const;
 
@@ -219,20 +243,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ResponseCode Response code returned after redirection
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetResponseCode() const;
 
                     /**
                      * 设置Response code returned after redirection
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ResponseCode Response code returned after redirection
+                     * @param _responseCode Response code returned after redirection
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetResponseCode(const int64_t& _responseCode);
 
                     /**
                      * 判断参数 ResponseCode 是否已赋值
                      * @return ResponseCode 是否已赋值
+                     * 
                      */
                     bool ResponseCodeHasBeenSet() const;
 
@@ -241,20 +268,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TransManagedIds ID of the rule that is set to allow requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetTransManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to allow requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TransManagedIds ID of the rule that is set to allow requests
+                     * @param _transManagedIds ID of the rule that is set to allow requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTransManagedIds(const std::vector<int64_t>& _transManagedIds);
 
                     /**
                      * 判断参数 TransManagedIds 是否已赋值
                      * @return TransManagedIds 是否已赋值
+                     * 
                      */
                     bool TransManagedIdsHasBeenSet() const;
 
@@ -263,20 +293,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AlgManagedIds ID of the rule that is set to verify requests by JavaScript challenge
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetAlgManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to verify requests by JavaScript challenge
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AlgManagedIds ID of the rule that is set to verify requests by JavaScript challenge
+                     * @param _algManagedIds ID of the rule that is set to verify requests by JavaScript challenge
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAlgManagedIds(const std::vector<int64_t>& _algManagedIds);
 
                     /**
                      * 判断参数 AlgManagedIds 是否已赋值
                      * @return AlgManagedIds 是否已赋值
+                     * 
                      */
                     bool AlgManagedIdsHasBeenSet() const;
 
@@ -285,20 +318,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CapManagedIds ID of the rule that is set to verify requests by CAPTCHA
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetCapManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to verify requests by CAPTCHA
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CapManagedIds ID of the rule that is set to verify requests by CAPTCHA
+                     * @param _capManagedIds ID of the rule that is set to verify requests by CAPTCHA
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCapManagedIds(const std::vector<int64_t>& _capManagedIds);
 
                     /**
                      * 判断参数 CapManagedIds 是否已赋值
                      * @return CapManagedIds 是否已赋值
+                     * 
                      */
                     bool CapManagedIdsHasBeenSet() const;
 
@@ -307,20 +343,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MonManagedIds ID of the rule that is set to observe requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetMonManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to observe requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MonManagedIds ID of the rule that is set to observe requests
+                     * @param _monManagedIds ID of the rule that is set to observe requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMonManagedIds(const std::vector<int64_t>& _monManagedIds);
 
                     /**
                      * 判断参数 MonManagedIds 是否已赋值
                      * @return MonManagedIds 是否已赋值
+                     * 
                      */
                     bool MonManagedIdsHasBeenSet() const;
 
@@ -329,20 +368,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DropManagedIds ID of the rule that is set to block requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetDropManagedIds() const;
 
                     /**
                      * 设置ID of the rule that is set to block requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DropManagedIds ID of the rule that is set to block requests
+                     * @param _dropManagedIds ID of the rule that is set to block requests
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDropManagedIds(const std::vector<int64_t>& _dropManagedIds);
 
                     /**
                      * 判断参数 DropManagedIds 是否已赋值
                      * @return DropManagedIds 是否已赋值
+                     * 
                      */
                     bool DropManagedIdsHasBeenSet() const;
 

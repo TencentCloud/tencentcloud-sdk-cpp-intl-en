@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the object.
                      * @return UniqueId Unique ID of the object.
+                     * 
                      */
                     std::string GetUniqueId() const;
 
                     /**
                      * 设置Unique ID of the object.
-                     * @param UniqueId Unique ID of the object.
+                     * @param _uniqueId Unique ID of the object.
+                     * 
                      */
                     void SetUniqueId(const std::string& _uniqueId);
 
                     /**
                      * 判断参数 UniqueId 是否已赋值
                      * @return UniqueId 是否已赋值
+                     * 
                      */
                     bool UniqueIdHasBeenSet() const;
 
                     /**
                      * 获取Dimension set of an object instance, which is a jsonObj string.
                      * @return Dimensions Dimension set of an object instance, which is a jsonObj string.
+                     * 
                      */
                     std::string GetDimensions() const;
 
                     /**
                      * 设置Dimension set of an object instance, which is a jsonObj string.
-                     * @param Dimensions Dimension set of an object instance, which is a jsonObj string.
+                     * @param _dimensions Dimension set of an object instance, which is a jsonObj string.
+                     * 
                      */
                     void SetDimensions(const std::string& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
                     /**
                      * 获取Whether the object is shielded. The value 0 indicates that the object is not shielded. The value 1 indicates that the object is shielded.
                      * @return IsShielded Whether the object is shielded. The value 0 indicates that the object is not shielded. The value 1 indicates that the object is shielded.
+                     * 
                      */
                     int64_t GetIsShielded() const;
 
                     /**
                      * 设置Whether the object is shielded. The value 0 indicates that the object is not shielded. The value 1 indicates that the object is shielded.
-                     * @param IsShielded Whether the object is shielded. The value 0 indicates that the object is not shielded. The value 1 indicates that the object is shielded.
+                     * @param _isShielded Whether the object is shielded. The value 0 indicates that the object is not shielded. The value 1 indicates that the object is shielded.
+                     * 
                      */
                     void SetIsShielded(const int64_t& _isShielded);
 
                     /**
                      * 判断参数 IsShielded 是否已赋值
                      * @return IsShielded 是否已赋值
+                     * 
                      */
                     bool IsShieldedHasBeenSet() const;
 
                     /**
                      * 获取Region where the object resides.
                      * @return Region Region where the object resides.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region where the object resides.
-                     * @param Region Region where the object resides.
+                     * @param _region Region where the object resides.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

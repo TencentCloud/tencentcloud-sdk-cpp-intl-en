@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取User ID.
                      * @return UserId User ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Username.
                      * @return UserName Username.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ThirdPartyAccounts Third-Party account binding information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ThirdPartyAccountInfo> GetThirdPartyAccounts() const;
 
                     /**
                      * 判断参数 ThirdPartyAccounts 是否已赋值
                      * @return ThirdPartyAccounts 是否已赋值
+                     * 
                      */
                     bool ThirdPartyAccountsHasBeenSet() const;
 

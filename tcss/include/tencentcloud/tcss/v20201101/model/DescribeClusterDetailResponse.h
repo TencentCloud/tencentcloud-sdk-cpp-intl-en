@@ -46,300 +46,350 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Progress of the current cluster scan task. `100` indicates that the scan is completed.
                      * @return ScanTaskProgress Progress of the current cluster scan task. `100` indicates that the scan is completed.
+                     * 
                      */
                     int64_t GetScanTaskProgress() const;
 
                     /**
                      * 判断参数 ScanTaskProgress 是否已赋值
                      * @return ScanTaskProgress 是否已赋值
+                     * 
                      */
                     bool ScanTaskProgressHasBeenSet() const;
 
                     /**
                      * 获取Cluster version
                      * @return ClusterVersion Cluster version
+                     * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
                      * 判断参数 ClusterVersion 是否已赋值
                      * @return ClusterVersion 是否已赋值
+                     * 
                      */
                     bool ClusterVersionHasBeenSet() const;
 
                     /**
                      * 获取Runtime component
                      * @return ContainerRuntime Runtime component
+                     * 
                      */
                     std::string GetContainerRuntime() const;
 
                     /**
                      * 判断参数 ContainerRuntime 是否已赋值
                      * @return ContainerRuntime 是否已赋值
+                     * 
                      */
                     bool ContainerRuntimeHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes in the cluster
                      * @return ClusterNodeNum Number of nodes in the cluster
+                     * 
                      */
                     uint64_t GetClusterNodeNum() const;
 
                     /**
                      * 判断参数 ClusterNodeNum 是否已赋值
                      * @return ClusterNodeNum 是否已赋值
+                     * 
                      */
                     bool ClusterNodeNumHasBeenSet() const;
 
                     /**
                      * 获取Cluster status. Valid values: `Running`, `Creating`, `Abnormal`.
                      * @return ClusterStatus Cluster status. Valid values: `Running`, `Creating`, `Abnormal`.
+                     * 
                      */
                     std::string GetClusterStatus() const;
 
                     /**
                      * 判断参数 ClusterStatus 是否已赋值
                      * @return ClusterStatus 是否已赋值
+                     * 
                      */
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
                      * 获取Cluster type. Valid values: `MANAGED_CLUSTER` (managed cluster); `INDEPENDENT_CLUSTER` (self-deployed cluster).
                      * @return ClusterType Cluster type. Valid values: `MANAGED_CLUSTER` (managed cluster); `INDEPENDENT_CLUSTER` (self-deployed cluster).
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
                      * 获取Cluster region
                      * @return Region Cluster region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Number of critical check items
                      * @return SeriousRiskCount Number of critical check items
+                     * 
                      */
                     uint64_t GetSeriousRiskCount() const;
 
                     /**
                      * 判断参数 SeriousRiskCount 是否已赋值
                      * @return SeriousRiskCount 是否已赋值
+                     * 
                      */
                     bool SeriousRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Number of high-risk check items
                      * @return HighRiskCount Number of high-risk check items
+                     * 
                      */
                     uint64_t GetHighRiskCount() const;
 
                     /**
                      * 判断参数 HighRiskCount 是否已赋值
                      * @return HighRiskCount 是否已赋值
+                     * 
                      */
                     bool HighRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Number of medium-risk check items
                      * @return MiddleRiskCount Number of medium-risk check items
+                     * 
                      */
                     uint64_t GetMiddleRiskCount() const;
 
                     /**
                      * 判断参数 MiddleRiskCount 是否已赋值
                      * @return MiddleRiskCount 是否已赋值
+                     * 
                      */
                     bool MiddleRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Number of prompt-risk check items
                      * @return HintRiskCount Number of prompt-risk check items
+                     * 
                      */
                     uint64_t GetHintRiskCount() const;
 
                     /**
                      * 判断参数 HintRiskCount 是否已赋值
                      * @return HintRiskCount 是否已赋值
+                     * 
                      */
                     bool HintRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Status of the check task
                      * @return CheckStatus Status of the check task
+                     * 
                      */
                     std::string GetCheckStatus() const;
 
                     /**
                      * 判断参数 CheckStatus 是否已赋值
                      * @return CheckStatus 是否已赋值
+                     * 
                      */
                     bool CheckStatusHasBeenSet() const;
 
                     /**
                      * 获取Status of the defender
                      * @return DefenderStatus Status of the defender
+                     * 
                      */
                     std::string GetDefenderStatus() const;
 
                     /**
                      * 判断参数 DefenderStatus 是否已赋值
                      * @return DefenderStatus 是否已赋值
+                     * 
                      */
                     bool DefenderStatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the scan task
                      * @return TaskCreateTime Creation time of the scan task
+                     * 
                      */
                     std::string GetTaskCreateTime() const;
 
                     /**
                      * 判断参数 TaskCreateTime 是否已赋值
                      * @return TaskCreateTime 是否已赋值
+                     * 
                      */
                     bool TaskCreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Network type. Valid values: `PublicNetwork` (public network); `VPCNetwork` (VPC).
                      * @return NetworkType Network type. Valid values: `PublicNetwork` (public network); `VPCNetwork` (VPC).
+                     * 
                      */
                     std::string GetNetworkType() const;
 
                     /**
                      * 判断参数 NetworkType 是否已赋值
                      * @return NetworkType 是否已赋值
+                     * 
                      */
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
                      * 获取API server address
                      * @return ApiServerAddress API server address
+                     * 
                      */
                     std::string GetApiServerAddress() const;
 
                     /**
                      * 判断参数 ApiServerAddress 是否已赋值
                      * @return ApiServerAddress 是否已赋值
+                     * 
                      */
                     bool ApiServerAddressHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes
                      * @return NodeCount Number of nodes
+                     * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
                      * 判断参数 NodeCount 是否已赋值
                      * @return NodeCount 是否已赋值
+                     * 
                      */
                     bool NodeCountHasBeenSet() const;
 
                     /**
                      * 获取Number of namespaces
                      * @return NamespaceCount Number of namespaces
+                     * 
                      */
                     uint64_t GetNamespaceCount() const;
 
                     /**
                      * 判断参数 NamespaceCount 是否已赋值
                      * @return NamespaceCount 是否已赋值
+                     * 
                      */
                     bool NamespaceCountHasBeenSet() const;
 
                     /**
                      * 获取Number of workloads
                      * @return WorkloadCount Number of workloads
+                     * 
                      */
                     uint64_t GetWorkloadCount() const;
 
                     /**
                      * 判断参数 WorkloadCount 是否已赋值
                      * @return WorkloadCount 是否已赋值
+                     * 
                      */
                     bool WorkloadCountHasBeenSet() const;
 
                     /**
                      * 获取Number of Pods
                      * @return PodCount Number of Pods
+                     * 
                      */
                     uint64_t GetPodCount() const;
 
                     /**
                      * 判断参数 PodCount 是否已赋值
                      * @return PodCount 是否已赋值
+                     * 
                      */
                     bool PodCountHasBeenSet() const;
 
                     /**
                      * 获取Number of Services
                      * @return ServiceCount Number of Services
+                     * 
                      */
                     uint64_t GetServiceCount() const;
 
                     /**
                      * 判断参数 ServiceCount 是否已赋值
                      * @return ServiceCount 是否已赋值
+                     * 
                      */
                     bool ServiceCountHasBeenSet() const;
 
                     /**
                      * 获取Number of Ingresses
                      * @return IngressCount Number of Ingresses
+                     * 
                      */
                     uint64_t GetIngressCount() const;
 
                     /**
                      * 判断参数 IngressCount 是否已赋值
                      * @return IngressCount 是否已赋值
+                     * 
                      */
                     bool IngressCountHasBeenSet() const;
 
                     /**
                      * 获取IPs of the primary nodes
                      * @return MasterIps IPs of the primary nodes
+                     * 
                      */
                     std::string GetMasterIps() const;
 
                     /**
                      * 判断参数 MasterIps 是否已赋值
                      * @return MasterIps 是否已赋值
+                     * 
                      */
                     bool MasterIpsHasBeenSet() const;
 

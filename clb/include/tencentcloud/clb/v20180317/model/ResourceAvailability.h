@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Specific ISP resource information. Values: `CMCC`, `CUCC`, `CTCC`, `BGP`.
                      * @return Type Specific ISP resource information. Values: `CMCC`, `CUCC`, `CTCC`, `BGP`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Specific ISP resource information. Values: `CMCC`, `CUCC`, `CTCC`, `BGP`.
-                     * @param Type Specific ISP resource information. Values: `CMCC`, `CUCC`, `CTCC`, `BGP`.
+                     * @param _type Specific ISP resource information. Values: `CMCC`, `CUCC`, `CTCC`, `BGP`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Whether the resource is available. Values: `Available`, `Unavailable`
                      * @return Availability Whether the resource is available. Values: `Available`, `Unavailable`
+                     * 
                      */
                     std::string GetAvailability() const;
 
                     /**
                      * 设置Whether the resource is available. Values: `Available`, `Unavailable`
-                     * @param Availability Whether the resource is available. Values: `Available`, `Unavailable`
+                     * @param _availability Whether the resource is available. Values: `Available`, `Unavailable`
+                     * 
                      */
                     void SetAvailability(const std::string& _availability);
 
                     /**
                      * 判断参数 Availability 是否已赋值
                      * @return Availability 是否已赋值
+                     * 
                      */
                     bool AvailabilityHasBeenSet() const;
 

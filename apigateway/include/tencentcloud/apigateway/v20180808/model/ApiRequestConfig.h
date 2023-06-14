@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取path
                      * @return Path path
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置path
-                     * @param Path path
+                     * @param _path path
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Method
                      * @return Method Method
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Method
-                     * @param Method Method
+                     * @param _method Method
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 

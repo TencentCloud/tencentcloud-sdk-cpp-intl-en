@@ -52,180 +52,210 @@ namespace TencentCloud
                     /**
                      * 获取Compute environment ID
                      * @return EnvId Compute environment ID
+                     * 
                      */
                     std::string GetEnvId() const;
 
                     /**
                      * 设置Compute environment ID
-                     * @param EnvId Compute environment ID
+                     * @param _envId Compute environment ID
+                     * 
                      */
                     void SetEnvId(const std::string& _envId);
 
                     /**
                      * 判断参数 EnvId 是否已赋值
                      * @return EnvId 是否已赋值
+                     * 
                      */
                     bool EnvIdHasBeenSet() const;
 
                     /**
                      * 获取Compute environment name
                      * @return EnvName Compute environment name
+                     * 
                      */
                     std::string GetEnvName() const;
 
                     /**
                      * 设置Compute environment name
-                     * @param EnvName Compute environment name
+                     * @param _envName Compute environment name
+                     * 
                      */
                     void SetEnvName(const std::string& _envName);
 
                     /**
                      * 判断参数 EnvName 是否已赋值
                      * @return EnvName 是否已赋值
+                     * 
                      */
                     bool EnvNameHasBeenSet() const;
 
                     /**
                      * 获取Location information
                      * @return Placement Location information
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置Location information
-                     * @param Placement Location information
+                     * @param _placement Location information
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Compute node statistical metrics
                      * @return ComputeNodeMetrics Compute node statistical metrics
+                     * 
                      */
                     ComputeNodeMetrics GetComputeNodeMetrics() const;
 
                     /**
                      * 设置Compute node statistical metrics
-                     * @param ComputeNodeMetrics Compute node statistical metrics
+                     * @param _computeNodeMetrics Compute node statistical metrics
+                     * 
                      */
                     void SetComputeNodeMetrics(const ComputeNodeMetrics& _computeNodeMetrics);
 
                     /**
                      * 判断参数 ComputeNodeMetrics 是否已赋值
                      * @return ComputeNodeMetrics 是否已赋值
+                     * 
                      */
                     bool ComputeNodeMetricsHasBeenSet() const;
 
                     /**
                      * 获取Compute environment type
                      * @return EnvType Compute environment type
+                     * 
                      */
                     std::string GetEnvType() const;
 
                     /**
                      * 设置Compute environment type
-                     * @param EnvType Compute environment type
+                     * @param _envType Compute environment type
+                     * 
                      */
                     void SetEnvType(const std::string& _envType);
 
                     /**
                      * 判断参数 EnvType 是否已赋值
                      * @return EnvType 是否已赋值
+                     * 
                      */
                     bool EnvTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of desired compute nodes
                      * @return DesiredComputeNodeCount Number of desired compute nodes
+                     * 
                      */
                     uint64_t GetDesiredComputeNodeCount() const;
 
                     /**
                      * 设置Number of desired compute nodes
-                     * @param DesiredComputeNodeCount Number of desired compute nodes
+                     * @param _desiredComputeNodeCount Number of desired compute nodes
+                     * 
                      */
                     void SetDesiredComputeNodeCount(const uint64_t& _desiredComputeNodeCount);
 
                     /**
                      * 判断参数 DesiredComputeNodeCount 是否已赋值
                      * @return DesiredComputeNodeCount 是否已赋值
+                     * 
                      */
                     bool DesiredComputeNodeCountHasBeenSet() const;
 
                     /**
                      * 获取Compute environment resource type. Values: `CVM`, `CPM` (Bare Metal)
                      * @return ResourceType Compute environment resource type. Values: `CVM`, `CPM` (Bare Metal)
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Compute environment resource type. Values: `CVM`, `CPM` (Bare Metal)
-                     * @param ResourceType Compute environment resource type. Values: `CVM`, `CPM` (Bare Metal)
+                     * @param _resourceType Compute environment resource type. Values: `CVM`, `CPM` (Bare Metal)
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Next action
                      * @return NextAction Next action
+                     * 
                      */
                     std::string GetNextAction() const;
 
                     /**
                      * 设置Next action
-                     * @param NextAction Next action
+                     * @param _nextAction Next action
+                     * 
                      */
                     void SetNextAction(const std::string& _nextAction);
 
                     /**
                      * 判断参数 NextAction 是否已赋值
                      * @return NextAction 是否已赋值
+                     * 
                      */
                     bool NextActionHasBeenSet() const;
 
                     /**
                      * 获取Number of compute nodes added to the compute environment
                      * @return AttachedComputeNodeCount Number of compute nodes added to the compute environment
+                     * 
                      */
                     uint64_t GetAttachedComputeNodeCount() const;
 
                     /**
                      * 设置Number of compute nodes added to the compute environment
-                     * @param AttachedComputeNodeCount Number of compute nodes added to the compute environment
+                     * @param _attachedComputeNodeCount Number of compute nodes added to the compute environment
+                     * 
                      */
                     void SetAttachedComputeNodeCount(const uint64_t& _attachedComputeNodeCount);
 
                     /**
                      * 判断参数 AttachedComputeNodeCount 是否已赋值
                      * @return AttachedComputeNodeCount 是否已赋值
+                     * 
                      */
                     bool AttachedComputeNodeCountHasBeenSet() const;
 
@@ -234,20 +264,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Tags Tag list bound to the compute environment.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list bound to the compute environment.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Tags Tag list bound to the compute environment.
+                     * @param _tags Tag list bound to the compute environment.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

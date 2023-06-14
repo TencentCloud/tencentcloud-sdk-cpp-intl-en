@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取Globally unique CMK ID
                      * @return KeyId Globally unique CMK ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Alias that makes a key more recognizable and understandable
                      * @return Alias Alias that makes a key more recognizable and understandable
+                     * 
                      */
                     std::string GetAlias() const;
 
                     /**
                      * 判断参数 Alias 是否已赋值
                      * @return Alias 是否已赋值
+                     * 
                      */
                     bool AliasHasBeenSet() const;
 
                     /**
                      * 获取Key creation time in UNIX timestamp format
                      * @return CreateTime Key creation time in UNIX timestamp format
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取CMK description
                      * @return Description CMK description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取CMK status
                      * @return KeyState CMK status
+                     * 
                      */
                     std::string GetKeyState() const;
 
                     /**
                      * 判断参数 KeyState 是否已赋值
                      * @return KeyState 是否已赋值
+                     * 
                      */
                     bool KeyStateHasBeenSet() const;
 
                     /**
                      * 获取CMK usage
                      * @return KeyUsage CMK usage
+                     * 
                      */
                     std::string GetKeyUsage() const;
 
                     /**
                      * 判断参数 KeyUsage 是否已赋值
                      * @return KeyUsage 是否已赋值
+                     * 
                      */
                     bool KeyUsageHasBeenSet() const;
 
                     /**
                      * 获取Tag operation return code. 0: success; 1: internal error; 2: business processing error
                      * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+                     * 
                      */
                     uint64_t GetTagCode() const;
 
                     /**
                      * 判断参数 TagCode 是否已赋值
                      * @return TagCode 是否已赋值
+                     * 
                      */
                     bool TagCodeHasBeenSet() const;
 
                     /**
                      * 获取Tag operation return information
                      * @return TagMsg Tag operation return information
+                     * 
                      */
                     std::string GetTagMsg() const;
 
                     /**
                      * 判断参数 TagMsg 是否已赋值
                      * @return TagMsg 是否已赋值
+                     * 
                      */
                     bool TagMsgHasBeenSet() const;
 
@@ -144,12 +160,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetHsmClusterId() const;
 
                     /**
                      * 判断参数 HsmClusterId 是否已赋值
                      * @return HsmClusterId 是否已赋值
+                     * 
                      */
                     bool HsmClusterIdHasBeenSet() const;
 

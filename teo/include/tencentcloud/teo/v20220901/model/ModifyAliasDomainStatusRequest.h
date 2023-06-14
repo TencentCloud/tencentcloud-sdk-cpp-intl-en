@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return Paused Status of the alias domain name. Values:
 <li>`false`: Enable the alias domain name.</li>
 <li>`true`: Disable the alias domain name.</li>
+                     * 
                      */
                     bool GetPaused() const;
 
@@ -74,33 +78,38 @@ namespace TencentCloud
                      * 设置Status of the alias domain name. Values:
 <li>`false`: Enable the alias domain name.</li>
 <li>`true`: Disable the alias domain name.</li>
-                     * @param Paused Status of the alias domain name. Values:
+                     * @param _paused Status of the alias domain name. Values:
 <li>`false`: Enable the alias domain name.</li>
 <li>`true`: Disable the alias domain name.</li>
+                     * 
                      */
                     void SetPaused(const bool& _paused);
 
                     /**
                      * 判断参数 Paused 是否已赋值
                      * @return Paused 是否已赋值
+                     * 
                      */
                     bool PausedHasBeenSet() const;
 
                     /**
                      * 获取The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
                      * @return AliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+                     * 
                      */
                     std::vector<std::string> GetAliasNames() const;
 
                     /**
                      * 设置The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
-                     * @param AliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+                     * @param _aliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+                     * 
                      */
                     void SetAliasNames(const std::vector<std::string>& _aliasNames);
 
                     /**
                      * 判断参数 AliasNames 是否已赋值
                      * @return AliasNames 是否已赋值
+                     * 
                      */
                     bool AliasNamesHasBeenSet() const;
 

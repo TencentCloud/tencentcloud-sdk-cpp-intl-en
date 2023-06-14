@@ -46,144 +46,168 @@ namespace TencentCloud
                     /**
                      * 获取Statistical mode. Value: `sum`.
                      * @return Statistics Statistical mode. Value: `sum`.
+                     * 
                      */
                     std::string GetStatistics() const;
 
                     /**
                      * 设置Statistical mode. Value: `sum`.
-                     * @param Statistics Statistical mode. Value: `sum`.
+                     * @param _statistics Statistical mode. Value: `sum`.
+                     * 
                      */
                     void SetStatistics(const std::string& _statistics);
 
                     /**
                      * 判断参数 Statistics 是否已赋值
                      * @return Statistics 是否已赋值
+                     * 
                      */
                     bool StatisticsHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
                      * @return Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
-                     * @param Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * @param _business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
                      * @return Period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
-                     * @param Period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+                     * @param _period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Statistics start time, such as `2020-02-01 12:04:12`
                      * @return StartTime Statistics start time, such as `2020-02-01 12:04:12`
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Statistics start time, such as `2020-02-01 12:04:12`
-                     * @param StartTime Statistics start time, such as `2020-02-01 12:04:12`
+                     * @param _startTime Statistics start time, such as `2020-02-01 12:04:12`
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistics end time, such as `2020-02-03 18:03:23`
                      * @return EndTime Statistics end time, such as `2020-02-03 18:03:23`
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Statistics end time, such as `2020-02-03 18:03:23`
-                     * @param EndTime Statistics end time, such as `2020-02-03 18:03:23`
+                     * @param _endTime Statistics end time, such as `2020-02-03 18:03:23`
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The resource ID.
                      * @return Id The resource ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置The resource ID.
-                     * @param Id The resource ID.
+                     * @param _id The resource ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Specific domain name query
                      * @return Domain Specific domain name query
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Specific domain name query
-                     * @param Domain Specific domain name query
+                     * @param _domain Specific domain name query
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
                      * @return ProtoInfo Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
+                     * 
                      */
                     std::vector<ProtocolPort> GetProtoInfo() const;
 
                     /**
                      * 设置Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
-                     * @param ProtoInfo Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
+                     * @param _protoInfo Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
+                     * 
                      */
                     void SetProtoInfo(const std::vector<ProtocolPort>& _protoInfo);
 
                     /**
                      * 判断参数 ProtoInfo 是否已赋值
                      * @return ProtoInfo 是否已赋值
+                     * 
                      */
                     bool ProtoInfoHasBeenSet() const;
 

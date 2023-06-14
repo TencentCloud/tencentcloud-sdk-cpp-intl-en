@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of mssql-j8kv137v
                      * @return InstanceId Instance ID in the format of mssql-j8kv137v
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-j8kv137v
-                     * @param InstanceId Instance ID in the format of mssql-j8kv137v
+                     * @param _instanceId Instance ID in the format of mssql-j8kv137v
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Information of account for which to modify remarks
                      * @return Accounts Information of account for which to modify remarks
+                     * 
                      */
                     std::vector<AccountRemark> GetAccounts() const;
 
                     /**
                      * 设置Information of account for which to modify remarks
-                     * @param Accounts Information of account for which to modify remarks
+                     * @param _accounts Information of account for which to modify remarks
+                     * 
                      */
                     void SetAccounts(const std::vector<AccountRemark>& _accounts);
 
                     /**
                      * 判断参数 Accounts 是否已赋值
                      * @return Accounts 是否已赋值
+                     * 
                      */
                     bool AccountsHasBeenSet() const;
 

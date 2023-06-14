@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The details ID.
                      * @return Id The details ID.
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置The details ID.
-                     * @param Id The details ID.
+                     * @param _id The details ID.
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
                      * @return Action The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
-                     * @param Action The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
+                     * @param _action The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取The domains.
                      * @return Domain The domains.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The domains.
-                     * @param Domain The domains.
+                     * @param _domain The domains.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The status. Valid values: `SUCCESS`, `FAILURE`
                      * @return Status The status. Valid values: `SUCCESS`, `FAILURE`
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置The status. Valid values: `SUCCESS`, `FAILURE`
-                     * @param Status The status. Valid values: `SUCCESS`, `FAILURE`
+                     * @param _status The status. Valid values: `SUCCESS`, `FAILURE`
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -123,56 +135,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Reason The reason for failure.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置The reason for failure.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Reason The reason for failure.
+                     * @param _reason The reason for failure.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReason(const std::string& _reason);
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 
                     /**
                      * 获取The creation time.
                      * @return CreatedOn The creation time.
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置The creation time.
-                     * @param CreatedOn The creation time.
+                     * @param _createdOn The creation time.
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
                     /**
                      * 获取The update time.
                      * @return UpdatedOn The update time.
+                     * 
                      */
                     std::string GetUpdatedOn() const;
 
                     /**
                      * 设置The update time.
-                     * @param UpdatedOn The update time.
+                     * @param _updatedOn The update time.
+                     * 
                      */
                     void SetUpdatedOn(const std::string& _updatedOn);
 
                     /**
                      * 判断参数 UpdatedOn 是否已赋值
                      * @return UpdatedOn 是否已赋值
+                     * 
                      */
                     bool UpdatedOnHasBeenSet() const;
 
@@ -181,20 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TransferDnsResult Null: The DNS service is not transferred. `false`: The DNS service failed to be transferred. `true`: The DNS service is transferred successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetTransferDnsResult() const;
 
                     /**
                      * 设置Null: The DNS service is not transferred. `false`: The DNS service failed to be transferred. `true`: The DNS service is transferred successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TransferDnsResult Null: The DNS service is not transferred. `false`: The DNS service failed to be transferred. `true`: The DNS service is transferred successfully.
+                     * @param _transferDnsResult Null: The DNS service is not transferred. `false`: The DNS service failed to be transferred. `true`: The DNS service is transferred successfully.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransferDnsResult(const bool& _transferDnsResult);
 
                     /**
                      * 判断参数 TransferDnsResult 是否已赋值
                      * @return TransferDnsResult 是否已赋值
+                     * 
                      */
                     bool TransferDnsResultHasBeenSet() const;
 
@@ -203,20 +227,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReasonZh The reason for failure, expressed in Chinese.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReasonZh() const;
 
                     /**
                      * 设置The reason for failure, expressed in Chinese.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReasonZh The reason for failure, expressed in Chinese.
+                     * @param _reasonZh The reason for failure, expressed in Chinese.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReasonZh(const std::string& _reasonZh);
 
                     /**
                      * 判断参数 ReasonZh 是否已赋值
                      * @return ReasonZh 是否已赋值
+                     * 
                      */
                     bool ReasonZhHasBeenSet() const;
 
@@ -225,20 +252,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayStatus The payment status.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPayStatus() const;
 
                     /**
                      * 设置The payment status.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PayStatus The payment status.
+                     * @param _payStatus The payment status.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayStatus(const int64_t& _payStatus);
 
                     /**
                      * 判断参数 PayStatus 是否已赋值
                      * @return PayStatus 是否已赋值
+                     * 
                      */
                     bool PayStatusHasBeenSet() const;
 

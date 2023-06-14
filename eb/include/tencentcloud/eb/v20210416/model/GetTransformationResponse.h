@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Transformation rule list
                      * @return Transformations Transformation rule list
+                     * 
                      */
                     std::vector<Transformation> GetTransformations() const;
 
                     /**
                      * 判断参数 Transformations 是否已赋值
                      * @return Transformations 是否已赋值
+                     * 
                      */
                     bool TransformationsHasBeenSet() const;
 

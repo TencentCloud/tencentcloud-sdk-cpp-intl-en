@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Member UIN.
                      * @return MemberUin Member UIN.
+                     * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
                      * 设置Member UIN.
-                     * @param MemberUin Member UIN.
+                     * @param _memberUin Member UIN.
+                     * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
 
                     /**
                      * 判断参数 MemberUin 是否已赋值
                      * @return MemberUin 是否已赋值
+                     * 
                      */
                     bool MemberUinHasBeenSet() const;
 
                     /**
                      * 获取Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
                      * @return PolicyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
-                     * @param PolicyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+                     * @param _policyId Policy ID, which can be obtained through the `DescribeOrganizationMemberPolicies` API.
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取List of sub-account UINs of the organization admin, which can contain up to five UINs.
                      * @return OrgSubAccountUins List of sub-account UINs of the organization admin, which can contain up to five UINs.
+                     * 
                      */
                     std::vector<int64_t> GetOrgSubAccountUins() const;
 
                     /**
                      * 设置List of sub-account UINs of the organization admin, which can contain up to five UINs.
-                     * @param OrgSubAccountUins List of sub-account UINs of the organization admin, which can contain up to five UINs.
+                     * @param _orgSubAccountUins List of sub-account UINs of the organization admin, which can contain up to five UINs.
+                     * 
                      */
                     void SetOrgSubAccountUins(const std::vector<int64_t>& _orgSubAccountUins);
 
                     /**
                      * 判断参数 OrgSubAccountUins 是否已赋值
                      * @return OrgSubAccountUins 是否已赋值
+                     * 
                      */
                     bool OrgSubAccountUinsHasBeenSet() const;
 

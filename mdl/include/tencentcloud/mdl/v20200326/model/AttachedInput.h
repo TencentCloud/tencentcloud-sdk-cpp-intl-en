@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Input ID
                      * @return Id Input ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Input ID
-                     * @param Id Input ID
+                     * @param _id Input ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return AudioSelectors Audio selector for the input. There can be 0 to 20 audio selectors.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<AudioSelectorInfo> GetAudioSelectors() const;
 
                     /**
                      * 设置Audio selector for the input. There can be 0 to 20 audio selectors.
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param AudioSelectors Audio selector for the input. There can be 0 to 20 audio selectors.
+                     * @param _audioSelectors Audio selector for the input. There can be 0 to 20 audio selectors.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAudioSelectors(const std::vector<AudioSelectorInfo>& _audioSelectors);
 
                     /**
                      * 判断参数 AudioSelectors 是否已赋值
                      * @return AudioSelectors 是否已赋值
+                     * 
                      */
                     bool AudioSelectorsHasBeenSet() const;
 
@@ -93,20 +99,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return PullBehavior Pull mode. If the input type is `HLS_PULL` or `MP4_PULL`, you can set this parameter to `LOOP` or `ONCE`. `LOOP` is the default value.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetPullBehavior() const;
 
                     /**
                      * 设置Pull mode. If the input type is `HLS_PULL` or `MP4_PULL`, you can set this parameter to `LOOP` or `ONCE`. `LOOP` is the default value.
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param PullBehavior Pull mode. If the input type is `HLS_PULL` or `MP4_PULL`, you can set this parameter to `LOOP` or `ONCE`. `LOOP` is the default value.
+                     * @param _pullBehavior Pull mode. If the input type is `HLS_PULL` or `MP4_PULL`, you can set this parameter to `LOOP` or `ONCE`. `LOOP` is the default value.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPullBehavior(const std::string& _pullBehavior);
 
                     /**
                      * 判断参数 PullBehavior 是否已赋值
                      * @return PullBehavior 是否已赋值
+                     * 
                      */
                     bool PullBehaviorHasBeenSet() const;
 
@@ -115,20 +124,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return FailOverSettings Input failover configuration
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     FailOverSettings GetFailOverSettings() const;
 
                     /**
                      * 设置Input failover configuration
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param FailOverSettings Input failover configuration
+                     * @param _failOverSettings Input failover configuration
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetFailOverSettings(const FailOverSettings& _failOverSettings);
 
                     /**
                      * 判断参数 FailOverSettings 是否已赋值
                      * @return FailOverSettings 是否已赋值
+                     * 
                      */
                     bool FailOverSettingsHasBeenSet() const;
 

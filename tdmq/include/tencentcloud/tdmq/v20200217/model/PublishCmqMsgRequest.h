@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Topic name
                      * @return TopicName Topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-                     * @param TopicName Topic name
+                     * @param _topicName Topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Message content. The total message size is up to 1,024 KB.
                      * @return MsgContent Message content. The total message size is up to 1,024 KB.
+                     * 
                      */
                     std::string GetMsgContent() const;
 
                     /**
                      * 设置Message content. The total message size is up to 1,024 KB.
-                     * @param MsgContent Message content. The total message size is up to 1,024 KB.
+                     * @param _msgContent Message content. The total message size is up to 1,024 KB.
+                     * 
                      */
                     void SetMsgContent(const std::string& _msgContent);
 
                     /**
                      * 判断参数 MsgContent 是否已赋值
                      * @return MsgContent 是否已赋值
+                     * 
                      */
                     bool MsgContentHasBeenSet() const;
 
                     /**
                      * 获取Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
                      * @return MsgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
+                     * 
                      */
                     std::vector<std::string> GetMsgTag() const;
 
                     /**
                      * 设置Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
-                     * @param MsgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
+                     * @param _msgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
+                     * 
                      */
                     void SetMsgTag(const std::vector<std::string>& _msgTag);
 
                     /**
                      * 判断参数 MsgTag 是否已赋值
                      * @return MsgTag 是否已赋值
+                     * 
                      */
                     bool MsgTagHasBeenSet() const;
 

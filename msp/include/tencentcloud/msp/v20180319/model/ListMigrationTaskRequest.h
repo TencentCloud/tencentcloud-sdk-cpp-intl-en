@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The initial number of records, default value: 0
                      * @return Offset The initial number of records, default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The initial number of records, default value: 0
-                     * @param Offset The initial number of records, default value: 0
+                     * @param _offset The initial number of records, default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of records, default value: 10
                      * @return Limit Number of records, default value: 10
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of records, default value: 10
-                     * @param Limit Number of records, default value: 10
+                     * @param _limit Number of records, default value: 10
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Project ID, the default value is empty.
                      * @return ProjectId Project ID, the default value is empty.
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID, the default value is empty.
-                     * @param ProjectId Project ID, the default value is empty.
+                     * @param _projectId Project ID, the default value is empty.
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 

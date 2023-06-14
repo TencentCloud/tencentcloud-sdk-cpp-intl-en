@@ -53,6 +53,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -62,17 +63,19 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param StartTime The start time for query. You can query data from the past three months. The longest time period that can be queried is one month.
+                     * @param _startTime The start time for query. You can query data from the past three months. The longest time period that can be queried is one month.
 
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -87,6 +90,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -96,35 +100,40 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param EndTime The end time for query. You can query data from the past three months. The longest time period that can be queried is one month.
+                     * @param _endTime The end time for query. You can query data from the past three months. The longest time period that can be queried is one month.
 
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The push domains to query. If you leave this empty, the time shifting billing data of all push domains will be returned.
                      * @return PushDomains The push domains to query. If you leave this empty, the time shifting billing data of all push domains will be returned.
+                     * 
                      */
                     std::vector<std::string> GetPushDomains() const;
 
                     /**
                      * 设置The push domains to query. If you leave this empty, the time shifting billing data of all push domains will be returned.
-                     * @param PushDomains The push domains to query. If you leave this empty, the time shifting billing data of all push domains will be returned.
+                     * @param _pushDomains The push domains to query. If you leave this empty, the time shifting billing data of all push domains will be returned.
+                     * 
                      */
                     void SetPushDomains(const std::vector<std::string>& _pushDomains);
 
                     /**
                      * 判断参数 PushDomains 是否已赋值
                      * @return PushDomains 是否已赋值
+                     * 
                      */
                     bool PushDomainsHasBeenSet() const;
 

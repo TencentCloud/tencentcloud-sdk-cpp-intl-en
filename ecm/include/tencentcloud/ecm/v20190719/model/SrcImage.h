@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取System name
                      * @return ImageOsName System name
+                     * 
                      */
                     std::string GetImageOsName() const;
 
                     /**
                      * 设置System name
-                     * @param ImageOsName System name
+                     * @param _imageOsName System name
+                     * 
                      */
                     void SetImageOsName(const std::string& _imageOsName);
 
                     /**
                      * 判断参数 ImageOsName 是否已赋值
                      * @return ImageOsName 是否已赋值
+                     * 
                      */
                     bool ImageOsNameHasBeenSet() const;
 
                     /**
                      * 获取Image description
                      * @return ImageDescription Image description
+                     * 
                      */
                     std::string GetImageDescription() const;
 
                     /**
                      * 设置Image description
-                     * @param ImageDescription Image description
+                     * @param _imageDescription Image description
+                     * 
                      */
                     void SetImageDescription(const std::string& _imageDescription);
 
                     /**
                      * 判断参数 ImageDescription 是否已赋值
                      * @return ImageDescription 是否已赋值
+                     * 
                      */
                     bool ImageDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return Region Region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
-                     * @param Region Region
+                     * @param _region Region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Region ID
                      * @return RegionID Region ID
+                     * 
                      */
                     int64_t GetRegionID() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionID Region ID
+                     * @param _regionID Region ID
+                     * 
                      */
                     void SetRegionID(const int64_t& _regionID);
 
                     /**
                      * 判断参数 RegionID 是否已赋值
                      * @return RegionID 是否已赋值
+                     * 
                      */
                     bool RegionIDHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return RegionName Region name
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name
-                     * @param RegionName Region name
+                     * @param _regionName Region name
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Source instance name
                      * @return InstanceName Source instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Source instance name
-                     * @param InstanceName Source instance name
+                     * @param _instanceName Source instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Source instance ID
                      * @return InstanceId Source instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Source instance ID
-                     * @param InstanceId Source instance ID
+                     * @param _instanceId Source instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Source image type
                      * @return ImageType Source image type
+                     * 
                      */
                     std::string GetImageType() const;
 
                     /**
                      * 设置Source image type
-                     * @param ImageType Source image type
+                     * @param _imageType Source image type
+                     * 
                      */
                     void SetImageType(const std::string& _imageType);
 
                     /**
                      * 判断参数 ImageType 是否已赋值
                      * @return ImageType 是否已赋值
+                     * 
                      */
                     bool ImageTypeHasBeenSet() const;
 

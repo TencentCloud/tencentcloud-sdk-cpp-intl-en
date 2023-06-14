@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance input mode. Valid values: `0` (read/write), `1` (read-only)
                      * @return InputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+                     * 
                      */
                     std::string GetInputMode() const;
 
                     /**
                      * 设置Instance input mode. Valid values: `0` (read/write), `1` (read-only)
-                     * @param InputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+                     * @param _inputMode Instance input mode. Valid values: `0` (read/write), `1` (read-only)
+                     * 
                      */
                     void SetInputMode(const std::string& _inputMode);
 
                     /**
                      * 判断参数 InputMode 是否已赋值
                      * @return InputMode 是否已赋值
+                     * 
                      */
                     bool InputModeHasBeenSet() const;
 

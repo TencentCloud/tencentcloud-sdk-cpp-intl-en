@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取List of MatchTicket IDs. It can contain up to 12 IDs.
                      * @return MatchTicketIds List of MatchTicket IDs. It can contain up to 12 IDs.
+                     * 
                      */
                     std::vector<MTicket> GetMatchTicketIds() const;
 
                     /**
                      * 设置List of MatchTicket IDs. It can contain up to 12 IDs.
-                     * @param MatchTicketIds List of MatchTicket IDs. It can contain up to 12 IDs.
+                     * @param _matchTicketIds List of MatchTicket IDs. It can contain up to 12 IDs.
+                     * 
                      */
                     void SetMatchTicketIds(const std::vector<MTicket>& _matchTicketIds);
 
                     /**
                      * 判断参数 MatchTicketIds 是否已赋值
                      * @return MatchTicketIds 是否已赋值
+                     * 
                      */
                     bool MatchTicketIdsHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The payload of the pass-through SEI.
                      * @return PayloadContent The payload of the pass-through SEI.
+                     * 
                      */
                     std::string GetPayloadContent() const;
 
                     /**
                      * 设置The payload of the pass-through SEI.
-                     * @param PayloadContent The payload of the pass-through SEI.
+                     * @param _payloadContent The payload of the pass-through SEI.
+                     * 
                      */
                     void SetPayloadContent(const std::string& _payloadContent);
 
                     /**
                      * 判断参数 PayloadContent 是否已赋值
                      * @return PayloadContent 是否已赋值
+                     * 
                      */
                     bool PayloadContentHasBeenSet() const;
 
                     /**
                      * 获取The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
                      * @return PayloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+                     * 
                      */
                     uint64_t GetPayloadType() const;
 
                     /**
                      * 设置The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
-                     * @param PayloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+                     * @param _payloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+                     * 
                      */
                     void SetPayloadType(const uint64_t& _payloadType);
 
                     /**
                      * 判断参数 PayloadType 是否已赋值
                      * @return PayloadType 是否已赋值
+                     * 
                      */
                     bool PayloadTypeHasBeenSet() const;
 
                     /**
                      * 获取This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
                      * @return PayloadUuid This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
+                     * 
                      */
                     std::string GetPayloadUuid() const;
 
                     /**
                      * 设置This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
-                     * @param PayloadUuid This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
+                     * @param _payloadUuid This parameter is required only if `PayloadType` is 5. It must be a 32-character hexadecimal string. If `PayloadType` is not 5, this parameter will be ignored.
+                     * 
                      */
                     void SetPayloadUuid(const std::string& _payloadUuid);
 
                     /**
                      * 判断参数 PayloadUuid 是否已赋值
                      * @return PayloadUuid 是否已赋值
+                     * 
                      */
                     bool PayloadUuidHasBeenSet() const;
 
                     /**
                      * 获取The SEI sending interval (milliseconds). The default value is 1000.
                      * @return Interval The SEI sending interval (milliseconds). The default value is 1000.
+                     * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
                      * 设置The SEI sending interval (milliseconds). The default value is 1000.
-                     * @param Interval The SEI sending interval (milliseconds). The default value is 1000.
+                     * @param _interval The SEI sending interval (milliseconds). The default value is 1000.
+                     * 
                      */
                     void SetInterval(const uint64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
                      * @return FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+                     * 
                      */
                     uint64_t GetFollowIdr() const;
 
                     /**
                      * 设置Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-                     * @param FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+                     * @param _followIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+                     * 
                      */
                     void SetFollowIdr(const uint64_t& _followIdr);
 
                     /**
                      * 判断参数 FollowIdr 是否已赋值
                      * @return FollowIdr 是否已赋值
+                     * 
                      */
                     bool FollowIdrHasBeenSet() const;
 

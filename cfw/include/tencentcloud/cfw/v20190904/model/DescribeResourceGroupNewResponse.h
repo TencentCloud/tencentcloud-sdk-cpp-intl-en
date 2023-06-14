@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Returns a tree structure
                      * @return Data Returns a tree structure
+                     * 
                      */
                     std::string GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Number of uncategorizd instances
                      * @return UnResourceNum Number of uncategorizd instances
+                     * 
                      */
                     int64_t GetUnResourceNum() const;
 
                     /**
                      * 判断参数 UnResourceNum 是否已赋值
                      * @return UnResourceNum 是否已赋值
+                     * 
                      */
                     bool UnResourceNumHasBeenSet() const;
 
                     /**
                      * 获取Response message
                      * @return ReturnMsg Response message
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 
                     /**
                      * 获取Return code. 0: Request successful
                      * @return ReturnCode Return code. 0: Request successful
+                     * 
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 

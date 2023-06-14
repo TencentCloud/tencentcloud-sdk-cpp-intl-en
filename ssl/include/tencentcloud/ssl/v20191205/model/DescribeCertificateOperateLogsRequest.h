@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Offset. The default value is 0.
                      * @return Offset Offset. The default value is 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * @param _offset Offset. The default value is 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of requested logs. The default value is 20.
                      * @return Limit Number of requested logs. The default value is 20.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of requested logs. The default value is 20.
-                     * @param Limit Number of requested logs. The default value is 20.
+                     * @param _limit Number of requested logs. The default value is 20.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Start time. The default value is 15 days ago.
                      * @return StartTime Start time. The default value is 15 days ago.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time. The default value is 15 days ago.
-                     * @param StartTime Start time. The default value is 15 days ago.
+                     * @param _startTime Start time. The default value is 15 days ago.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time. The default value is the current time.
                      * @return EndTime End time. The default value is the current time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time. The default value is the current time.
-                     * @param EndTime End time. The default value is the current time.
+                     * @param _endTime End time. The default value is the current time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

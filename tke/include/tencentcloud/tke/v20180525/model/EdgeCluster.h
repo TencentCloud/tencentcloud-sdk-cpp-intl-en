@@ -51,180 +51,210 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster Pod CIDR block
                      * @return PodCIDR Cluster Pod CIDR block
+                     * 
                      */
                     std::string GetPodCIDR() const;
 
                     /**
                      * 设置Cluster Pod CIDR block
-                     * @param PodCIDR Cluster Pod CIDR block
+                     * @param _podCIDR Cluster Pod CIDR block
+                     * 
                      */
                     void SetPodCIDR(const std::string& _podCIDR);
 
                     /**
                      * 判断参数 PodCIDR 是否已赋值
                      * @return PodCIDR 是否已赋值
+                     * 
                      */
                     bool PodCIDRHasBeenSet() const;
 
                     /**
                      * 获取Cluster service CIDR block
                      * @return ServiceCIDR Cluster service CIDR block
+                     * 
                      */
                     std::string GetServiceCIDR() const;
 
                     /**
                      * 设置Cluster service CIDR block
-                     * @param ServiceCIDR Cluster service CIDR block
+                     * @param _serviceCIDR Cluster service CIDR block
+                     * 
                      */
                     void SetServiceCIDR(const std::string& _serviceCIDR);
 
                     /**
                      * 判断参数 ServiceCIDR 是否已赋值
                      * @return ServiceCIDR 是否已赋值
+                     * 
                      */
                     bool ServiceCIDRHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return K8SVersion 
+                     * 
                      */
                     std::string GetK8SVersion() const;
 
                     /**
                      * 设置
-                     * @param K8SVersion 
+                     * @param _k8SVersion 
+                     * 
                      */
                     void SetK8SVersion(const std::string& _k8SVersion);
 
                     /**
                      * 判断参数 K8SVersion 是否已赋值
                      * @return K8SVersion 是否已赋值
+                     * 
                      */
                     bool K8SVersionHasBeenSet() const;
 
                     /**
                      * 获取Cluster status
                      * @return Status Cluster status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Cluster status
-                     * @param Status Cluster status
+                     * @param _status Cluster status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Cluster description
                      * @return ClusterDesc Cluster description
+                     * 
                      */
                     std::string GetClusterDesc() const;
 
                     /**
                      * 设置Cluster description
-                     * @param ClusterDesc Cluster description
+                     * @param _clusterDesc Cluster description
+                     * 
                      */
                     void SetClusterDesc(const std::string& _clusterDesc);
 
                     /**
                      * 判断参数 ClusterDesc 是否已赋值
                      * @return ClusterDesc 是否已赋值
+                     * 
                      */
                     bool ClusterDescHasBeenSet() const;
 
                     /**
                      * 获取Cluster creation time
                      * @return CreatedTime Cluster creation time
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Cluster creation time
-                     * @param CreatedTime Cluster creation time
+                     * @param _createdTime Cluster creation time
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Edge cluster version
                      * @return EdgeClusterVersion Edge cluster version
+                     * 
                      */
                     std::string GetEdgeClusterVersion() const;
 
                     /**
                      * 设置Edge cluster version
-                     * @param EdgeClusterVersion Edge cluster version
+                     * @param _edgeClusterVersion Edge cluster version
+                     * 
                      */
                     void SetEdgeClusterVersion(const std::string& _edgeClusterVersion);
 
                     /**
                      * 判断参数 EdgeClusterVersion 是否已赋值
                      * @return EdgeClusterVersion 是否已赋值
+                     * 
                      */
                     bool EdgeClusterVersionHasBeenSet() const;
 
@@ -233,20 +263,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return MaxNodePodNum Maximum number of Pods on the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxNodePodNum() const;
 
                     /**
                      * 设置Maximum number of Pods on the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param MaxNodePodNum Maximum number of Pods on the node
+                     * @param _maxNodePodNum Maximum number of Pods on the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxNodePodNum(const int64_t& _maxNodePodNum);
 
                     /**
                      * 判断参数 MaxNodePodNum 是否已赋值
                      * @return MaxNodePodNum 是否已赋值
+                     * 
                      */
                     bool MaxNodePodNumHasBeenSet() const;
 
@@ -255,20 +288,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterAdvancedSettings Cluster advanced settings
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     EdgeClusterAdvancedSettings GetClusterAdvancedSettings() const;
 
                     /**
                      * 设置Cluster advanced settings
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClusterAdvancedSettings Cluster advanced settings
+                     * @param _clusterAdvancedSettings Cluster advanced settings
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterAdvancedSettings(const EdgeClusterAdvancedSettings& _clusterAdvancedSettings);
 
                     /**
                      * 判断参数 ClusterAdvancedSettings 是否已赋值
                      * @return ClusterAdvancedSettings 是否已赋值
+                     * 
                      */
                     bool ClusterAdvancedSettingsHasBeenSet() const;
 
@@ -277,20 +313,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Level TKE edge cluster level
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置TKE edge cluster level
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Level TKE edge cluster level
+                     * @param _level TKE edge cluster level
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -299,20 +338,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AutoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAutoUpgradeClusterLevel() const;
 
                     /**
                      * 设置Whether to support auto upgrade of cluster spec level
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AutoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
+                     * @param _autoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoUpgradeClusterLevel(const bool& _autoUpgradeClusterLevel);
 
                     /**
                      * 判断参数 AutoUpgradeClusterLevel 是否已赋值
                      * @return AutoUpgradeClusterLevel 是否已赋值
+                     * 
                      */
                     bool AutoUpgradeClusterLevelHasBeenSet() const;
 
@@ -321,20 +363,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetChargeType() const;
 
                     /**
                      * 设置Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+                     * @param _chargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChargeType(const std::string& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
@@ -343,38 +388,44 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EdgeVersion Edge cluster component version 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEdgeVersion() const;
 
                     /**
                      * 设置Edge cluster component version 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EdgeVersion Edge cluster component version 
+                     * @param _edgeVersion Edge cluster component version 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEdgeVersion(const std::string& _edgeVersion);
 
                     /**
                      * 判断参数 EdgeVersion 是否已赋值
                      * @return EdgeVersion 是否已赋值
+                     * 
                      */
                     bool EdgeVersionHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return TagSpecification 
+                     * 
                      */
                     TagSpecification GetTagSpecification() const;
 
                     /**
                      * 设置
-                     * @param TagSpecification 
+                     * @param _tagSpecification 
+                     * 
                      */
                     void SetTagSpecification(const TagSpecification& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 

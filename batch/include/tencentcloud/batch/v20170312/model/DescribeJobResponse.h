@@ -51,144 +51,168 @@ namespace TencentCloud
                     /**
                      * 获取Job ID
                      * @return JobId Job ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Job name
                      * @return JobName Job name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Availability zone information
                      * @return Zone Availability zone information
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Job priority
                      * @return Priority Job priority
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 
                     /**
                      * 获取Job state
                      * @return JobState Job state
+                     * 
                      */
                     std::string GetJobState() const;
 
                     /**
                      * 判断参数 JobState 是否已赋值
                      * @return JobState 是否已赋值
+                     * 
                      */
                     bool JobStateHasBeenSet() const;
 
                     /**
                      * 获取Creation Date
                      * @return CreateTime Creation Date
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Task view information
                      * @return TaskSet Task view information
+                     * 
                      */
                     std::vector<TaskView> GetTaskSet() const;
 
                     /**
                      * 判断参数 TaskSet 是否已赋值
                      * @return TaskSet 是否已赋值
+                     * 
                      */
                     bool TaskSetHasBeenSet() const;
 
                     /**
                      * 获取Information of the dependency among tasks
                      * @return DependenceSet Information of the dependency among tasks
+                     * 
                      */
                     std::vector<Dependence> GetDependenceSet() const;
 
                     /**
                      * 判断参数 DependenceSet 是否已赋值
                      * @return DependenceSet 是否已赋值
+                     * 
                      */
                     bool DependenceSetHasBeenSet() const;
 
                     /**
                      * 获取Task statistical metrics
                      * @return TaskMetrics Task statistical metrics
+                     * 
                      */
                     TaskMetrics GetTaskMetrics() const;
 
                     /**
                      * 判断参数 TaskMetrics 是否已赋值
                      * @return TaskMetrics 是否已赋值
+                     * 
                      */
                     bool TaskMetricsHasBeenSet() const;
 
                     /**
                      * 获取Task instance statistical metrics
                      * @return TaskInstanceMetrics Task instance statistical metrics
+                     * 
                      */
                     TaskInstanceMetrics GetTaskInstanceMetrics() const;
 
                     /**
                      * 判断参数 TaskInstanceMetrics 是否已赋值
                      * @return TaskInstanceMetrics 是否已赋值
+                     * 
                      */
                     bool TaskInstanceMetricsHasBeenSet() const;
 
                     /**
                      * 获取Job failure reason
                      * @return StateReason Job failure reason
+                     * 
                      */
                     std::string GetStateReason() const;
 
                     /**
                      * 判断参数 StateReason 是否已赋值
                      * @return StateReason 是否已赋值
+                     * 
                      */
                     bool StateReasonHasBeenSet() const;
 
@@ -197,12 +221,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Tags List of tags bound with the job.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -211,12 +237,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NextAction Next action
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetNextAction() const;
 
                     /**
                      * 判断参数 NextAction 是否已赋值
                      * @return NextAction 是否已赋值
+                     * 
                      */
                     bool NextActionHasBeenSet() const;
 

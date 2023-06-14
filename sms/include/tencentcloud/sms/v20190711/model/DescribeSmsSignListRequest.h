@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Signature ID array.
                      * @return SignIdSet Signature ID array.
+                     * 
                      */
                     std::vector<uint64_t> GetSignIdSet() const;
 
                     /**
                      * 设置Signature ID array.
-                     * @param SignIdSet Signature ID array.
+                     * @param _signIdSet Signature ID array.
+                     * 
                      */
                     void SetSignIdSet(const std::vector<uint64_t>& _signIdSet);
 
                     /**
                      * 判断参数 SignIdSet 是否已赋值
                      * @return SignIdSet 是否已赋值
+                     * 
                      */
                     bool SignIdSetHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -74,15 +78,17 @@ namespace TencentCloud
                      * 设置Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
-                     * @param International Whether it is Global SMS:
+                     * @param _international Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 

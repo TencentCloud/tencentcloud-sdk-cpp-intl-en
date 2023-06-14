@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Starting position
                      * @return Offset Starting position
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting position
-                     * @param Offset Starting position
+                     * @param _offset Starting position
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Quantity
                      * @return Limit Quantity
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Quantity
-                     * @param Limit Quantity
+                     * @param _limit Quantity
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

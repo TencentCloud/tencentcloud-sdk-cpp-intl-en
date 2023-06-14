@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取A parameter set. For details, see the example.
                      * @return FunctionArg A parameter set. For details, see the example.
+                     * 
                      */
                     FunctionArg GetFunctionArg() const;
 
                     /**
                      * 设置A parameter set. For details, see the example.
-                     * @param FunctionArg A parameter set. For details, see the example.
+                     * @param _functionArg A parameter set. For details, see the example.
+                     * 
                      */
                     void SetFunctionArg(const FunctionArg& _functionArg);
 
                     /**
                      * 判断参数 FunctionArg 是否已赋值
                      * @return FunctionArg 是否已赋值
+                     * 
                      */
                     bool FunctionArgHasBeenSet() const;
 
                     /**
                      * 获取A parameter set. For details, see the example.
                      * @return TransactionArg A parameter set. For details, see the example.
+                     * 
                      */
                     TransactionArg GetTransactionArg() const;
 
                     /**
                      * 设置A parameter set. For details, see the example.
-                     * @param TransactionArg A parameter set. For details, see the example.
+                     * @param _transactionArg A parameter set. For details, see the example.
+                     * 
                      */
                     void SetTransactionArg(const TransactionArg& _transactionArg);
 
                     /**
                      * 判断参数 TransactionArg 是否已赋值
                      * @return TransactionArg 是否已赋值
+                     * 
                      */
                     bool TransactionArgHasBeenSet() const;
 
                     /**
                      * 获取The version.
                      * @return VersionCredential The version.
+                     * 
                      */
                     std::string GetVersionCredential() const;
 
                     /**
                      * 设置The version.
-                     * @param VersionCredential The version.
+                     * @param _versionCredential The version.
+                     * 
                      */
                     void SetVersionCredential(const std::string& _versionCredential);
 
                     /**
                      * 判断参数 VersionCredential 是否已赋值
                      * @return VersionCredential 是否已赋值
+                     * 
                      */
                     bool VersionCredentialHasBeenSet() const;
 
                     /**
                      * 获取Whether the credential is unsigned.
                      * @return UnSigned Whether the credential is unsigned.
+                     * 
                      */
                     bool GetUnSigned() const;
 
                     /**
                      * 设置Whether the credential is unsigned.
-                     * @param UnSigned Whether the credential is unsigned.
+                     * @param _unSigned Whether the credential is unsigned.
+                     * 
                      */
                     void SetUnSigned(const bool& _unSigned);
 
                     /**
                      * 判断参数 UnSigned 是否已赋值
                      * @return UnSigned 是否已赋值
+                     * 
                      */
                     bool UnSignedHasBeenSet() const;
 

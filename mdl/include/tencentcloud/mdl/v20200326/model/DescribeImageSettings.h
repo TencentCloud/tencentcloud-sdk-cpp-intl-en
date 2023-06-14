@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Origin
                      * @return Location Origin
+                     * 
                      */
                     std::string GetLocation() const;
 
                     /**
                      * 设置Origin
-                     * @param Location Origin
+                     * @param _location Origin
+                     * 
                      */
                     void SetLocation(const std::string& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 
                     /**
                      * 获取The watermark image’s horizontal distance from the origin as a percentage of the video width
                      * @return XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * 
                      */
                     int64_t GetXPos() const;
 
                     /**
                      * 设置The watermark image’s horizontal distance from the origin as a percentage of the video width
-                     * @param XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * @param _xPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * 
                      */
                     void SetXPos(const int64_t& _xPos);
 
                     /**
                      * 判断参数 XPos 是否已赋值
                      * @return XPos 是否已赋值
+                     * 
                      */
                     bool XPosHasBeenSet() const;
 
                     /**
                      * 获取The watermark image’s vertical distance from the origin as a percentage of the video height
                      * @return YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * 
                      */
                     int64_t GetYPos() const;
 
                     /**
                      * 设置The watermark image’s vertical distance from the origin as a percentage of the video height
-                     * @param YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * @param _yPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * 
                      */
                     void SetYPos(const int64_t& _yPos);
 
                     /**
                      * 判断参数 YPos 是否已赋值
                      * @return YPos 是否已赋值
+                     * 
                      */
                     bool YPosHasBeenSet() const;
 
                     /**
                      * 获取The watermark image’s width as a percentage of the video width
                      * @return Width The watermark image’s width as a percentage of the video width
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置The watermark image’s width as a percentage of the video width
-                     * @param Width The watermark image’s width as a percentage of the video width
+                     * @param _width The watermark image’s width as a percentage of the video width
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取The watermark image’s height as a percentage of the video height
                      * @return Height The watermark image’s height as a percentage of the video height
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置The watermark image’s height as a percentage of the video height
-                     * @param Height The watermark image’s height as a percentage of the video height
+                     * @param _height The watermark image’s height as a percentage of the video height
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 

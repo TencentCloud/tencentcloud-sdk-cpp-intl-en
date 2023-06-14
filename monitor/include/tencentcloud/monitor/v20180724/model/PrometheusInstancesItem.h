@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name.
                      * @return InstanceName Instance name.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name.
-                     * @param InstanceName Instance name.
+                     * @param _instanceName Instance name.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -95,6 +101,7 @@ namespace TencentCloud
 <li>2: Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
+                     * 
                      */
                     int64_t GetInstanceChargeType() const;
 
@@ -104,89 +111,103 @@ namespace TencentCloud
 <li>2: Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
-                     * @param InstanceChargeType Instance billing mode. Valid values:
+                     * @param _instanceChargeType Instance billing mode. Valid values:
 <ul>
 <li>2: Monthly subscription</li>
 <li>3: Pay-as-you-go</li>
 </ul>
+                     * 
                      */
                     void SetInstanceChargeType(const int64_t& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取AZ
                      * @return Zone AZ
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ
-                     * @param Zone AZ
+                     * @param _zone AZ
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID
                      * @return SubnetId Subnet ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID
-                     * @param SubnetId Subnet ID
+                     * @param _subnetId Subnet ID
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -195,20 +216,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataRetentionTime Storage period
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDataRetentionTime() const;
 
                     /**
                      * 设置Storage period
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DataRetentionTime Storage period
+                     * @param _dataRetentionTime Storage period
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataRetentionTime(const int64_t& _dataRetentionTime);
 
                     /**
                      * 判断参数 DataRetentionTime 是否已赋值
                      * @return DataRetentionTime 是否已赋值
+                     * 
                      */
                     bool DataRetentionTimeHasBeenSet() const;
 
@@ -235,6 +259,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>8: Suspending service for overdue payment</li>
 <li>9: Service suspended for overdue payment</li>
 </ul>
+                     * 
                      */
                     int64_t GetInstanceStatus() const;
 
@@ -250,7 +275,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>8: Suspending service for overdue payment</li>
 <li>9: Service suspended for overdue payment</li>
 </ul>
-                     * @param InstanceStatus Instance status. Valid values:
+                     * @param _instanceStatus Instance status. Valid values:
 <ul>
 <li>1: Creating</li>
 <li>2: Running</li>
@@ -261,12 +286,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>8: Suspending service for overdue payment</li>
 <li>9: Service suspended for overdue payment</li>
 </ul>
+                     * 
                      */
                     void SetInstanceStatus(const int64_t& _instanceStatus);
 
                     /**
                      * 判断参数 InstanceStatus 是否已赋值
                      * @return InstanceStatus 是否已赋值
+                     * 
                      */
                     bool InstanceStatusHasBeenSet() const;
 
@@ -275,38 +302,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GrafanaURL Grafana dashboard URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGrafanaURL() const;
 
                     /**
                      * 设置Grafana dashboard URL
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GrafanaURL Grafana dashboard URL
+                     * @param _grafanaURL Grafana dashboard URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGrafanaURL(const std::string& _grafanaURL);
 
                     /**
                      * 判断参数 GrafanaURL 是否已赋值
                      * @return GrafanaURL 是否已赋值
+                     * 
                      */
                     bool GrafanaURLHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreatedAt Creation time
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreatedAt Creation time
+                     * @param _createdAt Creation time
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 
@@ -317,6 +350,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return EnableGrafana Whether Grafana is enabled
 <li>0: Disabled</li>
 <li>1: Enabled</li>
+                     * 
                      */
                     int64_t GetEnableGrafana() const;
 
@@ -324,15 +358,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Whether Grafana is enabled
 <li>0: Disabled</li>
 <li>1: Enabled</li>
-                     * @param EnableGrafana Whether Grafana is enabled
+                     * @param _enableGrafana Whether Grafana is enabled
 <li>0: Disabled</li>
 <li>1: Enabled</li>
+                     * 
                      */
                     void SetEnableGrafana(const int64_t& _enableGrafana);
 
                     /**
                      * 判断参数 EnableGrafana 是否已赋值
                      * @return EnableGrafana 是否已赋值
+                     * 
                      */
                     bool EnableGrafanaHasBeenSet() const;
 
@@ -341,20 +377,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IPv4Address Instance IPv4 address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIPv4Address() const;
 
                     /**
                      * 设置Instance IPv4 address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IPv4Address Instance IPv4 address
+                     * @param _iPv4Address Instance IPv4 address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIPv4Address(const std::string& _iPv4Address);
 
                     /**
                      * 判断参数 IPv4Address 是否已赋值
                      * @return IPv4Address 是否已赋值
+                     * 
                      */
                     bool IPv4AddressHasBeenSet() const;
 
@@ -363,20 +402,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagSpecification List of tags associated with the instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusTag> GetTagSpecification() const;
 
                     /**
                      * 设置List of tags associated with the instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagSpecification List of tags associated with the instance.
+                     * @param _tagSpecification List of tags associated with the instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSpecification(const std::vector<PrometheusTag>& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 
@@ -385,20 +427,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time of the purchased instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Expiration time of the purchased instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Expiration time of the purchased instance
+                     * @param _expireTime Expiration time of the purchased instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -421,6 +466,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>5: Assignment failed</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetChargeStatus() const;
 
@@ -434,7 +480,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>5: Assignment failed</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ChargeStatus Billing status
+                     * @param _chargeStatus Billing status
 <ul>
 <li>1: Normal</li>
 <li>2: Expired</li>
@@ -443,12 +489,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>5: Assignment failed</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChargeStatus(const int64_t& _chargeStatus);
 
                     /**
                      * 判断参数 ChargeStatus 是否已赋值
                      * @return ChargeStatus 是否已赋值
+                     * 
                      */
                     bool ChargeStatusHasBeenSet() const;
 
@@ -457,20 +505,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SpecName Specification name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSpecName() const;
 
                     /**
                      * 设置Specification name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SpecName Specification name
+                     * @param _specName Specification name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpecName(const std::string& _specName);
 
                     /**
                      * 判断参数 SpecName 是否已赋值
                      * @return SpecName 是否已赋值
+                     * 
                      */
                     bool SpecNameHasBeenSet() const;
 
@@ -491,6 +542,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>-1: Invalid</ii>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
@@ -503,7 +555,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>-1: Invalid</ii>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AutoRenewFlag Auto-renewal flag
+                     * @param _autoRenewFlag Auto-renewal flag
 <ul>
 <li>0: Auto-renewal not enabled</li>
 <li>1: Auto-renewal enabled</li>
@@ -511,12 +563,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>-1: Invalid</ii>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
@@ -533,6 +587,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>1: Yes</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsNearExpire() const;
 
@@ -543,18 +598,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>1: Yes</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsNearExpire Expiring soon
+                     * @param _isNearExpire Expiring soon
 <ul>
 <li>0: No</li>
 <li>1: Yes</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsNearExpire(const int64_t& _isNearExpire);
 
                     /**
                      * 判断参数 IsNearExpire 是否已赋值
                      * @return IsNearExpire 是否已赋值
+                     * 
                      */
                     bool IsNearExpireHasBeenSet() const;
 
@@ -563,20 +620,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuthToken The token required for data writing
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthToken() const;
 
                     /**
                      * 设置The token required for data writing
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AuthToken The token required for data writing
+                     * @param _authToken The token required for data writing
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthToken(const std::string& _authToken);
 
                     /**
                      * 判断参数 AuthToken 是否已赋值
                      * @return AuthToken 是否已赋值
+                     * 
                      */
                     bool AuthTokenHasBeenSet() const;
 
@@ -585,20 +645,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RemoteWrite Prometheus remote write address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemoteWrite() const;
 
                     /**
                      * 设置Prometheus remote write address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RemoteWrite Prometheus remote write address
+                     * @param _remoteWrite Prometheus remote write address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemoteWrite(const std::string& _remoteWrite);
 
                     /**
                      * 判断参数 RemoteWrite 是否已赋值
                      * @return RemoteWrite 是否已赋值
+                     * 
                      */
                     bool RemoteWriteHasBeenSet() const;
 
@@ -607,20 +670,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ApiRootPath Prometheus HTTP API root address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiRootPath() const;
 
                     /**
                      * 设置Prometheus HTTP API root address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ApiRootPath Prometheus HTTP API root address
+                     * @param _apiRootPath Prometheus HTTP API root address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiRootPath(const std::string& _apiRootPath);
 
                     /**
                      * 判断参数 ApiRootPath 是否已赋值
                      * @return ApiRootPath 是否已赋值
+                     * 
                      */
                     bool ApiRootPathHasBeenSet() const;
 
@@ -629,20 +695,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyAddress Proxy address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProxyAddress() const;
 
                     /**
                      * 设置Proxy address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProxyAddress Proxy address
+                     * @param _proxyAddress Proxy address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProxyAddress(const std::string& _proxyAddress);
 
                     /**
                      * 判断参数 ProxyAddress 是否已赋值
                      * @return ProxyAddress 是否已赋值
+                     * 
                      */
                     bool ProxyAddressHasBeenSet() const;
 
@@ -669,6 +738,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>7: Deleted</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetGrafanaStatus() const;
 
@@ -684,7 +754,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>7: Deleted</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GrafanaStatus Grafana status
+                     * @param _grafanaStatus Grafana status
 <ul>
 <li>1: Creating</li>
 <li>2: Running</li>
@@ -695,12 +765,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>7: Deleted</li>
 </ul>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGrafanaStatus(const int64_t& _grafanaStatus);
 
                     /**
                      * 判断参数 GrafanaStatus 是否已赋值
                      * @return GrafanaStatus 是否已赋值
+                     * 
                      */
                     bool GrafanaStatusHasBeenSet() const;
 
@@ -709,20 +781,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GrafanaIpWhiteList Grafana IP allowlist, where IPs are separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGrafanaIpWhiteList() const;
 
                     /**
                      * 设置Grafana IP allowlist, where IPs are separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GrafanaIpWhiteList Grafana IP allowlist, where IPs are separated by comma.
+                     * @param _grafanaIpWhiteList Grafana IP allowlist, where IPs are separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGrafanaIpWhiteList(const std::string& _grafanaIpWhiteList);
 
                     /**
                      * 判断参数 GrafanaIpWhiteList 是否已赋值
                      * @return GrafanaIpWhiteList 是否已赋值
+                     * 
                      */
                     bool GrafanaIpWhiteListHasBeenSet() const;
 
@@ -731,20 +806,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Grant Instance authorization information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PrometheusInstanceGrantInfo GetGrant() const;
 
                     /**
                      * 设置Instance authorization information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Grant Instance authorization information
+                     * @param _grant Instance authorization information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGrant(const PrometheusInstanceGrantInfo& _grant);
 
                     /**
                      * 判断参数 Grant 是否已赋值
                      * @return Grant 是否已赋值
+                     * 
                      */
                     bool GrantHasBeenSet() const;
 
@@ -753,20 +831,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GrafanaInstanceId ID of the bound Grafana instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGrafanaInstanceId() const;
 
                     /**
                      * 设置ID of the bound Grafana instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GrafanaInstanceId ID of the bound Grafana instance
+                     * @param _grafanaInstanceId ID of the bound Grafana instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGrafanaInstanceId(const std::string& _grafanaInstanceId);
 
                     /**
                      * 判断参数 GrafanaInstanceId 是否已赋值
                      * @return GrafanaInstanceId 是否已赋值
+                     * 
                      */
                     bool GrafanaInstanceIdHasBeenSet() const;
 
@@ -775,20 +856,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AlertRuleLimit The alert rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAlertRuleLimit() const;
 
                     /**
                      * 设置The alert rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AlertRuleLimit The alert rule limit
+                     * @param _alertRuleLimit The alert rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlertRuleLimit(const int64_t& _alertRuleLimit);
 
                     /**
                      * 判断参数 AlertRuleLimit 是否已赋值
                      * @return AlertRuleLimit 是否已赋值
+                     * 
                      */
                     bool AlertRuleLimitHasBeenSet() const;
 
@@ -797,20 +881,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordingRuleLimit The recording rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRecordingRuleLimit() const;
 
                     /**
                      * 设置The recording rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordingRuleLimit The recording rule limit
+                     * @param _recordingRuleLimit The recording rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecordingRuleLimit(const int64_t& _recordingRuleLimit);
 
                     /**
                      * 判断参数 RecordingRuleLimit 是否已赋值
                      * @return RecordingRuleLimit 是否已赋值
+                     * 
                      */
                     bool RecordingRuleLimitHasBeenSet() const;
 
@@ -819,20 +906,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMigrationType() const;
 
                     /**
                      * 设置Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+                     * @param _migrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMigrationType(const int64_t& _migrationType);
 
                     /**
                      * 判断参数 MigrationType 是否已赋值
                      * @return MigrationType 是否已赋值
+                     * 
                      */
                     bool MigrationTypeHasBeenSet() const;
 

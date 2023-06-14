@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
                      * @return TemplateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
-                     * @param TemplateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+                     * @param _templateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
                      * @return TemplateName Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
-                     * @param TemplateName Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
+                     * @param _templateName Parameter template name, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this field is empty, the original parameter template name will be used.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this parameter is not passed in, the original parameter template description will be used.
                      * @return TemplateDescription Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this parameter is not passed in, the original parameter template description will be used.
+                     * 
                      */
                     std::string GetTemplateDescription() const;
 
                     /**
                      * 设置Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this parameter is not passed in, the original parameter template description will be used.
-                     * @param TemplateDescription Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this parameter is not passed in, the original parameter template description will be used.
+                     * @param _templateDescription Parameter template description, which can contain 1-60 letters, digits, and symbols (-_./()[]()+=:@). If this parameter is not passed in, the original parameter template description will be used.
+                     * 
                      */
                     void SetTemplateDescription(const std::string& _templateDescription);
 
                     /**
                      * 判断参数 TemplateDescription 是否已赋值
                      * @return TemplateDescription 是否已赋值
+                     * 
                      */
                     bool TemplateDescriptionHasBeenSet() const;
 
                     /**
                      * 获取The set of parameters to be modified or added. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
                      * @return ModifyParamEntrySet The set of parameters to be modified or added. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
+                     * 
                      */
                     std::vector<ParamEntry> GetModifyParamEntrySet() const;
 
                     /**
                      * 设置The set of parameters to be modified or added. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
-                     * @param ModifyParamEntrySet The set of parameters to be modified or added. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
+                     * @param _modifyParamEntrySet The set of parameters to be modified or added. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
+                     * 
                      */
                     void SetModifyParamEntrySet(const std::vector<ParamEntry>& _modifyParamEntrySet);
 
                     /**
                      * 判断参数 ModifyParamEntrySet 是否已赋值
                      * @return ModifyParamEntrySet 是否已赋值
+                     * 
                      */
                     bool ModifyParamEntrySetHasBeenSet() const;
 
                     /**
                      * 获取The set of parameters to be deleted in the template. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
                      * @return DeleteParamSet The set of parameters to be deleted in the template. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
+                     * 
                      */
                     std::vector<std::string> GetDeleteParamSet() const;
 
                     /**
                      * 设置The set of parameters to be deleted in the template. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
-                     * @param DeleteParamSet The set of parameters to be deleted in the template. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
+                     * @param _deleteParamSet The set of parameters to be deleted in the template. A parameter cannot be put to `ModifyParamEntrySet` and `DeleteParamSet` at the same time, that is, it cannot be modified/added and deleted at the same time.
+                     * 
                      */
                     void SetDeleteParamSet(const std::vector<std::string>& _deleteParamSet);
 
                     /**
                      * 判断参数 DeleteParamSet 是否已赋值
                      * @return DeleteParamSet 是否已赋值
+                     * 
                      */
                     bool DeleteParamSetHasBeenSet() const;
 

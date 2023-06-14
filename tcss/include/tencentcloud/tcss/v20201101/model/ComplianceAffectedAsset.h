@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the customer asset
                      * @return CustomerAssetId Unique ID of the customer asset
+                     * 
                      */
                     uint64_t GetCustomerAssetId() const;
 
                     /**
                      * 设置Unique ID of the customer asset
-                     * @param CustomerAssetId Unique ID of the customer asset
+                     * @param _customerAssetId Unique ID of the customer asset
+                     * 
                      */
                     void SetCustomerAssetId(const uint64_t& _customerAssetId);
 
                     /**
                      * 判断参数 CustomerAssetId 是否已赋值
                      * @return CustomerAssetId 是否已赋值
+                     * 
                      */
                     bool CustomerAssetIdHasBeenSet() const;
 
                     /**
                      * 获取Asset name
                      * @return AssetName Asset name
+                     * 
                      */
                     std::string GetAssetName() const;
 
                     /**
                      * 设置Asset name
-                     * @param AssetName Asset name
+                     * @param _assetName Asset name
+                     * 
                      */
                     void SetAssetName(const std::string& _assetName);
 
                     /**
                      * 判断参数 AssetName 是否已赋值
                      * @return AssetName 是否已赋值
+                     * 
                      */
                     bool AssetNameHasBeenSet() const;
 
                     /**
                      * 获取Asset type
                      * @return AssetType Asset type
+                     * 
                      */
                     std::string GetAssetType() const;
 
                     /**
                      * 设置Asset type
-                     * @param AssetType Asset type
+                     * @param _assetType Asset type
+                     * 
                      */
                     void SetAssetType(const std::string& _assetType);
 
                     /**
                      * 判断参数 AssetType 是否已赋值
                      * @return AssetType 是否已赋值
+                     * 
                      */
                     bool AssetTypeHasBeenSet() const;
 
@@ -119,6 +128,7 @@ namespace TencentCloud
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     std::string GetCheckStatus() const;
 
@@ -132,7 +142,7 @@ namespace TencentCloud
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
-                     * @param CheckStatus Check status
+                     * @param _checkStatus Check status
 
 `CHECK_INIT`: To be checked.
 
@@ -141,30 +151,35 @@ namespace TencentCloud
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
 
                     /**
                      * 判断参数 CheckStatus 是否已赋值
                      * @return CheckStatus 是否已赋值
+                     * 
                      */
                     bool CheckStatusHasBeenSet() const;
 
                     /**
                      * 获取Node name
                      * @return NodeName Node name
+                     * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 设置Node name
-                     * @param NodeName Node name
+                     * @param _nodeName Node name
+                     * 
                      */
                     void SetNodeName(const std::string& _nodeName);
 
                     /**
                      * 判断参数 NodeName 是否已赋值
                      * @return NodeName 是否已赋值
+                     * 
                      */
                     bool NodeNameHasBeenSet() const;
 
@@ -175,6 +190,7 @@ It is "0000-00-00 00:00:00" if no check has been performed.
                      * @return LastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
 
 It is "0000-00-00 00:00:00" if no check has been performed.
+                     * 
                      */
                     std::string GetLastCheckTime() const;
 
@@ -182,15 +198,17 @@ It is "0000-00-00 00:00:00" if no check has been performed.
                      * 设置Last check time in the format of "YYYY-MM-DD HH:m::SS"
 
 It is "0000-00-00 00:00:00" if no check has been performed.
-                     * @param LastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
+                     * @param _lastCheckTime Last check time in the format of "YYYY-MM-DD HH:m::SS"
 
 It is "0000-00-00 00:00:00" if no check has been performed.
+                     * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
 
                     /**
                      * 判断参数 LastCheckTime 是否已赋值
                      * @return LastCheckTime 是否已赋值
+                     * 
                      */
                     bool LastCheckTimeHasBeenSet() const;
 
@@ -205,6 +223,7 @@ It is "0000-00-00 00:00:00" if no check has been performed.
 `RESULT_FAILED`: Failed.
 
 `RESULT_PASSED`: Passed.
+                     * 
                      */
                     std::string GetCheckResult() const;
 
@@ -214,17 +233,19 @@ It is "0000-00-00 00:00:00" if no check has been performed.
 `RESULT_FAILED`: Failed.
 
 `RESULT_PASSED`: Passed.
-                     * @param CheckResult Check result. Valid values:
+                     * @param _checkResult Check result. Valid values:
 
 `RESULT_FAILED`: Failed.
 
 `RESULT_PASSED`: Passed.
+                     * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
 
                     /**
                      * 判断参数 CheckResult 是否已赋值
                      * @return CheckResult 是否已赋值
+                     * 
                      */
                     bool CheckResultHasBeenSet() const;
 
@@ -233,20 +254,23 @@ It is "0000-00-00 00:00:00" if no check has been performed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostIP Server IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHostIP() const;
 
                     /**
                      * 设置Server IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HostIP Server IP
+                     * @param _hostIP Server IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHostIP(const std::string& _hostIP);
 
                     /**
                      * 判断参数 HostIP 是否已赋值
                      * @return HostIP 是否已赋值
+                     * 
                      */
                     bool HostIPHasBeenSet() const;
 
@@ -255,20 +279,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageTag Image tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageTag() const;
 
                     /**
                      * 设置Image tag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImageTag Image tag
+                     * @param _imageTag Image tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageTag(const std::string& _imageTag);
 
                     /**
                      * 判断参数 ImageTag 是否已赋值
                      * @return ImageTag 是否已赋值
+                     * 
                      */
                     bool ImageTagHasBeenSet() const;
 
@@ -277,20 +304,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VerifyInfo Verification information of the check item
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVerifyInfo() const;
 
                     /**
                      * 设置Verification information of the check item
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VerifyInfo Verification information of the check item
+                     * @param _verifyInfo Verification information of the check item
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVerifyInfo(const std::string& _verifyInfo);
 
                     /**
                      * 判断参数 VerifyInfo 是否已赋值
                      * @return VerifyInfo 是否已赋值
+                     * 
                      */
                     bool VerifyInfoHasBeenSet() const;
 
@@ -299,20 +329,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

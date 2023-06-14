@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return ChannelId Channel ID
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param ChannelId Channel ID
+                     * @param _channelId Channel ID
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 
                     /**
                      * 获取CDN playback domain name
                      * @return CdnDomain CDN playback domain name
+                     * 
                      */
                     std::string GetCdnDomain() const;
 
                     /**
                      * 设置CDN playback domain name
-                     * @param CdnDomain CDN playback domain name
+                     * @param _cdnDomain CDN playback domain name
+                     * 
                      */
                     void SetCdnDomain(const std::string& _cdnDomain);
 
                     /**
                      * 判断参数 CdnDomain 是否已赋值
                      * @return CdnDomain 是否已赋值
+                     * 
                      */
                     bool CdnDomainHasBeenSet() const;
 

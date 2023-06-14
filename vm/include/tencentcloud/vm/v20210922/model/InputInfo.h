@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type. Values: `URL`, `COS`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type. Values: `URL`, `COS`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type Type. Values: `URL`, `COS`.
+                     * @param _type Type. Values: `URL`, `COS`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Url URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Url URL
+                     * @param _url URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BucketInfo Bucket information. When `Type = COS`, this field is required.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBucketInfo() const;
 
                     /**
                      * 设置Bucket information. When `Type = COS`, this field is required.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BucketInfo Bucket information. When `Type = COS`, this field is required.
+                     * @param _bucketInfo Bucket information. When `Type = COS`, this field is required.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBucketInfo(const std::string& _bucketInfo);
 
                     /**
                      * 判断参数 BucketInfo 是否已赋值
                      * @return BucketInfo 是否已赋值
+                     * 
                      */
                     bool BucketInfoHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Namespace used to query data by Tencent Cloud service monitoring type
                      * @return QceNamespace Namespace used to query data by Tencent Cloud service monitoring type
+                     * 
                      */
                     std::string GetQceNamespace() const;
 
                     /**
                      * 设置Namespace used to query data by Tencent Cloud service monitoring type
-                     * @param QceNamespace Namespace used to query data by Tencent Cloud service monitoring type
+                     * @param _qceNamespace Namespace used to query data by Tencent Cloud service monitoring type
+                     * 
                      */
                     void SetQceNamespace(const std::string& _qceNamespace);
 
                     /**
                      * 判断参数 QceNamespace 是否已赋值
                      * @return QceNamespace 是否已赋值
+                     * 
                      */
                     bool QceNamespaceHasBeenSet() const;
 
                     /**
                      * 获取Metric name
                      * @return MetricName Metric name
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric name
-                     * @param MetricName Metric name
+                     * @param _metricName Metric name
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Statistical period
                      * @return Period Statistical period
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Statistical period
-                     * @param Period Statistical period
+                     * @param _period Statistical period
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Value triggering alarm
                      * @return Value Value triggering alarm
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value triggering alarm
-                     * @param Value Value triggering alarm
+                     * @param _value Value triggering alarm
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Metric display name
                      * @return Description Metric display name
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Metric display name
-                     * @param Description Metric display name
+                     * @param _description Metric display name
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

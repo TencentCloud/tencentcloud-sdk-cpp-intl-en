@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Country/Region ID
                      * @return CountryId Country/Region ID
+                     * 
                      */
                     std::string GetCountryId() const;
 
                     /**
                      * 设置Country/Region ID
-                     * @param CountryId Country/Region ID
+                     * @param _countryId Country/Region ID
+                     * 
                      */
                     void SetCountryId(const std::string& _countryId);
 
                     /**
                      * 判断参数 CountryId 是否已赋值
                      * @return CountryId 是否已赋值
+                     * 
                      */
                     bool CountryIdHasBeenSet() const;
 
                     /**
                      * 获取Country/Region name
                      * @return CountryName Country/Region name
+                     * 
                      */
                     std::string GetCountryName() const;
 
                     /**
                      * 设置Country/Region name
-                     * @param CountryName Country/Region name
+                     * @param _countryName Country/Region name
+                     * 
                      */
                     void SetCountryName(const std::string& _countryName);
 
                     /**
                      * 判断参数 CountryName 是否已赋值
                      * @return CountryName 是否已赋值
+                     * 
                      */
                     bool CountryNameHasBeenSet() const;
 

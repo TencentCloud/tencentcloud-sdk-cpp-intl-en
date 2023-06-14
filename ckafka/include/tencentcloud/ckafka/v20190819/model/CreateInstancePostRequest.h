@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
                      * @return InstanceName Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param InstanceName Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * @param _instanceName Instance name, which is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Instance bandwidth
                      * @return BandWidth Instance bandwidth
+                     * 
                      */
                     int64_t GetBandWidth() const;
 
                     /**
                      * 设置Instance bandwidth
-                     * @param BandWidth Instance bandwidth
+                     * @param _bandWidth Instance bandwidth
+                     * 
                      */
                     void SetBandWidth(const int64_t& _bandWidth);
 
                     /**
                      * 判断参数 BandWidth 是否已赋值
                      * @return BandWidth 是否已赋值
+                     * 
                      */
                     bool BandWidthHasBeenSet() const;
 
                     /**
                      * 获取VPC ID. If this parameter is left empty, the classic network will be used by default.
                      * @return VpcId VPC ID. If this parameter is left empty, the classic network will be used by default.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID. If this parameter is left empty, the classic network will be used by default.
-                     * @param VpcId VPC ID. If this parameter is left empty, the classic network will be used by default.
+                     * @param _vpcId VPC ID. If this parameter is left empty, the classic network will be used by default.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID, which is required for a VPC but not for the classic network.
                      * @return SubnetId Subnet ID, which is required for a VPC but not for the classic network.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID, which is required for a VPC but not for the classic network.
-                     * @param SubnetId Subnet ID, which is required for a VPC but not for the classic network.
+                     * @param _subnetId Subnet ID, which is required for a VPC but not for the classic network.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The maximum retention period for instance logs in minutes. Default value: 1,440 minutes (1 day). Max value: 12960 minutes (90 days). This parameter is optional.
                      * @return MsgRetentionTime The maximum retention period for instance logs in minutes. Default value: 1,440 minutes (1 day). Max value: 12960 minutes (90 days). This parameter is optional.
+                     * 
                      */
                     int64_t GetMsgRetentionTime() const;
 
                     /**
                      * 设置The maximum retention period for instance logs in minutes. Default value: 1,440 minutes (1 day). Max value: 12960 minutes (90 days). This parameter is optional.
-                     * @param MsgRetentionTime The maximum retention period for instance logs in minutes. Default value: 1,440 minutes (1 day). Max value: 12960 minutes (90 days). This parameter is optional.
+                     * @param _msgRetentionTime The maximum retention period for instance logs in minutes. Default value: 1,440 minutes (1 day). Max value: 12960 minutes (90 days). This parameter is optional.
+                     * 
                      */
                     void SetMsgRetentionTime(const int64_t& _msgRetentionTime);
 
                     /**
                      * 判断参数 MsgRetentionTime 是否已赋值
                      * @return MsgRetentionTime 是否已赋值
+                     * 
                      */
                     bool MsgRetentionTimeHasBeenSet() const;
 
                     /**
                      * 获取AZ
                      * @return ZoneId AZ
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置AZ
-                     * @param ZoneId AZ
+                     * @param _zoneId AZ
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID, which can be selected when you create an instance.
                      * @return ClusterId Cluster ID, which can be selected when you create an instance.
+                     * 
                      */
                     int64_t GetClusterId() const;
 
                     /**
                      * 设置Cluster ID, which can be selected when you create an instance.
-                     * @param ClusterId Cluster ID, which can be selected when you create an instance.
+                     * @param _clusterId Cluster ID, which can be selected when you create an instance.
+                     * 
                      */
                     void SetClusterId(const int64_t& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

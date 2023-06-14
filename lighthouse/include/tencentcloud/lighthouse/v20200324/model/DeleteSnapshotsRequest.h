@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of snapshots to be deleted, which can be queried through `DescribeSnapshots`.
                      * @return SnapshotIds List of IDs of snapshots to be deleted, which can be queried through `DescribeSnapshots`.
+                     * 
                      */
                     std::vector<std::string> GetSnapshotIds() const;
 
                     /**
                      * 设置List of IDs of snapshots to be deleted, which can be queried through `DescribeSnapshots`.
-                     * @param SnapshotIds List of IDs of snapshots to be deleted, which can be queried through `DescribeSnapshots`.
+                     * @param _snapshotIds List of IDs of snapshots to be deleted, which can be queried through `DescribeSnapshots`.
+                     * 
                      */
                     void SetSnapshotIds(const std::vector<std::string>& _snapshotIds);
 
                     /**
                      * 判断参数 SnapshotIds 是否已赋值
                      * @return SnapshotIds 是否已赋值
+                     * 
                      */
                     bool SnapshotIdsHasBeenSet() const;
 

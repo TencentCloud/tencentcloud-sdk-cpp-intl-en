@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Region
                      * @return Region Region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
-                     * @param Region Region
+                     * @param _region Region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Total number of snapshots
                      * @return SnapshotNumber Total number of snapshots
+                     * 
                      */
                     uint64_t GetSnapshotNumber() const;
 
                     /**
                      * 设置Total number of snapshots
-                     * @param SnapshotNumber Total number of snapshots
+                     * @param _snapshotNumber Total number of snapshots
+                     * 
                      */
                     void SetSnapshotNumber(const uint64_t& _snapshotNumber);
 
                     /**
                      * 判断参数 SnapshotNumber 是否已赋值
                      * @return SnapshotNumber 是否已赋值
+                     * 
                      */
                     bool SnapshotNumberHasBeenSet() const;
 
                     /**
                      * 获取Total snapshot size
                      * @return SnapshotSize Total snapshot size
+                     * 
                      */
                     uint64_t GetSnapshotSize() const;
 
                     /**
                      * 设置Total snapshot size
-                     * @param SnapshotSize Total snapshot size
+                     * @param _snapshotSize Total snapshot size
+                     * 
                      */
                     void SetSnapshotSize(const uint64_t& _snapshotSize);
 
                     /**
                      * 判断参数 SnapshotSize 是否已赋值
                      * @return SnapshotSize 是否已赋值
+                     * 
                      */
                     bool SnapshotSizeHasBeenSet() const;
 

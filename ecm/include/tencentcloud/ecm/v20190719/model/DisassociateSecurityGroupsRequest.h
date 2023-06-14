@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the security group to be unbound, such as `esg-efil73jd`. You can unbind only one security group at a time.
                      * @return SecurityGroupIds ID of the security group to be unbound, such as `esg-efil73jd`. You can unbind only one security group at a time.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置ID of the security group to be unbound, such as `esg-efil73jd`. You can unbind only one security group at a time.
-                     * @param SecurityGroupIds ID of the security group to be unbound, such as `esg-efil73jd`. You can unbind only one security group at a time.
+                     * @param _securityGroupIds ID of the security group to be unbound, such as `esg-efil73jd`. You can unbind only one security group at a time.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance to be unbound, such as `ein-lesecurk`. You can specify multiple instances.
                      * @return InstanceIds ID of the instance to be unbound, such as `ein-lesecurk`. You can specify multiple instances.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置ID of the instance to be unbound, such as `ein-lesecurk`. You can specify multiple instances.
-                     * @param InstanceIds ID of the instance to be unbound, such as `ein-lesecurk`. You can specify multiple instances.
+                     * @param _instanceIds ID of the instance to be unbound, such as `ein-lesecurk`. You can specify multiple instances.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

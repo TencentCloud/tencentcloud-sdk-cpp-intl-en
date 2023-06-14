@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Rule information
                      * @return RuleSet Rule information
+                     * 
                      */
                     std::vector<EscapeRule> GetRuleSet() const;
 
                     /**
                      * 判断参数 RuleSet 是否已赋值
                      * @return RuleSet 是否已赋值
+                     * 
                      */
                     bool RuleSetHasBeenSet() const;
 

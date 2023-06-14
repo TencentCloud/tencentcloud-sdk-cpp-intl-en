@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a CMK, which is used to specify the CMK into which to import key material.
                      * @return KeyId Unique ID of a CMK, which is used to specify the CMK into which to import key material.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取The token required for importing key material, which is used as a parameter for `ImportKeyMaterial`.
                      * @return ImportToken The token required for importing key material, which is used as a parameter for `ImportKeyMaterial`.
+                     * 
                      */
                     std::string GetImportToken() const;
 
                     /**
                      * 判断参数 ImportToken 是否已赋值
                      * @return ImportToken 是否已赋值
+                     * 
                      */
                     bool ImportTokenHasBeenSet() const;
 
                     /**
                      * 获取The Base64-encoded RSA public key used to encrypt key material before importing it with `ImportKeyMaterial`.
                      * @return PublicKey The Base64-encoded RSA public key used to encrypt key material before importing it with `ImportKeyMaterial`.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取Validity period of the token and public key. A token and public key can only be imported when they are valid. If they are expired, you will need to call the `GetParametersForImport` API again to get a new token and public key.
                      * @return ParametersValidTo Validity period of the token and public key. A token and public key can only be imported when they are valid. If they are expired, you will need to call the `GetParametersForImport` API again to get a new token and public key.
+                     * 
                      */
                     uint64_t GetParametersValidTo() const;
 
                     /**
                      * 判断参数 ParametersValidTo 是否已赋值
                      * @return ParametersValidTo 是否已赋值
+                     * 
                      */
                     bool ParametersValidToHasBeenSet() const;
 

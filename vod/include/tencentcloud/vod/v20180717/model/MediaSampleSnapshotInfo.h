@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SampleSnapshotSet Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaSampleSnapshotItem> GetSampleSnapshotSet() const;
 
                     /**
                      * 设置Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SampleSnapshotSet Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
+                     * @param _sampleSnapshotSet Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSampleSnapshotSet(const std::vector<MediaSampleSnapshotItem>& _sampleSnapshotSet);
 
                     /**
                      * 判断参数 SampleSnapshotSet 是否已赋值
                      * @return SampleSnapshotSet 是否已赋值
+                     * 
                      */
                     bool SampleSnapshotSetHasBeenSet() const;
 

@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Permission group ID
                      * @return PGroupId Permission group ID
+                     * 
                      */
                     std::string GetPGroupId() const;
 
                     /**
                      * 判断参数 PGroupId 是否已赋值
                      * @return PGroupId 是否已赋值
+                     * 
                      */
                     bool PGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Permission group name
                      * @return Name Permission group name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Permission group description
                      * @return DescInfo Permission group description
+                     * 
                      */
                     std::string GetDescInfo() const;
 
                     /**
                      * 判断参数 DescInfo 是否已赋值
                      * @return DescInfo 是否已赋值
+                     * 
                      */
                     bool DescInfoHasBeenSet() const;
 
                     /**
                      * 获取The number of file systems bound to this permission group
                      * @return BindCfsNum The number of file systems bound to this permission group
+                     * 
                      */
                     int64_t GetBindCfsNum() const;
 
                     /**
                      * 判断参数 BindCfsNum 是否已赋值
                      * @return BindCfsNum 是否已赋值
+                     * 
                      */
                     bool BindCfsNumHasBeenSet() const;
 
                     /**
                      * 获取Permission group creation time
                      * @return CDate Permission group creation time
+                     * 
                      */
                     std::string GetCDate() const;
 
                     /**
                      * 判断参数 CDate 是否已赋值
                      * @return CDate 是否已赋值
+                     * 
                      */
                     bool CDateHasBeenSet() const;
 

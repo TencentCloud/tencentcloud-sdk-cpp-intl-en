@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Component name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name Component name
+                     * @param _name Component name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Component version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetVersion() const;
 
                     /**
                      * 设置Component version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version Component version
+                     * @param _version Component version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::vector<std::string>& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FixedVersion Fixed component version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFixedVersion() const;
 
                     /**
                      * 设置Fixed component version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FixedVersion Fixed component version
+                     * @param _fixedVersion Fixed component version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFixedVersion(const std::vector<std::string>& _fixedVersion);
 
                     /**
                      * 判断参数 FixedVersion 是否已赋值
                      * @return FixedVersion 是否已赋值
+                     * 
                      */
                     bool FixedVersionHasBeenSet() const;
 

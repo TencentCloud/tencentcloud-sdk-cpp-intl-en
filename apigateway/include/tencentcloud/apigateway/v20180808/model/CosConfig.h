@@ -61,6 +61,7 @@ POST：PostObject、AppendObject
 HEAD： HeadObject
 DELETE： DeleteObject
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -72,19 +73,21 @@ POST：PostObject、AppendObject
 HEAD： HeadObject
 DELETE： DeleteObject
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Action Specifies how the backend COS bucket is called by the API. The frontend request method and Action can be:
+                     * @param _action Specifies how the backend COS bucket is called by the API. The frontend request method and Action can be:
 GET：GetObject
 PUT：PutObject
 POST：PostObject、AppendObject
 HEAD： HeadObject
 DELETE： DeleteObject
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -93,20 +96,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return BucketName Backend COS bucket of the API
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBucketName() const;
 
                     /**
                      * 设置Backend COS bucket of the API
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param BucketName Backend COS bucket of the API
+                     * @param _bucketName Backend COS bucket of the API
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBucketName(const std::string& _bucketName);
 
                     /**
                      * 判断参数 BucketName 是否已赋值
                      * @return BucketName 是否已赋值
+                     * 
                      */
                     bool BucketNameHasBeenSet() const;
 
@@ -115,20 +121,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Authorization Whether to enable the backend COS signature for the API. It defaults to `false`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAuthorization() const;
 
                     /**
                      * 设置Whether to enable the backend COS signature for the API. It defaults to `false`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Authorization Whether to enable the backend COS signature for the API. It defaults to `false`.
+                     * @param _authorization Whether to enable the backend COS signature for the API. It defaults to `false`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthorization(const bool& _authorization);
 
                     /**
                      * 判断参数 Authorization 是否已赋值
                      * @return Authorization 是否已赋值
+                     * 
                      */
                     bool AuthorizationHasBeenSet() const;
 
@@ -145,6 +154,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
 Default: `BackEndPath`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPathMatchMode() const;
 
@@ -155,18 +165,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
 Default: `BackEndPath`
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PathMatchMode The path matching mode of the backend COS service
+                     * @param _pathMatchMode The path matching mode of the backend COS service
 `BackEndPath`: Match the backend path
 `FullPath`: Match the full path
 
 Default: `BackEndPath`
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPathMatchMode(const std::string& _pathMatchMode);
 
                     /**
                      * 判断参数 PathMatchMode 是否已赋值
                      * @return PathMatchMode 是否已赋值
+                     * 
                      */
                     bool PathMatchModeHasBeenSet() const;
 

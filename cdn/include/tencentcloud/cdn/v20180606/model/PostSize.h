@@ -53,6 +53,7 @@ on: Enable
                      * @return Switch Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ on: Enable
                      * 设置Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
-                     * @param Switch Limit the size of POST requests. The default value is 32 MB.
+                     * @param _switch Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Maximum size. Value range: 1 MB to 200 MB.
                      * @return MaxSize Maximum size. Value range: 1 MB to 200 MB.
+                     * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum size. Value range: 1 MB to 200 MB.
-                     * @param MaxSize Maximum size. Value range: 1 MB to 200 MB.
+                     * @param _maxSize Maximum size. Value range: 1 MB to 200 MB.
+                     * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 

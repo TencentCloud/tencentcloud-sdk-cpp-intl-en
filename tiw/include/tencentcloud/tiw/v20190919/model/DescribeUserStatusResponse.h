@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取AppId of the customer.
                      * @return AppId AppId of the customer.
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
@@ -64,48 +66,56 @@ namespace TencentCloud
 
 0: The whiteboard service is not activated.
 1: The whiteboard service is activated.
+                     * 
                      */
                     int64_t GetIsTiwUser() const;
 
                     /**
                      * 判断参数 IsTiwUser 是否已赋值
                      * @return IsTiwUser 是否已赋值
+                     * 
                      */
                     bool IsTiwUserHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether the interactive class feature of the trial or official edition is activated before.
                      * @return IsSaaSUser Specifies whether the interactive class feature of the trial or official edition is activated before.
+                     * 
                      */
                     int64_t GetIsSaaSUser() const;
 
                     /**
                      * 判断参数 IsSaaSUser 是否已赋值
                      * @return IsSaaSUser 是否已赋值
+                     * 
                      */
                     bool IsSaaSUserHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether the user uses the offline recording feature of the whiteboard service.
                      * @return IsTiwOfflineRecordUser Specifies whether the user uses the offline recording feature of the whiteboard service.
+                     * 
                      */
                     int64_t GetIsTiwOfflineRecordUser() const;
 
                     /**
                      * 判断参数 IsTiwOfflineRecordUser 是否已赋值
                      * @return IsTiwOfflineRecordUser 是否已赋值
+                     * 
                      */
                     bool IsTiwOfflineRecordUserHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether the user is authenticated.
                      * @return IsAuthenticated Specifies whether the user is authenticated.
+                     * 
                      */
                     int64_t GetIsAuthenticated() const;
 
                     /**
                      * 判断参数 IsAuthenticated 是否已赋值
                      * @return IsAuthenticated 是否已赋值
+                     * 
                      */
                     bool IsAuthenticatedHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The hash value.
                      * @return Hash The hash value.
+                     * 
                      */
                     std::string GetHash() const;
 
                     /**
                      * 判断参数 Hash 是否已赋值
                      * @return Hash 是否已赋值
+                     * 
                      */
                     bool HashHasBeenSet() const;
 

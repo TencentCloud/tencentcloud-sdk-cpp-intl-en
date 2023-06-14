@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Data offset. Default value: 0.
                      * @return Offset Data offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. Default value: 0.
-                     * @param Offset Data offset. Default value: 0.
+                     * @param _offset Data offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned CLB instances. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned CLB instances. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取CLB instance region
                      * @return LoadBalancerRegion CLB instance region
+                     * 
                      */
                     std::string GetLoadBalancerRegion() const;
 
                     /**
                      * 设置CLB instance region
-                     * @param LoadBalancerRegion CLB instance region
+                     * @param _loadBalancerRegion CLB instance region
+                     * 
                      */
                     void SetLoadBalancerRegion(const std::string& _loadBalancerRegion);
 
                     /**
                      * 判断参数 LoadBalancerRegion 是否已赋值
                      * @return LoadBalancerRegion 是否已赋值
+                     * 
                      */
                     bool LoadBalancerRegionHasBeenSet() const;
 

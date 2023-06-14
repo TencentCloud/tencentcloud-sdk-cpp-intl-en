@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取List of forwarding listening ports. Value range: 1–65535.
                      * @return ProxyPorts List of forwarding listening ports. Value range: 1–65535.
+                     * 
                      */
                     std::vector<int64_t> GetProxyPorts() const;
 
                     /**
                      * 设置List of forwarding listening ports. Value range: 1–65535.
-                     * @param ProxyPorts List of forwarding listening ports. Value range: 1–65535.
+                     * @param _proxyPorts List of forwarding listening ports. Value range: 1–65535.
+                     * 
                      */
                     void SetProxyPorts(const std::vector<int64_t>& _proxyPorts);
 
                     /**
                      * 判断参数 ProxyPorts 是否已赋值
                      * @return ProxyPorts 是否已赋值
+                     * 
                      */
                     bool ProxyPortsHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 `http`: HTTP protocol
 `https`: HTTPS protocol
 ]
+                     * 
                      */
                     std::string GetProxyType() const;
 
@@ -81,16 +85,18 @@ namespace TencentCloud
 `http`: HTTP protocol
 `https`: HTTPS protocol
 ]
-                     * @param ProxyType Forwarding protocol:
+                     * @param _proxyType Forwarding protocol:
 `http`: HTTP protocol
 `https`: HTTPS protocol
 ]
+                     * 
                      */
                     void SetProxyType(const std::string& _proxyType);
 
                     /**
                      * 判断参数 ProxyType 是否已赋值
                      * @return ProxyType 是否已赋值
+                     * 
                      */
                     bool ProxyTypeHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of modifications.
                      * @return TotalCount Total number of modifications.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information of modifications.
                      * @return InstanceParamHistory Information of modifications.
+                     * 
                      */
                     std::vector<InstanceParamHistory> GetInstanceParamHistory() const;
 
                     /**
                      * 判断参数 InstanceParamHistory 是否已赋值
                      * @return InstanceParamHistory 是否已赋值
+                     * 
                      */
                     bool InstanceParamHistoryHasBeenSet() const;
 

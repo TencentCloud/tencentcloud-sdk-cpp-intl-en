@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site
-                     * @param ZoneId ID of the site
+                     * @param _zoneId ID of the site
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Certificate ID
                      * @return CertId Certificate ID
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Certificate ID
-                     * @param CertId Certificate ID
+                     * @param _certId Certificate ID
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
@@ -87,6 +93,7 @@ If the deployment fails, you can pass in `Status = deployed` again.
 `deployed`: The certificate is deployed.
 `disabled`: The certificate is disabled.
 If the deployment fails, you can pass in `Status = deployed` again.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -95,16 +102,18 @@ If the deployment fails, you can pass in `Status = deployed` again.
 `deployed`: The certificate is deployed.
 `disabled`: The certificate is disabled.
 If the deployment fails, you can pass in `Status = deployed` again.
-                     * @param Status Certificate status
+                     * @param _status Certificate status
 `deployed`: The certificate is deployed.
 `disabled`: The certificate is disabled.
 If the deployment fails, you can pass in `Status = deployed` again.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

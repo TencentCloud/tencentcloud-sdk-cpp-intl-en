@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the ENI instance, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The ID of the ENI instance, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the CVM instance, such as `ins-r8hr2upy`.
                      * @return InstanceId The ID of the CVM instance, such as `ins-r8hr2upy`.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The ID of the CVM instance, such as `ins-r8hr2upy`.
-                     * @param InstanceId The ID of the CVM instance, such as `ins-r8hr2upy`.
+                     * @param _instanceId The ID of the CVM instance, such as `ins-r8hr2upy`.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
                      * @return AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     * 
                      */
                     uint64_t GetAttachType() const;
 
                     /**
                      * 设置ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
-                     * @param AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     * @param _attachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+                     * 
                      */
                     void SetAttachType(const uint64_t& _attachType);
 
                     /**
                      * 判断参数 AttachType 是否已赋值
                      * @return AttachType 是否已赋值
+                     * 
                      */
                     bool AttachTypeHasBeenSet() const;
 

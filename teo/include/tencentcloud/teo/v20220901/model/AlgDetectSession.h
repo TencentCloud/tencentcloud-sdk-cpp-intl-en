@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Method to validate Cookie.
                      * @return Name Method to validate Cookie.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Method to validate Cookie.
-                     * @param Name Method to validate Cookie.
+                     * @param _name Method to validate Cookie.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
                      * @return DetectMode The validation mode. Values:
 <li>`detect`: Validate only</li>
 <li>`update_detect` (default): Update Cookie and validate</li>
+                     * 
                      */
                     std::string GetDetectMode() const;
 
@@ -79,15 +83,17 @@ namespace TencentCloud
                      * 设置The validation mode. Values:
 <li>`detect`: Validate only</li>
 <li>`update_detect` (default): Update Cookie and validate</li>
-                     * @param DetectMode The validation mode. Values:
+                     * @param _detectMode The validation mode. Values:
 <li>`detect`: Validate only</li>
 <li>`update_detect` (default): Update Cookie and validate</li>
+                     * 
                      */
                     void SetDetectMode(const std::string& _detectMode);
 
                     /**
                      * 判断参数 DetectMode 是否已赋值
                      * @return DetectMode 是否已赋值
+                     * 
                      */
                     bool DetectModeHasBeenSet() const;
 
@@ -98,6 +104,7 @@ namespace TencentCloud
                      * @return SessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
 <li>`off`: Disable</li>
 <li>`on`: Enable</li>
+                     * 
                      */
                     std::string GetSessionAnalyzeSwitch() const;
 
@@ -105,87 +112,101 @@ namespace TencentCloud
                      * 设置Whether to enable Cookie-based session check. The default value is `off`. Values:
 <li>`off`: Disable</li>
 <li>`on`: Enable</li>
-                     * @param SessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
+                     * @param _sessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
 <li>`off`: Disable</li>
 <li>`on`: Enable</li>
+                     * 
                      */
                     void SetSessionAnalyzeSwitch(const std::string& _sessionAnalyzeSwitch);
 
                     /**
                      * 判断参数 SessionAnalyzeSwitch 是否已赋值
                      * @return SessionAnalyzeSwitch 是否已赋值
+                     * 
                      */
                     bool SessionAnalyzeSwitchHasBeenSet() const;
 
                     /**
                      * 获取The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
                      * @return InvalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+                     * 
                      */
                     int64_t GetInvalidStatTime() const;
 
                     /**
                      * 设置The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
-                     * @param InvalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+                     * @param _invalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+                     * 
                      */
                     void SetInvalidStatTime(const int64_t& _invalidStatTime);
 
                     /**
                      * 判断参数 InvalidStatTime 是否已赋值
                      * @return InvalidStatTime 是否已赋值
+                     * 
                      */
                     bool InvalidStatTimeHasBeenSet() const;
 
                     /**
                      * 获取The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
                      * @return InvalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+                     * 
                      */
                     int64_t GetInvalidThreshold() const;
 
                     /**
                      * 设置The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
-                     * @param InvalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+                     * @param _invalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+                     * 
                      */
                     void SetInvalidThreshold(const int64_t& _invalidThreshold);
 
                     /**
                      * 判断参数 InvalidThreshold 是否已赋值
                      * @return InvalidThreshold 是否已赋值
+                     * 
                      */
                     bool InvalidThresholdHasBeenSet() const;
 
                     /**
                      * 获取Cookie validation results.
                      * @return AlgDetectResults Cookie validation results.
+                     * 
                      */
                     std::vector<AlgDetectResult> GetAlgDetectResults() const;
 
                     /**
                      * 设置Cookie validation results.
-                     * @param AlgDetectResults Cookie validation results.
+                     * @param _algDetectResults Cookie validation results.
+                     * 
                      */
                     void SetAlgDetectResults(const std::vector<AlgDetectResult>& _algDetectResults);
 
                     /**
                      * 判断参数 AlgDetectResults 是否已赋值
                      * @return AlgDetectResults 是否已赋值
+                     * 
                      */
                     bool AlgDetectResultsHasBeenSet() const;
 
                     /**
                      * 获取Cookie-based session check results.
                      * @return SessionBehaviors Cookie-based session check results.
+                     * 
                      */
                     std::vector<AlgDetectResult> GetSessionBehaviors() const;
 
                     /**
                      * 设置Cookie-based session check results.
-                     * @param SessionBehaviors Cookie-based session check results.
+                     * @param _sessionBehaviors Cookie-based session check results.
+                     * 
                      */
                     void SetSessionBehaviors(const std::vector<AlgDetectResult>& _sessionBehaviors);
 
                     /**
                      * 判断参数 SessionBehaviors 是否已赋值
                      * @return SessionBehaviors 是否已赋值
+                     * 
                      */
                     bool SessionBehaviorsHasBeenSet() const;
 

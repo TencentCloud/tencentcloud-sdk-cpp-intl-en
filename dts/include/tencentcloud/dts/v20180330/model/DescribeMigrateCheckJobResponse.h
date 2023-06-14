@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Check task status: unavailable, starting, running, finished
                      * @return Status Check task status: unavailable, starting, running, finished
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Task error code
                      * @return ErrorCode Task error code
+                     * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取Task error message
                      * @return ErrorMessage Task error message
+                     * 
                      */
                     std::string GetErrorMessage() const;
 
                     /**
                      * 判断参数 ErrorMessage 是否已赋值
                      * @return ErrorMessage 是否已赋值
+                     * 
                      */
                     bool ErrorMessageHasBeenSet() const;
 
                     /**
                      * 获取Check task progress. For example, "30" means 30% completed
                      * @return Progress Check task progress. For example, "30" means 30% completed
+                     * 
                      */
                     std::string GetProgress() const;
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Whether the check succeeds. 0: no; 1: yes; 3: not checked
                      * @return CheckFlag Whether the check succeeds. 0: no; 1: yes; 3: not checked
+                     * 
                      */
                     int64_t GetCheckFlag() const;
 
                     /**
                      * 判断参数 CheckFlag 是否已赋值
                      * @return CheckFlag 是否已赋值
+                     * 
                      */
                     bool CheckFlagHasBeenSet() const;
 

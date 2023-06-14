@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取SMS receipts.
                      * @return CallbackCount SMS receipts.
+                     * 
                      */
                     uint64_t GetCallbackCount() const;
 
                     /**
                      * 设置SMS receipts.
-                     * @param CallbackCount SMS receipts.
+                     * @param _callbackCount SMS receipts.
+                     * 
                      */
                     void SetCallbackCount(const uint64_t& _callbackCount);
 
                     /**
                      * 判断参数 CallbackCount 是否已赋值
                      * @return CallbackCount 是否已赋值
+                     * 
                      */
                     bool CallbackCountHasBeenSet() const;
 
                     /**
                      * 获取Successfully submitted SMS messages.
                      * @return RequestSuccessCount Successfully submitted SMS messages.
+                     * 
                      */
                     uint64_t GetRequestSuccessCount() const;
 
                     /**
                      * 设置Successfully submitted SMS messages.
-                     * @param RequestSuccessCount Successfully submitted SMS messages.
+                     * @param _requestSuccessCount Successfully submitted SMS messages.
+                     * 
                      */
                     void SetRequestSuccessCount(const uint64_t& _requestSuccessCount);
 
                     /**
                      * 判断参数 RequestSuccessCount 是否已赋值
                      * @return RequestSuccessCount 是否已赋值
+                     * 
                      */
                     bool RequestSuccessCountHasBeenSet() const;
 
                     /**
                      * 获取Failed SMS receipts.
                      * @return CallbackFailCount Failed SMS receipts.
+                     * 
                      */
                     uint64_t GetCallbackFailCount() const;
 
                     /**
                      * 设置Failed SMS receipts.
-                     * @param CallbackFailCount Failed SMS receipts.
+                     * @param _callbackFailCount Failed SMS receipts.
+                     * 
                      */
                     void SetCallbackFailCount(const uint64_t& _callbackFailCount);
 
                     /**
                      * 判断参数 CallbackFailCount 是否已赋值
                      * @return CallbackFailCount 是否已赋值
+                     * 
                      */
                     bool CallbackFailCountHasBeenSet() const;
 
                     /**
                      * 获取Successful SMS receipts.
                      * @return CallbackSuccessCount Successful SMS receipts.
+                     * 
                      */
                     uint64_t GetCallbackSuccessCount() const;
 
                     /**
                      * 设置Successful SMS receipts.
-                     * @param CallbackSuccessCount Successful SMS receipts.
+                     * @param _callbackSuccessCount Successful SMS receipts.
+                     * 
                      */
                     void SetCallbackSuccessCount(const uint64_t& _callbackSuccessCount);
 
                     /**
                      * 判断参数 CallbackSuccessCount 是否已赋值
                      * @return CallbackSuccessCount 是否已赋值
+                     * 
                      */
                     bool CallbackSuccessCountHasBeenSet() const;
 
                     /**
                      * 获取Internal carrier errors.
                      * @return InternalErrorCount Internal carrier errors.
+                     * 
                      */
                     uint64_t GetInternalErrorCount() const;
 
                     /**
                      * 设置Internal carrier errors.
-                     * @param InternalErrorCount Internal carrier errors.
+                     * @param _internalErrorCount Internal carrier errors.
+                     * 
                      */
                     void SetInternalErrorCount(const uint64_t& _internalErrorCount);
 
                     /**
                      * 判断参数 InternalErrorCount 是否已赋值
                      * @return InternalErrorCount 是否已赋值
+                     * 
                      */
                     bool InternalErrorCountHasBeenSet() const;
 
                     /**
                      * 获取Invalid or empty mobile numbers.
                      * @return InvalidNumberCount Invalid or empty mobile numbers.
+                     * 
                      */
                     uint64_t GetInvalidNumberCount() const;
 
                     /**
                      * 设置Invalid or empty mobile numbers.
-                     * @param InvalidNumberCount Invalid or empty mobile numbers.
+                     * @param _invalidNumberCount Invalid or empty mobile numbers.
+                     * 
                      */
                     void SetInvalidNumberCount(const uint64_t& _invalidNumberCount);
 
                     /**
                      * 判断参数 InvalidNumberCount 是否已赋值
                      * @return InvalidNumberCount 是否已赋值
+                     * 
                      */
                     bool InvalidNumberCountHasBeenSet() const;
 
                     /**
                      * 获取Errors such as out-of-service or power-off.
                      * @return ShutdownErrorCount Errors such as out-of-service or power-off.
+                     * 
                      */
                     uint64_t GetShutdownErrorCount() const;
 
                     /**
                      * 设置Errors such as out-of-service or power-off.
-                     * @param ShutdownErrorCount Errors such as out-of-service or power-off.
+                     * @param _shutdownErrorCount Errors such as out-of-service or power-off.
+                     * 
                      */
                     void SetShutdownErrorCount(const uint64_t& _shutdownErrorCount);
 
                     /**
                      * 判断参数 ShutdownErrorCount 是否已赋值
                      * @return ShutdownErrorCount 是否已赋值
+                     * 
                      */
                     bool ShutdownErrorCountHasBeenSet() const;
 
                     /**
                      * 获取Blacklisted mobile numbers.
                      * @return BlackListCount Blacklisted mobile numbers.
+                     * 
                      */
                     uint64_t GetBlackListCount() const;
 
                     /**
                      * 设置Blacklisted mobile numbers.
-                     * @param BlackListCount Blacklisted mobile numbers.
+                     * @param _blackListCount Blacklisted mobile numbers.
+                     * 
                      */
                     void SetBlackListCount(const uint64_t& _blackListCount);
 
                     /**
                      * 判断参数 BlackListCount 是否已赋值
                      * @return BlackListCount 是否已赋值
+                     * 
                      */
                     bool BlackListCountHasBeenSet() const;
 
                     /**
                      * 获取Carrier frequency limit hits.
                      * @return FrequencyLimitCount Carrier frequency limit hits.
+                     * 
                      */
                     uint64_t GetFrequencyLimitCount() const;
 
                     /**
                      * 设置Carrier frequency limit hits.
-                     * @param FrequencyLimitCount Carrier frequency limit hits.
+                     * @param _frequencyLimitCount Carrier frequency limit hits.
+                     * 
                      */
                     void SetFrequencyLimitCount(const uint64_t& _frequencyLimitCount);
 
                     /**
                      * 判断参数 FrequencyLimitCount 是否已赋值
                      * @return FrequencyLimitCount 是否已赋值
+                     * 
                      */
                     bool FrequencyLimitCountHasBeenSet() const;
 

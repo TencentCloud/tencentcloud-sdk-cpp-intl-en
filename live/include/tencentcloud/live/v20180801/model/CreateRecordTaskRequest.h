@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Push path.
                      * @return AppName Push path.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path.
-                     * @param AppName Push path.
+                     * @param _appName Push path.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
                      * @return EndTime Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
-                     * @param EndTime Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+                     * @param _endTime Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
                      * @return StartTime Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
+                     * 
                      */
                     uint64_t GetStartTime() const;
 
                     /**
                      * 设置Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
-                     * @param StartTime Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
+                     * @param _startTime Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
+                     * 
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -139,6 +154,7 @@ namespace TencentCloud
                      * @return StreamType Push type. Default value: 0. Valid values:
 0: LVB push.
 1: mixed stream, i.e., A + B = C mixed stream.
+                     * 
                      */
                     uint64_t GetStreamType() const;
 
@@ -146,51 +162,59 @@ namespace TencentCloud
                      * 设置Push type. Default value: 0. Valid values:
 0: LVB push.
 1: mixed stream, i.e., A + B = C mixed stream.
-                     * @param StreamType Push type. Default value: 0. Valid values:
+                     * @param _streamType Push type. Default value: 0. Valid values:
 0: LVB push.
 1: mixed stream, i.e., A + B = C mixed stream.
+                     * 
                      */
                     void SetStreamType(const uint64_t& _streamType);
 
                     /**
                      * 判断参数 StreamType 是否已赋值
                      * @return StreamType 是否已赋值
+                     * 
                      */
                     bool StreamTypeHasBeenSet() const;
 
                     /**
                      * 获取Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
                      * @return TemplateId Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
+                     * 
                      */
                     uint64_t GetTemplateId() const;
 
                     /**
                      * 设置Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
-                     * @param TemplateId Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
+                     * @param _templateId Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
+                     * 
                      */
                     void SetTemplateId(const uint64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Extension field which is not defined now. It is empty by default.
                      * @return Extension Extension field which is not defined now. It is empty by default.
+                     * 
                      */
                     std::string GetExtension() const;
 
                     /**
                      * 设置Extension field which is not defined now. It is empty by default.
-                     * @param Extension Extension field which is not defined now. It is empty by default.
+                     * @param _extension Extension field which is not defined now. It is empty by default.
+                     * 
                      */
                     void SetExtension(const std::string& _extension);
 
                     /**
                      * 判断参数 Extension 是否已赋值
                      * @return Extension 是否已赋值
+                     * 
                      */
                     bool ExtensionHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The shared component name.
                      * @return ServiceName The shared component name.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置The shared component name.
-                     * @param ServiceName The shared component name.
+                     * @param _serviceName The shared component name.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
                     /**
                      * 获取The cluster to which the shared component belongs.
                      * @return InstanceId The cluster to which the shared component belongs.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The cluster to which the shared component belongs.
-                     * @param InstanceId The cluster to which the shared component belongs.
+                     * @param _instanceId The cluster to which the shared component belongs.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

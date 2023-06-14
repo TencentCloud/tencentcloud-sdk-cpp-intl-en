@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Score of the detected porn information in video from 0 to 100.
                      * @return Confidence Score of the detected porn information in video from 0 to 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Score of the detected porn information in video from 0 to 100.
-                     * @param Confidence Score of the detected porn information in video from 0 to 100.
+                     * @param _confidence Score of the detected porn information in video from 0 to 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -82,16 +86,18 @@ namespace TencentCloud
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param Suggestion Suggestion for the detected porn information. Valid values:
+                     * @param _suggestion Suggestion for the detected porn information. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -106,6 +112,7 @@ namespace TencentCloud
 <li>sexy: Sexiness.</li>
 <li>vulgar: Vulgarity.</li>
 <li>intimacy: Intimacy.</li>
+                     * 
                      */
                     std::string GetLabel() const;
 
@@ -115,35 +122,40 @@ namespace TencentCloud
 <li>sexy: Sexiness.</li>
 <li>vulgar: Vulgarity.</li>
 <li>intimacy: Intimacy.</li>
-                     * @param Label Tag of the detected porn information in video. Valid values:
+                     * @param _label Tag of the detected porn information in video. Valid values:
 <li>porn: Porn.</li>
 <li>sexy: Sexiness.</li>
 <li>vulgar: Vulgarity.</li>
 <li>intimacy: Intimacy.</li>
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
                     /**
                      * 获取List of video segments that contain the detected porn information.
                      * @return SegmentSet List of video segments that contain the detected porn information.
+                     * 
                      */
                     std::vector<MediaContentReviewSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of video segments that contain the detected porn information.
-                     * @param SegmentSet List of video segments that contain the detected porn information.
+                     * @param _segmentSet List of video segments that contain the detected porn information.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

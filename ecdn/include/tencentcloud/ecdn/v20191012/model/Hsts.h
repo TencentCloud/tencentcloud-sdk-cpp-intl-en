@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable. Valid values: on, off.
                      * @return Switch Whether to enable. Valid values: on, off.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable. Valid values: on, off.
-                     * @param Switch Whether to enable. Valid values: on, off.
+                     * @param _switch Whether to enable. Valid values: on, off.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxAge `MaxAge` value.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxAge() const;
 
                     /**
                      * 设置`MaxAge` value.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxAge `MaxAge` value.
+                     * @param _maxAge `MaxAge` value.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxAge(const int64_t& _maxAge);
 
                     /**
                      * 判断参数 MaxAge 是否已赋值
                      * @return MaxAge 是否已赋值
+                     * 
                      */
                     bool MaxAgeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIncludeSubDomains() const;
 
                     /**
                      * 设置Whether to include subdomain names. Valid values: on, off.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
+                     * @param _includeSubDomains Whether to include subdomain names. Valid values: on, off.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIncludeSubDomains(const std::string& _includeSubDomains);
 
                     /**
                      * 判断参数 IncludeSubDomains 是否已赋值
                      * @return IncludeSubDomains 是否已赋值
+                     * 
                      */
                     bool IncludeSubDomainsHasBeenSet() const;
 

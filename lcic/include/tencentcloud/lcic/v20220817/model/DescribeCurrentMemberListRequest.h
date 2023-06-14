@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The room ID.
                      * @return RoomId The room ID.
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置The room ID.
-                     * @param RoomId The room ID.
+                     * @param _roomId The room ID.
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The page to return records from. Pagination starts from 1.
                      * @return Page The page to return records from. Pagination starts from 1.
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置The page to return records from. Pagination starts from 1.
-                     * @param Page The page to return records from. Pagination starts from 1.
+                     * @param _page The page to return records from. Pagination starts from 1.
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records per page. The value of this parameter cannot exceed 1000.
                      * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of records per page. The value of this parameter cannot exceed 1000.
-                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
+                     * @param _limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

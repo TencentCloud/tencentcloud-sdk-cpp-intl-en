@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the certificate to be replaced, which can be a server certificate or a client certificate.
                      * @return OldCertificateId ID of the certificate to be replaced, which can be a server certificate or a client certificate.
+                     * 
                      */
                     std::string GetOldCertificateId() const;
 
                     /**
                      * 设置ID of the certificate to be replaced, which can be a server certificate or a client certificate.
-                     * @param OldCertificateId ID of the certificate to be replaced, which can be a server certificate or a client certificate.
+                     * @param _oldCertificateId ID of the certificate to be replaced, which can be a server certificate or a client certificate.
+                     * 
                      */
                     void SetOldCertificateId(const std::string& _oldCertificateId);
 
                     /**
                      * 判断参数 OldCertificateId 是否已赋值
                      * @return OldCertificateId 是否已赋值
+                     * 
                      */
                     bool OldCertificateIdHasBeenSet() const;
 
                     /**
                      * 获取Information such as the content of the new certificate
                      * @return Certificate Information such as the content of the new certificate
+                     * 
                      */
                     CertificateInput GetCertificate() const;
 
                     /**
                      * 设置Information such as the content of the new certificate
-                     * @param Certificate Information such as the content of the new certificate
+                     * @param _certificate Information such as the content of the new certificate
+                     * 
                      */
                     void SetCertificate(const CertificateInput& _certificate);
 
                     /**
                      * 判断参数 Certificate 是否已赋值
                      * @return Certificate 是否已赋值
+                     * 
                      */
                     bool CertificateHasBeenSet() const;
 

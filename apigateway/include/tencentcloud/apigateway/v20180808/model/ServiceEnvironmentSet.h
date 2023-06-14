@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of environments bound to service.
+                     * @param _totalCount Total number of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EnvironmentList List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Environment> GetEnvironmentList() const;
 
                     /**
                      * 设置List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EnvironmentList List of environments bound to service.
+                     * @param _environmentList List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentList(const std::vector<Environment>& _environmentList);
 
                     /**
                      * 判断参数 EnvironmentList 是否已赋值
                      * @return EnvironmentList 是否已赋值
+                     * 
                      */
                     bool EnvironmentListHasBeenSet() const;
 

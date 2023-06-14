@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取File name
                      * @return FileTaskId File name
+                     * 
                      */
                     std::string GetFileTaskId() const;
 
                     /**
                      * 判断参数 FileTaskId 是否已赋值
                      * @return FileTaskId 是否已赋值
+                     * 
                      */
                     bool FileTaskIdHasBeenSet() const;
 

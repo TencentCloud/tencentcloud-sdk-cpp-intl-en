@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TranscodeSet Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaTranscodeItem> GetTranscodeSet() const;
 
                     /**
                      * 设置Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeSet Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
+                     * @param _transcodeSet Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTranscodeSet(const std::vector<MediaTranscodeItem>& _transcodeSet);
 
                     /**
                      * 判断参数 TranscodeSet 是否已赋值
                      * @return TranscodeSet 是否已赋值
+                     * 
                      */
                     bool TranscodeSetHasBeenSet() const;
 

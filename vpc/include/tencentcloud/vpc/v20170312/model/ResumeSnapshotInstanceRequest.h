@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot policy IDs
                      * @return SnapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     std::string GetSnapshotPolicyId() const;
 
                     /**
                      * 设置Snapshot policy IDs
-                     * @param SnapshotPolicyId Snapshot policy IDs
+                     * @param _snapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     void SetSnapshotPolicyId(const std::string& _snapshotPolicyId);
 
                     /**
                      * 判断参数 SnapshotPolicyId 是否已赋值
                      * @return SnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool SnapshotPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Snapshot file ID
                      * @return SnapshotFileId Snapshot file ID
+                     * 
                      */
                     std::string GetSnapshotFileId() const;
 
                     /**
                      * 设置Snapshot file ID
-                     * @param SnapshotFileId Snapshot file ID
+                     * @param _snapshotFileId Snapshot file ID
+                     * 
                      */
                     void SetSnapshotFileId(const std::string& _snapshotFileId);
 
                     /**
                      * 判断参数 SnapshotFileId 是否已赋值
                      * @return SnapshotFileId 是否已赋值
+                     * 
                      */
                     bool SnapshotFileIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance.
                      * @return InstanceId ID of the instance.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance.
-                     * @param InstanceId ID of the instance.
+                     * @param _instanceId ID of the instance.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

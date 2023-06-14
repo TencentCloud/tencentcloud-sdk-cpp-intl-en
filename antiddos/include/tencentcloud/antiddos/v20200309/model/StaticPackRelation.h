@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ProtectBandwidth Base protection bandwidth
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetProtectBandwidth() const;
 
                     /**
                      * 设置Base protection bandwidth
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ProtectBandwidth Base protection bandwidth
+                     * @param _protectBandwidth Base protection bandwidth
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetProtectBandwidth(const uint64_t& _protectBandwidth);
 
                     /**
                      * 判断参数 ProtectBandwidth 是否已赋值
                      * @return ProtectBandwidth 是否已赋值
+                     * 
                      */
                     bool ProtectBandwidthHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NormalBandwidth Application bandwidth
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetNormalBandwidth() const;
 
                     /**
                      * 设置Application bandwidth
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NormalBandwidth Application bandwidth
+                     * @param _normalBandwidth Application bandwidth
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNormalBandwidth(const uint64_t& _normalBandwidth);
 
                     /**
                      * 判断参数 NormalBandwidth 是否已赋值
                      * @return NormalBandwidth 是否已赋值
+                     * 
                      */
                     bool NormalBandwidthHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ForwardRulesLimit Forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetForwardRulesLimit() const;
 
                     /**
                      * 设置Forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ForwardRulesLimit Forwarding rules
+                     * @param _forwardRulesLimit Forwarding rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetForwardRulesLimit(const uint64_t& _forwardRulesLimit);
 
                     /**
                      * 判断参数 ForwardRulesLimit 是否已赋值
                      * @return ForwardRulesLimit 是否已赋值
+                     * 
                      */
                     bool ForwardRulesLimitHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AutoRenewFlag Auto-renewal flag
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
                      * 设置Auto-renewal flag
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AutoRenewFlag Auto-renewal flag
+                     * @param _autoRenewFlag Auto-renewal flag
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CurDeadline Expiration time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCurDeadline() const;
 
                     /**
                      * 设置Expiration time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CurDeadline Expiration time
+                     * @param _curDeadline Expiration time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCurDeadline(const std::string& _curDeadline);
 
                     /**
                      * 判断参数 CurDeadline 是否已赋值
                      * @return CurDeadline 是否已赋值
+                     * 
                      */
                     bool CurDeadlineHasBeenSet() const;
 

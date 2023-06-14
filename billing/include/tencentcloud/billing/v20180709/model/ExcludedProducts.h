@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The names of non-applicable products.
                      * @return GoodsName The names of non-applicable products.
+                     * 
                      */
                     std::string GetGoodsName() const;
 
                     /**
                      * 设置The names of non-applicable products.
-                     * @param GoodsName The names of non-applicable products.
+                     * @param _goodsName The names of non-applicable products.
+                     * 
                      */
                     void SetGoodsName(const std::string& _goodsName);
 
                     /**
                      * 判断参数 GoodsName 是否已赋值
                      * @return GoodsName 是否已赋值
+                     * 
                      */
                     bool GoodsNameHasBeenSet() const;
 
                     /**
                      * 获取`postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
                      * @return PayMode `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置`postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
-                     * @param PayMode `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
+                     * @param _payMode `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all.
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 

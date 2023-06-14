@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return MigrateId Migration task ID
+                     * 
                      */
                     uint64_t GetMigrateId() const;
 
                     /**
                      * 设置Migration task ID
-                     * @param MigrateId Migration task ID
+                     * @param _migrateId Migration task ID
+                     * 
                      */
                     void SetMigrateId(const uint64_t& _migrateId);
 
                     /**
                      * 判断参数 MigrateId 是否已赋值
                      * @return MigrateId 是否已赋值
+                     * 
                      */
                     bool MigrateIdHasBeenSet() const;
 

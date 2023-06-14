@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The task ID.
                      * @return TaskId The task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The task ID.
-                     * @param TaskId The task ID.
+                     * @param _taskId The task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取The operator.
                      * @return Operator The operator.
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置The operator.
-                     * @param Operator The operator.
+                     * @param _operator The operator.
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
@@ -86,6 +92,7 @@ If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
                      * @return SourceUrls The source URL(s).
 If `SourceType` is `PullLivePushLive`, you can specify only one source URL.
 If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
+                     * 
                      */
                     std::vector<std::string> GetSourceUrls() const;
 
@@ -93,15 +100,17 @@ If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
                      * 设置The source URL(s).
 If `SourceType` is `PullLivePushLive`, you can specify only one source URL.
 If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
-                     * @param SourceUrls The source URL(s).
+                     * @param _sourceUrls The source URL(s).
 If `SourceType` is `PullLivePushLive`, you can specify only one source URL.
 If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
+                     * 
                      */
                     void SetSourceUrls(const std::vector<std::string>& _sourceUrls);
 
                     /**
                      * 判断参数 SourceUrls 是否已赋值
                      * @return SourceUrls 是否已赋值
+                     * 
                      */
                     bool SourceUrlsHasBeenSet() const;
 
@@ -114,6 +123,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -122,16 +132,18 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param StartTime The start time.
+                     * @param _startTime The start time.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -150,6 +162,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -161,19 +174,21 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param EndTime The end time. Notes:
+                     * @param _endTime The end time. Notes:
 1. The end time must be later than the start time.
 2. The end time and start time must be later than the current time.
 3. The end time and start time must be less than seven days apart.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -188,6 +203,7 @@ This parameter is valid only if the source is video files.
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     int64_t GetVodLoopTimes() const;
 
@@ -197,17 +213,19 @@ This parameter is valid only if the source is video files.
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only if the source is video files.
-                     * @param VodLoopTimes The number of times to loop video files.
+                     * @param _vodLoopTimes The number of times to loop video files.
 -1: Loop indefinitely
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     void SetVodLoopTimes(const int64_t& _vodLoopTimes);
 
                     /**
                      * 判断参数 VodLoopTimes 是否已赋值
                      * @return VodLoopTimes 是否已赋值
+                     * 
                      */
                     bool VodLoopTimesHasBeenSet() const;
 
@@ -220,6 +238,7 @@ This parameter is valid only if the source is video files.
 ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Finish the current video first and then pull from the new source.
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     std::string GetVodRefreshType() const;
 
@@ -228,16 +247,18 @@ This parameter is valid only if the source is video files.
 ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Finish the current video first and then pull from the new source.
 This parameter is valid only if the source is video files.
-                     * @param VodRefreshType The behavior after the source video files (`SourceUrls`) are changed.
+                     * @param _vodRefreshType The behavior after the source video files (`SourceUrls`) are changed.
 ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Finish the current video first and then pull from the new source.
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     void SetVodRefreshType(const std::string& _vodRefreshType);
 
                     /**
                      * 判断参数 VodRefreshType 是否已赋值
                      * @return VodRefreshType 是否已赋值
+                     * 
                      */
                     bool VodRefreshTypeHasBeenSet() const;
 
@@ -248,6 +269,7 @@ pause
                      * @return Status Whether to enable or pause the task. Valid values:
 enable
 pause
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -255,15 +277,17 @@ pause
                      * 设置Whether to enable or pause the task. Valid values:
 enable
 pause
-                     * @param Status Whether to enable or pause the task. Valid values:
+                     * @param _status Whether to enable or pause the task. Valid values:
 enable
 pause
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -280,6 +304,7 @@ TaskExit: Callback for ending a task
 VodSourceFileStart: Callback for starting to pull from video files
 VodSourceFileFinish: Callback for stopping pulling from video files
 ResetTaskConfig: Callback for modifying a task
+                     * 
                      */
                     std::vector<std::string> GetCallbackEvents() const;
 
@@ -290,18 +315,20 @@ TaskExit: Callback for ending a task
 VodSourceFileStart: Callback for starting to pull from video files
 VodSourceFileFinish: Callback for stopping pulling from video files
 ResetTaskConfig: Callback for modifying a task
-                     * @param CallbackEvents The events to listen for. If you do not pass this parameter, all events will be listened for.
+                     * @param _callbackEvents The events to listen for. If you do not pass this parameter, all events will be listened for.
 TaskStart: Callback for starting a task
 TaskExit: Callback for ending a task
 VodSourceFileStart: Callback for starting to pull from video files
 VodSourceFileFinish: Callback for stopping pulling from video files
 ResetTaskConfig: Callback for modifying a task
+                     * 
                      */
                     void SetCallbackEvents(const std::vector<std::string>& _callbackEvents);
 
                     /**
                      * 判断参数 CallbackEvents 是否已赋值
                      * @return CallbackEvents 是否已赋值
+                     * 
                      */
                     bool CallbackEventsHasBeenSet() const;
 
@@ -310,20 +337,23 @@ ResetTaskConfig: Callback for modifying a task
 Callbacks will be sent to this URL.
                      * @return CallbackUrl A custom callback URL.
 Callbacks will be sent to this URL.
+                     * 
                      */
                     std::string GetCallbackUrl() const;
 
                     /**
                      * 设置A custom callback URL.
 Callbacks will be sent to this URL.
-                     * @param CallbackUrl A custom callback URL.
+                     * @param _callbackUrl A custom callback URL.
 Callbacks will be sent to this URL.
+                     * 
                      */
                     void SetCallbackUrl(const std::string& _callbackUrl);
 
                     /**
                      * 判断参数 CallbackUrl 是否已赋值
                      * @return CallbackUrl 是否已赋值
+                     * 
                      */
                     bool CallbackUrlHasBeenSet() const;
 
@@ -332,20 +362,23 @@ Callbacks will be sent to this URL.
 The value of this parameter cannot be smaller than 1 or larger than the number of elements in `SourceUrls`.
                      * @return FileIndex The index of the video to start from.
 The value of this parameter cannot be smaller than 1 or larger than the number of elements in `SourceUrls`.
+                     * 
                      */
                     int64_t GetFileIndex() const;
 
                     /**
                      * 设置The index of the video to start from.
 The value of this parameter cannot be smaller than 1 or larger than the number of elements in `SourceUrls`.
-                     * @param FileIndex The index of the video to start from.
+                     * @param _fileIndex The index of the video to start from.
 The value of this parameter cannot be smaller than 1 or larger than the number of elements in `SourceUrls`.
+                     * 
                      */
                     void SetFileIndex(const int64_t& _fileIndex);
 
                     /**
                      * 判断参数 FileIndex 是否已赋值
                      * @return FileIndex 是否已赋值
+                     * 
                      */
                     bool FileIndexHasBeenSet() const;
 
@@ -356,6 +389,7 @@ Notes:
                      * @return OffsetTime The playback offset (seconds).
 Notes:
 1. This parameter should be used together with `FileIndex`.
+                     * 
                      */
                     int64_t GetOffsetTime() const;
 
@@ -363,33 +397,38 @@ Notes:
                      * 设置The playback offset (seconds).
 Notes:
 1. This parameter should be used together with `FileIndex`.
-                     * @param OffsetTime The playback offset (seconds).
+                     * @param _offsetTime The playback offset (seconds).
 Notes:
 1. This parameter should be used together with `FileIndex`.
+                     * 
                      */
                     void SetOffsetTime(const int64_t& _offsetTime);
 
                     /**
                      * 判断参数 OffsetTime 是否已赋值
                      * @return OffsetTime 是否已赋值
+                     * 
                      */
                     bool OffsetTimeHasBeenSet() const;
 
                     /**
                      * 获取The remarks for the task.
                      * @return Comment The remarks for the task.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The remarks for the task.
-                     * @param Comment The remarks for the task.
+                     * @param _comment The remarks for the task.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -410,6 +449,7 @@ Notes:
 2. Leaving this parameter empty will reset the backup source.
 3. When pull from the primary source is interrupted, the system will pull from the backup source.
 4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+                     * 
                      */
                     std::string GetBackupSourceType() const;
 
@@ -422,7 +462,7 @@ Notes:
 2. Leaving this parameter empty will reset the backup source.
 3. When pull from the primary source is interrupted, the system will pull from the backup source.
 4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
-                     * @param BackupSourceType The backup source type.
+                     * @param _backupSourceType The backup source type.
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
@@ -430,12 +470,14 @@ Notes:
 2. Leaving this parameter empty will reset the backup source.
 3. When pull from the primary source is interrupted, the system will pull from the backup source.
 4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+                     * 
                      */
                     void SetBackupSourceType(const std::string& _backupSourceType);
 
                     /**
                      * 判断参数 BackupSourceType 是否已赋值
                      * @return BackupSourceType 是否已赋值
+                     * 
                      */
                     bool BackupSourceTypeHasBeenSet() const;
 
@@ -444,20 +486,23 @@ Notes:
 You can specify only one backup source URL.
                      * @return BackupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
+                     * 
                      */
                     std::string GetBackupSourceUrl() const;
 
                     /**
                      * 设置The URL of the backup source.
 You can specify only one backup source URL.
-                     * @param BackupSourceUrl The URL of the backup source.
+                     * @param _backupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
+                     * 
                      */
                     void SetBackupSourceUrl(const std::string& _backupSourceUrl);
 
                     /**
                      * 判断参数 BackupSourceUrl 是否已赋值
                      * @return BackupSourceUrl 是否已赋值
+                     * 
                      */
                     bool BackupSourceUrlHasBeenSet() const;
 
@@ -480,6 +525,7 @@ Notes:
 5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
 6. If you want to stop using watermarks, pass in an empty array.
 7. Currently, animated watermarks are not supported.
+                     * 
                      */
                     std::vector<PullPushWatermarkInfo> GetWatermarkList() const;
 
@@ -493,7 +539,7 @@ Notes:
 5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
 6. If you want to stop using watermarks, pass in an empty array.
 7. Currently, animated watermarks are not supported.
-                     * @param WatermarkList The information of watermarks to add.
+                     * @param _watermarkList The information of watermarks to add.
 Notes:
 1. You can add up to four watermarks to different locations of the video.
 2. Make sure you use publicly accessible URLs for the watermark images.
@@ -502,12 +548,14 @@ Notes:
 5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
 6. If you want to stop using watermarks, pass in an empty array.
 7. Currently, animated watermarks are not supported.
+                     * 
                      */
                     void SetWatermarkList(const std::vector<PullPushWatermarkInfo>& _watermarkList);
 
                     /**
                      * 判断参数 WatermarkList 是否已赋值
                      * @return WatermarkList 是否已赋值
+                     * 
                      */
                     bool WatermarkListHasBeenSet() const;
 
@@ -520,6 +568,7 @@ Note: If you enable local mode, MP4 files will be downloaded to local storage, a
 0: Do not use local mode
 1: Use local mode
 Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * 
                      */
                     int64_t GetVodLocalMode() const;
 
@@ -528,16 +577,18 @@ Note: If you enable local mode, MP4 files will be downloaded to local storage, a
 0: Do not use local mode
 1: Use local mode
 Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
-                     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+                     * @param _vodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
 0: Do not use local mode
 1: Use local mode
 Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * 
                      */
                     void SetVodLocalMode(const int64_t& _vodLocalMode);
 
                     /**
                      * 判断参数 VodLocalMode 是否已赋值
                      * @return VodLocalMode 是否已赋值
+                     * 
                      */
                     bool VodLocalModeHasBeenSet() const;
 

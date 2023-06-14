@@ -62,306 +62,357 @@ namespace TencentCloud
                     /**
                      * 获取The file ID.
                      * @return FileId The file ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The file ID.
-                     * @param FileId The file ID.
+                     * @param _fileId The file ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
                      * @return StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
-                     * @param StartTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+                     * @param _startTimeOffset The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
                      * @return EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
-                     * @param EndTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+                     * @param _endTimeOffset The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取The ID of the remaster template.
                      * @return Definition The ID of the remaster template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置The ID of the remaster template.
-                     * @param Definition The ID of the remaster template.
+                     * @param _definition The ID of the remaster template.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取The video quality remastering parameters.
                      * @return RepairInfo The video quality remastering parameters.
+                     * 
                      */
                     RepairInfo GetRepairInfo() const;
 
                     /**
                      * 设置The video quality remastering parameters.
-                     * @param RepairInfo The video quality remastering parameters.
+                     * @param _repairInfo The video quality remastering parameters.
+                     * 
                      */
                     void SetRepairInfo(const RepairInfo& _repairInfo);
 
                     /**
                      * 判断参数 RepairInfo 是否已赋值
                      * @return RepairInfo 是否已赋值
+                     * 
                      */
                     bool RepairInfoHasBeenSet() const;
 
                     /**
                      * 获取The smart frame interpolation parameters.
                      * @return VideoFrameInterpolationInfo The smart frame interpolation parameters.
+                     * 
                      */
                     VideoFrameInterpolationInfo GetVideoFrameInterpolationInfo() const;
 
                     /**
                      * 设置The smart frame interpolation parameters.
-                     * @param VideoFrameInterpolationInfo The smart frame interpolation parameters.
+                     * @param _videoFrameInterpolationInfo The smart frame interpolation parameters.
+                     * 
                      */
                     void SetVideoFrameInterpolationInfo(const VideoFrameInterpolationInfo& _videoFrameInterpolationInfo);
 
                     /**
                      * 判断参数 VideoFrameInterpolationInfo 是否已赋值
                      * @return VideoFrameInterpolationInfo 是否已赋值
+                     * 
                      */
                     bool VideoFrameInterpolationInfoHasBeenSet() const;
 
                     /**
                      * 获取The super resolution parameters.
                      * @return SuperResolutionInfo The super resolution parameters.
+                     * 
                      */
                     SuperResolutionInfo GetSuperResolutionInfo() const;
 
                     /**
                      * 设置The super resolution parameters.
-                     * @param SuperResolutionInfo The super resolution parameters.
+                     * @param _superResolutionInfo The super resolution parameters.
+                     * 
                      */
                     void SetSuperResolutionInfo(const SuperResolutionInfo& _superResolutionInfo);
 
                     /**
                      * 判断参数 SuperResolutionInfo 是否已赋值
                      * @return SuperResolutionInfo 是否已赋值
+                     * 
                      */
                     bool SuperResolutionInfoHasBeenSet() const;
 
                     /**
                      * 获取The high dynamic range (HDR) parameters.
                      * @return HDRInfo The high dynamic range (HDR) parameters.
+                     * 
                      */
                     HDRInfo GetHDRInfo() const;
 
                     /**
                      * 设置The high dynamic range (HDR) parameters.
-                     * @param HDRInfo The high dynamic range (HDR) parameters.
+                     * @param _hDRInfo The high dynamic range (HDR) parameters.
+                     * 
                      */
                     void SetHDRInfo(const HDRInfo& _hDRInfo);
 
                     /**
                      * 判断参数 HDRInfo 是否已赋值
                      * @return HDRInfo 是否已赋值
+                     * 
                      */
                     bool HDRInfoHasBeenSet() const;
 
                     /**
                      * 获取The image noise removal parameters.
                      * @return VideoDenoiseInfo The image noise removal parameters.
+                     * 
                      */
                     VideoDenoiseInfo GetVideoDenoiseInfo() const;
 
                     /**
                      * 设置The image noise removal parameters.
-                     * @param VideoDenoiseInfo The image noise removal parameters.
+                     * @param _videoDenoiseInfo The image noise removal parameters.
+                     * 
                      */
                     void SetVideoDenoiseInfo(const VideoDenoiseInfo& _videoDenoiseInfo);
 
                     /**
                      * 判断参数 VideoDenoiseInfo 是否已赋值
                      * @return VideoDenoiseInfo 是否已赋值
+                     * 
                      */
                     bool VideoDenoiseInfoHasBeenSet() const;
 
                     /**
                      * 获取The noise removal parameters.
                      * @return AudioDenoiseInfo The noise removal parameters.
+                     * 
                      */
                     AudioDenoiseInfo GetAudioDenoiseInfo() const;
 
                     /**
                      * 设置The noise removal parameters.
-                     * @param AudioDenoiseInfo The noise removal parameters.
+                     * @param _audioDenoiseInfo The noise removal parameters.
+                     * 
                      */
                     void SetAudioDenoiseInfo(const AudioDenoiseInfo& _audioDenoiseInfo);
 
                     /**
                      * 判断参数 AudioDenoiseInfo 是否已赋值
                      * @return AudioDenoiseInfo 是否已赋值
+                     * 
                      */
                     bool AudioDenoiseInfoHasBeenSet() const;
 
                     /**
                      * 获取The color enhancement parameters.
                      * @return ColorInfo The color enhancement parameters.
+                     * 
                      */
                     ColorEnhanceInfo GetColorInfo() const;
 
                     /**
                      * 设置The color enhancement parameters.
-                     * @param ColorInfo The color enhancement parameters.
+                     * @param _colorInfo The color enhancement parameters.
+                     * 
                      */
                     void SetColorInfo(const ColorEnhanceInfo& _colorInfo);
 
                     /**
                      * 判断参数 ColorInfo 是否已赋值
                      * @return ColorInfo 是否已赋值
+                     * 
                      */
                     bool ColorInfoHasBeenSet() const;
 
                     /**
                      * 获取The detail enhancement parameters.
                      * @return SharpInfo The detail enhancement parameters.
+                     * 
                      */
                     SharpEnhanceInfo GetSharpInfo() const;
 
                     /**
                      * 设置The detail enhancement parameters.
-                     * @param SharpInfo The detail enhancement parameters.
+                     * @param _sharpInfo The detail enhancement parameters.
+                     * 
                      */
                     void SetSharpInfo(const SharpEnhanceInfo& _sharpInfo);
 
                     /**
                      * 判断参数 SharpInfo 是否已赋值
                      * @return SharpInfo 是否已赋值
+                     * 
                      */
                     bool SharpInfoHasBeenSet() const;
 
                     /**
                      * 获取The face enhancement parameters.
                      * @return FaceInfo The face enhancement parameters.
+                     * 
                      */
                     FaceEnhanceInfo GetFaceInfo() const;
 
                     /**
                      * 设置The face enhancement parameters.
-                     * @param FaceInfo The face enhancement parameters.
+                     * @param _faceInfo The face enhancement parameters.
+                     * 
                      */
                     void SetFaceInfo(const FaceEnhanceInfo& _faceInfo);
 
                     /**
                      * 判断参数 FaceInfo 是否已赋值
                      * @return FaceInfo 是否已赋值
+                     * 
                      */
                     bool FaceInfoHasBeenSet() const;
 
                     /**
                      * 获取The low-light enhancement parameters.
                      * @return LowLightInfo The low-light enhancement parameters.
+                     * 
                      */
                     LowLightEnhanceInfo GetLowLightInfo() const;
 
                     /**
                      * 设置The low-light enhancement parameters.
-                     * @param LowLightInfo The low-light enhancement parameters.
+                     * @param _lowLightInfo The low-light enhancement parameters.
+                     * 
                      */
                     void SetLowLightInfo(const LowLightEnhanceInfo& _lowLightInfo);
 
                     /**
                      * 判断参数 LowLightInfo 是否已赋值
                      * @return LowLightInfo 是否已赋值
+                     * 
                      */
                     bool LowLightInfoHasBeenSet() const;
 
                     /**
                      * 获取The banding removal parameters.
                      * @return ScratchRepairInfo The banding removal parameters.
+                     * 
                      */
                     ScratchRepairInfo GetScratchRepairInfo() const;
 
                     /**
                      * 设置The banding removal parameters.
-                     * @param ScratchRepairInfo The banding removal parameters.
+                     * @param _scratchRepairInfo The banding removal parameters.
+                     * 
                      */
                     void SetScratchRepairInfo(const ScratchRepairInfo& _scratchRepairInfo);
 
                     /**
                      * 判断参数 ScratchRepairInfo 是否已赋值
                      * @return ScratchRepairInfo 是否已赋值
+                     * 
                      */
                     bool ScratchRepairInfoHasBeenSet() const;
 
                     /**
                      * 获取The artifact removal (smoothing) parameters.
                      * @return ArtifactRepairInfo The artifact removal (smoothing) parameters.
+                     * 
                      */
                     ArtifactRepairInfo GetArtifactRepairInfo() const;
 
                     /**
                      * 设置The artifact removal (smoothing) parameters.
-                     * @param ArtifactRepairInfo The artifact removal (smoothing) parameters.
+                     * @param _artifactRepairInfo The artifact removal (smoothing) parameters.
+                     * 
                      */
                     void SetArtifactRepairInfo(const ArtifactRepairInfo& _artifactRepairInfo);
 
                     /**
                      * 判断参数 ArtifactRepairInfo 是否已赋值
                      * @return ArtifactRepairInfo 是否已赋值
+                     * 
                      */
                     bool ArtifactRepairInfoHasBeenSet() const;
 
                     /**
                      * 获取The output parameters of the file.
                      * @return TargetInfo The output parameters of the file.
+                     * 
                      */
                     RebuildMediaTargetInfo GetTargetInfo() const;
 
                     /**
                      * 设置The output parameters of the file.
-                     * @param TargetInfo The output parameters of the file.
+                     * @param _targetInfo The output parameters of the file.
+                     * 
                      */
                     void SetTargetInfo(const RebuildMediaTargetInfo& _targetInfo);
 
                     /**
                      * 判断参数 TargetInfo 是否已赋值
                      * @return TargetInfo 是否已赋值
+                     * 
                      */
                     bool TargetInfoHasBeenSet() const;
 

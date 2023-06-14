@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the policy group
                      * @return PolicyId ID of the policy group
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置ID of the policy group
-                     * @param PolicyId ID of the policy group
+                     * @param _policyId ID of the policy group
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Top-level domain name
                      * @return ZoneId Top-level domain name
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Top-level domain name
-                     * @param ZoneId Top-level domain name
+                     * @param _zoneId Top-level domain name
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Detailed DDoS mitigation configuration
                      * @return DdosRule Detailed DDoS mitigation configuration
+                     * 
                      */
                     DdosRule GetDdosRule() const;
 
                     /**
                      * 设置Detailed DDoS mitigation configuration
-                     * @param DdosRule Detailed DDoS mitigation configuration
+                     * @param _ddosRule Detailed DDoS mitigation configuration
+                     * 
                      */
                     void SetDdosRule(const DdosRule& _ddosRule);
 
                     /**
                      * 判断参数 DdosRule 是否已赋值
                      * @return DdosRule 是否已赋值
+                     * 
                      */
                     bool DdosRuleHasBeenSet() const;
 

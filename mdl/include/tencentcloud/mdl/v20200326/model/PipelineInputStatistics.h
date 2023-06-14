@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Data timestamp in seconds.
                      * @return Timestamp Data timestamp in seconds.
+                     * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
                      * 设置Data timestamp in seconds.
-                     * @param Timestamp Data timestamp in seconds.
+                     * @param _timestamp Data timestamp in seconds.
+                     * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
                     /**
                      * 获取Input bandwidth in bps.
                      * @return NetworkIn Input bandwidth in bps.
+                     * 
                      */
                     uint64_t GetNetworkIn() const;
 
                     /**
                      * 设置Input bandwidth in bps.
-                     * @param NetworkIn Input bandwidth in bps.
+                     * @param _networkIn Input bandwidth in bps.
+                     * 
                      */
                     void SetNetworkIn(const uint64_t& _networkIn);
 
                     /**
                      * 判断参数 NetworkIn 是否已赋值
                      * @return NetworkIn 是否已赋值
+                     * 
                      */
                     bool NetworkInHasBeenSet() const;
 
@@ -91,6 +97,7 @@ For other inputs, the quantity is 1.
                      * @return Video Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
+                     * 
                      */
                     std::vector<VideoPipelineInputStatistics> GetVideo() const;
 
@@ -98,15 +105,17 @@ For other inputs, the quantity is 1.
                      * 设置Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-                     * @param Video Video information array.
+                     * @param _video Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
+                     * 
                      */
                     void SetVideo(const std::vector<VideoPipelineInputStatistics>& _video);
 
                     /**
                      * 判断参数 Video 是否已赋值
                      * @return Video 是否已赋值
+                     * 
                      */
                     bool VideoHasBeenSet() const;
 
@@ -117,6 +126,7 @@ For other inputs, the quantity is 1.
                      * @return Audio Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
+                     * 
                      */
                     std::vector<AudioPipelineInputStatistics> GetAudio() const;
 
@@ -124,15 +134,17 @@ For other inputs, the quantity is 1.
                      * 设置Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-                     * @param Audio Audio information array.
+                     * @param _audio Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
+                     * 
                      */
                     void SetAudio(const std::vector<AudioPipelineInputStatistics>& _audio);
 
                     /**
                      * 判断参数 Audio 是否已赋值
                      * @return Audio 是否已赋值
+                     * 
                      */
                     bool AudioHasBeenSet() const;
 

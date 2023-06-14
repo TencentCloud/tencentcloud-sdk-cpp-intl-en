@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return Id Channel ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param Id Channel ID
+                     * @param _id Channel ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Channel input URL
                      * @return Url Channel input URL
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Channel input URL
-                     * @param Url Channel input URL
+                     * @param _url Channel input URL
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return ActionType Authentication configuration. Valid values: `CLOSE`, `UPDATE`
 `CLOSE`: disable authentication
 `UPDATE`: update authentication information
+                     * 
                      */
                     std::string GetActionType() const;
 
@@ -92,15 +99,17 @@ namespace TencentCloud
                      * 设置Authentication configuration. Valid values: `CLOSE`, `UPDATE`
 `CLOSE`: disable authentication
 `UPDATE`: update authentication information
-                     * @param ActionType Authentication configuration. Valid values: `CLOSE`, `UPDATE`
+                     * @param _actionType Authentication configuration. Valid values: `CLOSE`, `UPDATE`
 `CLOSE`: disable authentication
 `UPDATE`: update authentication information
+                     * 
                      */
                     void SetActionType(const std::string& _actionType);
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 

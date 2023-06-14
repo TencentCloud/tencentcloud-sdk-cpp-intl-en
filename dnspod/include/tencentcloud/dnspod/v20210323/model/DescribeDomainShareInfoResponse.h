@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Domain sharing information
                      * @return ShareList Domain sharing information
+                     * 
                      */
                     std::vector<DomainShareInfo> GetShareList() const;
 
                     /**
                      * 判断参数 ShareList 是否已赋值
                      * @return ShareList 是否已赋值
+                     * 
                      */
                     bool ShareListHasBeenSet() const;
 
                     /**
                      * 获取Owner account of the domain
                      * @return Owner Owner account of the domain
+                     * 
                      */
                     std::string GetOwner() const;
 
                     /**
                      * 判断参数 Owner 是否已赋值
                      * @return Owner 是否已赋值
+                     * 
                      */
                     bool OwnerHasBeenSet() const;
 

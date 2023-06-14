@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of policies
                      * @return TotalCount Total number of policies
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Policy array
                      * @return Policies Policy array
+                     * 
                      */
                     std::vector<AlarmPolicy> GetPolicies() const;
 
                     /**
                      * 判断参数 Policies 是否已赋值
                      * @return Policies 是否已赋值
+                     * 
                      */
                     bool PoliciesHasBeenSet() const;
 

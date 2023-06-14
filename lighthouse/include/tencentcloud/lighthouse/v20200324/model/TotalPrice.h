@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return OriginalPrice Total original price
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Total original price
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param OriginalPrice Total original price
+                     * @param _originalPrice Total original price
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DiscountPrice Total discounted price
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Total discounted price
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DiscountPrice Total discounted price
+                     * @param _discountPrice Total discounted price
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 

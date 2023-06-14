@@ -49,36 +49,42 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Data Gets unhandled security events
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     UnHandleEvent GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Error code. 0: success; non-0: error
                      * @return ReturnCode Error code. 0: success; non-0: error
+                     * 
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取Return message: success
                      * @return ReturnMsg Return message: success
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 

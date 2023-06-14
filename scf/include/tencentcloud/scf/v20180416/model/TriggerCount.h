@@ -49,198 +49,231 @@ namespace TencentCloud
                     /**
                      * 获取Number of COS triggers
                      * @return Cos Number of COS triggers
+                     * 
                      */
                     int64_t GetCos() const;
 
                     /**
                      * 设置Number of COS triggers
-                     * @param Cos Number of COS triggers
+                     * @param _cos Number of COS triggers
+                     * 
                      */
                     void SetCos(const int64_t& _cos);
 
                     /**
                      * 判断参数 Cos 是否已赋值
                      * @return Cos 是否已赋值
+                     * 
                      */
                     bool CosHasBeenSet() const;
 
                     /**
                      * 获取Number of timer triggers
                      * @return Timer Number of timer triggers
+                     * 
                      */
                     int64_t GetTimer() const;
 
                     /**
                      * 设置Number of timer triggers
-                     * @param Timer Number of timer triggers
+                     * @param _timer Number of timer triggers
+                     * 
                      */
                     void SetTimer(const int64_t& _timer);
 
                     /**
                      * 判断参数 Timer 是否已赋值
                      * @return Timer 是否已赋值
+                     * 
                      */
                     bool TimerHasBeenSet() const;
 
                     /**
                      * 获取Number of CMQ triggers
                      * @return Cmq Number of CMQ triggers
+                     * 
                      */
                     int64_t GetCmq() const;
 
                     /**
                      * 设置Number of CMQ triggers
-                     * @param Cmq Number of CMQ triggers
+                     * @param _cmq Number of CMQ triggers
+                     * 
                      */
                     void SetCmq(const int64_t& _cmq);
 
                     /**
                      * 判断参数 Cmq 是否已赋值
                      * @return Cmq 是否已赋值
+                     * 
                      */
                     bool CmqHasBeenSet() const;
 
                     /**
                      * 获取Total number of triggers
                      * @return Total Total number of triggers
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 设置Total number of triggers
-                     * @param Total Total number of triggers
+                     * @param _total Total number of triggers
+                     * 
                      */
                     void SetTotal(const int64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Number of CKafka triggers
                      * @return Ckafka Number of CKafka triggers
+                     * 
                      */
                     int64_t GetCkafka() const;
 
                     /**
                      * 设置Number of CKafka triggers
-                     * @param Ckafka Number of CKafka triggers
+                     * @param _ckafka Number of CKafka triggers
+                     * 
                      */
                     void SetCkafka(const int64_t& _ckafka);
 
                     /**
                      * 判断参数 Ckafka 是否已赋值
                      * @return Ckafka 是否已赋值
+                     * 
                      */
                     bool CkafkaHasBeenSet() const;
 
                     /**
                      * 获取Number of API Gateway triggers
                      * @return Apigw Number of API Gateway triggers
+                     * 
                      */
                     int64_t GetApigw() const;
 
                     /**
                      * 设置Number of API Gateway triggers
-                     * @param Apigw Number of API Gateway triggers
+                     * @param _apigw Number of API Gateway triggers
+                     * 
                      */
                     void SetApigw(const int64_t& _apigw);
 
                     /**
                      * 判断参数 Apigw 是否已赋值
                      * @return Apigw 是否已赋值
+                     * 
                      */
                     bool ApigwHasBeenSet() const;
 
                     /**
                      * 获取Number of CLS triggers
                      * @return Cls Number of CLS triggers
+                     * 
                      */
                     int64_t GetCls() const;
 
                     /**
                      * 设置Number of CLS triggers
-                     * @param Cls Number of CLS triggers
+                     * @param _cls Number of CLS triggers
+                     * 
                      */
                     void SetCls(const int64_t& _cls);
 
                     /**
                      * 判断参数 Cls 是否已赋值
                      * @return Cls 是否已赋值
+                     * 
                      */
                     bool ClsHasBeenSet() const;
 
                     /**
                      * 获取Number of CLB triggers
                      * @return Clb Number of CLB triggers
+                     * 
                      */
                     int64_t GetClb() const;
 
                     /**
                      * 设置Number of CLB triggers
-                     * @param Clb Number of CLB triggers
+                     * @param _clb Number of CLB triggers
+                     * 
                      */
                     void SetClb(const int64_t& _clb);
 
                     /**
                      * 判断参数 Clb 是否已赋值
                      * @return Clb 是否已赋值
+                     * 
                      */
                     bool ClbHasBeenSet() const;
 
                     /**
                      * 获取Number of MPS triggers
                      * @return Mps Number of MPS triggers
+                     * 
                      */
                     int64_t GetMps() const;
 
                     /**
                      * 设置Number of MPS triggers
-                     * @param Mps Number of MPS triggers
+                     * @param _mps Number of MPS triggers
+                     * 
                      */
                     void SetMps(const int64_t& _mps);
 
                     /**
                      * 判断参数 Mps 是否已赋值
                      * @return Mps 是否已赋值
+                     * 
                      */
                     bool MpsHasBeenSet() const;
 
                     /**
                      * 获取Number of CM triggers
                      * @return Cm Number of CM triggers
+                     * 
                      */
                     int64_t GetCm() const;
 
                     /**
                      * 设置Number of CM triggers
-                     * @param Cm Number of CM triggers
+                     * @param _cm Number of CM triggers
+                     * 
                      */
                     void SetCm(const int64_t& _cm);
 
                     /**
                      * 判断参数 Cm 是否已赋值
                      * @return Cm 是否已赋值
+                     * 
                      */
                     bool CmHasBeenSet() const;
 
                     /**
                      * 获取Number of VOD triggers
                      * @return Vod Number of VOD triggers
+                     * 
                      */
                     int64_t GetVod() const;
 
                     /**
                      * 设置Number of VOD triggers
-                     * @param Vod Number of VOD triggers
+                     * @param _vod Number of VOD triggers
+                     * 
                      */
                     void SetVod(const int64_t& _vod);
 
                     /**
                      * 判断参数 Vod 是否已赋值
                      * @return Vod 是否已赋值
+                     * 
                      */
                     bool VodHasBeenSet() const;
 
@@ -249,20 +282,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Eb Number of EventBridge triggers
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEb() const;
 
                     /**
                      * 设置Number of EventBridge triggers
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Eb Number of EventBridge triggers
+                     * @param _eb Number of EventBridge triggers
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEb(const int64_t& _eb);
 
                     /**
                      * 判断参数 Eb 是否已赋值
                      * @return Eb 是否已赋值
+                     * 
                      */
                     bool EbHasBeenSet() const;
 

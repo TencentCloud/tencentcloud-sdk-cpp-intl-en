@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Domain name information list.
                      * @return Domains Domain name information list.
+                     * 
                      */
                     std::vector<DomainBriefInfo> GetDomains() const;
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Total number of domain names.
                      * @return TotalCount Total number of domain names.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -52,72 +52,84 @@ namespace TencentCloud
                     /**
                      * 获取Job ID
                      * @return JobId Job ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Job ID
-                     * @param JobId Job ID
+                     * @param _jobId Job ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Job name
                      * @return JobName Job name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Job name
-                     * @param JobName Job name
+                     * @param _jobName Job name
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Job state
                      * @return JobState Job state
+                     * 
                      */
                     std::string GetJobState() const;
 
                     /**
                      * 设置Job state
-                     * @param JobState Job state
+                     * @param _jobState Job state
+                     * 
                      */
                     void SetJobState(const std::string& _jobState);
 
                     /**
                      * 判断参数 JobState 是否已赋值
                      * @return JobState 是否已赋值
+                     * 
                      */
                     bool JobStateHasBeenSet() const;
 
                     /**
                      * 获取Job priority
                      * @return Priority Job priority
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 设置Job priority
-                     * @param Priority Job priority
+                     * @param _priority Job priority
+                     * 
                      */
                     void SetPriority(const int64_t& _priority);
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 
@@ -126,38 +138,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Placement Location information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置Location information
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Placement Location information
+                     * @param _placement Location information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -166,38 +184,44 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EndTime End time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EndTime End time
+                     * @param _endTime End time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Task statistical metrics
                      * @return TaskMetrics Task statistical metrics
+                     * 
                      */
                     TaskMetrics GetTaskMetrics() const;
 
                     /**
                      * 设置Task statistical metrics
-                     * @param TaskMetrics Task statistical metrics
+                     * @param _taskMetrics Task statistical metrics
+                     * 
                      */
                     void SetTaskMetrics(const TaskMetrics& _taskMetrics);
 
                     /**
                      * 判断参数 TaskMetrics 是否已赋值
                      * @return TaskMetrics 是否已赋值
+                     * 
                      */
                     bool TaskMetricsHasBeenSet() const;
 
@@ -206,20 +230,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Tags List of tags bound with the job.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of tags bound with the job.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Tags List of tags bound with the job.
+                     * @param _tags List of tags bound with the job.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

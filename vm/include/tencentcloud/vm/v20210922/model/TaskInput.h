@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Data ID
                      * @return DataId Data ID
+                     * 
                      */
                     std::string GetDataId() const;
 
                     /**
                      * 设置Data ID
-                     * @param DataId Data ID
+                     * @param _dataId Data ID
+                     * 
                      */
                     void SetDataId(const std::string& _dataId);
 
                     /**
                      * 判断参数 DataId 是否已赋值
                      * @return DataId 是否已赋值
+                     * 
                      */
                     bool DataIdHasBeenSet() const;
 
                     /**
                      * 获取Task name
                      * @return Name Task name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Task name
-                     * @param Name Task name
+                     * @param _name Task name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Task input
                      * @return Input Task input
+                     * 
                      */
                     StorageInfo GetInput() const;
 
                     /**
                      * 设置Task input
-                     * @param Input Task input
+                     * @param _input Task input
+                     * 
                      */
                     void SetInput(const StorageInfo& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 

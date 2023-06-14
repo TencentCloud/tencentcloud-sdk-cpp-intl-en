@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取CRD usage
                      * @return CRDUsage CRD usage
+                     * 
                      */
                     ResourceUsage GetCRDUsage() const;
 
                     /**
                      * 判断参数 CRDUsage 是否已赋值
                      * @return CRDUsage 是否已赋值
+                     * 
                      */
                     bool CRDUsageHasBeenSet() const;
 
                     /**
                      * 获取Pod usage
                      * @return PodUsage Pod usage
+                     * 
                      */
                     uint64_t GetPodUsage() const;
 
                     /**
                      * 判断参数 PodUsage 是否已赋值
                      * @return PodUsage 是否已赋值
+                     * 
                      */
                     bool PodUsageHasBeenSet() const;
 
                     /**
                      * 获取ConfigMap usage
                      * @return ConfigMapUsage ConfigMap usage
+                     * 
                      */
                     uint64_t GetConfigMapUsage() const;
 
                     /**
                      * 判断参数 ConfigMapUsage 是否已赋值
                      * @return ConfigMapUsage 是否已赋值
+                     * 
                      */
                     bool ConfigMapUsageHasBeenSet() const;
 
                     /**
                      * 获取Other resource usage
                      * @return OtherUsage Other resource usage
+                     * 
                      */
                     ResourceUsage GetOtherUsage() const;
 
                     /**
                      * 判断参数 OtherUsage 是否已赋值
                      * @return OtherUsage 是否已赋值
+                     * 
                      */
                     bool OtherUsageHasBeenSet() const;
 

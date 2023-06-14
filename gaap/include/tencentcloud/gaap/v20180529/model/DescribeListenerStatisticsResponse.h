@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Connection group statistics
                      * @return StatisticsData Connection group statistics
+                     * 
                      */
                     std::vector<MetricStatisticsInfo> GetStatisticsData() const;
 
                     /**
                      * 判断参数 StatisticsData 是否已赋值
                      * @return StatisticsData 是否已赋值
+                     * 
                      */
                     bool StatisticsDataHasBeenSet() const;
 

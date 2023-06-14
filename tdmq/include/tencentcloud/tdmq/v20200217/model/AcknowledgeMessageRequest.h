@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID used to identify the message, which can be obtained from the returned value of `receiveMessage`.
                      * @return MessageId Unique ID used to identify the message, which can be obtained from the returned value of `receiveMessage`.
+                     * 
                      */
                     std::string GetMessageId() const;
 
                     /**
                      * 设置Unique ID used to identify the message, which can be obtained from the returned value of `receiveMessage`.
-                     * @param MessageId Unique ID used to identify the message, which can be obtained from the returned value of `receiveMessage`.
+                     * @param _messageId Unique ID used to identify the message, which can be obtained from the returned value of `receiveMessage`.
+                     * 
                      */
                     void SetMessageId(const std::string& _messageId);
 
                     /**
                      * 判断参数 MessageId 是否已赋值
                      * @return MessageId 是否已赋值
+                     * 
                      */
                     bool MessageIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name, which can be obtained from the returned value of `receiveMessage` and is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
                      * @return AckTopic Topic name, which can be obtained from the returned value of `receiveMessage` and is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
+                     * 
                      */
                     std::string GetAckTopic() const;
 
                     /**
                      * 设置Topic name, which can be obtained from the returned value of `receiveMessage` and is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
-                     * @param AckTopic Topic name, which can be obtained from the returned value of `receiveMessage` and is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
+                     * @param _ackTopic Topic name, which can be obtained from the returned value of `receiveMessage` and is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
+                     * 
                      */
                     void SetAckTopic(const std::string& _ackTopic);
 
                     /**
                      * 判断参数 AckTopic 是否已赋值
                      * @return AckTopic 是否已赋值
+                     * 
                      */
                     bool AckTopicHasBeenSet() const;
 
                     /**
                      * 获取Subscriber name, which can be obtained from the returned value of `receiveMessage`. Make sure that it is the same as the subscriber name identified in `receiveMessage`; otherwise, the received message cannot be correctly acknowledged.
                      * @return SubName Subscriber name, which can be obtained from the returned value of `receiveMessage`. Make sure that it is the same as the subscriber name identified in `receiveMessage`; otherwise, the received message cannot be correctly acknowledged.
+                     * 
                      */
                     std::string GetSubName() const;
 
                     /**
                      * 设置Subscriber name, which can be obtained from the returned value of `receiveMessage`. Make sure that it is the same as the subscriber name identified in `receiveMessage`; otherwise, the received message cannot be correctly acknowledged.
-                     * @param SubName Subscriber name, which can be obtained from the returned value of `receiveMessage`. Make sure that it is the same as the subscriber name identified in `receiveMessage`; otherwise, the received message cannot be correctly acknowledged.
+                     * @param _subName Subscriber name, which can be obtained from the returned value of `receiveMessage`. Make sure that it is the same as the subscriber name identified in `receiveMessage`; otherwise, the received message cannot be correctly acknowledged.
+                     * 
                      */
                     void SetSubName(const std::string& _subName);
 
                     /**
                      * 判断参数 SubName 是否已赋值
                      * @return SubName 是否已赋值
+                     * 
                      */
                     bool SubNameHasBeenSet() const;
 

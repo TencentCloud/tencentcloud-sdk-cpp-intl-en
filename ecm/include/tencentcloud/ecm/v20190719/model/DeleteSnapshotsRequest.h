@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the snapshots to be deleted, which can be queried through [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      * @return SnapshotIds List of IDs of the snapshots to be deleted, which can be queried through [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * 
                      */
                     std::vector<std::string> GetSnapshotIds() const;
 
                     /**
                      * 设置List of IDs of the snapshots to be deleted, which can be queried through [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
-                     * @param SnapshotIds List of IDs of the snapshots to be deleted, which can be queried through [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @param _snapshotIds List of IDs of the snapshots to be deleted, which can be queried through [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * 
                      */
                     void SetSnapshotIds(const std::vector<std::string>& _snapshotIds);
 
                     /**
                      * 判断参数 SnapshotIds 是否已赋值
                      * @return SnapshotIds 是否已赋值
+                     * 
                      */
                     bool SnapshotIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to force delete the images associated with the snapshot.
                      * @return DeleteBindImages Whether to force delete the images associated with the snapshot.
+                     * 
                      */
                     bool GetDeleteBindImages() const;
 
                     /**
                      * 设置Whether to force delete the images associated with the snapshot.
-                     * @param DeleteBindImages Whether to force delete the images associated with the snapshot.
+                     * @param _deleteBindImages Whether to force delete the images associated with the snapshot.
+                     * 
                      */
                     void SetDeleteBindImages(const bool& _deleteBindImages);
 
                     /**
                      * 判断参数 DeleteBindImages 是否已赋值
                      * @return DeleteBindImages 是否已赋值
+                     * 
                      */
                     bool DeleteBindImagesHasBeenSet() const;
 

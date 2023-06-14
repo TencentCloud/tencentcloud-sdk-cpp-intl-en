@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Query filter
                      * @return Filters Query filter
+                     * 
                      */
                     std::vector<DnsRecordFilter> GetFilters() const;
 
                     /**
                      * 设置Query filter
-                     * @param Filters Query filter
+                     * @param _filters Query filter
+                     * 
                      */
                     void SetFilters(const std::vector<DnsRecordFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Sorts the order
                      * @return Order Sorts the order
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorts the order
-                     * @param Order Sorts the order
+                     * @param _order Sorts the order
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `asc`, and `desc`.
                      * @return Direction Valid values: `asc`, and `desc`.
+                     * 
                      */
                     std::string GetDirection() const;
 
                     /**
                      * 设置Valid values: `asc`, and `desc`.
-                     * @param Direction Valid values: `asc`, and `desc`.
+                     * @param _direction Valid values: `asc`, and `desc`.
+                     * 
                      */
                     void SetDirection(const std::string& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `all`, and `any`.
                      * @return Match Valid values: `all`, and `any`.
+                     * 
                      */
                     std::string GetMatch() const;
 
                     /**
                      * 设置Valid values: `all`, and `any`.
-                     * @param Match Valid values: `all`, and `any`.
+                     * @param _match Valid values: `all`, and `any`.
+                     * 
                      */
                     void SetMatch(const std::string& _match);
 
                     /**
                      * 判断参数 Match 是否已赋值
                      * @return Match 是否已赋值
+                     * 
                      */
                     bool MatchHasBeenSet() const;
 
                     /**
                      * 获取Limit on paginated queries. Default value: 100. Maximum value: 1000.
                      * @return Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit on paginated queries. Default value: 100. Maximum value: 1000.
-                     * @param Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+                     * @param _limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset for paginated queries. Default value: 0
                      * @return Offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset for paginated queries. Default value: 0
-                     * @param Offset Offset for paginated queries. Default value: 0
+                     * @param _offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 

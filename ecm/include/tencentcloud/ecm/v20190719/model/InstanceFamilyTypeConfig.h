@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance model family type ID
                      * @return InstanceFamilyType Instance model family type ID
+                     * 
                      */
                     std::string GetInstanceFamilyType() const;
 
                     /**
                      * 设置Instance model family type ID
-                     * @param InstanceFamilyType Instance model family type ID
+                     * @param _instanceFamilyType Instance model family type ID
+                     * 
                      */
                     void SetInstanceFamilyType(const std::string& _instanceFamilyType);
 
                     /**
                      * 判断参数 InstanceFamilyType 是否已赋值
                      * @return InstanceFamilyType 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance model family type name
                      * @return InstanceFamilyTypeName Instance model family type name
+                     * 
                      */
                     std::string GetInstanceFamilyTypeName() const;
 
                     /**
                      * 设置Instance model family type name
-                     * @param InstanceFamilyTypeName Instance model family type name
+                     * @param _instanceFamilyTypeName Instance model family type name
+                     * 
                      */
                     void SetInstanceFamilyTypeName(const std::string& _instanceFamilyTypeName);
 
                     /**
                      * 判断参数 InstanceFamilyTypeName 是否已赋值
                      * @return InstanceFamilyTypeName 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyTypeNameHasBeenSet() const;
 

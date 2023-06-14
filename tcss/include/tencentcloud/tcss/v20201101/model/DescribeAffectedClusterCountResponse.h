@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Number of critical clusters
                      * @return SeriousRiskClusterCount Number of critical clusters
+                     * 
                      */
                     uint64_t GetSeriousRiskClusterCount() const;
 
                     /**
                      * 判断参数 SeriousRiskClusterCount 是否已赋值
                      * @return SeriousRiskClusterCount 是否已赋值
+                     * 
                      */
                     bool SeriousRiskClusterCountHasBeenSet() const;
 
                     /**
                      * 获取Number of high-risk clusters
                      * @return HighRiskClusterCount Number of high-risk clusters
+                     * 
                      */
                     uint64_t GetHighRiskClusterCount() const;
 
                     /**
                      * 判断参数 HighRiskClusterCount 是否已赋值
                      * @return HighRiskClusterCount 是否已赋值
+                     * 
                      */
                     bool HighRiskClusterCountHasBeenSet() const;
 
                     /**
                      * 获取Number of medium-risk clusters
                      * @return MiddleRiskClusterCount Number of medium-risk clusters
+                     * 
                      */
                     uint64_t GetMiddleRiskClusterCount() const;
 
                     /**
                      * 判断参数 MiddleRiskClusterCount 是否已赋值
                      * @return MiddleRiskClusterCount 是否已赋值
+                     * 
                      */
                     bool MiddleRiskClusterCountHasBeenSet() const;
 
                     /**
                      * 获取Number of low-risk clusters
                      * @return HintRiskClusterCount Number of low-risk clusters
+                     * 
                      */
                     uint64_t GetHintRiskClusterCount() const;
 
                     /**
                      * 判断参数 HintRiskClusterCount 是否已赋值
                      * @return HintRiskClusterCount 是否已赋值
+                     * 
                      */
                     bool HintRiskClusterCountHasBeenSet() const;
 

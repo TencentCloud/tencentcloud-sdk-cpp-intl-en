@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Whether it is from Tencent Cloud
                      * @return IsCloud Whether it is from Tencent Cloud
+                     * 
                      */
                     bool GetIsCloud() const;
 
                     /**
                      * 设置Whether it is from Tencent Cloud
-                     * @param IsCloud Whether it is from Tencent Cloud
+                     * @param _isCloud Whether it is from Tencent Cloud
+                     * 
                      */
                     void SetIsCloud(const bool& _isCloud);
 
                     /**
                      * 判断参数 IsCloud 是否已赋值
                      * @return IsCloud 是否已赋值
+                     * 
                      */
                     bool IsCloudHasBeenSet() const;
 
                     /**
                      * 获取Network type. Valid values: `basic` (classic network); `private` (VPC); `public` (public network); `direct` (Direct Connect).
                      * @return NetType Network type. Valid values: `basic` (classic network); `private` (VPC); `public` (public network); `direct` (Direct Connect).
+                     * 
                      */
                     std::string GetNetType() const;
 
                     /**
                      * 设置Network type. Valid values: `basic` (classic network); `private` (VPC); `public` (public network); `direct` (Direct Connect).
-                     * @param NetType Network type. Valid values: `basic` (classic network); `private` (VPC); `public` (public network); `direct` (Direct Connect).
+                     * @param _netType Network type. Valid values: `basic` (classic network); `private` (VPC); `public` (public network); `direct` (Direct Connect).
+                     * 
                      */
                     void SetNetType(const std::string& _netType);
 
                     /**
                      * 判断参数 NetType 是否已赋值
                      * @return NetType 是否已赋值
+                     * 
                      */
                     bool NetTypeHasBeenSet() const;
 
                     /**
                      * 获取Region, which is required when `NetType` is `direct`.
                      * @return RegionCode Region, which is required when `NetType` is `direct`.
+                     * 
                      */
                     std::string GetRegionCode() const;
 
                     /**
                      * 设置Region, which is required when `NetType` is `direct`.
-                     * @param RegionCode Region, which is required when `NetType` is `direct`.
+                     * @param _regionCode Region, which is required when `NetType` is `direct`.
+                     * 
                      */
                     void SetRegionCode(const std::string& _regionCode);
 
                     /**
                      * 判断参数 RegionCode 是否已赋值
                      * @return RegionCode 是否已赋值
+                     * 
                      */
                     bool RegionCodeHasBeenSet() const;
 
                     /**
                      * 获取VpcId, which is required when `NetType` is `direct`.
                      * @return VpcId VpcId, which is required when `NetType` is `direct`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VpcId, which is required when `NetType` is `direct`.
-                     * @param VpcId VpcId, which is required when `NetType` is `direct`.
+                     * @param _vpcId VpcId, which is required when `NetType` is `direct`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Command validity, which is required for non-Tencent Cloud instances.
                      * @return ExpireDate Command validity, which is required for non-Tencent Cloud instances.
+                     * 
                      */
                     std::string GetExpireDate() const;
 
                     /**
                      * 设置Command validity, which is required for non-Tencent Cloud instances.
-                     * @param ExpireDate Command validity, which is required for non-Tencent Cloud instances.
+                     * @param _expireDate Command validity, which is required for non-Tencent Cloud instances.
+                     * 
                      */
                     void SetExpireDate(const std::string& _expireDate);
 
                     /**
                      * 判断参数 ExpireDate 是否已赋值
                      * @return ExpireDate 是否已赋值
+                     * 
                      */
                     bool ExpireDateHasBeenSet() const;
 

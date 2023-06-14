@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of policies associated with the role
                      * @return List List of policies associated with the role
+                     * 
                      */
                     std::vector<AttachedPolicyOfRole> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
                     /**
                      * 获取Total number of policies associated with the role
                      * @return TotalNum Total number of policies associated with the role
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 

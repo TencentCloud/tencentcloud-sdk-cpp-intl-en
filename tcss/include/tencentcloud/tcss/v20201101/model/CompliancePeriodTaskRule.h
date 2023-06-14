@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Execution frequency (days). Valid values: `1`, `3`, `7`.
                      * @return Frequency Execution frequency (days). Valid values: `1`, `3`, `7`.
+                     * 
                      */
                     uint64_t GetFrequency() const;
 
                     /**
                      * 设置Execution frequency (days). Valid values: `1`, `3`, `7`.
-                     * @param Frequency Execution frequency (days). Valid values: `1`, `3`, `7`.
+                     * @param _frequency Execution frequency (days). Valid values: `1`, `3`, `7`.
+                     * 
                      */
                     void SetFrequency(const uint64_t& _frequency);
 
                     /**
                      * 判断参数 Frequency 是否已赋值
                      * @return Frequency 是否已赋值
+                     * 
                      */
                     bool FrequencyHasBeenSet() const;
 
                     /**
                      * 获取Execution time in the format of "HH:mm:SS"
                      * @return ExecutionTime Execution time in the format of "HH:mm:SS"
+                     * 
                      */
                     std::string GetExecutionTime() const;
 
                     /**
                      * 设置Execution time in the format of "HH:mm:SS"
-                     * @param ExecutionTime Execution time in the format of "HH:mm:SS"
+                     * @param _executionTime Execution time in the format of "HH:mm:SS"
+                     * 
                      */
                     void SetExecutionTime(const std::string& _executionTime);
 
                     /**
                      * 判断参数 ExecutionTime 是否已赋值
                      * @return ExecutionTime 是否已赋值
+                     * 
                      */
                     bool ExecutionTimeHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Enable Whether to enable
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Whether to enable
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Enable Whether to enable
+                     * @param _enable Whether to enable
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

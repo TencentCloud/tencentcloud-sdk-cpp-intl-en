@@ -47,54 +47,63 @@ namespace TencentCloud
                     /**
                      * 获取ECM region, such as `ap-xian-ecm`.
                      * @return EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region, such as `ap-xian-ecm`.
-                     * @param EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * @param _ecmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取Network type of the CLB instance. Currently, you can pass in only `OPEN`, which indicates public network.
                      * @return LoadBalancerType Network type of the CLB instance. Currently, you can pass in only `OPEN`, which indicates public network.
+                     * 
                      */
                     std::string GetLoadBalancerType() const;
 
                     /**
                      * 设置Network type of the CLB instance. Currently, you can pass in only `OPEN`, which indicates public network.
-                     * @param LoadBalancerType Network type of the CLB instance. Currently, you can pass in only `OPEN`, which indicates public network.
+                     * @param _loadBalancerType Network type of the CLB instance. Currently, you can pass in only `OPEN`, which indicates public network.
+                     * 
                      */
                     void SetLoadBalancerType(const std::string& _loadBalancerType);
 
                     /**
                      * 判断参数 LoadBalancerType 是否已赋值
                      * @return LoadBalancerType 是否已赋值
+                     * 
                      */
                     bool LoadBalancerTypeHasBeenSet() const;
 
                     /**
                      * 获取CMCC: China Mobile; CTCC: China Telecom; CUCC: China Unicom.
                      * @return VipIsp CMCC: China Mobile; CTCC: China Telecom; CUCC: China Unicom.
+                     * 
                      */
                     std::string GetVipIsp() const;
 
                     /**
                      * 设置CMCC: China Mobile; CTCC: China Telecom; CUCC: China Unicom.
-                     * @param VipIsp CMCC: China Mobile; CTCC: China Telecom; CUCC: China Unicom.
+                     * @param _vipIsp CMCC: China Mobile; CTCC: China Telecom; CUCC: China Unicom.
+                     * 
                      */
                     void SetVipIsp(const std::string& _vipIsp);
 
                     /**
                      * 判断参数 VipIsp 是否已赋值
                      * @return VipIsp 是否已赋值
+                     * 
                      */
                     bool VipIspHasBeenSet() const;
 
@@ -103,146 +112,170 @@ namespace TencentCloud
 Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
                      * @return LoadBalancerName CLB instance name, which will take effect only when one instance is created. It can contain 1–50 letters, digits, hyphens, and underscores.
 Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name, which will take effect only when one instance is created. It can contain 1–50 letters, digits, hyphens, and underscores.
 Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
-                     * @param LoadBalancerName CLB instance name, which will take effect only when one instance is created. It can contain 1–50 letters, digits, hyphens, and underscores.
+                     * @param _loadBalancerName CLB instance name, which will take effect only when one instance is created. It can contain 1–50 letters, digits, hyphens, and underscores.
 Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
                      * 获取Network ID of the target device on the CLB backend, such as `vpc-12345678`.
                      * @return VpcId Network ID of the target device on the CLB backend, such as `vpc-12345678`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Network ID of the target device on the CLB backend, such as `vpc-12345678`.
-                     * @param VpcId Network ID of the target device on the CLB backend, such as `vpc-12345678`.
+                     * @param _vpcId Network ID of the target device on the CLB backend, such as `vpc-12345678`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Number of CLB instances to be created. Default value: 1.
                      * @return Number Number of CLB instances to be created. Default value: 1.
+                     * 
                      */
                     int64_t GetNumber() const;
 
                     /**
                      * 设置Number of CLB instances to be created. Default value: 1.
-                     * @param Number Number of CLB instances to be created. Default value: 1.
+                     * @param _number Number of CLB instances to be created. Default value: 1.
+                     * 
                      */
                     void SetNumber(const int64_t& _number);
 
                     /**
                      * 判断参数 Number 是否已赋值
                      * @return Number 是否已赋值
+                     * 
                      */
                     bool NumberHasBeenSet() const;
 
                     /**
                      * 获取CLB information such as bandwidth limit.
                      * @return InternetAccessible CLB information such as bandwidth limit.
+                     * 
                      */
                     LoadBalancerInternetAccessible GetInternetAccessible() const;
 
                     /**
                      * 设置CLB information such as bandwidth limit.
-                     * @param InternetAccessible CLB information such as bandwidth limit.
+                     * @param _internetAccessible CLB information such as bandwidth limit.
+                     * 
                      */
                     void SetInternetAccessible(const LoadBalancerInternetAccessible& _internetAccessible);
 
                     /**
                      * 判断参数 InternetAccessible 是否已赋值
                      * @return InternetAccessible 是否已赋值
+                     * 
                      */
                     bool InternetAccessibleHasBeenSet() const;
 
                     /**
                      * 获取Tags.
                      * @return Tags Tags.
+                     * 
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
                      * 设置Tags.
-                     * @param Tags Tags.
+                     * @param _tags Tags.
+                     * 
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Security groups.
                      * @return SecurityGroups Security groups.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroups() const;
 
                     /**
                      * 设置Security groups.
-                     * @param SecurityGroups Security groups.
+                     * @param _securityGroups Security groups.
+                     * 
                      */
                     void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
 
                     /**
                      * 判断参数 SecurityGroups 是否已赋值
                      * @return SecurityGroups 是否已赋值
+                     * 
                      */
                     bool SecurityGroupsHasBeenSet() const;
 
                     /**
                      * 获取IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
                      * @return AddressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     * 
                      */
                     std::string GetAddressIPVersion() const;
 
                     /**
                      * 设置IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
-                     * @param AddressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     * @param _addressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     * 
                      */
                     void SetAddressIPVersion(const std::string& _addressIPVersion);
 
                     /**
                      * 判断参数 AddressIPVersion 是否已赋值
                      * @return AddressIPVersion 是否已赋值
+                     * 
                      */
                     bool AddressIPVersionHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID. This parameter is required for IPv6 CLB instances.
                      * @return SubnetId Subnet ID. This parameter is required for IPv6 CLB instances.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID. This parameter is required for IPv6 CLB instances.
-                     * @param SubnetId Subnet ID. This parameter is required for IPv6 CLB instances.
+                     * @param _subnetId Subnet ID. This parameter is required for IPv6 CLB instances.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 

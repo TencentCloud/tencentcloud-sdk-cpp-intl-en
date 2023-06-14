@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where a table group resides
                      * @return ClusterId ID of the cluster where a table group resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where a table group resides
-                     * @param ClusterId ID of the cluster where a table group resides
+                     * @param _clusterId ID of the cluster where a table group resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Table group ID
                      * @return TableGroupId Table group ID
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置Table group ID
-                     * @param TableGroupId Table group ID
+                     * @param _tableGroupId Table group ID
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 

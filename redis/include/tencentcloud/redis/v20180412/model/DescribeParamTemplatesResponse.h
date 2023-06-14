@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of parameter templates of the user.
                      * @return TotalCount Number of parameter templates of the user.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Parameter template details.
                      * @return Items Parameter template details.
+                     * 
                      */
                     std::vector<ParamTemplateInfo> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

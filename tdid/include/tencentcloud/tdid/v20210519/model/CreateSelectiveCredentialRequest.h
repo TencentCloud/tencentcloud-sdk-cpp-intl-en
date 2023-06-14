@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取A parameter set.
                      * @return FunctionArg A parameter set.
+                     * 
                      */
                     VerifyFunctionArg GetFunctionArg() const;
 
                     /**
                      * 设置A parameter set.
-                     * @param FunctionArg A parameter set.
+                     * @param _functionArg A parameter set.
+                     * 
                      */
                     void SetFunctionArg(const VerifyFunctionArg& _functionArg);
 
                     /**
                      * 判断参数 FunctionArg 是否已赋值
                      * @return FunctionArg 是否已赋值
+                     * 
                      */
                     bool FunctionArgHasBeenSet() const;
 
                     /**
                      * 获取The disclosure policy ID.
                      * @return PolicyId The disclosure policy ID.
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置The disclosure policy ID.
-                     * @param PolicyId The disclosure policy ID.
+                     * @param _policyId The disclosure policy ID.
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 

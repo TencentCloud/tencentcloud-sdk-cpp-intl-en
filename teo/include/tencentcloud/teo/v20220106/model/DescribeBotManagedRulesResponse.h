@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of bot managed rules returned
                      * @return Count Number of bot managed rules returned
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Bot managed rules
                      * @return Rules Bot managed rules
+                     * 
                      */
                     std::vector<BotManagedRuleDetail> GetRules() const;
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
                     /**
                      * 获取Total number of bot managed rules
                      * @return Total Total number of bot managed rules
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取CVM instance type
                      * @return InstanceType CVM instance type
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置CVM instance type
-                     * @param InstanceType CVM instance type
+                     * @param _instanceType CVM instance type
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Data disk mounting information
                      * @return DataDisks Data disk mounting information
+                     * 
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
                      * 设置Data disk mounting information
-                     * @param DataDisks Data disk mounting information
+                     * @param _dataDisks Data disk mounting information
+                     * 
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
                     /**
                      * 判断参数 DataDisks 是否已赋值
                      * @return DataDisks 是否已赋值
+                     * 
                      */
                     bool DataDisksHasBeenSet() const;
 
                     /**
                      * 获取Availability zone where the CVM instance is located
                      * @return Zone Availability zone where the CVM instance is located
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone where the CVM instance is located
-                     * @param Zone Availability zone where the CVM instance is located
+                     * @param _zone Availability zone where the CVM instance is located
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Member UIN.
                      * @return MemberUin Member UIN.
+                     * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
                      * 设置Member UIN.
-                     * @param MemberUin Member UIN.
+                     * @param _memberUin Member UIN.
+                     * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
 
                     /**
                      * 判断参数 MemberUin 是否已赋值
                      * @return MemberUin 是否已赋值
+                     * 
                      */
                     bool MemberUinHasBeenSet() const;
 
                     /**
                      * 获取Policy ID.
                      * @return PolicyId Policy ID.
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID.
-                     * @param PolicyId Policy ID.
+                     * @param _policyId Policy ID.
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Organization sub-account UIN.
                      * @return OrgSubAccountUin Organization sub-account UIN.
+                     * 
                      */
                     int64_t GetOrgSubAccountUin() const;
 
                     /**
                      * 设置Organization sub-account UIN.
-                     * @param OrgSubAccountUin Organization sub-account UIN.
+                     * @param _orgSubAccountUin Organization sub-account UIN.
+                     * 
                      */
                     void SetOrgSubAccountUin(const int64_t& _orgSubAccountUin);
 
                     /**
                      * 判断参数 OrgSubAccountUin 是否已赋值
                      * @return OrgSubAccountUin 是否已赋值
+                     * 
                      */
                     bool OrgSubAccountUinHasBeenSet() const;
 

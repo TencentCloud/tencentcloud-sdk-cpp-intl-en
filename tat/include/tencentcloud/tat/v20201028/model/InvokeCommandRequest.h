@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the command to be triggered.
                      * @return CommandId ID of the command to be triggered.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 设置ID of the command to be triggered.
-                     * @param CommandId ID of the command to be triggered.
+                     * @param _commandId ID of the command to be triggered.
+                     * 
                      */
                     void SetCommandId(const std::string& _commandId);
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 
                     /**
                      * 获取IDs of instances about to execute commands. At most 100 IDs are allowed.
                      * @return InstanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置IDs of instances about to execute commands. At most 100 IDs are allowed.
-                     * @param InstanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
+                     * @param _instanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
@@ -89,6 +95,7 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
 If no parameter value is provided, the DefaultParameters of the command is used.
 Up to 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 
                      */
                     std::string GetParameters() const;
 
@@ -98,17 +105,19 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
 If no parameter value is provided, the DefaultParameters of the command is used.
 Up to 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @param Parameters Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+                     * @param _parameters Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
 `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
 If no parameter value is provided, the DefaultParameters of the command is used.
 Up to 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 
                      */
                     void SetParameters(const std::string& _parameters);
 
                     /**
                      * 判断参数 Parameters 是否已赋值
                      * @return Parameters 是否已赋值
+                     * 
                      */
                     bool ParametersHasBeenSet() const;
 
@@ -117,74 +126,86 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
 The principle of the least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. If this is not specified, the Username of the command is used by default.
                      * @return Username The username used to execute the command on the CVM or Lighthouse instance.
 The principle of the least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. If this is not specified, the Username of the command is used by default.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置The username used to execute the command on the CVM or Lighthouse instance.
 The principle of the least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. If this is not specified, the Username of the command is used by default.
-                     * @param Username The username used to execute the command on the CVM or Lighthouse instance.
+                     * @param _username The username used to execute the command on the CVM or Lighthouse instance.
 The principle of the least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. If this is not specified, the Username of the command is used by default.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Execution path of the command. The WorkingDirectory of the command is used by default.
                      * @return WorkingDirectory Execution path of the command. The WorkingDirectory of the command is used by default.
+                     * 
                      */
                     std::string GetWorkingDirectory() const;
 
                     /**
                      * 设置Execution path of the command. The WorkingDirectory of the command is used by default.
-                     * @param WorkingDirectory Execution path of the command. The WorkingDirectory of the command is used by default.
+                     * @param _workingDirectory Execution path of the command. The WorkingDirectory of the command is used by default.
+                     * 
                      */
                     void SetWorkingDirectory(const std::string& _workingDirectory);
 
                     /**
                      * 判断参数 WorkingDirectory 是否已赋值
                      * @return WorkingDirectory 是否已赋值
+                     * 
                      */
                     bool WorkingDirectoryHasBeenSet() const;
 
                     /**
                      * 获取Command timeout period. Value range: [1, 86400]. The Timeout of the command is used by default.
                      * @return Timeout Command timeout period. Value range: [1, 86400]. The Timeout of the command is used by default.
+                     * 
                      */
                     uint64_t GetTimeout() const;
 
                     /**
                      * 设置Command timeout period. Value range: [1, 86400]. The Timeout of the command is used by default.
-                     * @param Timeout Command timeout period. Value range: [1, 86400]. The Timeout of the command is used by default.
+                     * @param _timeout Command timeout period. Value range: [1, 86400]. The Timeout of the command is used by default.
+                     * 
                      */
                     void SetTimeout(const uint64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
                      * @return OutputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+                     * 
                      */
                     std::string GetOutputCOSBucketUrl() const;
 
                     /**
                      * 设置The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
-                     * @param OutputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+                     * @param _outputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+                     * 
                      */
                     void SetOutputCOSBucketUrl(const std::string& _outputCOSBucketUrl);
 
                     /**
                      * 判断参数 OutputCOSBucketUrl 是否已赋值
                      * @return OutputCOSBucketUrl 是否已赋值
+                     * 
                      */
                     bool OutputCOSBucketUrlHasBeenSet() const;
 
@@ -197,6 +218,7 @@ The principle of the least privilege is the best practice for permission managem
 1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
 2. Use a slash (/) to create a subdirectory.
 3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+                     * 
                      */
                     std::string GetOutputCOSKeyPrefix() const;
 
@@ -205,16 +227,18 @@ The principle of the least privilege is the best practice for permission managem
 1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
 2. Use a slash (/) to create a subdirectory.
 3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
-                     * @param OutputCOSKeyPrefix The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
+                     * @param _outputCOSKeyPrefix The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
 1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
 2. Use a slash (/) to create a subdirectory.
 3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+                     * 
                      */
                     void SetOutputCOSKeyPrefix(const std::string& _outputCOSKeyPrefix);
 
                     /**
                      * 判断参数 OutputCOSKeyPrefix 是否已赋值
                      * @return OutputCOSKeyPrefix 是否已赋值
+                     * 
                      */
                     bool OutputCOSKeyPrefixHasBeenSet() const;
 

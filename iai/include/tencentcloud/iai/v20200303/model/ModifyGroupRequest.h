@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Group ID, which is the `GroupId` in the `CreateGroup` API.
                      * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Group ID, which is the `GroupId` in the `CreateGroup` API.
-                     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * @param _groupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Group name
                      * @return GroupName Group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Group name
-                     * @param GroupName Group name
+                     * @param _groupName Group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Custom description field of the group to be modified, which is a `key-value` pair.
                      * @return GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value` pair.
+                     * 
                      */
                     std::vector<GroupExDescriptionInfo> GetGroupExDescriptionInfos() const;
 
                     /**
                      * 设置Custom description field of the group to be modified, which is a `key-value` pair.
-                     * @param GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value` pair.
+                     * @param _groupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value` pair.
+                     * 
                      */
                     void SetGroupExDescriptionInfos(const std::vector<GroupExDescriptionInfo>& _groupExDescriptionInfos);
 
                     /**
                      * 判断参数 GroupExDescriptionInfos 是否已赋值
                      * @return GroupExDescriptionInfos 是否已赋值
+                     * 
                      */
                     bool GroupExDescriptionInfosHasBeenSet() const;
 
                     /**
                      * 获取Group remarks
                      * @return Tag Group remarks
+                     * 
                      */
                     std::string GetTag() const;
 
                     /**
                      * 设置Group remarks
-                     * @param Tag Group remarks
+                     * @param _tag Group remarks
+                     * 
                      */
                     void SetTag(const std::string& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 

@@ -50,180 +50,210 @@ namespace TencentCloud
                     /**
                      * 获取Whether the alarm policy can be set to default.
                      * @return CanSetDefault Whether the alarm policy can be set to default.
+                     * 
                      */
                     bool GetCanSetDefault() const;
 
                     /**
                      * 设置Whether the alarm policy can be set to default.
-                     * @param CanSetDefault Whether the alarm policy can be set to default.
+                     * @param _canSetDefault Whether the alarm policy can be set to default.
+                     * 
                      */
                     void SetCanSetDefault(const bool& _canSetDefault);
 
                     /**
                      * 判断参数 CanSetDefault 是否已赋值
                      * @return CanSetDefault 是否已赋值
+                     * 
                      */
                     bool CanSetDefaultHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy group ID.
                      * @return GroupID Alarm policy group ID.
+                     * 
                      */
                     int64_t GetGroupID() const;
 
                     /**
                      * 设置Alarm policy group ID.
-                     * @param GroupID Alarm policy group ID.
+                     * @param _groupID Alarm policy group ID.
+                     * 
                      */
                     void SetGroupID(const int64_t& _groupID);
 
                     /**
                      * 判断参数 GroupID 是否已赋值
                      * @return GroupID 是否已赋值
+                     * 
                      */
                     bool GroupIDHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy group name.
                      * @return GroupName Alarm policy group name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Alarm policy group name.
-                     * @param GroupName Alarm policy group name.
+                     * @param _groupName Alarm policy group name.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return InsertTime Creation time.
+                     * 
                      */
                     int64_t GetInsertTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param InsertTime Creation time.
+                     * @param _insertTime Creation time.
+                     * 
                      */
                     void SetInsertTime(const int64_t& _insertTime);
 
                     /**
                      * 判断参数 InsertTime 是否已赋值
                      * @return InsertTime 是否已赋值
+                     * 
                      */
                     bool InsertTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether the alarm policy is set to default.
                      * @return IsDefault Whether the alarm policy is set to default.
+                     * 
                      */
                     int64_t GetIsDefault() const;
 
                     /**
                      * 设置Whether the alarm policy is set to default.
-                     * @param IsDefault Whether the alarm policy is set to default.
+                     * @param _isDefault Whether the alarm policy is set to default.
+                     * 
                      */
                     void SetIsDefault(const int64_t& _isDefault);
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
                     /**
                      * 获取Whether the alarm policy is enabled.
                      * @return Enable Whether the alarm policy is enabled.
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Whether the alarm policy is enabled.
-                     * @param Enable Whether the alarm policy is enabled.
+                     * @param _enable Whether the alarm policy is enabled.
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取UIN of the last modifier.
                      * @return LastEditUin UIN of the last modifier.
+                     * 
                      */
                     int64_t GetLastEditUin() const;
 
                     /**
                      * 设置UIN of the last modifier.
-                     * @param LastEditUin UIN of the last modifier.
+                     * @param _lastEditUin UIN of the last modifier.
+                     * 
                      */
                     void SetLastEditUin(const int64_t& _lastEditUin);
 
                     /**
                      * 判断参数 LastEditUin 是否已赋值
                      * @return LastEditUin 是否已赋值
+                     * 
                      */
                     bool LastEditUinHasBeenSet() const;
 
                     /**
                      * 获取Number of unshielded instances.
                      * @return NoShieldedInstanceCount Number of unshielded instances.
+                     * 
                      */
                     int64_t GetNoShieldedInstanceCount() const;
 
                     /**
                      * 设置Number of unshielded instances.
-                     * @param NoShieldedInstanceCount Number of unshielded instances.
+                     * @param _noShieldedInstanceCount Number of unshielded instances.
+                     * 
                      */
                     void SetNoShieldedInstanceCount(const int64_t& _noShieldedInstanceCount);
 
                     /**
                      * 判断参数 NoShieldedInstanceCount 是否已赋值
                      * @return NoShieldedInstanceCount 是否已赋值
+                     * 
                      */
                     bool NoShieldedInstanceCountHasBeenSet() const;
 
                     /**
                      * 获取Parent policy group ID.
                      * @return ParentGroupID Parent policy group ID.
+                     * 
                      */
                     int64_t GetParentGroupID() const;
 
                     /**
                      * 设置Parent policy group ID.
-                     * @param ParentGroupID Parent policy group ID.
+                     * @param _parentGroupID Parent policy group ID.
+                     * 
                      */
                     void SetParentGroupID(const int64_t& _parentGroupID);
 
                     /**
                      * 判断参数 ParentGroupID 是否已赋值
                      * @return ParentGroupID 是否已赋值
+                     * 
                      */
                     bool ParentGroupIDHasBeenSet() const;
 
                     /**
                      * 获取Project ID.
                      * @return ProjectID Project ID.
+                     * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
                      * 设置Project ID.
-                     * @param ProjectID Project ID.
+                     * @param _projectID Project ID.
+                     * 
                      */
                     void SetProjectID(const int64_t& _projectID);
 
                     /**
                      * 判断参数 ProjectID 是否已赋值
                      * @return ProjectID 是否已赋值
+                     * 
                      */
                     bool ProjectIDHasBeenSet() const;
 
@@ -232,110 +262,128 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ReceiverInfos Alarm recipient information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PolicyGroupReceiverInfo> GetReceiverInfos() const;
 
                     /**
                      * 设置Alarm recipient information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ReceiverInfos Alarm recipient information.
+                     * @param _receiverInfos Alarm recipient information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReceiverInfos(const std::vector<PolicyGroupReceiverInfo>& _receiverInfos);
 
                     /**
                      * 判断参数 ReceiverInfos 是否已赋值
                      * @return ReceiverInfos 是否已赋值
+                     * 
                      */
                     bool ReceiverInfosHasBeenSet() const;
 
                     /**
                      * 获取Remarks.
                      * @return Remark Remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks.
-                     * @param Remark Remarks.
+                     * @param _remark Remarks.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Modification time.
                      * @return UpdateTime Modification time.
+                     * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
                      * 设置Modification time.
-                     * @param UpdateTime Modification time.
+                     * @param _updateTime Modification time.
+                     * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取The total number of associated instances.
                      * @return TotalInstanceCount The total number of associated instances.
+                     * 
                      */
                     int64_t GetTotalInstanceCount() const;
 
                     /**
                      * 设置The total number of associated instances.
-                     * @param TotalInstanceCount The total number of associated instances.
+                     * @param _totalInstanceCount The total number of associated instances.
+                     * 
                      */
                     void SetTotalInstanceCount(const int64_t& _totalInstanceCount);
 
                     /**
                      * 判断参数 TotalInstanceCount 是否已赋值
                      * @return TotalInstanceCount 是否已赋值
+                     * 
                      */
                     bool TotalInstanceCountHasBeenSet() const;
 
                     /**
                      * 获取View.
                      * @return ViewName View.
+                     * 
                      */
                     std::string GetViewName() const;
 
                     /**
                      * 设置View.
-                     * @param ViewName View.
+                     * @param _viewName View.
+                     * 
                      */
                     void SetViewName(const std::string& _viewName);
 
                     /**
                      * 判断参数 ViewName 是否已赋值
                      * @return ViewName 是否已赋值
+                     * 
                      */
                     bool ViewNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the logical relationship between rules is AND.
                      * @return IsUnionRule Whether the logical relationship between rules is AND.
+                     * 
                      */
                     int64_t GetIsUnionRule() const;
 
                     /**
                      * 设置Whether the logical relationship between rules is AND.
-                     * @param IsUnionRule Whether the logical relationship between rules is AND.
+                     * @param _isUnionRule Whether the logical relationship between rules is AND.
+                     * 
                      */
                     void SetIsUnionRule(const int64_t& _isUnionRule);
 
                     /**
                      * 判断参数 IsUnionRule 是否已赋值
                      * @return IsUnionRule 是否已赋值
+                     * 
                      */
                     bool IsUnionRuleHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Recording time.
                      * @return RecordTime Recording time.
+                     * 
                      */
                     std::string GetRecordTime() const;
 
                     /**
                      * 设置Recording time.
-                     * @param RecordTime Recording time.
+                     * @param _recordTime Recording time.
+                     * 
                      */
                     void SetRecordTime(const std::string& _recordTime);
 
                     /**
                      * 判断参数 RecordTime 是否已赋值
                      * @return RecordTime 是否已赋值
+                     * 
                      */
                     bool RecordTimeHasBeenSet() const;
 
                     /**
                      * 获取Inbound bandwidth data.
                      * @return PeakInNetwork Inbound bandwidth data.
+                     * 
                      */
                     std::string GetPeakInNetwork() const;
 
                     /**
                      * 设置Inbound bandwidth data.
-                     * @param PeakInNetwork Inbound bandwidth data.
+                     * @param _peakInNetwork Inbound bandwidth data.
+                     * 
                      */
                     void SetPeakInNetwork(const std::string& _peakInNetwork);
 
                     /**
                      * 判断参数 PeakInNetwork 是否已赋值
                      * @return PeakInNetwork 是否已赋值
+                     * 
                      */
                     bool PeakInNetworkHasBeenSet() const;
 
                     /**
                      * 获取Outbound bandwidth data.
                      * @return PeakOutNetwork Outbound bandwidth data.
+                     * 
                      */
                     std::string GetPeakOutNetwork() const;
 
                     /**
                      * 设置Outbound bandwidth data.
-                     * @param PeakOutNetwork Outbound bandwidth data.
+                     * @param _peakOutNetwork Outbound bandwidth data.
+                     * 
                      */
                     void SetPeakOutNetwork(const std::string& _peakOutNetwork);
 
                     /**
                      * 判断参数 PeakOutNetwork 是否已赋值
                      * @return PeakOutNetwork 是否已赋值
+                     * 
                      */
                     bool PeakOutNetworkHasBeenSet() const;
 
                     /**
                      * 获取Billable bandwidth in bps
                      * @return ChargeNetwork Billable bandwidth in bps
+                     * 
                      */
                     std::string GetChargeNetwork() const;
 
                     /**
                      * 设置Billable bandwidth in bps
-                     * @param ChargeNetwork Billable bandwidth in bps
+                     * @param _chargeNetwork Billable bandwidth in bps
+                     * 
                      */
                     void SetChargeNetwork(const std::string& _chargeNetwork);
 
                     /**
                      * 判断参数 ChargeNetwork 是否已赋值
                      * @return ChargeNetwork 是否已赋值
+                     * 
                      */
                     bool ChargeNetworkHasBeenSet() const;
 

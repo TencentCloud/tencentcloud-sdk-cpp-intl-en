@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the modified group
                      * @return GroupId ID of the modified group
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 

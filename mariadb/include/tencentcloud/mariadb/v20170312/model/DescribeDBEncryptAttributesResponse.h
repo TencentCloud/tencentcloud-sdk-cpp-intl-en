@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether encryption is enabled. Valid values: `1` (enabled), `2` (disabled).
                      * @return EncryptStatus Whether encryption is enabled. Valid values: `1` (enabled), `2` (disabled).
+                     * 
                      */
                     int64_t GetEncryptStatus() const;
 
                     /**
                      * 判断参数 EncryptStatus 是否已赋值
                      * @return EncryptStatus 是否已赋值
+                     * 
                      */
                     bool EncryptStatusHasBeenSet() const;
 
                     /**
                      * 获取DEK key
                      * @return CipherText DEK key
+                     * 
                      */
                     std::string GetCipherText() const;
 
                     /**
                      * 判断参数 CipherText 是否已赋值
                      * @return CipherText 是否已赋值
+                     * 
                      */
                     bool CipherTextHasBeenSet() const;
 
                     /**
                      * 获取DEK key expiration date
                      * @return ExpireDate DEK key expiration date
+                     * 
                      */
                     std::string GetExpireDate() const;
 
                     /**
                      * 判断参数 ExpireDate 是否已赋值
                      * @return ExpireDate 是否已赋值
+                     * 
                      */
                     bool ExpireDateHasBeenSet() const;
 

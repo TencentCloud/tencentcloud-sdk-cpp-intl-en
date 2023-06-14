@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Client time in RFC 3339 format
                      * @return StartTime Client time in RFC 3339 format
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Client time in RFC 3339 format
-                     * @param StartTime Client time in RFC 3339 format
+                     * @param _startTime Client time in RFC 3339 format
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Client time in RFC 3339 format
                      * @return EndTime Client time in RFC 3339 format
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Client time in RFC 3339 format
-                     * @param EndTime Client time in RFC 3339 format
+                     * @param _endTime Client time in RFC 3339 format
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -88,6 +94,7 @@ namespace TencentCloud
 `l7Flow_outFlux`: Access traffic
 `l7Flow_request`: Access requests
 `l7Flow_outBandwidth`: Access bandwidth
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
@@ -96,70 +103,81 @@ namespace TencentCloud
 `l7Flow_outFlux`: Access traffic
 `l7Flow_request`: Access requests
 `l7Flow_outBandwidth`: Access bandwidth
-                     * @param MetricNames Supported metrics for data query:
+                     * @param _metricNames Supported metrics for data query:
 `l7Flow_outFlux`: Access traffic
 `l7Flow_request`: Access requests
 `l7Flow_outBandwidth`: Access bandwidth
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
                     /**
                      * 获取Time interval. Valid values: {min, 5min, hour, day, week}
                      * @return Interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Time interval. Valid values: {min, 5min, hour, day, week}
-                     * @param Interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * @param _interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Array of `ZoneId` values
                      * @return ZoneIds Array of `ZoneId` values
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置Array of `ZoneId` values
-                     * @param ZoneIds Array of `ZoneId` values
+                     * @param _zoneIds Array of `ZoneId` values
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取Filter
                      * @return Filters Filter
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter
-                     * @param Filters Filter
+                     * @param _filters Filter
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-hez4fh0v
                      * @return DBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-hez4fh0v
-                     * @param DBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * @param _dBInstanceId Instance ID in the format of postgres-hez4fh0v
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
                      * @return IsIpv6 Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+                     * 
                      */
                     int64_t GetIsIpv6() const;
 
                     /**
                      * 设置Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
-                     * @param IsIpv6 Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+                     * @param _isIpv6 Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+                     * 
                      */
                     void SetIsIpv6(const int64_t& _isIpv6);
 
                     /**
                      * 判断参数 IsIpv6 是否已赋值
                      * @return IsIpv6 是否已赋值
+                     * 
                      */
                     bool IsIpv6HasBeenSet() const;
 

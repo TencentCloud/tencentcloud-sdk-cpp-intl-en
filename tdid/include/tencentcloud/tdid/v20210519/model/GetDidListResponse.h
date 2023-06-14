@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取A list of DIDs.
                      * @return DataList A list of DIDs.
+                     * 
                      */
                     std::vector<DidData> GetDataList() const;
 
                     /**
                      * 判断参数 DataList 是否已赋值
                      * @return DataList 是否已赋值
+                     * 
                      */
                     bool DataListHasBeenSet() const;
 
                     /**
                      * 获取The total number of records.
                      * @return AllCount The total number of records.
+                     * 
                      */
                     int64_t GetAllCount() const;
 
                     /**
                      * 判断参数 AllCount 是否已赋值
                      * @return AllCount 是否已赋值
+                     * 
                      */
                     bool AllCountHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid value was found.
                      * @return CcnId The CCN ID that the bandwidth belongs to.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN ID that the bandwidth belongs to.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param CcnId The CCN ID that the bandwidth belongs to.
+                     * @param _ccnId The CCN ID that the bandwidth belongs to.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return CreatedTime The creation time of the instance.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置The creation time of the instance.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param CreatedTime The creation time of the instance.
+                     * @param _createdTime The creation time of the instance.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return ExpiredTime The expiration time of the instance.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
                      * 设置The expiration time of the instance.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ExpiredTime The expiration time of the instance.
+                     * @param _expiredTime The expiration time of the instance.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
 
                     /**
                      * 判断参数 ExpiredTime 是否已赋值
                      * @return ExpiredTime 是否已赋值
+                     * 
                      */
                     bool ExpiredTimeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return RegionFlowControlId The unique ID of the bandwidth instance.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRegionFlowControlId() const;
 
                     /**
                      * 设置The unique ID of the bandwidth instance.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param RegionFlowControlId The unique ID of the bandwidth instance.
+                     * @param _regionFlowControlId The unique ID of the bandwidth instance.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetRegionFlowControlId(const std::string& _regionFlowControlId);
 
                     /**
                      * 判断参数 RegionFlowControlId 是否已赋值
                      * @return RegionFlowControlId 是否已赋值
+                     * 
                      */
                     bool RegionFlowControlIdHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return RenewFlag The billing flag.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
                      * 设置The billing flag.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param RenewFlag The billing flag.
+                     * @param _renewFlag The billing flag.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     CcnRegionBandwidthLimit GetCcnRegionBandwidthLimit() const;
 
                     /**
                      * 设置The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
+                     * @param _ccnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetCcnRegionBandwidthLimit(const CcnRegionBandwidthLimit& _ccnRegionBandwidthLimit);
 
                     /**
                      * 判断参数 CcnRegionBandwidthLimit 是否已赋值
                      * @return CcnRegionBandwidthLimit 是否已赋值
+                     * 
                      */
                     bool CcnRegionBandwidthLimitHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return MarketId Cloud marketplace instance ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMarketId() const;
 
                     /**
                      * 设置Cloud marketplace instance ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param MarketId Cloud marketplace instance ID.
+                     * @param _marketId Cloud marketplace instance ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMarketId(const std::string& _marketId);
 
                     /**
                      * 判断参数 MarketId 是否已赋值
                      * @return MarketId 是否已赋值
+                     * 
                      */
                     bool MarketIdHasBeenSet() const;
 

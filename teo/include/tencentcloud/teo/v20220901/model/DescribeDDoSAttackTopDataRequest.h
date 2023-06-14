@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The start time.
                      * @return StartTime The start time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time.
-                     * @param StartTime The start time.
+                     * @param _startTime The start time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time.
                      * @return EndTime The end time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time.
-                     * @param EndTime The end time.
+                     * @param _endTime The end time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -93,6 +99,7 @@ namespace TencentCloud
 <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
 <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
 <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+                     * 
                      */
                     std::string GetMetricName() const;
 
@@ -104,55 +111,63 @@ namespace TencentCloud
 <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
 <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
 <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
-                     * @param MetricName The statistical metric. Values:
+                     * @param _metricName The statistical metric. Values:
 <li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
 <li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
 <li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
 <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
 <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
 <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取List of site IDs to be queried. All sites will be selected if this field is not specified.
                      * @return ZoneIds List of site IDs to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of site IDs to be queried. All sites will be selected if this field is not specified.
-                     * @param ZoneIds List of site IDs to be queried. All sites will be selected if this field is not specified.
+                     * @param _zoneIds List of site IDs to be queried. All sites will be selected if this field is not specified.
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
                      * @return PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+                     * 
                      */
                     std::vector<int64_t> GetPolicyIds() const;
 
                     /**
                      * 设置The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
-                     * @param PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+                     * @param _policyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+                     * 
                      */
                     void SetPolicyIds(const std::vector<int64_t>& _policyIds);
 
                     /**
                      * 判断参数 PolicyIds 是否已赋值
                      * @return PolicyIds 是否已赋值
+                     * 
                      */
                     bool PolicyIdsHasBeenSet() const;
 
@@ -165,6 +180,7 @@ namespace TencentCloud
 <li>`flood`: Flood;</li>
 <li>`icmpFlood`: ICMP flood;</li>
 <li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+                     * 
                      */
                     std::string GetAttackType() const;
 
@@ -173,16 +189,18 @@ namespace TencentCloud
 <li>`flood`: Flood;</li>
 <li>`icmpFlood`: ICMP flood;</li>
 <li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
-                     * @param AttackType The attack type. Values:
+                     * @param _attackType The attack type. Values:
 <li>`flood`: Flood;</li>
 <li>`icmpFlood`: ICMP flood;</li>
 <li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+                     * 
                      */
                     void SetAttackType(const std::string& _attackType);
 
                     /**
                      * 判断参数 AttackType 是否已赋值
                      * @return AttackType 是否已赋值
+                     * 
                      */
                     bool AttackTypeHasBeenSet() const;
 
@@ -195,6 +213,7 @@ namespace TencentCloud
 <li>`tcp`: TCP protocol;</li>
 <li>`udp`: UDP protocol;</li>
 <li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+                     * 
                      */
                     std::string GetProtocolType() const;
 
@@ -203,52 +222,60 @@ namespace TencentCloud
 <li>`tcp`: TCP protocol;</li>
 <li>`udp`: UDP protocol;</li>
 <li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
-                     * @param ProtocolType The protocol type. Values:
+                     * @param _protocolType The protocol type. Values:
 <li>`tcp`: TCP protocol;</li>
 <li>`udp`: UDP protocol;</li>
 <li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+                     * 
                      */
                     void SetProtocolType(const std::string& _protocolType);
 
                     /**
                      * 判断参数 ProtocolType 是否已赋值
                      * @return ProtocolType 是否已赋值
+                     * 
                      */
                     bool ProtocolTypeHasBeenSet() const;
 
                     /**
                      * 获取The port number.
                      * @return Port The port number.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置The port number.
-                     * @param Port The port number.
+                     * @param _port The port number.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
                      * @return Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
-                     * @param Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * @param _limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -259,6 +286,7 @@ namespace TencentCloud
                      * @return Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -266,15 +294,17 @@ namespace TencentCloud
                      * 设置Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     * @param Area Data storage region. Values:
+                     * @param _area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-f49l6u0z`.
                      * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-f49l6u0z`.
-                     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * @param _ccnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取The UIN (root account) to which the CCN belongs.
                      * @return CcnUin The UIN (root account) to which the CCN belongs.
+                     * 
                      */
                     std::string GetCcnUin() const;
 
                     /**
                      * 设置The UIN (root account) to which the CCN belongs.
-                     * @param CcnUin The UIN (root account) to which the CCN belongs.
+                     * @param _ccnUin The UIN (root account) to which the CCN belongs.
+                     * 
                      */
                     void SetCcnUin(const std::string& _ccnUin);
 
                     /**
                      * 判断参数 CcnUin 是否已赋值
                      * @return CcnUin 是否已赋值
+                     * 
                      */
                     bool CcnUinHasBeenSet() const;
 
                     /**
                      * 获取The list of network instances that re-apply for association.
                      * @return Instances The list of network instances that re-apply for association.
+                     * 
                      */
                     std::vector<CcnInstance> GetInstances() const;
 
                     /**
                      * 设置The list of network instances that re-apply for association.
-                     * @param Instances The list of network instances that re-apply for association.
+                     * @param _instances The list of network instances that re-apply for association.
+                     * 
                      */
                     void SetInstances(const std::vector<CcnInstance>& _instances);
 
                     /**
                      * 判断参数 Instances 是否已赋值
                      * @return Instances 是否已赋值
+                     * 
                      */
                     bool InstancesHasBeenSet() const;
 

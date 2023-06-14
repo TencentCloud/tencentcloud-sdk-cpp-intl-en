@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取User attribute code
                      * @return UserPropertyCode User attribute code
+                     * 
                      */
                     std::string GetUserPropertyCode() const;
 
                     /**
                      * 设置User attribute code
-                     * @param UserPropertyCode User attribute code
+                     * @param _userPropertyCode User attribute code
+                     * 
                      */
                     void SetUserPropertyCode(const std::string& _userPropertyCode);
 
                     /**
                      * 判断参数 UserPropertyCode 是否已赋值
                      * @return UserPropertyCode 是否已赋值
+                     * 
                      */
                     bool UserPropertyCodeHasBeenSet() const;
 
                     /**
                      * 获取User attribute mapping name
                      * @return ColumnName User attribute mapping name
+                     * 
                      */
                     std::string GetColumnName() const;
 
                     /**
                      * 设置User attribute mapping name
-                     * @param ColumnName User attribute mapping name
+                     * @param _columnName User attribute mapping name
+                     * 
                      */
                     void SetColumnName(const std::string& _columnName);
 
                     /**
                      * 判断参数 ColumnName 是否已赋值
                      * @return ColumnName 是否已赋值
+                     * 
                      */
                     bool ColumnNameHasBeenSet() const;
 

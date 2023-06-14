@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster's account name
                      * @return UserName Cluster's account name
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Cluster's password
                      * @return Password Cluster's password
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Cluster's access CA certificate
                      * @return CertificationAuthority Cluster's access CA certificate
+                     * 
                      */
                     std::string GetCertificationAuthority() const;
 
                     /**
                      * 判断参数 CertificationAuthority 是否已赋值
                      * @return CertificationAuthority 是否已赋值
+                     * 
                      */
                     bool CertificationAuthorityHasBeenSet() const;
 
                     /**
                      * 获取Cluster's access address
                      * @return ClusterExternalEndpoint Cluster's access address
+                     * 
                      */
                     std::string GetClusterExternalEndpoint() const;
 
                     /**
                      * 判断参数 ClusterExternalEndpoint 是否已赋值
                      * @return ClusterExternalEndpoint 是否已赋值
+                     * 
                      */
                     bool ClusterExternalEndpointHasBeenSet() const;
 
                     /**
                      * 获取Domain name accessed by the cluster
                      * @return Domain Domain name accessed by the cluster
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Cluster's endpoint address
                      * @return PgwEndpoint Cluster's endpoint address
+                     * 
                      */
                     std::string GetPgwEndpoint() const;
 
                     /**
                      * 判断参数 PgwEndpoint 是否已赋值
                      * @return PgwEndpoint 是否已赋值
+                     * 
                      */
                     bool PgwEndpointHasBeenSet() const;
 
@@ -120,12 +132,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return SecurityPolicy Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetSecurityPolicy() const;
 
                     /**
                      * 判断参数 SecurityPolicy 是否已赋值
                      * @return SecurityPolicy 是否已赋值
+                     * 
                      */
                     bool SecurityPolicyHasBeenSet() const;
 
@@ -134,12 +148,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Kubeconfig Cluster Kubeconfig file
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetKubeconfig() const;
 
                     /**
                      * 判断参数 Kubeconfig 是否已赋值
                      * @return Kubeconfig 是否已赋值
+                     * 
                      */
                     bool KubeconfigHasBeenSet() const;
 
@@ -148,12 +164,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return JnsGwEndpoint Access address of the cluster JnsGw
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetJnsGwEndpoint() const;
 
                     /**
                      * 判断参数 JnsGwEndpoint 是否已赋值
                      * @return JnsGwEndpoint 是否已赋值
+                     * 
                      */
                     bool JnsGwEndpointHasBeenSet() const;
 

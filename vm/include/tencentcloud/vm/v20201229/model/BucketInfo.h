@@ -50,54 +50,63 @@ See the basic concepts at https://intl.cloud.tencent.com/document/product/436/44
                     /**
                      * 获取This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
                      * @return Bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
-                     * @param Bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
+                     * @param _bucket This field indicates a bucket name in Tencent Cloud COS. For more information on buckets, see [Basic Concepts](https://intl.cloud.tencent.com/document/product/436/44352?from_cn_redirect=1).
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
                      * @return Region This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
-                     * @param Region This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
+                     * @param _region This field indicates a region where a Tencent Cloud managed data center is deployed. COS data is stored in buckets in these regions.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
                      * @return Object This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetObject() const;
 
                     /**
                      * 设置This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
-                     * @param Object This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+                     * @param _object This field indicates an object key in Tencent Cloud COS. An object is stored in a bucket as a basic storage unit. You can manage objects through the Tencent Cloud console, API, or SDK. For more information on objects, see [Object Overview](https://intl.cloud.tencent.com/document/product/436/13324?from_cn_redirect=1).
+                     * 
                      */
                     void SetObject(const std::string& _object);
 
                     /**
                      * 判断参数 Object 是否已赋值
                      * @return Object 是否已赋值
+                     * 
                      */
                     bool ObjectHasBeenSet() const;
 

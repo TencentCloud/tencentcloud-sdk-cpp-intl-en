@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Pid Audio `Pid`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPid() const;
 
                     /**
                      * 设置Audio `Pid`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Pid Audio `Pid`.
+                     * @param _pid Audio `Pid`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPid(const int64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Codec Audio codec.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCodec() const;
 
                     /**
                      * 设置Audio codec.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Codec Audio codec.
+                     * @param _codec Audio codec.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Fps Audio frame rate.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFps() const;
 
                     /**
                      * 设置Audio frame rate.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Fps Audio frame rate.
+                     * @param _fps Audio frame rate.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFps(const int64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Rate Audio bitrate.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRate() const;
 
                     /**
                      * 设置Audio bitrate.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Rate Audio bitrate.
+                     * @param _rate Audio bitrate.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRate(const int64_t& _rate);
 
                     /**
                      * 判断参数 Rate 是否已赋值
                      * @return Rate 是否已赋值
+                     * 
                      */
                     bool RateHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SampleRate Audio sample rate.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSampleRate() const;
 
                     /**
                      * 设置Audio sample rate.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SampleRate Audio sample rate.
+                     * @param _sampleRate Audio sample rate.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSampleRate(const int64_t& _sampleRate);
 
                     /**
                      * 判断参数 SampleRate 是否已赋值
                      * @return SampleRate 是否已赋值
+                     * 
                      */
                     bool SampleRateHasBeenSet() const;
 

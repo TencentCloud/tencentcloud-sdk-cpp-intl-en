@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Returned person information
                      * @return PersonInfos Returned person information
+                     * 
                      */
                     std::vector<PersonInfo> GetPersonInfos() const;
 
                     /**
                      * 判断参数 PersonInfos 是否已赋值
                      * @return PersonInfos 是否已赋值
+                     * 
                      */
                     bool PersonInfosHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PersonNum Number of persons in the group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPersonNum() const;
 
                     /**
                      * 判断参数 PersonNum 是否已赋值
                      * @return PersonNum 是否已赋值
+                     * 
                      */
                     bool PersonNumHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FaceNum Number of faces in the group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFaceNum() const;
 
                     /**
                      * 判断参数 FaceNum 是否已赋值
                      * @return FaceNum 是否已赋值
+                     * 
                      */
                     bool FaceNumHasBeenSet() const;
 
@@ -89,12 +95,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of policy lists
                      * @return Total Number of policy lists
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Information of the policy list
                      * @return CcBlackWhiteIpList Information of the policy list
+                     * 
                      */
                     std::vector<CcBlackWhiteIpPolicy> GetCcBlackWhiteIpList() const;
 
                     /**
                      * 判断参数 CcBlackWhiteIpList 是否已赋值
                      * @return CcBlackWhiteIpList 是否已赋值
+                     * 
                      */
                     bool CcBlackWhiteIpListHasBeenSet() const;
 

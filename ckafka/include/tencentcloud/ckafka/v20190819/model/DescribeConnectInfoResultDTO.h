@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IpAddr IP address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIpAddr() const;
 
                     /**
                      * 设置IP address
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IpAddr IP address
+                     * @param _ipAddr IP address
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpAddr(const std::string& _ipAddr);
 
                     /**
                      * 判断参数 IpAddr 是否已赋值
                      * @return IpAddr 是否已赋值
+                     * 
                      */
                     bool IpAddrHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Time Connection time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Connection time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Time Connection time
+                     * @param _time Connection time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsUnSupportVersion Whether it is a supported version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsUnSupportVersion() const;
 
                     /**
                      * 设置Whether it is a supported version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsUnSupportVersion Whether it is a supported version
+                     * @param _isUnSupportVersion Whether it is a supported version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsUnSupportVersion(const bool& _isUnSupportVersion);
 
                     /**
                      * 判断参数 IsUnSupportVersion 是否已赋值
                      * @return IsUnSupportVersion 是否已赋值
+                     * 
                      */
                     bool IsUnSupportVersionHasBeenSet() const;
 

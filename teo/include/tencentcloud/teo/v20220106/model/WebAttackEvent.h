@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClientIp Client IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置Client IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientIp Client IP
+                     * @param _clientIp Client IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackUrl Attack URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttackUrl() const;
 
                     /**
                      * 设置Attack URL
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackUrl Attack URL
+                     * @param _attackUrl Attack URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackUrl(const std::string& _attackUrl);
 
                     /**
                      * 判断参数 AttackUrl 是否已赋值
                      * @return AttackUrl 是否已赋值
+                     * 
                      */
                     bool AttackUrlHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackTime Attack time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAttackTime() const;
 
                     /**
                      * 设置Attack time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackTime Attack time in seconds
+                     * @param _attackTime Attack time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackTime(const int64_t& _attackTime);
 
                     /**
                      * 判断参数 AttackTime 是否已赋值
                      * @return AttackTime 是否已赋值
+                     * 
                      */
                     bool AttackTimeHasBeenSet() const;
 

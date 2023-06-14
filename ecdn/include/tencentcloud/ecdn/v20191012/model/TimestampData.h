@@ -51,38 +51,44 @@ namespace TencentCloud
 Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59
                      * @return Time Statistical time point in forward rounding mode
 Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Statistical time point in forward rounding mode
 Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59
-                     * @param Time Statistical time point in forward rounding mode
+                     * @param _time Statistical time point in forward rounding mode
 Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Data value
                      * @return Value Data value
+                     * 
                      */
                     std::vector<double> GetValue() const;
 
                     /**
                      * 设置Data value
-                     * @param Value Data value
+                     * @param _value Data value
+                     * 
                      */
                     void SetValue(const std::vector<double>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
@@ -79,6 +82,7 @@ You can select multiple elements, which are connected by OR logic. If a use case
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 You can select multiple elements, which are connected by OR logic. If a use case contains any element in this parameter, the keyword sample will be used.
+                     * 
                      */
                     std::vector<std::string> GetUsages() const;
 
@@ -92,7 +96,7 @@ You can select multiple elements, which are connected by OR logic. If a use case
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 You can select multiple elements, which are connected by OR logic. If a use case contains any element in this parameter, the keyword sample will be used.
-                     * @param Usages <b>Keyword usage. Valid values:</b>
+                     * @param _usages <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
 2. Recognition.Asr: ASR-based content recognition
 3. Review.Ocr: OCR-based inappropriate information recognition
@@ -101,84 +105,98 @@ You can select multiple elements, which are connected by OR logic. If a use case
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 You can select multiple elements, which are connected by OR logic. If a use case contains any element in this parameter, the keyword sample will be used.
+                     * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
                     /**
                      * 判断参数 Usages 是否已赋值
                      * @return Usages 是否已赋值
+                     * 
                      */
                     bool UsagesHasBeenSet() const;
 
                     /**
                      * 获取Keyword filter. Array length limit: 100 words.
                      * @return Keywords Keyword filter. Array length limit: 100 words.
+                     * 
                      */
                     std::vector<std::string> GetKeywords() const;
 
                     /**
                      * 设置Keyword filter. Array length limit: 100 words.
-                     * @param Keywords Keyword filter. Array length limit: 100 words.
+                     * @param _keywords Keyword filter. Array length limit: 100 words.
+                     * 
                      */
                     void SetKeywords(const std::vector<std::string>& _keywords);
 
                     /**
                      * 判断参数 Keywords 是否已赋值
                      * @return Keywords 是否已赋值
+                     * 
                      */
                     bool KeywordsHasBeenSet() const;
 
                     /**
                      * 获取Tag filter. Array length limit: 20 words.
                      * @return Tags Tag filter. Array length limit: 20 words.
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Tag filter. Array length limit: 20 words.
-                     * @param Tags Tag filter. Array length limit: 20 words.
+                     * @param _tags Tag filter. Array length limit: 20 words.
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset. Default value: 0.
                      * @return Offset Pagination offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset. Default value: 0.
-                     * @param Offset Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries to be returned. Default value: 100. Maximum value: 100.
                      * @return Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries to be returned. Default value: 100. Maximum value: 100.
-                     * @param Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+                     * @param _limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

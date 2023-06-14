@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Service provider. Valid values: `UNICOM`.
                      * @return ServiceProvider Service provider. Valid values: `UNICOM`.
+                     * 
                      */
                     std::string GetServiceProvider() const;
 
                     /**
                      * 设置Service provider. Valid values: `UNICOM`.
-                     * @param ServiceProvider Service provider. Valid values: `UNICOM`.
+                     * @param _serviceProvider Service provider. Valid values: `UNICOM`.
+                     * 
                      */
                     void SetServiceProvider(const std::string& _serviceProvider);
 
                     /**
                      * 判断参数 ServiceProvider 是否已赋值
                      * @return ServiceProvider 是否已赋值
+                     * 
                      */
                     bool ServiceProviderHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of compliance review request.
                      * @return ComplianceId Unique ID of compliance review request.
+                     * 
                      */
                     uint64_t GetComplianceId() const;
 
                     /**
                      * 设置Unique ID of compliance review request.
-                     * @param ComplianceId Unique ID of compliance review request.
+                     * @param _complianceId Unique ID of compliance review request.
+                     * 
                      */
                     void SetComplianceId(const uint64_t& _complianceId);
 
                     /**
                      * 判断参数 ComplianceId 是否已赋值
                      * @return ComplianceId 是否已赋值
+                     * 
                      */
                     bool ComplianceIdHasBeenSet() const;
 
                     /**
                      * 获取Audit behavior. Valid values: `APPROVED` and `DENY`.
                      * @return AuditBehavior Audit behavior. Valid values: `APPROVED` and `DENY`.
+                     * 
                      */
                     std::string GetAuditBehavior() const;
 
                     /**
                      * 设置Audit behavior. Valid values: `APPROVED` and `DENY`.
-                     * @param AuditBehavior Audit behavior. Valid values: `APPROVED` and `DENY`.
+                     * @param _auditBehavior Audit behavior. Valid values: `APPROVED` and `DENY`.
+                     * 
                      */
                     void SetAuditBehavior(const std::string& _auditBehavior);
 
                     /**
                      * 判断参数 AuditBehavior 是否已赋值
                      * @return AuditBehavior 是否已赋值
+                     * 
                      */
                     bool AuditBehaviorHasBeenSet() const;
 

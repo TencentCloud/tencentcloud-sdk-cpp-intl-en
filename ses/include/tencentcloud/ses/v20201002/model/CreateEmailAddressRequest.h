@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Your sender address. (You can create up to 10 sender addresses for each domain.)
                      * @return EmailAddress Your sender address. (You can create up to 10 sender addresses for each domain.)
+                     * 
                      */
                     std::string GetEmailAddress() const;
 
                     /**
                      * 设置Your sender address. (You can create up to 10 sender addresses for each domain.)
-                     * @param EmailAddress Your sender address. (You can create up to 10 sender addresses for each domain.)
+                     * @param _emailAddress Your sender address. (You can create up to 10 sender addresses for each domain.)
+                     * 
                      */
                     void SetEmailAddress(const std::string& _emailAddress);
 
                     /**
                      * 判断参数 EmailAddress 是否已赋值
                      * @return EmailAddress 是否已赋值
+                     * 
                      */
                     bool EmailAddressHasBeenSet() const;
 
                     /**
                      * 获取Sender name.
                      * @return EmailSenderName Sender name.
+                     * 
                      */
                     std::string GetEmailSenderName() const;
 
                     /**
                      * 设置Sender name.
-                     * @param EmailSenderName Sender name.
+                     * @param _emailSenderName Sender name.
+                     * 
                      */
                     void SetEmailSenderName(const std::string& _emailSenderName);
 
                     /**
                      * 判断参数 EmailSenderName 是否已赋值
                      * @return EmailSenderName 是否已赋值
+                     * 
                      */
                     bool EmailSenderNameHasBeenSet() const;
 

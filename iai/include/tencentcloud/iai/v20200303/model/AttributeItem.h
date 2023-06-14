@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Attribute value
                      * @return Type Attribute value
+                     * 
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置Attribute value
-                     * @param Type Attribute value
+                     * @param _type Attribute value
+                     * 
                      */
                     void SetType(const int64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Probability of recognizing `Type`, which indicates the probability of correct recognition. Value range: [0,1].
                      * @return Probability Probability of recognizing `Type`, which indicates the probability of correct recognition. Value range: [0,1].
+                     * 
                      */
                     double GetProbability() const;
 
                     /**
                      * 设置Probability of recognizing `Type`, which indicates the probability of correct recognition. Value range: [0,1].
-                     * @param Probability Probability of recognizing `Type`, which indicates the probability of correct recognition. Value range: [0,1].
+                     * @param _probability Probability of recognizing `Type`, which indicates the probability of correct recognition. Value range: [0,1].
+                     * 
                      */
                     void SetProbability(const double& _probability);
 
                     /**
                      * 判断参数 Probability 是否已赋值
                      * @return Probability 是否已赋值
+                     * 
                      */
                     bool ProbabilityHasBeenSet() const;
 

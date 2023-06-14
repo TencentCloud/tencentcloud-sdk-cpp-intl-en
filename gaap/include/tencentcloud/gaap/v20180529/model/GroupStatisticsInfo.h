@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Connection group ID
                      * @return GroupId Connection group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Connection group ID
-                     * @param GroupId Connection group ID
+                     * @param _groupId Connection group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Connection group name
                      * @return GroupName Connection group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Connection group name
-                     * @param GroupName Connection group name
+                     * @param _groupName Connection group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取List of connections of a connection group
                      * @return ProxySet List of connections of a connection group
+                     * 
                      */
                     std::vector<ProxySimpleInfo> GetProxySet() const;
 
                     /**
                      * 设置List of connections of a connection group
-                     * @param ProxySet List of connections of a connection group
+                     * @param _proxySet List of connections of a connection group
+                     * 
                      */
                     void SetProxySet(const std::vector<ProxySimpleInfo>& _proxySet);
 
                     /**
                      * 判断参数 ProxySet 是否已赋值
                      * @return ProxySet 是否已赋值
+                     * 
                      */
                     bool ProxySetHasBeenSet() const;
 

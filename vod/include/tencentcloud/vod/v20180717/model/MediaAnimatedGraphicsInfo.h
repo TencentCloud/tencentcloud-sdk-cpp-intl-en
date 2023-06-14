@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AnimatedGraphicsSet Result information of animated image generating task
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaAnimatedGraphicsItem> GetAnimatedGraphicsSet() const;
 
                     /**
                      * 设置Result information of animated image generating task
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AnimatedGraphicsSet Result information of animated image generating task
+                     * @param _animatedGraphicsSet Result information of animated image generating task
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnimatedGraphicsSet(const std::vector<MediaAnimatedGraphicsItem>& _animatedGraphicsSet);
 
                     /**
                      * 判断参数 AnimatedGraphicsSet 是否已赋值
                      * @return AnimatedGraphicsSet 是否已赋值
+                     * 
                      */
                     bool AnimatedGraphicsSetHasBeenSet() const;
 

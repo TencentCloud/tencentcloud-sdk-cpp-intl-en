@@ -49,36 +49,42 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordInfo Information about the recording task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RecordInfo> GetRecordInfo() const;
 
                     /**
                      * 判断参数 RecordInfo 是否已赋值
                      * @return RecordInfo 是否已赋值
+                     * 
                      */
                     bool RecordInfoHasBeenSet() const;
 
                     /**
                      * 获取Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
                      * @return RecordMode Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
+                     * 
                      */
                     uint64_t GetRecordMode() const;
 
                     /**
                      * 判断参数 RecordMode 是否已赋值
                      * @return RecordMode 是否已赋值
+                     * 
                      */
                     bool RecordModeHasBeenSet() const;
 
                     /**
                      * 获取Room ID.
                      * @return RoomId Room ID.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 

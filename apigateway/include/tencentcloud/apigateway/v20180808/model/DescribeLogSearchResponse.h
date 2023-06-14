@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Cursor for getting more search results. If the value is `""`, there will be no subsequent results
                      * @return ConText Cursor for getting more search results. If the value is `""`, there will be no subsequent results
+                     * 
                      */
                     std::string GetConText() const;
 
                     /**
                      * 判断参数 ConText 是否已赋值
                      * @return ConText 是否已赋值
+                     * 
                      */
                     bool ConTextHasBeenSet() const;
 
@@ -112,24 +114,28 @@ ups_head_t: time when the backend response header arrives.
 err_msg: error message.
 tcp_rtt: client TCP connection information. RTT (Round Trip Time) consists of three parts: link propagation delay, end system processing delay, and queuing delay in router cache.
 req_id: request ID.
+                     * 
                      */
                     std::vector<std::string> GetLogSet() const;
 
                     /**
                      * 判断参数 LogSet 是否已赋值
                      * @return LogSet 是否已赋值
+                     * 
                      */
                     bool LogSetHasBeenSet() const;
 
                     /**
                      * 获取Number of logs returned for one search (`TotalCount <= Limit`)
                      * @return TotalCount Number of logs returned for one search (`TotalCount <= Limit`)
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

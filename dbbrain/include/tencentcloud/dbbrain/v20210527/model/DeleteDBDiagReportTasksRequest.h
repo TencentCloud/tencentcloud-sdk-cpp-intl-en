@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of tasks to be deleted
                      * @return AsyncRequestIds List of IDs of tasks to be deleted
+                     * 
                      */
                     std::vector<int64_t> GetAsyncRequestIds() const;
 
                     /**
                      * 设置List of IDs of tasks to be deleted
-                     * @param AsyncRequestIds List of IDs of tasks to be deleted
+                     * @param _asyncRequestIds List of IDs of tasks to be deleted
+                     * 
                      */
                     void SetAsyncRequestIds(const std::vector<int64_t>& _asyncRequestIds);
 
                     /**
                      * 判断参数 AsyncRequestIds 是否已赋值
                      * @return AsyncRequestIds 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdsHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -83,20 +89,23 @@ namespace TencentCloud
 Default value: `mysql`.
                      * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
 Default value: `mysql`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
 Default value: `mysql`.
-                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
+                     * @param _product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL).
 Default value: `mysql`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

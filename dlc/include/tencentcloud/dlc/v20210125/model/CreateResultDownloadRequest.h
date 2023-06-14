@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The result query task ID.
                      * @return TaskId The result query task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The result query task ID.
-                     * @param TaskId The result query task ID.
+                     * @param _taskId The result query task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取The result format.
                      * @return Format The result format.
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置The result format.
-                     * @param Format The result format.
+                     * @param _format The result format.
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取Whether to re-generate a file to download. This parameter applies only when the last task is `timeout` or `error`.
                      * @return Force Whether to re-generate a file to download. This parameter applies only when the last task is `timeout` or `error`.
+                     * 
                      */
                     bool GetForce() const;
 
                     /**
                      * 设置Whether to re-generate a file to download. This parameter applies only when the last task is `timeout` or `error`.
-                     * @param Force Whether to re-generate a file to download. This parameter applies only when the last task is `timeout` or `error`.
+                     * @param _force Whether to re-generate a file to download. This parameter applies only when the last task is `timeout` or `error`.
+                     * 
                      */
                     void SetForce(const bool& _force);
 
                     /**
                      * 判断参数 Force 是否已赋值
                      * @return Force 是否已赋值
+                     * 
                      */
                     bool ForceHasBeenSet() const;
 

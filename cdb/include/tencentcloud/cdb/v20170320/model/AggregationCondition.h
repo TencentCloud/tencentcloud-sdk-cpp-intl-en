@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
                      * @return AggregationField Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
+                     * 
                      */
                     std::string GetAggregationField() const;
 
                     /**
                      * 设置Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
-                     * @param AggregationField Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
+                     * @param _aggregationField Aggregation field. Valid values: `host` (source IP), `user` （username), `dbName` (database name), `sqlType` (SQL type).
+                     * 
                      */
                     void SetAggregationField(const std::string& _aggregationField);
 
                     /**
                      * 判断参数 AggregationField 是否已赋值
                      * @return AggregationField 是否已赋值
+                     * 
                      */
                     bool AggregationFieldHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of buckets returned under this field. Maximum value: `100`.
                      * @return Limit Number of buckets returned under this field. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of buckets returned under this field. Maximum value: `100`.
-                     * @param Limit Number of buckets returned under this field. Maximum value: `100`.
+                     * @param _limit Number of buckets returned under this field. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Network ACL instance ID, such as `acl-12345678`.
                      * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
                      * 设置Network ACL instance ID, such as `acl-12345678`.
-                     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * @param _networkAclId Network ACL instance ID, such as `acl-12345678`.
+                     * 
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
                     /**
                      * 判断参数 NetworkAclId 是否已赋值
                      * @return NetworkAclId 是否已赋值
+                     * 
                      */
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
                      * 获取Array of subnet instance IDs, such as [subnet-12345678].
                      * @return SubnetIds Array of subnet instance IDs, such as [subnet-12345678].
+                     * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
                      * 设置Array of subnet instance IDs, such as [subnet-12345678].
-                     * @param SubnetIds Array of subnet instance IDs, such as [subnet-12345678].
+                     * @param _subnetIds Array of subnet instance IDs, such as [subnet-12345678].
+                     * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 

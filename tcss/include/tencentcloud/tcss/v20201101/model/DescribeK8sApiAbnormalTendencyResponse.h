@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Trend list
                      * @return List Trend list
+                     * 
                      */
                     std::vector<K8sApiAbnormalTendencyItem> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

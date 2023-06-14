@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取API call information
                      * @return Msg API call information
+                     * 
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 判断参数 Msg 是否已赋值
                      * @return Msg 是否已赋值
+                     * 
                      */
                     bool MsgHasBeenSet() const;
 
                     /**
                      * 获取Array of unique user identifiers
                      * @return UniqueIDSet Array of unique user identifiers
+                     * 
                      */
                     std::vector<std::string> GetUniqueIDSet() const;
 
                     /**
                      * 判断参数 UniqueIDSet 是否已赋值
                      * @return UniqueIDSet 是否已赋值
+                     * 
                      */
                     bool UniqueIDSetHasBeenSet() const;
 

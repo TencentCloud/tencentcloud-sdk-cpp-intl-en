@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Node ID
                      * @return InstanceId Node ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Node ID
-                     * @param InstanceId Node ID
+                     * @param _instanceId Node ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The current version of the node
                      * @return Version The current version of the node
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置The current version of the node
-                     * @param Version The current version of the node
+                     * @param _version The current version of the node
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -87,56 +93,65 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LatestVersion The latest minor version of the current version
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetLatestVersion() const;
 
                     /**
                      * 设置The latest minor version of the current version
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LatestVersion The latest minor version of the current version
+                     * @param _latestVersion The latest minor version of the current version
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLatestVersion(const std::string& _latestVersion);
 
                     /**
                      * 判断参数 LatestVersion 是否已赋值
                      * @return LatestVersion 是否已赋值
+                     * 
                      */
                     bool LatestVersionHasBeenSet() const;
 
                     /**
                      * 获取RuntimeVersion
                      * @return RuntimeVersion RuntimeVersion
+                     * 
                      */
                     std::string GetRuntimeVersion() const;
 
                     /**
                      * 设置RuntimeVersion
-                     * @param RuntimeVersion RuntimeVersion
+                     * @param _runtimeVersion RuntimeVersion
+                     * 
                      */
                     void SetRuntimeVersion(const std::string& _runtimeVersion);
 
                     /**
                      * 判断参数 RuntimeVersion 是否已赋值
                      * @return RuntimeVersion 是否已赋值
+                     * 
                      */
                     bool RuntimeVersionHasBeenSet() const;
 
                     /**
                      * 获取RuntimeLatestVersion
                      * @return RuntimeLatestVersion RuntimeLatestVersion
+                     * 
                      */
                     std::string GetRuntimeLatestVersion() const;
 
                     /**
                      * 设置RuntimeLatestVersion
-                     * @param RuntimeLatestVersion RuntimeLatestVersion
+                     * @param _runtimeLatestVersion RuntimeLatestVersion
+                     * 
                      */
                     void SetRuntimeLatestVersion(const std::string& _runtimeLatestVersion);
 
                     /**
                      * 判断参数 RuntimeLatestVersion 是否已赋值
                      * @return RuntimeLatestVersion 是否已赋值
+                     * 
                      */
                     bool RuntimeLatestVersionHasBeenSet() const;
 

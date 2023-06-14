@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Storage `poolID`
                      * @return PoolId Storage `poolID`
+                     * 
                      */
                     uint64_t GetPoolId() const;
 
                     /**
                      * 判断参数 PoolId 是否已赋值
                      * @return PoolId 是否已赋值
+                     * 
                      */
                     bool PoolIdHasBeenSet() const;
 
                     /**
                      * 获取Rollback task ID, which needs to be passed in when rolling back to this time point
                      * @return QueryId Rollback task ID, which needs to be passed in when rolling back to this time point
+                     * 
                      */
                     uint64_t GetQueryId() const;
 
                     /**
                      * 判断参数 QueryId 是否已赋值
                      * @return QueryId 是否已赋值
+                     * 
                      */
                     bool QueryIdHasBeenSet() const;
 
                     /**
                      * 获取Whether the time point is valid. pass: check passed; fail: check failed
                      * @return Status Whether the time point is valid. pass: check passed; fail: check failed
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Suggested time point. This value takes effect only if `Status` is `fail`
                      * @return SuggestTime Suggested time point. This value takes effect only if `Status` is `fail`
+                     * 
                      */
                     std::string GetSuggestTime() const;
 
                     /**
                      * 判断参数 SuggestTime 是否已赋值
                      * @return SuggestTime 是否已赋值
+                     * 
                      */
                     bool SuggestTimeHasBeenSet() const;
 

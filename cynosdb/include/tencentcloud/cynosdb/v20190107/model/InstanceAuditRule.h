@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuditRule Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAuditRule() const;
 
                     /**
                      * 设置Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AuditRule Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
+                     * @param _auditRule Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuditRule(const bool& _auditRule);
 
                     /**
                      * 判断参数 AuditRule 是否已赋值
                      * @return AuditRule 是否已赋值
+                     * 
                      */
                     bool AuditRuleHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AuditRuleFilters Audit rule details, which is valid only when `AuditRule` is `true`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AuditRuleFilters> GetAuditRuleFilters() const;
 
                     /**
                      * 设置Audit rule details, which is valid only when `AuditRule` is `true`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AuditRuleFilters Audit rule details, which is valid only when `AuditRule` is `true`.
+                     * @param _auditRuleFilters Audit rule details, which is valid only when `AuditRule` is `true`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuditRuleFilters(const std::vector<AuditRuleFilters>& _auditRuleFilters);
 
                     /**
                      * 判断参数 AuditRuleFilters 是否已赋值
                      * @return AuditRuleFilters 是否已赋值
+                     * 
                      */
                     bool AuditRuleFiltersHasBeenSet() const;
 

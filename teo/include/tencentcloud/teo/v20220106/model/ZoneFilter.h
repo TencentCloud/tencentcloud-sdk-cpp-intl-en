@@ -57,6 +57,7 @@ namespace TencentCloud
 - `status`: Site status.
 - `tagKey`: Tag key.
 - `tagValue`: Tag value.
+                     * 
                      */
                     std::string GetName() const;
 
@@ -66,53 +67,61 @@ namespace TencentCloud
 - `status`: Site status.
 - `tagKey`: Tag key.
 - `tagValue`: Tag value.
-                     * @param Name Filters by the field name. Vaules:
+                     * @param _name Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
 - `tagKey`: Tag key.
 - `tagValue`: Tag value.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Filters by the field value
                      * @return Values Filters by the field value
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Filters by the field value
-                     * @param Values Filters by the field value
+                     * @param _values Filters by the field value
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
                      * @return Fuzzy Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
+                     * 
                      */
                     bool GetFuzzy() const;
 
                     /**
                      * 设置Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
-                     * @param Fuzzy Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
+                     * @param _fuzzy Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
+                     * 
                      */
                     void SetFuzzy(const bool& _fuzzy);
 
                     /**
                      * 判断参数 Fuzzy 是否已赋值
                      * @return Fuzzy 是否已赋值
+                     * 
                      */
                     bool FuzzyHasBeenSet() const;
 

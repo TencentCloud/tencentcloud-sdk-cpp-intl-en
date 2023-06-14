@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取API component name. The value for the current API is monitor.
                      * @return Module API component name. The value for the current API is monitor.
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置API component name. The value for the current API is monitor.
-                     * @param Module API component name. The value for the current API is monitor.
+                     * @param _module API component name. The value for the current API is monitor.
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Message policy ID, which is configured on the custom message page.
                      * @return PolicyId Message policy ID, which is configured on the custom message page.
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Message policy ID, which is configured on the custom message page.
-                     * @param PolicyId Message policy ID, which is configured on the custom message page.
+                     * @param _policyId Message policy ID, which is configured on the custom message page.
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Custom message content that a user wants to send.
                      * @return Msg Custom message content that a user wants to send.
+                     * 
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 设置Custom message content that a user wants to send.
-                     * @param Msg Custom message content that a user wants to send.
+                     * @param _msg Custom message content that a user wants to send.
+                     * 
                      */
                     void SetMsg(const std::string& _msg);
 
                     /**
                      * 判断参数 Msg 是否已赋值
                      * @return Msg 是否已赋值
+                     * 
                      */
                     bool MsgHasBeenSet() const;
 

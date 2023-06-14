@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Hot key details
                      * @return Data Hot key details
+                     * 
                      */
                     std::vector<HotKeyInfo> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

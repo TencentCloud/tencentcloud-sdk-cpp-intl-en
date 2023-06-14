@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether disablement succeeded
                      * @return IsSuccess Whether disablement succeeded
+                     * 
                      */
                     int64_t GetIsSuccess() const;
 
                     /**
                      * 判断参数 IsSuccess 是否已赋值
                      * @return IsSuccess 是否已赋值
+                     * 
                      */
                     bool IsSuccessHasBeenSet() const;
 

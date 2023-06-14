@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Old replica AZ
                      * @return OldSlaveZone Old replica AZ
+                     * 
                      */
                     std::string GetOldSlaveZone() const;
 
                     /**
                      * 设置Old replica AZ
-                     * @param OldSlaveZone Old replica AZ
+                     * @param _oldSlaveZone Old replica AZ
+                     * 
                      */
                     void SetOldSlaveZone(const std::string& _oldSlaveZone);
 
                     /**
                      * 判断参数 OldSlaveZone 是否已赋值
                      * @return OldSlaveZone 是否已赋值
+                     * 
                      */
                     bool OldSlaveZoneHasBeenSet() const;
 
                     /**
                      * 获取New replica AZ
                      * @return NewSlaveZone New replica AZ
+                     * 
                      */
                     std::string GetNewSlaveZone() const;
 
                     /**
                      * 设置New replica AZ
-                     * @param NewSlaveZone New replica AZ
+                     * @param _newSlaveZone New replica AZ
+                     * 
                      */
                     void SetNewSlaveZone(const std::string& _newSlaveZone);
 
                     /**
                      * 判断参数 NewSlaveZone 是否已赋值
                      * @return NewSlaveZone 是否已赋值
+                     * 
                      */
                     bool NewSlaveZoneHasBeenSet() const;
 

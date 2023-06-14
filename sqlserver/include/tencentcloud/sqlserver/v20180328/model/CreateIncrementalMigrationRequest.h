@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of imported target instance
                      * @return InstanceId ID of imported target instance
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of imported target instance
-                     * @param InstanceId ID of imported target instance
+                     * @param _instanceId ID of imported target instance
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup import task ID, which is returned through the API CreateBackupMigration.
                      * @return BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration.
+                     * 
                      */
                     std::string GetBackupMigrationId() const;
 
                     /**
                      * 设置Backup import task ID, which is returned through the API CreateBackupMigration.
-                     * @param BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration.
+                     * @param _backupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration.
+                     * 
                      */
                     void SetBackupMigrationId(const std::string& _backupMigrationId);
 
                     /**
                      * 判断参数 BackupMigrationId 是否已赋值
                      * @return BackupMigrationId 是否已赋值
+                     * 
                      */
                     bool BackupMigrationIdHasBeenSet() const;
 
                     /**
                      * 获取Incremental backup file. If the UploadType of a full backup file is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
                      * @return BackupFiles Incremental backup file. If the UploadType of a full backup file is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * 
                      */
                     std::vector<std::string> GetBackupFiles() const;
 
                     /**
                      * 设置Incremental backup file. If the UploadType of a full backup file is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
-                     * @param BackupFiles Incremental backup file. If the UploadType of a full backup file is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * @param _backupFiles Incremental backup file. If the UploadType of a full backup file is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
+                     * 
                      */
                     void SetBackupFiles(const std::vector<std::string>& _backupFiles);
 
                     /**
                      * 判断参数 BackupFiles 是否已赋值
                      * @return BackupFiles 是否已赋值
+                     * 
                      */
                     bool BackupFilesHasBeenSet() const;
 
                     /**
                      * 获取Whether restoration is required. No: not required. Yes: required. Not required by default.
                      * @return IsRecovery Whether restoration is required. No: not required. Yes: required. Not required by default.
+                     * 
                      */
                     std::string GetIsRecovery() const;
 
                     /**
                      * 设置Whether restoration is required. No: not required. Yes: required. Not required by default.
-                     * @param IsRecovery Whether restoration is required. No: not required. Yes: required. Not required by default.
+                     * @param _isRecovery Whether restoration is required. No: not required. Yes: required. Not required by default.
+                     * 
                      */
                     void SetIsRecovery(const std::string& _isRecovery);
 
                     /**
                      * 判断参数 IsRecovery 是否已赋值
                      * @return IsRecovery 是否已赋值
+                     * 
                      */
                     bool IsRecoveryHasBeenSet() const;
 

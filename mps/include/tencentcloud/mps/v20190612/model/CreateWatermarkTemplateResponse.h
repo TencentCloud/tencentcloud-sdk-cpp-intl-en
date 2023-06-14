@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a watermarking template.
                      * @return Definition Unique ID of a watermarking template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Watermark image address. This field is valid only when `Type` is `image`.
                      * @return ImageUrl Watermark image address. This field is valid only when `Type` is `image`.
+                     * 
                      */
                     std::string GetImageUrl() const;
 
                     /**
                      * 判断参数 ImageUrl 是否已赋值
                      * @return ImageUrl 是否已赋值
+                     * 
                      */
                     bool ImageUrlHasBeenSet() const;
 

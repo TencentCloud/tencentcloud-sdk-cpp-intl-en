@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Number of keys on the node
                      * @return Keys Number of keys on the node
+                     * 
                      */
                     int64_t GetKeys() const;
 
                     /**
                      * 设置Number of keys on the node
-                     * @param Keys Number of keys on the node
+                     * @param _keys Number of keys on the node
+                     * 
                      */
                     void SetKeys(const int64_t& _keys);
 
                     /**
                      * 判断参数 Keys 是否已赋值
                      * @return Keys 是否已赋值
+                     * 
                      */
                     bool KeysHasBeenSet() const;
 
                     /**
                      * 获取Distribution of node slots
                      * @return Slot Distribution of node slots
+                     * 
                      */
                     std::string GetSlot() const;
 
                     /**
                      * 设置Distribution of node slots
-                     * @param Slot Distribution of node slots
+                     * @param _slot Distribution of node slots
+                     * 
                      */
                     void SetSlot(const std::string& _slot);
 
                     /**
                      * 判断参数 Slot 是否已赋值
                      * @return Slot 是否已赋值
+                     * 
                      */
                     bool SlotHasBeenSet() const;
 
                     /**
                      * 获取Node ID
                      * @return NodeId Node ID
+                     * 
                      */
                     std::string GetNodeId() const;
 
                     /**
                      * 设置Node ID
-                     * @param NodeId Node ID
+                     * @param _nodeId Node ID
+                     * 
                      */
                     void SetNodeId(const std::string& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 
                     /**
                      * 获取Node status
                      * @return Status Node status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Node status
-                     * @param Status Node status
+                     * @param _status Node status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Node role
                      * @return Role Node role
+                     * 
                      */
                     std::string GetRole() const;
 
                     /**
                      * 设置Node role
-                     * @param Role Node role
+                     * @param _role Node role
+                     * 
                      */
                     void SetRole(const std::string& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 

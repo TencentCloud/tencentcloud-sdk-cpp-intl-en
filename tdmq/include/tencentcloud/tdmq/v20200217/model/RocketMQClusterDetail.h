@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Basic cluster information.
                      * @return Info Basic cluster information.
+                     * 
                      */
                     RocketMQClusterInfo GetInfo() const;
 
                     /**
                      * 设置Basic cluster information.
-                     * @param Info Basic cluster information.
+                     * @param _info Basic cluster information.
+                     * 
                      */
                     void SetInfo(const RocketMQClusterInfo& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 
                     /**
                      * 获取Cluster configuration information.
                      * @return Config Cluster configuration information.
+                     * 
                      */
                     RocketMQClusterConfig GetConfig() const;
 
                     /**
                      * 设置Cluster configuration information.
-                     * @param Config Cluster configuration information.
+                     * @param _config Cluster configuration information.
+                     * 
                      */
                     void SetConfig(const RocketMQClusterConfig& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
@@ -89,20 +95,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+                     * @param _status Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Key name
                      * @return KeyName Key name
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Key name
-                     * @param KeyName Key name
+                     * @param _keyName Key name
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 
                     /**
                      * 获取Supported data types: string, boolean, int32, int64, float, and double
                      * @return KeyType Supported data types: string, boolean, int32, int64, float, and double
+                     * 
                      */
                     std::string GetKeyType() const;
 
                     /**
                      * 设置Supported data types: string, boolean, int32, int64, float, and double
-                     * @param KeyType Supported data types: string, boolean, int32, int64, float, and double
+                     * @param _keyType Supported data types: string, boolean, int32, int64, float, and double
+                     * 
                      */
                     void SetKeyType(const std::string& _keyType);
 
                     /**
                      * 判断参数 KeyType 是否已赋值
                      * @return KeyType 是否已赋值
+                     * 
                      */
                     bool KeyTypeHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return KeyNonExistingField Assignment information returned upon resolution failure
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetKeyNonExistingField() const;
 
                     /**
                      * 设置Assignment information returned upon resolution failure
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param KeyNonExistingField Assignment information returned upon resolution failure
+                     * @param _keyNonExistingField Assignment information returned upon resolution failure
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetKeyNonExistingField(const std::string& _keyNonExistingField);
 
                     /**
                      * 判断参数 KeyNonExistingField 是否已赋值
                      * @return KeyNonExistingField 是否已赋值
+                     * 
                      */
                     bool KeyNonExistingFieldHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Access credential ID
                      * @return TokenId Access credential ID
+                     * 
                      */
                     std::string GetTokenId() const;
 
                     /**
                      * 设置Access credential ID
-                     * @param TokenId Access credential ID
+                     * @param _tokenId Access credential ID
+                     * 
                      */
                     void SetTokenId(const std::string& _tokenId);
 
                     /**
                      * 判断参数 TokenId 是否已赋值
                      * @return TokenId 是否已赋值
+                     * 
                      */
                     bool TokenIdHasBeenSet() const;
 

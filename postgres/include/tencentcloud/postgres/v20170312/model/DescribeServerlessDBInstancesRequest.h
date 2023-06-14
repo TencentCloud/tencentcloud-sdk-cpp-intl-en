@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Query conditions
                      * @return Filter Query conditions
+                     * 
                      */
                     std::vector<Filter> GetFilter() const;
 
                     /**
                      * 设置Query conditions
-                     * @param Filter Query conditions
+                     * @param _filter Query conditions
+                     * 
                      */
                     void SetFilter(const std::vector<Filter>& _filter);
 
                     /**
                      * 判断参数 Filter 是否已赋值
                      * @return Filter 是否已赋值
+                     * 
                      */
                     bool FilterHasBeenSet() const;
 
                     /**
                      * 获取The number of queries
                      * @return Limit The number of queries
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of queries
-                     * @param Limit The number of queries
+                     * @param _limit The number of queries
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The offset value
                      * @return Offset The offset value
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The offset value
-                     * @param Offset The offset value
+                     * @param _offset The offset value
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting metric. Currently, only "CreateTime" (instance creation time) is supported.
                      * @return OrderBy Sorting metric. Currently, only "CreateTime" (instance creation time) is supported.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting metric. Currently, only "CreateTime" (instance creation time) is supported.
-                     * @param OrderBy Sorting metric. Currently, only "CreateTime" (instance creation time) is supported.
+                     * @param _orderBy Sorting metric. Currently, only "CreateTime" (instance creation time) is supported.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Ascending and descending are supported.
                      * @return OrderByType Sorting order. Ascending and descending are supported.
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting order. Ascending and descending are supported.
-                     * @param OrderByType Sorting order. Ascending and descending are supported.
+                     * @param _orderByType Sorting order. Ascending and descending are supported.
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

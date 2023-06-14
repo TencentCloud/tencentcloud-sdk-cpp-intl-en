@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Origin server IP or domain name
                      * @return RealServerIP Origin server IP or domain name
+                     * 
                      */
                     std::string GetRealServerIP() const;
 
                     /**
                      * 设置Origin server IP or domain name
-                     * @param RealServerIP Origin server IP or domain name
+                     * @param _realServerIP Origin server IP or domain name
+                     * 
                      */
                     void SetRealServerIP(const std::string& _realServerIP);
 
                     /**
                      * 判断参数 RealServerIP 是否已赋值
                      * @return RealServerIP 是否已赋值
+                     * 
                      */
                     bool RealServerIPHasBeenSet() const;
 
                     /**
                      * 获取Origin server ID
                      * @return RealServerId Origin server ID
+                     * 
                      */
                     std::string GetRealServerId() const;
 
                     /**
                      * 设置Origin server ID
-                     * @param RealServerId Origin server ID
+                     * @param _realServerId Origin server ID
+                     * 
                      */
                     void SetRealServerId(const std::string& _realServerId);
 
                     /**
                      * 判断参数 RealServerId 是否已赋值
                      * @return RealServerId 是否已赋值
+                     * 
                      */
                     bool RealServerIdHasBeenSet() const;
 
                     /**
                      * 获取Origin server name
                      * @return RealServerName Origin server name
+                     * 
                      */
                     std::string GetRealServerName() const;
 
                     /**
                      * 设置Origin server name
-                     * @param RealServerName Origin server name
+                     * @param _realServerName Origin server name
+                     * 
                      */
                     void SetRealServerName(const std::string& _realServerName);
 
                     /**
                      * 判断参数 RealServerName 是否已赋值
                      * @return RealServerName 是否已赋值
+                     * 
                      */
                     bool RealServerNameHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -124,20 +136,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagSet Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
                      * 设置Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagSet Tag list.
+                     * @param _tagSet Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 

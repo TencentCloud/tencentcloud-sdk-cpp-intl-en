@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Hidden Whether to hide
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetHidden() const;
 
                     /**
                      * 设置Whether to hide
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Hidden Whether to hide
+                     * @param _hidden Whether to hide
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHidden(const bool& _hidden);
 
                     /**
                      * 判断参数 Hidden 是否已赋值
                      * @return Hidden 是否已赋值
+                     * 
                      */
                     bool HiddenHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NewViewNames Names of new views
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetNewViewNames() const;
 
                     /**
                      * 设置Names of new views
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NewViewNames Names of new views
+                     * @param _newViewNames Names of new views
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNewViewNames(const std::vector<std::string>& _newViewNames);
 
                     /**
                      * 判断参数 NewViewNames 是否已赋值
                      * @return NewViewNames 是否已赋值
+                     * 
                      */
                     bool NewViewNamesHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Description Description
+                     * @param _description Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

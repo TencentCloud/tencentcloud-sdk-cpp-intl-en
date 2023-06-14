@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the query (client time in RFC 3339)
                      * @return StartTime Start time of the query (client time in RFC 3339)
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the query (client time in RFC 3339)
-                     * @param StartTime Start time of the query (client time in RFC 3339)
+                     * @param _startTime Start time of the query (client time in RFC 3339)
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Start time of the query (client time in RFC 3339)
                      * @return EndTime Start time of the query (client time in RFC 3339)
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Start time of the query (client time in RFC 3339)
-                     * @param EndTime Start time of the query (client time in RFC 3339)
+                     * @param _endTime Start time of the query (client time in RFC 3339)
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return MetricNames Supported metrics for data query:
 `l7Cache_outFlux`: Access traffic
 `l7Cache_request`: Access requests
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
@@ -93,51 +100,59 @@ namespace TencentCloud
                      * 设置Supported metrics for data query:
 `l7Cache_outFlux`: Access traffic
 `l7Cache_request`: Access requests
-                     * @param MetricNames Supported metrics for data query:
+                     * @param _metricNames Supported metrics for data query:
 `l7Cache_outFlux`: Access traffic
 `l7Cache_request`: Access requests
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
                     /**
                      * 获取Time interval. Values: {min, 5min, hour, day, week}
                      * @return Interval Time interval. Values: {min, 5min, hour, day, week}
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Time interval. Values: {min, 5min, hour, day, week}
-                     * @param Interval Time interval. Values: {min, 5min, hour, day, week}
+                     * @param _interval Time interval. Values: {min, 5min, hour, day, week}
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取List of site IDs
                      * @return ZoneIds List of site IDs
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of site IDs
-                     * @param ZoneIds List of site IDs
+                     * @param _zoneIds List of site IDs
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
@@ -148,6 +163,7 @@ namespace TencentCloud
                      * @return Filters Filter condition:
 {Key: "cacheType", Value: ["hit"], Operator: "equals"}: Filter by data responded from EdgeOne
 {Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}: Filter by data responded from the origin server
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -155,15 +171,17 @@ namespace TencentCloud
                      * 设置Filter condition:
 {Key: "cacheType", Value: ["hit"], Operator: "equals"}: Filter by data responded from EdgeOne
 {Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}: Filter by data responded from the origin server
-                     * @param Filters Filter condition:
+                     * @param _filters Filter condition:
 {Key: "cacheType", Value: ["hit"], Operator: "equals"}: Filter by data responded from EdgeOne
 {Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}: Filter by data responded from the origin server
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

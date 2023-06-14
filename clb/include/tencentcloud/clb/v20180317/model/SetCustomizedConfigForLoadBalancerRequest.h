@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
                      * @return OperationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+                     * 
                      */
                     std::string GetOperationType() const;
 
                     /**
                      * 设置Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
-                     * @param OperationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+                     * @param _operationType Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+                     * 
                      */
                     void SetOperationType(const std::string& _operationType);
 
                     /**
                      * 判断参数 OperationType 是否已赋值
                      * @return OperationType 是否已赋值
+                     * 
                      */
                     bool OperationTypeHasBeenSet() const;
 
                     /**
                      * 获取This field is required except for creating custom configurations, such as "pz-1234abcd".
                      * @return UconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
+                     * 
                      */
                     std::string GetUconfigId() const;
 
                     /**
                      * 设置This field is required except for creating custom configurations, such as "pz-1234abcd".
-                     * @param UconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
+                     * @param _uconfigId This field is required except for creating custom configurations, such as "pz-1234abcd".
+                     * 
                      */
                     void SetUconfigId(const std::string& _uconfigId);
 
                     /**
                      * 判断参数 UconfigId 是否已赋值
                      * @return UconfigId 是否已赋值
+                     * 
                      */
                     bool UconfigIdHasBeenSet() const;
 
                     /**
                      * 获取This field is required when creating or modifying custom configurations.
                      * @return ConfigContent This field is required when creating or modifying custom configurations.
+                     * 
                      */
                     std::string GetConfigContent() const;
 
                     /**
                      * 设置This field is required when creating or modifying custom configurations.
-                     * @param ConfigContent This field is required when creating or modifying custom configurations.
+                     * @param _configContent This field is required when creating or modifying custom configurations.
+                     * 
                      */
                     void SetConfigContent(const std::string& _configContent);
 
                     /**
                      * 判断参数 ConfigContent 是否已赋值
                      * @return ConfigContent 是否已赋值
+                     * 
                      */
                     bool ConfigContentHasBeenSet() const;
 
                     /**
                      * 获取This field is required when creating or renaming custom configurations.
                      * @return ConfigName This field is required when creating or renaming custom configurations.
+                     * 
                      */
                     std::string GetConfigName() const;
 
                     /**
                      * 设置This field is required when creating or renaming custom configurations.
-                     * @param ConfigName This field is required when creating or renaming custom configurations.
+                     * @param _configName This field is required when creating or renaming custom configurations.
+                     * 
                      */
                     void SetConfigName(const std::string& _configName);
 
                     /**
                      * 判断参数 ConfigName 是否已赋值
                      * @return ConfigName 是否已赋值
+                     * 
                      */
                     bool ConfigNameHasBeenSet() const;
 
                     /**
                      * 获取This field is required when binding/unbinding resources.
                      * @return LoadBalancerIds This field is required when binding/unbinding resources.
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置This field is required when binding/unbinding resources.
-                     * @param LoadBalancerIds This field is required when binding/unbinding resources.
+                     * @param _loadBalancerIds This field is required when binding/unbinding resources.
+                     * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 

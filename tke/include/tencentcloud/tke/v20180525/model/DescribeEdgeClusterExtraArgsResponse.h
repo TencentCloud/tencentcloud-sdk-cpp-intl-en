@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterExtraArgs Custom parameters of the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     EdgeClusterExtraArgs GetClusterExtraArgs() const;
 
                     /**
                      * 判断参数 ClusterExtraArgs 是否已赋值
                      * @return ClusterExtraArgs 是否已赋值
+                     * 
                      */
                     bool ClusterExtraArgsHasBeenSet() const;
 

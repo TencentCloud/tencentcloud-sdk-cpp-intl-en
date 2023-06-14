@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability name
                      * @return VulName Vulnerability name
+                     * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 设置Vulnerability name
-                     * @param VulName Vulnerability name
+                     * @param _vulName Vulnerability name
+                     * 
                      */
                     void SetVulName(const std::string& _vulName);
 
                     /**
                      * 判断参数 VulName 是否已赋值
                      * @return VulName 是否已赋值
+                     * 
                      */
                     bool VulNameHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability CVE ID
                      * @return CVEID Vulnerability CVE ID
+                     * 
                      */
                     std::string GetCVEID() const;
 
                     /**
                      * 设置Vulnerability CVE ID
-                     * @param CVEID Vulnerability CVE ID
+                     * @param _cVEID Vulnerability CVE ID
+                     * 
                      */
                     void SetCVEID(const std::string& _cVEID);
 
                     /**
                      * 判断参数 CVEID 是否已赋值
                      * @return CVEID 是否已赋值
+                     * 
                      */
                     bool CVEIDHasBeenSet() const;
 
                     /**
                      * 获取POC ID
                      * @return PocID POC ID
+                     * 
                      */
                     std::string GetPocID() const;
 
                     /**
                      * 设置POC ID
-                     * @param PocID POC ID
+                     * @param _pocID POC ID
+                     * 
                      */
                     void SetPocID(const std::string& _pocID);
 
                     /**
                      * 判断参数 PocID 是否已赋值
                      * @return PocID 是否已赋值
+                     * 
                      */
                     bool PocIDHasBeenSet() const;
 
                     /**
                      * 获取Number of ignored repository images
                      * @return RegistryImageCount Number of ignored repository images
+                     * 
                      */
                     int64_t GetRegistryImageCount() const;
 
                     /**
                      * 设置Number of ignored repository images
-                     * @param RegistryImageCount Number of ignored repository images
+                     * @param _registryImageCount Number of ignored repository images
+                     * 
                      */
                     void SetRegistryImageCount(const int64_t& _registryImageCount);
 
                     /**
                      * 判断参数 RegistryImageCount 是否已赋值
                      * @return RegistryImageCount 是否已赋值
+                     * 
                      */
                     bool RegistryImageCountHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether to ignore all images. Valid values: `0` (no); `1` (yes).
                      * @return IsIgnoreAll Whether to ignore all images. Valid values: `0` (no); `1` (yes).
+                     * 
                      */
                     int64_t GetIsIgnoreAll() const;
 
                     /**
                      * 设置Whether to ignore all images. Valid values: `0` (no); `1` (yes).
-                     * @param IsIgnoreAll Whether to ignore all images. Valid values: `0` (no); `1` (yes).
+                     * @param _isIgnoreAll Whether to ignore all images. Valid values: `0` (no); `1` (yes).
+                     * 
                      */
                     void SetIsIgnoreAll(const int64_t& _isIgnoreAll);
 
                     /**
                      * 判断参数 IsIgnoreAll 是否已赋值
                      * @return IsIgnoreAll 是否已赋值
+                     * 
                      */
                     bool IsIgnoreAllHasBeenSet() const;
 
                     /**
                      * 获取Number of ignored local images
                      * @return LocalImageCount Number of ignored local images
+                     * 
                      */
                     int64_t GetLocalImageCount() const;
 
                     /**
                      * 设置Number of ignored local images
-                     * @param LocalImageCount Number of ignored local images
+                     * @param _localImageCount Number of ignored local images
+                     * 
                      */
                     void SetLocalImageCount(const int64_t& _localImageCount);
 
                     /**
                      * 判断参数 LocalImageCount 是否已赋值
                      * @return LocalImageCount 是否已赋值
+                     * 
                      */
                     bool LocalImageCountHasBeenSet() const;
 

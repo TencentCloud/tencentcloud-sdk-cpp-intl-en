@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return DBInstanceId Instance ID
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param DBInstanceId Instance ID
+                     * @param _dBInstanceId Instance ID
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the RO group to which the read-only replica belongs
                      * @return ReadOnlyGroupId ID of the RO group to which the read-only replica belongs
+                     * 
                      */
                     std::string GetReadOnlyGroupId() const;
 
                     /**
                      * 设置ID of the RO group to which the read-only replica belongs
-                     * @param ReadOnlyGroupId ID of the RO group to which the read-only replica belongs
+                     * @param _readOnlyGroupId ID of the RO group to which the read-only replica belongs
+                     * 
                      */
                     void SetReadOnlyGroupId(const std::string& _readOnlyGroupId);
 
                     /**
                      * 判断参数 ReadOnlyGroupId 是否已赋值
                      * @return ReadOnlyGroupId 是否已赋值
+                     * 
                      */
                     bool ReadOnlyGroupIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the new RO group into which the read-only replica will move
                      * @return NewReadOnlyGroupId ID of the new RO group into which the read-only replica will move
+                     * 
                      */
                     std::string GetNewReadOnlyGroupId() const;
 
                     /**
                      * 设置ID of the new RO group into which the read-only replica will move
-                     * @param NewReadOnlyGroupId ID of the new RO group into which the read-only replica will move
+                     * @param _newReadOnlyGroupId ID of the new RO group into which the read-only replica will move
+                     * 
                      */
                     void SetNewReadOnlyGroupId(const std::string& _newReadOnlyGroupId);
 
                     /**
                      * 判断参数 NewReadOnlyGroupId 是否已赋值
                      * @return NewReadOnlyGroupId 是否已赋值
+                     * 
                      */
                     bool NewReadOnlyGroupIdHasBeenSet() const;
 

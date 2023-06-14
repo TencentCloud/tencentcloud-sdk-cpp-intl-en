@@ -46,120 +46,140 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable scheduled scan
                      * @return EnableScan Whether to enable scheduled scan
+                     * 
                      */
                     bool GetEnableScan() const;
 
                     /**
                      * 判断参数 EnableScan 是否已赋值
                      * @return EnableScan 是否已赋值
+                     * 
                      */
                     bool EnableScanHasBeenSet() const;
 
                     /**
                      * 获取Check cycle in days
                      * @return Cycle Check cycle in days
+                     * 
                      */
                     uint64_t GetCycle() const;
 
                     /**
                      * 判断参数 Cycle 是否已赋值
                      * @return Cycle 是否已赋值
+                     * 
                      */
                     bool CycleHasBeenSet() const;
 
                     /**
                      * 获取Scan start time
                      * @return BeginScanAt Scan start time
+                     * 
                      */
                     std::string GetBeginScanAt() const;
 
                     /**
                      * 判断参数 BeginScanAt 是否已赋值
                      * @return BeginScanAt 是否已赋值
+                     * 
                      */
                     bool BeginScanAtHasBeenSet() const;
 
                     /**
                      * 获取Scan all paths
                      * @return ScanPathAll Scan all paths
+                     * 
                      */
                     bool GetScanPathAll() const;
 
                     /**
                      * 判断参数 ScanPathAll 是否已赋值
                      * @return ScanPathAll 是否已赋值
+                     * 
                      */
                     bool ScanPathAllHasBeenSet() const;
 
                     /**
                      * 获取Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
                      * @return ScanPathType Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
+                     * 
                      */
                     uint64_t GetScanPathType() const;
 
                     /**
                      * 判断参数 ScanPathType 是否已赋值
                      * @return ScanPathType 是否已赋值
+                     * 
                      */
                     bool ScanPathTypeHasBeenSet() const;
 
                     /**
                      * 获取Timeout period in hours
                      * @return Timeout Timeout period in hours
+                     * 
                      */
                     uint64_t GetTimeout() const;
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Scanning scope. Valid values: `0` (container); `1` (server).
                      * @return ScanRangeType Scanning scope. Valid values: `0` (container); `1` (server).
+                     * 
                      */
                     uint64_t GetScanRangeType() const;
 
                     /**
                      * 判断参数 ScanRangeType 是否已赋值
                      * @return ScanRangeType 是否已赋值
+                     * 
                      */
                     bool ScanRangeTypeHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `true` (all); `false` (specified).
                      * @return ScanRangeAll Valid values: `true` (all); `false` (specified).
+                     * 
                      */
                     bool GetScanRangeAll() const;
 
                     /**
                      * 判断参数 ScanRangeAll 是否已赋值
                      * @return ScanRangeAll 是否已赋值
+                     * 
                      */
                     bool ScanRangeAllHasBeenSet() const;
 
                     /**
                      * 获取ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
                      * @return ScanIds ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
+                     * 
                      */
                     std::vector<std::string> GetScanIds() const;
 
                     /**
                      * 判断参数 ScanIds 是否已赋值
                      * @return ScanIds 是否已赋值
+                     * 
                      */
                     bool ScanIdsHasBeenSet() const;
 
                     /**
                      * 获取Specified path to be excluded or scanned
                      * @return ScanPath Specified path to be excluded or scanned
+                     * 
                      */
                     std::vector<std::string> GetScanPath() const;
 
                     /**
                      * 判断参数 ScanPath 是否已赋值
                      * @return ScanPath 是否已赋值
+                     * 
                      */
                     bool ScanPathHasBeenSet() const;
 
@@ -168,12 +188,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClickTimeout Timeout settings of quick check
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetClickTimeout() const;
 
                     /**
                      * 判断参数 ClickTimeout 是否已赋值
                      * @return ClickTimeout 是否已赋值
+                     * 
                      */
                     bool ClickTimeoutHasBeenSet() const;
 
@@ -188,12 +210,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `SCAN_PATH_DEFAULT`: Scan the default path
 `SCAN_PATH_USER_DEFINE`: Scan the custom path
 
+                     * 
                      */
                     std::string GetScanPathMode() const;
 
                     /**
                      * 判断参数 ScanPathMode 是否已赋值
                      * @return ScanPathMode 是否已赋值
+                     * 
                      */
                     bool ScanPathModeHasBeenSet() const;
 

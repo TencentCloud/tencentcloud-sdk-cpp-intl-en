@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return NamespaceName Namespace name
+                     * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param NamespaceName Namespace name
+                     * @param _namespaceName Namespace name
+                     * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
 
                     /**
                      * 判断参数 NamespaceName 是否已赋值
                      * @return NamespaceName 是否已赋值
+                     * 
                      */
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
                      * 获取Image repository name
                      * @return RepositoryName Image repository name
+                     * 
                      */
                     std::string GetRepositoryName() const;
 
                     /**
                      * 设置Image repository name
-                     * @param RepositoryName Image repository name
+                     * @param _repositoryName Image repository name
+                     * 
                      */
                     void SetRepositoryName(const std::string& _repositoryName);
 
                     /**
                      * 判断参数 RepositoryName 是否已赋值
                      * @return RepositoryName 是否已赋值
+                     * 
                      */
                     bool RepositoryNameHasBeenSet() const;
 
                     /**
                      * 获取Image tag specified for fuzzy search
                      * @return ImageVersion Image tag specified for fuzzy search
+                     * 
                      */
                     std::string GetImageVersion() const;
 
                     /**
                      * 设置Image tag specified for fuzzy search
-                     * @param ImageVersion Image tag specified for fuzzy search
+                     * @param _imageVersion Image tag specified for fuzzy search
+                     * 
                      */
                     void SetImageVersion(const std::string& _imageVersion);
 
                     /**
                      * 判断参数 ImageVersion 是否已赋值
                      * @return ImageVersion 是否已赋值
+                     * 
                      */
                     bool ImageVersionHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page, which is used for pagination. Default value: 20.
                      * @return Limit Number of entries per page, which is used for pagination. Default value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page, which is used for pagination. Default value: 20.
-                     * @param Limit Number of entries per page, which is used for pagination. Default value: 20.
+                     * @param _limit Number of entries per page, which is used for pagination. Default value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: 1.
                      * @return Offset Page number. Default value: 1.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: 1.
-                     * @param Offset Page number. Default value: 1.
+                     * @param _offset Page number. Default value: 1.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Image digest specified for search
                      * @return Digest Image digest specified for search
+                     * 
                      */
                     std::string GetDigest() const;
 
                     /**
                      * 设置Image digest specified for search
-                     * @param Digest Image digest specified for search
+                     * @param _digest Image digest specified for search
+                     * 
                      */
                     void SetDigest(const std::string& _digest);
 
                     /**
                      * 判断参数 Digest 是否已赋值
                      * @return Digest 是否已赋值
+                     * 
                      */
                     bool DigestHasBeenSet() const;
 
                     /**
                      * 获取Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
                      * @return ExactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     * 
                      */
                     bool GetExactMatch() const;
 
                     /**
                      * 设置Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
-                     * @param ExactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     * @param _exactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     * 
                      */
                     void SetExactMatch(const bool& _exactMatch);
 
                     /**
                      * 判断参数 ExactMatch 是否已赋值
                      * @return ExactMatch 是否已赋值
+                     * 
                      */
                     bool ExactMatchHasBeenSet() const;
 

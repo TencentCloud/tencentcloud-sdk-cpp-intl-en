@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The audio sample rate (Hz). Valid values: 48000, 44100, 32000, 24000, 16000, 8000.
                      * @return SampleRate The audio sample rate (Hz). Valid values: 48000, 44100, 32000, 24000, 16000, 8000.
+                     * 
                      */
                     uint64_t GetSampleRate() const;
 
                     /**
                      * 设置The audio sample rate (Hz). Valid values: 48000, 44100, 32000, 24000, 16000, 8000.
-                     * @param SampleRate The audio sample rate (Hz). Valid values: 48000, 44100, 32000, 24000, 16000, 8000.
+                     * @param _sampleRate The audio sample rate (Hz). Valid values: 48000, 44100, 32000, 24000, 16000, 8000.
+                     * 
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
 
                     /**
                      * 判断参数 SampleRate 是否已赋值
                      * @return SampleRate 是否已赋值
+                     * 
                      */
                     bool SampleRateHasBeenSet() const;
 
                     /**
                      * 获取The number of sound channels. Valid values: 1 (mono), 2 (dual).
                      * @return Channel The number of sound channels. Valid values: 1 (mono), 2 (dual).
+                     * 
                      */
                     uint64_t GetChannel() const;
 
                     /**
                      * 设置The number of sound channels. Valid values: 1 (mono), 2 (dual).
-                     * @param Channel The number of sound channels. Valid values: 1 (mono), 2 (dual).
+                     * @param _channel The number of sound channels. Valid values: 1 (mono), 2 (dual).
+                     * 
                      */
                     void SetChannel(const uint64_t& _channel);
 
                     /**
                      * 判断参数 Channel 是否已赋值
                      * @return Channel 是否已赋值
+                     * 
                      */
                     bool ChannelHasBeenSet() const;
 
                     /**
                      * 获取The audio bitrate (Kbps). Value range: 8-500.
                      * @return BitRate The audio bitrate (Kbps). Value range: 8-500.
+                     * 
                      */
                     uint64_t GetBitRate() const;
 
                     /**
                      * 设置The audio bitrate (Kbps). Value range: 8-500.
-                     * @param BitRate The audio bitrate (Kbps). Value range: 8-500.
+                     * @param _bitRate The audio bitrate (Kbps). Value range: 8-500.
+                     * 
                      */
                     void SetBitRate(const uint64_t& _bitRate);
 
                     /**
                      * 判断参数 BitRate 是否已赋值
                      * @return BitRate 是否已赋值
+                     * 
                      */
                     bool BitRateHasBeenSet() const;
 
                     /**
                      * 获取The audio codec. Valid values: 0 (LC-AAC), 1 (HE-AAC), 2 (HE-AACv2). The default value is 0. If this parameter is set to 2, `Channel` must be 2. If it is set to 1 or 2, `SampleRate` can only be 48000, 44100, 32000, 24000, or 16000.
                      * @return Codec The audio codec. Valid values: 0 (LC-AAC), 1 (HE-AAC), 2 (HE-AACv2). The default value is 0. If this parameter is set to 2, `Channel` must be 2. If it is set to 1 or 2, `SampleRate` can only be 48000, 44100, 32000, 24000, or 16000.
+                     * 
                      */
                     uint64_t GetCodec() const;
 
                     /**
                      * 设置The audio codec. Valid values: 0 (LC-AAC), 1 (HE-AAC), 2 (HE-AACv2). The default value is 0. If this parameter is set to 2, `Channel` must be 2. If it is set to 1 or 2, `SampleRate` can only be 48000, 44100, 32000, 24000, or 16000.
-                     * @param Codec The audio codec. Valid values: 0 (LC-AAC), 1 (HE-AAC), 2 (HE-AACv2). The default value is 0. If this parameter is set to 2, `Channel` must be 2. If it is set to 1 or 2, `SampleRate` can only be 48000, 44100, 32000, 24000, or 16000.
+                     * @param _codec The audio codec. Valid values: 0 (LC-AAC), 1 (HE-AAC), 2 (HE-AACv2). The default value is 0. If this parameter is set to 2, `Channel` must be 2. If it is set to 1 or 2, `SampleRate` can only be 48000, 44100, 32000, 24000, or 16000.
+                     * 
                      */
                     void SetCodec(const uint64_t& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 

@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VirtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VirtualPrivateCloud GetVirtualPrivateCloud() const;
 
                     /**
                      * 设置The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VirtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
+                     * @param _virtualPrivateCloud The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVirtualPrivateCloud(const VirtualPrivateCloud& _virtualPrivateCloud);
 
                     /**
                      * 判断参数 VirtualPrivateCloud 是否已赋值
                      * @return VirtualPrivateCloud 是否已赋值
+                     * 
                      */
                     bool VirtualPrivateCloudHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @param _placement The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AllNodeResourceSpec The specs of all nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AllNodeResourceSpec GetAllNodeResourceSpec() const;
 
                     /**
                      * 设置The specs of all nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AllNodeResourceSpec The specs of all nodes.
+                     * @param _allNodeResourceSpec The specs of all nodes.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAllNodeResourceSpec(const AllNodeResourceSpec& _allNodeResourceSpec);
 
                     /**
                      * 判断参数 AllNodeResourceSpec 是否已赋值
                      * @return AllNodeResourceSpec 是否已赋值
+                     * 
                      */
                     bool AllNodeResourceSpecHasBeenSet() const;
 
@@ -126,6 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
   <li>standby</li>
   <li>third-party</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetZoneTag() const;
 
@@ -135,17 +145,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
   <li>standby</li>
   <li>third-party</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneTag For a single AZ, `ZoneTag` can be left out. For a double-AZ mode, `ZoneTag` is set to `master` and `standby` for the first and second AZs, respectively. If there are three AZs, `ZoneTag` is set to `master`, `standby`, and `third-party` for the first, second, and third AZs, respectively. Valid values:
+                     * @param _zoneTag For a single AZ, `ZoneTag` can be left out. For a double-AZ mode, `ZoneTag` is set to `master` and `standby` for the first and second AZs, respectively. If there are three AZs, `ZoneTag` is set to `master`, `standby`, and `third-party` for the first, second, and third AZs, respectively. Valid values:
   <li>master</li>
   <li>standby</li>
   <li>third-party</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneTag(const std::string& _zoneTag);
 
                     /**
                      * 判断参数 ZoneTag 是否已赋值
                      * @return ZoneTag 是否已赋值
+                     * 
                      */
                     bool ZoneTagHasBeenSet() const;
 

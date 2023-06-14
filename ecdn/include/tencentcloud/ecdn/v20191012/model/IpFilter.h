@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取IP blocklist/allowlist switch. Valid values: on, off.
                      * @return Switch IP blocklist/allowlist switch. Valid values: on, off.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置IP blocklist/allowlist switch. Valid values: on, off.
-                     * @param Switch IP blocklist/allowlist switch. Valid values: on, off.
+                     * @param _switch IP blocklist/allowlist switch. Valid values: on, off.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FilterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFilterType() const;
 
                     /**
                      * 设置IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FilterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
+                     * @param _filterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFilterType(const std::string& _filterType);
 
                     /**
                      * 判断参数 FilterType 是否已赋值
                      * @return FilterType 是否已赋值
+                     * 
                      */
                     bool FilterTypeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Filters IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
                      * 设置IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Filters IP blocklist/allowlist list.
+                     * @param _filters IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

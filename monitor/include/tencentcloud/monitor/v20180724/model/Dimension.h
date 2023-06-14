@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance dimension name
                      * @return Name Instance dimension name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Instance dimension name
-                     * @param Name Instance dimension name
+                     * @param _name Instance dimension name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Instance dimension value
                      * @return Value Instance dimension value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Instance dimension value
-                     * @param Value Instance dimension value
+                     * @param _value Instance dimension value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

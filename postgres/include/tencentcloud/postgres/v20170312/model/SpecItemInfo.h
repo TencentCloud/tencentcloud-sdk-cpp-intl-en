@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Specification ID
                      * @return SpecCode Specification ID
+                     * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
                      * 设置Specification ID
-                     * @param SpecCode Specification ID
+                     * @param _specCode Specification ID
+                     * 
                      */
                     void SetSpecCode(const std::string& _specCode);
 
                     /**
                      * 判断参数 SpecCode 是否已赋值
                      * @return SpecCode 是否已赋值
+                     * 
                      */
                     bool SpecCodeHasBeenSet() const;
 
                     /**
                      * 获取PostgerSQL version number
                      * @return Version PostgerSQL version number
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置PostgerSQL version number
-                     * @param Version PostgerSQL version number
+                     * @param _version PostgerSQL version number
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
                     /**
                      * 获取Full version name corresponding to kernel number
                      * @return VersionName Full version name corresponding to kernel number
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Full version name corresponding to kernel number
-                     * @param VersionName Full version name corresponding to kernel number
+                     * @param _versionName Full version name corresponding to kernel number
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 
                     /**
                      * 获取Number of CPU cores
                      * @return Cpu Number of CPU cores
+                     * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
                      * 设置Number of CPU cores
-                     * @param Cpu Number of CPU cores
+                     * @param _cpu Number of CPU cores
+                     * 
                      */
                     void SetCpu(const uint64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Memory size in MB
                      * @return Memory Memory size in MB
+                     * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
                      * 设置Memory size in MB
-                     * @param Memory Memory size in MB
+                     * @param _memory Memory size in MB
+                     * 
                      */
                     void SetMemory(const uint64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Maximum storage capacity in GB supported by this specification
                      * @return MaxStorage Maximum storage capacity in GB supported by this specification
+                     * 
                      */
                     uint64_t GetMaxStorage() const;
 
                     /**
                      * 设置Maximum storage capacity in GB supported by this specification
-                     * @param MaxStorage Maximum storage capacity in GB supported by this specification
+                     * @param _maxStorage Maximum storage capacity in GB supported by this specification
+                     * 
                      */
                     void SetMaxStorage(const uint64_t& _maxStorage);
 
                     /**
                      * 判断参数 MaxStorage 是否已赋值
                      * @return MaxStorage 是否已赋值
+                     * 
                      */
                     bool MaxStorageHasBeenSet() const;
 
                     /**
                      * 获取Minimum storage capacity in GB supported by this specification
                      * @return MinStorage Minimum storage capacity in GB supported by this specification
+                     * 
                      */
                     uint64_t GetMinStorage() const;
 
                     /**
                      * 设置Minimum storage capacity in GB supported by this specification
-                     * @param MinStorage Minimum storage capacity in GB supported by this specification
+                     * @param _minStorage Minimum storage capacity in GB supported by this specification
+                     * 
                      */
                     void SetMinStorage(const uint64_t& _minStorage);
 
                     /**
                      * 判断参数 MinStorage 是否已赋值
                      * @return MinStorage 是否已赋值
+                     * 
                      */
                     bool MinStorageHasBeenSet() const;
 
                     /**
                      * 获取Estimated QPS for this specification
                      * @return Qps Estimated QPS for this specification
+                     * 
                      */
                     uint64_t GetQps() const;
 
                     /**
                      * 设置Estimated QPS for this specification
-                     * @param Qps Estimated QPS for this specification
+                     * @param _qps Estimated QPS for this specification
+                     * 
                      */
                     void SetQps(const uint64_t& _qps);
 
                     /**
                      * 判断参数 Qps 是否已赋值
                      * @return Qps 是否已赋值
+                     * 
                      */
                     bool QpsHasBeenSet() const;
 
                     /**
                      * 获取(Disused)
                      * @return Pid (Disused)
+                     * 
                      */
                     uint64_t GetPid() const;
 
                     /**
                      * 设置(Disused)
-                     * @param Pid (Disused)
+                     * @param _pid (Disused)
+                     * 
                      */
                     void SetPid(const uint64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 
                     /**
                      * 获取Machine type
                      * @return Type Machine type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Machine type
-                     * @param Type Machine type
+                     * @param _type Machine type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -231,20 +261,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MajorVersion PostgreSQL major version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMajorVersion() const;
 
                     /**
                      * 设置PostgreSQL major version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MajorVersion PostgreSQL major version number
+                     * @param _majorVersion PostgreSQL major version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMajorVersion(const std::string& _majorVersion);
 
                     /**
                      * 判断参数 MajorVersion 是否已赋值
                      * @return MajorVersion 是否已赋值
+                     * 
                      */
                     bool MajorVersionHasBeenSet() const;
 
@@ -253,20 +286,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return KernelVersion PostgreSQL kernel version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKernelVersion() const;
 
                     /**
                      * 设置PostgreSQL kernel version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param KernelVersion PostgreSQL kernel version number
+                     * @param _kernelVersion PostgreSQL kernel version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKernelVersion(const std::string& _kernelVersion);
 
                     /**
                      * 判断参数 KernelVersion 是否已赋值
                      * @return KernelVersion 是否已赋值
+                     * 
                      */
                     bool KernelVersionHasBeenSet() const;
 
@@ -275,20 +311,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetIsSupportTDE() const;
 
                     /**
                      * 设置Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+                     * @param _isSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetIsSupportTDE(const int64_t& _isSupportTDE);
 
                     /**
                      * 判断参数 IsSupportTDE 是否已赋值
                      * @return IsSupportTDE 是否已赋值
+                     * 
                      */
                     bool IsSupportTDEHasBeenSet() const;
 

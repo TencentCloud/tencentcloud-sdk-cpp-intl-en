@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorMsg The description of the final verification result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoBestFrameUrl The temporary URL of the best face screenshot collected from the video stream. It is valid for 10 minutes. Download the image if needed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVideoBestFrameUrl() const;
 
                     /**
                      * 判断参数 VideoBestFrameUrl 是否已赋值
                      * @return VideoBestFrameUrl 是否已赋值
+                     * 
                      */
                     bool VideoBestFrameUrlHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoBestFrameMd5 The MD5 hash value of the best face screenshot collected from the video stream. It can be used to check whether the image content is consistent with the file content.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVideoBestFrameMd5() const;
 
                     /**
                      * 判断参数 VideoBestFrameMd5 是否已赋值
                      * @return VideoBestFrameMd5 是否已赋值
+                     * 
                      */
                     bool VideoBestFrameMd5HasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VerificationDetailList The details list of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<VerificationDetail> GetVerificationDetailList() const;
 
                     /**
                      * 判断参数 VerificationDetailList 是否已赋值
                      * @return VerificationDetailList 是否已赋值
+                     * 
                      */
                     bool VerificationDetailListHasBeenSet() const;
 
@@ -119,12 +129,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoUrl The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVideoUrl() const;
 
                     /**
                      * 判断参数 VideoUrl 是否已赋值
                      * @return VideoUrl 是否已赋值
+                     * 
                      */
                     bool VideoUrlHasBeenSet() const;
 
@@ -133,12 +145,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoMd5 The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVideoMd5() const;
 
                     /**
                      * 判断参数 VideoMd5 是否已赋值
                      * @return VideoMd5 是否已赋值
+                     * 
                      */
                     bool VideoMd5HasBeenSet() const;
 

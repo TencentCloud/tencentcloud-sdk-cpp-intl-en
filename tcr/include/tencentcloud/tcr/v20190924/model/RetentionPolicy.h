@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Tag retention policy ID
                      * @return RetentionId Tag retention policy ID
+                     * 
                      */
                     int64_t GetRetentionId() const;
 
                     /**
                      * 设置Tag retention policy ID
-                     * @param RetentionId Tag retention policy ID
+                     * @param _retentionId Tag retention policy ID
+                     * 
                      */
                     void SetRetentionId(const int64_t& _retentionId);
 
                     /**
                      * 判断参数 RetentionId 是否已赋值
                      * @return RetentionId 是否已赋值
+                     * 
                      */
                     bool RetentionIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return NamespaceName Namespace name
+                     * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param NamespaceName Namespace name
+                     * @param _namespaceName Namespace name
+                     * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
 
                     /**
                      * 判断参数 NamespaceName 是否已赋值
                      * @return NamespaceName 是否已赋值
+                     * 
                      */
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
                      * 获取List of rules
                      * @return RetentionRuleList List of rules
+                     * 
                      */
                     std::vector<RetentionRule> GetRetentionRuleList() const;
 
                     /**
                      * 设置List of rules
-                     * @param RetentionRuleList List of rules
+                     * @param _retentionRuleList List of rules
+                     * 
                      */
                     void SetRetentionRuleList(const std::vector<RetentionRule>& _retentionRuleList);
 
                     /**
                      * 判断参数 RetentionRuleList 是否已赋值
                      * @return RetentionRuleList 是否已赋值
+                     * 
                      */
                     bool RetentionRuleListHasBeenSet() const;
 
                     /**
                      * 获取Regular execution mode
                      * @return CronSetting Regular execution mode
+                     * 
                      */
                     std::string GetCronSetting() const;
 
                     /**
                      * 设置Regular execution mode
-                     * @param CronSetting Regular execution mode
+                     * @param _cronSetting Regular execution mode
+                     * 
                      */
                     void SetCronSetting(const std::string& _cronSetting);
 
                     /**
                      * 判断参数 CronSetting 是否已赋值
                      * @return CronSetting 是否已赋值
+                     * 
                      */
                     bool CronSettingHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the rule
                      * @return Disabled Whether to enable the rule
+                     * 
                      */
                     bool GetDisabled() const;
 
                     /**
                      * 设置Whether to enable the rule
-                     * @param Disabled Whether to enable the rule
+                     * @param _disabled Whether to enable the rule
+                     * 
                      */
                     void SetDisabled(const bool& _disabled);
 
                     /**
                      * 判断参数 Disabled 是否已赋值
                      * @return Disabled 是否已赋值
+                     * 
                      */
                     bool DisabledHasBeenSet() const;
 
                     /**
                      * 获取The execution time of the next task based on the current time and `cronSetting`, which is for reference only
                      * @return NextExecutionTime The execution time of the next task based on the current time and `cronSetting`, which is for reference only
+                     * 
                      */
                     std::string GetNextExecutionTime() const;
 
                     /**
                      * 设置The execution time of the next task based on the current time and `cronSetting`, which is for reference only
-                     * @param NextExecutionTime The execution time of the next task based on the current time and `cronSetting`, which is for reference only
+                     * @param _nextExecutionTime The execution time of the next task based on the current time and `cronSetting`, which is for reference only
+                     * 
                      */
                     void SetNextExecutionTime(const std::string& _nextExecutionTime);
 
                     /**
                      * 判断参数 NextExecutionTime 是否已赋值
                      * @return NextExecutionTime 是否已赋值
+                     * 
                      */
                     bool NextExecutionTimeHasBeenSet() const;
 

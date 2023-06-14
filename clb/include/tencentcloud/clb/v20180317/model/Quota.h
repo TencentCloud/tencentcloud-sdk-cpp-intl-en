@@ -63,6 +63,7 @@ namespace TencentCloud
 <li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
 <li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
 <li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li>
+                     * 
                      */
                     std::string GetQuotaId() const;
 
@@ -75,7 +76,7 @@ namespace TencentCloud
 <li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
 <li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
 <li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li>
-                     * @param QuotaId Quota name. Valid values:
+                     * @param _quotaId Quota name. Valid values:
 <li> `TOTAL_OPEN_CLB_QUOTA`: Quota of public network CLB instances in the current region</li>
 <li> `TOTAL_INTERNAL_CLB_QUOTA`: Quota of private network CLB instances in the current region</li>
 <li> `TOTAL_LISTENER_QUOTA`: Quota of listeners under one CLB instance</li>
@@ -83,12 +84,14 @@ namespace TencentCloud
 <li> `TOTAL_TARGET_BIND_QUOTA`: Quota of CVM instances can be bound under one forwarding rule</li>
 <li> `TOTAL_SNAP_IP_QUOTA`: Quota of SNAT IPs for cross-region binding 2.0 under one CLB instance </li>
 <li> `TOTAL_ISP_CLB_QUOTA`: Quota of triple-ISP (CMCC/CUCC/CTCC) CLB instances in the current region</li>
+                     * 
                      */
                     void SetQuotaId(const std::string& _quotaId);
 
                     /**
                      * 判断参数 QuotaId 是否已赋值
                      * @return QuotaId 是否已赋值
+                     * 
                      */
                     bool QuotaIdHasBeenSet() const;
 
@@ -97,38 +100,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return QuotaCurrent Currently used quantity. If it is `null`, it is meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetQuotaCurrent() const;
 
                     /**
                      * 设置Currently used quantity. If it is `null`, it is meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param QuotaCurrent Currently used quantity. If it is `null`, it is meaningless.
+                     * @param _quotaCurrent Currently used quantity. If it is `null`, it is meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQuotaCurrent(const int64_t& _quotaCurrent);
 
                     /**
                      * 判断参数 QuotaCurrent 是否已赋值
                      * @return QuotaCurrent 是否已赋值
+                     * 
                      */
                     bool QuotaCurrentHasBeenSet() const;
 
                     /**
                      * 获取Quota limit.
                      * @return QuotaLimit Quota limit.
+                     * 
                      */
                     int64_t GetQuotaLimit() const;
 
                     /**
                      * 设置Quota limit.
-                     * @param QuotaLimit Quota limit.
+                     * @param _quotaLimit Quota limit.
+                     * 
                      */
                     void SetQuotaLimit(const int64_t& _quotaLimit);
 
                     /**
                      * 判断参数 QuotaLimit 是否已赋值
                      * @return QuotaLimit 是否已赋值
+                     * 
                      */
                     bool QuotaLimitHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Start value of the `{number}` variable. Default value: 0.
                      * @return InitialValue Start value of the `{number}` variable. Default value: 0.
+                     * 
                      */
                     uint64_t GetInitialValue() const;
 
                     /**
                      * 设置Start value of the `{number}` variable. Default value: 0.
-                     * @param InitialValue Start value of the `{number}` variable. Default value: 0.
+                     * @param _initialValue Start value of the `{number}` variable. Default value: 0.
+                     * 
                      */
                     void SetInitialValue(const uint64_t& _initialValue);
 
                     /**
                      * 判断参数 InitialValue 是否已赋值
                      * @return InitialValue 是否已赋值
+                     * 
                      */
                     bool InitialValueHasBeenSet() const;
 
                     /**
                      * 获取Increment of the `{number}` variable. Default value: 1.
                      * @return Increment Increment of the `{number}` variable. Default value: 1.
+                     * 
                      */
                     uint64_t GetIncrement() const;
 
                     /**
                      * 设置Increment of the `{number}` variable. Default value: 1.
-                     * @param Increment Increment of the `{number}` variable. Default value: 1.
+                     * @param _increment Increment of the `{number}` variable. Default value: 1.
+                     * 
                      */
                     void SetIncrement(const uint64_t& _increment);
 
                     /**
                      * 判断参数 Increment 是否已赋值
                      * @return Increment 是否已赋值
+                     * 
                      */
                     bool IncrementHasBeenSet() const;
 
                     /**
                      * 获取Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
                      * @return MinLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+                     * 
                      */
                     uint64_t GetMinLength() const;
 
                     /**
                      * 设置Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
-                     * @param MinLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+                     * @param _minLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+                     * 
                      */
                     void SetMinLength(const uint64_t& _minLength);
 
                     /**
                      * 判断参数 MinLength 是否已赋值
                      * @return MinLength 是否已赋值
+                     * 
                      */
                     bool MinLengthHasBeenSet() const;
 
                     /**
                      * 获取Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
                      * @return PlaceHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+                     * 
                      */
                     std::string GetPlaceHolder() const;
 
                     /**
                      * 设置Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
-                     * @param PlaceHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+                     * @param _placeHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+                     * 
                      */
                     void SetPlaceHolder(const std::string& _placeHolder);
 
                     /**
                      * 判断参数 PlaceHolder 是否已赋值
                      * @return PlaceHolder 是否已赋值
+                     * 
                      */
                     bool PlaceHolderHasBeenSet() const;
 

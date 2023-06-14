@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MatchTicket MatchTicket
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     MatchTicket GetMatchTicket() const;
 
                     /**
                      * 判断参数 MatchTicket 是否已赋值
                      * @return MatchTicket 是否已赋值
+                     * 
                      */
                     bool MatchTicketHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Request volume statistics table
                      * @return Data Request volume statistics table
+                     * 
                      */
                     std::vector<MetricData> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Request volume unit time. Valid values: Day, Hour
                      * @return Interval Request volume unit time. Valid values: Day, Hour
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 

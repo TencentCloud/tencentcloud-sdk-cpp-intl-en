@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Number of applications
                      * @return TotalCount Number of applications
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of applications
-                     * @param TotalCount Number of applications
+                     * @param _totalCount Number of applications
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAppSet Application information array
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiAppInfo> GetApiAppSet() const;
 
                     /**
                      * 设置Application information array
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAppSet Application information array
+                     * @param _apiAppSet Application information array
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAppSet(const std::vector<ApiAppInfo>& _apiAppSet);
 
                     /**
                      * 判断参数 ApiAppSet 是否已赋值
                      * @return ApiAppSet 是否已赋值
+                     * 
                      */
                     bool ApiAppSetHasBeenSet() const;
 

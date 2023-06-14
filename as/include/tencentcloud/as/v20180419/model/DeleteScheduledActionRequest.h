@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the scheduled task to be deleted.
                      * @return ScheduledActionId ID of the scheduled task to be deleted.
+                     * 
                      */
                     std::string GetScheduledActionId() const;
 
                     /**
                      * 设置ID of the scheduled task to be deleted.
-                     * @param ScheduledActionId ID of the scheduled task to be deleted.
+                     * @param _scheduledActionId ID of the scheduled task to be deleted.
+                     * 
                      */
                     void SetScheduledActionId(const std::string& _scheduledActionId);
 
                     /**
                      * 判断参数 ScheduledActionId 是否已赋值
                      * @return ScheduledActionId 是否已赋值
+                     * 
                      */
                     bool ScheduledActionIdHasBeenSet() const;
 

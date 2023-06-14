@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Targets Health check status of the real server bound to the rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TargetHealth> GetTargets() const;
 
                     /**
                      * 设置Health check status of the real server bound to the rule
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Targets Health check status of the real server bound to the rule
+                     * @param _targets Health check status of the real server bound to the rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargets(const std::vector<TargetHealth>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 

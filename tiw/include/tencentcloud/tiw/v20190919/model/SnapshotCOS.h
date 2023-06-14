@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取UIN of the Tencent Cloud account.
                      * @return Uin UIN of the Tencent Cloud account.
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 设置UIN of the Tencent Cloud account.
-                     * @param Uin UIN of the Tencent Cloud account.
+                     * @param _uin UIN of the Tencent Cloud account.
+                     * 
                      */
                     void SetUin(const uint64_t& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取COS region.
                      * @return Region COS region.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置COS region.
-                     * @param Region COS region.
+                     * @param _region COS region.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取COS bucket name.
                      * @return Bucket COS bucket name.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置COS bucket name.
-                     * @param Bucket COS bucket name.
+                     * @param _bucket COS bucket name.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取Root directory for storing whiteboard snapshots.
                      * @return TargetDir Root directory for storing whiteboard snapshots.
+                     * 
                      */
                     std::string GetTargetDir() const;
 
                     /**
                      * 设置Root directory for storing whiteboard snapshots.
-                     * @param TargetDir Root directory for storing whiteboard snapshots.
+                     * @param _targetDir Root directory for storing whiteboard snapshots.
+                     * 
                      */
                     void SetTargetDir(const std::string& _targetDir);
 
                     /**
                      * 判断参数 TargetDir 是否已赋值
                      * @return TargetDir 是否已赋值
+                     * 
                      */
                     bool TargetDirHasBeenSet() const;
 
                     /**
                      * 获取CDN acceleration domain name.
                      * @return Domain CDN acceleration domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置CDN acceleration domain name.
-                     * @param Domain CDN acceleration domain name.
+                     * @param _domain CDN acceleration domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

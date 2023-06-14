@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
                      * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+                     * 
                      */
                     uint64_t GetSegmentDuration() const;
 
                     /**
                      * 设置Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
-                     * @param SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+                     * @param _segmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+                     * 
                      */
                     void SetSegmentDuration(const uint64_t& _segmentDuration);
 
                     /**
                      * 判断参数 SegmentDuration 是否已赋值
                      * @return SegmentDuration 是否已赋值
+                     * 
                      */
                     bool SegmentDurationHasBeenSet() const;
 
                     /**
                      * 获取Number of segments. Value range: [1,30]. Default value: 5.
                      * @return SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+                     * 
                      */
                     uint64_t GetSegmentNumber() const;
 
                     /**
                      * 设置Number of segments. Value range: [1,30]. Default value: 5.
-                     * @param SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+                     * @param _segmentNumber Number of segments. Value range: [1,30]. Default value: 5.
+                     * 
                      */
                     void SetSegmentNumber(const uint64_t& _segmentNumber);
 
                     /**
                      * 判断参数 SegmentNumber 是否已赋值
                      * @return SegmentNumber 是否已赋值
+                     * 
                      */
                     bool SegmentNumberHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
                      * @return PeriodTriggers Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
+                     * 
                      */
                     std::string GetPeriodTriggers() const;
 
                     /**
                      * 设置Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
-                     * @param PeriodTriggers Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
+                     * @param _periodTriggers Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
+                     * 
                      */
                     void SetPeriodTriggers(const std::string& _periodTriggers);
 
                     /**
                      * 判断参数 PeriodTriggers 是否已赋值
                      * @return PeriodTriggers 是否已赋值
+                     * 
                      */
                     bool PeriodTriggersHasBeenSet() const;
 
                     /**
                      * 获取The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
                      * @return H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * 
                      */
                     std::string GetH265PackageType() const;
 
                     /**
                      * 设置The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
-                     * @param H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * @param _h265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * 
                      */
                     void SetH265PackageType(const std::string& _h265PackageType);
 
                     /**
                      * 判断参数 H265PackageType 是否已赋值
                      * @return H265PackageType 是否已赋值
+                     * 
                      */
                     bool H265PackageTypeHasBeenSet() const;
 

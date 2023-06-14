@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
                      * @return Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+                     * 
                      */
                     std::vector<std::string> GetLabels() const;
 
                     /**
                      * 设置The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
-                     * @param Labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+                     * @param _labels The violation labels to use. Valid values: <li>`Porn`: Pornographic content</li> <li>`Terror`: Terrorist content</li> <li>`Moan`: Moaning</li>
+                     * 
                      */
                     void SetLabels(const std::vector<std::string>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return SubAppId 
+                     * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
                      * 设置
-                     * @param SubAppId 
+                     * @param _subAppId 
+                     * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Name 
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置
-                     * @param Name 
+                     * @param _name 
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Comment 
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置
-                     * @param Comment 
+                     * @param _comment 
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return StatusChangeAmount Number of events whose statuses have changed.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetStatusChangeAmount() const;
 
                     /**
                      * 设置Number of events whose statuses have changed.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param StatusChangeAmount Number of events whose statuses have changed.
+                     * @param _statusChangeAmount Number of events whose statuses have changed.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetStatusChangeAmount(const int64_t& _statusChangeAmount);
 
                     /**
                      * 判断参数 StatusChangeAmount 是否已赋值
                      * @return StatusChangeAmount 是否已赋值
+                     * 
                      */
                     bool StatusChangeAmountHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return UnConfigAlarmAmount Number of events whose alarm statuses are not configured.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUnConfigAlarmAmount() const;
 
                     /**
                      * 设置Number of events whose alarm statuses are not configured.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param UnConfigAlarmAmount Number of events whose alarm statuses are not configured.
+                     * @param _unConfigAlarmAmount Number of events whose alarm statuses are not configured.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUnConfigAlarmAmount(const int64_t& _unConfigAlarmAmount);
 
                     /**
                      * 判断参数 UnConfigAlarmAmount 是否已赋值
                      * @return UnConfigAlarmAmount 是否已赋值
+                     * 
                      */
                     bool UnConfigAlarmAmountHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return UnNormalEventAmount Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUnNormalEventAmount() const;
 
                     /**
                      * 设置Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param UnNormalEventAmount Number of events with exceptions.
+                     * @param _unNormalEventAmount Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUnNormalEventAmount(const int64_t& _unNormalEventAmount);
 
                     /**
                      * 判断参数 UnNormalEventAmount 是否已赋值
                      * @return UnNormalEventAmount 是否已赋值
+                     * 
                      */
                     bool UnNormalEventAmountHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return UnRecoverAmount Number of events that have not been recovered.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUnRecoverAmount() const;
 
                     /**
                      * 设置Number of events that have not been recovered.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param UnRecoverAmount Number of events that have not been recovered.
+                     * @param _unRecoverAmount Number of events that have not been recovered.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUnRecoverAmount(const int64_t& _unRecoverAmount);
 
                     /**
                      * 判断参数 UnRecoverAmount 是否已赋值
                      * @return UnRecoverAmount 是否已赋值
+                     * 
                      */
                     bool UnRecoverAmountHasBeenSet() const;
 

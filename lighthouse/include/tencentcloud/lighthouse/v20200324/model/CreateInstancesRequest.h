@@ -48,108 +48,126 @@ namespace TencentCloud
                     /**
                      * 获取Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
                      * @return BundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetBundleId() const;
 
                     /**
                      * 设置Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
-                     * @param BundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+                     * @param _bundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetBundleId(const std::string& _bundleId);
 
                     /**
                      * 判断参数 BundleId 是否已赋值
                      * @return BundleId 是否已赋值
+                     * 
                      */
                     bool BundleIdHasBeenSet() const;
 
                     /**
                      * 获取Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
                      * @return BlueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetBlueprintId() const;
 
                     /**
                      * 设置Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
-                     * @param BlueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
+                     * @param _blueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetBlueprintId(const std::string& _blueprintId);
 
                     /**
                      * 判断参数 BlueprintId 是否已赋值
                      * @return BlueprintId 是否已赋值
+                     * 
                      */
                     bool BlueprintIdHasBeenSet() const;
 
                     /**
                      * 获取Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
                      * @return InstanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
                      * 设置Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
-                     * @param InstanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * @param _instanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+                     * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
                     /**
                      * 判断参数 InstanceChargePrepaid 是否已赋值
                      * @return InstanceChargePrepaid 是否已赋值
+                     * 
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
                      * 获取Instance display name.
                      * @return InstanceName Instance display name.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance display name.
-                     * @param InstanceName Instance display name.
+                     * @param _instanceName Instance display name.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
                      * @return InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
                      * 设置Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
-                     * @param InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * @param _instanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
 
                     /**
                      * 判断参数 InstanceCount 是否已赋值
                      * @return InstanceCount 是否已赋值
+                     * 
                      */
                     bool InstanceCountHasBeenSet() const;
 
                     /**
                      * 获取List of availability zones. A random AZ is selected by default.
                      * @return Zones List of availability zones. A random AZ is selected by default.
+                     * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
                      * 设置List of availability zones. A random AZ is selected by default.
-                     * @param Zones List of availability zones. A random AZ is selected by default.
+                     * @param _zones List of availability zones. A random AZ is selected by default.
+                     * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
                     /**
                      * 判断参数 Zones 是否已赋值
                      * @return Zones 是否已赋值
+                     * 
                      */
                     bool ZonesHasBeenSet() const;
 
@@ -164,6 +182,7 @@ If the dry run succeeds, the RequestId will be returned.
 If the dry run fails, the corresponding error code will be returned.
 If the dry run succeeds, the RequestId will be returned.
 `false` (default value): send a normal request and create instance(s) if all the requirements are met.
+                     * 
                      */
                     bool GetDryRun() const;
 
@@ -173,89 +192,103 @@ If the dry run succeeds, the RequestId will be returned.
 If the dry run fails, the corresponding error code will be returned.
 If the dry run succeeds, the RequestId will be returned.
 `false` (default value): send a normal request and create instance(s) if all the requirements are met.
-                     * @param DryRun Whether the request is a dry run only.
+                     * @param _dryRun Whether the request is a dry run only.
 `true`: dry run only. The request will not create instance(s). A dry run can check whether all the required parameters are specified, whether the request format is right, whether the request exceeds service limits, and whether the specified CVMs are available.
 If the dry run fails, the corresponding error code will be returned.
 If the dry run succeeds, the RequestId will be returned.
 `false` (default value): send a normal request and create instance(s) if all the requirements are met.
+                     * 
                      */
                     void SetDryRun(const bool& _dryRun);
 
                     /**
                      * 判断参数 DryRun 是否已赋值
                      * @return DryRun 是否已赋值
+                     * 
                      */
                     bool DryRunHasBeenSet() const;
 
                     /**
                      * 获取A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
                      * @return ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
+                     * 
                      */
                     std::string GetClientToken() const;
 
                     /**
                      * 设置A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
-                     * @param ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
+                     * @param _clientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
+                     * 
                      */
                     void SetClientToken(const std::string& _clientToken);
 
                     /**
                      * 判断参数 ClientToken 是否已赋值
                      * @return ClientToken 是否已赋值
+                     * 
                      */
                     bool ClientTokenHasBeenSet() const;
 
                     /**
                      * 获取Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
                      * @return LoginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+                     * 
                      */
                     LoginConfiguration GetLoginConfiguration() const;
 
                     /**
                      * 设置Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
-                     * @param LoginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+                     * @param _loginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+                     * 
                      */
                     void SetLoginConfiguration(const LoginConfiguration& _loginConfiguration);
 
                     /**
                      * 判断参数 LoginConfiguration 是否已赋值
                      * @return LoginConfiguration 是否已赋值
+                     * 
                      */
                     bool LoginConfigurationHasBeenSet() const;
 
                     /**
                      * 获取Configuration of the containers to create
                      * @return Containers Configuration of the containers to create
+                     * 
                      */
                     std::vector<DockerContainerConfiguration> GetContainers() const;
 
                     /**
                      * 设置Configuration of the containers to create
-                     * @param Containers Configuration of the containers to create
+                     * @param _containers Configuration of the containers to create
+                     * 
                      */
                     void SetContainers(const std::vector<DockerContainerConfiguration>& _containers);
 
                     /**
                      * 判断参数 Containers 是否已赋值
                      * @return Containers 是否已赋值
+                     * 
                      */
                     bool ContainersHasBeenSet() const;
 
                     /**
                      * 获取Whether to use the vouchers automatically. It defaults to No.
                      * @return AutoVoucher Whether to use the vouchers automatically. It defaults to No.
+                     * 
                      */
                     bool GetAutoVoucher() const;
 
                     /**
                      * 设置Whether to use the vouchers automatically. It defaults to No.
-                     * @param AutoVoucher Whether to use the vouchers automatically. It defaults to No.
+                     * @param _autoVoucher Whether to use the vouchers automatically. It defaults to No.
+                     * 
                      */
                     void SetAutoVoucher(const bool& _autoVoucher);
 
                     /**
                      * 判断参数 AutoVoucher 是否已赋值
                      * @return AutoVoucher 是否已赋值
+                     * 
                      */
                     bool AutoVoucherHasBeenSet() const;
 

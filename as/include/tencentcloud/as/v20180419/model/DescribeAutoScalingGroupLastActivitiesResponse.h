@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Information set of eligible scaling activities. Scaling groups without scaling activities are not returned. For example, if there are 50 auto scaling group IDs but only 45 records are returned, it indicates that 5 of the auto scaling groups do not have scaling activities.
                      * @return ActivitySet Information set of eligible scaling activities. Scaling groups without scaling activities are not returned. For example, if there are 50 auto scaling group IDs but only 45 records are returned, it indicates that 5 of the auto scaling groups do not have scaling activities.
+                     * 
                      */
                     std::vector<Activity> GetActivitySet() const;
 
                     /**
                      * 判断参数 ActivitySet 是否已赋值
                      * @return ActivitySet 是否已赋值
+                     * 
                      */
                     bool ActivitySetHasBeenSet() const;
 

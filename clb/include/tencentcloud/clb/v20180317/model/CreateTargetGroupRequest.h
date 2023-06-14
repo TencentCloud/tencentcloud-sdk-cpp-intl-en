@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Target group name (up to 50 characters)
                      * @return TargetGroupName Target group name (up to 50 characters)
+                     * 
                      */
                     std::string GetTargetGroupName() const;
 
                     /**
                      * 设置Target group name (up to 50 characters)
-                     * @param TargetGroupName Target group name (up to 50 characters)
+                     * @param _targetGroupName Target group name (up to 50 characters)
+                     * 
                      */
                     void SetTargetGroupName(const std::string& _targetGroupName);
 
                     /**
                      * 判断参数 TargetGroupName 是否已赋值
                      * @return TargetGroupName 是否已赋值
+                     * 
                      */
                     bool TargetGroupNameHasBeenSet() const;
 
                     /**
                      * 获取`vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
                      * @return VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置`vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
-                     * @param VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+                     * @param _vpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Default port of a target group, which can be used for subsequently added servers.
                      * @return Port Default port of a target group, which can be used for subsequently added servers.
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Default port of a target group, which can be used for subsequently added servers.
-                     * @param Port Default port of a target group, which can be used for subsequently added servers.
+                     * @param _port Default port of a target group, which can be used for subsequently added servers.
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Real server bound to a target group
                      * @return TargetGroupInstances Real server bound to a target group
+                     * 
                      */
                     std::vector<TargetGroupInstance> GetTargetGroupInstances() const;
 
                     /**
                      * 设置Real server bound to a target group
-                     * @param TargetGroupInstances Real server bound to a target group
+                     * @param _targetGroupInstances Real server bound to a target group
+                     * 
                      */
                     void SetTargetGroupInstances(const std::vector<TargetGroupInstance>& _targetGroupInstances);
 
                     /**
                      * 判断参数 TargetGroupInstances 是否已赋值
                      * @return TargetGroupInstances 是否已赋值
+                     * 
                      */
                     bool TargetGroupInstancesHasBeenSet() const;
 

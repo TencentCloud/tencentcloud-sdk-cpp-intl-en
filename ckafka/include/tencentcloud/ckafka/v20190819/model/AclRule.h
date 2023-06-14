@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return RuleName ACL rule name.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置ACL rule name.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param RuleName ACL rule name.
+                     * @param _ruleName ACL rule name.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return PatternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPatternType() const;
 
                     /**
                      * 设置Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param PatternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
+                     * @param _patternType Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPatternType(const std::string& _patternType);
 
                     /**
                      * 判断参数 PatternType 是否已赋值
                      * @return PatternType 是否已赋值
+                     * 
                      */
                     bool PatternTypeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Pattern Prefix value for prefix match.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPattern() const;
 
                     /**
                      * 设置Prefix value for prefix match.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Pattern Prefix value for prefix match.
+                     * @param _pattern Prefix value for prefix match.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPattern(const std::string& _pattern);
 
                     /**
                      * 判断参数 Pattern 是否已赋值
                      * @return Pattern 是否已赋值
+                     * 
                      */
                     bool PatternHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ResourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param ResourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
+                     * @param _resourceType ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return AclList ACL information contained in the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAclList() const;
 
                     /**
                      * 设置ACL information contained in the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param AclList ACL information contained in the rule.
+                     * @param _aclList ACL information contained in the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAclList(const std::string& _aclList);
 
                     /**
                      * 判断参数 AclList 是否已赋值
                      * @return AclList 是否已赋值
+                     * 
                      */
                     bool AclListHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return CreateTimeStamp Creation time of the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTimeStamp() const;
 
                     /**
                      * 设置Creation time of the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param CreateTimeStamp Creation time of the rule.
+                     * @param _createTimeStamp Creation time of the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTimeStamp(const std::string& _createTimeStamp);
 
                     /**
                      * 判断参数 CreateTimeStamp 是否已赋值
                      * @return CreateTimeStamp 是否已赋值
+                     * 
                      */
                     bool CreateTimeStampHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsApplied() const;
 
                     /**
                      * 设置A parameter used to specify whether the preset ACL rule is applied to new topics.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param IsApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
+                     * @param _isApplied A parameter used to specify whether the preset ACL rule is applied to new topics.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsApplied(const int64_t& _isApplied);
 
                     /**
                      * 判断参数 IsApplied 是否已赋值
                      * @return IsApplied 是否已赋值
+                     * 
                      */
                     bool IsAppliedHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return UpdateTimeStamp Rule update time.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTimeStamp() const;
 
                     /**
                      * 设置Rule update time.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param UpdateTimeStamp Rule update time.
+                     * @param _updateTimeStamp Rule update time.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTimeStamp(const std::string& _updateTimeStamp);
 
                     /**
                      * 判断参数 UpdateTimeStamp 是否已赋值
                      * @return UpdateTimeStamp 是否已赋值
+                     * 
                      */
                     bool UpdateTimeStampHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Comment Remarks of the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Remarks of the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Comment Remarks of the rule.
+                     * @param _comment Remarks of the rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return TopicName One of the corresponding topic names that is displayed.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置One of the corresponding topic names that is displayed.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param TopicName One of the corresponding topic names that is displayed.
+                     * @param _topicName One of the corresponding topic names that is displayed.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
@@ -293,20 +326,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return TopicCount The number of topics that apply this ACL rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTopicCount() const;
 
                     /**
                      * 设置The number of topics that apply this ACL rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param TopicCount The number of topics that apply this ACL rule.
+                     * @param _topicCount The number of topics that apply this ACL rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicCount(const int64_t& _topicCount);
 
                     /**
                      * 判断参数 TopicCount 是否已赋值
                      * @return TopicCount 是否已赋值
+                     * 
                      */
                     bool TopicCountHasBeenSet() const;
 
@@ -315,20 +351,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PatternTypeTitle Name of rule type.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPatternTypeTitle() const;
 
                     /**
                      * 设置Name of rule type.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PatternTypeTitle Name of rule type.
+                     * @param _patternTypeTitle Name of rule type.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPatternTypeTitle(const std::string& _patternTypeTitle);
 
                     /**
                      * 判断参数 PatternTypeTitle 是否已赋值
                      * @return PatternTypeTitle 是否已赋值
+                     * 
                      */
                     bool PatternTypeTitleHasBeenSet() const;
 

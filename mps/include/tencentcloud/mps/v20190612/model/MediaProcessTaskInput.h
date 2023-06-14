@@ -55,108 +55,126 @@ namespace TencentCloud
                     /**
                      * 获取List of transcoding tasks.
                      * @return TranscodeTaskSet List of transcoding tasks.
+                     * 
                      */
                     std::vector<TranscodeTaskInput> GetTranscodeTaskSet() const;
 
                     /**
                      * 设置List of transcoding tasks.
-                     * @param TranscodeTaskSet List of transcoding tasks.
+                     * @param _transcodeTaskSet List of transcoding tasks.
+                     * 
                      */
                     void SetTranscodeTaskSet(const std::vector<TranscodeTaskInput>& _transcodeTaskSet);
 
                     /**
                      * 判断参数 TranscodeTaskSet 是否已赋值
                      * @return TranscodeTaskSet 是否已赋值
+                     * 
                      */
                     bool TranscodeTaskSetHasBeenSet() const;
 
                     /**
                      * 获取List of animated image generating tasks.
                      * @return AnimatedGraphicTaskSet List of animated image generating tasks.
+                     * 
                      */
                     std::vector<AnimatedGraphicTaskInput> GetAnimatedGraphicTaskSet() const;
 
                     /**
                      * 设置List of animated image generating tasks.
-                     * @param AnimatedGraphicTaskSet List of animated image generating tasks.
+                     * @param _animatedGraphicTaskSet List of animated image generating tasks.
+                     * 
                      */
                     void SetAnimatedGraphicTaskSet(const std::vector<AnimatedGraphicTaskInput>& _animatedGraphicTaskSet);
 
                     /**
                      * 判断参数 AnimatedGraphicTaskSet 是否已赋值
                      * @return AnimatedGraphicTaskSet 是否已赋值
+                     * 
                      */
                     bool AnimatedGraphicTaskSetHasBeenSet() const;
 
                     /**
                      * 获取List of time point screencapturing tasks.
                      * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+                     * 
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> GetSnapshotByTimeOffsetTaskSet() const;
 
                     /**
                      * 设置List of time point screencapturing tasks.
-                     * @param SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+                     * @param _snapshotByTimeOffsetTaskSet List of time point screencapturing tasks.
+                     * 
                      */
                     void SetSnapshotByTimeOffsetTaskSet(const std::vector<SnapshotByTimeOffsetTaskInput>& _snapshotByTimeOffsetTaskSet);
 
                     /**
                      * 判断参数 SnapshotByTimeOffsetTaskSet 是否已赋值
                      * @return SnapshotByTimeOffsetTaskSet 是否已赋值
+                     * 
                      */
                     bool SnapshotByTimeOffsetTaskSetHasBeenSet() const;
 
                     /**
                      * 获取List of sampled screencapturing tasks.
                      * @return SampleSnapshotTaskSet List of sampled screencapturing tasks.
+                     * 
                      */
                     std::vector<SampleSnapshotTaskInput> GetSampleSnapshotTaskSet() const;
 
                     /**
                      * 设置List of sampled screencapturing tasks.
-                     * @param SampleSnapshotTaskSet List of sampled screencapturing tasks.
+                     * @param _sampleSnapshotTaskSet List of sampled screencapturing tasks.
+                     * 
                      */
                     void SetSampleSnapshotTaskSet(const std::vector<SampleSnapshotTaskInput>& _sampleSnapshotTaskSet);
 
                     /**
                      * 判断参数 SampleSnapshotTaskSet 是否已赋值
                      * @return SampleSnapshotTaskSet 是否已赋值
+                     * 
                      */
                     bool SampleSnapshotTaskSetHasBeenSet() const;
 
                     /**
                      * 获取List of image sprite generating tasks.
                      * @return ImageSpriteTaskSet List of image sprite generating tasks.
+                     * 
                      */
                     std::vector<ImageSpriteTaskInput> GetImageSpriteTaskSet() const;
 
                     /**
                      * 设置List of image sprite generating tasks.
-                     * @param ImageSpriteTaskSet List of image sprite generating tasks.
+                     * @param _imageSpriteTaskSet List of image sprite generating tasks.
+                     * 
                      */
                     void SetImageSpriteTaskSet(const std::vector<ImageSpriteTaskInput>& _imageSpriteTaskSet);
 
                     /**
                      * 判断参数 ImageSpriteTaskSet 是否已赋值
                      * @return ImageSpriteTaskSet 是否已赋值
+                     * 
                      */
                     bool ImageSpriteTaskSetHasBeenSet() const;
 
                     /**
                      * 获取List of adaptive bitrate streaming tasks.
                      * @return AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
+                     * 
                      */
                     std::vector<AdaptiveDynamicStreamingTaskInput> GetAdaptiveDynamicStreamingTaskSet() const;
 
                     /**
                      * 设置List of adaptive bitrate streaming tasks.
-                     * @param AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
+                     * @param _adaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingTaskSet(const std::vector<AdaptiveDynamicStreamingTaskInput>& _adaptiveDynamicStreamingTaskSet);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingTaskSet 是否已赋值
                      * @return AdaptiveDynamicStreamingTaskSet 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingTaskSetHasBeenSet() const;
 

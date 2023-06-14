@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Customer asset ID
                      * @return CustomerAssetId Customer asset ID
+                     * 
                      */
                     uint64_t GetCustomerAssetId() const;
 
                     /**
                      * 设置Customer asset ID
-                     * @param CustomerAssetId Customer asset ID
+                     * @param _customerAssetId Customer asset ID
+                     * 
                      */
                     void SetCustomerAssetId(const uint64_t& _customerAssetId);
 
                     /**
                      * 判断参数 CustomerAssetId 是否已赋值
                      * @return CustomerAssetId 是否已赋值
+                     * 
                      */
                     bool CustomerAssetIdHasBeenSet() const;
 
                     /**
                      * 获取Asset type
                      * @return AssetType Asset type
+                     * 
                      */
                     std::string GetAssetType() const;
 
                     /**
                      * 设置Asset type
-                     * @param AssetType Asset type
+                     * @param _assetType Asset type
+                     * 
                      */
                     void SetAssetType(const std::string& _assetType);
 
                     /**
                      * 判断参数 AssetType 是否已赋值
                      * @return AssetType 是否已赋值
+                     * 
                      */
                     bool AssetTypeHasBeenSet() const;
 
                     /**
                      * 获取Asset name
                      * @return AssetName Asset name
+                     * 
                      */
                     std::string GetAssetName() const;
 
                     /**
                      * 设置Asset name
-                     * @param AssetName Asset name
+                     * @param _assetName Asset name
+                     * 
                      */
                     void SetAssetName(const std::string& _assetName);
 
                     /**
                      * 判断参数 AssetName 是否已赋值
                      * @return AssetName 是否已赋值
+                     * 
                      */
                     bool AssetNameHasBeenSet() const;
 
@@ -105,56 +114,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageTag This field is the image tag when the asset is an image.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageTag() const;
 
                     /**
                      * 设置This field is the image tag when the asset is an image.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImageTag This field is the image tag when the asset is an image.
+                     * @param _imageTag This field is the image tag when the asset is an image.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageTag(const std::string& _imageTag);
 
                     /**
                      * 判断参数 ImageTag 是否已赋值
                      * @return ImageTag 是否已赋值
+                     * 
                      */
                     bool ImageTagHasBeenSet() const;
 
                     /**
                      * 获取Server IP of the asset
                      * @return HostIP Server IP of the asset
+                     * 
                      */
                     std::string GetHostIP() const;
 
                     /**
                      * 设置Server IP of the asset
-                     * @param HostIP Server IP of the asset
+                     * @param _hostIP Server IP of the asset
+                     * 
                      */
                     void SetHostIP(const std::string& _hostIP);
 
                     /**
                      * 判断参数 HostIP 是否已赋值
                      * @return HostIP 是否已赋值
+                     * 
                      */
                     bool HostIPHasBeenSet() const;
 
                     /**
                      * 获取Node name of the asset
                      * @return NodeName Node name of the asset
+                     * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 设置Node name of the asset
-                     * @param NodeName Node name of the asset
+                     * @param _nodeName Node name of the asset
+                     * 
                      */
                     void SetNodeName(const std::string& _nodeName);
 
                     /**
                      * 判断参数 NodeName 是否已赋值
                      * @return NodeName 是否已赋值
+                     * 
                      */
                     bool NodeNameHasBeenSet() const;
 
@@ -177,6 +195,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     std::string GetCheckStatus() const;
 
@@ -190,7 +209,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
-                     * @param CheckStatus Check status
+                     * @param _checkStatus Check status
 
 `CHECK_INIT`: To be checked.
 
@@ -199,12 +218,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `CHECK_FINISHED`: Checked.
 
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
 
                     /**
                      * 判断参数 CheckStatus 是否已赋值
                      * @return CheckStatus 是否已赋值
+                     * 
                      */
                     bool CheckStatusHasBeenSet() const;
 
@@ -213,20 +234,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PassedPolicyItemCount Number of check items that the asset passed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPassedPolicyItemCount() const;
 
                     /**
                      * 设置Number of check items that the asset passed
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PassedPolicyItemCount Number of check items that the asset passed
+                     * @param _passedPolicyItemCount Number of check items that the asset passed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPassedPolicyItemCount(const uint64_t& _passedPolicyItemCount);
 
                     /**
                      * 判断参数 PassedPolicyItemCount 是否已赋值
                      * @return PassedPolicyItemCount 是否已赋值
+                     * 
                      */
                     bool PassedPolicyItemCountHasBeenSet() const;
 
@@ -235,20 +259,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailedPolicyItemCount Number of check items that the asset failed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFailedPolicyItemCount() const;
 
                     /**
                      * 设置Number of check items that the asset failed
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FailedPolicyItemCount Number of check items that the asset failed
+                     * @param _failedPolicyItemCount Number of check items that the asset failed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailedPolicyItemCount(const uint64_t& _failedPolicyItemCount);
 
                     /**
                      * 判断参数 FailedPolicyItemCount 是否已赋值
                      * @return FailedPolicyItemCount 是否已赋值
+                     * 
                      */
                     bool FailedPolicyItemCountHasBeenSet() const;
 
@@ -257,20 +284,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastCheckTime Last check time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastCheckTime() const;
 
                     /**
                      * 设置Last check time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LastCheckTime Last check time
+                     * @param _lastCheckTime Last check time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastCheckTime(const std::string& _lastCheckTime);
 
                     /**
                      * 判断参数 LastCheckTime 是否已赋值
                      * @return LastCheckTime 是否已赋值
+                     * 
                      */
                     bool LastCheckTimeHasBeenSet() const;
 
@@ -283,6 +313,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCheckResult() const;
 
@@ -291,16 +322,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CheckResult Check result. Valid values:
+                     * @param _checkResult Check result. Valid values:
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
 
                     /**
                      * 判断参数 CheckResult 是否已赋值
                      * @return CheckResult 是否已赋值
+                     * 
                      */
                     bool CheckResultHasBeenSet() const;
 
@@ -309,20 +342,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceId Node instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Node instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceId Node instance ID
+                     * @param _instanceId Node instance ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

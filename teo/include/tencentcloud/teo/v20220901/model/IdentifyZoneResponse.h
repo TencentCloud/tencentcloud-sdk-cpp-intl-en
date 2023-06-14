@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Details of the DNS record.
                      * @return Ascription Details of the DNS record.
+                     * 
                      */
                     AscriptionInfo GetAscription() const;
 
                     /**
                      * 判断参数 Ascription 是否已赋值
                      * @return Ascription 是否已赋值
+                     * 
                      */
                     bool AscriptionHasBeenSet() const;
 
                     /**
                      * 获取Details of the verification file.
                      * @return FileAscription Details of the verification file.
+                     * 
                      */
                     FileAscriptionInfo GetFileAscription() const;
 
                     /**
                      * 判断参数 FileAscription 是否已赋值
                      * @return FileAscription 是否已赋值
+                     * 
                      */
                     bool FileAscriptionHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Specifies whether Range GETs is enabled
                      * @return Switch Specifies whether Range GETs is enabled
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Specifies whether Range GETs is enabled
-                     * @param Switch Specifies whether Range GETs is enabled
+                     * @param _switch Specifies whether Range GETs is enabled
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -75,6 +78,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `directory`: effective for specified paths.
 `path`: effective for specified absolute paths.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -84,17 +88,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `directory`: effective for specified paths.
 `path`: effective for specified absolute paths.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `file`: effective for specified file suffixes.
 `directory`: effective for specified paths.
 `path`: effective for specified absolute paths.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -109,6 +115,7 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -118,17 +125,19 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RulePaths Content for each `RuleType`:
+                     * @param _rulePaths Content for each `RuleType`:
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 

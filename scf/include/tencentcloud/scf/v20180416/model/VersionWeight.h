@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Function version name
                      * @return Version Function version name
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Function version name
-                     * @param Version Function version name
+                     * @param _version Function version name
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
                     /**
                      * 获取Version weight
                      * @return Weight Version weight
+                     * 
                      */
                     double GetWeight() const;
 
                     /**
                      * 设置Version weight
-                     * @param Weight Version weight
+                     * @param _weight Version weight
+                     * 
                      */
                     void SetWeight(const double& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

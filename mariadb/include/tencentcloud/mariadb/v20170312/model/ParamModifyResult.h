@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Renames parameter
                      * @return Param Renames parameter
+                     * 
                      */
                     std::string GetParam() const;
 
                     /**
                      * 设置Renames parameter
-                     * @param Param Renames parameter
+                     * @param _param Renames parameter
+                     * 
                      */
                     void SetParam(const std::string& _param);
 
                     /**
                      * 判断参数 Param 是否已赋值
                      * @return Param 是否已赋值
+                     * 
                      */
                     bool ParamHasBeenSet() const;
 
                     /**
                      * 获取Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value.
                      * @return Code Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value.
+                     * 
                      */
                     int64_t GetCode() const;
 
                     /**
                      * 设置Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value.
-                     * @param Code Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value.
+                     * @param _code Result of parameter modification. 0: success; -1: failure; -2: invalid parameter value.
+                     * 
                      */
                     void SetCode(const int64_t& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 

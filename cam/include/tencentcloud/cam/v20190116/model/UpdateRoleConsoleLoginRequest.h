@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether login is allowed. 1: yes, 0: no
                      * @return ConsoleLogin Whether login is allowed. 1: yes, 0: no
+                     * 
                      */
                     int64_t GetConsoleLogin() const;
 
                     /**
                      * 设置Whether login is allowed. 1: yes, 0: no
-                     * @param ConsoleLogin Whether login is allowed. 1: yes, 0: no
+                     * @param _consoleLogin Whether login is allowed. 1: yes, 0: no
+                     * 
                      */
                     void SetConsoleLogin(const int64_t& _consoleLogin);
 
                     /**
                      * 判断参数 ConsoleLogin 是否已赋值
                      * @return ConsoleLogin 是否已赋值
+                     * 
                      */
                     bool ConsoleLoginHasBeenSet() const;
 
                     /**
                      * 获取Role ID. Use either `RoleId` or `RoleName` as the input parameter.
                      * @return RoleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+                     * 
                      */
                     int64_t GetRoleId() const;
 
                     /**
                      * 设置Role ID. Use either `RoleId` or `RoleName` as the input parameter.
-                     * @param RoleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+                     * @param _roleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+                     * 
                      */
                     void SetRoleId(const int64_t& _roleId);
 
                     /**
                      * 判断参数 RoleId 是否已赋值
                      * @return RoleId 是否已赋值
+                     * 
                      */
                     bool RoleIdHasBeenSet() const;
 
                     /**
                      * 获取Role name. Use either `RoleId` or `RoleName` as the input parameter.
                      * @return RoleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name. Use either `RoleId` or `RoleName` as the input parameter.
-                     * @param RoleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
+                     * @param _roleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 

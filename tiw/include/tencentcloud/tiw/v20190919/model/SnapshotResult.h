@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return ErrorCode Task execution error code.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorCode() const;
 
                     /**
                      * 设置Task execution error code.
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param ErrorCode Task execution error code.
+                     * @param _errorCode Task execution error code.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorCode(const std::string& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return ErrorMessage Task execution error message.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorMessage() const;
 
                     /**
                      * 设置Task execution error message.
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param ErrorMessage Task execution error message.
+                     * @param _errorMessage Task execution error message.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorMessage(const std::string& _errorMessage);
 
                     /**
                      * 判断参数 ErrorMessage 是否已赋值
                      * @return ErrorMessage 是否已赋值
+                     * 
                      */
                     bool ErrorMessageHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Total Number of generated snapshot images.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 设置Number of generated snapshot images.
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param Total Number of generated snapshot images.
+                     * @param _total Number of generated snapshot images.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotal(const uint64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Snapshots List of URLs of the snapshot images.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSnapshots() const;
 
                     /**
                      * 设置List of URLs of the snapshot images.
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param Snapshots List of URLs of the snapshot images.
+                     * @param _snapshots List of URLs of the snapshot images.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshots(const std::vector<std::string>& _snapshots);
 
                     /**
                      * 判断参数 Snapshots 是否已赋值
                      * @return Snapshots 是否已赋值
+                     * 
                      */
                     bool SnapshotsHasBeenSet() const;
 

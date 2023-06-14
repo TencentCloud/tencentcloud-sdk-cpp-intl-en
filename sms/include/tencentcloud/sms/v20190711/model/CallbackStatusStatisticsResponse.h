@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Receipt statistics response packet body.
                      * @return CallbackStatusStatistics Receipt statistics response packet body.
+                     * 
                      */
                     CallbackStatusStatistics GetCallbackStatusStatistics() const;
 
                     /**
                      * 判断参数 CallbackStatusStatistics 是否已赋值
                      * @return CallbackStatusStatistics 是否已赋值
+                     * 
                      */
                     bool CallbackStatusStatisticsHasBeenSet() const;
 

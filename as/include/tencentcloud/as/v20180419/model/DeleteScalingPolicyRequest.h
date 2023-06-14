@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the alarm policy to be deleted.
                      * @return AutoScalingPolicyId ID of the alarm policy to be deleted.
+                     * 
                      */
                     std::string GetAutoScalingPolicyId() const;
 
                     /**
                      * 设置ID of the alarm policy to be deleted.
-                     * @param AutoScalingPolicyId ID of the alarm policy to be deleted.
+                     * @param _autoScalingPolicyId ID of the alarm policy to be deleted.
+                     * 
                      */
                     void SetAutoScalingPolicyId(const std::string& _autoScalingPolicyId);
 
                     /**
                      * 判断参数 AutoScalingPolicyId 是否已赋值
                      * @return AutoScalingPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoScalingPolicyIdHasBeenSet() const;
 

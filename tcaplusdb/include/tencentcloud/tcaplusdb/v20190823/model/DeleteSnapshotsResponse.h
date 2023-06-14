@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of snapshots deleted in batches
                      * @return TotalCount The number of snapshots deleted in batches
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The result list of snapshots deleted in batches
                      * @return TableResults The result list of snapshots deleted in batches
+                     * 
                      */
                     std::vector<SnapshotResult> GetTableResults() const;
 
                     /**
                      * 判断参数 TableResults 是否已赋值
                      * @return TableResults 是否已赋值
+                     * 
                      */
                     bool TableResultsHasBeenSet() const;
 

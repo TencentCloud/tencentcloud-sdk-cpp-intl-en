@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Tag key. Up to 127 bytes are allowed.
                      * @return Key Tag key. Up to 127 bytes are allowed.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Tag key. Up to 127 bytes are allowed.
-                     * @param Key Tag key. Up to 127 bytes are allowed.
+                     * @param _key Tag key. Up to 127 bytes are allowed.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Tag value. Up to 255 bytes are allowed.
                      * @return Value Tag value. Up to 255 bytes are allowed.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Tag value. Up to 255 bytes are allowed.
-                     * @param Value Tag value. Up to 255 bytes are allowed.
+                     * @param _value Tag value. Up to 255 bytes are allowed.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

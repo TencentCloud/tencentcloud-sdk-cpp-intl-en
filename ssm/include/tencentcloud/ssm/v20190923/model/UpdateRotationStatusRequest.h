@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Tencent Cloud service credential name.
                      * @return SecretName Tencent Cloud service credential name.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Tencent Cloud service credential name.
-                     * @param SecretName Tencent Cloud service credential name.
+                     * @param _secretName Tencent Cloud service credential name.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return EnableRotation Specifies whether to enable rotation.
 `true`: enables rotation.
 `false`: disables rotation.
+                     * 
                      */
                     bool GetEnableRotation() const;
 
@@ -74,33 +78,38 @@ namespace TencentCloud
                      * 设置Specifies whether to enable rotation.
 `true`: enables rotation.
 `false`: disables rotation.
-                     * @param EnableRotation Specifies whether to enable rotation.
+                     * @param _enableRotation Specifies whether to enable rotation.
 `true`: enables rotation.
 `false`: disables rotation.
+                     * 
                      */
                     void SetEnableRotation(const bool& _enableRotation);
 
                     /**
                      * 判断参数 EnableRotation 是否已赋值
                      * @return EnableRotation 是否已赋值
+                     * 
                      */
                     bool EnableRotationHasBeenSet() const;
 
                     /**
                      * 获取Rotation frequency in days. Value range: 30–365.
                      * @return Frequency Rotation frequency in days. Value range: 30–365.
+                     * 
                      */
                     int64_t GetFrequency() const;
 
                     /**
                      * 设置Rotation frequency in days. Value range: 30–365.
-                     * @param Frequency Rotation frequency in days. Value range: 30–365.
+                     * @param _frequency Rotation frequency in days. Value range: 30–365.
+                     * 
                      */
                     void SetFrequency(const int64_t& _frequency);
 
                     /**
                      * 判断参数 Frequency 是否已赋值
                      * @return Frequency 是否已赋值
+                     * 
                      */
                     bool FrequencyHasBeenSet() const;
 
@@ -109,20 +118,23 @@ namespace TencentCloud
 When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
                      * @return RotationBeginTime User-defined rotation start time in the format of 2006-01-02 15:04:05.
 When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
+                     * 
                      */
                     std::string GetRotationBeginTime() const;
 
                     /**
                      * 设置User-defined rotation start time in the format of 2006-01-02 15:04:05.
 When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
-                     * @param RotationBeginTime User-defined rotation start time in the format of 2006-01-02 15:04:05.
+                     * @param _rotationBeginTime User-defined rotation start time in the format of 2006-01-02 15:04:05.
 When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
+                     * 
                      */
                     void SetRotationBeginTime(const std::string& _rotationBeginTime);
 
                     /**
                      * 判断参数 RotationBeginTime 是否已赋值
                      * @return RotationBeginTime 是否已赋值
+                     * 
                      */
                     bool RotationBeginTimeHasBeenSet() const;
 

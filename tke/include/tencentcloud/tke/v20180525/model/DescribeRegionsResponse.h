@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of regions
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RegionInstanceSet ## Region List
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RegionInstance> GetRegionInstanceSet() const;
 
                     /**
                      * 判断参数 RegionInstanceSet 是否已赋值
                      * @return RegionInstanceSet 是否已赋值
+                     * 
                      */
                     bool RegionInstanceSetHasBeenSet() const;
 

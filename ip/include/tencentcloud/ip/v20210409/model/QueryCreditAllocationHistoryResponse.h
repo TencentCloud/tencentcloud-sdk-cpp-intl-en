@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Total Total number of records
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return History List of record details
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<QueryCreditAllocationHistoryData> GetHistory() const;
 
                     /**
                      * 判断参数 History 是否已赋值
                      * @return History 是否已赋值
+                     * 
                      */
                     bool HistoryHasBeenSet() const;
 

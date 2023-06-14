@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of available acceleration regions
                      * @return TotalCount The number of available acceleration regions
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of available acceleration region information
                      * @return AccessRegionSet List of available acceleration region information
+                     * 
                      */
                     std::vector<AccessRegionDetial> GetAccessRegionSet() const;
 
                     /**
                      * 判断参数 AccessRegionSet 是否已赋值
                      * @return AccessRegionSet 是否已赋值
+                     * 
                      */
                     bool AccessRegionSetHasBeenSet() const;
 

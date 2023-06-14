@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取User-side BGP Asn.
                      * @return Asn User-side BGP Asn.
+                     * 
                      */
                     int64_t GetAsn() const;
 
                     /**
                      * 设置User-side BGP Asn.
-                     * @param Asn User-side BGP Asn.
+                     * @param _asn User-side BGP Asn.
+                     * 
                      */
                     void SetAsn(const int64_t& _asn);
 
                     /**
                      * 判断参数 Asn 是否已赋值
                      * @return Asn 是否已赋值
+                     * 
                      */
                     bool AsnHasBeenSet() const;
 
                     /**
                      * 获取User-side BGP key.
                      * @return AuthKey User-side BGP key.
+                     * 
                      */
                     std::string GetAuthKey() const;
 
                     /**
                      * 设置User-side BGP key.
-                     * @param AuthKey User-side BGP key.
+                     * @param _authKey User-side BGP key.
+                     * 
                      */
                     void SetAuthKey(const std::string& _authKey);
 
                     /**
                      * 判断参数 AuthKey 是否已赋值
                      * @return AuthKey 是否已赋值
+                     * 
                      */
                     bool AuthKeyHasBeenSet() const;
 

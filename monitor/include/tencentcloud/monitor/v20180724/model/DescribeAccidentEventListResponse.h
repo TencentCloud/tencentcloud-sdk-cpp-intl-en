@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Alarms Platform event list.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribeAccidentEventListAlarms> GetAlarms() const;
 
                     /**
                      * 判断参数 Alarms 是否已赋值
                      * @return Alarms 是否已赋值
+                     * 
                      */
                     bool AlarmsHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Total Total number of platform events.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique player ID associated with player session
                      * @return PlayerId Unique player ID associated with player session
+                     * 
                      */
                     std::string GetPlayerId() const;
 
                     /**
                      * 设置Unique player ID associated with player session
-                     * @param PlayerId Unique player ID associated with player session
+                     * @param _playerId Unique player ID associated with player session
+                     * 
                      */
                     void SetPlayerId(const std::string& _playerId);
 
                     /**
                      * 判断参数 PlayerId 是否已赋值
                      * @return PlayerId 是否已赋值
+                     * 
                      */
                     bool PlayerIdHasBeenSet() const;
 
                     /**
                      * 获取Developer-defined player data
                      * @return PlayerData Developer-defined player data
+                     * 
                      */
                     std::string GetPlayerData() const;
 
                     /**
                      * 设置Developer-defined player data
-                     * @param PlayerData Developer-defined player data
+                     * @param _playerData Developer-defined player data
+                     * 
                      */
                     void SetPlayerData(const std::string& _playerData);
 
                     /**
                      * 判断参数 PlayerData 是否已赋值
                      * @return PlayerData 是否已赋值
+                     * 
                      */
                     bool PlayerDataHasBeenSet() const;
 

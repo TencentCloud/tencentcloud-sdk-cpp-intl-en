@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Connection ID.
                      * @return DirectConnectId Connection ID.
+                     * 
                      */
                     std::string GetDirectConnectId() const;
 
                     /**
                      * 设置Connection ID.
-                     * @param DirectConnectId Connection ID.
+                     * @param _directConnectId Connection ID.
+                     * 
                      */
                     void SetDirectConnectId(const std::string& _directConnectId);
 
                     /**
                      * 判断参数 DirectConnectId 是否已赋值
                      * @return DirectConnectId 是否已赋值
+                     * 
                      */
                     bool DirectConnectIdHasBeenSet() const;
 
                     /**
                      * 获取Connection name.
                      * @return DirectConnectName Connection name.
+                     * 
                      */
                     std::string GetDirectConnectName() const;
 
                     /**
                      * 设置Connection name.
-                     * @param DirectConnectName Connection name.
+                     * @param _directConnectName Connection name.
+                     * 
                      */
                     void SetDirectConnectName(const std::string& _directConnectName);
 
                     /**
                      * 判断参数 DirectConnectName 是否已赋值
                      * @return DirectConnectName 是否已赋值
+                     * 
                      */
                     bool DirectConnectNameHasBeenSet() const;
 
                     /**
                      * 获取Access point ID of a connection.
                      * @return AccessPointId Access point ID of a connection.
+                     * 
                      */
                     std::string GetAccessPointId() const;
 
                     /**
                      * 设置Access point ID of a connection.
-                     * @param AccessPointId Access point ID of a connection.
+                     * @param _accessPointId Access point ID of a connection.
+                     * 
                      */
                     void SetAccessPointId(const std::string& _accessPointId);
 
                     /**
                      * 判断参数 AccessPointId 是否已赋值
                      * @return AccessPointId 是否已赋值
+                     * 
                      */
                     bool AccessPointIdHasBeenSet() const;
 
@@ -120,6 +129,7 @@ ALLOCATED: Constructing.
 AVAILABLE: Available.  
 DELETING: Deleting.
 DELETED: Deleted.
+                     * 
                      */
                     std::string GetState() const;
 
@@ -133,7 +143,7 @@ ALLOCATED: Constructing.
 AVAILABLE: Available.  
 DELETING: Deleting.
 DELETED: Deleted.
-                     * @param State Connection status.
+                     * @param _state Connection status.
 PENDING: Applying. 
 REJECTED: Application rejected.   
 TOPAY: Payment pending. 
@@ -142,120 +152,140 @@ ALLOCATED: Constructing.
 AVAILABLE: Available.  
 DELETING: Deleting.
 DELETED: Deleted.
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Connection creation time.
                      * @return CreatedTime Connection creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Connection creation time.
-                     * @param CreatedTime Connection creation time.
+                     * @param _createdTime Connection creation time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Connection activation time.
                      * @return EnabledTime Connection activation time.
+                     * 
                      */
                     std::string GetEnabledTime() const;
 
                     /**
                      * 设置Connection activation time.
-                     * @param EnabledTime Connection activation time.
+                     * @param _enabledTime Connection activation time.
+                     * 
                      */
                     void SetEnabledTime(const std::string& _enabledTime);
 
                     /**
                      * 判断参数 EnabledTime 是否已赋值
                      * @return EnabledTime 是否已赋值
+                     * 
                      */
                     bool EnabledTimeHasBeenSet() const;
 
                     /**
                      * 获取ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
                      * @return LineOperator ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
+                     * 
                      */
                     std::string GetLineOperator() const;
 
                     /**
                      * 设置ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
-                     * @param LineOperator ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
+                     * @param _lineOperator ISP that provides connections. Valid values: ChinaTelecom (China Telecom), ChinaMobile (China Mobile), ChinaUnicom (China Unicom), In-houseWiring (in-house wiring), ChinaOther (other Chinese ISPs), InternationalOperator (international ISPs).
+                     * 
                      */
                     void SetLineOperator(const std::string& _lineOperator);
 
                     /**
                      * 判断参数 LineOperator 是否已赋值
                      * @return LineOperator 是否已赋值
+                     * 
                      */
                     bool LineOperatorHasBeenSet() const;
 
                     /**
                      * 获取Location of a local IDC.
                      * @return Location Location of a local IDC.
+                     * 
                      */
                     std::string GetLocation() const;
 
                     /**
                      * 设置Location of a local IDC.
-                     * @param Location Location of a local IDC.
+                     * @param _location Location of a local IDC.
+                     * 
                      */
                     void SetLocation(const std::string& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 
                     /**
                      * 获取Connection port bandwidth in Mbps.
                      * @return Bandwidth Connection port bandwidth in Mbps.
+                     * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
                      * 设置Connection port bandwidth in Mbps.
-                     * @param Bandwidth Connection port bandwidth in Mbps.
+                     * @param _bandwidth Connection port bandwidth in Mbps.
+                     * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取User-side port type of a connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface; it is the default value), 1000Base-LX (1-Gigabit single-mode optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-mode optical Ethernet interface; 10 KM).
                      * @return PortType User-side port type of a connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface; it is the default value), 1000Base-LX (1-Gigabit single-mode optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-mode optical Ethernet interface; 10 KM).
+                     * 
                      */
                     std::string GetPortType() const;
 
                     /**
                      * 设置User-side port type of a connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface; it is the default value), 1000Base-LX (1-Gigabit single-mode optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-mode optical Ethernet interface; 10 KM).
-                     * @param PortType User-side port type of a connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface; it is the default value), 1000Base-LX (1-Gigabit single-mode optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-mode optical Ethernet interface; 10 KM).
+                     * @param _portType User-side port type of a connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface; it is the default value), 1000Base-LX (1-Gigabit single-mode optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-mode optical Ethernet interface; 10 KM).
+                     * 
                      */
                     void SetPortType(const std::string& _portType);
 
                     /**
                      * 判断参数 PortType 是否已赋值
                      * @return PortType 是否已赋值
+                     * 
                      */
                     bool PortTypeHasBeenSet() const;
 
@@ -264,38 +294,44 @@ DELETED: Deleted.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CircuitCode Circuit code of a connection, which is provided by the ISP or service provider.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCircuitCode() const;
 
                     /**
                      * 设置Circuit code of a connection, which is provided by the ISP or service provider.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CircuitCode Circuit code of a connection, which is provided by the ISP or service provider.
+                     * @param _circuitCode Circuit code of a connection, which is provided by the ISP or service provider.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCircuitCode(const std::string& _circuitCode);
 
                     /**
                      * 判断参数 CircuitCode 是否已赋值
                      * @return CircuitCode 是否已赋值
+                     * 
                      */
                     bool CircuitCodeHasBeenSet() const;
 
                     /**
                      * 获取ID of a redundant connection.
                      * @return RedundantDirectConnectId ID of a redundant connection.
+                     * 
                      */
                     std::string GetRedundantDirectConnectId() const;
 
                     /**
                      * 设置ID of a redundant connection.
-                     * @param RedundantDirectConnectId ID of a redundant connection.
+                     * @param _redundantDirectConnectId ID of a redundant connection.
+                     * 
                      */
                     void SetRedundantDirectConnectId(const std::string& _redundantDirectConnectId);
 
                     /**
                      * 判断参数 RedundantDirectConnectId 是否已赋值
                      * @return RedundantDirectConnectId 是否已赋值
+                     * 
                      */
                     bool RedundantDirectConnectIdHasBeenSet() const;
 
@@ -304,20 +340,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Vlan VLAN for connection debugging, which is enabled and automatically assigned by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetVlan() const;
 
                     /**
                      * 设置VLAN for connection debugging, which is enabled and automatically assigned by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Vlan VLAN for connection debugging, which is enabled and automatically assigned by default.
+                     * @param _vlan VLAN for connection debugging, which is enabled and automatically assigned by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVlan(const int64_t& _vlan);
 
                     /**
                      * 判断参数 Vlan 是否已赋值
                      * @return Vlan 是否已赋值
+                     * 
                      */
                     bool VlanHasBeenSet() const;
 
@@ -326,20 +365,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TencentAddress Tencent-side IP address for connection debugging.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTencentAddress() const;
 
                     /**
                      * 设置Tencent-side IP address for connection debugging.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TencentAddress Tencent-side IP address for connection debugging.
+                     * @param _tencentAddress Tencent-side IP address for connection debugging.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTencentAddress(const std::string& _tencentAddress);
 
                     /**
                      * 判断参数 TencentAddress 是否已赋值
                      * @return TencentAddress 是否已赋值
+                     * 
                      */
                     bool TencentAddressHasBeenSet() const;
 
@@ -348,20 +390,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CustomerAddress User-side IP address for connection debugging.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCustomerAddress() const;
 
                     /**
                      * 设置User-side IP address for connection debugging.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CustomerAddress User-side IP address for connection debugging.
+                     * @param _customerAddress User-side IP address for connection debugging.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCustomerAddress(const std::string& _customerAddress);
 
                     /**
                      * 判断参数 CustomerAddress 是否已赋值
                      * @return CustomerAddress 是否已赋值
+                     * 
                      */
                     bool CustomerAddressHasBeenSet() const;
 
@@ -370,20 +415,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CustomerName Name of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCustomerName() const;
 
                     /**
                      * 设置Name of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CustomerName Name of the connection applicant, which is obtained from the account system by default.
+                     * @param _customerName Name of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCustomerName(const std::string& _customerName);
 
                     /**
                      * 判断参数 CustomerName 是否已赋值
                      * @return CustomerName 是否已赋值
+                     * 
                      */
                     bool CustomerNameHasBeenSet() const;
 
@@ -392,20 +440,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CustomerContactMail Email address of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCustomerContactMail() const;
 
                     /**
                      * 设置Email address of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CustomerContactMail Email address of the connection applicant, which is obtained from the account system by default.
+                     * @param _customerContactMail Email address of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCustomerContactMail(const std::string& _customerContactMail);
 
                     /**
                      * 判断参数 CustomerContactMail 是否已赋值
                      * @return CustomerContactMail 是否已赋值
+                     * 
                      */
                     bool CustomerContactMailHasBeenSet() const;
 
@@ -414,20 +465,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CustomerContactNumber Contact number of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCustomerContactNumber() const;
 
                     /**
                      * 设置Contact number of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CustomerContactNumber Contact number of the connection applicant, which is obtained from the account system by default.
+                     * @param _customerContactNumber Contact number of the connection applicant, which is obtained from the account system by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCustomerContactNumber(const std::string& _customerContactNumber);
 
                     /**
                      * 判断参数 CustomerContactNumber 是否已赋值
                      * @return CustomerContactNumber 是否已赋值
+                     * 
                      */
                     bool CustomerContactNumberHasBeenSet() const;
 
@@ -436,20 +490,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpiredTime Connection expiration time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
                      * 设置Connection expiration time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpiredTime Connection expiration time.
+                     * @param _expiredTime Connection expiration time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
 
                     /**
                      * 判断参数 ExpiredTime 是否已赋值
                      * @return ExpiredTime 是否已赋值
+                     * 
                      */
                     bool ExpiredTimeHasBeenSet() const;
 
@@ -458,20 +515,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ChargeType Connection billing mode. NON_RECURRING_CHARGE: One-time charge for accessing service
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetChargeType() const;
 
                     /**
                      * 设置Connection billing mode. NON_RECURRING_CHARGE: One-time charge for accessing service
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ChargeType Connection billing mode. NON_RECURRING_CHARGE: One-time charge for accessing service
+                     * @param _chargeType Connection billing mode. NON_RECURRING_CHARGE: One-time charge for accessing service
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChargeType(const std::string& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
@@ -480,20 +540,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FaultReportContactPerson Fault reporting contact person.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFaultReportContactPerson() const;
 
                     /**
                      * 设置Fault reporting contact person.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FaultReportContactPerson Fault reporting contact person.
+                     * @param _faultReportContactPerson Fault reporting contact person.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFaultReportContactPerson(const std::string& _faultReportContactPerson);
 
                     /**
                      * 判断参数 FaultReportContactPerson 是否已赋值
                      * @return FaultReportContactPerson 是否已赋值
+                     * 
                      */
                     bool FaultReportContactPersonHasBeenSet() const;
 
@@ -502,20 +565,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FaultReportContactNumber Fault reporting contact number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFaultReportContactNumber() const;
 
                     /**
                      * 设置Fault reporting contact number.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FaultReportContactNumber Fault reporting contact number.
+                     * @param _faultReportContactNumber Fault reporting contact number.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFaultReportContactNumber(const std::string& _faultReportContactNumber);
 
                     /**
                      * 判断参数 FaultReportContactNumber 是否已赋值
                      * @return FaultReportContactNumber 是否已赋值
+                     * 
                      */
                     bool FaultReportContactNumberHasBeenSet() const;
 
@@ -524,38 +590,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TagSet Tag key-value pair
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
                      * 设置Tag key-value pair
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TagSet Tag key-value pair
+                     * @param _tagSet Tag key-value pair
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
                     /**
                      * 获取Access point type of a connection.
                      * @return AccessPointType Access point type of a connection.
+                     * 
                      */
                     std::string GetAccessPointType() const;
 
                     /**
                      * 设置Access point type of a connection.
-                     * @param AccessPointType Access point type of a connection.
+                     * @param _accessPointType Access point type of a connection.
+                     * 
                      */
                     void SetAccessPointType(const std::string& _accessPointType);
 
                     /**
                      * 判断参数 AccessPointType 是否已赋值
                      * @return AccessPointType 是否已赋值
+                     * 
                      */
                     bool AccessPointTypeHasBeenSet() const;
 
@@ -564,20 +636,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IdcCity IDC city.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIdcCity() const;
 
                     /**
                      * 设置IDC city.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IdcCity IDC city.
+                     * @param _idcCity IDC city.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIdcCity(const std::string& _idcCity);
 
                     /**
                      * 判断参数 IdcCity 是否已赋值
                      * @return IdcCity 是否已赋值
+                     * 
                      */
                     bool IdcCityHasBeenSet() const;
 
@@ -586,20 +661,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ChargeState Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetChargeState() const;
 
                     /**
                      * 设置Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ChargeState Billing status
+                     * @param _chargeState Billing status
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChargeState(const std::string& _chargeState);
 
                     /**
                      * 判断参数 ChargeState 是否已赋值
                      * @return ChargeState 是否已赋值
+                     * 
                      */
                     bool ChargeStateHasBeenSet() const;
 
@@ -608,20 +686,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Connection activation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Connection activation time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Connection activation time.
+                     * @param _startTime Connection activation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -630,20 +711,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return SignLaw Whether the connection has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     bool GetSignLaw() const;
 
                     /**
                      * 设置Whether the connection has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param SignLaw Whether the connection has the service agreement signed.
+                     * @param _signLaw Whether the connection has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetSignLaw(const bool& _signLaw);
 
                     /**
                      * 判断参数 SignLaw 是否已赋值
                      * @return SignLaw 是否已赋值
+                     * 
                      */
                     bool SignLawHasBeenSet() const;
 
@@ -652,20 +736,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return LocalZone Whether the connection is an edge zone.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     bool GetLocalZone() const;
 
                     /**
                      * 设置Whether the connection is an edge zone.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param LocalZone Whether the connection is an edge zone.
+                     * @param _localZone Whether the connection is an edge zone.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetLocalZone(const bool& _localZone);
 
                     /**
                      * 判断参数 LocalZone 是否已赋值
                      * @return LocalZone 是否已赋值
+                     * 
                      */
                     bool LocalZoneHasBeenSet() const;
 
@@ -674,20 +761,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetVlanZeroDirectConnectTunnelCount() const;
 
                     /**
                      * 设置Number of dedicated tunnels with disabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
+                     * @param _vlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetVlanZeroDirectConnectTunnelCount(const uint64_t& _vlanZeroDirectConnectTunnelCount);
 
                     /**
                      * 判断参数 VlanZeroDirectConnectTunnelCount 是否已赋值
                      * @return VlanZeroDirectConnectTunnelCount 是否已赋值
+                     * 
                      */
                     bool VlanZeroDirectConnectTunnelCountHasBeenSet() const;
 
@@ -696,20 +786,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetOtherVlanDirectConnectTunnelCount() const;
 
                     /**
                      * 设置Number of dedicated tunnels with enabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
+                     * @param _otherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOtherVlanDirectConnectTunnelCount(const uint64_t& _otherVlanDirectConnectTunnelCount);
 
                     /**
                      * 判断参数 OtherVlanDirectConnectTunnelCount 是否已赋值
                      * @return OtherVlanDirectConnectTunnelCount 是否已赋值
+                     * 
                      */
                     bool OtherVlanDirectConnectTunnelCountHasBeenSet() const;
 
@@ -718,20 +811,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MinBandwidth Minimum bandwidth of the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMinBandwidth() const;
 
                     /**
                      * 设置Minimum bandwidth of the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MinBandwidth Minimum bandwidth of the connection
+                     * @param _minBandwidth Minimum bandwidth of the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMinBandwidth(const uint64_t& _minBandwidth);
 
                     /**
                      * 判断参数 MinBandwidth 是否已赋值
                      * @return MinBandwidth 是否已赋值
+                     * 
                      */
                     bool MinBandwidthHasBeenSet() const;
 

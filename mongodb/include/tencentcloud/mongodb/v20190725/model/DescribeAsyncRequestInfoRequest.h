@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
                      * @return AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+                     * 
                      */
                     std::string GetAsyncRequestId() const;
 
                     /**
                      * 设置Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
-                     * @param AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+                     * @param _asyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+                     * 
                      */
                     void SetAsyncRequestId(const std::string& _asyncRequestId);
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

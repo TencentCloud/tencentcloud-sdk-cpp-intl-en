@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance group ID
                      * @return InstanceId Instance group ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance group ID
-                     * @param InstanceId Instance group ID
+                     * @param _instanceId Instance group ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      * @return SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置List of IDs of security groups to be modified, which is an array of one or more security group IDs.
-                     * @param SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * @param _securityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取AZ
                      * @return Zone AZ
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ
-                     * @param Zone AZ
+                     * @param _zone AZ
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 

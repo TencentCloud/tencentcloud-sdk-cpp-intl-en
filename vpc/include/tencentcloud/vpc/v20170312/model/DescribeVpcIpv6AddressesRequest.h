@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
                      * @return VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
-                     * @param VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * @param _vpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The `IP` address list. Each request supports a maximum of `10` batch querying.
                      * @return Ipv6Addresses The `IP` address list. Each request supports a maximum of `10` batch querying.
+                     * 
                      */
                     std::vector<std::string> GetIpv6Addresses() const;
 
                     /**
                      * 设置The `IP` address list. Each request supports a maximum of `10` batch querying.
-                     * @param Ipv6Addresses The `IP` address list. Each request supports a maximum of `10` batch querying.
+                     * @param _ipv6Addresses The `IP` address list. Each request supports a maximum of `10` batch querying.
+                     * 
                      */
                     void SetIpv6Addresses(const std::vector<std::string>& _ipv6Addresses);
 
                     /**
                      * 判断参数 Ipv6Addresses 是否已赋值
                      * @return Ipv6Addresses 是否已赋值
+                     * 
                      */
                     bool Ipv6AddressesHasBeenSet() const;
 
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity.
                      * @return Limit The returned quantity.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity.
-                     * @param Limit The returned quantity.
+                     * @param _limit The returned quantity.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

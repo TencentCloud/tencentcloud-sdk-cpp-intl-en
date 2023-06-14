@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Message body that is sent.
                      * @return Body Message body that is sent.
+                     * 
                      */
                     std::string GetBody() const;
 
                     /**
                      * 设置Message body that is sent.
-                     * @param Body Message body that is sent.
+                     * @param _body Message body that is sent.
+                     * 
                      */
                     void SetBody(const std::string& _body);
 
                     /**
                      * 判断参数 Body 是否已赋值
                      * @return Body 是否已赋值
+                     * 
                      */
                     bool BodyHasBeenSet() const;
 
                     /**
                      * 获取Message sending key name.
                      * @return Key Message sending key name.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Message sending key name.
-                     * @param Key Message sending key name.
+                     * @param _key Message sending key name.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 

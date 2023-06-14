@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CheckItemName Check item name, such as source database permission check.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCheckItemName() const;
 
                     /**
                      * 设置Check item name, such as source database permission check.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CheckItemName Check item name, such as source database permission check.
+                     * @param _checkItemName Check item name, such as source database permission check.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckItemName(const std::string& _checkItemName);
 
                     /**
                      * 判断参数 CheckItemName 是否已赋值
                      * @return CheckItemName 是否已赋值
+                     * 
                      */
                     bool CheckItemNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Check item details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Check item details
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Description Check item details
+                     * @param _description Check item details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CheckResult Check item result. Valid values: `pass` (pass); `failed` (failure); `warning` (pass with warning).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCheckResult() const;
 
                     /**
                      * 设置Check item result. Valid values: `pass` (pass); `failed` (failure); `warning` (pass with warning).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CheckResult Check item result. Valid values: `pass` (pass); `failed` (failure); `warning` (pass with warning).
+                     * @param _checkResult Check item result. Valid values: `pass` (pass); `failed` (failure); `warning` (pass with warning).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckResult(const std::string& _checkResult);
 
                     /**
                      * 判断参数 CheckResult 是否已赋值
                      * @return CheckResult 是否已赋值
+                     * 
                      */
                     bool CheckResultHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailureReason The cause of the check item failure
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFailureReason() const;
 
                     /**
                      * 设置The cause of the check item failure
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FailureReason The cause of the check item failure
+                     * @param _failureReason The cause of the check item failure
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFailureReason(const std::string& _failureReason);
 
                     /**
                      * 判断参数 FailureReason 是否已赋值
                      * @return FailureReason 是否已赋值
+                     * 
                      */
                     bool FailureReasonHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Solution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Solution
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Solution Solution
+                     * @param _solution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSolution(const std::string& _solution);
 
                     /**
                      * 判断参数 Solution 是否已赋值
                      * @return Solution 是否已赋值
+                     * 
                      */
                     bool SolutionHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorLog Execution error log
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetErrorLog() const;
 
                     /**
                      * 设置Execution error log
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrorLog Execution error log
+                     * @param _errorLog Execution error log
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorLog(const std::vector<std::string>& _errorLog);
 
                     /**
                      * 判断参数 ErrorLog 是否已赋值
                      * @return ErrorLog 是否已赋值
+                     * 
                      */
                     bool ErrorLogHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HelpDoc URL of the detailed help document
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetHelpDoc() const;
 
                     /**
                      * 设置URL of the detailed help document
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HelpDoc URL of the detailed help document
+                     * @param _helpDoc URL of the detailed help document
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHelpDoc(const std::vector<std::string>& _helpDoc);
 
                     /**
                      * 判断参数 HelpDoc 是否已赋值
                      * @return HelpDoc 是否已赋值
+                     * 
                      */
                     bool HelpDocHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SkipInfo Prompt text for ignoring a risk
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSkipInfo() const;
 
                     /**
                      * 设置Prompt text for ignoring a risk
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SkipInfo Prompt text for ignoring a risk
+                     * @param _skipInfo Prompt text for ignoring a risk
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSkipInfo(const std::string& _skipInfo);
 
                     /**
                      * 判断参数 SkipInfo 是否已赋值
                      * @return SkipInfo 是否已赋值
+                     * 
                      */
                     bool SkipInfoHasBeenSet() const;
 

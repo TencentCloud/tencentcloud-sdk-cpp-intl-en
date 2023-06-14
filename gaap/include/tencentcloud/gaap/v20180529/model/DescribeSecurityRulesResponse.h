@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of returned security rules.
                      * @return TotalCount The number of returned security rules.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of returned security rules.
                      * @return SecurityRuleSet List of returned security rules.
+                     * 
                      */
                     std::vector<SecurityPolicyRuleOut> GetSecurityRuleSet() const;
 
                     /**
                      * 判断参数 SecurityRuleSet 是否已赋值
                      * @return SecurityRuleSet 是否已赋值
+                     * 
                      */
                     bool SecurityRuleSetHasBeenSet() const;
 

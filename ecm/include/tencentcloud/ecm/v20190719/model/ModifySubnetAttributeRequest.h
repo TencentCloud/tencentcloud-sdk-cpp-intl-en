@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Subnet instance ID, such as `subnet-pxir56ns`.
                      * @return SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID, such as `subnet-pxir56ns`.
-                     * @param SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
+                     * @param _subnetId Subnet instance ID, such as `subnet-pxir56ns`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取Subnet name, which can contain up to 60 bytes.
                      * @return SubnetName Subnet name, which can contain up to 60 bytes.
+                     * 
                      */
                     std::string GetSubnetName() const;
 
                     /**
                      * 设置Subnet name, which can contain up to 60 bytes.
-                     * @param SubnetName Subnet name, which can contain up to 60 bytes.
+                     * @param _subnetName Subnet name, which can contain up to 60 bytes.
+                     * 
                      */
                     void SetSubnetName(const std::string& _subnetName);
 
                     /**
                      * 判断参数 SubnetName 是否已赋值
                      * @return SubnetName 是否已赋值
+                     * 
                      */
                     bool SubnetNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable broadcast for the subnet.
                      * @return EnableBroadcast Whether to enable broadcast for the subnet.
+                     * 
                      */
                     std::string GetEnableBroadcast() const;
 
                     /**
                      * 设置Whether to enable broadcast for the subnet.
-                     * @param EnableBroadcast Whether to enable broadcast for the subnet.
+                     * @param _enableBroadcast Whether to enable broadcast for the subnet.
+                     * 
                      */
                     void SetEnableBroadcast(const std::string& _enableBroadcast);
 
                     /**
                      * 判断参数 EnableBroadcast 是否已赋值
                      * @return EnableBroadcast 是否已赋值
+                     * 
                      */
                     bool EnableBroadcastHasBeenSet() const;
 
                     /**
                      * 获取Tag key value of the subnet
                      * @return Tags Tag key value of the subnet
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag key value of the subnet
-                     * @param Tags Tag key value of the subnet
+                     * @param _tags Tag key value of the subnet
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

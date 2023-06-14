@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content
                      * @return Label Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content
-                     * @param Label Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content
+                     * @param _label Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return Suggestion Recommended follow-up action. <br>`Block`: block it automatically; `Review`: review the content again in human; **Pass**: pass
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
                      * 设置Recommended follow-up action. <br>`Block`: block it automatically; `Review`: review the content again in human; **Pass**: pass
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Suggestion Recommended follow-up action. <br>`Block`: block it automatically; `Review`: review the content again in human; **Pass**: pass
+                     * @param _suggestion Recommended follow-up action. <br>`Block`: block it automatically; `Review`: review the content again in human; **Pass**: pass
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetKeywords() const;
 
                     /**
                      * 设置Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+                     * @param _keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeywords(const std::vector<std::string>& _keywords);
 
                     /**
                      * 判断参数 Keywords 是否已赋值
                      * @return Keywords 是否已赋值
+                     * 
                      */
                     bool KeywordsHasBeenSet() const;
 
@@ -114,20 +123,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return Score This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Score This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
+                     * @param _score This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -136,20 +148,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return LibType It indicates the library type corresponding with the keyword. Valid values: `1` (blocklist/allowlist library) and `2` (custom keyword library). If no custom keyword library is configured, the default value is 1.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     int64_t GetLibType() const;
 
                     /**
                      * 设置It indicates the library type corresponding with the keyword. Valid values: `1` (blocklist/allowlist library) and `2` (custom keyword library). If no custom keyword library is configured, the default value is 1.
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param LibType It indicates the library type corresponding with the keyword. Valid values: `1` (blocklist/allowlist library) and `2` (custom keyword library). If no custom keyword library is configured, the default value is 1.
+                     * @param _libType It indicates the library type corresponding with the keyword. Valid values: `1` (blocklist/allowlist library) and `2` (custom keyword library). If no custom keyword library is configured, the default value is 1.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetLibType(const int64_t& _libType);
 
                     /**
                      * 判断参数 LibType 是否已赋值
                      * @return LibType 是否已赋值
+                     * 
                      */
                     bool LibTypeHasBeenSet() const;
 
@@ -158,20 +173,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return LibId This field is **only valid when `Label` is `Custom`. It returns the custom library ID to facilitate the library management and configuration.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetLibId() const;
 
                     /**
                      * 设置This field is **only valid when `Label` is `Custom`. It returns the custom library ID to facilitate the library management and configuration.
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param LibId This field is **only valid when `Label` is `Custom`. It returns the custom library ID to facilitate the library management and configuration.
+                     * @param _libId This field is **only valid when `Label` is `Custom`. It returns the custom library ID to facilitate the library management and configuration.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetLibId(const std::string& _libId);
 
                     /**
                      * 判断参数 LibId 是否已赋值
                      * @return LibId 是否已赋值
+                     * 
                      */
                     bool LibIdHasBeenSet() const;
 
@@ -180,20 +198,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return LibName This field is **only valid when `Label` is `Custom` (custom keyword)`. It returns the custom library name to facilitate the library management and configuration.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetLibName() const;
 
                     /**
                      * 设置This field is **only valid when `Label` is `Custom` (custom keyword)`. It returns the custom library name to facilitate the library management and configuration.
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param LibName This field is **only valid when `Label` is `Custom` (custom keyword)`. It returns the custom library name to facilitate the library management and configuration.
+                     * @param _libName This field is **only valid when `Label` is `Custom` (custom keyword)`. It returns the custom library name to facilitate the library management and configuration.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetLibName(const std::string& _libName);
 
                     /**
                      * 判断参数 LibName 是否已赋值
                      * @return LibName 是否已赋值
+                     * 
                      */
                     bool LibNameHasBeenSet() const;
 
@@ -202,20 +223,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return SubLabel The field returns the second-level labels under the current label.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
                      * 设置The field returns the second-level labels under the current label.
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param SubLabel The field returns the second-level labels under the current label.
+                     * @param _subLabel The field returns the second-level labels under the current label.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
 
                     /**
                      * 判断参数 SubLabel 是否已赋值
                      * @return SubLabel 是否已赋值
+                     * 
                      */
                     bool SubLabelHasBeenSet() const;
 
@@ -224,20 +248,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Returns the keywords, label, sub-label and the score.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Returns the keywords, label, sub-label and the score.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Returns the keywords, label, sub-label and the score.
+                     * @param _tags Returns the keywords, label, sub-label and the score.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

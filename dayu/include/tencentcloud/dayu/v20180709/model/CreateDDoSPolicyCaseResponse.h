@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Policy scenario ID
                      * @return SceneId Policy scenario ID
+                     * 
                      */
                     std::string GetSceneId() const;
 
                     /**
                      * 判断参数 SceneId 是否已赋值
                      * @return SceneId 是否已赋值
+                     * 
                      */
                     bool SceneIdHasBeenSet() const;
 

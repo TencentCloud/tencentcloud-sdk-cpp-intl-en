@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Connection group ID
                      * @return GroupId Connection group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Connection group ID
-                     * @param GroupId Connection group ID
+                     * @param _groupId Connection group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Connection group domain name
+                     * @param _domain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -93,56 +99,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupName Connection group name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Connection group name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupName Connection group name
+                     * @param _groupName Connection group name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Target region
                      * @return RealServerRegionInfo Target region
+                     * 
                      */
                     RegionDetail GetRealServerRegionInfo() const;
 
                     /**
                      * 设置Target region
-                     * @param RealServerRegionInfo Target region
+                     * @param _realServerRegionInfo Target region
+                     * 
                      */
                     void SetRealServerRegionInfo(const RegionDetail& _realServerRegionInfo);
 
                     /**
                      * 判断参数 RealServerRegionInfo 是否已赋值
                      * @return RealServerRegionInfo 是否已赋值
+                     * 
                      */
                     bool RealServerRegionInfoHasBeenSet() const;
 
@@ -161,6 +176,7 @@ Where:
 `DESTROYING`: Terminating
 `MOVING`: Migrating
 `CHANGING`: Deploying
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -172,37 +188,42 @@ Where:
 `DESTROYING`: Terminating
 `MOVING`: Migrating
 `CHANGING`: Deploying
-                     * @param Status Connection group status.
+                     * @param _status Connection group status.
 Where:
 `RUNNING`: Running
 `CREATING`: Creating
 `DESTROYING`: Terminating
 `MOVING`: Migrating
 `CHANGING`: Deploying
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Tag list.
                      * @return TagSet Tag list.
+                     * 
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
                      * 设置Tag list.
-                     * @param TagSet Tag list.
+                     * @param _tagSet Tag list.
+                     * 
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
@@ -211,20 +232,23 @@ Where:
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Version Connection group version
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Connection group version
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Version Connection group version
+                     * @param _version Connection group version
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -233,20 +257,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -255,20 +282,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProxyType Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetProxyType() const;
 
                     /**
                      * 设置Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProxyType Whether the connection group contains a Microsoft connection
+                     * @param _proxyType Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProxyType(const uint64_t& _proxyType);
 
                     /**
                      * 判断参数 ProxyType 是否已赋值
                      * @return ProxyType 是否已赋值
+                     * 
                      */
                     bool ProxyTypeHasBeenSet() const;
 
@@ -281,6 +311,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: Disable
 `1`: Enable
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHttp3Supported() const;
 
@@ -289,16 +320,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: Disable
 `1`: Enable
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+                     * @param _http3Supported Specifies whether to enable HTTP3. Valid values:
 `0`: Disable
 `1`: Enable
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
                     /**
                      * 判断参数 Http3Supported 是否已赋值
                      * @return Http3Supported 是否已赋值
+                     * 
                      */
                     bool Http3SupportedHasBeenSet() const;
 
@@ -329,6 +362,7 @@ Each bit in the bitmap represents a feature:
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFeatureBitmap() const;
 
@@ -346,7 +380,7 @@ Each bit in the bitmap represents a feature:
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param FeatureBitmap Feature bitmap. Valid values:
+                     * @param _featureBitmap Feature bitmap. Valid values:
 `0`: Feature not supported
 `1`: Feature supported
 Each bit in the bitmap represents a feature:
@@ -359,12 +393,14 @@ Each bit in the bitmap represents a feature:
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFeatureBitmap(const int64_t& _featureBitmap);
 
                     /**
                      * 判断参数 FeatureBitmap 是否已赋值
                      * @return FeatureBitmap 是否已赋值
+                     * 
                      */
                     bool FeatureBitmapHasBeenSet() const;
 

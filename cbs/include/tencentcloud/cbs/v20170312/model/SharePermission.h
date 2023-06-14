@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot sharing time
                      * @return CreatedTime Snapshot sharing time
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Snapshot sharing time
-                     * @param CreatedTime Snapshot sharing time
+                     * @param _createdTime Snapshot sharing time
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取ID of the shared account
                      * @return AccountId ID of the shared account
+                     * 
                      */
                     std::string GetAccountId() const;
 
                     /**
                      * 设置ID of the shared account
-                     * @param AccountId ID of the shared account
+                     * @param _accountId ID of the shared account
+                     * 
                      */
                     void SetAccountId(const std::string& _accountId);
 
                     /**
                      * 判断参数 AccountId 是否已赋值
                      * @return AccountId 是否已赋值
+                     * 
                      */
                     bool AccountIdHasBeenSet() const;
 

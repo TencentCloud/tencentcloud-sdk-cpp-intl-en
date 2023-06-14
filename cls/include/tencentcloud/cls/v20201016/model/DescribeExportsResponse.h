@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of exported logs
                      * @return Exports List of exported logs
+                     * 
                      */
                     std::vector<ExportInfo> GetExports() const;
 
                     /**
                      * 判断参数 Exports 是否已赋值
                      * @return Exports 是否已赋值
+                     * 
                      */
                     bool ExportsHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Returned metric value
                      * @return DataList Returned metric value
+                     * 
                      */
                     std::vector<BaradData> GetDataList() const;
 
                     /**
                      * 判断参数 DataList 是否已赋值
                      * @return DataList 是否已赋值
+                     * 
                      */
                     bool DataListHasBeenSet() const;
 

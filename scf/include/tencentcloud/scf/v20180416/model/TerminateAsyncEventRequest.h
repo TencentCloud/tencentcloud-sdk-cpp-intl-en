@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Function name
                      * @return FunctionName Function name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name
-                     * @param FunctionName Function name
+                     * @param _functionName Function name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Terminated invocation request ID
                      * @return InvokeRequestId Terminated invocation request ID
+                     * 
                      */
                     std::string GetInvokeRequestId() const;
 
                     /**
                      * 设置Terminated invocation request ID
-                     * @param InvokeRequestId Terminated invocation request ID
+                     * @param _invokeRequestId Terminated invocation request ID
+                     * 
                      */
                     void SetInvokeRequestId(const std::string& _invokeRequestId);
 
                     /**
                      * 判断参数 InvokeRequestId 是否已赋值
                      * @return InvokeRequestId 是否已赋值
+                     * 
                      */
                     bool InvokeRequestIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace
                      * @return Namespace Namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace
-                     * @param Namespace Namespace
+                     * @param _namespace Namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
                      * @return GraceShutdown Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
+                     * 
                      */
                     bool GetGraceShutdown() const;
 
                     /**
                      * 设置Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
-                     * @param GraceShutdown Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
+                     * @param _graceShutdown Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
+                     * 
                      */
                     void SetGraceShutdown(const bool& _graceShutdown);
 
                     /**
                      * 判断参数 GraceShutdown 是否已赋值
                      * @return GraceShutdown 是否已赋值
+                     * 
                      */
                     bool GraceShutdownHasBeenSet() const;
 

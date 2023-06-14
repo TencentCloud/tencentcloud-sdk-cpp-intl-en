@@ -54,18 +54,21 @@ namespace TencentCloud
                     /**
                      * 获取Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
                      * @return Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
+                     * 
                      */
                     std::string GetContainer() const;
 
                     /**
                      * 设置Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
-                     * @param Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
+                     * @param _container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
+                     * 
                      */
                     void SetContainer(const std::string& _container);
 
                     /**
                      * 判断参数 Container 是否已赋值
                      * @return Container 是否已赋值
+                     * 
                      */
                     bool ContainerHasBeenSet() const;
 
@@ -76,6 +79,7 @@ namespace TencentCloud
                      * @return RemoveVideo Whether to remove video data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
+                     * 
                      */
                     uint64_t GetRemoveVideo() const;
 
@@ -83,15 +87,17 @@ namespace TencentCloud
                      * 设置Whether to remove video data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
-                     * @param RemoveVideo Whether to remove video data. Valid values:
+                     * @param _removeVideo Whether to remove video data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
+                     * 
                      */
                     void SetRemoveVideo(const uint64_t& _removeVideo);
 
                     /**
                      * 判断参数 RemoveVideo 是否已赋值
                      * @return RemoveVideo 是否已赋值
+                     * 
                      */
                     bool RemoveVideoHasBeenSet() const;
 
@@ -102,6 +108,7 @@ namespace TencentCloud
                      * @return RemoveAudio Whether to remove audio data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
+                     * 
                      */
                     uint64_t GetRemoveAudio() const;
 
@@ -109,87 +116,101 @@ namespace TencentCloud
                      * 设置Whether to remove audio data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
-                     * @param RemoveAudio Whether to remove audio data. Valid values:
+                     * @param _removeAudio Whether to remove audio data. Valid values:
 <li>0: retain</li>
 <li>1: remove</li>
+                     * 
                      */
                     void SetRemoveAudio(const uint64_t& _removeAudio);
 
                     /**
                      * 判断参数 RemoveAudio 是否已赋值
                      * @return RemoveAudio 是否已赋值
+                     * 
                      */
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
                      * 获取Video stream configuration parameter.
                      * @return VideoTemplate Video stream configuration parameter.
+                     * 
                      */
                     VideoTemplateInfoForUpdate GetVideoTemplate() const;
 
                     /**
                      * 设置Video stream configuration parameter.
-                     * @param VideoTemplate Video stream configuration parameter.
+                     * @param _videoTemplate Video stream configuration parameter.
+                     * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfoForUpdate& _videoTemplate);
 
                     /**
                      * 判断参数 VideoTemplate 是否已赋值
                      * @return VideoTemplate 是否已赋值
+                     * 
                      */
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
                      * 获取Audio stream configuration parameter.
                      * @return AudioTemplate Audio stream configuration parameter.
+                     * 
                      */
                     AudioTemplateInfoForUpdate GetAudioTemplate() const;
 
                     /**
                      * 设置Audio stream configuration parameter.
-                     * @param AudioTemplate Audio stream configuration parameter.
+                     * @param _audioTemplate Audio stream configuration parameter.
+                     * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfoForUpdate& _audioTemplate);
 
                     /**
                      * 判断参数 AudioTemplate 是否已赋值
                      * @return AudioTemplate 是否已赋值
+                     * 
                      */
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
                      * 获取TESHD transcoding parameter.
                      * @return TEHDConfig TESHD transcoding parameter.
+                     * 
                      */
                     TEHDConfigForUpdate GetTEHDConfig() const;
 
                     /**
                      * 设置TESHD transcoding parameter.
-                     * @param TEHDConfig TESHD transcoding parameter.
+                     * @param _tEHDConfig TESHD transcoding parameter.
+                     * 
                      */
                     void SetTEHDConfig(const TEHDConfigForUpdate& _tEHDConfig);
 
                     /**
                      * 判断参数 TEHDConfig 是否已赋值
                      * @return TEHDConfig 是否已赋值
+                     * 
                      */
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
                      * 获取The subtitle settings.
                      * @return SubtitleTemplate The subtitle settings.
+                     * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
                      * 设置The subtitle settings.
-                     * @param SubtitleTemplate The subtitle settings.
+                     * @param _subtitleTemplate The subtitle settings.
+                     * 
                      */
                     void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
 
                     /**
                      * 判断参数 SubtitleTemplate 是否已赋值
                      * @return SubtitleTemplate 是否已赋值
+                     * 
                      */
                     bool SubtitleTemplateHasBeenSet() const;
 
@@ -198,20 +219,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AddonAudioStream The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaInputInfo> GetAddonAudioStream() const;
 
                     /**
                      * 设置The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AddonAudioStream The information of the external audio track to add.
+                     * @param _addonAudioStream The information of the external audio track to add.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddonAudioStream(const std::vector<MediaInputInfo>& _addonAudioStream);
 
                     /**
                      * 判断参数 AddonAudioStream 是否已赋值
                      * @return AddonAudioStream 是否已赋值
+                     * 
                      */
                     bool AddonAudioStreamHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取New description of up to 1,024 bytes in length
                      * @return Description New description of up to 1,024 bytes in length
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置New description of up to 1,024 bytes in length
-                     * @param Description New description of up to 1,024 bytes in length
+                     * @param _description New description of up to 1,024 bytes in length
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取ID of the CMK for which to modify the description
                      * @return KeyId ID of the CMK for which to modify the description
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置ID of the CMK for which to modify the description
-                     * @param KeyId ID of the CMK for which to modify the description
+                     * @param _keyId ID of the CMK for which to modify the description
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 

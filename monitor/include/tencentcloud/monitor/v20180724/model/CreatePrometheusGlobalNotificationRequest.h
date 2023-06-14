@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Alert notification channel
                      * @return Notification Alert notification channel
+                     * 
                      */
                     PrometheusNotificationItem GetNotification() const;
 
                     /**
                      * 设置Alert notification channel
-                     * @param Notification Alert notification channel
+                     * @param _notification Alert notification channel
+                     * 
                      */
                     void SetNotification(const PrometheusNotificationItem& _notification);
 
                     /**
                      * 判断参数 Notification 是否已赋值
                      * @return Notification 是否已赋值
+                     * 
                      */
                     bool NotificationHasBeenSet() const;
 

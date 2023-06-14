@@ -47,90 +47,105 @@ namespace TencentCloud
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
                      * @return Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
-                     * @param Status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * @param _status Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Filter: file ID.
                      * @return FileId Filter: file ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Filter: file ID.
-                     * @param FileId Filter: file ID.
+                     * @param _fileId Filter: file ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取Filter: task creation time.
                      * @return CreateTime Filter: task creation time.
+                     * 
                      */
                     TimeRange GetCreateTime() const;
 
                     /**
                      * 设置Filter: task creation time.
-                     * @param CreateTime Filter: task creation time.
+                     * @param _createTime Filter: task creation time.
+                     * 
                      */
                     void SetCreateTime(const TimeRange& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Filter: task end time.
                      * @return FinishTime Filter: task end time.
+                     * 
                      */
                     TimeRange GetFinishTime() const;
 
                     /**
                      * 设置Filter: task end time.
-                     * @param FinishTime Filter: task end time.
+                     * @param _finishTime Filter: task end time.
+                     * 
                      */
                     void SetFinishTime(const TimeRange& _finishTime);
 
                     /**
                      * 判断参数 FinishTime 是否已赋值
                      * @return FinishTime 是否已赋值
+                     * 
                      */
                     bool FinishTimeHasBeenSet() const;
 
@@ -141,6 +156,7 @@ namespace TencentCloud
                      * @return Sort Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
+                     * 
                      */
                     SortBy GetSort() const;
 
@@ -148,51 +164,59 @@ namespace TencentCloud
                      * 设置Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
-                     * @param Sort Sort field. Valid values:
+                     * @param _sort Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
+                     * 
                      */
                     void SetSort(const SortBy& _sort);
 
                     /**
                      * 判断参数 Sort 是否已赋值
                      * @return Sort 是否已赋值
+                     * 
                      */
                     bool SortHasBeenSet() const;
 
                     /**
                      * 获取Number of entries to be returned. Default value: 10. Maximum value: 100.
                      * @return Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries to be returned. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
                      * @return ScrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+                     * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
                      * 设置Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
-                     * @param ScrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+                     * @param _scrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+                     * 
                      */
                     void SetScrollToken(const std::string& _scrollToken);
 
                     /**
                      * 判断参数 ScrollToken 是否已赋值
                      * @return ScrollToken 是否已赋值
+                     * 
                      */
                     bool ScrollTokenHasBeenSet() const;
 

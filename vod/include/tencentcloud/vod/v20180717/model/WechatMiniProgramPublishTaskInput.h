@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the transcoding template corresponding to the published video. 0 represents the source video.
                      * @return SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+                     * 
                      */
                     uint64_t GetSourceDefinition() const;
 
                     /**
                      * 设置ID of the transcoding template corresponding to the published video. 0 represents the source video.
-                     * @param SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+                     * @param _sourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+                     * 
                      */
                     void SetSourceDefinition(const uint64_t& _sourceDefinition);
 
                     /**
                      * 判断参数 SourceDefinition 是否已赋值
                      * @return SourceDefinition 是否已赋值
+                     * 
                      */
                     bool SourceDefinitionHasBeenSet() const;
 

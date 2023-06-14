@@ -52,36 +52,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of transcoding template.
                      * @return Definition Unique ID of transcoding template.
+                     * 
                      */
                     std::string GetDefinition() const;
 
                     /**
                      * 设置Unique ID of transcoding template.
-                     * @param Definition Unique ID of transcoding template.
+                     * @param _definition Unique ID of transcoding template.
+                     * 
                      */
                     void SetDefinition(const std::string& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
                      * @return Container Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
+                     * 
                      */
                     std::string GetContainer() const;
 
                     /**
                      * 设置Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
-                     * @param Container Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
+                     * @param _container Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
+                     * 
                      */
                     void SetContainer(const std::string& _container);
 
                     /**
                      * 判断参数 Container 是否已赋值
                      * @return Container 是否已赋值
+                     * 
                      */
                     bool ContainerHasBeenSet() const;
 
@@ -90,20 +96,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Name Transcoding template name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Transcoding template name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Name Transcoding template name.
+                     * @param _name Transcoding template name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -112,20 +121,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Comment Template description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Template description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Comment Template description.
+                     * @param _comment Template description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -136,6 +148,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Type Template type. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -143,15 +156,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Template type. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
-                     * @param Type Template type. Valid values:
+                     * @param _type Template type. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -162,6 +177,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return RemoveVideo Whether to remove video data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
+                     * 
                      */
                     int64_t GetRemoveVideo() const;
 
@@ -169,15 +185,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Whether to remove video data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
-                     * @param RemoveVideo Whether to remove video data. Valid values:
+                     * @param _removeVideo Whether to remove video data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
+                     * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
 
                     /**
                      * 判断参数 RemoveVideo 是否已赋值
                      * @return RemoveVideo 是否已赋值
+                     * 
                      */
                     bool RemoveVideoHasBeenSet() const;
 
@@ -188,6 +206,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return RemoveAudio Whether to remove audio data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
+                     * 
                      */
                     int64_t GetRemoveAudio() const;
 
@@ -195,15 +214,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Whether to remove audio data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
-                     * @param RemoveAudio Whether to remove audio data. Valid values:
+                     * @param _removeAudio Whether to remove audio data. Valid values:
 <li>0: retain;</li>
 <li>1: remove.</li>
+                     * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
 
                     /**
                      * 判断参数 RemoveAudio 是否已赋值
                      * @return RemoveAudio 是否已赋值
+                     * 
                      */
                     bool RemoveAudioHasBeenSet() const;
 
@@ -212,20 +233,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VideoTemplate Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VideoTemplateInfo GetVideoTemplate() const;
 
                     /**
                      * 设置Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VideoTemplate Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
+                     * @param _videoTemplate Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfo& _videoTemplate);
 
                     /**
                      * 判断参数 VideoTemplate 是否已赋值
                      * @return VideoTemplate 是否已赋值
+                     * 
                      */
                     bool VideoTemplateHasBeenSet() const;
 
@@ -234,20 +258,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AudioTemplate Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AudioTemplateInfo GetAudioTemplate() const;
 
                     /**
                      * 设置Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AudioTemplate Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
+                     * @param _audioTemplate Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfo& _audioTemplate);
 
                     /**
                      * 判断参数 AudioTemplate 是否已赋值
                      * @return AudioTemplate 是否已赋值
+                     * 
                      */
                     bool AudioTemplateHasBeenSet() const;
 
@@ -256,20 +283,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TEHDConfig TESHD transcoding parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
                      * 设置TESHD transcoding parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TEHDConfig TESHD transcoding parameter.
+                     * @param _tEHDConfig TESHD transcoding parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
 
                     /**
                      * 判断参数 TEHDConfig 是否已赋值
                      * @return TEHDConfig 是否已赋值
+                     * 
                      */
                     bool TEHDConfigHasBeenSet() const;
 
@@ -280,6 +310,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return ContainerType Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li>
+                     * 
                      */
                     std::string GetContainerType() const;
 
@@ -287,69 +318,80 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li>
-                     * @param ContainerType Container filter. Valid values:
+                     * @param _containerType Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li>
+                     * 
                      */
                     void SetContainerType(const std::string& _containerType);
 
                     /**
                      * 判断参数 ContainerType 是否已赋值
                      * @return ContainerType 是否已赋值
+                     * 
                      */
                     bool ContainerTypeHasBeenSet() const;
 
                     /**
                      * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取The segment type. This parameter is valid only if `Container` is `hls`
                      * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+                     * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
                      * 设置The segment type. This parameter is valid only if `Container` is `hls`
-                     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+                     * @param _segmentType The segment type. This parameter is valid only if `Container` is `hls`
+                     * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
 
                     /**
                      * 判断参数 SegmentType 是否已赋值
                      * @return SegmentType 是否已赋值
+                     * 
                      */
                     bool SegmentTypeHasBeenSet() const;
 

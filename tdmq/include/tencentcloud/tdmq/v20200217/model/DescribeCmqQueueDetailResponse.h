@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of queue details.
                      * @return QueueDescribe List of queue details.
+                     * 
                      */
                     CmqQueue GetQueueDescribe() const;
 
                     /**
                      * 判断参数 QueueDescribe 是否已赋值
                      * @return QueueDescribe 是否已赋值
+                     * 
                      */
                     bool QueueDescribeHasBeenSet() const;
 

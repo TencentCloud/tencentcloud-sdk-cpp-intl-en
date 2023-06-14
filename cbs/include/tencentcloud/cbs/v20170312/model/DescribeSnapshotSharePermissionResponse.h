@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The set of snapshot sharing information
                      * @return SharePermissionSet The set of snapshot sharing information
+                     * 
                      */
                     std::vector<SharePermission> GetSharePermissionSet() const;
 
                     /**
                      * 判断参数 SharePermissionSet 是否已赋值
                      * @return SharePermissionSet 是否已赋值
+                     * 
                      */
                     bool SharePermissionSetHasBeenSet() const;
 

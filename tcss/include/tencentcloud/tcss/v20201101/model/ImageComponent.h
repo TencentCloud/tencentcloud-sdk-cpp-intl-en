@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Component name
                      * @return Name Component name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Component name
-                     * @param Name Component name
+                     * @param _name Component name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Component version
                      * @return Version Component version
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Component version
-                     * @param Version Component version
+                     * @param _version Component version
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
                     /**
                      * 获取Component path
                      * @return Path Component path
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Component path
-                     * @param Path Component path
+                     * @param _path Component path
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Component type
                      * @return Type Component type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Component type
-                     * @param Type Component type
+                     * @param _type Component type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulCount Number of component vulnerabilities
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetVulCount() const;
 
                     /**
                      * 设置Number of component vulnerabilities
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VulCount Number of component vulnerabilities
+                     * @param _vulCount Number of component vulnerabilities
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVulCount(const uint64_t& _vulCount);
 
                     /**
                      * 判断参数 VulCount 是否已赋值
                      * @return VulCount 是否已赋值
+                     * 
                      */
                     bool VulCountHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageID Image ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 

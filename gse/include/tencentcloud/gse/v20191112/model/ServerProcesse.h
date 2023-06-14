@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Number of concurrent processes. Value range of total concurrent processes: 1-50.
                      * @return ConcurrentExecutions Number of concurrent processes. Value range of total concurrent processes: 1-50.
+                     * 
                      */
                     uint64_t GetConcurrentExecutions() const;
 
                     /**
                      * 设置Number of concurrent processes. Value range of total concurrent processes: 1-50.
-                     * @param ConcurrentExecutions Number of concurrent processes. Value range of total concurrent processes: 1-50.
+                     * @param _concurrentExecutions Number of concurrent processes. Value range of total concurrent processes: 1-50.
+                     * 
                      */
                     void SetConcurrentExecutions(const uint64_t& _concurrentExecutions);
 
                     /**
                      * 判断参数 ConcurrentExecutions 是否已赋值
                      * @return ConcurrentExecutions 是否已赋值
+                     * 
                      */
                     bool ConcurrentExecutionsHasBeenSet() const;
 
                     /**
                      * 获取Launch Path. Linux: /local/game/ or Windows: C:\game\. The path length is 1-1024.
                      * @return LaunchPath Launch Path. Linux: /local/game/ or Windows: C:\game\. The path length is 1-1024.
+                     * 
                      */
                     std::string GetLaunchPath() const;
 
                     /**
                      * 设置Launch Path. Linux: /local/game/ or Windows: C:\game\. The path length is 1-1024.
-                     * @param LaunchPath Launch Path. Linux: /local/game/ or Windows: C:\game\. The path length is 1-1024.
+                     * @param _launchPath Launch Path. Linux: /local/game/ or Windows: C:\game\. The path length is 1-1024.
+                     * 
                      */
                     void SetLaunchPath(const std::string& _launchPath);
 
                     /**
                      * 判断参数 LaunchPath 是否已赋值
                      * @return LaunchPath 是否已赋值
+                     * 
                      */
                     bool LaunchPathHasBeenSet() const;
 
                     /**
                      * 获取Launch parameter. The length is 0-1024.
                      * @return Parameters Launch parameter. The length is 0-1024.
+                     * 
                      */
                     std::string GetParameters() const;
 
                     /**
                      * 设置Launch parameter. The length is 0-1024.
-                     * @param Parameters Launch parameter. The length is 0-1024.
+                     * @param _parameters Launch parameter. The length is 0-1024.
+                     * 
                      */
                     void SetParameters(const std::string& _parameters);
 
                     /**
                      * 判断参数 Parameters 是否已赋值
                      * @return Parameters 是否已赋值
+                     * 
                      */
                     bool ParametersHasBeenSet() const;
 

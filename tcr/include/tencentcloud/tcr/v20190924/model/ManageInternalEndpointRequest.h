@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Create/Delete
                      * @return Operation Create/Delete
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置Create/Delete
-                     * @param Operation Create/Delete
+                     * @param _operation Create/Delete
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
                     /**
                      * 获取ID of the VPC to be connected to
                      * @return VpcId ID of the VPC to be connected to
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置ID of the VPC to be connected to
-                     * @param VpcId ID of the VPC to be connected to
+                     * @param _vpcId ID of the VPC to be connected to
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the subnet to be connected to
                      * @return SubnetId ID of the subnet to be connected to
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置ID of the subnet to be connected to
-                     * @param SubnetId ID of the subnet to be connected to
+                     * @param _subnetId ID of the subnet to be connected to
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the requested region, which is used as the region of the replica instance
                      * @return RegionId ID of the requested region, which is used as the region of the replica instance
+                     * 
                      */
                     uint64_t GetRegionId() const;
 
                     /**
                      * 设置ID of the requested region, which is used as the region of the replica instance
-                     * @param RegionId ID of the requested region, which is used as the region of the replica instance
+                     * @param _regionId ID of the requested region, which is used as the region of the replica instance
+                     * 
                      */
                     void SetRegionId(const uint64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the requested region, which is used as the region of the replica instance
                      * @return RegionName Name of the requested region, which is used as the region of the replica instance
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Name of the requested region, which is used as the region of the replica instance
-                     * @param RegionName Name of the requested region, which is used as the region of the replica instance
+                     * @param _regionName Name of the requested region, which is used as the region of the replica instance
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 

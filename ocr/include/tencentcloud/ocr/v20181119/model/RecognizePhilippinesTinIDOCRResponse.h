@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取The Base64-encoded identity photo.
                      * @return HeadPortrait The Base64-encoded identity photo.
+                     * 
                      */
                     TextDetectionResult GetHeadPortrait() const;
 
                     /**
                      * 判断参数 HeadPortrait 是否已赋值
                      * @return HeadPortrait 是否已赋值
+                     * 
                      */
                     bool HeadPortraitHasBeenSet() const;
 
                     /**
                      * 获取The tax identification number (TIN).
                      * @return LicenseNumber The tax identification number (TIN).
+                     * 
                      */
                     TextDetectionResult GetLicenseNumber() const;
 
                     /**
                      * 判断参数 LicenseNumber 是否已赋值
                      * @return LicenseNumber 是否已赋值
+                     * 
                      */
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
                      * 获取The name.
                      * @return FullName The name.
+                     * 
                      */
                     TextDetectionResult GetFullName() const;
 
                     /**
                      * 判断参数 FullName 是否已赋值
                      * @return FullName 是否已赋值
+                     * 
                      */
                     bool FullNameHasBeenSet() const;
 
                     /**
                      * 获取The address.
                      * @return Address The address.
+                     * 
                      */
                     TextDetectionResult GetAddress() const;
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取The birth date.
                      * @return Birthday The birth date.
+                     * 
                      */
                     TextDetectionResult GetBirthday() const;
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 
                     /**
                      * 获取The issue date.
                      * @return IssueDate The issue date.
+                     * 
                      */
                     TextDetectionResult GetIssueDate() const;
 
                     /**
                      * 判断参数 IssueDate 是否已赋值
                      * @return IssueDate 是否已赋值
+                     * 
                      */
                     bool IssueDateHasBeenSet() const;
 

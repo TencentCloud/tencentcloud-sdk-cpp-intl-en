@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether values are case sensitive
                      * @return CaseSensitive Whether values are case sensitive
+                     * 
                      */
                     bool GetCaseSensitive() const;
 
                     /**
                      * 设置Whether values are case sensitive
-                     * @param CaseSensitive Whether values are case sensitive
+                     * @param _caseSensitive Whether values are case sensitive
+                     * 
                      */
                     void SetCaseSensitive(const bool& _caseSensitive);
 
                     /**
                      * 判断参数 CaseSensitive 是否已赋值
                      * @return CaseSensitive 是否已赋值
+                     * 
                      */
                     bool CaseSensitiveHasBeenSet() const;
 
@@ -93,6 +96,7 @@ namespace TencentCloud
 `cookie`: Cookie. The value can contain up to 512 characters.
 `user-agent`: User-Agent. The value can contain up to 512 characters.
 `head`: custom header. The value can contain up to 512 characters. If the matching content is blank or does not exist, enter the matching parameter directly.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -111,7 +115,7 @@ namespace TencentCloud
 `cookie`: Cookie. The value can contain up to 512 characters.
 `user-agent`: User-Agent. The value can contain up to 512 characters.
 `head`: custom header. The value can contain up to 512 characters. If the matching content is blank or does not exist, enter the matching parameter directly.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `protocol`: protocol. Valid values: `HTTP` and `HTTPS`.
 `method`: request method. Valid values: `HEAD`, `GET`, `POST`, `PUT`, `OPTIONS`, `TRACE`, `DELETE`, `PATCH` and `CONNECT`.
 `all`: domain name. The matching content is `*` and cannot be edited.
@@ -125,12 +129,14 @@ namespace TencentCloud
 `cookie`: Cookie. The value can contain up to 512 characters.
 `user-agent`: User-Agent. The value can contain up to 512 characters.
 `head`: custom header. The value can contain up to 512 characters. If the matching content is blank or does not exist, enter the matching parameter directly.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -149,6 +155,7 @@ namespace TencentCloud
 `equal`: the rule value is equal to the specified rule type. 
 `matching`: the rule value matches with the prefix of the specified rule type.
 `null`: the rule value is empty or does not exist.
+                     * 
                      */
                     std::string GetLogicOperator() const;
 
@@ -160,19 +167,21 @@ namespace TencentCloud
 `equal`: the rule value is equal to the specified rule type. 
 `matching`: the rule value matches with the prefix of the specified rule type.
 `null`: the rule value is empty or does not exist.
-                     * @param LogicOperator Logical operator, which connects the relation between RuleType and RuleValue. Valid values:
+                     * @param _logicOperator Logical operator, which connects the relation between RuleType and RuleValue. Valid values:
 `exclude`: the rule value is not contained. 
 `include`: the rule value is contained. 
 `notequal`: the rule value is not equal to the specified rule type. 
 `equal`: the rule value is equal to the specified rule type. 
 `matching`: the rule value matches with the prefix of the specified rule type.
 `null`: the rule value is empty or does not exist.
+                     * 
                      */
                     void SetLogicOperator(const std::string& _logicOperator);
 
                     /**
                      * 判断参数 LogicOperator 是否已赋值
                      * @return LogicOperator 是否已赋值
+                     * 
                      */
                     bool LogicOperatorHasBeenSet() const;
 
@@ -181,20 +190,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RuleValue Rule value
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRuleValue() const;
 
                     /**
                      * 设置Rule value
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RuleValue Rule value
+                     * @param _ruleValue Rule value
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleValue(const std::vector<std::string>& _ruleValue);
 
                     /**
                      * 判断参数 RuleValue 是否已赋值
                      * @return RuleValue 是否已赋值
+                     * 
                      */
                     bool RuleValueHasBeenSet() const;
 
@@ -203,20 +215,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RuleParam Matched parameter. Only request parameters, Cookie, and custom request headers have a value.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleParam() const;
 
                     /**
                      * 设置Matched parameter. Only request parameters, Cookie, and custom request headers have a value.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RuleParam Matched parameter. Only request parameters, Cookie, and custom request headers have a value.
+                     * @param _ruleParam Matched parameter. Only request parameters, Cookie, and custom request headers have a value.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleParam(const std::string& _ruleParam);
 
                     /**
                      * 判断参数 RuleParam 是否已赋值
                      * @return RuleParam 是否已赋值
+                     * 
                      */
                     bool RuleParamHasBeenSet() const;
 

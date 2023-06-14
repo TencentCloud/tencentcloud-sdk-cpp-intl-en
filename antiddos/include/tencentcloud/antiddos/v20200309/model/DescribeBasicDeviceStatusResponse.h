@@ -53,12 +53,14 @@ namespace TencentCloud
 `1`: The IP is blocked.
 `2`: The P is normal.
 `3`: The IP is being attacked.
+                     * 
                      */
                     std::vector<KeyValue> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

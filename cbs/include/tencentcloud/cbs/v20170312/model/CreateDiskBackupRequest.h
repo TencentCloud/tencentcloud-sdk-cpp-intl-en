@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of the cloud disk for which to create a backup point.
                      * @return DiskId Name of the cloud disk for which to create a backup point.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Name of the cloud disk for which to create a backup point.
-                     * @param DiskId Name of the cloud disk for which to create a backup point.
+                     * @param _diskId Name of the cloud disk for which to create a backup point.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the cloud disk backup point, which can contain up to 100 characters.
                      * @return DiskBackupName Name of the cloud disk backup point, which can contain up to 100 characters.
+                     * 
                      */
                     std::string GetDiskBackupName() const;
 
                     /**
                      * 设置Name of the cloud disk backup point, which can contain up to 100 characters.
-                     * @param DiskBackupName Name of the cloud disk backup point, which can contain up to 100 characters.
+                     * @param _diskBackupName Name of the cloud disk backup point, which can contain up to 100 characters.
+                     * 
                      */
                     void SetDiskBackupName(const std::string& _diskBackupName);
 
                     /**
                      * 判断参数 DiskBackupName 是否已赋值
                      * @return DiskBackupName 是否已赋值
+                     * 
                      */
                     bool DiskBackupNameHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Bidding price such as "1.05"
                      * @return MaxPrice Bidding price such as "1.05"
+                     * 
                      */
                     std::string GetMaxPrice() const;
 
                     /**
                      * 设置Bidding price such as "1.05"
-                     * @param MaxPrice Bidding price such as "1.05"
+                     * @param _maxPrice Bidding price such as "1.05"
+                     * 
                      */
                     void SetMaxPrice(const std::string& _maxPrice);
 
                     /**
                      * 判断参数 MaxPrice 是否已赋值
                      * @return MaxPrice 是否已赋值
+                     * 
                      */
                     bool MaxPriceHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SpotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSpotInstanceType() const;
 
                     /**
                      * 设置Bid request type. Currently, only "one-time" type is supported. Default value: one-time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SpotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
+                     * @param _spotInstanceType Bid request type. Currently, only "one-time" type is supported. Default value: one-time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpotInstanceType(const std::string& _spotInstanceType);
 
                     /**
                      * 判断参数 SpotInstanceType 是否已赋值
                      * @return SpotInstanceType 是否已赋值
+                     * 
                      */
                     bool SpotInstanceTypeHasBeenSet() const;
 

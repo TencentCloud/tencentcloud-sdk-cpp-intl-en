@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Auto-renewal flag and purchase duration in months for prepayment. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
                      * @return RegistryChargePrepaid Auto-renewal flag and purchase duration in months for prepayment. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
+                     * 
                      */
                     RegistryChargePrepaid GetRegistryChargePrepaid() const;
 
                     /**
                      * 设置Auto-renewal flag and purchase duration in months for prepayment. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
-                     * @param RegistryChargePrepaid Auto-renewal flag and purchase duration in months for prepayment. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
+                     * @param _registryChargePrepaid Auto-renewal flag and purchase duration in months for prepayment. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
+                     * 
                      */
                     void SetRegistryChargePrepaid(const RegistryChargePrepaid& _registryChargePrepaid);
 
                     /**
                      * 判断参数 RegistryChargePrepaid 是否已赋值
                      * @return RegistryChargePrepaid 是否已赋值
+                     * 
                      */
                     bool RegistryChargePrepaidHasBeenSet() const;
 
                     /**
                      * 获取Valid values: 0: renewal; 1: change from pay-as-you-go to monthly subscription billing
                      * @return Flag Valid values: 0: renewal; 1: change from pay-as-you-go to monthly subscription billing
+                     * 
                      */
                     int64_t GetFlag() const;
 
                     /**
                      * 设置Valid values: 0: renewal; 1: change from pay-as-you-go to monthly subscription billing
-                     * @param Flag Valid values: 0: renewal; 1: change from pay-as-you-go to monthly subscription billing
+                     * @param _flag Valid values: 0: renewal; 1: change from pay-as-you-go to monthly subscription billing
+                     * 
                      */
                     void SetFlag(const int64_t& _flag);
 
                     /**
                      * 判断参数 Flag 是否已赋值
                      * @return Flag 是否已赋值
+                     * 
                      */
                     bool FlagHasBeenSet() const;
 

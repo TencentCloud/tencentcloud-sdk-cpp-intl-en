@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Your push domain name.
                      * @return DomainName Your push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Your push domain name.
-                     * @param DomainName Your push domain name.
+                     * @param _domainName Your push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -69,6 +72,7 @@ Note: The difference between EndTime and StartTime cannot be greater than 30 day
 In UTC format, such as 2016-06-30T19:00:00Z.
 This cannot be after the current time.
 Note: The difference between EndTime and StartTime cannot be greater than 30 days.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -77,16 +81,18 @@ Note: The difference between EndTime and StartTime cannot be greater than 30 day
 In UTC format, such as 2016-06-30T19:00:00Z.
 This cannot be after the current time.
 Note: The difference between EndTime and StartTime cannot be greater than 30 days.
-                     * @param EndTime End time.
+                     * @param _endTime End time.
 In UTC format, such as 2016-06-30T19:00:00Z.
 This cannot be after the current time.
 Note: The difference between EndTime and StartTime cannot be greater than 30 days.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -97,6 +103,7 @@ This supports querying data in the past 60 days.
                      * @return StartTime Start time. 
 In UTC format, such as 2016-06-29T19:00:00Z.
 This supports querying data in the past 60 days.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -104,33 +111,38 @@ This supports querying data in the past 60 days.
                      * 设置Start time. 
 In UTC format, such as 2016-06-29T19:00:00Z.
 This supports querying data in the past 60 days.
-                     * @param StartTime Start time. 
+                     * @param _startTime Start time. 
 In UTC format, such as 2016-06-29T19:00:00Z.
 This supports querying data in the past 60 days.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
                      * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
-                     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
+                     * @param _appName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
@@ -139,20 +151,23 @@ This supports querying data in the past 60 days.
 Default value: 1.
                      * @return PageNum Page number to get.
 Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 设置Page number to get.
 Default value: 1.
-                     * @param PageNum Page number to get.
+                     * @param _pageNum Page number to get.
 Default value: 1.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -165,6 +180,7 @@ Default value: 10
 Maximum value: 100
 Valid values: integers between 10 and 100
 Default value: 10
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
@@ -173,34 +189,39 @@ Default value: 10
 Maximum value: 100
 Valid values: integers between 10 and 100
 Default value: 10
-                     * @param PageSize Number of entries per page.
+                     * @param _pageSize Number of entries per page.
 Maximum value: 100
 Valid values: integers between 10 and 100
 Default value: 10
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Stream name, which supports fuzzy match.
                      * @return StreamName Stream name, which supports fuzzy match.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name, which supports fuzzy match.
-                     * @param StreamName Stream name, which supports fuzzy match.
+                     * @param _streamName Stream name, which supports fuzzy match.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 

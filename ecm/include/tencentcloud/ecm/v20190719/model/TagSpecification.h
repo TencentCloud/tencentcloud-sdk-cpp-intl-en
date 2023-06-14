@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Resource type. Valid values: instance, module
                      * @return ResourceType Resource type. Valid values: instance, module
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type. Valid values: instance, module
-                     * @param ResourceType Resource type. Valid values: instance, module
+                     * @param _resourceType Resource type. Valid values: instance, module
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Tag list
                      * @return Tags Tag list
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list
-                     * @param Tags Tag list
+                     * @param _tags Tag list
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

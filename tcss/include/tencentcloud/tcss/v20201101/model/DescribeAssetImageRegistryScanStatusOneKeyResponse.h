@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of images
                      * @return ImageTotal Number of images
+                     * 
                      */
                     uint64_t GetImageTotal() const;
 
                     /**
                      * 判断参数 ImageTotal 是否已赋值
                      * @return ImageTotal 是否已赋值
+                     * 
                      */
                     bool ImageTotalHasBeenSet() const;
 
                     /**
                      * 获取Number of scanned images
                      * @return ImageScanCnt Number of scanned images
+                     * 
                      */
                     uint64_t GetImageScanCnt() const;
 
                     /**
                      * 判断参数 ImageScanCnt 是否已赋值
                      * @return ImageScanCnt 是否已赋值
+                     * 
                      */
                     bool ImageScanCntHasBeenSet() const;
 
@@ -73,60 +77,70 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageStatus Scanning progress list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ImageProgress> GetImageStatus() const;
 
                     /**
                      * 判断参数 ImageStatus 是否已赋值
                      * @return ImageStatus 是否已赋值
+                     * 
                      */
                     bool ImageStatusHasBeenSet() const;
 
                     /**
                      * 获取Number of successfully scanned images
                      * @return SuccessCount Number of successfully scanned images
+                     * 
                      */
                     uint64_t GetSuccessCount() const;
 
                     /**
                      * 判断参数 SuccessCount 是否已赋值
                      * @return SuccessCount 是否已赋值
+                     * 
                      */
                     bool SuccessCountHasBeenSet() const;
 
                     /**
                      * 获取Number of risks
                      * @return RiskCount Number of risks
+                     * 
                      */
                     uint64_t GetRiskCount() const;
 
                     /**
                      * 判断参数 RiskCount 是否已赋值
                      * @return RiskCount 是否已赋值
+                     * 
                      */
                     bool RiskCountHasBeenSet() const;
 
                     /**
                      * 获取Scanning progress
                      * @return Schedule Scanning progress
+                     * 
                      */
                     uint64_t GetSchedule() const;
 
                     /**
                      * 判断参数 Schedule 是否已赋值
                      * @return Schedule 是否已赋值
+                     * 
                      */
                     bool ScheduleHasBeenSet() const;
 
                     /**
                      * 获取Scanning status
                      * @return Status Scanning status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -135,12 +149,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanRemainTime Remaining scan time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetScanRemainTime() const;
 
                     /**
                      * 判断参数 ScanRemainTime 是否已赋值
                      * @return ScanRemainTime 是否已赋值
+                     * 
                      */
                     bool ScanRemainTimeHasBeenSet() const;
 

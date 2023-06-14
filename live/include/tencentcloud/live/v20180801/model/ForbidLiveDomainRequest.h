@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取LVB domain name to be disabled.
                      * @return DomainName LVB domain name to be disabled.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置LVB domain name to be disabled.
-                     * @param DomainName LVB domain name to be disabled.
+                     * @param _domainName LVB domain name to be disabled.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 

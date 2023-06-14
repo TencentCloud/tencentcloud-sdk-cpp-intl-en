@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Period
                      * @return Period Period
+                     * 
                      */
                     std::string GetPeriod() const;
 
                     /**
                      * 设置Period
-                     * @param Period Period
+                     * @param _period Period
+                     * 
                      */
                     void SetPeriod(const std::string& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Statistical method
                      * @return StatType Statistical method
+                     * 
                      */
                     std::vector<std::string> GetStatType() const;
 
                     /**
                      * 设置Statistical method
-                     * @param StatType Statistical method
+                     * @param _statType Statistical method
+                     * 
                      */
                     void SetStatType(const std::vector<std::string>& _statType);
 
                     /**
                      * 判断参数 StatType 是否已赋值
                      * @return StatType 是否已赋值
+                     * 
                      */
                     bool StatTypeHasBeenSet() const;
 

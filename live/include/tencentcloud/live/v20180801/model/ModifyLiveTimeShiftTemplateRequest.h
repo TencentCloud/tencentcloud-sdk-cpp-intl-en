@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The time shifting template ID.
                      * @return TemplateId The time shifting template ID.
+                     * 
                      */
                     uint64_t GetTemplateId() const;
 
                     /**
                      * 设置The time shifting template ID.
-                     * @param TemplateId The time shifting template ID.
+                     * @param _templateId The time shifting template ID.
+                     * 
                      */
                     void SetTemplateId(const uint64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 Only letters, numbers, underscores, and hyphens are supported.
                      * @return TemplateName The template name.
 Only letters, numbers, underscores, and hyphens are supported.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置The template name.
 Only letters, numbers, underscores, and hyphens are supported.
-                     * @param TemplateName The template name.
+                     * @param _templateName The template name.
 Only letters, numbers, underscores, and hyphens are supported.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
@@ -89,6 +95,7 @@ Only letters, numbers, underscores, and hyphens are supported.
                      * @return Description The template description.
 Maximum length: 1,024 bytes.
 Only letters, numbers, underscores, and hyphens are supported.
+                     * 
                      */
                     std::string GetDescription() const;
 
@@ -96,15 +103,17 @@ Only letters, numbers, underscores, and hyphens are supported.
                      * 设置The template description.
 Maximum length: 1,024 bytes.
 Only letters, numbers, underscores, and hyphens are supported.
-                     * @param Description The template description.
+                     * @param _description The template description.
 Maximum length: 1,024 bytes.
 Only letters, numbers, underscores, and hyphens are supported.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Only letters, numbers, underscores, and hyphens are supported.
 Unit: Second.
                      * @return Duration The time shifting duration.
 Unit: Second.
+                     * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
                      * 设置The time shifting duration.
 Unit: Second.
-                     * @param Duration The time shifting duration.
+                     * @param _duration The time shifting duration.
 Unit: Second.
+                     * 
                      */
                     void SetDuration(const uint64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
@@ -139,6 +151,7 @@ Default value: 5
 Value range: 3-10.
 Unit: Second.
 Default value: 5
+                     * 
                      */
                     uint64_t GetItemDuration() const;
 
@@ -147,16 +160,18 @@ Default value: 5
 Value range: 3-10.
 Unit: Second.
 Default value: 5
-                     * @param ItemDuration The segment size.
+                     * @param _itemDuration The segment size.
 Value range: 3-10.
 Unit: Second.
 Default value: 5
+                     * 
                      */
                     void SetItemDuration(const uint64_t& _itemDuration);
 
                     /**
                      * 判断参数 ItemDuration 是否已赋值
                      * @return ItemDuration 是否已赋值
+                     * 
                      */
                     bool ItemDurationHasBeenSet() const;
 
@@ -167,6 +182,7 @@ Default value: `false`.
                      * @return RemoveWatermark Whether to remove watermarks.
 If you pass in `true`, the original stream will be recorded.
 Default value: `false`.
+                     * 
                      */
                     bool GetRemoveWatermark() const;
 
@@ -174,15 +190,17 @@ Default value: `false`.
                      * 设置Whether to remove watermarks.
 If you pass in `true`, the original stream will be recorded.
 Default value: `false`.
-                     * @param RemoveWatermark Whether to remove watermarks.
+                     * @param _removeWatermark Whether to remove watermarks.
 If you pass in `true`, the original stream will be recorded.
 Default value: `false`.
+                     * 
                      */
                     void SetRemoveWatermark(const bool& _removeWatermark);
 
                     /**
                      * 判断参数 RemoveWatermark 是否已赋值
                      * @return RemoveWatermark 是否已赋值
+                     * 
                      */
                     bool RemoveWatermarkHasBeenSet() const;
 
@@ -191,20 +209,23 @@ Default value: `false`.
 This API works only if `RemoveWatermark` is `false`.
                      * @return TranscodeTemplateIds The transcoding template IDs.
 This API works only if `RemoveWatermark` is `false`.
+                     * 
                      */
                     std::vector<int64_t> GetTranscodeTemplateIds() const;
 
                     /**
                      * 设置The transcoding template IDs.
 This API works only if `RemoveWatermark` is `false`.
-                     * @param TranscodeTemplateIds The transcoding template IDs.
+                     * @param _transcodeTemplateIds The transcoding template IDs.
 This API works only if `RemoveWatermark` is `false`.
+                     * 
                      */
                     void SetTranscodeTemplateIds(const std::vector<int64_t>& _transcodeTemplateIds);
 
                     /**
                      * 判断参数 TranscodeTemplateIds 是否已赋值
                      * @return TranscodeTemplateIds 是否已赋值
+                     * 
                      */
                     bool TranscodeTemplateIdsHasBeenSet() const;
 
@@ -217,6 +238,7 @@ Default value: `Mainland`.
 `Mainland`: The Chinese mainland.
 `Overseas`: Outside the Chinese mainland.
 Default value: `Mainland`.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -225,16 +247,18 @@ Default value: `Mainland`.
 `Mainland`: The Chinese mainland.
 `Overseas`: Outside the Chinese mainland.
 Default value: `Mainland`.
-                     * @param Area The region.
+                     * @param _area The region.
 `Mainland`: The Chinese mainland.
 `Overseas`: Outside the Chinese mainland.
 Default value: `Mainland`.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

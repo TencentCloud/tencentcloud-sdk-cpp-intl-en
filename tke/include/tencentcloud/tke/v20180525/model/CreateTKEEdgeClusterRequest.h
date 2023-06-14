@@ -47,252 +47,294 @@ namespace TencentCloud
                     /**
                      * 获取
                      * @return K8SVersion 
+                     * 
                      */
                     std::string GetK8SVersion() const;
 
                     /**
                      * 设置
-                     * @param K8SVersion 
+                     * @param _k8SVersion 
+                     * 
                      */
                     void SetK8SVersion(const std::string& _k8SVersion);
 
                     /**
                      * 判断参数 K8SVersion 是否已赋值
                      * @return K8SVersion 是否已赋值
+                     * 
                      */
                     bool K8SVersionHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Cluster Pod CIDR block
                      * @return PodCIDR Cluster Pod CIDR block
+                     * 
                      */
                     std::string GetPodCIDR() const;
 
                     /**
                      * 设置Cluster Pod CIDR block
-                     * @param PodCIDR Cluster Pod CIDR block
+                     * @param _podCIDR Cluster Pod CIDR block
+                     * 
                      */
                     void SetPodCIDR(const std::string& _podCIDR);
 
                     /**
                      * 判断参数 PodCIDR 是否已赋值
                      * @return PodCIDR 是否已赋值
+                     * 
                      */
                     bool PodCIDRHasBeenSet() const;
 
                     /**
                      * 获取Cluster service CIDR block
                      * @return ServiceCIDR Cluster service CIDR block
+                     * 
                      */
                     std::string GetServiceCIDR() const;
 
                     /**
                      * 设置Cluster service CIDR block
-                     * @param ServiceCIDR Cluster service CIDR block
+                     * @param _serviceCIDR Cluster service CIDR block
+                     * 
                      */
                     void SetServiceCIDR(const std::string& _serviceCIDR);
 
                     /**
                      * 判断参数 ServiceCIDR 是否已赋值
                      * @return ServiceCIDR 是否已赋值
+                     * 
                      */
                     bool ServiceCIDRHasBeenSet() const;
 
                     /**
                      * 获取Cluster description
                      * @return ClusterDesc Cluster description
+                     * 
                      */
                     std::string GetClusterDesc() const;
 
                     /**
                      * 设置Cluster description
-                     * @param ClusterDesc Cluster description
+                     * @param _clusterDesc Cluster description
+                     * 
                      */
                     void SetClusterDesc(const std::string& _clusterDesc);
 
                     /**
                      * 判断参数 ClusterDesc 是否已赋值
                      * @return ClusterDesc 是否已赋值
+                     * 
                      */
                     bool ClusterDescHasBeenSet() const;
 
                     /**
                      * 获取Cluster advanced settings
                      * @return ClusterAdvancedSettings Cluster advanced settings
+                     * 
                      */
                     EdgeClusterAdvancedSettings GetClusterAdvancedSettings() const;
 
                     /**
                      * 设置Cluster advanced settings
-                     * @param ClusterAdvancedSettings Cluster advanced settings
+                     * @param _clusterAdvancedSettings Cluster advanced settings
+                     * 
                      */
                     void SetClusterAdvancedSettings(const EdgeClusterAdvancedSettings& _clusterAdvancedSettings);
 
                     /**
                      * 判断参数 ClusterAdvancedSettings 是否已赋值
                      * @return ClusterAdvancedSettings 是否已赋值
+                     * 
                      */
                     bool ClusterAdvancedSettingsHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of Pods on the node
                      * @return MaxNodePodNum Maximum number of Pods on the node
+                     * 
                      */
                     int64_t GetMaxNodePodNum() const;
 
                     /**
                      * 设置Maximum number of Pods on the node
-                     * @param MaxNodePodNum Maximum number of Pods on the node
+                     * @param _maxNodePodNum Maximum number of Pods on the node
+                     * 
                      */
                     void SetMaxNodePodNum(const int64_t& _maxNodePodNum);
 
                     /**
                      * 判断参数 MaxNodePodNum 是否已赋值
                      * @return MaxNodePodNum 是否已赋值
+                     * 
                      */
                     bool MaxNodePodNumHasBeenSet() const;
 
                     /**
                      * 获取Public LB of the TKE Edge cluster
                      * @return PublicLB Public LB of the TKE Edge cluster
+                     * 
                      */
                     EdgeClusterPublicLB GetPublicLB() const;
 
                     /**
                      * 设置Public LB of the TKE Edge cluster
-                     * @param PublicLB Public LB of the TKE Edge cluster
+                     * @param _publicLB Public LB of the TKE Edge cluster
+                     * 
                      */
                     void SetPublicLB(const EdgeClusterPublicLB& _publicLB);
 
                     /**
                      * 判断参数 PublicLB 是否已赋值
                      * @return PublicLB 是否已赋值
+                     * 
                      */
                     bool PublicLBHasBeenSet() const;
 
                     /**
                      * 获取Cluster specification level
                      * @return ClusterLevel Cluster specification level
+                     * 
                      */
                     std::string GetClusterLevel() const;
 
                     /**
                      * 设置Cluster specification level
-                     * @param ClusterLevel Cluster specification level
+                     * @param _clusterLevel Cluster specification level
+                     * 
                      */
                     void SetClusterLevel(const std::string& _clusterLevel);
 
                     /**
                      * 判断参数 ClusterLevel 是否已赋值
                      * @return ClusterLevel 是否已赋值
+                     * 
                      */
                     bool ClusterLevelHasBeenSet() const;
 
                     /**
                      * 获取Whether auto upgrade is supported
                      * @return AutoUpgradeClusterLevel Whether auto upgrade is supported
+                     * 
                      */
                     bool GetAutoUpgradeClusterLevel() const;
 
                     /**
                      * 设置Whether auto upgrade is supported
-                     * @param AutoUpgradeClusterLevel Whether auto upgrade is supported
+                     * @param _autoUpgradeClusterLevel Whether auto upgrade is supported
+                     * 
                      */
                     void SetAutoUpgradeClusterLevel(const bool& _autoUpgradeClusterLevel);
 
                     /**
                      * 判断参数 AutoUpgradeClusterLevel 是否已赋值
                      * @return AutoUpgradeClusterLevel 是否已赋值
+                     * 
                      */
                     bool AutoUpgradeClusterLevelHasBeenSet() const;
 
                     /**
                      * 获取Cluster billing mode
                      * @return ChargeType Cluster billing mode
+                     * 
                      */
                     std::string GetChargeType() const;
 
                     /**
                      * 设置Cluster billing mode
-                     * @param ChargeType Cluster billing mode
+                     * @param _chargeType Cluster billing mode
+                     * 
                      */
                     void SetChargeType(const std::string& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Edge cluster version. It is the set of versions of all cluster components.
                      * @return EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
+                     * 
                      */
                     std::string GetEdgeVersion() const;
 
                     /**
                      * 设置Edge cluster version. It is the set of versions of all cluster components.
-                     * @param EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
+                     * @param _edgeVersion Edge cluster version. It is the set of versions of all cluster components.
+                     * 
                      */
                     void SetEdgeVersion(const std::string& _edgeVersion);
 
                     /**
                      * 判断参数 EdgeVersion 是否已赋值
                      * @return EdgeVersion 是否已赋值
+                     * 
                      */
                     bool EdgeVersionHasBeenSet() const;
 
                     /**
                      * 获取Prefix of the image registry of an edge component
                      * @return RegistryPrefix Prefix of the image registry of an edge component
+                     * 
                      */
                     std::string GetRegistryPrefix() const;
 
                     /**
                      * 设置Prefix of the image registry of an edge component
-                     * @param RegistryPrefix Prefix of the image registry of an edge component
+                     * @param _registryPrefix Prefix of the image registry of an edge component
+                     * 
                      */
                     void SetRegistryPrefix(const std::string& _registryPrefix);
 
                     /**
                      * 判断参数 RegistryPrefix 是否已赋值
                      * @return RegistryPrefix 是否已赋值
+                     * 
                      */
                     bool RegistryPrefixHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Installation command
                      * @return Command Installation command
+                     * 
                      */
                     std::string GetCommand() const;
 
                     /**
                      * 判断参数 Command 是否已赋值
                      * @return Command 是否已赋值
+                     * 
                      */
                     bool CommandHasBeenSet() const;
 

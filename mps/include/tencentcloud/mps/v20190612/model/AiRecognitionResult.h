@@ -67,6 +67,7 @@ namespace TencentCloud
 <li>AsrFullTextRecognition: Full speech recognition</li>
 <li>OcrFullTextRecognition: Full text recognition</li>
 <li>TransTextRecognition: Speech translation</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -78,19 +79,21 @@ namespace TencentCloud
 <li>AsrFullTextRecognition: Full speech recognition</li>
 <li>OcrFullTextRecognition: Full text recognition</li>
 <li>TransTextRecognition: Speech translation</li>
-                     * @param Type The task type. Valid values:
+                     * @param _type The task type. Valid values:
 <li>FaceRecognition: Face recognition</li>
 <li>AsrWordsRecognition: Speech keyword recognition</li>
 <li>OcrWordsRecognition: Text keyword recognition</li>
 <li>AsrFullTextRecognition: Full speech recognition</li>
 <li>OcrFullTextRecognition: Full text recognition</li>
 <li>TransTextRecognition: Speech translation</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -101,6 +104,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return FaceTask Face recognition result, which is valid when `Type` is 
  `FaceRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskFaceResult GetFaceTask() const;
 
@@ -108,15 +112,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Face recognition result, which is valid when `Type` is 
  `FaceRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FaceTask Face recognition result, which is valid when `Type` is 
+                     * @param _faceTask Face recognition result, which is valid when `Type` is 
  `FaceRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFaceTask(const AiRecognitionTaskFaceResult& _faceTask);
 
                     /**
                      * 判断参数 FaceTask 是否已赋值
                      * @return FaceTask 是否已赋值
+                     * 
                      */
                     bool FaceTaskHasBeenSet() const;
 
@@ -127,6 +133,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return AsrWordsTask Speech keyword recognition result, which is valid when `Type` is
  `AsrWordsRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskAsrWordsResult GetAsrWordsTask() const;
 
@@ -134,15 +141,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Speech keyword recognition result, which is valid when `Type` is
  `AsrWordsRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AsrWordsTask Speech keyword recognition result, which is valid when `Type` is
+                     * @param _asrWordsTask Speech keyword recognition result, which is valid when `Type` is
  `AsrWordsRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAsrWordsTask(const AiRecognitionTaskAsrWordsResult& _asrWordsTask);
 
                     /**
                      * 判断参数 AsrWordsTask 是否已赋值
                      * @return AsrWordsTask 是否已赋值
+                     * 
                      */
                     bool AsrWordsTaskHasBeenSet() const;
 
@@ -153,6 +162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return AsrFullTextTask Full speech recognition result, which is valid when `Type` is
  `AsrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskAsrFullTextResult GetAsrFullTextTask() const;
 
@@ -160,15 +170,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Full speech recognition result, which is valid when `Type` is
  `AsrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AsrFullTextTask Full speech recognition result, which is valid when `Type` is
+                     * @param _asrFullTextTask Full speech recognition result, which is valid when `Type` is
  `AsrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAsrFullTextTask(const AiRecognitionTaskAsrFullTextResult& _asrFullTextTask);
 
                     /**
                      * 判断参数 AsrFullTextTask 是否已赋值
                      * @return AsrFullTextTask 是否已赋值
+                     * 
                      */
                     bool AsrFullTextTaskHasBeenSet() const;
 
@@ -179,6 +191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return OcrWordsTask Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskOcrWordsResult GetOcrWordsTask() const;
 
@@ -186,15 +199,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OcrWordsTask Text keyword recognition result, which is valid when `Type` is
+                     * @param _ocrWordsTask Text keyword recognition result, which is valid when `Type` is
  `OcrWordsRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOcrWordsTask(const AiRecognitionTaskOcrWordsResult& _ocrWordsTask);
 
                     /**
                      * 判断参数 OcrWordsTask 是否已赋值
                      * @return OcrWordsTask 是否已赋值
+                     * 
                      */
                     bool OcrWordsTaskHasBeenSet() const;
 
@@ -205,6 +220,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return OcrFullTextTask Full text recognition result, which is valid when `Type` is
  `OcrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskOcrFullTextResult GetOcrFullTextTask() const;
 
@@ -212,15 +228,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Full text recognition result, which is valid when `Type` is
  `OcrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OcrFullTextTask Full text recognition result, which is valid when `Type` is
+                     * @param _ocrFullTextTask Full text recognition result, which is valid when `Type` is
  `OcrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOcrFullTextTask(const AiRecognitionTaskOcrFullTextResult& _ocrFullTextTask);
 
                     /**
                      * 判断参数 OcrFullTextTask 是否已赋值
                      * @return OcrFullTextTask 是否已赋值
+                     * 
                      */
                     bool OcrFullTextTaskHasBeenSet() const;
 
@@ -231,6 +249,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return TransTextTask The translation result. This parameter is valid only if `Type` is
  `TransTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskTransTextResult GetTransTextTask() const;
 
@@ -238,15 +257,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The translation result. This parameter is valid only if `Type` is
  `TransTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TransTextTask The translation result. This parameter is valid only if `Type` is
+                     * @param _transTextTask The translation result. This parameter is valid only if `Type` is
  `TransTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransTextTask(const AiRecognitionTaskTransTextResult& _transTextTask);
 
                     /**
                      * 判断参数 TransTextTask 是否已赋值
                      * @return TransTextTask 是否已赋值
+                     * 
                      */
                     bool TransTextTaskHasBeenSet() const;
 

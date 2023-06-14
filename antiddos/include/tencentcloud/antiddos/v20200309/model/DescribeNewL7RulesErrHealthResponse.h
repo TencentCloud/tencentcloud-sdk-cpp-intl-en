@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of rules with exceptions. `Key`: Rule ID, `Value`: Exception IPs and error message. 
                      * @return ErrHealths List of rules with exceptions. `Key`: Rule ID, `Value`: Exception IPs and error message. 
+                     * 
                      */
                     std::vector<KeyValue> GetErrHealths() const;
 
                     /**
                      * 判断参数 ErrHealths 是否已赋值
                      * @return ErrHealths 是否已赋值
+                     * 
                      */
                     bool ErrHealthsHasBeenSet() const;
 
                     /**
                      * 获取Total number of rules with exceptions
                      * @return Total Total number of rules with exceptions
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

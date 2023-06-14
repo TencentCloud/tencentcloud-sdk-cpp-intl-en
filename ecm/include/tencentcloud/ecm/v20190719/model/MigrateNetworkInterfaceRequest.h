@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ECM region, such as `ap-xian-ecm`.
                      * @return EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region, such as `ap-xian-ecm`.
-                     * @param EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * @param _ecmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取ENI instance ID, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置ENI instance ID, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the ECM instance bound to the ENI, such as `ein-r8hr2upy`.
                      * @return SourceInstanceId ID of the ECM instance bound to the ENI, such as `ein-r8hr2upy`.
+                     * 
                      */
                     std::string GetSourceInstanceId() const;
 
                     /**
                      * 设置ID of the ECM instance bound to the ENI, such as `ein-r8hr2upy`.
-                     * @param SourceInstanceId ID of the ECM instance bound to the ENI, such as `ein-r8hr2upy`.
+                     * @param _sourceInstanceId ID of the ECM instance bound to the ENI, such as `ein-r8hr2upy`.
+                     * 
                      */
                     void SetSourceInstanceId(const std::string& _sourceInstanceId);
 
                     /**
                      * 判断参数 SourceInstanceId 是否已赋值
                      * @return SourceInstanceId 是否已赋值
+                     * 
                      */
                     bool SourceInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the destination ECM instance to be migrated.
                      * @return DestinationInstanceId ID of the destination ECM instance to be migrated.
+                     * 
                      */
                     std::string GetDestinationInstanceId() const;
 
                     /**
                      * 设置ID of the destination ECM instance to be migrated.
-                     * @param DestinationInstanceId ID of the destination ECM instance to be migrated.
+                     * @param _destinationInstanceId ID of the destination ECM instance to be migrated.
+                     * 
                      */
                     void SetDestinationInstanceId(const std::string& _destinationInstanceId);
 
                     /**
                      * 判断参数 DestinationInstanceId 是否已赋值
                      * @return DestinationInstanceId 是否已赋值
+                     * 
                      */
                     bool DestinationInstanceIdHasBeenSet() const;
 

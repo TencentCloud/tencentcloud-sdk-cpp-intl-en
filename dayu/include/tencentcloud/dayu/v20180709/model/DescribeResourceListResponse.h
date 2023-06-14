@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of records
                      * @return Total Total number of records
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -119,24 +121,28 @@ namespace TencentCloud
 "Key": "DdosMax" (Base protection value of the Anti-DDoS Ultimate instance)
 "Key": "GFBandwidth" (Base business application bandwidth of the Anti-DDoS Advanced instance)
 "Key": "ServiceBandwidth" (Base business application bandwidth of the Anti-DDoS Ultimate instance)
+                     * 
                      */
                     std::vector<KeyValueRecord> GetServicePacks() const;
 
                     /**
                      * 判断参数 ServicePacks 是否已赋值
                      * @return ServicePacks 是否已赋值
+                     * 
                      */
                     bool ServicePacksHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS service type. `bgp`: Anti-DDoS Pro (single IP), `bgp-multip`: Anti-DDoS Pro (multi-IP), `bgpip`: Anti-DDoS Advanced, `net`: Anti-DDoS Ultimate)
                      * @return Business Anti-DDoS service type. `bgp`: Anti-DDoS Pro (single IP), `bgp-multip`: Anti-DDoS Pro (multi-IP), `bgpip`: Anti-DDoS Advanced, `net`: Anti-DDoS Ultimate)
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 

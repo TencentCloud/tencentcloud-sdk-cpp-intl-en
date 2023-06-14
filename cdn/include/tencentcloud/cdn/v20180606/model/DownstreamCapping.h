@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Downstream speed configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Downstream speed configuration switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Downstream speed configuration switch
+                     * @param _switch Downstream speed configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CappingRules Downstream speed limiting rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<CappingRule> GetCappingRules() const;
 
                     /**
                      * 设置Downstream speed limiting rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CappingRules Downstream speed limiting rules
+                     * @param _cappingRules Downstream speed limiting rules
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCappingRules(const std::vector<CappingRule>& _cappingRules);
 
                     /**
                      * 判断参数 CappingRules 是否已赋值
                      * @return CappingRules 是否已赋值
+                     * 
                      */
                     bool CappingRulesHasBeenSet() const;
 

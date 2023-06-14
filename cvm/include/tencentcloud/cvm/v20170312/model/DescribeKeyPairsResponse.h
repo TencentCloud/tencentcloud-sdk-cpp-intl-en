@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of key pairs meeting the filtering conditions.
                      * @return TotalCount Number of key pairs meeting the filtering conditions.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Detailed information on key pairs.
                      * @return KeyPairSet Detailed information on key pairs.
+                     * 
                      */
                     std::vector<KeyPair> GetKeyPairSet() const;
 
                     /**
                      * 判断参数 KeyPairSet 是否已赋值
                      * @return KeyPairSet 是否已赋值
+                     * 
                      */
                     bool KeyPairSetHasBeenSet() const;
 

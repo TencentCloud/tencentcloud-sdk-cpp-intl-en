@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SparkAppId The unique ID of the application.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSparkAppId() const;
 
                     /**
                      * 判断参数 SparkAppId 是否已赋值
                      * @return SparkAppId 是否已赋值
+                     * 
                      */
                     bool SparkAppIdHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of role names.
                      * @return RoleNames Array of role names.
+                     * 
                      */
                     std::vector<std::string> GetRoleNames() const;
 
                     /**
                      * 设置Array of role names.
-                     * @param RoleNames Array of role names.
+                     * @param _roleNames Array of role names.
+                     * 
                      */
                     void SetRoleNames(const std::vector<std::string>& _roleNames);
 
                     /**
                      * 判断参数 RoleNames 是否已赋值
                      * @return RoleNames 是否已赋值
+                     * 
                      */
                     bool RoleNamesHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID (required)
                      * @return ClusterId Cluster ID (required)
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID (required)
-                     * @param ClusterId Cluster ID (required)
+                     * @param _clusterId Cluster ID (required)
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

@@ -58,6 +58,7 @@ A specific domain name: Details of the domain name
 `multiDomains`: Aggregated details of multiple domain names
 Project ID: ID of the specifically queried project
 `all`: Details at the account level
+                     * 
                      */
                     std::string GetResource() const;
 
@@ -67,35 +68,40 @@ A specific domain name: Details of the domain name
 `multiDomains`: Aggregated details of multiple domain names
 Project ID: ID of the specifically queried project
 `all`: Details at the account level
-                     * @param Resource Resource name, which is classified as follows based on different query filters:
+                     * @param _resource Resource name, which is classified as follows based on different query filters:
 A specific domain name: Details of the domain name
 `multiDomains`: Aggregated details of multiple domain names
 Project ID: ID of the specifically queried project
 `all`: Details at the account level
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取Origin-pull data details
                      * @return OriginData Origin-pull data details
+                     * 
                      */
                     std::vector<CdnData> GetOriginData() const;
 
                     /**
                      * 设置Origin-pull data details
-                     * @param OriginData Origin-pull data details
+                     * @param _originData Origin-pull data details
+                     * 
                      */
                     void SetOriginData(const std::vector<CdnData>& _originData);
 
                     /**
                      * 判断参数 OriginData 是否已赋值
                      * @return OriginData 是否已赋值
+                     * 
                      */
                     bool OriginDataHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Daily email sending statistics.
                      * @return DailyVolumes Daily email sending statistics.
+                     * 
                      */
                     std::vector<Volume> GetDailyVolumes() const;
 
                     /**
                      * 判断参数 DailyVolumes 是否已赋值
                      * @return DailyVolumes 是否已赋值
+                     * 
                      */
                     bool DailyVolumesHasBeenSet() const;
 
                     /**
                      * 获取Overall email sending statistics.
                      * @return OverallVolume Overall email sending statistics.
+                     * 
                      */
                     Volume GetOverallVolume() const;
 
                     /**
                      * 判断参数 OverallVolume 是否已赋值
                      * @return OverallVolume 是否已赋值
+                     * 
                      */
                     bool OverallVolumeHasBeenSet() const;
 

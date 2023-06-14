@@ -51,6 +51,7 @@ Default value: `mainland`.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
 Default value: `mainland`.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -59,34 +60,39 @@ Default value: `mainland`.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
 Default value: `mainland`.
-                     * @param Area Specifies a service region.
+                     * @param _area Specifies a service region.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
 Default value: `mainland`.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Specifies the product to query, either `cdn` (default) or `ecdn`.
                      * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Specifies the product to query, either `cdn` (default) or `ecdn`.
-                     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * @param _product Specifies the product to query, either `cdn` (default) or `ecdn`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取CKafka address
                      * @return Address CKafka address
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置CKafka address
-                     * @param Address CKafka address
+                     * @param _address CKafka address
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取CKafka topic
                      * @return Topic CKafka topic
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置CKafka topic
-                     * @param Topic CKafka topic
+                     * @param _topic CKafka topic
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 
                     /**
                      * 获取CKafka username
                      * @return User CKafka username
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置CKafka username
-                     * @param User CKafka username
+                     * @param _user CKafka username
+                     * 
                      */
                     void SetUser(const std::string& _user);
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
                     /**
                      * 获取CKafka password
                      * @return Password CKafka password
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置CKafka password
-                     * @param Password CKafka password
+                     * @param _password CKafka password
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取CKafka instance
                      * @return Instance CKafka instance
+                     * 
                      */
                     std::string GetInstance() const;
 
                     /**
                      * 设置CKafka instance
-                     * @param Instance CKafka instance
+                     * @param _instance CKafka instance
+                     * 
                      */
                     void SetInstance(const std::string& _instance);
 
                     /**
                      * 判断参数 Instance 是否已赋值
                      * @return Instance 是否已赋值
+                     * 
                      */
                     bool InstanceHasBeenSet() const;
 
                     /**
                      * 获取Whether VPC access is enabled
                      * @return IsVpc Whether VPC access is enabled
+                     * 
                      */
                     int64_t GetIsVpc() const;
 
                     /**
                      * 设置Whether VPC access is enabled
-                     * @param IsVpc Whether VPC access is enabled
+                     * @param _isVpc Whether VPC access is enabled
+                     * 
                      */
                     void SetIsVpc(const int64_t& _isVpc);
 
                     /**
                      * 判断参数 IsVpc 是否已赋值
                      * @return IsVpc 是否已赋值
+                     * 
                      */
                     bool IsVpcHasBeenSet() const;
 

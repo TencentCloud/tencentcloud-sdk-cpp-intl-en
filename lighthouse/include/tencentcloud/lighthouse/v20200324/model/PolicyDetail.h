@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取User discount.
                      * @return UserDiscount User discount.
+                     * 
                      */
                     int64_t GetUserDiscount() const;
 
                     /**
                      * 设置User discount.
-                     * @param UserDiscount User discount.
+                     * @param _userDiscount User discount.
+                     * 
                      */
                     void SetUserDiscount(const int64_t& _userDiscount);
 
                     /**
                      * 判断参数 UserDiscount 是否已赋值
                      * @return UserDiscount 是否已赋值
+                     * 
                      */
                     bool UserDiscountHasBeenSet() const;
 
                     /**
                      * 获取Public discount.
                      * @return CommonDiscount Public discount.
+                     * 
                      */
                     int64_t GetCommonDiscount() const;
 
                     /**
                      * 设置Public discount.
-                     * @param CommonDiscount Public discount.
+                     * @param _commonDiscount Public discount.
+                     * 
                      */
                     void SetCommonDiscount(const int64_t& _commonDiscount);
 
                     /**
                      * 判断参数 CommonDiscount 是否已赋值
                      * @return CommonDiscount 是否已赋值
+                     * 
                      */
                     bool CommonDiscountHasBeenSet() const;
 
                     /**
                      * 获取Final discount.
                      * @return FinalDiscount Final discount.
+                     * 
                      */
                     int64_t GetFinalDiscount() const;
 
                     /**
                      * 设置Final discount.
-                     * @param FinalDiscount Final discount.
+                     * @param _finalDiscount Final discount.
+                     * 
                      */
                     void SetFinalDiscount(const int64_t& _finalDiscount);
 
                     /**
                      * 判断参数 FinalDiscount 是否已赋值
                      * @return FinalDiscount 是否已赋值
+                     * 
                      */
                     bool FinalDiscountHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ActivityDiscount Activity discount. The value `null` indicates no discount.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetActivityDiscount() const;
 
                     /**
                      * 设置Activity discount. The value `null` indicates no discount.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ActivityDiscount Activity discount. The value `null` indicates no discount.
+                     * @param _activityDiscount Activity discount. The value `null` indicates no discount.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActivityDiscount(const double& _activityDiscount);
 
                     /**
                      * 判断参数 ActivityDiscount 是否已赋值
                      * @return ActivityDiscount 是否已赋值
+                     * 
                      */
                     bool ActivityDiscountHasBeenSet() const;
 
@@ -129,6 +141,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return DiscountType Discount type.
 Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiscountType() const;
 
@@ -136,15 +149,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 设置Discount type.
 Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DiscountType Discount type.
+                     * @param _discountType Discount type.
 Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiscountType(const std::string& _discountType);
 
                     /**
                      * 判断参数 DiscountType 是否已赋值
                      * @return DiscountType 是否已赋值
+                     * 
                      */
                     bool DiscountTypeHasBeenSet() const;
 

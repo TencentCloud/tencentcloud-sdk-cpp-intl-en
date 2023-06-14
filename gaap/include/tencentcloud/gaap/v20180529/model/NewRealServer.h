@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Origin server ID
                      * @return RealServerId Origin server ID
+                     * 
                      */
                     std::string GetRealServerId() const;
 
                     /**
                      * 设置Origin server ID
-                     * @param RealServerId Origin server ID
+                     * @param _realServerId Origin server ID
+                     * 
                      */
                     void SetRealServerId(const std::string& _realServerId);
 
                     /**
                      * 判断参数 RealServerId 是否已赋值
                      * @return RealServerId 是否已赋值
+                     * 
                      */
                     bool RealServerIdHasBeenSet() const;
 
                     /**
                      * 获取Origin server IP or domain name
                      * @return RealServerIP Origin server IP or domain name
+                     * 
                      */
                     std::string GetRealServerIP() const;
 
                     /**
                      * 设置Origin server IP or domain name
-                     * @param RealServerIP Origin server IP or domain name
+                     * @param _realServerIP Origin server IP or domain name
+                     * 
                      */
                     void SetRealServerIP(const std::string& _realServerIP);
 
                     /**
                      * 判断参数 RealServerIP 是否已赋值
                      * @return RealServerIP 是否已赋值
+                     * 
                      */
                     bool RealServerIPHasBeenSet() const;
 

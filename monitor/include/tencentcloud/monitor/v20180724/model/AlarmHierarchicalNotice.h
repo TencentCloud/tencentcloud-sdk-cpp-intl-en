@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NoticeId Notification template ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNoticeId() const;
 
                     /**
                      * 设置Notification template ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NoticeId Notification template ID
+                     * @param _noticeId Notification template ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoticeId(const std::string& _noticeId);
 
                     /**
                      * 判断参数 NoticeId 是否已赋值
                      * @return NoticeId 是否已赋值
+                     * 
                      */
                     bool NoticeIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Classification The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetClassification() const;
 
                     /**
                      * 设置The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Classification The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
+                     * @param _classification The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassification(const std::vector<std::string>& _classification);
 
                     /**
                      * 判断参数 Classification 是否已赋值
                      * @return Classification 是否已赋值
+                     * 
                      */
                     bool ClassificationHasBeenSet() const;
 

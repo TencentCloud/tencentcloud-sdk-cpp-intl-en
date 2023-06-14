@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of deleted topics.
                      * @return TopicSets Array of deleted topics.
+                     * 
                      */
                     std::vector<TopicRecord> GetTopicSets() const;
 
                     /**
                      * 判断参数 TopicSets 是否已赋值
                      * @return TopicSets 是否已赋值
+                     * 
                      */
                     bool TopicSetsHasBeenSet() const;
 

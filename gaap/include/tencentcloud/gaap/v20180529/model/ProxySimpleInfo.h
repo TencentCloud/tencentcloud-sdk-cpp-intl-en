@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Connection ID
                      * @return ProxyId Connection ID
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Connection ID
-                     * @param ProxyId Connection ID
+                     * @param _proxyId Connection ID
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
                     /**
                      * 获取Connection name
                      * @return ProxyName Connection name
+                     * 
                      */
                     std::string GetProxyName() const;
 
                     /**
                      * 设置Connection name
-                     * @param ProxyName Connection name
+                     * @param _proxyName Connection name
+                     * 
                      */
                     void SetProxyName(const std::string& _proxyName);
 
                     /**
                      * 判断参数 ProxyName 是否已赋值
                      * @return ProxyName 是否已赋值
+                     * 
                      */
                     bool ProxyNameHasBeenSet() const;
 
                     /**
                      * 获取Listener list
                      * @return ListenerList Listener list
+                     * 
                      */
                     std::vector<ListenerInfo> GetListenerList() const;
 
                     /**
                      * 设置Listener list
-                     * @param ListenerList Listener list
+                     * @param _listenerList Listener list
+                     * 
                      */
                     void SetListenerList(const std::vector<ListenerInfo>& _listenerList);
 
                     /**
                      * 判断参数 ListenerList 是否已赋值
                      * @return ListenerList 是否已赋值
+                     * 
                      */
                     bool ListenerListHasBeenSet() const;
 

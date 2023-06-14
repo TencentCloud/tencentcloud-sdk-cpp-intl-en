@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to detect sensitive information in images. Valid values:
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to detect sensitive information in images. Valid values:
 <li>ON</li>
 <li>OFF</li>
-                     * @param Switch Whether to detect sensitive information in images. Valid values:
+                     * @param _switch Whether to detect sensitive information in images. Valid values:
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -93,6 +96,7 @@ namespace TencentCloud
 <li>explosion</li>
 <li>terrorists</li>
 <li>scenario (sensitive scenes) </li>
+                     * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
@@ -107,7 +111,7 @@ namespace TencentCloud
 <li>explosion</li>
 <li>terrorists</li>
 <li>scenario (sensitive scenes) </li>
-                     * @param LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+                     * @param _labelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
 <li>guns</li>
 <li>crowd</li>
 <li>bloody</li>
@@ -117,48 +121,56 @@ namespace TencentCloud
 <li>explosion</li>
 <li>terrorists</li>
 <li>scenario (sensitive scenes) </li>
+                     * 
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
 
                     /**
                      * 判断参数 LabelSet 是否已赋值
                      * @return LabelSet 是否已赋值
+                     * 
                      */
                     bool LabelSetHasBeenSet() const;
 
                     /**
                      * 获取Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
                      * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
+                     * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
                      * 设置Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
-                     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
+                     * @param _blockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
+                     * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
 
                     /**
                      * 判断参数 BlockConfidence 是否已赋值
                      * @return BlockConfidence 是否已赋值
+                     * 
                      */
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
                      * 获取Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
                      * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
+                     * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
                      * 设置Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
-                     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
+                     * @param _reviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
+                     * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
 
                     /**
                      * 判断参数 ReviewConfidence 是否已赋值
                      * @return ReviewConfidence 是否已赋值
+                     * 
                      */
                     bool ReviewConfidenceHasBeenSet() const;
 

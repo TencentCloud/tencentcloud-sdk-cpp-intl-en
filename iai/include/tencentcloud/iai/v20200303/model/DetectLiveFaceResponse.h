@@ -48,24 +48,28 @@ namespace TencentCloud
 This field is meaningful only if `FaceModelVersion` is 2.0.
                      * @return Score Liveness score. Value range: [0,100]. The score is generally between 80 and 100, but 0 is also a common value. As a recommendation, when the score is greater than 87, it can be judged that the person in the image is alive. You can adjust the threshold according to your specific scenario.
 This field is meaningful only if `FaceModelVersion` is 2.0.
+                     * 
                      */
                     double GetScore() const;
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 
@@ -74,12 +78,14 @@ This field is meaningful only if `FaceModelVersion` is 2.0.
 This field is meaningful only if `FaceModelVersion` is 3.0.
                      * @return IsLiveness Whether liveness detection is passed.
 This field is meaningful only if `FaceModelVersion` is 3.0.
+                     * 
                      */
                     bool GetIsLiveness() const;
 
                     /**
                      * 判断参数 IsLiveness 是否已赋值
                      * @return IsLiveness 是否已赋值
+                     * 
                      */
                     bool IsLivenessHasBeenSet() const;
 

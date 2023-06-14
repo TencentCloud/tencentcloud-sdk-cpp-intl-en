@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Configuration ID of a custom error response
                      * @return ErrorPageId Configuration ID of a custom error response
+                     * 
                      */
                     std::string GetErrorPageId() const;
 
                     /**
                      * 判断参数 ErrorPageId 是否已赋值
                      * @return ErrorPageId 是否已赋值
+                     * 
                      */
                     bool ErrorPageIdHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Expected time point to roll back to
                      * @return ExpectTime Expected time point to roll back to
+                     * 
                      */
                     std::string GetExpectTime() const;
 
                     /**
                      * 设置Expected time point to roll back to
-                     * @param ExpectTime Expected time point to roll back to
+                     * @param _expectTime Expected time point to roll back to
+                     * 
                      */
                     void SetExpectTime(const std::string& _expectTime);
 
                     /**
                      * 判断参数 ExpectTime 是否已赋值
                      * @return ExpectTime 是否已赋值
+                     * 
                      */
                     bool ExpectTimeHasBeenSet() const;
 
                     /**
                      * 获取Error tolerance range for rollback time point
                      * @return ExpectTimeThresh Error tolerance range for rollback time point
+                     * 
                      */
                     uint64_t GetExpectTimeThresh() const;
 
                     /**
                      * 设置Error tolerance range for rollback time point
-                     * @param ExpectTimeThresh Error tolerance range for rollback time point
+                     * @param _expectTimeThresh Error tolerance range for rollback time point
+                     * 
                      */
                     void SetExpectTimeThresh(const uint64_t& _expectTimeThresh);
 
                     /**
                      * 判断参数 ExpectTimeThresh 是否已赋值
                      * @return ExpectTimeThresh 是否已赋值
+                     * 
                      */
                     bool ExpectTimeThreshHasBeenSet() const;
 

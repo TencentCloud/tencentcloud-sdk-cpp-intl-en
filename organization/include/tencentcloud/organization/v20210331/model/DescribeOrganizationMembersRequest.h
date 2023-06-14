@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
                      * @return Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
-                     * @param Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * @param _offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit, which defaults to `10`. Value range: 1-50.
                      * @return Limit Limit, which defaults to `10`. Value range: 1-50.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Limit, which defaults to `10`. Value range: 1-50.
-                     * @param Limit Limit, which defaults to `10`. Value range: 1-50.
+                     * @param _limit Limit, which defaults to `10`. Value range: 1-50.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
                      * @return Lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+                     * 
                      */
                     std::string GetLang() const;
 
                     /**
                      * 设置Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
-                     * @param Lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+                     * @param _lang Valid values: `en` (Tencent Cloud International); `zh` (Tencent Cloud).
+                     * 
                      */
                     void SetLang(const std::string& _lang);
 
                     /**
                      * 判断参数 Lang 是否已赋值
                      * @return Lang 是否已赋值
+                     * 
                      */
                     bool LangHasBeenSet() const;
 
                     /**
                      * 获取Search by member name or ID.
                      * @return SearchKey Search by member name or ID.
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Search by member name or ID.
-                     * @param SearchKey Search by member name or ID.
+                     * @param _searchKey Search by member name or ID.
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 
                     /**
                      * 获取Entity name.
                      * @return AuthName Entity name.
+                     * 
                      */
                     std::string GetAuthName() const;
 
                     /**
                      * 设置Entity name.
-                     * @param AuthName Entity name.
+                     * @param _authName Entity name.
+                     * 
                      */
                     void SetAuthName(const std::string& _authName);
 
                     /**
                      * 判断参数 AuthName 是否已赋值
                      * @return AuthName 是否已赋值
+                     * 
                      */
                     bool AuthNameHasBeenSet() const;
 
                     /**
                      * 获取Abbreviation of the trusted service, which is required during querying the trusted service admin.
                      * @return Product Abbreviation of the trusted service, which is required during querying the trusted service admin.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Abbreviation of the trusted service, which is required during querying the trusted service admin.
-                     * @param Product Abbreviation of the trusted service, which is required during querying the trusted service admin.
+                     * @param _product Abbreviation of the trusted service, which is required during querying the trusted service admin.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

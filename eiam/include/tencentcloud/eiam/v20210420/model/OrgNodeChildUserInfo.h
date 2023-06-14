@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeId Organization node ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeId() const;
 
                     /**
                      * 设置Organization node ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrgNodeId Organization node ID, which is globally unique and can contain up to 64 characters.
+                     * @param _orgNodeId Organization node ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOrgNodeId(const std::string& _orgNodeId);
 
                     /**
                      * 判断参数 OrgNodeId 是否已赋值
                      * @return OrgNodeId 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserInfo User information list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UserInfo> GetUserInfo() const;
 
                     /**
                      * 设置User information list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserInfo User information list.
+                     * @param _userInfo User information list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserInfo(const std::vector<UserInfo>& _userInfo);
 
                     /**
                      * 判断参数 UserInfo 是否已赋值
                      * @return UserInfo 是否已赋值
+                     * 
                      */
                     bool UserInfoHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalUserNum Total number of users under the current organization node.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalUserNum() const;
 
                     /**
                      * 设置Total number of users under the current organization node.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalUserNum Total number of users under the current organization node.
+                     * @param _totalUserNum Total number of users under the current organization node.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalUserNum(const int64_t& _totalUserNum);
 
                     /**
                      * 判断参数 TotalUserNum 是否已赋值
                      * @return TotalUserNum 是否已赋值
+                     * 
                      */
                     bool TotalUserNumHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeIdPath Organization ID path.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeIdPath() const;
 
                     /**
                      * 设置Organization ID path.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrgNodeIdPath Organization ID path.
+                     * @param _orgNodeIdPath Organization ID path.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOrgNodeIdPath(const std::string& _orgNodeIdPath);
 
                     /**
                      * 判断参数 OrgNodeIdPath 是否已赋值
                      * @return OrgNodeIdPath 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdPathHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeNamePath Organization name path.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgNodeNamePath() const;
 
                     /**
                      * 设置Organization name path.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrgNodeNamePath Organization name path.
+                     * @param _orgNodeNamePath Organization name path.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOrgNodeNamePath(const std::string& _orgNodeNamePath);
 
                     /**
                      * 判断参数 OrgNodeNamePath 是否已赋值
                      * @return OrgNodeNamePath 是否已赋值
+                     * 
                      */
                     bool OrgNodeNamePathHasBeenSet() const;
 

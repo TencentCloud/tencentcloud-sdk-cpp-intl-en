@@ -55,288 +55,336 @@ namespace TencentCloud
                     /**
                      * 获取Data migration task ID
                      * @return JobId Data migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Data migration task ID
-                     * @param JobId Data migration task ID
+                     * @param _jobId Data migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Data migration task name
                      * @return JobName Data migration task name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Data migration task name
-                     * @param JobName Data migration task name
+                     * @param _jobName Data migration task name
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Migration task configuration options
                      * @return MigrateOption Migration task configuration options
+                     * 
                      */
                     MigrateOption GetMigrateOption() const;
 
                     /**
                      * 设置Migration task configuration options
-                     * @param MigrateOption Migration task configuration options
+                     * @param _migrateOption Migration task configuration options
+                     * 
                      */
                     void SetMigrateOption(const MigrateOption& _migrateOption);
 
                     /**
                      * 判断参数 MigrateOption 是否已赋值
                      * @return MigrateOption 是否已赋值
+                     * 
                      */
                     bool MigrateOptionHasBeenSet() const;
 
                     /**
                      * 获取Source instance database type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
                      * @return SrcDatabaseType Source instance database type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
+                     * 
                      */
                     std::string GetSrcDatabaseType() const;
 
                     /**
                      * 设置Source instance database type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
-                     * @param SrcDatabaseType Source instance database type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
+                     * @param _srcDatabaseType Source instance database type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
+                     * 
                      */
                     void SetSrcDatabaseType(const std::string& _srcDatabaseType);
 
                     /**
                      * 判断参数 SrcDatabaseType 是否已赋值
                      * @return SrcDatabaseType 是否已赋值
+                     * 
                      */
                     bool SrcDatabaseTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
                      * @return SrcAccessType Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
+                     * 
                      */
                     std::string GetSrcAccessType() const;
 
                     /**
                      * 设置Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
-                     * @param SrcAccessType Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
+                     * @param _srcAccessType Source instance access type. Value range: extranet (public network), cvm (CVM-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instances)
+                     * 
                      */
                     void SetSrcAccessType(const std::string& _srcAccessType);
 
                     /**
                      * 判断参数 SrcAccessType 是否已赋值
                      * @return SrcAccessType 是否已赋值
+                     * 
                      */
                     bool SrcAccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance information, which is correlated with the migration task type
                      * @return SrcInfo Source instance information, which is correlated with the migration task type
+                     * 
                      */
                     SrcInfo GetSrcInfo() const;
 
                     /**
                      * 设置Source instance information, which is correlated with the migration task type
-                     * @param SrcInfo Source instance information, which is correlated with the migration task type
+                     * @param _srcInfo Source instance information, which is correlated with the migration task type
+                     * 
                      */
                     void SetSrcInfo(const SrcInfo& _srcInfo);
 
                     /**
                      * 判断参数 SrcInfo 是否已赋值
                      * @return SrcInfo 是否已赋值
+                     * 
                      */
                     bool SrcInfoHasBeenSet() const;
 
                     /**
                      * 获取Target instance access type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
                      * @return DstDatabaseType Target instance access type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
+                     * 
                      */
                     std::string GetDstDatabaseType() const;
 
                     /**
                      * 设置Target instance access type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
-                     * @param DstDatabaseType Target instance access type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
+                     * @param _dstDatabaseType Target instance access type: MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona
+                     * 
                      */
                     void SetDstDatabaseType(const std::string& _dstDatabaseType);
 
                     /**
                      * 判断参数 DstDatabaseType 是否已赋值
                      * @return DstDatabaseType 是否已赋值
+                     * 
                      */
                     bool DstDatabaseTypeHasBeenSet() const;
 
                     /**
                      * 获取Target instance access type, which currently only supports cdb (TencentDB instance)
                      * @return DstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)
+                     * 
                      */
                     std::string GetDstAccessType() const;
 
                     /**
                      * 设置Target instance access type, which currently only supports cdb (TencentDB instance)
-                     * @param DstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)
+                     * @param _dstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)
+                     * 
                      */
                     void SetDstAccessType(const std::string& _dstAccessType);
 
                     /**
                      * 判断参数 DstAccessType 是否已赋值
                      * @return DstAccessType 是否已赋值
+                     * 
                      */
                     bool DstAccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Target instance information
                      * @return DstInfo Target instance information
+                     * 
                      */
                     DstInfo GetDstInfo() const;
 
                     /**
                      * 设置Target instance information
-                     * @param DstInfo Target instance information
+                     * @param _dstInfo Target instance information
+                     * 
                      */
                     void SetDstInfo(const DstInfo& _dstInfo);
 
                     /**
                      * 判断参数 DstInfo 是否已赋值
                      * @return DstInfo 是否已赋值
+                     * 
                      */
                     bool DstInfoHasBeenSet() const;
 
                     /**
                      * 获取Information of the source table to be migrated. If the entire instance is to be migrated, this field should be []
                      * @return DatabaseInfo Information of the source table to be migrated. If the entire instance is to be migrated, this field should be []
+                     * 
                      */
                     std::string GetDatabaseInfo() const;
 
                     /**
                      * 设置Information of the source table to be migrated. If the entire instance is to be migrated, this field should be []
-                     * @param DatabaseInfo Information of the source table to be migrated. If the entire instance is to be migrated, this field should be []
+                     * @param _databaseInfo Information of the source table to be migrated. If the entire instance is to be migrated, this field should be []
+                     * 
                      */
                     void SetDatabaseInfo(const std::string& _databaseInfo);
 
                     /**
                      * 判断参数 DatabaseInfo 是否已赋值
                      * @return DatabaseInfo 是否已赋值
+                     * 
                      */
                     bool DatabaseInfoHasBeenSet() const;
 
                     /**
                      * 获取Task creation/submission time
                      * @return CreateTime Task creation/submission time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Task creation/submission time
-                     * @param CreateTime Task creation/submission time
+                     * @param _createTime Task creation/submission time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Task start time
                      * @return StartTime Task start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Task start time
-                     * @param StartTime Task start time
+                     * @param _startTime Task start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Task end time
                      * @return EndTime Task end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Task end time
-                     * @param EndTime Task end time
+                     * @param _endTime Task end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
                      * @return Status Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-                     * @param Status Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
+                     * @param _status Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Task details
                      * @return Detail Task details
+                     * 
                      */
                     MigrateDetailInfo GetDetail() const;
 
                     /**
                      * 设置Task details
-                     * @param Detail Task details
+                     * @param _detail Task details
+                     * 
                      */
                     void SetDetail(const MigrateDetailInfo& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 
                     /**
                      * 获取Prompt message for task error, which is not null or empty when an error occurs with the task
                      * @return ErrorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
+                     * 
                      */
                     std::vector<ErrorInfo> GetErrorInfo() const;
 
                     /**
                      * 设置Prompt message for task error, which is not null or empty when an error occurs with the task
-                     * @param ErrorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
+                     * @param _errorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
+                     * 
                      */
                     void SetErrorInfo(const std::vector<ErrorInfo>& _errorInfo);
 
                     /**
                      * 判断参数 ErrorInfo 是否已赋值
                      * @return ErrorInfo 是否已赋值
+                     * 
                      */
                     bool ErrorInfoHasBeenSet() const;
 
@@ -345,20 +393,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tags Tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagItem> GetTags() const;
 
                     /**
                      * 设置Tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Tags Tag
+                     * @param _tags Tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<TagItem>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -367,20 +418,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SrcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SrcInfo> GetSrcInfoMulti() const;
 
                     /**
                      * 设置Information of the source instance, a cluster edition instance whose access type is not `cdb`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SrcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+                     * @param _srcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSrcInfoMulti(const std::vector<SrcInfo>& _srcInfoMulti);
 
                     /**
                      * 判断参数 SrcInfoMulti 是否已赋值
                      * @return SrcInfoMulti 是否已赋值
+                     * 
                      */
                     bool SrcInfoMultiHasBeenSet() const;
 

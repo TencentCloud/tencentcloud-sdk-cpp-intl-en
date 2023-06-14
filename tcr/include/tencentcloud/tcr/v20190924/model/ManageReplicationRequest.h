@@ -47,108 +47,126 @@ namespace TencentCloud
                     /**
                      * 获取Source instance ID
                      * @return SourceRegistryId Source instance ID
+                     * 
                      */
                     std::string GetSourceRegistryId() const;
 
                     /**
                      * 设置Source instance ID
-                     * @param SourceRegistryId Source instance ID
+                     * @param _sourceRegistryId Source instance ID
+                     * 
                      */
                     void SetSourceRegistryId(const std::string& _sourceRegistryId);
 
                     /**
                      * 判断参数 SourceRegistryId 是否已赋值
                      * @return SourceRegistryId 是否已赋值
+                     * 
                      */
                     bool SourceRegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Destination instance ID
                      * @return DestinationRegistryId Destination instance ID
+                     * 
                      */
                     std::string GetDestinationRegistryId() const;
 
                     /**
                      * 设置Destination instance ID
-                     * @param DestinationRegistryId Destination instance ID
+                     * @param _destinationRegistryId Destination instance ID
+                     * 
                      */
                     void SetDestinationRegistryId(const std::string& _destinationRegistryId);
 
                     /**
                      * 判断参数 DestinationRegistryId 是否已赋值
                      * @return DestinationRegistryId 是否已赋值
+                     * 
                      */
                     bool DestinationRegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Synchronization rule
                      * @return Rule Synchronization rule
+                     * 
                      */
                     ReplicationRule GetRule() const;
 
                     /**
                      * 设置Synchronization rule
-                     * @param Rule Synchronization rule
+                     * @param _rule Synchronization rule
+                     * 
                      */
                     void SetRule(const ReplicationRule& _rule);
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 
                     /**
                      * 获取Rule description
                      * @return Description Rule description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description
-                     * @param Description Rule description
+                     * @param _description Rule description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Region ID of the destination instance. For example, `1` represents Guangzhou
                      * @return DestinationRegionId Region ID of the destination instance. For example, `1` represents Guangzhou
+                     * 
                      */
                     uint64_t GetDestinationRegionId() const;
 
                     /**
                      * 设置Region ID of the destination instance. For example, `1` represents Guangzhou
-                     * @param DestinationRegionId Region ID of the destination instance. For example, `1` represents Guangzhou
+                     * @param _destinationRegionId Region ID of the destination instance. For example, `1` represents Guangzhou
+                     * 
                      */
                     void SetDestinationRegionId(const uint64_t& _destinationRegionId);
 
                     /**
                      * 判断参数 DestinationRegionId 是否已赋值
                      * @return DestinationRegionId 是否已赋值
+                     * 
                      */
                     bool DestinationRegionIdHasBeenSet() const;
 
                     /**
                      * 获取Configuration of the synchronization rule
                      * @return PeerReplicationOption Configuration of the synchronization rule
+                     * 
                      */
                     PeerReplicationOption GetPeerReplicationOption() const;
 
                     /**
                      * 设置Configuration of the synchronization rule
-                     * @param PeerReplicationOption Configuration of the synchronization rule
+                     * @param _peerReplicationOption Configuration of the synchronization rule
+                     * 
                      */
                     void SetPeerReplicationOption(const PeerReplicationOption& _peerReplicationOption);
 
                     /**
                      * 判断参数 PeerReplicationOption 是否已赋值
                      * @return PeerReplicationOption 是否已赋值
+                     * 
                      */
                     bool PeerReplicationOptionHasBeenSet() const;
 

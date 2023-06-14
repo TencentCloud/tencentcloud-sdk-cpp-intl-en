@@ -49,198 +49,231 @@ namespace TencentCloud
                     /**
                      * 获取Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
                      * @return SecretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
-                     * @param SecretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
+                     * @param _secretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
                     /**
                      * 获取Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
                      * @return SignParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * 
                      */
                     std::string GetSignParam() const;
 
                     /**
                      * 设置Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
-                     * @param SignParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _signParam Signature field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * 
                      */
                     void SetSignParam(const std::string& _signParam);
 
                     /**
                      * 判断参数 SignParam 是否已赋值
                      * @return SignParam 是否已赋值
+                     * 
                      */
                     bool SignParamHasBeenSet() const;
 
                     /**
                      * 获取Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
                      * @return TimeParam Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * 
                      */
                     std::string GetTimeParam() const;
 
                     /**
                      * 设置Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
-                     * @param TimeParam Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * @param _timeParam Time field name in the URI string, starting with a letter, and consisting of letters, digits, and underscores.
+                     * 
                      */
                     void SetTimeParam(const std::string& _timeParam);
 
                     /**
                      * 判断参数 TimeParam 是否已赋值
                      * @return TimeParam 是否已赋值
+                     * 
                      */
                     bool TimeParamHasBeenSet() const;
 
                     /**
                      * 获取Expiration time in seconds
                      * @return ExpireTime Expiration time in seconds
+                     * 
                      */
                     int64_t GetExpireTime() const;
 
                     /**
                      * 设置Expiration time in seconds
-                     * @param ExpireTime Expiration time in seconds
+                     * @param _expireTime Expiration time in seconds
+                     * 
                      */
                     void SetExpireTime(const int64_t& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether the expiration time parameter is required
                      * @return ExpireTimeRequired Whether the expiration time parameter is required
+                     * 
                      */
                     bool GetExpireTimeRequired() const;
 
                     /**
                      * 设置Whether the expiration time parameter is required
-                     * @param ExpireTimeRequired Whether the expiration time parameter is required
+                     * @param _expireTimeRequired Whether the expiration time parameter is required
+                     * 
                      */
                     void SetExpireTimeRequired(const bool& _expireTimeRequired);
 
                     /**
                      * 判断参数 ExpireTimeRequired 是否已赋值
                      * @return ExpireTimeRequired 是否已赋值
+                     * 
                      */
                     bool ExpireTimeRequiredHasBeenSet() const;
 
                     /**
                      * 获取URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
                      * @return Format URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
-                     * @param Format URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+                     * @param _format URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取Time format. Valid values: dec (decimal), hex (hexadecimal).
                      * @return TimeFormat Time format. Valid values: dec (decimal), hex (hexadecimal).
+                     * 
                      */
                     std::string GetTimeFormat() const;
 
                     /**
                      * 设置Time format. Valid values: dec (decimal), hex (hexadecimal).
-                     * @param TimeFormat Time format. Valid values: dec (decimal), hex (hexadecimal).
+                     * @param _timeFormat Time format. Valid values: dec (decimal), hex (hexadecimal).
+                     * 
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
 
                     /**
                      * 判断参数 TimeFormat 是否已赋值
                      * @return TimeFormat 是否已赋值
+                     * 
                      */
                     bool TimeFormatHasBeenSet() const;
 
                     /**
                      * 获取Status code returned when the authentication failed
                      * @return FailCode Status code returned when the authentication failed
+                     * 
                      */
                     int64_t GetFailCode() const;
 
                     /**
                      * 设置Status code returned when the authentication failed
-                     * @param FailCode Status code returned when the authentication failed
+                     * @param _failCode Status code returned when the authentication failed
+                     * 
                      */
                     void SetFailCode(const int64_t& _failCode);
 
                     /**
                      * 判断参数 FailCode 是否已赋值
                      * @return FailCode 是否已赋值
+                     * 
                      */
                     bool FailCodeHasBeenSet() const;
 
                     /**
                      * 获取Status code returned when the URL expired
                      * @return ExpireCode Status code returned when the URL expired
+                     * 
                      */
                     int64_t GetExpireCode() const;
 
                     /**
                      * 设置Status code returned when the URL expired
-                     * @param ExpireCode Status code returned when the URL expired
+                     * @param _expireCode Status code returned when the URL expired
+                     * 
                      */
                     void SetExpireCode(const int64_t& _expireCode);
 
                     /**
                      * 判断参数 ExpireCode 是否已赋值
                      * @return ExpireCode 是否已赋值
+                     * 
                      */
                     bool ExpireCodeHasBeenSet() const;
 
                     /**
                      * 获取List of URLs to be authenticated
                      * @return RulePaths List of URLs to be authenticated
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
                      * 设置List of URLs to be authenticated
-                     * @param RulePaths List of URLs to be authenticated
+                     * @param _rulePaths List of URLs to be authenticated
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 
                     /**
                      * 获取Reserved field
                      * @return Transformation Reserved field
+                     * 
                      */
                     int64_t GetTransformation() const;
 
                     /**
                      * 设置Reserved field
-                     * @param Transformation Reserved field
+                     * @param _transformation Reserved field
+                     * 
                      */
                     void SetTransformation(const int64_t& _transformation);
 
                     /**
                      * 判断参数 Transformation 是否已赋值
                      * @return Transformation 是否已赋值
+                     * 
                      */
                     bool TransformationHasBeenSet() const;
 

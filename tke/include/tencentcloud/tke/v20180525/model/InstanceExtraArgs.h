@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetKubelet() const;
 
                     /**
                      * 设置Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+                     * @param _kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetKubelet(const std::vector<std::string>& _kubelet);
 
                     /**
                      * 判断参数 Kubelet 是否已赋值
                      * @return Kubelet 是否已赋值
+                     * 
                      */
                     bool KubeletHasBeenSet() const;
 

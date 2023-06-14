@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Base protection bandwidth (in Mbps)
                      * @return ProtectBandwidth Base protection bandwidth (in Mbps)
+                     * 
                      */
                     uint64_t GetProtectBandwidth() const;
 
                     /**
                      * 设置Base protection bandwidth (in Mbps)
-                     * @param ProtectBandwidth Base protection bandwidth (in Mbps)
+                     * @param _protectBandwidth Base protection bandwidth (in Mbps)
+                     * 
                      */
                     void SetProtectBandwidth(const uint64_t& _protectBandwidth);
 
                     /**
                      * 判断参数 ProtectBandwidth 是否已赋值
                      * @return ProtectBandwidth 是否已赋值
+                     * 
                      */
                     bool ProtectBandwidthHasBeenSet() const;
 
                     /**
                      * 获取CC protection bandwidth (in QPS)
                      * @return ProtectCCQPS CC protection bandwidth (in QPS)
+                     * 
                      */
                     uint64_t GetProtectCCQPS() const;
 
                     /**
                      * 设置CC protection bandwidth (in QPS)
-                     * @param ProtectCCQPS CC protection bandwidth (in QPS)
+                     * @param _protectCCQPS CC protection bandwidth (in QPS)
+                     * 
                      */
                     void SetProtectCCQPS(const uint64_t& _protectCCQPS);
 
                     /**
                      * 判断参数 ProtectCCQPS 是否已赋值
                      * @return ProtectCCQPS 是否已赋值
+                     * 
                      */
                     bool ProtectCCQPSHasBeenSet() const;
 
                     /**
                      * 获取Normal application bandwidth (in Mbps)
                      * @return NormalBandwidth Normal application bandwidth (in Mbps)
+                     * 
                      */
                     uint64_t GetNormalBandwidth() const;
 
                     /**
                      * 设置Normal application bandwidth (in Mbps)
-                     * @param NormalBandwidth Normal application bandwidth (in Mbps)
+                     * @param _normalBandwidth Normal application bandwidth (in Mbps)
+                     * 
                      */
                     void SetNormalBandwidth(const uint64_t& _normalBandwidth);
 
                     /**
                      * 判断参数 NormalBandwidth 是否已赋值
                      * @return NormalBandwidth 是否已赋值
+                     * 
                      */
                     bool NormalBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Number of forwarding rules
                      * @return ForwardRulesLimit Number of forwarding rules
+                     * 
                      */
                     uint64_t GetForwardRulesLimit() const;
 
                     /**
                      * 设置Number of forwarding rules
-                     * @param ForwardRulesLimit Number of forwarding rules
+                     * @param _forwardRulesLimit Number of forwarding rules
+                     * 
                      */
                     void SetForwardRulesLimit(const uint64_t& _forwardRulesLimit);
 
                     /**
                      * 判断参数 ForwardRulesLimit 是否已赋值
                      * @return ForwardRulesLimit 是否已赋值
+                     * 
                      */
                     bool ForwardRulesLimitHasBeenSet() const;
 
@@ -127,6 +139,7 @@ namespace TencentCloud
 `0`: disabled
 `1`: enabled
 ]
+                     * 
                      */
                     uint64_t GetAutoRenewFlag() const;
 
@@ -135,16 +148,18 @@ namespace TencentCloud
 `0`: disabled
 `1`: enabled
 ]
-                     * @param AutoRenewFlag Auto-renewal status. Valid values:
+                     * @param _autoRenewFlag Auto-renewal status. Valid values:
 `0`: disabled
 `1`: enabled
 ]
+                     * 
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
@@ -163,6 +178,7 @@ namespace TencentCloud
 `4`: China Mobile
 `99`: third-party line
 ]
+                     * 
                      */
                     uint64_t GetLine() const;
 
@@ -174,37 +190,42 @@ namespace TencentCloud
 `4`: China Mobile
 `99`: third-party line
 ]
-                     * @param Line Anti-DDoS Advanced line. Valid values:
+                     * @param _line Anti-DDoS Advanced line. Valid values:
 `1`: BGP
 `2`: China Telecom
 `3`: China Unicom
 `4`: China Mobile
 `99`: third-party line
 ]
+                     * 
                      */
                     void SetLine(const uint64_t& _line);
 
                     /**
                      * 判断参数 Line 是否已赋值
                      * @return Line 是否已赋值
+                     * 
                      */
                     bool LineHasBeenSet() const;
 
                     /**
                      * 获取Elastic protection bandwidth (in Mbps)
                      * @return ElasticBandwidth Elastic protection bandwidth (in Mbps)
+                     * 
                      */
                     uint64_t GetElasticBandwidth() const;
 
                     /**
                      * 设置Elastic protection bandwidth (in Mbps)
-                     * @param ElasticBandwidth Elastic protection bandwidth (in Mbps)
+                     * @param _elasticBandwidth Elastic protection bandwidth (in Mbps)
+                     * 
                      */
                     void SetElasticBandwidth(const uint64_t& _elasticBandwidth);
 
                     /**
                      * 判断参数 ElasticBandwidth 是否已赋值
                      * @return ElasticBandwidth 是否已赋值
+                     * 
                      */
                     bool ElasticBandwidthHasBeenSet() const;
 

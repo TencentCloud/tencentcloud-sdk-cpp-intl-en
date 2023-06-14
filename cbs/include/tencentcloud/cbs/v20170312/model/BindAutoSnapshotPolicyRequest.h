@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of scheduled snapshot policy to be bound.
                      * @return AutoSnapshotPolicyId ID of scheduled snapshot policy to be bound.
+                     * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
                      * 设置ID of scheduled snapshot policy to be bound.
-                     * @param AutoSnapshotPolicyId ID of scheduled snapshot policy to be bound.
+                     * @param _autoSnapshotPolicyId ID of scheduled snapshot policy to be bound.
+                     * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
 
                     /**
                      * 判断参数 AutoSnapshotPolicyId 是否已赋值
                      * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
                      * @return DiskIds List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
+                     * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
                      * 设置List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
-                     * @param DiskIds List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
+                     * @param _diskIds List of cloud disk IDs to be bound. Maximum of 80 cloud disks can be bound per request.
+                     * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
 
                     /**
                      * 判断参数 DiskIds 是否已赋值
                      * @return DiskIds 是否已赋值
+                     * 
                      */
                     bool DiskIdsHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Input ID
                      * @return Id Input ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Input ID
-                     * @param Id Input ID
+                     * @param _id Input ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
                      * @return Name Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-                     * @param Name Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * @param _name Input name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取List of the IDs of the security groups to attach
                      * @return SecurityGroupIds List of the IDs of the security groups to attach
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置List of the IDs of the security groups to attach
-                     * @param SecurityGroupIds List of the IDs of the security groups to attach
+                     * @param _securityGroupIds List of the IDs of the security groups to attach
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
@@ -106,6 +115,7 @@ Note: If this parameter is not specified or empty, the original input settings w
 For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
 Note: If this parameter is not specified or empty, the original input settings will be used.
+                     * 
                      */
                     std::vector<InputSettingInfo> GetInputSettings() const;
 
@@ -114,16 +124,18 @@ Note: If this parameter is not specified or empty, the original input settings w
 For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
 Note: If this parameter is not specified or empty, the original input settings will be used.
-                     * @param InputSettings Input settings
+                     * @param _inputSettings Input settings
 For the type `RTMP_PUSH`, `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL`, 1 or 2 inputs of the corresponding type can be configured.
 This parameter can be left empty for RTP_PUSH and UDP_PUSH inputs.
 Note: If this parameter is not specified or empty, the original input settings will be used.
+                     * 
                      */
                     void SetInputSettings(const std::vector<InputSettingInfo>& _inputSettings);
 
                     /**
                      * 判断参数 InputSettings 是否已赋值
                      * @return InputSettings 是否已赋值
+                     * 
                      */
                     bool InputSettingsHasBeenSet() const;
 

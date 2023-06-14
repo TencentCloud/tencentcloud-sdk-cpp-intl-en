@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The cluster ID
                      * @return ClusterId The cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The cluster ID
-                     * @param ClusterId The cluster ID
+                     * @param _clusterId The cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Database name
                      * @return Database Database name
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name
-                     * @param Database Database name
+                     * @param _database Database name
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
@@ -85,6 +91,7 @@ Default value: `0`.
                      * @return MatchType Whether to search exactly
 Valid values: `0` (fuzzy search), `1` (exact search). 
 Default value: `0`.
+                     * 
                      */
                     int64_t GetMatchType() const;
 
@@ -92,15 +99,17 @@ Default value: `0`.
                      * 设置Whether to search exactly
 Valid values: `0` (fuzzy search), `1` (exact search). 
 Default value: `0`.
-                     * @param MatchType Whether to search exactly
+                     * @param _matchType Whether to search exactly
 Valid values: `0` (fuzzy search), `1` (exact search). 
 Default value: `0`.
+                     * 
                      */
                     void SetMatchType(const int64_t& _matchType);
 
                     /**
                      * 判断参数 MatchType 是否已赋值
                      * @return MatchType 是否已赋值
+                     * 
                      */
                     bool MatchTypeHasBeenSet() const;
 

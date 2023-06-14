@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Event ID.
                      * @return EventId Event ID.
+                     * 
                      */
                     int64_t GetEventId() const;
 
                     /**
                      * 设置Event ID.
-                     * @param EventId Event ID.
+                     * @param _eventId Event ID.
+                     * 
                      */
                     void SetEventId(const int64_t& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Alarm sending and convergence type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
                      * @return AlarmNotifyType Alarm sending and convergence type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+                     * 
                      */
                     int64_t GetAlarmNotifyType() const;
 
                     /**
                      * 设置Alarm sending and convergence type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
-                     * @param AlarmNotifyType Alarm sending and convergence type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+                     * @param _alarmNotifyType Alarm sending and convergence type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+                     * 
                      */
                     void SetAlarmNotifyType(const int64_t& _alarmNotifyType);
 
                     /**
                      * 判断参数 AlarmNotifyType 是否已赋值
                      * @return AlarmNotifyType 是否已赋值
+                     * 
                      */
                     bool AlarmNotifyTypeHasBeenSet() const;
 
                     /**
                      * 获取Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of triggerTime.
                      * @return AlarmNotifyPeriod Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of triggerTime.
+                     * 
                      */
                     int64_t GetAlarmNotifyPeriod() const;
 
                     /**
                      * 设置Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of triggerTime.
-                     * @param AlarmNotifyPeriod Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of triggerTime.
+                     * @param _alarmNotifyPeriod Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of triggerTime.
+                     * 
                      */
                     void SetAlarmNotifyPeriod(const int64_t& _alarmNotifyPeriod);
 
                     /**
                      * 判断参数 AlarmNotifyPeriod 是否已赋值
                      * @return AlarmNotifyPeriod 是否已赋值
+                     * 
                      */
                     bool AlarmNotifyPeriodHasBeenSet() const;
 
                     /**
                      * 获取Rule ID. No filling means new addition while filling in ruleId means to modify existing rules.
                      * @return RuleId Rule ID. No filling means new addition while filling in ruleId means to modify existing rules.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置Rule ID. No filling means new addition while filling in ruleId means to modify existing rules.
-                     * @param RuleId Rule ID. No filling means new addition while filling in ruleId means to modify existing rules.
+                     * @param _ruleId Rule ID. No filling means new addition while filling in ruleId means to modify existing rules.
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

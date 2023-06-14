@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Logset ID
                      * @return LogsetId Logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置Logset ID
-                     * @param LogsetId Logset ID
+                     * @param _logsetId Logset ID
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Logset name
                      * @return LogsetName Logset name
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name
-                     * @param LogsetName Logset name
+                     * @param _logsetName Logset name
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -106,20 +115,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAssumerName() const;
 
                     /**
                      * 设置Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+                     * @param _assumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAssumerName(const std::string& _assumerName);
 
                     /**
                      * 判断参数 AssumerName 是否已赋值
                      * @return AssumerName 是否已赋值
+                     * 
                      */
                     bool AssumerNameHasBeenSet() const;
 
@@ -128,56 +140,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tags Tag bound to logset
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag bound to logset
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Tags Tag bound to logset
+                     * @param _tags Tag bound to logset
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Number of log topics in logset
                      * @return TopicCount Number of log topics in logset
+                     * 
                      */
                     int64_t GetTopicCount() const;
 
                     /**
                      * 设置Number of log topics in logset
-                     * @param TopicCount Number of log topics in logset
+                     * @param _topicCount Number of log topics in logset
+                     * 
                      */
                     void SetTopicCount(const int64_t& _topicCount);
 
                     /**
                      * 判断参数 TopicCount 是否已赋值
                      * @return TopicCount 是否已赋值
+                     * 
                      */
                     bool TopicCountHasBeenSet() const;
 
                     /**
                      * 获取If `AssumerName` is not empty, it indicates the service provider who creates the logset.
                      * @return RoleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置If `AssumerName` is not empty, it indicates the service provider who creates the logset.
-                     * @param RoleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+                     * @param _roleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 

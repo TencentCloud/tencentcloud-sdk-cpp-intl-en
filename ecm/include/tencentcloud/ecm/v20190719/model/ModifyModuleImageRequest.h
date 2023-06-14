@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Default image ID
                      * @return DefaultImageId Default image ID
+                     * 
                      */
                     std::string GetDefaultImageId() const;
 
                     /**
                      * 设置Default image ID
-                     * @param DefaultImageId Default image ID
+                     * @param _defaultImageId Default image ID
+                     * 
                      */
                     void SetDefaultImageId(const std::string& _defaultImageId);
 
                     /**
                      * 判断参数 DefaultImageId 是否已赋值
                      * @return DefaultImageId 是否已赋值
+                     * 
                      */
                     bool DefaultImageIdHasBeenSet() const;
 
                     /**
                      * 获取Module ID
                      * @return ModuleId Module ID
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID
-                     * @param ModuleId Module ID
+                     * @param _moduleId Module ID
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 

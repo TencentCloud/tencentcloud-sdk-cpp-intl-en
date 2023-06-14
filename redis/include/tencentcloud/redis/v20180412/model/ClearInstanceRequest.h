@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
                      * @return Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
-                     * @param Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+                     * @param _password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

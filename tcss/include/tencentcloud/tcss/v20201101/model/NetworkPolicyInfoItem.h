@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Network policy name
                      * @return Name Network policy name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Network policy name
-                     * @param Name Network policy name
+                     * @param _name Network policy name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Description Network policy description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Network policy description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Description Network policy description
+                     * @param _description Network policy description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -109,6 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Publishing`: Enabled.
 
 `unPublishEdit`: To be enabled.
+                     * 
                      */
                     std::string GetPublishStatus() const;
 
@@ -124,7 +131,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Publishing`: Enabled.
 
 `unPublishEdit`: To be enabled.
-                     * @param PublishStatus Publishing status:
+                     * @param _publishStatus Publishing status:
 
 `PublishedNoConfirm`: Enabled and to be confirmed.
 
@@ -135,12 +142,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Publishing`: Enabled.
 
 `unPublishEdit`: To be enabled.
+                     * 
                      */
                     void SetPublishStatus(const std::string& _publishStatus);
 
                     /**
                      * 判断参数 PublishStatus 是否已赋值
                      * @return PublishStatus 是否已赋值
+                     * 
                      */
                     bool PublishStatusHasBeenSet() const;
 
@@ -155,6 +164,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `System`: Synched from the cluster.
 
 `Manual`: Added manually.
+                     * 
                      */
                     std::string GetPolicySourceType() const;
 
@@ -164,53 +174,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `System`: Synched from the cluster.
 
 `Manual`: Added manually.
-                     * @param PolicySourceType Policy type:
+                     * @param _policySourceType Policy type:
 
 `System`: Synched from the cluster.
 
 `Manual`: Added manually.
+                     * 
                      */
                     void SetPolicySourceType(const std::string& _policySourceType);
 
                     /**
                      * 判断参数 PolicySourceType 是否已赋值
                      * @return PolicySourceType 是否已赋值
+                     * 
                      */
                     bool PolicySourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Policy space
                      * @return Namespace Policy space
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Policy space
-                     * @param Namespace Policy space
+                     * @param _namespace Policy space
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Policy creation date
                      * @return PolicyCreateTime Policy creation date
+                     * 
                      */
                     std::string GetPolicyCreateTime() const;
 
                     /**
                      * 设置Policy creation date
-                     * @param PolicyCreateTime Policy creation date
+                     * @param _policyCreateTime Policy creation date
+                     * 
                      */
                     void SetPolicyCreateTime(const std::string& _policyCreateTime);
 
                     /**
                      * 判断参数 PolicyCreateTime 是否已赋值
                      * @return PolicyCreateTime 是否已赋值
+                     * 
                      */
                     bool PolicyCreateTimeHasBeenSet() const;
 
@@ -225,6 +243,7 @@ cilium: Cilium
 kube-router: KubeRouter
 
 cilium: Cilium
+                     * 
                      */
                     std::string GetNetworkPolicyPlugin() const;
 
@@ -234,17 +253,19 @@ cilium: Cilium
 kube-router: KubeRouter
 
 cilium: Cilium
-                     * @param NetworkPolicyPlugin Policy type
+                     * @param _networkPolicyPlugin Policy type
 
 kube-router: KubeRouter
 
 cilium: Cilium
+                     * 
                      */
                     void SetNetworkPolicyPlugin(const std::string& _networkPolicyPlugin);
 
                     /**
                      * 判断参数 NetworkPolicyPlugin 是否已赋值
                      * @return NetworkPolicyPlugin 是否已赋值
+                     * 
                      */
                     bool NetworkPolicyPluginHasBeenSet() const;
 
@@ -253,20 +274,23 @@ cilium: Cilium
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublishResult Policy publishing result
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublishResult() const;
 
                     /**
                      * 设置Policy publishing result
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublishResult Policy publishing result
+                     * @param _publishResult Policy publishing result
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublishResult(const std::string& _publishResult);
 
                     /**
                      * 判断参数 PublishResult 是否已赋值
                      * @return PublishResult 是否已赋值
+                     * 
                      */
                     bool PublishResultHasBeenSet() const;
 
@@ -285,6 +309,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     int64_t GetFromPolicyRule() const;
 
@@ -296,19 +321,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Reject all.
 
 `3`: Custom.
-                     * @param FromPolicyRule Inbound rule
+                     * @param _fromPolicyRule Inbound rule
 
 `1`: Allow all.
 
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     void SetFromPolicyRule(const int64_t& _fromPolicyRule);
 
                     /**
                      * 判断参数 FromPolicyRule 是否已赋值
                      * @return FromPolicyRule 是否已赋值
+                     * 
                      */
                     bool FromPolicyRuleHasBeenSet() const;
 
@@ -327,6 +354,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     int64_t GetToPolicyRule() const;
 
@@ -338,19 +366,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Reject all.
 
 `3`: Custom.
-                     * @param ToPolicyRule Inbound rule
+                     * @param _toPolicyRule Inbound rule
 
 `1`: Allow all.
 
 `2`: Reject all.
 
 `3`: Custom.
+                     * 
                      */
                     void SetToPolicyRule(const int64_t& _toPolicyRule);
 
                     /**
                      * 判断参数 ToPolicyRule 是否已赋值
                      * @return ToPolicyRule 是否已赋值
+                     * 
                      */
                     bool ToPolicyRuleHasBeenSet() const;
 
@@ -359,38 +389,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PodSelector Object
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPodSelector() const;
 
                     /**
                      * 设置Object
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PodSelector Object
+                     * @param _podSelector Object
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPodSelector(const std::string& _podSelector);
 
                     /**
                      * 判断参数 PodSelector 是否已赋值
                      * @return PodSelector 是否已赋值
+                     * 
                      */
                     bool PodSelectorHasBeenSet() const;
 
                     /**
                      * 获取Network policy ID
                      * @return Id Network policy ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Network policy ID
-                     * @param Id Network policy ID
+                     * @param _id Network policy ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

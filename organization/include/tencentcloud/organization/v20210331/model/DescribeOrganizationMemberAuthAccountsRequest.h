@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of returned results.
                      * @return Limit Maximum number of returned results.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of returned results.
-                     * @param Limit Maximum number of returned results.
+                     * @param _limit Maximum number of returned results.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Member UIN.
                      * @return MemberUin Member UIN.
+                     * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
                      * 设置Member UIN.
-                     * @param MemberUin Member UIN.
+                     * @param _memberUin Member UIN.
+                     * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
 
                     /**
                      * 判断参数 MemberUin 是否已赋值
                      * @return MemberUin 是否已赋值
+                     * 
                      */
                     bool MemberUinHasBeenSet() const;
 
                     /**
                      * 获取Policy ID.
                      * @return PolicyId Policy ID.
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID.
-                     * @param PolicyId Policy ID.
+                     * @param _policyId Policy ID.
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 

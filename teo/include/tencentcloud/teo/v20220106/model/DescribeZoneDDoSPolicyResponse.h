@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取User APPID
                      * @return AppId User APPID
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取DDoS mitigation configuration
                      * @return ShieldAreas DDoS mitigation configuration
+                     * 
                      */
                     std::vector<ShieldArea> GetShieldAreas() const;
 
                     /**
                      * 判断参数 ShieldAreas 是否已赋值
                      * @return ShieldAreas 是否已赋值
+                     * 
                      */
                     bool ShieldAreasHasBeenSet() const;
 
@@ -74,12 +78,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Domains Includes the details of all subdomain names
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<DDoSApplication> GetDomains() const;
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 

@@ -52,6 +52,7 @@ image-name: image name
 task-id: async task ID
 image-id: image ID
 image-name: image name
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -60,16 +61,18 @@ image-name: image name
 task-id: async task ID
 image-id: image ID
 image-name: image name
-                     * @param Filters Supports querying by key and value.
+                     * @param _filters Supports querying by key and value.
 task-id: async task ID
 image-id: image ID
 image-name: image name
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

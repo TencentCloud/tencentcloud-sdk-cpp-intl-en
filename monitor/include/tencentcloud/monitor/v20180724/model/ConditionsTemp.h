@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TemplateName Template name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TemplateName Template name
+                     * @param _templateName Template name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Condition Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AlarmPolicyCondition GetCondition() const;
 
                     /**
                      * 设置Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Condition Metric trigger condition
+                     * @param _condition Metric trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCondition(const AlarmPolicyCondition& _condition);
 
                     /**
                      * 判断参数 Condition 是否已赋值
                      * @return Condition 是否已赋值
+                     * 
                      */
                     bool ConditionHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EventCondition Event trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AlarmPolicyEventCondition GetEventCondition() const;
 
                     /**
                      * 设置Event trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EventCondition Event trigger condition
+                     * @param _eventCondition Event trigger condition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventCondition(const AlarmPolicyEventCondition& _eventCondition);
 
                     /**
                      * 判断参数 EventCondition 是否已赋值
                      * @return EventCondition 是否已赋值
+                     * 
                      */
                     bool EventConditionHasBeenSet() const;
 

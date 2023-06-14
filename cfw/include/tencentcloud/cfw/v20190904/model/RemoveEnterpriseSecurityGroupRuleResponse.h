@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Returns the UUID of the deleted policy after the deletion is successful
                      * @return RuleUuid Returns the UUID of the deleted policy after the deletion is successful
+                     * 
                      */
                     int64_t GetRuleUuid() const;
 
                     /**
                      * 判断参数 RuleUuid 是否已赋值
                      * @return RuleUuid 是否已赋值
+                     * 
                      */
                     bool RuleUuidHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Status 0: operation successful; -1: operation failed
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

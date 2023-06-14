@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
                      * @return UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-                     * @param UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * @param _userId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Public IP of user’s application client, which is used for nearby scheduling.
                      * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 
                      */
                     std::string GetUserIp() const;
 
                     /**
                      * 设置Public IP of user’s application client, which is used for nearby scheduling.
-                     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * @param _userIp Public IP of user’s application client, which is used for nearby scheduling.
+                     * 
                      */
                     void SetUserIp(const std::string& _userIp);
 
                     /**
                      * 判断参数 UserIp 是否已赋值
                      * @return UserIp 是否已赋值
+                     * 
                      */
                     bool UserIpHasBeenSet() const;
 
                     /**
                      * 获取The client-side session data, which is obtained from the SDK.
                      * @return ClientSession The client-side session data, which is obtained from the SDK.
+                     * 
                      */
                     std::string GetClientSession() const;
 
                     /**
                      * 设置The client-side session data, which is obtained from the SDK.
-                     * @param ClientSession The client-side session data, which is obtained from the SDK.
+                     * @param _clientSession The client-side session data, which is obtained from the SDK.
+                     * 
                      */
                     void SetClientSession(const std::string& _clientSession);
 
                     /**
                      * 判断参数 ClientSession 是否已赋值
                      * @return ClientSession 是否已赋值
+                     * 
                      */
                     bool ClientSessionHasBeenSet() const;
 
@@ -103,6 +112,7 @@ Empty string (default): Keep the application running on the cloud only when ther
                      * @return RunMode The on-cloud running mode.
 `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
 Empty string (default): Keep the application running on the cloud only when there are client connections.
+                     * 
                      */
                     std::string GetRunMode() const;
 
@@ -110,15 +120,17 @@ Empty string (default): Keep the application running on the cloud only when ther
                      * 设置The on-cloud running mode.
 `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
 Empty string (default): Keep the application running on the cloud only when there are client connections.
-                     * @param RunMode The on-cloud running mode.
+                     * @param _runMode The on-cloud running mode.
 `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
 Empty string (default): Keep the application running on the cloud only when there are client connections.
+                     * 
                      */
                     void SetRunMode(const std::string& _runMode);
 
                     /**
                      * 判断参数 RunMode 是否已赋值
                      * @return RunMode 是否已赋值
+                     * 
                      */
                     bool RunModeHasBeenSet() const;
 

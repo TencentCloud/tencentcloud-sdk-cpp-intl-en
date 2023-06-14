@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Service type
                      * @return ServiceType Service type
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Service type
-                     * @param ServiceType Service type
+                     * @param _serviceType Service type
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
                     /**
                      * 获取Resource prefix
                      * @return ResourcePrefix Resource prefix
+                     * 
                      */
                     std::string GetResourcePrefix() const;
 
                     /**
                      * 设置Resource prefix
-                     * @param ResourcePrefix Resource prefix
+                     * @param _resourcePrefix Resource prefix
+                     * 
                      */
                     void SetResourcePrefix(const std::string& _resourcePrefix);
 
                     /**
                      * 判断参数 ResourcePrefix 是否已赋值
                      * @return ResourcePrefix 是否已赋值
+                     * 
                      */
                     bool ResourcePrefixHasBeenSet() const;
 
                     /**
                      * 获取Unique resource ID
                      * @return ResourceIds Unique resource ID
+                     * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
                      * 设置Unique resource ID
-                     * @param ResourceIds Unique resource ID
+                     * @param _resourceIds Unique resource ID
+                     * 
                      */
                     void SetResourceIds(const std::vector<std::string>& _resourceIds);
 
                     /**
                      * 判断参数 ResourceIds 是否已赋值
                      * @return ResourceIds 是否已赋值
+                     * 
                      */
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
                      * 获取Resource region
                      * @return ResourceRegion Resource region
+                     * 
                      */
                     std::string GetResourceRegion() const;
 
                     /**
                      * 设置Resource region
-                     * @param ResourceRegion Resource region
+                     * @param _resourceRegion Resource region
+                     * 
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
 
                     /**
                      * 判断参数 ResourceRegion 是否已赋值
                      * @return ResourceRegion 是否已赋值
+                     * 
                      */
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
                      * 获取Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
                      * @return Offset Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
-                     * @param Offset Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+                     * @param _offset Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Default value: 15
                      * @return Limit Number of entries per page. Default value: 15
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Default value: 15
-                     * @param Limit Number of entries per page. Default value: 15
+                     * @param _limit Number of entries per page. Default value: 15
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

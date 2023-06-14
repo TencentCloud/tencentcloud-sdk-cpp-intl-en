@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Security group ID.
                      * @return SecurityGroupId Security group ID.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置Security group ID.
-                     * @param SecurityGroupId Security group ID.
+                     * @param _securityGroupId Security group ID.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取List of instance IDs, which is an array of one or more instance IDs.
                      * @return InstanceIds List of instance IDs, which is an array of one or more instance IDs.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of instance IDs, which is an array of one or more instance IDs.
-                     * @param InstanceIds List of instance IDs, which is an array of one or more instance IDs.
+                     * @param _instanceIds List of instance IDs, which is an array of one or more instance IDs.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be unbound from the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be unbound from the read-only replicas themselves.
                      * @return ForReadonlyInstance This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be unbound from the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be unbound from the read-only replicas themselves.
+                     * 
                      */
                     bool GetForReadonlyInstance() const;
 
                     /**
                      * 设置This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be unbound from the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be unbound from the read-only replicas themselves.
-                     * @param ForReadonlyInstance This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be unbound from the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be unbound from the read-only replicas themselves.
+                     * @param _forReadonlyInstance This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be unbound from the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be unbound from the read-only replicas themselves.
+                     * 
                      */
                     void SetForReadonlyInstance(const bool& _forReadonlyInstance);
 
                     /**
                      * 判断参数 ForReadonlyInstance 是否已赋值
                      * @return ForReadonlyInstance 是否已赋值
+                     * 
                      */
                     bool ForReadonlyInstanceHasBeenSet() const;
 

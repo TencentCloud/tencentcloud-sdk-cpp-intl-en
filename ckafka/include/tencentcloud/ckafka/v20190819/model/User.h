@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取User ID
                      * @return UserId User ID
+                     * 
                      */
                     int64_t GetUserId() const;
 
                     /**
                      * 设置User ID
-                     * @param UserId User ID
+                     * @param _userId User ID
+                     * 
                      */
                     void SetUserId(const int64_t& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Username
                      * @return Name Username
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Username
-                     * @param Name Username
+                     * @param _name Username
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last updated time
                      * @return UpdateTime Last updated time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last updated time
-                     * @param UpdateTime Last updated time
+                     * @param _updateTime Last updated time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

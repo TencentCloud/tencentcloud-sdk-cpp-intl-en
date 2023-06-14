@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Date
                      * @return DateTime Date
+                     * 
                      */
                     std::string GetDateTime() const;
 
                     /**
                      * 设置Date
-                     * @param DateTime Date
+                     * @param _dateTime Date
+                     * 
                      */
                     void SetDateTime(const std::string& _dateTime);
 
                     /**
                      * 判断参数 DateTime 是否已赋值
                      * @return DateTime 是否已赋值
+                     * 
                      */
                     bool DateTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of unlicensed cores
                      * @return CoresCount Number of unlicensed cores
+                     * 
                      */
                     int64_t GetCoresCount() const;
 
                     /**
                      * 设置Number of unlicensed cores
-                     * @param CoresCount Number of unlicensed cores
+                     * @param _coresCount Number of unlicensed cores
+                     * 
                      */
                     void SetCoresCount(const int64_t& _coresCount);
 
                     /**
                      * 判断参数 CoresCount 是否已赋值
                      * @return CoresCount 是否已赋值
+                     * 
                      */
                     bool CoresCountHasBeenSet() const;
 

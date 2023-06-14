@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return DBInstanceId Instance ID
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param DBInstanceId Instance ID
+                     * @param _dBInstanceId Instance ID
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
                      * @return ParamName Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
+                     * 
                      */
                     std::string GetParamName() const;
 
                     /**
                      * 设置Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
-                     * @param ParamName Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
+                     * @param _paramName Name of the parameter to be queried. If `ParamName` is left empty or not passed in, the list of all parameters will be returned.
+                     * 
                      */
                     void SetParamName(const std::string& _paramName);
 
                     /**
                      * 判断参数 ParamName 是否已赋值
                      * @return ParamName 是否已赋值
+                     * 
                      */
                     bool ParamNameHasBeenSet() const;
 

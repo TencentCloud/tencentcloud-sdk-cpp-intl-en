@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Data subscription instance ID
                      * @return SubscribeId Data subscription instance ID
+                     * 
                      */
                     std::string GetSubscribeId() const;
 
                     /**
                      * 设置Data subscription instance ID
-                     * @param SubscribeId Data subscription instance ID
+                     * @param _subscribeId Data subscription instance ID
+                     * 
                      */
                     void SetSubscribeId(const std::string& _subscribeId);
 
                     /**
                      * 判断参数 SubscribeId 是否已赋值
                      * @return SubscribeId 是否已赋值
+                     * 
                      */
                     bool SubscribeIdHasBeenSet() const;
 
                     /**
                      * 获取Data subscription type. Valid values: 0 (full instance subscription), 1 (data subscription), 2 (structure subscription), 3 (data subscription + structure subscription)
                      * @return SubscribeObjectType Data subscription type. Valid values: 0 (full instance subscription), 1 (data subscription), 2 (structure subscription), 3 (data subscription + structure subscription)
+                     * 
                      */
                     int64_t GetSubscribeObjectType() const;
 
                     /**
                      * 设置Data subscription type. Valid values: 0 (full instance subscription), 1 (data subscription), 2 (structure subscription), 3 (data subscription + structure subscription)
-                     * @param SubscribeObjectType Data subscription type. Valid values: 0 (full instance subscription), 1 (data subscription), 2 (structure subscription), 3 (data subscription + structure subscription)
+                     * @param _subscribeObjectType Data subscription type. Valid values: 0 (full instance subscription), 1 (data subscription), 2 (structure subscription), 3 (data subscription + structure subscription)
+                     * 
                      */
                     void SetSubscribeObjectType(const int64_t& _subscribeObjectType);
 
                     /**
                      * 判断参数 SubscribeObjectType 是否已赋值
                      * @return SubscribeObjectType 是否已赋值
+                     * 
                      */
                     bool SubscribeObjectTypeHasBeenSet() const;
 
                     /**
                      * 获取Information of subscribed table
                      * @return Objects Information of subscribed table
+                     * 
                      */
                     std::vector<SubscribeObject> GetObjects() const;
 
                     /**
                      * 设置Information of subscribed table
-                     * @param Objects Information of subscribed table
+                     * @param _objects Information of subscribed table
+                     * 
                      */
                     void SetObjects(const std::vector<SubscribeObject>& _objects);
 
                     /**
                      * 判断参数 Objects 是否已赋值
                      * @return Objects 是否已赋值
+                     * 
                      */
                     bool ObjectsHasBeenSet() const;
 

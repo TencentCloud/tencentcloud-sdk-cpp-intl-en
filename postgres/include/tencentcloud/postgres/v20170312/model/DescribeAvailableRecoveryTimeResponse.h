@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The earliest restoration time (UTC+8).
                      * @return RecoveryBeginTime The earliest restoration time (UTC+8).
+                     * 
                      */
                     std::string GetRecoveryBeginTime() const;
 
                     /**
                      * 判断参数 RecoveryBeginTime 是否已赋值
                      * @return RecoveryBeginTime 是否已赋值
+                     * 
                      */
                     bool RecoveryBeginTimeHasBeenSet() const;
 
                     /**
                      * 获取The latest restoration time (UTC+8).
                      * @return RecoveryEndTime The latest restoration time (UTC+8).
+                     * 
                      */
                     std::string GetRecoveryEndTime() const;
 
                     /**
                      * 判断参数 RecoveryEndTime 是否已赋值
                      * @return RecoveryEndTime 是否已赋值
+                     * 
                      */
                     bool RecoveryEndTimeHasBeenSet() const;
 

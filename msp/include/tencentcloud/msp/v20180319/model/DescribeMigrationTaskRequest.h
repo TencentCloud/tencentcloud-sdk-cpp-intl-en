@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Task ID, such as msp-jitoh33n
                      * @return TaskId Task ID, such as msp-jitoh33n
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID, such as msp-jitoh33n
-                     * @param TaskId Task ID, such as msp-jitoh33n
+                     * @param _taskId Task ID, such as msp-jitoh33n
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

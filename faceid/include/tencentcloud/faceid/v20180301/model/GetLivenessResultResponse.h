@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取The final verification result.
                      * @return Result The final verification result.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取The description of the final verification result.
                      * @return Description The description of the final verification result.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取The face screenshot.
                      * @return BestFrame The face screenshot.
+                     * 
                      */
                     FileInfo GetBestFrame() const;
 
                     /**
                      * 判断参数 BestFrame 是否已赋值
                      * @return BestFrame 是否已赋值
+                     * 
                      */
                     bool BestFrameHasBeenSet() const;
 
                     /**
                      * 获取The video for the detection.
                      * @return Video The video for the detection.
+                     * 
                      */
                     FileInfo GetVideo() const;
 
                     /**
                      * 判断参数 Video 是否已赋值
                      * @return Video 是否已赋值
+                     * 
                      */
                     bool VideoHasBeenSet() const;
 

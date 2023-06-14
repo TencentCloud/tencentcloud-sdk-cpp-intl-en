@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Port.
                      * @return Port Port.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Port.
-                     * @param Port Port.
+                     * @param _port Port.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Mapped port
                      * @return TargetPort Mapped port
+                     * 
                      */
                     int64_t GetTargetPort() const;
 
                     /**
                      * 设置Mapped port
-                     * @param TargetPort Mapped port
+                     * @param _targetPort Mapped port
+                     * 
                      */
                     void SetTargetPort(const int64_t& _targetPort);
 
                     /**
                      * 判断参数 TargetPort 是否已赋值
                      * @return TargetPort 是否已赋值
+                     * 
                      */
                     bool TargetPortHasBeenSet() const;
 
                     /**
                      * 获取TCP/UDP protocol stack.
                      * @return Protocol TCP/UDP protocol stack.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置TCP/UDP protocol stack.
-                     * @param Protocol TCP/UDP protocol stack.
+                     * @param _protocol TCP/UDP protocol stack.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取K8s service name
                      * @return ServiceName K8s service name
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置K8s service name
-                     * @param ServiceName K8s service name
+                     * @param _serviceName K8s service name
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 

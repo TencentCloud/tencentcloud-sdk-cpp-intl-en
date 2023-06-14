@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PlanInfo Plans available for the current user
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PlanInfo> GetPlanInfo() const;
 
                     /**
                      * 判断参数 PlanInfo 是否已赋值
                      * @return PlanInfo 是否已赋值
+                     * 
                      */
                     bool PlanInfoHasBeenSet() const;
 

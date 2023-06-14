@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取MD5 checksum of the file
                      * @return MD5 MD5 checksum of the file
+                     * 
                      */
                     std::string GetMD5() const;
 
                     /**
                      * 判断参数 MD5 是否已赋值
                      * @return MD5 是否已赋值
+                     * 
                      */
                     bool MD5HasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Size File size (B)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSize() const;
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VirusName Virus name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVirusName() const;
 
                     /**
                      * 判断参数 VirusName 是否已赋值
                      * @return VirusName 是否已赋值
+                     * 
                      */
                     bool VirusNameHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
                      * 判断参数 RiskLevel 是否已赋值
                      * @return RiskLevel 是否已赋值
+                     * 
                      */
                     bool RiskLevelHasBeenSet() const;
 
@@ -102,12 +110,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return KillEngine Anti-virus engine
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetKillEngine() const;
 
                     /**
                      * 判断参数 KillEngine 是否已赋值
                      * @return KillEngine 是否已赋值
+                     * 
                      */
                     bool KillEngineHasBeenSet() const;
 
@@ -116,12 +126,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -130,12 +142,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HarmDescribe Event description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHarmDescribe() const;
 
                     /**
                      * 判断参数 HarmDescribe 是否已赋值
                      * @return HarmDescribe 是否已赋值
+                     * 
                      */
                     bool HarmDescribeHasBeenSet() const;
 
@@ -144,12 +158,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SuggestScheme Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuggestScheme() const;
 
                     /**
                      * 判断参数 SuggestScheme 是否已赋值
                      * @return SuggestScheme 是否已赋值
+                     * 
                      */
                     bool SuggestSchemeHasBeenSet() const;
 
@@ -158,12 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReferenceLink Reference link
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReferenceLink() const;
 
                     /**
                      * 判断参数 ReferenceLink 是否已赋值
                      * @return ReferenceLink 是否已赋值
+                     * 
                      */
                     bool ReferenceLinkHasBeenSet() const;
 

@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type (`net`: Anti-DDoS Ultimate)
                      * @return Business Anti-DDoS service type (`net`: Anti-DDoS Ultimate)
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type (`net`: Anti-DDoS Ultimate)
-                     * @param Business Anti-DDoS service type (`net`: Anti-DDoS Ultimate)
+                     * @param _business Anti-DDoS service type (`net`: Anti-DDoS Ultimate)
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param Id Anti-DDoS instance ID
+                     * @param _id Anti-DDoS instance ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Statistics start time
                      * @return StartTime Statistics start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Statistics start time
-                     * @param StartTime Statistics start time
+                     * @param _startTime Statistics start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistics end time
                      * @return EndTime Statistics end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Statistics end time
-                     * @param EndTime Statistics end time
+                     * @param _endTime Statistics end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Metric. Valid values: [traffic (attack protocol traffic in KB), pkg (number of attack protocol packets), classnum (number of attack events)]
                      * @return MetricName Metric. Valid values: [traffic (attack protocol traffic in KB), pkg (number of attack protocol packets), classnum (number of attack events)]
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric. Valid values: [traffic (attack protocol traffic in KB), pkg (number of attack protocol packets), classnum (number of attack events)]
-                     * @param MetricName Metric. Valid values: [traffic (attack protocol traffic in KB), pkg (number of attack protocol packets), classnum (number of attack events)]
+                     * @param _metricName Metric. Valid values: [traffic (attack protocol traffic in KB), pkg (number of attack protocol packets), classnum (number of attack events)]
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 

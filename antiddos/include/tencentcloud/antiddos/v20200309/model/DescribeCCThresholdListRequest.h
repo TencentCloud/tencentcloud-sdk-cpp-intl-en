@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
                      * @return Business Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
-                     * @param Business Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
+                     * @param _business Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Starting offset of the page. Value: (number of pages – 1) * items per page.
                      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the page. Value: (number of pages – 1) * items per page.
-                     * @param Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * @param _offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results returned in one page
                      * @return Limit Number of results returned in one page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results returned in one page
-                     * @param Limit Number of results returned in one page
+                     * @param _limit Number of results returned in one page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取ID of the specified instance
                      * @return InstanceId ID of the specified instance
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the specified instance
-                     * @param InstanceId ID of the specified instance
+                     * @param _instanceId ID of the specified instance
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Subapplication name.
                      * @return Name Subapplication name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Subapplication name.
-                     * @param Name Subapplication name.
+                     * @param _name Subapplication name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Tag information. You can query the list of subapplications with specified tags.
                      * @return Tags Tag information. You can query the list of subapplications with specified tags.
+                     * 
                      */
                     std::vector<ResourceTag> GetTags() const;
 
                     /**
                      * 设置Tag information. You can query the list of subapplications with specified tags.
-                     * @param Tags Tag information. You can query the list of subapplications with specified tags.
+                     * @param _tags Tag information. You can query the list of subapplications with specified tags.
+                     * 
                      */
                     void SetTags(const std::vector<ResourceTag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Page number offset from the beginning of paginated queries. Default value: 0.
                      * @return Offset Page number offset from the beginning of paginated queries. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page number offset from the beginning of paginated queries. Default value: 0.
-                     * @param Offset Page number offset from the beginning of paginated queries. Default value: 0.
+                     * @param _offset Page number offset from the beginning of paginated queries. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
                      * @return Limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
-                     * @param Limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+                     * @param _limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

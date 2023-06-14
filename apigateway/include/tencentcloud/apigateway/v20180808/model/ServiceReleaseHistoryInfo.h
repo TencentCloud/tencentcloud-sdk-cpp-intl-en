@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VersionName Version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VersionName Version ID.
+                     * @param _versionName Version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VersionDesc Version description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersionDesc() const;
 
                     /**
                      * 设置Version description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VersionDesc Version description.
+                     * @param _versionDesc Version description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersionDesc(const std::string& _versionDesc);
 
                     /**
                      * 判断参数 VersionDesc 是否已赋值
                      * @return VersionDesc 是否已赋值
+                     * 
                      */
                     bool VersionDescHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ReleaseTime Version release time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReleaseTime() const;
 
                     /**
                      * 设置Version release time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReleaseTime Version release time.
+                     * @param _releaseTime Version release time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReleaseTime(const std::string& _releaseTime);
 
                     /**
                      * 判断参数 ReleaseTime 是否已赋值
                      * @return ReleaseTime 是否已赋值
+                     * 
                      */
                     bool ReleaseTimeHasBeenSet() const;
 

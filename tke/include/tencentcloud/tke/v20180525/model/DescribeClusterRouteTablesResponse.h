@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of instances that match the filter condition(s).
                      * @return TotalCount Number of instances that match the filter condition(s).
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Object of cluster route table.
                      * @return RouteTableSet Object of cluster route table.
+                     * 
                      */
                     std::vector<RouteTableInfo> GetRouteTableSet() const;
 
                     /**
                      * 判断参数 RouteTableSet 是否已赋值
                      * @return RouteTableSet 是否已赋值
+                     * 
                      */
                     bool RouteTableSetHasBeenSet() const;
 

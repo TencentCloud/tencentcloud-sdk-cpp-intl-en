@@ -51,92 +51,107 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Label This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Label This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
+                     * @param _label This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
                     /**
                      * 获取This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
                      * @return Score This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
-                     * @param Score This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
+                     * @param _score This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
                     /**
                      * 获取This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
                      * @return StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 
                      */
                     double GetStartTime() const;
 
                     /**
                      * 设置This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
-                     * @param StartTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * @param _startTime This field is used to return the start time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 
                      */
                     void SetStartTime(const double& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
                      * @return EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 
                      */
                     double GetEndTime() const;
 
                     /**
                      * 设置This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
-                     * @param EndTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * @param _endTime This field is used to return the end time of the segment of an audio file under the corresponding moan tag in milliseconds.
+                     * 
                      */
                     void SetEndTime(const double& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取*This field is in beta test. Stay tuned*
                      * @return SubLabelCode *This field is in beta test. Stay tuned*
+                     * 
                      */
                     std::string GetSubLabelCode() const;
 
                     /**
                      * 设置*This field is in beta test. Stay tuned*
-                     * @param SubLabelCode *This field is in beta test. Stay tuned*
+                     * @param _subLabelCode *This field is in beta test. Stay tuned*
+                     * 
                      */
                     void SetSubLabelCode(const std::string& _subLabelCode);
 
                     /**
                      * 判断参数 SubLabelCode 是否已赋值
                      * @return SubLabelCode 是否已赋值
+                     * 
                      */
                     bool SubLabelCodeHasBeenSet() const;
 
@@ -145,38 +160,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
                      * 设置This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubLabel This field is used to return a subtag under the current tag (Lable).
+                     * @param _subLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
 
                     /**
                      * 判断参数 SubLabel 是否已赋值
                      * @return SubLabel 是否已赋值
+                     * 
                      */
                     bool SubLabelHasBeenSet() const;
 
                     /**
                      * 获取This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
                      * @return Suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
                      * 设置This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
-                     * @param Suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     * @param _suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 

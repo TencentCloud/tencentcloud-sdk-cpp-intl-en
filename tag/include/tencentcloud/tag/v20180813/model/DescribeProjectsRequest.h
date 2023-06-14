@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取If this parameter is 1, all projects (including hidden ones) will be queried. If it is 0, only non-hidden projects will be queried.
                      * @return AllList If this parameter is 1, all projects (including hidden ones) will be queried. If it is 0, only non-hidden projects will be queried.
+                     * 
                      */
                     uint64_t GetAllList() const;
 
                     /**
                      * 设置If this parameter is 1, all projects (including hidden ones) will be queried. If it is 0, only non-hidden projects will be queried.
-                     * @param AllList If this parameter is 1, all projects (including hidden ones) will be queried. If it is 0, only non-hidden projects will be queried.
+                     * @param _allList If this parameter is 1, all projects (including hidden ones) will be queried. If it is 0, only non-hidden projects will be queried.
+                     * 
                      */
                     void SetAllList(const uint64_t& _allList);
 
                     /**
                      * 判断参数 AllList 是否已赋值
                      * @return AllList 是否已赋值
+                     * 
                      */
                     bool AllListHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Fixed value: 1,000.
                      * @return Limit Number of entries per page. Fixed value: 1,000.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Fixed value: 1,000.
-                     * @param Limit Number of entries per page. Fixed value: 1,000.
+                     * @param _limit Number of entries per page. Fixed value: 1,000.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset.
                      * @return Offset Pagination offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset.
-                     * @param Offset Pagination offset.
+                     * @param _offset Pagination offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

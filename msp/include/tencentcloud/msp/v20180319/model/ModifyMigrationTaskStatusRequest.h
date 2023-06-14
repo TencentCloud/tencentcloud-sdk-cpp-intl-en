@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Task status, valid values include `unstart` (migration has not started), `migrating` (migration in progress), `finish` (migration completed) or `fail` (migration failed).
                      * @return Status Task status, valid values include `unstart` (migration has not started), `migrating` (migration in progress), `finish` (migration completed) or `fail` (migration failed).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status, valid values include `unstart` (migration has not started), `migrating` (migration in progress), `finish` (migration completed) or `fail` (migration failed).
-                     * @param Status Task status, valid values include `unstart` (migration has not started), `migrating` (migration in progress), `finish` (migration completed) or `fail` (migration failed).
+                     * @param _status Task status, valid values include `unstart` (migration has not started), `migrating` (migration in progress), `finish` (migration completed) or `fail` (migration failed).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Task ID, such as msp-jitoh33n
                      * @return TaskId Task ID, such as msp-jitoh33n
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID, such as msp-jitoh33n
-                     * @param TaskId Task ID, such as msp-jitoh33n
+                     * @param _taskId Task ID, such as msp-jitoh33n
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

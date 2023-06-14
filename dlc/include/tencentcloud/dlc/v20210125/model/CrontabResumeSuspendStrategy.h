@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResumeTime The scheduled start time, such as 8:00 AM every Monday.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResumeTime() const;
 
                     /**
                      * 设置The scheduled start time, such as 8:00 AM every Monday.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ResumeTime The scheduled start time, such as 8:00 AM every Monday.
+                     * @param _resumeTime The scheduled start time, such as 8:00 AM every Monday.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResumeTime(const std::string& _resumeTime);
 
                     /**
                      * 判断参数 ResumeTime 是否已赋值
                      * @return ResumeTime 是否已赋值
+                     * 
                      */
                     bool ResumeTimeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SuspendTime The scheduled suspension time, such as 8:00 PM every Monday.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuspendTime() const;
 
                     /**
                      * 设置The scheduled suspension time, such as 8:00 PM every Monday.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SuspendTime The scheduled suspension time, such as 8:00 PM every Monday.
+                     * @param _suspendTime The scheduled suspension time, such as 8:00 PM every Monday.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuspendTime(const std::string& _suspendTime);
 
                     /**
                      * 判断参数 SuspendTime 是否已赋值
                      * @return SuspendTime 是否已赋值
+                     * 
                      */
                     bool SuspendTimeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SuspendStrategy The suspension setting. Valid values: `0` (suspension after task end, default) and `1` (force suspension).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSuspendStrategy() const;
 
                     /**
                      * 设置The suspension setting. Valid values: `0` (suspension after task end, default) and `1` (force suspension).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SuspendStrategy The suspension setting. Valid values: `0` (suspension after task end, default) and `1` (force suspension).
+                     * @param _suspendStrategy The suspension setting. Valid values: `0` (suspension after task end, default) and `1` (force suspension).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuspendStrategy(const int64_t& _suspendStrategy);
 
                     /**
                      * 判断参数 SuspendStrategy 是否已赋值
                      * @return SuspendStrategy 是否已赋值
+                     * 
                      */
                     bool SuspendStrategyHasBeenSet() const;
 

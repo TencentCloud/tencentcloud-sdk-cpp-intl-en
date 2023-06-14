@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter
                      * @return Offset Pagination parameter
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination parameter
-                     * @param Offset Pagination parameter
+                     * @param _offset Pagination parameter
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter
                      * @return Limit Pagination parameter
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Pagination parameter
-                     * @param Limit Pagination parameter
+                     * @param _limit Pagination parameter
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Ignore query string parameter
                      * @return Host Ignore query string parameter
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Ignore query string parameter
-                     * @param Host Ignore query string parameter
+                     * @param _host Ignore query string parameter
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether the `Host` parameter supports fuzzy match
                      * @return Fuzzy Specifies whether the `Host` parameter supports fuzzy match
+                     * 
                      */
                     bool GetFuzzy() const;
 
                     /**
                      * 设置Specifies whether the `Host` parameter supports fuzzy match
-                     * @param Fuzzy Specifies whether the `Host` parameter supports fuzzy match
+                     * @param _fuzzy Specifies whether the `Host` parameter supports fuzzy match
+                     * 
                      */
                     void SetFuzzy(const bool& _fuzzy);
 
                     /**
                      * 判断参数 Fuzzy 是否已赋值
                      * @return Fuzzy 是否已赋值
+                     * 
                      */
                     bool FuzzyHasBeenSet() const;
 

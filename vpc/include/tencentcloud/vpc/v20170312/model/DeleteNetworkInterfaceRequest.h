@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the ENI instance, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The ID of the ENI instance, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 

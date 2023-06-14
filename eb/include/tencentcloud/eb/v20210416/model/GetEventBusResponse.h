@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Update time
                      * @return ModTime Update time
+                     * 
                      */
                     std::string GetModTime() const;
 
                     /**
                      * 判断参数 ModTime 是否已赋值
                      * @return ModTime 是否已赋值
+                     * 
                      */
                     bool ModTimeHasBeenSet() const;
 
                     /**
                      * 获取Event bus description
                      * @return Description Event bus description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Log topic ID
                      * @return ClsTopicId Log topic ID
+                     * 
                      */
                     std::string GetClsTopicId() const;
 
                     /**
                      * 判断参数 ClsTopicId 是否已赋值
                      * @return ClsTopicId 是否已赋值
+                     * 
                      */
                     bool ClsTopicIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return AddTime Creation time.
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
                     /**
                      * 获取Logset ID
                      * @return ClsLogsetId Logset ID
+                     * 
                      */
                     std::string GetClsLogsetId() const;
 
                     /**
                      * 判断参数 ClsLogsetId 是否已赋值
                      * @return ClsLogsetId 是否已赋值
+                     * 
                      */
                     bool ClsLogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Event bus name
                      * @return EventBusName Event bus name
+                     * 
                      */
                     std::string GetEventBusName() const;
 
                     /**
                      * 判断参数 EventBusName 是否已赋值
                      * @return EventBusName 是否已赋值
+                     * 
                      */
                     bool EventBusNameHasBeenSet() const;
 
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取(Disused) Event bus type
                      * @return Type (Disused) Event bus type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Billing mode
                      * @return PayMode Billing mode
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -156,12 +174,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SaveDays EventBridge log storage period
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSaveDays() const;
 
                     /**
                      * 判断参数 SaveDays 是否已赋值
                      * @return SaveDays 是否已赋值
+                     * 
                      */
                     bool SaveDaysHasBeenSet() const;
 
@@ -170,12 +190,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LogTopicId EventBridge log topic ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogTopicId() const;
 
                     /**
                      * 判断参数 LogTopicId 是否已赋值
                      * @return LogTopicId 是否已赋值
+                     * 
                      */
                     bool LogTopicIdHasBeenSet() const;
 
@@ -184,12 +206,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnableStore Whether to enable log storage
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnableStore() const;
 
                     /**
                      * 判断参数 EnableStore 是否已赋值
                      * @return EnableStore 是否已赋值
+                     * 
                      */
                     bool EnableStoreHasBeenSet() const;
 
@@ -198,12 +222,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LinkMode Whether to sort the message
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLinkMode() const;
 
                     /**
                      * 判断参数 LinkMode 是否已赋值
                      * @return LinkMode 是否已赋值
+                     * 
                      */
                     bool LinkModeHasBeenSet() const;
 

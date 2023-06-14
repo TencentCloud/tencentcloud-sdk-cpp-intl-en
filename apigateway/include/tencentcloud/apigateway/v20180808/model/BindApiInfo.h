@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique API ID.
                      * @return ApiId Unique API ID.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique API ID.
-                     * @param ApiId Unique API ID.
+                     * @param _apiId Unique API ID.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the service
                      * @return ServiceId Unique ID of the service
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service
-                     * @param ServiceId Unique ID of the service
+                     * @param _serviceId Unique ID of the service
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ApiName API name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetApiName() const;
 
                     /**
                      * 设置API name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ApiName API name
+                     * @param _apiName API name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetApiName(const std::string& _apiName);
 
                     /**
                      * 判断参数 ApiName 是否已赋值
                      * @return ApiName 是否已赋值
+                     * 
                      */
                     bool ApiNameHasBeenSet() const;
 
@@ -109,38 +118,44 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ServiceName Service name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Service name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ServiceName Service name
+                     * @param _serviceName Service name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
                     /**
                      * 获取Bound At
                      * @return BindTime Bound At
+                     * 
                      */
                     std::string GetBindTime() const;
 
                     /**
                      * 设置Bound At
-                     * @param BindTime Bound At
+                     * @param _bindTime Bound At
+                     * 
                      */
                     void SetBindTime(const std::string& _bindTime);
 
                     /**
                      * 判断参数 BindTime 是否已赋值
                      * @return BindTime 是否已赋值
+                     * 
                      */
                     bool BindTimeHasBeenSet() const;
 

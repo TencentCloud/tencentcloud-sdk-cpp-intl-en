@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the cluster where the table resides
                      * @return ClusterId The ID of the cluster where the table resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The ID of the cluster where the table resides
-                     * @param ClusterId The ID of the cluster where the table resides
+                     * @param _clusterId The ID of the cluster where the table resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Snapshot list
                      * @return SelectedTables Snapshot list
+                     * 
                      */
                     std::vector<SnapshotInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置Snapshot list
-                     * @param SelectedTables Snapshot list
+                     * @param _selectedTables Snapshot list
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SnapshotInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 

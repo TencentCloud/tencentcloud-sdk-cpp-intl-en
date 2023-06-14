@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取ECM region, such as `ap-xian-ecm`.
                      * @return EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region, such as `ap-xian-ecm`.
-                     * @param EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * @param _ecmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取ENI instance ID, such as `eni-11112222`.
                      * @return NetworkInterfaceId ENI instance ID, such as `eni-11112222`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置ENI instance ID, such as `eni-11112222`.
-                     * @param NetworkInterfaceId ENI instance ID, such as `eni-11112222`.
+                     * @param _networkInterfaceId ENI instance ID, such as `eni-11112222`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the specified private IPs. You can specify up to 10 IPs at a time.
                      * @return PrivateIpAddresses Information of the specified private IPs. You can specify up to 10 IPs at a time.
+                     * 
                      */
                     std::vector<PrivateIpAddressSpecification> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置Information of the specified private IPs. You can specify up to 10 IPs at a time.
-                     * @param PrivateIpAddresses Information of the specified private IPs. You can specify up to 10 IPs at a time.
+                     * @param _privateIpAddresses Information of the specified private IPs. You can specify up to 10 IPs at a time.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<PrivateIpAddressSpecification>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 

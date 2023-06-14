@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of assets that failed the check
                      * @return TotalCount Total number of assets that failed the check
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ScanFailedAssetList List of aggregated information of each type of asset that failed the check
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ComplianceScanFailedAsset> GetScanFailedAssetList() const;
 
                     /**
                      * 判断参数 ScanFailedAssetList 是否已赋值
                      * @return ScanFailedAssetList 是否已赋值
+                     * 
                      */
                     bool ScanFailedAssetListHasBeenSet() const;
 

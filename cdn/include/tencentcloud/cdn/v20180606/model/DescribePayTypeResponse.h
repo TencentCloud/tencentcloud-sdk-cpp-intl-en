@@ -58,12 +58,14 @@ When you change a daily billing mode to another, and there is network usage on t
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
 When you change a daily billing mode to another, and there is network usage on the day of change, this field shows the new billing mode, which takes effect from the next day. If there is no network usage on the day of change, this field shows the new billing mode directly.
+                     * 
                      */
                     std::string GetPayType() const;
 
                     /**
                      * 判断参数 PayType 是否已赋值
                      * @return PayType 是否已赋值
+                     * 
                      */
                     bool PayTypeHasBeenSet() const;
 
@@ -76,12 +78,14 @@ When you change a daily billing mode to another, and there is network usage on t
 `day`: Daily
 `month`: Monthly 
 `hour`: Hourly 
+                     * 
                      */
                     std::string GetBillingCycle() const;
 
                     /**
                      * 判断参数 BillingCycle 是否已赋值
                      * @return BillingCycle 是否已赋值
+                     * 
                      */
                     bool BillingCycleHasBeenSet() const;
 
@@ -96,12 +100,14 @@ When you change a daily billing mode to another, and there is network usage on t
 `month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
 `sum`: Billed by the total traffic/total requests (daily or monthly settlement)
 `max`: Billed by the peak bandwidth (daily settlement)
+                     * 
                      */
                     std::string GetStatType() const;
 
                     /**
                      * 判断参数 StatType 是否已赋值
                      * @return StatType 是否已赋值
+                     * 
                      */
                     bool StatTypeHasBeenSet() const;
 
@@ -112,12 +118,14 @@ When you change a daily billing mode to another, and there is network usage on t
                      * @return RegionType Billing method for regions outside the Chinese mainland:
 `all`: Unified billing for all regions
 `multiple`: Region-specific billing
+                     * 
                      */
                     std::string GetRegionType() const;
 
                     /**
                      * 判断参数 RegionType 是否已赋值
                      * @return RegionType 是否已赋值
+                     * 
                      */
                     bool RegionTypeHasBeenSet() const;
 
@@ -134,12 +142,14 @@ When you change a daily billing mode to another, and there is network usage on t
 `request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
+                     * 
                      */
                     std::string GetCurrentPayType() const;
 
                     /**
                      * 判断参数 CurrentPayType 是否已赋值
                      * @return CurrentPayType 是否已赋值
+                     * 
                      */
                     bool CurrentPayTypeHasBeenSet() const;
 

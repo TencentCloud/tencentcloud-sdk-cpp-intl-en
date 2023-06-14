@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID.
                      * @return LoadBalancerId CLB instance ID.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID.
-                     * @param LoadBalancerId CLB instance ID.
+                     * @param _loadBalancerId CLB instance ID.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB listener ID.
                      * @return ListenerId CLB listener ID.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID.
-                     * @param ListenerId CLB listener ID.
+                     * @param _listenerId CLB listener ID.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Legacy domain name under a listener.
                      * @return Domain Legacy domain name under a listener.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Legacy domain name under a listener.
-                     * @param Domain Legacy domain name under a listener.
+                     * @param _domain Legacy domain name under a listener.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
                      * @return NewDomain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
+                     * 
                      */
                     std::string GetNewDomain() const;
 
                     /**
                      * 设置New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
-                     * @param NewDomain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
+                     * @param _newDomain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
+                     * 
                      */
                     void SetNewDomain(const std::string& _newDomain);
 
                     /**
                      * 判断参数 NewDomain 是否已赋值
                      * @return NewDomain 是否已赋值
+                     * 
                      */
                     bool NewDomainHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Export field
                      * @return ExportField Export field
+                     * 
                      */
                     std::vector<std::string> GetExportField() const;
 
                     /**
                      * 设置Export field
-                     * @param ExportField Export field
+                     * @param _exportField Export field
+                     * 
                      */
                     void SetExportField(const std::vector<std::string>& _exportField);
 
                     /**
                      * 判断参数 ExportField 是否已赋值
                      * @return ExportField 是否已赋值
+                     * 
                      */
                     bool ExportFieldHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
@@ -88,6 +94,7 @@ namespace TencentCloud
 <li>Level- String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
 <li>Behavior - String - Required: No - Risky behavior. Valid values: `1`, `2`, `3`, `4`.</li>
 <li>Type - String - Required: No - Risk type. Valid values: `1`, `2`.</li>
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
@@ -96,16 +103,18 @@ namespace TencentCloud
 <li>Level- String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
 <li>Behavior - String - Required: No - Risky behavior. Valid values: `1`, `2`, `3`, `4`.</li>
 <li>Type - String - Required: No - Risk type. Valid values: `1`, `2`.</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>Level- String - Required: No - Risk level. Valid values: `1`, `2`, `3`, `4`.</li>
 <li>Behavior - String - Required: No - Risky behavior. Valid values: `1`, `2`, `3`, `4`.</li>
 <li>Type - String - Required: No - Risk type. Valid values: `1`, `2`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

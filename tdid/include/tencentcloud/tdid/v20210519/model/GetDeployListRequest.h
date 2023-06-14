@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The start.
                      * @return DisplayStart The start.
+                     * 
                      */
                     uint64_t GetDisplayStart() const;
 
                     /**
                      * 设置The start.
-                     * @param DisplayStart The start.
+                     * @param _displayStart The start.
+                     * 
                      */
                     void SetDisplayStart(const uint64_t& _displayStart);
 
                     /**
                      * 判断参数 DisplayStart 是否已赋值
                      * @return DisplayStart 是否已赋值
+                     * 
                      */
                     bool DisplayStartHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records to return.
                      * @return DisplayLength The maximum number of records to return.
+                     * 
                      */
                     uint64_t GetDisplayLength() const;
 
                     /**
                      * 设置The maximum number of records to return.
-                     * @param DisplayLength The maximum number of records to return.
+                     * @param _displayLength The maximum number of records to return.
+                     * 
                      */
                     void SetDisplayLength(const uint64_t& _displayLength);
 
                     /**
                      * 判断参数 DisplayLength 是否已赋值
                      * @return DisplayLength 是否已赋值
+                     * 
                      */
                     bool DisplayLengthHasBeenSet() const;
 

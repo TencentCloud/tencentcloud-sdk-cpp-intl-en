@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取ID of the remote backup subtask
                      * @return SubBackupId ID of the remote backup subtask
+                     * 
                      */
                     std::vector<int64_t> GetSubBackupId() const;
 
                     /**
                      * 设置ID of the remote backup subtask
-                     * @param SubBackupId ID of the remote backup subtask
+                     * @param _subBackupId ID of the remote backup subtask
+                     * 
                      */
                     void SetSubBackupId(const std::vector<int64_t>& _subBackupId);
 
                     /**
                      * 判断参数 SubBackupId 是否已赋值
                      * @return SubBackupId 是否已赋值
+                     * 
                      */
                     bool SubBackupIdHasBeenSet() const;
 
                     /**
                      * 获取The region where the remote backup resides
                      * @return Region The region where the remote backup resides
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置The region where the remote backup resides
-                     * @param Region The region where the remote backup resides
+                     * @param _region The region where the remote backup resides
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
                      * @return Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
-                     * @param Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * @param _status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The start time of remote backup
                      * @return StartTime The start time of remote backup
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start time of remote backup
-                     * @param StartTime The start time of remote backup
+                     * @param _startTime The start time of remote backup
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time of remote backup
                      * @return FinishTime The end time of remote backup
+                     * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
                      * 设置The end time of remote backup
-                     * @param FinishTime The end time of remote backup
+                     * @param _finishTime The end time of remote backup
+                     * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
 
                     /**
                      * 判断参数 FinishTime 是否已赋值
                      * @return FinishTime 是否已赋值
+                     * 
                      */
                     bool FinishTimeHasBeenSet() const;
 
                     /**
                      * 获取The download address
                      * @return Url The download address
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The download address
-                     * @param Url The download address
+                     * @param _url The download address
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

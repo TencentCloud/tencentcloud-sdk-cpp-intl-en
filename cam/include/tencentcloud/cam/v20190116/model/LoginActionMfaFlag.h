@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Mobile phone
                      * @return Phone Mobile phone
+                     * 
                      */
                     uint64_t GetPhone() const;
 
                     /**
                      * 设置Mobile phone
-                     * @param Phone Mobile phone
+                     * @param _phone Mobile phone
+                     * 
                      */
                     void SetPhone(const uint64_t& _phone);
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
                     /**
                      * 获取Soft token
                      * @return Stoken Soft token
+                     * 
                      */
                     uint64_t GetStoken() const;
 
                     /**
                      * 设置Soft token
-                     * @param Stoken Soft token
+                     * @param _stoken Soft token
+                     * 
                      */
                     void SetStoken(const uint64_t& _stoken);
 
                     /**
                      * 判断参数 Stoken 是否已赋值
                      * @return Stoken 是否已赋值
+                     * 
                      */
                     bool StokenHasBeenSet() const;
 
                     /**
                      * 获取WeChat
                      * @return Wechat WeChat
+                     * 
                      */
                     uint64_t GetWechat() const;
 
                     /**
                      * 设置WeChat
-                     * @param Wechat WeChat
+                     * @param _wechat WeChat
+                     * 
                      */
                     void SetWechat(const uint64_t& _wechat);
 
                     /**
                      * 判断参数 Wechat 是否已赋值
                      * @return Wechat 是否已赋值
+                     * 
                      */
                     bool WechatHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ListenerId Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ListenerId Listener ID
+                     * @param _listenerId Listener ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Bound port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Bound port
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Bound port
+                     * @param _port Bound port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId CVM instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置CVM instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId CVM instance ID
+                     * @param _instanceId CVM instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EniIp ENI IP
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEniIp() const;
 
                     /**
                      * 设置ENI IP
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EniIp ENI IP
+                     * @param _eniIp ENI IP
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEniIp(const std::string& _eniIp);
 
                     /**
                      * 判断参数 EniIp 是否已赋值
                      * @return EniIp 是否已赋值
+                     * 
                      */
                     bool EniIpHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Weight Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetWeight() const;
 
                     /**
                      * 设置Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Weight Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
+                     * @param _weight Weight of the CVM instance. Value range: [0, 100]. If it is not specified for binding the instance, 10 will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWeight(const int64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

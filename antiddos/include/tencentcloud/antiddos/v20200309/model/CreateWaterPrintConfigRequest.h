@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Watermark configuration
                      * @return WaterPrintConfig Watermark configuration
+                     * 
                      */
                     WaterPrintConfig GetWaterPrintConfig() const;
 
                     /**
                      * 设置Watermark configuration
-                     * @param WaterPrintConfig Watermark configuration
+                     * @param _waterPrintConfig Watermark configuration
+                     * 
                      */
                     void SetWaterPrintConfig(const WaterPrintConfig& _waterPrintConfig);
 
                     /**
                      * 判断参数 WaterPrintConfig 是否已赋值
                      * @return WaterPrintConfig 是否已赋值
+                     * 
                      */
                     bool WaterPrintConfigHasBeenSet() const;
 

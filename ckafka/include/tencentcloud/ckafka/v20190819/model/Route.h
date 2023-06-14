@@ -58,6 +58,7 @@ namespace TencentCloud
 1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
 2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+                     * 
                      */
                     int64_t GetAccessType() const;
 
@@ -67,71 +68,82 @@ namespace TencentCloud
 1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
 2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-                     * @param AccessType Instance connection method
+                     * @param _accessType Instance connection method
 0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
 1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
 2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+                     * 
                      */
                     void SetAccessType(const int64_t& _accessType);
 
                     /**
                      * 判断参数 AccessType 是否已赋值
                      * @return AccessType 是否已赋值
+                     * 
                      */
                     bool AccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Route ID
                      * @return RouteId Route ID
+                     * 
                      */
                     int64_t GetRouteId() const;
 
                     /**
                      * 设置Route ID
-                     * @param RouteId Route ID
+                     * @param _routeId Route ID
+                     * 
                      */
                     void SetRouteId(const int64_t& _routeId);
 
                     /**
                      * 判断参数 RouteId 是否已赋值
                      * @return RouteId 是否已赋值
+                     * 
                      */
                     bool RouteIdHasBeenSet() const;
 
                     /**
                      * 获取VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
                      * @return VipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+                     * 
                      */
                     int64_t GetVipType() const;
 
                     /**
                      * 设置VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
-                     * @param VipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+                     * @param _vipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+                     * 
                      */
                     void SetVipType(const int64_t& _vipType);
 
                     /**
                      * 判断参数 VipType 是否已赋值
                      * @return VipType 是否已赋值
+                     * 
                      */
                     bool VipTypeHasBeenSet() const;
 
                     /**
                      * 获取Virtual IP list
                      * @return VipList Virtual IP list
+                     * 
                      */
                     std::vector<VipEntity> GetVipList() const;
 
                     /**
                      * 设置Virtual IP list
-                     * @param VipList Virtual IP list
+                     * @param _vipList Virtual IP list
+                     * 
                      */
                     void SetVipList(const std::vector<VipEntity>& _vipList);
 
                     /**
                      * 判断参数 VipList 是否已赋值
                      * @return VipList 是否已赋值
+                     * 
                      */
                     bool VipListHasBeenSet() const;
 
@@ -140,20 +152,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Domain name
+                     * @param _domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DomainPort Domain name port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDomainPort() const;
 
                     /**
                      * 设置Domain name port
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DomainPort Domain name port
+                     * @param _domainPort Domain name port
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomainPort(const int64_t& _domainPort);
 
                     /**
                      * 判断参数 DomainPort 是否已赋值
                      * @return DomainPort 是否已赋值
+                     * 
                      */
                     bool DomainPortHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeleteTimestamp Timestamp
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeleteTimestamp() const;
 
                     /**
                      * 设置Timestamp
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeleteTimestamp Timestamp
+                     * @param _deleteTimestamp Timestamp
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeleteTimestamp(const std::string& _deleteTimestamp);
 
                     /**
                      * 判断参数 DeleteTimestamp 是否已赋值
                      * @return DeleteTimestamp 是否已赋值
+                     * 
                      */
                     bool DeleteTimestampHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The position of the timestamp watermark. Valid values: `0` (top left), `1` (top right), `2` (bottom left), `3` (bottom right), `4` (top center), `5` (bottom center), `6` (center).
                      * @return Pos The position of the timestamp watermark. Valid values: `0` (top left), `1` (top right), `2` (bottom left), `3` (bottom right), `4` (top center), `5` (bottom center), `6` (center).
+                     * 
                      */
                     uint64_t GetPos() const;
 
                     /**
                      * 设置The position of the timestamp watermark. Valid values: `0` (top left), `1` (top right), `2` (bottom left), `3` (bottom right), `4` (top center), `5` (bottom center), `6` (center).
-                     * @param Pos The position of the timestamp watermark. Valid values: `0` (top left), `1` (top right), `2` (bottom left), `3` (bottom right), `4` (top center), `5` (bottom center), `6` (center).
+                     * @param _pos The position of the timestamp watermark. Valid values: `0` (top left), `1` (top right), `2` (bottom left), `3` (bottom right), `4` (top center), `5` (bottom center), `6` (center).
+                     * 
                      */
                     void SetPos(const uint64_t& _pos);
 
                     /**
                      * 判断参数 Pos 是否已赋值
                      * @return Pos 是否已赋值
+                     * 
                      */
                     bool PosHasBeenSet() const;
 
                     /**
                      * 获取The time zone. The default is UTC+8.
                      * @return TimeZone The time zone. The default is UTC+8.
+                     * 
                      */
                     uint64_t GetTimeZone() const;
 
                     /**
                      * 设置The time zone. The default is UTC+8.
-                     * @param TimeZone The time zone. The default is UTC+8.
+                     * @param _timeZone The time zone. The default is UTC+8.
+                     * 
                      */
                     void SetTimeZone(const uint64_t& _timeZone);
 
                     /**
                      * 判断参数 TimeZone 是否已赋值
                      * @return TimeZone 是否已赋值
+                     * 
                      */
                     bool TimeZoneHasBeenSet() const;
 

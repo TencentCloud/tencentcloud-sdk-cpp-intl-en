@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Data subscription instance ID
                      * @return SubscribeId Data subscription instance ID
+                     * 
                      */
                     std::string GetSubscribeId() const;
 
                     /**
                      * 设置Data subscription instance ID
-                     * @param SubscribeId Data subscription instance ID
+                     * @param _subscribeId Data subscription instance ID
+                     * 
                      */
                     void SetSubscribeId(const std::string& _subscribeId);
 
                     /**
                      * 判断参数 SubscribeId 是否已赋值
                      * @return SubscribeId 是否已赋值
+                     * 
                      */
                     bool SubscribeIdHasBeenSet() const;
 
                     /**
                      * 获取Consumption starting time point in the format of `Y-m-d h:m:s`, i.e., the starting time point for data subscription. Value range: within the last 24 hours
                      * @return ConsumeStartTime Consumption starting time point in the format of `Y-m-d h:m:s`, i.e., the starting time point for data subscription. Value range: within the last 24 hours
+                     * 
                      */
                     std::string GetConsumeStartTime() const;
 
                     /**
                      * 设置Consumption starting time point in the format of `Y-m-d h:m:s`, i.e., the starting time point for data subscription. Value range: within the last 24 hours
-                     * @param ConsumeStartTime Consumption starting time point in the format of `Y-m-d h:m:s`, i.e., the starting time point for data subscription. Value range: within the last 24 hours
+                     * @param _consumeStartTime Consumption starting time point in the format of `Y-m-d h:m:s`, i.e., the starting time point for data subscription. Value range: within the last 24 hours
+                     * 
                      */
                     void SetConsumeStartTime(const std::string& _consumeStartTime);
 
                     /**
                      * 判断参数 ConsumeStartTime 是否已赋值
                      * @return ConsumeStartTime 是否已赋值
+                     * 
                      */
                     bool ConsumeStartTimeHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Certificate ID
                      * @return CertificateId Certificate ID
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置Certificate ID
-                     * @param CertificateId Certificate ID
+                     * @param _certificateId Certificate ID
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 
                     /**
                      * 获取Certificate name; It's an old parameter, please switch to CertificateAlias.
                      * @return CertificateName Certificate name; It's an old parameter, please switch to CertificateAlias.
+                     * 
                      */
                     std::string GetCertificateName() const;
 
                     /**
                      * 设置Certificate name; It's an old parameter, please switch to CertificateAlias.
-                     * @param CertificateName Certificate name; It's an old parameter, please switch to CertificateAlias.
+                     * @param _certificateName Certificate name; It's an old parameter, please switch to CertificateAlias.
+                     * 
                      */
                     void SetCertificateName(const std::string& _certificateName);
 
                     /**
                      * 判断参数 CertificateName 是否已赋值
                      * @return CertificateName 是否已赋值
+                     * 
                      */
                     bool CertificateNameHasBeenSet() const;
 
                     /**
                      * 获取Certificate type.
                      * @return CertificateType Certificate type.
+                     * 
                      */
                     int64_t GetCertificateType() const;
 
                     /**
                      * 设置Certificate type.
-                     * @param CertificateType Certificate type.
+                     * @param _certificateType Certificate type.
+                     * 
                      */
                     void SetCertificateType(const int64_t& _certificateType);
 
                     /**
                      * 判断参数 CertificateType 是否已赋值
                      * @return CertificateType 是否已赋值
+                     * 
                      */
                     bool CertificateTypeHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CertificateAlias Certificate name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCertificateAlias() const;
 
                     /**
                      * 设置Certificate name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CertificateAlias Certificate name.
+                     * @param _certificateAlias Certificate name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertificateAlias(const std::string& _certificateAlias);
 
                     /**
                      * 判断参数 CertificateAlias 是否已赋值
                      * @return CertificateAlias 是否已赋值
+                     * 
                      */
                     bool CertificateAliasHasBeenSet() const;
 
                     /**
                      * 获取Certificate creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
                      * @return CreateTime Certificate creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Certificate creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
-                     * @param CreateTime Certificate creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+                     * @param _createTime Certificate creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BeginTime Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetBeginTime() const;
 
                     /**
                      * 设置Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BeginTime Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+                     * @param _beginTime Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBeginTime(const uint64_t& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetEndTime() const;
 
                     /**
                      * 设置Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+                     * @param _endTime Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -189,20 +210,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IssuerCN Common name of the certificate issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIssuerCN() const;
 
                     /**
                      * 设置Common name of the certificate issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IssuerCN Common name of the certificate issuer.
+                     * @param _issuerCN Common name of the certificate issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIssuerCN(const std::string& _issuerCN);
 
                     /**
                      * 判断参数 IssuerCN 是否已赋值
                      * @return IssuerCN 是否已赋值
+                     * 
                      */
                     bool IssuerCNHasBeenSet() const;
 
@@ -211,20 +235,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubjectCN Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubjectCN() const;
 
                     /**
                      * 设置Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubjectCN Common name of the certificate subject.
+                     * @param _subjectCN Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubjectCN(const std::string& _subjectCN);
 
                     /**
                      * 判断参数 SubjectCN 是否已赋值
                      * @return SubjectCN 是否已赋值
+                     * 
                      */
                     bool SubjectCNHasBeenSet() const;
 

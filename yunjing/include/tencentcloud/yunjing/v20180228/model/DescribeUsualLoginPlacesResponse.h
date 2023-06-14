@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Usual login location array
                      * @return UsualLoginPlaces Usual login location array
+                     * 
                      */
                     std::vector<UsualPlace> GetUsualLoginPlaces() const;
 
                     /**
                      * 判断参数 UsualLoginPlaces 是否已赋值
                      * @return UsualLoginPlaces 是否已赋值
+                     * 
                      */
                     bool UsualLoginPlacesHasBeenSet() const;
 

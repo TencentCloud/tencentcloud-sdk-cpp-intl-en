@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Protocol type for an IP location database. Valid value: `ipv4`.
                      * @return Type Protocol type for an IP location database. Valid value: `ipv4`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Protocol type for an IP location database. Valid value: `ipv4`.
-                     * @param Type Protocol type for an IP location database. Valid value: `ipv4`.
+                     * @param _type Protocol type for an IP location database. Valid value: `ipv4`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

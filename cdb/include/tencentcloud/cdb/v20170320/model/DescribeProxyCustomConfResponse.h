@@ -50,12 +50,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Count Number of queried proxy configurations
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
@@ -64,12 +66,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return CustomConf Proxy configuration details
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     CustomConfig GetCustomConf() const;
 
                     /**
                      * 判断参数 CustomConf 是否已赋值
                      * @return CustomConf 是否已赋值
+                     * 
                      */
                     bool CustomConfHasBeenSet() const;
 
@@ -78,12 +82,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return WeightRule Weight rule
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     Rule GetWeightRule() const;
 
                     /**
                      * 判断参数 WeightRule 是否已赋值
                      * @return WeightRule 是否已赋值
+                     * 
                      */
                     bool WeightRuleHasBeenSet() const;
 

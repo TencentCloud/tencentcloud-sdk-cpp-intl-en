@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the cluster where table group tags need to be queried
                      * @return ClusterId The ID of the cluster where table group tags need to be queried
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The ID of the cluster where table group tags need to be queried
-                     * @param ClusterId The ID of the cluster where table group tags need to be queried
+                     * @param _clusterId The ID of the cluster where table group tags need to be queried
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The list of IDs of the table groups whose tags need to be queried
                      * @return TableGroupIds The list of IDs of the table groups whose tags need to be queried
+                     * 
                      */
                     std::vector<std::string> GetTableGroupIds() const;
 
                     /**
                      * 设置The list of IDs of the table groups whose tags need to be queried
-                     * @param TableGroupIds The list of IDs of the table groups whose tags need to be queried
+                     * @param _tableGroupIds The list of IDs of the table groups whose tags need to be queried
+                     * 
                      */
                     void SetTableGroupIds(const std::vector<std::string>& _tableGroupIds);
 
                     /**
                      * 判断参数 TableGroupIds 是否已赋值
                      * @return TableGroupIds 是否已赋值
+                     * 
                      */
                     bool TableGroupIdsHasBeenSet() const;
 

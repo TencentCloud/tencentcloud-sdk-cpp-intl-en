@@ -59,6 +59,7 @@ namespace TencentCloud
                      * @return FullUrlCache Whether to enable full-path cache
 `on`: Enable full-path cache (i.e., disable Ignore Query String)
 `off`: Disable full-path cache (i.e., enable Ignore Query String)
+                     * 
                      */
                     std::string GetFullUrlCache() const;
 
@@ -66,15 +67,17 @@ namespace TencentCloud
                      * 设置Whether to enable full-path cache
 `on`: Enable full-path cache (i.e., disable Ignore Query String)
 `off`: Disable full-path cache (i.e., enable Ignore Query String)
-                     * @param FullUrlCache Whether to enable full-path cache
+                     * @param _fullUrlCache Whether to enable full-path cache
 `on`: Enable full-path cache (i.e., disable Ignore Query String)
 `off`: Disable full-path cache (i.e., enable Ignore Query String)
+                     * 
                      */
                     void SetFullUrlCache(const std::string& _fullUrlCache);
 
                     /**
                      * 判断参数 FullUrlCache 是否已赋值
                      * @return FullUrlCache 是否已赋值
+                     * 
                      */
                     bool FullUrlCacheHasBeenSet() const;
 
@@ -83,20 +86,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IgnoreCase Specifies whether the cache key is case sensitive
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIgnoreCase() const;
 
                     /**
                      * 设置Specifies whether the cache key is case sensitive
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param IgnoreCase Specifies whether the cache key is case sensitive
+                     * @param _ignoreCase Specifies whether the cache key is case sensitive
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIgnoreCase(const std::string& _ignoreCase);
 
                     /**
                      * 判断参数 IgnoreCase 是否已赋值
                      * @return IgnoreCase 是否已赋值
+                     * 
                      */
                     bool IgnoreCaseHasBeenSet() const;
 
@@ -105,20 +111,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return QueryString Request parameter contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     QueryStringKey GetQueryString() const;
 
                     /**
                      * 设置Request parameter contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param QueryString Request parameter contained in `CacheKey`
+                     * @param _queryString Request parameter contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetQueryString(const QueryStringKey& _queryString);
 
                     /**
                      * 判断参数 QueryString 是否已赋值
                      * @return QueryString 是否已赋值
+                     * 
                      */
                     bool QueryStringHasBeenSet() const;
 
@@ -127,20 +136,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Cookie Cookie contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     CookieKey GetCookie() const;
 
                     /**
                      * 设置Cookie contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Cookie Cookie contained in `CacheKey`
+                     * @param _cookie Cookie contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCookie(const CookieKey& _cookie);
 
                     /**
                      * 判断参数 Cookie 是否已赋值
                      * @return Cookie 是否已赋值
+                     * 
                      */
                     bool CookieHasBeenSet() const;
 
@@ -149,20 +161,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Header Request header contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     HeaderKey GetHeader() const;
 
                     /**
                      * 设置Request header contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Header Request header contained in `CacheKey`
+                     * @param _header Request header contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHeader(const HeaderKey& _header);
 
                     /**
                      * 判断参数 Header 是否已赋值
                      * @return Header 是否已赋值
+                     * 
                      */
                     bool HeaderHasBeenSet() const;
 
@@ -171,20 +186,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheTag Custom string contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     CacheTagKey GetCacheTag() const;
 
                     /**
                      * 设置Custom string contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CacheTag Custom string contained in `CacheKey`
+                     * @param _cacheTag Custom string contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCacheTag(const CacheTagKey& _cacheTag);
 
                     /**
                      * 判断参数 CacheTag 是否已赋值
                      * @return CacheTag 是否已赋值
+                     * 
                      */
                     bool CacheTagHasBeenSet() const;
 
@@ -193,20 +211,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Scheme Request protocol contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     SchemeKey GetScheme() const;
 
                     /**
                      * 设置Request protocol contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Scheme Request protocol contained in `CacheKey`
+                     * @param _scheme Request protocol contained in `CacheKey`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetScheme(const SchemeKey& _scheme);
 
                     /**
                      * 判断参数 Scheme 是否已赋值
                      * @return Scheme 是否已赋值
+                     * 
                      */
                     bool SchemeHasBeenSet() const;
 
@@ -215,20 +236,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return KeyRules Path-specific cache key configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<KeyRule> GetKeyRules() const;
 
                     /**
                      * 设置Path-specific cache key configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param KeyRules Path-specific cache key configuration
+                     * @param _keyRules Path-specific cache key configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetKeyRules(const std::vector<KeyRule>& _keyRules);
 
                     /**
                      * 判断参数 KeyRules 是否已赋值
                      * @return KeyRules 是否已赋值
+                     * 
                      */
                     bool KeyRulesHasBeenSet() const;
 

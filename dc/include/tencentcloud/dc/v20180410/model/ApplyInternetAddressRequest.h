@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Mask length of a CIDR block
                      * @return MaskLen Mask length of a CIDR block
+                     * 
                      */
                     int64_t GetMaskLen() const;
 
                     /**
                      * 设置Mask length of a CIDR block
-                     * @param MaskLen Mask length of a CIDR block
+                     * @param _maskLen Mask length of a CIDR block
+                     * 
                      */
                     void SetMaskLen(const int64_t& _maskLen);
 
                     /**
                      * 判断参数 MaskLen 是否已赋值
                      * @return MaskLen 是否已赋值
+                     * 
                      */
                     bool MaskLenHasBeenSet() const;
 
@@ -69,6 +72,7 @@ namespace TencentCloud
 1: China Telecom
 2: China Mobile
 3: China Unicom
+                     * 
                      */
                     int64_t GetAddrType() const;
 
@@ -77,16 +81,18 @@ namespace TencentCloud
 1: China Telecom
 2: China Mobile
 3: China Unicom
-                     * @param AddrType Address type. Valid values: 0: BGP
+                     * @param _addrType Address type. Valid values: 0: BGP
 1: China Telecom
 2: China Mobile
 3: China Unicom
+                     * 
                      */
                     void SetAddrType(const int64_t& _addrType);
 
                     /**
                      * 判断参数 AddrType 是否已赋值
                      * @return AddrType 是否已赋值
+                     * 
                      */
                     bool AddrTypeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ namespace TencentCloud
 1: IPv6
                      * @return AddrProto Address protocol. Valid values: 0: IPv4
 1: IPv6
+                     * 
                      */
                     int64_t GetAddrProto() const;
 
                     /**
                      * 设置Address protocol. Valid values: 0: IPv4
 1: IPv6
-                     * @param AddrProto Address protocol. Valid values: 0: IPv4
+                     * @param _addrProto Address protocol. Valid values: 0: IPv4
 1: IPv6
+                     * 
                      */
                     void SetAddrProto(const int64_t& _addrProto);
 
                     /**
                      * 判断参数 AddrProto 是否已赋值
                      * @return AddrProto 是否已赋值
+                     * 
                      */
                     bool AddrProtoHasBeenSet() const;
 

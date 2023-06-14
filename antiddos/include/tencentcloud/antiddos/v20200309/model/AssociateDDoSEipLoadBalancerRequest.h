@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
                      * @return InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
-                     * @param InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * @param _instanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取EIP of the Anti-DDoS instance ID.
                      * @return Eip EIP of the Anti-DDoS instance ID.
+                     * 
                      */
                     std::string GetEip() const;
 
                     /**
                      * 设置EIP of the Anti-DDoS instance ID.
-                     * @param Eip EIP of the Anti-DDoS instance ID.
+                     * @param _eip EIP of the Anti-DDoS instance ID.
+                     * 
                      */
                     void SetEip(const std::string& _eip);
 
                     /**
                      * 判断参数 Eip 是否已赋值
                      * @return Eip 是否已赋值
+                     * 
                      */
                     bool EipHasBeenSet() const;
 
                     /**
                      * 获取ID of the CLB to bind, such as `lb-0000002i`. It can be queried in the console or obtained from `LoadBalancerId` returned by the `DescribeLoadBalancers` API.
                      * @return LoadBalancerID ID of the CLB to bind, such as `lb-0000002i`. It can be queried in the console or obtained from `LoadBalancerId` returned by the `DescribeLoadBalancers` API.
+                     * 
                      */
                     std::string GetLoadBalancerID() const;
 
                     /**
                      * 设置ID of the CLB to bind, such as `lb-0000002i`. It can be queried in the console or obtained from `LoadBalancerId` returned by the `DescribeLoadBalancers` API.
-                     * @param LoadBalancerID ID of the CLB to bind, such as `lb-0000002i`. It can be queried in the console or obtained from `LoadBalancerId` returned by the `DescribeLoadBalancers` API.
+                     * @param _loadBalancerID ID of the CLB to bind, such as `lb-0000002i`. It can be queried in the console or obtained from `LoadBalancerId` returned by the `DescribeLoadBalancers` API.
+                     * 
                      */
                     void SetLoadBalancerID(const std::string& _loadBalancerID);
 
                     /**
                      * 判断参数 LoadBalancerID 是否已赋值
                      * @return LoadBalancerID 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIDHasBeenSet() const;
 
                     /**
                      * 获取Region of the CLB instance, such as `ap-hongkong`.
                      * @return LoadBalancerRegion Region of the CLB instance, such as `ap-hongkong`.
+                     * 
                      */
                     std::string GetLoadBalancerRegion() const;
 
                     /**
                      * 设置Region of the CLB instance, such as `ap-hongkong`.
-                     * @param LoadBalancerRegion Region of the CLB instance, such as `ap-hongkong`.
+                     * @param _loadBalancerRegion Region of the CLB instance, such as `ap-hongkong`.
+                     * 
                      */
                     void SetLoadBalancerRegion(const std::string& _loadBalancerRegion);
 
                     /**
                      * 判断参数 LoadBalancerRegion 是否已赋值
                      * @return LoadBalancerRegion 是否已赋值
+                     * 
                      */
                     bool LoadBalancerRegionHasBeenSet() const;
 
                     /**
                      * 获取CLB private IP
                      * @return Vip CLB private IP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置CLB private IP
-                     * @param Vip CLB private IP
+                     * @param _vip CLB private IP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 

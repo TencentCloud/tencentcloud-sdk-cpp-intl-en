@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable WAF. Valid values: `on` and `off`.
                      * @return Switch Whether to enable WAF. Valid values: `on` and `off`.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable WAF. Valid values: `on` and `off`.
-                     * @param Switch Whether to enable WAF. Valid values: `on` and `off`.
+                     * @param _switch Whether to enable WAF. Valid values: `on` and `off`.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -72,20 +75,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Mode WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Mode WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
+                     * @param _mode WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
@@ -94,20 +100,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ErrorPage Redirection error page
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     ScdnErrorPage GetErrorPage() const;
 
                     /**
                      * 设置Redirection error page
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ErrorPage Redirection error page
+                     * @param _errorPage Redirection error page
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorPage(const ScdnErrorPage& _errorPage);
 
                     /**
                      * 判断参数 ErrorPage 是否已赋值
                      * @return ErrorPage 是否已赋值
+                     * 
                      */
                     bool ErrorPageHasBeenSet() const;
 
@@ -116,20 +125,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return WebShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetWebShellSwitch() const;
 
                     /**
                      * 设置Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param WebShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
+                     * @param _webShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWebShellSwitch(const std::string& _webShellSwitch);
 
                     /**
                      * 判断参数 WebShellSwitch 是否已赋值
                      * @return WebShellSwitch 是否已赋值
+                     * 
                      */
                     bool WebShellSwitchHasBeenSet() const;
 
@@ -138,20 +150,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Rules Attack blocking rules
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ScdnWafRule> GetRules() const;
 
                     /**
                      * 设置Attack blocking rules
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Rules Attack blocking rules
+                     * @param _rules Attack blocking rules
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRules(const std::vector<ScdnWafRule>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
@@ -160,20 +175,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Level WAF rule level. Valid values: 100, 200, and 300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetLevel() const;
 
                     /**
                      * 设置WAF rule level. Valid values: 100, 200, and 300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Level WAF rule level. Valid values: 100, 200, and 300.
+                     * @param _level WAF rule level. Valid values: 100, 200, and 300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetLevel(const int64_t& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -182,20 +200,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SubRuleSwitch WAF sub-rule switch
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<WafSubRuleStatus> GetSubRuleSwitch() const;
 
                     /**
                      * 设置WAF sub-rule switch
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SubRuleSwitch WAF sub-rule switch
+                     * @param _subRuleSwitch WAF sub-rule switch
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSubRuleSwitch(const std::vector<WafSubRuleStatus>& _subRuleSwitch);
 
                     /**
                      * 判断参数 SubRuleSwitch 是否已赋值
                      * @return SubRuleSwitch 是否已赋值
+                     * 
                      */
                     bool SubRuleSwitchHasBeenSet() const;
 

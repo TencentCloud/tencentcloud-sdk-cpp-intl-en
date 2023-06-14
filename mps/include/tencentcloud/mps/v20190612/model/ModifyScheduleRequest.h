@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The scheme ID.
                      * @return ScheduleId The scheme ID.
+                     * 
                      */
                     int64_t GetScheduleId() const;
 
                     /**
                      * 设置The scheme ID.
-                     * @param ScheduleId The scheme ID.
+                     * @param _scheduleId The scheme ID.
+                     * 
                      */
                     void SetScheduleId(const int64_t& _scheduleId);
 
                     /**
                      * 判断参数 ScheduleId 是否已赋值
                      * @return ScheduleId 是否已赋值
+                     * 
                      */
                     bool ScheduleIdHasBeenSet() const;
 
                     /**
                      * 获取The scheme name.
                      * @return ScheduleName The scheme name.
+                     * 
                      */
                     std::string GetScheduleName() const;
 
                     /**
                      * 设置The scheme name.
-                     * @param ScheduleName The scheme name.
+                     * @param _scheduleName The scheme name.
+                     * 
                      */
                     void SetScheduleName(const std::string& _scheduleName);
 
                     /**
                      * 判断参数 ScheduleName 是否已赋值
                      * @return ScheduleName 是否已赋值
+                     * 
                      */
                     bool ScheduleNameHasBeenSet() const;
 
                     /**
                      * 获取The trigger of the scheme.
                      * @return Trigger The trigger of the scheme.
+                     * 
                      */
                     WorkflowTrigger GetTrigger() const;
 
                     /**
                      * 设置The trigger of the scheme.
-                     * @param Trigger The trigger of the scheme.
+                     * @param _trigger The trigger of the scheme.
+                     * 
                      */
                     void SetTrigger(const WorkflowTrigger& _trigger);
 
                     /**
                      * 判断参数 Trigger 是否已赋值
                      * @return Trigger 是否已赋值
+                     * 
                      */
                     bool TriggerHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: You need to pass in the full list of subtasks even if you want to change only some of the subtasks.
                      * @return Activities The subtasks of the scheme.
 Note: You need to pass in the full list of subtasks even if you want to change only some of the subtasks.
+                     * 
                      */
                     std::vector<Activity> GetActivities() const;
 
                     /**
                      * 设置The subtasks of the scheme.
 Note: You need to pass in the full list of subtasks even if you want to change only some of the subtasks.
-                     * @param Activities The subtasks of the scheme.
+                     * @param _activities The subtasks of the scheme.
 Note: You need to pass in the full list of subtasks even if you want to change only some of the subtasks.
+                     * 
                      */
                     void SetActivities(const std::vector<Activity>& _activities);
 
                     /**
                      * 判断参数 Activities 是否已赋值
                      * @return Activities 是否已赋值
+                     * 
                      */
                     bool ActivitiesHasBeenSet() const;
 
                     /**
                      * 获取The bucket to save the output file.
                      * @return OutputStorage The bucket to save the output file.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置The bucket to save the output file.
-                     * @param OutputStorage The bucket to save the output file.
+                     * @param _outputStorage The bucket to save the output file.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 
@@ -145,38 +160,44 @@ Note: You need to pass in the full list of subtasks even if you want to change o
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
                      * @return OutputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
+                     * 
                      */
                     std::string GetOutputDir() const;
 
                     /**
                      * 设置The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
-                     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`.
+                     * @param _outputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
+                     * 
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
                     /**
                      * 判断参数 OutputDir 是否已赋值
                      * @return OutputDir 是否已赋值
+                     * 
                      */
                     bool OutputDirHasBeenSet() const;
 
                     /**
                      * 获取The notification configuration.
                      * @return TaskNotifyConfig The notification configuration.
+                     * 
                      */
                     TaskNotifyConfig GetTaskNotifyConfig() const;
 
                     /**
                      * 设置The notification configuration.
-                     * @param TaskNotifyConfig The notification configuration.
+                     * @param _taskNotifyConfig The notification configuration.
+                     * 
                      */
                     void SetTaskNotifyConfig(const TaskNotifyConfig& _taskNotifyConfig);
 
                     /**
                      * 判断参数 TaskNotifyConfig 是否已赋值
                      * @return TaskNotifyConfig 是否已赋值
+                     * 
                      */
                     bool TaskNotifyConfigHasBeenSet() const;
 

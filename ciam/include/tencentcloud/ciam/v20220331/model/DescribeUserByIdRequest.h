@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取User ID
                      * @return UserId User ID
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID
-                     * @param UserId User ID
+                     * @param _userId User ID
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -87,6 +93,7 @@ namespace TencentCloud
 
 <li> **false** </li>Default. The returned information is desensitized.
 <li> **true** </li>Return the original content.
+                     * 
                      */
                     bool GetOriginal() const;
 
@@ -95,16 +102,18 @@ namespace TencentCloud
 
 <li> **false** </li>Default. The returned information is desensitized.
 <li> **true** </li>Return the original content.
-                     * @param Original Whether the content is passed through
+                     * @param _original Whether the content is passed through
 
 <li> **false** </li>Default. The returned information is desensitized.
 <li> **true** </li>Return the original content.
+                     * 
                      */
                     void SetOriginal(const bool& _original);
 
                     /**
                      * 判断参数 Original 是否已赋值
                      * @return Original 是否已赋值
+                     * 
                      */
                     bool OriginalHasBeenSet() const;
 

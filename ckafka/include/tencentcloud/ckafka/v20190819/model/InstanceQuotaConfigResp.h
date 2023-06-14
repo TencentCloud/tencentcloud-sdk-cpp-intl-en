@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return QuotaProducerByteRate Production throttling in MB/sec.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetQuotaProducerByteRate() const;
 
                     /**
                      * 设置Production throttling in MB/sec.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param QuotaProducerByteRate Production throttling in MB/sec.
+                     * @param _quotaProducerByteRate Production throttling in MB/sec.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQuotaProducerByteRate(const int64_t& _quotaProducerByteRate);
 
                     /**
                      * 判断参数 QuotaProducerByteRate 是否已赋值
                      * @return QuotaProducerByteRate 是否已赋值
+                     * 
                      */
                     bool QuotaProducerByteRateHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return QuotaConsumerByteRate Consumption throttling in MB/sec.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetQuotaConsumerByteRate() const;
 
                     /**
                      * 设置Consumption throttling in MB/sec.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param QuotaConsumerByteRate Consumption throttling in MB/sec.
+                     * @param _quotaConsumerByteRate Consumption throttling in MB/sec.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQuotaConsumerByteRate(const int64_t& _quotaConsumerByteRate);
 
                     /**
                      * 判断参数 QuotaConsumerByteRate 是否已赋值
                      * @return QuotaConsumerByteRate 是否已赋值
+                     * 
                      */
                     bool QuotaConsumerByteRateHasBeenSet() const;
 

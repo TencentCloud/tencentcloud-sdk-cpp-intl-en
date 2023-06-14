@@ -57,6 +57,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -65,16 +66,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Browser cache configuration switch
+                     * @param _switch Browser cache configuration switch
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -83,20 +86,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MaxAgeRules MaxAge rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<MaxAgeRule> GetMaxAgeRules() const;
 
                     /**
                      * 设置MaxAge rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MaxAgeRules MaxAge rule
+                     * @param _maxAgeRules MaxAge rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMaxAgeRules(const std::vector<MaxAgeRule>& _maxAgeRules);
 
                     /**
                      * 判断参数 MaxAgeRules 是否已赋值
                      * @return MaxAgeRules 是否已赋值
+                     * 
                      */
                     bool MaxAgeRulesHasBeenSet() const;
 
@@ -105,20 +111,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MaxAgeCodeRule MaxAge status code
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     MaxAgeCodeRule GetMaxAgeCodeRule() const;
 
                     /**
                      * 设置MaxAge status code
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MaxAgeCodeRule MaxAge status code
+                     * @param _maxAgeCodeRule MaxAge status code
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMaxAgeCodeRule(const MaxAgeCodeRule& _maxAgeCodeRule);
 
                     /**
                      * 判断参数 MaxAgeCodeRule 是否已赋值
                      * @return MaxAgeCodeRule 是否已赋值
+                     * 
                      */
                     bool MaxAgeCodeRuleHasBeenSet() const;
 

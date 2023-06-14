@@ -57,6 +57,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <br><li>This field is unavailable to CVM instances.
 <br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetHostName() const;
 
@@ -66,17 +67,19 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <br><li>This field is unavailable to CVM instances.
 <br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param HostName Hostname of a CVM
+                     * @param _hostName Hostname of a CVM
 <br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
 <br><li>This field is unavailable to CVM instances.
 <br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
@@ -89,6 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <br><li> ORIGINAL. Auto Scaling transfers the HostName set in input parameters to the CVM directly. CVM may adds serial numbers for the HostName. The HostName of instances within the auto scaling group may conflict.
 <br><li> UNIQUE. The HostName set in input parameters is the prefix of a host name. Auto Scaling and CVM expand it. The HostName of an instance in the auto scaling group is unique.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHostNameStyle() const;
 
@@ -97,16 +101,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <br><li> ORIGINAL. Auto Scaling transfers the HostName set in input parameters to the CVM directly. CVM may adds serial numbers for the HostName. The HostName of instances within the auto scaling group may conflict.
 <br><li> UNIQUE. The HostName set in input parameters is the prefix of a host name. Auto Scaling and CVM expand it. The HostName of an instance in the auto scaling group is unique.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HostNameStyle Type of CVM host name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL"
+                     * @param _hostNameStyle Type of CVM host name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL"
 <br><li> ORIGINAL. Auto Scaling transfers the HostName set in input parameters to the CVM directly. CVM may adds serial numbers for the HostName. The HostName of instances within the auto scaling group may conflict.
 <br><li> UNIQUE. The HostName set in input parameters is the prefix of a host name. Auto Scaling and CVM expand it. The HostName of an instance in the auto scaling group is unique.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHostNameStyle(const std::string& _hostNameStyle);
 
                     /**
                      * 判断参数 HostNameStyle 是否已赋值
                      * @return HostNameStyle 是否已赋值
+                     * 
                      */
                     bool HostNameStyleHasBeenSet() const;
 

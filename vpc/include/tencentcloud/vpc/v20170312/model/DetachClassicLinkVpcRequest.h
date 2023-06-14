@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
                      * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * @param _vpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
                      * @return InstanceIds Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
-                     * @param InstanceIds Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
+                     * @param _instanceIds Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

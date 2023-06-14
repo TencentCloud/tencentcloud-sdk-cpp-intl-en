@@ -54,6 +54,7 @@ This parameter does not support specifying `DirectConnectTunnelIds` and `Filters
 <li> direct-connect-tunnel-name: Dedicated tunnel name.</li>
 <li> direct-connect-tunnel-id: Dedicated tunnel instance ID, such as `dcx-abcdefgh`.</li>
 <li>direct-connect-id: Connection instance ID, such as `dc-abcdefgh`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -63,71 +64,82 @@ This parameter does not support specifying `DirectConnectTunnelIds` and `Filters
 <li> direct-connect-tunnel-name: Dedicated tunnel name.</li>
 <li> direct-connect-tunnel-id: Dedicated tunnel instance ID, such as `dcx-abcdefgh`.</li>
 <li>direct-connect-id: Connection instance ID, such as `dc-abcdefgh`.</li>
-                     * @param Filters Filter conditions:
+                     * @param _filters Filter conditions:
 This parameter does not support specifying `DirectConnectTunnelIds` and `Filters` at the same time.
 <li> direct-connect-tunnel-name: Dedicated tunnel name.</li>
 <li> direct-connect-tunnel-id: Dedicated tunnel instance ID, such as `dcx-abcdefgh`.</li>
 <li>direct-connect-id: Connection instance ID, such as `dc-abcdefgh`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Array of dedicated tunnel IDs.
                      * @return DirectConnectTunnelIds Array of dedicated tunnel IDs.
+                     * 
                      */
                     std::vector<std::string> GetDirectConnectTunnelIds() const;
 
                     /**
                      * 设置Array of dedicated tunnel IDs.
-                     * @param DirectConnectTunnelIds Array of dedicated tunnel IDs.
+                     * @param _directConnectTunnelIds Array of dedicated tunnel IDs.
+                     * 
                      */
                     void SetDirectConnectTunnelIds(const std::vector<std::string>& _directConnectTunnelIds);
 
                     /**
                      * 判断参数 DirectConnectTunnelIds 是否已赋值
                      * @return DirectConnectTunnelIds 是否已赋值
+                     * 
                      */
                     bool DirectConnectTunnelIdsHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

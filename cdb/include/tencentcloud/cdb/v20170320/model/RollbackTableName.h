@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableName Original table name before rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Original table name before rollback
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableName Original table name before rollback
+                     * @param _tableName Original table name before rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NewTableName New table name after rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNewTableName() const;
 
                     /**
                      * 设置New table name after rollback
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NewTableName New table name after rollback
+                     * @param _newTableName New table name after rollback
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNewTableName(const std::string& _newTableName);
 
                     /**
                      * 判断参数 NewTableName 是否已赋值
                      * @return NewTableName 是否已赋值
+                     * 
                      */
                     bool NewTableNameHasBeenSet() const;
 

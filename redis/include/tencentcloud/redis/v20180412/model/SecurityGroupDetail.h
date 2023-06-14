@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Security group ID
                      * @return SecurityGroupId Security group ID
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置Security group ID
-                     * @param SecurityGroupId Security group ID
+                     * @param _securityGroupId Security group ID
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Security group name
                      * @return SecurityGroupName Security group name
+                     * 
                      */
                     std::string GetSecurityGroupName() const;
 
                     /**
                      * 设置Security group name
-                     * @param SecurityGroupName Security group name
+                     * @param _securityGroupName Security group name
+                     * 
                      */
                     void SetSecurityGroupName(const std::string& _securityGroupName);
 
                     /**
                      * 判断参数 SecurityGroupName 是否已赋值
                      * @return SecurityGroupName 是否已赋值
+                     * 
                      */
                     bool SecurityGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Security group remarks
                      * @return SecurityGroupRemark Security group remarks
+                     * 
                      */
                     std::string GetSecurityGroupRemark() const;
 
                     /**
                      * 设置Security group remarks
-                     * @param SecurityGroupRemark Security group remarks
+                     * @param _securityGroupRemark Security group remarks
+                     * 
                      */
                     void SetSecurityGroupRemark(const std::string& _securityGroupRemark);
 
                     /**
                      * 判断参数 SecurityGroupRemark 是否已赋值
                      * @return SecurityGroupRemark 是否已赋值
+                     * 
                      */
                     bool SecurityGroupRemarkHasBeenSet() const;
 
                     /**
                      * 获取Security group inbound rule
                      * @return InboundRule Security group inbound rule
+                     * 
                      */
                     std::vector<SecurityGroupsInboundAndOutbound> GetInboundRule() const;
 
                     /**
                      * 设置Security group inbound rule
-                     * @param InboundRule Security group inbound rule
+                     * @param _inboundRule Security group inbound rule
+                     * 
                      */
                     void SetInboundRule(const std::vector<SecurityGroupsInboundAndOutbound>& _inboundRule);
 
                     /**
                      * 判断参数 InboundRule 是否已赋值
                      * @return InboundRule 是否已赋值
+                     * 
                      */
                     bool InboundRuleHasBeenSet() const;
 
                     /**
                      * 获取Security group outbound rule
                      * @return OutboundRule Security group outbound rule
+                     * 
                      */
                     std::vector<SecurityGroupsInboundAndOutbound> GetOutboundRule() const;
 
                     /**
                      * 设置Security group outbound rule
-                     * @param OutboundRule Security group outbound rule
+                     * @param _outboundRule Security group outbound rule
+                     * 
                      */
                     void SetOutboundRule(const std::vector<SecurityGroupsInboundAndOutbound>& _outboundRule);
 
                     /**
                      * 判断参数 OutboundRule 是否已赋值
                      * @return OutboundRule 是否已赋值
+                     * 
                      */
                     bool OutboundRuleHasBeenSet() const;
 

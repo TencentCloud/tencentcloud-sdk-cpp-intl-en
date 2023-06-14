@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Download address for SSL certificate
                      * @return CertDownloadUrl Download address for SSL certificate
+                     * 
                      */
                     std::string GetCertDownloadUrl() const;
 
                     /**
                      * 判断参数 CertDownloadUrl 是否已赋值
                      * @return CertDownloadUrl 是否已赋值
+                     * 
                      */
                     bool CertDownloadUrlHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of the certificate download address
                      * @return UrlExpiredTime Expiration time of the certificate download address
+                     * 
                      */
                     std::string GetUrlExpiredTime() const;
 
                     /**
                      * 判断参数 UrlExpiredTime 是否已赋值
                      * @return UrlExpiredTime 是否已赋值
+                     * 
                      */
                     bool UrlExpiredTimeHasBeenSet() const;
 
@@ -74,12 +78,14 @@ namespace TencentCloud
                      * @return SSLConfig Whether the SSL is enabled for the identified instance.
 - `true`: Enabled
 - `false`: Disabled
+                     * 
                      */
                     bool GetSSLConfig() const;
 
                     /**
                      * 判断参数 SSLConfig 是否已赋值
                      * @return SSLConfig 是否已赋值
+                     * 
                      */
                     bool SSLConfigHasBeenSet() const;
 
@@ -90,12 +96,14 @@ namespace TencentCloud
                      * @return FeatureSupport Whether SSL is supported for the identified instance.
 -`true`: Supported
 -`false`: Not supported
+                     * 
                      */
                     bool GetFeatureSupport() const;
 
                     /**
                      * 判断参数 FeatureSupport 是否已赋值
                      * @return FeatureSupport 是否已赋值
+                     * 
                      */
                     bool FeatureSupportHasBeenSet() const;
 
@@ -106,12 +114,14 @@ namespace TencentCloud
                      * @return Status Status of SSL configuration
 - `1`: Configuring
 - `2`: Configured successfully
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

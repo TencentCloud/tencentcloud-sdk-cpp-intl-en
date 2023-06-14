@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Data migration task ID
                      * @return JobId Data migration task ID
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Data migration task ID
-                     * @param JobId Data migration task ID
+                     * @param _jobId Data migration task ID
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
                      * @return ResumeOption Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
+                     * 
                      */
                     std::string GetResumeOption() const;
 
                     /**
                      * 设置Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
-                     * @param ResumeOption Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
+                     * @param _resumeOption Task resumption mode. Valid values: `clearData` (Clearing the target instance data); `overwrite` (Executing the task in overwrite mode); `normal` (Following the normal process without additional operations). `clearData` and `overwrite` are only valid for Redis links and `normal` for non-Redis links.
+                     * 
                      */
                     void SetResumeOption(const std::string& _resumeOption);
 
                     /**
                      * 判断参数 ResumeOption 是否已赋值
                      * @return ResumeOption 是否已赋值
+                     * 
                      */
                     bool ResumeOptionHasBeenSet() const;
 

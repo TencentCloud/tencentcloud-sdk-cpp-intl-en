@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Deletion result
                      * @return DeleteResult Deletion result
+                     * 
                      */
                     bool GetDeleteResult() const;
 
                     /**
                      * 判断参数 DeleteResult 是否已赋值
                      * @return DeleteResult 是否已赋值
+                     * 
                      */
                     bool DeleteResultHasBeenSet() const;
 

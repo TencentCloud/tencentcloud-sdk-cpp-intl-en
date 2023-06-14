@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Domain lock information
                      * @return LockInfo Domain lock information
+                     * 
                      */
                     LockInfo GetLockInfo() const;
 
                     /**
                      * 判断参数 LockInfo 是否已赋值
                      * @return LockInfo 是否已赋值
+                     * 
                      */
                     bool LockInfoHasBeenSet() const;
 

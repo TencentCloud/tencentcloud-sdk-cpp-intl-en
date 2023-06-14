@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Multiple permission rules (up to 10)
                      * @return AccessRules Multiple permission rules (up to 10)
+                     * 
                      */
                     std::vector<AccessRule> GetAccessRules() const;
 
                     /**
                      * 设置Multiple permission rules (up to 10)
-                     * @param AccessRules Multiple permission rules (up to 10)
+                     * @param _accessRules Multiple permission rules (up to 10)
+                     * 
                      */
                     void SetAccessRules(const std::vector<AccessRule>& _accessRules);
 
                     /**
                      * 判断参数 AccessRules 是否已赋值
                      * @return AccessRules 是否已赋值
+                     * 
                      */
                     bool AccessRulesHasBeenSet() const;
 

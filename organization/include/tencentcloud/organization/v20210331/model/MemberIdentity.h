@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityId Identity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIdentityId() const;
 
                     /**
                      * 设置Identity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IdentityId Identity ID.
+                     * @param _identityId Identity ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIdentityId(const int64_t& _identityId);
 
                     /**
                      * 判断参数 IdentityId 是否已赋值
                      * @return IdentityId 是否已赋值
+                     * 
                      */
                     bool IdentityIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentityAliasName Identity name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIdentityAliasName() const;
 
                     /**
                      * 设置Identity name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IdentityAliasName Identity name.
+                     * @param _identityAliasName Identity name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIdentityAliasName(const std::string& _identityAliasName);
 
                     /**
                      * 判断参数 IdentityAliasName 是否已赋值
                      * @return IdentityAliasName 是否已赋值
+                     * 
                      */
                     bool IdentityAliasNameHasBeenSet() const;
 

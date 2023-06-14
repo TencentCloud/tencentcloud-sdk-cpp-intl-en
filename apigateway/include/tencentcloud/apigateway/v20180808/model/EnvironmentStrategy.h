@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Environment name
                      * @return EnvironmentName Environment name
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment name
-                     * @param EnvironmentName Environment name
+                     * @param _environmentName Environment name
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取Throttling value
                      * @return Quota Throttling value
+                     * 
                      */
                     int64_t GetQuota() const;
 
                     /**
                      * 设置Throttling value
-                     * @param Quota Throttling value
+                     * @param _quota Throttling value
+                     * 
                      */
                     void SetQuota(const int64_t& _quota);
 
                     /**
                      * 判断参数 Quota 是否已赋值
                      * @return Quota 是否已赋值
+                     * 
                      */
                     bool QuotaHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxQuota Maximum quota value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxQuota() const;
 
                     /**
                      * 设置Maximum quota value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxQuota Maximum quota value
+                     * @param _maxQuota Maximum quota value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxQuota(const int64_t& _maxQuota);
 
                     /**
                      * 判断参数 MaxQuota 是否已赋值
                      * @return MaxQuota 是否已赋值
+                     * 
                      */
                     bool MaxQuotaHasBeenSet() const;
 

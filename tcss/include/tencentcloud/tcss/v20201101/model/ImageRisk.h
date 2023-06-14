@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Behavior High-risk behavior
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetBehavior() const;
 
                     /**
                      * 设置High-risk behavior
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Behavior High-risk behavior
+                     * @param _behavior High-risk behavior
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBehavior(const uint64_t& _behavior);
 
                     /**
                      * 判断参数 Behavior 是否已赋值
                      * @return Behavior 是否已赋值
+                     * 
                      */
                     bool BehaviorHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置Type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type Type
+                     * @param _type Type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Level Risk level
+                     * @param _level Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Desc Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Desc Description
+                     * @param _desc Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstructionContent Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstructionContent() const;
 
                     /**
                      * 设置Solution
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstructionContent Solution
+                     * @param _instructionContent Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstructionContent(const std::string& _instructionContent);
 
                     /**
                      * 判断参数 InstructionContent 是否已赋值
                      * @return InstructionContent 是否已赋值
+                     * 
                      */
                     bool InstructionContentHasBeenSet() const;
 

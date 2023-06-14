@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of templates to get. This parameter is used for pagination.
                      * @return Limit Number of templates to get. This parameter is used for pagination.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of templates to get. This parameter is used for pagination.
-                     * @param Limit Number of templates to get. This parameter is used for pagination.
+                     * @param _limit Number of templates to get. This parameter is used for pagination.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Template offset to get. This parameter is used for pagination.
                      * @return Offset Template offset to get. This parameter is used for pagination.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Template offset to get. This parameter is used for pagination.
-                     * @param Offset Template offset to get. This parameter is used for pagination.
+                     * @param _offset Template offset to get. This parameter is used for pagination.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

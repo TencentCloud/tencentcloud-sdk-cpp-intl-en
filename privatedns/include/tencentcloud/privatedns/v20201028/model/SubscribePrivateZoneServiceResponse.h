@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Private DNS service activation status
                      * @return ServiceStatus Private DNS service activation status
+                     * 
                      */
                     std::string GetServiceStatus() const;
 
                     /**
                      * 判断参数 ServiceStatus 是否已赋值
                      * @return ServiceStatus 是否已赋值
+                     * 
                      */
                     bool ServiceStatusHasBeenSet() const;
 

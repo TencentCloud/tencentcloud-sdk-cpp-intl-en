@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取The category ID.
                      * @return ClassId The category ID.
+                     * 
                      */
                     int64_t GetClassId() const;
 
                     /**
                      * 设置The category ID.
-                     * @param ClassId The category ID.
+                     * @param _classId The category ID.
+                     * 
                      */
                     void SetClassId(const int64_t& _classId);
 
                     /**
                      * 判断参数 ClassId 是否已赋值
                      * @return ClassId 是否已赋值
+                     * 
                      */
                     bool ClassIdHasBeenSet() const;
 
                     /**
                      * 获取Parent category ID, which is -1 for a first-level category.
                      * @return ParentId Parent category ID, which is -1 for a first-level category.
+                     * 
                      */
                     int64_t GetParentId() const;
 
                     /**
                      * 设置Parent category ID, which is -1 for a first-level category.
-                     * @param ParentId Parent category ID, which is -1 for a first-level category.
+                     * @param _parentId Parent category ID, which is -1 for a first-level category.
+                     * 
                      */
                     void SetParentId(const int64_t& _parentId);
 
                     /**
                      * 判断参数 ParentId 是否已赋值
                      * @return ParentId 是否已赋值
+                     * 
                      */
                     bool ParentIdHasBeenSet() const;
 
                     /**
                      * 获取The category name.
                      * @return Name The category name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The category name.
-                     * @param Name The category name.
+                     * @param _name The category name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
                      * @return Level Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
+                     * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
                      * 设置Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
-                     * @param Level Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
+                     * @param _level Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
+                     * 
                      */
                     void SetLevel(const uint64_t& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
                     /**
                      * 获取The IDs of the immediate subcategories of the current category.
                      * @return SubClassIdSet The IDs of the immediate subcategories of the current category.
+                     * 
                      */
                     std::vector<int64_t> GetSubClassIdSet() const;
 
                     /**
                      * 设置The IDs of the immediate subcategories of the current category.
-                     * @param SubClassIdSet The IDs of the immediate subcategories of the current category.
+                     * @param _subClassIdSet The IDs of the immediate subcategories of the current category.
+                     * 
                      */
                     void SetSubClassIdSet(const std::vector<int64_t>& _subClassIdSet);
 
                     /**
                      * 判断参数 SubClassIdSet 是否已赋值
                      * @return SubClassIdSet 是否已赋值
+                     * 
                      */
                     bool SubClassIdSetHasBeenSet() const;
 
                     /**
                      * 获取The category name. This parameter is not recommended. Please use `Name` instead.
                      * @return ClassName The category name. This parameter is not recommended. Please use `Name` instead.
+                     * 
                      */
                     std::string GetClassName() const;
 
                     /**
                      * 设置The category name. This parameter is not recommended. Please use `Name` instead.
-                     * @param ClassName The category name. This parameter is not recommended. Please use `Name` instead.
+                     * @param _className The category name. This parameter is not recommended. Please use `Name` instead.
+                     * 
                      */
                     void SetClassName(const std::string& _className);
 
                     /**
                      * 判断参数 ClassName 是否已赋值
                      * @return ClassName 是否已赋值
+                     * 
                      */
                     bool ClassNameHasBeenSet() const;
 

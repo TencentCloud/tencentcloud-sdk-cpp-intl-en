@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of `tdsql-ow728lmc`.
                      * @return InstanceId Instance ID in the format of `tdsql-ow728lmc`.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Requests the current parameter values of the database
                      * @return Params Requests the current parameter values of the database
+                     * 
                      */
                     std::vector<ParamDesc> GetParams() const;
 
                     /**
                      * 判断参数 Params 是否已赋值
                      * @return Params 是否已赋值
+                     * 
                      */
                     bool ParamsHasBeenSet() const;
 

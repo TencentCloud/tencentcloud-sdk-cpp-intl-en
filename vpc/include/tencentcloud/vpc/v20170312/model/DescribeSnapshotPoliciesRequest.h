@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot policy IDs
                      * @return SnapshotPolicyIds Snapshot policy IDs
+                     * 
                      */
                     std::vector<std::string> GetSnapshotPolicyIds() const;
 
                     /**
                      * 设置Snapshot policy IDs
-                     * @param SnapshotPolicyIds Snapshot policy IDs
+                     * @param _snapshotPolicyIds Snapshot policy IDs
+                     * 
                      */
                     void SetSnapshotPolicyIds(const std::vector<std::string>& _snapshotPolicyIds);
 
                     /**
                      * 判断参数 SnapshotPolicyIds 是否已赋值
                      * @return SnapshotPolicyIds 是否已赋值
+                     * 
                      */
                     bool SnapshotPolicyIdsHasBeenSet() const;
 
@@ -68,6 +71,7 @@ namespace TencentCloud
                      * @return Filters Filter conditions. `SnapshotPolicyIds` and `Filters` cannot be both specified.
 <li>`snapshot-policy-id` - String - Snapshot policy ID</li>
 <li>`snapshot-policy-name` - String - Snapshot policy name</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -75,51 +79,59 @@ namespace TencentCloud
                      * 设置Filter conditions. `SnapshotPolicyIds` and `Filters` cannot be both specified.
 <li>`snapshot-policy-id` - String - Snapshot policy ID</li>
 <li>`snapshot-policy-name` - String - Snapshot policy name</li>
-                     * @param Filters Filter conditions. `SnapshotPolicyIds` and `Filters` cannot be both specified.
+                     * @param _filters Filter conditions. `SnapshotPolicyIds` and `Filters` cannot be both specified.
 <li>`snapshot-policy-id` - String - Snapshot policy ID</li>
 <li>`snapshot-policy-name` - String - Snapshot policy name</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 200.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 200.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 200.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

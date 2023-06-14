@@ -65,6 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Terror`: Violence and terrorism
 `Ad`: Advertising
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
@@ -78,7 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Terror`: Violence and terrorism
 `Ad`: Advertising
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Label Hit tag
+                     * @param _label Hit tag
 `Porn`: Pornographic
 `Sexy`: Sexy
 `Polity`: Political
@@ -87,12 +88,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Terror`: Violence and terrorism
 `Ad`: Advertising
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -107,6 +110,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Review`: You’re suggested to take a manual review.
 `Block`: You’re suggested to block the non-compliant video.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -116,17 +120,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Review`: You’re suggested to take a manual review.
 `Block`: You’re suggested to block the non-compliant video.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion Suggestion. Values:
+                     * @param _suggestion Suggestion. Values:
 `Pass`: You’re suggested to allow the video to pass.
 `Review`: You’re suggested to take a manual review.
 `Block`: You’re suggested to block the non-compliant video.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -135,20 +141,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Score Score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置Score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Score Score. Value range: 0-100.
+                     * @param _score Score. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取SMS delivery status.
                      * @return SendStatusSet SMS delivery status.
+                     * 
                      */
                     std::vector<SendStatus> GetSendStatusSet() const;
 
                     /**
                      * 判断参数 SendStatusSet 是否已赋值
                      * @return SendStatusSet 是否已赋值
+                     * 
                      */
                     bool SendStatusSetHasBeenSet() const;
 

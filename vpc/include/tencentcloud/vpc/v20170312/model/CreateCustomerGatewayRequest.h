@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Customer gateway can be named freely, but the maximum length is 60 characters.
                      * @return CustomerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     std::string GetCustomerGatewayName() const;
 
                     /**
                      * 设置Customer gateway can be named freely, but the maximum length is 60 characters.
-                     * @param CustomerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
+                     * @param _customerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     void SetCustomerGatewayName(const std::string& _customerGatewayName);
 
                     /**
                      * 判断参数 CustomerGatewayName 是否已赋值
                      * @return CustomerGatewayName 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayNameHasBeenSet() const;
 
                     /**
                      * 获取Customer gateway public IP.
                      * @return IpAddress Customer gateway public IP.
+                     * 
                      */
                     std::string GetIpAddress() const;
 
                     /**
                      * 设置Customer gateway public IP.
-                     * @param IpAddress Customer gateway public IP.
+                     * @param _ipAddress Customer gateway public IP.
+                     * 
                      */
                     void SetIpAddress(const std::string& _ipAddress);
 
                     /**
                      * 判断参数 IpAddress 是否已赋值
                      * @return IpAddress 是否已赋值
+                     * 
                      */
                     bool IpAddressHasBeenSet() const;
 
                     /**
                      * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

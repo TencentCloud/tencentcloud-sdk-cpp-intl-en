@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Queue name
                      * @return Queue Queue name
+                     * 
                      */
                     std::string GetQueue() const;
 
                     /**
                      * 设置Queue name
-                     * @param Queue Queue name
+                     * @param _queue Queue name
+                     * 
                      */
                     void SetQueue(const std::string& _queue);
 
                     /**
                      * 判断参数 Queue 是否已赋值
                      * @return Queue 是否已赋值
+                     * 
                      */
                     bool QueueHasBeenSet() const;
 
                     /**
                      * 获取Username
                      * @return User Username
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置Username
-                     * @param User Username
+                     * @param _user Username
+                     * 
                      */
                     void SetUser(const std::string& _user);
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
                     /**
                      * 获取Application type
                      * @return ApplicationType Application type
+                     * 
                      */
                     std::string GetApplicationType() const;
 
                     /**
                      * 设置Application type
-                     * @param ApplicationType Application type
+                     * @param _applicationType Application type
+                     * 
                      */
                     void SetApplicationType(const std::string& _applicationType);
 
                     /**
                      * 判断参数 ApplicationType 是否已赋值
                      * @return ApplicationType 是否已赋值
+                     * 
                      */
                     bool ApplicationTypeHasBeenSet() const;
 
                     /**
                      * 获取`SumMemorySeconds` meaning
                      * @return SumMemorySeconds `SumMemorySeconds` meaning
+                     * 
                      */
                     int64_t GetSumMemorySeconds() const;
 
                     /**
                      * 设置`SumMemorySeconds` meaning
-                     * @param SumMemorySeconds `SumMemorySeconds` meaning
+                     * @param _sumMemorySeconds `SumMemorySeconds` meaning
+                     * 
                      */
                     void SetSumMemorySeconds(const int64_t& _sumMemorySeconds);
 
                     /**
                      * 判断参数 SumMemorySeconds 是否已赋值
                      * @return SumMemorySeconds 是否已赋值
+                     * 
                      */
                     bool SumMemorySecondsHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return SumVCoreSeconds 
+                     * 
                      */
                     int64_t GetSumVCoreSeconds() const;
 
                     /**
                      * 设置
-                     * @param SumVCoreSeconds 
+                     * @param _sumVCoreSeconds 
+                     * 
                      */
                     void SetSumVCoreSeconds(const int64_t& _sumVCoreSeconds);
 
                     /**
                      * 判断参数 SumVCoreSeconds 是否已赋值
                      * @return SumVCoreSeconds 是否已赋值
+                     * 
                      */
                     bool SumVCoreSecondsHasBeenSet() const;
 
                     /**
                      * 获取SumHDFSBytesWritten (with unit)
                      * @return SumHDFSBytesWritten SumHDFSBytesWritten (with unit)
+                     * 
                      */
                     std::string GetSumHDFSBytesWritten() const;
 
                     /**
                      * 设置SumHDFSBytesWritten (with unit)
-                     * @param SumHDFSBytesWritten SumHDFSBytesWritten (with unit)
+                     * @param _sumHDFSBytesWritten SumHDFSBytesWritten (with unit)
+                     * 
                      */
                     void SetSumHDFSBytesWritten(const std::string& _sumHDFSBytesWritten);
 
                     /**
                      * 判断参数 SumHDFSBytesWritten 是否已赋值
                      * @return SumHDFSBytesWritten 是否已赋值
+                     * 
                      */
                     bool SumHDFSBytesWrittenHasBeenSet() const;
 
                     /**
                      * 获取SumHDFSBytesRead (with unit)
                      * @return SumHDFSBytesRead SumHDFSBytesRead (with unit)
+                     * 
                      */
                     std::string GetSumHDFSBytesRead() const;
 
                     /**
                      * 设置SumHDFSBytesRead (with unit)
-                     * @param SumHDFSBytesRead SumHDFSBytesRead (with unit)
+                     * @param _sumHDFSBytesRead SumHDFSBytesRead (with unit)
+                     * 
                      */
                     void SetSumHDFSBytesRead(const std::string& _sumHDFSBytesRead);
 
                     /**
                      * 判断参数 SumHDFSBytesRead 是否已赋值
                      * @return SumHDFSBytesRead 是否已赋值
+                     * 
                      */
                     bool SumHDFSBytesReadHasBeenSet() const;
 
                     /**
                      * 获取Application count
                      * @return CountApps Application count
+                     * 
                      */
                     int64_t GetCountApps() const;
 
                     /**
                      * 设置Application count
-                     * @param CountApps Application count
+                     * @param _countApps Application count
+                     * 
                      */
                     void SetCountApps(const int64_t& _countApps);
 
                     /**
                      * 判断参数 CountApps 是否已赋值
                      * @return CountApps 是否已赋值
+                     * 
                      */
                     bool CountAppsHasBeenSet() const;
 

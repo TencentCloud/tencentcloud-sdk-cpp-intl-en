@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取ES cluster ID
                      * @return InstanceId ES cluster ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ES cluster ID
-                     * @param InstanceId ES cluster ID
+                     * @param _instanceId ES cluster ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Type of the index to update. `auto`: Automated; `normal`: General.
                      * @return IndexType Type of the index to update. `auto`: Automated; `normal`: General.
+                     * 
                      */
                     std::string GetIndexType() const;
 
                     /**
                      * 设置Type of the index to update. `auto`: Automated; `normal`: General.
-                     * @param IndexType Type of the index to update. `auto`: Automated; `normal`: General.
+                     * @param _indexType Type of the index to update. `auto`: Automated; `normal`: General.
+                     * 
                      */
                     void SetIndexType(const std::string& _indexType);
 
                     /**
                      * 判断参数 IndexType 是否已赋值
                      * @return IndexType 是否已赋值
+                     * 
                      */
                     bool IndexTypeHasBeenSet() const;
 
                     /**
                      * 获取Name of the index to update
                      * @return IndexName Name of the index to update
+                     * 
                      */
                     std::string GetIndexName() const;
 
                     /**
                      * 设置Name of the index to update
-                     * @param IndexName Name of the index to update
+                     * @param _indexName Name of the index to update
+                     * 
                      */
                     void SetIndexName(const std::string& _indexName);
 
                     /**
                      * 判断参数 IndexName 是否已赋值
                      * @return IndexName 是否已赋值
+                     * 
                      */
                     bool IndexNameHasBeenSet() const;
 
                     /**
                      * 获取JSON-formatted index metadata to update, such as `mappings` and `settings`.
                      * @return UpdateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
+                     * 
                      */
                     std::string GetUpdateMetaJson() const;
 
                     /**
                      * 设置JSON-formatted index metadata to update, such as `mappings` and `settings`.
-                     * @param UpdateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
+                     * @param _updateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
+                     * 
                      */
                     void SetUpdateMetaJson(const std::string& _updateMetaJson);
 
                     /**
                      * 判断参数 UpdateMetaJson 是否已赋值
                      * @return UpdateMetaJson 是否已赋值
+                     * 
                      */
                     bool UpdateMetaJsonHasBeenSet() const;
 
                     /**
                      * 获取Username for cluster access
                      * @return Username Username for cluster access
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Username for cluster access
-                     * @param Username Username for cluster access
+                     * @param _username Username for cluster access
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Password for cluster access
                      * @return Password Password for cluster access
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password for cluster access
-                     * @param Password Password for cluster access
+                     * @param _password Password for cluster access
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Whether to roll over the backup index
                      * @return RolloverBackingIndex Whether to roll over the backup index
+                     * 
                      */
                     bool GetRolloverBackingIndex() const;
 
                     /**
                      * 设置Whether to roll over the backup index
-                     * @param RolloverBackingIndex Whether to roll over the backup index
+                     * @param _rolloverBackingIndex Whether to roll over the backup index
+                     * 
                      */
                     void SetRolloverBackingIndex(const bool& _rolloverBackingIndex);
 
                     /**
                      * 判断参数 RolloverBackingIndex 是否已赋值
                      * @return RolloverBackingIndex 是否已赋值
+                     * 
                      */
                     bool RolloverBackingIndexHasBeenSet() const;
 

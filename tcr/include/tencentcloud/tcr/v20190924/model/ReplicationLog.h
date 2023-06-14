@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ResourceType Resource type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ResourceType Resource type
+                     * @param _resourceType Resource type
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Source Path of the source resource
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置Path of the source resource
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Source Path of the source resource
+                     * @param _source Path of the source resource
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Destination Path of the destination resource
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDestination() const;
 
                     /**
                      * 设置Path of the destination resource
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Destination Path of the destination resource
+                     * @param _destination Path of the destination resource
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDestination(const std::string& _destination);
 
                     /**
                      * 判断参数 Destination 是否已赋值
                      * @return Destination 是否已赋值
+                     * 
                      */
                     bool DestinationHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Status Synchronization status
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Synchronization status
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Status Synchronization status
+                     * @param _status Synchronization status
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StartTime Start time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param StartTime Start time
+                     * @param _startTime Start time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EndTime End time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EndTime End time
+                     * @param _endTime End time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

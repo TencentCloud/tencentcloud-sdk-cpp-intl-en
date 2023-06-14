@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability name
                      * @return Name Vulnerability name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Vulnerability name
-                     * @param Name Vulnerability name
+                     * @param _name Vulnerability name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags Vulnerability tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Vulnerability tag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Vulnerability tag
+                     * @param _tags Vulnerability tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CVSSV3Score CVSS V3 score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetCVSSV3Score() const;
 
                     /**
                      * 设置CVSS V3 score
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CVSSV3Score CVSS V3 score
+                     * @param _cVSSV3Score CVSS V3 score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCVSSV3Score(const double& _cVSSV3Score);
 
                     /**
                      * 判断参数 CVSSV3Score 是否已赋值
                      * @return CVSSV3Score 是否已赋值
+                     * 
                      */
                     bool CVSSV3ScoreHasBeenSet() const;
 
@@ -113,38 +122,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Level Risk level
+                     * @param _level Risk level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
                     /**
                      * 获取CVE No.
                      * @return CVEID CVE No.
+                     * 
                      */
                     std::string GetCVEID() const;
 
                     /**
                      * 设置CVE No.
-                     * @param CVEID CVE No.
+                     * @param _cVEID CVE No.
+                     * 
                      */
                     void SetCVEID(const std::string& _cVEID);
 
                     /**
                      * 判断参数 CVEID 是否已赋值
                      * @return CVEID 是否已赋值
+                     * 
                      */
                     bool CVEIDHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Category Vulnerability type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCategory() const;
 
                     /**
                      * 设置Vulnerability type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Category Vulnerability type
+                     * @param _category Vulnerability type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCategory(const std::string& _category);
 
                     /**
                      * 判断参数 Category 是否已赋值
                      * @return Category 是否已赋值
+                     * 
                      */
                     bool CategoryHasBeenSet() const;
 
@@ -175,20 +193,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubmitTime Vulnerability disclosure time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubmitTime() const;
 
                     /**
                      * 设置Vulnerability disclosure time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubmitTime Vulnerability disclosure time
+                     * @param _submitTime Vulnerability disclosure time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubmitTime(const std::string& _submitTime);
 
                     /**
                      * 判断参数 SubmitTime 是否已赋值
                      * @return SubmitTime 是否已赋值
+                     * 
                      */
                     bool SubmitTimeHasBeenSet() const;
 
@@ -197,74 +218,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LatestFoundTime Last discovery time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLatestFoundTime() const;
 
                     /**
                      * 设置Last discovery time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LatestFoundTime Last discovery time
+                     * @param _latestFoundTime Last discovery time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLatestFoundTime(const std::string& _latestFoundTime);
 
                     /**
                      * 判断参数 LatestFoundTime 是否已赋值
                      * @return LatestFoundTime 是否已赋值
+                     * 
                      */
                     bool LatestFoundTimeHasBeenSet() const;
 
                     /**
                      * 获取Emergency vulnerability risk information. Valid values: `NOT_SCAN` (not scanned); `SCANNING` (scanning); `SCANNED_NOT_RISK` (scanned and at no risk); `SCANNED_RISK` (scanned and at risk).
                      * @return Status Emergency vulnerability risk information. Valid values: `NOT_SCAN` (not scanned); `SCANNING` (scanning); `SCANNED_NOT_RISK` (scanned and at no risk); `SCANNED_RISK` (scanned and at risk).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Emergency vulnerability risk information. Valid values: `NOT_SCAN` (not scanned); `SCANNING` (scanning); `SCANNED_NOT_RISK` (scanned and at no risk); `SCANNED_RISK` (scanned and at risk).
-                     * @param Status Emergency vulnerability risk information. Valid values: `NOT_SCAN` (not scanned); `SCANNING` (scanning); `SCANNED_NOT_RISK` (scanned and at no risk); `SCANNED_RISK` (scanned and at risk).
+                     * @param _status Emergency vulnerability risk information. Valid values: `NOT_SCAN` (not scanned); `SCANNING` (scanning); `SCANNED_NOT_RISK` (scanned and at no risk); `SCANNED_RISK` (scanned and at risk).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability ID
                      * @return ID Vulnerability ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Vulnerability ID
-                     * @param ID Vulnerability ID
+                     * @param _iD Vulnerability ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取POC ID
                      * @return PocID POC ID
+                     * 
                      */
                     std::string GetPocID() const;
 
                     /**
                      * 设置POC ID
-                     * @param PocID POC ID
+                     * @param _pocID POC ID
+                     * 
                      */
                     void SetPocID(const std::string& _pocID);
 
                     /**
                      * 判断参数 PocID 是否已赋值
                      * @return PocID 是否已赋值
+                     * 
                      */
                     bool PocIDHasBeenSet() const;
 
@@ -273,20 +306,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDefenceStatus() const;
 
                     /**
                      * 设置Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DefenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
+                     * @param _defenceStatus Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefenceStatus(const std::string& _defenceStatus);
 
                     /**
                      * 判断参数 DefenceStatus 是否已赋值
                      * @return DefenceStatus 是否已赋值
+                     * 
                      */
                     bool DefenceStatusHasBeenSet() const;
 
@@ -295,20 +331,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDefenceScope() const;
 
                     /**
                      * 设置Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DefenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
+                     * @param _defenceScope Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefenceScope(const std::string& _defenceScope);
 
                     /**
                      * 判断参数 DefenceScope 是否已赋值
                      * @return DefenceScope 是否已赋值
+                     * 
                      */
                     bool DefenceScopeHasBeenSet() const;
 
@@ -317,20 +356,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefenceHostCount Number of servers with exploit prevention enabled
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDefenceHostCount() const;
 
                     /**
                      * 设置Number of servers with exploit prevention enabled
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DefenceHostCount Number of servers with exploit prevention enabled
+                     * @param _defenceHostCount Number of servers with exploit prevention enabled
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefenceHostCount(const int64_t& _defenceHostCount);
 
                     /**
                      * 判断参数 DefenceHostCount 是否已赋值
                      * @return DefenceHostCount 是否已赋值
+                     * 
                      */
                     bool DefenceHostCountHasBeenSet() const;
 
@@ -339,20 +381,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DefendedCount Number of attacks defended against
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDefendedCount() const;
 
                     /**
                      * 设置Number of attacks defended against
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DefendedCount Number of attacks defended against
+                     * @param _defendedCount Number of attacks defended against
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefendedCount(const int64_t& _defendedCount);
 
                     /**
                      * 判断参数 DefendedCount 是否已赋值
                      * @return DefendedCount 是否已赋值
+                     * 
                      */
                     bool DefendedCountHasBeenSet() const;
 

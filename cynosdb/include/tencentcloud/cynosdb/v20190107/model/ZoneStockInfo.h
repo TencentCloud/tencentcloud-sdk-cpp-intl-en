@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取AZ
                      * @return Zone AZ
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ
-                     * @param Zone AZ
+                     * @param _zone AZ
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Whether there is an inventory.
                      * @return HasStock Whether there is an inventory.
+                     * 
                      */
                     bool GetHasStock() const;
 
                     /**
                      * 设置Whether there is an inventory.
-                     * @param HasStock Whether there is an inventory.
+                     * @param _hasStock Whether there is an inventory.
+                     * 
                      */
                     void SetHasStock(const bool& _hasStock);
 
                     /**
                      * 判断参数 HasStock 是否已赋值
                      * @return HasStock 是否已赋值
+                     * 
                      */
                     bool HasStockHasBeenSet() const;
 
                     /**
                      * 获取Quantity in stock
                      * @return StockCount Quantity in stock
+                     * 
                      */
                     int64_t GetStockCount() const;
 
                     /**
                      * 设置Quantity in stock
-                     * @param StockCount Quantity in stock
+                     * @param _stockCount Quantity in stock
+                     * 
                      */
                     void SetStockCount(const int64_t& _stockCount);
 
                     /**
                      * 判断参数 StockCount 是否已赋值
                      * @return StockCount 是否已赋值
+                     * 
                      */
                     bool StockCountHasBeenSet() const;
 

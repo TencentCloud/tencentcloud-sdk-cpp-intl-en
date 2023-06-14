@@ -51,6 +51,7 @@ namespace TencentCloud
 `bgp`: Anti-DDoS Pro
 `bgpip`: Anti-DDoS Advanced
 ]
+                     * 
                      */
                     std::string GetInstanceType() const;
 
@@ -59,16 +60,18 @@ namespace TencentCloud
 `bgp`: Anti-DDoS Pro
 `bgpip`: Anti-DDoS Advanced
 ]
-                     * @param InstanceType Product category. Valid values:
+                     * @param _instanceType Product category. Valid values:
 `bgp`: Anti-DDoS Pro
 `bgpip`: Anti-DDoS Advanced
 ]
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -81,6 +84,7 @@ namespace TencentCloud
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
+                     * 
                      */
                     int64_t GetFilterAlarmType() const;
 
@@ -89,16 +93,18 @@ namespace TencentCloud
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
-                     * @param FilterAlarmType Alarm threshold type filter. Valid values:
+                     * @param _filterAlarmType Alarm threshold type filter. Valid values:
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
+                     * 
                      */
                     void SetFilterAlarmType(const int64_t& _filterAlarmType);
 
                     /**
                      * 判断参数 FilterAlarmType 是否已赋值
                      * @return FilterAlarmType 是否已赋值
+                     * 
                      */
                     bool FilterAlarmTypeHasBeenSet() const;
 

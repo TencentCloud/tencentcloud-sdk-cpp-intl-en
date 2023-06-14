@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ObjectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetObjectMode() const;
 
                     /**
                      * 设置Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ObjectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
+                     * @param _objectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetObjectMode(const std::string& _objectMode);
 
                     /**
                      * 判断参数 ObjectMode 是否已赋值
                      * @return ObjectMode 是否已赋值
+                     * 
                      */
                     bool ObjectModeHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ObjectItems Object list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CompareObjectItem> GetObjectItems() const;
 
                     /**
                      * 设置Object list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ObjectItems Object list
+                     * @param _objectItems Object list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetObjectItems(const std::vector<CompareObjectItem>& _objectItems);
 
                     /**
                      * 判断参数 ObjectItems 是否已赋值
                      * @return ObjectItems 是否已赋值
+                     * 
                      */
                     bool ObjectItemsHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAdvancedObjects() const;
 
                     /**
                      * 设置Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+                     * @param _advancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdvancedObjects(const std::vector<std::string>& _advancedObjects);
 
                     /**
                      * 判断参数 AdvancedObjects 是否已赋值
                      * @return AdvancedObjects 是否已赋值
+                     * 
                      */
                     bool AdvancedObjectsHasBeenSet() const;
 

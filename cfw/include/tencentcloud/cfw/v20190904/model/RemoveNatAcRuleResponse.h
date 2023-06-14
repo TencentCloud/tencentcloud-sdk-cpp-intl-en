@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取UUID list of the deleted rules.
                      * @return RuleUuid UUID list of the deleted rules.
+                     * 
                      */
                     std::vector<int64_t> GetRuleUuid() const;
 
                     /**
                      * 判断参数 RuleUuid 是否已赋值
                      * @return RuleUuid 是否已赋值
+                     * 
                      */
                     bool RuleUuidHasBeenSet() const;
 

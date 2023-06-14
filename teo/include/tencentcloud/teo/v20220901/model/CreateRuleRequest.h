@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site
-                     * @param ZoneId ID of the site
+                     * @param _zoneId ID of the site
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The rule name (1 to 255 characters)
                      * @return RuleName The rule name (1 to 255 characters)
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置The rule name (1 to 255 characters)
-                     * @param RuleName The rule name (1 to 255 characters)
+                     * @param _ruleName The rule name (1 to 255 characters)
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return Status Rule status. Values:
 <li>`enable`: Enabled</li>
 <li>`disable`: Disabled</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -93,51 +100,59 @@ namespace TencentCloud
                      * 设置Rule status. Values:
 <li>`enable`: Enabled</li>
 <li>`disable`: Disabled</li>
-                     * @param Status Rule status. Values:
+                     * @param _status Rule status. Values:
 <li>`enable`: Enabled</li>
 <li>`disable`: Disabled</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The rule content.
                      * @return Rules The rule content.
+                     * 
                      */
                     std::vector<Rule> GetRules() const;
 
                     /**
                      * 设置The rule content.
-                     * @param Rules The rule content.
+                     * @param _rules The rule content.
+                     * 
                      */
                     void SetRules(const std::vector<Rule>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
                     /**
                      * 获取Tag of the rule.
                      * @return Tags Tag of the rule.
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
                      * 设置Tag of the rule.
-                     * @param Tags Tag of the rule.
+                     * @param _tags Tag of the rule.
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

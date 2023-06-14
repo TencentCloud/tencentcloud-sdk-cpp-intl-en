@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IPs to be queried
                      * @return Ips List of IPs to be queried
+                     * 
                      */
                     std::vector<std::string> GetIps() const;
 
                     /**
                      * 设置List of IPs to be queried
-                     * @param Ips List of IPs to be queried
+                     * @param _ips List of IPs to be queried
+                     * 
                      */
                     void SetIps(const std::vector<std::string>& _ips);
 
                     /**
                      * 判断参数 Ips 是否已赋值
                      * @return Ips 是否已赋值
+                     * 
                      */
                     bool IpsHasBeenSet() const;
 

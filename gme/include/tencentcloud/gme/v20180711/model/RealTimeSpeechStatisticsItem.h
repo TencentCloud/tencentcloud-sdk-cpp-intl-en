@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取DAUs in the Chinese mainland
                      * @return MainLandDau DAUs in the Chinese mainland
+                     * 
                      */
                     uint64_t GetMainLandDau() const;
 
                     /**
                      * 设置DAUs in the Chinese mainland
-                     * @param MainLandDau DAUs in the Chinese mainland
+                     * @param _mainLandDau DAUs in the Chinese mainland
+                     * 
                      */
                     void SetMainLandDau(const uint64_t& _mainLandDau);
 
                     /**
                      * 判断参数 MainLandDau 是否已赋值
                      * @return MainLandDau 是否已赋值
+                     * 
                      */
                     bool MainLandDauHasBeenSet() const;
 
                     /**
                      * 获取PCUs in the Chinese mainland
                      * @return MainLandPcu PCUs in the Chinese mainland
+                     * 
                      */
                     uint64_t GetMainLandPcu() const;
 
                     /**
                      * 设置PCUs in the Chinese mainland
-                     * @param MainLandPcu PCUs in the Chinese mainland
+                     * @param _mainLandPcu PCUs in the Chinese mainland
+                     * 
                      */
                     void SetMainLandPcu(const uint64_t& _mainLandPcu);
 
                     /**
                      * 判断参数 MainLandPcu 是否已赋值
                      * @return MainLandPcu 是否已赋值
+                     * 
                      */
                     bool MainLandPcuHasBeenSet() const;
 
                     /**
                      * 获取Total duration of use in the Chinese mainland (in minutes)
                      * @return MainLandDuration Total duration of use in the Chinese mainland (in minutes)
+                     * 
                      */
                     uint64_t GetMainLandDuration() const;
 
                     /**
                      * 设置Total duration of use in the Chinese mainland (in minutes)
-                     * @param MainLandDuration Total duration of use in the Chinese mainland (in minutes)
+                     * @param _mainLandDuration Total duration of use in the Chinese mainland (in minutes)
+                     * 
                      */
                     void SetMainLandDuration(const uint64_t& _mainLandDuration);
 
                     /**
                      * 判断参数 MainLandDuration 是否已赋值
                      * @return MainLandDuration 是否已赋值
+                     * 
                      */
                     bool MainLandDurationHasBeenSet() const;
 
                     /**
                      * 获取DAUs outside the Chinese mainland
                      * @return OverseaDau DAUs outside the Chinese mainland
+                     * 
                      */
                     uint64_t GetOverseaDau() const;
 
                     /**
                      * 设置DAUs outside the Chinese mainland
-                     * @param OverseaDau DAUs outside the Chinese mainland
+                     * @param _overseaDau DAUs outside the Chinese mainland
+                     * 
                      */
                     void SetOverseaDau(const uint64_t& _overseaDau);
 
                     /**
                      * 判断参数 OverseaDau 是否已赋值
                      * @return OverseaDau 是否已赋值
+                     * 
                      */
                     bool OverseaDauHasBeenSet() const;
 
                     /**
                      * 获取PCUs outside the Chinese mainland
                      * @return OverseaPcu PCUs outside the Chinese mainland
+                     * 
                      */
                     uint64_t GetOverseaPcu() const;
 
                     /**
                      * 设置PCUs outside the Chinese mainland
-                     * @param OverseaPcu PCUs outside the Chinese mainland
+                     * @param _overseaPcu PCUs outside the Chinese mainland
+                     * 
                      */
                     void SetOverseaPcu(const uint64_t& _overseaPcu);
 
                     /**
                      * 判断参数 OverseaPcu 是否已赋值
                      * @return OverseaPcu 是否已赋值
+                     * 
                      */
                     bool OverseaPcuHasBeenSet() const;
 
                     /**
                      * 获取Total duration of use outside the Chinese mainland (in minutes)
                      * @return OverseaDuration Total duration of use outside the Chinese mainland (in minutes)
+                     * 
                      */
                     uint64_t GetOverseaDuration() const;
 
                     /**
                      * 设置Total duration of use outside the Chinese mainland (in minutes)
-                     * @param OverseaDuration Total duration of use outside the Chinese mainland (in minutes)
+                     * @param _overseaDuration Total duration of use outside the Chinese mainland (in minutes)
+                     * 
                      */
                     void SetOverseaDuration(const uint64_t& _overseaDuration);
 
                     /**
                      * 判断参数 OverseaDuration 是否已赋值
                      * @return OverseaDuration 是否已赋值
+                     * 
                      */
                     bool OverseaDurationHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Custom key name.
                      * @return SecretName Custom key name.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Custom key name.
-                     * @param SecretName Custom key name.
+                     * @param _secretName Custom key name.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取Key type. Valid values: auto, manual (custom key). Default value: auto.
                      * @return AccessKeyType Key type. Valid values: auto, manual (custom key). Default value: auto.
+                     * 
                      */
                     std::string GetAccessKeyType() const;
 
                     /**
                      * 设置Key type. Valid values: auto, manual (custom key). Default value: auto.
-                     * @param AccessKeyType Key type. Valid values: auto, manual (custom key). Default value: auto.
+                     * @param _accessKeyType Key type. Valid values: auto, manual (custom key). Default value: auto.
+                     * 
                      */
                     void SetAccessKeyType(const std::string& _accessKeyType);
 
                     /**
                      * 判断参数 AccessKeyType 是否已赋值
                      * @return AccessKeyType 是否已赋值
+                     * 
                      */
                     bool AccessKeyTypeHasBeenSet() const;
 
                     /**
                      * 获取Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
                      * @return AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+                     * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
                      * 设置Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
-                     * @param AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+                     * @param _accessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+                     * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
 
                     /**
                      * 判断参数 AccessKeyId 是否已赋值
                      * @return AccessKeyId 是否已赋值
+                     * 
                      */
                     bool AccessKeyIdHasBeenSet() const;
 
                     /**
                      * 获取Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
                      * @return AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+                     * 
                      */
                     std::string GetAccessKeySecret() const;
 
                     /**
                      * 设置Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
-                     * @param AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+                     * @param _accessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+                     * 
                      */
                     void SetAccessKeySecret(const std::string& _accessKeySecret);
 
                     /**
                      * 判断参数 AccessKeySecret 是否已赋值
                      * @return AccessKeySecret 是否已赋值
+                     * 
                      */
                     bool AccessKeySecretHasBeenSet() const;
 

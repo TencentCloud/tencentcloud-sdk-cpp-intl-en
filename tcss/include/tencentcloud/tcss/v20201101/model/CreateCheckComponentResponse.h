@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `InstallSucc` (installed successfully); `InstallFailed` (failed to install).
                      * @return InstallResult Valid values: `InstallSucc` (installed successfully); `InstallFailed` (failed to install).
+                     * 
                      */
                     std::string GetInstallResult() const;
 
                     /**
                      * 判断参数 InstallResult 是否已赋值
                      * @return InstallResult 是否已赋值
+                     * 
                      */
                     bool InstallResultHasBeenSet() const;
 

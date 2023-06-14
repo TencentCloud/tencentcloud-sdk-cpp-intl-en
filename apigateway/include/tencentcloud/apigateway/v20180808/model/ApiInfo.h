@@ -63,20 +63,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceId Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceId Unique service ID of API.
+                     * @param _serviceId Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
@@ -85,20 +88,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceName Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceName Service name of API.
+                     * @param _serviceName Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
@@ -107,20 +113,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceDesc Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceDesc() const;
 
                     /**
                      * 设置Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceDesc Service description of API.
+                     * @param _serviceDesc Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceDesc(const std::string& _serviceDesc);
 
                     /**
                      * 判断参数 ServiceDesc 是否已赋值
                      * @return ServiceDesc 是否已赋值
+                     * 
                      */
                     bool ServiceDescHasBeenSet() const;
 
@@ -129,20 +138,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiId Unique API ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique API ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiId Unique API ID.
+                     * @param _apiId Unique API ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
@@ -151,20 +163,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiDesc API description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiDesc() const;
 
                     /**
                      * 设置API description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiDesc API description.
+                     * @param _apiDesc API description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiDesc(const std::string& _apiDesc);
 
                     /**
                      * 判断参数 ApiDesc 是否已赋值
                      * @return ApiDesc 是否已赋值
+                     * 
                      */
                     bool ApiDescHasBeenSet() const;
 
@@ -173,20 +188,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _createdTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -195,20 +213,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ModifiedTime Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 设置Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ModifiedTime Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _modifiedTime Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetModifiedTime(const std::string& _modifiedTime);
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 
@@ -217,20 +238,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiName API name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiName() const;
 
                     /**
                      * 设置API name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiName API name.
+                     * @param _apiName API name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiName(const std::string& _apiName);
 
                     /**
                      * 判断参数 ApiName 是否已赋值
                      * @return ApiName 是否已赋值
+                     * 
                      */
                     bool ApiNameHasBeenSet() const;
 
@@ -239,20 +263,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiType API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiType() const;
 
                     /**
                      * 设置API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiType API type. Valid values: NORMAL (general API), TSF (microservice API).
+                     * @param _apiType API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiType(const std::string& _apiType);
 
                     /**
                      * 判断参数 ApiType 是否已赋值
                      * @return ApiType 是否已赋值
+                     * 
                      */
                     bool ApiTypeHasBeenSet() const;
 
@@ -261,20 +288,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+                     * @param _protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -283,20 +313,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthType() const;
 
                     /**
                      * 设置API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
+                     * @param _authType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthType(const std::string& _authType);
 
                     /**
                      * 判断参数 AuthType 是否已赋值
                      * @return AuthType 是否已赋值
+                     * 
                      */
                     bool AuthTypeHasBeenSet() const;
 
@@ -305,20 +338,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiBusinessType OAuth API type. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiBusinessType() const;
 
                     /**
                      * 设置OAuth API type. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiBusinessType OAuth API type. Valid values: NORMAL (business API), OAUTH (authorization API).
+                     * @param _apiBusinessType OAuth API type. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiBusinessType(const std::string& _apiBusinessType);
 
                     /**
                      * 判断参数 ApiBusinessType 是否已赋值
                      * @return ApiBusinessType 是否已赋值
+                     * 
                      */
                     bool ApiBusinessTypeHasBeenSet() const;
 
@@ -327,20 +363,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthRelationApiId Unique ID of the authorization API associated with OAuth business API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthRelationApiId() const;
 
                     /**
                      * 设置Unique ID of the authorization API associated with OAuth business API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthRelationApiId Unique ID of the authorization API associated with OAuth business API.
+                     * @param _authRelationApiId Unique ID of the authorization API associated with OAuth business API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthRelationApiId(const std::string& _authRelationApiId);
 
                     /**
                      * 判断参数 AuthRelationApiId 是否已赋值
                      * @return AuthRelationApiId 是否已赋值
+                     * 
                      */
                     bool AuthRelationApiIdHasBeenSet() const;
 
@@ -349,20 +388,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OauthConfig OAuth configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OauthConfig GetOauthConfig() const;
 
                     /**
                      * 设置OAuth configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OauthConfig OAuth configuration.
+                     * @param _oauthConfig OAuth configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOauthConfig(const OauthConfig& _oauthConfig);
 
                     /**
                      * 判断参数 OauthConfig 是否已赋值
                      * @return OauthConfig 是否已赋值
+                     * 
                      */
                     bool OauthConfigHasBeenSet() const;
 
@@ -371,20 +413,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsDebugAfterCharge() const;
 
                     /**
                      * 设置Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace).
+                     * @param _isDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDebugAfterCharge(const bool& _isDebugAfterCharge);
 
                     /**
                      * 判断参数 IsDebugAfterCharge 是否已赋值
                      * @return IsDebugAfterCharge 是否已赋值
+                     * 
                      */
                     bool IsDebugAfterChargeHasBeenSet() const;
 
@@ -393,20 +438,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RequestConfig Request frontend configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RequestConfig GetRequestConfig() const;
 
                     /**
                      * 设置Request frontend configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RequestConfig Request frontend configuration.
+                     * @param _requestConfig Request frontend configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRequestConfig(const RequestConfig& _requestConfig);
 
                     /**
                      * 判断参数 RequestConfig 是否已赋值
                      * @return RequestConfig 是否已赋值
+                     * 
                      */
                     bool RequestConfigHasBeenSet() const;
 
@@ -415,20 +463,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResponseType Return type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResponseType() const;
 
                     /**
                      * 设置Return type.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResponseType Return type.
+                     * @param _responseType Return type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResponseType(const std::string& _responseType);
 
                     /**
                      * 判断参数 ResponseType 是否已赋值
                      * @return ResponseType 是否已赋值
+                     * 
                      */
                     bool ResponseTypeHasBeenSet() const;
 
@@ -437,20 +488,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResponseSuccessExample Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResponseSuccessExample() const;
 
                     /**
                      * 设置Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResponseSuccessExample Sample response for successful custom response configuration.
+                     * @param _responseSuccessExample Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResponseSuccessExample(const std::string& _responseSuccessExample);
 
                     /**
                      * 判断参数 ResponseSuccessExample 是否已赋值
                      * @return ResponseSuccessExample 是否已赋值
+                     * 
                      */
                     bool ResponseSuccessExampleHasBeenSet() const;
 
@@ -459,20 +513,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResponseFailExample Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResponseFailExample() const;
 
                     /**
                      * 设置Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResponseFailExample Sample response for failed custom response configuration.
+                     * @param _responseFailExample Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResponseFailExample(const std::string& _responseFailExample);
 
                     /**
                      * 判断参数 ResponseFailExample 是否已赋值
                      * @return ResponseFailExample 是否已赋值
+                     * 
                      */
                     bool ResponseFailExampleHasBeenSet() const;
 
@@ -481,20 +538,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ResponseErrorCodes Custom error code configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ErrorCodes> GetResponseErrorCodes() const;
 
                     /**
                      * 设置Custom error code configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ResponseErrorCodes Custom error code configuration.
+                     * @param _responseErrorCodes Custom error code configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResponseErrorCodes(const std::vector<ErrorCodes>& _responseErrorCodes);
 
                     /**
                      * 判断参数 ResponseErrorCodes 是否已赋值
                      * @return ResponseErrorCodes 是否已赋值
+                     * 
                      */
                     bool ResponseErrorCodesHasBeenSet() const;
 
@@ -503,20 +563,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RequestParameters Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ReqParameter> GetRequestParameters() const;
 
                     /**
                      * 设置Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RequestParameters Frontend request parameter.
+                     * @param _requestParameters Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRequestParameters(const std::vector<ReqParameter>& _requestParameters);
 
                     /**
                      * 判断参数 RequestParameters 是否已赋值
                      * @return RequestParameters 是否已赋值
+                     * 
                      */
                     bool RequestParametersHasBeenSet() const;
 
@@ -525,20 +588,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceTimeout API backend service timeout period in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetServiceTimeout() const;
 
                     /**
                      * 设置API backend service timeout period in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceTimeout API backend service timeout period in seconds.
+                     * @param _serviceTimeout API backend service timeout period in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceTimeout(const int64_t& _serviceTimeout);
 
                     /**
                      * 判断参数 ServiceTimeout 是否已赋值
                      * @return ServiceTimeout 是否已赋值
+                     * 
                      */
                     bool ServiceTimeoutHasBeenSet() const;
 
@@ -547,20 +613,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+                     * @param _serviceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
@@ -569,20 +638,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceConfig API backend service configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ServiceConfig GetServiceConfig() const;
 
                     /**
                      * 设置API backend service configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceConfig API backend service configuration.
+                     * @param _serviceConfig API backend service configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceConfig(const ServiceConfig& _serviceConfig);
 
                     /**
                      * 判断参数 ServiceConfig 是否已赋值
                      * @return ServiceConfig 是否已赋值
+                     * 
                      */
                     bool ServiceConfigHasBeenSet() const;
 
@@ -591,20 +663,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceParameters API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ServiceParameter> GetServiceParameters() const;
 
                     /**
                      * 设置API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceParameters API backend service parameter.
+                     * @param _serviceParameters API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceParameters(const std::vector<ServiceParameter>& _serviceParameters);
 
                     /**
                      * 判断参数 ServiceParameters 是否已赋值
                      * @return ServiceParameters 是否已赋值
+                     * 
                      */
                     bool ServiceParametersHasBeenSet() const;
 
@@ -613,20 +688,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ConstantParameters Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ConstantParameter> GetConstantParameters() const;
 
                     /**
                      * 设置Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConstantParameters Constant parameter.
+                     * @param _constantParameters Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConstantParameters(const std::vector<ConstantParameter>& _constantParameters);
 
                     /**
                      * 判断参数 ConstantParameters 是否已赋值
                      * @return ConstantParameters 是否已赋值
+                     * 
                      */
                     bool ConstantParametersHasBeenSet() const;
 
@@ -635,20 +713,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceMockReturnMessage() const;
 
                     /**
                      * 设置Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
+                     * @param _serviceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceMockReturnMessage(const std::string& _serviceMockReturnMessage);
 
                     /**
                      * 判断参数 ServiceMockReturnMessage 是否已赋值
                      * @return ServiceMockReturnMessage 是否已赋值
+                     * 
                      */
                     bool ServiceMockReturnMessageHasBeenSet() const;
 
@@ -657,20 +738,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceScfFunctionName() const;
 
                     /**
                      * 设置SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
+                     * @param _serviceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceScfFunctionName(const std::string& _serviceScfFunctionName);
 
                     /**
                      * 判断参数 ServiceScfFunctionName 是否已赋值
                      * @return ServiceScfFunctionName 是否已赋值
+                     * 
                      */
                     bool ServiceScfFunctionNameHasBeenSet() const;
 
@@ -679,20 +763,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceScfFunctionNamespace() const;
 
                     /**
                      * 设置SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
+                     * @param _serviceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceScfFunctionNamespace(const std::string& _serviceScfFunctionNamespace);
 
                     /**
                      * 判断参数 ServiceScfFunctionNamespace 是否已赋值
                      * @return ServiceScfFunctionNamespace 是否已赋值
+                     * 
                      */
                     bool ServiceScfFunctionNamespaceHasBeenSet() const;
 
@@ -701,20 +788,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceScfFunctionQualifier() const;
 
                     /**
                      * 设置SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
+                     * @param _serviceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceScfFunctionQualifier(const std::string& _serviceScfFunctionQualifier);
 
                     /**
                      * 判断参数 ServiceScfFunctionQualifier 是否已赋值
                      * @return ServiceScfFunctionQualifier 是否已赋值
+                     * 
                      */
                     bool ServiceScfFunctionQualifierHasBeenSet() const;
 
@@ -723,20 +813,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceScfIsIntegratedResponse Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetServiceScfIsIntegratedResponse() const;
 
                     /**
                      * 设置Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceScfIsIntegratedResponse Whether integrated response is enabled.
+                     * @param _serviceScfIsIntegratedResponse Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceScfIsIntegratedResponse(const bool& _serviceScfIsIntegratedResponse);
 
                     /**
                      * 判断参数 ServiceScfIsIntegratedResponse 是否已赋值
                      * @return ServiceScfIsIntegratedResponse 是否已赋值
+                     * 
                      */
                     bool ServiceScfIsIntegratedResponseHasBeenSet() const;
 
@@ -745,20 +838,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketRegisterFunctionName() const;
 
                     /**
                      * 设置SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
+                     * @param _serviceWebsocketRegisterFunctionName SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketRegisterFunctionName(const std::string& _serviceWebsocketRegisterFunctionName);
 
                     /**
                      * 判断参数 ServiceWebsocketRegisterFunctionName 是否已赋值
                      * @return ServiceWebsocketRegisterFunctionName 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketRegisterFunctionNameHasBeenSet() const;
 
@@ -767,20 +863,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketRegisterFunctionNamespace() const;
 
                     /**
                      * 设置SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketRegisterFunctionNamespace(const std::string& _serviceWebsocketRegisterFunctionNamespace);
 
                     /**
                      * 判断参数 ServiceWebsocketRegisterFunctionNamespace 是否已赋值
                      * @return ServiceWebsocketRegisterFunctionNamespace 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketRegisterFunctionNamespaceHasBeenSet() const;
 
@@ -789,20 +888,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketRegisterFunctionQualifier() const;
 
                     /**
                      * 设置SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketRegisterFunctionQualifier(const std::string& _serviceWebsocketRegisterFunctionQualifier);
 
                     /**
                      * 判断参数 ServiceWebsocketRegisterFunctionQualifier 是否已赋值
                      * @return ServiceWebsocketRegisterFunctionQualifier 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketRegisterFunctionQualifierHasBeenSet() const;
 
@@ -811,20 +913,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketCleanupFunctionName() const;
 
                     /**
                      * 设置SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketCleanupFunctionName(const std::string& _serviceWebsocketCleanupFunctionName);
 
                     /**
                      * 判断参数 ServiceWebsocketCleanupFunctionName 是否已赋值
                      * @return ServiceWebsocketCleanupFunctionName 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketCleanupFunctionNameHasBeenSet() const;
 
@@ -833,20 +938,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketCleanupFunctionNamespace() const;
 
                     /**
                      * 设置SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketCleanupFunctionNamespace(const std::string& _serviceWebsocketCleanupFunctionNamespace);
 
                     /**
                      * 判断参数 ServiceWebsocketCleanupFunctionNamespace 是否已赋值
                      * @return ServiceWebsocketCleanupFunctionNamespace 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketCleanupFunctionNamespaceHasBeenSet() const;
 
@@ -855,20 +963,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketCleanupFunctionQualifier() const;
 
                     /**
                      * 设置SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketCleanupFunctionQualifier(const std::string& _serviceWebsocketCleanupFunctionQualifier);
 
                     /**
                      * 判断参数 ServiceWebsocketCleanupFunctionQualifier 是否已赋值
                      * @return ServiceWebsocketCleanupFunctionQualifier 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketCleanupFunctionQualifierHasBeenSet() const;
 
@@ -877,20 +988,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InternalDomain WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInternalDomain() const;
 
                     /**
                      * 设置WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InternalDomain WebSocket callback address.
+                     * @param _internalDomain WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInternalDomain(const std::string& _internalDomain);
 
                     /**
                      * 判断参数 InternalDomain 是否已赋值
                      * @return InternalDomain 是否已赋值
+                     * 
                      */
                     bool InternalDomainHasBeenSet() const;
 
@@ -899,20 +1013,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketTransportFunctionName() const;
 
                     /**
                      * 设置SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketTransportFunctionName(const std::string& _serviceWebsocketTransportFunctionName);
 
                     /**
                      * 判断参数 ServiceWebsocketTransportFunctionName 是否已赋值
                      * @return ServiceWebsocketTransportFunctionName 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketTransportFunctionNameHasBeenSet() const;
 
@@ -921,20 +1038,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketTransportFunctionNamespace() const;
 
                     /**
                      * 设置SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketTransportFunctionNamespace(const std::string& _serviceWebsocketTransportFunctionNamespace);
 
                     /**
                      * 判断参数 ServiceWebsocketTransportFunctionNamespace 是否已赋值
                      * @return ServiceWebsocketTransportFunctionNamespace 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketTransportFunctionNamespaceHasBeenSet() const;
 
@@ -943,20 +1063,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceWebsocketTransportFunctionQualifier() const;
 
                     /**
                      * 设置SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+                     * @param _serviceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceWebsocketTransportFunctionQualifier(const std::string& _serviceWebsocketTransportFunctionQualifier);
 
                     /**
                      * 判断参数 ServiceWebsocketTransportFunctionQualifier 是否已赋值
                      * @return ServiceWebsocketTransportFunctionQualifier 是否已赋值
+                     * 
                      */
                     bool ServiceWebsocketTransportFunctionQualifierHasBeenSet() const;
 
@@ -965,20 +1088,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MicroServices List of microservices bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MicroService> GetMicroServices() const;
 
                     /**
                      * 设置List of microservices bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MicroServices List of microservices bound to API.
+                     * @param _microServices List of microservices bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMicroServices(const std::vector<MicroService>& _microServices);
 
                     /**
                      * 判断参数 MicroServices 是否已赋值
                      * @return MicroServices 是否已赋值
+                     * 
                      */
                     bool MicroServicesHasBeenSet() const;
 
@@ -987,20 +1113,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MicroServicesInfo Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetMicroServicesInfo() const;
 
                     /**
                      * 设置Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MicroServicesInfo Microservice details.
+                     * @param _microServicesInfo Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMicroServicesInfo(const std::vector<int64_t>& _microServicesInfo);
 
                     /**
                      * 判断参数 MicroServicesInfo 是否已赋值
                      * @return MicroServicesInfo 是否已赋值
+                     * 
                      */
                     bool MicroServicesInfoHasBeenSet() const;
 
@@ -1009,20 +1138,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TsfLoadBalanceConfResp GetServiceTsfLoadBalanceConf() const;
 
                     /**
                      * 设置Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
+                     * @param _serviceTsfLoadBalanceConf Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceTsfLoadBalanceConf(const TsfLoadBalanceConfResp& _serviceTsfLoadBalanceConf);
 
                     /**
                      * 判断参数 ServiceTsfLoadBalanceConf 是否已赋值
                      * @return ServiceTsfLoadBalanceConf 是否已赋值
+                     * 
                      */
                     bool ServiceTsfLoadBalanceConfHasBeenSet() const;
 
@@ -1031,20 +1163,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceTsfHealthCheckConf Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     HealthCheckConf GetServiceTsfHealthCheckConf() const;
 
                     /**
                      * 设置Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceTsfHealthCheckConf Health check configuration of microservice.
+                     * @param _serviceTsfHealthCheckConf Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceTsfHealthCheckConf(const HealthCheckConf& _serviceTsfHealthCheckConf);
 
                     /**
                      * 判断参数 ServiceTsfHealthCheckConf 是否已赋值
                      * @return ServiceTsfHealthCheckConf 是否已赋值
+                     * 
                      */
                     bool ServiceTsfHealthCheckConfHasBeenSet() const;
 
@@ -1053,20 +1188,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EnableCORS Whether to enable CORS.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnableCORS() const;
 
                     /**
                      * 设置Whether to enable CORS.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EnableCORS Whether to enable CORS.
+                     * @param _enableCORS Whether to enable CORS.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnableCORS(const bool& _enableCORS);
 
                     /**
                      * 判断参数 EnableCORS 是否已赋值
                      * @return EnableCORS 是否已赋值
+                     * 
                      */
                     bool EnableCORSHasBeenSet() const;
 
@@ -1075,20 +1213,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Tags Information of tags bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Information of tags bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Information of tags bound to API.
+                     * @param _tags Information of tags bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -1097,20 +1238,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Environments Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetEnvironments() const;
 
                     /**
                      * 设置Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Environments Environment information published for API.
+                     * @param _environments Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironments(const std::vector<std::string>& _environments);
 
                     /**
                      * 判断参数 Environments 是否已赋值
                      * @return Environments 是否已赋值
+                     * 
                      */
                     bool EnvironmentsHasBeenSet() const;
 
@@ -1119,20 +1263,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsBase64Encoded() const;
 
                     /**
                      * 设置Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+                     * @param _isBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsBase64Encoded(const bool& _isBase64Encoded);
 
                     /**
                      * 判断参数 IsBase64Encoded 是否已赋值
                      * @return IsBase64Encoded 是否已赋值
+                     * 
                      */
                     bool IsBase64EncodedHasBeenSet() const;
 
@@ -1141,20 +1288,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsBase64Trigger() const;
 
                     /**
                      * 设置Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+                     * @param _isBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsBase64Trigger(const bool& _isBase64Trigger);
 
                     /**
                      * 判断参数 IsBase64Trigger 是否已赋值
                      * @return IsBase64Trigger 是否已赋值
+                     * 
                      */
                     bool IsBase64TriggerHasBeenSet() const;
 
@@ -1163,20 +1313,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Base64EncodedTriggerRule> GetBase64EncodedTriggerRules() const;
 
                     /**
                      * 设置Header trigger rules. The number of rules cannot exceed 10.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+                     * @param _base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBase64EncodedTriggerRules(const std::vector<Base64EncodedTriggerRule>& _base64EncodedTriggerRules);
 
                     /**
                      * 判断参数 Base64EncodedTriggerRules 是否已赋值
                      * @return Base64EncodedTriggerRules 是否已赋值
+                     * 
                      */
                     bool Base64EncodedTriggerRulesHasBeenSet() const;
 

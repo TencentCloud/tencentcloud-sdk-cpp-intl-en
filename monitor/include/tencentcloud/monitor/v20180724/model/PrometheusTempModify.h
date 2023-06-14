@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Describe Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescribe() const;
 
                     /**
                      * 设置Description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Describe Description
+                     * @param _describe Description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescribe(const std::string& _describe);
 
                     /**
                      * 判断参数 Describe 是否已赋值
                      * @return Describe 是否已赋值
+                     * 
                      */
                     bool DescribeHasBeenSet() const;
 
@@ -95,6 +101,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ServiceMonitors This parameter is valid if `Level` is `cluster`.
 List of ServiceMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetServiceMonitors() const;
 
@@ -102,15 +109,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `cluster`.
 List of ServiceMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceMonitors This parameter is valid if `Level` is `cluster`.
+                     * @param _serviceMonitors This parameter is valid if `Level` is `cluster`.
 List of ServiceMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceMonitors(const std::vector<PrometheusConfigItem>& _serviceMonitors);
 
                     /**
                      * 判断参数 ServiceMonitors 是否已赋值
                      * @return ServiceMonitors 是否已赋值
+                     * 
                      */
                     bool ServiceMonitorsHasBeenSet() const;
 
@@ -121,6 +130,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return PodMonitors This parameter is valid if `Level` is `cluster`.
 List of PodMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetPodMonitors() const;
 
@@ -128,15 +138,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `cluster`.
 List of PodMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PodMonitors This parameter is valid if `Level` is `cluster`.
+                     * @param _podMonitors This parameter is valid if `Level` is `cluster`.
 List of PodMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPodMonitors(const std::vector<PrometheusConfigItem>& _podMonitors);
 
                     /**
                      * 判断参数 PodMonitors 是否已赋值
                      * @return PodMonitors 是否已赋值
+                     * 
                      */
                     bool PodMonitorsHasBeenSet() const;
 
@@ -147,6 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return RawJobs This parameter is valid if `Level` is `cluster`.
 List of RawJob rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetRawJobs() const;
 
@@ -154,15 +167,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `cluster`.
 List of RawJob rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RawJobs This parameter is valid if `Level` is `cluster`.
+                     * @param _rawJobs This parameter is valid if `Level` is `cluster`.
 List of RawJob rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRawJobs(const std::vector<PrometheusConfigItem>& _rawJobs);
 
                     /**
                      * 判断参数 RawJobs 是否已赋值
                      * @return RawJobs 是否已赋值
+                     * 
                      */
                     bool RawJobsHasBeenSet() const;
 
@@ -173,6 +188,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return RecordRules This parameter is valid if `Level` is `instance`.
 List of recording rules in the template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetRecordRules() const;
 
@@ -180,15 +196,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `instance`.
 List of recording rules in the template
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordRules This parameter is valid if `Level` is `instance`.
+                     * @param _recordRules This parameter is valid if `Level` is `instance`.
 List of recording rules in the template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecordRules(const std::vector<PrometheusConfigItem>& _recordRules);
 
                     /**
                      * 判断参数 RecordRules 是否已赋值
                      * @return RecordRules 是否已赋值
+                     * 
                      */
                     bool RecordRulesHasBeenSet() const;
 
@@ -197,20 +215,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AlertDetailRules Modification content, which is valid only if template type is `Alert`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusAlertPolicyItem> GetAlertDetailRules() const;
 
                     /**
                      * 设置Modification content, which is valid only if template type is `Alert`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AlertDetailRules Modification content, which is valid only if template type is `Alert`.
+                     * @param _alertDetailRules Modification content, which is valid only if template type is `Alert`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlertDetailRules(const std::vector<PrometheusAlertPolicyItem>& _alertDetailRules);
 
                     /**
                      * 判断参数 AlertDetailRules 是否已赋值
                      * @return AlertDetailRules 是否已赋值
+                     * 
                      */
                     bool AlertDetailRulesHasBeenSet() const;
 

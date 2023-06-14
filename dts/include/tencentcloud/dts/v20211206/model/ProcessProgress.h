@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Step status. Valid values: `notStarted`, `running`, `success`, `failed`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Step status. Valid values: `notStarted`, `running`, `success`, `failed`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Step status. Valid values: `notStarted`, `running`, `success`, `failed`.
+                     * @param _status Step status. Valid values: `notStarted`, `running`, `success`, `failed`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Percent Progress information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPercent() const;
 
                     /**
                      * 设置Progress information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Percent Progress information
+                     * @param _percent Progress information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPercent(const uint64_t& _percent);
 
                     /**
                      * 判断参数 Percent 是否已赋值
                      * @return Percent 是否已赋值
+                     * 
                      */
                     bool PercentHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepAll() const;
 
                     /**
                      * 设置Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepAll Total number of steps
+                     * @param _stepAll Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepAll(const uint64_t& _stepAll);
 
                     /**
                      * 判断参数 StepAll 是否已赋值
                      * @return StepAll 是否已赋值
+                     * 
                      */
                     bool StepAllHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepNow Current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepNow() const;
 
                     /**
                      * 设置Current step
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepNow Current step
+                     * @param _stepNow Current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepNow(const uint64_t& _stepNow);
 
                     /**
                      * 判断参数 StepNow 是否已赋值
                      * @return StepNow 是否已赋值
+                     * 
                      */
                     bool StepNowHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Message The prompt output in the current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置The prompt output in the current step
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Message The prompt output in the current step
+                     * @param _message The prompt output in the current step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Steps Step information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<StepDetailInfo> GetSteps() const;
 
                     /**
                      * 设置Step information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Steps Step information
+                     * @param _steps Step information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSteps(const std::vector<StepDetailInfo>& _steps);
 
                     /**
                      * 判断参数 Steps 是否已赋值
                      * @return Steps 是否已赋值
+                     * 
                      */
                     bool StepsHasBeenSet() const;
 

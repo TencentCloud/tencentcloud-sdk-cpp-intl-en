@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Agent information list.
                      * @return AutomationAgentSet Agent information list.
+                     * 
                      */
                     std::vector<AutomationAgentInfo> GetAutomationAgentSet() const;
 
                     /**
                      * 判断参数 AutomationAgentSet 是否已赋值
                      * @return AutomationAgentSet 是否已赋值
+                     * 
                      */
                     bool AutomationAgentSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of matching agents.
                      * @return TotalCount Total number of matching agents.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

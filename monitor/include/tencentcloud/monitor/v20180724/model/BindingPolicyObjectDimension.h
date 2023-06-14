@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Region name.
                      * @return Region Region name.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region name.
-                     * @param Region Region name.
+                     * @param _region Region name.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Region ID.
                      * @return RegionId Region ID.
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID.
-                     * @param RegionId Region ID.
+                     * @param _regionId Region ID.
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
                      * @return Dimensions Instance dimension information in the following format:
 {"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
 [Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+                     * 
                      */
                     std::string GetDimensions() const;
 
@@ -96,33 +103,38 @@ namespace TencentCloud
                      * 设置Instance dimension information in the following format:
 {"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
 [Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
-                     * @param Dimensions Instance dimension information in the following format:
+                     * @param _dimensions Instance dimension information in the following format:
 {"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
 [Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+                     * 
                      */
                     void SetDimensions(const std::string& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
                     /**
                      * 获取Event dimensions.
                      * @return EventDimensions Event dimensions.
+                     * 
                      */
                     std::string GetEventDimensions() const;
 
                     /**
                      * 设置Event dimensions.
-                     * @param EventDimensions Event dimensions.
+                     * @param _eventDimensions Event dimensions.
+                     * 
                      */
                     void SetEventDimensions(const std::string& _eventDimensions);
 
                     /**
                      * 判断参数 EventDimensions 是否已赋值
                      * @return EventDimensions 是否已赋值
+                     * 
                      */
                     bool EventDimensionsHasBeenSet() const;
 

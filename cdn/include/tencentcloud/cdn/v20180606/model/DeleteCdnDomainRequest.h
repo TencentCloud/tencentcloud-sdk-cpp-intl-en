@@ -47,20 +47,23 @@ namespace TencentCloud
 The domain name status should be `Disabled`
                      * @return Domain Domain name
 The domain name status should be `Disabled`
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
 The domain name status should be `Disabled`
-                     * @param Domain Domain name
+                     * @param _domain Domain name
 The domain name status should be `Disabled`
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

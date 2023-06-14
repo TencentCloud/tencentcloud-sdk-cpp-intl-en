@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Protocol and sale details
                      * @return Protocols Protocol and sale details
+                     * 
                      */
                     std::vector<AvailableProtoStatus> GetProtocols() const;
 
                     /**
                      * 设置Protocol and sale details
-                     * @param Protocols Protocol and sale details
+                     * @param _protocols Protocol and sale details
+                     * 
                      */
                     void SetProtocols(const std::vector<AvailableProtoStatus>& _protocols);
 
                     /**
                      * 判断参数 Protocols 是否已赋值
                      * @return Protocols 是否已赋值
+                     * 
                      */
                     bool ProtocolsHasBeenSet() const;
 
                     /**
                      * 获取Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
                      * @return Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
-                     * @param Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * @param _type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether prepaid is supported. `true`: yes; `false`: no
                      * @return Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * 
                      */
                     bool GetPrepayment() const;
 
                     /**
                      * 设置Indicates whether prepaid is supported. `true`: yes; `false`: no
-                     * @param Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * @param _prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+                     * 
                      */
                     void SetPrepayment(const bool& _prepayment);
 
                     /**
                      * 判断参数 Prepayment 是否已赋值
                      * @return Prepayment 是否已赋值
+                     * 
                      */
                     bool PrepaymentHasBeenSet() const;
 

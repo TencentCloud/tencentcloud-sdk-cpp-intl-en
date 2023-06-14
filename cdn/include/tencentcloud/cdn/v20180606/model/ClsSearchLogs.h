@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Cursor for more search results
                      * @return Context Cursor for more search results
+                     * 
                      */
                     std::string GetContext() const;
 
                     /**
                      * 设置Cursor for more search results
-                     * @param Context Cursor for more search results
+                     * @param _context Cursor for more search results
+                     * 
                      */
                     void SetContext(const std::string& _context);
 
                     /**
                      * 判断参数 Context 是否已赋值
                      * @return Context 是否已赋值
+                     * 
                      */
                     bool ContextHasBeenSet() const;
 
                     /**
                      * 获取Whether all search results have been returned
                      * @return Listover Whether all search results have been returned
+                     * 
                      */
                     bool GetListover() const;
 
                     /**
                      * 设置Whether all search results have been returned
-                     * @param Listover Whether all search results have been returned
+                     * @param _listover Whether all search results have been returned
+                     * 
                      */
                     void SetListover(const bool& _listover);
 
                     /**
                      * 判断参数 Listover 是否已赋值
                      * @return Listover 是否已赋值
+                     * 
                      */
                     bool ListoverHasBeenSet() const;
 
                     /**
                      * 获取Log content information
                      * @return Results Log content information
+                     * 
                      */
                     std::vector<ClsLogObject> GetResults() const;
 
                     /**
                      * 设置Log content information
-                     * @param Results Log content information
+                     * @param _results Log content information
+                     * 
                      */
                     void SetResults(const std::vector<ClsLogObject>& _results);
 
                     /**
                      * 判断参数 Results 是否已赋值
                      * @return Results 是否已赋值
+                     * 
                      */
                     bool ResultsHasBeenSet() const;
 

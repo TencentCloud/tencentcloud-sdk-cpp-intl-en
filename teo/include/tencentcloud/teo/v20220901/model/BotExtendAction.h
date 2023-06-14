@@ -65,6 +65,7 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -78,7 +79,7 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
-                     * @param Action The action. Values:
+                     * @param _action The action. Values:
 <li>`monitor`: Observe</li>
 <li>`trans`: Allow</li>
 <li>`alg`: JavaScript challenge</li>
@@ -87,12 +88,14 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -101,20 +104,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Percent The probability for triggering the action. Value range: 0-100.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPercent() const;
 
                     /**
                      * 设置The probability for triggering the action. Value range: 0-100.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Percent The probability for triggering the action. Value range: 0-100.
+                     * @param _percent The probability for triggering the action. Value range: 0-100.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPercent(const uint64_t& _percent);
 
                     /**
                      * 判断参数 Percent 是否已赋值
                      * @return Percent 是否已赋值
+                     * 
                      */
                     bool PercentHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
                      * @return AudioSelectorName Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
+                     * 
                      */
                     std::string GetAudioSelectorName() const;
 
                     /**
                      * 设置Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
-                     * @param AudioSelectorName Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
+                     * @param _audioSelectorName Only `AttachedInputs.AudioSelectors.Name` can be selected. This parameter is required for RTP_PUSH and UDP_PUSH.
+                     * 
                      */
                     void SetAudioSelectorName(const std::string& _audioSelectorName);
 
                     /**
                      * 判断参数 AudioSelectorName 是否已赋值
                      * @return AudioSelectorName 是否已赋值
+                     * 
                      */
                     bool AudioSelectorNameHasBeenSet() const;
 
                     /**
                      * 获取Audio transcoding template name, which can contain 1-20 letters and digits.
                      * @return Name Audio transcoding template name, which can contain 1-20 letters and digits.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Audio transcoding template name, which can contain 1-20 letters and digits.
-                     * @param Name Audio transcoding template name, which can contain 1-20 letters and digits.
+                     * @param _name Audio transcoding template name, which can contain 1-20 letters and digits.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Audio codec. Valid value: AAC. Default value: AAC.
                      * @return Acodec Audio codec. Valid value: AAC. Default value: AAC.
+                     * 
                      */
                     std::string GetAcodec() const;
 
                     /**
                      * 设置Audio codec. Valid value: AAC. Default value: AAC.
-                     * @param Acodec Audio codec. Valid value: AAC. Default value: AAC.
+                     * @param _acodec Audio codec. Valid value: AAC. Default value: AAC.
+                     * 
                      */
                     void SetAcodec(const std::string& _acodec);
 
                     /**
                      * 判断参数 Acodec 是否已赋值
                      * @return Acodec 是否已赋值
+                     * 
                      */
                     bool AcodecHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
                      * @return AudioBitrate Audio bitrate. If this parameter is left empty, the original value will be used.
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
+                     * 
                      */
                     uint64_t GetAudioBitrate() const;
 
                     /**
                      * 设置Audio bitrate. If this parameter is left empty, the original value will be used.
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
-                     * @param AudioBitrate Audio bitrate. If this parameter is left empty, the original value will be used.
+                     * @param _audioBitrate Audio bitrate. If this parameter is left empty, the original value will be used.
 Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000, 32000, 40000, 48000, 56000, 64000, 80000, 96000, 112000, 128000, 160000, 192000, 224000, 256000, 288000, 320000, 384000, 448000, 512000, 576000, 640000, 768000, 896000, 1024000
+                     * 
                      */
                     void SetAudioBitrate(const uint64_t& _audioBitrate);
 
                     /**
                      * 判断参数 AudioBitrate 是否已赋值
                      * @return AudioBitrate 是否已赋值
+                     * 
                      */
                     bool AudioBitrateHasBeenSet() const;
 
                     /**
                      * 获取Audio language code, whose length is always 3 characters.
                      * @return LanguageCode Audio language code, whose length is always 3 characters.
+                     * 
                      */
                     std::string GetLanguageCode() const;
 
                     /**
                      * 设置Audio language code, whose length is always 3 characters.
-                     * @param LanguageCode Audio language code, whose length is always 3 characters.
+                     * @param _languageCode Audio language code, whose length is always 3 characters.
+                     * 
                      */
                     void SetLanguageCode(const std::string& _languageCode);
 
                     /**
                      * 判断参数 LanguageCode 是否已赋值
                      * @return LanguageCode 是否已赋值
+                     * 
                      */
                     bool LanguageCodeHasBeenSet() const;
 

@@ -45,234 +45,273 @@ namespace TencentCloud
                     /**
                      * 获取List of VPC IDs
                      * @return VpcIds List of VPC IDs
+                     * 
                      */
                     std::vector<int64_t> GetVpcIds() const;
 
                     /**
                      * 设置List of VPC IDs
-                     * @param VpcIds List of VPC IDs
+                     * @param _vpcIds List of VPC IDs
+                     * 
                      */
                     void SetVpcIds(const std::vector<int64_t>& _vpcIds);
 
                     /**
                      * 判断参数 VpcIds 是否已赋值
                      * @return VpcIds 是否已赋值
+                     * 
                      */
                     bool VpcIdsHasBeenSet() const;
 
                     /**
                      * 获取List of subnet IDs
                      * @return SubnetIds List of subnet IDs
+                     * 
                      */
                     std::vector<int64_t> GetSubnetIds() const;
 
                     /**
                      * 设置List of subnet IDs
-                     * @param SubnetIds List of subnet IDs
+                     * @param _subnetIds List of subnet IDs
+                     * 
                      */
                     void SetSubnetIds(const std::vector<int64_t>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
                      * 获取List of billing modes. 0: monthly subscription; 1: pay-as-you-go
                      * @return PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置List of billing modes. 0: monthly subscription; 1: pay-as-you-go
-                     * @param PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
+                     * @param _payMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取List of instance IDs
                      * @return InstanceIds List of instance IDs
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of instance IDs
-                     * @param InstanceIds List of instance IDs
+                     * @param _instanceIds List of instance IDs
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取List of instance names
                      * @return InstanceNames List of instance names
+                     * 
                      */
                     std::vector<std::string> GetInstanceNames() const;
 
                     /**
                      * 设置List of instance names
-                     * @param InstanceNames List of instance names
+                     * @param _instanceNames List of instance names
+                     * 
                      */
                     void SetInstanceNames(const std::vector<std::string>& _instanceNames);
 
                     /**
                      * 判断参数 InstanceNames 是否已赋值
                      * @return InstanceNames 是否已赋值
+                     * 
                      */
                     bool InstanceNamesHasBeenSet() const;
 
                     /**
                      * 获取List of instance status
                      * @return Status List of instance status
+                     * 
                      */
                     std::vector<std::string> GetStatus() const;
 
                     /**
                      * 设置List of instance status
-                     * @param Status List of instance status
+                     * @param _status List of instance status
+                     * 
                      */
                     void SetStatus(const std::vector<std::string>& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return OrderBy Sorting field
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting field
-                     * @param OrderBy Sorting field
+                     * @param _orderBy Sorting field
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order
                      * @return OrderByType Sorting order
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting order
-                     * @param OrderByType Sorting order
+                     * @param _orderByType Sorting order
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
                      * 获取List of instance VIPs
                      * @return Vips List of instance VIPs
+                     * 
                      */
                     std::vector<std::string> GetVips() const;
 
                     /**
                      * 设置List of instance VIPs
-                     * @param Vips List of instance VIPs
+                     * @param _vips List of instance VIPs
+                     * 
                      */
                     void SetVips(const std::vector<std::string>& _vips);
 
                     /**
                      * 判断参数 Vips 是否已赋值
                      * @return Vips 是否已赋值
+                     * 
                      */
                     bool VipsHasBeenSet() const;
 
                     /**
                      * 获取List of VPC IDs
                      * @return UniqVpcIds List of VPC IDs
+                     * 
                      */
                     std::vector<std::string> GetUniqVpcIds() const;
 
                     /**
                      * 设置List of VPC IDs
-                     * @param UniqVpcIds List of VPC IDs
+                     * @param _uniqVpcIds List of VPC IDs
+                     * 
                      */
                     void SetUniqVpcIds(const std::vector<std::string>& _uniqVpcIds);
 
                     /**
                      * 判断参数 UniqVpcIds 是否已赋值
                      * @return UniqVpcIds 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdsHasBeenSet() const;
 
                     /**
                      * 获取List of unique subnet IDs
                      * @return UniqSubnetIds List of unique subnet IDs
+                     * 
                      */
                     std::vector<std::string> GetUniqSubnetIds() const;
 
                     /**
                      * 设置List of unique subnet IDs
-                     * @param UniqSubnetIds List of unique subnet IDs
+                     * @param _uniqSubnetIds List of unique subnet IDs
+                     * 
                      */
                     void SetUniqSubnetIds(const std::vector<std::string>& _uniqSubnetIds);
 
                     /**
                      * 判断参数 UniqSubnetIds 是否已赋值
                      * @return UniqSubnetIds 是否已赋值
+                     * 
                      */
                     bool UniqSubnetIdsHasBeenSet() const;
 
                     /**
                      * 获取Quantity limit. Recommended default value: 100.
                      * @return Limit Quantity limit. Recommended default value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Quantity limit. Recommended default value: 100.
-                     * @param Limit Quantity limit. Recommended default value: 100.
+                     * @param _limit Quantity limit. Recommended default value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0
                      * @return Offset Offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0
-                     * @param Offset Offset. Default value: 0
+                     * @param _offset Offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

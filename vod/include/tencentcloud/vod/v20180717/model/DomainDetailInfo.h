@@ -54,18 +54,21 @@ namespace TencentCloud
                     /**
                      * 获取Domain name
                      * @return Domain Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-                     * @param Domain Domain name
+                     * @param _domain Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -74,20 +77,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return AccelerateAreaInfos Acceleration region information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<AccelerateAreaInfo> GetAccelerateAreaInfos() const;
 
                     /**
                      * 设置Acceleration region information
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param AccelerateAreaInfos Acceleration region information
+                     * @param _accelerateAreaInfos Acceleration region information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetAccelerateAreaInfos(const std::vector<AccelerateAreaInfo>& _accelerateAreaInfos);
 
                     /**
                      * 判断参数 AccelerateAreaInfos 是否已赋值
                      * @return AccelerateAreaInfos 是否已赋值
+                     * 
                      */
                     bool AccelerateAreaInfosHasBeenSet() const;
 
@@ -100,6 +106,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>Online</li>
 <li>Deploying</li>
 <li>Locked: you cannot change the deployment status of locked domain names</li>
+                     * 
                      */
                     std::string GetDeployStatus() const;
 
@@ -108,16 +115,18 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>Online</li>
 <li>Deploying</li>
 <li>Locked: you cannot change the deployment status of locked domain names</li>
-                     * @param DeployStatus Deployment status. Valid values:
+                     * @param _deployStatus Deployment status. Valid values:
 <li>Online</li>
 <li>Deploying</li>
 <li>Locked: you cannot change the deployment status of locked domain names</li>
+                     * 
                      */
                     void SetDeployStatus(const std::string& _deployStatus);
 
                     /**
                      * 判断参数 DeployStatus 是否已赋值
                      * @return DeployStatus 是否已赋值
+                     * 
                      */
                     bool DeployStatusHasBeenSet() const;
 
@@ -126,20 +135,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return HTTPSConfig HTTPS configuration information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     DomainHTTPSConfig GetHTTPSConfig() const;
 
                     /**
                      * 设置HTTPS configuration information
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param HTTPSConfig HTTPS configuration information
+                     * @param _hTTPSConfig HTTPS configuration information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetHTTPSConfig(const DomainHTTPSConfig& _hTTPSConfig);
 
                     /**
                      * 判断参数 HTTPSConfig 是否已赋值
                      * @return HTTPSConfig 是否已赋值
+                     * 
                      */
                     bool HTTPSConfigHasBeenSet() const;
 
@@ -148,20 +160,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     UrlSignatureAuthPolicy GetUrlSignatureAuthPolicy() const;
 
                     /**
                      * 设置[Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
+                     * @param _urlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetUrlSignatureAuthPolicy(const UrlSignatureAuthPolicy& _urlSignatureAuthPolicy);
 
                     /**
                      * 判断参数 UrlSignatureAuthPolicy 是否已赋值
                      * @return UrlSignatureAuthPolicy 是否已赋值
+                     * 
                      */
                     bool UrlSignatureAuthPolicyHasBeenSet() const;
 
@@ -170,20 +185,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     RefererAuthPolicy GetRefererAuthPolicy() const;
 
                     /**
                      * 设置[Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
+                     * @param _refererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetRefererAuthPolicy(const RefererAuthPolicy& _refererAuthPolicy);
 
                     /**
                      * 判断参数 RefererAuthPolicy 是否已赋值
                      * @return RefererAuthPolicy 是否已赋值
+                     * 
                      */
                     bool RefererAuthPolicyHasBeenSet() const;
 
@@ -192,20 +210,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
                      * @return CreateTime The time when the domain name was added in the VOD system
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The time when the domain name was added in the VOD system
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-                     * @param CreateTime The time when the domain name was added in the VOD system
+                     * @param _createTime The time when the domain name was added in the VOD system
 <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -214,20 +235,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QUICConfig The QUIC configuration for the domain.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DomainQUICConfig GetQUICConfig() const;
 
                     /**
                      * 设置The QUIC configuration for the domain.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param QUICConfig The QUIC configuration for the domain.
+                     * @param _qUICConfig The QUIC configuration for the domain.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQUICConfig(const DomainQUICConfig& _qUICConfig);
 
                     /**
                      * 判断参数 QUICConfig 是否已赋值
                      * @return QUICConfig 是否已赋值
+                     * 
                      */
                     bool QUICConfigHasBeenSet() const;
 

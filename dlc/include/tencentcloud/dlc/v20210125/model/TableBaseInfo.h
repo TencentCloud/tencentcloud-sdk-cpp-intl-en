@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The database name.
                      * @return DatabaseName The database name.
+                     * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
                      * 设置The database name.
-                     * @param DatabaseName The database name.
+                     * @param _databaseName The database name.
+                     * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
 
                     /**
                      * 判断参数 DatabaseName 是否已赋值
                      * @return DatabaseName 是否已赋值
+                     * 
                      */
                     bool DatabaseNameHasBeenSet() const;
 
                     /**
                      * 获取The table name.
                      * @return TableName The table name.
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置The table name.
-                     * @param TableName The table name.
+                     * @param _tableName The table name.
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DatasourceConnectionName The data source name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatasourceConnectionName() const;
 
                     /**
                      * 设置The data source name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DatasourceConnectionName The data source name.
+                     * @param _datasourceConnectionName The data source name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatasourceConnectionName(const std::string& _datasourceConnectionName);
 
                     /**
                      * 判断参数 DatasourceConnectionName 是否已赋值
                      * @return DatasourceConnectionName 是否已赋值
+                     * 
                      */
                     bool DatasourceConnectionNameHasBeenSet() const;
 
@@ -110,20 +119,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TableComment The table remarks.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableComment() const;
 
                     /**
                      * 设置The table remarks.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TableComment The table remarks.
+                     * @param _tableComment The table remarks.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableComment(const std::string& _tableComment);
 
                     /**
                      * 判断参数 TableComment 是否已赋值
                      * @return TableComment 是否已赋值
+                     * 
                      */
                     bool TableCommentHasBeenSet() const;
 
@@ -132,20 +144,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type The specific type: `table` or `view`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The specific type: `table` or `view`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type The specific type: `table` or `view`.
+                     * @param _type The specific type: `table` or `view`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -154,20 +169,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TableFormat The data format type, such as `hive` and `iceberg`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTableFormat() const;
 
                     /**
                      * 设置The data format type, such as `hive` and `iceberg`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TableFormat The data format type, such as `hive` and `iceberg`.
+                     * @param _tableFormat The data format type, such as `hive` and `iceberg`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableFormat(const std::string& _tableFormat);
 
                     /**
                      * 判断参数 TableFormat 是否已赋值
                      * @return TableFormat 是否已赋值
+                     * 
                      */
                     bool TableFormatHasBeenSet() const;
 
@@ -176,20 +194,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserAlias The table creator name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserAlias() const;
 
                     /**
                      * 设置The table creator name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserAlias The table creator name.
+                     * @param _userAlias The table creator name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserAlias(const std::string& _userAlias);
 
                     /**
                      * 判断参数 UserAlias 是否已赋值
                      * @return UserAlias 是否已赋值
+                     * 
                      */
                     bool UserAliasHasBeenSet() const;
 
@@ -198,20 +219,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserSubUin The table creator ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserSubUin() const;
 
                     /**
                      * 设置The table creator ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserSubUin The table creator ID.
+                     * @param _userSubUin The table creator ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserSubUin(const std::string& _userSubUin);
 
                     /**
                      * 判断参数 UserSubUin 是否已赋值
                      * @return UserSubUin 是否已赋值
+                     * 
                      */
                     bool UserSubUinHasBeenSet() const;
 
@@ -220,20 +244,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GovernPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DataGovernPolicy GetGovernPolicy() const;
 
                     /**
                      * 设置The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GovernPolicy The data governance configuration.
+                     * @param _governPolicy The data governance configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGovernPolicy(const DataGovernPolicy& _governPolicy);
 
                     /**
                      * 判断参数 GovernPolicy 是否已赋值
                      * @return GovernPolicy 是否已赋值
+                     * 
                      */
                     bool GovernPolicyHasBeenSet() const;
 

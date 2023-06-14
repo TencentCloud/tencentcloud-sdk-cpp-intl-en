@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterList Cluster information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RocketMQClusterDetail> GetClusterList() const;
 
                     /**
                      * 判断参数 ClusterList 是否已赋值
                      * @return ClusterList 是否已赋值
+                     * 
                      */
                     bool ClusterListHasBeenSet() const;
 
                     /**
                      * 获取The total number of returned results.
                      * @return TotalCount The total number of returned results.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

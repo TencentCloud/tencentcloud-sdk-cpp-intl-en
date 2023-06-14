@@ -46,144 +46,168 @@ namespace TencentCloud
                     /**
                      * 获取Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
                      * @return SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+                     * 
                      */
                     std::string GetSrcDatabaseType() const;
 
                     /**
                      * 设置Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
-                     * @param SrcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+                     * @param _srcDatabaseType Source database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+                     * 
                      */
                     void SetSrcDatabaseType(const std::string& _srcDatabaseType);
 
                     /**
                      * 判断参数 SrcDatabaseType 是否已赋值
                      * @return SrcDatabaseType 是否已赋值
+                     * 
                      */
                     bool SrcDatabaseTypeHasBeenSet() const;
 
                     /**
                      * 获取Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
                      * @return DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+                     * 
                      */
                     std::string GetDstDatabaseType() const;
 
                     /**
                      * 设置Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
-                     * @param DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+                     * @param _dstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
+                     * 
                      */
                     void SetDstDatabaseType(const std::string& _dstDatabaseType);
 
                     /**
                      * 判断参数 DstDatabaseType 是否已赋值
                      * @return DstDatabaseType 是否已赋值
+                     * 
                      */
                     bool DstDatabaseTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance region, such as `ap-guangzhou`.
                      * @return SrcRegion Source instance region, such as `ap-guangzhou`.
+                     * 
                      */
                     std::string GetSrcRegion() const;
 
                     /**
                      * 设置Source instance region, such as `ap-guangzhou`.
-                     * @param SrcRegion Source instance region, such as `ap-guangzhou`.
+                     * @param _srcRegion Source instance region, such as `ap-guangzhou`.
+                     * 
                      */
                     void SetSrcRegion(const std::string& _srcRegion);
 
                     /**
                      * 判断参数 SrcRegion 是否已赋值
                      * @return SrcRegion 是否已赋值
+                     * 
                      */
                     bool SrcRegionHasBeenSet() const;
 
                     /**
                      * 获取Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
                      * @return DstRegion Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
+                     * 
                      */
                     std::string GetDstRegion() const;
 
                     /**
                      * 设置Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
-                     * @param DstRegion Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
+                     * @param _dstRegion Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
+                     * 
                      */
                     void SetDstRegion(const std::string& _dstRegion);
 
                     /**
                      * 判断参数 DstRegion 是否已赋值
                      * @return DstRegion 是否已赋值
+                     * 
                      */
                     bool DstRegionHasBeenSet() const;
 
                     /**
                      * 获取Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
                      * @return InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * 
                      */
                     std::string GetInstanceClass() const;
 
                     /**
                      * 设置Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
-                     * @param InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * @param _instanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * 
                      */
                     void SetInstanceClass(const std::string& _instanceClass);
 
                     /**
                      * 判断参数 InstanceClass 是否已赋值
                      * @return InstanceClass 是否已赋值
+                     * 
                      */
                     bool InstanceClassHasBeenSet() const;
 
                     /**
                      * 获取Quantity. Value range: [1,15]. Default value: `1`.
                      * @return Count Quantity. Value range: [1,15]. Default value: `1`.
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Quantity. Value range: [1,15]. Default value: `1`.
-                     * @param Count Quantity. Value range: [1,15]. Default value: `1`.
+                     * @param _count Quantity. Value range: [1,15]. Default value: `1`.
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Migration task name, which can contain up to 128 characters.
                      * @return JobName Migration task name, which can contain up to 128 characters.
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Migration task name, which can contain up to 128 characters.
-                     * @param JobName Migration task name, which can contain up to 128 characters.
+                     * @param _jobName Migration task name, which can contain up to 128 characters.
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Tag information
                      * @return Tags Tag information
+                     * 
                      */
                     std::vector<TagItem> GetTags() const;
 
                     /**
                      * 设置Tag information
-                     * @param Tags Tag information
+                     * @param _tags Tag information
+                     * 
                      */
                     void SetTags(const std::vector<TagItem>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

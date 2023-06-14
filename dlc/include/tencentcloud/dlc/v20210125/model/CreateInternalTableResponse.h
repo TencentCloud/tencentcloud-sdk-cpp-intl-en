@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The SQL statements for creating the managed internal table.
                      * @return Execution The SQL statements for creating the managed internal table.
+                     * 
                      */
                     std::string GetExecution() const;
 
                     /**
                      * 判断参数 Execution 是否已赋值
                      * @return Execution 是否已赋值
+                     * 
                      */
                     bool ExecutionHasBeenSet() const;
 

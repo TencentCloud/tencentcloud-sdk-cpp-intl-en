@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Security audit group ID.
                      * @return SecAuditGroupId Security audit group ID.
+                     * 
                      */
                     std::string GetSecAuditGroupId() const;
 
                     /**
                      * 设置Security audit group ID.
-                     * @param SecAuditGroupId Security audit group ID.
+                     * @param _secAuditGroupId Security audit group ID.
+                     * 
                      */
                     void SetSecAuditGroupId(const std::string& _secAuditGroupId);
 
                     /**
                      * 判断参数 SecAuditGroupId 是否已赋值
                      * @return SecAuditGroupId 是否已赋值
+                     * 
                      */
                     bool SecAuditGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Exported log start time, such as 2020-12-28 00:00:00.
                      * @return StartTime Exported log start time, such as 2020-12-28 00:00:00.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Exported log start time, such as 2020-12-28 00:00:00.
-                     * @param StartTime Exported log start time, such as 2020-12-28 00:00:00.
+                     * @param _startTime Exported log start time, such as 2020-12-28 00:00:00.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Exported log end time, such as 2020-12-28 01:00:00.
                      * @return EndTime Exported log end time, such as 2020-12-28 01:00:00.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Exported log end time, such as 2020-12-28 01:00:00.
-                     * @param EndTime Exported log end time, such as 2020-12-28 01:00:00.
+                     * @param _endTime Exported log end time, such as 2020-12-28 01:00:00.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid value: `mysql` (TencentDB for MySQL).
                      * @return Product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid value: `mysql` (TencentDB for MySQL).
-                     * @param Product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * @param _product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取List of log risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
                      * @return DangerLevels List of log risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
+                     * 
                      */
                     std::vector<int64_t> GetDangerLevels() const;
 
                     /**
                      * 设置List of log risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
-                     * @param DangerLevels List of log risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
+                     * @param _dangerLevels List of log risk levels. Valid values: `0` (no risk), `1` (low risk), `2` (medium risk), `3` (high risk).
+                     * 
                      */
                     void SetDangerLevels(const std::vector<int64_t>& _dangerLevels);
 
                     /**
                      * 判断参数 DangerLevels 是否已赋值
                      * @return DangerLevels 是否已赋值
+                     * 
                      */
                     bool DangerLevelsHasBeenSet() const;
 

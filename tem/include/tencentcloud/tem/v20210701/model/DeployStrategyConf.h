@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Total batches
                      * @return TotalBatchCount Total batches
+                     * 
                      */
                     int64_t GetTotalBatchCount() const;
 
                     /**
                      * 设置Total batches
-                     * @param TotalBatchCount Total batches
+                     * @param _totalBatchCount Total batches
+                     * 
                      */
                     void SetTotalBatchCount(const int64_t& _totalBatchCount);
 
                     /**
                      * 判断参数 TotalBatchCount 是否已赋值
                      * @return TotalBatchCount 是否已赋值
+                     * 
                      */
                     bool TotalBatchCountHasBeenSet() const;
 
                     /**
                      * 获取Number of pods for the beta batch
                      * @return BetaBatchNum Number of pods for the beta batch
+                     * 
                      */
                     int64_t GetBetaBatchNum() const;
 
                     /**
                      * 设置Number of pods for the beta batch
-                     * @param BetaBatchNum Number of pods for the beta batch
+                     * @param _betaBatchNum Number of pods for the beta batch
+                     * 
                      */
                     void SetBetaBatchNum(const int64_t& _betaBatchNum);
 
                     /**
                      * 判断参数 BetaBatchNum 是否已赋值
                      * @return BetaBatchNum 是否已赋值
+                     * 
                      */
                     bool BetaBatchNumHasBeenSet() const;
 
                     /**
                      * 获取Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
                      * @return DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
+                     * 
                      */
                     int64_t GetDeployStrategyType() const;
 
                     /**
                      * 设置Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
-                     * @param DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
+                     * @param _deployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
+                     * 
                      */
                     void SetDeployStrategyType(const int64_t& _deployStrategyType);
 
                     /**
                      * 判断参数 DeployStrategyType 是否已赋值
                      * @return DeployStrategyType 是否已赋值
+                     * 
                      */
                     bool DeployStrategyTypeHasBeenSet() const;
 
                     /**
                      * 获取Interval between batches
                      * @return BatchInterval Interval between batches
+                     * 
                      */
                     int64_t GetBatchInterval() const;
 
                     /**
                      * 设置Interval between batches
-                     * @param BatchInterval Interval between batches
+                     * @param _batchInterval Interval between batches
+                     * 
                      */
                     void SetBatchInterval(const int64_t& _batchInterval);
 
                     /**
                      * 判断参数 BatchInterval 是否已赋值
                      * @return BatchInterval 是否已赋值
+                     * 
                      */
                     bool BatchIntervalHasBeenSet() const;
 
                     /**
                      * 获取The minimum number of available pods
                      * @return MinAvailable The minimum number of available pods
+                     * 
                      */
                     int64_t GetMinAvailable() const;
 
                     /**
                      * 设置The minimum number of available pods
-                     * @param MinAvailable The minimum number of available pods
+                     * @param _minAvailable The minimum number of available pods
+                     * 
                      */
                     void SetMinAvailable(const int64_t& _minAvailable);
 
                     /**
                      * 判断参数 MinAvailable 是否已赋值
                      * @return MinAvailable 是否已赋值
+                     * 
                      */
                     bool MinAvailableHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable force release
                      * @return Force Whether to enable force release
+                     * 
                      */
                     bool GetForce() const;
 
                     /**
                      * 设置Whether to enable force release
-                     * @param Force Whether to enable force release
+                     * @param _force Whether to enable force release
+                     * 
                      */
                     void SetForce(const bool& _force);
 
                     /**
                      * 判断参数 Force 是否已赋值
                      * @return Force 是否已赋值
+                     * 
                      */
                     bool ForceHasBeenSet() const;
 

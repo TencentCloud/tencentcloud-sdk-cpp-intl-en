@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return AllTotal Total number of rules
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetAllTotal() const;
 
                     /**
                      * 判断参数 AllTotal 是否已赋值
                      * @return AllTotal 是否已赋值
+                     * 
                      */
                     bool AllTotalHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StrategyNum Number of blocking rules
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetStrategyNum() const;
 
                     /**
                      * 判断参数 StrategyNum 是否已赋值
                      * @return StrategyNum 是否已赋值
+                     * 
                      */
                     bool StrategyNumHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StartRuleNum Number of enabled rules
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetStartRuleNum() const;
 
                     /**
                      * 判断参数 StartRuleNum 是否已赋值
                      * @return StartRuleNum 是否已赋值
+                     * 
                      */
                     bool StartRuleNumHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StopRuleNum Number of disabled rules
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetStopRuleNum() const;
 
                     /**
                      * 判断参数 StopRuleNum 是否已赋值
                      * @return StopRuleNum 是否已赋值
+                     * 
                      */
                     bool StopRuleNumHasBeenSet() const;
 
@@ -104,12 +112,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return RemainingNum Remaining quota
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetRemainingNum() const;
 
                     /**
                      * 判断参数 RemainingNum 是否已赋值
                      * @return RemainingNum 是否已赋值
+                     * 
                      */
                     bool RemainingNumHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Transcoding result URL.
                      * @return ResultUrl Transcoding result URL.
+                     * 
                      */
                     std::string GetResultUrl() const;
 
                     /**
                      * 设置Transcoding result URL.
-                     * @param ResultUrl Transcoding result URL.
+                     * @param _resultUrl Transcoding result URL.
+                     * 
                      */
                     void SetResultUrl(const std::string& _resultUrl);
 
                     /**
                      * 判断参数 ResultUrl 是否已赋值
                      * @return ResultUrl 是否已赋值
+                     * 
                      */
                     bool ResultUrlHasBeenSet() const;
 
                     /**
                      * 获取Target resolution.
                      * @return Resolution Target resolution.
+                     * 
                      */
                     std::string GetResolution() const;
 
                     /**
                      * 设置Target resolution.
-                     * @param Resolution Target resolution.
+                     * @param _resolution Target resolution.
+                     * 
                      */
                     void SetResolution(const std::string& _resolution);
 
                     /**
                      * 判断参数 Resolution 是否已赋值
                      * @return Resolution 是否已赋值
+                     * 
                      */
                     bool ResolutionHasBeenSet() const;
 
                     /**
                      * 获取Title (usually the document name).
                      * @return Title Title (usually the document name).
+                     * 
                      */
                     std::string GetTitle() const;
 
                     /**
                      * 设置Title (usually the document name).
-                     * @param Title Title (usually the document name).
+                     * @param _title Title (usually the document name).
+                     * 
                      */
                     void SetTitle(const std::string& _title);
 
                     /**
                      * 判断参数 Title 是否已赋值
                      * @return Title 是否已赋值
+                     * 
                      */
                     bool TitleHasBeenSet() const;
 
                     /**
                      * 获取Number of transcoded pages.
                      * @return Pages Number of transcoded pages.
+                     * 
                      */
                     int64_t GetPages() const;
 
                     /**
                      * 设置Number of transcoded pages.
-                     * @param Pages Number of transcoded pages.
+                     * @param _pages Number of transcoded pages.
+                     * 
                      */
                     void SetPages(const int64_t& _pages);
 
                     /**
                      * 判断参数 Pages 是否已赋值
                      * @return Pages 是否已赋值
+                     * 
                      */
                     bool PagesHasBeenSet() const;
 
@@ -127,6 +139,7 @@ If the document transcoding request carries the ThumbnailResolution parameter an
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`, and so on.
 
 If the document transcoding request carries the ThumbnailResolution parameter and the transcoding type is dynamic transcoding, this parameter is not null. In other cases, this parameter is null.
+                     * 
                      */
                     std::string GetThumbnailUrl() const;
 
@@ -135,88 +148,102 @@ If the document transcoding request carries the ThumbnailResolution parameter an
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`, and so on.
 
 If the document transcoding request carries the ThumbnailResolution parameter and the transcoding type is dynamic transcoding, this parameter is not null. In other cases, this parameter is null.
-                     * @param ThumbnailUrl URL prefix of the thumbnail. If the URL prefix is `http://example.com/g0jb42ps49vtebjshilb/`, the thumbnail URL for the first page of the dynamically transcoded PowerPoint file is
+                     * @param _thumbnailUrl URL prefix of the thumbnail. If the URL prefix is `http://example.com/g0jb42ps49vtebjshilb/`, the thumbnail URL for the first page of the dynamically transcoded PowerPoint file is
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`, and so on.
 
 If the document transcoding request carries the ThumbnailResolution parameter and the transcoding type is dynamic transcoding, this parameter is not null. In other cases, this parameter is null.
+                     * 
                      */
                     void SetThumbnailUrl(const std::string& _thumbnailUrl);
 
                     /**
                      * 判断参数 ThumbnailUrl 是否已赋值
                      * @return ThumbnailUrl 是否已赋值
+                     * 
                      */
                     bool ThumbnailUrlHasBeenSet() const;
 
                     /**
                      * 获取Resolution of the thumbnail generated for dynamic transcoding
                      * @return ThumbnailResolution Resolution of the thumbnail generated for dynamic transcoding
+                     * 
                      */
                     std::string GetThumbnailResolution() const;
 
                     /**
                      * 设置Resolution of the thumbnail generated for dynamic transcoding
-                     * @param ThumbnailResolution Resolution of the thumbnail generated for dynamic transcoding
+                     * @param _thumbnailResolution Resolution of the thumbnail generated for dynamic transcoding
+                     * 
                      */
                     void SetThumbnailResolution(const std::string& _thumbnailResolution);
 
                     /**
                      * 判断参数 ThumbnailResolution 是否已赋值
                      * @return ThumbnailResolution 是否已赋值
+                     * 
                      */
                     bool ThumbnailResolutionHasBeenSet() const;
 
                     /**
                      * 获取URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
                      * @return CompressFileUrl URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
+                     * 
                      */
                     std::string GetCompressFileUrl() const;
 
                     /**
                      * 设置URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
-                     * @param CompressFileUrl URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
+                     * @param _compressFileUrl URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
+                     * 
                      */
                     void SetCompressFileUrl(const std::string& _compressFileUrl);
 
                     /**
                      * 判断参数 CompressFileUrl 是否已赋值
                      * @return CompressFileUrl 是否已赋值
+                     * 
                      */
                     bool CompressFileUrlHasBeenSet() const;
 
                     /**
                      * 获取Task execution error code.
                      * @return ErrorCode Task execution error code.
+                     * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 设置Task execution error code.
-                     * @param ErrorCode Task execution error code.
+                     * @param _errorCode Task execution error code.
+                     * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取Task execution error message.
                      * @return ErrorMsg Task execution error message.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 设置Task execution error message.
-                     * @param ErrorMsg Task execution error message.
+                     * @param _errorMsg Task execution error message.
+                     * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 

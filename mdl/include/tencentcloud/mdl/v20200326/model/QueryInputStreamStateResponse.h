@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The information of the StreamLive input queried.
                      * @return Info The information of the StreamLive input queried.
+                     * 
                      */
                     QueryDispatchInputInfo GetInfo() const;
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

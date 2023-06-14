@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取VPC name
                      * @return VpcName VPC name
+                     * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置VPC name
-                     * @param VpcName VPC name
+                     * @param _vpcName VPC name
+                     * 
                      */
                     void SetVpcName(const std::string& _vpcName);
 
                     /**
                      * 判断参数 VpcName 是否已赋值
                      * @return VpcName 是否已赋值
+                     * 
                      */
                     bool VpcNameHasBeenSet() const;
 
                     /**
                      * 获取NAT firewall mode. 0: Create new; 1: Use existing
                      * @return FwMode NAT firewall mode. 0: Create new; 1: Use existing
+                     * 
                      */
                     int64_t GetFwMode() const;
 
                     /**
                      * 设置NAT firewall mode. 0: Create new; 1: Use existing
-                     * @param FwMode NAT firewall mode. 0: Create new; 1: Use existing
+                     * @param _fwMode NAT firewall mode. 0: Create new; 1: Use existing
+                     * 
                      */
                     void SetFwMode(const int64_t& _fwMode);
 
                     /**
                      * 判断参数 FwMode 是否已赋值
                      * @return FwMode 是否已赋值
+                     * 
                      */
                     bool FwModeHasBeenSet() const;
 
                     /**
                      * 获取VPC IPv4 CIDR block (Classless Inter-Domain Routing)
                      * @return VpcIpv4Cidr VPC IPv4 CIDR block (Classless Inter-Domain Routing)
+                     * 
                      */
                     std::string GetVpcIpv4Cidr() const;
 
                     /**
                      * 设置VPC IPv4 CIDR block (Classless Inter-Domain Routing)
-                     * @param VpcIpv4Cidr VPC IPv4 CIDR block (Classless Inter-Domain Routing)
+                     * @param _vpcIpv4Cidr VPC IPv4 CIDR block (Classless Inter-Domain Routing)
+                     * 
                      */
                     void SetVpcIpv4Cidr(const std::string& _vpcIpv4Cidr);
 
                     /**
                      * 判断参数 VpcIpv4Cidr 是否已赋值
                      * @return VpcIpv4Cidr 是否已赋值
+                     * 
                      */
                     bool VpcIpv4CidrHasBeenSet() const;
 
                     /**
                      * 获取Public EIP, which is the firewall DNS resolution address
                      * @return DNSEip Public EIP, which is the firewall DNS resolution address
+                     * 
                      */
                     std::string GetDNSEip() const;
 
                     /**
                      * 设置Public EIP, which is the firewall DNS resolution address
-                     * @param DNSEip Public EIP, which is the firewall DNS resolution address
+                     * @param _dNSEip Public EIP, which is the firewall DNS resolution address
+                     * 
                      */
                     void SetDNSEip(const std::string& _dNSEip);
 
                     /**
                      * 判断参数 DNSEip 是否已赋值
                      * @return DNSEip 是否已赋值
+                     * 
                      */
                     bool DNSEipHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NatInsId NAT gateway ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetNatInsId() const;
 
                     /**
                      * 设置NAT gateway ID
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param NatInsId NAT gateway ID
+                     * @param _natInsId NAT gateway ID
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetNatInsId(const std::string& _natInsId);
 
                     /**
                      * 判断参数 NatInsId 是否已赋值
                      * @return NatInsId 是否已赋值
+                     * 
                      */
                     bool NatInsIdHasBeenSet() const;
 
@@ -163,38 +181,44 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NatInsName NAT gateway name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetNatInsName() const;
 
                     /**
                      * 设置NAT gateway name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param NatInsName NAT gateway name
+                     * @param _natInsName NAT gateway name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetNatInsName(const std::string& _natInsName);
 
                     /**
                      * 判断参数 NatInsName 是否已赋值
                      * @return NatInsName 是否已赋值
+                     * 
                      */
                     bool NatInsNameHasBeenSet() const;
 
                     /**
                      * 获取0: off; 1: on
                      * @return SwitchStatus 0: off; 1: on
+                     * 
                      */
                     int64_t GetSwitchStatus() const;
 
                     /**
                      * 设置0: off; 1: on
-                     * @param SwitchStatus 0: off; 1: on
+                     * @param _switchStatus 0: off; 1: on
+                     * 
                      */
                     void SetSwitchStatus(const int64_t& _switchStatus);
 
                     /**
                      * 判断参数 SwitchStatus 是否已赋值
                      * @return SwitchStatus 是否已赋值
+                     * 
                      */
                     bool SwitchStatusHasBeenSet() const;
 

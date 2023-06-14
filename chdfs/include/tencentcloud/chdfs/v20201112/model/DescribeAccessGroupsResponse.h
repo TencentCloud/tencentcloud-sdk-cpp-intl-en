@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of permission groups
                      * @return AccessGroups List of permission groups
+                     * 
                      */
                     std::vector<AccessGroup> GetAccessGroups() const;
 
                     /**
                      * 判断参数 AccessGroups 是否已赋值
                      * @return AccessGroups 是否已赋值
+                     * 
                      */
                     bool AccessGroupsHasBeenSet() const;
 

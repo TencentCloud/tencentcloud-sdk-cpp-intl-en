@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Subapplication name. Length limit: 40 characters.
                      * @return Name Subapplication name. Length limit: 40 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Subapplication name. Length limit: 40 characters.
-                     * @param Name Subapplication name. Length limit: 40 characters.
+                     * @param _name Subapplication name. Length limit: 40 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Subapplication overview. Length limit: 300 characters.
                      * @return Description Subapplication overview. Length limit: 300 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Subapplication overview. Length limit: 300 characters.
-                     * @param Description Subapplication overview. Length limit: 300 characters.
+                     * @param _description Subapplication overview. Length limit: 300 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

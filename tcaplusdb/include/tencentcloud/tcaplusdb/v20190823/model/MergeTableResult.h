@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -75,38 +78,44 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Error If table merging is successful, `null` will be returned
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     ErrorInfo GetError() const;
 
                     /**
                      * 设置If table merging is successful, `null` will be returned
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Error If table merging is successful, `null` will be returned
+                     * @param _error If table merging is successful, `null` will be returned
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetError(const ErrorInfo& _error);
 
                     /**
                      * 判断参数 Error 是否已赋值
                      * @return Error 是否已赋值
+                     * 
                      */
                     bool ErrorHasBeenSet() const;
 
                     /**
                      * 获取Comparison results of tables
                      * @return Table Comparison results of tables
+                     * 
                      */
                     CompareTablesInfo GetTable() const;
 
                     /**
                      * 设置Comparison results of tables
-                     * @param Table Comparison results of tables
+                     * @param _table Comparison results of tables
+                     * 
                      */
                     void SetTable(const CompareTablesInfo& _table);
 
                     /**
                      * 判断参数 Table 是否已赋值
                      * @return Table 是否已赋值
+                     * 
                      */
                     bool TableHasBeenSet() const;
 
@@ -115,20 +124,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ApplicationId Application ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
+                     * 
                      */
                     std::string GetRuleMode() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
-                     * @param RuleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
+                     * @param _ruleMode Policy mode. `RULE_MODE_RELEASE`: Allow.
    `RULE_MODE_ALERT`: Alert.
    `RULE_MODE_HOLDUP`: Block.
+                     * 
                      */
                     void SetRuleMode(const std::string& _ruleMode);
 
                     /**
                      * 判断参数 RuleMode 是否已赋值
                      * @return RuleMode 是否已赋值
+                     * 
                      */
                     bool RuleModeHasBeenSet() const;
 
                     /**
                      * 获取Process path
                      * @return ProcessPath Process path
+                     * 
                      */
                     std::string GetProcessPath() const;
 
                     /**
                      * 设置Process path
-                     * @param ProcessPath Process path
+                     * @param _processPath Process path
+                     * 
                      */
                     void SetProcessPath(const std::string& _processPath);
 
                     /**
                      * 判断参数 ProcessPath 是否已赋值
                      * @return ProcessPath 是否已赋值
+                     * 
                      */
                     bool ProcessPathHasBeenSet() const;
 
@@ -95,20 +101,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId Sub-policy ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Sub-policy ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleId Sub-policy ID
+                     * @param _ruleId Sub-policy ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleLevel() const;
 
                     /**
                      * 设置Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
+                     * @param _ruleLevel Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleLevel(const std::string& _ruleLevel);
 
                     /**
                      * 判断参数 RuleLevel 是否已赋值
                      * @return RuleLevel 是否已赋值
+                     * 
                      */
                     bool RuleLevelHasBeenSet() const;
 

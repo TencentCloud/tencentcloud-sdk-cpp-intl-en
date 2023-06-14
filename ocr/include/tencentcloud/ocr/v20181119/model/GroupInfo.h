@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The elements in each line.
                      * @return Groups The elements in each line.
+                     * 
                      */
                     std::vector<LineInfo> GetGroups() const;
 
                     /**
                      * 设置The elements in each line.
-                     * @param Groups The elements in each line.
+                     * @param _groups The elements in each line.
+                     * 
                      */
                     void SetGroups(const std::vector<LineInfo>& _groups);
 
                     /**
                      * 判断参数 Groups 是否已赋值
                      * @return Groups 是否已赋值
+                     * 
                      */
                     bool GroupsHasBeenSet() const;
 

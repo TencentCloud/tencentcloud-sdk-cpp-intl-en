@@ -73,6 +73,7 @@ EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
 STATICS_POD: Static pod creation
 ABNORMAL_CREATE_POD: Abnormal pod creation
 USER_DEFINED: User defined
+                     * 
                      */
                     std::string GetScope() const;
 
@@ -90,7 +91,7 @@ EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
 STATICS_POD: Static pod creation
 ABNORMAL_CREATE_POD: Abnormal pod creation
 USER_DEFINED: User defined
-                     * @param Scope Range
+                     * @param _scope Range
 System event:
 ANONYMOUS_ACCESS: Anonymous access
 ABNORMAL_UA_REQ: Abnormal UA request
@@ -103,30 +104,35 @@ EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
 STATICS_POD: Static pod creation
 ABNORMAL_CREATE_POD: Abnormal pod creation
 USER_DEFINED: User defined
+                     * 
                      */
                     void SetScope(const std::string& _scope);
 
                     /**
                      * 判断参数 Scope 是否已赋值
                      * @return Scope 是否已赋值
+                     * 
                      */
                     bool ScopeHasBeenSet() const;
 
                     /**
                      * 获取Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
                      * @return Action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
-                     * @param Action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+                     * @param _action Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -135,20 +141,23 @@ USER_DEFINED: User defined
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return RiskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
                      * 设置Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param RiskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
+                     * @param _riskLevel Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
 
                     /**
                      * 判断参数 RiskLevel 是否已赋值
                      * @return RiskLevel 是否已赋值
+                     * 
                      */
                     bool RiskLevelHasBeenSet() const;
 
@@ -157,20 +166,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Status Switch status (true: On; false: Off): applicable to system rules.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Switch status (true: On; false: Off): applicable to system rules.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Status Switch status (true: On; false: Off): applicable to system rules.
+                     * @param _status Switch status (true: On; false: Off): applicable to system rules.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -179,20 +191,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return IsDelete Whether to delete: applicable to custom rule input parameters.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     bool GetIsDelete() const;
 
                     /**
                      * 设置Whether to delete: applicable to custom rule input parameters.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param IsDelete Whether to delete: applicable to custom rule input parameters.
+                     * @param _isDelete Whether to delete: applicable to custom rule input parameters.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetIsDelete(const bool& _isDelete);
 
                     /**
                      * 判断参数 IsDelete 是否已赋值
                      * @return IsDelete 是否已赋值
+                     * 
                      */
                     bool IsDeleteHasBeenSet() const;
 

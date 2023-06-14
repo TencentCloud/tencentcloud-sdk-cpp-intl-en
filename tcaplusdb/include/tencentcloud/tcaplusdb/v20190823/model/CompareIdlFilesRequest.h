@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where the table to be modified resides
                      * @return ClusterId ID of the cluster where the table to be modified resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where the table to be modified resides
-                     * @param ClusterId ID of the cluster where the table to be modified resides
+                     * @param _clusterId ID of the cluster where the table to be modified resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of tables to be modified
                      * @return SelectedTables List of tables to be modified
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置List of tables to be modified
-                     * @param SelectedTables List of tables to be modified
+                     * @param _selectedTables List of tables to be modified
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 
                     /**
                      * 获取Selected list of uploaded IDL files. Either this parameter or `NewIdlFiles` must be selected
                      * @return ExistingIdlFiles Selected list of uploaded IDL files. Either this parameter or `NewIdlFiles` must be selected
+                     * 
                      */
                     std::vector<IdlFileInfo> GetExistingIdlFiles() const;
 
                     /**
                      * 设置Selected list of uploaded IDL files. Either this parameter or `NewIdlFiles` must be selected
-                     * @param ExistingIdlFiles Selected list of uploaded IDL files. Either this parameter or `NewIdlFiles` must be selected
+                     * @param _existingIdlFiles Selected list of uploaded IDL files. Either this parameter or `NewIdlFiles` must be selected
+                     * 
                      */
                     void SetExistingIdlFiles(const std::vector<IdlFileInfo>& _existingIdlFiles);
 
                     /**
                      * 判断参数 ExistingIdlFiles 是否已赋值
                      * @return ExistingIdlFiles 是否已赋值
+                     * 
                      */
                     bool ExistingIdlFilesHasBeenSet() const;
 
                     /**
                      * 获取List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
                      * @return NewIdlFiles List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
+                     * 
                      */
                     std::vector<IdlFileInfo> GetNewIdlFiles() const;
 
                     /**
                      * 设置List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
-                     * @param NewIdlFiles List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
+                     * @param _newIdlFiles List of IDL files to be uploaded. Either this parameter or `ExistingIdlFiles` must be selected
+                     * 
                      */
                     void SetNewIdlFiles(const std::vector<IdlFileInfo>& _newIdlFiles);
 
                     /**
                      * 判断参数 NewIdlFiles 是否已赋值
                      * @return NewIdlFiles 是否已赋值
+                     * 
                      */
                     bool NewIdlFilesHasBeenSet() const;
 

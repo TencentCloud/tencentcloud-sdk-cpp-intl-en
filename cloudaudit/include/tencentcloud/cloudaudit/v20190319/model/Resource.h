@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Resource type
                      * @return ResourceType Resource type
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type
-                     * @param ResourceType Resource type
+                     * @param _resourceType Resource type
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ResourceName Resource name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceName() const;
 
                     /**
                      * 设置Resource name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param ResourceName Resource name
+                     * @param _resourceName Resource name
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceName(const std::string& _resourceName);
 
                     /**
                      * 判断参数 ResourceName 是否已赋值
                      * @return ResourceName 是否已赋值
+                     * 
                      */
                     bool ResourceNameHasBeenSet() const;
 

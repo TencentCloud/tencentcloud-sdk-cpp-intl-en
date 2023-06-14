@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The information of claim protocol types (CPT).
                      * @return CptDataList The information of claim protocol types (CPT).
+                     * 
                      */
                     std::vector<CptListData> GetCptDataList() const;
 
                     /**
                      * 判断参数 CptDataList 是否已赋值
                      * @return CptDataList 是否已赋值
+                     * 
                      */
                     bool CptDataListHasBeenSet() const;
 
                     /**
                      * 获取The total number of claim protocol types (CPT).
                      * @return AllCount The total number of claim protocol types (CPT).
+                     * 
                      */
                     uint64_t GetAllCount() const;
 
                     /**
                      * 判断参数 AllCount 是否已赋值
                      * @return AllCount 是否已赋值
+                     * 
                      */
                     bool AllCountHasBeenSet() const;
 

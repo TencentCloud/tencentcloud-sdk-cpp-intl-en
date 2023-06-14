@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Total quota
                      * @return Total Total quota
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 设置Total quota
-                     * @param Total Total quota
+                     * @param _total Total quota
+                     * 
                      */
                     void SetTotal(const int64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Used quota
                      * @return Used Used quota
+                     * 
                      */
                     int64_t GetUsed() const;
 
                     /**
                      * 设置Used quota
-                     * @param Used Used quota
+                     * @param _used Used quota
+                     * 
                      */
                     void SetUsed(const int64_t& _used);
 
                     /**
                      * 判断参数 Used 是否已赋值
                      * @return Used 是否已赋值
+                     * 
                      */
                     bool UsedHasBeenSet() const;
 
                     /**
                      * 获取Available quota
                      * @return Stock Available quota
+                     * 
                      */
                     int64_t GetStock() const;
 
                     /**
                      * 设置Available quota
-                     * @param Stock Available quota
+                     * @param _stock Available quota
+                     * 
                      */
                     void SetStock(const int64_t& _stock);
 
                     /**
                      * 判断参数 Stock 是否已赋值
                      * @return Stock 是否已赋值
+                     * 
                      */
                     bool StockHasBeenSet() const;
 
                     /**
                      * 获取User’s quota
                      * @return Quota User’s quota
+                     * 
                      */
                     int64_t GetQuota() const;
 
                     /**
                      * 设置User’s quota
-                     * @param Quota User’s quota
+                     * @param _quota User’s quota
+                     * 
                      */
                     void SetQuota(const int64_t& _quota);
 
                     /**
                      * 判断参数 Quota 是否已赋值
                      * @return Quota 是否已赋值
+                     * 
                      */
                     bool QuotaHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Whitelist rule
                      * @return Rules Whitelist rule
+                     * 
                      */
                     LoginWhiteListsRule GetRules() const;
 
                     /**
                      * 设置Whitelist rule
-                     * @param Rules Whitelist rule
+                     * @param _rules Whitelist rule
+                     * 
                      */
                     void SetRules(const LoginWhiteListsRule& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取VpcId: vpc-xadsafsdasd
                      * @return UniqVpcId VpcId: vpc-xadsafsdasd
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VpcId: vpc-xadsafsdasd
-                     * @param UniqVpcId VpcId: vpc-xadsafsdasd
+                     * @param _uniqVpcId VpcId: vpc-xadsafsdasd
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
                      * 获取VPC region: ap-guangzhou, ap-shanghai
                      * @return Region VPC region: ap-guangzhou, ap-shanghai
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置VPC region: ap-guangzhou, ap-shanghai
-                     * @param Region VPC region: ap-guangzhou, ap-shanghai
+                     * @param _region VPC region: ap-guangzhou, ap-shanghai
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

@@ -57,6 +57,7 @@ namespace TencentCloud
 <li>`200`: The task completed.</li>
 <li>`100`: The task is running.</li>
 <li>`503`: The task failed.</li>
+                     * 
                      */
                     int64_t GetStatusCode() const;
 
@@ -65,52 +66,60 @@ namespace TencentCloud
 <li>`200`: The task completed.</li>
 <li>`100`: The task is running.</li>
 <li>`503`: The task failed.</li>
-                     * @param StatusCode The task status. Values:
+                     * @param _statusCode The task status. Values:
 <li>`200`: The task completed.</li>
 <li>`100`: The task is running.</li>
 <li>`503`: The task failed.</li>
+                     * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取ID of the site test task.
                      * @return TestId ID of the site test task.
+                     * 
                      */
                     std::string GetTestId() const;
 
                     /**
                      * 设置ID of the site test task.
-                     * @param TestId ID of the site test task.
+                     * @param _testId ID of the site test task.
+                     * 
                      */
                     void SetTestId(const std::string& _testId);
 
                     /**
                      * 判断参数 TestId 是否已赋值
                      * @return TestId 是否已赋值
+                     * 
                      */
                     bool TestIdHasBeenSet() const;
 
                     /**
                      * 获取The settings of the site test task.
                      * @return SpeedTestingConfig The settings of the site test task.
+                     * 
                      */
                     SpeedTestingConfig GetSpeedTestingConfig() const;
 
                     /**
                      * 设置The settings of the site test task.
-                     * @param SpeedTestingConfig The settings of the site test task.
+                     * @param _speedTestingConfig The settings of the site test task.
+                     * 
                      */
                     void SetSpeedTestingConfig(const SpeedTestingConfig& _speedTestingConfig);
 
                     /**
                      * 判断参数 SpeedTestingConfig 是否已赋值
                      * @return SpeedTestingConfig 是否已赋值
+                     * 
                      */
                     bool SpeedTestingConfigHasBeenSet() const;
 
@@ -119,20 +128,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SpeedTestingStatistics The site test result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SpeedTestingStatistics GetSpeedTestingStatistics() const;
 
                     /**
                      * 设置The site test result.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SpeedTestingStatistics The site test result.
+                     * @param _speedTestingStatistics The site test result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpeedTestingStatistics(const SpeedTestingStatistics& _speedTestingStatistics);
 
                     /**
                      * 判断参数 SpeedTestingStatistics 是否已赋值
                      * @return SpeedTestingStatistics 是否已赋值
+                     * 
                      */
                     bool SpeedTestingStatisticsHasBeenSet() const;
 

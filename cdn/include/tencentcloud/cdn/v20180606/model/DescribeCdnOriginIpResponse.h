@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Intermediate node IP details
                      * @return Ips Intermediate node IP details
+                     * 
                      */
                     std::vector<OriginIp> GetIps() const;
 
                     /**
                      * 判断参数 Ips 是否已赋值
                      * @return Ips 是否已赋值
+                     * 
                      */
                     bool IpsHasBeenSet() const;
 
                     /**
                      * 获取Number of intermediate node IPs
                      * @return TotalCount Number of intermediate node IPs
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

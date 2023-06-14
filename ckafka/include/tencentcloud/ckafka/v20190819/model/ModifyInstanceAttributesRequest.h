@@ -48,162 +48,189 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
                      * @return MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+                     * 
                      */
                     int64_t GetMsgRetentionTime() const;
 
                     /**
                      * 设置Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
-                     * @param MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+                     * @param _msgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+                     * 
                      */
                     void SetMsgRetentionTime(const int64_t& _msgRetentionTime);
 
                     /**
                      * 判断参数 MsgRetentionTime 是否已赋值
                      * @return MsgRetentionTime 是否已赋值
+                     * 
                      */
                     bool MsgRetentionTimeHasBeenSet() const;
 
                     /**
                      * 获取Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
                      * @return InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-                     * @param InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * @param _instanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Instance configuration
                      * @return Config Instance configuration
+                     * 
                      */
                     ModifyInstanceAttributesConfig GetConfig() const;
 
                     /**
                      * 设置Instance configuration
-                     * @param Config Instance configuration
+                     * @param _config Instance configuration
+                     * 
                      */
                     void SetConfig(const ModifyInstanceAttributesConfig& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
                     /**
                      * 获取Dynamic message retention policy configuration
                      * @return DynamicRetentionConfig Dynamic message retention policy configuration
+                     * 
                      */
                     DynamicRetentionTime GetDynamicRetentionConfig() const;
 
                     /**
                      * 设置Dynamic message retention policy configuration
-                     * @param DynamicRetentionConfig Dynamic message retention policy configuration
+                     * @param _dynamicRetentionConfig Dynamic message retention policy configuration
+                     * 
                      */
                     void SetDynamicRetentionConfig(const DynamicRetentionTime& _dynamicRetentionConfig);
 
                     /**
                      * 判断参数 DynamicRetentionConfig 是否已赋值
                      * @return DynamicRetentionConfig 是否已赋值
+                     * 
                      */
                     bool DynamicRetentionConfigHasBeenSet() const;
 
                     /**
                      * 获取Modification of the rebalancing time after upgrade
                      * @return RebalanceTime Modification of the rebalancing time after upgrade
+                     * 
                      */
                     int64_t GetRebalanceTime() const;
 
                     /**
                      * 设置Modification of the rebalancing time after upgrade
-                     * @param RebalanceTime Modification of the rebalancing time after upgrade
+                     * @param _rebalanceTime Modification of the rebalancing time after upgrade
+                     * 
                      */
                     void SetRebalanceTime(const int64_t& _rebalanceTime);
 
                     /**
                      * 判断参数 RebalanceTime 是否已赋值
                      * @return RebalanceTime 是否已赋值
+                     * 
                      */
                     bool RebalanceTimeHasBeenSet() const;
 
                     /**
                      * 获取Public network bandwidth
                      * @return PublicNetwork Public network bandwidth
+                     * 
                      */
                     int64_t GetPublicNetwork() const;
 
                     /**
                      * 设置Public network bandwidth
-                     * @param PublicNetwork Public network bandwidth
+                     * @param _publicNetwork Public network bandwidth
+                     * 
                      */
                     void SetPublicNetwork(const int64_t& _publicNetwork);
 
                     /**
                      * 判断参数 PublicNetwork 是否已赋值
                      * @return PublicNetwork 是否已赋值
+                     * 
                      */
                     bool PublicNetworkHasBeenSet() const;
 
                     /**
                      * 获取Dynamic disk expansion policy configuration.
                      * @return DynamicDiskConfig Dynamic disk expansion policy configuration.
+                     * 
                      */
                     DynamicDiskConfig GetDynamicDiskConfig() const;
 
                     /**
                      * 设置Dynamic disk expansion policy configuration.
-                     * @param DynamicDiskConfig Dynamic disk expansion policy configuration.
+                     * @param _dynamicDiskConfig Dynamic disk expansion policy configuration.
+                     * 
                      */
                     void SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig);
 
                     /**
                      * 判断参数 DynamicDiskConfig 是否已赋值
                      * @return DynamicDiskConfig 是否已赋值
+                     * 
                      */
                     bool DynamicDiskConfigHasBeenSet() const;
 
                     /**
                      * 获取The size of a single message in bytes at the instance level.
                      * @return MaxMessageByte The size of a single message in bytes at the instance level.
+                     * 
                      */
                     uint64_t GetMaxMessageByte() const;
 
                     /**
                      * 设置The size of a single message in bytes at the instance level.
-                     * @param MaxMessageByte The size of a single message in bytes at the instance level.
+                     * @param _maxMessageByte The size of a single message in bytes at the instance level.
+                     * 
                      */
                     void SetMaxMessageByte(const uint64_t& _maxMessageByte);
 
                     /**
                      * 判断参数 MaxMessageByte 是否已赋值
                      * @return MaxMessageByte 是否已赋值
+                     * 
                      */
                     bool MaxMessageByteHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取CC alarm threshold
                      * @return CCAlarmThreshold CC alarm threshold
+                     * 
                      */
                     CCAlarmThreshold GetCCAlarmThreshold() const;
 
                     /**
                      * 判断参数 CCAlarmThreshold 是否已赋值
                      * @return CCAlarmThreshold 是否已赋值
+                     * 
                      */
                     bool CCAlarmThresholdHasBeenSet() const;
 

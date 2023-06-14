@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Task ID.
                      * @return TaskId Task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID.
-                     * @param TaskId Task ID.
+                     * @param _taskId Task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -73,6 +76,7 @@ FINISH: completed.
 WAITING: waiting;
 PROCESSING: processing;
 FINISH: completed.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -81,16 +85,18 @@ FINISH: completed.
 WAITING: waiting;
 PROCESSING: processing;
 FINISH: completed.
-                     * @param Status Task status. Valid values:
+                     * @param _status Task status. Valid values:
 WAITING: waiting;
 PROCESSING: processing;
 FINISH: completed.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -101,6 +107,7 @@ FINISH: completed.
                      * @return ErrCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
+                     * 
                      */
                     int64_t GetErrCode() const;
 
@@ -108,69 +115,80 @@ FINISH: completed.
                      * 设置Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
-                     * @param ErrCode Error code
+                     * @param _errCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return Message Error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
-                     * @param Message Error message.
+                     * @param _message Error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取ID of published video file.
                      * @return FileId ID of published video file.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置ID of published video file.
-                     * @param FileId ID of published video file.
+                     * @param _fileId ID of published video file.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the transcoding template corresponding to the published video. 0 represents the source video.
                      * @return SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+                     * 
                      */
                     uint64_t GetSourceDefinition() const;
 
                     /**
                      * 设置ID of the transcoding template corresponding to the published video. 0 represents the source video.
-                     * @param SourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+                     * @param _sourceDefinition ID of the transcoding template corresponding to the published video. 0 represents the source video.
+                     * 
                      */
                     void SetSourceDefinition(const uint64_t& _sourceDefinition);
 
                     /**
                      * 判断参数 SourceDefinition 是否已赋值
                      * @return SourceDefinition 是否已赋值
+                     * 
                      */
                     bool SourceDefinitionHasBeenSet() const;
 
@@ -183,6 +201,7 @@ FINISH: completed.
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
+                     * 
                      */
                     std::string GetPublishResult() const;
 
@@ -191,16 +210,18 @@ FINISH: completed.
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
-                     * @param PublishResult Status of video release on WeChat Mini Program. Valid values:
+                     * @param _publishResult Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
+                     * 
                      */
                     void SetPublishResult(const std::string& _publishResult);
 
                     /**
                      * 判断参数 PublishResult 是否已赋值
                      * @return PublishResult 是否已赋值
+                     * 
                      */
                     bool PublishResultHasBeenSet() const;
 

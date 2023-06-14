@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Launch configuration ID
                      * @return LaunchConfigurationId Launch configuration ID
+                     * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
                      * 设置Launch configuration ID
-                     * @param LaunchConfigurationId Launch configuration ID
+                     * @param _launchConfigurationId Launch configuration ID
+                     * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
 
                     /**
                      * 判断参数 LaunchConfigurationId 是否已赋值
                      * @return LaunchConfigurationId 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
                      * @return ClearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
+                     * 
                      */
                     bool GetClearDataDisks() const;
 
                     /**
                      * 设置Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
-                     * @param ClearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
+                     * @param _clearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
+                     * 
                      */
                     void SetClearDataDisks(const bool& _clearDataDisks);
 
                     /**
                      * 判断参数 ClearDataDisks 是否已赋值
                      * @return ClearDataDisks 是否已赋值
+                     * 
                      */
                     bool ClearDataDisksHasBeenSet() const;
 
@@ -87,20 +93,23 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
 Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
                      * @return ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+                     * 
                      */
                     bool GetClearHostNameSettings() const;
 
                     /**
                      * 设置Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
-                     * @param ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+                     * @param _clearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+                     * 
                      */
                     void SetClearHostNameSettings(const bool& _clearHostNameSettings);
 
                     /**
                      * 判断参数 ClearHostNameSettings 是否已赋值
                      * @return ClearHostNameSettings 是否已赋值
+                     * 
                      */
                     bool ClearHostNameSettingsHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Setting it to `true` will clear the hostname settings, which means that CVM newl
 Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
                      * @return ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+                     * 
                      */
                     bool GetClearInstanceNameSettings() const;
 
                     /**
                      * 设置Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
-                     * @param ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+                     * @param _clearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+                     * 
                      */
                     void SetClearInstanceNameSettings(const bool& _clearInstanceNameSettings);
 
                     /**
                      * 判断参数 ClearInstanceNameSettings 是否已赋值
                      * @return ClearInstanceNameSettings 是否已赋值
+                     * 
                      */
                     bool ClearInstanceNameSettingsHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Setting it to `true` will clear the instance name settings, which means that CVM
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
                      * @return ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+                     * 
                      */
                     bool GetClearDisasterRecoverGroupIds() const;
 
                     /**
                      * 设置Whether to clear placement group information. This parameter is optional. Default value: `false`.
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
-                     * @param ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
+                     * @param _clearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
 `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+                     * 
                      */
                     void SetClearDisasterRecoverGroupIds(const bool& _clearDisasterRecoverGroupIds);
 
                     /**
                      * 判断参数 ClearDisasterRecoverGroupIds 是否已赋值
                      * @return ClearDisasterRecoverGroupIds 是否已赋值
+                     * 
                      */
                     bool ClearDisasterRecoverGroupIdsHasBeenSet() const;
 

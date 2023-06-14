@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Scaling group ID
                      * @return AutoScalingGroupId Scaling group ID
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Scaling group ID
-                     * @param AutoScalingGroupId Scaling group ID
+                     * @param _autoScalingGroupId Scaling group ID
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Whether it is enabled
                      * @return AutoScalingGroupEnabled Whether it is enabled
+                     * 
                      */
                     bool GetAutoScalingGroupEnabled() const;
 
                     /**
                      * 设置Whether it is enabled
-                     * @param AutoScalingGroupEnabled Whether it is enabled
+                     * @param _autoScalingGroupEnabled Whether it is enabled
+                     * 
                      */
                     void SetAutoScalingGroupEnabled(const bool& _autoScalingGroupEnabled);
 
                     /**
                      * 判断参数 AutoScalingGroupEnabled 是否已赋值
                      * @return AutoScalingGroupEnabled 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupEnabledHasBeenSet() const;
 
                     /**
                      * 获取Maximum and minimum number of pods in a scaling group
                      * @return AutoScalingGroupRange Maximum and minimum number of pods in a scaling group
+                     * 
                      */
                     AutoScalingGroupRange GetAutoScalingGroupRange() const;
 
                     /**
                      * 设置Maximum and minimum number of pods in a scaling group
-                     * @param AutoScalingGroupRange Maximum and minimum number of pods in a scaling group
+                     * @param _autoScalingGroupRange Maximum and minimum number of pods in a scaling group
+                     * 
                      */
                     void SetAutoScalingGroupRange(const AutoScalingGroupRange& _autoScalingGroupRange);
 
                     /**
                      * 判断参数 AutoScalingGroupRange 是否已赋值
                      * @return AutoScalingGroupRange 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupRangeHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Split zone group ID
                      * @return LineId Split zone group ID
+                     * 
                      */
                     std::string GetLineId() const;
 
                     /**
                      * 设置Split zone group ID
-                     * @param LineId Split zone group ID
+                     * @param _lineId Split zone group ID
+                     * 
                      */
                     void SetLineId(const std::string& _lineId);
 
                     /**
                      * 判断参数 LineId 是否已赋值
                      * @return LineId 是否已赋值
+                     * 
                      */
                     bool LineIdHasBeenSet() const;
 
                     /**
                      * 获取Split zone group name
                      * @return Name Split zone group name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Split zone group name
-                     * @param Name Split zone group name
+                     * @param _name Split zone group name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Group type
                      * @return Type Group type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Group type
-                     * @param Type Group type
+                     * @param _type Group type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取List of split zones in the split zone group
                      * @return LineList List of split zones in the split zone group
+                     * 
                      */
                     std::vector<std::string> GetLineList() const;
 
                     /**
                      * 设置List of split zones in the split zone group
-                     * @param LineList List of split zones in the split zone group
+                     * @param _lineList List of split zones in the split zone group
+                     * 
                      */
                     void SetLineList(const std::vector<std::string>& _lineList);
 
                     /**
                      * 判断参数 LineList 是否已赋值
                      * @return LineList 是否已赋值
+                     * 
                      */
                     bool LineListHasBeenSet() const;
 

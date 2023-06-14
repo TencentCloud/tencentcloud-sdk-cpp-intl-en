@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique application ID.
                      * @return ApiAppId Unique application ID.
+                     * 
                      */
                     std::string GetApiAppId() const;
 
                     /**
                      * 设置Unique application ID.
-                     * @param ApiAppId Unique application ID.
+                     * @param _apiAppId Unique application ID.
+                     * 
                      */
                     void SetApiAppId(const std::string& _apiAppId);
 
                     /**
                      * 判断参数 ApiAppId 是否已赋值
                      * @return ApiAppId 是否已赋值
+                     * 
                      */
                     bool ApiAppIdHasBeenSet() const;
 

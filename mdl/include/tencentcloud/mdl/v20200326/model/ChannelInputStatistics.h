@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Input ID.
                      * @return InputId Input ID.
+                     * 
                      */
                     std::string GetInputId() const;
 
                     /**
                      * 设置Input ID.
-                     * @param InputId Input ID.
+                     * @param _inputId Input ID.
+                     * 
                      */
                     void SetInputId(const std::string& _inputId);
 
                     /**
                      * 判断参数 InputId 是否已赋值
                      * @return InputId 是否已赋值
+                     * 
                      */
                     bool InputIdHasBeenSet() const;
 
                     /**
                      * 获取Input statistics.
                      * @return Statistics Input statistics.
+                     * 
                      */
                     InputStatistics GetStatistics() const;
 
                     /**
                      * 设置Input statistics.
-                     * @param Statistics Input statistics.
+                     * @param _statistics Input statistics.
+                     * 
                      */
                     void SetStatistics(const InputStatistics& _statistics);
 
                     /**
                      * 判断参数 Statistics 是否已赋值
                      * @return Statistics 是否已赋值
+                     * 
                      */
                     bool StatisticsHasBeenSet() const;
 

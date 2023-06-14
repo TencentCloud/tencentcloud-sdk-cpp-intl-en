@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The timestamp.
                      * @return Timestamp The timestamp.
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 设置The timestamp.
-                     * @param Timestamp The timestamp.
+                     * @param _timestamp The timestamp.
+                     * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
                     /**
                      * 获取The statistics of all the sessions.
                      * @return FlowStatistics The statistics of all the sessions.
+                     * 
                      */
                     std::vector<FlowStatistics> GetFlowStatistics() const;
 
                     /**
                      * 设置The statistics of all the sessions.
-                     * @param FlowStatistics The statistics of all the sessions.
+                     * @param _flowStatistics The statistics of all the sessions.
+                     * 
                      */
                     void SetFlowStatistics(const std::vector<FlowStatistics>& _flowStatistics);
 
                     /**
                      * 判断参数 FlowStatistics 是否已赋值
                      * @return FlowStatistics 是否已赋值
+                     * 
                      */
                     bool FlowStatisticsHasBeenSet() const;
 

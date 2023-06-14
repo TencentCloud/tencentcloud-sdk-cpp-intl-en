@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Name Name of the private origin authentication parameter.
 `AccessKeyId`: Access key ID
 `SecretAccessKey`: Secret access key
+                     * 
                      */
                     std::string GetName() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Name of the private origin authentication parameter.
 `AccessKeyId`: Access key ID
 `SecretAccessKey`: Secret access key
-                     * @param Name Name of the private origin authentication parameter.
+                     * @param _name Name of the private origin authentication parameter.
 `AccessKeyId`: Access key ID
 `SecretAccessKey`: Secret access key
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Value of the private origin authentication parameter
                      * @return Value Value of the private origin authentication parameter
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value of the private origin authentication parameter
-                     * @param Value Value of the private origin authentication parameter
+                     * @param _value Value of the private origin authentication parameter
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

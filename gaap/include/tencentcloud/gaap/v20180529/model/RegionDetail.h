@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     std::string GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const std::string& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region name in Chinese or English
                      * @return RegionName Region name in Chinese or English
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name in Chinese or English
-                     * @param RegionName Region name in Chinese or English
+                     * @param _regionName Region name in Chinese or English
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Region where the data center locates
                      * @return RegionArea Region where the data center locates
+                     * 
                      */
                     std::string GetRegionArea() const;
 
                     /**
                      * 设置Region where the data center locates
-                     * @param RegionArea Region where the data center locates
+                     * @param _regionArea Region where the data center locates
+                     * 
                      */
                     void SetRegionArea(const std::string& _regionArea);
 
                     /**
                      * 判断参数 RegionArea 是否已赋值
                      * @return RegionArea 是否已赋值
+                     * 
                      */
                     bool RegionAreaHasBeenSet() const;
 
                     /**
                      * 获取Name of the region where the data center locates
                      * @return RegionAreaName Name of the region where the data center locates
+                     * 
                      */
                     std::string GetRegionAreaName() const;
 
                     /**
                      * 设置Name of the region where the data center locates
-                     * @param RegionAreaName Name of the region where the data center locates
+                     * @param _regionAreaName Name of the region where the data center locates
+                     * 
                      */
                     void SetRegionAreaName(const std::string& _regionAreaName);
 
                     /**
                      * 判断参数 RegionAreaName 是否已赋值
                      * @return RegionAreaName 是否已赋值
+                     * 
                      */
                     bool RegionAreaNameHasBeenSet() const;
 
                     /**
                      * 获取Data center type. `dc`: data center; `ec`: edge server.
                      * @return IDCType Data center type. `dc`: data center; `ec`: edge server.
+                     * 
                      */
                     std::string GetIDCType() const;
 
                     /**
                      * 设置Data center type. `dc`: data center; `ec`: edge server.
-                     * @param IDCType Data center type. `dc`: data center; `ec`: edge server.
+                     * @param _iDCType Data center type. `dc`: data center; `ec`: edge server.
+                     * 
                      */
                     void SetIDCType(const std::string& _iDCType);
 
                     /**
                      * 判断参数 IDCType 是否已赋值
                      * @return IDCType 是否已赋值
+                     * 
                      */
                     bool IDCTypeHasBeenSet() const;
 
@@ -161,6 +176,7 @@ Each bit in the bitmap represents a feature:
 6th bit: non-BGP access;
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFeatureBitmap() const;
 
@@ -177,7 +193,7 @@ Each bit in the bitmap represents a feature:
 6th bit: non-BGP access;
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param FeatureBitmap Feature bitmap. Valid values:
+                     * @param _featureBitmap Feature bitmap. Valid values:
 `0`: the feature is not supported;
 `1`: the feature is supported.
 Each bit in the bitmap represents a feature:
@@ -189,12 +205,14 @@ Each bit in the bitmap represents a feature:
 6th bit: non-BGP access;
 7th bit: QoS acceleration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFeatureBitmap(const uint64_t& _featureBitmap);
 
                     /**
                      * 判断参数 FeatureBitmap 是否已赋值
                      * @return FeatureBitmap 是否已赋值
+                     * 
                      */
                     bool FeatureBitmapHasBeenSet() const;
 

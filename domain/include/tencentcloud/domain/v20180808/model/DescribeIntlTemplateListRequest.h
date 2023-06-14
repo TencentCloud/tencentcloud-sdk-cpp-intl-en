@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The offset.
                      * @return Offset The offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The offset.
-                     * @param Offset The offset.
+                     * @param _offset The offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of entries.
                      * @return Limit The maximum number of entries.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of entries.
-                     * @param Limit The maximum number of entries.
+                     * @param _limit The maximum number of entries.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The domain registrant keyword for exact match.
                      * @return Keyword The domain registrant keyword for exact match.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置The domain registrant keyword for exact match.
-                     * @param Keyword The domain registrant keyword for exact match.
+                     * @param _keyword The domain registrant keyword for exact match.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取The type. Valid values: `all` (all types), `I` (individual), `E` (organization).
                      * @return Type The type. Valid values: `all` (all types), `I` (individual), `E` (organization).
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The type. Valid values: `all` (all types), `I` (individual), `E` (organization).
-                     * @param Type The type. Valid values: `all` (all types), `I` (individual), `E` (organization).
+                     * @param _type The type. Valid values: `all` (all types), `I` (individual), `E` (organization).
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

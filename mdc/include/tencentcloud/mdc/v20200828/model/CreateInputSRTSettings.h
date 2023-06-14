@@ -50,162 +50,189 @@ namespace TencentCloud
                     /**
                      * 获取The SRT mode. Valid values: LISTENER (default), CALLER.
                      * @return Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置The SRT mode. Valid values: LISTENER (default), CALLER.
-                     * @param Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * @param _mode The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
                      * @return StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+                     * 
                      */
                     std::string GetStreamId() const;
 
                     /**
                      * 设置Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-                     * @param StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+                     * @param _streamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+                     * 
                      */
                     void SetStreamId(const std::string& _streamId);
 
                     /**
                      * 判断参数 StreamId 是否已赋值
                      * @return StreamId 是否已赋值
+                     * 
                      */
                     bool StreamIdHasBeenSet() const;
 
                     /**
                      * 获取Latency in ms. Default value: 0. Value range: [0, 3000].
                      * @return Latency Latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 
                      */
                     int64_t GetLatency() const;
 
                     /**
                      * 设置Latency in ms. Default value: 0. Value range: [0, 3000].
-                     * @param Latency Latency in ms. Default value: 0. Value range: [0, 3000].
+                     * @param _latency Latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 
                      */
                     void SetLatency(const int64_t& _latency);
 
                     /**
                      * 判断参数 Latency 是否已赋值
                      * @return Latency 是否已赋值
+                     * 
                      */
                     bool LatencyHasBeenSet() const;
 
                     /**
                      * 获取Receive latency in ms. Default value: 120. Value range: [0, 3000].
                      * @return RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
+                     * 
                      */
                     int64_t GetRecvLatency() const;
 
                     /**
                      * 设置Receive latency in ms. Default value: 120. Value range: [0, 3000].
-                     * @param RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
+                     * @param _recvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
+                     * 
                      */
                     void SetRecvLatency(const int64_t& _recvLatency);
 
                     /**
                      * 判断参数 RecvLatency 是否已赋值
                      * @return RecvLatency 是否已赋值
+                     * 
                      */
                     bool RecvLatencyHasBeenSet() const;
 
                     /**
                      * 获取Peer latency in ms. Default value: 0. Value range: [0, 3000].
                      * @return PeerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 
                      */
                     int64_t GetPeerLatency() const;
 
                     /**
                      * 设置Peer latency in ms. Default value: 0. Value range: [0, 3000].
-                     * @param PeerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
+                     * @param _peerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
+                     * 
                      */
                     void SetPeerLatency(const int64_t& _peerLatency);
 
                     /**
                      * 判断参数 PeerLatency 是否已赋值
                      * @return PeerLatency 是否已赋值
+                     * 
                      */
                     bool PeerLatencyHasBeenSet() const;
 
                     /**
                      * 获取Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
                      * @return PeerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * 
                      */
                     int64_t GetPeerIdleTimeout() const;
 
                     /**
                      * 设置Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
-                     * @param PeerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * @param _peerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+                     * 
                      */
                     void SetPeerIdleTimeout(const int64_t& _peerIdleTimeout);
 
                     /**
                      * 判断参数 PeerIdleTimeout 是否已赋值
                      * @return PeerIdleTimeout 是否已赋值
+                     * 
                      */
                     bool PeerIdleTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
                      * @return Passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+                     * 
                      */
                     std::string GetPassphrase() const;
 
                     /**
                      * 设置Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
-                     * @param Passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+                     * @param _passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+                     * 
                      */
                     void SetPassphrase(const std::string& _passphrase);
 
                     /**
                      * 判断参数 Passphrase 是否已赋值
                      * @return Passphrase 是否已赋值
+                     * 
                      */
                     bool PassphraseHasBeenSet() const;
 
                     /**
                      * 获取Key length. Default value: 0. Valid values: 0, 16, 24, 32.
                      * @return PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+                     * 
                      */
                     int64_t GetPbKeyLen() const;
 
                     /**
                      * 设置Key length. Default value: 0. Valid values: 0, 16, 24, 32.
-                     * @param PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+                     * @param _pbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+                     * 
                      */
                     void SetPbKeyLen(const int64_t& _pbKeyLen);
 
                     /**
                      * 判断参数 PbKeyLen 是否已赋值
                      * @return PbKeyLen 是否已赋值
+                     * 
                      */
                     bool PbKeyLenHasBeenSet() const;
 
                     /**
                      * 获取The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
                      * @return SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * 
                      */
                     std::vector<SRTSourceAddressReq> GetSourceAddresses() const;
 
                     /**
                      * 设置The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
-                     * @param SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * @param _sourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * 
                      */
                     void SetSourceAddresses(const std::vector<SRTSourceAddressReq>& _sourceAddresses);
 
                     /**
                      * 判断参数 SourceAddresses 是否已赋值
                      * @return SourceAddresses 是否已赋值
+                     * 
                      */
                     bool SourceAddressesHasBeenSet() const;
 

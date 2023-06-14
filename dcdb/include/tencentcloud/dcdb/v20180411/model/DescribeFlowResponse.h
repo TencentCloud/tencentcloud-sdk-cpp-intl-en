@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Task status. Valid values: `0` (succeeded), `1` (failed), `2` (running)
                      * @return Status Task status. Valid values: `0` (succeeded), `1` (failed), `2` (running)
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

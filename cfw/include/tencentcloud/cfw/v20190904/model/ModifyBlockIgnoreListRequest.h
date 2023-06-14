@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
                      * @return RuleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
+                     * 
                      */
                     int64_t GetRuleType() const;
 
                     /**
                      * 设置Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
-                     * @param RuleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
+                     * @param _ruleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
+                     * 
                      */
                     void SetRuleType(const int64_t& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Either IP or Domain is required
                      * @return IOC Either IP or Domain is required
+                     * 
                      */
                     std::vector<IocListData> GetIOC() const;
 
                     /**
                      * 设置Either IP or Domain is required
-                     * @param IOC Either IP or Domain is required
+                     * @param _iOC Either IP or Domain is required
+                     * 
                      */
                     void SetIOC(const std::vector<IocListData>& _iOC);
 
                     /**
                      * 判断参数 IOC 是否已赋值
                      * @return IOC 是否已赋值
+                     * 
                      */
                     bool IOCHasBeenSet() const;
 
                     /**
                      * 获取Optional values: delete, edit, and add
                      * @return IocAction Optional values: delete, edit, and add
+                     * 
                      */
                     std::string GetIocAction() const;
 
                     /**
                      * 设置Optional values: delete, edit, and add
-                     * @param IocAction Optional values: delete, edit, and add
+                     * @param _iocAction Optional values: delete, edit, and add
+                     * 
                      */
                     void SetIocAction(const std::string& _iocAction);
 
                     /**
                      * 判断参数 IocAction 是否已赋值
                      * @return IocAction 是否已赋值
+                     * 
                      */
                     bool IocActionHasBeenSet() const;
 
                     /**
                      * 获取Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
                      * @return StartTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
-                     * @param StartTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+                     * @param _startTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
                      * @return EndTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
-                     * @param EndTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
+                     * @param _endTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

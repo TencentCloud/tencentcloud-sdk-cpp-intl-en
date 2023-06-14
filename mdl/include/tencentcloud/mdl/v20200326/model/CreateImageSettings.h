@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Image file format. Valid values: png, jpg.
                      * @return ImageType Image file format. Valid values: png, jpg.
+                     * 
                      */
                     std::string GetImageType() const;
 
                     /**
                      * 设置Image file format. Valid values: png, jpg.
-                     * @param ImageType Image file format. Valid values: png, jpg.
+                     * @param _imageType Image file format. Valid values: png, jpg.
+                     * 
                      */
                     void SetImageType(const std::string& _imageType);
 
                     /**
                      * 判断参数 ImageType 是否已赋值
                      * @return ImageType 是否已赋值
+                     * 
                      */
                     bool ImageTypeHasBeenSet() const;
 
                     /**
                      * 获取Base64 encoded image content
                      * @return ImageContent Base64 encoded image content
+                     * 
                      */
                     std::string GetImageContent() const;
 
                     /**
                      * 设置Base64 encoded image content
-                     * @param ImageContent Base64 encoded image content
+                     * @param _imageContent Base64 encoded image content
+                     * 
                      */
                     void SetImageContent(const std::string& _imageContent);
 
                     /**
                      * 判断参数 ImageContent 是否已赋值
                      * @return ImageContent 是否已赋值
+                     * 
                      */
                     bool ImageContentHasBeenSet() const;
 
                     /**
                      * 获取Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
                      * @return Location Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
+                     * 
                      */
                     std::string GetLocation() const;
 
                     /**
                      * 设置Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
-                     * @param Location Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
+                     * @param _location Origin. Valid values: TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT.
+                     * 
                      */
                     void SetLocation(const std::string& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 
                     /**
                      * 获取The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
                      * @return XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * 
                      */
                     int64_t GetXPos() const;
 
                     /**
                      * 设置The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
-                     * @param XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * @param _xPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * 
                      */
                     void SetXPos(const int64_t& _xPos);
 
                     /**
                      * 判断参数 XPos 是否已赋值
                      * @return XPos 是否已赋值
+                     * 
                      */
                     bool XPosHasBeenSet() const;
 
                     /**
                      * 获取The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
                      * @return YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * 
                      */
                     int64_t GetYPos() const;
 
                     /**
                      * 设置The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
-                     * @param YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * @param _yPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * 
                      */
                     void SetYPos(const int64_t& _yPos);
 
                     /**
                      * 判断参数 YPos 是否已赋值
                      * @return YPos 是否已赋值
+                     * 
                      */
                     bool YPosHasBeenSet() const;
 
@@ -143,6 +158,7 @@ You cannot set both `Width` and `Height` to `0`.
                      * @return Width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
+                     * 
                      */
                     int64_t GetWidth() const;
 
@@ -150,15 +166,17 @@ You cannot set both `Width` and `Height` to `0`.
                      * 设置The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
-                     * @param Width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+                     * @param _width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -169,6 +187,7 @@ You cannot set both `Width` and `Height` to `0`.
                      * @return Height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
+                     * 
                      */
                     int64_t GetHeight() const;
 
@@ -176,15 +195,17 @@ You cannot set both `Width` and `Height` to `0`.
                      * 设置The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
-                     * @param Height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+                     * @param _height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Table field name
                      * @return FieldName Table field name
+                     * 
                      */
                     std::string GetFieldName() const;
 
                     /**
                      * 设置Table field name
-                     * @param FieldName Table field name
+                     * @param _fieldName Table field name
+                     * 
                      */
                     void SetFieldName(const std::string& _fieldName);
 
                     /**
                      * 判断参数 FieldName 是否已赋值
                      * @return FieldName 是否已赋值
+                     * 
                      */
                     bool FieldNameHasBeenSet() const;
 
                     /**
                      * 获取Whether it is a primary key field
                      * @return IsPrimaryKey Whether it is a primary key field
+                     * 
                      */
                     std::string GetIsPrimaryKey() const;
 
                     /**
                      * 设置Whether it is a primary key field
-                     * @param IsPrimaryKey Whether it is a primary key field
+                     * @param _isPrimaryKey Whether it is a primary key field
+                     * 
                      */
                     void SetIsPrimaryKey(const std::string& _isPrimaryKey);
 
                     /**
                      * 判断参数 IsPrimaryKey 是否已赋值
                      * @return IsPrimaryKey 是否已赋值
+                     * 
                      */
                     bool IsPrimaryKeyHasBeenSet() const;
 
                     /**
                      * 获取Field type
                      * @return FieldType Field type
+                     * 
                      */
                     std::string GetFieldType() const;
 
                     /**
                      * 设置Field type
-                     * @param FieldType Field type
+                     * @param _fieldType Field type
+                     * 
                      */
                     void SetFieldType(const std::string& _fieldType);
 
                     /**
                      * 判断参数 FieldType 是否已赋值
                      * @return FieldType 是否已赋值
+                     * 
                      */
                     bool FieldTypeHasBeenSet() const;
 
                     /**
                      * 获取Field length
                      * @return FieldSize Field length
+                     * 
                      */
                     int64_t GetFieldSize() const;
 
                     /**
                      * 设置Field length
-                     * @param FieldSize Field length
+                     * @param _fieldSize Field length
+                     * 
                      */
                     void SetFieldSize(const int64_t& _fieldSize);
 
                     /**
                      * 判断参数 FieldSize 是否已赋值
                      * @return FieldSize 是否已赋值
+                     * 
                      */
                     bool FieldSizeHasBeenSet() const;
 

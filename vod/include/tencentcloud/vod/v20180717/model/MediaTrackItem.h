@@ -64,6 +64,7 @@ namespace TencentCloud
 <li>Sticker: sticker segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -74,18 +75,20 @@ namespace TencentCloud
 <li>Sticker: sticker segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
-                     * @param Type Segment type. Valid values:
+                     * @param _type Segment type. Valid values:
 <li>Video: video segment.</li>
 <li>Audio: audio segment.</li>
 <li>Sticker: sticker segment.</li>
 <li>Transition: transition.</li>
 <li>Empty: empty segment.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -94,20 +97,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VideoItem Video segment, which is valid if `Type` is `Video`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VideoTrackItem GetVideoItem() const;
 
                     /**
                      * 设置Video segment, which is valid if `Type` is `Video`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VideoItem Video segment, which is valid if `Type` is `Video`.
+                     * @param _videoItem Video segment, which is valid if `Type` is `Video`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVideoItem(const VideoTrackItem& _videoItem);
 
                     /**
                      * 判断参数 VideoItem 是否已赋值
                      * @return VideoItem 是否已赋值
+                     * 
                      */
                     bool VideoItemHasBeenSet() const;
 
@@ -116,20 +122,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AudioItem Audio segment, which is valid if `Type` is `Audio`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AudioTrackItem GetAudioItem() const;
 
                     /**
                      * 设置Audio segment, which is valid if `Type` is `Audio`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AudioItem Audio segment, which is valid if `Type` is `Audio`.
+                     * @param _audioItem Audio segment, which is valid if `Type` is `Audio`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAudioItem(const AudioTrackItem& _audioItem);
 
                     /**
                      * 判断参数 AudioItem 是否已赋值
                      * @return AudioItem 是否已赋值
+                     * 
                      */
                     bool AudioItemHasBeenSet() const;
 
@@ -138,20 +147,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StickerItem Sticker segment, which is valid if `Type` is `Sticker`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     StickerTrackItem GetStickerItem() const;
 
                     /**
                      * 设置Sticker segment, which is valid if `Type` is `Sticker`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StickerItem Sticker segment, which is valid if `Type` is `Sticker`.
+                     * @param _stickerItem Sticker segment, which is valid if `Type` is `Sticker`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStickerItem(const StickerTrackItem& _stickerItem);
 
                     /**
                      * 判断参数 StickerItem 是否已赋值
                      * @return StickerItem 是否已赋值
+                     * 
                      */
                     bool StickerItemHasBeenSet() const;
 
@@ -160,20 +172,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TransitionItem Transition, which is valid if `Type` is `Transition`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaTransitionItem GetTransitionItem() const;
 
                     /**
                      * 设置Transition, which is valid if `Type` is `Transition`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TransitionItem Transition, which is valid if `Type` is `Transition`.
+                     * @param _transitionItem Transition, which is valid if `Type` is `Transition`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransitionItem(const MediaTransitionItem& _transitionItem);
 
                     /**
                      * 判断参数 TransitionItem 是否已赋值
                      * @return TransitionItem 是否已赋值
+                     * 
                      */
                     bool TransitionItemHasBeenSet() const;
 
@@ -184,6 +199,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return EmptyItem Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
 <li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EmptyTrackItem GetEmptyItem() const;
 
@@ -191,15 +207,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
 <li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EmptyItem Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
+                     * @param _emptyItem Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
 <li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEmptyItem(const EmptyTrackItem& _emptyItem);
 
                     /**
                      * 判断参数 EmptyItem 是否已赋值
                      * @return EmptyItem 是否已赋值
+                     * 
                      */
                     bool EmptyItemHasBeenSet() const;
 

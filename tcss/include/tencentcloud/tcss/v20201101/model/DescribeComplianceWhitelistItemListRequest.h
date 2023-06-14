@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Initial offset. Default value: `0`.
                      * @return Offset Initial offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Initial offset. Default value: `0`.
-                     * @param Offset Initial offset. Default value: `0`.
+                     * @param _offset Initial offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be obtained. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be obtained. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be obtained. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results to be obtained. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results to be obtained. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取List of asset types
                      * @return AssetTypeSet List of asset types
+                     * 
                      */
                     std::vector<std::string> GetAssetTypeSet() const;
 
                     /**
                      * 设置List of asset types
-                     * @param AssetTypeSet List of asset types
+                     * @param _assetTypeSet List of asset types
+                     * 
                      */
                     void SetAssetTypeSet(const std::vector<std::string>& _assetTypeSet);
 
                     /**
                      * 判断参数 AssetTypeSet 是否已赋值
                      * @return AssetTypeSet 是否已赋值
+                     * 
                      */
                     bool AssetTypeSetHasBeenSet() const;
 
                     /**
                      * 获取Query filter
                      * @return Filters Query filter
+                     * 
                      */
                     std::vector<ComplianceFilters> GetFilters() const;
 
                     /**
                      * 设置Query filter
-                     * @param Filters Query filter
+                     * @param _filters Query filter
+                     * 
                      */
                     void SetFilters(const std::vector<ComplianceFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return By Sorting field
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field
-                     * @param By Sorting field
+                     * @param _by Sorting field
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `desc`, `asc`.
                      * @return Order Sorting order. Valid values: `desc`, `asc`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order. Valid values: `desc`, `asc`.
-                     * @param Order Sorting order. Valid values: `desc`, `asc`.
+                     * @param _order Sorting order. Valid values: `desc`, `asc`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 

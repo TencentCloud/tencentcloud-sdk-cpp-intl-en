@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return DBInstanceId Instance ID
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param DBInstanceId Instance ID
+                     * @param _dBInstanceId Instance ID
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of log backups of an instance
                      * @return LogBackupCount Number of log backups of an instance
+                     * 
                      */
                     uint64_t GetLogBackupCount() const;
 
                     /**
                      * 设置Number of log backups of an instance
-                     * @param LogBackupCount Number of log backups of an instance
+                     * @param _logBackupCount Number of log backups of an instance
+                     * 
                      */
                     void SetLogBackupCount(const uint64_t& _logBackupCount);
 
                     /**
                      * 判断参数 LogBackupCount 是否已赋值
                      * @return LogBackupCount 是否已赋值
+                     * 
                      */
                     bool LogBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Size of log backups of an instance
                      * @return LogBackupSize Size of log backups of an instance
+                     * 
                      */
                     uint64_t GetLogBackupSize() const;
 
                     /**
                      * 设置Size of log backups of an instance
-                     * @param LogBackupSize Size of log backups of an instance
+                     * @param _logBackupSize Size of log backups of an instance
+                     * 
                      */
                     void SetLogBackupSize(const uint64_t& _logBackupSize);
 
                     /**
                      * 判断参数 LogBackupSize 是否已赋值
                      * @return LogBackupSize 是否已赋值
+                     * 
                      */
                     bool LogBackupSizeHasBeenSet() const;
 
                     /**
                      * 获取Number of manually created full backups of an instance
                      * @return ManualBaseBackupCount Number of manually created full backups of an instance
+                     * 
                      */
                     uint64_t GetManualBaseBackupCount() const;
 
                     /**
                      * 设置Number of manually created full backups of an instance
-                     * @param ManualBaseBackupCount Number of manually created full backups of an instance
+                     * @param _manualBaseBackupCount Number of manually created full backups of an instance
+                     * 
                      */
                     void SetManualBaseBackupCount(const uint64_t& _manualBaseBackupCount);
 
                     /**
                      * 判断参数 ManualBaseBackupCount 是否已赋值
                      * @return ManualBaseBackupCount 是否已赋值
+                     * 
                      */
                     bool ManualBaseBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Size of manually created full backups of an instance
                      * @return ManualBaseBackupSize Size of manually created full backups of an instance
+                     * 
                      */
                     uint64_t GetManualBaseBackupSize() const;
 
                     /**
                      * 设置Size of manually created full backups of an instance
-                     * @param ManualBaseBackupSize Size of manually created full backups of an instance
+                     * @param _manualBaseBackupSize Size of manually created full backups of an instance
+                     * 
                      */
                     void SetManualBaseBackupSize(const uint64_t& _manualBaseBackupSize);
 
                     /**
                      * 判断参数 ManualBaseBackupSize 是否已赋值
                      * @return ManualBaseBackupSize 是否已赋值
+                     * 
                      */
                     bool ManualBaseBackupSizeHasBeenSet() const;
 
                     /**
                      * 获取Number of automatically created full backups of an instance
                      * @return AutoBaseBackupCount Number of automatically created full backups of an instance
+                     * 
                      */
                     uint64_t GetAutoBaseBackupCount() const;
 
                     /**
                      * 设置Number of automatically created full backups of an instance
-                     * @param AutoBaseBackupCount Number of automatically created full backups of an instance
+                     * @param _autoBaseBackupCount Number of automatically created full backups of an instance
+                     * 
                      */
                     void SetAutoBaseBackupCount(const uint64_t& _autoBaseBackupCount);
 
                     /**
                      * 判断参数 AutoBaseBackupCount 是否已赋值
                      * @return AutoBaseBackupCount 是否已赋值
+                     * 
                      */
                     bool AutoBaseBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Size of automatically created full backups of an instance
                      * @return AutoBaseBackupSize Size of automatically created full backups of an instance
+                     * 
                      */
                     uint64_t GetAutoBaseBackupSize() const;
 
                     /**
                      * 设置Size of automatically created full backups of an instance
-                     * @param AutoBaseBackupSize Size of automatically created full backups of an instance
+                     * @param _autoBaseBackupSize Size of automatically created full backups of an instance
+                     * 
                      */
                     void SetAutoBaseBackupSize(const uint64_t& _autoBaseBackupSize);
 
                     /**
                      * 判断参数 AutoBaseBackupSize 是否已赋值
                      * @return AutoBaseBackupSize 是否已赋值
+                     * 
                      */
                     bool AutoBaseBackupSizeHasBeenSet() const;
 
                     /**
                      * 获取Total number of backups
                      * @return TotalBackupCount Total number of backups
+                     * 
                      */
                     uint64_t GetTotalBackupCount() const;
 
                     /**
                      * 设置Total number of backups
-                     * @param TotalBackupCount Total number of backups
+                     * @param _totalBackupCount Total number of backups
+                     * 
                      */
                     void SetTotalBackupCount(const uint64_t& _totalBackupCount);
 
                     /**
                      * 判断参数 TotalBackupCount 是否已赋值
                      * @return TotalBackupCount 是否已赋值
+                     * 
                      */
                     bool TotalBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Total backup size
                      * @return TotalBackupSize Total backup size
+                     * 
                      */
                     uint64_t GetTotalBackupSize() const;
 
                     /**
                      * 设置Total backup size
-                     * @param TotalBackupSize Total backup size
+                     * @param _totalBackupSize Total backup size
+                     * 
                      */
                     void SetTotalBackupSize(const uint64_t& _totalBackupSize);
 
                     /**
                      * 判断参数 TotalBackupSize 是否已赋值
                      * @return TotalBackupSize 是否已赋值
+                     * 
                      */
                     bool TotalBackupSizeHasBeenSet() const;
 

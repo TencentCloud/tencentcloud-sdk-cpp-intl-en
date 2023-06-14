@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS access rate limit configuration
                      * @return SpeedLimitConfig Anti-DDoS access rate limit configuration
+                     * 
                      */
                     DDoSSpeedLimitConfig GetSpeedLimitConfig() const;
 
                     /**
                      * 设置Anti-DDoS access rate limit configuration
-                     * @param SpeedLimitConfig Anti-DDoS access rate limit configuration
+                     * @param _speedLimitConfig Anti-DDoS access rate limit configuration
+                     * 
                      */
                     void SetSpeedLimitConfig(const DDoSSpeedLimitConfig& _speedLimitConfig);
 
                     /**
                      * 判断参数 SpeedLimitConfig 是否已赋值
                      * @return SpeedLimitConfig 是否已赋值
+                     * 
                      */
                     bool SpeedLimitConfigHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance configured
                      * @return InstanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     std::vector<InstanceRelation> GetInstanceDetailList() const;
 
                     /**
                      * 设置Anti-DDoS instance configured
-                     * @param InstanceDetailList Anti-DDoS instance configured
+                     * @param _instanceDetailList Anti-DDoS instance configured
+                     * 
                      */
                     void SetInstanceDetailList(const std::vector<InstanceRelation>& _instanceDetailList);
 
                     /**
                      * 判断参数 InstanceDetailList 是否已赋值
                      * @return InstanceDetailList 是否已赋值
+                     * 
                      */
                     bool InstanceDetailListHasBeenSet() const;
 

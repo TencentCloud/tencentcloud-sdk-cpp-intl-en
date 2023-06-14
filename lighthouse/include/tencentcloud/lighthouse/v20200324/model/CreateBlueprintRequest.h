@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Image name, which can contain up to 60 characters.
                      * @return BlueprintName Image name, which can contain up to 60 characters.
+                     * 
                      */
                     std::string GetBlueprintName() const;
 
                     /**
                      * 设置Image name, which can contain up to 60 characters.
-                     * @param BlueprintName Image name, which can contain up to 60 characters.
+                     * @param _blueprintName Image name, which can contain up to 60 characters.
+                     * 
                      */
                     void SetBlueprintName(const std::string& _blueprintName);
 
                     /**
                      * 判断参数 BlueprintName 是否已赋值
                      * @return BlueprintName 是否已赋值
+                     * 
                      */
                     bool BlueprintNameHasBeenSet() const;
 
                     /**
                      * 获取Image description, which can contain up to 60 characters.
                      * @return Description Image description, which can contain up to 60 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Image description, which can contain up to 60 characters.
-                     * @param Description Image description, which can contain up to 60 characters.
+                     * @param _description Image description, which can contain up to 60 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance for which to make an image.
                      * @return InstanceId ID of the instance for which to make an image.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance for which to make an image.
-                     * @param InstanceId ID of the instance for which to make an image.
+                     * @param _instanceId ID of the instance for which to make an image.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -109,6 +118,7 @@ Valid values:
 `False`: Create the image when the instance is running 
 Default: `True` 
 Note that if you create an image when the instance is running, there might be data loss.
+                     * 
                      */
                     bool GetForcePowerOff() const;
 
@@ -119,18 +129,20 @@ Valid values:
 `False`: Create the image when the instance is running 
 Default: `True` 
 Note that if you create an image when the instance is running, there might be data loss.
-                     * @param ForcePowerOff Whether to forcibly shut down the instance before creating the image 
+                     * @param _forcePowerOff Whether to forcibly shut down the instance before creating the image 
 Valid values: 
 `True`: Shut down and instance first 
 `False`: Create the image when the instance is running 
 Default: `True` 
 Note that if you create an image when the instance is running, there might be data loss.
+                     * 
                      */
                     void SetForcePowerOff(const bool& _forcePowerOff);
 
                     /**
                      * 判断参数 ForcePowerOff 是否已赋值
                      * @return ForcePowerOff 是否已赋值
+                     * 
                      */
                     bool ForcePowerOffHasBeenSet() const;
 

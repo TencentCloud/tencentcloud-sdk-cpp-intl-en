@@ -54,6 +54,7 @@ For live files, it indicates a timestamp (e.g., 1594650717).
                      * @return OffsetTime Capture time.
 For VOD files, it indicates the video offset time given in seconds (e.g., 0, 5, 10).
 For live files, it indicates a timestamp (e.g., 1594650717).
+                     * 
                      */
                     std::string GetOffsetTime() const;
 
@@ -61,33 +62,38 @@ For live files, it indicates a timestamp (e.g., 1594650717).
                      * 设置Capture time.
 For VOD files, it indicates the video offset time given in seconds (e.g., 0, 5, 10).
 For live files, it indicates a timestamp (e.g., 1594650717).
-                     * @param OffsetTime Capture time.
+                     * @param _offsetTime Capture time.
 For VOD files, it indicates the video offset time given in seconds (e.g., 0, 5, 10).
 For live files, it indicates a timestamp (e.g., 1594650717).
+                     * 
                      */
                     void SetOffsetTime(const std::string& _offsetTime);
 
                     /**
                      * 判断参数 OffsetTime 是否已赋值
                      * @return OffsetTime 是否已赋值
+                     * 
                      */
                     bool OffsetTimeHasBeenSet() const;
 
                     /**
                      * 获取Image capture result
                      * @return Result Image capture result
+                     * 
                      */
                     ImageResult GetResult() const;
 
                     /**
                      * 设置Image capture result
-                     * @param Result Image capture result
+                     * @param _result Image capture result
+                     * 
                      */
                     void SetResult(const ImageResult& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Details list
                      * @return DetailSet Details list
+                     * 
                      */
                     std::vector<BillDetail> GetDetailSet() const;
 
                     /**
                      * 判断参数 DetailSet 是否已赋值
                      * @return DetailSet 是否已赋值
+                     * 
                      */
                     bool DetailSetHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Total Total number of records
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

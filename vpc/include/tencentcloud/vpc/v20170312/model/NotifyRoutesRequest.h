@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the route table
                      * @return RouteTableId The unique ID of the route table
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置The unique ID of the route table
-                     * @param RouteTableId The unique ID of the route table
+                     * @param _routeTableId The unique ID of the route table
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the route
                      * @return RouteItemIds The unique ID of the route
+                     * 
                      */
                     std::vector<std::string> GetRouteItemIds() const;
 
                     /**
                      * 设置The unique ID of the route
-                     * @param RouteItemIds The unique ID of the route
+                     * @param _routeItemIds The unique ID of the route
+                     * 
                      */
                     void SetRouteItemIds(const std::vector<std::string>& _routeItemIds);
 
                     /**
                      * 判断参数 RouteItemIds 是否已赋值
                      * @return RouteItemIds 是否已赋值
+                     * 
                      */
                     bool RouteItemIdsHasBeenSet() const;
 

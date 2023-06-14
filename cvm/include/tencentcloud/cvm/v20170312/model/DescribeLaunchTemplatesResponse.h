@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TotalCount Number of eligible instance templates.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LaunchTemplateSet List of instance details
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LaunchTemplateInfo> GetLaunchTemplateSet() const;
 
                     /**
                      * 判断参数 LaunchTemplateSet 是否已赋值
                      * @return LaunchTemplateSet 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateSetHasBeenSet() const;
 

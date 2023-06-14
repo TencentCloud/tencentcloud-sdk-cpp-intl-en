@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded plaintext of the randomly generated number. You need to Base64-decode it to get the plaintext.
                      * @return Plaintext Base64-encoded plaintext of the randomly generated number. You need to Base64-decode it to get the plaintext.
+                     * 
                      */
                     std::string GetPlaintext() const;
 
                     /**
                      * 判断参数 Plaintext 是否已赋值
                      * @return Plaintext 是否已赋值
+                     * 
                      */
                     bool PlaintextHasBeenSet() const;
 

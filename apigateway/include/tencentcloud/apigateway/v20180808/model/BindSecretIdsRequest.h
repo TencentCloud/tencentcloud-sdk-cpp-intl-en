@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the usage plan to be bound.
                      * @return UsagePlanId Unique ID of the usage plan to be bound.
+                     * 
                      */
                     std::string GetUsagePlanId() const;
 
                     /**
                      * 设置Unique ID of the usage plan to be bound.
-                     * @param UsagePlanId Unique ID of the usage plan to be bound.
+                     * @param _usagePlanId Unique ID of the usage plan to be bound.
+                     * 
                      */
                     void SetUsagePlanId(const std::string& _usagePlanId);
 
                     /**
                      * 判断参数 UsagePlanId 是否已赋值
                      * @return UsagePlanId 是否已赋值
+                     * 
                      */
                     bool UsagePlanIdHasBeenSet() const;
 
                     /**
                      * 获取Array of IDs of the keys to be bound.
                      * @return AccessKeyIds Array of IDs of the keys to be bound.
+                     * 
                      */
                     std::vector<std::string> GetAccessKeyIds() const;
 
                     /**
                      * 设置Array of IDs of the keys to be bound.
-                     * @param AccessKeyIds Array of IDs of the keys to be bound.
+                     * @param _accessKeyIds Array of IDs of the keys to be bound.
+                     * 
                      */
                     void SetAccessKeyIds(const std::vector<std::string>& _accessKeyIds);
 
                     /**
                      * 判断参数 AccessKeyIds 是否已赋值
                      * @return AccessKeyIds 是否已赋值
+                     * 
                      */
                     bool AccessKeyIdsHasBeenSet() const;
 

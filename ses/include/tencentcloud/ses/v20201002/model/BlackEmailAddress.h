@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Time when the email address is blocklisted.
                      * @return BounceTime Time when the email address is blocklisted.
+                     * 
                      */
                     std::string GetBounceTime() const;
 
                     /**
                      * 设置Time when the email address is blocklisted.
-                     * @param BounceTime Time when the email address is blocklisted.
+                     * @param _bounceTime Time when the email address is blocklisted.
+                     * 
                      */
                     void SetBounceTime(const std::string& _bounceTime);
 
                     /**
                      * 判断参数 BounceTime 是否已赋值
                      * @return BounceTime 是否已赋值
+                     * 
                      */
                     bool BounceTimeHasBeenSet() const;
 
                     /**
                      * 获取Blocklisted email address.
                      * @return EmailAddress Blocklisted email address.
+                     * 
                      */
                     std::string GetEmailAddress() const;
 
                     /**
                      * 设置Blocklisted email address.
-                     * @param EmailAddress Blocklisted email address.
+                     * @param _emailAddress Blocklisted email address.
+                     * 
                      */
                     void SetEmailAddress(const std::string& _emailAddress);
 
                     /**
                      * 判断参数 EmailAddress 是否已赋值
                      * @return EmailAddress 是否已赋值
+                     * 
                      */
                     bool EmailAddressHasBeenSet() const;
 

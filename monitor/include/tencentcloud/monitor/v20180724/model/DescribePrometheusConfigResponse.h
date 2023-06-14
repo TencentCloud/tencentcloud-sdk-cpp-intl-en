@@ -47,60 +47,70 @@ namespace TencentCloud
                     /**
                      * 获取Global configuration
                      * @return Config Global configuration
+                     * 
                      */
                     std::string GetConfig() const;
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
                     /**
                      * 获取ServiceMonitor configuration
                      * @return ServiceMonitors ServiceMonitor configuration
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetServiceMonitors() const;
 
                     /**
                      * 判断参数 ServiceMonitors 是否已赋值
                      * @return ServiceMonitors 是否已赋值
+                     * 
                      */
                     bool ServiceMonitorsHasBeenSet() const;
 
                     /**
                      * 获取PodMonitor configuration
                      * @return PodMonitors PodMonitor configuration
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetPodMonitors() const;
 
                     /**
                      * 判断参数 PodMonitors 是否已赋值
                      * @return PodMonitors 是否已赋值
+                     * 
                      */
                     bool PodMonitorsHasBeenSet() const;
 
                     /**
                      * 获取Raw jobs
                      * @return RawJobs Raw jobs
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetRawJobs() const;
 
                     /**
                      * 判断参数 RawJobs 是否已赋值
                      * @return RawJobs 是否已赋值
+                     * 
                      */
                     bool RawJobsHasBeenSet() const;
 
                     /**
                      * 获取Probes
                      * @return Probes Probes
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetProbes() const;
 
                     /**
                      * 判断参数 Probes 是否已赋值
                      * @return Probes 是否已赋值
+                     * 
                      */
                     bool ProbesHasBeenSet() const;
 

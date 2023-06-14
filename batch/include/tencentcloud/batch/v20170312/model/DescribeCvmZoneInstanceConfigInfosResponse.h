@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of model configurations in the availability zone.
                      * @return InstanceTypeQuotaSet List of model configurations in the availability zone.
+                     * 
                      */
                     std::vector<InstanceTypeQuotaItem> GetInstanceTypeQuotaSet() const;
 
                     /**
                      * 判断参数 InstanceTypeQuotaSet 是否已赋值
                      * @return InstanceTypeQuotaSet 是否已赋值
+                     * 
                      */
                     bool InstanceTypeQuotaSetHasBeenSet() const;
 

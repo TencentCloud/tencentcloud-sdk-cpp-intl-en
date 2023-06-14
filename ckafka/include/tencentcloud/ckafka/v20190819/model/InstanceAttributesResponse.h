@@ -54,360 +54,420 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取VIP list information of access point
                      * @return VipList VIP list information of access point
+                     * 
                      */
                     std::vector<VipEntity> GetVipList() const;
 
                     /**
                      * 设置VIP list information of access point
-                     * @param VipList VIP list information of access point
+                     * @param _vipList VIP list information of access point
+                     * 
                      */
                     void SetVipList(const std::vector<VipEntity>& _vipList);
 
                     /**
                      * 判断参数 VipList 是否已赋值
                      * @return VipList 是否已赋值
+                     * 
                      */
                     bool VipListHasBeenSet() const;
 
                     /**
                      * 获取Virtual IP
                      * @return Vip Virtual IP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Virtual IP
-                     * @param Vip Virtual IP
+                     * @param _vip Virtual IP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Virtual port
                      * @return Vport Virtual port
+                     * 
                      */
                     std::string GetVport() const;
 
                     /**
                      * 设置Virtual port
-                     * @param Vport Virtual port
+                     * @param _vport Virtual port
+                     * 
                      */
                     void SetVport(const std::string& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
                     /**
                      * 获取Instance status. 0: creating, 1: running, 2: deleting
                      * @return Status Instance status. 0: creating, 1: running, 2: deleting
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Instance status. 0: creating, 1: running, 2: deleting
-                     * @param Status Instance status. 0: creating, 1: running, 2: deleting
+                     * @param _status Instance status. 0: creating, 1: running, 2: deleting
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Instance bandwidth in Mbps
                      * @return Bandwidth Instance bandwidth in Mbps
+                     * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
                      * 设置Instance bandwidth in Mbps
-                     * @param Bandwidth Instance bandwidth in Mbps
+                     * @param _bandwidth Instance bandwidth in Mbps
+                     * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取Instance storage capacity in GB
                      * @return DiskSize Instance storage capacity in GB
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Instance storage capacity in GB
-                     * @param DiskSize Instance storage capacity in GB
+                     * @param _diskSize Instance storage capacity in GB
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
                     /**
                      * 获取AZ
                      * @return ZoneId AZ
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置AZ
-                     * @param ZoneId AZ
+                     * @param _zoneId AZ
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取VPC ID. If this parameter is empty, it means the basic network
                      * @return VpcId VPC ID. If this parameter is empty, it means the basic network
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID. If this parameter is empty, it means the basic network
-                     * @param VpcId VPC ID. If this parameter is empty, it means the basic network
+                     * @param _vpcId VPC ID. If this parameter is empty, it means the basic network
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID. If this parameter is empty, it means the basic network
                      * @return SubnetId Subnet ID. If this parameter is empty, it means the basic network
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID. If this parameter is empty, it means the basic network
-                     * @param SubnetId Subnet ID. If this parameter is empty, it means the basic network
+                     * @param _subnetId Subnet ID. If this parameter is empty, it means the basic network
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Instance health status. 1: healthy, 2: alarmed, 3: exceptional
                      * @return Healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+                     * 
                      */
                     int64_t GetHealthy() const;
 
                     /**
                      * 设置Instance health status. 1: healthy, 2: alarmed, 3: exceptional
-                     * @param Healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+                     * @param _healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+                     * 
                      */
                     void SetHealthy(const int64_t& _healthy);
 
                     /**
                      * 判断参数 Healthy 是否已赋值
                      * @return Healthy 是否已赋值
+                     * 
                      */
                     bool HealthyHasBeenSet() const;
 
                     /**
                      * 获取Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
                      * @return HealthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+                     * 
                      */
                     std::string GetHealthyMessage() const;
 
                     /**
                      * 设置Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
-                     * @param HealthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+                     * @param _healthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+                     * 
                      */
                     void SetHealthyMessage(const std::string& _healthyMessage);
 
                     /**
                      * 判断参数 HealthyMessage 是否已赋值
                      * @return HealthyMessage 是否已赋值
+                     * 
                      */
                     bool HealthyMessageHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Message retention period in minutes
                      * @return MsgRetentionTime Message retention period in minutes
+                     * 
                      */
                     int64_t GetMsgRetentionTime() const;
 
                     /**
                      * 设置Message retention period in minutes
-                     * @param MsgRetentionTime Message retention period in minutes
+                     * @param _msgRetentionTime Message retention period in minutes
+                     * 
                      */
                     void SetMsgRetentionTime(const int64_t& _msgRetentionTime);
 
                     /**
                      * 判断参数 MsgRetentionTime 是否已赋值
                      * @return MsgRetentionTime 是否已赋值
+                     * 
                      */
                     bool MsgRetentionTimeHasBeenSet() const;
 
                     /**
                      * 获取Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
                      * @return Config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+                     * 
                      */
                     InstanceConfigDO GetConfig() const;
 
                     /**
                      * 设置Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
-                     * @param Config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+                     * @param _config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+                     * 
                      */
                     void SetConfig(const InstanceConfigDO& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
                     /**
                      * 获取Number of remaining creatable partitions
                      * @return RemainderPartitions Number of remaining creatable partitions
+                     * 
                      */
                     int64_t GetRemainderPartitions() const;
 
                     /**
                      * 设置Number of remaining creatable partitions
-                     * @param RemainderPartitions Number of remaining creatable partitions
+                     * @param _remainderPartitions Number of remaining creatable partitions
+                     * 
                      */
                     void SetRemainderPartitions(const int64_t& _remainderPartitions);
 
                     /**
                      * 判断参数 RemainderPartitions 是否已赋值
                      * @return RemainderPartitions 是否已赋值
+                     * 
                      */
                     bool RemainderPartitionsHasBeenSet() const;
 
                     /**
                      * 获取Number of remaining creatable topics
                      * @return RemainderTopics Number of remaining creatable topics
+                     * 
                      */
                     int64_t GetRemainderTopics() const;
 
                     /**
                      * 设置Number of remaining creatable topics
-                     * @param RemainderTopics Number of remaining creatable topics
+                     * @param _remainderTopics Number of remaining creatable topics
+                     * 
                      */
                     void SetRemainderTopics(const int64_t& _remainderTopics);
 
                     /**
                      * 判断参数 RemainderTopics 是否已赋值
                      * @return RemainderTopics 是否已赋值
+                     * 
                      */
                     bool RemainderTopicsHasBeenSet() const;
 
                     /**
                      * 获取Number of partitions already created
                      * @return CreatedPartitions Number of partitions already created
+                     * 
                      */
                     int64_t GetCreatedPartitions() const;
 
                     /**
                      * 设置Number of partitions already created
-                     * @param CreatedPartitions Number of partitions already created
+                     * @param _createdPartitions Number of partitions already created
+                     * 
                      */
                     void SetCreatedPartitions(const int64_t& _createdPartitions);
 
                     /**
                      * 判断参数 CreatedPartitions 是否已赋值
                      * @return CreatedPartitions 是否已赋值
+                     * 
                      */
                     bool CreatedPartitionsHasBeenSet() const;
 
                     /**
                      * 获取Number of topics already created
                      * @return CreatedTopics Number of topics already created
+                     * 
                      */
                     int64_t GetCreatedTopics() const;
 
                     /**
                      * 设置Number of topics already created
-                     * @param CreatedTopics Number of topics already created
+                     * @param _createdTopics Number of topics already created
+                     * 
                      */
                     void SetCreatedTopics(const int64_t& _createdTopics);
 
                     /**
                      * 判断参数 CreatedTopics 是否已赋值
                      * @return CreatedTopics 是否已赋值
+                     * 
                      */
                     bool CreatedTopicsHasBeenSet() const;
 
@@ -416,20 +476,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Tags Tag array
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag array
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Tags Tag array
+                     * @param _tags Tag array
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -438,20 +501,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
                      * 设置Expiration time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Expiration time
+                     * @param _expireTime Expiration time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -460,20 +526,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ZoneIds Cross-AZ
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
                      * 设置Cross-AZ
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneIds Cross-AZ
+                     * @param _zoneIds Cross-AZ
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
@@ -482,20 +551,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Version Kafka version information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Kafka version information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Version Kafka version information
+                     * @param _version Kafka version information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -504,20 +576,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxGroupNum Maximum number of groups
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxGroupNum() const;
 
                     /**
                      * 设置Maximum number of groups
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxGroupNum Maximum number of groups
+                     * @param _maxGroupNum Maximum number of groups
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxGroupNum(const int64_t& _maxGroupNum);
 
                     /**
                      * 判断参数 MaxGroupNum 是否已赋值
                      * @return MaxGroupNum 是否已赋值
+                     * 
                      */
                     bool MaxGroupNumHasBeenSet() const;
 
@@ -526,20 +601,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetCvm() const;
 
                     /**
                      * 设置Offering type. `0`: Standard Edition; `1`: Professional Edition
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
+                     * @param _cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetCvm(const int64_t& _cvm);
 
                     /**
                      * 判断参数 Cvm 是否已赋值
                      * @return Cvm 是否已赋值
+                     * 
                      */
                     bool CvmHasBeenSet() const;
 
@@ -548,20 +626,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return InstanceType Type.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Type.
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param InstanceType Type.
+                     * @param _instanceType Type.
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -570,20 +651,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFeatures() const;
 
                     /**
                      * 设置Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+                     * @param _features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFeatures(const std::vector<std::string>& _features);
 
                     /**
                      * 判断参数 Features 是否已赋值
                      * @return Features 是否已赋值
+                     * 
                      */
                     bool FeaturesHasBeenSet() const;
 
@@ -592,20 +676,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return RetentionTimeConfig Dynamic message retention policy
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     DynamicRetentionTime GetRetentionTimeConfig() const;
 
                     /**
                      * 设置Dynamic message retention policy
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param RetentionTimeConfig Dynamic message retention policy
+                     * @param _retentionTimeConfig Dynamic message retention policy
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRetentionTimeConfig(const DynamicRetentionTime& _retentionTimeConfig);
 
                     /**
                      * 判断参数 RetentionTimeConfig 是否已赋值
                      * @return RetentionTimeConfig 是否已赋值
+                     * 
                      */
                     bool RetentionTimeConfigHasBeenSet() const;
 
@@ -614,20 +701,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxConnection Maximum number of connections
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMaxConnection() const;
 
                     /**
                      * 设置Maximum number of connections
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxConnection Maximum number of connections
+                     * @param _maxConnection Maximum number of connections
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxConnection(const uint64_t& _maxConnection);
 
                     /**
                      * 判断参数 MaxConnection 是否已赋值
                      * @return MaxConnection 是否已赋值
+                     * 
                      */
                     bool MaxConnectionHasBeenSet() const;
 
@@ -636,20 +726,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PublicNetwork Public network bandwidth
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPublicNetwork() const;
 
                     /**
                      * 设置Public network bandwidth
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PublicNetwork Public network bandwidth
+                     * @param _publicNetwork Public network bandwidth
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicNetwork(const int64_t& _publicNetwork);
 
                     /**
                      * 判断参数 PublicNetwork 是否已赋值
                      * @return PublicNetwork 是否已赋值
+                     * 
                      */
                     bool PublicNetworkHasBeenSet() const;
 
@@ -658,20 +751,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeleteRouteTimestamp Time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeleteRouteTimestamp() const;
 
                     /**
                      * 设置Time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeleteRouteTimestamp Time
+                     * @param _deleteRouteTimestamp Time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeleteRouteTimestamp(const std::string& _deleteRouteTimestamp);
 
                     /**
                      * 判断参数 DeleteRouteTimestamp 是否已赋值
                      * @return DeleteRouteTimestamp 是否已赋值
+                     * 
                      */
                     bool DeleteRouteTimestampHasBeenSet() const;
 
@@ -680,20 +776,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RemainingPartitions Number of remaining creatable partitions
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRemainingPartitions() const;
 
                     /**
                      * 设置Number of remaining creatable partitions
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RemainingPartitions Number of remaining creatable partitions
+                     * @param _remainingPartitions Number of remaining creatable partitions
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemainingPartitions(const int64_t& _remainingPartitions);
 
                     /**
                      * 判断参数 RemainingPartitions 是否已赋值
                      * @return RemainingPartitions 是否已赋值
+                     * 
                      */
                     bool RemainingPartitionsHasBeenSet() const;
 
@@ -702,20 +801,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RemainingTopics Number of remaining creatable topics
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRemainingTopics() const;
 
                     /**
                      * 设置Number of remaining creatable topics
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RemainingTopics Number of remaining creatable topics
+                     * @param _remainingTopics Number of remaining creatable topics
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemainingTopics(const int64_t& _remainingTopics);
 
                     /**
                      * 判断参数 RemainingTopics 是否已赋值
                      * @return RemainingTopics 是否已赋值
+                     * 
                      */
                     bool RemainingTopicsHasBeenSet() const;
 
@@ -724,20 +826,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DynamicDiskConfig Dynamic disk expansion policy.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     DynamicDiskConfig GetDynamicDiskConfig() const;
 
                     /**
                      * 设置Dynamic disk expansion policy.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DynamicDiskConfig Dynamic disk expansion policy.
+                     * @param _dynamicDiskConfig Dynamic disk expansion policy.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDynamicDiskConfig(const DynamicDiskConfig& _dynamicDiskConfig);
 
                     /**
                      * 判断参数 DynamicDiskConfig 是否已赋值
                      * @return DynamicDiskConfig 是否已赋值
+                     * 
                      */
                     bool DynamicDiskConfigHasBeenSet() const;
 

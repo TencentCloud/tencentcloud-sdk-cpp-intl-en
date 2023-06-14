@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Room ID	
                      * @return RoomId Room ID	
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置Room ID	
-                     * @param RoomId Room ID	
+                     * @param _roomId Room ID	
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Document ID	
                      * @return DocumentId Document ID	
+                     * 
                      */
                     std::string GetDocumentId() const;
 
                     /**
                      * 设置Document ID	
-                     * @param DocumentId Document ID	
+                     * @param _documentId Document ID	
+                     * 
                      */
                     void SetDocumentId(const std::string& _documentId);
 
                     /**
                      * 判断参数 DocumentId 是否已赋值
                      * @return DocumentId 是否已赋值
+                     * 
                      */
                     bool DocumentIdHasBeenSet() const;
 

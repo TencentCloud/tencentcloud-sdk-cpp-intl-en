@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Lifecycle hook ID
                      * @return LifecycleHookId Lifecycle hook ID
+                     * 
                      */
                     std::string GetLifecycleHookId() const;
 
                     /**
                      * 设置Lifecycle hook ID
-                     * @param LifecycleHookId Lifecycle hook ID
+                     * @param _lifecycleHookId Lifecycle hook ID
+                     * 
                      */
                     void SetLifecycleHookId(const std::string& _lifecycleHookId);
 
                     /**
                      * 判断参数 LifecycleHookId 是否已赋值
                      * @return LifecycleHookId 是否已赋值
+                     * 
                      */
                     bool LifecycleHookIdHasBeenSet() const;
 
                     /**
                      * 获取Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
                      * @return LifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+                     * 
                      */
                     std::string GetLifecycleActionResult() const;
 
                     /**
                      * 设置Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
-                     * @param LifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+                     * @param _lifecycleActionResult Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+                     * 
                      */
                     void SetLifecycleActionResult(const std::string& _lifecycleActionResult);
 
                     /**
                      * 判断参数 LifecycleActionResult 是否已赋值
                      * @return LifecycleActionResult 是否已赋值
+                     * 
                      */
                     bool LifecycleActionResultHasBeenSet() const;
 
                     /**
                      * 获取Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
                      * @return InstanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
-                     * @param InstanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * @param _instanceId Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Either "InstanceId" or "LifecycleActionToken" must be specified
                      * @return LifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 
                      */
                     std::string GetLifecycleActionToken() const;
 
                     /**
                      * 设置Either "InstanceId" or "LifecycleActionToken" must be specified
-                     * @param LifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * @param _lifecycleActionToken Either "InstanceId" or "LifecycleActionToken" must be specified
+                     * 
                      */
                     void SetLifecycleActionToken(const std::string& _lifecycleActionToken);
 
                     /**
                      * 判断参数 LifecycleActionToken 是否已赋值
                      * @return LifecycleActionToken 是否已赋值
+                     * 
                      */
                     bool LifecycleActionTokenHasBeenSet() const;
 

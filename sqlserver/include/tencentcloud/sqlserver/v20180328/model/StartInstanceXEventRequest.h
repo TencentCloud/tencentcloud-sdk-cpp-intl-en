@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to start or stop an extended event
                      * @return EventConfig Whether to start or stop an extended event
+                     * 
                      */
                     std::vector<EventConfig> GetEventConfig() const;
 
                     /**
                      * 设置Whether to start or stop an extended event
-                     * @param EventConfig Whether to start or stop an extended event
+                     * @param _eventConfig Whether to start or stop an extended event
+                     * 
                      */
                     void SetEventConfig(const std::vector<EventConfig>& _eventConfig);
 
                     /**
                      * 判断参数 EventConfig 是否已赋值
                      * @return EventConfig 是否已赋值
+                     * 
                      */
                     bool EventConfigHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Source forwarding rule ID
                      * @return SourceLocationId Source forwarding rule ID
+                     * 
                      */
                     std::string GetSourceLocationId() const;
 
                     /**
                      * 设置Source forwarding rule ID
-                     * @param SourceLocationId Source forwarding rule ID
+                     * @param _sourceLocationId Source forwarding rule ID
+                     * 
                      */
                     void SetSourceLocationId(const std::string& _sourceLocationId);
 
                     /**
                      * 判断参数 SourceLocationId 是否已赋值
                      * @return SourceLocationId 是否已赋值
+                     * 
                      */
                     bool SourceLocationIdHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule ID of a redirect target
                      * @return TargetLocationId Forwarding rule ID of a redirect target
+                     * 
                      */
                     std::string GetTargetLocationId() const;
 
                     /**
                      * 设置Forwarding rule ID of a redirect target
-                     * @param TargetLocationId Forwarding rule ID of a redirect target
+                     * @param _targetLocationId Forwarding rule ID of a redirect target
+                     * 
                      */
                     void SetTargetLocationId(const std::string& _targetLocationId);
 
                     /**
                      * 判断参数 TargetLocationId 是否已赋值
                      * @return TargetLocationId 是否已赋值
+                     * 
                      */
                     bool TargetLocationIdHasBeenSet() const;
 
                     /**
                      * 获取Redirection status code. Valid values: 301, 302, and 307.
                      * @return RewriteCode Redirection status code. Valid values: 301, 302, and 307.
+                     * 
                      */
                     int64_t GetRewriteCode() const;
 
                     /**
                      * 设置Redirection status code. Valid values: 301, 302, and 307.
-                     * @param RewriteCode Redirection status code. Valid values: 301, 302, and 307.
+                     * @param _rewriteCode Redirection status code. Valid values: 301, 302, and 307.
+                     * 
                      */
                     void SetRewriteCode(const int64_t& _rewriteCode);
 
                     /**
                      * 判断参数 RewriteCode 是否已赋值
                      * @return RewriteCode 是否已赋值
+                     * 
                      */
                     bool RewriteCodeHasBeenSet() const;
 
                     /**
                      * 获取Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
                      * @return TakeUrl Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+                     * 
                      */
                     bool GetTakeUrl() const;
 
                     /**
                      * 设置Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
-                     * @param TakeUrl Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+                     * @param _takeUrl Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+                     * 
                      */
                     void SetTakeUrl(const bool& _takeUrl);
 
                     /**
                      * 判断参数 TakeUrl 是否已赋值
                      * @return TakeUrl 是否已赋值
+                     * 
                      */
                     bool TakeUrlHasBeenSet() const;
 
                     /**
                      * 获取Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
                      * @return SourceDomain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+                     * 
                      */
                     std::string GetSourceDomain() const;
 
                     /**
                      * 设置Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
-                     * @param SourceDomain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+                     * @param _sourceDomain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+                     * 
                      */
                     void SetSourceDomain(const std::string& _sourceDomain);
 
                     /**
                      * 判断参数 SourceDomain 是否已赋值
                      * @return SourceDomain 是否已赋值
+                     * 
                      */
                     bool SourceDomainHasBeenSet() const;
 

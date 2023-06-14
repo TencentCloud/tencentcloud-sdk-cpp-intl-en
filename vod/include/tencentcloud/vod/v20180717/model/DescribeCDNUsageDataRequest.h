@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _startTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
                      * @return EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
-                     * @param EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+                     * @param _endTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return DataType CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
+                     * 
                      */
                     std::string GetDataType() const;
 
@@ -92,15 +99,17 @@ namespace TencentCloud
                      * 设置CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
-                     * @param DataType CDN statistics type. Valid values:
+                     * @param _dataType CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
+                     * 
                      */
                     void SetDataType(const std::string& _dataType);
 
                     /**
                      * 判断参数 DataType 是否已赋值
                      * @return DataType 是否已赋值
+                     * 
                      */
                     bool DataTypeHasBeenSet() const;
 
@@ -109,20 +118,23 @@ namespace TencentCloud
 You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
 You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
 You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
 You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
@@ -137,6 +149,7 @@ Default value: 1440. Data at 1-day granularity will be returned.
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
 <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
 Default value: 1440. Data at 1-day granularity will be returned.
+                     * 
                      */
                     uint64_t GetDataInterval() const;
 
@@ -146,35 +159,40 @@ Default value: 1440. Data at 1-day granularity will be returned.
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
 <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
 Default value: 1440. Data at 1-day granularity will be returned.
-                     * @param DataInterval Time granularity of usage data in minutes. Valid values:
+                     * @param _dataInterval Time granularity of usage data in minutes. Valid values:
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
 <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
 Default value: 1440. Data at 1-day granularity will be returned.
+                     * 
                      */
                     void SetDataInterval(const uint64_t& _dataInterval);
 
                     /**
                      * 判断参数 DataInterval 是否已赋值
                      * @return DataInterval 是否已赋值
+                     * 
                      */
                     bool DataIntervalHasBeenSet() const;
 
                     /**
                      * 获取List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
                      * @return DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+                     * 
                      */
                     std::vector<std::string> GetDomainNames() const;
 
                     /**
                      * 设置List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
-                     * @param DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+                     * @param _domainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+                     * 
                      */
                     void SetDomainNames(const std::vector<std::string>& _domainNames);
 
                     /**
                      * 判断参数 DomainNames 是否已赋值
                      * @return DomainNames 是否已赋值
+                     * 
                      */
                     bool DomainNamesHasBeenSet() const;
 

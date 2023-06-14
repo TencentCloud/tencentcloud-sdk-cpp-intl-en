@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Array of allowed endpoint services
                      * @return VpcEndpointServiceUserSet Array of allowed endpoint services
+                     * 
                      */
                     std::vector<VpcEndPointServiceUser> GetVpcEndpointServiceUserSet() const;
 
                     /**
                      * 判断参数 VpcEndpointServiceUserSet 是否已赋值
                      * @return VpcEndpointServiceUserSet 是否已赋值
+                     * 
                      */
                     bool VpcEndpointServiceUserSetHasBeenSet() const;
 
                     /**
                      * 获取Number of matched allowlists
                      * @return TotalCount Number of matched allowlists
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

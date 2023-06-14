@@ -56,20 +56,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDesiredPodNumber() const;
 
                     /**
                      * 设置When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+                     * @param _desiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDesiredPodNumber(const int64_t& _desiredPodNumber);
 
                     /**
                      * 判断参数 DesiredPodNumber 是否已赋值
                      * @return DesiredPodNumber 是否已赋值
+                     * 
                      */
                     bool DesiredPodNumberHasBeenSet() const;
 
@@ -78,20 +81,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return GPUArgs GPU driver parameters
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     GPUArgs GetGPUArgs() const;
 
                     /**
                      * 设置GPU driver parameters
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param GPUArgs GPU driver parameters
+                     * @param _gPUArgs GPU driver parameters
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetGPUArgs(const GPUArgs& _gPUArgs);
 
                     /**
                      * 判断参数 GPUArgs 是否已赋值
                      * @return GPUArgs 是否已赋值
+                     * 
                      */
                     bool GPUArgsHasBeenSet() const;
 
@@ -100,20 +106,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPreStartUserScript() const;
 
                     /**
                      * 设置Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+                     * @param _preStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPreStartUserScript(const std::string& _preStartUserScript);
 
                     /**
                      * 判断参数 PreStartUserScript 是否已赋值
                      * @return PreStartUserScript 是否已赋值
+                     * 
                      */
                     bool PreStartUserScriptHasBeenSet() const;
 
@@ -122,20 +131,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Taints Node taint
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<Taint> GetTaints() const;
 
                     /**
                      * 设置Node taint
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Taints Node taint
+                     * @param _taints Node taint
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTaints(const std::vector<Taint>& _taints);
 
                     /**
                      * 判断参数 Taints 是否已赋值
                      * @return Taints 是否已赋值
+                     * 
                      */
                     bool TaintsHasBeenSet() const;
 
@@ -146,6 +158,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * @return MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMountTarget() const;
 
@@ -153,15 +166,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * 设置Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+                     * @param _mountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMountTarget(const std::string& _mountTarget);
 
                     /**
                      * 判断参数 MountTarget 是否已赋值
                      * @return MountTarget 是否已赋值
+                     * 
                      */
                     bool MountTargetHasBeenSet() const;
 
@@ -170,20 +185,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid value was found.
                      * @return DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetDockerGraphPath() const;
 
                     /**
                      * 设置Specified value of dockerd --graph. Default value: /var/lib/docker
 Note: This field may return null, indicating that no valid value was found.
-                     * @param DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+                     * @param _dockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetDockerGraphPath(const std::string& _dockerGraphPath);
 
                     /**
                      * 判断参数 DockerGraphPath 是否已赋值
                      * @return DockerGraphPath 是否已赋值
+                     * 
                      */
                     bool DockerGraphPathHasBeenSet() const;
 
@@ -192,38 +210,44 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return UserScript Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUserScript() const;
 
                     /**
                      * 设置Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param UserScript Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
+                     * @param _userScript Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUserScript(const std::string& _userScript);
 
                     /**
                      * 判断参数 UserScript 是否已赋值
                      * @return UserScript 是否已赋值
+                     * 
                      */
                     bool UserScriptHasBeenSet() const;
 
                     /**
                      * 获取Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
                      * @return Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
+                     * 
                      */
                     int64_t GetUnschedulable() const;
 
                     /**
                      * 设置Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
-                     * @param Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
+                     * @param _unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
+                     * 
                      */
                     void SetUnschedulable(const int64_t& _unschedulable);
 
                     /**
                      * 判断参数 Unschedulable 是否已赋值
                      * @return Unschedulable 是否已赋值
+                     * 
                      */
                     bool UnschedulableHasBeenSet() const;
 
@@ -232,20 +256,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Labels Node label array
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Node label array
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Labels Node label array
+                     * @param _labels Node label array
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
@@ -254,20 +281,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
                      * 设置Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
+                     * @param _dataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
                     /**
                      * 判断参数 DataDisks 是否已赋值
                      * @return DataDisks 是否已赋值
+                     * 
                      */
                     bool DataDisksHasBeenSet() const;
 
@@ -276,20 +306,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid value was found.
                      * @return ExtraArgs Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     InstanceExtraArgs GetExtraArgs() const;
 
                     /**
                      * 设置Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ExtraArgs Information about node custom parameters
+                     * @param _extraArgs Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetExtraArgs(const InstanceExtraArgs& _extraArgs);
 
                     /**
                      * 判断参数 ExtraArgs 是否已赋值
                      * @return ExtraArgs 是否已赋值
+                     * 
                      */
                     bool ExtraArgsHasBeenSet() const;
 

@@ -104,6 +104,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
 <li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     NormalAction GetNormalAction() const;
 
@@ -135,7 +136,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
 <li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NormalAction Common operation. Values:
+                     * @param _normalAction Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -162,12 +163,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
 <li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNormalAction(const NormalAction& _normalAction);
 
                     /**
                      * 判断参数 NormalAction 是否已赋值
                      * @return NormalAction 是否已赋值
+                     * 
                      */
                     bool NormalActionHasBeenSet() const;
 
@@ -180,6 +183,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`RequestHeader`: HTTP request header modification.</li>
 <li>`ResponseHeader`: HTTP response header modification.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RewriteAction GetRewriteAction() const;
 
@@ -188,16 +192,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`RequestHeader`: HTTP request header modification.</li>
 <li>`ResponseHeader`: HTTP response header modification.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RewriteAction Feature operation with a request/response header. Features of this type include:
+                     * @param _rewriteAction Feature operation with a request/response header. Features of this type include:
 <li>`RequestHeader`: HTTP request header modification.</li>
 <li>`ResponseHeader`: HTTP response header modification.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRewriteAction(const RewriteAction& _rewriteAction);
 
                     /**
                      * 判断参数 RewriteAction 是否已赋值
                      * @return RewriteAction 是否已赋值
+                     * 
                      */
                     bool RewriteActionHasBeenSet() const;
 
@@ -210,6 +216,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`ErrorPage`: Custom error page.</li>
 <li>`StatusCodeCache`: Status code cache TTL.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CodeAction GetCodeAction() const;
 
@@ -218,16 +225,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`ErrorPage`: Custom error page.</li>
 <li>`StatusCodeCache`: Status code cache TTL.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CodeAction Feature operation with a status code. Features of this type include:
+                     * @param _codeAction Feature operation with a status code. Features of this type include:
 <li>`ErrorPage`: Custom error page.</li>
 <li>`StatusCodeCache`: Status code cache TTL.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCodeAction(const CodeAction& _codeAction);
 
                     /**
                      * 判断参数 CodeAction 是否已赋值
                      * @return CodeAction 是否已赋值
+                     * 
                      */
                     bool CodeActionHasBeenSet() const;
 

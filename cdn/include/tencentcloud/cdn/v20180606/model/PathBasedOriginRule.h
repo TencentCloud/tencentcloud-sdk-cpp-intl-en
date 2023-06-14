@@ -57,6 +57,7 @@ namespace TencentCloud
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 `index`: Apply to specified homepages.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -66,17 +67,19 @@ namespace TencentCloud
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 `index`: Apply to specified homepages.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 `index`: Apply to specified homepages.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -91,6 +94,7 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -100,35 +104,40 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
-                     * @param RulePaths Content for each `RuleType`:
+                     * @param _rulePaths Content for each `RuleType`:
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 
                     /**
                      * 获取Origin server list. Domain name and IPv4 addresses are supported.
                      * @return Origin Origin server list. Domain name and IPv4 addresses are supported.
+                     * 
                      */
                     std::vector<std::string> GetOrigin() const;
 
                     /**
                      * 设置Origin server list. Domain name and IPv4 addresses are supported.
-                     * @param Origin Origin server list. Domain name and IPv4 addresses are supported.
+                     * @param _origin Origin server list. Domain name and IPv4 addresses are supported.
+                     * 
                      */
                     void SetOrigin(const std::vector<std::string>& _origin);
 
                     /**
                      * 判断参数 Origin 是否已赋值
                      * @return Origin 是否已赋值
+                     * 
                      */
                     bool OriginHasBeenSet() const;
 

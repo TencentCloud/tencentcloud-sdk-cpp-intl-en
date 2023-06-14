@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Subapplication ID.
                      * @return SubAppId Subapplication ID.
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置Subapplication ID.
-                     * @param SubAppId Subapplication ID.
+                     * @param _subAppId Subapplication ID.
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取The subapplication name.
                      * @return SubAppIdName The subapplication name.
+                     * 
                      */
                     std::string GetSubAppIdName() const;
 
                     /**
                      * 设置The subapplication name.
-                     * @param SubAppIdName The subapplication name.
+                     * @param _subAppIdName The subapplication name.
+                     * 
                      */
                     void SetSubAppIdName(const std::string& _subAppIdName);
 
                     /**
                      * 判断参数 SubAppIdName 是否已赋值
                      * @return SubAppIdName 是否已赋值
+                     * 
                      */
                     bool SubAppIdNameHasBeenSet() const;
 
                     /**
                      * 获取Subapplication overview.
                      * @return Description Subapplication overview.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Subapplication overview.
-                     * @param Description Subapplication overview.
+                     * @param _description Subapplication overview.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -129,6 +141,7 @@ namespace TencentCloud
 <li>Off: disabled</li>
 <li>Destroying: terminating</li>
 <li>Destroyed: terminated</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -138,35 +151,40 @@ namespace TencentCloud
 <li>Off: disabled</li>
 <li>Destroying: terminating</li>
 <li>Destroyed: terminated</li>
-                     * @param Status Subapplication status. Valid values:
+                     * @param _status Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
 <li>Destroying: terminating</li>
 <li>Destroyed: terminated</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
                      * @return Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
-                     * @param Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * @param _name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

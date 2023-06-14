@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Task ID, such as msp-jitoh33n
                      * @return TaskId Task ID, such as msp-jitoh33n
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID, such as msp-jitoh33n
-                     * @param TaskId Task ID, such as msp-jitoh33n
+                     * @param _taskId Task ID, such as msp-jitoh33n
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Project ID, such as 10005
                      * @return ProjectId Project ID, such as 10005
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID, such as 10005
-                     * @param ProjectId Project ID, such as 10005
+                     * @param _projectId Project ID, such as 10005
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 

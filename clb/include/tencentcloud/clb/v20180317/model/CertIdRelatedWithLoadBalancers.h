@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Certificate ID
                      * @return CertId Certificate ID
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Certificate ID
-                     * @param CertId Certificate ID
+                     * @param _certId Certificate ID
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancers List of CLB instances associated with certificate
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LoadBalancer> GetLoadBalancers() const;
 
                     /**
                      * 设置List of CLB instances associated with certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LoadBalancers List of CLB instances associated with certificate
+                     * @param _loadBalancers List of CLB instances associated with certificate
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoadBalancers(const std::vector<LoadBalancer>& _loadBalancers);
 
                     /**
                      * 判断参数 LoadBalancers 是否已赋值
                      * @return LoadBalancers 是否已赋值
+                     * 
                      */
                     bool LoadBalancersHasBeenSet() const;
 

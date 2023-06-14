@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
                      * @return KeyIds List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
+                     * 
                      */
                     std::vector<std::string> GetKeyIds() const;
 
                     /**
                      * 设置List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
-                     * @param KeyIds List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
+                     * @param _keyIds List of IDs of the CMKs to be enabled in batches. Up to 100 CMKs are supported at a time
+                     * 
                      */
                     void SetKeyIds(const std::vector<std::string>& _keyIds);
 
                     /**
                      * 判断参数 KeyIds 是否已赋值
                      * @return KeyIds 是否已赋值
+                     * 
                      */
                     bool KeyIdsHasBeenSet() const;
 

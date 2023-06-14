@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of activities in the compute environment
                      * @return ActivitySet List of activities in the compute environment
+                     * 
                      */
                     std::vector<Activity> GetActivitySet() const;
 
                     /**
                      * 判断参数 ActivitySet 是否已赋值
                      * @return ActivitySet 是否已赋值
+                     * 
                      */
                     bool ActivitySetHasBeenSet() const;
 
                     /**
                      * 获取Number of activities
                      * @return TotalCount Number of activities
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the task to scan local images for vulnerabilities
                      * @return LocalTaskID ID of the task to scan local images for vulnerabilities
+                     * 
                      */
                     int64_t GetLocalTaskID() const;
 
                     /**
                      * 设置ID of the task to scan local images for vulnerabilities
-                     * @param LocalTaskID ID of the task to scan local images for vulnerabilities
+                     * @param _localTaskID ID of the task to scan local images for vulnerabilities
+                     * 
                      */
                     void SetLocalTaskID(const int64_t& _localTaskID);
 
                     /**
                      * 判断参数 LocalTaskID 是否已赋值
                      * @return LocalTaskID 是否已赋值
+                     * 
                      */
                     bool LocalTaskIDHasBeenSet() const;
 
                     /**
                      * 获取Local image ID. If it is not specified, it indicates all.
                      * @return LocalImageIDs Local image ID. If it is not specified, it indicates all.
+                     * 
                      */
                     std::vector<std::string> GetLocalImageIDs() const;
 
                     /**
                      * 设置Local image ID. If it is not specified, it indicates all.
-                     * @param LocalImageIDs Local image ID. If it is not specified, it indicates all.
+                     * @param _localImageIDs Local image ID. If it is not specified, it indicates all.
+                     * 
                      */
                     void SetLocalImageIDs(const std::vector<std::string>& _localImageIDs);
 
                     /**
                      * 判断参数 LocalImageIDs 是否已赋值
                      * @return LocalImageIDs 是否已赋值
+                     * 
                      */
                     bool LocalImageIDsHasBeenSet() const;
 
                     /**
                      * 获取Repository image ID. If it is not specified, it indicates all.
                      * @return RegistryImageIDs Repository image ID. If it is not specified, it indicates all.
+                     * 
                      */
                     std::vector<uint64_t> GetRegistryImageIDs() const;
 
                     /**
                      * 设置Repository image ID. If it is not specified, it indicates all.
-                     * @param RegistryImageIDs Repository image ID. If it is not specified, it indicates all.
+                     * @param _registryImageIDs Repository image ID. If it is not specified, it indicates all.
+                     * 
                      */
                     void SetRegistryImageIDs(const std::vector<uint64_t>& _registryImageIDs);
 
                     /**
                      * 判断参数 RegistryImageIDs 是否已赋值
                      * @return RegistryImageIDs 是否已赋值
+                     * 
                      */
                     bool RegistryImageIDsHasBeenSet() const;
 
                     /**
                      * 获取ID of the task to scan repository images for vulnerabilities
                      * @return RegistryTaskID ID of the task to scan repository images for vulnerabilities
+                     * 
                      */
                     int64_t GetRegistryTaskID() const;
 
                     /**
                      * 设置ID of the task to scan repository images for vulnerabilities
-                     * @param RegistryTaskID ID of the task to scan repository images for vulnerabilities
+                     * @param _registryTaskID ID of the task to scan repository images for vulnerabilities
+                     * 
                      */
                     void SetRegistryTaskID(const int64_t& _registryTaskID);
 
                     /**
                      * 判断参数 RegistryTaskID 是否已赋值
                      * @return RegistryTaskID 是否已赋值
+                     * 
                      */
                     bool RegistryTaskIDHasBeenSet() const;
 

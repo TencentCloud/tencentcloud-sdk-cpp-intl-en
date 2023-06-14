@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取LCIC SdkAppId
                      * @return SdkAppId LCIC SdkAppId
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置LCIC SdkAppId
-                     * @param SdkAppId LCIC SdkAppId
+                     * @param _sdkAppId LCIC SdkAppId
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Document URL	
                      * @return DocumentUrl Document URL	
+                     * 
                      */
                     std::string GetDocumentUrl() const;
 
                     /**
                      * 设置Document URL	
-                     * @param DocumentUrl Document URL	
+                     * @param _documentUrl Document URL	
+                     * 
                      */
                     void SetDocumentUrl(const std::string& _documentUrl);
 
                     /**
                      * 判断参数 DocumentUrl 是否已赋值
                      * @return DocumentUrl 是否已赋值
+                     * 
                      */
                     bool DocumentUrlHasBeenSet() const;
 
                     /**
                      * 获取Document name	
                      * @return DocumentName Document name	
+                     * 
                      */
                     std::string GetDocumentName() const;
 
                     /**
                      * 设置Document name	
-                     * @param DocumentName Document name	
+                     * @param _documentName Document name	
+                     * 
                      */
                     void SetDocumentName(const std::string& _documentName);
 
                     /**
                      * 判断参数 DocumentName 是否已赋值
                      * @return DocumentName 是否已赋值
+                     * 
                      */
                     bool DocumentNameHasBeenSet() const;
 
                     /**
                      * 获取Document owner ID	
                      * @return Owner Document owner ID	
+                     * 
                      */
                     std::string GetOwner() const;
 
                     /**
                      * 设置Document owner ID	
-                     * @param Owner Document owner ID	
+                     * @param _owner Document owner ID	
+                     * 
                      */
                     void SetOwner(const std::string& _owner);
 
                     /**
                      * 判断参数 Owner 是否已赋值
                      * @return Owner 是否已赋值
+                     * 
                      */
                     bool OwnerHasBeenSet() const;
 
                     /**
                      * 获取Transcoding type. Valid values: `0`: No transcoding required (default); `1`: Documents that need to be transcoded: ppt, pptx, pdf, doc, docx; `2`: Videos that need to be transcoded: mp4, 3pg, mpeg, avi, flv, wmv, rm, h264, etc.; `2`: Audio that needs to be transcoded: mp3, wav, wma, aac, flac, opus
                      * @return TranscodeType Transcoding type. Valid values: `0`: No transcoding required (default); `1`: Documents that need to be transcoded: ppt, pptx, pdf, doc, docx; `2`: Videos that need to be transcoded: mp4, 3pg, mpeg, avi, flv, wmv, rm, h264, etc.; `2`: Audio that needs to be transcoded: mp3, wav, wma, aac, flac, opus
+                     * 
                      */
                     uint64_t GetTranscodeType() const;
 
                     /**
                      * 设置Transcoding type. Valid values: `0`: No transcoding required (default); `1`: Documents that need to be transcoded: ppt, pptx, pdf, doc, docx; `2`: Videos that need to be transcoded: mp4, 3pg, mpeg, avi, flv, wmv, rm, h264, etc.; `2`: Audio that needs to be transcoded: mp3, wav, wma, aac, flac, opus
-                     * @param TranscodeType Transcoding type. Valid values: `0`: No transcoding required (default); `1`: Documents that need to be transcoded: ppt, pptx, pdf, doc, docx; `2`: Videos that need to be transcoded: mp4, 3pg, mpeg, avi, flv, wmv, rm, h264, etc.; `2`: Audio that needs to be transcoded: mp3, wav, wma, aac, flac, opus
+                     * @param _transcodeType Transcoding type. Valid values: `0`: No transcoding required (default); `1`: Documents that need to be transcoded: ppt, pptx, pdf, doc, docx; `2`: Videos that need to be transcoded: mp4, 3pg, mpeg, avi, flv, wmv, rm, h264, etc.; `2`: Audio that needs to be transcoded: mp3, wav, wma, aac, flac, opus
+                     * 
                      */
                     void SetTranscodeType(const uint64_t& _transcodeType);
 
                     /**
                      * 判断参数 TranscodeType 是否已赋值
                      * @return TranscodeType 是否已赋值
+                     * 
                      */
                     bool TranscodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Permission. Valid values: `0`: Private document (default); `1`: Public document
                      * @return Permission Permission. Valid values: `0`: Private document (default); `1`: Public document
+                     * 
                      */
                     uint64_t GetPermission() const;
 
                     /**
                      * 设置Permission. Valid values: `0`: Private document (default); `1`: Public document
-                     * @param Permission Permission. Valid values: `0`: Private document (default); `1`: Public document
+                     * @param _permission Permission. Valid values: `0`: Private document (default); `1`: Public document
+                     * 
                      */
                     void SetPermission(const uint64_t& _permission);
 
                     /**
                      * 判断参数 Permission 是否已赋值
                      * @return Permission 是否已赋值
+                     * 
                      */
                     bool PermissionHasBeenSet() const;
 
                     /**
                      * 获取Document extension
                      * @return DocumentType Document extension
+                     * 
                      */
                     std::string GetDocumentType() const;
 
                     /**
                      * 设置Document extension
-                     * @param DocumentType Document extension
+                     * @param _documentType Document extension
+                     * 
                      */
                     void SetDocumentType(const std::string& _documentType);
 
                     /**
                      * 判断参数 DocumentType 是否已赋值
                      * @return DocumentType 是否已赋值
+                     * 
                      */
                     bool DocumentTypeHasBeenSet() const;
 
                     /**
                      * 获取Document size, in bytes
                      * @return DocumentSize Document size, in bytes
+                     * 
                      */
                     uint64_t GetDocumentSize() const;
 
                     /**
                      * 设置Document size, in bytes
-                     * @param DocumentSize Document size, in bytes
+                     * @param _documentSize Document size, in bytes
+                     * 
                      */
                     void SetDocumentSize(const uint64_t& _documentSize);
 
                     /**
                      * 判断参数 DocumentSize 是否已赋值
                      * @return DocumentSize 是否已赋值
+                     * 
                      */
                     bool DocumentSizeHasBeenSet() const;
 

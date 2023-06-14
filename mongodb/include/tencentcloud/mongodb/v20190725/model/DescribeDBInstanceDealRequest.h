@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Order ID. It is returned by the `CreateDBInstance` and other APIs.
                      * @return DealId Order ID. It is returned by the `CreateDBInstance` and other APIs.
+                     * 
                      */
                     std::string GetDealId() const;
 
                     /**
                      * 设置Order ID. It is returned by the `CreateDBInstance` and other APIs.
-                     * @param DealId Order ID. It is returned by the `CreateDBInstance` and other APIs.
+                     * @param _dealId Order ID. It is returned by the `CreateDBInstance` and other APIs.
+                     * 
                      */
                     void SetDealId(const std::string& _dealId);
 
                     /**
                      * 判断参数 DealId 是否已赋值
                      * @return DealId 是否已赋值
+                     * 
                      */
                     bool DealIdHasBeenSet() const;
 

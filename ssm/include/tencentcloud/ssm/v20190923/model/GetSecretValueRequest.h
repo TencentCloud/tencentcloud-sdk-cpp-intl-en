@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of a Secret.
                      * @return SecretName Name of a Secret.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of a Secret.
-                     * @param SecretName Name of a Secret.
+                     * @param _secretName Name of a Secret.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
                      * @return VersionId Specifies the version number of the corresponding credential.
 For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
+                     * 
                      */
                     std::string GetVersionId() const;
 
                     /**
                      * 设置Specifies the version number of the corresponding credential.
 For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
-                     * @param VersionId Specifies the version number of the corresponding credential.
+                     * @param _versionId Specifies the version number of the corresponding credential.
 For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
+                     * 
                      */
                     void SetVersionId(const std::string& _versionId);
 
                     /**
                      * 判断参数 VersionId 是否已赋值
                      * @return VersionId 是否已赋值
+                     * 
                      */
                     bool VersionIdHasBeenSet() const;
 

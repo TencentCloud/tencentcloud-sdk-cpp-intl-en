@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
                      * @return BlueprintId Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetBlueprintId() const;
 
                     /**
                      * 设置Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
-                     * @param BlueprintId Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+                     * @param _blueprintId Image ID, which can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetBlueprintId(const std::string& _blueprintId);
 
                     /**
                      * 判断参数 BlueprintId 是否已赋值
                      * @return BlueprintId 是否已赋值
+                     * 
                      */
                     bool BlueprintIdHasBeenSet() const;
 
                     /**
                      * 获取New image name, which can contain up to 60 characters.
                      * @return BlueprintName New image name, which can contain up to 60 characters.
+                     * 
                      */
                     std::string GetBlueprintName() const;
 
                     /**
                      * 设置New image name, which can contain up to 60 characters.
-                     * @param BlueprintName New image name, which can contain up to 60 characters.
+                     * @param _blueprintName New image name, which can contain up to 60 characters.
+                     * 
                      */
                     void SetBlueprintName(const std::string& _blueprintName);
 
                     /**
                      * 判断参数 BlueprintName 是否已赋值
                      * @return BlueprintName 是否已赋值
+                     * 
                      */
                     bool BlueprintNameHasBeenSet() const;
 
                     /**
                      * 获取New image description, which can contain up to 60 characters.
                      * @return Description New image description, which can contain up to 60 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置New image description, which can contain up to 60 characters.
-                     * @param Description New image description, which can contain up to 60 characters.
+                     * @param _description New image description, which can contain up to 60 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

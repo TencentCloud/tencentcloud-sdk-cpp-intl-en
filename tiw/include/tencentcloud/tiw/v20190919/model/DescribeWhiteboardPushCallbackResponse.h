@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Callback URL of the whiteboard push event. If no callback URL is set, this parameter is null.
                      * @return Callback Callback URL of the whiteboard push event. If no callback URL is set, this parameter is null.
+                     * 
                      */
                     std::string GetCallback() const;
 
                     /**
                      * 判断参数 Callback 是否已赋值
                      * @return Callback 是否已赋值
+                     * 
                      */
                     bool CallbackHasBeenSet() const;
 
                     /**
                      * 获取Callback authentication key for whiteboard push.
                      * @return CallbackKey Callback authentication key for whiteboard push.
+                     * 
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 判断参数 CallbackKey 是否已赋值
                      * @return CallbackKey 是否已赋值
+                     * 
                      */
                     bool CallbackKeyHasBeenSet() const;
 

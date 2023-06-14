@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Input region.
                      * @return Region Input region.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Input region.
-                     * @param Region Input region.
+                     * @param _region Input region.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Input ID.
                      * @return Id Input ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Input ID.
-                     * @param Id Input ID.
+                     * @param _id Input ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Input name.
                      * @return Name Input name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Input name.
-                     * @param Name Input name.
+                     * @param _name Input name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Input type.
                      * @return Type Input type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Input type.
-                     * @param Type Input type.
+                     * @param _type Input type.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Array of security groups associated with input.
                      * @return SecurityGroupIds Array of security groups associated with input.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Array of security groups associated with input.
-                     * @param SecurityGroupIds Array of security groups associated with input.
+                     * @param _securityGroupIds Array of security groups associated with input.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
@@ -142,38 +157,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AttachedChannels Array of channels associated with input.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAttachedChannels() const;
 
                     /**
                      * 设置Array of channels associated with input.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AttachedChannels Array of channels associated with input.
+                     * @param _attachedChannels Array of channels associated with input.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttachedChannels(const std::vector<std::string>& _attachedChannels);
 
                     /**
                      * 判断参数 AttachedChannels 是否已赋值
                      * @return AttachedChannels 是否已赋值
+                     * 
                      */
                     bool AttachedChannelsHasBeenSet() const;
 
                     /**
                      * 获取Input configuration array.
                      * @return InputSettings Input configuration array.
+                     * 
                      */
                     std::vector<InputSettingInfo> GetInputSettings() const;
 
                     /**
                      * 设置Input configuration array.
-                     * @param InputSettings Input configuration array.
+                     * @param _inputSettings Input configuration array.
+                     * 
                      */
                     void SetInputSettings(const std::vector<InputSettingInfo>& _inputSettings);
 
                     /**
                      * 判断参数 InputSettings 是否已赋值
                      * @return InputSettings 是否已赋值
+                     * 
                      */
                     bool InputSettingsHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The room ID.
                      * @return RoomId The room ID.
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置The room ID.
-                     * @param RoomId The room ID.
+                     * @param _roomId The room ID.
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The starting message sequence. Messages before this sequence will be returned (not including the message whose sequence is `seq`).
                      * @return Seq The starting message sequence. Messages before this sequence will be returned (not including the message whose sequence is `seq`).
+                     * 
                      */
                     int64_t GetSeq() const;
 
                     /**
                      * 设置The starting message sequence. Messages before this sequence will be returned (not including the message whose sequence is `seq`).
-                     * @param Seq The starting message sequence. Messages before this sequence will be returned (not including the message whose sequence is `seq`).
+                     * @param _seq The starting message sequence. Messages before this sequence will be returned (not including the message whose sequence is `seq`).
+                     * 
                      */
                     void SetSeq(const int64_t& _seq);
 
                     /**
                      * 判断参数 Seq 是否已赋值
                      * @return Seq 是否已赋值
+                     * 
                      */
                     bool SeqHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of messages to return. The value of this parameter cannot exceed the maximum message count allowed by your package.
                      * @return Limit The maximum number of messages to return. The value of this parameter cannot exceed the maximum message count allowed by your package.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of messages to return. The value of this parameter cannot exceed the maximum message count allowed by your package.
-                     * @param Limit The maximum number of messages to return. The value of this parameter cannot exceed the maximum message count allowed by your package.
+                     * @param _limit The maximum number of messages to return. The value of this parameter cannot exceed the maximum message count allowed by your package.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the long-term access credential of the instance
                      * @return TokenId ID of the long-term access credential of the instance
+                     * 
                      */
                     std::string GetTokenId() const;
 
                     /**
                      * 设置ID of the long-term access credential of the instance
-                     * @param TokenId ID of the long-term access credential of the instance
+                     * @param _tokenId ID of the long-term access credential of the instance
+                     * 
                      */
                     void SetTokenId(const std::string& _tokenId);
 
                     /**
                      * 判断参数 TokenId 是否已赋值
                      * @return TokenId 是否已赋值
+                     * 
                      */
                     bool TokenIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the long-term access credential of the instance
                      * @return Enable Whether to enable the long-term access credential of the instance
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Whether to enable the long-term access credential of the instance
-                     * @param Enable Whether to enable the long-term access credential of the instance
+                     * @param _enable Whether to enable the long-term access credential of the instance
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Access credential description
                      * @return Desc Access credential description
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Access credential description
-                     * @param Desc Access credential description
+                     * @param _desc Access credential description
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
                     /**
                      * 获取Valid values: 1: Modify the description; 2: Enable/Disable. Default value: 2.
                      * @return ModifyFlag Valid values: 1: Modify the description; 2: Enable/Disable. Default value: 2.
+                     * 
                      */
                     int64_t GetModifyFlag() const;
 
                     /**
                      * 设置Valid values: 1: Modify the description; 2: Enable/Disable. Default value: 2.
-                     * @param ModifyFlag Valid values: 1: Modify the description; 2: Enable/Disable. Default value: 2.
+                     * @param _modifyFlag Valid values: 1: Modify the description; 2: Enable/Disable. Default value: 2.
+                     * 
                      */
                     void SetModifyFlag(const int64_t& _modifyFlag);
 
                     /**
                      * 判断参数 ModifyFlag 是否已赋值
                      * @return ModifyFlag 是否已赋值
+                     * 
                      */
                     bool ModifyFlagHasBeenSet() const;
 

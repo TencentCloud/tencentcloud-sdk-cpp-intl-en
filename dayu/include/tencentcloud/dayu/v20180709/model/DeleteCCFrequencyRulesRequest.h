@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
-                     * @param Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * @param _business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Access frequency control rule ID for CC protection
                      * @return CCFrequencyRuleId Access frequency control rule ID for CC protection
+                     * 
                      */
                     std::string GetCCFrequencyRuleId() const;
 
                     /**
                      * 设置Access frequency control rule ID for CC protection
-                     * @param CCFrequencyRuleId Access frequency control rule ID for CC protection
+                     * @param _cCFrequencyRuleId Access frequency control rule ID for CC protection
+                     * 
                      */
                     void SetCCFrequencyRuleId(const std::string& _cCFrequencyRuleId);
 
                     /**
                      * 判断参数 CCFrequencyRuleId 是否已赋值
                      * @return CCFrequencyRuleId 是否已赋值
+                     * 
                      */
                     bool CCFrequencyRuleIdHasBeenSet() const;
 

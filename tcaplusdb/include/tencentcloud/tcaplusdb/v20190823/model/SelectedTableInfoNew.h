@@ -49,252 +49,294 @@ namespace TencentCloud
                     /**
                      * 获取ID of the table group where a table resides
                      * @return TableGroupId ID of the table group where a table resides
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置ID of the table group where a table resides
-                     * @param TableGroupId ID of the table group where a table resides
+                     * @param _tableGroupId ID of the table group where a table resides
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Table name
                      * @return TableName Table name
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
-                     * @param TableName Table name
+                     * @param _tableName Table name
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
                     /**
                      * 获取Table instance ID
                      * @return TableInstanceId Table instance ID
+                     * 
                      */
                     std::string GetTableInstanceId() const;
 
                     /**
                      * 设置Table instance ID
-                     * @param TableInstanceId Table instance ID
+                     * @param _tableInstanceId Table instance ID
+                     * 
                      */
                     void SetTableInstanceId(const std::string& _tableInstanceId);
 
                     /**
                      * 判断参数 TableInstanceId 是否已赋值
                      * @return TableInstanceId 是否已赋值
+                     * 
                      */
                     bool TableInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Table description language type. Valid values: PROTO, TDR
                      * @return TableIdlType Table description language type. Valid values: PROTO, TDR
+                     * 
                      */
                     std::string GetTableIdlType() const;
 
                     /**
                      * 设置Table description language type. Valid values: PROTO, TDR
-                     * @param TableIdlType Table description language type. Valid values: PROTO, TDR
+                     * @param _tableIdlType Table description language type. Valid values: PROTO, TDR
+                     * 
                      */
                     void SetTableIdlType(const std::string& _tableIdlType);
 
                     /**
                      * 判断参数 TableIdlType 是否已赋值
                      * @return TableIdlType 是否已赋值
+                     * 
                      */
                     bool TableIdlTypeHasBeenSet() const;
 
                     /**
                      * 获取Table data structure type. Valid values: GENERIC, LIST
                      * @return TableType Table data structure type. Valid values: GENERIC, LIST
+                     * 
                      */
                     std::string GetTableType() const;
 
                     /**
                      * 设置Table data structure type. Valid values: GENERIC, LIST
-                     * @param TableType Table data structure type. Valid values: GENERIC, LIST
+                     * @param _tableType Table data structure type. Valid values: GENERIC, LIST
+                     * 
                      */
                     void SetTableType(const std::string& _tableType);
 
                     /**
                      * 判断参数 TableType 是否已赋值
                      * @return TableType 是否已赋值
+                     * 
                      */
                     bool TableTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of LIST-type table elements
                      * @return ListElementNum Number of LIST-type table elements
+                     * 
                      */
                     int64_t GetListElementNum() const;
 
                     /**
                      * 设置Number of LIST-type table elements
-                     * @param ListElementNum Number of LIST-type table elements
+                     * @param _listElementNum Number of LIST-type table elements
+                     * 
                      */
                     void SetListElementNum(const int64_t& _listElementNum);
 
                     /**
                      * 判断参数 ListElementNum 是否已赋值
                      * @return ListElementNum 是否已赋值
+                     * 
                      */
                     bool ListElementNumHasBeenSet() const;
 
                     /**
                      * 获取Reserved table capacity in GB
                      * @return ReservedVolume Reserved table capacity in GB
+                     * 
                      */
                     int64_t GetReservedVolume() const;
 
                     /**
                      * 设置Reserved table capacity in GB
-                     * @param ReservedVolume Reserved table capacity in GB
+                     * @param _reservedVolume Reserved table capacity in GB
+                     * 
                      */
                     void SetReservedVolume(const int64_t& _reservedVolume);
 
                     /**
                      * 判断参数 ReservedVolume 是否已赋值
                      * @return ReservedVolume 是否已赋值
+                     * 
                      */
                     bool ReservedVolumeHasBeenSet() const;
 
                     /**
                      * 获取Reserved table read QPS
                      * @return ReservedReadQps Reserved table read QPS
+                     * 
                      */
                     int64_t GetReservedReadQps() const;
 
                     /**
                      * 设置Reserved table read QPS
-                     * @param ReservedReadQps Reserved table read QPS
+                     * @param _reservedReadQps Reserved table read QPS
+                     * 
                      */
                     void SetReservedReadQps(const int64_t& _reservedReadQps);
 
                     /**
                      * 判断参数 ReservedReadQps 是否已赋值
                      * @return ReservedReadQps 是否已赋值
+                     * 
                      */
                     bool ReservedReadQpsHasBeenSet() const;
 
                     /**
                      * 获取Reserved table write QPS
                      * @return ReservedWriteQps Reserved table write QPS
+                     * 
                      */
                     int64_t GetReservedWriteQps() const;
 
                     /**
                      * 设置Reserved table write QPS
-                     * @param ReservedWriteQps Reserved table write QPS
+                     * @param _reservedWriteQps Reserved table write QPS
+                     * 
                      */
                     void SetReservedWriteQps(const int64_t& _reservedWriteQps);
 
                     /**
                      * 判断参数 ReservedWriteQps 是否已赋值
                      * @return ReservedWriteQps 是否已赋值
+                     * 
                      */
                     bool ReservedWriteQpsHasBeenSet() const;
 
                     /**
                      * 获取Table remarks
                      * @return Memo Table remarks
+                     * 
                      */
                     std::string GetMemo() const;
 
                     /**
                      * 设置Table remarks
-                     * @param Memo Table remarks
+                     * @param _memo Table remarks
+                     * 
                      */
                     void SetMemo(const std::string& _memo);
 
                     /**
                      * 判断参数 Memo 是否已赋值
                      * @return Memo 是否已赋值
+                     * 
                      */
                     bool MemoHasBeenSet() const;
 
                     /**
                      * 获取Key rollback filename, which is only used for rollback
                      * @return FileName Key rollback filename, which is only used for rollback
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Key rollback filename, which is only used for rollback
-                     * @param FileName Key rollback filename, which is only used for rollback
+                     * @param _fileName Key rollback filename, which is only used for rollback
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Key rollback file extension, which is only used for rollback
                      * @return FileExtType Key rollback file extension, which is only used for rollback
+                     * 
                      */
                     std::string GetFileExtType() const;
 
                     /**
                      * 设置Key rollback file extension, which is only used for rollback
-                     * @param FileExtType Key rollback file extension, which is only used for rollback
+                     * @param _fileExtType Key rollback file extension, which is only used for rollback
+                     * 
                      */
                     void SetFileExtType(const std::string& _fileExtType);
 
                     /**
                      * 判断参数 FileExtType 是否已赋值
                      * @return FileExtType 是否已赋值
+                     * 
                      */
                     bool FileExtTypeHasBeenSet() const;
 
                     /**
                      * 获取Key rollback file size, which is only used for rollback
                      * @return FileSize Key rollback file size, which is only used for rollback
+                     * 
                      */
                     int64_t GetFileSize() const;
 
                     /**
                      * 设置Key rollback file size, which is only used for rollback
-                     * @param FileSize Key rollback file size, which is only used for rollback
+                     * @param _fileSize Key rollback file size, which is only used for rollback
+                     * 
                      */
                     void SetFileSize(const int64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
                      * @return FileSize 是否已赋值
+                     * 
                      */
                     bool FileSizeHasBeenSet() const;
 
                     /**
                      * 获取Key rollback file content, which is only used for rollback
                      * @return FileContent Key rollback file content, which is only used for rollback
+                     * 
                      */
                     std::string GetFileContent() const;
 
                     /**
                      * 设置Key rollback file content, which is only used for rollback
-                     * @param FileContent Key rollback file content, which is only used for rollback
+                     * @param _fileContent Key rollback file content, which is only used for rollback
+                     * 
                      */
                     void SetFileContent(const std::string& _fileContent);
 
                     /**
                      * 判断参数 FileContent 是否已赋值
                      * @return FileContent 是否已赋值
+                     * 
                      */
                     bool FileContentHasBeenSet() const;
 

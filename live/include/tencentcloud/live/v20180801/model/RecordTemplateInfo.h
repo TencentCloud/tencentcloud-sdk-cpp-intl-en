@@ -52,126 +52,147 @@ namespace TencentCloud
                     /**
                      * 获取Template ID.
                      * @return TemplateId Template ID.
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-                     * @param TemplateId Template ID.
+                     * @param _templateId Template ID.
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Template name.
                      * @return TemplateName Template name.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name.
-                     * @param TemplateName Template name.
+                     * @param _templateName Template name.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Message description
                      * @return Description Message description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Message description
-                     * @param Description Message description
+                     * @param _description Message description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取FLV recording parameter.
                      * @return FlvParam FLV recording parameter.
+                     * 
                      */
                     RecordParam GetFlvParam() const;
 
                     /**
                      * 设置FLV recording parameter.
-                     * @param FlvParam FLV recording parameter.
+                     * @param _flvParam FLV recording parameter.
+                     * 
                      */
                     void SetFlvParam(const RecordParam& _flvParam);
 
                     /**
                      * 判断参数 FlvParam 是否已赋值
                      * @return FlvParam 是否已赋值
+                     * 
                      */
                     bool FlvParamHasBeenSet() const;
 
                     /**
                      * 获取HLS recording parameter.
                      * @return HlsParam HLS recording parameter.
+                     * 
                      */
                     RecordParam GetHlsParam() const;
 
                     /**
                      * 设置HLS recording parameter.
-                     * @param HlsParam HLS recording parameter.
+                     * @param _hlsParam HLS recording parameter.
+                     * 
                      */
                     void SetHlsParam(const RecordParam& _hlsParam);
 
                     /**
                      * 判断参数 HlsParam 是否已赋值
                      * @return HlsParam 是否已赋值
+                     * 
                      */
                     bool HlsParamHasBeenSet() const;
 
                     /**
                      * 获取MP4 recording parameter.
                      * @return Mp4Param MP4 recording parameter.
+                     * 
                      */
                     RecordParam GetMp4Param() const;
 
                     /**
                      * 设置MP4 recording parameter.
-                     * @param Mp4Param MP4 recording parameter.
+                     * @param _mp4Param MP4 recording parameter.
+                     * 
                      */
                     void SetMp4Param(const RecordParam& _mp4Param);
 
                     /**
                      * 判断参数 Mp4Param 是否已赋值
                      * @return Mp4Param 是否已赋值
+                     * 
                      */
                     bool Mp4ParamHasBeenSet() const;
 
                     /**
                      * 获取AAC recording parameter.
                      * @return AacParam AAC recording parameter.
+                     * 
                      */
                     RecordParam GetAacParam() const;
 
                     /**
                      * 设置AAC recording parameter.
-                     * @param AacParam AAC recording parameter.
+                     * @param _aacParam AAC recording parameter.
+                     * 
                      */
                     void SetAacParam(const RecordParam& _aacParam);
 
                     /**
                      * 判断参数 AacParam 是否已赋值
                      * @return AacParam 是否已赋值
+                     * 
                      */
                     bool AacParamHasBeenSet() const;
 
@@ -180,56 +201,65 @@ namespace TencentCloud
 1: LCB.
                      * @return IsDelayLive 0: LVB,
 1: LCB.
+                     * 
                      */
                     int64_t GetIsDelayLive() const;
 
                     /**
                      * 设置0: LVB,
 1: LCB.
-                     * @param IsDelayLive 0: LVB,
+                     * @param _isDelayLive 0: LVB,
 1: LCB.
+                     * 
                      */
                     void SetIsDelayLive(const int64_t& _isDelayLive);
 
                     /**
                      * 判断参数 IsDelayLive 是否已赋值
                      * @return IsDelayLive 是否已赋值
+                     * 
                      */
                     bool IsDelayLiveHasBeenSet() const;
 
                     /**
                      * 获取A special parameter for HLS recording.
                      * @return HlsSpecialParam A special parameter for HLS recording.
+                     * 
                      */
                     HlsSpecialParam GetHlsSpecialParam() const;
 
                     /**
                      * 设置A special parameter for HLS recording.
-                     * @param HlsSpecialParam A special parameter for HLS recording.
+                     * @param _hlsSpecialParam A special parameter for HLS recording.
+                     * 
                      */
                     void SetHlsSpecialParam(const HlsSpecialParam& _hlsSpecialParam);
 
                     /**
                      * 判断参数 HlsSpecialParam 是否已赋值
                      * @return HlsSpecialParam 是否已赋值
+                     * 
                      */
                     bool HlsSpecialParamHasBeenSet() const;
 
                     /**
                      * 获取MP3 recording parameter.
                      * @return Mp3Param MP3 recording parameter.
+                     * 
                      */
                     RecordParam GetMp3Param() const;
 
                     /**
                      * 设置MP3 recording parameter.
-                     * @param Mp3Param MP3 recording parameter.
+                     * @param _mp3Param MP3 recording parameter.
+                     * 
                      */
                     void SetMp3Param(const RecordParam& _mp3Param);
 
                     /**
                      * 判断参数 Mp3Param 是否已赋值
                      * @return Mp3Param 是否已赋值
+                     * 
                      */
                     bool Mp3ParamHasBeenSet() const;
 
@@ -238,20 +268,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return RemoveWatermark Whether the watermark is removed.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     bool GetRemoveWatermark() const;
 
                     /**
                      * 设置Whether the watermark is removed.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param RemoveWatermark Whether the watermark is removed.
+                     * @param _removeWatermark Whether the watermark is removed.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetRemoveWatermark(const bool& _removeWatermark);
 
                     /**
                      * 判断参数 RemoveWatermark 是否已赋值
                      * @return RemoveWatermark 是否已赋值
+                     * 
                      */
                     bool RemoveWatermarkHasBeenSet() const;
 
@@ -260,20 +293,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FlvSpecialParam A special parameter for FLV recording.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     FlvSpecialParam GetFlvSpecialParam() const;
 
                     /**
                      * 设置A special parameter for FLV recording.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FlvSpecialParam A special parameter for FLV recording.
+                     * @param _flvSpecialParam A special parameter for FLV recording.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFlvSpecialParam(const FlvSpecialParam& _flvSpecialParam);
 
                     /**
                      * 判断参数 FlvSpecialParam 是否已赋值
                      * @return FlvSpecialParam 是否已赋值
+                     * 
                      */
                     bool FlvSpecialParamHasBeenSet() const;
 

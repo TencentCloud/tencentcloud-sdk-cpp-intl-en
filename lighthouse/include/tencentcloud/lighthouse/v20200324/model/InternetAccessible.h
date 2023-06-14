@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return InternetChargeType Network billing mode. Valid values:
 <li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+                     * 
                      */
                     std::string GetInternetChargeType() const;
 
@@ -60,51 +61,59 @@ namespace TencentCloud
                      * 设置Network billing mode. Valid values:
 <li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
-                     * @param InternetChargeType Network billing mode. Valid values:
+                     * @param _internetChargeType Network billing mode. Valid values:
 <li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
 <li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+                     * 
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
 
                     /**
                      * 判断参数 InternetChargeType 是否已赋值
                      * @return InternetChargeType 是否已赋值
+                     * 
                      */
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Public network outbound bandwidth cap in Mbps.
                      * @return InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置Public network outbound bandwidth cap in Mbps.
-                     * @param InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+                     * @param _internetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取Whether to assign a public IP.
                      * @return PublicIpAssigned Whether to assign a public IP.
+                     * 
                      */
                     bool GetPublicIpAssigned() const;
 
                     /**
                      * 设置Whether to assign a public IP.
-                     * @param PublicIpAssigned Whether to assign a public IP.
+                     * @param _publicIpAssigned Whether to assign a public IP.
+                     * 
                      */
                     void SetPublicIpAssigned(const bool& _publicIpAssigned);
 
                     /**
                      * 判断参数 PublicIpAssigned 是否已赋值
                      * @return PublicIpAssigned 是否已赋值
+                     * 
                      */
                     bool PublicIpAssignedHasBeenSet() const;
 

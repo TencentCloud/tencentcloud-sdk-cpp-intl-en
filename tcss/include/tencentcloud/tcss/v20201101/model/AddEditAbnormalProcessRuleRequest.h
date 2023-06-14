@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Information of the added policy. The policy ID is empty here but cannot be empty when you edit a policy.
                      * @return RuleInfo Information of the added policy. The policy ID is empty here but cannot be empty when you edit a policy.
+                     * 
                      */
                     AbnormalProcessRuleInfo GetRuleInfo() const;
 
                     /**
                      * 设置Information of the added policy. The policy ID is empty here but cannot be empty when you edit a policy.
-                     * @param RuleInfo Information of the added policy. The policy ID is empty here but cannot be empty when you edit a policy.
+                     * @param _ruleInfo Information of the added policy. The policy ID is empty here but cannot be empty when you edit a policy.
+                     * 
                      */
                     void SetRuleInfo(const AbnormalProcessRuleInfo& _ruleInfo);
 
                     /**
                      * 判断参数 RuleInfo 是否已赋值
                      * @return RuleInfo 是否已赋值
+                     * 
                      */
                     bool RuleInfoHasBeenSet() const;
 
                     /**
                      * 获取Required only when an item is allowed
                      * @return EventId Required only when an item is allowed
+                     * 
                      */
                     std::string GetEventId() const;
 
                     /**
                      * 设置Required only when an item is allowed
-                     * @param EventId Required only when an item is allowed
+                     * @param _eventId Required only when an item is allowed
+                     * 
                      */
                     void SetEventId(const std::string& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 

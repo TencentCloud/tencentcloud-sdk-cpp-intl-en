@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Key The tag key.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置The tag key.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Key The tag key.
+                     * @param _key The tag key.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Value The tag value.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置The tag value.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Value The tag value.
+                     * @param _value The tag value.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取ID of the image export task
                      * @return TaskId ID of the image export task
+                     * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取List of COS filenames of the exported images
                      * @return CosPaths List of COS filenames of the exported images
+                     * 
                      */
                     std::vector<std::string> GetCosPaths() const;
 
                     /**
                      * 判断参数 CosPaths 是否已赋值
                      * @return CosPaths 是否已赋值
+                     * 
                      */
                     bool CosPathsHasBeenSet() const;
 

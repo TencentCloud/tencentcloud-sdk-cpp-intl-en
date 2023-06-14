@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The total number of events for the room. The value of this parameter is not affected by `keyword`.
                      * @return Total The total number of events for the room. The value of this parameter is not affected by `keyword`.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Events The event details, including the type and time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<EventInfo> GetEvents() const;
 
                     /**
                      * 判断参数 Events 是否已赋值
                      * @return Events 是否已赋值
+                     * 
                      */
                     bool EventsHasBeenSet() const;
 

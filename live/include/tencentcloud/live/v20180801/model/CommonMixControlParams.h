@@ -51,20 +51,23 @@ namespace TencentCloud
 If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
                      * @return UseMixCropCenter Value range: [0,1]. 
 If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+                     * 
                      */
                     int64_t GetUseMixCropCenter() const;
 
                     /**
                      * 设置Value range: [0,1]. 
 If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
-                     * @param UseMixCropCenter Value range: [0,1]. 
+                     * @param _useMixCropCenter Value range: [0,1]. 
 If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+                     * 
                      */
                     void SetUseMixCropCenter(const int64_t& _useMixCropCenter);
 
                     /**
                      * 判断参数 UseMixCropCenter 是否已赋值
                      * @return UseMixCropCenter 是否已赋值
+                     * 
                      */
                     bool UseMixCropCenterHasBeenSet() const;
 
@@ -73,20 +76,23 @@ If 1 is entered, when the layer resolution in the parameter is different from th
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
                      * @return AllowCopy Value range: [0,1].
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
+                     * 
                      */
                     int64_t GetAllowCopy() const;
 
                     /**
                      * 设置Value range: [0,1].
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
-                     * @param AllowCopy Value range: [0,1].
+                     * @param _allowCopy Value range: [0,1].
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
+                     * 
                      */
                     void SetAllowCopy(const int64_t& _allowCopy);
 
                     /**
                      * 判断参数 AllowCopy 是否已赋值
                      * @return AllowCopy 是否已赋值
+                     * 
                      */
                     bool AllowCopyHasBeenSet() const;
 
@@ -95,20 +101,23 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
 If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
                      * @return PassInputSei Valid values: 0, 1
 If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+                     * 
                      */
                     int64_t GetPassInputSei() const;
 
                     /**
                      * 设置Valid values: 0, 1
 If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
-                     * @param PassInputSei Valid values: 0, 1
+                     * @param _passInputSei Valid values: 0, 1
 If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+                     * 
                      */
                     void SetPassInputSei(const int64_t& _passInputSei);
 
                     /**
                      * 判断参数 PassInputSei 是否已赋值
                      * @return PassInputSei 是否已赋值
+                     * 
                      */
                     bool PassInputSeiHasBeenSet() const;
 

@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot policy ID
                      * @return AutoSnapshotPolicyId Snapshot policy ID
+                     * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
                      * 设置Snapshot policy ID
-                     * @param AutoSnapshotPolicyId Snapshot policy ID
+                     * @param _autoSnapshotPolicyId Snapshot policy ID
+                     * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
 
                     /**
                      * 判断参数 AutoSnapshotPolicyId 是否已赋值
                      * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Page offset
                      * @return Offset Page offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page offset
-                     * @param Offset Page offset
+                     * @param _offset Page offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Page length
                      * @return Limit Page length
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Page length
-                     * @param Limit Page length
+                     * @param _limit Page length
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Filters
                      * @return Filters Filters
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filters
-                     * @param Filters Filters
+                     * @param _filters Filters
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Ascending or descending order
                      * @return Order Ascending or descending order
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Ascending or descending order
-                     * @param Order Ascending or descending order
+                     * @param _order Ascending or descending order
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return OrderField Sorting field
+                     * 
                      */
                     std::string GetOrderField() const;
 
                     /**
                      * 设置Sorting field
-                     * @param OrderField Sorting field
+                     * @param _orderField Sorting field
+                     * 
                      */
                     void SetOrderField(const std::string& _orderField);
 
                     /**
                      * 判断参数 OrderField 是否已赋值
                      * @return OrderField 是否已赋值
+                     * 
                      */
                     bool OrderFieldHasBeenSet() const;
 

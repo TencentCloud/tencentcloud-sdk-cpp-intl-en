@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PrivateIPAddressSet Private network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrivateIPAddressInfo> GetPrivateIPAddressSet() const;
 
                     /**
                      * 设置Private network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateIPAddressSet Private network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
+                     * @param _privateIPAddressSet Private network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateIPAddressSet(const std::vector<PrivateIPAddressInfo>& _privateIPAddressSet);
 
                     /**
                      * 判断参数 PrivateIPAddressSet 是否已赋值
                      * @return PrivateIPAddressSet 是否已赋值
+                     * 
                      */
                     bool PrivateIPAddressSetHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PublicIPAddressSet Public network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PublicIPAddressInfo> GetPublicIPAddressSet() const;
 
                     /**
                      * 设置Public network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PublicIPAddressSet Public network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
+                     * @param _publicIPAddressSet Public network information list of the instance, with the primary ENI followed by secondary ENIs in the order of binding.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicIPAddressSet(const std::vector<PublicIPAddressInfo>& _publicIPAddressSet);
 
                     /**
                      * 判断参数 PublicIPAddressSet 是否已赋值
                      * @return PublicIPAddressSet 是否已赋值
+                     * 
                      */
                     bool PublicIPAddressSetHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceNetworkInfoSet Network information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<InstanceNetworkInfo> GetInstanceNetworkInfoSet() const;
 
                     /**
                      * 设置Network information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceNetworkInfoSet Network information of the instance.
+                     * @param _instanceNetworkInfoSet Network information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceNetworkInfoSet(const std::vector<InstanceNetworkInfo>& _instanceNetworkInfoSet);
 
                     /**
                      * 判断参数 InstanceNetworkInfoSet 是否已赋值
                      * @return InstanceNetworkInfoSet 是否已赋值
+                     * 
                      */
                     bool InstanceNetworkInfoSetHasBeenSet() const;
 

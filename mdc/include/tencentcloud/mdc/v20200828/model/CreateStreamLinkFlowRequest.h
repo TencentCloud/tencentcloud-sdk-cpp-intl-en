@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Flow name
                      * @return FlowName Flow name
+                     * 
                      */
                     std::string GetFlowName() const;
 
                     /**
                      * 设置Flow name
-                     * @param FlowName Flow name
+                     * @param _flowName Flow name
+                     * 
                      */
                     void SetFlowName(const std::string& _flowName);
 
                     /**
                      * 判断参数 FlowName 是否已赋值
                      * @return FlowName 是否已赋值
+                     * 
                      */
                     bool FlowNameHasBeenSet() const;
 
                     /**
                      * 获取Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
                      * @return MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+                     * 
                      */
                     int64_t GetMaxBandwidth() const;
 
                     /**
                      * 设置Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
-                     * @param MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+                     * @param _maxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+                     * 
                      */
                     void SetMaxBandwidth(const int64_t& _maxBandwidth);
 
                     /**
                      * 判断参数 MaxBandwidth 是否已赋值
                      * @return MaxBandwidth 是否已赋值
+                     * 
                      */
                     bool MaxBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Flow input group
                      * @return InputGroup Flow input group
+                     * 
                      */
                     std::vector<CreateInput> GetInputGroup() const;
 
                     /**
                      * 设置Flow input group
-                     * @param InputGroup Flow input group
+                     * @param _inputGroup Flow input group
+                     * 
                      */
                     void SetInputGroup(const std::vector<CreateInput>& _inputGroup);
 
                     /**
                      * 判断参数 InputGroup 是否已赋值
                      * @return InputGroup 是否已赋值
+                     * 
                      */
                     bool InputGroupHasBeenSet() const;
 

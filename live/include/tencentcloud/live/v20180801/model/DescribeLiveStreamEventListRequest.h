@@ -49,6 +49,7 @@ This supports querying the history of 60 days.
                      * @return StartTime Start time. 
 In UTC format, such as 2018-12-29T19:00:00Z.
 This supports querying the history of 60 days.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -56,15 +57,17 @@ This supports querying the history of 60 days.
                      * 设置Start time. 
 In UTC format, such as 2018-12-29T19:00:00Z.
 This supports querying the history of 60 days.
-                     * @param StartTime Start time. 
+                     * @param _startTime Start time. 
 In UTC format, such as 2018-12-29T19:00:00Z.
 This supports querying the history of 60 days.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -75,6 +78,7 @@ This cannot be after the current time and cannot be more than 30 days after the 
                      * @return EndTime End time.
 In UTC format, such as 2018-12-29T20:00:00Z.
 This cannot be after the current time and cannot be more than 30 days after the start time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -82,51 +86,59 @@ This cannot be after the current time and cannot be more than 30 days after the 
                      * 设置End time.
 In UTC format, such as 2018-12-29T20:00:00Z.
 This cannot be after the current time and cannot be more than 30 days after the start time.
-                     * @param EndTime End time.
+                     * @param _endTime End time.
 In UTC format, such as 2018-12-29T20:00:00Z.
 This cannot be after the current time and cannot be more than 30 days after the start time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
                      * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-                     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+                     * @param _appName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -135,20 +147,23 @@ This cannot be after the current time and cannot be more than 30 days after the 
 The IsStrict field can be used to change to exact query.
                      * @return StreamName Stream name; query with wildcard (*) is not supported; fuzzy match by default.
 The IsStrict field can be used to change to exact query.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name; query with wildcard (*) is not supported; fuzzy match by default.
 The IsStrict field can be used to change to exact query.
-                     * @param StreamName Stream name; query with wildcard (*) is not supported; fuzzy match by default.
+                     * @param _streamName Stream name; query with wildcard (*) is not supported; fuzzy match by default.
 The IsStrict field can be used to change to exact query.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
@@ -159,6 +174,7 @@ Note: Currently, query for up to 10,000 entries is supported.
                      * @return PageNum Page number to get.
 Default value: 1.
 Note: Currently, query for up to 10,000 entries is supported.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
@@ -166,15 +182,17 @@ Note: Currently, query for up to 10,000 entries is supported.
                      * 设置Page number to get.
 Default value: 1.
 Note: Currently, query for up to 10,000 entries is supported.
-                     * @param PageNum Page number to get.
+                     * @param _pageNum Page number to get.
 Default value: 1.
 Note: Currently, query for up to 10,000 entries is supported.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -189,6 +207,7 @@ Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
 Note: currently, query for up to 10,000 entries is supported.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
@@ -198,17 +217,19 @@ Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
 Note: currently, query for up to 10,000 entries is supported.
-                     * @param PageSize Number of entries per page.
+                     * @param _pageSize Number of entries per page.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
 Note: currently, query for up to 10,000 entries is supported.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
@@ -219,6 +240,7 @@ Note: currently, query for up to 10,000 entries is supported.
                      * @return IsFilter Whether to filter. No filtering by default.
 0: No filtering at all.
 1: Filter out the failing streams and return only the successful ones.
+                     * 
                      */
                     int64_t GetIsFilter() const;
 
@@ -226,15 +248,17 @@ Note: currently, query for up to 10,000 entries is supported.
                      * 设置Whether to filter. No filtering by default.
 0: No filtering at all.
 1: Filter out the failing streams and return only the successful ones.
-                     * @param IsFilter Whether to filter. No filtering by default.
+                     * @param _isFilter Whether to filter. No filtering by default.
 0: No filtering at all.
 1: Filter out the failing streams and return only the successful ones.
+                     * 
                      */
                     void SetIsFilter(const int64_t& _isFilter);
 
                     /**
                      * 判断参数 IsFilter 是否已赋值
                      * @return IsFilter 是否已赋值
+                     * 
                      */
                     bool IsFilterHasBeenSet() const;
 
@@ -247,6 +271,7 @@ Note: This parameter takes effect when StreamName is used.
 0: Fuzzy match.
 1: Exact query.
 Note: This parameter takes effect when StreamName is used.
+                     * 
                      */
                     int64_t GetIsStrict() const;
 
@@ -255,16 +280,18 @@ Note: This parameter takes effect when StreamName is used.
 0: Fuzzy match.
 1: Exact query.
 Note: This parameter takes effect when StreamName is used.
-                     * @param IsStrict Whether to query exactly. Fuzzy match by default.
+                     * @param _isStrict Whether to query exactly. Fuzzy match by default.
 0: Fuzzy match.
 1: Exact query.
 Note: This parameter takes effect when StreamName is used.
+                     * 
                      */
                     void SetIsStrict(const int64_t& _isStrict);
 
                     /**
                      * 判断参数 IsStrict 是否已赋值
                      * @return IsStrict 是否已赋值
+                     * 
                      */
                     bool IsStrictHasBeenSet() const;
 
@@ -275,6 +302,7 @@ Note: This parameter takes effect when StreamName is used.
                      * @return IsAsc Whether to display in ascending order by end time. Descending order by default.
 0: Descending.
 1: Ascending.
+                     * 
                      */
                     int64_t GetIsAsc() const;
 
@@ -282,15 +310,17 @@ Note: This parameter takes effect when StreamName is used.
                      * 设置Whether to display in ascending order by end time. Descending order by default.
 0: Descending.
 1: Ascending.
-                     * @param IsAsc Whether to display in ascending order by end time. Descending order by default.
+                     * @param _isAsc Whether to display in ascending order by end time. Descending order by default.
 0: Descending.
 1: Ascending.
+                     * 
                      */
                     void SetIsAsc(const int64_t& _isAsc);
 
                     /**
                      * 判断参数 IsAsc 是否已赋值
                      * @return IsAsc 是否已赋值
+                     * 
                      */
                     bool IsAscHasBeenSet() const;
 

@@ -47,144 +47,168 @@ namespace TencentCloud
                     /**
                      * 获取Project ID of connection group
                      * @return ProjectId Project ID of connection group
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID of connection group
-                     * @param ProjectId Project ID of connection group
+                     * @param _projectId Project ID of connection group
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Alias of connection group
                      * @return GroupName Alias of connection group
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Alias of connection group
-                     * @param GroupName Alias of connection group
+                     * @param _groupName Alias of connection group
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
                      * @return RealServerRegion Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
+                     * 
                      */
                     std::string GetRealServerRegion() const;
 
                     /**
                      * 设置Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
-                     * @param RealServerRegion Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
+                     * @param _realServerRegion Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
+                     * 
                      */
                     void SetRealServerRegion(const std::string& _realServerRegion);
 
                     /**
                      * 判断参数 RealServerRegion 是否已赋值
                      * @return RealServerRegion 是否已赋值
+                     * 
                      */
                     bool RealServerRegionHasBeenSet() const;
 
                     /**
                      * 获取List of tags
                      * @return TagSet List of tags
+                     * 
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
                      * 设置List of tags
-                     * @param TagSet List of tags
+                     * @param _tagSet List of tags
+                     * 
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
                     /**
                      * 获取List of acceleration regions, including their names, bandwidth, and concurrence configuration.
                      * @return AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+                     * 
                      */
                     std::vector<AccessConfiguration> GetAccessRegionSet() const;
 
                     /**
                      * 设置List of acceleration regions, including their names, bandwidth, and concurrence configuration.
-                     * @param AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+                     * @param _accessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+                     * 
                      */
                     void SetAccessRegionSet(const std::vector<AccessConfiguration>& _accessRegionSet);
 
                     /**
                      * 判断参数 AccessRegionSet 是否已赋值
                      * @return AccessRegionSet 是否已赋值
+                     * 
                      */
                     bool AccessRegionSetHasBeenSet() const;
 
                     /**
                      * 获取IP version. Valid values: `IPv4` (default), `IPv6`.
                      * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * 
                      */
                     std::string GetIPAddressVersion() const;
 
                     /**
                      * 设置IP version. Valid values: `IPv4` (default), `IPv6`.
-                     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * @param _iPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * 
                      */
                     void SetIPAddressVersion(const std::string& _iPAddressVersion);
 
                     /**
                      * 判断参数 IPAddressVersion 是否已赋值
                      * @return IPAddressVersion 是否已赋值
+                     * 
                      */
                     bool IPAddressVersionHasBeenSet() const;
 
                     /**
                      * 获取Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
                      * @return PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     * 
                      */
                     std::string GetPackageType() const;
 
                     /**
                      * 设置Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
-                     * @param PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     * @param _packageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+                     * 
                      */
                     void SetPackageType(const std::string& _packageType);
 
                     /**
                      * 判断参数 PackageType 是否已赋值
                      * @return PackageType 是否已赋值
+                     * 
                      */
                     bool PackageTypeHasBeenSet() const;
 
                     /**
                      * 获取(Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
                      * @return Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+                     * 
                      */
                     int64_t GetHttp3Supported() const;
 
                     /**
                      * 设置(Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
-                     * @param Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+                     * @param _http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+                     * 
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
                     /**
                      * 判断参数 Http3Supported 是否已赋值
                      * @return Http3Supported 是否已赋值
+                     * 
                      */
                     bool Http3SupportedHasBeenSet() const;
 

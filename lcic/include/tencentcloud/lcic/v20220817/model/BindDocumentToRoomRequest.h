@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Room ID
                      * @return RoomId Room ID
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置Room ID
-                     * @param RoomId Room ID
+                     * @param _roomId Room ID
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Document ID
                      * @return DocumentId Document ID
+                     * 
                      */
                     std::string GetDocumentId() const;
 
                     /**
                      * 设置Document ID
-                     * @param DocumentId Document ID
+                     * @param _documentId Document ID
+                     * 
                      */
                     void SetDocumentId(const std::string& _documentId);
 
                     /**
                      * 判断参数 DocumentId 是否已赋值
                      * @return DocumentId 是否已赋值
+                     * 
                      */
                     bool DocumentIdHasBeenSet() const;
 
                     /**
                      * 获取Binding type. The default value is `0`. The backend passes through this parameter to clients so that the clients can implement business logic based on this parameter.
                      * @return BindType Binding type. The default value is `0`. The backend passes through this parameter to clients so that the clients can implement business logic based on this parameter.
+                     * 
                      */
                     uint64_t GetBindType() const;
 
                     /**
                      * 设置Binding type. The default value is `0`. The backend passes through this parameter to clients so that the clients can implement business logic based on this parameter.
-                     * @param BindType Binding type. The default value is `0`. The backend passes through this parameter to clients so that the clients can implement business logic based on this parameter.
+                     * @param _bindType Binding type. The default value is `0`. The backend passes through this parameter to clients so that the clients can implement business logic based on this parameter.
+                     * 
                      */
                     void SetBindType(const uint64_t& _bindType);
 
                     /**
                      * 判断参数 BindType 是否已赋值
                      * @return BindType 是否已赋值
+                     * 
                      */
                     bool BindTypeHasBeenSet() const;
 

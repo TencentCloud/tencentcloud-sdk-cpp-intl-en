@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Default VpcId
                      * @return VpcId Default VpcId
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Default VpcId
-                     * @param VpcId Default VpcId
+                     * @param _vpcId Default VpcId
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Default SubnetId
                      * @return SubnetId Default SubnetId
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Default SubnetId
-                     * @param SubnetId Default SubnetId
+                     * @param _subnetId Default SubnetId
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 

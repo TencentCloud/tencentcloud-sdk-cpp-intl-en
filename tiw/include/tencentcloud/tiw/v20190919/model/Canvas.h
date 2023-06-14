@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Width and height of the mixed stream canvas
                      * @return LayoutParams Width and height of the mixed stream canvas
+                     * 
                      */
                     LayoutParams GetLayoutParams() const;
 
                     /**
                      * 设置Width and height of the mixed stream canvas
-                     * @param LayoutParams Width and height of the mixed stream canvas
+                     * @param _layoutParams Width and height of the mixed stream canvas
+                     * 
                      */
                     void SetLayoutParams(const LayoutParams& _layoutParams);
 
                     /**
                      * 判断参数 LayoutParams 是否已赋值
                      * @return LayoutParams 是否已赋值
+                     * 
                      */
                     bool LayoutParamsHasBeenSet() const;
 
                     /**
                      * 获取Background color, which is black by default. Its format is RGB. for example, "#FF0000" for the red color.
                      * @return BackgroundColor Background color, which is black by default. Its format is RGB. for example, "#FF0000" for the red color.
+                     * 
                      */
                     std::string GetBackgroundColor() const;
 
                     /**
                      * 设置Background color, which is black by default. Its format is RGB. for example, "#FF0000" for the red color.
-                     * @param BackgroundColor Background color, which is black by default. Its format is RGB. for example, "#FF0000" for the red color.
+                     * @param _backgroundColor Background color, which is black by default. Its format is RGB. for example, "#FF0000" for the red color.
+                     * 
                      */
                     void SetBackgroundColor(const std::string& _backgroundColor);
 
                     /**
                      * 判断参数 BackgroundColor 是否已赋值
                      * @return BackgroundColor 是否已赋值
+                     * 
                      */
                     bool BackgroundColorHasBeenSet() const;
 

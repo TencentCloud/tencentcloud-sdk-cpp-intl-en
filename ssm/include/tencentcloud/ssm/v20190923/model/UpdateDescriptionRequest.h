@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of a Secret whose description is to be updated.
                      * @return SecretName Name of a Secret whose description is to be updated.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of a Secret whose description is to be updated.
-                     * @param SecretName Name of a Secret whose description is to be updated.
+                     * @param _secretName Name of a Secret whose description is to be updated.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取New description information, which can be up to 2048 bytes.
                      * @return Description New description information, which can be up to 2048 bytes.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置New description information, which can be up to 2048 bytes.
-                     * @param Description New description information, which can be up to 2048 bytes.
+                     * @param _description New description information, which can be up to 2048 bytes.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Log type
                      * @return Resource Log type
+                     * 
                      */
                     std::string GetResource() const;
 
                     /**
                      * 设置Log type
-                     * @param Resource Log type
+                     * @param _resource Log type
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取Log table name
                      * @return Metric Log table name
+                     * 
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Log table name
-                     * @param Metric Log table name
+                     * @param _metric Log table name
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
                     /**
                      * 获取Total number of logs
                      * @return TotalCount Total number of logs
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of logs
-                     * @param TotalCount Total number of logs
+                     * @param _totalCount Total number of logs
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of logs
                      * @return DataSet List of logs
+                     * 
                      */
                     std::vector<AuditLogInfo> GetDataSet() const;
 
                     /**
                      * 设置List of logs
-                     * @param DataSet List of logs
+                     * @param _dataSet List of logs
+                     * 
                      */
                     void SetDataSet(const std::vector<AuditLogInfo>& _dataSet);
 
                     /**
                      * 判断参数 DataSet 是否已赋值
                      * @return DataSet 是否已赋值
+                     * 
                      */
                     bool DataSetHasBeenSet() const;
 

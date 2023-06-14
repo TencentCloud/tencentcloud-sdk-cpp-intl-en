@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
-                     * @param Switch Whether to enable HDR. Valid values:
+                     * @param _switch Whether to enable HDR. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -87,6 +90,7 @@ Note:
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
 <li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -98,19 +102,21 @@ Note:
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
 <li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
-                     * @param Type The HDR type. Valid values:
+                     * @param _type The HDR type. Valid values:
 <li>`hdr10`</li>
 <li>`hlg`</li>
 
 Note:
 <li>This parameter is valid only if `Switch` is `ON`.</li>
 <li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

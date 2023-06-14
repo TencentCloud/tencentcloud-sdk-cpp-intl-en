@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
 <li>OFF: disables intelligent frame-specific tagging task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
 <li>OFF: disables intelligent frame-specific tagging task.</li>
-                     * @param Switch Switch of intelligent frame-specific tagging task. Valid values:
+                     * @param _switch Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
 <li>OFF: disables intelligent frame-specific tagging task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
                      * @return ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
                      * 设置Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
-                     * @param ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * @param _screenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
 
                     /**
                      * 判断参数 ScreenshotInterval 是否已赋值
                      * @return ScreenshotInterval 是否已赋值
+                     * 
                      */
                     bool ScreenshotIntervalHasBeenSet() const;
 

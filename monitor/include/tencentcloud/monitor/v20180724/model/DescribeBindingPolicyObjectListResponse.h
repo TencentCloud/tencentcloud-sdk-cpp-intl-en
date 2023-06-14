@@ -50,36 +50,42 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return List List of bound object instances.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribeBindingPolicyObjectListInstance> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
                     /**
                      * 获取Total number of bound object instances.
                      * @return Total Total number of bound object instances.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Number of object instances that are not shielded.
                      * @return NoShieldedSum Number of object instances that are not shielded.
+                     * 
                      */
                     int64_t GetNoShieldedSum() const;
 
                     /**
                      * 判断参数 NoShieldedSum 是否已赋值
                      * @return NoShieldedSum 是否已赋值
+                     * 
                      */
                     bool NoShieldedSumHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceGroup Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribeBindingPolicyObjectListInstanceGroup GetInstanceGroup() const;
 
                     /**
                      * 判断参数 InstanceGroup 是否已赋值
                      * @return InstanceGroup 是否已赋值
+                     * 
                      */
                     bool InstanceGroupHasBeenSet() const;
 

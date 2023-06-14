@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取CCN instance ID.
                      * @return CcnId CCN instance ID.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置CCN instance ID.
-                     * @param CcnId CCN instance ID.
+                     * @param _ccnId CCN instance ID.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
                      * @return BandwidthLimitType CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+                     * 
                      */
                     std::string GetBandwidthLimitType() const;
 
                     /**
                      * 设置CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
-                     * @param BandwidthLimitType CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+                     * @param _bandwidthLimitType CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+                     * 
                      */
                     void SetBandwidthLimitType(const std::string& _bandwidthLimitType);
 
                     /**
                      * 判断参数 BandwidthLimitType 是否已赋值
                      * @return BandwidthLimitType 是否已赋值
+                     * 
                      */
                     bool BandwidthLimitTypeHasBeenSet() const;
 

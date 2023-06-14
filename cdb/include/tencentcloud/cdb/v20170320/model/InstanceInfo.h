@@ -55,54 +55,63 @@ namespace TencentCloud
                     /**
                      * 获取Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
                      * @return WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+                     * 
                      */
                     int64_t GetWanStatus() const;
 
                     /**
                      * 设置Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
-                     * @param WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+                     * @param _wanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+                     * 
                      */
                     void SetWanStatus(const int64_t& _wanStatus);
 
                     /**
                      * 判断参数 WanStatus 是否已赋值
                      * @return WanStatus 是否已赋值
+                     * 
                      */
                     bool WanStatusHasBeenSet() const;
 
                     /**
                      * 获取AZ information
                      * @return Zone AZ information
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ information
-                     * @param Zone AZ information
+                     * @param _zone AZ information
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Initialization flag. Value range: 0 (not initialized), 1 (initialized)
                      * @return InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+                     * 
                      */
                     int64_t GetInitFlag() const;
 
                     /**
                      * 设置Initialization flag. Value range: 0 (not initialized), 1 (initialized)
-                     * @param InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+                     * @param _initFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+                     * 
                      */
                     void SetInitFlag(const int64_t& _initFlag);
 
                     /**
                      * 判断参数 InitFlag 是否已赋值
                      * @return InitFlag 是否已赋值
+                     * 
                      */
                     bool InitFlagHasBeenSet() const;
 
@@ -111,74 +120,86 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RoVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RoVipInfo GetRoVipInfo() const;
 
                     /**
                      * 设置VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RoVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
+                     * @param _roVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRoVipInfo(const RoVipInfo& _roVipInfo);
 
                     /**
                      * 判断参数 RoVipInfo 是否已赋值
                      * @return RoVipInfo 是否已赋值
+                     * 
                      */
                     bool RoVipInfoHasBeenSet() const;
 
                     /**
                      * 获取Memory capacity in MB
                      * @return Memory Memory capacity in MB
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Memory capacity in MB
-                     * @param Memory Memory capacity in MB
+                     * @param _memory Memory capacity in MB
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
                      * @return Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
-                     * @param Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+                     * @param _status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取VPC ID, such as 51102
                      * @return VpcId VPC ID, such as 51102
+                     * 
                      */
                     int64_t GetVpcId() const;
 
                     /**
                      * 设置VPC ID, such as 51102
-                     * @param VpcId VPC ID, such as 51102
+                     * @param _vpcId VPC ID, such as 51102
+                     * 
                      */
                     void SetVpcId(const int64_t& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
@@ -187,92 +208,107 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SlaveInfo GetSlaveInfo() const;
 
                     /**
                      * 设置Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SlaveInfo Information of a secondary server
+                     * @param _slaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSlaveInfo(const SlaveInfo& _slaveInfo);
 
                     /**
                      * 判断参数 SlaveInfo 是否已赋值
                      * @return SlaveInfo 是否已赋值
+                     * 
                      */
                     bool SlaveInfoHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Disk capacity in GB
                      * @return Volume Disk capacity in GB
+                     * 
                      */
                     int64_t GetVolume() const;
 
                     /**
                      * 设置Disk capacity in GB
-                     * @param Volume Disk capacity in GB
+                     * @param _volume Disk capacity in GB
+                     * 
                      */
                     void SetVolume(const int64_t& _volume);
 
                     /**
                      * 判断参数 Volume 是否已赋值
                      * @return Volume 是否已赋值
+                     * 
                      */
                     bool VolumeHasBeenSet() const;
 
                     /**
                      * 获取Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
                      * @return AutoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+                     * 
                      */
                     int64_t GetAutoRenew() const;
 
                     /**
                      * 设置Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
-                     * @param AutoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+                     * @param _autoRenew Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+                     * 
                      */
                     void SetAutoRenew(const int64_t& _autoRenew);
 
                     /**
                      * 判断参数 AutoRenew 是否已赋值
                      * @return AutoRenew 是否已赋值
+                     * 
                      */
                     bool AutoRenewHasBeenSet() const;
 
                     /**
                      * 获取Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
                      * @return ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+                     * 
                      */
                     int64_t GetProtectMode() const;
 
                     /**
                      * 设置Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
-                     * @param ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+                     * @param _protectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+                     * 
                      */
                     void SetProtectMode(const int64_t& _protectMode);
 
                     /**
                      * 判断参数 ProtectMode 是否已赋值
                      * @return ProtectMode 是否已赋值
+                     * 
                      */
                     bool ProtectModeHasBeenSet() const;
 
@@ -281,146 +317,170 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RoGroups Details of a read-only group
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RoGroup> GetRoGroups() const;
 
                     /**
                      * 设置Details of a read-only group
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RoGroups Details of a read-only group
+                     * @param _roGroups Details of a read-only group
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRoGroups(const std::vector<RoGroup>& _roGroups);
 
                     /**
                      * 判断参数 RoGroups 是否已赋值
                      * @return RoGroups 是否已赋值
+                     * 
                      */
                     bool RoGroupsHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID, such as 2333
                      * @return SubnetId Subnet ID, such as 2333
+                     * 
                      */
                     int64_t GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID, such as 2333
-                     * @param SubnetId Subnet ID, such as 2333
+                     * @param _subnetId Subnet ID, such as 2333
+                     * 
                      */
                     void SetSubnetId(const int64_t& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
                      * @return InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+                     * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
                      * 设置Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
-                     * @param InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+                     * @param _instanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+                     * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Region information
                      * @return Region Region information
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region information
-                     * @param Region Region information
+                     * @param _region Region information
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Instance expiration time
                      * @return DeadlineTime Instance expiration time
+                     * 
                      */
                     std::string GetDeadlineTime() const;
 
                     /**
                      * 设置Instance expiration time
-                     * @param DeadlineTime Instance expiration time
+                     * @param _deadlineTime Instance expiration time
+                     * 
                      */
                     void SetDeadlineTime(const std::string& _deadlineTime);
 
                     /**
                      * 判断参数 DeadlineTime 是否已赋值
                      * @return DeadlineTime 是否已赋值
+                     * 
                      */
                     bool DeadlineTimeHasBeenSet() const;
 
                     /**
                      * 获取AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
                      * @return DeployMode AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+                     * 
                      */
                     int64_t GetDeployMode() const;
 
                     /**
                      * 设置AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
-                     * @param DeployMode AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+                     * @param _deployMode AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+                     * 
                      */
                     void SetDeployMode(const int64_t& _deployMode);
 
                     /**
                      * 判断参数 DeployMode 是否已赋值
                      * @return DeployMode 是否已赋值
+                     * 
                      */
                     bool DeployModeHasBeenSet() const;
 
                     /**
                      * 获取Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
                      * @return TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * 
                      */
                     int64_t GetTaskStatus() const;
 
                     /**
                      * 设置Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
-                     * @param TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * @param _taskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+                     * 
                      */
                     void SetTaskStatus(const int64_t& _taskStatus);
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 
@@ -429,74 +489,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MasterInfo GetMasterInfo() const;
 
                     /**
                      * 设置Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MasterInfo Details of a primary instance
+                     * @param _masterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMasterInfo(const MasterInfo& _masterInfo);
 
                     /**
                      * 判断参数 MasterInfo 是否已赋值
                      * @return MasterInfo 是否已赋值
+                     * 
                      */
                     bool MasterInfoHasBeenSet() const;
 
                     /**
                      * 获取Instance type
                      * @return DeviceType Instance type
+                     * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
                      * 设置Instance type
-                     * @param DeviceType Instance type
+                     * @param _deviceType Instance type
+                     * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
 
                     /**
                      * 判断参数 DeviceType 是否已赋值
                      * @return DeviceType 是否已赋值
+                     * 
                      */
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
                      * 获取Kernel version
                      * @return EngineVersion Kernel version
+                     * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
                      * 设置Kernel version
-                     * @param EngineVersion Kernel version
+                     * @param _engineVersion Kernel version
+                     * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
                     /**
                      * 判断参数 EngineVersion 是否已赋值
                      * @return EngineVersion 是否已赋值
+                     * 
                      */
                     bool EngineVersionHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -505,254 +577,296 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DrInfo Details of a disaster recovery instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DrInfo> GetDrInfo() const;
 
                     /**
                      * 设置Details of a disaster recovery instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DrInfo Details of a disaster recovery instance
+                     * @param _drInfo Details of a disaster recovery instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDrInfo(const std::vector<DrInfo>& _drInfo);
 
                     /**
                      * 判断参数 DrInfo 是否已赋值
                      * @return DrInfo 是否已赋值
+                     * 
                      */
                     bool DrInfoHasBeenSet() const;
 
                     /**
                      * 获取Public domain name
                      * @return WanDomain Public domain name
+                     * 
                      */
                     std::string GetWanDomain() const;
 
                     /**
                      * 设置Public domain name
-                     * @param WanDomain Public domain name
+                     * @param _wanDomain Public domain name
+                     * 
                      */
                     void SetWanDomain(const std::string& _wanDomain);
 
                     /**
                      * 判断参数 WanDomain 是否已赋值
                      * @return WanDomain 是否已赋值
+                     * 
                      */
                     bool WanDomainHasBeenSet() const;
 
                     /**
                      * 获取Public network port number
                      * @return WanPort Public network port number
+                     * 
                      */
                     int64_t GetWanPort() const;
 
                     /**
                      * 设置Public network port number
-                     * @param WanPort Public network port number
+                     * @param _wanPort Public network port number
+                     * 
                      */
                     void SetWanPort(const int64_t& _wanPort);
 
                     /**
                      * 判断参数 WanPort 是否已赋值
                      * @return WanPort 是否已赋值
+                     * 
                      */
                     bool WanPortHasBeenSet() const;
 
                     /**
                      * 获取Billing type
                      * @return PayType Billing type
+                     * 
                      */
                     int64_t GetPayType() const;
 
                     /**
                      * 设置Billing type
-                     * @param PayType Billing type
+                     * @param _payType Billing type
+                     * 
                      */
                     void SetPayType(const int64_t& _payType);
 
                     /**
                      * 判断参数 PayType 是否已赋值
                      * @return PayType 是否已赋值
+                     * 
                      */
                     bool PayTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance creation time
                      * @return CreateTime Instance creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Instance creation time
-                     * @param CreateTime Instance creation time
+                     * @param _createTime Instance creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Instance IP
                      * @return Vip Instance IP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Instance IP
-                     * @param Vip Instance IP
+                     * @param _vip Instance IP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Port number
                      * @return Vport Port number
+                     * 
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Port number
-                     * @param Vport Port number
+                     * @param _vport Port number
+                     * 
                      */
                     void SetVport(const int64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
                     /**
                      * 获取Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
                      * @return CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+                     * 
                      */
                     int64_t GetCdbError() const;
 
                     /**
                      * 设置Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
-                     * @param CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+                     * @param _cdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+                     * 
                      */
                     void SetCdbError(const int64_t& _cdbError);
 
                     /**
                      * 判断参数 CdbError 是否已赋值
                      * @return CdbError 是否已赋值
+                     * 
                      */
                     bool CdbErrorHasBeenSet() const;
 
                     /**
                      * 获取VPC descriptor, such as "vpc-5v8wn9mg"
                      * @return UniqVpcId VPC descriptor, such as "vpc-5v8wn9mg"
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC descriptor, such as "vpc-5v8wn9mg"
-                     * @param UniqVpcId VPC descriptor, such as "vpc-5v8wn9mg"
+                     * @param _uniqVpcId VPC descriptor, such as "vpc-5v8wn9mg"
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet descriptor, such as "subnet-1typ0s7d"
                      * @return UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d"
+                     * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
                      * 设置Subnet descriptor, such as "subnet-1typ0s7d"
-                     * @param UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d"
+                     * @param _uniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d"
+                     * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
 
                     /**
                      * 判断参数 UniqSubnetId 是否已赋值
                      * @return UniqSubnetId 是否已赋值
+                     * 
                      */
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Physical ID
                      * @return PhysicalId Physical ID
+                     * 
                      */
                     std::string GetPhysicalId() const;
 
                     /**
                      * 设置Physical ID
-                     * @param PhysicalId Physical ID
+                     * @param _physicalId Physical ID
+                     * 
                      */
                     void SetPhysicalId(const std::string& _physicalId);
 
                     /**
                      * 判断参数 PhysicalId 是否已赋值
                      * @return PhysicalId 是否已赋值
+                     * 
                      */
                     bool PhysicalIdHasBeenSet() const;
 
                     /**
                      * 获取Number of cores
                      * @return Cpu Number of cores
+                     * 
                      */
                     int64_t GetCpu() const;
 
                     /**
                      * 设置Number of cores
-                     * @param Cpu Number of cores
+                     * @param _cpu Number of cores
+                     * 
                      */
                     void SetCpu(const int64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Queries per second
                      * @return Qps Queries per second
+                     * 
                      */
                     int64_t GetQps() const;
 
                     /**
                      * 设置Queries per second
-                     * @param Qps Queries per second
+                     * @param _qps Queries per second
+                     * 
                      */
                     void SetQps(const int64_t& _qps);
 
                     /**
                      * 判断参数 Qps 是否已赋值
                      * @return Qps 是否已赋值
+                     * 
                      */
                     bool QpsHasBeenSet() const;
 
                     /**
                      * 获取AZ name
                      * @return ZoneName AZ name
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置AZ name
-                     * @param ZoneName AZ name
+                     * @param _zoneName AZ name
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
@@ -761,20 +875,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DeviceClass Physical machine model
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeviceClass() const;
 
                     /**
                      * 设置Physical machine model
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DeviceClass Physical machine model
+                     * @param _deviceClass Physical machine model
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeviceClass(const std::string& _deviceClass);
 
                     /**
                      * 判断参数 DeviceClass 是否已赋值
                      * @return DeviceClass 是否已赋值
+                     * 
                      */
                     bool DeviceClassHasBeenSet() const;
 
@@ -783,20 +900,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeployGroupId Placement group ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeployGroupId() const;
 
                     /**
                      * 设置Placement group ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeployGroupId Placement group ID
+                     * @param _deployGroupId Placement group ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeployGroupId(const std::string& _deployGroupId);
 
                     /**
                      * 判断参数 DeployGroupId 是否已赋值
                      * @return DeployGroupId 是否已赋值
+                     * 
                      */
                     bool DeployGroupIdHasBeenSet() const;
 
@@ -805,38 +925,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ZoneId AZ ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置AZ ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneId AZ ID
+                     * @param _zoneId AZ ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes
                      * @return InstanceNodes Number of nodes
+                     * 
                      */
                     int64_t GetInstanceNodes() const;
 
                     /**
                      * 设置Number of nodes
-                     * @param InstanceNodes Number of nodes
+                     * @param _instanceNodes Number of nodes
+                     * 
                      */
                     void SetInstanceNodes(const int64_t& _instanceNodes);
 
                     /**
                      * 判断参数 InstanceNodes 是否已赋值
                      * @return InstanceNodes 是否已赋值
+                     * 
                      */
                     bool InstanceNodesHasBeenSet() const;
 
@@ -845,20 +971,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TagList List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagInfoItem> GetTagList() const;
 
                     /**
                      * 设置List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TagList List of tags
+                     * @param _tagList List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagList(const std::vector<TagInfoItem>& _tagList);
 
                     /**
                      * 判断参数 TagList 是否已赋值
                      * @return TagList 是否已赋值
+                     * 
                      */
                     bool TagListHasBeenSet() const;
 
@@ -867,20 +996,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EngineType Engine type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEngineType() const;
 
                     /**
                      * 设置Engine type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EngineType Engine type
+                     * @param _engineType Engine type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEngineType(const std::string& _engineType);
 
                     /**
                      * 判断参数 EngineType 是否已赋值
                      * @return EngineType 是否已赋值
+                     * 
                      */
                     bool EngineTypeHasBeenSet() const;
 
@@ -889,38 +1021,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaxDelayTime Maximum delay threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxDelayTime() const;
 
                     /**
                      * 设置Maximum delay threshold
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MaxDelayTime Maximum delay threshold
+                     * @param _maxDelayTime Maximum delay threshold
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxDelayTime(const int64_t& _maxDelayTime);
 
                     /**
                      * 判断参数 MaxDelayTime 是否已赋值
                      * @return MaxDelayTime 是否已赋值
+                     * 
                      */
                     bool MaxDelayTimeHasBeenSet() const;
 
                     /**
                      * 获取Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
                      * @return DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
-                     * @param DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * @param _diskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 

@@ -48,24 +48,28 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AddressSet List of unique IDs of the EIPs applied for.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAddressSet() const;
 
                     /**
                      * 判断参数 AddressSet 是否已赋值
                      * @return AddressSet 是否已赋值
+                     * 
                      */
                     bool AddressSetHasBeenSet() const;
 
                     /**
                      * 获取Async task ID (TaskId). You can use the `DescribeTaskResult` API to query the task status.
                      * @return TaskId Async task ID (TaskId). You can use the `DescribeTaskResult` API to query the task status.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

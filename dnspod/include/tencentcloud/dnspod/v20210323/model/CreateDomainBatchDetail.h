@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordList See `RecordInfoBatch`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CreateDomainBatchRecord> GetRecordList() const;
 
                     /**
                      * 设置See `RecordInfoBatch`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordList See `RecordInfoBatch`.
+                     * @param _recordList See `RecordInfoBatch`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecordList(const std::vector<CreateDomainBatchRecord>& _recordList);
 
                     /**
                      * 判断参数 RecordList 是否已赋值
                      * @return RecordList 是否已赋值
+                     * 
                      */
                     bool RecordListHasBeenSet() const;
 
                     /**
                      * 获取Task ID
                      * @return Id Task ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Task ID
-                     * @param Id Task ID
+                     * @param _id Task ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Domain
+                     * @param _domain Domain
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -114,20 +123,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DomainGrade Domain level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomainGrade() const;
 
                     /**
                      * 设置Domain level
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DomainGrade Domain level
+                     * @param _domainGrade Domain level
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomainGrade(const std::string& _domainGrade);
 
                     /**
                      * 判断参数 DomainGrade 是否已赋值
                      * @return DomainGrade 是否已赋值
+                     * 
                      */
                     bool DomainGradeHasBeenSet() const;
 
@@ -136,20 +148,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrMsg Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
                      * 设置Error message
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrMsg Error message
+                     * @param _errMsg Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
 
                     /**
                      * 判断参数 ErrMsg 是否已赋值
                      * @return ErrMsg 是否已赋值
+                     * 
                      */
                     bool ErrMsgHasBeenSet() const;
 
@@ -158,20 +173,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Task running status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task running status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Task running status
+                     * @param _status Task running status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -180,20 +198,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Operation Operation type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置Operation type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Operation Operation type
+                     * @param _operation Operation type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 

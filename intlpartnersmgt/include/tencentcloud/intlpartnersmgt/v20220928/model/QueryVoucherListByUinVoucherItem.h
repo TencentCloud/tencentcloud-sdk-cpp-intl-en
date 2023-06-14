@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Voucher ID
                      * @return VoucherId Voucher ID
+                     * 
                      */
                     std::string GetVoucherId() const;
 
                     /**
                      * 设置Voucher ID
-                     * @param VoucherId Voucher ID
+                     * @param _voucherId Voucher ID
+                     * 
                      */
                     void SetVoucherId(const std::string& _voucherId);
 
                     /**
                      * 判断参数 VoucherId 是否已赋值
                      * @return VoucherId 是否已赋值
+                     * 
                      */
                     bool VoucherIdHasBeenSet() const;
 
                     /**
                      * 获取Voucher status
                      * @return VoucherStatus Voucher status
+                     * 
                      */
                     std::string GetVoucherStatus() const;
 
                     /**
                      * 设置Voucher status
-                     * @param VoucherStatus Voucher status
+                     * @param _voucherStatus Voucher status
+                     * 
                      */
                     void SetVoucherStatus(const std::string& _voucherStatus);
 
                     /**
                      * 判断参数 VoucherStatus 是否已赋值
                      * @return VoucherStatus 是否已赋值
+                     * 
                      */
                     bool VoucherStatusHasBeenSet() const;
 
                     /**
                      * 获取Voucher value
                      * @return TotalAmount Voucher value
+                     * 
                      */
                     double GetTotalAmount() const;
 
                     /**
                      * 设置Voucher value
-                     * @param TotalAmount Voucher value
+                     * @param _totalAmount Voucher value
+                     * 
                      */
                     void SetTotalAmount(const double& _totalAmount);
 
                     /**
                      * 判断参数 TotalAmount 是否已赋值
                      * @return TotalAmount 是否已赋值
+                     * 
                      */
                     bool TotalAmountHasBeenSet() const;
 
                     /**
                      * 获取Balance
                      * @return RemainAmount Balance
+                     * 
                      */
                     double GetRemainAmount() const;
 
                     /**
                      * 设置Balance
-                     * @param RemainAmount Balance
+                     * @param _remainAmount Balance
+                     * 
                      */
                     void SetRemainAmount(const double& _remainAmount);
 
                     /**
                      * 判断参数 RemainAmount 是否已赋值
                      * @return RemainAmount 是否已赋值
+                     * 
                      */
                     bool RemainAmountHasBeenSet() const;
 

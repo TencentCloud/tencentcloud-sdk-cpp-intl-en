@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Key pair ID list. Each request can contain up to 10 key pairs.
                      * @return KeyIds Key pair ID list. Each request can contain up to 10 key pairs.
+                     * 
                      */
                     std::vector<std::string> GetKeyIds() const;
 
                     /**
                      * 设置Key pair ID list. Each request can contain up to 10 key pairs.
-                     * @param KeyIds Key pair ID list. Each request can contain up to 10 key pairs.
+                     * @param _keyIds Key pair ID list. Each request can contain up to 10 key pairs.
+                     * 
                      */
                     void SetKeyIds(const std::vector<std::string>& _keyIds);
 
                     /**
                      * 判断参数 KeyIds 是否已赋值
                      * @return KeyIds 是否已赋值
+                     * 
                      */
                     bool KeyIdsHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot ID, which can be queried through `DescribeSnapshots`.
                      * @return SnapshotId Snapshot ID, which can be queried through `DescribeSnapshots`.
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 设置Snapshot ID, which can be queried through `DescribeSnapshots`.
-                     * @param SnapshotId Snapshot ID, which can be queried through `DescribeSnapshots`.
+                     * @param _snapshotId Snapshot ID, which can be queried through `DescribeSnapshots`.
+                     * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
                      * 获取New snapshot name, which can contain up to 60 characters.
                      * @return SnapshotName New snapshot name, which can contain up to 60 characters.
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置New snapshot name, which can contain up to 60 characters.
-                     * @param SnapshotName New snapshot name, which can contain up to 60 characters.
+                     * @param _snapshotName New snapshot name, which can contain up to 60 characters.
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 

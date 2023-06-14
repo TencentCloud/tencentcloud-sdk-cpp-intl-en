@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The public key.
                      * @return PublicKey The public key.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置The public key.
-                     * @param PublicKey The public key.
+                     * @param _publicKey The public key.
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取The encrypted public key.
                      * @return EncryptPubKey The encrypted public key.
+                     * 
                      */
                     std::string GetEncryptPubKey() const;
 
                     /**
                      * 设置The encrypted public key.
-                     * @param EncryptPubKey The encrypted public key.
+                     * @param _encryptPubKey The encrypted public key.
+                     * 
                      */
                     void SetEncryptPubKey(const std::string& _encryptPubKey);
 
                     /**
                      * 判断参数 EncryptPubKey 是否已赋值
                      * @return EncryptPubKey 是否已赋值
+                     * 
                      */
                     bool EncryptPubKeyHasBeenSet() const;
 

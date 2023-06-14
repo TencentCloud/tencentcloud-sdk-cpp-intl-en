@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Server name.
                      * @return MachineName Server name.
+                     * 
                      */
                     std::string GetMachineName() const;
 
                     /**
                      * 设置Server name.
-                     * @param MachineName Server name.
+                     * @param _machineName Server name.
+                     * 
                      */
                     void SetMachineName(const std::string& _machineName);
 
                     /**
                      * 判断参数 MachineName 是否已赋值
                      * @return MachineName 是否已赋值
+                     * 
                      */
                     bool MachineNameHasBeenSet() const;
 
                     /**
                      * 获取Server OS.
                      * @return MachineOs Server OS.
+                     * 
                      */
                     std::string GetMachineOs() const;
 
                     /**
                      * 设置Server OS.
-                     * @param MachineOs Server OS.
+                     * @param _machineOs Server OS.
+                     * 
                      */
                     void SetMachineOs(const std::string& _machineOs);
 
                     /**
                      * 判断参数 MachineOs 是否已赋值
                      * @return MachineOs 是否已赋值
+                     * 
                      */
                     bool MachineOsHasBeenSet() const;
 
@@ -93,6 +99,7 @@ namespace TencentCloud
 <li>OFFLINE: offline</li>
 <li>ONLINE: online</li>
 <li>MACHINE_STOPPED: shut down</li>
+                     * 
                      */
                     std::string GetMachineStatus() const;
 
@@ -101,88 +108,102 @@ namespace TencentCloud
 <li>OFFLINE: offline</li>
 <li>ONLINE: online</li>
 <li>MACHINE_STOPPED: shut down</li>
-                     * @param MachineStatus Server status.
+                     * @param _machineStatus Server status.
 <li>OFFLINE: offline</li>
 <li>ONLINE: online</li>
 <li>MACHINE_STOPPED: shut down</li>
+                     * 
                      */
                     void SetMachineStatus(const std::string& _machineStatus);
 
                     /**
                      * 判断参数 MachineStatus 是否已赋值
                      * @return MachineStatus 是否已赋值
+                     * 
                      */
                     bool MachineStatusHasBeenSet() const;
 
                     /**
                      * 获取CWP agent `Uuid`. If the agent is offline for a long time, a null character will be returned.
                      * @return Uuid CWP agent `Uuid`. If the agent is offline for a long time, a null character will be returned.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `Uuid`. If the agent is offline for a long time, a null character will be returned.
-                     * @param Uuid CWP agent `Uuid`. If the agent is offline for a long time, a null character will be returned.
+                     * @param _uuid CWP agent `Uuid`. If the agent is offline for a long time, a null character will be returned.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取CVM or BM instance `Uuid`.
                      * @return Quuid CVM or BM instance `Uuid`.
+                     * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置CVM or BM instance `Uuid`.
-                     * @param Quuid CVM or BM instance `Uuid`.
+                     * @param _quuid CVM or BM instance `Uuid`.
+                     * 
                      */
                     void SetQuuid(const std::string& _quuid);
 
                     /**
                      * 判断参数 Quuid 是否已赋值
                      * @return Quuid 是否已赋值
+                     * 
                      */
                     bool QuuidHasBeenSet() const;
 
                     /**
                      * 获取Number of vulnerabilities.
                      * @return VulNum Number of vulnerabilities.
+                     * 
                      */
                     int64_t GetVulNum() const;
 
                     /**
                      * 设置Number of vulnerabilities.
-                     * @param VulNum Number of vulnerabilities.
+                     * @param _vulNum Number of vulnerabilities.
+                     * 
                      */
                     void SetVulNum(const int64_t& _vulNum);
 
                     /**
                      * 判断参数 VulNum 是否已赋值
                      * @return VulNum 是否已赋值
+                     * 
                      */
                     bool VulNumHasBeenSet() const;
 
                     /**
                      * 获取Server IP.
                      * @return MachineIp Server IP.
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Server IP.
-                     * @param MachineIp Server IP.
+                     * @param _machineIp Server IP.
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
@@ -193,6 +214,7 @@ namespace TencentCloud
                      * @return IsProVersion Whether the server has enabled CWP Pro.
 <li>true: yes</li>
 <li>false: no</li>
+                     * 
                      */
                     bool GetIsProVersion() const;
 
@@ -200,33 +222,38 @@ namespace TencentCloud
                      * 设置Whether the server has enabled CWP Pro.
 <li>true: yes</li>
 <li>false: no</li>
-                     * @param IsProVersion Whether the server has enabled CWP Pro.
+                     * @param _isProVersion Whether the server has enabled CWP Pro.
 <li>true: yes</li>
 <li>false: no</li>
+                     * 
                      */
                     void SetIsProVersion(const bool& _isProVersion);
 
                     /**
                      * 判断参数 IsProVersion 是否已赋值
                      * @return IsProVersion 是否已赋值
+                     * 
                      */
                     bool IsProVersionHasBeenSet() const;
 
                     /**
                      * 获取Public IP of server.
                      * @return MachineWanIp Public IP of server.
+                     * 
                      */
                     std::string GetMachineWanIp() const;
 
                     /**
                      * 设置Public IP of server.
-                     * @param MachineWanIp Public IP of server.
+                     * @param _machineWanIp Public IP of server.
+                     * 
                      */
                     void SetMachineWanIp(const std::string& _machineWanIp);
 
                     /**
                      * 判断参数 MachineWanIp 是否已赋值
                      * @return MachineWanIp 是否已赋值
+                     * 
                      */
                     bool MachineWanIpHasBeenSet() const;
 
@@ -235,92 +262,107 @@ namespace TencentCloud
 <li>POSTPAY: post-paid, i.e., pay-as-you-go </li>
                      * @return PayMode Server status.
 <li>POSTPAY: post-paid, i.e., pay-as-you-go </li>
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置Server status.
 <li>POSTPAY: post-paid, i.e., pay-as-you-go </li>
-                     * @param PayMode Server status.
+                     * @param _payMode Server status.
 <li>POSTPAY: post-paid, i.e., pay-as-you-go </li>
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Number of trojans.
                      * @return MalwareNum Number of trojans.
+                     * 
                      */
                     int64_t GetMalwareNum() const;
 
                     /**
                      * 设置Number of trojans.
-                     * @param MalwareNum Number of trojans.
+                     * @param _malwareNum Number of trojans.
+                     * 
                      */
                     void SetMalwareNum(const int64_t& _malwareNum);
 
                     /**
                      * 判断参数 MalwareNum 是否已赋值
                      * @return MalwareNum 是否已赋值
+                     * 
                      */
                     bool MalwareNumHasBeenSet() const;
 
                     /**
                      * 获取Tag information
                      * @return Tag Tag information
+                     * 
                      */
                     std::vector<MachineTag> GetTag() const;
 
                     /**
                      * 设置Tag information
-                     * @param Tag Tag information
+                     * @param _tag Tag information
+                     * 
                      */
                     void SetTag(const std::vector<MachineTag>& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
                     /**
                      * 获取Number of baseline risks.
                      * @return BaselineNum Number of baseline risks.
+                     * 
                      */
                     int64_t GetBaselineNum() const;
 
                     /**
                      * 设置Number of baseline risks.
-                     * @param BaselineNum Number of baseline risks.
+                     * @param _baselineNum Number of baseline risks.
+                     * 
                      */
                     void SetBaselineNum(const int64_t& _baselineNum);
 
                     /**
                      * 判断参数 BaselineNum 是否已赋值
                      * @return BaselineNum 是否已赋值
+                     * 
                      */
                     bool BaselineNumHasBeenSet() const;
 
                     /**
                      * 获取Number of network risks.
                      * @return CyberAttackNum Number of network risks.
+                     * 
                      */
                     int64_t GetCyberAttackNum() const;
 
                     /**
                      * 设置Number of network risks.
-                     * @param CyberAttackNum Number of network risks.
+                     * @param _cyberAttackNum Number of network risks.
+                     * 
                      */
                     void SetCyberAttackNum(const int64_t& _cyberAttackNum);
 
                     /**
                      * 判断参数 CyberAttackNum 是否已赋值
                      * @return CyberAttackNum 是否已赋值
+                     * 
                      */
                     bool CyberAttackNumHasBeenSet() const;
 
@@ -333,6 +375,7 @@ namespace TencentCloud
 <li>SAFE: safe</li>
 <li>RISK: at risk</li>
 <li>UNKNOWN: unknown</li>
+                     * 
                      */
                     std::string GetSecurityStatus() const;
 
@@ -341,52 +384,60 @@ namespace TencentCloud
 <li>SAFE: safe</li>
 <li>RISK: at risk</li>
 <li>UNKNOWN: unknown</li>
-                     * @param SecurityStatus Risk status.
+                     * @param _securityStatus Risk status.
 <li>SAFE: safe</li>
 <li>RISK: at risk</li>
 <li>UNKNOWN: unknown</li>
+                     * 
                      */
                     void SetSecurityStatus(const std::string& _securityStatus);
 
                     /**
                      * 判断参数 SecurityStatus 是否已赋值
                      * @return SecurityStatus 是否已赋值
+                     * 
                      */
                     bool SecurityStatusHasBeenSet() const;
 
                     /**
                      * 获取Number of intrusions
                      * @return InvasionNum Number of intrusions
+                     * 
                      */
                     int64_t GetInvasionNum() const;
 
                     /**
                      * 设置Number of intrusions
-                     * @param InvasionNum Number of intrusions
+                     * @param _invasionNum Number of intrusions
+                     * 
                      */
                     void SetInvasionNum(const int64_t& _invasionNum);
 
                     /**
                      * 判断参数 InvasionNum 是否已赋值
                      * @return InvasionNum 是否已赋值
+                     * 
                      */
                     bool InvasionNumHasBeenSet() const;
 
                     /**
                      * 获取Region information
                      * @return RegionInfo Region information
+                     * 
                      */
                     RegionInfo GetRegionInfo() const;
 
                     /**
                      * 设置Region information
-                     * @param RegionInfo Region information
+                     * @param _regionInfo Region information
+                     * 
                      */
                     void SetRegionInfo(const RegionInfo& _regionInfo);
 
                     /**
                      * 判断参数 RegionInfo 是否已赋值
                      * @return RegionInfo 是否已赋值
+                     * 
                      */
                     bool RegionInfoHasBeenSet() const;
 

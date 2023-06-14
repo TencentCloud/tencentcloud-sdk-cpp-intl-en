@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RenewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
                      * 设置Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RenewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
+                     * @param _renewFlag Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Period Cycle, indicating the number of months (reserved field)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Cycle, indicating the number of months (reserved field)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Period Cycle, indicating the number of months (reserved field)
+                     * @param _period Cycle, indicating the number of months (reserved field)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 

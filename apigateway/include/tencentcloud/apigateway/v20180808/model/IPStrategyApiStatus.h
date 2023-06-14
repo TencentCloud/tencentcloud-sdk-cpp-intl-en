@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of APIs bound to environment.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of APIs bound to environment.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of APIs bound to environment.
+                     * @param _totalCount Number of APIs bound to environment.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiIdStatusSet Details of APIs bound to environment.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IPStrategyApi> GetApiIdStatusSet() const;
 
                     /**
                      * 设置Details of APIs bound to environment.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiIdStatusSet Details of APIs bound to environment.
+                     * @param _apiIdStatusSet Details of APIs bound to environment.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiIdStatusSet(const std::vector<IPStrategyApi>& _apiIdStatusSet);
 
                     /**
                      * 判断参数 ApiIdStatusSet 是否已赋值
                      * @return ApiIdStatusSet 是否已赋值
+                     * 
                      */
                     bool ApiIdStatusSetHasBeenSet() const;
 

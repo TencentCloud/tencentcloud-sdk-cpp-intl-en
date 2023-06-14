@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Scheduled backup day. Values: `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`.
                      * @return BackupDay Scheduled backup day. Values: `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`.
+                     * 
                      */
                     std::string GetBackupDay() const;
 
                     /**
                      * 设置Scheduled backup day. Values: `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`.
-                     * @param BackupDay Scheduled backup day. Values: `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`.
+                     * @param _backupDay Scheduled backup day. Values: `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`.
+                     * 
                      */
                     void SetBackupDay(const std::string& _backupDay);
 
                     /**
                      * 判断参数 BackupDay 是否已赋值
                      * @return BackupDay 是否已赋值
+                     * 
                      */
                     bool BackupDayHasBeenSet() const;
 
                     /**
                      * 获取Backup point in time. Format: HH:mm:ss.
                      * @return BackupTime Backup point in time. Format: HH:mm:ss.
+                     * 
                      */
                     std::string GetBackupTime() const;
 
                     /**
                      * 设置Backup point in time. Format: HH:mm:ss.
-                     * @param BackupTime Backup point in time. Format: HH:mm:ss.
+                     * @param _backupTime Backup point in time. Format: HH:mm:ss.
+                     * 
                      */
                     void SetBackupTime(const std::string& _backupTime);
 
                     /**
                      * 判断参数 BackupTime 是否已赋值
                      * @return BackupTime 是否已赋值
+                     * 
                      */
                     bool BackupTimeHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Temporary credentials
                      * @return Credentials Temporary credentials
+                     * 
                      */
                     Credentials GetCredentials() const;
 
                     /**
                      * 判断参数 Credentials 是否已赋值
                      * @return Credentials 是否已赋值
+                     * 
                      */
                     bool CredentialsHasBeenSet() const;
 
                     /**
                      * 获取Temporary credentials expiration time. A Unix timestamp will be returned which is accurate to the second
                      * @return ExpiredTime Temporary credentials expiration time. A Unix timestamp will be returned which is accurate to the second
+                     * 
                      */
                     uint64_t GetExpiredTime() const;
 
                     /**
                      * 判断参数 ExpiredTime 是否已赋值
                      * @return ExpiredTime 是否已赋值
+                     * 
                      */
                     bool ExpiredTimeHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Expiration Credentials expiration time in UTC time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpiration() const;
 
                     /**
                      * 判断参数 Expiration 是否已赋值
                      * @return Expiration 是否已赋值
+                     * 
                      */
                     bool ExpirationHasBeenSet() const;
 

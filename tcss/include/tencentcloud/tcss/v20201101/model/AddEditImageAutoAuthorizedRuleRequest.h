@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Scope. Valid values: `MANUAL` (specified servers); `ALL` (all images).
                      * @return RangeType Scope. Valid values: `MANUAL` (specified servers); `ALL` (all images).
+                     * 
                      */
                     std::string GetRangeType() const;
 
                     /**
                      * 设置Scope. Valid values: `MANUAL` (specified servers); `ALL` (all images).
-                     * @param RangeType Scope. Valid values: `MANUAL` (specified servers); `ALL` (all images).
+                     * @param _rangeType Scope. Valid values: `MANUAL` (specified servers); `ALL` (all images).
+                     * 
                      */
                     void SetRangeType(const std::string& _rangeType);
 
                     /**
                      * 判断参数 RangeType 是否已赋值
                      * @return RangeType 是否已赋值
+                     * 
                      */
                     bool RangeTypeHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of image licenses per day. `0`: Unlimited.
                      * @return MaxDailyCount Maximum number of image licenses per day. `0`: Unlimited.
+                     * 
                      */
                     int64_t GetMaxDailyCount() const;
 
                     /**
                      * 设置Maximum number of image licenses per day. `0`: Unlimited.
-                     * @param MaxDailyCount Maximum number of image licenses per day. `0`: Unlimited.
+                     * @param _maxDailyCount Maximum number of image licenses per day. `0`: Unlimited.
+                     * 
                      */
                     void SetMaxDailyCount(const int64_t& _maxDailyCount);
 
                     /**
                      * 判断参数 MaxDailyCount 是否已赋值
                      * @return MaxDailyCount 是否已赋值
+                     * 
                      */
                     bool MaxDailyCountHasBeenSet() const;
 
                     /**
                      * 获取Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
                      * @return IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * 
                      */
                     int64_t GetIsEnabled() const;
 
                     /**
                      * 设置Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
-                     * @param IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * @param _isEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * 
                      */
                     void SetIsEnabled(const int64_t& _isEnabled);
 
                     /**
                      * 判断参数 IsEnabled 是否已赋值
                      * @return IsEnabled 是否已赋值
+                     * 
                      */
                     bool IsEnabledHasBeenSet() const;
 
                     /**
                      * 获取IDs of specified servers. This parameter is required when the scope is `MANUAL` and `HostIdFilters` is empty.
                      * @return HostIdSet IDs of specified servers. This parameter is required when the scope is `MANUAL` and `HostIdFilters` is empty.
+                     * 
                      */
                     std::vector<std::string> GetHostIdSet() const;
 
                     /**
                      * 设置IDs of specified servers. This parameter is required when the scope is `MANUAL` and `HostIdFilters` is empty.
-                     * @param HostIdSet IDs of specified servers. This parameter is required when the scope is `MANUAL` and `HostIdFilters` is empty.
+                     * @param _hostIdSet IDs of specified servers. This parameter is required when the scope is `MANUAL` and `HostIdFilters` is empty.
+                     * 
                      */
                     void SetHostIdSet(const std::vector<std::string>& _hostIdSet);
 
                     /**
                      * 判断参数 HostIdSet 是否已赋值
                      * @return HostIdSet 是否已赋值
+                     * 
                      */
                     bool HostIdSetHasBeenSet() const;
 
                     /**
                      * 获取Rule ID, which is required during editing.
                      * @return RuleId Rule ID, which is required during editing.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置Rule ID, which is required during editing.
-                     * @param RuleId Rule ID, which is required during editing.
+                     * @param _ruleId Rule ID, which is required during editing.
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Filter. This parameter is required when the scope is `MANUAL` and `HostIdSet` is empty.
                      * @return HostIdFilters Filter. This parameter is required when the scope is `MANUAL` and `HostIdSet` is empty.
+                     * 
                      */
                     std::vector<AssetFilters> GetHostIdFilters() const;
 
                     /**
                      * 设置Filter. This parameter is required when the scope is `MANUAL` and `HostIdSet` is empty.
-                     * @param HostIdFilters Filter. This parameter is required when the scope is `MANUAL` and `HostIdSet` is empty.
+                     * @param _hostIdFilters Filter. This parameter is required when the scope is `MANUAL` and `HostIdSet` is empty.
+                     * 
                      */
                     void SetHostIdFilters(const std::vector<AssetFilters>& _hostIdFilters);
 
                     /**
                      * 判断参数 HostIdFilters 是否已赋值
                      * @return HostIdFilters 是否已赋值
+                     * 
                      */
                     bool HostIdFiltersHasBeenSet() const;
 
                     /**
                      * 获取Specified server IDs to be excluded
                      * @return ExcludeHostIdSet Specified server IDs to be excluded
+                     * 
                      */
                     std::vector<std::string> GetExcludeHostIdSet() const;
 
                     /**
                      * 设置Specified server IDs to be excluded
-                     * @param ExcludeHostIdSet Specified server IDs to be excluded
+                     * @param _excludeHostIdSet Specified server IDs to be excluded
+                     * 
                      */
                     void SetExcludeHostIdSet(const std::vector<std::string>& _excludeHostIdSet);
 
                     /**
                      * 判断参数 ExcludeHostIdSet 是否已赋值
                      * @return ExcludeHostIdSet 是否已赋值
+                     * 
                      */
                     bool ExcludeHostIdSetHasBeenSet() const;
 

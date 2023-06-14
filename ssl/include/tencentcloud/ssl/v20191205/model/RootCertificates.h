@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Sign Chinese SM signature certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSign() const;
 
                     /**
                      * 设置Chinese SM signature certificate
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Sign Chinese SM signature certificate
+                     * @param _sign Chinese SM signature certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSign(const std::string& _sign);
 
                     /**
                      * 判断参数 Sign 是否已赋值
                      * @return Sign 是否已赋值
+                     * 
                      */
                     bool SignHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Encrypt Chinese SM encryption certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEncrypt() const;
 
                     /**
                      * 设置Chinese SM encryption certificate
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Encrypt Chinese SM encryption certificate
+                     * @param _encrypt Chinese SM encryption certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEncrypt(const std::string& _encrypt);
 
                     /**
                      * 判断参数 Encrypt 是否已赋值
                      * @return Encrypt 是否已赋值
+                     * 
                      */
                     bool EncryptHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Standard Standard certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStandard() const;
 
                     /**
                      * 设置Standard certificate
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Standard Standard certificate
+                     * @param _standard Standard certificate
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStandard(const std::string& _standard);
 
                     /**
                      * 判断参数 Standard 是否已赋值
                      * @return Standard 是否已赋值
+                     * 
                      */
                     bool StandardHasBeenSet() const;
 

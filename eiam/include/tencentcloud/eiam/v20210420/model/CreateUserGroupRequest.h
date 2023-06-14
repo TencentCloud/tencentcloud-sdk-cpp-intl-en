@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取User group nickname, which is unique and can contain up to 64 characters.
                      * @return DisplayName User group nickname, which is unique and can contain up to 64 characters.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置User group nickname, which is unique and can contain up to 64 characters.
-                     * @param DisplayName User group nickname, which is unique and can contain up to 64 characters.
+                     * @param _displayName User group nickname, which is unique and can contain up to 64 characters.
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
                     /**
                      * 获取User group remarks, which can contain up to 512 characters.
                      * @return Description User group remarks, which can contain up to 512 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置User group remarks, which can contain up to 512 characters.
-                     * @param Description User group remarks, which can contain up to 512 characters.
+                     * @param _description User group remarks, which can contain up to 512 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

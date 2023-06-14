@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceID Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceID Instance ID
+                     * @param _instanceID Instance ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicList Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CKafkaTopicInfo> GetTopicList() const;
 
                     /**
                      * 设置Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TopicList Topic list
+                     * @param _topicList Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicList(const std::vector<CKafkaTopicInfo>& _topicList);
 
                     /**
                      * 判断参数 TopicList 是否已赋值
                      * @return TopicList 是否已赋值
+                     * 
                      */
                     bool TopicListHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RouteList Route list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CkafkaRouteInfo> GetRouteList() const;
 
                     /**
                      * 设置Route list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RouteList Route list
+                     * @param _routeList Route list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouteList(const std::vector<CkafkaRouteInfo>& _routeList);
 
                     /**
                      * 判断参数 RouteList 是否已赋值
                      * @return RouteList 是否已赋值
+                     * 
                      */
                     bool RouteListHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return KafkaVersion Kafka version number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKafkaVersion() const;
 
                     /**
                      * 设置Kafka version number
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param KafkaVersion Kafka version number
+                     * @param _kafkaVersion Kafka version number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKafkaVersion(const std::string& _kafkaVersion);
 
                     /**
                      * 判断参数 KafkaVersion 是否已赋值
                      * @return KafkaVersion 是否已赋值
+                     * 
                      */
                     bool KafkaVersionHasBeenSet() const;
 

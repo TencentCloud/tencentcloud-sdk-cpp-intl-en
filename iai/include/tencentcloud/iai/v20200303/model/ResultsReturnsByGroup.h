@@ -52,36 +52,42 @@ namespace TencentCloud
                     /**
                      * 获取Position of detected face frame
                      * @return FaceRect Position of detected face frame
+                     * 
                      */
                     FaceRect GetFaceRect() const;
 
                     /**
                      * 设置Position of detected face frame
-                     * @param FaceRect Position of detected face frame
+                     * @param _faceRect Position of detected face frame
+                     * 
                      */
                     void SetFaceRect(const FaceRect& _faceRect);
 
                     /**
                      * 判断参数 FaceRect 是否已赋值
                      * @return FaceRect 是否已赋值
+                     * 
                      */
                     bool FaceRectHasBeenSet() const;
 
                     /**
                      * 获取Recognition result.
                      * @return GroupCandidates Recognition result.
+                     * 
                      */
                     std::vector<GroupCandidate> GetGroupCandidates() const;
 
                     /**
                      * 设置Recognition result.
-                     * @param GroupCandidates Recognition result.
+                     * @param _groupCandidates Recognition result.
+                     * 
                      */
                     void SetGroupCandidates(const std::vector<GroupCandidate>& _groupCandidates);
 
                     /**
                      * 判断参数 GroupCandidates 是否已赋值
                      * @return GroupCandidates 是否已赋值
+                     * 
                      */
                     bool GroupCandidatesHasBeenSet() const;
 
@@ -90,20 +96,23 @@ namespace TencentCloud
 -1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
                      * @return RetCode Status return code of detected face image. 0: normal. 
 -1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+                     * 
                      */
                     int64_t GetRetCode() const;
 
                     /**
                      * 设置Status return code of detected face image. 0: normal. 
 -1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
-                     * @param RetCode Status return code of detected face image. 0: normal. 
+                     * @param _retCode Status return code of detected face image. 0: normal. 
 -1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+                     * 
                      */
                     void SetRetCode(const int64_t& _retCode);
 
                     /**
                      * 判断参数 RetCode 是否已赋值
                      * @return RetCode 是否已赋值
+                     * 
                      */
                     bool RetCodeHasBeenSet() const;
 

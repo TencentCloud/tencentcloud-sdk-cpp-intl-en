@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Order name
                      * @return DealName Order name
+                     * 
                      */
                     std::string GetDealName() const;
 
                     /**
                      * 设置Order name
-                     * @param DealName Order name
+                     * @param _dealName Order name
+                     * 
                      */
                     void SetDealName(const std::string& _dealName);
 
                     /**
                      * 判断参数 DealName 是否已赋值
                      * @return DealName 是否已赋值
+                     * 
                      */
                     bool DealNameHasBeenSet() const;
 
                     /**
                      * 获取User
                      * @return OwnerUin User
+                     * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
                      * 设置User
-                     * @param OwnerUin User
+                     * @param _ownerUin User
+                     * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
 
                     /**
                      * 判断参数 OwnerUin 是否已赋值
                      * @return OwnerUin 是否已赋值
+                     * 
                      */
                     bool OwnerUinHasBeenSet() const;
 
                     /**
                      * 获取Number of instances involved in order
                      * @return Count Number of instances involved in order
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of instances involved in order
-                     * @param Count Number of instances involved in order
+                     * @param _count Number of instances involved in order
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Billing mode. 0: pay-as-you-go
                      * @return PayMode Billing mode. 0: pay-as-you-go
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置Billing mode. 0: pay-as-you-go
-                     * @param PayMode Billing mode. 0: pay-as-you-go
+                     * @param _payMode Billing mode. 0: pay-as-you-go
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Async task flow ID
                      * @return FlowId Async task flow ID
+                     * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 设置Async task flow ID
-                     * @param FlowId Async task flow ID
+                     * @param _flowId Async task flow ID
+                     * 
                      */
                     void SetFlowId(const int64_t& _flowId);
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID array
                      * @return DBInstanceIdSet Instance ID array
+                     * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
                      * 设置Instance ID array
-                     * @param DBInstanceIdSet Instance ID array
+                     * @param _dBInstanceIdSet Instance ID array
+                     * 
                      */
                     void SetDBInstanceIdSet(const std::vector<std::string>& _dBInstanceIdSet);
 
                     /**
                      * 判断参数 DBInstanceIdSet 是否已赋值
                      * @return DBInstanceIdSet 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdSetHasBeenSet() const;
 

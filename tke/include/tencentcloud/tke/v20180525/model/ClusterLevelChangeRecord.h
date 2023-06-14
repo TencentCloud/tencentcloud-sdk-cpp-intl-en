@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Record ID
                      * @return ID Record ID
+                     * 
                      */
                     std::string GetID() const;
 
                     /**
                      * 设置Record ID
-                     * @param ID Record ID
+                     * @param _iD Record ID
+                     * 
                      */
                     void SetID(const std::string& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterID Cluster ID
+                     * 
                      */
                     std::string GetClusterID() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterID Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
                      */
                     void SetClusterID(const std::string& _clusterID);
 
                     /**
                      * 判断参数 ClusterID 是否已赋值
                      * @return ClusterID 是否已赋值
+                     * 
                      */
                     bool ClusterIDHasBeenSet() const;
 
                     /**
                      * 获取Status (valid values: `trading`, `upgrading`, `success`, `failed`)
                      * @return Status Status (valid values: `trading`, `upgrading`, `success`, `failed`)
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status (valid values: `trading`, `upgrading`, `success`, `failed`)
-                     * @param Status Status (valid values: `trading`, `upgrading`, `success`, `failed`)
+                     * @param _status Status (valid values: `trading`, `upgrading`, `success`, `failed`)
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Status description
                      * @return Message Status description
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Status description
-                     * @param Message Status description
+                     * @param _message Status description
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Original model
                      * @return OldLevel Original model
+                     * 
                      */
                     std::string GetOldLevel() const;
 
                     /**
                      * 设置Original model
-                     * @param OldLevel Original model
+                     * @param _oldLevel Original model
+                     * 
                      */
                     void SetOldLevel(const std::string& _oldLevel);
 
                     /**
                      * 判断参数 OldLevel 是否已赋值
                      * @return OldLevel 是否已赋值
+                     * 
                      */
                     bool OldLevelHasBeenSet() const;
 
                     /**
                      * 获取New model
                      * @return NewLevel New model
+                     * 
                      */
                     std::string GetNewLevel() const;
 
                     /**
                      * 设置New model
-                     * @param NewLevel New model
+                     * @param _newLevel New model
+                     * 
                      */
                     void SetNewLevel(const std::string& _newLevel);
 
                     /**
                      * 判断参数 NewLevel 是否已赋值
                      * @return NewLevel 是否已赋值
+                     * 
                      */
                     bool NewLevelHasBeenSet() const;
 
                     /**
                      * 获取Trigger type (valid values: `manual`, `auto`)
                      * @return TriggerType Trigger type (valid values: `manual`, `auto`)
+                     * 
                      */
                     std::string GetTriggerType() const;
 
                     /**
                      * 设置Trigger type (valid values: `manual`, `auto`)
-                     * @param TriggerType Trigger type (valid values: `manual`, `auto`)
+                     * @param _triggerType Trigger type (valid values: `manual`, `auto`)
+                     * 
                      */
                     void SetTriggerType(const std::string& _triggerType);
 
                     /**
                      * 判断参数 TriggerType 是否已赋值
                      * @return TriggerType 是否已赋值
+                     * 
                      */
                     bool TriggerTypeHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartedAt Start time
+                     * 
                      */
                     std::string GetStartedAt() const;
 
                     /**
                      * 设置Start time
-                     * @param StartedAt Start time
+                     * @param _startedAt Start time
+                     * 
                      */
                     void SetStartedAt(const std::string& _startedAt);
 
                     /**
                      * 判断参数 StartedAt 是否已赋值
                      * @return StartedAt 是否已赋值
+                     * 
                      */
                     bool StartedAtHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndedAt End time
+                     * 
                      */
                     std::string GetEndedAt() const;
 
                     /**
                      * 设置End time
-                     * @param EndedAt End time
+                     * @param _endedAt End time
+                     * 
                      */
                     void SetEndedAt(const std::string& _endedAt);
 
                     /**
                      * 判断参数 EndedAt 是否已赋值
                      * @return EndedAt 是否已赋值
+                     * 
                      */
                     bool EndedAtHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Scaling group ID
                      * @return AutoScalingGroupId Scaling group ID
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Scaling group ID
-                     * @param AutoScalingGroupId Scaling group ID
+                     * @param _autoScalingGroupId Scaling group ID
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>NORMAL: Normal<br>
 <li>WARNING: Warning<br>
 <li>CRITICAL: Serious warning<br>
+                     * 
                      */
                     std::string GetLevel() const;
 
@@ -82,34 +86,39 @@ namespace TencentCloud
 <li>NORMAL: Normal<br>
 <li>WARNING: Warning<br>
 <li>CRITICAL: Serious warning<br>
-                     * @param Level Scaling group warning level. Valid values:<br>
+                     * @param _level Scaling group warning level. Valid values:<br>
 <li>NORMAL: Normal<br>
 <li>WARNING: Warning<br>
 <li>CRITICAL: Serious warning<br>
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
                     /**
                      * 获取A collection of suggestions for scaling group configurations.
                      * @return Advices A collection of suggestions for scaling group configurations.
+                     * 
                      */
                     std::vector<Advice> GetAdvices() const;
 
                     /**
                      * 设置A collection of suggestions for scaling group configurations.
-                     * @param Advices A collection of suggestions for scaling group configurations.
+                     * @param _advices A collection of suggestions for scaling group configurations.
+                     * 
                      */
                     void SetAdvices(const std::vector<Advice>& _advices);
 
                     /**
                      * 判断参数 Advices 是否已赋值
                      * @return Advices 是否已赋值
+                     * 
                      */
                     bool AdvicesHasBeenSet() const;
 

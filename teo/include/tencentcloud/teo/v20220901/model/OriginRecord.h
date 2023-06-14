@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取The origin record value, which can be an IPv4/IPv6 address or a domain name.
                      * @return Record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+                     * 
                      */
                     std::string GetRecord() const;
 
                     /**
                      * 设置The origin record value, which can be an IPv4/IPv6 address or a domain name.
-                     * @param Record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+                     * @param _record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+                     * 
                      */
                     void SetRecord(const std::string& _record);
 
                     /**
                      * 判断参数 Record 是否已赋值
                      * @return Record 是否已赋值
+                     * 
                      */
                     bool RecordHasBeenSet() const;
 
                     /**
                      * 获取The origin record ID.
                      * @return RecordId The origin record ID.
+                     * 
                      */
                     std::string GetRecordId() const;
 
                     /**
                      * 设置The origin record ID.
-                     * @param RecordId The origin record ID.
+                     * @param _recordId The origin record ID.
+                     * 
                      */
                     void SetRecordId(const std::string& _recordId);
 
                     /**
                      * 判断参数 RecordId 是否已赋值
                      * @return RecordId 是否已赋值
+                     * 
                      */
                     bool RecordIdHasBeenSet() const;
 
                     /**
                      * 获取The origin port. Value rang: 1-65535.
                      * @return Port The origin port. Value rang: 1-65535.
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置The origin port. Value rang: 1-65535.
-                     * @param Port The origin port. Value rang: 1-65535.
+                     * @param _port The origin port. Value rang: 1-65535.
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -114,6 +123,7 @@ If a value between 1-100 is passed, the total weight of multiple origins in a gr
 The weight when `ConfigurationType=proto`.
 If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
 If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+                     * 
                      */
                     uint64_t GetWeight() const;
 
@@ -124,18 +134,20 @@ If a value between 1-100 is passed, the total weight of multiple origins in a gr
 The weight when `ConfigurationType=proto`.
 If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
 If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
-                     * @param Weight The weight when `ConfigurationType=weight`.
+                     * @param _weight The weight when `ConfigurationType=weight`.
 If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
 If a value between 1-100 is passed, the total weight of multiple origins in a group should be 100, indicating that origin-pull is performed by weight.
 The weight when `ConfigurationType=proto`.
 If 0 or no value is passed, the weight of each origin in a group will be 0 or left empty, indicating that origin-pull is performed by round-robin.
 If a value between 1-100 is passed, the total weight of multiple origins with the same protocol in a group should be 100, indicating that origin-pull is performed by weight.
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 
@@ -146,6 +158,7 @@ If a value between 1-100 is passed, the total weight of multiple origins with th
                      * @return Proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
 <li>`http`: HTTP protocol</li>
 <li>`https`: HTTPS protocol</li>
+                     * 
                      */
                     std::string GetProto() const;
 
@@ -153,15 +166,17 @@ If a value between 1-100 is passed, the total weight of multiple origins with th
                      * 设置The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
 <li>`http`: HTTP protocol</li>
 <li>`https`: HTTPS protocol</li>
-                     * @param Proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
+                     * @param _proto The origin protocol when `ConfigurationType=proto`, indicating that origin-pull is performed by protocol.
 <li>`http`: HTTP protocol</li>
 <li>`https`: HTTPS protocol</li>
+                     * 
                      */
                     void SetProto(const std::string& _proto);
 
                     /**
                      * 判断参数 Proto 是否已赋值
                      * @return Proto 是否已赋值
+                     * 
                      */
                     bool ProtoHasBeenSet() const;
 
@@ -178,6 +193,7 @@ If a value between 1-100 is passed, the total weight of multiple origins with th
 <li>`Africa`</li>
 <li>`Oceania`</li>
 <li>`Americas`</li>An origin group must have at least one origin configured with all regions.
+                     * 
                      */
                     std::vector<std::string> GetArea() const;
 
@@ -188,18 +204,20 @@ If a value between 1-100 is passed, the total weight of multiple origins with th
 <li>`Africa`</li>
 <li>`Oceania`</li>
 <li>`Americas`</li>An origin group must have at least one origin configured with all regions.
-                     * @param Area The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
+                     * @param _area The region when `ConfigurationType=area`, which is specified by country code (ISO 3166 alpha-2) or continent code. If not specified, it indicates all regions. Supported continent codes:
 <li>`Asia`</li>
 <li>`Europe`</li>
 <li>`Africa`</li>
 <li>`Oceania`</li>
 <li>`Americas`</li>An origin group must have at least one origin configured with all regions.
+                     * 
                      */
                     void SetArea(const std::vector<std::string>& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -212,6 +230,7 @@ Whether the origin group is private. Values:
 Whether the origin group is private. Values:
 <li>`true`: Yes.</li>
 <li>`false`: No.</li>If not specified, it defaults to false.
+                     * 
                      */
                     bool GetPrivate() const;
 
@@ -220,34 +239,39 @@ Whether the origin group is private. Values:
 Whether the origin group is private. Values:
 <li>`true`: Yes.</li>
 <li>`false`: No.</li>If not specified, it defaults to false.
-                     * @param Private It is valid only when `OriginType=third_part`.
+                     * @param _private It is valid only when `OriginType=third_part`.
 Whether the origin group is private. Values:
 <li>`true`: Yes.</li>
 <li>`false`: No.</li>If not specified, it defaults to false.
+                     * 
                      */
                     void SetPrivate(const bool& _private);
 
                     /**
                      * 判断参数 Private 是否已赋值
                      * @return Private 是否已赋值
+                     * 
                      */
                     bool PrivateHasBeenSet() const;
 
                     /**
                      * 获取The authentication parameter, which is used when `Private=true`.
                      * @return PrivateParameters The authentication parameter, which is used when `Private=true`.
+                     * 
                      */
                     std::vector<PrivateParameter> GetPrivateParameters() const;
 
                     /**
                      * 设置The authentication parameter, which is used when `Private=true`.
-                     * @param PrivateParameters The authentication parameter, which is used when `Private=true`.
+                     * @param _privateParameters The authentication parameter, which is used when `Private=true`.
+                     * 
                      */
                     void SetPrivateParameters(const std::vector<PrivateParameter>& _privateParameters);
 
                     /**
                      * 判断参数 PrivateParameters 是否已赋值
                      * @return PrivateParameters 是否已赋值
+                     * 
                      */
                     bool PrivateParametersHasBeenSet() const;
 

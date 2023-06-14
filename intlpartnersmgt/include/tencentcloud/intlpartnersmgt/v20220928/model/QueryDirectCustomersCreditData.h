@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取User UIN
                      * @return Uin User UIN
+                     * 
                      */
                     uint64_t GetUin() const;
 
                     /**
                      * 设置User UIN
-                     * @param Uin User UIN
+                     * @param _uin User UIN
+                     * 
                      */
                     void SetUin(const uint64_t& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取Total credit
                      * @return TotalCredit Total credit
+                     * 
                      */
                     double GetTotalCredit() const;
 
                     /**
                      * 设置Total credit
-                     * @param TotalCredit Total credit
+                     * @param _totalCredit Total credit
+                     * 
                      */
                     void SetTotalCredit(const double& _totalCredit);
 
                     /**
                      * 判断参数 TotalCredit 是否已赋值
                      * @return TotalCredit 是否已赋值
+                     * 
                      */
                     bool TotalCreditHasBeenSet() const;
 
                     /**
                      * 获取Remaining credit
                      * @return RemainingCredit Remaining credit
+                     * 
                      */
                     double GetRemainingCredit() const;
 
                     /**
                      * 设置Remaining credit
-                     * @param RemainingCredit Remaining credit
+                     * @param _remainingCredit Remaining credit
+                     * 
                      */
                     void SetRemainingCredit(const double& _remainingCredit);
 
                     /**
                      * 判断参数 RemainingCredit 是否已赋值
                      * @return RemainingCredit 是否已赋值
+                     * 
                      */
                     bool RemainingCreditHasBeenSet() const;
 

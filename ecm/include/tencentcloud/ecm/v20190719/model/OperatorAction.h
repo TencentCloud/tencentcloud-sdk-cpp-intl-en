@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Executable operation
                      * @return Action Executable operation
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Executable operation
-                     * @param Action Executable operation
+                     * @param _action Executable operation
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Code Code
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Code
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Code Code
+                     * @param _code Code
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Message Specific information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Specific information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Message Specific information
+                     * @param _message Specific information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

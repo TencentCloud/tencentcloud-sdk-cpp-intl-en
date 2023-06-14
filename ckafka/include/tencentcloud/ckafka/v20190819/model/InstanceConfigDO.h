@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether to create topics automatically
                      * @return AutoCreateTopicsEnable Whether to create topics automatically
+                     * 
                      */
                     bool GetAutoCreateTopicsEnable() const;
 
                     /**
                      * 设置Whether to create topics automatically
-                     * @param AutoCreateTopicsEnable Whether to create topics automatically
+                     * @param _autoCreateTopicsEnable Whether to create topics automatically
+                     * 
                      */
                     void SetAutoCreateTopicsEnable(const bool& _autoCreateTopicsEnable);
 
                     /**
                      * 判断参数 AutoCreateTopicsEnable 是否已赋值
                      * @return AutoCreateTopicsEnable 是否已赋值
+                     * 
                      */
                     bool AutoCreateTopicsEnableHasBeenSet() const;
 
                     /**
                      * 获取Number of partitions
                      * @return DefaultNumPartitions Number of partitions
+                     * 
                      */
                     int64_t GetDefaultNumPartitions() const;
 
                     /**
                      * 设置Number of partitions
-                     * @param DefaultNumPartitions Number of partitions
+                     * @param _defaultNumPartitions Number of partitions
+                     * 
                      */
                     void SetDefaultNumPartitions(const int64_t& _defaultNumPartitions);
 
                     /**
                      * 判断参数 DefaultNumPartitions 是否已赋值
                      * @return DefaultNumPartitions 是否已赋值
+                     * 
                      */
                     bool DefaultNumPartitionsHasBeenSet() const;
 
                     /**
                      * 获取Default replication factor
                      * @return DefaultReplicationFactor Default replication factor
+                     * 
                      */
                     int64_t GetDefaultReplicationFactor() const;
 
                     /**
                      * 设置Default replication factor
-                     * @param DefaultReplicationFactor Default replication factor
+                     * @param _defaultReplicationFactor Default replication factor
+                     * 
                      */
                     void SetDefaultReplicationFactor(const int64_t& _defaultReplicationFactor);
 
                     /**
                      * 判断参数 DefaultReplicationFactor 是否已赋值
                      * @return DefaultReplicationFactor 是否已赋值
+                     * 
                      */
                     bool DefaultReplicationFactorHasBeenSet() const;
 

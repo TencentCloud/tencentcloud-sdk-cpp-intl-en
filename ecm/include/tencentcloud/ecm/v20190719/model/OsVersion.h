@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取OS type
                      * @return OsName OS type
+                     * 
                      */
                     std::string GetOsName() const;
 
                     /**
                      * 设置OS type
-                     * @param OsName OS type
+                     * @param _osName OS type
+                     * 
                      */
                     void SetOsName(const std::string& _osName);
 
                     /**
                      * 判断参数 OsName 是否已赋值
                      * @return OsName 是否已赋值
+                     * 
                      */
                     bool OsNameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OsVersions Supported OS versions
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetOsVersions() const;
 
                     /**
                      * 设置Supported OS versions
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OsVersions Supported OS versions
+                     * @param _osVersions Supported OS versions
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOsVersions(const std::vector<std::string>& _osVersions);
 
                     /**
                      * 判断参数 OsVersions 是否已赋值
                      * @return OsVersions 是否已赋值
+                     * 
                      */
                     bool OsVersionsHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Architecture Supported OS architecture
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetArchitecture() const;
 
                     /**
                      * 设置Supported OS architecture
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Architecture Supported OS architecture
+                     * @param _architecture Supported OS architecture
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetArchitecture(const std::vector<std::string>& _architecture);
 
                     /**
                      * 判断参数 Architecture 是否已赋值
                      * @return Architecture 是否已赋值
+                     * 
                      */
                     bool ArchitectureHasBeenSet() const;
 

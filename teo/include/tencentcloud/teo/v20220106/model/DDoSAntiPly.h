@@ -49,234 +49,273 @@ namespace TencentCloud
                     /**
                      * 获取Enables TCP protocol blocking. `on` (enable); `off` (disable).
                      * @return DropTcp Enables TCP protocol blocking. `on` (enable); `off` (disable).
+                     * 
                      */
                     std::string GetDropTcp() const;
 
                     /**
                      * 设置Enables TCP protocol blocking. `on` (enable); `off` (disable).
-                     * @param DropTcp Enables TCP protocol blocking. `on` (enable); `off` (disable).
+                     * @param _dropTcp Enables TCP protocol blocking. `on` (enable); `off` (disable).
+                     * 
                      */
                     void SetDropTcp(const std::string& _dropTcp);
 
                     /**
                      * 判断参数 DropTcp 是否已赋值
                      * @return DropTcp 是否已赋值
+                     * 
                      */
                     bool DropTcpHasBeenSet() const;
 
                     /**
                      * 获取Enables UDP protocol blocking. `on` (enable); `off` (disable).
                      * @return DropUdp Enables UDP protocol blocking. `on` (enable); `off` (disable).
+                     * 
                      */
                     std::string GetDropUdp() const;
 
                     /**
                      * 设置Enables UDP protocol blocking. `on` (enable); `off` (disable).
-                     * @param DropUdp Enables UDP protocol blocking. `on` (enable); `off` (disable).
+                     * @param _dropUdp Enables UDP protocol blocking. `on` (enable); `off` (disable).
+                     * 
                      */
                     void SetDropUdp(const std::string& _dropUdp);
 
                     /**
                      * 判断参数 DropUdp 是否已赋值
                      * @return DropUdp 是否已赋值
+                     * 
                      */
                     bool DropUdpHasBeenSet() const;
 
                     /**
                      * 获取Enables ICMP protocol blocking. `on` (enable); `off` (disable).
                      * @return DropIcmp Enables ICMP protocol blocking. `on` (enable); `off` (disable).
+                     * 
                      */
                     std::string GetDropIcmp() const;
 
                     /**
                      * 设置Enables ICMP protocol blocking. `on` (enable); `off` (disable).
-                     * @param DropIcmp Enables ICMP protocol blocking. `on` (enable); `off` (disable).
+                     * @param _dropIcmp Enables ICMP protocol blocking. `on` (enable); `off` (disable).
+                     * 
                      */
                     void SetDropIcmp(const std::string& _dropIcmp);
 
                     /**
                      * 判断参数 DropIcmp 是否已赋值
                      * @return DropIcmp 是否已赋值
+                     * 
                      */
                     bool DropIcmpHasBeenSet() const;
 
                     /**
                      * 获取Enables blocking for other protocols. `on` (enable); `off` (disable).
                      * @return DropOther Enables blocking for other protocols. `on` (enable); `off` (disable).
+                     * 
                      */
                     std::string GetDropOther() const;
 
                     /**
                      * 设置Enables blocking for other protocols. `on` (enable); `off` (disable).
-                     * @param DropOther Enables blocking for other protocols. `on` (enable); `off` (disable).
+                     * @param _dropOther Enables blocking for other protocols. `on` (enable); `off` (disable).
+                     * 
                      */
                     void SetDropOther(const std::string& _dropOther);
 
                     /**
                      * 判断参数 DropOther 是否已赋值
                      * @return DropOther 是否已赋值
+                     * 
                      */
                     bool DropOtherHasBeenSet() const;
 
                     /**
                      * 获取Number of new connections the source port can establish. Value range: 0-4294967295.
                      * @return SourceCreateLimit Number of new connections the source port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     int64_t GetSourceCreateLimit() const;
 
                     /**
                      * 设置Number of new connections the source port can establish. Value range: 0-4294967295.
-                     * @param SourceCreateLimit Number of new connections the source port can establish. Value range: 0-4294967295.
+                     * @param _sourceCreateLimit Number of new connections the source port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     void SetSourceCreateLimit(const int64_t& _sourceCreateLimit);
 
                     /**
                      * 判断参数 SourceCreateLimit 是否已赋值
                      * @return SourceCreateLimit 是否已赋值
+                     * 
                      */
                     bool SourceCreateLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of concurrent connections the source port can establish. Value range: 0-4294967295.
                      * @return SourceConnectLimit Number of concurrent connections the source port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     int64_t GetSourceConnectLimit() const;
 
                     /**
                      * 设置Number of concurrent connections the source port can establish. Value range: 0-4294967295.
-                     * @param SourceConnectLimit Number of concurrent connections the source port can establish. Value range: 0-4294967295.
+                     * @param _sourceConnectLimit Number of concurrent connections the source port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     void SetSourceConnectLimit(const int64_t& _sourceConnectLimit);
 
                     /**
                      * 判断参数 SourceConnectLimit 是否已赋值
                      * @return SourceConnectLimit 是否已赋值
+                     * 
                      */
                     bool SourceConnectLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of new connections the destination port can establish. Value range: 0-4294967295.
                      * @return DestinationCreateLimit Number of new connections the destination port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     int64_t GetDestinationCreateLimit() const;
 
                     /**
                      * 设置Number of new connections the destination port can establish. Value range: 0-4294967295.
-                     * @param DestinationCreateLimit Number of new connections the destination port can establish. Value range: 0-4294967295.
+                     * @param _destinationCreateLimit Number of new connections the destination port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     void SetDestinationCreateLimit(const int64_t& _destinationCreateLimit);
 
                     /**
                      * 判断参数 DestinationCreateLimit 是否已赋值
                      * @return DestinationCreateLimit 是否已赋值
+                     * 
                      */
                     bool DestinationCreateLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of concurrent connections the destination port can establish. Value range: 0-4294967295.
                      * @return DestinationConnectLimit Number of concurrent connections the destination port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     int64_t GetDestinationConnectLimit() const;
 
                     /**
                      * 设置Number of concurrent connections the destination port can establish. Value range: 0-4294967295.
-                     * @param DestinationConnectLimit Number of concurrent connections the destination port can establish. Value range: 0-4294967295.
+                     * @param _destinationConnectLimit Number of concurrent connections the destination port can establish. Value range: 0-4294967295.
+                     * 
                      */
                     void SetDestinationConnectLimit(const int64_t& _destinationConnectLimit);
 
                     /**
                      * 判断参数 DestinationConnectLimit 是否已赋值
                      * @return DestinationConnectLimit 是否已赋值
+                     * 
                      */
                     bool DestinationConnectLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of abnormal connections allowed. Value range: 0-4294967295.
                      * @return AbnormalConnectNum Number of abnormal connections allowed. Value range: 0-4294967295.
+                     * 
                      */
                     int64_t GetAbnormalConnectNum() const;
 
                     /**
                      * 设置Number of abnormal connections allowed. Value range: 0-4294967295.
-                     * @param AbnormalConnectNum Number of abnormal connections allowed. Value range: 0-4294967295.
+                     * @param _abnormalConnectNum Number of abnormal connections allowed. Value range: 0-4294967295.
+                     * 
                      */
                     void SetAbnormalConnectNum(const int64_t& _abnormalConnectNum);
 
                     /**
                      * 判断参数 AbnormalConnectNum 是否已赋值
                      * @return AbnormalConnectNum 是否已赋值
+                     * 
                      */
                     bool AbnormalConnectNumHasBeenSet() const;
 
                     /**
                      * 获取Specifies the ratio of SYN exceptions to trigger alerts. Value range: 0-100
                      * @return AbnormalSynRatio Specifies the ratio of SYN exceptions to trigger alerts. Value range: 0-100
+                     * 
                      */
                     int64_t GetAbnormalSynRatio() const;
 
                     /**
                      * 设置Specifies the ratio of SYN exceptions to trigger alerts. Value range: 0-100
-                     * @param AbnormalSynRatio Specifies the ratio of SYN exceptions to trigger alerts. Value range: 0-100
+                     * @param _abnormalSynRatio Specifies the ratio of SYN exceptions to trigger alerts. Value range: 0-100
+                     * 
                      */
                     void SetAbnormalSynRatio(const int64_t& _abnormalSynRatio);
 
                     /**
                      * 判断参数 AbnormalSynRatio 是否已赋值
                      * @return AbnormalSynRatio 是否已赋值
+                     * 
                      */
                     bool AbnormalSynRatioHasBeenSet() const;
 
                     /**
                      * 获取Specifies a max number of SYN packets that triggers alarms. Value range: 0-65535
                      * @return AbnormalSynNum Specifies a max number of SYN packets that triggers alarms. Value range: 0-65535
+                     * 
                      */
                     int64_t GetAbnormalSynNum() const;
 
                     /**
                      * 设置Specifies a max number of SYN packets that triggers alarms. Value range: 0-65535
-                     * @param AbnormalSynNum Specifies a max number of SYN packets that triggers alarms. Value range: 0-65535
+                     * @param _abnormalSynNum Specifies a max number of SYN packets that triggers alarms. Value range: 0-65535
+                     * 
                      */
                     void SetAbnormalSynNum(const int64_t& _abnormalSynNum);
 
                     /**
                      * 判断参数 AbnormalSynNum 是否已赋值
                      * @return AbnormalSynNum 是否已赋值
+                     * 
                      */
                     bool AbnormalSynNumHasBeenSet() const;
 
                     /**
                      * 获取Connection timeout period. Value range: 0-65535.
                      * @return ConnectTimeout Connection timeout period. Value range: 0-65535.
+                     * 
                      */
                     int64_t GetConnectTimeout() const;
 
                     /**
                      * 设置Connection timeout period. Value range: 0-65535.
-                     * @param ConnectTimeout Connection timeout period. Value range: 0-65535.
+                     * @param _connectTimeout Connection timeout period. Value range: 0-65535.
+                     * 
                      */
                     void SetConnectTimeout(const int64_t& _connectTimeout);
 
                     /**
                      * 判断参数 ConnectTimeout 是否已赋值
                      * @return ConnectTimeout 是否已赋值
+                     * 
                      */
                     bool ConnectTimeoutHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable null session protection. `0`: Disable; `1`: Enable.
                      * @return EmptyConnectProtect Whether to enable null session protection. `0`: Disable; `1`: Enable.
+                     * 
                      */
                     std::string GetEmptyConnectProtect() const;
 
                     /**
                      * 设置Whether to enable null session protection. `0`: Disable; `1`: Enable.
-                     * @param EmptyConnectProtect Whether to enable null session protection. `0`: Disable; `1`: Enable.
+                     * @param _emptyConnectProtect Whether to enable null session protection. `0`: Disable; `1`: Enable.
+                     * 
                      */
                     void SetEmptyConnectProtect(const std::string& _emptyConnectProtect);
 
                     /**
                      * 判断参数 EmptyConnectProtect 是否已赋值
                      * @return EmptyConnectProtect 是否已赋值
+                     * 
                      */
                     bool EmptyConnectProtectHasBeenSet() const;
 
@@ -285,20 +324,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UdpShard Whether to enable UDP fragmentation. `off`: Disable; `on`: Enable.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUdpShard() const;
 
                     /**
                      * 设置Whether to enable UDP fragmentation. `off`: Disable; `on`: Enable.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UdpShard Whether to enable UDP fragmentation. `off`: Disable; `on`: Enable.
+                     * @param _udpShard Whether to enable UDP fragmentation. `off`: Disable; `on`: Enable.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUdpShard(const std::string& _udpShard);
 
                     /**
                      * 判断参数 UdpShard 是否已赋值
                      * @return UdpShard 是否已赋值
+                     * 
                      */
                     bool UdpShardHasBeenSet() const;
 

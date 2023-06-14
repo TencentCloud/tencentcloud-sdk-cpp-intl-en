@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique instance ID.
                      * @return InstanceId Unique instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Unique instance ID.
-                     * @param InstanceId Unique instance ID.
+                     * @param _instanceId Unique instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Route ID.
                      * @return RouteId Route ID.
+                     * 
                      */
                     int64_t GetRouteId() const;
 
                     /**
                      * 设置Route ID.
-                     * @param RouteId Route ID.
+                     * @param _routeId Route ID.
+                     * 
                      */
                     void SetRouteId(const int64_t& _routeId);
 
                     /**
                      * 判断参数 RouteId 是否已赋值
                      * @return RouteId 是否已赋值
+                     * 
                      */
                     bool RouteIdHasBeenSet() const;
 
                     /**
                      * 获取AppId of the caller.
                      * @return CallerAppid AppId of the caller.
+                     * 
                      */
                     int64_t GetCallerAppid() const;
 
                     /**
                      * 设置AppId of the caller.
-                     * @param CallerAppid AppId of the caller.
+                     * @param _callerAppid AppId of the caller.
+                     * 
                      */
                     void SetCallerAppid(const int64_t& _callerAppid);
 
                     /**
                      * 判断参数 CallerAppid 是否已赋值
                      * @return CallerAppid 是否已赋值
+                     * 
                      */
                     bool CallerAppidHasBeenSet() const;
 
                     /**
                      * 获取The time when a route was deleted.
                      * @return DeleteRouteTime The time when a route was deleted.
+                     * 
                      */
                     std::string GetDeleteRouteTime() const;
 
                     /**
                      * 设置The time when a route was deleted.
-                     * @param DeleteRouteTime The time when a route was deleted.
+                     * @param _deleteRouteTime The time when a route was deleted.
+                     * 
                      */
                     void SetDeleteRouteTime(const std::string& _deleteRouteTime);
 
                     /**
                      * 判断参数 DeleteRouteTime 是否已赋值
                      * @return DeleteRouteTime 是否已赋值
+                     * 
                      */
                     bool DeleteRouteTimeHasBeenSet() const;
 

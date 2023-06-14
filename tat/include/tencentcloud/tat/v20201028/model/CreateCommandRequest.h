@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
                      * @return CommandName Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+                     * 
                      */
                     std::string GetCommandName() const;
 
                     /**
                      * 设置Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
-                     * @param CommandName Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+                     * @param _commandName Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+                     * 
                      */
                     void SetCommandName(const std::string& _commandName);
 
                     /**
                      * 判断参数 CommandName 是否已赋值
                      * @return CommandName 是否已赋值
+                     * 
                      */
                     bool CommandNameHasBeenSet() const;
 
                     /**
                      * 获取Base64-encoded command. The maximum length is 64 KB.
                      * @return Content Base64-encoded command. The maximum length is 64 KB.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Base64-encoded command. The maximum length is 64 KB.
-                     * @param Content Base64-encoded command. The maximum length is 64 KB.
+                     * @param _content Base64-encoded command. The maximum length is 64 KB.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Command description. The maximum length is 120 characters.
                      * @return Description Command description. The maximum length is 120 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Command description. The maximum length is 120 characters.
-                     * @param Description Command description. The maximum length is 120 characters.
+                     * @param _description Command description. The maximum length is 120 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
                      * @return CommandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * 
                      */
                     std::string GetCommandType() const;
 
                     /**
                      * 设置Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
-                     * @param CommandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * @param _commandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+                     * 
                      */
                     void SetCommandType(const std::string& _commandType);
 
                     /**
                      * 判断参数 CommandType 是否已赋值
                      * @return CommandType 是否已赋值
+                     * 
                      */
                     bool CommandTypeHasBeenSet() const;
 
                     /**
                      * 获取Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
                      * @return WorkingDirectory Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
+                     * 
                      */
                     std::string GetWorkingDirectory() const;
 
                     /**
                      * 设置Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
-                     * @param WorkingDirectory Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
+                     * @param _workingDirectory Command execution path. The default value is /root for `SHELL` commands and C:\Program Files\qcloud\tat_agent\workdir for `POWERSHELL` commands.
+                     * 
                      */
                     void SetWorkingDirectory(const std::string& _workingDirectory);
 
                     /**
                      * 判断参数 WorkingDirectory 是否已赋值
                      * @return WorkingDirectory 是否已赋值
+                     * 
                      */
                     bool WorkingDirectoryHasBeenSet() const;
 
                     /**
                      * 获取Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
                      * @return Timeout Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
+                     * 
                      */
                     uint64_t GetTimeout() const;
 
                     /**
                      * 设置Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
-                     * @param Timeout Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
+                     * @param _timeout Command timeout period. Default value: 60 seconds. Value range: [1, 86400].
+                     * 
                      */
                     void SetTimeout(const uint64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
@@ -158,6 +176,7 @@ Default value: `false`.
                      * @return EnableParameter Whether to enable the custom parameter feature.
 This cannot be modified once created.
 Default value: `false`.
+                     * 
                      */
                     bool GetEnableParameter() const;
 
@@ -165,15 +184,17 @@ Default value: `false`.
                      * 设置Whether to enable the custom parameter feature.
 This cannot be modified once created.
 Default value: `false`.
-                     * @param EnableParameter Whether to enable the custom parameter feature.
+                     * @param _enableParameter Whether to enable the custom parameter feature.
 This cannot be modified once created.
 Default value: `false`.
+                     * 
                      */
                     void SetEnableParameter(const bool& _enableParameter);
 
                     /**
                      * 判断参数 EnableParameter 是否已赋值
                      * @return EnableParameter 是否已赋值
+                     * 
                      */
                     bool EnableParameterHasBeenSet() const;
 
@@ -188,6 +209,7 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
 If no parameter value is provided in the `InvokeCommand` API, the default value is used.
 Up to 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 
                      */
                     std::string GetDefaultParameters() const;
 
@@ -197,35 +219,40 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
 If no parameter value is provided in the `InvokeCommand` API, the default value is used.
 Up to 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-                     * @param DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
+                     * @param _defaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
 `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
 If no parameter value is provided in the `InvokeCommand` API, the default value is used.
 Up to 20 custom parameters are supported.
 The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+                     * 
                      */
                     void SetDefaultParameters(const std::string& _defaultParameters);
 
                     /**
                      * 判断参数 DefaultParameters 是否已赋值
                      * @return DefaultParameters 是否已赋值
+                     * 
                      */
                     bool DefaultParametersHasBeenSet() const;
 
                     /**
                      * 获取Tags bound to the command. At most 10 tags are allowed.
                      * @return Tags Tags bound to the command. At most 10 tags are allowed.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tags bound to the command. At most 10 tags are allowed.
-                     * @param Tags Tags bound to the command. At most 10 tags are allowed.
+                     * @param _tags Tags bound to the command. At most 10 tags are allowed.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -234,38 +261,44 @@ The name of the custom parameter cannot exceed 64 characters and can contain [a-
 The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. By default, the root user is used to execute commands on Linux and the System user is used on Windows.
                      * @return Username The username used to execute the command on the CVM or Lighthouse instance.
 The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. By default, the root user is used to execute commands on Linux and the System user is used on Windows.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置The username used to execute the command on the CVM or Lighthouse instance.
 The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. By default, the root user is used to execute commands on Linux and the System user is used on Windows.
-                     * @param Username The username used to execute the command on the CVM or Lighthouse instance.
+                     * @param _username The username used to execute the command on the CVM or Lighthouse instance.
 The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. By default, the root user is used to execute commands on Linux and the System user is used on Windows.
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
                      * @return OutputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+                     * 
                      */
                     std::string GetOutputCOSBucketUrl() const;
 
                     /**
                      * 设置The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
-                     * @param OutputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+                     * @param _outputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+                     * 
                      */
                     void SetOutputCOSBucketUrl(const std::string& _outputCOSBucketUrl);
 
                     /**
                      * 判断参数 OutputCOSBucketUrl 是否已赋值
                      * @return OutputCOSBucketUrl 是否已赋值
+                     * 
                      */
                     bool OutputCOSBucketUrlHasBeenSet() const;
 
@@ -278,6 +311,7 @@ The principle of least privilege is the best practice for permission management.
 1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
 2. Use a slash (/) to create a subdirectory.
 3. Consecutive dots (.) and slashes (/) are not allowed. It can not start with a slash (/). 
+                     * 
                      */
                     std::string GetOutputCOSKeyPrefix() const;
 
@@ -286,16 +320,18 @@ The principle of least privilege is the best practice for permission management.
 1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
 2. Use a slash (/) to create a subdirectory.
 3. Consecutive dots (.) and slashes (/) are not allowed. It can not start with a slash (/). 
-                     * @param OutputCOSKeyPrefix The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
+                     * @param _outputCOSKeyPrefix The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
 1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
 2. Use a slash (/) to create a subdirectory.
 3. Consecutive dots (.) and slashes (/) are not allowed. It can not start with a slash (/). 
+                     * 
                      */
                     void SetOutputCOSKeyPrefix(const std::string& _outputCOSKeyPrefix);
 
                     /**
                      * 判断参数 OutputCOSKeyPrefix 是否已赋值
                      * @return OutputCOSKeyPrefix 是否已赋值
+                     * 
                      */
                     bool OutputCOSKeyPrefixHasBeenSet() const;
 

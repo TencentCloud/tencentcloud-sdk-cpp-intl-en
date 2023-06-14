@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup mode. 0: automatic backup; 1: manual backup
                      * @return BackupType Backup mode. 0: automatic backup; 1: manual backup
+                     * 
                      */
                     uint64_t GetBackupType() const;
 
                     /**
                      * 设置Backup mode. 0: automatic backup; 1: manual backup
-                     * @param BackupType Backup mode. 0: automatic backup; 1: manual backup
+                     * @param _backupType Backup mode. 0: automatic backup; 1: manual backup
+                     * 
                      */
                     void SetBackupType(const uint64_t& _backupType);
 
                     /**
                      * 判断参数 BackupType 是否已赋值
                      * @return BackupType 是否已赋值
+                     * 
                      */
                     bool BackupTypeHasBeenSet() const;
 
                     /**
                      * 获取Backup name
                      * @return BackupName Backup name
+                     * 
                      */
                     std::string GetBackupName() const;
 
                     /**
                      * 设置Backup name
-                     * @param BackupName Backup name
+                     * @param _backupName Backup name
+                     * 
                      */
                     void SetBackupName(const std::string& _backupName);
 
                     /**
                      * 判断参数 BackupName 是否已赋值
                      * @return BackupName 是否已赋值
+                     * 
                      */
                     bool BackupNameHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupDesc Backup remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackupDesc() const;
 
                     /**
                      * 设置Backup remarks
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BackupDesc Backup remarks
+                     * @param _backupDesc Backup remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackupDesc(const std::string& _backupDesc);
 
                     /**
                      * 判断参数 BackupDesc 是否已赋值
                      * @return BackupDesc 是否已赋值
+                     * 
                      */
                     bool BackupDescHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupSize Backup file size in KB
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetBackupSize() const;
 
                     /**
                      * 设置Backup file size in KB
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BackupSize Backup file size in KB
+                     * @param _backupSize Backup file size in KB
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackupSize(const uint64_t& _backupSize);
 
                     /**
                      * 判断参数 BackupSize 是否已赋值
                      * @return BackupSize 是否已赋值
+                     * 
                      */
                     bool BackupSizeHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Backup start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Backup start time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Backup start time
+                     * @param _startTime Backup start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -171,56 +189,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime Backup end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Backup end time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime Backup end time
+                     * @param _endTime Backup end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Backup status. 1: backing up; 2: backed up successful
                      * @return Status Backup status. 1: backing up; 2: backed up successful
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Backup status. 1: backing up; 2: backed up successful
-                     * @param Status Backup status. 1: backing up; 2: backed up successful
+                     * @param _status Backup status. 1: backing up; 2: backed up successful
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Backup method. 0: logical backup; 1: physical backup
                      * @return BackupMethod Backup method. 0: logical backup; 1: physical backup
+                     * 
                      */
                     uint64_t GetBackupMethod() const;
 
                     /**
                      * 设置Backup method. 0: logical backup; 1: physical backup
-                     * @param BackupMethod Backup method. 0: logical backup; 1: physical backup
+                     * @param _backupMethod Backup method. 0: logical backup; 1: physical backup
+                     * 
                      */
                     void SetBackupMethod(const uint64_t& _backupMethod);
 
                     /**
                      * 判断参数 BackupMethod 是否已赋值
                      * @return BackupMethod 是否已赋值
+                     * 
                      */
                     bool BackupMethodHasBeenSet() const;
 

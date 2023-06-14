@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Export status. Valid values: `SUCCESS`, `FAILURE`, `RUNNING`.
                      * @return ExportStatus Export status. Valid values: `SUCCESS`, `FAILURE`, `RUNNING`.
+                     * 
                      */
                     std::string GetExportStatus() const;
 
                     /**
                      * 判断参数 ExportStatus 是否已赋值
                      * @return ExportStatus 是否已赋值
+                     * 
                      */
                     bool ExportStatusHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DownloadURL Download URL
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDownloadURL() const;
 
                     /**
                      * 判断参数 DownloadURL 是否已赋值
                      * @return DownloadURL 是否已赋值
+                     * 
                      */
                     bool DownloadURLHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExportProgress Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetExportProgress() const;
 
                     /**
                      * 判断参数 ExportProgress 是否已赋值
                      * @return ExportProgress 是否已赋值
+                     * 
                      */
                     bool ExportProgressHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailureMsg Failure cause
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFailureMsg() const;
 
                     /**
                      * 判断参数 FailureMsg 是否已赋值
                      * @return FailureMsg 是否已赋值
+                     * 
                      */
                     bool FailureMsgHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Order number
                      * @return DealName Order number
+                     * 
                      */
                     std::string GetDealName() const;
 
                     /**
                      * 设置Order number
-                     * @param DealName Order number
+                     * @param _dealName Order number
+                     * 
                      */
                     void SetDealName(const std::string& _dealName);
 
                     /**
                      * 判断参数 DealName 是否已赋值
                      * @return DealName 是否已赋值
+                     * 
                      */
                     bool DealNameHasBeenSet() const;
 
                     /**
                      * 获取Account
                      * @return OwnerUin Account
+                     * 
                      */
                     std::string GetOwnerUin() const;
 
                     /**
                      * 设置Account
-                     * @param OwnerUin Account
+                     * @param _ownerUin Account
+                     * 
                      */
                     void SetOwnerUin(const std::string& _ownerUin);
 
                     /**
                      * 判断参数 OwnerUin 是否已赋值
                      * @return OwnerUin 是否已赋值
+                     * 
                      */
                     bool OwnerUinHasBeenSet() const;
 
                     /**
                      * 获取Number of items
                      * @return Count Number of items
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of items
-                     * @param Count Number of items
+                     * @param _count Number of items
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取ID of the associated process, which can be used to query the process execution status.
                      * @return FlowId ID of the associated process, which can be used to query the process execution status.
+                     * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 设置ID of the associated process, which can be used to query the process execution status.
-                     * @param FlowId ID of the associated process, which can be used to query the process execution status.
+                     * @param _flowId ID of the associated process, which can be used to query the process execution status.
+                     * 
                      */
                     void SetFlowId(const int64_t& _flowId);
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
@@ -123,38 +135,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
+                     * @param _instanceIds The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
                      * @return PayMode Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
-                     * @param PayMode Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
+                     * @param _payMode Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 

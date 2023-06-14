@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the flow log.
                      * @return FlowLogId The unique ID of the flow log.
+                     * 
                      */
                     std::string GetFlowLogId() const;
 
                     /**
                      * 设置The unique ID of the flow log.
-                     * @param FlowLogId The unique ID of the flow log.
+                     * @param _flowLogId The unique ID of the flow log.
+                     * 
                      */
                     void SetFlowLogId(const std::string& _flowLogId);
 
                     /**
                      * 判断参数 FlowLogId 是否已赋值
                      * @return FlowLogId 是否已赋值
+                     * 
                      */
                     bool FlowLogIdHasBeenSet() const;
 
                     /**
                      * 获取The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
                      * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
-                     * @param VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
+                     * @param _vpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 

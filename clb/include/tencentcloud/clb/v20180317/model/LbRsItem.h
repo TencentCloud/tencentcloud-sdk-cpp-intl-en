@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Private network IP to be queried, which can be of the CVM or ENI.
                      * @return PrivateIp Private network IP to be queried, which can be of the CVM or ENI.
+                     * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
                      * 设置Private network IP to be queried, which can be of the CVM or ENI.
-                     * @param PrivateIp Private network IP to be queried, which can be of the CVM or ENI.
+                     * @param _privateIp Private network IP to be queried, which can be of the CVM or ENI.
+                     * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
 
                     /**
                      * 判断参数 PrivateIp 是否已赋值
                      * @return PrivateIp 是否已赋值
+                     * 
                      */
                     bool PrivateIpHasBeenSet() const;
 

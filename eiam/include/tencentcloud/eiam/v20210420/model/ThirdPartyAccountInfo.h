@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AccountCode Third-Party account code. `2` indicates WeCom account.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAccountCode() const;
 
                     /**
                      * 设置Third-Party account code. `2` indicates WeCom account.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AccountCode Third-Party account code. `2` indicates WeCom account.
+                     * @param _accountCode Third-Party account code. `2` indicates WeCom account.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAccountCode(const std::string& _accountCode);
 
                     /**
                      * 判断参数 AccountCode 是否已赋值
                      * @return AccountCode 是否已赋值
+                     * 
                      */
                     bool AccountCodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AccountName Username of the account.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAccountName() const;
 
                     /**
                      * 设置Username of the account.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AccountName Username of the account.
+                     * @param _accountName Username of the account.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAccountName(const std::string& _accountName);
 
                     /**
                      * 判断参数 AccountName 是否已赋值
                      * @return AccountName 是否已赋值
+                     * 
                      */
                     bool AccountNameHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique task ID.
                      * @return TaskId Unique task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Unique task ID.
-                     * @param TaskId Unique task ID.
+                     * @param _taskId Unique task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -78,6 +81,7 @@ namespace TencentCloud
 - RECORDING: Recording in progress.
 - STOPPED: Recording stopped.
 - FINISHED: Recording finished.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -88,90 +92,104 @@ namespace TencentCloud
 - RECORDING: Recording in progress.
 - STOPPED: Recording stopped.
 - FINISHED: Recording finished.
-                     * @param Status Status of the real-time recording task.
+                     * @param _status Status of the real-time recording task.
 - PAUSED: Recording paused.
 - PREPARED: Recording in preparation.
 - RECORDING: Recording in progress.
 - STOPPED: Recording stopped.
 - FINISHED: Recording finished.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Room ID of the real-time recording task.
                      * @return RoomId Room ID of the real-time recording task.
+                     * 
                      */
                     int64_t GetRoomId() const;
 
                     /**
                      * 设置Room ID of the real-time recording task.
-                     * @param RoomId Room ID of the real-time recording task.
+                     * @param _roomId Room ID of the real-time recording task.
+                     * 
                      */
                     void SetRoomId(const int64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the task.
                      * @return CreateTime Creation time of the task.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of the task.
-                     * @param CreateTime Creation time of the task.
+                     * @param _createTime Creation time of the task.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Real-time recording result.
                      * @return Result Real-time recording result.
+                     * 
                      */
                     RecordTaskResult GetResult() const;
 
                     /**
                      * 设置Real-time recording result.
-                     * @param Result Real-time recording result.
+                     * @param _result Real-time recording result.
+                     * 
                      */
                     void SetResult(const RecordTaskResult& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

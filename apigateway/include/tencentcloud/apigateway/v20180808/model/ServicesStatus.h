@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of services in list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of services in list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of services in list.
+                     * @param _totalCount Total number of services in list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceSet Service list details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Service> GetServiceSet() const;
 
                     /**
                      * 设置Service list details.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceSet Service list details.
+                     * @param _serviceSet Service list details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceSet(const std::vector<Service>& _serviceSet);
 
                     /**
                      * 判断参数 ServiceSet 是否已赋值
                      * @return ServiceSet 是否已赋值
+                     * 
                      */
                     bool ServiceSetHasBeenSet() const;
 

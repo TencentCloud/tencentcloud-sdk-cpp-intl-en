@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
                      * @return CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetCustomerGatewayId() const;
 
                     /**
                      * 设置The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
-                     * @param CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
+                     * @param _customerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/api/215/17516?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetCustomerGatewayId(const std::string& _customerGatewayId);
 
                     /**
                      * 判断参数 CustomerGatewayId 是否已赋值
                      * @return CustomerGatewayId 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Customer gateway can be named freely, but the maximum length is 60 characters.
                      * @return CustomerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     std::string GetCustomerGatewayName() const;
 
                     /**
                      * 设置Customer gateway can be named freely, but the maximum length is 60 characters.
-                     * @param CustomerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
+                     * @param _customerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
+                     * 
                      */
                     void SetCustomerGatewayName(const std::string& _customerGatewayName);
 
                     /**
                      * 判断参数 CustomerGatewayName 是否已赋值
                      * @return CustomerGatewayName 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayNameHasBeenSet() const;
 

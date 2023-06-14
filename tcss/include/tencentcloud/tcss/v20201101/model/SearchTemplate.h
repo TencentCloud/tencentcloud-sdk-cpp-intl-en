@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Search name
                      * @return Name Search name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Search name
-                     * @param Name Search name
+                     * @param _name Search name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Search index type
                      * @return LogType Search index type
+                     * 
                      */
                     std::string GetLogType() const;
 
                     /**
                      * 设置Search index type
-                     * @param LogType Search index type
+                     * @param _logType Search index type
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
                     /**
                      * 获取Search statement
                      * @return Condition Search statement
+                     * 
                      */
                     std::string GetCondition() const;
 
                     /**
                      * 设置Search statement
-                     * @param Condition Search statement
+                     * @param _condition Search statement
+                     * 
                      */
                     void SetCondition(const std::string& _condition);
 
                     /**
                      * 判断参数 Condition 是否已赋值
                      * @return Condition 是否已赋值
+                     * 
                      */
                     bool ConditionHasBeenSet() const;
 
                     /**
                      * 获取Time range
                      * @return TimeRange Time range
+                     * 
                      */
                     std::string GetTimeRange() const;
 
                     /**
                      * 设置Time range
-                     * @param TimeRange Time range
+                     * @param _timeRange Time range
+                     * 
                      */
                     void SetTimeRange(const std::string& _timeRange);
 
                     /**
                      * 判断参数 TimeRange 是否已赋值
                      * @return TimeRange 是否已赋值
+                     * 
                      */
                     bool TimeRangeHasBeenSet() const;
 
                     /**
                      * 获取Converted search statement content
                      * @return Query Converted search statement content
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Converted search statement content
-                     * @param Query Converted search statement content
+                     * @param _query Converted search statement content
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Search method. Valid values: `standard` (search in the search box); `simple` (search by filter).
                      * @return Flag Search method. Valid values: `standard` (search in the search box); `simple` (search by filter).
+                     * 
                      */
                     std::string GetFlag() const;
 
                     /**
                      * 设置Search method. Valid values: `standard` (search in the search box); `simple` (search by filter).
-                     * @param Flag Search method. Valid values: `standard` (search in the search box); `simple` (search by filter).
+                     * @param _flag Search method. Valid values: `standard` (search in the search box); `simple` (search by filter).
+                     * 
                      */
                     void SetFlag(const std::string& _flag);
 
                     /**
                      * 判断参数 Flag 是否已赋值
                      * @return Flag 是否已赋值
+                     * 
                      */
                     bool FlagHasBeenSet() const;
 
                     /**
                      * 获取Displayed data
                      * @return DisplayData Displayed data
+                     * 
                      */
                     std::string GetDisplayData() const;
 
                     /**
                      * 设置Displayed data
-                     * @param DisplayData Displayed data
+                     * @param _displayData Displayed data
+                     * 
                      */
                     void SetDisplayData(const std::string& _displayData);
 
                     /**
                      * 判断参数 DisplayData 是否已赋值
                      * @return DisplayData 是否已赋值
+                     * 
                      */
                     bool DisplayDataHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return Id Rule ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param Id Rule ID
+                     * @param _id Rule ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

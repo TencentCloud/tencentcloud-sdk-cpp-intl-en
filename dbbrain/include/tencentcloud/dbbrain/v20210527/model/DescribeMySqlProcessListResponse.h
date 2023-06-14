@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of real-time threads.
                      * @return ProcessList List of real-time threads.
+                     * 
                      */
                     std::vector<MySqlProcess> GetProcessList() const;
 
                     /**
                      * 判断参数 ProcessList 是否已赋值
                      * @return ProcessList 是否已赋值
+                     * 
                      */
                     bool ProcessListHasBeenSet() const;
 

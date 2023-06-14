@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ReturnMsg Response parameter
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NatFwInsCount Number of NAT instances of the current tenant
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetNatFwInsCount() const;
 
                     /**
                      * 判断参数 NatFwInsCount 是否已赋值
                      * @return NatFwInsCount 是否已赋值
+                     * 
                      */
                     bool NatFwInsCountHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return SubnetCount Number of subnets connected by the current tenant
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetSubnetCount() const;
 
                     /**
                      * 判断参数 SubnetCount 是否已赋值
                      * @return SubnetCount 是否已赋值
+                     * 
                      */
                     bool SubnetCountHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return OpenSwitchCount Number of firewalls enabled
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetOpenSwitchCount() const;
 
                     /**
                      * 判断参数 OpenSwitchCount 是否已赋值
                      * @return OpenSwitchCount 是否已赋值
+                     * 
                      */
                     bool OpenSwitchCountHasBeenSet() const;
 

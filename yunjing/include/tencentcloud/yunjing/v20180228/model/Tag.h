@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Tag ID
                      * @return Id Tag ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Tag ID
-                     * @param Id Tag ID
+                     * @param _id Tag ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Tag name
                      * @return Name Tag name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Tag name
-                     * @param Name Tag name
+                     * @param _name Tag name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Number of servers
                      * @return Count Number of servers
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of servers
-                     * @param Count Number of servers
+                     * @param _count Number of servers
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

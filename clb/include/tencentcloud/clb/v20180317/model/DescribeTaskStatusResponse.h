@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
                      * @return Status Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return LoadBalancerIds Array of unique CLB instance IDs.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 

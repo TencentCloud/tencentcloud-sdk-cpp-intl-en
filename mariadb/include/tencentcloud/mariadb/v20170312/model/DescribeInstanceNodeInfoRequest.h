@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID, such as tdsql-6ltok4u9
                      * @return InstanceId Instance ID, such as tdsql-6ltok4u9
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID, such as tdsql-6ltok4u9
-                     * @param InstanceId Instance ID, such as tdsql-6ltok4u9
+                     * @param _instanceId Instance ID, such as tdsql-6ltok4u9
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of results returned at a time. By default, there is no upper limit to this value, that is, all results can be returned.
                      * @return Limit The maximum number of results returned at a time. By default, there is no upper limit to this value, that is, all results can be returned.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of results returned at a time. By default, there is no upper limit to this value, that is, all results can be returned.
-                     * @param Limit The maximum number of results returned at a time. By default, there is no upper limit to this value, that is, all results can be returned.
+                     * @param _limit The maximum number of results returned at a time. By default, there is no upper limit to this value, that is, all results can be returned.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset of the returned results. Default value: `0`.
                      * @return Offset Offset of the returned results. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset of the returned results. Default value: `0`.
-                     * @param Offset Offset of the returned results. Default value: `0`.
+                     * @param _offset Offset of the returned results. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

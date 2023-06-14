@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The flow ID.
                      * @return FlowId The flow ID.
+                     * 
                      */
                     std::string GetFlowId() const;
 
                     /**
                      * 设置The flow ID.
-                     * @param FlowId The flow ID.
+                     * @param _flowId The flow ID.
+                     * 
                      */
                     void SetFlowId(const std::string& _flowId);
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
                     /**
                      * 获取The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
                      * @return InputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 
                      */
                     std::vector<std::string> GetInputIds() const;
 
                     /**
                      * 设置The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-                     * @param InputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * @param _inputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 
                      */
                     void SetInputIds(const std::vector<std::string>& _inputIds);
 
                     /**
                      * 判断参数 InputIds 是否已赋值
                      * @return InputIds 是否已赋值
+                     * 
                      */
                     bool InputIdsHasBeenSet() const;
 
                     /**
                      * 获取The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
                      * @return OutputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 
                      */
                     std::vector<std::string> GetOutputIds() const;
 
                     /**
                      * 设置The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-                     * @param OutputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * @param _outputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+                     * 
                      */
                     void SetOutputIds(const std::vector<std::string>& _outputIds);
 
                     /**
                      * 判断参数 OutputIds 是否已赋值
                      * @return OutputIds 是否已赋值
+                     * 
                      */
                     bool OutputIdsHasBeenSet() const;
 

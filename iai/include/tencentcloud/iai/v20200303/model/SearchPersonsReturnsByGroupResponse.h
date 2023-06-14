@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of the persons included in searched groups. If the quality of all faces in the input image does not meet the requirement, 0 will be returned.
                      * @return PersonNum Number of the persons included in searched groups. If the quality of all faces in the input image does not meet the requirement, 0 will be returned.
+                     * 
                      */
                     uint64_t GetPersonNum() const;
 
                     /**
                      * 判断参数 PersonNum 是否已赋值
                      * @return PersonNum 是否已赋值
+                     * 
                      */
                     bool PersonNumHasBeenSet() const;
 
                     /**
                      * 获取Recognition result.
                      * @return ResultsReturnsByGroup Recognition result.
+                     * 
                      */
                     std::vector<ResultsReturnsByGroup> GetResultsReturnsByGroup() const;
 
                     /**
                      * 判断参数 ResultsReturnsByGroup 是否已赋值
                      * @return ResultsReturnsByGroup 是否已赋值
+                     * 
                      */
                     bool ResultsReturnsByGroupHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

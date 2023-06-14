@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of displayed results
                      * @return TotalCount Number of displayed results
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information set of displayed target groups
                      * @return TargetGroupSet Information set of displayed target groups
+                     * 
                      */
                     std::vector<TargetGroupInfo> GetTargetGroupSet() const;
 
                     /**
                      * 判断参数 TargetGroupSet 是否已赋值
                      * @return TargetGroupSet 是否已赋值
+                     * 
                      */
                     bool TargetGroupSetHasBeenSet() const;
 

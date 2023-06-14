@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Account ID.
                      * @return AccountId Account ID.
+                     * 
                      */
                     std::string GetAccountId() const;
 
                     /**
                      * 设置Account ID.
-                     * @param AccountId Account ID.
+                     * @param _accountId Account ID.
+                     * 
                      */
                     void SetAccountId(const std::string& _accountId);
 
                     /**
                      * 判断参数 AccountId 是否已赋值
                      * @return AccountId 是否已赋值
+                     * 
                      */
                     bool AccountIdHasBeenSet() const;
 
                     /**
                      * 获取Account name. When this parameter is not specified, the name will not be modified.
                      * @return AccountName Account name. When this parameter is not specified, the name will not be modified.
+                     * 
                      */
                     std::string GetAccountName() const;
 
                     /**
                      * 设置Account name. When this parameter is not specified, the name will not be modified.
-                     * @param AccountName Account name. When this parameter is not specified, the name will not be modified.
+                     * @param _accountName Account name. When this parameter is not specified, the name will not be modified.
+                     * 
                      */
                     void SetAccountName(const std::string& _accountName);
 
                     /**
                      * 判断参数 AccountName 是否已赋值
                      * @return AccountName 是否已赋值
+                     * 
                      */
                     bool AccountNameHasBeenSet() const;
 
                     /**
                      * 获取Account password. When this parameter is not specified, the password will not be changed.
                      * @return Password Account password. When this parameter is not specified, the password will not be changed.
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Account password. When this parameter is not specified, the password will not be changed.
-                     * @param Password Account password. When this parameter is not specified, the password will not be changed.
+                     * @param _password Account password. When this parameter is not specified, the password will not be changed.
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Description. When this parameter is not specified, the description will not be modified.
                      * @return Description Description. When this parameter is not specified, the description will not be modified.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description. When this parameter is not specified, the description will not be modified.
-                     * @param Description Description. When this parameter is not specified, the description will not be modified.
+                     * @param _description Description. When this parameter is not specified, the description will not be modified.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

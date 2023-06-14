@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Protocol port template instance ID, such as `ppm-e6dy460g`.
                      * @return ServiceTemplateId Protocol port template instance ID, such as `ppm-e6dy460g`.
+                     * 
                      */
                     std::string GetServiceTemplateId() const;
 
                     /**
                      * 设置Protocol port template instance ID, such as `ppm-e6dy460g`.
-                     * @param ServiceTemplateId Protocol port template instance ID, such as `ppm-e6dy460g`.
+                     * @param _serviceTemplateId Protocol port template instance ID, such as `ppm-e6dy460g`.
+                     * 
                      */
                     void SetServiceTemplateId(const std::string& _serviceTemplateId);
 
                     /**
                      * 判断参数 ServiceTemplateId 是否已赋值
                      * @return ServiceTemplateId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdHasBeenSet() const;
 

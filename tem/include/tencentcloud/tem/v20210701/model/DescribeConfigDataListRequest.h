@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Environment ID
                      * @return EnvironmentId Environment ID
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Source channel. Please keep the default value.
                      * @return SourceChannel Source channel. Please keep the default value.
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel. Please keep the default value.
-                     * @param SourceChannel Source channel. Please keep the default value.
+                     * @param _sourceChannel Source channel. Please keep the default value.
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 
                     /**
                      * 获取Paging cursor
                      * @return ContinueToken Paging cursor
+                     * 
                      */
                     std::string GetContinueToken() const;
 
                     /**
                      * 设置Paging cursor
-                     * @param ContinueToken Paging cursor
+                     * @param _continueToken Paging cursor
+                     * 
                      */
                     void SetContinueToken(const std::string& _continueToken);
 
                     /**
                      * 判断参数 ContinueToken 是否已赋值
                      * @return ContinueToken 是否已赋值
+                     * 
                      */
                     bool ContinueTokenHasBeenSet() const;
 
                     /**
                      * 获取Pagination limit
                      * @return Limit Pagination limit
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination limit
-                     * @param Limit Pagination limit
+                     * @param _limit Pagination limit
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

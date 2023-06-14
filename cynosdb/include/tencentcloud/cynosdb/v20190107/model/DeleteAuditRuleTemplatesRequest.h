@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Audit rule template ID
                      * @return RuleTemplateIds Audit rule template ID
+                     * 
                      */
                     std::vector<std::string> GetRuleTemplateIds() const;
 
                     /**
                      * 设置Audit rule template ID
-                     * @param RuleTemplateIds Audit rule template ID
+                     * @param _ruleTemplateIds Audit rule template ID
+                     * 
                      */
                     void SetRuleTemplateIds(const std::vector<std::string>& _ruleTemplateIds);
 
                     /**
                      * 判断参数 RuleTemplateIds 是否已赋值
                      * @return RuleTemplateIds 是否已赋值
+                     * 
                      */
                     bool RuleTemplateIdsHasBeenSet() const;
 

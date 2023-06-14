@@ -53,38 +53,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DataId This field is used to return the ID of the video moderation task data for subsequent query and management of moderation tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDataId() const;
 
                     /**
                      * 设置This field is used to return the ID of the video moderation task data for subsequent query and management of moderation tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DataId This field is used to return the ID of the video moderation task data for subsequent query and management of moderation tasks.
+                     * @param _dataId This field is used to return the ID of the video moderation task data for subsequent query and management of moderation tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataId(const std::string& _dataId);
 
                     /**
                      * 判断参数 DataId 是否已赋值
                      * @return DataId 是否已赋值
+                     * 
                      */
                     bool DataIdHasBeenSet() const;
 
                     /**
                      * 获取This field is used to return the ID of a video moderation task for identification, query, and management of moderation tasks.
                      * @return TaskId This field is used to return the ID of a video moderation task for identification, query, and management of moderation tasks.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置This field is used to return the ID of a video moderation task for identification, query, and management of moderation tasks.
-                     * @param TaskId This field is used to return the ID of a video moderation task for identification, query, and management of moderation tasks.
+                     * @param _taskId This field is used to return the ID of a video moderation task for identification, query, and management of moderation tasks.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -93,20 +99,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
                      * @return Status This field is used to return the task status of the queried content.
 <br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置This field is used to return the task status of the queried content.
 <br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
-                     * @param Status This field is used to return the task status of the queried content.
+                     * @param _status This field is used to return the task status of the queried content.
 <br>Valid values: **FINISH** (task completed), **PENDING** (task pending), **RUNNING** (task in progress), **ERROR** (task error), **CANCELLED** (task canceled).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -115,20 +124,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Name This field is used to return the name of a video moderation task for subsequent query and management of moderation tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置This field is used to return the name of a video moderation task for subsequent query and management of moderation tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Name This field is used to return the name of a video moderation task for subsequent query and management of moderation tasks.
+                     * @param _name This field is used to return the name of a video moderation task for subsequent query and management of moderation tasks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -137,20 +149,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BizType This field is used to return the `BizType` parameter passed in when the video moderation API is called for easier data identification and management.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBizType() const;
 
                     /**
                      * 设置This field is used to return the `BizType` parameter passed in when the video moderation API is called for easier data identification and management.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BizType This field is used to return the `BizType` parameter passed in when the video moderation API is called for easier data identification and management.
+                     * @param _bizType This field is used to return the `BizType` parameter passed in when the video moderation API is called for easier data identification and management.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBizType(const std::string& _bizType);
 
                     /**
                      * 判断参数 BizType 是否已赋值
                      * @return BizType 是否已赋值
+                     * 
                      */
                     bool BizTypeHasBeenSet() const;
 
@@ -159,20 +174,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Type This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **VIDEO** (video on demand), **LIVE_VIDEO** (video live streaming). Default value: VIDEO.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **VIDEO** (video on demand), **LIVE_VIDEO** (video live streaming). Default value: VIDEO.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Type This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **VIDEO** (video on demand), **LIVE_VIDEO** (video live streaming). Default value: VIDEO.
+                     * @param _type This field is used to return the audio moderation type passed in when the audio moderation API is called. Valid values: **VIDEO** (video on demand), **LIVE_VIDEO** (video live streaming). Default value: VIDEO.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -183,6 +201,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return Suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -190,33 +209,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the suggested operation.<br>
+                     * @param _suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the suggested operation.<br>
 Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
                      * @return Labels This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+                     * 
                      */
                     std::vector<TaskLabel> GetLabels() const;
 
                     /**
                      * 设置This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-                     * @param Labels This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+                     * @param _labels This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+                     * 
                      */
                     void SetLabels(const std::vector<TaskLabel>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
@@ -225,38 +249,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MediaInfo This field is used to return the details of the input media file, including codec and segment length. For details, see the description of the `MediaInfo` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaInfo GetMediaInfo() const;
 
                     /**
                      * 设置This field is used to return the details of the input media file, including codec and segment length. For details, see the description of the `MediaInfo` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MediaInfo This field is used to return the details of the input media file, including codec and segment length. For details, see the description of the `MediaInfo` data structure.
+                     * @param _mediaInfo This field is used to return the details of the input media file, including codec and segment length. For details, see the description of the `MediaInfo` data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMediaInfo(const MediaInfo& _mediaInfo);
 
                     /**
                      * 判断参数 MediaInfo 是否已赋值
                      * @return MediaInfo 是否已赋值
+                     * 
                      */
                     bool MediaInfoHasBeenSet() const;
 
                     /**
                      * 获取This field is used to return the creation time of the queried task in ISO 8601 format.
                      * @return CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置This field is used to return the creation time of the queried task in ISO 8601 format.
-                     * @param CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
+                     * @param _createdAt This field is used to return the creation time of the queried task in ISO 8601 format.
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 
@@ -265,20 +295,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UpdatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdatedAt() const;
 
                     /**
                      * 设置This field is used to return the last update time of the queried task in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UpdatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
+                     * @param _updatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdatedAt(const std::string& _updatedAt);
 
                     /**
                      * 判断参数 UpdatedAt 是否已赋值
                      * @return UpdatedAt 是否已赋值
+                     * 
                      */
                     bool UpdatedAtHasBeenSet() const;
 

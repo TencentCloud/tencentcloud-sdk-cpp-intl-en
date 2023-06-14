@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of the created secret.
                      * @return SecretName Name of the created secret.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the created SSH key.
                      * @return SSHKeyID ID of the created SSH key.
+                     * 
                      */
                     std::string GetSSHKeyID() const;
 
                     /**
                      * 判断参数 SSHKeyID 是否已赋值
                      * @return SSHKeyID 是否已赋值
+                     * 
                      */
                     bool SSHKeyIDHasBeenSet() const;
 
                     /**
                      * 获取Name of the created SSH key.
                      * @return SSHKeyName Name of the created SSH key.
+                     * 
                      */
                     std::string GetSSHKeyName() const;
 
                     /**
                      * 判断参数 SSHKeyName 是否已赋值
                      * @return SSHKeyName 是否已赋值
+                     * 
                      */
                     bool SSHKeyNameHasBeenSet() const;
 
@@ -84,12 +90,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TagCode Tag return code. `0`: success; `1`: internal error; `2`: business processing error.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTagCode() const;
 
                     /**
                      * 判断参数 TagCode 是否已赋值
                      * @return TagCode 是否已赋值
+                     * 
                      */
                     bool TagCodeHasBeenSet() const;
 
@@ -98,12 +106,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TagMsg Tag return message.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTagMsg() const;
 
                     /**
                      * 判断参数 TagMsg 是否已赋值
                      * @return TagMsg 是否已赋值
+                     * 
                      */
                     bool TagMsgHasBeenSet() const;
 

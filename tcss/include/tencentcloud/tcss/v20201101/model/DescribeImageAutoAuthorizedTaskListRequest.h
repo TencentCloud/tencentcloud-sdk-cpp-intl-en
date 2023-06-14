@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -88,6 +94,7 @@ Image source. Valid values: `LOCAL` (local image); `REGISTRY` (repository image)
 `Status` (licensing result). Valid values: `ALLSUCCSESS` (licensing succeeded); `PARTIALFAIL` (failed to license some images); `ALLFAIL` (failed to license all images).
 Licensing method. Valid values: `AUTO` (automatic licensing); `MANUAL` (manual licensing).
 Image source. Valid values: `LOCAL` (local image); `REGISTRY` (repository image).
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
@@ -96,52 +103,60 @@ Image source. Valid values: `LOCAL` (local image); `REGISTRY` (repository image)
 `Status` (licensing result). Valid values: `ALLSUCCSESS` (licensing succeeded); `PARTIALFAIL` (failed to license some images); `ALLFAIL` (failed to license all images).
 Licensing method. Valid values: `AUTO` (automatic licensing); `MANUAL` (manual licensing).
 Image source. Valid values: `LOCAL` (local image); `REGISTRY` (repository image).
-                     * @param Filters Filter field
+                     * @param _filters Filter field
 `Status` (licensing result). Valid values: `ALLSUCCSESS` (licensing succeeded); `PARTIALFAIL` (failed to license some images); `ALLFAIL` (failed to license all images).
 Licensing method. Valid values: `AUTO` (automatic licensing); `MANUAL` (manual licensing).
 Image source. Valid values: `LOCAL` (local image); `REGISTRY` (repository image).
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
                      * @return AddressId The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
-                     * @param AddressId The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
+                     * @param _addressId The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 
                     /**
                      * 获取The public IP address, such as `123.121.34.33`.
                      * @return PublicIpAddress The public IP address, such as `123.121.34.33`.
+                     * 
                      */
                     std::string GetPublicIpAddress() const;
 
                     /**
                      * 设置The public IP address, such as `123.121.34.33`.
-                     * @param PublicIpAddress The public IP address, such as `123.121.34.33`.
+                     * @param _publicIpAddress The public IP address, such as `123.121.34.33`.
+                     * 
                      */
                     void SetPublicIpAddress(const std::string& _publicIpAddress);
 
                     /**
                      * 判断参数 PublicIpAddress 是否已赋值
                      * @return PublicIpAddress 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressHasBeenSet() const;
 
                     /**
                      * 获取The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
                      * @return IsBlocked The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
+                     * 
                      */
                     bool GetIsBlocked() const;
 
                     /**
                      * 设置The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
-                     * @param IsBlocked The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
+                     * @param _isBlocked The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
+                     * 
                      */
                     void SetIsBlocked(const bool& _isBlocked);
 
                     /**
                      * 判断参数 IsBlocked 是否已赋值
                      * @return IsBlocked 是否已赋值
+                     * 
                      */
                     bool IsBlockedHasBeenSet() const;
 

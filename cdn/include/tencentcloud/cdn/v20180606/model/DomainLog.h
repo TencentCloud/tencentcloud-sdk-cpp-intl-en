@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Starting time of the log package
                      * @return StartTime Starting time of the log package
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Starting time of the log package
-                     * @param StartTime Starting time of the log package
+                     * @param _startTime Starting time of the log package
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the log package
                      * @return EndTime End time of the log package
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the log package
-                     * @param EndTime End time of the log package
+                     * @param _endTime End time of the log package
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Log package download link
                      * @return LogPath Log package download link
+                     * 
                      */
                     std::string GetLogPath() const;
 
                     /**
                      * 设置Log package download link
-                     * @param LogPath Log package download link
+                     * @param _logPath Log package download link
+                     * 
                      */
                     void SetLogPath(const std::string& _logPath);
 
                     /**
                      * 判断参数 LogPath 是否已赋值
                      * @return LogPath 是否已赋值
+                     * 
                      */
                     bool LogPathHasBeenSet() const;
 
@@ -107,6 +116,7 @@ namespace TencentCloud
                      * @return Area Acceleration region corresponding to the log package
 `mainland`: Within the Chinese mainland
 `overseas`: Outside the Chinese mainland
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -114,33 +124,38 @@ namespace TencentCloud
                      * 设置Acceleration region corresponding to the log package
 `mainland`: Within the Chinese mainland
 `overseas`: Outside the Chinese mainland
-                     * @param Area Acceleration region corresponding to the log package
+                     * @param _area Acceleration region corresponding to the log package
 `mainland`: Within the Chinese mainland
 `overseas`: Outside the Chinese mainland
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Log package filename
                      * @return LogName Log package filename
+                     * 
                      */
                     std::string GetLogName() const;
 
                     /**
                      * 设置Log package filename
-                     * @param LogName Log package filename
+                     * @param _logName Log package filename
+                     * 
                      */
                     void SetLogName(const std::string& _logName);
 
                     /**
                      * 判断参数 LogName 是否已赋值
                      * @return LogName 是否已赋值
+                     * 
                      */
                     bool LogNameHasBeenSet() const;
 

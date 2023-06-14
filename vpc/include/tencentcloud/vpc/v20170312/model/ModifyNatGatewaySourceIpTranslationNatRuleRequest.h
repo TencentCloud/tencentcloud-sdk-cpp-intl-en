@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the NAT Gateway, such as `nat-df453454`
                      * @return NatGatewayId The ID of the NAT Gateway, such as `nat-df453454`
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The ID of the NAT Gateway, such as `nat-df453454`
-                     * @param NatGatewayId The ID of the NAT Gateway, such as `nat-df453454`
+                     * @param _natGatewayId The ID of the NAT Gateway, such as `nat-df453454`
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The SNAT forwarding rule of the NAT Gateway
                      * @return SourceIpTranslationNatRule The SNAT forwarding rule of the NAT Gateway
+                     * 
                      */
                     SourceIpTranslationNatRule GetSourceIpTranslationNatRule() const;
 
                     /**
                      * 设置The SNAT forwarding rule of the NAT Gateway
-                     * @param SourceIpTranslationNatRule The SNAT forwarding rule of the NAT Gateway
+                     * @param _sourceIpTranslationNatRule The SNAT forwarding rule of the NAT Gateway
+                     * 
                      */
                     void SetSourceIpTranslationNatRule(const SourceIpTranslationNatRule& _sourceIpTranslationNatRule);
 
                     /**
                      * 判断参数 SourceIpTranslationNatRule 是否已赋值
                      * @return SourceIpTranslationNatRule 是否已赋值
+                     * 
                      */
                     bool SourceIpTranslationNatRuleHasBeenSet() const;
 

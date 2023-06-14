@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Parent category ID. For a first-level category, enter `-1`.
                      * @return ParentId Parent category ID. For a first-level category, enter `-1`.
+                     * 
                      */
                     int64_t GetParentId() const;
 
                     /**
                      * 设置Parent category ID. For a first-level category, enter `-1`.
-                     * @param ParentId Parent category ID. For a first-level category, enter `-1`.
+                     * @param _parentId Parent category ID. For a first-level category, enter `-1`.
+                     * 
                      */
                     void SetParentId(const int64_t& _parentId);
 
                     /**
                      * 判断参数 ParentId 是否已赋值
                      * @return ParentId 是否已赋值
+                     * 
                      */
                     bool ParentIdHasBeenSet() const;
 
                     /**
                      * 获取Category name. Length limit: 1-64 characters.
                      * @return ClassName Category name. Length limit: 1-64 characters.
+                     * 
                      */
                     std::string GetClassName() const;
 
                     /**
                      * 设置Category name. Length limit: 1-64 characters.
-                     * @param ClassName Category name. Length limit: 1-64 characters.
+                     * @param _className Category name. Length limit: 1-64 characters.
+                     * 
                      */
                     void SetClassName(const std::string& _className);
 
                     /**
                      * 判断参数 ClassName 是否已赋值
                      * @return ClassName 是否已赋值
+                     * 
                      */
                     bool ClassNameHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 

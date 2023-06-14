@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of email addresses to be unblocklisted. Enter at least one address.
                      * @return EmailAddressList List of email addresses to be unblocklisted. Enter at least one address.
+                     * 
                      */
                     std::vector<std::string> GetEmailAddressList() const;
 
                     /**
                      * 设置List of email addresses to be unblocklisted. Enter at least one address.
-                     * @param EmailAddressList List of email addresses to be unblocklisted. Enter at least one address.
+                     * @param _emailAddressList List of email addresses to be unblocklisted. Enter at least one address.
+                     * 
                      */
                     void SetEmailAddressList(const std::vector<std::string>& _emailAddressList);
 
                     /**
                      * 判断参数 EmailAddressList 是否已赋值
                      * @return EmailAddressList 是否已赋值
+                     * 
                      */
                     bool EmailAddressListHasBeenSet() const;
 

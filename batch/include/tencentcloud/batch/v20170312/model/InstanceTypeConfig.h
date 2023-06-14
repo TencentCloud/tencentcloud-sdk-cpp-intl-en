@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Memory size in GB.
                      * @return Mem Memory size in GB.
+                     * 
                      */
                     int64_t GetMem() const;
 
                     /**
                      * 设置Memory size in GB.
-                     * @param Mem Memory size in GB.
+                     * @param _mem Memory size in GB.
+                     * 
                      */
                     void SetMem(const int64_t& _mem);
 
                     /**
                      * 判断参数 Mem 是否已赋值
                      * @return Mem 是否已赋值
+                     * 
                      */
                     bool MemHasBeenSet() const;
 
                     /**
                      * 获取Number of CPU cores.
                      * @return Cpu Number of CPU cores.
+                     * 
                      */
                     int64_t GetCpu() const;
 
                     /**
                      * 设置Number of CPU cores.
-                     * @param Cpu Number of CPU cores.
+                     * @param _cpu Number of CPU cores.
+                     * 
                      */
                     void SetCpu(const int64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Instance model.
                      * @return InstanceType Instance model.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance model.
-                     * @param InstanceType Instance model.
+                     * @param _instanceType Instance model.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Availability zone.
                      * @return Zone Availability zone.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone.
-                     * @param Zone Availability zone.
+                     * @param _zone Availability zone.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Instance model family.
                      * @return InstanceFamily Instance model family.
+                     * 
                      */
                     std::string GetInstanceFamily() const;
 
                     /**
                      * 设置Instance model family.
-                     * @param InstanceFamily Instance model family.
+                     * @param _instanceFamily Instance model family.
+                     * 
                      */
                     void SetInstanceFamily(const std::string& _instanceFamily);
 
                     /**
                      * 判断参数 InstanceFamily 是否已赋值
                      * @return InstanceFamily 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site related with the accelerated domain name.
                      * @return ZoneId ID of the site related with the accelerated domain name.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site related with the accelerated domain name.
-                     * @param ZoneId ID of the site related with the accelerated domain name.
+                     * @param _zoneId ID of the site related with the accelerated domain name.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Accelerated domain name
                      * @return DomainName Accelerated domain name
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Accelerated domain name
-                     * @param DomainName Accelerated domain name
+                     * @param _domainName Accelerated domain name
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Details of the origin.
                      * @return OriginInfo Details of the origin.
+                     * 
                      */
                     OriginInfo GetOriginInfo() const;
 
                     /**
                      * 设置Details of the origin.
-                     * @param OriginInfo Details of the origin.
+                     * @param _originInfo Details of the origin.
+                     * 
                      */
                     void SetOriginInfo(const OriginInfo& _originInfo);
 
                     /**
                      * 判断参数 OriginInfo 是否已赋值
                      * @return OriginInfo 是否已赋值
+                     * 
                      */
                     bool OriginInfoHasBeenSet() const;
 

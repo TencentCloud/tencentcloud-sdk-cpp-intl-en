@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Namespace name
                      * @return Namespace Namespace name
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace name
-                     * @param Namespace Namespace name
+                     * @param _namespace Namespace name
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Scrape configuration name
                      * @return Name Scrape configuration name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Scrape configuration name
-                     * @param Name Scrape configuration name
+                     * @param _name Scrape configuration name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Namespace of the scrape configuration
                      * @return Namespace Namespace of the scrape configuration
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace of the scrape configuration
-                     * @param Namespace Namespace of the scrape configuration
+                     * @param _namespace Namespace of the scrape configuration
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Scrape configuration type: ServiceMonitor/PodMonitor
                      * @return Kind Scrape configuration type: ServiceMonitor/PodMonitor
+                     * 
                      */
                     std::string GetKind() const;
 
                     /**
                      * 设置Scrape configuration type: ServiceMonitor/PodMonitor
-                     * @param Kind Scrape configuration type: ServiceMonitor/PodMonitor
+                     * @param _kind Scrape configuration type: ServiceMonitor/PodMonitor
+                     * 
                      */
                     void SetKind(const std::string& _kind);
 
                     /**
                      * 判断参数 Kind 是否已赋值
                      * @return Kind 是否已赋值
+                     * 
                      */
                     bool KindHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NamespaceSelector Namespace selection method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNamespaceSelector() const;
 
                     /**
                      * 设置Namespace selection method
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NamespaceSelector Namespace selection method
+                     * @param _namespaceSelector Namespace selection method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNamespaceSelector(const std::string& _namespaceSelector);
 
                     /**
                      * 判断参数 NamespaceSelector 是否已赋值
                      * @return NamespaceSelector 是否已赋值
+                     * 
                      */
                     bool NamespaceSelectorHasBeenSet() const;
 
@@ -127,38 +139,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Selector Label selection method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSelector() const;
 
                     /**
                      * 设置Label selection method
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Selector Label selection method
+                     * @param _selector Label selection method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSelector(const std::string& _selector);
 
                     /**
                      * 判断参数 Selector 是否已赋值
                      * @return Selector 是否已赋值
+                     * 
                      */
                     bool SelectorHasBeenSet() const;
 
                     /**
                      * 获取`Endpoints` information (PodMonitor does not have this parameter)
                      * @return Endpoints `Endpoints` information (PodMonitor does not have this parameter)
+                     * 
                      */
                     std::string GetEndpoints() const;
 
                     /**
                      * 设置`Endpoints` information (PodMonitor does not have this parameter)
-                     * @param Endpoints `Endpoints` information (PodMonitor does not have this parameter)
+                     * @param _endpoints `Endpoints` information (PodMonitor does not have this parameter)
+                     * 
                      */
                     void SetEndpoints(const std::string& _endpoints);
 
                     /**
                      * 判断参数 Endpoints 是否已赋值
                      * @return Endpoints 是否已赋值
+                     * 
                      */
                     bool EndpointsHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Yaml Scrape configuration information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetYaml() const;
 
                     /**
                      * 设置Scrape configuration information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Yaml Scrape configuration information
+                     * @param _yaml Scrape configuration information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetYaml(const std::string& _yaml);
 
                     /**
                      * 判断参数 Yaml 是否已赋值
                      * @return Yaml 是否已赋值
+                     * 
                      */
                     bool YamlHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of unblocked URLs
                      * @return Urls List of unblocked URLs
+                     * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
                      * 设置List of unblocked URLs
-                     * @param Urls List of unblocked URLs
+                     * @param _urls List of unblocked URLs
+                     * 
                      */
                     void SetUrls(const std::vector<std::string>& _urls);
 
                     /**
                      * 判断参数 Urls 是否已赋值
                      * @return Urls 是否已赋值
+                     * 
                      */
                     bool UrlsHasBeenSet() const;
 
                     /**
                      * 获取URL blocking date
                      * @return Date URL blocking date
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置URL blocking date
-                     * @param Date URL blocking date
+                     * @param _date URL blocking date
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 

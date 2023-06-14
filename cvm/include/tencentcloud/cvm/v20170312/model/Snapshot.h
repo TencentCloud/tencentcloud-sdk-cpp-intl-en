@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot ID.
                      * @return SnapshotId Snapshot ID.
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 设置Snapshot ID.
-                     * @param SnapshotId Snapshot ID.
+                     * @param _snapshotId Snapshot ID.
+                     * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ DATA_DISK: data disk
                      * @return DiskUsage Type of the cloud disk used to create the snapshot. Valid values:
 SYSTEM_DISK: system disk
 DATA_DISK: data disk
+                     * 
                      */
                     std::string GetDiskUsage() const;
 
@@ -78,33 +82,38 @@ DATA_DISK: data disk
                      * 设置Type of the cloud disk used to create the snapshot. Valid values:
 SYSTEM_DISK: system disk
 DATA_DISK: data disk
-                     * @param DiskUsage Type of the cloud disk used to create the snapshot. Valid values:
+                     * @param _diskUsage Type of the cloud disk used to create the snapshot. Valid values:
 SYSTEM_DISK: system disk
 DATA_DISK: data disk
+                     * 
                      */
                     void SetDiskUsage(const std::string& _diskUsage);
 
                     /**
                      * 判断参数 DiskUsage 是否已赋值
                      * @return DiskUsage 是否已赋值
+                     * 
                      */
                     bool DiskUsageHasBeenSet() const;
 
                     /**
                      * 获取Size of the cloud disk used to create the snapshot; unit: GB.
                      * @return DiskSize Size of the cloud disk used to create the snapshot; unit: GB.
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Size of the cloud disk used to create the snapshot; unit: GB.
-                     * @param DiskSize Size of the cloud disk used to create the snapshot; unit: GB.
+                     * @param _diskSize Size of the cloud disk used to create the snapshot; unit: GB.
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 

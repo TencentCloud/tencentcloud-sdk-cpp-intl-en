@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Parameter template ID, which uniquely identifies a parameter template.
                      * @return TemplateId Parameter template ID, which uniquely identifies a parameter template.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 

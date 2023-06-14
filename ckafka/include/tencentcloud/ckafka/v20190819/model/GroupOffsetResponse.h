@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Total number of eligible results
                      * @return TotalCount Total number of eligible results
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of eligible results
-                     * @param TotalCount Total number of eligible results
+                     * @param _totalCount Total number of eligible results
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TopicList Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<GroupOffsetTopic> GetTopicList() const;
 
                     /**
                      * 设置Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TopicList Array of partitions in the topic, where each element is a JSON object
+                     * @param _topicList Array of partitions in the topic, where each element is a JSON object
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicList(const std::vector<GroupOffsetTopic>& _topicList);
 
                     /**
                      * 判断参数 TopicList 是否已赋值
                      * @return TopicList 是否已赋值
+                     * 
                      */
                     bool TopicListHasBeenSet() const;
 

@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Delivery serial number.
                      * @return SerialNo Delivery serial number.
+                     * 
                      */
                     std::string GetSerialNo() const;
 
                     /**
                      * 设置Delivery serial number.
-                     * @param SerialNo Delivery serial number.
+                     * @param _serialNo Delivery serial number.
+                     * 
                      */
                     void SetSerialNo(const std::string& _serialNo);
 
                     /**
                      * 判断参数 SerialNo 是否已赋值
                      * @return SerialNo 是否已赋值
+                     * 
                      */
                     bool SerialNoHasBeenSet() const;
 
                     /**
                      * 获取Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
                      * @return PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
                      * 设置Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-                     * @param PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * @param _phoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
 
                     /**
                      * 判断参数 PhoneNumber 是否已赋值
                      * @return PhoneNumber 是否已赋值
+                     * 
                      */
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
                      * 获取Number of billable SMS messages. For billing rules, see Billing Policy.
                      * @return Fee Number of billable SMS messages. For billing rules, see Billing Policy.
+                     * 
                      */
                     uint64_t GetFee() const;
 
                     /**
                      * 设置Number of billable SMS messages. For billing rules, see Billing Policy.
-                     * @param Fee Number of billable SMS messages. For billing rules, see Billing Policy.
+                     * @param _fee Number of billable SMS messages. For billing rules, see Billing Policy.
+                     * 
                      */
                     void SetFee(const uint64_t& _fee);
 
                     /**
                      * 判断参数 Fee 是否已赋值
                      * @return Fee 是否已赋值
+                     * 
                      */
                     bool FeeHasBeenSet() const;
 
                     /**
                      * 获取User session content.
                      * @return SessionContext User session content.
+                     * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
                      * 设置User session content.
-                     * @param SessionContext User session content.
+                     * @param _sessionContext User session content.
+                     * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
                     /**
                      * 判断参数 SessionContext 是否已赋值
                      * @return SessionContext 是否已赋值
+                     * 
                      */
                     bool SessionContextHasBeenSet() const;
 
                     /**
                      * 获取SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
                      * @return Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
-                     * @param Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+                     * @param _code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取SMS request error message.
                      * @return Message SMS request error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置SMS request error message.
-                     * @param Message SMS request error message.
+                     * @param _message SMS request error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
                      * @return IsoCode Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetIsoCode() const;
 
                     /**
                      * 设置Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
-                     * @param IsoCode Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+                     * @param _isoCode Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+                     * 
                      */
                     void SetIsoCode(const std::string& _isoCode);
 
                     /**
                      * 判断参数 IsoCode 是否已赋值
                      * @return IsoCode 是否已赋值
+                     * 
                      */
                     bool IsoCodeHasBeenSet() const;
 

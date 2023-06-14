@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Node ownership details
                      * @return Ips Node ownership details
+                     * 
                      */
                     std::vector<CdnIp> GetIps() const;
 
                     /**
                      * 判断参数 Ips 是否已赋值
                      * @return Ips 是否已赋值
+                     * 
                      */
                     bool IpsHasBeenSet() const;
 

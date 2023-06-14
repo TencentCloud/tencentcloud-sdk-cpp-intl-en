@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ES cluster ID
                      * @return InstanceId ES cluster ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ES cluster ID
-                     * @param InstanceId ES cluster ID
+                     * @param _instanceId ES cluster ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Index type. `auto`: Automated; `normal`: General.
                      * @return IndexType Index type. `auto`: Automated; `normal`: General.
+                     * 
                      */
                     std::string GetIndexType() const;
 
                     /**
                      * 设置Index type. `auto`: Automated; `normal`: General.
-                     * @param IndexType Index type. `auto`: Automated; `normal`: General.
+                     * @param _indexType Index type. `auto`: Automated; `normal`: General.
+                     * 
                      */
                     void SetIndexType(const std::string& _indexType);
 
                     /**
                      * 判断参数 IndexType 是否已赋值
                      * @return IndexType 是否已赋值
+                     * 
                      */
                     bool IndexTypeHasBeenSet() const;
 
                     /**
                      * 获取Index name. `null` indicates that all indexes are requested.
                      * @return IndexName Index name. `null` indicates that all indexes are requested.
+                     * 
                      */
                     std::string GetIndexName() const;
 
                     /**
                      * 设置Index name. `null` indicates that all indexes are requested.
-                     * @param IndexName Index name. `null` indicates that all indexes are requested.
+                     * @param _indexName Index name. `null` indicates that all indexes are requested.
+                     * 
                      */
                     void SetIndexName(const std::string& _indexName);
 
                     /**
                      * 判断参数 IndexName 是否已赋值
                      * @return IndexName 是否已赋值
+                     * 
                      */
                     bool IndexNameHasBeenSet() const;
 
                     /**
                      * 获取Username for cluster access
                      * @return Username Username for cluster access
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Username for cluster access
-                     * @param Username Username for cluster access
+                     * @param _username Username for cluster access
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Password for cluster access
                      * @return Password Password for cluster access
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password for cluster access
-                     * @param Password Password for cluster access
+                     * @param _password Password for cluster access
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

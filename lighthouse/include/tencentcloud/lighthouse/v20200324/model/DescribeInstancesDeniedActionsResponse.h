@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of instance operation limit details.
                      * @return InstanceDeniedActionSet List of instance operation limit details.
+                     * 
                      */
                     std::vector<InstanceDeniedActions> GetInstanceDeniedActionSet() const;
 
                     /**
                      * 判断参数 InstanceDeniedActionSet 是否已赋值
                      * @return InstanceDeniedActionSet 是否已赋值
+                     * 
                      */
                     bool InstanceDeniedActionSetHasBeenSet() const;
 

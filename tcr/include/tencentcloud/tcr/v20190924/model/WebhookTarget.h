@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Target address
                      * @return Address Target address
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置Target address
-                     * @param Address Target address
+                     * @param _address Target address
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取Custom headers
                      * @return Headers Custom headers
+                     * 
                      */
                     std::vector<Header> GetHeaders() const;
 
                     /**
                      * 设置Custom headers
-                     * @param Headers Custom headers
+                     * @param _headers Custom headers
+                     * 
                      */
                     void SetHeaders(const std::vector<Header>& _headers);
 
                     /**
                      * 判断参数 Headers 是否已赋值
                      * @return Headers 是否已赋值
+                     * 
                      */
                     bool HeadersHasBeenSet() const;
 

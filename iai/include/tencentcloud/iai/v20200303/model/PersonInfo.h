@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Person name
                      * @return PersonName Person name
+                     * 
                      */
                     std::string GetPersonName() const;
 
                     /**
                      * 设置Person name
-                     * @param PersonName Person name
+                     * @param _personName Person name
+                     * 
                      */
                     void SetPersonName(const std::string& _personName);
 
                     /**
                      * 判断参数 PersonName 是否已赋值
                      * @return PersonName 是否已赋值
+                     * 
                      */
                     bool PersonNameHasBeenSet() const;
 
                     /**
                      * 获取Person ID
                      * @return PersonId Person ID
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置Person ID
-                     * @param PersonId Person ID
+                     * @param _personId Person ID
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
                     /**
                      * 获取Person gender
                      * @return Gender Person gender
+                     * 
                      */
                     int64_t GetGender() const;
 
                     /**
                      * 设置Person gender
-                     * @param Gender Person gender
+                     * @param _gender Person gender
+                     * 
                      */
                     void SetGender(const int64_t& _gender);
 
                     /**
                      * 判断参数 Gender 是否已赋值
                      * @return Gender 是否已赋值
+                     * 
                      */
                     bool GenderHasBeenSet() const;
 
                     /**
                      * 获取Content of person description field
                      * @return PersonExDescriptions Content of person description field
+                     * 
                      */
                     std::vector<std::string> GetPersonExDescriptions() const;
 
                     /**
                      * 设置Content of person description field
-                     * @param PersonExDescriptions Content of person description field
+                     * @param _personExDescriptions Content of person description field
+                     * 
                      */
                     void SetPersonExDescriptions(const std::vector<std::string>& _personExDescriptions);
 
                     /**
                      * 判断参数 PersonExDescriptions 是否已赋值
                      * @return PersonExDescriptions 是否已赋值
+                     * 
                      */
                     bool PersonExDescriptionsHasBeenSet() const;
 
                     /**
                      * 获取List of contained face images
                      * @return FaceIds List of contained face images
+                     * 
                      */
                     std::vector<std::string> GetFaceIds() const;
 
                     /**
                      * 设置List of contained face images
-                     * @param FaceIds List of contained face images
+                     * @param _faceIds List of contained face images
+                     * 
                      */
                     void SetFaceIds(const std::vector<std::string>& _faceIds);
 
                     /**
                      * 判断参数 FaceIds 是否已赋值
                      * @return FaceIds 是否已赋值
+                     * 
                      */
                     bool FaceIdsHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
                      * @return CreationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
 The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
+                     * 
                      */
                     uint64_t GetCreationTimestamp() const;
 
                     /**
                      * 设置Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
 The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
-                     * @param CreationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+                     * @param _creationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
 The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
+                     * 
                      */
                     void SetCreationTimestamp(const uint64_t& _creationTimestamp);
 
                     /**
                      * 判断参数 CreationTimestamp 是否已赋值
                      * @return CreationTimestamp 是否已赋值
+                     * 
                      */
                     bool CreationTimestampHasBeenSet() const;
 

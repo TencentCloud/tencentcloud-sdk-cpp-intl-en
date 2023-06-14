@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Keyword. Length limit: 128 characters.
                      * @return Keyword Keyword. Length limit: 128 characters.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Keyword. Length limit: 128 characters.
-                     * @param Keyword Keyword. Length limit: 128 characters.
+                     * @param _keyword Keyword. Length limit: 128 characters.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
@@ -80,6 +83,7 @@ namespace TencentCloud
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 7. All: equivalent to 1+2+3+4
+                     * 
                      */
                     std::vector<std::string> GetUsages() const;
 
@@ -93,7 +97,7 @@ namespace TencentCloud
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 7. All: equivalent to 1+2+3+4
-                     * @param Usages <b>Keyword usage. Valid values:</b>
+                     * @param _usages <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
 2. Recognition.Asr: ASR-based content recognition
 3. Review.Ocr: OCR-based inappropriate information recognition
@@ -102,30 +106,35 @@ namespace TencentCloud
 5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 7. All: equivalent to 1+2+3+4
+                     * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
                     /**
                      * 判断参数 Usages 是否已赋值
                      * @return Usages 是否已赋值
+                     * 
                      */
                     bool UsagesHasBeenSet() const;
 
                     /**
                      * 获取Tag operation information.
                      * @return TagOperationInfo Tag operation information.
+                     * 
                      */
                     AiSampleTagOperation GetTagOperationInfo() const;
 
                     /**
                      * 设置Tag operation information.
-                     * @param TagOperationInfo Tag operation information.
+                     * @param _tagOperationInfo Tag operation information.
+                     * 
                      */
                     void SetTagOperationInfo(const AiSampleTagOperation& _tagOperationInfo);
 
                     /**
                      * 判断参数 TagOperationInfo 是否已赋值
                      * @return TagOperationInfo 是否已赋值
+                     * 
                      */
                     bool TagOperationInfoHasBeenSet() const;
 

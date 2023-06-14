@@ -83,6 +83,7 @@ namespace TencentCloud
 <li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
 <li>`portrait`: Client reputation (only available in custom bot rules)</li>
 <li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+                     * 
                      */
                     std::string GetMatchFrom() const;
 
@@ -105,7 +106,7 @@ namespace TencentCloud
 <li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
 <li>`portrait`: Client reputation (only available in custom bot rules)</li>
 <li>`header_seq`: Header sequence (only available in custom bot rules)</li>
-                     * @param MatchFrom The field to match. Values:
+                     * @param _matchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
 <li>`ua`: User-Agent</li>
@@ -123,30 +124,35 @@ namespace TencentCloud
 <li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
 <li>`portrait`: Client reputation (only available in custom bot rules)</li>
 <li>`header_seq`: Header sequence (only available in custom bot rules)</li>
+                     * 
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
 
                     /**
                      * 判断参数 MatchFrom 是否已赋值
                      * @return MatchFrom 是否已赋值
+                     * 
                      */
                     bool MatchFromHasBeenSet() const;
 
                     /**
                      * 获取The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
                      * @return MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+                     * 
                      */
                     std::string GetMatchParam() const;
 
                     /**
                      * 设置The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
-                     * @param MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+                     * @param _matchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+                     * 
                      */
                     void SetMatchParam(const std::string& _matchParam);
 
                     /**
                      * 判断参数 MatchParam 是否已赋值
                      * @return MatchParam 是否已赋值
+                     * 
                      */
                     bool MatchParamHasBeenSet() const;
 
@@ -185,6 +191,7 @@ namespace TencentCloud
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
+                     * 
                      */
                     std::string GetOperator() const;
 
@@ -206,7 +213,7 @@ namespace TencentCloud
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-                     * @param Operator The logical operator. Values:
+                     * @param _operator The logical operator. Values:
 <li>`equal`: Value equals</li>
 <li>`not_equal`: Value not equals</li>
 <li>`include`: String contains</li>
@@ -223,30 +230,35 @@ namespace TencentCloud
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取The content to match.
                      * @return MatchContent The content to match.
+                     * 
                      */
                     std::string GetMatchContent() const;
 
                     /**
                      * 设置The content to match.
-                     * @param MatchContent The content to match.
+                     * @param _matchContent The content to match.
+                     * 
                      */
                     void SetMatchContent(const std::string& _matchContent);
 
                     /**
                      * 判断参数 MatchContent 是否已赋值
                      * @return MatchContent 是否已赋值
+                     * 
                      */
                     bool MatchContentHasBeenSet() const;
 

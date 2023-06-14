@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取List of cluster IDs to be set
                      * @return ClusterIds List of cluster IDs to be set
+                     * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
                      * 设置List of cluster IDs to be set
-                     * @param ClusterIds List of cluster IDs to be set
+                     * @param _clusterIds List of cluster IDs to be set
+                     * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
                     /**
                      * 判断参数 ClusterIds 是否已赋值
                      * @return ClusterIds 是否已赋值
+                     * 
                      */
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
                      * 获取Cluster check mode. Valid values: `Cluster_Normal` (normal mode); `Cluster_Actived` (proactive mode); `Cluster_Unset` (not set).
                      * @return ClusterCheckMode Cluster check mode. Valid values: `Cluster_Normal` (normal mode); `Cluster_Actived` (proactive mode); `Cluster_Unset` (not set).
+                     * 
                      */
                     std::string GetClusterCheckMode() const;
 
                     /**
                      * 设置Cluster check mode. Valid values: `Cluster_Normal` (normal mode); `Cluster_Actived` (proactive mode); `Cluster_Unset` (not set).
-                     * @param ClusterCheckMode Cluster check mode. Valid values: `Cluster_Normal` (normal mode); `Cluster_Actived` (proactive mode); `Cluster_Unset` (not set).
+                     * @param _clusterCheckMode Cluster check mode. Valid values: `Cluster_Normal` (normal mode); `Cluster_Actived` (proactive mode); `Cluster_Unset` (not set).
+                     * 
                      */
                     void SetClusterCheckMode(const std::string& _clusterCheckMode);
 
                     /**
                      * 判断参数 ClusterCheckMode 是否已赋值
                      * @return ClusterCheckMode 是否已赋值
+                     * 
                      */
                     bool ClusterCheckModeHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `0` (not set); `1` (on); `2` (off).
                      * @return ClusterAutoCheck Valid values: `0` (not set); `1` (on); `2` (off).
+                     * 
                      */
                     uint64_t GetClusterAutoCheck() const;
 
                     /**
                      * 设置Valid values: `0` (not set); `1` (on); `2` (off).
-                     * @param ClusterAutoCheck Valid values: `0` (not set); `1` (on); `2` (off).
+                     * @param _clusterAutoCheck Valid values: `0` (not set); `1` (on); `2` (off).
+                     * 
                      */
                     void SetClusterAutoCheck(const uint64_t& _clusterAutoCheck);
 
                     /**
                      * 判断参数 ClusterAutoCheck 是否已赋值
                      * @return ClusterAutoCheck 是否已赋值
+                     * 
                      */
                     bool ClusterAutoCheckHasBeenSet() const;
 

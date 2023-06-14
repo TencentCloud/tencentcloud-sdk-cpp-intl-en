@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information of all attached disks
                      * @return AttachDetailSet Information of all attached disks
+                     * 
                      */
                     std::vector<AttachDetail> GetAttachDetailSet() const;
 
                     /**
                      * 判断参数 AttachDetailSet 是否已赋值
                      * @return AttachDetailSet 是否已赋值
+                     * 
                      */
                     bool AttachDetailSetHasBeenSet() const;
 
                     /**
                      * 获取Number of attached cloud disks
                      * @return TotalCount Number of attached cloud disks
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -53,144 +53,168 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the ENI instance, such as `eni-f1xjkw1b`.
                      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The ID of the ENI instance, such as `eni-f1xjkw1b`.
-                     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
+                     * @param _networkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取ENI Name
                      * @return NetworkInterfaceName ENI Name
+                     * 
                      */
                     std::string GetNetworkInterfaceName() const;
 
                     /**
                      * 设置ENI Name
-                     * @param NetworkInterfaceName ENI Name
+                     * @param _networkInterfaceName ENI Name
+                     * 
                      */
                     void SetNetworkInterfaceName(const std::string& _networkInterfaceName);
 
                     /**
                      * 判断参数 NetworkInterfaceName 是否已赋值
                      * @return NetworkInterfaceName 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceNameHasBeenSet() const;
 
                     /**
                      * 获取ENI description.
                      * @return NetworkInterfaceDescription ENI description.
+                     * 
                      */
                     std::string GetNetworkInterfaceDescription() const;
 
                     /**
                      * 设置ENI description.
-                     * @param NetworkInterfaceDescription ENI description.
+                     * @param _networkInterfaceDescription ENI description.
+                     * 
                      */
                     void SetNetworkInterfaceDescription(const std::string& _networkInterfaceDescription);
 
                     /**
                      * 判断参数 NetworkInterfaceDescription 是否已赋值
                      * @return NetworkInterfaceDescription 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Subnet instance ID.
                      * @return SubnetId Subnet instance ID.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID.
-                     * @param SubnetId Subnet instance ID.
+                     * @param _subnetId Subnet instance ID.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取VPC instance ID.
                      * @return VpcId VPC instance ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID.
-                     * @param VpcId VPC instance ID.
+                     * @param _vpcId VPC instance ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Bound security group.
                      * @return GroupSet Bound security group.
+                     * 
                      */
                     std::vector<std::string> GetGroupSet() const;
 
                     /**
                      * 设置Bound security group.
-                     * @param GroupSet Bound security group.
+                     * @param _groupSet Bound security group.
+                     * 
                      */
                     void SetGroupSet(const std::vector<std::string>& _groupSet);
 
                     /**
                      * 判断参数 GroupSet 是否已赋值
                      * @return GroupSet 是否已赋值
+                     * 
                      */
                     bool GroupSetHasBeenSet() const;
 
                     /**
                      * 获取Whether it is the primary ENI.
                      * @return Primary Whether it is the primary ENI.
+                     * 
                      */
                     bool GetPrimary() const;
 
                     /**
                      * 设置Whether it is the primary ENI.
-                     * @param Primary Whether it is the primary ENI.
+                     * @param _primary Whether it is the primary ENI.
+                     * 
                      */
                     void SetPrimary(const bool& _primary);
 
                     /**
                      * 判断参数 Primary 是否已赋值
                      * @return Primary 是否已赋值
+                     * 
                      */
                     bool PrimaryHasBeenSet() const;
 
                     /**
                      * 获取MAC address
                      * @return MacAddress MAC address
+                     * 
                      */
                     std::string GetMacAddress() const;
 
                     /**
                      * 设置MAC address
-                     * @param MacAddress MAC address
+                     * @param _macAddress MAC address
+                     * 
                      */
                     void SetMacAddress(const std::string& _macAddress);
 
                     /**
                      * 判断参数 MacAddress 是否已赋值
                      * @return MacAddress 是否已赋值
+                     * 
                      */
                     bool MacAddressHasBeenSet() const;
 
@@ -207,6 +231,7 @@ namespace TencentCloud
 <li>`ATTACHING`: Binding</li>
 <li>`DETACHING`: Unbinding</li>
 <li>`DELETING`: Deleting</li>
+                     * 
                      */
                     std::string GetState() const;
 
@@ -217,36 +242,41 @@ namespace TencentCloud
 <li>`ATTACHING`: Binding</li>
 <li>`DETACHING`: Unbinding</li>
 <li>`DELETING`: Deleting</li>
-                     * @param State ENI status:
+                     * @param _state ENI status:
 <li>`PENDING`: Creating</li>
 <li>`AVAILABLE`: Available</li>
 <li>`ATTACHING`: Binding</li>
 <li>`DETACHING`: Unbinding</li>
 <li>`DELETING`: Deleting</li>
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Private IP information.
                      * @return PrivateIpAddressSet Private IP information.
+                     * 
                      */
                     std::vector<PrivateIpAddressSpecification> GetPrivateIpAddressSet() const;
 
                     /**
                      * 设置Private IP information.
-                     * @param PrivateIpAddressSet Private IP information.
+                     * @param _privateIpAddressSet Private IP information.
+                     * 
                      */
                     void SetPrivateIpAddressSet(const std::vector<PrivateIpAddressSpecification>& _privateIpAddressSet);
 
                     /**
                      * 判断参数 PrivateIpAddressSet 是否已赋值
                      * @return PrivateIpAddressSet 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressSetHasBeenSet() const;
 
@@ -255,110 +285,128 @@ namespace TencentCloud
 Note: This field may return null, indicating no valid value.
                      * @return Attachment Bound CVM object.
 Note: This field may return null, indicating no valid value.
+                     * 
                      */
                     NetworkInterfaceAttachment GetAttachment() const;
 
                     /**
                      * 设置Bound CVM object.
 Note: This field may return null, indicating no valid value.
-                     * @param Attachment Bound CVM object.
+                     * @param _attachment Bound CVM object.
 Note: This field may return null, indicating no valid value.
+                     * 
                      */
                     void SetAttachment(const NetworkInterfaceAttachment& _attachment);
 
                     /**
                      * 判断参数 Attachment 是否已赋值
                      * @return Attachment 是否已赋值
+                     * 
                      */
                     bool AttachmentHasBeenSet() const;
 
                     /**
                      * 获取Availability Zone.
                      * @return Zone Availability Zone.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability Zone.
-                     * @param Zone Availability Zone.
+                     * @param _zone Availability Zone.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Creation Time.
                      * @return CreatedTime Creation Time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation Time.
-                     * @param CreatedTime Creation Time.
+                     * @param _createdTime Creation Time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取The `IPv6` address list.
                      * @return Ipv6AddressSet The `IPv6` address list.
+                     * 
                      */
                     std::vector<Ipv6Address> GetIpv6AddressSet() const;
 
                     /**
                      * 设置The `IPv6` address list.
-                     * @param Ipv6AddressSet The `IPv6` address list.
+                     * @param _ipv6AddressSet The `IPv6` address list.
+                     * 
                      */
                     void SetIpv6AddressSet(const std::vector<Ipv6Address>& _ipv6AddressSet);
 
                     /**
                      * 判断参数 Ipv6AddressSet 是否已赋值
                      * @return Ipv6AddressSet 是否已赋值
+                     * 
                      */
                     bool Ipv6AddressSetHasBeenSet() const;
 
                     /**
                      * 获取Tag key-value pair.
                      * @return TagSet Tag key-value pair.
+                     * 
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
                      * 设置Tag key-value pair.
-                     * @param TagSet Tag key-value pair.
+                     * @param _tagSet Tag key-value pair.
+                     * 
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
                     /**
                      * 获取The ENI type. 0: ENI. 1: EVM ENI.
                      * @return EniType The ENI type. 0: ENI. 1: EVM ENI.
+                     * 
                      */
                     uint64_t GetEniType() const;
 
                     /**
                      * 设置The ENI type. 0: ENI. 1: EVM ENI.
-                     * @param EniType The ENI type. 0: ENI. 1: EVM ENI.
+                     * @param _eniType The ENI type. 0: ENI. 1: EVM ENI.
+                     * 
                      */
                     void SetEniType(const uint64_t& _eniType);
 
                     /**
                      * 判断参数 EniType 是否已赋值
                      * @return EniType 是否已赋值
+                     * 
                      */
                     bool EniTypeHasBeenSet() const;
 
@@ -367,20 +415,23 @@ Note: This field may return null, indicating no valid value.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Business Type of the resource bound with an ENI. Valid values: cvm, eks.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Type of the resource bound with an ENI. Valid values: cvm, eks.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Business Type of the resource bound with an ENI. Valid values: cvm, eks.
+                     * @param _business Type of the resource bound with an ENI. Valid values: cvm, eks.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
@@ -389,20 +440,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CdcId ID of the CDC instance associated with the ENI
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCdcId() const;
 
                     /**
                      * 设置ID of the CDC instance associated with the ENI
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CdcId ID of the CDC instance associated with the ENI
+                     * @param _cdcId ID of the CDC instance associated with the ENI
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCdcId(const std::string& _cdcId);
 
                     /**
                      * 判断参数 CdcId 是否已赋值
                      * @return CdcId 是否已赋值
+                     * 
                      */
                     bool CdcIdHasBeenSet() const;
 
@@ -411,20 +465,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AttachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAttachType() const;
 
                     /**
                      * 设置ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AttachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+                     * @param _attachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttachType(const uint64_t& _attachType);
 
                     /**
                      * 判断参数 AttachType 是否已赋值
                      * @return AttachType 是否已赋值
+                     * 
                      */
                     bool AttachTypeHasBeenSet() const;
 
@@ -433,20 +490,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ResourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ResourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+                     * @param _resourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
@@ -463,6 +523,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`AU`: Silver</li>
 <li>`AG`: Bronze</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetQosLevel() const;
 
@@ -473,18 +534,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`AU`: Silver</li>
 <li>`AG`: Bronze</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param QosLevel Service level
+                     * @param _qosLevel Service level
 <li>`DEFAULT`: Default level</lil>
 <li>`PT`: Gold</li>
 <li>`AU`: Silver</li>
 <li>`AG`: Bronze</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQosLevel(const std::string& _qosLevel);
 
                     /**
                      * 判断参数 QosLevel 是否已赋值
                      * @return QosLevel 是否已赋值
+                     * 
                      */
                     bool QosLevelHasBeenSet() const;
 

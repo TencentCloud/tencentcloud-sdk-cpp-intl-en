@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
                      * @return TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+                     * 
                      */
                     std::string GetTypeName() const;
 
                     /**
                      * 设置Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
-                     * @param TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+                     * @param _typeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+                     * 
                      */
                     void SetTypeName(const std::string& _typeName);
 
                     /**
                      * 判断参数 TypeName 是否已赋值
                      * @return TypeName 是否已赋值
+                     * 
                      */
                     bool TypeNameHasBeenSet() const;
 
                     /**
                      * 获取Engine version number
                      * @return EngineVersion Engine version number
+                     * 
                      */
                     std::vector<std::string> GetEngineVersion() const;
 
                     /**
                      * 设置Engine version number
-                     * @param EngineVersion Engine version number
+                     * @param _engineVersion Engine version number
+                     * 
                      */
                     void SetEngineVersion(const std::vector<std::string>& _engineVersion);
 
                     /**
                      * 判断参数 EngineVersion 是否已赋值
                      * @return EngineVersion 是否已赋值
+                     * 
                      */
                     bool EngineVersionHasBeenSet() const;
 
                     /**
                      * 获取Purchasable specifications ID
                      * @return ConfigIds Purchasable specifications ID
+                     * 
                      */
                     std::vector<int64_t> GetConfigIds() const;
 
                     /**
                      * 设置Purchasable specifications ID
-                     * @param ConfigIds Purchasable specifications ID
+                     * @param _configIds Purchasable specifications ID
+                     * 
                      */
                     void SetConfigIds(const std::vector<int64_t>& _configIds);
 
                     /**
                      * 判断参数 ConfigIds 是否已赋值
                      * @return ConfigIds 是否已赋值
+                     * 
                      */
                     bool ConfigIdsHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取Source listener ID
                      * @return SourceListenerId Source listener ID
+                     * 
                      */
                     std::string GetSourceListenerId() const;
 
                     /**
                      * 设置Source listener ID
-                     * @param SourceListenerId Source listener ID
+                     * @param _sourceListenerId Source listener ID
+                     * 
                      */
                     void SetSourceListenerId(const std::string& _sourceListenerId);
 
                     /**
                      * 判断参数 SourceListenerId 是否已赋值
                      * @return SourceListenerId 是否已赋值
+                     * 
                      */
                     bool SourceListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Target listener ID
                      * @return TargetListenerId Target listener ID
+                     * 
                      */
                     std::string GetTargetListenerId() const;
 
                     /**
                      * 设置Target listener ID
-                     * @param TargetListenerId Target listener ID
+                     * @param _targetListenerId Target listener ID
+                     * 
                      */
                     void SetTargetListenerId(const std::string& _targetListenerId);
 
                     /**
                      * 判断参数 TargetListenerId 是否已赋值
                      * @return TargetListenerId 是否已赋值
+                     * 
                      */
                     bool TargetListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Redirection relationship between forwarding rules
                      * @return RewriteInfos Redirection relationship between forwarding rules
+                     * 
                      */
                     std::vector<RewriteLocationMap> GetRewriteInfos() const;
 
                     /**
                      * 设置Redirection relationship between forwarding rules
-                     * @param RewriteInfos Redirection relationship between forwarding rules
+                     * @param _rewriteInfos Redirection relationship between forwarding rules
+                     * 
                      */
                     void SetRewriteInfos(const std::vector<RewriteLocationMap>& _rewriteInfos);
 
                     /**
                      * 判断参数 RewriteInfos 是否已赋值
                      * @return RewriteInfos 是否已赋值
+                     * 
                      */
                     bool RewriteInfosHasBeenSet() const;
 

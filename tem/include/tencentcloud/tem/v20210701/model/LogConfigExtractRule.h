@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return BeginningRegex First line regex
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetBeginningRegex() const;
 
                     /**
                      * 设置First line regex
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param BeginningRegex First line regex
+                     * @param _beginningRegex First line regex
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetBeginningRegex(const std::string& _beginningRegex);
 
                     /**
                      * 判断参数 BeginningRegex 是否已赋值
                      * @return BeginningRegex 是否已赋值
+                     * 
                      */
                     bool BeginningRegexHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Keys Withdrawl result
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetKeys() const;
 
                     /**
                      * 设置Withdrawl result
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Keys Withdrawl result
+                     * @param _keys Withdrawl result
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetKeys(const std::vector<std::string>& _keys);
 
                     /**
                      * 判断参数 Keys 是否已赋值
                      * @return Keys 是否已赋值
+                     * 
                      */
                     bool KeysHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return FilterKeys Filter keys
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetFilterKeys() const;
 
                     /**
                      * 设置Filter keys
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param FilterKeys Filter keys
+                     * @param _filterKeys Filter keys
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetFilterKeys(const std::vector<std::string>& _filterKeys);
 
                     /**
                      * 判断参数 FilterKeys 是否已赋值
                      * @return FilterKeys 是否已赋值
+                     * 
                      */
                     bool FilterKeysHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return FilterRegex Filter values
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetFilterRegex() const;
 
                     /**
                      * 设置Filter values
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param FilterRegex Filter values
+                     * @param _filterRegex Filter values
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetFilterRegex(const std::vector<std::string>& _filterRegex);
 
                     /**
                      * 判断参数 FilterRegex 是否已赋值
                      * @return FilterRegex 是否已赋值
+                     * 
                      */
                     bool FilterRegexHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return LogRegex Log regex
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetLogRegex() const;
 
                     /**
                      * 设置Log regex
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param LogRegex Log regex
+                     * @param _logRegex Log regex
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetLogRegex(const std::string& _logRegex);
 
                     /**
                      * 判断参数 LogRegex 是否已赋值
                      * @return LogRegex 是否已赋值
+                     * 
                      */
                     bool LogRegexHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return TimeKey Time field
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetTimeKey() const;
 
                     /**
                      * 设置Time field
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param TimeKey Time field
+                     * @param _timeKey Time field
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTimeKey(const std::string& _timeKey);
 
                     /**
                      * 判断参数 TimeKey 是否已赋值
                      * @return TimeKey 是否已赋值
+                     * 
                      */
                     bool TimeKeyHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return TimeFormat Time Format
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetTimeFormat() const;
 
                     /**
                      * 设置Time Format
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param TimeFormat Time Format
+                     * @param _timeFormat Time Format
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
 
                     /**
                      * 判断参数 TimeFormat 是否已赋值
                      * @return TimeFormat 是否已赋值
+                     * 
                      */
                     bool TimeFormatHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UnMatchUpload - Enable the upload of the log that failed to parse
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUnMatchUpload() const;
 
                     /**
                      * 设置- Enable the upload of the log that failed to parse
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UnMatchUpload - Enable the upload of the log that failed to parse
+                     * @param _unMatchUpload - Enable the upload of the log that failed to parse
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUnMatchUpload(const std::string& _unMatchUpload);
 
                     /**
                      * 判断参数 UnMatchUpload 是否已赋值
                      * @return UnMatchUpload 是否已赋值
+                     * 
                      */
                     bool UnMatchUploadHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UnMatchedKey Key of log failed to be parsed
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUnMatchedKey() const;
 
                     /**
                      * 设置Key of log failed to be parsed
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UnMatchedKey Key of log failed to be parsed
+                     * @param _unMatchedKey Key of log failed to be parsed
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUnMatchedKey(const std::string& _unMatchedKey);
 
                     /**
                      * 判断参数 UnMatchedKey 是否已赋值
                      * @return UnMatchedKey 是否已赋值
+                     * 
                      */
                     bool UnMatchedKeyHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Backtracking tracking
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBacktracking() const;
 
                     /**
                      * 设置tracking
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Backtracking tracking
+                     * @param _backtracking tracking
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBacktracking(const std::string& _backtracking);
 
                     /**
                      * 判断参数 Backtracking 是否已赋值
                      * @return Backtracking 是否已赋值
+                     * 
                      */
                     bool BacktrackingHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Delimiter Separator
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDelimiter() const;
 
                     /**
                      * 设置Separator
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Delimiter Separator
+                     * @param _delimiter Separator
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDelimiter(const std::string& _delimiter);
 
                     /**
                      * 判断参数 Delimiter 是否已赋值
                      * @return Delimiter 是否已赋值
+                     * 
                      */
                     bool DelimiterHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取ENI instance ID, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置ENI instance ID, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId ENI instance ID, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取Information of the specified IPv6 addresses.
                      * @return Ipv6Addresses Information of the specified IPv6 addresses.
+                     * 
                      */
                     std::vector<Ipv6Address> GetIpv6Addresses() const;
 
                     /**
                      * 设置Information of the specified IPv6 addresses.
-                     * @param Ipv6Addresses Information of the specified IPv6 addresses.
+                     * @param _ipv6Addresses Information of the specified IPv6 addresses.
+                     * 
                      */
                     void SetIpv6Addresses(const std::vector<Ipv6Address>& _ipv6Addresses);
 
                     /**
                      * 判断参数 Ipv6Addresses 是否已赋值
                      * @return Ipv6Addresses 是否已赋值
+                     * 
                      */
                     bool Ipv6AddressesHasBeenSet() const;
 

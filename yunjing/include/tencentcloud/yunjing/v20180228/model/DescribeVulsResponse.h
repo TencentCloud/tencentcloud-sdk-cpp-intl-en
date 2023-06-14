@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of vulnerabilities.
                      * @return TotalCount Number of vulnerabilities.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability list array.
                      * @return Vuls Vulnerability list array.
+                     * 
                      */
                     std::vector<Vul> GetVuls() const;
 
                     /**
                      * 判断参数 Vuls 是否已赋值
                      * @return Vuls 是否已赋值
+                     * 
                      */
                     bool VulsHasBeenSet() const;
 

@@ -55,6 +55,7 @@ The value can be a random name for identification, such as `Canvas1` or `Picture
                      * @return InputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
 The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
 The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
+                     * 
                      */
                     std::string GetInputStreamName() const;
 
@@ -62,51 +63,59 @@ The value can be a random name for identification, such as `Canvas1` or `Picture
                      * 设置Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
 The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
 The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
-                     * @param InputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+                     * @param _inputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
 The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
 The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
+                     * 
                      */
                     void SetInputStreamName(const std::string& _inputStreamName);
 
                     /**
                      * 判断参数 InputStreamName 是否已赋值
                      * @return InputStreamName 是否已赋值
+                     * 
                      */
                     bool InputStreamNameHasBeenSet() const;
 
                     /**
                      * 获取Input stream layout parameter.
                      * @return LayoutParams Input stream layout parameter.
+                     * 
                      */
                     CommonMixLayoutParams GetLayoutParams() const;
 
                     /**
                      * 设置Input stream layout parameter.
-                     * @param LayoutParams Input stream layout parameter.
+                     * @param _layoutParams Input stream layout parameter.
+                     * 
                      */
                     void SetLayoutParams(const CommonMixLayoutParams& _layoutParams);
 
                     /**
                      * 判断参数 LayoutParams 是否已赋值
                      * @return LayoutParams 是否已赋值
+                     * 
                      */
                     bool LayoutParamsHasBeenSet() const;
 
                     /**
                      * 获取Input stream crop parameter.
                      * @return CropParams Input stream crop parameter.
+                     * 
                      */
                     CommonMixCropParams GetCropParams() const;
 
                     /**
                      * 设置Input stream crop parameter.
-                     * @param CropParams Input stream crop parameter.
+                     * @param _cropParams Input stream crop parameter.
+                     * 
                      */
                     void SetCropParams(const CommonMixCropParams& _cropParams);
 
                     /**
                      * 判断参数 CropParams 是否已赋值
                      * @return CropParams 是否已赋值
+                     * 
                      */
                     bool CropParamsHasBeenSet() const;
 

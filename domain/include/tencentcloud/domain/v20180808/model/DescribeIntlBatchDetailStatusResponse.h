@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The details.
                      * @return Details The details.
+                     * 
                      */
                     std::vector<IntlBatchDetails> GetDetails() const;
 
                     /**
                      * 判断参数 Details 是否已赋值
                      * @return Details 是否已赋值
+                     * 
                      */
                     bool DetailsHasBeenSet() const;
 

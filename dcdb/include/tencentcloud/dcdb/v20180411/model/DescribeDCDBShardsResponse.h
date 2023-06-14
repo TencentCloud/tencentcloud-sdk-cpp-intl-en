@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible shards
                      * @return TotalCount Number of eligible shards
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Shard information list
                      * @return Shards Shard information list
+                     * 
                      */
                     std::vector<DCDBShardInfo> GetShards() const;
 
                     /**
                      * 判断参数 Shards 是否已赋值
                      * @return Shards 是否已赋值
+                     * 
                      */
                     bool ShardsHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DcnFlag Disaster recovery flag. Valid values: 0 (none), 1 (source instance), 2 (disaster recovery instance)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDcnFlag() const;
 
                     /**
                      * 判断参数 DcnFlag 是否已赋值
                      * @return DcnFlag 是否已赋值
+                     * 
                      */
                     bool DcnFlagHasBeenSet() const;
 

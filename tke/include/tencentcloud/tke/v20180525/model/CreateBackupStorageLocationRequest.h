@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Repository region, such as `ap-guangzhou`
                      * @return StorageRegion Repository region, such as `ap-guangzhou`
+                     * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
                      * 设置Repository region, such as `ap-guangzhou`
-                     * @param StorageRegion Repository region, such as `ap-guangzhou`
+                     * @param _storageRegion Repository region, such as `ap-guangzhou`
+                     * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
 
                     /**
                      * 判断参数 StorageRegion 是否已赋值
                      * @return StorageRegion 是否已赋值
+                     * 
                      */
                     bool StorageRegionHasBeenSet() const;
 
                     /**
                      * 获取COS bucket name. For COS storage type, it must start with the prefix `tke-backup`.
                      * @return Bucket COS bucket name. For COS storage type, it must start with the prefix `tke-backup`.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置COS bucket name. For COS storage type, it must start with the prefix `tke-backup`.
-                     * @param Bucket COS bucket name. For COS storage type, it must start with the prefix `tke-backup`.
+                     * @param _bucket COS bucket name. For COS storage type, it must start with the prefix `tke-backup`.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取Backup repository name
                      * @return Name Backup repository name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Backup repository name
-                     * @param Name Backup repository name
+                     * @param _name Backup repository name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The provider of storage service. It defaults to Tencent Cloud.
                      * @return Provider The provider of storage service. It defaults to Tencent Cloud.
+                     * 
                      */
                     std::string GetProvider() const;
 
                     /**
                      * 设置The provider of storage service. It defaults to Tencent Cloud.
-                     * @param Provider The provider of storage service. It defaults to Tencent Cloud.
+                     * @param _provider The provider of storage service. It defaults to Tencent Cloud.
+                     * 
                      */
                     void SetProvider(const std::string& _provider);
 
                     /**
                      * 判断参数 Provider 是否已赋值
                      * @return Provider 是否已赋值
+                     * 
                      */
                     bool ProviderHasBeenSet() const;
 
                     /**
                      * 获取COS bucket path
                      * @return Path COS bucket path
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置COS bucket path
-                     * @param Path COS bucket path
+                     * @param _path COS bucket path
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 

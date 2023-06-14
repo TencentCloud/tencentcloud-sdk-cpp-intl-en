@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserGroupIds List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetUserGroupIds() const;
 
                     /**
                      * 设置List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserGroupIds List of IDs of the user's user groups.
+                     * @param _userGroupIds List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserGroupIds(const std::vector<std::string>& _userGroupIds);
 
                     /**
                      * 判断参数 UserGroupIds 是否已赋值
                      * @return UserGroupIds 是否已赋值
+                     * 
                      */
                     bool UserGroupIdsHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgNodeIds List of IDs of the user's organization nodes.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetOrgNodeIds() const;
 
                     /**
                      * 设置List of IDs of the user's organization nodes.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrgNodeIds List of IDs of the user's organization nodes.
+                     * @param _orgNodeIds List of IDs of the user's organization nodes.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOrgNodeIds(const std::vector<std::string>& _orgNodeIds);
 
                     /**
                      * 判断参数 OrgNodeIds 是否已赋值
                      * @return OrgNodeIds 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdsHasBeenSet() const;
 

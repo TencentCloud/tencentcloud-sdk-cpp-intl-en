@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Province/State ID
                      * @return ProvinceId Province/State ID
+                     * 
                      */
                     std::string GetProvinceId() const;
 
                     /**
                      * 设置Province/State ID
-                     * @param ProvinceId Province/State ID
+                     * @param _provinceId Province/State ID
+                     * 
                      */
                     void SetProvinceId(const std::string& _provinceId);
 
                     /**
                      * 判断参数 ProvinceId 是否已赋值
                      * @return ProvinceId 是否已赋值
+                     * 
                      */
                     bool ProvinceIdHasBeenSet() const;
 
                     /**
                      * 获取Province/State name
                      * @return ProvinceName Province/State name
+                     * 
                      */
                     std::string GetProvinceName() const;
 
                     /**
                      * 设置Province/State name
-                     * @param ProvinceName Province/State name
+                     * @param _provinceName Province/State name
+                     * 
                      */
                     void SetProvinceName(const std::string& _provinceName);
 
                     /**
                      * 判断参数 ProvinceName 是否已赋值
                      * @return ProvinceName 是否已赋值
+                     * 
                      */
                     bool ProvinceNameHasBeenSet() const;
 

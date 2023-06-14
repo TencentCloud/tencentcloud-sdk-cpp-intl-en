@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Retry interval in seconds
                      * @return RetryInterval Retry interval in seconds
+                     * 
                      */
                     uint64_t GetRetryInterval() const;
 
                     /**
                      * 设置Retry interval in seconds
-                     * @param RetryInterval Retry interval in seconds
+                     * @param _retryInterval Retry interval in seconds
+                     * 
                      */
                     void SetRetryInterval(const uint64_t& _retryInterval);
 
                     /**
                      * 判断参数 RetryInterval 是否已赋值
                      * @return RetryInterval 是否已赋值
+                     * 
                      */
                     bool RetryIntervalHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of retries
                      * @return MaxRetryAttempts Maximum number of retries
+                     * 
                      */
                     uint64_t GetMaxRetryAttempts() const;
 
                     /**
                      * 设置Maximum number of retries
-                     * @param MaxRetryAttempts Maximum number of retries
+                     * @param _maxRetryAttempts Maximum number of retries
+                     * 
                      */
                     void SetMaxRetryAttempts(const uint64_t& _maxRetryAttempts);
 
                     /**
                      * 判断参数 MaxRetryAttempts 是否已赋值
                      * @return MaxRetryAttempts 是否已赋值
+                     * 
                      */
                     bool MaxRetryAttemptsHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NumberOfShards Number of primary shards
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetNumberOfShards() const;
 
                     /**
                      * 设置Number of primary shards
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NumberOfShards Number of primary shards
+                     * @param _numberOfShards Number of primary shards
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNumberOfShards(const std::string& _numberOfShards);
 
                     /**
                      * 判断参数 NumberOfShards 是否已赋值
                      * @return NumberOfShards 是否已赋值
+                     * 
                      */
                     bool NumberOfShardsHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NumberOfReplicas Number of replica shards
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetNumberOfReplicas() const;
 
                     /**
                      * 设置Number of replica shards
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NumberOfReplicas Number of replica shards
+                     * @param _numberOfReplicas Number of replica shards
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNumberOfReplicas(const std::string& _numberOfReplicas);
 
                     /**
                      * 判断参数 NumberOfReplicas 是否已赋值
                      * @return NumberOfReplicas 是否已赋值
+                     * 
                      */
                     bool NumberOfReplicasHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RefreshInterval Index refresh interval
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRefreshInterval() const;
 
                     /**
                      * 设置Index refresh interval
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RefreshInterval Index refresh interval
+                     * @param _refreshInterval Index refresh interval
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRefreshInterval(const std::string& _refreshInterval);
 
                     /**
                      * 判断参数 RefreshInterval 是否已赋值
                      * @return RefreshInterval 是否已赋值
+                     * 
                      */
                     bool RefreshIntervalHasBeenSet() const;
 

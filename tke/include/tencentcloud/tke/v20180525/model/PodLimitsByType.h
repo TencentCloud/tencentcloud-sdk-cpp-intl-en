@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return TKERouteENINonStaticIP The number of Pods supported by a TKE shared ENI in non-static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTKERouteENINonStaticIP() const;
 
                     /**
                      * 设置The number of Pods supported by a TKE shared ENI in non-static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param TKERouteENINonStaticIP The number of Pods supported by a TKE shared ENI in non-static IP address mode
+                     * @param _tKERouteENINonStaticIP The number of Pods supported by a TKE shared ENI in non-static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTKERouteENINonStaticIP(const int64_t& _tKERouteENINonStaticIP);
 
                     /**
                      * 判断参数 TKERouteENINonStaticIP 是否已赋值
                      * @return TKERouteENINonStaticIP 是否已赋值
+                     * 
                      */
                     bool TKERouteENINonStaticIPHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return TKERouteENIStaticIP The number of Pods supported by a TKE shared ENI in static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTKERouteENIStaticIP() const;
 
                     /**
                      * 设置The number of Pods supported by a TKE shared ENI in static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param TKERouteENIStaticIP The number of Pods supported by a TKE shared ENI in static IP address mode
+                     * @param _tKERouteENIStaticIP The number of Pods supported by a TKE shared ENI in static IP address mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTKERouteENIStaticIP(const int64_t& _tKERouteENIStaticIP);
 
                     /**
                      * 判断参数 TKERouteENIStaticIP 是否已赋值
                      * @return TKERouteENIStaticIP 是否已赋值
+                     * 
                      */
                     bool TKERouteENIStaticIPHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return TKEDirectENI The number of Pods supported by TKE independent ENI mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetTKEDirectENI() const;
 
                     /**
                      * 设置The number of Pods supported by TKE independent ENI mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param TKEDirectENI The number of Pods supported by TKE independent ENI mode
+                     * @param _tKEDirectENI The number of Pods supported by TKE independent ENI mode
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTKEDirectENI(const int64_t& _tKEDirectENI);
 
                     /**
                      * 判断参数 TKEDirectENI 是否已赋值
                      * @return TKEDirectENI 是否已赋值
+                     * 
                      */
                     bool TKEDirectENIHasBeenSet() const;
 

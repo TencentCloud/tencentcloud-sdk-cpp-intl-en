@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConnectedSince The time when the consumer started connecting.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConnectedSince() const;
 
                     /**
                      * 设置The time when the consumer started connecting.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConnectedSince The time when the consumer started connecting.
+                     * @param _connectedSince The time when the consumer started connecting.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConnectedSince(const std::string& _connectedSince);
 
                     /**
                      * 判断参数 ConnectedSince 是否已赋值
                      * @return ConnectedSince 是否已赋值
+                     * 
                      */
                     bool ConnectedSinceHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConsumerAddr Consumer address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConsumerAddr() const;
 
                     /**
                      * 设置Consumer address.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConsumerAddr Consumer address.
+                     * @param _consumerAddr Consumer address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConsumerAddr(const std::string& _consumerAddr);
 
                     /**
                      * 判断参数 ConsumerAddr 是否已赋值
                      * @return ConsumerAddr 是否已赋值
+                     * 
                      */
                     bool ConsumerAddrHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConsumerName Consumer name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConsumerName() const;
 
                     /**
                      * 设置Consumer name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConsumerName Consumer name.
+                     * @param _consumerName Consumer name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConsumerName(const std::string& _consumerName);
 
                     /**
                      * 判断参数 ConsumerName 是否已赋值
                      * @return ConsumerName 是否已赋值
+                     * 
                      */
                     bool ConsumerNameHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClientVersion Consumer version.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientVersion() const;
 
                     /**
                      * 设置Consumer version.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientVersion Consumer version.
+                     * @param _clientVersion Consumer version.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientVersion(const std::string& _clientVersion);
 
                     /**
                      * 判断参数 ClientVersion 是否已赋值
                      * @return ClientVersion 是否已赋值
+                     * 
                      */
                     bool ClientVersionHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Partition Serial number of the topic partition connected to the consumer.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPartition() const;
 
                     /**
                      * 设置Serial number of the topic partition connected to the consumer.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Partition Serial number of the topic partition connected to the consumer.
+                     * @param _partition Serial number of the topic partition connected to the consumer.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartition(const int64_t& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 

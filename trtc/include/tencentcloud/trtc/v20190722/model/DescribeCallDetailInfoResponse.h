@@ -48,12 +48,14 @@ namespace TencentCloud
                     /**
                      * 获取The number of records returned.
                      * @return Total The number of records returned.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -62,12 +64,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserList The user information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UserInformation> GetUserList() const;
 
                     /**
                      * 判断参数 UserList 是否已赋值
                      * @return UserList 是否已赋值
+                     * 
                      */
                     bool UserListHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Data The call quality data.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<QualityData> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

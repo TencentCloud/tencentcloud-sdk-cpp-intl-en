@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable POST upload limit (default limit: 32 MB). Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable POST upload limit (default limit: 32 MB). Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable POST upload limit (default limit: 32 MB). Values:
+                     * @param _switch Whether to enable POST upload limit (default limit: 32 MB). Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaxSize Maximum size. Value range: 1-500 MB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum size. Value range: 1-500 MB.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MaxSize Maximum size. Value range: 1-500 MB.
+                     * @param _maxSize Maximum size. Value range: 1-500 MB.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 

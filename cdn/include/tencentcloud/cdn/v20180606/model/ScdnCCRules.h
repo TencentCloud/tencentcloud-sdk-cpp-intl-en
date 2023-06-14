@@ -59,6 +59,7 @@ namespace TencentCloud
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -69,54 +70,62 @@ namespace TencentCloud
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `all`: effective for all files.
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取Rule value (blocking condition)
                      * @return RuleValue Rule value (blocking condition)
+                     * 
                      */
                     std::vector<std::string> GetRuleValue() const;
 
                     /**
                      * 设置Rule value (blocking condition)
-                     * @param RuleValue Rule value (blocking condition)
+                     * @param _ruleValue Rule value (blocking condition)
+                     * 
                      */
                     void SetRuleValue(const std::vector<std::string>& _ruleValue);
 
                     /**
                      * 判断参数 RuleValue 是否已赋值
                      * @return RuleValue 是否已赋值
+                     * 
                      */
                     bool RuleValueHasBeenSet() const;
 
                     /**
                      * 获取IP access limit rule
                      * @return Qps IP access limit rule
+                     * 
                      */
                     uint64_t GetQps() const;
 
                     /**
                      * 设置IP access limit rule
-                     * @param Qps IP access limit rule
+                     * @param _qps IP access limit rule
+                     * 
                      */
                     void SetQps(const uint64_t& _qps);
 
                     /**
                      * 判断参数 Qps 是否已赋值
                      * @return Qps 是否已赋值
+                     * 
                      */
                     bool QpsHasBeenSet() const;
 
@@ -125,20 +134,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DetectionTime Detection granularity
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDetectionTime() const;
 
                     /**
                      * 设置Detection granularity
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DetectionTime Detection granularity
+                     * @param _detectionTime Detection granularity
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetectionTime(const uint64_t& _detectionTime);
 
                     /**
                      * 判断参数 DetectionTime 是否已赋值
                      * @return DetectionTime 是否已赋值
+                     * 
                      */
                     bool DetectionTimeHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return FrequencyLimit Frequency threshold
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFrequencyLimit() const;
 
                     /**
                      * 设置Frequency threshold
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param FrequencyLimit Frequency threshold
+                     * @param _frequencyLimit Frequency threshold
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFrequencyLimit(const uint64_t& _frequencyLimit);
 
                     /**
                      * 判断参数 FrequencyLimit 是否已赋值
                      * @return FrequencyLimit 是否已赋值
+                     * 
                      */
                     bool FrequencyLimitHasBeenSet() const;
 
@@ -169,20 +184,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PunishmentSwitch Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPunishmentSwitch() const;
 
                     /**
                      * 设置Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PunishmentSwitch Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
+                     * @param _punishmentSwitch Whether to block or redirect requests from suspicious IPs. Valid values: `on` and `off`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPunishmentSwitch(const std::string& _punishmentSwitch);
 
                     /**
                      * 判断参数 PunishmentSwitch 是否已赋值
                      * @return PunishmentSwitch 是否已赋值
+                     * 
                      */
                     bool PunishmentSwitchHasBeenSet() const;
 
@@ -191,20 +209,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PunishmentTime Suspicious IP restriction duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPunishmentTime() const;
 
                     /**
                      * 设置Suspicious IP restriction duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PunishmentTime Suspicious IP restriction duration
+                     * @param _punishmentTime Suspicious IP restriction duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPunishmentTime(const uint64_t& _punishmentTime);
 
                     /**
                      * 判断参数 PunishmentTime 是否已赋值
                      * @return PunishmentTime 是否已赋值
+                     * 
                      */
                     bool PunishmentTimeHasBeenSet() const;
 
@@ -213,20 +234,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Action Action. Valid values: `intercept` and `redirect`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action. Valid values: `intercept` and `redirect`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Action Action. Valid values: `intercept` and `redirect`.
+                     * @param _action Action. Valid values: `intercept` and `redirect`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -235,20 +259,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RedirectUrl The redirection target URL used when the `Action` is `redirect`
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置The redirection target URL used when the `Action` is `redirect`
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RedirectUrl The redirection target URL used when the `Action` is `redirect`
+                     * @param _redirectUrl The redirection target URL used when the `Action` is `redirect`
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
                     /**
                      * 判断参数 RedirectUrl 是否已赋值
                      * @return RedirectUrl 是否已赋值
+                     * 
                      */
                     bool RedirectUrlHasBeenSet() const;
 

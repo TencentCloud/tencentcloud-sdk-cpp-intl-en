@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Filename
                      * @return FileName Filename
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename
-                     * @param FileName Filename
+                     * @param _fileName Filename
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取File path
                      * @return FilePath File path
+                     * 
                      */
                     std::string GetFilePath() const;
 
                     /**
                      * 设置File path
-                     * @param FilePath File path
+                     * @param _filePath File path
+                     * 
                      */
                     void SetFilePath(const std::string& _filePath);
 
                     /**
                      * 判断参数 FilePath 是否已赋值
                      * @return FilePath 是否已赋值
+                     * 
                      */
                     bool FilePathHasBeenSet() const;
 
                     /**
                      * 获取Virus name
                      * @return VirusName Virus name
+                     * 
                      */
                     std::string GetVirusName() const;
 
                     /**
                      * 设置Virus name
-                     * @param VirusName Virus name
+                     * @param _virusName Virus name
+                     * 
                      */
                     void SetVirusName(const std::string& _virusName);
 
                     /**
                      * 判断参数 VirusName 是否已赋值
                      * @return VirusName 是否已赋值
+                     * 
                      */
                     bool VirusNameHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return ModifyTime Update time
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Update time
-                     * @param ModifyTime Update time
+                     * @param _modifyTime Update time
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
                      * 获取Container name
                      * @return ContainerName Container name
+                     * 
                      */
                     std::string GetContainerName() const;
 
                     /**
                      * 设置Container name
-                     * @param ContainerName Container name
+                     * @param _containerName Container name
+                     * 
                      */
                     void SetContainerName(const std::string& _containerName);
 
                     /**
                      * 判断参数 ContainerName 是否已赋值
                      * @return ContainerName 是否已赋值
+                     * 
                      */
                     bool ContainerNameHasBeenSet() const;
 
                     /**
                      * 获取Container ID
                      * @return ContainerId Container ID
+                     * 
                      */
                     std::string GetContainerId() const;
 
                     /**
                      * 设置Container ID
-                     * @param ContainerId Container ID
+                     * @param _containerId Container ID
+                     * 
                      */
                     void SetContainerId(const std::string& _containerId);
 
                     /**
                      * 判断参数 ContainerId 是否已赋值
                      * @return ContainerId 是否已赋值
+                     * 
                      */
                     bool ContainerIdHasBeenSet() const;
 
@@ -189,6 +210,7 @@ namespace TencentCloud
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+                     * 
                      */
                     std::string GetContainerStatus() const;
 
@@ -201,7 +223,7 @@ namespace TencentCloud
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
-                     * @param ContainerStatus Container status
+                     * @param _containerStatus Container status
 `RUNNING`: Running.
 `PAUSED`: Paused.
 `STOPPED`: Stopped.
@@ -209,48 +231,56 @@ namespace TencentCloud
 `DESTROYED`: Terminated.
 `RESTARTING`: Restarting.
 `REMOVING`: Removing.
+                     * 
                      */
                     void SetContainerStatus(const std::string& _containerStatus);
 
                     /**
                      * 判断参数 ContainerStatus 是否已赋值
                      * @return ContainerStatus 是否已赋值
+                     * 
                      */
                     bool ContainerStatusHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
@@ -273,6 +303,7 @@ namespace TencentCloud
 `DEAL_ISOLATE_FAILED`: Isolation failed.
 `DEAL_RECOVERING`: Recovering.
 `DEAL_RECOVER_FAILED`: Recovery failed.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -286,7 +317,7 @@ namespace TencentCloud
 `DEAL_ISOLATE_FAILED`: Isolation failed.
 `DEAL_RECOVERING`: Recovering.
 `DEAL_RECOVER_FAILED`: Recovery failed.
-                     * @param Status `DEAL_NONE`: Pending.
+                     * @param _status `DEAL_NONE`: Pending.
 `DEAL_IGNORE`: Ignored.
 `DEAL_ADD_WHITELIST`: Allowed.
 `DEAL_DEL`: Deleted.
@@ -295,66 +326,77 @@ namespace TencentCloud
 `DEAL_ISOLATE_FAILED`: Isolation failed.
 `DEAL_RECOVERING`: Recovering.
 `DEAL_RECOVER_FAILED`: Recovery failed.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Event ID
                      * @return Id Event ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Event ID
-                     * @param Id Event ID
+                     * @param _id Event ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Event description
                      * @return HarmDescribe Event description
+                     * 
                      */
                     std::string GetHarmDescribe() const;
 
                     /**
                      * 设置Event description
-                     * @param HarmDescribe Event description
+                     * @param _harmDescribe Event description
+                     * 
                      */
                     void SetHarmDescribe(const std::string& _harmDescribe);
 
                     /**
                      * 判断参数 HarmDescribe 是否已赋值
                      * @return HarmDescribe 是否已赋值
+                     * 
                      */
                     bool HarmDescribeHasBeenSet() const;
 
                     /**
                      * 获取Solution
                      * @return SuggestScheme Solution
+                     * 
                      */
                     std::string GetSuggestScheme() const;
 
                     /**
                      * 设置Solution
-                     * @param SuggestScheme Solution
+                     * @param _suggestScheme Solution
+                     * 
                      */
                     void SetSuggestScheme(const std::string& _suggestScheme);
 
                     /**
                      * 判断参数 SuggestScheme 是否已赋值
                      * @return SuggestScheme 是否已赋值
+                     * 
                      */
                     bool SuggestSchemeHasBeenSet() const;
 
@@ -383,6 +425,7 @@ namespace TencentCloud
 `OFFLINE`: Offline.
 `INTERNAL`: Internal service error.
 `VALIDATION`: Invalid parameter.
+                     * 
                      */
                     std::string GetSubStatus() const;
 
@@ -399,7 +442,7 @@ namespace TencentCloud
 `OFFLINE`: Offline.
 `INTERNAL`: Internal service error.
 `VALIDATION`: Invalid parameter.
-                     * @param SubStatus Sub-status of the failure:
+                     * @param _subStatus Sub-status of the failure:
 `FILE_NOT_FOUND`: The file does not exist.
 `FILE_ABNORMAL`: The file is abnormal.
 `FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
@@ -411,12 +454,14 @@ namespace TencentCloud
 `OFFLINE`: Offline.
 `INTERNAL`: Internal service error.
 `VALIDATION`: Invalid parameter.
+                     * 
                      */
                     void SetSubStatus(const std::string& _subStatus);
 
                     /**
                      * 判断参数 SubStatus 是否已赋值
                      * @return SubStatus 是否已赋值
+                     * 
                      */
                     bool SubStatusHasBeenSet() const;
 
@@ -435,6 +480,7 @@ namespace TencentCloud
 `ISOLATE_FAILED`: 	Isolation failed.
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
+                     * 
                      */
                     std::string GetContainerNetStatus() const;
 
@@ -446,19 +492,21 @@ namespace TencentCloud
 `ISOLATE_FAILED`: 	Isolation failed.
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
-                     * @param ContainerNetStatus Network status
+                     * @param _containerNetStatus Network status
 `NORMAL`: 	Not isolated.
 `ISOLATED`: 		Isolated.
 `ISOLATING`: 		Isolating.
 `ISOLATE_FAILED`: 	Isolation failed.
 `RESTORING`: Recovering.
 `RESTORE_FAILED`: Recovery failed.
+                     * 
                      */
                     void SetContainerNetStatus(const std::string& _containerNetStatus);
 
                     /**
                      * 判断参数 ContainerNetStatus 是否已赋值
                      * @return ContainerNetStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetStatusHasBeenSet() const;
 
@@ -479,6 +527,7 @@ namespace TencentCloud
 	"SHARED_HOST"         // The container shares the network with the server.
 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 	"UNKNOW"              // The reason is unknown.
+                     * 
                      */
                     std::string GetContainerNetSubStatus() const;
 
@@ -491,7 +540,7 @@ namespace TencentCloud
 	"SHARED_HOST"         // The container shares the network with the server.
 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 	"UNKNOW"              // The reason is unknown.
-                     * @param ContainerNetSubStatus Sub-status of the container
+                     * @param _containerNetSubStatus Sub-status of the container
 "AGENT_OFFLINE"       // The agent is offline.
 	"NODE_DESTROYED"      // The node is terminated.
 	"CONTAINER_EXITED"    // The container exited.
@@ -499,30 +548,35 @@ namespace TencentCloud
 	"SHARED_HOST"         // The container shares the network with the server.
 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
 	"UNKNOW"              // The reason is unknown.
+                     * 
                      */
                     void SetContainerNetSubStatus(const std::string& _containerNetSubStatus);
 
                     /**
                      * 判断参数 ContainerNetSubStatus 是否已赋值
                      * @return ContainerNetSubStatus 是否已赋值
+                     * 
                      */
                     bool ContainerNetSubStatusHasBeenSet() const;
 
                     /**
                      * 获取Container isolation operation source
                      * @return ContainerIsolateOperationSrc Container isolation operation source
+                     * 
                      */
                     std::string GetContainerIsolateOperationSrc() const;
 
                     /**
                      * 设置Container isolation operation source
-                     * @param ContainerIsolateOperationSrc Container isolation operation source
+                     * @param _containerIsolateOperationSrc Container isolation operation source
+                     * 
                      */
                     void SetContainerIsolateOperationSrc(const std::string& _containerIsolateOperationSrc);
 
                     /**
                      * 判断参数 ContainerIsolateOperationSrc 是否已赋值
                      * @return ContainerIsolateOperationSrc 是否已赋值
+                     * 
                      */
                     bool ContainerIsolateOperationSrcHasBeenSet() const;
 
@@ -531,20 +585,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MD5 MD5 checksum
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMD5() const;
 
                     /**
                      * 设置MD5 checksum
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MD5 MD5 checksum
+                     * @param _mD5 MD5 checksum
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMD5(const std::string& _mD5);
 
                     /**
                      * 判断参数 MD5 是否已赋值
                      * @return MD5 是否已赋值
+                     * 
                      */
                     bool MD5HasBeenSet() const;
 
@@ -553,20 +610,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
                      * 设置Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RiskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
+                     * @param _riskLevel Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
 
                     /**
                      * 判断参数 RiskLevel 是否已赋值
                      * @return RiskLevel 是否已赋值
+                     * 
                      */
                     bool RiskLevelHasBeenSet() const;
 
@@ -585,6 +645,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `4`: Unusual behavior.
 `5`: Threat intelligence.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetCheckPlatform() const;
 
@@ -596,19 +657,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `4`: Unusual behavior.
 `5`: Threat intelligence.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CheckPlatform Check platform
+                     * @param _checkPlatform Check platform
 `1`: Tencent Cloud Security Engine.
 `2`: tav.
 `3`: binaryAi.
 `4`: Unusual behavior.
 `5`: Threat intelligence.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckPlatform(const std::vector<std::string>& _checkPlatform);
 
                     /**
                      * 判断参数 CheckPlatform 是否已赋值
                      * @return CheckPlatform 是否已赋值
+                     * 
                      */
                     bool CheckPlatformHasBeenSet() const;
 

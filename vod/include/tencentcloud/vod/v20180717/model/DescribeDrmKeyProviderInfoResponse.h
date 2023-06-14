@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SDMCInfo The DRM key information provided by SDMC.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SDMCDrmKeyProviderInfo GetSDMCInfo() const;
 
                     /**
                      * 判断参数 SDMCInfo 是否已赋值
                      * @return SDMCInfo 是否已赋值
+                     * 
                      */
                     bool SDMCInfoHasBeenSet() const;
 

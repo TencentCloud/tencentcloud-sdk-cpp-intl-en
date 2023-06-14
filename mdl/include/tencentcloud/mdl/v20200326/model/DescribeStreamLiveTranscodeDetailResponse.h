@@ -47,60 +47,70 @@ namespace TencentCloud
                     /**
                      * 获取A list of the transcoding information.
                      * @return Infos A list of the transcoding information.
+                     * 
                      */
                     std::vector<DescribeTranscodeDetailInfo> GetInfos() const;
 
                     /**
                      * 判断参数 Infos 是否已赋值
                      * @return Infos 是否已赋值
+                     * 
                      */
                     bool InfosHasBeenSet() const;
 
                     /**
                      * 获取The number of the current page.
                      * @return PageNum The number of the current page.
+                     * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取The number of records per page.
                      * @return PageSize The number of records per page.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取The total number of records.
                      * @return TotalNum The total number of records.
+                     * 
                      */
                     int64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 
                     /**
                      * 获取The total number of pages.
                      * @return TotalPage The total number of pages.
+                     * 
                      */
                     int64_t GetTotalPage() const;
 
                     /**
                      * 判断参数 TotalPage 是否已赋值
                      * @return TotalPage 是否已赋值
+                     * 
                      */
                     bool TotalPageHasBeenSet() const;
 

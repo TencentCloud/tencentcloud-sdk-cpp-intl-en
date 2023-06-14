@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RoomId The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRoomId() const;
 
                     /**
                      * 设置The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RoomId The room ID.
+                     * @param _roomId The room ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRoomId(const uint64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UserId The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserId The ID of the user to whom the event occurred.
+                     * @param _userId The ID of the user to whom the event occurred.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 

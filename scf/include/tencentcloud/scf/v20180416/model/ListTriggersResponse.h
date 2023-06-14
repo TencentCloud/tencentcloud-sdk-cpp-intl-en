@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of triggers
                      * @return TotalCount Total number of triggers
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Trigger list
                      * @return Triggers Trigger list
+                     * 
                      */
                     std::vector<TriggerInfo> GetTriggers() const;
 
                     /**
                      * 判断参数 Triggers 是否已赋值
                      * @return Triggers 是否已赋值
+                     * 
                      */
                     bool TriggersHasBeenSet() const;
 

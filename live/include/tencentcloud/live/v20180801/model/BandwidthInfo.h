@@ -53,6 +53,7 @@ The time accuracy matches with the query granularity.
                      * @return Time Format of return value:
 yyyy-mm-dd HH:MM:SS
 The time accuracy matches with the query granularity.
+                     * 
                      */
                     std::string GetTime() const;
 
@@ -60,33 +61,38 @@ The time accuracy matches with the query granularity.
                      * 设置Format of return value:
 yyyy-mm-dd HH:MM:SS
 The time accuracy matches with the query granularity.
-                     * @param Time Format of return value:
+                     * @param _time Format of return value:
 yyyy-mm-dd HH:MM:SS
 The time accuracy matches with the query granularity.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth.
                      * @return Bandwidth Bandwidth.
+                     * 
                      */
                     double GetBandwidth() const;
 
                     /**
                      * 设置Bandwidth.
-                     * @param Bandwidth Bandwidth.
+                     * @param _bandwidth Bandwidth.
+                     * 
                      */
                     void SetBandwidth(const double& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 

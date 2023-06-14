@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information of connection groups that the statistics can be derived from
                      * @return GroupSet Information of connection groups that the statistics can be derived from
+                     * 
                      */
                     std::vector<GroupStatisticsInfo> GetGroupSet() const;
 
                     /**
                      * 判断参数 GroupSet 是否已赋值
                      * @return GroupSet 是否已赋值
+                     * 
                      */
                     bool GroupSetHasBeenSet() const;
 
                     /**
                      * 获取Connection group quantity
                      * @return TotalCount Connection group quantity
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Permission name
                      * @return Name Permission name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Permission name
-                     * @param Name Permission name
+                     * @param _name Permission name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Permission value
                      * @return Value Permission value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Permission value
-                     * @param Value Permission value
+                     * @param _value Permission value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

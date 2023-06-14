@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Direction. 0: outbound; 1: inbound. 1 by default
                      * @return Direction Direction. 0: outbound; 1: inbound. 1 by default
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Direction. 0: outbound; 1: inbound. 1 by default
-                     * @param Direction Direction. 0: outbound; 1: inbound. 1 by default
+                     * @param _direction Direction. 0: outbound; 1: inbound. 1 by default
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Toggle status. 0: off; 1: on
                      * @return Status Toggle status. 0: off; 1: on
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Toggle status. 0: off; 1: on
-                     * @param Status Toggle status. 0: off; 1: on
+                     * @param _status Toggle status. 0: off; 1: on
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Modified priority of enterprise security group rules
                      * @return RuleSequence Modified priority of enterprise security group rules
+                     * 
                      */
                     uint64_t GetRuleSequence() const;
 
                     /**
                      * 设置Modified priority of enterprise security group rules
-                     * @param RuleSequence Modified priority of enterprise security group rules
+                     * @param _ruleSequence Modified priority of enterprise security group rules
+                     * 
                      */
                     void SetRuleSequence(const uint64_t& _ruleSequence);
 
                     /**
                      * 判断参数 RuleSequence 是否已赋值
                      * @return RuleSequence 是否已赋值
+                     * 
                      */
                     bool RuleSequenceHasBeenSet() const;
 

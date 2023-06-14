@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取The video transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
                      * @return VideoParams The video transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+                     * 
                      */
                     VideoParams GetVideoParams() const;
 
                     /**
                      * 设置The video transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
-                     * @param VideoParams The video transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+                     * @param _videoParams The video transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+                     * 
                      */
                     void SetVideoParams(const VideoParams& _videoParams);
 
                     /**
                      * 判断参数 VideoParams 是否已赋值
                      * @return VideoParams 是否已赋值
+                     * 
                      */
                     bool VideoParamsHasBeenSet() const;
 
                     /**
                      * 获取The audio transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
                      * @return AudioParams The audio transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+                     * 
                      */
                     AudioParams GetAudioParams() const;
 
                     /**
                      * 设置The audio transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
-                     * @param AudioParams The audio transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+                     * @param _audioParams The audio transcoding parameters for recording. If you set this parameter, you must specify all its fields. If you do not set it, the default will be used.
+                     * 
                      */
                     void SetAudioParams(const AudioParams& _audioParams);
 
                     /**
                      * 判断参数 AudioParams 是否已赋值
                      * @return AudioParams 是否已赋值
+                     * 
                      */
                     bool AudioParamsHasBeenSet() const;
 

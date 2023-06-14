@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Disk type: LOCAL_BASIC.
                      * @return DiskType Disk type: LOCAL_BASIC.
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Disk type: LOCAL_BASIC.
-                     * @param DiskType Disk type: LOCAL_BASIC.
+                     * @param _diskType Disk type: LOCAL_BASIC.
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Disk ID
                      * @return DiskId Disk ID
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Disk ID
-                     * @param DiskId Disk ID
+                     * @param _diskId Disk ID
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Disk size in GB
                      * @return DiskSize Disk size in GB
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Disk size in GB
-                     * @param DiskSize Disk size in GB
+                     * @param _diskSize Disk size in GB
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 

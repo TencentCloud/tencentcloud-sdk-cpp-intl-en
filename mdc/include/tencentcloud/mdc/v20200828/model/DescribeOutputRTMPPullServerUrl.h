@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取`tcUrl` of the RTMP pull URL
                      * @return TcUrl `tcUrl` of the RTMP pull URL
+                     * 
                      */
                     std::string GetTcUrl() const;
 
                     /**
                      * 设置`tcUrl` of the RTMP pull URL
-                     * @param TcUrl `tcUrl` of the RTMP pull URL
+                     * @param _tcUrl `tcUrl` of the RTMP pull URL
+                     * 
                      */
                     void SetTcUrl(const std::string& _tcUrl);
 
                     /**
                      * 判断参数 TcUrl 是否已赋值
                      * @return TcUrl 是否已赋值
+                     * 
                      */
                     bool TcUrlHasBeenSet() const;
 
                     /**
                      * 获取Stream key of the RTMP pull URL
                      * @return StreamKey Stream key of the RTMP pull URL
+                     * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
                      * 设置Stream key of the RTMP pull URL
-                     * @param StreamKey Stream key of the RTMP pull URL
+                     * @param _streamKey Stream key of the RTMP pull URL
+                     * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
 
                     /**
                      * 判断参数 StreamKey 是否已赋值
                      * @return StreamKey 是否已赋值
+                     * 
                      */
                     bool StreamKeyHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
                      * @return PersonId ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
-                     * @param PersonId ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
+                     * @param _personId ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
@@ -69,6 +72,7 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
 The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 
                      */
                     std::string GetImage() const;
 
@@ -77,16 +81,18 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
 The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
-                     * @param Image Base64-encoded image data, which cannot exceed 5 MB.
+                     * @param _image Base64-encoded image data, which cannot exceed 5 MB.
 The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 
                      */
                     void SetImage(const std::string& _image);
 
                     /**
                      * 判断参数 Image 是否已赋值
                      * @return Image 是否已赋值
+                     * 
                      */
                     bool ImageHasBeenSet() const;
 
@@ -105,6 +111,7 @@ We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guar
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 
                      */
                     std::string GetUrl() const;
 
@@ -116,19 +123,21 @@ We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guar
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
-                     * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * @param _url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
 The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 If there are multiple faces in the image, only the face with the largest size will be selected.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -149,6 +158,7 @@ If the image quality does not meet the requirement, the returned result will pro
 4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
+                     * 
                      */
                     uint64_t GetQualityControl() const;
 
@@ -161,7 +171,7 @@ If the image quality does not meet the requirement, the returned result will pro
 4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
-                     * @param QualityControl Image quality control. 
+                     * @param _qualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
 2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
@@ -169,30 +179,35 @@ If the image quality does not meet the requirement, the returned result will pro
 4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
+                     * 
                      */
                     void SetQualityControl(const uint64_t& _qualityControl);
 
                     /**
                      * 判断参数 QualityControl 是否已赋值
                      * @return QualityControl 是否已赋值
+                     * 
                      */
                     bool QualityControlHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
                      * @return NeedRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+                     * 
                      */
                     uint64_t GetNeedRotateDetection() const;
 
                     /**
                      * 设置Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
-                     * @param NeedRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+                     * @param _needRotateDetection Whether to enable the support for rotated image recognition. 0: no; 1: yes. Default value: 0. When the face in the image is rotated and the image has no EXIF information, if this parameter is not enabled, the face in the image cannot be correctly detected and recognized. If you are sure that the input image contains EXIF information or the face in the image will not be rotated, do not enable this parameter, as the overall time consumption may increase by hundreds of milliseconds after it is enabled.
+                     * 
                      */
                     void SetNeedRotateDetection(const uint64_t& _needRotateDetection);
 
                     /**
                      * 判断参数 NeedRotateDetection 是否已赋值
                      * @return NeedRotateDetection 是否已赋值
+                     * 
                      */
                     bool NeedRotateDetectionHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The moderation template ID.
                      * @return Definition The moderation template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置The moderation template ID.
-                     * @param Definition The moderation template ID.
+                     * @param _definition The moderation template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -81,16 +85,18 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion The suggestion. Valid values:
+                     * @param _suggestion The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -123,6 +129,7 @@ namespace TencentCloud
 <li>`Illegal` (illegal content)</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
+                     * 
                      */
                     std::vector<std::string> GetTypeSet() const;
 
@@ -141,7 +148,7 @@ namespace TencentCloud
 <li>`Illegal` (illegal content)</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
-                     * @param TypeSet The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
+                     * @param _typeSet The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
 `Form` indicates the type of inappropriate content detected. Valid values:
 <li>`Image` (people or icons in images)</li>
 <li>`OCR` (text in images)</li>
@@ -155,30 +162,35 @@ namespace TencentCloud
 <li>`Illegal` (illegal content)</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
+                     * 
                      */
                     void SetTypeSet(const std::vector<std::string>& _typeSet);
 
                     /**
                      * 判断参数 TypeSet 是否已赋值
                      * @return TypeSet 是否已赋值
+                     * 
                      */
                     bool TypeSetHasBeenSet() const;
 
                     /**
                      * 获取The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return ReviewTime The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetReviewTime() const;
 
                     /**
                      * 设置The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param ReviewTime The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _reviewTime The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetReviewTime(const std::string& _reviewTime);
 
                     /**
                      * 判断参数 ReviewTime 是否已赋值
                      * @return ReviewTime 是否已赋值
+                     * 
                      */
                     bool ReviewTimeHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID.
                      * @return VpcId VPC instance ID.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID.
-                     * @param VpcId VPC instance ID.
+                     * @param _vpcId VPC instance ID.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取CVM Private IP.
                      * @return IpAddress CVM Private IP.
+                     * 
                      */
                     std::string GetIpAddress() const;
 
                     /**
                      * 设置CVM Private IP.
-                     * @param IpAddress CVM Private IP.
+                     * @param _ipAddress CVM Private IP.
+                     * 
                      */
                     void SetIpAddress(const std::string& _ipAddress);
 
                     /**
                      * 判断参数 IpAddress 是否已赋值
                      * @return IpAddress 是否已赋值
+                     * 
                      */
                     bool IpAddressHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth limit value.
                      * @return Bandwidth Bandwidth limit value.
+                     * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
                      * 设置Bandwidth limit value.
-                     * @param Bandwidth Bandwidth limit value.
+                     * @param _bandwidth Bandwidth limit value.
+                     * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return CreateTime Creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreateTime Creation time.
+                     * @param _createTime Creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

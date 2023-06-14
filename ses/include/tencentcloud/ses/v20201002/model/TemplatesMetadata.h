@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Creation time.
                      * @return CreatedTimestamp Creation time.
+                     * 
                      */
                     uint64_t GetCreatedTimestamp() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreatedTimestamp Creation time.
+                     * @param _createdTimestamp Creation time.
+                     * 
                      */
                     void SetCreatedTimestamp(const uint64_t& _createdTimestamp);
 
                     /**
                      * 判断参数 CreatedTimestamp 是否已赋值
                      * @return CreatedTimestamp 是否已赋值
+                     * 
                      */
                     bool CreatedTimestampHasBeenSet() const;
 
                     /**
                      * 获取Template name.
                      * @return TemplateName Template name.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name.
-                     * @param TemplateName Template name.
+                     * @param _templateName Template name.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Template status. 1: under review; 0: approved; 2: rejected; other values: unavailable.
                      * @return TemplateStatus Template status. 1: under review; 0: approved; 2: rejected; other values: unavailable.
+                     * 
                      */
                     int64_t GetTemplateStatus() const;
 
                     /**
                      * 设置Template status. 1: under review; 0: approved; 2: rejected; other values: unavailable.
-                     * @param TemplateStatus Template status. 1: under review; 0: approved; 2: rejected; other values: unavailable.
+                     * @param _templateStatus Template status. 1: under review; 0: approved; 2: rejected; other values: unavailable.
+                     * 
                      */
                     void SetTemplateStatus(const int64_t& _templateStatus);
 
                     /**
                      * 判断参数 TemplateStatus 是否已赋值
                      * @return TemplateStatus 是否已赋值
+                     * 
                      */
                     bool TemplateStatusHasBeenSet() const;
 
                     /**
                      * 获取Template ID.
                      * @return TemplateID Template ID.
+                     * 
                      */
                     uint64_t GetTemplateID() const;
 
                     /**
                      * 设置Template ID.
-                     * @param TemplateID Template ID.
+                     * @param _templateID Template ID.
+                     * 
                      */
                     void SetTemplateID(const uint64_t& _templateID);
 
                     /**
                      * 判断参数 TemplateID 是否已赋值
                      * @return TemplateID 是否已赋值
+                     * 
                      */
                     bool TemplateIDHasBeenSet() const;
 
                     /**
                      * 获取Review reply
                      * @return ReviewReason Review reply
+                     * 
                      */
                     std::string GetReviewReason() const;
 
                     /**
                      * 设置Review reply
-                     * @param ReviewReason Review reply
+                     * @param _reviewReason Review reply
+                     * 
                      */
                     void SetReviewReason(const std::string& _reviewReason);
 
                     /**
                      * 判断参数 ReviewReason 是否已赋值
                      * @return ReviewReason 是否已赋值
+                     * 
                      */
                     bool ReviewReasonHasBeenSet() const;
 

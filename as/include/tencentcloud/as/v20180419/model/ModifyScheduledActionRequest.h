@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取ID of the scheduled task to be edited
                      * @return ScheduledActionId ID of the scheduled task to be edited
+                     * 
                      */
                     std::string GetScheduledActionId() const;
 
                     /**
                      * 设置ID of the scheduled task to be edited
-                     * @param ScheduledActionId ID of the scheduled task to be edited
+                     * @param _scheduledActionId ID of the scheduled task to be edited
+                     * 
                      */
                     void SetScheduledActionId(const std::string& _scheduledActionId);
 
                     /**
                      * 判断参数 ScheduledActionId 是否已赋值
                      * @return ScheduledActionId 是否已赋值
+                     * 
                      */
                     bool ScheduledActionIdHasBeenSet() const;
 
                     /**
                      * 获取Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
                      * @return ScheduledActionName Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
+                     * 
                      */
                     std::string GetScheduledActionName() const;
 
                     /**
                      * 设置Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
-                     * @param ScheduledActionName Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
+                     * @param _scheduledActionName Scheduled task name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 60 bytes and must be unique in an auto scaling group.
+                     * 
                      */
                     void SetScheduledActionName(const std::string& _scheduledActionName);
 
                     /**
                      * 判断参数 ScheduledActionName 是否已赋值
                      * @return ScheduledActionName 是否已赋值
+                     * 
                      */
                     bool ScheduledActionNameHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
                      * @return MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
                      * 设置The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-                     * @param MaxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * @param _maxSize The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 
                     /**
                      * 获取The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
                      * @return MinSize The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * 
                      */
                     uint64_t GetMinSize() const;
 
                     /**
                      * 设置The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
-                     * @param MinSize The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * @param _minSize The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * 
                      */
                     void SetMinSize(const uint64_t& _minSize);
 
                     /**
                      * 判断参数 MinSize 是否已赋值
                      * @return MinSize 是否已赋值
+                     * 
                      */
                     bool MinSizeHasBeenSet() const;
 
                     /**
                      * 获取The desired number of instances set for the auto scaling group when the scheduled task is triggered.
                      * @return DesiredCapacity The desired number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * 
                      */
                     uint64_t GetDesiredCapacity() const;
 
                     /**
                      * 设置The desired number of instances set for the auto scaling group when the scheduled task is triggered.
-                     * @param DesiredCapacity The desired number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * @param _desiredCapacity The desired number of instances set for the auto scaling group when the scheduled task is triggered.
+                     * 
                      */
                     void SetDesiredCapacity(const uint64_t& _desiredCapacity);
 
                     /**
                      * 判断参数 DesiredCapacity 是否已赋值
                      * @return DesiredCapacity 是否已赋值
+                     * 
                      */
                     bool DesiredCapacityHasBeenSet() const;
 
                     /**
                      * 获取Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
                      * @return StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
-                     * @param StartTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * @param _startTime Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
                      * @return EndTime End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
-                     * @param EndTime End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
+                     * @param _endTime End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
                      * @return Recurrence Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
+                     * 
                      */
                     std::string GetRecurrence() const;
 
                     /**
                      * 设置Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
-                     * @param Recurrence Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
+                     * @param _recurrence Repeating mode of the scheduled task, which is in standard cron format. <br>This parameter and `EndTime` need to be specified at the same time.
+                     * 
                      */
                     void SetRecurrence(const std::string& _recurrence);
 
                     /**
                      * 判断参数 Recurrence 是否已赋值
                      * @return Recurrence 是否已赋值
+                     * 
                      */
                     bool RecurrenceHasBeenSet() const;
 

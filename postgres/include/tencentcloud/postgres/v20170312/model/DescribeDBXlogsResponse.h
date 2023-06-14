@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of date entries returned this time.
                      * @return TotalCount Number of date entries returned this time.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Xlog list
                      * @return XlogList Xlog list
+                     * 
                      */
                     std::vector<Xlog> GetXlogList() const;
 
                     /**
                      * 判断参数 XlogList 是否已赋值
                      * @return XlogList 是否已赋值
+                     * 
                      */
                     bool XlogListHasBeenSet() const;
 

@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Health score out of 100 points.
                      * @return HealthScore Health score out of 100 points.
+                     * 
                      */
                     int64_t GetHealthScore() const;
 
                     /**
                      * 设置Health score out of 100 points.
-                     * @param HealthScore Health score out of 100 points.
+                     * @param _healthScore Health score out of 100 points.
+                     * 
                      */
                     void SetHealthScore(const int64_t& _healthScore);
 
                     /**
                      * 判断参数 HealthScore 是否已赋值
                      * @return HealthScore 是否已赋值
+                     * 
                      */
                     bool HealthScoreHasBeenSet() const;
 
                     /**
                      * 获取Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
                      * @return HealthLevel Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
+                     * 
                      */
                     std::string GetHealthLevel() const;
 
                     /**
                      * 设置Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
-                     * @param HealthLevel Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
+                     * @param _healthLevel Health level. Valid values: `HEALTH` (healthy), `SUB_HEALTH` (suboptimal), `RISK` (risky), and `HIGH_RISK` (critical).
+                     * 
                      */
                     void SetHealthLevel(const std::string& _healthLevel);
 
                     /**
                      * 判断参数 HealthLevel 是否已赋值
                      * @return HealthLevel 是否已赋值
+                     * 
                      */
                     bool HealthLevelHasBeenSet() const;
 
                     /**
                      * 获取Total scores deducted.
                      * @return ScoreLost Total scores deducted.
+                     * 
                      */
                     int64_t GetScoreLost() const;
 
                     /**
                      * 设置Total scores deducted.
-                     * @param ScoreLost Total scores deducted.
+                     * @param _scoreLost Total scores deducted.
+                     * 
                      */
                     void SetScoreLost(const int64_t& _scoreLost);
 
                     /**
                      * 判断参数 ScoreLost 是否已赋值
                      * @return ScoreLost 是否已赋值
+                     * 
                      */
                     bool ScoreLostHasBeenSet() const;
 
@@ -106,20 +115,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return ScoreDetails Deduction details.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ScoreDetail> GetScoreDetails() const;
 
                     /**
                      * 设置Deduction details.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param ScoreDetails Deduction details.
+                     * @param _scoreDetails Deduction details.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScoreDetails(const std::vector<ScoreDetail>& _scoreDetails);
 
                     /**
                      * 判断参数 ScoreDetails 是否已赋值
                      * @return ScoreDetails 是否已赋值
+                     * 
                      */
                     bool ScoreDetailsHasBeenSet() const;
 

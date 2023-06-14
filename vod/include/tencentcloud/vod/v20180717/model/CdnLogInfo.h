@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
                      * @return Date Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
-                     * @param Date Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
+                     * @param _date Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
@@ -69,74 +72,86 @@ namespace TencentCloud
 such as 2018120101-test.vod2.mqcloud.com.
                      * @return Name Log name in the format of date and time-domain name,
 such as 2018120101-test.vod2.mqcloud.com.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Log name in the format of date and time-domain name,
 such as 2018120101-test.vod2.mqcloud.com.
-                     * @param Name Log name in the format of date and time-domain name,
+                     * @param _name Log name in the format of date and time-domain name,
 such as 2018120101-test.vod2.mqcloud.com.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Log download link, which is valid for 24 hours.
                      * @return Url Log download link, which is valid for 24 hours.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Log download link, which is valid for 24 hours.
-                     * @param Url Log download link, which is valid for 24 hours.
+                     * @param _url Log download link, which is valid for 24 hours.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
                      * @return StartTime Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
-                     * @param StartTime Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+                     * @param _startTime Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
                      * @return EndTime Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
-                     * @param EndTime Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+                     * @param _endTime Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

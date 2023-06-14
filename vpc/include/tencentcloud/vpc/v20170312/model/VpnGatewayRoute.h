@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Destination IDC IP range
                      * @return DestinationCidrBlock Destination IDC IP range
+                     * 
                      */
                     std::string GetDestinationCidrBlock() const;
 
                     /**
                      * 设置Destination IDC IP range
-                     * @param DestinationCidrBlock Destination IDC IP range
+                     * @param _destinationCidrBlock Destination IDC IP range
+                     * 
                      */
                     void SetDestinationCidrBlock(const std::string& _destinationCidrBlock);
 
                     /**
                      * 判断参数 DestinationCidrBlock 是否已赋值
                      * @return DestinationCidrBlock 是否已赋值
+                     * 
                      */
                     bool DestinationCidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Next hop type (type of the associated instance). Valid values: `VPNCONN` (VPN tunnel) and `CCN` (CCN instance)
                      * @return InstanceType Next hop type (type of the associated instance). Valid values: `VPNCONN` (VPN tunnel) and `CCN` (CCN instance)
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Next hop type (type of the associated instance). Valid values: `VPNCONN` (VPN tunnel) and `CCN` (CCN instance)
-                     * @param InstanceType Next hop type (type of the associated instance). Valid values: `VPNCONN` (VPN tunnel) and `CCN` (CCN instance)
+                     * @param _instanceType Next hop type (type of the associated instance). Valid values: `VPNCONN` (VPN tunnel) and `CCN` (CCN instance)
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance ID of the next hop
                      * @return InstanceId Instance ID of the next hop
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID of the next hop
-                     * @param InstanceId Instance ID of the next hop
+                     * @param _instanceId Instance ID of the next hop
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Priority. Valid values: `0` and `100`
                      * @return Priority Priority. Valid values: `0` and `100`
+                     * 
                      */
                     int64_t GetPriority() const;
 
                     /**
                      * 设置Priority. Valid values: `0` and `100`
-                     * @param Priority Priority. Valid values: `0` and `100`
+                     * @param _priority Priority. Valid values: `0` and `100`
+                     * 
                      */
                     void SetPriority(const int64_t& _priority);
 
                     /**
                      * 判断参数 Priority 是否已赋值
                      * @return Priority 是否已赋值
+                     * 
                      */
                     bool PriorityHasBeenSet() const;
 
                     /**
                      * 获取Status. Valid values: `ENABLE` and `DISABLE`
                      * @return Status Status. Valid values: `ENABLE` and `DISABLE`
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status. Valid values: `ENABLE` and `DISABLE`
-                     * @param Status Status. Valid values: `ENABLE` and `DISABLE`
+                     * @param _status Status. Valid values: `ENABLE` and `DISABLE`
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Route ID
                      * @return RouteId Route ID
+                     * 
                      */
                     std::string GetRouteId() const;
 
                     /**
                      * 设置Route ID
-                     * @param RouteId Route ID
+                     * @param _routeId Route ID
+                     * 
                      */
                     void SetRouteId(const std::string& _routeId);
 
                     /**
                      * 判断参数 RouteId 是否已赋值
                      * @return RouteId 是否已赋值
+                     * 
                      */
                     bool RouteIdHasBeenSet() const;
 
                     /**
                      * 获取Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
                      * @return Type Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
-                     * @param Type Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
+                     * @param _type Route type. Valid values: `VPC`, `CCN` (CCN-propagated route), `Static`, and `BGP`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

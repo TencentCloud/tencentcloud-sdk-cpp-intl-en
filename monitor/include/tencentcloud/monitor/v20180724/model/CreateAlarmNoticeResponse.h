@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Alarm notification template ID
                      * @return NoticeId Alarm notification template ID
+                     * 
                      */
                     std::string GetNoticeId() const;
 
                     /**
                      * 判断参数 NoticeId 是否已赋值
                      * @return NoticeId 是否已赋值
+                     * 
                      */
                     bool NoticeIdHasBeenSet() const;
 

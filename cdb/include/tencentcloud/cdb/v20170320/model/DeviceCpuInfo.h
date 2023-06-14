@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Average instance CPU utilization
                      * @return Rate Average instance CPU utilization
+                     * 
                      */
                     std::vector<DeviceCpuRateInfo> GetRate() const;
 
                     /**
                      * 设置Average instance CPU utilization
-                     * @param Rate Average instance CPU utilization
+                     * @param _rate Average instance CPU utilization
+                     * 
                      */
                     void SetRate(const std::vector<DeviceCpuRateInfo>& _rate);
 
                     /**
                      * 判断参数 Rate 是否已赋值
                      * @return Rate 是否已赋值
+                     * 
                      */
                     bool RateHasBeenSet() const;
 
                     /**
                      * 获取CPU monitoring data of the instance
                      * @return Load CPU monitoring data of the instance
+                     * 
                      */
                     std::vector<int64_t> GetLoad() const;
 
                     /**
                      * 设置CPU monitoring data of the instance
-                     * @param Load CPU monitoring data of the instance
+                     * @param _load CPU monitoring data of the instance
+                     * 
                      */
                     void SetLoad(const std::vector<int64_t>& _load);
 
                     /**
                      * 判断参数 Load 是否已赋值
                      * @return Load 是否已赋值
+                     * 
                      */
                     bool LoadHasBeenSet() const;
 

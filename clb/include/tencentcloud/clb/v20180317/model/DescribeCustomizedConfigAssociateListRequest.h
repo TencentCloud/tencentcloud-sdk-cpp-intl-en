@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Configuration ID.
                      * @return UconfigId Configuration ID.
+                     * 
                      */
                     std::string GetUconfigId() const;
 
                     /**
                      * 设置Configuration ID.
-                     * @param UconfigId Configuration ID.
+                     * @param _uconfigId Configuration ID.
+                     * 
                      */
                     void SetUconfigId(const std::string& _uconfigId);
 
                     /**
                      * 判断参数 UconfigId 是否已赋值
                      * @return UconfigId 是否已赋值
+                     * 
                      */
                     bool UconfigIdHasBeenSet() const;
 
                     /**
                      * 获取Start position of the binding list. Default: 0.
                      * @return Offset Start position of the binding list. Default: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Start position of the binding list. Default: 0.
-                     * @param Offset Start position of the binding list. Default: 0.
+                     * @param _offset Start position of the binding list. Default: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of binding lists to pull. Default: 20.
                      * @return Limit Number of binding lists to pull. Default: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of binding lists to pull. Default: 20.
-                     * @param Limit Number of binding lists to pull. Default: 20.
+                     * @param _limit Number of binding lists to pull. Default: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Searches for the domain name.
                      * @return Domain Searches for the domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Searches for the domain name.
-                     * @param Domain Searches for the domain name.
+                     * @param _domain Searches for the domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

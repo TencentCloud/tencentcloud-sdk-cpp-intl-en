@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取LCIC SdkAppId	
                      * @return SdkAppId LCIC SdkAppId	
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置LCIC SdkAppId	
-                     * @param SdkAppId LCIC SdkAppId	
+                     * @param _sdkAppId LCIC SdkAppId	
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Username	
                      * @return Name Username	
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Username	
-                     * @param Name Username	
+                     * @param _name Username	
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取User's ID in the customer system, which should be unique under the same application	
                      * @return OriginId User's ID in the customer system, which should be unique under the same application	
+                     * 
                      */
                     std::string GetOriginId() const;
 
                     /**
                      * 设置User's ID in the customer system, which should be unique under the same application	
-                     * @param OriginId User's ID in the customer system, which should be unique under the same application	
+                     * @param _originId User's ID in the customer system, which should be unique under the same application	
+                     * 
                      */
                     void SetOriginId(const std::string& _originId);
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 
                     /**
                      * 获取User's profile photo	
                      * @return Avatar User's profile photo	
+                     * 
                      */
                     std::string GetAvatar() const;
 
                     /**
                      * 设置User's profile photo	
-                     * @param Avatar User's profile photo	
+                     * @param _avatar User's profile photo	
+                     * 
                      */
                     void SetAvatar(const std::string& _avatar);
 
                     /**
                      * 判断参数 Avatar 是否已赋值
                      * @return Avatar 是否已赋值
+                     * 
                      */
                     bool AvatarHasBeenSet() const;
 

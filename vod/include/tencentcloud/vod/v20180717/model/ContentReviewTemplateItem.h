@@ -54,54 +54,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of an intelligent recognition template
                      * @return Definition Unique ID of an intelligent recognition template
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Unique ID of an intelligent recognition template
-                     * @param Definition Unique ID of an intelligent recognition template
+                     * @param _definition Unique ID of an intelligent recognition template
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Name of an intelligent recognition template. Max 64 characters
                      * @return Name Name of an intelligent recognition template. Max 64 characters
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of an intelligent recognition template. Max 64 characters
-                     * @param Name Name of an intelligent recognition template. Max 64 characters
+                     * @param _name Name of an intelligent recognition template. Max 64 characters
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description of an intelligent recognition template. Max 256 characters
                      * @return Comment Description of an intelligent recognition template. Max 256 characters
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Description of an intelligent recognition template. Max 256 characters
-                     * @param Comment Description of an intelligent recognition template. Max 256 characters
+                     * @param _comment Description of an intelligent recognition template. Max 256 characters
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -110,20 +119,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return PornConfigure Parameters for recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     PornConfigureInfo GetPornConfigure() const;
 
                     /**
                      * 设置Parameters for recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param PornConfigure Parameters for recognition of pornographic content
+                     * @param _pornConfigure Parameters for recognition of pornographic content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetPornConfigure(const PornConfigureInfo& _pornConfigure);
 
                     /**
                      * 判断参数 PornConfigure 是否已赋值
                      * @return PornConfigure 是否已赋值
+                     * 
                      */
                     bool PornConfigureHasBeenSet() const;
 
@@ -132,20 +144,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return TerrorismConfigure Parameters for recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
                      * 设置Parameters for recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param TerrorismConfigure Parameters for recognition of terrorism content
+                     * @param _terrorismConfigure Parameters for recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
 
                     /**
                      * 判断参数 TerrorismConfigure 是否已赋值
                      * @return TerrorismConfigure 是否已赋值
+                     * 
                      */
                     bool TerrorismConfigureHasBeenSet() const;
 
@@ -154,20 +169,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return PoliticalConfigure Parameters for recognition of politically sensitive content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
                      * 设置Parameters for recognition of politically sensitive content
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param PoliticalConfigure Parameters for recognition of politically sensitive content
+                     * @param _politicalConfigure Parameters for recognition of politically sensitive content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
 
                     /**
                      * 判断参数 PoliticalConfigure 是否已赋值
                      * @return PoliticalConfigure 是否已赋值
+                     * 
                      */
                     bool PoliticalConfigureHasBeenSet() const;
 
@@ -180,6 +198,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProhibitedConfigureInfo GetProhibitedConfigure() const;
 
@@ -188,16 +207,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+                     * @param _prohibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfo& _prohibitedConfigure);
 
                     /**
                      * 判断参数 ProhibitedConfigure 是否已赋值
                      * @return ProhibitedConfigure 是否已赋值
+                     * 
                      */
                     bool ProhibitedConfigureHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return UserDefineConfigure Custom recognition parameters
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     UserDefineConfigureInfo GetUserDefineConfigure() const;
 
                     /**
                      * 设置Custom recognition parameters
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param UserDefineConfigure Custom recognition parameters
+                     * @param _userDefineConfigure Custom recognition parameters
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfo& _userDefineConfigure);
 
                     /**
                      * 判断参数 UserDefineConfigure 是否已赋值
                      * @return UserDefineConfigure 是否已赋值
+                     * 
                      */
                     bool UserDefineConfigureHasBeenSet() const;
 
@@ -230,6 +254,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      * @return ReviewWallSwitch Whether to subject the recognition result to human review
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     std::string GetReviewWallSwitch() const;
 
@@ -237,69 +262,80 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      * 设置Whether to subject the recognition result to human review
 <li>ON</li>
 <li>OFF</li>
-                     * @param ReviewWallSwitch Whether to subject the recognition result to human review
+                     * @param _reviewWallSwitch Whether to subject the recognition result to human review
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     void SetReviewWallSwitch(const std::string& _reviewWallSwitch);
 
                     /**
                      * 判断参数 ReviewWallSwitch 是否已赋值
                      * @return ReviewWallSwitch 是否已赋值
+                     * 
                      */
                     bool ReviewWallSwitchHasBeenSet() const;
 
                     /**
                      * 获取Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
                      * @return ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
                      * 设置Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
-                     * @param ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * @param _screenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+                     * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
 
                     /**
                      * 判断参数 ScreenshotInterval 是否已赋值
                      * @return ScreenshotInterval 是否已赋值
+                     * 
                      */
                     bool ScreenshotIntervalHasBeenSet() const;
 
                     /**
                      * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

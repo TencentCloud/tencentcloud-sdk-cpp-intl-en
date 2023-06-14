@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Unusual login location data in weekly CWP Pro report
                      * @return WeeklyReportNonlocalLoginPlaces Unusual login location data in weekly CWP Pro report
+                     * 
                      */
                     std::vector<WeeklyReportNonlocalLoginPlace> GetWeeklyReportNonlocalLoginPlaces() const;
 
                     /**
                      * 判断参数 WeeklyReportNonlocalLoginPlaces 是否已赋值
                      * @return WeeklyReportNonlocalLoginPlaces 是否已赋值
+                     * 
                      */
                     bool WeeklyReportNonlocalLoginPlacesHasBeenSet() const;
 
                     /**
                      * 获取Total number of records.
                      * @return TotalCount Total number of records.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

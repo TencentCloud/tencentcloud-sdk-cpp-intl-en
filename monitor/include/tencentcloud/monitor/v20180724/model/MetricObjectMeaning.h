@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Meaning of the metric in English
                      * @return En Meaning of the metric in English
+                     * 
                      */
                     std::string GetEn() const;
 
                     /**
                      * 设置Meaning of the metric in English
-                     * @param En Meaning of the metric in English
+                     * @param _en Meaning of the metric in English
+                     * 
                      */
                     void SetEn(const std::string& _en);
 
                     /**
                      * 判断参数 En 是否已赋值
                      * @return En 是否已赋值
+                     * 
                      */
                     bool EnHasBeenSet() const;
 
                     /**
                      * 获取Meaning of the metric in Chinese
                      * @return Zh Meaning of the metric in Chinese
+                     * 
                      */
                     std::string GetZh() const;
 
                     /**
                      * 设置Meaning of the metric in Chinese
-                     * @param Zh Meaning of the metric in Chinese
+                     * @param _zh Meaning of the metric in Chinese
+                     * 
                      */
                     void SetZh(const std::string& _zh);
 
                     /**
                      * 判断参数 Zh 是否已赋值
                      * @return Zh 是否已赋值
+                     * 
                      */
                     bool ZhHasBeenSet() const;
 

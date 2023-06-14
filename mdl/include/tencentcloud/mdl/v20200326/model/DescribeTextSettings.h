@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Text
                      * @return Text Text
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置Text
-                     * @param Text Text
+                     * @param _text Text
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
                     /**
                      * 获取Origin
                      * @return Location Origin
+                     * 
                      */
                     std::string GetLocation() const;
 
                     /**
                      * 设置Origin
-                     * @param Location Origin
+                     * @param _location Origin
+                     * 
                      */
                     void SetLocation(const std::string& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 
                     /**
                      * 获取The watermark image’s horizontal distance from the origin as a percentage of the video width
                      * @return XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * 
                      */
                     int64_t GetXPos() const;
 
                     /**
                      * 设置The watermark image’s horizontal distance from the origin as a percentage of the video width
-                     * @param XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * @param _xPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+                     * 
                      */
                     void SetXPos(const int64_t& _xPos);
 
                     /**
                      * 判断参数 XPos 是否已赋值
                      * @return XPos 是否已赋值
+                     * 
                      */
                     bool XPosHasBeenSet() const;
 
                     /**
                      * 获取The watermark image’s vertical distance from the origin as a percentage of the video height
                      * @return YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * 
                      */
                     int64_t GetYPos() const;
 
                     /**
                      * 设置The watermark image’s vertical distance from the origin as a percentage of the video height
-                     * @param YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * @param _yPos The watermark image’s vertical distance from the origin as a percentage of the video height
+                     * 
                      */
                     void SetYPos(const int64_t& _yPos);
 
                     /**
                      * 判断参数 YPos 是否已赋值
                      * @return YPos 是否已赋值
+                     * 
                      */
                     bool YPosHasBeenSet() const;
 
                     /**
                      * 获取Font size
                      * @return FontSize Font size
+                     * 
                      */
                     int64_t GetFontSize() const;
 
                     /**
                      * 设置Font size
-                     * @param FontSize Font size
+                     * @param _fontSize Font size
+                     * 
                      */
                     void SetFontSize(const int64_t& _fontSize);
 
                     /**
                      * 判断参数 FontSize 是否已赋值
                      * @return FontSize 是否已赋值
+                     * 
                      */
                     bool FontSizeHasBeenSet() const;
 
                     /**
                      * 获取Font color
                      * @return FontColor Font color
+                     * 
                      */
                     std::string GetFontColor() const;
 
                     /**
                      * 设置Font color
-                     * @param FontColor Font color
+                     * @param _fontColor Font color
+                     * 
                      */
                     void SetFontColor(const std::string& _fontColor);
 
                     /**
                      * 判断参数 FontColor 是否已赋值
                      * @return FontColor 是否已赋值
+                     * 
                      */
                     bool FontColorHasBeenSet() const;
 

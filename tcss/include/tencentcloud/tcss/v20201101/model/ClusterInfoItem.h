@@ -49,360 +49,420 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Cluster version
                      * @return ClusterVersion Cluster version
+                     * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
                      * 设置Cluster version
-                     * @param ClusterVersion Cluster version
+                     * @param _clusterVersion Cluster version
+                     * 
                      */
                     void SetClusterVersion(const std::string& _clusterVersion);
 
                     /**
                      * 判断参数 ClusterVersion 是否已赋值
                      * @return ClusterVersion 是否已赋值
+                     * 
                      */
                     bool ClusterVersionHasBeenSet() const;
 
                     /**
                      * 获取Cluster OS
                      * @return ClusterOs Cluster OS
+                     * 
                      */
                     std::string GetClusterOs() const;
 
                     /**
                      * 设置Cluster OS
-                     * @param ClusterOs Cluster OS
+                     * @param _clusterOs Cluster OS
+                     * 
                      */
                     void SetClusterOs(const std::string& _clusterOs);
 
                     /**
                      * 判断参数 ClusterOs 是否已赋值
                      * @return ClusterOs 是否已赋值
+                     * 
                      */
                     bool ClusterOsHasBeenSet() const;
 
                     /**
                      * 获取Cluster type
                      * @return ClusterType Cluster type
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Cluster type
-                     * @param ClusterType Cluster type
+                     * @param _clusterType Cluster type
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes in the cluster
                      * @return ClusterNodeNum Number of nodes in the cluster
+                     * 
                      */
                     uint64_t GetClusterNodeNum() const;
 
                     /**
                      * 设置Number of nodes in the cluster
-                     * @param ClusterNodeNum Number of nodes in the cluster
+                     * @param _clusterNodeNum Number of nodes in the cluster
+                     * 
                      */
                     void SetClusterNodeNum(const uint64_t& _clusterNodeNum);
 
                     /**
                      * 判断参数 ClusterNodeNum 是否已赋值
                      * @return ClusterNodeNum 是否已赋值
+                     * 
                      */
                     bool ClusterNodeNumHasBeenSet() const;
 
                     /**
                      * 获取Cluster region
                      * @return Region Cluster region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Cluster region
-                     * @param Region Cluster region
+                     * @param _region Cluster region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
                      * @return DefenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+                     * 
                      */
                     std::string GetDefenderStatus() const;
 
                     /**
                      * 设置Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
-                     * @param DefenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+                     * @param _defenderStatus Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+                     * 
                      */
                     void SetDefenderStatus(const std::string& _defenderStatus);
 
                     /**
                      * 判断参数 DefenderStatus 是否已赋值
                      * @return DefenderStatus 是否已赋值
+                     * 
                      */
                     bool DefenderStatusHasBeenSet() const;
 
                     /**
                      * 获取Cluster status
                      * @return ClusterStatus Cluster status
+                     * 
                      */
                     std::string GetClusterStatus() const;
 
                     /**
                      * 设置Cluster status
-                     * @param ClusterStatus Cluster status
+                     * @param _clusterStatus Cluster status
+                     * 
                      */
                     void SetClusterStatus(const std::string& _clusterStatus);
 
                     /**
                      * 判断参数 ClusterStatus 是否已赋值
                      * @return ClusterStatus 是否已赋值
+                     * 
                      */
                     bool ClusterStatusHasBeenSet() const;
 
                     /**
                      * 获取Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
                      * @return ClusterCheckMode Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
+                     * 
                      */
                     std::string GetClusterCheckMode() const;
 
                     /**
                      * 设置Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
-                     * @param ClusterCheckMode Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
+                     * @param _clusterCheckMode Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
+                     * 
                      */
                     void SetClusterCheckMode(const std::string& _clusterCheckMode);
 
                     /**
                      * 判断参数 ClusterCheckMode 是否已赋值
                      * @return ClusterCheckMode 是否已赋值
+                     * 
                      */
                     bool ClusterCheckModeHasBeenSet() const;
 
                     /**
                      * 获取Whether automatic and regular check is enabled
                      * @return ClusterAutoCheck Whether automatic and regular check is enabled
+                     * 
                      */
                     bool GetClusterAutoCheck() const;
 
                     /**
                      * 设置Whether automatic and regular check is enabled
-                     * @param ClusterAutoCheck Whether automatic and regular check is enabled
+                     * @param _clusterAutoCheck Whether automatic and regular check is enabled
+                     * 
                      */
                     void SetClusterAutoCheck(const bool& _clusterAutoCheck);
 
                     /**
                      * 判断参数 ClusterAutoCheck 是否已赋值
                      * @return ClusterAutoCheck 是否已赋值
+                     * 
                      */
                     bool ClusterAutoCheckHasBeenSet() const;
 
                     /**
                      * 获取Cause of the failure to deploy the defender. When it is `UserDaemonSetNotReady`, `UnreadyNodeNum` is changed to "The defenders on N nodes are ready". If it is another value, the error message is directly displayed.
                      * @return DefenderErrorReason Cause of the failure to deploy the defender. When it is `UserDaemonSetNotReady`, `UnreadyNodeNum` is changed to "The defenders on N nodes are ready". If it is another value, the error message is directly displayed.
+                     * 
                      */
                     std::string GetDefenderErrorReason() const;
 
                     /**
                      * 设置Cause of the failure to deploy the defender. When it is `UserDaemonSetNotReady`, `UnreadyNodeNum` is changed to "The defenders on N nodes are ready". If it is another value, the error message is directly displayed.
-                     * @param DefenderErrorReason Cause of the failure to deploy the defender. When it is `UserDaemonSetNotReady`, `UnreadyNodeNum` is changed to "The defenders on N nodes are ready". If it is another value, the error message is directly displayed.
+                     * @param _defenderErrorReason Cause of the failure to deploy the defender. When it is `UserDaemonSetNotReady`, `UnreadyNodeNum` is changed to "The defenders on N nodes are ready". If it is another value, the error message is directly displayed.
+                     * 
                      */
                     void SetDefenderErrorReason(const std::string& _defenderErrorReason);
 
                     /**
                      * 判断参数 DefenderErrorReason 是否已赋值
                      * @return DefenderErrorReason 是否已赋值
+                     * 
                      */
                     bool DefenderErrorReasonHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes where the defender is not ready
                      * @return UnreadyNodeNum Number of nodes where the defender is not ready
+                     * 
                      */
                     uint64_t GetUnreadyNodeNum() const;
 
                     /**
                      * 设置Number of nodes where the defender is not ready
-                     * @param UnreadyNodeNum Number of nodes where the defender is not ready
+                     * @param _unreadyNodeNum Number of nodes where the defender is not ready
+                     * 
                      */
                     void SetUnreadyNodeNum(const uint64_t& _unreadyNodeNum);
 
                     /**
                      * 判断参数 UnreadyNodeNum 是否已赋值
                      * @return UnreadyNodeNum 是否已赋值
+                     * 
                      */
                     bool UnreadyNodeNumHasBeenSet() const;
 
                     /**
                      * 获取Number of critical check items
                      * @return SeriousRiskCount Number of critical check items
+                     * 
                      */
                     int64_t GetSeriousRiskCount() const;
 
                     /**
                      * 设置Number of critical check items
-                     * @param SeriousRiskCount Number of critical check items
+                     * @param _seriousRiskCount Number of critical check items
+                     * 
                      */
                     void SetSeriousRiskCount(const int64_t& _seriousRiskCount);
 
                     /**
                      * 判断参数 SeriousRiskCount 是否已赋值
                      * @return SeriousRiskCount 是否已赋值
+                     * 
                      */
                     bool SeriousRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Number of high-risk check items
                      * @return HighRiskCount Number of high-risk check items
+                     * 
                      */
                     int64_t GetHighRiskCount() const;
 
                     /**
                      * 设置Number of high-risk check items
-                     * @param HighRiskCount Number of high-risk check items
+                     * @param _highRiskCount Number of high-risk check items
+                     * 
                      */
                     void SetHighRiskCount(const int64_t& _highRiskCount);
 
                     /**
                      * 判断参数 HighRiskCount 是否已赋值
                      * @return HighRiskCount 是否已赋值
+                     * 
                      */
                     bool HighRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Number of medium-risk check items
                      * @return MiddleRiskCount Number of medium-risk check items
+                     * 
                      */
                     int64_t GetMiddleRiskCount() const;
 
                     /**
                      * 设置Number of medium-risk check items
-                     * @param MiddleRiskCount Number of medium-risk check items
+                     * @param _middleRiskCount Number of medium-risk check items
+                     * 
                      */
                     void SetMiddleRiskCount(const int64_t& _middleRiskCount);
 
                     /**
                      * 判断参数 MiddleRiskCount 是否已赋值
                      * @return MiddleRiskCount 是否已赋值
+                     * 
                      */
                     bool MiddleRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Number of prompt-risk check items
                      * @return HintRiskCount Number of prompt-risk check items
+                     * 
                      */
                     int64_t GetHintRiskCount() const;
 
                     /**
                      * 设置Number of prompt-risk check items
-                     * @param HintRiskCount Number of prompt-risk check items
+                     * @param _hintRiskCount Number of prompt-risk check items
+                     * 
                      */
                     void SetHintRiskCount(const int64_t& _hintRiskCount);
 
                     /**
                      * 判断参数 HintRiskCount 是否已赋值
                      * @return HintRiskCount 是否已赋值
+                     * 
                      */
                     bool HintRiskCountHasBeenSet() const;
 
                     /**
                      * 获取Check failure cause
                      * @return CheckFailReason Check failure cause
+                     * 
                      */
                     std::string GetCheckFailReason() const;
 
                     /**
                      * 设置Check failure cause
-                     * @param CheckFailReason Check failure cause
+                     * @param _checkFailReason Check failure cause
+                     * 
                      */
                     void SetCheckFailReason(const std::string& _checkFailReason);
 
                     /**
                      * 判断参数 CheckFailReason 是否已赋值
                      * @return CheckFailReason 是否已赋值
+                     * 
                      */
                     bool CheckFailReasonHasBeenSet() const;
 
                     /**
                      * 获取Check status. Valid values: `Task_Running`, `NoRisk`, `HasRisk`, `Uncheck`, `Task_Error`.
                      * @return CheckStatus Check status. Valid values: `Task_Running`, `NoRisk`, `HasRisk`, `Uncheck`, `Task_Error`.
+                     * 
                      */
                     std::string GetCheckStatus() const;
 
                     /**
                      * 设置Check status. Valid values: `Task_Running`, `NoRisk`, `HasRisk`, `Uncheck`, `Task_Error`.
-                     * @param CheckStatus Check status. Valid values: `Task_Running`, `NoRisk`, `HasRisk`, `Uncheck`, `Task_Error`.
+                     * @param _checkStatus Check status. Valid values: `Task_Running`, `NoRisk`, `HasRisk`, `Uncheck`, `Task_Error`.
+                     * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
 
                     /**
                      * 判断参数 CheckStatus 是否已赋值
                      * @return CheckStatus 是否已赋值
+                     * 
                      */
                     bool CheckStatusHasBeenSet() const;
 
                     /**
                      * 获取Task creation time and check time
                      * @return TaskCreateTime Task creation time and check time
+                     * 
                      */
                     std::string GetTaskCreateTime() const;
 
                     /**
                      * 设置Task creation time and check time
-                     * @param TaskCreateTime Task creation time and check time
+                     * @param _taskCreateTime Task creation time and check time
+                     * 
                      */
                     void SetTaskCreateTime(const std::string& _taskCreateTime);
 
                     /**
                      * 判断参数 TaskCreateTime 是否已赋值
                      * @return TaskCreateTime 是否已赋值
+                     * 
                      */
                     bool TaskCreateTimeHasBeenSet() const;
 

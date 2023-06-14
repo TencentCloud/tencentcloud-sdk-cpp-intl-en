@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of eligible usage plans.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of eligible usage plans.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of eligible usage plans.
+                     * @param _totalCount Number of eligible usage plans.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UsagePlanStatusSet Usage plan list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UsagePlanStatusInfo> GetUsagePlanStatusSet() const;
 
                     /**
                      * 设置Usage plan list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UsagePlanStatusSet Usage plan list.
+                     * @param _usagePlanStatusSet Usage plan list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUsagePlanStatusSet(const std::vector<UsagePlanStatusInfo>& _usagePlanStatusSet);
 
                     /**
                      * 判断参数 UsagePlanStatusSet 是否已赋值
                      * @return UsagePlanStatusSet 是否已赋值
+                     * 
                      */
                     bool UsagePlanStatusSetHasBeenSet() const;
 

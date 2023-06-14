@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of specified allowed items
                      * @return WhitelistIdSet List of IDs of specified allowed items
+                     * 
                      */
                     std::vector<uint64_t> GetWhitelistIdSet() const;
 
                     /**
                      * 设置List of IDs of specified allowed items
-                     * @param WhitelistIdSet List of IDs of specified allowed items
+                     * @param _whitelistIdSet List of IDs of specified allowed items
+                     * 
                      */
                     void SetWhitelistIdSet(const std::vector<uint64_t>& _whitelistIdSet);
 
                     /**
                      * 判断参数 WhitelistIdSet 是否已赋值
                      * @return WhitelistIdSet 是否已赋值
+                     * 
                      */
                     bool WhitelistIdSetHasBeenSet() const;
 

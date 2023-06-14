@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where a file resides
                      * @return ClusterId ID of the cluster where a file resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where a file resides
-                     * @param ClusterId ID of the cluster where a file resides
+                     * @param _clusterId ID of the cluster where a file resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the table group where a file resides
                      * @return TableGroupIds ID of the table group where a file resides
+                     * 
                      */
                     std::vector<std::string> GetTableGroupIds() const;
 
                     /**
                      * 设置ID of the table group where a file resides
-                     * @param TableGroupIds ID of the table group where a file resides
+                     * @param _tableGroupIds ID of the table group where a file resides
+                     * 
                      */
                     void SetTableGroupIds(const std::vector<std::string>& _tableGroupIds);
 
                     /**
                      * 判断参数 TableGroupIds 是否已赋值
                      * @return TableGroupIds 是否已赋值
+                     * 
                      */
                     bool TableGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取File ID list
                      * @return IdlFileIds File ID list
+                     * 
                      */
                     std::vector<std::string> GetIdlFileIds() const;
 
                     /**
                      * 设置File ID list
-                     * @param IdlFileIds File ID list
+                     * @param _idlFileIds File ID list
+                     * 
                      */
                     void SetIdlFileIds(const std::vector<std::string>& _idlFileIds);
 
                     /**
                      * 判断参数 IdlFileIds 是否已赋值
                      * @return IdlFileIds 是否已赋值
+                     * 
                      */
                     bool IdlFileIdsHasBeenSet() const;
 
                     /**
                      * 获取Query list offset
                      * @return Offset Query list offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Query list offset
-                     * @param Offset Query list offset
+                     * @param _offset Query list offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results in query list
                      * @return Limit Number of returned results in query list
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results in query list
-                     * @param Limit Number of returned results in query list
+                     * @param _limit Number of returned results in query list
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

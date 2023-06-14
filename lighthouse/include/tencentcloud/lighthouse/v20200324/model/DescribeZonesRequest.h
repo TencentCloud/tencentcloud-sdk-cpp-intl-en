@@ -51,6 +51,7 @@ The default value is `ZONE`.
 <li>`ZONE`: Sort by the availability zone.
 <li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
 The default value is `ZONE`.
+                     * 
                      */
                     std::string GetOrderField() const;
 
@@ -59,16 +60,18 @@ The default value is `ZONE`.
 <li>`ZONE`: Sort by the availability zone.
 <li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
 The default value is `ZONE`.
-                     * @param OrderField Sorting field. Valid values:
+                     * @param _orderField Sorting field. Valid values:
 <li>`ZONE`: Sort by the availability zone.
 <li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
 The default value is `ZONE`.
+                     * 
                      */
                     void SetOrderField(const std::string& _orderField);
 
                     /**
                      * 判断参数 OrderField 是否已赋值
                      * @return OrderField 是否已赋值
+                     * 
                      */
                     bool OrderFieldHasBeenSet() const;
 
@@ -81,6 +84,7 @@ The default value is `ASC`.
 <li>ASC: Ascending sort. 
 <li>DESC: Descending sort.
 The default value is `ASC`.
+                     * 
                      */
                     std::string GetOrder() const;
 
@@ -89,16 +93,18 @@ The default value is `ASC`.
 <li>ASC: Ascending sort. 
 <li>DESC: Descending sort.
 The default value is `ASC`.
-                     * @param Order Specifies how availability zones are listed. Valid values:
+                     * @param _order Specifies how availability zones are listed. Valid values:
 <li>ASC: Ascending sort. 
 <li>DESC: Descending sort.
 The default value is `ASC`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 

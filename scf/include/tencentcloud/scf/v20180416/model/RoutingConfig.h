@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Additional version with random weight-based routing
                      * @return AdditionalVersionWeights Additional version with random weight-based routing
+                     * 
                      */
                     std::vector<VersionWeight> GetAdditionalVersionWeights() const;
 
                     /**
                      * 设置Additional version with random weight-based routing
-                     * @param AdditionalVersionWeights Additional version with random weight-based routing
+                     * @param _additionalVersionWeights Additional version with random weight-based routing
+                     * 
                      */
                     void SetAdditionalVersionWeights(const std::vector<VersionWeight>& _additionalVersionWeights);
 
                     /**
                      * 判断参数 AdditionalVersionWeights 是否已赋值
                      * @return AdditionalVersionWeights 是否已赋值
+                     * 
                      */
                     bool AdditionalVersionWeightsHasBeenSet() const;
 
                     /**
                      * 获取Additional version with rule-based routing
                      * @return AddtionVersionMatchs Additional version with rule-based routing
+                     * 
                      */
                     std::vector<VersionMatch> GetAddtionVersionMatchs() const;
 
                     /**
                      * 设置Additional version with rule-based routing
-                     * @param AddtionVersionMatchs Additional version with rule-based routing
+                     * @param _addtionVersionMatchs Additional version with rule-based routing
+                     * 
                      */
                     void SetAddtionVersionMatchs(const std::vector<VersionMatch>& _addtionVersionMatchs);
 
                     /**
                      * 判断参数 AddtionVersionMatchs 是否已赋值
                      * @return AddtionVersionMatchs 是否已赋值
+                     * 
                      */
                     bool AddtionVersionMatchsHasBeenSet() const;
 

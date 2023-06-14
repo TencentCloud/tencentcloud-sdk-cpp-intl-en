@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID
                      * @return VpcId VPC instance ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID
-                     * @param VpcId VPC instance ID
+                     * @param _vpcId VPC instance ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet instance ID
                      * @return SubnetId Subnet instance ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID
-                     * @param SubnetId Subnet instance ID
+                     * @param _subnetId Subnet instance ID
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Endpoint name
                      * @return EndPointName Endpoint name
+                     * 
                      */
                     std::string GetEndPointName() const;
 
                     /**
                      * 设置Endpoint name
-                     * @param EndPointName Endpoint name
+                     * @param _endPointName Endpoint name
+                     * 
                      */
                     void SetEndPointName(const std::string& _endPointName);
 
                     /**
                      * 判断参数 EndPointName 是否已赋值
                      * @return EndPointName 是否已赋值
+                     * 
                      */
                     bool EndPointNameHasBeenSet() const;
 
                     /**
                      * 获取Endpoint service ID
                      * @return EndPointServiceId Endpoint service ID
+                     * 
                      */
                     std::string GetEndPointServiceId() const;
 
                     /**
                      * 设置Endpoint service ID
-                     * @param EndPointServiceId Endpoint service ID
+                     * @param _endPointServiceId Endpoint service ID
+                     * 
                      */
                     void SetEndPointServiceId(const std::string& _endPointServiceId);
 
                     /**
                      * 判断参数 EndPointServiceId 是否已赋值
                      * @return EndPointServiceId 是否已赋值
+                     * 
                      */
                     bool EndPointServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Endpoint VIP. You can apply for a specified IP.
                      * @return EndPointVip Endpoint VIP. You can apply for a specified IP.
+                     * 
                      */
                     std::string GetEndPointVip() const;
 
                     /**
                      * 设置Endpoint VIP. You can apply for a specified IP.
-                     * @param EndPointVip Endpoint VIP. You can apply for a specified IP.
+                     * @param _endPointVip Endpoint VIP. You can apply for a specified IP.
+                     * 
                      */
                     void SetEndPointVip(const std::string& _endPointVip);
 
                     /**
                      * 判断参数 EndPointVip 是否已赋值
                      * @return EndPointVip 是否已赋值
+                     * 
                      */
                     bool EndPointVipHasBeenSet() const;
 
                     /**
                      * 获取Security group ID
                      * @return SecurityGroupId Security group ID
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置Security group ID
-                     * @param SecurityGroupId Security group ID
+                     * @param _securityGroupId Security group ID
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 

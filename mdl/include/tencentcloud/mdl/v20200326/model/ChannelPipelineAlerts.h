@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Alarm start time in UTC time.
                      * @return SetTime Alarm start time in UTC time.
+                     * 
                      */
                     std::string GetSetTime() const;
 
                     /**
                      * 设置Alarm start time in UTC time.
-                     * @param SetTime Alarm start time in UTC time.
+                     * @param _setTime Alarm start time in UTC time.
+                     * 
                      */
                     void SetSetTime(const std::string& _setTime);
 
                     /**
                      * 判断参数 SetTime 是否已赋值
                      * @return SetTime 是否已赋值
+                     * 
                      */
                     bool SetTimeHasBeenSet() const;
 
@@ -69,56 +72,65 @@ namespace TencentCloud
 This time is available only after the alarm ends.
                      * @return ClearTime Alarm end time in UTC time.
 This time is available only after the alarm ends.
+                     * 
                      */
                     std::string GetClearTime() const;
 
                     /**
                      * 设置Alarm end time in UTC time.
 This time is available only after the alarm ends.
-                     * @param ClearTime Alarm end time in UTC time.
+                     * @param _clearTime Alarm end time in UTC time.
 This time is available only after the alarm ends.
+                     * 
                      */
                     void SetClearTime(const std::string& _clearTime);
 
                     /**
                      * 判断参数 ClearTime 是否已赋值
                      * @return ClearTime 是否已赋值
+                     * 
                      */
                     bool ClearTimeHasBeenSet() const;
 
                     /**
                      * 获取Alarm type.
                      * @return Type Alarm type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Alarm type.
-                     * @param Type Alarm type.
+                     * @param _type Alarm type.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Alarm details.
                      * @return Message Alarm details.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Alarm details.
-                     * @param Message Alarm details.
+                     * @param _message Alarm details.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

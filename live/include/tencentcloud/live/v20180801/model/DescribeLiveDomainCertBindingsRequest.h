@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The keyword to use to search for domains.
                      * @return DomainSearch The keyword to use to search for domains.
+                     * 
                      */
                     std::string GetDomainSearch() const;
 
                     /**
                      * 设置The keyword to use to search for domains.
-                     * @param DomainSearch The keyword to use to search for domains.
+                     * @param _domainSearch The keyword to use to search for domains.
+                     * 
                      */
                     void SetDomainSearch(const std::string& _domainSearch);
 
                     /**
                      * 判断参数 DomainSearch 是否已赋值
                      * @return DomainSearch 是否已赋值
+                     * 
                      */
                     bool DomainSearchHasBeenSet() const;
 
                     /**
                      * 获取The number of records to skip before starting to return any results. 0 means to start from the first record and is the default.
                      * @return Offset The number of records to skip before starting to return any results. 0 means to start from the first record and is the default.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The number of records to skip before starting to return any results. 0 means to start from the first record and is the default.
-                     * @param Offset The number of records to skip before starting to return any results. 0 means to start from the first record and is the default.
+                     * @param _offset The number of records to skip before starting to return any results. 0 means to start from the first record and is the default.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -83,38 +89,44 @@ namespace TencentCloud
 If this parameter is not specified, up to 50 records will be returned.
                      * @return Length The maximum number of records to return. The default is 50.
 If this parameter is not specified, up to 50 records will be returned.
+                     * 
                      */
                     int64_t GetLength() const;
 
                     /**
                      * 设置The maximum number of records to return. The default is 50.
 If this parameter is not specified, up to 50 records will be returned.
-                     * @param Length The maximum number of records to return. The default is 50.
+                     * @param _length The maximum number of records to return. The default is 50.
 If this parameter is not specified, up to 50 records will be returned.
+                     * 
                      */
                     void SetLength(const int64_t& _length);
 
                     /**
                      * 判断参数 Length 是否已赋值
                      * @return Length 是否已赋值
+                     * 
                      */
                     bool LengthHasBeenSet() const;
 
                     /**
                      * 获取The name of a particular domain to query.
                      * @return DomainName The name of a particular domain to query.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置The name of a particular domain to query.
-                     * @param DomainName The name of a particular domain to query.
+                     * @param _domainName The name of a particular domain to query.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -125,6 +137,7 @@ ExpireTimeDesc: Sort the records by certificate expiration time in descending or
                      * @return OrderBy Valid values:
 ExpireTimeAsc: Sort the records by certificate expiration time in ascending order.
 ExpireTimeDesc: Sort the records by certificate expiration time in descending order.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
@@ -132,15 +145,17 @@ ExpireTimeDesc: Sort the records by certificate expiration time in descending or
                      * 设置Valid values:
 ExpireTimeAsc: Sort the records by certificate expiration time in ascending order.
 ExpireTimeDesc: Sort the records by certificate expiration time in descending order.
-                     * @param OrderBy Valid values:
+                     * @param _orderBy Valid values:
 ExpireTimeAsc: Sort the records by certificate expiration time in ascending order.
 ExpireTimeDesc: Sort the records by certificate expiration time in descending order.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 

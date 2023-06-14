@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Response data in JSON format.
                      * @return ResponseData Response data in JSON format.
+                     * 
                      */
                     std::string GetResponseData() const;
 
                     /**
                      * 判断参数 ResponseData 是否已赋值
                      * @return ResponseData 是否已赋值
+                     * 
                      */
                     bool ResponseDataHasBeenSet() const;
 

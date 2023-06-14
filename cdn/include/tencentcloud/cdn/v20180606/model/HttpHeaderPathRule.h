@@ -57,6 +57,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `del`: deletes a header parameter.
 `add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeaderMode() const;
 
@@ -66,17 +67,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `del`: deletes a header parameter.
 `add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param HeaderMode HTTP header setting methods
+                     * @param _headerMode HTTP header setting methods
 `set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
 `del`: deletes a header parameter.
 `add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHeaderMode(const std::string& _headerMode);
 
                     /**
                      * 判断参数 HeaderMode 是否已赋值
                      * @return HeaderMode 是否已赋值
+                     * 
                      */
                     bool HeaderModeHasBeenSet() const;
 
@@ -85,20 +88,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return HeaderName HTTP header name. Up to 100 characters can be set.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
                      * 设置HTTP header name. Up to 100 characters can be set.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param HeaderName HTTP header name. Up to 100 characters can be set.
+                     * @param _headerName HTTP header name. Up to 100 characters can be set.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHeaderName(const std::string& _headerName);
 
                     /**
                      * 判断参数 HeaderName 是否已赋值
                      * @return HeaderName 是否已赋值
+                     * 
                      */
                     bool HeaderNameHasBeenSet() const;
 
@@ -111,6 +117,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Not required when Mode is del
 Required when Mode is add/set
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetHeaderValue() const;
 
@@ -119,16 +126,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Not required when Mode is del
 Required when Mode is add/set
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param HeaderValue HTTP header value. Up to 1000 characters can be set.
+                     * @param _headerValue HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHeaderValue(const std::string& _headerValue);
 
                     /**
                      * 判断参数 HeaderValue 是否已赋值
                      * @return HeaderValue 是否已赋值
+                     * 
                      */
                     bool HeaderValueHasBeenSet() const;
 
@@ -145,6 +154,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -155,18 +165,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `all`: Apply to all files.
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -183,6 +195,7 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -193,18 +206,20 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RulePaths Content for each `RuleType`:
+                     * @param _rulePaths Content for each `RuleType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 

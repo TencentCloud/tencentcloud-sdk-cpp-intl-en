@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Log export ID
                      * @return ExportId Log export ID
+                     * 
                      */
                     std::string GetExportId() const;
 
                     /**
                      * 设置Log export ID
-                     * @param ExportId Log export ID
+                     * @param _exportId Log export ID
+                     * 
                      */
                     void SetExportId(const std::string& _exportId);
 
                     /**
                      * 判断参数 ExportId 是否已赋值
                      * @return ExportId 是否已赋值
+                     * 
                      */
                     bool ExportIdHasBeenSet() const;
 

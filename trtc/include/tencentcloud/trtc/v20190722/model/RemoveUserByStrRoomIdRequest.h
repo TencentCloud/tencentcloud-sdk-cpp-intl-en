@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取`SDKAppId` of TRTC
                      * @return SdkAppId `SDKAppId` of TRTC
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置`SDKAppId` of TRTC
-                     * @param SdkAppId `SDKAppId` of TRTC
+                     * @param _sdkAppId `SDKAppId` of TRTC
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Room ID
                      * @return RoomId Room ID
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置Room ID
-                     * @param RoomId Room ID
+                     * @param _roomId Room ID
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取List of up to 10 users to be removed
                      * @return UserIds List of up to 10 users to be removed
+                     * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
                      * 设置List of up to 10 users to be removed
-                     * @param UserIds List of up to 10 users to be removed
+                     * @param _userIds List of up to 10 users to be removed
+                     * 
                      */
                     void SetUserIds(const std::vector<std::string>& _userIds);
 
                     /**
                      * 判断参数 UserIds 是否已赋值
                      * @return UserIds 是否已赋值
+                     * 
                      */
                     bool UserIdsHasBeenSet() const;
 

@@ -70,18 +70,21 @@ namespace TencentCloud
                     /**
                      * 获取Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
                      * @return EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
+                     * 
                      */
                     std::string GetEventHandle() const;
 
                     /**
                      * 设置Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
-                     * @param EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
+                     * @param _eventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
+                     * 
                      */
                     void SetEventHandle(const std::string& _eventHandle);
 
                     /**
                      * 判断参数 EventHandle 是否已赋值
                      * @return EventHandle 是否已赋值
+                     * 
                      */
                     bool EventHandleHasBeenSet() const;
 
@@ -128,6 +131,7 @@ namespace TencentCloud
 <li>`ClipComplete`: Finished video clipping.</li>
 <li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
 <li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
+                     * 
                      */
                     std::string GetEventType() const;
 
@@ -153,7 +157,7 @@ namespace TencentCloud
 <li>`ClipComplete`: Finished video clipping.</li>
 <li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
 <li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
-                     * @param EventType <b>Supported event types:</b>
+                     * @param _eventType <b>Supported event types:</b>
 <li>`NewFileUpload`: Video uploaded.</li>
 <li>`ProcedureStateChanged`: Task flow status changed.</li>
 <li>`FileDeleted`: Video deleted.</li>
@@ -174,12 +178,14 @@ namespace TencentCloud
 <li>`ClipComplete`: Finished video clipping.</li>
 <li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
 <li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
@@ -188,20 +194,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileUploadEvent Video upload completion event, which is valid if the event type is `NewFileUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FileUploadTask GetFileUploadEvent() const;
 
                     /**
                      * 设置Video upload completion event, which is valid if the event type is `NewFileUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileUploadEvent Video upload completion event, which is valid if the event type is `NewFileUpload`.
+                     * @param _fileUploadEvent Video upload completion event, which is valid if the event type is `NewFileUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileUploadEvent(const FileUploadTask& _fileUploadEvent);
 
                     /**
                      * 判断参数 FileUploadEvent 是否已赋值
                      * @return FileUploadEvent 是否已赋值
+                     * 
                      */
                     bool FileUploadEventHasBeenSet() const;
 
@@ -210,20 +219,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProcedureStateChangeEvent Task flow status change event, which is valid if the event type is `ProcedureStateChanged`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProcedureTask GetProcedureStateChangeEvent() const;
 
                     /**
                      * 设置Task flow status change event, which is valid if the event type is `ProcedureStateChanged`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProcedureStateChangeEvent Task flow status change event, which is valid if the event type is `ProcedureStateChanged`.
+                     * @param _procedureStateChangeEvent Task flow status change event, which is valid if the event type is `ProcedureStateChanged`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProcedureStateChangeEvent(const ProcedureTask& _procedureStateChangeEvent);
 
                     /**
                      * 判断参数 ProcedureStateChangeEvent 是否已赋值
                      * @return ProcedureStateChangeEvent 是否已赋值
+                     * 
                      */
                     bool ProcedureStateChangeEventHasBeenSet() const;
 
@@ -232,20 +244,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileDeleteEvent File deletion event, which is valid if the event type is `FileDeleted`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FileDeleteTask GetFileDeleteEvent() const;
 
                     /**
                      * 设置File deletion event, which is valid if the event type is `FileDeleted`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileDeleteEvent File deletion event, which is valid if the event type is `FileDeleted`.
+                     * @param _fileDeleteEvent File deletion event, which is valid if the event type is `FileDeleted`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileDeleteEvent(const FileDeleteTask& _fileDeleteEvent);
 
                     /**
                      * 判断参数 FileDeleteEvent 是否已赋值
                      * @return FileDeleteEvent 是否已赋值
+                     * 
                      */
                     bool FileDeleteEventHasBeenSet() const;
 
@@ -254,20 +269,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PullCompleteEvent Video pull for upload completion event, which is valid if the event type is `PullComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PullUploadTask GetPullCompleteEvent() const;
 
                     /**
                      * 设置Video pull for upload completion event, which is valid if the event type is `PullComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PullCompleteEvent Video pull for upload completion event, which is valid if the event type is `PullComplete`.
+                     * @param _pullCompleteEvent Video pull for upload completion event, which is valid if the event type is `PullComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPullCompleteEvent(const PullUploadTask& _pullCompleteEvent);
 
                     /**
                      * 判断参数 PullCompleteEvent 是否已赋值
                      * @return PullCompleteEvent 是否已赋值
+                     * 
                      */
                     bool PullCompleteEventHasBeenSet() const;
 
@@ -276,20 +294,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EditMediaCompleteEvent Video editing completion event, which is valid if the event type is `EditMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EditMediaTask GetEditMediaCompleteEvent() const;
 
                     /**
                      * 设置Video editing completion event, which is valid if the event type is `EditMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EditMediaCompleteEvent Video editing completion event, which is valid if the event type is `EditMediaComplete`.
+                     * @param _editMediaCompleteEvent Video editing completion event, which is valid if the event type is `EditMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEditMediaCompleteEvent(const EditMediaTask& _editMediaCompleteEvent);
 
                     /**
                      * 判断参数 EditMediaCompleteEvent 是否已赋值
                      * @return EditMediaCompleteEvent 是否已赋值
+                     * 
                      */
                     bool EditMediaCompleteEventHasBeenSet() const;
 
@@ -298,20 +319,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SplitMediaTask GetSplitMediaCompleteEvent() const;
 
                     /**
                      * 设置The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
+                     * @param _splitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSplitMediaCompleteEvent(const SplitMediaTask& _splitMediaCompleteEvent);
 
                     /**
                      * 判断参数 SplitMediaCompleteEvent 是否已赋值
                      * @return SplitMediaCompleteEvent 是否已赋值
+                     * 
                      */
                     bool SplitMediaCompleteEventHasBeenSet() const;
 
@@ -320,20 +344,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ComposeMediaCompleteEvent Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ComposeMediaTask GetComposeMediaCompleteEvent() const;
 
                     /**
                      * 设置Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ComposeMediaCompleteEvent Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
+                     * @param _composeMediaCompleteEvent Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComposeMediaCompleteEvent(const ComposeMediaTask& _composeMediaCompleteEvent);
 
                     /**
                      * 判断参数 ComposeMediaCompleteEvent 是否已赋值
                      * @return ComposeMediaCompleteEvent 是否已赋值
+                     * 
                      */
                     bool ComposeMediaCompleteEventHasBeenSet() const;
 
@@ -342,20 +369,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClipCompleteEvent Video clipping completion event, which is valid if the event type is `ClipComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ClipTask2017 GetClipCompleteEvent() const;
 
                     /**
                      * 设置Video clipping completion event, which is valid if the event type is `ClipComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClipCompleteEvent Video clipping completion event, which is valid if the event type is `ClipComplete`.
+                     * @param _clipCompleteEvent Video clipping completion event, which is valid if the event type is `ClipComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClipCompleteEvent(const ClipTask2017& _clipCompleteEvent);
 
                     /**
                      * 判断参数 ClipCompleteEvent 是否已赋值
                      * @return ClipCompleteEvent 是否已赋值
+                     * 
                      */
                     bool ClipCompleteEventHasBeenSet() const;
 
@@ -364,20 +394,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TranscodeTask2017 GetTranscodeCompleteEvent() const;
 
                     /**
                      * 设置Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+                     * @param _transcodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTranscodeCompleteEvent(const TranscodeTask2017& _transcodeCompleteEvent);
 
                     /**
                      * 判断参数 TranscodeCompleteEvent 是否已赋值
                      * @return TranscodeCompleteEvent 是否已赋值
+                     * 
                      */
                     bool TranscodeCompleteEventHasBeenSet() const;
 
@@ -386,20 +419,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CreateImageSpriteTask2017 GetCreateImageSpriteCompleteEvent() const;
 
                     /**
                      * 设置Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
+                     * @param _createImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateImageSpriteCompleteEvent(const CreateImageSpriteTask2017& _createImageSpriteCompleteEvent);
 
                     /**
                      * 判断参数 CreateImageSpriteCompleteEvent 是否已赋值
                      * @return CreateImageSpriteCompleteEvent 是否已赋值
+                     * 
                      */
                     bool CreateImageSpriteCompleteEventHasBeenSet() const;
 
@@ -408,20 +444,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ConcatTask2017 GetConcatCompleteEvent() const;
 
                     /**
                      * 设置Video splicing completion event, which is valid if the event type is `ConcatComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+                     * @param _concatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConcatCompleteEvent(const ConcatTask2017& _concatCompleteEvent);
 
                     /**
                      * 判断参数 ConcatCompleteEvent 是否已赋值
                      * @return ConcatCompleteEvent 是否已赋值
+                     * 
                      */
                     bool ConcatCompleteEventHasBeenSet() const;
 
@@ -430,20 +469,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SnapshotByTimeOffsetCompleteEvent Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SnapshotByTimeOffsetTask2017 GetSnapshotByTimeOffsetCompleteEvent() const;
 
                     /**
                      * 设置Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SnapshotByTimeOffsetCompleteEvent Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
+                     * @param _snapshotByTimeOffsetCompleteEvent Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotByTimeOffsetCompleteEvent(const SnapshotByTimeOffsetTask2017& _snapshotByTimeOffsetCompleteEvent);
 
                     /**
                      * 判断参数 SnapshotByTimeOffsetCompleteEvent 是否已赋值
                      * @return SnapshotByTimeOffsetCompleteEvent 是否已赋值
+                     * 
                      */
                     bool SnapshotByTimeOffsetCompleteEventHasBeenSet() const;
 
@@ -452,20 +494,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WechatPublishTask GetWechatPublishCompleteEvent() const;
 
                     /**
                      * 设置Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+                     * @param _wechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWechatPublishCompleteEvent(const WechatPublishTask& _wechatPublishCompleteEvent);
 
                     /**
                      * 判断参数 WechatPublishCompleteEvent 是否已赋值
                      * @return WechatPublishCompleteEvent 是否已赋值
+                     * 
                      */
                     bool WechatPublishCompleteEventHasBeenSet() const;
 
@@ -474,20 +519,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WechatMiniProgramPublishTask GetWechatMiniProgramPublishCompleteEvent() const;
 
                     /**
                      * 设置Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
+                     * @param _wechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWechatMiniProgramPublishCompleteEvent(const WechatMiniProgramPublishTask& _wechatMiniProgramPublishCompleteEvent);
 
                     /**
                      * 判断参数 WechatMiniProgramPublishCompleteEvent 是否已赋值
                      * @return WechatMiniProgramPublishCompleteEvent 是否已赋值
+                     * 
                      */
                     bool WechatMiniProgramPublishCompleteEventHasBeenSet() const;
 
@@ -496,20 +544,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RemoveWatermarkTask GetRemoveWatermarkCompleteEvent() const;
 
                     /**
                      * 设置The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
+                     * @param _removeWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemoveWatermarkCompleteEvent(const RemoveWatermarkTask& _removeWatermarkCompleteEvent);
 
                     /**
                      * 判断参数 RemoveWatermarkCompleteEvent 是否已赋值
                      * @return RemoveWatermarkCompleteEvent 是否已赋值
+                     * 
                      */
                     bool RemoveWatermarkCompleteEventHasBeenSet() const;
 
@@ -518,20 +569,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RestoreMediaTask GetRestoreMediaCompleteEvent() const;
 
                     /**
                      * 设置The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
+                     * @param _restoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRestoreMediaCompleteEvent(const RestoreMediaTask& _restoreMediaCompleteEvent);
 
                     /**
                      * 判断参数 RestoreMediaCompleteEvent 是否已赋值
                      * @return RestoreMediaCompleteEvent 是否已赋值
+                     * 
                      */
                     bool RestoreMediaCompleteEventHasBeenSet() const;
 
@@ -540,20 +594,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RebuildMediaTask GetRebuildMediaCompleteEvent() const;
 
                     /**
                      * 设置The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
+                     * @param _rebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRebuildMediaCompleteEvent(const RebuildMediaTask& _rebuildMediaCompleteEvent);
 
                     /**
                      * 判断参数 RebuildMediaCompleteEvent 是否已赋值
                      * @return RebuildMediaCompleteEvent 是否已赋值
+                     * 
                      */
                     bool RebuildMediaCompleteEventHasBeenSet() const;
 
@@ -562,20 +619,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ExtractTraceWatermarkTask GetExtractTraceWatermarkCompleteEvent() const;
 
                     /**
                      * 设置The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+                     * @param _extractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtractTraceWatermarkCompleteEvent(const ExtractTraceWatermarkTask& _extractTraceWatermarkCompleteEvent);
 
                     /**
                      * 判断参数 ExtractTraceWatermarkCompleteEvent 是否已赋值
                      * @return ExtractTraceWatermarkCompleteEvent 是否已赋值
+                     * 
                      */
                     bool ExtractTraceWatermarkCompleteEventHasBeenSet() const;
 
@@ -584,20 +644,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReviewAudioVideoTask GetReviewAudioVideoCompleteEvent() const;
 
                     /**
                      * 设置The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+                     * @param _reviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReviewAudioVideoCompleteEvent(const ReviewAudioVideoTask& _reviewAudioVideoCompleteEvent);
 
                     /**
                      * 判断参数 ReviewAudioVideoCompleteEvent 是否已赋值
                      * @return ReviewAudioVideoCompleteEvent 是否已赋值
+                     * 
                      */
                     bool ReviewAudioVideoCompleteEventHasBeenSet() const;
 
@@ -606,20 +669,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReduceMediaBitrateCompleteEvent This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReduceMediaBitrateTask GetReduceMediaBitrateCompleteEvent() const;
 
                     /**
                      * 设置This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReduceMediaBitrateCompleteEvent This parameter is invalid now.
+                     * @param _reduceMediaBitrateCompleteEvent This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReduceMediaBitrateCompleteEvent(const ReduceMediaBitrateTask& _reduceMediaBitrateCompleteEvent);
 
                     /**
                      * 判断参数 ReduceMediaBitrateCompleteEvent 是否已赋值
                      * @return ReduceMediaBitrateCompleteEvent 是否已赋值
+                     * 
                      */
                     bool ReduceMediaBitrateCompleteEventHasBeenSet() const;
 
@@ -628,20 +694,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DescribeFileAttributesCompleteEvent The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesCompleteEvent() const;
 
                     /**
                      * 设置The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DescribeFileAttributesCompleteEvent The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
+                     * @param _describeFileAttributesCompleteEvent The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescribeFileAttributesCompleteEvent(const DescribeFileAttributesTask& _describeFileAttributesCompleteEvent);
 
                     /**
                      * 判断参数 DescribeFileAttributesCompleteEvent 是否已赋值
                      * @return DescribeFileAttributesCompleteEvent 是否已赋值
+                     * 
                      */
                     bool DescribeFileAttributesCompleteEventHasBeenSet() const;
 

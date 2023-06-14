@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of protected resources
                      * @return Entities List of protected resources
+                     * 
                      */
                     std::vector<SecurityEntity> GetEntities() const;
 
                     /**
                      * 判断参数 Entities 是否已赋值
                      * @return Entities 是否已赋值
+                     * 
                      */
                     bool EntitiesHasBeenSet() const;
 

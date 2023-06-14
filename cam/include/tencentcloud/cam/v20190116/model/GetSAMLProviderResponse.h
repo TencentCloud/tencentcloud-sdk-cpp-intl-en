@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取SAML identity provider name
                      * @return Name SAML identity provider name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取SAML identity provider description
                      * @return Description SAML identity provider description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Time SAML identity provider created
                      * @return CreateTime Time SAML identity provider created
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Time SAML identity provider last modified
                      * @return ModifyTime Time SAML identity provider last modified
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
                      * 获取SAML identity provider metadata document
                      * @return SAMLMetadata SAML identity provider metadata document
+                     * 
                      */
                     std::string GetSAMLMetadata() const;
 
                     /**
                      * 判断参数 SAMLMetadata 是否已赋值
                      * @return SAMLMetadata 是否已赋值
+                     * 
                      */
                     bool SAMLMetadataHasBeenSet() const;
 

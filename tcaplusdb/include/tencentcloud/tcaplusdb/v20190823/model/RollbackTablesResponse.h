@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of table rollback task results
                      * @return TotalCount Number of table rollback task results
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Table rollback task result list
                      * @return TableResults Table rollback task result list
+                     * 
                      */
                     std::vector<TableRollbackResultNew> GetTableResults() const;
 
                     /**
                      * 判断参数 TableResults 是否已赋值
                      * @return TableResults 是否已赋值
+                     * 
                      */
                     bool TableResultsHasBeenSet() const;
 

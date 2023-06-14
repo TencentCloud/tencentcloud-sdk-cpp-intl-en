@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The URLs of the CDNs to relay to.
                      * @return PublishCdnUrl The URLs of the CDNs to relay to.
+                     * 
                      */
                     std::string GetPublishCdnUrl() const;
 
                     /**
                      * 设置The URLs of the CDNs to relay to.
-                     * @param PublishCdnUrl The URLs of the CDNs to relay to.
+                     * @param _publishCdnUrl The URLs of the CDNs to relay to.
+                     * 
                      */
                     void SetPublishCdnUrl(const std::string& _publishCdnUrl);
 
                     /**
                      * 判断参数 PublishCdnUrl 是否已赋值
                      * @return PublishCdnUrl 是否已赋值
+                     * 
                      */
                     bool PublishCdnUrlHasBeenSet() const;
 
                     /**
                      * 获取Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
                      * @return IsTencentCdn Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+                     * 
                      */
                     uint64_t GetIsTencentCdn() const;
 
                     /**
                      * 设置Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
-                     * @param IsTencentCdn Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+                     * @param _isTencentCdn Whether to relay to Tencent Cloud’s CDN. `0`: Third-party CDN; `1` (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+                     * 
                      */
                     void SetIsTencentCdn(const uint64_t& _isTencentCdn);
 
                     /**
                      * 判断参数 IsTencentCdn 是否已赋值
                      * @return IsTencentCdn 是否已赋值
+                     * 
                      */
                     bool IsTencentCdnHasBeenSet() const;
 

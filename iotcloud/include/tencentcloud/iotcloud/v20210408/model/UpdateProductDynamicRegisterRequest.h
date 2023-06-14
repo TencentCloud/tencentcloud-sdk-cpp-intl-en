@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Product ID
                      * @return ProductId Product ID
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置Product ID
-                     * @param ProductId Product ID
+                     * @param _productId Product ID
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
                      * @return RegisterType Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
+                     * 
                      */
                     uint64_t GetRegisterType() const;
 
                     /**
                      * 设置Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
-                     * @param RegisterType Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
+                     * @param _registerType Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
+                     * 
                      */
                     void SetRegisterType(const uint64_t& _registerType);
 
                     /**
                      * 判断参数 RegisterType 是否已赋值
                      * @return RegisterType 是否已赋值
+                     * 
                      */
                     bool RegisterTypeHasBeenSet() const;
 
                     /**
                      * 获取Maximum dynamically registered devices
                      * @return RegisterLimit Maximum dynamically registered devices
+                     * 
                      */
                     uint64_t GetRegisterLimit() const;
 
                     /**
                      * 设置Maximum dynamically registered devices
-                     * @param RegisterLimit Maximum dynamically registered devices
+                     * @param _registerLimit Maximum dynamically registered devices
+                     * 
                      */
                     void SetRegisterLimit(const uint64_t& _registerLimit);
 
                     /**
                      * 判断参数 RegisterLimit 是否已赋值
                      * @return RegisterLimit 是否已赋值
+                     * 
                      */
                     bool RegisterLimitHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取IP version. Valid values: `IPv4` (default), `IPv6`.
                      * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * 
                      */
                     std::string GetIPAddressVersion() const;
 
                     /**
                      * 设置IP version. Valid values: `IPv4` (default), `IPv6`.
-                     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * @param _iPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+                     * 
                      */
                     void SetIPAddressVersion(const std::string& _iPAddressVersion);
 
                     /**
                      * 判断参数 IPAddressVersion 是否已赋值
                      * @return IPAddressVersion 是否已赋值
+                     * 
                      */
                     bool IPAddressVersionHasBeenSet() const;
 
                     /**
                      * 获取Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
                      * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+                     * 
                      */
                     std::string GetPackageType() const;
 
                     /**
                      * 设置Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
-                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+                     * @param _packageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+                     * 
                      */
                     void SetPackageType(const std::string& _packageType);
 
                     /**
                      * 判断参数 PackageType 是否已赋值
                      * @return PackageType 是否已赋值
+                     * 
                      */
                     bool PackageTypeHasBeenSet() const;
 

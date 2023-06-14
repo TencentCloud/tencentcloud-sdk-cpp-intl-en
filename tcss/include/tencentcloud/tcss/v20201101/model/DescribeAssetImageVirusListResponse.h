@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of viruses in the image
                      * @return List List of viruses in the image
+                     * 
                      */
                     std::vector<ImageVirusInfo> GetList() const;
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -81,12 +85,14 @@ namespace TencentCloud
 `2`: Scanned.
 `3`: Scan error.
 `4`: Scan canceled.
+                     * 
                      */
                     uint64_t GetVirusScanStatus() const;
 
                     /**
                      * 判断参数 VirusScanStatus 是否已赋值
                      * @return VirusScanStatus 是否已赋值
+                     * 
                      */
                     bool VirusScanStatusHasBeenSet() const;
 

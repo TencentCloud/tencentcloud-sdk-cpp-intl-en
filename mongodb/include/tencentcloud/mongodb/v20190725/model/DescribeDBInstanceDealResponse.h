@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
                      * @return Status Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Original price of the order.
                      * @return OriginalPrice Original price of the order.
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discounted price of the order.
                      * @return DiscountPrice Discounted price of the order.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
                      * 获取Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
                      * @return Action Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 

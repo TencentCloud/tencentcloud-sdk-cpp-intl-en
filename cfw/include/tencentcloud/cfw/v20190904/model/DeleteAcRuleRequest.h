@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the rule to delete. It can be queried via the DescribeAcLists API.
                      * @return Id The ID of the rule to delete. It can be queried via the DescribeAcLists API.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置The ID of the rule to delete. It can be queried via the DescribeAcLists API.
-                     * @param Id The ID of the rule to delete. It can be queried via the DescribeAcLists API.
+                     * @param _id The ID of the rule to delete. It can be queried via the DescribeAcLists API.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Direction. 0: outbound; 1: inbound
                      * @return Direction Direction. 0: outbound; 1: inbound
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Direction. 0: outbound; 1: inbound
-                     * @param Direction Direction. 0: outbound; 1: inbound
+                     * @param _direction Direction. 0: outbound; 1: inbound
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Edge ID between two VPCs
                      * @return EdgeId Edge ID between two VPCs
+                     * 
                      */
                     std::string GetEdgeId() const;
 
                     /**
                      * 设置Edge ID between two VPCs
-                     * @param EdgeId Edge ID between two VPCs
+                     * @param _edgeId Edge ID between two VPCs
+                     * 
                      */
                     void SetEdgeId(const std::string& _edgeId);
 
                     /**
                      * 判断参数 EdgeId 是否已赋值
                      * @return EdgeId 是否已赋值
+                     * 
                      */
                     bool EdgeIdHasBeenSet() const;
 
                     /**
                      * 获取NAT region, e.g. ap-shanghai/ap-guangzhou/ap-chongqing
                      * @return Area NAT region, e.g. ap-shanghai/ap-guangzhou/ap-chongqing
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置NAT region, e.g. ap-shanghai/ap-guangzhou/ap-chongqing
-                     * @param Area NAT region, e.g. ap-shanghai/ap-guangzhou/ap-chongqing
+                     * @param _area NAT region, e.g. ap-shanghai/ap-guangzhou/ap-chongqing
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

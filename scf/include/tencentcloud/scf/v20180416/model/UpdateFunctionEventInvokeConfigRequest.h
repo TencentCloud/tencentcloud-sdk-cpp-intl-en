@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Async retry configuration information
                      * @return AsyncTriggerConfig Async retry configuration information
+                     * 
                      */
                     AsyncTriggerConfig GetAsyncTriggerConfig() const;
 
                     /**
                      * 设置Async retry configuration information
-                     * @param AsyncTriggerConfig Async retry configuration information
+                     * @param _asyncTriggerConfig Async retry configuration information
+                     * 
                      */
                     void SetAsyncTriggerConfig(const AsyncTriggerConfig& _asyncTriggerConfig);
 
                     /**
                      * 判断参数 AsyncTriggerConfig 是否已赋值
                      * @return AsyncTriggerConfig 是否已赋值
+                     * 
                      */
                     bool AsyncTriggerConfigHasBeenSet() const;
 
                     /**
                      * 获取Function name
                      * @return FunctionName Function name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name
-                     * @param FunctionName Function name
+                     * @param _functionName Function name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function namespace. Default value: default
                      * @return Namespace Function namespace. Default value: default
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace. Default value: default
-                     * @param Namespace Function namespace. Default value: default
+                     * @param _namespace Function namespace. Default value: default
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 

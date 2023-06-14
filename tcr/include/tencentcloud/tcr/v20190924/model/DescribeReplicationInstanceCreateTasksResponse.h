@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Task details
                      * @return TaskDetail Task details
+                     * 
                      */
                     std::vector<TaskDetail> GetTaskDetail() const;
 
                     /**
                      * 判断参数 TaskDetail 是否已赋值
                      * @return TaskDetail 是否已赋值
+                     * 
                      */
                     bool TaskDetailHasBeenSet() const;
 
                     /**
                      * 获取Overall task status
                      * @return Status Overall task status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

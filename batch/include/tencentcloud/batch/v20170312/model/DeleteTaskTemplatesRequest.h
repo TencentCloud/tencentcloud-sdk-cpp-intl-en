@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取This API is used to delete task template information.
                      * @return TaskTemplateIds This API is used to delete task template information.
+                     * 
                      */
                     std::vector<std::string> GetTaskTemplateIds() const;
 
                     /**
                      * 设置This API is used to delete task template information.
-                     * @param TaskTemplateIds This API is used to delete task template information.
+                     * @param _taskTemplateIds This API is used to delete task template information.
+                     * 
                      */
                     void SetTaskTemplateIds(const std::vector<std::string>& _taskTemplateIds);
 
                     /**
                      * 判断参数 TaskTemplateIds 是否已赋值
                      * @return TaskTemplateIds 是否已赋值
+                     * 
                      */
                     bool TaskTemplateIdsHasBeenSet() const;
 

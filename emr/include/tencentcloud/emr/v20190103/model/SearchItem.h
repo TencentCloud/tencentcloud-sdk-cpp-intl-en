@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Searchable type
                      * @return SearchType Searchable type
+                     * 
                      */
                     std::string GetSearchType() const;
 
                     /**
                      * 设置Searchable type
-                     * @param SearchType Searchable type
+                     * @param _searchType Searchable type
+                     * 
                      */
                     void SetSearchType(const std::string& _searchType);
 
                     /**
                      * 判断参数 SearchType 是否已赋值
                      * @return SearchType 是否已赋值
+                     * 
                      */
                     bool SearchTypeHasBeenSet() const;
 
                     /**
                      * 获取Searchable value
                      * @return SearchValue Searchable value
+                     * 
                      */
                     std::string GetSearchValue() const;
 
                     /**
                      * 设置Searchable value
-                     * @param SearchValue Searchable value
+                     * @param _searchValue Searchable value
+                     * 
                      */
                     void SetSearchValue(const std::string& _searchValue);
 
                     /**
                      * 判断参数 SearchValue 是否已赋值
                      * @return SearchValue 是否已赋值
+                     * 
                      */
                     bool SearchValueHasBeenSet() const;
 

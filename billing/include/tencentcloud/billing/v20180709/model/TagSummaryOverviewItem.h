@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagValue Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagValue Tag value
+                     * @param _tagValue Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagValue(const std::string& _tagValue);
 
                     /**
                      * 判断参数 TagValue 是否已赋值
                      * @return TagValue 是否已赋值
+                     * 
                      */
                     bool TagValueHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealTotalCost Actual cost
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRealTotalCost() const;
 
                     /**
                      * 设置Actual cost
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealTotalCost Actual cost
+                     * @param _realTotalCost Actual cost
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealTotalCost(const std::string& _realTotalCost);
 
                     /**
                      * 判断参数 RealTotalCost 是否已赋值
                      * @return RealTotalCost 是否已赋值
+                     * 
                      */
                     bool RealTotalCostHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealTotalCostRatio Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRealTotalCostRatio() const;
 
                     /**
                      * 设置Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealTotalCostRatio Cost percentage rounded to two decimal places
+                     * @param _realTotalCostRatio Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealTotalCostRatio(const std::string& _realTotalCostRatio);
 
                     /**
                      * 判断参数 RealTotalCostRatio 是否已赋值
                      * @return RealTotalCostRatio 是否已赋值
+                     * 
                      */
                     bool RealTotalCostRatioHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
                      * 设置The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+                     * @param _totalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
 
                     /**
                      * 判断参数 TotalCost 是否已赋值
                      * @return TotalCost 是否已赋值
+                     * 
                      */
                     bool TotalCostHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CashPayAmount Payment by cash credits
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCashPayAmount() const;
 
                     /**
                      * 设置Payment by cash credits
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CashPayAmount Payment by cash credits
+                     * @param _cashPayAmount Payment by cash credits
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCashPayAmount(const std::string& _cashPayAmount);
 
                     /**
                      * 判断参数 CashPayAmount 是否已赋值
                      * @return CashPayAmount 是否已赋值
+                     * 
                      */
                     bool CashPayAmountHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IncentivePayAmount Payment by free credits
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIncentivePayAmount() const;
 
                     /**
                      * 设置Payment by free credits
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IncentivePayAmount Payment by free credits
+                     * @param _incentivePayAmount Payment by free credits
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIncentivePayAmount(const std::string& _incentivePayAmount);
 
                     /**
                      * 判断参数 IncentivePayAmount 是否已赋值
                      * @return IncentivePayAmount 是否已赋值
+                     * 
                      */
                     bool IncentivePayAmountHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VoucherPayAmount Payment by vouchers
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
                      * 设置Payment by vouchers
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VoucherPayAmount Payment by vouchers
+                     * @param _voucherPayAmount Payment by vouchers
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
 
                     /**
                      * 判断参数 VoucherPayAmount 是否已赋值
                      * @return VoucherPayAmount 是否已赋值
+                     * 
                      */
                     bool VoucherPayAmountHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TransferPayAmount Payment by commission credits
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTransferPayAmount() const;
 
                     /**
                      * 设置Payment by commission credits
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TransferPayAmount Payment by commission credits
+                     * @param _transferPayAmount Payment by commission credits
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransferPayAmount(const std::string& _transferPayAmount);
 
                     /**
                      * 判断参数 TransferPayAmount 是否已赋值
                      * @return TransferPayAmount 是否已赋值
+                     * 
                      */
                     bool TransferPayAmountHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of session IDs
                      * @return SessionId List of session IDs
+                     * 
                      */
                     std::vector<int64_t> GetSessionId() const;
 
                     /**
                      * 设置List of session IDs
-                     * @param SessionId List of session IDs
+                     * @param _sessionId List of session IDs
+                     * 
                      */
                     void SetSessionId(const std::vector<int64_t>& _sessionId);
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 
                     /**
                      * 获取Shard ID. Either `ShardId` or `ShardSerialId` is required.
                      * @return ShardId Shard ID. Either `ShardId` or `ShardSerialId` is required.
+                     * 
                      */
                     std::string GetShardId() const;
 
                     /**
                      * 设置Shard ID. Either `ShardId` or `ShardSerialId` is required.
-                     * @param ShardId Shard ID. Either `ShardId` or `ShardSerialId` is required.
+                     * @param _shardId Shard ID. Either `ShardId` or `ShardSerialId` is required.
+                     * 
                      */
                     void SetShardId(const std::string& _shardId);
 
                     /**
                      * 判断参数 ShardId 是否已赋值
                      * @return ShardId 是否已赋值
+                     * 
                      */
                     bool ShardIdHasBeenSet() const;
 
                     /**
                      * 获取Shard sequence ID. Either `ShardId` or `ShardSerialId` is required.
                      * @return ShardSerialId Shard sequence ID. Either `ShardId` or `ShardSerialId` is required.
+                     * 
                      */
                     std::string GetShardSerialId() const;
 
                     /**
                      * 设置Shard sequence ID. Either `ShardId` or `ShardSerialId` is required.
-                     * @param ShardSerialId Shard sequence ID. Either `ShardId` or `ShardSerialId` is required.
+                     * @param _shardSerialId Shard sequence ID. Either `ShardId` or `ShardSerialId` is required.
+                     * 
                      */
                     void SetShardSerialId(const std::string& _shardSerialId);
 
                     /**
                      * 判断参数 ShardSerialId 是否已赋值
                      * @return ShardSerialId 是否已赋值
+                     * 
                      */
                     bool ShardSerialIdHasBeenSet() const;
 

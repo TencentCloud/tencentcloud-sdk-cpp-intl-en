@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
 * WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
 * WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
-                     * @param Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+                     * @param _switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
 * WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Timeout Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimeout() const;
 
                     /**
                      * 设置Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Timeout Sets timeout period in seconds. Maximum value: 300
+                     * @param _timeout Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimeout(const int64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 

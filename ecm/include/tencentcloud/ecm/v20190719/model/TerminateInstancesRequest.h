@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the instances to be terminated.
                      * @return InstanceIdSet List of IDs of the instances to be terminated.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置List of IDs of the instances to be terminated.
-                     * @param InstanceIdSet List of IDs of the instances to be terminated.
+                     * @param _instanceIdSet List of IDs of the instances to be terminated.
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable scheduled termination. Default value: no.
                      * @return TerminateDelay Whether to enable scheduled termination. Default value: no.
+                     * 
                      */
                     bool GetTerminateDelay() const;
 
                     /**
                      * 设置Whether to enable scheduled termination. Default value: no.
-                     * @param TerminateDelay Whether to enable scheduled termination. Default value: no.
+                     * @param _terminateDelay Whether to enable scheduled termination. Default value: no.
+                     * 
                      */
                     void SetTerminateDelay(const bool& _terminateDelay);
 
                     /**
                      * 判断参数 TerminateDelay 是否已赋值
                      * @return TerminateDelay 是否已赋值
+                     * 
                      */
                     bool TerminateDelayHasBeenSet() const;
 
                     /**
                      * 获取Scheduled termination time, such as `2019-08-05 12:01:30`. If you don't enable scheduled termination, you can ignore this parameter.
                      * @return TerminateTime Scheduled termination time, such as `2019-08-05 12:01:30`. If you don't enable scheduled termination, you can ignore this parameter.
+                     * 
                      */
                     std::string GetTerminateTime() const;
 
                     /**
                      * 设置Scheduled termination time, such as `2019-08-05 12:01:30`. If you don't enable scheduled termination, you can ignore this parameter.
-                     * @param TerminateTime Scheduled termination time, such as `2019-08-05 12:01:30`. If you don't enable scheduled termination, you can ignore this parameter.
+                     * @param _terminateTime Scheduled termination time, such as `2019-08-05 12:01:30`. If you don't enable scheduled termination, you can ignore this parameter.
+                     * 
                      */
                     void SetTerminateTime(const std::string& _terminateTime);
 
                     /**
                      * 判断参数 TerminateTime 是否已赋值
                      * @return TerminateTime 是否已赋值
+                     * 
                      */
                     bool TerminateTimeHasBeenSet() const;
 
@@ -103,6 +112,7 @@ false: only the server will be terminated, while the ENI and EIP will be retaine
                      * @return AssociatedResourceDestroy Whether to delete the bound ENI and EIP. Default value: true.
 true: the ENI and EIP will also be deleted;
 false: only the server will be terminated, while the ENI and EIP will be retained.
+                     * 
                      */
                     bool GetAssociatedResourceDestroy() const;
 
@@ -110,15 +120,17 @@ false: only the server will be terminated, while the ENI and EIP will be retaine
                      * 设置Whether to delete the bound ENI and EIP. Default value: true.
 true: the ENI and EIP will also be deleted;
 false: only the server will be terminated, while the ENI and EIP will be retained.
-                     * @param AssociatedResourceDestroy Whether to delete the bound ENI and EIP. Default value: true.
+                     * @param _associatedResourceDestroy Whether to delete the bound ENI and EIP. Default value: true.
 true: the ENI and EIP will also be deleted;
 false: only the server will be terminated, while the ENI and EIP will be retained.
+                     * 
                      */
                     void SetAssociatedResourceDestroy(const bool& _associatedResourceDestroy);
 
                     /**
                      * 判断参数 AssociatedResourceDestroy 是否已赋值
                      * @return AssociatedResourceDestroy 是否已赋值
+                     * 
                      */
                     bool AssociatedResourceDestroyHasBeenSet() const;
 

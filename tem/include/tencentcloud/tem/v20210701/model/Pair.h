@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Key
                      * @return Key Key
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Key
-                     * @param Key Key
+                     * @param _key Key
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Value
                      * @return Value Value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value
-                     * @param Value Value
+                     * @param _value Value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置`default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+                     * @param _type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return Config Configuration name
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetConfig() const;
 
                     /**
                      * 设置Configuration name
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Config Configuration name
+                     * @param _config Configuration name
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetConfig(const std::string& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Secret Encrypt configuration name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetSecret() const;
 
                     /**
                      * 设置Encrypt configuration name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Secret Encrypt configuration name
+                     * @param _secret Encrypt configuration name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetSecret(const std::string& _secret);
 
                     /**
                      * 判断参数 Secret 是否已赋值
                      * @return Secret 是否已赋值
+                     * 
                      */
                     bool SecretHasBeenSet() const;
 

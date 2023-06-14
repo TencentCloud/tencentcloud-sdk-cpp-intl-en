@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Date in the format of yyyy-mm-dd, such as 2018-07-13
                      * @return StatDate Date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 
                      */
                     std::string GetStatDate() const;
 
                     /**
                      * 设置Date in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @param StatDate Date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * @param _statDate Date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 
                      */
                     void SetStatDate(const std::string& _statDate);
 
                     /**
                      * 判断参数 StatDate 是否已赋值
                      * @return StatDate 是否已赋值
+                     * 
                      */
                     bool StatDateHasBeenSet() const;
 
                     /**
                      * 获取Statistical value
                      * @return Data Statistical value
+                     * 
                      */
                     uint64_t GetData() const;
 
                     /**
                      * 设置Statistical value
-                     * @param Data Statistical value
+                     * @param _data Statistical value
+                     * 
                      */
                     void SetData(const uint64_t& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

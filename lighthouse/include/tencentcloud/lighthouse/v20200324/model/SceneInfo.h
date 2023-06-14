@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Scene ID
                      * @return SceneId Scene ID
+                     * 
                      */
                     std::string GetSceneId() const;
 
                     /**
                      * 设置Scene ID
-                     * @param SceneId Scene ID
+                     * @param _sceneId Scene ID
+                     * 
                      */
                     void SetSceneId(const std::string& _sceneId);
 
                     /**
                      * 判断参数 SceneId 是否已赋值
                      * @return SceneId 是否已赋值
+                     * 
                      */
                     bool SceneIdHasBeenSet() const;
 
                     /**
                      * 获取Display name of the scene
                      * @return DisplayName Display name of the scene
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Display name of the scene
-                     * @param DisplayName Display name of the scene
+                     * @param _displayName Display name of the scene
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
                     /**
                      * 获取Scene description
                      * @return Description Scene description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Scene description
-                     * @param Description Scene description
+                     * @param _description Scene description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

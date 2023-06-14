@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取StreamLive region information
                      * @return Info StreamLive region information
+                     * 
                      */
                     StreamLiveRegionInfo GetInfo() const;
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

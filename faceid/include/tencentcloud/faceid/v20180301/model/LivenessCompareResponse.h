@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取The best screenshot of the video after successful verification. The photo is Base64-encoded and in JPG format.
                      * @return BestFrameBase64 The best screenshot of the video after successful verification. The photo is Base64-encoded and in JPG format.
+                     * 
                      */
                     std::string GetBestFrameBase64() const;
 
                     /**
                      * 判断参数 BestFrameBase64 是否已赋值
                      * @return BestFrameBase64 是否已赋值
+                     * 
                      */
                     bool BestFrameBase64HasBeenSet() const;
 
                     /**
                      * 获取Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
                      * @return Sim Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
+                     * 
                      */
                     double GetSim() const;
 
                     /**
                      * 判断参数 Sim 是否已赋值
                      * @return Sim 是否已赋值
+                     * 
                      */
                     bool SimHasBeenSet() const;
 
                     /**
                      * 获取Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
                      * @return Result Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取Service result description.
                      * @return Description Service result description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return BestFrameList 
+                     * 
                      */
                     std::vector<std::string> GetBestFrameList() const;
 
                     /**
                      * 判断参数 BestFrameList 是否已赋值
                      * @return BestFrameList 是否已赋值
+                     * 
                      */
                     bool BestFrameListHasBeenSet() const;
 

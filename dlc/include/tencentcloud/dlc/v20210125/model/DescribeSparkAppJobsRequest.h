@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取The returned results are sorted by this field.
                      * @return SortBy The returned results are sorted by this field.
+                     * 
                      */
                     std::string GetSortBy() const;
 
                     /**
                      * 设置The returned results are sorted by this field.
-                     * @param SortBy The returned results are sorted by this field.
+                     * @param _sortBy The returned results are sorted by this field.
+                     * 
                      */
                     void SetSortBy(const std::string& _sortBy);
 
                     /**
                      * 判断参数 SortBy 是否已赋值
                      * @return SortBy 是否已赋值
+                     * 
                      */
                     bool SortByHasBeenSet() const;
 
                     /**
                      * 获取Descending or ascending order, such as `desc`.
                      * @return Sorting Descending or ascending order, such as `desc`.
+                     * 
                      */
                     std::string GetSorting() const;
 
                     /**
                      * 设置Descending or ascending order, such as `desc`.
-                     * @param Sorting Descending or ascending order, such as `desc`.
+                     * @param _sorting Descending or ascending order, such as `desc`.
+                     * 
                      */
                     void SetSorting(const std::string& _sorting);
 
                     /**
                      * 判断参数 Sorting 是否已赋值
                      * @return Sorting 是否已赋值
+                     * 
                      */
                     bool SortingHasBeenSet() const;
 
                     /**
                      * 获取Filter by this parameter, which can be `spark-job-name`.
                      * @return Filters Filter by this parameter, which can be `spark-job-name`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter by this parameter, which can be `spark-job-name`.
-                     * @param Filters Filter by this parameter, which can be `spark-job-name`.
+                     * @param _filters Filter by this parameter, which can be `spark-job-name`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The update start time in the format of yyyy-mm-dd HH:MM:SS.
                      * @return StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The update start time in the format of yyyy-mm-dd HH:MM:SS.
-                     * @param StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @param _startTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The update end time in the format of yyyy-mm-dd HH:MM:SS.
                      * @return EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The update end time in the format of yyyy-mm-dd HH:MM:SS.
-                     * @param EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @param _endTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The query list offset, which defaults to 0.
                      * @return Offset The query list offset, which defaults to 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The query list offset, which defaults to 0.
-                     * @param Offset The query list offset, which defaults to 0.
+                     * @param _offset The query list offset, which defaults to 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of queries allowed in the list, which defaults to 100.
                      * @return Limit The maximum number of queries allowed in the list, which defaults to 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of queries allowed in the list, which defaults to 100.
-                     * @param Limit The maximum number of queries allowed in the list, which defaults to 100.
+                     * @param _limit The maximum number of queries allowed in the list, which defaults to 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

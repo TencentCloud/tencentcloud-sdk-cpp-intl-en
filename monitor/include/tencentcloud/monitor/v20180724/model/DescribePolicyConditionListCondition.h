@@ -52,18 +52,21 @@ namespace TencentCloud
                     /**
                      * 获取Policy view name.
                      * @return PolicyViewName Policy view name.
+                     * 
                      */
                     std::string GetPolicyViewName() const;
 
                     /**
                      * 设置Policy view name.
-                     * @param PolicyViewName Policy view name.
+                     * @param _policyViewName Policy view name.
+                     * 
                      */
                     void SetPolicyViewName(const std::string& _policyViewName);
 
                     /**
                      * 判断参数 PolicyViewName 是否已赋值
                      * @return PolicyViewName 是否已赋值
+                     * 
                      */
                     bool PolicyViewNameHasBeenSet() const;
 
@@ -72,38 +75,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return EventMetrics Event alarm conditions.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribePolicyConditionListEventMetric> GetEventMetrics() const;
 
                     /**
                      * 设置Event alarm conditions.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param EventMetrics Event alarm conditions.
+                     * @param _eventMetrics Event alarm conditions.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetEventMetrics(const std::vector<DescribePolicyConditionListEventMetric>& _eventMetrics);
 
                     /**
                      * 判断参数 EventMetrics 是否已赋值
                      * @return EventMetrics 是否已赋值
+                     * 
                      */
                     bool EventMetricsHasBeenSet() const;
 
                     /**
                      * 获取Whether to support multiple regions.
                      * @return IsSupportMultiRegion Whether to support multiple regions.
+                     * 
                      */
                     bool GetIsSupportMultiRegion() const;
 
                     /**
                      * 设置Whether to support multiple regions.
-                     * @param IsSupportMultiRegion Whether to support multiple regions.
+                     * @param _isSupportMultiRegion Whether to support multiple regions.
+                     * 
                      */
                     void SetIsSupportMultiRegion(const bool& _isSupportMultiRegion);
 
                     /**
                      * 判断参数 IsSupportMultiRegion 是否已赋值
                      * @return IsSupportMultiRegion 是否已赋值
+                     * 
                      */
                     bool IsSupportMultiRegionHasBeenSet() const;
 
@@ -112,74 +121,86 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Metrics Metric alarm conditions.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<DescribePolicyConditionListMetric> GetMetrics() const;
 
                     /**
                      * 设置Metric alarm conditions.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Metrics Metric alarm conditions.
+                     * @param _metrics Metric alarm conditions.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetMetrics(const std::vector<DescribePolicyConditionListMetric>& _metrics);
 
                     /**
                      * 判断参数 Metrics 是否已赋值
                      * @return Metrics 是否已赋值
+                     * 
                      */
                     bool MetricsHasBeenSet() const;
 
                     /**
                      * 获取Policy type name.
                      * @return Name Policy type name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Policy type name.
-                     * @param Name Policy type name.
+                     * @param _name Policy type name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Sorting ID.
                      * @return SortId Sorting ID.
+                     * 
                      */
                     int64_t GetSortId() const;
 
                     /**
                      * 设置Sorting ID.
-                     * @param SortId Sorting ID.
+                     * @param _sortId Sorting ID.
+                     * 
                      */
                     void SetSortId(const int64_t& _sortId);
 
                     /**
                      * 判断参数 SortId 是否已赋值
                      * @return SortId 是否已赋值
+                     * 
                      */
                     bool SortIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to support default policies.
                      * @return SupportDefault Whether to support default policies.
+                     * 
                      */
                     bool GetSupportDefault() const;
 
                     /**
                      * 设置Whether to support default policies.
-                     * @param SupportDefault Whether to support default policies.
+                     * @param _supportDefault Whether to support default policies.
+                     * 
                      */
                     void SetSupportDefault(const bool& _supportDefault);
 
                     /**
                      * 判断参数 SupportDefault 是否已赋值
                      * @return SupportDefault 是否已赋值
+                     * 
                      */
                     bool SupportDefaultHasBeenSet() const;
 
@@ -188,20 +209,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return SupportRegions List of regions that support this policy type.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetSupportRegions() const;
 
                     /**
                      * 设置List of regions that support this policy type.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param SupportRegions List of regions that support this policy type.
+                     * @param _supportRegions List of regions that support this policy type.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetSupportRegions(const std::vector<std::string>& _supportRegions);
 
                     /**
                      * 判断参数 SupportRegions 是否已赋值
                      * @return SupportRegions 是否已赋值
+                     * 
                      */
                     bool SupportRegionsHasBeenSet() const;
 
@@ -210,20 +234,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DeprecatingInfo Deprecated information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribePolicyConditionListResponseDeprecatingInfo GetDeprecatingInfo() const;
 
                     /**
                      * 设置Deprecated information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DeprecatingInfo Deprecated information
+                     * @param _deprecatingInfo Deprecated information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeprecatingInfo(const DescribePolicyConditionListResponseDeprecatingInfo& _deprecatingInfo);
 
                     /**
                      * 判断参数 DeprecatingInfo 是否已赋值
                      * @return DeprecatingInfo 是否已赋值
+                     * 
                      */
                     bool DeprecatingInfoHasBeenSet() const;
 

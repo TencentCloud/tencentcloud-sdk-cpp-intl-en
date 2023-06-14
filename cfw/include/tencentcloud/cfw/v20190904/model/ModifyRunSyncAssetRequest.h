@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取0: edge firewall toggle; 1: VPC firewall toggle
                      * @return Type 0: edge firewall toggle; 1: VPC firewall toggle
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置0: edge firewall toggle; 1: VPC firewall toggle
-                     * @param Type 0: edge firewall toggle; 1: VPC firewall toggle
+                     * @param _type 0: edge firewall toggle; 1: VPC firewall toggle
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

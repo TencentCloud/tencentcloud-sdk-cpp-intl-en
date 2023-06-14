@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of mssql-rljoi3bf
                      * @return InstanceId Instance ID in the format of mssql-rljoi3bf
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-rljoi3bf
-                     * @param InstanceId Instance ID in the format of mssql-rljoi3bf
+                     * @param _instanceId Instance ID in the format of mssql-rljoi3bf
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Array of database names and remarks, where each element contains a database name and the corresponding remarks
                      * @return DBRemarks Array of database names and remarks, where each element contains a database name and the corresponding remarks
+                     * 
                      */
                     std::vector<DBRemark> GetDBRemarks() const;
 
                     /**
                      * 设置Array of database names and remarks, where each element contains a database name and the corresponding remarks
-                     * @param DBRemarks Array of database names and remarks, where each element contains a database name and the corresponding remarks
+                     * @param _dBRemarks Array of database names and remarks, where each element contains a database name and the corresponding remarks
+                     * 
                      */
                     void SetDBRemarks(const std::vector<DBRemark>& _dBRemarks);
 
                     /**
                      * 判断参数 DBRemarks 是否已赋值
                      * @return DBRemarks 是否已赋值
+                     * 
                      */
                     bool DBRemarksHasBeenSet() const;
 

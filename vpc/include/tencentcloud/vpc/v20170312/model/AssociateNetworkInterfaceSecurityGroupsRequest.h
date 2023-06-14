@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ENI instance ID, e.g. eni-pxir56ns. You can enter up to 100 instances for each request.
                      * @return NetworkInterfaceIds ENI instance ID, e.g. eni-pxir56ns. You can enter up to 100 instances for each request.
+                     * 
                      */
                     std::vector<std::string> GetNetworkInterfaceIds() const;
 
                     /**
                      * 设置ENI instance ID, e.g. eni-pxir56ns. You can enter up to 100 instances for each request.
-                     * @param NetworkInterfaceIds ENI instance ID, e.g. eni-pxir56ns. You can enter up to 100 instances for each request.
+                     * @param _networkInterfaceIds ENI instance ID, e.g. eni-pxir56ns. You can enter up to 100 instances for each request.
+                     * 
                      */
                     void SetNetworkInterfaceIds(const std::vector<std::string>& _networkInterfaceIds);
 
                     /**
                      * 判断参数 NetworkInterfaceIds 是否已赋值
                      * @return NetworkInterfaceIds 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdsHasBeenSet() const;
 
                     /**
                      * 获取The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups. You can enter up to 100 instances for each request.
                      * @return SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups. You can enter up to 100 instances for each request.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups. You can enter up to 100 instances for each request.
-                     * @param SecurityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups. You can enter up to 100 instances for each request.
+                     * @param _securityGroupIds The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups. You can enter up to 100 instances for each request.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 

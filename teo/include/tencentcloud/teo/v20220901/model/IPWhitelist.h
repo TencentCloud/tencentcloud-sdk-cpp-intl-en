@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IPv4 addresses
                      * @return IPv4 List of IPv4 addresses
+                     * 
                      */
                     std::vector<std::string> GetIPv4() const;
 
                     /**
                      * 设置List of IPv4 addresses
-                     * @param IPv4 List of IPv4 addresses
+                     * @param _iPv4 List of IPv4 addresses
+                     * 
                      */
                     void SetIPv4(const std::vector<std::string>& _iPv4);
 
                     /**
                      * 判断参数 IPv4 是否已赋值
                      * @return IPv4 是否已赋值
+                     * 
                      */
                     bool IPv4HasBeenSet() const;
 
                     /**
                      * 获取List of IPv6 addresses
                      * @return IPv6 List of IPv6 addresses
+                     * 
                      */
                     std::vector<std::string> GetIPv6() const;
 
                     /**
                      * 设置List of IPv6 addresses
-                     * @param IPv6 List of IPv6 addresses
+                     * @param _iPv6 List of IPv6 addresses
+                     * 
                      */
                     void SetIPv6(const std::vector<std::string>& _iPv6);
 
                     /**
                      * 判断参数 IPv6 是否已赋值
                      * @return IPv6 是否已赋值
+                     * 
                      */
                     bool IPv6HasBeenSet() const;
 

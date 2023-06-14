@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Score of the ASR-detected porn information in text from 0 to 100.
                      * @return Confidence Score of the ASR-detected porn information in text from 0 to 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Score of the ASR-detected porn information in text from 0 to 100.
-                     * @param Confidence Score of the ASR-detected porn information in text from 0 to 100.
+                     * @param _confidence Score of the ASR-detected porn information in text from 0 to 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -82,34 +86,39 @@ namespace TencentCloud
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param Suggestion Suggestion for the ASR-detected porn information in text. Valid values:
+                     * @param _suggestion Suggestion for the ASR-detected porn information in text. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取List of video segments that contain the ASR-detected porn information in text.
                      * @return SegmentSet List of video segments that contain the ASR-detected porn information in text.
+                     * 
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of video segments that contain the ASR-detected porn information in text.
-                     * @param SegmentSet List of video segments that contain the ASR-detected porn information in text.
+                     * @param _segmentSet List of video segments that contain the ASR-detected porn information in text.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewAsrTextSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

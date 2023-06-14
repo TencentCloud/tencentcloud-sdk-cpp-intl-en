@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Start port. Value range: 1–65535.
                      * @return BeginPort Start port. Value range: 1–65535.
+                     * 
                      */
                     uint64_t GetBeginPort() const;
 
                     /**
                      * 设置Start port. Value range: 1–65535.
-                     * @param BeginPort Start port. Value range: 1–65535.
+                     * @param _beginPort Start port. Value range: 1–65535.
+                     * 
                      */
                     void SetBeginPort(const uint64_t& _beginPort);
 
                     /**
                      * 判断参数 BeginPort 是否已赋值
                      * @return BeginPort 是否已赋值
+                     * 
                      */
                     bool BeginPortHasBeenSet() const;
 
                     /**
                      * 获取End port. The value should be in the range 1–65535 and cannot be less than that of the start port.
                      * @return EndPort End port. The value should be in the range 1–65535 and cannot be less than that of the start port.
+                     * 
                      */
                     uint64_t GetEndPort() const;
 
                     /**
                      * 设置End port. The value should be in the range 1–65535 and cannot be less than that of the start port.
-                     * @param EndPort End port. The value should be in the range 1–65535 and cannot be less than that of the start port.
+                     * @param _endPort End port. The value should be in the range 1–65535 and cannot be less than that of the start port.
+                     * 
                      */
                     void SetEndPort(const uint64_t& _endPort);
 
                     /**
                      * 判断参数 EndPort 是否已赋值
                      * @return EndPort 是否已赋值
+                     * 
                      */
                     bool EndPortHasBeenSet() const;
 

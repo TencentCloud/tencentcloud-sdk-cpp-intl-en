@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取End time of a valid time period.
                      * @return EndTime End time of a valid time period.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End time of a valid time period.
-                     * @param EndTime End time of a valid time period.
+                     * @param _endTime End time of a valid time period.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether it is required to send notifications.
                      * @return NeedSendNotice Whether it is required to send notifications.
+                     * 
                      */
                     int64_t GetNeedSendNotice() const;
 
                     /**
                      * 设置Whether it is required to send notifications.
-                     * @param NeedSendNotice Whether it is required to send notifications.
+                     * @param _needSendNotice Whether it is required to send notifications.
+                     * 
                      */
                     void SetNeedSendNotice(const int64_t& _needSendNotice);
 
                     /**
                      * 判断参数 NeedSendNotice 是否已赋值
                      * @return NeedSendNotice 是否已赋值
+                     * 
                      */
                     bool NeedSendNoticeHasBeenSet() const;
 
@@ -87,38 +93,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return NotifyWay Alarm receiving channel.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetNotifyWay() const;
 
                     /**
                      * 设置Alarm receiving channel.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param NotifyWay Alarm receiving channel.
+                     * @param _notifyWay Alarm receiving channel.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNotifyWay(const std::vector<std::string>& _notifyWay);
 
                     /**
                      * 判断参数 NotifyWay 是否已赋值
                      * @return NotifyWay 是否已赋值
+                     * 
                      */
                     bool NotifyWayHasBeenSet() const;
 
                     /**
                      * 获取Alarm call intervals for individuals in seconds.
                      * @return PersonInterval Alarm call intervals for individuals in seconds.
+                     * 
                      */
                     int64_t GetPersonInterval() const;
 
                     /**
                      * 设置Alarm call intervals for individuals in seconds.
-                     * @param PersonInterval Alarm call intervals for individuals in seconds.
+                     * @param _personInterval Alarm call intervals for individuals in seconds.
+                     * 
                      */
                     void SetPersonInterval(const int64_t& _personInterval);
 
                     /**
                      * 判断参数 PersonInterval 是否已赋值
                      * @return PersonInterval 是否已赋值
+                     * 
                      */
                     bool PersonIntervalHasBeenSet() const;
 
@@ -127,38 +139,44 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ReceiverGroupList Message recipient group list.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetReceiverGroupList() const;
 
                     /**
                      * 设置Message recipient group list.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ReceiverGroupList Message recipient group list.
+                     * @param _receiverGroupList Message recipient group list.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReceiverGroupList(const std::vector<int64_t>& _receiverGroupList);
 
                     /**
                      * 判断参数 ReceiverGroupList 是否已赋值
                      * @return ReceiverGroupList 是否已赋值
+                     * 
                      */
                     bool ReceiverGroupListHasBeenSet() const;
 
                     /**
                      * 获取Recipient type.
                      * @return ReceiverType Recipient type.
+                     * 
                      */
                     std::string GetReceiverType() const;
 
                     /**
                      * 设置Recipient type.
-                     * @param ReceiverType Recipient type.
+                     * @param _receiverType Recipient type.
+                     * 
                      */
                     void SetReceiverType(const std::string& _receiverType);
 
                     /**
                      * 判断参数 ReceiverType 是否已赋值
                      * @return ReceiverType 是否已赋值
+                     * 
                      */
                     bool ReceiverTypeHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetReceiverUserList() const;
 
                     /**
                      * 设置Recipient list. The list of recipient IDs that is queried by a platform API.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
+                     * @param _receiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReceiverUserList(const std::vector<int64_t>& _receiverUserList);
 
                     /**
                      * 判断参数 ReceiverUserList 是否已赋值
                      * @return ReceiverUserList 是否已赋值
+                     * 
                      */
                     bool ReceiverUserListHasBeenSet() const;
 
@@ -189,56 +210,65 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RecoverNotify Alarm resolution notification method.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRecoverNotify() const;
 
                     /**
                      * 设置Alarm resolution notification method.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RecoverNotify Alarm resolution notification method.
+                     * @param _recoverNotify Alarm resolution notification method.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecoverNotify(const std::vector<std::string>& _recoverNotify);
 
                     /**
                      * 判断参数 RecoverNotify 是否已赋值
                      * @return RecoverNotify 是否已赋值
+                     * 
                      */
                     bool RecoverNotifyHasBeenSet() const;
 
                     /**
                      * 获取Alarm call interval per round in seconds.
                      * @return RoundInterval Alarm call interval per round in seconds.
+                     * 
                      */
                     int64_t GetRoundInterval() const;
 
                     /**
                      * 设置Alarm call interval per round in seconds.
-                     * @param RoundInterval Alarm call interval per round in seconds.
+                     * @param _roundInterval Alarm call interval per round in seconds.
+                     * 
                      */
                     void SetRoundInterval(const int64_t& _roundInterval);
 
                     /**
                      * 判断参数 RoundInterval 是否已赋值
                      * @return RoundInterval 是否已赋值
+                     * 
                      */
                     bool RoundIntervalHasBeenSet() const;
 
                     /**
                      * 获取Number of alarm call rounds.
                      * @return RoundNumber Number of alarm call rounds.
+                     * 
                      */
                     int64_t GetRoundNumber() const;
 
                     /**
                      * 设置Number of alarm call rounds.
-                     * @param RoundNumber Number of alarm call rounds.
+                     * @param _roundNumber Number of alarm call rounds.
+                     * 
                      */
                     void SetRoundNumber(const int64_t& _roundNumber);
 
                     /**
                      * 判断参数 RoundNumber 是否已赋值
                      * @return RoundNumber 是否已赋值
+                     * 
                      */
                     bool RoundNumberHasBeenSet() const;
 
@@ -247,38 +277,44 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SendFor Alarm call notification time. Valid values: `OCCUR` (indicating that a notification is sent when the alarm is triggered) and `RECOVER` (indicating that a notification is sent when the alarm is resolved).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSendFor() const;
 
                     /**
                      * 设置Alarm call notification time. Valid values: `OCCUR` (indicating that a notification is sent when the alarm is triggered) and `RECOVER` (indicating that a notification is sent when the alarm is resolved).
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SendFor Alarm call notification time. Valid values: `OCCUR` (indicating that a notification is sent when the alarm is triggered) and `RECOVER` (indicating that a notification is sent when the alarm is resolved).
+                     * @param _sendFor Alarm call notification time. Valid values: `OCCUR` (indicating that a notification is sent when the alarm is triggered) and `RECOVER` (indicating that a notification is sent when the alarm is resolved).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSendFor(const std::vector<std::string>& _sendFor);
 
                     /**
                      * 判断参数 SendFor 是否已赋值
                      * @return SendFor 是否已赋值
+                     * 
                      */
                     bool SendForHasBeenSet() const;
 
                     /**
                      * 获取Start time of a valid time period.
                      * @return StartTime Start time of a valid time period.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time of a valid time period.
-                     * @param StartTime Start time of a valid time period.
+                     * @param _startTime Start time of a valid time period.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -287,20 +323,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UIDList UID of the alarm call recipient.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetUIDList() const;
 
                     /**
                      * 设置UID of the alarm call recipient.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UIDList UID of the alarm call recipient.
+                     * @param _uIDList UID of the alarm call recipient.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUIDList(const std::vector<int64_t>& _uIDList);
 
                     /**
                      * 判断参数 UIDList 是否已赋值
                      * @return UIDList 是否已赋值
+                     * 
                      */
                     bool UIDListHasBeenSet() const;
 

@@ -55,12 +55,14 @@ If `Key` is "Id", `Value` indicates the resource ID
 If `Key` is "RuleIdList", `Value` indicates the resource rule ID. Multiple rule IDs are separated by ","
 If `Key` is "RuleNameList", `Value` indicates the resource rule name. Multiple rule names are separated by ","
 If `Key` is "RuleNum", `Value` indicates the number of resource rules
+                     * 
                      */
                     std::vector<KeyValueRecord> GetL4RuleSets() const;
 
                     /**
                      * 判断参数 L4RuleSets 是否已赋值
                      * @return L4RuleSets 是否已赋值
+                     * 
                      */
                     bool L4RuleSetsHasBeenSet() const;
 
@@ -75,12 +77,14 @@ If `Key` is "Id", `Value` indicates the resource ID
 If `Key` is "RuleIdList", `Value` indicates the resource rule ID. Multiple rule IDs are separated by ","
 If `Key` is "RuleNameList", `Value` indicates the resource rule name. Multiple rule names are separated by ","
 If `Key` is "RuleNum", `Value` indicates the number of resource rules
+                     * 
                      */
                     std::vector<KeyValueRecord> GetL7RuleSets() const;
 
                     /**
                      * 判断参数 L7RuleSets 是否已赋值
                      * @return L7RuleSets 是否已赋值
+                     * 
                      */
                     bool L7RuleSetsHasBeenSet() const;
 

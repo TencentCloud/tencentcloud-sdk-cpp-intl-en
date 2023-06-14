@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Name of the Secret.
                      * @return SecretName Name of the Secret.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the Secret version.
                      * @return VersionId ID of the Secret version.
+                     * 
                      */
                     std::string GetVersionId() const;
 
                     /**
                      * 判断参数 VersionId 是否已赋值
                      * @return VersionId 是否已赋值
+                     * 
                      */
                     bool VersionIdHasBeenSet() const;
 
@@ -72,12 +76,14 @@ namespace TencentCloud
 Either `SecretBinary` or `SecretString` cannot be empty.
                      * @return SecretBinary When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
 Either `SecretBinary` or `SecretString` cannot be empty.
+                     * 
                      */
                     std::string GetSecretBinary() const;
 
                     /**
                      * 判断参数 SecretBinary 是否已赋值
                      * @return SecretBinary 是否已赋值
+                     * 
                      */
                     bool SecretBinaryHasBeenSet() const;
 
@@ -86,12 +92,14 @@ Either `SecretBinary` or `SecretString` cannot be empty.
 Either `SecretBinary` or `SecretString` cannot be empty.
                      * @return SecretString When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
 Either `SecretBinary` or `SecretString` cannot be empty.
+                     * 
                      */
                     std::string GetSecretString() const;
 
                     /**
                      * 判断参数 SecretString 是否已赋值
                      * @return SecretString 是否已赋值
+                     * 
                      */
                     bool SecretStringHasBeenSet() const;
 

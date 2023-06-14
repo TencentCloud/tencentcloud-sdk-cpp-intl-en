@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Associated tag ID
                      * @return Rid Associated tag ID
+                     * 
                      */
                     int64_t GetRid() const;
 
                     /**
                      * 设置Associated tag ID
-                     * @param Rid Associated tag ID
+                     * @param _rid Associated tag ID
+                     * 
                      */
                     void SetRid(const int64_t& _rid);
 
                     /**
                      * 判断参数 Rid 是否已赋值
                      * @return Rid 是否已赋值
+                     * 
                      */
                     bool RidHasBeenSet() const;
 
                     /**
                      * 获取Tag name
                      * @return Name Tag name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Tag name
-                     * @param Name Tag name
+                     * @param _name Tag name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Tag ID
                      * @return TagId Tag ID
+                     * 
                      */
                     uint64_t GetTagId() const;
 
                     /**
                      * 设置Tag ID
-                     * @param TagId Tag ID
+                     * @param _tagId Tag ID
+                     * 
                      */
                     void SetTagId(const uint64_t& _tagId);
 
                     /**
                      * 判断参数 TagId 是否已赋值
                      * @return TagId 是否已赋值
+                     * 
                      */
                     bool TagIdHasBeenSet() const;
 

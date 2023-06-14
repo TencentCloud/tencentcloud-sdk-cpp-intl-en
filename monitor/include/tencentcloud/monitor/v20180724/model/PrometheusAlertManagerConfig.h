@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取AlertManager URL
                      * @return Url AlertManager URL
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置AlertManager URL
-                     * @param Url AlertManager URL
+                     * @param _url AlertManager URL
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterType Type of the cluster where AlertManager is deployed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Type of the cluster where AlertManager is deployed
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterType Type of the cluster where AlertManager is deployed
+                     * @param _clusterType Type of the cluster where AlertManager is deployed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterId ID of the cluster where AlertManager is deployed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where AlertManager is deployed
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterId ID of the cluster where AlertManager is deployed
+                     * @param _clusterId ID of the cluster where AlertManager is deployed
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

@@ -54,12 +54,14 @@ namespace TencentCloud
 <li>AGENT_OFFLINE: CWP agent is offline</li>
 <li>COLLECTING: getting port</li>
 <li>FAILED: failed to get processes</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

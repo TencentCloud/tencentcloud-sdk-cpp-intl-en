@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Country/region of the IP
                      * @return Country Country/region of the IP
+                     * 
                      */
                     bool GetCountry() const;
 
                     /**
                      * 设置Country/region of the IP
-                     * @param Country Country/region of the IP
+                     * @param _country Country/region of the IP
+                     * 
                      */
                     void SetCountry(const bool& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
                     /**
                      * 获取Province/municipality/state of the IP
                      * @return Province Province/municipality/state of the IP
+                     * 
                      */
                     bool GetProvince() const;
 
                     /**
                      * 设置Province/municipality/state of the IP
-                     * @param Province Province/municipality/state of the IP
+                     * @param _province Province/municipality/state of the IP
+                     * 
                      */
                     void SetProvince(const bool& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
                     /**
                      * 获取City of the IP
                      * @return City City of the IP
+                     * 
                      */
                     bool GetCity() const;
 
                     /**
                      * 设置City of the IP
-                     * @param City City of the IP
+                     * @param _city City of the IP
+                     * 
                      */
                     void SetCity(const bool& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 
                     /**
                      * 获取City district of the IP
                      * @return Region City district of the IP
+                     * 
                      */
                     bool GetRegion() const;
 
                     /**
                      * 设置City district of the IP
-                     * @param Region City district of the IP
+                     * @param _region City district of the IP
+                     * 
                      */
                     void SetRegion(const bool& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Access ISP field
                      * @return Isp Access ISP field
+                     * 
                      */
                     bool GetIsp() const;
 
                     /**
                      * 设置Access ISP field
-                     * @param Isp Access ISP field
+                     * @param _isp Access ISP field
+                     * 
                      */
                     void SetIsp(const bool& _isp);
 
                     /**
                      * 判断参数 Isp 是否已赋值
                      * @return Isp 是否已赋值
+                     * 
                      */
                     bool IspHasBeenSet() const;
 
                     /**
                      * 获取ISP backbone network’s AS field
                      * @return AsName ISP backbone network’s AS field
+                     * 
                      */
                     bool GetAsName() const;
 
                     /**
                      * 设置ISP backbone network’s AS field
-                     * @param AsName ISP backbone network’s AS field
+                     * @param _asName ISP backbone network’s AS field
+                     * 
                      */
                     void SetAsName(const bool& _asName);
 
                     /**
                      * 判断参数 AsName 是否已赋值
                      * @return AsName 是否已赋值
+                     * 
                      */
                     bool AsNameHasBeenSet() const;
 
                     /**
                      * 获取Backbone AS ID
                      * @return AsId Backbone AS ID
+                     * 
                      */
                     bool GetAsId() const;
 
                     /**
                      * 设置Backbone AS ID
-                     * @param AsId Backbone AS ID
+                     * @param _asId Backbone AS ID
+                     * 
                      */
                     void SetAsId(const bool& _asId);
 
                     /**
                      * 判断参数 AsId 是否已赋值
                      * @return AsId 是否已赋值
+                     * 
                      */
                     bool AsIdHasBeenSet() const;
 
                     /**
                      * 获取Comment
                      * @return Comment Comment
+                     * 
                      */
                     bool GetComment() const;
 
                     /**
                      * 设置Comment
-                     * @param Comment Comment
+                     * @param _comment Comment
+                     * 
                      */
                     void SetComment(const bool& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 

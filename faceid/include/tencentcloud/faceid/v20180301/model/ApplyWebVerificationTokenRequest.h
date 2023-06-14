@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The web redirect URL after the verification is completed.
                      * @return RedirectUrl The web redirect URL after the verification is completed.
+                     * 
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置The web redirect URL after the verification is completed.
-                     * @param RedirectUrl The web redirect URL after the verification is completed.
+                     * @param _redirectUrl The web redirect URL after the verification is completed.
+                     * 
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
                     /**
                      * 判断参数 RedirectUrl 是否已赋值
                      * @return RedirectUrl 是否已赋值
+                     * 
                      */
                     bool RedirectUrlHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return CompareImageUrl The COS URL of the image for face comparison, which can be obtained with one of the following methods:
 1. Call the `CreateUploadUrl` API to generate a URL and call it again after the image is successfully uploaded.
 2. Use an existing COS URL. For a private bucket, grant the download permission with a pre-signed URL. The corresponding COS bucket must be in the same region as the input parameter `Region`.
+                     * 
                      */
                     std::string GetCompareImageUrl() const;
 
@@ -74,33 +78,38 @@ namespace TencentCloud
                      * 设置The COS URL of the image for face comparison, which can be obtained with one of the following methods:
 1. Call the `CreateUploadUrl` API to generate a URL and call it again after the image is successfully uploaded.
 2. Use an existing COS URL. For a private bucket, grant the download permission with a pre-signed URL. The corresponding COS bucket must be in the same region as the input parameter `Region`.
-                     * @param CompareImageUrl The COS URL of the image for face comparison, which can be obtained with one of the following methods:
+                     * @param _compareImageUrl The COS URL of the image for face comparison, which can be obtained with one of the following methods:
 1. Call the `CreateUploadUrl` API to generate a URL and call it again after the image is successfully uploaded.
 2. Use an existing COS URL. For a private bucket, grant the download permission with a pre-signed URL. The corresponding COS bucket must be in the same region as the input parameter `Region`.
+                     * 
                      */
                     void SetCompareImageUrl(const std::string& _compareImageUrl);
 
                     /**
                      * 判断参数 CompareImageUrl 是否已赋值
                      * @return CompareImageUrl 是否已赋值
+                     * 
                      */
                     bool CompareImageUrlHasBeenSet() const;
 
                     /**
                      * 获取The MD5 hash values of the image for face comparison (CompareImageUrl).
                      * @return CompareImageMd5 The MD5 hash values of the image for face comparison (CompareImageUrl).
+                     * 
                      */
                     std::string GetCompareImageMd5() const;
 
                     /**
                      * 设置The MD5 hash values of the image for face comparison (CompareImageUrl).
-                     * @param CompareImageMd5 The MD5 hash values of the image for face comparison (CompareImageUrl).
+                     * @param _compareImageMd5 The MD5 hash values of the image for face comparison (CompareImageUrl).
+                     * 
                      */
                     void SetCompareImageMd5(const std::string& _compareImageMd5);
 
                     /**
                      * 判断参数 CompareImageMd5 是否已赋值
                      * @return CompareImageMd5 是否已赋值
+                     * 
                      */
                     bool CompareImageMd5HasBeenSet() const;
 

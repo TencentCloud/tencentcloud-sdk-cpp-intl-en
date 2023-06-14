@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information list of instance shards
                      * @return InstanceShards Information list of instance shards
+                     * 
                      */
                     std::vector<InstanceClusterShard> GetInstanceShards() const;
 
                     /**
                      * 判断参数 InstanceShards 是否已赋值
                      * @return InstanceShards 是否已赋值
+                     * 
                      */
                     bool InstanceShardsHasBeenSet() const;
 
                     /**
                      * 获取Total number of instance shard nodes
                      * @return TotalCount Total number of instance shard nodes
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

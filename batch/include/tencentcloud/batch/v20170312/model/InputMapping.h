@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Source path
                      * @return SourcePath Source path
+                     * 
                      */
                     std::string GetSourcePath() const;
 
                     /**
                      * 设置Source path
-                     * @param SourcePath Source path
+                     * @param _sourcePath Source path
+                     * 
                      */
                     void SetSourcePath(const std::string& _sourcePath);
 
                     /**
                      * 判断参数 SourcePath 是否已赋值
                      * @return SourcePath 是否已赋值
+                     * 
                      */
                     bool SourcePathHasBeenSet() const;
 
                     /**
                      * 获取Destination path
                      * @return DestinationPath Destination path
+                     * 
                      */
                     std::string GetDestinationPath() const;
 
                     /**
                      * 设置Destination path
-                     * @param DestinationPath Destination path
+                     * @param _destinationPath Destination path
+                     * 
                      */
                     void SetDestinationPath(const std::string& _destinationPath);
 
                     /**
                      * 判断参数 DestinationPath 是否已赋值
                      * @return DestinationPath 是否已赋值
+                     * 
                      */
                     bool DestinationPathHasBeenSet() const;
 
                     /**
                      * 获取Mounting configuration item parameter
                      * @return MountOptionParameter Mounting configuration item parameter
+                     * 
                      */
                     std::string GetMountOptionParameter() const;
 
                     /**
                      * 设置Mounting configuration item parameter
-                     * @param MountOptionParameter Mounting configuration item parameter
+                     * @param _mountOptionParameter Mounting configuration item parameter
+                     * 
                      */
                     void SetMountOptionParameter(const std::string& _mountOptionParameter);
 
                     /**
                      * 判断参数 MountOptionParameter 是否已赋值
                      * @return MountOptionParameter 是否已赋值
+                     * 
                      */
                     bool MountOptionParameterHasBeenSet() const;
 

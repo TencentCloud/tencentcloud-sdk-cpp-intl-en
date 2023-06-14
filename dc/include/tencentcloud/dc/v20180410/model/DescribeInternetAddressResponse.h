@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Number of public IP addresses for internet tunnels
                      * @return TotalCount Number of public IP addresses for internet tunnels
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Subnets List of the public IP addresses for internet tunnels
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<InternetAddressDetail> GetSubnets() const;
 
                     /**
                      * 判断参数 Subnets 是否已赋值
                      * @return Subnets 是否已赋值
+                     * 
                      */
                     bool SubnetsHasBeenSet() const;
 

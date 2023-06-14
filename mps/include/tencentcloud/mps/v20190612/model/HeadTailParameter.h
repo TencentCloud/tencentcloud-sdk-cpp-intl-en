@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Opening credits list
                      * @return HeadSet Opening credits list
+                     * 
                      */
                     std::vector<MediaInputInfo> GetHeadSet() const;
 
                     /**
                      * 设置Opening credits list
-                     * @param HeadSet Opening credits list
+                     * @param _headSet Opening credits list
+                     * 
                      */
                     void SetHeadSet(const std::vector<MediaInputInfo>& _headSet);
 
                     /**
                      * 判断参数 HeadSet 是否已赋值
                      * @return HeadSet 是否已赋值
+                     * 
                      */
                     bool HeadSetHasBeenSet() const;
 
                     /**
                      * 获取Closing credits list
                      * @return TailSet Closing credits list
+                     * 
                      */
                     std::vector<MediaInputInfo> GetTailSet() const;
 
                     /**
                      * 设置Closing credits list
-                     * @param TailSet Closing credits list
+                     * @param _tailSet Closing credits list
+                     * 
                      */
                     void SetTailSet(const std::vector<MediaInputInfo>& _tailSet);
 
                     /**
                      * 判断参数 TailSet 是否已赋值
                      * @return TailSet 是否已赋值
+                     * 
                      */
                     bool TailSetHasBeenSet() const;
 

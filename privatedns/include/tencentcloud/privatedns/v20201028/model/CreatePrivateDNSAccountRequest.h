@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Private DNS account
                      * @return Account Private DNS account
+                     * 
                      */
                     PrivateDNSAccount GetAccount() const;
 
                     /**
                      * 设置Private DNS account
-                     * @param Account Private DNS account
+                     * @param _account Private DNS account
+                     * 
                      */
                     void SetAccount(const PrivateDNSAccount& _account);
 
                     /**
                      * 判断参数 Account 是否已赋值
                      * @return Account 是否已赋值
+                     * 
                      */
                     bool AccountHasBeenSet() const;
 

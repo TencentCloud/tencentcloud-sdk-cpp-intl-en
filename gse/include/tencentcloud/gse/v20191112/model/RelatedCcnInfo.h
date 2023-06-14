@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Account of the CCN instance owner
                      * @return AccountId Account of the CCN instance owner
+                     * 
                      */
                     std::string GetAccountId() const;
 
                     /**
                      * 设置Account of the CCN instance owner
-                     * @param AccountId Account of the CCN instance owner
+                     * @param _accountId Account of the CCN instance owner
+                     * 
                      */
                     void SetAccountId(const std::string& _accountId);
 
                     /**
                      * 判断参数 AccountId 是否已赋值
                      * @return AccountId 是否已赋值
+                     * 
                      */
                     bool AccountIdHasBeenSet() const;
 
                     /**
                      * 获取CCN instance ID
                      * @return CcnId CCN instance ID
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置CCN instance ID
-                     * @param CcnId CCN instance ID
+                     * @param _ccnId CCN instance ID
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取Status of associated CCN instance
                      * @return AttachType Status of associated CCN instance
+                     * 
                      */
                     std::string GetAttachType() const;
 
                     /**
                      * 设置Status of associated CCN instance
-                     * @param AttachType Status of associated CCN instance
+                     * @param _attachType Status of associated CCN instance
+                     * 
                      */
                     void SetAttachType(const std::string& _attachType);
 
                     /**
                      * 判断参数 AttachType 是否已赋值
                      * @return AttachType 是否已赋值
+                     * 
                      */
                     bool AttachTypeHasBeenSet() const;
 

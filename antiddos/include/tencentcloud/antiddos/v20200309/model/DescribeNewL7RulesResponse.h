@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取List of forwarding rules
                      * @return Rules List of forwarding rules
+                     * 
                      */
                     std::vector<NewL7RuleEntry> GetRules() const;
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
                     /**
                      * 获取List of health check settings
                      * @return Healths List of health check settings
+                     * 
                      */
                     std::vector<L7RuleHealth> GetHealths() const;
 
                     /**
                      * 判断参数 Healths 是否已赋值
                      * @return Healths 是否已赋值
+                     * 
                      */
                     bool HealthsHasBeenSet() const;
 
                     /**
                      * 获取Total number of rules
                      * @return Total Total number of rules
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

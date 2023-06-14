@@ -47,126 +47,147 @@ namespace TencentCloud
                     /**
                      * 获取Enterprise Edition instance name
                      * @return RegistryName Enterprise Edition instance name
+                     * 
                      */
                     std::string GetRegistryName() const;
 
                     /**
                      * 设置Enterprise Edition instance name
-                     * @param RegistryName Enterprise Edition instance name
+                     * @param _registryName Enterprise Edition instance name
+                     * 
                      */
                     void SetRegistryName(const std::string& _registryName);
 
                     /**
                      * 判断参数 RegistryName 是否已赋值
                      * @return RegistryName 是否已赋值
+                     * 
                      */
                     bool RegistryNameHasBeenSet() const;
 
                     /**
                      * 获取Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
                      * @return RegistryType Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
+                     * 
                      */
                     std::string GetRegistryType() const;
 
                     /**
                      * 设置Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
-                     * @param RegistryType Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
+                     * @param _registryType Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
+                     * 
                      */
                     void SetRegistryType(const std::string& _registryType);
 
                     /**
                      * 判断参数 RegistryType 是否已赋值
                      * @return RegistryType 是否已赋值
+                     * 
                      */
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
                      * 获取Cloud tag description
                      * @return TagSpecification Cloud tag description
+                     * 
                      */
                     TagSpecification GetTagSpecification() const;
 
                     /**
                      * 设置Cloud tag description
-                     * @param TagSpecification Cloud tag description
+                     * @param _tagSpecification Cloud tag description
+                     * 
                      */
                     void SetTagSpecification(const TagSpecification& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 
                     /**
                      * 获取Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
                      * @return RegistryChargeType Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
+                     * 
                      */
                     int64_t GetRegistryChargeType() const;
 
                     /**
                      * 设置Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
-                     * @param RegistryChargeType Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
+                     * @param _registryChargeType Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
+                     * 
                      */
                     void SetRegistryChargeType(const int64_t& _registryChargeType);
 
                     /**
                      * 判断参数 RegistryChargeType 是否已赋值
                      * @return RegistryChargeType 是否已赋值
+                     * 
                      */
                     bool RegistryChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Auto-renewal setting and purchase period
                      * @return RegistryChargePrepaid Auto-renewal setting and purchase period
+                     * 
                      */
                     RegistryChargePrepaid GetRegistryChargePrepaid() const;
 
                     /**
                      * 设置Auto-renewal setting and purchase period
-                     * @param RegistryChargePrepaid Auto-renewal setting and purchase period
+                     * @param _registryChargePrepaid Auto-renewal setting and purchase period
+                     * 
                      */
                     void SetRegistryChargePrepaid(const RegistryChargePrepaid& _registryChargePrepaid);
 
                     /**
                      * 判断参数 RegistryChargePrepaid 是否已赋值
                      * @return RegistryChargePrepaid 是否已赋值
+                     * 
                      */
                     bool RegistryChargePrepaidHasBeenSet() const;
 
                     /**
                      * 获取Whether to sync TCR cloud tags to the COS bucket
                      * @return SyncTag Whether to sync TCR cloud tags to the COS bucket
+                     * 
                      */
                     bool GetSyncTag() const;
 
                     /**
                      * 设置Whether to sync TCR cloud tags to the COS bucket
-                     * @param SyncTag Whether to sync TCR cloud tags to the COS bucket
+                     * @param _syncTag Whether to sync TCR cloud tags to the COS bucket
+                     * 
                      */
                     void SetSyncTag(const bool& _syncTag);
 
                     /**
                      * 判断参数 SyncTag 是否已赋值
                      * @return SyncTag 是否已赋值
+                     * 
                      */
                     bool SyncTagHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the COS Multi-AZ feature
                      * @return EnableCosMAZ Whether to enable the COS Multi-AZ feature
+                     * 
                      */
                     bool GetEnableCosMAZ() const;
 
                     /**
                      * 设置Whether to enable the COS Multi-AZ feature
-                     * @param EnableCosMAZ Whether to enable the COS Multi-AZ feature
+                     * @param _enableCosMAZ Whether to enable the COS Multi-AZ feature
+                     * 
                      */
                     void SetEnableCosMAZ(const bool& _enableCosMAZ);
 
                     /**
                      * 判断参数 EnableCosMAZ 是否已赋值
                      * @return EnableCosMAZ 是否已赋值
+                     * 
                      */
                     bool EnableCosMAZHasBeenSet() const;
 

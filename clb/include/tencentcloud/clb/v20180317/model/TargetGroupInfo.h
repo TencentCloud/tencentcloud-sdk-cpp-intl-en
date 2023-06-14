@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Target group ID
                      * @return TargetGroupId Target group ID
+                     * 
                      */
                     std::string GetTargetGroupId() const;
 
                     /**
                      * 设置Target group ID
-                     * @param TargetGroupId Target group ID
+                     * @param _targetGroupId Target group ID
+                     * 
                      */
                     void SetTargetGroupId(const std::string& _targetGroupId);
 
                     /**
                      * 判断参数 TargetGroupId 是否已赋值
                      * @return TargetGroupId 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdHasBeenSet() const;
 
                     /**
                      * 获取`vpcid` of target group
                      * @return VpcId `vpcid` of target group
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置`vpcid` of target group
-                     * @param VpcId `vpcid` of target group
+                     * @param _vpcId `vpcid` of target group
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Target group name
                      * @return TargetGroupName Target group name
+                     * 
                      */
                     std::string GetTargetGroupName() const;
 
                     /**
                      * 设置Target group name
-                     * @param TargetGroupName Target group name
+                     * @param _targetGroupName Target group name
+                     * 
                      */
                     void SetTargetGroupName(const std::string& _targetGroupName);
 
                     /**
                      * 判断参数 TargetGroupName 是否已赋值
                      * @return TargetGroupName 是否已赋值
+                     * 
                      */
                     bool TargetGroupNameHasBeenSet() const;
 
@@ -106,56 +115,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Default port of target group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Default port of target group
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Default port of target group
+                     * @param _port Default port of target group
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Target group creation time
                      * @return CreatedTime Target group creation time
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Target group creation time
-                     * @param CreatedTime Target group creation time
+                     * @param _createdTime Target group creation time
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Target group modification time
                      * @return UpdatedTime Target group modification time
+                     * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
                      * 设置Target group modification time
-                     * @param UpdatedTime Target group modification time
+                     * @param _updatedTime Target group modification time
+                     * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
 
                     /**
                      * 判断参数 UpdatedTime 是否已赋值
                      * @return UpdatedTime 是否已赋值
+                     * 
                      */
                     bool UpdatedTimeHasBeenSet() const;
 
@@ -164,20 +182,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AssociatedRule Array of associated rules
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AssociationItem> GetAssociatedRule() const;
 
                     /**
                      * 设置Array of associated rules
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AssociatedRule Array of associated rules
+                     * @param _associatedRule Array of associated rules
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAssociatedRule(const std::vector<AssociationItem>& _associatedRule);
 
                     /**
                      * 判断参数 AssociatedRule 是否已赋值
                      * @return AssociatedRule 是否已赋值
+                     * 
                      */
                     bool AssociatedRuleHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      * @return InstanceId Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-                     * @param InstanceId Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @param _instanceId Instance ID, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Old password of an instance
                      * @return OldPassword Old password of an instance
+                     * 
                      */
                     std::string GetOldPassword() const;
 
                     /**
                      * 设置Old password of an instance
-                     * @param OldPassword Old password of an instance
+                     * @param _oldPassword Old password of an instance
+                     * 
                      */
                     void SetOldPassword(const std::string& _oldPassword);
 
                     /**
                      * 判断参数 OldPassword 是否已赋值
                      * @return OldPassword 是否已赋值
+                     * 
                      */
                     bool OldPasswordHasBeenSet() const;
 
@@ -87,6 +93,7 @@ namespace TencentCloud
 - It must contain 8-30 characters, preferably 12 or more.
 - It cannot start with a slash (/)
 - It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+                     * 
                      */
                     std::string GetPassword() const;
 
@@ -95,16 +102,18 @@ namespace TencentCloud
 - It must contain 8-30 characters, preferably 12 or more.
 - It cannot start with a slash (/)
 - It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
-                     * @param Password New instance password, which has the following requirements:
+                     * @param _password New instance password, which has the following requirements:
 - It must contain 8-30 characters, preferably 12 or more.
 - It cannot start with a slash (/)
 - It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

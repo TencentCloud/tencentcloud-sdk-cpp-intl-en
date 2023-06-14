@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Unique request ID
                      * @return RequestId Unique request ID
+                     * 
                      */
                     std::string GetRequestId() const;
 
                     /**
                      * 设置Unique request ID
-                     * @param RequestId Unique request ID
+                     * @param _requestId Unique request ID
+                     * 
                      */
                     void SetRequestId(const std::string& _requestId);
 
                     /**
                      * 判断参数 RequestId 是否已赋值
                      * @return RequestId 是否已赋值
+                     * 
                      */
                     bool RequestIdHasBeenSet() const;
 
                     /**
                      * 获取Bucket name
                      * @return Bucket Bucket name
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置Bucket name
-                     * @param Bucket Bucket name
+                     * @param _bucket Bucket name
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取Bucket region
                      * @return Region Bucket region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Bucket region
-                     * @param Region Bucket region
+                     * @param _region Bucket region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取`SecretId` of temporary key
                      * @return TmpSecretId `SecretId` of temporary key
+                     * 
                      */
                     std::string GetTmpSecretId() const;
 
                     /**
                      * 设置`SecretId` of temporary key
-                     * @param TmpSecretId `SecretId` of temporary key
+                     * @param _tmpSecretId `SecretId` of temporary key
+                     * 
                      */
                     void SetTmpSecretId(const std::string& _tmpSecretId);
 
                     /**
                      * 判断参数 TmpSecretId 是否已赋值
                      * @return TmpSecretId 是否已赋值
+                     * 
                      */
                     bool TmpSecretIdHasBeenSet() const;
 
                     /**
                      * 获取`SecretKey` of temporary key
                      * @return TmpSecretKey `SecretKey` of temporary key
+                     * 
                      */
                     std::string GetTmpSecretKey() const;
 
                     /**
                      * 设置`SecretKey` of temporary key
-                     * @param TmpSecretKey `SecretKey` of temporary key
+                     * @param _tmpSecretKey `SecretKey` of temporary key
+                     * 
                      */
                     void SetTmpSecretKey(const std::string& _tmpSecretKey);
 
                     /**
                      * 判断参数 TmpSecretKey 是否已赋值
                      * @return TmpSecretKey 是否已赋值
+                     * 
                      */
                     bool TmpSecretKeyHasBeenSet() const;
 
                     /**
                      * 获取`sessionToken` of temporary key
                      * @return SessionToken `sessionToken` of temporary key
+                     * 
                      */
                     std::string GetSessionToken() const;
 
                     /**
                      * 设置`sessionToken` of temporary key
-                     * @param SessionToken `sessionToken` of temporary key
+                     * @param _sessionToken `sessionToken` of temporary key
+                     * 
                      */
                     void SetSessionToken(const std::string& _sessionToken);
 
                     /**
                      * 判断参数 SessionToken 是否已赋值
                      * @return SessionToken 是否已赋值
+                     * 
                      */
                     bool SessionTokenHasBeenSet() const;
 
                     /**
                      * 获取`StartTime` of temporary key acquisition
                      * @return StartTime `StartTime` of temporary key acquisition
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置`StartTime` of temporary key acquisition
-                     * @param StartTime `StartTime` of temporary key acquisition
+                     * @param _startTime `StartTime` of temporary key acquisition
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取`ExpiredTime` of temporary key
                      * @return ExpiredTime `ExpiredTime` of temporary key
+                     * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
                      * 设置`ExpiredTime` of temporary key
-                     * @param ExpiredTime `ExpiredTime` of temporary key
+                     * @param _expiredTime `ExpiredTime` of temporary key
+                     * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
 
                     /**
                      * 判断参数 ExpiredTime 是否已赋值
                      * @return ExpiredTime 是否已赋值
+                     * 
                      */
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
                      * 获取Full package path
                      * @return FullPath Full package path
+                     * 
                      */
                     std::string GetFullPath() const;
 
                     /**
                      * 设置Full package path
-                     * @param FullPath Full package path
+                     * @param _fullPath Full package path
+                     * 
                      */
                     void SetFullPath(const std::string& _fullPath);
 
                     /**
                      * 判断参数 FullPath 是否已赋值
                      * @return FullPath 是否已赋值
+                     * 
                      */
                     bool FullPathHasBeenSet() const;
 

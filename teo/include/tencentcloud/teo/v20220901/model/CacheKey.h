@@ -56,6 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
 <li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFullUrlCache() const;
 
@@ -64,16 +65,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
 <li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FullUrlCache Whether to enable full-path cache. Values:
+                     * @param _fullUrlCache Whether to enable full-path cache. Values:
 <li>`on`: Enable full-path cache (i.e., disable Ignore Query String).</li>
 <li>`off`: Disable full-path cache (i.e., enable Ignore Query String).</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFullUrlCache(const std::string& _fullUrlCache);
 
                     /**
                      * 判断参数 FullUrlCache 是否已赋值
                      * @return FullUrlCache 是否已赋值
+                     * 
                      */
                     bool FullUrlCacheHasBeenSet() const;
 
@@ -86,6 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Ignore</li>
 <li>`off`: Not ignore</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIgnoreCase() const;
 
@@ -94,16 +98,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`on`: Ignore</li>
 <li>`off`: Not ignore</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IgnoreCase Whether to ignore case in the cache key. Values:
+                     * @param _ignoreCase Whether to ignore case in the cache key. Values:
 <li>`on`: Ignore</li>
 <li>`off`: Not ignore</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIgnoreCase(const std::string& _ignoreCase);
 
                     /**
                      * 判断参数 IgnoreCase 是否已赋值
                      * @return IgnoreCase 是否已赋值
+                     * 
                      */
                     bool IgnoreCaseHasBeenSet() const;
 
@@ -112,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return QueryString Request parameter contained in `CacheKey`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     QueryString GetQueryString() const;
 
                     /**
                      * 设置Request parameter contained in `CacheKey`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param QueryString Request parameter contained in `CacheKey`
+                     * @param _queryString Request parameter contained in `CacheKey`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQueryString(const QueryString& _queryString);
 
                     /**
                      * 判断参数 QueryString 是否已赋值
                      * @return QueryString 是否已赋值
+                     * 
                      */
                     bool QueryStringHasBeenSet() const;
 

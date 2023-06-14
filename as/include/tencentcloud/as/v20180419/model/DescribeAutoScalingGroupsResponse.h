@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of auto scaling group details.
                      * @return AutoScalingGroupSet List of auto scaling group details.
+                     * 
                      */
                     std::vector<AutoScalingGroup> GetAutoScalingGroupSet() const;
 
                     /**
                      * 判断参数 AutoScalingGroupSet 是否已赋值
                      * @return AutoScalingGroupSet 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupSetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible auto scaling groups.
                      * @return TotalCount Number of eligible auto scaling groups.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

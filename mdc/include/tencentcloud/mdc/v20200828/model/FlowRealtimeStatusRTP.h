@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The number of packets transmitted.
                      * @return Packets The number of packets transmitted.
+                     * 
                      */
                     int64_t GetPackets() const;
 
                     /**
                      * 设置The number of packets transmitted.
-                     * @param Packets The number of packets transmitted.
+                     * @param _packets The number of packets transmitted.
+                     * 
                      */
                     void SetPackets(const int64_t& _packets);
 
                     /**
                      * 判断参数 Packets 是否已赋值
                      * @return Packets 是否已赋值
+                     * 
                      */
                     bool PacketsHasBeenSet() const;
 

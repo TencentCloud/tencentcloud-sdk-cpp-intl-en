@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取NAT gateway ID.
                      * @return NatGatewayIds NAT gateway ID.
+                     * 
                      */
                     std::vector<std::string> GetNatGatewayIds() const;
 
                     /**
                      * 设置NAT gateway ID.
-                     * @param NatGatewayIds NAT gateway ID.
+                     * @param _natGatewayIds NAT gateway ID.
+                     * 
                      */
                     void SetNatGatewayIds(const std::vector<std::string>& _natGatewayIds);
 
                     /**
                      * 判断参数 NatGatewayIds 是否已赋值
                      * @return NatGatewayIds 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdsHasBeenSet() const;
 
@@ -80,6 +83,7 @@ namespace TencentCloud
 <li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
 <li>`private-port`. The private network port.</li>
 <li>`description`. The rule description.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -93,7 +97,7 @@ namespace TencentCloud
 <li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
 <li>`private-port`. The private network port.</li>
 <li>`description`. The rule description.</li>
-                     * @param Filters Filters:
+                     * @param _filters Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
 <li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
@@ -102,48 +106,56 @@ namespace TencentCloud
 <li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
 <li>`private-port`. The private network port.</li>
 <li>`description`. The rule description.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

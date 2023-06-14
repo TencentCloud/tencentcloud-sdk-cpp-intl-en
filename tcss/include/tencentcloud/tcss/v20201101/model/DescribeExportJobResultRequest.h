@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Value of the `JobId` field returned by `CreateExportComplianceStatusListJob`
                      * @return JobId Value of the `JobId` field returned by `CreateExportComplianceStatusListJob`
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Value of the `JobId` field returned by `CreateExportComplianceStatusListJob`
-                     * @param JobId Value of the `JobId` field returned by `CreateExportComplianceStatusListJob`
+                     * @param _jobId Value of the `JobId` field returned by `CreateExportComplianceStatusListJob`
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 

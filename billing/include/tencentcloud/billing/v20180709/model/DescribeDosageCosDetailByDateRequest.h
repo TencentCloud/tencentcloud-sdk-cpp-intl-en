@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The start date of the usage query, such as `2020-09-01`.
                      * @return StartDate The start date of the usage query, such as `2020-09-01`.
+                     * 
                      */
                     std::string GetStartDate() const;
 
                     /**
                      * 设置The start date of the usage query, such as `2020-09-01`.
-                     * @param StartDate The start date of the usage query, such as `2020-09-01`.
+                     * @param _startDate The start date of the usage query, such as `2020-09-01`.
+                     * 
                      */
                     void SetStartDate(const std::string& _startDate);
 
                     /**
                      * 判断参数 StartDate 是否已赋值
                      * @return StartDate 是否已赋值
+                     * 
                      */
                     bool StartDateHasBeenSet() const;
 
                     /**
                      * 获取The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
                      * @return EndDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
-                     * @param EndDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+                     * @param _endDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 
                     /**
                      * 获取Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
                      * @return BucketName Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
+                     * 
                      */
                     std::string GetBucketName() const;
 
                     /**
                      * 设置Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
-                     * @param BucketName Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
+                     * @param _bucketName Bucket name. You can use `Get Service` to query the list of all buckets under a requester account. For details, see [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291).
+                     * 
                      */
                     void SetBucketName(const std::string& _bucketName);
 
                     /**
                      * 判断参数 BucketName 是否已赋值
                      * @return BucketName 是否已赋值
+                     * 
                      */
                     bool BucketNameHasBeenSet() const;
 

@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FailedItems List of IDs of the users failed to be added to the user group.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFailedItems() const;
 
                     /**
                      * 判断参数 FailedItems 是否已赋值
                      * @return FailedItems 是否已赋值
+                     * 
                      */
                     bool FailedItemsHasBeenSet() const;
 

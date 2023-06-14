@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cloud disk backup point to be deleted.
                      * @return DiskBackupIds ID of the cloud disk backup point to be deleted.
+                     * 
                      */
                     std::vector<std::string> GetDiskBackupIds() const;
 
                     /**
                      * 设置ID of the cloud disk backup point to be deleted.
-                     * @param DiskBackupIds ID of the cloud disk backup point to be deleted.
+                     * @param _diskBackupIds ID of the cloud disk backup point to be deleted.
+                     * 
                      */
                     void SetDiskBackupIds(const std::vector<std::string>& _diskBackupIds);
 
                     /**
                      * 判断参数 DiskBackupIds 是否已赋值
                      * @return DiskBackupIds 是否已赋值
+                     * 
                      */
                     bool DiskBackupIdsHasBeenSet() const;
 

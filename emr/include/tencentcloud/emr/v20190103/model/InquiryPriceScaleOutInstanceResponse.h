@@ -50,12 +50,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost Original price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
                      * 判断参数 OriginalCost 是否已赋值
                      * @return OriginalCost 是否已赋值
+                     * 
                      */
                     bool OriginalCostHasBeenSet() const;
 
@@ -64,12 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DiscountCost Discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiscountCost() const;
 
                     /**
                      * 判断参数 DiscountCost 是否已赋值
                      * @return DiscountCost 是否已赋值
+                     * 
                      */
                     bool DiscountCostHasBeenSet() const;
 
@@ -80,12 +84,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return Unit Time unit of scale-out. Valid value:
 <li>s: Second.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 
@@ -94,12 +100,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PriceSpec Node spec queried for price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PriceResource GetPriceSpec() const;
 
                     /**
                      * 判断参数 PriceSpec 是否已赋值
                      * @return PriceSpec 是否已赋值
+                     * 
                      */
                     bool PriceSpecHasBeenSet() const;
 
@@ -108,12 +116,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<EmrPrice> GetMultipleEmrPrice() const;
 
                     /**
                      * 判断参数 MultipleEmrPrice 是否已赋值
                      * @return MultipleEmrPrice 是否已赋值
+                     * 
                      */
                     bool MultipleEmrPriceHasBeenSet() const;
 

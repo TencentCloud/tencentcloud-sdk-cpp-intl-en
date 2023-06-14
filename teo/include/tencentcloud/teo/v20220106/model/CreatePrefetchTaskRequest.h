@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site
-                     * @param ZoneId ID of the site
+                     * @param _zoneId ID of the site
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -66,20 +69,23 @@ namespace TencentCloud
 http://www.example.com/example.txt
                      * @return Targets List of resources to be pre-warmed, for example:
 http://www.example.com/example.txt
+                     * 
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
                      * 设置List of resources to be pre-warmed, for example:
 http://www.example.com/example.txt
-                     * @param Targets List of resources to be pre-warmed, for example:
+                     * @param _targets List of resources to be pre-warmed, for example:
 http://www.example.com/example.txt
+                     * 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 
@@ -88,38 +94,44 @@ http://www.example.com/example.txt
 Note that if it’s enabled, the purging is based on the converted URLs.
                      * @return EncodeUrl Specifies whether to encode the URL
 Note that if it’s enabled, the purging is based on the converted URLs.
+                     * 
                      */
                     bool GetEncodeUrl() const;
 
                     /**
                      * 设置Specifies whether to encode the URL
 Note that if it’s enabled, the purging is based on the converted URLs.
-                     * @param EncodeUrl Specifies whether to encode the URL
+                     * @param _encodeUrl Specifies whether to encode the URL
 Note that if it’s enabled, the purging is based on the converted URLs.
+                     * 
                      */
                     void SetEncodeUrl(const bool& _encodeUrl);
 
                     /**
                      * 判断参数 EncodeUrl 是否已赋值
                      * @return EncodeUrl 是否已赋值
+                     * 
                      */
                     bool EncodeUrlHasBeenSet() const;
 
                     /**
                      * 获取HTTP header information
                      * @return Headers HTTP header information
+                     * 
                      */
                     std::vector<Header> GetHeaders() const;
 
                     /**
                      * 设置HTTP header information
-                     * @param Headers HTTP header information
+                     * @param _headers HTTP header information
+                     * 
                      */
                     void SetHeaders(const std::vector<Header>& _headers);
 
                     /**
                      * 判断参数 Headers 是否已赋值
                      * @return Headers 是否已赋值
+                     * 
                      */
                     bool HeadersHasBeenSet() const;
 

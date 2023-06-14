@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Key for sorting. See custom attributes
                      * @return PropertyKey Key for sorting. See custom attributes
+                     * 
                      */
                     std::string GetPropertyKey() const;
 
                     /**
                      * 设置Key for sorting. See custom attributes
-                     * @param PropertyKey Key for sorting. See custom attributes
+                     * @param _propertyKey Key for sorting. See custom attributes
+                     * 
                      */
                     void SetPropertyKey(const std::string& _propertyKey);
 
                     /**
                      * 判断参数 PropertyKey 是否已赋值
                      * @return PropertyKey 是否已赋值
+                     * 
                      */
                     bool PropertyKeyHasBeenSet() const;
 
                     /**
                      * 获取`ASC` or `DESC`
                      * @return Order `ASC` or `DESC`
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置`ASC` or `DESC`
-                     * @param Order `ASC` or `DESC`
+                     * @param _order `ASC` or `DESC`
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 

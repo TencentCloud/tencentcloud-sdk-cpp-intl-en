@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return DBInstanceId Instance ID.
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param DBInstanceId Instance ID.
+                     * @param _dBInstanceId Instance ID.
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup type. Valid values: `LogBackup`, `BaseBackup`.
                      * @return BackupType Backup type. Valid values: `LogBackup`, `BaseBackup`.
+                     * 
                      */
                     std::string GetBackupType() const;
 
                     /**
                      * 设置Backup type. Valid values: `LogBackup`, `BaseBackup`.
-                     * @param BackupType Backup type. Valid values: `LogBackup`, `BaseBackup`.
+                     * @param _backupType Backup type. Valid values: `LogBackup`, `BaseBackup`.
+                     * 
                      */
                     void SetBackupType(const std::string& _backupType);
 
                     /**
                      * 判断参数 BackupType 是否已赋值
                      * @return BackupType 是否已赋值
+                     * 
                      */
                     bool BackupTypeHasBeenSet() const;
 
                     /**
                      * 获取Unique backup ID.
                      * @return BackupId Unique backup ID.
+                     * 
                      */
                     std::string GetBackupId() const;
 
                     /**
                      * 设置Unique backup ID.
-                     * @param BackupId Unique backup ID.
+                     * @param _backupId Unique backup ID.
+                     * 
                      */
                     void SetBackupId(const std::string& _backupId);
 
                     /**
                      * 判断参数 BackupId 是否已赋值
                      * @return BackupId 是否已赋值
+                     * 
                      */
                     bool BackupIdHasBeenSet() const;
 
                     /**
                      * 获取Validity period of a URL, which is 12 hours by default.
                      * @return URLExpireTime Validity period of a URL, which is 12 hours by default.
+                     * 
                      */
                     uint64_t GetURLExpireTime() const;
 
                     /**
                      * 设置Validity period of a URL, which is 12 hours by default.
-                     * @param URLExpireTime Validity period of a URL, which is 12 hours by default.
+                     * @param _uRLExpireTime Validity period of a URL, which is 12 hours by default.
+                     * 
                      */
                     void SetURLExpireTime(const uint64_t& _uRLExpireTime);
 
                     /**
                      * 判断参数 URLExpireTime 是否已赋值
                      * @return URLExpireTime 是否已赋值
+                     * 
                      */
                     bool URLExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Backup download restriction
                      * @return BackupDownloadRestriction Backup download restriction
+                     * 
                      */
                     BackupDownloadRestriction GetBackupDownloadRestriction() const;
 
                     /**
                      * 设置Backup download restriction
-                     * @param BackupDownloadRestriction Backup download restriction
+                     * @param _backupDownloadRestriction Backup download restriction
+                     * 
                      */
                     void SetBackupDownloadRestriction(const BackupDownloadRestriction& _backupDownloadRestriction);
 
                     /**
                      * 判断参数 BackupDownloadRestriction 是否已赋值
                      * @return BackupDownloadRestriction 是否已赋值
+                     * 
                      */
                     bool BackupDownloadRestrictionHasBeenSet() const;
 

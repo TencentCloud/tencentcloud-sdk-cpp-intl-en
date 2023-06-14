@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Certificate ID
                      * @return CertId Certificate ID
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Certificate ID
-                     * @param CertId Certificate ID
+                     * @param _certId Certificate ID
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name
                      * @return DomainName Domain name
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name
-                     * @param DomainName Domain name
+                     * @param _domainName Domain name
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Domain name creation status. Valid values: SUCCESS, FAILURE, CREATING, DELETING.
                      * @return Status Domain name creation status. Valid values: SUCCESS, FAILURE, CREATING, DELETING.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Domain name creation status. Valid values: SUCCESS, FAILURE, CREATING, DELETING.
-                     * @param Status Domain name creation status. Valid values: SUCCESS, FAILURE, CREATING, DELETING.
+                     * @param _status Domain name creation status. Valid values: SUCCESS, FAILURE, CREATING, DELETING.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

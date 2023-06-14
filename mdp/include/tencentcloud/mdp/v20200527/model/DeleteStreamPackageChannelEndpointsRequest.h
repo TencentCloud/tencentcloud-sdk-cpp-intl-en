@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return Id Channel ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param Id Channel ID
+                     * @param _id Channel ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取List of the URLs of the endpoints to delete
                      * @return Urls List of the URLs of the endpoints to delete
+                     * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
                      * 设置List of the URLs of the endpoints to delete
-                     * @param Urls List of the URLs of the endpoints to delete
+                     * @param _urls List of the URLs of the endpoints to delete
+                     * 
                      */
                     void SetUrls(const std::vector<std::string>& _urls);
 
                     /**
                      * 判断参数 Urls 是否已赋值
                      * @return Urls 是否已赋值
+                     * 
                      */
                     bool UrlsHasBeenSet() const;
 

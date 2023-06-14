@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ACL policy name
                      * @return RuleName ACL policy name
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置ACL policy name
-                     * @param RuleName ACL policy name
+                     * @param _ruleName ACL policy name
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to be applied to new topics
                      * @return IsApplied Whether to be applied to new topics
+                     * 
                      */
                     int64_t GetIsApplied() const;
 
                     /**
                      * 设置Whether to be applied to new topics
-                     * @param IsApplied Whether to be applied to new topics
+                     * @param _isApplied Whether to be applied to new topics
+                     * 
                      */
                     void SetIsApplied(const int64_t& _isApplied);
 
                     /**
                      * 判断参数 IsApplied 是否已赋值
                      * @return IsApplied 是否已赋值
+                     * 
                      */
                     bool IsAppliedHasBeenSet() const;
 

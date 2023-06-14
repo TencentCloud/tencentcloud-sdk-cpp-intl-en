@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Replica group ID, which is required for multi-AZ instances.
                      * @return GroupId Replica group ID, which is required for multi-AZ instances.
+                     * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
                      * 设置Replica group ID, which is required for multi-AZ instances.
-                     * @param GroupId Replica group ID, which is required for multi-AZ instances.
+                     * @param _groupId Replica group ID, which is required for multi-AZ instances.
+                     * 
                      */
                     void SetGroupId(const int64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 

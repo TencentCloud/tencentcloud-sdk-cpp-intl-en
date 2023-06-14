@@ -50,48 +50,56 @@ namespace TencentCloud
                     /**
                      * 获取CPU monitoring data of the instance
                      * @return Cpu CPU monitoring data of the instance
+                     * 
                      */
                     DeviceCpuInfo GetCpu() const;
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Memory monitoring data of the instance
                      * @return Mem Memory monitoring data of the instance
+                     * 
                      */
                     DeviceMemInfo GetMem() const;
 
                     /**
                      * 判断参数 Mem 是否已赋值
                      * @return Mem 是否已赋值
+                     * 
                      */
                     bool MemHasBeenSet() const;
 
                     /**
                      * 获取Network monitoring data of the instance
                      * @return Net Network monitoring data of the instance
+                     * 
                      */
                     DeviceNetInfo GetNet() const;
 
                     /**
                      * 判断参数 Net 是否已赋值
                      * @return Net 是否已赋值
+                     * 
                      */
                     bool NetHasBeenSet() const;
 
                     /**
                      * 获取Disk monitoring data of the instance
                      * @return Disk Disk monitoring data of the instance
+                     * 
                      */
                     DeviceDiskInfo GetDisk() const;
 
                     /**
                      * 判断参数 Disk 是否已赋值
                      * @return Disk 是否已赋值
+                     * 
                      */
                     bool DiskHasBeenSet() const;
 

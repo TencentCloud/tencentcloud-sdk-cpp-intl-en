@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of replay task IDs.
                      * @return Ids List of replay task IDs.
+                     * 
                      */
                     std::vector<std::string> GetIds() const;
 
                     /**
                      * 设置List of replay task IDs.
-                     * @param Ids List of replay task IDs.
+                     * @param _ids List of replay task IDs.
+                     * 
                      */
                     void SetIds(const std::vector<std::string>& _ids);
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

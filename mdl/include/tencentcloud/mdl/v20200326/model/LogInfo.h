@@ -52,56 +52,65 @@ namespace TencentCloud
 It contains the value of `StreamStart` which refers to the push information.
                      * @return Type Log type.
 It contains the value of `StreamStart` which refers to the push information.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Log type.
 It contains the value of `StreamStart` which refers to the push information.
-                     * @param Type Log type.
+                     * @param _type Log type.
 It contains the value of `StreamStart` which refers to the push information.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Time when the log is printed.
                      * @return Time Time when the log is printed.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Time when the log is printed.
-                     * @param Time Time when the log is printed.
+                     * @param _time Time when the log is printed.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Log details.
                      * @return Message Log details.
+                     * 
                      */
                     LogMessageInfo GetMessage() const;
 
                     /**
                      * 设置Log details.
-                     * @param Message Log details.
+                     * @param _message Log details.
+                     * 
                      */
                     void SetMessage(const LogMessageInfo& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

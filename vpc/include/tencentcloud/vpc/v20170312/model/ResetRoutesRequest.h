@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The route table instance ID, such as `rtb-azd4dt1c`.
                      * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置The route table instance ID, such as `rtb-azd4dt1c`.
-                     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * @param _routeTableId The route table instance ID, such as `rtb-azd4dt1c`.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
                      * 获取The route table name. The maximum length is 60 characters.
                      * @return RouteTableName The route table name. The maximum length is 60 characters.
+                     * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
                      * 设置The route table name. The maximum length is 60 characters.
-                     * @param RouteTableName The route table name. The maximum length is 60 characters.
+                     * @param _routeTableName The route table name. The maximum length is 60 characters.
+                     * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
 
                     /**
                      * 判断参数 RouteTableName 是否已赋值
                      * @return RouteTableName 是否已赋值
+                     * 
                      */
                     bool RouteTableNameHasBeenSet() const;
 
                     /**
                      * 获取Routing policy.
                      * @return Routes Routing policy.
+                     * 
                      */
                     std::vector<Route> GetRoutes() const;
 
                     /**
                      * 设置Routing policy.
-                     * @param Routes Routing policy.
+                     * @param _routes Routing policy.
+                     * 
                      */
                     void SetRoutes(const std::vector<Route>& _routes);
 
                     /**
                      * 判断参数 Routes 是否已赋值
                      * @return Routes 是否已赋值
+                     * 
                      */
                     bool RoutesHasBeenSet() const;
 

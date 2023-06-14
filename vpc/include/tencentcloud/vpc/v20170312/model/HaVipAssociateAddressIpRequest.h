@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
                      * @return HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
+                     * 
                      */
                     std::string GetHaVipId() const;
 
                     /**
                      * 设置The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
-                     * @param HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
+                     * @param _haVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
+                     * 
                      */
                     void SetHaVipId(const std::string& _haVipId);
 
                     /**
                      * 判断参数 HaVipId 是否已赋值
                      * @return HaVipId 是否已赋值
+                     * 
                      */
                     bool HaVipIdHasBeenSet() const;
 
                     /**
                      * 获取The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
                      * @return AddressIp The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
+                     * 
                      */
                     std::string GetAddressIp() const;
 
                     /**
                      * 设置The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
-                     * @param AddressIp The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
+                     * @param _addressIp The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
+                     * 
                      */
                     void SetAddressIp(const std::string& _addressIp);
 
                     /**
                      * 判断参数 AddressIp 是否已赋值
                      * @return AddressIp 是否已赋值
+                     * 
                      */
                     bool AddressIpHasBeenSet() const;
 

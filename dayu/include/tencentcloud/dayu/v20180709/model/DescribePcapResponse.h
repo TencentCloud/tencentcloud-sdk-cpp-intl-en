@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取PCAP packet download link list, which is an empty array if there are no PCAP packets;
                      * @return PcapUrlList PCAP packet download link list, which is an empty array if there are no PCAP packets;
+                     * 
                      */
                     std::vector<std::string> GetPcapUrlList() const;
 
                     /**
                      * 判断参数 PcapUrlList 是否已赋值
                      * @return PcapUrlList 是否已赋值
+                     * 
                      */
                     bool PcapUrlListHasBeenSet() const;
 

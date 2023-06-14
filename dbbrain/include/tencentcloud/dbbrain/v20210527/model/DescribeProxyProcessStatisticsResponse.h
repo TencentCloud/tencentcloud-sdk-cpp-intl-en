@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Real-time session statistics.
                      * @return ProcessStatistics Real-time session statistics.
+                     * 
                      */
                     ProcessStatistic GetProcessStatistics() const;
 
                     /**
                      * 判断参数 ProcessStatistics 是否已赋值
                      * @return ProcessStatistics 是否已赋值
+                     * 
                      */
                     bool ProcessStatisticsHasBeenSet() const;
 

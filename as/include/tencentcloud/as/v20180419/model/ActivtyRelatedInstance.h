@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
 <li>FAILED: failed
+                     * 
                      */
                     std::string GetInstanceStatus() const;
 
@@ -84,17 +88,19 @@ namespace TencentCloud
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
 <li>FAILED: failed
-                     * @param InstanceStatus Status of the instance in the scaling activity. Value range:
+                     * @param _instanceStatus Status of the instance in the scaling activity. Value range:
 <li>INIT: initializing
 <li>RUNNING: running
 <li>SUCCESSFUL: succeeded
 <li>FAILED: failed
+                     * 
                      */
                     void SetInstanceStatus(const std::string& _instanceStatus);
 
                     /**
                      * 判断参数 InstanceStatus 是否已赋值
                      * @return InstanceStatus 是否已赋值
+                     * 
                      */
                     bool InstanceStatusHasBeenSet() const;
 

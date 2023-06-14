@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The protocol port template group instance ID, such as `ppmg-n17uxvve`.
                      * @return ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-n17uxvve`.
+                     * 
                      */
                     std::string GetServiceTemplateGroupId() const;
 
                     /**
                      * 设置The protocol port template group instance ID, such as `ppmg-n17uxvve`.
-                     * @param ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-n17uxvve`.
+                     * @param _serviceTemplateGroupId The protocol port template group instance ID, such as `ppmg-n17uxvve`.
+                     * 
                      */
                     void SetServiceTemplateGroupId(const std::string& _serviceTemplateGroupId);
 
                     /**
                      * 判断参数 ServiceTemplateGroupId 是否已赋值
                      * @return ServiceTemplateGroupId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateGroupIdHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Application list.
                      * @return ApplicationInfos Application list.
+                     * 
                      */
                     std::vector<ApplicationItem> GetApplicationInfos() const;
 
                     /**
                      * 判断参数 ApplicationInfos 是否已赋值
                      * @return ApplicationInfos 是否已赋值
+                     * 
                      */
                     bool ApplicationInfosHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether all applications are included. The value 0 indicates no and 1 indicates yes.
                      * @return AllOption Specifies whether all applications are included. The value 0 indicates no and 1 indicates yes.
+                     * 
                      */
                     int64_t GetAllOption() const;
 
                     /**
                      * 判断参数 AllOption 是否已赋值
                      * @return AllOption 是否已赋值
+                     * 
                      */
                     bool AllOptionHasBeenSet() const;
 

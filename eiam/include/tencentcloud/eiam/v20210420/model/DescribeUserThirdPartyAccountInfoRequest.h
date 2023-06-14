@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Username. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
                      * @return UserName Username. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
-                     * @param UserName Username. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+                     * @param _userName Username. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取User ID. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
                      * @return UserId User ID. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
-                     * @param UserId User ID. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+                     * @param _userId User ID. You need to specify at least `Username` or `UserId`. If both are specified, `Username` will be used first.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 

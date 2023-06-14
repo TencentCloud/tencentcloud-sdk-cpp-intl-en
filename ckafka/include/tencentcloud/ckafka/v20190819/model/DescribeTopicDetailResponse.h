@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Returned entity of topic details
                      * @return Result Returned entity of topic details
+                     * 
                      */
                     TopicDetailResponse GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

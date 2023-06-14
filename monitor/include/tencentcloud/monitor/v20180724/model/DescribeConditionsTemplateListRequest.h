@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取The value is fixed to `monitor`.
                      * @return Module The value is fixed to `monitor`.
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置The value is fixed to `monitor`.
-                     * @param Module The value is fixed to `monitor`.
+                     * @param _module The value is fixed to `monitor`.
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取View name, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
                      * @return ViewName View name, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
+                     * 
                      */
                     std::string GetViewName() const;
 
                     /**
                      * 设置View name, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
-                     * @param ViewName View name, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
+                     * @param _viewName View name, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
+                     * 
                      */
                     void SetViewName(const std::string& _viewName);
 
                     /**
                      * 判断参数 ViewName 是否已赋值
                      * @return ViewName 是否已赋值
+                     * 
                      */
                     bool ViewNameHasBeenSet() const;
 
                     /**
                      * 获取Filter by trigger condition template name.
                      * @return GroupName Filter by trigger condition template name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Filter by trigger condition template name.
-                     * @param GroupName Filter by trigger condition template name.
+                     * @param _groupName Filter by trigger condition template name.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Filter by trigger condition template ID.
                      * @return GroupID Filter by trigger condition template ID.
+                     * 
                      */
                     std::string GetGroupID() const;
 
                     /**
                      * 设置Filter by trigger condition template ID.
-                     * @param GroupID Filter by trigger condition template ID.
+                     * @param _groupID Filter by trigger condition template ID.
+                     * 
                      */
                     void SetGroupID(const std::string& _groupID);
 
                     /**
                      * 判断参数 GroupID 是否已赋值
                      * @return GroupID 是否已赋值
+                     * 
                      */
                     bool GroupIDHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter, which specifies the number of returned results per page. Value range: 1-100. Default value: 20.
                      * @return Limit Pagination parameter, which specifies the number of returned results per page. Value range: 1-100. Default value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination parameter, which specifies the number of returned results per page. Value range: 1-100. Default value: 20.
-                     * @param Limit Pagination parameter, which specifies the number of returned results per page. Value range: 1-100. Default value: 20.
+                     * @param _limit Pagination parameter, which specifies the number of returned results per page. Value range: 1-100. Default value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset starting from 0. Default value: 0.
                      * @return Offset Pagination offset starting from 0. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset starting from 0. Default value: 0.
-                     * @param Offset Pagination offset starting from 0. Default value: 0.
+                     * @param _offset Pagination offset starting from 0. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
                      * @return UpdateTimeOrder Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
+                     * 
                      */
                     std::string GetUpdateTimeOrder() const;
 
                     /**
                      * 设置Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
-                     * @param UpdateTimeOrder Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
+                     * @param _updateTimeOrder Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
+                     * 
                      */
                     void SetUpdateTimeOrder(const std::string& _updateTimeOrder);
 
                     /**
                      * 判断参数 UpdateTimeOrder 是否已赋值
                      * @return UpdateTimeOrder 是否已赋值
+                     * 
                      */
                     bool UpdateTimeOrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
                      * @return PolicyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * 
                      */
                     std::string GetPolicyCountOrder() const;
 
                     /**
                      * 设置Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
-                     * @param PolicyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * @param _policyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * 
                      */
                     void SetPolicyCountOrder(const std::string& _policyCountOrder);
 
                     /**
                      * 判断参数 PolicyCountOrder 是否已赋值
                      * @return PolicyCountOrder 是否已赋值
+                     * 
                      */
                     bool PolicyCountOrderHasBeenSet() const;
 

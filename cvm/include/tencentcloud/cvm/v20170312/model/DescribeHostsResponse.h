@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of CDH instances meeting the query conditions
                      * @return TotalCount Total number of CDH instances meeting the query conditions
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information on CDH instances
                      * @return HostSet Information on CDH instances
+                     * 
                      */
                     std::vector<HostItem> GetHostSet() const;
 
                     /**
                      * 判断参数 HostSet 是否已赋值
                      * @return HostSet 是否已赋值
+                     * 
                      */
                     bool HostSetHasBeenSet() const;
 

@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Animated image generating template ID.
                      * @return Definition Animated image generating template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Animated image generating template ID.
-                     * @param Definition Animated image generating template ID.
+                     * @param _definition Animated image generating template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Start time of an animated image in a video in seconds.
                      * @return StartTimeOffset Start time of an animated image in a video in seconds.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time of an animated image in a video in seconds.
-                     * @param StartTimeOffset Start time of an animated image in a video in seconds.
+                     * @param _startTimeOffset Start time of an animated image in a video in seconds.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取End time of an animated image in a video in seconds.
                      * @return EndTimeOffset End time of an animated image in a video in seconds.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time of an animated image in a video in seconds.
-                     * @param EndTimeOffset End time of an animated image in a video in seconds.
+                     * @param _endTimeOffset End time of an animated image in a video in seconds.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
@@ -106,38 +115,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OutputStorage Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OutputStorage Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+                     * @param _outputStorage Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 
                     /**
                      * 获取Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
                      * @return OutputObjectPath Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+                     * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
                      * 设置Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
-                     * @param OutputObjectPath Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+                     * @param _outputObjectPath Output path to a generated animated image file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+                     * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
 
                     /**
                      * 判断参数 OutputObjectPath 是否已赋值
                      * @return OutputObjectPath 是否已赋值
+                     * 
                      */
                     bool OutputObjectPathHasBeenSet() const;
 

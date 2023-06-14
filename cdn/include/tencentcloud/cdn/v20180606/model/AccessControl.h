@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable request header and request URL access control. Valid values: on, off
                      * @return Switch Whether to enable request header and request URL access control. Valid values: on, off
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable request header and request URL access control. Valid values: on, off
-                     * @param Switch Whether to enable request header and request URL access control. Valid values: on, off
+                     * @param _switch Whether to enable request header and request URL access control. Valid values: on, off
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AccessControlRules Request header and request URL access rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<AccessControlRule> GetAccessControlRules() const;
 
                     /**
                      * 设置Request header and request URL access rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AccessControlRules Request header and request URL access rule
+                     * @param _accessControlRules Request header and request URL access rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAccessControlRules(const std::vector<AccessControlRule>& _accessControlRules);
 
                     /**
                      * 判断参数 AccessControlRules 是否已赋值
                      * @return AccessControlRules 是否已赋值
+                     * 
                      */
                     bool AccessControlRulesHasBeenSet() const;
 
@@ -92,20 +98,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ReturnCode Returns status code
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 设置Returns status code
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ReturnCode Returns status code
+                     * @param _returnCode Returns status code
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetReturnCode(const int64_t& _returnCode);
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 

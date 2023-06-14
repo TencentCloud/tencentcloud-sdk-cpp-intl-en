@@ -51,72 +51,84 @@ namespace TencentCloud
                     /**
                      * 获取Rule name
                      * @return RuleName Rule name
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
-                     * @param RuleName Rule name
+                     * @param _ruleName Rule name
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取Specific configurations
                      * @return Configure Specific configurations
+                     * 
                      */
                     std::vector<ScdnAclRule> GetConfigure() const;
 
                     /**
                      * 设置Specific configurations
-                     * @param Configure Specific configurations
+                     * @param _configure Specific configurations
+                     * 
                      */
                     void SetConfigure(const std::vector<ScdnAclRule>& _configure);
 
                     /**
                      * 判断参数 Configure 是否已赋值
                      * @return Configure 是否已赋值
+                     * 
                      */
                     bool ConfigureHasBeenSet() const;
 
                     /**
                      * 获取Action. Valid values: `intercept` and `redirect`.
                      * @return Result Action. Valid values: `intercept` and `redirect`.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 设置Action. Valid values: `intercept` and `redirect`.
-                     * @param Result Action. Valid values: `intercept` and `redirect`.
+                     * @param _result Action. Valid values: `intercept` and `redirect`.
+                     * 
                      */
                     void SetResult(const std::string& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取Whether the rule is activated. Valid values: `active` and `inactive`.
                      * @return Status Whether the rule is activated. Valid values: `active` and `inactive`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Whether the rule is activated. Valid values: `active` and `inactive`.
-                     * @param Status Whether the rule is activated. Valid values: `active` and `inactive`.
+                     * @param _status Whether the rule is activated. Valid values: `active` and `inactive`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -125,20 +137,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ErrorPage Error page configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     ScdnErrorPage GetErrorPage() const;
 
                     /**
                      * 设置Error page configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ErrorPage Error page configuration
+                     * @param _errorPage Error page configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetErrorPage(const ScdnErrorPage& _errorPage);
 
                     /**
                      * 判断参数 ErrorPage 是否已赋值
                      * @return ErrorPage 是否已赋值
+                     * 
                      */
                     bool ErrorPageHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability scan task ID
                      * @return TaskID Vulnerability scan task ID
+                     * 
                      */
                     int64_t GetTaskID() const;
 
                     /**
                      * 设置Vulnerability scan task ID
-                     * @param TaskID Vulnerability scan task ID
+                     * @param _taskID Vulnerability scan task ID
+                     * 
                      */
                     void SetTaskID(const int64_t& _taskID);
 
                     /**
                      * 判断参数 TaskID 是否已赋值
                      * @return TaskID 是否已赋值
+                     * 
                      */
                     bool TaskIDHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
 <li>ImageID- string - Required: No - Image ID</li>
 <li>ImageName- String - Required: No - Image name</li>
 <li>ScanStatus- string - Required: No - Check status. Valid values: `WAIT_SCAN` (pending); `SCANNING` (checking); `SCANNED` (checked); `SCAN_ERR` (failed to check); `CANCELED` (check ended).</li>
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
@@ -81,89 +85,103 @@ namespace TencentCloud
 <li>ImageID- string - Required: No - Image ID</li>
 <li>ImageName- String - Required: No - Image name</li>
 <li>ScanStatus- string - Required: No - Check status. Valid values: `WAIT_SCAN` (pending); `SCANNING` (checking); `SCANNED` (checked); `SCAN_ERR` (failed to check); `CANCELED` (check ended).</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>OnlyAffectedNewestImage- Bool- Required: No - Show only vulnerabilities that affect the latest image tags</li>
 <li>ImageID- string - Required: No - Image ID</li>
 <li>ImageName- String - Required: No - Image name</li>
 <li>ScanStatus- string - Required: No - Check status. Valid values: `WAIT_SCAN` (pending); `SCANNING` (checking); `SCANNED` (checked); `SCAN_ERR` (failed to check); `CANCELED` (check ended).</li>
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: `10`. Maximum value: `100`.
                      * @return Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: `10`. Maximum value: `100`.
-                     * @param Limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * @param _limit Number of results to be returned. Default value: `10`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting order
                      * @return Order Sorting order
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order
-                     * @param Order Sorting order
+                     * @param _order Sorting order
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return By Sorting field
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field
-                     * @param By Sorting field
+                     * @param _by Sorting field
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 

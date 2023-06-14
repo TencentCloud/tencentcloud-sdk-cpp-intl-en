@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Function name
                      * @return FunctionName Function name
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Function name
-                     * @param FunctionName Function name
+                     * @param _functionName Function name
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Alias name
                      * @return Name Alias name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Alias name
-                     * @param Name Alias name
+                     * @param _name Alias name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Master version pointed to by the alias
                      * @return FunctionVersion Master version pointed to by the alias
+                     * 
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
                      * 设置Master version pointed to by the alias
-                     * @param FunctionVersion Master version pointed to by the alias
+                     * @param _functionVersion Master version pointed to by the alias
+                     * 
                      */
                     void SetFunctionVersion(const std::string& _functionVersion);
 
                     /**
                      * 判断参数 FunctionVersion 是否已赋值
                      * @return FunctionVersion 是否已赋值
+                     * 
                      */
                     bool FunctionVersionHasBeenSet() const;
 
                     /**
                      * 获取Function namespace
                      * @return Namespace Function namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace
-                     * @param Namespace Function namespace
+                     * @param _namespace Function namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Routing information of alias, which is required if you need to specify an additional version for the alias.
                      * @return RoutingConfig Routing information of alias, which is required if you need to specify an additional version for the alias.
+                     * 
                      */
                     RoutingConfig GetRoutingConfig() const;
 
                     /**
                      * 设置Routing information of alias, which is required if you need to specify an additional version for the alias.
-                     * @param RoutingConfig Routing information of alias, which is required if you need to specify an additional version for the alias.
+                     * @param _routingConfig Routing information of alias, which is required if you need to specify an additional version for the alias.
+                     * 
                      */
                     void SetRoutingConfig(const RoutingConfig& _routingConfig);
 
                     /**
                      * 判断参数 RoutingConfig 是否已赋值
                      * @return RoutingConfig 是否已赋值
+                     * 
                      */
                     bool RoutingConfigHasBeenSet() const;
 
                     /**
                      * 获取Alias description
                      * @return Description Alias description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Alias description
-                     * @param Description Alias description
+                     * @param _description Alias description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

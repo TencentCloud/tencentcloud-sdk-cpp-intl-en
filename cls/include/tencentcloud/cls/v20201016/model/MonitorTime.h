@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Type Valid values:
 <br><li> `Period`: periodic execution
 <br><li> `Fixed`: scheduled execution
+                     * 
                      */
                     std::string GetType() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Valid values:
 <br><li> `Period`: periodic execution
 <br><li> `Fixed`: scheduled execution
-                     * @param Type Valid values:
+                     * @param _type Valid values:
 <br><li> `Period`: periodic execution
 <br><li> `Fixed`: scheduled execution
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Execution interval or scheduled time point in minutes. Value range: 1–1440.
                      * @return Time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+                     * 
                      */
                     int64_t GetTime() const;
 
                     /**
                      * 设置Execution interval or scheduled time point in minutes. Value range: 1–1440.
-                     * @param Time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+                     * @param _time Execution interval or scheduled time point in minutes. Value range: 1–1440.
+                     * 
                      */
                     void SetTime(const int64_t& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 

@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The page to return records from. Pagination starts from 1.
                      * @return Page The page to return records from. Pagination starts from 1.
+                     * 
                      */
                     int64_t GetPage() const;
 
                     /**
                      * 设置The page to return records from. Pagination starts from 1.
-                     * @param Page The page to return records from. Pagination starts from 1.
+                     * @param _page The page to return records from. Pagination starts from 1.
+                     * 
                      */
                     void SetPage(const int64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records per page. The value of this parameter cannot exceed `1000`.
                      * @return Limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of records per page. The value of this parameter cannot exceed `1000`.
-                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+                     * @param _limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The courseware access. [0]: The private courseware of the specified user (`Owner`) will be returned; [1]: The public courseware of the specified user will be returned; [0,1]: Both the private and public courseware of the specified user will be returned; [2]: The private courseware of the specified user and the public courseware of all users (including `Owner`) will be returned.
                      * @return Permission The courseware access. [0]: The private courseware of the specified user (`Owner`) will be returned; [1]: The public courseware of the specified user will be returned; [0,1]: Both the private and public courseware of the specified user will be returned; [2]: The private courseware of the specified user and the public courseware of all users (including `Owner`) will be returned.
+                     * 
                      */
                     std::vector<uint64_t> GetPermission() const;
 
                     /**
                      * 设置The courseware access. [0]: The private courseware of the specified user (`Owner`) will be returned; [1]: The public courseware of the specified user will be returned; [0,1]: Both the private and public courseware of the specified user will be returned; [2]: The private courseware of the specified user and the public courseware of all users (including `Owner`) will be returned.
-                     * @param Permission The courseware access. [0]: The private courseware of the specified user (`Owner`) will be returned; [1]: The public courseware of the specified user will be returned; [0,1]: Both the private and public courseware of the specified user will be returned; [2]: The private courseware of the specified user and the public courseware of all users (including `Owner`) will be returned.
+                     * @param _permission The courseware access. [0]: The private courseware of the specified user (`Owner`) will be returned; [1]: The public courseware of the specified user will be returned; [0,1]: Both the private and public courseware of the specified user will be returned; [2]: The private courseware of the specified user and the public courseware of all users (including `Owner`) will be returned.
+                     * 
                      */
                     void SetPermission(const std::vector<uint64_t>& _permission);
 
                     /**
                      * 判断参数 Permission 是否已赋值
                      * @return Permission 是否已赋值
+                     * 
                      */
                     bool PermissionHasBeenSet() const;
 
                     /**
                      * 获取The user ID of the courseware owner. If you do not specify this, the information of all courseware under the application will be returned.
                      * @return Owner The user ID of the courseware owner. If you do not specify this, the information of all courseware under the application will be returned.
+                     * 
                      */
                     std::string GetOwner() const;
 
                     /**
                      * 设置The user ID of the courseware owner. If you do not specify this, the information of all courseware under the application will be returned.
-                     * @param Owner The user ID of the courseware owner. If you do not specify this, the information of all courseware under the application will be returned.
+                     * @param _owner The user ID of the courseware owner. If you do not specify this, the information of all courseware under the application will be returned.
+                     * 
                      */
                     void SetOwner(const std::string& _owner);
 
                     /**
                      * 判断参数 Owner 是否已赋值
                      * @return Owner 是否已赋值
+                     * 
                      */
                     bool OwnerHasBeenSet() const;
 
                     /**
                      * 获取The filename keyword.
                      * @return Keyword The filename keyword.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置The filename keyword.
-                     * @param Keyword The filename keyword.
+                     * @param _keyword The filename keyword.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取The courseware IDs. Non-existent IDs will be ignored.
                      * @return DocumentId The courseware IDs. Non-existent IDs will be ignored.
+                     * 
                      */
                     std::vector<std::string> GetDocumentId() const;
 
                     /**
                      * 设置The courseware IDs. Non-existent IDs will be ignored.
-                     * @param DocumentId The courseware IDs. Non-existent IDs will be ignored.
+                     * @param _documentId The courseware IDs. Non-existent IDs will be ignored.
+                     * 
                      */
                     void SetDocumentId(const std::vector<std::string>& _documentId);
 
                     /**
                      * 判断参数 DocumentId 是否已赋值
                      * @return DocumentId 是否已赋值
+                     * 
                      */
                     bool DocumentIdHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of accounts to be filtered
                      * @return AccountNames List of accounts to be filtered
+                     * 
                      */
                     std::vector<std::string> GetAccountNames() const;
 
                     /**
                      * 设置List of accounts to be filtered
-                     * @param AccountNames List of accounts to be filtered
+                     * @param _accountNames List of accounts to be filtered
+                     * 
                      */
                     void SetAccountNames(const std::vector<std::string>& _accountNames);
 
                     /**
                      * 判断参数 AccountNames 是否已赋值
                      * @return AccountNames 是否已赋值
+                     * 
                      */
                     bool AccountNamesHasBeenSet() const;
 
@@ -85,6 +91,7 @@ This parameter has been disused.
                      * @return DbType Database type. Valid values: 
 <li> MYSQL </li>
 This parameter has been disused.
+                     * 
                      */
                     std::string GetDbType() const;
 
@@ -92,69 +99,80 @@ This parameter has been disused.
                      * 设置Database type. Valid values: 
 <li> MYSQL </li>
 This parameter has been disused.
-                     * @param DbType Database type. Valid values: 
+                     * @param _dbType Database type. Valid values: 
 <li> MYSQL </li>
 This parameter has been disused.
+                     * 
                      */
                     void SetDbType(const std::string& _dbType);
 
                     /**
                      * 判断参数 DbType 是否已赋值
                      * @return DbType 是否已赋值
+                     * 
                      */
                     bool DbTypeHasBeenSet() const;
 
                     /**
                      * 获取List of accounts to be filtered
                      * @return Hosts List of accounts to be filtered
+                     * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
                      * 设置List of accounts to be filtered
-                     * @param Hosts List of accounts to be filtered
+                     * @param _hosts List of accounts to be filtered
+                     * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
 
                     /**
                      * 判断参数 Hosts 是否已赋值
                      * @return Hosts 是否已赋值
+                     * 
                      */
                     bool HostsHasBeenSet() const;
 
                     /**
                      * 获取Maximum entries returned per page
                      * @return Limit Maximum entries returned per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum entries returned per page
-                     * @param Limit Maximum entries returned per page
+                     * @param _limit Maximum entries returned per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of network ACL instance IDs, such as [acl-12345678]. Up to 100 instances are allowed for each request. This parameter does not support specifying `NetworkAclIds` and `Filters` at the same time.
                      * @return NetworkAclIds Array of network ACL instance IDs, such as [acl-12345678]. Up to 100 instances are allowed for each request. This parameter does not support specifying `NetworkAclIds` and `Filters` at the same time.
+                     * 
                      */
                     std::vector<std::string> GetNetworkAclIds() const;
 
                     /**
                      * 设置Array of network ACL instance IDs, such as [acl-12345678]. Up to 100 instances are allowed for each request. This parameter does not support specifying `NetworkAclIds` and `Filters` at the same time.
-                     * @param NetworkAclIds Array of network ACL instance IDs, such as [acl-12345678]. Up to 100 instances are allowed for each request. This parameter does not support specifying `NetworkAclIds` and `Filters` at the same time.
+                     * @param _networkAclIds Array of network ACL instance IDs, such as [acl-12345678]. Up to 100 instances are allowed for each request. This parameter does not support specifying `NetworkAclIds` and `Filters` at the same time.
+                     * 
                      */
                     void SetNetworkAclIds(const std::vector<std::string>& _networkAclIds);
 
                     /**
                      * 判断参数 NetworkAclIds 是否已赋值
                      * @return NetworkAclIds 是否已赋值
+                     * 
                      */
                     bool NetworkAclIdsHasBeenSet() const;
 
@@ -70,6 +73,7 @@ namespace TencentCloud
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as vpc-12345678.</li>
 <li>network-acl-id - String - (Filter condition) Network ACL instance ID, such as acl-12345678.</li>
 <li>network-acl-name - String - (Filter condition) Network ACL instance name.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -78,52 +82,60 @@ namespace TencentCloud
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as vpc-12345678.</li>
 <li>network-acl-id - String - (Filter condition) Network ACL instance ID, such as acl-12345678.</li>
 <li>network-acl-name - String - (Filter condition) Network ACL instance name.</li>
-                     * @param Filters Filter condition. `NetworkAclIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter condition. `NetworkAclIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as vpc-12345678.</li>
 <li>network-acl-id - String - (Filter condition) Network ACL instance ID, such as acl-12345678.</li>
 <li>network-acl-name - String - (Filter condition) Network ACL instance name.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default: 0.
                      * @return Offset Offset. Default: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default: 0.
-                     * @param Offset Offset. Default: 0.
+                     * @param _offset Offset. Default: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Returned quantity. Default: 20. Value range: 1-100.
                      * @return Limit Returned quantity. Default: 20. Value range: 1-100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Returned quantity. Default: 20. Value range: 1-100.
-                     * @param Limit Returned quantity. Default: 20. Value range: 1-100.
+                     * @param _limit Returned quantity. Default: 20. Value range: 1-100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Template name
                      * @return Name Template name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Template name
-                     * @param Name Template name
+                     * @param _name Template name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
                      * @return Level Template dimension. Valid values:
 `instance`
 `cluster`
+                     * 
                      */
                     std::string GetLevel() const;
 
@@ -80,15 +84,17 @@ namespace TencentCloud
                      * 设置Template dimension. Valid values:
 `instance`
 `cluster`
-                     * @param Level Template dimension. Valid values:
+                     * @param _level Template dimension. Valid values:
 `instance`
 `cluster`
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -97,20 +103,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Describe Template description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescribe() const;
 
                     /**
                      * 设置Template description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Describe Template description
+                     * @param _describe Template description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescribe(const std::string& _describe);
 
                     /**
                      * 判断参数 Describe 是否已赋值
                      * @return Describe 是否已赋值
+                     * 
                      */
                     bool DescribeHasBeenSet() const;
 
@@ -121,6 +130,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return RecordRules This parameter is valid if `Level` is `instance`.
 List of recording rules in the template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetRecordRules() const;
 
@@ -128,15 +138,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `instance`.
 List of recording rules in the template
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordRules This parameter is valid if `Level` is `instance`.
+                     * @param _recordRules This parameter is valid if `Level` is `instance`.
 List of recording rules in the template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecordRules(const std::vector<PrometheusConfigItem>& _recordRules);
 
                     /**
                      * 判断参数 RecordRules 是否已赋值
                      * @return RecordRules 是否已赋值
+                     * 
                      */
                     bool RecordRulesHasBeenSet() const;
 
@@ -147,6 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ServiceMonitors This parameter is valid if `Level` is `cluster`.
 List of ServiceMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetServiceMonitors() const;
 
@@ -154,15 +167,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `cluster`.
 List of ServiceMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceMonitors This parameter is valid if `Level` is `cluster`.
+                     * @param _serviceMonitors This parameter is valid if `Level` is `cluster`.
 List of ServiceMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceMonitors(const std::vector<PrometheusConfigItem>& _serviceMonitors);
 
                     /**
                      * 判断参数 ServiceMonitors 是否已赋值
                      * @return ServiceMonitors 是否已赋值
+                     * 
                      */
                     bool ServiceMonitorsHasBeenSet() const;
 
@@ -173,6 +188,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return PodMonitors This parameter is valid if `Level` is `cluster`.
 List of PodMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetPodMonitors() const;
 
@@ -180,15 +196,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `cluster`.
 List of PodMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PodMonitors This parameter is valid if `Level` is `cluster`.
+                     * @param _podMonitors This parameter is valid if `Level` is `cluster`.
 List of PodMonitor rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPodMonitors(const std::vector<PrometheusConfigItem>& _podMonitors);
 
                     /**
                      * 判断参数 PodMonitors 是否已赋值
                      * @return PodMonitors 是否已赋值
+                     * 
                      */
                     bool PodMonitorsHasBeenSet() const;
 
@@ -199,6 +217,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return RawJobs This parameter is valid if `Level` is `cluster`.
 List of RawJob rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusConfigItem> GetRawJobs() const;
 
@@ -206,15 +225,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `cluster`.
 List of RawJob rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RawJobs This parameter is valid if `Level` is `cluster`.
+                     * @param _rawJobs This parameter is valid if `Level` is `cluster`.
 List of RawJob rules in the template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRawJobs(const std::vector<PrometheusConfigItem>& _rawJobs);
 
                     /**
                      * 判断参数 RawJobs 是否已赋值
                      * @return RawJobs 是否已赋值
+                     * 
                      */
                     bool RawJobsHasBeenSet() const;
 
@@ -223,20 +244,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateId Template ID, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置Template ID, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TemplateId Template ID, which is used as an output parameter.
+                     * @param _templateId Template ID, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
@@ -245,20 +269,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Last update time, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last update time, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Last update time, which is used as an output parameter.
+                     * @param _updateTime Last update time, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -267,20 +294,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version The current version, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置The current version, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Version The current version, which is used as an output parameter.
+                     * @param _version The current version, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -289,20 +319,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsDefault Whether it is the default template provided by the system, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsDefault() const;
 
                     /**
                      * 设置Whether it is the default template provided by the system, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsDefault Whether it is the default template provided by the system, which is used as an output parameter.
+                     * @param _isDefault Whether it is the default template provided by the system, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsDefault(const bool& _isDefault);
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
@@ -313,6 +346,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return AlertDetailRules This parameter is valid if `Level` is `instance`.
 List of alert configurations in the template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PrometheusAlertPolicyItem> GetAlertDetailRules() const;
 
@@ -320,15 +354,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置This parameter is valid if `Level` is `instance`.
 List of alert configurations in the template
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AlertDetailRules This parameter is valid if `Level` is `instance`.
+                     * @param _alertDetailRules This parameter is valid if `Level` is `instance`.
 List of alert configurations in the template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlertDetailRules(const std::vector<PrometheusAlertPolicyItem>& _alertDetailRules);
 
                     /**
                      * 判断参数 AlertDetailRules 是否已赋值
                      * @return AlertDetailRules 是否已赋值
+                     * 
                      */
                     bool AlertDetailRulesHasBeenSet() const;
 
@@ -337,20 +373,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TargetsTotal Number of associated instances
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTargetsTotal() const;
 
                     /**
                      * 设置Number of associated instances
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TargetsTotal Number of associated instances
+                     * @param _targetsTotal Number of associated instances
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargetsTotal(const int64_t& _targetsTotal);
 
                     /**
                      * 判断参数 TargetsTotal 是否已赋值
                      * @return TargetsTotal 是否已赋值
+                     * 
                      */
                     bool TargetsTotalHasBeenSet() const;
 

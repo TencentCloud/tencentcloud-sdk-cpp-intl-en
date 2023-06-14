@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The domains to check.
                      * @return Domains The domains to check.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domains to check.
-                     * @param Domains The domains to check.
+                     * @param _domains The domains to check.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取The period (1 to 10 years). If this parameter is left empty, premium domains cannot be checked.
                      * @return Period The period (1 to 10 years). If this parameter is left empty, premium domains cannot be checked.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置The period (1 to 10 years). If this parameter is left empty, premium domains cannot be checked.
-                     * @param Period The period (1 to 10 years). If this parameter is left empty, premium domains cannot be checked.
+                     * @param _period The period (1 to 10 years). If this parameter is left empty, premium domains cannot be checked.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Payment method. Valid value: `1` (account balance).
                      * @return PayMode Payment method. Valid value: `1` (account balance).
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置Payment method. Valid value: `1` (account balance).
-                     * @param PayMode Payment method. Valid value: `1` (account balance).
+                     * @param _payMode Payment method. Valid value: `1` (account balance).
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable auto-renewal.
                      * @return AutoRenewFlag Whether to enable auto-renewal.
+                     * 
                      */
                     bool GetAutoRenewFlag() const;
 
                     /**
                      * 设置Whether to enable auto-renewal.
-                     * @param AutoRenewFlag Whether to enable auto-renewal.
+                     * @param _autoRenewFlag Whether to enable auto-renewal.
+                     * 
                      */
                     void SetAutoRenewFlag(const bool& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 

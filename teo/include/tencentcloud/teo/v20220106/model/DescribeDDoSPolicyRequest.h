@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Policy group ID
                      * @return PolicyId Policy group ID
+                     * 
                      */
                     int64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy group ID
-                     * @param PolicyId Policy group ID
+                     * @param _policyId Policy group ID
+                     * 
                      */
                     void SetPolicyId(const int64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Top-level domain name (site)
                      * @return ZoneId Top-level domain name (site)
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Top-level domain name (site)
-                     * @param ZoneId Top-level domain name (site)
+                     * @param _zoneId Top-level domain name (site)
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 

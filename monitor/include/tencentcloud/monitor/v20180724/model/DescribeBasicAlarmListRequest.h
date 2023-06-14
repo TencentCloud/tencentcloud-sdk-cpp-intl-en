@@ -45,216 +45,252 @@ namespace TencentCloud
                     /**
                      * 获取API component name. The value for the current API is monitor.
                      * @return Module API component name. The value for the current API is monitor.
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置API component name. The value for the current API is monitor.
-                     * @param Module API component name. The value for the current API is monitor.
+                     * @param _module API component name. The value for the current API is monitor.
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Start time, which is the timestamp one day prior by default.
                      * @return StartTime Start time, which is the timestamp one day prior by default.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置Start time, which is the timestamp one day prior by default.
-                     * @param StartTime Start time, which is the timestamp one day prior by default.
+                     * @param _startTime Start time, which is the timestamp one day prior by default.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time, which is the current timestamp by default.
                      * @return EndTime End time, which is the current timestamp by default.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置End time, which is the current timestamp by default.
-                     * @param EndTime End time, which is the current timestamp by default.
+                     * @param _endTime End time, which is the current timestamp by default.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
                      * @return Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
-                     * @param Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+                     * @param _limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Parameter offset on each page. The value starts from 0 and the default value is 0.
                      * @return Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Parameter offset on each page. The value starts from 0 and the default value is 0.
-                     * @param Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+                     * @param _offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting by occurrence time. Valid values: asc and desc.
                      * @return OccurTimeOrder Sorting by occurrence time. Valid values: asc and desc.
+                     * 
                      */
                     std::string GetOccurTimeOrder() const;
 
                     /**
                      * 设置Sorting by occurrence time. Valid values: asc and desc.
-                     * @param OccurTimeOrder Sorting by occurrence time. Valid values: asc and desc.
+                     * @param _occurTimeOrder Sorting by occurrence time. Valid values: asc and desc.
+                     * 
                      */
                     void SetOccurTimeOrder(const std::string& _occurTimeOrder);
 
                     /**
                      * 判断参数 OccurTimeOrder 是否已赋值
                      * @return OccurTimeOrder 是否已赋值
+                     * 
                      */
                     bool OccurTimeOrderHasBeenSet() const;
 
                     /**
                      * 获取Filter by project ID.
                      * @return ProjectIds Filter by project ID.
+                     * 
                      */
                     std::vector<int64_t> GetProjectIds() const;
 
                     /**
                      * 设置Filter by project ID.
-                     * @param ProjectIds Filter by project ID.
+                     * @param _projectIds Filter by project ID.
+                     * 
                      */
                     void SetProjectIds(const std::vector<int64_t>& _projectIds);
 
                     /**
                      * 判断参数 ProjectIds 是否已赋值
                      * @return ProjectIds 是否已赋值
+                     * 
                      */
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
                      * 获取Filter by policy type.
                      * @return ViewNames Filter by policy type.
+                     * 
                      */
                     std::vector<std::string> GetViewNames() const;
 
                     /**
                      * 设置Filter by policy type.
-                     * @param ViewNames Filter by policy type.
+                     * @param _viewNames Filter by policy type.
+                     * 
                      */
                     void SetViewNames(const std::vector<std::string>& _viewNames);
 
                     /**
                      * 判断参数 ViewNames 是否已赋值
                      * @return ViewNames 是否已赋值
+                     * 
                      */
                     bool ViewNamesHasBeenSet() const;
 
                     /**
                      * 获取Filter by alarm status.
                      * @return AlarmStatus Filter by alarm status.
+                     * 
                      */
                     std::vector<int64_t> GetAlarmStatus() const;
 
                     /**
                      * 设置Filter by alarm status.
-                     * @param AlarmStatus Filter by alarm status.
+                     * @param _alarmStatus Filter by alarm status.
+                     * 
                      */
                     void SetAlarmStatus(const std::vector<int64_t>& _alarmStatus);
 
                     /**
                      * 判断参数 AlarmStatus 是否已赋值
                      * @return AlarmStatus 是否已赋值
+                     * 
                      */
                     bool AlarmStatusHasBeenSet() const;
 
                     /**
                      * 获取Filter by alarm object.
                      * @return ObjLike Filter by alarm object.
+                     * 
                      */
                     std::string GetObjLike() const;
 
                     /**
                      * 设置Filter by alarm object.
-                     * @param ObjLike Filter by alarm object.
+                     * @param _objLike Filter by alarm object.
+                     * 
                      */
                     void SetObjLike(const std::string& _objLike);
 
                     /**
                      * 判断参数 ObjLike 是否已赋值
                      * @return ObjLike 是否已赋值
+                     * 
                      */
                     bool ObjLikeHasBeenSet() const;
 
                     /**
                      * 获取Filter by instance group ID.
                      * @return InstanceGroupIds Filter by instance group ID.
+                     * 
                      */
                     std::vector<int64_t> GetInstanceGroupIds() const;
 
                     /**
                      * 设置Filter by instance group ID.
-                     * @param InstanceGroupIds Filter by instance group ID.
+                     * @param _instanceGroupIds Filter by instance group ID.
+                     * 
                      */
                     void SetInstanceGroupIds(const std::vector<int64_t>& _instanceGroupIds);
 
                     /**
                      * 判断参数 InstanceGroupIds 是否已赋值
                      * @return InstanceGroupIds 是否已赋值
+                     * 
                      */
                     bool InstanceGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Filtering by metric names
                      * @return MetricNames Filtering by metric names
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
                      * 设置Filtering by metric names
-                     * @param MetricNames Filtering by metric names
+                     * @param _metricNames Filtering by metric names
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 

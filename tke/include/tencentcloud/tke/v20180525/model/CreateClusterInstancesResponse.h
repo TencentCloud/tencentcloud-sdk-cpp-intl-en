@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceIdSet Instance ID
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 

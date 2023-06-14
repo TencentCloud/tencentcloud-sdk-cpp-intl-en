@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
                      * @return InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
-                     * @param InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
+                     * @param _instanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
                      * @return InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
                      * 设置Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
-                     * @param InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * @param _instanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
                     /**
                      * 判断参数 InstanceChargePrepaid 是否已赋值
                      * @return InstanceChargePrepaid 是否已赋值
+                     * 
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
                      * 获取Whether to renew the data disk. Default: `false`.
                      * @return RenewDataDisk Whether to renew the data disk. Default: `false`.
+                     * 
                      */
                     bool GetRenewDataDisk() const;
 
                     /**
                      * 设置Whether to renew the data disk. Default: `false`.
-                     * @param RenewDataDisk Whether to renew the data disk. Default: `false`.
+                     * @param _renewDataDisk Whether to renew the data disk. Default: `false`.
+                     * 
                      */
                     void SetRenewDataDisk(const bool& _renewDataDisk);
 
                     /**
                      * 判断参数 RenewDataDisk 是否已赋值
                      * @return RenewDataDisk 是否已赋值
+                     * 
                      */
                     bool RenewDataDiskHasBeenSet() const;
 
                     /**
                      * 获取Whether to align the data disk expiration with the instance expiration time. Default: `false`.
                      * @return AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
+                     * 
                      */
                     bool GetAlignInstanceExpiredTime() const;
 
                     /**
                      * 设置Whether to align the data disk expiration with the instance expiration time. Default: `false`.
-                     * @param AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
+                     * @param _alignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
+                     * 
                      */
                     void SetAlignInstanceExpiredTime(const bool& _alignInstanceExpiredTime);
 
                     /**
                      * 判断参数 AlignInstanceExpiredTime 是否已赋值
                      * @return AlignInstanceExpiredTime 是否已赋值
+                     * 
                      */
                     bool AlignInstanceExpiredTimeHasBeenSet() const;
 

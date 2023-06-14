@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Name of the function for which to set the provisioned concurrency
                      * @return FunctionName Name of the function for which to set the provisioned concurrency
+                     * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
                      * 设置Name of the function for which to set the provisioned concurrency
-                     * @param FunctionName Name of the function for which to set the provisioned concurrency
+                     * @param _functionName Name of the function for which to set the provisioned concurrency
+                     * 
                      */
                     void SetFunctionName(const std::string& _functionName);
 
                     /**
                      * 判断参数 FunctionName 是否已赋值
                      * @return FunctionName 是否已赋值
+                     * 
                      */
                     bool FunctionNameHasBeenSet() const;
 
                     /**
                      * 获取Function version number. Note: the `$LATEST` version does not support provisioned concurrency
                      * @return Qualifier Function version number. Note: the `$LATEST` version does not support provisioned concurrency
+                     * 
                      */
                     std::string GetQualifier() const;
 
                     /**
                      * 设置Function version number. Note: the `$LATEST` version does not support provisioned concurrency
-                     * @param Qualifier Function version number. Note: the `$LATEST` version does not support provisioned concurrency
+                     * @param _qualifier Function version number. Note: the `$LATEST` version does not support provisioned concurrency
+                     * 
                      */
                     void SetQualifier(const std::string& _qualifier);
 
                     /**
                      * 判断参数 Qualifier 是否已赋值
                      * @return Qualifier 是否已赋值
+                     * 
                      */
                     bool QualifierHasBeenSet() const;
 
                     /**
                      * 获取Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
                      * @return VersionProvisionedConcurrencyNum Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
+                     * 
                      */
                     uint64_t GetVersionProvisionedConcurrencyNum() const;
 
                     /**
                      * 设置Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
-                     * @param VersionProvisionedConcurrencyNum Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
+                     * @param _versionProvisionedConcurrencyNum Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
+                     * 
                      */
                     void SetVersionProvisionedConcurrencyNum(const uint64_t& _versionProvisionedConcurrencyNum);
 
                     /**
                      * 判断参数 VersionProvisionedConcurrencyNum 是否已赋值
                      * @return VersionProvisionedConcurrencyNum 是否已赋值
+                     * 
                      */
                     bool VersionProvisionedConcurrencyNumHasBeenSet() const;
 
                     /**
                      * 获取Function namespace. Default value: `default`
                      * @return Namespace Function namespace. Default value: `default`
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Function namespace. Default value: `default`
-                     * @param Namespace Function namespace. Default value: `default`
+                     * @param _namespace Function namespace. Default value: `default`
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Scheduled provisioned concurrency scaling action
                      * @return TriggerActions Scheduled provisioned concurrency scaling action
+                     * 
                      */
                     std::vector<TriggerAction> GetTriggerActions() const;
 
                     /**
                      * 设置Scheduled provisioned concurrency scaling action
-                     * @param TriggerActions Scheduled provisioned concurrency scaling action
+                     * @param _triggerActions Scheduled provisioned concurrency scaling action
+                     * 
                      */
                     void SetTriggerActions(const std::vector<TriggerAction>& _triggerActions);
 
                     /**
                      * 判断参数 TriggerActions 是否已赋值
                      * @return TriggerActions 是否已赋值
+                     * 
                      */
                     bool TriggerActionsHasBeenSet() const;
 
@@ -146,6 +161,7 @@ If `ConcurrencyUtilizationTracking` is passed in,
 If `ConcurrencyUtilizationTracking` is passed in, 
 
 `TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+                     * 
                      */
                     std::string GetProvisionedType() const;
 
@@ -156,72 +172,83 @@ If `ConcurrencyUtilizationTracking` is passed in,
 If `ConcurrencyUtilizationTracking` is passed in, 
 
 `TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
-                     * @param ProvisionedType Specifies the provisioned concurrency type.
+                     * @param _provisionedType Specifies the provisioned concurrency type.
 `Default`: Static provisioned concurrency. 
 `ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
 If `ConcurrencyUtilizationTracking` is passed in, 
 
 `TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+                     * 
                      */
                     void SetProvisionedType(const std::string& _provisionedType);
 
                     /**
                      * 判断参数 ProvisionedType 是否已赋值
                      * @return ProvisionedType 是否已赋值
+                     * 
                      */
                     bool ProvisionedTypeHasBeenSet() const;
 
                     /**
                      * 获取The target concurrency utilization. Range: (0,1) (two decimal places)
                      * @return TrackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+                     * 
                      */
                     double GetTrackingTarget() const;
 
                     /**
                      * 设置The target concurrency utilization. Range: (0,1) (two decimal places)
-                     * @param TrackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+                     * @param _trackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+                     * 
                      */
                     void SetTrackingTarget(const double& _trackingTarget);
 
                     /**
                      * 判断参数 TrackingTarget 是否已赋值
                      * @return TrackingTarget 是否已赋值
+                     * 
                      */
                     bool TrackingTargetHasBeenSet() const;
 
                     /**
                      * 获取The minimum number of instances. It can not be smaller than `1`.
                      * @return MinCapacity The minimum number of instances. It can not be smaller than `1`.
+                     * 
                      */
                     uint64_t GetMinCapacity() const;
 
                     /**
                      * 设置The minimum number of instances. It can not be smaller than `1`.
-                     * @param MinCapacity The minimum number of instances. It can not be smaller than `1`.
+                     * @param _minCapacity The minimum number of instances. It can not be smaller than `1`.
+                     * 
                      */
                     void SetMinCapacity(const uint64_t& _minCapacity);
 
                     /**
                      * 判断参数 MinCapacity 是否已赋值
                      * @return MinCapacity 是否已赋值
+                     * 
                      */
                     bool MinCapacityHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of instances
                      * @return MaxCapacity The maximum number of instances
+                     * 
                      */
                     uint64_t GetMaxCapacity() const;
 
                     /**
                      * 设置The maximum number of instances
-                     * @param MaxCapacity The maximum number of instances
+                     * @param _maxCapacity The maximum number of instances
+                     * 
                      */
                     void SetMaxCapacity(const uint64_t& _maxCapacity);
 
                     /**
                      * 判断参数 MaxCapacity 是否已赋值
                      * @return MaxCapacity 是否已赋值
+                     * 
                      */
                     bool MaxCapacityHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of connections.
                      * @return DirectConnectSet List of connections.
+                     * 
                      */
                     std::vector<DirectConnect> GetDirectConnectSet() const;
 
                     /**
                      * 判断参数 DirectConnectSet 是否已赋值
                      * @return DirectConnectSet 是否已赋值
+                     * 
                      */
                     bool DirectConnectSetHasBeenSet() const;
 
                     /**
                      * 获取Number of eligible connection lists.
                      * @return TotalCount Number of eligible connection lists.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return AllSignLaw Whether all connections under the account have the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     bool GetAllSignLaw() const;
 
                     /**
                      * 判断参数 AllSignLaw 是否已赋值
                      * @return AllSignLaw 是否已赋值
+                     * 
                      */
                     bool AllSignLawHasBeenSet() const;
 

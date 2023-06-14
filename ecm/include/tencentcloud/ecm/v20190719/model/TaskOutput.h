@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Task ID
                      * @return TaskId Task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID
-                     * @param TaskId Task ID
+                     * @param _taskId Task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Status description
                      * @return Message Status description
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Status description
-                     * @param Message Status description
+                     * @param _message Status description
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Status value. Valid values: SUCCESS, FAILED, OPERATING
                      * @return Status Status value. Valid values: SUCCESS, FAILED, OPERATING
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status value. Valid values: SUCCESS, FAILED, OPERATING
-                     * @param Status Status value. Valid values: SUCCESS, FAILED, OPERATING
+                     * @param _status Status value. Valid values: SUCCESS, FAILED, OPERATING
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Task submission time
                      * @return AddTime Task submission time
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置Task submission time
-                     * @param AddTime Task submission time
+                     * @param _addTime Task submission time
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
                     /**
                      * 获取Task end time
                      * @return EndTime Task end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Task end time
-                     * @param EndTime Task end time
+                     * @param _endTime Task end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Operation name
                      * @return Operation Operation name
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置Operation name
-                     * @param Operation Operation name
+                     * @param _operation Operation name
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 

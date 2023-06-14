@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Auto scaling group ID.
                      * @return AutoScalingGroupId Auto scaling group ID.
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置Auto scaling group ID.
-                     * @param AutoScalingGroupId Auto scaling group ID.
+                     * @param _autoScalingGroupId Auto scaling group ID.
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID.
                      * @return InstanceIds Instance ID.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceIds Instance ID.
+                     * @param _instanceIds Instance ID.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable scale-in protection for this instance
                      * @return ProtectedFromScaleIn Whether to enable scale-in protection for this instance
+                     * 
                      */
                     bool GetProtectedFromScaleIn() const;
 
                     /**
                      * 设置Whether to enable scale-in protection for this instance
-                     * @param ProtectedFromScaleIn Whether to enable scale-in protection for this instance
+                     * @param _protectedFromScaleIn Whether to enable scale-in protection for this instance
+                     * 
                      */
                     void SetProtectedFromScaleIn(const bool& _protectedFromScaleIn);
 
                     /**
                      * 判断参数 ProtectedFromScaleIn 是否已赋值
                      * @return ProtectedFromScaleIn 是否已赋值
+                     * 
                      */
                     bool ProtectedFromScaleInHasBeenSet() const;
 

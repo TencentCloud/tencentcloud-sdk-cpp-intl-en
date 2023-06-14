@@ -50,180 +50,210 @@ namespace TencentCloud
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return ModTime Update time
+                     * 
                      */
                     std::string GetModTime() const;
 
                     /**
                      * 设置Update time
-                     * @param ModTime Update time
+                     * @param _modTime Update time
+                     * 
                      */
                     void SetModTime(const std::string& _modTime);
 
                     /**
                      * 判断参数 ModTime 是否已赋值
                      * @return ModTime 是否已赋值
+                     * 
                      */
                     bool ModTimeHasBeenSet() const;
 
                     /**
                      * 获取Switch
                      * @return Enable Switch
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Switch
-                     * @param Enable Switch
+                     * @param _enable Switch
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return AddTime Creation time
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param AddTime Creation time
+                     * @param _addTime Creation time
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
                     /**
                      * 获取Connector ID
                      * @return ConnectionId Connector ID
+                     * 
                      */
                     std::string GetConnectionId() const;
 
                     /**
                      * 设置Connector ID
-                     * @param ConnectionId Connector ID
+                     * @param _connectionId Connector ID
+                     * 
                      */
                     void SetConnectionId(const std::string& _connectionId);
 
                     /**
                      * 判断参数 ConnectionId 是否已赋值
                      * @return ConnectionId 是否已赋值
+                     * 
                      */
                     bool ConnectionIdHasBeenSet() const;
 
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Connector description
                      * @return ConnectionDescription Connector description
+                     * 
                      */
                     ConnectionDescription GetConnectionDescription() const;
 
                     /**
                      * 设置Connector description
-                     * @param ConnectionDescription Connector description
+                     * @param _connectionDescription Connector description
+                     * 
                      */
                     void SetConnectionDescription(const ConnectionDescription& _connectionDescription);
 
                     /**
                      * 判断参数 ConnectionDescription 是否已赋值
                      * @return ConnectionDescription 是否已赋值
+                     * 
                      */
                     bool ConnectionDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Connector name
                      * @return ConnectionName Connector name
+                     * 
                      */
                     std::string GetConnectionName() const;
 
                     /**
                      * 设置Connector name
-                     * @param ConnectionName Connector name
+                     * @param _connectionName Connector name
+                     * 
                      */
                     void SetConnectionName(const std::string& _connectionName);
 
                     /**
                      * 判断参数 ConnectionName 是否已赋值
                      * @return ConnectionName 是否已赋值
+                     * 
                      */
                     bool ConnectionNameHasBeenSet() const;
 
                     /**
                      * 获取Type
                      * @return Type Type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type
-                     * @param Type Type
+                     * @param _type Type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

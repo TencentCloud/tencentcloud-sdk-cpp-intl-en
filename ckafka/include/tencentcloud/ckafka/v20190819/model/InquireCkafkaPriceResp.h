@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstancePrice Instance price
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InquiryPrice GetInstancePrice() const;
 
                     /**
                      * 设置Instance price
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstancePrice Instance price
+                     * @param _instancePrice Instance price
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstancePrice(const InquiryPrice& _instancePrice);
 
                     /**
                      * 判断参数 InstancePrice 是否已赋值
                      * @return InstancePrice 是否已赋值
+                     * 
                      */
                     bool InstancePriceHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublicNetworkBandwidthPrice Public network bandwidth price
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InquiryPrice GetPublicNetworkBandwidthPrice() const;
 
                     /**
                      * 设置Public network bandwidth price
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublicNetworkBandwidthPrice Public network bandwidth price
+                     * @param _publicNetworkBandwidthPrice Public network bandwidth price
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicNetworkBandwidthPrice(const InquiryPrice& _publicNetworkBandwidthPrice);
 
                     /**
                      * 判断参数 PublicNetworkBandwidthPrice 是否已赋值
                      * @return PublicNetworkBandwidthPrice 是否已赋值
+                     * 
                      */
                     bool PublicNetworkBandwidthPriceHasBeenSet() const;
 

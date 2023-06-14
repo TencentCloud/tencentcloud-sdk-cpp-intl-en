@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the proxy
                      * @return ProxyId ID of the proxy
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置ID of the proxy
-                     * @param ProxyId ID of the proxy
+                     * @param _proxyId ID of the proxy
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -103,6 +112,7 @@ namespace TencentCloud
                      * @return Status Status
 `offline`: Disabled
 `online`: Enabled
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -110,15 +120,17 @@ namespace TencentCloud
                      * 设置Status
 `offline`: Disabled
 `online`: Enabled
-                     * @param Status Status
+                     * @param _status Status
 `offline`: Disabled
 `online`: Enabled
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

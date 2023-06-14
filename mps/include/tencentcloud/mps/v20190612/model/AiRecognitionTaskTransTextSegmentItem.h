@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The confidence score for a segment. Value range: 0-100.
                      * @return Confidence The confidence score for a segment. Value range: 0-100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置The confidence score for a segment. Value range: 0-100.
-                     * @param Confidence The confidence score for a segment. Value range: 0-100.
+                     * @param _confidence The confidence score for a segment. Value range: 0-100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取The start time offset (seconds) of a segment.
                      * @return StartTimeOffset The start time offset (seconds) of a segment.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置The start time offset (seconds) of a segment.
-                     * @param StartTimeOffset The start time offset (seconds) of a segment.
+                     * @param _startTimeOffset The start time offset (seconds) of a segment.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取The end time offset (seconds) of a segment.
                      * @return EndTimeOffset The end time offset (seconds) of a segment.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置The end time offset (seconds) of a segment.
-                     * @param EndTimeOffset The end time offset (seconds) of a segment.
+                     * @param _endTimeOffset The end time offset (seconds) of a segment.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取The text transcript.
                      * @return Text The text transcript.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置The text transcript.
-                     * @param Text The text transcript.
+                     * @param _text The text transcript.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
                     /**
                      * 获取The translation.
                      * @return Trans The translation.
+                     * 
                      */
                     std::string GetTrans() const;
 
                     /**
                      * 设置The translation.
-                     * @param Trans The translation.
+                     * @param _trans The translation.
+                     * 
                      */
                     void SetTrans(const std::string& _trans);
 
                     /**
                      * 判断参数 Trans 是否已赋值
                      * @return Trans 是否已赋值
+                     * 
                      */
                     bool TransHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the site to be queried.
                      * @return ZoneId The ID of the site to be queried.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The ID of the site to be queried.
-                     * @param ZoneId The ID of the site to be queried.
+                     * @param _zoneId The ID of the site to be queried.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The subdomain name to be queried.
                      * @return Domain The subdomain name to be queried.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The subdomain name to be queried.
-                     * @param Domain The subdomain name to be queried.
+                     * @param _domain The subdomain name to be queried.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return RuleType Rule type. Values:
 <li>`acl`: Custom rules;</li>
 <li>`rate`: Rate limiting rules.</li>All rules will be queried if this field is not specified.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -92,87 +99,101 @@ namespace TencentCloud
                      * 设置Rule type. Values:
 <li>`acl`: Custom rules;</li>
 <li>`rate`: Rate limiting rules.</li>All rules will be queried if this field is not specified.
-                     * @param RuleType Rule type. Values:
+                     * @param _ruleType Rule type. Values:
 <li>`acl`: Custom rules;</li>
 <li>`rate`: Rate limiting rules.</li>All rules will be queried if this field is not specified.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
                     /**
                      * 获取The rule ID.
                      * @return RuleId The rule ID.
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置The rule ID.
-                     * @param RuleId The rule ID.
+                     * @param _ruleId The rule ID.
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取The client IP.
                      * @return SourceClientIp The client IP.
+                     * 
                      */
                     std::string GetSourceClientIp() const;
 
                     /**
                      * 设置The client IP.
-                     * @param SourceClientIp The client IP.
+                     * @param _sourceClientIp The client IP.
+                     * 
                      */
                     void SetSourceClientIp(const std::string& _sourceClientIp);
 
                     /**
                      * 判断参数 SourceClientIp 是否已赋值
                      * @return SourceClientIp 是否已赋值
+                     * 
                      */
                     bool SourceClientIpHasBeenSet() const;
 
                     /**
                      * 获取Limit on paginated queries. Default value: 20. Maximum value: 1000.
                      * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit on paginated queries. Default value: 20. Maximum value: 1000.
-                     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * @param _limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The page offset. Default value: 0.
                      * @return Offset The page offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The page offset. Default value: 0.
-                     * @param Offset The page offset. Default value: 0.
+                     * @param _offset The page offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -183,6 +204,7 @@ namespace TencentCloud
                      * @return Area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -190,15 +212,17 @@ namespace TencentCloud
                      * 设置Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     * @param Area Data storage region. Values:
+                     * @param _area Data storage region. Values:
 <li>`overseas`: Global (outside the Chinese mainland);</li>
 <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

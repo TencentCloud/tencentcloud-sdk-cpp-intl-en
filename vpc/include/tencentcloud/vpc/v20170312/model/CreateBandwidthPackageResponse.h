@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the bandwidth package.
                      * @return BandwidthPackageId The unique ID of the bandwidth package.
+                     * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
                      * 判断参数 BandwidthPackageId 是否已赋值
                      * @return BandwidthPackageId 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
                      * @return BandwidthPackageIds The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
+                     * 
                      */
                     std::vector<std::string> GetBandwidthPackageIds() const;
 
                     /**
                      * 判断参数 BandwidthPackageIds 是否已赋值
                      * @return BandwidthPackageIds 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageIdsHasBeenSet() const;
 

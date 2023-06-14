@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability category ID
                      * @return VulId Vulnerability category ID
+                     * 
                      */
                     uint64_t GetVulId() const;
 
                     /**
                      * 设置Vulnerability category ID
-                     * @param VulId Vulnerability category ID
+                     * @param _vulId Vulnerability category ID
+                     * 
                      */
                     void SetVulId(const uint64_t& _vulId);
 
                     /**
                      * 判断参数 VulId 是否已赋值
                      * @return VulId 是否已赋值
+                     * 
                      */
                     bool VulIdHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability name
                      * @return VulName Vulnerability name
+                     * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 设置Vulnerability name
-                     * @param VulName Vulnerability name
+                     * @param _vulName Vulnerability name
+                     * 
                      */
                     void SetVulName(const std::string& _vulName);
 
                     /**
                      * 判断参数 VulName 是否已赋值
                      * @return VulName 是否已赋值
+                     * 
                      */
                     bool VulNameHasBeenSet() const;
 
@@ -93,6 +99,7 @@ HIGH: high
 MIDDLE: medium
 LOW: low
 NOTICE: notice
+                     * 
                      */
                     std::string GetVulLevel() const;
 
@@ -102,53 +109,61 @@ HIGH: high
 MIDDLE: medium
 LOW: low
 NOTICE: notice
-                     * @param VulLevel Vulnerability severity level:
+                     * @param _vulLevel Vulnerability severity level:
 HIGH: high
 MIDDLE: medium
 LOW: low
 NOTICE: notice
+                     * 
                      */
                     void SetVulLevel(const std::string& _vulLevel);
 
                     /**
                      * 判断参数 VulLevel 是否已赋值
                      * @return VulLevel 是否已赋值
+                     * 
                      */
                     bool VulLevelHasBeenSet() const;
 
                     /**
                      * 获取Last scanned time
                      * @return LastScanTime Last scanned time
+                     * 
                      */
                     std::string GetLastScanTime() const;
 
                     /**
                      * 设置Last scanned time
-                     * @param LastScanTime Last scanned time
+                     * @param _lastScanTime Last scanned time
+                     * 
                      */
                     void SetLastScanTime(const std::string& _lastScanTime);
 
                     /**
                      * 判断参数 LastScanTime 是否已赋值
                      * @return LastScanTime 是否已赋值
+                     * 
                      */
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of affected servers
                      * @return ImpactedHostNum Number of affected servers
+                     * 
                      */
                     uint64_t GetImpactedHostNum() const;
 
                     /**
                      * 设置Number of affected servers
-                     * @param ImpactedHostNum Number of affected servers
+                     * @param _impactedHostNum Number of affected servers
+                     * 
                      */
                     void SetImpactedHostNum(const uint64_t& _impactedHostNum);
 
                     /**
                      * 判断参数 ImpactedHostNum 是否已赋值
                      * @return ImpactedHostNum 是否已赋值
+                     * 
                      */
                     bool ImpactedHostNumHasBeenSet() const;
 
@@ -159,6 +174,7 @@ NOTICE: notice
                      * @return VulStatus Vulnerability status
 * UN_OPERATED: to be processed
 * FIXED: fixed
+                     * 
                      */
                     std::string GetVulStatus() const;
 
@@ -166,15 +182,17 @@ NOTICE: notice
                      * 设置Vulnerability status
 * UN_OPERATED: to be processed
 * FIXED: fixed
-                     * @param VulStatus Vulnerability status
+                     * @param _vulStatus Vulnerability status
 * UN_OPERATED: to be processed
 * FIXED: fixed
+                     * 
                      */
                     void SetVulStatus(const std::string& _vulStatus);
 
                     /**
                      * 判断参数 VulStatus 是否已赋值
                      * @return VulStatus 是否已赋值
+                     * 
                      */
                     bool VulStatusHasBeenSet() const;
 

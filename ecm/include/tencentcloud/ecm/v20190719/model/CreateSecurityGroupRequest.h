@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Security group name, which can be customized with up to 60 characters.
                      * @return GroupName Security group name, which can be customized with up to 60 characters.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Security group name, which can be customized with up to 60 characters.
-                     * @param GroupName Security group name, which can be customized with up to 60 characters.
+                     * @param _groupName Security group name, which can be customized with up to 60 characters.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Security group remarks, which can contain up to 100 characters.
                      * @return GroupDescription Security group remarks, which can contain up to 100 characters.
+                     * 
                      */
                     std::string GetGroupDescription() const;
 
                     /**
                      * 设置Security group remarks, which can contain up to 100 characters.
-                     * @param GroupDescription Security group remarks, which can contain up to 100 characters.
+                     * @param _groupDescription Security group remarks, which can contain up to 100 characters.
+                     * 
                      */
                     void SetGroupDescription(const std::string& _groupDescription);
 
                     /**
                      * 判断参数 GroupDescription 是否已赋值
                      * @return GroupDescription 是否已赋值
+                     * 
                      */
                     bool GroupDescriptionHasBeenSet() const;
 
                     /**
                      * 获取List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags List of bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

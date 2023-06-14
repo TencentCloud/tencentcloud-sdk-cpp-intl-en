@@ -47,20 +47,23 @@ namespace TencentCloud
 You can only query data in the last month (not including the current day).
                      * @return StartDayTime The query start time (UTC+8) in the format of yyyy-MM-dd.
 You can only query data in the last month (not including the current day).
+                     * 
                      */
                     std::string GetStartDayTime() const;
 
                     /**
                      * 设置The query start time (UTC+8) in the format of yyyy-MM-dd.
 You can only query data in the last month (not including the current day).
-                     * @param StartDayTime The query start time (UTC+8) in the format of yyyy-MM-dd.
+                     * @param _startDayTime The query start time (UTC+8) in the format of yyyy-MM-dd.
 You can only query data in the last month (not including the current day).
+                     * 
                      */
                     void SetStartDayTime(const std::string& _startDayTime);
 
                     /**
                      * 判断参数 StartDayTime 是否已赋值
                      * @return StartDayTime 是否已赋值
+                     * 
                      */
                     bool StartDayTimeHasBeenSet() const;
 
@@ -69,38 +72,44 @@ You can only query data in the last month (not including the current day).
 You can only query data in the last month (not including the current day).
                      * @return EndDayTime The query end time (UTC+8) in the format of yyyy-MM-dd.
 You can only query data in the last month (not including the current day).
+                     * 
                      */
                     std::string GetEndDayTime() const;
 
                     /**
                      * 设置The query end time (UTC+8) in the format of yyyy-MM-dd.
 You can only query data in the last month (not including the current day).
-                     * @param EndDayTime The query end time (UTC+8) in the format of yyyy-MM-dd.
+                     * @param _endDayTime The query end time (UTC+8) in the format of yyyy-MM-dd.
 You can only query data in the last month (not including the current day).
+                     * 
                      */
                     void SetEndDayTime(const std::string& _endDayTime);
 
                     /**
                      * 判断参数 EndDayTime 是否已赋值
                      * @return EndDayTime 是否已赋值
+                     * 
                      */
                     bool EndDayTimeHasBeenSet() const;
 
                     /**
                      * 获取The channel ID (optional).
                      * @return ChannelId The channel ID (optional).
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置The channel ID (optional).
-                     * @param ChannelId The channel ID (optional).
+                     * @param _channelId The channel ID (optional).
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 
@@ -109,20 +118,23 @@ You can only query data in the last month (not including the current day).
 The value cannot exceed 100.
                      * @return PageNum The number of pages. Default value: 1.
 The value cannot exceed 100.
+                     * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
                      * 设置The number of pages. Default value: 1.
 The value cannot exceed 100.
-                     * @param PageNum The number of pages. Default value: 1.
+                     * @param _pageNum The number of pages. Default value: 1.
 The value cannot exceed 100.
+                     * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -131,20 +143,23 @@ The value cannot exceed 100.
 Value range: 1-1000.
                      * @return PageSize The number of records per page. Default value: 10.
 Value range: 1-1000.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置The number of records per page. Default value: 10.
 Value range: 1-1000.
-                     * @param PageSize The number of records per page. Default value: 10.
+                     * @param _pageSize The number of records per page. Default value: 10.
 Value range: 1-1000.
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

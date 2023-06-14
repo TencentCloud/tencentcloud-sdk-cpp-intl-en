@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取X-coordinate of top-left point.
                      * @return X X-coordinate of top-left point.
+                     * 
                      */
                     int64_t GetX() const;
 
                     /**
                      * 设置X-coordinate of top-left point.
-                     * @param X X-coordinate of top-left point.
+                     * @param _x X-coordinate of top-left point.
+                     * 
                      */
                     void SetX(const int64_t& _x);
 
                     /**
                      * 判断参数 X 是否已赋值
                      * @return X 是否已赋值
+                     * 
                      */
                     bool XHasBeenSet() const;
 
                     /**
                      * 获取Y-coordinate of top-left point.
                      * @return Y Y-coordinate of top-left point.
+                     * 
                      */
                     int64_t GetY() const;
 
                     /**
                      * 设置Y-coordinate of top-left point.
-                     * @param Y Y-coordinate of top-left point.
+                     * @param _y Y-coordinate of top-left point.
+                     * 
                      */
                     void SetY(const int64_t& _y);
 
                     /**
                      * 判断参数 Y 是否已赋值
                      * @return Y 是否已赋值
+                     * 
                      */
                     bool YHasBeenSet() const;
 
                     /**
                      * 获取Width
                      * @return Width Width
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Width
-                     * @param Width Width
+                     * @param _width Width
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Height
                      * @return Height Height
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Height
-                     * @param Height Height
+                     * @param _height Height
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 

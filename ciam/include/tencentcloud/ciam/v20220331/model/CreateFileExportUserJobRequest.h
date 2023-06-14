@@ -47,18 +47,21 @@ namespace TencentCloud
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
 
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
+                     * 
                      */
                     std::string GetFormat() const;
 
@@ -79,16 +83,18 @@ namespace TencentCloud
 
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-                     * @param Format Exported data type
+                     * @param _format Exported data type
 
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
@@ -101,6 +107,7 @@ namespace TencentCloud
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -109,34 +116,39 @@ namespace TencentCloud
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
-                     * @param Filters Valid values of `Key`: `condition`, `userGroupId`.
+                     * @param _filters Valid values of `Key`: `condition`, `userGroupId`.
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Attributes and mapping names included in the exported user information. If this parameter is empty, all attributes will be included.
                      * @return ExportPropertyMaps Attributes and mapping names included in the exported user information. If this parameter is empty, all attributes will be included.
+                     * 
                      */
                     std::vector<ExportPropertyMap> GetExportPropertyMaps() const;
 
                     /**
                      * 设置Attributes and mapping names included in the exported user information. If this parameter is empty, all attributes will be included.
-                     * @param ExportPropertyMaps Attributes and mapping names included in the exported user information. If this parameter is empty, all attributes will be included.
+                     * @param _exportPropertyMaps Attributes and mapping names included in the exported user information. If this parameter is empty, all attributes will be included.
+                     * 
                      */
                     void SetExportPropertyMaps(const std::vector<ExportPropertyMap>& _exportPropertyMaps);
 
                     /**
                      * 判断参数 ExportPropertyMaps 是否已赋值
                      * @return ExportPropertyMaps 是否已赋值
+                     * 
                      */
                     bool ExportPropertyMapsHasBeenSet() const;
 

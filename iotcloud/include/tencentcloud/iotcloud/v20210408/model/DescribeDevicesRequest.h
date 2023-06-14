@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取ID of the product whose devices are queried
                      * @return ProductId ID of the product whose devices are queried
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置ID of the product whose devices are queried
-                     * @param ProductId ID of the product whose devices are queried
+                     * @param _productId ID of the product whose devices are queried
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取Offset, which starts from 0
                      * @return Offset Offset, which starts from 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which starts from 0
-                     * @param Offset Offset, which starts from 0
+                     * @param _offset Offset, which starts from 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Page size. Value range: 10-250
                      * @return Limit Page size. Value range: 10-250
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Page size. Value range: 10-250
-                     * @param Limit Page size. Value range: 10-250
+                     * @param _limit Page size. Value range: 10-250
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Device firmware version. If no value is passed in, devices of all firmware versions are returned. If `None-FirmwareVersion` is passed in, devices without version numbers are returned.
                      * @return FirmwareVersion Device firmware version. If no value is passed in, devices of all firmware versions are returned. If `None-FirmwareVersion` is passed in, devices without version numbers are returned.
+                     * 
                      */
                     std::string GetFirmwareVersion() const;
 
                     /**
                      * 设置Device firmware version. If no value is passed in, devices of all firmware versions are returned. If `None-FirmwareVersion` is passed in, devices without version numbers are returned.
-                     * @param FirmwareVersion Device firmware version. If no value is passed in, devices of all firmware versions are returned. If `None-FirmwareVersion` is passed in, devices without version numbers are returned.
+                     * @param _firmwareVersion Device firmware version. If no value is passed in, devices of all firmware versions are returned. If `None-FirmwareVersion` is passed in, devices without version numbers are returned.
+                     * 
                      */
                     void SetFirmwareVersion(const std::string& _firmwareVersion);
 
                     /**
                      * 判断参数 FirmwareVersion 是否已赋值
                      * @return FirmwareVersion 是否已赋值
+                     * 
                      */
                     bool FirmwareVersionHasBeenSet() const;
 
                     /**
                      * 获取Device name to query
                      * @return DeviceName Device name to query
+                     * 
                      */
                     std::string GetDeviceName() const;
 
                     /**
                      * 设置Device name to query
-                     * @param DeviceName Device name to query
+                     * @param _deviceName Device name to query
+                     * 
                      */
                     void SetDeviceName(const std::string& _deviceName);
 
                     /**
                      * 判断参数 DeviceName 是否已赋值
                      * @return DeviceName 是否已赋值
+                     * 
                      */
                     bool DeviceNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to query enabled or disabled devices. `0`: disabled devices; `1`: enabled devices. By default, both enabled and disabled devices are queried.
                      * @return EnableState Whether to query enabled or disabled devices. `0`: disabled devices; `1`: enabled devices. By default, both enabled and disabled devices are queried.
+                     * 
                      */
                     uint64_t GetEnableState() const;
 
                     /**
                      * 设置Whether to query enabled or disabled devices. `0`: disabled devices; `1`: enabled devices. By default, both enabled and disabled devices are queried.
-                     * @param EnableState Whether to query enabled or disabled devices. `0`: disabled devices; `1`: enabled devices. By default, both enabled and disabled devices are queried.
+                     * @param _enableState Whether to query enabled or disabled devices. `0`: disabled devices; `1`: enabled devices. By default, both enabled and disabled devices are queried.
+                     * 
                      */
                     void SetEnableState(const uint64_t& _enableState);
 
                     /**
                      * 判断参数 EnableState 是否已赋值
                      * @return EnableState 是否已赋值
+                     * 
                      */
                     bool EnableStateHasBeenSet() const;
 

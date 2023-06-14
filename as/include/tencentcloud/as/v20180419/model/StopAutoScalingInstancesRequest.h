@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The scaling group ID.
                      * @return AutoScalingGroupId The scaling group ID.
+                     * 
                      */
                     std::string GetAutoScalingGroupId() const;
 
                     /**
                      * 设置The scaling group ID.
-                     * @param AutoScalingGroupId The scaling group ID.
+                     * @param _autoScalingGroupId The scaling group ID.
+                     * 
                      */
                     void SetAutoScalingGroupId(const std::string& _autoScalingGroupId);
 
                     /**
                      * 判断参数 AutoScalingGroupId 是否已赋值
                      * @return AutoScalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取The list of the CVM instances you want to shut down.
                      * @return InstanceIds The list of the CVM instances you want to shut down.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置The list of the CVM instances you want to shut down.
-                     * @param InstanceIds The list of the CVM instances you want to shut down.
+                     * @param _instanceIds The list of the CVM instances you want to shut down.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
@@ -87,6 +93,7 @@ Default value: KEEP_CHARGING.
 KEEP_CHARGING: keep charging after shutdown.  
 STOP_CHARGING: stop charging after shutdown.
 Default value: KEEP_CHARGING.
+                     * 
                      */
                     std::string GetStoppedMode() const;
 
@@ -95,16 +102,18 @@ Default value: KEEP_CHARGING.
 KEEP_CHARGING: keep charging after shutdown.  
 STOP_CHARGING: stop charging after shutdown.
 Default value: KEEP_CHARGING.
-                     * @param StoppedMode Whether the shutdown instances will be charged. Valid values:  
+                     * @param _stoppedMode Whether the shutdown instances will be charged. Valid values:  
 KEEP_CHARGING: keep charging after shutdown.  
 STOP_CHARGING: stop charging after shutdown.
 Default value: KEEP_CHARGING.
+                     * 
                      */
                     void SetStoppedMode(const std::string& _stoppedMode);
 
                     /**
                      * 判断参数 StoppedMode 是否已赋值
                      * @return StoppedMode 是否已赋值
+                     * 
                      */
                     bool StoppedModeHasBeenSet() const;
 

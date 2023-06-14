@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Total time consumed
                      * @return TotalTime Total time consumed
+                     * 
                      */
                     double GetTotalTime() const;
 
                     /**
                      * 设置Total time consumed
-                     * @param TotalTime Total time consumed
+                     * @param _totalTime Total time consumed
+                     * 
                      */
                     void SetTotalTime(const double& _totalTime);
 
                     /**
                      * 判断参数 TotalTime 是否已赋值
                      * @return TotalTime 是否已赋值
+                     * 
                      */
                     bool TotalTimeHasBeenSet() const;
 
                     /**
                      * 获取Total number of calls
                      * @return TotalCalls Total number of calls
+                     * 
                      */
                     int64_t GetTotalCalls() const;
 
                     /**
                      * 设置Total number of calls
-                     * @param TotalCalls Total number of calls
+                     * @param _totalCalls Total number of calls
+                     * 
                      */
                     void SetTotalCalls(const int64_t& _totalCalls);
 
                     /**
                      * 判断参数 TotalCalls 是否已赋值
                      * @return TotalCalls 是否已赋值
+                     * 
                      */
                     bool TotalCallsHasBeenSet() const;
 
                     /**
                      * 获取List of slow SQL statements after desensitization
                      * @return NormalQueries List of slow SQL statements after desensitization
+                     * 
                      */
                     std::vector<NormalQueryItem> GetNormalQueries() const;
 
                     /**
                      * 设置List of slow SQL statements after desensitization
-                     * @param NormalQueries List of slow SQL statements after desensitization
+                     * @param _normalQueries List of slow SQL statements after desensitization
+                     * 
                      */
                     void SetNormalQueries(const std::vector<NormalQueryItem>& _normalQueries);
 
                     /**
                      * 判断参数 NormalQueries 是否已赋值
                      * @return NormalQueries 是否已赋值
+                     * 
                      */
                     bool NormalQueriesHasBeenSet() const;
 

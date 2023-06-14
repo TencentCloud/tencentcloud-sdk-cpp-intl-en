@@ -46,144 +46,168 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID.
                      * @return ServiceId Unique service ID.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID.
-                     * @param ServiceId Unique service ID.
+                     * @param _serviceId Unique service ID.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Custom domain name whose path mapping is to be modified.
                      * @return SubDomain Custom domain name whose path mapping is to be modified.
+                     * 
                      */
                     std::string GetSubDomain() const;
 
                     /**
                      * 设置Custom domain name whose path mapping is to be modified.
-                     * @param SubDomain Custom domain name whose path mapping is to be modified.
+                     * @param _subDomain Custom domain name whose path mapping is to be modified.
+                     * 
                      */
                     void SetSubDomain(const std::string& _subDomain);
 
                     /**
                      * 判断参数 SubDomain 是否已赋值
                      * @return SubDomain 是否已赋值
+                     * 
                      */
                     bool SubDomainHasBeenSet() const;
 
                     /**
                      * 获取Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
                      * @return IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
+                     * 
                      */
                     bool GetIsDefaultMapping() const;
 
                     /**
                      * 设置Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
-                     * @param IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
+                     * @param _isDefaultMapping Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
+                     * 
                      */
                     void SetIsDefaultMapping(const bool& _isDefaultMapping);
 
                     /**
                      * 判断参数 IsDefaultMapping 是否已赋值
                      * @return IsDefaultMapping 是否已赋值
+                     * 
                      */
                     bool IsDefaultMappingHasBeenSet() const;
 
                     /**
                      * 获取Certificate ID, which is required if the HTTPS protocol is included.
                      * @return CertificateId Certificate ID, which is required if the HTTPS protocol is included.
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置Certificate ID, which is required if the HTTPS protocol is included.
-                     * @param CertificateId Certificate ID, which is required if the HTTPS protocol is included.
+                     * @param _certificateId Certificate ID, which is required if the HTTPS protocol is included.
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 
                     /**
                      * 获取Custom domain name protocol type after modification. Valid values: http, https, http&https.
                      * @return Protocol Custom domain name protocol type after modification. Valid values: http, https, http&https.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Custom domain name protocol type after modification. Valid values: http, https, http&https.
-                     * @param Protocol Custom domain name protocol type after modification. Valid values: http, https, http&https.
+                     * @param _protocol Custom domain name protocol type after modification. Valid values: http, https, http&https.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Path mapping list after modification.
                      * @return PathMappingSet Path mapping list after modification.
+                     * 
                      */
                     std::vector<PathMapping> GetPathMappingSet() const;
 
                     /**
                      * 设置Path mapping list after modification.
-                     * @param PathMappingSet Path mapping list after modification.
+                     * @param _pathMappingSet Path mapping list after modification.
+                     * 
                      */
                     void SetPathMappingSet(const std::vector<PathMapping>& _pathMappingSet);
 
                     /**
                      * 判断参数 PathMappingSet 是否已赋值
                      * @return PathMappingSet 是否已赋值
+                     * 
                      */
                     bool PathMappingSetHasBeenSet() const;
 
                     /**
                      * 获取Network type. Valid values: INNER, OUTER.
                      * @return NetType Network type. Valid values: INNER, OUTER.
+                     * 
                      */
                     std::string GetNetType() const;
 
                     /**
                      * 设置Network type. Valid values: INNER, OUTER.
-                     * @param NetType Network type. Valid values: INNER, OUTER.
+                     * @param _netType Network type. Valid values: INNER, OUTER.
+                     * 
                      */
                     void SetNetType(const std::string& _netType);
 
                     /**
                      * 判断参数 NetType 是否已赋值
                      * @return NetType 是否已赋值
+                     * 
                      */
                     bool NetTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
                      * @return IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     * 
                      */
                     bool GetIsForcedHttps() const;
 
                     /**
                      * 设置Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
-                     * @param IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     * @param _isForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+                     * 
                      */
                     void SetIsForcedHttps(const bool& _isForcedHttps);
 
                     /**
                      * 判断参数 IsForcedHttps 是否已赋值
                      * @return IsForcedHttps 是否已赋值
+                     * 
                      */
                     bool IsForcedHttpsHasBeenSet() const;
 

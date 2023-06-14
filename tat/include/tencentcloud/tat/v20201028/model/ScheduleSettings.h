@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Policy Execution policy:
 <br><li>`ONCE`: Execute once
 <br><li>`RECURRENCE`: Execute repeatedly
+                     * 
                      */
                     std::string GetPolicy() const;
 
@@ -60,51 +61,59 @@ namespace TencentCloud
                      * 设置Execution policy:
 <br><li>`ONCE`: Execute once
 <br><li>`RECURRENCE`: Execute repeatedly
-                     * @param Policy Execution policy:
+                     * @param _policy Execution policy:
 <br><li>`ONCE`: Execute once
 <br><li>`RECURRENCE`: Execute repeatedly
+                     * 
                      */
                     void SetPolicy(const std::string& _policy);
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 
                     /**
                      * 获取Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
                      * @return Recurrence Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
+                     * 
                      */
                     std::string GetRecurrence() const;
 
                     /**
                      * 设置Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
-                     * @param Recurrence Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
+                     * @param _recurrence Trigger the crontab expression. This field is required if `Policy` is `RECURRENCE`. The crontab expression is parsed in UTC+8.
+                     * 
                      */
                     void SetRecurrence(const std::string& _recurrence);
 
                     /**
                      * 判断参数 Recurrence 是否已赋值
                      * @return Recurrence 是否已赋值
+                     * 
                      */
                     bool RecurrenceHasBeenSet() const;
 
                     /**
                      * 获取The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
                      * @return InvokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+                     * 
                      */
                     std::string GetInvokeTime() const;
 
                     /**
                      * 设置The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
-                     * @param InvokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+                     * @param _invokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+                     * 
                      */
                     void SetInvokeTime(const std::string& _invokeTime);
 
                     /**
                      * 判断参数 InvokeTime 是否已赋值
                      * @return InvokeTime 是否已赋值
+                     * 
                      */
                     bool InvokeTimeHasBeenSet() const;
 

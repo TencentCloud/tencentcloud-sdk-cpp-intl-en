@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取EMR cluster ID
                      * @return InstanceId EMR cluster ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置EMR cluster ID
-                     * @param InstanceId EMR cluster ID
+                     * @param _instanceId EMR cluster ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Business identifier. `fair`: Edit fair configuration items; `fairPlan`: Edit the execution plan; `capacity`: Edit capacity configuration items.
                      * @return Key Business identifier. `fair`: Edit fair configuration items; `fairPlan`: Edit the execution plan; `capacity`: Edit capacity configuration items.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Business identifier. `fair`: Edit fair configuration items; `fairPlan`: Edit the execution plan; `capacity`: Edit capacity configuration items.
-                     * @param Key Business identifier. `fair`: Edit fair configuration items; `fairPlan`: Edit the execution plan; `capacity`: Edit capacity configuration items.
+                     * @param _key Business identifier. `fair`: Edit fair configuration items; `fairPlan`: Edit the execution plan; `capacity`: Edit capacity configuration items.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Modified module information
                      * @return Value Modified module information
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Modified module information
-                     * @param Value Modified module information
+                     * @param _value Modified module information
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

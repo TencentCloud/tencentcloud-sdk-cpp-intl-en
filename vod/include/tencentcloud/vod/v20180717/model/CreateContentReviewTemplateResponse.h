@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of an intelligent recognition template.
                      * @return Definition Unique ID of an intelligent recognition template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取`1`: Return results at the network level; `0`: Return results at the service level.
                      * @return Type `1`: Return results at the network level; `0`: Return results at the service level.
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置`1`: Return results at the network level; `0`: Return results at the service level.
-                     * @param Type `1`: Return results at the network level; `0`: Return results at the service level.
+                     * @param _type `1`: Return results at the network level; `0`: Return results at the service level.
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

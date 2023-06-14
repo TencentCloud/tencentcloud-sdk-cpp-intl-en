@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancingId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancingId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancingId CLB instance ID
+                     * @param _loadBalancingId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancingId(const std::string& _loadBalancingId);
 
                     /**
                      * 判断参数 LoadBalancingId 是否已赋值
                      * @return LoadBalancingId 是否已赋值
+                     * 
                      */
                     bool LoadBalancingIdHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return Status Status.
 `online`: Enabled
 `offline`: Disabled
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -92,15 +99,17 @@ namespace TencentCloud
                      * 设置Status.
 `online`: Enabled
 `offline`: Disabled
-                     * @param Status Status.
+                     * @param _status Status.
 `online`: Enabled
 `offline`: Disabled
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

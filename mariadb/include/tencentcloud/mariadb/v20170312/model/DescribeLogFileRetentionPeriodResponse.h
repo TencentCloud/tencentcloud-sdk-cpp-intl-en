@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of `tdsql-ow728lmc`
                      * @return InstanceId Instance ID in the format of `tdsql-ow728lmc`
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup log retention days
                      * @return Days Backup log retention days
+                     * 
                      */
                     uint64_t GetDays() const;
 
                     /**
                      * 判断参数 Days 是否已赋值
                      * @return Days 是否已赋值
+                     * 
                      */
                     bool DaysHasBeenSet() const;
 

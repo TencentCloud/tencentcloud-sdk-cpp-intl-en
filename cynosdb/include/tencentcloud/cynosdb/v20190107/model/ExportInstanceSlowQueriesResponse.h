@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Slow query export content
                      * @return FileContent Slow query export content
+                     * 
                      */
                     std::string GetFileContent() const;
 
                     /**
                      * 判断参数 FileContent 是否已赋值
                      * @return FileContent 是否已赋值
+                     * 
                      */
                     bool FileContentHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Label Language
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置Language
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Label Language
+                     * @param _label Language
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Score Score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置Score
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Score Score
+                     * @param _score Score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetStartTime() const;
 
                     /**
                      * 设置Start time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Start time
+                     * @param _startTime Start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const double& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime End time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetEndTime() const;
 
                     /**
                      * 设置End time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime End time
+                     * @param _endTime End time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const double& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubLabelCode Subtag under the current tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubLabelCode() const;
 
                     /**
                      * 设置Subtag under the current tag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubLabelCode Subtag under the current tag
+                     * @param _subLabelCode Subtag under the current tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubLabelCode(const std::string& _subLabelCode);
 
                     /**
                      * 判断参数 SubLabelCode 是否已赋值
                      * @return SubLabelCode 是否已赋值
+                     * 
                      */
                     bool SubLabelCodeHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Video content analysis template ID.
                      * @return Definition Video content analysis template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Video content analysis template ID.
-                     * @param Definition Video content analysis template ID.
+                     * @param _definition Video content analysis template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

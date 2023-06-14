@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The array of network detection verification results.
                      * @return NetDetectIpStateSet The array of network detection verification results.
+                     * 
                      */
                     std::vector<NetDetectIpState> GetNetDetectIpStateSet() const;
 
                     /**
                      * 判断参数 NetDetectIpStateSet 是否已赋值
                      * @return NetDetectIpStateSet 是否已赋值
+                     * 
                      */
                     bool NetDetectIpStateSetHasBeenSet() const;
 

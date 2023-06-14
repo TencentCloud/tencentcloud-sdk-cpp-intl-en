@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID of the policy to be modified.
                      * @return ServiceId Unique service ID of the policy to be modified.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of the policy to be modified.
-                     * @param ServiceId Unique service ID of the policy to be modified.
+                     * @param _serviceId Unique service ID of the policy to be modified.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the policy to be modified.
                      * @return StrategyId Unique ID of the policy to be modified.
+                     * 
                      */
                     std::string GetStrategyId() const;
 
                     /**
                      * 设置Unique ID of the policy to be modified.
-                     * @param StrategyId Unique ID of the policy to be modified.
+                     * @param _strategyId Unique ID of the policy to be modified.
+                     * 
                      */
                     void SetStrategyId(const std::string& _strategyId);
 
                     /**
                      * 判断参数 StrategyId 是否已赋值
                      * @return StrategyId 是否已赋值
+                     * 
                      */
                     bool StrategyIdHasBeenSet() const;
 
                     /**
                      * 获取Details of the policy to be modified.
                      * @return StrategyData Details of the policy to be modified.
+                     * 
                      */
                     std::string GetStrategyData() const;
 
                     /**
                      * 设置Details of the policy to be modified.
-                     * @param StrategyData Details of the policy to be modified.
+                     * @param _strategyData Details of the policy to be modified.
+                     * 
                      */
                     void SetStrategyData(const std::string& _strategyData);
 
                     /**
                      * 判断参数 StrategyData 是否已赋值
                      * @return StrategyData 是否已赋值
+                     * 
                      */
                     bool StrategyDataHasBeenSet() const;
 

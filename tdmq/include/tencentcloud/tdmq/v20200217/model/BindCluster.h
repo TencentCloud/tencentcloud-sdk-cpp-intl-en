@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of a physical cluster.
                      * @return ClusterName Name of a physical cluster.
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Name of a physical cluster.
-                     * @param ClusterName Name of a physical cluster.
+                     * @param _clusterName Name of a physical cluster.
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of private CA certificates
                      * @return CAs List of private CA certificates
+                     * 
                      */
                     std::vector<CertInfo> GetCAs() const;
 
                     /**
                      * 判断参数 CAs 是否已赋值
                      * @return CAs 是否已赋值
+                     * 
                      */
                     bool CAsHasBeenSet() const;
 

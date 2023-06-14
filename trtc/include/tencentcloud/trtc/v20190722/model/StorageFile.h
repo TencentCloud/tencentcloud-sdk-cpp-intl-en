@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UserId The user whose stream is recorded into the file. In the mixed-stream recording mode, this parameter will be empty.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user whose stream is recorded into the file. In the mixed-stream recording mode, this parameter will be empty.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UserId The user whose stream is recorded into the file. In the mixed-stream recording mode, this parameter will be empty.
+                     * @param _userId The user whose stream is recorded into the file. In the mixed-stream recording mode, this parameter will be empty.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取The filename.
                      * @return FileName The filename.
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置The filename.
-                     * @param FileName The filename.
+                     * @param _fileName The filename.
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
@@ -97,6 +103,7 @@ video
 audio
 audio_video
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTrackType() const;
 
@@ -106,35 +113,40 @@ video
 audio
 audio_video
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TrackType The type of the media recorded.
+                     * @param _trackType The type of the media recorded.
 video
 audio
 audio_video
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTrackType(const std::string& _trackType);
 
                     /**
                      * 判断参数 TrackType 是否已赋值
                      * @return TrackType 是否已赋值
+                     * 
                      */
                     bool TrackTypeHasBeenSet() const;
 
                     /**
                      * 获取The start time (Unix timestamp) of the recording file.
                      * @return BeginTimeStamp The start time (Unix timestamp) of the recording file.
+                     * 
                      */
                     uint64_t GetBeginTimeStamp() const;
 
                     /**
                      * 设置The start time (Unix timestamp) of the recording file.
-                     * @param BeginTimeStamp The start time (Unix timestamp) of the recording file.
+                     * @param _beginTimeStamp The start time (Unix timestamp) of the recording file.
+                     * 
                      */
                     void SetBeginTimeStamp(const uint64_t& _beginTimeStamp);
 
                     /**
                      * 判断参数 BeginTimeStamp 是否已赋值
                      * @return BeginTimeStamp 是否已赋值
+                     * 
                      */
                     bool BeginTimeStampHasBeenSet() const;
 

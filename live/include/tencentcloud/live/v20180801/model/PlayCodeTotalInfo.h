@@ -51,38 +51,44 @@ namespace TencentCloud
 400, 403, 404, 500, 502, 503, 504.
                      * @return Code HTTP code. Valid values:
 400, 403, 404, 500, 502, 503, 504.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置HTTP code. Valid values:
 400, 403, 404, 500, 502, 503, 504.
-                     * @param Code HTTP code. Valid values:
+                     * @param _code HTTP code. Valid values:
 400, 403, 404, 500, 502, 503, 504.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取Total occurrences.
                      * @return Num Total occurrences.
+                     * 
                      */
                     uint64_t GetNum() const;
 
                     /**
                      * 设置Total occurrences.
-                     * @param Num Total occurrences.
+                     * @param _num Total occurrences.
+                     * 
                      */
                     void SetNum(const uint64_t& _num);
 
                     /**
                      * 判断参数 Num 是否已赋值
                      * @return Num 是否已赋值
+                     * 
                      */
                     bool NumHasBeenSet() const;
 

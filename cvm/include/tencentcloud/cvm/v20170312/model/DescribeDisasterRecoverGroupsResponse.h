@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information on spread placement groups.
                      * @return DisasterRecoverGroupSet Information on spread placement groups.
+                     * 
                      */
                     std::vector<DisasterRecoverGroup> GetDisasterRecoverGroupSet() const;
 
                     /**
                      * 判断参数 DisasterRecoverGroupSet 是否已赋值
                      * @return DisasterRecoverGroupSet 是否已赋值
+                     * 
                      */
                     bool DisasterRecoverGroupSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of placement groups of the user.
                      * @return TotalCount Total number of placement groups of the user.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

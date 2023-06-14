@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Total number of published versions.
+                     * @param _totalCount Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VersionList Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ServiceReleaseHistoryInfo> GetVersionList() const;
 
                     /**
                      * 设置Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VersionList Release version list.
+                     * @param _versionList Release version list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersionList(const std::vector<ServiceReleaseHistoryInfo>& _versionList);
 
                     /**
                      * 判断参数 VersionList 是否已赋值
                      * @return VersionList 是否已赋值
+                     * 
                      */
                     bool VersionListHasBeenSet() const;
 

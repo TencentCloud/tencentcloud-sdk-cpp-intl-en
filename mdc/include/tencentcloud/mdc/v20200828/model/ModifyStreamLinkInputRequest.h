@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The flow ID.
                      * @return FlowId The flow ID.
+                     * 
                      */
                     std::string GetFlowId() const;
 
                     /**
                      * 设置The flow ID.
-                     * @param FlowId The flow ID.
+                     * @param _flowId The flow ID.
+                     * 
                      */
                     void SetFlowId(const std::string& _flowId);
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
                     /**
                      * 获取The input information to modify.
                      * @return Input The input information to modify.
+                     * 
                      */
                     ModifyInput GetInput() const;
 
                     /**
                      * 设置The input information to modify.
-                     * @param Input The input information to modify.
+                     * @param _input The input information to modify.
+                     * 
                      */
                     void SetInput(const ModifyInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 

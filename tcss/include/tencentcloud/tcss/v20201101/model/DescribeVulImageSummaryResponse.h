@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Number of images affected by critical or high-risk vulnerabilities
                      * @return SeriousVulImageCount Number of images affected by critical or high-risk vulnerabilities
+                     * 
                      */
                     int64_t GetSeriousVulImageCount() const;
 
                     /**
                      * 判断参数 SeriousVulImageCount 是否已赋值
                      * @return SeriousVulImageCount 是否已赋值
+                     * 
                      */
                     bool SeriousVulImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of scanned images
                      * @return ScannedImageCount Number of scanned images
+                     * 
                      */
                     int64_t GetScannedImageCount() const;
 
                     /**
                      * 判断参数 ScannedImageCount 是否已赋值
                      * @return ScannedImageCount 是否已赋值
+                     * 
                      */
                     bool ScannedImageCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of vulnerabilities
                      * @return VulTotalCount Total number of vulnerabilities
+                     * 
                      */
                     int64_t GetVulTotalCount() const;
 
                     /**
                      * 判断参数 VulTotalCount 是否已赋值
                      * @return VulTotalCount 是否已赋值
+                     * 
                      */
                     bool VulTotalCountHasBeenSet() const;
 
                     /**
                      * 获取Number of system vulnerabilities
                      * @return SysTemVulCount Number of system vulnerabilities
+                     * 
                      */
                     int64_t GetSysTemVulCount() const;
 
                     /**
                      * 判断参数 SysTemVulCount 是否已赋值
                      * @return SysTemVulCount 是否已赋值
+                     * 
                      */
                     bool SysTemVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of web application vulnerabilities
                      * @return WebVulCount Number of web application vulnerabilities
+                     * 
                      */
                     int64_t GetWebVulCount() const;
 
                     /**
                      * 判断参数 WebVulCount 是否已赋值
                      * @return WebVulCount 是否已赋值
+                     * 
                      */
                     bool WebVulCountHasBeenSet() const;
 
                     /**
                      * 获取Number of licensed images
                      * @return AllAuthorizedImageCount Number of licensed images
+                     * 
                      */
                     int64_t GetAllAuthorizedImageCount() const;
 
                     /**
                      * 判断参数 AllAuthorizedImageCount 是否已赋值
                      * @return AllAuthorizedImageCount 是否已赋值
+                     * 
                      */
                     bool AllAuthorizedImageCountHasBeenSet() const;
 
                     /**
                      * 获取Number of emergency vulnerabilities
                      * @return EmergencyVulCount Number of emergency vulnerabilities
+                     * 
                      */
                     int64_t GetEmergencyVulCount() const;
 
                     /**
                      * 判断参数 EmergencyVulCount 是否已赋值
                      * @return EmergencyVulCount 是否已赋值
+                     * 
                      */
                     bool EmergencyVulCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of vulnerabilities that can be scanned for
                      * @return SupportVulTotalCount Total number of vulnerabilities that can be scanned for
+                     * 
                      */
                     int64_t GetSupportVulTotalCount() const;
 
                     /**
                      * 判断参数 SupportVulTotalCount 是否已赋值
                      * @return SupportVulTotalCount 是否已赋值
+                     * 
                      */
                     bool SupportVulTotalCountHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability library update time
                      * @return VulLibraryUpdateTime Vulnerability library update time
+                     * 
                      */
                     std::string GetVulLibraryUpdateTime() const;
 
                     /**
                      * 判断参数 VulLibraryUpdateTime 是否已赋值
                      * @return VulLibraryUpdateTime 是否已赋值
+                     * 
                      */
                     bool VulLibraryUpdateTimeHasBeenSet() const;
 

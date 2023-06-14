@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The domain to verify.
                      * @return DomainName The domain to verify.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置The domain to verify.
-                     * @param DomainName The domain to verify.
+                     * @param _domainName The domain to verify.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -69,6 +72,7 @@ dbCheck: Check whether the domain has already been successfully verified.
 dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
 fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
 dbCheck: Check whether the domain has already been successfully verified.
+                     * 
                      */
                     std::string GetVerifyType() const;
 
@@ -77,16 +81,18 @@ dbCheck: Check whether the domain has already been successfully verified.
 dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
 fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
 dbCheck: Check whether the domain has already been successfully verified.
-                     * @param VerifyType The verification type. Valid values:
+                     * @param _verifyType The verification type. Valid values:
 dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
 fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
 dbCheck: Check whether the domain has already been successfully verified.
+                     * 
                      */
                     void SetVerifyType(const std::string& _verifyType);
 
                     /**
                      * 判断参数 VerifyType 是否已赋值
                      * @return VerifyType 是否已赋值
+                     * 
                      */
                     bool VerifyTypeHasBeenSet() const;
 

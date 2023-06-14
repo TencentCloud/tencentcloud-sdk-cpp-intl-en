@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of associated CLB instance
                      * @return LoadBalancerId ID of associated CLB instance
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置ID of associated CLB instance
-                     * @param LoadBalancerId ID of associated CLB instance
+                     * @param _loadBalancerId ID of associated CLB instance
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取ID of associated listener
                      * @return ListenerId ID of associated listener
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置ID of associated listener
-                     * @param ListenerId ID of associated listener
+                     * @param _listenerId ID of associated listener
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
@@ -87,56 +93,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LocationId ID of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置ID of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LocationId ID of associated forwarding rule
+                     * @param _locationId ID of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
                     /**
                      * 获取Protocol type of associated listener, such as HTTP or TCP
                      * @return Protocol Protocol type of associated listener, such as HTTP or TCP
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol type of associated listener, such as HTTP or TCP
-                     * @param Protocol Protocol type of associated listener, such as HTTP or TCP
+                     * @param _protocol Protocol type of associated listener, such as HTTP or TCP
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Port of associated listener
                      * @return Port Port of associated listener
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Port of associated listener
-                     * @param Port Port of associated listener
+                     * @param _port Port of associated listener
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain name of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Domain name of associated forwarding rule
+                     * @param _domain Domain name of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -167,56 +185,65 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Url URL of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Url URL of associated forwarding rule
+                     * @param _url URL of associated forwarding rule
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取CLB instance name
                      * @return LoadBalancerName CLB instance name
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name
-                     * @param LoadBalancerName CLB instance name
+                     * @param _loadBalancerName CLB instance name
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
                      * 获取Listener name
                      * @return ListenerName Listener name
+                     * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置Listener name
-                     * @param ListenerName Listener name
+                     * @param _listenerName Listener name
+                     * 
                      */
                     void SetListenerName(const std::string& _listenerName);
 
                     /**
                      * 判断参数 ListenerName 是否已赋值
                      * @return ListenerName 是否已赋值
+                     * 
                      */
                     bool ListenerNameHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Domain array
                      * @return DomainList Domain array
+                     * 
                      */
                     std::vector<std::string> GetDomainList() const;
 
                     /**
                      * 设置Domain array
-                     * @param DomainList Domain array
+                     * @param _domainList Domain array
+                     * 
                      */
                     void SetDomainList(const std::vector<std::string>& _domainList);
 
                     /**
                      * 判断参数 DomainList 是否已赋值
                      * @return DomainList 是否已赋值
+                     * 
                      */
                     bool DomainListHasBeenSet() const;
 
                     /**
                      * 获取Add A records of @ and www for each domain with the record value of the IP. If this parameter is not passed in or is set to an empty string or null, only the domain but not the records will be added.
                      * @return RecordValue Add A records of @ and www for each domain with the record value of the IP. If this parameter is not passed in or is set to an empty string or null, only the domain but not the records will be added.
+                     * 
                      */
                     std::string GetRecordValue() const;
 
                     /**
                      * 设置Add A records of @ and www for each domain with the record value of the IP. If this parameter is not passed in or is set to an empty string or null, only the domain but not the records will be added.
-                     * @param RecordValue Add A records of @ and www for each domain with the record value of the IP. If this parameter is not passed in or is set to an empty string or null, only the domain but not the records will be added.
+                     * @param _recordValue Add A records of @ and www for each domain with the record value of the IP. If this parameter is not passed in or is set to an empty string or null, only the domain but not the records will be added.
+                     * 
                      */
                     void SetRecordValue(const std::string& _recordValue);
 
                     /**
                      * 判断参数 RecordValue 是否已赋值
                      * @return RecordValue 是否已赋值
+                     * 
                      */
                     bool RecordValueHasBeenSet() const;
 

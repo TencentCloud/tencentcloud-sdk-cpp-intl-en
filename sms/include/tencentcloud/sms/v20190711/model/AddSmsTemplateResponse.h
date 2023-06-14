@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取SMS template addition response packet body
                      * @return AddTemplateStatus SMS template addition response packet body
+                     * 
                      */
                     AddTemplateStatus GetAddTemplateStatus() const;
 
                     /**
                      * 判断参数 AddTemplateStatus 是否已赋值
                      * @return AddTemplateStatus 是否已赋值
+                     * 
                      */
                     bool AddTemplateStatusHasBeenSet() const;
 

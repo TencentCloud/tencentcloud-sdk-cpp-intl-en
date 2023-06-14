@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Backup Parameters of the backup task.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackup() const;
 
                     /**
                      * 判断参数 Backup 是否已赋值
                      * @return Backup 是否已赋值
+                     * 
                      */
                     bool BackupHasBeenSet() const;
 

@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取The record count info.
                      * @return RecordCountInfo The record count info.
+                     * 
                      */
                     RecordCountInfo GetRecordCountInfo() const;
 
                     /**
                      * 判断参数 RecordCountInfo 是否已赋值
                      * @return RecordCountInfo 是否已赋值
+                     * 
                      */
                     bool RecordCountInfoHasBeenSet() const;
 
                     /**
                      * 获取The record list result.
                      * @return RecordList The record list result.
+                     * 
                      */
                     std::vector<RecordListItem> GetRecordList() const;
 
                     /**
                      * 判断参数 RecordList 是否已赋值
                      * @return RecordList 是否已赋值
+                     * 
                      */
                     bool RecordListHasBeenSet() const;
 

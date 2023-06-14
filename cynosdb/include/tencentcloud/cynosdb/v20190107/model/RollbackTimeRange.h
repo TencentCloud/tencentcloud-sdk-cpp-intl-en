@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return TimeRangeStart Start time
+                     * 
                      */
                     std::string GetTimeRangeStart() const;
 
                     /**
                      * 设置Start time
-                     * @param TimeRangeStart Start time
+                     * @param _timeRangeStart Start time
+                     * 
                      */
                     void SetTimeRangeStart(const std::string& _timeRangeStart);
 
                     /**
                      * 判断参数 TimeRangeStart 是否已赋值
                      * @return TimeRangeStart 是否已赋值
+                     * 
                      */
                     bool TimeRangeStartHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return TimeRangeEnd End time
+                     * 
                      */
                     std::string GetTimeRangeEnd() const;
 
                     /**
                      * 设置End time
-                     * @param TimeRangeEnd End time
+                     * @param _timeRangeEnd End time
+                     * 
                      */
                     void SetTimeRangeEnd(const std::string& _timeRangeEnd);
 
                     /**
                      * 判断参数 TimeRangeEnd 是否已赋值
                      * @return TimeRangeEnd 是否已赋值
+                     * 
                      */
                     bool TimeRangeEndHasBeenSet() const;
 

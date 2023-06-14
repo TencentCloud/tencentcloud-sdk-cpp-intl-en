@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Account UIN
                      * @return Uin Account UIN
+                     * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 

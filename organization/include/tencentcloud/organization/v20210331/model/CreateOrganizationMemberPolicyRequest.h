@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Member UIN.
                      * @return MemberUin Member UIN.
+                     * 
                      */
                     int64_t GetMemberUin() const;
 
                     /**
                      * 设置Member UIN.
-                     * @param MemberUin Member UIN.
+                     * @param _memberUin Member UIN.
+                     * 
                      */
                     void SetMemberUin(const int64_t& _memberUin);
 
                     /**
                      * 判断参数 MemberUin 是否已赋值
                      * @return MemberUin 是否已赋值
+                     * 
                      */
                     bool MemberUinHasBeenSet() const;
 
                     /**
                      * 获取Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
                      * @return PolicyName Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
-                     * @param PolicyName Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
+                     * @param _policyName Policy name, which can contain up to 128 letters, digits, and symbols `+=,.@_-`.
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
                     /**
                      * 获取Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
                      * @return IdentityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+                     * 
                      */
                     int64_t GetIdentityId() const;
 
                     /**
                      * 设置Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
-                     * @param IdentityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+                     * @param _identityId Member access identity ID, which can be obtained through the `DescribeOrganizationMemberAuthIdentities` API.
+                     * 
                      */
                     void SetIdentityId(const int64_t& _identityId);
 
                     /**
                      * 判断参数 IdentityId 是否已赋值
                      * @return IdentityId 是否已赋值
+                     * 
                      */
                     bool IdentityIdHasBeenSet() const;
 
                     /**
                      * 获取Description.
                      * @return Description Description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description.
-                     * @param Description Description.
+                     * @param _description Description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

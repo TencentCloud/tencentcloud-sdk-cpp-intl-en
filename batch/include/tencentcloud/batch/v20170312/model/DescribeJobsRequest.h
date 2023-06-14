@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取List of job IDs. It cannot be specified together with `Filters`.
                      * @return JobIds List of job IDs. It cannot be specified together with `Filters`.
+                     * 
                      */
                     std::vector<std::string> GetJobIds() const;
 
                     /**
                      * 设置List of job IDs. It cannot be specified together with `Filters`.
-                     * @param JobIds List of job IDs. It cannot be specified together with `Filters`.
+                     * @param _jobIds List of job IDs. It cannot be specified together with `Filters`.
+                     * 
                      */
                     void SetJobIds(const std::vector<std::string>& _jobIds);
 
                     /**
                      * 判断参数 JobIds 是否已赋值
                      * @return JobIds 是否已赋值
+                     * 
                      */
                     bool JobIdsHasBeenSet() const;
 
@@ -80,6 +83,7 @@ It cannot be specified together with `JobIds`.
 <li> `tag-value` - String - Optional - Tag value.</li>
 <li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
 It cannot be specified together with `JobIds`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -93,7 +97,7 @@ It cannot be specified together with `JobIds`.
 <li> `tag-value` - String - Optional - Tag value.</li>
 <li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
 It cannot be specified together with `JobIds`.
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li> `job-id` - String - Optional - Filter by the job ID.</li>
 <li> `job-name` - String - Optional - Filter by the job name.</li>
 <li> `job-state` - String - Optional - Filter by the job state.</li>
@@ -102,48 +106,56 @@ It cannot be specified together with `JobIds`.
 <li> `tag-value` - String - Optional - Tag value.</li>
 <li> `tag:tag-key` - String - Optional - Filter by the tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
 It cannot be specified together with `JobIds`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of returned items
                      * @return Limit Maximum number of returned items
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of returned items
-                     * @param Limit Maximum number of returned items
+                     * @param _limit Maximum number of returned items
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

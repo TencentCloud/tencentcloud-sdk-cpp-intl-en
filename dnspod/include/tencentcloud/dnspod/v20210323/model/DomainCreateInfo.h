@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Domain ID
                      * @return Id Domain ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Domain ID
-                     * @param Id Domain ID
+                     * @param _id Domain ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Domain
                      * @return Domain Domain
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain
-                     * @param Domain Domain
+                     * @param _domain Domain
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Domain Punycode
                      * @return Punycode Domain Punycode
+                     * 
                      */
                     std::string GetPunycode() const;
 
                     /**
                      * 设置Domain Punycode
-                     * @param Punycode Domain Punycode
+                     * @param _punycode Domain Punycode
+                     * 
                      */
                     void SetPunycode(const std::string& _punycode);
 
                     /**
                      * 判断参数 Punycode 是否已赋值
                      * @return Punycode 是否已赋值
+                     * 
                      */
                     bool PunycodeHasBeenSet() const;
 
                     /**
                      * 获取NS list of the domain
                      * @return GradeNsList NS list of the domain
+                     * 
                      */
                     std::vector<std::string> GetGradeNsList() const;
 
                     /**
                      * 设置NS list of the domain
-                     * @param GradeNsList NS list of the domain
+                     * @param _gradeNsList NS list of the domain
+                     * 
                      */
                     void SetGradeNsList(const std::vector<std::string>& _gradeNsList);
 
                     /**
                      * 判断参数 GradeNsList 是否已赋值
                      * @return GradeNsList 是否已赋值
+                     * 
                      */
                     bool GradeNsListHasBeenSet() const;
 

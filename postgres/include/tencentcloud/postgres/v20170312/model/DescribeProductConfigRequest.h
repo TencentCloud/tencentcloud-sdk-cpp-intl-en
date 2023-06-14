@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取AZ name
                      * @return Zone AZ name
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ name
-                     * @param Zone AZ name
+                     * @param _zone AZ name
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -69,6 +72,7 @@ Default value: `postgresql`
 1. `postgresql` (TencentDB for PostgreSQL)
 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
 Default value: `postgresql`
+                     * 
                      */
                     std::string GetDBEngine() const;
 
@@ -77,16 +81,18 @@ Default value: `postgresql`
 1. `postgresql` (TencentDB for PostgreSQL)
 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
 Default value: `postgresql`
-                     * @param DBEngine Database engines. Valid values:
+                     * @param _dBEngine Database engines. Valid values:
 1. `postgresql` (TencentDB for PostgreSQL)
 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
 Default value: `postgresql`
+                     * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
 
                     /**
                      * 判断参数 DBEngine 是否已赋值
                      * @return DBEngine 是否已赋值
+                     * 
                      */
                     bool DBEngineHasBeenSet() const;
 

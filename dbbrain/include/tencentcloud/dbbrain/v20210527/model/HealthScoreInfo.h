@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Exception details.
                      * @return IssueTypes Exception details.
+                     * 
                      */
                     std::vector<IssueTypeInfo> GetIssueTypes() const;
 
                     /**
                      * 设置Exception details.
-                     * @param IssueTypes Exception details.
+                     * @param _issueTypes Exception details.
+                     * 
                      */
                     void SetIssueTypes(const std::vector<IssueTypeInfo>& _issueTypes);
 
                     /**
                      * 判断参数 IssueTypes 是否已赋值
                      * @return IssueTypes 是否已赋值
+                     * 
                      */
                     bool IssueTypesHasBeenSet() const;
 
                     /**
                      * 获取Total number of exceptions.
                      * @return EventsTotalCount Total number of exceptions.
+                     * 
                      */
                     int64_t GetEventsTotalCount() const;
 
                     /**
                      * 设置Total number of exceptions.
-                     * @param EventsTotalCount Total number of exceptions.
+                     * @param _eventsTotalCount Total number of exceptions.
+                     * 
                      */
                     void SetEventsTotalCount(const int64_t& _eventsTotalCount);
 
                     /**
                      * 判断参数 EventsTotalCount 是否已赋值
                      * @return EventsTotalCount 是否已赋值
+                     * 
                      */
                     bool EventsTotalCountHasBeenSet() const;
 
                     /**
                      * 获取Health score.
                      * @return HealthScore Health score.
+                     * 
                      */
                     int64_t GetHealthScore() const;
 
                     /**
                      * 设置Health score.
-                     * @param HealthScore Health score.
+                     * @param _healthScore Health score.
+                     * 
                      */
                     void SetHealthScore(const int64_t& _healthScore);
 
                     /**
                      * 判断参数 HealthScore 是否已赋值
                      * @return HealthScore 是否已赋值
+                     * 
                      */
                     bool HealthScoreHasBeenSet() const;
 
                     /**
                      * 获取Health level, such as `HEALTH`, `SUB_HEALTH`, `RISK`, and `HIGH_RISK`.
                      * @return HealthLevel Health level, such as `HEALTH`, `SUB_HEALTH`, `RISK`, and `HIGH_RISK`.
+                     * 
                      */
                     std::string GetHealthLevel() const;
 
                     /**
                      * 设置Health level, such as `HEALTH`, `SUB_HEALTH`, `RISK`, and `HIGH_RISK`.
-                     * @param HealthLevel Health level, such as `HEALTH`, `SUB_HEALTH`, `RISK`, and `HIGH_RISK`.
+                     * @param _healthLevel Health level, such as `HEALTH`, `SUB_HEALTH`, `RISK`, and `HIGH_RISK`.
+                     * 
                      */
                     void SetHealthLevel(const std::string& _healthLevel);
 
                     /**
                      * 判断参数 HealthLevel 是否已赋值
                      * @return HealthLevel 是否已赋值
+                     * 
                      */
                     bool HealthLevelHasBeenSet() const;
 

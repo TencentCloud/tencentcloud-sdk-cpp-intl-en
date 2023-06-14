@@ -51,342 +51,399 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Instance VIP information
                      * @return Vip Instance VIP information
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Instance VIP information
-                     * @param Vip Instance VIP information
+                     * @param _vip Instance VIP information
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Instance port information
                      * @return Vport Instance port information
+                     * 
                      */
                     std::string GetVport() const;
 
                     /**
                      * 设置Instance port information
-                     * @param Vport Instance port information
+                     * @param _vport Instance port information
+                     * 
                      */
                     void SetVport(const std::string& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
                     /**
                      * 获取Virtual IP list
                      * @return VipList Virtual IP list
+                     * 
                      */
                     std::vector<VipEntity> GetVipList() const;
 
                     /**
                      * 设置Virtual IP list
-                     * @param VipList Virtual IP list
+                     * @param _vipList Virtual IP list
+                     * 
                      */
                     void SetVipList(const std::vector<VipEntity>& _vipList);
 
                     /**
                      * 判断参数 VipList 是否已赋值
                      * @return VipList 是否已赋值
+                     * 
                      */
                     bool VipListHasBeenSet() const;
 
                     /**
                      * 获取Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
                      * @return Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
-                     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+                     * @param _status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Instance bandwidth in Mbps
                      * @return Bandwidth Instance bandwidth in Mbps
+                     * 
                      */
                     int64_t GetBandwidth() const;
 
                     /**
                      * 设置Instance bandwidth in Mbps
-                     * @param Bandwidth Instance bandwidth in Mbps
+                     * @param _bandwidth Instance bandwidth in Mbps
+                     * 
                      */
                     void SetBandwidth(const int64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取Instance storage capacity in GB
                      * @return DiskSize Instance storage capacity in GB
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Instance storage capacity in GB
-                     * @param DiskSize Instance storage capacity in GB
+                     * @param _diskSize Instance storage capacity in GB
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
                     /**
                      * 获取AZ ID
                      * @return ZoneId AZ ID
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置AZ ID
-                     * @param ZoneId AZ ID
+                     * @param _zoneId AZ ID
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取vpcId. If this parameter is empty, it means the basic network
                      * @return VpcId vpcId. If this parameter is empty, it means the basic network
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置vpcId. If this parameter is empty, it means the basic network
-                     * @param VpcId vpcId. If this parameter is empty, it means the basic network
+                     * @param _vpcId vpcId. If this parameter is empty, it means the basic network
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID
                      * @return SubnetId Subnet ID
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID
-                     * @param SubnetId Subnet ID
+                     * @param _subnetId Subnet ID
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
                      * @return RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+                     * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
                      * 设置Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
-                     * @param RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+                     * @param _renewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+                     * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
                      * @return Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+                     * 
                      */
                     int64_t GetHealthy() const;
 
                     /**
                      * 设置Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
-                     * @param Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+                     * @param _healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+                     * 
                      */
                     void SetHealthy(const int64_t& _healthy);
 
                     /**
                      * 判断参数 Healthy 是否已赋值
                      * @return Healthy 是否已赋值
+                     * 
                      */
                     bool HealthyHasBeenSet() const;
 
                     /**
                      * 获取Instance status information
                      * @return HealthyMessage Instance status information
+                     * 
                      */
                     std::string GetHealthyMessage() const;
 
                     /**
                      * 设置Instance status information
-                     * @param HealthyMessage Instance status information
+                     * @param _healthyMessage Instance status information
+                     * 
                      */
                     void SetHealthyMessage(const std::string& _healthyMessage);
 
                     /**
                      * 判断参数 HealthyMessage 是否已赋值
                      * @return HealthyMessage 是否已赋值
+                     * 
                      */
                     bool HealthyMessageHasBeenSet() const;
 
                     /**
                      * 获取Instance creation time
                      * @return CreateTime Instance creation time
+                     * 
                      */
                     int64_t GetCreateTime() const;
 
                     /**
                      * 设置Instance creation time
-                     * @param CreateTime Instance creation time
+                     * @param _createTime Instance creation time
+                     * 
                      */
                     void SetCreateTime(const int64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Instance expiration time
                      * @return ExpireTime Instance expiration time
+                     * 
                      */
                     int64_t GetExpireTime() const;
 
                     /**
                      * 设置Instance expiration time
-                     * @param ExpireTime Instance expiration time
+                     * @param _expireTime Instance expiration time
+                     * 
                      */
                     void SetExpireTime(const int64_t& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether it is an internal customer. 1: yes
                      * @return IsInternal Whether it is an internal customer. 1: yes
+                     * 
                      */
                     int64_t GetIsInternal() const;
 
                     /**
                      * 设置Whether it is an internal customer. 1: yes
-                     * @param IsInternal Whether it is an internal customer. 1: yes
+                     * @param _isInternal Whether it is an internal customer. 1: yes
+                     * 
                      */
                     void SetIsInternal(const int64_t& _isInternal);
 
                     /**
                      * 判断参数 IsInternal 是否已赋值
                      * @return IsInternal 是否已赋值
+                     * 
                      */
                     bool IsInternalHasBeenSet() const;
 
                     /**
                      * 获取Number of topics
                      * @return TopicNum Number of topics
+                     * 
                      */
                     int64_t GetTopicNum() const;
 
                     /**
                      * 设置Number of topics
-                     * @param TopicNum Number of topics
+                     * @param _topicNum Number of topics
+                     * 
                      */
                     void SetTopicNum(const int64_t& _topicNum);
 
                     /**
                      * 判断参数 TopicNum 是否已赋值
                      * @return TopicNum 是否已赋值
+                     * 
                      */
                     bool TopicNumHasBeenSet() const;
 
                     /**
                      * 获取Tag
                      * @return Tags Tag
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag
-                     * @param Tags Tag
+                     * @param _tags Tag
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -395,20 +452,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Version Kafka version information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Kafka version information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Version Kafka version information
+                     * @param _version Kafka version information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -417,20 +477,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ZoneIds Cross-AZ
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetZoneIds() const;
 
                     /**
                      * 设置Cross-AZ
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneIds Cross-AZ
+                     * @param _zoneIds Cross-AZ
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneIds(const std::vector<int64_t>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
@@ -439,20 +502,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Cvm CKafka sale type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCvm() const;
 
                     /**
                      * 设置CKafka sale type
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Cvm CKafka sale type
+                     * @param _cvm CKafka sale type
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCvm(const int64_t& _cvm);
 
                     /**
                      * 判断参数 Cvm 是否已赋值
                      * @return Cvm 是否已赋值
+                     * 
                      */
                     bool CvmHasBeenSet() const;
 
@@ -461,20 +527,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return InstanceType CKafka instance type
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置CKafka instance type
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param InstanceType CKafka instance type
+                     * @param _instanceType CKafka instance type
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -483,20 +552,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return DiskType Disk type
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Disk type
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param DiskType Disk type
+                     * @param _diskType Disk type
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
@@ -505,20 +577,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return MaxTopicNumber Maximum number of topics for the current instance
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxTopicNumber() const;
 
                     /**
                      * 设置Maximum number of topics for the current instance
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param MaxTopicNumber Maximum number of topics for the current instance
+                     * @param _maxTopicNumber Maximum number of topics for the current instance
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxTopicNumber(const int64_t& _maxTopicNumber);
 
                     /**
                      * 判断参数 MaxTopicNumber 是否已赋值
                      * @return MaxTopicNumber 是否已赋值
+                     * 
                      */
                     bool MaxTopicNumberHasBeenSet() const;
 
@@ -527,20 +602,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return MaxPartitionNumber Maximum number of partitions for the current instance
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxPartitionNumber() const;
 
                     /**
                      * 设置Maximum number of partitions for the current instance
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param MaxPartitionNumber Maximum number of partitions for the current instance
+                     * @param _maxPartitionNumber Maximum number of partitions for the current instance
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxPartitionNumber(const int64_t& _maxPartitionNumber);
 
                     /**
                      * 判断参数 MaxPartitionNumber 是否已赋值
                      * @return MaxPartitionNumber 是否已赋值
+                     * 
                      */
                     bool MaxPartitionNumberHasBeenSet() const;
 
@@ -549,20 +627,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return RebalanceTime Time of scheduled upgrade
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRebalanceTime() const;
 
                     /**
                      * 设置Time of scheduled upgrade
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param RebalanceTime Time of scheduled upgrade
+                     * @param _rebalanceTime Time of scheduled upgrade
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRebalanceTime(const std::string& _rebalanceTime);
 
                     /**
                      * 判断参数 RebalanceTime 是否已赋值
                      * @return RebalanceTime 是否已赋值
+                     * 
                      */
                     bool RebalanceTimeHasBeenSet() const;
 
@@ -571,20 +652,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PartitionNumber Number of partitions in the current instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPartitionNumber() const;
 
                     /**
                      * 设置Number of partitions in the current instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PartitionNumber Number of partitions in the current instance.
+                     * @param _partitionNumber Number of partitions in the current instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartitionNumber(const uint64_t& _partitionNumber);
 
                     /**
                      * 判断参数 PartitionNumber 是否已赋值
                      * @return PartitionNumber 是否已赋值
+                     * 
                      */
                     bool PartitionNumberHasBeenSet() const;
 
@@ -593,20 +677,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PublicNetworkChargeType Public network bandwidth type.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicNetworkChargeType() const;
 
                     /**
                      * 设置Public network bandwidth type.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PublicNetworkChargeType Public network bandwidth type.
+                     * @param _publicNetworkChargeType Public network bandwidth type.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicNetworkChargeType(const std::string& _publicNetworkChargeType);
 
                     /**
                      * 判断参数 PublicNetworkChargeType 是否已赋值
                      * @return PublicNetworkChargeType 是否已赋值
+                     * 
                      */
                     bool PublicNetworkChargeTypeHasBeenSet() const;
 
@@ -615,20 +702,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PublicNetwork Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPublicNetwork() const;
 
                     /**
                      * 设置Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PublicNetwork Public network bandwidth.
+                     * @param _publicNetwork Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicNetwork(const int64_t& _publicNetwork);
 
                     /**
                      * 判断参数 PublicNetwork 是否已赋值
                      * @return PublicNetwork 是否已赋值
+                     * 
                      */
                     bool PublicNetworkHasBeenSet() const;
 
@@ -637,20 +727,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterType Instance type.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Instance type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterType Instance type.
+                     * @param _clusterType Instance type.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
@@ -659,20 +752,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Features Instance feature list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFeatures() const;
 
                     /**
                      * 设置Instance feature list.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Features Instance feature list.
+                     * @param _features Instance feature list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFeatures(const std::vector<std::string>& _features);
 
                     /**
                      * 判断参数 Features 是否已赋值
                      * @return Features 是否已赋值
+                     * 
                      */
                     bool FeaturesHasBeenSet() const;
 

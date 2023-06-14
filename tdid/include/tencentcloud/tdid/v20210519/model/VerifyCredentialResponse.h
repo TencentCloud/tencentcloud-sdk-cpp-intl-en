@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether the verification is successful.
                      * @return Result Whether the verification is successful.
+                     * 
                      */
                     bool GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取The verification code.
                      * @return VerifyCode The verification code.
+                     * 
                      */
                     uint64_t GetVerifyCode() const;
 
                     /**
                      * 判断参数 VerifyCode 是否已赋值
                      * @return VerifyCode 是否已赋值
+                     * 
                      */
                     bool VerifyCodeHasBeenSet() const;
 
                     /**
                      * 获取The verification message.
                      * @return VerifyMessage The verification message.
+                     * 
                      */
                     std::string GetVerifyMessage() const;
 
                     /**
                      * 判断参数 VerifyMessage 是否已赋值
                      * @return VerifyMessage 是否已赋值
+                     * 
                      */
                     bool VerifyMessageHasBeenSet() const;
 

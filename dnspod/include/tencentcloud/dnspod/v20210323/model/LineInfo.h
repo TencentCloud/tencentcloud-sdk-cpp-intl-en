@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Split zone name
                      * @return Name Split zone name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Split zone name
-                     * @param Name Split zone name
+                     * @param _name Split zone name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Split zone ID
                      * @return LineId Split zone ID
+                     * 
                      */
                     std::string GetLineId() const;
 
                     /**
                      * 设置Split zone ID
-                     * @param LineId Split zone ID
+                     * @param _lineId Split zone ID
+                     * 
                      */
                     void SetLineId(const std::string& _lineId);
 
                     /**
                      * 判断参数 LineId 是否已赋值
                      * @return LineId 是否已赋值
+                     * 
                      */
                     bool LineIdHasBeenSet() const;
 

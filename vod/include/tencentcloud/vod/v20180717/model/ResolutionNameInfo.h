@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Length of video short side in px.
                      * @return MinEdgeLength Length of video short side in px.
+                     * 
                      */
                     uint64_t GetMinEdgeLength() const;
 
                     /**
                      * 设置Length of video short side in px.
-                     * @param MinEdgeLength Length of video short side in px.
+                     * @param _minEdgeLength Length of video short side in px.
+                     * 
                      */
                     void SetMinEdgeLength(const uint64_t& _minEdgeLength);
 
                     /**
                      * 判断参数 MinEdgeLength 是否已赋值
                      * @return MinEdgeLength 是否已赋值
+                     * 
                      */
                     bool MinEdgeLengthHasBeenSet() const;
 
                     /**
                      * 获取Display name.
                      * @return Name Display name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Display name.
-                     * @param Name Display name.
+                     * @param _name Display name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

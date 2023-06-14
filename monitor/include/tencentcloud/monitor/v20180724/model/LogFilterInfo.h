@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Field name
                      * @return Key Field name
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Field name
-                     * @param Key Field name
+                     * @param _key Field name
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Comparison operator
                      * @return Operator Comparison operator
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置Comparison operator
-                     * @param Operator Comparison operator
+                     * @param _operator Comparison operator
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取Field value
                      * @return Value Field value
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Field value
-                     * @param Value Field value
+                     * @param _value Field value
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

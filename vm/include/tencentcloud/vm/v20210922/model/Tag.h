@@ -55,6 +55,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 When `Label` is `Teenager`, `Name` can be `Teenager`. 
 When `Label` is `Gender`, `Name` can be `Male` and `Female`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
@@ -63,16 +64,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 When `Label` is `Teenager`, `Name` can be `Teenager`. 
 When `Label` is `Gender`, `Name` can be `Male` and `Female`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Name The value of this parameter varies by `Label`.
+                     * @param _name The value of this parameter varies by `Label`.
 When `Label` is `Teenager`, `Name` can be `Teenager`. 
 When `Label` is `Gender`, `Name` can be `Male` and `Female`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -81,20 +84,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Score Confidence score. Value: 1 to 100. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置Confidence score. Value: 1 to 100. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Score Confidence score. Value: 1 to 100. 
+                     * @param _score Confidence score. Value: 1 to 100. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -103,20 +109,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StartTime Start time for the recognition (ms)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetStartTime() const;
 
                     /**
                      * 设置Start time for the recognition (ms)
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StartTime Start time for the recognition (ms)
+                     * @param _startTime Start time for the recognition (ms)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const double& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -125,20 +134,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EndTime End time for the recognition (ms)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetEndTime() const;
 
                     /**
                      * 设置End time for the recognition (ms)
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EndTime End time for the recognition (ms)
+                     * @param _endTime End time for the recognition (ms)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const double& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

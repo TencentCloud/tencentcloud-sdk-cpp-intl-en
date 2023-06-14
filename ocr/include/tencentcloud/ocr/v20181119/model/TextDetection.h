@@ -53,36 +53,42 @@ namespace TencentCloud
                     /**
                      * 获取Recognized text line content.
                      * @return DetectedText Recognized text line content.
+                     * 
                      */
                     std::string GetDetectedText() const;
 
                     /**
                      * 设置Recognized text line content.
-                     * @param DetectedText Recognized text line content.
+                     * @param _detectedText Recognized text line content.
+                     * 
                      */
                     void SetDetectedText(const std::string& _detectedText);
 
                     /**
                      * 判断参数 DetectedText 是否已赋值
                      * @return DetectedText 是否已赋值
+                     * 
                      */
                     bool DetectedTextHasBeenSet() const;
 
                     /**
                      * 获取Confidence. Value range: 0–100.
                      * @return Confidence Confidence. Value range: 0–100.
+                     * 
                      */
                     int64_t GetConfidence() const;
 
                     /**
                      * 设置Confidence. Value range: 0–100.
-                     * @param Confidence Confidence. Value range: 0–100.
+                     * @param _confidence Confidence. Value range: 0–100.
+                     * 
                      */
                     void SetConfidence(const int64_t& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -91,20 +97,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Polygon Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Coord> GetPolygon() const;
 
                     /**
                      * 设置Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Polygon Text line coordinates, which are represented as 4 vertex coordinates.
+                     * @param _polygon Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolygon(const std::vector<Coord>& _polygon);
 
                     /**
                      * 判断参数 Polygon 是否已赋值
                      * @return Polygon 是否已赋值
+                     * 
                      */
                     bool PolygonHasBeenSet() const;
 
@@ -113,74 +122,86 @@ Note: this field may return null, indicating that no valid values can be obtaine
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
                      * @return AdvancedInfo Extended field.
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
+                     * 
                      */
                     std::string GetAdvancedInfo() const;
 
                     /**
                      * 设置Extended field.
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
-                     * @param AdvancedInfo Extended field.
+                     * @param _advancedInfo Extended field.
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
+                     * 
                      */
                     void SetAdvancedInfo(const std::string& _advancedInfo);
 
                     /**
                      * 判断参数 AdvancedInfo 是否已赋值
                      * @return AdvancedInfo 是否已赋值
+                     * 
                      */
                     bool AdvancedInfoHasBeenSet() const;
 
                     /**
                      * 获取Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
                      * @return ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+                     * 
                      */
                     ItemCoord GetItemPolygon() const;
 
                     /**
                      * 设置Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
-                     * @param ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+                     * @param _itemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+                     * 
                      */
                     void SetItemPolygon(const ItemCoord& _itemPolygon);
 
                     /**
                      * 判断参数 ItemPolygon 是否已赋值
                      * @return ItemPolygon 是否已赋值
+                     * 
                      */
                     bool ItemPolygonHasBeenSet() const;
 
                     /**
                      * 获取Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
                      * @return Words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * 
                      */
                     std::vector<DetectedWords> GetWords() const;
 
                     /**
                      * 设置Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
-                     * @param Words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * @param _words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * 
                      */
                     void SetWords(const std::vector<DetectedWords>& _words);
 
                     /**
                      * 判断参数 Words 是否已赋值
                      * @return Words 是否已赋值
+                     * 
                      */
                     bool WordsHasBeenSet() const;
 
                     /**
                      * 获取Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
                      * @return WordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * 
                      */
                     std::vector<DetectedWordCoordPoint> GetWordCoordPoint() const;
 
                     /**
                      * 设置Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
-                     * @param WordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * @param _wordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+                     * 
                      */
                     void SetWordCoordPoint(const std::vector<DetectedWordCoordPoint>& _wordCoordPoint);
 
                     /**
                      * 判断参数 WordCoordPoint 是否已赋值
                      * @return WordCoordPoint 是否已赋值
+                     * 
                      */
                     bool WordCoordPointHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
                      * @return Ready Indicates whether or not the data is ready. 0 = not ready, 1 = ready.
+                     * 
                      */
                     uint64_t GetReady() const;
 
                     /**
                      * 判断参数 Ready 是否已赋值
                      * @return Ready 是否已赋值
+                     * 
                      */
                     bool ReadyHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return SummaryOverview Detailed cost distribution for all projects
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<ProjectSummaryOverviewItem> GetSummaryOverview() const;
 
                     /**
                      * 判断参数 SummaryOverview 是否已赋值
                      * @return SummaryOverview 是否已赋值
+                     * 
                      */
                     bool SummaryOverviewHasBeenSet() const;
 

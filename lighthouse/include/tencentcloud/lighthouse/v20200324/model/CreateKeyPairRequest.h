@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Key pair name, which can contain up to 25 digits, letters, and underscores.
                      * @return KeyName Key pair name, which can contain up to 25 digits, letters, and underscores.
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Key pair name, which can contain up to 25 digits, letters, and underscores.
-                     * @param KeyName Key pair name, which can contain up to 25 digits, letters, and underscores.
+                     * @param _keyName Key pair name, which can contain up to 25 digits, letters, and underscores.
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 

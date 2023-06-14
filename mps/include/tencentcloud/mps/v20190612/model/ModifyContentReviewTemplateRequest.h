@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the content moderation template.
                      * @return Definition The unique ID of the content moderation template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置The unique ID of the content moderation template.
-                     * @param Definition The unique ID of the content moderation template.
+                     * @param _definition The unique ID of the content moderation template.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取The name of the content moderation template. Length limit: 64 characters.
                      * @return Name The name of the content moderation template. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The name of the content moderation template. Length limit: 64 characters.
-                     * @param Name The name of the content moderation template. Length limit: 64 characters.
+                     * @param _name The name of the content moderation template. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The template description. Length limit: 256 characters.
                      * @return Comment The template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The template description. Length limit: 256 characters.
-                     * @param Comment The template description. Length limit: 256 characters.
+                     * @param _comment The template description. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
                     /**
                      * 获取Control parameter for porn information
                      * @return PornConfigure Control parameter for porn information
+                     * 
                      */
                     PornConfigureInfoForUpdate GetPornConfigure() const;
 
                     /**
                      * 设置Control parameter for porn information
-                     * @param PornConfigure Control parameter for porn information
+                     * @param _pornConfigure Control parameter for porn information
+                     * 
                      */
                     void SetPornConfigure(const PornConfigureInfoForUpdate& _pornConfigure);
 
                     /**
                      * 判断参数 PornConfigure 是否已赋值
                      * @return PornConfigure 是否已赋值
+                     * 
                      */
                     bool PornConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter for terrorism information
                      * @return TerrorismConfigure Control parameter for terrorism information
+                     * 
                      */
                     TerrorismConfigureInfoForUpdate GetTerrorismConfigure() const;
 
                     /**
                      * 设置Control parameter for terrorism information
-                     * @param TerrorismConfigure Control parameter for terrorism information
+                     * @param _terrorismConfigure Control parameter for terrorism information
+                     * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfoForUpdate& _terrorismConfigure);
 
                     /**
                      * 判断参数 TerrorismConfigure 是否已赋值
                      * @return TerrorismConfigure 是否已赋值
+                     * 
                      */
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter for politically sensitive information
                      * @return PoliticalConfigure Control parameter for politically sensitive information
+                     * 
                      */
                     PoliticalConfigureInfoForUpdate GetPoliticalConfigure() const;
 
                     /**
                      * 设置Control parameter for politically sensitive information
-                     * @param PoliticalConfigure Control parameter for politically sensitive information
+                     * @param _politicalConfigure Control parameter for politically sensitive information
+                     * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfoForUpdate& _politicalConfigure);
 
                     /**
                      * 判断参数 PoliticalConfigure 是否已赋值
                      * @return PoliticalConfigure 是否已赋值
+                     * 
                      */
                     bool PoliticalConfigureHasBeenSet() const;
 
@@ -164,6 +182,7 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
+                     * 
                      */
                     ProhibitedConfigureInfoForUpdate GetProhibitedConfigure() const;
 
@@ -172,34 +191,39 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
-                     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+                     * @param _prohibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
+                     * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfoForUpdate& _prohibitedConfigure);
 
                     /**
                      * 判断参数 ProhibitedConfigure 是否已赋值
                      * @return ProhibitedConfigure 是否已赋值
+                     * 
                      */
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
                      * 获取Custom content moderation parameters.
                      * @return UserDefineConfigure Custom content moderation parameters.
+                     * 
                      */
                     UserDefineConfigureInfoForUpdate GetUserDefineConfigure() const;
 
                     /**
                      * 设置Custom content moderation parameters.
-                     * @param UserDefineConfigure Custom content moderation parameters.
+                     * @param _userDefineConfigure Custom content moderation parameters.
+                     * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfoForUpdate& _userDefineConfigure);
 
                     /**
                      * 判断参数 UserDefineConfigure 是否已赋值
                      * @return UserDefineConfigure 是否已赋值
+                     * 
                      */
                     bool UserDefineConfigureHasBeenSet() const;
 

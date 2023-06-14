@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The URL of the file currently pulled.
                      * @return FileUrl The URL of the file currently pulled.
+                     * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
                      * 设置The URL of the file currently pulled.
-                     * @param FileUrl The URL of the file currently pulled.
+                     * @param _fileUrl The URL of the file currently pulled.
+                     * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
 
                     /**
                      * 判断参数 FileUrl 是否已赋值
                      * @return FileUrl 是否已赋值
+                     * 
                      */
                     bool FileUrlHasBeenSet() const;
 
                     /**
                      * 获取The offset of the file currently pulled.
                      * @return OffsetTime The offset of the file currently pulled.
+                     * 
                      */
                     uint64_t GetOffsetTime() const;
 
                     /**
                      * 设置The offset of the file currently pulled.
-                     * @param OffsetTime The offset of the file currently pulled.
+                     * @param _offsetTime The offset of the file currently pulled.
+                     * 
                      */
                     void SetOffsetTime(const uint64_t& _offsetTime);
 
                     /**
                      * 判断参数 OffsetTime 是否已赋值
                      * @return OffsetTime 是否已赋值
+                     * 
                      */
                     bool OffsetTimeHasBeenSet() const;
 
@@ -89,6 +95,7 @@ Note: Beijing time is 8 hours ahead of UTC.
                      * @return ReportTime The time when the offset is reported, in UTC format.
 Example: 2020-07-23T03:20:39Z
 Note: Beijing time is 8 hours ahead of UTC.
+                     * 
                      */
                     std::string GetReportTime() const;
 
@@ -96,33 +103,38 @@ Note: Beijing time is 8 hours ahead of UTC.
                      * 设置The time when the offset is reported, in UTC format.
 Example: 2020-07-23T03:20:39Z
 Note: Beijing time is 8 hours ahead of UTC.
-                     * @param ReportTime The time when the offset is reported, in UTC format.
+                     * @param _reportTime The time when the offset is reported, in UTC format.
 Example: 2020-07-23T03:20:39Z
 Note: Beijing time is 8 hours ahead of UTC.
+                     * 
                      */
                     void SetReportTime(const std::string& _reportTime);
 
                     /**
                      * 判断参数 ReportTime 是否已赋值
                      * @return ReportTime 是否已赋值
+                     * 
                      */
                     bool ReportTimeHasBeenSet() const;
 
                     /**
                      * 获取The number of times looped.
                      * @return LoopedTimes The number of times looped.
+                     * 
                      */
                     int64_t GetLoopedTimes() const;
 
                     /**
                      * 设置The number of times looped.
-                     * @param LoopedTimes The number of times looped.
+                     * @param _loopedTimes The number of times looped.
+                     * 
                      */
                     void SetLoopedTimes(const int64_t& _loopedTimes);
 
                     /**
                      * 判断参数 LoopedTimes 是否已赋值
                      * @return LoopedTimes 是否已赋值
+                     * 
                      */
                     bool LoopedTimesHasBeenSet() const;
 

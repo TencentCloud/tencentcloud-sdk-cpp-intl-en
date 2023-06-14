@@ -56,24 +56,28 @@ namespace TencentCloud
 1: Conflict between VPC and serviceCIDR
 2: Conflict between VPC and podCIDR
 3: Conflict between serviceCIDR and podCIDR
+                     * 
                      */
                     int64_t GetConflictCode() const;
 
                     /**
                      * 判断参数 ConflictCode 是否已赋值
                      * @return ConflictCode 是否已赋值
+                     * 
                      */
                     bool ConflictCodeHasBeenSet() const;
 
                     /**
                      * 获取CIDR block conflict description
                      * @return ConflictMsg CIDR block conflict description
+                     * 
                      */
                     std::string GetConflictMsg() const;
 
                     /**
                      * 判断参数 ConflictMsg 是否已赋值
                      * @return ConflictMsg 是否已赋值
+                     * 
                      */
                     bool ConflictMsgHasBeenSet() const;
 

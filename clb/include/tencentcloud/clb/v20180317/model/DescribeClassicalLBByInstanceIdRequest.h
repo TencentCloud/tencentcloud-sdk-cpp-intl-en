@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of real server IDs
                      * @return InstanceIds List of real server IDs
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置List of real server IDs
-                     * @param InstanceIds List of real server IDs
+                     * @param _instanceIds List of real server IDs
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

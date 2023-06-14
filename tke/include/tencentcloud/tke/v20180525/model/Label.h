@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Name in map list
                      * @return Name Name in map list
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name in map list
-                     * @param Name Name in map list
+                     * @param _name Name in map list
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Value in map list
                      * @return Value Value in map list
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value in map list
-                     * @param Value Value in map list
+                     * @param _value Value in map list
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

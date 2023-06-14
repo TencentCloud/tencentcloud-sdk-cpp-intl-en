@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ObjectsType Data subscription object type. 0: database, 1: database table
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetObjectsType() const;
 
                     /**
                      * 设置Data subscription object type. 0: database, 1: database table
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ObjectsType Data subscription object type. 0: database, 1: database table
+                     * @param _objectsType Data subscription object type. 0: database, 1: database table
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetObjectsType(const int64_t& _objectsType);
 
                     /**
                      * 判断参数 ObjectsType 是否已赋值
                      * @return ObjectsType 是否已赋值
+                     * 
                      */
                     bool ObjectsTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseName Name of subscribed database
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatabaseName() const;
 
                     /**
                      * 设置Name of subscribed database
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DatabaseName Name of subscribed database
+                     * @param _databaseName Name of subscribed database
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabaseName(const std::string& _databaseName);
 
                     /**
                      * 判断参数 DatabaseName 是否已赋值
                      * @return DatabaseName 是否已赋值
+                     * 
                      */
                     bool DatabaseNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TableNames Array of table names in subscribed database
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTableNames() const;
 
                     /**
                      * 设置Array of table names in subscribed database
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TableNames Array of table names in subscribed database
+                     * @param _tableNames Array of table names in subscribed database
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTableNames(const std::vector<std::string>& _tableNames);
 
                     /**
                      * 判断参数 TableNames 是否已赋值
                      * @return TableNames 是否已赋值
+                     * 
                      */
                     bool TableNamesHasBeenSet() const;
 

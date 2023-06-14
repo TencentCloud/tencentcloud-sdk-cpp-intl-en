@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of custom domain names under service
                      * @return TotalCount Number of custom domain names under service
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of custom domain names under service
-                     * @param TotalCount Number of custom domain names under service
+                     * @param _totalCount Number of custom domain names under service
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Custom service domain name list.
                      * @return DomainSet Custom service domain name list.
+                     * 
                      */
                     std::vector<DomainSetList> GetDomainSet() const;
 
                     /**
                      * 设置Custom service domain name list.
-                     * @param DomainSet Custom service domain name list.
+                     * @param _domainSet Custom service domain name list.
+                     * 
                      */
                     void SetDomainSet(const std::vector<DomainSetList>& _domainSet);
 
                     /**
                      * 判断参数 DomainSet 是否已赋值
                      * @return DomainSet 是否已赋值
+                     * 
                      */
                     bool DomainSetHasBeenSet() const;
 

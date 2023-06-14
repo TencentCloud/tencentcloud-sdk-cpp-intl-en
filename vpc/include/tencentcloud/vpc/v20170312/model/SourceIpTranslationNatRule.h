@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Resource ID
                      * @return ResourceId Resource ID
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Resource ID
-                     * @param ResourceId Resource ID
+                     * @param _resourceId Resource ID
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
@@ -69,92 +72,107 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type. Valid values: SUBNET, NETWORKINTERFACE
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
+                     * @param _resourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Source IP/IP range
                      * @return PrivateIpAddress Source IP/IP range
+                     * 
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
                      * 设置Source IP/IP range
-                     * @param PrivateIpAddress Source IP/IP range
+                     * @param _privateIpAddress Source IP/IP range
+                     * 
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
                     /**
                      * 判断参数 PrivateIpAddress 是否已赋值
                      * @return PrivateIpAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressHasBeenSet() const;
 
                     /**
                      * 获取Elastic IP address pool
                      * @return PublicIpAddresses Elastic IP address pool
+                     * 
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
                      * 设置Elastic IP address pool
-                     * @param PublicIpAddresses Elastic IP address pool
+                     * @param _publicIpAddresses Elastic IP address pool
+                     * 
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
 
                     /**
                      * 判断参数 PublicIpAddresses 是否已赋值
                      * @return PublicIpAddresses 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressesHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取SNAT rule ID
                      * @return NatGatewaySnatId SNAT rule ID
+                     * 
                      */
                     std::string GetNatGatewaySnatId() const;
 
                     /**
                      * 设置SNAT rule ID
-                     * @param NatGatewaySnatId SNAT rule ID
+                     * @param _natGatewaySnatId SNAT rule ID
+                     * 
                      */
                     void SetNatGatewaySnatId(const std::string& _natGatewaySnatId);
 
                     /**
                      * 判断参数 NatGatewaySnatId 是否已赋值
                      * @return NatGatewaySnatId 是否已赋值
+                     * 
                      */
                     bool NatGatewaySnatIdHasBeenSet() const;
 
@@ -163,20 +181,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return NatGatewayId NAT gateway ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置NAT gateway ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param NatGatewayId NAT gateway ID.
+                     * @param _natGatewayId NAT gateway ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
@@ -185,20 +206,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return VpcId VPC ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param VpcId VPC ID.
+                     * @param _vpcId VPC ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
@@ -207,20 +231,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CreatedTime The creation time of a NAT gateway's SNAT rule.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置The creation time of a NAT gateway's SNAT rule.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CreatedTime The creation time of a NAT gateway's SNAT rule.
+                     * @param _createdTime The creation time of a NAT gateway's SNAT rule.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 

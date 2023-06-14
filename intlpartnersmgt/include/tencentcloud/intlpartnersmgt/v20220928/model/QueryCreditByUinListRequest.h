@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取User list
                      * @return UinList User list
+                     * 
                      */
                     std::vector<uint64_t> GetUinList() const;
 
                     /**
                      * 设置User list
-                     * @param UinList User list
+                     * @param _uinList User list
+                     * 
                      */
                     void SetUinList(const std::vector<uint64_t>& _uinList);
 
                     /**
                      * 判断参数 UinList 是否已赋值
                      * @return UinList 是否已赋值
+                     * 
                      */
                     bool UinListHasBeenSet() const;
 

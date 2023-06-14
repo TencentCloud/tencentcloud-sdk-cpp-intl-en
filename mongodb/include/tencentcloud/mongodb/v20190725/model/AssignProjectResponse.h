@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取List of the returned async task IDs
                      * @return FlowIds List of the returned async task IDs
+                     * 
                      */
                     std::vector<uint64_t> GetFlowIds() const;
 
                     /**
                      * 判断参数 FlowIds 是否已赋值
                      * @return FlowIds 是否已赋值
+                     * 
                      */
                     bool FlowIdsHasBeenSet() const;
 

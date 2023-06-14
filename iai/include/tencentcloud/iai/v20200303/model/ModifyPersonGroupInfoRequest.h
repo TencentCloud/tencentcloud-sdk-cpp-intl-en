@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Group ID, which is the `GroupId` in the `CreateGroup` API.
                      * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Group ID, which is the `GroupId` in the `CreateGroup` API.
-                     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * @param _groupId Group ID, which is the `GroupId` in the `CreateGroup` API.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
                      * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
-                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param _personId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
                     /**
                      * 获取Custom description field of the person to be modified, which is a `key-value` pair.
                      * @return PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value` pair.
+                     * 
                      */
                     std::vector<PersonExDescriptionInfo> GetPersonExDescriptionInfos() const;
 
                     /**
                      * 设置Custom description field of the person to be modified, which is a `key-value` pair.
-                     * @param PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value` pair.
+                     * @param _personExDescriptionInfos Custom description field of the person to be modified, which is a `key-value` pair.
+                     * 
                      */
                     void SetPersonExDescriptionInfos(const std::vector<PersonExDescriptionInfo>& _personExDescriptionInfos);
 
                     /**
                      * 判断参数 PersonExDescriptionInfos 是否已赋值
                      * @return PersonExDescriptionInfos 是否已赋值
+                     * 
                      */
                     bool PersonExDescriptionInfosHasBeenSet() const;
 

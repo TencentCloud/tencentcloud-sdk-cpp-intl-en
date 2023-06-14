@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Message retention period in ms. The current minimum value is 60,000 ms.
                      * @return RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+                     * 
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
                      * 设置Message retention period in ms. The current minimum value is 60,000 ms.
-                     * @param RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+                     * @param _retentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+                     * 
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
 
                     /**
                      * 判断参数 RetentionMs 是否已赋值
                      * @return RetentionMs 是否已赋值
+                     * 
                      */
                     bool RetentionMsHasBeenSet() const;
 
                     /**
                      * 获取Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
                      * @return Note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     std::string GetNote() const;
 
                     /**
                      * 设置Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param Note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * @param _note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 
                      */
                     void SetNote(const std::string& _note);
 
                     /**
                      * 判断参数 Note 是否已赋值
                      * @return Note 是否已赋值
+                     * 
                      */
                     bool NoteHasBeenSet() const;
 
                     /**
                      * 获取Tag list
                      * @return Tags Tag list
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list
-                     * @param Tags Tag list
+                     * @param _tags Tag list
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

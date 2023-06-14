@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Policy index
                      * @return PolicyIndex Policy index
+                     * 
                      */
                     int64_t GetPolicyIndex() const;
 
                     /**
                      * 设置Policy index
-                     * @param PolicyIndex Policy index
+                     * @param _policyIndex Policy index
+                     * 
                      */
                     void SetPolicyIndex(const int64_t& _policyIndex);
 
                     /**
                      * 判断参数 PolicyIndex 是否已赋值
                      * @return PolicyIndex 是否已赋值
+                     * 
                      */
                     bool PolicyIndexHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Description Remarks
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Remarks
-                     * @param Description Remarks
+                     * @param _description Remarks
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取The public network IP address of the access source
                      * @return CidrBlock The public network IP address of the access source
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置The public network IP address of the access source
-                     * @param CidrBlock The public network IP address of the access source
+                     * @param _cidrBlock The public network IP address of the access source
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取The version of the security policy
                      * @return PolicyVersion The version of the security policy
+                     * 
                      */
                     std::string GetPolicyVersion() const;
 
                     /**
                      * 设置The version of the security policy
-                     * @param PolicyVersion The version of the security policy
+                     * @param _policyVersion The version of the security policy
+                     * 
                      */
                     void SetPolicyVersion(const std::string& _policyVersion);
 
                     /**
                      * 判断参数 PolicyVersion 是否已赋值
                      * @return PolicyVersion 是否已赋值
+                     * 
                      */
                     bool PolicyVersionHasBeenSet() const;
 

@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding rule domain name.
                      * @return Domain Forwarding rule domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Forwarding rule domain name.
-                     * @param Domain Forwarding rule domain name.
+                     * @param _domain Forwarding rule domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule list of the domain name.
                      * @return RuleSet Forwarding rule list of the domain name.
+                     * 
                      */
                     std::vector<RuleInfo> GetRuleSet() const;
 
                     /**
                      * 设置Forwarding rule list of the domain name.
-                     * @param RuleSet Forwarding rule list of the domain name.
+                     * @param _ruleSet Forwarding rule list of the domain name.
+                     * 
                      */
                     void SetRuleSet(const std::vector<RuleInfo>& _ruleSet);
 
                     /**
                      * 判断参数 RuleSet 是否已赋值
                      * @return RuleSet 是否已赋值
+                     * 
                      */
                     bool RuleSetHasBeenSet() const;
 
@@ -89,20 +95,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CertificateId Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CertificateId Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
+                     * @param _certificateId Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 
@@ -111,20 +120,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CertificateAlias Server certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCertificateAlias() const;
 
                     /**
                      * 设置Server certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CertificateAlias Server certificate name of the domain name.
+                     * @param _certificateAlias Server certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertificateAlias(const std::string& _certificateAlias);
 
                     /**
                      * 判断参数 CertificateAlias 是否已赋值
                      * @return CertificateAlias 是否已赋值
+                     * 
                      */
                     bool CertificateAliasHasBeenSet() const;
 
@@ -133,20 +145,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClientCertificateId Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientCertificateId() const;
 
                     /**
                      * 设置Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientCertificateId Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
+                     * @param _clientCertificateId Client certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientCertificateId(const std::string& _clientCertificateId);
 
                     /**
                      * 判断参数 ClientCertificateId 是否已赋值
                      * @return ClientCertificateId 是否已赋值
+                     * 
                      */
                     bool ClientCertificateIdHasBeenSet() const;
 
@@ -155,20 +170,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClientCertificateAlias Client certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientCertificateAlias() const;
 
                     /**
                      * 设置Client certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientCertificateAlias Client certificate name of the domain name.
+                     * @param _clientCertificateAlias Client certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientCertificateAlias(const std::string& _clientCertificateAlias);
 
                     /**
                      * 判断参数 ClientCertificateAlias 是否已赋值
                      * @return ClientCertificateAlias 是否已赋值
+                     * 
                      */
                     bool ClientCertificateAliasHasBeenSet() const;
 
@@ -177,20 +195,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BasicAuthConfId Basic authentication configuration ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBasicAuthConfId() const;
 
                     /**
                      * 设置Basic authentication configuration ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BasicAuthConfId Basic authentication configuration ID of the domain name.
+                     * @param _basicAuthConfId Basic authentication configuration ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBasicAuthConfId(const std::string& _basicAuthConfId);
 
                     /**
                      * 判断参数 BasicAuthConfId 是否已赋值
                      * @return BasicAuthConfId 是否已赋值
+                     * 
                      */
                     bool BasicAuthConfIdHasBeenSet() const;
 
@@ -203,6 +224,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBasicAuth() const;
 
@@ -211,16 +233,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BasicAuth Basic authentication status:
+                     * @param _basicAuth Basic authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBasicAuth(const int64_t& _basicAuth);
 
                     /**
                      * 判断参数 BasicAuth 是否已赋值
                      * @return BasicAuth 是否已赋值
+                     * 
                      */
                     bool BasicAuthHasBeenSet() const;
 
@@ -229,20 +253,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BasicAuthConfAlias Basic authentication configuration name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBasicAuthConfAlias() const;
 
                     /**
                      * 设置Basic authentication configuration name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BasicAuthConfAlias Basic authentication configuration name of the domain name.
+                     * @param _basicAuthConfAlias Basic authentication configuration name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBasicAuthConfAlias(const std::string& _basicAuthConfAlias);
 
                     /**
                      * 判断参数 BasicAuthConfAlias 是否已赋值
                      * @return BasicAuthConfAlias 是否已赋值
+                     * 
                      */
                     bool BasicAuthConfAliasHasBeenSet() const;
 
@@ -251,20 +278,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealServerCertificateId Origin server authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRealServerCertificateId() const;
 
                     /**
                      * 设置Origin server authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealServerCertificateId Origin server authentication certificate ID of the domain name.
+                     * @param _realServerCertificateId Origin server authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealServerCertificateId(const std::string& _realServerCertificateId);
 
                     /**
                      * 判断参数 RealServerCertificateId 是否已赋值
                      * @return RealServerCertificateId 是否已赋值
+                     * 
                      */
                     bool RealServerCertificateIdHasBeenSet() const;
 
@@ -277,6 +307,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRealServerAuth() const;
 
@@ -285,16 +316,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealServerAuth Origin server authentication status:
+                     * @param _realServerAuth Origin server authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealServerAuth(const int64_t& _realServerAuth);
 
                     /**
                      * 判断参数 RealServerAuth 是否已赋值
                      * @return RealServerAuth 是否已赋值
+                     * 
                      */
                     bool RealServerAuthHasBeenSet() const;
 
@@ -303,20 +336,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealServerCertificateAlias Origin server authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRealServerCertificateAlias() const;
 
                     /**
                      * 设置Origin server authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealServerCertificateAlias Origin server authentication certificate name of the domain name.
+                     * @param _realServerCertificateAlias Origin server authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealServerCertificateAlias(const std::string& _realServerCertificateAlias);
 
                     /**
                      * 判断参数 RealServerCertificateAlias 是否已赋值
                      * @return RealServerCertificateAlias 是否已赋值
+                     * 
                      */
                     bool RealServerCertificateAliasHasBeenSet() const;
 
@@ -325,20 +361,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GaapCertificateId Connection authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGaapCertificateId() const;
 
                     /**
                      * 设置Connection authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GaapCertificateId Connection authentication certificate ID of the domain name.
+                     * @param _gaapCertificateId Connection authentication certificate ID of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGaapCertificateId(const std::string& _gaapCertificateId);
 
                     /**
                      * 判断参数 GaapCertificateId 是否已赋值
                      * @return GaapCertificateId 是否已赋值
+                     * 
                      */
                     bool GaapCertificateIdHasBeenSet() const;
 
@@ -351,6 +390,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetGaapAuth() const;
 
@@ -359,16 +399,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GaapAuth Connection authentication status:
+                     * @param _gaapAuth Connection authentication status:
 0: disabled;
 1: enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGaapAuth(const int64_t& _gaapAuth);
 
                     /**
                      * 判断参数 GaapAuth 是否已赋值
                      * @return GaapAuth 是否已赋值
+                     * 
                      */
                     bool GaapAuthHasBeenSet() const;
 
@@ -377,20 +419,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GaapCertificateAlias Connection authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGaapCertificateAlias() const;
 
                     /**
                      * 设置Connection authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GaapCertificateAlias Connection authentication certificate name of the domain name.
+                     * @param _gaapCertificateAlias Connection authentication certificate name of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGaapCertificateAlias(const std::string& _gaapCertificateAlias);
 
                     /**
                      * 判断参数 GaapCertificateAlias 是否已赋值
                      * @return GaapCertificateAlias 是否已赋值
+                     * 
                      */
                     bool GaapCertificateAliasHasBeenSet() const;
 
@@ -399,20 +444,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealServerCertificateDomain Origin server authentication domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRealServerCertificateDomain() const;
 
                     /**
                      * 设置Origin server authentication domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RealServerCertificateDomain Origin server authentication domain name.
+                     * @param _realServerCertificateDomain Origin server authentication domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealServerCertificateDomain(const std::string& _realServerCertificateDomain);
 
                     /**
                      * 判断参数 RealServerCertificateDomain 是否已赋值
                      * @return RealServerCertificateDomain 是否已赋值
+                     * 
                      */
                     bool RealServerCertificateDomainHasBeenSet() const;
 
@@ -421,20 +469,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolyClientCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CertificateAliasInfo> GetPolyClientCertificateAliasInfo() const;
 
                     /**
                      * 设置Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PolyClientCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple client certificates.
+                     * @param _polyClientCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolyClientCertificateAliasInfo(const std::vector<CertificateAliasInfo>& _polyClientCertificateAliasInfo);
 
                     /**
                      * 判断参数 PolyClientCertificateAliasInfo 是否已赋值
                      * @return PolyClientCertificateAliasInfo 是否已赋值
+                     * 
                      */
                     bool PolyClientCertificateAliasInfoHasBeenSet() const;
 
@@ -443,20 +494,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolyRealServerCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CertificateAliasInfo> GetPolyRealServerCertificateAliasInfo() const;
 
                     /**
                      * 设置Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PolyRealServerCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+                     * @param _polyRealServerCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolyRealServerCertificateAliasInfo(const std::vector<CertificateAliasInfo>& _polyRealServerCertificateAliasInfo);
 
                     /**
                      * 判断参数 PolyRealServerCertificateAliasInfo 是否已赋值
                      * @return PolyRealServerCertificateAliasInfo 是否已赋值
+                     * 
                      */
                     bool PolyRealServerCertificateAliasInfoHasBeenSet() const;
 
@@ -471,6 +525,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 1: changing;
 2: deleting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDomainStatus() const;
 
@@ -480,17 +535,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 1: changing;
 2: deleting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DomainStatus Domain name status.
+                     * @param _domainStatus Domain name status.
 0: running;
 1: changing;
 2: deleting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomainStatus(const uint64_t& _domainStatus);
 
                     /**
                      * 判断参数 DomainStatus 是否已赋值
                      * @return DomainStatus 是否已赋值
+                     * 
                      */
                     bool DomainStatusHasBeenSet() const;
 
@@ -499,20 +556,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBanStatus() const;
 
                     /**
                      * 设置Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+                     * @param _banStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBanStatus(const std::string& _banStatus);
 
                     /**
                      * 判断参数 BanStatus 是否已赋值
                      * @return BanStatus 是否已赋值
+                     * 
                      */
                     bool BanStatusHasBeenSet() const;
 
@@ -525,6 +585,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `0`: disable HTTP3;
 `1`: enable HTTP3.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHttp3Supported() const;
 
@@ -533,16 +594,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `0`: disable HTTP3;
 `1`: enable HTTP3.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+                     * @param _http3Supported Specifies whether to enable HTTP3. Valid values:
 `0`: disable HTTP3;
 `1`: enable HTTP3.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
                     /**
                      * 判断参数 Http3Supported 是否已赋值
                      * @return Http3Supported 是否已赋值
+                     * 
                      */
                     bool Http3SupportedHasBeenSet() const;
 

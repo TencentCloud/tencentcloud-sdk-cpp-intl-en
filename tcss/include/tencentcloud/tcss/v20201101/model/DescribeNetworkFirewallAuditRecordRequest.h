@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of records per query
                      * @return Limit Maximum number of records per query
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of records per query
-                     * @param Limit Maximum number of records per query
+                     * @param _limit Maximum number of records per query
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -84,56 +90,65 @@ namespace TencentCloud
 Name. Valid values: `publish`, `unpublish`, `confirm`, `add`, `update`, `delete`.
                      * @return Filters Name - Action
 Name. Valid values: `publish`, `unpublish`, `confirm`, `add`, `update`, `delete`.
+                     * 
                      */
                     std::vector<ComplianceFilters> GetFilters() const;
 
                     /**
                      * 设置Name - Action
 Name. Valid values: `publish`, `unpublish`, `confirm`, `add`, `update`, `delete`.
-                     * @param Filters Name - Action
+                     * @param _filters Name - Action
 Name. Valid values: `publish`, `unpublish`, `confirm`, `add`, `update`, `delete`.
+                     * 
                      */
                     void SetFilters(const std::vector<ComplianceFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Sorting field
                      * @return By Sorting field
+                     * 
                      */
                     std::string GetBy() const;
 
                     /**
                      * 设置Sorting field
-                     * @param By Sorting field
+                     * @param _by Sorting field
+                     * 
                      */
                     void SetBy(const std::string& _by);
 
                     /**
                      * 判断参数 By 是否已赋值
                      * @return By 是否已赋值
+                     * 
                      */
                     bool ByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `asc`, `desc`.
                      * @return Order Sorting order. Valid values: `asc`, `desc`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order. Valid values: `asc`, `desc`.
-                     * @param Order Sorting order. Valid values: `asc`, `desc`.
+                     * @param _order Sorting order. Valid values: `asc`, `desc`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Result of deleting topic IP allowlist
                      * @return Result Result of deleting topic IP allowlist
+                     * 
                      */
                     JgwOperateResponse GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

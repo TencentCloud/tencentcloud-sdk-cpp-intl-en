@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of async task flow for account password change
                      * @return FlowId ID of async task flow for account password change
+                     * 
                      */
                     int64_t GetFlowId() const;
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取IP
                      * @return Ip IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Type of the unblocking action (`user`: self-service unblocking, `auto`: automatic unblocking, `update`: unblocking by service upgrading, `bind`: unblocking by binding Anti-DDoS Pro instance)
                      * @return ActionType Type of the unblocking action (`user`: self-service unblocking, `auto`: automatic unblocking, `update`: unblocking by service upgrading, `bind`: unblocking by binding Anti-DDoS Pro instance)
+                     * 
                      */
                     std::string GetActionType() const;
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 
                     /**
                      * 获取Unblocked time (estimated)
                      * @return UnblockTime Unblocked time (estimated)
+                     * 
                      */
                     std::string GetUnblockTime() const;
 
                     /**
                      * 判断参数 UnblockTime 是否已赋值
                      * @return UnblockTime 是否已赋值
+                     * 
                      */
                     bool UnblockTimeHasBeenSet() const;
 

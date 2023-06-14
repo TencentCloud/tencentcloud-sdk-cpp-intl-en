@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Video ID.
                      * @return FileId Video ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Video ID.
-                     * @param FileId Video ID.
+                     * @param _fileId Video ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
@@ -82,16 +86,18 @@ namespace TencentCloud
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
-                     * @param StartTimeOffset Offset of the video splitting start time in seconds.
+                     * @param _startTimeOffset Offset of the video splitting start time in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
@@ -104,6 +110,7 @@ namespace TencentCloud
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
@@ -112,52 +119,60 @@ namespace TencentCloud
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
-                     * @param EndTimeOffset Offset of the video splitting end time in seconds.
+                     * @param _endTimeOffset Offset of the video splitting end time in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取[Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
                      * @return ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
+                     * 
                      */
                     std::string GetProcedureName() const;
 
                     /**
                      * 设置[Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
-                     * @param ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
+                     * @param _procedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/33931?lang=en&pg=) name, which should be entered if you want to perform a task flow on the generated new video.
+                     * 
                      */
                     void SetProcedureName(const std::string& _procedureName);
 
                     /**
                      * 判断参数 ProcedureName 是否已赋值
                      * @return ProcedureName 是否已赋值
+                     * 
                      */
                     bool ProcedureNameHasBeenSet() const;
 
                     /**
                      * 获取Output information of a video splitting task.
                      * @return OutputConfig Output information of a video splitting task.
+                     * 
                      */
                     SplitMediaOutputConfig GetOutputConfig() const;
 
                     /**
                      * 设置Output information of a video splitting task.
-                     * @param OutputConfig Output information of a video splitting task.
+                     * @param _outputConfig Output information of a video splitting task.
+                     * 
                      */
                     void SetOutputConfig(const SplitMediaOutputConfig& _outputConfig);
 
                     /**
                      * 判断参数 OutputConfig 是否已赋值
                      * @return OutputConfig 是否已赋值
+                     * 
                      */
                     bool OutputConfigHasBeenSet() const;
 

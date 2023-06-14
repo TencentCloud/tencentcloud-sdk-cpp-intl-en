@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Returned error code.
                      * @return Errno Returned error code.
+                     * 
                      */
                     int64_t GetErrno() const;
 
                     /**
                      * 判断参数 Errno 是否已赋值
                      * @return Errno 是否已赋值
+                     * 
                      */
                     bool ErrnoHasBeenSet() const;
 
                     /**
                      * 获取Returned error message.
                      * @return Msg Returned error message.
+                     * 
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 判断参数 Msg 是否已赋值
                      * @return Msg 是否已赋值
+                     * 
                      */
                     bool MsgHasBeenSet() const;
 

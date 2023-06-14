@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of bound resources
                      * @return BindList List of bound resources
+                     * 
                      */
                     std::vector<BindDetailItem> GetBindList() const;
 
                     /**
                      * 判断参数 BindList 是否已赋值
                      * @return BindList 是否已赋值
+                     * 
                      */
                     bool BindListHasBeenSet() const;
 
                     /**
                      * 获取Total number of bound resources
                      * @return TotalCount Total number of bound resources
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

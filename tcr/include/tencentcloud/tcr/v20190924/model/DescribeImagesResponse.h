@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of container images
                      * @return ImageInfoList List of container images
+                     * 
                      */
                     std::vector<TcrImageInfo> GetImageInfoList() const;
 
                     /**
                      * 判断参数 ImageInfoList 是否已赋值
                      * @return ImageInfoList 是否已赋值
+                     * 
                      */
                     bool ImageInfoListHasBeenSet() const;
 
                     /**
                      * 获取Total number of container images
                      * @return TotalCount Total number of container images
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

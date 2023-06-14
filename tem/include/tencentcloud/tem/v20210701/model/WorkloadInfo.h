@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterId The resource ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The resource ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClusterId The resource ID.
+                     * @param _clusterId The resource ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ApplicationName Application name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
                      * 设置Application name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ApplicationName Application name
+                     * @param _applicationName Application name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
 
                     /**
                      * 判断参数 ApplicationName 是否已赋值
                      * @return ApplicationName 是否已赋值
+                     * 
                      */
                     bool ApplicationNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return VersionName Version name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetVersionName() const;
 
                     /**
                      * 设置Version name
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param VersionName Version name
+                     * @param _versionName Version name
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetVersionName(const std::string& _versionName);
 
                     /**
                      * 判断参数 VersionName 是否已赋值
                      * @return VersionName 是否已赋值
+                     * 
                      */
                     bool VersionNameHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ReadyReplicas Number of ready replicas
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetReadyReplicas() const;
 
                     /**
                      * 设置Number of ready replicas
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ReadyReplicas Number of ready replicas
+                     * @param _readyReplicas Number of ready replicas
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReadyReplicas(const int64_t& _readyReplicas);
 
                     /**
                      * 判断参数 ReadyReplicas 是否已赋值
                      * @return ReadyReplicas 是否已赋值
+                     * 
                      */
                     bool ReadyReplicasHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Replicas Number of replicas
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetReplicas() const;
 
                     /**
                      * 设置Number of replicas
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Replicas Number of replicas
+                     * @param _replicas Number of replicas
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetReplicas(const int64_t& _replicas);
 
                     /**
                      * 判断参数 Replicas 是否已赋值
                      * @return Replicas 是否已赋值
+                     * 
                      */
                     bool ReplicasHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UpdatedReplicas Number of updated replicas
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUpdatedReplicas() const;
 
                     /**
                      * 设置Number of updated replicas
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UpdatedReplicas Number of updated replicas
+                     * @param _updatedReplicas Number of updated replicas
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUpdatedReplicas(const int64_t& _updatedReplicas);
 
                     /**
                      * 判断参数 UpdatedReplicas 是否已赋值
                      * @return UpdatedReplicas 是否已赋值
+                     * 
                      */
                     bool UpdatedReplicasHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UpdatedReadyReplicas Number of replicas ready for update
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUpdatedReadyReplicas() const;
 
                     /**
                      * 设置Number of replicas ready for update
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UpdatedReadyReplicas Number of replicas ready for update
+                     * @param _updatedReadyReplicas Number of replicas ready for update
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUpdatedReadyReplicas(const int64_t& _updatedReadyReplicas);
 
                     /**
                      * 判断参数 UpdatedReadyReplicas 是否已赋值
                      * @return UpdatedReadyReplicas 是否已赋值
+                     * 
                      */
                     bool UpdatedReadyReplicasHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UpdateRevision ## Version Updates
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUpdateRevision() const;
 
                     /**
                      * 设置## Version Updates
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UpdateRevision ## Version Updates
+                     * @param _updateRevision ## Version Updates
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetUpdateRevision(const std::string& _updateRevision);
 
                     /**
                      * 判断参数 UpdateRevision 是否已赋值
                      * @return UpdateRevision 是否已赋值
+                     * 
                      */
                     bool UpdateRevisionHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return CurrentRevision Current Version
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetCurrentRevision() const;
 
                     /**
                      * 设置Current Version
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param CurrentRevision Current Version
+                     * @param _currentRevision Current Version
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetCurrentRevision(const std::string& _currentRevision);
 
                     /**
                      * 判断参数 CurrentRevision 是否已赋值
                      * @return CurrentRevision 是否已赋值
+                     * 
                      */
                     bool CurrentRevisionHasBeenSet() const;
 

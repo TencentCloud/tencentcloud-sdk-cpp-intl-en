@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where a table group resides
                      * @return ClusterId ID of the cluster where a table group resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where a table group resides
-                     * @param ClusterId ID of the cluster where a table group resides
+                     * @param _clusterId ID of the cluster where a table group resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Table group name, which can contain up to 32 letters and digits
                      * @return TableGroupName Table group name, which can contain up to 32 letters and digits
+                     * 
                      */
                     std::string GetTableGroupName() const;
 
                     /**
                      * 设置Table group name, which can contain up to 32 letters and digits
-                     * @param TableGroupName Table group name, which can contain up to 32 letters and digits
+                     * @param _tableGroupName Table group name, which can contain up to 32 letters and digits
+                     * 
                      */
                     void SetTableGroupName(const std::string& _tableGroupName);
 
                     /**
                      * 判断参数 TableGroupName 是否已赋值
                      * @return TableGroupName 是否已赋值
+                     * 
                      */
                     bool TableGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
                      * @return TableGroupId Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
-                     * @param TableGroupId Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
+                     * @param _tableGroupId Table group ID, which can be customized but must be unique in one cluster. If it is not specified, the auto-increment mode will be used.
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Table group tag list
                      * @return ResourceTags Table group tag list
+                     * 
                      */
                     std::vector<TagInfoUnit> GetResourceTags() const;
 
                     /**
                      * 设置Table group tag list
-                     * @param ResourceTags Table group tag list
+                     * @param _resourceTags Table group tag list
+                     * 
                      */
                     void SetResourceTags(const std::vector<TagInfoUnit>& _resourceTags);
 
                     /**
                      * 判断参数 ResourceTags 是否已赋值
                      * @return ResourceTags 是否已赋值
+                     * 
                      */
                     bool ResourceTagsHasBeenSet() const;
 

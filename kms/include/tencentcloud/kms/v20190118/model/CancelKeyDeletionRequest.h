@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the CMK for which to cancel schedule deletion
                      * @return KeyId Unique ID of the CMK for which to cancel schedule deletion
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Unique ID of the CMK for which to cancel schedule deletion
-                     * @param KeyId Unique ID of the CMK for which to cancel schedule deletion
+                     * @param _keyId Unique ID of the CMK for which to cancel schedule deletion
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 

@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取List of task objects.
                      * @return TaskList List of task objects.
+                     * 
                      */
                     std::vector<TaskResponseInfo> GetTaskList() const;
 
                     /**
                      * 判断参数 TaskList 是否已赋值
                      * @return TaskList 是否已赋值
+                     * 
                      */
                     bool TaskListHasBeenSet() const;
 
                     /**
                      * 获取Total number of instances
                      * @return TotalCount Total number of instances
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,12 +78,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TasksOverview The task overview.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TasksOverview GetTasksOverview() const;
 
                     /**
                      * 判断参数 TasksOverview 是否已赋值
                      * @return TasksOverview 是否已赋值
+                     * 
                      */
                     bool TasksOverviewHasBeenSet() const;
 

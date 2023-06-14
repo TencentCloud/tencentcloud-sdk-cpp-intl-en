@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unusual login location event ID array.
                      * @return Ids Unusual login location event ID array.
+                     * 
                      */
                     std::vector<uint64_t> GetIds() const;
 
                     /**
                      * 设置Unusual login location event ID array.
-                     * @param Ids Unusual login location event ID array.
+                     * @param _ids Unusual login location event ID array.
+                     * 
                      */
                     void SetIds(const std::vector<uint64_t>& _ids);
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

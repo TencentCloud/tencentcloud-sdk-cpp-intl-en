@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Adaptive bitrate streaming template ID.
                      * @return Definition Adaptive bitrate streaming template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置Adaptive bitrate streaming template ID.
-                     * @param Definition Adaptive bitrate streaming template ID.
+                     * @param _definition Adaptive bitrate streaming template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -71,56 +74,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
                      * 设置List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WatermarkSet List of up to 10 image or text watermarks.
+                     * @param _watermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
 
                     /**
                      * 判断参数 WatermarkSet 是否已赋值
                      * @return WatermarkSet 是否已赋值
+                     * 
                      */
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
                      * 获取Digital watermark.
                      * @return TraceWatermark Digital watermark.
+                     * 
                      */
                     TraceWatermarkInput GetTraceWatermark() const;
 
                     /**
                      * 设置Digital watermark.
-                     * @param TraceWatermark Digital watermark.
+                     * @param _traceWatermark Digital watermark.
+                     * 
                      */
                     void SetTraceWatermark(const TraceWatermarkInput& _traceWatermark);
 
                     /**
                      * 判断参数 TraceWatermark 是否已赋值
                      * @return TraceWatermark 是否已赋值
+                     * 
                      */
                     bool TraceWatermarkHasBeenSet() const;
 
                     /**
                      * 获取List of subtitle IDs (maximum: 16)
                      * @return SubtitleSet List of subtitle IDs (maximum: 16)
+                     * 
                      */
                     std::vector<std::string> GetSubtitleSet() const;
 
                     /**
                      * 设置List of subtitle IDs (maximum: 16)
-                     * @param SubtitleSet List of subtitle IDs (maximum: 16)
+                     * @param _subtitleSet List of subtitle IDs (maximum: 16)
+                     * 
                      */
                     void SetSubtitleSet(const std::vector<std::string>& _subtitleSet);
 
                     /**
                      * 判断参数 SubtitleSet 是否已赋值
                      * @return SubtitleSet 是否已赋值
+                     * 
                      */
                     bool SubtitleSetHasBeenSet() const;
 

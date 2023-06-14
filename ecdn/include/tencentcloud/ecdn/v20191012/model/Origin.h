@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
                      * @return Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+                     * 
                      */
                     std::vector<std::string> GetOrigins() const;
 
                     /**
                      * 设置Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
-                     * @param Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+                     * @param _origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+                     * 
                      */
                     void SetOrigins(const std::vector<std::string>& _origins);
 
                     /**
                      * 判断参数 Origins 是否已赋值
                      * @return Origins 是否已赋值
+                     * 
                      */
                     bool OriginsHasBeenSet() const;
 
@@ -72,6 +75,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return OriginType Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
 This is required when setting `Origins`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginType() const;
 
@@ -79,15 +83,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
 This is required when setting `Origins`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OriginType Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
+                     * @param _originType Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
 This is required when setting `Origins`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginType(const std::string& _originType);
 
                     /**
                      * 判断参数 OriginType 是否已赋值
                      * @return OriginType 是否已赋值
+                     * 
                      */
                     bool OriginTypeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServerName Host header value during origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServerName() const;
 
                     /**
                      * 设置Host header value during origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServerName Host header value during origin-pull.
+                     * @param _serverName Host header value during origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServerName(const std::string& _serverName);
 
                     /**
                      * 判断参数 ServerName 是否已赋值
                      * @return ServerName 是否已赋值
+                     * 
                      */
                     bool ServerNameHasBeenSet() const;
 
@@ -120,6 +129,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return OriginPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
 If this parameter is left empty, HTTP origin-pull will be used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetOriginPullProtocol() const;
 
@@ -127,33 +137,38 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      * 设置Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
 If this parameter is left empty, HTTP origin-pull will be used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param OriginPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
+                     * @param _originPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
 If this parameter is left empty, HTTP origin-pull will be used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
 
                     /**
                      * 判断参数 OriginPullProtocol 是否已赋值
                      * @return OriginPullProtocol 是否已赋值
+                     * 
                      */
                     bool OriginPullProtocolHasBeenSet() const;
 
                     /**
                      * 获取Secondary origin server list.
                      * @return BackupOrigins Secondary origin server list.
+                     * 
                      */
                     std::vector<std::string> GetBackupOrigins() const;
 
                     /**
                      * 设置Secondary origin server list.
-                     * @param BackupOrigins Secondary origin server list.
+                     * @param _backupOrigins Secondary origin server list.
+                     * 
                      */
                     void SetBackupOrigins(const std::vector<std::string>& _backupOrigins);
 
                     /**
                      * 判断参数 BackupOrigins 是否已赋值
                      * @return BackupOrigins 是否已赋值
+                     * 
                      */
                     bool BackupOriginsHasBeenSet() const;
 
@@ -164,6 +179,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return BackupOriginType Secondary origin server type, which is the same as `OriginType`.
 This is required when setting `BackupOrigins`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackupOriginType() const;
 
@@ -171,15 +187,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Secondary origin server type, which is the same as `OriginType`.
 This is required when setting `BackupOrigins`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BackupOriginType Secondary origin server type, which is the same as `OriginType`.
+                     * @param _backupOriginType Secondary origin server type, which is the same as `OriginType`.
 This is required when setting `BackupOrigins`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackupOriginType(const std::string& _backupOriginType);
 
                     /**
                      * 判断参数 BackupOriginType 是否已赋值
                      * @return BackupOriginType 是否已赋值
+                     * 
                      */
                     bool BackupOriginTypeHasBeenSet() const;
 
@@ -188,20 +206,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AdvanceHttps HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AdvanceHttps GetAdvanceHttps() const;
 
                     /**
                      * 设置HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AdvanceHttps HTTPS advanced origin-pull configuration
+                     * @param _advanceHttps HTTPS advanced origin-pull configuration
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdvanceHttps(const AdvanceHttps& _advanceHttps);
 
                     /**
                      * 判断参数 AdvanceHttps 是否已赋值
                      * @return AdvanceHttps 是否已赋值
+                     * 
                      */
                     bool AdvanceHttpsHasBeenSet() const;
 

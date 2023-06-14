@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取Time range in seconds in histogram.
                      * @return Period Time range in seconds in histogram.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Number of slow logs in the specified time range.
                      * @return TimeSeries Number of slow logs in the specified time range.
+                     * 
                      */
                     std::vector<TimeSlice> GetTimeSeries() const;
 
                     /**
                      * 判断参数 TimeSeries 是否已赋值
                      * @return TimeSeries 是否已赋值
+                     * 
                      */
                     bool TimeSeriesHasBeenSet() const;
 
                     /**
                      * 获取Instance CPU utilization monitoring data in the specified time range.
                      * @return SeriesData Instance CPU utilization monitoring data in the specified time range.
+                     * 
                      */
                     MonitorMetricSeriesData GetSeriesData() const;
 
                     /**
                      * 判断参数 SeriesData 是否已赋值
                      * @return SeriesData 是否已赋值
+                     * 
                      */
                     bool SeriesDataHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取URL of the user callback API.
                      * @return CallbackUrl URL of the user callback API.
+                     * 
                      */
                     std::string GetCallbackUrl() const;
 
                     /**
                      * 设置URL of the user callback API.
-                     * @param CallbackUrl URL of the user callback API.
+                     * @param _callbackUrl URL of the user callback API.
+                     * 
                      */
                     void SetCallbackUrl(const std::string& _callbackUrl);
 
                     /**
                      * 判断参数 CallbackUrl 是否已赋值
                      * @return CallbackUrl 是否已赋值
+                     * 
                      */
                     bool CallbackUrlHasBeenSet() const;
 
                     /**
                      * 获取Status of the user callback API. The value 0 indicates that the API is not verified. The value 1 indicates that the API is verified. The value 2 indicates that a URL exists but the API fails to be verified.
                      * @return ValidFlag Status of the user callback API. The value 0 indicates that the API is not verified. The value 1 indicates that the API is verified. The value 2 indicates that a URL exists but the API fails to be verified.
+                     * 
                      */
                     int64_t GetValidFlag() const;
 
                     /**
                      * 设置Status of the user callback API. The value 0 indicates that the API is not verified. The value 1 indicates that the API is verified. The value 2 indicates that a URL exists but the API fails to be verified.
-                     * @param ValidFlag Status of the user callback API. The value 0 indicates that the API is not verified. The value 1 indicates that the API is verified. The value 2 indicates that a URL exists but the API fails to be verified.
+                     * @param _validFlag Status of the user callback API. The value 0 indicates that the API is not verified. The value 1 indicates that the API is verified. The value 2 indicates that a URL exists but the API fails to be verified.
+                     * 
                      */
                     void SetValidFlag(const int64_t& _validFlag);
 
                     /**
                      * 判断参数 ValidFlag 是否已赋值
                      * @return ValidFlag 是否已赋值
+                     * 
                      */
                     bool ValidFlagHasBeenSet() const;
 
                     /**
                      * 获取Verification code of the user callback API.
                      * @return VerifyCode Verification code of the user callback API.
+                     * 
                      */
                     std::string GetVerifyCode() const;
 
                     /**
                      * 设置Verification code of the user callback API.
-                     * @param VerifyCode Verification code of the user callback API.
+                     * @param _verifyCode Verification code of the user callback API.
+                     * 
                      */
                     void SetVerifyCode(const std::string& _verifyCode);
 
                     /**
                      * 判断参数 VerifyCode 是否已赋值
                      * @return VerifyCode 是否已赋值
+                     * 
                      */
                     bool VerifyCodeHasBeenSet() const;
 

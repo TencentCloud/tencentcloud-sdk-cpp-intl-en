@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID. The instance must be terminated first.
                      * @return InstanceId Instance ID. The instance must be terminated first.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID. The instance must be terminated first.
-                     * @param InstanceId Instance ID. The instance must be terminated first.
+                     * @param _instanceId Instance ID. The instance must be terminated first.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

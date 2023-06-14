@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return Key Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Key Dimension name in English.
+                     * @param _key Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Name Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Name Dimension name in Chinese.
+                     * @param _name Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return Value Dimension value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Dimension value.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param Value Dimension value.
+                     * @param _value Dimension value.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

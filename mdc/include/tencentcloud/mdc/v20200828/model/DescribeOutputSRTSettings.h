@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<SRTAddressDestination> GetDestinations() const;
 
                     /**
                      * 设置A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+                     * @param _destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDestinations(const std::vector<SRTAddressDestination>& _destinations);
 
                     /**
                      * 判断参数 Destinations 是否已赋值
                      * @return Destinations 是否已赋值
+                     * 
                      */
                     bool DestinationsHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StreamId Stream ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStreamId() const;
 
                     /**
                      * 设置Stream ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StreamId Stream ID.
+                     * @param _streamId Stream ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStreamId(const std::string& _streamId);
 
                     /**
                      * 判断参数 StreamId 是否已赋值
                      * @return StreamId 是否已赋值
+                     * 
                      */
                     bool StreamIdHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Latency Latency.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetLatency() const;
 
                     /**
                      * 设置Latency.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Latency Latency.
+                     * @param _latency Latency.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLatency(const int64_t& _latency);
 
                     /**
                      * 判断参数 Latency 是否已赋值
                      * @return Latency 是否已赋值
+                     * 
                      */
                     bool LatencyHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RecvLatency Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRecvLatency() const;
 
                     /**
                      * 设置Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RecvLatency Receive latency.
+                     * @param _recvLatency Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecvLatency(const int64_t& _recvLatency);
 
                     /**
                      * 判断参数 RecvLatency 是否已赋值
                      * @return RecvLatency 是否已赋值
+                     * 
                      */
                     bool RecvLatencyHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PeerLatency Peer latency.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPeerLatency() const;
 
                     /**
                      * 设置Peer latency.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PeerLatency Peer latency.
+                     * @param _peerLatency Peer latency.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPeerLatency(const int64_t& _peerLatency);
 
                     /**
                      * 判断参数 PeerLatency 是否已赋值
                      * @return PeerLatency 是否已赋值
+                     * 
                      */
                     bool PeerLatencyHasBeenSet() const;
 
@@ -163,20 +178,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PeerIdleTimeout Peer idle timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPeerIdleTimeout() const;
 
                     /**
                      * 设置Peer idle timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PeerIdleTimeout Peer idle timeout period.
+                     * @param _peerIdleTimeout Peer idle timeout period.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPeerIdleTimeout(const int64_t& _peerIdleTimeout);
 
                     /**
                      * 判断参数 PeerIdleTimeout 是否已赋值
                      * @return PeerIdleTimeout 是否已赋值
+                     * 
                      */
                     bool PeerIdleTimeoutHasBeenSet() const;
 
@@ -185,20 +203,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Passphrase Encryption key.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPassphrase() const;
 
                     /**
                      * 设置Encryption key.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Passphrase Encryption key.
+                     * @param _passphrase Encryption key.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPassphrase(const std::string& _passphrase);
 
                     /**
                      * 判断参数 Passphrase 是否已赋值
                      * @return Passphrase 是否已赋值
+                     * 
                      */
                     bool PassphraseHasBeenSet() const;
 
@@ -207,20 +228,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PbKeyLen Encryption key length.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPbKeyLen() const;
 
                     /**
                      * 设置Encryption key length.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PbKeyLen Encryption key length.
+                     * @param _pbKeyLen Encryption key length.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPbKeyLen(const int64_t& _pbKeyLen);
 
                     /**
                      * 判断参数 PbKeyLen 是否已赋值
                      * @return PbKeyLen 是否已赋值
+                     * 
                      */
                     bool PbKeyLenHasBeenSet() const;
 
@@ -229,20 +253,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mode The SRT mode.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置The SRT mode.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mode The SRT mode.
+                     * @param _mode The SRT mode.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
@@ -251,20 +278,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<OutputSRTSourceAddressResp> GetSourceAddresses() const;
 
                     /**
                      * 设置The server’s listen address, which is valid if `Mode` is `LISTENER`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
+                     * @param _sourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSourceAddresses(const std::vector<OutputSRTSourceAddressResp>& _sourceAddresses);
 
                     /**
                      * 判断参数 SourceAddresses 是否已赋值
                      * @return SourceAddresses 是否已赋值
+                     * 
                      */
                     bool SourceAddressesHasBeenSet() const;
 

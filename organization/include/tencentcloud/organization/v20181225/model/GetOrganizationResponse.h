@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Organization ID
                      * @return OrgId Organization ID
+                     * 
                      */
                     uint64_t GetOrgId() const;
 
                     /**
                      * 判断参数 OrgId 是否已赋值
                      * @return OrgId 是否已赋值
+                     * 
                      */
                     bool OrgIdHasBeenSet() const;
 
                     /**
                      * 获取Creator UIN
                      * @return HostUin Creator UIN
+                     * 
                      */
                     uint64_t GetHostUin() const;
 
                     /**
                      * 判断参数 HostUin 是否已赋值
                      * @return HostUin 是否已赋值
+                     * 
                      */
                     bool HostUinHasBeenSet() const;
 
                     /**
                      * 获取Creator's name
                      * @return Nickname Creator's name
+                     * 
                      */
                     std::string GetNickname() const;
 
                     /**
                      * 判断参数 Nickname 是否已赋值
                      * @return Nickname 是否已赋值
+                     * 
                      */
                     bool NicknameHasBeenSet() const;
 
                     /**
                      * 获取Creator's email address
                      * @return Mail Creator's email address
+                     * 
                      */
                     std::string GetMail() const;
 
                     /**
                      * 判断参数 Mail 是否已赋值
                      * @return Mail 是否已赋值
+                     * 
                      */
                     bool MailHasBeenSet() const;
 
                     /**
                      * 获取Organization type
                      * @return OrgType Organization type
+                     * 
                      */
                     uint64_t GetOrgType() const;
 
                     /**
                      * 判断参数 OrgType 是否已赋值
                      * @return OrgType 是否已赋值
+                     * 
                      */
                     bool OrgTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether the organization is empty or not 
                      * @return IsEmpty Whether the organization is empty or not 
+                     * 
                      */
                     uint64_t GetIsEmpty() const;
 
                     /**
                      * 判断参数 IsEmpty 是否已赋值
                      * @return IsEmpty 是否已赋值
+                     * 
                      */
                     bool IsEmptyHasBeenSet() const;
 

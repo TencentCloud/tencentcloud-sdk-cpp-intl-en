@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Protocol Protocol of the network policy
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol of the network policy
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol Protocol of the network policy
+                     * @param _protocol Protocol of the network policy
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Port Port of the network policy
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPort() const;
 
                     /**
                      * 设置Port of the network policy
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Port Port of the network policy
+                     * @param _port Port of the network policy
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const std::string& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 

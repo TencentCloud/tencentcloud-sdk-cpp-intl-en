@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Client time in RFC 3339 format
                      * @return StartTime Client time in RFC 3339 format
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Client time in RFC 3339 format
-                     * @param StartTime Client time in RFC 3339 format
+                     * @param _startTime Client time in RFC 3339 format
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Client time in RFC 3339 format
                      * @return EndTime Client time in RFC 3339 format
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Client time in RFC 3339 format
-                     * @param EndTime Client time in RFC 3339 format
+                     * @param _endTime Client time in RFC 3339 format
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -87,6 +93,7 @@ namespace TencentCloud
 `l7Flow_outFlux`: Access traffic
 `l7Flow_request`: Access requests
 `l7Flow_outBandwidth`: Access bandwidth
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
@@ -95,88 +102,102 @@ namespace TencentCloud
 `l7Flow_outFlux`: Access traffic
 `l7Flow_request`: Access requests
 `l7Flow_outBandwidth`: Access bandwidth
-                     * @param MetricNames Supported metrics for data query:
+                     * @param _metricNames Supported metrics for data query:
 `l7Flow_outFlux`: Access traffic
 `l7Flow_request`: Access requests
 `l7Flow_outBandwidth`: Access bandwidth
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
                     /**
                      * 获取Time interval. Valid values: {min, 5min, hour, day, week}
                      * @return Interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Time interval. Valid values: {min, 5min, hour, day, week}
-                     * @param Interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * @param _interval Time interval. Valid values: {min, 5min, hour, day, week}
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取List of `ZoneId` values. This parameter takes effect only when querying in the zone/domain dimension.
                      * @return ZoneIds List of `ZoneId` values. This parameter takes effect only when querying in the zone/domain dimension.
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置List of `ZoneId` values. This parameter takes effect only when querying in the zone/domain dimension.
-                     * @param ZoneIds List of `ZoneId` values. This parameter takes effect only when querying in the zone/domain dimension.
+                     * @param _zoneIds List of `ZoneId` values. This parameter takes effect only when querying in the zone/domain dimension.
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取List of `Domain` values. This parameter takes effect only when querying in the domain dimension.
                      * @return Domains List of `Domain` values. This parameter takes effect only when querying in the domain dimension.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置List of `Domain` values. This parameter takes effect only when querying in the domain dimension.
-                     * @param Domains List of `Domain` values. This parameter takes effect only when querying in the domain dimension.
+                     * @param _domains List of `Domain` values. This parameter takes effect only when querying in the domain dimension.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Protocol type. Valid values: {http,http2,https,all}
                      * @return Protocol Protocol type. Valid values: {http,http2,https,all}
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol type. Valid values: {http,http2,https,all}
-                     * @param Protocol Protocol type. Valid values: {http,http2,https,all}
+                     * @param _protocol Protocol type. Valid values: {http,http2,https,all}
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

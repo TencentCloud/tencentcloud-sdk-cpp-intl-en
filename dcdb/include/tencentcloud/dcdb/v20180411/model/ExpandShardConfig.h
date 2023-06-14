@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Shard IDs in array
                      * @return ShardInstanceIds Shard IDs in array
+                     * 
                      */
                     std::vector<std::string> GetShardInstanceIds() const;
 
                     /**
                      * 设置Shard IDs in array
-                     * @param ShardInstanceIds Shard IDs in array
+                     * @param _shardInstanceIds Shard IDs in array
+                     * 
                      */
                     void SetShardInstanceIds(const std::vector<std::string>& _shardInstanceIds);
 
                     /**
                      * 判断参数 ShardInstanceIds 是否已赋值
                      * @return ShardInstanceIds 是否已赋值
+                     * 
                      */
                     bool ShardInstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Shard memory capacity in GB
                      * @return ShardMemory Shard memory capacity in GB
+                     * 
                      */
                     int64_t GetShardMemory() const;
 
                     /**
                      * 设置Shard memory capacity in GB
-                     * @param ShardMemory Shard memory capacity in GB
+                     * @param _shardMemory Shard memory capacity in GB
+                     * 
                      */
                     void SetShardMemory(const int64_t& _shardMemory);
 
                     /**
                      * 判断参数 ShardMemory 是否已赋值
                      * @return ShardMemory 是否已赋值
+                     * 
                      */
                     bool ShardMemoryHasBeenSet() const;
 
                     /**
                      * 获取Shard storage capacity in GB
                      * @return ShardStorage Shard storage capacity in GB
+                     * 
                      */
                     int64_t GetShardStorage() const;
 
                     /**
                      * 设置Shard storage capacity in GB
-                     * @param ShardStorage Shard storage capacity in GB
+                     * @param _shardStorage Shard storage capacity in GB
+                     * 
                      */
                     void SetShardStorage(const int64_t& _shardStorage);
 
                     /**
                      * 判断参数 ShardStorage 是否已赋值
                      * @return ShardStorage 是否已赋值
+                     * 
                      */
                     bool ShardStorageHasBeenSet() const;
 
                     /**
                      * 获取Number of shard nodes
                      * @return ShardNodeCount Number of shard nodes
+                     * 
                      */
                     int64_t GetShardNodeCount() const;
 
                     /**
                      * 设置Number of shard nodes
-                     * @param ShardNodeCount Number of shard nodes
+                     * @param _shardNodeCount Number of shard nodes
+                     * 
                      */
                     void SetShardNodeCount(const int64_t& _shardNodeCount);
 
                     /**
                      * 判断参数 ShardNodeCount 是否已赋值
                      * @return ShardNodeCount 是否已赋值
+                     * 
                      */
                     bool ShardNodeCountHasBeenSet() const;
 

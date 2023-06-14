@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Action to be executed
                      * @return Action Action to be executed
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action to be executed
-                     * @param Action Action to be executed
+                     * @param _action Action to be executed
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取IP addresses
                      * @return Ip IP addresses
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP addresses
-                     * @param Ip IP addresses
+                     * @param _ip IP addresses
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Port number
                      * @return Port Port number
+                     * 
                      */
                     std::string GetPort() const;
 
                     /**
                      * 设置Port number
-                     * @param Port Port number
+                     * @param _port Port number
+                     * 
                      */
                     void SetPort(const std::string& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Protocol type
                      * @return Proto Protocol type
+                     * 
                      */
                     std::string GetProto() const;
 
                     /**
                      * 设置Protocol type
-                     * @param Proto Protocol type
+                     * @param _proto Protocol type
+                     * 
                      */
                     void SetProto(const std::string& _proto);
 
                     /**
                      * 判断参数 Proto 是否已赋值
                      * @return Proto 是否已赋值
+                     * 
                      */
                     bool ProtoHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Total number of data entries
                      * @return TotalCount Total number of data entries
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of data entries
-                     * @param TotalCount Total number of data entries
+                     * @param _totalCount Total number of data entries
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AclRuleList ACL rule list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AclRule> GetAclRuleList() const;
 
                     /**
                      * 设置ACL rule list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AclRuleList ACL rule list
+                     * @param _aclRuleList ACL rule list
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAclRuleList(const std::vector<AclRule>& _aclRuleList);
 
                     /**
                      * 判断参数 AclRuleList 是否已赋值
                      * @return AclRuleList 是否已赋值
+                     * 
                      */
                     bool AclRuleListHasBeenSet() const;
 

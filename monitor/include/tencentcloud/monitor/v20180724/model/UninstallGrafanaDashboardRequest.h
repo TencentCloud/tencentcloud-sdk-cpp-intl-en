@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -97,6 +100,7 @@ namespace TencentCloud
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+                     * 
                      */
                     std::vector<std::string> GetIntegrationCodes() const;
 
@@ -119,7 +123,7 @@ namespace TencentCloud
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
-                     * @param IntegrationCodes Prometheus integration code, indicating to delete the corresponding dashboard. Valid values:
+                     * @param _integrationCodes Prometheus integration code, indicating to delete the corresponding dashboard. Valid values:
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -137,12 +141,14 @@ namespace TencentCloud
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+                     * 
                      */
                     void SetIntegrationCodes(const std::vector<std::string>& _integrationCodes);
 
                     /**
                      * 判断参数 IntegrationCodes 是否已赋值
                      * @return IntegrationCodes 是否已赋值
+                     * 
                      */
                     bool IntegrationCodesHasBeenSet() const;
 

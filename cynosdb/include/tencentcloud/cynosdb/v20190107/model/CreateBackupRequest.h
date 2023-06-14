@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
                      * @return BackupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+                     * 
                      */
                     std::string GetBackupType() const;
 
                     /**
                      * 设置Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
-                     * @param BackupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+                     * @param _backupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+                     * 
                      */
                     void SetBackupType(const std::string& _backupType);
 
                     /**
                      * 判断参数 BackupType 是否已赋值
                      * @return BackupType 是否已赋值
+                     * 
                      */
                     bool BackupTypeHasBeenSet() const;
 
                     /**
                      * 获取Backup database, which is valid when `BackupType` is `logic`.
                      * @return BackupDatabases Backup database, which is valid when `BackupType` is `logic`.
+                     * 
                      */
                     std::vector<std::string> GetBackupDatabases() const;
 
                     /**
                      * 设置Backup database, which is valid when `BackupType` is `logic`.
-                     * @param BackupDatabases Backup database, which is valid when `BackupType` is `logic`.
+                     * @param _backupDatabases Backup database, which is valid when `BackupType` is `logic`.
+                     * 
                      */
                     void SetBackupDatabases(const std::vector<std::string>& _backupDatabases);
 
                     /**
                      * 判断参数 BackupDatabases 是否已赋值
                      * @return BackupDatabases 是否已赋值
+                     * 
                      */
                     bool BackupDatabasesHasBeenSet() const;
 
                     /**
                      * 获取Backup table, which is valid when `BackupType` is `logic`.
                      * @return BackupTables Backup table, which is valid when `BackupType` is `logic`.
+                     * 
                      */
                     std::vector<DatabaseTables> GetBackupTables() const;
 
                     /**
                      * 设置Backup table, which is valid when `BackupType` is `logic`.
-                     * @param BackupTables Backup table, which is valid when `BackupType` is `logic`.
+                     * @param _backupTables Backup table, which is valid when `BackupType` is `logic`.
+                     * 
                      */
                     void SetBackupTables(const std::vector<DatabaseTables>& _backupTables);
 
                     /**
                      * 判断参数 BackupTables 是否已赋值
                      * @return BackupTables 是否已赋值
+                     * 
                      */
                     bool BackupTablesHasBeenSet() const;
 
                     /**
                      * 获取Backup name
                      * @return BackupName Backup name
+                     * 
                      */
                     std::string GetBackupName() const;
 
                     /**
                      * 设置Backup name
-                     * @param BackupName Backup name
+                     * @param _backupName Backup name
+                     * 
                      */
                     void SetBackupName(const std::string& _backupName);
 
                     /**
                      * 判断参数 BackupName 是否已赋值
                      * @return BackupName 是否已赋值
+                     * 
                      */
                     bool BackupNameHasBeenSet() const;
 

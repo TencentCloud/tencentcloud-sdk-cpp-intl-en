@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Generated transformer ID
                      * @return TransformationId Generated transformer ID
+                     * 
                      */
                     std::string GetTransformationId() const;
 
                     /**
                      * 判断参数 TransformationId 是否已赋值
                      * @return TransformationId 是否已赋值
+                     * 
                      */
                     bool TransformationIdHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Template name.
                      * @return TemplateName Template name.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name.
-                     * @param TemplateName Template name.
+                     * @param _templateName Template name.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Template content.
                      * @return TemplateContent Template content.
+                     * 
                      */
                     std::string GetTemplateContent() const;
 
                     /**
                      * 设置Template content.
-                     * @param TemplateContent Template content.
+                     * @param _templateContent Template content.
+                     * 
                      */
                     void SetTemplateContent(const std::string& _templateContent);
 
                     /**
                      * 判断参数 TemplateContent 是否已赋值
                      * @return TemplateContent 是否已赋值
+                     * 
                      */
                     bool TemplateContentHasBeenSet() const;
 
                     /**
                      * 获取SMS type. 0: ordinary SMS, 1: marketing SMS.
                      * @return SmsType SMS type. 0: ordinary SMS, 1: marketing SMS.
+                     * 
                      */
                     uint64_t GetSmsType() const;
 
                     /**
                      * 设置SMS type. 0: ordinary SMS, 1: marketing SMS.
-                     * @param SmsType SMS type. 0: ordinary SMS, 1: marketing SMS.
+                     * @param _smsType SMS type. 0: ordinary SMS, 1: marketing SMS.
+                     * 
                      */
                     void SetSmsType(const uint64_t& _smsType);
 
                     /**
                      * 判断参数 SmsType 是否已赋值
                      * @return SmsType 是否已赋值
+                     * 
                      */
                     bool SmsTypeHasBeenSet() const;
 
@@ -103,6 +112,7 @@ namespace TencentCloud
                      * @return International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -110,33 +120,38 @@ namespace TencentCloud
                      * 设置Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
-                     * @param International Whether it is Global SMS:
+                     * @param _international Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 
                     /**
                      * 获取Template remarks, such as reason for application and use case.
                      * @return Remark Template remarks, such as reason for application and use case.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Template remarks, such as reason for application and use case.
-                     * @param Remark Template remarks, such as reason for application and use case.
+                     * @param _remark Template remarks, such as reason for application and use case.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

@@ -52,6 +52,7 @@ namespace TencentCloud
 <li>OnlyAffectedNewestImage- string- Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedContainer-string- Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>CategoryType- string - Required: No - Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `ALL` (all vulnerabilities).</li>
+                     * 
                      */
                     std::vector<RunTimeFilters> GetFilters() const;
 
@@ -60,16 +61,18 @@ namespace TencentCloud
 <li>OnlyAffectedNewestImage- string- Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedContainer-string- Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>CategoryType- string - Required: No - Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `ALL` (all vulnerabilities).</li>
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li>OnlyAffectedNewestImage- string- Required: No - Show only vulnerabilities that affect the latest image tags. Valid values: `true`, `false`.</li>
 <li>OnlyAffectedContainer-string- Required: No - Show only vulnerabilities that affect containers. Valid values: `true`, `false`.</li>
 <li>CategoryType- string - Required: No - Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `ALL` (all vulnerabilities).</li>
+                     * 
                      */
                     void SetFilters(const std::vector<RunTimeFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Delivery statistics response packet.
                      * @return SendStatusStatistics Delivery statistics response packet.
+                     * 
                      */
                     SendStatusStatistics GetSendStatusStatistics() const;
 
                     /**
                      * 判断参数 SendStatusStatistics 是否已赋值
                      * @return SendStatusStatistics 是否已赋值
+                     * 
                      */
                     bool SendStatusStatisticsHasBeenSet() const;
 

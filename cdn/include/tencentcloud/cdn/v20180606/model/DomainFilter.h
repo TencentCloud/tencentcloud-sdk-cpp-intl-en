@@ -71,6 +71,7 @@ namespace TencentCloud
 - `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
 - `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
 - `tagKey`: Tag key.
+                     * 
                      */
                     std::string GetName() const;
 
@@ -87,7 +88,7 @@ namespace TencentCloud
 - `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
 - `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
 - `tagKey`: Tag key.
-                     * @param Name Filters by the field name, which includes:
+                     * @param _name Filters by the field name, which includes:
 - `origin`: Primary origin server.
 - `domain`: Domain name.
 - `resourceId`: Domain name ID.
@@ -99,30 +100,35 @@ namespace TencentCloud
 - `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
 - `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
 - `tagKey`: Tag key.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Filter field value.
                      * @return Value Filter field value.
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
                     /**
                      * 设置Filter field value.
-                     * @param Value Filter field value.
+                     * @param _value Filter field value.
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -131,20 +137,23 @@ namespace TencentCloud
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
                      * @return Fuzzy Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
+                     * 
                      */
                     bool GetFuzzy() const;
 
                     /**
                      * 设置Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
-                     * @param Fuzzy Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
+                     * @param _fuzzy Whether to enable fuzzy query. Only `origin` or `domain` is supported for the filter field name.
 When fuzzy query is enabled, the maximum Value length is 1. When fuzzy query is disabled, the maximum Value length is 5.
+                     * 
                      */
                     void SetFuzzy(const bool& _fuzzy);
 
                     /**
                      * 判断参数 Fuzzy 是否已赋值
                      * @return Fuzzy 是否已赋值
+                     * 
                      */
                     bool FuzzyHasBeenSet() const;
 

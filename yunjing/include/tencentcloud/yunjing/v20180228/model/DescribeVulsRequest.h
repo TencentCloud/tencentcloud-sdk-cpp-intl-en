@@ -52,6 +52,7 @@ namespace TencentCloud
 <li>WEB: web application vulnerability</li>
 <li>SYSTEM: system component vulnerability</li>
 <li>BASELINE: security baseline</li>
+                     * 
                      */
                     std::string GetVulType() const;
 
@@ -60,52 +61,60 @@ namespace TencentCloud
 <li>WEB: web application vulnerability</li>
 <li>SYSTEM: system component vulnerability</li>
 <li>BASELINE: security baseline</li>
-                     * @param VulType Vulnerability type.
+                     * @param _vulType Vulnerability type.
 <li>WEB: web application vulnerability</li>
 <li>SYSTEM: system component vulnerability</li>
 <li>BASELINE: security baseline</li>
+                     * 
                      */
                     void SetVulType(const std::string& _vulType);
 
                     /**
                      * 判断参数 VulType 是否已赋值
                      * @return VulType 是否已赋值
+                     * 
                      */
                     bool VulTypeHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. Default value: 10. Maximum value: 100.
                      * @return Limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of results to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -118,6 +127,7 @@ Only one value is allowed for the `Status` filter, and "OR" logic is not support
 <li>Status - String - Required: No - Filter by status (UN_OPERATED: to be processed, FIXED: fixed)
 
 Only one value is allowed for the `Status` filter, and "OR" logic is not supported.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -126,16 +136,18 @@ Only one value is allowed for the `Status` filter, and "OR" logic is not support
 <li>Status - String - Required: No - Filter by status (UN_OPERATED: to be processed, FIXED: fixed)
 
 Only one value is allowed for the `Status` filter, and "OR" logic is not supported.
-                     * @param Filters Filter.
+                     * @param _filters Filter.
 <li>Status - String - Required: No - Filter by status (UN_OPERATED: to be processed, FIXED: fixed)
 
 Only one value is allowed for the `Status` filter, and "OR" logic is not supported.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

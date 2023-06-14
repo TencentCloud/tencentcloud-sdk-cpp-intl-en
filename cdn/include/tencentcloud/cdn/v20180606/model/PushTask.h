@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Prefetch task ID
                      * @return TaskId Prefetch task ID
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Prefetch task ID
-                     * @param TaskId Prefetch task ID
+                     * @param _taskId Prefetch task ID
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Prefetched URL
                      * @return Url Prefetched URL
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Prefetched URL
-                     * @param Url Prefetched URL
+                     * @param _url Prefetched URL
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
@@ -93,6 +99,7 @@ namespace TencentCloud
 `done`: Prefetch succeeded
 `process`: Prefetch in progress
 `invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -102,53 +109,61 @@ namespace TencentCloud
 `done`: Prefetch succeeded
 `process`: Prefetch in progress
 `invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
-                     * @param Status Prefetch task status
+                     * @param _status Prefetch task status
 `fail`: Prefetch failed
 `done`: Prefetch succeeded
 `process`: Prefetch in progress
 `invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Prefetch progress in percentage
                      * @return Percent Prefetch progress in percentage
+                     * 
                      */
                     int64_t GetPercent() const;
 
                     /**
                      * 设置Prefetch progress in percentage
-                     * @param Percent Prefetch progress in percentage
+                     * @param _percent Prefetch progress in percentage
+                     * 
                      */
                     void SetPercent(const int64_t& _percent);
 
                     /**
                      * 判断参数 Percent 是否已赋值
                      * @return Percent 是否已赋值
+                     * 
                      */
                     bool PercentHasBeenSet() const;
 
                     /**
                      * 获取Prefetch task submission time
                      * @return CreateTime Prefetch task submission time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Prefetch task submission time
-                     * @param CreateTime Prefetch task submission time
+                     * @param _createTime Prefetch task submission time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -161,6 +176,7 @@ namespace TencentCloud
 `mainland`: Within the Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -169,16 +185,18 @@ namespace TencentCloud
 `mainland`: Within the Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
-                     * @param Area Prefetch region
+                     * @param _area Prefetch region
 `mainland`: Within the Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -187,20 +205,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpdateTime Prefetch task update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Prefetch task update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UpdateTime Prefetch task update time
+                     * @param _updateTime Prefetch task update time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The start.
                      * @return DisplayStart The start.
+                     * 
                      */
                     int64_t GetDisplayStart() const;
 
                     /**
                      * 设置The start.
-                     * @param DisplayStart The start.
+                     * @param _displayStart The start.
+                     * 
                      */
                     void SetDisplayStart(const int64_t& _displayStart);
 
                     /**
                      * 判断参数 DisplayStart 是否已赋值
                      * @return DisplayStart 是否已赋值
+                     * 
                      */
                     bool DisplayStartHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records to return.
                      * @return DisplayLength The maximum number of records to return.
+                     * 
                      */
                     int64_t GetDisplayLength() const;
 
                     /**
                      * 设置The maximum number of records to return.
-                     * @param DisplayLength The maximum number of records to return.
+                     * @param _displayLength The maximum number of records to return.
+                     * 
                      */
                     void SetDisplayLength(const int64_t& _displayLength);
 
                     /**
                      * 判断参数 DisplayLength 是否已赋值
                      * @return DisplayLength 是否已赋值
+                     * 
                      */
                     bool DisplayLengthHasBeenSet() const;
 

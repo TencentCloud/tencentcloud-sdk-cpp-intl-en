@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance creation process type
                      * @return Type Instance creation process type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Instance creation process type
-                     * @param Type Instance creation process type
+                     * @param _type Instance creation process type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Instance creation process status
                      * @return Status Instance creation process status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Instance creation process status
-                     * @param Status Instance creation process status
+                     * @param _status Instance creation process status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Reason Reasons for transiting to the process
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置Reasons for transiting to the process
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Reason Reasons for transiting to the process
+                     * @param _reason Reasons for transiting to the process
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReason(const std::string& _reason);
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 

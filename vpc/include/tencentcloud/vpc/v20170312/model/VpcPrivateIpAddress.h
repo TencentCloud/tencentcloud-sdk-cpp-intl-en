@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取`VPC` private `IP`.
                      * @return PrivateIpAddress `VPC` private `IP`.
+                     * 
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
                      * 设置`VPC` private `IP`.
-                     * @param PrivateIpAddress `VPC` private `IP`.
+                     * @param _privateIpAddress `VPC` private `IP`.
+                     * 
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
                     /**
                      * 判断参数 PrivateIpAddress 是否已赋值
                      * @return PrivateIpAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressHasBeenSet() const;
 
                     /**
                      * 获取The `CIDR` belonging to the subnet.
                      * @return CidrBlock The `CIDR` belonging to the subnet.
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置The `CIDR` belonging to the subnet.
-                     * @param CidrBlock The `CIDR` belonging to the subnet.
+                     * @param _cidrBlock The `CIDR` belonging to the subnet.
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Private `IP` type.
                      * @return PrivateIpAddressType Private `IP` type.
+                     * 
                      */
                     std::string GetPrivateIpAddressType() const;
 
                     /**
                      * 设置Private `IP` type.
-                     * @param PrivateIpAddressType Private `IP` type.
+                     * @param _privateIpAddressType Private `IP` type.
+                     * 
                      */
                     void SetPrivateIpAddressType(const std::string& _privateIpAddressType);
 
                     /**
                      * 判断参数 PrivateIpAddressType 是否已赋值
                      * @return PrivateIpAddressType 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressTypeHasBeenSet() const;
 
                     /**
                      * 获取`IP` application time.
                      * @return CreatedTime `IP` application time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置`IP` application time.
-                     * @param CreatedTime `IP` application time.
+                     * @param _createdTime `IP` application time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 

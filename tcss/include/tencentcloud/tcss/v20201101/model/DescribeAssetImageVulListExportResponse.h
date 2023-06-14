@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Excel file download URL
                      * @return DownloadUrl Excel file download URL
+                     * 
                      */
                     std::string GetDownloadUrl() const;
 
                     /**
                      * 判断参数 DownloadUrl 是否已赋值
                      * @return DownloadUrl 是否已赋值
+                     * 
                      */
                     bool DownloadUrlHasBeenSet() const;
 

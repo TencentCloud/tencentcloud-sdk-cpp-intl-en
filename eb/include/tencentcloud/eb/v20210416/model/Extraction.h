@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取JsonPath, which will be `$.` by default if not specified
                      * @return ExtractionInputPath JsonPath, which will be `$.` by default if not specified
+                     * 
                      */
                     std::string GetExtractionInputPath() const;
 
                     /**
                      * 设置JsonPath, which will be `$.` by default if not specified
-                     * @param ExtractionInputPath JsonPath, which will be `$.` by default if not specified
+                     * @param _extractionInputPath JsonPath, which will be `$.` by default if not specified
+                     * 
                      */
                     void SetExtractionInputPath(const std::string& _extractionInputPath);
 
                     /**
                      * 判断参数 ExtractionInputPath 是否已赋值
                      * @return ExtractionInputPath 是否已赋值
+                     * 
                      */
                     bool ExtractionInputPathHasBeenSet() const;
 
                     /**
                      * 获取Valid values: TEXT/JSON
                      * @return Format Valid values: TEXT/JSON
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Valid values: TEXT/JSON
-                     * @param Format Valid values: TEXT/JSON
+                     * @param _format Valid values: TEXT/JSON
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TextParams Only required for `Text`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TextParams GetTextParams() const;
 
                     /**
                      * 设置Only required for `Text`
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TextParams Only required for `Text`
+                     * @param _textParams Only required for `Text`
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTextParams(const TextParams& _textParams);
 
                     /**
                      * 判断参数 TextParams 是否已赋值
                      * @return TextParams 是否已赋值
+                     * 
                      */
                     bool TextParamsHasBeenSet() const;
 

@@ -51,38 +51,44 @@ namespace TencentCloud
 In seconds, indicating data time.
                      * @return Timestamp Timestamp.
 In seconds, indicating data time.
+                     * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
                      * 设置Timestamp.
 In seconds, indicating data time.
-                     * @param Timestamp Timestamp.
+                     * @param _timestamp Timestamp.
 In seconds, indicating data time.
+                     * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
                     /**
                      * 获取Output bandwidth in bps.
                      * @return NetworkOut Output bandwidth in bps.
+                     * 
                      */
                     uint64_t GetNetworkOut() const;
 
                     /**
                      * 设置Output bandwidth in bps.
-                     * @param NetworkOut Output bandwidth in bps.
+                     * @param _networkOut Output bandwidth in bps.
+                     * 
                      */
                     void SetNetworkOut(const uint64_t& _networkOut);
 
                     /**
                      * 判断参数 NetworkOut 是否已赋值
                      * @return NetworkOut 是否已赋值
+                     * 
                      */
                     bool NetworkOutHasBeenSet() const;
 

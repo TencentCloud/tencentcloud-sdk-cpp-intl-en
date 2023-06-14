@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return QueueId Message queue ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetQueueId() const;
 
                     /**
                      * 设置Message queue ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param QueueId Message queue ID.
+                     * @param _queueId Message queue ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQueueId(const std::string& _queueId);
 
                     /**
                      * 判断参数 QueueId 是否已赋值
                      * @return QueueId 是否已赋值
+                     * 
                      */
                     bool QueueIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return QueueName Message queue name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置Message queue name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param QueueName Message queue name.
+                     * @param _queueName Message queue name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 

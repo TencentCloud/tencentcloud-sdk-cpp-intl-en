@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ES aggregation condition in JSON
                      * @return Query ES aggregation condition in JSON
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置ES aggregation condition in JSON
-                     * @param Query ES aggregation condition in JSON
+                     * @param _query ES aggregation condition in JSON
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 

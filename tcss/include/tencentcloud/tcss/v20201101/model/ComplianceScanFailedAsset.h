@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Customer asset ID
                      * @return CustomerAssetId Customer asset ID
+                     * 
                      */
                     uint64_t GetCustomerAssetId() const;
 
                     /**
                      * 设置Customer asset ID
-                     * @param CustomerAssetId Customer asset ID
+                     * @param _customerAssetId Customer asset ID
+                     * 
                      */
                     void SetCustomerAssetId(const uint64_t& _customerAssetId);
 
                     /**
                      * 判断参数 CustomerAssetId 是否已赋值
                      * @return CustomerAssetId 是否已赋值
+                     * 
                      */
                     bool CustomerAssetIdHasBeenSet() const;
 
                     /**
                      * 获取Asset type
                      * @return AssetType Asset type
+                     * 
                      */
                     std::string GetAssetType() const;
 
                     /**
                      * 设置Asset type
-                     * @param AssetType Asset type
+                     * @param _assetType Asset type
+                     * 
                      */
                     void SetAssetType(const std::string& _assetType);
 
                     /**
                      * 判断参数 AssetType 是否已赋值
                      * @return AssetType 是否已赋值
+                     * 
                      */
                     bool AssetTypeHasBeenSet() const;
 
@@ -93,6 +99,7 @@ namespace TencentCloud
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     std::string GetCheckStatus() const;
 
@@ -102,89 +109,103 @@ namespace TencentCloud
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
-                     * @param CheckStatus Check status
+                     * @param _checkStatus Check status
 `CHECK_INIT`: To be checked.
 `CHECK_RUNNING`: Checking.
 `CHECK_FINISHED`: Checked.
 `CHECK_FAILED`: Check failed.
+                     * 
                      */
                     void SetCheckStatus(const std::string& _checkStatus);
 
                     /**
                      * 判断参数 CheckStatus 是否已赋值
                      * @return CheckStatus 是否已赋值
+                     * 
                      */
                     bool CheckStatusHasBeenSet() const;
 
                     /**
                      * 获取Asset name
                      * @return AssetName Asset name
+                     * 
                      */
                     std::string GetAssetName() const;
 
                     /**
                      * 设置Asset name
-                     * @param AssetName Asset name
+                     * @param _assetName Asset name
+                     * 
                      */
                     void SetAssetName(const std::string& _assetName);
 
                     /**
                      * 判断参数 AssetName 是否已赋值
                      * @return AssetName 是否已赋值
+                     * 
                      */
                     bool AssetNameHasBeenSet() const;
 
                     /**
                      * 获取Cause of the asset check failure
                      * @return FailureReason Cause of the asset check failure
+                     * 
                      */
                     std::string GetFailureReason() const;
 
                     /**
                      * 设置Cause of the asset check failure
-                     * @param FailureReason Cause of the asset check failure
+                     * @param _failureReason Cause of the asset check failure
+                     * 
                      */
                     void SetFailureReason(const std::string& _failureReason);
 
                     /**
                      * 判断参数 FailureReason 是否已赋值
                      * @return FailureReason 是否已赋值
+                     * 
                      */
                     bool FailureReasonHasBeenSet() const;
 
                     /**
                      * 获取Suggestion for handling the check failure
                      * @return Suggestion Suggestion for handling the check failure
+                     * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
                      * 设置Suggestion for handling the check failure
-                     * @param Suggestion Suggestion for handling the check failure
+                     * @param _suggestion Suggestion for handling the check failure
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取Check time
                      * @return CheckTime Check time
+                     * 
                      */
                     std::string GetCheckTime() const;
 
                     /**
                      * 设置Check time
-                     * @param CheckTime Check time
+                     * @param _checkTime Check time
+                     * 
                      */
                     void SetCheckTime(const std::string& _checkTime);
 
                     /**
                      * 判断参数 CheckTime 是否已赋值
                      * @return CheckTime 是否已赋值
+                     * 
                      */
                     bool CheckTimeHasBeenSet() const;
 

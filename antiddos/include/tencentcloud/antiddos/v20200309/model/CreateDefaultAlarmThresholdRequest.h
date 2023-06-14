@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Default alarm threshold configuration
                      * @return DefaultAlarmConfig Default alarm threshold configuration
+                     * 
                      */
                     DefaultAlarmThreshold GetDefaultAlarmConfig() const;
 
                     /**
                      * 设置Default alarm threshold configuration
-                     * @param DefaultAlarmConfig Default alarm threshold configuration
+                     * @param _defaultAlarmConfig Default alarm threshold configuration
+                     * 
                      */
                     void SetDefaultAlarmConfig(const DefaultAlarmThreshold& _defaultAlarmConfig);
 
                     /**
                      * 判断参数 DefaultAlarmConfig 是否已赋值
                      * @return DefaultAlarmConfig 是否已赋值
+                     * 
                      */
                     bool DefaultAlarmConfigHasBeenSet() const;
 
@@ -70,6 +73,7 @@ namespace TencentCloud
 `bgp`: Anti-DDoS Pro
 `bgpip`: Anti-DDoS Advanced
 ]
+                     * 
                      */
                     std::string GetInstanceType() const;
 
@@ -78,16 +82,18 @@ namespace TencentCloud
 `bgp`: Anti-DDoS Pro
 `bgpip`: Anti-DDoS Advanced
 ]
-                     * @param InstanceType Product category. Valid values:
+                     * @param _instanceType Product category. Valid values:
 `bgp`: Anti-DDoS Pro
 `bgpip`: Anti-DDoS Advanced
 ]
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 

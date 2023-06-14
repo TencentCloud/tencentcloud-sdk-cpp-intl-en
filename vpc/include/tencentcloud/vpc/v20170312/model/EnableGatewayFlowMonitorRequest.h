@@ -51,6 +51,7 @@ VPN gateway instance, such as `vpn-ltjahce6`.
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
+                     * 
                      */
                     std::string GetGatewayId() const;
 
@@ -59,16 +60,18 @@ VPN gateway instance, such as `vpn-ltjahce6`.
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
-                     * @param GatewayId Gateway instance ID. Supported types:
+                     * @param _gatewayId Gateway instance ID. Supported types:
 Direct connect gateway instance, such as `dcg-ltjahce6`;
 NAT gateway instance, such as `nat-ltjahce6`;
 VPN gateway instance, such as `vpn-ltjahce6`.
+                     * 
                      */
                     void SetGatewayId(const std::string& _gatewayId);
 
                     /**
                      * 判断参数 GatewayId 是否已赋值
                      * @return GatewayId 是否已赋值
+                     * 
                      */
                     bool GatewayIdHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取The name of the domain checked.
                      * @return DomainName The name of the domain checked.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the domain is available for registration.
                      * @return Available Whether the domain is available for registration.
+                     * 
                      */
                     bool GetAvailable() const;
 
                     /**
                      * 判断参数 Available 是否已赋值
                      * @return Available 是否已赋值
+                     * 
                      */
                     bool AvailableHasBeenSet() const;
 
                     /**
                      * 获取The reason why the domain cannot be registered.
                      * @return Reason The reason why the domain cannot be registered.
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 
                     /**
                      * 获取Whether the domain is a premium one.
                      * @return Premium Whether the domain is a premium one.
+                     * 
                      */
                     bool GetPremium() const;
 
                     /**
                      * 判断参数 Premium 是否已赋值
                      * @return Premium 是否已赋值
+                     * 
                      */
                     bool PremiumHasBeenSet() const;
 
                     /**
                      * 获取The domain price.
                      * @return Price The domain price.
+                     * 
                      */
                     double GetPrice() const;
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 
                     /**
                      * 获取Whether the domain name involves restricted words.
                      * @return BlackWord Whether the domain name involves restricted words.
+                     * 
                      */
                     bool GetBlackWord() const;
 
                     /**
                      * 判断参数 BlackWord 是否已赋值
                      * @return BlackWord 是否已赋值
+                     * 
                      */
                     bool BlackWordHasBeenSet() const;
 
@@ -120,12 +132,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Describe The premium domain description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescribe() const;
 
                     /**
                      * 判断参数 Describe 是否已赋值
                      * @return Describe 是否已赋值
+                     * 
                      */
                     bool DescribeHasBeenSet() const;
 
@@ -134,12 +148,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FeeRenew The price for renewing the premium domain.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetFeeRenew() const;
 
                     /**
                      * 判断参数 FeeRenew 是否已赋值
                      * @return FeeRenew 是否已赋值
+                     * 
                      */
                     bool FeeRenewHasBeenSet() const;
 
@@ -148,12 +164,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RealPrice The real price of the domain. For a premium domain, its price varies depending on the period. For a non-premium domain, the price is the 1-year price.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetRealPrice() const;
 
                     /**
                      * 判断参数 RealPrice 是否已赋值
                      * @return RealPrice 是否已赋值
+                     * 
                      */
                     bool RealPriceHasBeenSet() const;
 
@@ -162,60 +180,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FeeTransfer The price for transferring a premium domain in.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetFeeTransfer() const;
 
                     /**
                      * 判断参数 FeeTransfer 是否已赋值
                      * @return FeeTransfer 是否已赋值
+                     * 
                      */
                     bool FeeTransferHasBeenSet() const;
 
                     /**
                      * 获取The price for redeeming a premium domain.
                      * @return FeeRestore The price for redeeming a premium domain.
+                     * 
                      */
                     double GetFeeRestore() const;
 
                     /**
                      * 判断参数 FeeRestore 是否已赋值
                      * @return FeeRestore 是否已赋值
+                     * 
                      */
                     bool FeeRestoreHasBeenSet() const;
 
                     /**
                      * 获取The period (in years) of the domain.
                      * @return Period The period (in years) of the domain.
+                     * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取The reason why the domain cannot be registered, expressed in Chinese.
                      * @return ReasonZh The reason why the domain cannot be registered, expressed in Chinese.
+                     * 
                      */
                     std::string GetReasonZh() const;
 
                     /**
                      * 判断参数 ReasonZh 是否已赋值
                      * @return ReasonZh 是否已赋值
+                     * 
                      */
                     bool ReasonZhHasBeenSet() const;
 
                     /**
                      * 获取The internal error code.
                      * @return ResCode The internal error code.
+                     * 
                      */
                     std::string GetResCode() const;
 
                     /**
                      * 判断参数 ResCode 是否已赋值
                      * @return ResCode 是否已赋值
+                     * 
                      */
                     bool ResCodeHasBeenSet() const;
 

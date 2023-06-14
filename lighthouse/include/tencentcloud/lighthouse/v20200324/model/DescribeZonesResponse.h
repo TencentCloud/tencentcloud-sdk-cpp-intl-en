@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of AZs
                      * @return TotalCount Number of AZs
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of AZ details
                      * @return ZoneInfoSet List of AZ details
+                     * 
                      */
                     std::vector<ZoneInfo> GetZoneInfoSet() const;
 
                     /**
                      * 判断参数 ZoneInfoSet 是否已赋值
                      * @return ZoneInfoSet 是否已赋值
+                     * 
                      */
                     bool ZoneInfoSetHasBeenSet() const;
 

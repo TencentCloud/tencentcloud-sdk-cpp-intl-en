@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Video content analysis template name. Length limit: 64 characters.
                      * @return Name Video content analysis template name. Length limit: 64 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Video content analysis template name. Length limit: 64 characters.
-                     * @param Name Video content analysis template name. Length limit: 64 characters.
+                     * @param _name Video content analysis template name. Length limit: 64 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Video content analysis template description. Length limit: 256 characters.
                      * @return Comment Video content analysis template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Video content analysis template description. Length limit: 256 characters.
-                     * @param Comment Video content analysis template description. Length limit: 256 characters.
+                     * @param _comment Video content analysis template description. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of intelligent categorization task.
                      * @return ClassificationConfigure Control parameter of intelligent categorization task.
+                     * 
                      */
                     ClassificationConfigureInfo GetClassificationConfigure() const;
 
                     /**
                      * 设置Control parameter of intelligent categorization task.
-                     * @param ClassificationConfigure Control parameter of intelligent categorization task.
+                     * @param _classificationConfigure Control parameter of intelligent categorization task.
+                     * 
                      */
                     void SetClassificationConfigure(const ClassificationConfigureInfo& _classificationConfigure);
 
                     /**
                      * 判断参数 ClassificationConfigure 是否已赋值
                      * @return ClassificationConfigure 是否已赋值
+                     * 
                      */
                     bool ClassificationConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of intelligent tagging task.
                      * @return TagConfigure Control parameter of intelligent tagging task.
+                     * 
                      */
                     TagConfigureInfo GetTagConfigure() const;
 
                     /**
                      * 设置Control parameter of intelligent tagging task.
-                     * @param TagConfigure Control parameter of intelligent tagging task.
+                     * @param _tagConfigure Control parameter of intelligent tagging task.
+                     * 
                      */
                     void SetTagConfigure(const TagConfigureInfo& _tagConfigure);
 
                     /**
                      * 判断参数 TagConfigure 是否已赋值
                      * @return TagConfigure 是否已赋值
+                     * 
                      */
                     bool TagConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of intelligent cover generating task.
                      * @return CoverConfigure Control parameter of intelligent cover generating task.
+                     * 
                      */
                     CoverConfigureInfo GetCoverConfigure() const;
 
                     /**
                      * 设置Control parameter of intelligent cover generating task.
-                     * @param CoverConfigure Control parameter of intelligent cover generating task.
+                     * @param _coverConfigure Control parameter of intelligent cover generating task.
+                     * 
                      */
                     void SetCoverConfigure(const CoverConfigureInfo& _coverConfigure);
 
                     /**
                      * 判断参数 CoverConfigure 是否已赋值
                      * @return CoverConfigure 是否已赋值
+                     * 
                      */
                     bool CoverConfigureHasBeenSet() const;
 
                     /**
                      * 获取Control parameter of intelligent frame-specific tagging task.
                      * @return FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
+                     * 
                      */
                     FrameTagConfigureInfo GetFrameTagConfigure() const;
 
                     /**
                      * 设置Control parameter of intelligent frame-specific tagging task.
-                     * @param FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
+                     * @param _frameTagConfigure Control parameter of intelligent frame-specific tagging task.
+                     * 
                      */
                     void SetFrameTagConfigure(const FrameTagConfigureInfo& _frameTagConfigure);
 
                     /**
                      * 判断参数 FrameTagConfigure 是否已赋值
                      * @return FrameTagConfigure 是否已赋值
+                     * 
                      */
                     bool FrameTagConfigureHasBeenSet() const;
 

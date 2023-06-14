@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Total nodes to upgrade
                      * @return Total Total nodes to upgrade
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Total upgraded nodes
                      * @return Done Total upgraded nodes
+                     * 
                      */
                     int64_t GetDone() const;
 
                     /**
                      * 判断参数 Done 是否已赋值
                      * @return Done 是否已赋值
+                     * 
                      */
                     bool DoneHasBeenSet() const;
 
@@ -84,36 +88,42 @@ pausing: stopping
 done: completed
 timeout: timed out
 aborted: canceled
+                     * 
                      */
                     std::string GetLifeState() const;
 
                     /**
                      * 判断参数 LifeState 是否已赋值
                      * @return LifeState 是否已赋值
+                     * 
                      */
                     bool LifeStateHasBeenSet() const;
 
                     /**
                      * 获取Details of upgrade progress of each node
                      * @return Instances Details of upgrade progress of each node
+                     * 
                      */
                     std::vector<InstanceUpgradeProgressItem> GetInstances() const;
 
                     /**
                      * 判断参数 Instances 是否已赋值
                      * @return Instances 是否已赋值
+                     * 
                      */
                     bool InstancesHasBeenSet() const;
 
                     /**
                      * 获取Current cluster status
                      * @return ClusterStatus Current cluster status
+                     * 
                      */
                     InstanceUpgradeClusterStatus GetClusterStatus() const;
 
                     /**
                      * 判断参数 ClusterStatus 是否已赋值
                      * @return ClusterStatus 是否已赋值
+                     * 
                      */
                     bool ClusterStatusHasBeenSet() const;
 

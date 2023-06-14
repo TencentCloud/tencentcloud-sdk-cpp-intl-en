@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `NULL`, indicating that no valid value was found.
                      * @return UpstreamId The unique upstream ID returned
 Note: This field may return `NULL`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetUpstreamId() const;
 
                     /**
                      * 判断参数 UpstreamId 是否已赋值
                      * @return UpstreamId 是否已赋值
+                     * 
                      */
                     bool UpstreamIdHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Video pull for upload task ID, which can be used to query the status of pull for upload task.
                      * @return TaskId Video pull for upload task ID, which can be used to query the status of pull for upload task.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

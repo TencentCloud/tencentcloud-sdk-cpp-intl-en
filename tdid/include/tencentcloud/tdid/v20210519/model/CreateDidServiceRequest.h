@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取The consortium name.
                      * @return ConsortiumName The consortium name.
+                     * 
                      */
                     std::string GetConsortiumName() const;
 
                     /**
                      * 设置The consortium name.
-                     * @param ConsortiumName The consortium name.
+                     * @param _consortiumName The consortium name.
+                     * 
                      */
                     void SetConsortiumName(const std::string& _consortiumName);
 
                     /**
                      * 判断参数 ConsortiumName 是否已赋值
                      * @return ConsortiumName 是否已赋值
+                     * 
                      */
                     bool ConsortiumNameHasBeenSet() const;
 
                     /**
                      * 获取The consortium ID.
                      * @return ConsortiumId The consortium ID.
+                     * 
                      */
                     int64_t GetConsortiumId() const;
 
                     /**
                      * 设置The consortium ID.
-                     * @param ConsortiumId The consortium ID.
+                     * @param _consortiumId The consortium ID.
+                     * 
                      */
                     void SetConsortiumId(const int64_t& _consortiumId);
 
                     /**
                      * 判断参数 ConsortiumId 是否已赋值
                      * @return ConsortiumId 是否已赋值
+                     * 
                      */
                     bool ConsortiumIdHasBeenSet() const;
 
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     int64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const int64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The organization name.
                      * @return AgencyName The organization name.
+                     * 
                      */
                     std::string GetAgencyName() const;
 
                     /**
                      * 设置The organization name.
-                     * @param AgencyName The organization name.
+                     * @param _agencyName The organization name.
+                     * 
                      */
                     void SetAgencyName(const std::string& _agencyName);
 
                     /**
                      * 判断参数 AgencyName 是否已赋值
                      * @return AgencyName 是否已赋值
+                     * 
                      */
                     bool AgencyNameHasBeenSet() const;
 
                     /**
                      * 获取The application name.
                      * @return AppName The application name.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The application name.
-                     * @param AppName The application name.
+                     * @param _appName The application name.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The group name.
                      * @return GroupName The group name.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置The group name.
-                     * @param GroupName The group name.
+                     * @param _groupName The group name.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 

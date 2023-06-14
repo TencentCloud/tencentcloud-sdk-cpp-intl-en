@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
                      * @return ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
-                     * @param ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+                     * @param _zoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
                      * @return Entity The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
-                     * @param Entity The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
+                     * @param _entity The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
@@ -88,6 +94,7 @@ namespace TencentCloud
                      * @return Switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>If not specified, it defaults to the setting that was last configured.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -95,15 +102,17 @@ namespace TencentCloud
                      * 设置Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>If not specified, it defaults to the setting that was last configured.
-                     * @param Switch Switch. Values:
+                     * @param _switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>If not specified, it defaults to the setting that was last configured.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -120,6 +129,7 @@ namespace TencentCloud
 <li>`strict`: Strict</li>
 <li>`stricter`: Super strict</li>
 <li>`custom`: Custom</li>If not specified, it defaults to the setting that was last configured.
+                     * 
                      */
                     std::string GetLevel() const;
 
@@ -130,18 +140,20 @@ namespace TencentCloud
 <li>`strict`: Strict</li>
 <li>`stricter`: Super strict</li>
 <li>`custom`: Custom</li>If not specified, it defaults to the setting that was last configured.
-                     * @param Level The rule level. Values:
+                     * @param _level The rule level. Values:
 <li>`loose`: Loose</li>
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`stricter`: Super strict</li>
 <li>`custom`: Custom</li>If not specified, it defaults to the setting that was last configured.
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -152,6 +164,7 @@ namespace TencentCloud
                      * @return Mode The rule action. Values:
 <li>`block`: Block</li>
 <li>`observe`: Observe</li>If not specified, it defaults to the setting that was last configured.
+                     * 
                      */
                     std::string GetMode() const;
 
@@ -159,87 +172,101 @@ namespace TencentCloud
                      * 设置The rule action. Values:
 <li>`block`: Block</li>
 <li>`observe`: Observe</li>If not specified, it defaults to the setting that was last configured.
-                     * @param Mode The rule action. Values:
+                     * @param _mode The rule action. Values:
 <li>`block`: Block</li>
 <li>`observe`: Observe</li>If not specified, it defaults to the setting that was last configured.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取The settings of the managed rule. If not specified, it defaults to the settings that were last configured.
                      * @return WafRules The settings of the managed rule. If not specified, it defaults to the settings that were last configured.
+                     * 
                      */
                     WafRule GetWafRules() const;
 
                     /**
                      * 设置The settings of the managed rule. If not specified, it defaults to the settings that were last configured.
-                     * @param WafRules The settings of the managed rule. If not specified, it defaults to the settings that were last configured.
+                     * @param _wafRules The settings of the managed rule. If not specified, it defaults to the settings that were last configured.
+                     * 
                      */
                     void SetWafRules(const WafRule& _wafRules);
 
                     /**
                      * 判断参数 WafRules 是否已赋值
                      * @return WafRules 是否已赋值
+                     * 
                      */
                     bool WafRulesHasBeenSet() const;
 
                     /**
                      * 获取The settings of the AI rule engine. If not specified, it defaults to the settings that were last configured.
                      * @return AiRule The settings of the AI rule engine. If not specified, it defaults to the settings that were last configured.
+                     * 
                      */
                     AiRule GetAiRule() const;
 
                     /**
                      * 设置The settings of the AI rule engine. If not specified, it defaults to the settings that were last configured.
-                     * @param AiRule The settings of the AI rule engine. If not specified, it defaults to the settings that were last configured.
+                     * @param _aiRule The settings of the AI rule engine. If not specified, it defaults to the settings that were last configured.
+                     * 
                      */
                     void SetAiRule(const AiRule& _aiRule);
 
                     /**
                      * 判断参数 AiRule 是否已赋值
                      * @return AiRule 是否已赋值
+                     * 
                      */
                     bool AiRuleHasBeenSet() const;
 
                     /**
                      * 获取The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
                      * @return WafGroups The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
+                     * 
                      */
                     std::vector<WafGroup> GetWafGroups() const;
 
                     /**
                      * 设置The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
-                     * @param WafGroups The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
+                     * @param _wafGroups The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
+                     * 
                      */
                     void SetWafGroups(const std::vector<WafGroup>& _wafGroups);
 
                     /**
                      * 判断参数 WafGroups 是否已赋值
                      * @return WafGroups 是否已赋值
+                     * 
                      */
                     bool WafGroupsHasBeenSet() const;
 
                     /**
                      * 获取The template ID. You must specify either this field or "ZoneId+Entity".
                      * @return TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置The template ID. You must specify either this field or "ZoneId+Entity".
-                     * @param TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
+                     * @param _templateId The template ID. You must specify either this field or "ZoneId+Entity".
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 

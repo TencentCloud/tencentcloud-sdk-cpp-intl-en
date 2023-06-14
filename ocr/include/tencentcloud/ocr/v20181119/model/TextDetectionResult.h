@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The recognized text line content.
                      * @return Value The recognized text line content.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置The recognized text line content.
-                     * @param Value The recognized text line content.
+                     * @param _value The recognized text line content.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取The coordinates, represented in the coordinates of the four points.
                      * @return Polygon The coordinates, represented in the coordinates of the four points.
+                     * 
                      */
                     std::vector<Coord> GetPolygon() const;
 
                     /**
                      * 设置The coordinates, represented in the coordinates of the four points.
-                     * @param Polygon The coordinates, represented in the coordinates of the four points.
+                     * @param _polygon The coordinates, represented in the coordinates of the four points.
+                     * 
                      */
                     void SetPolygon(const std::vector<Coord>& _polygon);
 
                     /**
                      * 判断参数 Polygon 是否已赋值
                      * @return Polygon 是否已赋值
+                     * 
                      */
                     bool PolygonHasBeenSet() const;
 

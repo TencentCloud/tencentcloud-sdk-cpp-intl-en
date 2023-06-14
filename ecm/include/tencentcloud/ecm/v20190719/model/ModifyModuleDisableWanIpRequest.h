@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Module ID
                      * @return ModuleId Module ID
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID
-                     * @param ModuleId Module ID
+                     * @param _moduleId Module ID
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to prohibit public IP assignment. Valid values: true: no; false: yes.
                      * @return DisableWanIp Whether to prohibit public IP assignment. Valid values: true: no; false: yes.
+                     * 
                      */
                     bool GetDisableWanIp() const;
 
                     /**
                      * 设置Whether to prohibit public IP assignment. Valid values: true: no; false: yes.
-                     * @param DisableWanIp Whether to prohibit public IP assignment. Valid values: true: no; false: yes.
+                     * @param _disableWanIp Whether to prohibit public IP assignment. Valid values: true: no; false: yes.
+                     * 
                      */
                     void SetDisableWanIp(const bool& _disableWanIp);
 
                     /**
                      * 判断参数 DisableWanIp 是否已赋值
                      * @return DisableWanIp 是否已赋值
+                     * 
                      */
                     bool DisableWanIpHasBeenSet() const;
 

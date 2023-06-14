@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot policy IDs
                      * @return SnapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     std::string GetSnapshotPolicyId() const;
 
                     /**
                      * 设置Snapshot policy IDs
-                     * @param SnapshotPolicyId Snapshot policy IDs
+                     * @param _snapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     void SetSnapshotPolicyId(const std::string& _snapshotPolicyId);
 
                     /**
                      * 判断参数 SnapshotPolicyId 是否已赋值
                      * @return SnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool SnapshotPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Snapshot policy name
                      * @return SnapshotPolicyName Snapshot policy name
+                     * 
                      */
                     std::string GetSnapshotPolicyName() const;
 
                     /**
                      * 设置Snapshot policy name
-                     * @param SnapshotPolicyName Snapshot policy name
+                     * @param _snapshotPolicyName Snapshot policy name
+                     * 
                      */
                     void SetSnapshotPolicyName(const std::string& _snapshotPolicyName);
 
                     /**
                      * 判断参数 SnapshotPolicyName 是否已赋值
                      * @return SnapshotPolicyName 是否已赋值
+                     * 
                      */
                     bool SnapshotPolicyNameHasBeenSet() const;
 
                     /**
                      * 获取Backup policy
                      * @return BackupPolicies Backup policy
+                     * 
                      */
                     std::vector<BackupPolicy> GetBackupPolicies() const;
 
                     /**
                      * 设置Backup policy
-                     * @param BackupPolicies Backup policy
+                     * @param _backupPolicies Backup policy
+                     * 
                      */
                     void SetBackupPolicies(const std::vector<BackupPolicy>& _backupPolicies);
 
                     /**
                      * 判断参数 BackupPolicies 是否已赋值
                      * @return BackupPolicies 是否已赋值
+                     * 
                      */
                     bool BackupPoliciesHasBeenSet() const;
 
                     /**
                      * 获取Snapshot retention period. Range: 1 to 365 days
                      * @return KeepTime Snapshot retention period. Range: 1 to 365 days
+                     * 
                      */
                     uint64_t GetKeepTime() const;
 
                     /**
                      * 设置Snapshot retention period. Range: 1 to 365 days
-                     * @param KeepTime Snapshot retention period. Range: 1 to 365 days
+                     * @param _keepTime Snapshot retention period. Range: 1 to 365 days
+                     * 
                      */
                     void SetKeepTime(const uint64_t& _keepTime);
 
                     /**
                      * 判断参数 KeepTime 是否已赋值
                      * @return KeepTime 是否已赋值
+                     * 
                      */
                     bool KeepTimeHasBeenSet() const;
 

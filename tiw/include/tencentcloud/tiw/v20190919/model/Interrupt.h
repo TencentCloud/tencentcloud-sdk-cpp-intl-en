@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return UserId User ID.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID.
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param UserId User ID.
+                     * @param _userId User ID.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Count Number of video stream interruptions.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of video stream interruptions.
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param Count Number of video stream interruptions.
+                     * @param _count Number of video stream interruptions.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

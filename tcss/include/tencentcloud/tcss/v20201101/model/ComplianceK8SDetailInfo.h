@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterName K8s cluster name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置K8s cluster name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterName K8s cluster name
+                     * @param _clusterName K8s cluster name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterVersion K8s cluster version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterVersion() const;
 
                     /**
                      * 设置K8s cluster version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterVersion K8s cluster version
+                     * @param _clusterVersion K8s cluster version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterVersion(const std::string& _clusterVersion);
 
                     /**
                      * 判断参数 ClusterVersion 是否已赋值
                      * @return ClusterVersion 是否已赋值
+                     * 
                      */
                     bool ClusterVersionHasBeenSet() const;
 

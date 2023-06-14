@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Sorting order (required). Valid values: `desc`, `asc`.
                      * @return OrderBy Sorting order (required). Valid values: `desc`, `asc`.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting order (required). Valid values: `desc`, `asc`.
-                     * @param OrderBy Sorting order (required). Valid values: `desc`, `asc`.
+                     * @param _orderBy Sorting order (required). Valid values: `desc`, `asc`.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Start time in milliseconds. It is in timestamp format and is required.
                      * @return StartTime Start time in milliseconds. It is in timestamp format and is required.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time in milliseconds. It is in timestamp format and is required.
-                     * @param StartTime Start time in milliseconds. It is in timestamp format and is required.
+                     * @param _startTime Start time in milliseconds. It is in timestamp format and is required.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
                      * @return Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-                     * @param Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
+                     * @param _limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number
                      * @return Page Page number
+                     * 
                      */
                     int64_t GetPage() const;
 
                     /**
                      * 设置Page number
-                     * @param Page Page number
+                     * @param _page Page number
+                     * 
                      */
                     void SetPage(const int64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Query statement, which is required and can contain up to 4,096 characters.
                      * @return Query Query statement, which is required and can contain up to 4,096 characters.
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Query statement, which is required and can contain up to 4,096 characters.
-                     * @param Query Query statement, which is required and can contain up to 4,096 characters.
+                     * @param _query Query statement, which is required and can contain up to 4,096 characters.
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取End time in milliseconds. It is in timestamp format and is required.
                      * @return EndTime End time in milliseconds. It is in timestamp format and is required.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in milliseconds. It is in timestamp format and is required.
-                     * @param EndTime End time in milliseconds. It is in timestamp format and is required.
+                     * @param _endTime End time in milliseconds. It is in timestamp format and is required.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Project ID (required)
                      * @return ID Project ID (required)
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Project ID (required)
-                     * @param ID Project ID (required)
+                     * @param _iD Project ID (required)
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

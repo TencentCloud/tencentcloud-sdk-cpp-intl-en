@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
                      * @return Invited Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
+                     * 
                      */
                     uint64_t GetInvited() const;
 
                     /**
                      * 设置Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
-                     * @param Invited Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
+                     * @param _invited Whether to list the invitations you received or the invitations you sent. `1`: list the invitations you received; `0`: list the invitations you sent.
+                     * 
                      */
                     void SetInvited(const uint64_t& _invited);
 
                     /**
                      * 判断参数 Invited 是否已赋值
                      * @return Invited 是否已赋值
+                     * 
                      */
                     bool InvitedHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit
                      * @return Limit Limit
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Limit
-                     * @param Limit Limit
+                     * @param _limit Limit
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

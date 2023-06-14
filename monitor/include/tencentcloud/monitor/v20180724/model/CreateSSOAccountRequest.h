@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-abcdefgh”.
                      * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取User account ID, such as “10000000”.
                      * @return UserId User account ID, such as “10000000”.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User account ID, such as “10000000”.
-                     * @param UserId User account ID, such as “10000000”.
+                     * @param _userId User account ID, such as “10000000”.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Permission
                      * @return Role Permission
+                     * 
                      */
                     std::vector<GrafanaAccountRole> GetRole() const;
 
                     /**
                      * 设置Permission
-                     * @param Role Permission
+                     * @param _role Permission
+                     * 
                      */
                     void SetRole(const std::vector<GrafanaAccountRole>& _role);
 
                     /**
                      * 判断参数 Role 是否已赋值
                      * @return Role 是否已赋值
+                     * 
                      */
                     bool RoleHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Notes Remarks
+                     * 
                      */
                     std::string GetNotes() const;
 
                     /**
                      * 设置Remarks
-                     * @param Notes Remarks
+                     * @param _notes Remarks
+                     * 
                      */
                     void SetNotes(const std::string& _notes);
 
                     /**
                      * 判断参数 Notes 是否已赋值
                      * @return Notes 是否已赋值
+                     * 
                      */
                     bool NotesHasBeenSet() const;
 

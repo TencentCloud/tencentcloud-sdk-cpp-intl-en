@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Time point when this monitoring data point is generated
                      * @return Timestamp Time point when this monitoring data point is generated
+                     * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
                      * 设置Time point when this monitoring data point is generated
-                     * @param Timestamp Time point when this monitoring data point is generated
+                     * @param _timestamp Time point when this monitoring data point is generated
+                     * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Value Monitoring data point value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetValue() const;
 
                     /**
                      * 设置Monitoring data point value
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Value Monitoring data point value
+                     * @param _value Monitoring data point value
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const double& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

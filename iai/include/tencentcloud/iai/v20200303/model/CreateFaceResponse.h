@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of successfully added faces
                      * @return SucFaceNum Number of successfully added faces
+                     * 
                      */
                     uint64_t GetSucFaceNum() const;
 
                     /**
                      * 判断参数 SucFaceNum 是否已赋值
                      * @return SucFaceNum 是否已赋值
+                     * 
                      */
                     bool SucFaceNumHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of successfully added faces
                      * @return SucFaceIds List of IDs of successfully added faces
+                     * 
                      */
                     std::vector<std::string> GetSucFaceIds() const;
 
                     /**
                      * 判断参数 SucFaceIds 是否已赋值
                      * @return SucFaceIds 是否已赋值
+                     * 
                      */
                     bool SucFaceIdsHasBeenSet() const;
 
@@ -77,12 +81,14 @@ The order of `RetCode` values is the same as the order of `Images` or `Urls` in 
 -1601: the image quality control requirement is not met; -1604: the face similarity is not above `FaceMatchThreshold`. 
 Other non-zero values: algorithm service exception. 
 The order of `RetCode` values is the same as the order of `Images` or `Urls` in the input parameter.
+                     * 
                      */
                     std::vector<int64_t> GetRetCode() const;
 
                     /**
                      * 判断参数 RetCode 是否已赋值
                      * @return RetCode 是否已赋值
+                     * 
                      */
                     bool RetCodeHasBeenSet() const;
 
@@ -91,36 +97,42 @@ The order of `RetCode` values is the same as the order of `Images` or `Urls` in 
 For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
                      * @return SucIndexes Indexes of successfully added faces. The order of indexes is the same as the order of `Images` or `Urls` in the input parameter. 
 For example, if there are 3 URLs in `Urls`, and the second URL fails, then the value of `SucIndexes` will be [0,2].
+                     * 
                      */
                     std::vector<uint64_t> GetSucIndexes() const;
 
                     /**
                      * 判断参数 SucIndexes 是否已赋值
                      * @return SucIndexes 是否已赋值
+                     * 
                      */
                     bool SucIndexesHasBeenSet() const;
 
                     /**
                      * 获取Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
                      * @return SucFaceRects Frame positions of successfully added faces. The order is the same as the order of `Images` or `Urls` in the input parameter.
+                     * 
                      */
                     std::vector<FaceRect> GetSucFaceRects() const;
 
                     /**
                      * 判断参数 SucFaceRects 是否已赋值
                      * @return SucFaceRects 是否已赋值
+                     * 
                      */
                     bool SucFaceRectsHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

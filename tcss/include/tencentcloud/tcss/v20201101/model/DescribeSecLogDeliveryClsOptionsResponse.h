@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取List of optional CLS logsets, which is returned only when `ClsRegion` is not empty.
                      * @return LogSetList List of optional CLS logsets, which is returned only when `ClsRegion` is not empty.
+                     * 
                      */
                     std::vector<ClsLogsetInfo> GetLogSetList() const;
 
                     /**
                      * 判断参数 LogSetList 是否已赋值
                      * @return LogSetList 是否已赋值
+                     * 
                      */
                     bool LogSetListHasBeenSet() const;
 
                     /**
                      * 获取List of optional regions, which is returned only when `ClsRegion` is empty.
                      * @return RegionList List of optional regions, which is returned only when `ClsRegion` is empty.
+                     * 
                      */
                     std::vector<RegionInfo> GetRegionList() const;
 
                     /**
                      * 判断参数 RegionList 是否已赋值
                      * @return RegionList 是否已赋值
+                     * 
                      */
                     bool RegionListHasBeenSet() const;
 

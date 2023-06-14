@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID, such as dcdbt-7oaxtcb7.
                      * @return InstanceId Instance ID, such as dcdbt-7oaxtcb7.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID, such as dcdbt-7oaxtcb7.
-                     * @param InstanceId Instance ID, such as dcdbt-7oaxtcb7.
+                     * @param _instanceId Instance ID, such as dcdbt-7oaxtcb7.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID, such as `vpc-xxx`.
                      * @return VpcId VPC ID, such as `vpc-xxx`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID, such as `vpc-xxx`.
-                     * @param VpcId VPC ID, such as `vpc-xxx`.
+                     * @param _vpcId VPC ID, such as `vpc-xxx`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID of the VPC, such as `subnet-xxx`.
                      * @return SubnetId Subnet ID of the VPC, such as `subnet-xxx`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID of the VPC, such as `subnet-xxx`.
-                     * @param SubnetId Subnet ID of the VPC, such as `subnet-xxx`.
+                     * @param _subnetId Subnet ID of the VPC, such as `subnet-xxx`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -93,6 +99,7 @@ TRUE: yes
 FALSE: no
 
 Default value: FALSE.
+                     * 
                      */
                     bool GetAsVpcGateway() const;
 
@@ -102,53 +109,61 @@ TRUE: yes
 FALSE: no
 
 Default value: FALSE.
-                     * @param AsVpcGateway Whether it is used as a public gateway. The public gateway can be used only when the instance has a public IP and resides in a VPC. Valid values:
+                     * @param _asVpcGateway Whether it is used as a public gateway. The public gateway can be used only when the instance has a public IP and resides in a VPC. Valid values:
 TRUE: yes
 FALSE: no
 
 Default value: FALSE.
+                     * 
                      */
                     void SetAsVpcGateway(const bool& _asVpcGateway);
 
                     /**
                      * 判断参数 AsVpcGateway 是否已赋值
                      * @return AsVpcGateway 是否已赋值
+                     * 
                      */
                     bool AsVpcGatewayHasBeenSet() const;
 
                     /**
                      * 获取Array of VPC subnet IPs. This parameter can be used to create instances or modify the VPC attributes of instances.
                      * @return PrivateIpAddresses Array of VPC subnet IPs. This parameter can be used to create instances or modify the VPC attributes of instances.
+                     * 
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置Array of VPC subnet IPs. This parameter can be used to create instances or modify the VPC attributes of instances.
-                     * @param PrivateIpAddresses Array of VPC subnet IPs. This parameter can be used to create instances or modify the VPC attributes of instances.
+                     * @param _privateIpAddresses Array of VPC subnet IPs. This parameter can be used to create instances or modify the VPC attributes of instances.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 
                     /**
                      * 获取Number of the IPv6 addresses to be randomly generated for the ENI.
                      * @return Ipv6AddressCount Number of the IPv6 addresses to be randomly generated for the ENI.
+                     * 
                      */
                     int64_t GetIpv6AddressCount() const;
 
                     /**
                      * 设置Number of the IPv6 addresses to be randomly generated for the ENI.
-                     * @param Ipv6AddressCount Number of the IPv6 addresses to be randomly generated for the ENI.
+                     * @param _ipv6AddressCount Number of the IPv6 addresses to be randomly generated for the ENI.
+                     * 
                      */
                     void SetIpv6AddressCount(const int64_t& _ipv6AddressCount);
 
                     /**
                      * 判断参数 Ipv6AddressCount 是否已赋值
                      * @return Ipv6AddressCount 是否已赋值
+                     * 
                      */
                     bool Ipv6AddressCountHasBeenSet() const;
 

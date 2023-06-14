@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取CHC ID
                      * @return ChcIds CHC ID
+                     * 
                      */
                     std::vector<std::string> GetChcIds() const;
 
                     /**
                      * 设置CHC ID
-                     * @param ChcIds CHC ID
+                     * @param _chcIds CHC ID
+                     * 
                      */
                     void SetChcIds(const std::vector<std::string>& _chcIds);
 
                     /**
                      * 判断参数 ChcIds 是否已赋值
                      * @return ChcIds 是否已赋值
+                     * 
                      */
                     bool ChcIdsHasBeenSet() const;
 

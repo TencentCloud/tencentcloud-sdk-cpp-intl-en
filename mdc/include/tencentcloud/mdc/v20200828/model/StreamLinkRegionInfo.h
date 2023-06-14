@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取List of StreamLink regions
                      * @return Regions List of StreamLink regions
+                     * 
                      */
                     std::vector<RegionInfo> GetRegions() const;
 
                     /**
                      * 设置List of StreamLink regions
-                     * @param Regions List of StreamLink regions
+                     * @param _regions List of StreamLink regions
+                     * 
                      */
                     void SetRegions(const std::vector<RegionInfo>& _regions);
 
                     /**
                      * 判断参数 Regions 是否已赋值
                      * @return Regions 是否已赋值
+                     * 
                      */
                     bool RegionsHasBeenSet() const;
 

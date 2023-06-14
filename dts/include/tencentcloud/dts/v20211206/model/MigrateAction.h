@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AllAction List of all operations in the task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAllAction() const;
 
                     /**
                      * 设置List of all operations in the task
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AllAction List of all operations in the task
+                     * @param _allAction List of all operations in the task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAllAction(const std::vector<std::string>& _allAction);
 
                     /**
                      * 判断参数 AllAction 是否已赋值
                      * @return AllAction 是否已赋值
+                     * 
                      */
                     bool AllActionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AllowedAction List of allowed operations in the task under the current status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAllowedAction() const;
 
                     /**
                      * 设置List of allowed operations in the task under the current status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AllowedAction List of allowed operations in the task under the current status
+                     * @param _allowedAction List of allowed operations in the task under the current status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAllowedAction(const std::vector<std::string>& _allowedAction);
 
                     /**
                      * 判断参数 AllowedAction 是否已赋值
                      * @return AllowedAction 是否已赋值
+                     * 
                      */
                     bool AllowedActionHasBeenSet() const;
 

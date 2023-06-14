@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible entries.
                      * @return TotalCount Number of eligible entries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of adaptive bitrate streaming template details.
                      * @return AdaptiveDynamicStreamingTemplateSet List of adaptive bitrate streaming template details.
+                     * 
                      */
                     std::vector<AdaptiveDynamicStreamingTemplate> GetAdaptiveDynamicStreamingTemplateSet() const;
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingTemplateSet 是否已赋值
                      * @return AdaptiveDynamicStreamingTemplateSet 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingTemplateSetHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取IP address to be handled. Either IP or Domain is required.
                      * @return IP IP address to be handled. Either IP or Domain is required.
+                     * 
                      */
                     std::string GetIP() const;
 
                     /**
                      * 设置IP address to be handled. Either IP or Domain is required.
-                     * @param IP IP address to be handled. Either IP or Domain is required.
+                     * @param _iP IP address to be handled. Either IP or Domain is required.
+                     * 
                      */
                     void SetIP(const std::string& _iP);
 
                     /**
                      * 判断参数 IP 是否已赋值
                      * @return IP 是否已赋值
+                     * 
                      */
                     bool IPHasBeenSet() const;
 
                     /**
                      * 获取0 or 1. 0: outbound; 1: inbound
                      * @return Direction 0 or 1. 0: outbound; 1: inbound
+                     * 
                      */
                     int64_t GetDirection() const;
 
                     /**
                      * 设置0 or 1. 0: outbound; 1: inbound
-                     * @param Direction 0 or 1. 0: outbound; 1: inbound
+                     * @param _direction 0 or 1. 0: outbound; 1: inbound
+                     * 
                      */
                     void SetDirection(const int64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Domain name to be handled. Either IP or Domain is required.
                      * @return Domain Domain name to be handled. Either IP or Domain is required.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name to be handled. Either IP or Domain is required.
-                     * @param Domain Domain name to be handled. Either IP or Domain is required.
+                     * @param _domain Domain name to be handled. Either IP or Domain is required.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

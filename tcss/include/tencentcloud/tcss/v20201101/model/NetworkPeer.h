@@ -61,6 +61,7 @@ Namespace: `NamespaceSelector`, which indicates that `NamespaceSelector` has a v
 Pod type: `PodSelector`, which indicates that both `NamespaceSelector` and `PodSelector` have values.
 
 IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
+                     * 
                      */
                     std::string GetPeerType() const;
 
@@ -72,19 +73,21 @@ Namespace: `NamespaceSelector`, which indicates that `NamespaceSelector` has a v
 Pod type: `PodSelector`, which indicates that both `NamespaceSelector` and `PodSelector` have values.
 
 IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
-                     * @param PeerType Object type:
+                     * @param _peerType Object type:
 
 Namespace: `NamespaceSelector`, which indicates that `NamespaceSelector` has a value.
 
 Pod type: `PodSelector`, which indicates that both `NamespaceSelector` and `PodSelector` have values.
 
 IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
+                     * 
                      */
                     void SetPeerType(const std::string& _peerType);
 
                     /**
                      * 判断参数 PeerType 是否已赋值
                      * @return PeerType 是否已赋值
+                     * 
                      */
                     bool PeerTypeHasBeenSet() const;
 
@@ -93,20 +96,23 @@ IP type: `IPBlock`, which indicates that only `IPBlock` has a value.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NamespaceSelector Namespace selector
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNamespaceSelector() const;
 
                     /**
                      * 设置Namespace selector
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NamespaceSelector Namespace selector
+                     * @param _namespaceSelector Namespace selector
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNamespaceSelector(const std::string& _namespaceSelector);
 
                     /**
                      * 判断参数 NamespaceSelector 是否已赋值
                      * @return NamespaceSelector 是否已赋值
+                     * 
                      */
                     bool NamespaceSelectorHasBeenSet() const;
 
@@ -115,20 +121,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PodSelector Pod selector
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPodSelector() const;
 
                     /**
                      * 设置Pod selector
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PodSelector Pod selector
+                     * @param _podSelector Pod selector
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPodSelector(const std::string& _podSelector);
 
                     /**
                      * 判断参数 PodSelector 是否已赋值
                      * @return PodSelector 是否已赋值
+                     * 
                      */
                     bool PodSelectorHasBeenSet() const;
 
@@ -137,20 +146,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IPBlock IP selector
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIPBlock() const;
 
                     /**
                      * 设置IP selector
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IPBlock IP selector
+                     * @param _iPBlock IP selector
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIPBlock(const std::string& _iPBlock);
 
                     /**
                      * 判断参数 IPBlock 是否已赋值
                      * @return IPBlock 是否已赋值
+                     * 
                      */
                     bool IPBlockHasBeenSet() const;
 

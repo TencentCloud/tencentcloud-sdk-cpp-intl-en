@@ -66,6 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Terror`: Violence and terrorism
 `Ad`: Advertising
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetScene() const;
 
@@ -79,7 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Terror`: Violence and terrorism
 `Ad`: Advertising
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Scene Scenario
+                     * @param _scene Scenario
 `Porn`: Pornographic
 `Sexy`: Sexy
 `Polity`: Political
@@ -88,12 +89,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Terror`: Violence and terrorism
 `Ad`: Advertising
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScene(const std::string& _scene);
 
                     /**
                      * 判断参数 Scene 是否已赋值
                      * @return Scene 是否已赋值
+                     * 
                      */
                     bool SceneHasBeenSet() const;
 
@@ -106,6 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: No
 `1`: Yes
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHitFlag() const;
 
@@ -114,16 +118,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: No
 `1`: Yes
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HitFlag Whether the video content is hit
+                     * @param _hitFlag Whether the video content is hit
 `0`: No
 `1`: Yes
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHitFlag(const int64_t& _hitFlag);
 
                     /**
                      * 判断参数 HitFlag 是否已赋值
                      * @return HitFlag 是否已赋值
+                     * 
                      */
                     bool HitFlagHasBeenSet() const;
 
@@ -138,6 +144,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Review`: You’re suggested to take a manual review.
 `Block`: You’re suggested to block the non-compliant video.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -147,17 +154,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Review`: You’re suggested to take a manual review.
 `Block`: You’re suggested to block the non-compliant video.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion Suggestion. Values:
+                     * @param _suggestion Suggestion. Values:
 `Pass`: You’re suggested to allow the video to pass.
 `Review`: You’re suggested to take a manual review.
 `Block`: You’re suggested to block the non-compliant video.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -166,20 +175,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Label Tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置Tag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Label Tag
+                     * @param _label Tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -188,20 +200,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubLabel Subtag under the current tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
                      * 设置Subtag under the current tag
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubLabel Subtag under the current tag
+                     * @param _subLabel Subtag under the current tag
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
 
                     /**
                      * 判断参数 SubLabel 是否已赋值
                      * @return SubLabel 是否已赋值
+                     * 
                      */
                     bool SubLabelHasBeenSet() const;
 
@@ -210,20 +225,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Score Score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置Score
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Score Score
+                     * @param _score Score
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -232,20 +250,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Names If the hit video contains political content, the list of politicians will be returned; otherwise a null value is returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
                      * 设置If the hit video contains political content, the list of politicians will be returned; otherwise a null value is returned.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Names If the hit video contains political content, the list of politicians will be returned; otherwise a null value is returned.
+                     * @param _names If the hit video contains political content, the list of politicians will be returned; otherwise a null value is returned.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
                     /**
                      * 判断参数 Names 是否已赋值
                      * @return Names 是否已赋值
+                     * 
                      */
                     bool NamesHasBeenSet() const;
 
@@ -254,20 +275,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Text OCR-recognized text in the image
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置OCR-recognized text in the image
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Text OCR-recognized text in the image
+                     * @param _text OCR-recognized text in the image
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
@@ -276,20 +300,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Details Other details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ImageResultsResultDetail> GetDetails() const;
 
                     /**
                      * 设置Other details
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Details Other details
+                     * @param _details Other details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetails(const std::vector<ImageResultsResultDetail>& _details);
 
                     /**
                      * 判断参数 Details 是否已赋值
                      * @return Details 是否已赋值
+                     * 
                      */
                     bool DetailsHasBeenSet() const;
 

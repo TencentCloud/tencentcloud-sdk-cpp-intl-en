@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Primary instance ID
                      * @return RegistryId Primary instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Primary instance ID
-                     * @param RegistryId Primary instance ID
+                     * @param _registryId Primary instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace ID
                      * @return NamespaceId Namespace ID
+                     * 
                      */
                     int64_t GetNamespaceId() const;
 
                     /**
                      * 设置Namespace ID
-                     * @param NamespaceId Namespace ID
+                     * @param _namespaceId Namespace ID
+                     * 
                      */
                     void SetNamespaceId(const int64_t& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Retention policy
                      * @return RetentionRule Retention policy
+                     * 
                      */
                     RetentionRule GetRetentionRule() const;
 
                     /**
                      * 设置Retention policy
-                     * @param RetentionRule Retention policy
+                     * @param _retentionRule Retention policy
+                     * 
                      */
                     void SetRetentionRule(const RetentionRule& _retentionRule);
 
                     /**
                      * 判断参数 RetentionRule 是否已赋值
                      * @return RetentionRule 是否已赋值
+                     * 
                      */
                     bool RetentionRuleHasBeenSet() const;
 
                     /**
                      * 获取Execution cycle. Valid values: manual, daily, weekly, monthly.
                      * @return CronSetting Execution cycle. Valid values: manual, daily, weekly, monthly.
+                     * 
                      */
                     std::string GetCronSetting() const;
 
                     /**
                      * 设置Execution cycle. Valid values: manual, daily, weekly, monthly.
-                     * @param CronSetting Execution cycle. Valid values: manual, daily, weekly, monthly.
+                     * @param _cronSetting Execution cycle. Valid values: manual, daily, weekly, monthly.
+                     * 
                      */
                     void SetCronSetting(const std::string& _cronSetting);
 
                     /**
                      * 判断参数 CronSetting 是否已赋值
                      * @return CronSetting 是否已赋值
+                     * 
                      */
                     bool CronSettingHasBeenSet() const;
 
                     /**
                      * 获取Whether to disable the rule. Default value: false.
                      * @return Disabled Whether to disable the rule. Default value: false.
+                     * 
                      */
                     bool GetDisabled() const;
 
                     /**
                      * 设置Whether to disable the rule. Default value: false.
-                     * @param Disabled Whether to disable the rule. Default value: false.
+                     * @param _disabled Whether to disable the rule. Default value: false.
+                     * 
                      */
                     void SetDisabled(const bool& _disabled);
 
                     /**
                      * 判断参数 Disabled 是否已赋值
                      * @return Disabled 是否已赋值
+                     * 
                      */
                     bool DisabledHasBeenSet() const;
 

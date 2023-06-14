@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取District.
                      * @return ProvinceName District.
+                     * 
                      */
                     std::string GetProvinceName() const;
 
                     /**
                      * 设置District.
-                     * @param ProvinceName District.
+                     * @param _provinceName District.
+                     * 
                      */
                     void SetProvinceName(const std::string& _provinceName);
 
                     /**
                      * 判断参数 ProvinceName 是否已赋值
                      * @return ProvinceName 是否已赋值
+                     * 
                      */
                     bool ProvinceNameHasBeenSet() const;
 
                     /**
                      * 获取ISP.
                      * @return IspName ISP.
+                     * 
                      */
                     std::string GetIspName() const;
 
                     /**
                      * 设置ISP.
-                     * @param IspName ISP.
+                     * @param _ispName ISP.
+                     * 
                      */
                     void SetIspName(const std::string& _ispName);
 
                     /**
                      * 判断参数 IspName 是否已赋值
                      * @return IspName 是否已赋值
+                     * 
                      */
                     bool IspNameHasBeenSet() const;
 
                     /**
                      * 获取Detailed data at the minute level.
                      * @return DetailInfoList Detailed data at the minute level.
+                     * 
                      */
                     std::vector<CdnPlayStatData> GetDetailInfoList() const;
 
                     /**
                      * 设置Detailed data at the minute level.
-                     * @param DetailInfoList Detailed data at the minute level.
+                     * @param _detailInfoList Detailed data at the minute level.
+                     * 
                      */
                     void SetDetailInfoList(const std::vector<CdnPlayStatData>& _detailInfoList);
 
                     /**
                      * 判断参数 DetailInfoList 是否已赋值
                      * @return DetailInfoList 是否已赋值
+                     * 
                      */
                     bool DetailInfoListHasBeenSet() const;
 

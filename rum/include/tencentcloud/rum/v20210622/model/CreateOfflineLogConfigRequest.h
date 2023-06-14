@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique project key for reporting
                      * @return ProjectKey Unique project key for reporting
+                     * 
                      */
                     std::string GetProjectKey() const;
 
                     /**
                      * 设置Unique project key for reporting
-                     * @param ProjectKey Unique project key for reporting
+                     * @param _projectKey Unique project key for reporting
+                     * 
                      */
                     void SetProjectKey(const std::string& _projectKey);
 
                     /**
                      * 判断参数 ProjectKey 是否已赋值
                      * @return ProjectKey 是否已赋值
+                     * 
                      */
                     bool ProjectKeyHasBeenSet() const;
 
                     /**
                      * 获取Unique identifier of the user to be listened on (`aid` or `uin`)
                      * @return UniqueID Unique identifier of the user to be listened on (`aid` or `uin`)
+                     * 
                      */
                     std::string GetUniqueID() const;
 
                     /**
                      * 设置Unique identifier of the user to be listened on (`aid` or `uin`)
-                     * @param UniqueID Unique identifier of the user to be listened on (`aid` or `uin`)
+                     * @param _uniqueID Unique identifier of the user to be listened on (`aid` or `uin`)
+                     * 
                      */
                     void SetUniqueID(const std::string& _uniqueID);
 
                     /**
                      * 判断参数 UniqueID 是否已赋值
                      * @return UniqueID 是否已赋值
+                     * 
                      */
                     bool UniqueIDHasBeenSet() const;
 

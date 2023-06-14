@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where a table group resides
                      * @return ClusterId ID of the cluster where a table group resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where a table group resides
-                     * @param ClusterId ID of the cluster where a table group resides
+                     * @param _clusterId ID of the cluster where a table group resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the table group to be renamed
                      * @return TableGroupId ID of the table group to be renamed
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置ID of the table group to be renamed
-                     * @param TableGroupId ID of the table group to be renamed
+                     * @param _tableGroupId ID of the table group to be renamed
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取New table group name, which can contain letters and symbols
                      * @return TableGroupName New table group name, which can contain letters and symbols
+                     * 
                      */
                     std::string GetTableGroupName() const;
 
                     /**
                      * 设置New table group name, which can contain letters and symbols
-                     * @param TableGroupName New table group name, which can contain letters and symbols
+                     * @param _tableGroupName New table group name, which can contain letters and symbols
+                     * 
                      */
                     void SetTableGroupName(const std::string& _tableGroupName);
 
                     /**
                      * 判断参数 TableGroupName 是否已赋值
                      * @return TableGroupName 是否已赋值
+                     * 
                      */
                     bool TableGroupNameHasBeenSet() const;
 

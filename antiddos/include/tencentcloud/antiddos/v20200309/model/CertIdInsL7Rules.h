@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取List of rules configured for certificates
                      * @return L7Rules List of rules configured for certificates
+                     * 
                      */
                     std::vector<InsL7Rules> GetL7Rules() const;
 
                     /**
                      * 设置List of rules configured for certificates
-                     * @param L7Rules List of rules configured for certificates
+                     * @param _l7Rules List of rules configured for certificates
+                     * 
                      */
                     void SetL7Rules(const std::vector<InsL7Rules>& _l7Rules);
 
                     /**
                      * 判断参数 L7Rules 是否已赋值
                      * @return L7Rules 是否已赋值
+                     * 
                      */
                     bool L7RulesHasBeenSet() const;
 
                     /**
                      * 获取Certificate ID
                      * @return CertId Certificate ID
+                     * 
                      */
                     std::string GetCertId() const;
 
                     /**
                      * 设置Certificate ID
-                     * @param CertId Certificate ID
+                     * @param _certId Certificate ID
+                     * 
                      */
                     void SetCertId(const std::string& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 

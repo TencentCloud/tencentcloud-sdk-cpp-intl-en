@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of the Secret to be restored.
                      * @return SecretName Name of the Secret to be restored.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of the Secret to be restored.
-                     * @param SecretName Name of the Secret to be restored.
+                     * @param _secretName Name of the Secret to be restored.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 

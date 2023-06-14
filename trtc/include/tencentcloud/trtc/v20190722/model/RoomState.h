@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取The call ID, which uniquely identifies a call.
                      * @return CommId The call ID, which uniquely identifies a call.
+                     * 
                      */
                     std::string GetCommId() const;
 
                     /**
                      * 设置The call ID, which uniquely identifies a call.
-                     * @param CommId The call ID, which uniquely identifies a call.
+                     * @param _commId The call ID, which uniquely identifies a call.
+                     * 
                      */
                     void SetCommId(const std::string& _commId);
 
                     /**
                      * 判断参数 CommId 是否已赋值
                      * @return CommId 是否已赋值
+                     * 
                      */
                     bool CommIdHasBeenSet() const;
 
                     /**
                      * 获取The room ID.
                      * @return RoomString The room ID.
+                     * 
                      */
                     std::string GetRoomString() const;
 
                     /**
                      * 设置The room ID.
-                     * @param RoomString The room ID.
+                     * @param _roomString The room ID.
+                     * 
                      */
                     void SetRoomString(const std::string& _roomString);
 
                     /**
                      * 判断参数 RoomString 是否已赋值
                      * @return RoomString 是否已赋值
+                     * 
                      */
                     bool RoomStringHasBeenSet() const;
 
                     /**
                      * 获取The room creation time.
                      * @return CreateTime The room creation time.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置The room creation time.
-                     * @param CreateTime The room creation time.
+                     * @param _createTime The room creation time.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取The room termination time.
                      * @return DestroyTime The room termination time.
+                     * 
                      */
                     uint64_t GetDestroyTime() const;
 
                     /**
                      * 设置The room termination time.
-                     * @param DestroyTime The room termination time.
+                     * @param _destroyTime The room termination time.
+                     * 
                      */
                     void SetDestroyTime(const uint64_t& _destroyTime);
 
                     /**
                      * 判断参数 DestroyTime 是否已赋值
                      * @return DestroyTime 是否已赋值
+                     * 
                      */
                     bool DestroyTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether the room is terminated.
                      * @return IsFinished Whether the room is terminated.
+                     * 
                      */
                     bool GetIsFinished() const;
 
                     /**
                      * 设置Whether the room is terminated.
-                     * @param IsFinished Whether the room is terminated.
+                     * @param _isFinished Whether the room is terminated.
+                     * 
                      */
                     void SetIsFinished(const bool& _isFinished);
 
                     /**
                      * 判断参数 IsFinished 是否已赋值
                      * @return IsFinished 是否已赋值
+                     * 
                      */
                     bool IsFinishedHasBeenSet() const;
 
                     /**
                      * 获取The user ID of the room creator.
                      * @return UserId The user ID of the room creator.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The user ID of the room creator.
-                     * @param UserId The user ID of the room creator.
+                     * @param _userId The user ID of the room creator.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 

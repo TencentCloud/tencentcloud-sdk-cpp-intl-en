@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Private IP of a real server
                      * @return IP Private IP of a real server
+                     * 
                      */
                     std::string GetIP() const;
 
                     /**
                      * 设置Private IP of a real server
-                     * @param IP Private IP of a real server
+                     * @param _iP Private IP of a real server
+                     * 
                      */
                     void SetIP(const std::string& _iP);
 
                     /**
                      * 判断参数 IP 是否已赋值
                      * @return IP 是否已赋值
+                     * 
                      */
                     bool IPHasBeenSet() const;
 
                     /**
                      * 获取Real server port
                      * @return Port Real server port
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Real server port
-                     * @param Port Real server port
+                     * @param _port Real server port
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取CLB listener port
                      * @return ListenerPort CLB listener port
+                     * 
                      */
                     int64_t GetListenerPort() const;
 
                     /**
                      * 设置CLB listener port
-                     * @param ListenerPort CLB listener port
+                     * @param _listenerPort CLB listener port
+                     * 
                      */
                     void SetListenerPort(const int64_t& _listenerPort);
 
                     /**
                      * 判断参数 ListenerPort 是否已赋值
                      * @return ListenerPort 是否已赋值
+                     * 
                      */
                     bool ListenerPortHasBeenSet() const;
 
                     /**
                      * 获取Forwarding protocol
                      * @return Protocol Forwarding protocol
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Forwarding protocol
-                     * @param Protocol Forwarding protocol
+                     * @param _protocol Forwarding protocol
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Health check result. Value range: 1 (healthy), 0 (unhealthy)
                      * @return HealthStatus Health check result. Value range: 1 (healthy), 0 (unhealthy)
+                     * 
                      */
                     int64_t GetHealthStatus() const;
 
                     /**
                      * 设置Health check result. Value range: 1 (healthy), 0 (unhealthy)
-                     * @param HealthStatus Health check result. Value range: 1 (healthy), 0 (unhealthy)
+                     * @param _healthStatus Health check result. Value range: 1 (healthy), 0 (unhealthy)
+                     * 
                      */
                     void SetHealthStatus(const int64_t& _healthStatus);
 
                     /**
                      * 判断参数 HealthStatus 是否已赋值
                      * @return HealthStatus 是否已赋值
+                     * 
                      */
                     bool HealthStatusHasBeenSet() const;
 

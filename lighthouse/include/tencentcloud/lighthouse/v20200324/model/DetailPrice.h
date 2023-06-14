@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return PriceName Values: 
 <li>"DiskSpace": Cloud disk space</li>
 <li>"DiskBackupQuota": Cloud disk backups</li>
+                     * 
                      */
                     std::string GetPriceName() const;
 
@@ -60,87 +61,101 @@ namespace TencentCloud
                      * 设置Values: 
 <li>"DiskSpace": Cloud disk space</li>
 <li>"DiskBackupQuota": Cloud disk backups</li>
-                     * @param PriceName Values: 
+                     * @param _priceName Values: 
 <li>"DiskSpace": Cloud disk space</li>
 <li>"DiskBackupQuota": Cloud disk backups</li>
+                     * 
                      */
                     void SetPriceName(const std::string& _priceName);
 
                     /**
                      * 判断参数 PriceName 是否已赋值
                      * @return PriceName 是否已赋值
+                     * 
                      */
                     bool PriceNameHasBeenSet() const;
 
                     /**
                      * 获取Official unit price of the billable item
                      * @return OriginUnitPrice Official unit price of the billable item
+                     * 
                      */
                     double GetOriginUnitPrice() const;
 
                     /**
                      * 设置Official unit price of the billable item
-                     * @param OriginUnitPrice Official unit price of the billable item
+                     * @param _originUnitPrice Official unit price of the billable item
+                     * 
                      */
                     void SetOriginUnitPrice(const double& _originUnitPrice);
 
                     /**
                      * 判断参数 OriginUnitPrice 是否已赋值
                      * @return OriginUnitPrice 是否已赋值
+                     * 
                      */
                     bool OriginUnitPriceHasBeenSet() const;
 
                     /**
                      * 获取Official total price of the billable item
                      * @return OriginalPrice Official total price of the billable item
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Official total price of the billable item
-                     * @param OriginalPrice Official total price of the billable item
+                     * @param _originalPrice Official total price of the billable item
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discount of the billable item
                      * @return Discount Discount of the billable item
+                     * 
                      */
                     double GetDiscount() const;
 
                     /**
                      * 设置Discount of the billable item
-                     * @param Discount Discount of the billable item
+                     * @param _discount Discount of the billable item
+                     * 
                      */
                     void SetDiscount(const double& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discounted total price of the billable item
                      * @return DiscountPrice Discounted total price of the billable item
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted total price of the billable item
-                     * @param DiscountPrice Discounted total price of the billable item
+                     * @param _discountPrice Discounted total price of the billable item
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 

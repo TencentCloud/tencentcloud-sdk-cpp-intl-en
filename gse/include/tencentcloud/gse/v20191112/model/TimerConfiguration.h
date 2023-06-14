@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimerType The recurrence pattern of auto-scaling. `0`: undefined, `1`: once, `2`: daily, `3`: monthly, `4`: weekly
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimerType() const;
 
                     /**
                      * 设置The recurrence pattern of auto-scaling. `0`: undefined, `1`: once, `2`: daily, `3`: monthly, `4`: weekly
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimerType The recurrence pattern of auto-scaling. `0`: undefined, `1`: once, `2`: daily, `3`: monthly, `4`: weekly
+                     * @param _timerType The recurrence pattern of auto-scaling. `0`: undefined, `1`: once, `2`: daily, `3`: monthly, `4`: weekly
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimerType(const int64_t& _timerType);
 
                     /**
                      * 判断参数 TimerType 是否已赋值
                      * @return TimerType 是否已赋值
+                     * 
                      */
                     bool TimerTypeHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return TimerValue Details of the recurrence pattern of auto-scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     TimerValue GetTimerValue() const;
 
                     /**
                      * 设置Details of the recurrence pattern of auto-scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TimerValue Details of the recurrence pattern of auto-scaling
+                     * @param _timerValue Details of the recurrence pattern of auto-scaling
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimerValue(const TimerValue& _timerValue);
 
                     /**
                      * 判断参数 TimerValue 是否已赋值
                      * @return TimerValue 是否已赋值
+                     * 
                      */
                     bool TimerValueHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return BeginTime Start time of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param BeginTime Start time of the scheduled scaling policy
+                     * @param _beginTime Start time of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EndTime End time of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EndTime End time of the scheduled scaling policy
+                     * @param _endTime End time of the scheduled scaling policy
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

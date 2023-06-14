@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Quota list
                      * @return QuotaSet Quota list
+                     * 
                      */
                     std::vector<Quota> GetQuotaSet() const;
 
                     /**
                      * 判断参数 QuotaSet 是否已赋值
                      * @return QuotaSet 是否已赋值
+                     * 
                      */
                     bool QuotaSetHasBeenSet() const;
 

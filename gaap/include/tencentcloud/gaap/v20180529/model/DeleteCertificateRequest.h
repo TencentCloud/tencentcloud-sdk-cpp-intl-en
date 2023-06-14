@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the certificate to be deleted.
                      * @return CertificateId ID of the certificate to be deleted.
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置ID of the certificate to be deleted.
-                     * @param CertificateId ID of the certificate to be deleted.
+                     * @param _certificateId ID of the certificate to be deleted.
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 

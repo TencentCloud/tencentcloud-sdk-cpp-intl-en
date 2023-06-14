@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Quantity
                      * @return TotalCount Quantity
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Quantity
-                     * @param TotalCount Quantity
+                     * @param _totalCount Quantity
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiAppApiSet Information array of the API bound to the application
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ApiAppApiInfo> GetApiAppApiSet() const;
 
                     /**
                      * 设置Information array of the API bound to the application
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiAppApiSet Information array of the API bound to the application
+                     * @param _apiAppApiSet Information array of the API bound to the application
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiAppApiSet(const std::vector<ApiAppApiInfo>& _apiAppApiSet);
 
                     /**
                      * 判断参数 ApiAppApiSet 是否已赋值
                      * @return ApiAppApiSet 是否已赋值
+                     * 
                      */
                     bool ApiAppApiSetHasBeenSet() const;
 

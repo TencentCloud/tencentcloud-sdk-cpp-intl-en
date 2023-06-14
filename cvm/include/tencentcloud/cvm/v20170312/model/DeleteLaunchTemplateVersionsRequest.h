@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The launch template ID
                      * @return LaunchTemplateId The launch template ID
+                     * 
                      */
                     std::string GetLaunchTemplateId() const;
 
                     /**
                      * 设置The launch template ID
-                     * @param LaunchTemplateId The launch template ID
+                     * @param _launchTemplateId The launch template ID
+                     * 
                      */
                     void SetLaunchTemplateId(const std::string& _launchTemplateId);
 
                     /**
                      * 判断参数 LaunchTemplateId 是否已赋值
                      * @return LaunchTemplateId 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取List of instance launch template versions.
                      * @return LaunchTemplateVersions List of instance launch template versions.
+                     * 
                      */
                     std::vector<int64_t> GetLaunchTemplateVersions() const;
 
                     /**
                      * 设置List of instance launch template versions.
-                     * @param LaunchTemplateVersions List of instance launch template versions.
+                     * @param _launchTemplateVersions List of instance launch template versions.
+                     * 
                      */
                     void SetLaunchTemplateVersions(const std::vector<int64_t>& _launchTemplateVersions);
 
                     /**
                      * 判断参数 LaunchTemplateVersions 是否已赋值
                      * @return LaunchTemplateVersions 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateVersionsHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Connection ID.
                      * @return DirectConnectId Connection ID.
+                     * 
                      */
                     std::string GetDirectConnectId() const;
 
                     /**
                      * 设置Connection ID.
-                     * @param DirectConnectId Connection ID.
+                     * @param _directConnectId Connection ID.
+                     * 
                      */
                     void SetDirectConnectId(const std::string& _directConnectId);
 
                     /**
                      * 判断参数 DirectConnectId 是否已赋值
                      * @return DirectConnectId 是否已赋值
+                     * 
                      */
                     bool DirectConnectIdHasBeenSet() const;
 

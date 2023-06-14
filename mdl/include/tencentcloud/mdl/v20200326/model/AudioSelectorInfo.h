@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Audio name, which can contain 1-32 letters, digits, and underscores.
                      * @return Name Audio name, which can contain 1-32 letters, digits, and underscores.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Audio name, which can contain 1-32 letters, digits, and underscores.
-                     * @param Name Audio name, which can contain 1-32 letters, digits, and underscores.
+                     * @param _name Audio name, which can contain 1-32 letters, digits, and underscores.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Audio `Pid` selection.
                      * @return AudioPidSelection Audio `Pid` selection.
+                     * 
                      */
                     AudioPidSelectionInfo GetAudioPidSelection() const;
 
                     /**
                      * 设置Audio `Pid` selection.
-                     * @param AudioPidSelection Audio `Pid` selection.
+                     * @param _audioPidSelection Audio `Pid` selection.
+                     * 
                      */
                     void SetAudioPidSelection(const AudioPidSelectionInfo& _audioPidSelection);
 
                     /**
                      * 判断参数 AudioPidSelection 是否已赋值
                      * @return AudioPidSelection 是否已赋值
+                     * 
                      */
                     bool AudioPidSelectionHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance account name
                      * @return UserName Instance account name
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Instance account name
-                     * @param UserName Instance account name
+                     * @param _userName Instance account name
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取New password, which must contain at least eight characters
                      * @return Password New password, which must contain at least eight characters
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置New password, which must contain at least eight characters
-                     * @param Password New password, which must contain at least eight characters
+                     * @param _password New password, which must contain at least eight characters
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

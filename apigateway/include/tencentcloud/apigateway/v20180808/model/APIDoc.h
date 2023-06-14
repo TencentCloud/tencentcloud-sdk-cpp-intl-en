@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取API document ID
                      * @return ApiDocId API document ID
+                     * 
                      */
                     std::string GetApiDocId() const;
 
                     /**
                      * 设置API document ID
-                     * @param ApiDocId API document ID
+                     * @param _apiDocId API document ID
+                     * 
                      */
                     void SetApiDocId(const std::string& _apiDocId);
 
                     /**
                      * 判断参数 ApiDocId 是否已赋值
                      * @return ApiDocId 是否已赋值
+                     * 
                      */
                     bool ApiDocIdHasBeenSet() const;
 
                     /**
                      * 获取API document name
                      * @return ApiDocName API document name
+                     * 
                      */
                     std::string GetApiDocName() const;
 
                     /**
                      * 设置API document name
-                     * @param ApiDocName API document name
+                     * @param _apiDocName API document name
+                     * 
                      */
                     void SetApiDocName(const std::string& _apiDocName);
 
                     /**
                      * 判断参数 ApiDocName 是否已赋值
                      * @return ApiDocName 是否已赋值
+                     * 
                      */
                     bool ApiDocNameHasBeenSet() const;
 
                     /**
                      * 获取API document build status
                      * @return ApiDocStatus API document build status
+                     * 
                      */
                     std::string GetApiDocStatus() const;
 
                     /**
                      * 设置API document build status
-                     * @param ApiDocStatus API document build status
+                     * @param _apiDocStatus API document build status
+                     * 
                      */
                     void SetApiDocStatus(const std::string& _apiDocStatus);
 
                     /**
                      * 判断参数 ApiDocStatus 是否已赋值
                      * @return ApiDocStatus 是否已赋值
+                     * 
                      */
                     bool ApiDocStatusHasBeenSet() const;
 

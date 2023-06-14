@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Maximum TPS per namespace
                      * @return MaxTpsPerNamespace Maximum TPS per namespace
+                     * 
                      */
                     uint64_t GetMaxTpsPerNamespace() const;
 
                     /**
                      * 设置Maximum TPS per namespace
-                     * @param MaxTpsPerNamespace Maximum TPS per namespace
+                     * @param _maxTpsPerNamespace Maximum TPS per namespace
+                     * 
                      */
                     void SetMaxTpsPerNamespace(const uint64_t& _maxTpsPerNamespace);
 
                     /**
                      * 判断参数 MaxTpsPerNamespace 是否已赋值
                      * @return MaxTpsPerNamespace 是否已赋值
+                     * 
                      */
                     bool MaxTpsPerNamespaceHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of namespaces
                      * @return MaxNamespaceNum Maximum number of namespaces
+                     * 
                      */
                     uint64_t GetMaxNamespaceNum() const;
 
                     /**
                      * 设置Maximum number of namespaces
-                     * @param MaxNamespaceNum Maximum number of namespaces
+                     * @param _maxNamespaceNum Maximum number of namespaces
+                     * 
                      */
                     void SetMaxNamespaceNum(const uint64_t& _maxNamespaceNum);
 
                     /**
                      * 判断参数 MaxNamespaceNum 是否已赋值
                      * @return MaxNamespaceNum 是否已赋值
+                     * 
                      */
                     bool MaxNamespaceNumHasBeenSet() const;
 
                     /**
                      * 获取Number of used namespaces
                      * @return UsedNamespaceNum Number of used namespaces
+                     * 
                      */
                     uint64_t GetUsedNamespaceNum() const;
 
                     /**
                      * 设置Number of used namespaces
-                     * @param UsedNamespaceNum Number of used namespaces
+                     * @param _usedNamespaceNum Number of used namespaces
+                     * 
                      */
                     void SetUsedNamespaceNum(const uint64_t& _usedNamespaceNum);
 
                     /**
                      * 判断参数 UsedNamespaceNum 是否已赋值
                      * @return UsedNamespaceNum 是否已赋值
+                     * 
                      */
                     bool UsedNamespaceNumHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of topics
                      * @return MaxTopicNum Maximum number of topics
+                     * 
                      */
                     uint64_t GetMaxTopicNum() const;
 
                     /**
                      * 设置Maximum number of topics
-                     * @param MaxTopicNum Maximum number of topics
+                     * @param _maxTopicNum Maximum number of topics
+                     * 
                      */
                     void SetMaxTopicNum(const uint64_t& _maxTopicNum);
 
                     /**
                      * 判断参数 MaxTopicNum 是否已赋值
                      * @return MaxTopicNum 是否已赋值
+                     * 
                      */
                     bool MaxTopicNumHasBeenSet() const;
 
                     /**
                      * 获取Number of used topics
                      * @return UsedTopicNum Number of used topics
+                     * 
                      */
                     uint64_t GetUsedTopicNum() const;
 
                     /**
                      * 设置Number of used topics
-                     * @param UsedTopicNum Number of used topics
+                     * @param _usedTopicNum Number of used topics
+                     * 
                      */
                     void SetUsedTopicNum(const uint64_t& _usedTopicNum);
 
                     /**
                      * 判断参数 UsedTopicNum 是否已赋值
                      * @return UsedTopicNum 是否已赋值
+                     * 
                      */
                     bool UsedTopicNumHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of groups
                      * @return MaxGroupNum Maximum number of groups
+                     * 
                      */
                     uint64_t GetMaxGroupNum() const;
 
                     /**
                      * 设置Maximum number of groups
-                     * @param MaxGroupNum Maximum number of groups
+                     * @param _maxGroupNum Maximum number of groups
+                     * 
                      */
                     void SetMaxGroupNum(const uint64_t& _maxGroupNum);
 
                     /**
                      * 判断参数 MaxGroupNum 是否已赋值
                      * @return MaxGroupNum 是否已赋值
+                     * 
                      */
                     bool MaxGroupNumHasBeenSet() const;
 
                     /**
                      * 获取Number of used groups
                      * @return UsedGroupNum Number of used groups
+                     * 
                      */
                     uint64_t GetUsedGroupNum() const;
 
                     /**
                      * 设置Number of used groups
-                     * @param UsedGroupNum Number of used groups
+                     * @param _usedGroupNum Number of used groups
+                     * 
                      */
                     void SetUsedGroupNum(const uint64_t& _usedGroupNum);
 
                     /**
                      * 判断参数 UsedGroupNum 是否已赋值
                      * @return UsedGroupNum 是否已赋值
+                     * 
                      */
                     bool UsedGroupNumHasBeenSet() const;
 
                     /**
                      * 获取Maximum message retention period in milliseconds
                      * @return MaxRetentionTime Maximum message retention period in milliseconds
+                     * 
                      */
                     uint64_t GetMaxRetentionTime() const;
 
                     /**
                      * 设置Maximum message retention period in milliseconds
-                     * @param MaxRetentionTime Maximum message retention period in milliseconds
+                     * @param _maxRetentionTime Maximum message retention period in milliseconds
+                     * 
                      */
                     void SetMaxRetentionTime(const uint64_t& _maxRetentionTime);
 
                     /**
                      * 判断参数 MaxRetentionTime 是否已赋值
                      * @return MaxRetentionTime 是否已赋值
+                     * 
                      */
                     bool MaxRetentionTimeHasBeenSet() const;
 
                     /**
                      * 获取Maximum message delay in milliseconds
                      * @return MaxLatencyTime Maximum message delay in milliseconds
+                     * 
                      */
                     uint64_t GetMaxLatencyTime() const;
 
                     /**
                      * 设置Maximum message delay in milliseconds
-                     * @param MaxLatencyTime Maximum message delay in milliseconds
+                     * @param _maxLatencyTime Maximum message delay in milliseconds
+                     * 
                      */
                     void SetMaxLatencyTime(const uint64_t& _maxLatencyTime);
 
                     /**
                      * 判断参数 MaxLatencyTime 是否已赋值
                      * @return MaxLatencyTime 是否已赋值
+                     * 
                      */
                     bool MaxLatencyTimeHasBeenSet() const;
 
@@ -213,20 +240,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaxQueuesPerTopic The maximum number of queues in a single topic
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMaxQueuesPerTopic() const;
 
                     /**
                      * 设置The maximum number of queues in a single topic
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MaxQueuesPerTopic The maximum number of queues in a single topic
+                     * @param _maxQueuesPerTopic The maximum number of queues in a single topic
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxQueuesPerTopic(const uint64_t& _maxQueuesPerTopic);
 
                     /**
                      * 判断参数 MaxQueuesPerTopic 是否已赋值
                      * @return MaxQueuesPerTopic 是否已赋值
+                     * 
                      */
                     bool MaxQueuesPerTopicHasBeenSet() const;
 

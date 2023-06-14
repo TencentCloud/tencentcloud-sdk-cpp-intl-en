@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Query by one or more instance IDs. Instance ID is in the format of `prom-xxxxxxxx`. Up to 100 instances can be queried in one request.
                      * @return InstanceIds Query by one or more instance IDs. Instance ID is in the format of `prom-xxxxxxxx`. Up to 100 instances can be queried in one request.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Query by one or more instance IDs. Instance ID is in the format of `prom-xxxxxxxx`. Up to 100 instances can be queried in one request.
-                     * @param InstanceIds Query by one or more instance IDs. Instance ID is in the format of `prom-xxxxxxxx`. Up to 100 instances can be queried in one request.
+                     * @param _instanceIds Query by one or more instance IDs. Instance ID is in the format of `prom-xxxxxxxx`. Up to 100 instances can be queried in one request.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartCalcDate Start time
+                     * 
                      */
                     std::string GetStartCalcDate() const;
 
                     /**
                      * 设置Start time
-                     * @param StartCalcDate Start time
+                     * @param _startCalcDate Start time
+                     * 
                      */
                     void SetStartCalcDate(const std::string& _startCalcDate);
 
                     /**
                      * 判断参数 StartCalcDate 是否已赋值
                      * @return StartCalcDate 是否已赋值
+                     * 
                      */
                     bool StartCalcDateHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndCalcDate End time
+                     * 
                      */
                     std::string GetEndCalcDate() const;
 
                     /**
                      * 设置End time
-                     * @param EndCalcDate End time
+                     * @param _endCalcDate End time
+                     * 
                      */
                     void SetEndCalcDate(const std::string& _endCalcDate);
 
                     /**
                      * 判断参数 EndCalcDate 是否已赋值
                      * @return EndCalcDate 是否已赋值
+                     * 
                      */
                     bool EndCalcDateHasBeenSet() const;
 

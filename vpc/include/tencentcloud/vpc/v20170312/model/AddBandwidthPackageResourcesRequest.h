@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
                      * @return ResourceIds The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
+                     * 
                      */
                     std::vector<std::string> GetResourceIds() const;
 
                     /**
                      * 设置The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
-                     * @param ResourceIds The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
+                     * @param _resourceIds The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
+                     * 
                      */
                     void SetResourceIds(const std::vector<std::string>& _resourceIds);
 
                     /**
                      * 判断参数 ResourceIds 是否已赋值
                      * @return ResourceIds 是否已赋值
+                     * 
                      */
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the bandwidth package, such as 'bwp-xxxx'.
                      * @return BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+                     * 
                      */
                     std::string GetBandwidthPackageId() const;
 
                     /**
                      * 设置The unique ID of the bandwidth package, such as 'bwp-xxxx'.
-                     * @param BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+                     * @param _bandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+                     * 
                      */
                     void SetBandwidthPackageId(const std::string& _bandwidthPackageId);
 
                     /**
                      * 判断参数 BandwidthPackageId 是否已赋值
                      * @return BandwidthPackageId 是否已赋值
+                     * 
                      */
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
                      * 获取The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
                      * @return NetworkType The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
+                     * 
                      */
                     std::string GetNetworkType() const;
 
                     /**
                      * 设置The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
-                     * @param NetworkType The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
+                     * @param _networkType The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
+                     * 
                      */
                     void SetNetworkType(const std::string& _networkType);
 
                     /**
                      * 判断参数 NetworkType 是否已赋值
                      * @return NetworkType 是否已赋值
+                     * 
                      */
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
                      * 获取The resource type, including `Address` and `LoadBalance`.
                      * @return ResourceType The resource type, including `Address` and `LoadBalance`.
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置The resource type, including `Address` and `LoadBalance`.
-                     * @param ResourceType The resource type, including `Address` and `LoadBalance`.
+                     * @param _resourceType The resource type, including `Address` and `LoadBalance`.
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
                      * @return Protocol The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
-                     * @param Protocol The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
+                     * @param _protocol The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

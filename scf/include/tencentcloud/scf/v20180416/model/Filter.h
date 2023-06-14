@@ -57,6 +57,7 @@ When `Name` is `Runtime`, `CustomImage` refers to the image type function
 Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
 Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
 When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+                     * 
                      */
                     std::string GetName() const;
 
@@ -65,34 +66,39 @@ When `Name` is `Runtime`, `CustomImage` refers to the image type function
 Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
 Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
 When `Name` is `Runtime`, `CustomImage` refers to the image type function 
-                     * @param Name Fields to be filtered. Up to 10 conditions allowed.
+                     * @param _name Fields to be filtered. Up to 10 conditions allowed.
 Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
 Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
 When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Filter values of the field
                      * @return Values Filter values of the field
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Filter values of the field
-                     * @param Values Filter values of the field
+                     * @param _values Filter values of the field
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

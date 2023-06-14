@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID, which is passed through from the input parameters.
                      * @return InstanceId Instance ID, which is passed through from the input parameters.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance user list.
                      * @return Users Instance user list.
+                     * 
                      */
                     std::vector<DBAccount> GetUsers() const;
 
                     /**
                      * 判断参数 Users 是否已赋值
                      * @return Users 是否已赋值
+                     * 
                      */
                     bool UsersHasBeenSet() const;
 

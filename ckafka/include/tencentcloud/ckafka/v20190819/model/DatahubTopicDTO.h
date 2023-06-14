@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Topic name
                      * @return TopicName Topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name
-                     * @param TopicName Topic name
+                     * @param _topicName Topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Topic ID
                      * @return TopicId Topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Topic ID
-                     * @param TopicId Topic ID
+                     * @param _topicId Topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取The number of partitions
                      * @return PartitionNum The number of partitions
+                     * 
                      */
                     uint64_t GetPartitionNum() const;
 
                     /**
                      * 设置The number of partitions
-                     * @param PartitionNum The number of partitions
+                     * @param _partitionNum The number of partitions
+                     * 
                      */
                     void SetPartitionNum(const uint64_t& _partitionNum);
 
                     /**
                      * 判断参数 PartitionNum 是否已赋值
                      * @return PartitionNum 是否已赋值
+                     * 
                      */
                     bool PartitionNumHasBeenSet() const;
 
                     /**
                      * 获取Expiration time
                      * @return RetentionMs Expiration time
+                     * 
                      */
                     uint64_t GetRetentionMs() const;
 
                     /**
                      * 设置Expiration time
-                     * @param RetentionMs Expiration time
+                     * @param _retentionMs Expiration time
+                     * 
                      */
                     void SetRetentionMs(const uint64_t& _retentionMs);
 
                     /**
                      * 判断参数 RetentionMs 是否已赋值
                      * @return RetentionMs 是否已赋值
+                     * 
                      */
                     bool RetentionMsHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Note Remarks
+                     * 
                      */
                     std::string GetNote() const;
 
                     /**
                      * 设置Remarks
-                     * @param Note Remarks
+                     * @param _note Remarks
+                     * 
                      */
                     void SetNote(const std::string& _note);
 
                     /**
                      * 判断参数 Note 是否已赋值
                      * @return Note 是否已赋值
+                     * 
                      */
                     bool NoteHasBeenSet() const;
 
                     /**
                      * 获取Status (`1`: In use; `2`: Deleting)
                      * @return Status Status (`1`: In use; `2`: Deleting)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Status (`1`: In use; `2`: Deleting)
-                     * @param Status Status (`1`: In use; `2`: Deleting)
+                     * @param _status Status (`1`: In use; `2`: Deleting)
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

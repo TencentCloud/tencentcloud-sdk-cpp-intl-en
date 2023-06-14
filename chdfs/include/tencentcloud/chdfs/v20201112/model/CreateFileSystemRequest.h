@@ -46,180 +46,210 @@ namespace TencentCloud
                     /**
                      * 获取File system name
                      * @return FileSystemName File system name
+                     * 
                      */
                     std::string GetFileSystemName() const;
 
                     /**
                      * 设置File system name
-                     * @param FileSystemName File system name
+                     * @param _fileSystemName File system name
+                     * 
                      */
                     void SetFileSystemName(const std::string& _fileSystemName);
 
                     /**
                      * 判断参数 FileSystemName 是否已赋值
                      * @return FileSystemName 是否已赋值
+                     * 
                      */
                     bool FileSystemNameHasBeenSet() const;
 
                     /**
                      * 获取File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
                      * @return CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     * 
                      */
                     uint64_t GetCapacityQuota() const;
 
                     /**
                      * 设置File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-                     * @param CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     * @param _capacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+                     * 
                      */
                     void SetCapacityQuota(const uint64_t& _capacityQuota);
 
                     /**
                      * 判断参数 CapacityQuota 是否已赋值
                      * @return CapacityQuota 是否已赋值
+                     * 
                      */
                     bool CapacityQuotaHasBeenSet() const;
 
                     /**
                      * 获取Whether to verify POSIX ACL
                      * @return PosixAcl Whether to verify POSIX ACL
+                     * 
                      */
                     bool GetPosixAcl() const;
 
                     /**
                      * 设置Whether to verify POSIX ACL
-                     * @param PosixAcl Whether to verify POSIX ACL
+                     * @param _posixAcl Whether to verify POSIX ACL
+                     * 
                      */
                     void SetPosixAcl(const bool& _posixAcl);
 
                     /**
                      * 判断参数 PosixAcl 是否已赋值
                      * @return PosixAcl 是否已赋值
+                     * 
                      */
                     bool PosixAclHasBeenSet() const;
 
                     /**
                      * 获取File system description, which is an empty string by default
                      * @return Description File system description, which is an empty string by default
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置File system description, which is an empty string by default
-                     * @param Description File system description, which is an empty string by default
+                     * @param _description File system description, which is an empty string by default
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取List of superuser names, which is an empty array by default
                      * @return SuperUsers List of superuser names, which is an empty array by default
+                     * 
                      */
                     std::vector<std::string> GetSuperUsers() const;
 
                     /**
                      * 设置List of superuser names, which is an empty array by default
-                     * @param SuperUsers List of superuser names, which is an empty array by default
+                     * @param _superUsers List of superuser names, which is an empty array by default
+                     * 
                      */
                     void SetSuperUsers(const std::vector<std::string>& _superUsers);
 
                     /**
                      * 判断参数 SuperUsers 是否已赋值
                      * @return SuperUsers 是否已赋值
+                     * 
                      */
                     bool SuperUsersHasBeenSet() const;
 
                     /**
                      * 获取Username of the root directory Inode, which is `hadoop` by default
                      * @return RootInodeUser Username of the root directory Inode, which is `hadoop` by default
+                     * 
                      */
                     std::string GetRootInodeUser() const;
 
                     /**
                      * 设置Username of the root directory Inode, which is `hadoop` by default
-                     * @param RootInodeUser Username of the root directory Inode, which is `hadoop` by default
+                     * @param _rootInodeUser Username of the root directory Inode, which is `hadoop` by default
+                     * 
                      */
                     void SetRootInodeUser(const std::string& _rootInodeUser);
 
                     /**
                      * 判断参数 RootInodeUser 是否已赋值
                      * @return RootInodeUser 是否已赋值
+                     * 
                      */
                     bool RootInodeUserHasBeenSet() const;
 
                     /**
                      * 获取Group name of the root directory Inode, which is `supergroup` by default
                      * @return RootInodeGroup Group name of the root directory Inode, which is `supergroup` by default
+                     * 
                      */
                     std::string GetRootInodeGroup() const;
 
                     /**
                      * 设置Group name of the root directory Inode, which is `supergroup` by default
-                     * @param RootInodeGroup Group name of the root directory Inode, which is `supergroup` by default
+                     * @param _rootInodeGroup Group name of the root directory Inode, which is `supergroup` by default
+                     * 
                      */
                     void SetRootInodeGroup(const std::string& _rootInodeGroup);
 
                     /**
                      * 判断参数 RootInodeGroup 是否已赋值
                      * @return RootInodeGroup 是否已赋值
+                     * 
                      */
                     bool RootInodeGroupHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable verification of Ranger service addresses
                      * @return EnableRanger Whether to enable verification of Ranger service addresses
+                     * 
                      */
                     bool GetEnableRanger() const;
 
                     /**
                      * 设置Whether to enable verification of Ranger service addresses
-                     * @param EnableRanger Whether to enable verification of Ranger service addresses
+                     * @param _enableRanger Whether to enable verification of Ranger service addresses
+                     * 
                      */
                     void SetEnableRanger(const bool& _enableRanger);
 
                     /**
                      * 判断参数 EnableRanger 是否已赋值
                      * @return EnableRanger 是否已赋值
+                     * 
                      */
                     bool EnableRangerHasBeenSet() const;
 
                     /**
                      * 获取List of Ranger service addresses (empty array by default)
                      * @return RangerServiceAddresses List of Ranger service addresses (empty array by default)
+                     * 
                      */
                     std::vector<std::string> GetRangerServiceAddresses() const;
 
                     /**
                      * 设置List of Ranger service addresses (empty array by default)
-                     * @param RangerServiceAddresses List of Ranger service addresses (empty array by default)
+                     * @param _rangerServiceAddresses List of Ranger service addresses (empty array by default)
+                     * 
                      */
                     void SetRangerServiceAddresses(const std::vector<std::string>& _rangerServiceAddresses);
 
                     /**
                      * 判断参数 RangerServiceAddresses 是否已赋值
                      * @return RangerServiceAddresses 是否已赋值
+                     * 
                      */
                     bool RangerServiceAddressesHasBeenSet() const;
 
                     /**
                      * 获取Multiple resource tags, which can be an empty array
                      * @return Tags Multiple resource tags, which can be an empty array
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Multiple resource tags, which can be an empty array
-                     * @param Tags Multiple resource tags, which can be an empty array
+                     * @param _tags Multiple resource tags, which can be an empty array
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

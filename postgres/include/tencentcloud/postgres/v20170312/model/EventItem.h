@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ParamName Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetParamName() const;
 
                     /**
                      * 设置Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ParamName Parameter name
+                     * @param _paramName Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParamName(const std::string& _paramName);
 
                     /**
                      * 判断参数 ParamName 是否已赋值
                      * @return ParamName 是否已赋值
+                     * 
                      */
                     bool ParamNameHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EventCount The number of modification events
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEventCount() const;
 
                     /**
                      * 设置The number of modification events
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EventCount The number of modification events
+                     * @param _eventCount The number of modification events
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventCount(const int64_t& _eventCount);
 
                     /**
                      * 判断参数 EventCount 是否已赋值
                      * @return EventCount 是否已赋值
+                     * 
                      */
                     bool EventCountHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EventDetail Modification event details
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<EventInfo> GetEventDetail() const;
 
                     /**
                      * 设置Modification event details
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EventDetail Modification event details
+                     * @param _eventDetail Modification event details
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventDetail(const std::vector<EventInfo>& _eventDetail);
 
                     /**
                      * 判断参数 EventDetail 是否已赋值
                      * @return EventDetail 是否已赋值
+                     * 
                      */
                     bool EventDetailHasBeenSet() const;
 

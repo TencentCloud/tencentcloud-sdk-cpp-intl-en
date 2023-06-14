@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取A list of the consortiums.
                      * @return ConsortiumList A list of the consortiums.
+                     * 
                      */
                     std::vector<ConsortiumItem> GetConsortiumList() const;
 
                     /**
                      * 判断参数 ConsortiumList 是否已赋值
                      * @return ConsortiumList 是否已赋值
+                     * 
                      */
                     bool ConsortiumListHasBeenSet() const;
 

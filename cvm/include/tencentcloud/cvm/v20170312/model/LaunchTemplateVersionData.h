@@ -62,20 +62,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Placement Location of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置Location of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Placement Location of the instance.
+                     * @param _placement Location of the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
@@ -84,20 +87,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceType Instance model.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance model.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceType Instance model.
+                     * @param _instanceType Instance model.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -106,20 +112,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceName Instance name.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceName Instance name.
+                     * @param _instanceName Instance name.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -128,20 +137,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceChargeType Instance billing mode. Valid values: <br><li>`POSTPAID_BY_HOUR`: postpaid for pay-as-you-go instances <br><li>`CDHPAID`: billed for CDH instances, not the CVMs running on the CDHs.<br>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置Instance billing mode. Valid values: <br><li>`POSTPAID_BY_HOUR`: postpaid for pay-as-you-go instances <br><li>`CDHPAID`: billed for CDH instances, not the CVMs running on the CDHs.<br>
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceChargeType Instance billing mode. Valid values: <br><li>`POSTPAID_BY_HOUR`: postpaid for pay-as-you-go instances <br><li>`CDHPAID`: billed for CDH instances, not the CVMs running on the CDHs.<br>
+                     * @param _instanceChargeType Instance billing mode. Valid values: <br><li>`POSTPAID_BY_HOUR`: postpaid for pay-as-you-go instances <br><li>`CDHPAID`: billed for CDH instances, not the CVMs running on the CDHs.<br>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
                     /**
                      * 判断参数 InstanceChargeType 是否已赋值
                      * @return InstanceChargeType 是否已赋值
+                     * 
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
@@ -150,20 +162,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SystemDisk Instance system disk information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     SystemDisk GetSystemDisk() const;
 
                     /**
                      * 设置Instance system disk information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SystemDisk Instance system disk information.
+                     * @param _systemDisk Instance system disk information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSystemDisk(const SystemDisk& _systemDisk);
 
                     /**
                      * 判断参数 SystemDisk 是否已赋值
                      * @return SystemDisk 是否已赋值
+                     * 
                      */
                     bool SystemDiskHasBeenSet() const;
 
@@ -172,20 +187,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DataDisks Instance data disk information. This parameter only covers the data disks purchased together with the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
                      * 设置Instance data disk information. This parameter only covers the data disks purchased together with the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DataDisks Instance data disk information. This parameter only covers the data disks purchased together with the instance.
+                     * @param _dataDisks Instance data disk information. This parameter only covers the data disks purchased together with the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
 
                     /**
                      * 判断参数 DataDisks 是否已赋值
                      * @return DataDisks 是否已赋值
+                     * 
                      */
                     bool DataDisksHasBeenSet() const;
 
@@ -194,20 +212,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InternetAccessible Instance bandwidth information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     InternetAccessible GetInternetAccessible() const;
 
                     /**
                      * 设置Instance bandwidth information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InternetAccessible Instance bandwidth information.
+                     * @param _internetAccessible Instance bandwidth information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInternetAccessible(const InternetAccessible& _internetAccessible);
 
                     /**
                      * 判断参数 InternetAccessible 是否已赋值
                      * @return InternetAccessible 是否已赋值
+                     * 
                      */
                     bool InternetAccessibleHasBeenSet() const;
 
@@ -216,20 +237,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return VirtualPrivateCloud Information of the VPC where the instance resides.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     VirtualPrivateCloud GetVirtualPrivateCloud() const;
 
                     /**
                      * 设置Information of the VPC where the instance resides.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param VirtualPrivateCloud Information of the VPC where the instance resides.
+                     * @param _virtualPrivateCloud Information of the VPC where the instance resides.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVirtualPrivateCloud(const VirtualPrivateCloud& _virtualPrivateCloud);
 
                     /**
                      * 判断参数 VirtualPrivateCloud 是否已赋值
                      * @return VirtualPrivateCloud 是否已赋值
+                     * 
                      */
                     bool VirtualPrivateCloudHasBeenSet() const;
 
@@ -238,20 +262,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ImageId `ID` of the image used to create the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置`ID` of the image used to create the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ImageId `ID` of the image used to create the instance.
+                     * @param _imageId `ID` of the image used to create the instance.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
@@ -260,20 +287,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SecurityGroupIds Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SecurityGroupIds Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
+                     * @param _securityGroupIds Security groups to which the instance belongs. To obtain the security group IDs, you can call [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) and look for the `sgld` fields in the response.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
@@ -282,20 +312,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LoginSettings Login settings of the instance. Currently, only the key associated with the instance is returned.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     LoginSettings GetLoginSettings() const;
 
                     /**
                      * 设置Login settings of the instance. Currently, only the key associated with the instance is returned.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LoginSettings Login settings of the instance. Currently, only the key associated with the instance is returned.
+                     * @param _loginSettings Login settings of the instance. Currently, only the key associated with the instance is returned.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoginSettings(const LoginSettings& _loginSettings);
 
                     /**
                      * 判断参数 LoginSettings 是否已赋值
                      * @return LoginSettings 是否已赋值
+                     * 
                      */
                     bool LoginSettingsHasBeenSet() const;
 
@@ -304,20 +337,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CamRoleName CAM role name.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCamRoleName() const;
 
                     /**
                      * 设置CAM role name.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CamRoleName CAM role name.
+                     * @param _camRoleName CAM role name.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCamRoleName(const std::string& _camRoleName);
 
                     /**
                      * 判断参数 CamRoleName 是否已赋值
                      * @return CamRoleName 是否已赋值
+                     * 
                      */
                     bool CamRoleNameHasBeenSet() const;
 
@@ -326,20 +362,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return HpcClusterId HPC cluster `ID`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
                      * 设置HPC cluster `ID`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param HpcClusterId HPC cluster `ID`.
+                     * @param _hpcClusterId HPC cluster `ID`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHpcClusterId(const std::string& _hpcClusterId);
 
                     /**
                      * 判断参数 HpcClusterId 是否已赋值
                      * @return HpcClusterId 是否已赋值
+                     * 
                      */
                     bool HpcClusterIdHasBeenSet() const;
 
@@ -348,20 +387,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceCount Number of instances purchased.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
                      * 设置Number of instances purchased.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceCount Number of instances purchased.
+                     * @param _instanceCount Number of instances purchased.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
 
                     /**
                      * 判断参数 InstanceCount 是否已赋值
                      * @return InstanceCount 是否已赋值
+                     * 
                      */
                     bool InstanceCountHasBeenSet() const;
 
@@ -370,20 +412,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnhancedService Enhanced service.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     EnhancedService GetEnhancedService() const;
 
                     /**
                      * 设置Enhanced service.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnhancedService Enhanced service.
+                     * @param _enhancedService Enhanced service.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnhancedService(const EnhancedService& _enhancedService);
 
                     /**
                      * 判断参数 EnhancedService 是否已赋值
                      * @return EnhancedService 是否已赋值
+                     * 
                      */
                     bool EnhancedServiceHasBeenSet() const;
 
@@ -392,20 +437,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UserData User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16KB.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserData() const;
 
                     /**
                      * 设置User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16KB.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UserData User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16KB.
+                     * @param _userData User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16KB.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserData(const std::string& _userData);
 
                     /**
                      * 判断参数 UserData 是否已赋值
                      * @return UserData 是否已赋值
+                     * 
                      */
                     bool UserDataHasBeenSet() const;
 
@@ -414,20 +462,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DisasterRecoverGroupIds Placement group ID. You can only specify one.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
                      * 设置Placement group ID. You can only specify one.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DisasterRecoverGroupIds Placement group ID. You can only specify one.
+                     * @param _disasterRecoverGroupIds Placement group ID. You can only specify one.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
 
                     /**
                      * 判断参数 DisasterRecoverGroupIds 是否已赋值
                      * @return DisasterRecoverGroupIds 是否已赋值
+                     * 
                      */
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
@@ -436,20 +487,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ActionTimer Scheduled tasks. You can use this parameter to specify scheduled tasks for the instance. Only scheduled termination is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     ActionTimer GetActionTimer() const;
 
                     /**
                      * 设置Scheduled tasks. You can use this parameter to specify scheduled tasks for the instance. Only scheduled termination is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ActionTimer Scheduled tasks. You can use this parameter to specify scheduled tasks for the instance. Only scheduled termination is supported.
+                     * @param _actionTimer Scheduled tasks. You can use this parameter to specify scheduled tasks for the instance. Only scheduled termination is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActionTimer(const ActionTimer& _actionTimer);
 
                     /**
                      * 判断参数 ActionTimer 是否已赋值
                      * @return ActionTimer 是否已赋值
+                     * 
                      */
                     bool ActionTimerHasBeenSet() const;
 
@@ -458,20 +512,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     InstanceMarketOptionsRequest GetInstanceMarketOptions() const;
 
                     /**
                      * 设置Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
+                     * @param _instanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceMarketOptions(const InstanceMarketOptionsRequest& _instanceMarketOptions);
 
                     /**
                      * 判断参数 InstanceMarketOptions 是否已赋值
                      * @return InstanceMarketOptions 是否已赋值
+                     * 
                      */
                     bool InstanceMarketOptionsHasBeenSet() const;
 
@@ -480,20 +537,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return HostName Hostname of a CVM.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Hostname of a CVM.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param HostName Hostname of a CVM.
+                     * @param _hostName Hostname of a CVM.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
@@ -502,20 +562,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClientToken A string used to ensure the idempotency of the request.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientToken() const;
 
                     /**
                      * 设置A string used to ensure the idempotency of the request.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClientToken A string used to ensure the idempotency of the request.
+                     * @param _clientToken A string used to ensure the idempotency of the request.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientToken(const std::string& _clientToken);
 
                     /**
                      * 判断参数 ClientToken 是否已赋值
                      * @return ClientToken 是否已赋值
+                     * 
                      */
                     bool ClientTokenHasBeenSet() const;
 
@@ -524,20 +587,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceChargePrepaid Prepaid mode. This parameter indicates relevant parameter settings for monthly-subscribed instances.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
                      * 设置Prepaid mode. This parameter indicates relevant parameter settings for monthly-subscribed instances.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceChargePrepaid Prepaid mode. This parameter indicates relevant parameter settings for monthly-subscribed instances.
+                     * @param _instanceChargePrepaid Prepaid mode. This parameter indicates relevant parameter settings for monthly-subscribed instances.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
 
                     /**
                      * 判断参数 InstanceChargePrepaid 是否已赋值
                      * @return InstanceChargePrepaid 是否已赋值
+                     * 
                      */
                     bool InstanceChargePrepaidHasBeenSet() const;
 
@@ -546,20 +612,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TagSpecification List of tag description. By specifying this parameter, the tag can be bound to the corresponding CVM and CBS instances at the same time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TagSpecification> GetTagSpecification() const;
 
                     /**
                      * 设置List of tag description. By specifying this parameter, the tag can be bound to the corresponding CVM and CBS instances at the same time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TagSpecification List of tag description. By specifying this parameter, the tag can be bound to the corresponding CVM and CBS instances at the same time.
+                     * @param _tagSpecification List of tag description. By specifying this parameter, the tag can be bound to the corresponding CVM and CBS instances at the same time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 
@@ -578,6 +647,7 @@ FALSE: Termination protection is disabled.
 
 Default value: `FALSE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetDisableApiTermination() const;
 
@@ -589,19 +659,21 @@ FALSE: Termination protection is disabled.
 
 Default value: `FALSE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DisableApiTermination Whether to enable termination protection. Valid values:
+                     * @param _disableApiTermination Whether to enable termination protection. Valid values:
 
 TRUE: Termination protection is enabled.
 FALSE: Termination protection is disabled.
 
 Default value: `FALSE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisableApiTermination(const bool& _disableApiTermination);
 
                     /**
                      * 判断参数 DisableApiTermination 是否已赋值
                      * @return DisableApiTermination 是否已赋值
+                     * 
                      */
                     bool DisableApiTerminationHasBeenSet() const;
 

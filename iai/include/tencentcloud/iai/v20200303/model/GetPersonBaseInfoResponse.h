@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Person name
                      * @return PersonName Person name
+                     * 
                      */
                     std::string GetPersonName() const;
 
                     /**
                      * 判断参数 PersonName 是否已赋值
                      * @return PersonName 是否已赋值
+                     * 
                      */
                     bool PersonNameHasBeenSet() const;
 
                     /**
                      * 获取Person gender. 0: empty; 1: male; 2: female.
                      * @return Gender Person gender. 0: empty; 1: male; 2: female.
+                     * 
                      */
                     int64_t GetGender() const;
 
                     /**
                      * 判断参数 Gender 是否已赋值
                      * @return Gender 是否已赋值
+                     * 
                      */
                     bool GenderHasBeenSet() const;
 
                     /**
                      * 获取List of the IDs of included faces
                      * @return FaceIds List of the IDs of included faces
+                     * 
                      */
                     std::vector<std::string> GetFaceIds() const;
 
                     /**
                      * 判断参数 FaceIds 是否已赋值
                      * @return FaceIds 是否已赋值
+                     * 
                      */
                     bool FaceIdsHasBeenSet() const;
 

@@ -47,96 +47,112 @@ namespace TencentCloud
                     /**
                      * 获取The surname.
                      * @return Surname The surname.
+                     * 
                      */
                     TextDetectionResult GetSurname() const;
 
                     /**
                      * 判断参数 Surname 是否已赋值
                      * @return Surname 是否已赋值
+                     * 
                      */
                     bool SurnameHasBeenSet() const;
 
                     /**
                      * 获取The middle name.
                      * @return MiddleName The middle name.
+                     * 
                      */
                     TextDetectionResult GetMiddleName() const;
 
                     /**
                      * 判断参数 MiddleName 是否已赋值
                      * @return MiddleName 是否已赋值
+                     * 
                      */
                     bool MiddleNameHasBeenSet() const;
 
                     /**
                      * 获取The given name.
                      * @return GivenName The given name.
+                     * 
                      */
                     TextDetectionResult GetGivenName() const;
 
                     /**
                      * 判断参数 GivenName 是否已赋值
                      * @return GivenName 是否已赋值
+                     * 
                      */
                     bool GivenNameHasBeenSet() const;
 
                     /**
                      * 获取The address.
                      * @return Address The address.
+                     * 
                      */
                     TextDetectionResult GetAddress() const;
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取The date of birth.
                      * @return Birthday The date of birth.
+                     * 
                      */
                     TextDetectionResult GetBirthday() const;
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 
                     /**
                      * 获取The common reference number (CRN).
                      * @return CRN The common reference number (CRN).
+                     * 
                      */
                     TextDetectionResult GetCRN() const;
 
                     /**
                      * 判断参数 CRN 是否已赋值
                      * @return CRN 是否已赋值
+                     * 
                      */
                     bool CRNHasBeenSet() const;
 
                     /**
                      * 获取The gender.
                      * @return Sex The gender.
+                     * 
                      */
                     TextDetectionResult GetSex() const;
 
                     /**
                      * 判断参数 Sex 是否已赋值
                      * @return Sex 是否已赋值
+                     * 
                      */
                     bool SexHasBeenSet() const;
 
                     /**
                      * 获取The Base64-encoded identity photo.
                      * @return HeadPortrait The Base64-encoded identity photo.
+                     * 
                      */
                     TextDetectionResult GetHeadPortrait() const;
 
                     /**
                      * 判断参数 HeadPortrait 是否已赋值
                      * @return HeadPortrait 是否已赋值
+                     * 
                      */
                     bool HeadPortraitHasBeenSet() const;
 

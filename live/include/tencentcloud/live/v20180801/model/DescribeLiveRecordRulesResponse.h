@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of rules.
                      * @return Rules List of rules.
+                     * 
                      */
                     std::vector<RuleInfo> GetRules() const;
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

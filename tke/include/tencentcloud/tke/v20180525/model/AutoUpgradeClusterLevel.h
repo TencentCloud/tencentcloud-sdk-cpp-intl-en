@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable Auto Cluster Upgrade
                      * @return IsAutoUpgrade Whether to enable Auto Cluster Upgrade
+                     * 
                      */
                     bool GetIsAutoUpgrade() const;
 
                     /**
                      * 设置Whether to enable Auto Cluster Upgrade
-                     * @param IsAutoUpgrade Whether to enable Auto Cluster Upgrade
+                     * @param _isAutoUpgrade Whether to enable Auto Cluster Upgrade
+                     * 
                      */
                     void SetIsAutoUpgrade(const bool& _isAutoUpgrade);
 
                     /**
                      * 判断参数 IsAutoUpgrade 是否已赋值
                      * @return IsAutoUpgrade 是否已赋值
+                     * 
                      */
                     bool IsAutoUpgradeHasBeenSet() const;
 

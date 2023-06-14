@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Cross-border origin-pull optimization configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Cross-border origin-pull optimization configuration switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Cross-border origin-pull optimization configuration switch
+                     * @param _switch Cross-border origin-pull optimization configuration switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetOptimizationType() const;
 
@@ -89,16 +93,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param OptimizationType Cross-border types
+                     * @param _optimizationType Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetOptimizationType(const std::string& _optimizationType);
 
                     /**
                      * 判断参数 OptimizationType 是否已赋值
                      * @return OptimizationType 是否已赋值
+                     * 
                      */
                     bool OptimizationTypeHasBeenSet() const;
 

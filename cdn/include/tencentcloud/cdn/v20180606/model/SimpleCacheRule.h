@@ -59,6 +59,7 @@ index: home page
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 index: home page
+                     * 
                      */
                     std::string GetCacheType() const;
 
@@ -69,18 +70,20 @@ index: home page
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 index: home page
-                     * @param CacheType Rule types:
+                     * @param _cacheType Rule types:
 `all`: Apply to all files.
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 index: home page
+                     * 
                      */
                     void SetCacheType(const std::string& _cacheType);
 
                     /**
                      * 判断参数 CacheType 是否已赋值
                      * @return CacheType 是否已赋值
+                     * 
                      */
                     bool CacheTypeHasBeenSet() const;
 
@@ -97,6 +100,7 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+                     * 
                      */
                     std::vector<std::string> GetCacheContents() const;
 
@@ -107,18 +111,20 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
-                     * @param CacheContents Content for each `CacheType`:
+                     * @param _cacheContents Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+                     * 
                      */
                     void SetCacheContents(const std::vector<std::string>& _cacheContents);
 
                     /**
                      * 判断参数 CacheContents 是否已赋值
                      * @return CacheContents 是否已赋值
+                     * 
                      */
                     bool CacheContentsHasBeenSet() const;
 
@@ -127,20 +133,23 @@ For `index`, enter a forward slash `/`.
 Unit: second. The maximum value is 365 days.
                      * @return CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
+                     * 
                      */
                     int64_t GetCacheTime() const;
 
                     /**
                      * 设置Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-                     * @param CacheTime Cache expiration time settings
+                     * @param _cacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
+                     * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
 
                     /**
                      * 判断参数 CacheTime 是否已赋值
                      * @return CacheTime 是否已赋值
+                     * 
                      */
                     bool CacheTimeHasBeenSet() const;
 

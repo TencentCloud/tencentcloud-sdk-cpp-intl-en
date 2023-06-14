@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Task type
                      * @return BizType Task type
+                     * 
                      */
                     std::string GetBizType() const;
 
                     /**
                      * 设置Task type
-                     * @param BizType Task type
+                     * @param _bizType Task type
+                     * 
                      */
                     void SetBizType(const std::string& _bizType);
 
                     /**
                      * 判断参数 BizType 是否已赋值
                      * @return BizType 是否已赋值
+                     * 
                      */
                     bool BizTypeHasBeenSet() const;
 
                     /**
                      * 获取Task type. Values: `VIDEO`, `AUDIO`, `LIVE_VIDEO`, and `LIVE_AUDIO`.
                      * @return Type Task type. Values: `VIDEO`, `AUDIO`, `LIVE_VIDEO`, and `LIVE_AUDIO`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Task type. Values: `VIDEO`, `AUDIO`, `LIVE_VIDEO`, and `LIVE_AUDIO`.
-                     * @param Type Task type. Values: `VIDEO`, `AUDIO`, `LIVE_VIDEO`, and `LIVE_AUDIO`.
+                     * @param _type Task type. Values: `VIDEO`, `AUDIO`, `LIVE_VIDEO`, and `LIVE_AUDIO`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Suggestion. Values: `Pass`, `Review`, and `Block`.
                      * @return Suggestion Suggestion. Values: `Pass`, `Review`, and `Block`.
+                     * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
                      * 设置Suggestion. Values: `Pass`, `Review`, and `Block`.
-                     * @param Suggestion Suggestion. Values: `Pass`, `Review`, and `Block`.
+                     * @param _suggestion Suggestion. Values: `Pass`, `Review`, and `Block`.
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
                      * @return TaskStatus Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
+                     * 
                      */
                     std::string GetTaskStatus() const;
 
                     /**
                      * 设置Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
-                     * @param TaskStatus Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
+                     * @param _taskStatus Task status. Values: `PENDING`, `RUNNING`, `ERROR`, `FINISH`, and `CANCELLED`.
+                     * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 

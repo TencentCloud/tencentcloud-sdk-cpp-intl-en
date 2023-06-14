@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return ChannelId Channel ID
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param ChannelId Channel ID
+                     * @param _channelId Channel ID
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 
                     /**
                      * 获取The LVB domain name to bind
                      * @return LVBDomain The LVB domain name to bind
+                     * 
                      */
                     std::string GetLVBDomain() const;
 
                     /**
                      * 设置The LVB domain name to bind
-                     * @param LVBDomain The LVB domain name to bind
+                     * @param _lVBDomain The LVB domain name to bind
+                     * 
                      */
                     void SetLVBDomain(const std::string& _lVBDomain);
 
                     /**
                      * 判断参数 LVBDomain 是否已赋值
                      * @return LVBDomain 是否已赋值
+                     * 
                      */
                     bool LVBDomainHasBeenSet() const;
 

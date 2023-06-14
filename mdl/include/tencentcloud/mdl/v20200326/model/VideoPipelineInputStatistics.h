@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Video FPS.
                      * @return Fps Video FPS.
+                     * 
                      */
                     uint64_t GetFps() const;
 
                     /**
                      * 设置Video FPS.
-                     * @param Fps Video FPS.
+                     * @param _fps Video FPS.
+                     * 
                      */
                     void SetFps(const uint64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 
                     /**
                      * 获取Video bitrate in bps.
                      * @return Rate Video bitrate in bps.
+                     * 
                      */
                     uint64_t GetRate() const;
 
                     /**
                      * 设置Video bitrate in bps.
-                     * @param Rate Video bitrate in bps.
+                     * @param _rate Video bitrate in bps.
+                     * 
                      */
                     void SetRate(const uint64_t& _rate);
 
                     /**
                      * 判断参数 Rate 是否已赋值
                      * @return Rate 是否已赋值
+                     * 
                      */
                     bool RateHasBeenSet() const;
 
                     /**
                      * 获取Video `Pid`, which is available only if the input is `rtp/udp`.
                      * @return Pid Video `Pid`, which is available only if the input is `rtp/udp`.
+                     * 
                      */
                     int64_t GetPid() const;
 
                     /**
                      * 设置Video `Pid`, which is available only if the input is `rtp/udp`.
-                     * @param Pid Video `Pid`, which is available only if the input is `rtp/udp`.
+                     * @param _pid Video `Pid`, which is available only if the input is `rtp/udp`.
+                     * 
                      */
                     void SetPid(const int64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Listener rule associated with the real server.
                      * @return LoadBalancers Listener rule associated with the real server.
+                     * 
                      */
                     std::vector<LBItem> GetLoadBalancers() const;
 
                     /**
                      * 判断参数 LoadBalancers 是否已赋值
                      * @return LoadBalancers 是否已赋值
+                     * 
                      */
                     bool LoadBalancersHasBeenSet() const;
 

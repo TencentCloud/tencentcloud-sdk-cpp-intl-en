@@ -47,126 +47,147 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID.
                      * @return ClusterId Cluster ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID.
-                     * @param ClusterId Cluster ID.
+                     * @param _clusterId Cluster ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name.
                      * @return Namespace Namespace name.
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace name.
-                     * @param Namespace Namespace name.
+                     * @param _namespace Namespace name.
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Topic name.
                      * @return Topic Topic name.
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置Topic name.
-                     * @param Topic Topic name.
+                     * @param _topic Topic name.
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 
                     /**
                      * 获取Parameter filter. The `ProducerName` and `Address` fields are supported.
                      * @return Filters Parameter filter. The `ProducerName` and `Address` fields are supported.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Parameter filter. The `ProducerName` and `Address` fields are supported.
-                     * @param Filters Parameter filter. The `ProducerName` and `Address` fields are supported.
+                     * @param _filters Parameter filter. The `ProducerName` and `Address` fields are supported.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset for query. Default value: `0`.
                      * @return Offset Offset for query. Default value: `0`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset for query. Default value: `0`.
-                     * @param Offset Offset for query. Default value: `0`.
+                     * @param _offset Offset for query. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of query results displayed per page. Default value: `20`.
                      * @return Limit The number of query results displayed per page. Default value: `20`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of query results displayed per page. Default value: `20`.
-                     * @param Limit The number of query results displayed per page. Default value: `20`.
+                     * @param _limit The number of query results displayed per page. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Sort by field.
                      * @return Sort Sort by field.
+                     * 
                      */
                     Sort GetSort() const;
 
                     /**
                      * 设置Sort by field.
-                     * @param Sort Sort by field.
+                     * @param _sort Sort by field.
+                     * 
                      */
                     void SetSort(const Sort& _sort);
 
                     /**
                      * 判断参数 Sort 是否已赋值
                      * @return Sort 是否已赋值
+                     * 
                      */
                     bool SortHasBeenSet() const;
 

@@ -50,12 +50,14 @@ namespace TencentCloud
                     /**
                      * 获取Price information. It defaults to the price information of the first instance in the list.
                      * @return Price Price information. It defaults to the price information of the first instance in the list.
+                     * 
                      */
                     Price GetPrice() const;
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 
@@ -64,12 +66,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataDiskPriceSet List of data disk price information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DataDiskPrice> GetDataDiskPriceSet() const;
 
                     /**
                      * 判断参数 DataDiskPriceSet 是否已赋值
                      * @return DataDiskPriceSet 是否已赋值
+                     * 
                      */
                     bool DataDiskPriceSetHasBeenSet() const;
 
@@ -78,24 +82,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstancePriceDetailSet Price list of the instances to be renewed.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<InstancePriceDetail> GetInstancePriceDetailSet() const;
 
                     /**
                      * 判断参数 InstancePriceDetailSet 是否已赋值
                      * @return InstancePriceDetailSet 是否已赋值
+                     * 
                      */
                     bool InstancePriceDetailSetHasBeenSet() const;
 
                     /**
                      * 获取Total price
                      * @return TotalPrice Total price
+                     * 
                      */
                     TotalPrice GetTotalPrice() const;
 
                     /**
                      * 判断参数 TotalPrice 是否已赋值
                      * @return TotalPrice 是否已赋值
+                     * 
                      */
                     bool TotalPriceHasBeenSet() const;
 

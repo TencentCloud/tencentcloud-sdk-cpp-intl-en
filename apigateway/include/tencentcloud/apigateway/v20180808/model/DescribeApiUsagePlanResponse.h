@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Result List of usage plans bound to API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ApiUsagePlanSet GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

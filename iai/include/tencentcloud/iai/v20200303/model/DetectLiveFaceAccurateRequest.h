@@ -53,6 +53,7 @@ The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for i
 The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
 The face must be greater than 100*100 px in size.
 Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 
                      */
                     std::string GetImage() const;
 
@@ -62,17 +63,19 @@ The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for i
 The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
 The face must be greater than 100*100 px in size.
 Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
-                     * @param Image Base64-encoded image data, which cannot exceed 5 MB.
+                     * @param _image Base64-encoded image data, which cannot exceed 5 MB.
 The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats. 
 The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
 The face must be greater than 100*100 px in size.
 Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 
                      */
                     void SetImage(const std::string& _image);
 
                     /**
                      * 判断参数 Image 是否已赋值
                      * @return Image 是否已赋值
+                     * 
                      */
                     bool ImageHasBeenSet() const;
 
@@ -91,6 +94,7 @@ The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images
 The face must be greater than 100*100 px in size.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
 Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 
                      */
                     std::string GetUrl() const;
 
@@ -102,37 +106,42 @@ The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images
 The face must be greater than 100*100 px in size.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
 Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
-                     * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+                     * @param _url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
 The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
 The recommended image aspect ratio is 3:4 (generally, the aspect ratio of images taken by mobile phones).
 The face must be greater than 100*100 px in size.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
 Supported image formats are PNG, JPG, JPEG, and BMP. GIF is currently not supported.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition. Valid value: `3.0`.
                      * @return FaceModelVersion Algorithm model version used for face recognition. Valid value: `3.0`.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 设置Algorithm model version used for face recognition. Valid value: `3.0`.
-                     * @param FaceModelVersion Algorithm model version used for face recognition. Valid value: `3.0`.
+                     * @param _faceModelVersion Algorithm model version used for face recognition. Valid value: `3.0`.
+                     * 
                      */
                     void SetFaceModelVersion(const std::string& _faceModelVersion);
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

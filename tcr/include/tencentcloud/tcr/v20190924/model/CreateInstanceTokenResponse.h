@@ -48,36 +48,42 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Username Username
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Access credential
                      * @return Token Access credential
+                     * 
                      */
                     std::string GetToken() const;
 
                     /**
                      * 判断参数 Token 是否已赋值
                      * @return Token 是否已赋值
+                     * 
                      */
                     bool TokenHasBeenSet() const;
 
                     /**
                      * 获取Expiration timestamp of access credential. It is a string of numbers without unit.
                      * @return ExpTime Expiration timestamp of access credential. It is a string of numbers without unit.
+                     * 
                      */
                     int64_t GetExpTime() const;
 
                     /**
                      * 判断参数 ExpTime 是否已赋值
                      * @return ExpTime 是否已赋值
+                     * 
                      */
                     bool ExpTimeHasBeenSet() const;
 
@@ -86,12 +92,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return TokenId Token ID of long-term access credential. It is not available to temporary access credential.
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetTokenId() const;
 
                     /**
                      * 判断参数 TokenId 是否已赋值
                      * @return TokenId 是否已赋值
+                     * 
                      */
                     bool TokenIdHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB instance name
                      * @return LoadBalancerName CLB instance name
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name
-                     * @param LoadBalancerName CLB instance name
+                     * @param _loadBalancerName CLB instance name
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
                      * 获取CLB instance region
                      * @return Region CLB instance region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置CLB instance region
-                     * @param Region CLB instance region
+                     * @param _region CLB instance region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取CLB instance VIP
                      * @return Vip CLB instance VIP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置CLB instance VIP
-                     * @param Vip CLB instance VIP
+                     * @param _vip CLB instance VIP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Maximum outbound bandwidth in Mbps
                      * @return OutBandwidth Maximum outbound bandwidth in Mbps
+                     * 
                      */
                     double GetOutBandwidth() const;
 
                     /**
                      * 设置Maximum outbound bandwidth in Mbps
-                     * @param OutBandwidth Maximum outbound bandwidth in Mbps
+                     * @param _outBandwidth Maximum outbound bandwidth in Mbps
+                     * 
                      */
                     void SetOutBandwidth(const double& _outBandwidth);
 
                     /**
                      * 判断参数 OutBandwidth 是否已赋值
                      * @return OutBandwidth 是否已赋值
+                     * 
                      */
                     bool OutBandwidthHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Domain CLB domain name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置CLB domain name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Domain CLB domain name
+                     * @param _domain CLB domain name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

@@ -46,204 +46,238 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (single IP); `bgp-multip`: Anti-DDoS Pro (multi-IP), `net`: Anti-DDoS Ultimate
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (single IP); `bgp-multip`: Anti-DDoS Pro (multi-IP), `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Resource IP
                      * @return Ip Resource IP
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Attack start time
                      * @return StartTime Attack start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Attack end time
                      * @return EndTime Attack end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of TCP attack packets
                      * @return TcpPacketSum Number of TCP attack packets
+                     * 
                      */
                     uint64_t GetTcpPacketSum() const;
 
                     /**
                      * 判断参数 TcpPacketSum 是否已赋值
                      * @return TcpPacketSum 是否已赋值
+                     * 
                      */
                     bool TcpPacketSumHasBeenSet() const;
 
                     /**
                      * 获取Traffic of TCP attacks in KB
                      * @return TcpKBSum Traffic of TCP attacks in KB
+                     * 
                      */
                     uint64_t GetTcpKBSum() const;
 
                     /**
                      * 判断参数 TcpKBSum 是否已赋值
                      * @return TcpKBSum 是否已赋值
+                     * 
                      */
                     bool TcpKBSumHasBeenSet() const;
 
                     /**
                      * 获取Number of UDP attack packets
                      * @return UdpPacketSum Number of UDP attack packets
+                     * 
                      */
                     uint64_t GetUdpPacketSum() const;
 
                     /**
                      * 判断参数 UdpPacketSum 是否已赋值
                      * @return UdpPacketSum 是否已赋值
+                     * 
                      */
                     bool UdpPacketSumHasBeenSet() const;
 
                     /**
                      * 获取Traffic of UDP attacks in KB
                      * @return UdpKBSum Traffic of UDP attacks in KB
+                     * 
                      */
                     uint64_t GetUdpKBSum() const;
 
                     /**
                      * 判断参数 UdpKBSum 是否已赋值
                      * @return UdpKBSum 是否已赋值
+                     * 
                      */
                     bool UdpKBSumHasBeenSet() const;
 
                     /**
                      * 获取Number of ICMP attack packets
                      * @return IcmpPacketSum Number of ICMP attack packets
+                     * 
                      */
                     uint64_t GetIcmpPacketSum() const;
 
                     /**
                      * 判断参数 IcmpPacketSum 是否已赋值
                      * @return IcmpPacketSum 是否已赋值
+                     * 
                      */
                     bool IcmpPacketSumHasBeenSet() const;
 
                     /**
                      * 获取Traffic of ICMP attacks in KB
                      * @return IcmpKBSum Traffic of ICMP attacks in KB
+                     * 
                      */
                     uint64_t GetIcmpKBSum() const;
 
                     /**
                      * 判断参数 IcmpKBSum 是否已赋值
                      * @return IcmpKBSum 是否已赋值
+                     * 
                      */
                     bool IcmpKBSumHasBeenSet() const;
 
                     /**
                      * 获取Number of other attack packets
                      * @return OtherPacketSum Number of other attack packets
+                     * 
                      */
                     uint64_t GetOtherPacketSum() const;
 
                     /**
                      * 判断参数 OtherPacketSum 是否已赋值
                      * @return OtherPacketSum 是否已赋值
+                     * 
                      */
                     bool OtherPacketSumHasBeenSet() const;
 
                     /**
                      * 获取Traffic of other attacks in KB
                      * @return OtherKBSum Traffic of other attacks in KB
+                     * 
                      */
                     uint64_t GetOtherKBSum() const;
 
                     /**
                      * 判断参数 OtherKBSum 是否已赋值
                      * @return OtherKBSum 是否已赋值
+                     * 
                      */
                     bool OtherKBSumHasBeenSet() const;
 
                     /**
                      * 获取Total attack traffic in KB
                      * @return TotalTraffic Total attack traffic in KB
+                     * 
                      */
                     uint64_t GetTotalTraffic() const;
 
                     /**
                      * 判断参数 TotalTraffic 是否已赋值
                      * @return TotalTraffic 是否已赋值
+                     * 
                      */
                     bool TotalTrafficHasBeenSet() const;
 
                     /**
                      * 获取Attack traffic bandwidth peak
                      * @return Mbps Attack traffic bandwidth peak
+                     * 
                      */
                     uint64_t GetMbps() const;
 
                     /**
                      * 判断参数 Mbps 是否已赋值
                      * @return Mbps 是否已赋值
+                     * 
                      */
                     bool MbpsHasBeenSet() const;
 
                     /**
                      * 获取Attack packet rate peak
                      * @return Pps Attack packet rate peak
+                     * 
                      */
                     uint64_t GetPps() const;
 
                     /**
                      * 判断参数 Pps 是否已赋值
                      * @return Pps 是否已赋值
+                     * 
                      */
                     bool PpsHasBeenSet() const;
 
                     /**
                      * 获取PCAP file download link
                      * @return PcapUrl PCAP file download link
+                     * 
                      */
                     std::vector<std::string> GetPcapUrl() const;
 
                     /**
                      * 判断参数 PcapUrl 是否已赋值
                      * @return PcapUrl 是否已赋值
+                     * 
                      */
                     bool PcapUrlHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Price of the cloud disk after its backup point quota is modified.
                      * @return DiskPrice Price of the cloud disk after its backup point quota is modified.
+                     * 
                      */
                     Price GetDiskPrice() const;
 
                     /**
                      * 判断参数 DiskPrice 是否已赋值
                      * @return DiskPrice 是否已赋值
+                     * 
                      */
                     bool DiskPriceHasBeenSet() const;
 

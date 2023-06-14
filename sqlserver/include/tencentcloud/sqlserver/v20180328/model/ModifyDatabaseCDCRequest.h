@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Array of database names
                      * @return DBNames Array of database names
+                     * 
                      */
                     std::vector<std::string> GetDBNames() const;
 
                     /**
                      * 设置Array of database names
-                     * @param DBNames Array of database names
+                     * @param _dBNames Array of database names
+                     * 
                      */
                     void SetDBNames(const std::vector<std::string>& _dBNames);
 
                     /**
                      * 判断参数 DBNames 是否已赋值
                      * @return DBNames 是否已赋值
+                     * 
                      */
                     bool DBNamesHasBeenSet() const;
 
                     /**
                      * 获取Enable or disable CDC. Valid values: `enable`, `disable`
                      * @return ModifyType Enable or disable CDC. Valid values: `enable`, `disable`
+                     * 
                      */
                     std::string GetModifyType() const;
 
                     /**
                      * 设置Enable or disable CDC. Valid values: `enable`, `disable`
-                     * @param ModifyType Enable or disable CDC. Valid values: `enable`, `disable`
+                     * @param _modifyType Enable or disable CDC. Valid values: `enable`, `disable`
+                     * 
                      */
                     void SetModifyType(const std::string& _modifyType);
 
                     /**
                      * 判断参数 ModifyType 是否已赋值
                      * @return ModifyType 是否已赋值
+                     * 
                      */
                     bool ModifyTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

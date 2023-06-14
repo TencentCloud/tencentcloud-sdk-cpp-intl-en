@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Specifies the URL to be queried
                      * @return Url Specifies the URL to be queried
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Specifies the URL to be queried
-                     * @param Url Specifies the URL to be queried
+                     * @param _url Specifies the URL to be queried
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Starting time, such as `2018-12-12 10:24:00`
                      * @return StartTime Starting time, such as `2018-12-12 10:24:00`
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Starting time, such as `2018-12-12 10:24:00`
-                     * @param StartTime Starting time, such as `2018-12-12 10:24:00`
+                     * @param _startTime Starting time, such as `2018-12-12 10:24:00`
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time, such as `2018-12-14 10:24:00`
                      * @return EndTime End time, such as `2018-12-14 10:24:00`
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time, such as `2018-12-14 10:24:00`
-                     * @param EndTime End time, such as `2018-12-14 10:24:00`
+                     * @param _endTime End time, such as `2018-12-14 10:24:00`
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -103,6 +112,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                      * @return Status Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -110,69 +120,80 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                      * 设置Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
-                     * @param Status Current URL status
+                     * @param _status Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Offset for paginated queries. Default value: 0
                      * @return Offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset for paginated queries. Default value: 0
-                     * @param Offset Offset for paginated queries. Default value: 0
+                     * @param _offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Pagination limit. Default value: 20.
                      * @return Limit Pagination limit. Default value: 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Pagination limit. Default value: 20.
-                     * @param Limit Pagination limit. Default value: 20.
+                     * @param _limit Pagination limit. Default value: 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Task ID. The task ID and start time cannot be both left empty.
                      * @return TaskId Task ID. The task ID and start time cannot be both left empty.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID. The task ID and start time cannot be both left empty.
-                     * @param TaskId Task ID. The task ID and start time cannot be both left empty.
+                     * @param _taskId Task ID. The task ID and start time cannot be both left empty.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

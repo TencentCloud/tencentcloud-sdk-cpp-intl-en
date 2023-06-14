@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取AZ to be queried
                      * @return Zone AZ to be queried
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ to be queried
-                     * @param Zone AZ to be queried
+                     * @param _zone AZ to be queried
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 

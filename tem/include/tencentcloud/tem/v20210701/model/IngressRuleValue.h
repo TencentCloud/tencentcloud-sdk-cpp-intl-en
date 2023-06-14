@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Overall rule configuration
                      * @return Paths Overall rule configuration
+                     * 
                      */
                     std::vector<IngressRulePath> GetPaths() const;
 
                     /**
                      * 设置Overall rule configuration
-                     * @param Paths Overall rule configuration
+                     * @param _paths Overall rule configuration
+                     * 
                      */
                     void SetPaths(const std::vector<IngressRulePath>& _paths);
 
                     /**
                      * 判断参数 Paths 是否已赋值
                      * @return Paths 是否已赋值
+                     * 
                      */
                     bool PathsHasBeenSet() const;
 

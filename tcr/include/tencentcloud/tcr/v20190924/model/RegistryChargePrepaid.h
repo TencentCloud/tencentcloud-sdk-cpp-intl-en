@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance purchase duration in months
                      * @return Period Instance purchase duration in months
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Instance purchase duration in months
-                     * @param Period Instance purchase duration in months
+                     * @param _period Instance purchase duration in months
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Auto-renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
                      * @return RenewFlag Auto-renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
+                     * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
                      * 设置Auto-renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
-                     * @param RenewFlag Auto-renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
+                     * @param _renewFlag Auto-renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
+                     * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 

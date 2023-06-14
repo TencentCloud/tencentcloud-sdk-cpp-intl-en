@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
                      * @return VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
-                     * @param VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * @param _vpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The private `IP` address list. Each request supports a maximum of `10` batch querying.
                      * @return PrivateIpAddresses The private `IP` address list. Each request supports a maximum of `10` batch querying.
+                     * 
                      */
                     std::vector<std::string> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置The private `IP` address list. Each request supports a maximum of `10` batch querying.
-                     * @param PrivateIpAddresses The private `IP` address list. Each request supports a maximum of `10` batch querying.
+                     * @param _privateIpAddresses The private `IP` address list. Each request supports a maximum of `10` batch querying.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<std::string>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 

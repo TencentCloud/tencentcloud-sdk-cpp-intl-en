@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Status value. 0: operation successful; non-0: operation failed
                      * @return Status Status value. 0: operation successful; non-0: operation failed
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Info Returns redundant information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInfo() const;
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

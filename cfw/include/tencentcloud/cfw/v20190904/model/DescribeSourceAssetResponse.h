@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取Region collection
                      * @return ZoneList Region collection
+                     * 
                      */
                     std::vector<AssetZone> GetZoneList() const;
 
                     /**
                      * 判断参数 ZoneList 是否已赋值
                      * @return ZoneList 是否已赋值
+                     * 
                      */
                     bool ZoneListHasBeenSet() const;
 
                     /**
                      * 获取Data
                      * @return Data Data
+                     * 
                      */
                     std::vector<InstanceInfo> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
                     /**
                      * 获取Total number of returned data
                      * @return Total Total number of returned data
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

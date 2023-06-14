@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Metric name.
                      * @return Metric Metric name.
+                     * 
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Metric name.
-                     * @param Metric Metric name.
+                     * @param _metric Metric name.
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
                     /**
                      * 获取Metric unit.
                      * @return Unit Metric unit.
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置Metric unit.
-                     * @param Unit Metric unit.
+                     * @param _unit Metric unit.
+                     * 
                      */
                     void SetUnit(const std::string& _unit);
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Values Metric value.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetValues() const;
 
                     /**
                      * 设置Metric value.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Values Metric value.
+                     * @param _values Metric value.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValues(const std::vector<int64_t>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

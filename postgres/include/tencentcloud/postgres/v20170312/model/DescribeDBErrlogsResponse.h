@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of date entries returned for this call
                      * @return TotalCount Number of date entries returned for this call
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Error log list
                      * @return Details Error log list
+                     * 
                      */
                     std::vector<ErrLogDetail> GetDetails() const;
 
                     /**
                      * 判断参数 Details 是否已赋值
                      * @return Details 是否已赋值
+                     * 
                      */
                     bool DetailsHasBeenSet() const;
 

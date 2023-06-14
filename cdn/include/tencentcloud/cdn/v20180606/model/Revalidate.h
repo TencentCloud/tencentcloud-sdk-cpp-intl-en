@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to always forward to the origin server for verification. Valid values: on, off
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to always forward to the origin server for verification. Valid values: on, off
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Whether to always forward to the origin server for verification. Valid values: on, off
+                     * @param _switch Whether to always forward to the origin server for verification. Valid values: on, off
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Path Forwards to the origin server for verification only for specific request path
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Forwards to the origin server for verification only for specific request path
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Path Forwards to the origin server for verification only for specific request path
+                     * @param _path Forwards to the origin server for verification only for specific request path
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Product ID
                      * @return ProductId Product ID
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置Product ID
-                     * @param ProductId Product ID
+                     * @param _productId Product ID
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取Device name
                      * @return DeviceName Device name
+                     * 
                      */
                     std::string GetDeviceName() const;
 
                     /**
                      * 设置Device name
-                     * @param DeviceName Device name
+                     * @param _deviceName Device name
+                     * 
                      */
                     void SetDeviceName(const std::string& _deviceName);
 
                     /**
                      * 判断参数 DeviceName 是否已赋值
                      * @return DeviceName 是否已赋值
+                     * 
                      */
                     bool DeviceNameHasBeenSet() const;
 
                     /**
                      * 获取Log level. `0`: disable; `1`: error; `2`: warning; `3`: information; `4`: debugging
                      * @return LogLevel Log level. `0`: disable; `1`: error; `2`: warning; `3`: information; `4`: debugging
+                     * 
                      */
                     uint64_t GetLogLevel() const;
 
                     /**
                      * 设置Log level. `0`: disable; `1`: error; `2`: warning; `3`: information; `4`: debugging
-                     * @param LogLevel Log level. `0`: disable; `1`: error; `2`: warning; `3`: information; `4`: debugging
+                     * @param _logLevel Log level. `0`: disable; `1`: error; `2`: warning; `3`: information; `4`: debugging
+                     * 
                      */
                     void SetLogLevel(const uint64_t& _logLevel);
 
                     /**
                      * 判断参数 LogLevel 是否已赋值
                      * @return LogLevel 是否已赋值
+                     * 
                      */
                     bool LogLevelHasBeenSet() const;
 

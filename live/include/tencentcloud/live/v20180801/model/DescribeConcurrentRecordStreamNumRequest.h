@@ -47,20 +47,23 @@ namespace TencentCloud
 NormalLive: LVB.
                      * @return LiveType Live streaming type. SlowLive: LCB.
 NormalLive: LVB.
+                     * 
                      */
                     std::string GetLiveType() const;
 
                     /**
                      * 设置Live streaming type. SlowLive: LCB.
 NormalLive: LVB.
-                     * @param LiveType Live streaming type. SlowLive: LCB.
+                     * @param _liveType Live streaming type. SlowLive: LCB.
 NormalLive: LVB.
+                     * 
                      */
                     void SetLiveType(const std::string& _liveType);
 
                     /**
                      * 判断参数 LiveType 是否已赋值
                      * @return LiveType 是否已赋值
+                     * 
                      */
                     bool LiveTypeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ NormalLive: LVB.
 Data for the last 180 days can be queried.
                      * @return StartTime Start time in the format of `yyyy-mm-dd HH:MM:SS`.
 Data for the last 180 days can be queried.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time in the format of `yyyy-mm-dd HH:MM:SS`.
 Data for the last 180 days can be queried.
-                     * @param StartTime Start time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _startTime Start time in the format of `yyyy-mm-dd HH:MM:SS`.
 Data for the last 180 days can be queried.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -91,56 +97,65 @@ Data for the last 180 days can be queried.
 The maximum time span supported is 31 days.
                      * @return EndTime End time in the format of `yyyy-mm-dd HH:MM:SS`.
 The maximum time span supported is 31 days.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in the format of `yyyy-mm-dd HH:MM:SS`.
 The maximum time span supported is 31 days.
-                     * @param EndTime End time in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _endTime End time in the format of `yyyy-mm-dd HH:MM:SS`.
 The maximum time span supported is 31 days.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
                      * @return MainlandOrOversea Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
                     /**
                      * 设置Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
-                     * @param MainlandOrOversea Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
+                     * @param _mainlandOrOversea Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name list. If this parameter is left empty, full data will be queried.
                      * @return PushDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * 
                      */
                     std::vector<std::string> GetPushDomains() const;
 
                     /**
                      * 设置Playback domain name list. If this parameter is left empty, full data will be queried.
-                     * @param PushDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * @param _pushDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+                     * 
                      */
                     void SetPushDomains(const std::vector<std::string>& _pushDomains);
 
                     /**
                      * 判断参数 PushDomains 是否已赋值
                      * @return PushDomains 是否已赋值
+                     * 
                      */
                     bool PushDomainsHasBeenSet() const;
 

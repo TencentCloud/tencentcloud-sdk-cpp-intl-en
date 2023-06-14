@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of log types
                      * @return LogTypeList List of log types
+                     * 
                      */
                     std::vector<SecLogDeliveryClsSettingInfo> GetLogTypeList() const;
 
                     /**
                      * 判断参数 LogTypeList 是否已赋值
                      * @return LogTypeList 是否已赋值
+                     * 
                      */
                     bool LogTypeListHasBeenSet() const;
 

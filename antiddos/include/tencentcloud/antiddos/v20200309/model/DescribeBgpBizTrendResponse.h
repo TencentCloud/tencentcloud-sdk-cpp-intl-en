@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Values of the samples
                      * @return DataList Values of the samples
+                     * 
                      */
                     std::vector<uint64_t> GetDataList() const;
 
                     /**
                      * 判断参数 DataList 是否已赋值
                      * @return DataList 是否已赋值
+                     * 
                      */
                     bool DataListHasBeenSet() const;
 
                     /**
                      * 获取Number of samples
                      * @return Total Number of samples
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Statistical metric
                      * @return MetricName Statistical metric
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Maximum value of the arrays returned
                      * @return MaxData Maximum value of the arrays returned
+                     * 
                      */
                     uint64_t GetMaxData() const;
 
                     /**
                      * 判断参数 MaxData 是否已赋值
                      * @return MaxData 是否已赋值
+                     * 
                      */
                     bool MaxDataHasBeenSet() const;
 

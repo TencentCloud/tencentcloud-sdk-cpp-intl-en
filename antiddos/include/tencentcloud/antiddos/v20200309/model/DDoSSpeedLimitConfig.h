@@ -57,6 +57,7 @@ namespace TencentCloud
 `1`: rate limit based on the real server IP
 `2`: rate limit based on the destination port
 ]
+                     * 
                      */
                     uint64_t GetMode() const;
 
@@ -65,70 +66,81 @@ namespace TencentCloud
 `1`: rate limit based on the real server IP
 `2`: rate limit based on the destination port
 ]
-                     * @param Mode Rate limit mode. Valid values:
+                     * @param _mode Rate limit mode. Valid values:
 `1`: rate limit based on the real server IP
 `2`: rate limit based on the destination port
 ]
+                     * 
                      */
                     void SetMode(const uint64_t& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Rate limit value. This field contains at least one valid rate limit type. Note that only up to one value of each type is supported.
                      * @return SpeedValues Rate limit value. This field contains at least one valid rate limit type. Note that only up to one value of each type is supported.
+                     * 
                      */
                     std::vector<SpeedValue> GetSpeedValues() const;
 
                     /**
                      * 设置Rate limit value. This field contains at least one valid rate limit type. Note that only up to one value of each type is supported.
-                     * @param SpeedValues Rate limit value. This field contains at least one valid rate limit type. Note that only up to one value of each type is supported.
+                     * @param _speedValues Rate limit value. This field contains at least one valid rate limit type. Note that only up to one value of each type is supported.
+                     * 
                      */
                     void SetSpeedValues(const std::vector<SpeedValue>& _speedValues);
 
                     /**
                      * 判断参数 SpeedValues 是否已赋值
                      * @return SpeedValues 是否已赋值
+                     * 
                      */
                     bool SpeedValuesHasBeenSet() const;
 
                     /**
                      * 获取This field is replaced with a new field DstPortList.
                      * @return DstPortScopes This field is replaced with a new field DstPortList.
+                     * 
                      */
                     std::vector<PortSegment> GetDstPortScopes() const;
 
                     /**
                      * 设置This field is replaced with a new field DstPortList.
-                     * @param DstPortScopes This field is replaced with a new field DstPortList.
+                     * @param _dstPortScopes This field is replaced with a new field DstPortList.
+                     * 
                      */
                     void SetDstPortScopes(const std::vector<PortSegment>& _dstPortScopes);
 
                     /**
                      * 判断参数 DstPortScopes 是否已赋值
                      * @return DstPortScopes 是否已赋值
+                     * 
                      */
                     bool DstPortScopesHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Id 
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置
-                     * @param Id 
+                     * @param _id 
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -149,6 +161,7 @@ Note: For custom protocol ranges, only protocol number is supported. Multiple ra
 `1;2–100`: user-defined protocol with up to 8 ranges
 ]
 Note: For custom protocol ranges, only protocol number is supported. Multiple ranges are separated by ";". If the value is `ALL`, any other protocol or protocol number should be excluded.
+                     * 
                      */
                     std::string GetProtocolList() const;
 
@@ -161,7 +174,7 @@ Note: For custom protocol ranges, only protocol number is supported. Multiple ra
 `1;2–100`: user-defined protocol with up to 8 ranges
 ]
 Note: For custom protocol ranges, only protocol number is supported. Multiple ranges are separated by ";". If the value is `ALL`, any other protocol or protocol number should be excluded.
-                     * @param ProtocolList IP protocol number. Valid values:
+                     * @param _protocolList IP protocol number. Valid values:
 `ALL`: all protocols
 `TCP`: TCP protocol
 `UDP`: UDP protocol
@@ -169,30 +182,35 @@ Note: For custom protocol ranges, only protocol number is supported. Multiple ra
 `1;2–100`: user-defined protocol with up to 8 ranges
 ]
 Note: For custom protocol ranges, only protocol number is supported. Multiple ranges are separated by ";". If the value is `ALL`, any other protocol or protocol number should be excluded.
+                     * 
                      */
                     void SetProtocolList(const std::string& _protocolList);
 
                     /**
                      * 判断参数 ProtocolList 是否已赋值
                      * @return ProtocolList 是否已赋值
+                     * 
                      */
                     bool ProtocolListHasBeenSet() const;
 
                     /**
                      * 获取Port range list, which contains up to 8 ranges. Use ";" to separate multiple ports and "–" to indicate a range of ports, as described in the following formats: `0–65535`, `80;443;1000–2000`.
                      * @return DstPortList Port range list, which contains up to 8 ranges. Use ";" to separate multiple ports and "–" to indicate a range of ports, as described in the following formats: `0–65535`, `80;443;1000–2000`.
+                     * 
                      */
                     std::string GetDstPortList() const;
 
                     /**
                      * 设置Port range list, which contains up to 8 ranges. Use ";" to separate multiple ports and "–" to indicate a range of ports, as described in the following formats: `0–65535`, `80;443;1000–2000`.
-                     * @param DstPortList Port range list, which contains up to 8 ranges. Use ";" to separate multiple ports and "–" to indicate a range of ports, as described in the following formats: `0–65535`, `80;443;1000–2000`.
+                     * @param _dstPortList Port range list, which contains up to 8 ranges. Use ";" to separate multiple ports and "–" to indicate a range of ports, as described in the following formats: `0–65535`, `80;443;1000–2000`.
+                     * 
                      */
                     void SetDstPortList(const std::string& _dstPortList);
 
                     /**
                      * 判断参数 DstPortList 是否已赋值
                      * @return DstPortList 是否已赋值
+                     * 
                      */
                     bool DstPortListHasBeenSet() const;
 

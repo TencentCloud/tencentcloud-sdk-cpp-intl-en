@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of restoration tasks
                      * @return RestoreTasks List of restoration tasks
+                     * 
                      */
                     std::vector<RestoreTask> GetRestoreTasks() const;
 
                     /**
                      * 判断参数 RestoreTasks 是否已赋值
                      * @return RestoreTasks 是否已赋值
+                     * 
                      */
                     bool RestoreTasksHasBeenSet() const;
 

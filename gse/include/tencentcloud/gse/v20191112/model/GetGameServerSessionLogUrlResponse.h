@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return PreSignedUrl Log download URL. It should contain 1 to 1024 ASCII characters.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetPreSignedUrl() const;
 
                     /**
                      * 判断参数 PreSignedUrl 是否已赋值
                      * @return PreSignedUrl 是否已赋值
+                     * 
                      */
                     bool PreSignedUrlHasBeenSet() const;
 

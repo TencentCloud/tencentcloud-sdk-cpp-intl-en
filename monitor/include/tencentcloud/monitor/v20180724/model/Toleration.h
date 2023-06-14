@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Key of the taint to which the toleration is applied
                      * @return Key Key of the taint to which the toleration is applied
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Key of the taint to which the toleration is applied
-                     * @param Key Key of the taint to which the toleration is applied
+                     * @param _key Key of the taint to which the toleration is applied
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取The key-value relationship
                      * @return Operator The key-value relationship
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置The key-value relationship
-                     * @param Operator The key-value relationship
+                     * @param _operator The key-value relationship
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取The taint effect to be matched
                      * @return Effect The taint effect to be matched
+                     * 
                      */
                     std::string GetEffect() const;
 
                     /**
                      * 设置The taint effect to be matched
-                     * @param Effect The taint effect to be matched
+                     * @param _effect The taint effect to be matched
+                     * 
                      */
                     void SetEffect(const std::string& _effect);
 
                     /**
                      * 判断参数 Effect 是否已赋值
                      * @return Effect 是否已赋值
+                     * 
                      */
                     bool EffectHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Minimum value when the constraint type is `section`
                      * @return Min Minimum value when the constraint type is `section`
+                     * 
                      */
                     std::string GetMin() const;
 
                     /**
                      * 设置Minimum value when the constraint type is `section`
-                     * @param Min Minimum value when the constraint type is `section`
+                     * @param _min Minimum value when the constraint type is `section`
+                     * 
                      */
                     void SetMin(const std::string& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
                     /**
                      * 获取Maximum value when the constraint type is `section`
                      * @return Max Maximum value when the constraint type is `section`
+                     * 
                      */
                     std::string GetMax() const;
 
                     /**
                      * 设置Maximum value when the constraint type is `section`
-                     * @param Max Maximum value when the constraint type is `section`
+                     * @param _max Maximum value when the constraint type is `section`
+                     * 
                      */
                     void SetMax(const std::string& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 

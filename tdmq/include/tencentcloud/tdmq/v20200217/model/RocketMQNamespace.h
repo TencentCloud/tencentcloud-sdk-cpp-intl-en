@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
                      * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
                      * 设置Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
-                     * @param NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * @param _namespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
                      * @return Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+                     * 
                      */
                     uint64_t GetTtl() const;
 
                     /**
                      * 设置Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
-                     * @param Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+                     * @param _ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
+                     * 
                      */
                     void SetTtl(const uint64_t& _ttl);
 
                     /**
                      * 判断参数 Ttl 是否已赋值
                      * @return Ttl 是否已赋值
+                     * 
                      */
                     bool TtlHasBeenSet() const;
 
                     /**
                      * 获取Retention period for persistently stored messages in milliseconds.
                      * @return RetentionTime Retention period for persistently stored messages in milliseconds.
+                     * 
                      */
                     uint64_t GetRetentionTime() const;
 
                     /**
                      * 设置Retention period for persistently stored messages in milliseconds.
-                     * @param RetentionTime Retention period for persistently stored messages in milliseconds.
+                     * @param _retentionTime Retention period for persistently stored messages in milliseconds.
+                     * 
                      */
                     void SetRetentionTime(const uint64_t& _retentionTime);
 
                     /**
                      * 判断参数 RetentionTime 是否已赋值
                      * @return RetentionTime 是否已赋值
+                     * 
                      */
                     bool RetentionTimeHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Description.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Description.
+                     * @param _remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PublicEndpoint Public network access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPublicEndpoint() const;
 
                     /**
                      * 设置Public network access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PublicEndpoint Public network access point address.
+                     * @param _publicEndpoint Public network access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPublicEndpoint(const std::string& _publicEndpoint);
 
                     /**
                      * 判断参数 PublicEndpoint 是否已赋值
                      * @return PublicEndpoint 是否已赋值
+                     * 
                      */
                     bool PublicEndpointHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcEndpoint VPC access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVpcEndpoint() const;
 
                     /**
                      * 设置VPC access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VpcEndpoint VPC access point address.
+                     * @param _vpcEndpoint VPC access point address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcEndpoint(const std::string& _vpcEndpoint);
 
                     /**
                      * 判断参数 VpcEndpoint 是否已赋值
                      * @return VpcEndpoint 是否已赋值
+                     * 
                      */
                     bool VpcEndpointHasBeenSet() const;
 

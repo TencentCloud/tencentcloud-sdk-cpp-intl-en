@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encrypted SQL statement
                      * @return SQL Base64-encrypted SQL statement
+                     * 
                      */
                     std::string GetSQL() const;
 
                     /**
                      * 设置Base64-encrypted SQL statement
-                     * @param SQL Base64-encrypted SQL statement
+                     * @param _sQL Base64-encrypted SQL statement
+                     * 
                      */
                     void SetSQL(const std::string& _sQL);
 
                     /**
                      * 判断参数 SQL 是否已赋值
                      * @return SQL 是否已赋值
+                     * 
                      */
                     bool SQLHasBeenSet() const;
 
                     /**
                      * 获取Task configuration information
                      * @return Config Task configuration information
+                     * 
                      */
                     std::vector<KVPair> GetConfig() const;
 
                     /**
                      * 设置Task configuration information
-                     * @param Config Task configuration information
+                     * @param _config Task configuration information
+                     * 
                      */
                     void SetConfig(const std::vector<KVPair>& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 

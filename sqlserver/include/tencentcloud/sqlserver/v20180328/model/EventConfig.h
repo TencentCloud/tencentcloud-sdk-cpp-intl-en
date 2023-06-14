@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Event type. Valid values: `slow` (set threshold for slow SQL ), `blocked` (set threshold for the blocking and deadlock).
                      * @return EventType Event type. Valid values: `slow` (set threshold for slow SQL ), `blocked` (set threshold for the blocking and deadlock).
+                     * 
                      */
                     std::string GetEventType() const;
 
                     /**
                      * 设置Event type. Valid values: `slow` (set threshold for slow SQL ), `blocked` (set threshold for the blocking and deadlock).
-                     * @param EventType Event type. Valid values: `slow` (set threshold for slow SQL ), `blocked` (set threshold for the blocking and deadlock).
+                     * @param _eventType Event type. Valid values: `slow` (set threshold for slow SQL ), `blocked` (set threshold for the blocking and deadlock).
+                     * 
                      */
                     void SetEventType(const std::string& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Threshold in milliseconds. Valid values: `0`(disable), `non-zero` (enable)
                      * @return Threshold Threshold in milliseconds. Valid values: `0`(disable), `non-zero` (enable)
+                     * 
                      */
                     int64_t GetThreshold() const;
 
                     /**
                      * 设置Threshold in milliseconds. Valid values: `0`(disable), `non-zero` (enable)
-                     * @param Threshold Threshold in milliseconds. Valid values: `0`(disable), `non-zero` (enable)
+                     * @param _threshold Threshold in milliseconds. Valid values: `0`(disable), `non-zero` (enable)
+                     * 
                      */
                     void SetThreshold(const int64_t& _threshold);
 
                     /**
                      * 判断参数 Threshold 是否已赋值
                      * @return Threshold 是否已赋值
+                     * 
                      */
                     bool ThresholdHasBeenSet() const;
 

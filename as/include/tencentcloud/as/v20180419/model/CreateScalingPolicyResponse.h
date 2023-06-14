@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Alarm trigger policy ID.
                      * @return AutoScalingPolicyId Alarm trigger policy ID.
+                     * 
                      */
                     std::string GetAutoScalingPolicyId() const;
 
                     /**
                      * 判断参数 AutoScalingPolicyId 是否已赋值
                      * @return AutoScalingPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoScalingPolicyIdHasBeenSet() const;
 

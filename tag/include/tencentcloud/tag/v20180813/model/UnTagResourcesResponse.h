@@ -51,12 +51,14 @@ When tag unbinding partially or completely fails, the returned `FailedResources`
                      * @return FailedResources Information of failed resources.
 When tag unbinding succeeds, the returned `FailedResources` will be empty.
 When tag unbinding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+                     * 
                      */
                     std::vector<FailedResource> GetFailedResources() const;
 
                     /**
                      * 判断参数 FailedResources 是否已赋值
                      * @return FailedResources 是否已赋值
+                     * 
                      */
                     bool FailedResourcesHasBeenSet() const;
 

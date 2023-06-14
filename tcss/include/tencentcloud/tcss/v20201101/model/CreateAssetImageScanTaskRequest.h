@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Whether to scan all images.
                      * @return All Whether to scan all images.
+                     * 
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置Whether to scan all images.
-                     * @param All Whether to scan all images.
+                     * @param _all Whether to scan all images.
+                     * 
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
+                     * 
                      */
                     bool AllHasBeenSet() const;
 
                     /**
                      * 获取List of images to be scanned.
                      * @return Images List of images to be scanned.
+                     * 
                      */
                     std::vector<std::string> GetImages() const;
 
                     /**
                      * 设置List of images to be scanned.
-                     * @param Images List of images to be scanned.
+                     * @param _images List of images to be scanned.
+                     * 
                      */
                     void SetImages(const std::vector<std::string>& _images);
 
                     /**
                      * 判断参数 Images 是否已赋值
                      * @return Images 是否已赋值
+                     * 
                      */
                     bool ImagesHasBeenSet() const;
 
                     /**
                      * 获取Scan for vulnerabilities.
                      * @return ScanVul Scan for vulnerabilities.
+                     * 
                      */
                     bool GetScanVul() const;
 
                     /**
                      * 设置Scan for vulnerabilities.
-                     * @param ScanVul Scan for vulnerabilities.
+                     * @param _scanVul Scan for vulnerabilities.
+                     * 
                      */
                     void SetScanVul(const bool& _scanVul);
 
                     /**
                      * 判断参数 ScanVul 是否已赋值
                      * @return ScanVul 是否已赋值
+                     * 
                      */
                     bool ScanVulHasBeenSet() const;
 
                     /**
                      * 获取Scan for trojans.
                      * @return ScanVirus Scan for trojans.
+                     * 
                      */
                     bool GetScanVirus() const;
 
                     /**
                      * 设置Scan for trojans.
-                     * @param ScanVirus Scan for trojans.
+                     * @param _scanVirus Scan for trojans.
+                     * 
                      */
                     void SetScanVirus(const bool& _scanVirus);
 
                     /**
                      * 判断参数 ScanVirus 是否已赋值
                      * @return ScanVirus 是否已赋值
+                     * 
                      */
                     bool ScanVirusHasBeenSet() const;
 
                     /**
                      * 获取Scan for risks.
                      * @return ScanRisk Scan for risks.
+                     * 
                      */
                     bool GetScanRisk() const;
 
                     /**
                      * 设置Scan for risks.
-                     * @param ScanRisk Scan for risks.
+                     * @param _scanRisk Scan for risks.
+                     * 
                      */
                     void SetScanRisk(const bool& _scanRisk);
 
                     /**
                      * 判断参数 ScanRisk 是否已赋值
                      * @return ScanRisk 是否已赋值
+                     * 
                      */
                     bool ScanRiskHasBeenSet() const;
 
                     /**
                      * 获取Filter
                      * @return Filters Filter
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
                      * 设置Filter
-                     * @param Filters Filter
+                     * @param _filters Filter
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Specified image IDs to be excluded
                      * @return ExcludeImageIds Specified image IDs to be excluded
+                     * 
                      */
                     std::vector<std::string> GetExcludeImageIds() const;
 
                     /**
                      * 设置Specified image IDs to be excluded
-                     * @param ExcludeImageIds Specified image IDs to be excluded
+                     * @param _excludeImageIds Specified image IDs to be excluded
+                     * 
                      */
                     void SetExcludeImageIds(const std::vector<std::string>& _excludeImageIds);
 
                     /**
                      * 判断参数 ExcludeImageIds 是否已赋值
                      * @return ExcludeImageIds 是否已赋值
+                     * 
                      */
                     bool ExcludeImageIdsHasBeenSet() const;
 

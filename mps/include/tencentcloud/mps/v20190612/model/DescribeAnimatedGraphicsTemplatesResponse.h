@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible entries.
                      * @return TotalCount Number of eligible entries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of animated image generating template details.
                      * @return AnimatedGraphicsTemplateSet List of animated image generating template details.
+                     * 
                      */
                     std::vector<AnimatedGraphicsTemplate> GetAnimatedGraphicsTemplateSet() const;
 
                     /**
                      * 判断参数 AnimatedGraphicsTemplateSet 是否已赋值
                      * @return AnimatedGraphicsTemplateSet 是否已赋值
+                     * 
                      */
                     bool AnimatedGraphicsTemplateSetHasBeenSet() const;
 

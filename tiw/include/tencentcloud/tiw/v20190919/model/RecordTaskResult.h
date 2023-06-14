@@ -51,216 +51,252 @@ namespace TencentCloud
                     /**
                      * 获取`AUTO`: Recording automatically stops. `USER_CALL`: The API for stopping recording is called.
                      * @return FinishReason `AUTO`: Recording automatically stops. `USER_CALL`: The API for stopping recording is called.
+                     * 
                      */
                     std::string GetFinishReason() const;
 
                     /**
                      * 设置`AUTO`: Recording automatically stops. `USER_CALL`: The API for stopping recording is called.
-                     * @param FinishReason `AUTO`: Recording automatically stops. `USER_CALL`: The API for stopping recording is called.
+                     * @param _finishReason `AUTO`: Recording automatically stops. `USER_CALL`: The API for stopping recording is called.
+                     * 
                      */
                     void SetFinishReason(const std::string& _finishReason);
 
                     /**
                      * 判断参数 FinishReason 是否已赋值
                      * @return FinishReason 是否已赋值
+                     * 
                      */
                     bool FinishReasonHasBeenSet() const;
 
                     /**
                      * 获取Number of exceptions.
                      * @return ExceptionCnt Number of exceptions.
+                     * 
                      */
                     int64_t GetExceptionCnt() const;
 
                     /**
                      * 设置Number of exceptions.
-                     * @param ExceptionCnt Number of exceptions.
+                     * @param _exceptionCnt Number of exceptions.
+                     * 
                      */
                     void SetExceptionCnt(const int64_t& _exceptionCnt);
 
                     /**
                      * 判断参数 ExceptionCnt 是否已赋值
                      * @return ExceptionCnt 是否已赋值
+                     * 
                      */
                     bool ExceptionCntHasBeenSet() const;
 
                     /**
                      * 获取Room ID.
                      * @return RoomId Room ID.
+                     * 
                      */
                     int64_t GetRoomId() const;
 
                     /**
                      * 设置Room ID.
-                     * @param RoomId Room ID.
+                     * @param _roomId Room ID.
+                     * 
                      */
                     void SetRoomId(const int64_t& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取Group ID.
                      * @return GroupId Group ID.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Group ID.
-                     * @param GroupId Group ID.
+                     * @param _groupId Group ID.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Actual recording start time.
                      * @return RecordStartTime Actual recording start time.
+                     * 
                      */
                     int64_t GetRecordStartTime() const;
 
                     /**
                      * 设置Actual recording start time.
-                     * @param RecordStartTime Actual recording start time.
+                     * @param _recordStartTime Actual recording start time.
+                     * 
                      */
                     void SetRecordStartTime(const int64_t& _recordStartTime);
 
                     /**
                      * 判断参数 RecordStartTime 是否已赋值
                      * @return RecordStartTime 是否已赋值
+                     * 
                      */
                     bool RecordStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Recording end time.
                      * @return RecordStopTime Recording end time.
+                     * 
                      */
                     int64_t GetRecordStopTime() const;
 
                     /**
                      * 设置Recording end time.
-                     * @param RecordStopTime Recording end time.
+                     * @param _recordStopTime Recording end time.
+                     * 
                      */
                     void SetRecordStopTime(const int64_t& _recordStopTime);
 
                     /**
                      * 判断参数 RecordStopTime 是否已赋值
                      * @return RecordStopTime 是否已赋值
+                     * 
                      */
                     bool RecordStopTimeHasBeenSet() const;
 
                     /**
                      * 获取Recording duration.
                      * @return TotalTime Recording duration.
+                     * 
                      */
                     int64_t GetTotalTime() const;
 
                     /**
                      * 设置Recording duration.
-                     * @param TotalTime Recording duration.
+                     * @param _totalTime Recording duration.
+                     * 
                      */
                     void SetTotalTime(const int64_t& _totalTime);
 
                     /**
                      * 判断参数 TotalTime 是否已赋值
                      * @return TotalTime 是否已赋值
+                     * 
                      */
                     bool TotalTimeHasBeenSet() const;
 
                     /**
                      * 获取List of video information.
                      * @return VideoInfos List of video information.
+                     * 
                      */
                     std::vector<VideoInfo> GetVideoInfos() const;
 
                     /**
                      * 设置List of video information.
-                     * @param VideoInfos List of video information.
+                     * @param _videoInfos List of video information.
+                     * 
                      */
                     void SetVideoInfos(const std::vector<VideoInfo>& _videoInfos);
 
                     /**
                      * 判断参数 VideoInfos 是否已赋值
                      * @return VideoInfos 是否已赋值
+                     * 
                      */
                     bool VideoInfosHasBeenSet() const;
 
                     /**
                      * 获取Omitted video durations.
                      * @return OmittedDurations Omitted video durations.
+                     * 
                      */
                     std::vector<OmittedDuration> GetOmittedDurations() const;
 
                     /**
                      * 设置Omitted video durations.
-                     * @param OmittedDurations Omitted video durations.
+                     * @param _omittedDurations Omitted video durations.
+                     * 
                      */
                     void SetOmittedDurations(const std::vector<OmittedDuration>& _omittedDurations);
 
                     /**
                      * 判断参数 OmittedDurations 是否已赋值
                      * @return OmittedDurations 是否已赋值
+                     * 
                      */
                     bool OmittedDurationsHasBeenSet() const;
 
                     /**
                      * 获取Details.
                      * @return Details Details.
+                     * 
                      */
                     std::string GetDetails() const;
 
                     /**
                      * 设置Details.
-                     * @param Details Details.
+                     * @param _details Details.
+                     * 
                      */
                     void SetDetails(const std::string& _details);
 
                     /**
                      * 判断参数 Details 是否已赋值
                      * @return Details 是否已赋值
+                     * 
                      */
                     bool DetailsHasBeenSet() const;
 
                     /**
                      * 获取Task execution error code.
                      * @return ErrorCode Task execution error code.
+                     * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 设置Task execution error code.
-                     * @param ErrorCode Task execution error code.
+                     * @param _errorCode Task execution error code.
+                     * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return ErrorMsg Error message.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 设置Error message.
-                     * @param ErrorMsg Error message.
+                     * @param _errorMsg Error message.
+                     * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 

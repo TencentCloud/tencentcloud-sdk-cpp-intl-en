@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Database proxy ID
                      * @return ProxyGroupId Database proxy ID
+                     * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
                      * 设置Database proxy ID
-                     * @param ProxyGroupId Database proxy ID
+                     * @param _proxyGroupId Database proxy ID
+                     * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
 
                     /**
                      * 判断参数 ProxyGroupId 是否已赋值
                      * @return ProxyGroupId 是否已赋值
+                     * 
                      */
                     bool ProxyGroupIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
                              `false` (disable).
                      * @return OpenConnectionPool Whether to enable the connection pool. Valid values: `true` (enable);
                              `false` (disable).
+                     * 
                      */
                     bool GetOpenConnectionPool() const;
 
                     /**
                      * 设置Whether to enable the connection pool. Valid values: `true` (enable);
                              `false` (disable).
-                     * @param OpenConnectionPool Whether to enable the connection pool. Valid values: `true` (enable);
+                     * @param _openConnectionPool Whether to enable the connection pool. Valid values: `true` (enable);
                              `false` (disable).
+                     * 
                      */
                     void SetOpenConnectionPool(const bool& _openConnectionPool);
 
                     /**
                      * 判断参数 OpenConnectionPool 是否已赋值
                      * @return OpenConnectionPool 是否已赋值
+                     * 
                      */
                     bool OpenConnectionPoolHasBeenSet() const;
 
@@ -87,38 +93,44 @@ namespace TencentCloud
 You can use the `DescribeProxyConnectionPoolConf` API to query the connection pool type.
                      * @return ConnectionPoolType Connection pool type.
 You can use the `DescribeProxyConnectionPoolConf` API to query the connection pool type.
+                     * 
                      */
                     std::string GetConnectionPoolType() const;
 
                     /**
                      * 设置Connection pool type.
 You can use the `DescribeProxyConnectionPoolConf` API to query the connection pool type.
-                     * @param ConnectionPoolType Connection pool type.
+                     * @param _connectionPoolType Connection pool type.
 You can use the `DescribeProxyConnectionPoolConf` API to query the connection pool type.
+                     * 
                      */
                     void SetConnectionPoolType(const std::string& _connectionPoolType);
 
                     /**
                      * 判断参数 ConnectionPoolType 是否已赋值
                      * @return ConnectionPoolType 是否已赋值
+                     * 
                      */
                     bool ConnectionPoolTypeHasBeenSet() const;
 
                     /**
                      * 获取Connection persistence timeout in seconds
                      * @return PoolConnectionTimeOut Connection persistence timeout in seconds
+                     * 
                      */
                     int64_t GetPoolConnectionTimeOut() const;
 
                     /**
                      * 设置Connection persistence timeout in seconds
-                     * @param PoolConnectionTimeOut Connection persistence timeout in seconds
+                     * @param _poolConnectionTimeOut Connection persistence timeout in seconds
+                     * 
                      */
                     void SetPoolConnectionTimeOut(const int64_t& _poolConnectionTimeOut);
 
                     /**
                      * 判断参数 PoolConnectionTimeOut 是否已赋值
                      * @return PoolConnectionTimeOut 是否已赋值
+                     * 
                      */
                     bool PoolConnectionTimeOutHasBeenSet() const;
 

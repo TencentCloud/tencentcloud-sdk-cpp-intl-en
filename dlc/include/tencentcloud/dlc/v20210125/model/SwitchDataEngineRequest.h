@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The name of the primary cluster.
                      * @return DataEngineName The name of the primary cluster.
+                     * 
                      */
                     std::string GetDataEngineName() const;
 
                     /**
                      * 设置The name of the primary cluster.
-                     * @param DataEngineName The name of the primary cluster.
+                     * @param _dataEngineName The name of the primary cluster.
+                     * 
                      */
                     void SetDataEngineName(const std::string& _dataEngineName);
 
                     /**
                      * 判断参数 DataEngineName 是否已赋值
                      * @return DataEngineName 是否已赋值
+                     * 
                      */
                     bool DataEngineNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to start the standby cluster.
                      * @return StartStandbyCluster Whether to start the standby cluster.
+                     * 
                      */
                     bool GetStartStandbyCluster() const;
 
                     /**
                      * 设置Whether to start the standby cluster.
-                     * @param StartStandbyCluster Whether to start the standby cluster.
+                     * @param _startStandbyCluster Whether to start the standby cluster.
+                     * 
                      */
                     void SetStartStandbyCluster(const bool& _startStandbyCluster);
 
                     /**
                      * 判断参数 StartStandbyCluster 是否已赋值
                      * @return StartStandbyCluster 是否已赋值
+                     * 
                      */
                     bool StartStandbyClusterHasBeenSet() const;
 

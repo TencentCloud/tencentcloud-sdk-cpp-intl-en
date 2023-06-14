@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Custom response configuration error code.
                      * @return Code Custom response configuration error code.
+                     * 
                      */
                     int64_t GetCode() const;
 
                     /**
                      * 设置Custom response configuration error code.
-                     * @param Code Custom response configuration error code.
+                     * @param _code Custom response configuration error code.
+                     * 
                      */
                     void SetCode(const int64_t& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取Custom response configuration error message.
                      * @return Msg Custom response configuration error message.
+                     * 
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 设置Custom response configuration error message.
-                     * @param Msg Custom response configuration error message.
+                     * @param _msg Custom response configuration error message.
+                     * 
                      */
                     void SetMsg(const std::string& _msg);
 
                     /**
                      * 判断参数 Msg 是否已赋值
                      * @return Msg 是否已赋值
+                     * 
                      */
                     bool MsgHasBeenSet() const;
 
                     /**
                      * 获取Custom response configuration error code remarks.
                      * @return Desc Custom response configuration error code remarks.
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Custom response configuration error code remarks.
-                     * @param Desc Custom response configuration error code remarks.
+                     * @param _desc Custom response configuration error code remarks.
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
                     /**
                      * 获取Custom error code conversion.
                      * @return ConvertedCode Custom error code conversion.
+                     * 
                      */
                     int64_t GetConvertedCode() const;
 
                     /**
                      * 设置Custom error code conversion.
-                     * @param ConvertedCode Custom error code conversion.
+                     * @param _convertedCode Custom error code conversion.
+                     * 
                      */
                     void SetConvertedCode(const int64_t& _convertedCode);
 
                     /**
                      * 判断参数 ConvertedCode 是否已赋值
                      * @return ConvertedCode 是否已赋值
+                     * 
                      */
                     bool ConvertedCodeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable error code conversion.
                      * @return NeedConvert Whether to enable error code conversion.
+                     * 
                      */
                     bool GetNeedConvert() const;
 
                     /**
                      * 设置Whether to enable error code conversion.
-                     * @param NeedConvert Whether to enable error code conversion.
+                     * @param _needConvert Whether to enable error code conversion.
+                     * 
                      */
                     void SetNeedConvert(const bool& _needConvert);
 
                     /**
                      * 判断参数 NeedConvert 是否已赋值
                      * @return NeedConvert 是否已赋值
+                     * 
                      */
                     bool NeedConvertHasBeenSet() const;
 

@@ -53,180 +53,210 @@ namespace TencentCloud
                     /**
                      * 获取Node pool ID
                      * @return NodePoolId Node pool ID
+                     * 
                      */
                     std::string GetNodePoolId() const;
 
                     /**
                      * 设置Node pool ID
-                     * @param NodePoolId Node pool ID
+                     * @param _nodePoolId Node pool ID
+                     * 
                      */
                     void SetNodePoolId(const std::string& _nodePoolId);
 
                     /**
                      * 判断参数 NodePoolId 是否已赋值
                      * @return NodePoolId 是否已赋值
+                     * 
                      */
                     bool NodePoolIdHasBeenSet() const;
 
                     /**
                      * 获取Node pool name
                      * @return Name Node pool name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node pool name
-                     * @param Name Node pool name
+                     * @param _name Node pool name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Cluster instance ID
                      * @return ClusterInstanceId Cluster instance ID
+                     * 
                      */
                     std::string GetClusterInstanceId() const;
 
                     /**
                      * 设置Cluster instance ID
-                     * @param ClusterInstanceId Cluster instance ID
+                     * @param _clusterInstanceId Cluster instance ID
+                     * 
                      */
                     void SetClusterInstanceId(const std::string& _clusterInstanceId);
 
                     /**
                      * 判断参数 ClusterInstanceId 是否已赋值
                      * @return ClusterInstanceId 是否已赋值
+                     * 
                      */
                     bool ClusterInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
                      * @return LifeState The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
+                     * 
                      */
                     std::string GetLifeState() const;
 
                     /**
                      * 设置The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
-                     * @param LifeState The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
+                     * @param _lifeState The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
+                     * 
                      */
                     void SetLifeState(const std::string& _lifeState);
 
                     /**
                      * 判断参数 LifeState 是否已赋值
                      * @return LifeState 是否已赋值
+                     * 
                      */
                     bool LifeStateHasBeenSet() const;
 
                     /**
                      * 获取Launch configuration ID
                      * @return LaunchConfigurationId Launch configuration ID
+                     * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
                      * 设置Launch configuration ID
-                     * @param LaunchConfigurationId Launch configuration ID
+                     * @param _launchConfigurationId Launch configuration ID
+                     * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
 
                     /**
                      * 判断参数 LaunchConfigurationId 是否已赋值
                      * @return LaunchConfigurationId 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationIdHasBeenSet() const;
 
                     /**
                      * 获取Auto-scaling group ID
                      * @return AutoscalingGroupId Auto-scaling group ID
+                     * 
                      */
                     std::string GetAutoscalingGroupId() const;
 
                     /**
                      * 设置Auto-scaling group ID
-                     * @param AutoscalingGroupId Auto-scaling group ID
+                     * @param _autoscalingGroupId Auto-scaling group ID
+                     * 
                      */
                     void SetAutoscalingGroupId(const std::string& _autoscalingGroupId);
 
                     /**
                      * 判断参数 AutoscalingGroupId 是否已赋值
                      * @return AutoscalingGroupId 是否已赋值
+                     * 
                      */
                     bool AutoscalingGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Labels
                      * @return Labels Labels
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Labels
-                     * @param Labels Labels
+                     * @param _labels Labels
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
                     /**
                      * 获取Array of taint
                      * @return Taints Array of taint
+                     * 
                      */
                     std::vector<Taint> GetTaints() const;
 
                     /**
                      * 设置Array of taint
-                     * @param Taints Array of taint
+                     * @param _taints Array of taint
+                     * 
                      */
                     void SetTaints(const std::vector<Taint>& _taints);
 
                     /**
                      * 判断参数 Taints 是否已赋值
                      * @return Taints 是否已赋值
+                     * 
                      */
                     bool TaintsHasBeenSet() const;
 
                     /**
                      * 获取Node list
                      * @return NodeCountSummary Node list
+                     * 
                      */
                     NodeCountSummary GetNodeCountSummary() const;
 
                     /**
                      * 设置Node list
-                     * @param NodeCountSummary Node list
+                     * @param _nodeCountSummary Node list
+                     * 
                      */
                     void SetNodeCountSummary(const NodeCountSummary& _nodeCountSummary);
 
                     /**
                      * 判断参数 NodeCountSummary 是否已赋值
                      * @return NodeCountSummary 是否已赋值
+                     * 
                      */
                     bool NodeCountSummaryHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return AutoscalingGroupStatus 
+                     * 
                      */
                     std::string GetAutoscalingGroupStatus() const;
 
                     /**
                      * 设置
-                     * @param AutoscalingGroupStatus 
+                     * @param _autoscalingGroupStatus 
+                     * 
                      */
                     void SetAutoscalingGroupStatus(const std::string& _autoscalingGroupStatus);
 
                     /**
                      * 判断参数 AutoscalingGroupStatus 是否已赋值
                      * @return AutoscalingGroupStatus 是否已赋值
+                     * 
                      */
                     bool AutoscalingGroupStatusHasBeenSet() const;
 
@@ -235,20 +265,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MaxNodesNum Maximum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetMaxNodesNum() const;
 
                     /**
                      * 设置Maximum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param MaxNodesNum Maximum number of nodes
+                     * @param _maxNodesNum Maximum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetMaxNodesNum(const int64_t& _maxNodesNum);
 
                     /**
                      * 判断参数 MaxNodesNum 是否已赋值
                      * @return MaxNodesNum 是否已赋值
+                     * 
                      */
                     bool MaxNodesNumHasBeenSet() const;
 
@@ -257,20 +290,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MinNodesNum Minimum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetMinNodesNum() const;
 
                     /**
                      * 设置Minimum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param MinNodesNum Minimum number of nodes
+                     * @param _minNodesNum Minimum number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetMinNodesNum(const int64_t& _minNodesNum);
 
                     /**
                      * 判断参数 MinNodesNum 是否已赋值
                      * @return MinNodesNum 是否已赋值
+                     * 
                      */
                     bool MinNodesNumHasBeenSet() const;
 
@@ -279,20 +315,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return DesiredNodesNum Desired number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetDesiredNodesNum() const;
 
                     /**
                      * 设置Desired number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param DesiredNodesNum Desired number of nodes
+                     * @param _desiredNodesNum Desired number of nodes
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetDesiredNodesNum(const int64_t& _desiredNodesNum);
 
                     /**
                      * 判断参数 DesiredNodesNum 是否已赋值
                      * @return DesiredNodesNum 是否已赋值
+                     * 
                      */
                     bool DesiredNodesNumHasBeenSet() const;
 
@@ -301,20 +340,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return NodePoolOs The operating system of the node pool
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetNodePoolOs() const;
 
                     /**
                      * 设置The operating system of the node pool
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param NodePoolOs The operating system of the node pool
+                     * @param _nodePoolOs The operating system of the node pool
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetNodePoolOs(const std::string& _nodePoolOs);
 
                     /**
                      * 判断参数 NodePoolOs 是否已赋值
                      * @return NodePoolOs 是否已赋值
+                     * 
                      */
                     bool NodePoolOsHasBeenSet() const;
 
@@ -323,20 +365,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetOsCustomizeType() const;
 
                     /**
                      * 设置Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+                     * @param _osCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetOsCustomizeType(const std::string& _osCustomizeType);
 
                     /**
                      * 判断参数 OsCustomizeType 是否已赋值
                      * @return OsCustomizeType 是否已赋值
+                     * 
                      */
                     bool OsCustomizeTypeHasBeenSet() const;
 
@@ -345,20 +390,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ImageId Image ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
@@ -367,20 +415,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return DesiredPodNum This parameter is required when the custom PodCIDR mode is enabled for the cluster.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     int64_t GetDesiredPodNum() const;
 
                     /**
                      * 设置This parameter is required when the custom PodCIDR mode is enabled for the cluster.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param DesiredPodNum This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+                     * @param _desiredPodNum This parameter is required when the custom PodCIDR mode is enabled for the cluster.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetDesiredPodNum(const int64_t& _desiredPodNum);
 
                     /**
                      * 判断参数 DesiredPodNum 是否已赋值
                      * @return DesiredPodNum 是否已赋值
+                     * 
                      */
                     bool DesiredPodNumHasBeenSet() const;
 
@@ -389,20 +440,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return UserScript Custom script
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetUserScript() const;
 
                     /**
                      * 设置Custom script
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param UserScript Custom script
+                     * @param _userScript Custom script
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetUserScript(const std::string& _userScript);
 
                     /**
                      * 判断参数 UserScript 是否已赋值
                      * @return UserScript 是否已赋值
+                     * 
                      */
                     bool UserScriptHasBeenSet() const;
 
@@ -411,20 +465,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tags Resource tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Resource tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Tags Resource tag
+                     * @param _tags Resource tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -433,20 +490,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DeletionProtection Whether Deletion Protection is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetDeletionProtection() const;
 
                     /**
                      * 设置Whether Deletion Protection is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DeletionProtection Whether Deletion Protection is enabled
+                     * @param _deletionProtection Whether Deletion Protection is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeletionProtection(const bool& _deletionProtection);
 
                     /**
                      * 判断参数 DeletionProtection 是否已赋值
                      * @return DeletionProtection 是否已赋值
+                     * 
                      */
                     bool DeletionProtectionHasBeenSet() const;
 

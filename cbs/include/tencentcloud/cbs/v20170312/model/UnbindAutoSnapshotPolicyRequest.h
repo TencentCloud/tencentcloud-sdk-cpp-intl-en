@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of cloud disk IDs scheduled snapshot policy to be unbound from.
                      * @return DiskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
+                     * 
                      */
                     std::vector<std::string> GetDiskIds() const;
 
                     /**
                      * 设置List of cloud disk IDs scheduled snapshot policy to be unbound from.
-                     * @param DiskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
+                     * @param _diskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
+                     * 
                      */
                     void SetDiskIds(const std::vector<std::string>& _diskIds);
 
                     /**
                      * 判断参数 DiskIds 是否已赋值
                      * @return DiskIds 是否已赋值
+                     * 
                      */
                     bool DiskIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of scheduled snapshot policy to be unbound.
                      * @return AutoSnapshotPolicyId ID of scheduled snapshot policy to be unbound.
+                     * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
                      * 设置ID of scheduled snapshot policy to be unbound.
-                     * @param AutoSnapshotPolicyId ID of scheduled snapshot policy to be unbound.
+                     * @param _autoSnapshotPolicyId ID of scheduled snapshot policy to be unbound.
+                     * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
 
                     /**
                      * 判断参数 AutoSnapshotPolicyId 是否已赋值
                      * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 

@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Time window on Monday in the format of 02:00-06:00
                      * @return Monday Time window on Monday in the format of 02:00-06:00
+                     * 
                      */
                     std::string GetMonday() const;
 
                     /**
                      * 设置Time window on Monday in the format of 02:00-06:00
-                     * @param Monday Time window on Monday in the format of 02:00-06:00
+                     * @param _monday Time window on Monday in the format of 02:00-06:00
+                     * 
                      */
                     void SetMonday(const std::string& _monday);
 
                     /**
                      * 判断参数 Monday 是否已赋值
                      * @return Monday 是否已赋值
+                     * 
                      */
                     bool MondayHasBeenSet() const;
 
                     /**
                      * 获取Time window on Tuesday in the format of 02:00-06:00
                      * @return Tuesday Time window on Tuesday in the format of 02:00-06:00
+                     * 
                      */
                     std::string GetTuesday() const;
 
                     /**
                      * 设置Time window on Tuesday in the format of 02:00-06:00
-                     * @param Tuesday Time window on Tuesday in the format of 02:00-06:00
+                     * @param _tuesday Time window on Tuesday in the format of 02:00-06:00
+                     * 
                      */
                     void SetTuesday(const std::string& _tuesday);
 
                     /**
                      * 判断参数 Tuesday 是否已赋值
                      * @return Tuesday 是否已赋值
+                     * 
                      */
                     bool TuesdayHasBeenSet() const;
 
                     /**
                      * 获取Time window on Wednesday in the format of 02:00-06:00
                      * @return Wednesday Time window on Wednesday in the format of 02:00-06:00
+                     * 
                      */
                     std::string GetWednesday() const;
 
                     /**
                      * 设置Time window on Wednesday in the format of 02:00-06:00
-                     * @param Wednesday Time window on Wednesday in the format of 02:00-06:00
+                     * @param _wednesday Time window on Wednesday in the format of 02:00-06:00
+                     * 
                      */
                     void SetWednesday(const std::string& _wednesday);
 
                     /**
                      * 判断参数 Wednesday 是否已赋值
                      * @return Wednesday 是否已赋值
+                     * 
                      */
                     bool WednesdayHasBeenSet() const;
 
                     /**
                      * 获取Time window on Thursday in the format of 02:00-06:00
                      * @return Thursday Time window on Thursday in the format of 02:00-06:00
+                     * 
                      */
                     std::string GetThursday() const;
 
                     /**
                      * 设置Time window on Thursday in the format of 02:00-06:00
-                     * @param Thursday Time window on Thursday in the format of 02:00-06:00
+                     * @param _thursday Time window on Thursday in the format of 02:00-06:00
+                     * 
                      */
                     void SetThursday(const std::string& _thursday);
 
                     /**
                      * 判断参数 Thursday 是否已赋值
                      * @return Thursday 是否已赋值
+                     * 
                      */
                     bool ThursdayHasBeenSet() const;
 
                     /**
                      * 获取Time window on Friday in the format of 02:00-06:00
                      * @return Friday Time window on Friday in the format of 02:00-06:00
+                     * 
                      */
                     std::string GetFriday() const;
 
                     /**
                      * 设置Time window on Friday in the format of 02:00-06:00
-                     * @param Friday Time window on Friday in the format of 02:00-06:00
+                     * @param _friday Time window on Friday in the format of 02:00-06:00
+                     * 
                      */
                     void SetFriday(const std::string& _friday);
 
                     /**
                      * 判断参数 Friday 是否已赋值
                      * @return Friday 是否已赋值
+                     * 
                      */
                     bool FridayHasBeenSet() const;
 
                     /**
                      * 获取Time window on Saturday in the format of 02:00-06:00
                      * @return Saturday Time window on Saturday in the format of 02:00-06:00
+                     * 
                      */
                     std::string GetSaturday() const;
 
                     /**
                      * 设置Time window on Saturday in the format of 02:00-06:00
-                     * @param Saturday Time window on Saturday in the format of 02:00-06:00
+                     * @param _saturday Time window on Saturday in the format of 02:00-06:00
+                     * 
                      */
                     void SetSaturday(const std::string& _saturday);
 
                     /**
                      * 判断参数 Saturday 是否已赋值
                      * @return Saturday 是否已赋值
+                     * 
                      */
                     bool SaturdayHasBeenSet() const;
 
                     /**
                      * 获取Time window on Sunday in the format of 02:00-06:00
                      * @return Sunday Time window on Sunday in the format of 02:00-06:00
+                     * 
                      */
                     std::string GetSunday() const;
 
                     /**
                      * 设置Time window on Sunday in the format of 02:00-06:00
-                     * @param Sunday Time window on Sunday in the format of 02:00-06:00
+                     * @param _sunday Time window on Sunday in the format of 02:00-06:00
+                     * 
                      */
                     void SetSunday(const std::string& _sunday);
 
                     /**
                      * 判断参数 Sunday 是否已赋值
                      * @return Sunday 是否已赋值
+                     * 
                      */
                     bool SundayHasBeenSet() const;
 
                     /**
                      * 获取Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
                      * @return BackupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     * 
                      */
                     std::string GetBackupPeriodStrategy() const;
 
                     /**
                      * 设置Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
-                     * @param BackupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     * @param _backupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     * 
                      */
                     void SetBackupPeriodStrategy(const std::string& _backupPeriodStrategy);
 
                     /**
                      * 判断参数 BackupPeriodStrategy 是否已赋值
                      * @return BackupPeriodStrategy 是否已赋值
+                     * 
                      */
                     bool BackupPeriodStrategyHasBeenSet() const;
 
                     /**
                      * 获取If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
                      * @return Days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     * 
                      */
                     std::vector<int64_t> GetDays() const;
 
                     /**
                      * 设置If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
-                     * @param Days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     * @param _days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     * 
                      */
                     void SetDays(const std::vector<int64_t>& _days);
 
                     /**
                      * 判断参数 Days 是否已赋值
                      * @return Days 是否已赋值
+                     * 
                      */
                     bool DaysHasBeenSet() const;
 
                     /**
                      * 获取Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
                      * @return BackupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     * 
                      */
                     std::string GetBackupPeriodTime() const;
 
                     /**
                      * 设置Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
-                     * @param BackupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     * @param _backupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     * 
                      */
                     void SetBackupPeriodTime(const std::string& _backupPeriodTime);
 
                     /**
                      * 判断参数 BackupPeriodTime 是否已赋值
                      * @return BackupPeriodTime 是否已赋值
+                     * 
                      */
                     bool BackupPeriodTimeHasBeenSet() const;
 

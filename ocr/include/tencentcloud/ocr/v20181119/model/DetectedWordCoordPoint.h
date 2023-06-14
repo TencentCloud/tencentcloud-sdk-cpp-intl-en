@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Coordinates of a word’s four corners in a clockwise order on the input image, starting from the upper-left corner
                      * @return WordCoordinate Coordinates of a word’s four corners in a clockwise order on the input image, starting from the upper-left corner
+                     * 
                      */
                     std::vector<Coord> GetWordCoordinate() const;
 
                     /**
                      * 设置Coordinates of a word’s four corners in a clockwise order on the input image, starting from the upper-left corner
-                     * @param WordCoordinate Coordinates of a word’s four corners in a clockwise order on the input image, starting from the upper-left corner
+                     * @param _wordCoordinate Coordinates of a word’s four corners in a clockwise order on the input image, starting from the upper-left corner
+                     * 
                      */
                     void SetWordCoordinate(const std::vector<Coord>& _wordCoordinate);
 
                     /**
                      * 判断参数 WordCoordinate 是否已赋值
                      * @return WordCoordinate 是否已赋值
+                     * 
                      */
                     bool WordCoordinateHasBeenSet() const;
 

@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return ImgReviewInfo Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     TerrorismImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
                      * 设置Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
+                     * @param _imgReviewInfo Parameters for recognition of terrorism content in images
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetImgReviewInfo(const TerrorismImgReviewTemplateInfo& _imgReviewInfo);
 
                     /**
                      * 判断参数 ImgReviewInfo 是否已赋值
                      * @return ImgReviewInfo 是否已赋值
+                     * 
                      */
                     bool ImgReviewInfoHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
                      * @return OcrReviewInfo Parameters for OCR-based recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     TerrorismOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
                      * 设置Parameters for OCR-based recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+                     * @param _ocrReviewInfo Parameters for OCR-based recognition of terrorism content
 Note: This field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfo& _ocrReviewInfo);
 
                     /**
                      * 判断参数 OcrReviewInfo 是否已赋值
                      * @return OcrReviewInfo 是否已赋值
+                     * 
                      */
                     bool OcrReviewInfoHasBeenSet() const;
 

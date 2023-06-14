@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Network protocol. Valid values: TCP or UDP.
                      * @return IpProtocol Network protocol. Valid values: TCP or UDP.
+                     * 
                      */
                     std::string GetIpProtocol() const;
 
                     /**
                      * 设置Network protocol. Valid values: TCP or UDP.
-                     * @param IpProtocol Network protocol. Valid values: TCP or UDP.
+                     * @param _ipProtocol Network protocol. Valid values: TCP or UDP.
+                     * 
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
 
                     /**
                      * 判断参数 IpProtocol 是否已赋值
                      * @return IpProtocol 是否已赋值
+                     * 
                      */
                     bool IpProtocolHasBeenSet() const;
 
                     /**
                      * 获取Elastic IP.
                      * @return PublicIpAddress Elastic IP.
+                     * 
                      */
                     std::string GetPublicIpAddress() const;
 
                     /**
                      * 设置Elastic IP.
-                     * @param PublicIpAddress Elastic IP.
+                     * @param _publicIpAddress Elastic IP.
+                     * 
                      */
                     void SetPublicIpAddress(const std::string& _publicIpAddress);
 
                     /**
                      * 判断参数 PublicIpAddress 是否已赋值
                      * @return PublicIpAddress 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressHasBeenSet() const;
 
                     /**
                      * 获取Public port.
                      * @return PublicPort Public port.
+                     * 
                      */
                     int64_t GetPublicPort() const;
 
                     /**
                      * 设置Public port.
-                     * @param PublicPort Public port.
+                     * @param _publicPort Public port.
+                     * 
                      */
                     void SetPublicPort(const int64_t& _publicPort);
 
                     /**
                      * 判断参数 PublicPort 是否已赋值
                      * @return PublicPort 是否已赋值
+                     * 
                      */
                     bool PublicPortHasBeenSet() const;
 
                     /**
                      * 获取Private address.
                      * @return PrivateIpAddress Private address.
+                     * 
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
                      * 设置Private address.
-                     * @param PrivateIpAddress Private address.
+                     * @param _privateIpAddress Private address.
+                     * 
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
                     /**
                      * 判断参数 PrivateIpAddress 是否已赋值
                      * @return PrivateIpAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressHasBeenSet() const;
 
                     /**
                      * 获取Private port.
                      * @return PrivatePort Private port.
+                     * 
                      */
                     int64_t GetPrivatePort() const;
 
                     /**
                      * 设置Private port.
-                     * @param PrivatePort Private port.
+                     * @param _privatePort Private port.
+                     * 
                      */
                     void SetPrivatePort(const int64_t& _privatePort);
 
                     /**
                      * 判断参数 PrivatePort 是否已赋值
                      * @return PrivatePort 是否已赋值
+                     * 
                      */
                     bool PrivatePortHasBeenSet() const;
 
                     /**
                      * 获取The description of NAT firewall forwarding rules.
                      * @return Description The description of NAT firewall forwarding rules.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置The description of NAT firewall forwarding rules.
-                     * @param Description The description of NAT firewall forwarding rules.
+                     * @param _description The description of NAT firewall forwarding rules.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Video splitting template ID.
                      * @return Definition Video splitting template ID.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Video splitting template ID.
-                     * @param Definition Video splitting template ID.
+                     * @param _definition Video splitting template ID.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

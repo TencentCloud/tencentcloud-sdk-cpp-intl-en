@@ -55,12 +55,14 @@ If `Key` is ProductName, `value` indicates the name of a Tencent Cloud product i
 If `Key` is `ProductInstanceId`, `value` indicates the ID of a Tencent Cloud product instance;
 If `Key` is `ProductType`, `value` indicates the Tencent Cloud product type (cvm: CVM, clb: CLB);
 If `Key` is `IP`, `value` indicates the IP of a Tencent Cloud product instance;
+                     * 
                      */
                     std::vector<KeyValueRecord> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

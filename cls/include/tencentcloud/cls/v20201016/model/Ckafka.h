@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取CKafka VIP
                      * @return Vip CKafka VIP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置CKafka VIP
-                     * @param Vip CKafka VIP
+                     * @param _vip CKafka VIP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取CKafka Vport
                      * @return Vport CKafka Vport
+                     * 
                      */
                     std::string GetVport() const;
 
                     /**
                      * 设置CKafka Vport
-                     * @param Vport CKafka Vport
+                     * @param _vport CKafka Vport
+                     * 
                      */
                     void SetVport(const std::string& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
                     /**
                      * 获取CKafka instance ID
                      * @return InstanceId CKafka instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置CKafka instance ID
-                     * @param InstanceId CKafka instance ID
+                     * @param _instanceId CKafka instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取CKafka instance name
                      * @return InstanceName CKafka instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置CKafka instance name
-                     * @param InstanceName CKafka instance name
+                     * @param _instanceName CKafka instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取CKafka topic ID
                      * @return TopicId CKafka topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置CKafka topic ID
-                     * @param TopicId CKafka topic ID
+                     * @param _topicId CKafka topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取CKafka topic name
                      * @return TopicName CKafka topic name
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置CKafka topic name
-                     * @param TopicName CKafka topic name
+                     * @param _topicName CKafka topic name
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 

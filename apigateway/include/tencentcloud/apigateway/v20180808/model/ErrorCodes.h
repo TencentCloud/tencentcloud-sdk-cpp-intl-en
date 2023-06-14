@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Code Custom response configuration error code.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCode() const;
 
                     /**
                      * 设置Custom response configuration error code.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Code Custom response configuration error code.
+                     * @param _code Custom response configuration error code.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCode(const int64_t& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Msg Custom response configuration error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 设置Custom response configuration error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Msg Custom response configuration error message.
+                     * @param _msg Custom response configuration error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsg(const std::string& _msg);
 
                     /**
                      * 判断参数 Msg 是否已赋值
                      * @return Msg 是否已赋值
+                     * 
                      */
                     bool MsgHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Desc Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Desc Custom response configuration error code remarks.
+                     * @param _desc Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ConvertedCode Custom error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetConvertedCode() const;
 
                     /**
                      * 设置Custom error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConvertedCode Custom error code conversion.
+                     * @param _convertedCode Custom error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConvertedCode(const int64_t& _convertedCode);
 
                     /**
                      * 判断参数 ConvertedCode 是否已赋值
                      * @return ConvertedCode 是否已赋值
+                     * 
                      */
                     bool ConvertedCodeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NeedConvert Whether to enable error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetNeedConvert() const;
 
                     /**
                      * 设置Whether to enable error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NeedConvert Whether to enable error code conversion.
+                     * @param _needConvert Whether to enable error code conversion.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNeedConvert(const bool& _needConvert);
 
                     /**
                      * 判断参数 NeedConvert 是否已赋值
                      * @return NeedConvert 是否已赋值
+                     * 
                      */
                     bool NeedConvertHasBeenSet() const;
 

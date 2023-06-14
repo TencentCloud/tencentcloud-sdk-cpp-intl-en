@@ -50,36 +50,42 @@ Examples: {'InstanceFamilyName': 'Standard S1', 'InstanceFamily': 'S1'}, {'Insta
                     /**
                      * 获取Full name of the model family.
                      * @return InstanceFamilyName Full name of the model family.
+                     * 
                      */
                     std::string GetInstanceFamilyName() const;
 
                     /**
                      * 设置Full name of the model family.
-                     * @param InstanceFamilyName Full name of the model family.
+                     * @param _instanceFamilyName Full name of the model family.
+                     * 
                      */
                     void SetInstanceFamilyName(const std::string& _instanceFamilyName);
 
                     /**
                      * 判断参数 InstanceFamilyName 是否已赋值
                      * @return InstanceFamilyName 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyNameHasBeenSet() const;
 
                     /**
                      * 获取Acronym of the model family.
                      * @return InstanceFamily Acronym of the model family.
+                     * 
                      */
                     std::string GetInstanceFamily() const;
 
                     /**
                      * 设置Acronym of the model family.
-                     * @param InstanceFamily Acronym of the model family.
+                     * @param _instanceFamily Acronym of the model family.
+                     * 
                      */
                     void SetInstanceFamily(const std::string& _instanceFamily);
 
                     /**
                      * 判断参数 InstanceFamily 是否已赋值
                      * @return InstanceFamily 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyHasBeenSet() const;
 

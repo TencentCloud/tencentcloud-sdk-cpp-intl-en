@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取An array of template IDs to be filtered.
                      * @return TemplateIds An array of template IDs to be filtered.
+                     * 
                      */
                     std::vector<int64_t> GetTemplateIds() const;
 
                     /**
                      * 设置An array of template IDs to be filtered.
-                     * @param TemplateIds An array of template IDs to be filtered.
+                     * @param _templateIds An array of template IDs to be filtered.
+                     * 
                      */
                     void SetTemplateIds(const std::vector<int64_t>& _templateIds);
 
                     /**
                      * 判断参数 TemplateIds 是否已赋值
                      * @return TemplateIds 是否已赋值
+                     * 
                      */
                     bool TemplateIdsHasBeenSet() const;
 
                     /**
                      * 获取An array of domain names to be filtered.
                      * @return DomainNames An array of domain names to be filtered.
+                     * 
                      */
                     std::vector<std::string> GetDomainNames() const;
 
                     /**
                      * 设置An array of domain names to be filtered.
-                     * @param DomainNames An array of domain names to be filtered.
+                     * @param _domainNames An array of domain names to be filtered.
+                     * 
                      */
                     void SetDomainNames(const std::vector<std::string>& _domainNames);
 
                     /**
                      * 判断参数 DomainNames 是否已赋值
                      * @return DomainNames 是否已赋值
+                     * 
                      */
                     bool DomainNamesHasBeenSet() const;
 

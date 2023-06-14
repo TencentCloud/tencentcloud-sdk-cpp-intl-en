@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取The watermark type. Valid values: `0` (default): Image; `1`: Text.
                      * @return WaterMarkType The watermark type. Valid values: `0` (default): Image; `1`: Text.
+                     * 
                      */
                     uint64_t GetWaterMarkType() const;
 
                     /**
                      * 设置The watermark type. Valid values: `0` (default): Image; `1`: Text.
-                     * @param WaterMarkType The watermark type. Valid values: `0` (default): Image; `1`: Text.
+                     * @param _waterMarkType The watermark type. Valid values: `0` (default): Image; `1`: Text.
+                     * 
                      */
                     void SetWaterMarkType(const uint64_t& _waterMarkType);
 
                     /**
                      * 判断参数 WaterMarkType 是否已赋值
                      * @return WaterMarkType 是否已赋值
+                     * 
                      */
                     bool WaterMarkTypeHasBeenSet() const;
 
                     /**
                      * 获取The watermark image information. This parameter is required if `WaterMarkType` is 0.
                      * @return WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
+                     * 
                      */
                     McuWaterMarkImage GetWaterMarkImage() const;
 
                     /**
                      * 设置The watermark image information. This parameter is required if `WaterMarkType` is 0.
-                     * @param WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
+                     * @param _waterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
+                     * 
                      */
                     void SetWaterMarkImage(const McuWaterMarkImage& _waterMarkImage);
 
                     /**
                      * 判断参数 WaterMarkImage 是否已赋值
                      * @return WaterMarkImage 是否已赋值
+                     * 
                      */
                     bool WaterMarkImageHasBeenSet() const;
 
                     /**
                      * 获取The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
                      * @return WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+                     * 
                      */
                     McuWaterMarkText GetWaterMarkText() const;
 
                     /**
                      * 设置The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-                     * @param WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+                     * @param _waterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+                     * 
                      */
                     void SetWaterMarkText(const McuWaterMarkText& _waterMarkText);
 
                     /**
                      * 判断参数 WaterMarkText 是否已赋值
                      * @return WaterMarkText 是否已赋值
+                     * 
                      */
                     bool WaterMarkTextHasBeenSet() const;
 

@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Database name.
                      * @return TableSchema Database name.
+                     * 
                      */
                     std::string GetTableSchema() const;
 
                     /**
                      * 设置Database name.
-                     * @param TableSchema Database name.
+                     * @param _tableSchema Database name.
+                     * 
                      */
                     void SetTableSchema(const std::string& _tableSchema);
 
                     /**
                      * 判断参数 TableSchema 是否已赋值
                      * @return TableSchema 是否已赋值
+                     * 
                      */
                     bool TableSchemaHasBeenSet() const;
 
                     /**
                      * 获取Data space in MB.
                      * @return DataLength Data space in MB.
+                     * 
                      */
                     double GetDataLength() const;
 
                     /**
                      * 设置Data space in MB.
-                     * @param DataLength Data space in MB.
+                     * @param _dataLength Data space in MB.
+                     * 
                      */
                     void SetDataLength(const double& _dataLength);
 
                     /**
                      * 判断参数 DataLength 是否已赋值
                      * @return DataLength 是否已赋值
+                     * 
                      */
                     bool DataLengthHasBeenSet() const;
 
                     /**
                      * 获取Index space in MB.
                      * @return IndexLength Index space in MB.
+                     * 
                      */
                     double GetIndexLength() const;
 
                     /**
                      * 设置Index space in MB.
-                     * @param IndexLength Index space in MB.
+                     * @param _indexLength Index space in MB.
+                     * 
                      */
                     void SetIndexLength(const double& _indexLength);
 
                     /**
                      * 判断参数 IndexLength 是否已赋值
                      * @return IndexLength 是否已赋值
+                     * 
                      */
                     bool IndexLengthHasBeenSet() const;
 
                     /**
                      * 获取Fragmented space in MB.
                      * @return DataFree Fragmented space in MB.
+                     * 
                      */
                     double GetDataFree() const;
 
                     /**
                      * 设置Fragmented space in MB.
-                     * @param DataFree Fragmented space in MB.
+                     * @param _dataFree Fragmented space in MB.
+                     * 
                      */
                     void SetDataFree(const double& _dataFree);
 
                     /**
                      * 判断参数 DataFree 是否已赋值
                      * @return DataFree 是否已赋值
+                     * 
                      */
                     bool DataFreeHasBeenSet() const;
 
                     /**
                      * 获取Total space usage in MB.
                      * @return TotalLength Total space usage in MB.
+                     * 
                      */
                     double GetTotalLength() const;
 
                     /**
                      * 设置Total space usage in MB.
-                     * @param TotalLength Total space usage in MB.
+                     * @param _totalLength Total space usage in MB.
+                     * 
                      */
                     void SetTotalLength(const double& _totalLength);
 
                     /**
                      * 判断参数 TotalLength 是否已赋值
                      * @return TotalLength 是否已赋值
+                     * 
                      */
                     bool TotalLengthHasBeenSet() const;
 
                     /**
                      * 获取Fragmented rate (%).
                      * @return FragRatio Fragmented rate (%).
+                     * 
                      */
                     double GetFragRatio() const;
 
                     /**
                      * 设置Fragmented rate (%).
-                     * @param FragRatio Fragmented rate (%).
+                     * @param _fragRatio Fragmented rate (%).
+                     * 
                      */
                     void SetFragRatio(const double& _fragRatio);
 
                     /**
                      * 判断参数 FragRatio 是否已赋值
                      * @return FragRatio 是否已赋值
+                     * 
                      */
                     bool FragRatioHasBeenSet() const;
 
                     /**
                      * 获取Number of rows.
                      * @return TableRows Number of rows.
+                     * 
                      */
                     int64_t GetTableRows() const;
 
                     /**
                      * 设置Number of rows.
-                     * @param TableRows Number of rows.
+                     * @param _tableRows Number of rows.
+                     * 
                      */
                     void SetTableRows(const int64_t& _tableRows);
 
                     /**
                      * 判断参数 TableRows 是否已赋值
                      * @return TableRows 是否已赋值
+                     * 
                      */
                     bool TableRowsHasBeenSet() const;
 
@@ -177,20 +198,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return PhysicalFileSize The total size of the independent physical files corresponding to all the database tables (MB).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetPhysicalFileSize() const;
 
                     /**
                      * 设置The total size of the independent physical files corresponding to all the database tables (MB).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param PhysicalFileSize The total size of the independent physical files corresponding to all the database tables (MB).
+                     * @param _physicalFileSize The total size of the independent physical files corresponding to all the database tables (MB).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPhysicalFileSize(const double& _physicalFileSize);
 
                     /**
                      * 判断参数 PhysicalFileSize 是否已赋值
                      * @return PhysicalFileSize 是否已赋值
+                     * 
                      */
                     bool PhysicalFileSizeHasBeenSet() const;
 

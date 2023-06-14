@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return Name Query type:
 `isp`: queries ISP codes
 `district`: queries codes of provinces (Mainland China) or countries/regions (outside Mainland China)
+                     * 
                      */
                     std::string GetName() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Query type:
 `isp`: queries ISP codes
 `district`: queries codes of provinces (Mainland China) or countries/regions (outside Mainland China)
-                     * @param Name Query type:
+                     * @param _name Query type:
 `isp`: queries ISP codes
 `district`: queries codes of provinces (Mainland China) or countries/regions (outside Mainland China)
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

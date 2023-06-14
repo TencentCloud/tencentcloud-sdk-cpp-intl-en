@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The information of the users to register.
                      * @return Users The information of the users to register.
+                     * 
                      */
                     std::vector<BatchUserRequest> GetUsers() const;
 
                     /**
                      * 设置The information of the users to register.
-                     * @param Users The information of the users to register.
+                     * @param _users The information of the users to register.
+                     * 
                      */
                     void SetUsers(const std::vector<BatchUserRequest>& _users);
 
                     /**
                      * 判断参数 Users 是否已赋值
                      * @return Users 是否已赋值
+                     * 
                      */
                     bool UsersHasBeenSet() const;
 

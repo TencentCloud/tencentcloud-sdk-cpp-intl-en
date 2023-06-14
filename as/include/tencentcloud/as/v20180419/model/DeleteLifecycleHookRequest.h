@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Lifecycle hook ID
                      * @return LifecycleHookId Lifecycle hook ID
+                     * 
                      */
                     std::string GetLifecycleHookId() const;
 
                     /**
                      * 设置Lifecycle hook ID
-                     * @param LifecycleHookId Lifecycle hook ID
+                     * @param _lifecycleHookId Lifecycle hook ID
+                     * 
                      */
                     void SetLifecycleHookId(const std::string& _lifecycleHookId);
 
                     /**
                      * 判断参数 LifecycleHookId 是否已赋值
                      * @return LifecycleHookId 是否已赋值
+                     * 
                      */
                     bool LifecycleHookIdHasBeenSet() const;
 

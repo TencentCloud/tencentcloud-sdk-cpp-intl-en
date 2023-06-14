@@ -58,162 +58,189 @@ namespace TencentCloud
                     /**
                      * 获取A transcoding task.
                      * @return TranscodeTask A transcoding task.
+                     * 
                      */
                     TranscodeTaskInput GetTranscodeTask() const;
 
                     /**
                      * 设置A transcoding task.
-                     * @param TranscodeTask A transcoding task.
+                     * @param _transcodeTask A transcoding task.
+                     * 
                      */
                     void SetTranscodeTask(const TranscodeTaskInput& _transcodeTask);
 
                     /**
                      * 判断参数 TranscodeTask 是否已赋值
                      * @return TranscodeTask 是否已赋值
+                     * 
                      */
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
                      * 获取An animated screenshot generation task.
                      * @return AnimatedGraphicTask An animated screenshot generation task.
+                     * 
                      */
                     AnimatedGraphicTaskInput GetAnimatedGraphicTask() const;
 
                     /**
                      * 设置An animated screenshot generation task.
-                     * @param AnimatedGraphicTask An animated screenshot generation task.
+                     * @param _animatedGraphicTask An animated screenshot generation task.
+                     * 
                      */
                     void SetAnimatedGraphicTask(const AnimatedGraphicTaskInput& _animatedGraphicTask);
 
                     /**
                      * 判断参数 AnimatedGraphicTask 是否已赋值
                      * @return AnimatedGraphicTask 是否已赋值
+                     * 
                      */
                     bool AnimatedGraphicTaskHasBeenSet() const;
 
                     /**
                      * 获取A time point screencapturing task.
                      * @return SnapshotByTimeOffsetTask A time point screencapturing task.
+                     * 
                      */
                     SnapshotByTimeOffsetTaskInput GetSnapshotByTimeOffsetTask() const;
 
                     /**
                      * 设置A time point screencapturing task.
-                     * @param SnapshotByTimeOffsetTask A time point screencapturing task.
+                     * @param _snapshotByTimeOffsetTask A time point screencapturing task.
+                     * 
                      */
                     void SetSnapshotByTimeOffsetTask(const SnapshotByTimeOffsetTaskInput& _snapshotByTimeOffsetTask);
 
                     /**
                      * 判断参数 SnapshotByTimeOffsetTask 是否已赋值
                      * @return SnapshotByTimeOffsetTask 是否已赋值
+                     * 
                      */
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
                      * 获取A sampled screencapturing task.
                      * @return SampleSnapshotTask A sampled screencapturing task.
+                     * 
                      */
                     SampleSnapshotTaskInput GetSampleSnapshotTask() const;
 
                     /**
                      * 设置A sampled screencapturing task.
-                     * @param SampleSnapshotTask A sampled screencapturing task.
+                     * @param _sampleSnapshotTask A sampled screencapturing task.
+                     * 
                      */
                     void SetSampleSnapshotTask(const SampleSnapshotTaskInput& _sampleSnapshotTask);
 
                     /**
                      * 判断参数 SampleSnapshotTask 是否已赋值
                      * @return SampleSnapshotTask 是否已赋值
+                     * 
                      */
                     bool SampleSnapshotTaskHasBeenSet() const;
 
                     /**
                      * 获取An image sprite generation task.
                      * @return ImageSpriteTask An image sprite generation task.
+                     * 
                      */
                     ImageSpriteTaskInput GetImageSpriteTask() const;
 
                     /**
                      * 设置An image sprite generation task.
-                     * @param ImageSpriteTask An image sprite generation task.
+                     * @param _imageSpriteTask An image sprite generation task.
+                     * 
                      */
                     void SetImageSpriteTask(const ImageSpriteTaskInput& _imageSpriteTask);
 
                     /**
                      * 判断参数 ImageSpriteTask 是否已赋值
                      * @return ImageSpriteTask 是否已赋值
+                     * 
                      */
                     bool ImageSpriteTaskHasBeenSet() const;
 
                     /**
                      * 获取An adaptive bitrate streaming task.
                      * @return AdaptiveDynamicStreamingTask An adaptive bitrate streaming task.
+                     * 
                      */
                     AdaptiveDynamicStreamingTaskInput GetAdaptiveDynamicStreamingTask() const;
 
                     /**
                      * 设置An adaptive bitrate streaming task.
-                     * @param AdaptiveDynamicStreamingTask An adaptive bitrate streaming task.
+                     * @param _adaptiveDynamicStreamingTask An adaptive bitrate streaming task.
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const AdaptiveDynamicStreamingTaskInput& _adaptiveDynamicStreamingTask);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingTask 是否已赋值
                      * @return AdaptiveDynamicStreamingTask 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingTaskHasBeenSet() const;
 
                     /**
                      * 获取A content moderation task.
                      * @return AiContentReviewTask A content moderation task.
+                     * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
                      * 设置A content moderation task.
-                     * @param AiContentReviewTask A content moderation task.
+                     * @param _aiContentReviewTask A content moderation task.
+                     * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
 
                     /**
                      * 判断参数 AiContentReviewTask 是否已赋值
                      * @return AiContentReviewTask 是否已赋值
+                     * 
                      */
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
                      * 获取A content analysis task.
                      * @return AiAnalysisTask A content analysis task.
+                     * 
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
                      * 设置A content analysis task.
-                     * @param AiAnalysisTask A content analysis task.
+                     * @param _aiAnalysisTask A content analysis task.
+                     * 
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
 
                     /**
                      * 判断参数 AiAnalysisTask 是否已赋值
                      * @return AiAnalysisTask 是否已赋值
+                     * 
                      */
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
                      * 获取A content recognition task.
                      * @return AiRecognitionTask A content recognition task.
+                     * 
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
                      * 设置A content recognition task.
-                     * @param AiRecognitionTask A content recognition task.
+                     * @param _aiRecognitionTask A content recognition task.
+                     * 
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
 
                     /**
                      * 判断参数 AiRecognitionTask 是否已赋值
                      * @return AiRecognitionTask 是否已赋值
+                     * 
                      */
                     bool AiRecognitionTaskHasBeenSet() const;
 

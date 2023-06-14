@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
                      * @return AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * 
                      */
                     std::string GetAccountName() const;
 
                     /**
                      * 设置Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
-                     * @param AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * @param _accountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * 
                      */
                     void SetAccountName(const std::string& _accountName);
 
                     /**
                      * 判断参数 AccountName 是否已赋值
                      * @return AccountName 是否已赋值
+                     * 
                      */
                     bool AccountNameHasBeenSet() const;
 
                     /**
                      * 获取Password, which can contain 8-64 characters.
                      * @return AccountPassword Password, which can contain 8-64 characters.
+                     * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
                      * 设置Password, which can contain 8-64 characters.
-                     * @param AccountPassword Password, which can contain 8-64 characters.
+                     * @param _accountPassword Password, which can contain 8-64 characters.
+                     * 
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
 
                     /**
                      * 判断参数 AccountPassword 是否已赋值
                      * @return AccountPassword 是否已赋值
+                     * 
                      */
                     bool AccountPasswordHasBeenSet() const;
 
                     /**
                      * 获取Host
                      * @return Host Host
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Host
-                     * @param Host Host
+                     * @param _host Host
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of user connections, which cannot be above 10,240.
                      * @return MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+                     * 
                      */
                     int64_t GetMaxUserConnections() const;
 
                     /**
                      * 设置Maximum number of user connections, which cannot be above 10,240.
-                     * @param MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+                     * @param _maxUserConnections Maximum number of user connections, which cannot be above 10,240.
+                     * 
                      */
                     void SetMaxUserConnections(const int64_t& _maxUserConnections);
 
                     /**
                      * 判断参数 MaxUserConnections 是否已赋值
                      * @return MaxUserConnections 是否已赋值
+                     * 
                      */
                     bool MaxUserConnectionsHasBeenSet() const;
 

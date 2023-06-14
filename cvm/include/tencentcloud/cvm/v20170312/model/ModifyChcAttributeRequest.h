@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取CHC host IDs
                      * @return ChcIds CHC host IDs
+                     * 
                      */
                     std::vector<std::string> GetChcIds() const;
 
                     /**
                      * 设置CHC host IDs
-                     * @param ChcIds CHC host IDs
+                     * @param _chcIds CHC host IDs
+                     * 
                      */
                     void SetChcIds(const std::vector<std::string>& _chcIds);
 
                     /**
                      * 判断参数 ChcIds 是否已赋值
                      * @return ChcIds 是否已赋值
+                     * 
                      */
                     bool ChcIdsHasBeenSet() const;
 
                     /**
                      * 获取CHC host name
                      * @return InstanceName CHC host name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置CHC host name
-                     * @param InstanceName CHC host name
+                     * @param _instanceName CHC host name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Server type
                      * @return DeviceType Server type
+                     * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
                      * 设置Server type
-                     * @param DeviceType Server type
+                     * @param _deviceType Server type
+                     * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
 
                     /**
                      * 判断参数 DeviceType 是否已赋值
                      * @return DeviceType 是否已赋值
+                     * 
                      */
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
                      * 获取Valid characters: Letters, numbers, hyphens and underscores
                      * @return BmcUser Valid characters: Letters, numbers, hyphens and underscores
+                     * 
                      */
                     std::string GetBmcUser() const;
 
                     /**
                      * 设置Valid characters: Letters, numbers, hyphens and underscores
-                     * @param BmcUser Valid characters: Letters, numbers, hyphens and underscores
+                     * @param _bmcUser Valid characters: Letters, numbers, hyphens and underscores
+                     * 
                      */
                     void SetBmcUser(const std::string& _bmcUser);
 
                     /**
                      * 判断参数 BmcUser 是否已赋值
                      * @return BmcUser 是否已赋值
+                     * 
                      */
                     bool BmcUserHasBeenSet() const;
 
                     /**
                      * 获取The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
                      * @return Password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
-                     * @param Password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+                     * @param _password The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取BMC network security group list
                      * @return BmcSecurityGroupIds BMC network security group list
+                     * 
                      */
                     std::vector<std::string> GetBmcSecurityGroupIds() const;
 
                     /**
                      * 设置BMC network security group list
-                     * @param BmcSecurityGroupIds BMC network security group list
+                     * @param _bmcSecurityGroupIds BMC network security group list
+                     * 
                      */
                     void SetBmcSecurityGroupIds(const std::vector<std::string>& _bmcSecurityGroupIds);
 
                     /**
                      * 判断参数 BmcSecurityGroupIds 是否已赋值
                      * @return BmcSecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool BmcSecurityGroupIdsHasBeenSet() const;
 

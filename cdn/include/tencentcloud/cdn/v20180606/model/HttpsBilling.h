@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取HTTPS (enabled by default), which will incur charges.
                      * @return Switch HTTPS (enabled by default), which will incur charges.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置HTTPS (enabled by default), which will incur charges.
-                     * @param Switch HTTPS (enabled by default), which will incur charges.
+                     * @param _switch HTTPS (enabled by default), which will incur charges.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

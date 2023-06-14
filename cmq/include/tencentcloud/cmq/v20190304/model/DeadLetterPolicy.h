@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeadLetterQueueName DeadLetterQueueName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeadLetterQueueName() const;
 
                     /**
                      * 设置DeadLetterQueueName
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeadLetterQueueName DeadLetterQueueName
+                     * @param _deadLetterQueueName DeadLetterQueueName
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeadLetterQueueName(const std::string& _deadLetterQueueName);
 
                     /**
                      * 判断参数 DeadLetterQueueName 是否已赋值
                      * @return DeadLetterQueueName 是否已赋值
+                     * 
                      */
                     bool DeadLetterQueueNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeadLetterQueue DeadLetterQueue
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeadLetterQueue() const;
 
                     /**
                      * 设置DeadLetterQueue
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeadLetterQueue DeadLetterQueue
+                     * @param _deadLetterQueue DeadLetterQueue
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeadLetterQueue(const std::string& _deadLetterQueue);
 
                     /**
                      * 判断参数 DeadLetterQueue 是否已赋值
                      * @return DeadLetterQueue 是否已赋值
+                     * 
                      */
                     bool DeadLetterQueueHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Policy Policy
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPolicy() const;
 
                     /**
                      * 设置Policy
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Policy Policy
+                     * @param _policy Policy
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPolicy(const uint64_t& _policy);
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxTimeToLive MaxTimeToLive
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMaxTimeToLive() const;
 
                     /**
                      * 设置MaxTimeToLive
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxTimeToLive MaxTimeToLive
+                     * @param _maxTimeToLive MaxTimeToLive
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxTimeToLive(const uint64_t& _maxTimeToLive);
 
                     /**
                      * 判断参数 MaxTimeToLive 是否已赋值
                      * @return MaxTimeToLive 是否已赋值
+                     * 
                      */
                     bool MaxTimeToLiveHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxReceiveCount MaxReceiveCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMaxReceiveCount() const;
 
                     /**
                      * 设置MaxReceiveCount
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxReceiveCount MaxReceiveCount
+                     * @param _maxReceiveCount MaxReceiveCount
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxReceiveCount(const uint64_t& _maxReceiveCount);
 
                     /**
                      * 判断参数 MaxReceiveCount 是否已赋值
                      * @return MaxReceiveCount 是否已赋值
+                     * 
                      */
                     bool MaxReceiveCountHasBeenSet() const;
 

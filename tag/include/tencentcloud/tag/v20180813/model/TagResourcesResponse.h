@@ -51,12 +51,14 @@ When tag creating and binding partially or completely fails, the returned `Faile
                      * @return FailedResources Information of failed resources.
 When tag creating and binding succeeds, the returned `FailedResources` will be empty.
 When tag creating and binding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+                     * 
                      */
                     std::vector<FailedResource> GetFailedResources() const;
 
                     /**
                      * 判断参数 FailedResources 是否已赋值
                      * @return FailedResources 是否已赋值
+                     * 
                      */
                     bool FailedResourcesHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Time range
                      * @return TimeSegment Time range
+                     * 
                      */
                     std::string GetTimeSegment() const;
 
                     /**
                      * 设置Time range
-                     * @param TimeSegment Time range
+                     * @param _timeSegment Time range
+                     * 
                      */
                     void SetTimeSegment(const std::string& _timeSegment);
 
                     /**
                      * 判断参数 TimeSegment 是否已赋值
                      * @return TimeSegment 是否已赋值
+                     * 
                      */
                     bool TimeSegmentHasBeenSet() const;
 
                     /**
                      * 获取The number of slow query statements whose execution time falls within the time range
                      * @return Count The number of slow query statements whose execution time falls within the time range
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置The number of slow query statements whose execution time falls within the time range
-                     * @param Count The number of slow query statements whose execution time falls within the time range
+                     * @param _count The number of slow query statements whose execution time falls within the time range
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

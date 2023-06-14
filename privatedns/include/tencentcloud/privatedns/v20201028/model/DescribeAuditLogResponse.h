@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of operation logs
                      * @return Data List of operation logs
+                     * 
                      */
                     std::vector<AuditLog> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

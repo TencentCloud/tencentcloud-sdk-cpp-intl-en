@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the plugin to be bound
                      * @return PluginId ID of the plugin to be bound
+                     * 
                      */
                     std::string GetPluginId() const;
 
                     /**
                      * 设置ID of the plugin to be bound
-                     * @param PluginId ID of the plugin to be bound
+                     * @param _pluginId ID of the plugin to be bound
+                     * 
                      */
                     void SetPluginId(const std::string& _pluginId);
 
                     /**
                      * 判断参数 PluginId 是否已赋值
                      * @return PluginId 是否已赋值
+                     * 
                      */
                     bool PluginIdHasBeenSet() const;
 
                     /**
                      * 获取Service ID
                      * @return ServiceId Service ID
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Service ID
-                     * @param ServiceId Service ID
+                     * @param _serviceId Service ID
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取API environment
                      * @return EnvironmentName API environment
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置API environment
-                     * @param EnvironmentName API environment
+                     * @param _environmentName API environment
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取List of APIs bound with the plugin
                      * @return ApiIds List of APIs bound with the plugin
+                     * 
                      */
                     std::vector<std::string> GetApiIds() const;
 
                     /**
                      * 设置List of APIs bound with the plugin
-                     * @param ApiIds List of APIs bound with the plugin
+                     * @param _apiIds List of APIs bound with the plugin
+                     * 
                      */
                     void SetApiIds(const std::vector<std::string>& _apiIds);
 
                     /**
                      * 判断参数 ApiIds 是否已赋值
                      * @return ApiIds 是否已赋值
+                     * 
                      */
                     bool ApiIdsHasBeenSet() const;
 

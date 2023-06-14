@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Memory size in MB
                      * @return Memory Memory size in MB
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Memory size in MB
-                     * @param Memory Memory size in MB
+                     * @param _memory Memory size in MB
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取CPU core count
                      * @return Cpu CPU core count
+                     * 
                      */
                     int64_t GetCpu() const;
 
                     /**
                      * 设置CPU core count
-                     * @param Cpu CPU core count
+                     * @param _cpu CPU core count
+                     * 
                      */
                     void SetCpu(const int64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Minimum disk size in GB
                      * @return VolumeMin Minimum disk size in GB
+                     * 
                      */
                     int64_t GetVolumeMin() const;
 
                     /**
                      * 设置Minimum disk size in GB
-                     * @param VolumeMin Minimum disk size in GB
+                     * @param _volumeMin Minimum disk size in GB
+                     * 
                      */
                     void SetVolumeMin(const int64_t& _volumeMin);
 
                     /**
                      * 判断参数 VolumeMin 是否已赋值
                      * @return VolumeMin 是否已赋值
+                     * 
                      */
                     bool VolumeMinHasBeenSet() const;
 
                     /**
                      * 获取Maximum disk size in GB
                      * @return VolumeMax Maximum disk size in GB
+                     * 
                      */
                     int64_t GetVolumeMax() const;
 
                     /**
                      * 设置Maximum disk size in GB
-                     * @param VolumeMax Maximum disk size in GB
+                     * @param _volumeMax Maximum disk size in GB
+                     * 
                      */
                     void SetVolumeMax(const int64_t& _volumeMax);
 
                     /**
                      * 判断参数 VolumeMax 是否已赋值
                      * @return VolumeMax 是否已赋值
+                     * 
                      */
                     bool VolumeMaxHasBeenSet() const;
 
                     /**
                      * 获取Disk capacity increment in GB
                      * @return VolumeStep Disk capacity increment in GB
+                     * 
                      */
                     int64_t GetVolumeStep() const;
 
                     /**
                      * 设置Disk capacity increment in GB
-                     * @param VolumeStep Disk capacity increment in GB
+                     * @param _volumeStep Disk capacity increment in GB
+                     * 
                      */
                     void SetVolumeStep(const int64_t& _volumeStep);
 
                     /**
                      * 判断参数 VolumeStep 是否已赋值
                      * @return VolumeStep 是否已赋值
+                     * 
                      */
                     bool VolumeStepHasBeenSet() const;
 
                     /**
                      * 获取IO operations per second
                      * @return Iops IO operations per second
+                     * 
                      */
                     int64_t GetIops() const;
 
                     /**
                      * 设置IO operations per second
-                     * @param Iops IO operations per second
+                     * @param _iops IO operations per second
+                     * 
                      */
                     void SetIops(const int64_t& _iops);
 
                     /**
                      * 判断参数 Iops 是否已赋值
                      * @return Iops 是否已赋值
+                     * 
                      */
                     bool IopsHasBeenSet() const;
 
                     /**
                      * 获取Application scenario description
                      * @return Info Application scenario description
+                     * 
                      */
                     std::string GetInfo() const;
 
                     /**
                      * 设置Application scenario description
-                     * @param Info Application scenario description
+                     * @param _info Application scenario description
+                     * 
                      */
                     void SetInfo(const std::string& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 
                     /**
                      * 获取Status. The value `0` indicates that this specification is available.
                      * @return Status Status. The value `0` indicates that this specification is available.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Status. The value `0` indicates that this specification is available.
-                     * @param Status Status. The value `0` indicates that this specification is available.
+                     * @param _status Status. The value `0` indicates that this specification is available.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -195,56 +219,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DeviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeviceType() const;
 
                     /**
                      * 设置Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DeviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
+                     * @param _deviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeviceType(const std::string& _deviceType);
 
                     /**
                      * 判断参数 DeviceType 是否已赋值
                      * @return DeviceType 是否已赋值
+                     * 
                      */
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
                      * 获取Engine type description. Valid values: `Innodb`, `RocksDB`.
                      * @return EngineType Engine type description. Valid values: `Innodb`, `RocksDB`.
+                     * 
                      */
                     std::string GetEngineType() const;
 
                     /**
                      * 设置Engine type description. Valid values: `Innodb`, `RocksDB`.
-                     * @param EngineType Engine type description. Valid values: `Innodb`, `RocksDB`.
+                     * @param _engineType Engine type description. Valid values: `Innodb`, `RocksDB`.
+                     * 
                      */
                     void SetEngineType(const std::string& _engineType);
 
                     /**
                      * 判断参数 EngineType 是否已赋值
                      * @return EngineType 是否已赋值
+                     * 
                      */
                     bool EngineTypeHasBeenSet() const;
 
                     /**
                      * 获取Purchasable specifications ID
                      * @return Id Purchasable specifications ID
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Purchasable specifications ID
-                     * @param Id Purchasable specifications ID
+                     * @param _id Purchasable specifications ID
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

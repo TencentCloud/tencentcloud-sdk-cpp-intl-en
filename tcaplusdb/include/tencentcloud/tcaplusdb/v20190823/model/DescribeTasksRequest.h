@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of clusters where the tasks to be queried reside
                      * @return ClusterIds List of IDs of clusters where the tasks to be queried reside
+                     * 
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
                      * 设置List of IDs of clusters where the tasks to be queried reside
-                     * @param ClusterIds List of IDs of clusters where the tasks to be queried reside
+                     * @param _clusterIds List of IDs of clusters where the tasks to be queried reside
+                     * 
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
                     /**
                      * 判断参数 ClusterIds 是否已赋值
                      * @return ClusterIds 是否已赋值
+                     * 
                      */
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of tasks to be queried
                      * @return TaskIds List of IDs of tasks to be queried
+                     * 
                      */
                     std::vector<std::string> GetTaskIds() const;
 
                     /**
                      * 设置List of IDs of tasks to be queried
-                     * @param TaskIds List of IDs of tasks to be queried
+                     * @param _taskIds List of IDs of tasks to be queried
+                     * 
                      */
                     void SetTaskIds(const std::vector<std::string>& _taskIds);
 
                     /**
                      * 判断参数 TaskIds 是否已赋值
                      * @return TaskIds 是否已赋值
+                     * 
                      */
                     bool TaskIdsHasBeenSet() const;
 
                     /**
                      * 获取Filter. Valid values: Content, TaskType, Operator, Time
                      * @return Filters Filter. Valid values: Content, TaskType, Operator, Time
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter. Valid values: Content, TaskType, Operator, Time
-                     * @param Filters Filter. Valid values: Content, TaskType, Operator, Time
+                     * @param _filters Filter. Valid values: Content, TaskType, Operator, Time
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Query list offset
                      * @return Offset Query list offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Query list offset
-                     * @param Offset Query list offset
+                     * @param _offset Query list offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results in query list
                      * @return Limit Number of returned results in query list
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results in query list
-                     * @param Limit Number of returned results in query list
+                     * @param _limit Number of returned results in query list
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

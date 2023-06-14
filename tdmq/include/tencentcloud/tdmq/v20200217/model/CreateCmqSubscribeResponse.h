@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Subscription ID
                      * @return SubscriptionId Subscription ID
+                     * 
                      */
                     std::string GetSubscriptionId() const;
 
                     /**
                      * 判断参数 SubscriptionId 是否已赋值
                      * @return SubscriptionId 是否已赋值
+                     * 
                      */
                     bool SubscriptionIdHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterID Cluster ID
+                     * 
                      */
                     std::string GetClusterID() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterID Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
                      */
                     void SetClusterID(const std::string& _clusterID);
 
                     /**
                      * 判断参数 ClusterID 是否已赋值
                      * @return ClusterID 是否已赋值
+                     * 
                      */
                     bool ClusterIDHasBeenSet() const;
 
                     /**
                      * 获取IDs of ECMs to be deleted
                      * @return EcmIdSet IDs of ECMs to be deleted
+                     * 
                      */
                     std::vector<std::string> GetEcmIdSet() const;
 
                     /**
                      * 设置IDs of ECMs to be deleted
-                     * @param EcmIdSet IDs of ECMs to be deleted
+                     * @param _ecmIdSet IDs of ECMs to be deleted
+                     * 
                      */
                     void SetEcmIdSet(const std::vector<std::string>& _ecmIdSet);
 
                     /**
                      * 判断参数 EcmIdSet 是否已赋值
                      * @return EcmIdSet 是否已赋值
+                     * 
                      */
                     bool EcmIdSetHasBeenSet() const;
 

@@ -47,90 +47,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
                      * @return StartTime Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
-                     * @param StartTime Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+                     * @param _startTime Start time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
                      * @return EndTime End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
-                     * @param EndTime End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+                     * @param _endTime End time of the log to be analyzed in the format of `2023-02-16 00:00:20`.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Sorting conditions for aggregation dimension
                      * @return AggregationConditions Sorting conditions for aggregation dimension
+                     * 
                      */
                     std::vector<AggregationCondition> GetAggregationConditions() const;
 
                     /**
                      * 设置Sorting conditions for aggregation dimension
-                     * @param AggregationConditions Sorting conditions for aggregation dimension
+                     * @param _aggregationConditions Sorting conditions for aggregation dimension
+                     * 
                      */
                     void SetAggregationConditions(const std::vector<AggregationCondition>& _aggregationConditions);
 
                     /**
                      * 判断参数 AggregationConditions 是否已赋值
                      * @return AggregationConditions 是否已赋值
+                     * 
                      */
                     bool AggregationConditionsHasBeenSet() const;
 
                     /**
                      * 获取The result set of the audit log filtered by this condition is set as the analysis Log.
                      * @return AuditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * 
                      */
                     AuditLogFilter GetAuditLogFilter() const;
 
                     /**
                      * 设置The result set of the audit log filtered by this condition is set as the analysis Log.
-                     * @param AuditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * @param _auditLogFilter The result set of the audit log filtered by this condition is set as the analysis Log.
+                     * 
                      */
                     void SetAuditLogFilter(const AuditLogFilter& _auditLogFilter);
 
                     /**
                      * 判断参数 AuditLogFilter 是否已赋值
                      * @return AuditLogFilter 是否已赋值
+                     * 
                      */
                     bool AuditLogFilterHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The key of player custom data. It should contain 1 to 1024 ASCII characters.
                      * @return Key The key of player custom data. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置The key of player custom data. It should contain 1 to 1024 ASCII characters.
-                     * @param Key The key of player custom data. It should contain 1 to 1024 ASCII characters.
+                     * @param _key The key of player custom data. It should contain 1 to 1024 ASCII characters.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取The value of player custom data. It should contain 1 to 2048 ASCII characters.
                      * @return Value The value of player custom data. It should contain 1 to 2048 ASCII characters.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置The value of player custom data. It should contain 1 to 2048 ASCII characters.
-                     * @param Value The value of player custom data. It should contain 1 to 2048 ASCII characters.
+                     * @param _value The value of player custom data. It should contain 1 to 2048 ASCII characters.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

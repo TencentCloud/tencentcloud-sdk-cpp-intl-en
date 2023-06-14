@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
                      * @return TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

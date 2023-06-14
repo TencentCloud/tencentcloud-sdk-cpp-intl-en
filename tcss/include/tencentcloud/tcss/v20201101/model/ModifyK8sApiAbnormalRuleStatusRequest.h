@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return RuleID Rule ID
+                     * 
                      */
                     std::string GetRuleID() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleID Rule ID
+                     * @param _ruleID Rule ID
+                     * 
                      */
                     void SetRuleID(const std::string& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
                     /**
                      * 获取Status of the rule. Values: `true` (Enabled), `false` (Disabled)
                      * @return Status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Status of the rule. Values: `true` (Enabled), `false` (Disabled)
-                     * @param Status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+                     * @param _status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

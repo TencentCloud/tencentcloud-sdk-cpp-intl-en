@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Current value
                      * @return CurrentValue Current value
+                     * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
                      * 设置Current value
-                     * @param CurrentValue Current value
+                     * @param _currentValue Current value
+                     * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
                     /**
                      * 判断参数 CurrentValue 是否已赋值
                      * @return CurrentValue 是否已赋值
+                     * 
                      */
                     bool CurrentValueHasBeenSet() const;
 
                     /**
                      * 获取Default value
                      * @return Default Default value
+                     * 
                      */
                     std::string GetDefault() const;
 
                     /**
                      * 设置Default value
-                     * @param Default Default value
+                     * @param _default Default value
+                     * 
                      */
                     void SetDefault(const std::string& _default);
 
                     /**
                      * 判断参数 Default 是否已赋值
                      * @return Default 是否已赋值
+                     * 
                      */
                     bool DefaultHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnumValue The collection of valid value types when parameter type is `enum`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
                      * 设置The collection of valid value types when parameter type is `enum`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnumValue The collection of valid value types when parameter type is `enum`.
+                     * @param _enumValue The collection of valid value types when parameter type is `enum`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
 
                     /**
                      * 判断参数 EnumValue 是否已赋值
                      * @return EnumValue 是否已赋值
+                     * 
                      */
                     bool EnumValueHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Max Maximum value when parameter type is `float` or `integer`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMax() const;
 
                     /**
                      * 设置Maximum value when parameter type is `float` or `integer`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Max Maximum value when parameter type is `float` or `integer`.
+                     * @param _max Maximum value when parameter type is `float` or `integer`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMax(const std::string& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
@@ -131,92 +143,107 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Min Minimum value when parameter type is `float` or `integer`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMin() const;
 
                     /**
                      * 设置Minimum value when parameter type is `float` or `integer`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Min Minimum value when parameter type is `float` or `integer`.
+                     * @param _min Minimum value when parameter type is `float` or `integer`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMin(const std::string& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
                     /**
                      * 获取Parameter name
                      * @return ParamName Parameter name
+                     * 
                      */
                     std::string GetParamName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param ParamName Parameter name
+                     * @param _paramName Parameter name
+                     * 
                      */
                     void SetParamName(const std::string& _paramName);
 
                     /**
                      * 判断参数 ParamName 是否已赋值
                      * @return ParamName 是否已赋值
+                     * 
                      */
                     bool ParamNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to restart the instance for the parameter to take effect
                      * @return NeedReboot Whether to restart the instance for the parameter to take effect
+                     * 
                      */
                     int64_t GetNeedReboot() const;
 
                     /**
                      * 设置Whether to restart the instance for the parameter to take effect
-                     * @param NeedReboot Whether to restart the instance for the parameter to take effect
+                     * @param _needReboot Whether to restart the instance for the parameter to take effect
+                     * 
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
 
                     /**
                      * 判断参数 NeedReboot 是否已赋值
                      * @return NeedReboot 是否已赋值
+                     * 
                      */
                     bool NeedRebootHasBeenSet() const;
 
                     /**
                      * 获取Parameter description
                      * @return Description Parameter description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Parameter description
-                     * @param Description Parameter description
+                     * @param _description Parameter description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
                      * @return ParamType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+                     * 
                      */
                     std::string GetParamType() const;
 
                     /**
                      * 设置Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
-                     * @param ParamType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+                     * @param _paramType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+                     * 
                      */
                     void SetParamType(const std::string& _paramType);
 
                     /**
                      * 判断参数 ParamType 是否已赋值
                      * @return ParamType 是否已赋值
+                     * 
                      */
                     bool ParamTypeHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Fuzzy query by role name
                      * @return RoleName Fuzzy query by role name
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Fuzzy query by role name
-                     * @param RoleName Fuzzy query by role name
+                     * @param _roleName Fuzzy query by role name
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
                     /**
                      * 获取Offset. If this parameter is left empty, 0 will be used by default.
                      * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. If this parameter is left empty, 0 will be used by default.
-                     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * @param _offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
                      * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * @param _limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID (required)
                      * @return ClusterId Cluster ID (required)
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID (required)
-                     * @param ClusterId Cluster ID (required)
+                     * @param _clusterId Cluster ID (required)
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -124,6 +136,7 @@ Required: no
 Filter by role name for exact query.
 Type: String
 Required: no
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -132,16 +145,18 @@ Required: no
 Filter by role name for exact query.
 Type: String
 Required: no
-                     * @param Filters * RoleName
+                     * @param _filters * RoleName
 Filter by role name for exact query.
 Type: String
 Required: no
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Person ID, which is the `PersonId` in the `CreatePerson` API.
                      * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置Person ID, which is the `PersonId` in the `CreatePerson` API.
-                     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * @param _personId Person ID, which is the `PersonId` in the `CreatePerson` API.
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 

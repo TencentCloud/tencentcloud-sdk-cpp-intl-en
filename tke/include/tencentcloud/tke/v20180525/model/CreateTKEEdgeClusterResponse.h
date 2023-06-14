@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取TKE Edge cluster ID
                      * @return ClusterId TKE Edge cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

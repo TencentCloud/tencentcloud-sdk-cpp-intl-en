@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Url Channel input URL.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Channel input URL.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Url Channel input URL.
+                     * @param _url Channel input URL.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Channel input authentication information.
                      * @return AuthInfo Channel input authentication information.
+                     * 
                      */
                     InputAuthInfo GetAuthInfo() const;
 
                     /**
                      * 设置Channel input authentication information.
-                     * @param AuthInfo Channel input authentication information.
+                     * @param _authInfo Channel input authentication information.
+                     * 
                      */
                     void SetAuthInfo(const InputAuthInfo& _authInfo);
 
                     /**
                      * 判断参数 AuthInfo 是否已赋值
                      * @return AuthInfo 是否已赋值
+                     * 
                      */
                     bool AuthInfoHasBeenSet() const;
 

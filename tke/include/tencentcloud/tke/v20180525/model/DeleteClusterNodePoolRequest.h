@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取ClusterId of a node pool
                      * @return ClusterId ClusterId of a node pool
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ClusterId of a node pool
-                     * @param ClusterId ClusterId of a node pool
+                     * @param _clusterId ClusterId of a node pool
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取IDs of node pools to delete
                      * @return NodePoolIds IDs of node pools to delete
+                     * 
                      */
                     std::vector<std::string> GetNodePoolIds() const;
 
                     /**
                      * 设置IDs of node pools to delete
-                     * @param NodePoolIds IDs of node pools to delete
+                     * @param _nodePoolIds IDs of node pools to delete
+                     * 
                      */
                     void SetNodePoolIds(const std::vector<std::string>& _nodePoolIds);
 
                     /**
                      * 判断参数 NodePoolIds 是否已赋值
                      * @return NodePoolIds 是否已赋值
+                     * 
                      */
                     bool NodePoolIdsHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether nodes in a node pool are retained when the node pool is deleted. (The nodes are removed from the cluster. However, the corresponding instances will not be terminated.)
                      * @return KeepInstance Indicates whether nodes in a node pool are retained when the node pool is deleted. (The nodes are removed from the cluster. However, the corresponding instances will not be terminated.)
+                     * 
                      */
                     bool GetKeepInstance() const;
 
                     /**
                      * 设置Indicates whether nodes in a node pool are retained when the node pool is deleted. (The nodes are removed from the cluster. However, the corresponding instances will not be terminated.)
-                     * @param KeepInstance Indicates whether nodes in a node pool are retained when the node pool is deleted. (The nodes are removed from the cluster. However, the corresponding instances will not be terminated.)
+                     * @param _keepInstance Indicates whether nodes in a node pool are retained when the node pool is deleted. (The nodes are removed from the cluster. However, the corresponding instances will not be terminated.)
+                     * 
                      */
                     void SetKeepInstance(const bool& _keepInstance);
 
                     /**
                      * 判断参数 KeepInstance 是否已赋值
                      * @return KeepInstance 是否已赋值
+                     * 
                      */
                     bool KeepInstanceHasBeenSet() const;
 

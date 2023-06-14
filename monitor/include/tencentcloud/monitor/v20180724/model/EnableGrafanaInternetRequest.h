@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-kleu3gt0”.
                      * @return InstanceID TCMG instance ID, such as “grafana-kleu3gt0”.
+                     * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-kleu3gt0”.
-                     * @param InstanceID TCMG instance ID, such as “grafana-kleu3gt0”.
+                     * @param _instanceID TCMG instance ID, such as “grafana-kleu3gt0”.
+                     * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
                     /**
                      * 判断参数 InstanceID 是否已赋值
                      * @return InstanceID 是否已赋值
+                     * 
                      */
                     bool InstanceIDHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable public network access (`true`: Yes; `false`: No)
                      * @return EnableInternet Whether to enable public network access (`true`: Yes; `false`: No)
+                     * 
                      */
                     bool GetEnableInternet() const;
 
                     /**
                      * 设置Whether to enable public network access (`true`: Yes; `false`: No)
-                     * @param EnableInternet Whether to enable public network access (`true`: Yes; `false`: No)
+                     * @param _enableInternet Whether to enable public network access (`true`: Yes; `false`: No)
+                     * 
                      */
                     void SetEnableInternet(const bool& _enableInternet);
 
                     /**
                      * 判断参数 EnableInternet 是否已赋值
                      * @return EnableInternet 是否已赋值
+                     * 
                      */
                     bool EnableInternetHasBeenSet() const;
 

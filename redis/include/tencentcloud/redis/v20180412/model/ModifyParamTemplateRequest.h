@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the source parameter template.
                      * @return TemplateId ID of the source parameter template.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置ID of the source parameter template.
-                     * @param TemplateId ID of the source parameter template.
+                     * @param _templateId ID of the source parameter template.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取New name after the parameter template is modified.
                      * @return Name New name after the parameter template is modified.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置New name after the parameter template is modified.
-                     * @param Name New name after the parameter template is modified.
+                     * @param _name New name after the parameter template is modified.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取New description after the parameter template is modified.
                      * @return Description New description after the parameter template is modified.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置New description after the parameter template is modified.
-                     * @param Description New description after the parameter template is modified.
+                     * @param _description New description after the parameter template is modified.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取New parameter list after the parameter template is modified.
                      * @return ParamList New parameter list after the parameter template is modified.
+                     * 
                      */
                     std::vector<InstanceParam> GetParamList() const;
 
                     /**
                      * 设置New parameter list after the parameter template is modified.
-                     * @param ParamList New parameter list after the parameter template is modified.
+                     * @param _paramList New parameter list after the parameter template is modified.
+                     * 
                      */
                     void SetParamList(const std::vector<InstanceParam>& _paramList);
 
                     /**
                      * 判断参数 ParamList 是否已赋值
                      * @return ParamList 是否已赋值
+                     * 
                      */
                     bool ParamListHasBeenSet() const;
 

@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Array to be modified
                      * @return RuleSet Array to be modified
+                     * 
                      */
                     std::vector<EscapeRuleEnabled> GetRuleSet() const;
 
                     /**
                      * 设置Array to be modified
-                     * @param RuleSet Array to be modified
+                     * @param _ruleSet Array to be modified
+                     * 
                      */
                     void SetRuleSet(const std::vector<EscapeRuleEnabled>& _ruleSet);
 
                     /**
                      * 判断参数 RuleSet 是否已赋值
                      * @return RuleSet 是否已赋值
+                     * 
                      */
                     bool RuleSetHasBeenSet() const;
 

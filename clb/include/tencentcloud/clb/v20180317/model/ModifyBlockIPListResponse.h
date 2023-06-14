@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID
                      * @return JodId Async task ID
+                     * 
                      */
                     std::string GetJodId() const;
 
                     /**
                      * 判断参数 JodId 是否已赋值
                      * @return JodId 是否已赋值
+                     * 
                      */
                     bool JodIdHasBeenSet() const;
 

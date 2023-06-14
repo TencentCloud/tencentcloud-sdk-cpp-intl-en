@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ApplicationNumNeedToStart Number of applications to start
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetApplicationNumNeedToStart() const;
 
                     /**
                      * 设置Number of applications to start
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ApplicationNumNeedToStart Number of applications to start
+                     * @param _applicationNumNeedToStart Number of applications to start
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationNumNeedToStart(const int64_t& _applicationNumNeedToStart);
 
                     /**
                      * 判断参数 ApplicationNumNeedToStart 是否已赋值
                      * @return ApplicationNumNeedToStart 是否已赋值
+                     * 
                      */
                     bool ApplicationNumNeedToStartHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StartedApplicationNum Number of started applictions
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStartedApplicationNum() const;
 
                     /**
                      * 设置Number of started applictions
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StartedApplicationNum Number of started applictions
+                     * @param _startedApplicationNum Number of started applictions
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartedApplicationNum(const int64_t& _startedApplicationNum);
 
                     /**
                      * 判断参数 StartedApplicationNum 是否已赋值
                      * @return StartedApplicationNum 是否已赋值
+                     * 
                      */
                     bool StartedApplicationNumHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StartFailedApplicationNum Number of applications failed to be started
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStartFailedApplicationNum() const;
 
                     /**
                      * 设置Number of applications failed to be started
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StartFailedApplicationNum Number of applications failed to be started
+                     * @param _startFailedApplicationNum Number of applications failed to be started
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartFailedApplicationNum(const int64_t& _startFailedApplicationNum);
 
                     /**
                      * 判断参数 StartFailedApplicationNum 是否已赋值
                      * @return StartFailedApplicationNum 是否已赋值
+                     * 
                      */
                     bool StartFailedApplicationNumHasBeenSet() const;
 

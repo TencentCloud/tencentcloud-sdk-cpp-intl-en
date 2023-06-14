@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Endpoint service ID
                      * @return EndPointServiceId Endpoint service ID
+                     * 
                      */
                     std::string GetEndPointServiceId() const;
 
                     /**
                      * 设置Endpoint service ID
-                     * @param EndPointServiceId Endpoint service ID
+                     * @param _endPointServiceId Endpoint service ID
+                     * 
                      */
                     void SetEndPointServiceId(const std::string& _endPointServiceId);
 
                     /**
                      * 判断参数 EndPointServiceId 是否已赋值
                      * @return EndPointServiceId 是否已赋值
+                     * 
                      */
                     bool EndPointServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Endpoint ID
                      * @return EndPointId Endpoint ID
+                     * 
                      */
                     std::vector<std::string> GetEndPointId() const;
 
                     /**
                      * 设置Endpoint ID
-                     * @param EndPointId Endpoint ID
+                     * @param _endPointId Endpoint ID
+                     * 
                      */
                     void SetEndPointId(const std::vector<std::string>& _endPointId);
 
                     /**
                      * 判断参数 EndPointId 是否已赋值
                      * @return EndPointId 是否已赋值
+                     * 
                      */
                     bool EndPointIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to accept the request of connecting with an endpoint
                      * @return AcceptFlag Whether to accept the request of connecting with an endpoint
+                     * 
                      */
                     bool GetAcceptFlag() const;
 
                     /**
                      * 设置Whether to accept the request of connecting with an endpoint
-                     * @param AcceptFlag Whether to accept the request of connecting with an endpoint
+                     * @param _acceptFlag Whether to accept the request of connecting with an endpoint
+                     * 
                      */
                     void SetAcceptFlag(const bool& _acceptFlag);
 
                     /**
                      * 判断参数 AcceptFlag 是否已赋值
                      * @return AcceptFlag 是否已赋值
+                     * 
                      */
                     bool AcceptFlagHasBeenSet() const;
 

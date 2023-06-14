@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Disaster recovery instance status
                      * @return Status Disaster recovery instance status
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Disaster recovery instance status
-                     * @param Status Disaster recovery instance status
+                     * @param _status Disaster recovery instance status
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取AZ information
                      * @return Zone AZ information
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ information
-                     * @param Zone AZ information
+                     * @param _zone AZ information
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Region information
                      * @return Region Region information
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region information
-                     * @param Region Region information
+                     * @param _region Region information
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -131,6 +143,7 @@ namespace TencentCloud
 2 - disaster recovery synced successfully;
 3 - disaster recovery sync failed;
 4 - repairing disaster recovery sync;
+                     * 
                      */
                     int64_t GetSyncStatus() const;
 
@@ -141,54 +154,62 @@ namespace TencentCloud
 2 - disaster recovery synced successfully;
 3 - disaster recovery sync failed;
 4 - repairing disaster recovery sync;
-                     * @param SyncStatus Instance sync status. Possible returned values include:
+                     * @param _syncStatus Instance sync status. Possible returned values include:
 0 - disaster recovery not synced;
 1 - disaster recovery syncing;
 2 - disaster recovery synced successfully;
 3 - disaster recovery sync failed;
 4 - repairing disaster recovery sync;
+                     * 
                      */
                     void SetSyncStatus(const int64_t& _syncStatus);
 
                     /**
                      * 判断参数 SyncStatus 是否已赋值
                      * @return SyncStatus 是否已赋值
+                     * 
                      */
                     bool SyncStatusHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Instance type
                      * @return InstanceType Instance type
+                     * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
                      * 设置Instance type
-                     * @param InstanceType Instance type
+                     * @param _instanceType Instance type
+                     * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 

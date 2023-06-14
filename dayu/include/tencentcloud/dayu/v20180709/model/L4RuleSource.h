@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Intermediate IP or domain name
                      * @return Source Intermediate IP or domain name
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置Intermediate IP or domain name
-                     * @param Source Intermediate IP or domain name
+                     * @param _source Intermediate IP or domain name
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Weight value. Value range: [0,100]
                      * @return Weight Weight value. Value range: [0,100]
+                     * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
                      * 设置Weight value. Value range: [0,100]
-                     * @param Weight Weight value. Value range: [0,100]
+                     * @param _weight Weight value. Value range: [0,100]
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

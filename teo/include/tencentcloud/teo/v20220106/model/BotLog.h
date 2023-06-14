@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackTime Attack time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAttackTime() const;
 
                     /**
                      * 设置Attack time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackTime Attack time
+                     * @param _attackTime Attack time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackTime(const uint64_t& _attackTime);
 
                     /**
                      * 判断参数 AttackTime 是否已赋值
                      * @return AttackTime 是否已赋值
+                     * 
                      */
                     bool AttackTimeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackIp Attack IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttackIp() const;
 
                     /**
                      * 设置Attack IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackIp Attack IP
+                     * @param _attackIp Attack IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackIp(const std::string& _attackIp);
 
                     /**
                      * 判断参数 AttackIp 是否已赋值
                      * @return AttackIp 是否已赋值
+                     * 
                      */
                     bool AttackIpHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Domain name
+                     * @param _domain Domain name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RequestUri Request URI
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRequestUri() const;
 
                     /**
                      * 设置Request URI
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RequestUri Request URI
+                     * @param _requestUri Request URI
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRequestUri(const std::string& _requestUri);
 
                     /**
                      * 判断参数 RequestUri 是否已赋值
                      * @return RequestUri 是否已赋值
+                     * 
                      */
                     bool RequestUriHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackType Attack type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttackType() const;
 
                     /**
                      * 设置Attack type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackType Attack type
+                     * @param _attackType Attack type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackType(const std::string& _attackType);
 
                     /**
                      * 判断参数 AttackType 是否已赋值
                      * @return AttackType 是否已赋值
+                     * 
                      */
                     bool AttackTypeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RequestMethod Request method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRequestMethod() const;
 
                     /**
                      * 设置Request method
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RequestMethod Request method
+                     * @param _requestMethod Request method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRequestMethod(const std::string& _requestMethod);
 
                     /**
                      * 判断参数 RequestMethod 是否已赋值
                      * @return RequestMethod 是否已赋值
+                     * 
                      */
                     bool RequestMethodHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackContent Attack content
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttackContent() const;
 
                     /**
                      * 设置Attack content
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackContent Attack content
+                     * @param _attackContent Attack content
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackContent(const std::string& _attackContent);
 
                     /**
                      * 判断参数 AttackContent 是否已赋值
                      * @return AttackContent 是否已赋值
+                     * 
                      */
                     bool AttackContentHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RiskLevel Risk grade
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
                      * 设置Risk grade
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RiskLevel Risk grade
+                     * @param _riskLevel Risk grade
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
 
                     /**
                      * 判断参数 RiskLevel 是否已赋值
                      * @return RiskLevel 是否已赋值
+                     * 
                      */
                     bool RiskLevelHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleId Rule number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRuleId() const;
 
                     /**
                      * 设置Rule number
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleId Rule number
+                     * @param _ruleId Rule number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleId(const uint64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SipCountryCode IP country/region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSipCountryCode() const;
 
                     /**
                      * 设置IP country/region
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SipCountryCode IP country/region
+                     * @param _sipCountryCode IP country/region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSipCountryCode(const std::string& _sipCountryCode);
 
                     /**
                      * 判断参数 SipCountryCode 是否已赋值
                      * @return SipCountryCode 是否已赋值
+                     * 
                      */
                     bool SipCountryCodeHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventId Event ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEventId() const;
 
                     /**
                      * 设置Event ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EventId Event ID
+                     * @param _eventId Event ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventId(const std::string& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
@@ -293,20 +326,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DisposalMethod Processing method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisposalMethod() const;
 
                     /**
                      * 设置Processing method
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DisposalMethod Processing method
+                     * @param _disposalMethod Processing method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisposalMethod(const std::string& _disposalMethod);
 
                     /**
                      * 判断参数 DisposalMethod 是否已赋值
                      * @return DisposalMethod 是否已赋值
+                     * 
                      */
                     bool DisposalMethodHasBeenSet() const;
 
@@ -315,20 +351,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HttpLog http_log
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHttpLog() const;
 
                     /**
                      * 设置http_log
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HttpLog http_log
+                     * @param _httpLog http_log
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttpLog(const std::string& _httpLog);
 
                     /**
                      * 判断参数 HttpLog 是否已赋值
                      * @return HttpLog 是否已赋值
+                     * 
                      */
                     bool HttpLogHasBeenSet() const;
 
@@ -337,20 +376,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Ua user agent
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUa() const;
 
                     /**
                      * 设置user agent
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Ua user agent
+                     * @param _ua user agent
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUa(const std::string& _ua);
 
                     /**
                      * 判断参数 Ua 是否已赋值
                      * @return Ua 是否已赋值
+                     * 
                      */
                     bool UaHasBeenSet() const;
 
@@ -359,20 +401,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetectionMethod Detection method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDetectionMethod() const;
 
                     /**
                      * 设置Detection method
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DetectionMethod Detection method
+                     * @param _detectionMethod Detection method
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetectionMethod(const std::string& _detectionMethod);
 
                     /**
                      * 判断参数 DetectionMethod 是否已赋值
                      * @return DetectionMethod 是否已赋值
+                     * 
                      */
                     bool DetectionMethodHasBeenSet() const;
 
@@ -381,20 +426,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Confidence Confidence
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConfidence() const;
 
                     /**
                      * 设置Confidence
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Confidence Confidence
+                     * @param _confidence Confidence
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfidence(const std::string& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -403,20 +451,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Maliciousness Maliciousness
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMaliciousness() const;
 
                     /**
                      * 设置Maliciousness
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Maliciousness Maliciousness
+                     * @param _maliciousness Maliciousness
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaliciousness(const std::string& _maliciousness);
 
                     /**
                      * 判断参数 Maliciousness 是否已赋值
                      * @return Maliciousness 是否已赋值
+                     * 
                      */
                     bool MaliciousnessHasBeenSet() const;
 

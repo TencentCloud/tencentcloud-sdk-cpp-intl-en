@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ExtraArgs Custom parameters of the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     EdgeClusterExtraArgs GetExtraArgs() const;
 
                     /**
                      * 设置Custom parameters of the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ExtraArgs Custom parameters of the cluster
+                     * @param _extraArgs Custom parameters of the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtraArgs(const EdgeClusterExtraArgs& _extraArgs);
 
                     /**
                      * 判断参数 ExtraArgs 是否已赋值
                      * @return ExtraArgs 是否已赋值
+                     * 
                      */
                     bool ExtraArgsHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Runtime Runtime type. Valid values: "docker" (default), "containerd".
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuntime() const;
 
                     /**
                      * 设置Runtime type. Valid values: "docker" (default), "containerd".
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Runtime Runtime type. Valid values: "docker" (default), "containerd".
+                     * @param _runtime Runtime type. Valid values: "docker" (default), "containerd".
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuntime(const std::string& _runtime);
 
                     /**
                      * 判断参数 Runtime 是否已赋值
                      * @return Runtime 是否已赋值
+                     * 
                      */
                     bool RuntimeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ProxyMode Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProxyMode() const;
 
                     /**
                      * 设置Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProxyMode Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+                     * @param _proxyMode Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProxyMode(const std::string& _proxyMode);
 
                     /**
                      * 判断参数 ProxyMode 是否已赋值
                      * @return ProxyMode 是否已赋值
+                     * 
                      */
                     bool ProxyModeHasBeenSet() const;
 

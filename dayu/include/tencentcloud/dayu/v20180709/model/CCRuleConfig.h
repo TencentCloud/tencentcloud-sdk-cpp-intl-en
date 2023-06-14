@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Reference period in seconds. Valid values: [10, 30, 60]
                      * @return Period Reference period in seconds. Valid values: [10, 30, 60]
+                     * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
                      * 设置Reference period in seconds. Valid values: [10, 30, 60]
-                     * @param Period Reference period in seconds. Valid values: [10, 30, 60]
+                     * @param _period Reference period in seconds. Valid values: [10, 30, 60]
+                     * 
                      */
                     void SetPeriod(const uint64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Number of access requests. Value range: [1-10000]
                      * @return ReqNumber Number of access requests. Value range: [1-10000]
+                     * 
                      */
                     uint64_t GetReqNumber() const;
 
                     /**
                      * 设置Number of access requests. Value range: [1-10000]
-                     * @param ReqNumber Number of access requests. Value range: [1-10000]
+                     * @param _reqNumber Number of access requests. Value range: [1-10000]
+                     * 
                      */
                     void SetReqNumber(const uint64_t& _reqNumber);
 
                     /**
                      * 判断参数 ReqNumber 是否已赋值
                      * @return ReqNumber 是否已赋值
+                     * 
                      */
                     bool ReqNumberHasBeenSet() const;
 
                     /**
                      * 获取Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
                      * @return Action Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
-                     * @param Action Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
+                     * @param _action Action take. Valid values: ["alg" (CAPTCHA), "drop" (blocking)]
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Execution duration in seconds. Valid range: [1-900]
                      * @return ExeDuration Execution duration in seconds. Valid range: [1-900]
+                     * 
                      */
                     uint64_t GetExeDuration() const;
 
                     /**
                      * 设置Execution duration in seconds. Valid range: [1-900]
-                     * @param ExeDuration Execution duration in seconds. Valid range: [1-900]
+                     * @param _exeDuration Execution duration in seconds. Valid range: [1-900]
+                     * 
                      */
                     void SetExeDuration(const uint64_t& _exeDuration);
 
                     /**
                      * 判断参数 ExeDuration 是否已赋值
                      * @return ExeDuration 是否已赋值
+                     * 
                      */
                     bool ExeDurationHasBeenSet() const;
 

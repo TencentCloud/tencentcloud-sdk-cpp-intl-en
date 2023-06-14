@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable rotation. `true`: enabled; `false`: disabled.
                      * @return EnableRotation Whether to enable rotation. `true`: enabled; `false`: disabled.
+                     * 
                      */
                     bool GetEnableRotation() const;
 
                     /**
                      * 判断参数 EnableRotation 是否已赋值
                      * @return EnableRotation 是否已赋值
+                     * 
                      */
                     bool EnableRotationHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Frequency Rotation frequency in days. Default value: 1 day.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFrequency() const;
 
                     /**
                      * 判断参数 Frequency 是否已赋值
                      * @return Frequency 是否已赋值
+                     * 
                      */
                     bool FrequencyHasBeenSet() const;
 
@@ -74,12 +78,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LatestRotateTime Last rotation time, which is an explicitly visible time string in the format of 2006-01-02 15:04:05.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLatestRotateTime() const;
 
                     /**
                      * 判断参数 LatestRotateTime 是否已赋值
                      * @return LatestRotateTime 是否已赋值
+                     * 
                      */
                     bool LatestRotateTimeHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NextRotateBeginTime Next rotation start time, which is an explicitly visible time string in the format of 2006-01-02 15:04:05.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNextRotateBeginTime() const;
 
                     /**
                      * 判断参数 NextRotateBeginTime 是否已赋值
                      * @return NextRotateBeginTime 是否已赋值
+                     * 
                      */
                     bool NextRotateBeginTimeHasBeenSet() const;
 

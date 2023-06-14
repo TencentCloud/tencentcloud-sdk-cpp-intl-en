@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取`VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
                      * @return VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置`VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-                     * @param VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * @param _vpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
                      * @return NewCidrBlocks Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * 
                      */
                     std::vector<std::string> GetNewCidrBlocks() const;
 
                     /**
                      * 设置Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
-                     * @param NewCidrBlocks Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * @param _newCidrBlocks Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * 
                      */
                     void SetNewCidrBlocks(const std::vector<std::string>& _newCidrBlocks);
 
                     /**
                      * 判断参数 NewCidrBlocks 是否已赋值
                      * @return NewCidrBlocks 是否已赋值
+                     * 
                      */
                     bool NewCidrBlocksHasBeenSet() const;
 
                     /**
                      * 获取Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
                      * @return OldCidrBlocks Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * 
                      */
                     std::vector<std::string> GetOldCidrBlocks() const;
 
                     /**
                      * 设置Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
-                     * @param OldCidrBlocks Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * @param _oldCidrBlocks Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * 
                      */
                     void SetOldCidrBlocks(const std::vector<std::string>& _oldCidrBlocks);
 
                     /**
                      * 判断参数 OldCidrBlocks 是否已赋值
                      * @return OldCidrBlocks 是否已赋值
+                     * 
                      */
                     bool OldCidrBlocksHasBeenSet() const;
 

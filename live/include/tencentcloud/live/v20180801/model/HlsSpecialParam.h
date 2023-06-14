@@ -51,20 +51,23 @@ namespace TencentCloud
 Value range: [0, 1,800].
                      * @return FlowContinueDuration Timeout period for restarting an interrupted HLS push.
 Value range: [0, 1,800].
+                     * 
                      */
                     uint64_t GetFlowContinueDuration() const;
 
                     /**
                      * 设置Timeout period for restarting an interrupted HLS push.
 Value range: [0, 1,800].
-                     * @param FlowContinueDuration Timeout period for restarting an interrupted HLS push.
+                     * @param _flowContinueDuration Timeout period for restarting an interrupted HLS push.
 Value range: [0, 1,800].
+                     * 
                      */
                     void SetFlowContinueDuration(const uint64_t& _flowContinueDuration);
 
                     /**
                      * 判断参数 FlowContinueDuration 是否已赋值
                      * @return FlowContinueDuration 是否已赋值
+                     * 
                      */
                     bool FlowContinueDurationHasBeenSet() const;
 

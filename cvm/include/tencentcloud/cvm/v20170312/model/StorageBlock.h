@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value is found.
                      * @return Type Local HDD storage type. Value: LOCAL_PRO.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Local HDD storage type. Value: LOCAL_PRO.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param Type Local HDD storage type. Value: LOCAL_PRO.
+                     * @param _type Local HDD storage type. Value: LOCAL_PRO.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return MinSize Minimum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     int64_t GetMinSize() const;
 
                     /**
                      * 设置Minimum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
-                     * @param MinSize Minimum capacity of local HDD storage
+                     * @param _minSize Minimum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetMinSize(const int64_t& _minSize);
 
                     /**
                      * 判断参数 MinSize 是否已赋值
                      * @return MinSize 是否已赋值
+                     * 
                      */
                     bool MinSizeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return MaxSize Maximum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     int64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
-                     * @param MaxSize Maximum capacity of local HDD storage
+                     * @param _maxSize Maximum capacity of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetMaxSize(const int64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 

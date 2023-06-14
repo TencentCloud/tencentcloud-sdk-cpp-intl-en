@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Start time of the Pro Edition, which is not empty only when the edition is purchased.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -62,36 +64,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime End time of the Pro Edition, which is not empty only when more resources are purchased.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of cores to be purchased
                      * @return CoresCnt Number of cores to be purchased
+                     * 
                      */
                     uint64_t GetCoresCnt() const;
 
                     /**
                      * 判断参数 CoresCnt 是否已赋值
                      * @return CoresCnt 是否已赋值
+                     * 
                      */
                     bool CoresCntHasBeenSet() const;
 
                     /**
                      * 获取Upper limit for elastic billing
                      * @return MaxPostPayCoresCnt Upper limit for elastic billing
+                     * 
                      */
                     uint64_t GetMaxPostPayCoresCnt() const;
 
                     /**
                      * 判断参数 MaxPostPayCoresCnt 是否已赋值
                      * @return MaxPostPayCoresCnt 是否已赋值
+                     * 
                      */
                     bool MaxPostPayCoresCntHasBeenSet() const;
 
@@ -100,12 +108,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResourceId Resource ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
@@ -118,24 +128,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `Pending`: To be purchased.
 `Normal`: Purchased.
 `Isolate`: Isolated.
+                     * 
                      */
                     std::string GetBuyStatus() const;
 
                     /**
                      * 判断参数 BuyStatus 是否已赋值
                      * @return BuyStatus 是否已赋值
+                     * 
                      */
                     bool BuyStatusHasBeenSet() const;
 
                     /**
                      * 获取Whether it has been purchased before. Valid values: `false` (no); `true` (yes).
                      * @return IsPurchased Whether it has been purchased before. Valid values: `false` (no); `true` (yes).
+                     * 
                      */
                     bool GetIsPurchased() const;
 
                     /**
                      * 判断参数 IsPurchased 是否已赋值
                      * @return IsPurchased 是否已赋值
+                     * 
                      */
                     bool IsPurchasedHasBeenSet() const;
 

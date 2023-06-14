@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取User APPID
                      * @return AppId User APPID
+                     * 
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 设置User APPID
-                     * @param AppId User APPID
+                     * @param _appId User APPID
+                     * 
                      */
                     void SetAppId(const int64_t& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取Top-level domain name
                      * @return ZoneId Top-level domain name
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Top-level domain name
-                     * @param ZoneId Top-level domain name
+                     * @param _zoneId Top-level domain name
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Second-level domain name
                      * @return Entity Second-level domain name
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置Second-level domain name
-                     * @param Entity Second-level domain name
+                     * @param _entity Second-level domain name
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
                     /**
                      * 获取Type of protected resource. Values: `domain` and `application`.
                      * @return EntityType Type of protected resource. Values: `domain` and `application`.
+                     * 
                      */
                     std::string GetEntityType() const;
 
                     /**
                      * 设置Type of protected resource. Values: `domain` and `application`.
-                     * @param EntityType Type of protected resource. Values: `domain` and `application`.
+                     * @param _entityType Type of protected resource. Values: `domain` and `application`.
+                     * 
                      */
                     void SetEntityType(const std::string& _entityType);
 
                     /**
                      * 判断参数 EntityType 是否已赋值
                      * @return EntityType 是否已赋值
+                     * 
                      */
                     bool EntityTypeHasBeenSet() const;
 

@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-f49l6u0z`.
                      * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-f49l6u0z`.
-                     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * @param _ccnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取The outbound bandwidth cap of each CCN region.
                      * @return CcnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
+                     * 
                      */
                     std::vector<CcnRegionBandwidthLimit> GetCcnRegionBandwidthLimits() const;
 
                     /**
                      * 设置The outbound bandwidth cap of each CCN region.
-                     * @param CcnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
+                     * @param _ccnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
+                     * 
                      */
                     void SetCcnRegionBandwidthLimits(const std::vector<CcnRegionBandwidthLimit>& _ccnRegionBandwidthLimits);
 
                     /**
                      * 判断参数 CcnRegionBandwidthLimits 是否已赋值
                      * @return CcnRegionBandwidthLimits 是否已赋值
+                     * 
                      */
                     bool CcnRegionBandwidthLimitsHasBeenSet() const;
 
                     /**
                      * 获取Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
                      * @return SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     * 
                      */
                     bool GetSetDefaultLimitFlag() const;
 
                     /**
                      * 设置Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
-                     * @param SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     * @param _setDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+                     * 
                      */
                     void SetSetDefaultLimitFlag(const bool& _setDefaultLimitFlag);
 
                     /**
                      * 判断参数 SetDefaultLimitFlag 是否已赋值
                      * @return SetDefaultLimitFlag 是否已赋值
+                     * 
                      */
                     bool SetDefaultLimitFlagHasBeenSet() const;
 

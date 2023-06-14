@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Access credential type. Values: `longterm` and `temp` (default, valid for one hour)
                      * @return TokenType Access credential type. Values: `longterm` and `temp` (default, valid for one hour)
+                     * 
                      */
                     std::string GetTokenType() const;
 
                     /**
                      * 设置Access credential type. Values: `longterm` and `temp` (default, valid for one hour)
-                     * @param TokenType Access credential type. Values: `longterm` and `temp` (default, valid for one hour)
+                     * @param _tokenType Access credential type. Values: `longterm` and `temp` (default, valid for one hour)
+                     * 
                      */
                     void SetTokenType(const std::string& _tokenType);
 
                     /**
                      * 判断参数 TokenType 是否已赋值
                      * @return TokenType 是否已赋值
+                     * 
                      */
                     bool TokenTypeHasBeenSet() const;
 
                     /**
                      * 获取Description of the long-term access credential
                      * @return Desc Description of the long-term access credential
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置Description of the long-term access credential
-                     * @param Desc Description of the long-term access credential
+                     * @param _desc Description of the long-term access credential
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 

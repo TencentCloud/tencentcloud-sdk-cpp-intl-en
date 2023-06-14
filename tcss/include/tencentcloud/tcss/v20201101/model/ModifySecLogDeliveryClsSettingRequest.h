@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Log information
                      * @return List Log information
+                     * 
                      */
                     std::vector<SecLogDeliveryClsSettingInfo> GetList() const;
 
                     /**
                      * 设置Log information
-                     * @param List Log information
+                     * @param _list Log information
+                     * 
                      */
                     void SetList(const std::vector<SecLogDeliveryClsSettingInfo>& _list);
 
                     /**
                      * 判断参数 List 是否已赋值
                      * @return List 是否已赋值
+                     * 
                      */
                     bool ListHasBeenSet() const;
 

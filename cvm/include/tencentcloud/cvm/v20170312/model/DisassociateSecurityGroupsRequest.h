@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
                      * @return SecurityGroupIds ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
-                     * @param SecurityGroupIds ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
+                     * @param _securityGroupIds ID of the security group to be disassociated, such as `sg-efil73jd`. Only one security group can be disassociated.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取ID(s) of the instance(s) to be disassociated,such as `ins-lesecurk`. You can specify multiple instances.
                      * @return InstanceIds ID(s) of the instance(s) to be disassociated,such as `ins-lesecurk`. You can specify multiple instances.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置ID(s) of the instance(s) to be disassociated,such as `ins-lesecurk`. You can specify multiple instances.
-                     * @param InstanceIds ID(s) of the instance(s) to be disassociated,such as `ins-lesecurk`. You can specify multiple instances.
+                     * @param _instanceIds ID(s) of the instance(s) to be disassociated,such as `ins-lesecurk`. You can specify multiple instances.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

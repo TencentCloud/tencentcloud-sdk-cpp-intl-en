@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Metric categories. Valid values: `AVAILABILITY`, `MAINTAINABILITY`, `PERFORMANCE`, and `RELIABILITY`.
                      * @return IssueType Metric categories. Valid values: `AVAILABILITY`, `MAINTAINABILITY`, `PERFORMANCE`, and `RELIABILITY`.
+                     * 
                      */
                     std::string GetIssueType() const;
 
                     /**
                      * 设置Metric categories. Valid values: `AVAILABILITY`, `MAINTAINABILITY`, `PERFORMANCE`, and `RELIABILITY`.
-                     * @param IssueType Metric categories. Valid values: `AVAILABILITY`, `MAINTAINABILITY`, `PERFORMANCE`, and `RELIABILITY`.
+                     * @param _issueType Metric categories. Valid values: `AVAILABILITY`, `MAINTAINABILITY`, `PERFORMANCE`, and `RELIABILITY`.
+                     * 
                      */
                     void SetIssueType(const std::string& _issueType);
 
                     /**
                      * 判断参数 IssueType 是否已赋值
                      * @return IssueType 是否已赋值
+                     * 
                      */
                     bool IssueTypeHasBeenSet() const;
 
                     /**
                      * 获取Exception.
                      * @return Events Exception.
+                     * 
                      */
                     std::vector<EventInfo> GetEvents() const;
 
                     /**
                      * 设置Exception.
-                     * @param Events Exception.
+                     * @param _events Exception.
+                     * 
                      */
                     void SetEvents(const std::vector<EventInfo>& _events);
 
                     /**
                      * 判断参数 Events 是否已赋值
                      * @return Events 是否已赋值
+                     * 
                      */
                     bool EventsHasBeenSet() const;
 
                     /**
                      * 获取Total number of exceptions.
                      * @return TotalCount Total number of exceptions.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of exceptions.
-                     * @param TotalCount Total number of exceptions.
+                     * @param _totalCount Total number of exceptions.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

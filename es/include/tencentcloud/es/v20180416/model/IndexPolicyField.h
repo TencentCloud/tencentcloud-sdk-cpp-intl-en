@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return WarmEnable Whether to enable the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetWarmEnable() const;
 
                     /**
                      * 设置Whether to enable the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param WarmEnable Whether to enable the warm phase
+                     * @param _warmEnable Whether to enable the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetWarmEnable(const std::string& _warmEnable);
 
                     /**
                      * 判断参数 WarmEnable 是否已赋值
                      * @return WarmEnable 是否已赋值
+                     * 
                      */
                     bool WarmEnableHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return WarmMinAge Min age before data transitions to the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetWarmMinAge() const;
 
                     /**
                      * 设置Min age before data transitions to the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param WarmMinAge Min age before data transitions to the warm phase
+                     * @param _warmMinAge Min age before data transitions to the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetWarmMinAge(const std::string& _warmMinAge);
 
                     /**
                      * 判断参数 WarmMinAge 是否已赋值
                      * @return WarmMinAge 是否已赋值
+                     * 
                      */
                     bool WarmMinAgeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ColdEnable Whether to enable the cold phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetColdEnable() const;
 
                     /**
                      * 设置Whether to enable the cold phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ColdEnable Whether to enable the cold phase
+                     * @param _coldEnable Whether to enable the cold phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetColdEnable(const std::string& _coldEnable);
 
                     /**
                      * 判断参数 ColdEnable 是否已赋值
                      * @return ColdEnable 是否已赋值
+                     * 
                      */
                     bool ColdEnableHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ColdMinAge Min age before data transitions to the cold phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetColdMinAge() const;
 
                     /**
                      * 设置Min age before data transitions to the cold phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ColdMinAge Min age before data transitions to the cold phase
+                     * @param _coldMinAge Min age before data transitions to the cold phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetColdMinAge(const std::string& _coldMinAge);
 
                     /**
                      * 判断参数 ColdMinAge 是否已赋值
                      * @return ColdMinAge 是否已赋值
+                     * 
                      */
                     bool ColdMinAgeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FrozenEnable Whether to enable the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetFrozenEnable() const;
 
                     /**
                      * 设置Whether to enable the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FrozenEnable Whether to enable the frozen phase
+                     * @param _frozenEnable Whether to enable the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFrozenEnable(const std::string& _frozenEnable);
 
                     /**
                      * 判断参数 FrozenEnable 是否已赋值
                      * @return FrozenEnable 是否已赋值
+                     * 
                      */
                     bool FrozenEnableHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FrozenMinAge Min age before data transitions to the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetFrozenMinAge() const;
 
                     /**
                      * 设置Min age before data transitions to the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FrozenMinAge Min age before data transitions to the frozen phase
+                     * @param _frozenMinAge Min age before data transitions to the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFrozenMinAge(const std::string& _frozenMinAge);
 
                     /**
                      * 判断参数 FrozenMinAge 是否已赋值
                      * @return FrozenMinAge 是否已赋值
+                     * 
                      */
                     bool FrozenMinAgeHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ColdAction /
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetColdAction() const;
 
                     /**
                      * 设置/
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param ColdAction /
+                     * @param _coldAction /
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetColdAction(const std::string& _coldAction);
 
                     /**
                      * 判断参数 ColdAction 是否已赋值
                      * @return ColdAction 是否已赋值
+                     * 
                      */
                     bool ColdActionHasBeenSet() const;
 

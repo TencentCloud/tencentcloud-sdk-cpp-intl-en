@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SoftQuotaDayDetail Elastic billing details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SoftQuotaDayInfo> GetSoftQuotaDayDetail() const;
 
                     /**
                      * 判断参数 SoftQuotaDayDetail 是否已赋值
                      * @return SoftQuotaDayDetail 是否已赋值
+                     * 
                      */
                     bool SoftQuotaDayDetailHasBeenSet() const;
 

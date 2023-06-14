@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
                      * @return Filters Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
-                     * @param Filters Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+                     * @param _filters Filter condition. The primary ID must be specified in the format of `db-master-instance-id` to filter results, or else `null` will be returned.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The number of results per page. Default value: 10.
                      * @return PageSize The number of results per page. Default value: 10.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置The number of results per page. Default value: 10.
-                     * @param PageSize The number of results per page. Default value: 10.
+                     * @param _pageSize The number of results per page. Default value: 10.
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Specify which page is displayed. Default value: 1 (the first page).
                      * @return PageNumber Specify which page is displayed. Default value: 1 (the first page).
+                     * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
                      * 设置Specify which page is displayed. Default value: 1 (the first page).
-                     * @param PageNumber Specify which page is displayed. Default value: 1 (the first page).
+                     * @param _pageNumber Specify which page is displayed. Default value: 1 (the first page).
+                     * 
                      */
                     void SetPageNumber(const int64_t& _pageNumber);
 
                     /**
                      * 判断参数 PageNumber 是否已赋值
                      * @return PageNumber 是否已赋值
+                     * 
                      */
                     bool PageNumberHasBeenSet() const;
 
                     /**
                      * 获取Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
                      * @return OrderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
-                     * @param OrderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+                     * @param _orderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `desc`, `asc`.
                      * @return OrderByType Sorting order. Valid values: `desc`, `asc`.
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting order. Valid values: `desc`, `asc`.
-                     * @param OrderByType Sorting order. Valid values: `desc`, `asc`.
+                     * @param _orderByType Sorting order. Valid values: `desc`, `asc`.
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

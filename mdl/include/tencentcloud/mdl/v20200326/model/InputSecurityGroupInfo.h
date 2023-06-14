@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Input security group ID.
                      * @return Id Input security group ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Input security group ID.
-                     * @param Id Input security group ID.
+                     * @param _id Input security group ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Input security group name.
                      * @return Name Input security group name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Input security group name.
-                     * @param Name Input security group name.
+                     * @param _name Input security group name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取List of allowlist entries.
                      * @return Whitelist List of allowlist entries.
+                     * 
                      */
                     std::vector<std::string> GetWhitelist() const;
 
                     /**
                      * 设置List of allowlist entries.
-                     * @param Whitelist List of allowlist entries.
+                     * @param _whitelist List of allowlist entries.
+                     * 
                      */
                     void SetWhitelist(const std::vector<std::string>& _whitelist);
 
                     /**
                      * 判断参数 Whitelist 是否已赋值
                      * @return Whitelist 是否已赋值
+                     * 
                      */
                     bool WhitelistHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OccupiedInputs List of bound input streams.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetOccupiedInputs() const;
 
                     /**
                      * 设置List of bound input streams.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OccupiedInputs List of bound input streams.
+                     * @param _occupiedInputs List of bound input streams.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOccupiedInputs(const std::vector<std::string>& _occupiedInputs);
 
                     /**
                      * 判断参数 OccupiedInputs 是否已赋值
                      * @return OccupiedInputs 是否已赋值
+                     * 
                      */
                     bool OccupiedInputsHasBeenSet() const;
 
                     /**
                      * 获取Input security group address.
                      * @return Region Input security group address.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Input security group address.
-                     * @param Region Input security group address.
+                     * @param _region Input security group address.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

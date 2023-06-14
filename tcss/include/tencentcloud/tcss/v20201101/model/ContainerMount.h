@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Mount type: `bind`.
                      * @return Type Mount type: `bind`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Mount type: `bind`.
-                     * @param Type Mount type: `bind`.
+                     * @param _type Mount type: `bind`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Host path
                      * @return Source Host path
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置Host path
-                     * @param Source Host path
+                     * @param _source Host path
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Path in the container
                      * @return Destination Path in the container
+                     * 
                      */
                     std::string GetDestination() const;
 
                     /**
                      * 设置Path in the container
-                     * @param Destination Path in the container
+                     * @param _destination Path in the container
+                     * 
                      */
                     void SetDestination(const std::string& _destination);
 
                     /**
                      * 判断参数 Destination 是否已赋值
                      * @return Destination 是否已赋值
+                     * 
                      */
                     bool DestinationHasBeenSet() const;
 
                     /**
                      * 获取Mode
                      * @return Mode Mode
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Mode
-                     * @param Mode Mode
+                     * @param _mode Mode
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Read/Write permission
                      * @return RW Read/Write permission
+                     * 
                      */
                     bool GetRW() const;
 
                     /**
                      * 设置Read/Write permission
-                     * @param RW Read/Write permission
+                     * @param _rW Read/Write permission
+                     * 
                      */
                     void SetRW(const bool& _rW);
 
                     /**
                      * 判断参数 RW 是否已赋值
                      * @return RW 是否已赋值
+                     * 
                      */
                     bool RWHasBeenSet() const;
 
                     /**
                      * 获取Propagation type
                      * @return Propagation Propagation type
+                     * 
                      */
                     std::string GetPropagation() const;
 
                     /**
                      * 设置Propagation type
-                     * @param Propagation Propagation type
+                     * @param _propagation Propagation type
+                     * 
                      */
                     void SetPropagation(const std::string& _propagation);
 
                     /**
                      * 判断参数 Propagation 是否已赋值
                      * @return Propagation 是否已赋值
+                     * 
                      */
                     bool PropagationHasBeenSet() const;
 
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Driver
                      * @return Driver Driver
+                     * 
                      */
                     std::string GetDriver() const;
 
                     /**
                      * 设置Driver
-                     * @param Driver Driver
+                     * @param _driver Driver
+                     * 
                      */
                     void SetDriver(const std::string& _driver);
 
                     /**
                      * 判断参数 Driver 是否已赋值
                      * @return Driver 是否已赋值
+                     * 
                      */
                     bool DriverHasBeenSet() const;
 

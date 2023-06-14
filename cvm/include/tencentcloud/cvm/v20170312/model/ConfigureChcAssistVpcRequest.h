@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取CHC host IDs
                      * @return ChcIds CHC host IDs
+                     * 
                      */
                     std::vector<std::string> GetChcIds() const;
 
                     /**
                      * 设置CHC host IDs
-                     * @param ChcIds CHC host IDs
+                     * @param _chcIds CHC host IDs
+                     * 
                      */
                     void SetChcIds(const std::vector<std::string>& _chcIds);
 
                     /**
                      * 判断参数 ChcIds 是否已赋值
                      * @return ChcIds 是否已赋值
+                     * 
                      */
                     bool ChcIdsHasBeenSet() const;
 
                     /**
                      * 获取Out-of-band network information
                      * @return BmcVirtualPrivateCloud Out-of-band network information
+                     * 
                      */
                     VirtualPrivateCloud GetBmcVirtualPrivateCloud() const;
 
                     /**
                      * 设置Out-of-band network information
-                     * @param BmcVirtualPrivateCloud Out-of-band network information
+                     * @param _bmcVirtualPrivateCloud Out-of-band network information
+                     * 
                      */
                     void SetBmcVirtualPrivateCloud(const VirtualPrivateCloud& _bmcVirtualPrivateCloud);
 
                     /**
                      * 判断参数 BmcVirtualPrivateCloud 是否已赋值
                      * @return BmcVirtualPrivateCloud 是否已赋值
+                     * 
                      */
                     bool BmcVirtualPrivateCloudHasBeenSet() const;
 
                     /**
                      * 获取Out-of-band network security group list
                      * @return BmcSecurityGroupIds Out-of-band network security group list
+                     * 
                      */
                     std::vector<std::string> GetBmcSecurityGroupIds() const;
 
                     /**
                      * 设置Out-of-band network security group list
-                     * @param BmcSecurityGroupIds Out-of-band network security group list
+                     * @param _bmcSecurityGroupIds Out-of-band network security group list
+                     * 
                      */
                     void SetBmcSecurityGroupIds(const std::vector<std::string>& _bmcSecurityGroupIds);
 
                     /**
                      * 判断参数 BmcSecurityGroupIds 是否已赋值
                      * @return BmcSecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool BmcSecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Deployment network information
                      * @return DeployVirtualPrivateCloud Deployment network information
+                     * 
                      */
                     VirtualPrivateCloud GetDeployVirtualPrivateCloud() const;
 
                     /**
                      * 设置Deployment network information
-                     * @param DeployVirtualPrivateCloud Deployment network information
+                     * @param _deployVirtualPrivateCloud Deployment network information
+                     * 
                      */
                     void SetDeployVirtualPrivateCloud(const VirtualPrivateCloud& _deployVirtualPrivateCloud);
 
                     /**
                      * 判断参数 DeployVirtualPrivateCloud 是否已赋值
                      * @return DeployVirtualPrivateCloud 是否已赋值
+                     * 
                      */
                     bool DeployVirtualPrivateCloudHasBeenSet() const;
 
                     /**
                      * 获取Deployment network security group list
                      * @return DeploySecurityGroupIds Deployment network security group list
+                     * 
                      */
                     std::vector<std::string> GetDeploySecurityGroupIds() const;
 
                     /**
                      * 设置Deployment network security group list
-                     * @param DeploySecurityGroupIds Deployment network security group list
+                     * @param _deploySecurityGroupIds Deployment network security group list
+                     * 
                      */
                     void SetDeploySecurityGroupIds(const std::vector<std::string>& _deploySecurityGroupIds);
 
                     /**
                      * 判断参数 DeploySecurityGroupIds 是否已赋值
                      * @return DeploySecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool DeploySecurityGroupIdsHasBeenSet() const;
 

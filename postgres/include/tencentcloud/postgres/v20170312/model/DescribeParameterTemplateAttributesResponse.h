@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateId Parameter template ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of parameters contained in the parameter template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ParamInfoSet Parameter information contained in the parameter template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ParamInfo> GetParamInfoSet() const;
 
                     /**
                      * 判断参数 ParamInfoSet 是否已赋值
                      * @return ParamInfoSet 是否已赋值
+                     * 
                      */
                     bool ParamInfoSetHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateName Parameter template name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DBMajorVersion Database version applicable to a parameter template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
                      * 判断参数 DBMajorVersion 是否已赋值
                      * @return DBMajorVersion 是否已赋值
+                     * 
                      */
                     bool DBMajorVersionHasBeenSet() const;
 
@@ -119,12 +129,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DBEngine Database engine applicable to a parameter template
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDBEngine() const;
 
                     /**
                      * 判断参数 DBEngine 是否已赋值
                      * @return DBEngine 是否已赋值
+                     * 
                      */
                     bool DBEngineHasBeenSet() const;
 
@@ -133,12 +145,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateDescription Parameter template description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTemplateDescription() const;
 
                     /**
                      * 判断参数 TemplateDescription 是否已赋值
                      * @return TemplateDescription 是否已赋值
+                     * 
                      */
                     bool TemplateDescriptionHasBeenSet() const;
 

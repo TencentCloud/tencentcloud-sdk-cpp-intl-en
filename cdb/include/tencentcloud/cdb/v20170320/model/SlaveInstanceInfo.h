@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Port number
                      * @return Vport Port number
+                     * 
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Port number
-                     * @param Vport Port number
+                     * @param _vport Port number
+                     * 
                      */
                     void SetVport(const int64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
                     /**
                      * 获取Region information
                      * @return Region Region information
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region information
-                     * @param Region Region information
+                     * @param _region Region information
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Virtual IP information
                      * @return Vip Virtual IP information
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Virtual IP information
-                     * @param Vip Virtual IP information
+                     * @param _vip Virtual IP information
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取AZ information
                      * @return Zone AZ information
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ information
-                     * @param Zone AZ information
+                     * @param _zone AZ information
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 

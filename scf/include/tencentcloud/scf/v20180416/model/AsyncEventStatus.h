@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Async event status. Values: `RUNNING` (running); `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed).
                      * @return Status Async event status. Values: `RUNNING` (running); `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed).
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Async event status. Values: `RUNNING` (running); `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed).
-                     * @param Status Async event status. Values: `RUNNING` (running); `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed).
+                     * @param _status Async event status. Values: `RUNNING` (running); `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed).
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Request status code
                      * @return StatusCode Request status code
+                     * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
                      * 设置Request status code
-                     * @param StatusCode Request status code
+                     * @param _statusCode Request status code
+                     * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取Async execution request ID
                      * @return InvokeRequestId Async execution request ID
+                     * 
                      */
                     std::string GetInvokeRequestId() const;
 
                     /**
                      * 设置Async execution request ID
-                     * @param InvokeRequestId Async execution request ID
+                     * @param _invokeRequestId Async execution request ID
+                     * 
                      */
                     void SetInvokeRequestId(const std::string& _invokeRequestId);
 
                     /**
                      * 判断参数 InvokeRequestId 是否已赋值
                      * @return InvokeRequestId 是否已赋值
+                     * 
                      */
                     bool InvokeRequestIdHasBeenSet() const;
 

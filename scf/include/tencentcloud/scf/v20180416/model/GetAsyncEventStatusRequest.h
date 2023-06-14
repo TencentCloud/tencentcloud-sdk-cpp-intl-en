@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the async execution request
                      * @return InvokeRequestId ID of the async execution request
+                     * 
                      */
                     std::string GetInvokeRequestId() const;
 
                     /**
                      * 设置ID of the async execution request
-                     * @param InvokeRequestId ID of the async execution request
+                     * @param _invokeRequestId ID of the async execution request
+                     * 
                      */
                     void SetInvokeRequestId(const std::string& _invokeRequestId);
 
                     /**
                      * 判断参数 InvokeRequestId 是否已赋值
                      * @return InvokeRequestId 是否已赋值
+                     * 
                      */
                     bool InvokeRequestIdHasBeenSet() const;
 

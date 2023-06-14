@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Video clipping task ID.
                      * @return TaskId Video clipping task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Video clipping task ID.
-                     * @param TaskId Video clipping task ID.
+                     * @param _taskId Video clipping task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取ID of source file for video clipping task.
                      * @return SrcFileId ID of source file for video clipping task.
+                     * 
                      */
                     std::string GetSrcFileId() const;
 
                     /**
                      * 设置ID of source file for video clipping task.
-                     * @param SrcFileId ID of source file for video clipping task.
+                     * @param _srcFileId ID of source file for video clipping task.
+                     * 
                      */
                     void SetSrcFileId(const std::string& _srcFileId);
 
                     /**
                      * 判断参数 SrcFileId 是否已赋值
                      * @return SrcFileId 是否已赋值
+                     * 
                      */
                     bool SrcFileIdHasBeenSet() const;
 
                     /**
                      * 获取Information of file output by video clipping.
                      * @return FileInfo Information of file output by video clipping.
+                     * 
                      */
                     ClipFileInfo2017 GetFileInfo() const;
 
                     /**
                      * 设置Information of file output by video clipping.
-                     * @param FileInfo Information of file output by video clipping.
+                     * @param _fileInfo Information of file output by video clipping.
+                     * 
                      */
                     void SetFileInfo(const ClipFileInfo2017& _fileInfo);
 
                     /**
                      * 判断参数 FileInfo 是否已赋值
                      * @return FileInfo 是否已赋值
+                     * 
                      */
                     bool FileInfoHasBeenSet() const;
 

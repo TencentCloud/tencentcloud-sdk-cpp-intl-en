@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Canary project name
                      * @return ProjectName Canary project name
+                     * 
                      */
                     std::string GetProjectName() const;
 
                     /**
                      * 设置Canary project name
-                     * @param ProjectName Canary project name
+                     * @param _projectName Canary project name
+                     * 
                      */
                     void SetProjectName(const std::string& _projectName);
 
                     /**
                      * 判断参数 ProjectName 是否已赋值
                      * @return ProjectName 是否已赋值
+                     * 
                      */
                     bool ProjectNameHasBeenSet() const;
 

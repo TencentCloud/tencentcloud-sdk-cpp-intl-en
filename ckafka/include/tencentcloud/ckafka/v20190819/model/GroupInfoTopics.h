@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of assigned topics
                      * @return Topic Name of assigned topics
+                     * 
                      */
                     std::string GetTopic() const;
 
                     /**
                      * 设置Name of assigned topics
-                     * @param Topic Name of assigned topics
+                     * @param _topic Name of assigned topics
+                     * 
                      */
                     void SetTopic(const std::string& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Partitions Information of assigned partition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetPartitions() const;
 
                     /**
                      * 设置Information of assigned partition
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Partitions Information of assigned partition
+                     * @param _partitions Information of assigned partition
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartitions(const std::vector<int64_t>& _partitions);
 
                     /**
                      * 判断参数 Partitions 是否已赋值
                      * @return Partitions 是否已赋值
+                     * 
                      */
                     bool PartitionsHasBeenSet() const;
 

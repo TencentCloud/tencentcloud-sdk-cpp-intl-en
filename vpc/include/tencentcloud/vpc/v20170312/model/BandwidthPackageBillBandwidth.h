@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Current billable usage, in Mbps
                      * @return BandwidthUsage Current billable usage, in Mbps
+                     * 
                      */
                     uint64_t GetBandwidthUsage() const;
 
                     /**
                      * 设置Current billable usage, in Mbps
-                     * @param BandwidthUsage Current billable usage, in Mbps
+                     * @param _bandwidthUsage Current billable usage, in Mbps
+                     * 
                      */
                     void SetBandwidthUsage(const uint64_t& _bandwidthUsage);
 
                     /**
                      * 判断参数 BandwidthUsage 是否已赋值
                      * @return BandwidthUsage 是否已赋值
+                     * 
                      */
                     bool BandwidthUsageHasBeenSet() const;
 

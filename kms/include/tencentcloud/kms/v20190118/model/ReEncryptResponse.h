@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取Re-encrypted ciphertext
                      * @return CiphertextBlob Re-encrypted ciphertext
+                     * 
                      */
                     std::string GetCiphertextBlob() const;
 
                     /**
                      * 判断参数 CiphertextBlob 是否已赋值
                      * @return CiphertextBlob 是否已赋值
+                     * 
                      */
                     bool CiphertextBlobHasBeenSet() const;
 
                     /**
                      * 获取CMK used for re-encryption
                      * @return KeyId CMK used for re-encryption
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取CMK used by ciphertext before re-encryption
                      * @return SourceKeyId CMK used by ciphertext before re-encryption
+                     * 
                      */
                     std::string GetSourceKeyId() const;
 
                     /**
                      * 判断参数 SourceKeyId 是否已赋值
                      * @return SourceKeyId 是否已赋值
+                     * 
                      */
                     bool SourceKeyIdHasBeenSet() const;
 
                     /**
                      * 获取`true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned
                      * @return ReEncrypted `true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned
+                     * 
                      */
                     bool GetReEncrypted() const;
 
                     /**
                      * 判断参数 ReEncrypted 是否已赋值
                      * @return ReEncrypted 是否已赋值
+                     * 
                      */
                     bool ReEncryptedHasBeenSet() const;
 

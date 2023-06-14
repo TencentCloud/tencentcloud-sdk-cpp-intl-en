@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Key pair ID, which is the unique identifier of a key pair.
                      * @return KeyId Key pair ID, which is the unique identifier of a key pair.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Key pair ID, which is the unique identifier of a key pair.
-                     * @param KeyId Key pair ID, which is the unique identifier of a key pair.
+                     * @param _keyId Key pair ID, which is the unique identifier of a key pair.
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Key pair name.
                      * @return KeyName Key pair name.
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Key pair name.
-                     * @param KeyName Key pair name.
+                     * @param _keyName Key pair name.
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 
                     /**
                      * 获取Public key (in plain text) of key pair.
                      * @return PublicKey Public key (in plain text) of key pair.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Public key (in plain text) of key pair.
-                     * @param PublicKey Public key (in plain text) of key pair.
+                     * @param _publicKey Public key (in plain text) of key pair.
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AssociatedInstanceIds List of IDs of instances associated with the key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAssociatedInstanceIds() const;
 
                     /**
                      * 设置List of IDs of instances associated with the key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AssociatedInstanceIds List of IDs of instances associated with the key pair.
+                     * @param _associatedInstanceIds List of IDs of instances associated with the key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAssociatedInstanceIds(const std::vector<std::string>& _associatedInstanceIds);
 
                     /**
                      * 判断参数 AssociatedInstanceIds 是否已赋值
                      * @return AssociatedInstanceIds 是否已赋值
+                     * 
                      */
                     bool AssociatedInstanceIdsHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
+                     * @param _createdTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PrivateKey Private key of key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPrivateKey() const;
 
                     /**
                      * 设置Private key of key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateKey Private key of key pair.
+                     * @param _privateKey Private key of key pair.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrivateKey(const std::string& _privateKey);
 
                     /**
                      * 判断参数 PrivateKey 是否已赋值
                      * @return PrivateKey 是否已赋值
+                     * 
                      */
                     bool PrivateKeyHasBeenSet() const;
 

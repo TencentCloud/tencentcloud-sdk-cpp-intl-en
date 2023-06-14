@@ -55,24 +55,28 @@ namespace TencentCloud
 `5min`: 5 minutes
 `hour`: 1 hour
 `day`: 1 day
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Returned data details of the specified conditional query
                      * @return Data Returned data details of the specified conditional query
+                     * 
                      */
                     std::vector<ResourceData> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

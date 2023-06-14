@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of matching records.
                      * @return TotalCount Number of matching records.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Execution history of an invoker.
                      * @return InvokerRecordSet Execution history of an invoker.
+                     * 
                      */
                     std::vector<InvokerRecord> GetInvokerRecordSet() const;
 
                     /**
                      * 判断参数 InvokerRecordSet 是否已赋值
                      * @return InvokerRecordSet 是否已赋值
+                     * 
                      */
                     bool InvokerRecordSetHasBeenSet() const;
 

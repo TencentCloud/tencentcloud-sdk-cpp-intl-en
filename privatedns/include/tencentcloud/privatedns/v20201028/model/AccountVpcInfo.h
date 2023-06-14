@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取VpcId: vpc-xadsafsdasd
                      * @return UniqVpcId VpcId: vpc-xadsafsdasd
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VpcId: vpc-xadsafsdasd
-                     * @param UniqVpcId VpcId: vpc-xadsafsdasd
+                     * @param _uniqVpcId VpcId: vpc-xadsafsdasd
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Region VPC region: ap-guangzhou, ap-shanghai
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置VPC region: ap-guangzhou, ap-shanghai
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Region VPC region: ap-guangzhou, ap-shanghai
+                     * @param _region VPC region: ap-guangzhou, ap-shanghai
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Uin VPC account: 123456789
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置VPC account: 123456789
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Uin VPC account: 123456789
+                     * @param _uin VPC account: 123456789
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUin(const std::string& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return VpcName VPC name: testname
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置VPC name: testname
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param VpcName VPC name: testname
+                     * @param _vpcName VPC name: testname
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcName(const std::string& _vpcName);
 
                     /**
                      * 判断参数 VpcName 是否已赋值
                      * @return VpcName 是否已赋值
+                     * 
                      */
                     bool VpcNameHasBeenSet() const;
 

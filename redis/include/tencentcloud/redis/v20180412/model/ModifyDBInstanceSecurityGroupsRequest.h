@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Database engine name, which is `redis` for this API.
                      * @return Product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Database engine name, which is `redis` for this API.
-                     * @param Product Database engine name, which is `redis` for this API.
+                     * @param _product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      * @return SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置List of IDs of security groups to be modified, which is an array of one or more security group IDs.
-                     * @param SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * @param _securityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param _instanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

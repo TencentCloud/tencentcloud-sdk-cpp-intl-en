@@ -53,72 +53,84 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The site name.
                      * @return ZoneName The site name.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置The site name.
-                     * @param ZoneName The site name.
+                     * @param _zoneName The site name.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取List of name servers used by the site
                      * @return OriginalNameServers List of name servers used by the site
+                     * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
                      * 设置List of name servers used by the site
-                     * @param OriginalNameServers List of name servers used by the site
+                     * @param _originalNameServers List of name servers used by the site
+                     * 
                      */
                     void SetOriginalNameServers(const std::vector<std::string>& _originalNameServers);
 
                     /**
                      * 判断参数 OriginalNameServers 是否已赋值
                      * @return OriginalNameServers 是否已赋值
+                     * 
                      */
                     bool OriginalNameServersHasBeenSet() const;
 
                     /**
                      * 获取The list of name servers assigned by Tencent Cloud.
                      * @return NameServers The list of name servers assigned by Tencent Cloud.
+                     * 
                      */
                     std::vector<std::string> GetNameServers() const;
 
                     /**
                      * 设置The list of name servers assigned by Tencent Cloud.
-                     * @param NameServers The list of name servers assigned by Tencent Cloud.
+                     * @param _nameServers The list of name servers assigned by Tencent Cloud.
+                     * 
                      */
                     void SetNameServers(const std::vector<std::string>& _nameServers);
 
                     /**
                      * 判断参数 NameServers 是否已赋值
                      * @return NameServers 是否已赋值
+                     * 
                      */
                     bool NameServersHasBeenSet() const;
 
@@ -133,6 +145,7 @@ namespace TencentCloud
 <li>`pending`: The name server is not switched.</li>
 <li>`moved`: The name server is moved.</li>
 <li>`deactivated`: The site is blocked.</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -142,17 +155,19 @@ namespace TencentCloud
 <li>`pending`: The name server is not switched.</li>
 <li>`moved`: The name server is moved.</li>
 <li>`deactivated`: The site is blocked.</li>
-                     * @param Status The site status. Values:
+                     * @param _status The site status. Values:
 <li>`active`: The name server is switched.</li>
 <li>`pending`: The name server is not switched.</li>
 <li>`moved`: The name server is moved.</li>
 <li>`deactivated`: The site is blocked.</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -163,6 +178,7 @@ namespace TencentCloud
                      * @return Type The site access method. Values:
 <li>`full`: Access through a name server.</li>
 <li>`partial`: Access through a CNAME record.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -170,33 +186,38 @@ namespace TencentCloud
                      * 设置The site access method. Values:
 <li>`full`: Access through a name server.</li>
 <li>`partial`: Access through a CNAME record.</li>
-                     * @param Type The site access method. Values:
+                     * @param _type The site access method. Values:
 <li>`full`: Access through a name server.</li>
 <li>`partial`: Access through a CNAME record.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Whether the site is disabled.
                      * @return Paused Whether the site is disabled.
+                     * 
                      */
                     bool GetPaused() const;
 
                     /**
                      * 设置Whether the site is disabled.
-                     * @param Paused Whether the site is disabled.
+                     * @param _paused Whether the site is disabled.
+                     * 
                      */
                     void SetPaused(const bool& _paused);
 
                     /**
                      * 判断参数 Paused 是否已赋值
                      * @return Paused 是否已赋值
+                     * 
                      */
                     bool PausedHasBeenSet() const;
 
@@ -207,6 +228,7 @@ namespace TencentCloud
                      * @return CnameSpeedUp Whether CNAME acceleration is enabled. Values:
 <li>`enabled`: Enabled</li>
 <li>`disabled`: Disabled</li>
+                     * 
                      */
                     std::string GetCnameSpeedUp() const;
 
@@ -214,15 +236,17 @@ namespace TencentCloud
                      * 设置Whether CNAME acceleration is enabled. Values:
 <li>`enabled`: Enabled</li>
 <li>`disabled`: Disabled</li>
-                     * @param CnameSpeedUp Whether CNAME acceleration is enabled. Values:
+                     * @param _cnameSpeedUp Whether CNAME acceleration is enabled. Values:
 <li>`enabled`: Enabled</li>
 <li>`disabled`: Disabled</li>
+                     * 
                      */
                     void SetCnameSpeedUp(const std::string& _cnameSpeedUp);
 
                     /**
                      * 判断参数 CnameSpeedUp 是否已赋值
                      * @return CnameSpeedUp 是否已赋值
+                     * 
                      */
                     bool CnameSpeedUpHasBeenSet() const;
 
@@ -233,6 +257,7 @@ namespace TencentCloud
                      * @return CnameStatus CNAME record access status. Values:
 <li>`finished`: The site is verified.</li>
 <li>`pending`: The site is being verified.</li>
+                     * 
                      */
                     std::string GetCnameStatus() const;
 
@@ -240,87 +265,101 @@ namespace TencentCloud
                      * 设置CNAME record access status. Values:
 <li>`finished`: The site is verified.</li>
 <li>`pending`: The site is being verified.</li>
-                     * @param CnameStatus CNAME record access status. Values:
+                     * @param _cnameStatus CNAME record access status. Values:
 <li>`finished`: The site is verified.</li>
 <li>`pending`: The site is being verified.</li>
+                     * 
                      */
                     void SetCnameStatus(const std::string& _cnameStatus);
 
                     /**
                      * 判断参数 CnameStatus 是否已赋值
                      * @return CnameStatus 是否已赋值
+                     * 
                      */
                     bool CnameStatusHasBeenSet() const;
 
                     /**
                      * 获取The list of resource tags.
                      * @return Tags The list of resource tags.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置The list of resource tags.
-                     * @param Tags The list of resource tags.
+                     * @param _tags The list of resource tags.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取The list of billable resources.
                      * @return Resources The list of billable resources.
+                     * 
                      */
                     std::vector<Resource> GetResources() const;
 
                     /**
                      * 设置The list of billable resources.
-                     * @param Resources The list of billable resources.
+                     * @param _resources The list of billable resources.
+                     * 
                      */
                     void SetResources(const std::vector<Resource>& _resources);
 
                     /**
                      * 判断参数 Resources 是否已赋值
                      * @return Resources 是否已赋值
+                     * 
                      */
                     bool ResourcesHasBeenSet() const;
 
                     /**
                      * 获取The creation time of the site.
                      * @return CreatedOn The creation time of the site.
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置The creation time of the site.
-                     * @param CreatedOn The creation time of the site.
+                     * @param _createdOn The creation time of the site.
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
                     /**
                      * 获取The modification date of the site.
                      * @return ModifiedOn The modification date of the site.
+                     * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
                      * 设置The modification date of the site.
-                     * @param ModifiedOn The modification date of the site.
+                     * @param _modifiedOn The modification date of the site.
+                     * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
 
                     /**
                      * 判断参数 ModifiedOn 是否已赋值
                      * @return ModifiedOn 是否已赋值
+                     * 
                      */
                     bool ModifiedOnHasBeenSet() const;
 
@@ -333,6 +372,7 @@ namespace TencentCloud
 <li>`global`: Global.</li>
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Outside the Chinese mainland.</li>
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -341,16 +381,18 @@ namespace TencentCloud
 <li>`global`: Global.</li>
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Outside the Chinese mainland.</li>
-                     * @param Area The site access region. Values:
+                     * @param _area The site access region. Values:
 <li>`global`: Global.</li>
 <li>`mainland`: Chinese mainland.</li>
 <li>`overseas`: Outside the Chinese mainland.</li>
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -359,20 +401,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VanityNameServers The custom name server information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VanityNameServers GetVanityNameServers() const;
 
                     /**
                      * 设置The custom name server information.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VanityNameServers The custom name server information.
+                     * @param _vanityNameServers The custom name server information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVanityNameServers(const VanityNameServers& _vanityNameServers);
 
                     /**
                      * 判断参数 VanityNameServers 是否已赋值
                      * @return VanityNameServers 是否已赋值
+                     * 
                      */
                     bool VanityNameServersHasBeenSet() const;
 
@@ -381,20 +426,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VanityNameServersIps The custom name server IP information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<VanityNameServersIps> GetVanityNameServersIps() const;
 
                     /**
                      * 设置The custom name server IP information.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VanityNameServersIps The custom name server IP information.
+                     * @param _vanityNameServersIps The custom name server IP information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVanityNameServersIps(const std::vector<VanityNameServersIps>& _vanityNameServersIps);
 
                     /**
                      * 判断参数 VanityNameServersIps 是否已赋值
                      * @return VanityNameServersIps 是否已赋值
+                     * 
                      */
                     bool VanityNameServersIpsHasBeenSet() const;
 
@@ -407,6 +455,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`active`: Enabled</li>
 <li>`inactive`: Not activated</li>
 <li>`paused`: Disabled</li>
+                     * 
                      */
                     std::string GetActiveStatus() const;
 
@@ -415,16 +464,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`active`: Enabled</li>
 <li>`inactive`: Not activated</li>
 <li>`paused`: Disabled</li>
-                     * @param ActiveStatus Status of the proxy. Values:
+                     * @param _activeStatus Status of the proxy. Values:
 <li>`active`: Enabled</li>
 <li>`inactive`: Not activated</li>
 <li>`paused`: Disabled</li>
+                     * 
                      */
                     void SetActiveStatus(const std::string& _activeStatus);
 
                     /**
                      * 判断参数 ActiveStatus 是否已赋值
                      * @return ActiveStatus 是否已赋值
+                     * 
                      */
                     bool ActiveStatusHasBeenSet() const;
 
@@ -433,20 +484,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAliasZoneName() const;
 
                     /**
                      * 设置The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * @param _aliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAliasZoneName(const std::string& _aliasZoneName);
 
                     /**
                      * 判断参数 AliasZoneName 是否已赋值
                      * @return AliasZoneName 是否已赋值
+                     * 
                      */
                     bool AliasZoneNameHasBeenSet() const;
 
@@ -459,6 +513,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`0`: Non-fake site</li>
 <li>`1`: Fake site</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetIsFake() const;
 
@@ -467,16 +522,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`0`: Non-fake site</li>
 <li>`1`: Fake site</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param IsFake Whether it’s a fake site. Values:
+                     * @param _isFake Whether it’s a fake site. Values:
 <li>`0`: Non-fake site</li>
 <li>`1`: Fake site</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIsFake(const int64_t& _isFake);
 
                     /**
                      * 判断参数 IsFake 是否已赋值
                      * @return IsFake 是否已赋值
+                     * 
                      */
                     bool IsFakeHasBeenSet() const;
 

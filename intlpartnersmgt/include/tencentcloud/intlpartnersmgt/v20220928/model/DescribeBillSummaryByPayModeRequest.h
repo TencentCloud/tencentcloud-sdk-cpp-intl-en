@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Bill month in the format of "yyyy-MM"
                      * @return BillMonth Bill month in the format of "yyyy-MM"
+                     * 
                      */
                     std::string GetBillMonth() const;
 
                     /**
                      * 设置Bill month in the format of "yyyy-MM"
-                     * @param BillMonth Bill month in the format of "yyyy-MM"
+                     * @param _billMonth Bill month in the format of "yyyy-MM"
+                     * 
                      */
                     void SetBillMonth(const std::string& _billMonth);
 
                     /**
                      * 判断参数 BillMonth 是否已赋值
                      * @return BillMonth 是否已赋值
+                     * 
                      */
                     bool BillMonthHasBeenSet() const;
 
                     /**
                      * 获取Customer UIN
                      * @return CustomerUin Customer UIN
+                     * 
                      */
                     int64_t GetCustomerUin() const;
 
                     /**
                      * 设置Customer UIN
-                     * @param CustomerUin Customer UIN
+                     * @param _customerUin Customer UIN
+                     * 
                      */
                     void SetCustomerUin(const int64_t& _customerUin);
 
                     /**
                      * 判断参数 CustomerUin 是否已赋值
                      * @return CustomerUin 是否已赋值
+                     * 
                      */
                     bool CustomerUinHasBeenSet() const;
 

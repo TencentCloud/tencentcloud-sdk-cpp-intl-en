@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID.
                      * @return LoadBalancerId CLB instance ID.
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID.
-                     * @param LoadBalancerId CLB instance ID.
+                     * @param _loadBalancerId CLB instance ID.
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB listener ID.
                      * @return ListenerId CLB listener ID.
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID.
-                     * @param ListenerId CLB listener ID.
+                     * @param _listenerId CLB listener ID.
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取List of functions to be unbound
                      * @return FunctionTargets List of functions to be unbound
+                     * 
                      */
                     std::vector<FunctionTarget> GetFunctionTargets() const;
 
                     /**
                      * 设置List of functions to be unbound
-                     * @param FunctionTargets List of functions to be unbound
+                     * @param _functionTargets List of functions to be unbound
+                     * 
                      */
                     void SetFunctionTargets(const std::vector<FunctionTarget>& _functionTargets);
 
                     /**
                      * 判断参数 FunctionTargets 是否已赋值
                      * @return FunctionTargets 是否已赋值
+                     * 
                      */
                     bool FunctionTargetsHasBeenSet() const;
 
                     /**
                      * 获取The ID of target forwarding rule. To unbind a function from an L7 forwarding rule, either `LocationId` or `Domain+Url` is required. 
                      * @return LocationId The ID of target forwarding rule. To unbind a function from an L7 forwarding rule, either `LocationId` or `Domain+Url` is required. 
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置The ID of target forwarding rule. To unbind a function from an L7 forwarding rule, either `LocationId` or `Domain+Url` is required. 
-                     * @param LocationId The ID of target forwarding rule. To unbind a function from an L7 forwarding rule, either `LocationId` or `Domain+Url` is required. 
+                     * @param _locationId The ID of target forwarding rule. To unbind a function from an L7 forwarding rule, either `LocationId` or `Domain+Url` is required. 
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name of the target forwarding rule. It is ignored if `LocationId` is specified. 
                      * @return Domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified. 
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name of the target forwarding rule. It is ignored if `LocationId` is specified. 
-                     * @param Domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified. 
+                     * @param _domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified. 
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取URL of the target forwarding rule. It is ignored if `LocationId` is specified. 
                      * @return Url URL of the target forwarding rule. It is ignored if `LocationId` is specified. 
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of the target forwarding rule. It is ignored if `LocationId` is specified. 
-                     * @param Url URL of the target forwarding rule. It is ignored if `LocationId` is specified. 
+                     * @param _url URL of the target forwarding rule. It is ignored if `LocationId` is specified. 
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether it is supported. Valid values: `yes`, `no`.
                      * @return IsDisable Whether it is supported. Valid values: `yes`, `no`.
+                     * 
                      */
                     std::string GetIsDisable() const;
 
                     /**
                      * 设置Whether it is supported. Valid values: `yes`, `no`.
-                     * @param IsDisable Whether it is supported. Valid values: `yes`, `no`.
+                     * @param _isDisable Whether it is supported. Valid values: `yes`, `no`.
+                     * 
                      */
                     void SetIsDisable(const std::string& _isDisable);
 
                     /**
                      * 判断参数 IsDisable 是否已赋值
                      * @return IsDisable 是否已赋值
+                     * 
                      */
                     bool IsDisableHasBeenSet() const;
 
                     /**
                      * 获取Module name
                      * @return ModuleName Module name
+                     * 
                      */
                     std::string GetModuleName() const;
 
                     /**
                      * 设置Module name
-                     * @param ModuleName Module name
+                     * @param _moduleName Module name
+                     * 
                      */
                     void SetModuleName(const std::string& _moduleName);
 
                     /**
                      * 判断参数 ModuleName 是否已赋值
                      * @return ModuleName 是否已赋值
+                     * 
                      */
                     bool ModuleNameHasBeenSet() const;
 

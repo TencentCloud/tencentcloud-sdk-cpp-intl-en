@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Filter parameters
                      * @return Filters Filter parameters
+                     * 
                      */
                     std::vector<DnsDataFilter> GetFilters() const;
 
                     /**
                      * 设置Filter parameters
-                     * @param Filters Filter parameters
+                     * @param _filters Filter parameters
+                     * 
                      */
                     void SetFilters(const std::vector<DnsDataFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
@@ -110,6 +119,7 @@ Valid values:
 `5min`: 5 minutes
 `hour`: 1 hour
 `day`: 1 day
+                     * 
                      */
                     std::string GetInterval() const;
 
@@ -120,18 +130,20 @@ Valid values:
 `5min`: 5 minutes
 `hour`: 1 hour
 `day`: 1 day
-                     * @param Interval Time granularity. The default value is `min`. The server can adapt to the time granularity specified.
+                     * @param _interval Time granularity. The default value is `min`. The server can adapt to the time granularity specified.
 Valid values:
 `min`: 1 minute
 `5min`: 5 minutes
 `hour`: 1 hour
 `day`: 1 day
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 

@@ -47,20 +47,23 @@ namespace TencentCloud
 Example: 2019-02-21 10:00:00.
                      * @return StartTime Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
-                     * @param StartTime Start point in time (Beijing time).
+                     * @param _startTime Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -71,6 +74,7 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      * @return EndTime End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -78,15 +82,17 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
                      * 设置End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
-                     * @param EndTime End point in time (Beijing time).
+                     * @param _endTime End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
 Note: `EndTime` and `StartTime` only support querying data for the last day.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
 1: 1-minute granularity (the query interval should be within 1 day)
                      * @return Granularity Supported granularities:
 1: 1-minute granularity (the query interval should be within 1 day)
+                     * 
                      */
                     uint64_t GetGranularity() const;
 
                     /**
                      * 设置Supported granularities:
 1: 1-minute granularity (the query interval should be within 1 day)
-                     * @param Granularity Supported granularities:
+                     * @param _granularity Supported granularities:
 1: 1-minute granularity (the query interval should be within 1 day)
+                     * 
                      */
                     void SetGranularity(const uint64_t& _granularity);
 
                     /**
                      * 判断参数 Granularity 是否已赋值
                      * @return Granularity 是否已赋值
+                     * 
                      */
                     bool GranularityHasBeenSet() const;
 
@@ -125,6 +134,7 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
 "Flux": traffic
 "Request": number of requests
 "Online": number of concurrent connections
+                     * 
                      */
                     std::string GetStatType() const;
 
@@ -135,90 +145,104 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
 "Flux": traffic
 "Request": number of requests
 "Online": number of concurrent connections
-                     * @param StatType Statistical metric type:
+                     * @param _statType Statistical metric type:
 "Bandwidth": bandwidth
 "FluxPerSecond": average traffic
 "Flux": traffic
 "Request": number of requests
 "Online": number of concurrent connections
+                     * 
                      */
                     void SetStatType(const std::string& _statType);
 
                     /**
                      * 判断参数 StatType 是否已赋值
                      * @return StatType 是否已赋值
+                     * 
                      */
                     bool StatTypeHasBeenSet() const;
 
                     /**
                      * 获取Playback domain name list.
                      * @return PlayDomains Playback domain name list.
+                     * 
                      */
                     std::vector<std::string> GetPlayDomains() const;
 
                     /**
                      * 设置Playback domain name list.
-                     * @param PlayDomains Playback domain name list.
+                     * @param _playDomains Playback domain name list.
+                     * 
                      */
                     void SetPlayDomains(const std::vector<std::string>& _playDomains);
 
                     /**
                      * 判断参数 PlayDomains 是否已赋值
                      * @return PlayDomains 是否已赋值
+                     * 
                      */
                     bool PlayDomainsHasBeenSet() const;
 
                     /**
                      * 获取List of the districts to be queried, such as Beijing.
                      * @return ProvinceNames List of the districts to be queried, such as Beijing.
+                     * 
                      */
                     std::vector<std::string> GetProvinceNames() const;
 
                     /**
                      * 设置List of the districts to be queried, such as Beijing.
-                     * @param ProvinceNames List of the districts to be queried, such as Beijing.
+                     * @param _provinceNames List of the districts to be queried, such as Beijing.
+                     * 
                      */
                     void SetProvinceNames(const std::vector<std::string>& _provinceNames);
 
                     /**
                      * 判断参数 ProvinceNames 是否已赋值
                      * @return ProvinceNames 是否已赋值
+                     * 
                      */
                     bool ProvinceNamesHasBeenSet() const;
 
                     /**
                      * 获取List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
                      * @return IspNames List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
+                     * 
                      */
                     std::vector<std::string> GetIspNames() const;
 
                     /**
                      * 设置List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
-                     * @param IspNames List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
+                     * @param _ispNames List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
+                     * 
                      */
                     void SetIspNames(const std::vector<std::string>& _ispNames);
 
                     /**
                      * 判断参数 IspNames 是否已赋值
                      * @return IspNames 是否已赋值
+                     * 
                      */
                     bool IspNamesHasBeenSet() const;
 
                     /**
                      * 获取Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
                      * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
                     /**
                      * 设置Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
-                     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * @param _mainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 
@@ -229,6 +253,7 @@ Data of all IPs will be returned if this parameter is left empty.
                      * @return IpType IP type:
 "Ipv6": IPv6 data
 Data of all IPs will be returned if this parameter is left empty.
+                     * 
                      */
                     std::string GetIpType() const;
 
@@ -236,15 +261,17 @@ Data of all IPs will be returned if this parameter is left empty.
                      * 设置IP type:
 "Ipv6": IPv6 data
 Data of all IPs will be returned if this parameter is left empty.
-                     * @param IpType IP type:
+                     * @param _ipType IP type:
 "Ipv6": IPv6 data
 Data of all IPs will be returned if this parameter is left empty.
+                     * 
                      */
                     void SetIpType(const std::string& _ipType);
 
                     /**
                      * 判断参数 IpType 是否已赋值
                      * @return IpType 是否已赋值
+                     * 
                      */
                     bool IpTypeHasBeenSet() const;
 

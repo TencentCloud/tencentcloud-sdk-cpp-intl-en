@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return AttributeKey Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttributeKey() const;
 
                     /**
                      * 设置Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param AttributeKey Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
+                     * @param _attributeKey Valid values: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, and EventId
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttributeKey(const std::string& _attributeKey);
 
                     /**
                      * 判断参数 AttributeKey 是否已赋值
                      * @return AttributeKey 是否已赋值
+                     * 
                      */
                     bool AttributeKeyHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return AttributeValue Value of `AttributeValue`
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttributeValue() const;
 
                     /**
                      * 设置Value of `AttributeValue`
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param AttributeValue Value of `AttributeValue`
+                     * @param _attributeValue Value of `AttributeValue`
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttributeValue(const std::string& _attributeValue);
 
                     /**
                      * 判断参数 AttributeValue 是否已赋值
                      * @return AttributeValue 是否已赋值
+                     * 
                      */
                     bool AttributeValueHasBeenSet() const;
 

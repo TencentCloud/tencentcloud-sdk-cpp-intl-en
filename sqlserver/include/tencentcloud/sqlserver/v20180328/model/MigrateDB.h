@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of migrated database
                      * @return DBName Name of migrated database
+                     * 
                      */
                     std::string GetDBName() const;
 
                     /**
                      * 设置Name of migrated database
-                     * @param DBName Name of migrated database
+                     * @param _dBName Name of migrated database
+                     * 
                      */
                     void SetDBName(const std::string& _dBName);
 
                     /**
                      * 判断参数 DBName 是否已赋值
                      * @return DBName 是否已赋值
+                     * 
                      */
                     bool DBNameHasBeenSet() const;
 

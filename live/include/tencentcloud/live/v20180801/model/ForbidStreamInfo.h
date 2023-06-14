@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: Beijing time (UTC+8) is used.
                      * @return CreateTime The creation time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The creation time.
 Note: Beijing time (UTC+8) is used.
-                     * @param CreateTime The creation time.
+                     * @param _createTime The creation time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: Beijing time (UTC+8) is used.
 Note: Beijing time (UTC+8) is used.
                      * @return ExpireTime The end time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置The end time.
 Note: Beijing time (UTC+8) is used.
-                     * @param ExpireTime The end time.
+                     * @param _expireTime The end time.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AppName The push path.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The push path.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AppName The push path.
+                     * @param _appName The push path.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DomainName The push domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置The push domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DomainName The push domain name.
+                     * @param _domainName The push domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 

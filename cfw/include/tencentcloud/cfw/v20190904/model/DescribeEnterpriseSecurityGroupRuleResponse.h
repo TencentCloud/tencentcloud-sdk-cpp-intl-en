@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取Page number of the current page displayed for query by page number.
                      * @return PageNo Page number of the current page displayed for query by page number.
+                     * 
                      */
                     std::string GetPageNo() const;
 
                     /**
                      * 判断参数 PageNo 是否已赋值
                      * @return PageNo 是否已赋值
+                     * 
                      */
                     bool PageNoHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of entries per page displayed for query by page number.
                      * @return PageSize Maximum number of entries per page displayed for query by page number.
+                     * 
                      */
                     std::string GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Access control rule list
                      * @return Rules Access control rule list
+                     * 
                      */
                     std::vector<SecurityGroupRule> GetRules() const;
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
                     /**
                      * 获取Total number of access control rules
                      * @return TotalCount Total number of access control rules
+                     * 
                      */
                     std::string GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

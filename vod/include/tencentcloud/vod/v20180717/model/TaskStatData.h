@@ -75,6 +75,7 @@ namespace TencentCloud
 <li>`AddTraceWatermark`: Digital watermarking</li>
 <li>`RebuildMedia`: Remaster</li>
 <li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+                     * 
                      */
                     std::string GetTaskType() const;
 
@@ -92,7 +93,7 @@ namespace TencentCloud
 <li>`AddTraceWatermark`: Digital watermarking</li>
 <li>`RebuildMedia`: Remaster</li>
 <li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
-                     * @param TaskType The task type.
+                     * @param _taskType The task type.
 <li>`Transcoding`: General transcoding</li>
 <li>`Transcoding-TESHD`: Top Speed Codec transcoding</li>
 <li>`Editing`: Video editing</li>
@@ -105,30 +106,35 @@ namespace TencentCloud
 <li>`AddTraceWatermark`: Digital watermarking</li>
 <li>`RebuildMedia`: Remaster</li>
 <li>`Transcode` Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+                     * 
                      */
                     void SetTaskType(const std::string& _taskType);
 
                     /**
                      * 判断参数 TaskType 是否已赋值
                      * @return TaskType 是否已赋值
+                     * 
                      */
                     bool TaskTypeHasBeenSet() const;
 
                     /**
                      * 获取Task statistics overview (usage unit: second).
                      * @return Summary Task statistics overview (usage unit: second).
+                     * 
                      */
                     std::vector<TaskStatDataItem> GetSummary() const;
 
                     /**
                      * 设置Task statistics overview (usage unit: second).
-                     * @param Summary Task statistics overview (usage unit: second).
+                     * @param _summary Task statistics overview (usage unit: second).
+                     * 
                      */
                     void SetSummary(const std::vector<TaskStatDataItem>& _summary);
 
                     /**
                      * 判断参数 Summary 是否已赋值
                      * @return Summary 是否已赋值
+                     * 
                      */
                     bool SummaryHasBeenSet() const;
 
@@ -239,6 +245,7 @@ The watermark removal/remaster specifications. Valid values:
 <li>`4K` (short side ≤ 2160 px)</li>
 <li>`8K` (short side ≤ 4320 px)</li>
 <li>`audio`</li>
+                     * 
                      */
                     std::vector<SpecificationDataItem> GetDetails() const;
 
@@ -296,7 +303,7 @@ The watermark removal/remaster specifications. Valid values:
 <li>`4K` (short side ≤ 2160 px)</li>
 <li>`8K` (short side ≤ 4320 px)</li>
 <li>`audio`</li>
-                     * @param Details The usage statistics for different task types.
+                     * @param _details The usage statistics for different task types.
 Transcoding:
 <li>`Remuxing`</li>
 <li>`Audio` (audio transcoding)</li>
@@ -349,12 +356,14 @@ The watermark removal/remaster specifications. Valid values:
 <li>`4K` (short side ≤ 2160 px)</li>
 <li>`8K` (short side ≤ 4320 px)</li>
 <li>`audio`</li>
+                     * 
                      */
                     void SetDetails(const std::vector<SpecificationDataItem>& _details);
 
                     /**
                      * 判断参数 Details 是否已赋值
                      * @return Details 是否已赋值
+                     * 
                      */
                     bool DetailsHasBeenSet() const;
 

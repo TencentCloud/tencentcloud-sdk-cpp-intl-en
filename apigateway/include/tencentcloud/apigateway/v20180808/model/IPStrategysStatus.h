@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of policies.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Number of policies.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCount Number of policies.
+                     * @param _totalCount Number of policies.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StrategySet Policy list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IPStrategy> GetStrategySet() const;
 
                     /**
                      * 设置Policy list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StrategySet Policy list.
+                     * @param _strategySet Policy list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStrategySet(const std::vector<IPStrategy>& _strategySet);
 
                     /**
                      * 判断参数 StrategySet 是否已赋值
                      * @return StrategySet 是否已赋值
+                     * 
                      */
                     bool StrategySetHasBeenSet() const;
 

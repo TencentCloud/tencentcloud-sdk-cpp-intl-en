@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The AWS S3 bucket.
                      * @return S3Bucket The AWS S3 bucket.
+                     * 
                      */
                     std::string GetS3Bucket() const;
 
                     /**
                      * 设置The AWS S3 bucket.
-                     * @param S3Bucket The AWS S3 bucket.
+                     * @param _s3Bucket The AWS S3 bucket.
+                     * 
                      */
                     void SetS3Bucket(const std::string& _s3Bucket);
 
                     /**
                      * 判断参数 S3Bucket 是否已赋值
                      * @return S3Bucket 是否已赋值
+                     * 
                      */
                     bool S3BucketHasBeenSet() const;
 
                     /**
                      * 获取The region of the AWS S3 bucket.
                      * @return S3Region The region of the AWS S3 bucket.
+                     * 
                      */
                     std::string GetS3Region() const;
 
                     /**
                      * 设置The region of the AWS S3 bucket.
-                     * @param S3Region The region of the AWS S3 bucket.
+                     * @param _s3Region The region of the AWS S3 bucket.
+                     * 
                      */
                     void SetS3Region(const std::string& _s3Region);
 
                     /**
                      * 判断参数 S3Region 是否已赋值
                      * @return S3Region 是否已赋值
+                     * 
                      */
                     bool S3RegionHasBeenSet() const;
 
                     /**
                      * 获取The path of the AWS S3 object.
                      * @return S3Object The path of the AWS S3 object.
+                     * 
                      */
                     std::string GetS3Object() const;
 
                     /**
                      * 设置The path of the AWS S3 object.
-                     * @param S3Object The path of the AWS S3 object.
+                     * @param _s3Object The path of the AWS S3 object.
+                     * 
                      */
                     void SetS3Object(const std::string& _s3Object);
 
                     /**
                      * 判断参数 S3Object 是否已赋值
                      * @return S3Object 是否已赋值
+                     * 
                      */
                     bool S3ObjectHasBeenSet() const;
 
                     /**
                      * 获取The key ID required to access the AWS S3 object.
                      * @return S3SecretId The key ID required to access the AWS S3 object.
+                     * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
                      * 设置The key ID required to access the AWS S3 object.
-                     * @param S3SecretId The key ID required to access the AWS S3 object.
+                     * @param _s3SecretId The key ID required to access the AWS S3 object.
+                     * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
 
                     /**
                      * 判断参数 S3SecretId 是否已赋值
                      * @return S3SecretId 是否已赋值
+                     * 
                      */
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
                      * 获取The key required to access the AWS S3 object.
                      * @return S3SecretKey The key required to access the AWS S3 object.
+                     * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
                      * 设置The key required to access the AWS S3 object.
-                     * @param S3SecretKey The key required to access the AWS S3 object.
+                     * @param _s3SecretKey The key required to access the AWS S3 object.
+                     * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
 
                     /**
                      * 判断参数 S3SecretKey 是否已赋值
                      * @return S3SecretKey 是否已赋值
+                     * 
                      */
                     bool S3SecretKeyHasBeenSet() const;
 

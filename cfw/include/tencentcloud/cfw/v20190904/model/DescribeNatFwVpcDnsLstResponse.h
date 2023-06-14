@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return VpcDnsSwitchLst VPC DNS info array of NAT firewall
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<VpcDnsInfo> GetVpcDnsSwitchLst() const;
 
                     /**
                      * 判断参数 VpcDnsSwitchLst 是否已赋值
                      * @return VpcDnsSwitchLst 是否已赋值
+                     * 
                      */
                     bool VpcDnsSwitchLstHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ReturnMsg Response parameter
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetReturnMsg() const;
 
                     /**
                      * 判断参数 ReturnMsg 是否已赋值
                      * @return ReturnMsg 是否已赋值
+                     * 
                      */
                     bool ReturnMsgHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Total Total number of toggles
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

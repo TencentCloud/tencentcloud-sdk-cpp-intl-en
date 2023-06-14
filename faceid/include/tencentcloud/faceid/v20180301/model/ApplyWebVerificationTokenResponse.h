@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取The verification URL to be opened with a browser to start the verification process.
                      * @return VerificationUrl The verification URL to be opened with a browser to start the verification process.
+                     * 
                      */
                     std::string GetVerificationUrl() const;
 
                     /**
                      * 判断参数 VerificationUrl 是否已赋值
                      * @return VerificationUrl 是否已赋值
+                     * 
                      */
                     bool VerificationUrlHasBeenSet() const;
 
                     /**
                      * 获取The token used to identify a web-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
                      * @return BizToken The token used to identify a web-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+                     * 
                      */
                     std::string GetBizToken() const;
 
                     /**
                      * 判断参数 BizToken 是否已赋值
                      * @return BizToken 是否已赋值
+                     * 
                      */
                     bool BizTokenHasBeenSet() const;
 

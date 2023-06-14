@@ -47,54 +47,63 @@ namespace TencentCloud
                     /**
                      * 获取Private domain ID
                      * @return ZoneId Private domain ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Private domain ID
-                     * @param ZoneId Private domain ID
+                     * @param _zoneId Private domain ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取List of all VPCs associated with private domain
                      * @return VpcSet List of all VPCs associated with private domain
+                     * 
                      */
                     std::vector<VpcInfo> GetVpcSet() const;
 
                     /**
                      * 设置List of all VPCs associated with private domain
-                     * @param VpcSet List of all VPCs associated with private domain
+                     * @param _vpcSet List of all VPCs associated with private domain
+                     * 
                      */
                     void SetVpcSet(const std::vector<VpcInfo>& _vpcSet);
 
                     /**
                      * 判断参数 VpcSet 是否已赋值
                      * @return VpcSet 是否已赋值
+                     * 
                      */
                     bool VpcSetHasBeenSet() const;
 
                     /**
                      * 获取List of authorized accounts' VPCs to associate with the private domain
                      * @return AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
+                     * 
                      */
                     std::vector<AccountVpcInfo> GetAccountVpcSet() const;
 
                     /**
                      * 设置List of authorized accounts' VPCs to associate with the private domain
-                     * @param AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
+                     * @param _accountVpcSet List of authorized accounts' VPCs to associate with the private domain
+                     * 
                      */
                     void SetAccountVpcSet(const std::vector<AccountVpcInfo>& _accountVpcSet);
 
                     /**
                      * 判断参数 AccountVpcSet 是否已赋值
                      * @return AccountVpcSet 是否已赋值
+                     * 
                      */
                     bool AccountVpcSetHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Custom application name.
                      * @return ApiAppName Custom application name.
+                     * 
                      */
                     std::string GetApiAppName() const;
 
                     /**
                      * 设置Custom application name.
-                     * @param ApiAppName Custom application name.
+                     * @param _apiAppName Custom application name.
+                     * 
                      */
                     void SetApiAppName(const std::string& _apiAppName);
 
                     /**
                      * 判断参数 ApiAppName 是否已赋值
                      * @return ApiAppName 是否已赋值
+                     * 
                      */
                     bool ApiAppNameHasBeenSet() const;
 
                     /**
                      * 获取Application description
                      * @return ApiAppDesc Application description
+                     * 
                      */
                     std::string GetApiAppDesc() const;
 
                     /**
                      * 设置Application description
-                     * @param ApiAppDesc Application description
+                     * @param _apiAppDesc Application description
+                     * 
                      */
                     void SetApiAppDesc(const std::string& _apiAppDesc);
 
                     /**
                      * 判断参数 ApiAppDesc 是否已赋值
                      * @return ApiAppDesc 是否已赋值
+                     * 
                      */
                     bool ApiAppDescHasBeenSet() const;
 

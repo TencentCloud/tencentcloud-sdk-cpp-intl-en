@@ -49,12 +49,14 @@ namespace TencentCloud
                     /**
                      * 获取The number of proxy nodes
                      * @return ProxyCount The number of proxy nodes
+                     * 
                      */
                     int64_t GetProxyCount() const;
 
                     /**
                      * 判断参数 ProxyCount 是否已赋值
                      * @return ProxyCount 是否已赋值
+                     * 
                      */
                     bool ProxyCountHasBeenSet() const;
 
@@ -63,24 +65,28 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Proxy Proxy node information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ProxyNodes> GetProxy() const;
 
                     /**
                      * 判断参数 Proxy 是否已赋值
                      * @return Proxy 是否已赋值
+                     * 
                      */
                     bool ProxyHasBeenSet() const;
 
                     /**
                      * 获取The number of redis nodes
                      * @return RedisCount The number of redis nodes
+                     * 
                      */
                     int64_t GetRedisCount() const;
 
                     /**
                      * 判断参数 RedisCount 是否已赋值
                      * @return RedisCount 是否已赋值
+                     * 
                      */
                     bool RedisCountHasBeenSet() const;
 
@@ -89,24 +95,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Redis Redis node information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RedisNodes> GetRedis() const;
 
                     /**
                      * 判断参数 Redis 是否已赋值
                      * @return Redis 是否已赋值
+                     * 
                      */
                     bool RedisHasBeenSet() const;
 
                     /**
                      * 获取The number of tendis nodes
                      * @return TendisCount The number of tendis nodes
+                     * 
                      */
                     int64_t GetTendisCount() const;
 
                     /**
                      * 判断参数 TendisCount 是否已赋值
                      * @return TendisCount 是否已赋值
+                     * 
                      */
                     bool TendisCountHasBeenSet() const;
 
@@ -115,12 +125,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Tendis Tendis node information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TendisNodes> GetTendis() const;
 
                     /**
                      * 判断参数 Tendis 是否已赋值
                      * @return Tendis 是否已赋值
+                     * 
                      */
                     bool TendisHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Start time offset of a suspected segment in seconds.
                      * @return StartTimeOffset Start time offset of a suspected segment in seconds.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of a suspected segment in seconds.
-                     * @param StartTimeOffset Start time offset of a suspected segment in seconds.
+                     * @param _startTimeOffset Start time offset of a suspected segment in seconds.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取End time offset of a suspected segment in seconds.
                      * @return EndTimeOffset End time offset of a suspected segment in seconds.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time offset of a suspected segment in seconds.
-                     * @param EndTimeOffset End time offset of a suspected segment in seconds.
+                     * @param _endTimeOffset End time offset of a suspected segment in seconds.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取Confidence score for the detected politically sensitive content
                      * @return Confidence Confidence score for the detected politically sensitive content
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence score for the detected politically sensitive content
-                     * @param Confidence Confidence score for the detected politically sensitive content
+                     * @param _confidence Confidence score for the detected politically sensitive content
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -109,6 +118,7 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -117,34 +127,39 @@ namespace TencentCloud
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion Processing suggestion for the detected politically sensitive content. Valid values:
+                     * @param _suggestion Processing suggestion for the detected politically sensitive content. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取Name of the politically sensitive content or banned images
                      * @return Name Name of the politically sensitive content or banned images
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of the politically sensitive content or banned images
-                     * @param Name Name of the politically sensitive content or banned images
+                     * @param _name Name of the politically sensitive content or banned images
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -197,6 +212,7 @@ celebrity:
 <li>historical_celebrity: banned historical figures</li>
 military:
 <li>sensitive_military: banned people in military</li>
+                     * 
                      */
                     std::string GetLabel() const;
 
@@ -225,7 +241,7 @@ celebrity:
 <li>historical_celebrity: banned historical figures</li>
 military:
 <li>sensitive_military: banned people in military</li>
-                     * @param Label Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+                     * @param _label Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
 <li>`violation_photo`: banned images</li>
 politician:
@@ -249,12 +265,14 @@ celebrity:
 <li>historical_celebrity: banned historical figures</li>
 military:
 <li>sensitive_military: banned people in military</li>
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -263,74 +281,86 @@ military:
  and will be deleted after `PicUrlExpireTime`).
                      * @return Url URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
-                     * @param Url URL of a suspected image (which will not be permanently stored
+                     * @param _url URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
                      * @return AreaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
                      * 设置Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-                     * @param AreaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * @param _areaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
 
                     /**
                      * 判断参数 AreaCoordSet 是否已赋值
                      * @return AreaCoordSet 是否已赋值
+                     * 
                      */
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
                      * 获取This field has been disused. Please use `PicUrlExpireTime`.
                      * @return PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * 
                      */
                     int64_t GetPicUrlExpireTimeStamp() const;
 
                     /**
                      * 设置This field has been disused. Please use `PicUrlExpireTime`.
-                     * @param PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * @param _picUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * 
                      */
                     void SetPicUrlExpireTimeStamp(const int64_t& _picUrlExpireTimeStamp);
 
                     /**
                      * 判断参数 PicUrlExpireTimeStamp 是否已赋值
                      * @return PicUrlExpireTimeStamp 是否已赋值
+                     * 
                      */
                     bool PicUrlExpireTimeStampHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
                      * 设置Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _picUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
 
                     /**
                      * 判断参数 PicUrlExpireTime 是否已赋值
                      * @return PicUrlExpireTime 是否已赋值
+                     * 
                      */
                     bool PicUrlExpireTimeHasBeenSet() const;
 

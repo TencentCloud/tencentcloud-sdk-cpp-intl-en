@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The set of queried recording tasks.
                      * @return RecordTaskSet The set of queried recording tasks.
+                     * 
                      */
                     std::vector<RecordTaskSearchResult> GetRecordTaskSet() const;
 
                     /**
                      * 判断参数 RecordTaskSet 是否已赋值
                      * @return RecordTaskSet 是否已赋值
+                     * 
                      */
                     bool RecordTaskSetHasBeenSet() const;
 
                     /**
                      * 获取Number of recording tasks.
                      * @return TotalCount Number of recording tasks.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Storage statistics with one piece of data for every 5 minutes or 1 day.
                      * @return Data Storage statistics with one piece of data for every 5 minutes or 1 day.
+                     * 
                      */
                     std::vector<StatDataItem> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

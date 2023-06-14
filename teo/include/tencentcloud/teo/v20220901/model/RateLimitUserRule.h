@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取The request threshold. Value range: 0-4294967294.
                      * @return Threshold The request threshold. Value range: 0-4294967294.
+                     * 
                      */
                     int64_t GetThreshold() const;
 
                     /**
                      * 设置The request threshold. Value range: 0-4294967294.
-                     * @param Threshold The request threshold. Value range: 0-4294967294.
+                     * @param _threshold The request threshold. Value range: 0-4294967294.
+                     * 
                      */
                     void SetThreshold(const int64_t& _threshold);
 
                     /**
                      * 判断参数 Threshold 是否已赋值
                      * @return Threshold 是否已赋值
+                     * 
                      */
                     bool ThresholdHasBeenSet() const;
 
                     /**
                      * 获取The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
                      * @return Period The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
-                     * @param Period The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+                     * @param _period The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
                      * @return RuleName The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
-                     * @param RuleName The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+                     * @param _ruleName The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -110,6 +119,7 @@ namespace TencentCloud
 <li>`monitor`: Observe</li>
 <li>`drop`: Block</li>
 <li>`alg`: JavaScript challenge</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -118,34 +128,39 @@ namespace TencentCloud
 <li>`monitor`: Observe</li>
 <li>`drop`: Block</li>
 <li>`alg`: JavaScript challenge</li>
-                     * @param Action The action. Values:
+                     * @param _action The action. Values:
 <li>`monitor`: Observe</li>
 <li>`drop`: Block</li>
 <li>`alg`: JavaScript challenge</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
                      * @return PunishTime The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+                     * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
                      * 设置The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
-                     * @param PunishTime The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+                     * @param _punishTime The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+                     * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
 
                     /**
                      * 判断参数 PunishTime 是否已赋值
                      * @return PunishTime 是否已赋值
+                     * 
                      */
                     bool PunishTimeHasBeenSet() const;
 
@@ -158,6 +173,7 @@ namespace TencentCloud
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
 <li>`hour`: Hour</li>
+                     * 
                      */
                     std::string GetPunishTimeUnit() const;
 
@@ -166,16 +182,18 @@ namespace TencentCloud
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
 <li>`hour`: Hour</li>
-                     * @param PunishTimeUnit The time unit. Values:
+                     * @param _punishTimeUnit The time unit. Values:
 <li>`second`: Second</li>
 <li>`minutes`: Minute</li>
 <li>`hour`: Hour</li>
+                     * 
                      */
                     void SetPunishTimeUnit(const std::string& _punishTimeUnit);
 
                     /**
                      * 判断参数 PunishTimeUnit 是否已赋值
                      * @return PunishTimeUnit 是否已赋值
+                     * 
                      */
                     bool PunishTimeUnitHasBeenSet() const;
 
@@ -186,6 +204,7 @@ namespace TencentCloud
                      * @return RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: on
+                     * 
                      */
                     std::string GetRuleStatus() const;
 
@@ -193,51 +212,59 @@ namespace TencentCloud
                      * 设置The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: on
-                     * @param RuleStatus The rule status. Values:
+                     * @param _ruleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: on
+                     * 
                      */
                     void SetRuleStatus(const std::string& _ruleStatus);
 
                     /**
                      * 判断参数 RuleStatus 是否已赋值
                      * @return RuleStatus 是否已赋值
+                     * 
                      */
                     bool RuleStatusHasBeenSet() const;
 
                     /**
                      * 获取The rule details.
                      * @return AclConditions The rule details.
+                     * 
                      */
                     std::vector<AclCondition> GetAclConditions() const;
 
                     /**
                      * 设置The rule details.
-                     * @param AclConditions The rule details.
+                     * @param _aclConditions The rule details.
+                     * 
                      */
                     void SetAclConditions(const std::vector<AclCondition>& _aclConditions);
 
                     /**
                      * 判断参数 AclConditions 是否已赋值
                      * @return AclConditions 是否已赋值
+                     * 
                      */
                     bool AclConditionsHasBeenSet() const;
 
                     /**
                      * 获取The rule weight. Value range: 0-100.
                      * @return RulePriority The rule weight. Value range: 0-100.
+                     * 
                      */
                     int64_t GetRulePriority() const;
 
                     /**
                      * 设置The rule weight. Value range: 0-100.
-                     * @param RulePriority The rule weight. Value range: 0-100.
+                     * @param _rulePriority The rule weight. Value range: 0-100.
+                     * 
                      */
                     void SetRulePriority(const int64_t& _rulePriority);
 
                     /**
                      * 判断参数 RulePriority 是否已赋值
                      * @return RulePriority 是否已赋值
+                     * 
                      */
                     bool RulePriorityHasBeenSet() const;
 
@@ -246,20 +273,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleID The rule ID, which is only used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置The rule ID, which is only used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleID The rule ID, which is only used as an output parameter.
+                     * @param _ruleID The rule ID, which is only used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
@@ -270,6 +300,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return FreqFields The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFreqFields() const;
 
@@ -277,15 +308,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FreqFields The filter. Values:
+                     * @param _freqFields The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFreqFields(const std::vector<std::string>& _freqFields);
 
                     /**
                      * 判断参数 FreqFields 是否已赋值
                      * @return FreqFields 是否已赋值
+                     * 
                      */
                     bool FreqFieldsHasBeenSet() const;
 
@@ -294,20 +327,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -320,6 +356,7 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
 <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
 <li>`client_to_eo`: Requests from the client to EdgeOne</li>
 Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     * 
                      */
                     std::vector<std::string> GetFreqScope() const;
 
@@ -328,16 +365,18 @@ Note: A null value indicates responses from the origin server to EdgeOne are rec
 <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
 <li>`client_to_eo`: Requests from the client to EdgeOne</li>
 Note: A null value indicates responses from the origin server to EdgeOne are recorded.
-                     * @param FreqScope The statistical dimension. Values:
+                     * @param _freqScope The statistical dimension. Values:
 <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
 <li>`client_to_eo`: Requests from the client to EdgeOne</li>
 Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     * 
                      */
                     void SetFreqScope(const std::vector<std::string>& _freqScope);
 
                     /**
                      * 判断参数 FreqScope 是否已赋值
                      * @return FreqScope 是否已赋值
+                     * 
                      */
                     bool FreqScopeHasBeenSet() const;
 

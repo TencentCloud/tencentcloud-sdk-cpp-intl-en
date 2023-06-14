@@ -53,92 +53,107 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EnvironmentId Environment ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Environment namespace
                      * @return ClusterNamespace Environment namespace
+                     * 
                      */
                     std::string GetClusterNamespace() const;
 
                     /**
                      * 设置Environment namespace
-                     * @param ClusterNamespace Environment namespace
+                     * @param _clusterNamespace Environment namespace
+                     * 
                      */
                     void SetClusterNamespace(const std::string& _clusterNamespace);
 
                     /**
                      * 判断参数 ClusterNamespace 是否已赋值
                      * @return ClusterNamespace 是否已赋值
+                     * 
                      */
                     bool ClusterNamespaceHasBeenSet() const;
 
                     /**
                      * 获取ip version
                      * @return AddressIPVersion ip version
+                     * 
                      */
                     std::string GetAddressIPVersion() const;
 
                     /**
                      * 设置ip version
-                     * @param AddressIPVersion ip version
+                     * @param _addressIPVersion ip version
+                     * 
                      */
                     void SetAddressIPVersion(const std::string& _addressIPVersion);
 
                     /**
                      * 判断参数 AddressIPVersion 是否已赋值
                      * @return AddressIPVersion 是否已赋值
+                     * 
                      */
                     bool AddressIPVersionHasBeenSet() const;
 
                     /**
                      * 获取ingress name
                      * @return IngressName ingress name
+                     * 
                      */
                     std::string GetIngressName() const;
 
                     /**
                      * 设置ingress name
-                     * @param IngressName ingress name
+                     * @param _ingressName ingress name
+                     * 
                      */
                     void SetIngressName(const std::string& _ingressName);
 
                     /**
                      * 判断参数 IngressName 是否已赋值
                      * @return IngressName 是否已赋值
+                     * 
                      */
                     bool IngressNameHasBeenSet() const;
 
                     /**
                      * 获取Rules configuration
                      * @return Rules Rules configuration
+                     * 
                      */
                     std::vector<IngressRule> GetRules() const;
 
                     /**
                      * 设置Rules configuration
-                     * @param Rules Rules configuration
+                     * @param _rules Rules configuration
+                     * 
                      */
                     void SetRules(const std::vector<IngressRule>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
@@ -147,20 +162,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ClbId clb ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClbId() const;
 
                     /**
                      * 设置clb ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClbId clb ID
+                     * @param _clbId clb ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClbId(const std::string& _clbId);
 
                     /**
                      * 判断参数 ClbId 是否已赋值
                      * @return ClbId 是否已赋值
+                     * 
                      */
                     bool ClbIdHasBeenSet() const;
 
@@ -169,20 +187,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tls TLS configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IngressTls> GetTls() const;
 
                     /**
                      * 设置TLS configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Tls TLS configuration
+                     * @param _tls TLS configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTls(const std::vector<IngressTls>& _tls);
 
                     /**
                      * 判断参数 Tls 是否已赋值
                      * @return Tls 是否已赋值
+                     * 
                      */
                     bool TlsHasBeenSet() const;
 
@@ -191,20 +212,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterId Environment cluster ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Environment cluster ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClusterId Environment cluster ID
+                     * @param _clusterId Environment cluster ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -213,20 +237,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Vip clb ip
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置clb ip
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Vip clb ip
+                     * @param _vip clb ip
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
@@ -235,38 +262,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CreateTime Creation time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
                      * @return Mixed Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
+                     * 
                      */
                     bool GetMixed() const;
 
                     /**
                      * 设置Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
-                     * @param Mixed Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
+                     * @param _mixed Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
+                     * 
                      */
                     void SetMixed(const bool& _mixed);
 
                     /**
                      * 判断参数 Mixed 是否已赋值
                      * @return Mixed 是否已赋值
+                     * 
                      */
                     bool MixedHasBeenSet() const;
 
@@ -279,6 +312,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `AUTO` (automatically redirect HTTP to HTTPS)
 - `NONE` (no redirection)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRewriteType() const;
 
@@ -287,16 +321,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `AUTO` (automatically redirect HTTP to HTTPS)
 - `NONE` (no redirection)
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RewriteType Redirection mode. Values:
+                     * @param _rewriteType Redirection mode. Values:
 - `AUTO` (automatically redirect HTTP to HTTPS)
 - `NONE` (no redirection)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRewriteType(const std::string& _rewriteType);
 
                     /**
                      * 判断参数 RewriteType 是否已赋值
                      * @return RewriteType 是否已赋值
+                     * 
                      */
                     bool RewriteTypeHasBeenSet() const;
 
@@ -305,20 +341,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Domain CLB domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置CLB domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Domain CLB domain name
+                     * @param _domain CLB domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

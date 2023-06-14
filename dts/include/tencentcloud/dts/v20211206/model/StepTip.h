@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Code Error code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Error code
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Code Error code
+                     * @param _code Error code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Message Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Message Error message
+                     * @param _message Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Solution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Solution
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Solution Solution
+                     * @param _solution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSolution(const std::string& _solution);
 
                     /**
                      * 判断参数 Solution 是否已赋值
                      * @return Solution 是否已赋值
+                     * 
                      */
                     bool SolutionHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HelpDoc Help document
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHelpDoc() const;
 
                     /**
                      * 设置Help document
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HelpDoc Help document
+                     * @param _helpDoc Help document
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHelpDoc(const std::string& _helpDoc);
 
                     /**
                      * 判断参数 HelpDoc 是否已赋值
                      * @return HelpDoc 是否已赋值
+                     * 
                      */
                     bool HelpDocHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SkipInfo Whether the current step is skipped
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSkipInfo() const;
 
                     /**
                      * 设置Whether the current step is skipped
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SkipInfo Whether the current step is skipped
+                     * @param _skipInfo Whether the current step is skipped
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSkipInfo(const std::string& _skipInfo);
 
                     /**
                      * 判断参数 SkipInfo 是否已赋值
                      * @return SkipInfo 是否已赋值
+                     * 
                      */
                     bool SkipInfoHasBeenSet() const;
 

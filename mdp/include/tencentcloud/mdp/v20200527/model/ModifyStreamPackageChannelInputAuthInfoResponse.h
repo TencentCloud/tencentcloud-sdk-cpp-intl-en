@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Channel input authentication information
                      * @return AuthInfo Channel input authentication information
+                     * 
                      */
                     InputAuthInfo GetAuthInfo() const;
 
                     /**
                      * 判断参数 AuthInfo 是否已赋值
                      * @return AuthInfo 是否已赋值
+                     * 
                      */
                     bool AuthInfoHasBeenSet() const;
 

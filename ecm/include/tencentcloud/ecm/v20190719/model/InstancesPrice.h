@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance price details
                      * @return InstancePricesPartDetail Instance price details
+                     * 
                      */
                     InstancePricesPartDetail GetInstancePricesPartDetail() const;
 
                     /**
                      * 设置Instance price details
-                     * @param InstancePricesPartDetail Instance price details
+                     * @param _instancePricesPartDetail Instance price details
+                     * 
                      */
                     void SetInstancePricesPartDetail(const InstancePricesPartDetail& _instancePricesPartDetail);
 
                     /**
                      * 判断参数 InstancePricesPartDetail 是否已赋值
                      * @return InstancePricesPartDetail 是否已赋值
+                     * 
                      */
                     bool InstancePricesPartDetailHasBeenSet() const;
 
                     /**
                      * 获取Discount on the total instance price
                      * @return Discount Discount on the total instance price
+                     * 
                      */
                     uint64_t GetDiscount() const;
 
                     /**
                      * 设置Discount on the total instance price
-                     * @param Discount Discount on the total instance price
+                     * @param _discount Discount on the total instance price
+                     * 
                      */
                     void SetDiscount(const uint64_t& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discounted price
                      * @return DiscountPrice Discounted price
+                     * 
                      */
                     uint64_t GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted price
-                     * @param DiscountPrice Discounted price
+                     * @param _discountPrice Discounted price
+                     * 
                      */
                     void SetDiscountPrice(const uint64_t& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
                      * 获取Original cost
                      * @return OriginalPrice Original cost
+                     * 
                      */
                     uint64_t GetOriginalPrice() const;
 
                     /**
                      * 设置Original cost
-                     * @param OriginalPrice Original cost
+                     * @param _originalPrice Original cost
+                     * 
                      */
                     void SetOriginalPrice(const uint64_t& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 

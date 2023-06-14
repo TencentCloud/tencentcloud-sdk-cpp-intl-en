@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
                      * @return TextDetections Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+                     * 
                      */
                     std::vector<TextDetection> GetTextDetections() const;
 
                     /**
                      * 判断参数 TextDetections 是否已赋值
                      * @return TextDetections 是否已赋值
+                     * 
                      */
                     bool TextDetectionsHasBeenSet() const;
 
                     /**
                      * 获取Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
                      * @return Angel Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+                     * 
                      */
                     double GetAngel() const;
 
                     /**
                      * 判断参数 Angel 是否已赋值
                      * @return Angel 是否已赋值
+                     * 
                      */
                     bool AngelHasBeenSet() const;
 

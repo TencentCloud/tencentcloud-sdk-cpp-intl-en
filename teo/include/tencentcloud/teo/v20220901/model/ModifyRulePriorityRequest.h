@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site
-                     * @param ZoneId ID of the site
+                     * @param _zoneId ID of the site
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Order of rule IDs. If there are multiple rules, they will be executed in order from top to bottom.
                      * @return RuleIds Order of rule IDs. If there are multiple rules, they will be executed in order from top to bottom.
+                     * 
                      */
                     std::vector<std::string> GetRuleIds() const;
 
                     /**
                      * 设置Order of rule IDs. If there are multiple rules, they will be executed in order from top to bottom.
-                     * @param RuleIds Order of rule IDs. If there are multiple rules, they will be executed in order from top to bottom.
+                     * @param _ruleIds Order of rule IDs. If there are multiple rules, they will be executed in order from top to bottom.
+                     * 
                      */
                     void SetRuleIds(const std::vector<std::string>& _ruleIds);
 
                     /**
                      * 判断参数 RuleIds 是否已赋值
                      * @return RuleIds 是否已赋值
+                     * 
                      */
                     bool RuleIdsHasBeenSet() const;
 

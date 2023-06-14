@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDays() const;
 
                     /**
                      * 设置Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
+                     * @param _days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDays(const uint64_t& _days);
 
                     /**
                      * 判断参数 Days 是否已赋值
                      * @return Days 是否已赋值
+                     * 
                      */
                     bool DaysHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetWeeks() const;
 
                     /**
                      * 设置Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
+                     * @param _weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWeeks(const uint64_t& _weeks);
 
                     /**
                      * 判断参数 Weeks 是否已赋值
                      * @return Weeks 是否已赋值
+                     * 
                      */
                     bool WeeksHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMonths() const;
 
                     /**
                      * 设置Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
+                     * @param _months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMonths(const uint64_t& _months);
 
                     /**
                      * 判断参数 Months 是否已赋值
                      * @return Months 是否已赋值
+                     * 
                      */
                     bool MonthsHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetYears() const;
 
                     /**
                      * 设置Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
+                     * @param _years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetYears(const uint64_t& _years);
 
                     /**
                      * 判断参数 Years 是否已赋值
                      * @return Years 是否已赋值
+                     * 
                      */
                     bool YearsHasBeenSet() const;
 

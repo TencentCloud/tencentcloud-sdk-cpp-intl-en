@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Route table CIDR
                      * @return RouteTableCidrBlock Route table CIDR
+                     * 
                      */
                     std::string GetRouteTableCidrBlock() const;
 
                     /**
                      * 设置Route table CIDR
-                     * @param RouteTableCidrBlock Route table CIDR
+                     * @param _routeTableCidrBlock Route table CIDR
+                     * 
                      */
                     void SetRouteTableCidrBlock(const std::string& _routeTableCidrBlock);
 
                     /**
                      * 判断参数 RouteTableCidrBlock 是否已赋值
                      * @return RouteTableCidrBlock 是否已赋值
+                     * 
                      */
                     bool RouteTableCidrBlockHasBeenSet() const;
 
                     /**
                      * 获取VPC bound to the route table
                      * @return VpcId VPC bound to the route table
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC bound to the route table
-                     * @param VpcId VPC bound to the route table
+                     * @param _vpcId VPC bound to the route table
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 

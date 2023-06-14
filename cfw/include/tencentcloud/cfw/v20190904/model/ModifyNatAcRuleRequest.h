@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of rules to be modified.
                      * @return Rules Array of rules to be modified.
+                     * 
                      */
                     std::vector<CreateNatRuleItem> GetRules() const;
 
                     /**
                      * 设置Array of rules to be modified.
-                     * @param Rules Array of rules to be modified.
+                     * @param _rules Array of rules to be modified.
+                     * 
                      */
                     void SetRules(const std::vector<CreateNatRuleItem>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

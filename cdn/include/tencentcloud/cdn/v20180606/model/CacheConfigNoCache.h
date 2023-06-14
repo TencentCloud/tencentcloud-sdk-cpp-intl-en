@@ -55,6 +55,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 `on`: Enable
 `off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Note: this field may return null, indicating that no valid value is obtained.
 `on`: Enable
 `off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
-                     * @param Switch No-cache configuration switch
+                     * @param _switch No-cache configuration switch
 `on`: Enable
 `off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -87,6 +90,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRevalidate() const;
 
@@ -96,17 +100,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Revalidate Always forwards to the origin server for verification
+                     * @param _revalidate Always forwards to the origin server for verification
 `on`: Enable
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRevalidate(const std::string& _revalidate);
 
                     /**
                      * 判断参数 Revalidate 是否已赋值
                      * @return Revalidate 是否已赋值
+                     * 
                      */
                     bool RevalidateHasBeenSet() const;
 

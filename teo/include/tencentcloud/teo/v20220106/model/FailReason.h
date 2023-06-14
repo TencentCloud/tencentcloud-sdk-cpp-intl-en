@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Failure reason
                      * @return Reason Failure reason
+                     * 
                      */
                     std::string GetReason() const;
 
                     /**
                      * 设置Failure reason
-                     * @param Reason Failure reason
+                     * @param _reason Failure reason
+                     * 
                      */
                     void SetReason(const std::string& _reason);
 
                     /**
                      * 判断参数 Reason 是否已赋值
                      * @return Reason 是否已赋值
+                     * 
                      */
                     bool ReasonHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
  
                      * @return Targets List of resources failed to be processed. 
  
+                     * 
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
                      * 设置List of resources failed to be processed. 
  
-                     * @param Targets List of resources failed to be processed. 
+                     * @param _targets List of resources failed to be processed. 
  
+                     * 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID returned by the `ModifyBlockIPList` API
                      * @return TaskId Async task ID returned by the `ModifyBlockIPList` API
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Async task ID returned by the `ModifyBlockIPList` API
-                     * @param TaskId Async task ID returned by the `ModifyBlockIPList` API
+                     * @param _taskId Async task ID returned by the `ModifyBlockIPList` API
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

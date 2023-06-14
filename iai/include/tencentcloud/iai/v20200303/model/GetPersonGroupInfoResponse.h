@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of groups containing this person and their description fields
                      * @return PersonGroupInfos List of groups containing this person and their description fields
+                     * 
                      */
                     std::vector<PersonGroupInfo> GetPersonGroupInfos() const;
 
                     /**
                      * 判断参数 PersonGroupInfos 是否已赋值
                      * @return PersonGroupInfos 是否已赋值
+                     * 
                      */
                     bool PersonGroupInfosHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GroupNum Total number of groups
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetGroupNum() const;
 
                     /**
                      * 判断参数 GroupNum 是否已赋值
                      * @return GroupNum 是否已赋值
+                     * 
                      */
                     bool GroupNumHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FaceModelVersion Algorithm model version used by the Face Recognition service.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

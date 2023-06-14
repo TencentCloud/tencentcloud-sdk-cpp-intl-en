@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Environment name.
                      * @return Environment Environment name.
+                     * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
                      * 设置Environment name.
-                     * @param Environment Environment name.
+                     * @param _environment Environment name.
+                     * 
                      */
                     void SetEnvironment(const std::string& _environment);
 
                     /**
                      * 判断参数 Environment 是否已赋值
                      * @return Environment 是否已赋值
+                     * 
                      */
                     bool EnvironmentHasBeenSet() const;
 
                     /**
                      * 获取Unique usage plan ID.
                      * @return UsagePlanId Unique usage plan ID.
+                     * 
                      */
                     std::string GetUsagePlanId() const;
 
                     /**
                      * 设置Unique usage plan ID.
-                     * @param UsagePlanId Unique usage plan ID.
+                     * @param _usagePlanId Unique usage plan ID.
+                     * 
                      */
                     void SetUsagePlanId(const std::string& _usagePlanId);
 
                     /**
                      * 判断参数 UsagePlanId 是否已赋值
                      * @return UsagePlanId 是否已赋值
+                     * 
                      */
                     bool UsagePlanIdHasBeenSet() const;
 
                     /**
                      * 获取Usage plan name.
                      * @return UsagePlanName Usage plan name.
+                     * 
                      */
                     std::string GetUsagePlanName() const;
 
                     /**
                      * 设置Usage plan name.
-                     * @param UsagePlanName Usage plan name.
+                     * @param _usagePlanName Usage plan name.
+                     * 
                      */
                     void SetUsagePlanName(const std::string& _usagePlanName);
 
                     /**
                      * 判断参数 UsagePlanName 是否已赋值
                      * @return UsagePlanName 是否已赋值
+                     * 
                      */
                     bool UsagePlanNameHasBeenSet() const;
 
                     /**
                      * 获取Usage plan description.
                      * @return UsagePlanDesc Usage plan description.
+                     * 
                      */
                     std::string GetUsagePlanDesc() const;
 
                     /**
                      * 设置Usage plan description.
-                     * @param UsagePlanDesc Usage plan description.
+                     * @param _usagePlanDesc Usage plan description.
+                     * 
                      */
                     void SetUsagePlanDesc(const std::string& _usagePlanDesc);
 
                     /**
                      * 判断参数 UsagePlanDesc 是否已赋值
                      * @return UsagePlanDesc 是否已赋值
+                     * 
                      */
                     bool UsagePlanDescHasBeenSet() const;
 
                     /**
                      * 获取Usage plan QPS. `-1` indicates no limit.
                      * @return MaxRequestNumPreSec Usage plan QPS. `-1` indicates no limit.
+                     * 
                      */
                     int64_t GetMaxRequestNumPreSec() const;
 
                     /**
                      * 设置Usage plan QPS. `-1` indicates no limit.
-                     * @param MaxRequestNumPreSec Usage plan QPS. `-1` indicates no limit.
+                     * @param _maxRequestNumPreSec Usage plan QPS. `-1` indicates no limit.
+                     * 
                      */
                     void SetMaxRequestNumPreSec(const int64_t& _maxRequestNumPreSec);
 
                     /**
                      * 判断参数 MaxRequestNumPreSec 是否已赋值
                      * @return MaxRequestNumPreSec 是否已赋值
+                     * 
                      */
                     bool MaxRequestNumPreSecHasBeenSet() const;
 
                     /**
                      * 获取Usage plan time.
                      * @return CreatedTime Usage plan time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Usage plan time.
-                     * @param CreatedTime Usage plan time.
+                     * @param _createdTime Usage plan time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Usage plan modification time.
                      * @return ModifiedTime Usage plan modification time.
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 设置Usage plan modification time.
-                     * @param ModifiedTime Usage plan modification time.
+                     * @param _modifiedTime Usage plan modification time.
+                     * 
                      */
                     void SetModifiedTime(const std::string& _modifiedTime);
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 

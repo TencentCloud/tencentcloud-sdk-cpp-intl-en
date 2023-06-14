@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost Original price.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetOriginalCost() const;
 
                     /**
                      * 判断参数 OriginalCost 是否已赋值
                      * @return OriginalCost 是否已赋值
+                     * 
                      */
                     bool OriginalCostHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiscountCost Discounted price.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetDiscountCost() const;
 
                     /**
                      * 判断参数 DiscountCost 是否已赋值
                      * @return DiscountCost 是否已赋值
+                     * 
                      */
                     bool DiscountCostHasBeenSet() const;
 
@@ -79,12 +83,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return TimeUnit Time unit of scaling. Valid values:
 <li>s: seconds.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
                      * 判断参数 TimeUnit 是否已赋值
                      * @return TimeUnit 是否已赋值
+                     * 
                      */
                     bool TimeUnitHasBeenSet() const;
 
@@ -93,12 +99,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TimeSpan Duration of scaling.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
                      * 判断参数 TimeSpan 是否已赋值
                      * @return TimeSpan 是否已赋值
+                     * 
                      */
                     bool TimeSpanHasBeenSet() const;
 
@@ -107,12 +115,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PriceDetail Pricing details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PriceDetail> GetPriceDetail() const;
 
                     /**
                      * 判断参数 PriceDetail 是否已赋值
                      * @return PriceDetail 是否已赋值
+                     * 
                      */
                     bool PriceDetailHasBeenSet() const;
 

@@ -47,56 +47,65 @@ namespace TencentCloud
 Array length limit: 16.
                      * @return EventHandles Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
 Array length limit: 16.
+                     * 
                      */
                     std::vector<std::string> GetEventHandles() const;
 
                     /**
                      * 设置Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
 Array length limit: 16.
-                     * @param EventHandles Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
+                     * @param _eventHandles Event handler, i.e., the `EventSet. EventHandle` field in the output parameters of the [event notification pulling](https://intl.cloud.tencent.com/document/product/266/33433?from_cn_redirect=1) API.
 Array length limit: 16.
+                     * 
                      */
                     void SetEventHandles(const std::vector<std::string>& _eventHandles);
 
                     /**
                      * 判断参数 EventHandles 是否已赋值
                      * @return EventHandles 是否已赋值
+                     * 
                      */
                     bool EventHandlesHasBeenSet() const;
 
                     /**
                      * 获取Reserved field for special purposes.
                      * @return ExtInfo Reserved field for special purposes.
+                     * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
                      * 设置Reserved field for special purposes.
-                     * @param ExtInfo Reserved field for special purposes.
+                     * @param _extInfo Reserved field for special purposes.
+                     * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
 
                     /**
                      * 判断参数 ExtInfo 是否已赋值
                      * @return ExtInfo 是否已赋值
+                     * 
                      */
                     bool ExtInfoHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 

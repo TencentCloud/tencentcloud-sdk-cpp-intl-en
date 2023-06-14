@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
                      * @return Business Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
-                     * @param Business Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
+                     * @param _business Anti-DDoS service code. `bgp-multip` indicates Anti-DDos Pro.
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
                      * @return StartTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
-                     * @param StartTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * @param _startTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End of the time range for the query, such as `2020-09-22 00:00:00`.
                      * @return EndTime End of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End of the time range for the query, such as `2020-09-22 00:00:00`.
-                     * @param EndTime End of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * @param _endTime End of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistical metric. Values: `intraffic`, `outtraffic`, `inpkg`, and `outpkg`.
                      * @return MetricName Statistical metric. Values: `intraffic`, `outtraffic`, `inpkg`, and `outpkg`.
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Statistical metric. Values: `intraffic`, `outtraffic`, `inpkg`, and `outpkg`.
-                     * @param MetricName Statistical metric. Values: `intraffic`, `outtraffic`, `inpkg`, and `outpkg`.
+                     * @param _metricName Statistical metric. Values: `intraffic`, `outtraffic`, `inpkg`, and `outpkg`.
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取`0`: Fixed time. `1`: Custom time.
                      * @return Flag `0`: Fixed time. `1`: Custom time.
+                     * 
                      */
                     uint64_t GetFlag() const;
 
                     /**
                      * 设置`0`: Fixed time. `1`: Custom time.
-                     * @param Flag `0`: Fixed time. `1`: Custom time.
+                     * @param _flag `0`: Fixed time. `1`: Custom time.
+                     * 
                      */
                     void SetFlag(const uint64_t& _flag);
 
                     /**
                      * 判断参数 Flag 是否已赋值
                      * @return Flag 是否已赋值
+                     * 
                      */
                     bool FlagHasBeenSet() const;
 

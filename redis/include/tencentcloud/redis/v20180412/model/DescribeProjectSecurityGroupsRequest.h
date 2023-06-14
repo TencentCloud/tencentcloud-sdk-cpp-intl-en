@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Database engine name, which is `redis` for this API.
                      * @return Product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Database engine name, which is `redis` for this API.
-                     * @param Product Database engine name, which is `redis` for this API.
+                     * @param _product Database engine name, which is `redis` for this API.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Offset, which is an integral multiple of `Limit`.
                      * @return Offset Offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which is an integral multiple of `Limit`.
-                     * @param Offset Offset, which is an integral multiple of `Limit`.
+                     * @param _offset Offset, which is an integral multiple of `Limit`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of security groups to be pulled. Default value: `20`.
                      * @return Limit The number of security groups to be pulled. Default value: `20`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of security groups to be pulled. Default value: `20`.
-                     * @param Limit The number of security groups to be pulled. Default value: `20`.
+                     * @param _limit The number of security groups to be pulled. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Search criteria. You can enter a security group ID or name.
                      * @return SearchKey Search criteria. You can enter a security group ID or name.
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Search criteria. You can enter a security group ID or name.
-                     * @param SearchKey Search criteria. You can enter a security group ID or name.
+                     * @param _searchKey Search criteria. You can enter a security group ID or name.
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 

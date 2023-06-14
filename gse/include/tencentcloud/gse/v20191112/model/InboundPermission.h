@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Start port number. Minimum value: 1025.
                      * @return FromPort Start port number. Minimum value: 1025.
+                     * 
                      */
                     uint64_t GetFromPort() const;
 
                     /**
                      * 设置Start port number. Minimum value: 1025.
-                     * @param FromPort Start port number. Minimum value: 1025.
+                     * @param _fromPort Start port number. Minimum value: 1025.
+                     * 
                      */
                     void SetFromPort(const uint64_t& _fromPort);
 
                     /**
                      * 判断参数 FromPort 是否已赋值
                      * @return FromPort 是否已赋值
+                     * 
                      */
                     bool FromPortHasBeenSet() const;
 
                     /**
                      * 获取IP range. Valid range of the input IPv4 addresses in CIDR format; for example, 0.0.0.0.0/0.
                      * @return IpRange IP range. Valid range of the input IPv4 addresses in CIDR format; for example, 0.0.0.0.0/0.
+                     * 
                      */
                     std::string GetIpRange() const;
 
                     /**
                      * 设置IP range. Valid range of the input IPv4 addresses in CIDR format; for example, 0.0.0.0.0/0.
-                     * @param IpRange IP range. Valid range of the input IPv4 addresses in CIDR format; for example, 0.0.0.0.0/0.
+                     * @param _ipRange IP range. Valid range of the input IPv4 addresses in CIDR format; for example, 0.0.0.0.0/0.
+                     * 
                      */
                     void SetIpRange(const std::string& _ipRange);
 
                     /**
                      * 判断参数 IpRange 是否已赋值
                      * @return IpRange 是否已赋值
+                     * 
                      */
                     bool IpRangeHasBeenSet() const;
 
                     /**
                      * 获取Protocol type: TCP or UDP.
                      * @return Protocol Protocol type: TCP or UDP.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol type: TCP or UDP.
-                     * @param Protocol Protocol type: TCP or UDP.
+                     * @param _protocol Protocol type: TCP or UDP.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取End port number. Maximum value: 60000.
                      * @return ToPort End port number. Maximum value: 60000.
+                     * 
                      */
                     uint64_t GetToPort() const;
 
                     /**
                      * 设置End port number. Maximum value: 60000.
-                     * @param ToPort End port number. Maximum value: 60000.
+                     * @param _toPort End port number. Maximum value: 60000.
+                     * 
                      */
                     void SetToPort(const uint64_t& _toPort);
 
                     /**
                      * 判断参数 ToPort 是否已赋值
                      * @return ToPort 是否已赋值
+                     * 
                      */
                     bool ToPortHasBeenSet() const;
 

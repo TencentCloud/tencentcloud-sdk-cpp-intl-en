@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Log ID
                      * @return EventId Log ID
+                     * 
                      */
                     std::string GetEventId() const;
 
                     /**
                      * 设置Log ID
-                     * @param EventId Log ID
+                     * @param _eventId Log ID
+                     * 
                      */
                     void SetEventId(const std::string& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 
                     /**
                      * 获取Username
                      * @return Username Username
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 设置Username
-                     * @param Username Username
+                     * @param _username Username
+                     * 
                      */
                     void SetUsername(const std::string& _username);
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Event Time
                      * @return EventTime Event Time
+                     * 
                      */
                     std::string GetEventTime() const;
 
                     /**
                      * 设置Event Time
-                     * @param EventTime Event Time
+                     * @param _eventTime Event Time
+                     * 
                      */
                     void SetEventTime(const std::string& _eventTime);
 
                     /**
                      * 判断参数 EventTime 是否已赋值
                      * @return EventTime 是否已赋值
+                     * 
                      */
                     bool EventTimeHasBeenSet() const;
 
                     /**
                      * 获取Log details
                      * @return CloudAuditEvent Log details
+                     * 
                      */
                     std::string GetCloudAuditEvent() const;
 
                     /**
                      * 设置Log details
-                     * @param CloudAuditEvent Log details
+                     * @param _cloudAuditEvent Log details
+                     * 
                      */
                     void SetCloudAuditEvent(const std::string& _cloudAuditEvent);
 
                     /**
                      * 判断参数 CloudAuditEvent 是否已赋值
                      * @return CloudAuditEvent 是否已赋值
+                     * 
                      */
                     bool CloudAuditEventHasBeenSet() const;
 
                     /**
                      * 获取Description of resource type in Chinese (please use this field as required; if you are using other languages, ignore this field)
                      * @return ResourceTypeCn Description of resource type in Chinese (please use this field as required; if you are using other languages, ignore this field)
+                     * 
                      */
                     std::string GetResourceTypeCn() const;
 
                     /**
                      * 设置Description of resource type in Chinese (please use this field as required; if you are using other languages, ignore this field)
-                     * @param ResourceTypeCn Description of resource type in Chinese (please use this field as required; if you are using other languages, ignore this field)
+                     * @param _resourceTypeCn Description of resource type in Chinese (please use this field as required; if you are using other languages, ignore this field)
+                     * 
                      */
                     void SetResourceTypeCn(const std::string& _resourceTypeCn);
 
                     /**
                      * 判断参数 ResourceTypeCn 是否已赋值
                      * @return ResourceTypeCn 是否已赋值
+                     * 
                      */
                     bool ResourceTypeCnHasBeenSet() const;
 
                     /**
                      * 获取Authentication error code
                      * @return ErrorCode Authentication error code
+                     * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 设置Authentication error code
-                     * @param ErrorCode Authentication error code
+                     * @param _errorCode Authentication error code
+                     * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取Event name
                      * @return EventName Event name
+                     * 
                      */
                     std::string GetEventName() const;
 
                     /**
                      * 设置Event name
-                     * @param EventName Event name
+                     * @param _eventName Event name
+                     * 
                      */
                     void SetEventName(const std::string& _eventName);
 
                     /**
                      * 判断参数 EventName 是否已赋值
                      * @return EventName 是否已赋值
+                     * 
                      */
                     bool EventNameHasBeenSet() const;
 
@@ -178,92 +199,107 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SecretId Certificate ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecretId() const;
 
                     /**
                      * 设置Certificate ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SecretId Certificate ID
+                     * @param _secretId Certificate ID
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecretId(const std::string& _secretId);
 
                     /**
                      * 判断参数 SecretId 是否已赋值
                      * @return SecretId 是否已赋值
+                     * 
                      */
                     bool SecretIdHasBeenSet() const;
 
                     /**
                      * 获取Request source
                      * @return EventSource Request source
+                     * 
                      */
                     std::string GetEventSource() const;
 
                     /**
                      * 设置Request source
-                     * @param EventSource Request source
+                     * @param _eventSource Request source
+                     * 
                      */
                     void SetEventSource(const std::string& _eventSource);
 
                     /**
                      * 判断参数 EventSource 是否已赋值
                      * @return EventSource 是否已赋值
+                     * 
                      */
                     bool EventSourceHasBeenSet() const;
 
                     /**
                      * 获取Request ID
                      * @return RequestID Request ID
+                     * 
                      */
                     std::string GetRequestID() const;
 
                     /**
                      * 设置Request ID
-                     * @param RequestID Request ID
+                     * @param _requestID Request ID
+                     * 
                      */
                     void SetRequestID(const std::string& _requestID);
 
                     /**
                      * 判断参数 RequestID 是否已赋值
                      * @return RequestID 是否已赋值
+                     * 
                      */
                     bool RequestIDHasBeenSet() const;
 
                     /**
                      * 获取Resource region
                      * @return ResourceRegion Resource region
+                     * 
                      */
                     std::string GetResourceRegion() const;
 
                     /**
                      * 设置Resource region
-                     * @param ResourceRegion Resource region
+                     * @param _resourceRegion Resource region
+                     * 
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
 
                     /**
                      * 判断参数 ResourceRegion 是否已赋值
                      * @return ResourceRegion 是否已赋值
+                     * 
                      */
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
                      * 获取Root account ID
                      * @return AccountID Root account ID
+                     * 
                      */
                     int64_t GetAccountID() const;
 
                     /**
                      * 设置Root account ID
-                     * @param AccountID Root account ID
+                     * @param _accountID Root account ID
+                     * 
                      */
                     void SetAccountID(const int64_t& _accountID);
 
                     /**
                      * 判断参数 AccountID 是否已赋值
                      * @return AccountID 是否已赋值
+                     * 
                      */
                     bool AccountIDHasBeenSet() const;
 
@@ -272,92 +308,107 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SourceIPAddress Source IP
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSourceIPAddress() const;
 
                     /**
                      * 设置Source IP
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param SourceIPAddress Source IP
+                     * @param _sourceIPAddress Source IP
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSourceIPAddress(const std::string& _sourceIPAddress);
 
                     /**
                      * 判断参数 SourceIPAddress 是否已赋值
                      * @return SourceIPAddress 是否已赋值
+                     * 
                      */
                     bool SourceIPAddressHasBeenSet() const;
 
                     /**
                      * 获取Description of event name in Chinese (please use this field as required; if you are using other languages, ignore this field)
                      * @return EventNameCn Description of event name in Chinese (please use this field as required; if you are using other languages, ignore this field)
+                     * 
                      */
                     std::string GetEventNameCn() const;
 
                     /**
                      * 设置Description of event name in Chinese (please use this field as required; if you are using other languages, ignore this field)
-                     * @param EventNameCn Description of event name in Chinese (please use this field as required; if you are using other languages, ignore this field)
+                     * @param _eventNameCn Description of event name in Chinese (please use this field as required; if you are using other languages, ignore this field)
+                     * 
                      */
                     void SetEventNameCn(const std::string& _eventNameCn);
 
                     /**
                      * 判断参数 EventNameCn 是否已赋值
                      * @return EventNameCn 是否已赋值
+                     * 
                      */
                     bool EventNameCnHasBeenSet() const;
 
                     /**
                      * 获取Resource pair
                      * @return Resources Resource pair
+                     * 
                      */
                     Resource GetResources() const;
 
                     /**
                      * 设置Resource pair
-                     * @param Resources Resource pair
+                     * @param _resources Resource pair
+                     * 
                      */
                     void SetResources(const Resource& _resources);
 
                     /**
                      * 判断参数 Resources 是否已赋值
                      * @return Resources 是否已赋值
+                     * 
                      */
                     bool ResourcesHasBeenSet() const;
 
                     /**
                      * 获取Event region
                      * @return EventRegion Event region
+                     * 
                      */
                     std::string GetEventRegion() const;
 
                     /**
                      * 设置Event region
-                     * @param EventRegion Event region
+                     * @param _eventRegion Event region
+                     * 
                      */
                     void SetEventRegion(const std::string& _eventRegion);
 
                     /**
                      * 判断参数 EventRegion 是否已赋值
                      * @return EventRegion 是否已赋值
+                     * 
                      */
                     bool EventRegionHasBeenSet() const;
 
                     /**
                      * 获取IP location
                      * @return Location IP location
+                     * 
                      */
                     std::string GetLocation() const;
 
                     /**
                      * 设置IP location
-                     * @param Location IP location
+                     * @param _location IP location
+                     * 
                      */
                     void SetLocation(const std::string& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Array of check item details
                      * @return ClusterCheckItems Array of check item details
+                     * 
                      */
                     std::vector<ClusterCheckItem> GetClusterCheckItems() const;
 
                     /**
                      * 判断参数 ClusterCheckItems 是否已赋值
                      * @return ClusterCheckItems 是否已赋值
+                     * 
                      */
                     bool ClusterCheckItemsHasBeenSet() const;
 
                     /**
                      * 获取Total number of check items
                      * @return TotalCount Total number of check items
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

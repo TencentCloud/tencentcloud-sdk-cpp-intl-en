@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Metric Metric name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Metric name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Metric Metric name
+                     * @param _metric Metric name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetric(const std::string& _metric);
 
                     /**
                      * 判断参数 Metric 是否已赋值
                      * @return Metric 是否已赋值
+                     * 
                      */
                     bool MetricHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Detail Metric data details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TimingDataItem> GetDetail() const;
 
                     /**
                      * 设置Metric data details
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Detail Metric data details
+                     * @param _detail Metric data details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetail(const std::vector<TimingDataItem>& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Max Maximum
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMax() const;
 
                     /**
                      * 设置Maximum
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Max Maximum
+                     * @param _max Maximum
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMax(const int64_t& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Avg Average
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetAvg() const;
 
                     /**
                      * 设置Average
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Avg Average
+                     * @param _avg Average
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAvg(const double& _avg);
 
                     /**
                      * 判断参数 Avg 是否已赋值
                      * @return Avg 是否已赋值
+                     * 
                      */
                     bool AvgHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Sum Sum
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetSum() const;
 
                     /**
                      * 设置Sum
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Sum Sum
+                     * @param _sum Sum
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSum(const double& _sum);
 
                     /**
                      * 判断参数 Sum 是否已赋值
                      * @return Sum 是否已赋值
+                     * 
                      */
                     bool SumHasBeenSet() const;
 

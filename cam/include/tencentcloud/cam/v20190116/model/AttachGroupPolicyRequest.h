@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取User Group ID
                      * @return AttachGroupId User Group ID
+                     * 
                      */
                     uint64_t GetAttachGroupId() const;
 
                     /**
                      * 设置User Group ID
-                     * @param AttachGroupId User Group ID
+                     * @param _attachGroupId User Group ID
+                     * 
                      */
                     void SetAttachGroupId(const uint64_t& _attachGroupId);
 
                     /**
                      * 判断参数 AttachGroupId 是否已赋值
                      * @return AttachGroupId 是否已赋值
+                     * 
                      */
                     bool AttachGroupIdHasBeenSet() const;
 

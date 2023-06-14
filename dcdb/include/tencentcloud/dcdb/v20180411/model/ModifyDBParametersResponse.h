@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of dcdbt-ow728lmc.
                      * @return InstanceId Instance ID in the format of dcdbt-ow728lmc.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Parameter modification result
                      * @return Result Parameter modification result
+                     * 
                      */
                     std::vector<ParamModifyResult> GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

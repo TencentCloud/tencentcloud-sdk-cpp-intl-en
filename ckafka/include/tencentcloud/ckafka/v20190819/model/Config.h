@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Retention Message retention period
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRetention() const;
 
                     /**
                      * 设置Message retention period
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Retention Message retention period
+                     * @param _retention Message retention period
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRetention(const int64_t& _retention);
 
                     /**
                      * 判断参数 Retention 是否已赋值
                      * @return Retention 是否已赋值
+                     * 
                      */
                     bool RetentionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MinInsyncReplicas Minimum number of sync replications
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMinInsyncReplicas() const;
 
                     /**
                      * 设置Minimum number of sync replications
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MinInsyncReplicas Minimum number of sync replications
+                     * @param _minInsyncReplicas Minimum number of sync replications
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMinInsyncReplicas(const int64_t& _minInsyncReplicas);
 
                     /**
                      * 判断参数 MinInsyncReplicas 是否已赋值
                      * @return MinInsyncReplicas 是否已赋值
+                     * 
                      */
                     bool MinInsyncReplicasHasBeenSet() const;
 
@@ -97,6 +103,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return CleanUpPolicy Log cleanup mode. Default value: delete.
 delete: logs will be deleted by save time; compact: logs will be compressed by key; compact, delete: logs will be compressed by key and deleted by save time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCleanUpPolicy() const;
 
@@ -104,15 +111,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Log cleanup mode. Default value: delete.
 delete: logs will be deleted by save time; compact: logs will be compressed by key; compact, delete: logs will be compressed by key and deleted by save time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CleanUpPolicy Log cleanup mode. Default value: delete.
+                     * @param _cleanUpPolicy Log cleanup mode. Default value: delete.
 delete: logs will be deleted by save time; compact: logs will be compressed by key; compact, delete: logs will be compressed by key and deleted by save time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCleanUpPolicy(const std::string& _cleanUpPolicy);
 
                     /**
                      * 判断参数 CleanUpPolicy 是否已赋值
                      * @return CleanUpPolicy 是否已赋值
+                     * 
                      */
                     bool CleanUpPolicyHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SegmentMs Segment rolling duration
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSegmentMs() const;
 
                     /**
                      * 设置Segment rolling duration
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SegmentMs Segment rolling duration
+                     * @param _segmentMs Segment rolling duration
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSegmentMs(const int64_t& _segmentMs);
 
                     /**
                      * 判断参数 SegmentMs 是否已赋值
                      * @return SegmentMs 是否已赋值
+                     * 
                      */
                     bool SegmentMsHasBeenSet() const;
 
@@ -143,20 +155,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UncleanLeaderElectionEnable 0: false, 1: true.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetUncleanLeaderElectionEnable() const;
 
                     /**
                      * 设置0: false, 1: true.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UncleanLeaderElectionEnable 0: false, 1: true.
+                     * @param _uncleanLeaderElectionEnable 0: false, 1: true.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable);
 
                     /**
                      * 判断参数 UncleanLeaderElectionEnable 是否已赋值
                      * @return UncleanLeaderElectionEnable 是否已赋值
+                     * 
                      */
                     bool UncleanLeaderElectionEnableHasBeenSet() const;
 
@@ -165,20 +180,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SegmentBytes Number of bytes for segment rolling
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSegmentBytes() const;
 
                     /**
                      * 设置Number of bytes for segment rolling
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SegmentBytes Number of bytes for segment rolling
+                     * @param _segmentBytes Number of bytes for segment rolling
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSegmentBytes(const int64_t& _segmentBytes);
 
                     /**
                      * 判断参数 SegmentBytes 是否已赋值
                      * @return SegmentBytes 是否已赋值
+                     * 
                      */
                     bool SegmentBytesHasBeenSet() const;
 
@@ -187,20 +205,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MaxMessageBytes Maximum number of message bytes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxMessageBytes() const;
 
                     /**
                      * 设置Maximum number of message bytes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxMessageBytes Maximum number of message bytes
+                     * @param _maxMessageBytes Maximum number of message bytes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxMessageBytes(const int64_t& _maxMessageBytes);
 
                     /**
                      * 判断参数 MaxMessageBytes 是否已赋值
                      * @return MaxMessageBytes 是否已赋值
+                     * 
                      */
                     bool MaxMessageBytesHasBeenSet() const;
 
@@ -209,20 +230,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RetentionBytes Message retention file size.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
                      * 设置Message retention file size.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RetentionBytes Message retention file size.
+                     * @param _retentionBytes Message retention file size.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
 
                     /**
                      * 判断参数 RetentionBytes 是否已赋值
                      * @return RetentionBytes 是否已赋值
+                     * 
                      */
                     bool RetentionBytesHasBeenSet() const;
 

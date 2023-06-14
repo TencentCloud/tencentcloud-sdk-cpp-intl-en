@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Page number. Value range: [1,1000]. Default value: 1.
                      * @return PageNum Page number. Value range: [1,1000]. Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Value range: [1,1000]. Default value: 20.
                      * @return PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
                      * @return OrderParam Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
+                     * 
                      */
                     std::string GetOrderParam() const;
 
                     /**
                      * 判断参数 OrderParam 是否已赋值
                      * @return OrderParam 是否已赋值
+                     * 
                      */
                     bool OrderParamHasBeenSet() const;
 
                     /**
                      * 获取Total number of results.
                      * @return TotalNum Total number of results.
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 
                     /**
                      * 获取Total number of result pages.
                      * @return TotalPage Total number of result pages.
+                     * 
                      */
                     uint64_t GetTotalPage() const;
 
                     /**
                      * 判断参数 TotalPage 是否已赋值
                      * @return TotalPage 是否已赋值
+                     * 
                      */
                     bool TotalPageHasBeenSet() const;
 
                     /**
                      * 获取Data content.
                      * @return DataInfoList Data content.
+                     * 
                      */
                     std::vector<ClientIpPlaySumInfo> GetDataInfoList() const;
 
                     /**
                      * 判断参数 DataInfoList 是否已赋值
                      * @return DataInfoList 是否已赋值
+                     * 
                      */
                     bool DataInfoListHasBeenSet() const;
 

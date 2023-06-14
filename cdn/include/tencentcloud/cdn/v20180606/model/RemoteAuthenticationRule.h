@@ -51,20 +51,23 @@ namespace TencentCloud
 The server configured in `RemoteAutherntication` is used by default.
                      * @return Server Remote authentication server
 The server configured in `RemoteAutherntication` is used by default.
+                     * 
                      */
                     std::string GetServer() const;
 
                     /**
                      * 设置Remote authentication server
 The server configured in `RemoteAutherntication` is used by default.
-                     * @param Server Remote authentication server
+                     * @param _server Remote authentication server
 The server configured in `RemoteAutherntication` is used by default.
+                     * 
                      */
                     void SetServer(const std::string& _server);
 
                     /**
                      * 判断参数 Server 是否已赋值
                      * @return Server 是否已赋值
+                     * 
                      */
                     bool ServerHasBeenSet() const;
 
@@ -75,6 +78,7 @@ Default: `all`
                      * @return AuthMethod HTTP method used by the remote authentication server. Valid values: `get`, `post`, `head`, and `all`. 
 `all`: the remote authentication server follows the client request method.
 Default: `all`
+                     * 
                      */
                     std::string GetAuthMethod() const;
 
@@ -82,15 +86,17 @@ Default: `all`
                      * 设置HTTP method used by the remote authentication server. Valid values: `get`, `post`, `head`, and `all`. 
 `all`: the remote authentication server follows the client request method.
 Default: `all`
-                     * @param AuthMethod HTTP method used by the remote authentication server. Valid values: `get`, `post`, `head`, and `all`. 
+                     * @param _authMethod HTTP method used by the remote authentication server. Valid values: `get`, `post`, `head`, and `all`. 
 `all`: the remote authentication server follows the client request method.
 Default: `all`
+                     * 
                      */
                     void SetAuthMethod(const std::string& _authMethod);
 
                     /**
                      * 判断参数 AuthMethod 是否已赋值
                      * @return AuthMethod 是否已赋值
+                     * 
                      */
                     bool AuthMethodHasBeenSet() const;
 
@@ -107,6 +113,7 @@ Default: `all`.
 `directory`: apply to the specified directories
 `path`: apply to the specified absolute paths
 Default: `all`.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -117,18 +124,20 @@ Default: `all`.
 `directory`: apply to the specified directories
 `path`: apply to the specified absolute paths
 Default: `all`.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `all`: apply to all files
 `file`: apply to files with the specified suffixes
 `directory`: apply to the specified directories
 `path`: apply to the specified absolute paths
 Default: `all`.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -147,6 +156,7 @@ For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
 Default: `*`
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -158,19 +168,21 @@ For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
 Default: `*`
-                     * @param RulePaths Content for each `RuleType`:
+                     * @param _rulePaths Content for each `RuleType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
 Default: `*`
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 
@@ -181,6 +193,7 @@ Default: 20000
                      * @return AuthTimeout Timeout period of the remote authentication server. Unit: ms.
 Value range: [1, 30,000]
 Default: 20000
+                     * 
                      */
                     int64_t GetAuthTimeout() const;
 
@@ -188,15 +201,17 @@ Default: 20000
                      * 设置Timeout period of the remote authentication server. Unit: ms.
 Value range: [1, 30,000]
 Default: 20000
-                     * @param AuthTimeout Timeout period of the remote authentication server. Unit: ms.
+                     * @param _authTimeout Timeout period of the remote authentication server. Unit: ms.
 Value range: [1, 30,000]
 Default: 20000
+                     * 
                      */
                     void SetAuthTimeout(const int64_t& _authTimeout);
 
                     /**
                      * 判断参数 AuthTimeout 是否已赋值
                      * @return AuthTimeout 是否已赋值
+                     * 
                      */
                     bool AuthTimeoutHasBeenSet() const;
 
@@ -209,6 +224,7 @@ Default: `RETURN_200`
 `RETURN_200`: the request is allowed when the remote authentication server is timed out.
 `RETURN_403`: the request is denied when the remote authentication server is timed out.
 Default: `RETURN_200`
+                     * 
                      */
                     std::string GetAuthTimeoutAction() const;
 
@@ -217,16 +233,18 @@ Default: `RETURN_200`
 `RETURN_200`: the request is allowed when the remote authentication server is timed out.
 `RETURN_403`: the request is denied when the remote authentication server is timed out.
 Default: `RETURN_200`
-                     * @param AuthTimeoutAction Whether to deny or allow the request when the remote authentication server is timed out:
+                     * @param _authTimeoutAction Whether to deny or allow the request when the remote authentication server is timed out:
 `RETURN_200`: the request is allowed when the remote authentication server is timed out.
 `RETURN_403`: the request is denied when the remote authentication server is timed out.
 Default: `RETURN_200`
+                     * 
                      */
                     void SetAuthTimeoutAction(const std::string& _authTimeoutAction);
 
                     /**
                      * 判断参数 AuthTimeoutAction 是否已赋值
                      * @return AuthTimeoutAction 是否已赋值
+                     * 
                      */
                     bool AuthTimeoutActionHasBeenSet() const;
 

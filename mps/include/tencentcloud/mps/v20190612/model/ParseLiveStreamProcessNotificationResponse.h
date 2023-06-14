@@ -53,24 +53,28 @@ namespace TencentCloud
                      * @return NotificationType Result type of live stream processing. Valid values:
 <li>AiReviewResult: Content audit result;</li>
 <li>ProcessEof: Live stream processing has been completed.</li>
+                     * 
                      */
                     std::string GetNotificationType() const;
 
                     /**
                      * 判断参数 NotificationType 是否已赋值
                      * @return NotificationType 是否已赋值
+                     * 
                      */
                     bool NotificationTypeHasBeenSet() const;
 
                     /**
                      * 获取Video processing task ID.
                      * @return TaskId Video processing task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -79,12 +83,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessEofInfo Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     LiveStreamProcessErrorInfo GetProcessEofInfo() const;
 
                     /**
                      * 判断参数 ProcessEofInfo 是否已赋值
                      * @return ProcessEofInfo 是否已赋值
+                     * 
                      */
                     bool ProcessEofInfoHasBeenSet() const;
 
@@ -93,48 +99,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AiReviewResultInfo Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     LiveStreamAiReviewResultInfo GetAiReviewResultInfo() const;
 
                     /**
                      * 判断参数 AiReviewResultInfo 是否已赋值
                      * @return AiReviewResultInfo 是否已赋值
+                     * 
                      */
                     bool AiReviewResultInfoHasBeenSet() const;
 
                     /**
                      * 获取Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
                      * @return AiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+                     * 
                      */
                     LiveStreamAiRecognitionResultInfo GetAiRecognitionResultInfo() const;
 
                     /**
                      * 判断参数 AiRecognitionResultInfo 是否已赋值
                      * @return AiRecognitionResultInfo 是否已赋值
+                     * 
                      */
                     bool AiRecognitionResultInfoHasBeenSet() const;
 
                     /**
                      * 获取The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
                      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+                     * 
                      */
                     std::string GetSessionId() const;
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 
                     /**
                      * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
                      * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+                     * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
                      * 判断参数 SessionContext 是否已赋值
                      * @return SessionContext 是否已赋值
+                     * 
                      */
                     bool SessionContextHasBeenSet() const;
 

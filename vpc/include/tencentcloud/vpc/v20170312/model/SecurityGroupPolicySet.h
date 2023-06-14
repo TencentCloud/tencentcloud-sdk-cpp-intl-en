@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+                     * @param _version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Egress Outbound rule. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SecurityGroupPolicy> GetEgress() const;
 
                     /**
                      * 设置Outbound rule. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param Egress Outbound rule. 
+                     * @param _egress Outbound rule. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEgress(const std::vector<SecurityGroupPolicy>& _egress);
 
                     /**
                      * 判断参数 Egress 是否已赋值
                      * @return Egress 是否已赋值
+                     * 
                      */
                     bool EgressHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Ingress Inbound rule. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SecurityGroupPolicy> GetIngress() const;
 
                     /**
                      * 设置Inbound rule. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param Ingress Inbound rule. 
+                     * @param _ingress Inbound rule. 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIngress(const std::vector<SecurityGroupPolicy>& _ingress);
 
                     /**
                      * 判断参数 Ingress 是否已赋值
                      * @return Ingress 是否已赋值
+                     * 
                      */
                     bool IngressHasBeenSet() const;
 

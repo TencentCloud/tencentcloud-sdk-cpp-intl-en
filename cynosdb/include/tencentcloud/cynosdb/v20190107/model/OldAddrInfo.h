@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vip IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Vip IP
+                     * @param _vip IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vport Port
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Port
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Vport Port
+                     * @param _vport Port
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVport(const int64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReturnTime Expected valid hours of old IPs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetReturnTime() const;
 
                     /**
                      * 设置Expected valid hours of old IPs
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReturnTime Expected valid hours of old IPs
+                     * @param _returnTime Expected valid hours of old IPs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReturnTime(const std::string& _returnTime);
 
                     /**
                      * 判断参数 ReturnTime 是否已赋值
                      * @return ReturnTime 是否已赋值
+                     * 
                      */
                     bool ReturnTimeHasBeenSet() const;
 

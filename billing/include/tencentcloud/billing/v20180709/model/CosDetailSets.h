@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Bucket name
                      * @return BucketName Bucket name
+                     * 
                      */
                     std::string GetBucketName() const;
 
                     /**
                      * 设置Bucket name
-                     * @param BucketName Bucket name
+                     * @param _bucketName Bucket name
+                     * 
                      */
                     void SetBucketName(const std::string& _bucketName);
 
                     /**
                      * 判断参数 BucketName 是否已赋值
                      * @return BucketName 是否已赋值
+                     * 
                      */
                     bool BucketNameHasBeenSet() const;
 
                     /**
                      * 获取The start time of the usage
                      * @return DosageBeginTime The start time of the usage
+                     * 
                      */
                     std::string GetDosageBeginTime() const;
 
                     /**
                      * 设置The start time of the usage
-                     * @param DosageBeginTime The start time of the usage
+                     * @param _dosageBeginTime The start time of the usage
+                     * 
                      */
                     void SetDosageBeginTime(const std::string& _dosageBeginTime);
 
                     /**
                      * 判断参数 DosageBeginTime 是否已赋值
                      * @return DosageBeginTime 是否已赋值
+                     * 
                      */
                     bool DosageBeginTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time of the usage
                      * @return DosageEndTime The end time of the usage
+                     * 
                      */
                     std::string GetDosageEndTime() const;
 
                     /**
                      * 设置The end time of the usage
-                     * @param DosageEndTime The end time of the usage
+                     * @param _dosageEndTime The end time of the usage
+                     * 
                      */
                     void SetDosageEndTime(const std::string& _dosageEndTime);
 
                     /**
                      * 判断参数 DosageEndTime 是否已赋值
                      * @return DosageEndTime 是否已赋值
+                     * 
                      */
                     bool DosageEndTimeHasBeenSet() const;
 
                     /**
                      * 获取Subproduct name
                      * @return SubProductCodeName Subproduct name
+                     * 
                      */
                     std::string GetSubProductCodeName() const;
 
                     /**
                      * 设置Subproduct name
-                     * @param SubProductCodeName Subproduct name
+                     * @param _subProductCodeName Subproduct name
+                     * 
                      */
                     void SetSubProductCodeName(const std::string& _subProductCodeName);
 
                     /**
                      * 判断参数 SubProductCodeName 是否已赋值
                      * @return SubProductCodeName 是否已赋值
+                     * 
                      */
                     bool SubProductCodeNameHasBeenSet() const;
 
                     /**
                      * 获取Billable item name
                      * @return BillingItemCodeName Billable item name
+                     * 
                      */
                     std::string GetBillingItemCodeName() const;
 
                     /**
                      * 设置Billable item name
-                     * @param BillingItemCodeName Billable item name
+                     * @param _billingItemCodeName Billable item name
+                     * 
                      */
                     void SetBillingItemCodeName(const std::string& _billingItemCodeName);
 
                     /**
                      * 判断参数 BillingItemCodeName 是否已赋值
                      * @return BillingItemCodeName 是否已赋值
+                     * 
                      */
                     bool BillingItemCodeNameHasBeenSet() const;
 
                     /**
                      * 获取Usage
                      * @return DosageValue Usage
+                     * 
                      */
                     std::string GetDosageValue() const;
 
                     /**
                      * 设置Usage
-                     * @param DosageValue Usage
+                     * @param _dosageValue Usage
+                     * 
                      */
                     void SetDosageValue(const std::string& _dosageValue);
 
                     /**
                      * 判断参数 DosageValue 是否已赋值
                      * @return DosageValue 是否已赋值
+                     * 
                      */
                     bool DosageValueHasBeenSet() const;
 
                     /**
                      * 获取Unit of the billable item
                      * @return Unit Unit of the billable item
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置Unit of the billable item
-                     * @param Unit Unit of the billable item
+                     * @param _unit Unit of the billable item
+                     * 
                      */
                     void SetUnit(const std::string& _unit);
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 

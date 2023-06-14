@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
                      * @return QueueName Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-                     * @param QueueName Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+                     * @param _queueName Queue name, which is unique under the same account in an individual region. It is a string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取After this time is set, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
                      * @return StartConsumeTime After this time is set, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
+                     * 
                      */
                     uint64_t GetStartConsumeTime() const;
 
                     /**
                      * 设置After this time is set, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
-                     * @param StartConsumeTime After this time is set, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
+                     * @param _startConsumeTime After this time is set, the `(Batch)receiveMessage` API will consume the messages received after this timestamp in the order in which they are produced.
+                     * 
                      */
                     void SetStartConsumeTime(const uint64_t& _startConsumeTime);
 
                     /**
                      * 判断参数 StartConsumeTime 是否已赋值
                      * @return StartConsumeTime 是否已赋值
+                     * 
                      */
                     bool StartConsumeTimeHasBeenSet() const;
 

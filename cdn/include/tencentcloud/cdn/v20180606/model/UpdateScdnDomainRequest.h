@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Domain name
                      * @return Domain Domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name
-                     * @param Domain Domain name
+                     * @param _domain Domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取WAF configuration
                      * @return Waf WAF configuration
+                     * 
                      */
                     ScdnWafConfig GetWaf() const;
 
                     /**
                      * 设置WAF configuration
-                     * @param Waf WAF configuration
+                     * @param _waf WAF configuration
+                     * 
                      */
                     void SetWaf(const ScdnWafConfig& _waf);
 
                     /**
                      * 判断参数 Waf 是否已赋值
                      * @return Waf 是否已赋值
+                     * 
                      */
                     bool WafHasBeenSet() const;
 
                     /**
                      * 获取Custom defense policy configuration
                      * @return Acl Custom defense policy configuration
+                     * 
                      */
                     ScdnAclConfig GetAcl() const;
 
                     /**
                      * 设置Custom defense policy configuration
-                     * @param Acl Custom defense policy configuration
+                     * @param _acl Custom defense policy configuration
+                     * 
                      */
                     void SetAcl(const ScdnAclConfig& _acl);
 
                     /**
                      * 判断参数 Acl 是否已赋值
                      * @return Acl 是否已赋值
+                     * 
                      */
                     bool AclHasBeenSet() const;
 
                     /**
                      * 获取CC attack defense configurations. CC attack defense is enabled by default.
                      * @return CC CC attack defense configurations. CC attack defense is enabled by default.
+                     * 
                      */
                     ScdnConfig GetCC() const;
 
                     /**
                      * 设置CC attack defense configurations. CC attack defense is enabled by default.
-                     * @param CC CC attack defense configurations. CC attack defense is enabled by default.
+                     * @param _cC CC attack defense configurations. CC attack defense is enabled by default.
+                     * 
                      */
                     void SetCC(const ScdnConfig& _cC);
 
                     /**
                      * 判断参数 CC 是否已赋值
                      * @return CC 是否已赋值
+                     * 
                      */
                     bool CCHasBeenSet() const;
 
                     /**
                      * 获取DDoS defense configuration. DDoS defense is enabled by default.
                      * @return Ddos DDoS defense configuration. DDoS defense is enabled by default.
+                     * 
                      */
                     ScdnDdosConfig GetDdos() const;
 
                     /**
                      * 设置DDoS defense configuration. DDoS defense is enabled by default.
-                     * @param Ddos DDoS defense configuration. DDoS defense is enabled by default.
+                     * @param _ddos DDoS defense configuration. DDoS defense is enabled by default.
+                     * 
                      */
                     void SetDdos(const ScdnDdosConfig& _ddos);
 
                     /**
                      * 判断参数 Ddos 是否已赋值
                      * @return Ddos 是否已赋值
+                     * 
                      */
                     bool DdosHasBeenSet() const;
 
                     /**
                      * 获取Bot defense configuration
                      * @return Bot Bot defense configuration
+                     * 
                      */
                     ScdnBotConfig GetBot() const;
 
                     /**
                      * 设置Bot defense configuration
-                     * @param Bot Bot defense configuration
+                     * @param _bot Bot defense configuration
+                     * 
                      */
                     void SetBot(const ScdnBotConfig& _bot);
 
                     /**
                      * 判断参数 Bot 是否已赋值
                      * @return Bot 是否已赋值
+                     * 
                      */
                     bool BotHasBeenSet() const;
 

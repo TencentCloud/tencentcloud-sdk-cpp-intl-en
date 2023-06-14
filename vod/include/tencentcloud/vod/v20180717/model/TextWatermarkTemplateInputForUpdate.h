@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return FontType Font type. Currently, two types are supported:
 <li>simkai.ttf: both Chinese and English are supported;</li>
 <li>arial.ttf: only English is supported.</li>
+                     * 
                      */
                     std::string GetFontType() const;
 
@@ -60,51 +61,59 @@ namespace TencentCloud
                      * 设置Font type. Currently, two types are supported:
 <li>simkai.ttf: both Chinese and English are supported;</li>
 <li>arial.ttf: only English is supported.</li>
-                     * @param FontType Font type. Currently, two types are supported:
+                     * @param _fontType Font type. Currently, two types are supported:
 <li>simkai.ttf: both Chinese and English are supported;</li>
 <li>arial.ttf: only English is supported.</li>
+                     * 
                      */
                     void SetFontType(const std::string& _fontType);
 
                     /**
                      * 判断参数 FontType 是否已赋值
                      * @return FontType 是否已赋值
+                     * 
                      */
                     bool FontTypeHasBeenSet() const;
 
                     /**
                      * 获取Font size in Npx format where N is a numeric value.
                      * @return FontSize Font size in Npx format where N is a numeric value.
+                     * 
                      */
                     std::string GetFontSize() const;
 
                     /**
                      * 设置Font size in Npx format where N is a numeric value.
-                     * @param FontSize Font size in Npx format where N is a numeric value.
+                     * @param _fontSize Font size in Npx format where N is a numeric value.
+                     * 
                      */
                     void SetFontSize(const std::string& _fontSize);
 
                     /**
                      * 判断参数 FontSize 是否已赋值
                      * @return FontSize 是否已赋值
+                     * 
                      */
                     bool FontSizeHasBeenSet() const;
 
                     /**
                      * 获取Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
                      * @return FontColor Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
+                     * 
                      */
                     std::string GetFontColor() const;
 
                     /**
                      * 设置Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
-                     * @param FontColor Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
+                     * @param _fontColor Font color in 0xRRGGBB format. Default value: 0xFFFFFF (white).
+                     * 
                      */
                     void SetFontColor(const std::string& _fontColor);
 
                     /**
                      * 判断参数 FontColor 是否已赋值
                      * @return FontColor 是否已赋值
+                     * 
                      */
                     bool FontColorHasBeenSet() const;
 
@@ -115,6 +124,7 @@ namespace TencentCloud
                      * @return FontAlpha Text transparency. Value range: (0, 1]
 <li>0: completely transparent</li>
 <li>1: completely opaque</li>
+                     * 
                      */
                     double GetFontAlpha() const;
 
@@ -122,15 +132,17 @@ namespace TencentCloud
                      * 设置Text transparency. Value range: (0, 1]
 <li>0: completely transparent</li>
 <li>1: completely opaque</li>
-                     * @param FontAlpha Text transparency. Value range: (0, 1]
+                     * @param _fontAlpha Text transparency. Value range: (0, 1]
 <li>0: completely transparent</li>
 <li>1: completely opaque</li>
+                     * 
                      */
                     void SetFontAlpha(const double& _fontAlpha);
 
                     /**
                      * 判断参数 FontAlpha 是否已赋值
                      * @return FontAlpha 是否已赋值
+                     * 
                      */
                     bool FontAlphaHasBeenSet() const;
 

@@ -57,6 +57,7 @@ namespace TencentCloud
 <li>`trans`: Allow</li>
 <li>`alg`: JavaScript challenge</li>
 <li>`monitor`: Observe</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -66,35 +67,40 @@ namespace TencentCloud
 <li>`trans`: Allow</li>
 <li>`alg`: JavaScript challenge</li>
 <li>`monitor`: Observe</li>
-                     * @param Action The rule action. Values:
+                     * @param _action The rule action. Values:
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
 <li>`alg`: JavaScript challenge</li>
 <li>`monitor`: Observe</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取The rule ID, which is only used as an output parameter.
                      * @return RuleID The rule ID, which is only used as an output parameter.
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置The rule ID, which is only used as an output parameter.
-                     * @param RuleID The rule ID, which is only used as an output parameter.
+                     * @param _ruleID The rule ID, which is only used as an output parameter.
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
@@ -103,20 +109,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TransManagedIds The ID of the rule that applies the "Allow" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetTransManagedIds() const;
 
                     /**
                      * 设置The ID of the rule that applies the "Allow" action.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TransManagedIds The ID of the rule that applies the "Allow" action.
+                     * @param _transManagedIds The ID of the rule that applies the "Allow" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransManagedIds(const std::vector<int64_t>& _transManagedIds);
 
                     /**
                      * 判断参数 TransManagedIds 是否已赋值
                      * @return TransManagedIds 是否已赋值
+                     * 
                      */
                     bool TransManagedIdsHasBeenSet() const;
 
@@ -125,20 +134,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetAlgManagedIds() const;
 
                     /**
                      * 设置The ID of the rule that applies the "JavaScript challenge" action.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AlgManagedIds The ID of the rule that applies the "JavaScript challenge" action.
+                     * @param _algManagedIds The ID of the rule that applies the "JavaScript challenge" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlgManagedIds(const std::vector<int64_t>& _algManagedIds);
 
                     /**
                      * 判断参数 AlgManagedIds 是否已赋值
                      * @return AlgManagedIds 是否已赋值
+                     * 
                      */
                     bool AlgManagedIdsHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CapManagedIds The ID of the rule that applies the "Managed challenge" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetCapManagedIds() const;
 
                     /**
                      * 设置The ID of the rule that applies the "Managed challenge" action.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CapManagedIds The ID of the rule that applies the "Managed challenge" action.
+                     * @param _capManagedIds The ID of the rule that applies the "Managed challenge" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCapManagedIds(const std::vector<int64_t>& _capManagedIds);
 
                     /**
                      * 判断参数 CapManagedIds 是否已赋值
                      * @return CapManagedIds 是否已赋值
+                     * 
                      */
                     bool CapManagedIdsHasBeenSet() const;
 
@@ -169,20 +184,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MonManagedIds The ID of the rule that applies the "Observe" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetMonManagedIds() const;
 
                     /**
                      * 设置The ID of the rule that applies the "Observe" action.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MonManagedIds The ID of the rule that applies the "Observe" action.
+                     * @param _monManagedIds The ID of the rule that applies the "Observe" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMonManagedIds(const std::vector<int64_t>& _monManagedIds);
 
                     /**
                      * 判断参数 MonManagedIds 是否已赋值
                      * @return MonManagedIds 是否已赋值
+                     * 
                      */
                     bool MonManagedIdsHasBeenSet() const;
 
@@ -191,20 +209,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DropManagedIds The ID of the rule that applies the "Block" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetDropManagedIds() const;
 
                     /**
                      * 设置The ID of the rule that applies the "Block" action.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DropManagedIds The ID of the rule that applies the "Block" action.
+                     * @param _dropManagedIds The ID of the rule that applies the "Block" action.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDropManagedIds(const std::vector<int64_t>& _dropManagedIds);
 
                     /**
                      * 判断参数 DropManagedIds 是否已赋值
                      * @return DropManagedIds 是否已赋值
+                     * 
                      */
                     bool DropManagedIdsHasBeenSet() const;
 

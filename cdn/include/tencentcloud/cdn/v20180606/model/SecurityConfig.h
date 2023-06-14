@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取on|off
                      * @return Switch on|off
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置on|off
-                     * @param Switch on|off
+                     * @param _switch on|off
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

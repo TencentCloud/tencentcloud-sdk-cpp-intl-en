@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Name of the task.
                      * @return TaskName Name of the task.
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Name of the task.
-                     * @param TaskName Name of the task.
+                     * @param _taskName Name of the task.
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 
                     /**
                      * 获取Name of the site.
                      * @return ZoneName Name of the site.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置Name of the site.
-                     * @param ZoneName Name of the site.
+                     * @param _zoneName Name of the site.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the logset.
                      * @return LogSetId ID of the logset.
+                     * 
                      */
                     std::string GetLogSetId() const;
 
                     /**
                      * 设置ID of the logset.
-                     * @param LogSetId ID of the logset.
+                     * @param _logSetId ID of the logset.
+                     * 
                      */
                     void SetLogSetId(const std::string& _logSetId);
 
                     /**
                      * 判断参数 LogSetId 是否已赋值
                      * @return LogSetId 是否已赋值
+                     * 
                      */
                     bool LogSetIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the log topic.
                      * @return TopicId ID of the log topic.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置ID of the log topic.
-                     * @param TopicId ID of the log topic.
+                     * @param _topicId ID of the log topic.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Type of the task.
                      * @return EntityType Type of the task.
+                     * 
                      */
                     std::string GetEntityType() const;
 
                     /**
                      * 设置Type of the task.
-                     * @param EntityType Type of the task.
+                     * @param _entityType Type of the task.
+                     * 
                      */
                     void SetEntityType(const std::string& _entityType);
 
                     /**
                      * 判断参数 EntityType 是否已赋值
                      * @return EntityType 是否已赋值
+                     * 
                      */
                     bool EntityTypeHasBeenSet() const;
 
                     /**
                      * 获取Retention period of the log topic.
                      * @return Period Retention period of the log topic.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Retention period of the log topic.
-                     * @param Period Retention period of the log topic.
+                     * @param _period Retention period of the log topic.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Whether the log topic is enabled.
                      * @return Enabled Whether the log topic is enabled.
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether the log topic is enabled.
-                     * @param Enabled Whether the log topic is enabled.
+                     * @param _enabled Whether the log topic is enabled.
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Whether the log topic is deleted.
                      * @return Deleted Whether the log topic is deleted.
+                     * 
                      */
                     std::string GetDeleted() const;
 
                     /**
                      * 设置Whether the log topic is deleted.
-                     * @param Deleted Whether the log topic is deleted.
+                     * @param _deleted Whether the log topic is deleted.
+                     * 
                      */
                     void SetDeleted(const std::string& _deleted);
 
                     /**
                      * 判断参数 Deleted 是否已赋值
                      * @return Deleted 是否已赋值
+                     * 
                      */
                     bool DeletedHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return CreateTime Creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreateTime Creation time.
+                     * @param _createTime Creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -215,6 +242,7 @@ namespace TencentCloud
                      * @return Target Target location. Values:
 <li>`cls`: Ship logs to CLS;</li>
 <li>`custom_enpoint`: Ship logs to a custom address.</li>
+                     * 
                      */
                     std::string GetTarget() const;
 
@@ -222,15 +250,17 @@ namespace TencentCloud
                      * 设置Target location. Values:
 <li>`cls`: Ship logs to CLS;</li>
 <li>`custom_enpoint`: Ship logs to a custom address.</li>
-                     * @param Target Target location. Values:
+                     * @param _target Target location. Values:
 <li>`cls`: Ship logs to CLS;</li>
 <li>`custom_enpoint`: Ship logs to a custom address.</li>
+                     * 
                      */
                     void SetTarget(const std::string& _target);
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 
@@ -239,20 +269,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogSetRegion Region of the logset.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLogSetRegion() const;
 
                     /**
                      * 设置Region of the logset.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LogSetRegion Region of the logset.
+                     * @param _logSetRegion Region of the logset.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLogSetRegion(const std::string& _logSetRegion);
 
                     /**
                      * 判断参数 LogSetRegion 是否已赋值
                      * @return LogSetRegion 是否已赋值
+                     * 
                      */
                     bool LogSetRegionHasBeenSet() const;
 
@@ -261,20 +294,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZoneId ID of the site.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneId ID of the site.
+                     * @param _zoneId ID of the site.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -285,6 +321,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return Area Acceleration region. Values:
 <li>`mainland`: Chinese mainland;</li>
 <li>`overseas`: Global (outside the Chinese mainland).</li>
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -292,15 +329,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Acceleration region. Values:
 <li>`mainland`: Chinese mainland;</li>
 <li>`overseas`: Global (outside the Chinese mainland).</li>
-                     * @param Area Acceleration region. Values:
+                     * @param _area Acceleration region. Values:
 <li>`mainland`: Chinese mainland;</li>
 <li>`overseas`: Global (outside the Chinese mainland).</li>
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -311,6 +350,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return LogSetType Type of the shipping task. Values:
 <li>`cls`: Ship logs to CLS.</li>
 <li>`custom_endpoint`: Ship logs to custom APIs.</li>
+                     * 
                      */
                     std::string GetLogSetType() const;
 
@@ -318,15 +358,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Type of the shipping task. Values:
 <li>`cls`: Ship logs to CLS.</li>
 <li>`custom_endpoint`: Ship logs to custom APIs.</li>
-                     * @param LogSetType Type of the shipping task. Values:
+                     * @param _logSetType Type of the shipping task. Values:
 <li>`cls`: Ship logs to CLS.</li>
 <li>`custom_endpoint`: Ship logs to custom APIs.</li>
+                     * 
                      */
                     void SetLogSetType(const std::string& _logSetType);
 
                     /**
                      * 判断参数 LogSetType 是否已赋值
                      * @return LogSetType 是否已赋值
+                     * 
                      */
                     bool LogSetTypeHasBeenSet() const;
 

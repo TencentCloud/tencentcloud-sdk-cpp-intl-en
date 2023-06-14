@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ManuallyAdded Nodes that are manually managed
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     ManuallyAdded GetManuallyAdded() const;
 
                     /**
                      * 设置Nodes that are manually managed
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param ManuallyAdded Nodes that are manually managed
+                     * @param _manuallyAdded Nodes that are manually managed
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetManuallyAdded(const ManuallyAdded& _manuallyAdded);
 
                     /**
                      * 判断参数 ManuallyAdded 是否已赋值
                      * @return ManuallyAdded 是否已赋值
+                     * 
                      */
                     bool ManuallyAddedHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return AutoscalingAdded Nodes that are automatically managed
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     AutoscalingAdded GetAutoscalingAdded() const;
 
                     /**
                      * 设置Nodes that are automatically managed
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param AutoscalingAdded Nodes that are automatically managed
+                     * @param _autoscalingAdded Nodes that are automatically managed
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetAutoscalingAdded(const AutoscalingAdded& _autoscalingAdded);
 
                     /**
                      * 判断参数 AutoscalingAdded 是否已赋值
                      * @return AutoscalingAdded 是否已赋值
+                     * 
                      */
                     bool AutoscalingAddedHasBeenSet() const;
 

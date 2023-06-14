@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The start time recorded in UNIX timestamp.
                      * @return StartTime The start time recorded in UNIX timestamp.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置The start time recorded in UNIX timestamp.
-                     * @param StartTime The start time recorded in UNIX timestamp.
+                     * @param _startTime The start time recorded in UNIX timestamp.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
                      * @return EndTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
-                     * @param EndTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+                     * @param _endTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The regions blocked.
                      * @return BlockArea The regions blocked.
+                     * 
                      */
                     std::string GetBlockArea() const;
 
                     /**
                      * 设置The regions blocked.
-                     * @param BlockArea The regions blocked.
+                     * @param _blockArea The regions blocked.
+                     * 
                      */
                     void SetBlockArea(const std::string& _blockArea);
 
                     /**
                      * 判断参数 BlockArea 是否已赋值
                      * @return BlockArea 是否已赋值
+                     * 
                      */
                     bool BlockAreaHasBeenSet() const;
 

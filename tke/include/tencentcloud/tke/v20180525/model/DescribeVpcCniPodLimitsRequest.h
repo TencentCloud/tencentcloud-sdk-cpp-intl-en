@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The availability zone of the model to query, for example, `ap-guangzhou-3`. This field is left empty by default, that is, do not filter by the availability zone.
                      * @return Zone The availability zone of the model to query, for example, `ap-guangzhou-3`. This field is left empty by default, that is, do not filter by the availability zone.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置The availability zone of the model to query, for example, `ap-guangzhou-3`. This field is left empty by default, that is, do not filter by the availability zone.
-                     * @param Zone The availability zone of the model to query, for example, `ap-guangzhou-3`. This field is left empty by default, that is, do not filter by the availability zone.
+                     * @param _zone The availability zone of the model to query, for example, `ap-guangzhou-3`. This field is left empty by default, that is, do not filter by the availability zone.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取The instance family to query, for example, `S5`. This field is left empty by default, that is, do not filter by the instance family.
                      * @return InstanceFamily The instance family to query, for example, `S5`. This field is left empty by default, that is, do not filter by the instance family.
+                     * 
                      */
                     std::string GetInstanceFamily() const;
 
                     /**
                      * 设置The instance family to query, for example, `S5`. This field is left empty by default, that is, do not filter by the instance family.
-                     * @param InstanceFamily The instance family to query, for example, `S5`. This field is left empty by default, that is, do not filter by the instance family.
+                     * @param _instanceFamily The instance family to query, for example, `S5`. This field is left empty by default, that is, do not filter by the instance family.
+                     * 
                      */
                     void SetInstanceFamily(const std::string& _instanceFamily);
 
                     /**
                      * 判断参数 InstanceFamily 是否已赋值
                      * @return InstanceFamily 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyHasBeenSet() const;
 
                     /**
                      * 获取The instance model to query, for example, `S5.LARGE8`. This field is empty by default, that is, do not filter by instance type.
                      * @return InstanceType The instance model to query, for example, `S5.LARGE8`. This field is empty by default, that is, do not filter by instance type.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置The instance model to query, for example, `S5.LARGE8`. This field is empty by default, that is, do not filter by instance type.
-                     * @param InstanceType The instance model to query, for example, `S5.LARGE8`. This field is empty by default, that is, do not filter by instance type.
+                     * @param _instanceType The instance model to query, for example, `S5.LARGE8`. This field is empty by default, that is, do not filter by instance type.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 

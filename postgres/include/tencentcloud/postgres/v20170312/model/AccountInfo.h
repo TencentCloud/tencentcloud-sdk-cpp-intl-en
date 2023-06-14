@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-lnp6j617
                      * @return DBInstanceId Instance ID in the format of postgres-lnp6j617
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-lnp6j617
-                     * @param DBInstanceId Instance ID in the format of postgres-lnp6j617
+                     * @param _dBInstanceId Instance ID in the format of postgres-lnp6j617
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Account
                      * @return UserName Account
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Account
-                     * @param UserName Account
+                     * @param _userName Account
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Account remarks
                      * @return Remark Account remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Account remarks
-                     * @param Remark Account remarks
+                     * @param _remark Account remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
                      * @return Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
-                     * @param Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * @param _status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Account creation time
                      * @return CreateTime Account creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Account creation time
-                     * @param CreateTime Account creation time
+                     * @param _createTime Account creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Account last modified time
                      * @return UpdateTime Account last modified time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Account last modified time
-                     * @param UpdateTime Account last modified time
+                     * @param _updateTime Account last modified time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

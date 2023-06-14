@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Valid values: 0 (logical backup), 1 (physical backup)
                      * @return BackupMethod Valid values: 0 (logical backup), 1 (physical backup)
+                     * 
                      */
                     int64_t GetBackupMethod() const;
 
                     /**
                      * 设置Valid values: 0 (logical backup), 1 (physical backup)
-                     * @param BackupMethod Valid values: 0 (logical backup), 1 (physical backup)
+                     * @param _backupMethod Valid values: 0 (logical backup), 1 (physical backup)
+                     * 
                      */
                     void SetBackupMethod(const int64_t& _backupMethod);
 
                     /**
                      * 判断参数 BackupMethod 是否已赋值
                      * @return BackupMethod 是否已赋值
+                     * 
                      */
                     bool BackupMethodHasBeenSet() const;
 
                     /**
                      * 获取Backup remarks
                      * @return BackupRemark Backup remarks
+                     * 
                      */
                     std::string GetBackupRemark() const;
 
                     /**
                      * 设置Backup remarks
-                     * @param BackupRemark Backup remarks
+                     * @param _backupRemark Backup remarks
+                     * 
                      */
                     void SetBackupRemark(const std::string& _backupRemark);
 
                     /**
                      * 判断参数 BackupRemark 是否已赋值
                      * @return BackupRemark 是否已赋值
+                     * 
                      */
                     bool BackupRemarkHasBeenSet() const;
 

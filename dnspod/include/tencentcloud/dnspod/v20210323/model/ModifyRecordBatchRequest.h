@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Array of record IDs. You can view all DNS records and their IDs via the `DescribeRecordList` API.
                      * @return RecordIdList Array of record IDs. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * 
                      */
                     std::vector<uint64_t> GetRecordIdList() const;
 
                     /**
                      * 设置Array of record IDs. You can view all DNS records and their IDs via the `DescribeRecordList` API.
-                     * @param RecordIdList Array of record IDs. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * @param _recordIdList Array of record IDs. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * 
                      */
                     void SetRecordIdList(const std::vector<uint64_t>& _recordIdList);
 
                     /**
                      * 判断参数 RecordIdList 是否已赋值
                      * @return RecordIdList 是否已赋值
+                     * 
                      */
                     bool RecordIdListHasBeenSet() const;
 
                     /**
                      * 获取The field to be modified. Valid values: `sub_domain`, `record_type`, `area`, `value`, `mx`, `ttl`, `status`.
                      * @return Change The field to be modified. Valid values: `sub_domain`, `record_type`, `area`, `value`, `mx`, `ttl`, `status`.
+                     * 
                      */
                     std::string GetChange() const;
 
                     /**
                      * 设置The field to be modified. Valid values: `sub_domain`, `record_type`, `area`, `value`, `mx`, `ttl`, `status`.
-                     * @param Change The field to be modified. Valid values: `sub_domain`, `record_type`, `area`, `value`, `mx`, `ttl`, `status`.
+                     * @param _change The field to be modified. Valid values: `sub_domain`, `record_type`, `area`, `value`, `mx`, `ttl`, `status`.
+                     * 
                      */
                     void SetChange(const std::string& _change);
 
                     /**
                      * 判断参数 Change 是否已赋值
                      * @return Change 是否已赋值
+                     * 
                      */
                     bool ChangeHasBeenSet() const;
 
                     /**
                      * 获取The value to be changed to, which is required and subject to the `change` field.
                      * @return ChangeTo The value to be changed to, which is required and subject to the `change` field.
+                     * 
                      */
                     std::string GetChangeTo() const;
 
                     /**
                      * 设置The value to be changed to, which is required and subject to the `change` field.
-                     * @param ChangeTo The value to be changed to, which is required and subject to the `change` field.
+                     * @param _changeTo The value to be changed to, which is required and subject to the `change` field.
+                     * 
                      */
                     void SetChangeTo(const std::string& _changeTo);
 
                     /**
                      * 判断参数 ChangeTo 是否已赋值
                      * @return ChangeTo 是否已赋值
+                     * 
                      */
                     bool ChangeToHasBeenSet() const;
 
                     /**
                      * 获取The record value to be changed to, which is required only if the `change` field is `record_type`.
                      * @return Value The record value to be changed to, which is required only if the `change` field is `record_type`.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置The record value to be changed to, which is required only if the `change` field is `record_type`.
-                     * @param Value The record value to be changed to, which is required only if the `change` field is `record_type`.
+                     * @param _value The record value to be changed to, which is required only if the `change` field is `record_type`.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取MX record priority, which is required only if the `Change` field is `mx`.
                      * @return MX MX record priority, which is required only if the `Change` field is `mx`.
+                     * 
                      */
                     std::string GetMX() const;
 
                     /**
                      * 设置MX record priority, which is required only if the `Change` field is `mx`.
-                     * @param MX MX record priority, which is required only if the `Change` field is `mx`.
+                     * @param _mX MX record priority, which is required only if the `Change` field is `mx`.
+                     * 
                      */
                     void SetMX(const std::string& _mX);
 
                     /**
                      * 判断参数 MX 是否已赋值
                      * @return MX 是否已赋值
+                     * 
                      */
                     bool MXHasBeenSet() const;
 

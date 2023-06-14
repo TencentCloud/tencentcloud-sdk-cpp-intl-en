@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return UserName Username
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param UserName Username
+                     * @param _userName Username
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 

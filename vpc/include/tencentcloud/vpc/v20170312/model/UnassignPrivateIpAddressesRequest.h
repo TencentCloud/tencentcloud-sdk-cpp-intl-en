@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the ENI instance, such as `eni-m6dyj72l`.
                      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置The ID of the ENI instance, such as `eni-m6dyj72l`.
-                     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * @param _networkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取The information of the specified private IPs. You can specify a maximum of 10 each time.
                      * @return PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+                     * 
                      */
                     std::vector<PrivateIpAddressSpecification> GetPrivateIpAddresses() const;
 
                     /**
                      * 设置The information of the specified private IPs. You can specify a maximum of 10 each time.
-                     * @param PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+                     * @param _privateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+                     * 
                      */
                     void SetPrivateIpAddresses(const std::vector<PrivateIpAddressSpecification>& _privateIpAddresses);
 
                     /**
                      * 判断参数 PrivateIpAddresses 是否已赋值
                      * @return PrivateIpAddresses 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressesHasBeenSet() const;
 
                     /**
                      * 获取Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
                      * @return InstanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
-                     * @param InstanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     * @param _instanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

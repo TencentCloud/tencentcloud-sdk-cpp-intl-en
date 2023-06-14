@@ -51,38 +51,44 @@ namespace TencentCloud
 The ID must be an unused ID in the SDK. The whiteboard push service uses the user ID to enter the room for whiteboard push. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the pushing operation.
                      * @return PushUserId User ID used by the whiteboard push service for entering a room,
 The ID must be an unused ID in the SDK. The whiteboard push service uses the user ID to enter the room for whiteboard push. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the pushing operation.
+                     * 
                      */
                     std::string GetPushUserId() const;
 
                     /**
                      * 设置User ID used by the whiteboard push service for entering a room,
 The ID must be an unused ID in the SDK. The whiteboard push service uses the user ID to enter the room for whiteboard push. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the pushing operation.
-                     * @param PushUserId User ID used by the whiteboard push service for entering a room,
+                     * @param _pushUserId User ID used by the whiteboard push service for entering a room,
 The ID must be an unused ID in the SDK. The whiteboard push service uses the user ID to enter the room for whiteboard push. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the pushing operation.
+                     * 
                      */
                     void SetPushUserId(const std::string& _pushUserId);
 
                     /**
                      * 判断参数 PushUserId 是否已赋值
                      * @return PushUserId 是否已赋值
+                     * 
                      */
                     bool PushUserIdHasBeenSet() const;
 
                     /**
                      * 获取Signature corresponding to the PushUserId ID.
                      * @return PushUserSig Signature corresponding to the PushUserId ID.
+                     * 
                      */
                     std::string GetPushUserSig() const;
 
                     /**
                      * 设置Signature corresponding to the PushUserId ID.
-                     * @param PushUserSig Signature corresponding to the PushUserId ID.
+                     * @param _pushUserSig Signature corresponding to the PushUserId ID.
+                     * 
                      */
                     void SetPushUserSig(const std::string& _pushUserSig);
 
                     /**
                      * 判断参数 PushUserSig 是否已赋值
                      * @return PushUserSig 是否已赋值
+                     * 
                      */
                     bool PushUserSigHasBeenSet() const;
 

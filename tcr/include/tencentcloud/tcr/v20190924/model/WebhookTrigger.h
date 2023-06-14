@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Trigger name
                      * @return Name Trigger name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Trigger name
-                     * @param Name Trigger name
+                     * @param _name Trigger name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Trigger target
                      * @return Targets Trigger target
+                     * 
                      */
                     std::vector<WebhookTarget> GetTargets() const;
 
                     /**
                      * 设置Trigger target
-                     * @param Targets Trigger target
+                     * @param _targets Trigger target
+                     * 
                      */
                     void SetTargets(const std::vector<WebhookTarget>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 
                     /**
                      * 获取Action to be triggered
                      * @return EventTypes Action to be triggered
+                     * 
                      */
                     std::vector<std::string> GetEventTypes() const;
 
                     /**
                      * 设置Action to be triggered
-                     * @param EventTypes Action to be triggered
+                     * @param _eventTypes Action to be triggered
+                     * 
                      */
                     void SetEventTypes(const std::vector<std::string>& _eventTypes);
 
                     /**
                      * 判断参数 EventTypes 是否已赋值
                      * @return EventTypes 是否已赋值
+                     * 
                      */
                     bool EventTypesHasBeenSet() const;
 
                     /**
                      * 获取Trigger rule
                      * @return Condition Trigger rule
+                     * 
                      */
                     std::string GetCondition() const;
 
                     /**
                      * 设置Trigger rule
-                     * @param Condition Trigger rule
+                     * @param _condition Trigger rule
+                     * 
                      */
                     void SetCondition(const std::string& _condition);
 
                     /**
                      * 判断参数 Condition 是否已赋值
                      * @return Condition 是否已赋值
+                     * 
                      */
                     bool ConditionHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the trigger
                      * @return Enabled Whether to enable the trigger
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether to enable the trigger
-                     * @param Enabled Whether to enable the trigger
+                     * @param _enabled Whether to enable the trigger
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Trigger ID
                      * @return Id Trigger ID
+                     * 
                      */
                     int64_t GetId() const;
 
                     /**
                      * 设置Trigger ID
-                     * @param Id Trigger ID
+                     * @param _id Trigger ID
+                     * 
                      */
                     void SetId(const int64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Trigger description
                      * @return Description Trigger description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Trigger description
-                     * @param Description Trigger description
+                     * @param _description Trigger description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取ID of the namespace of the trigger
                      * @return NamespaceId ID of the namespace of the trigger
+                     * 
                      */
                     int64_t GetNamespaceId() const;
 
                     /**
                      * 设置ID of the namespace of the trigger
-                     * @param NamespaceId ID of the namespace of the trigger
+                     * @param _namespaceId ID of the namespace of the trigger
+                     * 
                      */
                     void SetNamespaceId(const int64_t& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 

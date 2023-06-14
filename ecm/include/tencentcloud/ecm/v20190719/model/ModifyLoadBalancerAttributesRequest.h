@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique CLB ID
                      * @return LoadBalancerId Unique CLB ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置Unique CLB ID
-                     * @param LoadBalancerId Unique CLB ID
+                     * @param _loadBalancerId Unique CLB ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB instance name
                      * @return LoadBalancerName CLB instance name
+                     * 
                      */
                     std::string GetLoadBalancerName() const;
 
                     /**
                      * 设置CLB instance name
-                     * @param LoadBalancerName CLB instance name
+                     * @param _loadBalancerName CLB instance name
+                     * 
                      */
                     void SetLoadBalancerName(const std::string& _loadBalancerName);
 
                     /**
                      * 判断参数 LoadBalancerName 是否已赋值
                      * @return LoadBalancerName 是否已赋值
+                     * 
                      */
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
                      * 获取Network billing and bandwidth parameters
                      * @return InternetChargeInfo Network billing and bandwidth parameters
+                     * 
                      */
                     LoadBalancerInternetAccessible GetInternetChargeInfo() const;
 
                     /**
                      * 设置Network billing and bandwidth parameters
-                     * @param InternetChargeInfo Network billing and bandwidth parameters
+                     * @param _internetChargeInfo Network billing and bandwidth parameters
+                     * 
                      */
                     void SetInternetChargeInfo(const LoadBalancerInternetAccessible& _internetChargeInfo);
 
                     /**
                      * 判断参数 InternetChargeInfo 是否已赋值
                      * @return InternetChargeInfo 是否已赋值
+                     * 
                      */
                     bool InternetChargeInfoHasBeenSet() const;
 
                     /**
                      * 获取Whether to allow ELB traffic to the target group. `true`: allows ELB traffic to the target group and verifies security groups only on ELB; `false`: denies ELB traffic to the target group and verifies security groups on both ELB and backend instances.
                      * @return LoadBalancerPassToTarget Whether to allow ELB traffic to the target group. `true`: allows ELB traffic to the target group and verifies security groups only on ELB; `false`: denies ELB traffic to the target group and verifies security groups on both ELB and backend instances.
+                     * 
                      */
                     bool GetLoadBalancerPassToTarget() const;
 
                     /**
                      * 设置Whether to allow ELB traffic to the target group. `true`: allows ELB traffic to the target group and verifies security groups only on ELB; `false`: denies ELB traffic to the target group and verifies security groups on both ELB and backend instances.
-                     * @param LoadBalancerPassToTarget Whether to allow ELB traffic to the target group. `true`: allows ELB traffic to the target group and verifies security groups only on ELB; `false`: denies ELB traffic to the target group and verifies security groups on both ELB and backend instances.
+                     * @param _loadBalancerPassToTarget Whether to allow ELB traffic to the target group. `true`: allows ELB traffic to the target group and verifies security groups only on ELB; `false`: denies ELB traffic to the target group and verifies security groups on both ELB and backend instances.
+                     * 
                      */
                     void SetLoadBalancerPassToTarget(const bool& _loadBalancerPassToTarget);
 
                     /**
                      * 判断参数 LoadBalancerPassToTarget 是否已赋值
                      * @return LoadBalancerPassToTarget 是否已赋值
+                     * 
                      */
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 

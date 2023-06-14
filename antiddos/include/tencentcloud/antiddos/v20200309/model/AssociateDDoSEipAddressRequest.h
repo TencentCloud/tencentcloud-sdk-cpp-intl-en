@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
                      * @return InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
-                     * @param InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * @param _instanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取EIP of the Anti-DDoS instance ID
                      * @return Eip EIP of the Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetEip() const;
 
                     /**
                      * 设置EIP of the Anti-DDoS instance ID
-                     * @param Eip EIP of the Anti-DDoS instance ID
+                     * @param _eip EIP of the Anti-DDoS instance ID
+                     * 
                      */
                     void SetEip(const std::string& _eip);
 
                     /**
                      * 判断参数 Eip 是否已赋值
                      * @return Eip 是否已赋值
+                     * 
                      */
                     bool EipHasBeenSet() const;
 
                     /**
                      * 获取Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
                      * @return CvmInstanceID Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
+                     * 
                      */
                     std::string GetCvmInstanceID() const;
 
                     /**
                      * 设置Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
-                     * @param CvmInstanceID Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
+                     * @param _cvmInstanceID Instance ID to bind. For example, `ins-11112222`. It can be queried in the console or obtained from `InstanceId` returned by `DescribeInstances`.
+                     * 
                      */
                     void SetCvmInstanceID(const std::string& _cvmInstanceID);
 
                     /**
                      * 判断参数 CvmInstanceID 是否已赋值
                      * @return CvmInstanceID 是否已赋值
+                     * 
                      */
                     bool CvmInstanceIDHasBeenSet() const;
 
                     /**
                      * 获取Region of the CVM instance. For example, `ap-hongkong`.
                      * @return CvmRegion Region of the CVM instance. For example, `ap-hongkong`.
+                     * 
                      */
                     std::string GetCvmRegion() const;
 
                     /**
                      * 设置Region of the CVM instance. For example, `ap-hongkong`.
-                     * @param CvmRegion Region of the CVM instance. For example, `ap-hongkong`.
+                     * @param _cvmRegion Region of the CVM instance. For example, `ap-hongkong`.
+                     * 
                      */
                     void SetCvmRegion(const std::string& _cvmRegion);
 
                     /**
                      * 判断参数 CvmRegion 是否已赋值
                      * @return CvmRegion 是否已赋值
+                     * 
                      */
                     bool CvmRegionHasBeenSet() const;
 

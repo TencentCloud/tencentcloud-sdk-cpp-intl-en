@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Total number of steps
                      * @return StepAll Total number of steps
+                     * 
                      */
                     int64_t GetStepAll() const;
 
                     /**
                      * 设置Total number of steps
-                     * @param StepAll Total number of steps
+                     * @param _stepAll Total number of steps
+                     * 
                      */
                     void SetStepAll(const int64_t& _stepAll);
 
                     /**
                      * 判断参数 StepAll 是否已赋值
                      * @return StepAll 是否已赋值
+                     * 
                      */
                     bool StepAllHasBeenSet() const;
 
                     /**
                      * 获取Current step
                      * @return StepNow Current step
+                     * 
                      */
                     int64_t GetStepNow() const;
 
                     /**
                      * 设置Current step
-                     * @param StepNow Current step
+                     * @param _stepNow Current step
+                     * 
                      */
                     void SetStepNow(const int64_t& _stepNow);
 
                     /**
                      * 判断参数 StepNow 是否已赋值
                      * @return StepNow 是否已赋值
+                     * 
                      */
                     bool StepNowHasBeenSet() const;
 
                     /**
                      * 获取Overall progress, such as "10"
                      * @return Progress Overall progress, such as "10"
+                     * 
                      */
                     std::string GetProgress() const;
 
                     /**
                      * 设置Overall progress, such as "10"
-                     * @param Progress Overall progress, such as "10"
+                     * @param _progress Overall progress, such as "10"
+                     * 
                      */
                     void SetProgress(const std::string& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Progress of current step, such as "1"
                      * @return CurrentStepProgress Progress of current step, such as "1"
+                     * 
                      */
                     std::string GetCurrentStepProgress() const;
 
                     /**
                      * 设置Progress of current step, such as "1"
-                     * @param CurrentStepProgress Progress of current step, such as "1"
+                     * @param _currentStepProgress Progress of current step, such as "1"
+                     * 
                      */
                     void SetCurrentStepProgress(const std::string& _currentStepProgress);
 
                     /**
                      * 判断参数 CurrentStepProgress 是否已赋值
                      * @return CurrentStepProgress 是否已赋值
+                     * 
                      */
                     bool CurrentStepProgressHasBeenSet() const;
 
                     /**
                      * 获取Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
                      * @return MasterSlaveDistance Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
+                     * 
                      */
                     int64_t GetMasterSlaveDistance() const;
 
                     /**
                      * 设置Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
-                     * @param MasterSlaveDistance Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
+                     * @param _masterSlaveDistance Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
+                     * 
                      */
                     void SetMasterSlaveDistance(const int64_t& _masterSlaveDistance);
 
                     /**
                      * 判断参数 MasterSlaveDistance 是否已赋值
                      * @return MasterSlaveDistance 是否已赋值
+                     * 
                      */
                     bool MasterSlaveDistanceHasBeenSet() const;
 
                     /**
                      * 获取Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
                      * @return SecondsBehindMaster Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
+                     * 
                      */
                     int64_t GetSecondsBehindMaster() const;
 
                     /**
                      * 设置Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
-                     * @param SecondsBehindMaster Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
+                     * @param _secondsBehindMaster Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
+                     * 
                      */
                     void SetSecondsBehindMaster(const int64_t& _secondsBehindMaster);
 
                     /**
                      * 判断参数 SecondsBehindMaster 是否已赋值
                      * @return SecondsBehindMaster 是否已赋值
+                     * 
                      */
                     bool SecondsBehindMasterHasBeenSet() const;
 
                     /**
                      * 获取Step information
                      * @return StepInfo Step information
+                     * 
                      */
                     std::vector<MigrateStepDetailInfo> GetStepInfo() const;
 
                     /**
                      * 设置Step information
-                     * @param StepInfo Step information
+                     * @param _stepInfo Step information
+                     * 
                      */
                     void SetStepInfo(const std::vector<MigrateStepDetailInfo>& _stepInfo);
 
                     /**
                      * 判断参数 StepInfo 是否已赋值
                      * @return StepInfo 是否已赋值
+                     * 
                      */
                     bool StepInfoHasBeenSet() const;
 

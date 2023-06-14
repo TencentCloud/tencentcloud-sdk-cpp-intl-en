@@ -47,60 +47,70 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `NoLimit` (backups can be downloaded over both private and public networks with any IPs), `LimitOnlyIntranet` (backups can be downloaded over the private network with any private IPs), `Customize` (backups can be downloaded over specified VPCs with specified IPs). The `LimitVpc` and `LimitIp` parameters are valid only when this parameter is set to `Customize`.
                      * @return LimitType Valid values: `NoLimit` (backups can be downloaded over both private and public networks with any IPs), `LimitOnlyIntranet` (backups can be downloaded over the private network with any private IPs), `Customize` (backups can be downloaded over specified VPCs with specified IPs). The `LimitVpc` and `LimitIp` parameters are valid only when this parameter is set to `Customize`.
+                     * 
                      */
                     std::string GetLimitType() const;
 
                     /**
                      * 判断参数 LimitType 是否已赋值
                      * @return LimitType 是否已赋值
+                     * 
                      */
                     bool LimitTypeHasBeenSet() const;
 
                     /**
                      * 获取Valid value: `In` (backups can only be downloaded over the VPCs specified in `LimitVpc`).
                      * @return VpcComparisonSymbol Valid value: `In` (backups can only be downloaded over the VPCs specified in `LimitVpc`).
+                     * 
                      */
                     std::string GetVpcComparisonSymbol() const;
 
                     /**
                      * 判断参数 VpcComparisonSymbol 是否已赋值
                      * @return VpcComparisonSymbol 是否已赋值
+                     * 
                      */
                     bool VpcComparisonSymbolHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `In` (backups can only be downloaded with the IPs specified in `LimitIp`), `NotIn` (backups cannot be downloaded with the IPs specified in `LimitIp`).
                      * @return IpComparisonSymbol Valid values: `In` (backups can only be downloaded with the IPs specified in `LimitIp`), `NotIn` (backups cannot be downloaded with the IPs specified in `LimitIp`).
+                     * 
                      */
                     std::string GetIpComparisonSymbol() const;
 
                     /**
                      * 判断参数 IpComparisonSymbol 是否已赋值
                      * @return IpComparisonSymbol 是否已赋值
+                     * 
                      */
                     bool IpComparisonSymbolHasBeenSet() const;
 
                     /**
                      * 获取VPCs used to restrict backup download.
                      * @return LimitVpc VPCs used to restrict backup download.
+                     * 
                      */
                     std::vector<BackupLimitVpcItem> GetLimitVpc() const;
 
                     /**
                      * 判断参数 LimitVpc 是否已赋值
                      * @return LimitVpc 是否已赋值
+                     * 
                      */
                     bool LimitVpcHasBeenSet() const;
 
                     /**
                      * 获取IPs used to restrict backup download.
                      * @return LimitIp IPs used to restrict backup download.
+                     * 
                      */
                     std::vector<std::string> GetLimitIp() const;
 
                     /**
                      * 判断参数 LimitIp 是否已赋值
                      * @return LimitIp 是否已赋值
+                     * 
                      */
                     bool LimitIpHasBeenSet() const;
 

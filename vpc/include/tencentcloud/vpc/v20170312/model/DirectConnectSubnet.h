@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The direct connect gateway ID.
                      * @return DirectConnectGatewayId The direct connect gateway ID.
+                     * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
                      * 设置The direct connect gateway ID.
-                     * @param DirectConnectGatewayId The direct connect gateway ID.
+                     * @param _directConnectGatewayId The direct connect gateway ID.
+                     * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
 
                     /**
                      * 判断参数 DirectConnectGatewayId 是否已赋值
                      * @return DirectConnectGatewayId 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取IDC subnet IP range
                      * @return CidrBlock IDC subnet IP range
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置IDC subnet IP range
-                     * @param CidrBlock IDC subnet IP range
+                     * @param _cidrBlock IDC subnet IP range
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 

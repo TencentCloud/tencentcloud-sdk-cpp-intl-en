@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取Instance name.
                      * @return InstanceId Instance name.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Database name.
                      * @return DbName Database name.
+                     * 
                      */
                     std::string GetDbName() const;
 
                     /**
                      * 判断参数 DbName 是否已赋值
                      * @return DbName 是否已赋值
+                     * 
                      */
                     bool DbNameHasBeenSet() const;
 
                     /**
                      * 获取Table name.
                      * @return Table Table name.
+                     * 
                      */
                     std::string GetTable() const;
 
                     /**
                      * 判断参数 Table 是否已赋值
                      * @return Table 是否已赋值
+                     * 
                      */
                     bool TableHasBeenSet() const;
 
                     /**
                      * 获取Column information.
                      * @return Cols Column information.
+                     * 
                      */
                     std::vector<TableColumn> GetCols() const;
 
                     /**
                      * 判断参数 Cols 是否已赋值
                      * @return Cols 是否已赋值
+                     * 
                      */
                     bool ColsHasBeenSet() const;
 

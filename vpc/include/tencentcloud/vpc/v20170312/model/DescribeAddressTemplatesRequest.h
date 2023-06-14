@@ -52,6 +52,7 @@ namespace TencentCloud
 <li>address-template-name - IP address template name.</li>
 <li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
 <li>address-ip - IP address.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -60,52 +61,60 @@ namespace TencentCloud
 <li>address-template-name - IP address template name.</li>
 <li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
 <li>address-ip - IP address.</li>
-                     * @param Filters Filters
+                     * @param _filters Filters
 <li>address-template-name - IP address template name.</li>
 <li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
 <li>address-ip - IP address.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset. The default value is 0.
                      * @return Offset Offset. The default value is 0.
+                     * 
                      */
                     std::string GetOffset() const;
 
                     /**
                      * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * @param _offset Offset. The default value is 0.
+                     * 
                      */
                     void SetOffset(const std::string& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of values to be returned. The default value is 20. Maximum is 100.
                      * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * 
                      */
                     std::string GetLimit() const;
 
                     /**
                      * 设置Number of values to be returned. The default value is 20. Maximum is 100.
-                     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * @param _limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * 
                      */
                     void SetLimit(const std::string& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

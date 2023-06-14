@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the notification to be modified.
                      * @return AutoScalingNotificationId ID of the notification to be modified.
+                     * 
                      */
                     std::string GetAutoScalingNotificationId() const;
 
                     /**
                      * 设置ID of the notification to be modified.
-                     * @param AutoScalingNotificationId ID of the notification to be modified.
+                     * @param _autoScalingNotificationId ID of the notification to be modified.
+                     * 
                      */
                     void SetAutoScalingNotificationId(const std::string& _autoScalingNotificationId);
 
                     /**
                      * 判断参数 AutoScalingNotificationId 是否已赋值
                      * @return AutoScalingNotificationId 是否已赋值
+                     * 
                      */
                     bool AutoScalingNotificationIdHasBeenSet() const;
 
@@ -75,6 +78,7 @@ namespace TencentCloud
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
+                     * 
                      */
                     std::vector<std::string> GetNotificationTypes() const;
 
@@ -86,73 +90,84 @@ namespace TencentCloud
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
-                     * @param NotificationTypes Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
+                     * @param _notificationTypes Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
 <li>SCALE_OUT_FAILED: scale-out failed</li>
 <li>SCALE_IN_SUCCESSFUL: scale-in succeeded</li>
 <li>SCALE_IN_FAILED: scale-in failed</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
+                     * 
                      */
                     void SetNotificationTypes(const std::vector<std::string>& _notificationTypes);
 
                     /**
                      * 判断参数 NotificationTypes 是否已赋值
                      * @return NotificationTypes 是否已赋值
+                     * 
                      */
                     bool NotificationTypesHasBeenSet() const;
 
                     /**
                      * 获取Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
                      * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * 
                      */
                     std::vector<std::string> GetNotificationUserGroupIds() const;
 
                     /**
                      * 设置Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-                     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * @param _notificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetNotificationUserGroupIds(const std::vector<std::string>& _notificationUserGroupIds);
 
                     /**
                      * 判断参数 NotificationUserGroupIds 是否已赋值
                      * @return NotificationUserGroupIds 是否已赋值
+                     * 
                      */
                     bool NotificationUserGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取CMQ or TDMQ CMQ queue name.
                      * @return QueueName CMQ or TDMQ CMQ queue name.
+                     * 
                      */
                     std::string GetQueueName() const;
 
                     /**
                      * 设置CMQ or TDMQ CMQ queue name.
-                     * @param QueueName CMQ or TDMQ CMQ queue name.
+                     * @param _queueName CMQ or TDMQ CMQ queue name.
+                     * 
                      */
                     void SetQueueName(const std::string& _queueName);
 
                     /**
                      * 判断参数 QueueName 是否已赋值
                      * @return QueueName 是否已赋值
+                     * 
                      */
                     bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取CMQ or TDMQ CMQ toipc name.
                      * @return TopicName CMQ or TDMQ CMQ toipc name.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置CMQ or TDMQ CMQ toipc name.
-                     * @param TopicName CMQ or TDMQ CMQ toipc name.
+                     * @param _topicName CMQ or TDMQ CMQ toipc name.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 

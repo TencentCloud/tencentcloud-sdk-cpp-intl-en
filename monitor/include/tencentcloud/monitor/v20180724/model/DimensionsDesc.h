@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of dimension names
                      * @return Dimensions Array of dimension names
+                     * 
                      */
                     std::vector<std::string> GetDimensions() const;
 
                     /**
                      * 设置Array of dimension names
-                     * @param Dimensions Array of dimension names
+                     * @param _dimensions Array of dimension names
+                     * 
                      */
                     void SetDimensions(const std::vector<std::string>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Number of CPU cores
                      * @return CpuNum Number of CPU cores
+                     * 
                      */
                     int64_t GetCpuNum() const;
 
                     /**
                      * 设置Number of CPU cores
-                     * @param CpuNum Number of CPU cores
+                     * @param _cpuNum Number of CPU cores
+                     * 
                      */
                     void SetCpuNum(const int64_t& _cpuNum);
 
                     /**
                      * 判断参数 CpuNum 是否已赋值
                      * @return CpuNum 是否已赋值
+                     * 
                      */
                     bool CpuNumHasBeenSet() const;
 
                     /**
                      * 获取ENI quantity limit
                      * @return NetworkInterfaceLimit ENI quantity limit
+                     * 
                      */
                     int64_t GetNetworkInterfaceLimit() const;
 
                     /**
                      * 设置ENI quantity limit
-                     * @param NetworkInterfaceLimit ENI quantity limit
+                     * @param _networkInterfaceLimit ENI quantity limit
+                     * 
                      */
                     void SetNetworkInterfaceLimit(const int64_t& _networkInterfaceLimit);
 
                     /**
                      * 判断参数 NetworkInterfaceLimit 是否已赋值
                      * @return NetworkInterfaceLimit 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceLimitHasBeenSet() const;
 
                     /**
                      * 获取Private IP quantity limit per ENI
                      * @return InnerIpPerNetworkInterface Private IP quantity limit per ENI
+                     * 
                      */
                     int64_t GetInnerIpPerNetworkInterface() const;
 
                     /**
                      * 设置Private IP quantity limit per ENI
-                     * @param InnerIpPerNetworkInterface Private IP quantity limit per ENI
+                     * @param _innerIpPerNetworkInterface Private IP quantity limit per ENI
+                     * 
                      */
                     void SetInnerIpPerNetworkInterface(const int64_t& _innerIpPerNetworkInterface);
 
                     /**
                      * 判断参数 InnerIpPerNetworkInterface 是否已赋值
                      * @return InnerIpPerNetworkInterface 是否已赋值
+                     * 
                      */
                     bool InnerIpPerNetworkInterfaceHasBeenSet() const;
 
                     /**
                      * 获取Public IP limit per instance
                      * @return PublicIpPerInstance Public IP limit per instance
+                     * 
                      */
                     int64_t GetPublicIpPerInstance() const;
 
                     /**
                      * 设置Public IP limit per instance
-                     * @param PublicIpPerInstance Public IP limit per instance
+                     * @param _publicIpPerInstance Public IP limit per instance
+                     * 
                      */
                     void SetPublicIpPerInstance(const int64_t& _publicIpPerInstance);
 
                     /**
                      * 判断参数 PublicIpPerInstance 是否已赋值
                      * @return PublicIpPerInstance 是否已赋值
+                     * 
                      */
                     bool PublicIpPerInstanceHasBeenSet() const;
 

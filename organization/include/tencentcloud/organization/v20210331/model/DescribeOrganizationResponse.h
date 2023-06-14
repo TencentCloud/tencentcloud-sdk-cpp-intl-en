@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OrgId Organization ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetOrgId() const;
 
                     /**
                      * 判断参数 OrgId 是否已赋值
                      * @return OrgId 是否已赋值
+                     * 
                      */
                     bool OrgIdHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HostUin Creator UIN.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetHostUin() const;
 
                     /**
                      * 判断参数 HostUin 是否已赋值
                      * @return HostUin 是否已赋值
+                     * 
                      */
                     bool HostUinHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NickName Creator name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNickName() const;
 
                     /**
                      * 判断参数 NickName 是否已赋值
                      * @return NickName 是否已赋值
+                     * 
                      */
                     bool NickNameHasBeenSet() const;
 
@@ -91,12 +97,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OrgType Organization type.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetOrgType() const;
 
                     /**
                      * 判断参数 OrgType 是否已赋值
                      * @return OrgType 是否已赋值
+                     * 
                      */
                     bool OrgTypeHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsManager Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsManager() const;
 
                     /**
                      * 判断参数 IsManager 是否已赋值
                      * @return IsManager 是否已赋值
+                     * 
                      */
                     bool IsManagerHasBeenSet() const;
 
@@ -119,12 +129,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OrgPolicyType Policy type. Valid values: `Financial` (finance management).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgPolicyType() const;
 
                     /**
                      * 判断参数 OrgPolicyType 是否已赋值
                      * @return OrgPolicyType 是否已赋值
+                     * 
                      */
                     bool OrgPolicyTypeHasBeenSet() const;
 
@@ -133,12 +145,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OrgPolicyName Policy name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgPolicyName() const;
 
                     /**
                      * 判断参数 OrgPolicyName 是否已赋值
                      * @return OrgPolicyName 是否已赋值
+                     * 
                      */
                     bool OrgPolicyNameHasBeenSet() const;
 
@@ -147,12 +161,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OrgPermission List of member financial permissions.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<OrgPermission> GetOrgPermission() const;
 
                     /**
                      * 判断参数 OrgPermission 是否已赋值
                      * @return OrgPermission 是否已赋值
+                     * 
                      */
                     bool OrgPermissionHasBeenSet() const;
 
@@ -161,12 +177,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RootNodeId Organization root node ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRootNodeId() const;
 
                     /**
                      * 判断参数 RootNodeId 是否已赋值
                      * @return RootNodeId 是否已赋值
+                     * 
                      */
                     bool RootNodeIdHasBeenSet() const;
 
@@ -175,12 +193,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Organization creation time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -189,12 +209,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JoinTime Member joining time.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetJoinTime() const;
 
                     /**
                      * 判断参数 JoinTime 是否已赋值
                      * @return JoinTime 是否已赋值
+                     * 
                      */
                     bool JoinTimeHasBeenSet() const;
 
@@ -203,12 +225,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIsAllowQuit() const;
 
                     /**
                      * 判断参数 IsAllowQuit 是否已赋值
                      * @return IsAllowQuit 是否已赋值
+                     * 
                      */
                     bool IsAllowQuitHasBeenSet() const;
 
@@ -217,12 +241,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayUin Payer UIN.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPayUin() const;
 
                     /**
                      * 判断参数 PayUin 是否已赋值
                      * @return PayUin 是否已赋值
+                     * 
                      */
                     bool PayUinHasBeenSet() const;
 
@@ -231,12 +257,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayName Payer name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPayName() const;
 
                     /**
                      * 判断参数 PayName 是否已赋值
                      * @return PayName 是否已赋值
+                     * 
                      */
                     bool PayNameHasBeenSet() const;
 
@@ -245,12 +273,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsAssignManager Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsAssignManager() const;
 
                     /**
                      * 判断参数 IsAssignManager 是否已赋值
                      * @return IsAssignManager 是否已赋值
+                     * 
                      */
                     bool IsAssignManagerHasBeenSet() const;
 
@@ -259,12 +289,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsAuthManager Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsAuthManager() const;
 
                     /**
                      * 判断参数 IsAuthManager 是否已赋值
                      * @return IsAuthManager 是否已赋值
+                     * 
                      */
                     bool IsAuthManagerHasBeenSet() const;
 

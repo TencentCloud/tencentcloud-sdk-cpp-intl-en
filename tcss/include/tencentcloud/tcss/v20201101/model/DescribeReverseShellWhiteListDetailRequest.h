@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Allowed item ID
                      * @return WhiteListId Allowed item ID
+                     * 
                      */
                     std::string GetWhiteListId() const;
 
                     /**
                      * 设置Allowed item ID
-                     * @param WhiteListId Allowed item ID
+                     * @param _whiteListId Allowed item ID
+                     * 
                      */
                     void SetWhiteListId(const std::string& _whiteListId);
 
                     /**
                      * 判断参数 WhiteListId 是否已赋值
                      * @return WhiteListId 是否已赋值
+                     * 
                      */
                     bool WhiteListIdHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Backup policy (0: instance backup, 1: multi-database backup)
                      * @return Strategy Backup policy (0: instance backup, 1: multi-database backup)
+                     * 
                      */
                     int64_t GetStrategy() const;
 
                     /**
                      * 设置Backup policy (0: instance backup, 1: multi-database backup)
-                     * @param Strategy Backup policy (0: instance backup, 1: multi-database backup)
+                     * @param _strategy Backup policy (0: instance backup, 1: multi-database backup)
+                     * 
                      */
                     void SetStrategy(const int64_t& _strategy);
 
                     /**
                      * 判断参数 Strategy 是否已赋值
                      * @return Strategy 是否已赋值
+                     * 
                      */
                     bool StrategyHasBeenSet() const;
 
                     /**
                      * 获取List of names of databases to be backed up (required only for multi-database backup)
                      * @return DBNames List of names of databases to be backed up (required only for multi-database backup)
+                     * 
                      */
                     std::vector<std::string> GetDBNames() const;
 
                     /**
                      * 设置List of names of databases to be backed up (required only for multi-database backup)
-                     * @param DBNames List of names of databases to be backed up (required only for multi-database backup)
+                     * @param _dBNames List of names of databases to be backed up (required only for multi-database backup)
+                     * 
                      */
                     void SetDBNames(const std::vector<std::string>& _dBNames);
 
                     /**
                      * 判断参数 DBNames 是否已赋值
                      * @return DBNames 是否已赋值
+                     * 
                      */
                     bool DBNamesHasBeenSet() const;
 
                     /**
                      * 获取Instance ID in the format of mssql-i1z41iwd
                      * @return InstanceId Instance ID in the format of mssql-i1z41iwd
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-i1z41iwd
-                     * @param InstanceId Instance ID in the format of mssql-i1z41iwd
+                     * @param _instanceId Instance ID in the format of mssql-i1z41iwd
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
                      * @return BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     * 
                      */
                     std::string GetBackupName() const;
 
                     /**
                      * 设置Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
-                     * @param BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     * @param _backupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+                     * 
                      */
                     void SetBackupName(const std::string& _backupName);
 
                     /**
                      * 判断参数 BackupName 是否已赋值
                      * @return BackupName 是否已赋值
+                     * 
                      */
                     bool BackupNameHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of purchasable instance specifications
                      * @return SpecInfoList List of purchasable instance specifications
+                     * 
                      */
                     std::vector<SpecificationInfo> GetSpecInfoList() const;
 
                     /**
                      * 判断参数 SpecInfoList 是否已赋值
                      * @return SpecInfoList 是否已赋值
+                     * 
                      */
                     bool SpecInfoListHasBeenSet() const;
 

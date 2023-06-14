@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取A list of DID services.
                      * @return DidServiceList A list of DID services.
+                     * 
                      */
                     std::vector<DidServiceInfo> GetDidServiceList() const;
 
                     /**
                      * 判断参数 DidServiceList 是否已赋值
                      * @return DidServiceList 是否已赋值
+                     * 
                      */
                     bool DidServiceListHasBeenSet() const;
 

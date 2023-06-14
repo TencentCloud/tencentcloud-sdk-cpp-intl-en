@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Destination URL of RTMP push in the format of 'rtmp://domain/live'.
                      * @return Url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Destination URL of RTMP push in the format of 'rtmp://domain/live'.
-                     * @param Url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+                     * @param _url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
                      * @return StreamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+                     * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
                      * 设置Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
-                     * @param StreamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+                     * @param _streamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+                     * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
 
                     /**
                      * 判断参数 StreamKey 是否已赋值
                      * @return StreamKey 是否已赋值
+                     * 
                      */
                     bool StreamKeyHasBeenSet() const;
 

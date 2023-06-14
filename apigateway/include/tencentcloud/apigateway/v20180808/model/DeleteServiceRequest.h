@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be deleted.
                      * @return ServiceId Unique ID of the service to be deleted.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be deleted.
-                     * @param ServiceId Unique ID of the service to be deleted.
+                     * @param _serviceId Unique ID of the service to be deleted.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
                      * @return SkipVerification A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
+                     * 
                      */
                     int64_t GetSkipVerification() const;
 
                     /**
                      * 设置A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
-                     * @param SkipVerification A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
+                     * @param _skipVerification A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
+                     * 
                      */
                     void SetSkipVerification(const int64_t& _skipVerification);
 
                     /**
                      * 判断参数 SkipVerification 是否已赋值
                      * @return SkipVerification 是否已赋值
+                     * 
                      */
                     bool SkipVerificationHasBeenSet() const;
 

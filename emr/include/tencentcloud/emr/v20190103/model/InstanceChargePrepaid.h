@@ -52,20 +52,23 @@ namespace TencentCloud
 Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                      * @return Period The period of monthly subscription, which defaults to 1 and is expressed in month.
 Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置The period of monthly subscription, which defaults to 1 and is expressed in month.
 Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
-                     * @param Period The period of monthly subscription, which defaults to 1 and is expressed in month.
+                     * @param _period The period of monthly subscription, which defaults to 1 and is expressed in month.
 Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
@@ -76,6 +79,7 @@ Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                      * @return RenewFlag Whether to enable auto-renewal. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
+                     * 
                      */
                     bool GetRenewFlag() const;
 
@@ -83,15 +87,17 @@ Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
                      * 设置Whether to enable auto-renewal. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
-                     * @param RenewFlag Whether to enable auto-renewal. Valid values:
+                     * @param _renewFlag Whether to enable auto-renewal. Valid values:
 <li>`true`: Enable</li>
 <li>`false` (default): Disable</li>
+                     * 
                      */
                     void SetRenewFlag(const bool& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 

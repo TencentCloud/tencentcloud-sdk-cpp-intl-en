@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * @return Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Information set of screenshots of the same specification. Each element represents a screenshot.
                      * @return PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
+                     * 
                      */
                     std::vector<MediaSnapshotByTimePicInfoItem> GetPicInfoSet() const;
 
                     /**
                      * 设置Information set of screenshots of the same specification. Each element represents a screenshot.
-                     * @param PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
+                     * @param _picInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
+                     * 
                      */
                     void SetPicInfoSet(const std::vector<MediaSnapshotByTimePicInfoItem>& _picInfoSet);
 
                     /**
                      * 判断参数 PicInfoSet 是否已赋值
                      * @return PicInfoSet 是否已赋值
+                     * 
                      */
                     bool PicInfoSetHasBeenSet() const;
 
                     /**
                      * 获取Location of a time point screenshot file.
                      * @return Storage Location of a time point screenshot file.
+                     * 
                      */
                     TaskOutputStorage GetStorage() const;
 
                     /**
                      * 设置Location of a time point screenshot file.
-                     * @param Storage Location of a time point screenshot file.
+                     * @param _storage Location of a time point screenshot file.
+                     * 
                      */
                     void SetStorage(const TaskOutputStorage& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 

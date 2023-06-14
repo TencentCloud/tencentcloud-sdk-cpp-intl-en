@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ProjectPvSet PV list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RumPvInfo> GetProjectPvSet() const;
 
                     /**
                      * 判断参数 ProjectPvSet 是否已赋值
                      * @return ProjectPvSet 是否已赋值
+                     * 
                      */
                     bool ProjectPvSetHasBeenSet() const;
 

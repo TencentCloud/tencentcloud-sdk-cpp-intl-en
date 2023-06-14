@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Extraction Describes how to extract data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Extraction GetExtraction() const;
 
                     /**
                      * 设置Describes how to extract data
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Extraction Describes how to extract data
+                     * @param _extraction Describes how to extract data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtraction(const Extraction& _extraction);
 
                     /**
                      * 判断参数 Extraction 是否已赋值
                      * @return Extraction 是否已赋值
+                     * 
                      */
                     bool ExtractionHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EtlFilter Describes how to filter data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EtlFilter GetEtlFilter() const;
 
                     /**
                      * 设置Describes how to filter data
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EtlFilter Describes how to filter data
+                     * @param _etlFilter Describes how to filter data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEtlFilter(const EtlFilter& _etlFilter);
 
                     /**
                      * 判断参数 EtlFilter 是否已赋值
                      * @return EtlFilter 是否已赋值
+                     * 
                      */
                     bool EtlFilterHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Transform Describes how to transform data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Transform GetTransform() const;
 
                     /**
                      * 设置Describes how to transform data
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Transform Describes how to transform data
+                     * @param _transform Describes how to transform data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTransform(const Transform& _transform);
 
                     /**
                      * 判断参数 Transform 是否已赋值
                      * @return Transform 是否已赋值
+                     * 
                      */
                     bool TransformHasBeenSet() const;
 

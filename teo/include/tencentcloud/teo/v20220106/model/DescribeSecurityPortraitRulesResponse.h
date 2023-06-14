@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of rules returned in this request
                      * @return Count Number of rules returned in this request
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Bot user profiling rule
                      * @return Rules Bot user profiling rule
+                     * 
                      */
                     std::vector<PortraitManagedRuleDetail> GetRules() const;
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
                     /**
                      * 获取Total number of rules
                      * @return Total Total number of rules
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

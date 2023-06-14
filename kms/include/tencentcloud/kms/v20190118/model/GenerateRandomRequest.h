@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Length of the random number. Minimum value: 1. Maximum value: 1024
                      * @return NumberOfBytes Length of the random number. Minimum value: 1. Maximum value: 1024
+                     * 
                      */
                     uint64_t GetNumberOfBytes() const;
 
                     /**
                      * 设置Length of the random number. Minimum value: 1. Maximum value: 1024
-                     * @param NumberOfBytes Length of the random number. Minimum value: 1. Maximum value: 1024
+                     * @param _numberOfBytes Length of the random number. Minimum value: 1. Maximum value: 1024
+                     * 
                      */
                     void SetNumberOfBytes(const uint64_t& _numberOfBytes);
 
                     /**
                      * 判断参数 NumberOfBytes 是否已赋值
                      * @return NumberOfBytes 是否已赋值
+                     * 
                      */
                     bool NumberOfBytesHasBeenSet() const;
 

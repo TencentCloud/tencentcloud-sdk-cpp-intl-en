@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the media file.
                      * @return FileId The ID of the media file.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The ID of the media file.
-                     * @param FileId The ID of the media file.
+                     * @param _fileId The ID of the media file.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取The moderation template ID.
                      * @return Definition The moderation template ID.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置The moderation template ID.
-                     * @param Definition The moderation template ID.
+                     * @param _definition The moderation template ID.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
                      * @return ReviewContents The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+                     * 
                      */
                     std::vector<std::string> GetReviewContents() const;
 
@@ -96,15 +103,17 @@ namespace TencentCloud
                      * 设置The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
-                     * @param ReviewContents The type of moderated content. Valid values:
+                     * @param _reviewContents The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+                     * 
                      */
                     void SetReviewContents(const std::vector<std::string>& _reviewContents);
 
                     /**
                      * 判断参数 ReviewContents 是否已赋值
                      * @return ReviewContents 是否已赋值
+                     * 
                      */
                     bool ReviewContentsHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The prefix (fixed).
                      * @return Prefix The prefix (fixed).
+                     * 
                      */
                     std::string GetPrefix() const;
 
                     /**
                      * 判断参数 Prefix 是否已赋值
                      * @return Prefix 是否已赋值
+                     * 
                      */
                     bool PrefixHasBeenSet() const;
 
                     /**
                      * 获取The details of the DID.
                      * @return Identity The details of the DID.
+                     * 
                      */
                     std::vector<Identity> GetIdentity() const;
 
                     /**
                      * 判断参数 Identity 是否已赋值
                      * @return Identity 是否已赋值
+                     * 
                      */
                     bool IdentityHasBeenSet() const;
 

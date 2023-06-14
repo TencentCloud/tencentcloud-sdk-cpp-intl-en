@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of vouchers.
                      * @return TotalCount The total number of vouchers.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The total amount used. The value of this parameter is the total amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
                      * @return TotalUsedAmount The total amount used. The value of this parameter is the total amount used (USD, rounded to 8 decimal places) multiplied by 100,000,000.
+                     * 
                      */
                     int64_t GetTotalUsedAmount() const;
 
                     /**
                      * 判断参数 TotalUsedAmount 是否已赋值
                      * @return TotalUsedAmount 是否已赋值
+                     * 
                      */
                     bool TotalUsedAmountHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return UsageRecords The usage details.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<UsageRecords> GetUsageRecords() const;
 
                     /**
                      * 判断参数 UsageRecords 是否已赋值
                      * @return UsageRecords 是否已赋值
+                     * 
                      */
                     bool UsageRecordsHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Pipeline0 Log information of pipeline 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LogInfo> GetPipeline0() const;
 
                     /**
                      * 设置Log information of pipeline 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Pipeline0 Log information of pipeline 0.
+                     * @param _pipeline0 Log information of pipeline 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPipeline0(const std::vector<LogInfo>& _pipeline0);
 
                     /**
                      * 判断参数 Pipeline0 是否已赋值
                      * @return Pipeline0 是否已赋值
+                     * 
                      */
                     bool Pipeline0HasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Pipeline1 Log information of pipeline 1.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LogInfo> GetPipeline1() const;
 
                     /**
                      * 设置Log information of pipeline 1.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Pipeline1 Log information of pipeline 1.
+                     * @param _pipeline1 Log information of pipeline 1.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPipeline1(const std::vector<LogInfo>& _pipeline1);
 
                     /**
                      * 判断参数 Pipeline1 是否已赋值
                      * @return Pipeline1 是否已赋值
+                     * 
                      */
                     bool Pipeline1HasBeenSet() const;
 

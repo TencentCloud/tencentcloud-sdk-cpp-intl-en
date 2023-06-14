@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Endpoint ID
                      * @return EndpointID Endpoint ID
+                     * 
                      */
                     std::string GetEndpointID() const;
 
                     /**
                      * 设置Endpoint ID
-                     * @param EndpointID Endpoint ID
+                     * @param _endpointID Endpoint ID
+                     * 
                      */
                     void SetEndpointID(const std::string& _endpointID);
 
                     /**
                      * 判断参数 EndpointID 是否已赋值
                      * @return EndpointID 是否已赋值
+                     * 
                      */
                     bool EndpointIDHasBeenSet() const;
 
                     /**
                      * 获取Mode: `bridge`.
                      * @return Mode Mode: `bridge`.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Mode: `bridge`.
-                     * @param Mode Mode: `bridge`.
+                     * @param _mode Mode: `bridge`.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Network name
                      * @return Name Network name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Network name
-                     * @param Name Network name
+                     * @param _name Network name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Network ID
                      * @return NetworkID Network ID
+                     * 
                      */
                     std::string GetNetworkID() const;
 
                     /**
                      * 设置Network ID
-                     * @param NetworkID Network ID
+                     * @param _networkID Network ID
+                     * 
                      */
                     void SetNetworkID(const std::string& _networkID);
 
                     /**
                      * 判断参数 NetworkID 是否已赋值
                      * @return NetworkID 是否已赋值
+                     * 
                      */
                     bool NetworkIDHasBeenSet() const;
 
                     /**
                      * 获取Gateway
                      * @return Gateway Gateway
+                     * 
                      */
                     std::string GetGateway() const;
 
                     /**
                      * 设置Gateway
-                     * @param Gateway Gateway
+                     * @param _gateway Gateway
+                     * 
                      */
                     void SetGateway(const std::string& _gateway);
 
                     /**
                      * 判断参数 Gateway 是否已赋值
                      * @return Gateway 是否已赋值
+                     * 
                      */
                     bool GatewayHasBeenSet() const;
 
                     /**
                      * 获取IPv4 address
                      * @return Ipv4 IPv4 address
+                     * 
                      */
                     std::string GetIpv4() const;
 
                     /**
                      * 设置IPv4 address
-                     * @param Ipv4 IPv4 address
+                     * @param _ipv4 IPv4 address
+                     * 
                      */
                     void SetIpv4(const std::string& _ipv4);
 
                     /**
                      * 判断参数 Ipv4 是否已赋值
                      * @return Ipv4 是否已赋值
+                     * 
                      */
                     bool Ipv4HasBeenSet() const;
 
                     /**
                      * 获取IPv6 address
                      * @return Ipv6 IPv6 address
+                     * 
                      */
                     std::string GetIpv6() const;
 
                     /**
                      * 设置IPv6 address
-                     * @param Ipv6 IPv6 address
+                     * @param _ipv6 IPv6 address
+                     * 
                      */
                     void SetIpv6(const std::string& _ipv6);
 
                     /**
                      * 判断参数 Ipv6 是否已赋值
                      * @return Ipv6 是否已赋值
+                     * 
                      */
                     bool Ipv6HasBeenSet() const;
 
                     /**
                      * 获取MAC address
                      * @return MAC MAC address
+                     * 
                      */
                     std::string GetMAC() const;
 
                     /**
                      * 设置MAC address
-                     * @param MAC MAC address
+                     * @param _mAC MAC address
+                     * 
                      */
                     void SetMAC(const std::string& _mAC);
 
                     /**
                      * 判断参数 MAC 是否已赋值
                      * @return MAC 是否已赋值
+                     * 
                      */
                     bool MACHasBeenSet() const;
 

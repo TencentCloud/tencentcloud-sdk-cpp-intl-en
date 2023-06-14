@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Difference Details of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DifferenceDetail GetDifference() const;
 
                     /**
                      * 设置Details of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Difference Details of inconsistent tables
+                     * @param _difference Details of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDifference(const DifferenceDetail& _difference);
 
                     /**
                      * 判断参数 Difference 是否已赋值
                      * @return Difference 是否已赋值
+                     * 
                      */
                     bool DifferenceHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Skipped Details of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SkippedDetail GetSkipped() const;
 
                     /**
                      * 设置Details of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Skipped Details of skipped tables
+                     * @param _skipped Details of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSkipped(const SkippedDetail& _skipped);
 
                     /**
                      * 判断参数 Skipped 是否已赋值
                      * @return Skipped 是否已赋值
+                     * 
                      */
                     bool SkippedHasBeenSet() const;
 

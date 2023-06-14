@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取The value of the recognized field.
                      * @return AutoContent The value of the recognized field.
+                     * 
                      */
                     std::string GetAutoContent() const;
 
                     /**
                      * 设置The value of the recognized field.
-                     * @param AutoContent The value of the recognized field.
+                     * @param _autoContent The value of the recognized field.
+                     * 
                      */
                     void SetAutoContent(const std::string& _autoContent);
 
                     /**
                      * 判断参数 AutoContent 是否已赋值
                      * @return AutoContent 是否已赋值
+                     * 
                      */
                     bool AutoContentHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Coord The coordinates of the four vertices.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Polygon GetCoord() const;
 
                     /**
                      * 设置The coordinates of the four vertices.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Coord The coordinates of the four vertices.
+                     * @param _coord The coordinates of the four vertices.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCoord(const Polygon& _coord);
 
                     /**
                      * 判断参数 Coord 是否已赋值
                      * @return Coord 是否已赋值
+                     * 
                      */
                     bool CoordHasBeenSet() const;
 

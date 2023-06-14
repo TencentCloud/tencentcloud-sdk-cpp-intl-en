@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the availability zone where the instance resides. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/35071) API and obtain the ID in the returned `Zone` field.
                      * @return Zone ID of the availability zone where the instance resides. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/35071) API and obtain the ID in the returned `Zone` field.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置ID of the availability zone where the instance resides. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/35071) API and obtain the ID in the returned `Zone` field.
-                     * @param Zone ID of the availability zone where the instance resides. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/35071) API and obtain the ID in the returned `Zone` field.
+                     * @param _zone ID of the availability zone where the instance resides. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/35071) API and obtain the ID in the returned `Zone` field.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` returned by [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1). If this is left empty, the default project is used.
                      * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` returned by [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1). If this is left empty, the default project is used.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` returned by [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1). If this is left empty, the default project is used.
-                     * @param ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` returned by [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1). If this is left empty, the default project is used.
+                     * @param _projectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` returned by [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1). If this is left empty, the default project is used.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
                      * @return HostIds ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
+                     * 
                      */
                     std::vector<std::string> GetHostIds() const;
 
                     /**
                      * 设置ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
-                     * @param HostIds ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
+                     * @param _hostIds ID list of CDHs from which the instance can be created. If you have purchased CDHs and specify this parameter, the instances you purchase will be randomly deployed on the CDHs.
+                     * 
                      */
                     void SetHostIds(const std::vector<std::string>& _hostIds);
 
                     /**
                      * 判断参数 HostIds 是否已赋值
                      * @return HostIds 是否已赋值
+                     * 
                      */
                     bool HostIdsHasBeenSet() const;
 
                     /**
                      * 获取IPs of the hosts to create CVMs
                      * @return HostIps IPs of the hosts to create CVMs
+                     * 
                      */
                     std::vector<std::string> GetHostIps() const;
 
                     /**
                      * 设置IPs of the hosts to create CVMs
-                     * @param HostIps IPs of the hosts to create CVMs
+                     * @param _hostIps IPs of the hosts to create CVMs
+                     * 
                      */
                     void SetHostIps(const std::vector<std::string>& _hostIps);
 
                     /**
                      * 判断参数 HostIps 是否已赋值
                      * @return HostIps 是否已赋值
+                     * 
                      */
                     bool HostIpsHasBeenSet() const;
 
                     /**
                      * 获取The ID of the CDH to which the instance belongs, only used as an output parameter.
                      * @return HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
+                     * 
                      */
                     std::string GetHostId() const;
 
                     /**
                      * 设置The ID of the CDH to which the instance belongs, only used as an output parameter.
-                     * @param HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
+                     * @param _hostId The ID of the CDH to which the instance belongs, only used as an output parameter.
+                     * 
                      */
                     void SetHostId(const std::string& _hostId);
 
                     /**
                      * 判断参数 HostId 是否已赋值
                      * @return HostId 是否已赋值
+                     * 
                      */
                     bool HostIdHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of instance IDs in the format of mssql-j8kv137v
                      * @return InstanceIdSet Array of instance IDs in the format of mssql-j8kv137v
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置Array of instance IDs in the format of mssql-j8kv137v
-                     * @param InstanceIdSet Array of instance IDs in the format of mssql-j8kv137v
+                     * @param _instanceIdSet Array of instance IDs in the format of mssql-j8kv137v
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取Project ID. If this parameter is 0, the default project will be used
                      * @return ProjectId Project ID. If this parameter is 0, the default project will be used
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID. If this parameter is 0, the default project will be used
-                     * @param ProjectId Project ID. If this parameter is 0, the default project will be used
+                     * @param _projectId Project ID. If this parameter is 0, the default project will be used
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 

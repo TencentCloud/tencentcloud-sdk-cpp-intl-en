@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取List of CLB listener IDs
                      * @return ListenerIds List of CLB listener IDs
+                     * 
                      */
                     std::vector<std::string> GetListenerIds() const;
 
                     /**
                      * 设置List of CLB listener IDs
-                     * @param ListenerIds List of CLB listener IDs
+                     * @param _listenerIds List of CLB listener IDs
+                     * 
                      */
                     void SetListenerIds(const std::vector<std::string>& _listenerIds);
 
                     /**
                      * 判断参数 ListenerIds 是否已赋值
                      * @return ListenerIds 是否已赋值
+                     * 
                      */
                     bool ListenerIdsHasBeenSet() const;
 
                     /**
                      * 获取CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
                      * @return Protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
-                     * @param Protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+                     * @param _protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取CLB listening port. Value range: 1 - 65535.
                      * @return ListenerPort CLB listening port. Value range: 1 - 65535.
+                     * 
                      */
                     int64_t GetListenerPort() const;
 
                     /**
                      * 设置CLB listening port. Value range: 1 - 65535.
-                     * @param ListenerPort CLB listening port. Value range: 1 - 65535.
+                     * @param _listenerPort CLB listening port. Value range: 1 - 65535.
+                     * 
                      */
                     void SetListenerPort(const int64_t& _listenerPort);
 
                     /**
                      * 判断参数 ListenerPort 是否已赋值
                      * @return ListenerPort 是否已赋值
+                     * 
                      */
                     bool ListenerPortHasBeenSet() const;
 
                     /**
                      * 获取Listener status. Valid values: 0 (creating) and 1 (running).
                      * @return Status Listener status. Valid values: 0 (creating) and 1 (running).
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Listener status. Valid values: 0 (creating) and 1 (running).
-                     * @param Status Listener status. Valid values: 0 (creating) and 1 (running).
+                     * @param _status Listener status. Valid values: 0 (creating) and 1 (running).
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

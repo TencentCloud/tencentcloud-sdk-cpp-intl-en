@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NatinsLst Instance array
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<NatFwInstance> GetNatinsLst() const;
 
                     /**
                      * 判断参数 NatinsLst 是否已赋值
                      * @return NatinsLst 是否已赋值
+                     * 
                      */
                     bool NatinsLstHasBeenSet() const;
 

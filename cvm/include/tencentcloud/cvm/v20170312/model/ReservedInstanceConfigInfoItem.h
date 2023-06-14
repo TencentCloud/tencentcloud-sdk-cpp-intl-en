@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Abbreviation name of the instance type.
                      * @return Type Abbreviation name of the instance type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Abbreviation name of the instance type.
-                     * @param Type Abbreviation name of the instance type.
+                     * @param _type Abbreviation name of the instance type.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Full name of the instance type.
                      * @return TypeName Full name of the instance type.
+                     * 
                      */
                     std::string GetTypeName() const;
 
                     /**
                      * 设置Full name of the instance type.
-                     * @param TypeName Full name of the instance type.
+                     * @param _typeName Full name of the instance type.
+                     * 
                      */
                     void SetTypeName(const std::string& _typeName);
 
                     /**
                      * 判断参数 TypeName 是否已赋值
                      * @return TypeName 是否已赋值
+                     * 
                      */
                     bool TypeNameHasBeenSet() const;
 
                     /**
                      * 获取Priority.
                      * @return Order Priority.
+                     * 
                      */
                     int64_t GetOrder() const;
 
                     /**
                      * 设置Priority.
-                     * @param Order Priority.
+                     * @param _order Priority.
+                     * 
                      */
                     void SetOrder(const int64_t& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取List of instance families.
                      * @return InstanceFamilies List of instance families.
+                     * 
                      */
                     std::vector<ReservedInstanceFamilyItem> GetInstanceFamilies() const;
 
                     /**
                      * 设置List of instance families.
-                     * @param InstanceFamilies List of instance families.
+                     * @param _instanceFamilies List of instance families.
+                     * 
                      */
                     void SetInstanceFamilies(const std::vector<ReservedInstanceFamilyItem>& _instanceFamilies);
 
                     /**
                      * 判断参数 InstanceFamilies 是否已赋值
                      * @return InstanceFamilies 是否已赋值
+                     * 
                      */
                     bool InstanceFamiliesHasBeenSet() const;
 

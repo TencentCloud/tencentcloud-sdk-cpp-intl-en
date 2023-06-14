@@ -47,20 +47,23 @@ namespace TencentCloud
 `InstanceId` for BM or `Uuid` for CVM
                      * @return Quuid Server `Uuid`.
 `InstanceId` for BM or `Uuid` for CVM
+                     * 
                      */
                     std::string GetQuuid() const;
 
                     /**
                      * 设置Server `Uuid`.
 `InstanceId` for BM or `Uuid` for CVM
-                     * @param Quuid Server `Uuid`.
+                     * @param _quuid Server `Uuid`.
 `InstanceId` for BM or `Uuid` for CVM
+                     * 
                      */
                     void SetQuuid(const std::string& _quuid);
 
                     /**
                      * 判断参数 Quuid 是否已赋值
                      * @return Quuid 是否已赋值
+                     * 
                      */
                     bool QuuidHasBeenSet() const;
 

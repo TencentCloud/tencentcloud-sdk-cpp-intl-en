@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of origin server regions
                      * @return TotalCount Total number of origin server regions
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of origin server region details
                      * @return DestRegionSet List of origin server region details
+                     * 
                      */
                     std::vector<RegionDetail> GetDestRegionSet() const;
 
                     /**
                      * 判断参数 DestRegionSet 是否已赋值
                      * @return DestRegionSet 是否已赋值
+                     * 
                      */
                     bool DestRegionSetHasBeenSet() const;
 

@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取The authority ID.
                      * @return Id The authority ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置The authority ID.
-                     * @param Id The authority ID.
+                     * @param _id The authority ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取The DID.
                      * @return DidId The DID.
+                     * 
                      */
                     uint64_t GetDidId() const;
 
                     /**
                      * 设置The DID.
-                     * @param DidId The DID.
+                     * @param _didId The DID.
+                     * 
                      */
                     void SetDidId(const uint64_t& _didId);
 
                     /**
                      * 判断参数 DidId 是否已赋值
                      * @return DidId 是否已赋值
+                     * 
                      */
                     bool DidIdHasBeenSet() const;
 
                     /**
                      * 获取The details of the DID.
                      * @return Did The details of the DID.
+                     * 
                      */
                     std::string GetDid() const;
 
                     /**
                      * 设置The details of the DID.
-                     * @param Did The details of the DID.
+                     * @param _did The details of the DID.
+                     * 
                      */
                     void SetDid(const std::string& _did);
 
                     /**
                      * 判断参数 Did 是否已赋值
                      * @return Did 是否已赋值
+                     * 
                      */
                     bool DidHasBeenSet() const;
 
                     /**
                      * 获取The authority name.
                      * @return Name The authority name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The authority name.
-                     * @param Name The authority name.
+                     * @param _name The authority name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Whether the authority is certified. `1`: Yes; `2`: No.
                      * @return Status Whether the authority is certified. `1`: Yes; `2`: No.
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Whether the authority is certified. `1`: Yes; `2`: No.
-                     * @param Status Whether the authority is certified. `1`: Yes; `2`: No.
+                     * @param _status Whether the authority is certified. `1`: Yes; `2`: No.
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The DID service ID.
                      * @return DidServiceId The DID service ID.
+                     * 
                      */
                     uint64_t GetDidServiceId() const;
 
                     /**
                      * 设置The DID service ID.
-                     * @param DidServiceId The DID service ID.
+                     * @param _didServiceId The DID service ID.
+                     * 
                      */
                     void SetDidServiceId(const uint64_t& _didServiceId);
 
                     /**
                      * 判断参数 DidServiceId 是否已赋值
                      * @return DidServiceId 是否已赋值
+                     * 
                      */
                     bool DidServiceIdHasBeenSet() const;
 
                     /**
                      * 获取The application ID.
                      * @return ContractAppId The application ID.
+                     * 
                      */
                     uint64_t GetContractAppId() const;
 
                     /**
                      * 设置The application ID.
-                     * @param ContractAppId The application ID.
+                     * @param _contractAppId The application ID.
+                     * 
                      */
                     void SetContractAppId(const uint64_t& _contractAppId);
 
                     /**
                      * 判断参数 ContractAppId 是否已赋值
                      * @return ContractAppId 是否已赋值
+                     * 
                      */
                     bool ContractAppIdHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -195,20 +219,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RegisterTime The registration time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegisterTime() const;
 
                     /**
                      * 设置The registration time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RegisterTime The registration time.
+                     * @param _registerTime The registration time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegisterTime(const std::string& _registerTime);
 
                     /**
                      * 判断参数 RegisterTime 是否已赋值
                      * @return RegisterTime 是否已赋值
+                     * 
                      */
                     bool RegisterTimeHasBeenSet() const;
 
@@ -217,20 +244,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RecognizeTime The recognition time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRecognizeTime() const;
 
                     /**
                      * 设置The recognition time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RecognizeTime The recognition time.
+                     * @param _recognizeTime The recognition time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecognizeTime(const std::string& _recognizeTime);
 
                     /**
                      * 判断参数 RecognizeTime 是否已赋值
                      * @return RecognizeTime 是否已赋值
+                     * 
                      */
                     bool RecognizeTimeHasBeenSet() const;
 
@@ -239,20 +269,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CreateTime The creation time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The creation time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CreateTime The creation time.
+                     * @param _createTime The creation time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -261,92 +294,107 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UpdateTime The last updated time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The last updated time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UpdateTime The last updated time.
+                     * @param _updateTime The last updated time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取The network ID.
                      * @return ClusterId The network ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ClusterId The network ID.
+                     * @param _clusterId The network ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The application name.
                      * @return AppName The application name.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The application name.
-                     * @param AppName The application name.
+                     * @param _appName The application name.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取The on-chain label.
                      * @return LabelName The on-chain label.
+                     * 
                      */
                     std::string GetLabelName() const;
 
                     /**
                      * 设置The on-chain label.
-                     * @param LabelName The on-chain label.
+                     * @param _labelName The on-chain label.
+                     * 
                      */
                     void SetLabelName(const std::string& _labelName);
 
                     /**
                      * 判断参数 LabelName 是否已赋值
                      * @return LabelName 是否已赋值
+                     * 
                      */
                     bool LabelNameHasBeenSet() const;
 

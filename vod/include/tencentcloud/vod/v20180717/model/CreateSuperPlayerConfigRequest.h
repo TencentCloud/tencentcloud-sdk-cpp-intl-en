@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
                      * @return Name Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
-                     * @param Name Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
+                     * @param _name Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
@@ -91,6 +97,7 @@ Default value: `AdaptiveDynamicStream`
 <li>Transcode</li>
 <li>Original</li>
 Default value: `AdaptiveDynamicStream`
+                     * 
                      */
                     std::string GetAudioVideoType() const;
 
@@ -100,17 +107,19 @@ Default value: `AdaptiveDynamicStream`
 <li>Transcode</li>
 <li>Original</li>
 Default value: `AdaptiveDynamicStream`
-                     * @param AudioVideoType Type of audio/video played. Valid values:
+                     * @param _audioVideoType Type of audio/video played. Valid values:
 <li>AdaptiveDynamicStreaming</li>
 <li>Transcode</li>
 <li>Original</li>
 Default value: `AdaptiveDynamicStream`
+                     * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
 
                     /**
                      * 判断参数 AudioVideoType 是否已赋值
                      * @return AudioVideoType 是否已赋值
+                     * 
                      */
                     bool AudioVideoTypeHasBeenSet() const;
 
@@ -125,6 +134,7 @@ This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
 <li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
 Default value: `OFF`
 This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+                     * 
                      */
                     std::string GetDrmSwitch() const;
 
@@ -134,17 +144,19 @@ This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
 <li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
 Default value: `OFF`
 This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
-                     * @param DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+                     * @param _drmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
 <li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
 <li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
 Default value: `OFF`
 This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+                     * 
                      */
                     void SetDrmSwitch(const std::string& _drmSwitch);
 
                     /**
                      * 判断参数 DrmSwitch 是否已赋值
                      * @return DrmSwitch 是否已赋值
+                     * 
                      */
                     bool DrmSwitchHasBeenSet() const;
 
@@ -155,6 +167,7 @@ This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `D
                      * @return AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
 
 This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+                     * 
                      */
                     uint64_t GetAdaptiveDynamicStreamingDefinition() const;
 
@@ -162,15 +175,17 @@ This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `D
                      * 设置ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
 
 This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
-                     * @param AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+                     * @param _adaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
 
 This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingDefinition(const uint64_t& _adaptiveDynamicStreamingDefinition);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingDefinition 是否已赋值
                      * @return AdaptiveDynamicStreamingDefinition 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingDefinitionHasBeenSet() const;
 
@@ -181,6 +196,7 @@ This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `D
                      * @return DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
 
 This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+                     * 
                      */
                     DrmStreamingsInfo GetDrmStreamingsInfo() const;
 
@@ -188,15 +204,17 @@ This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `D
                      * 设置Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
 
 This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
-                     * @param DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+                     * @param _drmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
 
 This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+                     * 
                      */
                     void SetDrmStreamingsInfo(const DrmStreamingsInfo& _drmStreamingsInfo);
 
                     /**
                      * 判断参数 DrmStreamingsInfo 是否已赋值
                      * @return DrmStreamingsInfo 是否已赋值
+                     * 
                      */
                     bool DrmStreamingsInfoHasBeenSet() const;
 
@@ -207,6 +225,7 @@ This parameter is required if `AudioVideoType` is `Transcode`.
                      * @return TranscodeDefinition ID of the transcoding template allowed for playback
 
 This parameter is required if `AudioVideoType` is `Transcode`.
+                     * 
                      */
                     uint64_t GetTranscodeDefinition() const;
 
@@ -214,33 +233,38 @@ This parameter is required if `AudioVideoType` is `Transcode`.
                      * 设置ID of the transcoding template allowed for playback
 
 This parameter is required if `AudioVideoType` is `Transcode`.
-                     * @param TranscodeDefinition ID of the transcoding template allowed for playback
+                     * @param _transcodeDefinition ID of the transcoding template allowed for playback
 
 This parameter is required if `AudioVideoType` is `Transcode`.
+                     * 
                      */
                     void SetTranscodeDefinition(const uint64_t& _transcodeDefinition);
 
                     /**
                      * 判断参数 TranscodeDefinition 是否已赋值
                      * @return TranscodeDefinition 是否已赋值
+                     * 
                      */
                     bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
                      * 获取ID of the image sprite generating template that allows output.
                      * @return ImageSpriteDefinition ID of the image sprite generating template that allows output.
+                     * 
                      */
                     uint64_t GetImageSpriteDefinition() const;
 
                     /**
                      * 设置ID of the image sprite generating template that allows output.
-                     * @param ImageSpriteDefinition ID of the image sprite generating template that allows output.
+                     * @param _imageSpriteDefinition ID of the image sprite generating template that allows output.
+                     * 
                      */
                     void SetImageSpriteDefinition(const uint64_t& _imageSpriteDefinition);
 
                     /**
                      * 判断参数 ImageSpriteDefinition 是否已赋值
                      * @return ImageSpriteDefinition 是否已赋值
+                     * 
                      */
                     bool ImageSpriteDefinitionHasBeenSet() const;
 
@@ -261,6 +285,7 @@ This parameter is required if `AudioVideoType` is `Transcode`.
 <li>MinEdgeLength: 1440, Name: 2K;</li>
 <li>MinEdgeLength: 2160, Name: 4K;</li>
 <li>MinEdgeLength: 4320, Name: 8K.</li>
+                     * 
                      */
                     std::vector<ResolutionNameInfo> GetResolutionNames() const;
 
@@ -273,7 +298,7 @@ This parameter is required if `AudioVideoType` is `Transcode`.
 <li>MinEdgeLength: 1440, Name: 2K;</li>
 <li>MinEdgeLength: 2160, Name: 4K;</li>
 <li>MinEdgeLength: 4320, Name: 8K.</li>
-                     * @param ResolutionNames Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
+                     * @param _resolutionNames Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
 <li>MinEdgeLength: 240, Name: LD;</li>
 <li>MinEdgeLength: 480, Name: SD;</li>
 <li>MinEdgeLength: 720, Name: HD;</li>
@@ -281,30 +306,35 @@ This parameter is required if `AudioVideoType` is `Transcode`.
 <li>MinEdgeLength: 1440, Name: 2K;</li>
 <li>MinEdgeLength: 2160, Name: 4K;</li>
 <li>MinEdgeLength: 4320, Name: 8K.</li>
+                     * 
                      */
                     void SetResolutionNames(const std::vector<ResolutionNameInfo>& _resolutionNames);
 
                     /**
                      * 判断参数 ResolutionNames 是否已赋值
                      * @return ResolutionNames 是否已赋值
+                     * 
                      */
                     bool ResolutionNamesHasBeenSet() const;
 
                     /**
                      * 获取Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
                      * @return Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
-                     * @param Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * @param _domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -315,6 +345,7 @@ This parameter is required if `AudioVideoType` is `Transcode`.
                      * @return Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
+                     * 
                      */
                     std::string GetScheme() const;
 
@@ -322,33 +353,38 @@ This parameter is required if `AudioVideoType` is `Transcode`.
                      * 设置Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
-                     * @param Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+                     * @param _scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
+                     * 
                      */
                     void SetScheme(const std::string& _scheme);
 
                     /**
                      * 判断参数 Scheme 是否已赋值
                      * @return Scheme 是否已赋值
+                     * 
                      */
                     bool SchemeHasBeenSet() const;
 
                     /**
                      * 获取Template description. Length limit: 256 characters.
                      * @return Comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Template description. Length limit: 256 characters.
-                     * @param Comment Template description. Length limit: 256 characters.
+                     * @param _comment Template description. Length limit: 256 characters.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 

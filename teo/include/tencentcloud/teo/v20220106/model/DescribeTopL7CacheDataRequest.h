@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the query (client time in RFC 3339)
                      * @return StartTime Start time of the query (client time in RFC 3339)
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time of the query (client time in RFC 3339)
-                     * @param StartTime Start time of the query (client time in RFC 3339)
+                     * @param _startTime Start time of the query (client time in RFC 3339)
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the query (client time in RFC 3339)
                      * @return EndTime End time of the query (client time in RFC 3339)
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the query (client time in RFC 3339)
-                     * @param EndTime End time of the query (client time in RFC 3339)
+                     * @param _endTime End time of the query (client time in RFC 3339)
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Metric for time-series data query
                      * @return MetricName Metric for time-series data query
+                     * 
                      */
                     std::string GetMetricName() const;
 
                     /**
                      * 设置Metric for time-series data query
-                     * @param MetricName Metric for time-series data query
+                     * @param _metricName Metric for time-series data query
+                     * 
                      */
                     void SetMetricName(const std::string& _metricName);
 
                     /**
                      * 判断参数 MetricName 是否已赋值
                      * @return MetricName 是否已赋值
+                     * 
                      */
                     bool MetricNameHasBeenSet() const;
 
                     /**
                      * 获取Specifies the number of data records to return. If `0` is passed in, all data is returned.
                      * @return Limit Specifies the number of data records to return. If `0` is passed in, all data is returned.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Specifies the number of data records to return. If `0` is passed in, all data is returned.
-                     * @param Limit Specifies the number of data records to return. If `0` is passed in, all data is returned.
+                     * @param _limit Specifies the number of data records to return. If `0` is passed in, all data is returned.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Time interval. Values: {min, 5min, hour, day, week}. This field is optional.
                      * @return Interval Time interval. Values: {min, 5min, hour, day, week}. This field is optional.
+                     * 
                      */
                     std::string GetInterval() const;
 
                     /**
                      * 设置Time interval. Values: {min, 5min, hour, day, week}. This field is optional.
-                     * @param Interval Time interval. Values: {min, 5min, hour, day, week}. This field is optional.
+                     * @param _interval Time interval. Values: {min, 5min, hour, day, week}. This field is optional.
+                     * 
                      */
                     void SetInterval(const std::string& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Array of site IDs
                      * @return ZoneIds Array of site IDs
+                     * 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
                      * 设置Array of site IDs
-                     * @param ZoneIds Array of site IDs
+                     * @param _zoneIds Array of site IDs
+                     * 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
                     /**
                      * 判断参数 ZoneIds 是否已赋值
                      * @return ZoneIds 是否已赋值
+                     * 
                      */
                     bool ZoneIdsHasBeenSet() const;
 
                     /**
                      * 获取Filter condition
                      * @return Filters Filter condition
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter condition
-                     * @param Filters Filter condition
+                     * @param _filters Filter condition
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

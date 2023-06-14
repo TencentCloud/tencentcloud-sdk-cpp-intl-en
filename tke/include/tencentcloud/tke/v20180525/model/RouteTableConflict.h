@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Route table type.
                      * @return RouteTableType Route table type.
+                     * 
                      */
                     std::string GetRouteTableType() const;
 
                     /**
                      * 设置Route table type.
-                     * @param RouteTableType Route table type.
+                     * @param _routeTableType Route table type.
+                     * 
                      */
                     void SetRouteTableType(const std::string& _routeTableType);
 
                     /**
                      * 判断参数 RouteTableType 是否已赋值
                      * @return RouteTableType 是否已赋值
+                     * 
                      */
                     bool RouteTableTypeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RouteTableCidrBlock Route table CIDR.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRouteTableCidrBlock() const;
 
                     /**
                      * 设置Route table CIDR.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RouteTableCidrBlock Route table CIDR.
+                     * @param _routeTableCidrBlock Route table CIDR.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouteTableCidrBlock(const std::string& _routeTableCidrBlock);
 
                     /**
                      * 判断参数 RouteTableCidrBlock 是否已赋值
                      * @return RouteTableCidrBlock 是否已赋值
+                     * 
                      */
                     bool RouteTableCidrBlockHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RouteTableName Route table name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
                      * 设置Route table name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RouteTableName Route table name.
+                     * @param _routeTableName Route table name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
 
                     /**
                      * 判断参数 RouteTableName 是否已赋值
                      * @return RouteTableName 是否已赋值
+                     * 
                      */
                     bool RouteTableNameHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RouteTableId Route table ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置Route table ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RouteTableId Route table ID.
+                     * @param _routeTableId Route table ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The IDs of the logs to be queried.
                      * @return LogIds The IDs of the logs to be queried.
+                     * 
                      */
                     std::vector<int64_t> GetLogIds() const;
 
                     /**
                      * 设置The IDs of the logs to be queried.
-                     * @param LogIds The IDs of the logs to be queried.
+                     * @param _logIds The IDs of the logs to be queried.
+                     * 
                      */
                     void SetLogIds(const std::vector<int64_t>& _logIds);
 
                     /**
                      * 判断参数 LogIds 是否已赋值
                      * @return LogIds 是否已赋值
+                     * 
                      */
                     bool LogIdsHasBeenSet() const;
 

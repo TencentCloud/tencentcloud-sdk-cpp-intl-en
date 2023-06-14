@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DependType Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDependType() const;
 
                     /**
                      * 设置Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DependType Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
+                     * @param _dependType Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDependType(const int64_t& _dependType);
 
                     /**
                      * 判断参数 DependType 是否已赋值
                      * @return DependType 是否已赋值
+                     * 
                      */
                     bool DependTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Service Shared component
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetService() const;
 
                     /**
                      * 设置Shared component
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Service Shared component
+                     * @param _service Shared component
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetService(const std::string& _service);
 
                     /**
                      * 判断参数 Service 是否已赋值
                      * @return Service 是否已赋值
+                     * 
                      */
                     bool ServiceHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterId Sharing cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Sharing cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClusterId Sharing cluster
+                     * @param _clusterId Sharing cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ClusterStatus Sharing cluster status
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetClusterStatus() const;
 
                     /**
                      * 设置Sharing cluster status
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClusterStatus Sharing cluster status
+                     * @param _clusterStatus Sharing cluster status
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterStatus(const int64_t& _clusterStatus);
 
                     /**
                      * 判断参数 ClusterStatus 是否已赋值
                      * @return ClusterStatus 是否已赋值
+                     * 
                      */
                     bool ClusterStatusHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取API document name
                      * @return ApiDocName API document name
+                     * 
                      */
                     std::string GetApiDocName() const;
 
                     /**
                      * 设置API document name
-                     * @param ApiDocName API document name
+                     * @param _apiDocName API document name
+                     * 
                      */
                     void SetApiDocName(const std::string& _apiDocName);
 
                     /**
                      * 判断参数 ApiDocName 是否已赋值
                      * @return ApiDocName 是否已赋值
+                     * 
                      */
                     bool ApiDocNameHasBeenSet() const;
 
                     /**
                      * 获取Service name
                      * @return ServiceId Service name
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Service name
-                     * @param ServiceId Service name
+                     * @param _serviceId Service name
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Environment name
                      * @return Environment Environment name
+                     * 
                      */
                     std::string GetEnvironment() const;
 
                     /**
                      * 设置Environment name
-                     * @param Environment Environment name
+                     * @param _environment Environment name
+                     * 
                      */
                     void SetEnvironment(const std::string& _environment);
 
                     /**
                      * 判断参数 Environment 是否已赋值
                      * @return Environment 是否已赋值
+                     * 
                      */
                     bool EnvironmentHasBeenSet() const;
 
                     /**
                      * 获取List of APIs for which to generate documents
                      * @return ApiIds List of APIs for which to generate documents
+                     * 
                      */
                     std::vector<std::string> GetApiIds() const;
 
                     /**
                      * 设置List of APIs for which to generate documents
-                     * @param ApiIds List of APIs for which to generate documents
+                     * @param _apiIds List of APIs for which to generate documents
+                     * 
                      */
                     void SetApiIds(const std::vector<std::string>& _apiIds);
 
                     /**
                      * 判断参数 ApiIds 是否已赋值
                      * @return ApiIds 是否已赋值
+                     * 
                      */
                     bool ApiIdsHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Three modes are supported: DLQ, drop, and ignore error, which correspond to `DLQ`, `DROP`, and `IGNORE_ERROR` respectively
                      * @return DisposeMethod Three modes are supported: DLQ, drop, and ignore error, which correspond to `DLQ`, `DROP`, and `IGNORE_ERROR` respectively
+                     * 
                      */
                     std::string GetDisposeMethod() const;
 
                     /**
                      * 设置Three modes are supported: DLQ, drop, and ignore error, which correspond to `DLQ`, `DROP`, and `IGNORE_ERROR` respectively
-                     * @param DisposeMethod Three modes are supported: DLQ, drop, and ignore error, which correspond to `DLQ`, `DROP`, and `IGNORE_ERROR` respectively
+                     * @param _disposeMethod Three modes are supported: DLQ, drop, and ignore error, which correspond to `DLQ`, `DROP`, and `IGNORE_ERROR` respectively
+                     * 
                      */
                     void SetDisposeMethod(const std::string& _disposeMethod);
 
                     /**
                      * 判断参数 DisposeMethod 是否已赋值
                      * @return DisposeMethod 是否已赋值
+                     * 
                      */
                     bool DisposeMethodHasBeenSet() const;
 
@@ -70,20 +73,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CkafkaDeliveryParams If the DLQ mode is set, this option is required. Error messages will be delivered to the corresponding Kafka topic
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CkafkaDeliveryParams GetCkafkaDeliveryParams() const;
 
                     /**
                      * 设置If the DLQ mode is set, this option is required. Error messages will be delivered to the corresponding Kafka topic
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CkafkaDeliveryParams If the DLQ mode is set, this option is required. Error messages will be delivered to the corresponding Kafka topic
+                     * @param _ckafkaDeliveryParams If the DLQ mode is set, this option is required. Error messages will be delivered to the corresponding Kafka topic
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCkafkaDeliveryParams(const CkafkaDeliveryParams& _ckafkaDeliveryParams);
 
                     /**
                      * 判断参数 CkafkaDeliveryParams 是否已赋值
                      * @return CkafkaDeliveryParams 是否已赋值
+                     * 
                      */
                     bool CkafkaDeliveryParamsHasBeenSet() const;
 

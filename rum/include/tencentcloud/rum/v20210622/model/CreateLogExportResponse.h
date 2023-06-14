@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Log export ID
                      * @return ExportID Log export ID
+                     * 
                      */
                     std::string GetExportID() const;
 
                     /**
                      * 判断参数 ExportID 是否已赋值
                      * @return ExportID 是否已赋值
+                     * 
                      */
                     bool ExportIDHasBeenSet() const;
 

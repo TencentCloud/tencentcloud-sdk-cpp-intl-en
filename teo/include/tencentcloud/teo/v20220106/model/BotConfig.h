@@ -52,90 +52,105 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable bot security configuration
                      * @return Switch Whether to enable bot security configuration
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable bot security configuration
-                     * @param Switch Whether to enable bot security configuration
+                     * @param _switch Whether to enable bot security configuration
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Preset rules
                      * @return ManagedRule Preset rules
+                     * 
                      */
                     BotManagedRule GetManagedRule() const;
 
                     /**
                      * 设置Preset rules
-                     * @param ManagedRule Preset rules
+                     * @param _managedRule Preset rules
+                     * 
                      */
                     void SetManagedRule(const BotManagedRule& _managedRule);
 
                     /**
                      * 判断参数 ManagedRule 是否已赋值
                      * @return ManagedRule 是否已赋值
+                     * 
                      */
                     bool ManagedRuleHasBeenSet() const;
 
                     /**
                      * 获取Not supported currently
                      * @return UaBotRule Not supported currently
+                     * 
                      */
                     BotManagedRule GetUaBotRule() const;
 
                     /**
                      * 设置Not supported currently
-                     * @param UaBotRule Not supported currently
+                     * @param _uaBotRule Not supported currently
+                     * 
                      */
                     void SetUaBotRule(const BotManagedRule& _uaBotRule);
 
                     /**
                      * 判断参数 UaBotRule 是否已赋值
                      * @return UaBotRule 是否已赋值
+                     * 
                      */
                     bool UaBotRuleHasBeenSet() const;
 
                     /**
                      * 获取Not supported currently
                      * @return IspBotRule Not supported currently
+                     * 
                      */
                     BotManagedRule GetIspBotRule() const;
 
                     /**
                      * 设置Not supported currently
-                     * @param IspBotRule Not supported currently
+                     * @param _ispBotRule Not supported currently
+                     * 
                      */
                     void SetIspBotRule(const BotManagedRule& _ispBotRule);
 
                     /**
                      * 判断参数 IspBotRule 是否已赋值
                      * @return IspBotRule 是否已赋值
+                     * 
                      */
                     bool IspBotRuleHasBeenSet() const;
 
                     /**
                      * 获取User portrait rules
                      * @return PortraitRule User portrait rules
+                     * 
                      */
                     BotPortraitRule GetPortraitRule() const;
 
                     /**
                      * 设置User portrait rules
-                     * @param PortraitRule User portrait rules
+                     * @param _portraitRule User portrait rules
+                     * 
                      */
                     void SetPortraitRule(const BotPortraitRule& _portraitRule);
 
                     /**
                      * 判断参数 PortraitRule 是否已赋值
                      * @return PortraitRule 是否已赋值
+                     * 
                      */
                     bool PortraitRuleHasBeenSet() const;
 
@@ -144,20 +159,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IntelligenceRule Bot intelligence rules
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     IntelligenceRule GetIntelligenceRule() const;
 
                     /**
                      * 设置Bot intelligence rules
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IntelligenceRule Bot intelligence rules
+                     * @param _intelligenceRule Bot intelligence rules
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIntelligenceRule(const IntelligenceRule& _intelligenceRule);
 
                     /**
                      * 判断参数 IntelligenceRule 是否已赋值
                      * @return IntelligenceRule 是否已赋值
+                     * 
                      */
                     bool IntelligenceRuleHasBeenSet() const;
 

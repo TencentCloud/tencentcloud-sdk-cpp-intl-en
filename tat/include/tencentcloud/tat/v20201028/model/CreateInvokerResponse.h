@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Invoker ID.
                      * @return InvokerId Invoker ID.
+                     * 
                      */
                     std::string GetInvokerId() const;
 
                     /**
                      * 判断参数 InvokerId 是否已赋值
                      * @return InvokerId 是否已赋值
+                     * 
                      */
                     bool InvokerIdHasBeenSet() const;
 

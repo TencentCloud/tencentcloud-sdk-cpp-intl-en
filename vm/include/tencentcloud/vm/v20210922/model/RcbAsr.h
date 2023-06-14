@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Text This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Text This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
+                     * @param _text This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置This field is used to return the creation time of the queried task in ISO 8601 format.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedAt This field is used to return the creation time of the queried task in ISO 8601 format.
+                     * @param _createdAt This field is used to return the creation time of the queried task in ISO 8601 format.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 

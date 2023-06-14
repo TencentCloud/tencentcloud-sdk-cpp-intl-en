@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Packed string, which will vary according to the custom API.
                      * @return Result Packed string, which will vary according to the custom API.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StrategyId Unique policy ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStrategyId() const;
 
                     /**
                      * 设置Unique policy ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StrategyId Unique policy ID.
+                     * @param _strategyId Unique policy ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStrategyId(const std::string& _strategyId);
 
                     /**
                      * 判断参数 StrategyId 是否已赋值
                      * @return StrategyId 是否已赋值
+                     * 
                      */
                     bool StrategyIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StrategyName Custom policy name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStrategyName() const;
 
                     /**
                      * 设置Custom policy name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StrategyName Custom policy name.
+                     * @param _strategyName Custom policy name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStrategyName(const std::string& _strategyName);
 
                     /**
                      * 判断参数 StrategyName 是否已赋值
                      * @return StrategyName 是否已赋值
+                     * 
                      */
                     bool StrategyNameHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStrategyType() const;
 
                     /**
                      * 设置Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+                     * @param _strategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStrategyType(const std::string& _strategyType);
 
                     /**
                      * 判断参数 StrategyType 是否已赋值
                      * @return StrategyType 是否已赋值
+                     * 
                      */
                     bool StrategyTypeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StrategyData IP list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStrategyData() const;
 
                     /**
                      * 设置IP list.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StrategyData IP list.
+                     * @param _strategyData IP list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStrategyData(const std::string& _strategyData);
 
                     /**
                      * 判断参数 StrategyData 是否已赋值
                      * @return StrategyData 是否已赋值
+                     * 
                      */
                     bool StrategyDataHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _createdTime Creation time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ModifiedTime Modification time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 设置Modification time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ModifiedTime Modification time
+                     * @param _modifiedTime Modification time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetModifiedTime(const std::string& _modifiedTime);
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ServiceId Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceId Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
+                     * @param _serviceId Last modified time in the format of YYYY-MM-DDThh:mm:ssZ according to ISO 8601 standard. UTC time is used.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BindApiTotalCount Number of APIs bound to policy.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBindApiTotalCount() const;
 
                     /**
                      * 设置Number of APIs bound to policy.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BindApiTotalCount Number of APIs bound to policy.
+                     * @param _bindApiTotalCount Number of APIs bound to policy.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBindApiTotalCount(const int64_t& _bindApiTotalCount);
 
                     /**
                      * 判断参数 BindApiTotalCount 是否已赋值
                      * @return BindApiTotalCount 是否已赋值
+                     * 
                      */
                     bool BindApiTotalCountHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BindApis Bound API details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DesApisStatus> GetBindApis() const;
 
                     /**
                      * 设置Bound API details.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BindApis Bound API details.
+                     * @param _bindApis Bound API details.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBindApis(const std::vector<DesApisStatus>& _bindApis);
 
                     /**
                      * 判断参数 BindApis 是否已赋值
                      * @return BindApis 是否已赋值
+                     * 
                      */
                     bool BindApisHasBeenSet() const;
 

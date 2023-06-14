@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Directory of the verification file.
                      * @return IdentifyPath Directory of the verification file.
+                     * 
                      */
                     std::string GetIdentifyPath() const;
 
                     /**
                      * 设置Directory of the verification file.
-                     * @param IdentifyPath Directory of the verification file.
+                     * @param _identifyPath Directory of the verification file.
+                     * 
                      */
                     void SetIdentifyPath(const std::string& _identifyPath);
 
                     /**
                      * 判断参数 IdentifyPath 是否已赋值
                      * @return IdentifyPath 是否已赋值
+                     * 
                      */
                     bool IdentifyPathHasBeenSet() const;
 
                     /**
                      * 获取Content of the verification file.
                      * @return IdentifyContent Content of the verification file.
+                     * 
                      */
                     std::string GetIdentifyContent() const;
 
                     /**
                      * 设置Content of the verification file.
-                     * @param IdentifyContent Content of the verification file.
+                     * @param _identifyContent Content of the verification file.
+                     * 
                      */
                     void SetIdentifyContent(const std::string& _identifyContent);
 
                     /**
                      * 判断参数 IdentifyContent 是否已赋值
                      * @return IdentifyContent 是否已赋值
+                     * 
                      */
                     bool IdentifyContentHasBeenSet() const;
 

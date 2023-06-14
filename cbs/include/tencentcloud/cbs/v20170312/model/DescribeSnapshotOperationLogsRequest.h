@@ -48,56 +48,65 @@ namespace TencentCloud
 <li>snapshot-id - Array of String - Required or not: Yes - Filter by snapshot ID, with maximum of 10 snapshot IDs able to be specified per request.
                      * @return Filters Filter conditions. The following conditions are supported:
 <li>snapshot-id - Array of String - Required or not: Yes - Filter by snapshot ID, with maximum of 10 snapshot IDs able to be specified per request.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter conditions. The following conditions are supported:
 <li>snapshot-id - Array of String - Required or not: Yes - Filter by snapshot ID, with maximum of 10 snapshot IDs able to be specified per request.
-                     * @param Filters Filter conditions. The following conditions are supported:
+                     * @param _filters Filter conditions. The following conditions are supported:
 <li>snapshot-id - Array of String - Required or not: Yes - Filter by snapshot ID, with maximum of 10 snapshot IDs able to be specified per request.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
                      * @return BeginTime The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
-                     * @param BeginTime The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+                     * @param _beginTime The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
                      * @return EndTime The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
-                     * @param EndTime The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
+                     * @param _endTime The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

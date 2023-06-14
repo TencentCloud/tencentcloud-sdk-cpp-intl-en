@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mainland Specific configuration for domain name inside mainland China.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     MainlandConfig GetMainland() const;
 
                     /**
                      * 设置Specific configuration for domain name inside mainland China.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mainland Specific configuration for domain name inside mainland China.
+                     * @param _mainland Specific configuration for domain name inside mainland China.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMainland(const MainlandConfig& _mainland);
 
                     /**
                      * 判断参数 Mainland 是否已赋值
                      * @return Mainland 是否已赋值
+                     * 
                      */
                     bool MainlandHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Overseas Specific configuration for domain name outside mainland China.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     OverseaConfig GetOverseas() const;
 
                     /**
                      * 设置Specific configuration for domain name outside mainland China.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Overseas Specific configuration for domain name outside mainland China.
+                     * @param _overseas Specific configuration for domain name outside mainland China.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetOverseas(const OverseaConfig& _overseas);
 
                     /**
                      * 判断参数 Overseas 是否已赋值
                      * @return Overseas 是否已赋值
+                     * 
                      */
                     bool OverseasHasBeenSet() const;
 

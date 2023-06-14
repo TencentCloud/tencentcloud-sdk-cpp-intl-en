@@ -58,18 +58,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Instance name, such as `ens-34241f3s`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name, such as `ens-34241f3s`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceName Instance name, such as `ens-34241f3s`.
+                     * @param _instanceName Instance name, such as `ens-34241f3s`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -116,6 +122,7 @@ STOPPING: shutting down
 REBOOTING: restarting
 SHUTDOWN: to be terminated
 TERMINATING: terminating.
+                     * 
                      */
                     std::string GetInstanceState() const;
 
@@ -130,7 +137,7 @@ STOPPING: shutting down
 REBOOTING: restarting
 SHUTDOWN: to be terminated
 TERMINATING: terminating.
-                     * @param InstanceState Instance status. Valid values:
+                     * @param _instanceState Instance status. Valid values:
 PENDING: creating
 LAUNCH_FAILED: failed to create
 RUNNING: running
@@ -140,12 +147,14 @@ STOPPING: shutting down
 REBOOTING: restarting
 SHUTDOWN: to be terminated
 TERMINATING: terminating.
+                     * 
                      */
                     void SetInstanceState(const std::string& _instanceState);
 
                     /**
                      * 判断参数 InstanceState 是否已赋值
                      * @return InstanceState 是否已赋值
+                     * 
                      */
                     bool InstanceStateHasBeenSet() const;
 
@@ -154,20 +163,23 @@ TERMINATING: terminating.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Image Information of the image currently used by the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Image GetImage() const;
 
                     /**
                      * 设置Information of the image currently used by the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Image Information of the image currently used by the instance.
+                     * @param _image Information of the image currently used by the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImage(const Image& _image);
 
                     /**
                      * 判断参数 Image 是否已赋值
                      * @return Image 是否已赋值
+                     * 
                      */
                     bool ImageHasBeenSet() const;
 
@@ -176,20 +188,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SimpleModule Basic information of the current module of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SimpleModule GetSimpleModule() const;
 
                     /**
                      * 设置Basic information of the current module of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SimpleModule Basic information of the current module of the instance.
+                     * @param _simpleModule Basic information of the current module of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSimpleModule(const SimpleModule& _simpleModule);
 
                     /**
                      * 判断参数 SimpleModule 是否已赋值
                      * @return SimpleModule 是否已赋值
+                     * 
                      */
                     bool SimpleModuleHasBeenSet() const;
 
@@ -198,20 +213,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Position Location information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Position GetPosition() const;
 
                     /**
                      * 设置Location information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Position Location information of the instance.
+                     * @param _position Location information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPosition(const Position& _position);
 
                     /**
                      * 判断参数 Position 是否已赋值
                      * @return Position 是否已赋值
+                     * 
                      */
                     bool PositionHasBeenSet() const;
 
@@ -220,20 +238,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Internet Network information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Internet GetInternet() const;
 
                     /**
                      * 设置Network information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Internet Network information of the instance.
+                     * @param _internet Network information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInternet(const Internet& _internet);
 
                     /**
                      * 判断参数 Internet 是否已赋值
                      * @return Internet 是否已赋值
+                     * 
                      */
                     bool InternetHasBeenSet() const;
 
@@ -242,20 +263,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceTypeConfig Configuration information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     InstanceTypeConfig GetInstanceTypeConfig() const;
 
                     /**
                      * 设置Configuration information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceTypeConfig Configuration information of the instance.
+                     * @param _instanceTypeConfig Configuration information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceTypeConfig(const InstanceTypeConfig& _instanceTypeConfig);
 
                     /**
                      * 判断参数 InstanceTypeConfig 是否已赋值
                      * @return InstanceTypeConfig 是否已赋值
+                     * 
                      */
                     bool InstanceTypeConfigHasBeenSet() const;
 
@@ -264,20 +288,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Instance creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Instance creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Instance creation time.
+                     * @param _createTime Instance creation time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -286,20 +313,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TagSet Instance tag information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
                      * 设置Instance tag information.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TagSet Instance tag information.
+                     * @param _tagSet Instance tag information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
@@ -308,20 +338,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LatestOperation Last operation on the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLatestOperation() const;
 
                     /**
                      * 设置Last operation on the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LatestOperation Last operation on the instance.
+                     * @param _latestOperation Last operation on the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLatestOperation(const std::string& _latestOperation);
 
                     /**
                      * 判断参数 LatestOperation 是否已赋值
                      * @return LatestOperation 是否已赋值
+                     * 
                      */
                     bool LatestOperationHasBeenSet() const;
 
@@ -330,20 +363,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LatestOperationState Result of the last operation on the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLatestOperationState() const;
 
                     /**
                      * 设置Result of the last operation on the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LatestOperationState Result of the last operation on the instance.
+                     * @param _latestOperationState Result of the last operation on the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLatestOperationState(const std::string& _latestOperationState);
 
                     /**
                      * 判断参数 LatestOperationState 是否已赋值
                      * @return LatestOperationState 是否已赋值
+                     * 
                      */
                     bool LatestOperationStateHasBeenSet() const;
 
@@ -358,6 +394,7 @@ NORMAL: normal
 EXPIRED: expired
 PROTECTIVELY_ISOLATED: isolated.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRestrictState() const;
 
@@ -367,17 +404,19 @@ NORMAL: normal
 EXPIRED: expired
 PROTECTIVELY_ISOLATED: isolated.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RestrictState Instance business status. Valid values:
+                     * @param _restrictState Instance business status. Valid values:
 NORMAL: normal
 EXPIRED: expired
 PROTECTIVELY_ISOLATED: isolated.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRestrictState(const std::string& _restrictState);
 
                     /**
                      * 判断参数 RestrictState 是否已赋值
                      * @return RestrictState 是否已赋值
+                     * 
                      */
                     bool RestrictStateHasBeenSet() const;
 
@@ -386,20 +425,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SystemDiskSize System disk size in GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSystemDiskSize() const;
 
                     /**
                      * 设置System disk size in GB.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SystemDiskSize System disk size in GB.
+                     * @param _systemDiskSize System disk size in GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSystemDiskSize(const int64_t& _systemDiskSize);
 
                     /**
                      * 判断参数 SystemDiskSize 是否已赋值
                      * @return SystemDiskSize 是否已赋值
+                     * 
                      */
                     bool SystemDiskSizeHasBeenSet() const;
 
@@ -408,20 +450,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DataDiskSize Data disk size in GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDataDiskSize() const;
 
                     /**
                      * 设置Data disk size in GB.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DataDiskSize Data disk size in GB.
+                     * @param _dataDiskSize Data disk size in GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataDiskSize(const int64_t& _dataDiskSize);
 
                     /**
                      * 判断参数 DataDiskSize 是否已赋值
                      * @return DataDiskSize 是否已赋值
+                     * 
                      */
                     bool DataDiskSizeHasBeenSet() const;
 
@@ -430,20 +475,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UUID Instance UUID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUUID() const;
 
                     /**
                      * 设置Instance UUID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UUID Instance UUID
+                     * @param _uUID Instance UUID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUUID(const std::string& _uUID);
 
                     /**
                      * 判断参数 UUID 是否已赋值
                      * @return UUID 是否已赋值
+                     * 
                      */
                     bool UUIDHasBeenSet() const;
 
@@ -456,6 +504,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     0: postpaid.
     1: prepaid.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPayMode() const;
 
@@ -464,16 +513,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     0: postpaid.
     1: prepaid.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PayMode Billing mode.
+                     * @param _payMode Billing mode.
     0: postpaid.
     1: prepaid.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -482,20 +533,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ExpireTime Expiration time in the format of `yyyy-mm-dd HH:mm:ss`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置Expiration time in the format of `yyyy-mm-dd HH:mm:ss`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireTime Expiration time in the format of `yyyy-mm-dd HH:mm:ss`.
+                     * @param _expireTime Expiration time in the format of `yyyy-mm-dd HH:mm:ss`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
@@ -504,20 +558,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IsolatedTime Isolation time in the format of `yyyy-mm-dd HH:mm:ss`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIsolatedTime() const;
 
                     /**
                      * 设置Isolation time in the format of `yyyy-mm-dd HH:mm:ss`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsolatedTime Isolation time in the format of `yyyy-mm-dd HH:mm:ss`.
+                     * @param _isolatedTime Isolation time in the format of `yyyy-mm-dd HH:mm:ss`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsolatedTime(const std::string& _isolatedTime);
 
                     /**
                      * 判断参数 IsolatedTime 是否已赋值
                      * @return IsolatedTime 是否已赋值
+                     * 
                      */
                     bool IsolatedTimeHasBeenSet() const;
 
@@ -530,6 +587,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
       0: no.
       1: yes.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRenewFlag() const;
 
@@ -538,16 +596,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
       0: no.
       1: yes.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RenewFlag Auto-Renewal flag.
+                     * @param _renewFlag Auto-Renewal flag.
       0: no.
       1: yes.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 
@@ -562,6 +622,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     WILL_EXPIRE: about to expire.
     EXPIRED: expired.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpireState() const;
 
@@ -571,17 +632,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     WILL_EXPIRE: about to expire.
     EXPIRED: expired.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpireState Expiration status.
+                     * @param _expireState Expiration status.
     NORMAL: normal.
     WILL_EXPIRE: about to expire.
     EXPIRED: expired.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpireState(const std::string& _expireState);
 
                     /**
                      * 判断参数 ExpireState 是否已赋值
                      * @return ExpireState 是否已赋值
+                     * 
                      */
                     bool ExpireStateHasBeenSet() const;
 
@@ -590,20 +653,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SystemDisk System disk information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DiskInfo GetSystemDisk() const;
 
                     /**
                      * 设置System disk information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SystemDisk System disk information
+                     * @param _systemDisk System disk information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSystemDisk(const DiskInfo& _systemDisk);
 
                     /**
                      * 判断参数 SystemDisk 是否已赋值
                      * @return SystemDisk 是否已赋值
+                     * 
                      */
                     bool SystemDiskHasBeenSet() const;
 
@@ -612,20 +678,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DataDisks Data disk information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DiskInfo> GetDataDisks() const;
 
                     /**
                      * 设置Data disk information
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DataDisks Data disk information
+                     * @param _dataDisks Data disk information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataDisks(const std::vector<DiskInfo>& _dataDisks);
 
                     /**
                      * 判断参数 DataDisks 是否已赋值
                      * @return DataDisks 是否已赋值
+                     * 
                      */
                     bool DataDisksHasBeenSet() const;
 
@@ -634,20 +703,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NewFlag New instance flag
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetNewFlag() const;
 
                     /**
                      * 设置New instance flag
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NewFlag New instance flag
+                     * @param _newFlag New instance flag
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNewFlag(const int64_t& _newFlag);
 
                     /**
                      * 判断参数 NewFlag 是否已赋值
                      * @return NewFlag 是否已赋值
+                     * 
                      */
                     bool NewFlagHasBeenSet() const;
 
@@ -656,20 +728,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SecurityGroupIds Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API.
+                     * @param _securityGroupIds Security group of the instance, which can be obtained from the `sgId` field in the returned value of the `DescribeSecurityGroups` API.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
@@ -678,20 +753,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return VirtualPrivateCloud VPC attribute
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VirtualPrivateCloud GetVirtualPrivateCloud() const;
 
                     /**
                      * 设置VPC attribute
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param VirtualPrivateCloud VPC attribute
+                     * @param _virtualPrivateCloud VPC attribute
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVirtualPrivateCloud(const VirtualPrivateCloud& _virtualPrivateCloud);
 
                     /**
                      * 判断参数 VirtualPrivateCloud 是否已赋值
                      * @return VirtualPrivateCloud 是否已赋值
+                     * 
                      */
                     bool VirtualPrivateCloudHasBeenSet() const;
 
@@ -700,20 +778,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ISP ISP field of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetISP() const;
 
                     /**
                      * 设置ISP field of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ISP ISP field of the instance.
+                     * @param _iSP ISP field of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetISP(const std::string& _iSP);
 
                     /**
                      * 判断参数 ISP 是否已赋值
                      * @return ISP 是否已赋值
+                     * 
                      */
                     bool ISPHasBeenSet() const;
 
@@ -722,20 +803,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PhysicalPosition Physical location information. Note that this field is currently a reserved field and null.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PhysicalPosition GetPhysicalPosition() const;
 
                     /**
                      * 设置Physical location information. Note that this field is currently a reserved field and null.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PhysicalPosition Physical location information. Note that this field is currently a reserved field and null.
+                     * @param _physicalPosition Physical location information. Note that this field is currently a reserved field and null.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPhysicalPosition(const PhysicalPosition& _physicalPosition);
 
                     /**
                      * 判断参数 PhysicalPosition 是否已赋值
                      * @return PhysicalPosition 是否已赋值
+                     * 
                      */
                     bool PhysicalPositionHasBeenSet() const;
 

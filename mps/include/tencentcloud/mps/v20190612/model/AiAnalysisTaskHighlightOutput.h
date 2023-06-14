@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取A list of the highlight segments generated.
                      * @return HighlightSet A list of the highlight segments generated.
+                     * 
                      */
                     std::vector<MediaAiAnalysisHighlightItem> GetHighlightSet() const;
 
                     /**
                      * 设置A list of the highlight segments generated.
-                     * @param HighlightSet A list of the highlight segments generated.
+                     * @param _highlightSet A list of the highlight segments generated.
+                     * 
                      */
                     void SetHighlightSet(const std::vector<MediaAiAnalysisHighlightItem>& _highlightSet);
 
                     /**
                      * 判断参数 HighlightSet 是否已赋值
                      * @return HighlightSet 是否已赋值
+                     * 
                      */
                     bool HighlightSetHasBeenSet() const;
 
                     /**
                      * 获取The storage location of the highlight segments.
                      * @return OutputStorage The storage location of the highlight segments.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置The storage location of the highlight segments.
-                     * @param OutputStorage The storage location of the highlight segments.
+                     * @param _outputStorage The storage location of the highlight segments.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 

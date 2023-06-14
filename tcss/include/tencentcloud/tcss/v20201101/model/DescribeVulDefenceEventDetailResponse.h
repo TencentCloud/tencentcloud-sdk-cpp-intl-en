@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Exploit prevention event details
                      * @return EventDetail Exploit prevention event details
+                     * 
                      */
                     VulDefenceEventDetail GetEventDetail() const;
 
                     /**
                      * 判断参数 EventDetail 是否已赋值
                      * @return EventDetail 是否已赋值
+                     * 
                      */
                     bool EventDetailHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The list of verified mobile numbers and email addresses.
                      * @return PhoneEmailList The list of verified mobile numbers and email addresses.
+                     * 
                      */
                     std::vector<IntlPhoneEmailLists> GetPhoneEmailList() const;
 
                     /**
                      * 判断参数 PhoneEmailList 是否已赋值
                      * @return PhoneEmailList 是否已赋值
+                     * 
                      */
                     bool PhoneEmailListHasBeenSet() const;
 
                     /**
                      * 获取The total count.
                      * @return TotalCount The total count.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

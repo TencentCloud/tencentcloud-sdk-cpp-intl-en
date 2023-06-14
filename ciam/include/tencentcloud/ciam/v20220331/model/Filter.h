@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Key value
                      * @return Key Key value
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Key value
-                     * @param Key Key value
+                     * @param _key Key value
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Value
                      * @return Values Value
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Value
-                     * @param Values Value
+                     * @param _values Value
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 
                     /**
                      * 获取Logical value
                      * @return Logic Logical value
+                     * 
                      */
                     bool GetLogic() const;
 
                     /**
                      * 设置Logical value
-                     * @param Logic Logical value
+                     * @param _logic Logical value
+                     * 
                      */
                     void SetLogic(const bool& _logic);
 
                     /**
                      * 判断参数 Logic 是否已赋值
                      * @return Logic 是否已赋值
+                     * 
                      */
                     bool LogicHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Organizational unit ID
                      * @return NodeId Organizational unit ID
+                     * 
                      */
                     uint64_t GetNodeId() const;
 
                     /**
                      * 设置Organizational unit ID
-                     * @param NodeId Organizational unit ID
+                     * @param _nodeId Organizational unit ID
+                     * 
                      */
                     void SetNodeId(const uint64_t& _nodeId);
 
                     /**
                      * 判断参数 NodeId 是否已赋值
                      * @return NodeId 是否已赋值
+                     * 
                      */
                     bool NodeIdHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit
                      * @return Limit Limit
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Limit
-                     * @param Limit Limit
+                     * @param _limit Limit
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

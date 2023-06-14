@@ -57,6 +57,7 @@ namespace TencentCloud
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -66,17 +67,19 @@ namespace TencentCloud
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `all`: Apply to all files.
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -91,6 +94,7 @@ For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -100,35 +104,40 @@ For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
-                     * @param RulePaths Content for each `RuleType`: 
+                     * @param _rulePaths Content for each `RuleType`: 
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 
                     /**
                      * 获取Downstream speed value settings (in KB/s)
                      * @return KBpsThreshold Downstream speed value settings (in KB/s)
+                     * 
                      */
                     int64_t GetKBpsThreshold() const;
 
                     /**
                      * 设置Downstream speed value settings (in KB/s)
-                     * @param KBpsThreshold Downstream speed value settings (in KB/s)
+                     * @param _kBpsThreshold Downstream speed value settings (in KB/s)
+                     * 
                      */
                     void SetKBpsThreshold(const int64_t& _kBpsThreshold);
 
                     /**
                      * 判断参数 KBpsThreshold 是否已赋值
                      * @return KBpsThreshold 是否已赋值
+                     * 
                      */
                     bool KBpsThresholdHasBeenSet() const;
 

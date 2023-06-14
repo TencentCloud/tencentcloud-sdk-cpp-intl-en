@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取The question ID.
                      * @return QuestionId The question ID.
+                     * 
                      */
                     std::string GetQuestionId() const;
 
                     /**
                      * 设置The question ID.
-                     * @param QuestionId The question ID.
+                     * @param _questionId The question ID.
+                     * 
                      */
                     void SetQuestionId(const std::string& _questionId);
 
                     /**
                      * 判断参数 QuestionId 是否已赋值
                      * @return QuestionId 是否已赋值
+                     * 
                      */
                     bool QuestionIdHasBeenSet() const;
 
                     /**
                      * 获取The question.
                      * @return QuestionContent The question.
+                     * 
                      */
                     std::string GetQuestionContent() const;
 
                     /**
                      * 设置The question.
-                     * @param QuestionContent The question.
+                     * @param _questionContent The question.
+                     * 
                      */
                     void SetQuestionContent(const std::string& _questionContent);
 
                     /**
                      * 判断参数 QuestionContent 是否已赋值
                      * @return QuestionContent 是否已赋值
+                     * 
                      */
                     bool QuestionContentHasBeenSet() const;
 
                     /**
                      * 获取The time limit for the question. If you set this parameter to `0`, there will not be a time limit.
                      * @return Duration The time limit for the question. If you set this parameter to `0`, there will not be a time limit.
+                     * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
                      * 设置The time limit for the question. If you set this parameter to `0`, there will not be a time limit.
-                     * @param Duration The time limit for the question. If you set this parameter to `0`, there will not be a time limit.
+                     * @param _duration The time limit for the question. If you set this parameter to `0`, there will not be a time limit.
+                     * 
                      */
                     void SetDuration(const uint64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取The correct answer. Bits are used to indicate the options that should be chosen. For example, `0x1` indicates option A; `0x11` indicates A and B, and so on.
                      * @return CorrectAnswer The correct answer. Bits are used to indicate the options that should be chosen. For example, `0x1` indicates option A; `0x11` indicates A and B, and so on.
+                     * 
                      */
                     int64_t GetCorrectAnswer() const;
 
                     /**
                      * 设置The correct answer. Bits are used to indicate the options that should be chosen. For example, `0x1` indicates option A; `0x11` indicates A and B, and so on.
-                     * @param CorrectAnswer The correct answer. Bits are used to indicate the options that should be chosen. For example, `0x1` indicates option A; `0x11` indicates A and B, and so on.
+                     * @param _correctAnswer The correct answer. Bits are used to indicate the options that should be chosen. For example, `0x1` indicates option A; `0x11` indicates A and B, and so on.
+                     * 
                      */
                     void SetCorrectAnswer(const int64_t& _correctAnswer);
 
                     /**
                      * 判断参数 CorrectAnswer 是否已赋值
                      * @return CorrectAnswer 是否已赋值
+                     * 
                      */
                     bool CorrectAnswerHasBeenSet() const;
 
@@ -124,20 +136,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AnswerStats The statistics for each type of answer.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AnswerStat> GetAnswerStats() const;
 
                     /**
                      * 设置The statistics for each type of answer.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AnswerStats The statistics for each type of answer.
+                     * @param _answerStats The statistics for each type of answer.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnswerStats(const std::vector<AnswerStat>& _answerStats);
 
                     /**
                      * 判断参数 AnswerStats 是否已赋值
                      * @return AnswerStats 是否已赋值
+                     * 
                      */
                     bool AnswerStatsHasBeenSet() const;
 

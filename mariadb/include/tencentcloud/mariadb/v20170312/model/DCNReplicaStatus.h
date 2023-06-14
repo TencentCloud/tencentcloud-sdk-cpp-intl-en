@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status DCN running status. Valid values: `START` (running), `STOP` (pause).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置DCN running status. Valid values: `START` (running), `STOP` (pause).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status DCN running status. Valid values: `START` (running), `STOP` (pause).
+                     * @param _status DCN running status. Valid values: `START` (running), `STOP` (pause).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The current delay, which takes the delay value of the replica instance.
                      * @return Delay The current delay, which takes the delay value of the replica instance.
+                     * 
                      */
                     int64_t GetDelay() const;
 
                     /**
                      * 设置The current delay, which takes the delay value of the replica instance.
-                     * @param Delay The current delay, which takes the delay value of the replica instance.
+                     * @param _delay The current delay, which takes the delay value of the replica instance.
+                     * 
                      */
                     void SetDelay(const int64_t& _delay);
 
                     /**
                      * 判断参数 Delay 是否已赋值
                      * @return Delay 是否已赋值
+                     * 
                      */
                     bool DelayHasBeenSet() const;
 

@@ -51,108 +51,126 @@ namespace TencentCloud
                     /**
                      * 获取Update time
                      * @return ModTime Update time
+                     * 
                      */
                     std::string GetModTime() const;
 
                     /**
                      * 设置Update time
-                     * @param ModTime Update time
+                     * @param _modTime Update time
+                     * 
                      */
                     void SetModTime(const std::string& _modTime);
 
                     /**
                      * 判断参数 ModTime 是否已赋值
                      * @return ModTime 是否已赋值
+                     * 
                      */
                     bool ModTimeHasBeenSet() const;
 
                     /**
                      * 获取Event bus description, which can contain up to 200 characters of any type
                      * @return Description Event bus description, which can contain up to 200 characters of any type
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Event bus description, which can contain up to 200 characters of any type
-                     * @param Description Event bus description, which can contain up to 200 characters of any type
+                     * @param _description Event bus description, which can contain up to 200 characters of any type
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return AddTime Creation time
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param AddTime Creation time
+                     * @param _addTime Creation time
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
                     /**
                      * 获取Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
                      * @return EventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * 
                      */
                     std::string GetEventBusName() const;
 
                     /**
                      * 设置Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
-                     * @param EventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * @param _eventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * 
                      */
                     void SetEventBusName(const std::string& _eventBusName);
 
                     /**
                      * 判断参数 EventBusName 是否已赋值
                      * @return EventBusName 是否已赋值
+                     * 
                      */
                     bool EventBusNameHasBeenSet() const;
 
                     /**
                      * 获取Event bus ID
                      * @return EventBusId Event bus ID
+                     * 
                      */
                     std::string GetEventBusId() const;
 
                     /**
                      * 设置Event bus ID
-                     * @param EventBusId Event bus ID
+                     * @param _eventBusId Event bus ID
+                     * 
                      */
                     void SetEventBusId(const std::string& _eventBusId);
 
                     /**
                      * 判断参数 EventBusId 是否已赋值
                      * @return EventBusId 是否已赋值
+                     * 
                      */
                     bool EventBusIdHasBeenSet() const;
 
                     /**
                      * 获取Event bus type
                      * @return Type Event bus type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Event bus type
-                     * @param Type Event bus type
+                     * @param _type Event bus type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -161,20 +179,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return PayMode Billing Mode
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置Billing Mode
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PayMode Billing Mode
+                     * @param _payMode Billing Mode
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -183,20 +204,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ConnectionBriefs Connector basic information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ConnectionBrief> GetConnectionBriefs() const;
 
                     /**
                      * 设置Connector basic information
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ConnectionBriefs Connector basic information
+                     * @param _connectionBriefs Connector basic information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConnectionBriefs(const std::vector<ConnectionBrief>& _connectionBriefs);
 
                     /**
                      * 判断参数 ConnectionBriefs 是否已赋值
                      * @return ConnectionBriefs 是否已赋值
+                     * 
                      */
                     bool ConnectionBriefsHasBeenSet() const;
 
@@ -205,20 +229,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TargetBriefs Target information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TargetBrief> GetTargetBriefs() const;
 
                     /**
                      * 设置Target information
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TargetBriefs Target information
+                     * @param _targetBriefs Target information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargetBriefs(const std::vector<TargetBrief>& _targetBriefs);
 
                     /**
                      * 判断参数 TargetBriefs 是否已赋值
                      * @return TargetBriefs 是否已赋值
+                     * 
                      */
                     bool TargetBriefsHasBeenSet() const;
 

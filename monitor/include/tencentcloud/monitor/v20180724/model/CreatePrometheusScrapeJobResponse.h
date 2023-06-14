@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of a successfully created scrape task.
                      * @return JobId ID of a successfully created scrape task.
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 

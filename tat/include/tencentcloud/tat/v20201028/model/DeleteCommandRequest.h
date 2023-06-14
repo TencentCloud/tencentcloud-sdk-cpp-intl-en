@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the command to be deleted.
                      * @return CommandId ID of the command to be deleted.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 设置ID of the command to be deleted.
-                     * @param CommandId ID of the command to be deleted.
+                     * @param _commandId ID of the command to be deleted.
+                     * 
                      */
                     void SetCommandId(const std::string& _commandId);
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 

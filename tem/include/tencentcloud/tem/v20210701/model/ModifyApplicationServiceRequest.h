@@ -47,90 +47,105 @@ namespace TencentCloud
                     /**
                      * 获取Application ID
                      * @return ApplicationId Application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Environment ID
                      * @return EnvironmentId Environment ID
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Source channel. Please keep the default value.
                      * @return SourceChannel Source channel. Please keep the default value.
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel. Please keep the default value.
-                     * @param SourceChannel Source channel. Please keep the default value.
+                     * @param _sourceChannel Source channel. Please keep the default value.
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 
                     /**
                      * 获取Full access mode settings
                      * @return Service Full access mode settings
+                     * 
                      */
                     EksService GetService() const;
 
                     /**
                      * 设置Full access mode settings
-                     * @param Service Full access mode settings
+                     * @param _service Full access mode settings
+                     * 
                      */
                     void SetService(const EksService& _service);
 
                     /**
                      * 判断参数 Service 是否已赋值
                      * @return Service 是否已赋值
+                     * 
                      */
                     bool ServiceHasBeenSet() const;
 
                     /**
                      * 获取Single entry access mode settings
                      * @return Data Single entry access mode settings
+                     * 
                      */
                     ServicePortMapping GetData() const;
 
                     /**
                      * 设置Single entry access mode settings
-                     * @param Data Single entry access mode settings
+                     * @param _data Single entry access mode settings
+                     * 
                      */
                     void SetData(const ServicePortMapping& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

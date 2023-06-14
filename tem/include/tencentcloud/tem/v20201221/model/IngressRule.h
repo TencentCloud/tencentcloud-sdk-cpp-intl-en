@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取ingress rule value
                      * @return Http ingress rule value
+                     * 
                      */
                     IngressRuleValue GetHttp() const;
 
                     /**
                      * 设置ingress rule value
-                     * @param Http ingress rule value
+                     * @param _http ingress rule value
+                     * 
                      */
                     void SetHttp(const IngressRuleValue& _http);
 
                     /**
                      * 判断参数 Http 是否已赋值
                      * @return Http 是否已赋值
+                     * 
                      */
                     bool HttpHasBeenSet() const;
 
@@ -70,38 +73,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Host Host address
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Host address
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Host Host address
+                     * @param _host Host address
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 
                     /**
                      * 获取Protocol. Options include HTTP and HTTPS. The default option is HTTP.
                      * @return Protocol Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol. Options include HTTP and HTTPS. The default option is HTTP.
-                     * @param Protocol Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+                     * @param _protocol Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 

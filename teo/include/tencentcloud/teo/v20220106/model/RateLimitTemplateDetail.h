@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mode Template name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Template name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mode Template name
+                     * @param _mode Template name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ID Unique ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Unique ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ID Unique ID
+                     * @param _iD Unique ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Action Action
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Action Action
+                     * @param _action Action
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PunishTime Time it takes to perform the action
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPunishTime() const;
 
                     /**
                      * 设置Time it takes to perform the action
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PunishTime Time it takes to perform the action
+                     * @param _punishTime Time it takes to perform the action
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPunishTime(const int64_t& _punishTime);
 
                     /**
                      * 判断参数 PunishTime 是否已赋值
                      * @return PunishTime 是否已赋值
+                     * 
                      */
                     bool PunishTimeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Threshold Request rate threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetThreshold() const;
 
                     /**
                      * 设置Request rate threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Threshold Request rate threshold
+                     * @param _threshold Request rate threshold
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetThreshold(const int64_t& _threshold);
 
                     /**
                      * 判断参数 Threshold 是否已赋值
                      * @return Threshold 是否已赋值
+                     * 
                      */
                     bool ThresholdHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Period Statistical period
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Statistical period
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Period Statistical period
+                     * @param _period Statistical period
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 

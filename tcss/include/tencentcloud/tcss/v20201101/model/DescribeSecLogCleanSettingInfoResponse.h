@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Minimum storage for triggering clearing
                      * @return ReservesLimit Minimum storage for triggering clearing
+                     * 
                      */
                     uint64_t GetReservesLimit() const;
 
                     /**
                      * 判断参数 ReservesLimit 是否已赋值
                      * @return ReservesLimit 是否已赋值
+                     * 
                      */
                     bool ReservesLimitHasBeenSet() const;
 
                     /**
                      * 获取Storage limit for stopping clearing
                      * @return ReservesDeadline Storage limit for stopping clearing
+                     * 
                      */
                     uint64_t GetReservesDeadline() const;
 
                     /**
                      * 判断参数 ReservesDeadline 是否已赋值
                      * @return ReservesDeadline 是否已赋值
+                     * 
                      */
                     bool ReservesDeadlineHasBeenSet() const;
 
                     /**
                      * 获取Storage period for triggering clearing
                      * @return DayLimit Storage period for triggering clearing
+                     * 
                      */
                     uint64_t GetDayLimit() const;
 
                     /**
                      * 判断参数 DayLimit 是否已赋值
                      * @return DayLimit 是否已赋值
+                     * 
                      */
                     bool DayLimitHasBeenSet() const;
 

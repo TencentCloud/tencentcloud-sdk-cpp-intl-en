@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Data Statistical value (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetData() const;
 
                     /**
                      * 设置Statistical value (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Data Statistical value (in seconds)
+                     * @param _data Statistical value (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetData(const double& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

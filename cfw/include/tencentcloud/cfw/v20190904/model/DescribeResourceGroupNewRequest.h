@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Query type. Network–VPC; business recognition–resource; resource tag–tag
                      * @return QueryType Query type. Network–VPC; business recognition–resource; resource tag–tag
+                     * 
                      */
                     std::string GetQueryType() const;
 
                     /**
                      * 设置Query type. Network–VPC; business recognition–resource; resource tag–tag
-                     * @param QueryType Query type. Network–VPC; business recognition–resource; resource tag–tag
+                     * @param _queryType Query type. Network–VPC; business recognition–resource; resource tag–tag
+                     * 
                      */
                     void SetQueryType(const std::string& _queryType);
 
                     /**
                      * 判断参数 QueryType 是否已赋值
                      * @return QueryType 是否已赋值
+                     * 
                      */
                     bool QueryTypeHasBeenSet() const;
 
                     /**
                      * 获取Asset group ID, 0: all asset group IDs
                      * @return GroupId Asset group ID, 0: all asset group IDs
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Asset group ID, 0: all asset group IDs
-                     * @param GroupId Asset group ID, 0: all asset group IDs
+                     * @param _groupId Asset group ID, 0: all asset group IDs
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取all: all, including subgroups; own: my asset groups only
                      * @return ShowType all: all, including subgroups; own: my asset groups only
+                     * 
                      */
                     std::string GetShowType() const;
 
                     /**
                      * 设置all: all, including subgroups; own: my asset groups only
-                     * @param ShowType all: all, including subgroups; own: my asset groups only
+                     * @param _showType all: all, including subgroups; own: my asset groups only
+                     * 
                      */
                     void SetShowType(const std::string& _showType);
 
                     /**
                      * 判断参数 ShowType 是否已赋值
                      * @return ShowType 是否已赋值
+                     * 
                      */
                     bool ShowTypeHasBeenSet() const;
 

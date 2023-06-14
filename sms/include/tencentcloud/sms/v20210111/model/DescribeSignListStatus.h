@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Signature ID.
                      * @return SignId Signature ID.
+                     * 
                      */
                     uint64_t GetSignId() const;
 
                     /**
                      * 设置Signature ID.
-                     * @param SignId Signature ID.
+                     * @param _signId Signature ID.
+                     * 
                      */
                     void SetSignId(const uint64_t& _signId);
 
                     /**
                      * 判断参数 SignId 是否已赋值
                      * @return SignId 是否已赋值
+                     * 
                      */
                     bool SignIdHasBeenSet() const;
 
                     /**
                      * 获取Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
                      * @return International Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
                     /**
                      * 设置Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
-                     * @param International Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
+                     * @param _international Whether it is Global SMS. 0: Mainland China SMS; 1: Global SMS.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 
@@ -87,74 +93,86 @@ namespace TencentCloud
 -1: application rejected or failed.
                      * @return StatusCode Signature application status. Valid values: 0: approved; 1: under review.
 -1: application rejected or failed.
+                     * 
                      */
                     int64_t GetStatusCode() const;
 
                     /**
                      * 设置Signature application status. Valid values: 0: approved; 1: under review.
 -1: application rejected or failed.
-                     * @param StatusCode Signature application status. Valid values: 0: approved; 1: under review.
+                     * @param _statusCode Signature application status. Valid values: 0: approved; 1: under review.
 -1: application rejected or failed.
+                     * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
                      * @return ReviewReply Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+                     * 
                      */
                     std::string GetReviewReply() const;
 
                     /**
                      * 设置Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
-                     * @param ReviewReply Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+                     * @param _reviewReply Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+                     * 
                      */
                     void SetReviewReply(const std::string& _reviewReply);
 
                     /**
                      * 判断参数 ReviewReply 是否已赋值
                      * @return ReviewReply 是否已赋值
+                     * 
                      */
                     bool ReviewReplyHasBeenSet() const;
 
                     /**
                      * 获取Signature name.
                      * @return SignName Signature name.
+                     * 
                      */
                     std::string GetSignName() const;
 
                     /**
                      * 设置Signature name.
-                     * @param SignName Signature name.
+                     * @param _signName Signature name.
+                     * 
                      */
                     void SetSignName(const std::string& _signName);
 
                     /**
                      * 判断参数 SignName 是否已赋值
                      * @return SignName 是否已赋值
+                     * 
                      */
                     bool SignNameHasBeenSet() const;
 
                     /**
                      * 获取Application submission time in the format of UNIX timestamp in seconds.
                      * @return CreateTime Application submission time in the format of UNIX timestamp in seconds.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Application submission time in the format of UNIX timestamp in seconds.
-                     * @param CreateTime Application submission time in the format of UNIX timestamp in seconds.
+                     * @param _createTime Application submission time in the format of UNIX timestamp in seconds.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

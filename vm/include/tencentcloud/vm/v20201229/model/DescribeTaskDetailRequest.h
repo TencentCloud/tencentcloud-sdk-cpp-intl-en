@@ -47,38 +47,44 @@ namespace TencentCloud
 <br>Note: the query API can query up to **20 tasks at a time**.
                      * @return TaskId This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task for which to query the details.
 <br>Note: the query API can query up to **20 tasks at a time**.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task for which to query the details.
 <br>Note: the query API can query up to **20 tasks at a time**.
-                     * @param TaskId This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task for which to query the details.
+                     * @param _taskId This field indicates the task ID (in the `Results` parameter) returned after a video moderation task is created. It is used to identify the moderation task for which to query the details.
 <br>Note: the query API can query up to **20 tasks at a time**.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取This boolean field indicates whether to display all video segments. Valid values: True (yes), False (display only video segments that hit the moderation rule). Default value: False.
                      * @return ShowAllSegments This boolean field indicates whether to display all video segments. Valid values: True (yes), False (display only video segments that hit the moderation rule). Default value: False.
+                     * 
                      */
                     bool GetShowAllSegments() const;
 
                     /**
                      * 设置This boolean field indicates whether to display all video segments. Valid values: True (yes), False (display only video segments that hit the moderation rule). Default value: False.
-                     * @param ShowAllSegments This boolean field indicates whether to display all video segments. Valid values: True (yes), False (display only video segments that hit the moderation rule). Default value: False.
+                     * @param _showAllSegments This boolean field indicates whether to display all video segments. Valid values: True (yes), False (display only video segments that hit the moderation rule). Default value: False.
+                     * 
                      */
                     void SetShowAllSegments(const bool& _showAllSegments);
 
                     /**
                      * 判断参数 ShowAllSegments 是否已赋值
                      * @return ShowAllSegments 是否已赋值
+                     * 
                      */
                     bool ShowAllSegmentsHasBeenSet() const;
 

@@ -53,6 +53,7 @@ Valid values:
                      * @return DiskType System disk type.
 Valid values: 
 <li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+                     * 
                      */
                     std::string GetDiskType() const;
 
@@ -60,33 +61,38 @@ Valid values:
                      * 设置System disk type.
 Valid values: 
 <li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
-                     * @param DiskType System disk type.
+                     * @param _diskType System disk type.
 Valid values: 
 <li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取System disk size in GB.
                      * @return DiskSize System disk size in GB.
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置System disk size in GB.
-                     * @param DiskSize System disk size in GB.
+                     * @param _diskSize System disk size in GB.
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Valid values:
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DiskId System disk ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置System disk ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DiskId System disk ID.
+                     * @param _diskId System disk ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 

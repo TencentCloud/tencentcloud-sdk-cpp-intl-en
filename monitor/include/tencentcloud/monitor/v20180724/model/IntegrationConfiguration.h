@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Type
                      * @return Kind Type
+                     * 
                      */
                     std::string GetKind() const;
 
                     /**
                      * 设置Type
-                     * @param Kind Type
+                     * @param _kind Type
+                     * 
                      */
                     void SetKind(const std::string& _kind);
 
                     /**
                      * 判断参数 Kind 是否已赋值
                      * @return Kind 是否已赋值
+                     * 
                      */
                     bool KindHasBeenSet() const;
 
                     /**
                      * 获取Content
                      * @return Content Content
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Content
-                     * @param Content Content
+                     * @param _content Content
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Status
                      * @return Status Status
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Status
-                     * @param Status Status
+                     * @param _status Status
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Instance type
                      * @return Category Instance type
+                     * 
                      */
                     std::string GetCategory() const;
 
                     /**
                      * 设置Instance type
-                     * @param Category Instance type
+                     * @param _category Instance type
+                     * 
                      */
                     void SetCategory(const std::string& _category);
 
                     /**
                      * 判断参数 Category 是否已赋值
                      * @return Category 是否已赋值
+                     * 
                      */
                     bool CategoryHasBeenSet() const;
 
                     /**
                      * 获取Instance description
                      * @return InstanceDesc Instance description
+                     * 
                      */
                     std::string GetInstanceDesc() const;
 
                     /**
                      * 设置Instance description
-                     * @param InstanceDesc Instance description
+                     * @param _instanceDesc Instance description
+                     * 
                      */
                     void SetInstanceDesc(const std::string& _instanceDesc);
 
                     /**
                      * 判断参数 InstanceDesc 是否已赋值
                      * @return InstanceDesc 是否已赋值
+                     * 
                      */
                     bool InstanceDescHasBeenSet() const;
 
                     /**
                      * 获取Dashboard URL
                      * @return GrafanaDashboardURL Dashboard URL
+                     * 
                      */
                     std::string GetGrafanaDashboardURL() const;
 
                     /**
                      * 设置Dashboard URL
-                     * @param GrafanaDashboardURL Dashboard URL
+                     * @param _grafanaDashboardURL Dashboard URL
+                     * 
                      */
                     void SetGrafanaDashboardURL(const std::string& _grafanaDashboardURL);
 
                     /**
                      * 判断参数 GrafanaDashboardURL 是否已赋值
                      * @return GrafanaDashboardURL 是否已赋值
+                     * 
                      */
                     bool GrafanaDashboardURLHasBeenSet() const;
 

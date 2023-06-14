@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Timestamp Error occurrence time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
                      * 设置Error occurrence time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Timestamp Error occurrence time.
+                     * @param _timestamp Error occurrence time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Content Error details
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Error details
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Content Error details
+                     * @param _content Error details
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

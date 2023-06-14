@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of scaling groups to be queried. Upper limit: 100.
                      * @return AutoScalingGroupIds List of scaling groups to be queried. Upper limit: 100.
+                     * 
                      */
                     std::vector<std::string> GetAutoScalingGroupIds() const;
 
                     /**
                      * 设置List of scaling groups to be queried. Upper limit: 100.
-                     * @param AutoScalingGroupIds List of scaling groups to be queried. Upper limit: 100.
+                     * @param _autoScalingGroupIds List of scaling groups to be queried. Upper limit: 100.
+                     * 
                      */
                     void SetAutoScalingGroupIds(const std::vector<std::string>& _autoScalingGroupIds);
 
                     /**
                      * 判断参数 AutoScalingGroupIds 是否已赋值
                      * @return AutoScalingGroupIds 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdsHasBeenSet() const;
 

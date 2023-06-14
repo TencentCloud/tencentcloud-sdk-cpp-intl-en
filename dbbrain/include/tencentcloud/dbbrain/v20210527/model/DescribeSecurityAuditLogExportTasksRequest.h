@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Security audit group ID.
                      * @return SecAuditGroupId Security audit group ID.
+                     * 
                      */
                     std::string GetSecAuditGroupId() const;
 
                     /**
                      * 设置Security audit group ID.
-                     * @param SecAuditGroupId Security audit group ID.
+                     * @param _secAuditGroupId Security audit group ID.
+                     * 
                      */
                     void SetSecAuditGroupId(const std::string& _secAuditGroupId);
 
                     /**
                      * 判断参数 SecAuditGroupId 是否已赋值
                      * @return SecAuditGroupId 是否已赋值
+                     * 
                      */
                     bool SecAuditGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid value: `mysql` (TencentDB for MySQL).
                      * @return Product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid value: `mysql` (TencentDB for MySQL).
-                     * @param Product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * @param _product Service type. Valid value: `mysql` (TencentDB for MySQL).
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取List of log export task IDs.
                      * @return AsyncRequestIds List of log export task IDs.
+                     * 
                      */
                     std::vector<uint64_t> GetAsyncRequestIds() const;
 
                     /**
                      * 设置List of log export task IDs.
-                     * @param AsyncRequestIds List of log export task IDs.
+                     * @param _asyncRequestIds List of log export task IDs.
+                     * 
                      */
                     void SetAsyncRequestIds(const std::vector<uint64_t>& _asyncRequestIds);
 
                     /**
                      * 判断参数 AsyncRequestIds 是否已赋值
                      * @return AsyncRequestIds 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdsHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: `0`.
                      * @return Offset Offset. Default value: `0`.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: `0`.
-                     * @param Offset Offset. Default value: `0`.
+                     * @param _offset Offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: `20`. Maximum value: `100`.
                      * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: `20`. Maximum value: `100`.
-                     * @param Limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * @param _limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

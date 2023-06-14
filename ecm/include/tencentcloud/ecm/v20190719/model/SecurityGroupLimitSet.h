@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Total number of security groups that can be created
                      * @return SecurityGroupLimit Total number of security groups that can be created
+                     * 
                      */
                     int64_t GetSecurityGroupLimit() const;
 
                     /**
                      * 设置Total number of security groups that can be created
-                     * @param SecurityGroupLimit Total number of security groups that can be created
+                     * @param _securityGroupLimit Total number of security groups that can be created
+                     * 
                      */
                     void SetSecurityGroupLimit(const int64_t& _securityGroupLimit);
 
                     /**
                      * 判断参数 SecurityGroupLimit 是否已赋值
                      * @return SecurityGroupLimit 是否已赋值
+                     * 
                      */
                     bool SecurityGroupLimitHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of rules under the security group
                      * @return SecurityGroupPolicyLimit Maximum number of rules under the security group
+                     * 
                      */
                     int64_t GetSecurityGroupPolicyLimit() const;
 
                     /**
                      * 设置Maximum number of rules under the security group
-                     * @param SecurityGroupPolicyLimit Maximum number of rules under the security group
+                     * @param _securityGroupPolicyLimit Maximum number of rules under the security group
+                     * 
                      */
                     void SetSecurityGroupPolicyLimit(const int64_t& _securityGroupPolicyLimit);
 
                     /**
                      * 判断参数 SecurityGroupPolicyLimit 是否已赋值
                      * @return SecurityGroupPolicyLimit 是否已赋值
+                     * 
                      */
                     bool SecurityGroupPolicyLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of nested security group rules under the security group
                      * @return ReferedSecurityGroupLimit Number of nested security group rules under the security group
+                     * 
                      */
                     int64_t GetReferedSecurityGroupLimit() const;
 
                     /**
                      * 设置Number of nested security group rules under the security group
-                     * @param ReferedSecurityGroupLimit Number of nested security group rules under the security group
+                     * @param _referedSecurityGroupLimit Number of nested security group rules under the security group
+                     * 
                      */
                     void SetReferedSecurityGroupLimit(const int64_t& _referedSecurityGroupLimit);
 
                     /**
                      * 判断参数 ReferedSecurityGroupLimit 是否已赋值
                      * @return ReferedSecurityGroupLimit 是否已赋值
+                     * 
                      */
                     bool ReferedSecurityGroupLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of instances associated with the security group
                      * @return SecurityGroupInstanceLimit Number of instances associated with the security group
+                     * 
                      */
                     int64_t GetSecurityGroupInstanceLimit() const;
 
                     /**
                      * 设置Number of instances associated with the security group
-                     * @param SecurityGroupInstanceLimit Number of instances associated with the security group
+                     * @param _securityGroupInstanceLimit Number of instances associated with the security group
+                     * 
                      */
                     void SetSecurityGroupInstanceLimit(const int64_t& _securityGroupInstanceLimit);
 
                     /**
                      * 判断参数 SecurityGroupInstanceLimit 是否已赋值
                      * @return SecurityGroupInstanceLimit 是否已赋值
+                     * 
                      */
                     bool SecurityGroupInstanceLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of security groups associated with the instance
                      * @return InstanceSecurityGroupLimit Number of security groups associated with the instance
+                     * 
                      */
                     int64_t GetInstanceSecurityGroupLimit() const;
 
                     /**
                      * 设置Number of security groups associated with the instance
-                     * @param InstanceSecurityGroupLimit Number of security groups associated with the instance
+                     * @param _instanceSecurityGroupLimit Number of security groups associated with the instance
+                     * 
                      */
                     void SetInstanceSecurityGroupLimit(const int64_t& _instanceSecurityGroupLimit);
 
                     /**
                      * 判断参数 InstanceSecurityGroupLimit 是否已赋值
                      * @return InstanceSecurityGroupLimit 是否已赋值
+                     * 
                      */
                     bool InstanceSecurityGroupLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of modules associated with the security group
                      * @return SecurityGroupModuleLimit Number of modules associated with the security group
+                     * 
                      */
                     int64_t GetSecurityGroupModuleLimit() const;
 
                     /**
                      * 设置Number of modules associated with the security group
-                     * @param SecurityGroupModuleLimit Number of modules associated with the security group
+                     * @param _securityGroupModuleLimit Number of modules associated with the security group
+                     * 
                      */
                     void SetSecurityGroupModuleLimit(const int64_t& _securityGroupModuleLimit);
 
                     /**
                      * 判断参数 SecurityGroupModuleLimit 是否已赋值
                      * @return SecurityGroupModuleLimit 是否已赋值
+                     * 
                      */
                     bool SecurityGroupModuleLimitHasBeenSet() const;
 
                     /**
                      * 获取Number of security groups associated with the module
                      * @return ModuleSecurityGroupLimit Number of security groups associated with the module
+                     * 
                      */
                     int64_t GetModuleSecurityGroupLimit() const;
 
                     /**
                      * 设置Number of security groups associated with the module
-                     * @param ModuleSecurityGroupLimit Number of security groups associated with the module
+                     * @param _moduleSecurityGroupLimit Number of security groups associated with the module
+                     * 
                      */
                     void SetModuleSecurityGroupLimit(const int64_t& _moduleSecurityGroupLimit);
 
                     /**
                      * 判断参数 ModuleSecurityGroupLimit 是否已赋值
                      * @return ModuleSecurityGroupLimit 是否已赋值
+                     * 
                      */
                     bool ModuleSecurityGroupLimitHasBeenSet() const;
 

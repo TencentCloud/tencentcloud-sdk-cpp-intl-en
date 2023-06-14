@@ -46,198 +46,231 @@ namespace TencentCloud
                     /**
                      * 获取Region ID (at least greater than 0)
                      * @return AreaId Region ID (at least greater than 0)
+                     * 
                      */
                     int64_t GetAreaId() const;
 
                     /**
                      * 设置Region ID (at least greater than 0)
-                     * @param AreaId Region ID (at least greater than 0)
+                     * @param _areaId Region ID (at least greater than 0)
+                     * 
                      */
                     void SetAreaId(const int64_t& _areaId);
 
                     /**
                      * 判断参数 AreaId 是否已赋值
                      * @return AreaId 是否已赋值
+                     * 
                      */
                     bool AreaIdHasBeenSet() const;
 
                     /**
                      * 获取Billing type (1: Pay-as-you-go).
                      * @return ChargeType Billing type (1: Pay-as-you-go).
+                     * 
                      */
                     int64_t GetChargeType() const;
 
                     /**
                      * 设置Billing type (1: Pay-as-you-go).
-                     * @param ChargeType Billing type (1: Pay-as-you-go).
+                     * @param _chargeType Billing type (1: Pay-as-you-go).
+                     * 
                      */
                     void SetChargeType(const int64_t& _chargeType);
 
                     /**
                      * 判断参数 ChargeType 是否已赋值
                      * @return ChargeType 是否已赋值
+                     * 
                      */
                     bool ChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Data retention period (at least greater than 0)
                      * @return DataRetentionDays Data retention period (at least greater than 0)
+                     * 
                      */
                     int64_t GetDataRetentionDays() const;
 
                     /**
                      * 设置Data retention period (at least greater than 0)
-                     * @param DataRetentionDays Data retention period (at least greater than 0)
+                     * @param _dataRetentionDays Data retention period (at least greater than 0)
+                     * 
                      */
                     void SetDataRetentionDays(const int64_t& _dataRetentionDays);
 
                     /**
                      * 判断参数 DataRetentionDays 是否已赋值
                      * @return DataRetentionDays 是否已赋值
+                     * 
                      */
                     bool DataRetentionDaysHasBeenSet() const;
 
                     /**
                      * 获取Instance name (up to 255 bytes)
                      * @return InstanceName Instance name (up to 255 bytes)
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name (up to 255 bytes)
-                     * @param InstanceName Instance name (up to 255 bytes)
+                     * @param _instanceName Instance name (up to 255 bytes)
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Tag list
                      * @return Tags Tag list
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list
-                     * @param Tags Tag list
+                     * @param _tags Tag list
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Instance description (up to 1,024 bytes)
                      * @return InstanceDesc Instance description (up to 1,024 bytes)
+                     * 
                      */
                     std::string GetInstanceDesc() const;
 
                     /**
                      * 设置Instance description (up to 1,024 bytes)
-                     * @param InstanceDesc Instance description (up to 1,024 bytes)
+                     * @param _instanceDesc Instance description (up to 1,024 bytes)
+                     * 
                      */
                     void SetInstanceDesc(const std::string& _instanceDesc);
 
                     /**
                      * 判断参数 InstanceDesc 是否已赋值
                      * @return InstanceDesc 是否已赋值
+                     * 
                      */
                     bool InstanceDescHasBeenSet() const;
 
                     /**
                      * 获取Number of data entries reported per day
                      * @return CountNum Number of data entries reported per day
+                     * 
                      */
                     std::string GetCountNum() const;
 
                     /**
                      * 设置Number of data entries reported per day
-                     * @param CountNum Number of data entries reported per day
+                     * @param _countNum Number of data entries reported per day
+                     * 
                      */
                     void SetCountNum(const std::string& _countNum);
 
                     /**
                      * 判断参数 CountNum 是否已赋值
                      * @return CountNum 是否已赋值
+                     * 
                      */
                     bool CountNumHasBeenSet() const;
 
                     /**
                      * 获取Billing for data storage
                      * @return PeriodRetain Billing for data storage
+                     * 
                      */
                     std::string GetPeriodRetain() const;
 
                     /**
                      * 设置Billing for data storage
-                     * @param PeriodRetain Billing for data storage
+                     * @param _periodRetain Billing for data storage
+                     * 
                      */
                     void SetPeriodRetain(const std::string& _periodRetain);
 
                     /**
                      * 判断参数 PeriodRetain 是否已赋值
                      * @return PeriodRetain 是否已赋值
+                     * 
                      */
                     bool PeriodRetainHasBeenSet() const;
 
                     /**
                      * 获取Instance purchase channel. Valid value: `cdn`.
                      * @return BuyingChannel Instance purchase channel. Valid value: `cdn`.
+                     * 
                      */
                     std::string GetBuyingChannel() const;
 
                     /**
                      * 设置Instance purchase channel. Valid value: `cdn`.
-                     * @param BuyingChannel Instance purchase channel. Valid value: `cdn`.
+                     * @param _buyingChannel Instance purchase channel. Valid value: `cdn`.
+                     * 
                      */
                     void SetBuyingChannel(const std::string& _buyingChannel);
 
                     /**
                      * 判断参数 BuyingChannel 是否已赋值
                      * @return BuyingChannel 是否已赋值
+                     * 
                      */
                     bool BuyingChannelHasBeenSet() const;
 
                     /**
                      * 获取Type of prepaid resource pack (only required for prepaid mode)
                      * @return ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
+                     * 
                      */
                     uint64_t GetResourcePackageType() const;
 
                     /**
                      * 设置Type of prepaid resource pack (only required for prepaid mode)
-                     * @param ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
+                     * @param _resourcePackageType Type of prepaid resource pack (only required for prepaid mode)
+                     * 
                      */
                     void SetResourcePackageType(const uint64_t& _resourcePackageType);
 
                     /**
                      * 判断参数 ResourcePackageType 是否已赋值
                      * @return ResourcePackageType 是否已赋值
+                     * 
                      */
                     bool ResourcePackageTypeHasBeenSet() const;
 
                     /**
                      * 获取The number of prepaid resource packs (only required for prepaid mode)
                      * @return ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
+                     * 
                      */
                     uint64_t GetResourcePackageNum() const;
 
                     /**
                      * 设置The number of prepaid resource packs (only required for prepaid mode)
-                     * @param ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
+                     * @param _resourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
+                     * 
                      */
                     void SetResourcePackageNum(const uint64_t& _resourcePackageNum);
 
                     /**
                      * 判断参数 ResourcePackageNum 是否已赋值
                      * @return ResourcePackageNum 是否已赋值
+                     * 
                      */
                     bool ResourcePackageNumHasBeenSet() const;
 

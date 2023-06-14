@@ -57,6 +57,7 @@ namespace TencentCloud
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
+                     * 
                      */
                     std::string GetOperator() const;
 
@@ -66,17 +67,19 @@ namespace TencentCloud
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
-                     * @param Operator Operator. Valid values:
+                     * @param _operator Operator. Valid values:
 <li>`equals`: Equals</li>
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 
@@ -97,6 +100,7 @@ namespace TencentCloud
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
 <li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
+                     * 
                      */
                     std::string GetTarget() const;
 
@@ -109,7 +113,7 @@ namespace TencentCloud
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
 <li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
-                     * @param Target The match type. Values:
+                     * @param _target The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
@@ -117,12 +121,14 @@ namespace TencentCloud
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
 <li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
+                     * 
                      */
                     void SetTarget(const std::string& _target);
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 
@@ -147,6 +153,7 @@ namespace TencentCloud
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
@@ -161,7 +168,7 @@ namespace TencentCloud
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
-                     * @param Values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+                     * @param _values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
 <li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
 <li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
 <li>When `Target=all`, it indicates any site request.</li>
@@ -171,30 +178,35 @@ namespace TencentCloud
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 
                     /**
                      * 获取Whether the parameter value is case insensitive. Default value: false.
                      * @return IgnoreCase Whether the parameter value is case insensitive. Default value: false.
+                     * 
                      */
                     bool GetIgnoreCase() const;
 
                     /**
                      * 设置Whether the parameter value is case insensitive. Default value: false.
-                     * @param IgnoreCase Whether the parameter value is case insensitive. Default value: false.
+                     * @param _ignoreCase Whether the parameter value is case insensitive. Default value: false.
+                     * 
                      */
                     void SetIgnoreCase(const bool& _ignoreCase);
 
                     /**
                      * 判断参数 IgnoreCase 是否已赋值
                      * @return IgnoreCase 是否已赋值
+                     * 
                      */
                     bool IgnoreCaseHasBeenSet() const;
 
@@ -205,6 +217,7 @@ namespace TencentCloud
                      * @return Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
 <li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
 <li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+                     * 
                      */
                     std::string GetName() const;
 
@@ -212,15 +225,17 @@ namespace TencentCloud
                      * 设置The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
 <li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
 <li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
-                     * @param Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+                     * @param _name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
 <li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
 <li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -229,20 +244,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIgnoreNameCase() const;
 
                     /**
                      * 设置Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
+                     * @param _ignoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIgnoreNameCase(const bool& _ignoreNameCase);
 
                     /**
                      * 判断参数 IgnoreNameCase 是否已赋值
                      * @return IgnoreNameCase 是否已赋值
+                     * 
                      */
                     bool IgnoreNameCaseHasBeenSet() const;
 

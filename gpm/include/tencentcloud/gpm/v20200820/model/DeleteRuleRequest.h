@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取RuleCode
                      * @return RuleCode RuleCode
+                     * 
                      */
                     std::string GetRuleCode() const;
 
                     /**
                      * 设置RuleCode
-                     * @param RuleCode RuleCode
+                     * @param _ruleCode RuleCode
+                     * 
                      */
                     void SetRuleCode(const std::string& _ruleCode);
 
                     /**
                      * 判断参数 RuleCode 是否已赋值
                      * @return RuleCode 是否已赋值
+                     * 
                      */
                     bool RuleCodeHasBeenSet() const;
 

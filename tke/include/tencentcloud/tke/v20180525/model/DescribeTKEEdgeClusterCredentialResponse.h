@@ -52,96 +52,112 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Addresses Access address of the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IPAddress> GetAddresses() const;
 
                     /**
                      * 判断参数 Addresses 是否已赋值
                      * @return Addresses 是否已赋值
+                     * 
                      */
                     bool AddressesHasBeenSet() const;
 
                     /**
                      * 获取Cluster authentication information
                      * @return Credential Cluster authentication information
+                     * 
                      */
                     ClusterCredential GetCredential() const;
 
                     /**
                      * 判断参数 Credential 是否已赋值
                      * @return Credential 是否已赋值
+                     * 
                      */
                     bool CredentialHasBeenSet() const;
 
                     /**
                      * 获取Public network access information of the cluster
                      * @return PublicLB Public network access information of the cluster
+                     * 
                      */
                     EdgeClusterPublicLB GetPublicLB() const;
 
                     /**
                      * 判断参数 PublicLB 是否已赋值
                      * @return PublicLB 是否已赋值
+                     * 
                      */
                     bool PublicLBHasBeenSet() const;
 
                     /**
                      * 获取Private network access information of the cluster
                      * @return InternalLB Private network access information of the cluster
+                     * 
                      */
                     EdgeClusterInternalLB GetInternalLB() const;
 
                     /**
                      * 判断参数 InternalLB 是否已赋值
                      * @return InternalLB 是否已赋值
+                     * 
                      */
                     bool InternalLBHasBeenSet() const;
 
                     /**
                      * 获取CoreDns deployment information of the cluster
                      * @return CoreDns CoreDns deployment information of the cluster
+                     * 
                      */
                     std::string GetCoreDns() const;
 
                     /**
                      * 判断参数 CoreDns 是否已赋值
                      * @return CoreDns 是否已赋值
+                     * 
                      */
                     bool CoreDnsHasBeenSet() const;
 
                     /**
                      * 获取Multi-region health check deployment information of the cluster
                      * @return HealthRegion Multi-region health check deployment information of the cluster
+                     * 
                      */
                     std::string GetHealthRegion() const;
 
                     /**
                      * 判断参数 HealthRegion 是否已赋值
                      * @return HealthRegion 是否已赋值
+                     * 
                      */
                     bool HealthRegionHasBeenSet() const;
 
                     /**
                      * 获取Health check deployment information of the cluster
                      * @return Health Health check deployment information of the cluster
+                     * 
                      */
                     std::string GetHealth() const;
 
                     /**
                      * 判断参数 Health 是否已赋值
                      * @return Health 是否已赋值
+                     * 
                      */
                     bool HealthHasBeenSet() const;
 
                     /**
                      * 获取Whether to deploy GridDaemon to support headless service
                      * @return GridDaemon Whether to deploy GridDaemon to support headless service
+                     * 
                      */
                     std::string GetGridDaemon() const;
 
                     /**
                      * 判断参数 GridDaemon 是否已赋值
                      * @return GridDaemon 是否已赋值
+                     * 
                      */
                     bool GridDaemonHasBeenSet() const;
 

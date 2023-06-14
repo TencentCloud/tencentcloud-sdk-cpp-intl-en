@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The group ID.
                      * @return GroupId The group ID.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * @param _groupId The group ID.
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取The SDKAppID assigned by LCIC.
                      * @return SdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The SDKAppID assigned by LCIC.
-                     * @param SdkAppId The SDKAppID assigned by LCIC.
+                     * @param _sdkAppId The SDKAppID assigned by LCIC.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The page to return records from. The default value is 1.
                      * @return Page The page to return records from. The default value is 1.
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置The page to return records from. The default value is 1.
-                     * @param Page The page to return records from. The default value is 1.
+                     * @param _page The page to return records from. The default value is 1.
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
                      * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
-                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+                     * @param _limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

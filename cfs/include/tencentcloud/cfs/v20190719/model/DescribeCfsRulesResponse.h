@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of permission group rules
                      * @return RuleList List of permission group rules
+                     * 
                      */
                     std::vector<PGroupRuleInfo> GetRuleList() const;
 
                     /**
                      * 判断参数 RuleList 是否已赋值
                      * @return RuleList 是否已赋值
+                     * 
                      */
                     bool RuleListHasBeenSet() const;
 

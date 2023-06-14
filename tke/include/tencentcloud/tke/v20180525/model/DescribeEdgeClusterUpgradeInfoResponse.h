@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ComponentVersion Upgradeable cluster component
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetComponentVersion() const;
 
                     /**
                      * 判断参数 ComponentVersion 是否已赋值
                      * @return ComponentVersion 是否已赋值
+                     * 
                      */
                     bool ComponentVersionHasBeenSet() const;
 
@@ -62,12 +64,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EdgeVersionCurrent Current version of the edge cluster
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEdgeVersionCurrent() const;
 
                     /**
                      * 判断参数 EdgeVersionCurrent 是否已赋值
                      * @return EdgeVersionCurrent 是否已赋值
+                     * 
                      */
                     bool EdgeVersionCurrentHasBeenSet() const;
 
@@ -76,12 +80,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RegistryPrefix Prefix of the image registry of an edge component (including domain name and namespace)
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRegistryPrefix() const;
 
                     /**
                      * 判断参数 RegistryPrefix 是否已赋值
                      * @return RegistryPrefix 是否已赋值
+                     * 
                      */
                     bool RegistryPrefixHasBeenSet() const;
 
@@ -90,12 +96,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ClusterUpgradeStatus Cluster upgrade status. Valid values: `Running`, `Updating`, `Failed`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetClusterUpgradeStatus() const;
 
                     /**
                      * 判断参数 ClusterUpgradeStatus 是否已赋值
                      * @return ClusterUpgradeStatus 是否已赋值
+                     * 
                      */
                     bool ClusterUpgradeStatusHasBeenSet() const;
 
@@ -104,12 +112,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ClusterUpgradeStatusReason Reason for `Updating` or `Failed`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetClusterUpgradeStatusReason() const;
 
                     /**
                      * 判断参数 ClusterUpgradeStatusReason 是否已赋值
                      * @return ClusterUpgradeStatusReason 是否已赋值
+                     * 
                      */
                     bool ClusterUpgradeStatusReasonHasBeenSet() const;
 

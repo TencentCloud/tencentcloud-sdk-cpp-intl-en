@@ -48,36 +48,42 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LogList Domain information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetLogList() const;
 
                     /**
                      * 判断参数 LogList 是否已赋值
                      * @return LogList 是否已赋值
+                     * 
                      */
                     bool LogListHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page
                      * @return PageSize Number of results per page
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Total number of logs
                      * @return TotalCount Total number of logs
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

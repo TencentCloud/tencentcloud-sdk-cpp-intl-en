@@ -49,198 +49,231 @@ namespace TencentCloud
                     /**
                      * 获取Task start time
                      * @return StartTime Task start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Task start time
-                     * @param StartTime Task start time
+                     * @param _startTime Task start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of data receivers
                      * @return Receivers Number of data receivers
+                     * 
                      */
                     int64_t GetReceivers() const;
 
                     /**
                      * 设置Number of data receivers
-                     * @param Receivers Number of data receivers
+                     * @param _receivers Number of data receivers
+                     * 
                      */
                     void SetReceivers(const int64_t& _receivers);
 
                     /**
                      * 判断参数 Receivers 是否已赋值
                      * @return Receivers 是否已赋值
+                     * 
                      */
                     bool ReceiversHasBeenSet() const;
 
                     /**
                      * 获取Number of receivers in service
                      * @return NumActiveReceivers Number of receivers in service
+                     * 
                      */
                     int64_t GetNumActiveReceivers() const;
 
                     /**
                      * 设置Number of receivers in service
-                     * @param NumActiveReceivers Number of receivers in service
+                     * @param _numActiveReceivers Number of receivers in service
+                     * 
                      */
                     void SetNumActiveReceivers(const int64_t& _numActiveReceivers);
 
                     /**
                      * 判断参数 NumActiveReceivers 是否已赋值
                      * @return NumActiveReceivers 是否已赋值
+                     * 
                      */
                     bool NumActiveReceiversHasBeenSet() const;
 
                     /**
                      * 获取Number of inactive receivers
                      * @return NumInactiveReceivers Number of inactive receivers
+                     * 
                      */
                     int64_t GetNumInactiveReceivers() const;
 
                     /**
                      * 设置Number of inactive receivers
-                     * @param NumInactiveReceivers Number of inactive receivers
+                     * @param _numInactiveReceivers Number of inactive receivers
+                     * 
                      */
                     void SetNumInactiveReceivers(const int64_t& _numInactiveReceivers);
 
                     /**
                      * 判断参数 NumInactiveReceivers 是否已赋值
                      * @return NumInactiveReceivers 是否已赋值
+                     * 
                      */
                     bool NumInactiveReceiversHasBeenSet() const;
 
                     /**
                      * 获取Number of running batches
                      * @return NumActiveBatches Number of running batches
+                     * 
                      */
                     int64_t GetNumActiveBatches() const;
 
                     /**
                      * 设置Number of running batches
-                     * @param NumActiveBatches Number of running batches
+                     * @param _numActiveBatches Number of running batches
+                     * 
                      */
                     void SetNumActiveBatches(const int64_t& _numActiveBatches);
 
                     /**
                      * 判断参数 NumActiveBatches 是否已赋值
                      * @return NumActiveBatches 是否已赋值
+                     * 
                      */
                     bool NumActiveBatchesHasBeenSet() const;
 
                     /**
                      * 获取Number of batches to be processed
                      * @return NumRetainedCompletedBatches Number of batches to be processed
+                     * 
                      */
                     int64_t GetNumRetainedCompletedBatches() const;
 
                     /**
                      * 设置Number of batches to be processed
-                     * @param NumRetainedCompletedBatches Number of batches to be processed
+                     * @param _numRetainedCompletedBatches Number of batches to be processed
+                     * 
                      */
                     void SetNumRetainedCompletedBatches(const int64_t& _numRetainedCompletedBatches);
 
                     /**
                      * 判断参数 NumRetainedCompletedBatches 是否已赋值
                      * @return NumRetainedCompletedBatches 是否已赋值
+                     * 
                      */
                     bool NumRetainedCompletedBatchesHasBeenSet() const;
 
                     /**
                      * 获取Number of completed batches
                      * @return NumTotalCompletedBatches Number of completed batches
+                     * 
                      */
                     int64_t GetNumTotalCompletedBatches() const;
 
                     /**
                      * 设置Number of completed batches
-                     * @param NumTotalCompletedBatches Number of completed batches
+                     * @param _numTotalCompletedBatches Number of completed batches
+                     * 
                      */
                     void SetNumTotalCompletedBatches(const int64_t& _numTotalCompletedBatches);
 
                     /**
                      * 判断参数 NumTotalCompletedBatches 是否已赋值
                      * @return NumTotalCompletedBatches 是否已赋值
+                     * 
                      */
                     bool NumTotalCompletedBatchesHasBeenSet() const;
 
                     /**
                      * 获取Average input speed
                      * @return AverageInputRate Average input speed
+                     * 
                      */
                     double GetAverageInputRate() const;
 
                     /**
                      * 设置Average input speed
-                     * @param AverageInputRate Average input speed
+                     * @param _averageInputRate Average input speed
+                     * 
                      */
                     void SetAverageInputRate(const double& _averageInputRate);
 
                     /**
                      * 判断参数 AverageInputRate 是否已赋值
                      * @return AverageInputRate 是否已赋值
+                     * 
                      */
                     bool AverageInputRateHasBeenSet() const;
 
                     /**
                      * 获取Average queue time
                      * @return AverageSchedulingDelay Average queue time
+                     * 
                      */
                     double GetAverageSchedulingDelay() const;
 
                     /**
                      * 设置Average queue time
-                     * @param AverageSchedulingDelay Average queue time
+                     * @param _averageSchedulingDelay Average queue time
+                     * 
                      */
                     void SetAverageSchedulingDelay(const double& _averageSchedulingDelay);
 
                     /**
                      * 判断参数 AverageSchedulingDelay 是否已赋值
                      * @return AverageSchedulingDelay 是否已赋值
+                     * 
                      */
                     bool AverageSchedulingDelayHasBeenSet() const;
 
                     /**
                      * 获取Average processing time
                      * @return AverageProcessingTime Average processing time
+                     * 
                      */
                     double GetAverageProcessingTime() const;
 
                     /**
                      * 设置Average processing time
-                     * @param AverageProcessingTime Average processing time
+                     * @param _averageProcessingTime Average processing time
+                     * 
                      */
                     void SetAverageProcessingTime(const double& _averageProcessingTime);
 
                     /**
                      * 判断参数 AverageProcessingTime 是否已赋值
                      * @return AverageProcessingTime 是否已赋值
+                     * 
                      */
                     bool AverageProcessingTimeHasBeenSet() const;
 
                     /**
                      * 获取Average latency
                      * @return AverageTotalDelay Average latency
+                     * 
                      */
                     double GetAverageTotalDelay() const;
 
                     /**
                      * 设置Average latency
-                     * @param AverageTotalDelay Average latency
+                     * @param _averageTotalDelay Average latency
+                     * 
                      */
                     void SetAverageTotalDelay(const double& _averageTotalDelay);
 
                     /**
                      * 判断参数 AverageTotalDelay 是否已赋值
                      * @return AverageTotalDelay 是否已赋值
+                     * 
                      */
                     bool AverageTotalDelayHasBeenSet() const;
 

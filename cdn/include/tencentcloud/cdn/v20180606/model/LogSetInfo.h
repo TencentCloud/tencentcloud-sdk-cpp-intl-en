@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Developer ID
                      * @return AppId Developer ID
+                     * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
                      * 设置Developer ID
-                     * @param AppId Developer ID
+                     * @param _appId Developer ID
+                     * 
                      */
                     void SetAppId(const uint64_t& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
@@ -69,128 +72,149 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Channel Channel
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetChannel() const;
 
                     /**
                      * 设置Channel
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Channel Channel
+                     * @param _channel Channel
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetChannel(const std::string& _channel);
 
                     /**
                      * 判断参数 Channel 是否已赋值
                      * @return Channel 是否已赋值
+                     * 
                      */
                     bool ChannelHasBeenSet() const;
 
                     /**
                      * 获取Logset ID
                      * @return LogsetId Logset ID
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置Logset ID
-                     * @param LogsetId Logset ID
+                     * @param _logsetId Logset ID
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Logset name
                      * @return LogsetName Logset name
+                     * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
                      * 设置Logset name
-                     * @param LogsetName Logset name
+                     * @param _logsetName Logset name
+                     * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
 
                     /**
                      * 判断参数 LogsetName 是否已赋值
                      * @return LogsetName 是否已赋值
+                     * 
                      */
                     bool LogsetNameHasBeenSet() const;
 
                     /**
                      * 获取Whether it is the default logset
                      * @return IsDefault Whether it is the default logset
+                     * 
                      */
                     uint64_t GetIsDefault() const;
 
                     /**
                      * 设置Whether it is the default logset
-                     * @param IsDefault Whether it is the default logset
+                     * @param _isDefault Whether it is the default logset
+                     * 
                      */
                     void SetIsDefault(const uint64_t& _isDefault);
 
                     /**
                      * 判断参数 IsDefault 是否已赋值
                      * @return IsDefault 是否已赋值
+                     * 
                      */
                     bool IsDefaultHasBeenSet() const;
 
                     /**
                      * 获取Log retention period in days
                      * @return LogsetSavePeriod Log retention period in days
+                     * 
                      */
                     uint64_t GetLogsetSavePeriod() const;
 
                     /**
                      * 设置Log retention period in days
-                     * @param LogsetSavePeriod Log retention period in days
+                     * @param _logsetSavePeriod Log retention period in days
+                     * 
                      */
                     void SetLogsetSavePeriod(const uint64_t& _logsetSavePeriod);
 
                     /**
                      * 判断参数 LogsetSavePeriod 是否已赋值
                      * @return LogsetSavePeriod 是否已赋值
+                     * 
                      */
                     bool LogsetSavePeriodHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return Region Region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
-                     * @param Region Region
+                     * @param _region Region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -199,20 +223,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Deleted Whether the logset has been removed from CLS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDeleted() const;
 
                     /**
                      * 设置Whether the logset has been removed from CLS
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Deleted Whether the logset has been removed from CLS
+                     * @param _deleted Whether the logset has been removed from CLS
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDeleted(const std::string& _deleted);
 
                     /**
                      * 判断参数 Deleted 是否已赋值
                      * @return Deleted 是否已赋值
+                     * 
                      */
                     bool DeletedHasBeenSet() const;
 
@@ -221,20 +248,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RegionEn Whether English is used in this region
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRegionEn() const;
 
                     /**
                      * 设置Whether English is used in this region
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RegionEn Whether English is used in this region
+                     * @param _regionEn Whether English is used in this region
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRegionEn(const std::string& _regionEn);
 
                     /**
                      * 判断参数 RegionEn 是否已赋值
                      * @return RegionEn 是否已赋值
+                     * 
                      */
                     bool RegionEnHasBeenSet() const;
 

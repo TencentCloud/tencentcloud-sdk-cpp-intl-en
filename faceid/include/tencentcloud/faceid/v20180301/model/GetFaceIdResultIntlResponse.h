@@ -66,48 +66,56 @@ namespace TencentCloud
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
 -999: The verification process wasn't finished.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取The description of the verification result.
                      * @return Description The description of the verification result.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取The best frame screenshot (in Base64) obtained during the verification.
                      * @return BestFrame The best frame screenshot (in Base64) obtained during the verification.
+                     * 
                      */
                     std::string GetBestFrame() const;
 
                     /**
                      * 判断参数 BestFrame 是否已赋值
                      * @return BestFrame 是否已赋值
+                     * 
                      */
                     bool BestFrameHasBeenSet() const;
 
                     /**
                      * 获取The video file (Base64) for verification.
                      * @return Video The video file (Base64) for verification.
+                     * 
                      */
                     std::string GetVideo() const;
 
                     /**
                      * 判断参数 Video 是否已赋值
                      * @return Video 是否已赋值
+                     * 
                      */
                     bool VideoHasBeenSet() const;
 
@@ -116,12 +124,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Similarity The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (liveness detection and face comparison) mode.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetSimilarity() const;
 
                     /**
                      * 判断参数 Similarity 是否已赋值
                      * @return Similarity 是否已赋值
+                     * 
                      */
                     bool SimilarityHasBeenSet() const;
 
@@ -130,12 +140,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Extra The pass-through parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExtra() const;
 
                     /**
                      * 判断参数 Extra 是否已赋值
                      * @return Extra 是否已赋值
+                     * 
                      */
                     bool ExtraHasBeenSet() const;
 

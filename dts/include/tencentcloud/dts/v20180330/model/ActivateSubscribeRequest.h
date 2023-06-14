@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Subscription instance ID.
                      * @return SubscribeId Subscription instance ID.
+                     * 
                      */
                     std::string GetSubscribeId() const;
 
                     /**
                      * 设置Subscription instance ID.
-                     * @param SubscribeId Subscription instance ID.
+                     * @param _subscribeId Subscription instance ID.
+                     * 
                      */
                     void SetSubscribeId(const std::string& _subscribeId);
 
                     /**
                      * 判断参数 SubscribeId 是否已赋值
                      * @return SubscribeId 是否已赋值
+                     * 
                      */
                     bool SubscribeIdHasBeenSet() const;
 
                     /**
                      * 获取Database Instance ID
                      * @return InstanceId Database Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Database Instance ID
-                     * @param InstanceId Database Instance ID
+                     * @param _instanceId Database Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Data subscription type. 0: full instance subscription, 1: data subscription, 2: structure subscription, 3: data subscription and structure subscription
                      * @return SubscribeObjectType Data subscription type. 0: full instance subscription, 1: data subscription, 2: structure subscription, 3: data subscription and structure subscription
+                     * 
                      */
                     int64_t GetSubscribeObjectType() const;
 
                     /**
                      * 设置Data subscription type. 0: full instance subscription, 1: data subscription, 2: structure subscription, 3: data subscription and structure subscription
-                     * @param SubscribeObjectType Data subscription type. 0: full instance subscription, 1: data subscription, 2: structure subscription, 3: data subscription and structure subscription
+                     * @param _subscribeObjectType Data subscription type. 0: full instance subscription, 1: data subscription, 2: structure subscription, 3: data subscription and structure subscription
+                     * 
                      */
                     void SetSubscribeObjectType(const int64_t& _subscribeObjectType);
 
                     /**
                      * 判断参数 SubscribeObjectType 是否已赋值
                      * @return SubscribeObjectType 是否已赋值
+                     * 
                      */
                     bool SubscribeObjectTypeHasBeenSet() const;
 
                     /**
                      * 获取Subscription object
                      * @return Objects Subscription object
+                     * 
                      */
                     SubscribeObject GetObjects() const;
 
                     /**
                      * 设置Subscription object
-                     * @param Objects Subscription object
+                     * @param _objects Subscription object
+                     * 
                      */
                     void SetObjects(const SubscribeObject& _objects);
 
                     /**
                      * 判断参数 Objects 是否已赋值
                      * @return Objects 是否已赋值
+                     * 
                      */
                     bool ObjectsHasBeenSet() const;
 
                     /**
                      * 获取Subnet of data subscription service, which is the subnet of the database instance by default.
                      * @return UniqSubnetId Subnet of data subscription service, which is the subnet of the database instance by default.
+                     * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
                      * 设置Subnet of data subscription service, which is the subnet of the database instance by default.
-                     * @param UniqSubnetId Subnet of data subscription service, which is the subnet of the database instance by default.
+                     * @param _uniqSubnetId Subnet of data subscription service, which is the subnet of the database instance by default.
+                     * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
 
                     /**
                      * 判断参数 UniqSubnetId 是否已赋值
                      * @return UniqSubnetId 是否已赋值
+                     * 
                      */
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Subscription service port. Default value: 7507
                      * @return Vport Subscription service port. Default value: 7507
+                     * 
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Subscription service port. Default value: 7507
-                     * @param Vport Subscription service port. Default value: 7507
+                     * @param _vport Subscription service port. Default value: 7507
+                     * 
                      */
                     void SetVport(const int64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Application ID, which is globally unique.
                      * @return ApplicationId Application ID, which is globally unique.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID, which is globally unique.
-                     * @param ApplicationId Application ID, which is globally unique.
+                     * @param _applicationId Application ID, which is globally unique.
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DisplayName Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DisplayName Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
+                     * @param _displayName Displayed application name, which can contain up to 64 characters and is the same as the application name by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedDate Application creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedDate() const;
 
                     /**
                      * 设置Application creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedDate Application creation time in ISO 8601 format.
+                     * @param _createdDate Application creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedDate(const std::string& _createdDate);
 
                     /**
                      * 判断参数 CreatedDate 是否已赋值
                      * @return CreatedDate 是否已赋值
+                     * 
                      */
                     bool CreatedDateHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastModifiedDate Last update time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastModifiedDate() const;
 
                     /**
                      * 设置Last update time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastModifiedDate Last update time in ISO 8601 format.
+                     * @param _lastModifiedDate Last update time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastModifiedDate(const std::string& _lastModifiedDate);
 
                     /**
                      * 判断参数 LastModifiedDate 是否已赋值
                      * @return LastModifiedDate 是否已赋值
+                     * 
                      */
                     bool LastModifiedDateHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AppStatus Application status.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAppStatus() const;
 
                     /**
                      * 设置Application status.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AppStatus Application status.
+                     * @param _appStatus Application status.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAppStatus(const bool& _appStatus);
 
                     /**
                      * 判断参数 AppStatus 是否已赋值
                      * @return AppStatus 是否已赋值
+                     * 
                      */
                     bool AppStatusHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Icon Application icon.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIcon() const;
 
                     /**
                      * 设置Application icon.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Icon Application icon.
+                     * @param _icon Application icon.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIcon(const std::string& _icon);
 
                     /**
                      * 判断参数 Icon 是否已赋值
                      * @return Icon 是否已赋值
+                     * 
                      */
                     bool IconHasBeenSet() const;
 
@@ -179,20 +197,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationType Application type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApplicationType() const;
 
                     /**
                      * 设置Application type.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApplicationType Application type.
+                     * @param _applicationType Application type.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApplicationType(const std::string& _applicationType);
 
                     /**
                      * 判断参数 ApplicationType 是否已赋值
                      * @return ApplicationType 是否已赋值
+                     * 
                      */
                     bool ApplicationTypeHasBeenSet() const;
 
@@ -201,20 +222,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ClientId Client ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientId() const;
 
                     /**
                      * 设置Client ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ClientId Client ID.
+                     * @param _clientId Client ID.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientId(const std::string& _clientId);
 
                     /**
                      * 判断参数 ClientId 是否已赋值
                      * @return ClientId 是否已赋值
+                     * 
                      */
                     bool ClientIdHasBeenSet() const;
 

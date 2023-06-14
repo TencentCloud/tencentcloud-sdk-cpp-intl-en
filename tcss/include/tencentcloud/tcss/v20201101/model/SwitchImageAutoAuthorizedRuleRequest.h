@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
                      * @return IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * 
                      */
                     int64_t GetIsEnabled() const;
 
                     /**
                      * 设置Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
-                     * @param IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * @param _isEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+                     * 
                      */
                     void SetIsEnabled(const int64_t& _isEnabled);
 
                     /**
                      * 判断参数 IsEnabled 是否已赋值
                      * @return IsEnabled 是否已赋值
+                     * 
                      */
                     bool IsEnabledHasBeenSet() const;
 
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     int64_t GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 

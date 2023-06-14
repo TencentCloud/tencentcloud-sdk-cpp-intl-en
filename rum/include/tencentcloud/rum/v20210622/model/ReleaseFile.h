@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取File version
                      * @return Version File version
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置File version
-                     * @param Version File version
+                     * @param _version File version
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
                     /**
                      * 获取Unique file key
                      * @return FileKey Unique file key
+                     * 
                      */
                     std::string GetFileKey() const;
 
                     /**
                      * 设置Unique file key
-                     * @param FileKey Unique file key
+                     * @param _fileKey Unique file key
+                     * 
                      */
                     void SetFileKey(const std::string& _fileKey);
 
                     /**
                      * 判断参数 FileKey 是否已赋值
                      * @return FileKey 是否已赋值
+                     * 
                      */
                     bool FileKeyHasBeenSet() const;
 
                     /**
                      * 获取Filename
                      * @return FileName Filename
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Filename
-                     * @param FileName Filename
+                     * @param _fileName Filename
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取File hash
                      * @return FileHash File hash
+                     * 
                      */
                     std::string GetFileHash() const;
 
                     /**
                      * 设置File hash
-                     * @param FileHash File hash
+                     * @param _fileHash File hash
+                     * 
                      */
                     void SetFileHash(const std::string& _fileHash);
 
                     /**
                      * 判断参数 FileHash 是否已赋值
                      * @return FileHash 是否已赋值
+                     * 
                      */
                     bool FileHashHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ID File ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置File ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ID File ID
+                     * @param _iD File ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

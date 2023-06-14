@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Account group ID.
                      * @return AccountGroupId Account group ID.
+                     * 
                      */
                     std::string GetAccountGroupId() const;
 
                     /**
                      * 设置Account group ID.
-                     * @param AccountGroupId Account group ID.
+                     * @param _accountGroupId Account group ID.
+                     * 
                      */
                     void SetAccountGroupId(const std::string& _accountGroupId);
 
                     /**
                      * 判断参数 AccountGroupId 是否已赋值
                      * @return AccountGroupId 是否已赋值
+                     * 
                      */
                     bool AccountGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Search criterion. You can combine multiple search criteria and search in multiple data ranges.
                      * @return SearchCondition Search criterion. You can combine multiple search criteria and search in multiple data ranges.
+                     * 
                      */
                     AccountGroupSearchCriteria GetSearchCondition() const;
 
                     /**
                      * 设置Search criterion. You can combine multiple search criteria and search in multiple data ranges.
-                     * @param SearchCondition Search criterion. You can combine multiple search criteria and search in multiple data ranges.
+                     * @param _searchCondition Search criterion. You can combine multiple search criteria and search in multiple data ranges.
+                     * 
                      */
                     void SetSearchCondition(const AccountGroupSearchCriteria& _searchCondition);
 
                     /**
                      * 判断参数 SearchCondition 是否已赋值
                      * @return SearchCondition 是否已赋值
+                     * 
                      */
                     bool SearchConditionHasBeenSet() const;
 
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

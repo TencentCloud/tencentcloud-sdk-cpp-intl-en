@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Event rule
                      * @return Description Event rule
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Event rule
-                     * @param Description Event rule
+                     * @param _description Event rule
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Solution
                      * @return Solution Solution
+                     * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Solution
-                     * @param Solution Solution
+                     * @param _solution Solution
+                     * 
                      */
                     void SetSolution(const std::string& _solution);
 
                     /**
                      * 判断参数 Solution 是否已赋值
                      * @return Solution 是否已赋值
+                     * 
                      */
                     bool SolutionHasBeenSet() const;
 
@@ -88,74 +94,86 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Event remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Event remarks
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Event remarks
+                     * @param _remark Event remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Details of the hit rule
                      * @return MatchRule Details of the hit rule
+                     * 
                      */
                     AbnormalProcessChildRuleInfo GetMatchRule() const;
 
                     /**
                      * 设置Details of the hit rule
-                     * @param MatchRule Details of the hit rule
+                     * @param _matchRule Details of the hit rule
+                     * 
                      */
                     void SetMatchRule(const AbnormalProcessChildRuleInfo& _matchRule);
 
                     /**
                      * 判断参数 MatchRule 是否已赋值
                      * @return MatchRule 是否已赋值
+                     * 
                      */
                     bool MatchRuleHasBeenSet() const;
 
                     /**
                      * 获取Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
                      * @return RuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
-                     * @param RuleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+                     * @param _ruleName Name of the hit rule. Valid values: `PROXY_TOOL` (proxy); `TRANSFER_CONTROL` (lateral movement); `ATTACK_CMD` (malicious command); `REVERSE_SHELL` (reverse shell); `FILELESS` (fileless execution); `RISK_CMD` (high-risk command); `ABNORMAL_CHILD_PROC` (unusual start found in the child process of the sensitive service); `USER_DEFINED_RULE` (custom rule).
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the hit rule
                      * @return RuleId ID of the hit rule
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置ID of the hit rule
-                     * @param RuleId ID of the hit rule
+                     * @param _ruleId ID of the hit rule
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -164,20 +182,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OperationTime Last processing time of the event
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOperationTime() const;
 
                     /**
                      * 设置Last processing time of the event
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OperationTime Last processing time of the event
+                     * @param _operationTime Last processing time of the event
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOperationTime(const std::string& _operationTime);
 
                     /**
                      * 判断参数 OperationTime 是否已赋值
                      * @return OperationTime 是否已赋值
+                     * 
                      */
                     bool OperationTimeHasBeenSet() const;
 
@@ -186,20 +207,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
+                     * @param _groupName Name of the hit policy. Valid values: `SYSTEM_DEFINED_RULE` (preset policy); name of the custom policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 

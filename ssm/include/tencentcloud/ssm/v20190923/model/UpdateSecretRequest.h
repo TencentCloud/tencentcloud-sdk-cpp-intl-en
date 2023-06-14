@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of a Secret whose content is to be updated.
                      * @return SecretName Name of a Secret whose content is to be updated.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Name of a Secret whose content is to be updated.
-                     * @param SecretName Name of a Secret whose content is to be updated.
+                     * @param _secretName Name of a Secret whose content is to be updated.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取ID of the Secret version whose content is to be updated.
                      * @return VersionId ID of the Secret version whose content is to be updated.
+                     * 
                      */
                     std::string GetVersionId() const;
 
                     /**
                      * 设置ID of the Secret version whose content is to be updated.
-                     * @param VersionId ID of the Secret version whose content is to be updated.
+                     * @param _versionId ID of the Secret version whose content is to be updated.
+                     * 
                      */
                     void SetVersionId(const std::string& _versionId);
 
                     /**
                      * 判断参数 VersionId 是否已赋值
                      * @return VersionId 是否已赋值
+                     * 
                      */
                     bool VersionIdHasBeenSet() const;
 
@@ -83,38 +89,44 @@ namespace TencentCloud
 Either `SecretBinary` or `SecretString` cannot be empty.
                      * @return SecretBinary This field should be used and Base64-encoded if the content of the new credential is binary.
 Either `SecretBinary` or `SecretString` cannot be empty.
+                     * 
                      */
                     std::string GetSecretBinary() const;
 
                     /**
                      * 设置This field should be used and Base64-encoded if the content of the new credential is binary.
 Either `SecretBinary` or `SecretString` cannot be empty.
-                     * @param SecretBinary This field should be used and Base64-encoded if the content of the new credential is binary.
+                     * @param _secretBinary This field should be used and Base64-encoded if the content of the new credential is binary.
 Either `SecretBinary` or `SecretString` cannot be empty.
+                     * 
                      */
                     void SetSecretBinary(const std::string& _secretBinary);
 
                     /**
                      * 判断参数 SecretBinary 是否已赋值
                      * @return SecretBinary 是否已赋值
+                     * 
                      */
                     bool SecretBinaryHasBeenSet() const;
 
                     /**
                      * 获取This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
                      * @return SecretString This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
+                     * 
                      */
                     std::string GetSecretString() const;
 
                     /**
                      * 设置This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
-                     * @param SecretString This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
+                     * @param _secretString This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
+                     * 
                      */
                     void SetSecretString(const std::string& _secretString);
 
                     /**
                      * 判断参数 SecretString 是否已赋值
                      * @return SecretString 是否已赋值
+                     * 
                      */
                     bool SecretStringHasBeenSet() const;
 

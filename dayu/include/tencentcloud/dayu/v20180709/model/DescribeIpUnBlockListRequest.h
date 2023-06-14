@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return BeginTime Start time
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time
-                     * @param BeginTime Start time
+                     * @param _beginTime Start time
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取IP (if this field is not empty, IP filtering will be performed)
                      * @return Ip IP (if this field is not empty, IP filtering will be performed)
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP (if this field is not empty, IP filtering will be performed)
-                     * @param Ip IP (if this field is not empty, IP filtering will be performed)
+                     * @param _ip IP (if this field is not empty, IP filtering will be performed)
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Pagination parameter (paginated query will be performed if this field is not empty). This field will be disused in the future. Please use the `Limit` and `Offset` fields instead;
                      * @return Paging Pagination parameter (paginated query will be performed if this field is not empty). This field will be disused in the future. Please use the `Limit` and `Offset` fields instead;
+                     * 
                      */
                     Paging GetPaging() const;
 
                     /**
                      * 设置Pagination parameter (paginated query will be performed if this field is not empty). This field will be disused in the future. Please use the `Limit` and `Offset` fields instead;
-                     * @param Paging Pagination parameter (paginated query will be performed if this field is not empty). This field will be disused in the future. Please use the `Limit` and `Offset` fields instead;
+                     * @param _paging Pagination parameter (paginated query will be performed if this field is not empty). This field will be disused in the future. Please use the `Limit` and `Offset` fields instead;
+                     * 
                      */
                     void SetPaging(const Paging& _paging);
 
                     /**
                      * 判断参数 Paging 是否已赋值
                      * @return Paging 是否已赋值
+                     * 
                      */
                     bool PagingHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. A value of 0 means no pagination
                      * @return Limit Number of entries per page. A value of 0 means no pagination
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. A value of 0 means no pagination
-                     * @param Limit Number of entries per page. A value of 0 means no pagination
+                     * @param _limit Number of entries per page. A value of 0 means no pagination
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page start offset, whose value is (page number - 1) * number of entries per page
                      * @return Offset Page start offset, whose value is (page number - 1) * number of entries per page
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page start offset, whose value is (page number - 1) * number of entries per page
-                     * @param Offset Page start offset, whose value is (page number - 1) * number of entries per page
+                     * @param _offset Page start offset, whose value is (page number - 1) * number of entries per page
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

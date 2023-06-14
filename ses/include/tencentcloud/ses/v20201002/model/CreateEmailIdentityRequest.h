@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
                      * @return EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+                     * 
                      */
                     std::string GetEmailIdentity() const;
 
                     /**
                      * 设置Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
-                     * @param EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+                     * @param _emailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+                     * 
                      */
                     void SetEmailIdentity(const std::string& _emailIdentity);
 
                     /**
                      * 判断参数 EmailIdentity 是否已赋值
                      * @return EmailIdentity 是否已赋值
+                     * 
                      */
                     bool EmailIdentityHasBeenSet() const;
 

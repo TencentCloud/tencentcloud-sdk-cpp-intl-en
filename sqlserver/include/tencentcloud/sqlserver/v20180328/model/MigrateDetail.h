@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Name of current step
                      * @return StepName Name of current step
+                     * 
                      */
                     std::string GetStepName() const;
 
                     /**
                      * 设置Name of current step
-                     * @param StepName Name of current step
+                     * @param _stepName Name of current step
+                     * 
                      */
                     void SetStepName(const std::string& _stepName);
 
                     /**
                      * 判断参数 StepName 是否已赋值
                      * @return StepName 是否已赋值
+                     * 
                      */
                     bool StepNameHasBeenSet() const;
 
                     /**
                      * 获取Progress of current step in %
                      * @return Progress Progress of current step in %
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Progress of current step in %
-                     * @param Progress Progress of current step in %
+                     * @param _progress Progress of current step in %
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 

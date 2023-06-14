@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Notification group ID
                      * @return AlarmNoticeId Notification group ID
+                     * 
                      */
                     std::string GetAlarmNoticeId() const;
 
                     /**
                      * 设置Notification group ID
-                     * @param AlarmNoticeId Notification group ID
+                     * @param _alarmNoticeId Notification group ID
+                     * 
                      */
                     void SetAlarmNoticeId(const std::string& _alarmNoticeId);
 
                     /**
                      * 判断参数 AlarmNoticeId 是否已赋值
                      * @return AlarmNoticeId 是否已赋值
+                     * 
                      */
                     bool AlarmNoticeIdHasBeenSet() const;
 
                     /**
                      * 获取Notification group name
                      * @return Name Notification group name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Notification group name
-                     * @param Name Notification group name
+                     * @param _name Notification group name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
 <li> `Trigger`: alarm triggered
 <li> `Recovery`: alarm cleared
 <li> `All`: alarm triggered and alarm cleared
+                     * 
                      */
                     std::string GetType() const;
 
@@ -97,52 +104,60 @@ namespace TencentCloud
 <li> `Trigger`: alarm triggered
 <li> `Recovery`: alarm cleared
 <li> `All`: alarm triggered and alarm cleared
-                     * @param Type Notification type. Valid values:
+                     * @param _type Notification type. Valid values:
 <li> `Trigger`: alarm triggered
 <li> `Recovery`: alarm cleared
 <li> `All`: alarm triggered and alarm cleared
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Notification recipient
                      * @return NoticeReceivers Notification recipient
+                     * 
                      */
                     std::vector<NoticeReceiver> GetNoticeReceivers() const;
 
                     /**
                      * 设置Notification recipient
-                     * @param NoticeReceivers Notification recipient
+                     * @param _noticeReceivers Notification recipient
+                     * 
                      */
                     void SetNoticeReceivers(const std::vector<NoticeReceiver>& _noticeReceivers);
 
                     /**
                      * 判断参数 NoticeReceivers 是否已赋值
                      * @return NoticeReceivers 是否已赋值
+                     * 
                      */
                     bool NoticeReceiversHasBeenSet() const;
 
                     /**
                      * 获取API callback information (including WeCom)
                      * @return WebCallbacks API callback information (including WeCom)
+                     * 
                      */
                     std::vector<WebCallback> GetWebCallbacks() const;
 
                     /**
                      * 设置API callback information (including WeCom)
-                     * @param WebCallbacks API callback information (including WeCom)
+                     * @param _webCallbacks API callback information (including WeCom)
+                     * 
                      */
                     void SetWebCallbacks(const std::vector<WebCallback>& _webCallbacks);
 
                     /**
                      * 判断参数 WebCallbacks 是否已赋值
                      * @return WebCallbacks 是否已赋值
+                     * 
                      */
                     bool WebCallbacksHasBeenSet() const;
 

@@ -49,6 +49,7 @@ Get the instance IDs from the `InstanceId` field in the information returned by 
                      * @return InstanceIds You can get available instance IDs in the following ways:
 Log in to the console to query instance IDs.
 Get the instance IDs from the `InstanceId` field in the information returned by the `DescribeInstances` API.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
@@ -56,15 +57,17 @@ Get the instance IDs from the `InstanceId` field in the information returned by 
                      * 设置You can get available instance IDs in the following ways:
 Log in to the console to query instance IDs.
 Get the instance IDs from the `InstanceId` field in the information returned by the `DescribeInstances` API.
-                     * @param InstanceIds You can get available instance IDs in the following ways:
+                     * @param _instanceIds You can get available instance IDs in the following ways:
 Log in to the console to query instance IDs.
 Get the instance IDs from the `InstanceId` field in the information returned by the `DescribeInstances` API.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
@@ -79,6 +82,7 @@ Get the key pair IDs from the `KeyId` field in the information returned by the `
 You can get available key IDs in the following ways:
 Log in to the console to query key IDs.
 Get the key pair IDs from the `KeyId` field in the information returned by the `DescribeKeyPairs` API.
+                     * 
                      */
                     std::vector<std::string> GetKeyIds() const;
 
@@ -88,17 +92,19 @@ Get the key pair IDs from the `KeyId` field in the information returned by the `
 You can get available key IDs in the following ways:
 Log in to the console to query key IDs.
 Get the key pair IDs from the `KeyId` field in the information returned by the `DescribeKeyPairs` API.
-                     * @param KeyIds List of key pair IDs. Each request can contain up to 100 key pairs. The key pair ID takes the form of `skey-11112222`.
+                     * @param _keyIds List of key pair IDs. Each request can contain up to 100 key pairs. The key pair ID takes the form of `skey-11112222`.
 
 You can get available key IDs in the following ways:
 Log in to the console to query key IDs.
 Get the key pair IDs from the `KeyId` field in the information returned by the `DescribeKeyPairs` API.
+                     * 
                      */
                     void SetKeyIds(const std::vector<std::string>& _keyIds);
 
                     /**
                      * 判断参数 KeyIds 是否已赋值
                      * @return KeyIds 是否已赋值
+                     * 
                      */
                     bool KeyIdsHasBeenSet() const;
 
@@ -113,6 +119,7 @@ TRUE: yes.
 FALSE: no.
 
 Default value: FALSE.
+                     * 
                      */
                     bool GetForceStop() const;
 
@@ -122,17 +129,19 @@ TRUE: yes.
 FALSE: no.
 
 Default value: FALSE.
-                     * @param ForceStop Whether to force shut down the running instance. We recommend you manually shut down the running instance before unbinding the key. Valid values:
+                     * @param _forceStop Whether to force shut down the running instance. We recommend you manually shut down the running instance before unbinding the key. Valid values:
 TRUE: yes.
 FALSE: no.
 
 Default value: FALSE.
+                     * 
                      */
                     void SetForceStop(const bool& _forceStop);
 
                     /**
                      * 判断参数 ForceStop 是否已赋值
                      * @return ForceStop 是否已赋值
+                     * 
                      */
                     bool ForceStopHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取LCIC SdkAppId
                      * @return SdkAppId LCIC SdkAppId
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置LCIC SdkAppId
-                     * @param SdkAppId LCIC SdkAppId
+                     * @param _sdkAppId LCIC SdkAppId
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Callback URL. Currently, only port 80 and port 443 are supported.
                      * @return Callback Callback URL. Currently, only port 80 and port 443 are supported.
+                     * 
                      */
                     std::string GetCallback() const;
 
                     /**
                      * 设置Callback URL. Currently, only port 80 and port 443 are supported.
-                     * @param Callback Callback URL. Currently, only port 80 and port 443 are supported.
+                     * @param _callback Callback URL. Currently, only port 80 and port 443 are supported.
+                     * 
                      */
                     void SetCallback(const std::string& _callback);
 
                     /**
                      * 判断参数 Callback 是否已赋值
                      * @return Callback 是否已赋值
+                     * 
                      */
                     bool CallbackHasBeenSet() const;
 
                     /**
                      * 获取The callback key.
                      * @return CallbackKey The callback key.
+                     * 
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 设置The callback key.
-                     * @param CallbackKey The callback key.
+                     * @param _callbackKey The callback key.
+                     * 
                      */
                     void SetCallbackKey(const std::string& _callbackKey);
 
                     /**
                      * 判断参数 CallbackKey 是否已赋值
                      * @return CallbackKey 是否已赋值
+                     * 
                      */
                     bool CallbackKeyHasBeenSet() const;
 

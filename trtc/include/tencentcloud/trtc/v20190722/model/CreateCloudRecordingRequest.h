@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
                      * @return SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
-                     * @param SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+                     * @param _sdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
                      * @return RoomId The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
-                     * @param RoomId The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+                     * @param _roomId The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The [user ID](https://www.tencentcloud.com/document/product/647/37714#userid) of the recording robot in the TRTC room, which cannot be identical to the user IDs of anchors in the room or other recording robots. To distinguish this user ID from others, we recommend you include the room ID in the user ID.
                      * @return UserId The [user ID](https://www.tencentcloud.com/document/product/647/37714#userid) of the recording robot in the TRTC room, which cannot be identical to the user IDs of anchors in the room or other recording robots. To distinguish this user ID from others, we recommend you include the room ID in the user ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置The [user ID](https://www.tencentcloud.com/document/product/647/37714#userid) of the recording robot in the TRTC room, which cannot be identical to the user IDs of anchors in the room or other recording robots. To distinguish this user ID from others, we recommend you include the room ID in the user ID.
-                     * @param UserId The [user ID](https://www.tencentcloud.com/document/product/647/37714#userid) of the recording robot in the TRTC room, which cannot be identical to the user IDs of anchors in the room or other recording robots. To distinguish this user ID from others, we recommend you include the room ID in the user ID.
+                     * @param _userId The [user ID](https://www.tencentcloud.com/document/product/647/37714#userid) of the recording robot in the TRTC room, which cannot be identical to the user IDs of anchors in the room or other recording robots. To distinguish this user ID from others, we recommend you include the room ID in the user ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
                      * @return UserSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+                     * 
                      */
                     std::string GetUserSig() const;
 
                     /**
                      * 设置The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
-                     * @param UserSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+                     * @param _userSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+                     * 
                      */
                     void SetUserSig(const std::string& _userSig);
 
                     /**
                      * 判断参数 UserSig 是否已赋值
                      * @return UserSig 是否已赋值
+                     * 
                      */
                     bool UserSigHasBeenSet() const;
 
                     /**
                      * 获取The on-cloud recording parameters.
                      * @return RecordParams The on-cloud recording parameters.
+                     * 
                      */
                     RecordParams GetRecordParams() const;
 
                     /**
                      * 设置The on-cloud recording parameters.
-                     * @param RecordParams The on-cloud recording parameters.
+                     * @param _recordParams The on-cloud recording parameters.
+                     * 
                      */
                     void SetRecordParams(const RecordParams& _recordParams);
 
                     /**
                      * 判断参数 RecordParams 是否已赋值
                      * @return RecordParams 是否已赋值
+                     * 
                      */
                     bool RecordParamsHasBeenSet() const;
 
                     /**
                      * 获取The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
                      * @return StorageParams The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
+                     * 
                      */
                     StorageParams GetStorageParams() const;
 
                     /**
                      * 设置The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
-                     * @param StorageParams The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
+                     * @param _storageParams The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
+                     * 
                      */
                     void SetStorageParams(const StorageParams& _storageParams);
 
                     /**
                      * 判断参数 StorageParams 是否已赋值
                      * @return StorageParams 是否已赋值
+                     * 
                      */
                     bool StorageParamsHasBeenSet() const;
 
@@ -161,6 +179,7 @@ namespace TencentCloud
                      * @return RoomIdType The type of the TRTC room ID, which must be the same as the ID type of the room whose streams are recorded.
 0: String
 1: 32-bit integer (default)
+                     * 
                      */
                     uint64_t GetRoomIdType() const;
 
@@ -168,87 +187,101 @@ namespace TencentCloud
                      * 设置The type of the TRTC room ID, which must be the same as the ID type of the room whose streams are recorded.
 0: String
 1: 32-bit integer (default)
-                     * @param RoomIdType The type of the TRTC room ID, which must be the same as the ID type of the room whose streams are recorded.
+                     * @param _roomIdType The type of the TRTC room ID, which must be the same as the ID type of the room whose streams are recorded.
 0: String
 1: 32-bit integer (default)
+                     * 
                      */
                     void SetRoomIdType(const uint64_t& _roomIdType);
 
                     /**
                      * 判断参数 RoomIdType 是否已赋值
                      * @return RoomIdType 是否已赋值
+                     * 
                      */
                     bool RoomIdTypeHasBeenSet() const;
 
                     /**
                      * 获取The stream mixing parameters, which are valid if the mixed-stream recording mode is used.
                      * @return MixTranscodeParams The stream mixing parameters, which are valid if the mixed-stream recording mode is used.
+                     * 
                      */
                     MixTranscodeParams GetMixTranscodeParams() const;
 
                     /**
                      * 设置The stream mixing parameters, which are valid if the mixed-stream recording mode is used.
-                     * @param MixTranscodeParams The stream mixing parameters, which are valid if the mixed-stream recording mode is used.
+                     * @param _mixTranscodeParams The stream mixing parameters, which are valid if the mixed-stream recording mode is used.
+                     * 
                      */
                     void SetMixTranscodeParams(const MixTranscodeParams& _mixTranscodeParams);
 
                     /**
                      * 判断参数 MixTranscodeParams 是否已赋值
                      * @return MixTranscodeParams 是否已赋值
+                     * 
                      */
                     bool MixTranscodeParamsHasBeenSet() const;
 
                     /**
                      * 获取The layout parameters, which are valid if the mixed-stream recording mode is used.
                      * @return MixLayoutParams The layout parameters, which are valid if the mixed-stream recording mode is used.
+                     * 
                      */
                     MixLayoutParams GetMixLayoutParams() const;
 
                     /**
                      * 设置The layout parameters, which are valid if the mixed-stream recording mode is used.
-                     * @param MixLayoutParams The layout parameters, which are valid if the mixed-stream recording mode is used.
+                     * @param _mixLayoutParams The layout parameters, which are valid if the mixed-stream recording mode is used.
+                     * 
                      */
                     void SetMixLayoutParams(const MixLayoutParams& _mixLayoutParams);
 
                     /**
                      * 判断参数 MixLayoutParams 是否已赋值
                      * @return MixLayoutParams 是否已赋值
+                     * 
                      */
                     bool MixLayoutParamsHasBeenSet() const;
 
                     /**
                      * 获取The amount of time (in hours) during which API requests can be made after recording starts. Calculation starts when a recording task is started (when the recording task ID is returned). Once the period elapses, the query, modification, and stop recording APIs can no longer be called, but the recording task will continue. The default value is `72` (three days), and the maximum and minimum values allowed are `720` (30 days) and `6` respectively. If you do not set this parameter, the query, modification, and stop recording APIs can be called within 72 hours after recording starts.
                      * @return ResourceExpiredHour The amount of time (in hours) during which API requests can be made after recording starts. Calculation starts when a recording task is started (when the recording task ID is returned). Once the period elapses, the query, modification, and stop recording APIs can no longer be called, but the recording task will continue. The default value is `72` (three days), and the maximum and minimum values allowed are `720` (30 days) and `6` respectively. If you do not set this parameter, the query, modification, and stop recording APIs can be called within 72 hours after recording starts.
+                     * 
                      */
                     uint64_t GetResourceExpiredHour() const;
 
                     /**
                      * 设置The amount of time (in hours) during which API requests can be made after recording starts. Calculation starts when a recording task is started (when the recording task ID is returned). Once the period elapses, the query, modification, and stop recording APIs can no longer be called, but the recording task will continue. The default value is `72` (three days), and the maximum and minimum values allowed are `720` (30 days) and `6` respectively. If you do not set this parameter, the query, modification, and stop recording APIs can be called within 72 hours after recording starts.
-                     * @param ResourceExpiredHour The amount of time (in hours) during which API requests can be made after recording starts. Calculation starts when a recording task is started (when the recording task ID is returned). Once the period elapses, the query, modification, and stop recording APIs can no longer be called, but the recording task will continue. The default value is `72` (three days), and the maximum and minimum values allowed are `720` (30 days) and `6` respectively. If you do not set this parameter, the query, modification, and stop recording APIs can be called within 72 hours after recording starts.
+                     * @param _resourceExpiredHour The amount of time (in hours) during which API requests can be made after recording starts. Calculation starts when a recording task is started (when the recording task ID is returned). Once the period elapses, the query, modification, and stop recording APIs can no longer be called, but the recording task will continue. The default value is `72` (three days), and the maximum and minimum values allowed are `720` (30 days) and `6` respectively. If you do not set this parameter, the query, modification, and stop recording APIs can be called within 72 hours after recording starts.
+                     * 
                      */
                     void SetResourceExpiredHour(const uint64_t& _resourceExpiredHour);
 
                     /**
                      * 判断参数 ResourceExpiredHour 是否已赋值
                      * @return ResourceExpiredHour 是否已赋值
+                     * 
                      */
                     bool ResourceExpiredHourHasBeenSet() const;
 
                     /**
                      * 获取The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users’ [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
                      * @return PrivateMapKey The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users’ [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
+                     * 
                      */
                     std::string GetPrivateMapKey() const;
 
                     /**
                      * 设置The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users’ [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
-                     * @param PrivateMapKey The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users’ [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
+                     * @param _privateMapKey The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users’ [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
+                     * 
                      */
                     void SetPrivateMapKey(const std::string& _privateMapKey);
 
                     /**
                      * 判断参数 PrivateMapKey 是否已赋值
                      * @return PrivateMapKey 是否已赋值
+                     * 
                      */
                     bool PrivateMapKeyHasBeenSet() const;
 

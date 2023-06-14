@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance VIP
                      * @return Vip Instance VIP
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Instance VIP
-                     * @param Vip Instance VIP
+                     * @param _vip Instance VIP
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取IPv6 flag
                      * @return Ipv6Flag IPv6 flag
+                     * 
                      */
                     uint64_t GetIpv6Flag() const;
 
                     /**
                      * 设置IPv6 flag
-                     * @param Ipv6Flag IPv6 flag
+                     * @param _ipv6Flag IPv6 flag
+                     * 
                      */
                     void SetIpv6Flag(const uint64_t& _ipv6Flag);
 
                     /**
                      * 判断参数 Ipv6Flag 是否已赋值
                      * @return Ipv6Flag 是否已赋值
+                     * 
                      */
                     bool Ipv6FlagHasBeenSet() const;
 
                     /**
                      * 获取VIP retention period in hours. Value range: 0-168. Default value: `24`. `0` indicates that the VIP will be released immediately, but there will be 1-minute delay.
                      * @return VipReleaseDelay VIP retention period in hours. Value range: 0-168. Default value: `24`. `0` indicates that the VIP will be released immediately, but there will be 1-minute delay.
+                     * 
                      */
                     uint64_t GetVipReleaseDelay() const;
 
                     /**
                      * 设置VIP retention period in hours. Value range: 0-168. Default value: `24`. `0` indicates that the VIP will be released immediately, but there will be 1-minute delay.
-                     * @param VipReleaseDelay VIP retention period in hours. Value range: 0-168. Default value: `24`. `0` indicates that the VIP will be released immediately, but there will be 1-minute delay.
+                     * @param _vipReleaseDelay VIP retention period in hours. Value range: 0-168. Default value: `24`. `0` indicates that the VIP will be released immediately, but there will be 1-minute delay.
+                     * 
                      */
                     void SetVipReleaseDelay(const uint64_t& _vipReleaseDelay);
 
                     /**
                      * 判断参数 VipReleaseDelay 是否已赋值
                      * @return VipReleaseDelay 是否已赋值
+                     * 
                      */
                     bool VipReleaseDelayHasBeenSet() const;
 

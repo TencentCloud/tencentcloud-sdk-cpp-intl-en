@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ProducerId Producer ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetProducerId() const;
 
                     /**
                      * 设置Producer ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProducerId Producer ID.
+                     * @param _producerId Producer ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProducerId(const int64_t& _producerId);
 
                     /**
                      * 判断参数 ProducerId 是否已赋值
                      * @return ProducerId 是否已赋值
+                     * 
                      */
                     bool ProducerIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ProducerName Producer name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProducerName() const;
 
                     /**
                      * 设置Producer name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ProducerName Producer name.
+                     * @param _producerName Producer name.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProducerName(const std::string& _producerName);
 
                     /**
                      * 判断参数 ProducerName 是否已赋值
                      * @return ProducerName 是否已赋值
+                     * 
                      */
                     bool ProducerNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Address Producer address.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置Producer address.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Address Producer address.
+                     * @param _address Producer address.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ClientVersion Client version.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientVersion() const;
 
                     /**
                      * 设置Client version.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClientVersion Client version.
+                     * @param _clientVersion Client version.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientVersion(const std::string& _clientVersion);
 
                     /**
                      * 判断参数 ClientVersion 是否已赋值
                      * @return ClientVersion 是否已赋值
+                     * 
                      */
                     bool ClientVersionHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MsgRateIn Message production rate (message/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetMsgRateIn() const;
 
                     /**
                      * 设置Message production rate (message/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MsgRateIn Message production rate (message/sec).
+                     * @param _msgRateIn Message production rate (message/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsgRateIn(const double& _msgRateIn);
 
                     /**
                      * 判断参数 MsgRateIn 是否已赋值
                      * @return MsgRateIn 是否已赋值
+                     * 
                      */
                     bool MsgRateInHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MsgThroughputIn Message production throughput rate (byte/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetMsgThroughputIn() const;
 
                     /**
                      * 设置Message production throughput rate (byte/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MsgThroughputIn Message production throughput rate (byte/sec).
+                     * @param _msgThroughputIn Message production throughput rate (byte/sec).
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMsgThroughputIn(const double& _msgThroughputIn);
 
                     /**
                      * 判断参数 MsgThroughputIn 是否已赋值
                      * @return MsgThroughputIn 是否已赋值
+                     * 
                      */
                     bool MsgThroughputInHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AverageMsgSize Average message size in bytes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetAverageMsgSize() const;
 
                     /**
                      * 设置Average message size in bytes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AverageMsgSize Average message size in bytes.
+                     * @param _averageMsgSize Average message size in bytes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAverageMsgSize(const double& _averageMsgSize);
 
                     /**
                      * 判断参数 AverageMsgSize 是否已赋值
                      * @return AverageMsgSize 是否已赋值
+                     * 
                      */
                     bool AverageMsgSizeHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ConnectedSince Connection time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConnectedSince() const;
 
                     /**
                      * 设置Connection time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ConnectedSince Connection time.
+                     * @param _connectedSince Connection time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConnectedSince(const std::string& _connectedSince);
 
                     /**
                      * 判断参数 ConnectedSince 是否已赋值
                      * @return ConnectedSince 是否已赋值
+                     * 
                      */
                     bool ConnectedSinceHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Partition Serial number of the topic partition connected to the producer.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPartition() const;
 
                     /**
                      * 设置Serial number of the topic partition connected to the producer.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Partition Serial number of the topic partition connected to the producer.
+                     * @param _partition Serial number of the topic partition connected to the producer.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPartition(const int64_t& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 

@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return PlayerSessions Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<PlayerSession> GetPlayerSessions() const;
 
                     /**
                      * 判断参数 PlayerSessions 是否已赋值
                      * @return PlayerSessions 是否已赋值
+                     * 
                      */
                     bool PlayerSessionsHasBeenSet() const;
 

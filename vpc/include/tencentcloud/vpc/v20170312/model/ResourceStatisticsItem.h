@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Resource type, such as CVM, ENI
                      * @return ResourceType Resource type, such as CVM, ENI
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type, such as CVM, ENI
-                     * @param ResourceType Resource type, such as CVM, ENI
+                     * @param _resourceType Resource type, such as CVM, ENI
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Resource name.
                      * @return ResourceName Resource name.
+                     * 
                      */
                     std::string GetResourceName() const;
 
                     /**
                      * 设置Resource name.
-                     * @param ResourceName Resource name.
+                     * @param _resourceName Resource name.
+                     * 
                      */
                     void SetResourceName(const std::string& _resourceName);
 
                     /**
                      * 判断参数 ResourceName 是否已赋值
                      * @return ResourceName 是否已赋值
+                     * 
                      */
                     bool ResourceNameHasBeenSet() const;
 
                     /**
                      * 获取Number of resources
                      * @return ResourceCount Number of resources
+                     * 
                      */
                     uint64_t GetResourceCount() const;
 
                     /**
                      * 设置Number of resources
-                     * @param ResourceCount Number of resources
+                     * @param _resourceCount Number of resources
+                     * 
                      */
                     void SetResourceCount(const uint64_t& _resourceCount);
 
                     /**
                      * 判断参数 ResourceCount 是否已赋值
                      * @return ResourceCount 是否已赋值
+                     * 
                      */
                     bool ResourceCountHasBeenSet() const;
 

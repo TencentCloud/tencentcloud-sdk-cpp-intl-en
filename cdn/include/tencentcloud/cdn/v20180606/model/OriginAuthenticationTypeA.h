@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SecretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SecretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
+                     * @param _secretKey Key used for signature calculation, allowing 6 to 32 bytes of letters and digits.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 

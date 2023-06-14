@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Task ID returned by the `CreateLiveRecord` API.
                      * @return TaskId Task ID returned by the `CreateLiveRecord` API.
+                     * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
                      * 设置Task ID returned by the `CreateLiveRecord` API.
-                     * @param TaskId Task ID returned by the `CreateLiveRecord` API.
+                     * @param _taskId Task ID returned by the `CreateLiveRecord` API.
+                     * 
                      */
                     void SetTaskId(const int64_t& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

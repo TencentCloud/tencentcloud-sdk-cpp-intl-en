@@ -55,12 +55,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `initializing`
 `running`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -69,12 +71,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Steps Initialize task steps
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TaskStepInfo> GetSteps() const;
 
                     /**
                      * 判断参数 Steps 是否已赋值
                      * @return Steps 是否已赋值
+                     * 
                      */
                     bool StepsHasBeenSet() const;
 
@@ -83,12 +87,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EksClusterId EKS cluster ID of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEksClusterId() const;
 
                     /**
                      * 判断参数 EksClusterId 是否已赋值
                      * @return EksClusterId 是否已赋值
+                     * 
                      */
                     bool EksClusterIdHasBeenSet() const;
 

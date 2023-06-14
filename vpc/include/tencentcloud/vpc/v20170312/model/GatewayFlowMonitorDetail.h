@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Origin `IP`.
                      * @return PrivateIpAddress Origin `IP`.
+                     * 
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
                      * 设置Origin `IP`.
-                     * @param PrivateIpAddress Origin `IP`.
+                     * @param _privateIpAddress Origin `IP`.
+                     * 
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
                     /**
                      * 判断参数 PrivateIpAddress 是否已赋值
                      * @return PrivateIpAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressHasBeenSet() const;
 
                     /**
                      * 获取Inbound packets.
                      * @return InPkg Inbound packets.
+                     * 
                      */
                     uint64_t GetInPkg() const;
 
                     /**
                      * 设置Inbound packets.
-                     * @param InPkg Inbound packets.
+                     * @param _inPkg Inbound packets.
+                     * 
                      */
                     void SetInPkg(const uint64_t& _inPkg);
 
                     /**
                      * 判断参数 InPkg 是否已赋值
                      * @return InPkg 是否已赋值
+                     * 
                      */
                     bool InPkgHasBeenSet() const;
 
                     /**
                      * 获取Outbound packets.
                      * @return OutPkg Outbound packets.
+                     * 
                      */
                     uint64_t GetOutPkg() const;
 
                     /**
                      * 设置Outbound packets.
-                     * @param OutPkg Outbound packets.
+                     * @param _outPkg Outbound packets.
+                     * 
                      */
                     void SetOutPkg(const uint64_t& _outPkg);
 
                     /**
                      * 判断参数 OutPkg 是否已赋值
                      * @return OutPkg 是否已赋值
+                     * 
                      */
                     bool OutPkgHasBeenSet() const;
 
                     /**
                      * 获取Inbound traffic, in Byte.
                      * @return InTraffic Inbound traffic, in Byte.
+                     * 
                      */
                     uint64_t GetInTraffic() const;
 
                     /**
                      * 设置Inbound traffic, in Byte.
-                     * @param InTraffic Inbound traffic, in Byte.
+                     * @param _inTraffic Inbound traffic, in Byte.
+                     * 
                      */
                     void SetInTraffic(const uint64_t& _inTraffic);
 
                     /**
                      * 判断参数 InTraffic 是否已赋值
                      * @return InTraffic 是否已赋值
+                     * 
                      */
                     bool InTrafficHasBeenSet() const;
 
                     /**
                      * 获取Outbound traffic, in Byte.
                      * @return OutTraffic Outbound traffic, in Byte.
+                     * 
                      */
                     uint64_t GetOutTraffic() const;
 
                     /**
                      * 设置Outbound traffic, in Byte.
-                     * @param OutTraffic Outbound traffic, in Byte.
+                     * @param _outTraffic Outbound traffic, in Byte.
+                     * 
                      */
                     void SetOutTraffic(const uint64_t& _outTraffic);
 
                     /**
                      * 判断参数 OutTraffic 是否已赋值
                      * @return OutTraffic 是否已赋值
+                     * 
                      */
                     bool OutTrafficHasBeenSet() const;
 

@@ -55,6 +55,7 @@ Their meanings are as follows:
 2 - blinking
 3 - light
 4 - blinking + light (default)
+                     * 
                      */
                     std::string GetSecureLevel() const;
 
@@ -65,18 +66,20 @@ Their meanings are as follows:
 2 - blinking
 3 - light
 4 - blinking + light (default)
-                     * @param SecureLevel Enumerated value. Valid values: `1`, `2`, `3`, and `4`.
+                     * @param _secureLevel Enumerated value. Valid values: `1`, `2`, `3`, and `4`.
 Their meanings are as follows:
 1 - silent
 2 - blinking
 3 - light
 4 - blinking + light (default)
+                     * 
                      */
                     void SetSecureLevel(const std::string& _secureLevel);
 
                     /**
                      * 判断参数 SecureLevel 是否已赋值
                      * @return SecureLevel 是否已赋值
+                     * 
                      */
                     bool SecureLevelHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Virtual node name
                      * @return NodeName Virtual node name
+                     * 
                      */
                     std::string GetNodeName() const;
 
                     /**
                      * 判断参数 NodeName 是否已赋值
                      * @return NodeName 是否已赋值
+                     * 
                      */
                     bool NodeNameHasBeenSet() const;
 

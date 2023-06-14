@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Layer name
                      * @return LayerName Layer name
+                     * 
                      */
                     std::string GetLayerName() const;
 
                     /**
                      * 设置Layer name
-                     * @param LayerName Layer name
+                     * @param _layerName Layer name
+                     * 
                      */
                     void SetLayerName(const std::string& _layerName);
 
                     /**
                      * 判断参数 LayerName 是否已赋值
                      * @return LayerName 是否已赋值
+                     * 
                      */
                     bool LayerNameHasBeenSet() const;
 
                     /**
                      * 获取Version number
                      * @return LayerVersion Version number
+                     * 
                      */
                     int64_t GetLayerVersion() const;
 
                     /**
                      * 设置Version number
-                     * @param LayerVersion Version number
+                     * @param _layerVersion Version number
+                     * 
                      */
                     void SetLayerVersion(const int64_t& _layerVersion);
 
                     /**
                      * 判断参数 LayerVersion 是否已赋值
                      * @return LayerVersion 是否已赋值
+                     * 
                      */
                     bool LayerVersionHasBeenSet() const;
 

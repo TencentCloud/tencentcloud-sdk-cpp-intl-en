@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Key pair information.
                      * @return KeyPair Key pair information.
+                     * 
                      */
                     KeyPair GetKeyPair() const;
 
                     /**
                      * 判断参数 KeyPair 是否已赋值
                      * @return KeyPair 是否已赋值
+                     * 
                      */
                     bool KeyPairHasBeenSet() const;
 

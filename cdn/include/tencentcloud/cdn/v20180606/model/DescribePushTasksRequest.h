@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Starting time, such as `2018-08-08 00:00:00`
                      * @return StartTime Starting time, such as `2018-08-08 00:00:00`
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Starting time, such as `2018-08-08 00:00:00`
-                     * @param StartTime Starting time, such as `2018-08-08 00:00:00`
+                     * @param _startTime Starting time, such as `2018-08-08 00:00:00`
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time, such as `2018-08-08 23:59:59`
                      * @return EndTime End time, such as `2018-08-08 23:59:59`
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time, such as `2018-08-08 23:59:59`
-                     * @param EndTime End time, such as `2018-08-08 23:59:59`
+                     * @param _endTime End time, such as `2018-08-08 23:59:59`
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -83,74 +89,86 @@ namespace TencentCloud
 You must specify either a task ID or a starting time.
                      * @return TaskId Specifies a task ID for your query.
 You must specify either a task ID or a starting time.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Specifies a task ID for your query.
 You must specify either a task ID or a starting time.
-                     * @param TaskId Specifies a task ID for your query.
+                     * @param _taskId Specifies a task ID for your query.
 You must specify either a task ID or a starting time.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
                      * @return Keyword Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
-                     * @param Keyword Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
+                     * @param _keyword Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取Offset for paginated queries. Default value: 0
                      * @return Offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset for paginated queries. Default value: 0
-                     * @param Offset Offset for paginated queries. Default value: 0
+                     * @param _offset Offset for paginated queries. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Limit on paginated queries. Default value: 20
                      * @return Limit Limit on paginated queries. Default value: 20
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Limit on paginated queries. Default value: 20
-                     * @param Limit Limit on paginated queries. Default value: 20
+                     * @param _limit Limit on paginated queries. Default value: 20
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -163,6 +181,7 @@ You must specify either a task ID or a starting time.
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
+                     * 
                      */
                     std::string GetArea() const;
 
@@ -171,16 +190,18 @@ You must specify either a task ID or a starting time.
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
-                     * @param Area Specifies a region for your query:
+                     * @param _area Specifies a region for your query:
 `mainland`: Chinese mainland
 `overseas`: Outside the Chinese mainland
 `global`: Globe
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
@@ -195,6 +216,7 @@ You must specify either a task ID or a starting time.
 `done`: Prefetch succeeded
 `process`: Prefetch in progress
 `invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -204,17 +226,19 @@ You must specify either a task ID or a starting time.
 `done`: Prefetch succeeded
 `process`: Prefetch in progress
 `invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
-                     * @param Status Queries the status of a specified task
+                     * @param _status Queries the status of a specified task
 `fail`: Prefetch failed
 `done`: Prefetch succeeded
 `process`: Prefetch in progress
 `invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

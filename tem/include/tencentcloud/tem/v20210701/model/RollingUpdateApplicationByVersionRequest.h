@@ -45,180 +45,210 @@ namespace TencentCloud
                     /**
                      * 获取Application ID
                      * @return ApplicationId Application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Environment ID
                      * @return EnvironmentId Environment ID
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Update version. For image-based deployment, it is the value. For deployment with JAR/WAR files, it is `Version`.
                      * @return DeployVersion Update version. For image-based deployment, it is the value. For deployment with JAR/WAR files, it is `Version`.
+                     * 
                      */
                     std::string GetDeployVersion() const;
 
                     /**
                      * 设置Update version. For image-based deployment, it is the value. For deployment with JAR/WAR files, it is `Version`.
-                     * @param DeployVersion Update version. For image-based deployment, it is the value. For deployment with JAR/WAR files, it is `Version`.
+                     * @param _deployVersion Update version. For image-based deployment, it is the value. For deployment with JAR/WAR files, it is `Version`.
+                     * 
                      */
                     void SetDeployVersion(const std::string& _deployVersion);
 
                     /**
                      * 判断参数 DeployVersion 是否已赋值
                      * @return DeployVersion 是否已赋值
+                     * 
                      */
                     bool DeployVersionHasBeenSet() const;
 
                     /**
                      * 获取JAR/WAR package name. It’s only required for deployment with JAR/WAR files.
                      * @return PackageName JAR/WAR package name. It’s only required for deployment with JAR/WAR files.
+                     * 
                      */
                     std::string GetPackageName() const;
 
                     /**
                      * 设置JAR/WAR package name. It’s only required for deployment with JAR/WAR files.
-                     * @param PackageName JAR/WAR package name. It’s only required for deployment with JAR/WAR files.
+                     * @param _packageName JAR/WAR package name. It’s only required for deployment with JAR/WAR files.
+                     * 
                      */
                     void SetPackageName(const std::string& _packageName);
 
                     /**
                      * 判断参数 PackageName 是否已赋值
                      * @return PackageName 是否已赋值
+                     * 
                      */
                     bool PackageNameHasBeenSet() const;
 
                     /**
                      * 获取Request source. Options: `IntelliJ`, `Coding`
                      * @return From Request source. Options: `IntelliJ`, `Coding`
+                     * 
                      */
                     std::string GetFrom() const;
 
                     /**
                      * 设置Request source. Options: `IntelliJ`, `Coding`
-                     * @param From Request source. Options: `IntelliJ`, `Coding`
+                     * @param _from Request source. Options: `IntelliJ`, `Coding`
+                     * 
                      */
                     void SetFrom(const std::string& _from);
 
                     /**
                      * 判断参数 From 是否已赋值
                      * @return From 是否已赋值
+                     * 
                      */
                     bool FromHasBeenSet() const;
 
                     /**
                      * 获取The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
                      * @return DeployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+                     * 
                      */
                     std::string GetDeployStrategyType() const;
 
                     /**
                      * 设置The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
-                     * @param DeployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+                     * @param _deployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+                     * 
                      */
                     void SetDeployStrategyType(const std::string& _deployStrategyType);
 
                     /**
                      * 判断参数 DeployStrategyType 是否已赋值
                      * @return DeployStrategyType 是否已赋值
+                     * 
                      */
                     bool DeployStrategyTypeHasBeenSet() const;
 
                     /**
                      * 获取Total number of batches
                      * @return TotalBatchCount Total number of batches
+                     * 
                      */
                     int64_t GetTotalBatchCount() const;
 
                     /**
                      * 设置Total number of batches
-                     * @param TotalBatchCount Total number of batches
+                     * @param _totalBatchCount Total number of batches
+                     * 
                      */
                     void SetTotalBatchCount(const int64_t& _totalBatchCount);
 
                     /**
                      * 判断参数 TotalBatchCount 是否已赋值
                      * @return TotalBatchCount 是否已赋值
+                     * 
                      */
                     bool TotalBatchCountHasBeenSet() const;
 
                     /**
                      * 获取Interval between the batches
                      * @return BatchInterval Interval between the batches
+                     * 
                      */
                     int64_t GetBatchInterval() const;
 
                     /**
                      * 设置Interval between the batches
-                     * @param BatchInterval Interval between the batches
+                     * @param _batchInterval Interval between the batches
+                     * 
                      */
                     void SetBatchInterval(const int64_t& _batchInterval);
 
                     /**
                      * 判断参数 BatchInterval 是否已赋值
                      * @return BatchInterval 是否已赋值
+                     * 
                      */
                     bool BatchIntervalHasBeenSet() const;
 
                     /**
                      * 获取Number of instances in a beta batch
                      * @return BetaBatchNum Number of instances in a beta batch
+                     * 
                      */
                     int64_t GetBetaBatchNum() const;
 
                     /**
                      * 设置Number of instances in a beta batch
-                     * @param BetaBatchNum Number of instances in a beta batch
+                     * @param _betaBatchNum Number of instances in a beta batch
+                     * 
                      */
                     void SetBetaBatchNum(const int64_t& _betaBatchNum);
 
                     /**
                      * 判断参数 BetaBatchNum 是否已赋值
                      * @return BetaBatchNum 是否已赋值
+                     * 
                      */
                     bool BetaBatchNumHasBeenSet() const;
 
                     /**
                      * 获取Minimum number of available instances during the deployment
                      * @return MinAvailable Minimum number of available instances during the deployment
+                     * 
                      */
                     int64_t GetMinAvailable() const;
 
                     /**
                      * 设置Minimum number of available instances during the deployment
-                     * @param MinAvailable Minimum number of available instances during the deployment
+                     * @param _minAvailable Minimum number of available instances during the deployment
+                     * 
                      */
                     void SetMinAvailable(const int64_t& _minAvailable);
 
                     /**
                      * 判断参数 MinAvailable 是否已赋值
                      * @return MinAvailable 是否已赋值
+                     * 
                      */
                     bool MinAvailableHasBeenSet() const;
 

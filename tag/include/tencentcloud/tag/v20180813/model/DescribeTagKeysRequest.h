@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Creator `Uin`. If not specified, `Uin` is only used as the query condition.
                      * @return CreateUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+                     * 
                      */
                     uint64_t GetCreateUin() const;
 
                     /**
                      * 设置Creator `Uin`. If not specified, `Uin` is only used as the query condition.
-                     * @param CreateUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+                     * @param _createUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
+                     * 
                      */
                     void SetCreateUin(const uint64_t& _createUin);
 
                     /**
                      * 判断参数 CreateUin 是否已赋值
                      * @return CreateUin 是否已赋值
+                     * 
                      */
                     bool CreateUinHasBeenSet() const;
 
                     /**
                      * 获取Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
                      * @return Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
-                     * @param Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+                     * @param _offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Page size. The default value is 0.
                      * @return Limit Page size. The default value is 0.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Page size. The default value is 0.
-                     * @param Limit Page size. The default value is 0.
+                     * @param _limit Page size. The default value is 0.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Whether to show project
                      * @return ShowProject Whether to show project
+                     * 
                      */
                     uint64_t GetShowProject() const;
 
                     /**
                      * 设置Whether to show project
-                     * @param ShowProject Whether to show project
+                     * @param _showProject Whether to show project
+                     * 
                      */
                     void SetShowProject(const uint64_t& _showProject);
 
                     /**
                      * 判断参数 ShowProject 是否已赋值
                      * @return ShowProject 是否已赋值
+                     * 
                      */
                     bool ShowProjectHasBeenSet() const;
 

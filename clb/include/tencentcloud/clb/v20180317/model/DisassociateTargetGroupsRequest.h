@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of rules to be unbound
                      * @return Associations Array of rules to be unbound
+                     * 
                      */
                     std::vector<TargetGroupAssociation> GetAssociations() const;
 
                     /**
                      * 设置Array of rules to be unbound
-                     * @param Associations Array of rules to be unbound
+                     * @param _associations Array of rules to be unbound
+                     * 
                      */
                     void SetAssociations(const std::vector<TargetGroupAssociation>& _associations);
 
                     /**
                      * 判断参数 Associations 是否已赋值
                      * @return Associations 是否已赋值
+                     * 
                      */
                     bool AssociationsHasBeenSet() const;
 

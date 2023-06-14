@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取Application name.
                      * @return AppName Application name.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Application name.
-                     * @param AppName Application name.
+                     * @param _appName Application name.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取Push domain name.
                      * @return DomainName Push domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param DomainName Push domain name.
+                     * @param _domainName Push domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 In UTC format, such as 2019-01-07T12:00:00Z.
                      * @return StreamStartTime Push start time.
 In UTC format, such as 2019-01-07T12:00:00Z.
+                     * 
                      */
                     std::string GetStreamStartTime() const;
 
                     /**
                      * 设置Push start time.
 In UTC format, such as 2019-01-07T12:00:00Z.
-                     * @param StreamStartTime Push start time.
+                     * @param _streamStartTime Push start time.
 In UTC format, such as 2019-01-07T12:00:00Z.
+                     * 
                      */
                     void SetStreamStartTime(const std::string& _streamStartTime);
 
                     /**
                      * 判断参数 StreamStartTime 是否已赋值
                      * @return StreamStartTime 是否已赋值
+                     * 
                      */
                     bool StreamStartTimeHasBeenSet() const;
 
@@ -127,92 +139,107 @@ In UTC format, such as 2019-01-07T12:00:00Z.
 In UTC format, such as 2019-01-07T15:00:00Z.
                      * @return StreamEndTime Push end time.
 In UTC format, such as 2019-01-07T15:00:00Z.
+                     * 
                      */
                     std::string GetStreamEndTime() const;
 
                     /**
                      * 设置Push end time.
 In UTC format, such as 2019-01-07T15:00:00Z.
-                     * @param StreamEndTime Push end time.
+                     * @param _streamEndTime Push end time.
 In UTC format, such as 2019-01-07T15:00:00Z.
+                     * 
                      */
                     void SetStreamEndTime(const std::string& _streamEndTime);
 
                     /**
                      * 判断参数 StreamEndTime 是否已赋值
                      * @return StreamEndTime 是否已赋值
+                     * 
                      */
                     bool StreamEndTimeHasBeenSet() const;
 
                     /**
                      * 获取Stop reason.
                      * @return StopReason Stop reason.
+                     * 
                      */
                     std::string GetStopReason() const;
 
                     /**
                      * 设置Stop reason.
-                     * @param StopReason Stop reason.
+                     * @param _stopReason Stop reason.
+                     * 
                      */
                     void SetStopReason(const std::string& _stopReason);
 
                     /**
                      * 判断参数 StopReason 是否已赋值
                      * @return StopReason 是否已赋值
+                     * 
                      */
                     bool StopReasonHasBeenSet() const;
 
                     /**
                      * 获取Push duration in seconds.
                      * @return Duration Push duration in seconds.
+                     * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
                      * 设置Push duration in seconds.
-                     * @param Duration Push duration in seconds.
+                     * @param _duration Push duration in seconds.
+                     * 
                      */
                     void SetDuration(const uint64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取Host IP.
                      * @return ClientIp Host IP.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置Host IP.
-                     * @param ClientIp Host IP.
+                     * @param _clientIp Host IP.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取Resolution.
                      * @return Resolution Resolution.
+                     * 
                      */
                     std::string GetResolution() const;
 
                     /**
                      * 设置Resolution.
-                     * @param Resolution Resolution.
+                     * @param _resolution Resolution.
+                     * 
                      */
                     void SetResolution(const std::string& _resolution);
 
                     /**
                      * 判断参数 Resolution 是否已赋值
                      * @return Resolution 是否已赋值
+                     * 
                      */
                     bool ResolutionHasBeenSet() const;
 

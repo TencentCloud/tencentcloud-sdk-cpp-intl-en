@@ -59,20 +59,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TranscodeTask The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskTranscodeResult GetTranscodeTask() const;
 
                     /**
                      * 设置The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeTask The result of a transcoding task.
+                     * @param _transcodeTask The result of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTranscodeTask(const MediaProcessTaskTranscodeResult& _transcodeTask);
 
                     /**
                      * 判断参数 TranscodeTask 是否已赋值
                      * @return TranscodeTask 是否已赋值
+                     * 
                      */
                     bool TranscodeTaskHasBeenSet() const;
 
@@ -81,20 +84,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AnimatedGraphicTask The result of an animated image generating task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskAnimatedGraphicResult GetAnimatedGraphicTask() const;
 
                     /**
                      * 设置The result of an animated image generating task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AnimatedGraphicTask The result of an animated image generating task.
+                     * @param _animatedGraphicTask The result of an animated image generating task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnimatedGraphicTask(const MediaProcessTaskAnimatedGraphicResult& _animatedGraphicTask);
 
                     /**
                      * 判断参数 AnimatedGraphicTask 是否已赋值
                      * @return AnimatedGraphicTask 是否已赋值
+                     * 
                      */
                     bool AnimatedGraphicTaskHasBeenSet() const;
 
@@ -103,20 +109,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SnapshotByTimeOffsetTask The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskSampleSnapshotResult GetSnapshotByTimeOffsetTask() const;
 
                     /**
                      * 设置The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SnapshotByTimeOffsetTask The result of a time point screenshot task.
+                     * @param _snapshotByTimeOffsetTask The result of a time point screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSnapshotByTimeOffsetTask(const MediaProcessTaskSampleSnapshotResult& _snapshotByTimeOffsetTask);
 
                     /**
                      * 判断参数 SnapshotByTimeOffsetTask 是否已赋值
                      * @return SnapshotByTimeOffsetTask 是否已赋值
+                     * 
                      */
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
@@ -125,20 +134,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SampleSnapshotTask The result of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskSampleSnapshotResult GetSampleSnapshotTask() const;
 
                     /**
                      * 设置The result of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SampleSnapshotTask The result of a sampled screenshot task.
+                     * @param _sampleSnapshotTask The result of a sampled screenshot task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSampleSnapshotTask(const MediaProcessTaskSampleSnapshotResult& _sampleSnapshotTask);
 
                     /**
                      * 判断参数 SampleSnapshotTask 是否已赋值
                      * @return SampleSnapshotTask 是否已赋值
+                     * 
                      */
                     bool SampleSnapshotTaskHasBeenSet() const;
 
@@ -147,20 +159,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ImageSpriteTask The result of an image sprite task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskImageSpriteResult GetImageSpriteTask() const;
 
                     /**
                      * 设置The result of an image sprite task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImageSpriteTask The result of an image sprite task.
+                     * @param _imageSpriteTask The result of an image sprite task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageSpriteTask(const MediaProcessTaskImageSpriteResult& _imageSpriteTask);
 
                     /**
                      * 判断参数 ImageSpriteTask 是否已赋值
                      * @return ImageSpriteTask 是否已赋值
+                     * 
                      */
                     bool ImageSpriteTaskHasBeenSet() const;
 
@@ -169,20 +184,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AdaptiveDynamicStreamingTask The result of an adaptive bitrate streaming task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskAdaptiveDynamicStreamingResult GetAdaptiveDynamicStreamingTask() const;
 
                     /**
                      * 设置The result of an adaptive bitrate streaming task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AdaptiveDynamicStreamingTask The result of an adaptive bitrate streaming task.
+                     * @param _adaptiveDynamicStreamingTask The result of an adaptive bitrate streaming task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const MediaProcessTaskAdaptiveDynamicStreamingResult& _adaptiveDynamicStreamingTask);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingTask 是否已赋值
                      * @return AdaptiveDynamicStreamingTask 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingTaskHasBeenSet() const;
 
@@ -191,20 +209,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecognitionTask The result of a content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ScheduleRecognitionTaskResult GetRecognitionTask() const;
 
                     /**
                      * 设置The result of a content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecognitionTask The result of a content recognition task.
+                     * @param _recognitionTask The result of a content recognition task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecognitionTask(const ScheduleRecognitionTaskResult& _recognitionTask);
 
                     /**
                      * 判断参数 RecognitionTask 是否已赋值
                      * @return RecognitionTask 是否已赋值
+                     * 
                      */
                     bool RecognitionTaskHasBeenSet() const;
 
@@ -213,20 +234,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReviewTask The result of a content moderation task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ScheduleReviewTaskResult GetReviewTask() const;
 
                     /**
                      * 设置The result of a content moderation task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReviewTask The result of a content moderation task.
+                     * @param _reviewTask The result of a content moderation task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReviewTask(const ScheduleReviewTaskResult& _reviewTask);
 
                     /**
                      * 判断参数 ReviewTask 是否已赋值
                      * @return ReviewTask 是否已赋值
+                     * 
                      */
                     bool ReviewTaskHasBeenSet() const;
 
@@ -235,20 +259,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AnalysisTask The result of a content analysis task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ScheduleAnalysisTaskResult GetAnalysisTask() const;
 
                     /**
                      * 设置The result of a content analysis task.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AnalysisTask The result of a content analysis task.
+                     * @param _analysisTask The result of a content analysis task.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnalysisTask(const ScheduleAnalysisTaskResult& _analysisTask);
 
                     /**
                      * 判断参数 AnalysisTask 是否已赋值
                      * @return AnalysisTask 是否已赋值
+                     * 
                      */
                     bool AnalysisTaskHasBeenSet() const;
 

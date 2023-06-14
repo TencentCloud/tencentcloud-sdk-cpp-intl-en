@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
                      * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * 
                      */
                     std::vector<std::string> GetWeekDays() const;
 
                     /**
                      * 设置Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
-                     * @param WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * @param _weekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * 
                      */
                     void SetWeekDays(const std::vector<std::string>& _weekDays);
 
                     /**
                      * 判断参数 WeekDays 是否已赋值
                      * @return WeekDays 是否已赋值
+                     * 
                      */
                     bool WeekDaysHasBeenSet() const;
 
                     /**
                      * 获取Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
                      * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * 
                      */
                     std::string GetTimePeriod() const;
 
                     /**
                      * 设置Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
-                     * @param TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * @param _timePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * 
                      */
                     void SetTimePeriod(const std::string& _timePeriod);
 
                     /**
                      * 判断参数 TimePeriod 是否已赋值
                      * @return TimePeriod 是否已赋值
+                     * 
                      */
                     bool TimePeriodHasBeenSet() const;
 
                     /**
                      * 获取Automatic backup type. `1`: Scheduled rollback.
                      * @return AutoBackupType Automatic backup type. `1`: Scheduled rollback.
+                     * 
                      */
                     int64_t GetAutoBackupType() const;
 
                     /**
                      * 设置Automatic backup type. `1`: Scheduled rollback.
-                     * @param AutoBackupType Automatic backup type. `1`: Scheduled rollback.
+                     * @param _autoBackupType Automatic backup type. `1`: Scheduled rollback.
+                     * 
                      */
                     void SetAutoBackupType(const int64_t& _autoBackupType);
 
                     /**
                      * 判断参数 AutoBackupType 是否已赋值
                      * @return AutoBackupType 是否已赋值
+                     * 
                      */
                     bool AutoBackupTypeHasBeenSet() const;
 

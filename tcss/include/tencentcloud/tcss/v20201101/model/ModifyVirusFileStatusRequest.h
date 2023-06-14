@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取IDs of events
                      * @return EventIdSet IDs of events
+                     * 
                      */
                     std::vector<std::string> GetEventIdSet() const;
 
                     /**
                      * 设置IDs of events
-                     * @param EventIdSet IDs of events
+                     * @param _eventIdSet IDs of events
+                     * 
                      */
                     void SetEventIdSet(const std::vector<std::string>& _eventIdSet);
 
                     /**
                      * 判断参数 EventIdSet 是否已赋值
                      * @return EventIdSet 是否已赋值
+                     * 
                      */
                     bool EventIdSetHasBeenSet() const;
 
@@ -77,6 +80,7 @@ namespace TencentCloud
     `EVENT_PENDING`: Pending.
 	`EVENT_ISOLATE_CONTAINER`: Container isolated.
 	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -89,7 +93,7 @@ namespace TencentCloud
     `EVENT_PENDING`: Pending.
 	`EVENT_ISOLATE_CONTAINER`: Container isolated.
 	`EVENT_RESOTRE_CONTAINER`: Container recovered.
-                     * @param Status Event status   
+                     * @param _status Event status   
     `EVENT_DEALED`: Processed.
     `EVENT_INGNORE`: Ignored.
     `EVENT_DEL`: Deleted.
@@ -97,48 +101,56 @@ namespace TencentCloud
     `EVENT_PENDING`: Pending.
 	`EVENT_ISOLATE_CONTAINER`: Container isolated.
 	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Event remarks
                      * @return Remark Event remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Event remarks
-                     * @param Remark Event remarks
+                     * @param _remark Event remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically isolate files with the same MD5 checksum
                      * @return AutoIsolate Whether to automatically isolate files with the same MD5 checksum
+                     * 
                      */
                     bool GetAutoIsolate() const;
 
                     /**
                      * 设置Whether to automatically isolate files with the same MD5 checksum
-                     * @param AutoIsolate Whether to automatically isolate files with the same MD5 checksum
+                     * @param _autoIsolate Whether to automatically isolate files with the same MD5 checksum
+                     * 
                      */
                     void SetAutoIsolate(const bool& _autoIsolate);
 
                     /**
                      * 判断参数 AutoIsolate 是否已赋值
                      * @return AutoIsolate 是否已赋值
+                     * 
                      */
                     bool AutoIsolateHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Speech keyword recognition result set.
                      * @return ResultSet Speech keyword recognition result set.
+                     * 
                      */
                     std::vector<AiRecognitionTaskAsrWordsResultItem> GetResultSet() const;
 
                     /**
                      * 设置Speech keyword recognition result set.
-                     * @param ResultSet Speech keyword recognition result set.
+                     * @param _resultSet Speech keyword recognition result set.
+                     * 
                      */
                     void SetResultSet(const std::vector<AiRecognitionTaskAsrWordsResultItem>& _resultSet);
 
                     /**
                      * 判断参数 ResultSet 是否已赋值
                      * @return ResultSet 是否已赋值
+                     * 
                      */
                     bool ResultSetHasBeenSet() const;
 

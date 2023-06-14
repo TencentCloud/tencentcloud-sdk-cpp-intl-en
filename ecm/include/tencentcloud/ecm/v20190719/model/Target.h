@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Listening port of the real server
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Listening port of the real server
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Listening port of the real server
+                     * @param _port Listening port of the real server
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId CVM instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置CVM instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceId CVM instance ID
+                     * @param _instanceId CVM instance ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Weight Forwarding weight of the real server. Value range: [0, 100]. Default value: 10.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetWeight() const;
 
                     /**
                      * 设置Forwarding weight of the real server. Value range: [0, 100]. Default value: 10.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Weight Forwarding weight of the real server. Value range: [0, 100]. Default value: 10.
+                     * @param _weight Forwarding weight of the real server. Value range: [0, 100]. Default value: 10.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWeight(const int64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EniIp You need to pass in this parameter when binding an ENI. It represents the IP address of the ENI. You must bind an ENI to a CVM instance first before you can bind it to a CLB instance. Note: you must pass in either `InstanceId` or `EniIp`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEniIp() const;
 
                     /**
                      * 设置You need to pass in this parameter when binding an ENI. It represents the IP address of the ENI. You must bind an ENI to a CVM instance first before you can bind it to a CLB instance. Note: you must pass in either `InstanceId` or `EniIp`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EniIp You need to pass in this parameter when binding an ENI. It represents the IP address of the ENI. You must bind an ENI to a CVM instance first before you can bind it to a CLB instance. Note: you must pass in either `InstanceId` or `EniIp`.
+                     * @param _eniIp You need to pass in this parameter when binding an ENI. It represents the IP address of the ENI. You must bind an ENI to a CVM instance first before you can bind it to a CLB instance. Note: you must pass in either `InstanceId` or `EniIp`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEniIp(const std::string& _eniIp);
 
                     /**
                      * 判断参数 EniIp 是否已赋值
                      * @return EniIp 是否已赋值
+                     * 
                      */
                     bool EniIpHasBeenSet() const;
 

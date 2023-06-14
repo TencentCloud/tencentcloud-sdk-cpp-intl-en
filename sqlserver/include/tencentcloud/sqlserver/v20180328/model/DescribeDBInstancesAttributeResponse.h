@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Archive backup status. Valid values: `enable` (enabled), `disable` (disabled)
                      * @return RegularBackupEnable Archive backup status. Valid values: `enable` (enabled), `disable` (disabled)
+                     * 
                      */
                     std::string GetRegularBackupEnable() const;
 
                     /**
                      * 判断参数 RegularBackupEnable 是否已赋值
                      * @return RegularBackupEnable 是否已赋值
+                     * 
                      */
                     bool RegularBackupEnableHasBeenSet() const;
 
                     /**
                      * 获取Archive backup retention period: [90-3650] days
                      * @return RegularBackupSaveDays Archive backup retention period: [90-3650] days
+                     * 
                      */
                     uint64_t GetRegularBackupSaveDays() const;
 
                     /**
                      * 判断参数 RegularBackupSaveDays 是否已赋值
                      * @return RegularBackupSaveDays 是否已赋值
+                     * 
                      */
                     bool RegularBackupSaveDaysHasBeenSet() const;
 
                     /**
                      * 获取Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly).
                      * @return RegularBackupStrategy Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly).
+                     * 
                      */
                     std::string GetRegularBackupStrategy() const;
 
                     /**
                      * 判断参数 RegularBackupStrategy 是否已赋值
                      * @return RegularBackupStrategy 是否已赋值
+                     * 
                      */
                     bool RegularBackupStrategyHasBeenSet() const;
 
                     /**
                      * 获取The number of retained archive backups
                      * @return RegularBackupCounts The number of retained archive backups
+                     * 
                      */
                     uint64_t GetRegularBackupCounts() const;
 
                     /**
                      * 判断参数 RegularBackupCounts 是否已赋值
                      * @return RegularBackupCounts 是否已赋值
+                     * 
                      */
                     bool RegularBackupCountsHasBeenSet() const;
 
                     /**
                      * 获取Archive backup start date in YYYY-MM-DD format, which is the current time by default.
                      * @return RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+                     * 
                      */
                     std::string GetRegularBackupStartTime() const;
 
                     /**
                      * 判断参数 RegularBackupStartTime 是否已赋值
                      * @return RegularBackupStartTime 是否已赋值
+                     * 
                      */
                     bool RegularBackupStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Block process threshold in milliseconds
                      * @return BlockedThreshold Block process threshold in milliseconds
+                     * 
                      */
                     int64_t GetBlockedThreshold() const;
 
                     /**
                      * 判断参数 BlockedThreshold 是否已赋值
                      * @return BlockedThreshold 是否已赋值
+                     * 
                      */
                     bool BlockedThresholdHasBeenSet() const;
 
                     /**
                      * 获取Retention period for the files of slow SQL, blocking, deadlock, and extended events.
                      * @return EventSaveDays Retention period for the files of slow SQL, blocking, deadlock, and extended events.
+                     * 
                      */
                     int64_t GetEventSaveDays() const;
 
                     /**
                      * 判断参数 EventSaveDays 是否已赋值
                      * @return EventSaveDays 是否已赋值
+                     * 
                      */
                     bool EventSaveDaysHasBeenSet() const;
 

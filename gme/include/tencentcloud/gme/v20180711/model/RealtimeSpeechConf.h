@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Voice Chat status. Valid values: `open`, `close`.
                      * @return Status Voice Chat status. Valid values: `open`, `close`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Voice Chat status. Valid values: `open`, `close`.
-                     * @param Status Voice Chat status. Valid values: `open`, `close`.
+                     * @param _status Voice Chat status. Valid values: `open`, `close`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Voice Chat sound quality. Valid value: `high`.
                      * @return Quality Voice Chat sound quality. Valid value: `high`.
+                     * 
                      */
                     std::string GetQuality() const;
 
                     /**
                      * 设置Voice Chat sound quality. Valid value: `high`.
-                     * @param Quality Voice Chat sound quality. Valid value: `high`.
+                     * @param _quality Voice Chat sound quality. Valid value: `high`.
+                     * 
                      */
                     void SetQuality(const std::string& _quality);
 
                     /**
                      * 判断参数 Quality 是否已赋值
                      * @return Quality 是否已赋值
+                     * 
                      */
                     bool QualityHasBeenSet() const;
 

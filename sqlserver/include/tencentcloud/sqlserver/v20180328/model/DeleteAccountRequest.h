@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Database instance ID in the format of mssql-njj2mtpl
                      * @return InstanceId Database instance ID in the format of mssql-njj2mtpl
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Database instance ID in the format of mssql-njj2mtpl
-                     * @param InstanceId Database instance ID in the format of mssql-njj2mtpl
+                     * @param _instanceId Database instance ID in the format of mssql-njj2mtpl
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Array of instance usernames
                      * @return UserNames Array of instance usernames
+                     * 
                      */
                     std::vector<std::string> GetUserNames() const;
 
                     /**
                      * 设置Array of instance usernames
-                     * @param UserNames Array of instance usernames
+                     * @param _userNames Array of instance usernames
+                     * 
                      */
                     void SetUserNames(const std::vector<std::string>& _userNames);
 
                     /**
                      * 判断参数 UserNames 是否已赋值
                      * @return UserNames 是否已赋值
+                     * 
                      */
                     bool UserNamesHasBeenSet() const;
 

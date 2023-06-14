@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
                      * @return ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
                      * 设置Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
-                     * @param ImageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * @param _imageBase64 Base64-encoded value of image. The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 500x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupies more than 2/3 area of the image.
+                     * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
 
                     /**
                      * 判断参数 ImageBase64 是否已赋值
                      * @return ImageBase64 是否已赋值
+                     * 
                      */
                     bool ImageBase64HasBeenSet() const;
 
                     /**
                      * 获取Whether to return an image. Default value: false.
                      * @return RetImage Whether to return an image. Default value: false.
+                     * 
                      */
                     bool GetRetImage() const;
 
                     /**
                      * 设置Whether to return an image. Default value: false.
-                     * @param RetImage Whether to return an image. Default value: false.
+                     * @param _retImage Whether to return an image. Default value: false.
+                     * 
                      */
                     void SetRetImage(const bool& _retImage);
 
                     /**
                      * 判断参数 RetImage 是否已赋值
                      * @return RetImage 是否已赋值
+                     * 
                      */
                     bool RetImageHasBeenSet() const;
 

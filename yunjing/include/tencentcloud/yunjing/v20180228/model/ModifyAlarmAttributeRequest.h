@@ -53,6 +53,7 @@ namespace TencentCloud
 <li>Malware: trojan event</li>
 <li>NonlocalLogin: unusual login location discovered</li>
 <li>CrackSuccess: brute force attack succeeded</li>
+                     * 
                      */
                     std::string GetAttribute() const;
 
@@ -62,17 +63,19 @@ namespace TencentCloud
 <li>Malware: trojan event</li>
 <li>NonlocalLogin: unusual login location discovered</li>
 <li>CrackSuccess: brute force attack succeeded</li>
-                     * @param Attribute Alarm item.
+                     * @param _attribute Alarm item.
 <li>Offline: CWP is offline</li>
 <li>Malware: trojan event</li>
 <li>NonlocalLogin: unusual login location discovered</li>
 <li>CrackSuccess: brute force attack succeeded</li>
+                     * 
                      */
                     void SetAttribute(const std::string& _attribute);
 
                     /**
                      * 判断参数 Attribute 是否已赋值
                      * @return Attribute 是否已赋值
+                     * 
                      */
                     bool AttributeHasBeenSet() const;
 
@@ -83,6 +86,7 @@ namespace TencentCloud
                      * @return Value Alarm item attributes.
 <li>CLOSE: disabled</li>
 <li>OPEN: enabled</li>
+                     * 
                      */
                     std::string GetValue() const;
 
@@ -90,15 +94,17 @@ namespace TencentCloud
                      * 设置Alarm item attributes.
 <li>CLOSE: disabled</li>
 <li>OPEN: enabled</li>
-                     * @param Value Alarm item attributes.
+                     * @param _value Alarm item attributes.
 <li>CLOSE: disabled</li>
 <li>OPEN: enabled</li>
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

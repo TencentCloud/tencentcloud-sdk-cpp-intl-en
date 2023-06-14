@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Instance status
                      * @return Status Instance status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Instance status
-                     * @param Status Instance status
+                     * @param _status Instance status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Conditions Additional status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<RegistryCondition> GetConditions() const;
 
                     /**
                      * 设置Additional status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Conditions Additional status
+                     * @param _conditions Additional status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConditions(const std::vector<RegistryCondition>& _conditions);
 
                     /**
                      * 判断参数 Conditions 是否已赋值
                      * @return Conditions 是否已赋值
+                     * 
                      */
                     bool ConditionsHasBeenSet() const;
 

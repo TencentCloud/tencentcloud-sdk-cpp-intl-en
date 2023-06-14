@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Function SCF related information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     FunctionInfo GetFunction() const;
 
                     /**
                      * 设置SCF related information
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Function SCF related information
+                     * @param _function SCF related information
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFunction(const FunctionInfo& _function);
 
                     /**
                      * 判断参数 Function 是否已赋值
                      * @return Function 是否已赋值
+                     * 
                      */
                     bool FunctionHasBeenSet() const;
 
                     /**
                      * 获取Weight
                      * @return Weight Weight
+                     * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
                      * 设置Weight
-                     * @param Weight Weight
+                     * @param _weight Weight
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

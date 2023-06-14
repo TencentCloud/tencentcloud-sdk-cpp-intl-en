@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Offset position
                      * @return Offset Offset position
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset position
-                     * @param Offset Offset position
+                     * @param _offset Offset position
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
                      * @return Limit Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
-                     * @param Limit Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
+                     * @param _limit Maximum number of users to be queried in this request. Maximum value: 50. Default value: 50
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

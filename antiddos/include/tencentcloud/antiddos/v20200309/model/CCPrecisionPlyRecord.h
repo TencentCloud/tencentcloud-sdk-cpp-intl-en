@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Type of the configuration field. Only `value` is supported.
                      * @return FieldType Type of the configuration field. Only `value` is supported.
+                     * 
                      */
                     std::string GetFieldType() const;
 
                     /**
                      * 设置Type of the configuration field. Only `value` is supported.
-                     * @param FieldType Type of the configuration field. Only `value` is supported.
+                     * @param _fieldType Type of the configuration field. Only `value` is supported.
+                     * 
                      */
                     void SetFieldType(const std::string& _fieldType);
 
                     /**
                      * 判断参数 FieldType 是否已赋值
                      * @return FieldType 是否已赋值
+                     * 
                      */
                     bool FieldTypeHasBeenSet() const;
 
                     /**
                      * 获取Configuration field. Valid values: `cgi`, `ua`, `cookie`, `referer`, `accept`, and `srcip`.
                      * @return FieldName Configuration field. Valid values: `cgi`, `ua`, `cookie`, `referer`, `accept`, and `srcip`.
+                     * 
                      */
                     std::string GetFieldName() const;
 
                     /**
                      * 设置Configuration field. Valid values: `cgi`, `ua`, `cookie`, `referer`, `accept`, and `srcip`.
-                     * @param FieldName Configuration field. Valid values: `cgi`, `ua`, `cookie`, `referer`, `accept`, and `srcip`.
+                     * @param _fieldName Configuration field. Valid values: `cgi`, `ua`, `cookie`, `referer`, `accept`, and `srcip`.
+                     * 
                      */
                     void SetFieldName(const std::string& _fieldName);
 
                     /**
                      * 判断参数 FieldName 是否已赋值
                      * @return FieldName 是否已赋值
+                     * 
                      */
                     bool FieldNameHasBeenSet() const;
 
                     /**
                      * 获取Value of the configuration field
                      * @return Value Value of the configuration field
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value of the configuration field
-                     * @param Value Value of the configuration field
+                     * @param _value Value of the configuration field
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Filters values of configuration fields. `equal`: The value matches the configuration field. `not_equal`: The value does not match the configuration field. `include`: The value is included.
                      * @return ValueOperator Filters values of configuration fields. `equal`: The value matches the configuration field. `not_equal`: The value does not match the configuration field. `include`: The value is included.
+                     * 
                      */
                     std::string GetValueOperator() const;
 
                     /**
                      * 设置Filters values of configuration fields. `equal`: The value matches the configuration field. `not_equal`: The value does not match the configuration field. `include`: The value is included.
-                     * @param ValueOperator Filters values of configuration fields. `equal`: The value matches the configuration field. `not_equal`: The value does not match the configuration field. `include`: The value is included.
+                     * @param _valueOperator Filters values of configuration fields. `equal`: The value matches the configuration field. `not_equal`: The value does not match the configuration field. `include`: The value is included.
+                     * 
                      */
                     void SetValueOperator(const std::string& _valueOperator);
 
                     /**
                      * 判断参数 ValueOperator 是否已赋值
                      * @return ValueOperator 是否已赋值
+                     * 
                      */
                     bool ValueOperatorHasBeenSet() const;
 

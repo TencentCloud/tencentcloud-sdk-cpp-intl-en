@@ -90,6 +90,7 @@ Type: String
 Required: no
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -117,7 +118,7 @@ Type: String
 Required: no
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @param Filters <br><li> configName
+                     * @param _filters <br><li> configName
 
 Filter by fuzzy match of **collection configuration name**
 Type: String
@@ -140,48 +141,56 @@ Type: String
 Required: no
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Page offset. Default value: 0
                      * @return Offset Page offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page offset. Default value: 0
-                     * @param Offset Page offset. Default value: 0
+                     * @param _offset Page offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of entries per page. Default value: 20. Maximum value: 100
                      * @return Limit Maximum number of entries per page. Default value: 20. Maximum value: 100
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of entries per page. Default value: 20. Maximum value: 100
-                     * @param Limit Maximum number of entries per page. Default value: 20. Maximum value: 100
+                     * @param _limit Maximum number of entries per page. Default value: 20. Maximum value: 100
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

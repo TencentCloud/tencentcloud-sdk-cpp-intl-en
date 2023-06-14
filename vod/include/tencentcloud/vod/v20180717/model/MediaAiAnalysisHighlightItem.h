@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Address of an intelligently generated highlight.
                      * @return HighlightUrl Address of an intelligently generated highlight.
+                     * 
                      */
                     std::string GetHighlightUrl() const;
 
                     /**
                      * 设置Address of an intelligently generated highlight.
-                     * @param HighlightUrl Address of an intelligently generated highlight.
+                     * @param _highlightUrl Address of an intelligently generated highlight.
+                     * 
                      */
                     void SetHighlightUrl(const std::string& _highlightUrl);
 
                     /**
                      * 判断参数 HighlightUrl 是否已赋值
                      * @return HighlightUrl 是否已赋值
+                     * 
                      */
                     bool HighlightUrlHasBeenSet() const;
 
                     /**
                      * 获取Address of an intelligently generated highlight cover.
                      * @return CovImgUrl Address of an intelligently generated highlight cover.
+                     * 
                      */
                     std::string GetCovImgUrl() const;
 
                     /**
                      * 设置Address of an intelligently generated highlight cover.
-                     * @param CovImgUrl Address of an intelligently generated highlight cover.
+                     * @param _covImgUrl Address of an intelligently generated highlight cover.
+                     * 
                      */
                     void SetCovImgUrl(const std::string& _covImgUrl);
 
                     /**
                      * 判断参数 CovImgUrl 是否已赋值
                      * @return CovImgUrl 是否已赋值
+                     * 
                      */
                     bool CovImgUrlHasBeenSet() const;
 
                     /**
                      * 获取Confidence of an intelligently generated highlight between 0 and 100.
                      * @return Confidence Confidence of an intelligently generated highlight between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of an intelligently generated highlight between 0 and 100.
-                     * @param Confidence Confidence of an intelligently generated highlight between 0 and 100.
+                     * @param _confidence Confidence of an intelligently generated highlight between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
                     /**
                      * 获取Duration of an intelligently generated highlight.
                      * @return Duration Duration of an intelligently generated highlight.
+                     * 
                      */
                     double GetDuration() const;
 
                     /**
                      * 设置Duration of an intelligently generated highlight.
-                     * @param Duration Duration of an intelligently generated highlight.
+                     * @param _duration Duration of an intelligently generated highlight.
+                     * 
                      */
                     void SetDuration(const double& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取List of intelligently generated highlight subsegments, which together form a highlight.
                      * @return SegmentSet List of intelligently generated highlight subsegments, which together form a highlight.
+                     * 
                      */
                     std::vector<HighlightSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of intelligently generated highlight subsegments, which together form a highlight.
-                     * @param SegmentSet List of intelligently generated highlight subsegments, which together form a highlight.
+                     * @param _segmentSet List of intelligently generated highlight subsegments, which together form a highlight.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<HighlightSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

@@ -49,20 +49,23 @@ namespace TencentCloud
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
                      * @return TimeUnit Time unit of scaling. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
                      * 设置Time unit of scaling. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-                     * @param TimeUnit Time unit of scaling. Valid values:
+                     * @param _timeUnit Time unit of scaling. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+                     * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
 
                     /**
                      * 判断参数 TimeUnit 是否已赋值
                      * @return TimeUnit 是否已赋值
+                     * 
                      */
                     bool TimeUnitHasBeenSet() const;
 
@@ -71,38 +74,44 @@ namespace TencentCloud
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
                      * @return TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 
                      */
                     uint64_t GetTimeSpan() const;
 
                     /**
                      * 设置Duration of scaling, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
-                     * @param TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
+                     * @param _timeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
 <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+                     * 
                      */
                     void SetTimeSpan(const uint64_t& _timeSpan);
 
                     /**
                      * 判断参数 TimeSpan 是否已赋值
                      * @return TimeSpan 是否已赋值
+                     * 
                      */
                     bool TimeSpanHasBeenSet() const;
 
                     /**
                      * 获取Target node specification.
                      * @return UpdateSpec Target node specification.
+                     * 
                      */
                     UpdateInstanceSettings GetUpdateSpec() const;
 
                     /**
                      * 设置Target node specification.
-                     * @param UpdateSpec Target node specification.
+                     * @param _updateSpec Target node specification.
+                     * 
                      */
                     void SetUpdateSpec(const UpdateInstanceSettings& _updateSpec);
 
                     /**
                      * 判断参数 UpdateSpec 是否已赋值
                      * @return UpdateSpec 是否已赋值
+                     * 
                      */
                     bool UpdateSpecHasBeenSet() const;
 
@@ -111,74 +120,86 @@ namespace TencentCloud
 <li>0: pay-as-you-go.</li>
                      * @return PayMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
+                     * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
                      * 设置Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
-                     * @param PayMode Instance billing mode. Valid values:
+                     * @param _payMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
+                     * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
                      * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
                      */
                     Placement GetPlacement() const;
 
                     /**
                      * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @param _placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * 
                      */
                     void SetPlacement(const Placement& _placement);
 
                     /**
                      * 判断参数 Placement 是否已赋值
                      * @return Placement 是否已赋值
+                     * 
                      */
                     bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取Currency.
                      * @return Currency Currency.
+                     * 
                      */
                     std::string GetCurrency() const;
 
                     /**
                      * 设置Currency.
-                     * @param Currency Currency.
+                     * @param _currency Currency.
+                     * 
                      */
                     void SetCurrency(const std::string& _currency);
 
                     /**
                      * 判断参数 Currency 是否已赋值
                      * @return Currency 是否已赋值
+                     * 
                      */
                     bool CurrencyHasBeenSet() const;
 
                     /**
                      * 获取The resource ID list for batch configuration change.
                      * @return ResourceIdList The resource ID list for batch configuration change.
+                     * 
                      */
                     std::vector<std::string> GetResourceIdList() const;
 
                     /**
                      * 设置The resource ID list for batch configuration change.
-                     * @param ResourceIdList The resource ID list for batch configuration change.
+                     * @param _resourceIdList The resource ID list for batch configuration change.
+                     * 
                      */
                     void SetResourceIdList(const std::vector<std::string>& _resourceIdList);
 
                     /**
                      * 判断参数 ResourceIdList 是否已赋值
                      * @return ResourceIdList 是否已赋值
+                     * 
                      */
                     bool ResourceIdListHasBeenSet() const;
 

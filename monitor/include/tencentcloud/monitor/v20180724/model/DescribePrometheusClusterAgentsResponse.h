@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Information of the associated cluster
                      * @return Agents Information of the associated cluster
+                     * 
                      */
                     std::vector<PrometheusAgentOverview> GetAgents() const;
 
                     /**
                      * 判断参数 Agents 是否已赋值
                      * @return Agents 是否已赋值
+                     * 
                      */
                     bool AgentsHasBeenSet() const;
 
                     /**
                      * 获取The total number of the associated clusters
                      * @return Total The total number of the associated clusters
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
                      * @return IsFirstBind Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+                     * 
                      */
                     bool GetIsFirstBind() const;
 
                     /**
                      * 判断参数 IsFirstBind 是否已赋值
                      * @return IsFirstBind 是否已赋值
+                     * 
                      */
                     bool IsFirstBindHasBeenSet() const;
 

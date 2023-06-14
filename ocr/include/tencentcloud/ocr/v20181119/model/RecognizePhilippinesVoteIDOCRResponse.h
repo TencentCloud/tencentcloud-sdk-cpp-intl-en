@@ -47,108 +47,126 @@ namespace TencentCloud
                     /**
                      * 获取The Base64-encoded identity photo.
                      * @return HeadPortrait The Base64-encoded identity photo.
+                     * 
                      */
                     TextDetectionResult GetHeadPortrait() const;
 
                     /**
                      * 判断参数 HeadPortrait 是否已赋值
                      * @return HeadPortrait 是否已赋值
+                     * 
                      */
                     bool HeadPortraitHasBeenSet() const;
 
                     /**
                      * 获取The voter's identification number (VIN).
                      * @return VIN The voter's identification number (VIN).
+                     * 
                      */
                     TextDetectionResult GetVIN() const;
 
                     /**
                      * 判断参数 VIN 是否已赋值
                      * @return VIN 是否已赋值
+                     * 
                      */
                     bool VINHasBeenSet() const;
 
                     /**
                      * 获取The first name.
                      * @return FirstName The first name.
+                     * 
                      */
                     TextDetectionResult GetFirstName() const;
 
                     /**
                      * 判断参数 FirstName 是否已赋值
                      * @return FirstName 是否已赋值
+                     * 
                      */
                     bool FirstNameHasBeenSet() const;
 
                     /**
                      * 获取The last name.
                      * @return LastName The last name.
+                     * 
                      */
                     TextDetectionResult GetLastName() const;
 
                     /**
                      * 判断参数 LastName 是否已赋值
                      * @return LastName 是否已赋值
+                     * 
                      */
                     bool LastNameHasBeenSet() const;
 
                     /**
                      * 获取The date of birth.
                      * @return Birthday The date of birth.
+                     * 
                      */
                     TextDetectionResult GetBirthday() const;
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 
                     /**
                      * 获取The civil status.
                      * @return CivilStatus The civil status.
+                     * 
                      */
                     TextDetectionResult GetCivilStatus() const;
 
                     /**
                      * 判断参数 CivilStatus 是否已赋值
                      * @return CivilStatus 是否已赋值
+                     * 
                      */
                     bool CivilStatusHasBeenSet() const;
 
                     /**
                      * 获取The citizenship.
                      * @return Citizenship The citizenship.
+                     * 
                      */
                     TextDetectionResult GetCitizenship() const;
 
                     /**
                      * 判断参数 Citizenship 是否已赋值
                      * @return Citizenship 是否已赋值
+                     * 
                      */
                     bool CitizenshipHasBeenSet() const;
 
                     /**
                      * 获取The address.
                      * @return Address The address.
+                     * 
                      */
                     TextDetectionResult GetAddress() const;
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取The precinct.
                      * @return PrecinctNo The precinct.
+                     * 
                      */
                     TextDetectionResult GetPrecinctNo() const;
 
                     /**
                      * 判断参数 PrecinctNo 是否已赋值
                      * @return PrecinctNo 是否已赋值
+                     * 
                      */
                     bool PrecinctNoHasBeenSet() const;
 

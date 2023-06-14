@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return InstanceId Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param InstanceId Anti-DDoS instance ID
+                     * @param _instanceId Anti-DDoS instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Feature filtering rules
                      * @return PacketFilterConfig Feature filtering rules
+                     * 
                      */
                     PacketFilterConfig GetPacketFilterConfig() const;
 
                     /**
                      * 设置Feature filtering rules
-                     * @param PacketFilterConfig Feature filtering rules
+                     * @param _packetFilterConfig Feature filtering rules
+                     * 
                      */
                     void SetPacketFilterConfig(const PacketFilterConfig& _packetFilterConfig);
 
                     /**
                      * 判断参数 PacketFilterConfig 是否已赋值
                      * @return PacketFilterConfig 是否已赋值
+                     * 
                      */
                     bool PacketFilterConfigHasBeenSet() const;
 

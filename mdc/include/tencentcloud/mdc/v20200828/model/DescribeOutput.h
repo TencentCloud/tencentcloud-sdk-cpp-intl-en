@@ -54,54 +54,63 @@ namespace TencentCloud
                     /**
                      * 获取Output ID.
                      * @return OutputId Output ID.
+                     * 
                      */
                     std::string GetOutputId() const;
 
                     /**
                      * 设置Output ID.
-                     * @param OutputId Output ID.
+                     * @param _outputId Output ID.
+                     * 
                      */
                     void SetOutputId(const std::string& _outputId);
 
                     /**
                      * 判断参数 OutputId 是否已赋值
                      * @return OutputId 是否已赋值
+                     * 
                      */
                     bool OutputIdHasBeenSet() const;
 
                     /**
                      * 获取Output name.
                      * @return OutputName Output name.
+                     * 
                      */
                     std::string GetOutputName() const;
 
                     /**
                      * 设置Output name.
-                     * @param OutputName Output name.
+                     * @param _outputName Output name.
+                     * 
                      */
                     void SetOutputName(const std::string& _outputName);
 
                     /**
                      * 判断参数 OutputName 是否已赋值
                      * @return OutputName 是否已赋值
+                     * 
                      */
                     bool OutputNameHasBeenSet() const;
 
                     /**
                      * 获取Output type.
                      * @return OutputType Output type.
+                     * 
                      */
                     std::string GetOutputType() const;
 
                     /**
                      * 设置Output type.
-                     * @param OutputType Output type.
+                     * @param _outputType Output type.
+                     * 
                      */
                     void SetOutputType(const std::string& _outputType);
 
                     /**
                      * 判断参数 OutputType 是否已赋值
                      * @return OutputType 是否已赋值
+                     * 
                      */
                     bool OutputTypeHasBeenSet() const;
 
@@ -110,56 +119,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Output description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Output description.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Output description.
+                     * @param _description Output description.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Output protocol.
                      * @return Protocol Output protocol.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Output protocol.
-                     * @param Protocol Output protocol.
+                     * @param _protocol Output protocol.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Output destination address information list.
                      * @return OutputAddressList Output destination address information list.
+                     * 
                      */
                     std::vector<OutputAddress> GetOutputAddressList() const;
 
                     /**
                      * 设置Output destination address information list.
-                     * @param OutputAddressList Output destination address information list.
+                     * @param _outputAddressList Output destination address information list.
+                     * 
                      */
                     void SetOutputAddressList(const std::vector<OutputAddress>& _outputAddressList);
 
                     /**
                      * 判断参数 OutputAddressList 是否已赋值
                      * @return OutputAddressList 是否已赋值
+                     * 
                      */
                     bool OutputAddressListHasBeenSet() const;
 
@@ -168,20 +186,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OutputRegion Output region.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOutputRegion() const;
 
                     /**
                      * 设置Output region.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OutputRegion Output region.
+                     * @param _outputRegion Output region.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOutputRegion(const std::string& _outputRegion);
 
                     /**
                      * 判断参数 OutputRegion 是否已赋值
                      * @return OutputRegion 是否已赋值
+                     * 
                      */
                     bool OutputRegionHasBeenSet() const;
 
@@ -190,20 +211,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SRTSettings SRT configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribeOutputSRTSettings GetSRTSettings() const;
 
                     /**
                      * 设置SRT configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SRTSettings SRT configuration information of output.
+                     * @param _sRTSettings SRT configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSRTSettings(const DescribeOutputSRTSettings& _sRTSettings);
 
                     /**
                      * 判断参数 SRTSettings 是否已赋值
                      * @return SRTSettings 是否已赋值
+                     * 
                      */
                     bool SRTSettingsHasBeenSet() const;
 
@@ -212,20 +236,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RTPSettings RTP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribeOutputRTPSettings GetRTPSettings() const;
 
                     /**
                      * 设置RTP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RTPSettings RTP configuration information of output.
+                     * @param _rTPSettings RTP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRTPSettings(const DescribeOutputRTPSettings& _rTPSettings);
 
                     /**
                      * 判断参数 RTPSettings 是否已赋值
                      * @return RTPSettings 是否已赋值
+                     * 
                      */
                     bool RTPSettingsHasBeenSet() const;
 
@@ -234,20 +261,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RTMPSettings RTMP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     DescribeOutputRTMPSettings GetRTMPSettings() const;
 
                     /**
                      * 设置RTMP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RTMPSettings RTMP configuration information of output.
+                     * @param _rTMPSettings RTMP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRTMPSettings(const DescribeOutputRTMPSettings& _rTMPSettings);
 
                     /**
                      * 判断参数 RTMPSettings 是否已赋值
                      * @return RTMPSettings 是否已赋值
+                     * 
                      */
                     bool RTMPSettingsHasBeenSet() const;
 
@@ -256,20 +286,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return RTMPPullSettings RTMP pull configuration of the output
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     DescribeOutputRTMPPullSettings GetRTMPPullSettings() const;
 
                     /**
                      * 设置RTMP pull configuration of the output
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param RTMPPullSettings RTMP pull configuration of the output
+                     * @param _rTMPPullSettings RTMP pull configuration of the output
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetRTMPPullSettings(const DescribeOutputRTMPPullSettings& _rTMPPullSettings);
 
                     /**
                      * 判断参数 RTMPPullSettings 是否已赋值
                      * @return RTMPPullSettings 是否已赋值
+                     * 
                      */
                     bool RTMPPullSettingsHasBeenSet() const;
 
@@ -280,6 +313,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return AllowIpList CIDR allowlist
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
@@ -287,15 +321,17 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 设置CIDR allowlist
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param AllowIpList CIDR allowlist
+                     * @param _allowIpList CIDR allowlist
 This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
 
                     /**
                      * 判断参数 AllowIpList 是否已赋值
                      * @return AllowIpList 是否已赋值
+                     * 
                      */
                     bool AllowIpListHasBeenSet() const;
 

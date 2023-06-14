@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Standard output redirection local path
                      * @return StdoutLocalPath Standard output redirection local path
+                     * 
                      */
                     std::string GetStdoutLocalPath() const;
 
                     /**
                      * 设置Standard output redirection local path
-                     * @param StdoutLocalPath Standard output redirection local path
+                     * @param _stdoutLocalPath Standard output redirection local path
+                     * 
                      */
                     void SetStdoutLocalPath(const std::string& _stdoutLocalPath);
 
                     /**
                      * 判断参数 StdoutLocalPath 是否已赋值
                      * @return StdoutLocalPath 是否已赋值
+                     * 
                      */
                     bool StdoutLocalPathHasBeenSet() const;
 
                     /**
                      * 获取Standard error redirection local path
                      * @return StderrLocalPath Standard error redirection local path
+                     * 
                      */
                     std::string GetStderrLocalPath() const;
 
                     /**
                      * 设置Standard error redirection local path
-                     * @param StderrLocalPath Standard error redirection local path
+                     * @param _stderrLocalPath Standard error redirection local path
+                     * 
                      */
                     void SetStderrLocalPath(const std::string& _stderrLocalPath);
 
                     /**
                      * 判断参数 StderrLocalPath 是否已赋值
                      * @return StderrLocalPath 是否已赋值
+                     * 
                      */
                     bool StderrLocalPathHasBeenSet() const;
 
                     /**
                      * 获取Standard output redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
                      * @return StdoutLocalFileName Standard output redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     std::string GetStdoutLocalFileName() const;
 
                     /**
                      * 设置Standard output redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
-                     * @param StdoutLocalFileName Standard output redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * @param _stdoutLocalFileName Standard output redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     void SetStdoutLocalFileName(const std::string& _stdoutLocalFileName);
 
                     /**
                      * 判断参数 StdoutLocalFileName 是否已赋值
                      * @return StdoutLocalFileName 是否已赋值
+                     * 
                      */
                     bool StdoutLocalFileNameHasBeenSet() const;
 
                     /**
                      * 获取Standard error redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
                      * @return StderrLocalFileName Standard error redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     std::string GetStderrLocalFileName() const;
 
                     /**
                      * 设置Standard error redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
-                     * @param StderrLocalFileName Standard error redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * @param _stderrLocalFileName Standard error redirection local file name, which supports three placeholders: `${BATCH_JOB_ID}`, `${BATCH_TASK_NAME}`, and `${BATCH_TASK_INSTANCE_INDEX}`
+                     * 
                      */
                     void SetStderrLocalFileName(const std::string& _stderrLocalFileName);
 
                     /**
                      * 判断参数 StderrLocalFileName 是否已赋值
                      * @return StderrLocalFileName 是否已赋值
+                     * 
                      */
                     bool StderrLocalFileNameHasBeenSet() const;
 

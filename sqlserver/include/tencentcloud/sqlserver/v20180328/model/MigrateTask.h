@@ -50,234 +50,273 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return MigrateId Migration task ID
+                     * 
                      */
                     uint64_t GetMigrateId() const;
 
                     /**
                      * 设置Migration task ID
-                     * @param MigrateId Migration task ID
+                     * @param _migrateId Migration task ID
+                     * 
                      */
                     void SetMigrateId(const uint64_t& _migrateId);
 
                     /**
                      * 判断参数 MigrateId 是否已赋值
                      * @return MigrateId 是否已赋值
+                     * 
                      */
                     bool MigrateIdHasBeenSet() const;
 
                     /**
                      * 获取Migration task name
                      * @return MigrateName Migration task name
+                     * 
                      */
                     std::string GetMigrateName() const;
 
                     /**
                      * 设置Migration task name
-                     * @param MigrateName Migration task name
+                     * @param _migrateName Migration task name
+                     * 
                      */
                     void SetMigrateName(const std::string& _migrateName);
 
                     /**
                      * 判断参数 MigrateName 是否已赋值
                      * @return MigrateName 是否已赋值
+                     * 
                      */
                     bool MigrateNameHasBeenSet() const;
 
                     /**
                      * 获取User ID of migration task
                      * @return AppId User ID of migration task
+                     * 
                      */
                     uint64_t GetAppId() const;
 
                     /**
                      * 设置User ID of migration task
-                     * @param AppId User ID of migration task
+                     * @param _appId User ID of migration task
+                     * 
                      */
                     void SetAppId(const uint64_t& _appId);
 
                     /**
                      * 判断参数 AppId 是否已赋值
                      * @return AppId 是否已赋值
+                     * 
                      */
                     bool AppIdHasBeenSet() const;
 
                     /**
                      * 获取Migration task region
                      * @return Region Migration task region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Migration task region
-                     * @param Region Migration task region
+                     * @param _region Migration task region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
                      * @return SourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
+                     * 
                      */
                     int64_t GetSourceType() const;
 
                     /**
                      * 设置Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
-                     * @param SourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
+                     * @param _sourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode)
+                     * 
                      */
                     void SetSourceType(const int64_t& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Migration task creation time
                      * @return CreateTime Migration task creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Migration task creation time
-                     * @param CreateTime Migration task creation time
+                     * @param _createTime Migration task creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Migration task start time
                      * @return StartTime Migration task start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Migration task start time
-                     * @param StartTime Migration task start time
+                     * @param _startTime Migration task start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Migration task end time
                      * @return EndTime Migration task end time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Migration task end time
-                     * @param EndTime Migration task end time
+                     * @param _endTime Migration task end time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
                      * @return Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
-                     * @param Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
+                     * @param _status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Information
                      * @return Message Information
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Information
-                     * @param Message Information
+                     * @param _message Information
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Whether migration task has been checked (0: not checked, 1: check succeeded, 2: check failed, 3: checking)
                      * @return CheckFlag Whether migration task has been checked (0: not checked, 1: check succeeded, 2: check failed, 3: checking)
+                     * 
                      */
                     uint64_t GetCheckFlag() const;
 
                     /**
                      * 设置Whether migration task has been checked (0: not checked, 1: check succeeded, 2: check failed, 3: checking)
-                     * @param CheckFlag Whether migration task has been checked (0: not checked, 1: check succeeded, 2: check failed, 3: checking)
+                     * @param _checkFlag Whether migration task has been checked (0: not checked, 1: check succeeded, 2: check failed, 3: checking)
+                     * 
                      */
                     void SetCheckFlag(const uint64_t& _checkFlag);
 
                     /**
                      * 判断参数 CheckFlag 是否已赋值
                      * @return CheckFlag 是否已赋值
+                     * 
                      */
                     bool CheckFlagHasBeenSet() const;
 
                     /**
                      * 获取Migration task progress in %
                      * @return Progress Migration task progress in %
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 设置Migration task progress in %
-                     * @param Progress Migration task progress in %
+                     * @param _progress Migration task progress in %
+                     * 
                      */
                     void SetProgress(const int64_t& _progress);
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Migration task progress details
                      * @return MigrateDetail Migration task progress details
+                     * 
                      */
                     MigrateDetail GetMigrateDetail() const;
 
                     /**
                      * 设置Migration task progress details
-                     * @param MigrateDetail Migration task progress details
+                     * @param _migrateDetail Migration task progress details
+                     * 
                      */
                     void SetMigrateDetail(const MigrateDetail& _migrateDetail);
 
                     /**
                      * 判断参数 MigrateDetail 是否已赋值
                      * @return MigrateDetail 是否已赋值
+                     * 
                      */
                     bool MigrateDetailHasBeenSet() const;
 

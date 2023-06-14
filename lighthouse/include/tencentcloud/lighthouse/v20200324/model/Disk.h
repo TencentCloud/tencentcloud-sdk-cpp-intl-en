@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Disk ID
                      * @return DiskId Disk ID
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Disk ID
-                     * @param DiskId Disk ID
+                     * @param _diskId Disk ID
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Availability zone
                      * @return Zone Availability zone
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone
-                     * @param Zone Availability zone
+                     * @param _zone Availability zone
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Disk name
                      * @return DiskName Disk name
+                     * 
                      */
                     std::string GetDiskName() const;
 
                     /**
                      * 设置Disk name
-                     * @param DiskName Disk name
+                     * @param _diskName Disk name
+                     * 
                      */
                     void SetDiskName(const std::string& _diskName);
 
                     /**
                      * 判断参数 DiskName 是否已赋值
                      * @return DiskName 是否已赋值
+                     * 
                      */
                     bool DiskNameHasBeenSet() const;
 
                     /**
                      * 获取Disk type
                      * @return DiskUsage Disk type
+                     * 
                      */
                     std::string GetDiskUsage() const;
 
                     /**
                      * 设置Disk type
-                     * @param DiskUsage Disk type
+                     * @param _diskUsage Disk type
+                     * 
                      */
                     void SetDiskUsage(const std::string& _diskUsage);
 
                     /**
                      * 判断参数 DiskUsage 是否已赋值
                      * @return DiskUsage 是否已赋值
+                     * 
                      */
                     bool DiskUsageHasBeenSet() const;
 
                     /**
                      * 获取Disk media type
                      * @return DiskType Disk media type
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Disk media type
-                     * @param DiskType Disk media type
+                     * @param _diskType Disk media type
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Disk payment type
                      * @return DiskChargeType Disk payment type
+                     * 
                      */
                     std::string GetDiskChargeType() const;
 
                     /**
                      * 设置Disk payment type
-                     * @param DiskChargeType Disk payment type
+                     * @param _diskChargeType Disk payment type
+                     * 
                      */
                     void SetDiskChargeType(const std::string& _diskChargeType);
 
                     /**
                      * 判断参数 DiskChargeType 是否已赋值
                      * @return DiskChargeType 是否已赋值
+                     * 
                      */
                     bool DiskChargeTypeHasBeenSet() const;
 
                     /**
                      * 获取Disk size
                      * @return DiskSize Disk size
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Disk size
-                     * @param DiskSize Disk size
+                     * @param _diskSize Disk size
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Renewal flag
                      * @return RenewFlag Renewal flag
+                     * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
                      * 设置Renewal flag
-                     * @param RenewFlag Renewal flag
+                     * @param _renewFlag Renewal flag
+                     * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 
@@ -231,6 +258,7 @@ namespace TencentCloud
 <li>`TERMINATING`: Terminating</li>
 <li>`DELETING`: Deleting</li>
 <li>`FREEZING`: Freezing</li>
+                     * 
                      */
                     std::string GetDiskState() const;
 
@@ -246,7 +274,7 @@ namespace TencentCloud
 <li>`TERMINATING`: Terminating</li>
 <li>`DELETING`: Deleting</li>
 <li>`FREEZING`: Freezing</li>
-                     * @param DiskState Disk status. Values: 
+                     * @param _diskState Disk status. Values: 
 <li>`PENDING`: Creating</li>
 <li>`UNATTACHED`: Not attached</li>
 <li>`ATTACHING`: Attaching</li>
@@ -257,102 +285,119 @@ namespace TencentCloud
 <li>`TERMINATING`: Terminating</li>
 <li>`DELETING`: Deleting</li>
 <li>`FREEZING`: Freezing</li>
+                     * 
                      */
                     void SetDiskState(const std::string& _diskState);
 
                     /**
                      * 判断参数 DiskState 是否已赋值
                      * @return DiskState 是否已赋值
+                     * 
                      */
                     bool DiskStateHasBeenSet() const;
 
                     /**
                      * 获取Whether the disk is attached to an instance
                      * @return Attached Whether the disk is attached to an instance
+                     * 
                      */
                     bool GetAttached() const;
 
                     /**
                      * 设置Whether the disk is attached to an instance
-                     * @param Attached Whether the disk is attached to an instance
+                     * @param _attached Whether the disk is attached to an instance
+                     * 
                      */
                     void SetAttached(const bool& _attached);
 
                     /**
                      * 判断参数 Attached 是否已赋值
                      * @return Attached 是否已赋值
+                     * 
                      */
                     bool AttachedHasBeenSet() const;
 
                     /**
                      * 获取Whether to release the disk along with the instance
                      * @return DeleteWithInstance Whether to release the disk along with the instance
+                     * 
                      */
                     bool GetDeleteWithInstance() const;
 
                     /**
                      * 设置Whether to release the disk along with the instance
-                     * @param DeleteWithInstance Whether to release the disk along with the instance
+                     * @param _deleteWithInstance Whether to release the disk along with the instance
+                     * 
                      */
                     void SetDeleteWithInstance(const bool& _deleteWithInstance);
 
                     /**
                      * 判断参数 DeleteWithInstance 是否已赋值
                      * @return DeleteWithInstance 是否已赋值
+                     * 
                      */
                     bool DeleteWithInstanceHasBeenSet() const;
 
                     /**
                      * 获取Last operation
                      * @return LatestOperation Last operation
+                     * 
                      */
                     std::string GetLatestOperation() const;
 
                     /**
                      * 设置Last operation
-                     * @param LatestOperation Last operation
+                     * @param _latestOperation Last operation
+                     * 
                      */
                     void SetLatestOperation(const std::string& _latestOperation);
 
                     /**
                      * 判断参数 LatestOperation 是否已赋值
                      * @return LatestOperation 是否已赋值
+                     * 
                      */
                     bool LatestOperationHasBeenSet() const;
 
                     /**
                      * 获取Last operation status
                      * @return LatestOperationState Last operation status
+                     * 
                      */
                     std::string GetLatestOperationState() const;
 
                     /**
                      * 设置Last operation status
-                     * @param LatestOperationState Last operation status
+                     * @param _latestOperationState Last operation status
+                     * 
                      */
                     void SetLatestOperationState(const std::string& _latestOperationState);
 
                     /**
                      * 判断参数 LatestOperationState 是否已赋值
                      * @return LatestOperationState 是否已赋值
+                     * 
                      */
                     bool LatestOperationStateHasBeenSet() const;
 
                     /**
                      * 获取Last request ID
                      * @return LatestOperationRequestId Last request ID
+                     * 
                      */
                     std::string GetLatestOperationRequestId() const;
 
                     /**
                      * 设置Last request ID
-                     * @param LatestOperationRequestId Last request ID
+                     * @param _latestOperationRequestId Last request ID
+                     * 
                      */
                     void SetLatestOperationRequestId(const std::string& _latestOperationRequestId);
 
                     /**
                      * 判断参数 LatestOperationRequestId 是否已赋值
                      * @return LatestOperationRequestId 是否已赋值
+                     * 
                      */
                     bool LatestOperationRequestIdHasBeenSet() const;
 
@@ -363,6 +408,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
@@ -370,15 +416,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 设置Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+                     * @param _createdTime Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -389,6 +437,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpiredTime() const;
 
@@ -396,15 +445,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+                     * @param _expiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
 
                     /**
                      * 判断参数 ExpiredTime 是否已赋值
                      * @return ExpiredTime 是否已赋值
+                     * 
                      */
                     bool ExpiredTimeHasBeenSet() const;
 
@@ -415,6 +466,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIsolatedTime() const;
 
@@ -422,51 +474,59 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Isolation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+                     * @param _isolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsolatedTime(const std::string& _isolatedTime);
 
                     /**
                      * 判断参数 IsolatedTime 是否已赋值
                      * @return IsolatedTime 是否已赋值
+                     * 
                      */
                     bool IsolatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Total disk backups
                      * @return DiskBackupCount Total disk backups
+                     * 
                      */
                     int64_t GetDiskBackupCount() const;
 
                     /**
                      * 设置Total disk backups
-                     * @param DiskBackupCount Total disk backups
+                     * @param _diskBackupCount Total disk backups
+                     * 
                      */
                     void SetDiskBackupCount(const int64_t& _diskBackupCount);
 
                     /**
                      * 判断参数 DiskBackupCount 是否已赋值
                      * @return DiskBackupCount 是否已赋值
+                     * 
                      */
                     bool DiskBackupCountHasBeenSet() const;
 
                     /**
                      * 获取Disk backup quota
                      * @return DiskBackupQuota Disk backup quota
+                     * 
                      */
                     int64_t GetDiskBackupQuota() const;
 
                     /**
                      * 设置Disk backup quota
-                     * @param DiskBackupQuota Disk backup quota
+                     * @param _diskBackupQuota Disk backup quota
+                     * 
                      */
                     void SetDiskBackupQuota(const int64_t& _diskBackupQuota);
 
                     /**
                      * 判断参数 DiskBackupQuota 是否已赋值
                      * @return DiskBackupQuota 是否已赋值
+                     * 
                      */
                     bool DiskBackupQuotaHasBeenSet() const;
 

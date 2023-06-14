@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取Application name.
                      * @return AppName Application name.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Application name.
-                     * @param AppName Application name.
+                     * @param _appName Application name.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取SKey required for creating an IM application.
                      * @return SKey SKey required for creating an IM application.
+                     * 
                      */
                     std::string GetSKey() const;
 
                     /**
                      * 设置SKey required for creating an IM application.
-                     * @param SKey SKey required for creating an IM application.
+                     * @param _sKey SKey required for creating an IM application.
+                     * 
                      */
                     void SetSKey(const std::string& _sKey);
 
                     /**
                      * 判断参数 SKey 是否已赋值
                      * @return SKey 是否已赋值
+                     * 
                      */
                     bool SKeyHasBeenSet() const;
 
                     /**
                      * 获取TinyId required for creating an IM application.
                      * @return TinyId TinyId required for creating an IM application.
+                     * 
                      */
                     std::string GetTinyId() const;
 
                     /**
                      * 设置TinyId required for creating an IM application.
-                     * @param TinyId TinyId required for creating an IM application.
+                     * @param _tinyId TinyId required for creating an IM application.
+                     * 
                      */
                     void SetTinyId(const std::string& _tinyId);
 
                     /**
                      * 判断参数 TinyId 是否已赋值
                      * @return TinyId 是否已赋值
+                     * 
                      */
                     bool TinyIdHasBeenSet() const;
 
                     /**
                      * 获取List of tags to be bound.
                      * @return TagList List of tags to be bound.
+                     * 
                      */
                     std::vector<Tag> GetTagList() const;
 
                     /**
                      * 设置List of tags to be bound.
-                     * @param TagList List of tags to be bound.
+                     * @param _tagList List of tags to be bound.
+                     * 
                      */
                     void SetTagList(const std::vector<Tag>& _tagList);
 
                     /**
                      * 判断参数 TagList 是否已赋值
                      * @return TagList 是否已赋值
+                     * 
                      */
                     bool TagListHasBeenSet() const;
 

@@ -46,270 +46,315 @@ namespace TencentCloud
                     /**
                      * 获取User ID
                      * @return UserId User ID
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID
-                     * @param UserId User ID
+                     * @param _userId User ID
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取User directory ID
                      * @return UserStoreId User directory ID
+                     * 
                      */
                     std::string GetUserStoreId() const;
 
                     /**
                      * 设置User directory ID
-                     * @param UserStoreId User directory ID
+                     * @param _userStoreId User directory ID
+                     * 
                      */
                     void SetUserStoreId(const std::string& _userStoreId);
 
                     /**
                      * 判断参数 UserStoreId 是否已赋值
                      * @return UserStoreId 是否已赋值
+                     * 
                      */
                     bool UserStoreIdHasBeenSet() const;
 
                     /**
                      * 获取Username
                      * @return UserName Username
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username
-                     * @param UserName Username
+                     * @param _userName Username
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Mobile number
                      * @return PhoneNumber Mobile number
+                     * 
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
                      * 设置Mobile number
-                     * @param PhoneNumber Mobile number
+                     * @param _phoneNumber Mobile number
+                     * 
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
 
                     /**
                      * 判断参数 PhoneNumber 是否已赋值
                      * @return PhoneNumber 是否已赋值
+                     * 
                      */
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
                      * 获取Email address
                      * @return Email Email address
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 设置Email address
-                     * @param Email Email address
+                     * @param _email Email address
+                     * 
                      */
                     void SetEmail(const std::string& _email);
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 
                     /**
                      * 获取Nickname
                      * @return Nickname Nickname
+                     * 
                      */
                     std::string GetNickname() const;
 
                     /**
                      * 设置Nickname
-                     * @param Nickname Nickname
+                     * @param _nickname Nickname
+                     * 
                      */
                     void SetNickname(const std::string& _nickname);
 
                     /**
                      * 判断参数 Nickname 是否已赋值
                      * @return Nickname 是否已赋值
+                     * 
                      */
                     bool NicknameHasBeenSet() const;
 
                     /**
                      * 获取Address
                      * @return Address Address
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置Address
-                     * @param Address Address
+                     * @param _address Address
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
                     /**
                      * 获取User group
                      * @return UserGroup User group
+                     * 
                      */
                     std::vector<std::string> GetUserGroup() const;
 
                     /**
                      * 设置User group
-                     * @param UserGroup User group
+                     * @param _userGroup User group
+                     * 
                      */
                     void SetUserGroup(const std::vector<std::string>& _userGroup);
 
                     /**
                      * 判断参数 UserGroup 是否已赋值
                      * @return UserGroup 是否已赋值
+                     * 
                      */
                     bool UserGroupHasBeenSet() const;
 
                     /**
                      * 获取Date of birth
                      * @return Birthdate Date of birth
+                     * 
                      */
                     int64_t GetBirthdate() const;
 
                     /**
                      * 设置Date of birth
-                     * @param Birthdate Date of birth
+                     * @param _birthdate Date of birth
+                     * 
                      */
                     void SetBirthdate(const int64_t& _birthdate);
 
                     /**
                      * 判断参数 Birthdate 是否已赋值
                      * @return Birthdate 是否已赋值
+                     * 
                      */
                     bool BirthdateHasBeenSet() const;
 
                     /**
                      * 获取Custom attribute
                      * @return CustomizationAttributes Custom attribute
+                     * 
                      */
                     std::vector<MemberMap> GetCustomizationAttributes() const;
 
                     /**
                      * 设置Custom attribute
-                     * @param CustomizationAttributes Custom attribute
+                     * @param _customizationAttributes Custom attribute
+                     * 
                      */
                     void SetCustomizationAttributes(const std::vector<MemberMap>& _customizationAttributes);
 
                     /**
                      * 判断参数 CustomizationAttributes 是否已赋值
                      * @return CustomizationAttributes 是否已赋值
+                     * 
                      */
                     bool CustomizationAttributesHasBeenSet() const;
 
                     /**
                      * 获取Index field 1
                      * @return IndexedAttribute1 Index field 1
+                     * 
                      */
                     std::string GetIndexedAttribute1() const;
 
                     /**
                      * 设置Index field 1
-                     * @param IndexedAttribute1 Index field 1
+                     * @param _indexedAttribute1 Index field 1
+                     * 
                      */
                     void SetIndexedAttribute1(const std::string& _indexedAttribute1);
 
                     /**
                      * 判断参数 IndexedAttribute1 是否已赋值
                      * @return IndexedAttribute1 是否已赋值
+                     * 
                      */
                     bool IndexedAttribute1HasBeenSet() const;
 
                     /**
                      * 获取Index field 2
                      * @return IndexedAttribute2 Index field 2
+                     * 
                      */
                     std::string GetIndexedAttribute2() const;
 
                     /**
                      * 设置Index field 2
-                     * @param IndexedAttribute2 Index field 2
+                     * @param _indexedAttribute2 Index field 2
+                     * 
                      */
                     void SetIndexedAttribute2(const std::string& _indexedAttribute2);
 
                     /**
                      * 判断参数 IndexedAttribute2 是否已赋值
                      * @return IndexedAttribute2 是否已赋值
+                     * 
                      */
                     bool IndexedAttribute2HasBeenSet() const;
 
                     /**
                      * 获取Index field 3
                      * @return IndexedAttribute3 Index field 3
+                     * 
                      */
                     std::string GetIndexedAttribute3() const;
 
                     /**
                      * 设置Index field 3
-                     * @param IndexedAttribute3 Index field 3
+                     * @param _indexedAttribute3 Index field 3
+                     * 
                      */
                     void SetIndexedAttribute3(const std::string& _indexedAttribute3);
 
                     /**
                      * 判断参数 IndexedAttribute3 是否已赋值
                      * @return IndexedAttribute3 是否已赋值
+                     * 
                      */
                     bool IndexedAttribute3HasBeenSet() const;
 
                     /**
                      * 获取Index field 4
                      * @return IndexedAttribute4 Index field 4
+                     * 
                      */
                     std::string GetIndexedAttribute4() const;
 
                     /**
                      * 设置Index field 4
-                     * @param IndexedAttribute4 Index field 4
+                     * @param _indexedAttribute4 Index field 4
+                     * 
                      */
                     void SetIndexedAttribute4(const std::string& _indexedAttribute4);
 
                     /**
                      * 判断参数 IndexedAttribute4 是否已赋值
                      * @return IndexedAttribute4 是否已赋值
+                     * 
                      */
                     bool IndexedAttribute4HasBeenSet() const;
 
                     /**
                      * 获取Index field 5
                      * @return IndexedAttribute5 Index field 5
+                     * 
                      */
                     std::string GetIndexedAttribute5() const;
 
                     /**
                      * 设置Index field 5
-                     * @param IndexedAttribute5 Index field 5
+                     * @param _indexedAttribute5 Index field 5
+                     * 
                      */
                     void SetIndexedAttribute5(const std::string& _indexedAttribute5);
 
                     /**
                      * 判断参数 IndexedAttribute5 是否已赋值
                      * @return IndexedAttribute5 是否已赋值
+                     * 
                      */
                     bool IndexedAttribute5HasBeenSet() const;
 

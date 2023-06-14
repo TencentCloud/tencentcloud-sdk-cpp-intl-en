@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where IDL resides
                      * @return ClusterId ID of the cluster where IDL resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where IDL resides
-                     * @param ClusterId ID of the cluster where IDL resides
+                     * @param _clusterId ID of the cluster where IDL resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of information of IDL files to be deleted
                      * @return IdlFiles List of information of IDL files to be deleted
+                     * 
                      */
                     std::vector<IdlFileInfo> GetIdlFiles() const;
 
                     /**
                      * 设置List of information of IDL files to be deleted
-                     * @param IdlFiles List of information of IDL files to be deleted
+                     * @param _idlFiles List of information of IDL files to be deleted
+                     * 
                      */
                     void SetIdlFiles(const std::vector<IdlFileInfo>& _idlFiles);
 
                     /**
                      * 判断参数 IdlFiles 是否已赋值
                      * @return IdlFiles 是否已赋值
+                     * 
                      */
                     bool IdlFilesHasBeenSet() const;
 

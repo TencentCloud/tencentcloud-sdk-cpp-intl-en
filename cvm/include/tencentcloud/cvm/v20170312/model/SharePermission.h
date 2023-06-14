@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Time when an image was shared.
                      * @return CreatedTime Time when an image was shared.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Time when an image was shared.
-                     * @param CreatedTime Time when an image was shared.
+                     * @param _createdTime Time when an image was shared.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取ID of the account with which the image is shared.
                      * @return AccountId ID of the account with which the image is shared.
+                     * 
                      */
                     std::string GetAccountId() const;
 
                     /**
                      * 设置ID of the account with which the image is shared.
-                     * @param AccountId ID of the account with which the image is shared.
+                     * @param _accountId ID of the account with which the image is shared.
+                     * 
                      */
                     void SetAccountId(const std::string& _accountId);
 
                     /**
                      * 判断参数 AccountId 是否已赋值
                      * @return AccountId 是否已赋值
+                     * 
                      */
                     bool AccountIdHasBeenSet() const;
 

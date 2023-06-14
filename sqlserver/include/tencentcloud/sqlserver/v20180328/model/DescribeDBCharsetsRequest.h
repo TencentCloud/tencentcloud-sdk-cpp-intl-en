@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of mssql-j8kv137v
                      * @return InstanceId Instance ID in the format of mssql-j8kv137v
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-j8kv137v
-                     * @param InstanceId Instance ID in the format of mssql-j8kv137v
+                     * @param _instanceId Instance ID in the format of mssql-j8kv137v
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

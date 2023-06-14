@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取IP address template instance ID, such as `ipm-mdunqeb6`.
                      * @return AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
+                     * 
                      */
                     std::string GetAddressTemplateId() const;
 
                     /**
                      * 设置IP address template instance ID, such as `ipm-mdunqeb6`.
-                     * @param AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
+                     * @param _addressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
+                     * 
                      */
                     void SetAddressTemplateId(const std::string& _addressTemplateId);
 
                     /**
                      * 判断参数 AddressTemplateId 是否已赋值
                      * @return AddressTemplateId 是否已赋值
+                     * 
                      */
                     bool AddressTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取IP address template name.
                      * @return AddressTemplateName IP address template name.
+                     * 
                      */
                     std::string GetAddressTemplateName() const;
 
                     /**
                      * 设置IP address template name.
-                     * @param AddressTemplateName IP address template name.
+                     * @param _addressTemplateName IP address template name.
+                     * 
                      */
                     void SetAddressTemplateName(const std::string& _addressTemplateName);
 
                     /**
                      * 判断参数 AddressTemplateName 是否已赋值
                      * @return AddressTemplateName 是否已赋值
+                     * 
                      */
                     bool AddressTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Address information, including IP, CIDR and IP address range.
                      * @return Addresses Address information, including IP, CIDR and IP address range.
+                     * 
                      */
                     std::vector<std::string> GetAddresses() const;
 
                     /**
                      * 设置Address information, including IP, CIDR and IP address range.
-                     * @param Addresses Address information, including IP, CIDR and IP address range.
+                     * @param _addresses Address information, including IP, CIDR and IP address range.
+                     * 
                      */
                     void SetAddresses(const std::vector<std::string>& _addresses);
 
                     /**
                      * 判断参数 Addresses 是否已赋值
                      * @return Addresses 是否已赋值
+                     * 
                      */
                     bool AddressesHasBeenSet() const;
 
                     /**
                      * 获取Address information with remarks, including the IP, CIDR block or IP address range.
                      * @return AddressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
+                     * 
                      */
                     std::vector<AddressInfo> GetAddressesExtra() const;
 
                     /**
                      * 设置Address information with remarks, including the IP, CIDR block or IP address range.
-                     * @param AddressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
+                     * @param _addressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
+                     * 
                      */
                     void SetAddressesExtra(const std::vector<AddressInfo>& _addressesExtra);
 
                     /**
                      * 判断参数 AddressesExtra 是否已赋值
                      * @return AddressesExtra 是否已赋值
+                     * 
                      */
                     bool AddressesExtraHasBeenSet() const;
 

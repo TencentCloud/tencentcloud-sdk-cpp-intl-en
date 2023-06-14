@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of security rule IDs. Up to 20 security rules are supported.
                      * @return SecurityRuleIds List of security rule IDs. Up to 20 security rules are supported.
+                     * 
                      */
                     std::vector<std::string> GetSecurityRuleIds() const;
 
                     /**
                      * 设置List of security rule IDs. Up to 20 security rules are supported.
-                     * @param SecurityRuleIds List of security rule IDs. Up to 20 security rules are supported.
+                     * @param _securityRuleIds List of security rule IDs. Up to 20 security rules are supported.
+                     * 
                      */
                     void SetSecurityRuleIds(const std::vector<std::string>& _securityRuleIds);
 
                     /**
                      * 判断参数 SecurityRuleIds 是否已赋值
                      * @return SecurityRuleIds 是否已赋值
+                     * 
                      */
                     bool SecurityRuleIdsHasBeenSet() const;
 

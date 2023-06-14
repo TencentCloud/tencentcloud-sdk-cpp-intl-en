@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The domains.
                      * @return Domains The domains.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domains.
-                     * @param Domains The domains.
+                     * @param _domains The domains.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取The user ID.
                      * @return ToUin The user ID.
+                     * 
                      */
                     std::string GetToUin() const;
 
                     /**
                      * 设置The user ID.
-                     * @param ToUin The user ID.
+                     * @param _toUin The user ID.
+                     * 
                      */
                     void SetToUin(const std::string& _toUin);
 
                     /**
                      * 判断参数 ToUin 是否已赋值
                      * @return ToUin 是否已赋值
+                     * 
                      */
                     bool ToUinHasBeenSet() const;
 
                     /**
                      * 获取Whether to transfer the DNS service.
                      * @return DnsTransfer Whether to transfer the DNS service.
+                     * 
                      */
                     bool GetDnsTransfer() const;
 
                     /**
                      * 设置Whether to transfer the DNS service.
-                     * @param DnsTransfer Whether to transfer the DNS service.
+                     * @param _dnsTransfer Whether to transfer the DNS service.
+                     * 
                      */
                     void SetDnsTransfer(const bool& _dnsTransfer);
 
                     /**
                      * 判断参数 DnsTransfer 是否已赋值
                      * @return DnsTransfer 是否已赋值
+                     * 
                      */
                     bool DnsTransferHasBeenSet() const;
 

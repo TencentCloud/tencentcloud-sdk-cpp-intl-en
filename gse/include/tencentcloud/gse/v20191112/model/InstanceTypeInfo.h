@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Name of the server type, such as `Standard SA1`
                      * @return TypeName Name of the server type, such as `Standard SA1`
+                     * 
                      */
                     std::string GetTypeName() const;
 
                     /**
                      * 设置Name of the server type, such as `Standard SA1`
-                     * @param TypeName Name of the server type, such as `Standard SA1`
+                     * @param _typeName Name of the server type, such as `Standard SA1`
+                     * 
                      */
                     void SetTypeName(const std::string& _typeName);
 
                     /**
                      * 判断参数 TypeName 是否已赋值
                      * @return TypeName 是否已赋值
+                     * 
                      */
                     bool TypeNameHasBeenSet() const;
 
                     /**
                      * 获取Specification of the server type, such as `SA1.SMALL1`
                      * @return InstanceType Specification of the server type, such as `SA1.SMALL1`
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Specification of the server type, such as `SA1.SMALL1`
-                     * @param InstanceType Specification of the server type, such as `SA1.SMALL1`
+                     * @param _instanceType Specification of the server type, such as `SA1.SMALL1`
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取CPU, in core
                      * @return Cpu CPU, in core
+                     * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
                      * 设置CPU, in core
-                     * @param Cpu CPU, in core
+                     * @param _cpu CPU, in core
+                     * 
                      */
                     void SetCpu(const uint64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Memory, in GB
                      * @return Memory Memory, in GB
+                     * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
                      * 设置Memory, in GB
-                     * @param Memory Memory, in GB
+                     * @param _memory Memory, in GB
+                     * 
                      */
                     void SetMemory(const uint64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取The packet sending and receiving capability, in 10k PPS. 
                      * @return NetworkCard The packet sending and receiving capability, in 10k PPS. 
+                     * 
                      */
                     uint64_t GetNetworkCard() const;
 
                     /**
                      * 设置The packet sending and receiving capability, in 10k PPS. 
-                     * @param NetworkCard The packet sending and receiving capability, in 10k PPS. 
+                     * @param _networkCard The packet sending and receiving capability, in 10k PPS. 
+                     * 
                      */
                     void SetNetworkCard(const uint64_t& _networkCard);
 
                     /**
                      * 判断参数 NetworkCard 是否已赋值
                      * @return NetworkCard 是否已赋值
+                     * 
                      */
                     bool NetworkCardHasBeenSet() const;
 

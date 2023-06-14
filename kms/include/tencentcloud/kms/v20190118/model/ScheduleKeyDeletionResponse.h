@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Schedule deletion execution time
                      * @return DeletionDate Schedule deletion execution time
+                     * 
                      */
                     uint64_t GetDeletionDate() const;
 
                     /**
                      * 判断参数 DeletionDate 是否已赋值
                      * @return DeletionDate 是否已赋值
+                     * 
                      */
                     bool DeletionDateHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the CMK scheduled for deletion
                      * @return KeyId Unique ID of the CMK scheduled for deletion
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
                      * @return VpcId The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
-                     * @param VpcId The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
+                     * @param _vpcId The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取The `IPv6` subnet IP range list.
                      * @return Ipv6SubnetCidrBlocks The `IPv6` subnet IP range list.
+                     * 
                      */
                     std::vector<Ipv6SubnetCidrBlock> GetIpv6SubnetCidrBlocks() const;
 
                     /**
                      * 设置The `IPv6` subnet IP range list.
-                     * @param Ipv6SubnetCidrBlocks The `IPv6` subnet IP range list.
+                     * @param _ipv6SubnetCidrBlocks The `IPv6` subnet IP range list.
+                     * 
                      */
                     void SetIpv6SubnetCidrBlocks(const std::vector<Ipv6SubnetCidrBlock>& _ipv6SubnetCidrBlocks);
 
                     /**
                      * 判断参数 Ipv6SubnetCidrBlocks 是否已赋值
                      * @return Ipv6SubnetCidrBlocks 是否已赋值
+                     * 
                      */
                     bool Ipv6SubnetCidrBlocksHasBeenSet() const;
 

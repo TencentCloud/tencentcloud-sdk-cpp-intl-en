@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Unique application ID.
                      * @return ApplicationId Unique application ID.
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApplicationAccounts Application account.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetApplicationAccounts() const;
 
                     /**
                      * 判断参数 ApplicationAccounts 是否已赋值
                      * @return ApplicationAccounts 是否已赋值
+                     * 
                      */
                     bool ApplicationAccountsHasBeenSet() const;
 
@@ -75,12 +79,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserId Unique ID of the authorized user.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
@@ -89,12 +95,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserName Username of the authorized user.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
@@ -103,12 +111,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthorizationUserResourceList Returned resource list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AuthorizationUserResouceInfo> GetAuthorizationUserResourceList() const;
 
                     /**
                      * 判断参数 AuthorizationUserResourceList 是否已赋值
                      * @return AuthorizationUserResourceList 是否已赋值
+                     * 
                      */
                     bool AuthorizationUserResourceListHasBeenSet() const;
 

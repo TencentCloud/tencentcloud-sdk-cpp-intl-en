@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the cluster where the table resides
                      * @return ClusterId The ID of the cluster where the table resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The ID of the cluster where the table resides
-                     * @param ClusterId The ID of the cluster where the table resides
+                     * @param _clusterId The ID of the cluster where the table resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the table group where the table resides
                      * @return TableGroupId The ID of the table group where the table resides
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置The ID of the table group where the table resides
-                     * @param TableGroupId The ID of the table group where the table resides
+                     * @param _tableGroupId The ID of the table group where the table resides
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Table name
                      * @return TableName Table name
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
-                     * @param TableName Table name
+                     * @param _tableName Table name
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
                     /**
                      * 获取Snapshot name
                      * @return SnapshotName Snapshot name
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置Snapshot name
-                     * @param SnapshotName Snapshot name
+                     * @param _snapshotName Snapshot name
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
                      * 获取The list of snapshots pulled in batches
                      * @return SelectedTables The list of snapshots pulled in batches
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置The list of snapshots pulled in batches
-                     * @param SelectedTables The list of snapshots pulled in batches
+                     * @param _selectedTables The list of snapshots pulled in batches
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 

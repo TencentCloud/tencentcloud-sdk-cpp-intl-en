@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the recording task.
                      * @return TaskId The unique ID of the recording task.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -65,12 +67,14 @@ Exited: The task is being ended.
 Idle: The task is idle.
 InProgress: The task is in progress.
 Exited: The task is being ended.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -79,12 +83,14 @@ Exited: The task is being ended.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StorageFileList The information of the recording files.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<StorageFile> GetStorageFileList() const;
 
                     /**
                      * 判断参数 StorageFileList 是否已赋值
                      * @return StorageFileList 是否已赋值
+                     * 
                      */
                     bool StorageFileListHasBeenSet() const;
 

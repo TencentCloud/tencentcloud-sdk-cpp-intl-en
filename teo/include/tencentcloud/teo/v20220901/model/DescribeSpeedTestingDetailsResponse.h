@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The site’s load speed across regions.
                      * @return SpeedTestingDetailData The site’s load speed across regions.
+                     * 
                      */
                     SpeedTestingDetailData GetSpeedTestingDetailData() const;
 
                     /**
                      * 判断参数 SpeedTestingDetailData 是否已赋值
                      * @return SpeedTestingDetailData 是否已赋值
+                     * 
                      */
                     bool SpeedTestingDetailDataHasBeenSet() const;
 

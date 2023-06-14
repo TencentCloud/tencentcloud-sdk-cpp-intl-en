@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Price for purchasing the extra performance
                      * @return DiskPrice Price for purchasing the extra performance
+                     * 
                      */
                     Price GetDiskPrice() const;
 
                     /**
                      * 判断参数 DiskPrice 是否已赋值
                      * @return DiskPrice 是否已赋值
+                     * 
                      */
                     bool DiskPriceHasBeenSet() const;
 

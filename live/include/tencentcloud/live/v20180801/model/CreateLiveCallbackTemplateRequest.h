@@ -49,6 +49,7 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * @return TemplateName Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
@@ -56,15 +57,17 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * 设置Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
-                     * @param TemplateName Template name.
+                     * @param _templateName Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
@@ -75,6 +78,7 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * @return Description Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     std::string GetDescription() const;
 
@@ -82,15 +86,17 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * 设置Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
-                     * @param Description Description.
+                     * @param _description Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Only letters, digits, underscores, and hyphens can be contained.
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return StreamBeginNotifyUrl Stream starting callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetStreamBeginNotifyUrl() const;
 
                     /**
                      * 设置Stream starting callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-                     * @param StreamBeginNotifyUrl Stream starting callback URL,
+                     * @param _streamBeginNotifyUrl Stream starting callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     void SetStreamBeginNotifyUrl(const std::string& _streamBeginNotifyUrl);
 
                     /**
                      * 判断参数 StreamBeginNotifyUrl 是否已赋值
                      * @return StreamBeginNotifyUrl 是否已赋值
+                     * 
                      */
                     bool StreamBeginNotifyUrlHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return StreamEndNotifyUrl Interruption callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetStreamEndNotifyUrl() const;
 
                     /**
                      * 设置Interruption callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-                     * @param StreamEndNotifyUrl Interruption callback URL,
+                     * @param _streamEndNotifyUrl Interruption callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     void SetStreamEndNotifyUrl(const std::string& _streamEndNotifyUrl);
 
                     /**
                      * 判断参数 StreamEndNotifyUrl 是否已赋值
                      * @return StreamEndNotifyUrl 是否已赋值
+                     * 
                      */
                     bool StreamEndNotifyUrlHasBeenSet() const;
 
@@ -143,20 +155,23 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return RecordNotifyUrl Recording callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetRecordNotifyUrl() const;
 
                     /**
                      * 设置Recording callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-                     * @param RecordNotifyUrl Recording callback URL,
+                     * @param _recordNotifyUrl Recording callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     void SetRecordNotifyUrl(const std::string& _recordNotifyUrl);
 
                     /**
                      * 判断参数 RecordNotifyUrl 是否已赋值
                      * @return RecordNotifyUrl 是否已赋值
+                     * 
                      */
                     bool RecordNotifyUrlHasBeenSet() const;
 
@@ -165,20 +180,23 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return SnapshotNotifyUrl Screencapturing callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetSnapshotNotifyUrl() const;
 
                     /**
                      * 设置Screencapturing callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-                     * @param SnapshotNotifyUrl Screencapturing callback URL,
+                     * @param _snapshotNotifyUrl Screencapturing callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     void SetSnapshotNotifyUrl(const std::string& _snapshotNotifyUrl);
 
                     /**
                      * 判断参数 SnapshotNotifyUrl 是否已赋值
                      * @return SnapshotNotifyUrl 是否已赋值
+                     * 
                      */
                     bool SnapshotNotifyUrlHasBeenSet() const;
 
@@ -187,20 +205,23 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
                      * @return PornCensorshipNotifyUrl Porn detection callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetPornCensorshipNotifyUrl() const;
 
                     /**
                      * 设置Porn detection callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
-                     * @param PornCensorshipNotifyUrl Porn detection callback URL,
+                     * @param _pornCensorshipNotifyUrl Porn detection callback URL,
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
+                     * 
                      */
                     void SetPornCensorshipNotifyUrl(const std::string& _pornCensorshipNotifyUrl);
 
                     /**
                      * 判断参数 PornCensorshipNotifyUrl 是否已赋值
                      * @return PornCensorshipNotifyUrl 是否已赋值
+                     * 
                      */
                     bool PornCensorshipNotifyUrlHasBeenSet() const;
 
@@ -209,56 +230,65 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
                      * @return CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetCallbackKey() const;
 
                     /**
                      * 设置Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-                     * @param CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+                     * @param _callbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+                     * 
                      */
                     void SetCallbackKey(const std::string& _callbackKey);
 
                     /**
                      * 判断参数 CallbackKey 是否已赋值
                      * @return CallbackKey 是否已赋值
+                     * 
                      */
                     bool CallbackKeyHasBeenSet() const;
 
                     /**
                      * 获取Disused
                      * @return StreamMixNotifyUrl Disused
+                     * 
                      */
                     std::string GetStreamMixNotifyUrl() const;
 
                     /**
                      * 设置Disused
-                     * @param StreamMixNotifyUrl Disused
+                     * @param _streamMixNotifyUrl Disused
+                     * 
                      */
                     void SetStreamMixNotifyUrl(const std::string& _streamMixNotifyUrl);
 
                     /**
                      * 判断参数 StreamMixNotifyUrl 是否已赋值
                      * @return StreamMixNotifyUrl 是否已赋值
+                     * 
                      */
                     bool StreamMixNotifyUrlHasBeenSet() const;
 
                     /**
                      * 获取The push error callback URL.
                      * @return PushExceptionNotifyUrl The push error callback URL.
+                     * 
                      */
                     std::string GetPushExceptionNotifyUrl() const;
 
                     /**
                      * 设置The push error callback URL.
-                     * @param PushExceptionNotifyUrl The push error callback URL.
+                     * @param _pushExceptionNotifyUrl The push error callback URL.
+                     * 
                      */
                     void SetPushExceptionNotifyUrl(const std::string& _pushExceptionNotifyUrl);
 
                     /**
                      * 判断参数 PushExceptionNotifyUrl 是否已赋值
                      * @return PushExceptionNotifyUrl 是否已赋值
+                     * 
                      */
                     bool PushExceptionNotifyUrlHasBeenSet() const;
 

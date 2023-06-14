@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
                      * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
-                     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * @param _vpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Network ACL name, which can contain up to 60 bytes.
                      * @return NetworkAclName Network ACL name, which can contain up to 60 bytes.
+                     * 
                      */
                     std::string GetNetworkAclName() const;
 
                     /**
                      * 设置Network ACL name, which can contain up to 60 bytes.
-                     * @param NetworkAclName Network ACL name, which can contain up to 60 bytes.
+                     * @param _networkAclName Network ACL name, which can contain up to 60 bytes.
+                     * 
                      */
                     void SetNetworkAclName(const std::string& _networkAclName);
 
                     /**
                      * 判断参数 NetworkAclName 是否已赋值
                      * @return NetworkAclName 是否已赋值
+                     * 
                      */
                     bool NetworkAclNameHasBeenSet() const;
 
                     /**
                      * 获取Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
                      * @return NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * 
                      */
                     std::string GetNetworkAclType() const;
 
                     /**
                      * 设置Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
-                     * @param NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * @param _networkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * 
                      */
                     void SetNetworkAclType(const std::string& _networkAclType);
 
                     /**
                      * 判断参数 NetworkAclType 是否已赋值
                      * @return NetworkAclType 是否已赋值
+                     * 
                      */
                     bool NetworkAclTypeHasBeenSet() const;
 
                     /**
                      * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
                      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

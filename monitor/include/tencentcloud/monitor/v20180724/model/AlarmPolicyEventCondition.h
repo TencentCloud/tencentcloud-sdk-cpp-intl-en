@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Rules Alarm trigger condition list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AlarmPolicyRule> GetRules() const;
 
                     /**
                      * 设置Alarm trigger condition list
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Rules Alarm trigger condition list
+                     * @param _rules Alarm trigger condition list
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRules(const std::vector<AlarmPolicyRule>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

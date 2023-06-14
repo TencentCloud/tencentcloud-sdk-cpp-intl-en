@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Environment (namespace) name.
                      * @return EnvironmentId Environment (namespace) name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment (namespace) name.
-                     * @param EnvironmentId Environment (namespace) name.
+                     * @param _environmentId Environment (namespace) name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name.
                      * @return TopicName Topic name.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name.
-                     * @param TopicName Topic name.
+                     * @param _topicName Topic name.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Offset, which defaults to 0 if left empty.
                      * @return Offset Offset, which defaults to 0 if left empty.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which defaults to 0 if left empty.
-                     * @param Offset Offset, which defaults to 0 if left empty.
+                     * @param _offset Offset, which defaults to 0 if left empty.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      * @return Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
-                     * @param Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * @param _limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Fuzzy match by subscriber name.
                      * @return SubscriptionName Fuzzy match by subscriber name.
+                     * 
                      */
                     std::string GetSubscriptionName() const;
 
                     /**
                      * 设置Fuzzy match by subscriber name.
-                     * @param SubscriptionName Fuzzy match by subscriber name.
+                     * @param _subscriptionName Fuzzy match by subscriber name.
+                     * 
                      */
                     void SetSubscriptionName(const std::string& _subscriptionName);
 
                     /**
                      * 判断参数 SubscriptionName 是否已赋值
                      * @return SubscriptionName 是否已赋值
+                     * 
                      */
                     bool SubscriptionNameHasBeenSet() const;
 
                     /**
                      * 获取Data filter.
                      * @return Filters Data filter.
+                     * 
                      */
                     std::vector<FilterSubscription> GetFilters() const;
 
                     /**
                      * 设置Data filter.
-                     * @param Filters Data filter.
+                     * @param _filters Data filter.
+                     * 
                      */
                     void SetFilters(const std::vector<FilterSubscription>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Pulsar cluster ID
                      * @return ClusterId Pulsar cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Pulsar cluster ID
-                     * @param ClusterId Pulsar cluster ID
+                     * @param _clusterId Pulsar cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

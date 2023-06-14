@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取IP address template name.
                      * @return AddressTemplateName IP address template name.
+                     * 
                      */
                     std::string GetAddressTemplateName() const;
 
                     /**
                      * 设置IP address template name.
-                     * @param AddressTemplateName IP address template name.
+                     * @param _addressTemplateName IP address template name.
+                     * 
                      */
                     void SetAddressTemplateName(const std::string& _addressTemplateName);
 
                     /**
                      * 判断参数 AddressTemplateName 是否已赋值
                      * @return AddressTemplateName 是否已赋值
+                     * 
                      */
                     bool AddressTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the IP address template instance.
                      * @return AddressTemplateId The unique ID of the IP address template instance.
+                     * 
                      */
                     std::string GetAddressTemplateId() const;
 
                     /**
                      * 设置The unique ID of the IP address template instance.
-                     * @param AddressTemplateId The unique ID of the IP address template instance.
+                     * @param _addressTemplateId The unique ID of the IP address template instance.
+                     * 
                      */
                     void SetAddressTemplateId(const std::string& _addressTemplateId);
 
                     /**
                      * 判断参数 AddressTemplateId 是否已赋值
                      * @return AddressTemplateId 是否已赋值
+                     * 
                      */
                     bool AddressTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取IP address information.
                      * @return AddressSet IP address information.
+                     * 
                      */
                     std::vector<std::string> GetAddressSet() const;
 
                     /**
                      * 设置IP address information.
-                     * @param AddressSet IP address information.
+                     * @param _addressSet IP address information.
+                     * 
                      */
                     void SetAddressSet(const std::vector<std::string>& _addressSet);
 
                     /**
                      * 判断参数 AddressSet 是否已赋值
                      * @return AddressSet 是否已赋值
+                     * 
                      */
                     bool AddressSetHasBeenSet() const;
 
                     /**
                      * 获取Creation Time.
                      * @return CreatedTime Creation Time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation Time.
-                     * @param CreatedTime Creation Time.
+                     * @param _createdTime Creation Time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取IP address information with remarks
                      * @return AddressExtraSet IP address information with remarks
+                     * 
                      */
                     std::vector<AddressInfo> GetAddressExtraSet() const;
 
                     /**
                      * 设置IP address information with remarks
-                     * @param AddressExtraSet IP address information with remarks
+                     * @param _addressExtraSet IP address information with remarks
+                     * 
                      */
                     void SetAddressExtraSet(const std::vector<AddressInfo>& _addressExtraSet);
 
                     /**
                      * 判断参数 AddressExtraSet 是否已赋值
                      * @return AddressExtraSet 是否已赋值
+                     * 
                      */
                     bool AddressExtraSetHasBeenSet() const;
 

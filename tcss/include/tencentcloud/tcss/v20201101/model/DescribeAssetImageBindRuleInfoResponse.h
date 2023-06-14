@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of events
                      * @return TotalCount Total number of events
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of rules bound to images
                      * @return ImageBindRuleSet List of rules bound to images
+                     * 
                      */
                     std::vector<ImagesBindRuleInfo> GetImageBindRuleSet() const;
 
                     /**
                      * 判断参数 ImageBindRuleSet 是否已赋值
                      * @return ImageBindRuleSet 是否已赋值
+                     * 
                      */
                     bool ImageBindRuleSetHasBeenSet() const;
 

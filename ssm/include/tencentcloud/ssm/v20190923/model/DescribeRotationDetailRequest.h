@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Specifies the name of the credential for which to get the credential rotation details.
                      * @return SecretName Specifies the name of the credential for which to get the credential rotation details.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Specifies the name of the credential for which to get the credential rotation details.
-                     * @param SecretName Specifies the name of the credential for which to get the credential rotation details.
+                     * @param _secretName Specifies the name of the credential for which to get the credential rotation details.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 

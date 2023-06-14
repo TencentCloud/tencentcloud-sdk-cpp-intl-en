@@ -59,6 +59,7 @@ namespace TencentCloud
 <li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
 <li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
 <li>Force: Specify both the height and width. The output image may be distorted.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -69,90 +70,104 @@ namespace TencentCloud
 <li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
 <li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
 <li>Force: Specify both the height and width. The output image may be distorted.</li>
-                     * @param Type The scaling type. Valid values:
+                     * @param _type The scaling type. Valid values:
 <li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
 <li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
 <li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
 <li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
 <li>Force: Specify both the height and width. The output image may be distorted.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
                      * @return Height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+                     * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
                      * 设置The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
-                     * @param Height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+                     * @param _height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+                     * 
                      */
                     void SetHeight(const uint64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
                      * @return Width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+                     * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
                      * 设置The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
-                     * @param Width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+                     * @param _width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
                      * @return LongEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+                     * 
                      */
                     uint64_t GetLongEdge() const;
 
                     /**
                      * 设置The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
-                     * @param LongEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+                     * @param _longEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+                     * 
                      */
                     void SetLongEdge(const uint64_t& _longEdge);
 
                     /**
                      * 判断参数 LongEdge 是否已赋值
                      * @return LongEdge 是否已赋值
+                     * 
                      */
                     bool LongEdgeHasBeenSet() const;
 
                     /**
                      * 获取The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
                      * @return ShortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+                     * 
                      */
                     uint64_t GetShortEdge() const;
 
                     /**
                      * 设置The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
-                     * @param ShortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+                     * @param _shortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+                     * 
                      */
                     void SetShortEdge(const uint64_t& _shortEdge);
 
                     /**
                      * 判断参数 ShortEdge 是否已赋值
                      * @return ShortEdge 是否已赋值
+                     * 
                      */
                     bool ShortEdgeHasBeenSet() const;
 

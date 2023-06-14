@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable the configuration of following the origin server. Valid values:
+                     * @param _switch Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetDefaultCacheTime() const;
 
                     /**
                      * 设置Sets the default cache time when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
+                     * @param _defaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDefaultCacheTime(const int64_t& _defaultCacheTime);
 
                     /**
                      * 判断参数 DefaultCacheTime 是否已赋值
                      * @return DefaultCacheTime 是否已赋值
+                     * 
                      */
                     bool DefaultCacheTimeHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDefaultCache() const;
 
                     /**
                      * 设置Specifies whether to enable cache when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+                     * @param _defaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDefaultCache(const std::string& _defaultCache);
 
                     /**
                      * 判断参数 DefaultCache 是否已赋值
                      * @return DefaultCache 是否已赋值
+                     * 
                      */
                     bool DefaultCacheHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDefaultCacheStrategy() const;
 
                     /**
                      * 设置Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+                     * @param _defaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDefaultCacheStrategy(const std::string& _defaultCacheStrategy);
 
                     /**
                      * 判断参数 DefaultCacheStrategy 是否已赋值
                      * @return DefaultCacheStrategy 是否已赋值
+                     * 
                      */
                     bool DefaultCacheStrategyHasBeenSet() const;
 

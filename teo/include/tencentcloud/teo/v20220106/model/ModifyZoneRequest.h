@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Site ID, which is used to identify the site.
                      * @return Id Site ID, which is used to identify the site.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Site ID, which is used to identify the site.
-                     * @param Id Site ID, which is used to identify the site.
+                     * @param _id Site ID, which is used to identify the site.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -68,6 +71,7 @@ namespace TencentCloud
                      * @return Type Specifies how the site is connected to EdgeOne.
 - `full`: Connect via the name server.
 - `partial`: Connect via the CNAME.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -75,33 +79,38 @@ namespace TencentCloud
                      * 设置Specifies how the site is connected to EdgeOne.
 - `full`: Connect via the name server.
 - `partial`: Connect via the CNAME.
-                     * @param Type Specifies how the site is connected to EdgeOne.
+                     * @param _type Specifies how the site is connected to EdgeOne.
 - `full`: Connect via the name server.
 - `partial`: Connect via the CNAME.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Custom site information
                      * @return VanityNameServers Custom site information
+                     * 
                      */
                     VanityNameServers GetVanityNameServers() const;
 
                     /**
                      * 设置Custom site information
-                     * @param VanityNameServers Custom site information
+                     * @param _vanityNameServers Custom site information
+                     * 
                      */
                     void SetVanityNameServers(const VanityNameServers& _vanityNameServers);
 
                     /**
                      * 判断参数 VanityNameServers 是否已赋值
                      * @return VanityNameServers 是否已赋值
+                     * 
                      */
                     bool VanityNameServersHasBeenSet() const;
 

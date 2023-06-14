@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Sort by field
                      * @return Field Sort by field
+                     * 
                      */
                     std::string GetField() const;
 
                     /**
                      * 设置Sort by field
-                     * @param Field Sort by field
+                     * @param _field Sort by field
+                     * 
                      */
                     void SetField(const std::string& _field);
 
                     /**
                      * 判断参数 Field 是否已赋值
                      * @return Field 是否已赋值
+                     * 
                      */
                     bool FieldHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: Asc (ascending), Desc (descending)
                      * @return Order Sorting order. Valid values: Asc (ascending), Desc (descending)
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order. Valid values: Asc (ascending), Desc (descending)
-                     * @param Order Sorting order. Valid values: Asc (ascending), Desc (descending)
+                     * @param _order Sorting order. Valid values: Asc (ascending), Desc (descending)
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 

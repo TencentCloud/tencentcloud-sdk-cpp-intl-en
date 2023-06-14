@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Combination of instance object dimensions
                      * @return Dimensions Combination of instance object dimensions
+                     * 
                      */
                     std::vector<Dimension> GetDimensions() const;
 
                     /**
                      * 设置Combination of instance object dimensions
-                     * @param Dimensions Combination of instance object dimensions
+                     * @param _dimensions Combination of instance object dimensions
+                     * 
                      */
                     void SetDimensions(const std::vector<Dimension>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 
                     /**
                      * 获取Data point list
                      * @return Values Data point list
+                     * 
                      */
                     std::vector<Point> GetValues() const;
 
                     /**
                      * 设置Data point list
-                     * @param Values Data point list
+                     * @param _values Data point list
+                     * 
                      */
                     void SetValues(const std::vector<Point>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

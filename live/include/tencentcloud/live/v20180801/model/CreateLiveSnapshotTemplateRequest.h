@@ -49,6 +49,7 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * @return TemplateName Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
@@ -56,33 +57,38 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * 设置Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
-                     * @param TemplateName Template name.
+                     * @param _templateName Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取COS application ID.
                      * @return CosAppId COS application ID.
+                     * 
                      */
                     int64_t GetCosAppId() const;
 
                     /**
                      * 设置COS application ID.
-                     * @param CosAppId COS application ID.
+                     * @param _cosAppId COS application ID.
+                     * 
                      */
                     void SetCosAppId(const int64_t& _cosAppId);
 
                     /**
                      * 判断参数 CosAppId 是否已赋值
                      * @return CosAppId 是否已赋值
+                     * 
                      */
                     bool CosAppIdHasBeenSet() const;
 
@@ -91,38 +97,44 @@ Only letters, digits, underscores, and hyphens can be contained.
 Note: the value of `CosBucket` cannot contain `-[appid]`.
                      * @return CosBucket COS bucket name.
 Note: the value of `CosBucket` cannot contain `-[appid]`.
+                     * 
                      */
                     std::string GetCosBucket() const;
 
                     /**
                      * 设置COS bucket name.
 Note: the value of `CosBucket` cannot contain `-[appid]`.
-                     * @param CosBucket COS bucket name.
+                     * @param _cosBucket COS bucket name.
 Note: the value of `CosBucket` cannot contain `-[appid]`.
+                     * 
                      */
                     void SetCosBucket(const std::string& _cosBucket);
 
                     /**
                      * 判断参数 CosBucket 是否已赋值
                      * @return CosBucket 是否已赋值
+                     * 
                      */
                     bool CosBucketHasBeenSet() const;
 
                     /**
                      * 获取COS region.
                      * @return CosRegion COS region.
+                     * 
                      */
                     std::string GetCosRegion() const;
 
                     /**
                      * 设置COS region.
-                     * @param CosRegion COS region.
+                     * @param _cosRegion COS region.
+                     * 
                      */
                     void SetCosRegion(const std::string& _cosRegion);
 
                     /**
                      * 判断参数 CosRegion 是否已赋值
                      * @return CosRegion 是否已赋值
+                     * 
                      */
                     bool CosRegionHasBeenSet() const;
 
@@ -133,6 +145,7 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * @return Description Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     std::string GetDescription() const;
 
@@ -140,15 +153,17 @@ Only letters, digits, underscores, and hyphens can be contained.
                      * 设置Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
-                     * @param Description Description.
+                     * @param _description Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Only letters, digits, underscores, and hyphens can be contained.
 Value range: 2-300
                      * @return SnapshotInterval Screencapturing interval (s). Default value: 10
 Value range: 2-300
+                     * 
                      */
                     int64_t GetSnapshotInterval() const;
 
                     /**
                      * 设置Screencapturing interval (s). Default value: 10
 Value range: 2-300
-                     * @param SnapshotInterval Screencapturing interval (s). Default value: 10
+                     * @param _snapshotInterval Screencapturing interval (s). Default value: 10
 Value range: 2-300
+                     * 
                      */
                     void SetSnapshotInterval(const int64_t& _snapshotInterval);
 
                     /**
                      * 判断参数 SnapshotInterval 是否已赋值
                      * @return SnapshotInterval 是否已赋值
+                     * 
                      */
                     bool SnapshotIntervalHasBeenSet() const;
 
@@ -179,20 +197,23 @@ Value range: 2-300
 Value range: 0-3000
                      * @return Width Screenshot width. Default value: `0` (original width)
 Value range: 0-3000
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Screenshot width. Default value: `0` (original width)
 Value range: 0-3000
-                     * @param Width Screenshot width. Default value: `0` (original width)
+                     * @param _width Screenshot width. Default value: `0` (original width)
 Value range: 0-3000
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -201,38 +222,44 @@ Value range: 0-3000
 Value range: 0-2000
                      * @return Height Screenshot height. Default value: `0` (original height)
 Value range: 0-2000
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Screenshot height. Default value: `0` (original height)
 Value range: 0-2000
-                     * @param Height Screenshot height. Default value: `0` (original height)
+                     * @param _height Screenshot height. Default value: `0` (original height)
 Value range: 0-2000
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable porn detection. 0: no, 1: yes. Default value: 0
                      * @return PornFlag Whether to enable porn detection. 0: no, 1: yes. Default value: 0
+                     * 
                      */
                     int64_t GetPornFlag() const;
 
                     /**
                      * 设置Whether to enable porn detection. 0: no, 1: yes. Default value: 0
-                     * @param PornFlag Whether to enable porn detection. 0: no, 1: yes. Default value: 0
+                     * @param _pornFlag Whether to enable porn detection. 0: no, 1: yes. Default value: 0
+                     * 
                      */
                     void SetPornFlag(const int64_t& _pornFlag);
 
                     /**
                      * 判断参数 PornFlag 是否已赋值
                      * @return PornFlag 是否已赋值
+                     * 
                      */
                     bool PornFlagHasBeenSet() const;
 
@@ -245,6 +272,7 @@ will be used.
 If no value is entered, the default value
 `/{Year}-{Month}-{Day}`
 will be used.
+                     * 
                      */
                     std::string GetCosPrefix() const;
 
@@ -253,16 +281,18 @@ will be used.
 If no value is entered, the default value
 `/{Year}-{Month}-{Day}`
 will be used.
-                     * @param CosPrefix COS Bucket folder prefix.
+                     * @param _cosPrefix COS Bucket folder prefix.
 If no value is entered, the default value
 `/{Year}-{Month}-{Day}`
 will be used.
+                     * 
                      */
                     void SetCosPrefix(const std::string& _cosPrefix);
 
                     /**
                      * 判断参数 CosPrefix 是否已赋值
                      * @return CosPrefix 是否已赋值
+                     * 
                      */
                     bool CosPrefixHasBeenSet() const;
 
@@ -275,6 +305,7 @@ will be used.
 If no value is entered, the default value 
 `{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
 will be used.
+                     * 
                      */
                     std::string GetCosFileName() const;
 
@@ -283,16 +314,18 @@ will be used.
 If no value is entered, the default value 
 `{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
 will be used.
-                     * @param CosFileName COS filename.
+                     * @param _cosFileName COS filename.
 If no value is entered, the default value 
 `{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
 will be used.
+                     * 
                      */
                     void SetCosFileName(const std::string& _cosFileName);
 
                     /**
                      * 判断参数 CosFileName 是否已赋值
                      * @return CosFileName 是否已赋值
+                     * 
                      */
                     bool CosFileNameHasBeenSet() const;
 

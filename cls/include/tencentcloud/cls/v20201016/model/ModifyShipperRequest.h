@@ -48,216 +48,252 @@ namespace TencentCloud
                     /**
                      * 获取Shipping rule ID
                      * @return ShipperId Shipping rule ID
+                     * 
                      */
                     std::string GetShipperId() const;
 
                     /**
                      * 设置Shipping rule ID
-                     * @param ShipperId Shipping rule ID
+                     * @param _shipperId Shipping rule ID
+                     * 
                      */
                     void SetShipperId(const std::string& _shipperId);
 
                     /**
                      * 判断参数 ShipperId 是否已赋值
                      * @return ShipperId 是否已赋值
+                     * 
                      */
                     bool ShipperIdHasBeenSet() const;
 
                     /**
                      * 获取New destination bucket in shipping rule
                      * @return Bucket New destination bucket in shipping rule
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置New destination bucket in shipping rule
-                     * @param Bucket New destination bucket in shipping rule
+                     * @param _bucket New destination bucket in shipping rule
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取New destination directory prefix in shipping rule
                      * @return Prefix New destination directory prefix in shipping rule
+                     * 
                      */
                     std::string GetPrefix() const;
 
                     /**
                      * 设置New destination directory prefix in shipping rule
-                     * @param Prefix New destination directory prefix in shipping rule
+                     * @param _prefix New destination directory prefix in shipping rule
+                     * 
                      */
                     void SetPrefix(const std::string& _prefix);
 
                     /**
                      * 判断参数 Prefix 是否已赋值
                      * @return Prefix 是否已赋值
+                     * 
                      */
                     bool PrefixHasBeenSet() const;
 
                     /**
                      * 获取Shipping rule status
                      * @return Status Shipping rule status
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Shipping rule status
-                     * @param Status Shipping rule status
+                     * @param _status Shipping rule status
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Shipping rule name
                      * @return ShipperName Shipping rule name
+                     * 
                      */
                     std::string GetShipperName() const;
 
                     /**
                      * 设置Shipping rule name
-                     * @param ShipperName Shipping rule name
+                     * @param _shipperName Shipping rule name
+                     * 
                      */
                     void SetShipperName(const std::string& _shipperName);
 
                     /**
                      * 判断参数 ShipperName 是否已赋值
                      * @return ShipperName 是否已赋值
+                     * 
                      */
                     bool ShipperNameHasBeenSet() const;
 
                     /**
                      * 获取Shipping time interval in seconds. Default value: 300. Value range: 300–900
                      * @return Interval Shipping time interval in seconds. Default value: 300. Value range: 300–900
+                     * 
                      */
                     uint64_t GetInterval() const;
 
                     /**
                      * 设置Shipping time interval in seconds. Default value: 300. Value range: 300–900
-                     * @param Interval Shipping time interval in seconds. Default value: 300. Value range: 300–900
+                     * @param _interval Shipping time interval in seconds. Default value: 300. Value range: 300–900
+                     * 
                      */
                     void SetInterval(const uint64_t& _interval);
 
                     /**
                      * 判断参数 Interval 是否已赋值
                      * @return Interval 是否已赋值
+                     * 
                      */
                     bool IntervalHasBeenSet() const;
 
                     /**
                      * 获取Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
                      * @return MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+                     * 
                      */
                     uint64_t GetMaxSize() const;
 
                     /**
                      * 设置Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
-                     * @param MaxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+                     * @param _maxSize Maximum size of a file to be shipped, in MB. Default value: 256. Value range: 100–256
+                     * 
                      */
                     void SetMaxSize(const uint64_t& _maxSize);
 
                     /**
                      * 判断参数 MaxSize 是否已赋值
                      * @return MaxSize 是否已赋值
+                     * 
                      */
                     bool MaxSizeHasBeenSet() const;
 
                     /**
                      * 获取Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
                      * @return FilterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
+                     * 
                      */
                     std::vector<FilterRuleInfo> GetFilterRules() const;
 
                     /**
                      * 设置Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
-                     * @param FilterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
+                     * @param _filterRules Filter rules for shipped logs. Only logs matching the rules can be shipped. All rules are in the AND relationship, and up to five rules can be added. If the array is empty, no filtering will be performed, and all logs will be shipped.
+                     * 
                      */
                     void SetFilterRules(const std::vector<FilterRuleInfo>& _filterRules);
 
                     /**
                      * 判断参数 FilterRules 是否已赋值
                      * @return FilterRules 是否已赋值
+                     * 
                      */
                     bool FilterRulesHasBeenSet() const;
 
                     /**
                      * 获取Partition rule of shipped log, which can be represented in `strftime` time format
                      * @return Partition Partition rule of shipped log, which can be represented in `strftime` time format
+                     * 
                      */
                     std::string GetPartition() const;
 
                     /**
                      * 设置Partition rule of shipped log, which can be represented in `strftime` time format
-                     * @param Partition Partition rule of shipped log, which can be represented in `strftime` time format
+                     * @param _partition Partition rule of shipped log, which can be represented in `strftime` time format
+                     * 
                      */
                     void SetPartition(const std::string& _partition);
 
                     /**
                      * 判断参数 Partition 是否已赋值
                      * @return Partition 是否已赋值
+                     * 
                      */
                     bool PartitionHasBeenSet() const;
 
                     /**
                      * 获取Compression configuration of shipped log
                      * @return Compress Compression configuration of shipped log
+                     * 
                      */
                     CompressInfo GetCompress() const;
 
                     /**
                      * 设置Compression configuration of shipped log
-                     * @param Compress Compression configuration of shipped log
+                     * @param _compress Compression configuration of shipped log
+                     * 
                      */
                     void SetCompress(const CompressInfo& _compress);
 
                     /**
                      * 判断参数 Compress 是否已赋值
                      * @return Compress 是否已赋值
+                     * 
                      */
                     bool CompressHasBeenSet() const;
 
                     /**
                      * 获取Format configuration of shipped log content
                      * @return Content Format configuration of shipped log content
+                     * 
                      */
                     ContentInfo GetContent() const;
 
                     /**
                      * 设置Format configuration of shipped log content
-                     * @param Content Format configuration of shipped log content
+                     * @param _content Format configuration of shipped log content
+                     * 
                      */
                     void SetContent(const ContentInfo& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
                      * @return FilenameMode Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+                     * 
                      */
                     uint64_t GetFilenameMode() const;
 
                     /**
                      * 设置Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
-                     * @param FilenameMode Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+                     * @param _filenameMode Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+                     * 
                      */
                     void SetFilenameMode(const uint64_t& _filenameMode);
 
                     /**
                      * 判断参数 FilenameMode 是否已赋值
                      * @return FilenameMode 是否已赋值
+                     * 
                      */
                     bool FilenameModeHasBeenSet() const;
 

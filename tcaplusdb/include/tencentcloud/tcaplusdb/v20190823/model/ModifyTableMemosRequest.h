@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster instance where a table resides
                      * @return ClusterId ID of the cluster instance where a table resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster instance where a table resides
-                     * @param ClusterId ID of the cluster instance where a table resides
+                     * @param _clusterId ID of the cluster instance where a table resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of details of selected tables
                      * @return TableMemos List of details of selected tables
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetTableMemos() const;
 
                     /**
                      * 设置List of details of selected tables
-                     * @param TableMemos List of details of selected tables
+                     * @param _tableMemos List of details of selected tables
+                     * 
                      */
                     void SetTableMemos(const std::vector<SelectedTableInfoNew>& _tableMemos);
 
                     /**
                      * 判断参数 TableMemos 是否已赋值
                      * @return TableMemos 是否已赋值
+                     * 
                      */
                     bool TableMemosHasBeenSet() const;
 

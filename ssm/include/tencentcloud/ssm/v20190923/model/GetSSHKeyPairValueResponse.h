@@ -46,48 +46,56 @@ namespace TencentCloud
                     /**
                      * 获取ID of the SSH key.
                      * @return SSHKeyID ID of the SSH key.
+                     * 
                      */
                     std::string GetSSHKeyID() const;
 
                     /**
                      * 判断参数 SSHKeyID 是否已赋值
                      * @return SSHKeyID 是否已赋值
+                     * 
                      */
                     bool SSHKeyIDHasBeenSet() const;
 
                     /**
                      * 获取Plaintext value of the Base64-encoded public key.
                      * @return PublicKey Plaintext value of the Base64-encoded public key.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取Plaintext value of the Base64-encoded private key.
                      * @return PrivateKey Plaintext value of the Base64-encoded private key.
+                     * 
                      */
                     std::string GetPrivateKey() const;
 
                     /**
                      * 判断参数 PrivateKey 是否已赋值
                      * @return PrivateKey 是否已赋值
+                     * 
                      */
                     bool PrivateKeyHasBeenSet() const;
 
                     /**
                      * 获取ID of the project to which the SSH key belongs.
                      * @return ProjectID ID of the project to which the SSH key belongs.
+                     * 
                      */
                     int64_t GetProjectID() const;
 
                     /**
                      * 判断参数 ProjectID 是否已赋值
                      * @return ProjectID 是否已赋值
+                     * 
                      */
                     bool ProjectIDHasBeenSet() const;
 
@@ -96,12 +104,14 @@ namespace TencentCloud
 The description can be modified in the CVM console.
                      * @return SSHKeyDescription Description of the SSH key.
 The description can be modified in the CVM console.
+                     * 
                      */
                     std::string GetSSHKeyDescription() const;
 
                     /**
                      * 判断参数 SSHKeyDescription 是否已赋值
                      * @return SSHKeyDescription 是否已赋值
+                     * 
                      */
                     bool SSHKeyDescriptionHasBeenSet() const;
 
@@ -110,12 +120,14 @@ The description can be modified in the CVM console.
 The name can be modified in the CVM console.
                      * @return SSHKeyName Name of the SSH key.
 The name can be modified in the CVM console.
+                     * 
                      */
                     std::string GetSSHKeyName() const;
 
                     /**
                      * 判断参数 SSHKeyName 是否已赋值
                      * @return SSHKeyName 是否已赋值
+                     * 
                      */
                     bool SSHKeyNameHasBeenSet() const;
 

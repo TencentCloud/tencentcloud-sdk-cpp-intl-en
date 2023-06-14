@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
                      * @return CcnIds The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
+                     * 
                      */
                     std::vector<std::string> GetCcnIds() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
-                     * @param CcnIds The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
+                     * @param _ccnIds The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
+                     * 
                      */
                     void SetCcnIds(const std::vector<std::string>& _ccnIds);
 
                     /**
                      * 判断参数 CcnIds 是否已赋值
                      * @return CcnIds 是否已赋值
+                     * 
                      */
                     bool CcnIdsHasBeenSet() const;
 
@@ -76,6 +79,7 @@ namespace TencentCloud
 <li>state - String - (Filter condition) The instance status. 'ISOLATED': Isolated (the account is in arrears and the service is suspended.) 'AVAILABLE': Running.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key.</li>
 <li>`tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see this example: **Querying the list of CCNs bound to tags**.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -87,91 +91,105 @@ namespace TencentCloud
 <li>state - String - (Filter condition) The instance status. 'ISOLATED': Isolated (the account is in arrears and the service is suspended.) 'AVAILABLE': Running.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key.</li>
 <li>`tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see this example: **Querying the list of CCNs bound to tags**.</li>
-                     * @param Filters Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter conditions. `CcnIds` and `Filters` cannot be specified at the same time.
 <li>ccn-id - String - (Filter condition) The unique ID of the CCN, such as `vpc-f49l6u0z`.</li>
 <li>ccn-name - String - (Filter condition) The CCN name.</li>
 <li>ccn-description - String - (Filter condition) CCN description.</li>
 <li>state - String - (Filter condition) The instance status. 'ISOLATED': Isolated (the account is in arrears and the service is suspended.) 'AVAILABLE': Running.</li>
 <li>tag-key - String - Required: no - (Filter condition) Filters by tag key.</li>
 <li>`tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see this example: **Querying the list of CCNs bound to tags**.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity
                      * @return Limit The returned quantity
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity
-                     * @param Limit The returned quantity
+                     * @param _limit The returned quantity
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
                      * @return OrderField Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
+                     * 
                      */
                     std::string GetOrderField() const;
 
                     /**
                      * 设置Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
-                     * @param OrderField Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
+                     * @param _orderField Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
+                     * 
                      */
                     void SetOrderField(const std::string& _orderField);
 
                     /**
                      * 判断参数 OrderField 是否已赋值
                      * @return OrderField 是否已赋值
+                     * 
                      */
                     bool OrderFieldHasBeenSet() const;
 
                     /**
                      * 获取Order methods. Ascending: `ASC`, Descending: `DESC`.
                      * @return OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
+                     * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
                      * 设置Order methods. Ascending: `ASC`, Descending: `DESC`.
-                     * @param OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
+                     * @param _orderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
+                     * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
 
                     /**
                      * 判断参数 OrderDirection 是否已赋值
                      * @return OrderDirection 是否已赋值
+                     * 
                      */
                     bool OrderDirectionHasBeenSet() const;
 

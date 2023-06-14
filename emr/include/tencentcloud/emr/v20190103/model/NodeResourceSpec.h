@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceType The spec type, such as `S2.MEDIUM8`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置The spec type, such as `S2.MEDIUM8`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceType The spec type, such as `S2.MEDIUM8`.
+                     * @param _instanceType The spec type, such as `S2.MEDIUM8`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SystemDisk The system disk, which can be up to 1 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DiskSpecInfo> GetSystemDisk() const;
 
                     /**
                      * 设置The system disk, which can be up to 1 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SystemDisk The system disk, which can be up to 1 PCS.
+                     * @param _systemDisk The system disk, which can be up to 1 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSystemDisk(const std::vector<DiskSpecInfo>& _systemDisk);
 
                     /**
                      * 判断参数 SystemDisk 是否已赋值
                      * @return SystemDisk 是否已赋值
+                     * 
                      */
                     bool SystemDiskHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tags The list of tags to be bound.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置The list of tags to be bound.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Tags The list of tags to be bound.
+                     * @param _tags The list of tags to be bound.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataDisk The cloud data disk, which can be up to 15 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DiskSpecInfo> GetDataDisk() const;
 
                     /**
                      * 设置The cloud data disk, which can be up to 15 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DataDisk The cloud data disk, which can be up to 15 PCS.
+                     * @param _dataDisk The cloud data disk, which can be up to 15 PCS.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDataDisk(const std::vector<DiskSpecInfo>& _dataDisk);
 
                     /**
                      * 判断参数 DataDisk 是否已赋值
                      * @return DataDisk 是否已赋值
+                     * 
                      */
                     bool DataDiskHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LocalDataDisk The local data disk.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DiskSpecInfo> GetLocalDataDisk() const;
 
                     /**
                      * 设置The local data disk.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LocalDataDisk The local data disk.
+                     * @param _localDataDisk The local data disk.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLocalDataDisk(const std::vector<DiskSpecInfo>& _localDataDisk);
 
                     /**
                      * 判断参数 LocalDataDisk 是否已赋值
                      * @return LocalDataDisk 是否已赋值
+                     * 
                      */
                     bool LocalDataDiskHasBeenSet() const;
 

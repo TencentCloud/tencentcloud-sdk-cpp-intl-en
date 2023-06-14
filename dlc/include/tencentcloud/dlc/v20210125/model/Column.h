@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Column name, which is case-insensitive and can contain up to 25 characters.
                      * @return Name Column name, which is case-insensitive and can contain up to 25 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Column name, which is case-insensitive and can contain up to 25 characters.
-                     * @param Name Column name, which is case-insensitive and can contain up to 25 characters.
+                     * @param _name Column name, which is case-insensitive and can contain up to 25 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>.
                      * @return Type Column type. Valid values:
 string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Column type. Valid values:
 string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>.
-                     * @param Type Column type. Valid values:
+                     * @param _type Column type. Valid values:
 string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Comment Class comment.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置Class comment.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Comment Class comment.
+                     * @param _comment Class comment.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Precision Length of the entire numeric value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPrecision() const;
 
                     /**
                      * 设置Length of the entire numeric value
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Precision Length of the entire numeric value
+                     * @param _precision Length of the entire numeric value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPrecision(const int64_t& _precision);
 
                     /**
                      * 判断参数 Precision 是否已赋值
                      * @return Precision 是否已赋值
+                     * 
                      */
                     bool PrecisionHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Scale Length of the decimal part
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScale() const;
 
                     /**
                      * 设置Length of the decimal part
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Scale Length of the decimal part
+                     * @param _scale Length of the decimal part
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScale(const int64_t& _scale);
 
                     /**
                      * 判断参数 Scale 是否已赋值
                      * @return Scale 是否已赋值
+                     * 
                      */
                     bool ScaleHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Nullable Whether the column is null.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNullable() const;
 
                     /**
                      * 设置Whether the column is null.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Nullable Whether the column is null.
+                     * @param _nullable Whether the column is null.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNullable(const std::string& _nullable);
 
                     /**
                      * 判断参数 Nullable 是否已赋值
                      * @return Nullable 是否已赋值
+                     * 
                      */
                     bool NullableHasBeenSet() const;
 
@@ -179,20 +197,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Position Field position
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPosition() const;
 
                     /**
                      * 设置Field position
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Position Field position
+                     * @param _position Field position
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPosition(const int64_t& _position);
 
                     /**
                      * 判断参数 Position 是否已赋值
                      * @return Position 是否已赋值
+                     * 
                      */
                     bool PositionHasBeenSet() const;
 
@@ -201,20 +222,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Field creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Field creation time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreateTime Field creation time
+                     * @param _createTime Field creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -223,20 +247,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifiedTime Field modification time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetModifiedTime() const;
 
                     /**
                      * 设置Field modification time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ModifiedTime Field modification time
+                     * @param _modifiedTime Field modification time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetModifiedTime(const std::string& _modifiedTime);
 
                     /**
                      * 判断参数 ModifiedTime 是否已赋值
                      * @return ModifiedTime 是否已赋值
+                     * 
                      */
                     bool ModifiedTimeHasBeenSet() const;
 
@@ -245,20 +272,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsPartition Whether the column is the partition field.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsPartition() const;
 
                     /**
                      * 设置Whether the column is the partition field.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsPartition Whether the column is the partition field.
+                     * @param _isPartition Whether the column is the partition field.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsPartition(const bool& _isPartition);
 
                     /**
                      * 判断参数 IsPartition 是否已赋值
                      * @return IsPartition 是否已赋值
+                     * 
                      */
                     bool IsPartitionHasBeenSet() const;
 

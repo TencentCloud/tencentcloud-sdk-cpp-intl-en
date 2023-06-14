@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RoReplicationMode DCN running status. Valid values: `START` (running), `STOP` (pause)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRoReplicationMode() const;
 
                     /**
                      * 设置DCN running status. Valid values: `START` (running), `STOP` (pause)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RoReplicationMode DCN running status. Valid values: `START` (running), `STOP` (pause)
+                     * @param _roReplicationMode DCN running status. Valid values: `START` (running), `STOP` (pause)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRoReplicationMode(const std::string& _roReplicationMode);
 
                     /**
                      * 判断参数 RoReplicationMode 是否已赋值
                      * @return RoReplicationMode 是否已赋值
+                     * 
                      */
                     bool RoReplicationModeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DelayReplicationType Delayed replication type. Valid values: `DEFAULT` (no delay), `DUE_TIME` (specified replication time)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDelayReplicationType() const;
 
                     /**
                      * 设置Delayed replication type. Valid values: `DEFAULT` (no delay), `DUE_TIME` (specified replication time)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DelayReplicationType Delayed replication type. Valid values: `DEFAULT` (no delay), `DUE_TIME` (specified replication time)
+                     * @param _delayReplicationType Delayed replication type. Valid values: `DEFAULT` (no delay), `DUE_TIME` (specified replication time)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDelayReplicationType(const std::string& _delayReplicationType);
 
                     /**
                      * 判断参数 DelayReplicationType 是否已赋值
                      * @return DelayReplicationType 是否已赋值
+                     * 
                      */
                     bool DelayReplicationTypeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DueTime Specified time for delayed replication
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDueTime() const;
 
                     /**
                      * 设置Specified time for delayed replication
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DueTime Specified time for delayed replication
+                     * @param _dueTime Specified time for delayed replication
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDueTime(const std::string& _dueTime);
 
                     /**
                      * 判断参数 DueTime 是否已赋值
                      * @return DueTime 是否已赋值
+                     * 
                      */
                     bool DueTimeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReplicationDelay The number of seconds to delay the replication
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetReplicationDelay() const;
 
                     /**
                      * 设置The number of seconds to delay the replication
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReplicationDelay The number of seconds to delay the replication
+                     * @param _replicationDelay The number of seconds to delay the replication
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReplicationDelay(const int64_t& _replicationDelay);
 
                     /**
                      * 判断参数 ReplicationDelay 是否已赋值
                      * @return ReplicationDelay 是否已赋值
+                     * 
                      */
                     bool ReplicationDelayHasBeenSet() const;
 

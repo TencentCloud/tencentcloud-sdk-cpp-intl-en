@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Protocol port ID, such as `eppm-f5n1f8da`.
                      * @return ServiceId Protocol port ID, such as `eppm-f5n1f8da`.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Protocol port ID, such as `eppm-f5n1f8da`.
-                     * @param ServiceId Protocol port ID, such as `eppm-f5n1f8da`.
+                     * @param _serviceId Protocol port ID, such as `eppm-f5n1f8da`.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Protocol port group ID, such as `eppmg-f5n1f8da`.
                      * @return ServiceGroupId Protocol port group ID, such as `eppmg-f5n1f8da`.
+                     * 
                      */
                     std::string GetServiceGroupId() const;
 
                     /**
                      * 设置Protocol port group ID, such as `eppmg-f5n1f8da`.
-                     * @param ServiceGroupId Protocol port group ID, such as `eppmg-f5n1f8da`.
+                     * @param _serviceGroupId Protocol port group ID, such as `eppmg-f5n1f8da`.
+                     * 
                      */
                     void SetServiceGroupId(const std::string& _serviceGroupId);
 
                     /**
                      * 判断参数 ServiceGroupId 是否已赋值
                      * @return ServiceGroupId 是否已赋值
+                     * 
                      */
                     bool ServiceGroupIdHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取MD5 checksum of the file
                      * @return MD5 MD5 checksum of the file
+                     * 
                      */
                     std::string GetMD5() const;
 
                     /**
                      * 设置MD5 checksum of the file
-                     * @param MD5 MD5 checksum of the file
+                     * @param _mD5 MD5 checksum of the file
+                     * 
                      */
                     void SetMD5(const std::string& _mD5);
 
                     /**
                      * 判断参数 MD5 是否已赋值
                      * @return MD5 是否已赋值
+                     * 
                      */
                     bool MD5HasBeenSet() const;
 
                     /**
                      * 获取Virus name
                      * @return VirusName Virus name
+                     * 
                      */
                     std::string GetVirusName() const;
 
                     /**
                      * 设置Virus name
-                     * @param VirusName Virus name
+                     * @param _virusName Virus name
+                     * 
                      */
                     void SetVirusName(const std::string& _virusName);
 
                     /**
                      * 判断参数 VirusName 是否已赋值
                      * @return VirusName 是否已赋值
+                     * 
                      */
                     bool VirusNameHasBeenSet() const;
 
                     /**
                      * 获取Last edit time
                      * @return ModifyTime Last edit time
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Last edit time
-                     * @param ModifyTime Last edit time
+                     * @param _modifyTime Last edit time
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
                      * 获取Automatic isolation switch. Valid values: `true` (on); `false` (off).
                      * @return AutoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
+                     * 
                      */
                     bool GetAutoIsolateSwitch() const;
 
                     /**
                      * 设置Automatic isolation switch. Valid values: `true` (on); `false` (off).
-                     * @param AutoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
+                     * @param _autoIsolateSwitch Automatic isolation switch. Valid values: `true` (on); `false` (off).
+                     * 
                      */
                     void SetAutoIsolateSwitch(const bool& _autoIsolateSwitch);
 
                     /**
                      * 判断参数 AutoIsolateSwitch 是否已赋值
                      * @return AutoIsolateSwitch 是否已赋值
+                     * 
                      */
                     bool AutoIsolateSwitchHasBeenSet() const;
 

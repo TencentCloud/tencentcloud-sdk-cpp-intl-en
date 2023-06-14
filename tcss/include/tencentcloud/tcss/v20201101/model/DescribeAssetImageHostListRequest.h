@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Filter. Valid values: `ImageID`, `HostID`.
                      * @return Filters Filter. Valid values: `ImageID`, `HostID`.
+                     * 
                      */
                     std::vector<AssetFilters> GetFilters() const;
 
                     /**
                      * 设置Filter. Valid values: `ImageID`, `HostID`.
-                     * @param Filters Filter. Valid values: `ImageID`, `HostID`.
+                     * @param _filters Filter. Valid values: `ImageID`, `HostID`.
+                     * 
                      */
                     void SetFilters(const std::vector<AssetFilters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

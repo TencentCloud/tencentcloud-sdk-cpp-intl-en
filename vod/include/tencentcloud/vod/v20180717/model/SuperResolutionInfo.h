@@ -55,6 +55,7 @@ If super resolution is enabled, the output resolution will double.
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ If super resolution is enabled, the output resolution will double.
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
-                     * @param Switch Whether to enable super resolution. Valid values:
+                     * @param _switch Whether to enable super resolution. Valid values:
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -85,6 +88,7 @@ Default value: `lq`.
 <li>`lq`: For low-resolution videos with obvious noise</li>
 <li>`hq`: For high-resolution videos</li>
 Default value: `lq`.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -93,16 +97,18 @@ Default value: `lq`.
 <li>`lq`: For low-resolution videos with obvious noise</li>
 <li>`hq`: For high-resolution videos</li>
 Default value: `lq`.
-                     * @param Type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
+                     * @param _type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
 <li>`lq`: For low-resolution videos with obvious noise</li>
 <li>`hq`: For high-resolution videos</li>
 Default value: `lq`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -111,20 +117,23 @@ Default value: `lq`.
 Default value: `2`.
                      * @return Size The ratio of the target resolution to the original resolution. Valid values: `2`.
 Default value: `2`.
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置The ratio of the target resolution to the original resolution. Valid values: `2`.
 Default value: `2`.
-                     * @param Size The ratio of the target resolution to the original resolution. Valid values: `2`.
+                     * @param _size The ratio of the target resolution to the original resolution. Valid values: `2`.
 Default value: `2`.
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 

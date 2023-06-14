@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExistedInstanceSet Array of existing instance information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ExistedInstance> GetExistedInstanceSet() const;
 
                     /**
                      * 判断参数 ExistedInstanceSet 是否已赋值
                      * @return ExistedInstanceSet 是否已赋值
+                     * 
                      */
                     bool ExistedInstanceSetHasBeenSet() const;
 
                     /**
                      * 获取Number of instances that match the filter condition(s).
                      * @return TotalCount Number of instances that match the filter condition(s).
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

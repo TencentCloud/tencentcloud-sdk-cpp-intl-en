@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Array of async task request IDs, which can be used to query the execution results of async tasks.
                      * @return AsyncRequestIds Array of async task request IDs, which can be used to query the execution results of async tasks.
+                     * 
                      */
                     std::vector<std::string> GetAsyncRequestIds() const;
 
                     /**
                      * 判断参数 AsyncRequestIds 是否已赋值
                      * @return AsyncRequestIds 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdsHasBeenSet() const;
 

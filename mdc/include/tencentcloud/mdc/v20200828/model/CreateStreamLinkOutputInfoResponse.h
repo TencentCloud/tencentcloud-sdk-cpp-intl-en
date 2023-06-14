@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The information of the created output.
                      * @return Info The information of the created output.
+                     * 
                      */
                     DescribeOutput GetInfo() const;
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

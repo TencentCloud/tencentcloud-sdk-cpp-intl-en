@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The site name.
                      * @return ZoneName The site name.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置The site name.
-                     * @param ZoneName The site name.
+                     * @param _zoneName The site name.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取The site performance across regions.
                      * @return DistrictStatistics The site performance across regions.
+                     * 
                      */
                     std::vector<DistrictStatistics> GetDistrictStatistics() const;
 
                     /**
                      * 设置The site performance across regions.
-                     * @param DistrictStatistics The site performance across regions.
+                     * @param _districtStatistics The site performance across regions.
+                     * 
                      */
                     void SetDistrictStatistics(const std::vector<DistrictStatistics>& _districtStatistics);
 
                     /**
                      * 判断参数 DistrictStatistics 是否已赋值
                      * @return DistrictStatistics 是否已赋值
+                     * 
                      */
                     bool DistrictStatisticsHasBeenSet() const;
 

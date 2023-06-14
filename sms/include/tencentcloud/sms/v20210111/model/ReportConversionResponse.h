@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Response packet for conversion rate reporting.
                      * @return ReportConversionStatus Response packet for conversion rate reporting.
+                     * 
                      */
                     ReportConversionStatus GetReportConversionStatus() const;
 
                     /**
                      * 判断参数 ReportConversionStatus 是否已赋值
                      * @return ReportConversionStatus 是否已赋值
+                     * 
                      */
                     bool ReportConversionStatusHasBeenSet() const;
 

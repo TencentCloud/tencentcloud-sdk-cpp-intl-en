@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Top-level domain name
                      * @return ZoneId Top-level domain name
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Top-level domain name
-                     * @param ZoneId Top-level domain name
+                     * @param _zoneId Top-level domain name
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Second-level domain name
                      * @return Entity Second-level domain name
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置Second-level domain name
-                     * @param Entity Second-level domain name
+                     * @param _entity Second-level domain name
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 

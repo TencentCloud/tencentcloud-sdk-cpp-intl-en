@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取SAML identity provider name
                      * @return Name SAML identity provider name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置SAML identity provider name
-                     * @param Name SAML identity provider name
+                     * @param _name SAML identity provider name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

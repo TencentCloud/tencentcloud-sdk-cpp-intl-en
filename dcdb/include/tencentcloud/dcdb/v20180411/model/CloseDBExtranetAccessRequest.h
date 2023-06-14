@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
                      * @return InstanceId ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
-                     * @param InstanceId ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+                     * @param _instanceId ID of an instance for which to disable public network access. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether IPv6 is used. Default value: 0
                      * @return Ipv6Flag Whether IPv6 is used. Default value: 0
+                     * 
                      */
                     int64_t GetIpv6Flag() const;
 
                     /**
                      * 设置Whether IPv6 is used. Default value: 0
-                     * @param Ipv6Flag Whether IPv6 is used. Default value: 0
+                     * @param _ipv6Flag Whether IPv6 is used. Default value: 0
+                     * 
                      */
                     void SetIpv6Flag(const int64_t& _ipv6Flag);
 
                     /**
                      * 判断参数 Ipv6Flag 是否已赋值
                      * @return Ipv6Flag 是否已赋值
+                     * 
                      */
                     bool Ipv6FlagHasBeenSet() const;
 

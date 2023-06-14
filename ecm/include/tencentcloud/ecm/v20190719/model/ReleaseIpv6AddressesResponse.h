@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Task ID. You can use the `DescribeTaskResult` API to query the task status
                      * @return TaskId Task ID. You can use the `DescribeTaskResult` API to query the task status
+                     * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

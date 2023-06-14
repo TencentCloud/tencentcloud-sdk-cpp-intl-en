@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取IP address of the file system
                      * @return CfsVip IP address of the file system
+                     * 
                      */
                     std::string GetCfsVip() const;
 
                     /**
                      * 设置IP address of the file system
-                     * @param CfsVip IP address of the file system
+                     * @param _cfsVip IP address of the file system
+                     * 
                      */
                     void SetCfsVip(const std::string& _cfsVip);
 
                     /**
                      * 判断参数 CfsVip 是否已赋值
                      * @return CfsVip 是否已赋值
+                     * 
                      */
                     bool CfsVipHasBeenSet() const;
 
                     /**
                      * 获取Client IP
                      * @return ClientIp Client IP
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置Client IP
-                     * @param ClientIp Client IP
+                     * @param _clientIp Client IP
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
                     /**
                      * 获取File system VPCID
                      * @return VpcId File system VPCID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置File system VPCID
-                     * @param VpcId File system VPCID
+                     * @param _vpcId File system VPCID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
                      * @return Zone Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
-                     * @param Zone Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+                     * @param _zone Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取AZ name
                      * @return ZoneName AZ name
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置AZ name
-                     * @param ZoneName AZ name
+                     * @param _zoneName AZ name
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
                     /**
                      * 获取Path in which the file system is mounted to the client
                      * @return MountDirectory Path in which the file system is mounted to the client
+                     * 
                      */
                     std::string GetMountDirectory() const;
 
                     /**
                      * 设置Path in which the file system is mounted to the client
-                     * @param MountDirectory Path in which the file system is mounted to the client
+                     * @param _mountDirectory Path in which the file system is mounted to the client
+                     * 
                      */
                     void SetMountDirectory(const std::string& _mountDirectory);
 
                     /**
                      * 判断参数 MountDirectory 是否已赋值
                      * @return MountDirectory 是否已赋值
+                     * 
                      */
                     bool MountDirectoryHasBeenSet() const;
 

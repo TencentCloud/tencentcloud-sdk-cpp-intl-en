@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of instances meeting the filter condition.
                      * @return TotalCount The number of instances meeting the filter condition.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取VPN tunnel instance.
                      * @return VpnConnectionSet VPN tunnel instance.
+                     * 
                      */
                     std::vector<VpnConnection> GetVpnConnectionSet() const;
 
                     /**
                      * 判断参数 VpnConnectionSet 是否已赋值
                      * @return VpnConnectionSet 是否已赋值
+                     * 
                      */
                     bool VpnConnectionSetHasBeenSet() const;
 

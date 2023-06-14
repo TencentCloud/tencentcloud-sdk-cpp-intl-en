@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FailedItems Information of the users failed to be deleted. When the business parameter is `DeleteIdList`, this field will return the list of IDs of the users failed to be deleted. When the business parameter is `DeleteNameList`, this field will return the list of usernames of the users failed to be deleted.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFailedItems() const;
 
                     /**
                      * 判断参数 FailedItems 是否已赋值
                      * @return FailedItems 是否已赋值
+                     * 
                      */
                     bool FailedItemsHasBeenSet() const;
 

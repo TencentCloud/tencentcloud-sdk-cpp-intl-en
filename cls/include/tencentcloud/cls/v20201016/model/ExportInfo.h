@@ -49,234 +49,273 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID
                      * @return TopicId Log topic ID
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID
-                     * @param TopicId Log topic ID
+                     * @param _topicId Log topic ID
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取Log export task ID
                      * @return ExportId Log export task ID
+                     * 
                      */
                     std::string GetExportId() const;
 
                     /**
                      * 设置Log export task ID
-                     * @param ExportId Log export task ID
+                     * @param _exportId Log export task ID
+                     * 
                      */
                     void SetExportId(const std::string& _exportId);
 
                     /**
                      * 判断参数 ExportId 是否已赋值
                      * @return ExportId 是否已赋值
+                     * 
                      */
                     bool ExportIdHasBeenSet() const;
 
                     /**
                      * 获取Log export query statement
                      * @return Query Log export query statement
+                     * 
                      */
                     std::string GetQuery() const;
 
                     /**
                      * 设置Log export query statement
-                     * @param Query Log export query statement
+                     * @param _query Log export query statement
+                     * 
                      */
                     void SetQuery(const std::string& _query);
 
                     /**
                      * 判断参数 Query 是否已赋值
                      * @return Query 是否已赋值
+                     * 
                      */
                     bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Log export filename
                      * @return FileName Log export filename
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Log export filename
-                     * @param FileName Log export filename
+                     * @param _fileName Log export filename
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Log file size
                      * @return FileSize Log file size
+                     * 
                      */
                     uint64_t GetFileSize() const;
 
                     /**
                      * 设置Log file size
-                     * @param FileSize Log file size
+                     * @param _fileSize Log file size
+                     * 
                      */
                     void SetFileSize(const uint64_t& _fileSize);
 
                     /**
                      * 判断参数 FileSize 是否已赋值
                      * @return FileSize 是否已赋值
+                     * 
                      */
                     bool FileSizeHasBeenSet() const;
 
                     /**
                      * 获取Log export time sorting
                      * @return Order Log export time sorting
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Log export time sorting
-                     * @param Order Log export time sorting
+                     * @param _order Log export time sorting
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取Log export format
                      * @return Format Log export format
+                     * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Log export format
-                     * @param Format Log export format
+                     * @param _format Log export format
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取Number of logs to be exported
                      * @return Count Number of logs to be exported
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of logs to be exported
-                     * @param Count Number of logs to be exported
+                     * @param _count Number of logs to be exported
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
                      * @return Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
-                     * @param Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+                     * @param _status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Log export start time
                      * @return From Log export start time
+                     * 
                      */
                     int64_t GetFrom() const;
 
                     /**
                      * 设置Log export start time
-                     * @param From Log export start time
+                     * @param _from Log export start time
+                     * 
                      */
                     void SetFrom(const int64_t& _from);
 
                     /**
                      * 判断参数 From 是否已赋值
                      * @return From 是否已赋值
+                     * 
                      */
                     bool FromHasBeenSet() const;
 
                     /**
                      * 获取Log export end time
                      * @return To Log export end time
+                     * 
                      */
                     int64_t GetTo() const;
 
                     /**
                      * 设置Log export end time
-                     * @param To Log export end time
+                     * @param _to Log export end time
+                     * 
                      */
                     void SetTo(const int64_t& _to);
 
                     /**
                      * 判断参数 To 是否已赋值
                      * @return To 是否已赋值
+                     * 
                      */
                     bool ToHasBeenSet() const;
 
                     /**
                      * 获取Log export path
                      * @return CosPath Log export path
+                     * 
                      */
                     std::string GetCosPath() const;
 
                     /**
                      * 设置Log export path
-                     * @param CosPath Log export path
+                     * @param _cosPath Log export path
+                     * 
                      */
                     void SetCosPath(const std::string& _cosPath);
 
                     /**
                      * 判断参数 CosPath 是否已赋值
                      * @return CosPath 是否已赋值
+                     * 
                      */
                     bool CosPathHasBeenSet() const;
 
                     /**
                      * 获取Log export creation time
                      * @return CreateTime Log export creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Log export creation time
-                     * @param CreateTime Log export creation time
+                     * @param _createTime Log export creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

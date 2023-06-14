@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the service to be published.
                      * @return ServiceId Unique ID of the service to be published.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique ID of the service to be published.
-                     * @param ServiceId Unique ID of the service to be published.
+                     * @param _serviceId Unique ID of the service to be published.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
                      * @return EnvironmentName Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
-                     * @param EnvironmentName Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * @param _environmentName Name of the environment to be published. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取Release description.
                      * @return ReleaseDesc Release description.
+                     * 
                      */
                     std::string GetReleaseDesc() const;
 
                     /**
                      * 设置Release description.
-                     * @param ReleaseDesc Release description.
+                     * @param _releaseDesc Release description.
+                     * 
                      */
                     void SetReleaseDesc(const std::string& _releaseDesc);
 
                     /**
                      * 判断参数 ReleaseDesc 是否已赋值
                      * @return ReleaseDesc 是否已赋值
+                     * 
                      */
                     bool ReleaseDescHasBeenSet() const;
 
                     /**
                      * 获取`apiId` list, which is reserved. Full API release is used by default.
                      * @return ApiIds `apiId` list, which is reserved. Full API release is used by default.
+                     * 
                      */
                     std::vector<std::string> GetApiIds() const;
 
                     /**
                      * 设置`apiId` list, which is reserved. Full API release is used by default.
-                     * @param ApiIds `apiId` list, which is reserved. Full API release is used by default.
+                     * @param _apiIds `apiId` list, which is reserved. Full API release is used by default.
+                     * 
                      */
                     void SetApiIds(const std::vector<std::string>& _apiIds);
 
                     /**
                      * 判断参数 ApiIds 是否已赋值
                      * @return ApiIds 是否已赋值
+                     * 
                      */
                     bool ApiIdsHasBeenSet() const;
 

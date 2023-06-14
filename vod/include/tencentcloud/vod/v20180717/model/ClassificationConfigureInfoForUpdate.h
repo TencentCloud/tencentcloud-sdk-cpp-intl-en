@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of intelligent categorization task. Valid values:
 <li>ON: enables intelligent categorization task;</li>
 <li>OFF: disables intelligent categorization task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of intelligent categorization task. Valid values:
 <li>ON: enables intelligent categorization task;</li>
 <li>OFF: disables intelligent categorization task.</li>
-                     * @param Switch Switch of intelligent categorization task. Valid values:
+                     * @param _switch Switch of intelligent categorization task. Valid values:
 <li>ON: enables intelligent categorization task;</li>
 <li>OFF: disables intelligent categorization task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

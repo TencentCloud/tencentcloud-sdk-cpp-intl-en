@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Event ID
                      * @return EventId Event ID
+                     * 
                      */
                     std::string GetEventId() const;
 
                     /**
                      * 设置Event ID
-                     * @param EventId Event ID
+                     * @param _eventId Event ID
+                     * 
                      */
                     void SetEventId(const std::string& _eventId);
 
                     /**
                      * 判断参数 EventId 是否已赋值
                      * @return EventId 是否已赋值
+                     * 
                      */
                     bool EventIdHasBeenSet() const;
 

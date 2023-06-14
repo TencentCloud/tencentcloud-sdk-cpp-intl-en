@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of source addresses.
                      * @return TotalCount Total number of source addresses.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Detailed list of the proportion of slow logs from each source address.
                      * @return Items Detailed list of the proportion of slow logs from each source address.
+                     * 
                      */
                     std::vector<SlowLogHost> GetItems() const;
 
                     /**
                      * 判断参数 Items 是否已赋值
                      * @return Items 是否已赋值
+                     * 
                      */
                     bool ItemsHasBeenSet() const;
 

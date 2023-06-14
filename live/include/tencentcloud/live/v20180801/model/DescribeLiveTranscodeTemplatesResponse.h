@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of transcoding templates.
                      * @return Templates List of transcoding templates.
+                     * 
                      */
                     std::vector<TemplateInfo> GetTemplates() const;
 
                     /**
                      * 判断参数 Templates 是否已赋值
                      * @return Templates 是否已赋值
+                     * 
                      */
                     bool TemplatesHasBeenSet() const;
 

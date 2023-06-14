@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Information of tables to be merged
                      * @return MergeTables Information of tables to be merged
+                     * 
                      */
                     CompareTablesInfo GetMergeTables() const;
 
                     /**
                      * 设置Information of tables to be merged
-                     * @param MergeTables Information of tables to be merged
+                     * @param _mergeTables Information of tables to be merged
+                     * 
                      */
                     void SetMergeTables(const CompareTablesInfo& _mergeTables);
 
                     /**
                      * 判断参数 MergeTables 是否已赋值
                      * @return MergeTables 是否已赋值
+                     * 
                      */
                     bool MergeTablesHasBeenSet() const;
 
                     /**
                      * 获取Whether to check indexes
                      * @return CheckIndex Whether to check indexes
+                     * 
                      */
                     bool GetCheckIndex() const;
 
                     /**
                      * 设置Whether to check indexes
-                     * @param CheckIndex Whether to check indexes
+                     * @param _checkIndex Whether to check indexes
+                     * 
                      */
                     void SetCheckIndex(const bool& _checkIndex);
 
                     /**
                      * 判断参数 CheckIndex 是否已赋值
                      * @return CheckIndex 是否已赋值
+                     * 
                      */
                     bool CheckIndexHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Database name
                      * @return Database Database name
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name
-                     * @param Database Database name
+                     * @param _database Database name
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
                     /**
                      * 获取Data table name
                      * @return Table Data table name
+                     * 
                      */
                     std::string GetTable() const;
 
                     /**
                      * 设置Data table name
-                     * @param Table Data table name
+                     * @param _table Data table name
+                     * 
                      */
                     void SetTable(const std::string& _table);
 
                     /**
                      * 判断参数 Table 是否已赋值
                      * @return Table 是否已赋值
+                     * 
                      */
                     bool TableHasBeenSet() const;
 
@@ -105,6 +114,7 @@ namespace TencentCloud
 `view`: Only return to view,
 `base_table`: Only return to basic table,
 `all`: Return to view and table.
+                     * 
                      */
                     std::string GetTableType() const;
 
@@ -113,16 +123,18 @@ namespace TencentCloud
 `view`: Only return to view,
 `base_table`: Only return to basic table,
 `all`: Return to view and table.
-                     * @param TableType Data table type. Valid values:
+                     * @param _tableType Data table type. Valid values:
 `view`: Only return to view,
 `base_table`: Only return to basic table,
 `all`: Return to view and table.
+                     * 
                      */
                     void SetTableType(const std::string& _tableType);
 
                     /**
                      * 判断参数 TableType 是否已赋值
                      * @return TableType 是否已赋值
+                     * 
                      */
                     bool TableTypeHasBeenSet() const;
 

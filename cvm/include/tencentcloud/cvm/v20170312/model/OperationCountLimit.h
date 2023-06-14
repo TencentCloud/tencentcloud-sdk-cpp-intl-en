@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
                      * @return Operation Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
-                     * @param Operation Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
+                     * @param _operation Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
                      * @return CurrentCount Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
+                     * 
                      */
                     int64_t GetCurrentCount() const;
 
                     /**
                      * 设置Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
-                     * @param CurrentCount Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
+                     * @param _currentCount Number of operations already performed. If it returns `-1`, it means there is no limit on the times of the operation.
+                     * 
                      */
                     void SetCurrentCount(const int64_t& _currentCount);
 
                     /**
                      * 判断参数 CurrentCount 是否已赋值
                      * @return CurrentCount 是否已赋值
+                     * 
                      */
                     bool CurrentCountHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
                      * @return LimitCount Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
+                     * 
                      */
                     int64_t GetLimitCount() const;
 
                     /**
                      * 设置Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
-                     * @param LimitCount Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
+                     * @param _limitCount Maximum number of times you can perform an operation. If it returns `-1`, it means there is no limit on the times of the operation. If it returns `0`, it means that configuration modification is not supported.
+                     * 
                      */
                     void SetLimitCount(const int64_t& _limitCount);
 
                     /**
                      * 判断参数 LimitCount 是否已赋值
                      * @return LimitCount 是否已赋值
+                     * 
                      */
                     bool LimitCountHasBeenSet() const;
 

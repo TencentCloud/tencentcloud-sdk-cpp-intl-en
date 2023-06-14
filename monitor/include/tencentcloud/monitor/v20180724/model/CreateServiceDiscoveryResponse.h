@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The scrape configuration information returned after successful creation
                      * @return ServiceDiscovery The scrape configuration information returned after successful creation
+                     * 
                      */
                     ServiceDiscoveryItem GetServiceDiscovery() const;
 
                     /**
                      * 判断参数 ServiceDiscovery 是否已赋值
                      * @return ServiceDiscovery 是否已赋值
+                     * 
                      */
                     bool ServiceDiscoveryHasBeenSet() const;
 

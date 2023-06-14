@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The profile ID.
                      * @return TemplateId The profile ID.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 

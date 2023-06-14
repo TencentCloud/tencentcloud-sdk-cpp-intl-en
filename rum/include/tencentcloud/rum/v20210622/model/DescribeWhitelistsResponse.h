@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Allowlist list
                      * @return WhitelistSet Allowlist list
+                     * 
                      */
                     std::vector<Whitelist> GetWhitelistSet() const;
 
                     /**
                      * 判断参数 WhitelistSet 是否已赋值
                      * @return WhitelistSet 是否已赋值
+                     * 
                      */
                     bool WhitelistSetHasBeenSet() const;
 

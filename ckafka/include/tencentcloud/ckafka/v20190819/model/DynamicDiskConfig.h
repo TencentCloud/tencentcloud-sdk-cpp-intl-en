@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Enable Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Enable Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+                     * @param _enable Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return StepForwardPercentage Percentage of dynamic disk expansion each time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStepForwardPercentage() const;
 
                     /**
                      * 设置Percentage of dynamic disk expansion each time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param StepForwardPercentage Percentage of dynamic disk expansion each time.
+                     * @param _stepForwardPercentage Percentage of dynamic disk expansion each time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepForwardPercentage(const int64_t& _stepForwardPercentage);
 
                     /**
                      * 判断参数 StepForwardPercentage 是否已赋值
                      * @return StepForwardPercentage 是否已赋值
+                     * 
                      */
                     bool StepForwardPercentageHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DiskQuotaPercentage Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDiskQuotaPercentage() const;
 
                     /**
                      * 设置Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DiskQuotaPercentage Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+                     * @param _diskQuotaPercentage Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDiskQuotaPercentage(const int64_t& _diskQuotaPercentage);
 
                     /**
                      * 判断参数 DiskQuotaPercentage 是否已赋值
                      * @return DiskQuotaPercentage 是否已赋值
+                     * 
                      */
                     bool DiskQuotaPercentageHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MaxDiskSpace Max disk space in GB.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMaxDiskSpace() const;
 
                     /**
                      * 设置Max disk space in GB.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MaxDiskSpace Max disk space in GB.
+                     * @param _maxDiskSpace Max disk space in GB.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMaxDiskSpace(const int64_t& _maxDiskSpace);
 
                     /**
                      * 判断参数 MaxDiskSpace 是否已赋值
                      * @return MaxDiskSpace 是否已赋值
+                     * 
                      */
                     bool MaxDiskSpaceHasBeenSet() const;
 

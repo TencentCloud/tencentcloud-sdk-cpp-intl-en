@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the ongoing task, which is returned from the `StartRecord` API.
                      * @return TaskId ID of the ongoing task, which is returned from the `StartRecord` API.
+                     * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 设置ID of the ongoing task, which is returned from the `StartRecord` API.
-                     * @param TaskId ID of the ongoing task, which is returned from the `StartRecord` API.
+                     * @param _taskId ID of the ongoing task, which is returned from the `StartRecord` API.
+                     * 
                      */
                     void SetTaskId(const uint64_t& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Application ID.
                      * @return BizId Application ID.
+                     * 
                      */
                     uint64_t GetBizId() const;
 
                     /**
                      * 设置Application ID.
-                     * @param BizId Application ID.
+                     * @param _bizId Application ID.
+                     * 
                      */
                     void SetBizId(const uint64_t& _bizId);
 
                     /**
                      * 判断参数 BizId 是否已赋值
                      * @return BizId 是否已赋值
+                     * 
                      */
                     bool BizIdHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The house ID.
                      * @return DataEngineId The house ID.
+                     * 
                      */
                     std::string GetDataEngineId() const;
 
                     /**
                      * 设置The house ID.
-                     * @param DataEngineId The house ID.
+                     * @param _dataEngineId The house ID.
+                     * 
                      */
                     void SetDataEngineId(const std::string& _dataEngineId);
 
                     /**
                      * 判断参数 DataEngineId 是否已赋值
                      * @return DataEngineId 是否已赋值
+                     * 
                      */
                     bool DataEngineIdHasBeenSet() const;
 

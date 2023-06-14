@@ -55,6 +55,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable WAF configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -62,15 +63,17 @@ namespace TencentCloud
                      * 设置Whether to enable WAF configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>The configuration can be modified even when it is disabled.
-                     * @param Switch Whether to enable WAF configuration. Values:
+                     * @param _switch Whether to enable WAF configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -87,6 +90,7 @@ namespace TencentCloud
 <li>`strict`: Strict</li>
 <li>`stricter`: Super strict</li>
 <li>`custom`: Custom</li>
+                     * 
                      */
                     std::string GetLevel() const;
 
@@ -97,18 +101,20 @@ namespace TencentCloud
 <li>`strict`: Strict</li>
 <li>`stricter`: Super strict</li>
 <li>`custom`: Custom</li>
-                     * @param Level The protection level. Values:
+                     * @param _level The protection level. Values:
 <li>`loose`: Loose</li>
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`stricter`: Super strict</li>
 <li>`custom`: Custom</li>
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -119,6 +125,7 @@ namespace TencentCloud
                      * @return Mode The WAF global mode. Values:
 <li>`block`: Block globally</li>
 <li>`observe`: Observe globally</li>
+                     * 
                      */
                     std::string GetMode() const;
 
@@ -126,51 +133,59 @@ namespace TencentCloud
                      * 设置The WAF global mode. Values:
 <li>`block`: Block globally</li>
 <li>`observe`: Observe globally</li>
-                     * @param Mode The WAF global mode. Values:
+                     * @param _mode The WAF global mode. Values:
 <li>`block`: Block globally</li>
 <li>`observe`: Observe globally</li>
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取The settings of the managed rule. If it is null, the settings that were last configured will be used.
                      * @return WafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     WafRule GetWafRule() const;
 
                     /**
                      * 设置The settings of the managed rule. If it is null, the settings that were last configured will be used.
-                     * @param WafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+                     * @param _wafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     void SetWafRule(const WafRule& _wafRule);
 
                     /**
                      * 判断参数 WafRule 是否已赋值
                      * @return WafRule 是否已赋值
+                     * 
                      */
                     bool WafRuleHasBeenSet() const;
 
                     /**
                      * 获取The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
                      * @return AiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+                     * 
                      */
                     AiRule GetAiRule() const;
 
                     /**
                      * 设置The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
-                     * @param AiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+                     * @param _aiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+                     * 
                      */
                     void SetAiRule(const AiRule& _aiRule);
 
                     /**
                      * 判断参数 AiRule 是否已赋值
                      * @return AiRule 是否已赋值
+                     * 
                      */
                     bool AiRuleHasBeenSet() const;
 

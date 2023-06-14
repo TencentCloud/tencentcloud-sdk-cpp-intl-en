@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Database instance ID in the format of postgres-6fego161
                      * @return DBInstanceId Database instance ID in the format of postgres-6fego161
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Database instance ID in the format of postgres-6fego161
-                     * @param DBInstanceId Database instance ID in the format of postgres-6fego161
+                     * @param _dBInstanceId Database instance ID in the format of postgres-6fego161
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取New name of database instance
                      * @return InstanceName New name of database instance
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置New name of database instance
-                     * @param InstanceName New name of database instance
+                     * @param _instanceName New name of database instance
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 

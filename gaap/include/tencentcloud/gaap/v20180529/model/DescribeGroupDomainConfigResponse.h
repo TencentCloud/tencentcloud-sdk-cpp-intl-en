@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取Nearest access configuration list of domain name resolution.
                      * @return AccessRegionList Nearest access configuration list of domain name resolution.
+                     * 
                      */
                     std::vector<DomainAccessRegionDict> GetAccessRegionList() const;
 
                     /**
                      * 判断参数 AccessRegionList 是否已赋值
                      * @return AccessRegionList 是否已赋值
+                     * 
                      */
                     bool AccessRegionListHasBeenSet() const;
 
                     /**
                      * 获取Default accesses Ip.
                      * @return DefaultDnsIp Default accesses Ip.
+                     * 
                      */
                     std::string GetDefaultDnsIp() const;
 
                     /**
                      * 判断参数 DefaultDnsIp 是否已赋值
                      * @return DefaultDnsIp 是否已赋值
+                     * 
                      */
                     bool DefaultDnsIpHasBeenSet() const;
 
                     /**
                      * 获取Connection group ID.
                      * @return GroupId Connection group ID.
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Total number of configuration of access regions.
                      * @return AccessRegionCount Total number of configuration of access regions.
+                     * 
                      */
                     int64_t GetAccessRegionCount() const;
 
                     /**
                      * 判断参数 AccessRegionCount 是否已赋值
                      * @return AccessRegionCount 是否已赋值
+                     * 
                      */
                     bool AccessRegionCountHasBeenSet() const;
 

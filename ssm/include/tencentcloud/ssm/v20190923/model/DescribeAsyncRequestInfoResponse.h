@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取0: processing, 1: processing succeeded, 2: processing failed
                      * @return TaskStatus 0: processing, 1: processing succeeded, 2: processing failed
+                     * 
                      */
                     int64_t GetTaskStatus() const;
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 
                     /**
                      * 获取Task description.
                      * @return Description Task description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

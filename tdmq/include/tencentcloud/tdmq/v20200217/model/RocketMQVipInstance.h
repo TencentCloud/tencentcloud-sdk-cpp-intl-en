@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
@@ -87,182 +93,212 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceVersion Instance version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetInstanceVersion() const;
 
                     /**
                      * 设置Instance version
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceVersion Instance version
+                     * @param _instanceVersion Instance version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceVersion(const std::string& _instanceVersion);
 
                     /**
                      * 判断参数 InstanceVersion 是否已赋值
                      * @return InstanceVersion 是否已赋值
+                     * 
                      */
                     bool InstanceVersionHasBeenSet() const;
 
                     /**
                      * 获取Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
                      * @return Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+                     * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-                     * @param Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+                     * @param _status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes
                      * @return NodeCount Number of nodes
+                     * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
                      * 设置Number of nodes
-                     * @param NodeCount Number of nodes
+                     * @param _nodeCount Number of nodes
+                     * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
 
                     /**
                      * 判断参数 NodeCount 是否已赋值
                      * @return NodeCount 是否已赋值
+                     * 
                      */
                     bool NodeCountHasBeenSet() const;
 
                     /**
                      * 获取Instance specification name
                      * @return ConfigDisplay Instance specification name
+                     * 
                      */
                     std::string GetConfigDisplay() const;
 
                     /**
                      * 设置Instance specification name
-                     * @param ConfigDisplay Instance specification name
+                     * @param _configDisplay Instance specification name
+                     * 
                      */
                     void SetConfigDisplay(const std::string& _configDisplay);
 
                     /**
                      * 判断参数 ConfigDisplay 是否已赋值
                      * @return ConfigDisplay 是否已赋值
+                     * 
                      */
                     bool ConfigDisplayHasBeenSet() const;
 
                     /**
                      * 获取Peak TPS
                      * @return MaxTps Peak TPS
+                     * 
                      */
                     uint64_t GetMaxTps() const;
 
                     /**
                      * 设置Peak TPS
-                     * @param MaxTps Peak TPS
+                     * @param _maxTps Peak TPS
+                     * 
                      */
                     void SetMaxTps(const uint64_t& _maxTps);
 
                     /**
                      * 判断参数 MaxTps 是否已赋值
                      * @return MaxTps 是否已赋值
+                     * 
                      */
                     bool MaxTpsHasBeenSet() const;
 
                     /**
                      * 获取Peak bandwidth in Mbps
                      * @return MaxBandWidth Peak bandwidth in Mbps
+                     * 
                      */
                     uint64_t GetMaxBandWidth() const;
 
                     /**
                      * 设置Peak bandwidth in Mbps
-                     * @param MaxBandWidth Peak bandwidth in Mbps
+                     * @param _maxBandWidth Peak bandwidth in Mbps
+                     * 
                      */
                     void SetMaxBandWidth(const uint64_t& _maxBandWidth);
 
                     /**
                      * 判断参数 MaxBandWidth 是否已赋值
                      * @return MaxBandWidth 是否已赋值
+                     * 
                      */
                     bool MaxBandWidthHasBeenSet() const;
 
                     /**
                      * 获取Storage capacity in GB
                      * @return MaxStorage Storage capacity in GB
+                     * 
                      */
                     uint64_t GetMaxStorage() const;
 
                     /**
                      * 设置Storage capacity in GB
-                     * @param MaxStorage Storage capacity in GB
+                     * @param _maxStorage Storage capacity in GB
+                     * 
                      */
                     void SetMaxStorage(const uint64_t& _maxStorage);
 
                     /**
                      * 判断参数 MaxStorage 是否已赋值
                      * @return MaxStorage 是否已赋值
+                     * 
                      */
                     bool MaxStorageHasBeenSet() const;
 
                     /**
                      * 获取Instance expiration time in milliseconds
                      * @return ExpireTime Instance expiration time in milliseconds
+                     * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
                      * 设置Instance expiration time in milliseconds
-                     * @param ExpireTime Instance expiration time in milliseconds
+                     * @param _expireTime Instance expiration time in milliseconds
+                     * 
                      */
                     void SetExpireTime(const uint64_t& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
                      * @return AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
+                     * 
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
                      * 设置Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
-                     * @param AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
+                     * @param _autoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
+                     * 
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Payment mode. 0: Postpaid; 1: Prepaid.
                      * @return PayMode Payment mode. 0: Postpaid; 1: Prepaid.
+                     * 
                      */
                     uint64_t GetPayMode() const;
 
                     /**
                      * 设置Payment mode. 0: Postpaid; 1: Prepaid.
-                     * @param PayMode Payment mode. 0: Postpaid; 1: Prepaid.
+                     * @param _payMode Payment mode. 0: Postpaid; 1: Prepaid.
+                     * 
                      */
                     void SetPayMode(const uint64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -271,38 +307,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Remarks
+                     * @param _remark Remarks
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Instance specification ID
                      * @return SpecName Instance specification ID
+                     * 
                      */
                     std::string GetSpecName() const;
 
                     /**
                      * 设置Instance specification ID
-                     * @param SpecName Instance specification ID
+                     * @param _specName Instance specification ID
+                     * 
                      */
                     void SetSpecName(const std::string& _specName);
 
                     /**
                      * 判断参数 SpecName 是否已赋值
                      * @return SpecName 是否已赋值
+                     * 
                      */
                     bool SpecNameHasBeenSet() const;
 

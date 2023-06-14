@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Task execution result information
                      * @return Info Task execution result information
+                     * 
                      */
                     std::string GetInfo() const;
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 
                     /**
                      * 获取Task execution status. Valid values: success, failed, running
                      * @return Status Task execution status. Valid values: success, failed, running
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

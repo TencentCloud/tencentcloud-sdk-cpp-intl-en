@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Time point in the format of `yyyy-mm-dd HH:MM:SS`.
                      * @return Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Time point in the format of `yyyy-mm-dd HH:MM:SS`.
-                     * @param Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * @param _time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth in Mbps.
                      * @return Bandwidth Bandwidth in Mbps.
+                     * 
                      */
                     double GetBandwidth() const;
 
                     /**
                      * 设置Bandwidth in Mbps.
-                     * @param Bandwidth Bandwidth in Mbps.
+                     * @param _bandwidth Bandwidth in Mbps.
+                     * 
                      */
                     void SetBandwidth(const double& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取Traffic in MB.
                      * @return Flux Traffic in MB.
+                     * 
                      */
                     double GetFlux() const;
 
                     /**
                      * 设置Traffic in MB.
-                     * @param Flux Traffic in MB.
+                     * @param _flux Traffic in MB.
+                     * 
                      */
                     void SetFlux(const double& _flux);
 
                     /**
                      * 判断参数 Flux 是否已赋值
                      * @return Flux 是否已赋值
+                     * 
                      */
                     bool FluxHasBeenSet() const;
 
                     /**
                      * 获取Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
                      * @return PeakTime Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
+                     * 
                      */
                     std::string GetPeakTime() const;
 
                     /**
                      * 设置Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
-                     * @param PeakTime Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
+                     * @param _peakTime Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
+                     * 
                      */
                     void SetPeakTime(const std::string& _peakTime);
 
                     /**
                      * 判断参数 PeakTime 是否已赋值
                      * @return PeakTime 是否已赋值
+                     * 
                      */
                     bool PeakTimeHasBeenSet() const;
 

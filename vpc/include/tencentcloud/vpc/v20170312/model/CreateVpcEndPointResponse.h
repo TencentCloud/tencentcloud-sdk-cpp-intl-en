@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Endpoint details
                      * @return EndPoint Endpoint details
+                     * 
                      */
                     EndPoint GetEndPoint() const;
 
                     /**
                      * 判断参数 EndPoint 是否已赋值
                      * @return EndPoint 是否已赋值
+                     * 
                      */
                     bool EndPointHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Listener ID to be modified
                      * @return ListenerId Listener ID to be modified
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener ID to be modified
-                     * @param ListenerId Listener ID to be modified
+                     * @param _listenerId Listener ID to be modified
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取New listener name
                      * @return ListenerName New listener name
+                     * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置New listener name
-                     * @param ListenerName New listener name
+                     * @param _listenerName New listener name
+                     * 
                      */
                     void SetListenerName(const std::string& _listenerName);
 
                     /**
                      * 判断参数 ListenerName 是否已赋值
                      * @return ListenerName 是否已赋值
+                     * 
                      */
                     bool ListenerNameHasBeenSet() const;
 
                     /**
                      * 获取Connection ID
                      * @return ProxyId Connection ID
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Connection ID
-                     * @param ProxyId Connection ID
+                     * @param _proxyId Connection ID
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 

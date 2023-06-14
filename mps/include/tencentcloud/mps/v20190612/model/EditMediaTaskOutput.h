@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Target storage of edited file.
                      * @return OutputStorage Target storage of edited file.
+                     * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置Target storage of edited file.
-                     * @param OutputStorage Target storage of edited file.
+                     * @param _outputStorage Target storage of edited file.
+                     * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
                     /**
                      * 判断参数 OutputStorage 是否已赋值
                      * @return OutputStorage 是否已赋值
+                     * 
                      */
                     bool OutputStorageHasBeenSet() const;
 
                     /**
                      * 获取Path of edited video file.
                      * @return Path Path of edited video file.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Path of edited video file.
-                     * @param Path Path of edited video file.
+                     * @param _path Path of edited video file.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 

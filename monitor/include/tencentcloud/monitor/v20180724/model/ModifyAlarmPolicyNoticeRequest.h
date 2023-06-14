@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Module name, which is specified as `monitor`.
                      * @return Module Module name, which is specified as `monitor`.
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置Module name, which is specified as `monitor`.
-                     * @param Module Module name, which is specified as `monitor`.
+                     * @param _module Module name, which is specified as `monitor`.
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
                      * @return PolicyId Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
-                     * @param PolicyId Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+                     * @param _policyId Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取List of alarm notification template IDs.
                      * @return NoticeIds List of alarm notification template IDs.
+                     * 
                      */
                     std::vector<std::string> GetNoticeIds() const;
 
                     /**
                      * 设置List of alarm notification template IDs.
-                     * @param NoticeIds List of alarm notification template IDs.
+                     * @param _noticeIds List of alarm notification template IDs.
+                     * 
                      */
                     void SetNoticeIds(const std::vector<std::string>& _noticeIds);
 
                     /**
                      * 判断参数 NoticeIds 是否已赋值
                      * @return NoticeIds 是否已赋值
+                     * 
                      */
                     bool NoticeIdsHasBeenSet() const;
 
                     /**
                      * 获取Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
                      * @return PolicyIds Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+                     * 
                      */
                     std::vector<std::string> GetPolicyIds() const;
 
                     /**
                      * 设置Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
-                     * @param PolicyIds Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+                     * @param _policyIds Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+                     * 
                      */
                     void SetPolicyIds(const std::vector<std::string>& _policyIds);
 
                     /**
                      * 判断参数 PolicyIds 是否已赋值
                      * @return PolicyIds 是否已赋值
+                     * 
                      */
                     bool PolicyIdsHasBeenSet() const;
 
                     /**
                      * 获取Notification rules for different alarm levels
                      * @return HierarchicalNotices Notification rules for different alarm levels
+                     * 
                      */
                     std::vector<AlarmHierarchicalNotice> GetHierarchicalNotices() const;
 
                     /**
                      * 设置Notification rules for different alarm levels
-                     * @param HierarchicalNotices Notification rules for different alarm levels
+                     * @param _hierarchicalNotices Notification rules for different alarm levels
+                     * 
                      */
                     void SetHierarchicalNotices(const std::vector<AlarmHierarchicalNotice>& _hierarchicalNotices);
 
                     /**
                      * 判断参数 HierarchicalNotices 是否已赋值
                      * @return HierarchicalNotices 是否已赋值
+                     * 
                      */
                     bool HierarchicalNoticesHasBeenSet() const;
 

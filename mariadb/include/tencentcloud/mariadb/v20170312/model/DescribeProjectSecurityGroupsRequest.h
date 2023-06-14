@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Database engine name. Valid value: `mariadb`.
                      * @return Product Database engine name. Valid value: `mariadb`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Database engine name. Valid value: `mariadb`.
-                     * @param Product Database engine name. Valid value: `mariadb`.
+                     * @param _product Database engine name. Valid value: `mariadb`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 

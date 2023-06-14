@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID.
                      * @return TaskId Async task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Execution result. Valid values: SUCCESS; FAILED; RUNNING.
                      * @return Result Execution result. Valid values: SUCCESS; FAILED; RUNNING.
+                     * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

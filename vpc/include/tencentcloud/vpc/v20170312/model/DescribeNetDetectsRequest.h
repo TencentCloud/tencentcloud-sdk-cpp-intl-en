@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The array of network detection instance `IDs`, such as [`netd-12345678`].
                      * @return NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * 
                      */
                     std::vector<std::string> GetNetDetectIds() const;
 
                     /**
                      * 设置The array of network detection instance `IDs`, such as [`netd-12345678`].
-                     * @param NetDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * @param _netDetectIds The array of network detection instance `IDs`, such as [`netd-12345678`].
+                     * 
                      */
                     void SetNetDetectIds(const std::vector<std::string>& _netDetectIds);
 
                     /**
                      * 判断参数 NetDetectIds 是否已赋值
                      * @return NetDetectIds 是否已赋值
+                     * 
                      */
                     bool NetDetectIdsHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
 <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
 <li>subnet-id - String - (Filter condition) The subnet instance ID, such as subnet-12345678.</li>
 <li>net-detect-name - String - (Filter condition) The network detection name.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -81,53 +85,61 @@ namespace TencentCloud
 <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
 <li>subnet-id - String - (Filter condition) The subnet instance ID, such as subnet-12345678.</li>
 <li>net-detect-name - String - (Filter condition) The network detection name.</li>
-                     * @param Filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter conditions. `NetDetectIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) The VPC instance ID, such as vpc-12345678.</li>
 <li>net-detect-id - String - (Filter condition) The network detection instance ID, such as netd-12345678.</li>
 <li>subnet-id - String - (Filter condition) The subnet instance ID, such as subnet-12345678.</li>
 <li>net-detect-name - String - (Filter condition) The network detection name.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The offset. Default: 0.
                      * @return Offset The offset. Default: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置The offset. Default: 0.
-                     * @param Offset The offset. Default: 0.
+                     * @param _offset The offset. Default: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of returned values. Default: 20. Maximum: 100.
                      * @return Limit The number of returned values. Default: 20. Maximum: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The number of returned values. Default: 20. Maximum: 100.
-                     * @param Limit The number of returned values. Default: 20. Maximum: 100.
+                     * @param _limit The number of returned values. Default: 20. Maximum: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

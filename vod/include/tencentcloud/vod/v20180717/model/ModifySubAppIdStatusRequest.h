@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
 You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -80,17 +84,19 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
 You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
-                     * @param Status Subapplication status. Valid values:
+                     * @param _status Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
 <li>Destroyed: terminated</li>
 You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

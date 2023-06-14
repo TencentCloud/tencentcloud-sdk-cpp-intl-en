@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return NatinsLst Instance card info array
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<NatInstanceInfo> GetNatinsLst() const;
 
                     /**
                      * 判断参数 NatinsLst 是否已赋值
                      * @return NatinsLst 是否已赋值
+                     * 
                      */
                     bool NatinsLstHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Total Number of NAT firewalls
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

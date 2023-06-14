@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
                      * @return InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
-                     * @param InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param _instanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance memory size in GB after specification adjustment.
                      * @return Memory Instance memory size in GB after specification adjustment.
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Instance memory size in GB after specification adjustment.
-                     * @param Memory Instance memory size in GB after specification adjustment.
+                     * @param _memory Instance memory size in GB after specification adjustment.
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Instance disk size in GB after specification adjustment.
                      * @return Volume Instance disk size in GB after specification adjustment.
+                     * 
                      */
                     int64_t GetVolume() const;
 
                     /**
                      * 设置Instance disk size in GB after specification adjustment.
-                     * @param Volume Instance disk size in GB after specification adjustment.
+                     * @param _volume Instance disk size in GB after specification adjustment.
+                     * 
                      */
                     void SetVolume(const int64_t& _volume);
 
                     /**
                      * 判断参数 Volume 是否已赋值
                      * @return Volume 是否已赋值
+                     * 
                      */
                     bool VolumeHasBeenSet() const;
 
                     /**
                      * 获取Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
                      * @return NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+                     * 
                      */
                     int64_t GetNodeNum() const;
 
                     /**
                      * 设置Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
-                     * @param NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+                     * @param _nodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+                     * 
                      */
                     void SetNodeNum(const int64_t& _nodeNum);
 
                     /**
                      * 判断参数 NodeNum 是否已赋值
                      * @return NodeNum 是否已赋值
+                     * 
                      */
                     bool NodeNumHasBeenSet() const;
 
                     /**
                      * 获取Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
                      * @return ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+                     * 
                      */
                     int64_t GetReplicateSetNum() const;
 
                     /**
                      * 设置Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
-                     * @param ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+                     * @param _replicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+                     * 
                      */
                     void SetReplicateSetNum(const int64_t& _replicateSetNum);
 
                     /**
                      * 判断参数 ReplicateSetNum 是否已赋值
                      * @return ReplicateSetNum 是否已赋值
+                     * 
                      */
                     bool ReplicateSetNumHasBeenSet() const;
 

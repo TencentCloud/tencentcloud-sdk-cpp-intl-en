@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Order name set
                      * @return DealNames Order name set
+                     * 
                      */
                     std::vector<std::string> GetDealNames() const;
 
                     /**
                      * 设置Order name set
-                     * @param DealNames Order name set
+                     * @param _dealNames Order name set
+                     * 
                      */
                     void SetDealNames(const std::vector<std::string>& _dealNames);
 
                     /**
                      * 判断参数 DealNames 是否已赋值
                      * @return DealNames 是否已赋值
+                     * 
                      */
                     bool DealNamesHasBeenSet() const;
 

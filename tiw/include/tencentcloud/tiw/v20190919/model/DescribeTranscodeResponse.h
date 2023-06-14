@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Total number of document pages
                      * @return Pages Total number of document pages
+                     * 
                      */
                     int64_t GetPages() const;
 
                     /**
                      * 判断参数 Pages 是否已赋值
                      * @return Pages 是否已赋值
+                     * 
                      */
                     bool PagesHasBeenSet() const;
 
                     /**
                      * 获取Transcoding progress. Value range: 0 to 100
                      * @return Progress Transcoding progress. Value range: 0 to 100
+                     * 
                      */
                     int64_t GetProgress() const;
 
                     /**
                      * 判断参数 Progress 是否已赋值
                      * @return Progress 是否已赋值
+                     * 
                      */
                     bool ProgressHasBeenSet() const;
 
                     /**
                      * 获取Document resolution
                      * @return Resolution Document resolution
+                     * 
                      */
                     std::string GetResolution() const;
 
                     /**
                      * 判断参数 Resolution 是否已赋值
                      * @return Resolution 是否已赋值
+                     * 
                      */
                     bool ResolutionHasBeenSet() const;
 
@@ -88,12 +94,14 @@ Static transcoding: URL prefix of the image transcoded for each document page. F
 Dynamic transcoding: link of the HTML5 page transcoded from a PowerPoint file
 Static transcoding: URL prefix of the image transcoded for each document page. For example, if the URL prefix is `http://example.com/g0jb42ps49vtebjshilb/`, the image URL of the first page is
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`, and so on.
+                     * 
                      */
                     std::string GetResultUrl() const;
 
                     /**
                      * 判断参数 ResultUrl 是否已赋值
                      * @return ResultUrl 是否已赋值
+                     * 
                      */
                     bool ResultUrlHasBeenSet() const;
 
@@ -106,36 +114,42 @@ Static transcoding: URL prefix of the image transcoded for each document page. F
 - QUEUED: queuing for transcoding
 - PROCESSING: transcoding is in progress
 - FINISHED: transcoded
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the transcoding task
                      * @return TaskId Unique ID of the transcoding task
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取Document name
                      * @return Title Document name
+                     * 
                      */
                     std::string GetTitle() const;
 
                     /**
                      * 判断参数 Title 是否已赋值
                      * @return Title 是否已赋值
+                     * 
                      */
                     bool TitleHasBeenSet() const;
 
@@ -148,36 +162,42 @@ If the document transcoding request carries the ThumbnailResolution parameter an
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`, and so on.
 
 If the document transcoding request carries the ThumbnailResolution parameter and the transcoding type is dynamic transcoding, this parameter is not null. In other cases, this parameter is null.
+                     * 
                      */
                     std::string GetThumbnailUrl() const;
 
                     /**
                      * 判断参数 ThumbnailUrl 是否已赋值
                      * @return ThumbnailUrl 是否已赋值
+                     * 
                      */
                     bool ThumbnailUrlHasBeenSet() const;
 
                     /**
                      * 获取Resolution of the thumbnail generated for dynamic transcoding
                      * @return ThumbnailResolution Resolution of the thumbnail generated for dynamic transcoding
+                     * 
                      */
                     std::string GetThumbnailResolution() const;
 
                     /**
                      * 判断参数 ThumbnailResolution 是否已赋值
                      * @return ThumbnailResolution 是否已赋值
+                     * 
                      */
                     bool ThumbnailResolutionHasBeenSet() const;
 
                     /**
                      * 获取URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
                      * @return CompressFileUrl URL for downloading the transcoded and compressed file. If `CompressFileType` carried in the document transcoding request is null or is not a supported compression format, this parameter is null.
+                     * 
                      */
                     std::string GetCompressFileUrl() const;
 
                     /**
                      * 判断参数 CompressFileUrl 是否已赋值
                      * @return CompressFileUrl 是否已赋值
+                     * 
                      */
                     bool CompressFileUrlHasBeenSet() const;
 
@@ -186,12 +206,14 @@ If the document transcoding request carries the ThumbnailResolution parameter an
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return ResourceListUrl Download URL (for trial) of the resource list.
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetResourceListUrl() const;
 
                     /**
                      * 判断参数 ResourceListUrl 是否已赋值
                      * @return ResourceListUrl 是否已赋值
+                     * 
                      */
                     bool ResourceListUrlHasBeenSet() const;
 
@@ -200,12 +222,14 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Ext Document generation mode (for trial).
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExt() const;
 
                     /**
                      * 判断参数 Ext 是否已赋值
                      * @return Ext 是否已赋值
+                     * 
                      */
                     bool ExtHasBeenSet() const;
 

@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取Sub-user username
                      * @return Name Sub-user username
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Sub-user username
-                     * @param Name Sub-user username
+                     * @param _name Sub-user username
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Sub-user remarks
                      * @return Remark Sub-user remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Sub-user remarks
-                     * @param Remark Sub-user remarks
+                     * @param _remark Sub-user remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
                      * @return ConsoleLogin Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
+                     * 
                      */
                     uint64_t GetConsoleLogin() const;
 
                     /**
                      * 设置Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
-                     * @param ConsoleLogin Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
+                     * @param _consoleLogin Whether or not the sub-user is allowed to log in to the console. 0: No; 1: Yes.
+                     * 
                      */
                     void SetConsoleLogin(const uint64_t& _consoleLogin);
 
                     /**
                      * 判断参数 ConsoleLogin 是否已赋值
                      * @return ConsoleLogin 是否已赋值
+                     * 
                      */
                     bool ConsoleLoginHasBeenSet() const;
 
                     /**
                      * 获取Sub-user's console login password. If no password rules have been set, the password must have a minimum of 8 characters containing uppercase letters, lowercase letters, digits, and special characters by default. This parameter will be valid only when the sub-user is allowed to log in to the console. If it is not specified and console login is allowed, the system will automatically generate a random 32-character password that contains uppercase letters, lowercase letters, digits, and special characters.
                      * @return Password Sub-user's console login password. If no password rules have been set, the password must have a minimum of 8 characters containing uppercase letters, lowercase letters, digits, and special characters by default. This parameter will be valid only when the sub-user is allowed to log in to the console. If it is not specified and console login is allowed, the system will automatically generate a random 32-character password that contains uppercase letters, lowercase letters, digits, and special characters.
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Sub-user's console login password. If no password rules have been set, the password must have a minimum of 8 characters containing uppercase letters, lowercase letters, digits, and special characters by default. This parameter will be valid only when the sub-user is allowed to log in to the console. If it is not specified and console login is allowed, the system will automatically generate a random 32-character password that contains uppercase letters, lowercase letters, digits, and special characters.
-                     * @param Password Sub-user's console login password. If no password rules have been set, the password must have a minimum of 8 characters containing uppercase letters, lowercase letters, digits, and special characters by default. This parameter will be valid only when the sub-user is allowed to log in to the console. If it is not specified and console login is allowed, the system will automatically generate a random 32-character password that contains uppercase letters, lowercase letters, digits, and special characters.
+                     * @param _password Sub-user's console login password. If no password rules have been set, the password must have a minimum of 8 characters containing uppercase letters, lowercase letters, digits, and special characters by default. This parameter will be valid only when the sub-user is allowed to log in to the console. If it is not specified and console login is allowed, the system will automatically generate a random 32-character password that contains uppercase letters, lowercase letters, digits, and special characters.
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
                      * @return NeedResetPassword If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
+                     * 
                      */
                     uint64_t GetNeedResetPassword() const;
 
                     /**
                      * 设置If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
-                     * @param NeedResetPassword If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
+                     * @param _needResetPassword If the sub-user needs to reset their password when they next log in to the console. 0: No; 1: Yes.
+                     * 
                      */
                     void SetNeedResetPassword(const uint64_t& _needResetPassword);
 
                     /**
                      * 判断参数 NeedResetPassword 是否已赋值
                      * @return NeedResetPassword 是否已赋值
+                     * 
                      */
                     bool NeedResetPasswordHasBeenSet() const;
 
                     /**
                      * 获取Mobile number
                      * @return PhoneNum Mobile number
+                     * 
                      */
                     std::string GetPhoneNum() const;
 
                     /**
                      * 设置Mobile number
-                     * @param PhoneNum Mobile number
+                     * @param _phoneNum Mobile number
+                     * 
                      */
                     void SetPhoneNum(const std::string& _phoneNum);
 
                     /**
                      * 判断参数 PhoneNum 是否已赋值
                      * @return PhoneNum 是否已赋值
+                     * 
                      */
                     bool PhoneNumHasBeenSet() const;
 
                     /**
                      * 获取Country/Area Code
                      * @return CountryCode Country/Area Code
+                     * 
                      */
                     std::string GetCountryCode() const;
 
                     /**
                      * 设置Country/Area Code
-                     * @param CountryCode Country/Area Code
+                     * @param _countryCode Country/Area Code
+                     * 
                      */
                     void SetCountryCode(const std::string& _countryCode);
 
                     /**
                      * 判断参数 CountryCode 是否已赋值
                      * @return CountryCode 是否已赋值
+                     * 
                      */
                     bool CountryCodeHasBeenSet() const;
 
                     /**
                      * 获取Email
                      * @return Email Email
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 设置Email
-                     * @param Email Email
+                     * @param _email Email
+                     * 
                      */
                     void SetEmail(const std::string& _email);
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 

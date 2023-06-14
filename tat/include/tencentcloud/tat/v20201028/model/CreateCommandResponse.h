@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Command ID.
                      * @return CommandId Command ID.
+                     * 
                      */
                     std::string GetCommandId() const;
 
                     /**
                      * 判断参数 CommandId 是否已赋值
                      * @return CommandId 是否已赋值
+                     * 
                      */
                     bool CommandIdHasBeenSet() const;
 

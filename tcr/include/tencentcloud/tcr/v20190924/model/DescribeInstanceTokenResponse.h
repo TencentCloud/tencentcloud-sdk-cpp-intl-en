@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of long-term access credentials
                      * @return TotalCount Total number of long-term access credentials
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of long-term access credentials
                      * @return Tokens List of long-term access credentials
+                     * 
                      */
                     std::vector<TcrInstanceToken> GetTokens() const;
 
                     /**
                      * 判断参数 Tokens 是否已赋值
                      * @return Tokens 是否已赋值
+                     * 
                      */
                     bool TokensHasBeenSet() const;
 

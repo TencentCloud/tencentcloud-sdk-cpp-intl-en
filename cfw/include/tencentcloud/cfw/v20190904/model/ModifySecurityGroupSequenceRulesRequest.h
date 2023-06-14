@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Direction. 0: outbound; 1: inbound. 1 by default
                      * @return Direction Direction. 0: outbound; 1: inbound. 1 by default
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Direction. 0: outbound; 1: inbound. 1 by default
-                     * @param Direction Direction. 0: outbound; 1: inbound. 1 by default
+                     * @param _direction Direction. 0: outbound; 1: inbound. 1 by default
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Sorting data of enterprise security group rules
                      * @return Data Sorting data of enterprise security group rules
+                     * 
                      */
                     std::vector<SecurityGroupOrderIndexData> GetData() const;
 
                     /**
                      * 设置Sorting data of enterprise security group rules
-                     * @param Data Sorting data of enterprise security group rules
+                     * @param _data Sorting data of enterprise security group rules
+                     * 
                      */
                     void SetData(const std::vector<SecurityGroupOrderIndexData>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

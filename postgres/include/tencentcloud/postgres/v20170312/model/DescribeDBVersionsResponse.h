@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of database versions
                      * @return VersionSet List of database versions
+                     * 
                      */
                     std::vector<Version> GetVersionSet() const;
 
                     /**
                      * 判断参数 VersionSet 是否已赋值
                      * @return VersionSet 是否已赋值
+                     * 
                      */
                     bool VersionSetHasBeenSet() const;
 

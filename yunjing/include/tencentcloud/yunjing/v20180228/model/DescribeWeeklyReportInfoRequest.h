@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Weekly CWP Pro report start time.
                      * @return BeginDate Weekly CWP Pro report start time.
+                     * 
                      */
                     std::string GetBeginDate() const;
 
                     /**
                      * 设置Weekly CWP Pro report start time.
-                     * @param BeginDate Weekly CWP Pro report start time.
+                     * @param _beginDate Weekly CWP Pro report start time.
+                     * 
                      */
                     void SetBeginDate(const std::string& _beginDate);
 
                     /**
                      * 判断参数 BeginDate 是否已赋值
                      * @return BeginDate 是否已赋值
+                     * 
                      */
                     bool BeginDateHasBeenSet() const;
 

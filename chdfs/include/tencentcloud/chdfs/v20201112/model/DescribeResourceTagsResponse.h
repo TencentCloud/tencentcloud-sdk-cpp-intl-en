@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of resource tags
                      * @return Tags List of resource tags
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

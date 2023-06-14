@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取bind: bind EIP; unbind: unbind EIP; newAdd: add firewall EIP
                      * @return OperationType bind: bind EIP; unbind: unbind EIP; newAdd: add firewall EIP
+                     * 
                      */
                     std::string GetOperationType() const;
 
                     /**
                      * 设置bind: bind EIP; unbind: unbind EIP; newAdd: add firewall EIP
-                     * @param OperationType bind: bind EIP; unbind: unbind EIP; newAdd: add firewall EIP
+                     * @param _operationType bind: bind EIP; unbind: unbind EIP; newAdd: add firewall EIP
+                     * 
                      */
                     void SetOperationType(const std::string& _operationType);
 
                     /**
                      * 判断参数 OperationType 是否已赋值
                      * @return OperationType 是否已赋值
+                     * 
                      */
                     bool OperationTypeHasBeenSet() const;
 
                     /**
                      * 获取Firewall instance ID
                      * @return CfwInstance Firewall instance ID
+                     * 
                      */
                     std::string GetCfwInstance() const;
 
                     /**
                      * 设置Firewall instance ID
-                     * @param CfwInstance Firewall instance ID
+                     * @param _cfwInstance Firewall instance ID
+                     * 
                      */
                     void SetCfwInstance(const std::string& _cfwInstance);
 
                     /**
                      * 判断参数 CfwInstance 是否已赋值
                      * @return CfwInstance 是否已赋值
+                     * 
                      */
                     bool CfwInstanceHasBeenSet() const;
 
                     /**
                      * 获取This field is required when OperationType is "bind" or "unbind".
                      * @return EipList This field is required when OperationType is "bind" or "unbind".
+                     * 
                      */
                     std::vector<std::string> GetEipList() const;
 
                     /**
                      * 设置This field is required when OperationType is "bind" or "unbind".
-                     * @param EipList This field is required when OperationType is "bind" or "unbind".
+                     * @param _eipList This field is required when OperationType is "bind" or "unbind".
+                     * 
                      */
                     void SetEipList(const std::vector<std::string>& _eipList);
 
                     /**
                      * 判断参数 EipList 是否已赋值
                      * @return EipList 是否已赋值
+                     * 
                      */
                     bool EipListHasBeenSet() const;
 

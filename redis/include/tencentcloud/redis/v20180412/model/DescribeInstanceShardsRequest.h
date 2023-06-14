@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to filter out the replica node information
                      * @return FilterSlave Whether to filter out the replica node information
+                     * 
                      */
                     bool GetFilterSlave() const;
 
                     /**
                      * 设置Whether to filter out the replica node information
-                     * @param FilterSlave Whether to filter out the replica node information
+                     * @param _filterSlave Whether to filter out the replica node information
+                     * 
                      */
                     void SetFilterSlave(const bool& _filterSlave);
 
                     /**
                      * 判断参数 FilterSlave 是否已赋值
                      * @return FilterSlave 是否已赋值
+                     * 
                      */
                     bool FilterSlaveHasBeenSet() const;
 

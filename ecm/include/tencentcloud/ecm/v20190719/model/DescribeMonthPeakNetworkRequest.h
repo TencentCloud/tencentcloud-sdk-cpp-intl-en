@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Month (xxxx-xx), such as `2021-03`. Default value: the last month
                      * @return Month Month (xxxx-xx), such as `2021-03`. Default value: the last month
+                     * 
                      */
                     std::string GetMonth() const;
 
                     /**
                      * 设置Month (xxxx-xx), such as `2021-03`. Default value: the last month
-                     * @param Month Month (xxxx-xx), such as `2021-03`. Default value: the last month
+                     * @param _month Month (xxxx-xx), such as `2021-03`. Default value: the last month
+                     * 
                      */
                     void SetMonth(const std::string& _month);
 
                     /**
                      * 判断参数 Month 是否已赋值
                      * @return Month 是否已赋值
+                     * 
                      */
                     bool MonthHasBeenSet() const;
 
                     /**
                      * 获取Filter
                      * @return Filters Filter
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter
-                     * @param Filters Filter
+                     * @param _filters Filter
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

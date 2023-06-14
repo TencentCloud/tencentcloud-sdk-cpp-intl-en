@@ -45,162 +45,189 @@ namespace TencentCloud
                     /**
                      * 获取Backup import task ID, which is returned through the API CreateBackupMigration
                      * @return BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * 
                      */
                     std::string GetBackupMigrationId() const;
 
                     /**
                      * 设置Backup import task ID, which is returned through the API CreateBackupMigration
-                     * @param BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * @param _backupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
+                     * 
                      */
                     void SetBackupMigrationId(const std::string& _backupMigrationId);
 
                     /**
                      * 判断参数 BackupMigrationId 是否已赋值
                      * @return BackupMigrationId 是否已赋值
+                     * 
                      */
                     bool BackupMigrationIdHasBeenSet() const;
 
                     /**
                      * 获取ID of imported target instance
                      * @return InstanceId ID of imported target instance
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of imported target instance
-                     * @param InstanceId ID of imported target instance
+                     * @param _instanceId ID of imported target instance
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Backup file name
                      * @return BackupFileName Backup file name
+                     * 
                      */
                     std::string GetBackupFileName() const;
 
                     /**
                      * 设置Backup file name
-                     * @param BackupFileName Backup file name
+                     * @param _backupFileName Backup file name
+                     * 
                      */
                     void SetBackupFileName(const std::string& _backupFileName);
 
                     /**
                      * 判断参数 BackupFileName 是否已赋值
                      * @return BackupFileName 是否已赋值
+                     * 
                      */
                     bool BackupFileNameHasBeenSet() const;
 
                     /**
                      * 获取Status set of import tasks
                      * @return StatusSet Status set of import tasks
+                     * 
                      */
                     std::vector<int64_t> GetStatusSet() const;
 
                     /**
                      * 设置Status set of import tasks
-                     * @param StatusSet Status set of import tasks
+                     * @param _statusSet Status set of import tasks
+                     * 
                      */
                     void SetStatusSet(const std::vector<int64_t>& _statusSet);
 
                     /**
                      * 判断参数 StatusSet 是否已赋值
                      * @return StatusSet 是否已赋值
+                     * 
                      */
                     bool StatusSetHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of results returned per page. Default value: `100`.
                      * @return Limit The maximum number of results returned per page. Default value: `100`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of results returned per page. Default value: `100`.
-                     * @param Limit The maximum number of results returned per page. Default value: `100`.
+                     * @param _limit The maximum number of results returned per page. Default value: `100`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: `0`.
                      * @return Offset Page number. Default value: `0`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: `0`.
-                     * @param Offset Page number. Default value: `0`.
+                     * @param _offset Page number. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
                      * @return OrderBy Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
-                     * @param OrderBy Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+                     * @param _orderBy Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
                      * @return OrderByType Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
-                     * @param OrderByType Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+                     * @param _orderByType Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
                      * 获取Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
                      * @return IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+                     * 
                      */
                     std::string GetIncrementalMigrationId() const;
 
                     /**
                      * 设置Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
-                     * @param IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+                     * @param _incrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+                     * 
                      */
                     void SetIncrementalMigrationId(const std::string& _incrementalMigrationId);
 
                     /**
                      * 判断参数 IncrementalMigrationId 是否已赋值
                      * @return IncrementalMigrationId 是否已赋值
+                     * 
                      */
                     bool IncrementalMigrationIdHasBeenSet() const;
 

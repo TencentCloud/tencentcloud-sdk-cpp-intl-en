@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Namespace name.
                      * @return EnvironmentId Namespace name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Namespace name.
-                     * @param EnvironmentId Namespace name.
+                     * @param _environmentId Namespace name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Description.
                      * @return Remark Description.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Description.
-                     * @param Remark Description.
+                     * @param _remark Description.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
                      * @return MsgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
+                     * 
                      */
                     int64_t GetMsgTTL() const;
 
                     /**
                      * 设置Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
-                     * @param MsgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
+                     * @param _msgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
+                     * 
                      */
                     void SetMsgTTL(const int64_t& _msgTTL);
 
                     /**
                      * 判断参数 MsgTTL 是否已赋值
                      * @return MsgTTL 是否已赋值
+                     * 
                      */
                     bool MsgTTLHasBeenSet() const;
 
                     /**
                      * 获取Creation time.
                      * @return CreateTime Creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-                     * @param CreateTime Creation time.
+                     * @param _createTime Creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modified.
                      * @return UpdateTime Last modified.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified.
-                     * @param UpdateTime Last modified.
+                     * @param _updateTime Last modified.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Namespace ID.
                      * @return NamespaceId Namespace ID.
+                     * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
                      * 设置Namespace ID.
-                     * @param NamespaceId Namespace ID.
+                     * @param _namespaceId Namespace ID.
+                     * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name.
                      * @return NamespaceName Namespace name.
+                     * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
                      * 设置Namespace name.
-                     * @param NamespaceName Namespace name.
+                     * @param _namespaceName Namespace name.
+                     * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
 
                     /**
                      * 判断参数 NamespaceName 是否已赋值
                      * @return NamespaceName 是否已赋值
+                     * 
                      */
                     bool NamespaceNameHasBeenSet() const;
 
@@ -178,20 +199,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicNum The number of topics.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTopicNum() const;
 
                     /**
                      * 设置The number of topics.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TopicNum The number of topics.
+                     * @param _topicNum The number of topics.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTopicNum(const int64_t& _topicNum);
 
                     /**
                      * 判断参数 TopicNum 是否已赋值
                      * @return TopicNum 是否已赋值
+                     * 
                      */
                     bool TopicNumHasBeenSet() const;
 
@@ -200,20 +224,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RetentionPolicy Message retention policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RetentionPolicy GetRetentionPolicy() const;
 
                     /**
                      * 设置Message retention policy.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RetentionPolicy Message retention policy.
+                     * @param _retentionPolicy Message retention policy.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRetentionPolicy(const RetentionPolicy& _retentionPolicy);
 
                     /**
                      * 判断参数 RetentionPolicy 是否已赋值
                      * @return RetentionPolicy 是否已赋值
+                     * 
                      */
                     bool RetentionPolicyHasBeenSet() const;
 

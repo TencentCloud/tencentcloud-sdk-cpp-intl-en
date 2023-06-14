@@ -49,270 +49,315 @@ namespace TencentCloud
                     /**
                      * 获取The network ID.
                      * @return ChainId The network ID.
+                     * 
                      */
                     uint64_t GetChainId() const;
 
                     /**
                      * 设置The network ID.
-                     * @param ChainId The network ID.
+                     * @param _chainId The network ID.
+                     * 
                      */
                     void SetChainId(const uint64_t& _chainId);
 
                     /**
                      * 判断参数 ChainId 是否已赋值
                      * @return ChainId 是否已赋值
+                     * 
                      */
                     bool ChainIdHasBeenSet() const;
 
                     /**
                      * 获取The network name.
                      * @return ChainName The network name.
+                     * 
                      */
                     std::string GetChainName() const;
 
                     /**
                      * 设置The network name.
-                     * @param ChainName The network name.
+                     * @param _chainName The network name.
+                     * 
                      */
                     void SetChainName(const std::string& _chainName);
 
                     /**
                      * 判断参数 ChainName 是否已赋值
                      * @return ChainName 是否已赋值
+                     * 
                      */
                     bool ChainNameHasBeenSet() const;
 
                     /**
                      * 获取The number of organizations.
                      * @return AgencyCount The number of organizations.
+                     * 
                      */
                     uint64_t GetAgencyCount() const;
 
                     /**
                      * 设置The number of organizations.
-                     * @param AgencyCount The number of organizations.
+                     * @param _agencyCount The number of organizations.
+                     * 
                      */
                     void SetAgencyCount(const uint64_t& _agencyCount);
 
                     /**
                      * 判断参数 AgencyCount 是否已赋值
                      * @return AgencyCount 是否已赋值
+                     * 
                      */
                     bool AgencyCountHasBeenSet() const;
 
                     /**
                      * 获取The consortium ID.
                      * @return ConsortiumId The consortium ID.
+                     * 
                      */
                     uint64_t GetConsortiumId() const;
 
                     /**
                      * 设置The consortium ID.
-                     * @param ConsortiumId The consortium ID.
+                     * @param _consortiumId The consortium ID.
+                     * 
                      */
                     void SetConsortiumId(const uint64_t& _consortiumId);
 
                     /**
                      * 判断参数 ConsortiumId 是否已赋值
                      * @return ConsortiumId 是否已赋值
+                     * 
                      */
                     bool ConsortiumIdHasBeenSet() const;
 
                     /**
                      * 获取The creation time.
                      * @return CreateTime The creation time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The creation time.
-                     * @param CreateTime The creation time.
+                     * @param _createTime The creation time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取The expiration time.
                      * @return ExpireTime The expiration time.
+                     * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
                      * 设置The expiration time.
-                     * @param ExpireTime The expiration time.
+                     * @param _expireTime The expiration time.
+                     * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取The network status.
                      * @return ChainStatus The network status.
+                     * 
                      */
                     uint64_t GetChainStatus() const;
 
                     /**
                      * 设置The network status.
-                     * @param ChainStatus The network status.
+                     * @param _chainStatus The network status.
+                     * 
                      */
                     void SetChainStatus(const uint64_t& _chainStatus);
 
                     /**
                      * 判断参数 ChainStatus 是否已赋值
                      * @return ChainStatus 是否已赋值
+                     * 
                      */
                     bool ChainStatusHasBeenSet() const;
 
                     /**
                      * 获取The resource ID.
                      * @return ResourceId The resource ID.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置The resource ID.
-                     * @param ResourceId The resource ID.
+                     * @param _resourceId The resource ID.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取The cluster ID.
                      * @return ClusterId The cluster ID.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The cluster ID.
-                     * @param ClusterId The cluster ID.
+                     * @param _clusterId The cluster ID.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The consortium name.
                      * @return ConsortiumName The consortium name.
+                     * 
                      */
                     std::string GetConsortiumName() const;
 
                     /**
                      * 设置The consortium name.
-                     * @param ConsortiumName The consortium name.
+                     * @param _consortiumName The consortium name.
+                     * 
                      */
                     void SetConsortiumName(const std::string& _consortiumName);
 
                     /**
                      * 判断参数 ConsortiumName 是否已赋值
                      * @return ConsortiumName 是否已赋值
+                     * 
                      */
                     bool ConsortiumNameHasBeenSet() const;
 
                     /**
                      * 获取The organization ID.
                      * @return AgencyId The organization ID.
+                     * 
                      */
                     uint64_t GetAgencyId() const;
 
                     /**
                      * 设置The organization ID.
-                     * @param AgencyId The organization ID.
+                     * @param _agencyId The organization ID.
+                     * 
                      */
                     void SetAgencyId(const uint64_t& _agencyId);
 
                     /**
                      * 判断参数 AgencyId 是否已赋值
                      * @return AgencyId 是否已赋值
+                     * 
                      */
                     bool AgencyIdHasBeenSet() const;
 
                     /**
                      * 获取The renewal status.
                      * @return AutoRenewFlag The renewal status.
+                     * 
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
                      * 设置The renewal status.
-                     * @param AutoRenewFlag The renewal status.
+                     * @param _autoRenewFlag The renewal status.
+                     * 
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取The network mode.
                      * @return TotalNetworkNode The network mode.
+                     * 
                      */
                     uint64_t GetTotalNetworkNode() const;
 
                     /**
                      * 设置The network mode.
-                     * @param TotalNetworkNode The network mode.
+                     * @param _totalNetworkNode The network mode.
+                     * 
                      */
                     void SetTotalNetworkNode(const uint64_t& _totalNetworkNode);
 
                     /**
                      * 判断参数 TotalNetworkNode 是否已赋值
                      * @return TotalNetworkNode 是否已赋值
+                     * 
                      */
                     bool TotalNetworkNodeHasBeenSet() const;
 
                     /**
                      * 获取The number of nodes created.
                      * @return TotalCreateNode The number of nodes created.
+                     * 
                      */
                     uint64_t GetTotalCreateNode() const;
 
                     /**
                      * 设置The number of nodes created.
-                     * @param TotalCreateNode The number of nodes created.
+                     * @param _totalCreateNode The number of nodes created.
+                     * 
                      */
                     void SetTotalCreateNode(const uint64_t& _totalCreateNode);
 
                     /**
                      * 判断参数 TotalCreateNode 是否已赋值
                      * @return TotalCreateNode 是否已赋值
+                     * 
                      */
                     bool TotalCreateNodeHasBeenSet() const;
 
                     /**
                      * 获取The total number of groups.
                      * @return TotalGroups The total number of groups.
+                     * 
                      */
                     uint64_t GetTotalGroups() const;
 
                     /**
                      * 设置The total number of groups.
-                     * @param TotalGroups The total number of groups.
+                     * @param _totalGroups The total number of groups.
+                     * 
                      */
                     void SetTotalGroups(const uint64_t& _totalGroups);
 
                     /**
                      * 判断参数 TotalGroups 是否已赋值
                      * @return TotalGroups 是否已赋值
+                     * 
                      */
                     bool TotalGroupsHasBeenSet() const;
 

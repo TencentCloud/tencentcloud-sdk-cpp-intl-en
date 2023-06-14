@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return DBInstanceId Instance ID
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param DBInstanceId Instance ID
+                     * @param _dBInstanceId Instance ID
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Base backup ID
                      * @return BaseBackupId Base backup ID
+                     * 
                      */
                     std::string GetBaseBackupId() const;
 
                     /**
                      * 设置Base backup ID
-                     * @param BaseBackupId Base backup ID
+                     * @param _baseBackupId Base backup ID
+                     * 
                      */
                     void SetBaseBackupId(const std::string& _baseBackupId);
 
                     /**
                      * 判断参数 BaseBackupId 是否已赋值
                      * @return BaseBackupId 是否已赋值
+                     * 
                      */
                     bool BaseBackupIdHasBeenSet() const;
 
                     /**
                      * 获取New expiration time
                      * @return NewExpireTime New expiration time
+                     * 
                      */
                     std::string GetNewExpireTime() const;
 
                     /**
                      * 设置New expiration time
-                     * @param NewExpireTime New expiration time
+                     * @param _newExpireTime New expiration time
+                     * 
                      */
                     void SetNewExpireTime(const std::string& _newExpireTime);
 
                     /**
                      * 判断参数 NewExpireTime 是否已赋值
                      * @return NewExpireTime 是否已赋值
+                     * 
                      */
                     bool NewExpireTimeHasBeenSet() const;
 

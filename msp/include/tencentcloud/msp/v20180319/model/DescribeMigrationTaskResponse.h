@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Migration details list
                      * @return TaskStatus Migration details list
+                     * 
                      */
                     std::vector<TaskStatus> GetTaskStatus() const;
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 

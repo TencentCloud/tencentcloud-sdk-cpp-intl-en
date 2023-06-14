@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
                      * @return HaVipIds The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+                     * 
                      */
                     std::vector<std::string> GetHaVipIds() const;
 
                     /**
                      * 设置The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
-                     * @param HaVipIds The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+                     * @param _haVipIds The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+                     * 
                      */
                     void SetHaVipIds(const std::vector<std::string>& _haVipIds);
 
                     /**
                      * 判断参数 HaVipIds 是否已赋值
                      * @return HaVipIds 是否已赋值
+                     * 
                      */
                     bool HaVipIdsHasBeenSet() const;
 
@@ -76,6 +79,7 @@ li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li
 <li>subnet-id - String - Subnet ID of the HAVIP.</li>
 <li>vip - String - Virtual IP address of the HAVIP.</li>
 <li>address-ip - String - Bound EIP.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -87,55 +91,63 @@ li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li
 <li>subnet-id - String - Subnet ID of the HAVIP.</li>
 <li>vip - String - Virtual IP address of the HAVIP.</li>
 <li>address-ip - String - Bound EIP.</li>
-                     * @param Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
 li>havip-id - String - The unique ID of the HAVIP, such as `havip-9o233uri`.</li>
 <li>havip-name - String - HAVIP name.</li>
 <li>vpc-id - String - VPC ID of the HAVIP.</li>
 <li>subnet-id - String - Subnet ID of the HAVIP.</li>
 <li>vip - String - Virtual IP address of the HAVIP.</li>
 <li>address-ip - String - Bound EIP.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity
                      * @return Limit The returned quantity
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity
-                     * @param Limit The returned quantity
+                     * @param _limit The returned quantity
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

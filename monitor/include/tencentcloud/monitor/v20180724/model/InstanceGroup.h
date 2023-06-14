@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceGroupId Instance group ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetInstanceGroupId() const;
 
                     /**
                      * 设置Instance group ID.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceGroupId Instance group ID.
+                     * @param _instanceGroupId Instance group ID.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceGroupId(const int64_t& _instanceGroupId);
 
                     /**
                      * 判断参数 InstanceGroupId 是否已赋值
                      * @return InstanceGroupId 是否已赋值
+                     * 
                      */
                     bool InstanceGroupIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceGroupName Instance group name.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceGroupName() const;
 
                     /**
                      * 设置Instance group name.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceGroupName Instance group name.
+                     * @param _instanceGroupName Instance group name.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceGroupName(const std::string& _instanceGroupName);
 
                     /**
                      * 判断参数 InstanceGroupName 是否已赋值
                      * @return InstanceGroupName 是否已赋值
+                     * 
                      */
                     bool InstanceGroupNameHasBeenSet() const;
 

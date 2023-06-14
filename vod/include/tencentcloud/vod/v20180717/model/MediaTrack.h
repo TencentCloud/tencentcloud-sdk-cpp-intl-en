@@ -60,6 +60,7 @@ namespace TencentCloud
 <li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -70,18 +71,20 @@ namespace TencentCloud
 <li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
-                     * @param Type Track type. Valid values:
+                     * @param _type Track type. Valid values:
 <ul>
 <li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
 </ul>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -90,20 +93,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TrackItems List of media segments on track.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaTrackItem> GetTrackItems() const;
 
                     /**
                      * 设置List of media segments on track.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TrackItems List of media segments on track.
+                     * @param _trackItems List of media segments on track.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTrackItems(const std::vector<MediaTrackItem>& _trackItems);
 
                     /**
                      * 判断参数 TrackItems 是否已赋值
                      * @return TrackItems 是否已赋值
+                     * 
                      */
                     bool TrackItemsHasBeenSet() const;
 

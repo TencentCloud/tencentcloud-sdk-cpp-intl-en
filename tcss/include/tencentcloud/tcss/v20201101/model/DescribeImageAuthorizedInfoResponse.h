@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Total number of valid image licenses
                      * @return TotalAuthorizedCnt Total number of valid image licenses
+                     * 
                      */
                     uint64_t GetTotalAuthorizedCnt() const;
 
                     /**
                      * 判断参数 TotalAuthorizedCnt 是否已赋值
                      * @return TotalAuthorizedCnt 是否已赋值
+                     * 
                      */
                     bool TotalAuthorizedCntHasBeenSet() const;
 
                     /**
                      * 获取Number of used image licenses
                      * @return UsedAuthorizedCnt Number of used image licenses
+                     * 
                      */
                     uint64_t GetUsedAuthorizedCnt() const;
 
                     /**
                      * 判断参数 UsedAuthorizedCnt 是否已赋值
                      * @return UsedAuthorizedCnt 是否已赋值
+                     * 
                      */
                     bool UsedAuthorizedCntHasBeenSet() const;
 
                     /**
                      * 获取Number of images with scan enabled
                      * @return ScannedImageCnt Number of images with scan enabled
+                     * 
                      */
                     uint64_t GetScannedImageCnt() const;
 
                     /**
                      * 判断参数 ScannedImageCnt 是否已赋值
                      * @return ScannedImageCnt 是否已赋值
+                     * 
                      */
                     bool ScannedImageCntHasBeenSet() const;
 
                     /**
                      * 获取Number of images with scan not enabled
                      * @return NotScannedImageCnt Number of images with scan not enabled
+                     * 
                      */
                     uint64_t GetNotScannedImageCnt() const;
 
                     /**
                      * 判断参数 NotScannedImageCnt 是否已赋值
                      * @return NotScannedImageCnt 是否已赋值
+                     * 
                      */
                     bool NotScannedImageCntHasBeenSet() const;
 
                     /**
                      * 获取Number of local images with scan not enabled
                      * @return NotScannedLocalImageCnt Number of local images with scan not enabled
+                     * 
                      */
                     uint64_t GetNotScannedLocalImageCnt() const;
 
                     /**
                      * 判断参数 NotScannedLocalImageCnt 是否已赋值
                      * @return NotScannedLocalImageCnt 是否已赋值
+                     * 
                      */
                     bool NotScannedLocalImageCntHasBeenSet() const;
 

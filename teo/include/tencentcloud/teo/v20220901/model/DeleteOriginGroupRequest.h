@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取The ID of the origin group.
                      * @return OriginGroupId The ID of the origin group.
+                     * 
                      */
                     std::string GetOriginGroupId() const;
 
                     /**
                      * 设置The ID of the origin group.
-                     * @param OriginGroupId The ID of the origin group.
+                     * @param _originGroupId The ID of the origin group.
+                     * 
                      */
                     void SetOriginGroupId(const std::string& _originGroupId);
 
                     /**
                      * 判断参数 OriginGroupId 是否已赋值
                      * @return OriginGroupId 是否已赋值
+                     * 
                      */
                     bool OriginGroupIdHasBeenSet() const;
 

@@ -52,24 +52,28 @@ namespace TencentCloud
                     /**
                      * 获取Compute environment ID
                      * @return EnvId Compute environment ID
+                     * 
                      */
                     std::string GetEnvId() const;
 
                     /**
                      * 判断参数 EnvId 是否已赋值
                      * @return EnvId 是否已赋值
+                     * 
                      */
                     bool EnvIdHasBeenSet() const;
 
                     /**
                      * 获取Compute environment name
                      * @return EnvName Compute environment name
+                     * 
                      */
                     std::string GetEnvName() const;
 
                     /**
                      * 判断参数 EnvName 是否已赋值
                      * @return EnvName 是否已赋值
+                     * 
                      */
                     bool EnvNameHasBeenSet() const;
 
@@ -78,96 +82,112 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EnvDescription Compute environment description
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEnvDescription() const;
 
                     /**
                      * 判断参数 EnvDescription 是否已赋值
                      * @return EnvDescription 是否已赋值
+                     * 
                      */
                     bool EnvDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Compute environment type. Only `MANAGED` is supported
                      * @return EnvType Compute environment type. Only `MANAGED` is supported
+                     * 
                      */
                     std::string GetEnvType() const;
 
                     /**
                      * 判断参数 EnvType 是否已赋值
                      * @return EnvType 是否已赋值
+                     * 
                      */
                     bool EnvTypeHasBeenSet() const;
 
                     /**
                      * 获取Compute environment parameter
                      * @return EnvData Compute environment parameter
+                     * 
                      */
                     EnvData GetEnvData() const;
 
                     /**
                      * 判断参数 EnvData 是否已赋值
                      * @return EnvData 是否已赋值
+                     * 
                      */
                     bool EnvDataHasBeenSet() const;
 
                     /**
                      * 获取Data disk mounting option
                      * @return MountDataDisks Data disk mounting option
+                     * 
                      */
                     std::vector<MountDataDisk> GetMountDataDisks() const;
 
                     /**
                      * 判断参数 MountDataDisks 是否已赋值
                      * @return MountDataDisks 是否已赋值
+                     * 
                      */
                     bool MountDataDisksHasBeenSet() const;
 
                     /**
                      * 获取Input mapping
                      * @return InputMappings Input mapping
+                     * 
                      */
                     std::vector<InputMapping> GetInputMappings() const;
 
                     /**
                      * 判断参数 InputMappings 是否已赋值
                      * @return InputMappings 是否已赋值
+                     * 
                      */
                     bool InputMappingsHasBeenSet() const;
 
                     /**
                      * 获取Authorization information
                      * @return Authentications Authorization information
+                     * 
                      */
                     std::vector<Authentication> GetAuthentications() const;
 
                     /**
                      * 判断参数 Authentications 是否已赋值
                      * @return Authentications 是否已赋值
+                     * 
                      */
                     bool AuthenticationsHasBeenSet() const;
 
                     /**
                      * 获取Notification information
                      * @return Notifications Notification information
+                     * 
                      */
                     std::vector<Notification> GetNotifications() const;
 
                     /**
                      * 判断参数 Notifications 是否已赋值
                      * @return Notifications 是否已赋值
+                     * 
                      */
                     bool NotificationsHasBeenSet() const;
 
                     /**
                      * 获取Number of desired compute nodes
                      * @return DesiredComputeNodeCount Number of desired compute nodes
+                     * 
                      */
                     int64_t GetDesiredComputeNodeCount() const;
 
                     /**
                      * 判断参数 DesiredComputeNodeCount 是否已赋值
                      * @return DesiredComputeNodeCount 是否已赋值
+                     * 
                      */
                     bool DesiredComputeNodeCountHasBeenSet() const;
 
@@ -176,12 +196,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Tags Tag list bound to the compute environment.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

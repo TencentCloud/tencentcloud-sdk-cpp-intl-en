@@ -69,6 +69,7 @@ When the permission is `DatabasePrivileges`, the database name must be specified
 When the permission is `TablePrivileges`, the database name and the table name in the database must be specified by the `Database` and `TableName` parameters;
 
 When the permission is `ColumnPrivileges`, the database name, table name in the database, and column name in the table must be specified by the `Database`, `TableName`, and `ColumnName` parameters.
+                     * 
                      */
                     std::string GetPrivilegeName() const;
 
@@ -84,7 +85,7 @@ When the permission is `DatabasePrivileges`, the database name must be specified
 When the permission is `TablePrivileges`, the database name and the table name in the database must be specified by the `Database` and `TableName` parameters;
 
 When the permission is `ColumnPrivileges`, the database name, table name in the database, and column name in the table must be specified by the `Database`, `TableName`, and `ColumnName` parameters.
-                     * @param PrivilegeName Permission name. Valid values:
+                     * @param _privilegeName Permission name. Valid values:
 GlobalPrivileges
 DatabasePrivileges
 TablePrivileges
@@ -95,12 +96,14 @@ When the permission is `DatabasePrivileges`, the database name must be specified
 When the permission is `TablePrivileges`, the database name and the table name in the database must be specified by the `Database` and `TableName` parameters;
 
 When the permission is `ColumnPrivileges`, the database name, table name in the database, and column name in the table must be specified by the `Database`, `TableName`, and `ColumnName` parameters.
+                     * 
                      */
                     void SetPrivilegeName(const std::string& _privilegeName);
 
                     /**
                      * 判断参数 PrivilegeName 是否已赋值
                      * @return PrivilegeName 是否已赋值
+                     * 
                      */
                     bool PrivilegeNameHasBeenSet() const;
 
@@ -133,6 +136,7 @@ Note: if this parameter is not passed in, it means to clear the permission.
 
 4. Valid values of `ColumnPrivileges`: "SELECT","INSERT","UPDATE","REFERENCES".
 Note: if this parameter is not passed in, it means to clear the permission.
+                     * 
                      */
                     std::vector<std::string> GetPrivileges() const;
 
@@ -151,7 +155,7 @@ Note: if this parameter is not passed in, it means to clear the permission.
 
 4. Valid values of `ColumnPrivileges`: "SELECT","INSERT","UPDATE","REFERENCES".
 Note: if this parameter is not passed in, it means to clear the permission.
-                     * @param Privileges Permission list.
+                     * @param _privileges Permission list.
 For the `Mysql` service, optional permission values are:
 
 1. Valid values of `GlobalPrivileges`: "SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER".
@@ -165,48 +169,56 @@ Note: if this parameter is not passed in, it means to clear the permission.
 
 4. Valid values of `ColumnPrivileges`: "SELECT","INSERT","UPDATE","REFERENCES".
 Note: if this parameter is not passed in, it means to clear the permission.
+                     * 
                      */
                     void SetPrivileges(const std::vector<std::string>& _privileges);
 
                     /**
                      * 判断参数 Privileges 是否已赋值
                      * @return Privileges 是否已赋值
+                     * 
                      */
                     bool PrivilegesHasBeenSet() const;
 
                     /**
                      * 获取This value takes effect only when `PrivilegeName` is `DatabasePrivileges`.
                      * @return Database This value takes effect only when `PrivilegeName` is `DatabasePrivileges`.
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置This value takes effect only when `PrivilegeName` is `DatabasePrivileges`.
-                     * @param Database This value takes effect only when `PrivilegeName` is `DatabasePrivileges`.
+                     * @param _database This value takes effect only when `PrivilegeName` is `DatabasePrivileges`.
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
                     /**
                      * 获取This value takes effect only when `PrivilegeName` is `TablePrivileges`, and the `Database` parameter is required in this case to explicitly indicate the database instance.
                      * @return TableName This value takes effect only when `PrivilegeName` is `TablePrivileges`, and the `Database` parameter is required in this case to explicitly indicate the database instance.
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置This value takes effect only when `PrivilegeName` is `TablePrivileges`, and the `Database` parameter is required in this case to explicitly indicate the database instance.
-                     * @param TableName This value takes effect only when `PrivilegeName` is `TablePrivileges`, and the `Database` parameter is required in this case to explicitly indicate the database instance.
+                     * @param _tableName This value takes effect only when `PrivilegeName` is `TablePrivileges`, and the `Database` parameter is required in this case to explicitly indicate the database instance.
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
@@ -217,6 +229,7 @@ TableName: explicitly indicate the table
                      * @return ColumnName This value takes effect only when `PrivilegeName` is `ColumnPrivileges`, and the following parameters are required in this case:
 Database: explicitly indicate the database instance.
 TableName: explicitly indicate the table
+                     * 
                      */
                     std::string GetColumnName() const;
 
@@ -224,15 +237,17 @@ TableName: explicitly indicate the table
                      * 设置This value takes effect only when `PrivilegeName` is `ColumnPrivileges`, and the following parameters are required in this case:
 Database: explicitly indicate the database instance.
 TableName: explicitly indicate the table
-                     * @param ColumnName This value takes effect only when `PrivilegeName` is `ColumnPrivileges`, and the following parameters are required in this case:
+                     * @param _columnName This value takes effect only when `PrivilegeName` is `ColumnPrivileges`, and the following parameters are required in this case:
 Database: explicitly indicate the database instance.
 TableName: explicitly indicate the table
+                     * 
                      */
                     void SetColumnName(const std::string& _columnName);
 
                     /**
                      * 判断参数 ColumnName 是否已赋值
                      * @return ColumnName 是否已赋值
+                     * 
                      */
                     bool ColumnNameHasBeenSet() const;
 

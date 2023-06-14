@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Policy name
                      * @return PolicyName Policy name
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name
-                     * @param PolicyName Policy name
+                     * @param _policyName Policy name
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
                     /**
                      * 获取Time of association
                      * @return AddTime Time of association
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置Time of association
-                     * @param AddTime Time of association
+                     * @param _addTime Time of association
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return PolicyType Policy type. `User` indicates custom policy; `QCS` indicates preset policy
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetPolicyType() const;
 
                     /**
                      * 设置Policy type. `User` indicates custom policy; `QCS` indicates preset policy
 Note: This field may return null, indicating that no valid value was found.
-                     * @param PolicyType Policy type. `User` indicates custom policy; `QCS` indicates preset policy
+                     * @param _policyType Policy type. `User` indicates custom policy; `QCS` indicates preset policy
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetPolicyType(const std::string& _policyType);
 
                     /**
                      * 判断参数 PolicyType 是否已赋值
                      * @return PolicyType 是否已赋值
+                     * 
                      */
                     bool PolicyTypeHasBeenSet() const;
 
                     /**
                      * 获取Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
                      * @return CreateMode Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
+                     * 
                      */
                     uint64_t GetCreateMode() const;
 
                     /**
                      * 设置Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
-                     * @param CreateMode Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
+                     * @param _createMode Policy creation method. 1: indicates the policy was created based on product function or item permission; other values indicate the policy was created based on the policy syntax
+                     * 
                      */
                     void SetCreateMode(const uint64_t& _createMode);
 
                     /**
                      * 判断参数 CreateMode 是否已赋值
                      * @return CreateMode 是否已赋值
+                     * 
                      */
                     bool CreateModeHasBeenSet() const;
 
@@ -145,20 +160,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Deactived Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDeactived() const;
 
                     /**
                      * 设置Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Deactived Whether the product has been deprecated (0: no; 1: yes)
+                     * @param _deactived Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeactived(const uint64_t& _deactived);
 
                     /**
                      * 判断参数 Deactived 是否已赋值
                      * @return Deactived 是否已赋值
+                     * 
                      */
                     bool DeactivedHasBeenSet() const;
 
@@ -167,20 +185,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DeactivedDetail List of deprecated products
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetDeactivedDetail() const;
 
                     /**
                      * 设置List of deprecated products
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DeactivedDetail List of deprecated products
+                     * @param _deactivedDetail List of deprecated products
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeactivedDetail(const std::vector<std::string>& _deactivedDetail);
 
                     /**
                      * 判断参数 DeactivedDetail 是否已赋值
                      * @return DeactivedDetail 是否已赋值
+                     * 
                      */
                     bool DeactivedDetailHasBeenSet() const;
 
@@ -189,20 +210,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Policy description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Policy description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Policy description
+                     * @param _description Policy description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

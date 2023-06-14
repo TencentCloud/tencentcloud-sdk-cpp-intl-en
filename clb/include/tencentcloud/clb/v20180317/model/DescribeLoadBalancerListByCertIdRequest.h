@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Server or client certificate ID
                      * @return CertIds Server or client certificate ID
+                     * 
                      */
                     std::vector<std::string> GetCertIds() const;
 
                     /**
                      * 设置Server or client certificate ID
-                     * @param CertIds Server or client certificate ID
+                     * @param _certIds Server or client certificate ID
+                     * 
                      */
                     void SetCertIds(const std::vector<std::string>& _certIds);
 
                     /**
                      * 判断参数 CertIds 是否已赋值
                      * @return CertIds 是否已赋值
+                     * 
                      */
                     bool CertIdsHasBeenSet() const;
 

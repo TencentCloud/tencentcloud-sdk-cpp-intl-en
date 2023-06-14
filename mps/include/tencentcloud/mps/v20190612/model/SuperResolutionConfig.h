@@ -55,6 +55,7 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-                     * @param Switch Whether to enable the feature. Valid values:
+                     * @param _switch Whether to enable the feature. Valid values:
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -87,6 +90,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>hq: For high-resolution videos</li>
 Default value: lq.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -96,17 +100,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>hq: For high-resolution videos</li>
 Default value: lq.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Type The strength. Valid values:
+                     * @param _type The strength. Valid values:
 <li>lq: For low-resolution videos with obvious noise</li>
 <li>hq: For high-resolution videos</li>
 Default value: lq.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -119,6 +125,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>2</li>
 Default value: 2.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSize() const;
 
@@ -127,16 +134,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>2</li>
 Default value: 2.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Size The ratio of the target resolution to the original resolution. Valid values:
+                     * @param _size The ratio of the target resolution to the original resolution. Valid values:
 <li>2</li>
 Default value: 2.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 

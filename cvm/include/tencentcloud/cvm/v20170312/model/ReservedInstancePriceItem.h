@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
                      * @return OfferingType Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
+                     * 
                      */
                     std::string GetOfferingType() const;
 
                     /**
                      * 设置Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
-                     * @param OfferingType Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
+                     * @param _offeringType Payment method. Valid values: All Upfront, Partial Upfront, and No Upfront.
+                     * 
                      */
                     void SetOfferingType(const std::string& _offeringType);
 
                     /**
                      * 判断参数 OfferingType 是否已赋值
                      * @return OfferingType 是否已赋值
+                     * 
                      */
                     bool OfferingTypeHasBeenSet() const;
 
                     /**
                      * 获取Upfront payment, in USD.
                      * @return FixedPrice Upfront payment, in USD.
+                     * 
                      */
                     double GetFixedPrice() const;
 
                     /**
                      * 设置Upfront payment, in USD.
-                     * @param FixedPrice Upfront payment, in USD.
+                     * @param _fixedPrice Upfront payment, in USD.
+                     * 
                      */
                     void SetFixedPrice(const double& _fixedPrice);
 
                     /**
                      * 判断参数 FixedPrice 是否已赋值
                      * @return FixedPrice 是否已赋值
+                     * 
                      */
                     bool FixedPriceHasBeenSet() const;
 
                     /**
                      * 获取Subsequent unit price, in USD/hr.
                      * @return UsagePrice Subsequent unit price, in USD/hr.
+                     * 
                      */
                     double GetUsagePrice() const;
 
                     /**
                      * 设置Subsequent unit price, in USD/hr.
-                     * @param UsagePrice Subsequent unit price, in USD/hr.
+                     * @param _usagePrice Subsequent unit price, in USD/hr.
+                     * 
                      */
                     void SetUsagePrice(const double& _usagePrice);
 
                     /**
                      * 判断参数 UsagePrice 是否已赋值
                      * @return UsagePrice 是否已赋值
+                     * 
                      */
                     bool UsagePriceHasBeenSet() const;
 
                     /**
                      * 获取The ID of the reserved instance offering.
                      * @return ReservedInstancesOfferingId The ID of the reserved instance offering.
+                     * 
                      */
                     std::string GetReservedInstancesOfferingId() const;
 
                     /**
                      * 设置The ID of the reserved instance offering.
-                     * @param ReservedInstancesOfferingId The ID of the reserved instance offering.
+                     * @param _reservedInstancesOfferingId The ID of the reserved instance offering.
+                     * 
                      */
                     void SetReservedInstancesOfferingId(const std::string& _reservedInstancesOfferingId);
 
                     /**
                      * 判断参数 ReservedInstancesOfferingId 是否已赋值
                      * @return ReservedInstancesOfferingId 是否已赋值
+                     * 
                      */
                     bool ReservedInstancesOfferingIdHasBeenSet() const;
 
                     /**
                      * 获取The availability zone in which the reserved instance can be purchased.
                      * @return Zone The availability zone in which the reserved instance can be purchased.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置The availability zone in which the reserved instance can be purchased.
-                     * @param Zone The availability zone in which the reserved instance can be purchased.
+                     * @param _zone The availability zone in which the reserved instance can be purchased.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Unit: second
                      * @return Duration The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, `31536000`.
 Unit: second
+                     * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
                      * 设置The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, `31536000`.
 Unit: second
-                     * @param Duration The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, `31536000`.
+                     * @param _duration The **validity** of the reserved instance in seconds, which is the purchased usage period. For example, `31536000`.
 Unit: second
+                     * 
                      */
                     void SetDuration(const uint64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
@@ -163,20 +181,23 @@ Unit: second
 Valid value: `Linux`.
                      * @return ProductDescription The operating system of the reserved instance, such as `Linux`.
 Valid value: `Linux`.
+                     * 
                      */
                     std::string GetProductDescription() const;
 
                     /**
                      * 设置The operating system of the reserved instance, such as `Linux`.
 Valid value: `Linux`.
-                     * @param ProductDescription The operating system of the reserved instance, such as `Linux`.
+                     * @param _productDescription The operating system of the reserved instance, such as `Linux`.
 Valid value: `Linux`.
+                     * 
                      */
                     void SetProductDescription(const std::string& _productDescription);
 
                     /**
                      * 判断参数 ProductDescription 是否已赋值
                      * @return ProductDescription 是否已赋值
+                     * 
                      */
                     bool ProductDescriptionHasBeenSet() const;
 

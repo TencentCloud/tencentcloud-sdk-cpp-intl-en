@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of task instances
                      * @return TotalCount Total number of task instances
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Set of task instance log details
                      * @return TaskInstanceLogSet Set of task instance log details
+                     * 
                      */
                     std::vector<TaskInstanceLog> GetTaskInstanceLogSet() const;
 
                     /**
                      * 判断参数 TaskInstanceLogSet 是否已赋值
                      * @return TaskInstanceLogSet 是否已赋值
+                     * 
                      */
                     bool TaskInstanceLogSetHasBeenSet() const;
 

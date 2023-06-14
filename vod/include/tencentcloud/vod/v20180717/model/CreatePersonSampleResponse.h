@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Information of a sample.
                      * @return Person Information of a sample.
+                     * 
                      */
                     AiSamplePerson GetPerson() const;
 
                     /**
                      * 判断参数 Person 是否已赋值
                      * @return Person 是否已赋值
+                     * 
                      */
                     bool PersonHasBeenSet() const;
 
                     /**
                      * 获取Information of samples that failed the verification by facial feature positioning.
                      * @return FailFaceInfoSet Information of samples that failed the verification by facial feature positioning.
+                     * 
                      */
                     std::vector<AiSampleFailFaceInfo> GetFailFaceInfoSet() const;
 
                     /**
                      * 判断参数 FailFaceInfoSet 是否已赋值
                      * @return FailFaceInfoSet 是否已赋值
+                     * 
                      */
                     bool FailFaceInfoSetHasBeenSet() const;
 

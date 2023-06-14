@@ -49,12 +49,14 @@ namespace TencentCloud
                     /**
                      * 获取Information of logsets in the Shanghai region
                      * @return Logset Information of logsets in the Shanghai region
+                     * 
                      */
                     LogSetInfo GetLogset() const;
 
                     /**
                      * 判断参数 Logset 是否已赋值
                      * @return Logset 是否已赋值
+                     * 
                      */
                     bool LogsetHasBeenSet() const;
 
@@ -63,12 +65,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Topics Information of log topics in the Shanghai region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TopicInfo> GetTopics() const;
 
                     /**
                      * 判断参数 Topics 是否已赋值
                      * @return Topics 是否已赋值
+                     * 
                      */
                     bool TopicsHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ExtraLogset Information on logsets in regions except Shanghai
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ExtraLogset> GetExtraLogset() const;
 
                     /**
                      * 判断参数 ExtraLogset 是否已赋值
                      * @return ExtraLogset 是否已赋值
+                     * 
                      */
                     bool ExtraLogsetHasBeenSet() const;
 

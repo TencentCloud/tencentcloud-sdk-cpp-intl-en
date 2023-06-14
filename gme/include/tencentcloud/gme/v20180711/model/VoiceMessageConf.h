@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Voice Message Service status. Valid values: `open`, `close`.
                      * @return Status Voice Message Service status. Valid values: `open`, `close`.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Voice Message Service status. Valid values: `open`, `close`.
-                     * @param Status Voice Message Service status. Valid values: `open`, `close`.
+                     * @param _status Voice Message Service status. Valid values: `open`, `close`.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
                      * @return Language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+                     * 
                      */
                     std::string GetLanguage() const;
 
                     /**
                      * 设置Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
-                     * @param Language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+                     * @param _language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+                     * 
                      */
                     void SetLanguage(const std::string& _language);
 
                     /**
                      * 判断参数 Language 是否已赋值
                      * @return Language 是否已赋值
+                     * 
                      */
                     bool LanguageHasBeenSet() const;
 

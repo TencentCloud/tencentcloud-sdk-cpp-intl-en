@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
                      * @return ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
-                     * @param ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
+                     * @param _clusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
                      * @return RunInstancePara Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetRunInstancePara() const;
 
                     /**
                      * 设置Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
-                     * @param RunInstancePara Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
+                     * @param _runInstancePara Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetRunInstancePara(const std::string& _runInstancePara);
 
                     /**
                      * 判断参数 RunInstancePara 是否已赋值
                      * @return RunInstancePara 是否已赋值
+                     * 
                      */
                     bool RunInstanceParaHasBeenSet() const;
 
                     /**
                      * 获取Additional parameter to be set for the instance
                      * @return InstanceAdvancedSettings Additional parameter to be set for the instance
+                     * 
                      */
                     InstanceAdvancedSettings GetInstanceAdvancedSettings() const;
 
                     /**
                      * 设置Additional parameter to be set for the instance
-                     * @param InstanceAdvancedSettings Additional parameter to be set for the instance
+                     * @param _instanceAdvancedSettings Additional parameter to be set for the instance
+                     * 
                      */
                     void SetInstanceAdvancedSettings(const InstanceAdvancedSettings& _instanceAdvancedSettings);
 
                     /**
                      * 判断参数 InstanceAdvancedSettings 是否已赋值
                      * @return InstanceAdvancedSettings 是否已赋值
+                     * 
                      */
                     bool InstanceAdvancedSettingsHasBeenSet() const;
 
                     /**
                      * 获取Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
                      * @return SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     * 
                      */
                     std::vector<std::string> GetSkipValidateOptions() const;
 
                     /**
                      * 设置Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
-                     * @param SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     * @param _skipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+                     * 
                      */
                     void SetSkipValidateOptions(const std::vector<std::string>& _skipValidateOptions);
 
                     /**
                      * 判断参数 SkipValidateOptions 是否已赋值
                      * @return SkipValidateOptions 是否已赋值
+                     * 
                      */
                     bool SkipValidateOptionsHasBeenSet() const;
 

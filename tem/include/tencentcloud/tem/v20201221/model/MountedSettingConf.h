@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Configuration Name
                      * @return ConfigDataName Configuration Name
+                     * 
                      */
                     std::string GetConfigDataName() const;
 
                     /**
                      * 设置Configuration Name
-                     * @param ConfigDataName Configuration Name
+                     * @param _configDataName Configuration Name
+                     * 
                      */
                     void SetConfigDataName(const std::string& _configDataName);
 
                     /**
                      * 判断参数 ConfigDataName 是否已赋值
                      * @return ConfigDataName 是否已赋值
+                     * 
                      */
                     bool ConfigDataNameHasBeenSet() const;
 
                     /**
                      * 获取Mount point path
                      * @return MountedPath Mount point path
+                     * 
                      */
                     std::string GetMountedPath() const;
 
                     /**
                      * 设置Mount point path
-                     * @param MountedPath Mount point path
+                     * @param _mountedPath Mount point path
+                     * 
                      */
                     void SetMountedPath(const std::string& _mountedPath);
 
                     /**
                      * 判断参数 MountedPath 是否已赋值
                      * @return MountedPath 是否已赋值
+                     * 
                      */
                     bool MountedPathHasBeenSet() const;
 
                     /**
                      * 获取Configuration Content
                      * @return Data Configuration Content
+                     * 
                      */
                     std::vector<Pair> GetData() const;
 
                     /**
                      * 设置Configuration Content
-                     * @param Data Configuration Content
+                     * @param _data Configuration Content
+                     * 
                      */
                     void SetData(const std::vector<Pair>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

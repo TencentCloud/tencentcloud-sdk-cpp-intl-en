@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Firewall rule list.
                      * @return FirewallRules Firewall rule list.
+                     * 
                      */
                     std::vector<FirewallRule> GetFirewallRules() const;
 
                     /**
                      * 设置Firewall rule list.
-                     * @param FirewallRules Firewall rule list.
+                     * @param _firewallRules Firewall rule list.
+                     * 
                      */
                     void SetFirewallRules(const std::vector<FirewallRule>& _firewallRules);
 
                     /**
                      * 判断参数 FirewallRules 是否已赋值
                      * @return FirewallRules 是否已赋值
+                     * 
                      */
                     bool FirewallRulesHasBeenSet() const;
 
                     /**
                      * 获取Current firewall version number. Every time you update the firewall rule version, it will be automatically increased by 1 to prevent the rule from expiring. If it is left empty, conflicts will not be considered.
                      * @return FirewallVersion Current firewall version number. Every time you update the firewall rule version, it will be automatically increased by 1 to prevent the rule from expiring. If it is left empty, conflicts will not be considered.
+                     * 
                      */
                     uint64_t GetFirewallVersion() const;
 
                     /**
                      * 设置Current firewall version number. Every time you update the firewall rule version, it will be automatically increased by 1 to prevent the rule from expiring. If it is left empty, conflicts will not be considered.
-                     * @param FirewallVersion Current firewall version number. Every time you update the firewall rule version, it will be automatically increased by 1 to prevent the rule from expiring. If it is left empty, conflicts will not be considered.
+                     * @param _firewallVersion Current firewall version number. Every time you update the firewall rule version, it will be automatically increased by 1 to prevent the rule from expiring. If it is left empty, conflicts will not be considered.
+                     * 
                      */
                     void SetFirewallVersion(const uint64_t& _firewallVersion);
 
                     /**
                      * 判断参数 FirewallVersion 是否已赋值
                      * @return FirewallVersion 是否已赋值
+                     * 
                      */
                     bool FirewallVersionHasBeenSet() const;
 

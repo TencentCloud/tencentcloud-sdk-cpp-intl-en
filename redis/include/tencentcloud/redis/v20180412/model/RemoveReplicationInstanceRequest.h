@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Replication group ID
                      * @return GroupId Replication group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Replication group ID
-                     * @param GroupId Replication group ID
+                     * @param _groupId Replication group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
                      * @return SyncType Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
+                     * 
                      */
                     bool GetSyncType() const;
 
                     /**
                      * 设置Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
-                     * @param SyncType Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
+                     * @param _syncType Data sync type. Valid values: `true` (strong sync is required), `false` (strong sync is not required, only the master instance can be deleted).
+                     * 
                      */
                     void SetSyncType(const bool& _syncType);
 
                     /**
                      * 判断参数 SyncType 是否已赋值
                      * @return SyncType 是否已赋值
+                     * 
                      */
                     bool SyncTypeHasBeenSet() const;
 

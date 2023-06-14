@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID
                      * @return VpcId VPC instance ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC instance ID
-                     * @param VpcId VPC instance ID
+                     * @param _vpcId VPC instance ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取CVM Instance ID
                      * @return InstanceIds CVM Instance ID
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置CVM Instance ID
-                     * @param InstanceIds CVM Instance ID
+                     * @param _instanceIds CVM Instance ID
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

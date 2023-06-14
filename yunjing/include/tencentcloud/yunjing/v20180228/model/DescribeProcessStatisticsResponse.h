@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of records in process statistics list.
                      * @return TotalCount Total number of records in process statistics list.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Process statistics list array.
                      * @return ProcessStatistics Process statistics list array.
+                     * 
                      */
                     std::vector<ProcessStatistics> GetProcessStatistics() const;
 
                     /**
                      * 判断参数 ProcessStatistics 是否已赋值
                      * @return ProcessStatistics 是否已赋值
+                     * 
                      */
                     bool ProcessStatisticsHasBeenSet() const;
 

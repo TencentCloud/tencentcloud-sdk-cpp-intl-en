@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a figure.
                      * @return Id Unique ID of a figure.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Unique ID of a figure.
-                     * @param Id Unique ID of a figure.
+                     * @param _id Unique ID of a figure.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -72,6 +75,7 @@ namespace TencentCloud
                      * @return Type Figure library type, indicating to which figure library the recognized figure belongs:
 <li>Default: Default figure library;</li>
 <li>UserDefine: Custom figure library.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -79,51 +83,59 @@ namespace TencentCloud
                      * 设置Figure library type, indicating to which figure library the recognized figure belongs:
 <li>Default: Default figure library;</li>
 <li>UserDefine: Custom figure library.</li>
-                     * @param Type Figure library type, indicating to which figure library the recognized figure belongs:
+                     * @param _type Figure library type, indicating to which figure library the recognized figure belongs:
 <li>Default: Default figure library;</li>
 <li>UserDefine: Custom figure library.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Name of a figure.
                      * @return Name Name of a figure.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a figure.
-                     * @param Name Name of a figure.
+                     * @param _name Name of a figure.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Result set of segments that contain a figure.
                      * @return SegmentSet Result set of segments that contain a figure.
+                     * 
                      */
                     std::vector<AiRecognitionTaskFaceSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置Result set of segments that contain a figure.
-                     * @param SegmentSet Result set of segments that contain a figure.
+                     * @param _segmentSet Result set of segments that contain a figure.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskFaceSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 
@@ -136,6 +148,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>Male</li>
 <li>Female</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetGender() const;
 
@@ -144,16 +157,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>Male</li>
 <li>Female</li>
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param Gender The person’s gender.
+                     * @param _gender The person’s gender.
 <li>Male</li>
 <li>Female</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetGender(const std::string& _gender);
 
                     /**
                      * 判断参数 Gender 是否已赋值
                      * @return Gender 是否已赋值
+                     * 
                      */
                     bool GenderHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Birthday The person’s birth date.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetBirthday() const;
 
                     /**
                      * 设置The person’s birth date.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param Birthday The person’s birth date.
+                     * @param _birthday The person’s birth date.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBirthday(const std::string& _birthday);
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Profession The person’s job or job title.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetProfession() const;
 
                     /**
                      * 设置The person’s job or job title.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param Profession The person’s job or job title.
+                     * @param _profession The person’s job or job title.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetProfession(const std::string& _profession);
 
                     /**
                      * 判断参数 Profession 是否已赋值
                      * @return Profession 是否已赋值
+                     * 
                      */
                     bool ProfessionHasBeenSet() const;
 
@@ -206,20 +227,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return SchoolOfGraduation The college the person graduated from.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSchoolOfGraduation() const;
 
                     /**
                      * 设置The college the person graduated from.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param SchoolOfGraduation The college the person graduated from.
+                     * @param _schoolOfGraduation The college the person graduated from.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSchoolOfGraduation(const std::string& _schoolOfGraduation);
 
                     /**
                      * 判断参数 SchoolOfGraduation 是否已赋值
                      * @return SchoolOfGraduation 是否已赋值
+                     * 
                      */
                     bool SchoolOfGraduationHasBeenSet() const;
 
@@ -228,20 +252,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Abstract The person’s profile.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAbstract() const;
 
                     /**
                      * 设置The person’s profile.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param Abstract The person’s profile.
+                     * @param _abstract The person’s profile.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAbstract(const std::string& _abstract);
 
                     /**
                      * 判断参数 Abstract 是否已赋值
                      * @return Abstract 是否已赋值
+                     * 
                      */
                     bool AbstractHasBeenSet() const;
 
@@ -250,20 +277,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return PlaceOfBirth The person’s place of birth.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetPlaceOfBirth() const;
 
                     /**
                      * 设置The person’s place of birth.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param PlaceOfBirth The person’s place of birth.
+                     * @param _placeOfBirth The person’s place of birth.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPlaceOfBirth(const std::string& _placeOfBirth);
 
                     /**
                      * 判断参数 PlaceOfBirth 是否已赋值
                      * @return PlaceOfBirth 是否已赋值
+                     * 
                      */
                     bool PlaceOfBirthHasBeenSet() const;
 
@@ -276,6 +306,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>Politician</li>
 <li>Artist</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetPersonType() const;
 
@@ -284,16 +315,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>Politician</li>
 <li>Artist</li>
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param PersonType Whether the person is a politician or artist.
+                     * @param _personType Whether the person is a politician or artist.
 <li>Politician</li>
 <li>Artist</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPersonType(const std::string& _personType);
 
                     /**
                      * 判断参数 PersonType 是否已赋值
                      * @return PersonType 是否已赋值
+                     * 
                      */
                     bool PersonTypeHasBeenSet() const;
 
@@ -306,6 +339,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>Normal</li>
 <li>Sensitive</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRemark() const;
 
@@ -314,16 +348,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>Normal</li>
 <li>Sensitive</li>
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param Remark Sensitivity
+                     * @param _remark Sensitivity
 <li>Normal</li>
 <li>Sensitive</li>
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
@@ -332,20 +368,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Url The screenshot URL.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The screenshot URL.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param Url The screenshot URL.
+                     * @param _url The screenshot URL.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

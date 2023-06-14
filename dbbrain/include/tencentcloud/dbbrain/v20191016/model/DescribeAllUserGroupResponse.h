@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of contact groups.
                      * @return TotalCount Total number of contact groups.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Groups Contact group information.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<GroupItem> GetGroups() const;
 
                     /**
                      * 判断参数 Groups 是否已赋值
                      * @return Groups 是否已赋值
+                     * 
                      */
                     bool GroupsHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID list of an auto scaling group.
                      * @return AutoScalingGroupIds ID list of an auto scaling group.
+                     * 
                      */
                     std::vector<std::string> GetAutoScalingGroupIds() const;
 
                     /**
                      * 设置ID list of an auto scaling group.
-                     * @param AutoScalingGroupIds ID list of an auto scaling group.
+                     * @param _autoScalingGroupIds ID list of an auto scaling group.
+                     * 
                      */
                     void SetAutoScalingGroupIds(const std::vector<std::string>& _autoScalingGroupIds);
 
                     /**
                      * 判断参数 AutoScalingGroupIds 是否已赋值
                      * @return AutoScalingGroupIds 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupIdsHasBeenSet() const;
 

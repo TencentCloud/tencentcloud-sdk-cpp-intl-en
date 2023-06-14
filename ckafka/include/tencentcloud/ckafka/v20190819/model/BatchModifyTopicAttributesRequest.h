@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Topic attribute list
                      * @return Topic Topic attribute list
+                     * 
                      */
                     std::vector<BatchModifyTopicInfo> GetTopic() const;
 
                     /**
                      * 设置Topic attribute list
-                     * @param Topic Topic attribute list
+                     * @param _topic Topic attribute list
+                     * 
                      */
                     void SetTopic(const std::vector<BatchModifyTopicInfo>& _topic);
 
                     /**
                      * 判断参数 Topic 是否已赋值
                      * @return Topic 是否已赋值
+                     * 
                      */
                     bool TopicHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of returned AZ resources. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned AZ resources. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned AZ resources. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned AZ resources. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned AZ resources. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Starting offset of the returned AZ resource list. Default value: 0.
                      * @return Offset Starting offset of the returned AZ resource list. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the returned AZ resource list. Default value: 0.
-                     * @param Offset Starting offset of the returned AZ resource list. Default value: 0.
+                     * @param _offset Starting offset of the returned AZ resource list. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return Filters Filter to query the list of AZ resources as detailed below:
 <li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
 <li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -93,15 +100,17 @@ namespace TencentCloud
                      * 设置Filter to query the list of AZ resources as detailed below:
 <li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
 <li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
-                     * @param Filters Filter to query the list of AZ resources as detailed below:
+                     * @param _filters Filter to query the list of AZ resources as detailed below:
 <li> `zone` - String - Optional - Filter by AZ, such as "ap-guangzhou-1".</li>
 <li> `isp` -- String - Optional - Filter by the ISP. Values: `BGP`, `CMCC`, `CUCC` and `CTCC`.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

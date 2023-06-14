@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Template name of the protocol port
                      * @return ServiceTemplateName Template name of the protocol port
+                     * 
                      */
                     std::string GetServiceTemplateName() const;
 
                     /**
                      * 设置Template name of the protocol port
-                     * @param ServiceTemplateName Template name of the protocol port
+                     * @param _serviceTemplateName Template name of the protocol port
+                     * 
                      */
                     void SetServiceTemplateName(const std::string& _serviceTemplateName);
 
                     /**
                      * 判断参数 ServiceTemplateName 是否已赋值
                      * @return ServiceTemplateName 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
                      * @return Services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * 
                      */
                     std::vector<std::string> GetServices() const;
 
                     /**
                      * 设置Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
-                     * @param Services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * @param _services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * 
                      */
                     void SetServices(const std::vector<std::string>& _services);
 
                     /**
                      * 判断参数 Services 是否已赋值
                      * @return Services 是否已赋值
+                     * 
                      */
                     bool ServicesHasBeenSet() const;
 
                     /**
                      * 获取You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
                      * @return ServicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * 
                      */
                     std::vector<ServicesInfo> GetServicesExtra() const;
 
                     /**
                      * 设置You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
-                     * @param ServicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * @param _servicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+                     * 
                      */
                     void SetServicesExtra(const std::vector<ServicesInfo>& _servicesExtra);
 
                     /**
                      * 判断参数 ServicesExtra 是否已赋值
                      * @return ServicesExtra 是否已赋值
+                     * 
                      */
                     bool ServicesExtraHasBeenSet() const;
 

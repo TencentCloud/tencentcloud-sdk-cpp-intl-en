@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Playback domain name.
                      * @return DomainName Playback domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Playback domain name.
-                     * @param DomainName Playback domain name.
+                     * @param _domainName Playback domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 

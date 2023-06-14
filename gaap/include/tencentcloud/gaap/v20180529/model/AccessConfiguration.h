@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Acceleration region.
                      * @return AccessRegion Acceleration region.
+                     * 
                      */
                     std::string GetAccessRegion() const;
 
                     /**
                      * 设置Acceleration region.
-                     * @param AccessRegion Acceleration region.
+                     * @param _accessRegion Acceleration region.
+                     * 
                      */
                     void SetAccessRegion(const std::string& _accessRegion);
 
                     /**
                      * 判断参数 AccessRegion 是否已赋值
                      * @return AccessRegion 是否已赋值
+                     * 
                      */
                     bool AccessRegionHasBeenSet() const;
 
                     /**
                      * 获取Connection bandwidth cap. Unit: Mbps.
                      * @return Bandwidth Connection bandwidth cap. Unit: Mbps.
+                     * 
                      */
                     uint64_t GetBandwidth() const;
 
                     /**
                      * 设置Connection bandwidth cap. Unit: Mbps.
-                     * @param Bandwidth Connection bandwidth cap. Unit: Mbps.
+                     * @param _bandwidth Connection bandwidth cap. Unit: Mbps.
+                     * 
                      */
                     void SetBandwidth(const uint64_t& _bandwidth);
 
                     /**
                      * 判断参数 Bandwidth 是否已赋值
                      * @return Bandwidth 是否已赋值
+                     * 
                      */
                     bool BandwidthHasBeenSet() const;
 
                     /**
                      * 获取Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
                      * @return Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+                     * 
                      */
                     uint64_t GetConcurrent() const;
 
                     /**
                      * 设置Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
-                     * @param Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+                     * @param _concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+                     * 
                      */
                     void SetConcurrent(const uint64_t& _concurrent);
 
                     /**
                      * 判断参数 Concurrent 是否已赋值
                      * @return Concurrent 是否已赋值
+                     * 
                      */
                     bool ConcurrentHasBeenSet() const;
 
                     /**
                      * 获取Network type. Valid values: `normal` (default), `cn2`
                      * @return NetworkType Network type. Valid values: `normal` (default), `cn2`
+                     * 
                      */
                     std::string GetNetworkType() const;
 
                     /**
                      * 设置Network type. Valid values: `normal` (default), `cn2`
-                     * @param NetworkType Network type. Valid values: `normal` (default), `cn2`
+                     * @param _networkType Network type. Valid values: `normal` (default), `cn2`
+                     * 
                      */
                     void SetNetworkType(const std::string& _networkType);
 
                     /**
                      * 判断参数 NetworkType 是否已赋值
                      * @return NetworkType 是否已赋值
+                     * 
                      */
                     bool NetworkTypeHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of table group successfully created
                      * @return TableGroupId ID of table group successfully created
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 

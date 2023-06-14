@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `EMERGENCY` (emergency vulnerability).
                      * @return CategoryType Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `EMERGENCY` (emergency vulnerability).
+                     * 
                      */
                     std::string GetCategoryType() const;
 
                     /**
                      * 设置Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `EMERGENCY` (emergency vulnerability).
-                     * @param CategoryType Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `EMERGENCY` (emergency vulnerability).
+                     * @param _categoryType Vulnerability type. Valid values: `SYSTEM` (system vulnerability); `WEB` (web application vulnerability); `EMERGENCY` (emergency vulnerability).
+                     * 
                      */
                     void SetCategoryType(const std::string& _categoryType);
 
                     /**
                      * 判断参数 CategoryType 是否已赋值
                      * @return CategoryType 是否已赋值
+                     * 
                      */
                     bool CategoryTypeHasBeenSet() const;
 

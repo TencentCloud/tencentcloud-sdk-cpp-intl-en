@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Alarm metric list
                      * @return Metrics Alarm metric list
+                     * 
                      */
                     std::vector<Metric> GetMetrics() const;
 
                     /**
                      * 判断参数 Metrics 是否已赋值
                      * @return Metrics 是否已赋值
+                     * 
                      */
                     bool MetricsHasBeenSet() const;
 

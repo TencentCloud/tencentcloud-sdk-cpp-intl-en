@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return WhiteIpList The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetWhiteIpList() const;
 
                     /**
                      * 设置The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param WhiteIpList The security group allowlist in CIDR format.
+                     * @param _whiteIpList The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWhiteIpList(const std::vector<std::string>& _whiteIpList);
 
                     /**
                      * 判断参数 WhiteIpList 是否已赋值
                      * @return WhiteIpList 是否已赋值
+                     * 
                      */
                     bool WhiteIpListHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BlackIpList The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetBlackIpList() const;
 
                     /**
                      * 设置The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BlackIpList The security group blocklist in CIDR format.
+                     * @param _blackIpList The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBlackIpList(const std::vector<std::string>& _blackIpList);
 
                     /**
                      * 判断参数 BlackIpList 是否已赋值
                      * @return BlackIpList 是否已赋值
+                     * 
                      */
                     bool BlackIpListHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AuthKey The authentication key. Its value is same as `X-TENCENT-PACKAGE` set in the HTTP request header.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAuthKey() const;
 
                     /**
                      * 设置The authentication key. Its value is same as `X-TENCENT-PACKAGE` set in the HTTP request header.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AuthKey The authentication key. Its value is same as `X-TENCENT-PACKAGE` set in the HTTP request header.
+                     * @param _authKey The authentication key. Its value is same as `X-TENCENT-PACKAGE` set in the HTTP request header.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAuthKey(const std::string& _authKey);
 
                     /**
                      * 判断参数 AuthKey 是否已赋值
                      * @return AuthKey 是否已赋值
+                     * 
                      */
                     bool AuthKeyHasBeenSet() const;
 

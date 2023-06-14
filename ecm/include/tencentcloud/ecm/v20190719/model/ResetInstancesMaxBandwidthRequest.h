@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the instances for which to reset the bandwidth cap. You can request up to 100 instances in a region at a time.
                      * @return InstanceIdSet List of IDs of the instances for which to reset the bandwidth cap. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置List of IDs of the instances for which to reset the bandwidth cap. You can request up to 100 instances in a region at a time.
-                     * @param InstanceIdSet List of IDs of the instances for which to reset the bandwidth cap. You can request up to 100 instances in a region at a time.
+                     * @param _instanceIdSet List of IDs of the instances for which to reset the bandwidth cap. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取Modified outbound bandwidth cap.
                      * @return MaxBandwidthOut Modified outbound bandwidth cap.
+                     * 
                      */
                     int64_t GetMaxBandwidthOut() const;
 
                     /**
                      * 设置Modified outbound bandwidth cap.
-                     * @param MaxBandwidthOut Modified outbound bandwidth cap.
+                     * @param _maxBandwidthOut Modified outbound bandwidth cap.
+                     * 
                      */
                     void SetMaxBandwidthOut(const int64_t& _maxBandwidthOut);
 
                     /**
                      * 判断参数 MaxBandwidthOut 是否已赋值
                      * @return MaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool MaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取Modified inbound bandwidth cap.
                      * @return MaxBandwidthIn Modified inbound bandwidth cap.
+                     * 
                      */
                     int64_t GetMaxBandwidthIn() const;
 
                     /**
                      * 设置Modified inbound bandwidth cap.
-                     * @param MaxBandwidthIn Modified inbound bandwidth cap.
+                     * @param _maxBandwidthIn Modified inbound bandwidth cap.
+                     * 
                      */
                     void SetMaxBandwidthIn(const int64_t& _maxBandwidthIn);
 
                     /**
                      * 判断参数 MaxBandwidthIn 是否已赋值
                      * @return MaxBandwidthIn 是否已赋值
+                     * 
                      */
                     bool MaxBandwidthInHasBeenSet() const;
 

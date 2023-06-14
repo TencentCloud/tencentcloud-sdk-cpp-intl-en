@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Automatic creation. true: enabled, false: not enabled
                      * @return AutoCreateTopicEnable Automatic creation. true: enabled, false: not enabled
+                     * 
                      */
                     bool GetAutoCreateTopicEnable() const;
 
                     /**
                      * 设置Automatic creation. true: enabled, false: not enabled
-                     * @param AutoCreateTopicEnable Automatic creation. true: enabled, false: not enabled
+                     * @param _autoCreateTopicEnable Automatic creation. true: enabled, false: not enabled
+                     * 
                      */
                     void SetAutoCreateTopicEnable(const bool& _autoCreateTopicEnable);
 
                     /**
                      * 判断参数 AutoCreateTopicEnable 是否已赋值
                      * @return AutoCreateTopicEnable 是否已赋值
+                     * 
                      */
                     bool AutoCreateTopicEnableHasBeenSet() const;
 
                     /**
                      * 获取Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
                      * @return DefaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+                     * 
                      */
                     int64_t GetDefaultNumPartitions() const;
 
                     /**
                      * 设置Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
-                     * @param DefaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+                     * @param _defaultNumPartitions Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+                     * 
                      */
                     void SetDefaultNumPartitions(const int64_t& _defaultNumPartitions);
 
                     /**
                      * 判断参数 DefaultNumPartitions 是否已赋值
                      * @return DefaultNumPartitions 是否已赋值
+                     * 
                      */
                     bool DefaultNumPartitionsHasBeenSet() const;
 
                     /**
                      * 获取If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
                      * @return DefaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+                     * 
                      */
                     int64_t GetDefaultReplicationFactor() const;
 
                     /**
                      * 设置If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
-                     * @param DefaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+                     * @param _defaultReplicationFactor If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+                     * 
                      */
                     void SetDefaultReplicationFactor(const int64_t& _defaultReplicationFactor);
 
                     /**
                      * 判断参数 DefaultReplicationFactor 是否已赋值
                      * @return DefaultReplicationFactor 是否已赋值
+                     * 
                      */
                     bool DefaultReplicationFactorHasBeenSet() const;
 

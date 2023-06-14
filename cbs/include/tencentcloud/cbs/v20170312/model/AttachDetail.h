@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The number of instances mounted to data disk.
                      * @return AttachedDiskCount The number of instances mounted to data disk.
+                     * 
                      */
                     uint64_t GetAttachedDiskCount() const;
 
                     /**
                      * 设置The number of instances mounted to data disk.
-                     * @param AttachedDiskCount The number of instances mounted to data disk.
+                     * @param _attachedDiskCount The number of instances mounted to data disk.
+                     * 
                      */
                     void SetAttachedDiskCount(const uint64_t& _attachedDiskCount);
 
                     /**
                      * 判断参数 AttachedDiskCount 是否已赋值
                      * @return AttachedDiskCount 是否已赋值
+                     * 
                      */
                     bool AttachedDiskCountHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of instances that can be mounted to data disk.
                      * @return MaxAttachCount The maximum number of instances that can be mounted to data disk.
+                     * 
                      */
                     uint64_t GetMaxAttachCount() const;
 
                     /**
                      * 设置The maximum number of instances that can be mounted to data disk.
-                     * @param MaxAttachCount The maximum number of instances that can be mounted to data disk.
+                     * @param _maxAttachCount The maximum number of instances that can be mounted to data disk.
+                     * 
                      */
                     void SetMaxAttachCount(const uint64_t& _maxAttachCount);
 
                     /**
                      * 判断参数 MaxAttachCount 是否已赋值
                      * @return MaxAttachCount 是否已赋值
+                     * 
                      */
                     bool MaxAttachCountHasBeenSet() const;
 

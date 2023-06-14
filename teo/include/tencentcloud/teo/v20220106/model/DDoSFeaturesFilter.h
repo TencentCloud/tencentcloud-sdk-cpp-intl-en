@@ -49,378 +49,441 @@ namespace TencentCloud
                     /**
                      * 获取Action. `drop`: Drop the request; `transmit`: Allow the request; `drop_block`: Drop the request and block it; `forward`: Continue to offer protection.
                      * @return Action Action. `drop`: Drop the request; `transmit`: Allow the request; `drop_block`: Drop the request and block it; `forward`: Continue to offer protection.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action. `drop`: Drop the request; `transmit`: Allow the request; `drop_block`: Drop the request and block it; `forward`: Continue to offer protection.
-                     * @param Action Action. `drop`: Drop the request; `transmit`: Allow the request; `drop_block`: Drop the request and block it; `forward`: Continue to offer protection.
+                     * @param _action Action. `drop`: Drop the request; `transmit`: Allow the request; `drop_block`: Drop the request and block it; `forward`: Continue to offer protection.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Sets how far from the first search position
                      * @return Depth Sets how far from the first search position
+                     * 
                      */
                     int64_t GetDepth() const;
 
                     /**
                      * 设置Sets how far from the first search position
-                     * @param Depth Sets how far from the first search position
+                     * @param _depth Sets how far from the first search position
+                     * 
                      */
                     void SetDepth(const int64_t& _depth);
 
                     /**
                      * 判断参数 Depth 是否已赋值
                      * @return Depth 是否已赋值
+                     * 
                      */
                     bool DepthHasBeenSet() const;
 
                     /**
                      * 获取Sets how far from the second search position
                      * @return Depth2 Sets how far from the second search position
+                     * 
                      */
                     int64_t GetDepth2() const;
 
                     /**
                      * 设置Sets how far from the second search position
-                     * @param Depth2 Sets how far from the second search position
+                     * @param _depth2 Sets how far from the second search position
+                     * 
                      */
                     void SetDepth2(const int64_t& _depth2);
 
                     /**
                      * 判断参数 Depth2 是否已赋值
                      * @return Depth2 是否已赋值
+                     * 
                      */
                     bool Depth2HasBeenSet() const;
 
                     /**
                      * 获取End of the destination port
                      * @return DportEnd End of the destination port
+                     * 
                      */
                     int64_t GetDportEnd() const;
 
                     /**
                      * 设置End of the destination port
-                     * @param DportEnd End of the destination port
+                     * @param _dportEnd End of the destination port
+                     * 
                      */
                     void SetDportEnd(const int64_t& _dportEnd);
 
                     /**
                      * 判断参数 DportEnd 是否已赋值
                      * @return DportEnd 是否已赋值
+                     * 
                      */
                     bool DportEndHasBeenSet() const;
 
                     /**
                      * 获取Start of the destination port
                      * @return DportStart Start of the destination port
+                     * 
                      */
                     int64_t GetDportStart() const;
 
                     /**
                      * 设置Start of the destination port
-                     * @param DportStart Start of the destination port
+                     * @param _dportStart Start of the destination port
+                     * 
                      */
                     void SetDportStart(const int64_t& _dportStart);
 
                     /**
                      * 判断参数 DportStart 是否已赋值
                      * @return DportStart 是否已赋值
+                     * 
                      */
                     bool DportStartHasBeenSet() const;
 
                     /**
                      * 获取Whether to match string 1 that does not contain all the specified elements
                      * @return IsNot Whether to match string 1 that does not contain all the specified elements
+                     * 
                      */
                     int64_t GetIsNot() const;
 
                     /**
                      * 设置Whether to match string 1 that does not contain all the specified elements
-                     * @param IsNot Whether to match string 1 that does not contain all the specified elements
+                     * @param _isNot Whether to match string 1 that does not contain all the specified elements
+                     * 
                      */
                     void SetIsNot(const int64_t& _isNot);
 
                     /**
                      * 判断参数 IsNot 是否已赋值
                      * @return IsNot 是否已赋值
+                     * 
                      */
                     bool IsNotHasBeenSet() const;
 
                     /**
                      * 获取Whether to match string 2 that does not contain all the specified elements
                      * @return IsNot2 Whether to match string 2 that does not contain all the specified elements
+                     * 
                      */
                     int64_t GetIsNot2() const;
 
                     /**
                      * 设置Whether to match string 2 that does not contain all the specified elements
-                     * @param IsNot2 Whether to match string 2 that does not contain all the specified elements
+                     * @param _isNot2 Whether to match string 2 that does not contain all the specified elements
+                     * 
                      */
                     void SetIsNot2(const int64_t& _isNot2);
 
                     /**
                      * 判断参数 IsNot2 是否已赋值
                      * @return IsNot2 是否已赋值
+                     * 
                      */
                     bool IsNot2HasBeenSet() const;
 
                     /**
                      * 获取Logical operator that combines two conditions. Values: `none`, `and` and `or`. If there is only one condition, pass in `none` for this condition only.
                      * @return MatchLogic Logical operator that combines two conditions. Values: `none`, `and` and `or`. If there is only one condition, pass in `none` for this condition only.
+                     * 
                      */
                     std::string GetMatchLogic() const;
 
                     /**
                      * 设置Logical operator that combines two conditions. Values: `none`, `and` and `or`. If there is only one condition, pass in `none` for this condition only.
-                     * @param MatchLogic Logical operator that combines two conditions. Values: `none`, `and` and `or`. If there is only one condition, pass in `none` for this condition only.
+                     * @param _matchLogic Logical operator that combines two conditions. Values: `none`, `and` and `or`. If there is only one condition, pass in `none` for this condition only.
+                     * 
                      */
                     void SetMatchLogic(const std::string& _matchLogic);
 
                     /**
                      * 判断参数 MatchLogic 是否已赋值
                      * @return MatchLogic 是否已赋值
+                     * 
                      */
                     bool MatchLogicHasBeenSet() const;
 
                     /**
                      * 获取Matching method of the first condition. `pcre`: Regex match; `sunday`: String match.
                      * @return MatchType Matching method of the first condition. `pcre`: Regex match; `sunday`: String match.
+                     * 
                      */
                     std::string GetMatchType() const;
 
                     /**
                      * 设置Matching method of the first condition. `pcre`: Regex match; `sunday`: String match.
-                     * @param MatchType Matching method of the first condition. `pcre`: Regex match; `sunday`: String match.
+                     * @param _matchType Matching method of the first condition. `pcre`: Regex match; `sunday`: String match.
+                     * 
                      */
                     void SetMatchType(const std::string& _matchType);
 
                     /**
                      * 判断参数 MatchType 是否已赋值
                      * @return MatchType 是否已赋值
+                     * 
                      */
                     bool MatchTypeHasBeenSet() const;
 
                     /**
                      * 获取Matching method of the second condition. `pcre`: Regex match; `sunday`: String match.
                      * @return MatchType2 Matching method of the second condition. `pcre`: Regex match; `sunday`: String match.
+                     * 
                      */
                     std::string GetMatchType2() const;
 
                     /**
                      * 设置Matching method of the second condition. `pcre`: Regex match; `sunday`: String match.
-                     * @param MatchType2 Matching method of the second condition. `pcre`: Regex match; `sunday`: String match.
+                     * @param _matchType2 Matching method of the second condition. `pcre`: Regex match; `sunday`: String match.
+                     * 
                      */
                     void SetMatchType2(const std::string& _matchType2);
 
                     /**
                      * 判断参数 MatchType2 是否已赋值
                      * @return MatchType2 是否已赋值
+                     * 
                      */
                     bool MatchType2HasBeenSet() const;
 
                     /**
                      * 获取Offset from the first search position
                      * @return Offset Offset from the first search position
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset from the first search position
-                     * @param Offset Offset from the first search position
+                     * @param _offset Offset from the first search position
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Offset from the second search position
                      * @return Offset2 Offset from the second search position
+                     * 
                      */
                     int64_t GetOffset2() const;
 
                     /**
                      * 设置Offset from the second search position
-                     * @param Offset2 Offset from the second search position
+                     * @param _offset2 Offset from the second search position
+                     * 
                      */
                     void SetOffset2(const int64_t& _offset2);
 
                     /**
                      * 判断参数 Offset2 是否已赋值
                      * @return Offset2 是否已赋值
+                     * 
                      */
                     bool Offset2HasBeenSet() const;
 
                     /**
                      * 获取Maximum packet length
                      * @return PacketMax Maximum packet length
+                     * 
                      */
                     int64_t GetPacketMax() const;
 
                     /**
                      * 设置Maximum packet length
-                     * @param PacketMax Maximum packet length
+                     * @param _packetMax Maximum packet length
+                     * 
                      */
                     void SetPacketMax(const int64_t& _packetMax);
 
                     /**
                      * 判断参数 PacketMax 是否已赋值
                      * @return PacketMax 是否已赋值
+                     * 
                      */
                     bool PacketMaxHasBeenSet() const;
 
                     /**
                      * 获取Minimum packet length
                      * @return PacketMin Minimum packet length
+                     * 
                      */
                     int64_t GetPacketMin() const;
 
                     /**
                      * 设置Minimum packet length
-                     * @param PacketMin Minimum packet length
+                     * @param _packetMin Minimum packet length
+                     * 
                      */
                     void SetPacketMin(const int64_t& _packetMin);
 
                     /**
                      * 判断参数 PacketMin 是否已赋值
                      * @return PacketMin 是否已赋值
+                     * 
                      */
                     bool PacketMinHasBeenSet() const;
 
                     /**
                      * 获取Protocol. Values: `tcp`, `udp`, `icmp` and `all`.
                      * @return Protocol Protocol. Values: `tcp`, `udp`, `icmp` and `all`.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol. Values: `tcp`, `udp`, `icmp` and `all`.
-                     * @param Protocol Protocol. Values: `tcp`, `udp`, `icmp` and `all`.
+                     * @param _protocol Protocol. Values: `tcp`, `udp`, `icmp` and `all`.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取End of the source port
                      * @return SportEnd End of the source port
+                     * 
                      */
                     int64_t GetSportEnd() const;
 
                     /**
                      * 设置End of the source port
-                     * @param SportEnd End of the source port
+                     * @param _sportEnd End of the source port
+                     * 
                      */
                     void SetSportEnd(const int64_t& _sportEnd);
 
                     /**
                      * 判断参数 SportEnd 是否已赋值
                      * @return SportEnd 是否已赋值
+                     * 
                      */
                     bool SportEndHasBeenSet() const;
 
                     /**
                      * 获取Start of the source port
                      * @return SportStart Start of the source port
+                     * 
                      */
                     int64_t GetSportStart() const;
 
                     /**
                      * 设置Start of the source port
-                     * @param SportStart Start of the source port
+                     * @param _sportStart Start of the source port
+                     * 
                      */
                     void SetSportStart(const int64_t& _sportStart);
 
                     /**
                      * 判断参数 SportStart 是否已赋值
                      * @return SportStart 是否已赋值
+                     * 
                      */
                     bool SportStartHasBeenSet() const;
 
                     /**
                      * 获取String in the first condition
                      * @return Str String in the first condition
+                     * 
                      */
                     std::string GetStr() const;
 
                     /**
                      * 设置String in the first condition
-                     * @param Str String in the first condition
+                     * @param _str String in the first condition
+                     * 
                      */
                     void SetStr(const std::string& _str);
 
                     /**
                      * 判断参数 Str 是否已赋值
                      * @return Str 是否已赋值
+                     * 
                      */
                     bool StrHasBeenSet() const;
 
                     /**
                      * 获取String in the second condition
                      * @return Str2 String in the second condition
+                     * 
                      */
                     std::string GetStr2() const;
 
                     /**
                      * 设置String in the second condition
-                     * @param Str2 String in the second condition
+                     * @param _str2 String in the second condition
+                     * 
                      */
                     void SetStr2(const std::string& _str2);
 
                     /**
                      * 判断参数 Str2 是否已赋值
                      * @return Str2 是否已赋值
+                     * 
                      */
                     bool Str2HasBeenSet() const;
 
                     /**
                      * 获取Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
                      * @return MatchBegin Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
+                     * 
                      */
                     std::string GetMatchBegin() const;
 
                     /**
                      * 设置Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
-                     * @param MatchBegin Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
+                     * @param _matchBegin Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
+                     * 
                      */
                     void SetMatchBegin(const std::string& _matchBegin);
 
                     /**
                      * 判断参数 MatchBegin 是否已赋值
                      * @return MatchBegin 是否已赋值
+                     * 
                      */
                     bool MatchBeginHasBeenSet() const;
 
                     /**
                      * 获取Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
                      * @return MatchBegin2 Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
+                     * 
                      */
                     std::string GetMatchBegin2() const;
 
                     /**
                      * 设置Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
-                     * @param MatchBegin2 Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
+                     * @param _matchBegin2 Layer at which each match starts. Values: `begin_l5`, `no_match`, `begin_l3` and `begin_l4`.
+                     * 
                      */
                     void SetMatchBegin2(const std::string& _matchBegin2);
 
                     /**
                      * 判断参数 MatchBegin2 是否已赋值
                      * @return MatchBegin2 是否已赋值
+                     * 
                      */
                     bool MatchBegin2HasBeenSet() const;
 

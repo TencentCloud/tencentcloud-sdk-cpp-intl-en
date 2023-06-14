@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of entries per page. Default value: 20
                      * @return Limit Number of entries per page. Default value: 20
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Default value: 20
-                     * @param Limit Number of entries per page. Default value: 20
+                     * @param _limit Number of entries per page. Default value: 20
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Pagination start value. Default value: 0
                      * @return Offset Pagination start value. Default value: 0
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination start value. Default value: 0
-                     * @param Offset Pagination start value. Default value: 0
+                     * @param _offset Pagination start value. Default value: 0
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

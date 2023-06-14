@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Reseller name
                      * @return AgentName Reseller name
+                     * 
                      */
                     std::string GetAgentName() const;
 
                     /**
                      * 判断参数 AgentName 是否已赋值
                      * @return AgentName 是否已赋值
+                     * 
                      */
                     bool AgentNameHasBeenSet() const;
 
                     /**
                      * 获取Reseller role type (1: Reseller; 2: Distributor; 3: Second-level reseller)
                      * @return AccountType Reseller role type (1: Reseller; 2: Distributor; 3: Second-level reseller)
+                     * 
                      */
                     int64_t GetAccountType() const;
 
                     /**
                      * 判断参数 AccountType 是否已赋值
                      * @return AccountType 是否已赋值
+                     * 
                      */
                     bool AccountTypeHasBeenSet() const;
 
                     /**
                      * 获取Total quota
                      * @return TotalQuota Total quota
+                     * 
                      */
                     double GetTotalQuota() const;
 
                     /**
                      * 判断参数 TotalQuota 是否已赋值
                      * @return TotalQuota 是否已赋值
+                     * 
                      */
                     bool TotalQuotaHasBeenSet() const;
 
                     /**
                      * 获取Remaining quota
                      * @return RemainingQuota Remaining quota
+                     * 
                      */
                     double GetRemainingQuota() const;
 
                     /**
                      * 判断参数 RemainingQuota 是否已赋值
                      * @return RemainingQuota 是否已赋值
+                     * 
                      */
                     bool RemainingQuotaHasBeenSet() const;
 
                     /**
                      * 获取The number of issued vouchers
                      * @return IssuedNum The number of issued vouchers
+                     * 
                      */
                     int64_t GetIssuedNum() const;
 
                     /**
                      * 判断参数 IssuedNum 是否已赋值
                      * @return IssuedNum 是否已赋值
+                     * 
                      */
                     bool IssuedNumHasBeenSet() const;
 

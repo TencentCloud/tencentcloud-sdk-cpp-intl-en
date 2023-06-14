@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Alias Image alias
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAlias() const;
 
                     /**
                      * 设置Image alias
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Alias Image alias
+                     * @param _alias Image alias
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAlias(const std::string& _alias);
 
                     /**
                      * 判断参数 Alias 是否已赋值
                      * @return Alias 是否已赋值
+                     * 
                      */
                     bool AliasHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OsName Operating system name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOsName() const;
 
                     /**
                      * 设置Operating system name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OsName Operating system name
+                     * @param _osName Operating system name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOsName(const std::string& _osName);
 
                     /**
                      * 判断参数 OsName 是否已赋值
                      * @return OsName 是否已赋值
+                     * 
                      */
                     bool OsNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ImageId Image ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OsCustomizeType Container image tag, **DOCKER_CUSTOMIZE** (container customized tag), **GENERAL** (general tag, default value)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOsCustomizeType() const;
 
                     /**
                      * 设置Container image tag, **DOCKER_CUSTOMIZE** (container customized tag), **GENERAL** (general tag, default value)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OsCustomizeType Container image tag, **DOCKER_CUSTOMIZE** (container customized tag), **GENERAL** (general tag, default value)
+                     * @param _osCustomizeType Container image tag, **DOCKER_CUSTOMIZE** (container customized tag), **GENERAL** (general tag, default value)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOsCustomizeType(const std::string& _osCustomizeType);
 
                     /**
                      * 判断参数 OsCustomizeType 是否已赋值
                      * @return OsCustomizeType 是否已赋值
+                     * 
                      */
                     bool OsCustomizeTypeHasBeenSet() const;
 

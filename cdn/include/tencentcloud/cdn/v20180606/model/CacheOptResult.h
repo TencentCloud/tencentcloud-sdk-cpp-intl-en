@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SuccessUrls List of succeeded URLs
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSuccessUrls() const;
 
                     /**
                      * 设置List of succeeded URLs
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SuccessUrls List of succeeded URLs
+                     * @param _successUrls List of succeeded URLs
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSuccessUrls(const std::vector<std::string>& _successUrls);
 
                     /**
                      * 判断参数 SuccessUrls 是否已赋值
                      * @return SuccessUrls 是否已赋值
+                     * 
                      */
                     bool SuccessUrlsHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FailUrls List of failed URLs
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFailUrls() const;
 
                     /**
                      * 设置List of failed URLs
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FailUrls List of failed URLs
+                     * @param _failUrls List of failed URLs
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFailUrls(const std::vector<std::string>& _failUrls);
 
                     /**
                      * 判断参数 FailUrls 是否已赋值
                      * @return FailUrls 是否已赋值
+                     * 
                      */
                     bool FailUrlsHasBeenSet() const;
 

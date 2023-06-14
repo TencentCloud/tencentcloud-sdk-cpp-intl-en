@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The set of instance backup plans
                      * @return Plans The set of instance backup plans
+                     * 
                      */
                     std::vector<BackupPlan> GetPlans() const;
 
                     /**
                      * 判断参数 Plans 是否已赋值
                      * @return Plans 是否已赋值
+                     * 
                      */
                     bool PlansHasBeenSet() const;
 

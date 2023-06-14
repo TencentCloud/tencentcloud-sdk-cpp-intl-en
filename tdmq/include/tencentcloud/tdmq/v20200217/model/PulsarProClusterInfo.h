@@ -50,108 +50,126 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster name
                      * @return ClusterName Cluster name
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name
-                     * @param ClusterName Cluster name
+                     * @param _clusterName Cluster name
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Remark Description
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Description
-                     * @param Remark Description
+                     * @param _remark Description
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Cluster status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated).
                      * @return Status Cluster status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated).
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Cluster status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated).
-                     * @param Status Cluster status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated).
+                     * @param _status Cluster status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated).
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Cluster version
                      * @return Version Cluster version
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Cluster version
-                     * @param Version Cluster version
+                     * @param _version Cluster version
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -160,38 +178,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeDistribution Node distribution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<InstanceNodeDistribution> GetNodeDistribution() const;
 
                     /**
                      * 设置Node distribution
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NodeDistribution Node distribution
+                     * @param _nodeDistribution Node distribution
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNodeDistribution(const std::vector<InstanceNodeDistribution>& _nodeDistribution);
 
                     /**
                      * 判断参数 NodeDistribution 是否已赋值
                      * @return NodeDistribution 是否已赋值
+                     * 
                      */
                     bool NodeDistributionHasBeenSet() const;
 
                     /**
                      * 获取Max storage capacity in MB
                      * @return MaxStorage Max storage capacity in MB
+                     * 
                      */
                     uint64_t GetMaxStorage() const;
 
                     /**
                      * 设置Max storage capacity in MB
-                     * @param MaxStorage Max storage capacity in MB
+                     * @param _maxStorage Max storage capacity in MB
+                     * 
                      */
                     void SetMaxStorage(const uint64_t& _maxStorage);
 
                     /**
                      * 判断参数 MaxStorage 是否已赋值
                      * @return MaxStorage 是否已赋值
+                     * 
                      */
                     bool MaxStorageHasBeenSet() const;
 

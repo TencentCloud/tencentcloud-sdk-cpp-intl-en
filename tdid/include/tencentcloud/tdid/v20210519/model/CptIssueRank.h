@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The (claim protocol type) CPT name.
                      * @return CptName The (claim protocol type) CPT name.
+                     * 
                      */
                     std::string GetCptName() const;
 
                     /**
                      * 设置The (claim protocol type) CPT name.
-                     * @param CptName The (claim protocol type) CPT name.
+                     * @param _cptName The (claim protocol type) CPT name.
+                     * 
                      */
                     void SetCptName(const std::string& _cptName);
 
                     /**
                      * 判断参数 CptName 是否已赋值
                      * @return CptName 是否已赋值
+                     * 
                      */
                     bool CptNameHasBeenSet() const;
 
                     /**
                      * 获取The ranking.
                      * @return Rank The ranking.
+                     * 
                      */
                     int64_t GetRank() const;
 
                     /**
                      * 设置The ranking.
-                     * @param Rank The ranking.
+                     * @param _rank The ranking.
+                     * 
                      */
                     void SetRank(const int64_t& _rank);
 
                     /**
                      * 判断参数 Rank 是否已赋值
                      * @return Rank 是否已赋值
+                     * 
                      */
                     bool RankHasBeenSet() const;
 
                     /**
                      * 获取The number of credentials issued.
                      * @return Count The number of credentials issued.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置The number of credentials issued.
-                     * @param Count The number of credentials issued.
+                     * @param _count The number of credentials issued.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取The application name.
                      * @return ApplyName The application name.
+                     * 
                      */
                     std::string GetApplyName() const;
 
                     /**
                      * 设置The application name.
-                     * @param ApplyName The application name.
+                     * @param _applyName The application name.
+                     * 
                      */
                     void SetApplyName(const std::string& _applyName);
 
                     /**
                      * 判断参数 ApplyName 是否已赋值
                      * @return ApplyName 是否已赋值
+                     * 
                      */
                     bool ApplyNameHasBeenSet() const;
 
                     /**
                      * 获取The application ID.
                      * @return ApplyId The application ID.
+                     * 
                      */
                     uint64_t GetApplyId() const;
 
                     /**
                      * 设置The application ID.
-                     * @param ApplyId The application ID.
+                     * @param _applyId The application ID.
+                     * 
                      */
                     void SetApplyId(const uint64_t& _applyId);
 
                     /**
                      * 判断参数 ApplyId 是否已赋值
                      * @return ApplyId 是否已赋值
+                     * 
                      */
                     bool ApplyIdHasBeenSet() const;
 

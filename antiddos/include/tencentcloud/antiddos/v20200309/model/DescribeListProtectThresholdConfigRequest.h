@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Starting offset of the page. Value: (number of pages – 1) * items per page.
                      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the page. Value: (number of pages – 1) * items per page.
-                     * @param Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * @param _offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
                      * @return Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
-                     * @param Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * @param _limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
                      * @return FilterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * 
                      */
                     std::string GetFilterInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
-                     * @param FilterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * @param _filterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * 
                      */
                     void SetFilterInstanceId(const std::string& _filterInstanceId);
 
                     /**
                      * 判断参数 FilterInstanceId 是否已赋值
                      * @return FilterInstanceId 是否已赋值
+                     * 
                      */
                     bool FilterInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取IP filter
                      * @return FilterIp IP filter
+                     * 
                      */
                     std::string GetFilterIp() const;
 
                     /**
                      * 设置IP filter
-                     * @param FilterIp IP filter
+                     * @param _filterIp IP filter
+                     * 
                      */
                     void SetFilterIp(const std::string& _filterIp);
 
                     /**
                      * 判断参数 FilterIp 是否已赋值
                      * @return FilterIp 是否已赋值
+                     * 
                      */
                     bool FilterIpHasBeenSet() const;
 
                     /**
                      * 获取Domain name filter for querying CC protection thresholds of domain names and protocols
                      * @return FilterDomain Domain name filter for querying CC protection thresholds of domain names and protocols
+                     * 
                      */
                     std::string GetFilterDomain() const;
 
                     /**
                      * 设置Domain name filter for querying CC protection thresholds of domain names and protocols
-                     * @param FilterDomain Domain name filter for querying CC protection thresholds of domain names and protocols
+                     * @param _filterDomain Domain name filter for querying CC protection thresholds of domain names and protocols
+                     * 
                      */
                     void SetFilterDomain(const std::string& _filterDomain);
 
                     /**
                      * 判断参数 FilterDomain 是否已赋值
                      * @return FilterDomain 是否已赋值
+                     * 
                      */
                     bool FilterDomainHasBeenSet() const;
 
                     /**
                      * 获取Protocol filter for querying CC protection thresholds of domain names and protocols
                      * @return FilterProtocol Protocol filter for querying CC protection thresholds of domain names and protocols
+                     * 
                      */
                     std::string GetFilterProtocol() const;
 
                     /**
                      * 设置Protocol filter for querying CC protection thresholds of domain names and protocols
-                     * @param FilterProtocol Protocol filter for querying CC protection thresholds of domain names and protocols
+                     * @param _filterProtocol Protocol filter for querying CC protection thresholds of domain names and protocols
+                     * 
                      */
                     void SetFilterProtocol(const std::string& _filterProtocol);
 
                     /**
                      * 判断参数 FilterProtocol 是否已赋值
                      * @return FilterProtocol 是否已赋值
+                     * 
                      */
                     bool FilterProtocolHasBeenSet() const;
 

@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取The site ID.
                      * @return ZoneId The site ID.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * @param _zoneId The site ID.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Security configuration.
                      * @return SecurityConfig Security configuration.
+                     * 
                      */
                     SecurityConfig GetSecurityConfig() const;
 
                     /**
                      * 设置Security configuration.
-                     * @param SecurityConfig Security configuration.
+                     * @param _securityConfig Security configuration.
+                     * 
                      */
                     void SetSecurityConfig(const SecurityConfig& _securityConfig);
 
                     /**
                      * 判断参数 SecurityConfig 是否已赋值
                      * @return SecurityConfig 是否已赋值
+                     * 
                      */
                     bool SecurityConfigHasBeenSet() const;
 
                     /**
                      * 获取The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
                      * @return Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+                     * 
                      */
                     std::string GetEntity() const;
 
                     /**
                      * 设置The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
-                     * @param Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+                     * @param _entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+                     * 
                      */
                     void SetEntity(const std::string& _entity);
 
                     /**
                      * 判断参数 Entity 是否已赋值
                      * @return Entity 是否已赋值
+                     * 
                      */
                     bool EntityHasBeenSet() const;
 
                     /**
                      * 获取The template ID. You must specify either this field or "Entity".
                      * @return TemplateId The template ID. You must specify either this field or "Entity".
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置The template ID. You must specify either this field or "Entity".
-                     * @param TemplateId The template ID. You must specify either this field or "Entity".
+                     * @param _templateId The template ID. You must specify either this field or "Entity".
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 

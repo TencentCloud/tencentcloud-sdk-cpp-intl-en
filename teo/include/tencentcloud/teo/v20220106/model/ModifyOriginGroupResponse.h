@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Origin group ID
                      * @return OriginId Origin group ID
+                     * 
                      */
                     std::string GetOriginId() const;
 
                     /**
                      * 判断参数 OriginId 是否已赋值
                      * @return OriginId 是否已赋值
+                     * 
                      */
                     bool OriginIdHasBeenSet() const;
 

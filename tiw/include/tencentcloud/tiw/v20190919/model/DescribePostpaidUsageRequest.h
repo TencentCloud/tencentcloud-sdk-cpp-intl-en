@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time of the query period.
                      * @return BeginTime Start time of the query period.
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time of the query period.
-                     * @param BeginTime Start time of the query period.
+                     * @param _beginTime Start time of the query period.
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time of the query period.
                      * @return EndTime End time of the query period.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time of the query period.
-                     * @param EndTime End time of the query period.
+                     * @param _endTime End time of the query period.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

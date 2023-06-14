@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Certificate name
                      * @return CertName Certificate name
+                     * 
                      */
                     std::string GetCertName() const;
 
                     /**
                      * 设置Certificate name
-                     * @param CertName Certificate name
+                     * @param _certName Certificate name
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 
                     /**
                      * 获取Offset for query
                      * @return Offset Offset for query
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset for query
-                     * @param Offset Offset for query
+                     * @param _offset Offset for query
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of records to return, which is 20 by default and cannot exceed 200
                      * @return Limit Maximum number of records to return, which is 20 by default and cannot exceed 200
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of records to return, which is 20 by default and cannot exceed 200
-                     * @param Limit Maximum number of records to return, which is 20 by default and cannot exceed 200
+                     * @param _limit Maximum number of records to return, which is 20 by default and cannot exceed 200
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
                      * @return AbnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+                     * 
                      */
                     uint64_t GetAbnormalEventId() const;
 
                     /**
                      * 设置The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
-                     * @param AbnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+                     * @param _abnormalEventId The error event ID. For details, see https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+                     * 
                      */
                     void SetAbnormalEventId(const uint64_t& _abnormalEventId);
 
                     /**
                      * 判断参数 AbnormalEventId 是否已赋值
                      * @return AbnormalEventId 是否已赋值
+                     * 
                      */
                     bool AbnormalEventIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PeerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPeerId() const;
 
                     /**
                      * 设置The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PeerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
+                     * @param _peerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPeerId(const std::string& _peerId);
 
                     /**
                      * 判断参数 PeerId 是否已赋值
                      * @return PeerId 是否已赋值
+                     * 
                      */
                     bool PeerIdHasBeenSet() const;
 

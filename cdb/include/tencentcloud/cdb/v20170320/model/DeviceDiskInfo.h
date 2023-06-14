@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Time percentage of IO operations per second
                      * @return IoRatioPerSec Time percentage of IO operations per second
+                     * 
                      */
                     std::vector<int64_t> GetIoRatioPerSec() const;
 
                     /**
                      * 设置Time percentage of IO operations per second
-                     * @param IoRatioPerSec Time percentage of IO operations per second
+                     * @param _ioRatioPerSec Time percentage of IO operations per second
+                     * 
                      */
                     void SetIoRatioPerSec(const std::vector<int64_t>& _ioRatioPerSec);
 
                     /**
                      * 判断参数 IoRatioPerSec 是否已赋值
                      * @return IoRatioPerSec 是否已赋值
+                     * 
                      */
                     bool IoRatioPerSecHasBeenSet() const;
 
                     /**
                      * 获取Average wait time of device I/O operations * 100 in milliseconds. For example, if the value is 201, the average wait time of I/O operations is 201/100 = 2.1 milliseconds.
                      * @return IoWaitTime Average wait time of device I/O operations * 100 in milliseconds. For example, if the value is 201, the average wait time of I/O operations is 201/100 = 2.1 milliseconds.
+                     * 
                      */
                     std::vector<int64_t> GetIoWaitTime() const;
 
                     /**
                      * 设置Average wait time of device I/O operations * 100 in milliseconds. For example, if the value is 201, the average wait time of I/O operations is 201/100 = 2.1 milliseconds.
-                     * @param IoWaitTime Average wait time of device I/O operations * 100 in milliseconds. For example, if the value is 201, the average wait time of I/O operations is 201/100 = 2.1 milliseconds.
+                     * @param _ioWaitTime Average wait time of device I/O operations * 100 in milliseconds. For example, if the value is 201, the average wait time of I/O operations is 201/100 = 2.1 milliseconds.
+                     * 
                      */
                     void SetIoWaitTime(const std::vector<int64_t>& _ioWaitTime);
 
                     /**
                      * 判断参数 IoWaitTime 是否已赋值
                      * @return IoWaitTime 是否已赋值
+                     * 
                      */
                     bool IoWaitTimeHasBeenSet() const;
 
                     /**
                      * 获取Average number of read operations completed by the disk per second * 100. For example, if the value is 2,002, the average number of read operations completed by the disk per second is 2,002/100=20.2.
                      * @return Read Average number of read operations completed by the disk per second * 100. For example, if the value is 2,002, the average number of read operations completed by the disk per second is 2,002/100=20.2.
+                     * 
                      */
                     std::vector<int64_t> GetRead() const;
 
                     /**
                      * 设置Average number of read operations completed by the disk per second * 100. For example, if the value is 2,002, the average number of read operations completed by the disk per second is 2,002/100=20.2.
-                     * @param Read Average number of read operations completed by the disk per second * 100. For example, if the value is 2,002, the average number of read operations completed by the disk per second is 2,002/100=20.2.
+                     * @param _read Average number of read operations completed by the disk per second * 100. For example, if the value is 2,002, the average number of read operations completed by the disk per second is 2,002/100=20.2.
+                     * 
                      */
                     void SetRead(const std::vector<int64_t>& _read);
 
                     /**
                      * 判断参数 Read 是否已赋值
                      * @return Read 是否已赋值
+                     * 
                      */
                     bool ReadHasBeenSet() const;
 
                     /**
                      * 获取Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
                      * @return Write Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
+                     * 
                      */
                     std::vector<int64_t> GetWrite() const;
 
                     /**
                      * 设置Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
-                     * @param Write Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
+                     * @param _write Average number of write operations completed by the disk per second * 100. For example, if the value is 30,001, the average number of write operations completed by the disk per second is 30,001/100=300.01.
+                     * 
                      */
                     void SetWrite(const std::vector<int64_t>& _write);
 
                     /**
                      * 判断参数 Write 是否已赋值
                      * @return Write 是否已赋值
+                     * 
                      */
                     bool WriteHasBeenSet() const;
 
                     /**
                      * 获取Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
                      * @return CapacityRatio Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     * 
                      */
                     std::vector<int64_t> GetCapacityRatio() const;
 
                     /**
                      * 设置Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
-                     * @param CapacityRatio Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     * @param _capacityRatio Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+                     * 
                      */
                     void SetCapacityRatio(const std::vector<int64_t>& _capacityRatio);
 
                     /**
                      * 判断参数 CapacityRatio 是否已赋值
                      * @return CapacityRatio 是否已赋值
+                     * 
                      */
                     bool CapacityRatioHasBeenSet() const;
 

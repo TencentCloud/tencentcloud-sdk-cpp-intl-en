@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Cluster model
                      * @return Name Cluster model
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Cluster model
-                     * @param Name Cluster model
+                     * @param _name Cluster model
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Model name
                      * @return Alias Model name
+                     * 
                      */
                     std::string GetAlias() const;
 
                     /**
                      * 设置Model name
-                     * @param Alias Model name
+                     * @param _alias Model name
+                     * 
                      */
                     void SetAlias(const std::string& _alias);
 
                     /**
                      * 判断参数 Alias 是否已赋值
                      * @return Alias 是否已赋值
+                     * 
                      */
                     bool AliasHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes
                      * @return NodeCount Number of nodes
+                     * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
                      * 设置Number of nodes
-                     * @param NodeCount Number of nodes
+                     * @param _nodeCount Number of nodes
+                     * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
 
                     /**
                      * 判断参数 NodeCount 是否已赋值
                      * @return NodeCount 是否已赋值
+                     * 
                      */
                     bool NodeCountHasBeenSet() const;
 
                     /**
                      * 获取Number of Pods
                      * @return PodCount Number of Pods
+                     * 
                      */
                     uint64_t GetPodCount() const;
 
                     /**
                      * 设置Number of Pods
-                     * @param PodCount Number of Pods
+                     * @param _podCount Number of Pods
+                     * 
                      */
                     void SetPodCount(const uint64_t& _podCount);
 
                     /**
                      * 判断参数 PodCount 是否已赋值
                      * @return PodCount 是否已赋值
+                     * 
                      */
                     bool PodCountHasBeenSet() const;
 
                     /**
                      * 获取Number of ConfigMap
                      * @return ConfigMapCount Number of ConfigMap
+                     * 
                      */
                     uint64_t GetConfigMapCount() const;
 
                     /**
                      * 设置Number of ConfigMap
-                     * @param ConfigMapCount Number of ConfigMap
+                     * @param _configMapCount Number of ConfigMap
+                     * 
                      */
                     void SetConfigMapCount(const uint64_t& _configMapCount);
 
                     /**
                      * 判断参数 ConfigMapCount 是否已赋值
                      * @return ConfigMapCount 是否已赋值
+                     * 
                      */
                     bool ConfigMapCountHasBeenSet() const;
 
                     /**
                      * 获取Number of CRDs
                      * @return CRDCount Number of CRDs
+                     * 
                      */
                     uint64_t GetCRDCount() const;
 
                     /**
                      * 设置Number of CRDs
-                     * @param CRDCount Number of CRDs
+                     * @param _cRDCount Number of CRDs
+                     * 
                      */
                     void SetCRDCount(const uint64_t& _cRDCount);
 
                     /**
                      * 判断参数 CRDCount 是否已赋值
                      * @return CRDCount 是否已赋值
+                     * 
                      */
                     bool CRDCountHasBeenSet() const;
 
                     /**
                      * 获取Whether it is enabled
                      * @return Enable Whether it is enabled
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Whether it is enabled
-                     * @param Enable Whether it is enabled
+                     * @param _enable Whether it is enabled
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -177,20 +198,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return OtherCount Number of other resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetOtherCount() const;
 
                     /**
                      * 设置Number of other resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param OtherCount Number of other resources
+                     * @param _otherCount Number of other resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOtherCount(const uint64_t& _otherCount);
 
                     /**
                      * 判断参数 OtherCount 是否已赋值
                      * @return OtherCount 是否已赋值
+                     * 
                      */
                     bool OtherCountHasBeenSet() const;
 

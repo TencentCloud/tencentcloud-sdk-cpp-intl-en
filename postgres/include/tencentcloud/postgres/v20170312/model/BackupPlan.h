@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Backup cycle
                      * @return BackupPeriod Backup cycle
+                     * 
                      */
                     std::string GetBackupPeriod() const;
 
                     /**
                      * 设置Backup cycle
-                     * @param BackupPeriod Backup cycle
+                     * @param _backupPeriod Backup cycle
+                     * 
                      */
                     void SetBackupPeriod(const std::string& _backupPeriod);
 
                     /**
                      * 判断参数 BackupPeriod 是否已赋值
                      * @return BackupPeriod 是否已赋值
+                     * 
                      */
                     bool BackupPeriodHasBeenSet() const;
 
                     /**
                      * 获取Retention period of basic backups
                      * @return BaseBackupRetentionPeriod Retention period of basic backups
+                     * 
                      */
                     uint64_t GetBaseBackupRetentionPeriod() const;
 
                     /**
                      * 设置Retention period of basic backups
-                     * @param BaseBackupRetentionPeriod Retention period of basic backups
+                     * @param _baseBackupRetentionPeriod Retention period of basic backups
+                     * 
                      */
                     void SetBaseBackupRetentionPeriod(const uint64_t& _baseBackupRetentionPeriod);
 
                     /**
                      * 判断参数 BaseBackupRetentionPeriod 是否已赋值
                      * @return BaseBackupRetentionPeriod 是否已赋值
+                     * 
                      */
                     bool BaseBackupRetentionPeriodHasBeenSet() const;
 
                     /**
                      * 获取The earliest time to start a backup
                      * @return MinBackupStartTime The earliest time to start a backup
+                     * 
                      */
                     std::string GetMinBackupStartTime() const;
 
                     /**
                      * 设置The earliest time to start a backup
-                     * @param MinBackupStartTime The earliest time to start a backup
+                     * @param _minBackupStartTime The earliest time to start a backup
+                     * 
                      */
                     void SetMinBackupStartTime(const std::string& _minBackupStartTime);
 
                     /**
                      * 判断参数 MinBackupStartTime 是否已赋值
                      * @return MinBackupStartTime 是否已赋值
+                     * 
                      */
                     bool MinBackupStartTimeHasBeenSet() const;
 
                     /**
                      * 获取The latest time to start a backup
                      * @return MaxBackupStartTime The latest time to start a backup
+                     * 
                      */
                     std::string GetMaxBackupStartTime() const;
 
                     /**
                      * 设置The latest time to start a backup
-                     * @param MaxBackupStartTime The latest time to start a backup
+                     * @param _maxBackupStartTime The latest time to start a backup
+                     * 
                      */
                     void SetMaxBackupStartTime(const std::string& _maxBackupStartTime);
 
                     /**
                      * 判断参数 MaxBackupStartTime 是否已赋值
                      * @return MaxBackupStartTime 是否已赋值
+                     * 
                      */
                     bool MaxBackupStartTimeHasBeenSet() const;
 

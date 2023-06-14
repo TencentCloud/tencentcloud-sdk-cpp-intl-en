@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance.
                      * @return InstanceId ID of the instance.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance.
-                     * @param InstanceId ID of the instance.
+                     * @param _instanceId ID of the instance.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Type of associated resource. Values: `securitygroup`
                      * @return InstanceType Type of associated resource. Values: `securitygroup`
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Type of associated resource. Values: `securitygroup`
-                     * @param InstanceType Type of associated resource. Values: `securitygroup`
+                     * @param _instanceType Type of associated resource. Values: `securitygroup`
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance region
                      * @return InstanceRegion Instance region
+                     * 
                      */
                     std::string GetInstanceRegion() const;
 
                     /**
                      * 设置Instance region
-                     * @param InstanceRegion Instance region
+                     * @param _instanceRegion Instance region
+                     * 
                      */
                     void SetInstanceRegion(const std::string& _instanceRegion);
 
                     /**
                      * 判断参数 InstanceRegion 是否已赋值
                      * @return InstanceRegion 是否已赋值
+                     * 
                      */
                     bool InstanceRegionHasBeenSet() const;
 
                     /**
                      * 获取Snapshot policy IDs
                      * @return SnapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     std::string GetSnapshotPolicyId() const;
 
                     /**
                      * 设置Snapshot policy IDs
-                     * @param SnapshotPolicyId Snapshot policy IDs
+                     * @param _snapshotPolicyId Snapshot policy IDs
+                     * 
                      */
                     void SetSnapshotPolicyId(const std::string& _snapshotPolicyId);
 
                     /**
                      * 判断参数 SnapshotPolicyId 是否已赋值
                      * @return SnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool SnapshotPolicyIdHasBeenSet() const;
 
                     /**
                      * 获取The instance name.
                      * @return InstanceName The instance name.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置The instance name.
-                     * @param InstanceName The instance name.
+                     * @param _instanceName The instance name.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 

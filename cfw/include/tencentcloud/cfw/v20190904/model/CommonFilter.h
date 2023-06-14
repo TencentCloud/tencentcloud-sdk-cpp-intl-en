@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Search key.
                      * @return Name Search key.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Search key.
-                     * @param Name Search key.
+                     * @param _name Search key.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Search values.
                      * @return Values Search values.
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Search values.
-                     * @param Values Search values.
+                     * @param _values Search values.
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 
@@ -141,6 +147,7 @@ enum FilterOperatorType {
     // Regular
     FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
+                     * 
                      */
                     int64_t GetOperatorType() const;
 
@@ -174,7 +181,7 @@ enum FilterOperatorType {
     // Regular
     FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
-                     * @param OperatorType Enum of integers that represent relations between Name and Values.
+                     * @param _operatorType Enum of integers that represent relations between Name and Values.
 enum FilterOperatorType {
     // Invalid
     FILTER_OPERATOR_TYPE_INVALID = 0;
@@ -203,12 +210,14 @@ enum FilterOperatorType {
     // Regular
     FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
+                     * 
                      */
                     void SetOperatorType(const int64_t& _operatorType);
 
                     /**
                      * 判断参数 OperatorType 是否已赋值
                      * @return OperatorType 是否已赋值
+                     * 
                      */
                     bool OperatorTypeHasBeenSet() const;
 

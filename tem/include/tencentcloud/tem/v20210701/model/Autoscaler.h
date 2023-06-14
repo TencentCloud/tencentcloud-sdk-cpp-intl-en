@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Minimum number of instances in a scaling group
                      * @return MinReplicas Minimum number of instances in a scaling group
+                     * 
                      */
                     int64_t GetMinReplicas() const;
 
                     /**
                      * 设置Minimum number of instances in a scaling group
-                     * @param MinReplicas Minimum number of instances in a scaling group
+                     * @param _minReplicas Minimum number of instances in a scaling group
+                     * 
                      */
                     void SetMinReplicas(const int64_t& _minReplicas);
 
                     /**
                      * 判断参数 MinReplicas 是否已赋值
                      * @return MinReplicas 是否已赋值
+                     * 
                      */
                     bool MinReplicasHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of instances in a scaling group
                      * @return MaxReplicas Maximum number of instances in a scaling group
+                     * 
                      */
                     int64_t GetMaxReplicas() const;
 
                     /**
                      * 设置Maximum number of instances in a scaling group
-                     * @param MaxReplicas Maximum number of instances in a scaling group
+                     * @param _maxReplicas Maximum number of instances in a scaling group
+                     * 
                      */
                     void SetMaxReplicas(const int64_t& _maxReplicas);
 
                     /**
                      * 判断参数 MaxReplicas 是否已赋值
                      * @return MaxReplicas 是否已赋值
+                     * 
                      */
                     bool MaxReplicasHasBeenSet() const;
 
@@ -89,20 +95,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return HorizontalAutoscaler Policy of the scaling rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<HorizontalAutoscaler> GetHorizontalAutoscaler() const;
 
                     /**
                      * 设置Policy of the scaling rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param HorizontalAutoscaler Policy of the scaling rule
+                     * @param _horizontalAutoscaler Policy of the scaling rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHorizontalAutoscaler(const std::vector<HorizontalAutoscaler>& _horizontalAutoscaler);
 
                     /**
                      * 判断参数 HorizontalAutoscaler 是否已赋值
                      * @return HorizontalAutoscaler 是否已赋值
+                     * 
                      */
                     bool HorizontalAutoscalerHasBeenSet() const;
 
@@ -111,20 +120,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CronHorizontalAutoscaler Scheduled auto-scaler policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<CronHorizontalAutoscaler> GetCronHorizontalAutoscaler() const;
 
                     /**
                      * 设置Scheduled auto-scaler policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CronHorizontalAutoscaler Scheduled auto-scaler policy
+                     * @param _cronHorizontalAutoscaler Scheduled auto-scaler policy
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCronHorizontalAutoscaler(const std::vector<CronHorizontalAutoscaler>& _cronHorizontalAutoscaler);
 
                     /**
                      * 判断参数 CronHorizontalAutoscaler 是否已赋值
                      * @return CronHorizontalAutoscaler 是否已赋值
+                     * 
                      */
                     bool CronHorizontalAutoscalerHasBeenSet() const;
 
@@ -133,20 +145,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AutoscalerId Scaling rule ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAutoscalerId() const;
 
                     /**
                      * 设置Scaling rule ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AutoscalerId Scaling rule ID
+                     * @param _autoscalerId Scaling rule ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoscalerId(const std::string& _autoscalerId);
 
                     /**
                      * 判断参数 AutoscalerId 是否已赋值
                      * @return AutoscalerId 是否已赋值
+                     * 
                      */
                     bool AutoscalerIdHasBeenSet() const;
 
@@ -155,20 +170,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AutoscalerName Scaling rule name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAutoscalerName() const;
 
                     /**
                      * 设置Scaling rule name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AutoscalerName Scaling rule name
+                     * @param _autoscalerName Scaling rule name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAutoscalerName(const std::string& _autoscalerName);
 
                     /**
                      * 判断参数 AutoscalerName 是否已赋值
                      * @return AutoscalerName 是否已赋值
+                     * 
                      */
                     bool AutoscalerNameHasBeenSet() const;
 
@@ -177,20 +195,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Description Description of the scaling rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description of the scaling rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Description Description of the scaling rule
+                     * @param _description Description of the scaling rule
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -199,20 +220,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CreateDate Creation time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreateDate() const;
 
                     /**
                      * 设置Creation time
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param CreateDate Creation time
+                     * @param _createDate Creation time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreateDate(const std::string& _createDate);
 
                     /**
                      * 判断参数 CreateDate 是否已赋值
                      * @return CreateDate 是否已赋值
+                     * 
                      */
                     bool CreateDateHasBeenSet() const;
 
@@ -221,20 +245,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ModifyDate Modification time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetModifyDate() const;
 
                     /**
                      * 设置Modification time
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ModifyDate Modification time
+                     * @param _modifyDate Modification time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetModifyDate(const std::string& _modifyDate);
 
                     /**
                      * 判断参数 ModifyDate 是否已赋值
                      * @return ModifyDate 是否已赋值
+                     * 
                      */
                     bool ModifyDateHasBeenSet() const;
 
@@ -243,20 +270,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EnableDate Start Time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEnableDate() const;
 
                     /**
                      * 设置Start Time
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnableDate Start Time
+                     * @param _enableDate Start Time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnableDate(const std::string& _enableDate);
 
                     /**
                      * 判断参数 EnableDate 是否已赋值
                      * @return EnableDate 是否已赋值
+                     * 
                      */
                     bool EnableDateHasBeenSet() const;
 
@@ -265,20 +295,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Enabled Whether it is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether it is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Enabled Whether it is enabled
+                     * @param _enabled Whether it is enabled
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 

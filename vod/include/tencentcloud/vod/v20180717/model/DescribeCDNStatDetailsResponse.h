@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Time granularity of every piece of data in minutes.
                      * @return DataInterval Time granularity of every piece of data in minutes.
+                     * 
                      */
                     uint64_t GetDataInterval() const;
 
                     /**
                      * 判断参数 DataInterval 是否已赋值
                      * @return DataInterval 是否已赋值
+                     * 
                      */
                     bool DataIntervalHasBeenSet() const;
 
                     /**
                      * 获取CDN usage statistics.
                      * @return Data CDN usage statistics.
+                     * 
                      */
                     std::vector<StatDataItem> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

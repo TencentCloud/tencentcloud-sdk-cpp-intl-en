@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable cache prefresh. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable cache prefresh. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable cache prefresh. Values:
+                     * @param _switch Whether to enable cache prefresh. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,20 +80,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Percent The cache prefresh percentage. Values: 1-99
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPercent() const;
 
                     /**
                      * 设置The cache prefresh percentage. Values: 1-99
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Percent The cache prefresh percentage. Values: 1-99
+                     * @param _percent The cache prefresh percentage. Values: 1-99
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPercent(const int64_t& _percent);
 
                     /**
                      * 判断参数 Percent 是否已赋值
                      * @return Percent 是否已赋值
+                     * 
                      */
                     bool PercentHasBeenSet() const;
 

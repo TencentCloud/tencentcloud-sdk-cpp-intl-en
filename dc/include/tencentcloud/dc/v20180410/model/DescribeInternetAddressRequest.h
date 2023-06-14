@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Offset. Default value: 0.
                      * @return Offset Offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset. Default value: 0.
-                     * @param Offset Offset. Default value: 0.
+                     * @param _offset Offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -92,6 +98,7 @@ namespace TencentCloud
 <li>Status, address status. Valid values: 0: in use; 1: disabled; 2: returned</li>
 <li>Subnet, public IP address array</li>
 <InstanceIds>Public IP address ID array</li>
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -102,18 +109,20 @@ namespace TencentCloud
 <li>Status, address status. Valid values: 0: in use; 1: disabled; 2: returned</li>
 <li>Subnet, public IP address array</li>
 <InstanceIds>Public IP address ID array</li>
-                     * @param Filters Filter conditions:
+                     * @param _filters Filter conditions:
 <li>AddrType, address type. Valid values: 0: BGP; 1: China Telecom; 2: China Mobile; 3: China Unicom</li>
 <li>AddrProto, address protocol. Valid values: 0: IPv4; 1: IPv6</li>
 <li>Status, address status. Valid values: 0: in use; 1: disabled; 2: returned</li>
 <li>Subnet, public IP address array</li>
 <InstanceIds>Public IP address ID array</li>
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

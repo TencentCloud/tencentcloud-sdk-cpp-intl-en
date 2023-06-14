@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Video input information.
                      * @return InputInfo Video input information.
+                     * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
                      * 设置Video input information.
-                     * @param InputInfo Video input information.
+                     * @param _inputInfo Video input information.
+                     * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
 
                     /**
                      * 判断参数 InputInfo 是否已赋值
                      * @return InputInfo 是否已赋值
+                     * 
                      */
                     bool InputInfoHasBeenSet() const;
 
                     /**
                      * 获取Start time offset of video clipping in seconds.
                      * @return StartTimeOffset Start time offset of video clipping in seconds.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of video clipping in seconds.
-                     * @param StartTimeOffset Start time offset of video clipping in seconds.
+                     * @param _startTimeOffset Start time offset of video clipping in seconds.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取End time offset of video clipping in seconds.
                      * @return EndTimeOffset End time offset of video clipping in seconds.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time offset of video clipping in seconds.
-                     * @param EndTimeOffset End time offset of video clipping in seconds.
+                     * @param _endTimeOffset End time offset of video clipping in seconds.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 

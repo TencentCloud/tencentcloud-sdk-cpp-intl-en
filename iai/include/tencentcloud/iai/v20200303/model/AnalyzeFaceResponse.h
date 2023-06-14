@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取Width of requested image.
                      * @return ImageWidth Width of requested image.
+                     * 
                      */
                     uint64_t GetImageWidth() const;
 
                     /**
                      * 判断参数 ImageWidth 是否已赋值
                      * @return ImageWidth 是否已赋值
+                     * 
                      */
                     bool ImageWidthHasBeenSet() const;
 
                     /**
                      * 获取Height of requested image.
                      * @return ImageHeight Height of requested image.
+                     * 
                      */
                     uint64_t GetImageHeight() const;
 
                     /**
                      * 判断参数 ImageHeight 是否已赋值
                      * @return ImageHeight 是否已赋值
+                     * 
                      */
                     bool ImageHeightHasBeenSet() const;
 
                     /**
                      * 获取Specific information of facial feature localization (facial keypoints).
                      * @return FaceShapeSet Specific information of facial feature localization (facial keypoints).
+                     * 
                      */
                     std::vector<FaceShape> GetFaceShapeSet() const;
 
                     /**
                      * 判断参数 FaceShapeSet 是否已赋值
                      * @return FaceShapeSet 是否已赋值
+                     * 
                      */
                     bool FaceShapeSetHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

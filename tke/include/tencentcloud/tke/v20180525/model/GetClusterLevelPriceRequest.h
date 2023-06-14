@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The cluster model. It’s used for price query.
                      * @return ClusterLevel The cluster model. It’s used for price query.
+                     * 
                      */
                     std::string GetClusterLevel() const;
 
                     /**
                      * 设置The cluster model. It’s used for price query.
-                     * @param ClusterLevel The cluster model. It’s used for price query.
+                     * @param _clusterLevel The cluster model. It’s used for price query.
+                     * 
                      */
                     void SetClusterLevel(const std::string& _clusterLevel);
 
                     /**
                      * 判断参数 ClusterLevel 是否已赋值
                      * @return ClusterLevel 是否已赋值
+                     * 
                      */
                     bool ClusterLevelHasBeenSet() const;
 

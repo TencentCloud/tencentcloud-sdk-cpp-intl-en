@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of object recognition task. Valid values:
 <li>ON: enables intelligent object recognition task;</li>
 <li>OFF: disables intelligent object recognition task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of object recognition task. Valid values:
 <li>ON: enables intelligent object recognition task;</li>
 <li>OFF: disables intelligent object recognition task.</li>
-                     * @param Switch Switch of object recognition task. Valid values:
+                     * @param _switch Switch of object recognition task. Valid values:
 <li>ON: enables intelligent object recognition task;</li>
 <li>OFF: disables intelligent object recognition task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -83,6 +86,7 @@ Default value: All, i.e., both default and custom object libraries will be used.
 <li>UserDefine: custom object library.</li>
 <li>All: both default and custom object libraries will be used.</li>
 Default value: All, i.e., both default and custom object libraries will be used.
+                     * 
                      */
                     std::string GetObjectLibrary() const;
 
@@ -92,17 +96,19 @@ Default value: All, i.e., both default and custom object libraries will be used.
 <li>UserDefine: custom object library.</li>
 <li>All: both default and custom object libraries will be used.</li>
 Default value: All, i.e., both default and custom object libraries will be used.
-                     * @param ObjectLibrary Object library. Valid values:
+                     * @param _objectLibrary Object library. Valid values:
 <li>Default: default object library;</li>
 <li>UserDefine: custom object library.</li>
 <li>All: both default and custom object libraries will be used.</li>
 Default value: All, i.e., both default and custom object libraries will be used.
+                     * 
                      */
                     void SetObjectLibrary(const std::string& _objectLibrary);
 
                     /**
                      * 判断参数 ObjectLibrary 是否已赋值
                      * @return ObjectLibrary 是否已赋值
+                     * 
                      */
                     bool ObjectLibraryHasBeenSet() const;
 

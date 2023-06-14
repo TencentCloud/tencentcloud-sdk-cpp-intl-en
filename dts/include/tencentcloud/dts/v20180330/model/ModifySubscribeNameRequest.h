@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Data subscription instance ID
                      * @return SubscribeId Data subscription instance ID
+                     * 
                      */
                     std::string GetSubscribeId() const;
 
                     /**
                      * 设置Data subscription instance ID
-                     * @param SubscribeId Data subscription instance ID
+                     * @param _subscribeId Data subscription instance ID
+                     * 
                      */
                     void SetSubscribeId(const std::string& _subscribeId);
 
                     /**
                      * 判断参数 SubscribeId 是否已赋值
                      * @return SubscribeId 是否已赋值
+                     * 
                      */
                     bool SubscribeIdHasBeenSet() const;
 
                     /**
                      * 获取Data subscription instance name. Length limit: [1,60]
                      * @return SubscribeName Data subscription instance name. Length limit: [1,60]
+                     * 
                      */
                     std::string GetSubscribeName() const;
 
                     /**
                      * 设置Data subscription instance name. Length limit: [1,60]
-                     * @param SubscribeName Data subscription instance name. Length limit: [1,60]
+                     * @param _subscribeName Data subscription instance name. Length limit: [1,60]
+                     * 
                      */
                     void SetSubscribeName(const std::string& _subscribeName);
 
                     /**
                      * 判断参数 SubscribeName 是否已赋值
                      * @return SubscribeName 是否已赋值
+                     * 
                      */
                     bool SubscribeNameHasBeenSet() const;
 

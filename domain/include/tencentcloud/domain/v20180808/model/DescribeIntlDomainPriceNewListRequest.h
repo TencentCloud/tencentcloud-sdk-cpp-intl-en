@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The list of domain suffixes for which you want to query prices. This parameter defaults to all suffixes.
                      * @return TldList The list of domain suffixes for which you want to query prices. This parameter defaults to all suffixes.
+                     * 
                      */
                     std::vector<std::string> GetTldList() const;
 
                     /**
                      * 设置The list of domain suffixes for which you want to query prices. This parameter defaults to all suffixes.
-                     * @param TldList The list of domain suffixes for which you want to query prices. This parameter defaults to all suffixes.
+                     * @param _tldList The list of domain suffixes for which you want to query prices. This parameter defaults to all suffixes.
+                     * 
                      */
                     void SetTldList(const std::vector<std::string>& _tldList);
 
                     /**
                      * 判断参数 TldList 是否已赋值
                      * @return TldList 是否已赋值
+                     * 
                      */
                     bool TldListHasBeenSet() const;
 
                     /**
                      * 获取The purchase year of the domains for which you want to query prices. This parameter defaults to all years.
                      * @return Year The purchase year of the domains for which you want to query prices. This parameter defaults to all years.
+                     * 
                      */
                     std::vector<int64_t> GetYear() const;
 
                     /**
                      * 设置The purchase year of the domains for which you want to query prices. This parameter defaults to all years.
-                     * @param Year The purchase year of the domains for which you want to query prices. This parameter defaults to all years.
+                     * @param _year The purchase year of the domains for which you want to query prices. This parameter defaults to all years.
+                     * 
                      */
                     void SetYear(const std::vector<int64_t>& _year);
 
                     /**
                      * 判断参数 Year 是否已赋值
                      * @return Year 是否已赋值
+                     * 
                      */
                     bool YearHasBeenSet() const;
 
                     /**
                      * 获取The domain purchase type. Valid values: `new`, `renew`, `redem` (redeem), `tran` (transfer in).
                      * @return Operation The domain purchase type. Valid values: `new`, `renew`, `redem` (redeem), `tran` (transfer in).
+                     * 
                      */
                     std::vector<std::string> GetOperation() const;
 
                     /**
                      * 设置The domain purchase type. Valid values: `new`, `renew`, `redem` (redeem), `tran` (transfer in).
-                     * @param Operation The domain purchase type. Valid values: `new`, `renew`, `redem` (redeem), `tran` (transfer in).
+                     * @param _operation The domain purchase type. Valid values: `new`, `renew`, `redem` (redeem), `tran` (transfer in).
+                     * 
                      */
                     void SetOperation(const std::vector<std::string>& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取VIP status of the read-only instance
                      * @return RoVipStatus VIP status of the read-only instance
+                     * 
                      */
                     int64_t GetRoVipStatus() const;
 
                     /**
                      * 设置VIP status of the read-only instance
-                     * @param RoVipStatus VIP status of the read-only instance
+                     * @param _roVipStatus VIP status of the read-only instance
+                     * 
                      */
                     void SetRoVipStatus(const int64_t& _roVipStatus);
 
                     /**
                      * 判断参数 RoVipStatus 是否已赋值
                      * @return RoVipStatus 是否已赋值
+                     * 
                      */
                     bool RoVipStatusHasBeenSet() const;
 
                     /**
                      * 获取VPC subnet of the read-only instance
                      * @return RoSubnetId VPC subnet of the read-only instance
+                     * 
                      */
                     int64_t GetRoSubnetId() const;
 
                     /**
                      * 设置VPC subnet of the read-only instance
-                     * @param RoSubnetId VPC subnet of the read-only instance
+                     * @param _roSubnetId VPC subnet of the read-only instance
+                     * 
                      */
                     void SetRoSubnetId(const int64_t& _roSubnetId);
 
                     /**
                      * 判断参数 RoSubnetId 是否已赋值
                      * @return RoSubnetId 是否已赋值
+                     * 
                      */
                     bool RoSubnetIdHasBeenSet() const;
 
                     /**
                      * 获取VPC of the read-only instance
                      * @return RoVpcId VPC of the read-only instance
+                     * 
                      */
                     int64_t GetRoVpcId() const;
 
                     /**
                      * 设置VPC of the read-only instance
-                     * @param RoVpcId VPC of the read-only instance
+                     * @param _roVpcId VPC of the read-only instance
+                     * 
                      */
                     void SetRoVpcId(const int64_t& _roVpcId);
 
                     /**
                      * 判断参数 RoVpcId 是否已赋值
                      * @return RoVpcId 是否已赋值
+                     * 
                      */
                     bool RoVpcIdHasBeenSet() const;
 
                     /**
                      * 获取VIP port number of the read-only instance
                      * @return RoVport VIP port number of the read-only instance
+                     * 
                      */
                     int64_t GetRoVport() const;
 
                     /**
                      * 设置VIP port number of the read-only instance
-                     * @param RoVport VIP port number of the read-only instance
+                     * @param _roVport VIP port number of the read-only instance
+                     * 
                      */
                     void SetRoVport(const int64_t& _roVport);
 
                     /**
                      * 判断参数 RoVport 是否已赋值
                      * @return RoVport 是否已赋值
+                     * 
                      */
                     bool RoVportHasBeenSet() const;
 
                     /**
                      * 获取VIP of the read-only instance
                      * @return RoVip VIP of the read-only instance
+                     * 
                      */
                     std::string GetRoVip() const;
 
                     /**
                      * 设置VIP of the read-only instance
-                     * @param RoVip VIP of the read-only instance
+                     * @param _roVip VIP of the read-only instance
+                     * 
                      */
                     void SetRoVip(const std::string& _roVip);
 
                     /**
                      * 判断参数 RoVip 是否已赋值
                      * @return RoVip 是否已赋值
+                     * 
                      */
                     bool RoVipHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取`healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
                      * @return Status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置`healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
-                     * @param Status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+                     * @param _status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Host List of unhealthy origin groups when `Status = unhealthy`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetHost() const;
 
                     /**
                      * 设置List of unhealthy origin groups when `Status = unhealthy`
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Host List of unhealthy origin groups when `Status = unhealthy`
+                     * @param _host List of unhealthy origin groups when `Status = unhealthy`
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHost(const std::vector<std::string>& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 

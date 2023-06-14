@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
                      * @return Rp Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
-                     * @param Rp Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
+                     * @param _rp Number of entries per page: must be greater than 0 and no greater than 200. Default is 20
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 
                     /**
                      * 获取Page number. Starts from 1 and cannot be greater than 200. Default is 1
                      * @return Page Page number. Starts from 1 and cannot be greater than 200. Default is 1
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number. Starts from 1 and cannot be greater than 200. Default is 1
-                     * @param Page Page number. Starts from 1 and cannot be greater than 200. Default is 1
+                     * @param _page Page number. Starts from 1 and cannot be greater than 200. Default is 1
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
                      * @return Scope Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
+                     * 
                      */
                     std::string GetScope() const;
 
                     /**
                      * 设置Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
-                     * @param Scope Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
+                     * @param _scope Valid values: `All`, `QCS`, and `Local`. `All` means all policies will be returned; `QCS` means only preset policies will be returned; `Local` means only custom policies will be returned. `All` is the default value
+                     * 
                      */
                     void SetScope(const std::string& _scope);
 
                     /**
                      * 判断参数 Scope 是否已赋值
                      * @return Scope 是否已赋值
+                     * 
                      */
                     bool ScopeHasBeenSet() const;
 
                     /**
                      * 获取Filter by policy name
                      * @return Keyword Filter by policy name
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Filter by policy name
-                     * @param Keyword Filter by policy name
+                     * @param _keyword Filter by policy name
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

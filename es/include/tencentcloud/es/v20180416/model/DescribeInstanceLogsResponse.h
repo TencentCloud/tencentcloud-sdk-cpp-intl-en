@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of returned logs
                      * @return TotalCount Number of returned logs
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Log details list
                      * @return InstanceLogList Log details list
+                     * 
                      */
                     std::vector<InstanceLog> GetInstanceLogList() const;
 
                     /**
                      * 判断参数 InstanceLogList 是否已赋值
                      * @return InstanceLogList 是否已赋值
+                     * 
                      */
                     bool InstanceLogListHasBeenSet() const;
 

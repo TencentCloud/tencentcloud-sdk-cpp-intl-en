@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID of the backup records to be deleted
                      * @return ClusterId Cluster ID of the backup records to be deleted
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID of the backup records to be deleted
-                     * @param ClusterId Cluster ID of the backup records to be deleted
+                     * @param _clusterId Cluster ID of the backup records to be deleted
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Details of the backup records to be deleted
                      * @return BackupRecords Details of the backup records to be deleted
+                     * 
                      */
                     std::vector<BackupRecords> GetBackupRecords() const;
 
                     /**
                      * 设置Details of the backup records to be deleted
-                     * @param BackupRecords Details of the backup records to be deleted
+                     * @param _backupRecords Details of the backup records to be deleted
+                     * 
                      */
                     void SetBackupRecords(const std::vector<BackupRecords>& _backupRecords);
 
                     /**
                      * 判断参数 BackupRecords 是否已赋值
                      * @return BackupRecords 是否已赋值
+                     * 
                      */
                     bool BackupRecordsHasBeenSet() const;
 

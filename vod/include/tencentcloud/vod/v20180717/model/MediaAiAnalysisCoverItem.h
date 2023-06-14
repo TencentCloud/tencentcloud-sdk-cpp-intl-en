@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Address of intelligently generated cover.
                      * @return CoverUrl Address of intelligently generated cover.
+                     * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
                      * 设置Address of intelligently generated cover.
-                     * @param CoverUrl Address of intelligently generated cover.
+                     * @param _coverUrl Address of intelligently generated cover.
+                     * 
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
 
                     /**
                      * 判断参数 CoverUrl 是否已赋值
                      * @return CoverUrl 是否已赋值
+                     * 
                      */
                     bool CoverUrlHasBeenSet() const;
 
                     /**
                      * 获取Confidence of intelligently generated cover between 0 and 100.
                      * @return Confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of intelligently generated cover between 0 and 100.
-                     * @param Confidence Confidence of intelligently generated cover between 0 and 100.
+                     * @param _confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 

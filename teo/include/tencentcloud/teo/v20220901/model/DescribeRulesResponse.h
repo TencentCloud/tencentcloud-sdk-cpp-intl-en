@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site
                      * @return ZoneId ID of the site
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取List of rules. Rules are sorted in order of execution.
                      * @return RuleItems List of rules. Rules are sorted in order of execution.
+                     * 
                      */
                     std::vector<RuleItem> GetRuleItems() const;
 
                     /**
                      * 判断参数 RuleItems 是否已赋值
                      * @return RuleItems 是否已赋值
+                     * 
                      */
                     bool RuleItemsHasBeenSet() const;
 

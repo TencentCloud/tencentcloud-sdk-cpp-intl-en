@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return Id Channel ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param Id Channel ID
+                     * @param _id Channel ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Channel endpoint URL
                      * @return Url Channel endpoint URL
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Channel endpoint URL
-                     * @param Url Channel endpoint URL
+                     * @param _url Channel endpoint URL
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取New endpoint name
                      * @return Name New endpoint name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置New endpoint name
-                     * @param Name New endpoint name
+                     * @param _name New endpoint name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取New channel authentication information
                      * @return AuthInfo New channel authentication information
+                     * 
                      */
                     EndpointAuthInfo GetAuthInfo() const;
 
                     /**
                      * 设置New channel authentication information
-                     * @param AuthInfo New channel authentication information
+                     * @param _authInfo New channel authentication information
+                     * 
                      */
                     void SetAuthInfo(const EndpointAuthInfo& _authInfo);
 
                     /**
                      * 判断参数 AuthInfo 是否已赋值
                      * @return AuthInfo 是否已赋值
+                     * 
                      */
                     bool AuthInfoHasBeenSet() const;
 

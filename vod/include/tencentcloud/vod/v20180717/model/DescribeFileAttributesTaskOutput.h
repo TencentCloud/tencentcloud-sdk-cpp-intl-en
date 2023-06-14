@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The MD5 hash of the file.
                      * @return Md5 The MD5 hash of the file.
+                     * 
                      */
                     std::string GetMd5() const;
 
                     /**
                      * 设置The MD5 hash of the file.
-                     * @param Md5 The MD5 hash of the file.
+                     * @param _md5 The MD5 hash of the file.
+                     * 
                      */
                     void SetMd5(const std::string& _md5);
 
                     /**
                      * 判断参数 Md5 是否已赋值
                      * @return Md5 是否已赋值
+                     * 
                      */
                     bool Md5HasBeenSet() const;
 

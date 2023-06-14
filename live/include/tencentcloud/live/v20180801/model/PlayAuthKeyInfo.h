@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Domain name.
                      * @return DomainName Domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name.
-                     * @param DomainName Domain name.
+                     * @param _domainName Domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return Enable Whether to enable:
 0: disable.
 1: enable.
+                     * 
                      */
                     int64_t GetEnable() const;
 
@@ -78,69 +82,80 @@ namespace TencentCloud
                      * 设置Whether to enable:
 0: disable.
 1: enable.
-                     * @param Enable Whether to enable:
+                     * @param _enable Whether to enable:
 0: disable.
 1: enable.
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Authentication key.
                      * @return AuthKey Authentication key.
+                     * 
                      */
                     std::string GetAuthKey() const;
 
                     /**
                      * 设置Authentication key.
-                     * @param AuthKey Authentication key.
+                     * @param _authKey Authentication key.
+                     * 
                      */
                     void SetAuthKey(const std::string& _authKey);
 
                     /**
                      * 判断参数 AuthKey 是否已赋值
                      * @return AuthKey 是否已赋值
+                     * 
                      */
                     bool AuthKeyHasBeenSet() const;
 
                     /**
                      * 获取Validity period in seconds.
                      * @return AuthDelta Validity period in seconds.
+                     * 
                      */
                     uint64_t GetAuthDelta() const;
 
                     /**
                      * 设置Validity period in seconds.
-                     * @param AuthDelta Validity period in seconds.
+                     * @param _authDelta Validity period in seconds.
+                     * 
                      */
                     void SetAuthDelta(const uint64_t& _authDelta);
 
                     /**
                      * 判断参数 AuthDelta 是否已赋值
                      * @return AuthDelta 是否已赋值
+                     * 
                      */
                     bool AuthDeltaHasBeenSet() const;
 
                     /**
                      * 获取Authentication `BackKey`.
                      * @return AuthBackKey Authentication `BackKey`.
+                     * 
                      */
                     std::string GetAuthBackKey() const;
 
                     /**
                      * 设置Authentication `BackKey`.
-                     * @param AuthBackKey Authentication `BackKey`.
+                     * @param _authBackKey Authentication `BackKey`.
+                     * 
                      */
                     void SetAuthBackKey(const std::string& _authBackKey);
 
                     /**
                      * 判断参数 AuthBackKey 是否已赋值
                      * @return AuthBackKey 是否已赋值
+                     * 
                      */
                     bool AuthBackKeyHasBeenSet() const;
 

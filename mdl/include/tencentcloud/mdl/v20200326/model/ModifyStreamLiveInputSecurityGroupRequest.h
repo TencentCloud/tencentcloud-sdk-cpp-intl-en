@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Input security group ID
                      * @return Id Input security group ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Input security group ID
-                     * @param Id Input security group ID
+                     * @param _id Input security group ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Input security group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
                      * @return Name Input security group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Input security group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-                     * @param Name Input security group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * @param _name Input security group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Allowlist entries (max: 10)
                      * @return Whitelist Allowlist entries (max: 10)
+                     * 
                      */
                     std::vector<std::string> GetWhitelist() const;
 
                     /**
                      * 设置Allowlist entries (max: 10)
-                     * @param Whitelist Allowlist entries (max: 10)
+                     * @param _whitelist Allowlist entries (max: 10)
+                     * 
                      */
                     void SetWhitelist(const std::vector<std::string>& _whitelist);
 
                     /**
                      * 判断参数 Whitelist 是否已赋值
                      * @return Whitelist 是否已赋值
+                     * 
                      */
                     bool WhitelistHasBeenSet() const;
 

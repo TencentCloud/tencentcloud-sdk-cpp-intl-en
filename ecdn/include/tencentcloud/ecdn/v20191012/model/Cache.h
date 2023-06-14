@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Caching configuration rule array.
                      * @return CacheRules Caching configuration rule array.
+                     * 
                      */
                     std::vector<CacheRule> GetCacheRules() const;
 
                     /**
                      * 设置Caching configuration rule array.
-                     * @param CacheRules Caching configuration rule array.
+                     * @param _cacheRules Caching configuration rule array.
+                     * 
                      */
                     void SetCacheRules(const std::vector<CacheRule>& _cacheRules);
 
                     /**
                      * 判断参数 CacheRules 是否已赋值
                      * @return CacheRules 是否已赋值
+                     * 
                      */
                     bool CacheRulesHasBeenSet() const;
 
@@ -76,6 +79,7 @@ on: enable
 off: disable
 If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFollowOrigin() const;
 
@@ -85,17 +89,19 @@ on: enable
 off: disable
 If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FollowOrigin Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
+                     * @param _followOrigin Whether to follow the `Cache-Control: max-age` configuration on the origin server (this feature is only available to users on the allowlist).
 on: enable
 off: disable
 If it is enabled, resources that do not match `CacheRules` will be cached on node according to the `max-age` value returned by the origin server, while resources that match `CacheRules` will be cached on node according to the cache expiration time set in `CacheRules`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
 
                     /**
                      * 判断参数 FollowOrigin 是否已赋值
                      * @return FollowOrigin 是否已赋值
+                     * 
                      */
                     bool FollowOriginHasBeenSet() const;
 

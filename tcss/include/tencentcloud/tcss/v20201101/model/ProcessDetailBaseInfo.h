@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Process name
                      * @return ProcessName Process name
+                     * 
                      */
                     std::string GetProcessName() const;
 
                     /**
                      * 设置Process name
-                     * @param ProcessName Process name
+                     * @param _processName Process name
+                     * 
                      */
                     void SetProcessName(const std::string& _processName);
 
                     /**
                      * 判断参数 ProcessName 是否已赋值
                      * @return ProcessName 是否已赋值
+                     * 
                      */
                     bool ProcessNameHasBeenSet() const;
 
                     /**
                      * 获取Process PID
                      * @return ProcessId Process PID
+                     * 
                      */
                     uint64_t GetProcessId() const;
 
                     /**
                      * 设置Process PID
-                     * @param ProcessId Process PID
+                     * @param _processId Process PID
+                     * 
                      */
                     void SetProcessId(const uint64_t& _processId);
 
                     /**
                      * 判断参数 ProcessId 是否已赋值
                      * @return ProcessId 是否已赋值
+                     * 
                      */
                     bool ProcessIdHasBeenSet() const;
 
                     /**
                      * 获取Process initiator
                      * @return ProcessStartUser Process initiator
+                     * 
                      */
                     std::string GetProcessStartUser() const;
 
                     /**
                      * 设置Process initiator
-                     * @param ProcessStartUser Process initiator
+                     * @param _processStartUser Process initiator
+                     * 
                      */
                     void SetProcessStartUser(const std::string& _processStartUser);
 
                     /**
                      * 判断参数 ProcessStartUser 是否已赋值
                      * @return ProcessStartUser 是否已赋值
+                     * 
                      */
                     bool ProcessStartUserHasBeenSet() const;
 
                     /**
                      * 获取Process user group
                      * @return ProcessUserGroup Process user group
+                     * 
                      */
                     std::string GetProcessUserGroup() const;
 
                     /**
                      * 设置Process user group
-                     * @param ProcessUserGroup Process user group
+                     * @param _processUserGroup Process user group
+                     * 
                      */
                     void SetProcessUserGroup(const std::string& _processUserGroup);
 
                     /**
                      * 判断参数 ProcessUserGroup 是否已赋值
                      * @return ProcessUserGroup 是否已赋值
+                     * 
                      */
                     bool ProcessUserGroupHasBeenSet() const;
 
                     /**
                      * 获取Process path
                      * @return ProcessPath Process path
+                     * 
                      */
                     std::string GetProcessPath() const;
 
                     /**
                      * 设置Process path
-                     * @param ProcessPath Process path
+                     * @param _processPath Process path
+                     * 
                      */
                     void SetProcessPath(const std::string& _processPath);
 
                     /**
                      * 判断参数 ProcessPath 是否已赋值
                      * @return ProcessPath 是否已赋值
+                     * 
                      */
                     bool ProcessPathHasBeenSet() const;
 
                     /**
                      * 获取Process command line parameter
                      * @return ProcessParam Process command line parameter
+                     * 
                      */
                     std::string GetProcessParam() const;
 
                     /**
                      * 设置Process command line parameter
-                     * @param ProcessParam Process command line parameter
+                     * @param _processParam Process command line parameter
+                     * 
                      */
                     void SetProcessParam(const std::string& _processParam);
 
                     /**
                      * 判断参数 ProcessParam 是否已赋值
                      * @return ProcessParam 是否已赋值
+                     * 
                      */
                     bool ProcessParamHasBeenSet() const;
 

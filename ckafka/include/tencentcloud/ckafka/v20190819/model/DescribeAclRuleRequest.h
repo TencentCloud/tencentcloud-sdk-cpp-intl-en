@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取ACL rule name
                      * @return RuleName ACL rule name
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置ACL rule name
-                     * @param RuleName ACL rule name
+                     * @param _ruleName ACL rule name
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
                     /**
                      * 获取ACL rule matching type
                      * @return PatternType ACL rule matching type
+                     * 
                      */
                     std::string GetPatternType() const;
 
                     /**
                      * 设置ACL rule matching type
-                     * @param PatternType ACL rule matching type
+                     * @param _patternType ACL rule matching type
+                     * 
                      */
                     void SetPatternType(const std::string& _patternType);
 
                     /**
                      * 判断参数 PatternType 是否已赋值
                      * @return PatternType 是否已赋值
+                     * 
                      */
                     bool PatternTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to read simplified ACL rules
                      * @return IsSimplified Whether to read simplified ACL rules
+                     * 
                      */
                     bool GetIsSimplified() const;
 
                     /**
                      * 设置Whether to read simplified ACL rules
-                     * @param IsSimplified Whether to read simplified ACL rules
+                     * @param _isSimplified Whether to read simplified ACL rules
+                     * 
                      */
                     void SetIsSimplified(const bool& _isSimplified);
 
                     /**
                      * 判断参数 IsSimplified 是否已赋值
                      * @return IsSimplified 是否已赋值
+                     * 
                      */
                     bool IsSimplifiedHasBeenSet() const;
 

@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Key None
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置None
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Key None
+                     * @param _key None
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Number of occurrences of the key value
                      * @return Count Number of occurrences of the key value
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of occurrences of the key value
-                     * @param Count Number of occurrences of the key value
+                     * @param _count Number of occurrences of the key value
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

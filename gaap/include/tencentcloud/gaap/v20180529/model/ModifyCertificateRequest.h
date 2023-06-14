@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Listener instance ID
                      * @return ListenerId Listener instance ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Listener instance ID
-                     * @param ListenerId Listener instance ID
+                     * @param _listenerId Listener instance ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name whose certificate needs to be modified
                      * @return Domain Domain name whose certificate needs to be modified
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name whose certificate needs to be modified
-                     * @param Domain Domain name whose certificate needs to be modified
+                     * @param _domain Domain name whose certificate needs to be modified
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -83,20 +89,23 @@ namespace TencentCloud
 If CertificateId=default, using the listener certificate.
                      * @return CertificateId New server certificate ID:
 If CertificateId=default, using the listener certificate.
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置New server certificate ID:
 If CertificateId=default, using the listener certificate.
-                     * @param CertificateId New server certificate ID:
+                     * @param _certificateId New server certificate ID:
 If CertificateId=default, using the listener certificate.
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 
@@ -107,6 +116,7 @@ This parameter is required only when the mutual authentication is adopted.
                      * @return ClientCertificateId New client certificate ID:
 If ClientCertificateId=default, using the listener certificate.
 This parameter is required only when the mutual authentication is adopted.
+                     * 
                      */
                     std::string GetClientCertificateId() const;
 
@@ -114,15 +124,17 @@ This parameter is required only when the mutual authentication is adopted.
                      * 设置New client certificate ID:
 If ClientCertificateId=default, using the listener certificate.
 This parameter is required only when the mutual authentication is adopted.
-                     * @param ClientCertificateId New client certificate ID:
+                     * @param _clientCertificateId New client certificate ID:
 If ClientCertificateId=default, using the listener certificate.
 This parameter is required only when the mutual authentication is adopted.
+                     * 
                      */
                     void SetClientCertificateId(const std::string& _clientCertificateId);
 
                     /**
                      * 判断参数 ClientCertificateId 是否已赋值
                      * @return ClientCertificateId 是否已赋值
+                     * 
                      */
                     bool ClientCertificateIdHasBeenSet() const;
 
@@ -131,20 +143,23 @@ This parameter is required only when the mutual authentication is adopted.
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
                      * @return PolyClientCertificateIds List of new IDs of multiple client certificates, where:
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
+                     * 
                      */
                     std::vector<std::string> GetPolyClientCertificateIds() const;
 
                     /**
                      * 设置List of new IDs of multiple client certificates, where:
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
-                     * @param PolyClientCertificateIds List of new IDs of multiple client certificates, where:
+                     * @param _polyClientCertificateIds List of new IDs of multiple client certificates, where:
 This parameter or the `ClientCertificateId` parameter is required for mutual authentication only.
+                     * 
                      */
                     void SetPolyClientCertificateIds(const std::vector<std::string>& _polyClientCertificateIds);
 
                     /**
                      * 判断参数 PolyClientCertificateIds 是否已赋值
                      * @return PolyClientCertificateIds 是否已赋值
+                     * 
                      */
                     bool PolyClientCertificateIdsHasBeenSet() const;
 

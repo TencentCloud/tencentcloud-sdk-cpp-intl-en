@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of application proxies.
                      * @return ApplicationProxies List of application proxies.
+                     * 
                      */
                     std::vector<ApplicationProxy> GetApplicationProxies() const;
 
                     /**
                      * 判断参数 ApplicationProxies 是否已赋值
                      * @return ApplicationProxies 是否已赋值
+                     * 
                      */
                     bool ApplicationProxiesHasBeenSet() const;
 
                     /**
                      * 获取Total number of records.
                      * @return TotalCount Total number of records.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

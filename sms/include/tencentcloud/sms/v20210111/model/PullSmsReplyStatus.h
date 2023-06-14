@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
                      * @return ExtendCode SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+                     * 
                      */
                     std::string GetExtendCode() const;
 
                     /**
                      * 设置SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
-                     * @param ExtendCode SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+                     * @param _extendCode SMS code number extension, which is not activated by default. If you need to activate it, please contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+                     * 
                      */
                     void SetExtendCode(const std::string& _extendCode);
 
                     /**
                      * 判断参数 ExtendCode 是否已赋值
                      * @return ExtendCode 是否已赋值
+                     * 
                      */
                     bool ExtendCodeHasBeenSet() const;
 
                     /**
                      * 获取Country (or region) code.
                      * @return CountryCode Country (or region) code.
+                     * 
                      */
                     std::string GetCountryCode() const;
 
                     /**
                      * 设置Country (or region) code.
-                     * @param CountryCode Country (or region) code.
+                     * @param _countryCode Country (or region) code.
+                     * 
                      */
                     void SetCountryCode(const std::string& _countryCode);
 
                     /**
                      * 判断参数 CountryCode 是否已赋值
                      * @return CountryCode 是否已赋值
+                     * 
                      */
                     bool CountryCodeHasBeenSet() const;
 
                     /**
                      * 获取Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
                      * @return PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
                      * 设置Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-                     * @param PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * @param _phoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
 
                     /**
                      * 判断参数 PhoneNumber 是否已赋值
                      * @return PhoneNumber 是否已赋值
+                     * 
                      */
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
                      * 获取SMS signature name.
                      * @return SignName SMS signature name.
+                     * 
                      */
                     std::string GetSignName() const;
 
                     /**
                      * 设置SMS signature name.
-                     * @param SignName SMS signature name.
+                     * @param _signName SMS signature name.
+                     * 
                      */
                     void SetSignName(const std::string& _signName);
 
                     /**
                      * 判断参数 SignName 是否已赋值
                      * @return SignName 是否已赋值
+                     * 
                      */
                     bool SignNameHasBeenSet() const;
 
                     /**
                      * 获取User reply.
                      * @return ReplyContent User reply.
+                     * 
                      */
                     std::string GetReplyContent() const;
 
                     /**
                      * 设置User reply.
-                     * @param ReplyContent User reply.
+                     * @param _replyContent User reply.
+                     * 
                      */
                     void SetReplyContent(const std::string& _replyContent);
 
                     /**
                      * 判断参数 ReplyContent 是否已赋值
                      * @return ReplyContent 是否已赋值
+                     * 
                      */
                     bool ReplyContentHasBeenSet() const;
 
                     /**
                      * 获取Reply time in seconds in the format of UNIX timestamp.
                      * @return ReplyTime Reply time in seconds in the format of UNIX timestamp.
+                     * 
                      */
                     uint64_t GetReplyTime() const;
 
                     /**
                      * 设置Reply time in seconds in the format of UNIX timestamp.
-                     * @param ReplyTime Reply time in seconds in the format of UNIX timestamp.
+                     * @param _replyTime Reply time in seconds in the format of UNIX timestamp.
+                     * 
                      */
                     void SetReplyTime(const uint64_t& _replyTime);
 
                     /**
                      * 判断参数 ReplyTime 是否已赋值
                      * @return ReplyTime 是否已赋值
+                     * 
                      */
                     bool ReplyTimeHasBeenSet() const;
 
                     /**
                      * 获取User's mobile number in a common format such as 13711112222.
                      * @return SubscriberNumber User's mobile number in a common format such as 13711112222.
+                     * 
                      */
                     std::string GetSubscriberNumber() const;
 
                     /**
                      * 设置User's mobile number in a common format such as 13711112222.
-                     * @param SubscriberNumber User's mobile number in a common format such as 13711112222.
+                     * @param _subscriberNumber User's mobile number in a common format such as 13711112222.
+                     * 
                      */
                     void SetSubscriberNumber(const std::string& _subscriberNumber);
 
                     /**
                      * 判断参数 SubscriberNumber 是否已赋值
                      * @return SubscriberNumber 是否已赋值
+                     * 
                      */
                     bool SubscriberNumberHasBeenSet() const;
 

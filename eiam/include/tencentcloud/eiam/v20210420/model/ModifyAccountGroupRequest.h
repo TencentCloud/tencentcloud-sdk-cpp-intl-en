@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Account group ID.
                      * @return AccountGroupId Account group ID.
+                     * 
                      */
                     std::string GetAccountGroupId() const;
 
                     /**
                      * 设置Account group ID.
-                     * @param AccountGroupId Account group ID.
+                     * @param _accountGroupId Account group ID.
+                     * 
                      */
                     void SetAccountGroupId(const std::string& _accountGroupId);
 
                     /**
                      * 判断参数 AccountGroupId 是否已赋值
                      * @return AccountGroupId 是否已赋值
+                     * 
                      */
                     bool AccountGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Account group name. When this parameter is not specified, the name will not be modified.
                      * @return GroupName Account group name. When this parameter is not specified, the name will not be modified.
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Account group name. When this parameter is not specified, the name will not be modified.
-                     * @param GroupName Account group name. When this parameter is not specified, the name will not be modified.
+                     * @param _groupName Account group name. When this parameter is not specified, the name will not be modified.
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Description. When this parameter is not specified, the description will not be modified.
                      * @return Description Description. When this parameter is not specified, the description will not be modified.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description. When this parameter is not specified, the description will not be modified.
-                     * @param Description Description. When this parameter is not specified, the description will not be modified.
+                     * @param _description Description. When this parameter is not specified, the description will not be modified.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

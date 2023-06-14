@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
                      * @return BackupTimeBeg Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+                     * 
                      */
                     uint64_t GetBackupTimeBeg() const;
 
                     /**
                      * 判断参数 BackupTimeBeg 是否已赋值
                      * @return BackupTimeBeg 是否已赋值
+                     * 
                      */
                     bool BackupTimeBegHasBeenSet() const;
 
                     /**
                      * 获取Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
                      * @return BackupTimeEnd Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+                     * 
                      */
                     uint64_t GetBackupTimeEnd() const;
 
                     /**
                      * 判断参数 BackupTimeEnd 是否已赋值
                      * @return BackupTimeEnd 是否已赋值
+                     * 
                      */
                     bool BackupTimeEndHasBeenSet() const;
 
                     /**
                      * 获取Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
                      * @return ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
+                     * 
                      */
                     uint64_t GetReserveDuration() const;
 
                     /**
                      * 判断参数 ReserveDuration 是否已赋值
                      * @return ReserveDuration 是否已赋值
+                     * 
                      */
                     bool ReserveDurationHasBeenSet() const;
 
@@ -84,12 +90,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetBackupFreq() const;
 
                     /**
                      * 判断参数 BackupFreq 是否已赋值
                      * @return BackupFreq 是否已赋值
+                     * 
                      */
                     bool BackupFreqHasBeenSet() const;
 
@@ -98,12 +106,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return BackupType Backup mode. logic: logic backup; snapshot: snapshot backup
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackupType() const;
 
                     /**
                      * 判断参数 BackupType 是否已赋值
                      * @return BackupType 是否已赋值
+                     * 
                      */
                     bool BackupTypeHasBeenSet() const;
 

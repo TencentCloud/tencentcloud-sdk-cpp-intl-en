@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The number of records per page. The default is 20, and the maximum is 1,000.
                      * @return Limit The number of records per page. The default is 20, and the maximum is 1,000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of records per page. The default is 20, and the maximum is 1,000.
-                     * @param Limit The number of records per page. The default is 20, and the maximum is 1,000.
+                     * @param _limit The number of records per page. The default is 20, and the maximum is 1,000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The page number the records start from. The default is 1.
                      * @return Offset The page number the records start from. The default is 1.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The page number the records start from. The default is 1.
-                     * @param Offset The page number the records start from. The default is 1.
+                     * @param _offset The page number the records start from. The default is 1.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The voucher ID.
                      * @return VoucherId The voucher ID.
+                     * 
                      */
                     std::string GetVoucherId() const;
 
                     /**
                      * 设置The voucher ID.
-                     * @param VoucherId The voucher ID.
+                     * @param _voucherId The voucher ID.
+                     * 
                      */
                     void SetVoucherId(const std::string& _voucherId);
 
                     /**
                      * 判断参数 VoucherId 是否已赋值
                      * @return VoucherId 是否已赋值
+                     * 
                      */
                     bool VoucherIdHasBeenSet() const;
 
                     /**
                      * 获取The operator. The default is the UIN of the current.
                      * @return Operator The operator. The default is the UIN of the current.
+                     * 
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置The operator. The default is the UIN of the current.
-                     * @param Operator The operator. The default is the UIN of the current.
+                     * @param _operator The operator. The default is the UIN of the current.
+                     * 
                      */
                     void SetOperator(const std::string& _operator);
 
                     /**
                      * 判断参数 Operator 是否已赋值
                      * @return Operator 是否已赋值
+                     * 
                      */
                     bool OperatorHasBeenSet() const;
 

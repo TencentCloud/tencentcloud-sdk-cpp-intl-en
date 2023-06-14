@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Key in the corresponding JSON output
                      * @return Key Key in the corresponding JSON output
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Key in the corresponding JSON output
-                     * @param Key Key in the corresponding JSON output
+                     * @param _key Key in the corresponding JSON output
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取You can enter a JsonPath, constant, or built-in date type
                      * @return Value You can enter a JsonPath, constant, or built-in date type
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置You can enter a JsonPath, constant, or built-in date type
-                     * @param Value You can enter a JsonPath, constant, or built-in date type
+                     * @param _value You can enter a JsonPath, constant, or built-in date type
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Data type of `Value`. Valid values: STRING, NUMBER, BOOLEAN, NULL, SYS_VARIABLE, JSONPATH
                      * @return ValueType Data type of `Value`. Valid values: STRING, NUMBER, BOOLEAN, NULL, SYS_VARIABLE, JSONPATH
+                     * 
                      */
                     std::string GetValueType() const;
 
                     /**
                      * 设置Data type of `Value`. Valid values: STRING, NUMBER, BOOLEAN, NULL, SYS_VARIABLE, JSONPATH
-                     * @param ValueType Data type of `Value`. Valid values: STRING, NUMBER, BOOLEAN, NULL, SYS_VARIABLE, JSONPATH
+                     * @param _valueType Data type of `Value`. Valid values: STRING, NUMBER, BOOLEAN, NULL, SYS_VARIABLE, JSONPATH
+                     * 
                      */
                     void SetValueType(const std::string& _valueType);
 
                     /**
                      * 判断参数 ValueType 是否已赋值
                      * @return ValueType 是否已赋值
+                     * 
                      */
                     bool ValueTypeHasBeenSet() const;
 

@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Total number of APIs that can use this plugin
                      * @return TotalCount Total number of APIs that can use this plugin
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 设置Total number of APIs that can use this plugin
-                     * @param TotalCount Total number of APIs that can use this plugin
+                     * @param _totalCount Total number of APIs that can use this plugin
+                     * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Information of the APIs that can use this plugin
                      * @return ApiSet Information of the APIs that can use this plugin
+                     * 
                      */
                     std::vector<AvailableApiInfo> GetApiSet() const;
 
                     /**
                      * 设置Information of the APIs that can use this plugin
-                     * @param ApiSet Information of the APIs that can use this plugin
+                     * @param _apiSet Information of the APIs that can use this plugin
+                     * 
                      */
                     void SetApiSet(const std::vector<AvailableApiInfo>& _apiSet);
 
                     /**
                      * 判断参数 ApiSet 是否已赋值
                      * @return ApiSet 是否已赋值
+                     * 
                      */
                     bool ApiSetHasBeenSet() const;
 

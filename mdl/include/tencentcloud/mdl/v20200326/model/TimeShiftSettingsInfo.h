@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return State Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param State Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
+                     * @param _state Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return PlayDomain Domain name bound for time shifting
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetPlayDomain() const;
 
                     /**
                      * 设置Domain name bound for time shifting
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param PlayDomain Domain name bound for time shifting
+                     * @param _playDomain Domain name bound for time shifting
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetPlayDomain(const std::string& _playDomain);
 
                     /**
                      * 判断参数 PlayDomain 是否已赋值
                      * @return PlayDomain 是否已赋值
+                     * 
                      */
                     bool PlayDomainHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return StartoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetStartoverWindow() const;
 
                     /**
                      * 设置Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param StartoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
+                     * @param _startoverWindow Allowable time-shift period (s). Value range: [600, 1209600]. Default value: 300
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStartoverWindow(const int64_t& _startoverWindow);
 
                     /**
                      * 判断参数 StartoverWindow 是否已赋值
                      * @return StartoverWindow 是否已赋值
+                     * 
                      */
                     bool StartoverWindowHasBeenSet() const;
 

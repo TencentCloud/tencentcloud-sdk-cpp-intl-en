@@ -56,18 +56,21 @@ namespace TencentCloud
                     /**
                      * 获取Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
                      * @return Name Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
-                     * @param Name Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
+                     * @param _name Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -76,20 +79,23 @@ namespace TencentCloud
 Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`
                      * @return Type Output protocol
 Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Output protocol
 Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`
-                     * @param Type Output protocol
+                     * @param _type Output protocol
 Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -98,38 +104,44 @@ Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_P
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
                      * @return Outputs Output information
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+                     * 
                      */
                     std::vector<OutputInfo> GetOutputs() const;
 
                     /**
                      * 设置Output information
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
-                     * @param Outputs Output information
+                     * @param _outputs Output information
 If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+                     * 
                      */
                     void SetOutputs(const std::vector<OutputInfo>& _outputs);
 
                     /**
                      * 判断参数 Outputs 是否已赋值
                      * @return Outputs 是否已赋值
+                     * 
                      */
                     bool OutputsHasBeenSet() const;
 
                     /**
                      * 获取Relay destinations. Quantity: [1, 2]
                      * @return Destinations Relay destinations. Quantity: [1, 2]
+                     * 
                      */
                     std::vector<DestinationInfo> GetDestinations() const;
 
                     /**
                      * 设置Relay destinations. Quantity: [1, 2]
-                     * @param Destinations Relay destinations. Quantity: [1, 2]
+                     * @param _destinations Relay destinations. Quantity: [1, 2]
+                     * 
                      */
                     void SetDestinations(const std::vector<DestinationInfo>& _destinations);
 
                     /**
                      * 判断参数 Destinations 是否已赋值
                      * @return Destinations 是否已赋值
+                     * 
                      */
                     bool DestinationsHasBeenSet() const;
 
@@ -138,20 +150,23 @@ If the type is RTMP or RTP, only one output is allowed; if it is HLS or DASH, 1-
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     HlsRemuxSettingsInfo GetHlsRemuxSettings() const;
 
                     /**
                      * 设置HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
+                     * @param _hlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE outputs
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetHlsRemuxSettings(const HlsRemuxSettingsInfo& _hlsRemuxSettings);
 
                     /**
                      * 判断参数 HlsRemuxSettings 是否已赋值
                      * @return HlsRemuxSettings 是否已赋值
+                     * 
                      */
                     bool HlsRemuxSettingsHasBeenSet() const;
 
@@ -160,20 +175,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return DrmSettings DRM configuration information
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     DrmSettingsInfo GetDrmSettings() const;
 
                     /**
                      * 设置DRM configuration information
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param DrmSettings DRM configuration information
+                     * @param _drmSettings DRM configuration information
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetDrmSettings(const DrmSettingsInfo& _drmSettings);
 
                     /**
                      * 判断参数 DrmSettings 是否已赋值
                      * @return DrmSettings 是否已赋值
+                     * 
                      */
                     bool DrmSettingsHasBeenSet() const;
 
@@ -182,20 +200,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     DashRemuxSettingsInfo GetDashRemuxSettings() const;
 
                     /**
                      * 设置DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
+                     * @param _dashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetDashRemuxSettings(const DashRemuxSettingsInfo& _dashRemuxSettings);
 
                     /**
                      * 判断参数 DashRemuxSettings 是否已赋值
                      * @return DashRemuxSettings 是否已赋值
+                     * 
                      */
                     bool DashRemuxSettingsHasBeenSet() const;
 
@@ -204,20 +225,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return StreamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     StreamPackageSettingsInfo GetStreamPackageSettings() const;
 
                     /**
                      * 设置StreamPackage configuration information, which is required if the output type is StreamPackage
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param StreamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
+                     * @param _streamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetStreamPackageSettings(const StreamPackageSettingsInfo& _streamPackageSettings);
 
                     /**
                      * 判断参数 StreamPackageSettings 是否已赋值
                      * @return StreamPackageSettings 是否已赋值
+                     * 
                      */
                     bool StreamPackageSettingsHasBeenSet() const;
 
@@ -226,20 +250,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return TimeShiftSettings Time-shift configuration information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     TimeShiftSettingsInfo GetTimeShiftSettings() const;
 
                     /**
                      * 设置Time-shift configuration information
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param TimeShiftSettings Time-shift configuration information
+                     * @param _timeShiftSettings Time-shift configuration information
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetTimeShiftSettings(const TimeShiftSettingsInfo& _timeShiftSettings);
 
                     /**
                      * 判断参数 TimeShiftSettings 是否已赋值
                      * @return TimeShiftSettings 是否已赋值
+                     * 
                      */
                     bool TimeShiftSettingsHasBeenSet() const;
 

@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Certificate ID.
                      * @return CertId Certificate ID.
+                     * 
                      */
                     int64_t GetCertId() const;
 
                     /**
                      * 设置Certificate ID.
-                     * @param CertId Certificate ID.
+                     * @param _certId Certificate ID.
+                     * 
                      */
                     void SetCertId(const int64_t& _certId);
 
                     /**
                      * 判断参数 CertId 是否已赋值
                      * @return CertId 是否已赋值
+                     * 
                      */
                     bool CertIdHasBeenSet() const;
 
                     /**
                      * 获取Certificate name.
                      * @return CertName Certificate name.
+                     * 
                      */
                     std::string GetCertName() const;
 
                     /**
                      * 设置Certificate name.
-                     * @param CertName Certificate name.
+                     * @param _certName Certificate name.
+                     * 
                      */
                     void SetCertName(const std::string& _certName);
 
                     /**
                      * 判断参数 CertName 是否已赋值
                      * @return CertName 是否已赋值
+                     * 
                      */
                     bool CertNameHasBeenSet() const;
 
                     /**
                      * 获取Description.
                      * @return Description Description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description.
-                     * @param Description Description.
+                     * @param _description Description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -105,38 +114,44 @@ namespace TencentCloud
 Note: Beijing time (UTC+8) is used.
                      * @return CreateTime The creation time in UTC format.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置The creation time in UTC format.
 Note: Beijing time (UTC+8) is used.
-                     * @param CreateTime The creation time in UTC format.
+                     * @param _createTime The creation time in UTC format.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Certificate content.
                      * @return HttpsCrt Certificate content.
+                     * 
                      */
                     std::string GetHttpsCrt() const;
 
                     /**
                      * 设置Certificate content.
-                     * @param HttpsCrt Certificate content.
+                     * @param _httpsCrt Certificate content.
+                     * 
                      */
                     void SetHttpsCrt(const std::string& _httpsCrt);
 
                     /**
                      * 判断参数 HttpsCrt 是否已赋值
                      * @return HttpsCrt 是否已赋值
+                     * 
                      */
                     bool HttpsCrtHasBeenSet() const;
 
@@ -147,6 +162,7 @@ Note: Beijing time (UTC+8) is used.
                      * @return CertType Certificate type.
 0: user-added certificate
 1: Tencent Cloud-hosted certificate.
+                     * 
                      */
                     int64_t GetCertType() const;
 
@@ -154,15 +170,17 @@ Note: Beijing time (UTC+8) is used.
                      * 设置Certificate type.
 0: user-added certificate
 1: Tencent Cloud-hosted certificate.
-                     * @param CertType Certificate type.
+                     * @param _certType Certificate type.
 0: user-added certificate
 1: Tencent Cloud-hosted certificate.
+                     * 
                      */
                     void SetCertType(const int64_t& _certType);
 
                     /**
                      * 判断参数 CertType 是否已赋值
                      * @return CertType 是否已赋值
+                     * 
                      */
                     bool CertTypeHasBeenSet() const;
 
@@ -171,56 +189,65 @@ Note: Beijing time (UTC+8) is used.
 Note: Beijing time (UTC+8) is used.
                      * @return CertExpireTime The certificate expiration time in UTC format.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     std::string GetCertExpireTime() const;
 
                     /**
                      * 设置The certificate expiration time in UTC format.
 Note: Beijing time (UTC+8) is used.
-                     * @param CertExpireTime The certificate expiration time in UTC format.
+                     * @param _certExpireTime The certificate expiration time in UTC format.
 Note: Beijing time (UTC+8) is used.
+                     * 
                      */
                     void SetCertExpireTime(const std::string& _certExpireTime);
 
                     /**
                      * 判断参数 CertExpireTime 是否已赋值
                      * @return CertExpireTime 是否已赋值
+                     * 
                      */
                     bool CertExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Domain name that uses this certificate.
                      * @return DomainName Domain name that uses this certificate.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name that uses this certificate.
-                     * @param DomainName Domain name that uses this certificate.
+                     * @param _domainName Domain name that uses this certificate.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Certificate status.
                      * @return Status Certificate status.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Certificate status.
-                     * @param Status Certificate status.
+                     * @param _status Certificate status.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -231,6 +258,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * @return CertDomains List of domain names in the certificate.
 ["*.x.com"] for example.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetCertDomains() const;
 
@@ -238,15 +266,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * 设置List of domain names in the certificate.
 ["*.x.com"] for example.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CertDomains List of domain names in the certificate.
+                     * @param _certDomains List of domain names in the certificate.
 ["*.x.com"] for example.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCertDomains(const std::vector<std::string>& _certDomains);
 
                     /**
                      * 判断参数 CertDomains 是否已赋值
                      * @return CertDomains 是否已赋值
+                     * 
                      */
                     bool CertDomainsHasBeenSet() const;
 
@@ -255,20 +285,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CloudCertId Tencent Cloud SSL certificate ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCloudCertId() const;
 
                     /**
                      * 设置Tencent Cloud SSL certificate ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CloudCertId Tencent Cloud SSL certificate ID.
+                     * @param _cloudCertId Tencent Cloud SSL certificate ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCloudCertId(const std::string& _cloudCertId);
 
                     /**
                      * 判断参数 CloudCertId 是否已赋值
                      * @return CloudCertId 是否已赋值
+                     * 
                      */
                     bool CloudCertIdHasBeenSet() const;
 

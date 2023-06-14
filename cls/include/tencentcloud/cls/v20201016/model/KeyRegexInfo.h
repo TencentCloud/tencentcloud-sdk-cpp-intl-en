@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Log key to be filtered
                      * @return Key Log key to be filtered
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Log key to be filtered
-                     * @param Key Log key to be filtered
+                     * @param _key Log key to be filtered
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Filter rule regex corresponding to key
                      * @return Regex Filter rule regex corresponding to key
+                     * 
                      */
                     std::string GetRegex() const;
 
                     /**
                      * 设置Filter rule regex corresponding to key
-                     * @param Regex Filter rule regex corresponding to key
+                     * @param _regex Filter rule regex corresponding to key
+                     * 
                      */
                     void SetRegex(const std::string& _regex);
 
                     /**
                      * 判断参数 Regex 是否已赋值
                      * @return Regex 是否已赋值
+                     * 
                      */
                     bool RegexHasBeenSet() const;
 

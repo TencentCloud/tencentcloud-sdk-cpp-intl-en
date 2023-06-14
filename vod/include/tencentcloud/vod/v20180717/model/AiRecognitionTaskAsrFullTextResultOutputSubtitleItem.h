@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Format The format of the subtitle files. Valid values:
 <li>vtt</li>
 <li>srt</li>
+                     * 
                      */
                     std::string GetFormat() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置The format of the subtitle files. Valid values:
 <li>vtt</li>
 <li>srt</li>
-                     * @param Format The format of the subtitle files. Valid values:
+                     * @param _format The format of the subtitle files. Valid values:
 <li>vtt</li>
 <li>srt</li>
+                     * 
                      */
                     void SetFormat(const std::string& _format);
 
                     /**
                      * 判断参数 Format 是否已赋值
                      * @return Format 是否已赋值
+                     * 
                      */
                     bool FormatHasBeenSet() const;
 
                     /**
                      * 获取The URL of a subtitle file.
                      * @return Url The URL of a subtitle file.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The URL of a subtitle file.
-                     * @param Url The URL of a subtitle file.
+                     * @param _url The URL of a subtitle file.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取IP address
                      * @return Ip IP address
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置IP address
-                     * @param Ip IP address
+                     * @param _ip IP address
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
                     /**
                      * 获取Blocklist/allowlist type. Valid values: [black, white]
                      * @return Type Blocklist/allowlist type. Valid values: [black, white]
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Blocklist/allowlist type. Valid values: [black, white]
-                     * @param Type Blocklist/allowlist type. Valid values: [black, white]
+                     * @param _type Blocklist/allowlist type. Valid values: [black, white]
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

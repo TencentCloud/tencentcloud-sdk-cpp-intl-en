@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ECM region
                      * @return EcmRegion ECM region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region
-                     * @param EcmRegion ECM region
+                     * @param _ecmRegion ECM region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取Unique EIP ID, such as `eip-11112222`.
                      * @return AddressId Unique EIP ID, such as `eip-11112222`.
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置Unique EIP ID, such as `eip-11112222`.
-                     * @param AddressId Unique EIP ID, such as `eip-11112222`.
+                     * @param _addressId Unique EIP ID, such as `eip-11112222`.
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 
                     /**
                      * 获取New EIP name, which can contain up to 20 characters.
                      * @return AddressName New EIP name, which can contain up to 20 characters.
+                     * 
                      */
                     std::string GetAddressName() const;
 
                     /**
                      * 设置New EIP name, which can contain up to 20 characters.
-                     * @param AddressName New EIP name, which can contain up to 20 characters.
+                     * @param _addressName New EIP name, which can contain up to 20 characters.
+                     * 
                      */
                     void SetAddressName(const std::string& _addressName);
 
                     /**
                      * 判断参数 AddressName 是否已赋值
                      * @return AddressName 是否已赋值
+                     * 
                      */
                     bool AddressNameHasBeenSet() const;
 
                     /**
                      * 获取Whether "direct access" is enabled for the EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct access feature.
                      * @return EipDirectConnection Whether "direct access" is enabled for the EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct access feature.
+                     * 
                      */
                     std::string GetEipDirectConnection() const;
 
                     /**
                      * 设置Whether "direct access" is enabled for the EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct access feature.
-                     * @param EipDirectConnection Whether "direct access" is enabled for the EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct access feature.
+                     * @param _eipDirectConnection Whether "direct access" is enabled for the EIP. TRUE: yes. FALSE: no. Note that this parameter is available only to users who have activated the EIP direct access feature.
+                     * 
                      */
                     void SetEipDirectConnection(const std::string& _eipDirectConnection);
 
                     /**
                      * 判断参数 EipDirectConnection 是否已赋值
                      * @return EipDirectConnection 是否已赋值
+                     * 
                      */
                     bool EipDirectConnectionHasBeenSet() const;
 

@@ -55,6 +55,7 @@ Default value: CLOUD_BASIC.
 - LOCAL_BASIC: local disk;
 - CLOUD_PREMIUM: Premium Cloud Storage;
 Default value: CLOUD_BASIC.
+                     * 
                      */
                     std::string GetDiskType() const;
 
@@ -63,52 +64,60 @@ Default value: CLOUD_BASIC.
 - LOCAL_BASIC: local disk;
 - CLOUD_PREMIUM: Premium Cloud Storage;
 Default value: CLOUD_BASIC.
-                     * @param DiskType Disk type. Valid values:
+                     * @param _diskType Disk type. Valid values:
 - LOCAL_BASIC: local disk;
 - CLOUD_PREMIUM: Premium Cloud Storage;
 Default value: CLOUD_BASIC.
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Disk ID. This parameter is temporarily unavailable.
                      * @return DiskId Disk ID. This parameter is temporarily unavailable.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置Disk ID. This parameter is temporarily unavailable.
-                     * @param DiskId Disk ID. This parameter is temporarily unavailable.
+                     * @param _diskId Disk ID. This parameter is temporarily unavailable.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Disk size in GB.
                      * @return DiskSize Disk size in GB.
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Disk size in GB.
-                     * @param DiskSize Disk size in GB.
+                     * @param _diskSize Disk size in GB.
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 

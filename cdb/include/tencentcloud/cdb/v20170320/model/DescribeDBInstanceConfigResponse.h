@@ -48,36 +48,42 @@ namespace TencentCloud
                     /**
                      * 获取Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
                      * @return ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+                     * 
                      */
                     int64_t GetProtectMode() const;
 
                     /**
                      * 判断参数 ProtectMode 是否已赋值
                      * @return ProtectMode 是否已赋值
+                     * 
                      */
                     bool ProtectModeHasBeenSet() const;
 
                     /**
                      * 获取Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
                      * @return DeployMode Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
+                     * 
                      */
                     int64_t GetDeployMode() const;
 
                     /**
                      * 判断参数 DeployMode 是否已赋值
                      * @return DeployMode 是否已赋值
+                     * 
                      */
                     bool DeployModeHasBeenSet() const;
 
                     /**
                      * 获取Instance AZ information in the format of "ap-shanghai-1".
                      * @return Zone Instance AZ information in the format of "ap-shanghai-1".
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -86,12 +92,14 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return SlaveConfig Configurations of the replica node
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     SlaveConfig GetSlaveConfig() const;
 
                     /**
                      * 判断参数 SlaveConfig 是否已赋值
                      * @return SlaveConfig 是否已赋值
+                     * 
                      */
                     bool SlaveConfigHasBeenSet() const;
 
@@ -100,24 +108,28 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return BackupConfig Configurations of the second replica node of a strong-sync instance
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     BackupConfig GetBackupConfig() const;
 
                     /**
                      * 判断参数 BackupConfig 是否已赋值
                      * @return BackupConfig 是否已赋值
+                     * 
                      */
                     bool BackupConfigHasBeenSet() const;
 
                     /**
                      * 获取This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
                      * @return Switched This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+                     * 
                      */
                     bool GetSwitched() const;
 
                     /**
                      * 判断参数 Switched 是否已赋值
                      * @return Switched 是否已赋值
+                     * 
                      */
                     bool SwitchedHasBeenSet() const;
 

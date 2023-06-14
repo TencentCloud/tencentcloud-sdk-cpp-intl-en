@@ -64,6 +64,7 @@ For `directory`, enter the path, e.g., `/xxx/test/`.
 For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -75,19 +76,21 @@ For `directory`, enter the path, e.g., `/xxx/test/`.
 For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RulePaths Content for each `CacheType`:
+                     * @param _rulePaths Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter the suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, e.g., `/xxx/test/`.
 For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 
@@ -106,6 +109,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `path`: effective for specified absolute paths.
 `index`: homepage.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -117,19 +121,21 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `path`: effective for specified absolute paths.
 `index`: homepage.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `all`: effective for all files.
 `file`: effective for specified file suffixes.
 `directory`: effective for specified paths.
 `path`: effective for specified absolute paths.
 `index`: homepage.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -138,20 +144,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheConfig Cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     RuleCacheConfig GetCacheConfig() const;
 
                     /**
                      * 设置Cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CacheConfig Cache configuration
+                     * @param _cacheConfig Cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCacheConfig(const RuleCacheConfig& _cacheConfig);
 
                     /**
                      * 判断参数 CacheConfig 是否已赋值
                      * @return CacheConfig 是否已赋值
+                     * 
                      */
                     bool CacheConfigHasBeenSet() const;
 

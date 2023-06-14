@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return ChannelId Channel ID
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param ChannelId Channel ID
+                     * @param _channelId Channel ID
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 
@@ -65,20 +68,23 @@ namespace TencentCloud
 UTC time, such as `2020-01-01T12:00:00Z`
                      * @return StartTime Start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
 UTC time, such as `2020-01-01T12:00:00Z`
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
 UTC time, such as `2020-01-01T12:00:00Z`
-                     * @param StartTime Start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
+                     * @param _startTime Start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
 UTC time, such as `2020-01-01T12:00:00Z`
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -87,38 +93,44 @@ UTC time, such as `2020-01-01T12:00:00Z`
 UTC time, such as `2020-01-01T12:00:00Z`
                      * @return EndTime End time for query, which is 1 hour after `StartTime` by default
 UTC time, such as `2020-01-01T12:00:00Z`
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time for query, which is 1 hour after `StartTime` by default
 UTC time, such as `2020-01-01T12:00:00Z`
-                     * @param EndTime End time for query, which is 1 hour after `StartTime` by default
+                     * @param _endTime End time for query, which is 1 hour after `StartTime` by default
 UTC time, such as `2020-01-01T12:00:00Z`
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
                      * @return Period Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
+                     * 
                      */
                     std::string GetPeriod() const;
 
                     /**
                      * 设置Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
-                     * @param Period Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
+                     * @param _period Data collection interval. Valid values: `5s`, `1min` (default), `5min`, `15min`
+                     * 
                      */
                     void SetPeriod(const std::string& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 

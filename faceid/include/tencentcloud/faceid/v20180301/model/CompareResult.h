@@ -68,6 +68,7 @@ namespace TencentCloud
 2014: The resolution of the uploaded image is too low . Please upload a new one.
 2015: Face comparison failed.
 2016: The similarity did not reach the passing standard.
+                     * 
                      */
                     std::string GetErrorCode() const;
 
@@ -82,7 +83,7 @@ namespace TencentCloud
 2014: The resolution of the uploaded image is too low . Please upload a new one.
 2015: Face comparison failed.
 2016: The similarity did not reach the passing standard.
-                     * @param ErrorCode The final verification result code.
+                     * @param _errorCode The final verification result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
 1004: Face detection failed.
@@ -92,66 +93,77 @@ namespace TencentCloud
 2014: The resolution of the uploaded image is too low . Please upload a new one.
 2015: Face comparison failed.
 2016: The similarity did not reach the passing standard.
+                     * 
                      */
                     void SetErrorCode(const std::string& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取The description of the final verification result.
                      * @return ErrorMsg The description of the final verification result.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 设置The description of the final verification result.
-                     * @param ErrorMsg The description of the final verification result.
+                     * @param _errorMsg The description of the final verification result.
+                     * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return LiveData 
+                     * 
                      */
                     FileInfo GetLiveData() const;
 
                     /**
                      * 设置
-                     * @param LiveData 
+                     * @param _liveData 
+                     * 
                      */
                     void SetLiveData(const FileInfo& _liveData);
 
                     /**
                      * 判断参数 LiveData 是否已赋值
                      * @return LiveData 是否已赋值
+                     * 
                      */
                     bool LiveDataHasBeenSet() const;
 
                     /**
                      * 获取The download URL of the video used for verification, which is valid for 10 minutes.
                      * @return LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+                     * 
                      */
                     FileInfo GetLiveVideo() const;
 
                     /**
                      * 设置The download URL of the video used for verification, which is valid for 10 minutes.
-                     * @param LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+                     * @param _liveVideo The download URL of the video used for verification, which is valid for 10 minutes.
+                     * 
                      */
                     void SetLiveVideo(const FileInfo& _liveVideo);
 
                     /**
                      * 判断参数 LiveVideo 是否已赋值
                      * @return LiveVideo 是否已赋值
+                     * 
                      */
                     bool LiveVideoHasBeenSet() const;
 
@@ -164,6 +176,7 @@ namespace TencentCloud
 0: Success.
 1001: Failed to call the liveness detection engine.
 1004: Face detection failed.
+                     * 
                      */
                     std::string GetLiveErrorCode() const;
 
@@ -172,34 +185,39 @@ namespace TencentCloud
 0: Success.
 1001: Failed to call the liveness detection engine.
 1004: Face detection failed.
-                     * @param LiveErrorCode The liveness detection result code.
+                     * @param _liveErrorCode The liveness detection result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
 1004: Face detection failed.
+                     * 
                      */
                     void SetLiveErrorCode(const std::string& _liveErrorCode);
 
                     /**
                      * 判断参数 LiveErrorCode 是否已赋值
                      * @return LiveErrorCode 是否已赋值
+                     * 
                      */
                     bool LiveErrorCodeHasBeenSet() const;
 
                     /**
                      * 获取The description of the liveness detection result.
                      * @return LiveErrorMsg The description of the liveness detection result.
+                     * 
                      */
                     std::string GetLiveErrorMsg() const;
 
                     /**
                      * 设置The description of the liveness detection result.
-                     * @param LiveErrorMsg The description of the liveness detection result.
+                     * @param _liveErrorMsg The description of the liveness detection result.
+                     * 
                      */
                     void SetLiveErrorMsg(const std::string& _liveErrorMsg);
 
                     /**
                      * 判断参数 LiveErrorMsg 是否已赋值
                      * @return LiveErrorMsg 是否已赋值
+                     * 
                      */
                     bool LiveErrorMsgHasBeenSet() const;
 
@@ -208,38 +226,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     FileInfo GetBestFrame() const;
 
                     /**
                      * 设置The download URL of the face screenshot during verification, which is valid for 10 minutes.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
+                     * @param _bestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBestFrame(const FileInfo& _bestFrame);
 
                     /**
                      * 判断参数 BestFrame 是否已赋值
                      * @return BestFrame 是否已赋值
+                     * 
                      */
                     bool BestFrameHasBeenSet() const;
 
                     /**
                      * 获取The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
                      * @return ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+                     * 
                      */
                     FileInfo GetProfileImage() const;
 
                     /**
                      * 设置The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
-                     * @param ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+                     * @param _profileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+                     * 
                      */
                     void SetProfileImage(const FileInfo& _profileImage);
 
                     /**
                      * 判断参数 ProfileImage 是否已赋值
                      * @return ProfileImage 是否已赋值
+                     * 
                      */
                     bool ProfileImageHasBeenSet() const;
 
@@ -262,6 +286,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 2015: Face comparison failed.
 2016: The similarity did not reach the passing standard.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCompareErrorCode() const;
 
@@ -275,7 +300,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 2015: Face comparison failed.
 2016: The similarity did not reach the passing standard.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param CompareErrorCode The face comparison result code.
+                     * @param _compareErrorCode The face comparison result code.
 0: Success.
 2004: The uploaded face image is too large or too small.
 2012: The face is not fully exposed.
@@ -284,12 +309,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 2015: Face comparison failed.
 2016: The similarity did not reach the passing standard.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCompareErrorCode(const std::string& _compareErrorCode);
 
                     /**
                      * 判断参数 CompareErrorCode 是否已赋值
                      * @return CompareErrorCode 是否已赋值
+                     * 
                      */
                     bool CompareErrorCodeHasBeenSet() const;
 
@@ -298,20 +325,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompareErrorMsg The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCompareErrorMsg() const;
 
                     /**
                      * 设置The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CompareErrorMsg The description of the face comparison result.
+                     * @param _compareErrorMsg The description of the face comparison result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompareErrorMsg(const std::string& _compareErrorMsg);
 
                     /**
                      * 判断参数 CompareErrorMsg 是否已赋值
                      * @return CompareErrorMsg 是否已赋值
+                     * 
                      */
                     bool CompareErrorMsgHasBeenSet() const;
 
@@ -320,38 +350,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Sim The similarity score of face comparison.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     double GetSim() const;
 
                     /**
                      * 设置The similarity score of face comparison.
 Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param Sim The similarity score of face comparison.
+                     * @param _sim The similarity score of face comparison.
 Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSim(const double& _sim);
 
                     /**
                      * 判断参数 Sim 是否已赋值
                      * @return Sim 是否已赋值
+                     * 
                      */
                     bool SimHasBeenSet() const;
 
                     /**
                      * 获取This field is disused.
                      * @return IsNeedCharge This field is disused.
+                     * 
                      */
                     bool GetIsNeedCharge() const;
 
                     /**
                      * 设置This field is disused.
-                     * @param IsNeedCharge This field is disused.
+                     * @param _isNeedCharge This field is disused.
+                     * 
                      */
                     void SetIsNeedCharge(const bool& _isNeedCharge);
 
                     /**
                      * 判断参数 IsNeedCharge 是否已赋值
                      * @return IsNeedCharge 是否已赋值
+                     * 
                      */
                     bool IsNeedChargeHasBeenSet() const;
 
@@ -398,6 +434,7 @@ When the value of `IdCardType` is `ML`:
 - Address string
 - Type string: Identity document type.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FileInfo GetCardInfoInputJson() const;
 
@@ -423,7 +460,7 @@ When the value of `IdCardType` is `ML`:
 - Address string
 - Type string: Identity document type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
+                     * @param _cardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
 When the value of `IdCardType` is `HK`:
 - CnName string: Chinese name
 - EnName string: English name
@@ -444,30 +481,35 @@ When the value of `IdCardType` is `ML`:
 - Address string
 - Type string: Identity document type.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCardInfoInputJson(const FileInfo& _cardInfoInputJson);
 
                     /**
                      * 判断参数 CardInfoInputJson 是否已赋值
                      * @return CardInfoInputJson 是否已赋值
+                     * 
                      */
                     bool CardInfoInputJsonHasBeenSet() const;
 
                     /**
                      * 获取The request ID of this verification process.
                      * @return RequestId The request ID of this verification process.
+                     * 
                      */
                     std::string GetRequestId() const;
 
                     /**
                      * 设置The request ID of this verification process.
-                     * @param RequestId The request ID of this verification process.
+                     * @param _requestId The request ID of this verification process.
+                     * 
                      */
                     void SetRequestId(const std::string& _requestId);
 
                     /**
                      * 判断参数 RequestId 是否已赋值
                      * @return RequestId 是否已赋值
+                     * 
                      */
                     bool RequestIdHasBeenSet() const;
 

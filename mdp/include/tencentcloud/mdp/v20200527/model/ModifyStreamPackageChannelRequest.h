@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Channel ID
                      * @return Id Channel ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Channel ID
-                     * @param Id Channel ID
+                     * @param _id Channel ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取New channel name
                      * @return Name New channel name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置New channel name
-                     * @param Name New channel name
+                     * @param _name New channel name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取New channel protocol. Valid values: HLS, DASH
                      * @return Protocol New channel protocol. Valid values: HLS, DASH
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置New channel protocol. Valid values: HLS, DASH
-                     * @param Protocol New channel protocol. Valid values: HLS, DASH
+                     * @param _protocol New channel protocol. Valid values: HLS, DASH
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Cache configuration
                      * @return CacheInfo Cache configuration
+                     * 
                      */
                     CacheInfo GetCacheInfo() const;
 
                     /**
                      * 设置Cache configuration
-                     * @param CacheInfo Cache configuration
+                     * @param _cacheInfo Cache configuration
+                     * 
                      */
                     void SetCacheInfo(const CacheInfo& _cacheInfo);
 
                     /**
                      * 判断参数 CacheInfo 是否已赋值
                      * @return CacheInfo 是否已赋值
+                     * 
                      */
                     bool CacheInfoHasBeenSet() const;
 

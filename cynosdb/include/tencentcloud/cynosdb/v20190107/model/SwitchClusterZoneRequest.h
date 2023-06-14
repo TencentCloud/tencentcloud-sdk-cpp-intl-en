@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The current AZ
                      * @return OldZone The current AZ
+                     * 
                      */
                     std::string GetOldZone() const;
 
                     /**
                      * 设置The current AZ
-                     * @param OldZone The current AZ
+                     * @param _oldZone The current AZ
+                     * 
                      */
                     void SetOldZone(const std::string& _oldZone);
 
                     /**
                      * 判断参数 OldZone 是否已赋值
                      * @return OldZone 是否已赋值
+                     * 
                      */
                     bool OldZoneHasBeenSet() const;
 
                     /**
                      * 获取New AZ
                      * @return NewZone New AZ
+                     * 
                      */
                     std::string GetNewZone() const;
 
                     /**
                      * 设置New AZ
-                     * @param NewZone New AZ
+                     * @param _newZone New AZ
+                     * 
                      */
                     void SetNewZone(const std::string& _newZone);
 
                     /**
                      * 判断参数 NewZone 是否已赋值
                      * @return NewZone 是否已赋值
+                     * 
                      */
                     bool NewZoneHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `yes` (execute during maintenance time), `no` (execute now)
                      * @return IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * 
                      */
                     std::string GetIsInMaintainPeriod() const;
 
                     /**
                      * 设置Valid values: `yes` (execute during maintenance time), `no` (execute now)
-                     * @param IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * @param _isInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+                     * 
                      */
                     void SetIsInMaintainPeriod(const std::string& _isInMaintainPeriod);
 
                     /**
                      * 判断参数 IsInMaintainPeriod 是否已赋值
                      * @return IsInMaintainPeriod 是否已赋值
+                     * 
                      */
                     bool IsInMaintainPeriodHasBeenSet() const;
 

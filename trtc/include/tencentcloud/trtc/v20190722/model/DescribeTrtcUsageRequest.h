@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The start date in the format of YYYY-MM-DD.
                      * @return StartTime The start date in the format of YYYY-MM-DD.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置The start date in the format of YYYY-MM-DD.
-                     * @param StartTime The start date in the format of YYYY-MM-DD.
+                     * @param _startTime The start date in the format of YYYY-MM-DD.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -65,38 +68,44 @@ namespace TencentCloud
 The period queried per request cannot be longer than 31 days.
                      * @return EndTime The end date in the format of YYYY-MM-DD.
 The period queried per request cannot be longer than 31 days.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置The end date in the format of YYYY-MM-DD.
 The period queried per request cannot be longer than 31 days.
-                     * @param EndTime The end date in the format of YYYY-MM-DD.
+                     * @param _endTime The end date in the format of YYYY-MM-DD.
 The period queried per request cannot be longer than 31 days.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
                      * @return SdkAppId The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
-                     * @param SdkAppId The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
+                     * @param _sdkAppId The `SDKAppID` of the TRTC application to which the target room belongs. If you do not specify this parameter, the usage statistics of all TRTC applications under the current account will be returned.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 

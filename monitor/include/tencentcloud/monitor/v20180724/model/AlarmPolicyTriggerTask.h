@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Type Triggered task type. Valid value: AS (auto scaling)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Triggered task type. Valid value: AS (auto scaling)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Type Triggered task type. Valid value: AS (auto scaling)
+                     * @param _type Triggered task type. Valid value: AS (auto scaling)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return TaskConfig Configuration information in JSON format, such as {"Key1":"Value1","Key2":"Value2"}
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskConfig() const;
 
                     /**
                      * 设置Configuration information in JSON format, such as {"Key1":"Value1","Key2":"Value2"}
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TaskConfig Configuration information in JSON format, such as {"Key1":"Value1","Key2":"Value2"}
+                     * @param _taskConfig Configuration information in JSON format, such as {"Key1":"Value1","Key2":"Value2"}
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskConfig(const std::string& _taskConfig);
 
                     /**
                      * 判断参数 TaskConfig 是否已赋值
                      * @return TaskConfig 是否已赋值
+                     * 
                      */
                     bool TaskConfigHasBeenSet() const;
 

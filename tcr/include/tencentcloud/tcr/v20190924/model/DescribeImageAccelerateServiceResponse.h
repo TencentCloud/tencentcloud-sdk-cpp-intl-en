@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Image acceleration status
                      * @return Status Image acceleration status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取CFS VIP
                      * @return CFSVIP CFS VIP
+                     * 
                      */
                     std::string GetCFSVIP() const;
 
                     /**
                      * 判断参数 CFSVIP 是否已赋值
                      * @return CFSVIP 是否已赋值
+                     * 
                      */
                     bool CFSVIPHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable
                      * @return IsEnable Whether to enable
+                     * 
                      */
                     bool GetIsEnable() const;
 
                     /**
                      * 判断参数 IsEnable 是否已赋值
                      * @return IsEnable 是否已赋值
+                     * 
                      */
                     bool IsEnableHasBeenSet() const;
 

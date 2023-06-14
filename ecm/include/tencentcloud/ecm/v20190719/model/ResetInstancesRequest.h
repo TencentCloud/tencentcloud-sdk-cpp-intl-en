@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the instances to be reinstalled.
                      * @return InstanceIdSet List of IDs of the instances to be reinstalled.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置List of IDs of the instances to be reinstalled.
-                     * @param InstanceIdSet List of IDs of the instances to be reinstalled.
+                     * @param _instanceIdSet List of IDs of the instances to be reinstalled.
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取ID of the image from which to install the instance. If this parameter is not specified, the current image of the instance will be used.
                      * @return ImageId ID of the image from which to install the instance. If this parameter is not specified, the current image of the instance will be used.
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置ID of the image from which to install the instance. If this parameter is not specified, the current image of the instance will be used.
-                     * @param ImageId ID of the image from which to install the instance. If this parameter is not specified, the current image of the instance will be used.
+                     * @param _imageId ID of the image from which to install the instance. If this parameter is not specified, the current image of the instance will be used.
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Password. If this parameter is not specified, the password will be subsequently displayed in the Message Center.
                      * @return Password Password. If this parameter is not specified, the password will be subsequently displayed in the Message Center.
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password. If this parameter is not specified, the password will be subsequently displayed in the Message Center.
-                     * @param Password Password. If this parameter is not specified, the password will be subsequently displayed in the Message Center.
+                     * @param _password Password. If this parameter is not specified, the password will be subsequently displayed in the Message Center.
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable CM and CWP. If this parameter is not specified, they will be enabled by default.
                      * @return EnhancedService Whether to enable CM and CWP. If this parameter is not specified, they will be enabled by default.
+                     * 
                      */
                     EnhancedService GetEnhancedService() const;
 
                     /**
                      * 设置Whether to enable CM and CWP. If this parameter is not specified, they will be enabled by default.
-                     * @param EnhancedService Whether to enable CM and CWP. If this parameter is not specified, they will be enabled by default.
+                     * @param _enhancedService Whether to enable CM and CWP. If this parameter is not specified, they will be enabled by default.
+                     * 
                      */
                     void SetEnhancedService(const EnhancedService& _enhancedService);
 
                     /**
                      * 判断参数 EnhancedService 是否已赋值
                      * @return EnhancedService 是否已赋值
+                     * 
                      */
                     bool EnhancedServiceHasBeenSet() const;
 
                     /**
                      * 获取Whether to retain the data on the data disk. Valid values: true, false. Default value: true
                      * @return KeepData Whether to retain the data on the data disk. Valid values: true, false. Default value: true
+                     * 
                      */
                     std::string GetKeepData() const;
 
                     /**
                      * 设置Whether to retain the data on the data disk. Valid values: true, false. Default value: true
-                     * @param KeepData Whether to retain the data on the data disk. Valid values: true, false. Default value: true
+                     * @param _keepData Whether to retain the data on the data disk. Valid values: true, false. Default value: true
+                     * 
                      */
                     void SetKeepData(const std::string& _keepData);
 
                     /**
                      * 判断参数 KeepData 是否已赋值
                      * @return KeepData 是否已赋值
+                     * 
                      */
                     bool KeepDataHasBeenSet() const;
 
@@ -146,6 +161,7 @@ FALSE: no
 
 Default value: FALSE.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKeepImageLogin() const;
 
@@ -156,18 +172,20 @@ FALSE: no
 
 Default value: FALSE.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param KeepImageLogin Whether to keep the original settings for the image. You cannot specify this parameter if `Password` or `KeyIds.N` is specified. You can specify this parameter as `TRUE` only when you create an instance by using a custom image, shared image, or image imported from an external resource. Valid values:
+                     * @param _keepImageLogin Whether to keep the original settings for the image. You cannot specify this parameter if `Password` or `KeyIds.N` is specified. You can specify this parameter as `TRUE` only when you create an instance by using a custom image, shared image, or image imported from an external resource. Valid values:
 TRUE: yes
 FALSE: no
 
 Default value: FALSE.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKeepImageLogin(const std::string& _keepImageLogin);
 
                     /**
                      * 判断参数 KeepImageLogin 是否已赋值
                      * @return KeepImageLogin 是否已赋值
+                     * 
                      */
                     bool KeepImageLoginHasBeenSet() const;
 

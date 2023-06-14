@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Combination of instance dimensions
                      * @return Dimensions Combination of instance dimensions
+                     * 
                      */
                     std::vector<Dimension> GetDimensions() const;
 
                     /**
                      * 设置Combination of instance dimensions
-                     * @param Dimensions Combination of instance dimensions
+                     * @param _dimensions Combination of instance dimensions
+                     * 
                      */
                     void SetDimensions(const std::vector<Dimension>& _dimensions);
 
                     /**
                      * 判断参数 Dimensions 是否已赋值
                      * @return Dimensions 是否已赋值
+                     * 
                      */
                     bool DimensionsHasBeenSet() const;
 

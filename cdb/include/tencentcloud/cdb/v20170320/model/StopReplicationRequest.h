@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Read-Only instance ID.
                      * @return InstanceId Read-Only instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Read-Only instance ID.
-                     * @param InstanceId Read-Only instance ID.
+                     * @param _instanceId Read-Only instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

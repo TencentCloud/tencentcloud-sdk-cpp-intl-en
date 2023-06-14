@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Domain information
                      * @return DomainInfo Domain information
+                     * 
                      */
                     DomainCreateInfo GetDomainInfo() const;
 
                     /**
                      * 判断参数 DomainInfo 是否已赋值
                      * @return DomainInfo 是否已赋值
+                     * 
                      */
                     bool DomainInfoHasBeenSet() const;
 

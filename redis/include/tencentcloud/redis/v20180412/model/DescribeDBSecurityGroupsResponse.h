@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Security group rules
                      * @return Groups Security group rules
+                     * 
                      */
                     std::vector<SecurityGroup> GetGroups() const;
 
                     /**
                      * 判断参数 Groups 是否已赋值
                      * @return Groups 是否已赋值
+                     * 
                      */
                     bool GroupsHasBeenSet() const;
 
                     /**
                      * 获取Private IP for which the security group takes effect
                      * @return VIP Private IP for which the security group takes effect
+                     * 
                      */
                     std::string GetVIP() const;
 
                     /**
                      * 判断参数 VIP 是否已赋值
                      * @return VIP 是否已赋值
+                     * 
                      */
                     bool VIPHasBeenSet() const;
 
                     /**
                      * 获取Private port for which the security group takes effect
                      * @return VPort Private port for which the security group takes effect
+                     * 
                      */
                     std::string GetVPort() const;
 
                     /**
                      * 判断参数 VPort 是否已赋值
                      * @return VPort 是否已赋值
+                     * 
                      */
                     bool VPortHasBeenSet() const;
 

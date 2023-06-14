@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Original image unit price in USD.
                      * @return OriginalBlueprintPrice Original image unit price in USD.
+                     * 
                      */
                     double GetOriginalBlueprintPrice() const;
 
                     /**
                      * 设置Original image unit price in USD.
-                     * @param OriginalBlueprintPrice Original image unit price in USD.
+                     * @param _originalBlueprintPrice Original image unit price in USD.
+                     * 
                      */
                     void SetOriginalBlueprintPrice(const double& _originalBlueprintPrice);
 
                     /**
                      * 判断参数 OriginalBlueprintPrice 是否已赋值
                      * @return OriginalBlueprintPrice 是否已赋值
+                     * 
                      */
                     bool OriginalBlueprintPriceHasBeenSet() const;
 
                     /**
                      * 获取Original image total price in USD.
                      * @return OriginalPrice Original image total price in USD.
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Original image total price in USD.
-                     * @param OriginalPrice Original image total price in USD.
+                     * @param _originalPrice Original image total price in USD.
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discount.
                      * @return Discount Discount.
+                     * 
                      */
                     int64_t GetDiscount() const;
 
                     /**
                      * 设置Discount.
-                     * @param Discount Discount.
+                     * @param _discount Discount.
+                     * 
                      */
                     void SetDiscount(const int64_t& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discounted image total price in USD.
                      * @return DiscountPrice Discounted image total price in USD.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted image total price in USD.
-                     * @param DiscountPrice Discounted image total price in USD.
+                     * @param _discountPrice Discounted image total price in USD.
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 

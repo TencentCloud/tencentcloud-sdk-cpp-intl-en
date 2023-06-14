@@ -50,126 +50,147 @@ namespace TencentCloud
                     /**
                      * 获取Database name
                      * @return Name Database name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Database name
-                     * @param Name Database name
+                     * @param _name Database name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Character set
                      * @return Charset Character set
+                     * 
                      */
                     std::string GetCharset() const;
 
                     /**
                      * 设置Character set
-                     * @param Charset Character set
+                     * @param _charset Character set
+                     * 
                      */
                     void SetCharset(const std::string& _charset);
 
                     /**
                      * 判断参数 Charset 是否已赋值
                      * @return Charset 是否已赋值
+                     * 
                      */
                     bool CharsetHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Database creation time
                      * @return CreateTime Database creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Database creation time
-                     * @param CreateTime Database creation time
+                     * @param _createTime Database creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Database status. 1: creating, 2: running, 3: modifying, -1: dropping
                      * @return Status Database status. 1: creating, 2: running, 3: modifying, -1: dropping
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Database status. 1: creating, 2: running, 3: modifying, -1: dropping
-                     * @param Status Database status. 1: creating, 2: running, 3: modifying, -1: dropping
+                     * @param _status Database status. 1: creating, 2: running, 3: modifying, -1: dropping
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Database account permission information
                      * @return Accounts Database account permission information
+                     * 
                      */
                     std::vector<AccountPrivilege> GetAccounts() const;
 
                     /**
                      * 设置Database account permission information
-                     * @param Accounts Database account permission information
+                     * @param _accounts Database account permission information
+                     * 
                      */
                     void SetAccounts(const std::vector<AccountPrivilege>& _accounts);
 
                     /**
                      * 判断参数 Accounts 是否已赋值
                      * @return Accounts 是否已赋值
+                     * 
                      */
                     bool AccountsHasBeenSet() const;
 
                     /**
                      * 获取Internal status. ONLINE: running
                      * @return InternalStatus Internal status. ONLINE: running
+                     * 
                      */
                     std::string GetInternalStatus() const;
 
                     /**
                      * 设置Internal status. ONLINE: running
-                     * @param InternalStatus Internal status. ONLINE: running
+                     * @param _internalStatus Internal status. ONLINE: running
+                     * 
                      */
                     void SetInternalStatus(const std::string& _internalStatus);
 
                     /**
                      * 判断参数 InternalStatus 是否已赋值
                      * @return InternalStatus 是否已赋值
+                     * 
                      */
                     bool InternalStatusHasBeenSet() const;
 

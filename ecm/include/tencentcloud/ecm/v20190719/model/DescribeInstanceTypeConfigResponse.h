@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number
                      * @return TotalCount Total number
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return InstanceTypeConfigSet Model configuration information
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<InstanceTypeConfig> GetInstanceTypeConfigSet() const;
 
                     /**
                      * 判断参数 InstanceTypeConfigSet 是否已赋值
                      * @return InstanceTypeConfigSet 是否已赋值
+                     * 
                      */
                     bool InstanceTypeConfigSetHasBeenSet() const;
 

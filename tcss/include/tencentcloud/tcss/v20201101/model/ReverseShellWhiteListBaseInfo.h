@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Allowed item ID
                      * @return Id Allowed item ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Allowed item ID
-                     * @param Id Allowed item ID
+                     * @param _id Allowed item ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Number of images
                      * @return ImageCount Number of images
+                     * 
                      */
                     uint64_t GetImageCount() const;
 
                     /**
                      * 设置Number of images
-                     * @param ImageCount Number of images
+                     * @param _imageCount Number of images
+                     * 
                      */
                     void SetImageCount(const uint64_t& _imageCount);
 
                     /**
                      * 判断参数 ImageCount 是否已赋值
                      * @return ImageCount 是否已赋值
+                     * 
                      */
                     bool ImageCountHasBeenSet() const;
 
                     /**
                      * 获取Connection process name
                      * @return ProcessName Connection process name
+                     * 
                      */
                     std::string GetProcessName() const;
 
                     /**
                      * 设置Connection process name
-                     * @param ProcessName Connection process name
+                     * @param _processName Connection process name
+                     * 
                      */
                     void SetProcessName(const std::string& _processName);
 
                     /**
                      * 判断参数 ProcessName 是否已赋值
                      * @return ProcessName 是否已赋值
+                     * 
                      */
                     bool ProcessNameHasBeenSet() const;
 
                     /**
                      * 获取Destination address IP
                      * @return DstIp Destination address IP
+                     * 
                      */
                     std::string GetDstIp() const;
 
                     /**
                      * 设置Destination address IP
-                     * @param DstIp Destination address IP
+                     * @param _dstIp Destination address IP
+                     * 
                      */
                     void SetDstIp(const std::string& _dstIp);
 
                     /**
                      * 判断参数 DstIp 是否已赋值
                      * @return DstIp 是否已赋值
+                     * 
                      */
                     bool DstIpHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Target port
                      * @return DstPort Target port
+                     * 
                      */
                     std::string GetDstPort() const;
 
                     /**
                      * 设置Target port
-                     * @param DstPort Target port
+                     * @param _dstPort Target port
+                     * 
                      */
                     void SetDstPort(const std::string& _dstPort);
 
                     /**
                      * 判断参数 DstPort 是否已赋值
                      * @return DstPort 是否已赋值
+                     * 
                      */
                     bool DstPortHasBeenSet() const;
 
                     /**
                      * 获取Whether it is allowed globally. `true`: Yes.
                      * @return IsGlobal Whether it is allowed globally. `true`: Yes.
+                     * 
                      */
                     bool GetIsGlobal() const;
 
                     /**
                      * 设置Whether it is allowed globally. `true`: Yes.
-                     * @param IsGlobal Whether it is allowed globally. `true`: Yes.
+                     * @param _isGlobal Whether it is allowed globally. `true`: Yes.
+                     * 
                      */
                     void SetIsGlobal(const bool& _isGlobal);
 
                     /**
                      * 判断参数 IsGlobal 是否已赋值
                      * @return IsGlobal 是否已赋值
+                     * 
                      */
                     bool IsGlobalHasBeenSet() const;
 
                     /**
                      * 获取Array of image IDs. An empty array indicates all.
                      * @return ImageIds Array of image IDs. An empty array indicates all.
+                     * 
                      */
                     std::vector<std::string> GetImageIds() const;
 
                     /**
                      * 设置Array of image IDs. An empty array indicates all.
-                     * @param ImageIds Array of image IDs. An empty array indicates all.
+                     * @param _imageIds Array of image IDs. An empty array indicates all.
+                     * 
                      */
                     void SetImageIds(const std::vector<std::string>& _imageIds);
 
                     /**
                      * 判断参数 ImageIds 是否已赋值
                      * @return ImageIds 是否已赋值
+                     * 
                      */
                     bool ImageIdsHasBeenSet() const;
 

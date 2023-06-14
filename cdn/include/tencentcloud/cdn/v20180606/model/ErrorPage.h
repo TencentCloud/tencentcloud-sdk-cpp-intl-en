@@ -56,6 +56,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -64,16 +65,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Status code redirect configuration switch
+                     * @param _switch Status code redirect configuration switch
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -82,20 +85,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PageRules Status code redirect rules configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<ErrorPageRule> GetPageRules() const;
 
                     /**
                      * 设置Status code redirect rules configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PageRules Status code redirect rules configuration
+                     * @param _pageRules Status code redirect rules configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPageRules(const std::vector<ErrorPageRule>& _pageRules);
 
                     /**
                      * 判断参数 PageRules 是否已赋值
                      * @return PageRules 是否已赋值
+                     * 
                      */
                     bool PageRulesHasBeenSet() const;
 

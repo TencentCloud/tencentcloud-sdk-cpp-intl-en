@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Domain name to be enabled.
                      * @return Domain Domain name to be enabled.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name to be enabled.
-                     * @param Domain Domain name to be enabled.
+                     * @param _domain Domain name to be enabled.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 

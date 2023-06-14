@@ -59,6 +59,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `directory`: Effective by directory
 `path`: Effective by full access path
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -69,18 +70,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `directory`: Effective by directory
 `path`: Effective by full access path
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RuleType Effective access path type
+                     * @param _ruleType Effective access path type
 `all`: All access paths are effective
 `file`: Effective by file extension
 `directory`: Effective by directory
 `path`: Effective by full access path
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -89,20 +92,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RulePaths Effective access paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
                      * 设置Effective access paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RulePaths Effective access paths
+                     * @param _rulePaths Effective access paths
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 
@@ -111,20 +117,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UserAgents `UserAgent` list
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetUserAgents() const;
 
                     /**
                      * 设置`UserAgent` list
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UserAgents `UserAgent` list
+                     * @param _userAgents `UserAgent` list
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUserAgents(const std::vector<std::string>& _userAgents);
 
                     /**
                      * 判断参数 UserAgents 是否已赋值
                      * @return UserAgents 是否已赋值
+                     * 
                      */
                     bool UserAgentsHasBeenSet() const;
 
@@ -133,20 +142,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FilterType Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetFilterType() const;
 
                     /**
                      * 设置Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FilterType Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+                     * @param _filterType Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFilterType(const std::string& _filterType);
 
                     /**
                      * 判断参数 FilterType 是否已赋值
                      * @return FilterType 是否已赋值
+                     * 
                      */
                     bool FilterTypeHasBeenSet() const;
 

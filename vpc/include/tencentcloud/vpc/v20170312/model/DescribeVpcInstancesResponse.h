@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of CVM instances.
                      * @return InstanceSet List of CVM instances.
+                     * 
                      */
                     std::vector<CvmInstance> GetInstanceSet() const;
 
                     /**
                      * 判断参数 InstanceSet 是否已赋值
                      * @return InstanceSet 是否已赋值
+                     * 
                      */
                     bool InstanceSetHasBeenSet() const;
 
                     /**
                      * 获取The number of eligible CVM instances.
                      * @return TotalCount The number of eligible CVM instances.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

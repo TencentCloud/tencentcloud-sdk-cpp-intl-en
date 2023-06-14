@@ -57,6 +57,7 @@ namespace TencentCloud
 <li>`suspect_bot`: Suspected bot</li>
 <li>`good_bot`: Good bot</li>
 <li>`normal`: Normal request</li>
+                     * 
                      */
                     std::string GetLabel() const;
 
@@ -66,17 +67,19 @@ namespace TencentCloud
 <li>`suspect_bot`: Suspected bot</li>
 <li>`good_bot`: Good bot</li>
 <li>`normal`: Normal request</li>
-                     * @param Label The tag to categorize bots. Values:
+                     * @param _label The tag to categorize bots. Values:
 <li>`evil_bot`: Malicious bot</li>
 <li>`suspect_bot`: Suspected bot</li>
 <li>`good_bot`: Good bot</li>
 <li>`normal`: Normal request</li>
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -93,6 +96,7 @@ namespace TencentCloud
 <li>`alg`: JavaScript challenge</li>
 <li>`captcha`: Managed challenge</li>
 <li>`monitor`: Observe</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -103,18 +107,20 @@ namespace TencentCloud
 <li>`alg`: JavaScript challenge</li>
 <li>`captcha`: Managed challenge</li>
 <li>`monitor`: Observe</li>
-                     * @param Action The action taken on bots. Values
+                     * @param _action The action taken on bots. Values
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
 <li>`alg`: JavaScript challenge</li>
 <li>`captcha`: Managed challenge</li>
 <li>`monitor`: Observe</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 

@@ -52,92 +52,107 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LaunchTemplateVersion Instance launch template version number.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetLaunchTemplateVersion() const;
 
                     /**
                      * 设置Instance launch template version number.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LaunchTemplateVersion Instance launch template version number.
+                     * @param _launchTemplateVersion Instance launch template version number.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLaunchTemplateVersion(const uint64_t& _launchTemplateVersion);
 
                     /**
                      * 判断参数 LaunchTemplateVersion 是否已赋值
                      * @return LaunchTemplateVersion 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateVersionHasBeenSet() const;
 
                     /**
                      * 获取Details of instance launch template versions.
                      * @return LaunchTemplateVersionData Details of instance launch template versions.
+                     * 
                      */
                     LaunchTemplateVersionData GetLaunchTemplateVersionData() const;
 
                     /**
                      * 设置Details of instance launch template versions.
-                     * @param LaunchTemplateVersionData Details of instance launch template versions.
+                     * @param _launchTemplateVersionData Details of instance launch template versions.
+                     * 
                      */
                     void SetLaunchTemplateVersionData(const LaunchTemplateVersionData& _launchTemplateVersionData);
 
                     /**
                      * 判断参数 LaunchTemplateVersionData 是否已赋值
                      * @return LaunchTemplateVersionData 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateVersionDataHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the instance launch template version.
                      * @return CreationTime Creation time of the instance launch template version.
+                     * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
                      * 设置Creation time of the instance launch template version.
-                     * @param CreationTime Creation time of the instance launch template version.
+                     * @param _creationTime Creation time of the instance launch template version.
+                     * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
 
                     /**
                      * 判断参数 CreationTime 是否已赋值
                      * @return CreationTime 是否已赋值
+                     * 
                      */
                     bool CreationTimeHasBeenSet() const;
 
                     /**
                      * 获取Instance launch template ID.
                      * @return LaunchTemplateId Instance launch template ID.
+                     * 
                      */
                     std::string GetLaunchTemplateId() const;
 
                     /**
                      * 设置Instance launch template ID.
-                     * @param LaunchTemplateId Instance launch template ID.
+                     * @param _launchTemplateId Instance launch template ID.
+                     * 
                      */
                     void SetLaunchTemplateId(const std::string& _launchTemplateId);
 
                     /**
                      * 判断参数 LaunchTemplateId 是否已赋值
                      * @return LaunchTemplateId 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether it’s the default launch template version.
                      * @return IsDefaultVersion Specifies whether it’s the default launch template version.
+                     * 
                      */
                     bool GetIsDefaultVersion() const;
 
                     /**
                      * 设置Specifies whether it’s the default launch template version.
-                     * @param IsDefaultVersion Specifies whether it’s the default launch template version.
+                     * @param _isDefaultVersion Specifies whether it’s the default launch template version.
+                     * 
                      */
                     void SetIsDefaultVersion(const bool& _isDefaultVersion);
 
                     /**
                      * 判断参数 IsDefaultVersion 是否已赋值
                      * @return IsDefaultVersion 是否已赋值
+                     * 
                      */
                     bool IsDefaultVersionHasBeenSet() const;
 
@@ -146,38 +161,44 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return LaunchTemplateVersionDescription Information of instance launch template version description.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLaunchTemplateVersionDescription() const;
 
                     /**
                      * 设置Information of instance launch template version description.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param LaunchTemplateVersionDescription Information of instance launch template version description.
+                     * @param _launchTemplateVersionDescription Information of instance launch template version description.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLaunchTemplateVersionDescription(const std::string& _launchTemplateVersionDescription);
 
                     /**
                      * 判断参数 LaunchTemplateVersionDescription 是否已赋值
                      * @return LaunchTemplateVersionDescription 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateVersionDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Creator account
                      * @return CreatedBy Creator account
+                     * 
                      */
                     std::string GetCreatedBy() const;
 
                     /**
                      * 设置Creator account
-                     * @param CreatedBy Creator account
+                     * @param _createdBy Creator account
+                     * 
                      */
                     void SetCreatedBy(const std::string& _createdBy);
 
                     /**
                      * 判断参数 CreatedBy 是否已赋值
                      * @return CreatedBy 是否已赋值
+                     * 
                      */
                     bool CreatedByHasBeenSet() const;
 

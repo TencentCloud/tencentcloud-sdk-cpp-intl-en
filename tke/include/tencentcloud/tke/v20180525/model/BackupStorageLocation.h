@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Backup repository name	
                      * @return Name Backup repository name	
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Backup repository name	
-                     * @param Name Backup repository name	
+                     * @param _name Backup repository name	
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Repository region, such as `ap-guangzhou`	
                      * @return StorageRegion Repository region, such as `ap-guangzhou`	
+                     * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
                      * 设置Repository region, such as `ap-guangzhou`	
-                     * @param StorageRegion Repository region, such as `ap-guangzhou`	
+                     * @param _storageRegion Repository region, such as `ap-guangzhou`	
+                     * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
 
                     /**
                      * 判断参数 StorageRegion 是否已赋值
                      * @return StorageRegion 是否已赋值
+                     * 
                      */
                     bool StorageRegionHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return Provider The provider of storage service. It defaults to Tencent Cloud. 	
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProvider() const;
 
                     /**
                      * 设置The provider of storage service. It defaults to Tencent Cloud. 	
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param Provider The provider of storage service. It defaults to Tencent Cloud. 	
+                     * @param _provider The provider of storage service. It defaults to Tencent Cloud. 	
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProvider(const std::string& _provider);
 
                     /**
                      * 判断参数 Provider 是否已赋值
                      * @return Provider 是否已赋值
+                     * 
                      */
                     bool ProviderHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Bucket COS bucket name. For COS storage type, it must start with the prefix `tke-backup`. 	
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置COS bucket name. For COS storage type, it must start with the prefix `tke-backup`. 	
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Bucket COS bucket name. For COS storage type, it must start with the prefix `tke-backup`. 	
+                     * @param _bucket COS bucket name. For COS storage type, it must start with the prefix `tke-backup`. 	
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Path COS bucket path 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置COS bucket path 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Path COS bucket path 
+                     * @param _path COS bucket path 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return State Storage repository status 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetState() const;
 
                     /**
                      * 设置Storage repository status 
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param State Storage repository status 
+                     * @param _state Storage repository status 
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
@@ -175,20 +193,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Message Status information 	
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Status information 	
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Message Status information 	
+                     * @param _message Status information 	
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
@@ -197,20 +218,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return LastValidationTime Last checked time 	
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastValidationTime() const;
 
                     /**
                      * 设置Last checked time 	
 Note: This parameter may return null, indicating that no valid values can be obtained.
-                     * @param LastValidationTime Last checked time 	
+                     * @param _lastValidationTime Last checked time 	
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastValidationTime(const std::string& _lastValidationTime);
 
                     /**
                      * 判断参数 LastValidationTime 是否已赋值
                      * @return LastValidationTime 是否已赋值
+                     * 
                      */
                     bool LastValidationTimeHasBeenSet() const;
 

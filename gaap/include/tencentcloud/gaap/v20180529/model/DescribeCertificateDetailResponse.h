@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Certificate Details.
                      * @return CertificateDetail Certificate Details.
+                     * 
                      */
                     CertificateDetail GetCertificateDetail() const;
 
                     /**
                      * 判断参数 CertificateDetail 是否已赋值
                      * @return CertificateDetail 是否已赋值
+                     * 
                      */
                     bool CertificateDetailHasBeenSet() const;
 

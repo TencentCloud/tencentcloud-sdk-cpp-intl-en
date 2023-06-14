@@ -52,74 +52,86 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return ConfigManual Metric configuration.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     DescribePolicyConditionListConfigManual GetConfigManual() const;
 
                     /**
                      * 设置Metric configuration.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param ConfigManual Metric configuration.
+                     * @param _configManual Metric configuration.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetConfigManual(const DescribePolicyConditionListConfigManual& _configManual);
 
                     /**
                      * 判断参数 ConfigManual 是否已赋值
                      * @return ConfigManual 是否已赋值
+                     * 
                      */
                     bool ConfigManualHasBeenSet() const;
 
                     /**
                      * 获取Metric ID.
                      * @return MetricId Metric ID.
+                     * 
                      */
                     int64_t GetMetricId() const;
 
                     /**
                      * 设置Metric ID.
-                     * @param MetricId Metric ID.
+                     * @param _metricId Metric ID.
+                     * 
                      */
                     void SetMetricId(const int64_t& _metricId);
 
                     /**
                      * 判断参数 MetricId 是否已赋值
                      * @return MetricId 是否已赋值
+                     * 
                      */
                     bool MetricIdHasBeenSet() const;
 
                     /**
                      * 获取Metric name.
                      * @return MetricShowName Metric name.
+                     * 
                      */
                     std::string GetMetricShowName() const;
 
                     /**
                      * 设置Metric name.
-                     * @param MetricShowName Metric name.
+                     * @param _metricShowName Metric name.
+                     * 
                      */
                     void SetMetricShowName(const std::string& _metricShowName);
 
                     /**
                      * 判断参数 MetricShowName 是否已赋值
                      * @return MetricShowName 是否已赋值
+                     * 
                      */
                     bool MetricShowNameHasBeenSet() const;
 
                     /**
                      * 获取Metric unit.
                      * @return MetricUnit Metric unit.
+                     * 
                      */
                     std::string GetMetricUnit() const;
 
                     /**
                      * 设置Metric unit.
-                     * @param MetricUnit Metric unit.
+                     * @param _metricUnit Metric unit.
+                     * 
                      */
                     void SetMetricUnit(const std::string& _metricUnit);
 
                     /**
                      * 判断参数 MetricUnit 是否已赋值
                      * @return MetricUnit 是否已赋值
+                     * 
                      */
                     bool MetricUnitHasBeenSet() const;
 

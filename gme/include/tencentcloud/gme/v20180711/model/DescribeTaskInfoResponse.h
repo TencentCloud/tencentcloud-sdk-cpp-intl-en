@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId ID of the ongoing task, which is returned from the `StartRecord` API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordMode Recording mode. Valid values: `1`: single stream; `2`: mixed streams; `3`: single stream and mixed streams.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRecordMode() const;
 
                     /**
                      * 判断参数 RecordMode 是否已赋值
                      * @return RecordMode 是否已赋值
+                     * 
                      */
                     bool RecordModeHasBeenSet() const;
 
@@ -77,12 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubscribeRecordUserIds Allowlist or blocklist for stream subscription.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SubscribeRecordUserIds GetSubscribeRecordUserIds() const;
 
                     /**
                      * 判断参数 SubscribeRecordUserIds 是否已赋值
                      * @return SubscribeRecordUserIds 是否已赋值
+                     * 
                      */
                     bool SubscribeRecordUserIdsHasBeenSet() const;
 

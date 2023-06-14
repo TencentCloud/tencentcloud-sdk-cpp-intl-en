@@ -57,20 +57,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DdosStatusInfo DDoS mitigation level
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DDoSStatusInfo GetDdosStatusInfo() const;
 
                     /**
                      * 设置DDoS mitigation level
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DdosStatusInfo DDoS mitigation level
+                     * @param _ddosStatusInfo DDoS mitigation level
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDdosStatusInfo(const DDoSStatusInfo& _ddosStatusInfo);
 
                     /**
                      * 判断参数 DdosStatusInfo 是否已赋值
                      * @return DdosStatusInfo 是否已赋值
+                     * 
                      */
                     bool DdosStatusInfoHasBeenSet() const;
 
@@ -79,20 +82,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DdosGeoIp DDoS regional blocking
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DDoSGeoIp GetDdosGeoIp() const;
 
                     /**
                      * 设置DDoS regional blocking
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DdosGeoIp DDoS regional blocking
+                     * @param _ddosGeoIp DDoS regional blocking
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDdosGeoIp(const DDoSGeoIp& _ddosGeoIp);
 
                     /**
                      * 判断参数 DdosGeoIp 是否已赋值
                      * @return DdosGeoIp 是否已赋值
+                     * 
                      */
                     bool DdosGeoIpHasBeenSet() const;
 
@@ -101,20 +107,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DdosAllowBlock DDoS blocklist/allowlist
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DdosAllowBlock GetDdosAllowBlock() const;
 
                     /**
                      * 设置DDoS blocklist/allowlist
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DdosAllowBlock DDoS blocklist/allowlist
+                     * @param _ddosAllowBlock DDoS blocklist/allowlist
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDdosAllowBlock(const DdosAllowBlock& _ddosAllowBlock);
 
                     /**
                      * 判断参数 DdosAllowBlock 是否已赋值
                      * @return DdosAllowBlock 是否已赋值
+                     * 
                      */
                     bool DdosAllowBlockHasBeenSet() const;
 
@@ -123,20 +132,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DdosAntiPly Protocol blocking and null session protection
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DDoSAntiPly GetDdosAntiPly() const;
 
                     /**
                      * 设置Protocol blocking and null session protection
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DdosAntiPly Protocol blocking and null session protection
+                     * @param _ddosAntiPly Protocol blocking and null session protection
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDdosAntiPly(const DDoSAntiPly& _ddosAntiPly);
 
                     /**
                      * 判断参数 DdosAntiPly 是否已赋值
                      * @return DdosAntiPly 是否已赋值
+                     * 
                      */
                     bool DdosAntiPlyHasBeenSet() const;
 
@@ -145,20 +157,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DdosPacketFilter DDoS feature filtering
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DdosPacketFilter GetDdosPacketFilter() const;
 
                     /**
                      * 设置DDoS feature filtering
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DdosPacketFilter DDoS feature filtering
+                     * @param _ddosPacketFilter DDoS feature filtering
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDdosPacketFilter(const DdosPacketFilter& _ddosPacketFilter);
 
                     /**
                      * 判断参数 DdosPacketFilter 是否已赋值
                      * @return DdosPacketFilter 是否已赋值
+                     * 
                      */
                     bool DdosPacketFilterHasBeenSet() const;
 
@@ -167,20 +182,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return DdosAcl DDoS port filtering
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     DdosAcls GetDdosAcl() const;
 
                     /**
                      * 设置DDoS port filtering
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DdosAcl DDoS port filtering
+                     * @param _ddosAcl DDoS port filtering
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDdosAcl(const DdosAcls& _ddosAcl);
 
                     /**
                      * 判断参数 DdosAcl 是否已赋值
                      * @return DdosAcl 是否已赋值
+                     * 
                      */
                     bool DdosAclHasBeenSet() const;
 
@@ -189,20 +207,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch DDoS mitigation switch. `on`: Enable; `off`: Disable.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置DDoS mitigation switch. `on`: Enable; `off`: Disable.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch DDoS mitigation switch. `on`: Enable; `off`: Disable.
+                     * @param _switch DDoS mitigation switch. `on`: Enable; `off`: Disable.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -211,20 +232,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UdpShardOpen Whether to enable UDP fragmentation. `on`: Enable; `off`: Disable.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUdpShardOpen() const;
 
                     /**
                      * 设置Whether to enable UDP fragmentation. `on`: Enable; `off`: Disable.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UdpShardOpen Whether to enable UDP fragmentation. `on`: Enable; `off`: Disable.
+                     * @param _udpShardOpen Whether to enable UDP fragmentation. `on`: Enable; `off`: Disable.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUdpShardOpen(const std::string& _udpShardOpen);
 
                     /**
                      * 判断参数 UdpShardOpen 是否已赋值
                      * @return UdpShardOpen 是否已赋值
+                     * 
                      */
                     bool UdpShardOpenHasBeenSet() const;
 

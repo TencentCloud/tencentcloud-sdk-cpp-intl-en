@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取List of rules
                      * @return Rules List of rules
+                     * 
                      */
                     std::vector<L7RuleEntry> GetRules() const;
 
                     /**
                      * 设置List of rules
-                     * @param Rules List of rules
+                     * @param _rules List of rules
+                     * 
                      */
                     void SetRules(const std::vector<L7RuleEntry>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
                      * @return Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
-                     * @param Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * @param _business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取List of resource IDs
                      * @return IdList List of resource IDs
+                     * 
                      */
                     std::vector<std::string> GetIdList() const;
 
                     /**
                      * 设置List of resource IDs
-                     * @param IdList List of resource IDs
+                     * @param _idList List of resource IDs
+                     * 
                      */
                     void SetIdList(const std::vector<std::string>& _idList);
 
                     /**
                      * 判断参数 IdList 是否已赋值
                      * @return IdList 是否已赋值
+                     * 
                      */
                     bool IdListHasBeenSet() const;
 
                     /**
                      * 获取List of resource IPs
                      * @return VipList List of resource IPs
+                     * 
                      */
                     std::vector<std::string> GetVipList() const;
 
                     /**
                      * 设置List of resource IPs
-                     * @param VipList List of resource IPs
+                     * @param _vipList List of resource IPs
+                     * 
                      */
                     void SetVipList(const std::vector<std::string>& _vipList);
 
                     /**
                      * 判断参数 VipList 是否已赋值
                      * @return VipList 是否已赋值
+                     * 
                      */
                     bool VipListHasBeenSet() const;
 

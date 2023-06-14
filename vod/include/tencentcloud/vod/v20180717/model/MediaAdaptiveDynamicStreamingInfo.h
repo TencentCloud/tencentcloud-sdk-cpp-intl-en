@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AdaptiveDynamicStreamingSet Information array of adaptive bitrate streaming.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AdaptiveDynamicStreamingInfoItem> GetAdaptiveDynamicStreamingSet() const;
 
                     /**
                      * 设置Information array of adaptive bitrate streaming.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AdaptiveDynamicStreamingSet Information array of adaptive bitrate streaming.
+                     * @param _adaptiveDynamicStreamingSet Information array of adaptive bitrate streaming.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingSet(const std::vector<AdaptiveDynamicStreamingInfoItem>& _adaptiveDynamicStreamingSet);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingSet 是否已赋值
                      * @return AdaptiveDynamicStreamingSet 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingSetHasBeenSet() const;
 

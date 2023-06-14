@@ -49,12 +49,14 @@ namespace TencentCloud
                     /**
                      * 获取You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
                      * @return Context You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
+                     * 
                      */
                     std::string GetContext() const;
 
                     /**
                      * 判断参数 Context 是否已赋值
                      * @return Context 是否已赋值
+                     * 
                      */
                     bool ContextHasBeenSet() const;
 
@@ -63,24 +65,28 @@ namespace TencentCloud
 Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
                      * @return ListOver Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
 Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+                     * 
                      */
                     bool GetListOver() const;
 
                     /**
                      * 判断参数 ListOver 是否已赋值
                      * @return ListOver 是否已赋值
+                     * 
                      */
                     bool ListOverHasBeenSet() const;
 
                     /**
                      * 获取Whether the returned data is the analysis (SQL) result
                      * @return Analysis Whether the returned data is the analysis (SQL) result
+                     * 
                      */
                     bool GetAnalysis() const;
 
                     /**
                      * 判断参数 Analysis 是否已赋值
                      * @return Analysis 是否已赋值
+                     * 
                      */
                     bool AnalysisHasBeenSet() const;
 
@@ -89,12 +95,14 @@ Note: This parameter is valid only when the query statement (`Query`) does not c
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Results Raw logs that meet the search conditions
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<LogInfo> GetResults() const;
 
                     /**
                      * 判断参数 Results 是否已赋值
                      * @return Results 是否已赋值
+                     * 
                      */
                     bool ResultsHasBeenSet() const;
 
@@ -105,12 +113,14 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return ColNames Column names of log analysis
 This parameter is valid only when `UseNewAnalysis` is `false`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetColNames() const;
 
                     /**
                      * 判断参数 ColNames 是否已赋值
                      * @return ColNames 是否已赋值
+                     * 
                      */
                     bool ColNamesHasBeenSet() const;
 
@@ -121,12 +131,14 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return AnalysisResults Log analysis result
 This parameter is valid only when `UseNewAnalysis` is `false`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<LogItems> GetAnalysisResults() const;
 
                     /**
                      * 判断参数 AnalysisResults 是否已赋值
                      * @return AnalysisResults 是否已赋值
+                     * 
                      */
                     bool AnalysisResultsHasBeenSet() const;
 
@@ -137,12 +149,14 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return AnalysisRecords Log analysis result
 This parameter is valid only when `UseNewAnalysis` is `true`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetAnalysisRecords() const;
 
                     /**
                      * 判断参数 AnalysisRecords 是否已赋值
                      * @return AnalysisRecords 是否已赋值
+                     * 
                      */
                     bool AnalysisRecordsHasBeenSet() const;
 
@@ -153,12 +167,14 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return Columns Column attributes of log analysis
 This parameter is valid only when `UseNewAnalysis` is `true`.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<Column> GetColumns() const;
 
                     /**
                      * 判断参数 Columns 是否已赋值
                      * @return Columns 是否已赋值
+                     * 
                      */
                     bool ColumnsHasBeenSet() const;
 
@@ -167,12 +183,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SamplingRate Sample rate used in this statistical analysis
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetSamplingRate() const;
 
                     /**
                      * 判断参数 SamplingRate 是否已赋值
                      * @return SamplingRate 是否已赋值
+                     * 
                      */
                     bool SamplingRateHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Timestamp SQL execution time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTimestamp() const;
 
                     /**
                      * 设置SQL execution time.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Timestamp SQL execution time.
+                     * @param _timestamp SQL execution time.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimestamp(const uint64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return QueryTime SQL execution duration in seconds.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetQueryTime() const;
 
                     /**
                      * 设置SQL execution duration in seconds.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param QueryTime SQL execution duration in seconds.
+                     * @param _queryTime SQL execution duration in seconds.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetQueryTime(const double& _queryTime);
 
                     /**
                      * 判断参数 QueryTime 是否已赋值
                      * @return QueryTime 是否已赋值
+                     * 
                      */
                     bool QueryTimeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SqlText SQL statement.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSqlText() const;
 
                     /**
                      * 设置SQL statement.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SqlText SQL statement.
+                     * @param _sqlText SQL statement.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSqlText(const std::string& _sqlText);
 
                     /**
                      * 判断参数 SqlText 是否已赋值
                      * @return SqlText 是否已赋值
+                     * 
                      */
                     bool SqlTextHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserHost Client address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserHost() const;
 
                     /**
                      * 设置Client address.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserHost Client address.
+                     * @param _userHost Client address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserHost(const std::string& _userHost);
 
                     /**
                      * 判断参数 UserHost 是否已赋值
                      * @return UserHost 是否已赋值
+                     * 
                      */
                     bool UserHostHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserName Username.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserName Username.
+                     * @param _userName Username.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Database Database name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatabase() const;
 
                     /**
                      * 设置Database name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Database Database name.
+                     * @param _database Database name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabase(const std::string& _database);
 
                     /**
                      * 判断参数 Database 是否已赋值
                      * @return Database 是否已赋值
+                     * 
                      */
                     bool DatabaseHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return LockTime Lock duration in seconds.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetLockTime() const;
 
                     /**
                      * 设置Lock duration in seconds.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param LockTime Lock duration in seconds.
+                     * @param _lockTime Lock duration in seconds.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLockTime(const double& _lockTime);
 
                     /**
                      * 判断参数 LockTime 是否已赋值
                      * @return LockTime 是否已赋值
+                     * 
                      */
                     bool LockTimeHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RowsExamined Number of scanned rows.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRowsExamined() const;
 
                     /**
                      * 设置Number of scanned rows.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RowsExamined Number of scanned rows.
+                     * @param _rowsExamined Number of scanned rows.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRowsExamined(const int64_t& _rowsExamined);
 
                     /**
                      * 判断参数 RowsExamined 是否已赋值
                      * @return RowsExamined 是否已赋值
+                     * 
                      */
                     bool RowsExaminedHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RowsSent Number of rows in result set.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRowsSent() const;
 
                     /**
                      * 设置Number of rows in result set.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RowsSent Number of rows in result set.
+                     * @param _rowsSent Number of rows in result set.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRowsSent(const int64_t& _rowsSent);
 
                     /**
                      * 判断参数 RowsSent 是否已赋值
                      * @return RowsSent 是否已赋值
+                     * 
                      */
                     bool RowsSentHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SqlTemplate SQL template.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSqlTemplate() const;
 
                     /**
                      * 设置SQL template.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SqlTemplate SQL template.
+                     * @param _sqlTemplate SQL template.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSqlTemplate(const std::string& _sqlTemplate);
 
                     /**
                      * 判断参数 SqlTemplate 是否已赋值
                      * @return SqlTemplate 是否已赋值
+                     * 
                      */
                     bool SqlTemplateHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Md5 SQL statement MD5.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMd5() const;
 
                     /**
                      * 设置SQL statement MD5.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Md5 SQL statement MD5.
+                     * @param _md5 SQL statement MD5.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMd5(const std::string& _md5);
 
                     /**
                      * 判断参数 Md5 是否已赋值
                      * @return Md5 是否已赋值
+                     * 
                      */
                     bool Md5HasBeenSet() const;
 

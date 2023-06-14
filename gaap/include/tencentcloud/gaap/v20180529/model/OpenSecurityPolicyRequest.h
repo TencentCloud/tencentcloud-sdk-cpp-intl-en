@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the connections requiring enabled security policies.
                      * @return ProxyId ID of the connections requiring enabled security policies.
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置ID of the connections requiring enabled security policies.
-                     * @param ProxyId ID of the connections requiring enabled security policies.
+                     * @param _proxyId ID of the connections requiring enabled security policies.
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
                     /**
                      * 获取Security policy ID
                      * @return PolicyId Security policy ID
+                     * 
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Security policy ID
-                     * @param PolicyId Security policy ID
+                     * @param _policyId Security policy ID
+                     * 
                      */
                     void SetPolicyId(const std::string& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 

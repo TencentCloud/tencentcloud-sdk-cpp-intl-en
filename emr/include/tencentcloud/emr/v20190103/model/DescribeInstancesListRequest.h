@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
                      * @return DisplayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+                     * 
                      */
                     std::string GetDisplayStrategy() const;
 
                     /**
                      * 设置Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
-                     * @param DisplayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+                     * @param _displayStrategy Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+                     * 
                      */
                     void SetDisplayStrategy(const std::string& _displayStrategy);
 
                     /**
                      * 判断参数 DisplayStrategy 是否已赋值
                      * @return DisplayStrategy 是否已赋值
+                     * 
                      */
                     bool DisplayStrategyHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: `0`, indicating the first page.
                      * @return Offset Page number. Default value: `0`, indicating the first page.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: `0`, indicating the first page.
-                     * @param Offset Page number. Default value: `0`, indicating the first page.
+                     * @param _offset Page number. Default value: `0`, indicating the first page.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results per page. Default value: `10`; maximum value: `100`.
                      * @return Limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results per page. Default value: `10`; maximum value: `100`.
-                     * @param Limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+                     * @param _limit Number of returned results per page. Default value: `10`; maximum value: `100`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
                      * @return OrderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+                     * 
                      */
                     std::string GetOrderField() const;
 
                     /**
                      * 设置Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
-                     * @param OrderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+                     * @param _orderField Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+                     * 
                      */
                     void SetOrderField(const std::string& _orderField);
 
                     /**
                      * 判断参数 OrderField 是否已赋值
                      * @return OrderField 是否已赋值
+                     * 
                      */
                     bool OrderFieldHasBeenSet() const;
 
                     /**
                      * 获取Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
                      * @return Asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+                     * 
                      */
                     int64_t GetAsc() const;
 
                     /**
                      * 设置Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
-                     * @param Asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+                     * @param _asc Sort ascending or descending based on `OrderField`. Valid values:<li>0: Descending.</li><li>1: Ascending.</li>Default value: `0`.
+                     * 
                      */
                     void SetAsc(const int64_t& _asc);
 
                     /**
                      * 判断参数 Asc 是否已赋值
                      * @return Asc 是否已赋值
+                     * 
                      */
                     bool AscHasBeenSet() const;
 
                     /**
                      * 获取Custom query
                      * @return Filters Custom query
+                     * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
                      * 设置Custom query
-                     * @param Filters Custom query
+                     * @param _filters Custom query
+                     * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the recording task.
                      * @return OnlineRecordTaskId ID of the recording task.
+                     * 
                      */
                     std::string GetOnlineRecordTaskId() const;
 
                     /**
                      * 设置ID of the recording task.
-                     * @param OnlineRecordTaskId ID of the recording task.
+                     * @param _onlineRecordTaskId ID of the recording task.
+                     * 
                      */
                     void SetOnlineRecordTaskId(const std::string& _onlineRecordTaskId);
 
                     /**
                      * 判断参数 OnlineRecordTaskId 是否已赋值
                      * @return OnlineRecordTaskId 是否已赋值
+                     * 
                      */
                     bool OnlineRecordTaskIdHasBeenSet() const;
 
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
@@ -89,6 +95,7 @@ This parameter conflicts with the Whiteboard parameter in the API for starting a
                      * @return Whiteboard Whiteboard parameters of the recording video generation task, such as the width and height of the whiteboard.
 
 This parameter conflicts with the Whiteboard parameter in the API for starting a recording task. If the two Whiteboard parameters are both specified, the Whiteboard parameter in this API takes priority for recording video generation. If the Whiteboard parameter in this API is not specified, the Whiteboard parameter specified in the API for starting a recording task is used for recording video generation.
+                     * 
                      */
                     Whiteboard GetWhiteboard() const;
 
@@ -96,15 +103,17 @@ This parameter conflicts with the Whiteboard parameter in the API for starting a
                      * 设置Whiteboard parameters of the recording video generation task, such as the width and height of the whiteboard.
 
 This parameter conflicts with the Whiteboard parameter in the API for starting a recording task. If the two Whiteboard parameters are both specified, the Whiteboard parameter in this API takes priority for recording video generation. If the Whiteboard parameter in this API is not specified, the Whiteboard parameter specified in the API for starting a recording task is used for recording video generation.
-                     * @param Whiteboard Whiteboard parameters of the recording video generation task, such as the width and height of the whiteboard.
+                     * @param _whiteboard Whiteboard parameters of the recording video generation task, such as the width and height of the whiteboard.
 
 This parameter conflicts with the Whiteboard parameter in the API for starting a recording task. If the two Whiteboard parameters are both specified, the Whiteboard parameter in this API takes priority for recording video generation. If the Whiteboard parameter in this API is not specified, the Whiteboard parameter specified in the API for starting a recording task is used for recording video generation.
+                     * 
                      */
                     void SetWhiteboard(const Whiteboard& _whiteboard);
 
                     /**
                      * 判断参数 Whiteboard 是否已赋值
                      * @return Whiteboard 是否已赋值
+                     * 
                      */
                     bool WhiteboardHasBeenSet() const;
 
@@ -115,6 +124,7 @@ This parameter conflicts with the Concat parameter in the API for starting a rec
                      * @return Concat Video splicing parameters.
 
 This parameter conflicts with the Concat parameter in the API for starting a recording task. If the two Concat parameters are both specified, the Concat parameter in this API takes priority for video splicing. If the Concat parameter in this API is not specified, the Concat parameter specified in the API for starting a recording task is used for video splicing.
+                     * 
                      */
                     Concat GetConcat() const;
 
@@ -122,15 +132,17 @@ This parameter conflicts with the Concat parameter in the API for starting a rec
                      * 设置Video splicing parameters.
 
 This parameter conflicts with the Concat parameter in the API for starting a recording task. If the two Concat parameters are both specified, the Concat parameter in this API takes priority for video splicing. If the Concat parameter in this API is not specified, the Concat parameter specified in the API for starting a recording task is used for video splicing.
-                     * @param Concat Video splicing parameters.
+                     * @param _concat Video splicing parameters.
 
 This parameter conflicts with the Concat parameter in the API for starting a recording task. If the two Concat parameters are both specified, the Concat parameter in this API takes priority for video splicing. If the Concat parameter in this API is not specified, the Concat parameter specified in the API for starting a recording task is used for video splicing.
+                     * 
                      */
                     void SetConcat(const Concat& _concat);
 
                     /**
                      * 判断参数 Concat 是否已赋值
                      * @return Concat 是否已赋值
+                     * 
                      */
                     bool ConcatHasBeenSet() const;
 
@@ -141,6 +153,7 @@ This parameter conflicts with the MixStream parameter in the API for starting a 
                      * @return MixStream Video stream mixing parameters.
 
 This parameter conflicts with the MixStream parameter in the API for starting a recording task. If the two MixStream parameters are both specified, the MixStream parameter in this API takes priority for video stream mixing. If the MixStream parameter in this API is not specified, the MixStream parameter specified in the API for starting a recording task is used for video stream mixing.
+                     * 
                      */
                     MixStream GetMixStream() const;
 
@@ -148,15 +161,17 @@ This parameter conflicts with the MixStream parameter in the API for starting a 
                      * 设置Video stream mixing parameters.
 
 This parameter conflicts with the MixStream parameter in the API for starting a recording task. If the two MixStream parameters are both specified, the MixStream parameter in this API takes priority for video stream mixing. If the MixStream parameter in this API is not specified, the MixStream parameter specified in the API for starting a recording task is used for video stream mixing.
-                     * @param MixStream Video stream mixing parameters.
+                     * @param _mixStream Video stream mixing parameters.
 
 This parameter conflicts with the MixStream parameter in the API for starting a recording task. If the two MixStream parameters are both specified, the MixStream parameter in this API takes priority for video stream mixing. If the MixStream parameter in this API is not specified, the MixStream parameter specified in the API for starting a recording task is used for video stream mixing.
+                     * 
                      */
                     void SetMixStream(const MixStream& _mixStream);
 
                     /**
                      * 判断参数 MixStream 是否已赋值
                      * @return MixStream 是否已赋值
+                     * 
                      */
                     bool MixStreamHasBeenSet() const;
 
@@ -167,6 +182,7 @@ This parameter conflicts with the RecordControl parameter in the API for startin
                      * @return RecordControl A group of video generation parameters. It specifies the streams to be generated, whether to disable audio recording for a stream, and whether to record only low-resolution videos, etc.
 
 This parameter conflicts with the RecordControl parameter in the API for starting a recording task. If the two RecordControl parameters are both specified, the RecordControl parameter in this API takes priority for video generation control. If the RecordControl parameter in this API is not specified, the RecordControl parameter specified in the API for starting a recording task is used for video generation control.
+                     * 
                      */
                     RecordControl GetRecordControl() const;
 
@@ -174,33 +190,38 @@ This parameter conflicts with the RecordControl parameter in the API for startin
                      * 设置A group of video generation parameters. It specifies the streams to be generated, whether to disable audio recording for a stream, and whether to record only low-resolution videos, etc.
 
 This parameter conflicts with the RecordControl parameter in the API for starting a recording task. If the two RecordControl parameters are both specified, the RecordControl parameter in this API takes priority for video generation control. If the RecordControl parameter in this API is not specified, the RecordControl parameter specified in the API for starting a recording task is used for video generation control.
-                     * @param RecordControl A group of video generation parameters. It specifies the streams to be generated, whether to disable audio recording for a stream, and whether to record only low-resolution videos, etc.
+                     * @param _recordControl A group of video generation parameters. It specifies the streams to be generated, whether to disable audio recording for a stream, and whether to record only low-resolution videos, etc.
 
 This parameter conflicts with the RecordControl parameter in the API for starting a recording task. If the two RecordControl parameters are both specified, the RecordControl parameter in this API takes priority for video generation control. If the RecordControl parameter in this API is not specified, the RecordControl parameter specified in the API for starting a recording task is used for video generation control.
+                     * 
                      */
                     void SetRecordControl(const RecordControl& _recordControl);
 
                     /**
                      * 判断参数 RecordControl 是否已赋值
                      * @return RecordControl 是否已赋值
+                     * 
                      */
                     bool RecordControlHasBeenSet() const;
 
                     /**
                      * 获取Internal parameter.
                      * @return ExtraData Internal parameter.
+                     * 
                      */
                     std::string GetExtraData() const;
 
                     /**
                      * 设置Internal parameter.
-                     * @param ExtraData Internal parameter.
+                     * @param _extraData Internal parameter.
+                     * 
                      */
                     void SetExtraData(const std::string& _extraData);
 
                     /**
                      * 判断参数 ExtraData 是否已赋值
                      * @return ExtraData 是否已赋值
+                     * 
                      */
                     bool ExtraDataHasBeenSet() const;
 

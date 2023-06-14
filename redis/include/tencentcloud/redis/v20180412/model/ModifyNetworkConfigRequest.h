@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
 - `changeVpc`: Subnet change.
 - `changeBaseToVpc`: Change from classic network to VPC.
 - `changeVPort`: Port change.
+                     * 
                      */
                     std::string GetOperation() const;
 
@@ -80,71 +84,82 @@ namespace TencentCloud
 - `changeVpc`: Subnet change.
 - `changeBaseToVpc`: Change from classic network to VPC.
 - `changeVPort`: Port change.
-                     * @param Operation Network change type. Valid values:
+                     * @param _operation Network change type. Valid values:
 - `changeVip`: VPC change, including the private IPv4 address and port.
 - `changeVpc`: Subnet change.
 - `changeBaseToVpc`: Change from classic network to VPC.
 - `changeVPort`: Port change.
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
                     /**
                      * 获取Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
                      * @return Vip Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
-                     * @param Vip Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
+                     * @param _vip Private IPv4 address of the instance, which is required if `Operation` is `changeVip`.
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
                      * @return VpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-                     * @param VpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * @param _vpcId VPC ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
                      * @return SubnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
-                     * @param SubnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * @param _subnetId Subnet ID after the change, which is required if `Operation` is `changeVpc` or `changeBaseToVpc`.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
@@ -159,6 +174,7 @@ namespace TencentCloud
 - Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
 
 **Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+                     * 
                      */
                     int64_t GetRecycle() const;
 
@@ -168,35 +184,40 @@ namespace TencentCloud
 - Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
 
 **Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
-                     * @param Recycle Retention period of the original private IPv4 address
+                     * @param _recycle Retention period of the original private IPv4 address
 - Unit: Days.
 - Valid values: `0`, `1`, `2`, `3`, `7`, `15`.
 
 **Note**: You can set the retention period of the original address only in the latest SDK. In earlier SDKs, the original address is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+                     * 
                      */
                     void SetRecycle(const int64_t& _recycle);
 
                     /**
                      * 判断参数 Recycle 是否已赋值
                      * @return Recycle 是否已赋值
+                     * 
                      */
                     bool RecycleHasBeenSet() const;
 
                     /**
                      * 获取Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
                      * @return VPort Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
+                     * 
                      */
                     int64_t GetVPort() const;
 
                     /**
                      * 设置Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
-                     * @param VPort Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
+                     * @param _vPort Network port after the change, which is required if `Operation` is `changeVPort` or `changeVip`. Value range: [1024,65535].
+                     * 
                      */
                     void SetVPort(const int64_t& _vPort);
 
                     /**
                      * 判断参数 VPort 是否已赋值
                      * @return VPort 是否已赋值
+                     * 
                      */
                     bool VPortHasBeenSet() const;
 

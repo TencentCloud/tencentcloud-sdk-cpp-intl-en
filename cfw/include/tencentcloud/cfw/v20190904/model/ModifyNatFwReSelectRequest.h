@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Mode. 1: use existing; 0: create new
                      * @return Mode Mode. 1: use existing; 0: create new
+                     * 
                      */
                     int64_t GetMode() const;
 
                     /**
                      * 设置Mode. 1: use existing; 0: create new
-                     * @param Mode Mode. 1: use existing; 0: create new
+                     * @param _mode Mode. 1: use existing; 0: create new
+                     * 
                      */
                     void SetMode(const int64_t& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Firewall instance ID
                      * @return CfwInstance Firewall instance ID
+                     * 
                      */
                     std::string GetCfwInstance() const;
 
                     /**
                      * 设置Firewall instance ID
-                     * @param CfwInstance Firewall instance ID
+                     * @param _cfwInstance Firewall instance ID
+                     * 
                      */
                     void SetCfwInstance(const std::string& _cfwInstance);
 
                     /**
                      * 判断参数 CfwInstance 是否已赋值
                      * @return CfwInstance 是否已赋值
+                     * 
                      */
                     bool CfwInstanceHasBeenSet() const;
 
                     /**
                      * 获取List of NAT gateways reconnected for the Using Existing mode. Only one of NatGwList and VpcList can be passed.
                      * @return NatGwList List of NAT gateways reconnected for the Using Existing mode. Only one of NatGwList and VpcList can be passed.
+                     * 
                      */
                     std::vector<std::string> GetNatGwList() const;
 
                     /**
                      * 设置List of NAT gateways reconnected for the Using Existing mode. Only one of NatGwList and VpcList can be passed.
-                     * @param NatGwList List of NAT gateways reconnected for the Using Existing mode. Only one of NatGwList and VpcList can be passed.
+                     * @param _natGwList List of NAT gateways reconnected for the Using Existing mode. Only one of NatGwList and VpcList can be passed.
+                     * 
                      */
                     void SetNatGwList(const std::vector<std::string>& _natGwList);
 
                     /**
                      * 判断参数 NatGwList 是否已赋值
                      * @return NatGwList 是否已赋值
+                     * 
                      */
                     bool NatGwListHasBeenSet() const;
 
                     /**
                      * 获取List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
                      * @return VpcList List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
+                     * 
                      */
                     std::vector<std::string> GetVpcList() const;
 
                     /**
                      * 设置List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
-                     * @param VpcList List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
+                     * @param _vpcList List of VPCs reconnected for the Create New mode. Only one of NatGwList and VpcList can be passed.
+                     * 
                      */
                     void SetVpcList(const std::vector<std::string>& _vpcList);
 
                     /**
                      * 判断参数 VpcList 是否已赋值
                      * @return VpcList 是否已赋值
+                     * 
                      */
                     bool VpcListHasBeenSet() const;
 
                     /**
                      * 获取IP range of the firewall
                      * @return FwCidrInfo IP range of the firewall
+                     * 
                      */
                     FwCidrInfo GetFwCidrInfo() const;
 
                     /**
                      * 设置IP range of the firewall
-                     * @param FwCidrInfo IP range of the firewall
+                     * @param _fwCidrInfo IP range of the firewall
+                     * 
                      */
                     void SetFwCidrInfo(const FwCidrInfo& _fwCidrInfo);
 
                     /**
                      * 判断参数 FwCidrInfo 是否已赋值
                      * @return FwCidrInfo 是否已赋值
+                     * 
                      */
                     bool FwCidrInfoHasBeenSet() const;
 

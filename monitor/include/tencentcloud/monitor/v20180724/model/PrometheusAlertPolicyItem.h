@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Rule name
                      * @return Name Rule name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Rule name
-                     * @param Name Rule name
+                     * @param _name Rule name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取List of rules
                      * @return Rules List of rules
+                     * 
                      */
                     std::vector<PrometheusAlertRule> GetRules() const;
 
                     /**
                      * 设置List of rules
-                     * @param Rules List of rules
+                     * @param _rules List of rules
+                     * 
                      */
                     void SetRules(const std::vector<PrometheusAlertRule>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 
@@ -89,20 +95,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Id Alerting rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Alerting rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Id Alerting rule ID
+                     * @param _id Alerting rule ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -111,20 +120,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateId If the alert comes from a template, `TemplateId` is the template ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置If the alert comes from a template, `TemplateId` is the template ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TemplateId If the alert comes from a template, `TemplateId` is the template ID.
+                     * @param _templateId If the alert comes from a template, `TemplateId` is the template ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
@@ -133,20 +145,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Notification Alert channel, which may be returned as null if used in a template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PrometheusNotificationItem GetNotification() const;
 
                     /**
                      * 设置Alert channel, which may be returned as null if used in a template.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Notification Alert channel, which may be returned as null if used in a template.
+                     * @param _notification Alert channel, which may be returned as null if used in a template.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNotification(const PrometheusNotificationItem& _notification);
 
                     /**
                      * 判断参数 Notification 是否已赋值
                      * @return Notification 是否已赋值
+                     * 
                      */
                     bool NotificationHasBeenSet() const;
 
@@ -155,20 +170,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdatedAt Last modification time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdatedAt() const;
 
                     /**
                      * 设置Last modification time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdatedAt Last modification time
+                     * @param _updatedAt Last modification time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdatedAt(const std::string& _updatedAt);
 
                     /**
                      * 判断参数 UpdatedAt 是否已赋值
                      * @return UpdatedAt 是否已赋值
+                     * 
                      */
                     bool UpdatedAtHasBeenSet() const;
 
@@ -177,20 +195,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterId If the alerting rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置If the alerting rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClusterId If the alerting rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
+                     * @param _clusterId If the alerting rule comes from the user cluster CRD resource definition, `ClusterId` is the cluster ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Country name
                      * @return NationCountryName Country name
+                     * 
                      */
                     std::string GetNationCountryName() const;
 
                     /**
                      * 设置Country name
-                     * @param NationCountryName Country name
+                     * @param _nationCountryName Country name
+                     * 
                      */
                     void SetNationCountryName(const std::string& _nationCountryName);
 
                     /**
                      * 判断参数 NationCountryName 是否已赋值
                      * @return NationCountryName 是否已赋值
+                     * 
                      */
                     bool NationCountryNameHasBeenSet() const;
 
                     /**
                      * 获取Country internal code
                      * @return NationCountryInnerCode Country internal code
+                     * 
                      */
                     std::string GetNationCountryInnerCode() const;
 
                     /**
                      * 设置Country internal code
-                     * @param NationCountryInnerCode Country internal code
+                     * @param _nationCountryInnerCode Country internal code
+                     * 
                      */
                     void SetNationCountryInnerCode(const std::string& _nationCountryInnerCode);
 
                     /**
                      * 判断参数 NationCountryInnerCode 是否已赋值
                      * @return NationCountryInnerCode 是否已赋值
+                     * 
                      */
                     bool NationCountryInnerCodeHasBeenSet() const;
 

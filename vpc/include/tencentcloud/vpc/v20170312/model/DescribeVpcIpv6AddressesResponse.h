@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The `IPv6` address list.
                      * @return Ipv6AddressSet The `IPv6` address list.
+                     * 
                      */
                     std::vector<VpcIpv6Address> GetIpv6AddressSet() const;
 
                     /**
                      * 判断参数 Ipv6AddressSet 是否已赋值
                      * @return Ipv6AddressSet 是否已赋值
+                     * 
                      */
                     bool Ipv6AddressSetHasBeenSet() const;
 
                     /**
                      * 获取The total number of `IPv6` addresses.
                      * @return TotalCount The total number of `IPv6` addresses.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

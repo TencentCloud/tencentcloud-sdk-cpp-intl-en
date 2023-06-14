@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of returned results. Maximum value: `50`.
                      * @return Limit Maximum number of returned results. Maximum value: `50`.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of returned results. Maximum value: `50`.
-                     * @param Limit Maximum number of returned results. Maximum value: `50`.
+                     * @param _limit Maximum number of returned results. Maximum value: `50`.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Search by name.
                      * @return SearchKey Search by name.
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Search by name.
-                     * @param SearchKey Search by name.
+                     * @param _searchKey Search by name.
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 
                     /**
                      * 获取Search by identity ID.
                      * @return IdentityId Search by identity ID.
+                     * 
                      */
                     uint64_t GetIdentityId() const;
 
                     /**
                      * 设置Search by identity ID.
-                     * @param IdentityId Search by identity ID.
+                     * @param _identityId Search by identity ID.
+                     * 
                      */
                     void SetIdentityId(const uint64_t& _identityId);
 
                     /**
                      * 判断参数 IdentityId 是否已赋值
                      * @return IdentityId 是否已赋值
+                     * 
                      */
                     bool IdentityIdHasBeenSet() const;
 

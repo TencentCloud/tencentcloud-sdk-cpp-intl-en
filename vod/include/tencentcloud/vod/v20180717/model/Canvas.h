@@ -55,6 +55,7 @@ Default value: Black.
 <li>Black: black background</li>
 <li>White: white background</li>
 Default value: Black.
+                     * 
                      */
                     std::string GetColor() const;
 
@@ -63,16 +64,18 @@ Default value: Black.
 <li>Black: black background</li>
 <li>White: white background</li>
 Default value: Black.
-                     * @param Color Background color. Valid values:
+                     * @param _color Background color. Valid values:
 <li>Black: black background</li>
 <li>White: white background</li>
 Default value: Black.
+                     * 
                      */
                     void SetColor(const std::string& _color);
 
                     /**
                      * 判断参数 Color 是否已赋值
                      * @return Color 是否已赋值
+                     * 
                      */
                     bool ColorHasBeenSet() const;
 
@@ -81,20 +84,23 @@ Default value: Black.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
                      * @return Width Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
-                     * @param Width Canvas width, which is the width of the output video. Value range: 0-4096 px.
+                     * @param _width Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
@@ -103,20 +109,23 @@ Default value: 0, which means that the value is the same as the video width of t
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
                      * @return Height Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
-                     * @param Height Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
+                     * @param _height Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 

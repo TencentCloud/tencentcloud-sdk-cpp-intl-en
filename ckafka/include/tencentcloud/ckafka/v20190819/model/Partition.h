@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Partition ID
                      * @return PartitionId Partition ID
+                     * 
                      */
                     int64_t GetPartitionId() const;
 
                     /**
                      * 设置Partition ID
-                     * @param PartitionId Partition ID
+                     * @param _partitionId Partition ID
+                     * 
                      */
                     void SetPartitionId(const int64_t& _partitionId);
 
                     /**
                      * 判断参数 PartitionId 是否已赋值
                      * @return PartitionId 是否已赋值
+                     * 
                      */
                     bool PartitionIdHasBeenSet() const;
 

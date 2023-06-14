@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Configuration information in XML format.
                      * @return CustomerGatewayConfiguration Configuration information in XML format.
+                     * 
                      */
                     std::string GetCustomerGatewayConfiguration() const;
 
                     /**
                      * 判断参数 CustomerGatewayConfiguration 是否已赋值
                      * @return CustomerGatewayConfiguration 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayConfigurationHasBeenSet() const;
 

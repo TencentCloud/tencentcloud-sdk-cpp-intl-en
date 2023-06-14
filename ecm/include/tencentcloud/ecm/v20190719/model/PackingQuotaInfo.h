@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance type
                      * @return InstanceType Instance type
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance type
-                     * @param InstanceType Instance type
+                     * @param _instanceType Instance type
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Packing quota
                      * @return PackingQuota Packing quota
+                     * 
                      */
                     int64_t GetPackingQuota() const;
 
                     /**
                      * 设置Packing quota
-                     * @param PackingQuota Packing quota
+                     * @param _packingQuota Packing quota
+                     * 
                      */
                     void SetPackingQuota(const int64_t& _packingQuota);
 
                     /**
                      * 判断参数 PackingQuota 是否已赋值
                      * @return PackingQuota 是否已赋值
+                     * 
                      */
                     bool PackingQuotaHasBeenSet() const;
 

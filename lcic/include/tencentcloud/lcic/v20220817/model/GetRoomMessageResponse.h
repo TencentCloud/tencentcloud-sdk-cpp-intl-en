@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The message list.
                      * @return Messages The message list.
+                     * 
                      */
                     std::vector<MessageList> GetMessages() const;
 
                     /**
                      * 判断参数 Messages 是否已赋值
                      * @return Messages 是否已赋值
+                     * 
                      */
                     bool MessagesHasBeenSet() const;
 

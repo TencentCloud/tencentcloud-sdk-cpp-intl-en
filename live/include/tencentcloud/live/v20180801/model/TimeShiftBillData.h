@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The push domain name.
                      * @return Domain The push domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The push domain name.
-                     * @param Domain The push domain name.
+                     * @param _domain The push domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The time-shift video length (minutes).
                      * @return Duration The time-shift video length (minutes).
+                     * 
                      */
                     double GetDuration() const;
 
                     /**
                      * 设置The time-shift video length (minutes).
-                     * @param Duration The time-shift video length (minutes).
+                     * @param _duration The time-shift video length (minutes).
+                     * 
                      */
                     void SetDuration(const double& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取The time-shift days.
                      * @return StoragePeriod The time-shift days.
+                     * 
                      */
                     double GetStoragePeriod() const;
 
                     /**
                      * 设置The time-shift days.
-                     * @param StoragePeriod The time-shift days.
+                     * @param _storagePeriod The time-shift days.
+                     * 
                      */
                     void SetStoragePeriod(const double& _storagePeriod);
 
                     /**
                      * 判断参数 StoragePeriod 是否已赋值
                      * @return StoragePeriod 是否已赋值
+                     * 
                      */
                     bool StoragePeriodHasBeenSet() const;
 
                     /**
                      * 获取The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
                      * @return Time The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
-                     * @param Time The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
+                     * @param _time The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取The total time-shift duration (minutes).
                      * @return TotalDuration The total time-shift duration (minutes).
+                     * 
                      */
                     double GetTotalDuration() const;
 
                     /**
                      * 设置The total time-shift duration (minutes).
-                     * @param TotalDuration The total time-shift duration (minutes).
+                     * @param _totalDuration The total time-shift duration (minutes).
+                     * 
                      */
                     void SetTotalDuration(const double& _totalDuration);
 
                     /**
                      * 判断参数 TotalDuration 是否已赋值
                      * @return TotalDuration 是否已赋值
+                     * 
                      */
                     bool TotalDurationHasBeenSet() const;
 

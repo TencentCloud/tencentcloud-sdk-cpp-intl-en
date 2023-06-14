@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the signature to be modified.
                      * @return SignId ID of the signature to be modified.
+                     * 
                      */
                     uint64_t GetSignId() const;
 
                     /**
                      * 设置ID of the signature to be modified.
-                     * @param SignId ID of the signature to be modified.
+                     * @param _signId ID of the signature to be modified.
+                     * 
                      */
                     void SetSignId(const uint64_t& _signId);
 
                     /**
                      * 判断参数 SignId 是否已赋值
                      * @return SignId 是否已赋值
+                     * 
                      */
                     bool SignIdHasBeenSet() const;
 
                     /**
                      * 获取Signature name.
                      * @return SignName Signature name.
+                     * 
                      */
                     std::string GetSignName() const;
 
                     /**
                      * 设置Signature name.
-                     * @param SignName Signature name.
+                     * @param _signName Signature name.
+                     * 
                      */
                     void SetSignName(const std::string& _signName);
 
                     /**
                      * 判断参数 SignName 是否已赋值
                      * @return SignName 是否已赋值
+                     * 
                      */
                     bool SignNameHasBeenSet() const;
 
@@ -97,6 +103,7 @@ Note: the identity certificate type must be selected according to the correspond
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
 6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
+                     * 
                      */
                     uint64_t GetSignType() const;
 
@@ -110,7 +117,7 @@ Note: the identity certificate type must be selected according to the correspond
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
 6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
-                     * @param SignType Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
+                     * @param _signType Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
 0: company. Valid values of `DocumentType` include 0 and 1.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
 2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
@@ -119,12 +126,14 @@ Note: the identity certificate type must be selected according to the correspond
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
 6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
+                     * 
                      */
                     void SetSignType(const uint64_t& _signType);
 
                     /**
                      * 判断参数 SignType 是否已赋值
                      * @return SignType 是否已赋值
+                     * 
                      */
                     bool SignTypeHasBeenSet() const;
 
@@ -149,6 +158,7 @@ Note: the identity certificate type must be selected according to the correspond
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
 8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
+                     * 
                      */
                     uint64_t GetDocumentType() const;
 
@@ -163,7 +173,7 @@ Note: the identity certificate type must be selected according to the correspond
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
 8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
-                     * @param DocumentType Identity certificate type:
+                     * @param _documentType Identity certificate type:
 0: three-in-one.
 1: business license.
 2: organization code certificate.
@@ -173,12 +183,14 @@ Note: the identity certificate type must be selected according to the correspond
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
 8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
+                     * 
                      */
                     void SetDocumentType(const uint64_t& _documentType);
 
                     /**
                      * 判断参数 DocumentType 是否已赋值
                      * @return DocumentType 是否已赋值
+                     * 
                      */
                     bool DocumentTypeHasBeenSet() const;
 
@@ -191,6 +203,7 @@ Note: the value of this parameter must be consistent with the `International` va
 `0`: Chinese mainland SMS.
 `1`: Global SMS.
 Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -199,16 +212,18 @@ Note: the value of this parameter must be consistent with the `International` va
 `0`: Chinese mainland SMS.
 `1`: Global SMS.
 Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
-                     * @param International A parameter used to specify whether it is Global SMS:
+                     * @param _international A parameter used to specify whether it is Global SMS:
 `0`: Chinese mainland SMS.
 `1`: Global SMS.
 Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 
@@ -219,6 +234,7 @@ Note: the value of this parameter must be consistent with the `International` va
                      * @return SignPurpose Signature purpose:
 0: for personal use.
 1: for others.
+                     * 
                      */
                     uint64_t GetSignPurpose() const;
 
@@ -226,33 +242,38 @@ Note: the value of this parameter must be consistent with the `International` va
                      * 设置Signature purpose:
 0: for personal use.
 1: for others.
-                     * @param SignPurpose Signature purpose:
+                     * @param _signPurpose Signature purpose:
 0: for personal use.
 1: for others.
+                     * 
                      */
                     void SetSignPurpose(const uint64_t& _signPurpose);
 
                     /**
                      * 判断参数 SignPurpose 是否已赋值
                      * @return SignPurpose 是否已赋值
+                     * 
                      */
                     bool SignPurposeHasBeenSet() const;
 
                     /**
                      * 获取You should Base64-encode the image of the identity certificate corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
                      * @return ProofImage You should Base64-encode the image of the identity certificate corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+                     * 
                      */
                     std::string GetProofImage() const;
 
                     /**
                      * 设置You should Base64-encode the image of the identity certificate corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
-                     * @param ProofImage You should Base64-encode the image of the identity certificate corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+                     * @param _proofImage You should Base64-encode the image of the identity certificate corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+                     * 
                      */
                     void SetProofImage(const std::string& _proofImage);
 
                     /**
                      * 判断参数 ProofImage 是否已赋值
                      * @return ProofImage 是否已赋值
+                     * 
                      */
                     bool ProofImageHasBeenSet() const;
 
@@ -263,6 +284,7 @@ Note: this field will take effect only when `SignPurpose` is 1 (for user by othe
                      * @return CommissionImage Power of attorney, which should be submitted if `SignPurpose` is for use by others.
 You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
 Note: this field will take effect only when `SignPurpose` is 1 (for user by others).
+                     * 
                      */
                     std::string GetCommissionImage() const;
 
@@ -270,33 +292,38 @@ Note: this field will take effect only when `SignPurpose` is 1 (for user by othe
                      * 设置Power of attorney, which should be submitted if `SignPurpose` is for use by others.
 You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
 Note: this field will take effect only when `SignPurpose` is 1 (for user by others).
-                     * @param CommissionImage Power of attorney, which should be submitted if `SignPurpose` is for use by others.
+                     * @param _commissionImage Power of attorney, which should be submitted if `SignPurpose` is for use by others.
 You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
 Note: this field will take effect only when `SignPurpose` is 1 (for user by others).
+                     * 
                      */
                     void SetCommissionImage(const std::string& _commissionImage);
 
                     /**
                      * 判断参数 CommissionImage 是否已赋值
                      * @return CommissionImage 是否已赋值
+                     * 
                      */
                     bool CommissionImageHasBeenSet() const;
 
                     /**
                      * 获取Signature application remarks.
                      * @return Remark Signature application remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Signature application remarks.
-                     * @param Remark Signature application remarks.
+                     * @param _remark Signature application remarks.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

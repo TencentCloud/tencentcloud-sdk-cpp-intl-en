@@ -47,20 +47,23 @@ namespace TencentCloud
 It can be the ID of a TKE, EKS, or edge cluster.
                      * @return ClusterId Cluster ID
 It can be the ID of a TKE, EKS, or edge cluster.
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
 It can be the ID of a TKE, EKS, or edge cluster.
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
 It can be the ID of a TKE, EKS, or edge cluster.
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

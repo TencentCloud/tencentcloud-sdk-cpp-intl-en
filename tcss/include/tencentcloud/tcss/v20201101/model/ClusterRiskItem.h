@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Check item information
                      * @return CheckItem Check item information
+                     * 
                      */
                     ClusterCheckItem GetCheckItem() const;
 
                     /**
                      * 设置Check item information
-                     * @param CheckItem Check item information
+                     * @param _checkItem Check item information
+                     * 
                      */
                     void SetCheckItem(const ClusterCheckItem& _checkItem);
 
                     /**
                      * 判断参数 CheckItem 是否已赋值
                      * @return CheckItem 是否已赋值
+                     * 
                      */
                     bool CheckItemHasBeenSet() const;
 
                     /**
                      * 获取Verification information
                      * @return VerifyInfo Verification information
+                     * 
                      */
                     std::string GetVerifyInfo() const;
 
                     /**
                      * 设置Verification information
-                     * @param VerifyInfo Verification information
+                     * @param _verifyInfo Verification information
+                     * 
                      */
                     void SetVerifyInfo(const std::string& _verifyInfo);
 
                     /**
                      * 判断参数 VerifyInfo 是否已赋值
                      * @return VerifyInfo 是否已赋值
+                     * 
                      */
                     bool VerifyInfoHasBeenSet() const;
 
                     /**
                      * 获取Event description and check error message
                      * @return ErrorMessage Event description and check error message
+                     * 
                      */
                     std::string GetErrorMessage() const;
 
                     /**
                      * 设置Event description and check error message
-                     * @param ErrorMessage Event description and check error message
+                     * @param _errorMessage Event description and check error message
+                     * 
                      */
                     void SetErrorMessage(const std::string& _errorMessage);
 
                     /**
                      * 判断参数 ErrorMessage 是否已赋值
                      * @return ErrorMessage 是否已赋值
+                     * 
                      */
                     bool ErrorMessageHasBeenSet() const;
 
                     /**
                      * 获取Number of affected clusters
                      * @return AffectedClusterCount Number of affected clusters
+                     * 
                      */
                     uint64_t GetAffectedClusterCount() const;
 
                     /**
                      * 设置Number of affected clusters
-                     * @param AffectedClusterCount Number of affected clusters
+                     * @param _affectedClusterCount Number of affected clusters
+                     * 
                      */
                     void SetAffectedClusterCount(const uint64_t& _affectedClusterCount);
 
                     /**
                      * 判断参数 AffectedClusterCount 是否已赋值
                      * @return AffectedClusterCount 是否已赋值
+                     * 
                      */
                     bool AffectedClusterCountHasBeenSet() const;
 
                     /**
                      * 获取Number of affected nodes
                      * @return AffectedNodeCount Number of affected nodes
+                     * 
                      */
                     uint64_t GetAffectedNodeCount() const;
 
                     /**
                      * 设置Number of affected nodes
-                     * @param AffectedNodeCount Number of affected nodes
+                     * @param _affectedNodeCount Number of affected nodes
+                     * 
                      */
                     void SetAffectedNodeCount(const uint64_t& _affectedNodeCount);
 
                     /**
                      * 判断参数 AffectedNodeCount 是否已赋值
                      * @return AffectedNodeCount 是否已赋值
+                     * 
                      */
                     bool AffectedNodeCountHasBeenSet() const;
 

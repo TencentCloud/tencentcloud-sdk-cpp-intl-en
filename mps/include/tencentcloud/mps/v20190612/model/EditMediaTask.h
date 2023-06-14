@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Task ID.
                      * @return TaskId Task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID.
-                     * @param TaskId Task ID.
+                     * @param _taskId Task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
                      * @return Status Task status. Valid values:
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -80,15 +84,17 @@ namespace TencentCloud
                      * 设置Task status. Valid values:
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
-                     * @param Status Task status. Valid values:
+                     * @param _status Task status. Valid values:
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -99,6 +105,7 @@ namespace TencentCloud
                      * @return ErrCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
+                     * 
                      */
                     int64_t GetErrCode() const;
 
@@ -106,69 +113,80 @@ namespace TencentCloud
                      * 设置Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
-                     * @param ErrCode Error code
+                     * @param _errCode Error code
 <li>0: success;</li>
 <li>Other values: failure.</li>
+                     * 
                      */
                     void SetErrCode(const int64_t& _errCode);
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 
                     /**
                      * 获取Error message.
                      * @return Message Error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Error message.
-                     * @param Message Error message.
+                     * @param _message Error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Input of video editing task.
                      * @return Input Input of video editing task.
+                     * 
                      */
                     EditMediaTaskInput GetInput() const;
 
                     /**
                      * 设置Input of video editing task.
-                     * @param Input Input of video editing task.
+                     * @param _input Input of video editing task.
+                     * 
                      */
                     void SetInput(const EditMediaTaskInput& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
                     /**
                      * 获取Output of video editing task.
                      * @return Output Output of video editing task.
+                     * 
                      */
                     EditMediaTaskOutput GetOutput() const;
 
                     /**
                      * 设置Output of video editing task.
-                     * @param Output Output of video editing task.
+                     * @param _output Output of video editing task.
+                     * 
                      */
                     void SetOutput(const EditMediaTaskOutput& _output);
 
                     /**
                      * 判断参数 Output 是否已赋值
                      * @return Output 是否已赋值
+                     * 
                      */
                     bool OutputHasBeenSet() const;
 

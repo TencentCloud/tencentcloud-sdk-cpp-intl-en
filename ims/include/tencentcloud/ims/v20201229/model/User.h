@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取This field indicates the business user ID. After it is specified, the system can optimize the moderation result according to the violation history to facilitate determination when a suspicious violation risk exists.
                      * @return UserId This field indicates the business user ID. After it is specified, the system can optimize the moderation result according to the violation history to facilitate determination when a suspicious violation risk exists.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置This field indicates the business user ID. After it is specified, the system can optimize the moderation result according to the violation history to facilitate determination when a suspicious violation risk exists.
-                     * @param UserId This field indicates the business user ID. After it is specified, the system can optimize the moderation result according to the violation history to facilitate determination when a suspicious violation risk exists.
+                     * @param _userId This field indicates the business user ID. After it is specified, the system can optimize the moderation result according to the violation history to facilitate determination when a suspicious violation risk exists.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取This field indicates the nickname of the business user's account.
                      * @return Nickname This field indicates the nickname of the business user's account.
+                     * 
                      */
                     std::string GetNickname() const;
 
                     /**
                      * 设置This field indicates the nickname of the business user's account.
-                     * @param Nickname This field indicates the nickname of the business user's account.
+                     * @param _nickname This field indicates the nickname of the business user's account.
+                     * 
                      */
                     void SetNickname(const std::string& _nickname);
 
                     /**
                      * 判断参数 Nickname 是否已赋值
                      * @return Nickname 是否已赋值
+                     * 
                      */
                     bool NicknameHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 This field can be used together with the ID parameter (UserId) to uniquely identify the account.
                      * @return AccountType This field indicates the account type of the business user ID.<br>
 This field can be used together with the ID parameter (UserId) to uniquely identify the account.
+                     * 
                      */
                     std::string GetAccountType() const;
 
                     /**
                      * 设置This field indicates the account type of the business user ID.<br>
 This field can be used together with the ID parameter (UserId) to uniquely identify the account.
-                     * @param AccountType This field indicates the account type of the business user ID.<br>
+                     * @param _accountType This field indicates the account type of the business user ID.<br>
 This field can be used together with the ID parameter (UserId) to uniquely identify the account.
+                     * 
                      */
                     void SetAccountType(const std::string& _accountType);
 
                     /**
                      * 判断参数 AccountType 是否已赋值
                      * @return AccountType 是否已赋值
+                     * 
                      */
                     bool AccountTypeHasBeenSet() const;
 
@@ -109,20 +118,23 @@ This field can be used together with the ID parameter (UserId) to uniquely ident
 Valid values: **0** (default value): unknown; **1** (male); **2** (female).
                      * @return Gender This field indicates the gender of the business user's account.<br>
 Valid values: **0** (default value): unknown; **1** (male); **2** (female).
+                     * 
                      */
                     uint64_t GetGender() const;
 
                     /**
                      * 设置This field indicates the gender of the business user's account.<br>
 Valid values: **0** (default value): unknown; **1** (male); **2** (female).
-                     * @param Gender This field indicates the gender of the business user's account.<br>
+                     * @param _gender This field indicates the gender of the business user's account.<br>
 Valid values: **0** (default value): unknown; **1** (male); **2** (female).
+                     * 
                      */
                     void SetGender(const uint64_t& _gender);
 
                     /**
                      * 判断参数 Gender 是否已赋值
                      * @return Gender 是否已赋值
+                     * 
                      */
                     bool GenderHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Valid values: **0** (default value): unknown; **1** (male); **2** (female).
 Valid values: integers between **0** (default value, which indicates unknown) and **custom age limit**.
                      * @return Age This field indicates the age of the business user's account.<br>
 Valid values: integers between **0** (default value, which indicates unknown) and **custom age limit**.
+                     * 
                      */
                     uint64_t GetAge() const;
 
                     /**
                      * 设置This field indicates the age of the business user's account.<br>
 Valid values: integers between **0** (default value, which indicates unknown) and **custom age limit**.
-                     * @param Age This field indicates the age of the business user's account.<br>
+                     * @param _age This field indicates the age of the business user's account.<br>
 Valid values: integers between **0** (default value, which indicates unknown) and **custom age limit**.
+                     * 
                      */
                     void SetAge(const uint64_t& _age);
 
                     /**
                      * 判断参数 Age 是否已赋值
                      * @return Age 是否已赋值
+                     * 
                      */
                     bool AgeHasBeenSet() const;
 
@@ -153,20 +168,23 @@ Valid values: integers between **0** (default value, which indicates unknown) an
 Valid values: **0** (default value): unknown; **1**: low level; **2**: medium level; **3**: high level. Currently, **the level is not customizable**.
                      * @return Level This field indicates the level of the business user's account.<br>
 Valid values: **0** (default value): unknown; **1**: low level; **2**: medium level; **3**: high level. Currently, **the level is not customizable**.
+                     * 
                      */
                     uint64_t GetLevel() const;
 
                     /**
                      * 设置This field indicates the level of the business user's account.<br>
 Valid values: **0** (default value): unknown; **1**: low level; **2**: medium level; **3**: high level. Currently, **the level is not customizable**.
-                     * @param Level This field indicates the level of the business user's account.<br>
+                     * @param _level This field indicates the level of the business user's account.<br>
 Valid values: **0** (default value): unknown; **1**: low level; **2**: medium level; **3**: high level. Currently, **the level is not customizable**.
+                     * 
                      */
                     void SetLevel(const uint64_t& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -175,56 +193,65 @@ Valid values: **0** (default value): unknown; **1**: low level; **2**: medium le
 Note: you need to use a consistent mobile number format, such as area code format (086/+86).
                      * @return Phone This field indicates the mobile number of the business user's account. It supports recording mobile numbers across the world.<br>
 Note: you need to use a consistent mobile number format, such as area code format (086/+86).
+                     * 
                      */
                     std::string GetPhone() const;
 
                     /**
                      * 设置This field indicates the mobile number of the business user's account. It supports recording mobile numbers across the world.<br>
 Note: you need to use a consistent mobile number format, such as area code format (086/+86).
-                     * @param Phone This field indicates the mobile number of the business user's account. It supports recording mobile numbers across the world.<br>
+                     * @param _phone This field indicates the mobile number of the business user's account. It supports recording mobile numbers across the world.<br>
 Note: you need to use a consistent mobile number format, such as area code format (086/+86).
+                     * 
                      */
                     void SetPhone(const std::string& _phone);
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
                     /**
                      * 获取This field indicates the profile of the business user. It can contain **up to 5,000 letters and special symbols**.
                      * @return Desc This field indicates the profile of the business user. It can contain **up to 5,000 letters and special symbols**.
+                     * 
                      */
                     std::string GetDesc() const;
 
                     /**
                      * 设置This field indicates the profile of the business user. It can contain **up to 5,000 letters and special symbols**.
-                     * @param Desc This field indicates the profile of the business user. It can contain **up to 5,000 letters and special symbols**.
+                     * @param _desc This field indicates the profile of the business user. It can contain **up to 5,000 letters and special symbols**.
+                     * 
                      */
                     void SetDesc(const std::string& _desc);
 
                     /**
                      * 判断参数 Desc 是否已赋值
                      * @return Desc 是否已赋值
+                     * 
                      */
                     bool DescHasBeenSet() const;
 
                     /**
                      * 获取This field indicates the access URL of the business user's profile photo in PNG, JPG, JPEG, BMP, GIF, or WEBP format.<br>Note: the profile photo **cannot exceed 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.
                      * @return HeadUrl This field indicates the access URL of the business user's profile photo in PNG, JPG, JPEG, BMP, GIF, or WEBP format.<br>Note: the profile photo **cannot exceed 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.
+                     * 
                      */
                     std::string GetHeadUrl() const;
 
                     /**
                      * 设置This field indicates the access URL of the business user's profile photo in PNG, JPG, JPEG, BMP, GIF, or WEBP format.<br>Note: the profile photo **cannot exceed 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.
-                     * @param HeadUrl This field indicates the access URL of the business user's profile photo in PNG, JPG, JPEG, BMP, GIF, or WEBP format.<br>Note: the profile photo **cannot exceed 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.
+                     * @param _headUrl This field indicates the access URL of the business user's profile photo in PNG, JPG, JPEG, BMP, GIF, or WEBP format.<br>Note: the profile photo **cannot exceed 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.
+                     * 
                      */
                     void SetHeadUrl(const std::string& _headUrl);
 
                     /**
                      * 判断参数 HeadUrl 是否已赋值
                      * @return HeadUrl 是否已赋值
+                     * 
                      */
                     bool HeadUrlHasBeenSet() const;
 

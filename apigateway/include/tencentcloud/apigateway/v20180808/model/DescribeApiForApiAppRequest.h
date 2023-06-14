@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID of the API
                      * @return ServiceId Unique service ID of the API
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of the API
-                     * @param ServiceId Unique service ID of the API
+                     * @param _serviceId Unique service ID of the API
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique API ID
                      * @return ApiId Unique API ID
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique API ID
-                     * @param ApiId Unique API ID
+                     * @param _apiId Unique API ID
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
                     /**
                      * 获取API region
                      * @return ApiRegion API region
+                     * 
                      */
                     std::string GetApiRegion() const;
 
                     /**
                      * 设置API region
-                     * @param ApiRegion API region
+                     * @param _apiRegion API region
+                     * 
                      */
                     void SetApiRegion(const std::string& _apiRegion);
 
                     /**
                      * 判断参数 ApiRegion 是否已赋值
                      * @return ApiRegion 是否已赋值
+                     * 
                      */
                     bool ApiRegionHasBeenSet() const;
 

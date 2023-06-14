@@ -55,6 +55,7 @@ namespace TencentCloud
 <li>`CLOUD_SSD`: SSD</li>
 <li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
 <li>`CLOUD_HSSD`: Enhanced SSD</li>
+                     * 
                      */
                     std::string GetDiskType() const;
 
@@ -63,52 +64,60 @@ namespace TencentCloud
 <li>`CLOUD_SSD`: SSD</li>
 <li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
 <li>`CLOUD_HSSD`: Enhanced SSD</li>
-                     * @param DiskType Cloud disk type
+                     * @param _diskType Cloud disk type
 <li>`CLOUD_SSD`: SSD</li>
 <li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
 <li>`CLOUD_HSSD`: Enhanced SSD</li>
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk size
                      * @return Volume Cloud disk size
+                     * 
                      */
                     int64_t GetVolume() const;
 
                     /**
                      * 设置Cloud disk size
-                     * @param Volume Cloud disk size
+                     * @param _volume Cloud disk size
+                     * 
                      */
                     void SetVolume(const int64_t& _volume);
 
                     /**
                      * 判断参数 Volume 是否已赋值
                      * @return Volume 是否已赋值
+                     * 
                      */
                     bool VolumeHasBeenSet() const;
 
                     /**
                      * 获取Number of cloud disks of this type
                      * @return Count Number of cloud disks of this type
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Number of cloud disks of this type
-                     * @param Count Number of cloud disks of this type
+                     * @param _count Number of cloud disks of this type
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

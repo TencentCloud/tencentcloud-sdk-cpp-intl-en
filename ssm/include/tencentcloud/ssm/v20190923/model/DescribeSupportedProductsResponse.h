@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取List of supported services.
                      * @return Products List of supported services.
+                     * 
                      */
                     std::vector<std::string> GetProducts() const;
 
                     /**
                      * 判断参数 Products 是否已赋值
                      * @return Products 是否已赋值
+                     * 
                      */
                     bool ProductsHasBeenSet() const;
 
                     /**
                      * 获取Number of supported services
                      * @return TotalCount Number of supported services
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

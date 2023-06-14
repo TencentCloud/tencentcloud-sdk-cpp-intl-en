@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Master version pointed to by the alias
                      * @return FunctionVersion Master version pointed to by the alias
+                     * 
                      */
                     std::string GetFunctionVersion() const;
 
                     /**
                      * 设置Master version pointed to by the alias
-                     * @param FunctionVersion Master version pointed to by the alias
+                     * @param _functionVersion Master version pointed to by the alias
+                     * 
                      */
                     void SetFunctionVersion(const std::string& _functionVersion);
 
                     /**
                      * 判断参数 FunctionVersion 是否已赋值
                      * @return FunctionVersion 是否已赋值
+                     * 
                      */
                     bool FunctionVersionHasBeenSet() const;
 
                     /**
                      * 获取Alias name
                      * @return Name Alias name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Alias name
-                     * @param Name Alias name
+                     * @param _name Alias name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RoutingConfig Routing information of alias
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RoutingConfig GetRoutingConfig() const;
 
                     /**
                      * 设置Routing information of alias
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RoutingConfig Routing information of alias
+                     * @param _routingConfig Routing information of alias
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRoutingConfig(const RoutingConfig& _routingConfig);
 
                     /**
                      * 判断参数 RoutingConfig 是否已赋值
                      * @return RoutingConfig 是否已赋值
+                     * 
                      */
                     bool RoutingConfigHasBeenSet() const;
 
@@ -110,20 +119,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description Description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description Description
+                     * @param _description Description
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -132,20 +144,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AddTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddTime() const;
 
                     /**
                      * 设置Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AddTime Creation time
+                     * @param _addTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddTime(const std::string& _addTime);
 
                     /**
                      * 判断参数 AddTime 是否已赋值
                      * @return AddTime 是否已赋值
+                     * 
                      */
                     bool AddTimeHasBeenSet() const;
 
@@ -154,20 +169,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ModTime Update time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetModTime() const;
 
                     /**
                      * 设置Update time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ModTime Update time
+                     * @param _modTime Update time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetModTime(const std::string& _modTime);
 
                     /**
                      * 判断参数 ModTime 是否已赋值
                      * @return ModTime 是否已赋值
+                     * 
                      */
                     bool ModTimeHasBeenSet() const;
 

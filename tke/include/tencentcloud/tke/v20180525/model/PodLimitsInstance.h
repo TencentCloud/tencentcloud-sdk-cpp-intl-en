@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return Zone The availability zone where the model is located
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置The availability zone where the model is located
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param Zone The availability zone where the model is located
+                     * @param _zone The availability zone where the model is located
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return InstanceFamily The instance family to which the model belongs
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetInstanceFamily() const;
 
                     /**
                      * 设置The instance family to which the model belongs
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param InstanceFamily The instance family to which the model belongs
+                     * @param _instanceFamily The instance family to which the model belongs
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetInstanceFamily(const std::string& _instanceFamily);
 
                     /**
                      * 判断参数 InstanceFamily 是否已赋值
                      * @return InstanceFamily 是否已赋值
+                     * 
                      */
                     bool InstanceFamilyHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return InstanceType Instance type
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance type
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param InstanceType Instance type
+                     * @param _instanceType Instance type
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return PodLimits The maximum number of Pods in the VPC-CNI mode supported by the model
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     PodLimitsByType GetPodLimits() const;
 
                     /**
                      * 设置The maximum number of Pods in the VPC-CNI mode supported by the model
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PodLimits The maximum number of Pods in the VPC-CNI mode supported by the model
+                     * @param _podLimits The maximum number of Pods in the VPC-CNI mode supported by the model
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPodLimits(const PodLimitsByType& _podLimits);
 
                     /**
                      * 判断参数 PodLimits 是否已赋值
                      * @return PodLimits 是否已赋值
+                     * 
                      */
                     bool PodLimitsHasBeenSet() const;
 

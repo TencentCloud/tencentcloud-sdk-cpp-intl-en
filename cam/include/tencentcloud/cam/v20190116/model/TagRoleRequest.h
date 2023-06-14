@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Tag.
                      * @return Tags Tag.
+                     * 
                      */
                     std::vector<RoleTags> GetTags() const;
 
                     /**
                      * 设置Tag.
-                     * @param Tags Tag.
+                     * @param _tags Tag.
+                     * 
                      */
                     void SetTags(const std::vector<RoleTags>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Role name. Specify either the role name or role ID.
                      * @return RoleName Role name. Specify either the role name or role ID.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name. Specify either the role name or role ID.
-                     * @param RoleName Role name. Specify either the role name or role ID.
+                     * @param _roleName Role name. Specify either the role name or role ID.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
                     /**
                      * 获取Role ID. Specify either the role ID or role name.
                      * @return RoleId Role ID. Specify either the role ID or role name.
+                     * 
                      */
                     std::string GetRoleId() const;
 
                     /**
                      * 设置Role ID. Specify either the role ID or role name.
-                     * @param RoleId Role ID. Specify either the role ID or role name.
+                     * @param _roleId Role ID. Specify either the role ID or role name.
+                     * 
                      */
                     void SetRoleId(const std::string& _roleId);
 
                     /**
                      * 判断参数 RoleId 是否已赋值
                      * @return RoleId 是否已赋值
+                     * 
                      */
                     bool RoleIdHasBeenSet() const;
 

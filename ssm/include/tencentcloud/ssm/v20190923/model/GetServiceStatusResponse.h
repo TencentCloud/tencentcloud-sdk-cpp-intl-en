@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取`true`: The service is activated; `false`: The service is not activated.
                      * @return ServiceEnabled `true`: The service is activated; `false`: The service is not activated.
+                     * 
                      */
                     bool GetServiceEnabled() const;
 
                     /**
                      * 判断参数 ServiceEnabled 是否已赋值
                      * @return ServiceEnabled 是否已赋值
+                     * 
                      */
                     bool ServiceEnabledHasBeenSet() const;
 
                     /**
                      * 获取Invalid service type. `0`: not purchased; `1`: normal; `2`: suspended due to arrears; `3`: resource released
                      * @return InvalidType Invalid service type. `0`: not purchased; `1`: normal; `2`: suspended due to arrears; `3`: resource released
+                     * 
                      */
                     int64_t GetInvalidType() const;
 
                     /**
                      * 判断参数 InvalidType 是否已赋值
                      * @return InvalidType 是否已赋值
+                     * 
                      */
                     bool InvalidTypeHasBeenSet() const;
 
@@ -72,12 +76,14 @@ namespace TencentCloud
 `false`: Forbid SSM to manage Tencent Cloud API key secrets.
                      * @return AccessKeyEscrowEnabled `true`: Allow SSM to manage Tencent Cloud API key secrets.
 `false`: Forbid SSM to manage Tencent Cloud API key secrets.
+                     * 
                      */
                     bool GetAccessKeyEscrowEnabled() const;
 
                     /**
                      * 判断参数 AccessKeyEscrowEnabled 是否已赋值
                      * @return AccessKeyEscrowEnabled 是否已赋值
+                     * 
                      */
                     bool AccessKeyEscrowEnabledHasBeenSet() const;
 

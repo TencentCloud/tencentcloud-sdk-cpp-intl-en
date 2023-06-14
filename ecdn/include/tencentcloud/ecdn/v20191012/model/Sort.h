@@ -53,6 +53,7 @@ certExpireTime: certificate expiration time
                      * @return Key Sort by field. Valid values:
 createTime: domain name creation time
 certExpireTime: certificate expiration time
+                     * 
                      */
                     std::string GetKey() const;
 
@@ -60,33 +61,38 @@ certExpireTime: certificate expiration time
                      * 设置Sort by field. Valid values:
 createTime: domain name creation time
 certExpireTime: certificate expiration time
-                     * @param Key Sort by field. Valid values:
+                     * @param _key Sort by field. Valid values:
 createTime: domain name creation time
 certExpireTime: certificate expiration time
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取asc/desc. Default value: desc.
                      * @return Sequence asc/desc. Default value: desc.
+                     * 
                      */
                     std::string GetSequence() const;
 
                     /**
                      * 设置asc/desc. Default value: desc.
-                     * @param Sequence asc/desc. Default value: desc.
+                     * @param _sequence asc/desc. Default value: desc.
+                     * 
                      */
                     void SetSequence(const std::string& _sequence);
 
                     /**
                      * 判断参数 Sequence 是否已赋值
                      * @return Sequence 是否已赋值
+                     * 
                      */
                     bool SequenceHasBeenSet() const;
 

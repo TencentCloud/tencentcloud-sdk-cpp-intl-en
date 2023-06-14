@@ -52,6 +52,7 @@ Value range of N: 0–9
 For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
 If this parameter is passed in, the list of all matching resources will be returned, and the specified `MaxResults` will become invalid.
 Value range of N: 0–9
+                     * 
                      */
                     std::vector<std::string> GetResourceList() const;
 
@@ -60,16 +61,18 @@ Value range of N: 0–9
 For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
 If this parameter is passed in, the list of all matching resources will be returned, and the specified `MaxResults` will become invalid.
 Value range of N: 0–9
-                     * @param ResourceList Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource.
+                     * @param _resourceList Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource.
 For example, ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}.
 If this parameter is passed in, the list of all matching resources will be returned, and the specified `MaxResults` will become invalid.
 Value range of N: 0–9
+                     * 
                      */
                     void SetResourceList(const std::vector<std::string>& _resourceList);
 
                     /**
                      * 判断参数 ResourceList 是否已赋值
                      * @return ResourceList 是否已赋值
+                     * 
                      */
                     bool ResourceListHasBeenSet() const;
 
@@ -82,6 +85,7 @@ There can be up to 10 `TagValues` in each `TagFilters`.
 If multiple tags are specified, resources bound to all such tags will be queried.
 Value range of N: 0–5
 There can be up to 10 `TagValues` in each `TagFilters`.
+                     * 
                      */
                     std::vector<TagFilter> GetTagFilters() const;
 
@@ -90,16 +94,18 @@ There can be up to 10 `TagValues` in each `TagFilters`.
 If multiple tags are specified, resources bound to all such tags will be queried.
 Value range of N: 0–5
 There can be up to 10 `TagValues` in each `TagFilters`.
-                     * @param TagFilters Tag key and value.
+                     * @param _tagFilters Tag key and value.
 If multiple tags are specified, resources bound to all such tags will be queried.
 Value range of N: 0–5
 There can be up to 10 `TagValues` in each `TagFilters`.
+                     * 
                      */
                     void SetTagFilters(const std::vector<TagFilter>& _tagFilters);
 
                     /**
                      * 判断参数 TagFilters 是否已赋值
                      * @return TagFilters 是否已赋值
+                     * 
                      */
                     bool TagFiltersHasBeenSet() const;
 
@@ -108,20 +114,23 @@ There can be up to 10 `TagValues` in each `TagFilters`.
 Leave it empty for the first request.
                      * @return PaginationToken The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
+                     * 
                      */
                     std::string GetPaginationToken() const;
 
                     /**
                      * 设置The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
-                     * @param PaginationToken The token value of the next page obtained from the response of the previous page.
+                     * @param _paginationToken The token value of the next page obtained from the response of the previous page.
 Leave it empty for the first request.
+                     * 
                      */
                     void SetPaginationToken(const std::string& _paginationToken);
 
                     /**
                      * 判断参数 PaginationToken 是否已赋值
                      * @return PaginationToken 是否已赋值
+                     * 
                      */
                     bool PaginationTokenHasBeenSet() const;
 
@@ -130,20 +139,23 @@ Leave it empty for the first request.
 Default value: 50.
                      * @return MaxResults Number of data entries to return per page (up to 200).
 Default value: 50.
+                     * 
                      */
                     uint64_t GetMaxResults() const;
 
                     /**
                      * 设置Number of data entries to return per page (up to 200).
 Default value: 50.
-                     * @param MaxResults Number of data entries to return per page (up to 200).
+                     * @param _maxResults Number of data entries to return per page (up to 200).
 Default value: 50.
+                     * 
                      */
                     void SetMaxResults(const uint64_t& _maxResults);
 
                     /**
                      * 判断参数 MaxResults 是否已赋值
                      * @return MaxResults 是否已赋值
+                     * 
                      */
                     bool MaxResultsHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Allowlist ID
                      * @return PolicyIndex Allowlist ID
+                     * 
                      */
                     int64_t GetPolicyIndex() const;
 
                     /**
                      * 设置Allowlist ID
-                     * @param PolicyIndex Allowlist ID
+                     * @param _policyIndex Allowlist ID
+                     * 
                      */
                     void SetPolicyIndex(const int64_t& _policyIndex);
 
                     /**
                      * 判断参数 PolicyIndex 是否已赋值
                      * @return PolicyIndex 是否已赋值
+                     * 
                      */
                     bool PolicyIndexHasBeenSet() const;
 
                     /**
                      * 获取Allowlist version
                      * @return PolicyVersion Allowlist version
+                     * 
                      */
                     std::string GetPolicyVersion() const;
 
                     /**
                      * 设置Allowlist version
-                     * @param PolicyVersion Allowlist version
+                     * @param _policyVersion Allowlist version
+                     * 
                      */
                     void SetPolicyVersion(const std::string& _policyVersion);
 
                     /**
                      * 判断参数 PolicyVersion 是否已赋值
                      * @return PolicyVersion 是否已赋值
+                     * 
                      */
                     bool PolicyVersionHasBeenSet() const;
 

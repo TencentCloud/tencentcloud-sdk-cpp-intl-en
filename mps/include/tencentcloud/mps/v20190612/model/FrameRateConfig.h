@@ -55,6 +55,7 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Default value: ON.
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
-                     * @param Switch Whether to enable the feature. Valid values:
+                     * @param _switch Whether to enable the feature. Valid values:
 <li>ON</li>
 <li>OFF</li>
 Default value: ON.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -85,6 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Default value: 0.
 Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetFps() const;
 
@@ -93,16 +97,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Default value: 0.
 Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Fps The frame rate (Hz). Value range: [0, 100].
+                     * @param _fps The frame rate (Hz). Value range: [0, 100].
 Default value: 0.
 Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFps(const uint64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 

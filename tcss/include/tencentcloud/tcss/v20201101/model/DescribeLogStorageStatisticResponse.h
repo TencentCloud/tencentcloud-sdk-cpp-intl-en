@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Total capacity in GB
                      * @return TotalSize Total capacity in GB
+                     * 
                      */
                     uint64_t GetTotalSize() const;
 
                     /**
                      * 判断参数 TotalSize 是否已赋值
                      * @return TotalSize 是否已赋值
+                     * 
                      */
                     bool TotalSizeHasBeenSet() const;
 
                     /**
                      * 获取Used capacity in GB
                      * @return UsedSize Used capacity in GB
+                     * 
                      */
                     uint64_t GetUsedSize() const;
 
                     /**
                      * 判断参数 UsedSize 是否已赋值
                      * @return UsedSize 是否已赋值
+                     * 
                      */
                     bool UsedSizeHasBeenSet() const;
 

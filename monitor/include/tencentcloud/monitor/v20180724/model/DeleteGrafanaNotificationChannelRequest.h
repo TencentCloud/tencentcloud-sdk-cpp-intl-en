@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of channel IDs, such as “nchannel-abcd1234”.
                      * @return ChannelIDs Array of channel IDs, such as “nchannel-abcd1234”.
+                     * 
                      */
                     std::vector<std::string> GetChannelIDs() const;
 
                     /**
                      * 设置Array of channel IDs, such as “nchannel-abcd1234”.
-                     * @param ChannelIDs Array of channel IDs, such as “nchannel-abcd1234”.
+                     * @param _channelIDs Array of channel IDs, such as “nchannel-abcd1234”.
+                     * 
                      */
                     void SetChannelIDs(const std::vector<std::string>& _channelIDs);
 
                     /**
                      * 判断参数 ChannelIDs 是否已赋值
                      * @return ChannelIDs 是否已赋值
+                     * 
                      */
                     bool ChannelIDsHasBeenSet() const;
 
                     /**
                      * 获取TCMG instance ID, such as “grafana-abcdefgh”.
                      * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

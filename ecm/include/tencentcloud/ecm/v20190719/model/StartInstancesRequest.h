@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the instances to be started. You can request up to 100 instances in a region at a time.
                      * @return InstanceIdSet List of IDs of the instances to be started. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置List of IDs of the instances to be started. You can request up to 100 instances in a region at a time.
-                     * @param InstanceIdSet List of IDs of the instances to be started. You can request up to 100 instances in a region at a time.
+                     * @param _instanceIdSet List of IDs of the instances to be started. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 

@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Data migration task name
                      * @return JobName Data migration task name
+                     * 
                      */
                     std::string GetJobName() const;
 
                     /**
                      * 设置Data migration task name
-                     * @param JobName Data migration task name
+                     * @param _jobName Data migration task name
+                     * 
                      */
                     void SetJobName(const std::string& _jobName);
 
                     /**
                      * 判断参数 JobName 是否已赋值
                      * @return JobName 是否已赋值
+                     * 
                      */
                     bool JobNameHasBeenSet() const;
 
                     /**
                      * 获取Migration task configuration options
                      * @return MigrateOption Migration task configuration options
+                     * 
                      */
                     MigrateOption GetMigrateOption() const;
 
                     /**
                      * 设置Migration task configuration options
-                     * @param MigrateOption Migration task configuration options
+                     * @param _migrateOption Migration task configuration options
+                     * 
                      */
                     void SetMigrateOption(const MigrateOption& _migrateOption);
 
                     /**
                      * 判断参数 MigrateOption 是否已赋值
                      * @return MigrateOption 是否已赋值
+                     * 
                      */
                     bool MigrateOptionHasBeenSet() const;
 
                     /**
                      * 获取Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
                      * @return SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
+                     * 
                      */
                     std::string GetSrcDatabaseType() const;
 
                     /**
                      * 设置Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
-                     * @param SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
+                     * @param _srcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
+                     * 
                      */
                     void SetSrcDatabaseType(const std::string& _srcDatabaseType);
 
                     /**
                      * 判断参数 SrcDatabaseType 是否已赋值
                      * @return SrcDatabaseType 是否已赋值
+                     * 
                      */
                     bool SrcDatabaseTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
                      * @return SrcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
+                     * 
                      */
                     std::string GetSrcAccessType() const;
 
                     /**
                      * 设置Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
-                     * @param SrcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
+                     * @param _srcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
+                     * 
                      */
                     void SetSrcAccessType(const std::string& _srcAccessType);
 
                     /**
                      * 判断参数 SrcAccessType 是否已赋值
                      * @return SrcAccessType 是否已赋值
+                     * 
                      */
                     bool SrcAccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance information, which is correlated with the migration task type
                      * @return SrcInfo Source instance information, which is correlated with the migration task type
+                     * 
                      */
                     SrcInfo GetSrcInfo() const;
 
                     /**
                      * 设置Source instance information, which is correlated with the migration task type
-                     * @param SrcInfo Source instance information, which is correlated with the migration task type
+                     * @param _srcInfo Source instance information, which is correlated with the migration task type
+                     * 
                      */
                     void SetSrcInfo(const SrcInfo& _srcInfo);
 
                     /**
                      * 判断参数 SrcInfo 是否已赋值
                      * @return SrcInfo 是否已赋值
+                     * 
                      */
                     bool SrcInfoHasBeenSet() const;
 
                     /**
                      * 获取Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
                      * @return DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
+                     * 
                      */
                     std::string GetDstDatabaseType() const;
 
                     /**
                      * 设置Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
-                     * @param DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
+                     * @param _dstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
+                     * 
                      */
                     void SetDstDatabaseType(const std::string& _dstDatabaseType);
 
                     /**
                      * 判断参数 DstDatabaseType 是否已赋值
                      * @return DstDatabaseType 是否已赋值
+                     * 
                      */
                     bool DstDatabaseTypeHasBeenSet() const;
 
                     /**
                      * 获取Target instance access type, which currently only supports cdb (TencentDB instance)
                      * @return DstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)
+                     * 
                      */
                     std::string GetDstAccessType() const;
 
                     /**
                      * 设置Target instance access type, which currently only supports cdb (TencentDB instance)
-                     * @param DstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)
+                     * @param _dstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)
+                     * 
                      */
                     void SetDstAccessType(const std::string& _dstAccessType);
 
                     /**
                      * 判断参数 DstAccessType 是否已赋值
                      * @return DstAccessType 是否已赋值
+                     * 
                      */
                     bool DstAccessTypeHasBeenSet() const;
 
                     /**
                      * 获取Destination instance information
                      * @return DstInfo Destination instance information
+                     * 
                      */
                     DstInfo GetDstInfo() const;
 
                     /**
                      * 设置Destination instance information
-                     * @param DstInfo Destination instance information
+                     * @param _dstInfo Destination instance information
+                     * 
                      */
                     void SetDstInfo(const DstInfo& _dstInfo);
 
                     /**
                      * 判断参数 DstInfo 是否已赋值
                      * @return DstInfo 是否已赋值
+                     * 
                      */
                     bool DstInfoHasBeenSet() const;
 
@@ -201,6 +225,7 @@ For databases with a database-table structure:
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+                     * 
                      */
                     std::string GetDatabaseInfo() const;
 
@@ -210,71 +235,82 @@ For databases with a database-table structure:
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
-                     * @param DatabaseInfo Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
+                     * @param _databaseInfo Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+                     * 
                      */
                     void SetDatabaseInfo(const std::string& _databaseInfo);
 
                     /**
                      * 判断参数 DatabaseInfo 是否已赋值
                      * @return DatabaseInfo 是否已赋值
+                     * 
                      */
                     bool DatabaseInfoHasBeenSet() const;
 
                     /**
                      * 获取Tag of the instance to be migrated.
                      * @return Tags Tag of the instance to be migrated.
+                     * 
                      */
                     std::vector<TagItem> GetTags() const;
 
                     /**
                      * 设置Tag of the instance to be migrated.
-                     * @param Tags Tag of the instance to be migrated.
+                     * @param _tags Tag of the instance to be migrated.
+                     * 
                      */
                     void SetTags(const std::vector<TagItem>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
                      * @return SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * 
                      */
                     std::string GetSrcNodeType() const;
 
                     /**
                      * 设置Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
-                     * @param SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * @param _srcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * 
                      */
                     void SetSrcNodeType(const std::string& _srcNodeType);
 
                     /**
                      * 判断参数 SrcNodeType 是否已赋值
                      * @return SrcNodeType 是否已赋值
+                     * 
                      */
                     bool SrcNodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Source instance information, which is correlated with the migration task type.
                      * @return SrcInfoMulti Source instance information, which is correlated with the migration task type.
+                     * 
                      */
                     std::vector<SrcInfo> GetSrcInfoMulti() const;
 
                     /**
                      * 设置Source instance information, which is correlated with the migration task type.
-                     * @param SrcInfoMulti Source instance information, which is correlated with the migration task type.
+                     * @param _srcInfoMulti Source instance information, which is correlated with the migration task type.
+                     * 
                      */
                     void SetSrcInfoMulti(const std::vector<SrcInfo>& _srcInfoMulti);
 
                     /**
                      * 判断参数 SrcInfoMulti 是否已赋值
                      * @return SrcInfoMulti 是否已赋值
+                     * 
                      */
                     bool SrcInfoMultiHasBeenSet() const;
 

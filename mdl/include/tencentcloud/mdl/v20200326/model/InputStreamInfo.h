@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The input stream address.
                      * @return InputAddress The input stream address.
+                     * 
                      */
                     std::string GetInputAddress() const;
 
                     /**
                      * 设置The input stream address.
-                     * @param InputAddress The input stream address.
+                     * @param _inputAddress The input stream address.
+                     * 
                      */
                     void SetInputAddress(const std::string& _inputAddress);
 
                     /**
                      * 判断参数 InputAddress 是否已赋值
                      * @return InputAddress 是否已赋值
+                     * 
                      */
                     bool InputAddressHasBeenSet() const;
 
                     /**
                      * 获取The input stream path.
                      * @return AppName The input stream path.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The input stream path.
-                     * @param AppName The input stream path.
+                     * @param _appName The input stream path.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
                     /**
                      * 获取The input stream name.
                      * @return StreamName The input stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置The input stream name.
-                     * @param StreamName The input stream name.
+                     * @param _streamName The input stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取The input stream status. `1` indicates the stream is active.
                      * @return Status The input stream status. `1` indicates the stream is active.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置The input stream status. `1` indicates the stream is active.
-                     * @param Status The input stream status. `1` indicates the stream is active.
+                     * @param _status The input stream status. `1` indicates the stream is active.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

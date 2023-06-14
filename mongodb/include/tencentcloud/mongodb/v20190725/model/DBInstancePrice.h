@@ -51,56 +51,65 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UnitPrice Unit price.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetUnitPrice() const;
 
                     /**
                      * 设置Unit price.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UnitPrice Unit price.
+                     * @param _unitPrice Unit price.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnitPrice(const double& _unitPrice);
 
                     /**
                      * 判断参数 UnitPrice 是否已赋值
                      * @return UnitPrice 是否已赋值
+                     * 
                      */
                     bool UnitPriceHasBeenSet() const;
 
                     /**
                      * 获取Original price.
                      * @return OriginalPrice Original price.
+                     * 
                      */
                     double GetOriginalPrice() const;
 
                     /**
                      * 设置Original price.
-                     * @param OriginalPrice Original price.
+                     * @param _originalPrice Original price.
+                     * 
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
                      * 获取Discounted price.
                      * @return DiscountPrice Discounted price.
+                     * 
                      */
                     double GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted price.
-                     * @param DiscountPrice Discounted price.
+                     * @param _discountPrice Discounted price.
+                     * 
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 

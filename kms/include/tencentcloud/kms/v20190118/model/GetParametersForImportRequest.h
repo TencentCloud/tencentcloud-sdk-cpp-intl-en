@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
                      * @return KeyId Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
-                     * @param KeyId Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
+                     * @param _keyId Unique ID of a CMK. The CMK for which to get the key parameters must be of the `EXTERNAL` type, i.e., Type = 2 when the CMK is created by the `CreateKey` API.
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
                      * @return WrappingAlgorithm Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
+                     * 
                      */
                     std::string GetWrappingAlgorithm() const;
 
                     /**
                      * 设置Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
-                     * @param WrappingAlgorithm Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
+                     * @param _wrappingAlgorithm Specifies the algorithm for key material encryption. Currently, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256` are supported.
+                     * 
                      */
                     void SetWrappingAlgorithm(const std::string& _wrappingAlgorithm);
 
                     /**
                      * 判断参数 WrappingAlgorithm 是否已赋值
                      * @return WrappingAlgorithm 是否已赋值
+                     * 
                      */
                     bool WrappingAlgorithmHasBeenSet() const;
 
                     /**
                      * 获取Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
                      * @return WrappingKeySpec Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
+                     * 
                      */
                     std::string GetWrappingKeySpec() const;
 
                     /**
                      * 设置Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
-                     * @param WrappingKeySpec Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
+                     * @param _wrappingKeySpec Specifies the type of wrapping key. Currently, only `RSA_2048` is supported.
+                     * 
                      */
                     void SetWrappingKeySpec(const std::string& _wrappingKeySpec);
 
                     /**
                      * 判断参数 WrappingKeySpec 是否已赋值
                      * @return WrappingKeySpec 是否已赋值
+                     * 
                      */
                     bool WrappingKeySpecHasBeenSet() const;
 

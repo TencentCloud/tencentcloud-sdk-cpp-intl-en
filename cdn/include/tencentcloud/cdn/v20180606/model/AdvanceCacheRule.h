@@ -61,6 +61,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `path`: Apply to specified absolute paths.
 `default`: the cache rules when the origin server has not returned max-age
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCacheType() const;
 
@@ -72,19 +73,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `path`: Apply to specified absolute paths.
 `default`: the cache rules when the origin server has not returned max-age
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CacheType Rule types:
+                     * @param _cacheType Rule types:
 `all`: Apply to all files.
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
 `path`: Apply to specified absolute paths.
 `default`: the cache rules when the origin server has not returned max-age
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCacheType(const std::string& _cacheType);
 
                     /**
                      * 判断参数 CacheType 是否已赋值
                      * @return CacheType 是否已赋值
+                     * 
                      */
                     bool CacheTypeHasBeenSet() const;
 
@@ -103,6 +106,7 @@ For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `default`, enter "no max-age".
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetCacheContents() const;
 
@@ -114,19 +118,21 @@ For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `default`, enter "no max-age".
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CacheContents Content for each CacheType:
+                     * @param _cacheContents Content for each CacheType:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `default`, enter "no max-age".
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCacheContents(const std::vector<std::string>& _cacheContents);
 
                     /**
                      * 判断参数 CacheContents 是否已赋值
                      * @return CacheContents 是否已赋值
+                     * 
                      */
                     bool CacheContentsHasBeenSet() const;
 
@@ -137,6 +143,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return CacheTime Cache expiration time
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetCacheTime() const;
 
@@ -144,15 +151,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Cache expiration time
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CacheTime Cache expiration time
+                     * @param _cacheTime Cache expiration time
 Unit: second. The maximum value is 365 days.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
 
                     /**
                      * 判断参数 CacheTime 是否已赋值
                      * @return CacheTime 是否已赋值
+                     * 
                      */
                     bool CacheTimeHasBeenSet() const;
 

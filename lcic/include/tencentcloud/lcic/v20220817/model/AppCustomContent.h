@@ -50,90 +50,105 @@ Used by actions: SetAppCustomContent.
                     /**
                      * 获取Multiple scenarios can be set for an application.
                      * @return Scene Multiple scenarios can be set for an application.
+                     * 
                      */
                     std::string GetScene() const;
 
                     /**
                      * 设置Multiple scenarios can be set for an application.
-                     * @param Scene Multiple scenarios can be set for an application.
+                     * @param _scene Multiple scenarios can be set for an application.
+                     * 
                      */
                     void SetScene(const std::string& _scene);
 
                     /**
                      * 判断参数 Scene 是否已赋值
                      * @return Scene 是否已赋值
+                     * 
                      */
                     bool SceneHasBeenSet() const;
 
                     /**
                      * 获取Logo URL
                      * @return LogoUrl Logo URL
+                     * 
                      */
                     std::string GetLogoUrl() const;
 
                     /**
                      * 设置Logo URL
-                     * @param LogoUrl Logo URL
+                     * @param _logoUrl Logo URL
+                     * 
                      */
                     void SetLogoUrl(const std::string& _logoUrl);
 
                     /**
                      * 判断参数 LogoUrl 是否已赋值
                      * @return LogoUrl 是否已赋值
+                     * 
                      */
                     bool LogoUrlHasBeenSet() const;
 
                     /**
                      * 获取Homepage URL, which can be used for redirection
                      * @return HomeUrl Homepage URL, which can be used for redirection
+                     * 
                      */
                     std::string GetHomeUrl() const;
 
                     /**
                      * 设置Homepage URL, which can be used for redirection
-                     * @param HomeUrl Homepage URL, which can be used for redirection
+                     * @param _homeUrl Homepage URL, which can be used for redirection
+                     * 
                      */
                     void SetHomeUrl(const std::string& _homeUrl);
 
                     /**
                      * 判断参数 HomeUrl 是否已赋值
                      * @return HomeUrl 是否已赋值
+                     * 
                      */
                     bool HomeUrlHasBeenSet() const;
 
                     /**
                      * 获取Custom JS URL
                      * @return JsUrl Custom JS URL
+                     * 
                      */
                     std::string GetJsUrl() const;
 
                     /**
                      * 设置Custom JS URL
-                     * @param JsUrl Custom JS URL
+                     * @param _jsUrl Custom JS URL
+                     * 
                      */
                     void SetJsUrl(const std::string& _jsUrl);
 
                     /**
                      * 判断参数 JsUrl 是否已赋值
                      * @return JsUrl 是否已赋值
+                     * 
                      */
                     bool JsUrlHasBeenSet() const;
 
                     /**
                      * 获取Custom CSS URL
                      * @return CssUrl Custom CSS URL
+                     * 
                      */
                     std::string GetCssUrl() const;
 
                     /**
                      * 设置Custom CSS URL
-                     * @param CssUrl Custom CSS URL
+                     * @param _cssUrl Custom CSS URL
+                     * 
                      */
                     void SetCssUrl(const std::string& _cssUrl);
 
                     /**
                      * 判断参数 CssUrl 是否已赋值
                      * @return CssUrl 是否已赋值
+                     * 
                      */
                     bool CssUrlHasBeenSet() const;
 

@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Switch Switch
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Switch
+                     * @param _switch Switch
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Rules []
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IpTableRule> GetRules() const;
 
                     /**
                      * 设置[]
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Rules []
+                     * @param _rules []
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRules(const std::vector<IpTableRule>& _rules);
 
                     /**
                      * 判断参数 Rules 是否已赋值
                      * @return Rules 是否已赋值
+                     * 
                      */
                     bool RulesHasBeenSet() const;
 

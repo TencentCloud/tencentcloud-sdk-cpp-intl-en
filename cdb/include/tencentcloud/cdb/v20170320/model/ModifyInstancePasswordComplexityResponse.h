@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID, which can be used to query task progress.
                      * @return AsyncRequestId Async task ID, which can be used to query task progress.
+                     * 
                      */
                     std::string GetAsyncRequestId() const;
 
                     /**
                      * 判断参数 AsyncRequestId 是否已赋值
                      * @return AsyncRequestId 是否已赋值
+                     * 
                      */
                     bool AsyncRequestIdHasBeenSet() const;
 

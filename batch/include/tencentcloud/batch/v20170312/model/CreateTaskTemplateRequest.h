@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Task template name
                      * @return TaskTemplateName Task template name
+                     * 
                      */
                     std::string GetTaskTemplateName() const;
 
                     /**
                      * 设置Task template name
-                     * @param TaskTemplateName Task template name
+                     * @param _taskTemplateName Task template name
+                     * 
                      */
                     void SetTaskTemplateName(const std::string& _taskTemplateName);
 
                     /**
                      * 判断参数 TaskTemplateName 是否已赋值
                      * @return TaskTemplateName 是否已赋值
+                     * 
                      */
                     bool TaskTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Task template content with the same parameter requirements as the task
                      * @return TaskTemplateInfo Task template content with the same parameter requirements as the task
+                     * 
                      */
                     Task GetTaskTemplateInfo() const;
 
                     /**
                      * 设置Task template content with the same parameter requirements as the task
-                     * @param TaskTemplateInfo Task template content with the same parameter requirements as the task
+                     * @param _taskTemplateInfo Task template content with the same parameter requirements as the task
+                     * 
                      */
                     void SetTaskTemplateInfo(const Task& _taskTemplateInfo);
 
                     /**
                      * 判断参数 TaskTemplateInfo 是否已赋值
                      * @return TaskTemplateInfo 是否已赋值
+                     * 
                      */
                     bool TaskTemplateInfoHasBeenSet() const;
 
                     /**
                      * 获取Task template description
                      * @return TaskTemplateDescription Task template description
+                     * 
                      */
                     std::string GetTaskTemplateDescription() const;
 
                     /**
                      * 设置Task template description
-                     * @param TaskTemplateDescription Task template description
+                     * @param _taskTemplateDescription Task template description
+                     * 
                      */
                     void SetTaskTemplateDescription(const std::string& _taskTemplateDescription);
 
                     /**
                      * 判断参数 TaskTemplateDescription 是否已赋值
                      * @return TaskTemplateDescription 是否已赋值
+                     * 
                      */
                     bool TaskTemplateDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Specifies the tags you want to bind to a task template. Each task template supports up to 10 tags.
                      * @return Tags Specifies the tags you want to bind to a task template. Each task template supports up to 10 tags.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Specifies the tags you want to bind to a task template. Each task template supports up to 10 tags.
-                     * @param Tags Specifies the tags you want to bind to a task template. Each task template supports up to 10 tags.
+                     * @param _tags Specifies the tags you want to bind to a task template. Each task template supports up to 10 tags.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

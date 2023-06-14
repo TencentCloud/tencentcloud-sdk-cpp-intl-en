@@ -49,234 +49,273 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the routing policy
                      * @return RouteId The ID of the routing policy
+                     * 
                      */
                     std::string GetRouteId() const;
 
                     /**
                      * 设置The ID of the routing policy
-                     * @param RouteId The ID of the routing policy
+                     * @param _routeId The ID of the routing policy
+                     * 
                      */
                     void SetRouteId(const std::string& _routeId);
 
                     /**
                      * 判断参数 RouteId 是否已赋值
                      * @return RouteId 是否已赋值
+                     * 
                      */
                     bool RouteIdHasBeenSet() const;
 
                     /**
                      * 获取Destination
                      * @return DestinationCidrBlock Destination
+                     * 
                      */
                     std::string GetDestinationCidrBlock() const;
 
                     /**
                      * 设置Destination
-                     * @param DestinationCidrBlock Destination
+                     * @param _destinationCidrBlock Destination
+                     * 
                      */
                     void SetDestinationCidrBlock(const std::string& _destinationCidrBlock);
 
                     /**
                      * 判断参数 DestinationCidrBlock 是否已赋值
                      * @return DestinationCidrBlock 是否已赋值
+                     * 
                      */
                     bool DestinationCidrBlockHasBeenSet() const;
 
                     /**
                      * 获取The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
                      * @return InstanceType The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
-                     * @param InstanceType The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
+                     * @param _instanceType The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取The next hop (associated instance)
                      * @return InstanceId The next hop (associated instance)
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The next hop (associated instance)
-                     * @param InstanceId The next hop (associated instance)
+                     * @param _instanceId The next hop (associated instance)
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the next hop (associated instance name)
                      * @return InstanceName The name of the next hop (associated instance name)
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置The name of the next hop (associated instance name)
-                     * @param InstanceName The name of the next hop (associated instance name)
+                     * @param _instanceName The name of the next hop (associated instance name)
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取The region of the next hop (the region of the associated instance)
                      * @return InstanceRegion The region of the next hop (the region of the associated instance)
+                     * 
                      */
                     std::string GetInstanceRegion() const;
 
                     /**
                      * 设置The region of the next hop (the region of the associated instance)
-                     * @param InstanceRegion The region of the next hop (the region of the associated instance)
+                     * @param _instanceRegion The region of the next hop (the region of the associated instance)
+                     * 
                      */
                     void SetInstanceRegion(const std::string& _instanceRegion);
 
                     /**
                      * 判断参数 InstanceRegion 是否已赋值
                      * @return InstanceRegion 是否已赋值
+                     * 
                      */
                     bool InstanceRegionHasBeenSet() const;
 
                     /**
                      * 获取Update Time
                      * @return UpdateTime Update Time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update Time
-                     * @param UpdateTime Update Time
+                     * @param _updateTime Update Time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether the route is enabled
                      * @return Enabled Whether the route is enabled
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether the route is enabled
-                     * @param Enabled Whether the route is enabled
+                     * @param _enabled Whether the route is enabled
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取The UIN (root account) to which the associated instance belongs
                      * @return InstanceUin The UIN (root account) to which the associated instance belongs
+                     * 
                      */
                     std::string GetInstanceUin() const;
 
                     /**
                      * 设置The UIN (root account) to which the associated instance belongs
-                     * @param InstanceUin The UIN (root account) to which the associated instance belongs
+                     * @param _instanceUin The UIN (root account) to which the associated instance belongs
+                     * 
                      */
                     void SetInstanceUin(const std::string& _instanceUin);
 
                     /**
                      * 判断参数 InstanceUin 是否已赋值
                      * @return InstanceUin 是否已赋值
+                     * 
                      */
                     bool InstanceUinHasBeenSet() const;
 
                     /**
                      * 获取Additional status of the route
                      * @return ExtraState Additional status of the route
+                     * 
                      */
                     std::string GetExtraState() const;
 
                     /**
                      * 设置Additional status of the route
-                     * @param ExtraState Additional status of the route
+                     * @param _extraState Additional status of the route
+                     * 
                      */
                     void SetExtraState(const std::string& _extraState);
 
                     /**
                      * 判断参数 ExtraState 是否已赋值
                      * @return ExtraState 是否已赋值
+                     * 
                      */
                     bool ExtraStateHasBeenSet() const;
 
                     /**
                      * 获取Whether it is a dynamic route
                      * @return IsBgp Whether it is a dynamic route
+                     * 
                      */
                     bool GetIsBgp() const;
 
                     /**
                      * 设置Whether it is a dynamic route
-                     * @param IsBgp Whether it is a dynamic route
+                     * @param _isBgp Whether it is a dynamic route
+                     * 
                      */
                     void SetIsBgp(const bool& _isBgp);
 
                     /**
                      * 判断参数 IsBgp 是否已赋值
                      * @return IsBgp 是否已赋值
+                     * 
                      */
                     bool IsBgpHasBeenSet() const;
 
                     /**
                      * 获取Route priority
                      * @return RoutePriority Route priority
+                     * 
                      */
                     uint64_t GetRoutePriority() const;
 
                     /**
                      * 设置Route priority
-                     * @param RoutePriority Route priority
+                     * @param _routePriority Route priority
+                     * 
                      */
                     void SetRoutePriority(const uint64_t& _routePriority);
 
                     /**
                      * 判断参数 RoutePriority 是否已赋值
                      * @return RoutePriority 是否已赋值
+                     * 
                      */
                     bool RoutePriorityHasBeenSet() const;
 
                     /**
                      * 获取Next hop port name (associated instance’s port name)
                      * @return InstanceExtraName Next hop port name (associated instance’s port name)
+                     * 
                      */
                     std::string GetInstanceExtraName() const;
 
                     /**
                      * 设置Next hop port name (associated instance’s port name)
-                     * @param InstanceExtraName Next hop port name (associated instance’s port name)
+                     * @param _instanceExtraName Next hop port name (associated instance’s port name)
+                     * 
                      */
                     void SetInstanceExtraName(const std::string& _instanceExtraName);
 
                     /**
                      * 判断参数 InstanceExtraName 是否已赋值
                      * @return InstanceExtraName 是否已赋值
+                     * 
                      */
                     bool InstanceExtraNameHasBeenSet() const;
 

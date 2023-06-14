@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Domain Domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain Domain name.
+                     * @param _domain Domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Ioc Rule IP.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIoc() const;
 
                     /**
                      * 设置Rule IP.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Ioc Rule IP.
+                     * @param _ioc Rule IP.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIoc(const std::string& _ioc);
 
                     /**
                      * 判断参数 Ioc 是否已赋值
                      * @return Ioc 是否已赋值
+                     * 
                      */
                     bool IocHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Level Threat level.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLevel() const;
 
                     /**
                      * 设置Threat level.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Level Threat level.
+                     * @param _level Threat level.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLevel(const std::string& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EventName Source event name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEventName() const;
 
                     /**
                      * 设置Source event name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EventName Source event name.
+                     * @param _eventName Source event name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEventName(const std::string& _eventName);
 
                     /**
                      * 判断参数 EventName 是否已赋值
                      * @return EventName 是否已赋值
+                     * 
                      */
                     bool EventNameHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Direction Direction. Valid values: 0: outbound; 1: inbound.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDirection() const;
 
                     /**
                      * 设置Direction. Valid values: 0: outbound; 1: inbound.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Direction Direction. Valid values: 0: outbound; 1: inbound.
+                     * @param _direction Direction. Valid values: 0: outbound; 1: inbound.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDirection(const int64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Protocol Protocol.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Protocol Protocol.
+                     * @param _protocol Protocol.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Address Address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAddress() const;
 
                     /**
                      * 设置Address.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Address Address.
+                     * @param _address Address.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddress(const std::string& _address);
 
                     /**
                      * 判断参数 Address 是否已赋值
                      * @return Address 是否已赋值
+                     * 
                      */
                     bool AddressHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Action Rule type. Valid values: 1: block; 2: allow.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetAction() const;
 
                     /**
                      * 设置Rule type. Valid values: 1: block; 2: allow.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Action Rule type. Valid values: 1: block; 2: allow.
+                     * @param _action Rule type. Valid values: 1: block; 2: allow.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAction(const int64_t& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartTime Time when a rule starts to take effect.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Time when a rule starts to take effect.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Time when a rule starts to take effect.
+                     * @param _startTime Time when a rule starts to take effect.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EndTime Time when a rule expires.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Time when a rule expires.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime Time when a rule expires.
+                     * @param _endTime Time when a rule expires.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IgnoreReason Reason for ignoring.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIgnoreReason() const;
 
                     /**
                      * 设置Reason for ignoring.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IgnoreReason Reason for ignoring.
+                     * @param _ignoreReason Reason for ignoring.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIgnoreReason(const std::string& _ignoreReason);
 
                     /**
                      * 判断参数 IgnoreReason 是否已赋值
                      * @return IgnoreReason 是否已赋值
+                     * 
                      */
                     bool IgnoreReasonHasBeenSet() const;
 
@@ -293,20 +326,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Source Security event source.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSource() const;
 
                     /**
                      * 设置Security event source.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Source Security event source.
+                     * @param _source Security event source.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSource(const std::string& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
@@ -315,20 +351,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UniqueId Rule ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUniqueId() const;
 
                     /**
                      * 设置Rule ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UniqueId Rule ID.
+                     * @param _uniqueId Rule ID.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUniqueId(const std::string& _uniqueId);
 
                     /**
                      * 判断参数 UniqueId 是否已赋值
                      * @return UniqueId 是否已赋值
+                     * 
                      */
                     bool UniqueIdHasBeenSet() const;
 
@@ -337,20 +376,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MatchTimes Number of rule matching times.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMatchTimes() const;
 
                     /**
                      * 设置Number of rule matching times.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MatchTimes Number of rule matching times.
+                     * @param _matchTimes Number of rule matching times.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMatchTimes(const int64_t& _matchTimes);
 
                     /**
                      * 判断参数 MatchTimes 是否已赋值
                      * @return MatchTimes 是否已赋值
+                     * 
                      */
                     bool MatchTimesHasBeenSet() const;
 
@@ -359,38 +401,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Country Country.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCountry() const;
 
                     /**
                      * 设置Country.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Country Country.
+                     * @param _country Country.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCountry(const std::string& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
                     /**
                      * 获取
                      * @return Comment 
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置
-                     * @param Comment 
+                     * @param _comment 
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 

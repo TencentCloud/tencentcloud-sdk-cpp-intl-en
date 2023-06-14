@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance price.
                      * @return InstancePrice Instance price.
+                     * 
                      */
                     ItemPrice GetInstancePrice() const;
 
                     /**
                      * 设置Instance price.
-                     * @param InstancePrice Instance price.
+                     * @param _instancePrice Instance price.
+                     * 
                      */
                     void SetInstancePrice(const ItemPrice& _instancePrice);
 
                     /**
                      * 判断参数 InstancePrice 是否已赋值
                      * @return InstancePrice 是否已赋值
+                     * 
                      */
                     bool InstancePriceHasBeenSet() const;
 
                     /**
                      * 获取Bandwidth price
                      * @return BandwidthPrice Bandwidth price
+                     * 
                      */
                     ItemPrice GetBandwidthPrice() const;
 
                     /**
                      * 设置Bandwidth price
-                     * @param BandwidthPrice Bandwidth price
+                     * @param _bandwidthPrice Bandwidth price
+                     * 
                      */
                     void SetBandwidthPrice(const ItemPrice& _bandwidthPrice);
 
                     /**
                      * 判断参数 BandwidthPrice 是否已赋值
                      * @return BandwidthPrice 是否已赋值
+                     * 
                      */
                     bool BandwidthPriceHasBeenSet() const;
 

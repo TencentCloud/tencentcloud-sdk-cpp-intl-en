@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Application ID
                      * @return ApplicationId Application ID
+                     * 
                      */
                     std::string GetApplicationId() const;
 
                     /**
                      * 设置Application ID
-                     * @param ApplicationId Application ID
+                     * @param _applicationId Application ID
+                     * 
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
                     /**
                      * 判断参数 ApplicationId 是否已赋值
                      * @return ApplicationId 是否已赋值
+                     * 
                      */
                     bool ApplicationIdHasBeenSet() const;
 
                     /**
                      * 获取Package name
                      * @return PkgName Package name
+                     * 
                      */
                     std::string GetPkgName() const;
 
                     /**
                      * 设置Package name
-                     * @param PkgName Package name
+                     * @param _pkgName Package name
+                     * 
                      */
                     void SetPkgName(const std::string& _pkgName);
 
                     /**
                      * 判断参数 PkgName 是否已赋值
                      * @return PkgName 是否已赋值
+                     * 
                      */
                     bool PkgNameHasBeenSet() const;
 
                     /**
                      * 获取Version of the package to download
                      * @return DeployVersion Version of the package to download
+                     * 
                      */
                     std::string GetDeployVersion() const;
 
                     /**
                      * 设置Version of the package to download
-                     * @param DeployVersion Version of the package to download
+                     * @param _deployVersion Version of the package to download
+                     * 
                      */
                     void SetDeployVersion(const std::string& _deployVersion);
 
                     /**
                      * 判断参数 DeployVersion 是否已赋值
                      * @return DeployVersion 是否已赋值
+                     * 
                      */
                     bool DeployVersionHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Step sequence
                      * @return StepNo Step sequence
+                     * 
                      */
                     int64_t GetStepNo() const;
 
                     /**
                      * 设置Step sequence
-                     * @param StepNo Step sequence
+                     * @param _stepNo Step sequence
+                     * 
                      */
                     void SetStepNo(const int64_t& _stepNo);
 
                     /**
                      * 判断参数 StepNo 是否已赋值
                      * @return StepNo 是否已赋值
+                     * 
                      */
                     bool StepNoHasBeenSet() const;
 
                     /**
                      * 获取Step name
                      * @return StepName Step name
+                     * 
                      */
                     std::string GetStepName() const;
 
                     /**
                      * 设置Step name
-                     * @param StepName Step name
+                     * @param _stepName Step name
+                     * 
                      */
                     void SetStepName(const std::string& _stepName);
 
                     /**
                      * 判断参数 StepName 是否已赋值
                      * @return StepName 是否已赋值
+                     * 
                      */
                     bool StepNameHasBeenSet() const;
 
                     /**
                      * 获取Step ID in English
                      * @return StepId Step ID in English
+                     * 
                      */
                     std::string GetStepId() const;
 
                     /**
                      * 设置Step ID in English
-                     * @param StepId Step ID in English
+                     * @param _stepId Step ID in English
+                     * 
                      */
                     void SetStepId(const std::string& _stepId);
 
                     /**
                      * 判断参数 StepId 是否已赋值
                      * @return StepId 是否已赋值
+                     * 
                      */
                     bool StepIdHasBeenSet() const;
 
                     /**
                      * 获取Step status: 0 (default value), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
                      * @return Status Step status: 0 (default value), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Step status: 0 (default value), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
-                     * @param Status Step status: 0 (default value), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
+                     * @param _status Step status: 0 (default value), 1 (succeeded), 2 (failed), 3 (in progress), 4 (not started)
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

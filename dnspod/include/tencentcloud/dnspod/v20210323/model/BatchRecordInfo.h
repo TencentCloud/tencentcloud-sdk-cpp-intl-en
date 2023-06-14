@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordId Record ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetRecordId() const;
 
                     /**
                      * 设置Record ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordId Record ID
+                     * @param _recordId Record ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecordId(const uint64_t& _recordId);
 
                     /**
                      * 判断参数 RecordId 是否已赋值
                      * @return RecordId 是否已赋值
+                     * 
                      */
                     bool RecordIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubDomain Subdomain (host record).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubDomain() const;
 
                     /**
                      * 设置Subdomain (host record).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubDomain Subdomain (host record).
+                     * @param _subDomain Subdomain (host record).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubDomain(const std::string& _subDomain);
 
                     /**
                      * 判断参数 SubDomain 是否已赋值
                      * @return SubDomain 是否已赋值
+                     * 
                      */
                     bool SubDomainHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordType Record type. For more information, see the `DescribeRecordType` API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRecordType() const;
 
                     /**
                      * 设置Record type. For more information, see the `DescribeRecordType` API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordType Record type. For more information, see the `DescribeRecordType` API.
+                     * @param _recordType Record type. For more information, see the `DescribeRecordType` API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecordType(const std::string& _recordType);
 
                     /**
                      * 判断参数 RecordType 是否已赋值
                      * @return RecordType 是否已赋值
+                     * 
                      */
                     bool RecordTypeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RecordLine Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRecordLine() const;
 
                     /**
                      * 设置Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordLine Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
+                     * @param _recordLine Split zone of the DNS record. For more information, see the `DescribeRecordLineList` API.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRecordLine(const std::string& _recordLine);
 
                     /**
                      * 判断参数 RecordLine 是否已赋值
                      * @return RecordLine 是否已赋值
+                     * 
                      */
                     bool RecordLineHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Value Record value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Record value
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Value Record value
+                     * @param _value Record value
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TTL TTL value of the record
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTTL() const;
 
                     /**
                      * 设置TTL value of the record
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TTL TTL value of the record
+                     * @param _tTL TTL value of the record
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTTL(const uint64_t& _tTL);
 
                     /**
                      * 判断参数 TTL 是否已赋值
                      * @return TTL 是否已赋值
+                     * 
                      */
                     bool TTLHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Record adding status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Record adding status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Record adding status
+                     * @param _status Record adding status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Operation Operation type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOperation() const;
 
                     /**
                      * 设置Operation type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Operation Operation type
+                     * @param _operation Operation type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
@@ -227,38 +251,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrMsg Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
                      * 设置Error message
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrMsg Error message
+                     * @param _errMsg Error message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
 
                     /**
                      * 判断参数 ErrMsg 是否已赋值
                      * @return ErrMsg 是否已赋值
+                     * 
                      */
                     bool ErrMsgHasBeenSet() const;
 
                     /**
                      * 获取ID of the record in the list
                      * @return Id ID of the record in the list
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置ID of the record in the list
-                     * @param Id ID of the record in the list
+                     * @param _id ID of the record in the list
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
@@ -267,20 +297,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Enabled Record status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetEnabled() const;
 
                     /**
                      * 设置Record status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Enabled Record status
+                     * @param _enabled Record status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnabled(const uint64_t& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
@@ -289,20 +322,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MX MX weight of the record
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetMX() const;
 
                     /**
                      * 设置MX weight of the record
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MX MX weight of the record
+                     * @param _mX MX weight of the record
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMX(const uint64_t& _mX);
 
                     /**
                      * 判断参数 MX 是否已赋值
                      * @return MX 是否已赋值
+                     * 
                      */
                     bool MXHasBeenSet() const;
 
@@ -311,20 +347,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Weight The record weight.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetWeight() const;
 
                     /**
                      * 设置The record weight.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Weight The record weight.
+                     * @param _weight The record weight.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWeight(const uint64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

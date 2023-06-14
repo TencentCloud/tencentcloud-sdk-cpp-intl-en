@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
                      * @return MinFinishTime Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
+                     * 
                      */
                     std::string GetMinFinishTime() const;
 
                     /**
                      * 设置Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
-                     * @param MinFinishTime Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
+                     * @param _minFinishTime Minimum end time of a backup in the format of `2018-01-01 00:00:00`. It is 7 days ago by default.
+                     * 
                      */
                     void SetMinFinishTime(const std::string& _minFinishTime);
 
                     /**
                      * 判断参数 MinFinishTime 是否已赋值
                      * @return MinFinishTime 是否已赋值
+                     * 
                      */
                     bool MinFinishTimeHasBeenSet() const;
 
                     /**
                      * 获取Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
                      * @return MaxFinishTime Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
+                     * 
                      */
                     std::string GetMaxFinishTime() const;
 
                     /**
                      * 设置Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
-                     * @param MaxFinishTime Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
+                     * @param _maxFinishTime Maximum end time of a backup in the format of `2018-01-01 00:00:00`. It is the current time by default.
+                     * 
                      */
                     void SetMaxFinishTime(const std::string& _maxFinishTime);
 
                     /**
                      * 判断参数 MaxFinishTime 是否已赋值
                      * @return MaxFinishTime 是否已赋值
+                     * 
                      */
                     bool MaxFinishTimeHasBeenSet() const;
 
@@ -88,6 +94,7 @@ db-instance-ip: Filter by instance VPC IP (in string format).
 db-instance-id: Filter by instance ID (in string format).
 db-instance-name: Filter by instance name (in string format).
 db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -96,88 +103,102 @@ db-instance-ip: Filter by instance VPC IP (in string format).
 db-instance-id: Filter by instance ID (in string format).
 db-instance-name: Filter by instance name (in string format).
 db-instance-ip: Filter by instance VPC IP (in string format).
-                     * @param Filters Filter instances using one or more criteria. Valid filter names:
+                     * @param _filters Filter instances using one or more criteria. Valid filter names:
 db-instance-id: Filter by instance ID (in string format).
 db-instance-name: Filter by instance name (in string format).
 db-instance-ip: Filter by instance VPC IP (in string format).
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of results returned per page. Value range: 1-100. Default: `10`
                      * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The maximum number of results returned per page. Value range: 1-100. Default: `10`
-                     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * @param _limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Data offset, which starts from 0.
                      * @return Offset Data offset, which starts from 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Data offset, which starts from 0.
-                     * @param Offset Data offset, which starts from 0.
+                     * @param _offset Data offset, which starts from 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
                      * @return OrderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
-                     * @param OrderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+                     * @param _orderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending).
                      * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * 
                      */
                     std::string GetOrderByType() const;
 
                     /**
                      * 设置Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-                     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * @param _orderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 

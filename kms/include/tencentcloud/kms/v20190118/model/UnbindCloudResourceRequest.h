@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取CMK ID
                      * @return KeyId CMK ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置CMK ID
-                     * @param KeyId CMK ID
+                     * @param _keyId CMK ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of a Tencent Cloud service
                      * @return ProductId Unique ID of a Tencent Cloud service
+                     * 
                      */
                     std::string GetProductId() const;
 
                     /**
                      * 设置Unique ID of a Tencent Cloud service
-                     * @param ProductId Unique ID of a Tencent Cloud service
+                     * @param _productId Unique ID of a Tencent Cloud service
+                     * 
                      */
                     void SetProductId(const std::string& _productId);
 
                     /**
                      * 判断参数 ProductId 是否已赋值
                      * @return ProductId 是否已赋值
+                     * 
                      */
                     bool ProductIdHasBeenSet() const;
 
                     /**
                      * 获取Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
                      * @return ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
-                     * @param ResourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+                     * @param _resourceId Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 

@@ -49,180 +49,210 @@ namespace TencentCloud
                     /**
                      * 获取Shard ID
                      * @return ShardInstanceId Shard ID
+                     * 
                      */
                     std::string GetShardInstanceId() const;
 
                     /**
                      * 设置Shard ID
-                     * @param ShardInstanceId Shard ID
+                     * @param _shardInstanceId Shard ID
+                     * 
                      */
                     void SetShardInstanceId(const std::string& _shardInstanceId);
 
                     /**
                      * 判断参数 ShardInstanceId 是否已赋值
                      * @return ShardInstanceId 是否已赋值
+                     * 
                      */
                     bool ShardInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Shard set ID
                      * @return ShardSerialId Shard set ID
+                     * 
                      */
                     std::string GetShardSerialId() const;
 
                     /**
                      * 设置Shard set ID
-                     * @param ShardSerialId Shard set ID
+                     * @param _shardSerialId Shard set ID
+                     * 
                      */
                     void SetShardSerialId(const std::string& _shardSerialId);
 
                     /**
                      * 判断参数 ShardSerialId 是否已赋值
                      * @return ShardSerialId 是否已赋值
+                     * 
                      */
                     bool ShardSerialIdHasBeenSet() const;
 
                     /**
                      * 获取Status. 0: creating; 1: processing; 2: running; 3: shard not initialized; -2: shard deleted
                      * @return Status Status. 0: creating; 1: processing; 2: running; 3: shard not initialized; -2: shard deleted
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Status. 0: creating; 1: processing; 2: running; 3: shard not initialized; -2: shard deleted
-                     * @param Status Status. 0: creating; 1: processing; 2: running; 3: shard not initialized; -2: shard deleted
+                     * @param _status Status. 0: creating; 1: processing; 2: running; 3: shard not initialized; -2: shard deleted
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return Createtime Creation time
+                     * 
                      */
                     std::string GetCreatetime() const;
 
                     /**
                      * 设置Creation time
-                     * @param Createtime Creation time
+                     * @param _createtime Creation time
+                     * 
                      */
                     void SetCreatetime(const std::string& _createtime);
 
                     /**
                      * 判断参数 Createtime 是否已赋值
                      * @return Createtime 是否已赋值
+                     * 
                      */
                     bool CreatetimeHasBeenSet() const;
 
                     /**
                      * 获取Memory size in GB
                      * @return Memory Memory size in GB
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Memory size in GB
-                     * @param Memory Memory size in GB
+                     * @param _memory Memory size in GB
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Storage capacity in GB
                      * @return Storage Storage capacity in GB
+                     * 
                      */
                     int64_t GetStorage() const;
 
                     /**
                      * 设置Storage capacity in GB
-                     * @param Storage Storage capacity in GB
+                     * @param _storage Storage capacity in GB
+                     * 
                      */
                     void SetStorage(const int64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Numeric ID of a shard
                      * @return ShardId Numeric ID of a shard
+                     * 
                      */
                     int64_t GetShardId() const;
 
                     /**
                      * 设置Numeric ID of a shard
-                     * @param ShardId Numeric ID of a shard
+                     * @param _shardId Numeric ID of a shard
+                     * 
                      */
                     void SetShardId(const int64_t& _shardId);
 
                     /**
                      * 判断参数 ShardId 是否已赋值
                      * @return ShardId 是否已赋值
+                     * 
                      */
                     bool ShardIdHasBeenSet() const;
 
                     /**
                      * 获取Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
                      * @return NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+                     * 
                      */
                     int64_t GetNodeCount() const;
 
                     /**
                      * 设置Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
-                     * @param NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+                     * @param _nodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+                     * 
                      */
                     void SetNodeCount(const int64_t& _nodeCount);
 
                     /**
                      * 判断参数 NodeCount 是否已赋值
                      * @return NodeCount 是否已赋值
+                     * 
                      */
                     bool NodeCountHasBeenSet() const;
 
                     /**
                      * 获取Product type ID (this field is obsolete and should not be depended on)
                      * @return Pid Product type ID (this field is obsolete and should not be depended on)
+                     * 
                      */
                     int64_t GetPid() const;
 
                     /**
                      * 设置Product type ID (this field is obsolete and should not be depended on)
-                     * @param Pid Product type ID (this field is obsolete and should not be depended on)
+                     * @param _pid Product type ID (this field is obsolete and should not be depended on)
+                     * 
                      */
                     void SetPid(const int64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 
                     /**
                      * 获取Number of CPU cores
                      * @return Cpu Number of CPU cores
+                     * 
                      */
                     uint64_t GetCpu() const;
 
                     /**
                      * 设置Number of CPU cores
-                     * @param Cpu Number of CPU cores
+                     * @param _cpu Number of CPU cores
+                     * 
                      */
                     void SetCpu(const uint64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 

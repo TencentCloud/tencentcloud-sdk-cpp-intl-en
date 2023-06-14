@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Newly created trigger
                      * @return Trigger Newly created trigger
+                     * 
                      */
                     WebhookTrigger GetTrigger() const;
 
                     /**
                      * 判断参数 Trigger 是否已赋值
                      * @return Trigger 是否已赋值
+                     * 
                      */
                     bool TriggerHasBeenSet() const;
 

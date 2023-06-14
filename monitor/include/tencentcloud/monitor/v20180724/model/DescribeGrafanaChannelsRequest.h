@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取TCMG instance ID, such as “grafana-12345678”.
                      * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置TCMG instance ID, such as “grafana-12345678”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
+                     * @param _instanceId TCMG instance ID, such as “grafana-12345678”.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of items to be queried
                      * @return Limit Number of items to be queried
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of items to be queried
-                     * @param Limit Number of items to be queried
+                     * @param _limit Number of items to be queried
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Alert channel name, such as “test”.
                      * @return ChannelName Alert channel name, such as “test”.
+                     * 
                      */
                     std::string GetChannelName() const;
 
                     /**
                      * 设置Alert channel name, such as “test”.
-                     * @param ChannelName Alert channel name, such as “test”.
+                     * @param _channelName Alert channel name, such as “test”.
+                     * 
                      */
                     void SetChannelName(const std::string& _channelName);
 
                     /**
                      * 判断参数 ChannelName 是否已赋值
                      * @return ChannelName 是否已赋值
+                     * 
                      */
                     bool ChannelNameHasBeenSet() const;
 
                     /**
                      * 获取Alert channel ID, such as “nchannel-abcd1234”.
                      * @return ChannelIds Alert channel ID, such as “nchannel-abcd1234”.
+                     * 
                      */
                     std::vector<std::string> GetChannelIds() const;
 
                     /**
                      * 设置Alert channel ID, such as “nchannel-abcd1234”.
-                     * @param ChannelIds Alert channel ID, such as “nchannel-abcd1234”.
+                     * @param _channelIds Alert channel ID, such as “nchannel-abcd1234”.
+                     * 
                      */
                     void SetChannelIds(const std::vector<std::string>& _channelIds);
 
                     /**
                      * 判断参数 ChannelIds 是否已赋值
                      * @return ChannelIds 是否已赋值
+                     * 
                      */
                     bool ChannelIdsHasBeenSet() const;
 
                     /**
                      * 获取Alert channel status
                      * @return ChannelState Alert channel status
+                     * 
                      */
                     int64_t GetChannelState() const;
 
                     /**
                      * 设置Alert channel status
-                     * @param ChannelState Alert channel status
+                     * @param _channelState Alert channel status
+                     * 
                      */
                     void SetChannelState(const int64_t& _channelState);
 
                     /**
                      * 判断参数 ChannelState 是否已赋值
                      * @return ChannelState 是否已赋值
+                     * 
                      */
                     bool ChannelStateHasBeenSet() const;
 

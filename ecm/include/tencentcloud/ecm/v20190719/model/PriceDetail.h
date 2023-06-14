@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Discount, such as `20`, which represents 80% off
                      * @return Discount Discount, such as `20`, which represents 80% off
+                     * 
                      */
                     uint64_t GetDiscount() const;
 
                     /**
                      * 设置Discount, such as `20`, which represents 80% off
-                     * @param Discount Discount, such as `20`, which represents 80% off
+                     * @param _discount Discount, such as `20`, which represents 80% off
+                     * 
                      */
                     void SetDiscount(const uint64_t& _discount);
 
                     /**
                      * 判断参数 Discount 是否已赋值
                      * @return Discount 是否已赋值
+                     * 
                      */
                     bool DiscountHasBeenSet() const;
 
                     /**
                      * 获取Discounted price in cents
                      * @return DiscountPrice Discounted price in cents
+                     * 
                      */
                     uint64_t GetDiscountPrice() const;
 
                     /**
                      * 设置Discounted price in cents
-                     * @param DiscountPrice Discounted price in cents
+                     * @param _discountPrice Discounted price in cents
+                     * 
                      */
                     void SetDiscountPrice(const uint64_t& _discountPrice);
 
                     /**
                      * 判断参数 DiscountPrice 是否已赋值
                      * @return DiscountPrice 是否已赋值
+                     * 
                      */
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
                      * 获取Original price in cents
                      * @return OriginalPrice Original price in cents
+                     * 
                      */
                     uint64_t GetOriginalPrice() const;
 
                     /**
                      * 设置Original price in cents
-                     * @param OriginalPrice Original price in cents
+                     * @param _originalPrice Original price in cents
+                     * 
                      */
                     void SetOriginalPrice(const uint64_t& _originalPrice);
 
                     /**
                      * 判断参数 OriginalPrice 是否已赋值
                      * @return OriginalPrice 是否已赋值
+                     * 
                      */
                     bool OriginalPriceHasBeenSet() const;
 

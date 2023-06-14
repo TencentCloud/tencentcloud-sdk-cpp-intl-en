@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AddressInfoSet Private and public IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AddressInfo> GetAddressInfoSet() const;
 
                     /**
                      * 设置Private and public IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AddressInfoSet Private and public IP information of the instance.
+                     * @param _addressInfoSet Private and public IP information of the instance.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAddressInfoSet(const std::vector<AddressInfo>& _addressInfoSet);
 
                     /**
                      * 判断参数 AddressInfoSet 是否已赋值
                      * @return AddressInfoSet 是否已赋值
+                     * 
                      */
                     bool AddressInfoSetHasBeenSet() const;
 
                     /**
                      * 获取ENI ID.
                      * @return NetworkInterfaceId ENI ID.
+                     * 
                      */
                     std::string GetNetworkInterfaceId() const;
 
                     /**
                      * 设置ENI ID.
-                     * @param NetworkInterfaceId ENI ID.
+                     * @param _networkInterfaceId ENI ID.
+                     * 
                      */
                     void SetNetworkInterfaceId(const std::string& _networkInterfaceId);
 
                     /**
                      * 判断参数 NetworkInterfaceId 是否已赋值
                      * @return NetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceIdHasBeenSet() const;
 
@@ -92,38 +98,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NetworkInterfaceName ENI name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNetworkInterfaceName() const;
 
                     /**
                      * 设置ENI name.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NetworkInterfaceName ENI name.
+                     * @param _networkInterfaceName ENI name.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNetworkInterfaceName(const std::string& _networkInterfaceName);
 
                     /**
                      * 判断参数 NetworkInterfaceName 是否已赋值
                      * @return NetworkInterfaceName 是否已赋值
+                     * 
                      */
                     bool NetworkInterfaceNameHasBeenSet() const;
 
                     /**
                      * 获取Primary ENI attribute. Valid values: true: primary ENI; false: secondary ENI.
                      * @return Primary Primary ENI attribute. Valid values: true: primary ENI; false: secondary ENI.
+                     * 
                      */
                     bool GetPrimary() const;
 
                     /**
                      * 设置Primary ENI attribute. Valid values: true: primary ENI; false: secondary ENI.
-                     * @param Primary Primary ENI attribute. Valid values: true: primary ENI; false: secondary ENI.
+                     * @param _primary Primary ENI attribute. Valid values: true: primary ENI; false: secondary ENI.
+                     * 
                      */
                     void SetPrimary(const bool& _primary);
 
                     /**
                      * 判断参数 Primary 是否已赋值
                      * @return Primary 是否已赋值
+                     * 
                      */
                     bool PrimaryHasBeenSet() const;
 

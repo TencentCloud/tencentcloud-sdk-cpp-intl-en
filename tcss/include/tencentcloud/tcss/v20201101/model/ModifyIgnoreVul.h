@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取POC ID
                      * @return PocID POC ID
+                     * 
                      */
                     std::string GetPocID() const;
 
                     /**
                      * 设置POC ID
-                     * @param PocID POC ID
+                     * @param _pocID POC ID
+                     * 
                      */
                     void SetPocID(const std::string& _pocID);
 
                     /**
                      * 判断参数 PocID 是否已赋值
                      * @return PocID 是否已赋值
+                     * 
                      */
                     bool PocIDHasBeenSet() const;
 
                     /**
                      * 获取IDs of images to be ignored. If it is not specified, it indicates to ignore all.
                      * @return ImageIDs IDs of images to be ignored. If it is not specified, it indicates to ignore all.
+                     * 
                      */
                     std::vector<std::string> GetImageIDs() const;
 
                     /**
                      * 设置IDs of images to be ignored. If it is not specified, it indicates to ignore all.
-                     * @param ImageIDs IDs of images to be ignored. If it is not specified, it indicates to ignore all.
+                     * @param _imageIDs IDs of images to be ignored. If it is not specified, it indicates to ignore all.
+                     * 
                      */
                     void SetImageIDs(const std::vector<std::string>& _imageIDs);
 
                     /**
                      * 判断参数 ImageIDs 是否已赋值
                      * @return ImageIDs 是否已赋值
+                     * 
                      */
                     bool ImageIDsHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Image type. Valid values: `LOCAL` (local image); `REGISTRY` (repository image).
                      * @return ImageType When there is an image
 Image type. Valid values: `LOCAL` (local image); `REGISTRY` (repository image).
+                     * 
                      */
                     std::string GetImageType() const;
 
                     /**
                      * 设置When there is an image
 Image type. Valid values: `LOCAL` (local image); `REGISTRY` (repository image).
-                     * @param ImageType When there is an image
+                     * @param _imageType When there is an image
 Image type. Valid values: `LOCAL` (local image); `REGISTRY` (repository image).
+                     * 
                      */
                     void SetImageType(const std::string& _imageType);
 
                     /**
                      * 判断参数 ImageType 是否已赋值
                      * @return ImageType 是否已赋值
+                     * 
                      */
                     bool ImageTypeHasBeenSet() const;
 

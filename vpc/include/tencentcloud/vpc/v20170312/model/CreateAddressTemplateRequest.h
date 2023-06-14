@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取IP address template name.
                      * @return AddressTemplateName IP address template name.
+                     * 
                      */
                     std::string GetAddressTemplateName() const;
 
                     /**
                      * 设置IP address template name.
-                     * @param AddressTemplateName IP address template name.
+                     * @param _addressTemplateName IP address template name.
+                     * 
                      */
                     void SetAddressTemplateName(const std::string& _addressTemplateName);
 
                     /**
                      * 判断参数 AddressTemplateName 是否已赋值
                      * @return AddressTemplateName 是否已赋值
+                     * 
                      */
                     bool AddressTemplateNameHasBeenSet() const;
 
                     /**
                      * 获取The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
                      * @return Addresses The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+                     * 
                      */
                     std::vector<std::string> GetAddresses() const;
 
                     /**
                      * 设置The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
-                     * @param Addresses The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+                     * @param _addresses The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+                     * 
                      */
                     void SetAddresses(const std::vector<std::string>& _addresses);
 
                     /**
                      * 判断参数 Addresses 是否已赋值
                      * @return Addresses 是否已赋值
+                     * 
                      */
                     bool AddressesHasBeenSet() const;
 
                     /**
                      * 获取The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
                      * @return AddressesExtra The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+                     * 
                      */
                     std::vector<AddressInfo> GetAddressesExtra() const;
 
                     /**
                      * 设置The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
-                     * @param AddressesExtra The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+                     * @param _addressesExtra The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+                     * 
                      */
                     void SetAddressesExtra(const std::vector<AddressInfo>& _addressesExtra);
 
                     /**
                      * 判断参数 AddressesExtra 是否已赋值
                      * @return AddressesExtra 是否已赋值
+                     * 
                      */
                     bool AddressesExtraHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Event ID.
                      * @return Id Event ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Event ID.
-                     * @param Id Event ID.
+                     * @param _id Event ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Server IP.
                      * @return MachineIp Server IP.
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Server IP.
-                     * @param MachineIp Server IP.
+                     * @param _machineIp Server IP.
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
@@ -89,6 +95,7 @@ namespace TencentCloud
                      * @return Status Login status
 <li>NON_LOCAL_LOGIN: unusual login location</li>
 <li>NORMAL_LOGIN: intended login</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -96,159 +103,185 @@ namespace TencentCloud
                      * 设置Login status
 <li>NON_LOCAL_LOGIN: unusual login location</li>
 <li>NORMAL_LOGIN: intended login</li>
-                     * @param Status Login status
+                     * @param _status Login status
 <li>NON_LOCAL_LOGIN: unusual login location</li>
 <li>NORMAL_LOGIN: intended login</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Username.
                      * @return UserName Username.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username.
-                     * @param UserName Username.
+                     * @param _userName Username.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取City ID.
                      * @return City City ID.
+                     * 
                      */
                     uint64_t GetCity() const;
 
                     /**
                      * 设置City ID.
-                     * @param City City ID.
+                     * @param _city City ID.
+                     * 
                      */
                     void SetCity(const uint64_t& _city);
 
                     /**
                      * 判断参数 City 是否已赋值
                      * @return City 是否已赋值
+                     * 
                      */
                     bool CityHasBeenSet() const;
 
                     /**
                      * 获取Country/Region ID.
                      * @return Country Country/Region ID.
+                     * 
                      */
                     uint64_t GetCountry() const;
 
                     /**
                      * 设置Country/Region ID.
-                     * @param Country Country/Region ID.
+                     * @param _country Country/Region ID.
+                     * 
                      */
                     void SetCountry(const uint64_t& _country);
 
                     /**
                      * 判断参数 Country 是否已赋值
                      * @return Country 是否已赋值
+                     * 
                      */
                     bool CountryHasBeenSet() const;
 
                     /**
                      * 获取Province/State ID.
                      * @return Province Province/State ID.
+                     * 
                      */
                     uint64_t GetProvince() const;
 
                     /**
                      * 设置Province/State ID.
-                     * @param Province Province/State ID.
+                     * @param _province Province/State ID.
+                     * 
                      */
                     void SetProvince(const uint64_t& _province);
 
                     /**
                      * 判断参数 Province 是否已赋值
                      * @return Province 是否已赋值
+                     * 
                      */
                     bool ProvinceHasBeenSet() const;
 
                     /**
                      * 获取Login IP.
                      * @return SrcIp Login IP.
+                     * 
                      */
                     std::string GetSrcIp() const;
 
                     /**
                      * 设置Login IP.
-                     * @param SrcIp Login IP.
+                     * @param _srcIp Login IP.
+                     * 
                      */
                     void SetSrcIp(const std::string& _srcIp);
 
                     /**
                      * 判断参数 SrcIp 是否已赋值
                      * @return SrcIp 是否已赋值
+                     * 
                      */
                     bool SrcIpHasBeenSet() const;
 
                     /**
                      * 获取Server name.
                      * @return MachineName Server name.
+                     * 
                      */
                     std::string GetMachineName() const;
 
                     /**
                      * 设置Server name.
-                     * @param MachineName Server name.
+                     * @param _machineName Server name.
+                     * 
                      */
                     void SetMachineName(const std::string& _machineName);
 
                     /**
                      * 判断参数 MachineName 是否已赋值
                      * @return MachineName 是否已赋值
+                     * 
                      */
                     bool MachineNameHasBeenSet() const;
 
                     /**
                      * 获取Login time.
                      * @return LoginTime Login time.
+                     * 
                      */
                     std::string GetLoginTime() const;
 
                     /**
                      * 设置Login time.
-                     * @param LoginTime Login time.
+                     * @param _loginTime Login time.
+                     * 
                      */
                     void SetLoginTime(const std::string& _loginTime);
 
                     /**
                      * 判断参数 LoginTime 是否已赋值
                      * @return LoginTime 是否已赋值
+                     * 
                      */
                     bool LoginTimeHasBeenSet() const;
 
                     /**
                      * 获取CWP agent `Uuid`.
                      * @return Uuid CWP agent `Uuid`.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `Uuid`.
-                     * @param Uuid CWP agent `Uuid`.
+                     * @param _uuid CWP agent `Uuid`.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 

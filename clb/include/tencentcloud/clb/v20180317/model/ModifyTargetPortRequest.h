@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB listener ID
                      * @return ListenerId CLB listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID
-                     * @param ListenerId CLB listener ID
+                     * @param _listenerId CLB listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取List of real servers for which to modify the ports
                      * @return Targets List of real servers for which to modify the ports
+                     * 
                      */
                     std::vector<Target> GetTargets() const;
 
                     /**
                      * 设置List of real servers for which to modify the ports
-                     * @param Targets List of real servers for which to modify the ports
+                     * @param _targets List of real servers for which to modify the ports
+                     * 
                      */
                     void SetTargets(const std::vector<Target>& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 
                     /**
                      * 获取New port of the real server bound to a listener or forwarding rule
                      * @return NewPort New port of the real server bound to a listener or forwarding rule
+                     * 
                      */
                     int64_t GetNewPort() const;
 
                     /**
                      * 设置New port of the real server bound to a listener or forwarding rule
-                     * @param NewPort New port of the real server bound to a listener or forwarding rule
+                     * @param _newPort New port of the real server bound to a listener or forwarding rule
+                     * 
                      */
                     void SetNewPort(const int64_t& _newPort);
 
                     /**
                      * 判断参数 NewPort 是否已赋值
                      * @return NewPort 是否已赋值
+                     * 
                      */
                     bool NewPortHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
                      * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+                     * 
                      */
                     std::string GetLocationId() const;
 
                     /**
                      * 设置Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
-                     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+                     * @param _locationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+                     * 
                      */
                     void SetLocationId(const std::string& _locationId);
 
                     /**
                      * 判断参数 LocationId 是否已赋值
                      * @return LocationId 是否已赋值
+                     * 
                      */
                     bool LocationIdHasBeenSet() const;
 
                     /**
                      * 获取Target rule domain name. This parameter does not take effect if LocationId is specified.
                      * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Target rule domain name. This parameter does not take effect if LocationId is specified.
-                     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
+                     * @param _domain Target rule domain name. This parameter does not take effect if LocationId is specified.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Target rule URL. This parameter does not take effect if LocationId is specified.
                      * @return Url Target rule URL. This parameter does not take effect if LocationId is specified.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Target rule URL. This parameter does not take effect if LocationId is specified.
-                     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified.
+                     * @param _url Target rule URL. This parameter does not take effect if LocationId is specified.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 

@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Region information
                      * @return Region Region information
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region information
-                     * @param Region Region information
+                     * @param _region Region information
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取AZ information
                      * @return Zone AZ information
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ information
-                     * @param Zone AZ information
+                     * @param _zone AZ information
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Purchasable specification information
                      * @return SpecItems Purchasable specification information
+                     * 
                      */
                     std::vector<SpecItem> GetSpecItems() const;
 
                     /**
                      * 设置Purchasable specification information
-                     * @param SpecItems Purchasable specification information
+                     * @param _specItems Purchasable specification information
+                     * 
                      */
                     void SetSpecItems(const std::vector<SpecItem>& _specItems);
 
                     /**
                      * 判断参数 SpecItems 是否已赋值
                      * @return SpecItems 是否已赋值
+                     * 
                      */
                     bool SpecItemsHasBeenSet() const;
 
                     /**
                      * 获取Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
                      * @return SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * 
                      */
                     int64_t GetSupportMultiAZ() const;
 
                     /**
                      * 设置Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
-                     * @param SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * @param _supportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * 
                      */
                     void SetSupportMultiAZ(const int64_t& _supportMultiAZ);
 
                     /**
                      * 判断参数 SupportMultiAZ 是否已赋值
                      * @return SupportMultiAZ 是否已赋值
+                     * 
                      */
                     bool SupportMultiAZHasBeenSet() const;
 

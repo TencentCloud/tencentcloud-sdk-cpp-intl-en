@@ -50,60 +50,70 @@ namespace TencentCloud
                     /**
                      * 获取Number of instance parameters
                      * @return TotalCount Number of instance parameters
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Instance parameter in Enum type
                      * @return InstanceEnumParam Instance parameter in Enum type
+                     * 
                      */
                     std::vector<InstanceEnumParam> GetInstanceEnumParam() const;
 
                     /**
                      * 判断参数 InstanceEnumParam 是否已赋值
                      * @return InstanceEnumParam 是否已赋值
+                     * 
                      */
                     bool InstanceEnumParamHasBeenSet() const;
 
                     /**
                      * 获取Instance parameter in Integer type
                      * @return InstanceIntegerParam Instance parameter in Integer type
+                     * 
                      */
                     std::vector<InstanceIntegerParam> GetInstanceIntegerParam() const;
 
                     /**
                      * 判断参数 InstanceIntegerParam 是否已赋值
                      * @return InstanceIntegerParam 是否已赋值
+                     * 
                      */
                     bool InstanceIntegerParamHasBeenSet() const;
 
                     /**
                      * 获取Instance parameter in Char type
                      * @return InstanceTextParam Instance parameter in Char type
+                     * 
                      */
                     std::vector<InstanceTextParam> GetInstanceTextParam() const;
 
                     /**
                      * 判断参数 InstanceTextParam 是否已赋值
                      * @return InstanceTextParam 是否已赋值
+                     * 
                      */
                     bool InstanceTextParamHasBeenSet() const;
 
                     /**
                      * 获取Instance parameter in Multi type
                      * @return InstanceMultiParam Instance parameter in Multi type
+                     * 
                      */
                     std::vector<InstanceMultiParam> GetInstanceMultiParam() const;
 
                     /**
                      * 判断参数 InstanceMultiParam 是否已赋值
                      * @return InstanceMultiParam 是否已赋值
+                     * 
                      */
                     bool InstanceMultiParamHasBeenSet() const;
 

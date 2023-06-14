@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return URLNotices Alarm callback notification
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<URLNotice> GetURLNotices() const;
 
                     /**
                      * 判断参数 URLNotices 是否已赋值
                      * @return URLNotices 是否已赋值
+                     * 
                      */
                     bool URLNoticesHasBeenSet() const;
 

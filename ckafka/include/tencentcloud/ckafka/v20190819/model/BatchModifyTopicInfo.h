@@ -49,198 +49,231 @@ namespace TencentCloud
                     /**
                      * 获取Topic name.
                      * @return TopicName Topic name.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name.
-                     * @param TopicName Topic name.
+                     * @param _topicName Topic name.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取The number of partitions.
                      * @return PartitionNum The number of partitions.
+                     * 
                      */
                     int64_t GetPartitionNum() const;
 
                     /**
                      * 设置The number of partitions.
-                     * @param PartitionNum The number of partitions.
+                     * @param _partitionNum The number of partitions.
+                     * 
                      */
                     void SetPartitionNum(const int64_t& _partitionNum);
 
                     /**
                      * 判断参数 PartitionNum 是否已赋值
                      * @return PartitionNum 是否已赋值
+                     * 
                      */
                     bool PartitionNumHasBeenSet() const;
 
                     /**
                      * 获取Remarks.
                      * @return Note Remarks.
+                     * 
                      */
                     std::string GetNote() const;
 
                     /**
                      * 设置Remarks.
-                     * @param Note Remarks.
+                     * @param _note Remarks.
+                     * 
                      */
                     void SetNote(const std::string& _note);
 
                     /**
                      * 判断参数 Note 是否已赋值
                      * @return Note 是否已赋值
+                     * 
                      */
                     bool NoteHasBeenSet() const;
 
                     /**
                      * 获取Number of replicas.
                      * @return ReplicaNum Number of replicas.
+                     * 
                      */
                     int64_t GetReplicaNum() const;
 
                     /**
                      * 设置Number of replicas.
-                     * @param ReplicaNum Number of replicas.
+                     * @param _replicaNum Number of replicas.
+                     * 
                      */
                     void SetReplicaNum(const int64_t& _replicaNum);
 
                     /**
                      * 判断参数 ReplicaNum 是否已赋值
                      * @return ReplicaNum 是否已赋值
+                     * 
                      */
                     bool ReplicaNumHasBeenSet() const;
 
                     /**
                      * 获取Message deletion policy. Valid values: `delete`, `compact`.
                      * @return CleanUpPolicy Message deletion policy. Valid values: `delete`, `compact`.
+                     * 
                      */
                     std::string GetCleanUpPolicy() const;
 
                     /**
                      * 设置Message deletion policy. Valid values: `delete`, `compact`.
-                     * @param CleanUpPolicy Message deletion policy. Valid values: `delete`, `compact`.
+                     * @param _cleanUpPolicy Message deletion policy. Valid values: `delete`, `compact`.
+                     * 
                      */
                     void SetCleanUpPolicy(const std::string& _cleanUpPolicy);
 
                     /**
                      * 判断参数 CleanUpPolicy 是否已赋值
                      * @return CleanUpPolicy 是否已赋值
+                     * 
                      */
                     bool CleanUpPolicyHasBeenSet() const;
 
                     /**
                      * 获取The minimum number of replicas specified by `min.insync.replicas` when the producer sets `request.required.acks` to `-1`.
                      * @return MinInsyncReplicas The minimum number of replicas specified by `min.insync.replicas` when the producer sets `request.required.acks` to `-1`.
+                     * 
                      */
                     int64_t GetMinInsyncReplicas() const;
 
                     /**
                      * 设置The minimum number of replicas specified by `min.insync.replicas` when the producer sets `request.required.acks` to `-1`.
-                     * @param MinInsyncReplicas The minimum number of replicas specified by `min.insync.replicas` when the producer sets `request.required.acks` to `-1`.
+                     * @param _minInsyncReplicas The minimum number of replicas specified by `min.insync.replicas` when the producer sets `request.required.acks` to `-1`.
+                     * 
                      */
                     void SetMinInsyncReplicas(const int64_t& _minInsyncReplicas);
 
                     /**
                      * 判断参数 MinInsyncReplicas 是否已赋值
                      * @return MinInsyncReplicas 是否已赋值
+                     * 
                      */
                     bool MinInsyncReplicasHasBeenSet() const;
 
                     /**
                      * 获取Whether to allow a non-ISR replica to be the leader.
                      * @return UncleanLeaderElectionEnable Whether to allow a non-ISR replica to be the leader.
+                     * 
                      */
                     bool GetUncleanLeaderElectionEnable() const;
 
                     /**
                      * 设置Whether to allow a non-ISR replica to be the leader.
-                     * @param UncleanLeaderElectionEnable Whether to allow a non-ISR replica to be the leader.
+                     * @param _uncleanLeaderElectionEnable Whether to allow a non-ISR replica to be the leader.
+                     * 
                      */
                     void SetUncleanLeaderElectionEnable(const bool& _uncleanLeaderElectionEnable);
 
                     /**
                      * 判断参数 UncleanLeaderElectionEnable 是否已赋值
                      * @return UncleanLeaderElectionEnable 是否已赋值
+                     * 
                      */
                     bool UncleanLeaderElectionEnableHasBeenSet() const;
 
                     /**
                      * 获取Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
                      * @return RetentionMs Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
+                     * 
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
                      * 设置Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
-                     * @param RetentionMs Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
+                     * @param _retentionMs Message retention period in topic dimension in milliseconds. Value range: 1 minute to 90 days.
+                     * 
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
 
                     /**
                      * 判断参数 RetentionMs 是否已赋值
                      * @return RetentionMs 是否已赋值
+                     * 
                      */
                     bool RetentionMsHasBeenSet() const;
 
                     /**
                      * 获取Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
                      * @return RetentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+                     * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
                      * 设置Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
-                     * @param RetentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+                     * @param _retentionBytes Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+                     * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
 
                     /**
                      * 判断参数 RetentionBytes 是否已赋值
                      * @return RetentionBytes 是否已赋值
+                     * 
                      */
                     bool RetentionBytesHasBeenSet() const;
 
                     /**
                      * 获取Segment rolling duration in milliseconds. Value range: 1-90 days.
                      * @return SegmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+                     * 
                      */
                     int64_t GetSegmentMs() const;
 
                     /**
                      * 设置Segment rolling duration in milliseconds. Value range: 1-90 days.
-                     * @param SegmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+                     * @param _segmentMs Segment rolling duration in milliseconds. Value range: 1-90 days.
+                     * 
                      */
                     void SetSegmentMs(const int64_t& _segmentMs);
 
                     /**
                      * 判断参数 SegmentMs 是否已赋值
                      * @return SegmentMs 是否已赋值
+                     * 
                      */
                     bool SegmentMsHasBeenSet() const;
 
                     /**
                      * 获取Message size per batch. Value range: 1 KB - 12 MB.
                      * @return MaxMessageBytes Message size per batch. Value range: 1 KB - 12 MB.
+                     * 
                      */
                     int64_t GetMaxMessageBytes() const;
 
                     /**
                      * 设置Message size per batch. Value range: 1 KB - 12 MB.
-                     * @param MaxMessageBytes Message size per batch. Value range: 1 KB - 12 MB.
+                     * @param _maxMessageBytes Message size per batch. Value range: 1 KB - 12 MB.
+                     * 
                      */
                     void SetMaxMessageBytes(const int64_t& _maxMessageBytes);
 
                     /**
                      * 判断参数 MaxMessageBytes 是否已赋值
                      * @return MaxMessageBytes 是否已赋值
+                     * 
                      */
                     bool MaxMessageBytesHasBeenSet() const;
 

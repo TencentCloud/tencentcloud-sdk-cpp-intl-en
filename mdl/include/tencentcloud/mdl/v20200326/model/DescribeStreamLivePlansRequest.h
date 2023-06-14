@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the channel whose events you want to query
                      * @return ChannelId ID of the channel whose events you want to query
+                     * 
                      */
                     std::string GetChannelId() const;
 
                     /**
                      * 设置ID of the channel whose events you want to query
-                     * @param ChannelId ID of the channel whose events you want to query
+                     * @param _channelId ID of the channel whose events you want to query
+                     * 
                      */
                     void SetChannelId(const std::string& _channelId);
 
                     /**
                      * 判断参数 ChannelId 是否已赋值
                      * @return ChannelId 是否已赋值
+                     * 
                      */
                     bool ChannelIdHasBeenSet() const;
 

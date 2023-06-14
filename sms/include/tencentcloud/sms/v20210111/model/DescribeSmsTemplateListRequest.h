@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
-                     * @param International Whether it is Global SMS:
+                     * @param _international Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 
@@ -73,20 +76,23 @@ namespace TencentCloud
 <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
                      * @return TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
 <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+                     * 
                      */
                     std::vector<uint64_t> GetTemplateIdSet() const;
 
                     /**
                      * 设置Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
 <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
-                     * @param TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+                     * @param _templateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
 <dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+                     * 
                      */
                     void SetTemplateIdSet(const std::vector<uint64_t>& _templateIdSet);
 
                     /**
                      * 判断参数 TemplateIdSet 是否已赋值
                      * @return TemplateIdSet 是否已赋值
+                     * 
                      */
                     bool TemplateIdSetHasBeenSet() const;
 
@@ -95,20 +101,23 @@ namespace TencentCloud
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
                      * @return Limit Upper limit. Maximum value: 100.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Upper limit. Maximum value: 100.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
-                     * @param Limit Upper limit. Maximum value: 100.
+                     * @param _limit Upper limit. Maximum value: 100.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
                      * @return Offset Offset.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 

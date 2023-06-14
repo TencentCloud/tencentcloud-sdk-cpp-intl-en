@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Parameter template name.
                      * @return Name Parameter template name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter template name.
-                     * @param Name Parameter template name.
+                     * @param _name Parameter template name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Parameter template description.
                      * @return Description Parameter template description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Parameter template description.
-                     * @param Description Parameter template description.
+                     * @param _description Parameter template description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取MySQL version number.
                      * @return EngineVersion MySQL version number.
+                     * 
                      */
                     std::string GetEngineVersion() const;
 
                     /**
                      * 设置MySQL version number.
-                     * @param EngineVersion MySQL version number.
+                     * @param _engineVersion MySQL version number.
+                     * 
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
                     /**
                      * 判断参数 EngineVersion 是否已赋值
                      * @return EngineVersion 是否已赋值
+                     * 
                      */
                     bool EngineVersionHasBeenSet() const;
 
                     /**
                      * 获取Source parameter template ID.
                      * @return TemplateId Source parameter template ID.
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Source parameter template ID.
-                     * @param TemplateId Source parameter template ID.
+                     * @param _templateId Source parameter template ID.
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取List of parameters.
                      * @return ParamList List of parameters.
+                     * 
                      */
                     std::vector<Parameter> GetParamList() const;
 
                     /**
                      * 设置List of parameters.
-                     * @param ParamList List of parameters.
+                     * @param _paramList List of parameters.
+                     * 
                      */
                     void SetParamList(const std::vector<Parameter>& _paramList);
 
                     /**
                      * 判断参数 ParamList 是否已赋值
                      * @return ParamList 是否已赋值
+                     * 
                      */
                     bool ParamListHasBeenSet() const;
 
                     /**
                      * 获取Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
                      * @return TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
                      * 设置Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-                     * @param TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * @param _templateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * 
                      */
                     void SetTemplateType(const std::string& _templateType);
 
                     /**
                      * 判断参数 TemplateType 是否已赋值
                      * @return TemplateType 是否已赋值
+                     * 
                      */
                     bool TemplateTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
                      * @return EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * 
                      */
                     std::string GetEngineType() const;
 
                     /**
                      * 设置Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
-                     * @param EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * @param _engineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * 
                      */
                     void SetEngineType(const std::string& _engineType);
 
                     /**
                      * 判断参数 EngineType 是否已赋值
                      * @return EngineType 是否已赋值
+                     * 
                      */
                     bool EngineTypeHasBeenSet() const;
 

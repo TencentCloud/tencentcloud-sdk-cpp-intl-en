@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取VM IP
                      * @return VmIp VM IP
+                     * 
                      */
                     std::string GetVmIp() const;
 
                     /**
                      * 设置VM IP
-                     * @param VmIp VM IP
+                     * @param _vmIp VM IP
+                     * 
                      */
                     void SetVmIp(const std::string& _vmIp);
 
                     /**
                      * 判断参数 VmIp 是否已赋值
                      * @return VmIp 是否已赋值
+                     * 
                      */
                     bool VmIpHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return VpcId VPC ID
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * @param _vpcId VPC ID
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取VM Port
                      * @return VmPort VM Port
+                     * 
                      */
                     int64_t GetVmPort() const;
 
                     /**
                      * 设置VM Port
-                     * @param VmPort VM Port
+                     * @param _vmPort VM Port
+                     * 
                      */
                     void SetVmPort(const int64_t& _vmPort);
 
                     /**
                      * 判断参数 VmPort 是否已赋值
                      * @return VmPort 是否已赋值
+                     * 
                      */
                     bool VmPortHasBeenSet() const;
 
                     /**
                      * 获取IP of the host where the CVM instance resides
                      * @return HostIp IP of the host where the CVM instance resides
+                     * 
                      */
                     std::string GetHostIp() const;
 
                     /**
                      * 设置IP of the host where the CVM instance resides
-                     * @param HostIp IP of the host where the CVM instance resides
+                     * @param _hostIp IP of the host where the CVM instance resides
+                     * 
                      */
                     void SetHostIp(const std::string& _hostIp);
 
                     /**
                      * 判断参数 HostIp 是否已赋值
                      * @return HostIp 是否已赋值
+                     * 
                      */
                     bool HostIpHasBeenSet() const;
 
                     /**
                      * 获取Docker IP
                      * @return DockerIp Docker IP
+                     * 
                      */
                     std::string GetDockerIp() const;
 
                     /**
                      * 设置Docker IP
-                     * @param DockerIp Docker IP
+                     * @param _dockerIp Docker IP
+                     * 
                      */
                     void SetDockerIp(const std::string& _dockerIp);
 
                     /**
                      * 判断参数 DockerIp 是否已赋值
                      * @return DockerIp 是否已赋值
+                     * 
                      */
                     bool DockerIpHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of eligible instances. If the results are returned in multiple pages, this value will be the number of all eligible instances but not the number of instances returned according to the current values of `Limit` and `Offset`
                      * @return TotalCount Total number of eligible instances. If the results are returned in multiple pages, this value will be the number of all eligible instances but not the number of instances returned according to the current values of `Limit` and `Offset`
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Instance list
                      * @return DBInstances Instance list
+                     * 
                      */
                     std::vector<DBInstance> GetDBInstances() const;
 
                     /**
                      * 判断参数 DBInstances 是否已赋值
                      * @return DBInstances 是否已赋值
+                     * 
                      */
                     bool DBInstancesHasBeenSet() const;
 

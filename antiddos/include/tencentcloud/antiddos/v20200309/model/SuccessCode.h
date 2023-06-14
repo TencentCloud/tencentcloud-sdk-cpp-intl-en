@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Description
                      * @return Message Description
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Description
-                     * @param Message Description
+                     * @param _message Description
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Success/Error code
                      * @return Code Success/Error code
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置Success/Error code
-                     * @param Code Success/Error code
+                     * @param _code Success/Error code
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 

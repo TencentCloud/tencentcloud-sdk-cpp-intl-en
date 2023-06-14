@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability ID.
                      * @return Id Vulnerability ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Vulnerability ID.
-                     * @param Id Vulnerability ID.
+                     * @param _id Vulnerability ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Server IP.
                      * @return MachineIp Server IP.
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Server IP.
-                     * @param MachineIp Server IP.
+                     * @param _machineIp Server IP.
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
                     /**
                      * 获取Server name.
                      * @return MachineName Server name.
+                     * 
                      */
                     std::string GetMachineName() const;
 
                     /**
                      * 设置Server name.
-                     * @param MachineName Server name.
+                     * @param _machineName Server name.
+                     * 
                      */
                     void SetMachineName(const std::string& _machineName);
 
                     /**
                      * 判断参数 MachineName 是否已赋值
                      * @return MachineName 是否已赋值
+                     * 
                      */
                     bool MachineNameHasBeenSet() const;
 
                     /**
                      * 获取Last detection time.
                      * @return LastScanTime Last detection time.
+                     * 
                      */
                     std::string GetLastScanTime() const;
 
                     /**
                      * 设置Last detection time.
-                     * @param LastScanTime Last detection time.
+                     * @param _lastScanTime Last detection time.
+                     * 
                      */
                     void SetLastScanTime(const std::string& _lastScanTime);
 
                     /**
                      * 判断参数 LastScanTime 是否已赋值
                      * @return LastScanTime 是否已赋值
+                     * 
                      */
                     bool LastScanTimeHasBeenSet() const;
 
@@ -127,6 +139,7 @@ namespace TencentCloud
 <li>UN_OPERATED: to be processed</li>
 <li>SCANING: scanning</li>
 <li>FIXED: fixed</li>
+                     * 
                      */
                     std::string GetVulStatus() const;
 
@@ -135,88 +148,102 @@ namespace TencentCloud
 <li>UN_OPERATED: to be processed</li>
 <li>SCANING: scanning</li>
 <li>FIXED: fixed</li>
-                     * @param VulStatus Vulnerability status.
+                     * @param _vulStatus Vulnerability status.
 <li>UN_OPERATED: to be processed</li>
 <li>SCANING: scanning</li>
 <li>FIXED: fixed</li>
+                     * 
                      */
                     void SetVulStatus(const std::string& _vulStatus);
 
                     /**
                      * 判断参数 VulStatus 是否已赋值
                      * @return VulStatus 是否已赋值
+                     * 
                      */
                     bool VulStatusHasBeenSet() const;
 
                     /**
                      * 获取CWP agent `UUID`.
                      * @return Uuid CWP agent `UUID`.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `UUID`.
-                     * @param Uuid CWP agent `UUID`.
+                     * @param _uuid CWP agent `UUID`.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability description.
                      * @return Description Vulnerability description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Vulnerability description.
-                     * @param Description Vulnerability description.
+                     * @param _description Vulnerability description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability category ID.
                      * @return VulId Vulnerability category ID.
+                     * 
                      */
                     uint64_t GetVulId() const;
 
                     /**
                      * 设置Vulnerability category ID.
-                     * @param VulId Vulnerability category ID.
+                     * @param _vulId Vulnerability category ID.
+                     * 
                      */
                     void SetVulId(const uint64_t& _vulId);
 
                     /**
                      * 判断参数 VulId 是否已赋值
                      * @return VulId 是否已赋值
+                     * 
                      */
                     bool VulIdHasBeenSet() const;
 
                     /**
                      * 获取Whether it is the CWP Pro.
                      * @return IsProVersion Whether it is the CWP Pro.
+                     * 
                      */
                     bool GetIsProVersion() const;
 
                     /**
                      * 设置Whether it is the CWP Pro.
-                     * @param IsProVersion Whether it is the CWP Pro.
+                     * @param _isProVersion Whether it is the CWP Pro.
+                     * 
                      */
                     void SetIsProVersion(const bool& _isProVersion);
 
                     /**
                      * 判断参数 IsProVersion 是否已赋值
                      * @return IsProVersion 是否已赋值
+                     * 
                      */
                     bool IsProVersionHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of a sample. Length limit: 20 characters.
                      * @return Name Name of a sample. Length limit: 20 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a sample. Length limit: 20 characters.
-                     * @param Name Name of a sample. Length limit: 20 characters.
+                     * @param _name Name of a sample. Length limit: 20 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -69,6 +72,7 @@ namespace TencentCloud
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2.
+                     * 
                      */
                     std::vector<std::string> GetUsages() const;
 
@@ -77,52 +81,60 @@ namespace TencentCloud
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2.
-                     * @param Usages Usage of a sample. Valid values:
+                     * @param _usages Usage of a sample. Valid values:
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2.
+                     * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
                     /**
                      * 判断参数 Usages 是否已赋值
                      * @return Usages 是否已赋值
+                     * 
                      */
                     bool UsagesHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Description of a sample. Length limit: 1024 characters.
                      * @return Description Description of a sample. Length limit: 1024 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description of a sample. Length limit: 1024 characters.
-                     * @param Description Description of a sample. Length limit: 1024 characters.
+                     * @param _description Description of a sample. Length limit: 1024 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -131,20 +143,23 @@ namespace TencentCloud
 Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
                      * @return FaceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
 Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+                     * 
                      */
                     std::vector<std::string> GetFaceContents() const;
 
                     /**
                      * 设置String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
 Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
-                     * @param FaceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
+                     * @param _faceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
 Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+                     * 
                      */
                     void SetFaceContents(const std::vector<std::string>& _faceContents);
 
                     /**
                      * 判断参数 FaceContents 是否已赋值
                      * @return FaceContents 是否已赋值
+                     * 
                      */
                     bool FaceContentsHasBeenSet() const;
 
@@ -155,6 +170,7 @@ Note: the image must be a relatively clear full-face photo of a person and has a
                      * @return Tags Tags of a sample
 <li>Array length limit: 20 tags</li>
 <li>Length limit of a tag: 128 characters</li>
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
@@ -162,15 +178,17 @@ Note: the image must be a relatively clear full-face photo of a person and has a
                      * 设置Tags of a sample
 <li>Array length limit: 20 tags</li>
 <li>Length limit of a tag: 128 characters</li>
-                     * @param Tags Tags of a sample
+                     * @param _tags Tags of a sample
 <li>Array length limit: 20 tags</li>
 <li>Length limit of a tag: 128 characters</li>
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

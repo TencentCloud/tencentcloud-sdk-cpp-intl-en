@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Record types: CNAME, A, TXT, and MX.
                      * @return Type Record types: CNAME, A, TXT, and MX.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Record types: CNAME, A, TXT, and MX.
-                     * @param Type Record types: CNAME, A, TXT, and MX.
+                     * @param _type Record types: CNAME, A, TXT, and MX.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Domain name.
                      * @return SendDomain Domain name.
+                     * 
                      */
                     std::string GetSendDomain() const;
 
                     /**
                      * 设置Domain name.
-                     * @param SendDomain Domain name.
+                     * @param _sendDomain Domain name.
+                     * 
                      */
                     void SetSendDomain(const std::string& _sendDomain);
 
                     /**
                      * 判断参数 SendDomain 是否已赋值
                      * @return SendDomain 是否已赋值
+                     * 
                      */
                     bool SendDomainHasBeenSet() const;
 
                     /**
                      * 获取Expected value.
                      * @return ExpectedValue Expected value.
+                     * 
                      */
                     std::string GetExpectedValue() const;
 
                     /**
                      * 设置Expected value.
-                     * @param ExpectedValue Expected value.
+                     * @param _expectedValue Expected value.
+                     * 
                      */
                     void SetExpectedValue(const std::string& _expectedValue);
 
                     /**
                      * 判断参数 ExpectedValue 是否已赋值
                      * @return ExpectedValue 是否已赋值
+                     * 
                      */
                     bool ExpectedValueHasBeenSet() const;
 
                     /**
                      * 获取Currently configured value.
                      * @return CurrentValue Currently configured value.
+                     * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
                      * 设置Currently configured value.
-                     * @param CurrentValue Currently configured value.
+                     * @param _currentValue Currently configured value.
+                     * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
                     /**
                      * 判断参数 CurrentValue 是否已赋值
                      * @return CurrentValue 是否已赋值
+                     * 
                      */
                     bool CurrentValueHasBeenSet() const;
 
                     /**
                      * 获取Approved or not. The default value is `false`.
                      * @return Status Approved or not. The default value is `false`.
+                     * 
                      */
                     bool GetStatus() const;
 
                     /**
                      * 设置Approved or not. The default value is `false`.
-                     * @param Status Approved or not. The default value is `false`.
+                     * @param _status Approved or not. The default value is `false`.
+                     * 
                      */
                     void SetStatus(const bool& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

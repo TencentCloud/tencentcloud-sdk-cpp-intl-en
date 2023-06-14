@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取Start time offset of frame-specific tag.
                      * @return StartTimeOffset Start time offset of frame-specific tag.
+                     * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
                      * 设置Start time offset of frame-specific tag.
-                     * @param StartTimeOffset Start time offset of frame-specific tag.
+                     * @param _startTimeOffset Start time offset of frame-specific tag.
+                     * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
 
                     /**
                      * 判断参数 StartTimeOffset 是否已赋值
                      * @return StartTimeOffset 是否已赋值
+                     * 
                      */
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取End time offset of frame-specific tag.
                      * @return EndTimeOffset End time offset of frame-specific tag.
+                     * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
                      * 设置End time offset of frame-specific tag.
-                     * @param EndTimeOffset End time offset of frame-specific tag.
+                     * @param _endTimeOffset End time offset of frame-specific tag.
+                     * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
 
                     /**
                      * 判断参数 EndTimeOffset 是否已赋值
                      * @return EndTimeOffset 是否已赋值
+                     * 
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取List of tags in time period.
                      * @return TagSet List of tags in time period.
+                     * 
                      */
                     std::vector<MediaAiAnalysisFrameTagItem> GetTagSet() const;
 
                     /**
                      * 设置List of tags in time period.
-                     * @param TagSet List of tags in time period.
+                     * @param _tagSet List of tags in time period.
+                     * 
                      */
                     void SetTagSet(const std::vector<MediaAiAnalysisFrameTagItem>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 

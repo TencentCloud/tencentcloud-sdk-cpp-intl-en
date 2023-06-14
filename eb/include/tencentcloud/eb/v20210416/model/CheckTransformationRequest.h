@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取JSON string to be processed
                      * @return Input JSON string to be processed
+                     * 
                      */
                     std::string GetInput() const;
 
                     /**
                      * 设置JSON string to be processed
-                     * @param Input JSON string to be processed
+                     * @param _input JSON string to be processed
+                     * 
                      */
                     void SetInput(const std::string& _input);
 
                     /**
                      * 判断参数 Input 是否已赋值
                      * @return Input 是否已赋值
+                     * 
                      */
                     bool InputHasBeenSet() const;
 
                     /**
                      * 获取Transformation rule list
                      * @return Transformations Transformation rule list
+                     * 
                      */
                     std::vector<Transformation> GetTransformations() const;
 
                     /**
                      * 设置Transformation rule list
-                     * @param Transformations Transformation rule list
+                     * @param _transformations Transformation rule list
+                     * 
                      */
                     void SetTransformations(const std::vector<Transformation>& _transformations);
 
                     /**
                      * 判断参数 Transformations 是否已赋值
                      * @return Transformations 是否已赋值
+                     * 
                      */
                     bool TransformationsHasBeenSet() const;
 

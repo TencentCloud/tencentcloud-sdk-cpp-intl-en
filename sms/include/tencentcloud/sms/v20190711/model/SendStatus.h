@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Delivery serial number.
                      * @return SerialNo Delivery serial number.
+                     * 
                      */
                     std::string GetSerialNo() const;
 
                     /**
                      * 设置Delivery serial number.
-                     * @param SerialNo Delivery serial number.
+                     * @param _serialNo Delivery serial number.
+                     * 
                      */
                     void SetSerialNo(const std::string& _serialNo);
 
                     /**
                      * 判断参数 SerialNo 是否已赋值
                      * @return SerialNo 是否已赋值
+                     * 
                      */
                     bool SerialNoHasBeenSet() const;
 
                     /**
                      * 获取Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
                      * @return PhoneNumber Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     std::string GetPhoneNumber() const;
 
                     /**
                      * 设置Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-                     * @param PhoneNumber Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * @param _phoneNumber Mobile number in the e.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+                     * 
                      */
                     void SetPhoneNumber(const std::string& _phoneNumber);
 
                     /**
                      * 判断参数 PhoneNumber 是否已赋值
                      * @return PhoneNumber 是否已赋值
+                     * 
                      */
                     bool PhoneNumberHasBeenSet() const;
 
                     /**
                      * 获取Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
                      * @return Fee Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+                     * 
                      */
                     uint64_t GetFee() const;
 
                     /**
                      * 设置Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
-                     * @param Fee Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+                     * @param _fee Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+                     * 
                      */
                     void SetFee(const uint64_t& _fee);
 
                     /**
                      * 判断参数 Fee 是否已赋值
                      * @return Fee 是否已赋值
+                     * 
                      */
                     bool FeeHasBeenSet() const;
 
                     /**
                      * 获取User session content.
                      * @return SessionContext User session content.
+                     * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
                      * 设置User session content.
-                     * @param SessionContext User session content.
+                     * @param _sessionContext User session content.
+                     * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
                     /**
                      * 判断参数 SessionContext 是否已赋值
                      * @return SessionContext 是否已赋值
+                     * 
                      */
                     bool SessionContextHasBeenSet() const;
 
                     /**
                      * 获取SMS request error code. For specific meanings, please see Error Codes.
                      * @return Code SMS request error code. For specific meanings, please see Error Codes.
+                     * 
                      */
                     std::string GetCode() const;
 
                     /**
                      * 设置SMS request error code. For specific meanings, please see Error Codes.
-                     * @param Code SMS request error code. For specific meanings, please see Error Codes.
+                     * @param _code SMS request error code. For specific meanings, please see Error Codes.
+                     * 
                      */
                     void SetCode(const std::string& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取SMS request error message.
                      * @return Message SMS request error message.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置SMS request error message.
-                     * @param Message SMS request error message.
+                     * @param _message SMS request error message.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
                      * @return IsoCode Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+                     * 
                      */
                     std::string GetIsoCode() const;
 
                     /**
                      * 设置Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
-                     * @param IsoCode Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+                     * @param _isoCode Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+                     * 
                      */
                     void SetIsoCode(const std::string& _isoCode);
 
                     /**
                      * 判断参数 IsoCode 是否已赋值
                      * @return IsoCode 是否已赋值
+                     * 
                      */
                     bool IsoCodeHasBeenSet() const;
 

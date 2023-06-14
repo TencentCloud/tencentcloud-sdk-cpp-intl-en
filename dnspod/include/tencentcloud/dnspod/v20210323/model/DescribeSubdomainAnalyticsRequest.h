@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取The domain of the DNS query volume to be queried
                      * @return Domain The domain of the DNS query volume to be queried
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The domain of the DNS query volume to be queried
-                     * @param Domain The domain of the DNS query volume to be queried
+                     * @param _domain The domain of the DNS query volume to be queried
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Query start date in the format of `YYYY-MM-DD`
                      * @return StartDate Query start date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     std::string GetStartDate() const;
 
                     /**
                      * 设置Query start date in the format of `YYYY-MM-DD`
-                     * @param StartDate Query start date in the format of `YYYY-MM-DD`
+                     * @param _startDate Query start date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     void SetStartDate(const std::string& _startDate);
 
                     /**
                      * 判断参数 StartDate 是否已赋值
                      * @return StartDate 是否已赋值
+                     * 
                      */
                     bool StartDateHasBeenSet() const;
 
                     /**
                      * 获取Query end date in the format of `YYYY-MM-DD`
                      * @return EndDate Query end date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置Query end date in the format of `YYYY-MM-DD`
-                     * @param EndDate Query end date in the format of `YYYY-MM-DD`
+                     * @param _endDate Query end date in the format of `YYYY-MM-DD`
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 
                     /**
                      * 获取The subdomain of the DNS query volume to be queried
                      * @return Subdomain The subdomain of the DNS query volume to be queried
+                     * 
                      */
                     std::string GetSubdomain() const;
 
                     /**
                      * 设置The subdomain of the DNS query volume to be queried
-                     * @param Subdomain The subdomain of the DNS query volume to be queried
+                     * @param _subdomain The subdomain of the DNS query volume to be queried
+                     * 
                      */
                     void SetSubdomain(const std::string& _subdomain);
 
                     /**
                      * 判断参数 Subdomain 是否已赋值
                      * @return Subdomain 是否已赋值
+                     * 
                      */
                     bool SubdomainHasBeenSet() const;
 
                     /**
                      * 获取`DATE`: Daily. `HOUR`: Hourly
                      * @return DnsFormat `DATE`: Daily. `HOUR`: Hourly
+                     * 
                      */
                     std::string GetDnsFormat() const;
 
                     /**
                      * 设置`DATE`: Daily. `HOUR`: Hourly
-                     * @param DnsFormat `DATE`: Daily. `HOUR`: Hourly
+                     * @param _dnsFormat `DATE`: Daily. `HOUR`: Hourly
+                     * 
                      */
                     void SetDnsFormat(const std::string& _dnsFormat);
 
                     /**
                      * 判断参数 DnsFormat 是否已赋值
                      * @return DnsFormat 是否已赋值
+                     * 
                      */
                     bool DnsFormatHasBeenSet() const;
 
                     /**
                      * 获取The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      * @return DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     uint64_t GetDomainId() const;
 
                     /**
                      * 设置The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
-                     * @param DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @param _domainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 

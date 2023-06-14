@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the site to be bound.
                      * @return ZoneId ID of the site to be bound.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site to be bound.
-                     * @param ZoneId ID of the site to be bound.
+                     * @param _zoneId ID of the site to be bound.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the target plan.
                      * @return PlanId ID of the target plan.
+                     * 
                      */
                     std::string GetPlanId() const;
 
                     /**
                      * 设置ID of the target plan.
-                     * @param PlanId ID of the target plan.
+                     * @param _planId ID of the target plan.
+                     * 
                      */
                     void SetPlanId(const std::string& _planId);
 
                     /**
                      * 判断参数 PlanId 是否已赋值
                      * @return PlanId 是否已赋值
+                     * 
                      */
                     bool PlanIdHasBeenSet() const;
 

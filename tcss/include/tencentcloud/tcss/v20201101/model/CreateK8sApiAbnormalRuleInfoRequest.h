@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Rule details
                      * @return RuleInfo Rule details
+                     * 
                      */
                     K8sApiAbnormalRuleInfo GetRuleInfo() const;
 
                     /**
                      * 设置Rule details
-                     * @param RuleInfo Rule details
+                     * @param _ruleInfo Rule details
+                     * 
                      */
                     void SetRuleInfo(const K8sApiAbnormalRuleInfo& _ruleInfo);
 
                     /**
                      * 判断参数 RuleInfo 是否已赋值
                      * @return RuleInfo 是否已赋值
+                     * 
                      */
                     bool RuleInfoHasBeenSet() const;
 
                     /**
                      * 获取The ID of the copy rule (for copy rule scenarios)
                      * @return CopySrcRuleID The ID of the copy rule (for copy rule scenarios)
+                     * 
                      */
                     std::string GetCopySrcRuleID() const;
 
                     /**
                      * 设置The ID of the copy rule (for copy rule scenarios)
-                     * @param CopySrcRuleID The ID of the copy rule (for copy rule scenarios)
+                     * @param _copySrcRuleID The ID of the copy rule (for copy rule scenarios)
+                     * 
                      */
                     void SetCopySrcRuleID(const std::string& _copySrcRuleID);
 
                     /**
                      * 判断参数 CopySrcRuleID 是否已赋值
                      * @return CopySrcRuleID 是否已赋值
+                     * 
                      */
                     bool CopySrcRuleIDHasBeenSet() const;
 
                     /**
                      * 获取Event ID (for adding events to an allowlist)
                      * @return EventID Event ID (for adding events to an allowlist)
+                     * 
                      */
                     uint64_t GetEventID() const;
 
                     /**
                      * 设置Event ID (for adding events to an allowlist)
-                     * @param EventID Event ID (for adding events to an allowlist)
+                     * @param _eventID Event ID (for adding events to an allowlist)
+                     * 
                      */
                     void SetEventID(const uint64_t& _eventID);
 
                     /**
                      * 判断参数 EventID 是否已赋值
                      * @return EventID 是否已赋值
+                     * 
                      */
                     bool EventIDHasBeenSet() const;
 

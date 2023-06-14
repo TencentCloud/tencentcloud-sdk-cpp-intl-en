@@ -59,12 +59,14 @@ BlockPackCount: number of blocked resources
 ExpiredPackCount: number of expired resources
 ExpireingPackCount: number of expiring resources
 IsolatePackCount: number of isolated resources
+                     * 
                      */
                     std::vector<KeyValue> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

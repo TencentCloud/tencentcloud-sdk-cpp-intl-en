@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取ID of the log topic.
                      * @return TopicId ID of the log topic.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置ID of the log topic.
-                     * @param TopicId ID of the log topic.
+                     * @param _topicId ID of the log topic.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the logset.
                      * @return LogsetId ID of the logset.
+                     * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
                      * 设置ID of the logset.
-                     * @param LogsetId ID of the logset.
+                     * @param _logsetId ID of the logset.
+                     * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
 
                     /**
                      * 判断参数 LogsetId 是否已赋值
                      * @return LogsetId 是否已赋值
+                     * 
                      */
                     bool LogsetIdHasBeenSet() const;
 
                     /**
                      * 获取Shipping task name.
                      * @return Name Shipping task name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Shipping task name.
-                     * @param Name Shipping task name.
+                     * @param _name Shipping task name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取COS bucket.
                      * @return Bucket COS bucket.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置COS bucket.
-                     * @param Bucket COS bucket.
+                     * @param _bucket COS bucket.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取Region where the COS bucket is located.
                      * @return BucketRegion Region where the COS bucket is located.
+                     * 
                      */
                     std::string GetBucketRegion() const;
 
                     /**
                      * 设置Region where the COS bucket is located.
-                     * @param BucketRegion Region where the COS bucket is located.
+                     * @param _bucketRegion Region where the COS bucket is located.
+                     * 
                      */
                     void SetBucketRegion(const std::string& _bucketRegion);
 
                     /**
                      * 判断参数 BucketRegion 是否已赋值
                      * @return BucketRegion 是否已赋值
+                     * 
                      */
                     bool BucketRegionHasBeenSet() const;
 
                     /**
                      * 获取The prefix of the folder where COS files are located.
                      * @return Prefix The prefix of the folder where COS files are located.
+                     * 
                      */
                     std::string GetPrefix() const;
 
                     /**
                      * 设置The prefix of the folder where COS files are located.
-                     * @param Prefix The prefix of the folder where COS files are located.
+                     * @param _prefix The prefix of the folder where COS files are located.
+                     * 
                      */
                     void SetPrefix(const std::string& _prefix);
 
                     /**
                      * 判断参数 Prefix 是否已赋值
                      * @return Prefix 是否已赋值
+                     * 
                      */
                     bool PrefixHasBeenSet() const;
 
@@ -156,56 +174,65 @@ namespace TencentCloud
 Default value: `minimalist_log`
                      * @return LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
+                     * 
                      */
                     std::string GetLogType() const;
 
                     /**
                      * 设置The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
-                     * @param LogType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
+                     * @param _logType The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
 Default value: `minimalist_log`
+                     * 
                      */
                     void SetLogType(const std::string& _logType);
 
                     /**
                      * 判断参数 LogType 是否已赋值
                      * @return LogType 是否已赋值
+                     * 
                      */
                     bool LogTypeHasBeenSet() const;
 
                     /**
                      * 获取Valid values: "" (default), "gzip", "lzop", "snappy"
                      * @return Compress Valid values: "" (default), "gzip", "lzop", "snappy"
+                     * 
                      */
                     std::string GetCompress() const;
 
                     /**
                      * 设置Valid values: "" (default), "gzip", "lzop", "snappy"
-                     * @param Compress Valid values: "" (default), "gzip", "lzop", "snappy"
+                     * @param _compress Valid values: "" (default), "gzip", "lzop", "snappy"
+                     * 
                      */
                     void SetCompress(const std::string& _compress);
 
                     /**
                      * 判断参数 Compress 是否已赋值
                      * @return Compress 是否已赋值
+                     * 
                      */
                     bool CompressHasBeenSet() const;
 
                     /**
                      * 获取Extraction rule. If `ExtractRule` is set, `LogType` must be set.
                      * @return ExtractRuleInfo Extraction rule. If `ExtractRule` is set, `LogType` must be set.
+                     * 
                      */
                     ExtractRuleInfo GetExtractRuleInfo() const;
 
                     /**
                      * 设置Extraction rule. If `ExtractRule` is set, `LogType` must be set.
-                     * @param ExtractRuleInfo Extraction rule. If `ExtractRule` is set, `LogType` must be set.
+                     * @param _extractRuleInfo Extraction rule. If `ExtractRule` is set, `LogType` must be set.
+                     * 
                      */
                     void SetExtractRuleInfo(const ExtractRuleInfo& _extractRuleInfo);
 
                     /**
                      * 判断参数 ExtractRuleInfo 是否已赋值
                      * @return ExtractRuleInfo 是否已赋值
+                     * 
                      */
                     bool ExtractRuleInfoHasBeenSet() const;
 

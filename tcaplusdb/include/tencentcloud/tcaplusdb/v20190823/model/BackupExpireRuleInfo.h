@@ -56,90 +56,105 @@ For `OperType, valid values: `0` (Add), `1` (Delete), `2` (Modify). The values `
                     /**
                      * 获取The ID of the table group where the table resides
                      * @return TableGroupId The ID of the table group where the table resides
+                     * 
                      */
                     std::string GetTableGroupId() const;
 
                     /**
                      * 设置The ID of the table group where the table resides
-                     * @param TableGroupId The ID of the table group where the table resides
+                     * @param _tableGroupId The ID of the table group where the table resides
+                     * 
                      */
                     void SetTableGroupId(const std::string& _tableGroupId);
 
                     /**
                      * 判断参数 TableGroupId 是否已赋值
                      * @return TableGroupId 是否已赋值
+                     * 
                      */
                     bool TableGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Table name
                      * @return TableName Table name
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name
-                     * @param TableName Table name
+                     * @param _tableName Table name
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
                     /**
                      * 获取file tag, which is described above.
                      * @return FileTag file tag, which is described above.
+                     * 
                      */
                     uint64_t GetFileTag() const;
 
                     /**
                      * 设置file tag, which is described above.
-                     * @param FileTag file tag, which is described above.
+                     * @param _fileTag file tag, which is described above.
+                     * 
                      */
                     void SetFileTag(const uint64_t& _fileTag);
 
                     /**
                      * 判断参数 FileTag 是否已赋值
                      * @return FileTag 是否已赋值
+                     * 
                      */
                     bool FileTagHasBeenSet() const;
 
                     /**
                      * 获取Retention days, which is described above.
                      * @return ExpireDay Retention days, which is described above.
+                     * 
                      */
                     uint64_t GetExpireDay() const;
 
                     /**
                      * 设置Retention days, which is described above.
-                     * @param ExpireDay Retention days, which is described above.
+                     * @param _expireDay Retention days, which is described above.
+                     * 
                      */
                     void SetExpireDay(const uint64_t& _expireDay);
 
                     /**
                      * 判断参数 ExpireDay 是否已赋值
                      * @return ExpireDay 是否已赋值
+                     * 
                      */
                     bool ExpireDayHasBeenSet() const;
 
                     /**
                      * 获取Operation type, which is described above.
                      * @return OperType Operation type, which is described above.
+                     * 
                      */
                     uint64_t GetOperType() const;
 
                     /**
                      * 设置Operation type, which is described above.
-                     * @param OperType Operation type, which is described above.
+                     * @param _operType Operation type, which is described above.
+                     * 
                      */
                     void SetOperType(const uint64_t& _operType);
 
                     /**
                      * 判断参数 OperType 是否已赋值
                      * @return OperType 是否已赋值
+                     * 
                      */
                     bool OperTypeHasBeenSet() const;
 

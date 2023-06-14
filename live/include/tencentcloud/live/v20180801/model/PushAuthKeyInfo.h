@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Domain name.
                      * @return DomainName Domain name.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name.
-                     * @param DomainName Domain name.
+                     * @param _domainName Domain name.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable. 0: disabled; 1: enabled.
                      * @return Enable Whether to enable. 0: disabled; 1: enabled.
+                     * 
                      */
                     int64_t GetEnable() const;
 
                     /**
                      * 设置Whether to enable. 0: disabled; 1: enabled.
-                     * @param Enable Whether to enable. 0: disabled; 1: enabled.
+                     * @param _enable Whether to enable. 0: disabled; 1: enabled.
+                     * 
                      */
                     void SetEnable(const int64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Master authentication key.
                      * @return MasterAuthKey Master authentication key.
+                     * 
                      */
                     std::string GetMasterAuthKey() const;
 
                     /**
                      * 设置Master authentication key.
-                     * @param MasterAuthKey Master authentication key.
+                     * @param _masterAuthKey Master authentication key.
+                     * 
                      */
                     void SetMasterAuthKey(const std::string& _masterAuthKey);
 
                     /**
                      * 判断参数 MasterAuthKey 是否已赋值
                      * @return MasterAuthKey 是否已赋值
+                     * 
                      */
                     bool MasterAuthKeyHasBeenSet() const;
 
                     /**
                      * 获取Standby authentication key.
                      * @return BackupAuthKey Standby authentication key.
+                     * 
                      */
                     std::string GetBackupAuthKey() const;
 
                     /**
                      * 设置Standby authentication key.
-                     * @param BackupAuthKey Standby authentication key.
+                     * @param _backupAuthKey Standby authentication key.
+                     * 
                      */
                     void SetBackupAuthKey(const std::string& _backupAuthKey);
 
                     /**
                      * 判断参数 BackupAuthKey 是否已赋值
                      * @return BackupAuthKey 是否已赋值
+                     * 
                      */
                     bool BackupAuthKeyHasBeenSet() const;
 
                     /**
                      * 获取Validity period in seconds.
                      * @return AuthDelta Validity period in seconds.
+                     * 
                      */
                     uint64_t GetAuthDelta() const;
 
                     /**
                      * 设置Validity period in seconds.
-                     * @param AuthDelta Validity period in seconds.
+                     * @param _authDelta Validity period in seconds.
+                     * 
                      */
                     void SetAuthDelta(const uint64_t& _authDelta);
 
                     /**
                      * 判断参数 AuthDelta 是否已赋值
                      * @return AuthDelta 是否已赋值
+                     * 
                      */
                     bool AuthDeltaHasBeenSet() const;
 

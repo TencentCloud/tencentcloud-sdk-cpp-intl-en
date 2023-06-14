@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
                      * @return TaskId Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
-                     * @param TaskId Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
+                     * @param _taskId Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

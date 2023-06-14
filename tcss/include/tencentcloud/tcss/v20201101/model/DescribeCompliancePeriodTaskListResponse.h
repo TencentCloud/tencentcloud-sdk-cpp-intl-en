@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of scheduled tasks
                      * @return TotalCount Total number of scheduled tasks
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of scheduled task information
                      * @return PeriodTaskSet List of scheduled task information
+                     * 
                      */
                     std::vector<CompliancePeriodTask> GetPeriodTaskSet() const;
 
                     /**
                      * 判断参数 PeriodTaskSet 是否已赋值
                      * @return PeriodTaskSet 是否已赋值
+                     * 
                      */
                     bool PeriodTaskSetHasBeenSet() const;
 

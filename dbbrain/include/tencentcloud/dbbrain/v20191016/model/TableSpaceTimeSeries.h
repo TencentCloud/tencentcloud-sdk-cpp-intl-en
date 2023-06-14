@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Table name.
                      * @return TableName Table name.
+                     * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Table name.
-                     * @param TableName Table name.
+                     * @param _tableName Table name.
+                     * 
                      */
                     void SetTableName(const std::string& _tableName);
 
                     /**
                      * 判断参数 TableName 是否已赋值
                      * @return TableName 是否已赋值
+                     * 
                      */
                     bool TableNameHasBeenSet() const;
 
                     /**
                      * 获取Database name.
                      * @return TableSchema Database name.
+                     * 
                      */
                     std::string GetTableSchema() const;
 
                     /**
                      * 设置Database name.
-                     * @param TableSchema Database name.
+                     * @param _tableSchema Database name.
+                     * 
                      */
                     void SetTableSchema(const std::string& _tableSchema);
 
                     /**
                      * 判断参数 TableSchema 是否已赋值
                      * @return TableSchema 是否已赋值
+                     * 
                      */
                     bool TableSchemaHasBeenSet() const;
 
                     /**
                      * 获取Database table storage engine.
                      * @return Engine Database table storage engine.
+                     * 
                      */
                     std::string GetEngine() const;
 
                     /**
                      * 设置Database table storage engine.
-                     * @param Engine Database table storage engine.
+                     * @param _engine Database table storage engine.
+                     * 
                      */
                     void SetEngine(const std::string& _engine);
 
                     /**
                      * 判断参数 Engine 是否已赋值
                      * @return Engine 是否已赋值
+                     * 
                      */
                     bool EngineHasBeenSet() const;
 
                     /**
                      * 获取Monitoring metric data in a unit of time interval.
                      * @return SeriesData Monitoring metric data in a unit of time interval.
+                     * 
                      */
                     MonitorFloatMetricSeriesData GetSeriesData() const;
 
                     /**
                      * 设置Monitoring metric data in a unit of time interval.
-                     * @param SeriesData Monitoring metric data in a unit of time interval.
+                     * @param _seriesData Monitoring metric data in a unit of time interval.
+                     * 
                      */
                     void SetSeriesData(const MonitorFloatMetricSeriesData& _seriesData);
 
                     /**
                      * 判断参数 SeriesData 是否已赋值
                      * @return SeriesData 是否已赋值
+                     * 
                      */
                     bool SeriesDataHasBeenSet() const;
 

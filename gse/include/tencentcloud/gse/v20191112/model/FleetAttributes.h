@@ -53,36 +53,42 @@ namespace TencentCloud
                     /**
                      * 获取Asset package ID
                      * @return AssetId Asset package ID
+                     * 
                      */
                     std::string GetAssetId() const;
 
                     /**
                      * 设置Asset package ID
-                     * @param AssetId Asset package ID
+                     * @param _assetId Asset package ID
+                     * 
                      */
                     void SetAssetId(const std::string& _assetId);
 
                     /**
                      * 判断参数 AssetId 是否已赋值
                      * @return AssetId 是否已赋值
+                     * 
                      */
                     bool AssetIdHasBeenSet() const;
 
                     /**
                      * 获取Server fleet creation time
                      * @return CreationTime Server fleet creation time
+                     * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
                      * 设置Server fleet creation time
-                     * @param CreationTime Server fleet creation time
+                     * @param _creationTime Server fleet creation time
+                     * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
 
                     /**
                      * 判断参数 CreationTime 是否已赋值
                      * @return CreationTime 是否已赋值
+                     * 
                      */
                     bool CreationTimeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Description Description
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Description Description
+                     * @param _description Description
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return FleetArn Description of server fleet resource
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetFleetArn() const;
 
                     /**
                      * 设置Description of server fleet resource
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param FleetArn Description of server fleet resource
+                     * @param _fleetArn Description of server fleet resource
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetFleetArn(const std::string& _fleetArn);
 
                     /**
                      * 判断参数 FleetArn 是否已赋值
                      * @return FleetArn 是否已赋值
+                     * 
                      */
                     bool FleetArnHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return FleetId Server fleet ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetFleetId() const;
 
                     /**
                      * 设置Server fleet ID
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param FleetId Server fleet ID
+                     * @param _fleetId Server fleet ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetFleetId(const std::string& _fleetId);
 
                     /**
                      * 判断参数 FleetId 是否已赋值
                      * @return FleetId 是否已赋值
+                     * 
                      */
                     bool FleetIdHasBeenSet() const;
 
@@ -157,20 +172,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return FleetType Server fleet type, which only supports ON_DEMAND now.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetFleetType() const;
 
                     /**
                      * 设置Server fleet type, which only supports ON_DEMAND now.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param FleetType Server fleet type, which only supports ON_DEMAND now.
+                     * @param _fleetType Server fleet type, which only supports ON_DEMAND now.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetFleetType(const std::string& _fleetType);
 
                     /**
                      * 判断参数 FleetType 是否已赋值
                      * @return FleetType 是否已赋值
+                     * 
                      */
                     bool FleetTypeHasBeenSet() const;
 
@@ -179,38 +197,44 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return InstanceType Server type, such as S5.LARGE8
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Server type, such as S5.LARGE8
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param InstanceType Server type, such as S5.LARGE8
+                     * @param _instanceType Server type, such as S5.LARGE8
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Server fleet name
                      * @return Name Server fleet name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Server fleet name
-                     * @param Name Server fleet name
+                     * @param _name Server fleet name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -219,20 +243,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return NewGameServerSessionProtectionPolicy Game session protection policy
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetNewGameServerSessionProtectionPolicy() const;
 
                     /**
                      * 设置Game session protection policy
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param NewGameServerSessionProtectionPolicy Game session protection policy
+                     * @param _newGameServerSessionProtectionPolicy Game session protection policy
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetNewGameServerSessionProtectionPolicy(const std::string& _newGameServerSessionProtectionPolicy);
 
                     /**
                      * 判断参数 NewGameServerSessionProtectionPolicy 是否已赋值
                      * @return NewGameServerSessionProtectionPolicy 是否已赋值
+                     * 
                      */
                     bool NewGameServerSessionProtectionPolicyHasBeenSet() const;
 
@@ -241,20 +268,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return OperatingSystem Operating system type
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetOperatingSystem() const;
 
                     /**
                      * 设置Operating system type
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param OperatingSystem Operating system type
+                     * @param _operatingSystem Operating system type
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetOperatingSystem(const std::string& _operatingSystem);
 
                     /**
                      * 判断参数 OperatingSystem 是否已赋值
                      * @return OperatingSystem 是否已赋值
+                     * 
                      */
                     bool OperatingSystemHasBeenSet() const;
 
@@ -263,20 +293,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ResourceCreationLimitPolicy Limit policy of resource creation
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     ResourceCreationLimitPolicy GetResourceCreationLimitPolicy() const;
 
                     /**
                      * 设置Limit policy of resource creation
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param ResourceCreationLimitPolicy Limit policy of resource creation
+                     * @param _resourceCreationLimitPolicy Limit policy of resource creation
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetResourceCreationLimitPolicy(const ResourceCreationLimitPolicy& _resourceCreationLimitPolicy);
 
                     /**
                      * 判断参数 ResourceCreationLimitPolicy 是否已赋值
                      * @return ResourceCreationLimitPolicy 是否已赋值
+                     * 
                      */
                     bool ResourceCreationLimitPolicyHasBeenSet() const;
 
@@ -285,20 +318,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Status Statuses: “Create”, “Downloading”, “Verifying”, “Generating”, “Activating”, “Active”, “Exception”, “Deleting”, and “End”.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Statuses: “Create”, “Downloading”, “Verifying”, “Generating”, “Activating”, “Active”, “Exception”, “Deleting”, and “End”.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Status Statuses: “Create”, “Downloading”, “Verifying”, “Generating”, “Activating”, “Active”, “Exception”, “Deleting”, and “End”.
+                     * @param _status Statuses: “Create”, “Downloading”, “Verifying”, “Generating”, “Activating”, “Active”, “Exception”, “Deleting”, and “End”.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -307,20 +343,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return StoppedActions The status of server fleet when it stopped. If this field is left empty, it means automatic scaling.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<std::string> GetStoppedActions() const;
 
                     /**
                      * 设置The status of server fleet when it stopped. If this field is left empty, it means automatic scaling.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param StoppedActions The status of server fleet when it stopped. If this field is left empty, it means automatic scaling.
+                     * @param _stoppedActions The status of server fleet when it stopped. If this field is left empty, it means automatic scaling.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetStoppedActions(const std::vector<std::string>& _stoppedActions);
 
                     /**
                      * 判断参数 StoppedActions 是否已赋值
                      * @return StoppedActions 是否已赋值
+                     * 
                      */
                     bool StoppedActionsHasBeenSet() const;
 
@@ -329,20 +368,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return TerminationTime Server fleet termination time
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetTerminationTime() const;
 
                     /**
                      * 设置Server fleet termination time
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param TerminationTime Server fleet termination time
+                     * @param _terminationTime Server fleet termination time
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetTerminationTime(const std::string& _terminationTime);
 
                     /**
                      * 判断参数 TerminationTime 是否已赋值
                      * @return TerminationTime 是否已赋值
+                     * 
                      */
                     bool TerminationTimeHasBeenSet() const;
 
@@ -351,20 +393,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return GameServerSessionProtectionTimeLimit Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     uint64_t GetGameServerSessionProtectionTimeLimit() const;
 
                     /**
                      * 设置Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param GameServerSessionProtectionTimeLimit Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes.
+                     * @param _gameServerSessionProtectionTimeLimit Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetGameServerSessionProtectionTimeLimit(const uint64_t& _gameServerSessionProtectionTimeLimit);
 
                     /**
                      * 判断参数 GameServerSessionProtectionTimeLimit 是否已赋值
                      * @return GameServerSessionProtectionTimeLimit 是否已赋值
+                     * 
                      */
                     bool GameServerSessionProtectionTimeLimitHasBeenSet() const;
 
@@ -373,20 +418,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return BillingStatus Billing status: Unactivated, Activated, Exception, Isolated due to arrears, Terminated, and Unfrozen.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetBillingStatus() const;
 
                     /**
                      * 设置Billing status: Unactivated, Activated, Exception, Isolated due to arrears, Terminated, and Unfrozen.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param BillingStatus Billing status: Unactivated, Activated, Exception, Isolated due to arrears, Terminated, and Unfrozen.
+                     * @param _billingStatus Billing status: Unactivated, Activated, Exception, Isolated due to arrears, Terminated, and Unfrozen.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetBillingStatus(const std::string& _billingStatus);
 
                     /**
                      * 判断参数 BillingStatus 是否已赋值
                      * @return BillingStatus 是否已赋值
+                     * 
                      */
                     bool BillingStatusHasBeenSet() const;
 
@@ -395,20 +443,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Tags Tag list. Up to 50 tags.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list. Up to 50 tags.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param Tags Tag list. Up to 50 tags.
+                     * @param _tags Tag list. Up to 50 tags.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
@@ -417,20 +468,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return DataDiskInfo Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<DiskInfo> GetDataDiskInfo() const;
 
                     /**
                      * 设置Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param DataDiskInfo Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
+                     * @param _dataDiskInfo Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetDataDiskInfo(const std::vector<DiskInfo>& _dataDiskInfo);
 
                     /**
                      * 判断参数 DataDiskInfo 是否已赋值
                      * @return DataDiskInfo 是否已赋值
+                     * 
                      */
                     bool DataDiskInfoHasBeenSet() const;
 
@@ -439,20 +493,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return SystemDiskInfo System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     DiskInfo GetSystemDiskInfo() const;
 
                     /**
                      * 设置System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param SystemDiskInfo System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
+                     * @param _systemDiskInfo System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetSystemDiskInfo(const DiskInfo& _systemDiskInfo);
 
                     /**
                      * 判断参数 SystemDiskInfo 是否已赋值
                      * @return SystemDiskInfo 是否已赋值
+                     * 
                      */
                     bool SystemDiskInfoHasBeenSet() const;
 
@@ -461,20 +518,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return RelatedCcnInfos CCN instance information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<RelatedCcnInfo> GetRelatedCcnInfos() const;
 
                     /**
                      * 设置CCN instance information
 Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param RelatedCcnInfos CCN instance information
+                     * @param _relatedCcnInfos CCN instance information
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     void SetRelatedCcnInfos(const std::vector<RelatedCcnInfo>& _relatedCcnInfos);
 
                     /**
                      * 判断参数 RelatedCcnInfos 是否已赋值
                      * @return RelatedCcnInfos 是否已赋值
+                     * 
                      */
                     bool RelatedCcnInfosHasBeenSet() const;
 
@@ -483,20 +543,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+                     * @param _internetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of level-defining policies
                      * @return Total Total number of level-defining policies
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Total number of level-defining policies
                      * @return LevelList Total number of level-defining policies
+                     * 
                      */
                     std::vector<CCLevelPolicy> GetLevelList() const;
 
                     /**
                      * 判断参数 LevelList 是否已赋值
                      * @return LevelList 是否已赋值
+                     * 
                      */
                     bool LevelListHasBeenSet() const;
 

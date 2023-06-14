@@ -58,20 +58,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RealtimeSpeechStatisticsItem Voice Chat statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     RealTimeSpeechStatisticsItem GetRealtimeSpeechStatisticsItem() const;
 
                     /**
                      * 设置Voice Chat statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RealtimeSpeechStatisticsItem Voice Chat statistics
+                     * @param _realtimeSpeechStatisticsItem Voice Chat statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealtimeSpeechStatisticsItem(const RealTimeSpeechStatisticsItem& _realtimeSpeechStatisticsItem);
 
                     /**
                      * 判断参数 RealtimeSpeechStatisticsItem 是否已赋值
                      * @return RealtimeSpeechStatisticsItem 是否已赋值
+                     * 
                      */
                     bool RealtimeSpeechStatisticsItemHasBeenSet() const;
 
@@ -80,20 +83,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return VoiceMessageStatisticsItem Voice Message statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     VoiceMessageStatisticsItem GetVoiceMessageStatisticsItem() const;
 
                     /**
                      * 设置Voice Message statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param VoiceMessageStatisticsItem Voice Message statistics
+                     * @param _voiceMessageStatisticsItem Voice Message statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVoiceMessageStatisticsItem(const VoiceMessageStatisticsItem& _voiceMessageStatisticsItem);
 
                     /**
                      * 判断参数 VoiceMessageStatisticsItem 是否已赋值
                      * @return VoiceMessageStatisticsItem 是否已赋值
+                     * 
                      */
                     bool VoiceMessageStatisticsItemHasBeenSet() const;
 
@@ -102,38 +108,44 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return VoiceFilterStatisticsItem Phrase Filtering statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     VoiceFilterStatisticsItem GetVoiceFilterStatisticsItem() const;
 
                     /**
                      * 设置Phrase Filtering statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param VoiceFilterStatisticsItem Phrase Filtering statistics
+                     * @param _voiceFilterStatisticsItem Phrase Filtering statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVoiceFilterStatisticsItem(const VoiceFilterStatisticsItem& _voiceFilterStatisticsItem);
 
                     /**
                      * 判断参数 VoiceFilterStatisticsItem 是否已赋值
                      * @return VoiceFilterStatisticsItem 是否已赋值
+                     * 
                      */
                     bool VoiceFilterStatisticsItemHasBeenSet() const;
 
                     /**
                      * 获取Reference period
                      * @return Date Reference period
+                     * 
                      */
                     std::string GetDate() const;
 
                     /**
                      * 设置Reference period
-                     * @param Date Reference period
+                     * @param _date Reference period
+                     * 
                      */
                     void SetDate(const std::string& _date);
 
                     /**
                      * 判断参数 Date 是否已赋值
                      * @return Date 是否已赋值
+                     * 
                      */
                     bool DateHasBeenSet() const;
 
@@ -142,20 +154,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AudioTextStatisticsItem Recording-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     AudioTextStatisticsItem GetAudioTextStatisticsItem() const;
 
                     /**
                      * 设置Recording-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AudioTextStatisticsItem Recording-to-Text usage statistics
+                     * @param _audioTextStatisticsItem Recording-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAudioTextStatisticsItem(const AudioTextStatisticsItem& _audioTextStatisticsItem);
 
                     /**
                      * 判断参数 AudioTextStatisticsItem 是否已赋值
                      * @return AudioTextStatisticsItem 是否已赋值
+                     * 
                      */
                     bool AudioTextStatisticsItemHasBeenSet() const;
 
@@ -164,20 +179,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return StreamTextStatisticsItem Stream-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     StreamTextStatisticsItem GetStreamTextStatisticsItem() const;
 
                     /**
                      * 设置Stream-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param StreamTextStatisticsItem Stream-to-Text usage statistics
+                     * @param _streamTextStatisticsItem Stream-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStreamTextStatisticsItem(const StreamTextStatisticsItem& _streamTextStatisticsItem);
 
                     /**
                      * 判断参数 StreamTextStatisticsItem 是否已赋值
                      * @return StreamTextStatisticsItem 是否已赋值
+                     * 
                      */
                     bool StreamTextStatisticsItemHasBeenSet() const;
 
@@ -186,20 +204,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return OverseaTextStatisticsItem Usage statistics of Voice-to-Text of outside-MLC requests
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     OverseaTextStatisticsItem GetOverseaTextStatisticsItem() const;
 
                     /**
                      * 设置Usage statistics of Voice-to-Text of outside-MLC requests
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param OverseaTextStatisticsItem Usage statistics of Voice-to-Text of outside-MLC requests
+                     * @param _overseaTextStatisticsItem Usage statistics of Voice-to-Text of outside-MLC requests
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOverseaTextStatisticsItem(const OverseaTextStatisticsItem& _overseaTextStatisticsItem);
 
                     /**
                      * 判断参数 OverseaTextStatisticsItem 是否已赋值
                      * @return OverseaTextStatisticsItem 是否已赋值
+                     * 
                      */
                     bool OverseaTextStatisticsItemHasBeenSet() const;
 
@@ -208,20 +229,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RealtimeTextStatisticsItem Real-time Voice-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     RealtimeTextStatisticsItem GetRealtimeTextStatisticsItem() const;
 
                     /**
                      * 设置Real-time Voice-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RealtimeTextStatisticsItem Real-time Voice-to-Text usage statistics
+                     * @param _realtimeTextStatisticsItem Real-time Voice-to-Text usage statistics
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRealtimeTextStatisticsItem(const RealtimeTextStatisticsItem& _realtimeTextStatisticsItem);
 
                     /**
                      * 判断参数 RealtimeTextStatisticsItem 是否已赋值
                      * @return RealtimeTextStatisticsItem 是否已赋值
+                     * 
                      */
                     bool RealtimeTextStatisticsItemHasBeenSet() const;
 

@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取The task ID.
                      * @return TaskId The task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The task ID.
-                     * @param TaskId The task ID.
+                     * @param _taskId The task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
                      * @return Status The task flow status. Valid values:
 <li>PROCESSING</li>
 <li>FINISH</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -80,69 +84,80 @@ namespace TencentCloud
                      * 设置The task flow status. Valid values:
 <li>PROCESSING</li>
 <li>FINISH</li>
-                     * @param Status The task flow status. Valid values:
+                     * @param _status The task flow status. Valid values:
 <li>PROCESSING</li>
 <li>FINISH</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The ID of the media file.
                      * @return FileId The ID of the media file.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The ID of the media file.
-                     * @param FileId The ID of the media file.
+                     * @param _fileId The ID of the media file.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the media file.
                      * @return FileName The name of the media file.
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置The name of the media file.
-                     * @param FileName The name of the media file.
+                     * @param _fileName The name of the media file.
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取The address of the media file.
                      * @return FileUrl The address of the media file.
+                     * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
                      * 设置The address of the media file.
-                     * @param FileUrl The address of the media file.
+                     * @param _fileUrl The address of the media file.
+                     * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
 
                     /**
                      * 判断参数 FileUrl 是否已赋值
                      * @return FileUrl 是否已赋值
+                     * 
                      */
                     bool FileUrlHasBeenSet() const;
 
@@ -151,56 +166,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MetaData The metadata of the source video.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
                      * 设置The metadata of the source video.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MetaData The metadata of the source video.
+                     * @param _metaData The metadata of the source video.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
 
                     /**
                      * 判断参数 MetaData 是否已赋值
                      * @return MetaData 是否已赋值
+                     * 
                      */
                     bool MetaDataHasBeenSet() const;
 
                     /**
                      * 获取The execution status and result of the bitrate reduction task.
                      * @return MediaProcessResultSet The execution status and result of the bitrate reduction task.
+                     * 
                      */
                     std::vector<ReduceMediaBitrateMediaProcessTaskResult> GetMediaProcessResultSet() const;
 
                     /**
                      * 设置The execution status and result of the bitrate reduction task.
-                     * @param MediaProcessResultSet The execution status and result of the bitrate reduction task.
+                     * @param _mediaProcessResultSet The execution status and result of the bitrate reduction task.
+                     * 
                      */
                     void SetMediaProcessResultSet(const std::vector<ReduceMediaBitrateMediaProcessTaskResult>& _mediaProcessResultSet);
 
                     /**
                      * 判断参数 MediaProcessResultSet 是否已赋值
                      * @return MediaProcessResultSet 是否已赋值
+                     * 
                      */
                     bool MediaProcessResultSetHasBeenSet() const;
 
                     /**
                      * 获取The task priority, which can be a value from -10 to 10.
                      * @return TasksPriority The task priority, which can be a value from -10 to 10.
+                     * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
                      * 设置The task priority, which can be a value from -10 to 10.
-                     * @param TasksPriority The task priority, which can be a value from -10 to 10.
+                     * @param _tasksPriority The task priority, which can be a value from -10 to 10.
+                     * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
 
                     /**
                      * 判断参数 TasksPriority 是否已赋值
                      * @return TasksPriority 是否已赋值
+                     * 
                      */
                     bool TasksPriorityHasBeenSet() const;
 
@@ -211,6 +235,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return TasksNotifyMode The notification mode for the change of task status. Valid values:
 <li>Finish: Send a notification after the task is completed.</li>
 <li>None: Do not send status change notifications for this task.</li>
+                     * 
                      */
                     std::string GetTasksNotifyMode() const;
 
@@ -218,51 +243,59 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The notification mode for the change of task status. Valid values:
 <li>Finish: Send a notification after the task is completed.</li>
 <li>None: Do not send status change notifications for this task.</li>
-                     * @param TasksNotifyMode The notification mode for the change of task status. Valid values:
+                     * @param _tasksNotifyMode The notification mode for the change of task status. Valid values:
 <li>Finish: Send a notification after the task is completed.</li>
 <li>None: Do not send status change notifications for this task.</li>
+                     * 
                      */
                     void SetTasksNotifyMode(const std::string& _tasksNotifyMode);
 
                     /**
                      * 判断参数 TasksNotifyMode 是否已赋值
                      * @return TasksNotifyMode 是否已赋值
+                     * 
                      */
                     bool TasksNotifyModeHasBeenSet() const;
 
                     /**
                      * 获取The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
                      * @return SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
                      * 设置The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-                     * @param SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * @param _sessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
                     /**
                      * 判断参数 SessionContext 是否已赋值
                      * @return SessionContext 是否已赋值
+                     * 
                      */
                     bool SessionContextHasBeenSet() const;
 
                     /**
                      * 获取The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
                      * @return SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+                     * 
                      */
                     std::string GetSessionId() const;
 
                     /**
                      * 设置The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
-                     * @param SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+                     * @param _sessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+                     * 
                      */
                     void SetSessionId(const std::string& _sessionId);
 
                     /**
                      * 判断参数 SessionId 是否已赋值
                      * @return SessionId 是否已赋值
+                     * 
                      */
                     bool SessionIdHasBeenSet() const;
 

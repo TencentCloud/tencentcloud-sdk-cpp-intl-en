@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Unique detail key
                      * @return Key Unique detail key
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Unique detail key
-                     * @param Key Unique detail key
+                     * @param _key Unique detail key
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
                     /**
                      * 获取Detail title.
                      * @return Title Detail title.
+                     * 
                      */
                     std::string GetTitle() const;
 
                     /**
                      * 设置Detail title.
-                     * @param Title Detail title.
+                     * @param _title Detail title.
+                     * 
                      */
                     void SetTitle(const std::string& _title);
 
                     /**
                      * 判断参数 Title 是否已赋值
                      * @return Title 是否已赋值
+                     * 
                      */
                     bool TitleHasBeenSet() const;
 
                     /**
                      * 获取Detail value.
                      * @return Value Detail value.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Detail value.
-                     * @param Value Detail value.
+                     * @param _value Detail value.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

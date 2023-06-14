@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Log topic ID bound to the task
                      * @return TopicId Log topic ID bound to the task
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置Log topic ID bound to the task
-                     * @param TopicId Log topic ID bound to the task
+                     * @param _topicId Log topic ID bound to the task
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 

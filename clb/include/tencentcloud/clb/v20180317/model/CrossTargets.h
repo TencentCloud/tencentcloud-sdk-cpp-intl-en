@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取VPC ID of the CLB instance
                      * @return LocalVpcId VPC ID of the CLB instance
+                     * 
                      */
                     std::string GetLocalVpcId() const;
 
                     /**
                      * 设置VPC ID of the CLB instance
-                     * @param LocalVpcId VPC ID of the CLB instance
+                     * @param _localVpcId VPC ID of the CLB instance
+                     * 
                      */
                     void SetLocalVpcId(const std::string& _localVpcId);
 
                     /**
                      * 判断参数 LocalVpcId 是否已赋值
                      * @return LocalVpcId 是否已赋值
+                     * 
                      */
                     bool LocalVpcIdHasBeenSet() const;
 
                     /**
                      * 获取VPC ID of the CVM or ENI instance
                      * @return VpcId VPC ID of the CVM or ENI instance
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID of the CVM or ENI instance
-                     * @param VpcId VPC ID of the CVM or ENI instance
+                     * @param _vpcId VPC ID of the CVM or ENI instance
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取IP address of the CVM or ENI instance
                      * @return IP IP address of the CVM or ENI instance
+                     * 
                      */
                     std::string GetIP() const;
 
                     /**
                      * 设置IP address of the CVM or ENI instance
-                     * @param IP IP address of the CVM or ENI instance
+                     * @param _iP IP address of the CVM or ENI instance
+                     * 
                      */
                     void SetIP(const std::string& _iP);
 
                     /**
                      * 判断参数 IP 是否已赋值
                      * @return IP 是否已赋值
+                     * 
                      */
                     bool IPHasBeenSet() const;
 
                     /**
                      * 获取VPC name of the CVM or ENI instance
                      * @return VpcName VPC name of the CVM or ENI instance
+                     * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置VPC name of the CVM or ENI instance
-                     * @param VpcName VPC name of the CVM or ENI instance
+                     * @param _vpcName VPC name of the CVM or ENI instance
+                     * 
                      */
                     void SetVpcName(const std::string& _vpcName);
 
                     /**
                      * 判断参数 VpcName 是否已赋值
                      * @return VpcName 是否已赋值
+                     * 
                      */
                     bool VpcNameHasBeenSet() const;
 
                     /**
                      * 获取ENI ID of the CVM instance
                      * @return EniId ENI ID of the CVM instance
+                     * 
                      */
                     std::string GetEniId() const;
 
                     /**
                      * 设置ENI ID of the CVM instance
-                     * @param EniId ENI ID of the CVM instance
+                     * @param _eniId ENI ID of the CVM instance
+                     * 
                      */
                     void SetEniId(const std::string& _eniId);
 
                     /**
                      * 判断参数 EniId 是否已赋值
                      * @return EniId 是否已赋值
+                     * 
                      */
                     bool EniIdHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceId ID of the CVM instance
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the CVM instance
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstanceId ID of the CVM instance
+                     * @param _instanceId ID of the CVM instance
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -163,38 +181,44 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return InstanceName Name of the CVM instance
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Name of the CVM instance
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param InstanceName Name of the CVM instance
+                     * @param _instanceName Name of the CVM instance
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Region of the CVM or ENI instance
                      * @return Region Region of the CVM or ENI instance
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region of the CVM or ENI instance
-                     * @param Region Region of the CVM or ENI instance
+                     * @param _region Region of the CVM or ENI instance
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

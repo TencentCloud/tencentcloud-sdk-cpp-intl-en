@@ -55,6 +55,7 @@ namespace TencentCloud
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
+                     * 
                      */
                     uint64_t GetAlarmType() const;
 
@@ -63,34 +64,39 @@ namespace TencentCloud
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
-                     * @param AlarmType Alarm threshold type. Valid values:
+                     * @param _alarmType Alarm threshold type. Valid values:
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
+                     * 
                      */
                     void SetAlarmType(const uint64_t& _alarmType);
 
                     /**
                      * 判断参数 AlarmType 是否已赋值
                      * @return AlarmType 是否已赋值
+                     * 
                      */
                     bool AlarmTypeHasBeenSet() const;
 
                     /**
                      * 获取Alarm threshold (Mbps). The value should be greater than or equal to 0. Note that the alarm threshold configuration will be removed if you pass the parameter for input and set it to 0.
                      * @return AlarmThreshold Alarm threshold (Mbps). The value should be greater than or equal to 0. Note that the alarm threshold configuration will be removed if you pass the parameter for input and set it to 0.
+                     * 
                      */
                     uint64_t GetAlarmThreshold() const;
 
                     /**
                      * 设置Alarm threshold (Mbps). The value should be greater than or equal to 0. Note that the alarm threshold configuration will be removed if you pass the parameter for input and set it to 0.
-                     * @param AlarmThreshold Alarm threshold (Mbps). The value should be greater than or equal to 0. Note that the alarm threshold configuration will be removed if you pass the parameter for input and set it to 0.
+                     * @param _alarmThreshold Alarm threshold (Mbps). The value should be greater than or equal to 0. Note that the alarm threshold configuration will be removed if you pass the parameter for input and set it to 0.
+                     * 
                      */
                     void SetAlarmThreshold(const uint64_t& _alarmThreshold);
 
                     /**
                      * 判断参数 AlarmThreshold 是否已赋值
                      * @return AlarmThreshold 是否已赋值
+                     * 
                      */
                     bool AlarmThresholdHasBeenSet() const;
 

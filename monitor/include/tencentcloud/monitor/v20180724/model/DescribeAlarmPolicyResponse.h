@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Policy details
                      * @return Policy Policy details
+                     * 
                      */
                     AlarmPolicy GetPolicy() const;
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 

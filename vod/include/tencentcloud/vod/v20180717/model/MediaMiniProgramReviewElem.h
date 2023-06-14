@@ -63,6 +63,7 @@ namespace TencentCloud
 <li>Political: politically sensitive image,</li>
 <li>Political.Ocr: politically sensitive text</li>
 <li>Political.Asr: politically sensitive speech</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -75,7 +76,7 @@ namespace TencentCloud
 <li>Political: politically sensitive image,</li>
 <li>Political.Ocr: politically sensitive text</li>
 <li>Political.Asr: politically sensitive speech</li>
-                     * @param Type Audit type. 
+                     * @param _type Audit type. 
 <li>Porn: porn image,</li>
 <li>Porn.Ocr: porn text,</li>
 <li>Porn.Asr: porn speech,</li>
@@ -83,12 +84,14 @@ namespace TencentCloud
 <li>Political: politically sensitive image,</li>
 <li>Political.Ocr: politically sensitive text</li>
 <li>Political.Asr: politically sensitive speech</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -101,6 +104,7 @@ namespace TencentCloud
 <li>pass: normal,</li>
 <li>block: violating,</li>
 <li>review: suspected of violation.</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -109,34 +113,39 @@ namespace TencentCloud
 <li>pass: normal,</li>
 <li>block: violating,</li>
 <li>review: suspected of violation.</li>
-                     * @param Suggestion Audit suggestion.
+                     * @param _suggestion Audit suggestion.
 <li>pass: normal,</li>
 <li>block: violating,</li>
 <li>review: suspected of violation.</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取Confidence of audit result between 0 and 100.
                      * @return Confidence Confidence of audit result between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Confidence of audit result between 0 and 100.
-                     * @param Confidence Confidence of audit result between 0 and 100.
+                     * @param _confidence Confidence of audit result between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 

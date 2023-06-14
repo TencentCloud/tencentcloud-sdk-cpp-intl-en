@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
                      * @return SSLMode Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
+                     * 
                      */
                     std::string GetSSLMode() const;
 
                     /**
                      * 设置Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
-                     * @param SSLMode Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
+                     * @param _sSLMode Authentication type. Values: `UNIDIRECTIONAL` (one-way authentication), `MUTUAL` (two-way authentication)
+                     * 
                      */
                     void SetSSLMode(const std::string& _sSLMode);
 
                     /**
                      * 判断参数 SSLMode 是否已赋值
                      * @return SSLMode 是否已赋值
+                     * 
                      */
                     bool SSLModeHasBeenSet() const;
 
                     /**
                      * 获取List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
                      * @return CertList List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
+                     * 
                      */
                     std::vector<CertInfo> GetCertList() const;
 
                     /**
                      * 设置List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
-                     * @param CertList List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
+                     * @param _certList List of listener or rule certificates. One-way and two-way authentication are supported. Only one certificate can be specified for one algorithm. If `SSLMode` is `MUTUAL` (two-way authentication), at least one CA certificate is required. 
+                     * 
                      */
                     void SetCertList(const std::vector<CertInfo>& _certList);
 
                     /**
                      * 判断参数 CertList 是否已赋值
                      * @return CertList 是否已赋值
+                     * 
                      */
                     bool CertListHasBeenSet() const;
 

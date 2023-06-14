@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Record ID
                      * @return Ids Record ID
+                     * 
                      */
                     std::vector<std::string> GetIds() const;
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

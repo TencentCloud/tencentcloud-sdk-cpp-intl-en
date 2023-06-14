@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Attack type
                      * @return AttackType Attack type
+                     * 
                      */
                     std::string GetAttackType() const;
 
                     /**
                      * 设置Attack type
-                     * @param AttackType Attack type
+                     * @param _attackType Attack type
+                     * 
                      */
                     void SetAttackType(const std::string& _attackType);
 
                     /**
                      * 判断参数 AttackType 是否已赋值
                      * @return AttackType 是否已赋值
+                     * 
                      */
                     bool AttackTypeHasBeenSet() const;
 
                     /**
                      * 获取Defense action. Valid value: `observe`.
                      * @return Operate Defense action. Valid value: `observe`.
+                     * 
                      */
                     std::string GetOperate() const;
 
                     /**
                      * 设置Defense action. Valid value: `observe`.
-                     * @param Operate Defense action. Valid value: `observe`.
+                     * @param _operate Defense action. Valid value: `observe`.
+                     * 
                      */
                     void SetOperate(const std::string& _operate);
 
                     /**
                      * 判断参数 Operate 是否已赋值
                      * @return Operate 是否已赋值
+                     * 
                      */
                     bool OperateHasBeenSet() const;
 

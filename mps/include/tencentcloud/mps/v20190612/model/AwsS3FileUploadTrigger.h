@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取The AWS S3 bucket bound to the scheme.
                      * @return S3Bucket The AWS S3 bucket bound to the scheme.
+                     * 
                      */
                     std::string GetS3Bucket() const;
 
                     /**
                      * 设置The AWS S3 bucket bound to the scheme.
-                     * @param S3Bucket The AWS S3 bucket bound to the scheme.
+                     * @param _s3Bucket The AWS S3 bucket bound to the scheme.
+                     * 
                      */
                     void SetS3Bucket(const std::string& _s3Bucket);
 
                     /**
                      * 判断参数 S3Bucket 是否已赋值
                      * @return S3Bucket 是否已赋值
+                     * 
                      */
                     bool S3BucketHasBeenSet() const;
 
                     /**
                      * 获取The region of the AWS S3 bucket.
                      * @return S3Region The region of the AWS S3 bucket.
+                     * 
                      */
                     std::string GetS3Region() const;
 
                     /**
                      * 设置The region of the AWS S3 bucket.
-                     * @param S3Region The region of the AWS S3 bucket.
+                     * @param _s3Region The region of the AWS S3 bucket.
+                     * 
                      */
                     void SetS3Region(const std::string& _s3Region);
 
                     /**
                      * 判断参数 S3Region 是否已赋值
                      * @return S3Region 是否已赋值
+                     * 
                      */
                     bool S3RegionHasBeenSet() const;
 
                     /**
                      * 获取The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
                      * @return Dir The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
+                     * 
                      */
                     std::string GetDir() const;
 
                     /**
                      * 设置The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
-                     * @param Dir The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
+                     * @param _dir The bucket directory bound. It must be an absolute path that starts and ends with `/`, such as `/movie/201907/`. If you do not specify this, the root directory will be bound.	
+                     * 
                      */
                     void SetDir(const std::string& _dir);
 
                     /**
                      * 判断参数 Dir 是否已赋值
                      * @return Dir 是否已赋值
+                     * 
                      */
                     bool DirHasBeenSet() const;
 
                     /**
                      * 获取The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
                      * @return Formats The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
+                     * 
                      */
                     std::vector<std::string> GetFormats() const;
 
                     /**
                      * 设置The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
-                     * @param Formats The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
+                     * @param _formats The file formats that will trigger the scheme, such as ["mp4", "flv", "mov"]. If you do not specify this, the upload of files in any format will trigger the scheme.	
+                     * 
                      */
                     void SetFormats(const std::vector<std::string>& _formats);
 
                     /**
                      * 判断参数 Formats 是否已赋值
                      * @return Formats 是否已赋值
+                     * 
                      */
                     bool FormatsHasBeenSet() const;
 
@@ -124,20 +136,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return S3SecretId The key ID of the AWS S3 bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
                      * 设置The key ID of the AWS S3 bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param S3SecretId The key ID of the AWS S3 bucket.
+                     * @param _s3SecretId The key ID of the AWS S3 bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
 
                     /**
                      * 判断参数 S3SecretId 是否已赋值
                      * @return S3SecretId 是否已赋值
+                     * 
                      */
                     bool S3SecretIdHasBeenSet() const;
 
@@ -146,20 +161,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return S3SecretKey The key of the AWS S3 bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
                      * 设置The key of the AWS S3 bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param S3SecretKey The key of the AWS S3 bucket.
+                     * @param _s3SecretKey The key of the AWS S3 bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
 
                     /**
                      * 判断参数 S3SecretKey 是否已赋值
                      * @return S3SecretKey 是否已赋值
+                     * 
                      */
                     bool S3SecretKeyHasBeenSet() const;
 
@@ -170,6 +188,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return AwsSQS The SQS queue of the AWS S3 bucket.
 Note: The queue must be in the same region as the bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AwsSQS GetAwsSQS() const;
 
@@ -177,15 +196,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The SQS queue of the AWS S3 bucket.
 Note: The queue must be in the same region as the bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AwsSQS The SQS queue of the AWS S3 bucket.
+                     * @param _awsSQS The SQS queue of the AWS S3 bucket.
 Note: The queue must be in the same region as the bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAwsSQS(const AwsSQS& _awsSQS);
 
                     /**
                      * 判断参数 AwsSQS 是否已赋值
                      * @return AwsSQS 是否已赋值
+                     * 
                      */
                     bool AwsSQSHasBeenSet() const;
 

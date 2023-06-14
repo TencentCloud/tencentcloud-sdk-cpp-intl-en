@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取TencentDB product type to be queried. Currently, only `mysql` is supported.
                      * @return Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置TencentDB product type to be queried. Currently, only `mysql` is supported.
-                     * @param Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * @param _product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Paginated query offset. Default value: `0`.
                      * @return Offset Paginated query offset. Default value: `0`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Paginated query offset. Default value: `0`.
-                     * @param Offset Paginated query offset. Default value: `0`.
+                     * @param _offset Paginated query offset. Default value: `0`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
                      * @return Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
-                     * @param Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+                     * @param _limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
                      * @return OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+                     * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
                      * 设置Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
-                     * @param OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+                     * @param _orderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
                      * @return OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
+                     * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
                      * 设置Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
-                     * @param OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
+                     * @param _orderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
+                     * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
 
                     /**
                      * 判断参数 OrderDirection 是否已赋值
                      * @return OrderDirection 是否已赋值
+                     * 
                      */
                     bool OrderDirectionHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Region Region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Region Region
+                     * @param _region Region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SubnetNum Number of public IP addresses for internet tunnels
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSubnetNum() const;
 
                     /**
                      * 设置Number of public IP addresses for internet tunnels
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SubnetNum Number of public IP addresses for internet tunnels
+                     * @param _subnetNum Number of public IP addresses for internet tunnels
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubnetNum(const int64_t& _subnetNum);
 
                     /**
                      * 判断参数 SubnetNum 是否已赋值
                      * @return SubnetNum 是否已赋值
+                     * 
                      */
                     bool SubnetNumHasBeenSet() const;
 

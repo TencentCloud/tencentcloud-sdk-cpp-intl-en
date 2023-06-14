@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Scheduling domain name
                      * @return Domain Scheduling domain name
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Scheduling domain name
-                     * @param Domain Scheduling domain name
+                     * @param _domain Scheduling domain name
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取List of line IPs
                      * @return LineIPList List of line IPs
+                     * 
                      */
                     std::vector<IPLineInfo> GetLineIPList() const;
 
                     /**
                      * 设置List of line IPs
-                     * @param LineIPList List of line IPs
+                     * @param _lineIPList List of line IPs
+                     * 
                      */
                     void SetLineIPList(const std::vector<IPLineInfo>& _lineIPList);
 
                     /**
                      * 判断参数 LineIPList 是否已赋值
                      * @return LineIPList 是否已赋值
+                     * 
                      */
                     bool LineIPListHasBeenSet() const;
 
                     /**
                      * 获取Scheduling mode. Valid value: `priority` (priority scheduling).
                      * @return Method Scheduling mode. Valid value: `priority` (priority scheduling).
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Scheduling mode. Valid value: `priority` (priority scheduling).
-                     * @param Method Scheduling mode. Valid value: `priority` (priority scheduling).
+                     * @param _method Scheduling mode. Valid value: `priority` (priority scheduling).
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
                     /**
                      * 获取TTL value recorded from the scheduling domain name resolution
                      * @return TTL TTL value recorded from the scheduling domain name resolution
+                     * 
                      */
                     uint64_t GetTTL() const;
 
                     /**
                      * 设置TTL value recorded from the scheduling domain name resolution
-                     * @param TTL TTL value recorded from the scheduling domain name resolution
+                     * @param _tTL TTL value recorded from the scheduling domain name resolution
+                     * 
                      */
                     void SetTTL(const uint64_t& _tTL);
 
                     /**
                      * 判断参数 TTL 是否已赋值
                      * @return TTL 是否已赋值
+                     * 
                      */
                     bool TTLHasBeenSet() const;
 
@@ -130,6 +142,7 @@ namespace TencentCloud
 `1`: running
 `2`: abnormal
 ]
+                     * 
                      */
                     uint64_t GetStatus() const;
 
@@ -139,53 +152,61 @@ namespace TencentCloud
 `1`: running
 `2`: abnormal
 ]
-                     * @param Status Running status. Valid values:
+                     * @param _status Running status. Valid values:
 `0`: not running
 `1`: running
 `2`: abnormal
 ]
+                     * 
                      */
                     void SetStatus(const uint64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreatedTime Creation time
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreatedTime Creation time
+                     * @param _createdTime Creation time
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modification time
                      * @return ModifyTime Last modification time
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Last modification time
-                     * @param ModifyTime Last modification time
+                     * @param _modifyTime Last modification time
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 
@@ -194,20 +215,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UsrDomainName Domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetUsrDomainName() const;
 
                     /**
                      * 设置Domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UsrDomainName Domain name
+                     * @param _usrDomainName Domain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUsrDomainName(const std::string& _usrDomainName);
 
                     /**
                      * 判断参数 UsrDomainName 是否已赋值
                      * @return UsrDomainName 是否已赋值
+                     * 
                      */
                     bool UsrDomainNameHasBeenSet() const;
 

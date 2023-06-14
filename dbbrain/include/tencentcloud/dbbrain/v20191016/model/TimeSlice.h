@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Total number
                      * @return Count Total number
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置Total number
-                     * @param Count Total number
+                     * @param _count Total number
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Statistics start time
                      * @return Timestamp Statistics start time
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 设置Statistics start time
-                     * @param Timestamp Statistics start time
+                     * @param _timestamp Statistics start time
+                     * 
                      */
                     void SetTimestamp(const int64_t& _timestamp);
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 

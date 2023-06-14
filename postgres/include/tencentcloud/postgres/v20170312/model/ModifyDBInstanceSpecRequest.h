@@ -45,162 +45,189 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-6bwgamo3.
                      * @return DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-6bwgamo3.
-                     * @param DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * @param _dBInstanceId Instance ID in the format of postgres-6bwgamo3.
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance memory size in GiB after modification.
                      * @return Memory Instance memory size in GiB after modification.
+                     * 
                      */
                     uint64_t GetMemory() const;
 
                     /**
                      * 设置Instance memory size in GiB after modification.
-                     * @param Memory Instance memory size in GiB after modification.
+                     * @param _memory Instance memory size in GiB after modification.
+                     * 
                      */
                     void SetMemory(const uint64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Instance disk size in GiB after modification.
                      * @return Storage Instance disk size in GiB after modification.
+                     * 
                      */
                     uint64_t GetStorage() const;
 
                     /**
                      * 设置Instance disk size in GiB after modification.
-                     * @param Storage Instance disk size in GiB after modification.
+                     * @param _storage Instance disk size in GiB after modification.
+                     * 
                      */
                     void SetStorage(const uint64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
                      * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 
                      */
                     uint64_t GetAutoVoucher() const;
 
                     /**
                      * 设置Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
-                     * @param AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * @param _autoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+                     * 
                      */
                     void SetAutoVoucher(const uint64_t& _autoVoucher);
 
                     /**
                      * 判断参数 AutoVoucher 是否已赋值
                      * @return AutoVoucher 是否已赋值
+                     * 
                      */
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
                      * 获取Voucher ID list. Currently, you can specify only one voucher.
                      * @return VoucherIds Voucher ID list. Currently, you can specify only one voucher.
+                     * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
                      * 设置Voucher ID list. Currently, you can specify only one voucher.
-                     * @param VoucherIds Voucher ID list. Currently, you can specify only one voucher.
+                     * @param _voucherIds Voucher ID list. Currently, you can specify only one voucher.
+                     * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
 
                     /**
                      * 判断参数 VoucherIds 是否已赋值
                      * @return VoucherIds 是否已赋值
+                     * 
                      */
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
                      * 获取Campaign ID.
                      * @return ActivityId Campaign ID.
+                     * 
                      */
                     uint64_t GetActivityId() const;
 
                     /**
                      * 设置Campaign ID.
-                     * @param ActivityId Campaign ID.
+                     * @param _activityId Campaign ID.
+                     * 
                      */
                     void SetActivityId(const uint64_t& _activityId);
 
                     /**
                      * 判断参数 ActivityId 是否已赋值
                      * @return ActivityId 是否已赋值
+                     * 
                      */
                     bool ActivityIdHasBeenSet() const;
 
                     /**
                      * 获取Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
                      * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * 
                      */
                     uint64_t GetSwitchTag() const;
 
                     /**
                      * 设置Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
-                     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * @param _switchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * 
                      */
                     void SetSwitchTag(const uint64_t& _switchTag);
 
                     /**
                      * 判断参数 SwitchTag 是否已赋值
                      * @return SwitchTag 是否已赋值
+                     * 
                      */
                     bool SwitchTagHasBeenSet() const;
 
                     /**
                      * 获取Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      * @return SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 
                      */
                     std::string GetSwitchStartTime() const;
 
                     /**
                      * 设置Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-                     * @param SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * @param _switchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 
                      */
                     void SetSwitchStartTime(const std::string& _switchStartTime);
 
                     /**
                      * 判断参数 SwitchStartTime 是否已赋值
                      * @return SwitchStartTime 是否已赋值
+                     * 
                      */
                     bool SwitchStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      * @return SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 
                      */
                     std::string GetSwitchEndTime() const;
 
                     /**
                      * 设置Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
-                     * @param SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * @param _switchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * 
                      */
                     void SetSwitchEndTime(const std::string& _switchEndTime);
 
                     /**
                      * 判断参数 SwitchEndTime 是否已赋值
                      * @return SwitchEndTime 是否已赋值
+                     * 
                      */
                     bool SwitchEndTimeHasBeenSet() const;
 

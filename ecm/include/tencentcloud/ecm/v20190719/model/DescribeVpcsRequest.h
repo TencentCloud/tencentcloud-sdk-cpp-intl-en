@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
                      * @return VpcIds VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     std::vector<std::string> GetVpcIds() const;
 
                     /**
                      * 设置VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
-                     * @param VpcIds VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
+                     * @param _vpcIds VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
+                     * 
                      */
                     void SetVpcIds(const std::vector<std::string>& _vpcIds);
 
                     /**
                      * 判断参数 VpcIds 是否已赋值
                      * @return VpcIds 是否已赋值
+                     * 
                      */
                     bool VpcIdsHasBeenSet() const;
 
@@ -76,6 +79,7 @@ cidr-block - String - VPC CIDR. Only fuzzy query by a single value is supported.
 region - String - VPC region.
 tag-key - String - Required: no - Filter by tag key.
 tag:tag-key - String - Required: no - Filter by tag key-value pair.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -87,91 +91,105 @@ cidr-block - String - VPC CIDR. Only fuzzy query by a single value is supported.
 region - String - VPC region.
 tag-key - String - Required: no - Filter by tag key.
 tag:tag-key - String - Required: no - Filter by tag key-value pair.
-                     * @param Filters Filter. `VpcIds` and `Filters` cannot be specified at the same time.
+                     * @param _filters Filter. `VpcIds` and `Filters` cannot be specified at the same time.
 vpc-name - String - VPC instance name. Only fuzzy query by a single value is supported.
 vpc-id - String - VPC instance ID, such as `vpc-f49l6u0z`.
 cidr-block - String - VPC CIDR. Only fuzzy query by a single value is supported.
 region - String - VPC region.
 tag-key - String - Required: no - Filter by tag key.
 tag:tag-key - String - Required: no - Filter by tag key-value pair.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results.
                      * @return Limit Number of returned results.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results.
-                     * @param Limit Number of returned results.
+                     * @param _limit Number of returned results.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return EcmRegion Region
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置Region
-                     * @param EcmRegion Region
+                     * @param _ecmRegion Region
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取Sorting method. time: sort in reverse chronological order; default: sort by network planning.
                      * @return Sort Sorting method. time: sort in reverse chronological order; default: sort by network planning.
+                     * 
                      */
                     std::string GetSort() const;
 
                     /**
                      * 设置Sorting method. time: sort in reverse chronological order; default: sort by network planning.
-                     * @param Sort Sorting method. time: sort in reverse chronological order; default: sort by network planning.
+                     * @param _sort Sorting method. time: sort in reverse chronological order; default: sort by network planning.
+                     * 
                      */
                     void SetSort(const std::string& _sort);
 
                     /**
                      * 判断参数 Sort 是否已赋值
                      * @return Sort 是否已赋值
+                     * 
                      */
                     bool SortHasBeenSet() const;
 

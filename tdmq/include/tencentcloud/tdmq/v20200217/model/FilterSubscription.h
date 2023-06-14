@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Whether to only display subscriptions that include real consumers.
                      * @return ConsumerHasCount Whether to only display subscriptions that include real consumers.
+                     * 
                      */
                     bool GetConsumerHasCount() const;
 
                     /**
                      * 设置Whether to only display subscriptions that include real consumers.
-                     * @param ConsumerHasCount Whether to only display subscriptions that include real consumers.
+                     * @param _consumerHasCount Whether to only display subscriptions that include real consumers.
+                     * 
                      */
                     void SetConsumerHasCount(const bool& _consumerHasCount);
 
                     /**
                      * 判断参数 ConsumerHasCount 是否已赋值
                      * @return ConsumerHasCount 是否已赋值
+                     * 
                      */
                     bool ConsumerHasCountHasBeenSet() const;
 
                     /**
                      * 获取Whether to only display subscriptions with heaped messages.
                      * @return ConsumerHasBacklog Whether to only display subscriptions with heaped messages.
+                     * 
                      */
                     bool GetConsumerHasBacklog() const;
 
                     /**
                      * 设置Whether to only display subscriptions with heaped messages.
-                     * @param ConsumerHasBacklog Whether to only display subscriptions with heaped messages.
+                     * @param _consumerHasBacklog Whether to only display subscriptions with heaped messages.
+                     * 
                      */
                     void SetConsumerHasBacklog(const bool& _consumerHasBacklog);
 
                     /**
                      * 判断参数 ConsumerHasBacklog 是否已赋值
                      * @return ConsumerHasBacklog 是否已赋值
+                     * 
                      */
                     bool ConsumerHasBacklogHasBeenSet() const;
 
                     /**
                      * 获取Whether to only display subscriptions with messages discarded after expiration.
                      * @return ConsumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
+                     * 
                      */
                     bool GetConsumerHasExpired() const;
 
                     /**
                      * 设置Whether to only display subscriptions with messages discarded after expiration.
-                     * @param ConsumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
+                     * @param _consumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
+                     * 
                      */
                     void SetConsumerHasExpired(const bool& _consumerHasExpired);
 
                     /**
                      * 判断参数 ConsumerHasExpired 是否已赋值
                      * @return ConsumerHasExpired 是否已赋值
+                     * 
                      */
                     bool ConsumerHasExpiredHasBeenSet() const;
 
                     /**
                      * 获取Filter by subscription name for exact query.
                      * @return SubscriptionNames Filter by subscription name for exact query.
+                     * 
                      */
                     std::vector<std::string> GetSubscriptionNames() const;
 
                     /**
                      * 设置Filter by subscription name for exact query.
-                     * @param SubscriptionNames Filter by subscription name for exact query.
+                     * @param _subscriptionNames Filter by subscription name for exact query.
+                     * 
                      */
                     void SetSubscriptionNames(const std::vector<std::string>& _subscriptionNames);
 
                     /**
                      * 判断参数 SubscriptionNames 是否已赋值
                      * @return SubscriptionNames 是否已赋值
+                     * 
                      */
                     bool SubscriptionNamesHasBeenSet() const;
 

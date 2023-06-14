@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Number of items per page (integer)
                      * @return Limit Number of items per page (integer)
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of items per page (integer)
-                     * @param Limit Number of items per page (integer)
+                     * @param _limit Number of items per page (integer)
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number (integer)
                      * @return Offset Page number (integer)
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Page number (integer)
-                     * @param Offset Page number (integer)
+                     * @param _offset Page number (integer)
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Filter parameter. Pass in {"Name": "IsDemo", "Values":["1"]} for the demo mode.
                      * @return Filters Filter parameter. Pass in {"Name": "IsDemo", "Values":["1"]} for the demo mode.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter parameter. Pass in {"Name": "IsDemo", "Values":["1"]} for the demo mode.
-                     * @param Filters Filter parameter. Pass in {"Name": "IsDemo", "Values":["1"]} for the demo mode.
+                     * @param _filters Filter parameter. Pass in {"Name": "IsDemo", "Values":["1"]} for the demo mode.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取This parameter has been disused. You need to indicate whether the demo mode is used in `Filters`.
                      * @return IsDemo This parameter has been disused. You need to indicate whether the demo mode is used in `Filters`.
+                     * 
                      */
                     int64_t GetIsDemo() const;
 
                     /**
                      * 设置This parameter has been disused. You need to indicate whether the demo mode is used in `Filters`.
-                     * @param IsDemo This parameter has been disused. You need to indicate whether the demo mode is used in `Filters`.
+                     * @param _isDemo This parameter has been disused. You need to indicate whether the demo mode is used in `Filters`.
+                     * 
                      */
                     void SetIsDemo(const int64_t& _isDemo);
 
                     /**
                      * 判断参数 IsDemo 是否已赋值
                      * @return IsDemo 是否已赋值
+                     * 
                      */
                     bool IsDemoHasBeenSet() const;
 

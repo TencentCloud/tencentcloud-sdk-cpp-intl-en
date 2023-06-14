@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Separator Comma, | , tab, space, line break, %, or #, which can contain only 1 character.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSeparator() const;
 
                     /**
                      * 设置Comma, | , tab, space, line break, %, or #, which can contain only 1 character.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Separator Comma, | , tab, space, line break, %, or #, which can contain only 1 character.
+                     * @param _separator Comma, | , tab, space, line break, %, or #, which can contain only 1 character.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSeparator(const std::string& _separator);
 
                     /**
                      * 判断参数 Separator 是否已赋值
                      * @return Separator 是否已赋值
+                     * 
                      */
                     bool SeparatorHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Regex Entered regex (128 characters)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegex() const;
 
                     /**
                      * 设置Entered regex (128 characters)
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Regex Entered regex (128 characters)
+                     * @param _regex Entered regex (128 characters)
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegex(const std::string& _regex);
 
                     /**
                      * 判断参数 Regex 是否已赋值
                      * @return Regex 是否已赋值
+                     * 
                      */
                     bool RegexHasBeenSet() const;
 

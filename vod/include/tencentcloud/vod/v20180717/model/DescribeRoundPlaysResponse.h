@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of records that meet the conditions.
                      * @return TotalCount The total number of records that meet the conditions.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The information of the playlists.
                      * @return RoundPlaySet The information of the playlists.
+                     * 
                      */
                     std::vector<RoundPlayInfo> GetRoundPlaySet() const;
 
                     /**
                      * 判断参数 RoundPlaySet 是否已赋值
                      * @return RoundPlaySet 是否已赋值
+                     * 
                      */
                     bool RoundPlaySetHasBeenSet() const;
 

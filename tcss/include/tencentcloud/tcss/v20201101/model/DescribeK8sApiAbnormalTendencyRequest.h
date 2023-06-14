@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Trend period (default value: 7 days)
                      * @return TendencyPeriod Trend period (default value: 7 days)
+                     * 
                      */
                     uint64_t GetTendencyPeriod() const;
 
                     /**
                      * 设置Trend period (default value: 7 days)
-                     * @param TendencyPeriod Trend period (default value: 7 days)
+                     * @param _tendencyPeriod Trend period (default value: 7 days)
+                     * 
                      */
                     void SetTendencyPeriod(const uint64_t& _tendencyPeriod);
 
                     /**
                      * 判断参数 TendencyPeriod 是否已赋值
                      * @return TendencyPeriod 是否已赋值
+                     * 
                      */
                     bool TendencyPeriodHasBeenSet() const;
 

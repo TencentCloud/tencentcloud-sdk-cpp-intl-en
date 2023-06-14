@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Trojan ID
                      * @return ID Trojan ID
+                     * 
                      */
                     std::string GetID() const;
 
                     /**
                      * 设置Trojan ID
-                     * @param ID Trojan ID
+                     * @param _iD Trojan ID
+                     * 
                      */
                     void SetID(const std::string& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

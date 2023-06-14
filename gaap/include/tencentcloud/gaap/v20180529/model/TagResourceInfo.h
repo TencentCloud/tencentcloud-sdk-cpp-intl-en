@@ -55,6 +55,7 @@ namespace TencentCloud
 `Proxy`: Connection
 `ProxyGroup`: Connection group
 `RealServer`: Origin server
+                     * 
                      */
                     std::string GetResourceType() const;
 
@@ -63,34 +64,39 @@ namespace TencentCloud
 `Proxy`: Connection
 `ProxyGroup`: Connection group
 `RealServer`: Origin server
-                     * @param ResourceType Resource types:
+                     * @param _resourceType Resource types:
 `Proxy`: Connection
 `ProxyGroup`: Connection group
 `RealServer`: Origin server
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return ResourceId Instance ID
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param ResourceId Instance ID
+                     * @param _resourceId Instance ID
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 

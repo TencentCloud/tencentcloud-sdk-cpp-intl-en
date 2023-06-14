@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Slow query duration in milliseconds
                      * @return Duration Slow query duration in milliseconds
+                     * 
                      */
                     int64_t GetDuration() const;
 
                     /**
                      * 设置Slow query duration in milliseconds
-                     * @param Duration Slow query duration in milliseconds
+                     * @param _duration Slow query duration in milliseconds
+                     * 
                      */
                     void SetDuration(const int64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取Client address
                      * @return Client Client address
+                     * 
                      */
                     std::string GetClient() const;
 
                     /**
                      * 设置Client address
-                     * @param Client Client address
+                     * @param _client Client address
+                     * 
                      */
                     void SetClient(const std::string& _client);
 
                     /**
                      * 判断参数 Client 是否已赋值
                      * @return Client 是否已赋值
+                     * 
                      */
                     bool ClientHasBeenSet() const;
 
                     /**
                      * 获取Slow query command
                      * @return Command Slow query command
+                     * 
                      */
                     std::string GetCommand() const;
 
                     /**
                      * 设置Slow query command
-                     * @param Command Slow query command
+                     * @param _command Slow query command
+                     * 
                      */
                     void SetCommand(const std::string& _command);
 
                     /**
                      * 判断参数 Command 是否已赋值
                      * @return Command 是否已赋值
+                     * 
                      */
                     bool CommandHasBeenSet() const;
 
                     /**
                      * 获取Detailed command line information of slow query
                      * @return CommandLine Detailed command line information of slow query
+                     * 
                      */
                     std::string GetCommandLine() const;
 
                     /**
                      * 设置Detailed command line information of slow query
-                     * @param CommandLine Detailed command line information of slow query
+                     * @param _commandLine Detailed command line information of slow query
+                     * 
                      */
                     void SetCommandLine(const std::string& _commandLine);
 
                     /**
                      * 判断参数 CommandLine 是否已赋值
                      * @return CommandLine 是否已赋值
+                     * 
                      */
                     bool CommandLineHasBeenSet() const;
 
                     /**
                      * 获取Execution time
                      * @return ExecuteTime Execution time
+                     * 
                      */
                     std::string GetExecuteTime() const;
 
                     /**
                      * 设置Execution time
-                     * @param ExecuteTime Execution time
+                     * @param _executeTime Execution time
+                     * 
                      */
                     void SetExecuteTime(const std::string& _executeTime);
 
                     /**
                      * 判断参数 ExecuteTime 是否已赋值
                      * @return ExecuteTime 是否已赋值
+                     * 
                      */
                     bool ExecuteTimeHasBeenSet() const;
 

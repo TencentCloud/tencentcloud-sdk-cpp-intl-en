@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Array of instance IDs
                      * @return RegistryIds Array of instance IDs
+                     * 
                      */
                     std::vector<std::string> GetRegistryIds() const;
 
                     /**
                      * 设置Array of instance IDs
-                     * @param RegistryIds Array of instance IDs
+                     * @param _registryIds Array of instance IDs
+                     * 
                      */
                     void SetRegistryIds(const std::vector<std::string>& _registryIds);
 
                     /**
                      * 判断参数 RegistryIds 是否已赋值
                      * @return RegistryIds 是否已赋值
+                     * 
                      */
                     bool RegistryIdsHasBeenSet() const;
 

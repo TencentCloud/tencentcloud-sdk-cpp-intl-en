@@ -45,216 +45,252 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of results returned per page. Default value: 20. Maximum value: 100.
                      * @return Limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of results returned per page. Default value: 20. Maximum value: 100.
-                     * @param Limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+                     * @param _limit Maximum number of results returned per page. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Offset, which is an integral multiple of `Limit` (rounded down automatically).
                      * @return Offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which is an integral multiple of `Limit` (rounded down automatically).
-                     * @param Offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
+                     * @param _offset Offset, which is an integral multiple of `Limit` (rounded down automatically).
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Project ID
                      * @return ProjectIds Project ID
+                     * 
                      */
                     std::vector<int64_t> GetProjectIds() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectIds Project ID
+                     * @param _projectIds Project ID
+                     * 
                      */
                     void SetProjectIds(const std::vector<int64_t>& _projectIds);
 
                     /**
                      * 判断参数 ProjectIds 是否已赋值
                      * @return ProjectIds 是否已赋值
+                     * 
                      */
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
                      * 获取Task type
                      * @return TaskTypes Task type
+                     * 
                      */
                     std::vector<std::string> GetTaskTypes() const;
 
                     /**
                      * 设置Task type
-                     * @param TaskTypes Task type
+                     * @param _taskTypes Task type
+                     * 
                      */
                     void SetTaskTypes(const std::vector<std::string>& _taskTypes);
 
                     /**
                      * 判断参数 TaskTypes 是否已赋值
                      * @return TaskTypes 是否已赋值
+                     * 
                      */
                     bool TaskTypesHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return BeginTime Start time
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time
-                     * @param BeginTime Start time
+                     * @param _beginTime Start time
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Task status
                      * @return TaskStatus Task status
+                     * 
                      */
                     std::vector<int64_t> GetTaskStatus() const;
 
                     /**
                      * 设置Task status
-                     * @param TaskStatus Task status
+                     * @param _taskStatus Task status
+                     * 
                      */
                     void SetTaskStatus(const std::vector<int64_t>& _taskStatus);
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 
                     /**
                      * 获取Task status
                      * @return Result Task status
+                     * 
                      */
                     std::vector<int64_t> GetResult() const;
 
                     /**
                      * 设置Task status
-                     * @param Result Task status
+                     * @param _result Task status
+                     * 
                      */
                     void SetResult(const std::vector<int64_t>& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取The field `OperatorUin` has been disused and replaced by `OperateUin`.
                      * @return OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
+                     * 
                      */
                     std::vector<int64_t> GetOperatorUin() const;
 
                     /**
                      * 设置The field `OperatorUin` has been disused and replaced by `OperateUin`.
-                     * @param OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
+                     * @param _operatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
+                     * 
                      */
                     void SetOperatorUin(const std::vector<int64_t>& _operatorUin);
 
                     /**
                      * 判断参数 OperatorUin 是否已赋值
                      * @return OperatorUin 是否已赋值
+                     * 
                      */
                     bool OperatorUinHasBeenSet() const;
 
                     /**
                      * 获取Operator Uin
                      * @return OperateUin Operator Uin
+                     * 
                      */
                     std::vector<std::string> GetOperateUin() const;
 
                     /**
                      * 设置Operator Uin
-                     * @param OperateUin Operator Uin
+                     * @param _operateUin Operator Uin
+                     * 
                      */
                     void SetOperateUin(const std::vector<std::string>& _operateUin);
 
                     /**
                      * 判断参数 OperateUin 是否已赋值
                      * @return OperateUin 是否已赋值
+                     * 
                      */
                     bool OperateUinHasBeenSet() const;
 

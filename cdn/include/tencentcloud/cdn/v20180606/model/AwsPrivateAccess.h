@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Switch, which can be set to on or off.
                      * @return Switch Switch, which can be set to on or off.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch, which can be set to on or off.
-                     * @param Switch Switch, which can be set to on or off.
+                     * @param _switch Switch, which can be set to on or off.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AccessKey Access ID.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
                      * 设置Access ID.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AccessKey Access ID.
+                     * @param _accessKey Access ID.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
 
                     /**
                      * 判断参数 AccessKey 是否已赋值
                      * @return AccessKey 是否已赋值
+                     * 
                      */
                     bool AccessKeyHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SecretKey Key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置Key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SecretKey Key.
+                     * @param _secretKey Key.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
@@ -113,20 +122,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Region Region.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Region Region.
+                     * @param _region Region.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -135,20 +147,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Bucket BucketName
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置BucketName
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Bucket BucketName
+                     * @param _bucket BucketName
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 

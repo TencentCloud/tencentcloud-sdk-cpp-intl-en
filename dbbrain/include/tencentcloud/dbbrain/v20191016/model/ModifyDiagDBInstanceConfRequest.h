@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable inspection
                      * @return InstanceConfs Whether to enable inspection
+                     * 
                      */
                     InstanceConfs GetInstanceConfs() const;
 
                     /**
                      * 设置Whether to enable inspection
-                     * @param InstanceConfs Whether to enable inspection
+                     * @param _instanceConfs Whether to enable inspection
+                     * 
                      */
                     void SetInstanceConfs(const InstanceConfs& _instanceConfs);
 
                     /**
                      * 判断参数 InstanceConfs 是否已赋值
                      * @return InstanceConfs 是否已赋值
+                     * 
                      */
                     bool InstanceConfsHasBeenSet() const;
 
                     /**
                      * 获取Target regions of the request. If the value is `All`, it is applied to all regions.
                      * @return Regions Target regions of the request. If the value is `All`, it is applied to all regions.
+                     * 
                      */
                     std::string GetRegions() const;
 
                     /**
                      * 设置Target regions of the request. If the value is `All`, it is applied to all regions.
-                     * @param Regions Target regions of the request. If the value is `All`, it is applied to all regions.
+                     * @param _regions Target regions of the request. If the value is `All`, it is applied to all regions.
+                     * 
                      */
                     void SetRegions(const std::string& _regions);
 
                     /**
                      * 判断参数 Regions 是否已赋值
                      * @return Regions 是否已赋值
+                     * 
                      */
                     bool RegionsHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
                      * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
-                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+                     * @param _product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance to modify.
                      * @return InstanceIds ID of the instance to modify.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置ID of the instance to modify.
-                     * @param InstanceIds ID of the instance to modify.
+                     * @param _instanceIds ID of the instance to modify.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

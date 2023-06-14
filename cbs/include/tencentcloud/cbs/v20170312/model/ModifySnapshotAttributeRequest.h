@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 设置Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
-                     * @param SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @param _snapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
                      * 获取Name of new snapshot. Maximum length is 60 bytes.
                      * @return SnapshotName Name of new snapshot. Maximum length is 60 bytes.
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置Name of new snapshot. Maximum length is 60 bytes.
-                     * @param SnapshotName Name of new snapshot. Maximum length is 60 bytes.
+                     * @param _snapshotName Name of new snapshot. Maximum length is 60 bytes.
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
                      * 获取Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
                      * @return IsPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
+                     * 
                      */
                     bool GetIsPermanent() const;
 
                     /**
                      * 设置Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
-                     * @param IsPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
+                     * @param _isPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
+                     * 
                      */
                     void SetIsPermanent(const bool& _isPermanent);
 
                     /**
                      * 判断参数 IsPermanent 是否已赋值
                      * @return IsPermanent 是否已赋值
+                     * 
                      */
                     bool IsPermanentHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
                      * @return Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     * 
                      */
                     std::string GetDeadline() const;
 
                     /**
                      * 设置Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
-                     * @param Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     * @param _deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+                     * 
                      */
                     void SetDeadline(const std::string& _deadline);
 
                     /**
                      * 判断参数 Deadline 是否已赋值
                      * @return Deadline 是否已赋值
+                     * 
                      */
                     bool DeadlineHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Domain alias ID. You can view all domain aliases and their IDs via the `DescribeDomainAliasList` API.
                      * @return DomainAliasId Domain alias ID. You can view all domain aliases and their IDs via the `DescribeDomainAliasList` API.
+                     * 
                      */
                     int64_t GetDomainAliasId() const;
 
                     /**
                      * 设置Domain alias ID. You can view all domain aliases and their IDs via the `DescribeDomainAliasList` API.
-                     * @param DomainAliasId Domain alias ID. You can view all domain aliases and their IDs via the `DescribeDomainAliasList` API.
+                     * @param _domainAliasId Domain alias ID. You can view all domain aliases and their IDs via the `DescribeDomainAliasList` API.
+                     * 
                      */
                     void SetDomainAliasId(const int64_t& _domainAliasId);
 
                     /**
                      * 判断参数 DomainAliasId 是否已赋值
                      * @return DomainAliasId 是否已赋值
+                     * 
                      */
                     bool DomainAliasIdHasBeenSet() const;
 
                     /**
                      * 获取Domain
                      * @return Domain Domain
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain
-                     * @param Domain Domain
+                     * @param _domain Domain
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      * @return DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     int64_t GetDomainId() const;
 
                     /**
                      * 设置The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
-                     * @param DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @param _domainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * 
                      */
                     void SetDomainId(const int64_t& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 

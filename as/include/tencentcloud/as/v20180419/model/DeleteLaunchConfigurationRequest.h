@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the launch configuration to be deleted.
                      * @return LaunchConfigurationId ID of the launch configuration to be deleted.
+                     * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
                      * 设置ID of the launch configuration to be deleted.
-                     * @param LaunchConfigurationId ID of the launch configuration to be deleted.
+                     * @param _launchConfigurationId ID of the launch configuration to be deleted.
+                     * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
 
                     /**
                      * 判断参数 LaunchConfigurationId 是否已赋值
                      * @return LaunchConfigurationId 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationIdHasBeenSet() const;
 

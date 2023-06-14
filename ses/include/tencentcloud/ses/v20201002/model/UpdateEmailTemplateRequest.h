@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Template content.
                      * @return TemplateContent Template content.
+                     * 
                      */
                     TemplateContent GetTemplateContent() const;
 
                     /**
                      * 设置Template content.
-                     * @param TemplateContent Template content.
+                     * @param _templateContent Template content.
+                     * 
                      */
                     void SetTemplateContent(const TemplateContent& _templateContent);
 
                     /**
                      * 判断参数 TemplateContent 是否已赋值
                      * @return TemplateContent 是否已赋值
+                     * 
                      */
                     bool TemplateContentHasBeenSet() const;
 
                     /**
                      * 获取Template ID.
                      * @return TemplateID Template ID.
+                     * 
                      */
                     uint64_t GetTemplateID() const;
 
                     /**
                      * 设置Template ID.
-                     * @param TemplateID Template ID.
+                     * @param _templateID Template ID.
+                     * 
                      */
                     void SetTemplateID(const uint64_t& _templateID);
 
                     /**
                      * 判断参数 TemplateID 是否已赋值
                      * @return TemplateID 是否已赋值
+                     * 
                      */
                     bool TemplateIDHasBeenSet() const;
 
                     /**
                      * 获取Template name
                      * @return TemplateName Template name
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name
-                     * @param TemplateName Template name
+                     * @param _templateName Template name
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 

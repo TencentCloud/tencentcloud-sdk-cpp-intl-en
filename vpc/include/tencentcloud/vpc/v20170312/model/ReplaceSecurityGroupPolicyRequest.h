@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
                      * @return SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+                     * 
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
                      * 设置The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
-                     * @param SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+                     * @param _securityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+                     * 
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
                     /**
                      * 判断参数 SecurityGroupId 是否已赋值
                      * @return SecurityGroupId 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Security group policy set object.
                      * @return SecurityGroupPolicySet Security group policy set object.
+                     * 
                      */
                     SecurityGroupPolicySet GetSecurityGroupPolicySet() const;
 
                     /**
                      * 设置Security group policy set object.
-                     * @param SecurityGroupPolicySet Security group policy set object.
+                     * @param _securityGroupPolicySet Security group policy set object.
+                     * 
                      */
                     void SetSecurityGroupPolicySet(const SecurityGroupPolicySet& _securityGroupPolicySet);
 
                     /**
                      * 判断参数 SecurityGroupPolicySet 是否已赋值
                      * @return SecurityGroupPolicySet 是否已赋值
+                     * 
                      */
                     bool SecurityGroupPolicySetHasBeenSet() const;
 
                     /**
                      * 获取(Optional) The old policy set of the security group, which is used for log records.
                      * @return OriginalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+                     * 
                      */
                     SecurityGroupPolicySet GetOriginalSecurityGroupPolicySet() const;
 
                     /**
                      * 设置(Optional) The old policy set of the security group, which is used for log records.
-                     * @param OriginalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+                     * @param _originalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+                     * 
                      */
                     void SetOriginalSecurityGroupPolicySet(const SecurityGroupPolicySet& _originalSecurityGroupPolicySet);
 
                     /**
                      * 判断参数 OriginalSecurityGroupPolicySet 是否已赋值
                      * @return OriginalSecurityGroupPolicySet 是否已赋值
+                     * 
                      */
                     bool OriginalSecurityGroupPolicySetHasBeenSet() const;
 

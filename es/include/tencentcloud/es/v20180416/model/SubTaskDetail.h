@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取Subtask name
                      * @return Name Subtask name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Subtask name
-                     * @param Name Subtask name
+                     * @param _name Subtask name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Subtask result
                      * @return Result Subtask result
+                     * 
                      */
                     bool GetResult() const;
 
                     /**
                      * 设置Subtask result
-                     * @param Result Subtask result
+                     * @param _result Subtask result
+                     * 
                      */
                     void SetResult(const bool& _result);
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 
                     /**
                      * 获取Subtask error message
                      * @return ErrMsg Subtask error message
+                     * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
                      * 设置Subtask error message
-                     * @param ErrMsg Subtask error message
+                     * @param _errMsg Subtask error message
+                     * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
 
                     /**
                      * 判断参数 ErrMsg 是否已赋值
                      * @return ErrMsg 是否已赋值
+                     * 
                      */
                     bool ErrMsgHasBeenSet() const;
 
                     /**
                      * 获取Subtask type
                      * @return Type Subtask type
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Subtask type
-                     * @param Type Subtask type
+                     * @param _type Subtask type
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Subtask status. 0: processing, 1: succeeded, -1: failed
                      * @return Status Subtask status. 0: processing, 1: succeeded, -1: failed
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Subtask status. 0: processing, 1: succeeded, -1: failed
-                     * @param Status Subtask status. 0: processing, 1: succeeded, -1: failed
+                     * @param _status Subtask status. 0: processing, 1: succeeded, -1: failed
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Name of the index for which the check for upgrade failed
                      * @return FailedIndices Name of the index for which the check for upgrade failed
+                     * 
                      */
                     std::vector<std::string> GetFailedIndices() const;
 
                     /**
                      * 设置Name of the index for which the check for upgrade failed
-                     * @param FailedIndices Name of the index for which the check for upgrade failed
+                     * @param _failedIndices Name of the index for which the check for upgrade failed
+                     * 
                      */
                     void SetFailedIndices(const std::vector<std::string>& _failedIndices);
 
                     /**
                      * 判断参数 FailedIndices 是否已赋值
                      * @return FailedIndices 是否已赋值
+                     * 
                      */
                     bool FailedIndicesHasBeenSet() const;
 
                     /**
                      * 获取Subtask end time
                      * @return FinishTime Subtask end time
+                     * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
                      * 设置Subtask end time
-                     * @param FinishTime Subtask end time
+                     * @param _finishTime Subtask end time
+                     * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
 
                     /**
                      * 判断参数 FinishTime 是否已赋值
                      * @return FinishTime 是否已赋值
+                     * 
                      */
                     bool FinishTimeHasBeenSet() const;
 
                     /**
                      * 获取Subtask level. 1: warning, 2: failed
                      * @return Level Subtask level. 1: warning, 2: failed
+                     * 
                      */
                     int64_t GetLevel() const;
 
                     /**
                      * 设置Subtask level. 1: warning, 2: failed
-                     * @param Level Subtask level. 1: warning, 2: failed
+                     * @param _level Subtask level. 1: warning, 2: failed
+                     * 
                      */
                     void SetLevel(const int64_t& _level);
 
                     /**
                      * 判断参数 Level 是否已赋值
                      * @return Level 是否已赋值
+                     * 
                      */
                     bool LevelHasBeenSet() const;
 

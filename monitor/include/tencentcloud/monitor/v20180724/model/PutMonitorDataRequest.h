@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取A group of metrics and data.
                      * @return Metrics A group of metrics and data.
+                     * 
                      */
                     std::vector<MetricDatum> GetMetrics() const;
 
                     /**
                      * 设置A group of metrics and data.
-                     * @param Metrics A group of metrics and data.
+                     * @param _metrics A group of metrics and data.
+                     * 
                      */
                     void SetMetrics(const std::vector<MetricDatum>& _metrics);
 
                     /**
                      * 判断参数 Metrics 是否已赋值
                      * @return Metrics 是否已赋值
+                     * 
                      */
                     bool MetricsHasBeenSet() const;
 
                     /**
                      * 获取IP address that is automatically specified when monitoring data is reported.
                      * @return AnnounceIp IP address that is automatically specified when monitoring data is reported.
+                     * 
                      */
                     std::string GetAnnounceIp() const;
 
                     /**
                      * 设置IP address that is automatically specified when monitoring data is reported.
-                     * @param AnnounceIp IP address that is automatically specified when monitoring data is reported.
+                     * @param _announceIp IP address that is automatically specified when monitoring data is reported.
+                     * 
                      */
                     void SetAnnounceIp(const std::string& _announceIp);
 
                     /**
                      * 判断参数 AnnounceIp 是否已赋值
                      * @return AnnounceIp 是否已赋值
+                     * 
                      */
                     bool AnnounceIpHasBeenSet() const;
 
                     /**
                      * 获取Timestamp that is automatically specified when monitoring data is reported.
                      * @return AnnounceTimestamp Timestamp that is automatically specified when monitoring data is reported.
+                     * 
                      */
                     uint64_t GetAnnounceTimestamp() const;
 
                     /**
                      * 设置Timestamp that is automatically specified when monitoring data is reported.
-                     * @param AnnounceTimestamp Timestamp that is automatically specified when monitoring data is reported.
+                     * @param _announceTimestamp Timestamp that is automatically specified when monitoring data is reported.
+                     * 
                      */
                     void SetAnnounceTimestamp(const uint64_t& _announceTimestamp);
 
                     /**
                      * 判断参数 AnnounceTimestamp 是否已赋值
                      * @return AnnounceTimestamp 是否已赋值
+                     * 
                      */
                     bool AnnounceTimestampHasBeenSet() const;
 
                     /**
                      * 获取IP address or product instance ID that is automatically specified when monitoring data is reported.
                      * @return AnnounceInstance IP address or product instance ID that is automatically specified when monitoring data is reported.
+                     * 
                      */
                     std::string GetAnnounceInstance() const;
 
                     /**
                      * 设置IP address or product instance ID that is automatically specified when monitoring data is reported.
-                     * @param AnnounceInstance IP address or product instance ID that is automatically specified when monitoring data is reported.
+                     * @param _announceInstance IP address or product instance ID that is automatically specified when monitoring data is reported.
+                     * 
                      */
                     void SetAnnounceInstance(const std::string& _announceInstance);
 
                     /**
                      * 判断参数 AnnounceInstance 是否已赋值
                      * @return AnnounceInstance 是否已赋值
+                     * 
                      */
                     bool AnnounceInstanceHasBeenSet() const;
 

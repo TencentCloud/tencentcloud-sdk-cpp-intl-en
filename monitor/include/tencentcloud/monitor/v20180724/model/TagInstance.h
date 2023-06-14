@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Key Tag key
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetKey() const;
 
                     /**
                      * 设置Tag key
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Key Tag key
+                     * @param _key Tag key
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetKey(const std::string& _key);
 
                     /**
                      * 判断参数 Key 是否已赋值
                      * @return Key 是否已赋值
+                     * 
                      */
                     bool KeyHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Value Tag value
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Tag value
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Value Tag value
+                     * @param _value Tag value
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceSum Number of instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetInstanceSum() const;
 
                     /**
                      * 设置Number of instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InstanceSum Number of instances
+                     * @param _instanceSum Number of instances
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInstanceSum(const int64_t& _instanceSum);
 
                     /**
                      * 判断参数 InstanceSum 是否已赋值
                      * @return InstanceSum 是否已赋值
+                     * 
                      */
                     bool InstanceSumHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ServiceType Service type, for example, CVM
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Service type, for example, CVM
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ServiceType Service type, for example, CVM
+                     * @param _serviceType Service type, for example, CVM
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RegionId Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegionId() const;
 
                     /**
                      * 设置Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionId(const std::string& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return BindingStatus Binding status. 2: bound; 1: binding
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBindingStatus() const;
 
                     /**
                      * 设置Binding status. 2: bound; 1: binding
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param BindingStatus Binding status. 2: bound; 1: binding
+                     * @param _bindingStatus Binding status. 2: bound; 1: binding
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBindingStatus(const int64_t& _bindingStatus);
 
                     /**
                      * 判断参数 BindingStatus 是否已赋值
                      * @return BindingStatus 是否已赋值
+                     * 
                      */
                     bool BindingStatusHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TagStatus Tag status. 2: existent; 1: nonexistent
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetTagStatus() const;
 
                     /**
                      * 设置Tag status. 2: existent; 1: nonexistent
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TagStatus Tag status. 2: existent; 1: nonexistent
+                     * @param _tagStatus Tag status. 2: existent; 1: nonexistent
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagStatus(const int64_t& _tagStatus);
 
                     /**
                      * 判断参数 TagStatus 是否已赋值
                      * @return TagStatus 是否已赋值
+                     * 
                      */
                     bool TagStatusHasBeenSet() const;
 

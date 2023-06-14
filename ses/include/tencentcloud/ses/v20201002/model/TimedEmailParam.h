@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Start time of a scheduled sending task
                      * @return BeginTime Start time of a scheduled sending task
+                     * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
                      * 设置Start time of a scheduled sending task
-                     * @param BeginTime Start time of a scheduled sending task
+                     * @param _beginTime Start time of a scheduled sending task
+                     * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
                     /**
                      * 判断参数 BeginTime 是否已赋值
                      * @return BeginTime 是否已赋值
+                     * 
                      */
                     bool BeginTimeHasBeenSet() const;
 

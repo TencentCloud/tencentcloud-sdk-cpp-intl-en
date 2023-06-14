@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
                      * @return TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetTargetInstanceType() const;
 
                     /**
                      * 设置Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-                     * @param TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * @param _targetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetTargetInstanceType(const std::string& _targetInstanceType);
 
                     /**
                      * 判断参数 TargetInstanceType 是否已赋值
                      * @return TargetInstanceType 是否已赋值
+                     * 
                      */
                     bool TargetInstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
                      * @return SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * 
                      */
                     int64_t GetSwitchOption() const;
 
                     /**
                      * 设置Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
-                     * @param SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * @param _switchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * 
                      */
                     void SetSwitchOption(const int64_t& _switchOption);
 
                     /**
                      * 判断参数 SwitchOption 是否已赋值
                      * @return SwitchOption 是否已赋值
+                     * 
                      */
                     bool SwitchOptionHasBeenSet() const;
 
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

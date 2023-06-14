@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
                      * @return KeyIds List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
+                     * 
                      */
                     std::vector<std::string> GetKeyIds() const;
 
                     /**
                      * 设置List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
-                     * @param KeyIds List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
+                     * @param _keyIds List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
+                     * 
                      */
                     void SetKeyIds(const std::vector<std::string>& _keyIds);
 
                     /**
                      * 判断参数 KeyIds 是否已赋值
                      * @return KeyIds 是否已赋值
+                     * 
                      */
                     bool KeyIdsHasBeenSet() const;
 

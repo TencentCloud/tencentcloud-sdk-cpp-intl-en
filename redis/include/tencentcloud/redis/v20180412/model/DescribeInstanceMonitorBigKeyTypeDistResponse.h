@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Big key type distribution details
                      * @return Data Big key type distribution details
+                     * 
                      */
                     std::vector<BigKeyTypeInfo> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

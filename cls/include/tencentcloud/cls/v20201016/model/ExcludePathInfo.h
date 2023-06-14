@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Type. Valid values: `File`, `Path`
                      * @return Type Type. Valid values: `File`, `Path`
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type. Valid values: `File`, `Path`
-                     * @param Type Type. Valid values: `File`, `Path`
+                     * @param _type Type. Valid values: `File`, `Path`
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Specific content corresponding to `Type`
                      * @return Value Specific content corresponding to `Type`
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Specific content corresponding to `Type`
-                     * @param Value Specific content corresponding to `Type`
+                     * @param _value Specific content corresponding to `Type`
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

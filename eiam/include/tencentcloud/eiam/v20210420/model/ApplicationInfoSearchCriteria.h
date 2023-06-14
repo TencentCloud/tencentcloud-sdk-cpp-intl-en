@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Application search keyword, which can be application name or ID.
                      * @return Keyword Application search keyword, which can be application name or ID.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Application search keyword, which can be application name or ID.
-                     * @param Keyword Application search keyword, which can be application name or ID.
+                     * @param _keyword Application search keyword, which can be application name or ID.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 
                     /**
                      * 获取Application type. Valid values: OAUTH2, JWT, CAS, SAML2, FORM, OIDC, APIGW
                      * @return ApplicationType Application type. Valid values: OAUTH2, JWT, CAS, SAML2, FORM, OIDC, APIGW
+                     * 
                      */
                     std::string GetApplicationType() const;
 
                     /**
                      * 设置Application type. Valid values: OAUTH2, JWT, CAS, SAML2, FORM, OIDC, APIGW
-                     * @param ApplicationType Application type. Valid values: OAUTH2, JWT, CAS, SAML2, FORM, OIDC, APIGW
+                     * @param _applicationType Application type. Valid values: OAUTH2, JWT, CAS, SAML2, FORM, OIDC, APIGW
+                     * 
                      */
                     void SetApplicationType(const std::string& _applicationType);
 
                     /**
                      * 判断参数 ApplicationType 是否已赋值
                      * @return ApplicationType 是否已赋值
+                     * 
                      */
                     bool ApplicationTypeHasBeenSet() const;
 

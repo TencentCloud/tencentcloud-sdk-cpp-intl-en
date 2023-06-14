@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether to add to the node pool.
                      * @return AddToNodePool Whether to add to the node pool.
+                     * 
                      */
                     bool GetAddToNodePool() const;
 
                     /**
                      * 设置Whether to add to the node pool.
-                     * @param AddToNodePool Whether to add to the node pool.
+                     * @param _addToNodePool Whether to add to the node pool.
+                     * 
                      */
                     void SetAddToNodePool(const bool& _addToNodePool);
 
                     /**
                      * 判断参数 AddToNodePool 是否已赋值
                      * @return AddToNodePool 是否已赋值
+                     * 
                      */
                     bool AddToNodePoolHasBeenSet() const;
 
                     /**
                      * 获取Node pool ID
                      * @return NodePoolId Node pool ID
+                     * 
                      */
                     std::string GetNodePoolId() const;
 
                     /**
                      * 设置Node pool ID
-                     * @param NodePoolId Node pool ID
+                     * @param _nodePoolId Node pool ID
+                     * 
                      */
                     void SetNodePoolId(const std::string& _nodePoolId);
 
                     /**
                      * 判断参数 NodePoolId 是否已赋值
                      * @return NodePoolId 是否已赋值
+                     * 
                      */
                     bool NodePoolIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to inherit the node pool configuration.
                      * @return InheritConfigurationFromNodePool Whether to inherit the node pool configuration.
+                     * 
                      */
                     bool GetInheritConfigurationFromNodePool() const;
 
                     /**
                      * 设置Whether to inherit the node pool configuration.
-                     * @param InheritConfigurationFromNodePool Whether to inherit the node pool configuration.
+                     * @param _inheritConfigurationFromNodePool Whether to inherit the node pool configuration.
+                     * 
                      */
                     void SetInheritConfigurationFromNodePool(const bool& _inheritConfigurationFromNodePool);
 
                     /**
                      * 判断参数 InheritConfigurationFromNodePool 是否已赋值
                      * @return InheritConfigurationFromNodePool 是否已赋值
+                     * 
                      */
                     bool InheritConfigurationFromNodePoolHasBeenSet() const;
 

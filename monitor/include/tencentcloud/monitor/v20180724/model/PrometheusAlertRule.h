@@ -50,90 +50,105 @@ namespace TencentCloud
                     /**
                      * 获取Rule name
                      * @return Name Rule name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Rule name
-                     * @param Name Rule name
+                     * @param _name Rule name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Prometheus statement
                      * @return Rule Prometheus statement
+                     * 
                      */
                     std::string GetRule() const;
 
                     /**
                      * 设置Prometheus statement
-                     * @param Rule Prometheus statement
+                     * @param _rule Prometheus statement
+                     * 
                      */
                     void SetRule(const std::string& _rule);
 
                     /**
                      * 判断参数 Rule 是否已赋值
                      * @return Rule 是否已赋值
+                     * 
                      */
                     bool RuleHasBeenSet() const;
 
                     /**
                      * 获取Additional tags
                      * @return Labels Additional tags
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Additional tags
-                     * @param Labels Additional tags
+                     * @param _labels Additional tags
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
                     /**
                      * 获取Alert sending template
                      * @return Template Alert sending template
+                     * 
                      */
                     std::string GetTemplate() const;
 
                     /**
                      * 设置Alert sending template
-                     * @param Template Alert sending template
+                     * @param _template Alert sending template
+                     * 
                      */
                     void SetTemplate(const std::string& _template);
 
                     /**
                      * 判断参数 Template 是否已赋值
                      * @return Template 是否已赋值
+                     * 
                      */
                     bool TemplateHasBeenSet() const;
 
                     /**
                      * 获取Duration
                      * @return For Duration
+                     * 
                      */
                     std::string GetFor() const;
 
                     /**
                      * 设置Duration
-                     * @param For Duration
+                     * @param _for Duration
+                     * 
                      */
                     void SetFor(const std::string& _for);
 
                     /**
                      * 判断参数 For 是否已赋值
                      * @return For 是否已赋值
+                     * 
                      */
                     bool ForHasBeenSet() const;
 
@@ -142,20 +157,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Describe Rule description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescribe() const;
 
                     /**
                      * 设置Rule description
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Describe Rule description
+                     * @param _describe Rule description
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescribe(const std::string& _describe);
 
                     /**
                      * 判断参数 Describe 是否已赋值
                      * @return Describe 是否已赋值
+                     * 
                      */
                     bool DescribeHasBeenSet() const;
 
@@ -164,20 +182,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Annotations See `annotations` in the Prometheus rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Label> GetAnnotations() const;
 
                     /**
                      * 设置See `annotations` in the Prometheus rule
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Annotations See `annotations` in the Prometheus rule
+                     * @param _annotations See `annotations` in the Prometheus rule
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAnnotations(const std::vector<Label>& _annotations);
 
                     /**
                      * 判断参数 Annotations 是否已赋值
                      * @return Annotations 是否已赋值
+                     * 
                      */
                     bool AnnotationsHasBeenSet() const;
 
@@ -186,20 +207,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleState Alerting rule status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRuleState() const;
 
                     /**
                      * 设置Alerting rule status
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleState Alerting rule status
+                     * @param _ruleState Alerting rule status
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleState(const int64_t& _ruleState);
 
                     /**
                      * 判断参数 RuleState 是否已赋值
                      * @return RuleState 是否已赋值
+                     * 
                      */
                     bool RuleStateHasBeenSet() const;
 

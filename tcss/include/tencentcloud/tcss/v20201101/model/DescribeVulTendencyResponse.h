@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of vulnerability trends
                      * @return VulTendencySet List of vulnerability trends
+                     * 
                      */
                     std::vector<VulTendencyInfo> GetVulTendencySet() const;
 
                     /**
                      * 判断参数 VulTendencySet 是否已赋值
                      * @return VulTendencySet 是否已赋值
+                     * 
                      */
                     bool VulTendencySetHasBeenSet() const;
 

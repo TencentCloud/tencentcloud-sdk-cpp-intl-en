@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取HTML code after base64 encoding. To ensure correct display, this parameter should include all code information and cannot contain external CSS.
                      * @return Html HTML code after base64 encoding. To ensure correct display, this parameter should include all code information and cannot contain external CSS.
+                     * 
                      */
                     std::string GetHtml() const;
 
                     /**
                      * 设置HTML code after base64 encoding. To ensure correct display, this parameter should include all code information and cannot contain external CSS.
-                     * @param Html HTML code after base64 encoding. To ensure correct display, this parameter should include all code information and cannot contain external CSS.
+                     * @param _html HTML code after base64 encoding. To ensure correct display, this parameter should include all code information and cannot contain external CSS.
+                     * 
                      */
                     void SetHtml(const std::string& _html);
 
                     /**
                      * 判断参数 Html 是否已赋值
                      * @return Html 是否已赋值
+                     * 
                      */
                     bool HtmlHasBeenSet() const;
 
                     /**
                      * 获取Plain text content after base64 encoding. If HTML is not involved, the plain text will be displayed in the email. Otherwise, this parameter represents the plain text style of the email.
                      * @return Text Plain text content after base64 encoding. If HTML is not involved, the plain text will be displayed in the email. Otherwise, this parameter represents the plain text style of the email.
+                     * 
                      */
                     std::string GetText() const;
 
                     /**
                      * 设置Plain text content after base64 encoding. If HTML is not involved, the plain text will be displayed in the email. Otherwise, this parameter represents the plain text style of the email.
-                     * @param Text Plain text content after base64 encoding. If HTML is not involved, the plain text will be displayed in the email. Otherwise, this parameter represents the plain text style of the email.
+                     * @param _text Plain text content after base64 encoding. If HTML is not involved, the plain text will be displayed in the email. Otherwise, this parameter represents the plain text style of the email.
+                     * 
                      */
                     void SetText(const std::string& _text);
 
                     /**
                      * 判断参数 Text 是否已赋值
                      * @return Text 是否已赋值
+                     * 
                      */
                     bool TextHasBeenSet() const;
 

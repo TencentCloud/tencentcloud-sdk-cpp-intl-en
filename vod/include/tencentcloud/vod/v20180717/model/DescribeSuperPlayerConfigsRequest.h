@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Player configuration name filter. Array length limit: 100.
                      * @return Names Player configuration name filter. Array length limit: 100.
+                     * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
                      * 设置Player configuration name filter. Array length limit: 100.
-                     * @param Names Player configuration name filter. Array length limit: 100.
+                     * @param _names Player configuration name filter. Array length limit: 100.
+                     * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
                     /**
                      * 判断参数 Names 是否已赋值
                      * @return Names 是否已赋值
+                     * 
                      */
                     bool NamesHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset. Default value: 0.
                      * @return Offset Pagination offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset. Default value: 0.
-                     * @param Offset Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries to be returned. Default value: 10. Maximum value: 100.
                      * @return Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries to be returned. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -121,6 +133,7 @@ namespace TencentCloud
                      * @return Type Player configuration type filter. Valid values:
 <li>Preset: preset configuration;</li>
 <li>Custom: custom configuration.</li>
+                     * 
                      */
                     std::string GetType() const;
 
@@ -128,15 +141,17 @@ namespace TencentCloud
                      * 设置Player configuration type filter. Valid values:
 <li>Preset: preset configuration;</li>
 <li>Custom: custom configuration.</li>
-                     * @param Type Player configuration type filter. Valid values:
+                     * @param _type Player configuration type filter. Valid values:
 <li>Preset: preset configuration;</li>
 <li>Custom: custom configuration.</li>
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

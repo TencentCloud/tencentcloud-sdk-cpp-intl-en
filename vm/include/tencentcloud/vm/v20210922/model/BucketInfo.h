@@ -50,54 +50,63 @@ For more information on Tencent Cloud storage, see https://intl.cloud.tencent.co
                     /**
                      * 获取Name of the COS bucket
                      * @return Bucket Name of the COS bucket
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置Name of the COS bucket
-                     * @param Bucket Name of the COS bucket
+                     * @param _bucket Name of the COS bucket
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return Region Region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
-                     * @param Region Region
+                     * @param _region Region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Object key
                      * @return Object Object key
+                     * 
                      */
                     std::string GetObject() const;
 
                     /**
                      * 设置Object key
-                     * @param Object Object key
+                     * @param _object Object key
+                     * 
                      */
                     void SetObject(const std::string& _object);
 
                     /**
                      * 判断参数 Object 是否已赋值
                      * @return Object 是否已赋值
+                     * 
                      */
                     bool ObjectHasBeenSet() const;
 

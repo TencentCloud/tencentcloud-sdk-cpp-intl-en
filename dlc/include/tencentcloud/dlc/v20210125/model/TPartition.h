@@ -49,144 +49,168 @@ namespace TencentCloud
                     /**
                      * 获取The field name.
                      * @return Name The field name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The field name.
-                     * @param Name The field name.
+                     * @param _name The field name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The field type.
                      * @return Type The field type.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The field type.
-                     * @param Type The field type.
+                     * @param _type The field type.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The field description.
                      * @return Comment The field description.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The field description.
-                     * @param Comment The field description.
+                     * @param _comment The field description.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
                     /**
                      * 获取The partition type.
                      * @return PartitionType The partition type.
+                     * 
                      */
                     std::string GetPartitionType() const;
 
                     /**
                      * 设置The partition type.
-                     * @param PartitionType The partition type.
+                     * @param _partitionType The partition type.
+                     * 
                      */
                     void SetPartitionType(const std::string& _partitionType);
 
                     /**
                      * 判断参数 PartitionType 是否已赋值
                      * @return PartitionType 是否已赋值
+                     * 
                      */
                     bool PartitionTypeHasBeenSet() const;
 
                     /**
                      * 获取The partition format.
                      * @return PartitionFormat The partition format.
+                     * 
                      */
                     std::string GetPartitionFormat() const;
 
                     /**
                      * 设置The partition format.
-                     * @param PartitionFormat The partition format.
+                     * @param _partitionFormat The partition format.
+                     * 
                      */
                     void SetPartitionFormat(const std::string& _partitionFormat);
 
                     /**
                      * 判断参数 PartitionFormat 是否已赋值
                      * @return PartitionFormat 是否已赋值
+                     * 
                      */
                     bool PartitionFormatHasBeenSet() const;
 
                     /**
                      * 获取The separator count of the partition conversion policy.
                      * @return PartitionDot The separator count of the partition conversion policy.
+                     * 
                      */
                     int64_t GetPartitionDot() const;
 
                     /**
                      * 设置The separator count of the partition conversion policy.
-                     * @param PartitionDot The separator count of the partition conversion policy.
+                     * @param _partitionDot The separator count of the partition conversion policy.
+                     * 
                      */
                     void SetPartitionDot(const int64_t& _partitionDot);
 
                     /**
                      * 判断参数 PartitionDot 是否已赋值
                      * @return PartitionDot 是否已赋值
+                     * 
                      */
                     bool PartitionDotHasBeenSet() const;
 
                     /**
                      * 获取The partition conversion policy.
                      * @return Transform The partition conversion policy.
+                     * 
                      */
                     std::string GetTransform() const;
 
                     /**
                      * 设置The partition conversion policy.
-                     * @param Transform The partition conversion policy.
+                     * @param _transform The partition conversion policy.
+                     * 
                      */
                     void SetTransform(const std::string& _transform);
 
                     /**
                      * 判断参数 Transform 是否已赋值
                      * @return Transform 是否已赋值
+                     * 
                      */
                     bool TransformHasBeenSet() const;
 
                     /**
                      * 获取The policy parameters.
                      * @return TransformArgs The policy parameters.
+                     * 
                      */
                     std::vector<std::string> GetTransformArgs() const;
 
                     /**
                      * 设置The policy parameters.
-                     * @param TransformArgs The policy parameters.
+                     * @param _transformArgs The policy parameters.
+                     * 
                      */
                     void SetTransformArgs(const std::vector<std::string>& _transformArgs);
 
                     /**
                      * 判断参数 TransformArgs 是否已赋值
                      * @return TransformArgs 是否已赋值
+                     * 
                      */
                     bool TransformArgsHasBeenSet() const;
 

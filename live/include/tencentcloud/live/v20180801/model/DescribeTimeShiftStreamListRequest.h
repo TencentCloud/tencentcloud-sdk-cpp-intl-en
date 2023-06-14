@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取The start time, which must be a Unix timestamp.
                      * @return StartTime The start time, which must be a Unix timestamp.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置The start time, which must be a Unix timestamp.
-                     * @param StartTime The start time, which must be a Unix timestamp.
+                     * @param _startTime The start time, which must be a Unix timestamp.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The end time, which must be a Unix timestamp.
                      * @return EndTime The end time, which must be a Unix timestamp.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置The end time, which must be a Unix timestamp.
-                     * @param EndTime The end time, which must be a Unix timestamp.
+                     * @param _endTime The end time, which must be a Unix timestamp.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取The stream name.
                      * @return StreamName The stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置The stream name.
-                     * @param StreamName The stream name.
+                     * @param _streamName The stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
                     /**
                      * 获取The push domain.
                      * @return Domain The push domain.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The push domain.
-                     * @param Domain The push domain.
+                     * @param _domain The push domain.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取The group the push domain belongs to.
                      * @return DomainGroup The group the push domain belongs to.
+                     * 
                      */
                     std::string GetDomainGroup() const;
 
                     /**
                      * 设置The group the push domain belongs to.
-                     * @param DomainGroup The group the push domain belongs to.
+                     * @param _domainGroup The group the push domain belongs to.
+                     * 
                      */
                     void SetDomainGroup(const std::string& _domainGroup);
 
                     /**
                      * 判断参数 DomainGroup 是否已赋值
                      * @return DomainGroup 是否已赋值
+                     * 
                      */
                     bool DomainGroupHasBeenSet() const;
 
@@ -137,38 +152,44 @@ namespace TencentCloud
 the default value `100` will be used. If you pass in a negative number or a value greater than 100, an error will be returned.
                      * @return PageSize The maximum number of records to return. Value range: 0-100. If you do not specify this parameter or pass in `0`, 
 the default value `100` will be used. If you pass in a negative number or a value greater than 100, an error will be returned.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置The maximum number of records to return. Value range: 0-100. If you do not specify this parameter or pass in `0`, 
 the default value `100` will be used. If you pass in a negative number or a value greater than 100, an error will be returned.
-                     * @param PageSize The maximum number of records to return. Value range: 0-100. If you do not specify this parameter or pass in `0`, 
+                     * @param _pageSize The maximum number of records to return. Value range: 0-100. If you do not specify this parameter or pass in `0`, 
 the default value `100` will be used. If you pass in a negative number or a value greater than 100, an error will be returned.
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取The number of page to pull records from. If you do not specify this parameter, the default value `1` will be used.
                      * @return PageNum The number of page to pull records from. If you do not specify this parameter, the default value `1` will be used.
+                     * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
                      * 设置The number of page to pull records from. If you do not specify this parameter, the default value `1` will be used.
-                     * @param PageNum The number of page to pull records from. If you do not specify this parameter, the default value `1` will be used.
+                     * @param _pageNum The number of page to pull records from. If you do not specify this parameter, the default value `1` will be used.
+                     * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 

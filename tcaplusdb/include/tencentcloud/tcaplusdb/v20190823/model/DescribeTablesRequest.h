@@ -47,108 +47,126 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where the table to be queried resides
                      * @return ClusterId ID of the cluster where the table to be queried resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where the table to be queried resides
-                     * @param ClusterId ID of the cluster where the table to be queried resides
+                     * @param _clusterId ID of the cluster where the table to be queried resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of the table groups where the table to be queried resides
                      * @return TableGroupIds List of IDs of the table groups where the table to be queried resides
+                     * 
                      */
                     std::vector<std::string> GetTableGroupIds() const;
 
                     /**
                      * 设置List of IDs of the table groups where the table to be queried resides
-                     * @param TableGroupIds List of IDs of the table groups where the table to be queried resides
+                     * @param _tableGroupIds List of IDs of the table groups where the table to be queried resides
+                     * 
                      */
                     void SetTableGroupIds(const std::vector<std::string>& _tableGroupIds);
 
                     /**
                      * 判断参数 TableGroupIds 是否已赋值
                      * @return TableGroupIds 是否已赋值
+                     * 
                      */
                     bool TableGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Information list of tables to be queried
                      * @return SelectedTables Information list of tables to be queried
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置Information list of tables to be queried
-                     * @param SelectedTables Information list of tables to be queried
+                     * @param _selectedTables Information list of tables to be queried
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 
                     /**
                      * 获取Filter. Valid values: TableName, TableInstanceId
                      * @return Filters Filter. Valid values: TableName, TableInstanceId
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter. Valid values: TableName, TableInstanceId
-                     * @param Filters Filter. Valid values: TableName, TableInstanceId
+                     * @param _filters Filter. Valid values: TableName, TableInstanceId
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Query result offset
                      * @return Offset Query result offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Query result offset
-                     * @param Offset Query result offset
+                     * @param _offset Query result offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned query results
                      * @return Limit Number of returned query results
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned query results
-                     * @param Limit Number of returned query results
+                     * @param _limit Number of returned query results
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

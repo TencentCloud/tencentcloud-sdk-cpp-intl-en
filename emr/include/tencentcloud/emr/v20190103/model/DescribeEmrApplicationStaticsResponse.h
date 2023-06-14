@@ -47,60 +47,70 @@ namespace TencentCloud
                     /**
                      * 获取Application statistics
                      * @return Statics Application statistics
+                     * 
                      */
                     std::vector<ApplicationStatics> GetStatics() const;
 
                     /**
                      * 判断参数 Statics 是否已赋值
                      * @return Statics 是否已赋值
+                     * 
                      */
                     bool StaticsHasBeenSet() const;
 
                     /**
                      * 获取Total count
                      * @return TotalCount Total count
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Available queue name
                      * @return Queues Available queue name
+                     * 
                      */
                     std::vector<std::string> GetQueues() const;
 
                     /**
                      * 判断参数 Queues 是否已赋值
                      * @return Queues 是否已赋值
+                     * 
                      */
                     bool QueuesHasBeenSet() const;
 
                     /**
                      * 获取Available usernames
                      * @return Users Available usernames
+                     * 
                      */
                     std::vector<std::string> GetUsers() const;
 
                     /**
                      * 判断参数 Users 是否已赋值
                      * @return Users 是否已赋值
+                     * 
                      */
                     bool UsersHasBeenSet() const;
 
                     /**
                      * 获取Available application type
                      * @return ApplicationTypes Available application type
+                     * 
                      */
                     std::vector<std::string> GetApplicationTypes() const;
 
                     /**
                      * 判断参数 ApplicationTypes 是否已赋值
                      * @return ApplicationTypes 是否已赋值
+                     * 
                      */
                     bool ApplicationTypesHasBeenSet() const;
 

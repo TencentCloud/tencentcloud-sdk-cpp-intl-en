@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Workflow ID filter. Array length limit: 100.
                      * @return WorkflowIds Workflow ID filter. Array length limit: 100.
+                     * 
                      */
                     std::vector<int64_t> GetWorkflowIds() const;
 
                     /**
                      * 设置Workflow ID filter. Array length limit: 100.
-                     * @param WorkflowIds Workflow ID filter. Array length limit: 100.
+                     * @param _workflowIds Workflow ID filter. Array length limit: 100.
+                     * 
                      */
                     void SetWorkflowIds(const std::vector<int64_t>& _workflowIds);
 
                     /**
                      * 判断参数 WorkflowIds 是否已赋值
                      * @return WorkflowIds 是否已赋值
+                     * 
                      */
                     bool WorkflowIdsHasBeenSet() const;
 
@@ -69,6 +72,7 @@ If this parameter is left empty, the workflow status will not be distinguished.
 <li>Enabled: Enabled,</li>
 <li>Disabled: Disabled.</li>
 If this parameter is left empty, the workflow status will not be distinguished.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -77,52 +81,60 @@ If this parameter is left empty, the workflow status will not be distinguished.
 <li>Enabled: Enabled,</li>
 <li>Disabled: Disabled.</li>
 If this parameter is left empty, the workflow status will not be distinguished.
-                     * @param Status Workflow status. Valid values:
+                     * @param _status Workflow status. Valid values:
 <li>Enabled: Enabled,</li>
 <li>Disabled: Disabled.</li>
 If this parameter is left empty, the workflow status will not be distinguished.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Paging offset. Default value: 0.
                      * @return Offset Paging offset. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Paging offset. Default value: 0.
-                     * @param Offset Paging offset. Default value: 0.
+                     * @param _offset Paging offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned entries. Default value: 10. Maximum value: 100.
                      * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

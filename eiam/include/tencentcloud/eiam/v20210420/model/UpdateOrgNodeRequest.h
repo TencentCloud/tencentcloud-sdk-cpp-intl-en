@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Organization node ID, which is globally unique.
                      * @return OrgNodeId Organization node ID, which is globally unique.
+                     * 
                      */
                     std::string GetOrgNodeId() const;
 
                     /**
                      * 设置Organization node ID, which is globally unique.
-                     * @param OrgNodeId Organization node ID, which is globally unique.
+                     * @param _orgNodeId Organization node ID, which is globally unique.
+                     * 
                      */
                     void SetOrgNodeId(const std::string& _orgNodeId);
 
                     /**
                      * 判断参数 OrgNodeId 是否已赋值
                      * @return OrgNodeId 是否已赋值
+                     * 
                      */
                     bool OrgNodeIdHasBeenSet() const;
 
                     /**
                      * 获取Organization node name, which can contain up to 64 characters.
                      * @return DisplayName Organization node name, which can contain up to 64 characters.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Organization node name, which can contain up to 64 characters.
-                     * @param DisplayName Organization node name, which can contain up to 64 characters.
+                     * @param _displayName Organization node name, which can contain up to 64 characters.
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
                     /**
                      * 获取Organization node description.
                      * @return Description Organization node description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Organization node description.
-                     * @param Description Organization node description.
+                     * @param _description Organization node description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
                      * @return CustomizedOrgNodeId External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+                     * 
                      */
                     std::string GetCustomizedOrgNodeId() const;
 
                     /**
                      * 设置External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
-                     * @param CustomizedOrgNodeId External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+                     * @param _customizedOrgNodeId External ID of the organization node, which is optional and customizable. If this parameter is specified, its uniqueness will be verified.
+                     * 
                      */
                     void SetCustomizedOrgNodeId(const std::string& _customizedOrgNodeId);
 
                     /**
                      * 判断参数 CustomizedOrgNodeId 是否已赋值
                      * @return CustomizedOrgNodeId 是否已赋值
+                     * 
                      */
                     bool CustomizedOrgNodeIdHasBeenSet() const;
 

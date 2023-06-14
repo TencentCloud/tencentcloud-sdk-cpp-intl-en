@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Component ID.
                      * @return Id Component ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Component ID.
-                     * @param Id Component ID.
+                     * @param _id Component ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Number of servers.
                      * @return MachineNum Number of servers.
+                     * 
                      */
                     uint64_t GetMachineNum() const;
 
                     /**
                      * 设置Number of servers.
-                     * @param MachineNum Number of servers.
+                     * @param _machineNum Number of servers.
+                     * 
                      */
                     void SetMachineNum(const uint64_t& _machineNum);
 
                     /**
                      * 判断参数 MachineNum 是否已赋值
                      * @return MachineNum 是否已赋值
+                     * 
                      */
                     bool MachineNumHasBeenSet() const;
 
                     /**
                      * 获取Component name.
                      * @return ComponentName Component name.
+                     * 
                      */
                     std::string GetComponentName() const;
 
                     /**
                      * 设置Component name.
-                     * @param ComponentName Component name.
+                     * @param _componentName Component name.
+                     * 
                      */
                     void SetComponentName(const std::string& _componentName);
 
                     /**
                      * 判断参数 ComponentName 是否已赋值
                      * @return ComponentName 是否已赋值
+                     * 
                      */
                     bool ComponentNameHasBeenSet() const;
 
@@ -107,6 +116,7 @@ namespace TencentCloud
                      * @return ComponentType Component type.
 <li>WEB: web component</li>
 <li>SYSTEM: system component</li>
+                     * 
                      */
                     std::string GetComponentType() const;
 
@@ -114,33 +124,38 @@ namespace TencentCloud
                      * 设置Component type.
 <li>WEB: web component</li>
 <li>SYSTEM: system component</li>
-                     * @param ComponentType Component type.
+                     * @param _componentType Component type.
 <li>WEB: web component</li>
 <li>SYSTEM: system component</li>
+                     * 
                      */
                     void SetComponentType(const std::string& _componentType);
 
                     /**
                      * 判断参数 ComponentType 是否已赋值
                      * @return ComponentType 是否已赋值
+                     * 
                      */
                     bool ComponentTypeHasBeenSet() const;
 
                     /**
                      * 获取Component description.
                      * @return Description Component description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Component description.
-                     * @param Description Component description.
+                     * @param _description Component description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

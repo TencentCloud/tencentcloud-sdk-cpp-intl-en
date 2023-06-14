@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Rule sequence number. Values: `OrderIndex` (Original sequence number), `NewOrderIndex` (New sequence number)
                      * @return RuleChangeItems Rule sequence number. Values: `OrderIndex` (Original sequence number), `NewOrderIndex` (New sequence number)
+                     * 
                      */
                     std::vector<RuleChangeItem> GetRuleChangeItems() const;
 
                     /**
                      * 设置Rule sequence number. Values: `OrderIndex` (Original sequence number), `NewOrderIndex` (New sequence number)
-                     * @param RuleChangeItems Rule sequence number. Values: `OrderIndex` (Original sequence number), `NewOrderIndex` (New sequence number)
+                     * @param _ruleChangeItems Rule sequence number. Values: `OrderIndex` (Original sequence number), `NewOrderIndex` (New sequence number)
+                     * 
                      */
                     void SetRuleChangeItems(const std::vector<RuleChangeItem>& _ruleChangeItems);
 
                     /**
                      * 判断参数 RuleChangeItems 是否已赋值
                      * @return RuleChangeItems 是否已赋值
+                     * 
                      */
                     bool RuleChangeItemsHasBeenSet() const;
 
                     /**
                      * 获取Rule direction. Values: `1` (Inbound) and `0` (Outbound)
                      * @return Direction Rule direction. Values: `1` (Inbound) and `0` (Outbound)
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Rule direction. Values: `1` (Inbound) and `0` (Outbound)
-                     * @param Direction Rule direction. Values: `1` (Inbound) and `0` (Outbound)
+                     * @param _direction Rule direction. Values: `1` (Inbound) and `0` (Outbound)
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 

@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取ECM region, such as `ap-xian-ecm`.
                      * @return EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     std::string GetEcmRegion() const;
 
                     /**
                      * 设置ECM region, such as `ap-xian-ecm`.
-                     * @param EcmRegion ECM region, such as `ap-xian-ecm`.
+                     * @param _ecmRegion ECM region, such as `ap-xian-ecm`.
+                     * 
                      */
                     void SetEcmRegion(const std::string& _ecmRegion);
 
                     /**
                      * 判断参数 EcmRegion 是否已赋值
                      * @return EcmRegion 是否已赋值
+                     * 
                      */
                     bool EcmRegionHasBeenSet() const;
 
                     /**
                      * 获取ID of the ENI instance bound to the private IP, such as `eni-11112222`.
                      * @return SourceNetworkInterfaceId ID of the ENI instance bound to the private IP, such as `eni-11112222`.
+                     * 
                      */
                     std::string GetSourceNetworkInterfaceId() const;
 
                     /**
                      * 设置ID of the ENI instance bound to the private IP, such as `eni-11112222`.
-                     * @param SourceNetworkInterfaceId ID of the ENI instance bound to the private IP, such as `eni-11112222`.
+                     * @param _sourceNetworkInterfaceId ID of the ENI instance bound to the private IP, such as `eni-11112222`.
+                     * 
                      */
                     void SetSourceNetworkInterfaceId(const std::string& _sourceNetworkInterfaceId);
 
                     /**
                      * 判断参数 SourceNetworkInterfaceId 是否已赋值
                      * @return SourceNetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool SourceNetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the destination ENI instance to be migrated.
                      * @return DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
+                     * 
                      */
                     std::string GetDestinationNetworkInterfaceId() const;
 
                     /**
                      * 设置ID of the destination ENI instance to be migrated.
-                     * @param DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
+                     * @param _destinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
+                     * 
                      */
                     void SetDestinationNetworkInterfaceId(const std::string& _destinationNetworkInterfaceId);
 
                     /**
                      * 判断参数 DestinationNetworkInterfaceId 是否已赋值
                      * @return DestinationNetworkInterfaceId 是否已赋值
+                     * 
                      */
                     bool DestinationNetworkInterfaceIdHasBeenSet() const;
 
                     /**
                      * 获取Private IP address to be migrated, such as `10.0.0.6`.
                      * @return PrivateIpAddress Private IP address to be migrated, such as `10.0.0.6`.
+                     * 
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
                      * 设置Private IP address to be migrated, such as `10.0.0.6`.
-                     * @param PrivateIpAddress Private IP address to be migrated, such as `10.0.0.6`.
+                     * @param _privateIpAddress Private IP address to be migrated, such as `10.0.0.6`.
+                     * 
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
                     /**
                      * 判断参数 PrivateIpAddress 是否已赋值
                      * @return PrivateIpAddress 是否已赋值
+                     * 
                      */
                     bool PrivateIpAddressHasBeenSet() const;
 

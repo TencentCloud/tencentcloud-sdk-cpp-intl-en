@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Array of classic CLB instance IDs
                      * @return LoadBalancerIds Array of classic CLB instance IDs
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置Array of classic CLB instance IDs
-                     * @param LoadBalancerIds Array of classic CLB instance IDs
+                     * @param _loadBalancerIds Array of classic CLB instance IDs
+                     * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 
                     /**
                      * 获取Exclusive cluster information
                      * @return ExclusiveCluster Exclusive cluster information
+                     * 
                      */
                     ExclusiveCluster GetExclusiveCluster() const;
 
                     /**
                      * 设置Exclusive cluster information
-                     * @param ExclusiveCluster Exclusive cluster information
+                     * @param _exclusiveCluster Exclusive cluster information
+                     * 
                      */
                     void SetExclusiveCluster(const ExclusiveCluster& _exclusiveCluster);
 
                     /**
                      * 判断参数 ExclusiveCluster 是否已赋值
                      * @return ExclusiveCluster 是否已赋值
+                     * 
                      */
                     bool ExclusiveClusterHasBeenSet() const;
 

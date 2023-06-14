@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return EndTime End time
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
-                     * @param EndTime End time
+                     * @param _endTime End time
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -85,6 +91,7 @@ namespace TencentCloud
                      * @return SphereOfInfluence Enumeration:
 `LATEST`: Latest version.
 `CONTAINER`: Running container.
+                     * 
                      */
                     std::string GetSphereOfInfluence() const;
 
@@ -92,15 +99,17 @@ namespace TencentCloud
                      * 设置Enumeration:
 `LATEST`: Latest version.
 `CONTAINER`: Running container.
-                     * @param SphereOfInfluence Enumeration:
+                     * @param _sphereOfInfluence Enumeration:
 `LATEST`: Latest version.
 `CONTAINER`: Running container.
+                     * 
                      */
                     void SetSphereOfInfluence(const std::string& _sphereOfInfluence);
 
                     /**
                      * 判断参数 SphereOfInfluence 是否已赋值
                      * @return SphereOfInfluence 是否已赋值
+                     * 
                      */
                     bool SphereOfInfluenceHasBeenSet() const;
 

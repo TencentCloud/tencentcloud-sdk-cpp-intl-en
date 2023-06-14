@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置Site ID
-                     * @param ZoneId Site ID
+                     * @param _zoneId Site ID
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the proxy
                      * @return ProxyId ID of the proxy
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置ID of the proxy
-                     * @param ProxyId ID of the proxy
+                     * @param _proxyId ID of the proxy
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
@@ -85,6 +91,7 @@ Instance name when `ProxyType=instance`
                      * @return ProxyName Name of the proxy:
 Domain name or subdomain name when `ProxyType=hostname`
 Instance name when `ProxyType=instance`
+                     * 
                      */
                     std::string GetProxyName() const;
 
@@ -92,69 +99,80 @@ Instance name when `ProxyType=instance`
                      * 设置Name of the proxy:
 Domain name or subdomain name when `ProxyType=hostname`
 Instance name when `ProxyType=instance`
-                     * @param ProxyName Name of the proxy:
+                     * @param _proxyName Name of the proxy:
 Domain name or subdomain name when `ProxyType=hostname`
 Instance name when `ProxyType=instance`
+                     * 
                      */
                     void SetProxyName(const std::string& _proxyName);
 
                     /**
                      * 判断参数 ProxyName 是否已赋值
                      * @return ProxyName 是否已赋值
+                     * 
                      */
                     bool ProxyNameHasBeenSet() const;
 
                     /**
                      * 获取This parameter is disused.
                      * @return ForwardClientIp This parameter is disused.
+                     * 
                      */
                     std::string GetForwardClientIp() const;
 
                     /**
                      * 设置This parameter is disused.
-                     * @param ForwardClientIp This parameter is disused.
+                     * @param _forwardClientIp This parameter is disused.
+                     * 
                      */
                     void SetForwardClientIp(const std::string& _forwardClientIp);
 
                     /**
                      * 判断参数 ForwardClientIp 是否已赋值
                      * @return ForwardClientIp 是否已赋值
+                     * 
                      */
                     bool ForwardClientIpHasBeenSet() const;
 
                     /**
                      * 获取This parameter is disused.
                      * @return SessionPersist This parameter is disused.
+                     * 
                      */
                     bool GetSessionPersist() const;
 
                     /**
                      * 设置This parameter is disused.
-                     * @param SessionPersist This parameter is disused.
+                     * @param _sessionPersist This parameter is disused.
+                     * 
                      */
                     void SetSessionPersist(const bool& _sessionPersist);
 
                     /**
                      * 判断参数 SessionPersist 是否已赋值
                      * @return SessionPersist 是否已赋值
+                     * 
                      */
                     bool SessionPersistHasBeenSet() const;
 
                     /**
                      * 获取Session persistence time. Value range: 30-3600 (in seconds).
                      * @return SessionPersistTime Session persistence time. Value range: 30-3600 (in seconds).
+                     * 
                      */
                     uint64_t GetSessionPersistTime() const;
 
                     /**
                      * 设置Session persistence time. Value range: 30-3600 (in seconds).
-                     * @param SessionPersistTime Session persistence time. Value range: 30-3600 (in seconds).
+                     * @param _sessionPersistTime Session persistence time. Value range: 30-3600 (in seconds).
+                     * 
                      */
                     void SetSessionPersistTime(const uint64_t& _sessionPersistTime);
 
                     /**
                      * 判断参数 SessionPersistTime 是否已赋值
                      * @return SessionPersistTime 是否已赋值
+                     * 
                      */
                     bool SessionPersistTimeHasBeenSet() const;
 
@@ -165,6 +183,7 @@ Instance name when `ProxyType=instance`
                      * @return ProxyType Specifies how a layer-4 proxy is created.
 `hostname`: Create by subdomain name
 `instance`: Create by instance
+                     * 
                      */
                     std::string GetProxyType() const;
 
@@ -172,15 +191,17 @@ Instance name when `ProxyType=instance`
                      * 设置Specifies how a layer-4 proxy is created.
 `hostname`: Create by subdomain name
 `instance`: Create by instance
-                     * @param ProxyType Specifies how a layer-4 proxy is created.
+                     * @param _proxyType Specifies how a layer-4 proxy is created.
 `hostname`: Create by subdomain name
 `instance`: Create by instance
+                     * 
                      */
                     void SetProxyType(const std::string& _proxyType);
 
                     /**
                      * 判断参数 ProxyType 是否已赋值
                      * @return ProxyType 是否已赋值
+                     * 
                      */
                     bool ProxyTypeHasBeenSet() const;
 

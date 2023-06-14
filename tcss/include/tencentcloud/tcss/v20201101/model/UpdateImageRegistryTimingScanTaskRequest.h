@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取Scheduled scan cycle
                      * @return ScanPeriod Scheduled scan cycle
+                     * 
                      */
                     uint64_t GetScanPeriod() const;
 
                     /**
                      * 设置Scheduled scan cycle
-                     * @param ScanPeriod Scheduled scan cycle
+                     * @param _scanPeriod Scheduled scan cycle
+                     * 
                      */
                     void SetScanPeriod(const uint64_t& _scanPeriod);
 
                     /**
                      * 判断参数 ScanPeriod 是否已赋值
                      * @return ScanPeriod 是否已赋值
+                     * 
                      */
                     bool ScanPeriodHasBeenSet() const;
 
                     /**
                      * 获取Scheduled scan switch
                      * @return Enable Scheduled scan switch
+                     * 
                      */
                     bool GetEnable() const;
 
                     /**
                      * 设置Scheduled scan switch
-                     * @param Enable Scheduled scan switch
+                     * @param _enable Scheduled scan switch
+                     * 
                      */
                     void SetEnable(const bool& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
                     /**
                      * 获取Scheduled scan time
                      * @return ScanTime Scheduled scan time
+                     * 
                      */
                     std::string GetScanTime() const;
 
                     /**
                      * 设置Scheduled scan time
-                     * @param ScanTime Scheduled scan time
+                     * @param _scanTime Scheduled scan time
+                     * 
                      */
                     void SetScanTime(const std::string& _scanTime);
 
                     /**
                      * 判断参数 ScanTime 是否已赋值
                      * @return ScanTime 是否已赋值
+                     * 
                      */
                     bool ScanTimeHasBeenSet() const;
 
                     /**
                      * 获取Array of the scanned trojan types
                      * @return ScanType Array of the scanned trojan types
+                     * 
                      */
                     std::vector<std::string> GetScanType() const;
 
                     /**
                      * 设置Array of the scanned trojan types
-                     * @param ScanType Array of the scanned trojan types
+                     * @param _scanType Array of the scanned trojan types
+                     * 
                      */
                     void SetScanType(const std::vector<std::string>& _scanType);
 
                     /**
                      * 判断参数 ScanType 是否已赋值
                      * @return ScanType 是否已赋值
+                     * 
                      */
                     bool ScanTypeHasBeenSet() const;
 
                     /**
                      * 获取Scanned image
                      * @return Images Scanned image
+                     * 
                      */
                     std::vector<ImageInfo> GetImages() const;
 
                     /**
                      * 设置Scanned image
-                     * @param Images Scanned image
+                     * @param _images Scanned image
+                     * 
                      */
                     void SetImages(const std::vector<ImageInfo>& _images);
 
                     /**
                      * 判断参数 Images 是否已赋值
                      * @return Images 是否已赋值
+                     * 
                      */
                     bool ImagesHasBeenSet() const;
 
                     /**
                      * 获取Whether to scan all
                      * @return All Whether to scan all
+                     * 
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置Whether to scan all
-                     * @param All Whether to scan all
+                     * @param _all Whether to scan all
+                     * 
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
+                     * 
                      */
                     bool AllHasBeenSet() const;
 
                     /**
                      * 获取ID of the image to be scanned
                      * @return Id ID of the image to be scanned
+                     * 
                      */
                     std::vector<uint64_t> GetId() const;
 
                     /**
                      * 设置ID of the image to be scanned
-                     * @param Id ID of the image to be scanned
+                     * @param _id ID of the image to be scanned
+                     * 
                      */
                     void SetId(const std::vector<uint64_t>& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

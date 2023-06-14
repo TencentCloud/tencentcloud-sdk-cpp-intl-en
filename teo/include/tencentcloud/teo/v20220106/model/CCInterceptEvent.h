@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClientIp Client IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClientIp() const;
 
                     /**
                      * 设置Client IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientIp Client IP
+                     * @param _clientIp Client IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClientIp(const std::string& _clientIp);
 
                     /**
                      * 判断参数 ClientIp 是否已赋值
                      * @return ClientIp 是否已赋值
+                     * 
                      */
                     bool ClientIpHasBeenSet() const;
 
@@ -73,38 +76,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InterceptNum Number of blocks per minute
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetInterceptNum() const;
 
                     /**
                      * 设置Number of blocks per minute
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InterceptNum Number of blocks per minute
+                     * @param _interceptNum Number of blocks per minute
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInterceptNum(const int64_t& _interceptNum);
 
                     /**
                      * 判断参数 InterceptNum 是否已赋值
                      * @return InterceptNum 是否已赋值
+                     * 
                      */
                     bool InterceptNumHasBeenSet() const;
 
                     /**
                      * 获取Block time in rate-limiting policy per minute in seconds
                      * @return InterceptTime Block time in rate-limiting policy per minute in seconds
+                     * 
                      */
                     int64_t GetInterceptTime() const;
 
                     /**
                      * 设置Block time in rate-limiting policy per minute in seconds
-                     * @param InterceptTime Block time in rate-limiting policy per minute in seconds
+                     * @param _interceptTime Block time in rate-limiting policy per minute in seconds
+                     * 
                      */
                     void SetInterceptTime(const int64_t& _interceptTime);
 
                     /**
                      * 判断参数 InterceptTime 是否已赋值
                      * @return InterceptTime 是否已赋值
+                     * 
                      */
                     bool InterceptTimeHasBeenSet() const;
 

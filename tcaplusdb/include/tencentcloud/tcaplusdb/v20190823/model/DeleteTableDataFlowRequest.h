@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the cluster where the tables reside
                      * @return ClusterId The ID of the cluster where the tables reside
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置The ID of the cluster where the tables reside
-                     * @param ClusterId The ID of the cluster where the tables reside
+                     * @param _clusterId The ID of the cluster where the tables reside
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取The list of tables for which data subscription will be disabled
                      * @return SelectedTables The list of tables for which data subscription will be disabled
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置The list of tables for which data subscription will be disabled
-                     * @param SelectedTables The list of tables for which data subscription will be disabled
+                     * @param _selectedTables The list of tables for which data subscription will be disabled
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 

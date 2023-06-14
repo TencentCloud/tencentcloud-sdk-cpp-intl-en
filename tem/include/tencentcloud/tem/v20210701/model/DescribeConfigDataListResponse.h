@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Configuration list.
                      * @return Result Configuration list.
+                     * 
                      */
                     DescribeConfigDataListPage GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
                      * @return Result 是否已赋值
+                     * 
                      */
                     bool ResultHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable custom ASR-based recognition. Valid values:
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable custom ASR-based recognition. Valid values:
 <li>ON</li>
 <li>OFF</li>
-                     * @param Switch Whether to enable custom ASR-based recognition. Valid values:
+                     * @param _switch Whether to enable custom ASR-based recognition. Valid values:
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -77,56 +80,65 @@ namespace TencentCloud
 Up to 10 labels are allowed, each containing no more than 16 characters.
                      * @return LabelSet Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
 Up to 10 labels are allowed, each containing no more than 16 characters.
+                     * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
                      * 设置Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
 Up to 10 labels are allowed, each containing no more than 16 characters.
-                     * @param LabelSet Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
+                     * @param _labelSet Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
 Up to 10 labels are allowed, each containing no more than 16 characters.
+                     * 
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
 
                     /**
                      * 判断参数 LabelSet 是否已赋值
                      * @return LabelSet 是否已赋值
+                     * 
                      */
                     bool LabelSetHasBeenSet() const;
 
                     /**
                      * 获取Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
                      * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+                     * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
                      * 设置Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
-                     * @param BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+                     * @param _blockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+                     * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
 
                     /**
                      * 判断参数 BlockConfidence 是否已赋值
                      * @return BlockConfidence 是否已赋值
+                     * 
                      */
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
                      * 获取Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
                      * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+                     * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
                      * 设置Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
-                     * @param ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+                     * @param _reviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+                     * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
 
                     /**
                      * 判断参数 ReviewConfidence 是否已赋值
                      * @return ReviewConfidence 是否已赋值
+                     * 
                      */
                     bool ReviewConfidenceHasBeenSet() const;
 

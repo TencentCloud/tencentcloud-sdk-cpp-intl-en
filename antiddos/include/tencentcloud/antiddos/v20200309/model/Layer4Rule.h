@@ -52,36 +52,42 @@ namespace TencentCloud
                     /**
                      * 获取Real server port. Value range: 1–65535.
                      * @return BackendPort Real server port. Value range: 1–65535.
+                     * 
                      */
                     uint64_t GetBackendPort() const;
 
                     /**
                      * 设置Real server port. Value range: 1–65535.
-                     * @param BackendPort Real server port. Value range: 1–65535.
+                     * @param _backendPort Real server port. Value range: 1–65535.
+                     * 
                      */
                     void SetBackendPort(const uint64_t& _backendPort);
 
                     /**
                      * 判断参数 BackendPort 是否已赋值
                      * @return BackendPort 是否已赋值
+                     * 
                      */
                     bool BackendPortHasBeenSet() const;
 
                     /**
                      * 获取Forwarding port. Value range: 1–65535.
                      * @return FrontendPort Forwarding port. Value range: 1–65535.
+                     * 
                      */
                     uint64_t GetFrontendPort() const;
 
                     /**
                      * 设置Forwarding port. Value range: 1–65535.
-                     * @param FrontendPort Forwarding port. Value range: 1–65535.
+                     * @param _frontendPort Forwarding port. Value range: 1–65535.
+                     * 
                      */
                     void SetFrontendPort(const uint64_t& _frontendPort);
 
                     /**
                      * 判断参数 FrontendPort 是否已赋值
                      * @return FrontendPort 是否已赋值
+                     * 
                      */
                     bool FrontendPortHasBeenSet() const;
 
@@ -94,6 +100,7 @@ UDP
 TCP
 UDP
 ]
+                     * 
                      */
                     std::string GetProtocol() const;
 
@@ -102,70 +109,81 @@ UDP
 TCP
 UDP
 ]
-                     * @param Protocol Forwarding rule. Valid values:
+                     * @param _protocol Forwarding rule. Valid values:
 TCP
 UDP
 ]
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取List of real servers
                      * @return RealServers List of real servers
+                     * 
                      */
                     std::vector<SourceServer> GetRealServers() const;
 
                     /**
                      * 设置List of real servers
-                     * @param RealServers List of real servers
+                     * @param _realServers List of real servers
+                     * 
                      */
                     void SetRealServers(const std::vector<SourceServer>& _realServers);
 
                     /**
                      * 判断参数 RealServers 是否已赋值
                      * @return RealServers 是否已赋值
+                     * 
                      */
                     bool RealServersHasBeenSet() const;
 
                     /**
                      * 获取Information of the Anti-DDoS instance
                      * @return InstanceDetails Information of the Anti-DDoS instance
+                     * 
                      */
                     std::vector<InstanceRelation> GetInstanceDetails() const;
 
                     /**
                      * 设置Information of the Anti-DDoS instance
-                     * @param InstanceDetails Information of the Anti-DDoS instance
+                     * @param _instanceDetails Information of the Anti-DDoS instance
+                     * 
                      */
                     void SetInstanceDetails(const std::vector<InstanceRelation>& _instanceDetails);
 
                     /**
                      * 判断参数 InstanceDetails 是否已赋值
                      * @return InstanceDetails 是否已赋值
+                     * 
                      */
                     bool InstanceDetailsHasBeenSet() const;
 
                     /**
                      * 获取Information of the Anti-DDoS instance configured
                      * @return InstanceDetailRule Information of the Anti-DDoS instance configured
+                     * 
                      */
                     std::vector<RuleInstanceRelation> GetInstanceDetailRule() const;
 
                     /**
                      * 设置Information of the Anti-DDoS instance configured
-                     * @param InstanceDetailRule Information of the Anti-DDoS instance configured
+                     * @param _instanceDetailRule Information of the Anti-DDoS instance configured
+                     * 
                      */
                     void SetInstanceDetailRule(const std::vector<RuleInstanceRelation>& _instanceDetailRule);
 
                     /**
                      * 判断参数 InstanceDetailRule 是否已赋值
                      * @return InstanceDetailRule 是否已赋值
+                     * 
                      */
                     bool InstanceDetailRuleHasBeenSet() const;
 

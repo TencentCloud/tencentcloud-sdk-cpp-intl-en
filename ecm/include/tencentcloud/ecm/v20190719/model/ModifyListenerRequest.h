@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取CLB instance ID
                      * @return LoadBalancerId CLB instance ID
+                     * 
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
                      * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * @param _loadBalancerId CLB instance ID
+                     * 
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
                     /**
                      * 判断参数 LoadBalancerId 是否已赋值
                      * @return LoadBalancerId 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
                      * 获取CLB listener ID
                      * @return ListenerId CLB listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置CLB listener ID
-                     * @param ListenerId CLB listener ID
+                     * @param _listenerId CLB listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取New listener name
                      * @return ListenerName New listener name
+                     * 
                      */
                     std::string GetListenerName() const;
 
                     /**
                      * 设置New listener name
-                     * @param ListenerName New listener name
+                     * @param _listenerName New listener name
+                     * 
                      */
                     void SetListenerName(const std::string& _listenerName);
 
                     /**
                      * 判断参数 ListenerName 是否已赋值
                      * @return ListenerName 是否已赋值
+                     * 
                      */
                     bool ListenerNameHasBeenSet() const;
 
                     /**
                      * 获取Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
                      * @return SessionExpireTime Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+                     * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
                      * 设置Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
-                     * @param SessionExpireTime Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+                     * @param _sessionExpireTime Session persistence time in seconds. Value range: 30–3600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
+                     * 
                      */
                     void SetSessionExpireTime(const int64_t& _sessionExpireTime);
 
                     /**
                      * 判断参数 SessionExpireTime 是否已赋值
                      * @return SessionExpireTime 是否已赋值
+                     * 
                      */
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Health check parameters
                      * @return HealthCheck Health check parameters
+                     * 
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
                      * 设置Health check parameters
-                     * @param HealthCheck Health check parameters
+                     * @param _healthCheck Health check parameters
+                     * 
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
 
                     /**
                      * 判断参数 HealthCheck 是否已赋值
                      * @return HealthCheck 是否已赋值
+                     * 
                      */
                     bool HealthCheckHasBeenSet() const;
 
@@ -138,20 +153,23 @@ namespace TencentCloud
 They represent weighted round robin and least connections, respectively. Default value: WRR.
                      * @return Scheduler Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
+                     * 
                      */
                     std::string GetScheduler() const;
 
                     /**
                      * 设置Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
-                     * @param Scheduler Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
+                     * @param _scheduler Forwarding method of the listener. Valid values: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
+                     * 
                      */
                     void SetScheduler(const std::string& _scheduler);
 
                     /**
                      * 判断参数 Scheduler 是否已赋值
                      * @return Scheduler 是否已赋值
+                     * 
                      */
                     bool SchedulerHasBeenSet() const;
 

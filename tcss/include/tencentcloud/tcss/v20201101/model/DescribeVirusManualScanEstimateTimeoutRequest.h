@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Scanning scope. Valid values: `0` (container); `1` (server).
                      * @return ScanRangeType Scanning scope. Valid values: `0` (container); `1` (server).
+                     * 
                      */
                     uint64_t GetScanRangeType() const;
 
                     /**
                      * 设置Scanning scope. Valid values: `0` (container); `1` (server).
-                     * @param ScanRangeType Scanning scope. Valid values: `0` (container); `1` (server).
+                     * @param _scanRangeType Scanning scope. Valid values: `0` (container); `1` (server).
+                     * 
                      */
                     void SetScanRangeType(const uint64_t& _scanRangeType);
 
                     /**
                      * 判断参数 ScanRangeType 是否已赋值
                      * @return ScanRangeType 是否已赋值
+                     * 
                      */
                     bool ScanRangeTypeHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `true` (all); `false` (specified).
                      * @return ScanRangeAll Valid values: `true` (all); `false` (specified).
+                     * 
                      */
                     bool GetScanRangeAll() const;
 
                     /**
                      * 设置Valid values: `true` (all); `false` (specified).
-                     * @param ScanRangeAll Valid values: `true` (all); `false` (specified).
+                     * @param _scanRangeAll Valid values: `true` (all); `false` (specified).
+                     * 
                      */
                     void SetScanRangeAll(const bool& _scanRangeAll);
 
                     /**
                      * 判断参数 ScanRangeAll 是否已赋值
                      * @return ScanRangeAll 是否已赋值
+                     * 
                      */
                     bool ScanRangeAllHasBeenSet() const;
 
                     /**
                      * 获取ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
                      * @return ScanIds ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
+                     * 
                      */
                     std::vector<std::string> GetScanIds() const;
 
                     /**
                      * 设置ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
-                     * @param ScanIds ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
+                     * @param _scanIds ID of the specified container or server to be scanned, which is based on `ScanRangeType`.
+                     * 
                      */
                     void SetScanIds(const std::vector<std::string>& _scanIds);
 
                     /**
                      * 判断参数 ScanIds 是否已赋值
                      * @return ScanIds 是否已赋值
+                     * 
                      */
                     bool ScanIdsHasBeenSet() const;
 

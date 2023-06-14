@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Prometheus instance ID
                      * @return InstanceId Prometheus instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Prometheus instance ID
-                     * @param InstanceId Prometheus instance ID
+                     * @param _instanceId Prometheus instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取<li>TKE: ID of the integrated TKE cluster</li>
                      * @return KubeClusterId <li>TKE: ID of the integrated TKE cluster</li>
+                     * 
                      */
                     std::string GetKubeClusterId() const;
 
                     /**
                      * 设置<li>TKE: ID of the integrated TKE cluster</li>
-                     * @param KubeClusterId <li>TKE: ID of the integrated TKE cluster</li>
+                     * @param _kubeClusterId <li>TKE: ID of the integrated TKE cluster</li>
+                     * 
                      */
                     void SetKubeClusterId(const std::string& _kubeClusterId);
 
                     /**
                      * 判断参数 KubeClusterId 是否已赋值
                      * @return KubeClusterId 是否已赋值
+                     * 
                      */
                     bool KubeClusterIdHasBeenSet() const;
 
@@ -83,20 +89,23 @@ namespace TencentCloud
 <li> 1 = TKE </li>
                      * @return KubeType Kubernetes cluster type:
 <li> 1 = TKE </li>
+                     * 
                      */
                     int64_t GetKubeType() const;
 
                     /**
                      * 设置Kubernetes cluster type:
 <li> 1 = TKE </li>
-                     * @param KubeType Kubernetes cluster type:
+                     * @param _kubeType Kubernetes cluster type:
 <li> 1 = TKE </li>
+                     * 
                      */
                     void SetKubeType(const int64_t& _kubeType);
 
                     /**
                      * 判断参数 KubeType 是否已赋值
                      * @return KubeType 是否已赋值
+                     * 
                      */
                     bool KubeTypeHasBeenSet() const;
 

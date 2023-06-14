@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Layer version list
                      * @return LayerVersions Layer version list
+                     * 
                      */
                     std::vector<LayerVersionInfo> GetLayerVersions() const;
 
                     /**
                      * 判断参数 LayerVersions 是否已赋值
                      * @return LayerVersions 是否已赋值
+                     * 
                      */
                     bool LayerVersionsHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The confidence score for the moderation result. Value range: 0-100.
                      * @return Confidence The confidence score for the moderation result. Value range: 0-100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置The confidence score for the moderation result. Value range: 0-100.
-                     * @param Confidence The confidence score for the moderation result. Value range: 0-100.
+                     * @param _confidence The confidence score for the moderation result. Value range: 0-100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 <li>pass/li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -81,16 +85,18 @@ namespace TencentCloud
 <li>pass/li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion The suggestion for handling the detected terrorist content. Valid values:
+                     * @param _suggestion The suggestion for handling the detected terrorist content. Valid values:
 <li>pass/li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
@@ -111,6 +117,7 @@ namespace TencentCloud
 <li>`banners`</li>
 <li>`explosion`</li>
 <li>`scenario` (terrorist scenes) </li>
+                     * 
                      */
                     std::string GetLabel() const;
 
@@ -123,7 +130,7 @@ namespace TencentCloud
 <li>`banners`</li>
 <li>`explosion`</li>
 <li>`scenario` (terrorist scenes) </li>
-                     * @param Label The label for the detected terrorist content. Valid values:
+                     * @param _label The label for the detected terrorist content. Valid values:
 <li>`guns`</li>
 <li>`crowd`</li>
 <li>`police`</li>
@@ -131,12 +138,14 @@ namespace TencentCloud
 <li>`banners`</li>
 <li>`explosion`</li>
 <li>`scenario` (terrorist scenes) </li>
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 

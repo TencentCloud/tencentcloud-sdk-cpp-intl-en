@@ -52,90 +52,105 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding rule path. Length: 1-200.
                      * @return Url Forwarding rule path. Length: 1-200.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置Forwarding rule path. Length: 1-200.
-                     * @param Url Forwarding rule path. Length: 1-200.
+                     * @param _url Forwarding rule path. Length: 1-200.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
                      * @return Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
-                     * @param Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     * @param _domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
                      * @return SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+                     * 
                      */
                     int64_t GetSessionExpireTime() const;
 
                     /**
                      * 设置Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
-                     * @param SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+                     * @param _sessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
+                     * 
                      */
                     void SetSessionExpireTime(const int64_t& _sessionExpireTime);
 
                     /**
                      * 判断参数 SessionExpireTime 是否已赋值
                      * @return SessionExpireTime 是否已赋值
+                     * 
                      */
                     bool SessionExpireTimeHasBeenSet() const;
 
                     /**
                      * 获取Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
                      * @return HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
+                     * 
                      */
                     HealthCheck GetHealthCheck() const;
 
                     /**
                      * 设置Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
-                     * @param HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
+                     * @param _healthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
+                     * 
                      */
                     void SetHealthCheck(const HealthCheck& _healthCheck);
 
                     /**
                      * 判断参数 HealthCheck 是否已赋值
                      * @return HealthCheck 是否已赋值
+                     * 
                      */
                     bool HealthCheckHasBeenSet() const;
 
                     /**
                      * 获取Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      * @return Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 
                      */
                     CertificateInput GetCertificate() const;
 
                     /**
                      * 设置Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-                     * @param Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @param _certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 
                      */
                     void SetCertificate(const CertificateInput& _certificate);
 
                     /**
                      * 判断参数 Certificate 是否已赋值
                      * @return Certificate 是否已赋值
+                     * 
                      */
                     bool CertificateHasBeenSet() const;
 
@@ -144,182 +159,212 @@ namespace TencentCloud
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
                      * @return Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
+                     * 
                      */
                     std::string GetScheduler() const;
 
                     /**
                      * 设置Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
-                     * @param Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
+                     * @param _scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
+                     * 
                      */
                     void SetScheduler(const std::string& _scheduler);
 
                     /**
                      * 判断参数 Scheduler 是否已赋值
                      * @return Scheduler 是否已赋值
+                     * 
                      */
                     bool SchedulerHasBeenSet() const;
 
                     /**
                      * 获取Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
                      * @return ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+                     * 
                      */
                     std::string GetForwardType() const;
 
                     /**
                      * 设置Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
-                     * @param ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+                     * @param _forwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+                     * 
                      */
                     void SetForwardType(const std::string& _forwardType);
 
                     /**
                      * 判断参数 ForwardType 是否已赋值
                      * @return ForwardType 是否已赋值
+                     * 
                      */
                     bool ForwardTypeHasBeenSet() const;
 
                     /**
                      * 获取Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
                      * @return DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+                     * 
                      */
                     bool GetDefaultServer() const;
 
                     /**
                      * 设置Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
-                     * @param DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+                     * @param _defaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+                     * 
                      */
                     void SetDefaultServer(const bool& _defaultServer);
 
                     /**
                      * 判断参数 DefaultServer 是否已赋值
                      * @return DefaultServer 是否已赋值
+                     * 
                      */
                     bool DefaultServerHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
                      * @return Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+                     * 
                      */
                     bool GetHttp2() const;
 
                     /**
                      * 设置Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
-                     * @param Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+                     * @param _http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+                     * 
                      */
                     void SetHttp2(const bool& _http2);
 
                     /**
                      * 判断参数 Http2 是否已赋值
                      * @return Http2 是否已赋值
+                     * 
                      */
                     bool Http2HasBeenSet() const;
 
                     /**
                      * 获取Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
                      * @return TargetType Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
+                     * 
                      */
                     std::string GetTargetType() const;
 
                     /**
                      * 设置Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
-                     * @param TargetType Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
+                     * @param _targetType Target real server type. NODE: binding a general node; TARGETGROUP: binding a target group.
+                     * 
                      */
                     void SetTargetType(const std::string& _targetType);
 
                     /**
                      * 判断参数 TargetType 是否已赋值
                      * @return TargetType 是否已赋值
+                     * 
                      */
                     bool TargetTypeHasBeenSet() const;
 
                     /**
                      * 获取TRPC callee server route, which is required when `ForwardType` is `TRPC`.
                      * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * 
                      */
                     std::string GetTrpcCallee() const;
 
                     /**
                      * 设置TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-                     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * @param _trpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+                     * 
                      */
                     void SetTrpcCallee(const std::string& _trpcCallee);
 
                     /**
                      * 判断参数 TrpcCallee 是否已赋值
                      * @return TrpcCallee 是否已赋值
+                     * 
                      */
                     bool TrpcCalleeHasBeenSet() const;
 
                     /**
                      * 获取TRPC calling service API, which is required when `ForwardType` is `TRPC`.
                      * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * 
                      */
                     std::string GetTrpcFunc() const;
 
                     /**
                      * 设置TRPC calling service API, which is required when `ForwardType` is `TRPC`.
-                     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * @param _trpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+                     * 
                      */
                     void SetTrpcFunc(const std::string& _trpcFunc);
 
                     /**
                      * 判断参数 TrpcFunc 是否已赋值
                      * @return TrpcFunc 是否已赋值
+                     * 
                      */
                     bool TrpcFuncHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
                      * @return Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+                     * 
                      */
                     bool GetQuic() const;
 
                     /**
                      * 设置Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
-                     * @param Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+                     * @param _quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+                     * 
                      */
                     void SetQuic(const bool& _quic);
 
                     /**
                      * 判断参数 Quic 是否已赋值
                      * @return Quic 是否已赋值
+                     * 
                      */
                     bool QuicHasBeenSet() const;
 
                     /**
                      * 获取The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
                      * @return Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
-                     * @param Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+                     * @param _domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      * @return MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 
                      */
                     MultiCertInfo GetMultiCertInfo() const;
 
                     /**
                      * 设置Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
-                     * @param MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @param _multiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * 
                      */
                     void SetMultiCertInfo(const MultiCertInfo& _multiCertInfo);
 
                     /**
                      * 判断参数 MultiCertInfo 是否已赋值
                      * @return MultiCertInfo 是否已赋值
+                     * 
                      */
                     bool MultiCertInfoHasBeenSet() const;
 

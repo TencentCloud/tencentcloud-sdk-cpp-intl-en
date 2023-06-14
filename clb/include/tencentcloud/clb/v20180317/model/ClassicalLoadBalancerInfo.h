@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Real server ID
                      * @return InstanceId Real server ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Real server ID
-                     * @param InstanceId Real server ID
+                     * @param _instanceId Real server ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
@@ -69,20 +72,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LoadBalancerIds List of CLB instance IDs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
                      * 设置List of CLB instance IDs
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LoadBalancerIds List of CLB instance IDs
+                     * @param _loadBalancerIds List of CLB instance IDs
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
                     /**
                      * 判断参数 LoadBalancerIds 是否已赋值
                      * @return LoadBalancerIds 是否已赋值
+                     * 
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 

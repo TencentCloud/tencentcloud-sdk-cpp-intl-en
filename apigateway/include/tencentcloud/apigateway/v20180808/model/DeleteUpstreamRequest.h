@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取ID of the upstream to be deleted
                      * @return UpstreamId ID of the upstream to be deleted
+                     * 
                      */
                     std::string GetUpstreamId() const;
 
                     /**
                      * 设置ID of the upstream to be deleted
-                     * @param UpstreamId ID of the upstream to be deleted
+                     * @param _upstreamId ID of the upstream to be deleted
+                     * 
                      */
                     void SetUpstreamId(const std::string& _upstreamId);
 
                     /**
                      * 判断参数 UpstreamId 是否已赋值
                      * @return UpstreamId 是否已赋值
+                     * 
                      */
                     bool UpstreamIdHasBeenSet() const;
 

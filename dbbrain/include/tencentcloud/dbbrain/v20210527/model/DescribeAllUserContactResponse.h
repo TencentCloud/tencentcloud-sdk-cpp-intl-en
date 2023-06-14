@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of recipients.
                      * @return TotalCount Total number of recipients.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Contacts Recipient information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ContactItem> GetContacts() const;
 
                     /**
                      * 判断参数 Contacts 是否已赋值
                      * @return Contacts 是否已赋值
+                     * 
                      */
                     bool ContactsHasBeenSet() const;
 

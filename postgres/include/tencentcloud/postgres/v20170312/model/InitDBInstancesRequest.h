@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID set.
                      * @return DBInstanceIdSet Instance ID set.
+                     * 
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
                      * 设置Instance ID set.
-                     * @param DBInstanceIdSet Instance ID set.
+                     * @param _dBInstanceIdSet Instance ID set.
+                     * 
                      */
                     void SetDBInstanceIdSet(const std::vector<std::string>& _dBInstanceIdSet);
 
                     /**
                      * 判断参数 DBInstanceIdSet 是否已赋值
                      * @return DBInstanceIdSet 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取Instance admin account username.
                      * @return AdminName Instance admin account username.
+                     * 
                      */
                     std::string GetAdminName() const;
 
                     /**
                      * 设置Instance admin account username.
-                     * @param AdminName Instance admin account username.
+                     * @param _adminName Instance admin account username.
+                     * 
                      */
                     void SetAdminName(const std::string& _adminName);
 
                     /**
                      * 判断参数 AdminName 是否已赋值
                      * @return AdminName 是否已赋值
+                     * 
                      */
                     bool AdminNameHasBeenSet() const;
 
                     /**
                      * 获取Password corresponding to instance root account username.
                      * @return AdminPassword Password corresponding to instance root account username.
+                     * 
                      */
                     std::string GetAdminPassword() const;
 
                     /**
                      * 设置Password corresponding to instance root account username.
-                     * @param AdminPassword Password corresponding to instance root account username.
+                     * @param _adminPassword Password corresponding to instance root account username.
+                     * 
                      */
                     void SetAdminPassword(const std::string& _adminPassword);
 
                     /**
                      * 判断参数 AdminPassword 是否已赋值
                      * @return AdminPassword 是否已赋值
+                     * 
                      */
                     bool AdminPasswordHasBeenSet() const;
 
                     /**
                      * 获取Instance character set. Valid values: UTF8, LATIN1.
                      * @return Charset Instance character set. Valid values: UTF8, LATIN1.
+                     * 
                      */
                     std::string GetCharset() const;
 
                     /**
                      * 设置Instance character set. Valid values: UTF8, LATIN1.
-                     * @param Charset Instance character set. Valid values: UTF8, LATIN1.
+                     * @param _charset Instance character set. Valid values: UTF8, LATIN1.
+                     * 
                      */
                     void SetCharset(const std::string& _charset);
 
                     /**
                      * 判断参数 Charset 是否已赋值
                      * @return Charset 是否已赋值
+                     * 
                      */
                     bool CharsetHasBeenSet() const;
 

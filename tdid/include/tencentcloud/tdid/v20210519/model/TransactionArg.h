@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The credential ID.
                      * @return InvokerTDid The credential ID.
+                     * 
                      */
                     std::string GetInvokerTDid() const;
 
                     /**
                      * 设置The credential ID.
-                     * @param InvokerTDid The credential ID.
+                     * @param _invokerTDid The credential ID.
+                     * 
                      */
                     void SetInvokerTDid(const std::string& _invokerTDid);
 
                     /**
                      * 判断参数 InvokerTDid 是否已赋值
                      * @return InvokerTDid 是否已赋值
+                     * 
                      */
                     bool InvokerTDidHasBeenSet() const;
 

@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Backup type. Automatic backup type: 1 (scheduled rollback)
                      * @return AutoBackupType Backup type. Automatic backup type: 1 (scheduled rollback)
+                     * 
                      */
                     int64_t GetAutoBackupType() const;
 
                     /**
                      * 判断参数 AutoBackupType 是否已赋值
                      * @return AutoBackupType 是否已赋值
+                     * 
                      */
                     bool AutoBackupTypeHasBeenSet() const;
 
                     /**
                      * 获取Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
                      * @return WeekDays Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+                     * 
                      */
                     std::vector<std::string> GetWeekDays() const;
 
                     /**
                      * 判断参数 WeekDays 是否已赋值
                      * @return WeekDays 是否已赋值
+                     * 
                      */
                     bool WeekDaysHasBeenSet() const;
 
                     /**
                      * 获取Time period.
                      * @return TimePeriod Time period.
+                     * 
                      */
                     std::string GetTimePeriod() const;
 
                     /**
                      * 判断参数 TimePeriod 是否已赋值
                      * @return TimePeriod 是否已赋值
+                     * 
                      */
                     bool TimePeriodHasBeenSet() const;
 
                     /**
                      * 获取Number of days to retain full backup files
                      * @return BackupStorageDays Number of days to retain full backup files
+                     * 
                      */
                     int64_t GetBackupStorageDays() const;
 
                     /**
                      * 判断参数 BackupStorageDays 是否已赋值
                      * @return BackupStorageDays 是否已赋值
+                     * 
                      */
                     bool BackupStorageDaysHasBeenSet() const;
 
                     /**
                      * 获取Number of days to retain Tendis binlog backup files
                      * @return BinlogStorageDays Number of days to retain Tendis binlog backup files
+                     * 
                      */
                     int64_t GetBinlogStorageDays() const;
 
                     /**
                      * 判断参数 BinlogStorageDays 是否已赋值
                      * @return BinlogStorageDays 是否已赋值
+                     * 
                      */
                     bool BinlogStorageDaysHasBeenSet() const;
 

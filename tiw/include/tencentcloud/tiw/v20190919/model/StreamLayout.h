@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Stream layout configuration
                      * @return LayoutParams Stream layout configuration
+                     * 
                      */
                     LayoutParams GetLayoutParams() const;
 
                     /**
                      * 设置Stream layout configuration
-                     * @param LayoutParams Stream layout configuration
+                     * @param _layoutParams Stream layout configuration
+                     * 
                      */
                     void SetLayoutParams(const LayoutParams& _layoutParams);
 
                     /**
                      * 判断参数 LayoutParams 是否已赋值
                      * @return LayoutParams 是否已赋值
+                     * 
                      */
                     bool LayoutParamsHasBeenSet() const;
 
@@ -78,6 +81,7 @@ Description of the possible video stream ID values:
 2. tic_substream: the current picture is used to display the auxiliary video stream.
 3. Specific user ID: the current picture is used to display the video stream of a specific user.
 4.Left empty: the current picture is vacant for new video stream.
+                     * 
                      */
                     std::string GetInputStreamId() const;
 
@@ -88,36 +92,41 @@ Description of the possible video stream ID values:
 2. tic_substream: the current picture is used to display the auxiliary video stream.
 3. Specific user ID: the current picture is used to display the video stream of a specific user.
 4.Left empty: the current picture is vacant for new video stream.
-                     * @param InputStreamId Video stream ID
+                     * @param _inputStreamId Video stream ID
 Description of the possible video stream ID values:
 1. tic_record_user: the current picture is used to display the whiteboard video stream.
 2. tic_substream: the current picture is used to display the auxiliary video stream.
 3. Specific user ID: the current picture is used to display the video stream of a specific user.
 4.Left empty: the current picture is vacant for new video stream.
+                     * 
                      */
                     void SetInputStreamId(const std::string& _inputStreamId);
 
                     /**
                      * 判断参数 InputStreamId 是否已赋值
                      * @return InputStreamId 是否已赋值
+                     * 
                      */
                     bool InputStreamIdHasBeenSet() const;
 
                     /**
                      * 获取Background color in RGB format, such as "#FF0000" for red. The default color is black. 
                      * @return BackgroundColor Background color in RGB format, such as "#FF0000" for red. The default color is black. 
+                     * 
                      */
                     std::string GetBackgroundColor() const;
 
                     /**
                      * 设置Background color in RGB format, such as "#FF0000" for red. The default color is black. 
-                     * @param BackgroundColor Background color in RGB format, such as "#FF0000" for red. The default color is black. 
+                     * @param _backgroundColor Background color in RGB format, such as "#FF0000" for red. The default color is black. 
+                     * 
                      */
                     void SetBackgroundColor(const std::string& _backgroundColor);
 
                     /**
                      * 判断参数 BackgroundColor 是否已赋值
                      * @return BackgroundColor 是否已赋值
+                     * 
                      */
                     bool BackgroundColorHasBeenSet() const;
 
@@ -130,6 +139,7 @@ Description of the possible video stream ID values:
 
 0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
 1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+                     * 
                      */
                     int64_t GetFillMode() const;
 
@@ -138,16 +148,18 @@ Description of the possible video stream ID values:
 
 0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
 1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
-                     * @param FillMode Video filling mode.
+                     * @param _fillMode Video filling mode.
 
 0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
 1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+                     * 
                      */
                     void SetFillMode(const int64_t& _fillMode);
 
                     /**
                      * 判断参数 FillMode 是否已赋值
                      * @return FillMode 是否已赋值
+                     * 
                      */
                     bool FillModeHasBeenSet() const;
 

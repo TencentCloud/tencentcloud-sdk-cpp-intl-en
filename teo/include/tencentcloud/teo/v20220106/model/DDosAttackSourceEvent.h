@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackSourceIp Attack source IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttackSourceIp() const;
 
                     /**
                      * 设置Attack source IP
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackSourceIp Attack source IP
+                     * @param _attackSourceIp Attack source IP
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackSourceIp(const std::string& _attackSourceIp);
 
                     /**
                      * 判断参数 AttackSourceIp 是否已赋值
                      * @return AttackSourceIp 是否已赋值
+                     * 
                      */
                     bool AttackSourceIpHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackRegion Country/Region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAttackRegion() const;
 
                     /**
                      * 设置Country/Region
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackRegion Country/Region
+                     * @param _attackRegion Country/Region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackRegion(const std::string& _attackRegion);
 
                     /**
                      * 判断参数 AttackRegion 是否已赋值
                      * @return AttackRegion 是否已赋值
+                     * 
                      */
                     bool AttackRegionHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackFlow Accumulative attack traffic
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAttackFlow() const;
 
                     /**
                      * 设置Accumulative attack traffic
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackFlow Accumulative attack traffic
+                     * @param _attackFlow Accumulative attack traffic
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackFlow(const uint64_t& _attackFlow);
 
                     /**
                      * 判断参数 AttackFlow 是否已赋值
                      * @return AttackFlow 是否已赋值
+                     * 
                      */
                     bool AttackFlowHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AttackPacketNum Accumulative number of attack packets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetAttackPacketNum() const;
 
                     /**
                      * 设置Accumulative number of attack packets
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackPacketNum Accumulative number of attack packets
+                     * @param _attackPacketNum Accumulative number of attack packets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAttackPacketNum(const uint64_t& _attackPacketNum);
 
                     /**
                      * 判断参数 AttackPacketNum 是否已赋值
                      * @return AttackPacketNum 是否已赋值
+                     * 
                      */
                     bool AttackPacketNumHasBeenSet() const;
 

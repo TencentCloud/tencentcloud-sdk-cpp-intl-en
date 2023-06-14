@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid value was found.
                      * @return IsScaleDownEnabled Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     bool GetIsScaleDownEnabled() const;
 
                     /**
                      * 设置Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @param IsScaleDownEnabled Whether to enable scale-in
+                     * @param _isScaleDownEnabled Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetIsScaleDownEnabled(const bool& _isScaleDownEnabled);
 
                     /**
                      * 判断参数 IsScaleDownEnabled 是否已赋值
                      * @return IsScaleDownEnabled 是否已赋值
+                     * 
                      */
                     bool IsScaleDownEnabledHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return Expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetExpander() const;
 
                     /**
                      * 设置The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param Expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
+                     * @param _expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetExpander(const std::string& _expander);
 
                     /**
                      * 判断参数 Expander 是否已赋值
                      * @return Expander 是否已赋值
+                     * 
                      */
                     bool ExpanderHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return MaxEmptyBulkDelete Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetMaxEmptyBulkDelete() const;
 
                     /**
                      * 设置Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
-                     * @param MaxEmptyBulkDelete Max concurrent scale-in volume
+                     * @param _maxEmptyBulkDelete Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetMaxEmptyBulkDelete(const int64_t& _maxEmptyBulkDelete);
 
                     /**
                      * 判断参数 MaxEmptyBulkDelete 是否已赋值
                      * @return MaxEmptyBulkDelete 是否已赋值
+                     * 
                      */
                     bool MaxEmptyBulkDeleteHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return ScaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetScaleDownDelay() const;
 
                     /**
                      * 设置Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ScaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
+                     * @param _scaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetScaleDownDelay(const int64_t& _scaleDownDelay);
 
                     /**
                      * 判断参数 ScaleDownDelay 是否已赋值
                      * @return ScaleDownDelay 是否已赋值
+                     * 
                      */
                     bool ScaleDownDelayHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetScaleDownUnneededTime() const;
 
                     /**
                      * 设置Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
+                     * @param _scaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetScaleDownUnneededTime(const int64_t& _scaleDownUnneededTime);
 
                     /**
                      * 判断参数 ScaleDownUnneededTime 是否已赋值
                      * @return ScaleDownUnneededTime 是否已赋值
+                     * 
                      */
                     bool ScaleDownUnneededTimeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return ScaleDownUtilizationThreshold Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetScaleDownUtilizationThreshold() const;
 
                     /**
                      * 设置Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ScaleDownUtilizationThreshold Percentage of node resource usage below which the node is considered to be idle (default value: 50)
+                     * @param _scaleDownUtilizationThreshold Percentage of node resource usage below which the node is considered to be idle (default value: 50)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetScaleDownUtilizationThreshold(const int64_t& _scaleDownUtilizationThreshold);
 
                     /**
                      * 判断参数 ScaleDownUtilizationThreshold 是否已赋值
                      * @return ScaleDownUtilizationThreshold 是否已赋值
+                     * 
                      */
                     bool ScaleDownUtilizationThresholdHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     bool GetSkipNodesWithLocalStorage() const;
 
                     /**
                      * 设置During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
+                     * @param _skipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetSkipNodesWithLocalStorage(const bool& _skipNodesWithLocalStorage);
 
                     /**
                      * 判断参数 SkipNodesWithLocalStorage 是否已赋值
                      * @return SkipNodesWithLocalStorage 是否已赋值
+                     * 
                      */
                     bool SkipNodesWithLocalStorageHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     bool GetSkipNodesWithSystemPods() const;
 
                     /**
                      * 设置During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+                     * @param _skipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetSkipNodesWithSystemPods(const bool& _skipNodesWithSystemPods);
 
                     /**
                      * 判断参数 SkipNodesWithSystemPods 是否已赋值
                      * @return SkipNodesWithSystemPods 是否已赋值
+                     * 
                      */
                     bool SkipNodesWithSystemPodsHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return IgnoreDaemonSetsUtilization Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     bool GetIgnoreDaemonSetsUtilization() const;
 
                     /**
                      * 设置Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
 Note: this field may return null, indicating that no valid value was found.
-                     * @param IgnoreDaemonSetsUtilization Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
+                     * @param _ignoreDaemonSetsUtilization Whether to ignore DaemonSet pods by default when calculating resource usage (default value: False: do not ignore)
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetIgnoreDaemonSetsUtilization(const bool& _ignoreDaemonSetsUtilization);
 
                     /**
                      * 判断参数 IgnoreDaemonSetsUtilization 是否已赋值
                      * @return IgnoreDaemonSetsUtilization 是否已赋值
+                     * 
                      */
                     bool IgnoreDaemonSetsUtilizationHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return OkTotalUnreadyCount Number at which CA health detection is triggered (default value: 3). After the number specified in OkTotalUnreadyCount is exceeded, CA will perform health detection.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetOkTotalUnreadyCount() const;
 
                     /**
                      * 设置Number at which CA health detection is triggered (default value: 3). After the number specified in OkTotalUnreadyCount is exceeded, CA will perform health detection.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param OkTotalUnreadyCount Number at which CA health detection is triggered (default value: 3). After the number specified in OkTotalUnreadyCount is exceeded, CA will perform health detection.
+                     * @param _okTotalUnreadyCount Number at which CA health detection is triggered (default value: 3). After the number specified in OkTotalUnreadyCount is exceeded, CA will perform health detection.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetOkTotalUnreadyCount(const int64_t& _okTotalUnreadyCount);
 
                     /**
                      * 判断参数 OkTotalUnreadyCount 是否已赋值
                      * @return OkTotalUnreadyCount 是否已赋值
+                     * 
                      */
                     bool OkTotalUnreadyCountHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return MaxTotalUnreadyPercentage Max percentage of unready nodes. After the max percentage is exceeded, CA will stop operation.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetMaxTotalUnreadyPercentage() const;
 
                     /**
                      * 设置Max percentage of unready nodes. After the max percentage is exceeded, CA will stop operation.
 Note: this field may return null, indicating that no valid value was found.
-                     * @param MaxTotalUnreadyPercentage Max percentage of unready nodes. After the max percentage is exceeded, CA will stop operation.
+                     * @param _maxTotalUnreadyPercentage Max percentage of unready nodes. After the max percentage is exceeded, CA will stop operation.
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetMaxTotalUnreadyPercentage(const int64_t& _maxTotalUnreadyPercentage);
 
                     /**
                      * 判断参数 MaxTotalUnreadyPercentage 是否已赋值
                      * @return MaxTotalUnreadyPercentage 是否已赋值
+                     * 
                      */
                     bool MaxTotalUnreadyPercentageHasBeenSet() const;
 
@@ -293,20 +326,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetScaleDownUnreadyTime() const;
 
                     /**
                      * 设置Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
-                     * @param ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
+                     * @param _scaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetScaleDownUnreadyTime(const int64_t& _scaleDownUnreadyTime);
 
                     /**
                      * 判断参数 ScaleDownUnreadyTime 是否已赋值
                      * @return ScaleDownUnreadyTime 是否已赋值
+                     * 
                      */
                     bool ScaleDownUnreadyTimeHasBeenSet() const;
 
@@ -315,20 +351,23 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
                      * @return UnregisteredNodeRemovalTime Waiting time before CA deletes nodes that are not registered in Kubernetes
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetUnregisteredNodeRemovalTime() const;
 
                     /**
                      * 设置Waiting time before CA deletes nodes that are not registered in Kubernetes
 Note: this field may return null, indicating that no valid value was found.
-                     * @param UnregisteredNodeRemovalTime Waiting time before CA deletes nodes that are not registered in Kubernetes
+                     * @param _unregisteredNodeRemovalTime Waiting time before CA deletes nodes that are not registered in Kubernetes
 Note: this field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUnregisteredNodeRemovalTime(const int64_t& _unregisteredNodeRemovalTime);
 
                     /**
                      * 判断参数 UnregisteredNodeRemovalTime 是否已赋值
                      * @return UnregisteredNodeRemovalTime 是否已赋值
+                     * 
                      */
                     bool UnregisteredNodeRemovalTimeHasBeenSet() const;
 

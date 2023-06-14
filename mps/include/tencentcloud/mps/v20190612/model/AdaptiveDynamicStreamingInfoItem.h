@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Adaptive bitrate streaming specification.
                      * @return Definition Adaptive bitrate streaming specification.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Adaptive bitrate streaming specification.
-                     * @param Definition Adaptive bitrate streaming specification.
+                     * @param _definition Adaptive bitrate streaming specification.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 
                     /**
                      * 获取Container format. Valid values: HLS, MPEG-DASH.
                      * @return Package Container format. Valid values: HLS, MPEG-DASH.
+                     * 
                      */
                     std::string GetPackage() const;
 
                     /**
                      * 设置Container format. Valid values: HLS, MPEG-DASH.
-                     * @param Package Container format. Valid values: HLS, MPEG-DASH.
+                     * @param _package Container format. Valid values: HLS, MPEG-DASH.
+                     * 
                      */
                     void SetPackage(const std::string& _package);
 
                     /**
                      * 判断参数 Package 是否已赋值
                      * @return Package 是否已赋值
+                     * 
                      */
                     bool PackageHasBeenSet() const;
 
                     /**
                      * 获取Playback address.
                      * @return Path Playback address.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Playback address.
-                     * @param Path Playback address.
+                     * @param _path Playback address.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Storage location of adaptive bitrate streaming files.
                      * @return Storage Storage location of adaptive bitrate streaming files.
+                     * 
                      */
                     TaskOutputStorage GetStorage() const;
 
                     /**
                      * 设置Storage location of adaptive bitrate streaming files.
-                     * @param Storage Storage location of adaptive bitrate streaming files.
+                     * @param _storage Storage location of adaptive bitrate streaming files.
+                     * 
                      */
                     void SetStorage(const TaskOutputStorage& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 

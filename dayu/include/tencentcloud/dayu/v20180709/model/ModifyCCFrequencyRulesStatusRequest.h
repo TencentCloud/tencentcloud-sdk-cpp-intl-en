@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
                      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     std::string GetBusiness() const;
 
                     /**
                      * 设置Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
-                     * @param Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * @param _business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `net`: Anti-DDoS Ultimate
+                     * 
                      */
                     void SetBusiness(const std::string& _business);
 
                     /**
                      * 判断参数 Business 是否已赋值
                      * @return Business 是否已赋值
+                     * 
                      */
                     bool BusinessHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID
                      * @return Id Anti-DDoS instance ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID
-                     * @param Id Anti-DDoS instance ID
+                     * @param _id Anti-DDoS instance ID
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Layer-7 forwarding rule ID, which can be obtained through the `DescribleL7Rules` API
                      * @return RuleId Layer-7 forwarding rule ID, which can be obtained through the `DescribleL7Rules` API
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Layer-7 forwarding rule ID, which can be obtained through the `DescribleL7Rules` API
-                     * @param RuleId Layer-7 forwarding rule ID, which can be obtained through the `DescribleL7Rules` API
+                     * @param _ruleId Layer-7 forwarding rule ID, which can be obtained through the `DescribleL7Rules` API
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Enables or disable. Valid values: ["on", "off"]
                      * @return Method Enables or disable. Valid values: ["on", "off"]
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Enables or disable. Valid values: ["on", "off"]
-                     * @param Method Enables or disable. Valid values: ["on", "off"]
+                     * @param _method Enables or disable. Valid values: ["on", "off"]
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 

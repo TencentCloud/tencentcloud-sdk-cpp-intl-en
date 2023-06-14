@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DomainLogs Log link list.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DomainLogs> GetDomainLogs() const;
 
                     /**
                      * 判断参数 DomainLogs 是否已赋值
                      * @return DomainLogs 是否已赋值
+                     * 
                      */
                     bool DomainLogsHasBeenSet() const;
 
                     /**
                      * 获取Total number of log links.
                      * @return TotalCount Total number of log links.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

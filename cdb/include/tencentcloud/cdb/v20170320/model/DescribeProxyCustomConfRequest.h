@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Paginated query offset
                      * @return Offset Paginated query offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Paginated query offset
-                     * @param Offset Paginated query offset
+                     * @param _offset Paginated query offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum entries returned per page
                      * @return Limit Maximum entries returned per page
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum entries returned per page
-                     * @param Limit Maximum entries returned per page
+                     * @param _limit Maximum entries returned per page
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

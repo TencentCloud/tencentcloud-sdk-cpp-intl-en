@@ -51,36 +51,42 @@ namespace TencentCloud
                     /**
                      * 获取Statistics on the DNS query volume of a subdomain
                      * @return Info Statistics on the DNS query volume of a subdomain
+                     * 
                      */
                     SubdomainAnalyticsInfo GetInfo() const;
 
                     /**
                      * 设置Statistics on the DNS query volume of a subdomain
-                     * @param Info Statistics on the DNS query volume of a subdomain
+                     * @param _info Statistics on the DNS query volume of a subdomain
+                     * 
                      */
                     void SetInfo(const SubdomainAnalyticsInfo& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 
                     /**
                      * 获取DNS query volume in the current statistical dimension
                      * @return Data DNS query volume in the current statistical dimension
+                     * 
                      */
                     std::vector<DomainAnalyticsDetail> GetData() const;
 
                     /**
                      * 设置DNS query volume in the current statistical dimension
-                     * @param Data DNS query volume in the current statistical dimension
+                     * @param _data DNS query volume in the current statistical dimension
+                     * 
                      */
                     void SetData(const std::vector<DomainAnalyticsDetail>& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

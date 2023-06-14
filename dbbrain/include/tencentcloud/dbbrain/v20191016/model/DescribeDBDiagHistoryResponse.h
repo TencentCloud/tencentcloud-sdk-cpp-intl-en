@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Event description.
                      * @return Events Event description.
+                     * 
                      */
                     std::vector<DiagHistoryEventItem> GetEvents() const;
 
                     /**
                      * 判断参数 Events 是否已赋值
                      * @return Events 是否已赋值
+                     * 
                      */
                     bool EventsHasBeenSet() const;
 

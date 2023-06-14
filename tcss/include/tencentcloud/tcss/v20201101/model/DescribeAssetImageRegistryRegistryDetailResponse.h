@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Repository name
                      * @return Name Repository name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Username
                      * @return Username Username
+                     * 
                      */
                     std::string GetUsername() const;
 
                     /**
                      * 判断参数 Username 是否已赋值
                      * @return Username 是否已赋值
+                     * 
                      */
                     bool UsernameHasBeenSet() const;
 
                     /**
                      * 获取Password
                      * @return Password Password
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Repository URL
                      * @return Url Repository URL
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Repository type, which can be `harbor`.
                      * @return RegistryType Repository type, which can be `harbor`.
+                     * 
                      */
                     std::string GetRegistryType() const;
 
                     /**
                      * 判断参数 RegistryType 是否已赋值
                      * @return RegistryType 是否已赋值
+                     * 
                      */
                     bool RegistryTypeHasBeenSet() const;
 
@@ -108,24 +118,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegistryVersion Repository version
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegistryVersion() const;
 
                     /**
                      * 判断参数 RegistryVersion 是否已赋值
                      * @return RegistryVersion 是否已赋值
+                     * 
                      */
                     bool RegistryVersionHasBeenSet() const;
 
                     /**
                      * 获取Network type, which can be `public` (public network).
                      * @return NetType Network type, which can be `public` (public network).
+                     * 
                      */
                     std::string GetNetType() const;
 
                     /**
                      * 判断参数 NetType 是否已赋值
                      * @return NetType 是否已赋值
+                     * 
                      */
                     bool NetTypeHasBeenSet() const;
 
@@ -134,12 +148,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegistryRegion Region. Default value: `default`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegistryRegion() const;
 
                     /**
                      * 判断参数 RegistryRegion 是否已赋值
                      * @return RegistryRegion 是否已赋值
+                     * 
                      */
                     bool RegistryRegionHasBeenSet() const;
 
@@ -148,12 +164,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SpeedLimit Speed limit
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSpeedLimit() const;
 
                     /**
                      * 判断参数 SpeedLimit 是否已赋值
                      * @return SpeedLimit 是否已赋值
+                     * 
                      */
                     bool SpeedLimitHasBeenSet() const;
 
@@ -162,12 +180,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetInsecure() const;
 
                     /**
                      * 判断参数 Insecure 是否已赋值
                      * @return Insecure 是否已赋值
+                     * 
                      */
                     bool InsecureHasBeenSet() const;
 

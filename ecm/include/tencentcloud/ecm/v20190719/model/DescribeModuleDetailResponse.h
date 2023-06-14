@@ -50,12 +50,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Module Module details. For more information, see `ModuleInfo` in the data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Module GetModule() const;
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
@@ -64,12 +66,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ModuleCounter Module statistics. For more information, see `ModuleCounterInfo` in the data structure.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ModuleCounter GetModuleCounter() const;
 
                     /**
                      * 判断参数 ModuleCounter 是否已赋值
                      * @return ModuleCounter 是否已赋值
+                     * 
                      */
                     bool ModuleCounterHasBeenSet() const;
 

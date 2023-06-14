@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of GC jobs
                      * @return Jobs List of GC jobs
+                     * 
                      */
                     std::vector<GCJobInfo> GetJobs() const;
 
                     /**
                      * 判断参数 Jobs 是否已赋值
                      * @return Jobs 是否已赋值
+                     * 
                      */
                     bool JobsHasBeenSet() const;
 

@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取Policy, Valid values: `ACCEPT`, `DROP`.
                      * @return Action Policy, Valid values: `ACCEPT`, `DROP`.
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Policy, Valid values: `ACCEPT`, `DROP`.
-                     * @param Action Policy, Valid values: `ACCEPT`, `DROP`.
+                     * @param _action Policy, Valid values: `ACCEPT`, `DROP`.
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Source or destination IP or IP range, such as 172.16.0.0/12.
                      * @return CidrIp Source or destination IP or IP range, such as 172.16.0.0/12.
+                     * 
                      */
                     std::string GetCidrIp() const;
 
                     /**
                      * 设置Source or destination IP or IP range, such as 172.16.0.0/12.
-                     * @param CidrIp Source or destination IP or IP range, such as 172.16.0.0/12.
+                     * @param _cidrIp Source or destination IP or IP range, such as 172.16.0.0/12.
+                     * 
                      */
                     void SetCidrIp(const std::string& _cidrIp);
 
                     /**
                      * 判断参数 CidrIp 是否已赋值
                      * @return CidrIp 是否已赋值
+                     * 
                      */
                     bool CidrIpHasBeenSet() const;
 
                     /**
                      * 获取Port
                      * @return PortRange Port
+                     * 
                      */
                     std::string GetPortRange() const;
 
                     /**
                      * 设置Port
-                     * @param PortRange Port
+                     * @param _portRange Port
+                     * 
                      */
                     void SetPortRange(const std::string& _portRange);
 
                     /**
                      * 判断参数 PortRange 是否已赋值
                      * @return PortRange 是否已赋值
+                     * 
                      */
                     bool PortRangeHasBeenSet() const;
 
                     /**
                      * 获取Network protocol. UDP and TCP are supported.
                      * @return IpProtocol Network protocol. UDP and TCP are supported.
+                     * 
                      */
                     std::string GetIpProtocol() const;
 
                     /**
                      * 设置Network protocol. UDP and TCP are supported.
-                     * @param IpProtocol Network protocol. UDP and TCP are supported.
+                     * @param _ipProtocol Network protocol. UDP and TCP are supported.
+                     * 
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
 
                     /**
                      * 判断参数 IpProtocol 是否已赋值
                      * @return IpProtocol 是否已赋值
+                     * 
                      */
                     bool IpProtocolHasBeenSet() const;
 
                     /**
                      * 获取The rule description
                      * @return Description The rule description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置The rule description
-                     * @param Description The rule description
+                     * @param _description The rule description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

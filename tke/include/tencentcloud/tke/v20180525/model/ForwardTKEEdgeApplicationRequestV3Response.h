@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Data returned after requesting the cluster add-on
                      * @return ResponseBody Data returned after requesting the cluster add-on
+                     * 
                      */
                     std::string GetResponseBody() const;
 
                     /**
                      * 判断参数 ResponseBody 是否已赋值
                      * @return ResponseBody 是否已赋值
+                     * 
                      */
                     bool ResponseBodyHasBeenSet() const;
 

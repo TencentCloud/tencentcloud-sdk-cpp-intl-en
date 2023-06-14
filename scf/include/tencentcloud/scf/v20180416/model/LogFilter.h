@@ -61,6 +61,7 @@ TimeLimitExceeded, indicating that logs of function invocations which timed out 
 ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
 UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
 Blank, indicating that all logs will be returned.
+                     * 
                      */
                     std::string GetRetCode() const;
 
@@ -72,19 +73,21 @@ TimeLimitExceeded, indicating that logs of function invocations which timed out 
 ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
 UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
 Blank, indicating that all logs will be returned.
-                     * @param RetCode Values of `filter.RetCode` include:
+                     * @param _retCode Values of `filter.RetCode` include:
 not0, indicating that only logs of failed execution will be returned.
 is0, indicating that only logs of successful execution will be returned.
 TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
 ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
 UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
 Blank, indicating that all logs will be returned.
+                     * 
                      */
                     void SetRetCode(const std::string& _retCode);
 
                     /**
                      * 判断参数 RetCode 是否已赋值
                      * @return RetCode 是否已赋值
+                     * 
                      */
                     bool RetCodeHasBeenSet() const;
 

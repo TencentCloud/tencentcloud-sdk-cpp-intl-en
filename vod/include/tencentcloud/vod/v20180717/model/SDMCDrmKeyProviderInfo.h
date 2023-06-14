@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The user ID assigned by SDMC, which can contain up to 128 characters.
                      * @return Uid The user ID assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     std::string GetUid() const;
 
                     /**
                      * 设置The user ID assigned by SDMC, which can contain up to 128 characters.
-                     * @param Uid The user ID assigned by SDMC, which can contain up to 128 characters.
+                     * @param _uid The user ID assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     void SetUid(const std::string& _uid);
 
                     /**
                      * 判断参数 Uid 是否已赋值
                      * @return Uid 是否已赋值
+                     * 
                      */
                     bool UidHasBeenSet() const;
 
                     /**
                      * 获取The secret ID assigned by SDMC, which can contain up to 128 characters.
                      * @return SecretId The secret ID assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     std::string GetSecretId() const;
 
                     /**
                      * 设置The secret ID assigned by SDMC, which can contain up to 128 characters.
-                     * @param SecretId The secret ID assigned by SDMC, which can contain up to 128 characters.
+                     * @param _secretId The secret ID assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     void SetSecretId(const std::string& _secretId);
 
                     /**
                      * 判断参数 SecretId 是否已赋值
                      * @return SecretId 是否已赋值
+                     * 
                      */
                     bool SecretIdHasBeenSet() const;
 
                     /**
                      * 获取The secret key assigned by SDMC, which can contain up to 128 characters.
                      * @return SecretKey The secret key assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置The secret key assigned by SDMC, which can contain up to 128 characters.
-                     * @param SecretKey The secret key assigned by SDMC, which can contain up to 128 characters.
+                     * @param _secretKey The secret key assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
                     /**
                      * 判断参数 SecretKey 是否已赋值
                      * @return SecretKey 是否已赋值
+                     * 
                      */
                     bool SecretKeyHasBeenSet() const;
 
                     /**
                      * 获取The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
                      * @return FairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+                     * 
                      */
                     std::string GetFairPlayCertificateUrl() const;
 
                     /**
                      * 设置The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
-                     * @param FairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+                     * @param _fairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+                     * 
                      */
                     void SetFairPlayCertificateUrl(const std::string& _fairPlayCertificateUrl);
 
                     /**
                      * 判断参数 FairPlayCertificateUrl 是否已赋值
                      * @return FairPlayCertificateUrl 是否已赋值
+                     * 
                      */
                     bool FairPlayCertificateUrlHasBeenSet() const;
 

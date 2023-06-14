@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Encoding format
                      * @return Codecs Encoding format
+                     * 
                      */
                     std::string GetCodecs() const;
 
                     /**
                      * 设置Encoding format
-                     * @param Codecs Encoding format
+                     * @param _codecs Encoding format
+                     * 
                      */
                     void SetCodecs(const std::string& _codecs);
 
                     /**
                      * 判断参数 Codecs 是否已赋值
                      * @return Codecs 是否已赋值
+                     * 
                      */
                     bool CodecsHasBeenSet() const;
 
@@ -69,74 +72,86 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Duration Segment duration during stream detection
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetDuration() const;
 
                     /**
                      * 设置Segment duration during stream detection
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Duration Segment duration during stream detection
+                     * @param _duration Segment duration during stream detection
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDuration(const int64_t& _duration);
 
                     /**
                      * 判断参数 Duration 是否已赋值
                      * @return Duration 是否已赋值
+                     * 
                      */
                     bool DurationHasBeenSet() const;
 
                     /**
                      * 获取Width, in pixels
                      * @return Width Width, in pixels
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Width, in pixels
-                     * @param Width Width, in pixels
+                     * @param _width Width, in pixels
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Height, in pixels
                      * @return Height Height, in pixels
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Height, in pixels
-                     * @param Height Height, in pixels
+                     * @param _height Height, in pixels
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取Cover
                      * @return Thumbnail Cover
+                     * 
                      */
                     std::string GetThumbnail() const;
 
                     /**
                      * 设置Cover
-                     * @param Thumbnail Cover
+                     * @param _thumbnail Cover
+                     * 
                      */
                     void SetThumbnail(const std::string& _thumbnail);
 
                     /**
                      * 判断参数 Thumbnail 是否已赋值
                      * @return Thumbnail 是否已赋值
+                     * 
                      */
                     bool ThumbnailHasBeenSet() const;
 

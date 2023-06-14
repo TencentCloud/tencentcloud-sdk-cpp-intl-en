@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Offset time of video timestamp in seconds.
                      * @return TimeOffset Offset time of video timestamp in seconds.
+                     * 
                      */
                     double GetTimeOffset() const;
 
                     /**
                      * 设置Offset time of video timestamp in seconds.
-                     * @param TimeOffset Offset time of video timestamp in seconds.
+                     * @param _timeOffset Offset time of video timestamp in seconds.
+                     * 
                      */
                     void SetTimeOffset(const double& _timeOffset);
 
                     /**
                      * 判断参数 TimeOffset 是否已赋值
                      * @return TimeOffset 是否已赋值
+                     * 
                      */
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
                      * 获取Content string of timestamp containing 1-128 characters.
                      * @return Content Content string of timestamp containing 1-128 characters.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Content string of timestamp containing 1-128 characters.
-                     * @param Content Content string of timestamp containing 1-128 characters.
+                     * @param _content Content string of timestamp containing 1-128 characters.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

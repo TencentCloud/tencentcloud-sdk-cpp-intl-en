@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Site ID
                      * @return Id Site ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Site name
                      * @return Name Site name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Name server used by the site
                      * @return OriginalNameServers Name server used by the site
+                     * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
                      * 判断参数 OriginalNameServers 是否已赋值
                      * @return OriginalNameServers 是否已赋值
+                     * 
                      */
                     bool OriginalNameServersHasBeenSet() const;
 
@@ -88,12 +94,14 @@ namespace TencentCloud
 - `pending`: The name server is not connected.
 - `active`: The name server is connected.
 - `moved`: The name server is moved.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -104,48 +112,56 @@ namespace TencentCloud
                      * @return Type Specifies how the site is connected to EdgeOne.
 - `full`: Connect via the name server.
 - `partial`: Connect via the CNAME.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取List of name servers assigned by Tencent Cloud
                      * @return NameServers List of name servers assigned by Tencent Cloud
+                     * 
                      */
                     std::vector<std::string> GetNameServers() const;
 
                     /**
                      * 判断参数 NameServers 是否已赋值
                      * @return NameServers 是否已赋值
+                     * 
                      */
                     bool NameServersHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreatedOn Creation time
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
                     /**
                      * 获取Modification time
                      * @return ModifiedOn Modification time
+                     * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
                      * 判断参数 ModifiedOn 是否已赋值
                      * @return ModifiedOn 是否已赋值
+                     * 
                      */
                     bool ModifiedOnHasBeenSet() const;
 
@@ -158,12 +174,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `finished`: Ownership of the site is verified.
 - `pending`: Verifying the ownership of the site.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetCnameStatus() const;
 
                     /**
                      * 判断参数 CnameStatus 是否已赋值
                      * @return CnameStatus 是否已赋值
+                     * 
                      */
                     bool CnameStatusHasBeenSet() const;
 

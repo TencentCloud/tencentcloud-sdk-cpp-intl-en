@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of event IDs
                      * @return EventIdSet List of event IDs
+                     * 
                      */
                     std::vector<std::string> GetEventIdSet() const;
 
                     /**
                      * 设置List of event IDs
-                     * @param EventIdSet List of event IDs
+                     * @param _eventIdSet List of event IDs
+                     * 
                      */
                     void SetEventIdSet(const std::vector<std::string>& _eventIdSet);
 
                     /**
                      * 判断参数 EventIdSet 是否已赋值
                      * @return EventIdSet 是否已赋值
+                     * 
                      */
                     bool EventIdSetHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
      `EVENT_INGNORE`: Ignored.
      `EVENT_DEL`: Deleted.
      `EVENT_ADD_WHITE`: Allowed.
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -80,35 +84,40 @@ namespace TencentCloud
      `EVENT_INGNORE`: Ignored.
      `EVENT_DEL`: Deleted.
      `EVENT_ADD_WHITE`: Allowed.
-                     * @param Status Event status     
+                     * @param _status Event status     
 `EVENT_DEALED`: Processed.
      `EVENT_INGNORE`: Ignored.
      `EVENT_DEL`: Deleted.
      `EVENT_ADD_WHITE`: Allowed.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Remarks
                      * @return Remark Remarks
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-                     * @param Remark Remarks
+                     * @param _remark Remarks
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

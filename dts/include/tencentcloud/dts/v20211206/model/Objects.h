@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Mode Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Mode Sync object type. Valid value: `Partial` (default).
+                     * @param _mode Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMode(const std::string& _mode);
 
                     /**
                      * 判断参数 Mode 是否已赋值
                      * @return Mode 是否已赋值
+                     * 
                      */
                     bool ModeHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Databases Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Database> GetDatabases() const;
 
                     /**
                      * 设置Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Databases Sync object, which is required if `Mode` is `Partial`.
+                     * @param _databases Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabases(const std::vector<Database>& _databases);
 
                     /**
                      * 判断参数 Databases 是否已赋值
                      * @return Databases 是否已赋值
+                     * 
                      */
                     bool DatabasesHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AdvancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAdvancedObjects() const;
 
                     /**
                      * 设置Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AdvancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
+                     * @param _advancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdvancedObjects(const std::vector<std::string>& _advancedObjects);
 
                     /**
                      * 判断参数 AdvancedObjects 是否已赋值
                      * @return AdvancedObjects 是否已赋值
+                     * 
                      */
                     bool AdvancedObjectsHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OnlineDDL A redundant field that specifies the online DDL type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OnlineDDL GetOnlineDDL() const;
 
                     /**
                      * 设置A redundant field that specifies the online DDL type
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OnlineDDL A redundant field that specifies the online DDL type
+                     * @param _onlineDDL A redundant field that specifies the online DDL type
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOnlineDDL(const OnlineDDL& _onlineDDL);
 
                     /**
                      * 判断参数 OnlineDDL 是否已赋值
                      * @return OnlineDDL 是否已赋值
+                     * 
                      */
                     bool OnlineDDLHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
                      * @return Name Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
-                     * @param Name Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
+                     * @param _name Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -81,6 +84,7 @@ For example, [
     "application/vnd.ms-project",
     "application/vnd.rn-rn_music_package"
 ] are valid.
+                     * 
                      */
                     std::vector<std::string> GetValue() const;
 
@@ -93,7 +97,7 @@ For example, [
     "application/vnd.ms-project",
     "application/vnd.rn-rn_music_package"
 ] are valid.
-                     * @param Value Array of header values that can trigger the encoding. Each element in the array can be up to 40 characters, including digits, letters, and special characters (`.`, `+`, `*`, `-`, `/`, and `_`). 
+                     * @param _value Array of header values that can trigger the encoding. Each element in the array can be up to 40 characters, including digits, letters, and special characters (`.`, `+`, `*`, `-`, `/`, and `_`). 
 
 For example, [
     "application/x-vpeg005",
@@ -101,12 +105,14 @@ For example, [
     "application/vnd.ms-project",
     "application/vnd.rn-rn_music_package"
 ] are valid.
+                     * 
                      */
                     void SetValue(const std::vector<std::string>& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

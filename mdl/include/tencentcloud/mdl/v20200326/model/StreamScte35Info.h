@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Pid SCTE-35 `Pid`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPid() const;
 
                     /**
                      * 设置SCTE-35 `Pid`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Pid SCTE-35 `Pid`.
+                     * @param _pid SCTE-35 `Pid`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPid(const int64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 

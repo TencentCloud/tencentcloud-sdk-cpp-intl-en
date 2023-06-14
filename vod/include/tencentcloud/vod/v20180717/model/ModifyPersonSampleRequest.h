@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of a sample.
                      * @return PersonId ID of a sample.
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置ID of a sample.
-                     * @param PersonId ID of a sample.
+                     * @param _personId ID of a sample.
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Name. Length limit: 128 characters.
                      * @return Name Name. Length limit: 128 characters.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name. Length limit: 128 characters.
-                     * @param Name Name. Length limit: 128 characters.
+                     * @param _name Name. Length limit: 128 characters.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Description. Length limit: 1,024 characters.
                      * @return Description Description. Length limit: 1,024 characters.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description. Length limit: 1,024 characters.
-                     * @param Description Description. Length limit: 1,024 characters.
+                     * @param _description Description. Length limit: 1,024 characters.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -125,6 +137,7 @@ namespace TencentCloud
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * 
                      */
                     std::vector<std::string> GetUsages() const;
 
@@ -133,52 +146,60 @@ namespace TencentCloud
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
-                     * @param Usages Sample usage. Valid values:
+                     * @param _usages Sample usage. Valid values:
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+                     * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
                     /**
                      * 判断参数 Usages 是否已赋值
                      * @return Usages 是否已赋值
+                     * 
                      */
                     bool UsagesHasBeenSet() const;
 
                     /**
                      * 获取Information of operations on facial features.
                      * @return FaceOperationInfo Information of operations on facial features.
+                     * 
                      */
                     AiSampleFaceOperation GetFaceOperationInfo() const;
 
                     /**
                      * 设置Information of operations on facial features.
-                     * @param FaceOperationInfo Information of operations on facial features.
+                     * @param _faceOperationInfo Information of operations on facial features.
+                     * 
                      */
                     void SetFaceOperationInfo(const AiSampleFaceOperation& _faceOperationInfo);
 
                     /**
                      * 判断参数 FaceOperationInfo 是否已赋值
                      * @return FaceOperationInfo 是否已赋值
+                     * 
                      */
                     bool FaceOperationInfoHasBeenSet() const;
 
                     /**
                      * 获取Tag operation information.
                      * @return TagOperationInfo Tag operation information.
+                     * 
                      */
                     AiSampleTagOperation GetTagOperationInfo() const;
 
                     /**
                      * 设置Tag operation information.
-                     * @param TagOperationInfo Tag operation information.
+                     * @param _tagOperationInfo Tag operation information.
+                     * 
                      */
                     void SetTagOperationInfo(const AiSampleTagOperation& _tagOperationInfo);
 
                     /**
                      * 判断参数 TagOperationInfo 是否已赋值
                      * @return TagOperationInfo 是否已赋值
+                     * 
                      */
                     bool TagOperationInfoHasBeenSet() const;
 

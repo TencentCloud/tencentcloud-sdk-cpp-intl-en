@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible instances.
                      * @return TotalCount Number of eligible instances.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Security group object.
                      * @return SecurityGroupSet Security group object.
+                     * 
                      */
                     std::vector<SecurityGroup> GetSecurityGroupSet() const;
 
                     /**
                      * 判断参数 SecurityGroupSet 是否已赋值
                      * @return SecurityGroupSet 是否已赋值
+                     * 
                      */
                     bool SecurityGroupSetHasBeenSet() const;
 

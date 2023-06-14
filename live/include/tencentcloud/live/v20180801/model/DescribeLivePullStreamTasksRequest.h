@@ -49,6 +49,7 @@ If you do not pass this parameter, all tasks will be returned, sorted by last up
                      * @return TaskId The task ID. 
 A task ID is returned by the `CreateLivePullStreamTask` API.
 If you do not pass this parameter, all tasks will be returned, sorted by last updated time in descending order.
+                     * 
                      */
                     std::string GetTaskId() const;
 
@@ -56,33 +57,38 @@ If you do not pass this parameter, all tasks will be returned, sorted by last up
                      * 设置The task ID. 
 A task ID is returned by the `CreateLivePullStreamTask` API.
 If you do not pass this parameter, all tasks will be returned, sorted by last updated time in descending order.
-                     * @param TaskId The task ID. 
+                     * @param _taskId The task ID. 
 A task ID is returned by the `CreateLivePullStreamTask` API.
 If you do not pass this parameter, all tasks will be returned, sorted by last updated time in descending order.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
                     /**
                      * 获取The number of page to start from. Default value: 1.
                      * @return PageNum The number of page to start from. Default value: 1.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 设置The number of page to start from. Default value: 1.
-                     * @param PageNum The number of page to start from. Default value: 1.
+                     * @param _pageNum The number of page to start from. Default value: 1.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -91,20 +97,23 @@ If you do not pass this parameter, all tasks will be returned, sorted by last up
 Valid values: Any integer between 1 and 20.
                      * @return PageSize The maximum number of records per page. Default value: 10.
 Valid values: Any integer between 1 and 20.
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置The maximum number of records per page. Default value: 10.
 Valid values: Any integer between 1 and 20.
-                     * @param PageSize The maximum number of records per page. Default value: 10.
+                     * @param _pageSize The maximum number of records per page. Default value: 10.
 Valid values: Any integer between 1 and 20.
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Information of the created channel endpoint
                      * @return Info Information of the created channel endpoint
+                     * 
                      */
                     EndpointInfo GetInfo() const;
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 

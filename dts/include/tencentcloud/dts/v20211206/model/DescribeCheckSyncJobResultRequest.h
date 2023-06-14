@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
                      * @return JobId Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
-                     * @param JobId Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
+                     * @param _jobId Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 

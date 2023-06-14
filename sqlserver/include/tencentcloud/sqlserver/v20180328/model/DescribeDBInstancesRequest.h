@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Project ID
                      * @return ProjectId Project ID
+                     * 
                      */
                     uint64_t GetProjectId() const;
 
                     /**
                      * 设置Project ID
-                     * @param ProjectId Project ID
+                     * @param _projectId Project ID
+                     * 
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
@@ -87,6 +90,7 @@ namespace TencentCloud
 <li>10: migrating instance</li>
 <li>11: read-only</li>
 <li>12: restarting</li>
+                     * 
                      */
                     int64_t GetStatus() const;
 
@@ -104,7 +108,7 @@ namespace TencentCloud
 <li>10: migrating instance</li>
 <li>11: read-only</li>
 <li>12: restarting</li>
-                     * @param Status Instance status. Valid values:
+                     * @param _status Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
 <li>3: running restrictedly (primary/secondary switching)</li>
@@ -117,264 +121,308 @@ namespace TencentCloud
 <li>10: migrating instance</li>
 <li>11: read-only</li>
 <li>12: restarting</li>
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Page number. Default value: 0
                      * @return Offset Page number. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number. Default value: 0
-                     * @param Offset Page number. Default value: 0
+                     * @param _offset Page number. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page. Value range: 1-100. Default value: 100
                      * @return Limit Number of results per page. Value range: 1-100. Default value: 100
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page. Value range: 1-100. Default value: 100
-                     * @param Limit Number of results per page. Value range: 1-100. Default value: 100
+                     * @param _limit Number of results per page. Value range: 1-100. Default value: 100
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取One or more instance IDs in the format of mssql-si2823jyl
                      * @return InstanceIdSet One or more instance IDs in the format of mssql-si2823jyl
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置One or more instance IDs in the format of mssql-si2823jyl
-                     * @param InstanceIdSet One or more instance IDs in the format of mssql-si2823jyl
+                     * @param _instanceIdSet One or more instance IDs in the format of mssql-si2823jyl
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
                      * 获取Retrieves billing type. 0: pay-as-you-go
                      * @return PayMode Retrieves billing type. 0: pay-as-you-go
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置Retrieves billing type. 0: pay-as-you-go
-                     * @param PayMode Retrieves billing type. 0: pay-as-you-go
+                     * @param _payMode Retrieves billing type. 0: pay-as-you-go
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
                      * @return VpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+                     * 
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
-                     * @param VpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+                     * @param _vpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+                     * 
                      */
                     void SetVpcId(const std::string& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
                     /**
                      * 获取Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
                      * @return SubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
-                     * @param SubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+                     * @param _subnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取The list of instance private IPs, such as 172.1.0.12
                      * @return VipSet The list of instance private IPs, such as 172.1.0.12
+                     * 
                      */
                     std::vector<std::string> GetVipSet() const;
 
                     /**
                      * 设置The list of instance private IPs, such as 172.1.0.12
-                     * @param VipSet The list of instance private IPs, such as 172.1.0.12
+                     * @param _vipSet The list of instance private IPs, such as 172.1.0.12
+                     * 
                      */
                     void SetVipSet(const std::vector<std::string>& _vipSet);
 
                     /**
                      * 判断参数 VipSet 是否已赋值
                      * @return VipSet 是否已赋值
+                     * 
                      */
                     bool VipSetHasBeenSet() const;
 
                     /**
                      * 获取The list of instance names used for fuzzy match
                      * @return InstanceNameSet The list of instance names used for fuzzy match
+                     * 
                      */
                     std::vector<std::string> GetInstanceNameSet() const;
 
                     /**
                      * 设置The list of instance names used for fuzzy match
-                     * @param InstanceNameSet The list of instance names used for fuzzy match
+                     * @param _instanceNameSet The list of instance names used for fuzzy match
+                     * 
                      */
                     void SetInstanceNameSet(const std::vector<std::string>& _instanceNameSet);
 
                     /**
                      * 判断参数 InstanceNameSet 是否已赋值
                      * @return InstanceNameSet 是否已赋值
+                     * 
                      */
                     bool InstanceNameSetHasBeenSet() const;
 
                     /**
                      * 获取The list of instance version numbers, such as 2008R2, 2012SP3
                      * @return VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
+                     * 
                      */
                     std::vector<std::string> GetVersionSet() const;
 
                     /**
                      * 设置The list of instance version numbers, such as 2008R2, 2012SP3
-                     * @param VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
+                     * @param _versionSet The list of instance version numbers, such as 2008R2, 2012SP3
+                     * 
                      */
                     void SetVersionSet(const std::vector<std::string>& _versionSet);
 
                     /**
                      * 判断参数 VersionSet 是否已赋值
                      * @return VersionSet 是否已赋值
+                     * 
                      */
                     bool VersionSetHasBeenSet() const;
 
                     /**
                      * 获取Instance availability zone, such as ap-guangzhou-2
                      * @return Zone Instance availability zone, such as ap-guangzhou-2
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Instance availability zone, such as ap-guangzhou-2
-                     * @param Zone Instance availability zone, such as ap-guangzhou-2
+                     * @param _zone Instance availability zone, such as ap-guangzhou-2
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取The list of instance tags
                      * @return TagKeys The list of instance tags
+                     * 
                      */
                     std::vector<std::string> GetTagKeys() const;
 
                     /**
                      * 设置The list of instance tags
-                     * @param TagKeys The list of instance tags
+                     * @param _tagKeys The list of instance tags
+                     * 
                      */
                     void SetTagKeys(const std::vector<std::string>& _tagKeys);
 
                     /**
                      * 判断参数 TagKeys 是否已赋值
                      * @return TagKeys 是否已赋值
+                     * 
                      */
                     bool TagKeysHasBeenSet() const;
 
                     /**
                      * 获取Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
                      * @return SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
-                     * @param SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     * @param _searchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 
                     /**
                      * 获取Unique Uid of an instance
                      * @return UidSet Unique Uid of an instance
+                     * 
                      */
                     std::vector<std::string> GetUidSet() const;
 
                     /**
                      * 设置Unique Uid of an instance
-                     * @param UidSet Unique Uid of an instance
+                     * @param _uidSet Unique Uid of an instance
+                     * 
                      */
                     void SetUidSet(const std::vector<std::string>& _uidSet);
 
                     /**
                      * 判断参数 UidSet 是否已赋值
                      * @return UidSet 是否已赋值
+                     * 
                      */
                     bool UidSetHasBeenSet() const;
 
                     /**
                      * 获取Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
                      * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
-                     * @param InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * @param _instanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 

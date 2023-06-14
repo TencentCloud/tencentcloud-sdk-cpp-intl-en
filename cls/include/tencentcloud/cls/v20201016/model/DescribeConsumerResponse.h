@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Whether the shipping task is effective
                      * @return Effective Whether the shipping task is effective
+                     * 
                      */
                     bool GetEffective() const;
 
                     /**
                      * 判断参数 Effective 是否已赋值
                      * @return Effective 是否已赋值
+                     * 
                      */
                     bool EffectiveHasBeenSet() const;
 
                     /**
                      * 获取Whether log metadata is shipped
                      * @return NeedContent Whether log metadata is shipped
+                     * 
                      */
                     bool GetNeedContent() const;
 
                     /**
                      * 判断参数 NeedContent 是否已赋值
                      * @return NeedContent 是否已赋值
+                     * 
                      */
                     bool NeedContentHasBeenSet() const;
 
@@ -74,24 +78,28 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return Content Metadata shipped if `NeedContent` is `true`
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     ConsumerContent GetContent() const;
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
                     /**
                      * 获取CKafka information
                      * @return Ckafka CKafka information
+                     * 
                      */
                     Ckafka GetCkafka() const;
 
                     /**
                      * 判断参数 Ckafka 是否已赋值
                      * @return Ckafka 是否已赋值
+                     * 
                      */
                     bool CkafkaHasBeenSet() const;
 
@@ -100,12 +108,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCompression() const;
 
                     /**
                      * 判断参数 Compression 是否已赋值
                      * @return Compression 是否已赋值
+                     * 
                      */
                     bool CompressionHasBeenSet() const;
 

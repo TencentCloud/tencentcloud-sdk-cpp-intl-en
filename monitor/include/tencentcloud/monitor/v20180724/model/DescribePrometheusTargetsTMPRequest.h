@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Cluster type
                      * @return ClusterType Cluster type
+                     * 
                      */
                     std::string GetClusterType() const;
 
                     /**
                      * 设置Cluster type
-                     * @param ClusterType Cluster type
+                     * @param _clusterType Cluster type
+                     * 
                      */
                     void SetClusterType(const std::string& _clusterType);
 
                     /**
                      * 判断参数 ClusterType 是否已赋值
                      * @return ClusterType 是否已赋值
+                     * 
                      */
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
@@ -104,6 +113,7 @@ You can filter by `RawJob`, `Job`, `ServiceMonitor`, `PodMonitor`, or `Health`.
                      * @return Filters Filters.
 You can filter by `RawJob`, `Job`, `ServiceMonitor`, `PodMonitor`, or `Health`.
 `Health` contains three values: `up`, `down`, `unknown`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -111,15 +121,17 @@ You can filter by `RawJob`, `Job`, `ServiceMonitor`, `PodMonitor`, or `Health`.
                      * 设置Filters.
 You can filter by `RawJob`, `Job`, `ServiceMonitor`, `PodMonitor`, or `Health`.
 `Health` contains three values: `up`, `down`, `unknown`.
-                     * @param Filters Filters.
+                     * @param _filters Filters.
 You can filter by `RawJob`, `Job`, `ServiceMonitor`, `PodMonitor`, or `Health`.
 `Health` contains three values: `up`, `down`, `unknown`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

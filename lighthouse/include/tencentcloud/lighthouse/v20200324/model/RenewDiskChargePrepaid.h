@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Purchase duration.
                      * @return Period Purchase duration.
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Purchase duration.
-                     * @param Period Purchase duration.
+                     * @param _period Purchase duration.
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Whether Auto-Renewal is enabled 
                      * @return RenewFlag Whether Auto-Renewal is enabled 
+                     * 
                      */
                     std::string GetRenewFlag() const;
 
                     /**
                      * 设置Whether Auto-Renewal is enabled 
-                     * @param RenewFlag Whether Auto-Renewal is enabled 
+                     * @param _renewFlag Whether Auto-Renewal is enabled 
+                     * 
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Duration unit. Default value: "m" (month).
                      * @return TimeUnit Duration unit. Default value: "m" (month).
+                     * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
                      * 设置Duration unit. Default value: "m" (month).
-                     * @param TimeUnit Duration unit. Default value: "m" (month).
+                     * @param _timeUnit Duration unit. Default value: "m" (month).
+                     * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
 
                     /**
                      * 判断参数 TimeUnit 是否已赋值
                      * @return TimeUnit 是否已赋值
+                     * 
                      */
                     bool TimeUnitHasBeenSet() const;
 
                     /**
                      * 获取Expiration time of the current instance.
                      * @return CurInstanceDeadline Expiration time of the current instance.
+                     * 
                      */
                     std::string GetCurInstanceDeadline() const;
 
                     /**
                      * 设置Expiration time of the current instance.
-                     * @param CurInstanceDeadline Expiration time of the current instance.
+                     * @param _curInstanceDeadline Expiration time of the current instance.
+                     * 
                      */
                     void SetCurInstanceDeadline(const std::string& _curInstanceDeadline);
 
                     /**
                      * 判断参数 CurInstanceDeadline 是否已赋值
                      * @return CurInstanceDeadline 是否已赋值
+                     * 
                      */
                     bool CurInstanceDeadlineHasBeenSet() const;
 

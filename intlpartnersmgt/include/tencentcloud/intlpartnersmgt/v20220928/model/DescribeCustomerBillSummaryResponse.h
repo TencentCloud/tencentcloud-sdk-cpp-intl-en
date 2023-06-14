@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Total amount
                      * @return TotalCost Total amount
+                     * 
                      */
                     double GetTotalCost() const;
 
                     /**
                      * 判断参数 TotalCost 是否已赋值
                      * @return TotalCost 是否已赋值
+                     * 
                      */
                     bool TotalCostHasBeenSet() const;
 

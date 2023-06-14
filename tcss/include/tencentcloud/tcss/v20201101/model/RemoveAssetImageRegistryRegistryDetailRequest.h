@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique repository ID
                      * @return RegistryId Unique repository ID
+                     * 
                      */
                     int64_t GetRegistryId() const;
 
                     /**
                      * 设置Unique repository ID
-                     * @param RegistryId Unique repository ID
+                     * @param _registryId Unique repository ID
+                     * 
                      */
                     void SetRegistryId(const int64_t& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 

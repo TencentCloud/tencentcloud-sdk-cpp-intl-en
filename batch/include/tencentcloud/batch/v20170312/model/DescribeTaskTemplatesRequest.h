@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取List of task template IDs. It cannot be specified together with `Filters`.
                      * @return TaskTemplateIds List of task template IDs. It cannot be specified together with `Filters`.
+                     * 
                      */
                     std::vector<std::string> GetTaskTemplateIds() const;
 
                     /**
                      * 设置List of task template IDs. It cannot be specified together with `Filters`.
-                     * @param TaskTemplateIds List of task template IDs. It cannot be specified together with `Filters`.
+                     * @param _taskTemplateIds List of task template IDs. It cannot be specified together with `Filters`.
+                     * 
                      */
                     void SetTaskTemplateIds(const std::vector<std::string>& _taskTemplateIds);
 
                     /**
                      * 判断参数 TaskTemplateIds 是否已赋值
                      * @return TaskTemplateIds 是否已赋值
+                     * 
                      */
                     bool TaskTemplateIdsHasBeenSet() const;
 
@@ -74,6 +77,7 @@ It cannot be specified together with `TaskTemplateIds`.
 <li> `tag-value` - String - Optional - Tag value.</li>
 <li> `tag:tag-key` - String - Optional - Tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
 It cannot be specified together with `TaskTemplateIds`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -84,54 +88,62 @@ It cannot be specified together with `TaskTemplateIds`.
 <li> `tag-value` - String - Optional - Tag value.</li>
 <li> `tag:tag-key` - String - Optional - Tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
 It cannot be specified together with `TaskTemplateIds`.
-                     * @param Filters Filter
+                     * @param _filters Filter
 <li> `task-template-name` - String - Optional - Task template name.</li>
 <li> `tag-key` - String - Optional - Tag key.</li>
 <li> `tag-value` - String - Optional - Tag value.</li>
 <li> `tag:tag-key` - String - Optional - Tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
 It cannot be specified together with `TaskTemplateIds`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Maximum number of returned items
                      * @return Limit Maximum number of returned items
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of returned items
-                     * @param Limit Maximum number of returned items
+                     * @param _limit Maximum number of returned items
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

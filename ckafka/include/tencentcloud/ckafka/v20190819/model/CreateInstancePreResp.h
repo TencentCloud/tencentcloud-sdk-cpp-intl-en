@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Returned code. 0: Normal; other values: Error.
                      * @return ReturnCode Returned code. 0: Normal; other values: Error.
+                     * 
                      */
                     std::string GetReturnCode() const;
 
                     /**
                      * 设置Returned code. 0: Normal; other values: Error.
-                     * @param ReturnCode Returned code. 0: Normal; other values: Error.
+                     * @param _returnCode Returned code. 0: Normal; other values: Error.
+                     * 
                      */
                     void SetReturnCode(const std::string& _returnCode);
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取The message indicating whether the operation is successful.
                      * @return ReturnMessage The message indicating whether the operation is successful.
+                     * 
                      */
                     std::string GetReturnMessage() const;
 
                     /**
                      * 设置The message indicating whether the operation is successful.
-                     * @param ReturnMessage The message indicating whether the operation is successful.
+                     * @param _returnMessage The message indicating whether the operation is successful.
+                     * 
                      */
                     void SetReturnMessage(const std::string& _returnMessage);
 
                     /**
                      * 判断参数 ReturnMessage 是否已赋值
                      * @return ReturnMessage 是否已赋值
+                     * 
                      */
                     bool ReturnMessageHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Data Data returned by the operation.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     CreateInstancePreData GetData() const;
 
                     /**
                      * 设置Data returned by the operation.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Data Data returned by the operation.
+                     * @param _data Data returned by the operation.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetData(const CreateInstancePreData& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 
@@ -110,20 +119,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return DeleteRouteTimestamp Deletion time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDeleteRouteTimestamp() const;
 
                     /**
                      * 设置Deletion time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param DeleteRouteTimestamp Deletion time.
+                     * @param _deleteRouteTimestamp Deletion time.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDeleteRouteTimestamp(const std::string& _deleteRouteTimestamp);
 
                     /**
                      * 判断参数 DeleteRouteTimestamp 是否已赋值
                      * @return DeleteRouteTimestamp 是否已赋值
+                     * 
                      */
                     bool DeleteRouteTimestampHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
                      * @return RegisterType Dynamic registration type. Valid values: 0 - disabled; 1 - pre-create device; 2 - auto-create device.
+                     * 
                      */
                     uint64_t GetRegisterType() const;
 
                     /**
                      * 判断参数 RegisterType 是否已赋值
                      * @return RegisterType 是否已赋值
+                     * 
                      */
                     bool RegisterTypeHasBeenSet() const;
 
                     /**
                      * 获取Product key for dynamic registration
                      * @return ProductSecret Product key for dynamic registration
+                     * 
                      */
                     std::string GetProductSecret() const;
 
                     /**
                      * 判断参数 ProductSecret 是否已赋值
                      * @return ProductSecret 是否已赋值
+                     * 
                      */
                     bool ProductSecretHasBeenSet() const;
 
                     /**
                      * 获取Maximum dynamically registered devices
                      * @return RegisterLimit Maximum dynamically registered devices
+                     * 
                      */
                     uint64_t GetRegisterLimit() const;
 
                     /**
                      * 判断参数 RegisterLimit 是否已赋值
                      * @return RegisterLimit 是否已赋值
+                     * 
                      */
                     bool RegisterLimitHasBeenSet() const;
 

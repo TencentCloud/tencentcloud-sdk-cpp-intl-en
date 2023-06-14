@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Name
                      * @return Name Name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name
-                     * @param Name Name
+                     * @param _name Name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Configuration content
                      * @return Config Configuration content
+                     * 
                      */
                     std::string GetConfig() const;
 
                     /**
                      * 设置Configuration content
-                     * @param Config Configuration content
+                     * @param _config Configuration content
+                     * 
                      */
                     void SetConfig(const std::string& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateId If the configuration comes from a template, this parameter is the template ID, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置If the configuration comes from a template, this parameter is the template ID, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TemplateId If the configuration comes from a template, this parameter is the template ID, which is used as an output parameter.
+                     * @param _templateId If the configuration comes from a template, this parameter is the template ID, which is used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
@@ -110,20 +119,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Targets Number of targets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Targets GetTargets() const;
 
                     /**
                      * 设置Number of targets
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Targets Number of targets
+                     * @param _targets Number of targets
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTargets(const Targets& _targets);
 
                     /**
                      * 判断参数 Targets 是否已赋值
                      * @return Targets 是否已赋值
+                     * 
                      */
                     bool TargetsHasBeenSet() const;
 

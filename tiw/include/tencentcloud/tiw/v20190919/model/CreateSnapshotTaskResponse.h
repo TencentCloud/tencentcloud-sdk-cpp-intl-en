@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the whiteboard snapshot task. This parameter is returned only if a task is created successfully.
                      * @return TaskID ID of the whiteboard snapshot task. This parameter is returned only if a task is created successfully.
+                     * 
                      */
                     std::string GetTaskID() const;
 
                     /**
                      * 判断参数 TaskID 是否已赋值
                      * @return TaskID 是否已赋值
+                     * 
                      */
                     bool TaskIDHasBeenSet() const;
 

@@ -50,198 +50,231 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return RegistryName Instance name
+                     * 
                      */
                     std::string GetRegistryName() const;
 
                     /**
                      * 设置Instance name
-                     * @param RegistryName Instance name
+                     * @param _registryName Instance name
+                     * 
                      */
                     void SetRegistryName(const std::string& _registryName);
 
                     /**
                      * 判断参数 RegistryName 是否已赋值
                      * @return RegistryName 是否已赋值
+                     * 
                      */
                     bool RegistryNameHasBeenSet() const;
 
                     /**
                      * 获取Instance specification
                      * @return RegistryType Instance specification
+                     * 
                      */
                     std::string GetRegistryType() const;
 
                     /**
                      * 设置Instance specification
-                     * @param RegistryType Instance specification
+                     * @param _registryType Instance specification
+                     * 
                      */
                     void SetRegistryType(const std::string& _registryType);
 
                     /**
                      * 判断参数 RegistryType 是否已赋值
                      * @return RegistryType 是否已赋值
+                     * 
                      */
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
                      * 获取Instance status
                      * @return Status Instance status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Instance status
-                     * @param Status Instance status
+                     * @param _status Instance status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Public access URL of the instance
                      * @return PublicDomain Public access URL of the instance
+                     * 
                      */
                     std::string GetPublicDomain() const;
 
                     /**
                      * 设置Public access URL of the instance
-                     * @param PublicDomain Public access URL of the instance
+                     * @param _publicDomain Public access URL of the instance
+                     * 
                      */
                     void SetPublicDomain(const std::string& _publicDomain);
 
                     /**
                      * 判断参数 PublicDomain 是否已赋值
                      * @return PublicDomain 是否已赋值
+                     * 
                      */
                     bool PublicDomainHasBeenSet() const;
 
                     /**
                      * 获取Instance creation time
                      * @return CreatedAt Instance creation time
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置Instance creation time
-                     * @param CreatedAt Instance creation time
+                     * @param _createdAt Instance creation time
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return RegionName Region name
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name
-                     * @param RegionName Region name
+                     * @param _regionName Region name
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     uint64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const uint64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable anonymity
                      * @return EnableAnonymous Whether to enable anonymity
+                     * 
                      */
                     bool GetEnableAnonymous() const;
 
                     /**
                      * 设置Whether to enable anonymity
-                     * @param EnableAnonymous Whether to enable anonymity
+                     * @param _enableAnonymous Whether to enable anonymity
+                     * 
                      */
                     void SetEnableAnonymous(const bool& _enableAnonymous);
 
                     /**
                      * 判断参数 EnableAnonymous 是否已赋值
                      * @return EnableAnonymous 是否已赋值
+                     * 
                      */
                     bool EnableAnonymousHasBeenSet() const;
 
                     /**
                      * 获取Token validity period
                      * @return TokenValidTime Token validity period
+                     * 
                      */
                     uint64_t GetTokenValidTime() const;
 
                     /**
                      * 设置Token validity period
-                     * @param TokenValidTime Token validity period
+                     * @param _tokenValidTime Token validity period
+                     * 
                      */
                     void SetTokenValidTime(const uint64_t& _tokenValidTime);
 
                     /**
                      * 判断参数 TokenValidTime 是否已赋值
                      * @return TokenValidTime 是否已赋值
+                     * 
                      */
                     bool TokenValidTimeHasBeenSet() const;
 
                     /**
                      * 获取Internal access address of the instance
                      * @return InternalEndpoint Internal access address of the instance
+                     * 
                      */
                     std::string GetInternalEndpoint() const;
 
                     /**
                      * 设置Internal access address of the instance
-                     * @param InternalEndpoint Internal access address of the instance
+                     * @param _internalEndpoint Internal access address of the instance
+                     * 
                      */
                     void SetInternalEndpoint(const std::string& _internalEndpoint);
 
                     /**
                      * 判断参数 InternalEndpoint 是否已赋值
                      * @return InternalEndpoint 是否已赋值
+                     * 
                      */
                     bool InternalEndpointHasBeenSet() const;
 
@@ -250,20 +283,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagSpecification Cloud tag of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TagSpecification GetTagSpecification() const;
 
                     /**
                      * 设置Cloud tag of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagSpecification Cloud tag of the instance
+                     * @param _tagSpecification Cloud tag of the instance
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTagSpecification(const TagSpecification& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 
@@ -272,20 +308,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpiredAt Instance expiration time (for prepayment)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetExpiredAt() const;
 
                     /**
                      * 设置Instance expiration time (for prepayment)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExpiredAt Instance expiration time (for prepayment)
+                     * @param _expiredAt Instance expiration time (for prepayment)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExpiredAt(const std::string& _expiredAt);
 
                     /**
                      * 判断参数 ExpiredAt 是否已赋值
                      * @return ExpiredAt 是否已赋值
+                     * 
                      */
                     bool ExpiredAtHasBeenSet() const;
 
@@ -294,20 +333,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayMod Instance billing mode. Valid values: 0: Postpayment; 1: Prepayment.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetPayMod() const;
 
                     /**
                      * 设置Instance billing mode. Valid values: 0: Postpayment; 1: Prepayment.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PayMod Instance billing mode. Valid values: 0: Postpayment; 1: Prepayment.
+                     * @param _payMod Instance billing mode. Valid values: 0: Postpayment; 1: Prepayment.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPayMod(const int64_t& _payMod);
 
                     /**
                      * 判断参数 PayMod 是否已赋值
                      * @return PayMod 是否已赋值
+                     * 
                      */
                     bool PayModHasBeenSet() const;
 
@@ -316,20 +358,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RenewFlag Prepayment renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
                      * 设置Prepayment renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RenewFlag Prepayment renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
+                     * @param _renewFlag Prepayment renewal flag. Valid values: 0: Manual renewal; 1: Auto-renewal; 2: No renewal and no notification.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
 
                     /**
                      * 判断参数 RenewFlag 是否已赋值
                      * @return RenewFlag 是否已赋值
+                     * 
                      */
                     bool RenewFlagHasBeenSet() const;
 

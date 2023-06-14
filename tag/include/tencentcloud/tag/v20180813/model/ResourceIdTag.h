@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained
                      * @return ResourceId Unique resource ID
 Note: this field may return null, indicating that no valid values can be obtained
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Unique resource ID
 Note: this field may return null, indicating that no valid values can be obtained
-                     * @param ResourceId Unique resource ID
+                     * @param _resourceId Unique resource ID
 Note: this field may return null, indicating that no valid values can be obtained
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained
                      * @return TagKeyValues Tag key-value pair
 Note: this field may return null, indicating that no valid values can be obtained
+                     * 
                      */
                     std::vector<Tag> GetTagKeyValues() const;
 
                     /**
                      * 设置Tag key-value pair
 Note: this field may return null, indicating that no valid values can be obtained
-                     * @param TagKeyValues Tag key-value pair
+                     * @param _tagKeyValues Tag key-value pair
 Note: this field may return null, indicating that no valid values can be obtained
+                     * 
                      */
                     void SetTagKeyValues(const std::vector<Tag>& _tagKeyValues);
 
                     /**
                      * 判断参数 TagKeyValues 是否已赋值
                      * @return TagKeyValues 是否已赋值
+                     * 
                      */
                     bool TagKeyValuesHasBeenSet() const;
 

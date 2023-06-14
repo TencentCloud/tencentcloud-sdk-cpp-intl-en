@@ -50,6 +50,7 @@ Value range of N: 0–9
                      * @return ResourceList Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
 For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
 Value range of N: 0–9
+                     * 
                      */
                     std::vector<std::string> GetResourceList() const;
 
@@ -57,15 +58,17 @@ Value range of N: 0–9
                      * 设置Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
 For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
 Value range of N: 0–9
-                     * @param ResourceList Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
+                     * @param _resourceList Six-segment resource description list. Tencent Cloud uses a six-segment value to describe a resource. For more information, see [CAM](https://intl.cloud.tencent.com/document/product/598/67350?from_cn_redirect=1) > Overview > API List > Six-Segment Resource Information.
 For example: ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}.
 Value range of N: 0–9
+                     * 
                      */
                     void SetResourceList(const std::vector<std::string>& _resourceList);
 
                     /**
                      * 判断参数 ResourceList 是否已赋值
                      * @return ResourceList 是否已赋值
+                     * 
                      */
                     bool ResourceListHasBeenSet() const;
 
@@ -80,6 +83,7 @@ If multiple tags are specified, all such tags will be created and bound to the s
 For each resource, each tag key can have only one value. If you try to add an existing tag key, the corresponding tag value will be updated to the new value.
 Non-existent tags will be automatically created.
 Value range of N: 0–9
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
@@ -89,17 +93,19 @@ If multiple tags are specified, all such tags will be created and bound to the s
 For each resource, each tag key can have only one value. If you try to add an existing tag key, the corresponding tag value will be updated to the new value.
 Non-existent tags will be automatically created.
 Value range of N: 0–9
-                     * @param Tags Tag key and value.
+                     * @param _tags Tag key and value.
 If multiple tags are specified, all such tags will be created and bound to the specified resources.
 For each resource, each tag key can have only one value. If you try to add an existing tag key, the corresponding tag value will be updated to the new value.
 Non-existent tags will be automatically created.
 Value range of N: 0–9
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

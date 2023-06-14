@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of video content analysis template.
                      * @return Definition Unique ID of video content analysis template.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Unique ID of video content analysis template.
-                     * @param Definition Unique ID of video content analysis template.
+                     * @param _definition Unique ID of video content analysis template.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

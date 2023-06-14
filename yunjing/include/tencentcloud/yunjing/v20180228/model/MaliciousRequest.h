@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Record ID.
                      * @return Id Record ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Record ID.
-                     * @param Id Record ID.
+                     * @param _id Record ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取CWP agent `UUID`.
                      * @return Uuid CWP agent `UUID`.
+                     * 
                      */
                     std::string GetUuid() const;
 
                     /**
                      * 设置CWP agent `UUID`.
-                     * @param Uuid CWP agent `UUID`.
+                     * @param _uuid CWP agent `UUID`.
+                     * 
                      */
                     void SetUuid(const std::string& _uuid);
 
                     /**
                      * 判断参数 Uuid 是否已赋值
                      * @return Uuid 是否已赋值
+                     * 
                      */
                     bool UuidHasBeenSet() const;
 
                     /**
                      * 获取Private IP of server.
                      * @return MachineIp Private IP of server.
+                     * 
                      */
                     std::string GetMachineIp() const;
 
                     /**
                      * 设置Private IP of server.
-                     * @param MachineIp Private IP of server.
+                     * @param _machineIp Private IP of server.
+                     * 
                      */
                     void SetMachineIp(const std::string& _machineIp);
 
                     /**
                      * 判断参数 MachineIp 是否已赋值
                      * @return MachineIp 是否已赋值
+                     * 
                      */
                     bool MachineIpHasBeenSet() const;
 
                     /**
                      * 获取Server name.
                      * @return MachineName Server name.
+                     * 
                      */
                     std::string GetMachineName() const;
 
                     /**
                      * 设置Server name.
-                     * @param MachineName Server name.
+                     * @param _machineName Server name.
+                     * 
                      */
                     void SetMachineName(const std::string& _machineName);
 
                     /**
                      * 判断参数 MachineName 是否已赋值
                      * @return MachineName 是否已赋值
+                     * 
                      */
                     bool MachineNameHasBeenSet() const;
 
                     /**
                      * 获取Malicious request domain name.
                      * @return Domain Malicious request domain name.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Malicious request domain name.
-                     * @param Domain Malicious request domain name.
+                     * @param _domain Malicious request domain name.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Number of malicious requests.
                      * @return Count Number of malicious requests.
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of malicious requests.
-                     * @param Count Number of malicious requests.
+                     * @param _count Number of malicious requests.
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
                     /**
                      * 获取Process name.
                      * @return ProcessName Process name.
+                     * 
                      */
                     std::string GetProcessName() const;
 
                     /**
                      * 设置Process name.
-                     * @param ProcessName Process name.
+                     * @param _processName Process name.
+                     * 
                      */
                     void SetProcessName(const std::string& _processName);
 
                     /**
                      * 判断参数 ProcessName 是否已赋值
                      * @return ProcessName 是否已赋值
+                     * 
                      */
                     bool ProcessNameHasBeenSet() const;
 
@@ -181,6 +202,7 @@ namespace TencentCloud
 <li>UN_OPERATED: to be processed</li>
 <li>TRUSTED: trusted</li>
 <li>UN_TRUSTED: untrusted</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -189,88 +211,102 @@ namespace TencentCloud
 <li>UN_OPERATED: to be processed</li>
 <li>TRUSTED: trusted</li>
 <li>UN_TRUSTED: untrusted</li>
-                     * @param Status Record status.
+                     * @param _status Record status.
 <li>UN_OPERATED: to be processed</li>
 <li>TRUSTED: trusted</li>
 <li>UN_TRUSTED: untrusted</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Malicious request domain name description.
                      * @return Description Malicious request domain name description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Malicious request domain name description.
-                     * @param Description Malicious request domain name description.
+                     * @param _description Malicious request domain name description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Reference address.
                      * @return Reference Reference address.
+                     * 
                      */
                     std::string GetReference() const;
 
                     /**
                      * 设置Reference address.
-                     * @param Reference Reference address.
+                     * @param _reference Reference address.
+                     * 
                      */
                     void SetReference(const std::string& _reference);
 
                     /**
                      * 判断参数 Reference 是否已赋值
                      * @return Reference 是否已赋值
+                     * 
                      */
                     bool ReferenceHasBeenSet() const;
 
                     /**
                      * 获取Discovery time.
                      * @return CreateTime Discovery time.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Discovery time.
-                     * @param CreateTime Discovery time.
+                     * @param _createTime Discovery time.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Record merge time.
                      * @return MergeTime Record merge time.
+                     * 
                      */
                     std::string GetMergeTime() const;
 
                     /**
                      * 设置Record merge time.
-                     * @param MergeTime Record merge time.
+                     * @param _mergeTime Record merge time.
+                     * 
                      */
                     void SetMergeTime(const std::string& _mergeTime);
 
                     /**
                      * 判断参数 MergeTime 是否已赋值
                      * @return MergeTime 是否已赋值
+                     * 
                      */
                     bool MergeTimeHasBeenSet() const;
 
@@ -279,56 +315,65 @@ namespace TencentCloud
 Value.
                      * @return ProcessMd5 Process MD5
 Value.
+                     * 
                      */
                     std::string GetProcessMd5() const;
 
                     /**
                      * 设置Process MD5
 Value.
-                     * @param ProcessMd5 Process MD5
+                     * @param _processMd5 Process MD5
 Value.
+                     * 
                      */
                     void SetProcessMd5(const std::string& _processMd5);
 
                     /**
                      * 判断参数 ProcessMd5 是否已赋值
                      * @return ProcessMd5 是否已赋值
+                     * 
                      */
                     bool ProcessMd5HasBeenSet() const;
 
                     /**
                      * 获取Executed command line.
                      * @return CmdLine Executed command line.
+                     * 
                      */
                     std::string GetCmdLine() const;
 
                     /**
                      * 设置Executed command line.
-                     * @param CmdLine Executed command line.
+                     * @param _cmdLine Executed command line.
+                     * 
                      */
                     void SetCmdLine(const std::string& _cmdLine);
 
                     /**
                      * 判断参数 CmdLine 是否已赋值
                      * @return CmdLine 是否已赋值
+                     * 
                      */
                     bool CmdLineHasBeenSet() const;
 
                     /**
                      * 获取Process `PID`.
                      * @return Pid Process `PID`.
+                     * 
                      */
                     uint64_t GetPid() const;
 
                     /**
                      * 设置Process `PID`.
-                     * @param Pid Process `PID`.
+                     * @param _pid Process `PID`.
+                     * 
                      */
                     void SetPid(const uint64_t& _pid);
 
                     /**
                      * 判断参数 Pid 是否已赋值
                      * @return Pid 是否已赋值
+                     * 
                      */
                     bool PidHasBeenSet() const;
 

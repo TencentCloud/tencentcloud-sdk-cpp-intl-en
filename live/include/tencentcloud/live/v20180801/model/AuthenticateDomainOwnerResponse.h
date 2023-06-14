@@ -50,12 +50,14 @@ If `VerifyType` is `fileCheck`, this is the file that should be uploaded for ver
                      * @return Content The content verified.
 If `VerifyType` is `dnsCheck`, this is the TXT record that should be added for verification.
 If `VerifyType` is `fileCheck`, this is the file that should be uploaded for verification.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 
@@ -66,12 +68,14 @@ If the value of this parameter is smaller than 0, the domain has not been verifi
                      * @return Status The verification status.
 If the value of this parameter is 0 or greater, the domain has been verified.
 If the value of this parameter is smaller than 0, the domain has not been verified.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -80,12 +84,14 @@ If the value of this parameter is smaller than 0, the domain has not been verifi
 Verification is not required if another domain under the same primary domain has been successfully verified.
                      * @return MainDomain The primary domain of the domain verified.
 Verification is not required if another domain under the same primary domain has been successfully verified.
+                     * 
                      */
                     std::string GetMainDomain() const;
 
                     /**
                      * 判断参数 MainDomain 是否已赋值
                      * @return MainDomain 是否已赋值
+                     * 
                      */
                     bool MainDomainHasBeenSet() const;
 

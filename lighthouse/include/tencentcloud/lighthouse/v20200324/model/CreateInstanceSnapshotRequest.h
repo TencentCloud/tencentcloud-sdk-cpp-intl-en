@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the instance for which to create a snapshot.
                      * @return InstanceId ID of the instance for which to create a snapshot.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of the instance for which to create a snapshot.
-                     * @param InstanceId ID of the instance for which to create a snapshot.
+                     * @param _instanceId ID of the instance for which to create a snapshot.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Snapshot name, which can contain up to 60 characters.
                      * @return SnapshotName Snapshot name, which can contain up to 60 characters.
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置Snapshot name, which can contain up to 60 characters.
-                     * @param SnapshotName Snapshot name, which can contain up to 60 characters.
+                     * @param _snapshotName Snapshot name, which can contain up to 60 characters.
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 

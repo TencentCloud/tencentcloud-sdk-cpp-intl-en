@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return MatchTickets MatchTicket list
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<MatchTicket> GetMatchTickets() const;
 
                     /**
                      * 判断参数 MatchTickets 是否已赋值
                      * @return MatchTickets 是否已赋值
+                     * 
                      */
                     bool MatchTicketsHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return ErrCode Error code
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     uint64_t GetErrCode() const;
 
                     /**
                      * 判断参数 ErrCode 是否已赋值
                      * @return ErrCode 是否已赋值
+                     * 
                      */
                     bool ErrCodeHasBeenSet() const;
 

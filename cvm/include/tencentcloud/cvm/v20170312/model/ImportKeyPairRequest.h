@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
                      * @return KeyName Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+                     * 
                      */
                     std::string GetKeyName() const;
 
                     /**
                      * 设置Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
-                     * @param KeyName Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+                     * @param _keyName Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
+                     * 
                      */
                     void SetKeyName(const std::string& _keyName);
 
                     /**
                      * 判断参数 KeyName 是否已赋值
                      * @return KeyName 是否已赋值
+                     * 
                      */
                     bool KeyNameHasBeenSet() const;
 
@@ -68,6 +71,7 @@ If you want to use the default project, specify 0 for the parameter.
                      * @return ProjectId The project ID to which the key pair belongs after it is created. <br><br>You can obtain the project ID in the following ways: <br><li>Check the project list in the [Project management](https://console.cloud.tencent.com/project) page.<br><li>Call the `DescribeProject` API and view the `projectId` in the response.
 
 If you want to use the default project, specify 0 for the parameter.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
@@ -75,51 +79,59 @@ If you want to use the default project, specify 0 for the parameter.
                      * 设置The project ID to which the key pair belongs after it is created. <br><br>You can obtain the project ID in the following ways: <br><li>Check the project list in the [Project management](https://console.cloud.tencent.com/project) page.<br><li>Call the `DescribeProject` API and view the `projectId` in the response.
 
 If you want to use the default project, specify 0 for the parameter.
-                     * @param ProjectId The project ID to which the key pair belongs after it is created. <br><br>You can obtain the project ID in the following ways: <br><li>Check the project list in the [Project management](https://console.cloud.tencent.com/project) page.<br><li>Call the `DescribeProject` API and view the `projectId` in the response.
+                     * @param _projectId The project ID to which the key pair belongs after it is created. <br><br>You can obtain the project ID in the following ways: <br><li>Check the project list in the [Project management](https://console.cloud.tencent.com/project) page.<br><li>Call the `DescribeProject` API and view the `projectId` in the response.
 
 If you want to use the default project, specify 0 for the parameter.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Content of the public key in the key pair in the `OpenSSH RSA` format.
                      * @return PublicKey Content of the public key in the key pair in the `OpenSSH RSA` format.
+                     * 
                      */
                     std::string GetPublicKey() const;
 
                     /**
                      * 设置Content of the public key in the key pair in the `OpenSSH RSA` format.
-                     * @param PublicKey Content of the public key in the key pair in the `OpenSSH RSA` format.
+                     * @param _publicKey Content of the public key in the key pair in the `OpenSSH RSA` format.
+                     * 
                      */
                     void SetPublicKey(const std::string& _publicKey);
 
                     /**
                      * 判断参数 PublicKey 是否已赋值
                      * @return PublicKey 是否已赋值
+                     * 
                      */
                     bool PublicKeyHasBeenSet() const;
 
                     /**
                      * 获取Tag description list. This parameter is used to bind a tag to a key pair.
                      * @return TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     * 
                      */
                     std::vector<TagSpecification> GetTagSpecification() const;
 
                     /**
                      * 设置Tag description list. This parameter is used to bind a tag to a key pair.
-                     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     * @param _tagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     * 
                      */
                     void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
 
                     /**
                      * 判断参数 TagSpecification 是否已赋值
                      * @return TagSpecification 是否已赋值
+                     * 
                      */
                     bool TagSpecificationHasBeenSet() const;
 

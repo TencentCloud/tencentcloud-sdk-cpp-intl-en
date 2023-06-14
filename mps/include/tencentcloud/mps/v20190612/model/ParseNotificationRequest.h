@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Event notification obtained from CMQ.
                      * @return Content Event notification obtained from CMQ.
+                     * 
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Event notification obtained from CMQ.
-                     * @param Content Event notification obtained from CMQ.
+                     * @param _content Event notification obtained from CMQ.
+                     * 
                      */
                     void SetContent(const std::string& _content);
 
                     /**
                      * 判断参数 Content 是否已赋值
                      * @return Content 是否已赋值
+                     * 
                      */
                     bool ContentHasBeenSet() const;
 

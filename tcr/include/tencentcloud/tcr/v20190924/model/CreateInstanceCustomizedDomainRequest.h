@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Primary instance ID
                      * @return RegistryId Primary instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Primary instance ID
-                     * @param RegistryId Primary instance ID
+                     * @param _registryId Primary instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Custom domain name
                      * @return DomainName Custom domain name
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Custom domain name
-                     * @param DomainName Custom domain name
+                     * @param _domainName Custom domain name
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Certificate ID
                      * @return CertificateId Certificate ID
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置Certificate ID
-                     * @param CertificateId Certificate ID
+                     * @param _certificateId Certificate ID
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 

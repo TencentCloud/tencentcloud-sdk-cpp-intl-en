@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取White-box key ID
                      * @return KeyId White-box key ID
+                     * 
                      */
                     std::string GetKeyId() const;
 
                     /**
                      * 设置White-box key ID
-                     * @param KeyId White-box key ID
+                     * @param _keyId White-box key ID
+                     * 
                      */
                     void SetKeyId(const std::string& _keyId);
 
                     /**
                      * 判断参数 KeyId 是否已赋值
                      * @return KeyId 是否已赋值
+                     * 
                      */
                     bool KeyIdHasBeenSet() const;
 
                     /**
                      * 获取Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
                      * @return DeviceFingerprints Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
+                     * 
                      */
                     std::vector<DeviceFingerprint> GetDeviceFingerprints() const;
 
                     /**
                      * 设置Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
-                     * @param DeviceFingerprints Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
+                     * @param _deviceFingerprints Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
+                     * 
                      */
                     void SetDeviceFingerprints(const std::vector<DeviceFingerprint>& _deviceFingerprints);
 
                     /**
                      * 判断参数 DeviceFingerprints 是否已赋值
                      * @return DeviceFingerprints 是否已赋值
+                     * 
                      */
                     bool DeviceFingerprintsHasBeenSet() const;
 

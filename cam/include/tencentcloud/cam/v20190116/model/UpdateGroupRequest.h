@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取User Group ID
                      * @return GroupId User Group ID
+                     * 
                      */
                     uint64_t GetGroupId() const;
 
                     /**
                      * 设置User Group ID
-                     * @param GroupId User Group ID
+                     * @param _groupId User Group ID
+                     * 
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取User Group name
                      * @return GroupName User Group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置User Group name
-                     * @param GroupName User Group name
+                     * @param _groupName User Group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取User Group description
                      * @return Remark User Group description
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置User Group description
-                     * @param Remark User Group description
+                     * @param _remark User Group description
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

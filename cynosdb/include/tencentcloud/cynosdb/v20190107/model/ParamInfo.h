@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Current value
                      * @return CurrentValue Current value
+                     * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
                      * 设置Current value
-                     * @param CurrentValue Current value
+                     * @param _currentValue Current value
+                     * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
                     /**
                      * 判断参数 CurrentValue 是否已赋值
                      * @return CurrentValue 是否已赋值
+                     * 
                      */
                     bool CurrentValueHasBeenSet() const;
 
                     /**
                      * 获取Default value
                      * @return Default Default value
+                     * 
                      */
                     std::string GetDefault() const;
 
                     /**
                      * 设置Default value
-                     * @param Default Default value
+                     * @param _default Default value
+                     * 
                      */
                     void SetDefault(const std::string& _default);
 
                     /**
                      * 判断参数 Default 是否已赋值
                      * @return Default 是否已赋值
+                     * 
                      */
                     bool DefaultHasBeenSet() const;
 
@@ -88,164 +94,191 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EnumValue List of valid values when parameter type is `enum`, `string` or `bool`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
                      * 设置List of valid values when parameter type is `enum`, `string` or `bool`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnumValue List of valid values when parameter type is `enum`, `string` or `bool`.
+                     * @param _enumValue List of valid values when parameter type is `enum`, `string` or `bool`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
 
                     /**
                      * 判断参数 EnumValue 是否已赋值
                      * @return EnumValue 是否已赋值
+                     * 
                      */
                     bool EnumValueHasBeenSet() const;
 
                     /**
                      * 获取Maximum value when parameter type is `float` or `integer`.
                      * @return Max Maximum value when parameter type is `float` or `integer`.
+                     * 
                      */
                     std::string GetMax() const;
 
                     /**
                      * 设置Maximum value when parameter type is `float` or `integer`.
-                     * @param Max Maximum value when parameter type is `float` or `integer`.
+                     * @param _max Maximum value when parameter type is `float` or `integer`.
+                     * 
                      */
                     void SetMax(const std::string& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
                     /**
                      * 获取Minimum value when parameter type is `float` or `integer`.
                      * @return Min Minimum value when parameter type is `float` or `integer`.
+                     * 
                      */
                     std::string GetMin() const;
 
                     /**
                      * 设置Minimum value when parameter type is `float` or `integer`.
-                     * @param Min Minimum value when parameter type is `float` or `integer`.
+                     * @param _min Minimum value when parameter type is `float` or `integer`.
+                     * 
                      */
                     void SetMin(const std::string& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
                     /**
                      * 获取Parameter name
                      * @return ParamName Parameter name
+                     * 
                      */
                     std::string GetParamName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param ParamName Parameter name
+                     * @param _paramName Parameter name
+                     * 
                      */
                     void SetParamName(const std::string& _paramName);
 
                     /**
                      * 判断参数 ParamName 是否已赋值
                      * @return ParamName 是否已赋值
+                     * 
                      */
                     bool ParamNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to restart the instance for the modified parameters to take effect.
                      * @return NeedReboot Whether to restart the instance for the modified parameters to take effect.
+                     * 
                      */
                     int64_t GetNeedReboot() const;
 
                     /**
                      * 设置Whether to restart the instance for the modified parameters to take effect.
-                     * @param NeedReboot Whether to restart the instance for the modified parameters to take effect.
+                     * @param _needReboot Whether to restart the instance for the modified parameters to take effect.
+                     * 
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
 
                     /**
                      * 判断参数 NeedReboot 是否已赋值
                      * @return NeedReboot 是否已赋值
+                     * 
                      */
                     bool NeedRebootHasBeenSet() const;
 
                     /**
                      * 获取Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
                      * @return ParamType Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
+                     * 
                      */
                     std::string GetParamType() const;
 
                     /**
                      * 设置Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
-                     * @param ParamType Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
+                     * @param _paramType Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
+                     * 
                      */
                     void SetParamType(const std::string& _paramType);
 
                     /**
                      * 判断参数 ParamType 是否已赋值
                      * @return ParamType 是否已赋值
+                     * 
                      */
                     bool ParamTypeHasBeenSet() const;
 
                     /**
                      * 获取Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
                      * @return MatchType Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
+                     * 
                      */
                     std::string GetMatchType() const;
 
                     /**
                      * 设置Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
-                     * @param MatchType Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
+                     * @param _matchType Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
+                     * 
                      */
                     void SetMatchType(const std::string& _matchType);
 
                     /**
                      * 判断参数 MatchType 是否已赋值
                      * @return MatchType 是否已赋值
+                     * 
                      */
                     bool MatchTypeHasBeenSet() const;
 
                     /**
                      * 获取Match values, which will be separated by semicolon when match type is `multiVal`.
                      * @return MatchValue Match values, which will be separated by semicolon when match type is `multiVal`.
+                     * 
                      */
                     std::string GetMatchValue() const;
 
                     /**
                      * 设置Match values, which will be separated by semicolon when match type is `multiVal`.
-                     * @param MatchValue Match values, which will be separated by semicolon when match type is `multiVal`.
+                     * @param _matchValue Match values, which will be separated by semicolon when match type is `multiVal`.
+                     * 
                      */
                     void SetMatchValue(const std::string& _matchValue);
 
                     /**
                      * 判断参数 MatchValue 是否已赋值
                      * @return MatchValue 是否已赋值
+                     * 
                      */
                     bool MatchValueHasBeenSet() const;
 
                     /**
                      * 获取Parameter description
                      * @return Description Parameter description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Parameter description
-                     * @param Description Parameter description
+                     * @param _description Parameter description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -254,20 +287,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsGlobal Whether it is global parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIsGlobal() const;
 
                     /**
                      * 设置Whether it is global parameter
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsGlobal Whether it is global parameter
+                     * @param _isGlobal Whether it is global parameter
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsGlobal(const int64_t& _isGlobal);
 
                     /**
                      * 判断参数 IsGlobal 是否已赋值
                      * @return IsGlobal 是否已赋值
+                     * 
                      */
                     bool IsGlobalHasBeenSet() const;
 
@@ -276,20 +312,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifiableInfo Whether the parameter can be modified
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ModifiableInfo GetModifiableInfo() const;
 
                     /**
                      * 设置Whether the parameter can be modified
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ModifiableInfo Whether the parameter can be modified
+                     * @param _modifiableInfo Whether the parameter can be modified
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetModifiableInfo(const ModifiableInfo& _modifiableInfo);
 
                     /**
                      * 判断参数 ModifiableInfo 是否已赋值
                      * @return ModifiableInfo 是否已赋值
+                     * 
                      */
                     bool ModifiableInfoHasBeenSet() const;
 
@@ -298,20 +337,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsFunc Whether it is a function
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetIsFunc() const;
 
                     /**
                      * 设置Whether it is a function
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsFunc Whether it is a function
+                     * @param _isFunc Whether it is a function
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIsFunc(const bool& _isFunc);
 
                     /**
                      * 判断参数 IsFunc 是否已赋值
                      * @return IsFunc 是否已赋值
+                     * 
                      */
                     bool IsFuncHasBeenSet() const;
 
@@ -320,20 +362,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Func Function
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFunc() const;
 
                     /**
                      * 设置Function
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Func Function
+                     * @param _func Function
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFunc(const std::string& _func);
 
                     /**
                      * 判断参数 Func 是否已赋值
                      * @return Func 是否已赋值
+                     * 
                      */
                     bool FuncHasBeenSet() const;
 

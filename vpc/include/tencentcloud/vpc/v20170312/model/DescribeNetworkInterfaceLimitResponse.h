@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Quota of ENIs mounted to a CVM instance in a standard way
                      * @return EniQuantity Quota of ENIs mounted to a CVM instance in a standard way
+                     * 
                      */
                     int64_t GetEniQuantity() const;
 
                     /**
                      * 判断参数 EniQuantity 是否已赋值
                      * @return EniQuantity 是否已赋值
+                     * 
                      */
                     bool EniQuantityHasBeenSet() const;
 
                     /**
                      * 获取Quota of IP addresses that can be allocated to each standard-mounted ENI
                      * @return EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each standard-mounted ENI
+                     * 
                      */
                     int64_t GetEniPrivateIpAddressQuantity() const;
 
                     /**
                      * 判断参数 EniPrivateIpAddressQuantity 是否已赋值
                      * @return EniPrivateIpAddressQuantity 是否已赋值
+                     * 
                      */
                     bool EniPrivateIpAddressQuantityHasBeenSet() const;
 
@@ -72,12 +76,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ExtendEniQuantity Quota of ENIs mounted to a CVM instance as an extension
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetExtendEniQuantity() const;
 
                     /**
                      * 判断参数 ExtendEniQuantity 是否已赋值
                      * @return ExtendEniQuantity 是否已赋值
+                     * 
                      */
                     bool ExtendEniQuantityHasBeenSet() const;
 
@@ -86,12 +92,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ExtendEniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each extension-mounted ENI.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetExtendEniPrivateIpAddressQuantity() const;
 
                     /**
                      * 判断参数 ExtendEniPrivateIpAddressQuantity 是否已赋值
                      * @return ExtendEniPrivateIpAddressQuantity 是否已赋值
+                     * 
                      */
                     bool ExtendEniPrivateIpAddressQuantityHasBeenSet() const;
 
@@ -100,12 +108,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SubEniQuantity The quota of relayed ENIs
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSubEniQuantity() const;
 
                     /**
                      * 判断参数 SubEniQuantity 是否已赋值
                      * @return SubEniQuantity 是否已赋值
+                     * 
                      */
                     bool SubEniQuantityHasBeenSet() const;
 
@@ -114,12 +124,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return SubEniPrivateIpAddressQuantity The quota of IPs that can be assigned to each relayed ENI.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSubEniPrivateIpAddressQuantity() const;
 
                     /**
                      * 判断参数 SubEniPrivateIpAddressQuantity 是否已赋值
                      * @return SubEniPrivateIpAddressQuantity 是否已赋值
+                     * 
                      */
                     bool SubEniPrivateIpAddressQuantityHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取AZ ID, which can be obtained through the `DescribeZones` API.
                      * @return Zone AZ ID, which can be obtained through the `DescribeZones` API.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ ID, which can be obtained through the `DescribeZones` API.
-                     * @param Zone AZ ID, which can be obtained through the `DescribeZones` API.
+                     * @param _zone AZ ID, which can be obtained through the `DescribeZones` API.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return DBEngine Database engines. Valid values:
 1. `postgresql` (TencentDB for PostgreSQL)
 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+                     * 
                      */
                     std::string GetDBEngine() const;
 
@@ -74,33 +78,38 @@ namespace TencentCloud
                      * 设置Database engines. Valid values:
 1. `postgresql` (TencentDB for PostgreSQL)
 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-                     * @param DBEngine Database engines. Valid values:
+                     * @param _dBEngine Database engines. Valid values:
 1. `postgresql` (TencentDB for PostgreSQL)
 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+                     * 
                      */
                     void SetDBEngine(const std::string& _dBEngine);
 
                     /**
                      * 判断参数 DBEngine 是否已赋值
                      * @return DBEngine 是否已赋值
+                     * 
                      */
                     bool DBEngineHasBeenSet() const;
 
                     /**
                      * 获取Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
                      * @return DBMajorVersion Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+                     * 
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
                      * 设置Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
-                     * @param DBMajorVersion Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+                     * @param _dBMajorVersion Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+                     * 
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
 
                     /**
                      * 判断参数 DBMajorVersion 是否已赋值
                      * @return DBMajorVersion 是否已赋值
+                     * 
                      */
                     bool DBMajorVersionHasBeenSet() const;
 

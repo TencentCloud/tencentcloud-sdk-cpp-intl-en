@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of new risk trends of local images
                      * @return ImageRiskTendencySet List of new risk trends of local images
+                     * 
                      */
                     std::vector<ImageRiskTendencyInfo> GetImageRiskTendencySet() const;
 
                     /**
                      * 判断参数 ImageRiskTendencySet 是否已赋值
                      * @return ImageRiskTendencySet 是否已赋值
+                     * 
                      */
                     bool ImageRiskTendencySetHasBeenSet() const;
 

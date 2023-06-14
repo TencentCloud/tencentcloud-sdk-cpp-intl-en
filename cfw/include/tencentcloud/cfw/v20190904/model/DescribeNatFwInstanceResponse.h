@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Instance array
                      * @return NatinsLst Instance array
+                     * 
                      */
                     std::vector<NatFwInstance> GetNatinsLst() const;
 
                     /**
                      * 判断参数 NatinsLst 是否已赋值
                      * @return NatinsLst 是否已赋值
+                     * 
                      */
                     bool NatinsLstHasBeenSet() const;
 

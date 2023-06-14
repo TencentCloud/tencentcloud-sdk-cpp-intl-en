@@ -55,6 +55,7 @@ Log storage period alert: log_save_day_limit
 Unavailable Kafka instance/public domain name: kafka_instance_domain_unavailable
 Incorrect Kafka username/password: kafka_user_passwd_wrong
 Kafka backend error field: kafka_field_wrong
+                     * 
                      */
                     std::vector<std::string> GetType() const;
 
@@ -65,18 +66,20 @@ Log storage period alert: log_save_day_limit
 Unavailable Kafka instance/public domain name: kafka_instance_domain_unavailable
 Incorrect Kafka username/password: kafka_user_passwd_wrong
 Kafka backend error field: kafka_field_wrong
-                     * @param Type Alert type
+                     * @param _type Alert type
 Log storage alert: log_reserve_full
 Log storage period alert: log_save_day_limit
 Unavailable Kafka instance/public domain name: kafka_instance_domain_unavailable
 Incorrect Kafka username/password: kafka_user_passwd_wrong
 Kafka backend error field: kafka_field_wrong
+                     * 
                      */
                     void SetType(const std::vector<std::string>& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

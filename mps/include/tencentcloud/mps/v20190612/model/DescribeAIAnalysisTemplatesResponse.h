@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible entries.
                      * @return TotalCount Number of eligible entries.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of video content analysis template details.
                      * @return AIAnalysisTemplateSet List of video content analysis template details.
+                     * 
                      */
                     std::vector<AIAnalysisTemplateItem> GetAIAnalysisTemplateSet() const;
 
                     /**
                      * 判断参数 AIAnalysisTemplateSet 是否已赋值
                      * @return AIAnalysisTemplateSet 是否已赋值
+                     * 
                      */
                     bool AIAnalysisTemplateSetHasBeenSet() const;
 

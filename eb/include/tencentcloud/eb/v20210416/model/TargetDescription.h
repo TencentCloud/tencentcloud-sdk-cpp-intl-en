@@ -52,72 +52,84 @@ namespace TencentCloud
                     /**
                      * 获取Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
                      * @return ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * 
                      */
                     std::string GetResourceDescription() const;
 
                     /**
                      * 设置Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
-                     * @param ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * @param _resourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * 
                      */
                     void SetResourceDescription(const std::string& _resourceDescription);
 
                     /**
                      * 判断参数 ResourceDescription 是否已赋值
                      * @return ResourceDescription 是否已赋值
+                     * 
                      */
                     bool ResourceDescriptionHasBeenSet() const;
 
                     /**
                      * 获取SCF parameter
                      * @return SCFParams SCF parameter
+                     * 
                      */
                     SCFParams GetSCFParams() const;
 
                     /**
                      * 设置SCF parameter
-                     * @param SCFParams SCF parameter
+                     * @param _sCFParams SCF parameter
+                     * 
                      */
                     void SetSCFParams(const SCFParams& _sCFParams);
 
                     /**
                      * 判断参数 SCFParams 是否已赋值
                      * @return SCFParams 是否已赋值
+                     * 
                      */
                     bool SCFParamsHasBeenSet() const;
 
                     /**
                      * 获取CKafka parameters
                      * @return CkafkaTargetParams CKafka parameters
+                     * 
                      */
                     CkafkaTargetParams GetCkafkaTargetParams() const;
 
                     /**
                      * 设置CKafka parameters
-                     * @param CkafkaTargetParams CKafka parameters
+                     * @param _ckafkaTargetParams CKafka parameters
+                     * 
                      */
                     void SetCkafkaTargetParams(const CkafkaTargetParams& _ckafkaTargetParams);
 
                     /**
                      * 判断参数 CkafkaTargetParams 是否已赋值
                      * @return CkafkaTargetParams 是否已赋值
+                     * 
                      */
                     bool CkafkaTargetParamsHasBeenSet() const;
 
                     /**
                      * 获取ElasticSearch parameters
                      * @return ESTargetParams ElasticSearch parameters
+                     * 
                      */
                     ESTargetParams GetESTargetParams() const;
 
                     /**
                      * 设置ElasticSearch parameters
-                     * @param ESTargetParams ElasticSearch parameters
+                     * @param _eSTargetParams ElasticSearch parameters
+                     * 
                      */
                     void SetESTargetParams(const ESTargetParams& _eSTargetParams);
 
                     /**
                      * 判断参数 ESTargetParams 是否已赋值
                      * @return ESTargetParams 是否已赋值
+                     * 
                      */
                     bool ESTargetParamsHasBeenSet() const;
 

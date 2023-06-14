@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Action performed on logs
                      * @return Action Action performed on logs
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Action performed on logs
-                     * @param Action Action performed on logs
+                     * @param _action Action performed on logs
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取Time when the action is performed
                      * @return CreatedOn Time when the action is performed
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置Time when the action is performed
-                     * @param CreatedOn Time when the action is performed
+                     * @param _createdOn Time when the action is performed
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 

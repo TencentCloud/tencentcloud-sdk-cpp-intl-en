@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Deletion task ID
                      * @return DeletionTaskId Deletion task ID
+                     * 
                      */
                     std::string GetDeletionTaskId() const;
 
                     /**
                      * 设置Deletion task ID
-                     * @param DeletionTaskId Deletion task ID
+                     * @param _deletionTaskId Deletion task ID
+                     * 
                      */
                     void SetDeletionTaskId(const std::string& _deletionTaskId);
 
                     /**
                      * 判断参数 DeletionTaskId 是否已赋值
                      * @return DeletionTaskId 是否已赋值
+                     * 
                      */
                     bool DeletionTaskIdHasBeenSet() const;
 

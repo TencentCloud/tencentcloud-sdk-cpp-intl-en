@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Message ID list.
                      * @return MessageId Message ID list.
+                     * 
                      */
                     std::vector<std::string> GetMessageId() const;
 
                     /**
                      * 判断参数 MessageId 是否已赋值
                      * @return MessageId 是否已赋值
+                     * 
                      */
                     bool MessageIdHasBeenSet() const;
 

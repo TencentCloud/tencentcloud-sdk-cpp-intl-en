@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of CVM instance categories
                      * @return InstanceCategorySet List of CVM instance categories
+                     * 
                      */
                     std::vector<InstanceCategoryItem> GetInstanceCategorySet() const;
 
                     /**
                      * 判断参数 InstanceCategorySet 是否已赋值
                      * @return InstanceCategorySet 是否已赋值
+                     * 
                      */
                     bool InstanceCategorySetHasBeenSet() const;
 

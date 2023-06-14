@@ -45,126 +45,147 @@ namespace TencentCloud
                     /**
                      * 获取Access to request the cluster add-on
                      * @return Method Access to request the cluster add-on
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Access to request the cluster add-on
-                     * @param Method Access to request the cluster add-on
+                     * @param _method Access to request the cluster add-on
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
                     /**
                      * 获取Path to request the cluster add-on
                      * @return Path Path to request the cluster add-on
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Path to request the cluster add-on
-                     * @param Path Path to request the cluster add-on
+                     * @param _path Path to request the cluster add-on
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
                     /**
                      * 获取Data format allowed to receive the requested cluster add-on
                      * @return Accept Data format allowed to receive the requested cluster add-on
+                     * 
                      */
                     std::string GetAccept() const;
 
                     /**
                      * 设置Data format allowed to receive the requested cluster add-on
-                     * @param Accept Data format allowed to receive the requested cluster add-on
+                     * @param _accept Data format allowed to receive the requested cluster add-on
+                     * 
                      */
                     void SetAccept(const std::string& _accept);
 
                     /**
                      * 判断参数 Accept 是否已赋值
                      * @return Accept 是否已赋值
+                     * 
                      */
                     bool AcceptHasBeenSet() const;
 
                     /**
                      * 获取Data format for requesting the cluster add-on
                      * @return ContentType Data format for requesting the cluster add-on
+                     * 
                      */
                     std::string GetContentType() const;
 
                     /**
                      * 设置Data format for requesting the cluster add-on
-                     * @param ContentType Data format for requesting the cluster add-on
+                     * @param _contentType Data format for requesting the cluster add-on
+                     * 
                      */
                     void SetContentType(const std::string& _contentType);
 
                     /**
                      * 判断参数 ContentType 是否已赋值
                      * @return ContentType 是否已赋值
+                     * 
                      */
                     bool ContentTypeHasBeenSet() const;
 
                     /**
                      * 获取Data sent to request the cluster add-on
                      * @return RequestBody Data sent to request the cluster add-on
+                     * 
                      */
                     std::string GetRequestBody() const;
 
                     /**
                      * 设置Data sent to request the cluster add-on
-                     * @param RequestBody Data sent to request the cluster add-on
+                     * @param _requestBody Data sent to request the cluster add-on
+                     * 
                      */
                     void SetRequestBody(const std::string& _requestBody);
 
                     /**
                      * 判断参数 RequestBody 是否已赋值
                      * @return RequestBody 是否已赋值
+                     * 
                      */
                     bool RequestBodyHasBeenSet() const;
 
                     /**
                      * 获取Cluster name (for example, `cls-1234abcd`)
                      * @return ClusterName Cluster name (for example, `cls-1234abcd`)
+                     * 
                      */
                     std::string GetClusterName() const;
 
                     /**
                      * 设置Cluster name (for example, `cls-1234abcd`)
-                     * @param ClusterName Cluster name (for example, `cls-1234abcd`)
+                     * @param _clusterName Cluster name (for example, `cls-1234abcd`)
+                     * 
                      */
                     void SetClusterName(const std::string& _clusterName);
 
                     /**
                      * 判断参数 ClusterName 是否已赋值
                      * @return ClusterName 是否已赋值
+                     * 
                      */
                     bool ClusterNameHasBeenSet() const;
 
                     /**
                      * 获取Whether to encode the request content
                      * @return EncodedBody Whether to encode the request content
+                     * 
                      */
                     std::string GetEncodedBody() const;
 
                     /**
                      * 设置Whether to encode the request content
-                     * @param EncodedBody Whether to encode the request content
+                     * @param _encodedBody Whether to encode the request content
+                     * 
                      */
                     void SetEncodedBody(const std::string& _encodedBody);
 
                     /**
                      * 判断参数 EncodedBody 是否已赋值
                      * @return EncodedBody 是否已赋值
+                     * 
                      */
                     bool EncodedBodyHasBeenSet() const;
 

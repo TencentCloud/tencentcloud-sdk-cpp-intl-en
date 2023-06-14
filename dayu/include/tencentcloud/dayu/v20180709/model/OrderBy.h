@@ -55,6 +55,7 @@ overloadCount (number of times of exceeding peak value)
 bandwidth (bandwidth),
 overloadCount (number of times of exceeding peak value)
 ]
+                     * 
                      */
                     std::string GetField() const;
 
@@ -63,34 +64,39 @@ overloadCount (number of times of exceeding peak value)
 bandwidth (bandwidth),
 overloadCount (number of times of exceeding peak value)
 ]
-                     * @param Field Sort by field name. Valid values: [
+                     * @param _field Sort by field name. Valid values: [
 bandwidth (bandwidth),
 overloadCount (number of times of exceeding peak value)
 ]
+                     * 
                      */
                     void SetField(const std::string& _field);
 
                     /**
                      * 判断参数 Field 是否已赋值
                      * @return Field 是否已赋值
+                     * 
                      */
                     bool FieldHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: [asc (ascending), desc (descending)]
                      * @return Order Sorting order. Valid values: [asc (ascending), desc (descending)]
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Sorting order. Valid values: [asc (ascending), desc (descending)]
-                     * @param Order Sorting order. Valid values: [asc (ascending), desc (descending)]
+                     * @param _order Sorting order. Valid values: [asc (ascending), desc (descending)]
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 

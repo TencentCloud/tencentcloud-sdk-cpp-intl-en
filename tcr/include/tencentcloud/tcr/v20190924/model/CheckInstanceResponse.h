@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Verification result. true: valid, false: invalid
                      * @return IsValidated Verification result. true: valid, false: invalid
+                     * 
                      */
                     bool GetIsValidated() const;
 
                     /**
                      * 判断参数 IsValidated 是否已赋值
                      * @return IsValidated 是否已赋值
+                     * 
                      */
                     bool IsValidatedHasBeenSet() const;
 
                     /**
                      * 获取ID of the region where the instance is located.
                      * @return RegionId ID of the region where the instance is located.
+                     * 
                      */
                     uint64_t GetRegionId() const;
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 

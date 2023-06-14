@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取The time point when to repeat the snapshot operation
                      * @return Hour The time point when to repeat the snapshot operation
+                     * 
                      */
                     std::string GetHour() const;
 
                     /**
                      * 设置The time point when to repeat the snapshot operation
-                     * @param Hour The time point when to repeat the snapshot operation
+                     * @param _hour The time point when to repeat the snapshot operation
+                     * 
                      */
                     void SetHour(const std::string& _hour);
 
                     /**
                      * 判断参数 Hour 是否已赋值
                      * @return Hour 是否已赋值
+                     * 
                      */
                     bool HourHasBeenSet() const;
 
                     /**
                      * 获取Policy name
                      * @return PolicyName Policy name
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name
-                     * @param PolicyName Policy name
+                     * @param _policyName Policy name
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 
                     /**
                      * 获取The day of the week on which to repeat the snapshot operation
                      * @return DayOfWeek The day of the week on which to repeat the snapshot operation
+                     * 
                      */
                     std::string GetDayOfWeek() const;
 
                     /**
                      * 设置The day of the week on which to repeat the snapshot operation
-                     * @param DayOfWeek The day of the week on which to repeat the snapshot operation
+                     * @param _dayOfWeek The day of the week on which to repeat the snapshot operation
+                     * 
                      */
                     void SetDayOfWeek(const std::string& _dayOfWeek);
 
                     /**
                      * 判断参数 DayOfWeek 是否已赋值
                      * @return DayOfWeek 是否已赋值
+                     * 
                      */
                     bool DayOfWeekHasBeenSet() const;
 
                     /**
                      * 获取Snapshot retention period
                      * @return AliveDays Snapshot retention period
+                     * 
                      */
                     uint64_t GetAliveDays() const;
 
                     /**
                      * 设置Snapshot retention period
-                     * @param AliveDays Snapshot retention period
+                     * @param _aliveDays Snapshot retention period
+                     * 
                      */
                     void SetAliveDays(const uint64_t& _aliveDays);
 
                     /**
                      * 判断参数 AliveDays 是否已赋值
                      * @return AliveDays 是否已赋值
+                     * 
                      */
                     bool AliveDaysHasBeenSet() const;
 
                     /**
                      * 获取The specific day (day 1 to day 31) of the month on which to create a snapshot.
                      * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * 
                      */
                     std::string GetDayOfMonth() const;
 
                     /**
                      * 设置The specific day (day 1 to day 31) of the month on which to create a snapshot.
-                     * @param DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * @param _dayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * 
                      */
                     void SetDayOfMonth(const std::string& _dayOfMonth);
 
                     /**
                      * 判断参数 DayOfMonth 是否已赋值
                      * @return DayOfMonth 是否已赋值
+                     * 
                      */
                     bool DayOfMonthHasBeenSet() const;
 
                     /**
                      * 获取The snapshot interval, in days.
                      * @return IntervalDays The snapshot interval, in days.
+                     * 
                      */
                     uint64_t GetIntervalDays() const;
 
                     /**
                      * 设置The snapshot interval, in days.
-                     * @param IntervalDays The snapshot interval, in days.
+                     * @param _intervalDays The snapshot interval, in days.
+                     * 
                      */
                     void SetIntervalDays(const uint64_t& _intervalDays);
 
                     /**
                      * 判断参数 IntervalDays 是否已赋值
                      * @return IntervalDays 是否已赋值
+                     * 
                      */
                     bool IntervalDaysHasBeenSet() const;
 

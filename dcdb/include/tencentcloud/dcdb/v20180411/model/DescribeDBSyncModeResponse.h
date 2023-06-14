@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
                      * @return SyncMode Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
+                     * 
                      */
                     int64_t GetSyncMode() const;
 
                     /**
                      * 判断参数 SyncMode 是否已赋值
                      * @return SyncMode 是否已赋值
+                     * 
                      */
                     bool SyncModeHasBeenSet() const;
 
                     /**
                      * 获取Whether a modification is in progress. 1: yes; 0: no.
                      * @return IsModifying Whether a modification is in progress. 1: yes; 0: no.
+                     * 
                      */
                     int64_t GetIsModifying() const;
 
                     /**
                      * 判断参数 IsModifying 是否已赋值
                      * @return IsModifying 是否已赋值
+                     * 
                      */
                     bool IsModifyingHasBeenSet() const;
 
                     /**
                      * 获取Current sync mode. Valid values: `0` (async), `1` (sync).
                      * @return CurrentSyncMode Current sync mode. Valid values: `0` (async), `1` (sync).
+                     * 
                      */
                     int64_t GetCurrentSyncMode() const;
 
                     /**
                      * 判断参数 CurrentSyncMode 是否已赋值
                      * @return CurrentSyncMode 是否已赋值
+                     * 
                      */
                     bool CurrentSyncModeHasBeenSet() const;
 

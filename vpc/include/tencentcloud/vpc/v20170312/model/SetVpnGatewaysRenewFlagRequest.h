@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取VPN gateway IDs
                      * @return VpnGatewayIds VPN gateway IDs
+                     * 
                      */
                     std::vector<std::string> GetVpnGatewayIds() const;
 
                     /**
                      * 设置VPN gateway IDs
-                     * @param VpnGatewayIds VPN gateway IDs
+                     * @param _vpnGatewayIds VPN gateway IDs
+                     * 
                      */
                     void SetVpnGatewayIds(const std::vector<std::string>& _vpnGatewayIds);
 
                     /**
                      * 判断参数 VpnGatewayIds 是否已赋值
                      * @return VpnGatewayIds 是否已赋值
+                     * 
                      */
                     bool VpnGatewayIdsHasBeenSet() const;
 
@@ -65,38 +68,44 @@ namespace TencentCloud
 Values: `0` (Follow original), `1` (Enable auto-renewal), `2` (Disable auto-renewal) 
                      * @return AutoRenewFlag Status of auto-renewal
 Values: `0` (Follow original), `1` (Enable auto-renewal), `2` (Disable auto-renewal) 
+                     * 
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
                      * 设置Status of auto-renewal
 Values: `0` (Follow original), `1` (Enable auto-renewal), `2` (Disable auto-renewal) 
-                     * @param AutoRenewFlag Status of auto-renewal
+                     * @param _autoRenewFlag Status of auto-renewal
 Values: `0` (Follow original), `1` (Enable auto-renewal), `2` (Disable auto-renewal) 
+                     * 
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取VPNGW type: `IPSEC`, `SSL`
                      * @return Type VPNGW type: `IPSEC`, `SSL`
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置VPNGW type: `IPSEC`, `SSL`
-                     * @param Type VPNGW type: `IPSEC`, `SSL`
+                     * @param _type VPNGW type: `IPSEC`, `SSL`
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

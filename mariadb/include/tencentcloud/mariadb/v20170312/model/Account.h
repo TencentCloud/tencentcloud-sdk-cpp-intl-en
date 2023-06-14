@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Account name
                      * @return User Account name
+                     * 
                      */
                     std::string GetUser() const;
 
                     /**
                      * 设置Account name
-                     * @param User Account name
+                     * @param _user Account name
+                     * 
                      */
                     void SetUser(const std::string& _user);
 
                     /**
                      * 判断参数 User 是否已赋值
                      * @return User 是否已赋值
+                     * 
                      */
                     bool UserHasBeenSet() const;
 
                     /**
                      * 获取Host address
                      * @return Host Host address
+                     * 
                      */
                     std::string GetHost() const;
 
                     /**
                      * 设置Host address
-                     * @param Host Host address
+                     * @param _host Host address
+                     * 
                      */
                     void SetHost(const std::string& _host);
 
                     /**
                      * 判断参数 Host 是否已赋值
                      * @return Host 是否已赋值
+                     * 
                      */
                     bool HostHasBeenSet() const;
 

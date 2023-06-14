@@ -63,12 +63,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Cache Cache expiration time configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     CacheConfig GetCache() const;
 
                     /**
                      * 判断参数 Cache 是否已赋值
                      * @return Cache 是否已赋值
+                     * 
                      */
                     bool CacheHasBeenSet() const;
 
@@ -77,12 +79,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheKey Node cache key configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     CacheKey GetCacheKey() const;
 
                     /**
                      * 判断参数 CacheKey 是否已赋值
                      * @return CacheKey 是否已赋值
+                     * 
                      */
                     bool CacheKeyHasBeenSet() const;
 
@@ -91,12 +95,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MaxAge Browser cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     MaxAge GetMaxAge() const;
 
                     /**
                      * 判断参数 MaxAge 是否已赋值
                      * @return MaxAge 是否已赋值
+                     * 
                      */
                     bool MaxAgeHasBeenSet() const;
 
@@ -105,12 +111,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OfflineCache Offline cache
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     OfflineCache GetOfflineCache() const;
 
                     /**
                      * 判断参数 OfflineCache 是否已赋值
                      * @return OfflineCache 是否已赋值
+                     * 
                      */
                     bool OfflineCacheHasBeenSet() const;
 
@@ -119,12 +127,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Quic QUIC access
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     Quic GetQuic() const;
 
                     /**
                      * 判断参数 Quic 是否已赋值
                      * @return Quic 是否已赋值
+                     * 
                      */
                     bool QuicHasBeenSet() const;
 
@@ -133,12 +143,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PostMaxSize POST transport configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     PostMaxSize GetPostMaxSize() const;
 
                     /**
                      * 判断参数 PostMaxSize 是否已赋值
                      * @return PostMaxSize 是否已赋值
+                     * 
                      */
                     bool PostMaxSizeHasBeenSet() const;
 
@@ -147,12 +159,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Compression Smart compression configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     Compression GetCompression() const;
 
                     /**
                      * 判断参数 Compression 是否已赋值
                      * @return Compression 是否已赋值
+                     * 
                      */
                     bool CompressionHasBeenSet() const;
 
@@ -161,12 +175,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpstreamHttp2 HTTP2 origin-pull configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     UpstreamHttp2 GetUpstreamHttp2() const;
 
                     /**
                      * 判断参数 UpstreamHttp2 是否已赋值
                      * @return UpstreamHttp2 是否已赋值
+                     * 
                      */
                     bool UpstreamHttp2HasBeenSet() const;
 
@@ -175,12 +191,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ForceRedirect Force HTTPS redirect configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     ForceRedirect GetForceRedirect() const;
 
                     /**
                      * 判断参数 ForceRedirect 是否已赋值
                      * @return ForceRedirect 是否已赋值
+                     * 
                      */
                     bool ForceRedirectHasBeenSet() const;
 
@@ -189,12 +207,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Https HTTPS acceleration configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     Https GetHttps() const;
 
                     /**
                      * 判断参数 Https 是否已赋值
                      * @return Https 是否已赋值
+                     * 
                      */
                     bool HttpsHasBeenSet() const;
 
@@ -203,12 +223,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Origin Origin server configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     Origin GetOrigin() const;
 
                     /**
                      * 判断参数 Origin 是否已赋值
                      * @return Origin 是否已赋值
+                     * 
                      */
                     bool OriginHasBeenSet() const;
 
@@ -217,36 +239,42 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SmartRouting Dynamic acceleration configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     SmartRouting GetSmartRouting() const;
 
                     /**
                      * 判断参数 SmartRouting 是否已赋值
                      * @return SmartRouting 是否已赋值
+                     * 
                      */
                     bool SmartRoutingHasBeenSet() const;
 
                     /**
                      * 获取Site ID
                      * @return ZoneId Site ID
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Domain name of the site
                      * @return Zone Domain name of the site
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -255,12 +283,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return WebSocket WebSocket configuration.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     WebSocket GetWebSocket() const;
 
                     /**
                      * 判断参数 WebSocket 是否已赋值
                      * @return WebSocket 是否已赋值
+                     * 
                      */
                     bool WebSocketHasBeenSet() const;
 
@@ -269,12 +299,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ClientIpHeader Origin-pull client IP header configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     ClientIp GetClientIpHeader() const;
 
                     /**
                      * 判断参数 ClientIpHeader 是否已赋值
                      * @return ClientIpHeader 是否已赋值
+                     * 
                      */
                     bool ClientIpHeaderHasBeenSet() const;
 
@@ -283,12 +315,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CachePrefresh Cache prefresh configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     CachePrefresh GetCachePrefresh() const;
 
                     /**
                      * 判断参数 CachePrefresh 是否已赋值
                      * @return CachePrefresh 是否已赋值
+                     * 
                      */
                     bool CachePrefreshHasBeenSet() const;
 

@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Domain to be verified.
                      * @return EmailIdentity Domain to be verified.
+                     * 
                      */
                     std::string GetEmailIdentity() const;
 
                     /**
                      * 设置Domain to be verified.
-                     * @param EmailIdentity Domain to be verified.
+                     * @param _emailIdentity Domain to be verified.
+                     * 
                      */
                     void SetEmailIdentity(const std::string& _emailIdentity);
 
                     /**
                      * 判断参数 EmailIdentity 是否已赋值
                      * @return EmailIdentity 是否已赋值
+                     * 
                      */
                     bool EmailIdentityHasBeenSet() const;
 

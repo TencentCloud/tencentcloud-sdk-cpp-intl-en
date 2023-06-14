@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserName Username, which can contain up to 32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username, which can contain up to 32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserName Username, which can contain up to 32 characters.
+                     * @param _userName Username, which can contain up to 32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Status User status.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置User status.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status User status.
+                     * @param _status User status.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DisplayName Nickname, which can contain up to 64 characters and is the same as the username by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDisplayName() const;
 
                     /**
                      * 设置Nickname, which can contain up to 64 characters and is the same as the username by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DisplayName Nickname, which can contain up to 64 characters and is the same as the username by default.
+                     * @param _displayName Nickname, which can contain up to 64 characters and is the same as the username by default.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDisplayName(const std::string& _displayName);
 
                     /**
                      * 判断参数 DisplayName 是否已赋值
                      * @return DisplayName 是否已赋值
+                     * 
                      */
                     bool DisplayNameHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Description User remarks, which can contain up to 512 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置User remarks, which can contain up to 512 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Description User remarks, which can contain up to 512 characters.
+                     * @param _description User remarks, which can contain up to 512 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastUpdateTime Last update time of the user in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastUpdateTime() const;
 
                     /**
                      * 设置Last update time of the user in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastUpdateTime Last update time of the user in ISO 8601 format.
+                     * @param _lastUpdateTime Last update time of the user in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastUpdateTime(const std::string& _lastUpdateTime);
 
                     /**
                      * 判断参数 LastUpdateTime 是否已赋值
                      * @return LastUpdateTime 是否已赋值
+                     * 
                      */
                     bool LastUpdateTimeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreationTime User creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
                      * 设置User creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreationTime User creation time in ISO 8601 format.
+                     * @param _creationTime User creation time in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreationTime(const std::string& _creationTime);
 
                     /**
                      * 判断参数 CreationTime 是否已赋值
                      * @return CreationTime 是否已赋值
+                     * 
                      */
                     bool CreationTimeHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return OrgPath Path ID of the user's primary organization.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOrgPath() const;
 
                     /**
                      * 设置Path ID of the user's primary organization.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OrgPath Path ID of the user's primary organization.
+                     * @param _orgPath Path ID of the user's primary organization.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOrgPath(const std::string& _orgPath);
 
                     /**
                      * 判断参数 OrgPath 是否已赋值
                      * @return OrgPath 是否已赋值
+                     * 
                      */
                     bool OrgPathHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Phone User's mobile number with country code, such as `+86-00000000000`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPhone() const;
 
                     /**
                      * 设置User's mobile number with country code, such as `+86-00000000000`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Phone User's mobile number with country code, such as `+86-00000000000`.
+                     * @param _phone User's mobile number with country code, such as `+86-00000000000`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPhone(const std::string& _phone);
 
                     /**
                      * 判断参数 Phone 是否已赋值
                      * @return Phone 是否已赋值
+                     * 
                      */
                     bool PhoneHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubjectGroups List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetSubjectGroups() const;
 
                     /**
                      * 设置List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubjectGroups List of IDs of the user's user groups.
+                     * @param _subjectGroups List of IDs of the user's user groups.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubjectGroups(const std::vector<std::string>& _subjectGroups);
 
                     /**
                      * 判断参数 SubjectGroups 是否已赋值
                      * @return SubjectGroups 是否已赋值
+                     * 
                      */
                     bool SubjectGroupsHasBeenSet() const;
 
@@ -249,20 +276,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Email User's email address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEmail() const;
 
                     /**
                      * 设置User's email address.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Email User's email address.
+                     * @param _email User's email address.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEmail(const std::string& _email);
 
                     /**
                      * 判断参数 Email 是否已赋值
                      * @return Email 是否已赋值
+                     * 
                      */
                     bool EmailHasBeenSet() const;
 
@@ -271,20 +301,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return LastLoginTime Last login time of the user in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastLoginTime() const;
 
                     /**
                      * 设置Last login time of the user in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastLoginTime Last login time of the user in ISO 8601 format.
+                     * @param _lastLoginTime Last login time of the user in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastLoginTime(const std::string& _lastLoginTime);
 
                     /**
                      * 判断参数 LastLoginTime 是否已赋值
                      * @return LastLoginTime 是否已赋值
+                     * 
                      */
                     bool LastLoginTimeHasBeenSet() const;
 
@@ -293,20 +326,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return UserId User ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserId User ID, which is globally unique and can contain up to 64 characters.
+                     * @param _userId User ID, which is globally unique and can contain up to 64 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 

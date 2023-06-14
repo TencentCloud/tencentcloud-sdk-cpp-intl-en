@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Type of data that is delivered to Kafka, such as `Avro` and `Json`.
                      * @return DataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+                     * 
                      */
                     std::string GetDataType() const;
 
                     /**
                      * 设置Type of data that is delivered to Kafka, such as `Avro` and `Json`.
-                     * @param DataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+                     * @param _dataType Type of data that is delivered to Kafka, such as `Avro` and `Json`.
+                     * 
                      */
                     void SetDataType(const std::string& _dataType);
 
                     /**
                      * 判断参数 DataType 是否已赋值
                      * @return DataType 是否已赋值
+                     * 
                      */
                     bool DataTypeHasBeenSet() const;
 
                     /**
                      * 获取Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
                      * @return TopicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+                     * 
                      */
                     std::string GetTopicType() const;
 
                     /**
                      * 设置Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
-                     * @param TopicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+                     * @param _topicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+                     * 
                      */
                     void SetTopicType(const std::string& _topicType);
 
                     /**
                      * 判断参数 TopicType 是否已赋值
                      * @return TopicType 是否已赋值
+                     * 
                      */
                     bool TopicTypeHasBeenSet() const;
 
                     /**
                      * 获取Topic for DDL storage
                      * @return DDLTopicName Topic for DDL storage
+                     * 
                      */
                     std::string GetDDLTopicName() const;
 
                     /**
                      * 设置Topic for DDL storage
-                     * @param DDLTopicName Topic for DDL storage
+                     * @param _dDLTopicName Topic for DDL storage
+                     * 
                      */
                     void SetDDLTopicName(const std::string& _dDLTopicName);
 
                     /**
                      * 判断参数 DDLTopicName 是否已赋值
                      * @return DDLTopicName 是否已赋值
+                     * 
                      */
                     bool DDLTopicNameHasBeenSet() const;
 
                     /**
                      * 获取Topic description
                      * @return TopicRules Topic description
+                     * 
                      */
                     std::vector<TopicRule> GetTopicRules() const;
 
                     /**
                      * 设置Topic description
-                     * @param TopicRules Topic description
+                     * @param _topicRules Topic description
+                     * 
                      */
                     void SetTopicRules(const std::vector<TopicRule>& _topicRules);
 
                     /**
                      * 判断参数 TopicRules 是否已赋值
                      * @return TopicRules 是否已赋值
+                     * 
                      */
                     bool TopicRulesHasBeenSet() const;
 

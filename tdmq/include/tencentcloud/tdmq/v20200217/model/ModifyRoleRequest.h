@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
                      * @return RoleName Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
-                     * @param RoleName Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
+                     * @param _roleName Role name, which can contain up to 32 letters, digits, hyphens, and underscores.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 
                     /**
                      * 获取Remarks (up to 128 characters).
                      * @return Remark Remarks (up to 128 characters).
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks (up to 128 characters).
-                     * @param Remark Remarks (up to 128 characters).
+                     * @param _remark Remarks (up to 128 characters).
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Cluster ID (required)
                      * @return ClusterId Cluster ID (required)
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID (required)
-                     * @param ClusterId Cluster ID (required)
+                     * @param _clusterId Cluster ID (required)
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 

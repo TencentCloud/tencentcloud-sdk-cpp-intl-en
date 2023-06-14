@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取UIN of the destination instance
                      * @return PeerRegistryUin UIN of the destination instance
+                     * 
                      */
                     std::string GetPeerRegistryUin() const;
 
                     /**
                      * 设置UIN of the destination instance
-                     * @param PeerRegistryUin UIN of the destination instance
+                     * @param _peerRegistryUin UIN of the destination instance
+                     * 
                      */
                     void SetPeerRegistryUin(const std::string& _peerRegistryUin);
 
                     /**
                      * 判断参数 PeerRegistryUin 是否已赋值
                      * @return PeerRegistryUin 是否已赋值
+                     * 
                      */
                     bool PeerRegistryUinHasBeenSet() const;
 
                     /**
                      * 获取Permanent access Token for the destination instance
                      * @return PeerRegistryToken Permanent access Token for the destination instance
+                     * 
                      */
                     std::string GetPeerRegistryToken() const;
 
                     /**
                      * 设置Permanent access Token for the destination instance
-                     * @param PeerRegistryToken Permanent access Token for the destination instance
+                     * @param _peerRegistryToken Permanent access Token for the destination instance
+                     * 
                      */
                     void SetPeerRegistryToken(const std::string& _peerRegistryToken);
 
                     /**
                      * 判断参数 PeerRegistryToken 是否已赋值
                      * @return PeerRegistryToken 是否已赋值
+                     * 
                      */
                     bool PeerRegistryTokenHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable cross-account synchronization
                      * @return EnablePeerReplication Whether to enable cross-account synchronization
+                     * 
                      */
                     bool GetEnablePeerReplication() const;
 
                     /**
                      * 设置Whether to enable cross-account synchronization
-                     * @param EnablePeerReplication Whether to enable cross-account synchronization
+                     * @param _enablePeerReplication Whether to enable cross-account synchronization
+                     * 
                      */
                     void SetEnablePeerReplication(const bool& _enablePeerReplication);
 
                     /**
                      * 判断参数 EnablePeerReplication 是否已赋值
                      * @return EnablePeerReplication 是否已赋值
+                     * 
                      */
                     bool EnablePeerReplicationHasBeenSet() const;
 

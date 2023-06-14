@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取The log ID.
                      * @return LogId The log ID.
+                     * 
                      */
                     int64_t GetLogId() const;
 
                     /**
                      * 设置The log ID.
-                     * @param LogId The log ID.
+                     * @param _logId The log ID.
+                     * 
                      */
                     void SetLogId(const int64_t& _logId);
 
                     /**
                      * 判断参数 LogId 是否已赋值
                      * @return LogId 是否已赋值
+                     * 
                      */
                     bool LogIdHasBeenSet() const;
 
                     /**
                      * 获取The offset. Default value: 0
                      * @return Offset The offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The offset. Default value: 0
-                     * @param Offset The offset. Default value: 0
+                     * @param _offset The offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The number of returned results. Default value: 20. Maximum value: 100.
                      * @return Limit The number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The number of returned results. Default value: 20. Maximum value: 100.
-                     * @param Limit The number of returned results. Default value: 20. Maximum value: 100.
+                     * @param _limit The number of returned results. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The sort key. Valid values: `Domain`, `UpdateOn`, `Status`
                      * @return OrderByKey The sort key. Valid values: `Domain`, `UpdateOn`, `Status`
+                     * 
                      */
                     std::string GetOrderByKey() const;
 
                     /**
                      * 设置The sort key. Valid values: `Domain`, `UpdateOn`, `Status`
-                     * @param OrderByKey The sort key. Valid values: `Domain`, `UpdateOn`, `Status`
+                     * @param _orderByKey The sort key. Valid values: `Domain`, `UpdateOn`, `Status`
+                     * 
                      */
                     void SetOrderByKey(const std::string& _orderByKey);
 
                     /**
                      * 判断参数 OrderByKey 是否已赋值
                      * @return OrderByKey 是否已赋值
+                     * 
                      */
                     bool OrderByKeyHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `0` (ascending), `1` (descending).
                      * @return OrderBy Valid values: `0` (ascending), `1` (descending).
+                     * 
                      */
                     int64_t GetOrderBy() const;
 
                     /**
                      * 设置Valid values: `0` (ascending), `1` (descending).
-                     * @param OrderBy Valid values: `0` (ascending), `1` (descending).
+                     * @param _orderBy Valid values: `0` (ascending), `1` (descending).
+                     * 
                      */
                     void SetOrderBy(const int64_t& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 

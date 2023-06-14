@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取List of the returned space statistics of top tables.
                      * @return TopSpaceTables List of the returned space statistics of top tables.
+                     * 
                      */
                     std::vector<TableSpaceData> GetTopSpaceTables() const;
 
                     /**
                      * 判断参数 TopSpaceTables 是否已赋值
                      * @return TopSpaceTables 是否已赋值
+                     * 
                      */
                     bool TopSpaceTablesHasBeenSet() const;
 
                     /**
                      * 获取Timestamp (in seconds) of tablespace data collect points
                      * @return Timestamp Timestamp (in seconds) of tablespace data collect points
+                     * 
                      */
                     int64_t GetTimestamp() const;
 
                     /**
                      * 判断参数 Timestamp 是否已赋值
                      * @return Timestamp 是否已赋值
+                     * 
                      */
                     bool TimestampHasBeenSet() const;
 

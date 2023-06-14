@@ -51,54 +51,63 @@ namespace TencentCloud
                     /**
                      * 获取Whether to use HostNetWork
                      * @return HostNet Whether to use HostNetWork
+                     * 
                      */
                     bool GetHostNet() const;
 
                     /**
                      * 设置Whether to use HostNetWork
-                     * @param HostNet Whether to use HostNetWork
+                     * @param _hostNet Whether to use HostNetWork
+                     * 
                      */
                     void SetHostNet(const bool& _hostNet);
 
                     /**
                      * 判断参数 HostNet 是否已赋值
                      * @return HostNet 是否已赋值
+                     * 
                      */
                     bool HostNetHasBeenSet() const;
 
                     /**
                      * 获取A parameter used to specify the running nodes for a pod
                      * @return NodeSelector A parameter used to specify the running nodes for a pod
+                     * 
                      */
                     std::vector<Label> GetNodeSelector() const;
 
                     /**
                      * 设置A parameter used to specify the running nodes for a pod
-                     * @param NodeSelector A parameter used to specify the running nodes for a pod
+                     * @param _nodeSelector A parameter used to specify the running nodes for a pod
+                     * 
                      */
                     void SetNodeSelector(const std::vector<Label>& _nodeSelector);
 
                     /**
                      * 判断参数 NodeSelector 是否已赋值
                      * @return NodeSelector 是否已赋值
+                     * 
                      */
                     bool NodeSelectorHasBeenSet() const;
 
                     /**
                      * 获取Tolerable taints
                      * @return Tolerations Tolerable taints
+                     * 
                      */
                     std::vector<Toleration> GetTolerations() const;
 
                     /**
                      * 设置Tolerable taints
-                     * @param Tolerations Tolerable taints
+                     * @param _tolerations Tolerable taints
+                     * 
                      */
                     void SetTolerations(const std::vector<Toleration>& _tolerations);
 
                     /**
                      * 判断参数 Tolerations 是否已赋值
                      * @return Tolerations 是否已赋值
+                     * 
                      */
                     bool TolerationsHasBeenSet() const;
 

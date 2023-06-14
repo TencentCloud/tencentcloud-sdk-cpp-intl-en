@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Label This field is used to return the language information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLabel() const;
 
                     /**
                      * 设置This field is used to return the language information.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Label This field is used to return the language information.
+                     * @param _label This field is used to return the language information.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLabel(const std::string& _label);
 
                     /**
                      * 判断参数 Label 是否已赋值
                      * @return Label 是否已赋值
+                     * 
                      */
                     bool LabelHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Score This parameter is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of the current returned language tag;
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置This parameter is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of the current returned language tag;
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Score This parameter is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of the current returned language tag;
+                     * @param _score This parameter is used to return the confidence under the current tag. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of the current returned language tag;
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetStartTime() const;
 
                     /**
                      * 设置This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * @param _startTime This parameter is used to return the start time of the segment of an audio file under the corresponding language tag in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartTime(const double& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetEndTime() const;
 
                     /**
                      * 设置This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
+                     * @param _endTime This parameter is used to return the end time of the segment of an audio file under the corresponding language tag in milliseconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const double& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return SubLabelCode *This field is in beta test. Stay tuned*
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSubLabelCode() const;
 
                     /**
                      * 设置*This field is in beta test. Stay tuned*
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SubLabelCode *This field is in beta test. Stay tuned*
+                     * @param _subLabelCode *This field is in beta test. Stay tuned*
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSubLabelCode(const std::string& _subLabelCode);
 
                     /**
                      * 判断参数 SubLabelCode 是否已赋值
                      * @return SubLabelCode 是否已赋值
+                     * 
                      */
                     bool SubLabelCodeHasBeenSet() const;
 

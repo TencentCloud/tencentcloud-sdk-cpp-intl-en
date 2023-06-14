@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoEnhance Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VideoEnhanceConfig GetVideoEnhance() const;
 
                     /**
                      * 设置Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VideoEnhance Video enhancement configuration.
+                     * @param _videoEnhance Video enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVideoEnhance(const VideoEnhanceConfig& _videoEnhance);
 
                     /**
                      * 判断参数 VideoEnhance 是否已赋值
                      * @return VideoEnhance 是否已赋值
+                     * 
                      */
                     bool VideoEnhanceHasBeenSet() const;
 

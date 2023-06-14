@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The confidence score for the moderation result. Value range: 0-100.
                      * @return Confidence The confidence score for the moderation result. Value range: 0-100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置The confidence score for the moderation result. Value range: 0-100.
-                     * @param Confidence The confidence score for the moderation result. Value range: 0-100.
+                     * @param _confidence The confidence score for the moderation result. Value range: 0-100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 <li>pass/li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -81,52 +85,60 @@ namespace TencentCloud
 <li>pass/li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion The suggestion for handling the detected politically sensitive content. Valid values:
+                     * @param _suggestion The suggestion for handling the detected politically sensitive content. Valid values:
 <li>pass/li>
 <li>review</li>
 <li>block</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取The name of the politically sensitive content or banned icon detected.
                      * @return Name The name of the politically sensitive content or banned icon detected.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The name of the politically sensitive content or banned icon detected.
-                     * @param Name The name of the politically sensitive content or banned icon detected.
+                     * @param _name The name of the politically sensitive content or banned icon detected.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
                      * @return AreaCoordSet The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+                     * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
                      * 设置The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
-                     * @param AreaCoordSet The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+                     * @param _areaCoordSet The coordinates (pixel) of the top-left and bottom-right corners of the frame where the politically sensitive content or banned icon appears. Format: [x1, y1, x2, y2].
+                     * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
 
                     /**
                      * 判断参数 AreaCoordSet 是否已赋值
                      * @return AreaCoordSet 是否已赋值
+                     * 
                      */
                     bool AreaCoordSetHasBeenSet() const;
 

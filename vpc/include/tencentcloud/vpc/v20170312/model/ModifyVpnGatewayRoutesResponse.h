@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Routes Route information of the VPN gateway
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::vector<VpnGatewayRoute> GetRoutes() const;
 
                     /**
                      * 判断参数 Routes 是否已赋值
                      * @return Routes 是否已赋值
+                     * 
                      */
                     bool RoutesHasBeenSet() const;
 

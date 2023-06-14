@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of matching execution activities.
                      * @return TotalCount Total number of matching execution activities.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of execution activities.
                      * @return InvocationSet List of execution activities.
+                     * 
                      */
                     std::vector<Invocation> GetInvocationSet() const;
 
                     /**
                      * 判断参数 InvocationSet 是否已赋值
                      * @return InvocationSet 是否已赋值
+                     * 
                      */
                     bool InvocationSetHasBeenSet() const;
 

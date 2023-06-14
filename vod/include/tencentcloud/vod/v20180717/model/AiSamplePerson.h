@@ -50,144 +50,168 @@ namespace TencentCloud
                     /**
                      * 获取Figure ID.
                      * @return PersonId Figure ID.
+                     * 
                      */
                     std::string GetPersonId() const;
 
                     /**
                      * 设置Figure ID.
-                     * @param PersonId Figure ID.
+                     * @param _personId Figure ID.
+                     * 
                      */
                     void SetPersonId(const std::string& _personId);
 
                     /**
                      * 判断参数 PersonId 是否已赋值
                      * @return PersonId 是否已赋值
+                     * 
                      */
                     bool PersonIdHasBeenSet() const;
 
                     /**
                      * 获取Figure name.
                      * @return Name Figure name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Figure name.
-                     * @param Name Figure name.
+                     * @param _name Figure name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Figure description.
                      * @return Description Figure description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Figure description.
-                     * @param Description Figure description.
+                     * @param _description Figure description.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Face information.
                      * @return FaceInfoSet Face information.
+                     * 
                      */
                     std::vector<AiSampleFaceInfo> GetFaceInfoSet() const;
 
                     /**
                      * 设置Face information.
-                     * @param FaceInfoSet Face information.
+                     * @param _faceInfoSet Face information.
+                     * 
                      */
                     void SetFaceInfoSet(const std::vector<AiSampleFaceInfo>& _faceInfoSet);
 
                     /**
                      * 判断参数 FaceInfoSet 是否已赋值
                      * @return FaceInfoSet 是否已赋值
+                     * 
                      */
                     bool FaceInfoSetHasBeenSet() const;
 
                     /**
                      * 获取Figure tag.
                      * @return TagSet Figure tag.
+                     * 
                      */
                     std::vector<std::string> GetTagSet() const;
 
                     /**
                      * 设置Figure tag.
-                     * @param TagSet Figure tag.
+                     * @param _tagSet Figure tag.
+                     * 
                      */
                     void SetTagSet(const std::vector<std::string>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
                     /**
                      * 获取Use case.
                      * @return UsageSet Use case.
+                     * 
                      */
                     std::vector<std::string> GetUsageSet() const;
 
                     /**
                      * 设置Use case.
-                     * @param UsageSet Use case.
+                     * @param _usageSet Use case.
+                     * 
                      */
                     void SetUsageSet(const std::vector<std::string>& _usageSet);
 
                     /**
                      * 判断参数 UsageSet 是否已赋值
                      * @return UsageSet 是否已赋值
+                     * 
                      */
                     bool UsageSetHasBeenSet() const;
 
                     /**
                      * 获取Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 

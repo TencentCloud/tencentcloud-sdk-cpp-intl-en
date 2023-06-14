@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Score of ASR-detected prohibited information in speech between 0 and 100.
                      * @return Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+                     * 
                      */
                     double GetConfidence() const;
 
                     /**
                      * 设置Score of ASR-detected prohibited information in speech between 0 and 100.
-                     * @param Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+                     * @param _confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+                     * 
                      */
                     void SetConfidence(const double& _confidence);
 
                     /**
                      * 判断参数 Confidence 是否已赋值
                      * @return Confidence 是否已赋值
+                     * 
                      */
                     bool ConfidenceHasBeenSet() const;
 
@@ -74,6 +77,7 @@ namespace TencentCloud
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
+                     * 
                      */
                     std::string GetSuggestion() const;
 
@@ -82,34 +86,39 @@ namespace TencentCloud
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+                     * @param _suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
+                     * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
                     /**
                      * 判断参数 Suggestion 是否已赋值
                      * @return Suggestion 是否已赋值
+                     * 
                      */
                     bool SuggestionHasBeenSet() const;
 
                     /**
                      * 获取List of video segments that contain the ASR-detected prohibited information in speech.
                      * @return SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+                     * 
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> GetSegmentSet() const;
 
                     /**
                      * 设置List of video segments that contain the ASR-detected prohibited information in speech.
-                     * @param SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+                     * @param _segmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+                     * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewAsrTextSegmentItem>& _segmentSet);
 
                     /**
                      * 判断参数 SegmentSet 是否已赋值
                      * @return SegmentSet 是否已赋值
+                     * 
                      */
                     bool SegmentSetHasBeenSet() const;
 

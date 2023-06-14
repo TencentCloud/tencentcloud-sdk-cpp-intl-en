@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepNo Step number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetStepNo() const;
 
                     /**
                      * 设置Step number
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepNo Step number
+                     * @param _stepNo Step number
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepNo(const uint64_t& _stepNo);
 
                     /**
                      * 判断参数 StepNo 是否已赋值
                      * @return StepNo 是否已赋值
+                     * 
                      */
                     bool StepNoHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepId Step ID such as `ConnectDBCheck`, `VersionCheck`, and `SrcPrivilegeCheck`. The specific check items are subject to source and target instances.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStepId() const;
 
                     /**
                      * 设置Step ID such as `ConnectDBCheck`, `VersionCheck`, and `SrcPrivilegeCheck`. The specific check items are subject to source and target instances.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepId Step ID such as `ConnectDBCheck`, `VersionCheck`, and `SrcPrivilegeCheck`. The specific check items are subject to source and target instances.
+                     * @param _stepId Step ID such as `ConnectDBCheck`, `VersionCheck`, and `SrcPrivilegeCheck`. The specific check items are subject to source and target instances.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepId(const std::string& _stepId);
 
                     /**
                      * 判断参数 StepId 是否已赋值
                      * @return StepId 是否已赋值
+                     * 
                      */
                     bool StepIdHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepName Step name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStepName() const;
 
                     /**
                      * 设置Step name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepName Step name
+                     * @param _stepName Step name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepName(const std::string& _stepName);
 
                     /**
                      * 判断参数 StepName 是否已赋值
                      * @return StepName 是否已赋值
+                     * 
                      */
                     bool StepNameHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepStatus Result of this check step. Valid values: `pass`, `failed`, `notStarted`, `blocked`, `warning`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStepStatus() const;
 
                     /**
                      * 设置Result of this check step. Valid values: `pass`, `failed`, `notStarted`, `blocked`, `warning`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepStatus Result of this check step. Valid values: `pass`, `failed`, `notStarted`, `blocked`, `warning`.
+                     * @param _stepStatus Result of this check step. Valid values: `pass`, `failed`, `notStarted`, `blocked`, `warning`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepStatus(const std::string& _stepStatus);
 
                     /**
                      * 判断参数 StepStatus 是否已赋值
                      * @return StepStatus 是否已赋值
+                     * 
                      */
                     bool StepStatusHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StepMessage Error message in this check step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStepMessage() const;
 
                     /**
                      * 设置Error message in this check step
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StepMessage Error message in this check step
+                     * @param _stepMessage Error message in this check step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStepMessage(const std::string& _stepMessage);
 
                     /**
                      * 判断参数 StepMessage 是否已赋值
                      * @return StepMessage 是否已赋值
+                     * 
                      */
                     bool StepMessageHasBeenSet() const;
 
@@ -162,20 +177,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DetailCheckItems Specific check item in this check step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DetailCheckItem> GetDetailCheckItems() const;
 
                     /**
                      * 设置Specific check item in this check step
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DetailCheckItems Specific check item in this check step
+                     * @param _detailCheckItems Specific check item in this check step
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDetailCheckItems(const std::vector<DetailCheckItem>& _detailCheckItems);
 
                     /**
                      * 判断参数 DetailCheckItems 是否已赋值
                      * @return DetailCheckItems 是否已赋值
+                     * 
                      */
                     bool DetailCheckItemsHasBeenSet() const;
 
@@ -184,20 +202,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HasSkipped Whether this step was skipped
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetHasSkipped() const;
 
                     /**
                      * 设置Whether this step was skipped
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HasSkipped Whether this step was skipped
+                     * @param _hasSkipped Whether this step was skipped
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHasSkipped(const bool& _hasSkipped);
 
                     /**
                      * 判断参数 HasSkipped 是否已赋值
                      * @return HasSkipped 是否已赋值
+                     * 
                      */
                     bool HasSkippedHasBeenSet() const;
 

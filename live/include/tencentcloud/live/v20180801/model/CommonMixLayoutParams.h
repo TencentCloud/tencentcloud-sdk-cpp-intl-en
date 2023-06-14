@@ -55,6 +55,7 @@ Note that two inputs cannot have the same `ImageLayer` value.
 (1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
 (2) This parameter is required for audio-only stream mixing as well.
 Note that two inputs cannot have the same `ImageLayer` value.
+                     * 
                      */
                     int64_t GetImageLayer() const;
 
@@ -63,16 +64,18 @@ Note that two inputs cannot have the same `ImageLayer` value.
 (1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
 (2) This parameter is required for audio-only stream mixing as well.
 Note that two inputs cannot have the same `ImageLayer` value.
-                     * @param ImageLayer Input layer. Value range: [1,16]
+                     * @param _imageLayer Input layer. Value range: [1,16]
 (1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
 (2) This parameter is required for audio-only stream mixing as well.
 Note that two inputs cannot have the same `ImageLayer` value.
+                     * 
                      */
                     void SetImageLayer(const int64_t& _imageLayer);
 
                     /**
                      * 判断参数 ImageLayer 是否已赋值
                      * @return ImageLayer 是否已赋值
+                     * 
                      */
                     bool ImageLayerHasBeenSet() const;
 
@@ -91,6 +94,7 @@ If this parameter is left empty, 0 will be used by default.
 3: the input stream is canvas. 
 4: the input stream is audio.
 5: the input stream is pure video.
+                     * 
                      */
                     int64_t GetInputType() const;
 
@@ -102,19 +106,21 @@ If this parameter is left empty, 0 will be used by default.
 3: the input stream is canvas. 
 4: the input stream is audio.
 5: the input stream is pure video.
-                     * @param InputType Input type. Value range: [0,5].
+                     * @param _inputType Input type. Value range: [0,5].
 If this parameter is left empty, 0 will be used by default.
 0: the input stream is audio/video.
 2: the input stream is image.
 3: the input stream is canvas. 
 4: the input stream is audio.
 5: the input stream is pure video.
+                     * 
                      */
                     void SetInputType(const int64_t& _inputType);
 
                     /**
                      * 判断参数 InputType 是否已赋值
                      * @return InputType 是否已赋值
+                     * 
                      */
                     bool InputTypeHasBeenSet() const;
 
@@ -129,6 +135,7 @@ Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
+                     * 
                      */
                     double GetImageHeight() const;
 
@@ -138,17 +145,19 @@ Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
-                     * @param ImageHeight Output height of input video image. Value range:
+                     * @param _imageHeight Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
+                     * 
                      */
                     void SetImageHeight(const double& _imageHeight);
 
                     /**
                      * 判断参数 ImageHeight 是否已赋值
                      * @return ImageHeight 是否已赋值
+                     * 
                      */
                     bool ImageHeightHasBeenSet() const;
 
@@ -163,6 +172,7 @@ Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
+                     * 
                      */
                     double GetImageWidth() const;
 
@@ -172,17 +182,19 @@ Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
-                     * @param ImageWidth Output width of input video image. Value range:
+                     * @param _imageWidth Output width of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
+                     * 
                      */
                     void SetImageWidth(const double& _imageWidth);
 
                     /**
                      * 判断参数 ImageWidth 是否已赋值
                      * @return ImageWidth 是否已赋值
+                     * 
                      */
                     bool ImageWidthHasBeenSet() const;
 
@@ -199,6 +211,7 @@ Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width).
+                     * 
                      */
                     double GetLocationX() const;
 
@@ -209,18 +222,20 @@ Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width).
-                     * @param LocationX X-axis offset of input in output video image. Value range:
+                     * @param _locationX X-axis offset of input in output video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width).
+                     * 
                      */
                     void SetLocationX(const double& _locationX);
 
                     /**
                      * 判断参数 LocationX 是否已赋值
                      * @return LocationX 是否已赋值
+                     * 
                      */
                     bool LocationXHasBeenSet() const;
 
@@ -237,6 +252,7 @@ Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width)
+                     * 
                      */
                     double GetLocationY() const;
 
@@ -247,18 +263,20 @@ Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width)
-                     * @param LocationY Y-axis offset of input in output video image. Value range:
+                     * @param _locationY Y-axis offset of input in output video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width)
+                     * 
                      */
                     void SetLocationY(const double& _locationY);
 
                     /**
                      * 判断参数 LocationY 是否已赋值
                      * @return LocationY 是否已赋值
+                     * 
                      */
                     bool LocationYHasBeenSet() const;
 
@@ -281,6 +299,7 @@ Blue: 0x99CCFF.
 Black: 0x000000.
 White: 0xFFFFFF.
 Gray: 0x999999
+                     * 
                      */
                     std::string GetColor() const;
 
@@ -294,7 +313,7 @@ Blue: 0x99CCFF.
 Black: 0x000000.
 White: 0xFFFFFF.
 Gray: 0x999999
-                     * @param Color When `InputType` is 3 (canvas), this value indicates the canvas color.
+                     * @param _color When `InputType` is 3 (canvas), this value indicates the canvas color.
 Commonly used colors include:
 Red: 0xcc0033.
 Yellow: 0xcc9900.
@@ -303,30 +322,35 @@ Blue: 0x99CCFF.
 Black: 0x000000.
 White: 0xFFFFFF.
 Gray: 0x999999
+                     * 
                      */
                     void SetColor(const std::string& _color);
 
                     /**
                      * 判断参数 Color 是否已赋值
                      * @return Color 是否已赋值
+                     * 
                      */
                     bool ColorHasBeenSet() const;
 
                     /**
                      * 获取When `InputType` is 2 (image), this value is the watermark ID.
                      * @return WatermarkId When `InputType` is 2 (image), this value is the watermark ID.
+                     * 
                      */
                     int64_t GetWatermarkId() const;
 
                     /**
                      * 设置When `InputType` is 2 (image), this value is the watermark ID.
-                     * @param WatermarkId When `InputType` is 2 (image), this value is the watermark ID.
+                     * @param _watermarkId When `InputType` is 2 (image), this value is the watermark ID.
+                     * 
                      */
                     void SetWatermarkId(const int64_t& _watermarkId);
 
                     /**
                      * 判断参数 WatermarkId 是否已赋值
                      * @return WatermarkId 是否已赋值
+                     * 
                      */
                     bool WatermarkIdHasBeenSet() const;
 

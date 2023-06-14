@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Input video source type. Valid values: File, Stream.
                      * @return InputType Input video source type. Valid values: File, Stream.
+                     * 
                      */
                     std::string GetInputType() const;
 
                     /**
                      * 设置Input video source type. Valid values: File, Stream.
-                     * @param InputType Input video source type. Valid values: File, Stream.
+                     * @param _inputType Input video source type. Valid values: File, Stream.
+                     * 
                      */
                     void SetInputType(const std::string& _inputType);
 
                     /**
                      * 判断参数 InputType 是否已赋值
                      * @return InputType 是否已赋值
+                     * 
                      */
                     bool InputTypeHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FileInfoSet Information of input video file. This field has a value only when `InputType` is `File`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<EditMediaFileInfo> GetFileInfoSet() const;
 
                     /**
                      * 设置Information of input video file. This field has a value only when `InputType` is `File`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileInfoSet Information of input video file. This field has a value only when `InputType` is `File`.
+                     * @param _fileInfoSet Information of input video file. This field has a value only when `InputType` is `File`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFileInfoSet(const std::vector<EditMediaFileInfo>& _fileInfoSet);
 
                     /**
                      * 判断参数 FileInfoSet 是否已赋值
                      * @return FileInfoSet 是否已赋值
+                     * 
                      */
                     bool FileInfoSetHasBeenSet() const;
 
@@ -93,20 +99,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return StreamInfoSet Input stream information. This field has a value only when `InputType` is `Stream`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<EditMediaStreamInfo> GetStreamInfoSet() const;
 
                     /**
                      * 设置Input stream information. This field has a value only when `InputType` is `Stream`.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StreamInfoSet Input stream information. This field has a value only when `InputType` is `Stream`.
+                     * @param _streamInfoSet Input stream information. This field has a value only when `InputType` is `Stream`.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStreamInfoSet(const std::vector<EditMediaStreamInfo>& _streamInfoSet);
 
                     /**
                      * 判断参数 StreamInfoSet 是否已赋值
                      * @return StreamInfoSet 是否已赋值
+                     * 
                      */
                     bool StreamInfoSetHasBeenSet() const;
 

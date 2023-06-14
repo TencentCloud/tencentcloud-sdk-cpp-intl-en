@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of matching commands.
                      * @return TotalCount Total number of matching commands.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of command details.
                      * @return CommandSet List of command details.
+                     * 
                      */
                     std::vector<Command> GetCommandSet() const;
 
                     /**
                      * 判断参数 CommandSet 是否已赋值
                      * @return CommandSet 是否已赋值
+                     * 
                      */
                     bool CommandSetHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The instance set of flow logs.
                      * @return FlowLog The instance set of flow logs.
+                     * 
                      */
                     std::vector<FlowLog> GetFlowLog() const;
 
                     /**
                      * 判断参数 FlowLog 是否已赋值
                      * @return FlowLog 是否已赋值
+                     * 
                      */
                     bool FlowLogHasBeenSet() const;
 
                     /**
                      * 获取The total number of flow logs.
                      * @return TotalNum The total number of flow logs.
+                     * 
                      */
                     uint64_t GetTotalNum() const;
 
                     /**
                      * 判断参数 TotalNum 是否已赋值
                      * @return TotalNum 是否已赋值
+                     * 
                      */
                     bool TotalNumHasBeenSet() const;
 

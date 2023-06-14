@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Promotion ID
                      * @return ActiveID Promotion ID
+                     * 
                      */
                     uint64_t GetActiveID() const;
 
                     /**
                      * 设置Promotion ID
-                     * @param ActiveID Promotion ID
+                     * @param _activeID Promotion ID
+                     * 
                      */
                     void SetActiveID(const uint64_t& _activeID);
 
                     /**
                      * 判断参数 ActiveID 是否已赋值
                      * @return ActiveID 是否已赋值
+                     * 
                      */
                     bool ActiveIDHasBeenSet() const;
 

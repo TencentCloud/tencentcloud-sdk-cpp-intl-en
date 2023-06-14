@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Replication mode of secondary database 2. Value range: async, semi-sync
                      * @return ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
+                     * 
                      */
                     std::string GetReplicationMode() const;
 
                     /**
                      * 设置Replication mode of secondary database 2. Value range: async, semi-sync
-                     * @param ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
+                     * @param _replicationMode Replication mode of secondary database 2. Value range: async, semi-sync
+                     * 
                      */
                     void SetReplicationMode(const std::string& _replicationMode);
 
                     /**
                      * 判断参数 ReplicationMode 是否已赋值
                      * @return ReplicationMode 是否已赋值
+                     * 
                      */
                     bool ReplicationModeHasBeenSet() const;
 
                     /**
                      * 获取Name of the AZ of secondary database 2, such as ap-shanghai-1
                      * @return Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Name of the AZ of secondary database 2, such as ap-shanghai-1
-                     * @param Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
+                     * @param _zone Name of the AZ of secondary database 2, such as ap-shanghai-1
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取Private IP address of secondary database 2
                      * @return Vip Private IP address of secondary database 2
+                     * 
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Private IP address of secondary database 2
-                     * @param Vip Private IP address of secondary database 2
+                     * @param _vip Private IP address of secondary database 2
+                     * 
                      */
                     void SetVip(const std::string& _vip);
 
                     /**
                      * 判断参数 Vip 是否已赋值
                      * @return Vip 是否已赋值
+                     * 
                      */
                     bool VipHasBeenSet() const;
 
                     /**
                      * 获取Access port of secondary database 2
                      * @return Vport Access port of secondary database 2
+                     * 
                      */
                     uint64_t GetVport() const;
 
                     /**
                      * 设置Access port of secondary database 2
-                     * @param Vport Access port of secondary database 2
+                     * @param _vport Access port of secondary database 2
+                     * 
                      */
                     void SetVport(const uint64_t& _vport);
 
                     /**
                      * 判断参数 Vport 是否已赋值
                      * @return Vport 是否已赋值
+                     * 
                      */
                     bool VportHasBeenSet() const;
 

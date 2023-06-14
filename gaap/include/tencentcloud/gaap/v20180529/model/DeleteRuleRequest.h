@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Layer-7 listener ID
                      * @return ListenerId Layer-7 listener ID
+                     * 
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Layer-7 listener ID
-                     * @param ListenerId Layer-7 listener ID
+                     * @param _listenerId Layer-7 listener ID
+                     * 
                      */
                     void SetListenerId(const std::string& _listenerId);
 
                     /**
                      * 判断参数 ListenerId 是否已赋值
                      * @return ListenerId 是否已赋值
+                     * 
                      */
                     bool ListenerIdHasBeenSet() const;
 
                     /**
                      * 获取Forwarding rule ID
                      * @return RuleId Forwarding rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Forwarding rule ID
-                     * @param RuleId Forwarding rule ID
+                     * @param _ruleId Forwarding rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
                      * @return Force Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
+                     * 
                      */
                     uint64_t GetForce() const;
 
                     /**
                      * 设置Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
-                     * @param Force Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
+                     * @param _force Whether to make a forced deletion of forwarding rules that have been bound to origin servers. 0: no; 1: yes.
+                     * 
                      */
                     void SetForce(const uint64_t& _force);
 
                     /**
                      * 判断参数 Force 是否已赋值
                      * @return Force 是否已赋值
+                     * 
                      */
                     bool ForceHasBeenSet() const;
 

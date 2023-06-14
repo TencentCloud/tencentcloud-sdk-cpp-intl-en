@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Cloud disk type. Valid values: "CLOUD_PREMIUM".
                      * @return DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
+                     * 
                      */
                     std::string GetDiskType() const;
 
                     /**
                      * 设置Cloud disk type. Valid values: "CLOUD_PREMIUM".
-                     * @param DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
+                     * @param _diskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
+                     * 
                      */
                     void SetDiskType(const std::string& _diskType);
 
                     /**
                      * 判断参数 DiskType 是否已赋值
                      * @return DiskType 是否已赋值
+                     * 
                      */
                     bool DiskTypeHasBeenSet() const;
 
                     /**
                      * 获取Cloud disk size.
                      * @return DiskSize Cloud disk size.
+                     * 
                      */
                     int64_t GetDiskSize() const;
 
                     /**
                      * 设置Cloud disk size.
-                     * @param DiskSize Cloud disk size.
+                     * @param _diskSize Cloud disk size.
+                     * 
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
                     /**
                      * 判断参数 DiskSize 是否已赋值
                      * @return DiskSize 是否已赋值
+                     * 
                      */
                     bool DiskSizeHasBeenSet() const;
 
                     /**
                      * 获取Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
                      * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 
                      */
                     int64_t GetDiskBackupQuota() const;
 
                     /**
                      * 设置Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-                     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * @param _diskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * 
                      */
                     void SetDiskBackupQuota(const int64_t& _diskBackupQuota);
 
                     /**
                      * 判断参数 DiskBackupQuota 是否已赋值
                      * @return DiskBackupQuota 是否已赋值
+                     * 
                      */
                     bool DiskBackupQuotaHasBeenSet() const;
 

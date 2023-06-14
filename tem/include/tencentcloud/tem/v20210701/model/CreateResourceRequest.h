@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Environment ID
                      * @return EnvironmentId Environment ID
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Resource type. Valid values: `CFS` (file system), `CLS` (log service), `TSE_SRE` (registry)
                      * @return ResourceType Resource type. Valid values: `CFS` (file system), `CLS` (log service), `TSE_SRE` (registry)
+                     * 
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type. Valid values: `CFS` (file system), `CLS` (log service), `TSE_SRE` (registry)
-                     * @param ResourceType Resource type. Valid values: `CFS` (file system), `CLS` (log service), `TSE_SRE` (registry)
+                     * @param _resourceType Resource type. Valid values: `CFS` (file system), `CLS` (log service), `TSE_SRE` (registry)
+                     * 
                      */
                     void SetResourceType(const std::string& _resourceType);
 
                     /**
                      * 判断参数 ResourceType 是否已赋值
                      * @return ResourceType 是否已赋值
+                     * 
                      */
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Resource ID
                      * @return ResourceId Resource ID
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Resource ID
-                     * @param ResourceId Resource ID
+                     * @param _resourceId Resource ID
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 
                     /**
                      * 获取Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
                      * @return ResourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     * 
                      */
                     std::string GetResourceFrom() const;
 
                     /**
                      * 设置Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
-                     * @param ResourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     * @param _resourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     * 
                      */
                     void SetResourceFrom(const std::string& _resourceFrom);
 
                     /**
                      * 判断参数 ResourceFrom 是否已赋值
                      * @return ResourceFrom 是否已赋值
+                     * 
                      */
                     bool ResourceFromHasBeenSet() const;
 
                     /**
                      * 获取Resource extra configuration
                      * @return ResourceConfig Resource extra configuration
+                     * 
                      */
                     std::string GetResourceConfig() const;
 
                     /**
                      * 设置Resource extra configuration
-                     * @param ResourceConfig Resource extra configuration
+                     * @param _resourceConfig Resource extra configuration
+                     * 
                      */
                     void SetResourceConfig(const std::string& _resourceConfig);
 
                     /**
                      * 判断参数 ResourceConfig 是否已赋值
                      * @return ResourceConfig 是否已赋值
+                     * 
                      */
                     bool ResourceConfigHasBeenSet() const;
 

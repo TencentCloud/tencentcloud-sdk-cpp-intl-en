@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of faces included in searched groups.
                      * @return FaceNum Number of faces included in searched groups.
+                     * 
                      */
                     uint64_t GetFaceNum() const;
 
                     /**
                      * 判断参数 FaceNum 是否已赋值
                      * @return FaceNum 是否已赋值
+                     * 
                      */
                     bool FaceNumHasBeenSet() const;
 
                     /**
                      * 获取Recognition result.
                      * @return ResultsReturnsByGroup Recognition result.
+                     * 
                      */
                     std::vector<ResultsReturnsByGroup> GetResultsReturnsByGroup() const;
 
                     /**
                      * 判断参数 ResultsReturnsByGroup 是否已赋值
                      * @return ResultsReturnsByGroup 是否已赋值
+                     * 
                      */
                     bool ResultsReturnsByGroupHasBeenSet() const;
 
                     /**
                      * 获取Algorithm model version used for face recognition.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 

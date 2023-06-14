@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of returned results. Default value: 20. Maximum value: 100
                      * @return Limit Number of returned results. Default value: 20. Maximum value: 100
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results. Default value: 20. Maximum value: 100
-                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100
+                     * @param _limit Number of returned results. Default value: 20. Maximum value: 100
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Record offset. Default value: 0
                      * @return Offset Record offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Record offset. Default value: 0
-                     * @param Offset Record offset. Default value: 0
+                     * @param _offset Record offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
@@ -86,6 +92,7 @@ namespace TencentCloud
                      * @return OrderBy Sort by field. Valid values:
 <li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: expiration time</li>
+                     * 
                      */
                     std::string GetOrderBy() const;
 
@@ -93,15 +100,17 @@ namespace TencentCloud
                      * 设置Sort by field. Valid values:
 <li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: expiration time</li>
-                     * @param OrderBy Sort by field. Valid values:
+                     * @param _orderBy Sort by field. Valid values:
 <li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: expiration time</li>
+                     * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
                     /**
                      * 判断参数 OrderBy 是否已赋值
                      * @return OrderBy 是否已赋值
+                     * 
                      */
                     bool OrderByHasBeenSet() const;
 
@@ -112,6 +121,7 @@ namespace TencentCloud
                      * @return OrderByType Sorting order. Valid values:
 <li> ASC: ascending</li>
 <li> DESC: descending</li>
+                     * 
                      */
                     std::string GetOrderByType() const;
 
@@ -119,51 +129,59 @@ namespace TencentCloud
                      * 设置Sorting order. Valid values:
 <li> ASC: ascending</li>
 <li> DESC: descending</li>
-                     * @param OrderByType Sorting order. Valid values:
+                     * @param _orderByType Sorting order. Valid values:
 <li> ASC: ascending</li>
 <li> DESC: descending</li>
+                     * 
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
                     /**
                      * 判断参数 OrderByType 是否已赋值
                      * @return OrderByType 是否已赋值
+                     * 
                      */
                     bool OrderByTypeHasBeenSet() const;
 
                     /**
                      * 获取Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
                      * @return Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+                     * 
                      */
                     std::vector<QueryFilter> GetFilters() const;
 
                     /**
                      * 设置Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
-                     * @param Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+                     * @param _filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+                     * 
                      */
                     void SetFilters(const std::vector<QueryFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Engine type. Currently, `MYSQL` is supported.
                      * @return DbType Engine type. Currently, `MYSQL` is supported.
+                     * 
                      */
                     std::string GetDbType() const;
 
                     /**
                      * 设置Engine type. Currently, `MYSQL` is supported.
-                     * @param DbType Engine type. Currently, `MYSQL` is supported.
+                     * @param _dbType Engine type. Currently, `MYSQL` is supported.
+                     * 
                      */
                     void SetDbType(const std::string& _dbType);
 
                     /**
                      * 判断参数 DbType 是否已赋值
                      * @return DbType 是否已赋值
+                     * 
                      */
                     bool DbTypeHasBeenSet() const;
 
@@ -184,6 +202,7 @@ isolated
 activating: Removing the instance from isolation
 offlining: Eliminating the instance
 offlined: Instance eliminated
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -196,7 +215,7 @@ isolated
 activating: Removing the instance from isolation
 offlining: Eliminating the instance
 offlined: Instance eliminated
-                     * @param Status Instance status. Valid values:
+                     * @param _status Instance status. Valid values:
 creating
 running
 isolating
@@ -204,30 +223,35 @@ isolated
 activating: Removing the instance from isolation
 offlining: Eliminating the instance
 offlined: Instance eliminated
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Instance ID list
                      * @return InstanceIds Instance ID list
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Instance ID list
-                     * @param InstanceIds Instance ID list
+                     * @param _instanceIds Instance ID list
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

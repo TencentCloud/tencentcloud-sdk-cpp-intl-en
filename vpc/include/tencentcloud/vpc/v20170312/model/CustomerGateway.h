@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the customer gateway
                      * @return CustomerGatewayId The unique ID of the customer gateway
+                     * 
                      */
                     std::string GetCustomerGatewayId() const;
 
                     /**
                      * 设置The unique ID of the customer gateway
-                     * @param CustomerGatewayId The unique ID of the customer gateway
+                     * @param _customerGatewayId The unique ID of the customer gateway
+                     * 
                      */
                     void SetCustomerGatewayId(const std::string& _customerGatewayId);
 
                     /**
                      * 判断参数 CustomerGatewayId 是否已赋值
                      * @return CustomerGatewayId 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Gateway Name
                      * @return CustomerGatewayName Gateway Name
+                     * 
                      */
                     std::string GetCustomerGatewayName() const;
 
                     /**
                      * 设置Gateway Name
-                     * @param CustomerGatewayName Gateway Name
+                     * @param _customerGatewayName Gateway Name
+                     * 
                      */
                     void SetCustomerGatewayName(const std::string& _customerGatewayName);
 
                     /**
                      * 判断参数 CustomerGatewayName 是否已赋值
                      * @return CustomerGatewayName 是否已赋值
+                     * 
                      */
                     bool CustomerGatewayNameHasBeenSet() const;
 
                     /**
                      * 获取Public network address
                      * @return IpAddress Public network address
+                     * 
                      */
                     std::string GetIpAddress() const;
 
                     /**
                      * 设置Public network address
-                     * @param IpAddress Public network address
+                     * @param _ipAddress Public network address
+                     * 
                      */
                     void SetIpAddress(const std::string& _ipAddress);
 
                     /**
                      * 判断参数 IpAddress 是否已赋值
                      * @return IpAddress 是否已赋值
+                     * 
                      */
                     bool IpAddressHasBeenSet() const;
 
                     /**
                      * 获取The creation time.
                      * @return CreatedTime The creation time.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置The creation time.
-                     * @param CreatedTime The creation time.
+                     * @param _createdTime The creation time.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 

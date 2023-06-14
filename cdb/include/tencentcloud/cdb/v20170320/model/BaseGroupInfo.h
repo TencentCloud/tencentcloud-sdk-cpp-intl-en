@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyGroupId Proxy group ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
                      * 设置Proxy group ID
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param ProxyGroupId Proxy group ID
+                     * @param _proxyGroupId Proxy group ID
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
 
                     /**
                      * 判断参数 ProxyGroupId 是否已赋值
                      * @return ProxyGroupId 是否已赋值
+                     * 
                      */
                     bool ProxyGroupIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return NodeCount Number of proxy nodes
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetNodeCount() const;
 
                     /**
                      * 设置Number of proxy nodes
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param NodeCount Number of proxy nodes
+                     * @param _nodeCount Number of proxy nodes
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetNodeCount(const uint64_t& _nodeCount);
 
                     /**
                      * 判断参数 NodeCount 是否已赋值
                      * @return NodeCount 是否已赋值
+                     * 
                      */
                     bool NodeCountHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Status Proxy group status. Valid values: `init` (delivering), `online` (active), `offline` (inactive), `destroy` (destoryed)
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Proxy group status. Valid values: `init` (delivering), `online` (active), `offline` (inactive), `destroy` (destoryed)
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param Status Proxy group status. Valid values: `init` (delivering), `online` (active), `offline` (inactive), `destroy` (destoryed)
+                     * @param _status Proxy group status. Valid values: `init` (delivering), `online` (active), `offline` (inactive), `destroy` (destoryed)
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Region Region
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param Region Region
+                     * @param _region Region
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Zone Availability zone
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param Zone Availability zone
+                     * @param _zone Availability zone
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return OpenRW Whether read/write separation is enabled
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     bool GetOpenRW() const;
 
                     /**
                      * 设置Whether read/write separation is enabled
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param OpenRW Whether read/write separation is enabled
+                     * @param _openRW Whether read/write separation is enabled
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetOpenRW(const bool& _openRW);
 
                     /**
                      * 判断参数 OpenRW 是否已赋值
                      * @return OpenRW 是否已赋值
+                     * 
                      */
                     bool OpenRWHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return CurrentProxyVersion Current proxy version
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetCurrentProxyVersion() const;
 
                     /**
                      * 设置Current proxy version
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param CurrentProxyVersion Current proxy version
+                     * @param _currentProxyVersion Current proxy version
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetCurrentProxyVersion(const std::string& _currentProxyVersion);
 
                     /**
                      * 判断参数 CurrentProxyVersion 是否已赋值
                      * @return CurrentProxyVersion 是否已赋值
+                     * 
                      */
                     bool CurrentProxyVersionHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return SupportUpgradeProxyVersion Target version to which the proxy can be upgraded
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::string GetSupportUpgradeProxyVersion() const;
 
                     /**
                      * 设置Target version to which the proxy can be upgraded
 Note: this field may return `null`, indicating that no valid value can be found.
-                     * @param SupportUpgradeProxyVersion Target version to which the proxy can be upgraded
+                     * @param _supportUpgradeProxyVersion Target version to which the proxy can be upgraded
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     void SetSupportUpgradeProxyVersion(const std::string& _supportUpgradeProxyVersion);
 
                     /**
                      * 判断参数 SupportUpgradeProxyVersion 是否已赋值
                      * @return SupportUpgradeProxyVersion 是否已赋值
+                     * 
                      */
                     bool SupportUpgradeProxyVersionHasBeenSet() const;
 

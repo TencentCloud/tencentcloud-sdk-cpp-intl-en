@@ -58,6 +58,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -66,16 +67,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Switch HTTPS configuration switch
+                     * @param _switch HTTPS configuration switch
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -88,6 +91,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHttp2() const;
 
@@ -96,16 +100,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Http2 Whether to enable HTTP2
+                     * @param _http2 Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetHttp2(const std::string& _http2);
 
                     /**
                      * 判断参数 Http2 是否已赋值
                      * @return Http2 是否已赋值
+                     * 
                      */
                     bool Http2HasBeenSet() const;
 
@@ -120,6 +126,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetOcspStapling() const;
 
@@ -129,17 +136,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param OcspStapling OCSP configuration switch
+                     * @param _ocspStapling OCSP configuration switch
 `on`: Enable
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetOcspStapling(const std::string& _ocspStapling);
 
                     /**
                      * 判断参数 OcspStapling 是否已赋值
                      * @return OcspStapling 是否已赋值
+                     * 
                      */
                     bool OcspStaplingHasBeenSet() const;
 
@@ -154,6 +163,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetVerifyClient() const;
 
@@ -163,17 +173,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param VerifyClient Client certificate authentication feature
+                     * @param _verifyClient Client certificate authentication feature
 `on`: Enable
 `off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetVerifyClient(const std::string& _verifyClient);
 
                     /**
                      * 判断参数 VerifyClient 是否已赋值
                      * @return VerifyClient 是否已赋值
+                     * 
                      */
                     bool VerifyClientHasBeenSet() const;
 
@@ -182,20 +194,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CertInfo Server certificate configuration information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     ServerCert GetCertInfo() const;
 
                     /**
                      * 设置Server certificate configuration information
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CertInfo Server certificate configuration information
+                     * @param _certInfo Server certificate configuration information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetCertInfo(const ServerCert& _certInfo);
 
                     /**
                      * 判断参数 CertInfo 是否已赋值
                      * @return CertInfo 是否已赋值
+                     * 
                      */
                     bool CertInfoHasBeenSet() const;
 
@@ -204,20 +219,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ClientCertInfo Client certificate configuration information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     ClientCert GetClientCertInfo() const;
 
                     /**
                      * 设置Client certificate configuration information
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ClientCertInfo Client certificate configuration information
+                     * @param _clientCertInfo Client certificate configuration information
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetClientCertInfo(const ClientCert& _clientCertInfo);
 
                     /**
                      * 判断参数 ClientCertInfo 是否已赋值
                      * @return ClientCertInfo 是否已赋值
+                     * 
                      */
                     bool ClientCertInfoHasBeenSet() const;
 
@@ -232,6 +250,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSpdy() const;
 
@@ -241,17 +260,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Spdy Spdy configuration switch
+                     * @param _spdy Spdy configuration switch
 `on`: Enable
 `off`: Disable
 It is disabled by default.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSpdy(const std::string& _spdy);
 
                     /**
                      * 判断参数 Spdy 是否已赋值
                      * @return Spdy 是否已赋值
+                     * 
                      */
                     bool SpdyHasBeenSet() const;
 
@@ -268,6 +289,7 @@ deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSslStatus() const;
 
@@ -278,18 +300,20 @@ deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param SslStatus HTTPS certificate deployment status
+                     * @param _sslStatus HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSslStatus(const std::string& _sslStatus);
 
                     /**
                      * 判断参数 SslStatus 是否已赋值
                      * @return SslStatus 是否已赋值
+                     * 
                      */
                     bool SslStatusHasBeenSet() const;
 
@@ -298,20 +322,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Hsts HSTS configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     Hsts GetHsts() const;
 
                     /**
                      * 设置HSTS configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Hsts HSTS configuration
+                     * @param _hsts HSTS configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHsts(const Hsts& _hsts);
 
                     /**
                      * 判断参数 Hsts 是否已赋值
                      * @return Hsts 是否已赋值
+                     * 
                      */
                     bool HstsHasBeenSet() const;
 
@@ -320,20 +347,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
                     /**
                      * 设置TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+                     * @param _tlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
 
                     /**
                      * 判断参数 TlsVersion 是否已赋值
                      * @return TlsVersion 是否已赋值
+                     * 
                      */
                     bool TlsVersionHasBeenSet() const;
 

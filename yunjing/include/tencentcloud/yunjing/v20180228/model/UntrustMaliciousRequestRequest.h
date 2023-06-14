@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Trusted record ID.
                      * @return Id Trusted record ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Trusted record ID.
-                     * @param Id Trusted record ID.
+                     * @param _id Trusted record ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

@@ -45,108 +45,126 @@ namespace TencentCloud
                     /**
                      * 获取Environment ID
                      * @return NamespaceId Environment ID
+                     * 
                      */
                     std::string GetNamespaceId() const;
 
                     /**
                      * 设置Environment ID
-                     * @param NamespaceId Environment ID
+                     * @param _namespaceId Environment ID
+                     * 
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
                     /**
                      * 判断参数 NamespaceId 是否已赋值
                      * @return NamespaceId 是否已赋值
+                     * 
                      */
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return NamespaceName Namespace name
+                     * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param NamespaceName Namespace name
+                     * @param _namespaceName Namespace name
+                     * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
 
                     /**
                      * 判断参数 NamespaceName 是否已赋值
                      * @return NamespaceName 是否已赋值
+                     * 
                      */
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
                      * 获取Namespace description
                      * @return Description Namespace description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Namespace description
-                     * @param Description Namespace description
+                     * @param _description Namespace description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取VPC name
                      * @return Vpc VPC name
+                     * 
                      */
                     std::string GetVpc() const;
 
                     /**
                      * 设置VPC name
-                     * @param Vpc VPC name
+                     * @param _vpc VPC name
+                     * 
                      */
                     void SetVpc(const std::string& _vpc);
 
                     /**
                      * 判断参数 Vpc 是否已赋值
                      * @return Vpc 是否已赋值
+                     * 
                      */
                     bool VpcHasBeenSet() const;
 
                     /**
                      * 获取Subnet
                      * @return SubnetIds Subnet
+                     * 
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
                      * 设置Subnet
-                     * @param SubnetIds Subnet
+                     * @param _subnetIds Subnet
+                     * 
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
                     /**
                      * 判断参数 SubnetIds 是否已赋值
                      * @return SubnetIds 是否已赋值
+                     * 
                      */
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 

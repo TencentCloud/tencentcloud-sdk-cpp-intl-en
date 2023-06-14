@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID of the IP policy to be bound.
                      * @return ServiceId Unique service ID of the IP policy to be bound.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of the IP policy to be bound.
-                     * @param ServiceId Unique service ID of the IP policy to be bound.
+                     * @param _serviceId Unique service ID of the IP policy to be bound.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique ID of the IP policy to be bound.
                      * @return StrategyId Unique ID of the IP policy to be bound.
+                     * 
                      */
                     std::string GetStrategyId() const;
 
                     /**
                      * 设置Unique ID of the IP policy to be bound.
-                     * @param StrategyId Unique ID of the IP policy to be bound.
+                     * @param _strategyId Unique ID of the IP policy to be bound.
+                     * 
                      */
                     void SetStrategyId(const std::string& _strategyId);
 
                     /**
                      * 判断参数 StrategyId 是否已赋值
                      * @return StrategyId 是否已赋值
+                     * 
                      */
                     bool StrategyIdHasBeenSet() const;
 
                     /**
                      * 获取Environment to be bound to IP policy.
                      * @return EnvironmentName Environment to be bound to IP policy.
+                     * 
                      */
                     std::string GetEnvironmentName() const;
 
                     /**
                      * 设置Environment to be bound to IP policy.
-                     * @param EnvironmentName Environment to be bound to IP policy.
+                     * @param _environmentName Environment to be bound to IP policy.
+                     * 
                      */
                     void SetEnvironmentName(const std::string& _environmentName);
 
                     /**
                      * 判断参数 EnvironmentName 是否已赋值
                      * @return EnvironmentName 是否已赋值
+                     * 
                      */
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
                      * 获取List of APIs to be bound to IP policy.
                      * @return BindApiIds List of APIs to be bound to IP policy.
+                     * 
                      */
                     std::vector<std::string> GetBindApiIds() const;
 
                     /**
                      * 设置List of APIs to be bound to IP policy.
-                     * @param BindApiIds List of APIs to be bound to IP policy.
+                     * @param _bindApiIds List of APIs to be bound to IP policy.
+                     * 
                      */
                     void SetBindApiIds(const std::vector<std::string>& _bindApiIds);
 
                     /**
                      * 判断参数 BindApiIds 是否已赋值
                      * @return BindApiIds 是否已赋值
+                     * 
                      */
                     bool BindApiIdsHasBeenSet() const;
 

@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends.
                      * @return TaskId The task ID assigned by the recording service, which uniquely identifies a recording process and becomes invalid after a recording task ends.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

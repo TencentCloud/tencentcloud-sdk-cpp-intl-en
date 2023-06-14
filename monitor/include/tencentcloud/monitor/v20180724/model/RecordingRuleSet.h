@@ -49,126 +49,147 @@ namespace TencentCloud
                     /**
                      * 获取Rule ID
                      * @return RuleId Rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Rule ID
-                     * @param RuleId Rule ID
+                     * @param _ruleId Rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
                     /**
                      * 获取Rule status code
                      * @return RuleState Rule status code
+                     * 
                      */
                     int64_t GetRuleState() const;
 
                     /**
                      * 设置Rule status code
-                     * @param RuleState Rule status code
+                     * @param _ruleState Rule status code
+                     * 
                      */
                     void SetRuleState(const int64_t& _ruleState);
 
                     /**
                      * 判断参数 RuleState 是否已赋值
                      * @return RuleState 是否已赋值
+                     * 
                      */
                     bool RuleStateHasBeenSet() const;
 
                     /**
                      * 获取Group name
                      * @return Name Group name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Group name
-                     * @param Name Group name
+                     * @param _name Group name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Rule group
                      * @return Group Rule group
+                     * 
                      */
                     std::string GetGroup() const;
 
                     /**
                      * 设置Rule group
-                     * @param Group Rule group
+                     * @param _group Rule group
+                     * 
                      */
                     void SetGroup(const std::string& _group);
 
                     /**
                      * 判断参数 Group 是否已赋值
                      * @return Group 是否已赋值
+                     * 
                      */
                     bool GroupHasBeenSet() const;
 
                     /**
                      * 获取Number of rules
                      * @return Total Number of rules
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 设置Number of rules
-                     * @param Total Number of rules
+                     * @param _total Number of rules
+                     * 
                      */
                     void SetTotal(const int64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取Rule creation time
                      * @return CreatedAt Rule creation time
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置Rule creation time
-                     * @param CreatedAt Rule creation time
+                     * @param _createdAt Rule creation time
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 
                     /**
                      * 获取Rule update time
                      * @return UpdatedAt Rule update time
+                     * 
                      */
                     std::string GetUpdatedAt() const;
 
                     /**
                      * 设置Rule update time
-                     * @param UpdatedAt Rule update time
+                     * @param _updatedAt Rule update time
+                     * 
                      */
                     void SetUpdatedAt(const std::string& _updatedAt);
 
                     /**
                      * 判断参数 UpdatedAt 是否已赋值
                      * @return UpdatedAt 是否已赋值
+                     * 
                      */
                     bool UpdatedAtHasBeenSet() const;
 
@@ -177,20 +198,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName Rule name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置Rule name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleName Rule name
+                     * @param _ruleName Rule name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 

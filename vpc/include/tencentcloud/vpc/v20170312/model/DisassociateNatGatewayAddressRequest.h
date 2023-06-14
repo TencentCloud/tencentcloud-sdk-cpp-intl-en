@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The ID of the NAT gateway, such as `nat-df45454`.
                      * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置The ID of the NAT gateway, such as `nat-df45454`.
-                     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * @param _natGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
                     /**
                      * 判断参数 NatGatewayId 是否已赋值
                      * @return NatGatewayId 是否已赋值
+                     * 
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取Array of the EIPs to be unbound from the NAT gateway.
                      * @return PublicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
+                     * 
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
                      * 设置Array of the EIPs to be unbound from the NAT gateway.
-                     * @param PublicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
+                     * @param _publicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
+                     * 
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
 
                     /**
                      * 判断参数 PublicIpAddresses 是否已赋值
                      * @return PublicIpAddresses 是否已赋值
+                     * 
                      */
                     bool PublicIpAddressesHasBeenSet() const;
 

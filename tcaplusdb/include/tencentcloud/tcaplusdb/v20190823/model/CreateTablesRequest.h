@@ -48,72 +48,84 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where to create a table
                      * @return ClusterId ID of the cluster where to create a table
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where to create a table
-                     * @param ClusterId ID of the cluster where to create a table
+                     * @param _clusterId ID of the cluster where to create a table
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Table creation IDL file list selected by user
                      * @return IdlFiles Table creation IDL file list selected by user
+                     * 
                      */
                     std::vector<IdlFileInfo> GetIdlFiles() const;
 
                     /**
                      * 设置Table creation IDL file list selected by user
-                     * @param IdlFiles Table creation IDL file list selected by user
+                     * @param _idlFiles Table creation IDL file list selected by user
+                     * 
                      */
                     void SetIdlFiles(const std::vector<IdlFileInfo>& _idlFiles);
 
                     /**
                      * 判断参数 IdlFiles 是否已赋值
                      * @return IdlFiles 是否已赋值
+                     * 
                      */
                     bool IdlFilesHasBeenSet() const;
 
                     /**
                      * 获取Information list of tables to be created
                      * @return SelectedTables Information list of tables to be created
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置Information list of tables to be created
-                     * @param SelectedTables Information list of tables to be created
+                     * @param _selectedTables Information list of tables to be created
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 
                     /**
                      * 获取Table tag list
                      * @return ResourceTags Table tag list
+                     * 
                      */
                     std::vector<TagInfoUnit> GetResourceTags() const;
 
                     /**
                      * 设置Table tag list
-                     * @param ResourceTags Table tag list
+                     * @param _resourceTags Table tag list
+                     * 
                      */
                     void SetResourceTags(const std::vector<TagInfoUnit>& _resourceTags);
 
                     /**
                      * 判断参数 ResourceTags 是否已赋值
                      * @return ResourceTags 是否已赋值
+                     * 
                      */
                     bool ResourceTagsHasBeenSet() const;
 

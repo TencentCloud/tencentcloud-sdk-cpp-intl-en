@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of rooms of the whiteboard.
                      * @return RoomList List of rooms of the whiteboard.
+                     * 
                      */
                     std::vector<RoomListItem> GetRoomList() const;
 
                     /**
                      * 判断参数 RoomList 是否已赋值
                      * @return RoomList 是否已赋值
+                     * 
                      */
                     bool RoomListHasBeenSet() const;
 

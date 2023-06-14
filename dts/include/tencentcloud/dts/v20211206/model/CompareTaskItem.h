@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JobId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param JobId Task ID
+                     * @param _jobId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompareTaskId Data consistency check task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCompareTaskId() const;
 
                     /**
                      * 设置Data consistency check task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CompareTaskId Data consistency check task ID
+                     * @param _compareTaskId Data consistency check task ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompareTaskId(const std::string& _compareTaskId);
 
                     /**
                      * 判断参数 CompareTaskId 是否已赋值
                      * @return CompareTaskId 是否已赋值
+                     * 
                      */
                     bool CompareTaskIdHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskName Data consistency check task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTaskName() const;
 
                     /**
                      * 设置Data consistency check task name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TaskName Data consistency check task name
+                     * @param _taskName Data consistency check task name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTaskName(const std::string& _taskName);
 
                     /**
                      * 判断参数 TaskName 是否已赋值
                      * @return TaskName 是否已赋值
+                     * 
                      */
                     bool TaskNameHasBeenSet() const;
 
@@ -120,20 +129,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     * @param _status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -142,20 +154,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Config Data consistency check task configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CompareObject GetConfig() const;
 
                     /**
                      * 设置Data consistency check task configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Config Data consistency check task configuration
+                     * @param _config Data consistency check task configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConfig(const CompareObject& _config);
 
                     /**
                      * 判断参数 Config 是否已赋值
                      * @return Config 是否已赋值
+                     * 
                      */
                     bool ConfigHasBeenSet() const;
 
@@ -164,20 +179,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CheckProcess Check details of the data consistency check task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProcessProgress GetCheckProcess() const;
 
                     /**
                      * 设置Check details of the data consistency check task
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CheckProcess Check details of the data consistency check task
+                     * @param _checkProcess Check details of the data consistency check task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckProcess(const ProcessProgress& _checkProcess);
 
                     /**
                      * 判断参数 CheckProcess 是否已赋值
                      * @return CheckProcess 是否已赋值
+                     * 
                      */
                     bool CheckProcessHasBeenSet() const;
 
@@ -186,20 +204,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompareProcess Running details of the data consistency check task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProcessProgress GetCompareProcess() const;
 
                     /**
                      * 设置Running details of the data consistency check task
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CompareProcess Running details of the data consistency check task
+                     * @param _compareProcess Running details of the data consistency check task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompareProcess(const ProcessProgress& _compareProcess);
 
                     /**
                      * 判断参数 CompareProcess 是否已赋值
                      * @return CompareProcess 是否已赋值
+                     * 
                      */
                     bool CompareProcessHasBeenSet() const;
 
@@ -208,20 +229,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Conclusion Comparison result. Valid values: `same`, `different`, `skipAll`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConclusion() const;
 
                     /**
                      * 设置Comparison result. Valid values: `same`, `different`, `skipAll`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Conclusion Comparison result. Valid values: `same`, `different`, `skipAll`.
+                     * @param _conclusion Comparison result. Valid values: `same`, `different`, `skipAll`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConclusion(const std::string& _conclusion);
 
                     /**
                      * 判断参数 Conclusion 是否已赋值
                      * @return Conclusion 是否已赋值
+                     * 
                      */
                     bool ConclusionHasBeenSet() const;
 
@@ -230,20 +254,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreatedAt Task creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
                      * 设置Task creation time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedAt Task creation time
+                     * @param _createdAt Task creation time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
 
                     /**
                      * 判断参数 CreatedAt 是否已赋值
                      * @return CreatedAt 是否已赋值
+                     * 
                      */
                     bool CreatedAtHasBeenSet() const;
 
@@ -252,20 +279,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartedAt Task start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartedAt() const;
 
                     /**
                      * 设置Task start time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartedAt Task start time
+                     * @param _startedAt Task start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartedAt(const std::string& _startedAt);
 
                     /**
                      * 判断参数 StartedAt 是否已赋值
                      * @return StartedAt 是否已赋值
+                     * 
                      */
                     bool StartedAtHasBeenSet() const;
 
@@ -274,20 +304,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FinishedAt Comparison end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFinishedAt() const;
 
                     /**
                      * 设置Comparison end time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FinishedAt Comparison end time
+                     * @param _finishedAt Comparison end time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFinishedAt(const std::string& _finishedAt);
 
                     /**
                      * 判断参数 FinishedAt 是否已赋值
                      * @return FinishedAt 是否已赋值
+                     * 
                      */
                     bool FinishedAtHasBeenSet() const;
 
@@ -296,20 +329,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+                     * @param _method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
@@ -318,20 +354,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Options Configuration information of the comparison task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CompareOptions GetOptions() const;
 
                     /**
                      * 设置Configuration information of the comparison task
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Options Configuration information of the comparison task
+                     * @param _options Configuration information of the comparison task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOptions(const CompareOptions& _options);
 
                     /**
                      * 判断参数 Options 是否已赋值
                      * @return Options 是否已赋值
+                     * 
                      */
                     bool OptionsHasBeenSet() const;
 
@@ -340,20 +379,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Message Consistency check prompt message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Consistency check prompt message
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Message Consistency check prompt message
+                     * @param _message Consistency check prompt message
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 

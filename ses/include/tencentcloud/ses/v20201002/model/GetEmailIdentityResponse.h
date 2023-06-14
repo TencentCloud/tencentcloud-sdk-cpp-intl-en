@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Verification type. The value is fixed to `DOMAIN`.
                      * @return IdentityType Verification type. The value is fixed to `DOMAIN`.
+                     * 
                      */
                     std::string GetIdentityType() const;
 
                     /**
                      * 判断参数 IdentityType 是否已赋值
                      * @return IdentityType 是否已赋值
+                     * 
                      */
                     bool IdentityTypeHasBeenSet() const;
 
                     /**
                      * 获取Verification passed or not.
                      * @return VerifiedForSendingStatus Verification passed or not.
+                     * 
                      */
                     bool GetVerifiedForSendingStatus() const;
 
                     /**
                      * 判断参数 VerifiedForSendingStatus 是否已赋值
                      * @return VerifiedForSendingStatus 是否已赋值
+                     * 
                      */
                     bool VerifiedForSendingStatusHasBeenSet() const;
 
                     /**
                      * 获取DNS configuration details.
                      * @return Attributes DNS configuration details.
+                     * 
                      */
                     std::vector<DNSAttributes> GetAttributes() const;
 
                     /**
                      * 判断参数 Attributes 是否已赋值
                      * @return Attributes 是否已赋值
+                     * 
                      */
                     bool AttributesHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The event list. An empty array will be returned if no data is obtained.
                      * @return Data The event list. An empty array will be returned if no data is obtained.
+                     * 
                      */
                     std::vector<EventList> GetData() const;
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

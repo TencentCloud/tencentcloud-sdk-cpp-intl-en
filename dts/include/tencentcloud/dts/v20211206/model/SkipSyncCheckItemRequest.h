@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Task ID, such as "sync-4ddgid2".
                      * @return JobId Task ID, such as "sync-4ddgid2".
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 设置Task ID, such as "sync-4ddgid2".
-                     * @param JobId Task ID, such as "sync-4ddgid2".
+                     * @param _jobId Task ID, such as "sync-4ddgid2".
+                     * 
                      */
                     void SetJobId(const std::string& _jobId);
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the check step to be skipped, which is obtained in the `StepInfos[i].StepId` field returned by the `DescribeCheckSyncJobResult` API, such as "OptimizeCheck".
                      * @return StepIds ID of the check step to be skipped, which is obtained in the `StepInfos[i].StepId` field returned by the `DescribeCheckSyncJobResult` API, such as "OptimizeCheck".
+                     * 
                      */
                     std::vector<std::string> GetStepIds() const;
 
                     /**
                      * 设置ID of the check step to be skipped, which is obtained in the `StepInfos[i].StepId` field returned by the `DescribeCheckSyncJobResult` API, such as "OptimizeCheck".
-                     * @param StepIds ID of the check step to be skipped, which is obtained in the `StepInfos[i].StepId` field returned by the `DescribeCheckSyncJobResult` API, such as "OptimizeCheck".
+                     * @param _stepIds ID of the check step to be skipped, which is obtained in the `StepInfos[i].StepId` field returned by the `DescribeCheckSyncJobResult` API, such as "OptimizeCheck".
+                     * 
                      */
                     void SetStepIds(const std::vector<std::string>& _stepIds);
 
                     /**
                      * 判断参数 StepIds 是否已赋值
                      * @return StepIds 是否已赋值
+                     * 
                      */
                     bool StepIdsHasBeenSet() const;
 

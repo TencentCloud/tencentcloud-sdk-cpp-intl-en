@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The number of eligible resources in the bandwidth package.
                      * @return TotalCount The number of eligible resources in the bandwidth package.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取The list of resources in the bandwidth package.
                      * @return ResourceSet The list of resources in the bandwidth package.
+                     * 
                      */
                     std::vector<Resource> GetResourceSet() const;
 
                     /**
                      * 判断参数 ResourceSet 是否已赋值
                      * @return ResourceSet 是否已赋值
+                     * 
                      */
                     bool ResourceSetHasBeenSet() const;
 

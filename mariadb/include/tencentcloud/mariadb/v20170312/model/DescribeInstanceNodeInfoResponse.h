@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of nodes
                      * @return TotalCount Total number of nodes
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Node information
                      * @return NodesInfo Node information
+                     * 
                      */
                     std::vector<NodeInfo> GetNodesInfo() const;
 
                     /**
                      * 判断参数 NodesInfo 是否已赋值
                      * @return NodesInfo 是否已赋值
+                     * 
                      */
                     bool NodesInfoHasBeenSet() const;
 

@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability category ID.
                      * @return VulId Vulnerability category ID.
+                     * 
                      */
                     uint64_t GetVulId() const;
 
                     /**
                      * 判断参数 VulId 是否已赋值
                      * @return VulId 是否已赋值
+                     * 
                      */
                     bool VulIdHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability name.
                      * @return VulName Vulnerability name.
+                     * 
                      */
                     std::string GetVulName() const;
 
                     /**
                      * 判断参数 VulName 是否已赋值
                      * @return VulName 是否已赋值
+                     * 
                      */
                     bool VulNameHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability level.
                      * @return VulLevel Vulnerability level.
+                     * 
                      */
                     std::string GetVulLevel() const;
 
                     /**
                      * 判断参数 VulLevel 是否已赋值
                      * @return VulLevel 是否已赋值
+                     * 
                      */
                     bool VulLevelHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability type.
                      * @return VulType Vulnerability type.
+                     * 
                      */
                     std::string GetVulType() const;
 
                     /**
                      * 判断参数 VulType 是否已赋值
                      * @return VulType 是否已赋值
+                     * 
                      */
                     bool VulTypeHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability description.
                      * @return Description Vulnerability description.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Repair plan.
                      * @return RepairPlan Repair plan.
+                     * 
                      */
                     std::string GetRepairPlan() const;
 
                     /**
                      * 判断参数 RepairPlan 是否已赋值
                      * @return RepairPlan 是否已赋值
+                     * 
                      */
                     bool RepairPlanHasBeenSet() const;
 
                     /**
                      * 获取Vulnerability CVE.
                      * @return CveId Vulnerability CVE.
+                     * 
                      */
                     std::string GetCveId() const;
 
                     /**
                      * 判断参数 CveId 是否已赋值
                      * @return CveId 是否已赋值
+                     * 
                      */
                     bool CveIdHasBeenSet() const;
 
                     /**
                      * 获取Reference link.
                      * @return Reference Reference link.
+                     * 
                      */
                     std::string GetReference() const;
 
                     /**
                      * 判断参数 Reference 是否已赋值
                      * @return Reference 是否已赋值
+                     * 
                      */
                     bool ReferenceHasBeenSet() const;
 

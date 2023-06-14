@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Allocated credit
                      * @return AllocatedCredit Allocated credit
+                     * 
                      */
                     double GetAllocatedCredit() const;
 
                     /**
                      * 判断参数 AllocatedCredit 是否已赋值
                      * @return AllocatedCredit 是否已赋值
+                     * 
                      */
                     bool AllocatedCreditHasBeenSet() const;
 
                     /**
                      * 获取Total credit
                      * @return TotalCredit Total credit
+                     * 
                      */
                     double GetTotalCredit() const;
 
                     /**
                      * 判断参数 TotalCredit 是否已赋值
                      * @return TotalCredit 是否已赋值
+                     * 
                      */
                     bool TotalCreditHasBeenSet() const;
 
                     /**
                      * 获取Remaining credit
                      * @return RemainingCredit Remaining credit
+                     * 
                      */
                     double GetRemainingCredit() const;
 
                     /**
                      * 判断参数 RemainingCredit 是否已赋值
                      * @return RemainingCredit 是否已赋值
+                     * 
                      */
                     bool RemainingCreditHasBeenSet() const;
 

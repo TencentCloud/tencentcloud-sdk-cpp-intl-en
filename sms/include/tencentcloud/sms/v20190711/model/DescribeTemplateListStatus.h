@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Template ID
                      * @return TemplateId Template ID
+                     * 
                      */
                     uint64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID
-                     * @param TemplateId Template ID
+                     * @param _templateId Template ID
+                     * 
                      */
                     void SetTemplateId(const uint64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
@@ -71,6 +74,7 @@ namespace TencentCloud
                      * @return International Whether it is Global SMS. Valid values:
 0: Mainland China SMS.
 1: Global SMS
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -78,15 +82,17 @@ namespace TencentCloud
                      * 设置Whether it is Global SMS. Valid values:
 0: Mainland China SMS.
 1: Global SMS
-                     * @param International Whether it is Global SMS. Valid values:
+                     * @param _international Whether it is Global SMS. Valid values:
 0: Mainland China SMS.
 1: Global SMS
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 
@@ -97,6 +103,7 @@ namespace TencentCloud
                      * @return StatusCode Signature application status. Valid values:
 0: approved.
 -1: rejected or failed.
+                     * 
                      */
                     int64_t GetStatusCode() const;
 
@@ -104,69 +111,80 @@ namespace TencentCloud
                      * 设置Signature application status. Valid values:
 0: approved.
 -1: rejected or failed.
-                     * @param StatusCode Signature application status. Valid values:
+                     * @param _statusCode Signature application status. Valid values:
 0: approved.
 -1: rejected or failed.
+                     * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
                     /**
                      * 获取Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
                      * @return ReviewReply Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+                     * 
                      */
                     std::string GetReviewReply() const;
 
                     /**
                      * 设置Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
-                     * @param ReviewReply Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+                     * @param _reviewReply Review reply, i.e., response given by the reviewer, which is usually the reason for rejection.
+                     * 
                      */
                     void SetReviewReply(const std::string& _reviewReply);
 
                     /**
                      * 判断参数 ReviewReply 是否已赋值
                      * @return ReviewReply 是否已赋值
+                     * 
                      */
                     bool ReviewReplyHasBeenSet() const;
 
                     /**
                      * 获取Template name.
                      * @return TemplateName Template name.
+                     * 
                      */
                     std::string GetTemplateName() const;
 
                     /**
                      * 设置Template name.
-                     * @param TemplateName Template name.
+                     * @param _templateName Template name.
+                     * 
                      */
                     void SetTemplateName(const std::string& _templateName);
 
                     /**
                      * 判断参数 TemplateName 是否已赋值
                      * @return TemplateName 是否已赋值
+                     * 
                      */
                     bool TemplateNameHasBeenSet() const;
 
                     /**
                      * 获取Application submission time in the format of UNIX timestamp in seconds.
                      * @return CreateTime Application submission time in the format of UNIX timestamp in seconds.
+                     * 
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
                      * 设置Application submission time in the format of UNIX timestamp in seconds.
-                     * @param CreateTime Application submission time in the format of UNIX timestamp in seconds.
+                     * @param _createTime Application submission time in the format of UNIX timestamp in seconds.
+                     * 
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

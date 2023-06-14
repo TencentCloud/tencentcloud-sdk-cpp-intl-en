@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取UIN of the VPC account
                      * @return Uin UIN of the VPC account
+                     * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置UIN of the VPC account
-                     * @param Uin UIN of the VPC account
+                     * @param _uin UIN of the VPC account
+                     * 
                      */
                     void SetUin(const std::string& _uin);
 
                     /**
                      * 判断参数 Uin 是否已赋值
                      * @return Uin 是否已赋值
+                     * 
                      */
                     bool UinHasBeenSet() const;
 
                     /**
                      * 获取VPC ID
                      * @return UniqVpcId VPC ID
+                     * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC ID
-                     * @param UniqVpcId VPC ID
+                     * @param _uniqVpcId VPC ID
+                     * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
                     /**
                      * 判断参数 UniqVpcId 是否已赋值
                      * @return UniqVpcId 是否已赋值
+                     * 
                      */
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
                      * 获取Region
                      * @return Region Region
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region
-                     * @param Region Region
+                     * @param _region Region
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 

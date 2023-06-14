@@ -52,38 +52,44 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZoneId AZ ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置AZ ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneId AZ ID
+                     * @param _zoneId AZ ID
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Price details by node
                      * @return NodeDetailPrice Price details by node
+                     * 
                      */
                     std::vector<NodeDetailPriceResult> GetNodeDetailPrice() const;
 
                     /**
                      * 设置Price details by node
-                     * @param NodeDetailPrice Price details by node
+                     * @param _nodeDetailPrice Price details by node
+                     * 
                      */
                     void SetNodeDetailPrice(const std::vector<NodeDetailPriceResult>& _nodeDetailPrice);
 
                     /**
                      * 判断参数 NodeDetailPrice 是否已赋值
                      * @return NodeDetailPrice 是否已赋值
+                     * 
                      */
                     bool NodeDetailPriceHasBeenSet() const;
 

@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
 <li>OFF: disables intelligent frame-specific tagging task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
 <li>OFF: disables intelligent frame-specific tagging task.</li>
-                     * @param Switch Switch of intelligent frame-specific tagging task. Valid values:
+                     * @param _switch Switch of intelligent frame-specific tagging task. Valid values:
 <li>ON: enables intelligent frame-specific tagging task;</li>
 <li>OFF: disables intelligent frame-specific tagging task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

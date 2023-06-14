@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of the media file
                      * @return FileId Unique ID of the media file
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置Unique ID of the media file
-                     * @param FileId Unique ID of the media file
+                     * @param _fileId Unique ID of the media file
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -67,6 +70,7 @@ namespace TencentCloud
                      * @return Operation Operation. Valid values:
 <li>`Attach`: associates subtitles.</li>
 <li>`Detach`: disassociates subtitles.</li>
+                     * 
                      */
                     std::string GetOperation() const;
 
@@ -74,69 +78,80 @@ namespace TencentCloud
                      * 设置Operation. Valid values:
 <li>`Attach`: associates subtitles.</li>
 <li>`Detach`: disassociates subtitles.</li>
-                     * @param Operation Operation. Valid values:
+                     * @param _operation Operation. Valid values:
 <li>`Attach`: associates subtitles.</li>
 <li>`Detach`: disassociates subtitles.</li>
+                     * 
                      */
                     void SetOperation(const std::string& _operation);
 
                     /**
                      * 判断参数 Operation 是否已赋值
                      * @return Operation 是否已赋值
+                     * 
                      */
                     bool OperationHasBeenSet() const;
 
                     /**
                      * 获取[Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
                      * @return AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+                     * 
                      */
                     uint64_t GetAdaptiveDynamicStreamingDefinition() const;
 
                     /**
                      * 设置[Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
-                     * @param AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+                     * @param _adaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+                     * 
                      */
                     void SetAdaptiveDynamicStreamingDefinition(const uint64_t& _adaptiveDynamicStreamingDefinition);
 
                     /**
                      * 判断参数 AdaptiveDynamicStreamingDefinition 是否已赋值
                      * @return AdaptiveDynamicStreamingDefinition 是否已赋值
+                     * 
                      */
                     bool AdaptiveDynamicStreamingDefinitionHasBeenSet() const;
 
                     /**
                      * 获取Unique IDs of the subtitles
                      * @return SubtitleIds Unique IDs of the subtitles
+                     * 
                      */
                     std::vector<std::string> GetSubtitleIds() const;
 
                     /**
                      * 设置Unique IDs of the subtitles
-                     * @param SubtitleIds Unique IDs of the subtitles
+                     * @param _subtitleIds Unique IDs of the subtitles
+                     * 
                      */
                     void SetSubtitleIds(const std::vector<std::string>& _subtitleIds);
 
                     /**
                      * 判断参数 SubtitleIds 是否已赋值
                      * @return SubtitleIds 是否已赋值
+                     * 
                      */
                     bool SubtitleIdsHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
                      * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param _subAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
                      * 判断参数 SubAppId 是否已赋值
                      * @return SubAppId 是否已赋值
+                     * 
                      */
                     bool SubAppIdHasBeenSet() const;
 

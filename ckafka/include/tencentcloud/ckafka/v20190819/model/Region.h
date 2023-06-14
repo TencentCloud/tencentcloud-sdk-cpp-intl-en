@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取Region name
                      * @return RegionName Region name
+                     * 
                      */
                     std::string GetRegionName() const;
 
                     /**
                      * 设置Region name
-                     * @param RegionName Region name
+                     * @param _regionName Region name
+                     * 
                      */
                     void SetRegionName(const std::string& _regionName);
 
                     /**
                      * 判断参数 RegionName 是否已赋值
                      * @return RegionName 是否已赋值
+                     * 
                      */
                     bool RegionNameHasBeenSet() const;
 
                     /**
                      * 获取Area name
                      * @return AreaName Area name
+                     * 
                      */
                     std::string GetAreaName() const;
 
                     /**
                      * 设置Area name
-                     * @param AreaName Area name
+                     * @param _areaName Area name
+                     * 
                      */
                     void SetAreaName(const std::string& _areaName);
 
                     /**
                      * 判断参数 AreaName 是否已赋值
                      * @return AreaName 是否已赋值
+                     * 
                      */
                     bool AreaNameHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return RegionCode Region code
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegionCode() const;
 
                     /**
                      * 设置Region code
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param RegionCode Region code
+                     * @param _regionCode Region code
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionCode(const std::string& _regionCode);
 
                     /**
                      * 判断参数 RegionCode 是否已赋值
                      * @return RegionCode 是否已赋值
+                     * 
                      */
                     bool RegionCodeHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return RegionCodeV3 Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegionCodeV3() const;
 
                     /**
                      * 设置Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param RegionCodeV3 Region code (v3)
+                     * @param _regionCodeV3 Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegionCodeV3(const std::string& _regionCodeV3);
 
                     /**
                      * 判断参数 RegionCodeV3 是否已赋值
                      * @return RegionCodeV3 是否已赋值
+                     * 
                      */
                     bool RegionCodeV3HasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSupport() const;
 
                     /**
                      * 设置NONE: no special models are supported by default.\nCVM: the CVM type is supported.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
+                     * @param _support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSupport(const std::string& _support);
 
                     /**
                      * 判断参数 Support 是否已赋值
                      * @return Support 是否已赋值
+                     * 
                      */
                     bool SupportHasBeenSet() const;
 
@@ -171,20 +189,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetIpv6() const;
 
                     /**
                      * 设置Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
+                     * @param _ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpv6(const int64_t& _ipv6);
 
                     /**
                      * 判断参数 Ipv6 是否已赋值
                      * @return Ipv6 是否已赋值
+                     * 
                      */
                     bool Ipv6HasBeenSet() const;
 
@@ -193,20 +214,23 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
                      * @return MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMultiZone() const;
 
                     /**
                      * 设置Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-                     * @param MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
+                     * @param _multiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMultiZone(const int64_t& _multiZone);
 
                     /**
                      * 判断参数 MultiZone 是否已赋值
                      * @return MultiZone 是否已赋值
+                     * 
                      */
                     bool MultiZoneHasBeenSet() const;
 

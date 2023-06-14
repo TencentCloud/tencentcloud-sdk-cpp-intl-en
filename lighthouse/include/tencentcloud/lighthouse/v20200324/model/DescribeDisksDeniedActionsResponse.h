@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of operation limits of cloud disks.
                      * @return DiskDeniedActionSet List of operation limits of cloud disks.
+                     * 
                      */
                     std::vector<DiskDeniedActions> GetDiskDeniedActionSet() const;
 
                     /**
                      * 判断参数 DiskDeniedActionSet 是否已赋值
                      * @return DiskDeniedActionSet 是否已赋值
+                     * 
                      */
                     bool DiskDeniedActionSetHasBeenSet() const;
 

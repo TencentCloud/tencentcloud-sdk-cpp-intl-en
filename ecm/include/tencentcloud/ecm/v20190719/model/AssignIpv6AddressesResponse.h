@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of IPv6 addresses assigned to ENIs.
                      * @return Ipv6AddressSet List of IPv6 addresses assigned to ENIs.
+                     * 
                      */
                     std::vector<Ipv6Address> GetIpv6AddressSet() const;
 
                     /**
                      * 判断参数 Ipv6AddressSet 是否已赋值
                      * @return Ipv6AddressSet 是否已赋值
+                     * 
                      */
                     bool Ipv6AddressSetHasBeenSet() const;
 

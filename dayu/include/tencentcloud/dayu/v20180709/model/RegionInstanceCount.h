@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Region code
                      * @return Region Region code
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region code
-                     * @param Region Region code
+                     * @param _region Region code
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Region code (new specification)
                      * @return RegionV3 Region code (new specification)
+                     * 
                      */
                     std::string GetRegionV3() const;
 
                     /**
                      * 设置Region code (new specification)
-                     * @param RegionV3 Region code (new specification)
+                     * @param _regionV3 Region code (new specification)
+                     * 
                      */
                     void SetRegionV3(const std::string& _regionV3);
 
                     /**
                      * 判断参数 RegionV3 是否已赋值
                      * @return RegionV3 是否已赋值
+                     * 
                      */
                     bool RegionV3HasBeenSet() const;
 
                     /**
                      * 获取Number of resource instances
                      * @return Count Number of resource instances
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 设置Number of resource instances
-                     * @param Count Number of resource instances
+                     * @param _count Number of resource instances
+                     * 
                      */
                     void SetCount(const uint64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取Describes how to transform data
                      * @return OutputStructs Describes how to transform data
+                     * 
                      */
                     std::vector<OutputStructParam> GetOutputStructs() const;
 
                     /**
                      * 设置Describes how to transform data
-                     * @param OutputStructs Describes how to transform data
+                     * @param _outputStructs Describes how to transform data
+                     * 
                      */
                     void SetOutputStructs(const std::vector<OutputStructParam>& _outputStructs);
 
                     /**
                      * 判断参数 OutputStructs 是否已赋值
                      * @return OutputStructs 是否已赋值
+                     * 
                      */
                     bool OutputStructsHasBeenSet() const;
 

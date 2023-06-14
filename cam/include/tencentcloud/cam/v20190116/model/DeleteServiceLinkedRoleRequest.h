@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of the service-linked role to be deleted.
                      * @return RoleName Name of the service-linked role to be deleted.
+                     * 
                      */
                     std::string GetRoleName() const;
 
                     /**
                      * 设置Name of the service-linked role to be deleted.
-                     * @param RoleName Name of the service-linked role to be deleted.
+                     * @param _roleName Name of the service-linked role to be deleted.
+                     * 
                      */
                     void SetRoleName(const std::string& _roleName);
 
                     /**
                      * 判断参数 RoleName 是否已赋值
                      * @return RoleName 是否已赋值
+                     * 
                      */
                     bool RoleNameHasBeenSet() const;
 

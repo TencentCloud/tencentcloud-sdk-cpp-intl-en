@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
                      * @return ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
+                     * 
                      */
                     std::string GetServiceTemplateGroupId() const;
 
                     /**
                      * 设置The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
-                     * @param ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
+                     * @param _serviceTemplateGroupId The protocol port template group instance ID, such as `ppmg-ei8hfd9a`.
+                     * 
                      */
                     void SetServiceTemplateGroupId(const std::string& _serviceTemplateGroupId);
 
                     /**
                      * 判断参数 ServiceTemplateGroupId 是否已赋值
                      * @return ServiceTemplateGroupId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Protocol port template group name.
                      * @return ServiceTemplateGroupName Protocol port template group name.
+                     * 
                      */
                     std::string GetServiceTemplateGroupName() const;
 
                     /**
                      * 设置Protocol port template group name.
-                     * @param ServiceTemplateGroupName Protocol port template group name.
+                     * @param _serviceTemplateGroupName Protocol port template group name.
+                     * 
                      */
                     void SetServiceTemplateGroupName(const std::string& _serviceTemplateGroupName);
 
                     /**
                      * 判断参数 ServiceTemplateGroupName 是否已赋值
                      * @return ServiceTemplateGroupName 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Instance ID of the protocol port template, such as `ppm-4dw6agho`.
                      * @return ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+                     * 
                      */
                     std::vector<std::string> GetServiceTemplateIds() const;
 
                     /**
                      * 设置Instance ID of the protocol port template, such as `ppm-4dw6agho`.
-                     * @param ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+                     * @param _serviceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+                     * 
                      */
                     void SetServiceTemplateIds(const std::vector<std::string>& _serviceTemplateIds);
 
                     /**
                      * 判断参数 ServiceTemplateIds 是否已赋值
                      * @return ServiceTemplateIds 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdsHasBeenSet() const;
 

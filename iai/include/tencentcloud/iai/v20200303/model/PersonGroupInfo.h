@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the group that contains this person
                      * @return GroupId ID of the group that contains this person
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置ID of the group that contains this person
-                     * @param GroupId ID of the group that contains this person
+                     * @param _groupId ID of the group that contains this person
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Content of person description field
                      * @return PersonExDescriptions Content of person description field
+                     * 
                      */
                     std::vector<std::string> GetPersonExDescriptions() const;
 
                     /**
                      * 设置Content of person description field
-                     * @param PersonExDescriptions Content of person description field
+                     * @param _personExDescriptions Content of person description field
+                     * 
                      */
                     void SetPersonExDescriptions(const std::vector<std::string>& _personExDescriptions);
 
                     /**
                      * 判断参数 PersonExDescriptions 是否已赋值
                      * @return PersonExDescriptions 是否已赋值
+                     * 
                      */
                     bool PersonExDescriptionsHasBeenSet() const;
 

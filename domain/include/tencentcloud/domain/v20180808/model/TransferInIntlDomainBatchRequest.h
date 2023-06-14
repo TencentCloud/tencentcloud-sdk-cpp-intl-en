@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取The profile ID.
                      * @return TemplateId The profile ID.
+                     * 
                      */
                     std::string GetTemplateId() const;
 
                     /**
                      * 设置The profile ID.
-                     * @param TemplateId The profile ID.
+                     * @param _templateId The profile ID.
+                     * 
                      */
                     void SetTemplateId(const std::string& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取The transfer passwords for the domains.
                      * @return PassWords The transfer passwords for the domains.
+                     * 
                      */
                     std::vector<std::string> GetPassWords() const;
 
                     /**
                      * 设置The transfer passwords for the domains.
-                     * @param PassWords The transfer passwords for the domains.
+                     * @param _passWords The transfer passwords for the domains.
+                     * 
                      */
                     void SetPassWords(const std::vector<std::string>& _passWords);
 
                     /**
                      * 判断参数 PassWords 是否已赋值
                      * @return PassWords 是否已赋值
+                     * 
                      */
                     bool PassWordsHasBeenSet() const;
 
                     /**
                      * 获取The domains to be bulk transferred in.
                      * @return Domains The domains to be bulk transferred in.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The domains to be bulk transferred in.
-                     * @param Domains The domains to be bulk transferred in.
+                     * @param _domains The domains to be bulk transferred in.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取The payment method. Valid value: `1` (account balance).
                      * @return PayMode The payment method. Valid value: `1` (account balance).
+                     * 
                      */
                     int64_t GetPayMode() const;
 
                     /**
                      * 设置The payment method. Valid value: `1` (account balance).
-                     * @param PayMode The payment method. Valid value: `1` (account balance).
+                     * @param _payMode The payment method. Valid value: `1` (account balance).
+                     * 
                      */
                     void SetPayMode(const int64_t& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable auto-renewal.
                      * @return AutoRenewFlag Whether to enable auto-renewal.
+                     * 
                      */
                     bool GetAutoRenewFlag() const;
 
                     /**
                      * 设置Whether to enable auto-renewal.
-                     * @param AutoRenewFlag Whether to enable auto-renewal.
+                     * @param _autoRenewFlag Whether to enable auto-renewal.
+                     * 
                      */
                     void SetAutoRenewFlag(const bool& _autoRenewFlag);
 
                     /**
                      * 判断参数 AutoRenewFlag 是否已赋值
                      * @return AutoRenewFlag 是否已赋值
+                     * 
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the transfer prohibition lock.
                      * @return TransferProhibition Whether to enable the transfer prohibition lock.
+                     * 
                      */
                     bool GetTransferProhibition() const;
 
                     /**
                      * 设置Whether to enable the transfer prohibition lock.
-                     * @param TransferProhibition Whether to enable the transfer prohibition lock.
+                     * @param _transferProhibition Whether to enable the transfer prohibition lock.
+                     * 
                      */
                     void SetTransferProhibition(const bool& _transferProhibition);
 
                     /**
                      * 判断参数 TransferProhibition 是否已赋值
                      * @return TransferProhibition 是否已赋值
+                     * 
                      */
                     bool TransferProhibitionHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the update prohibition lock.
                      * @return UpdateProhibition Whether to enable the update prohibition lock.
+                     * 
                      */
                     bool GetUpdateProhibition() const;
 
                     /**
                      * 设置Whether to enable the update prohibition lock.
-                     * @param UpdateProhibition Whether to enable the update prohibition lock.
+                     * @param _updateProhibition Whether to enable the update prohibition lock.
+                     * 
                      */
                     void SetUpdateProhibition(const bool& _updateProhibition);
 
                     /**
                      * 判断参数 UpdateProhibition 是否已赋值
                      * @return UpdateProhibition 是否已赋值
+                     * 
                      */
                     bool UpdateProhibitionHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the 60-day inter-registrar transfer lock.
                      * @return LockTransfer Whether to enable the 60-day inter-registrar transfer lock.
+                     * 
                      */
                     bool GetLockTransfer() const;
 
                     /**
                      * 设置Whether to enable the 60-day inter-registrar transfer lock.
-                     * @param LockTransfer Whether to enable the 60-day inter-registrar transfer lock.
+                     * @param _lockTransfer Whether to enable the 60-day inter-registrar transfer lock.
+                     * 
                      */
                     void SetLockTransfer(const bool& _lockTransfer);
 
                     /**
                      * 判断参数 LockTransfer 是否已赋值
                      * @return LockTransfer 是否已赋值
+                     * 
                      */
                     bool LockTransferHasBeenSet() const;
 

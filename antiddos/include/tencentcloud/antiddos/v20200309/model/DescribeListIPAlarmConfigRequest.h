@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Starting offset of the page. Value: (number of pages – 1) * items per page.
                      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Starting offset of the page. Value: (number of pages – 1) * items per page.
-                     * @param Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * @param _offset Starting offset of the page. Value: (number of pages – 1) * items per page.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of items per page. The default value is 20 when Limit = 0. The maximum value is 100.
                      * @return Limit Number of items per page. The default value is 20 when Limit = 0. The maximum value is 100.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of items per page. The default value is 20 when Limit = 0. The maximum value is 100.
-                     * @param Limit Number of items per page. The default value is 20 when Limit = 0. The maximum value is 100.
+                     * @param _limit Number of items per page. The default value is 20 when Limit = 0. The maximum value is 100.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
                      * @return FilterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * 
                      */
                     std::string GetFilterInstanceId() const;
 
                     /**
                      * 设置Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
-                     * @param FilterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * @param _filterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
+                     * 
                      */
                     void SetFilterInstanceId(const std::string& _filterInstanceId);
 
                     /**
                      * 判断参数 FilterInstanceId 是否已赋值
                      * @return FilterInstanceId 是否已赋值
+                     * 
                      */
                     bool FilterInstanceIdHasBeenSet() const;
 
@@ -105,6 +114,7 @@ namespace TencentCloud
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
+                     * 
                      */
                     int64_t GetFilterAlarmType() const;
 
@@ -113,52 +123,60 @@ namespace TencentCloud
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
-                     * @param FilterAlarmType Alarm threshold type filter. Valid values:
+                     * @param _filterAlarmType Alarm threshold type filter. Valid values:
 `1`: alarm threshold for inbound traffic
 `2`: alarm threshold for cleansing attack traffic
 ]
+                     * 
                      */
                     void SetFilterAlarmType(const int64_t& _filterAlarmType);
 
                     /**
                      * 判断参数 FilterAlarmType 是否已赋值
                      * @return FilterAlarmType 是否已赋值
+                     * 
                      */
                     bool FilterAlarmTypeHasBeenSet() const;
 
                     /**
                      * 获取IP filter
                      * @return FilterIp IP filter
+                     * 
                      */
                     std::string GetFilterIp() const;
 
                     /**
                      * 设置IP filter
-                     * @param FilterIp IP filter
+                     * @param _filterIp IP filter
+                     * 
                      */
                     void SetFilterIp(const std::string& _filterIp);
 
                     /**
                      * 判断参数 FilterIp 是否已赋值
                      * @return FilterIp 是否已赋值
+                     * 
                      */
                     bool FilterIpHasBeenSet() const;
 
                     /**
                      * 获取CNAME of the Anti-DDoS Advanced instance
                      * @return FilterCname CNAME of the Anti-DDoS Advanced instance
+                     * 
                      */
                     std::string GetFilterCname() const;
 
                     /**
                      * 设置CNAME of the Anti-DDoS Advanced instance
-                     * @param FilterCname CNAME of the Anti-DDoS Advanced instance
+                     * @param _filterCname CNAME of the Anti-DDoS Advanced instance
+                     * 
                      */
                     void SetFilterCname(const std::string& _filterCname);
 
                     /**
                      * 判断参数 FilterCname 是否已赋值
                      * @return FilterCname 是否已赋值
+                     * 
                      */
                     bool FilterCnameHasBeenSet() const;
 

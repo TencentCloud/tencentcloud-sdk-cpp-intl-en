@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取List of version numbers.
                      * @return VersionIDs List of version numbers.
+                     * 
                      */
                     std::vector<std::string> GetVersionIDs() const;
 
                     /**
                      * 判断参数 VersionIDs 是否已赋值
                      * @return VersionIDs 是否已赋值
+                     * 
                      */
                     bool VersionIDsHasBeenSet() const;
 
                     /**
                      * 获取Number of version numbers. The maximum number of version numbers that can be shown to users is 10.
                      * @return TotalCount Number of version numbers. The maximum number of version numbers that can be shown to users is 10.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

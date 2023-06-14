@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Options Configuration parameters of the check task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CompareOptions GetOptions() const;
 
                     /**
                      * 设置Configuration parameters of the check task
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Options Configuration parameters of the check task
+                     * @param _options Configuration parameters of the check task
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOptions(const CompareOptions& _options);
 
                     /**
                      * 判断参数 Options 是否已赋值
                      * @return Options 是否已赋值
+                     * 
                      */
                     bool OptionsHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Objects Consistency check objects
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     CompareObject GetObjects() const;
 
                     /**
                      * 设置Consistency check objects
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Objects Consistency check objects
+                     * @param _objects Consistency check objects
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetObjects(const CompareObject& _objects);
 
                     /**
                      * 判断参数 Objects 是否已赋值
                      * @return Objects 是否已赋值
+                     * 
                      */
                     bool ObjectsHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Conclusion Comparison conclusion. Valid values: `same`, `different`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConclusion() const;
 
                     /**
                      * 设置Comparison conclusion. Valid values: `same`, `different`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Conclusion Comparison conclusion. Valid values: `same`, `different`.
+                     * @param _conclusion Comparison conclusion. Valid values: `same`, `different`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConclusion(const std::string& _conclusion);
 
                     /**
                      * 判断参数 Conclusion 是否已赋值
                      * @return Conclusion 是否已赋值
+                     * 
                      */
                     bool ConclusionHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Task status. Valid values: `success`, `failed`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Task status. Valid values: `success`, `failed`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Task status. Valid values: `success`, `failed`.
+                     * @param _status Task status. Valid values: `success`, `failed`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalTables Total number of tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalTables() const;
 
                     /**
                      * 设置Total number of tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalTables Total number of tables
+                     * @param _totalTables Total number of tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalTables(const uint64_t& _totalTables);
 
                     /**
                      * 判断参数 TotalTables 是否已赋值
                      * @return TotalTables 是否已赋值
+                     * 
                      */
                     bool TotalTablesHasBeenSet() const;
 
@@ -163,20 +178,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CheckedTables Number of checked tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCheckedTables() const;
 
                     /**
                      * 设置Number of checked tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CheckedTables Number of checked tables
+                     * @param _checkedTables Number of checked tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCheckedTables(const uint64_t& _checkedTables);
 
                     /**
                      * 判断参数 CheckedTables 是否已赋值
                      * @return CheckedTables 是否已赋值
+                     * 
                      */
                     bool CheckedTablesHasBeenSet() const;
 
@@ -185,20 +203,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DifferentTables Number of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDifferentTables() const;
 
                     /**
                      * 设置Number of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DifferentTables Number of inconsistent tables
+                     * @param _differentTables Number of inconsistent tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDifferentTables(const uint64_t& _differentTables);
 
                     /**
                      * 判断参数 DifferentTables 是否已赋值
                      * @return DifferentTables 是否已赋值
+                     * 
                      */
                     bool DifferentTablesHasBeenSet() const;
 
@@ -207,20 +228,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SkippedTables Number of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSkippedTables() const;
 
                     /**
                      * 设置Number of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SkippedTables Number of skipped tables
+                     * @param _skippedTables Number of skipped tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSkippedTables(const uint64_t& _skippedTables);
 
                     /**
                      * 判断参数 SkippedTables 是否已赋值
                      * @return SkippedTables 是否已赋值
+                     * 
                      */
                     bool SkippedTablesHasBeenSet() const;
 
@@ -229,20 +253,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NearlyTableCount The estimated number of tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetNearlyTableCount() const;
 
                     /**
                      * 设置The estimated number of tables
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NearlyTableCount The estimated number of tables
+                     * @param _nearlyTableCount The estimated number of tables
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNearlyTableCount(const uint64_t& _nearlyTableCount);
 
                     /**
                      * 判断参数 NearlyTableCount 是否已赋值
                      * @return NearlyTableCount 是否已赋值
+                     * 
                      */
                     bool NearlyTableCountHasBeenSet() const;
 
@@ -251,20 +278,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DifferentRows Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDifferentRows() const;
 
                     /**
                      * 设置Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DifferentRows Number of inconsistent data rows
+                     * @param _differentRows Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDifferentRows(const uint64_t& _differentRows);
 
                     /**
                      * 判断参数 DifferentRows 是否已赋值
                      * @return DifferentRows 是否已赋值
+                     * 
                      */
                     bool DifferentRowsHasBeenSet() const;
 
@@ -273,20 +303,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetSrcSampleRows() const;
 
                     /**
                      * 设置Source database row count, which takes effect only when the comparison type is **Row count comparison**.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SrcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+                     * @param _srcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSrcSampleRows(const uint64_t& _srcSampleRows);
 
                     /**
                      * 判断参数 SrcSampleRows 是否已赋值
                      * @return SrcSampleRows 是否已赋值
+                     * 
                      */
                     bool SrcSampleRowsHasBeenSet() const;
 
@@ -295,20 +328,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetDstSampleRows() const;
 
                     /**
                      * 设置Target database row count, which takes effect only when the comparison type is **Row count comparison**.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+                     * @param _dstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDstSampleRows(const uint64_t& _dstSampleRows);
 
                     /**
                      * 判断参数 DstSampleRows 是否已赋值
                      * @return DstSampleRows 是否已赋值
+                     * 
                      */
                     bool DstSampleRowsHasBeenSet() const;
 
@@ -317,20 +353,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StartedAt Start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStartedAt() const;
 
                     /**
                      * 设置Start time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartedAt Start time
+                     * @param _startedAt Start time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStartedAt(const std::string& _startedAt);
 
                     /**
                      * 判断参数 StartedAt 是否已赋值
                      * @return StartedAt 是否已赋值
+                     * 
                      */
                     bool StartedAtHasBeenSet() const;
 
@@ -339,20 +378,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FinishedAt End time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFinishedAt() const;
 
                     /**
                      * 设置End time
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FinishedAt End time
+                     * @param _finishedAt End time
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFinishedAt(const std::string& _finishedAt);
 
                     /**
                      * 判断参数 FinishedAt 是否已赋值
                      * @return FinishedAt 是否已赋值
+                     * 
                      */
                     bool FinishedAtHasBeenSet() const;
 

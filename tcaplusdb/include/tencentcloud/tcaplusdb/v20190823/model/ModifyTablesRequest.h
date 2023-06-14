@@ -47,54 +47,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where the table to be modified resides
                      * @return ClusterId ID of the cluster where the table to be modified resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where the table to be modified resides
-                     * @param ClusterId ID of the cluster where the table to be modified resides
+                     * @param _clusterId ID of the cluster where the table to be modified resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Selected table modification IDL files
                      * @return IdlFiles Selected table modification IDL files
+                     * 
                      */
                     std::vector<IdlFileInfo> GetIdlFiles() const;
 
                     /**
                      * 设置Selected table modification IDL files
-                     * @param IdlFiles Selected table modification IDL files
+                     * @param _idlFiles Selected table modification IDL files
+                     * 
                      */
                     void SetIdlFiles(const std::vector<IdlFileInfo>& _idlFiles);
 
                     /**
                      * 判断参数 IdlFiles 是否已赋值
                      * @return IdlFiles 是否已赋值
+                     * 
                      */
                     bool IdlFilesHasBeenSet() const;
 
                     /**
                      * 获取List of tables to be modified
                      * @return SelectedTables List of tables to be modified
+                     * 
                      */
                     std::vector<SelectedTableInfoNew> GetSelectedTables() const;
 
                     /**
                      * 设置List of tables to be modified
-                     * @param SelectedTables List of tables to be modified
+                     * @param _selectedTables List of tables to be modified
+                     * 
                      */
                     void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 

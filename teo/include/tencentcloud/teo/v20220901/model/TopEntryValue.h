@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The item name.
                      * @return Name The item name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The item name.
-                     * @param Name The item name.
+                     * @param _name The item name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The number of items.
                      * @return Count The number of items.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 设置The number of items.
-                     * @param Count The number of items.
+                     * @param _count The number of items.
+                     * 
                      */
                     void SetCount(const int64_t& _count);
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

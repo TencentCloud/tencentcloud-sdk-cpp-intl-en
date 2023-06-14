@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取The service name (required), such as HDFS.
                      * @return ServiceName The service name (required), such as HDFS.
+                     * 
                      */
                     std::string GetServiceName() const;
 
                     /**
                      * 设置The service name (required), such as HDFS.
-                     * @param ServiceName The service name (required), such as HDFS.
+                     * @param _serviceName The service name (required), such as HDFS.
+                     * 
                      */
                     void SetServiceName(const std::string& _serviceName);
 
                     /**
                      * 判断参数 ServiceName 是否已赋值
                      * @return ServiceName 是否已赋值
+                     * 
                      */
                     bool ServiceNameHasBeenSet() const;
 
                     /**
                      * 获取If it is left empty, all processes will be operated on.
                      * @return ComponentInfoList If it is left empty, all processes will be operated on.
+                     * 
                      */
                     std::vector<ComponentBasicRestartInfo> GetComponentInfoList() const;
 
                     /**
                      * 设置If it is left empty, all processes will be operated on.
-                     * @param ComponentInfoList If it is left empty, all processes will be operated on.
+                     * @param _componentInfoList If it is left empty, all processes will be operated on.
+                     * 
                      */
                     void SetComponentInfoList(const std::vector<ComponentBasicRestartInfo>& _componentInfoList);
 
                     /**
                      * 判断参数 ComponentInfoList 是否已赋值
                      * @return ComponentInfoList 是否已赋值
+                     * 
                      */
                     bool ComponentInfoListHasBeenSet() const;
 

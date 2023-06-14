@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Request volume statistics start time
                      * @return TimeRangeBegin Request volume statistics start time
+                     * 
                      */
                     std::string GetTimeRangeBegin() const;
 
                     /**
                      * 设置Request volume statistics start time
-                     * @param TimeRangeBegin Request volume statistics start time
+                     * @param _timeRangeBegin Request volume statistics start time
+                     * 
                      */
                     void SetTimeRangeBegin(const std::string& _timeRangeBegin);
 
                     /**
                      * 判断参数 TimeRangeBegin 是否已赋值
                      * @return TimeRangeBegin 是否已赋值
+                     * 
                      */
                     bool TimeRangeBeginHasBeenSet() const;
 
                     /**
                      * 获取Filter parameter. Valid values: ZoneId (private domain ID), Domain (private domain), OperatorUin (operator account ID)
                      * @return Filters Filter parameter. Valid values: ZoneId (private domain ID), Domain (private domain), OperatorUin (operator account ID)
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter parameter. Valid values: ZoneId (private domain ID), Domain (private domain), OperatorUin (operator account ID)
-                     * @param Filters Filter parameter. Valid values: ZoneId (private domain ID), Domain (private domain), OperatorUin (operator account ID)
+                     * @param _filters Filter parameter. Valid values: ZoneId (private domain ID), Domain (private domain), OperatorUin (operator account ID)
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Request volume statistics end time
                      * @return TimeRangeEnd Request volume statistics end time
+                     * 
                      */
                     std::string GetTimeRangeEnd() const;
 
                     /**
                      * 设置Request volume statistics end time
-                     * @param TimeRangeEnd Request volume statistics end time
+                     * @param _timeRangeEnd Request volume statistics end time
+                     * 
                      */
                     void SetTimeRangeEnd(const std::string& _timeRangeEnd);
 
                     /**
                      * 判断参数 TimeRangeEnd 是否已赋值
                      * @return TimeRangeEnd 是否已赋值
+                     * 
                      */
                     bool TimeRangeEndHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset, starting from 0
                      * @return Offset Pagination offset, starting from 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset, starting from 0
-                     * @param Offset Pagination offset, starting from 0
+                     * @param _offset Pagination offset, starting from 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page. Maximum value: 100. Default value: 20
                      * @return Limit Number of entries per page. Maximum value: 100. Default value: 20
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of entries per page. Maximum value: 100. Default value: 20
-                     * @param Limit Number of entries per page. Maximum value: 100. Default value: 20
+                     * @param _limit Number of entries per page. Maximum value: 100. Default value: 20
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

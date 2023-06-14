@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Page number to get. Default value: 1.
                      * @return PageNum Page number to get. Default value: 1.
+                     * 
                      */
                     int64_t GetPageNum() const;
 
                     /**
                      * 设置Page number to get. Default value: 1.
-                     * @param PageNum Page number to get. Default value: 1.
+                     * @param _pageNum Page number to get. Default value: 1.
+                     * 
                      */
                     void SetPageNum(const int64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -67,6 +70,7 @@ Default value: 10.
                      * @return PageSize Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
@@ -74,33 +78,38 @@ Default value: 10.
                      * 设置Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
-                     * @param PageSize Number of entries per page. Maximum value: 100. 
+                     * @param _pageSize Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取Stream name for query
                      * @return StreamName Stream name for query
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name for query
-                     * @param StreamName Stream name for query
+                     * @param _streamName Stream name for query
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 

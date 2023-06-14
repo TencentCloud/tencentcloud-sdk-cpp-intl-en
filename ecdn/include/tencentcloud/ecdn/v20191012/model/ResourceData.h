@@ -58,6 +58,7 @@ Specific domain name: indicates the details of the specific domain name
 multiDomains: indicates aggregated details of multiple domain names
 Project ID: displays the ID of the specified project to be queried
 all: details at the account level
+                     * 
                      */
                     std::string GetResource() const;
 
@@ -67,35 +68,40 @@ Specific domain name: indicates the details of the specific domain name
 multiDomains: indicates aggregated details of multiple domain names
 Project ID: displays the ID of the specified project to be queried
 all: details at the account level
-                     * @param Resource Resource name, which is categorized as follows based on different query conditions:
+                     * @param _resource Resource name, which is categorized as follows based on different query conditions:
 Specific domain name: indicates the details of the specific domain name
 multiDomains: indicates aggregated details of multiple domain names
 Project ID: displays the ID of the specified project to be queried
 all: details at the account level
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取Data details of resource
                      * @return EcdnData Data details of resource
+                     * 
                      */
                     EcdnData GetEcdnData() const;
 
                     /**
                      * 设置Data details of resource
-                     * @param EcdnData Data details of resource
+                     * @param _ecdnData Data details of resource
+                     * 
                      */
                     void SetEcdnData(const EcdnData& _ecdnData);
 
                     /**
                      * 判断参数 EcdnData 是否已赋值
                      * @return EcdnData 是否已赋值
+                     * 
                      */
                     bool EcdnDataHasBeenSet() const;
 

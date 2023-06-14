@@ -51,38 +51,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PersonExDescriptionIndex Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPersonExDescriptionIndex() const;
 
                     /**
                      * 设置Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PersonExDescriptionIndex Person description field index, whose value starts from 0.
+                     * @param _personExDescriptionIndex Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPersonExDescriptionIndex(const uint64_t& _personExDescriptionIndex);
 
                     /**
                      * 判断参数 PersonExDescriptionIndex 是否已赋值
                      * @return PersonExDescriptionIndex 是否已赋值
+                     * 
                      */
                     bool PersonExDescriptionIndexHasBeenSet() const;
 
                     /**
                      * 获取Content of the person description field to be updated
                      * @return PersonExDescription Content of the person description field to be updated
+                     * 
                      */
                     std::string GetPersonExDescription() const;
 
                     /**
                      * 设置Content of the person description field to be updated
-                     * @param PersonExDescription Content of the person description field to be updated
+                     * @param _personExDescription Content of the person description field to be updated
+                     * 
                      */
                     void SetPersonExDescription(const std::string& _personExDescription);
 
                     /**
                      * 判断参数 PersonExDescription 是否已赋值
                      * @return PersonExDescription 是否已赋值
+                     * 
                      */
                     bool PersonExDescriptionHasBeenSet() const;
 

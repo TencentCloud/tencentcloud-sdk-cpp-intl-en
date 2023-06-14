@@ -49,24 +49,28 @@ namespace TencentCloud
 Value range: 0-20.
                      * @return Total The number of records returned.
 Value range: 0-20.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取The information of the abnormal user experiences.
                      * @return AbnormalExperienceList The information of the abnormal user experiences.
+                     * 
                      */
                     std::vector<AbnormalExperience> GetAbnormalExperienceList() const;
 
                     /**
                      * 判断参数 AbnormalExperienceList 是否已赋值
                      * @return AbnormalExperienceList 是否已赋值
+                     * 
                      */
                     bool AbnormalExperienceListHasBeenSet() const;
 

@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Mounting point. A valid path (for Linux) for a drive (for Windows, such as "H:\\")
                      * @return LocalPath Mounting point. A valid path (for Linux) for a drive (for Windows, such as "H:\\")
+                     * 
                      */
                     std::string GetLocalPath() const;
 
                     /**
                      * 设置Mounting point. A valid path (for Linux) for a drive (for Windows, such as "H:\\")
-                     * @param LocalPath Mounting point. A valid path (for Linux) for a drive (for Windows, such as "H:\\")
+                     * @param _localPath Mounting point. A valid path (for Linux) for a drive (for Windows, such as "H:\\")
+                     * 
                      */
                     void SetLocalPath(const std::string& _localPath);
 
                     /**
                      * 判断参数 LocalPath 是否已赋值
                      * @return LocalPath 是否已赋值
+                     * 
                      */
                     bool LocalPathHasBeenSet() const;
 
                     /**
                      * 获取File system type. Linux: `EXT3` (default) and `EXT4`. Windows: `NTFS`
                      * @return FileSystemType File system type. Linux: `EXT3` (default) and `EXT4`. Windows: `NTFS`
+                     * 
                      */
                     std::string GetFileSystemType() const;
 
                     /**
                      * 设置File system type. Linux: `EXT3` (default) and `EXT4`. Windows: `NTFS`
-                     * @param FileSystemType File system type. Linux: `EXT3` (default) and `EXT4`. Windows: `NTFS`
+                     * @param _fileSystemType File system type. Linux: `EXT3` (default) and `EXT4`. Windows: `NTFS`
+                     * 
                      */
                     void SetFileSystemType(const std::string& _fileSystemType);
 
                     /**
                      * 判断参数 FileSystemType 是否已赋值
                      * @return FileSystemType 是否已赋值
+                     * 
                      */
                     bool FileSystemTypeHasBeenSet() const;
 

@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取CLB information list
                      * @return LoadBalancerInfoList CLB information list
+                     * 
                      */
                     std::vector<ClassicalLoadBalancerInfo> GetLoadBalancerInfoList() const;
 
                     /**
                      * 判断参数 LoadBalancerInfoList 是否已赋值
                      * @return LoadBalancerInfoList 是否已赋值
+                     * 
                      */
                     bool LoadBalancerInfoListHasBeenSet() const;
 

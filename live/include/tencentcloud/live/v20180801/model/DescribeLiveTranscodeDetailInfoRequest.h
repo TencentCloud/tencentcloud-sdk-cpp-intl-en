@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Push domain name.
                      * @return PushDomain Push domain name.
+                     * 
                      */
                     std::string GetPushDomain() const;
 
                     /**
                      * 设置Push domain name.
-                     * @param PushDomain Push domain name.
+                     * @param _pushDomain Push domain name.
+                     * 
                      */
                     void SetPushDomain(const std::string& _pushDomain);
 
                     /**
                      * 判断参数 PushDomain 是否已赋值
                      * @return PushDomain 是否已赋值
+                     * 
                      */
                     bool PushDomainHasBeenSet() const;
 
                     /**
                      * 获取Stream name.
                      * @return StreamName Stream name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置Stream name.
-                     * @param StreamName Stream name.
+                     * @param _streamName Stream name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
@@ -85,6 +91,7 @@ Note: you can query the statistics for a day in the past month, with yesterday a
                      * @return DayTime Query date (UTC+8)
 Format: yyyymmdd
 Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
+                     * 
                      */
                     std::string GetDayTime() const;
 
@@ -92,15 +99,17 @@ Note: you can query the statistics for a day in the past month, with yesterday a
                      * 设置Query date (UTC+8)
 Format: yyyymmdd
 Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
-                     * @param DayTime Query date (UTC+8)
+                     * @param _dayTime Query date (UTC+8)
 Format: yyyymmdd
 Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
+                     * 
                      */
                     void SetDayTime(const std::string& _dayTime);
 
                     /**
                      * 判断参数 DayTime 是否已赋值
                      * @return DayTime 是否已赋值
+                     * 
                      */
                     bool DayTimeHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: you can query the statistics for a day in the past month, with yesterday a
 Up to 100 pages.
                      * @return PageNum Number of pages. Default value: 1.
 Up to 100 pages.
+                     * 
                      */
                     uint64_t GetPageNum() const;
 
                     /**
                      * 设置Number of pages. Default value: 1.
 Up to 100 pages.
-                     * @param PageNum Number of pages. Default value: 1.
+                     * @param _pageNum Number of pages. Default value: 1.
 Up to 100 pages.
+                     * 
                      */
                     void SetPageNum(const uint64_t& _pageNum);
 
                     /**
                      * 判断参数 PageNum 是否已赋值
                      * @return PageNum 是否已赋值
+                     * 
                      */
                     bool PageNumHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Up to 100 pages.
 Value range: [10,1000].
                      * @return PageSize Number of entries per page. Default value: 20,
 Value range: [10,1000].
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置Number of entries per page. Default value: 20,
 Value range: [10,1000].
-                     * @param PageSize Number of entries per page. Default value: 20,
+                     * @param _pageSize Number of entries per page. Default value: 20,
 Value range: [10,1000].
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
@@ -155,6 +170,7 @@ Note: details for the last month can be queried.
                      * @return StartDayTime Start day time (Beijing time),
 In the format of `yyyymmdd`.
 Note: details for the last month can be queried.
+                     * 
                      */
                     std::string GetStartDayTime() const;
 
@@ -162,15 +178,17 @@ Note: details for the last month can be queried.
                      * 设置Start day time (Beijing time),
 In the format of `yyyymmdd`.
 Note: details for the last month can be queried.
-                     * @param StartDayTime Start day time (Beijing time),
+                     * @param _startDayTime Start day time (Beijing time),
 In the format of `yyyymmdd`.
 Note: details for the last month can be queried.
+                     * 
                      */
                     void SetStartDayTime(const std::string& _startDayTime);
 
                     /**
                      * 判断参数 StartDayTime 是否已赋值
                      * @return StartDayTime 是否已赋值
+                     * 
                      */
                     bool StartDayTimeHasBeenSet() const;
 
@@ -181,6 +199,7 @@ Note: you can query the statistics for a period in the past month, with yesterda
                      * @return EndDayTime End date (UTC+8)
 Format: yyyymmdd
 Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+                     * 
                      */
                     std::string GetEndDayTime() const;
 
@@ -188,15 +207,17 @@ Note: you can query the statistics for a period in the past month, with yesterda
                      * 设置End date (UTC+8)
 Format: yyyymmdd
 Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
-                     * @param EndDayTime End date (UTC+8)
+                     * @param _endDayTime End date (UTC+8)
 Format: yyyymmdd
 Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+                     * 
                      */
                     void SetEndDayTime(const std::string& _endDayTime);
 
                     /**
                      * 判断参数 EndDayTime 是否已赋值
                      * @return EndDayTime 是否已赋值
+                     * 
                      */
                     bool EndDayTimeHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The IDs of the content moderation templates to query. Array length limit: 50.
                      * @return Definitions The IDs of the content moderation templates to query. Array length limit: 50.
+                     * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
                      * 设置The IDs of the content moderation templates to query. Array length limit: 50.
-                     * @param Definitions The IDs of the content moderation templates to query. Array length limit: 50.
+                     * @param _definitions The IDs of the content moderation templates to query. Array length limit: 50.
+                     * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
 
                     /**
                      * 判断参数 Definitions 是否已赋值
                      * @return Definitions 是否已赋值
+                     * 
                      */
                     bool DefinitionsHasBeenSet() const;
 
                     /**
                      * 获取Paging offset. Default value: 0.
                      * @return Offset Paging offset. Default value: 0.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Paging offset. Default value: 0.
-                     * @param Offset Paging offset. Default value: 0.
+                     * @param _offset Paging offset. Default value: 0.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned entries. Default value: 10. Maximum value: 50.
                      * @return Limit Number of returned entries. Default value: 10. Maximum value: 50.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned entries. Default value: 10. Maximum value: 50.
-                     * @param Limit Number of returned entries. Default value: 10. Maximum value: 50.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 50.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -103,6 +112,7 @@ namespace TencentCloud
                      * @return Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
 * Preset
 * Custom
+                     * 
                      */
                     std::string GetType() const;
 
@@ -110,15 +120,17 @@ namespace TencentCloud
                      * 设置The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
 * Preset
 * Custom
-                     * @param Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+                     * @param _type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
 * Preset
 * Custom
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 

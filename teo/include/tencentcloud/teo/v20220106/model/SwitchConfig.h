@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Switch that controls all web security configuration: basic web protection, custom rules, and rate limiting
                      * @return WebSwitch Switch that controls all web security configuration: basic web protection, custom rules, and rate limiting
+                     * 
                      */
                     std::string GetWebSwitch() const;
 
                     /**
                      * 设置Switch that controls all web security configuration: basic web protection, custom rules, and rate limiting
-                     * @param WebSwitch Switch that controls all web security configuration: basic web protection, custom rules, and rate limiting
+                     * @param _webSwitch Switch that controls all web security configuration: basic web protection, custom rules, and rate limiting
+                     * 
                      */
                     void SetWebSwitch(const std::string& _webSwitch);
 
                     /**
                      * 判断参数 WebSwitch 是否已赋值
                      * @return WebSwitch 是否已赋值
+                     * 
                      */
                     bool WebSwitchHasBeenSet() const;
 

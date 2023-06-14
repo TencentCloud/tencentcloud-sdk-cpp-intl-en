@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Timeout period in hours. Value range: 5-24.
                      * @return Timeout Timeout period in hours. Value range: 5-24.
+                     * 
                      */
                     uint64_t GetTimeout() const;
 
                     /**
                      * 设置Timeout period in hours. Value range: 5-24.
-                     * @param Timeout Timeout period in hours. Value range: 5-24.
+                     * @param _timeout Timeout period in hours. Value range: 5-24.
+                     * 
                      */
                     void SetTimeout(const uint64_t& _timeout);
 
                     /**
                      * 判断参数 Timeout 是否已赋值
                      * @return Timeout 是否已赋值
+                     * 
                      */
                     bool TimeoutHasBeenSet() const;
 
                     /**
                      * 获取Scan type. Valid values: `0` (quick scan); `1` (scheduled scan).
                      * @return ScanType Scan type. Valid values: `0` (quick scan); `1` (scheduled scan).
+                     * 
                      */
                     uint64_t GetScanType() const;
 
                     /**
                      * 设置Scan type. Valid values: `0` (quick scan); `1` (scheduled scan).
-                     * @param ScanType Scan type. Valid values: `0` (quick scan); `1` (scheduled scan).
+                     * @param _scanType Scan type. Valid values: `0` (quick scan); `1` (scheduled scan).
+                     * 
                      */
                     void SetScanType(const uint64_t& _scanType);
 
                     /**
                      * 判断参数 ScanType 是否已赋值
                      * @return ScanType 是否已赋值
+                     * 
                      */
                     bool ScanTypeHasBeenSet() const;
 

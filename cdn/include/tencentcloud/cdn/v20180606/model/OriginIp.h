@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Intermediate IP range/intermediate IP. The IP range information is returned by default.
                      * @return Ip Intermediate IP range/intermediate IP. The IP range information is returned by default.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Intermediate IP range/intermediate IP. The IP range information is returned by default.
-                     * @param Ip Intermediate IP range/intermediate IP. The IP range information is returned by default.
+                     * @param _ip Intermediate IP range/intermediate IP. The IP range information is returned by default.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 

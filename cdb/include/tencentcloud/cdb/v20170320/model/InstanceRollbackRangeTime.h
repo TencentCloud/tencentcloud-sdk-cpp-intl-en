@@ -50,72 +50,84 @@ namespace TencentCloud
                     /**
                      * 获取Queries database error code
                      * @return Code Queries database error code
+                     * 
                      */
                     int64_t GetCode() const;
 
                     /**
                      * 设置Queries database error code
-                     * @param Code Queries database error code
+                     * @param _code Queries database error code
+                     * 
                      */
                     void SetCode(const int64_t& _code);
 
                     /**
                      * 判断参数 Code 是否已赋值
                      * @return Code 是否已赋值
+                     * 
                      */
                     bool CodeHasBeenSet() const;
 
                     /**
                      * 获取Queries database error message
                      * @return Message Queries database error message
+                     * 
                      */
                     std::string GetMessage() const;
 
                     /**
                      * 设置Queries database error message
-                     * @param Message Queries database error message
+                     * @param _message Queries database error message
+                     * 
                      */
                     void SetMessage(const std::string& _message);
 
                     /**
                      * 判断参数 Message 是否已赋值
                      * @return Message 是否已赋值
+                     * 
                      */
                     bool MessageHasBeenSet() const;
 
                     /**
                      * 获取List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
                      * @return InstanceId List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
-                     * @param InstanceId List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
+                     * @param _instanceId List of instance IDs. An instance ID is in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB Console page.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Time range available for rollback
                      * @return Times Time range available for rollback
+                     * 
                      */
                     std::vector<RollbackTimeRange> GetTimes() const;
 
                     /**
                      * 设置Time range available for rollback
-                     * @param Times Time range available for rollback
+                     * @param _times Time range available for rollback
+                     * 
                      */
                     void SetTimes(const std::vector<RollbackTimeRange>& _times);
 
                     /**
                      * 判断参数 Times 是否已赋值
                      * @return Times 是否已赋值
+                     * 
                      */
                     bool TimesHasBeenSet() const;
 

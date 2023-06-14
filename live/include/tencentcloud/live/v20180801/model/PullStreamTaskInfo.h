@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取The task ID.
                      * @return TaskId The task ID.
+                     * 
                      */
                     std::string GetTaskId() const;
 
                     /**
                      * 设置The task ID.
-                     * @param TaskId The task ID.
+                     * @param _taskId The task ID.
+                     * 
                      */
                     void SetTaskId(const std::string& _taskId);
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 
@@ -75,6 +78,7 @@ PullPicPushLive: Images
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 PullPicPushLive: Images
+                     * 
                      */
                     std::string GetSourceType() const;
 
@@ -83,16 +87,18 @@ PullPicPushLive: Images
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 PullPicPushLive: Images
-                     * @param SourceType The source type. Valid values:
+                     * @param _sourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 PullPicPushLive: Images
+                     * 
                      */
                     void SetSourceType(const std::string& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
@@ -103,6 +109,7 @@ If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
                      * @return SourceUrls The source URL(s).
 If `SourceType` is `PullLiveToLive`, there can be only one source URL.
 If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
+                     * 
                      */
                     std::vector<std::string> GetSourceUrls() const;
 
@@ -110,15 +117,17 @@ If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
                      * 设置The source URL(s).
 If `SourceType` is `PullLiveToLive`, there can be only one source URL.
 If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
-                     * @param SourceUrls The source URL(s).
+                     * @param _sourceUrls The source URL(s).
 If `SourceType` is `PullLiveToLive`, there can be only one source URL.
 If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
+                     * 
                      */
                     void SetSourceUrls(const std::vector<std::string>& _sourceUrls);
 
                     /**
                      * 判断参数 SourceUrls 是否已赋值
                      * @return SourceUrls 是否已赋值
+                     * 
                      */
                     bool SourceUrlsHasBeenSet() const;
 
@@ -127,20 +136,23 @@ If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
 The pulled stream is pushed to this domain.
                      * @return DomainName The push domain name.
 The pulled stream is pushed to this domain.
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置The push domain name.
 The pulled stream is pushed to this domain.
-                     * @param DomainName The push domain name.
+                     * @param _domainName The push domain name.
 The pulled stream is pushed to this domain.
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
@@ -149,20 +161,23 @@ The pulled stream is pushed to this domain.
 The pulled stream is pushed to this application.
                      * @return AppName The application to push to.
 The pulled stream is pushed to this application.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置The application to push to.
 The pulled stream is pushed to this application.
-                     * @param AppName The application to push to.
+                     * @param _appName The application to push to.
 The pulled stream is pushed to this application.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
@@ -171,20 +186,23 @@ The pulled stream is pushed to this application.
 The pulled stream is pushed under this name.
                      * @return StreamName The stream name.
 The pulled stream is pushed under this name.
+                     * 
                      */
                     std::string GetStreamName() const;
 
                     /**
                      * 设置The stream name.
 The pulled stream is pushed under this name.
-                     * @param StreamName The stream name.
+                     * @param _streamName The stream name.
 The pulled stream is pushed under this name.
+                     * 
                      */
                     void SetStreamName(const std::string& _streamName);
 
                     /**
                      * 判断参数 StreamName 是否已赋值
                      * @return StreamName 是否已赋值
+                     * 
                      */
                     bool StreamNameHasBeenSet() const;
 
@@ -193,20 +211,23 @@ The pulled stream is pushed under this name.
 A custom push parameter.
                      * @return PushArgs The push parameter.
 A custom push parameter.
+                     * 
                      */
                     std::string GetPushArgs() const;
 
                     /**
                      * 设置The push parameter.
 A custom push parameter.
-                     * @param PushArgs The push parameter.
+                     * @param _pushArgs The push parameter.
 A custom push parameter.
+                     * 
                      */
                     void SetPushArgs(const std::string& _pushArgs);
 
                     /**
                      * 判断参数 PushArgs 是否已赋值
                      * @return PushArgs 是否已赋值
+                     * 
                      */
                     bool PushArgsHasBeenSet() const;
 
@@ -219,6 +240,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetStartTime() const;
 
@@ -227,16 +249,18 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param StartTime The start time.
+                     * @param _startTime The start time.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -255,6 +279,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetEndTime() const;
 
@@ -266,19 +291,21 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param EndTime The end time. Notes:
+                     * @param _endTime The end time. Notes:
 1. The end time must be later than the start time.
 2. The end time and start time must be later than the current time.
 3. The end time and start time must be less than seven days apart.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -309,6 +336,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 `na-siliconvalley`: Western US
 `na-ashburn`: Eastern US
 `ap-tokyo`: Japan
+                     * 
                      */
                     std::string GetRegion() const;
 
@@ -326,7 +354,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 `na-siliconvalley`: Western US
 `na-ashburn`: Eastern US
 `ap-tokyo`: Japan
-                     * @param Region The region where the task was created.
+                     * @param _region The region where the task was created.
 `ap-beijing`: North China (Beijing)
 `ap-shanghai`: East China (Shanghai)
 `ap-guangzhou`: South China (Guangzhou)
@@ -339,12 +367,14 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 `na-siliconvalley`: Western US
 `na-ashburn`: Eastern US
 `ap-tokyo`: Japan
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -359,6 +389,7 @@ This parameter is valid only if the source is video files.
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     int64_t GetVodLoopTimes() const;
 
@@ -368,17 +399,19 @@ This parameter is valid only if the source is video files.
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only if the source is video files.
-                     * @param VodLoopTimes The number of times to loop video files.
+                     * @param _vodLoopTimes The number of times to loop video files.
 -1: Loop indefinitely
 0: Do not loop
 > 0: The number of loop times. A task will end either when the videos are looped for the specified number of times or at the specified task end time, whichever is earlier.
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     void SetVodLoopTimes(const int64_t& _vodLoopTimes);
 
                     /**
                      * 判断参数 VodLoopTimes 是否已赋值
                      * @return VodLoopTimes 是否已赋值
+                     * 
                      */
                     bool VodLoopTimesHasBeenSet() const;
 
@@ -393,6 +426,7 @@ ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Finish the current video first and then pull from the new source.
 
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     std::string GetVodRefreshType() const;
 
@@ -402,17 +436,19 @@ ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Finish the current video first and then pull from the new source.
 
 This parameter is valid only if the source is video files.
-                     * @param VodRefreshType The behavior after the source video files (`SourceUrls`) are changed.
+                     * @param _vodRefreshType The behavior after the source video files (`SourceUrls`) are changed.
 ImmediateNewSource: Play the new videos immediately
 ContinueBreakPoint: Finish the current video first and then pull from the new source.
 
 This parameter is valid only if the source is video files.
+                     * 
                      */
                     void SetVodRefreshType(const std::string& _vodRefreshType);
 
                     /**
                      * 判断参数 VodRefreshType 是否已赋值
                      * @return VodRefreshType 是否已赋值
+                     * 
                      */
                     bool VodRefreshTypeHasBeenSet() const;
 
@@ -425,6 +461,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
@@ -433,16 +470,18 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param CreateTime The task creation time.
+                     * @param _createTime The task creation time.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -455,6 +494,7 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
@@ -463,70 +503,81 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-                     * @param UpdateTime The last updated time.
+                     * @param _updateTime The last updated time.
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取The task creator.
                      * @return CreateBy The task creator.
+                     * 
                      */
                     std::string GetCreateBy() const;
 
                     /**
                      * 设置The task creator.
-                     * @param CreateBy The task creator.
+                     * @param _createBy The task creator.
+                     * 
                      */
                     void SetCreateBy(const std::string& _createBy);
 
                     /**
                      * 判断参数 CreateBy 是否已赋值
                      * @return CreateBy 是否已赋值
+                     * 
                      */
                     bool CreateByHasBeenSet() const;
 
                     /**
                      * 获取The operator of the last update.
                      * @return UpdateBy The operator of the last update.
+                     * 
                      */
                     std::string GetUpdateBy() const;
 
                     /**
                      * 设置The operator of the last update.
-                     * @param UpdateBy The operator of the last update.
+                     * @param _updateBy The operator of the last update.
+                     * 
                      */
                     void SetUpdateBy(const std::string& _updateBy);
 
                     /**
                      * 判断参数 UpdateBy 是否已赋值
                      * @return UpdateBy 是否已赋值
+                     * 
                      */
                     bool UpdateByHasBeenSet() const;
 
                     /**
                      * 获取The callback URL.
                      * @return CallbackUrl The callback URL.
+                     * 
                      */
                     std::string GetCallbackUrl() const;
 
                     /**
                      * 设置The callback URL.
-                     * @param CallbackUrl The callback URL.
+                     * @param _callbackUrl The callback URL.
+                     * 
                      */
                     void SetCallbackUrl(const std::string& _callbackUrl);
 
                     /**
                      * 判断参数 CallbackUrl 是否已赋值
                      * @return CallbackUrl 是否已赋值
+                     * 
                      */
                     bool CallbackUrlHasBeenSet() const;
 
@@ -543,6 +594,7 @@ TaskExit: Callback for ending a task
 VodSourceFileStart: Callback for starting to pull from video files
 VodSourceFileFinish: Callback for stopping pulling from video files
 ResetTaskConfig: Callback for modifying a task
+                     * 
                      */
                     std::vector<std::string> GetCallbackEvents() const;
 
@@ -553,18 +605,20 @@ TaskExit: Callback for ending a task
 VodSourceFileStart: Callback for starting to pull from video files
 VodSourceFileFinish: Callback for stopping pulling from video files
 ResetTaskConfig: Callback for modifying a task
-                     * @param CallbackEvents The events to listen for.
+                     * @param _callbackEvents The events to listen for.
 TaskStart: Callback for starting a task
 TaskExit: Callback for ending a task
 VodSourceFileStart: Callback for starting to pull from video files
 VodSourceFileFinish: Callback for stopping pulling from video files
 ResetTaskConfig: Callback for modifying a task
+                     * 
                      */
                     void SetCallbackEvents(const std::vector<std::string>& _callbackEvents);
 
                     /**
                      * 判断参数 CallbackEvents 是否已赋值
                      * @return CallbackEvents 是否已赋值
+                     * 
                      */
                     bool CallbackEventsHasBeenSet() const;
 
@@ -573,20 +627,23 @@ ResetTaskConfig: Callback for modifying a task
 The information of the last callback.
                      * @return CallbackInfo Note: This parameter is not returned currently.
 The information of the last callback.
+                     * 
                      */
                     std::string GetCallbackInfo() const;
 
                     /**
                      * 设置Note: This parameter is not returned currently.
 The information of the last callback.
-                     * @param CallbackInfo Note: This parameter is not returned currently.
+                     * @param _callbackInfo Note: This parameter is not returned currently.
 The information of the last callback.
+                     * 
                      */
                     void SetCallbackInfo(const std::string& _callbackInfo);
 
                     /**
                      * 判断参数 CallbackInfo 是否已赋值
                      * @return CallbackInfo 是否已赋值
+                     * 
                      */
                     bool CallbackInfoHasBeenSet() const;
 
@@ -595,20 +652,23 @@ The information of the last callback.
 Error message.
                      * @return ErrorInfo Note: This parameter is not returned currently.
 Error message.
+                     * 
                      */
                     std::string GetErrorInfo() const;
 
                     /**
                      * 设置Note: This parameter is not returned currently.
 Error message.
-                     * @param ErrorInfo Note: This parameter is not returned currently.
+                     * @param _errorInfo Note: This parameter is not returned currently.
 Error message.
+                     * 
                      */
                     void SetErrorInfo(const std::string& _errorInfo);
 
                     /**
                      * 判断参数 ErrorInfo 是否已赋值
                      * @return ErrorInfo 是否已赋值
+                     * 
                      */
                     bool ErrorInfoHasBeenSet() const;
 
@@ -619,6 +679,7 @@ pause: Paused
                      * @return Status The task status.
 enable: Enabled
 pause: Paused
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -626,15 +687,17 @@ pause: Paused
                      * 设置The task status.
 enable: Enabled
 pause: Paused
-                     * @param Status The task status.
+                     * @param _status The task status.
 enable: Enabled
 pause: Paused
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -645,6 +708,7 @@ The information includes the source URL, offset, and report time.
                      * @return RecentPullInfo Note: This parameter is returned only if one task is queried.
 The latest pull information.
 The information includes the source URL, offset, and report time.
+                     * 
                      */
                     RecentPullInfo GetRecentPullInfo() const;
 
@@ -652,33 +716,38 @@ The information includes the source URL, offset, and report time.
                      * 设置Note: This parameter is returned only if one task is queried.
 The latest pull information.
 The information includes the source URL, offset, and report time.
-                     * @param RecentPullInfo Note: This parameter is returned only if one task is queried.
+                     * @param _recentPullInfo Note: This parameter is returned only if one task is queried.
 The latest pull information.
 The information includes the source URL, offset, and report time.
+                     * 
                      */
                     void SetRecentPullInfo(const RecentPullInfo& _recentPullInfo);
 
                     /**
                      * 判断参数 RecentPullInfo 是否已赋值
                      * @return RecentPullInfo 是否已赋值
+                     * 
                      */
                     bool RecentPullInfoHasBeenSet() const;
 
                     /**
                      * 获取The remarks for the task.
                      * @return Comment The remarks for the task.
+                     * 
                      */
                     std::string GetComment() const;
 
                     /**
                      * 设置The remarks for the task.
-                     * @param Comment The remarks for the task.
+                     * @param _comment The remarks for the task.
+                     * 
                      */
                     void SetComment(const std::string& _comment);
 
                     /**
                      * 判断参数 Comment 是否已赋值
                      * @return Comment 是否已赋值
+                     * 
                      */
                     bool CommentHasBeenSet() const;
 
@@ -691,6 +760,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackupSourceType() const;
 
@@ -699,16 +769,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BackupSourceType The backup source type. Valid values:
+                     * @param _backupSourceType The backup source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackupSourceType(const std::string& _backupSourceType);
 
                     /**
                      * 判断参数 BackupSourceType 是否已赋值
                      * @return BackupSourceType 是否已赋值
+                     * 
                      */
                     bool BackupSourceTypeHasBeenSet() const;
 
@@ -717,20 +789,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupSourceUrl The URL of the backup source.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetBackupSourceUrl() const;
 
                     /**
                      * 设置The URL of the backup source.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BackupSourceUrl The URL of the backup source.
+                     * @param _backupSourceUrl The URL of the backup source.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBackupSourceUrl(const std::string& _backupSourceUrl);
 
                     /**
                      * 判断参数 BackupSourceUrl 是否已赋值
                      * @return BackupSourceUrl 是否已赋值
+                     * 
                      */
                     bool BackupSourceUrlHasBeenSet() const;
 
@@ -739,20 +814,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WatermarkList The information of watermarks to add.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PullPushWatermarkInfo> GetWatermarkList() const;
 
                     /**
                      * 设置The information of watermarks to add.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param WatermarkList The information of watermarks to add.
+                     * @param _watermarkList The information of watermarks to add.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWatermarkList(const std::vector<PullPushWatermarkInfo>& _watermarkList);
 
                     /**
                      * 判断参数 WatermarkList 是否已赋值
                      * @return WatermarkList 是否已赋值
+                     * 
                      */
                     bool WatermarkListHasBeenSet() const;
 
@@ -765,6 +843,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: Do not use local mode
 1: Use local mode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetVodLocalMode() const;
 
@@ -773,16 +852,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: Do not use local mode
 1: Use local mode
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+                     * @param _vodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
 0: Do not use local mode
 1: Use local mode
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVodLocalMode(const int64_t& _vodLocalMode);
 
                     /**
                      * 判断参数 VodLocalMode 是否已赋值
                      * @return VodLocalMode 是否已赋值
+                     * 
                      */
                     bool VodLocalModeHasBeenSet() const;
 

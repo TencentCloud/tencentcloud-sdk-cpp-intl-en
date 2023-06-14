@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Backup name
                      * @return FileName Backup name
+                     * 
                      */
                     std::string GetFileName() const;
 
                     /**
                      * 设置Backup name
-                     * @param FileName Backup name
+                     * @param _fileName Backup name
+                     * 
                      */
                     void SetFileName(const std::string& _fileName);
 
                     /**
                      * 判断参数 FileName 是否已赋值
                      * @return FileName 是否已赋值
+                     * 
                      */
                     bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Backup size
                      * @return Size Backup size
+                     * 
                      */
                     int64_t GetSize() const;
 
                     /**
                      * 设置Backup size
-                     * @param Size Backup size
+                     * @param _size Backup size
+                     * 
                      */
                     void SetSize(const int64_t& _size);
 
                     /**
                      * 判断参数 Size 是否已赋值
                      * @return Size 是否已赋值
+                     * 
                      */
                     bool SizeHasBeenSet() const;
 

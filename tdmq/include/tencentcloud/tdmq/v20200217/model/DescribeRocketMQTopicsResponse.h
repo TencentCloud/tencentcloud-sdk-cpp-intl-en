@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of query records.
                      * @return TotalCount The total number of query records.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of topic information
                      * @return Topics List of topic information
+                     * 
                      */
                     std::vector<RocketMQTopic> GetTopics() const;
 
                     /**
                      * 判断参数 Topics 是否已赋值
                      * @return Topics 是否已赋值
+                     * 
                      */
                     bool TopicsHasBeenSet() const;
 

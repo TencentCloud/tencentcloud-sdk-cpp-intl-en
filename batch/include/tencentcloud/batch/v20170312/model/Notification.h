@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取CMQ topic name which should be valid and associated with a subscription
                      * @return TopicName CMQ topic name which should be valid and associated with a subscription
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置CMQ topic name which should be valid and associated with a subscription
-                     * @param TopicName CMQ topic name which should be valid and associated with a subscription
+                     * @param _topicName CMQ topic name which should be valid and associated with a subscription
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Event configuration
                      * @return EventConfigs Event configuration
+                     * 
                      */
                     std::vector<EventConfig> GetEventConfigs() const;
 
                     /**
                      * 设置Event configuration
-                     * @param EventConfigs Event configuration
+                     * @param _eventConfigs Event configuration
+                     * 
                      */
                     void SetEventConfigs(const std::vector<EventConfig>& _eventConfigs);
 
                     /**
                      * 判断参数 EventConfigs 是否已赋值
                      * @return EventConfigs 是否已赋值
+                     * 
                      */
                     bool EventConfigsHasBeenSet() const;
 

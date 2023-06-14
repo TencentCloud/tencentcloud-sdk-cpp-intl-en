@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
                      * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 设置Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
-                     * @param SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * @param _snapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+                     * 
                      */
                     void SetSnapshotId(const std::string& _snapshotId);
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
                      * @return DiskId ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-                     * @param DiskId ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+                     * @param _diskId ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to shut down a CVM automatically before a rollback
                      * @return AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+                     * 
                      */
                     bool GetAutoStopInstance() const;
 
                     /**
                      * 设置Specifies whether to shut down a CVM automatically before a rollback
-                     * @param AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+                     * @param _autoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+                     * 
                      */
                     void SetAutoStopInstance(const bool& _autoStopInstance);
 
                     /**
                      * 判断参数 AutoStopInstance 是否已赋值
                      * @return AutoStopInstance 是否已赋值
+                     * 
                      */
                     bool AutoStopInstanceHasBeenSet() const;
 
                     /**
                      * 获取Specifies whether to start up a CVM automatically after a rollback
                      * @return AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+                     * 
                      */
                     bool GetAutoStartInstance() const;
 
                     /**
                      * 设置Specifies whether to start up a CVM automatically after a rollback
-                     * @param AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+                     * @param _autoStartInstance Specifies whether to start up a CVM automatically after a rollback
+                     * 
                      */
                     void SetAutoStartInstance(const bool& _autoStartInstance);
 
                     /**
                      * 判断参数 AutoStartInstance 是否已赋值
                      * @return AutoStartInstance 是否已赋值
+                     * 
                      */
                     bool AutoStartInstanceHasBeenSet() const;
 

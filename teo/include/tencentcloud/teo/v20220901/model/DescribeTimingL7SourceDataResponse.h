@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of query results.
                      * @return TotalCount Total number of query results.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TimingDataRecords List of time series traffic data.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<TimingDataRecord> GetTimingDataRecords() const;
 
                     /**
                      * 判断参数 TimingDataRecords 是否已赋值
                      * @return TimingDataRecords 是否已赋值
+                     * 
                      */
                     bool TimingDataRecordsHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取File system ID
                      * @return FileSystemId File system ID
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 设置File system ID
-                     * @param FileSystemId File system ID
+                     * @param _fileSystemId File system ID
+                     * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
                      * 获取Multiple restoration tasks (up to 10)
                      * @return RestoreTasks Multiple restoration tasks (up to 10)
+                     * 
                      */
                     std::vector<RestoreTask> GetRestoreTasks() const;
 
                     /**
                      * 设置Multiple restoration tasks (up to 10)
-                     * @param RestoreTasks Multiple restoration tasks (up to 10)
+                     * @param _restoreTasks Multiple restoration tasks (up to 10)
+                     * 
                      */
                     void SetRestoreTasks(const std::vector<RestoreTask>& _restoreTasks);
 
                     /**
                      * 判断参数 RestoreTasks 是否已赋值
                      * @return RestoreTasks 是否已赋值
+                     * 
                      */
                     bool RestoreTasksHasBeenSet() const;
 

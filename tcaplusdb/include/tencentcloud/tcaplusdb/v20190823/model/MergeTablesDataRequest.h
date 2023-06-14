@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Tables to be merged
                      * @return SelectedTables Tables to be merged
+                     * 
                      */
                     std::vector<MergeTablesInfo> GetSelectedTables() const;
 
                     /**
                      * 设置Tables to be merged
-                     * @param SelectedTables Tables to be merged
+                     * @param _selectedTables Tables to be merged
+                     * 
                      */
                     void SetSelectedTables(const std::vector<MergeTablesInfo>& _selectedTables);
 
                     /**
                      * 判断参数 SelectedTables 是否已赋值
                      * @return SelectedTables 是否已赋值
+                     * 
                      */
                     bool SelectedTablesHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `true` (only compare), `false` (compare and merge)
                      * @return IsOnlyCompare Valid values: `true` (only compare), `false` (compare and merge)
+                     * 
                      */
                     bool GetIsOnlyCompare() const;
 
                     /**
                      * 设置Valid values: `true` (only compare), `false` (compare and merge)
-                     * @param IsOnlyCompare Valid values: `true` (only compare), `false` (compare and merge)
+                     * @param _isOnlyCompare Valid values: `true` (only compare), `false` (compare and merge)
+                     * 
                      */
                     void SetIsOnlyCompare(const bool& _isOnlyCompare);
 
                     /**
                      * 判断参数 IsOnlyCompare 是否已赋值
                      * @return IsOnlyCompare 是否已赋值
+                     * 
                      */
                     bool IsOnlyCompareHasBeenSet() const;
 

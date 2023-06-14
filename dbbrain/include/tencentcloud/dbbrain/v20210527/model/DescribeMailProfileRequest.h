@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Configuration type. Valid values: `dbScan_mail_configuration` (email configuration of the database inspection report), `scheduler_mail_configuration` (email configuration of the scheduled task report).
                      * @return ProfileType Configuration type. Valid values: `dbScan_mail_configuration` (email configuration of the database inspection report), `scheduler_mail_configuration` (email configuration of the scheduled task report).
+                     * 
                      */
                     std::string GetProfileType() const;
 
                     /**
                      * 设置Configuration type. Valid values: `dbScan_mail_configuration` (email configuration of the database inspection report), `scheduler_mail_configuration` (email configuration of the scheduled task report).
-                     * @param ProfileType Configuration type. Valid values: `dbScan_mail_configuration` (email configuration of the database inspection report), `scheduler_mail_configuration` (email configuration of the scheduled task report).
+                     * @param _profileType Configuration type. Valid values: `dbScan_mail_configuration` (email configuration of the database inspection report), `scheduler_mail_configuration` (email configuration of the scheduled task report).
+                     * 
                      */
                     void SetProfileType(const std::string& _profileType);
 
                     /**
                      * 判断参数 ProfileType 是否已赋值
                      * @return ProfileType 是否已赋值
+                     * 
                      */
                     bool ProfileTypeHasBeenSet() const;
 
                     /**
                      * 获取Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
                      * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
-                     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * @param _product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset.
                      * @return Offset Pagination offset.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset.
-                     * @param Offset Pagination offset.
+                     * @param _offset Pagination offset.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of results per page in paginated queries. Maximum value: `50`.
                      * @return Limit Number of results per page in paginated queries. Maximum value: `50`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of results per page in paginated queries. Maximum value: `50`.
-                     * @param Limit Number of results per page in paginated queries. Maximum value: `50`.
+                     * @param _limit Number of results per page in paginated queries. Maximum value: `50`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Query by email configuration name. The name of the scheduled task email configuration should be in the format of "scheduler_"+{instanceId}.
                      * @return ProfileName Query by email configuration name. The name of the scheduled task email configuration should be in the format of "scheduler_"+{instanceId}.
+                     * 
                      */
                     std::string GetProfileName() const;
 
                     /**
                      * 设置Query by email configuration name. The name of the scheduled task email configuration should be in the format of "scheduler_"+{instanceId}.
-                     * @param ProfileName Query by email configuration name. The name of the scheduled task email configuration should be in the format of "scheduler_"+{instanceId}.
+                     * @param _profileName Query by email configuration name. The name of the scheduled task email configuration should be in the format of "scheduler_"+{instanceId}.
+                     * 
                      */
                     void SetProfileName(const std::string& _profileName);
 
                     /**
                      * 判断参数 ProfileName 是否已赋值
                      * @return ProfileName 是否已赋值
+                     * 
                      */
                     bool ProfileNameHasBeenSet() const;
 

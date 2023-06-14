@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Weekly report start time.
                      * @return BeginDate Weekly report start time.
+                     * 
                      */
                     std::string GetBeginDate() const;
 
                     /**
                      * 设置Weekly report start time.
-                     * @param BeginDate Weekly report start time.
+                     * @param _beginDate Weekly report start time.
+                     * 
                      */
                     void SetBeginDate(const std::string& _beginDate);
 
                     /**
                      * 判断参数 BeginDate 是否已赋值
                      * @return BeginDate 是否已赋值
+                     * 
                      */
                     bool BeginDateHasBeenSet() const;
 
                     /**
                      * 获取Weekly report end time.
                      * @return EndDate Weekly report end time.
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置Weekly report end time.
-                     * @param EndDate Weekly report end time.
+                     * @param _endDate Weekly report end time.
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 

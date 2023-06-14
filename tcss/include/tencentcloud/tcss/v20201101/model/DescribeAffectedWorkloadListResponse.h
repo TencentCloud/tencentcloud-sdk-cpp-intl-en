@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of affected workloads
                      * @return TotalCount Number of affected workloads
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of affected workloads
                      * @return AffectedWorkloadList List of affected workloads
+                     * 
                      */
                     std::vector<AffectedWorkloadItem> GetAffectedWorkloadList() const;
 
                     /**
                      * 判断参数 AffectedWorkloadList 是否已赋值
                      * @return AffectedWorkloadList 是否已赋值
+                     * 
                      */
                     bool AffectedWorkloadListHasBeenSet() const;
 

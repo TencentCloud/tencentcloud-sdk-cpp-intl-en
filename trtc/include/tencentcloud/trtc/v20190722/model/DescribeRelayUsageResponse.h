@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The usage type. Each element of this parameter corresponds to an element of `UsageValue` in the order they are listed.
                      * @return UsageKey The usage type. Each element of this parameter corresponds to an element of `UsageValue` in the order they are listed.
+                     * 
                      */
                     std::vector<std::string> GetUsageKey() const;
 
                     /**
                      * 判断参数 UsageKey 是否已赋值
                      * @return UsageKey 是否已赋值
+                     * 
                      */
                     bool UsageKeyHasBeenSet() const;
 
                     /**
                      * 获取The usage data in each time unit.
                      * @return UsageList The usage data in each time unit.
+                     * 
                      */
                     std::vector<TrtcUsage> GetUsageList() const;
 
                     /**
                      * 判断参数 UsageList 是否已赋值
                      * @return UsageList 是否已赋值
+                     * 
                      */
                     bool UsageListHasBeenSet() const;
 

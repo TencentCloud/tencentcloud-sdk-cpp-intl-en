@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value is found.
                      * @return ResourceRegion The resource's region.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     std::string GetResourceRegion() const;
 
                     /**
                      * 设置The resource's region.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param ResourceRegion The resource's region.
+                     * @param _resourceRegion The resource's region.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
 
                     /**
                      * 判断参数 ResourceRegion 是否已赋值
                      * @return ResourceRegion 是否已赋值
+                     * 
                      */
                     bool ResourceRegionHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return ServiceType Service type.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Service type.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param ServiceType Service type.
+                     * @param _serviceType Service type.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetServiceType(const std::string& _serviceType);
 
                     /**
                      * 判断参数 ServiceType 是否已赋值
                      * @return ServiceType 是否已赋值
+                     * 
                      */
                     bool ServiceTypeHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return ResourcePrefix Resource prefix.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     std::string GetResourcePrefix() const;
 
                     /**
                      * 设置Resource prefix.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param ResourcePrefix Resource prefix.
+                     * @param _resourcePrefix Resource prefix.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetResourcePrefix(const std::string& _resourcePrefix);
 
                     /**
                      * 判断参数 ResourcePrefix 是否已赋值
                      * @return ResourcePrefix 是否已赋值
+                     * 
                      */
                     bool ResourcePrefixHasBeenSet() const;
 
@@ -118,20 +127,23 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return ResourceId Unique resource ID.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Unique resource ID.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param ResourceId Unique resource ID.
+                     * @param _resourceId Unique resource ID.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
@@ -140,20 +152,23 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return Tags Resource tag.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Resource tag.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param Tags Resource tag.
+                     * @param _tags Resource tag.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

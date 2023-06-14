@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Switch of video splitting recognition task. Valid values:
 <li>ON: enables intelligent video splitting recognition task;</li>
 <li>OFF: disables intelligent video splitting recognition task.</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Switch of video splitting recognition task. Valid values:
 <li>ON: enables intelligent video splitting recognition task;</li>
 <li>OFF: disables intelligent video splitting recognition task.</li>
-                     * @param Switch Switch of video splitting recognition task. Valid values:
+                     * @param _switch Switch of video splitting recognition task. Valid values:
 <li>ON: enables intelligent video splitting recognition task;</li>
 <li>OFF: disables intelligent video splitting recognition task.</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

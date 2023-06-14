@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable database inspection. Valid values: Yes/No.
                      * @return DailyInspection Whether to enable database inspection. Valid values: Yes/No.
+                     * 
                      */
                     std::string GetDailyInspection() const;
 
                     /**
                      * 设置Whether to enable database inspection. Valid values: Yes/No.
-                     * @param DailyInspection Whether to enable database inspection. Valid values: Yes/No.
+                     * @param _dailyInspection Whether to enable database inspection. Valid values: Yes/No.
+                     * 
                      */
                     void SetDailyInspection(const std::string& _dailyInspection);
 
                     /**
                      * 判断参数 DailyInspection 是否已赋值
                      * @return DailyInspection 是否已赋值
+                     * 
                      */
                     bool DailyInspectionHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable instance overview. Valid values: Yes/No.
                      * @return OverviewDisplay Whether to enable instance overview. Valid values: Yes/No.
+                     * 
                      */
                     std::string GetOverviewDisplay() const;
 
                     /**
                      * 设置Whether to enable instance overview. Valid values: Yes/No.
-                     * @param OverviewDisplay Whether to enable instance overview. Valid values: Yes/No.
+                     * @param _overviewDisplay Whether to enable instance overview. Valid values: Yes/No.
+                     * 
                      */
                     void SetOverviewDisplay(const std::string& _overviewDisplay);
 
                     /**
                      * 判断参数 OverviewDisplay 是否已赋值
                      * @return OverviewDisplay 是否已赋值
+                     * 
                      */
                     bool OverviewDisplayHasBeenSet() const;
 

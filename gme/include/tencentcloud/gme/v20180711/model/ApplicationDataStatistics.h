@@ -50,234 +50,273 @@ namespace TencentCloud
                     /**
                      * 获取Application ID
                      * @return BizId Application ID
+                     * 
                      */
                     uint64_t GetBizId() const;
 
                     /**
                      * 设置Application ID
-                     * @param BizId Application ID
+                     * @param _bizId Application ID
+                     * 
                      */
                     void SetBizId(const uint64_t& _bizId);
 
                     /**
                      * 判断参数 BizId 是否已赋值
                      * @return BizId 是否已赋值
+                     * 
                      */
                     bool BizIdHasBeenSet() const;
 
                     /**
                      * 获取Number of DAU metrics
                      * @return DauDataNum Number of DAU metrics
+                     * 
                      */
                     uint64_t GetDauDataNum() const;
 
                     /**
                      * 设置Number of DAU metrics
-                     * @param DauDataNum Number of DAU metrics
+                     * @param _dauDataNum Number of DAU metrics
+                     * 
                      */
                     void SetDauDataNum(const uint64_t& _dauDataNum);
 
                     /**
                      * 判断参数 DauDataNum 是否已赋值
                      * @return DauDataNum 是否已赋值
+                     * 
                      */
                     bool DauDataNumHasBeenSet() const;
 
                     /**
                      * 获取DAUs in the Chinese mainland
                      * @return DauDataMainland DAUs in the Chinese mainland
+                     * 
                      */
                     std::vector<StatisticsItem> GetDauDataMainland() const;
 
                     /**
                      * 设置DAUs in the Chinese mainland
-                     * @param DauDataMainland DAUs in the Chinese mainland
+                     * @param _dauDataMainland DAUs in the Chinese mainland
+                     * 
                      */
                     void SetDauDataMainland(const std::vector<StatisticsItem>& _dauDataMainland);
 
                     /**
                      * 判断参数 DauDataMainland 是否已赋值
                      * @return DauDataMainland 是否已赋值
+                     * 
                      */
                     bool DauDataMainlandHasBeenSet() const;
 
                     /**
                      * 获取DAUs outside the Chinese mainland
                      * @return DauDataOversea DAUs outside the Chinese mainland
+                     * 
                      */
                     std::vector<StatisticsItem> GetDauDataOversea() const;
 
                     /**
                      * 设置DAUs outside the Chinese mainland
-                     * @param DauDataOversea DAUs outside the Chinese mainland
+                     * @param _dauDataOversea DAUs outside the Chinese mainland
+                     * 
                      */
                     void SetDauDataOversea(const std::vector<StatisticsItem>& _dauDataOversea);
 
                     /**
                      * 判断参数 DauDataOversea 是否已赋值
                      * @return DauDataOversea 是否已赋值
+                     * 
                      */
                     bool DauDataOverseaHasBeenSet() const;
 
                     /**
                      * 获取Total DAUs
                      * @return DauDataSum Total DAUs
+                     * 
                      */
                     std::vector<StatisticsItem> GetDauDataSum() const;
 
                     /**
                      * 设置Total DAUs
-                     * @param DauDataSum Total DAUs
+                     * @param _dauDataSum Total DAUs
+                     * 
                      */
                     void SetDauDataSum(const std::vector<StatisticsItem>& _dauDataSum);
 
                     /**
                      * 判断参数 DauDataSum 是否已赋值
                      * @return DauDataSum 是否已赋值
+                     * 
                      */
                     bool DauDataSumHasBeenSet() const;
 
                     /**
                      * 获取Number of Voice Chat metrics
                      * @return DurationDataNum Number of Voice Chat metrics
+                     * 
                      */
                     uint64_t GetDurationDataNum() const;
 
                     /**
                      * 设置Number of Voice Chat metrics
-                     * @param DurationDataNum Number of Voice Chat metrics
+                     * @param _durationDataNum Number of Voice Chat metrics
+                     * 
                      */
                     void SetDurationDataNum(const uint64_t& _durationDataNum);
 
                     /**
                      * 判断参数 DurationDataNum 是否已赋值
                      * @return DurationDataNum 是否已赋值
+                     * 
                      */
                     bool DurationDataNumHasBeenSet() const;
 
                     /**
                      * 获取Duration of Voice Chat in the Chinese mainland (in minutes)
                      * @return DurationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
+                     * 
                      */
                     std::vector<StatisticsItem> GetDurationDataMainland() const;
 
                     /**
                      * 设置Duration of Voice Chat in the Chinese mainland (in minutes)
-                     * @param DurationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
+                     * @param _durationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
+                     * 
                      */
                     void SetDurationDataMainland(const std::vector<StatisticsItem>& _durationDataMainland);
 
                     /**
                      * 判断参数 DurationDataMainland 是否已赋值
                      * @return DurationDataMainland 是否已赋值
+                     * 
                      */
                     bool DurationDataMainlandHasBeenSet() const;
 
                     /**
                      * 获取Duration of Voice Chat outside the Chinese mainland (in minutes)
                      * @return DurationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
+                     * 
                      */
                     std::vector<StatisticsItem> GetDurationDataOversea() const;
 
                     /**
                      * 设置Duration of Voice Chat outside the Chinese mainland (in minutes)
-                     * @param DurationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
+                     * @param _durationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
+                     * 
                      */
                     void SetDurationDataOversea(const std::vector<StatisticsItem>& _durationDataOversea);
 
                     /**
                      * 判断参数 DurationDataOversea 是否已赋值
                      * @return DurationDataOversea 是否已赋值
+                     * 
                      */
                     bool DurationDataOverseaHasBeenSet() const;
 
                     /**
                      * 获取Total duration of Voice Chat (in minutes)
                      * @return DurationDataSum Total duration of Voice Chat (in minutes)
+                     * 
                      */
                     std::vector<StatisticsItem> GetDurationDataSum() const;
 
                     /**
                      * 设置Total duration of Voice Chat (in minutes)
-                     * @param DurationDataSum Total duration of Voice Chat (in minutes)
+                     * @param _durationDataSum Total duration of Voice Chat (in minutes)
+                     * 
                      */
                     void SetDurationDataSum(const std::vector<StatisticsItem>& _durationDataSum);
 
                     /**
                      * 判断参数 DurationDataSum 是否已赋值
                      * @return DurationDataSum 是否已赋值
+                     * 
                      */
                     bool DurationDataSumHasBeenSet() const;
 
                     /**
                      * 获取Number of PCU metrics
                      * @return PcuDataNum Number of PCU metrics
+                     * 
                      */
                     uint64_t GetPcuDataNum() const;
 
                     /**
                      * 设置Number of PCU metrics
-                     * @param PcuDataNum Number of PCU metrics
+                     * @param _pcuDataNum Number of PCU metrics
+                     * 
                      */
                     void SetPcuDataNum(const uint64_t& _pcuDataNum);
 
                     /**
                      * 判断参数 PcuDataNum 是否已赋值
                      * @return PcuDataNum 是否已赋值
+                     * 
                      */
                     bool PcuDataNumHasBeenSet() const;
 
                     /**
                      * 获取PCUs in the Chinese mainland
                      * @return PcuDataMainland PCUs in the Chinese mainland
+                     * 
                      */
                     std::vector<StatisticsItem> GetPcuDataMainland() const;
 
                     /**
                      * 设置PCUs in the Chinese mainland
-                     * @param PcuDataMainland PCUs in the Chinese mainland
+                     * @param _pcuDataMainland PCUs in the Chinese mainland
+                     * 
                      */
                     void SetPcuDataMainland(const std::vector<StatisticsItem>& _pcuDataMainland);
 
                     /**
                      * 判断参数 PcuDataMainland 是否已赋值
                      * @return PcuDataMainland 是否已赋值
+                     * 
                      */
                     bool PcuDataMainlandHasBeenSet() const;
 
                     /**
                      * 获取PCUs outside the Chinese mainland
                      * @return PcuDataOversea PCUs outside the Chinese mainland
+                     * 
                      */
                     std::vector<StatisticsItem> GetPcuDataOversea() const;
 
                     /**
                      * 设置PCUs outside the Chinese mainland
-                     * @param PcuDataOversea PCUs outside the Chinese mainland
+                     * @param _pcuDataOversea PCUs outside the Chinese mainland
+                     * 
                      */
                     void SetPcuDataOversea(const std::vector<StatisticsItem>& _pcuDataOversea);
 
                     /**
                      * 判断参数 PcuDataOversea 是否已赋值
                      * @return PcuDataOversea 是否已赋值
+                     * 
                      */
                     bool PcuDataOverseaHasBeenSet() const;
 
                     /**
                      * 获取Total PCUs
                      * @return PcuDataSum Total PCUs
+                     * 
                      */
                     std::vector<StatisticsItem> GetPcuDataSum() const;
 
                     /**
                      * 设置Total PCUs
-                     * @param PcuDataSum Total PCUs
+                     * @param _pcuDataSum Total PCUs
+                     * 
                      */
                     void SetPcuDataSum(const std::vector<StatisticsItem>& _pcuDataSum);
 
                     /**
                      * 判断参数 PcuDataSum 是否已赋值
                      * @return PcuDataSum 是否已赋值
+                     * 
                      */
                     bool PcuDataSumHasBeenSet() const;
 

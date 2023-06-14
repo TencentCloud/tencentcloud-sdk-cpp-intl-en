@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
                      * @return Begin Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
+                     * 
                      */
                     std::string GetBegin() const;
 
                     /**
                      * 设置Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
-                     * @param Begin Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
+                     * @param _begin Start time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-10-29 01:06:04
+                     * 
                      */
                     void SetBegin(const std::string& _begin);
 
                     /**
                      * 判断参数 Begin 是否已赋值
                      * @return Begin 是否已赋值
+                     * 
                      */
                     bool BeginHasBeenSet() const;
 
                     /**
                      * 获取End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
                      * @return End End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
+                     * 
                      */
                     std::string GetEnd() const;
 
                     /**
                      * 设置End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
-                     * @param End End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
+                     * @param _end End time available for rollback in the format of yyyy-MM-dd HH:mm:ss, such as 2016-11-02 11:44:47
+                     * 
                      */
                     void SetEnd(const std::string& _end);
 
                     /**
                      * 判断参数 End 是否已赋值
                      * @return End 是否已赋值
+                     * 
                      */
                     bool EndHasBeenSet() const;
 

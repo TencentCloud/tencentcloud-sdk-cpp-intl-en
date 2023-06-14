@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Start date.
                      * @return StartDate Start date.
+                     * 
                      */
                     std::string GetStartDate() const;
 
                     /**
                      * 设置Start date.
-                     * @param StartDate Start date.
+                     * @param _startDate Start date.
+                     * 
                      */
                     void SetStartDate(const std::string& _startDate);
 
                     /**
                      * 判断参数 StartDate 是否已赋值
                      * @return StartDate 是否已赋值
+                     * 
                      */
                     bool StartDateHasBeenSet() const;
 
                     /**
                      * 获取End date.
                      * @return EndDate End date.
+                     * 
                      */
                     std::string GetEndDate() const;
 
                     /**
                      * 设置End date.
-                     * @param EndDate End date.
+                     * @param _endDate End date.
+                     * 
                      */
                     void SetEndDate(const std::string& _endDate);
 
                     /**
                      * 判断参数 EndDate 是否已赋值
                      * @return EndDate 是否已赋值
+                     * 
                      */
                     bool EndDateHasBeenSet() const;
 
                     /**
                      * 获取Sender domain.
                      * @return Domain Sender domain.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Sender domain.
-                     * @param Domain Sender domain.
+                     * @param _domain Sender domain.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Recipient address type, for example, gmail.com.
                      * @return ReceivingMailboxType Recipient address type, for example, gmail.com.
+                     * 
                      */
                     std::string GetReceivingMailboxType() const;
 
                     /**
                      * 设置Recipient address type, for example, gmail.com.
-                     * @param ReceivingMailboxType Recipient address type, for example, gmail.com.
+                     * @param _receivingMailboxType Recipient address type, for example, gmail.com.
+                     * 
                      */
                     void SetReceivingMailboxType(const std::string& _receivingMailboxType);
 
                     /**
                      * 判断参数 ReceivingMailboxType 是否已赋值
                      * @return ReceivingMailboxType 是否已赋值
+                     * 
                      */
                     bool ReceivingMailboxTypeHasBeenSet() const;
 

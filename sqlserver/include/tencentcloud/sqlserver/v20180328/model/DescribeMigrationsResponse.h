@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of query results
                      * @return TotalCount Total number of query results
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of query results
                      * @return MigrateTaskSet List of query results
+                     * 
                      */
                     std::vector<MigrateTask> GetMigrateTaskSet() const;
 
                     /**
                      * 判断参数 MigrateTaskSet 是否已赋值
                      * @return MigrateTaskSet 是否已赋值
+                     * 
                      */
                     bool MigrateTaskSetHasBeenSet() const;
 

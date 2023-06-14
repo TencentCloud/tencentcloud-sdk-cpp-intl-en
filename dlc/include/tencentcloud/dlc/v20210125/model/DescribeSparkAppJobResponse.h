@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Job Spark job details
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SparkJobInfo GetJob() const;
 
                     /**
                      * 判断参数 Job 是否已赋值
                      * @return Job 是否已赋值
+                     * 
                      */
                     bool JobHasBeenSet() const;
 
                     /**
                      * 获取Whether the queried Spark job exists
                      * @return IsExists Whether the queried Spark job exists
+                     * 
                      */
                     bool GetIsExists() const;
 
                     /**
                      * 判断参数 IsExists 是否已赋值
                      * @return IsExists 是否已赋值
+                     * 
                      */
                     bool IsExistsHasBeenSet() const;
 

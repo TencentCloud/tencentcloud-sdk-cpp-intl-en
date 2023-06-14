@@ -53,6 +53,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return MaxAgeTime Specifies the max age of the cache (in seconds). The maximum value is 365 days.
 Note: the value `0` means not to cache.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetMaxAgeTime() const;
 
@@ -60,15 +61,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Specifies the max age of the cache (in seconds). The maximum value is 365 days.
 Note: the value `0` means not to cache.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MaxAgeTime Specifies the max age of the cache (in seconds). The maximum value is 365 days.
+                     * @param _maxAgeTime Specifies the max age of the cache (in seconds). The maximum value is 365 days.
 Note: the value `0` means not to cache.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMaxAgeTime(const int64_t& _maxAgeTime);
 
                     /**
                      * 判断参数 MaxAgeTime 是否已赋值
                      * @return MaxAgeTime 是否已赋值
+                     * 
                      */
                     bool MaxAgeTimeHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FollowOrigin Specifies whether to follow the max cache age of the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetFollowOrigin() const;
 
                     /**
                      * 设置Specifies whether to follow the max cache age of the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FollowOrigin Specifies whether to follow the max cache age of the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+                     * @param _followOrigin Specifies whether to follow the max cache age of the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
 
                     /**
                      * 判断参数 FollowOrigin 是否已赋值
                      * @return FollowOrigin 是否已赋值
+                     * 
                      */
                     bool FollowOriginHasBeenSet() const;
 

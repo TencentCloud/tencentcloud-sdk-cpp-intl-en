@@ -47,20 +47,23 @@ namespace TencentCloud
 This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
                      * @return MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
 This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
+                     * 
                      */
                     std::string GetMixStreamSessionId() const;
 
                     /**
                      * 设置ID of stream mix session (from applying for stream mix to canceling stream mix).
 This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
-                     * @param MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+                     * @param _mixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
 This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
+                     * 
                      */
                     void SetMixStreamSessionId(const std::string& _mixStreamSessionId);
 
                     /**
                      * 判断参数 MixStreamSessionId 是否已赋值
                      * @return MixStreamSessionId 是否已赋值
+                     * 
                      */
                     bool MixStreamSessionIdHasBeenSet() const;
 

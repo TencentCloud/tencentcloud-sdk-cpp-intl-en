@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Health report URL.
                      * @return ReportUrl Health report URL.
+                     * 
                      */
                     std::string GetReportUrl() const;
 
                     /**
                      * 判断参数 ReportUrl 是否已赋值
                      * @return ReportUrl 是否已赋值
+                     * 
                      */
                     bool ReportUrlHasBeenSet() const;
 
                     /**
                      * 获取Expiration timestamp of the health report URL (in seconds).
                      * @return ExpireTime Expiration timestamp of the health report URL (in seconds).
+                     * 
                      */
                     int64_t GetExpireTime() const;
 
                     /**
                      * 判断参数 ExpireTime 是否已赋值
                      * @return ExpireTime 是否已赋值
+                     * 
                      */
                     bool ExpireTimeHasBeenSet() const;
 

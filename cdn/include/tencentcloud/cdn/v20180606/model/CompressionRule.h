@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Compress true: must be set as true, enables compression
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetCompress() const;
 
                     /**
                      * 设置true: must be set as true, enables compression
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Compress true: must be set as true, enables compression
+                     * @param _compress true: must be set as true, enables compression
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompress(const bool& _compress);
 
                     /**
                      * 判断参数 Compress 是否已赋值
                      * @return Compress 是否已赋值
+                     * 
                      */
                     bool CompressHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MinLength The minimum file size to trigger compression (in bytes)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetMinLength() const;
 
                     /**
                      * 设置The minimum file size to trigger compression (in bytes)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MinLength The minimum file size to trigger compression (in bytes)
+                     * @param _minLength The minimum file size to trigger compression (in bytes)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMinLength(const int64_t& _minLength);
 
                     /**
                      * 判断参数 MinLength 是否已赋值
                      * @return MinLength 是否已赋值
+                     * 
                      */
                     bool MinLengthHasBeenSet() const;
 
@@ -97,6 +103,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return MaxLength The maximum file size to trigger compression (in bytes).
 The maximum value is 30 MB.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetMaxLength() const;
 
@@ -104,15 +111,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置The maximum file size to trigger compression (in bytes).
 The maximum value is 30 MB.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param MaxLength The maximum file size to trigger compression (in bytes).
+                     * @param _maxLength The maximum file size to trigger compression (in bytes).
 The maximum value is 30 MB.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMaxLength(const int64_t& _maxLength);
 
                     /**
                      * 判断参数 MaxLength 是否已赋值
                      * @return MaxLength 是否已赋值
+                     * 
                      */
                     bool MaxLengthHasBeenSet() const;
 
@@ -125,6 +134,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `gzip`: Gzip compression
 `brotli`: Brotli compression
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetAlgorithms() const;
 
@@ -133,16 +143,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `gzip`: Gzip compression
 `brotli`: Brotli compression
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Algorithms File compression algorithm
+                     * @param _algorithms File compression algorithm
 `gzip`: Gzip compression
 `brotli`: Brotli compression
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAlgorithms(const std::vector<std::string>& _algorithms);
 
                     /**
                      * 判断参数 Algorithms 是否已赋值
                      * @return Algorithms 是否已赋值
+                     * 
                      */
                     bool AlgorithmsHasBeenSet() const;
 
@@ -153,6 +165,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return FileExtensions Compress based on file suffix.
 File suffixes such as jpg and txt are supported.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
@@ -160,15 +173,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Compress based on file suffix.
 File suffixes such as jpg and txt are supported.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param FileExtensions Compress based on file suffix.
+                     * @param _fileExtensions Compress based on file suffix.
 File suffixes such as jpg and txt are supported.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
 
                     /**
                      * 判断参数 FileExtensions 是否已赋值
                      * @return FileExtensions 是否已赋值
+                     * 
                      */
                     bool FileExtensionsHasBeenSet() const;
 
@@ -189,6 +204,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetRuleType() const;
 
@@ -201,7 +217,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RuleType Rule types:
+                     * @param _ruleType Rule types:
 `all`: Apply to all files.
 `file`: Apply to files with the specified suffixes.
 `directory`: Apply to specified paths.
@@ -209,12 +225,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRuleType(const std::string& _ruleType);
 
                     /**
                      * 判断参数 RuleType 是否已赋值
                      * @return RuleType 是否已赋值
+                     * 
                      */
                     bool RuleTypeHasBeenSet() const;
 
@@ -233,6 +251,7 @@ For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -244,19 +263,21 @@ For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param RulePaths Content for each `CacheType`:
+                     * @param _rulePaths Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
                     /**
                      * 判断参数 RulePaths 是否已赋值
                      * @return RulePaths 是否已赋值
+                     * 
                      */
                     bool RulePathsHasBeenSet() const;
 

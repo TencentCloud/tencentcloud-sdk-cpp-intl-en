@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取SAML metadata document, which must be Base64 encoded.
                      * @return SAMLMetadataDocument SAML metadata document, which must be Base64 encoded.
+                     * 
                      */
                     std::string GetSAMLMetadataDocument() const;
 
                     /**
                      * 设置SAML metadata document, which must be Base64 encoded.
-                     * @param SAMLMetadataDocument SAML metadata document, which must be Base64 encoded.
+                     * @param _sAMLMetadataDocument SAML metadata document, which must be Base64 encoded.
+                     * 
                      */
                     void SetSAMLMetadataDocument(const std::string& _sAMLMetadataDocument);
 
                     /**
                      * 判断参数 SAMLMetadataDocument 是否已赋值
                      * @return SAMLMetadataDocument 是否已赋值
+                     * 
                      */
                     bool SAMLMetadataDocumentHasBeenSet() const;
 

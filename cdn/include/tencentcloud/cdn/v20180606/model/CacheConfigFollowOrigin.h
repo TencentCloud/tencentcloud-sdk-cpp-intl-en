@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Follow origin server switch configuration
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Follow origin server switch configuration
 `on`: Enable
 `off`: Disable
-                     * @param Switch Follow origin server switch configuration
+                     * @param _switch Follow origin server switch configuration
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return HeuristicCache Heuristic cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     HeuristicCache GetHeuristicCache() const;
 
                     /**
                      * 设置Heuristic cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param HeuristicCache Heuristic cache configuration
+                     * @param _heuristicCache Heuristic cache configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetHeuristicCache(const HeuristicCache& _heuristicCache);
 
                     /**
                      * 判断参数 HeuristicCache 是否已赋值
                      * @return HeuristicCache 是否已赋值
+                     * 
                      */
                     bool HeuristicCacheHasBeenSet() const;
 

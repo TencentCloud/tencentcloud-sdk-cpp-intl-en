@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Returned code. 0: normal, other values: error
                      * @return ReturnCode Returned code. 0: normal, other values: error
+                     * 
                      */
                     std::string GetReturnCode() const;
 
                     /**
                      * 设置Returned code. 0: normal, other values: error
-                     * @param ReturnCode Returned code. 0: normal, other values: error
+                     * @param _returnCode Returned code. 0: normal, other values: error
+                     * 
                      */
                     void SetReturnCode(const std::string& _returnCode);
 
                     /**
                      * 判断参数 ReturnCode 是否已赋值
                      * @return ReturnCode 是否已赋值
+                     * 
                      */
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
                      * 获取Success message
                      * @return ReturnMessage Success message
+                     * 
                      */
                     std::string GetReturnMessage() const;
 
                     /**
                      * 设置Success message
-                     * @param ReturnMessage Success message
+                     * @param _returnMessage Success message
+                     * 
                      */
                     void SetReturnMessage(const std::string& _returnMessage);
 
                     /**
                      * 判断参数 ReturnMessage 是否已赋值
                      * @return ReturnMessage 是否已赋值
+                     * 
                      */
                     bool ReturnMessageHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Data Data returned by an operation, which may contain `flowId`, etc.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OperateResponseData GetData() const;
 
                     /**
                      * 设置Data returned by an operation, which may contain `flowId`, etc.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Data Data returned by an operation, which may contain `flowId`, etc.
+                     * @param _data Data returned by an operation, which may contain `flowId`, etc.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetData(const OperateResponseData& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
                      * @return Data 是否已赋值
+                     * 
                      */
                     bool DataHasBeenSet() const;
 

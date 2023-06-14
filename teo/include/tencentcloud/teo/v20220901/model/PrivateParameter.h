@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Name The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+                     * 
                      */
                     std::string GetName() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
-                     * @param Name The parameter name. Values
+                     * @param _name The parameter name. Values
 <li>`AccessKeyId`: Access Key ID</li>
 <li>`SecretAccessKey`: Secret Access Key</li>
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The parameter value.
                      * @return Value The parameter value.
+                     * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置The parameter value.
-                     * @param Value The parameter value.
+                     * @param _value The parameter value.
+                     * 
                      */
                     void SetValue(const std::string& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 

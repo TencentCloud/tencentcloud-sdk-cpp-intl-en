@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Region Instance region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Instance region
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Region Instance region
+                     * @param _region Instance region
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AccessType Instances network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetAccessType() const;
 
                     /**
                      * 设置Instances network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AccessType Instances network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
+                     * @param _accessType Instances network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAccessType(const std::string& _accessType);
 
                     /**
                      * 判断参数 AccessType 是否已赋值
                      * @return AccessType 是否已赋值
+                     * 
                      */
                     bool AccessTypeHasBeenSet() const;
 
@@ -97,20 +103,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatabaseType() const;
 
                     /**
                      * 设置Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
+                     * @param _databaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabaseType(const std::string& _databaseType);
 
                     /**
                      * 判断参数 DatabaseType 是否已赋值
                      * @return DatabaseType 是否已赋值
+                     * 
                      */
                     bool DatabaseTypeHasBeenSet() const;
 
@@ -119,20 +128,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetNodeType() const;
 
                     /**
                      * 设置Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
+                     * @param _nodeType Node type. Valid values: empty or `simple` (general node); `cluster` (cluster node).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNodeType(const std::string& _nodeType);
 
                     /**
                      * 判断参数 NodeType 是否已赋值
                      * @return NodeType 是否已赋值
+                     * 
                      */
                     bool NodeTypeHasBeenSet() const;
 
@@ -141,20 +153,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Info Database information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DBInfo> GetInfo() const;
 
                     /**
                      * 设置Database information
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Info Database information
+                     * @param _info Database information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetInfo(const std::vector<DBInfo>& _info);
 
                     /**
                      * 判断参数 Info 是否已赋值
                      * @return Info 是否已赋值
+                     * 
                      */
                     bool InfoHasBeenSet() const;
 
@@ -163,20 +178,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Supplier Instance service provider, such as "aliyun" and "others".
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSupplier() const;
 
                     /**
                      * 设置Instance service provider, such as "aliyun" and "others".
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Supplier Instance service provider, such as "aliyun" and "others".
+                     * @param _supplier Instance service provider, such as "aliyun" and "others".
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSupplier(const std::string& _supplier);
 
                     /**
                      * 判断参数 Supplier 是否已赋值
                      * @return Supplier 是否已赋值
+                     * 
                      */
                     bool SupplierHasBeenSet() const;
 
@@ -187,6 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ExtraAttr For MongoDB, you can define the following parameters: 	['AuthDatabase':'admin', 
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<KeyValuePairOption> GetExtraAttr() const;
 
@@ -194,15 +213,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置For MongoDB, you can define the following parameters: 	['AuthDatabase':'admin', 
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ExtraAttr For MongoDB, you can define the following parameters: 	['AuthDatabase':'admin', 
+                     * @param _extraAttr For MongoDB, you can define the following parameters: 	['AuthDatabase':'admin', 
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetExtraAttr(const std::vector<KeyValuePairOption>& _extraAttr);
 
                     /**
                      * 判断参数 ExtraAttr 是否已赋值
                      * @return ExtraAttr 是否已赋值
+                     * 
                      */
                     bool ExtraAttrHasBeenSet() const;
 
@@ -211,20 +232,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDatabaseNetEnv() const;
 
                     /**
                      * 设置Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+                     * @param _databaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDatabaseNetEnv(const std::string& _databaseNetEnv);
 
                     /**
                      * 判断参数 DatabaseNetEnv 是否已赋值
                      * @return DatabaseNetEnv 是否已赋值
+                     * 
                      */
                     bool DatabaseNetEnvHasBeenSet() const;
 

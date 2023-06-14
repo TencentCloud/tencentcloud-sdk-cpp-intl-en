@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Public network download address (valid for six hours). This field will be disused soon.
                      * @return DownloadUrl Public network download address (valid for six hours). This field will be disused soon.
+                     * 
                      */
                     std::vector<std::string> GetDownloadUrl() const;
 
                     /**
                      * 判断参数 DownloadUrl 是否已赋值
                      * @return DownloadUrl 是否已赋值
+                     * 
                      */
                     bool DownloadUrlHasBeenSet() const;
 
                     /**
                      * 获取Private network download address (valid for six hours). This field will be disused soon.
                      * @return InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
+                     * 
                      */
                     std::vector<std::string> GetInnerDownloadUrl() const;
 
                     /**
                      * 判断参数 InnerDownloadUrl 是否已赋值
                      * @return InnerDownloadUrl 是否已赋值
+                     * 
                      */
                     bool InnerDownloadUrlHasBeenSet() const;
 
@@ -73,12 +77,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Filenames Filename. This field will be disused soon.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFilenames() const;
 
                     /**
                      * 判断参数 Filenames 是否已赋值
                      * @return Filenames 是否已赋值
+                     * 
                      */
                     bool FilenamesHasBeenSet() const;
 
@@ -87,12 +93,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupInfos List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BackupDownloadInfo> GetBackupInfos() const;
 
                     /**
                      * 判断参数 BackupInfos 是否已赋值
                      * @return BackupInfos 是否已赋值
+                     * 
                      */
                     bool BackupInfosHasBeenSet() const;
 

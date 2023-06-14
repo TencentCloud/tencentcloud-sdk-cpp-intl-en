@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Maximum number of pulled entries. Maximum value: 100.
                      * @return Limit Maximum number of pulled entries. Maximum value: 100.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Maximum number of pulled entries. Maximum value: 100.
-                     * @param Limit Maximum number of pulled entries. Maximum value: 100.
+                     * @param _limit Maximum number of pulled entries. Maximum value: 100.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
                      * @return SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * 
                      */
                     std::string GetSmsSdkAppId() const;
 
                     /**
                      * 设置The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
-                     * @param SmsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * @param _smsSdkAppId The SMS `SdkAppId` generated after an application is added in the [SMS console](https://console.cloud.tencent.com/smsv2/app-manage), such as 1400006666.
+                     * 
                      */
                     void SetSmsSdkAppId(const std::string& _smsSdkAppId);
 
                     /**
                      * 判断参数 SmsSdkAppId 是否已赋值
                      * @return SmsSdkAppId 是否已赋值
+                     * 
                      */
                     bool SmsSdkAppIdHasBeenSet() const;
 

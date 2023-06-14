@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取AZ
                      * @return Zone AZ
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ
-                     * @param Zone AZ
+                     * @param _zone AZ
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 
                     /**
                      * 获取AZ ID
                      * @return ZoneId AZ ID
+                     * 
                      */
                     int64_t GetZoneId() const;
 
                     /**
                      * 设置AZ ID
-                     * @param ZoneId AZ ID
+                     * @param _zoneId AZ ID
+                     * 
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取AZ status. Valid values: `0`(Unavailable), `1` (Available).
                      * @return ZoneState AZ status. Valid values: `0`(Unavailable), `1` (Available).
+                     * 
                      */
                     int64_t GetZoneState() const;
 
                     /**
                      * 设置AZ status. Valid values: `0`(Unavailable), `1` (Available).
-                     * @param ZoneState AZ status. Valid values: `0`(Unavailable), `1` (Available).
+                     * @param _zoneState AZ status. Valid values: `0`(Unavailable), `1` (Available).
+                     * 
                      */
                     void SetZoneState(const int64_t& _zoneState);
 
                     /**
                      * 判断参数 ZoneState 是否已赋值
                      * @return ZoneState 是否已赋值
+                     * 
                      */
                     bool ZoneStateHasBeenSet() const;
 
                     /**
                      * 获取Region ID
                      * @return RegionId Region ID
+                     * 
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
-                     * @param RegionId Region ID
+                     * @param _regionId Region ID
+                     * 
                      */
                     void SetRegionId(const int64_t& _regionId);
 
                     /**
                      * 判断参数 RegionId 是否已赋值
                      * @return RegionId 是否已赋值
+                     * 
                      */
                     bool RegionIdHasBeenSet() const;
 
                     /**
                      * 获取AZ name
                      * @return ZoneName AZ name
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置AZ name
-                     * @param ZoneName AZ name
+                     * @param _zoneName AZ name
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 

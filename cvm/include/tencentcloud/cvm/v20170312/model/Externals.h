@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value is found.
                      * @return ReleaseAddress Release address
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     bool GetReleaseAddress() const;
 
                     /**
                      * 设置Release address
 Note: This field may return null, indicating that no valid value is found.
-                     * @param ReleaseAddress Release address
+                     * @param _releaseAddress Release address
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetReleaseAddress(const bool& _releaseAddress);
 
                     /**
                      * 判断参数 ReleaseAddress 是否已赋值
                      * @return ReleaseAddress 是否已赋值
+                     * 
                      */
                     bool ReleaseAddressHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value was found.
                      * @return UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetUnsupportNetworks() const;
 
                     /**
                      * 设置Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
 Note: This field may return null, indicating that no valid value was found.
-                     * @param UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+                     * @param _unsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetUnsupportNetworks(const std::vector<std::string>& _unsupportNetworks);
 
                     /**
                      * 判断参数 UnsupportNetworks 是否已赋值
                      * @return UnsupportNetworks 是否已赋值
+                     * 
                      */
                     bool UnsupportNetworksHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return StorageBlockAttr Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     StorageBlock GetStorageBlockAttr() const;
 
                     /**
                      * 设置Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
-                     * @param StorageBlockAttr Attributes of local HDD storage
+                     * @param _storageBlockAttr Attributes of local HDD storage
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetStorageBlockAttr(const StorageBlock& _storageBlockAttr);
 
                     /**
                      * 判断参数 StorageBlockAttr 是否已赋值
                      * @return StorageBlockAttr 是否已赋值
+                     * 
                      */
                     bool StorageBlockAttrHasBeenSet() const;
 

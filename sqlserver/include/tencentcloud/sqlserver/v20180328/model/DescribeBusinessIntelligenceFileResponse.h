@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Total number of file deployment tasks
                      * @return TotalCount Total number of file deployment tasks
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取File deployment task set
                      * @return BackupMigrationSet File deployment task set
+                     * 
                      */
                     std::vector<BusinessIntelligenceFile> GetBackupMigrationSet() const;
 
                     /**
                      * 判断参数 BackupMigrationSet 是否已赋值
                      * @return BackupMigrationSet 是否已赋值
+                     * 
                      */
                     bool BackupMigrationSetHasBeenSet() const;
 

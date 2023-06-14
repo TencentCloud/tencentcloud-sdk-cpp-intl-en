@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Keyword
                      * @return Keyword Keyword
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Keyword
-                     * @param Keyword Keyword
+                     * @param _keyword Keyword
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

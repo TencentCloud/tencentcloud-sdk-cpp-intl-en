@@ -52,92 +52,107 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginDetail Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     OriginDetail GetOriginDetail() const;
 
                     /**
                      * 设置Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginDetail Details of the origin.
+                     * @param _originDetail Details of the origin.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginDetail(const OriginDetail& _originDetail);
 
                     /**
                      * 判断参数 OriginDetail 是否已赋值
                      * @return OriginDetail 是否已赋值
+                     * 
                      */
                     bool OriginDetailHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the accelerated domain name.
                      * @return CreatedOn Creation time of the accelerated domain name.
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置Creation time of the accelerated domain name.
-                     * @param CreatedOn Creation time of the accelerated domain name.
+                     * @param _createdOn Creation time of the accelerated domain name.
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
                     /**
                      * 获取Accelerated domain name
                      * @return DomainName Accelerated domain name
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Accelerated domain name
-                     * @param DomainName Accelerated domain name
+                     * @param _domainName Accelerated domain name
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Modification time of the accelerated domain name.
                      * @return ModifiedOn Modification time of the accelerated domain name.
+                     * 
                      */
                     std::string GetModifiedOn() const;
 
                     /**
                      * 设置Modification time of the accelerated domain name.
-                     * @param ModifiedOn Modification time of the accelerated domain name.
+                     * @param _modifiedOn Modification time of the accelerated domain name.
+                     * 
                      */
                     void SetModifiedOn(const std::string& _modifiedOn);
 
                     /**
                      * 判断参数 ModifiedOn 是否已赋值
                      * @return ModifiedOn 是否已赋值
+                     * 
                      */
                     bool ModifiedOnHasBeenSet() const;
 
                     /**
                      * 获取ID of the site.
                      * @return ZoneId ID of the site.
+                     * 
                      */
                     std::string GetZoneId() const;
 
                     /**
                      * 设置ID of the site.
-                     * @param ZoneId ID of the site.
+                     * @param _zoneId ID of the site.
+                     * 
                      */
                     void SetZoneId(const std::string& _zoneId);
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
@@ -154,6 +169,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`offline`: Disabled</li>
 <li>`forbidden`: Blocked</li>
 <li>`init`: Pending activation</li>
+                     * 
                      */
                     std::string GetDomainStatus() const;
 
@@ -164,36 +180,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`offline`: Disabled</li>
 <li>`forbidden`: Blocked</li>
 <li>`init`: Pending activation</li>
-                     * @param DomainStatus Status of the accelerated domain name. Values:
+                     * @param _domainStatus Status of the accelerated domain name. Values:
 <li>`online`: Activated</li>
 <li>`process`: Being deployed</li>
 <li>`offline`: Disabled</li>
 <li>`forbidden`: Blocked</li>
 <li>`init`: Pending activation</li>
+                     * 
                      */
                     void SetDomainStatus(const std::string& _domainStatus);
 
                     /**
                      * 判断参数 DomainStatus 是否已赋值
                      * @return DomainStatus 是否已赋值
+                     * 
                      */
                     bool DomainStatusHasBeenSet() const;
 
                     /**
                      * 获取The CNAME address.
                      * @return Cname The CNAME address.
+                     * 
                      */
                     std::string GetCname() const;
 
                     /**
                      * 设置The CNAME address.
-                     * @param Cname The CNAME address.
+                     * @param _cname The CNAME address.
+                     * 
                      */
                     void SetCname(const std::string& _cname);
 
                     /**
                      * 判断参数 Cname 是否已赋值
                      * @return Cname 是否已赋值
+                     * 
                      */
                     bool CnameHasBeenSet() const;
 
@@ -202,20 +223,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIdentificationStatus() const;
 
                     /**
                      * 设置Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+                     * @param _identificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIdentificationStatus(const std::string& _identificationStatus);
 
                     /**
                      * 判断参数 IdentificationStatus 是否已赋值
                      * @return IdentificationStatus 是否已赋值
+                     * 
                      */
                     bool IdentificationStatusHasBeenSet() const;
 

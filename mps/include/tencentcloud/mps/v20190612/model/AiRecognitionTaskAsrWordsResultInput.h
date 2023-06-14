@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Speech keyword recognition template ID.
                      * @return Definition Speech keyword recognition template ID.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置Speech keyword recognition template ID.
-                     * @param Definition Speech keyword recognition template ID.
+                     * @param _definition Speech keyword recognition template ID.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

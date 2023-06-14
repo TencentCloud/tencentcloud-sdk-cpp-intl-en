@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Module ID
                      * @return ModuleId Module ID
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID
-                     * @param ModuleId Module ID
+                     * @param _moduleId Module ID
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 
                     /**
                      * 获取Default outbound bandwidth cap
                      * @return DefaultBandwidth Default outbound bandwidth cap
+                     * 
                      */
                     int64_t GetDefaultBandwidth() const;
 
                     /**
                      * 设置Default outbound bandwidth cap
-                     * @param DefaultBandwidth Default outbound bandwidth cap
+                     * @param _defaultBandwidth Default outbound bandwidth cap
+                     * 
                      */
                     void SetDefaultBandwidth(const int64_t& _defaultBandwidth);
 
                     /**
                      * 判断参数 DefaultBandwidth 是否已赋值
                      * @return DefaultBandwidth 是否已赋值
+                     * 
                      */
                     bool DefaultBandwidthHasBeenSet() const;
 
                     /**
                      * 获取Default inbound bandwidth cap
                      * @return DefaultBandwidthIn Default inbound bandwidth cap
+                     * 
                      */
                     int64_t GetDefaultBandwidthIn() const;
 
                     /**
                      * 设置Default inbound bandwidth cap
-                     * @param DefaultBandwidthIn Default inbound bandwidth cap
+                     * @param _defaultBandwidthIn Default inbound bandwidth cap
+                     * 
                      */
                     void SetDefaultBandwidthIn(const int64_t& _defaultBandwidthIn);
 
                     /**
                      * 判断参数 DefaultBandwidthIn 是否已赋值
                      * @return DefaultBandwidthIn 是否已赋值
+                     * 
                      */
                     bool DefaultBandwidthInHasBeenSet() const;
 

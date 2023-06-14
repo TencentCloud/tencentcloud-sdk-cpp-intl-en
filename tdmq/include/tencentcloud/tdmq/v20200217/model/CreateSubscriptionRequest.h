@@ -45,144 +45,168 @@ namespace TencentCloud
                     /**
                      * 获取Environment (namespace) name.
                      * @return EnvironmentId Environment (namespace) name.
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment (namespace) name.
-                     * @param EnvironmentId Environment (namespace) name.
+                     * @param _environmentId Environment (namespace) name.
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Topic name.
                      * @return TopicName Topic name.
+                     * 
                      */
                     std::string GetTopicName() const;
 
                     /**
                      * 设置Topic name.
-                     * @param TopicName Topic name.
+                     * @param _topicName Topic name.
+                     * 
                      */
                     void SetTopicName(const std::string& _topicName);
 
                     /**
                      * 判断参数 TopicName 是否已赋值
                      * @return TopicName 是否已赋值
+                     * 
                      */
                     bool TopicNameHasBeenSet() const;
 
                     /**
                      * 获取Subscriber name, which can contain up to 128 characters.
                      * @return SubscriptionName Subscriber name, which can contain up to 128 characters.
+                     * 
                      */
                     std::string GetSubscriptionName() const;
 
                     /**
                      * 设置Subscriber name, which can contain up to 128 characters.
-                     * @param SubscriptionName Subscriber name, which can contain up to 128 characters.
+                     * @param _subscriptionName Subscriber name, which can contain up to 128 characters.
+                     * 
                      */
                     void SetSubscriptionName(const std::string& _subscriptionName);
 
                     /**
                      * 判断参数 SubscriptionName 是否已赋值
                      * @return SubscriptionName 是否已赋值
+                     * 
                      */
                     bool SubscriptionNameHasBeenSet() const;
 
                     /**
                      * 获取Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
                      * @return IsIdempotent Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
+                     * 
                      */
                     bool GetIsIdempotent() const;
 
                     /**
                      * 设置Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
-                     * @param IsIdempotent Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
+                     * @param _isIdempotent Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
+                     * 
                      */
                     void SetIsIdempotent(const bool& _isIdempotent);
 
                     /**
                      * 判断参数 IsIdempotent 是否已赋值
                      * @return IsIdempotent 是否已赋值
+                     * 
                      */
                     bool IsIdempotentHasBeenSet() const;
 
                     /**
                      * 获取Remarks (up to 128 characters).
                      * @return Remark Remarks (up to 128 characters).
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks (up to 128 characters).
-                     * @param Remark Remarks (up to 128 characters).
+                     * @param _remark Remarks (up to 128 characters).
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 
                     /**
                      * 获取Pulsar cluster ID
                      * @return ClusterId Pulsar cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Pulsar cluster ID
-                     * @param ClusterId Pulsar cluster ID
+                     * @param _clusterId Pulsar cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
                      * @return AutoCreatePolicyTopic Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
+                     * 
                      */
                     bool GetAutoCreatePolicyTopic() const;
 
                     /**
                      * 设置Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
-                     * @param AutoCreatePolicyTopic Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
+                     * @param _autoCreatePolicyTopic Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
+                     * 
                      */
                     void SetAutoCreatePolicyTopic(const bool& _autoCreatePolicyTopic);
 
                     /**
                      * 判断参数 AutoCreatePolicyTopic 是否已赋值
                      * @return AutoCreatePolicyTopic 是否已赋值
+                     * 
                      */
                     bool AutoCreatePolicyTopicHasBeenSet() const;
 
                     /**
                      * 获取Naming convention for dead letter and retry letter topics. `LEGACY` indicates to use the legacy naming convention, and `COMMUNITY` indicates to use the naming convention in the Pulsar community.
                      * @return PostFixPattern Naming convention for dead letter and retry letter topics. `LEGACY` indicates to use the legacy naming convention, and `COMMUNITY` indicates to use the naming convention in the Pulsar community.
+                     * 
                      */
                     std::string GetPostFixPattern() const;
 
                     /**
                      * 设置Naming convention for dead letter and retry letter topics. `LEGACY` indicates to use the legacy naming convention, and `COMMUNITY` indicates to use the naming convention in the Pulsar community.
-                     * @param PostFixPattern Naming convention for dead letter and retry letter topics. `LEGACY` indicates to use the legacy naming convention, and `COMMUNITY` indicates to use the naming convention in the Pulsar community.
+                     * @param _postFixPattern Naming convention for dead letter and retry letter topics. `LEGACY` indicates to use the legacy naming convention, and `COMMUNITY` indicates to use the naming convention in the Pulsar community.
+                     * 
                      */
                     void SetPostFixPattern(const std::string& _postFixPattern);
 
                     /**
                      * 判断参数 PostFixPattern 是否已赋值
                      * @return PostFixPattern 是否已赋值
+                     * 
                      */
                     bool PostFixPatternHasBeenSet() const;
 

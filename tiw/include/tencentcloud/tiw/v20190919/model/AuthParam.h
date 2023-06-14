@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取SdkAppId of the whiteboard application.
                      * @return SdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     int64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the whiteboard application.
-                     * @param SdkAppId SdkAppId of the whiteboard application.
+                     * @param _sdkAppId SdkAppId of the whiteboard application.
+                     * 
                      */
                     void SetSdkAppId(const int64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
                      * 获取User ID.
                      * @return UserId User ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID.
-                     * @param UserId User ID.
+                     * @param _userId User ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取Signature corresponding to the user ID.
                      * @return UserSig Signature corresponding to the user ID.
+                     * 
                      */
                     std::string GetUserSig() const;
 
                     /**
                      * 设置Signature corresponding to the user ID.
-                     * @param UserSig Signature corresponding to the user ID.
+                     * @param _userSig Signature corresponding to the user ID.
+                     * 
                      */
                     void SetUserSig(const std::string& _userSig);
 
                     /**
                      * 判断参数 UserSig 是否已赋值
                      * @return UserSig 是否已赋值
+                     * 
                      */
                     bool UserSigHasBeenSet() const;
 

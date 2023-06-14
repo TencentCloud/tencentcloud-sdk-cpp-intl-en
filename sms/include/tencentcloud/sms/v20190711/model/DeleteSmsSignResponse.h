@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Signature deletion response.
                      * @return DeleteSignStatus Signature deletion response.
+                     * 
                      */
                     DeleteSignStatus GetDeleteSignStatus() const;
 
                     /**
                      * 判断参数 DeleteSignStatus 是否已赋值
                      * @return DeleteSignStatus 是否已赋值
+                     * 
                      */
                     bool DeleteSignStatusHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+                     * @param _method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SampleRate Sampling rate. Value range: 0-100%.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSampleRate() const;
 
                     /**
                      * 设置Sampling rate. Value range: 0-100%.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SampleRate Sampling rate. Value range: 0-100%.
+                     * @param _sampleRate Sampling rate. Value range: 0-100%.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSampleRate(const int64_t& _sampleRate);
 
                     /**
                      * 判断参数 SampleRate 是否已赋值
                      * @return SampleRate 是否已赋值
+                     * 
                      */
                     bool SampleRateHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ThreadCount The number of threads, which defaults to 1. Value range: 1-5.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetThreadCount() const;
 
                     /**
                      * 设置The number of threads, which defaults to 1. Value range: 1-5.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ThreadCount The number of threads, which defaults to 1. Value range: 1-5.
+                     * @param _threadCount The number of threads, which defaults to 1. Value range: 1-5.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetThreadCount(const int64_t& _threadCount);
 
                     /**
                      * 判断参数 ThreadCount 是否已赋值
                      * @return ThreadCount 是否已赋值
+                     * 
                      */
                     bool ThreadCountHasBeenSet() const;
 

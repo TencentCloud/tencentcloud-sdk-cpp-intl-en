@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Signature name.
                      * @return SignName Signature name.
+                     * 
                      */
                     std::string GetSignName() const;
 
                     /**
                      * 设置Signature name.
-                     * @param SignName Signature name.
+                     * @param _signName Signature name.
+                     * 
                      */
                     void SetSignName(const std::string& _signName);
 
                     /**
                      * 判断参数 SignName 是否已赋值
                      * @return SignName 是否已赋值
+                     * 
                      */
                     bool SignNameHasBeenSet() const;
 
@@ -77,6 +80,7 @@ Note: the identity document type must be selected according to the correspondenc
 4: trademark (7).
 5: governmental/public institution or others (2, 3).
 Note: the identity document type must be selected according to the correspondence; otherwise, the review will fail.
+                     * 
                      */
                     uint64_t GetSignType() const;
 
@@ -89,7 +93,7 @@ Note: the identity document type must be selected according to the correspondenc
 4: trademark (7).
 5: governmental/public institution or others (2, 3).
 Note: the identity document type must be selected according to the correspondence; otherwise, the review will fail.
-                     * @param SignType Signature type. Each of these types is followed by their `DocumentType` (identity document type) option:
+                     * @param _signType Signature type. Each of these types is followed by their `DocumentType` (identity document type) option:
 0: company (0, 1, 2, 3).
 1: app (0, 1, 2, 3, 4).
 2: website (0, 1, 2, 3, 5).
@@ -97,12 +101,14 @@ Note: the identity document type must be selected according to the correspondenc
 4: trademark (7).
 5: governmental/public institution or others (2, 3).
 Note: the identity document type must be selected according to the correspondence; otherwise, the review will fail.
+                     * 
                      */
                     void SetSignType(const uint64_t& _signType);
 
                     /**
                      * 判断参数 SignType 是否已赋值
                      * @return SignType 是否已赋值
+                     * 
                      */
                     bool SignTypeHasBeenSet() const;
 
@@ -125,6 +131,7 @@ Note: the identity document type must be selected according to the correspondenc
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
+                     * 
                      */
                     uint64_t GetDocumentType() const;
 
@@ -138,7 +145,7 @@ Note: the identity document type must be selected according to the correspondenc
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
-                     * @param DocumentType Identity document type:
+                     * @param _documentType Identity document type:
 0: 3-in-1 license.
 1: business license.
 2: organization code certificate.
@@ -147,12 +154,14 @@ Note: the identity document type must be selected according to the correspondenc
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
+                     * 
                      */
                     void SetDocumentType(const uint64_t& _documentType);
 
                     /**
                      * 判断参数 DocumentType 是否已赋值
                      * @return DocumentType 是否已赋值
+                     * 
                      */
                     bool DocumentTypeHasBeenSet() const;
 
@@ -163,6 +172,7 @@ Note: the identity document type must be selected according to the correspondenc
                      * @return International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     uint64_t GetInternational() const;
 
@@ -170,15 +180,17 @@ Note: the identity document type must be selected according to the correspondenc
                      * 设置Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
-                     * @param International Whether it is Global SMS:
+                     * @param _international Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+                     * 
                      */
                     void SetInternational(const uint64_t& _international);
 
                     /**
                      * 判断参数 International 是否已赋值
                      * @return International 是否已赋值
+                     * 
                      */
                     bool InternationalHasBeenSet() const;
 
@@ -189,6 +201,7 @@ Note: the identity document type must be selected according to the correspondenc
                      * @return UsedMethod Signature use:
 0: for self-use.
 1: for others.
+                     * 
                      */
                     uint64_t GetUsedMethod() const;
 
@@ -196,33 +209,38 @@ Note: the identity document type must be selected according to the correspondenc
                      * 设置Signature use:
 0: for self-use.
 1: for others.
-                     * @param UsedMethod Signature use:
+                     * @param _usedMethod Signature use:
 0: for self-use.
 1: for others.
+                     * 
                      */
                     void SetUsedMethod(const uint64_t& _usedMethod);
 
                     /**
                      * 判断参数 UsedMethod 是否已赋值
                      * @return UsedMethod 是否已赋值
+                     * 
                      */
                     bool UsedMethodHasBeenSet() const;
 
                     /**
                      * 获取You should Base64-encode the image of the identity document corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
                      * @return ProofImage You should Base64-encode the image of the identity document corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+                     * 
                      */
                     std::string GetProofImage() const;
 
                     /**
                      * 设置You should Base64-encode the image of the identity document corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
-                     * @param ProofImage You should Base64-encode the image of the identity document corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+                     * @param _proofImage You should Base64-encode the image of the identity document corresponding to the signature first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
+                     * 
                      */
                     void SetProofImage(const std::string& _proofImage);
 
                     /**
                      * 判断参数 ProofImage 是否已赋值
                      * @return ProofImage 是否已赋值
+                     * 
                      */
                     bool ProofImageHasBeenSet() const;
 
@@ -233,6 +251,7 @@ Note: this field will take effect only when `UsedMethod` is 1 (for others).
                      * @return CommissionImage Authorization letter, which should be submitted if `UsedMethod` is for others.
 You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
 Note: this field will take effect only when `UsedMethod` is 1 (for others).
+                     * 
                      */
                     std::string GetCommissionImage() const;
 
@@ -240,33 +259,38 @@ Note: this field will take effect only when `UsedMethod` is 1 (for others).
                      * 设置Authorization letter, which should be submitted if `UsedMethod` is for others.
 You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
 Note: this field will take effect only when `UsedMethod` is 1 (for others).
-                     * @param CommissionImage Authorization letter, which should be submitted if `UsedMethod` is for others.
+                     * @param _commissionImage Authorization letter, which should be submitted if `UsedMethod` is for others.
 You should Base64-encode the image first, remove the prefix `data:image/jpeg;base64,` from the resulted string, and then use it as the value of this parameter.
 Note: this field will take effect only when `UsedMethod` is 1 (for others).
+                     * 
                      */
                     void SetCommissionImage(const std::string& _commissionImage);
 
                     /**
                      * 判断参数 CommissionImage 是否已赋值
                      * @return CommissionImage 是否已赋值
+                     * 
                      */
                     bool CommissionImageHasBeenSet() const;
 
                     /**
                      * 获取Signature application remarks.
                      * @return Remark Signature application remarks.
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Signature application remarks.
-                     * @param Remark Signature application remarks.
+                     * @param _remark Signature application remarks.
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

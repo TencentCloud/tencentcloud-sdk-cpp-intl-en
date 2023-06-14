@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Project ID/domain name ID.
                      * @return ResourceId Project ID/domain name ID.
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置Project ID/domain name ID.
-                     * @param ResourceId Project ID/domain name ID.
+                     * @param _resourceId Project ID/domain name ID.
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Project name/domain name.
                      * @return Resource Project name/domain name.
+                     * 
                      */
                     std::string GetResource() const;
 
                     /**
                      * 设置Project name/domain name.
-                     * @param Resource Project name/domain name.
+                     * @param _resource Project name/domain name.
+                     * 
                      */
                     void SetResource(const std::string& _resource);
 
                     /**
                      * 判断参数 Resource 是否已赋值
                      * @return Resource 是否已赋值
+                     * 
                      */
                     bool ResourceHasBeenSet() const;
 
                     /**
                      * 获取Total traffic/max bandwidth in bytes and bps, respectively.
                      * @return Value Total traffic/max bandwidth in bytes and bps, respectively.
+                     * 
                      */
                     int64_t GetValue() const;
 
                     /**
                      * 设置Total traffic/max bandwidth in bytes and bps, respectively.
-                     * @param Value Total traffic/max bandwidth in bytes and bps, respectively.
+                     * @param _value Total traffic/max bandwidth in bytes and bps, respectively.
+                     * 
                      */
                     void SetValue(const int64_t& _value);
 
                     /**
                      * 判断参数 Value 是否已赋值
                      * @return Value 是否已赋值
+                     * 
                      */
                     bool ValueHasBeenSet() const;
 
                     /**
                      * 获取Percentage of individual resource out of all resources.
                      * @return Percentage Percentage of individual resource out of all resources.
+                     * 
                      */
                     double GetPercentage() const;
 
                     /**
                      * 设置Percentage of individual resource out of all resources.
-                     * @param Percentage Percentage of individual resource out of all resources.
+                     * @param _percentage Percentage of individual resource out of all resources.
+                     * 
                      */
                     void SetPercentage(const double& _percentage);
 
                     /**
                      * 判断参数 Percentage 是否已赋值
                      * @return Percentage 是否已赋值
+                     * 
                      */
                     bool PercentageHasBeenSet() const;
 
                     /**
                      * 获取Total billable traffic/max billable bandwidth in bytes and bps, respectively.
                      * @return BillingValue Total billable traffic/max billable bandwidth in bytes and bps, respectively.
+                     * 
                      */
                     int64_t GetBillingValue() const;
 
                     /**
                      * 设置Total billable traffic/max billable bandwidth in bytes and bps, respectively.
-                     * @param BillingValue Total billable traffic/max billable bandwidth in bytes and bps, respectively.
+                     * @param _billingValue Total billable traffic/max billable bandwidth in bytes and bps, respectively.
+                     * 
                      */
                     void SetBillingValue(const int64_t& _billingValue);
 
                     /**
                      * 判断参数 BillingValue 是否已赋值
                      * @return BillingValue 是否已赋值
+                     * 
                      */
                     bool BillingValueHasBeenSet() const;
 
                     /**
                      * 获取Percentage of billable amount out of total amount.
                      * @return BillingPercentage Percentage of billable amount out of total amount.
+                     * 
                      */
                     double GetBillingPercentage() const;
 
                     /**
                      * 设置Percentage of billable amount out of total amount.
-                     * @param BillingPercentage Percentage of billable amount out of total amount.
+                     * @param _billingPercentage Percentage of billable amount out of total amount.
+                     * 
                      */
                     void SetBillingPercentage(const double& _billingPercentage);
 
                     /**
                      * 判断参数 BillingPercentage 是否已赋值
                      * @return BillingPercentage 是否已赋值
+                     * 
                      */
                     bool BillingPercentageHasBeenSet() const;
 

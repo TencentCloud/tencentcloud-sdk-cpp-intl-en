@@ -47,48 +47,56 @@ namespace TencentCloud
                     /**
                      * 获取Total number of private domain DNS records
                      * @return ZoneTotal Total number of private domain DNS records
+                     * 
                      */
                     int64_t GetZoneTotal() const;
 
                     /**
                      * 判断参数 ZoneTotal 是否已赋值
                      * @return ZoneTotal 是否已赋值
+                     * 
                      */
                     bool ZoneTotalHasBeenSet() const;
 
                     /**
                      * 获取Number of VPCs associated with private domain
                      * @return ZoneVpcCount Number of VPCs associated with private domain
+                     * 
                      */
                     int64_t GetZoneVpcCount() const;
 
                     /**
                      * 判断参数 ZoneVpcCount 是否已赋值
                      * @return ZoneVpcCount 是否已赋值
+                     * 
                      */
                     bool ZoneVpcCountHasBeenSet() const;
 
                     /**
                      * 获取Total number of historical requests
                      * @return RequestTotalCount Total number of historical requests
+                     * 
                      */
                     int64_t GetRequestTotalCount() const;
 
                     /**
                      * 判断参数 RequestTotalCount 是否已赋值
                      * @return RequestTotalCount 是否已赋值
+                     * 
                      */
                     bool RequestTotalCountHasBeenSet() const;
 
                     /**
                      * 获取Traffic package usage
                      * @return FlowUsage Traffic package usage
+                     * 
                      */
                     std::vector<FlowUsage> GetFlowUsage() const;
 
                     /**
                      * 判断参数 FlowUsage 是否已赋值
                      * @return FlowUsage 是否已赋值
+                     * 
                      */
                     bool FlowUsageHasBeenSet() const;
 

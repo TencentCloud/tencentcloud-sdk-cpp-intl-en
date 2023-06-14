@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Task instance index
                      * @return TaskInstanceIndex Task instance index
+                     * 
                      */
                     int64_t GetTaskInstanceIndex() const;
 
                     /**
                      * 设置Task instance index
-                     * @param TaskInstanceIndex Task instance index
+                     * @param _taskInstanceIndex Task instance index
+                     * 
                      */
                     void SetTaskInstanceIndex(const int64_t& _taskInstanceIndex);
 
                     /**
                      * 判断参数 TaskInstanceIndex 是否已赋值
                      * @return TaskInstanceIndex 是否已赋值
+                     * 
                      */
                     bool TaskInstanceIndexHasBeenSet() const;
 
                     /**
                      * 获取Task instance state
                      * @return TaskInstanceState Task instance state
+                     * 
                      */
                     std::string GetTaskInstanceState() const;
 
                     /**
                      * 设置Task instance state
-                     * @param TaskInstanceState Task instance state
+                     * @param _taskInstanceState Task instance state
+                     * 
                      */
                     void SetTaskInstanceState(const std::string& _taskInstanceState);
 
                     /**
                      * 判断参数 TaskInstanceState 是否已赋值
                      * @return TaskInstanceState 是否已赋值
+                     * 
                      */
                     bool TaskInstanceStateHasBeenSet() const;
 
@@ -88,38 +94,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ExitCode Exit code after application execution is completed
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     int64_t GetExitCode() const;
 
                     /**
                      * 设置Exit code after application execution is completed
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ExitCode Exit code after application execution is completed
+                     * @param _exitCode Exit code after application execution is completed
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetExitCode(const int64_t& _exitCode);
 
                     /**
                      * 判断参数 ExitCode 是否已赋值
                      * @return ExitCode 是否已赋值
+                     * 
                      */
                     bool ExitCodeHasBeenSet() const;
 
                     /**
                      * 获取Task instance state reason. If the task instance fails, the reason for the failure will be logged.
                      * @return StateReason Task instance state reason. If the task instance fails, the reason for the failure will be logged.
+                     * 
                      */
                     std::string GetStateReason() const;
 
                     /**
                      * 设置Task instance state reason. If the task instance fails, the reason for the failure will be logged.
-                     * @param StateReason Task instance state reason. If the task instance fails, the reason for the failure will be logged.
+                     * @param _stateReason Task instance state reason. If the task instance fails, the reason for the failure will be logged.
+                     * 
                      */
                     void SetStateReason(const std::string& _stateReason);
 
                     /**
                      * 判断参数 StateReason 是否已赋值
                      * @return StateReason 是否已赋值
+                     * 
                      */
                     bool StateReasonHasBeenSet() const;
 
@@ -128,38 +140,44 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return ComputeNodeInstanceId The `InstanceId` of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetComputeNodeInstanceId() const;
 
                     /**
                      * 设置The `InstanceId` of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried.
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ComputeNodeInstanceId The `InstanceId` of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried.
+                     * @param _computeNodeInstanceId The `InstanceId` of the compute node (e.g., CVM instance) where the task instance is running. This field is empty if the task instance is not running or has already been completed and will change when the task instance is retried.
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetComputeNodeInstanceId(const std::string& _computeNodeInstanceId);
 
                     /**
                      * 判断参数 ComputeNodeInstanceId 是否已赋值
                      * @return ComputeNodeInstanceId 是否已赋值
+                     * 
                      */
                     bool ComputeNodeInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return CreateTime Creation time
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param CreateTime Creation time
+                     * @param _createTime Creation time
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 
@@ -168,20 +186,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return LaunchTime Start time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetLaunchTime() const;
 
                     /**
                      * 设置Start time
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param LaunchTime Start time
+                     * @param _launchTime Start time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetLaunchTime(const std::string& _launchTime);
 
                     /**
                      * 判断参数 LaunchTime 是否已赋值
                      * @return LaunchTime 是否已赋值
+                     * 
                      */
                     bool LaunchTimeHasBeenSet() const;
 
@@ -190,20 +211,23 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return RunningTime Running start time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetRunningTime() const;
 
                     /**
                      * 设置Running start time
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param RunningTime Running start time
+                     * @param _runningTime Running start time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetRunningTime(const std::string& _runningTime);
 
                     /**
                      * 判断参数 RunningTime 是否已赋值
                      * @return RunningTime 是否已赋值
+                     * 
                      */
                     bool RunningTimeHasBeenSet() const;
 
@@ -212,56 +236,65 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
                      * @return EndTime Task end time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Task end time
 Note: This field may return `null`, indicating that no valid value was found.
-                     * @param EndTime Task end time
+                     * @param _endTime Task end time
 Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Redirection information
                      * @return RedirectInfo Redirection information
+                     * 
                      */
                     RedirectInfo GetRedirectInfo() const;
 
                     /**
                      * 设置Redirection information
-                     * @param RedirectInfo Redirection information
+                     * @param _redirectInfo Redirection information
+                     * 
                      */
                     void SetRedirectInfo(const RedirectInfo& _redirectInfo);
 
                     /**
                      * 判断参数 RedirectInfo 是否已赋值
                      * @return RedirectInfo 是否已赋值
+                     * 
                      */
                     bool RedirectInfoHasBeenSet() const;
 
                     /**
                      * 获取Task instance state reason details. If the task instance fails, the reason for the failure will be logged
                      * @return StateDetailedReason Task instance state reason details. If the task instance fails, the reason for the failure will be logged
+                     * 
                      */
                     std::string GetStateDetailedReason() const;
 
                     /**
                      * 设置Task instance state reason details. If the task instance fails, the reason for the failure will be logged
-                     * @param StateDetailedReason Task instance state reason details. If the task instance fails, the reason for the failure will be logged
+                     * @param _stateDetailedReason Task instance state reason details. If the task instance fails, the reason for the failure will be logged
+                     * 
                      */
                     void SetStateDetailedReason(const std::string& _stateDetailedReason);
 
                     /**
                      * 判断参数 StateDetailedReason 是否已赋值
                      * @return StateDetailedReason 是否已赋值
+                     * 
                      */
                     bool StateDetailedReasonHasBeenSet() const;
 

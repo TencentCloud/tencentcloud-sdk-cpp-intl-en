@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The unique ID of the CVM instance, such as `ins-11112222`.
                      * @return InstanceId The unique ID of the CVM instance, such as `ins-11112222`.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The unique ID of the CVM instance, such as `ins-11112222`.
-                     * @param InstanceId The unique ID of the CVM instance, such as `ins-11112222`.
+                     * @param _instanceId The unique ID of the CVM instance, such as `ins-11112222`.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The unique ID of the EIP, such as `eip-11112222`.
                      * @return AddressId The unique ID of the EIP, such as `eip-11112222`.
+                     * 
                      */
                     std::string GetAddressId() const;
 
                     /**
                      * 设置The unique ID of the EIP, such as `eip-11112222`.
-                     * @param AddressId The unique ID of the EIP, such as `eip-11112222`.
+                     * @param _addressId The unique ID of the EIP, such as `eip-11112222`.
+                     * 
                      */
                     void SetAddressId(const std::string& _addressId);
 
                     /**
                      * 判断参数 AddressId 是否已赋值
                      * @return AddressId 是否已赋值
+                     * 
                      */
                     bool AddressIdHasBeenSet() const;
 

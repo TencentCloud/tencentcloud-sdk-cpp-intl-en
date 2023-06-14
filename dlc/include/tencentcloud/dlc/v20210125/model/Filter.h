@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Attribute name. If more than one filter exists, the logical relationship between these filters is `OR`.
                      * @return Name Attribute name. If more than one filter exists, the logical relationship between these filters is `OR`.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Attribute name. If more than one filter exists, the logical relationship between these filters is `OR`.
-                     * @param Name Attribute name. If more than one filter exists, the logical relationship between these filters is `OR`.
+                     * @param _name Attribute name. If more than one filter exists, the logical relationship between these filters is `OR`.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`.
                      * @return Values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`.
+                     * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
                      * 设置Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`.
-                     * @param Values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`.
+                     * @param _values Attribute value. If multiple values exist in one filter, the logical relationship between these values is `OR`.
+                     * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
                     /**
                      * 判断参数 Values 是否已赋值
                      * @return Values 是否已赋值
+                     * 
                      */
                     bool ValuesHasBeenSet() const;
 

@@ -48,24 +48,28 @@ namespace TencentCloud
                     /**
                      * 获取Instance list
                      * @return InstanceList Instance list
+                     * 
                      */
                     std::vector<CKafkaInstanceInfo> GetInstanceList() const;
 
                     /**
                      * 判断参数 InstanceList 是否已赋值
                      * @return InstanceList 是否已赋值
+                     * 
                      */
                     bool InstanceListHasBeenSet() const;
 
                     /**
                      * 获取Region list
                      * @return RegionList Region list
+                     * 
                      */
                     std::vector<RegionInfo> GetRegionList() const;
 
                     /**
                      * 判断参数 RegionList 是否已赋值
                      * @return RegionList 是否已赋值
+                     * 
                      */
                     bool RegionListHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return ApiId API ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置API ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ApiId API ID
+                     * @param _apiId API ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Path Path
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Path
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Path Path
+                     * @param _path Path
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPath(const std::string& _path);
 
                     /**
                      * 判断参数 Path 是否已赋值
                      * @return Path 是否已赋值
+                     * 
                      */
                     bool PathHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Method Request method
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Request method
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Method Request method
+                     * @param _method Request method
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMethod(const std::string& _method);
 
                     /**
                      * 判断参数 Method 是否已赋值
                      * @return Method 是否已赋值
+                     * 
                      */
                     bool MethodHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return CreatedTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time
+                     * @param _createdTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
                     /**
                      * 判断参数 CreatedTime 是否已赋值
                      * @return CreatedTime 是否已赋值
+                     * 
                      */
                     bool CreatedTimeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Status Status of the import task
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Status of the import task
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Status Status of the import task
+                     * @param _status Status of the import task
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ErrMsg Details of the error
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrMsg() const;
 
                     /**
                      * 设置Details of the error
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ErrMsg Details of the error
+                     * @param _errMsg Details of the error
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrMsg(const std::string& _errMsg);
 
                     /**
                      * 判断参数 ErrMsg 是否已赋值
                      * @return ErrMsg 是否已赋值
+                     * 
                      */
                     bool ErrMsgHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ApiName API name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetApiName() const;
 
                     /**
                      * 设置API name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ApiName API name
+                     * @param _apiName API name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetApiName(const std::string& _apiName);
 
                     /**
                      * 判断参数 ApiName 是否已赋值
                      * @return ApiName 是否已赋值
+                     * 
                      */
                     bool ApiNameHasBeenSet() const;
 

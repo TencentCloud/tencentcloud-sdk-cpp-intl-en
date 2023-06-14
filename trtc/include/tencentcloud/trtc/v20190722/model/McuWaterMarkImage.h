@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
                      * @return WaterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+                     * 
                      */
                     std::string GetWaterMarkUrl() const;
 
                     /**
                      * 设置The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
-                     * @param WaterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+                     * @param _waterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+                     * 
                      */
                     void SetWaterMarkUrl(const std::string& _waterMarkUrl);
 
                     /**
                      * 判断参数 WaterMarkUrl 是否已赋值
                      * @return WaterMarkUrl 是否已赋值
+                     * 
                      */
                     bool WaterMarkUrlHasBeenSet() const;
 
                     /**
                      * 获取The watermark width (pixels).
                      * @return WaterMarkWidth The watermark width (pixels).
+                     * 
                      */
                     uint64_t GetWaterMarkWidth() const;
 
                     /**
                      * 设置The watermark width (pixels).
-                     * @param WaterMarkWidth The watermark width (pixels).
+                     * @param _waterMarkWidth The watermark width (pixels).
+                     * 
                      */
                     void SetWaterMarkWidth(const uint64_t& _waterMarkWidth);
 
                     /**
                      * 判断参数 WaterMarkWidth 是否已赋值
                      * @return WaterMarkWidth 是否已赋值
+                     * 
                      */
                     bool WaterMarkWidthHasBeenSet() const;
 
                     /**
                      * 获取The watermark height (pixels).
                      * @return WaterMarkHeight The watermark height (pixels).
+                     * 
                      */
                     uint64_t GetWaterMarkHeight() const;
 
                     /**
                      * 设置The watermark height (pixels).
-                     * @param WaterMarkHeight The watermark height (pixels).
+                     * @param _waterMarkHeight The watermark height (pixels).
+                     * 
                      */
                     void SetWaterMarkHeight(const uint64_t& _waterMarkHeight);
 
                     /**
                      * 判断参数 WaterMarkHeight 是否已赋值
                      * @return WaterMarkHeight 是否已赋值
+                     * 
                      */
                     bool WaterMarkHeightHasBeenSet() const;
 
                     /**
                      * 获取The horizontal offset (pixels) of the watermark.
                      * @return LocationX The horizontal offset (pixels) of the watermark.
+                     * 
                      */
                     uint64_t GetLocationX() const;
 
                     /**
                      * 设置The horizontal offset (pixels) of the watermark.
-                     * @param LocationX The horizontal offset (pixels) of the watermark.
+                     * @param _locationX The horizontal offset (pixels) of the watermark.
+                     * 
                      */
                     void SetLocationX(const uint64_t& _locationX);
 
                     /**
                      * 判断参数 LocationX 是否已赋值
                      * @return LocationX 是否已赋值
+                     * 
                      */
                     bool LocationXHasBeenSet() const;
 
                     /**
                      * 获取The vertical offset (pixels) of the watermark.
                      * @return LocationY The vertical offset (pixels) of the watermark.
+                     * 
                      */
                     uint64_t GetLocationY() const;
 
                     /**
                      * 设置The vertical offset (pixels) of the watermark.
-                     * @param LocationY The vertical offset (pixels) of the watermark.
+                     * @param _locationY The vertical offset (pixels) of the watermark.
+                     * 
                      */
                     void SetLocationY(const uint64_t& _locationY);
 
                     /**
                      * 判断参数 LocationY 是否已赋值
                      * @return LocationY 是否已赋值
+                     * 
                      */
                     bool LocationYHasBeenSet() const;
 
                     /**
                      * 获取The image layer of the watermark. If you do not pass this parameter, 0 will be used.
                      * @return ZOrder The image layer of the watermark. If you do not pass this parameter, 0 will be used.
+                     * 
                      */
                     uint64_t GetZOrder() const;
 
                     /**
                      * 设置The image layer of the watermark. If you do not pass this parameter, 0 will be used.
-                     * @param ZOrder The image layer of the watermark. If you do not pass this parameter, 0 will be used.
+                     * @param _zOrder The image layer of the watermark. If you do not pass this parameter, 0 will be used.
+                     * 
                      */
                     void SetZOrder(const uint64_t& _zOrder);
 
                     /**
                      * 判断参数 ZOrder 是否已赋值
                      * @return ZOrder 是否已赋值
+                     * 
                      */
                     bool ZOrderHasBeenSet() const;
 

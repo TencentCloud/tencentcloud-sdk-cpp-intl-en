@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取API key ID.
                      * @return AccessKeyId API key ID.
+                     * 
                      */
                     std::string GetAccessKeyId() const;
 
                     /**
                      * 设置API key ID.
-                     * @param AccessKeyId API key ID.
+                     * @param _accessKeyId API key ID.
+                     * 
                      */
                     void SetAccessKeyId(const std::string& _accessKeyId);
 
                     /**
                      * 判断参数 AccessKeyId 是否已赋值
                      * @return AccessKeyId 是否已赋值
+                     * 
                      */
                     bool AccessKeyIdHasBeenSet() const;
 

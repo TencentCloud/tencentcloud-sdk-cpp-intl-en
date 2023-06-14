@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of Anti-DDoS instance IDs
                      * @return InstanceIdList List of Anti-DDoS instance IDs
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdList() const;
 
                     /**
                      * 设置List of Anti-DDoS instance IDs
-                     * @param InstanceIdList List of Anti-DDoS instance IDs
+                     * @param _instanceIdList List of Anti-DDoS instance IDs
+                     * 
                      */
                     void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
 
                     /**
                      * 判断参数 InstanceIdList 是否已赋值
                      * @return InstanceIdList 是否已赋值
+                     * 
                      */
                     bool InstanceIdListHasBeenSet() const;
 
@@ -69,6 +72,7 @@ namespace TencentCloud
 `on`: enabled
 `off`: disabled
 ]
+                     * 
                      */
                     std::string GetDDoSAI() const;
 
@@ -77,16 +81,18 @@ namespace TencentCloud
 `on`: enabled
 `off`: disabled
 ]
-                     * @param DDoSAI AI protection switch. Valid values:
+                     * @param _dDoSAI AI protection switch. Valid values:
 `on`: enabled
 `off`: disabled
 ]
+                     * 
                      */
                     void SetDDoSAI(const std::string& _dDoSAI);
 
                     /**
                      * 判断参数 DDoSAI 是否已赋值
                      * @return DDoSAI 是否已赋值
+                     * 
                      */
                     bool DDoSAIHasBeenSet() const;
 

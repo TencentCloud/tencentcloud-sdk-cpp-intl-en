@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取File ID
                      * @return ID File ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置File ID
-                     * @param ID File ID
+                     * @param _iD File ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 

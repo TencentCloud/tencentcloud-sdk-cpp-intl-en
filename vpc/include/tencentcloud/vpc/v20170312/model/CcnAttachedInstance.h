@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The ID of a CCN instance.
                      * @return CcnId The ID of a CCN instance.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The ID of a CCN instance.
-                     * @param CcnId The ID of a CCN instance.
+                     * @param _ccnId The ID of a CCN instance.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
@@ -73,6 +76,7 @@ namespace TencentCloud
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+                     * 
                      */
                     std::string GetInstanceType() const;
 
@@ -81,106 +85,123 @@ namespace TencentCloud
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
-                     * @param InstanceType The type of associated instances:
+                     * @param _instanceType The type of associated instances:
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+                     * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
                     /**
                      * 判断参数 InstanceType 是否已赋值
                      * @return InstanceType 是否已赋值
+                     * 
                      */
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
                      * 获取The ID of the associated instance.
                      * @return InstanceId The ID of the associated instance.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置The ID of the associated instance.
-                     * @param InstanceId The ID of the associated instance.
+                     * @param _instanceId The ID of the associated instance.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取The name of the associated instance.
                      * @return InstanceName The name of the associated instance.
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置The name of the associated instance.
-                     * @param InstanceName The name of the associated instance.
+                     * @param _instanceName The name of the associated instance.
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取The region to which the associated instance belongs, such as `ap-guangzhou`.
                      * @return InstanceRegion The region to which the associated instance belongs, such as `ap-guangzhou`.
+                     * 
                      */
                     std::string GetInstanceRegion() const;
 
                     /**
                      * 设置The region to which the associated instance belongs, such as `ap-guangzhou`.
-                     * @param InstanceRegion The region to which the associated instance belongs, such as `ap-guangzhou`.
+                     * @param _instanceRegion The region to which the associated instance belongs, such as `ap-guangzhou`.
+                     * 
                      */
                     void SetInstanceRegion(const std::string& _instanceRegion);
 
                     /**
                      * 判断参数 InstanceRegion 是否已赋值
                      * @return InstanceRegion 是否已赋值
+                     * 
                      */
                     bool InstanceRegionHasBeenSet() const;
 
                     /**
                      * 获取The UIN (root account) to which the associated instance belongs.
                      * @return InstanceUin The UIN (root account) to which the associated instance belongs.
+                     * 
                      */
                     std::string GetInstanceUin() const;
 
                     /**
                      * 设置The UIN (root account) to which the associated instance belongs.
-                     * @param InstanceUin The UIN (root account) to which the associated instance belongs.
+                     * @param _instanceUin The UIN (root account) to which the associated instance belongs.
+                     * 
                      */
                     void SetInstanceUin(const std::string& _instanceUin);
 
                     /**
                      * 判断参数 InstanceUin 是否已赋值
                      * @return InstanceUin 是否已赋值
+                     * 
                      */
                     bool InstanceUinHasBeenSet() const;
 
                     /**
                      * 获取The CIDR of the associated instance.
                      * @return CidrBlock The CIDR of the associated instance.
+                     * 
                      */
                     std::vector<std::string> GetCidrBlock() const;
 
                     /**
                      * 设置The CIDR of the associated instance.
-                     * @param CidrBlock The CIDR of the associated instance.
+                     * @param _cidrBlock The CIDR of the associated instance.
+                     * 
                      */
                     void SetCidrBlock(const std::vector<std::string>& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
@@ -205,6 +226,7 @@ namespace TencentCloud
 <li>`ATTACHING`: binding</li>
 <li>`DETACHING`: Unbinding</li>
 <li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
+                     * 
                      */
                     std::string GetState() const;
 
@@ -219,7 +241,7 @@ namespace TencentCloud
 <li>`ATTACHING`: binding</li>
 <li>`DETACHING`: Unbinding</li>
 <li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
-                     * @param State The status of the associated instance:
+                     * @param _state The status of the associated instance:
 <li>`PENDING`: In application</li>
 <li>`ACTIVE`: Connected</li>
 <li>`EXPIRED`: Expired</li>
@@ -229,84 +251,98 @@ namespace TencentCloud
 <li>`ATTACHING`: binding</li>
 <li>`DETACHING`: Unbinding</li>
 <li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
+                     * 
                      */
                     void SetState(const std::string& _state);
 
                     /**
                      * 判断参数 State 是否已赋值
                      * @return State 是否已赋值
+                     * 
                      */
                     bool StateHasBeenSet() const;
 
                     /**
                      * 获取Association Time.
                      * @return AttachedTime Association Time.
+                     * 
                      */
                     std::string GetAttachedTime() const;
 
                     /**
                      * 设置Association Time.
-                     * @param AttachedTime Association Time.
+                     * @param _attachedTime Association Time.
+                     * 
                      */
                     void SetAttachedTime(const std::string& _attachedTime);
 
                     /**
                      * 判断参数 AttachedTime 是否已赋值
                      * @return AttachedTime 是否已赋值
+                     * 
                      */
                     bool AttachedTimeHasBeenSet() const;
 
                     /**
                      * 获取The UIN (root account) to which the CCN belongs.
                      * @return CcnUin The UIN (root account) to which the CCN belongs.
+                     * 
                      */
                     std::string GetCcnUin() const;
 
                     /**
                      * 设置The UIN (root account) to which the CCN belongs.
-                     * @param CcnUin The UIN (root account) to which the CCN belongs.
+                     * @param _ccnUin The UIN (root account) to which the CCN belongs.
+                     * 
                      */
                     void SetCcnUin(const std::string& _ccnUin);
 
                     /**
                      * 判断参数 CcnUin 是否已赋值
                      * @return CcnUin 是否已赋值
+                     * 
                      */
                     bool CcnUinHasBeenSet() const;
 
                     /**
                      * 获取General location of the associated instance, such as CHINA_MAINLAND.
                      * @return InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
+                     * 
                      */
                     std::string GetInstanceArea() const;
 
                     /**
                      * 设置General location of the associated instance, such as CHINA_MAINLAND.
-                     * @param InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
+                     * @param _instanceArea General location of the associated instance, such as CHINA_MAINLAND.
+                     * 
                      */
                     void SetInstanceArea(const std::string& _instanceArea);
 
                     /**
                      * 判断参数 InstanceArea 是否已赋值
                      * @return InstanceArea 是否已赋值
+                     * 
                      */
                     bool InstanceAreaHasBeenSet() const;
 
                     /**
                      * 获取Description
                      * @return Description Description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description
-                     * @param Description Description
+                     * @param _description Description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -315,20 +351,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RouteTableId Route table ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置Route table ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RouteTableId Route table ID
+                     * @param _routeTableId Route table ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 
@@ -337,20 +376,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RouteTableName Route table name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRouteTableName() const;
 
                     /**
                      * 设置Route table name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param RouteTableName Route table name
+                     * @param _routeTableName Route table name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRouteTableName(const std::string& _routeTableName);
 
                     /**
                      * 判断参数 RouteTableName 是否已赋值
                      * @return RouteTableName 是否已赋值
+                     * 
                      */
                     bool RouteTableNameHasBeenSet() const;
 

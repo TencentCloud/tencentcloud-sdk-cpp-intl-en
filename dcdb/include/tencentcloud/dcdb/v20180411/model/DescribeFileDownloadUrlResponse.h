@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Signed download URL
                      * @return PreSignedUrl Signed download URL
+                     * 
                      */
                     std::string GetPreSignedUrl() const;
 
                     /**
                      * 判断参数 PreSignedUrl 是否已赋值
                      * @return PreSignedUrl 是否已赋值
+                     * 
                      */
                     bool PreSignedUrlHasBeenSet() const;
 

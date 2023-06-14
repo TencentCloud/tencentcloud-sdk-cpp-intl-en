@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Stops all if set to 1
                      * @return StopType Stops all if set to 1
+                     * 
                      */
                     int64_t GetStopType() const;
 
                     /**
                      * 设置Stops all if set to 1
-                     * @param StopType Stops all if set to 1
+                     * @param _stopType Stops all if set to 1
+                     * 
                      */
                     void SetStopType(const int64_t& _stopType);
 
                     /**
                      * 判断参数 StopType 是否已赋值
                      * @return StopType 是否已赋值
+                     * 
                      */
                     bool StopTypeHasBeenSet() const;
 

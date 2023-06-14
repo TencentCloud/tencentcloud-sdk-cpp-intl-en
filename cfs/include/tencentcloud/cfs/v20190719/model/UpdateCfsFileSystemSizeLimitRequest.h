@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
                      * @return FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * 
                      */
                     uint64_t GetFsLimit() const;
 
                     /**
                      * 设置File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
-                     * @param FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * @param _fsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+                     * 
                      */
                     void SetFsLimit(const uint64_t& _fsLimit);
 
                     /**
                      * 判断参数 FsLimit 是否已赋值
                      * @return FsLimit 是否已赋值
+                     * 
                      */
                     bool FsLimitHasBeenSet() const;
 
                     /**
                      * 获取File system ID. Currently, only Standard file systems are supported.
                      * @return FileSystemId File system ID. Currently, only Standard file systems are supported.
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 设置File system ID. Currently, only Standard file systems are supported.
-                     * @param FileSystemId File system ID. Currently, only Standard file systems are supported.
+                     * @param _fileSystemId File system ID. Currently, only Standard file systems are supported.
+                     * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 

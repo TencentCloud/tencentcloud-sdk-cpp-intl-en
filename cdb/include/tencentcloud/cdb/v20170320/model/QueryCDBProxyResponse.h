@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Count Number of instances in the proxy group
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     uint64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return ProxyGroup Proxy information
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     std::vector<ProxyGroups> GetProxyGroup() const;
 
                     /**
                      * 判断参数 ProxyGroup 是否已赋值
                      * @return ProxyGroup 是否已赋值
+                     * 
                      */
                     bool ProxyGroupHasBeenSet() const;
 

@@ -47,144 +47,168 @@ namespace TencentCloud
                     /**
                      * 获取Machine group ID
                      * @return GroupId Machine group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Machine group ID
-                     * @param GroupId Machine group ID
+                     * @param _groupId Machine group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Machine group name
                      * @return GroupName Machine group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Machine group name
-                     * @param GroupName Machine group name
+                     * @param _groupName Machine group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Machine group type
                      * @return MachineGroupType Machine group type
+                     * 
                      */
                     MachineGroupTypeInfo GetMachineGroupType() const;
 
                     /**
                      * 设置Machine group type
-                     * @param MachineGroupType Machine group type
+                     * @param _machineGroupType Machine group type
+                     * 
                      */
                     void SetMachineGroupType(const MachineGroupTypeInfo& _machineGroupType);
 
                     /**
                      * 判断参数 MachineGroupType 是否已赋值
                      * @return MachineGroupType 是否已赋值
+                     * 
                      */
                     bool MachineGroupTypeHasBeenSet() const;
 
                     /**
                      * 获取Tag list
                      * @return Tags Tag list
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Tag list
-                     * @param Tags Tag list
+                     * @param _tags Tag list
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable automatic update for the machine group
                      * @return AutoUpdate Whether to enable automatic update for the machine group
+                     * 
                      */
                     bool GetAutoUpdate() const;
 
                     /**
                      * 设置Whether to enable automatic update for the machine group
-                     * @param AutoUpdate Whether to enable automatic update for the machine group
+                     * @param _autoUpdate Whether to enable automatic update for the machine group
+                     * 
                      */
                     void SetAutoUpdate(const bool& _autoUpdate);
 
                     /**
                      * 判断参数 AutoUpdate 是否已赋值
                      * @return AutoUpdate 是否已赋值
+                     * 
                      */
                     bool AutoUpdateHasBeenSet() const;
 
                     /**
                      * 获取Update start time. We recommend you update LogListener during off-peak hours.
                      * @return UpdateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+                     * 
                      */
                     std::string GetUpdateStartTime() const;
 
                     /**
                      * 设置Update start time. We recommend you update LogListener during off-peak hours.
-                     * @param UpdateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+                     * @param _updateStartTime Update start time. We recommend you update LogListener during off-peak hours.
+                     * 
                      */
                     void SetUpdateStartTime(const std::string& _updateStartTime);
 
                     /**
                      * 判断参数 UpdateStartTime 是否已赋值
                      * @return UpdateStartTime 是否已赋值
+                     * 
                      */
                     bool UpdateStartTimeHasBeenSet() const;
 
                     /**
                      * 获取Update end time. We recommend you update LogListener during off-peak hours.
                      * @return UpdateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+                     * 
                      */
                     std::string GetUpdateEndTime() const;
 
                     /**
                      * 设置Update end time. We recommend you update LogListener during off-peak hours.
-                     * @param UpdateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+                     * @param _updateEndTime Update end time. We recommend you update LogListener during off-peak hours.
+                     * 
                      */
                     void SetUpdateEndTime(const std::string& _updateEndTime);
 
                     /**
                      * 判断参数 UpdateEndTime 是否已赋值
                      * @return UpdateEndTime 是否已赋值
+                     * 
                      */
                     bool UpdateEndTimeHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
                      * @return ServiceLogging Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
+                     * 
                      */
                     bool GetServiceLogging() const;
 
                     /**
                      * 设置Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
-                     * @param ServiceLogging Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
+                     * @param _serviceLogging Whether to enable the service log to record the logs generated by the LogListener service itself. After it is enabled, the internal logset `cls_service_logging` and the `loglistener_status`, `loglistener_alarm`, and `loglistener_business` log topics will be created, which will not incur fees.
+                     * 
                      */
                     void SetServiceLogging(const bool& _serviceLogging);
 
                     /**
                      * 判断参数 ServiceLogging 是否已赋值
                      * @return ServiceLogging 是否已赋值
+                     * 
                      */
                     bool ServiceLoggingHasBeenSet() const;
 

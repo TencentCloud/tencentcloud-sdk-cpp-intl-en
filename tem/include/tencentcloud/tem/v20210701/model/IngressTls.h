@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Host array. An empty array indicates the default certificate for all domain names.
                      * @return Hosts Host array. An empty array indicates the default certificate for all domain names.
+                     * 
                      */
                     std::vector<std::string> GetHosts() const;
 
                     /**
                      * 设置Host array. An empty array indicates the default certificate for all domain names.
-                     * @param Hosts Host array. An empty array indicates the default certificate for all domain names.
+                     * @param _hosts Host array. An empty array indicates the default certificate for all domain names.
+                     * 
                      */
                     void SetHosts(const std::vector<std::string>& _hosts);
 
                     /**
                      * 判断参数 Hosts 是否已赋值
                      * @return Hosts 是否已赋值
+                     * 
                      */
                     bool HostsHasBeenSet() const;
 
                     /**
                      * 获取Secret name. If a certificate is used, this field is left empty.
                      * @return SecretName Secret name. If a certificate is used, this field is left empty.
+                     * 
                      */
                     std::string GetSecretName() const;
 
                     /**
                      * 设置Secret name. If a certificate is used, this field is left empty.
-                     * @param SecretName Secret name. If a certificate is used, this field is left empty.
+                     * @param _secretName Secret name. If a certificate is used, this field is left empty.
+                     * 
                      */
                     void SetSecretName(const std::string& _secretName);
 
                     /**
                      * 判断参数 SecretName 是否已赋值
                      * @return SecretName 是否已赋值
+                     * 
                      */
                     bool SecretNameHasBeenSet() const;
 
                     /**
                      * 获取SSL Certificate Id
                      * @return CertificateId SSL Certificate Id
+                     * 
                      */
                     std::string GetCertificateId() const;
 
                     /**
                      * 设置SSL Certificate Id
-                     * @param CertificateId SSL Certificate Id
+                     * @param _certificateId SSL Certificate Id
+                     * 
                      */
                     void SetCertificateId(const std::string& _certificateId);
 
                     /**
                      * 判断参数 CertificateId 是否已赋值
                      * @return CertificateId 是否已赋值
+                     * 
                      */
                     bool CertificateIdHasBeenSet() const;
 

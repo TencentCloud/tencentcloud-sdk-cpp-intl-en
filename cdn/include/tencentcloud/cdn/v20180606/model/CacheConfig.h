@@ -51,38 +51,44 @@ namespace TencentCloud
 `off`: Disable
                      * @return HeuristicCacheTimeSwitch `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetHeuristicCacheTimeSwitch() const;
 
                     /**
                      * 设置`on`: Enable
 `off`: Disable
-                     * @param HeuristicCacheTimeSwitch `on`: Enable
+                     * @param _heuristicCacheTimeSwitch `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetHeuristicCacheTimeSwitch(const std::string& _heuristicCacheTimeSwitch);
 
                     /**
                      * 判断参数 HeuristicCacheTimeSwitch 是否已赋值
                      * @return HeuristicCacheTimeSwitch 是否已赋值
+                     * 
                      */
                     bool HeuristicCacheTimeSwitchHasBeenSet() const;
 
                     /**
                      * 获取Unit: Second
                      * @return HeuristicCacheTime Unit: Second
+                     * 
                      */
                     int64_t GetHeuristicCacheTime() const;
 
                     /**
                      * 设置Unit: Second
-                     * @param HeuristicCacheTime Unit: Second
+                     * @param _heuristicCacheTime Unit: Second
+                     * 
                      */
                     void SetHeuristicCacheTime(const int64_t& _heuristicCacheTime);
 
                     /**
                      * 判断参数 HeuristicCacheTime 是否已赋值
                      * @return HeuristicCacheTime 是否已赋值
+                     * 
                      */
                     bool HeuristicCacheTimeHasBeenSet() const;
 

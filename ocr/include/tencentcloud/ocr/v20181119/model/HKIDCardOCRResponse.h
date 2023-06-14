@@ -46,60 +46,70 @@ namespace TencentCloud
                     /**
                      * 获取Name in Chinese
                      * @return CnName Name in Chinese
+                     * 
                      */
                     std::string GetCnName() const;
 
                     /**
                      * 判断参数 CnName 是否已赋值
                      * @return CnName 是否已赋值
+                     * 
                      */
                     bool CnNameHasBeenSet() const;
 
                     /**
                      * 获取Name in English
                      * @return EnName Name in English
+                     * 
                      */
                     std::string GetEnName() const;
 
                     /**
                      * 判断参数 EnName 是否已赋值
                      * @return EnName 是否已赋值
+                     * 
                      */
                     bool EnNameHasBeenSet() const;
 
                     /**
                      * 获取Telecode for the name in Chinese
                      * @return TelexCode Telecode for the name in Chinese
+                     * 
                      */
                     std::string GetTelexCode() const;
 
                     /**
                      * 判断参数 TelexCode 是否已赋值
                      * @return TelexCode 是否已赋值
+                     * 
                      */
                     bool TelexCodeHasBeenSet() const;
 
                     /**
                      * 获取Gender. Valid values: Male, Female
                      * @return Sex Gender. Valid values: Male, Female
+                     * 
                      */
                     std::string GetSex() const;
 
                     /**
                      * 判断参数 Sex 是否已赋值
                      * @return Sex 是否已赋值
+                     * 
                      */
                     bool SexHasBeenSet() const;
 
                     /**
                      * 获取Date of birth
                      * @return Birthday Date of birth
+                     * 
                      */
                     std::string GetBirthday() const;
 
                     /**
                      * 判断参数 Birthday 是否已赋值
                      * @return Birthday 是否已赋值
+                     * 
                      */
                     bool BirthdayHasBeenSet() const;
 
@@ -112,60 +122,70 @@ namespace TencentCloud
 0: non-permanent;
 1: permanent;
 -1: unknown.
+                     * 
                      */
                     int64_t GetPermanent() const;
 
                     /**
                      * 判断参数 Permanent 是否已赋值
                      * @return Permanent 是否已赋值
+                     * 
                      */
                     bool PermanentHasBeenSet() const;
 
                     /**
                      * 获取Identity card number
                      * @return IdNum Identity card number
+                     * 
                      */
                     std::string GetIdNum() const;
 
                     /**
                      * 判断参数 IdNum 是否已赋值
                      * @return IdNum 是否已赋值
+                     * 
                      */
                     bool IdNumHasBeenSet() const;
 
                     /**
                      * 获取Document symbol, i.e., the symbol under the date of birth, such as "***AZ"
                      * @return Symbol Document symbol, i.e., the symbol under the date of birth, such as "***AZ"
+                     * 
                      */
                     std::string GetSymbol() const;
 
                     /**
                      * 判断参数 Symbol 是否已赋值
                      * @return Symbol 是否已赋值
+                     * 
                      */
                     bool SymbolHasBeenSet() const;
 
                     /**
                      * 获取First issue date
                      * @return FirstIssueDate First issue date
+                     * 
                      */
                     std::string GetFirstIssueDate() const;
 
                     /**
                      * 判断参数 FirstIssueDate 是否已赋值
                      * @return FirstIssueDate 是否已赋值
+                     * 
                      */
                     bool FirstIssueDateHasBeenSet() const;
 
                     /**
                      * 获取Last receipt date
                      * @return CurrentIssueDate Last receipt date
+                     * 
                      */
                     std::string GetCurrentIssueDate() const;
 
                     /**
                      * 判断参数 CurrentIssueDate 是否已赋值
                      * @return CurrentIssueDate 是否已赋值
+                     * 
                      */
                     bool CurrentIssueDateHasBeenSet() const;
 
@@ -180,12 +200,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 1: forged;
 2: authentic.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetFakeDetectResult() const;
 
                     /**
                      * 判断参数 FakeDetectResult 是否已赋值
                      * @return FakeDetectResult 是否已赋值
+                     * 
                      */
                     bool FakeDetectResultHasBeenSet() const;
 
@@ -194,12 +216,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return HeadImage Base64-encoded identity photo
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetHeadImage() const;
 
                     /**
                      * 判断参数 HeadImage 是否已赋值
                      * @return HeadImage 是否已赋值
+                     * 
                      */
                     bool HeadImageHasBeenSet() const;
 
@@ -212,12 +236,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 -9102: Alarm for photocopied document
 -9103: Alarm for spoofed document
 -9104: Alarm for photoshopped document
+                     * 
                      */
                     std::vector<int64_t> GetWarningCode() const;
 
                     /**
                      * 判断参数 WarningCode 是否已赋值
                      * @return WarningCode 是否已赋值
+                     * 
                      */
                     bool WarningCodeHasBeenSet() const;
 

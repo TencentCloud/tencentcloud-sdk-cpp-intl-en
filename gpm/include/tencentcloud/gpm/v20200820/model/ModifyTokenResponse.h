@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Token that has been set successfully.
                      * @return MatchToken Token that has been set successfully.
+                     * 
                      */
                     std::string GetMatchToken() const;
 
                     /**
                      * 判断参数 MatchToken 是否已赋值
                      * @return MatchToken 是否已赋值
+                     * 
                      */
                     bool MatchTokenHasBeenSet() const;
 
@@ -60,12 +62,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return CompatibleSpan The time period during which GPM will continuously push the original token in seconds to the user when the token is replaced.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     uint64_t GetCompatibleSpan() const;
 
                     /**
                      * 判断参数 CompatibleSpan 是否已赋值
                      * @return CompatibleSpan 是否已赋值
+                     * 
                      */
                     bool CompatibleSpanHasBeenSet() const;
 

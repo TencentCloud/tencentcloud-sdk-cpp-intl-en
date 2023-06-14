@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Advanced DDoS policy list
                      * @return DDosPolicyList Advanced DDoS policy list
+                     * 
                      */
                     std::vector<DDosPolicy> GetDDosPolicyList() const;
 
                     /**
                      * 判断参数 DDosPolicyList 是否已赋值
                      * @return DDosPolicyList 是否已赋值
+                     * 
                      */
                     bool DDosPolicyListHasBeenSet() const;
 

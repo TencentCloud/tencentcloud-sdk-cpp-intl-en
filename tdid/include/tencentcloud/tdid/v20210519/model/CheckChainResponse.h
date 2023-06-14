@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Whether you are the owner of the consortium. `1`: Yes; `0`: No.
                      * @return RoleType Whether you are the owner of the consortium. `1`: Yes; `0`: No.
+                     * 
                      */
                     int64_t GetRoleType() const;
 
                     /**
                      * 判断参数 RoleType 是否已赋值
                      * @return RoleType 是否已赋值
+                     * 
                      */
                     bool RoleTypeHasBeenSet() const;
 
                     /**
                      * 获取The chain ID.
                      * @return ChainId The chain ID.
+                     * 
                      */
                     std::string GetChainId() const;
 
                     /**
                      * 判断参数 ChainId 是否已赋值
                      * @return ChainId 是否已赋值
+                     * 
                      */
                     bool ChainIdHasBeenSet() const;
 
                     /**
                      * 获取The application name.
                      * @return AppName The application name.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 

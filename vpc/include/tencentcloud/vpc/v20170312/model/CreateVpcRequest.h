@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取The VPC name. The maximum length is 60 bytes.
                      * @return VpcName The VPC name. The maximum length is 60 bytes.
+                     * 
                      */
                     std::string GetVpcName() const;
 
                     /**
                      * 设置The VPC name. The maximum length is 60 bytes.
-                     * @param VpcName The VPC name. The maximum length is 60 bytes.
+                     * @param _vpcName The VPC name. The maximum length is 60 bytes.
+                     * 
                      */
                     void SetVpcName(const std::string& _vpcName);
 
                     /**
                      * 判断参数 VpcName 是否已赋值
                      * @return VpcName 是否已赋值
+                     * 
                      */
                     bool VpcNameHasBeenSet() const;
 
                     /**
                      * 获取VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
                      * @return CidrBlock VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
+                     * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
                      * 设置VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
-                     * @param CidrBlock VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
+                     * @param _cidrBlock VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
+                     * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
                     /**
                      * 判断参数 CidrBlock 是否已赋值
                      * @return CidrBlock 是否已赋值
+                     * 
                      */
                     bool CidrBlockHasBeenSet() const;
 
                     /**
                      * 获取Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
                      * @return EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
+                     * 
                      */
                     std::string GetEnableMulticast() const;
 
                     /**
                      * 设置Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
-                     * @param EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
+                     * @param _enableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
+                     * 
                      */
                     void SetEnableMulticast(const std::string& _enableMulticast);
 
                     /**
                      * 判断参数 EnableMulticast 是否已赋值
                      * @return EnableMulticast 是否已赋值
+                     * 
                      */
                     bool EnableMulticastHasBeenSet() const;
 
                     /**
                      * 获取DNS address. A maximum of 4 addresses is supported.
                      * @return DnsServers DNS address. A maximum of 4 addresses is supported.
+                     * 
                      */
                     std::vector<std::string> GetDnsServers() const;
 
                     /**
                      * 设置DNS address. A maximum of 4 addresses is supported.
-                     * @param DnsServers DNS address. A maximum of 4 addresses is supported.
+                     * @param _dnsServers DNS address. A maximum of 4 addresses is supported.
+                     * 
                      */
                     void SetDnsServers(const std::vector<std::string>& _dnsServers);
 
                     /**
                      * 判断参数 DnsServers 是否已赋值
                      * @return DnsServers 是否已赋值
+                     * 
                      */
                     bool DnsServersHasBeenSet() const;
 
                     /**
                      * 获取Domain name of DHCP
                      * @return DomainName Domain name of DHCP
+                     * 
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置Domain name of DHCP
-                     * @param DomainName Domain name of DHCP
+                     * @param _domainName Domain name of DHCP
+                     * 
                      */
                     void SetDomainName(const std::string& _domainName);
 
                     /**
                      * 判断参数 DomainName 是否已赋值
                      * @return DomainName 是否已赋值
+                     * 
                      */
                     bool DomainNameHasBeenSet() const;
 
                     /**
                      * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @param _tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

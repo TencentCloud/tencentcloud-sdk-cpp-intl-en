@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The relay URL. Format: `rtmp://domain/live`.
                      * @return Url The relay URL. Format: `rtmp://domain/live`.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The relay URL. Format: `rtmp://domain/live`.
-                     * @param Url The relay URL. Format: `rtmp://domain/live`.
+                     * @param _url The relay URL. Format: `rtmp://domain/live`.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取The `StreamKey` for relay. Format: `stream?key=value`.
                      * @return StreamKey The `StreamKey` for relay. Format: `stream?key=value`.
+                     * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
                      * 设置The `StreamKey` for relay. Format: `stream?key=value`.
-                     * @param StreamKey The `StreamKey` for relay. Format: `stream?key=value`.
+                     * @param _streamKey The `StreamKey` for relay. Format: `stream?key=value`.
+                     * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
 
                     /**
                      * 判断参数 StreamKey 是否已赋值
                      * @return StreamKey 是否已赋值
+                     * 
                      */
                     bool StreamKeyHasBeenSet() const;
 

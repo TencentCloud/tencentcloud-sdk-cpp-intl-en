@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of the IDs of the channels to delete
                      * @return Ids List of the IDs of the channels to delete
+                     * 
                      */
                     std::vector<std::string> GetIds() const;
 
                     /**
                      * 设置List of the IDs of the channels to delete
-                     * @param Ids List of the IDs of the channels to delete
+                     * @param _ids List of the IDs of the channels to delete
+                     * 
                      */
                     void SetIds(const std::vector<std::string>& _ids);
 
                     /**
                      * 判断参数 Ids 是否已赋值
                      * @return Ids 是否已赋值
+                     * 
                      */
                     bool IdsHasBeenSet() const;
 

@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Output group name.
                      * @return OutputGroupName Output group name.
+                     * 
                      */
                     std::string GetOutputGroupName() const;
 
                     /**
                      * 设置Output group name.
-                     * @param OutputGroupName Output group name.
+                     * @param _outputGroupName Output group name.
+                     * 
                      */
                     void SetOutputGroupName(const std::string& _outputGroupName);
 
                     /**
                      * 判断参数 OutputGroupName 是否已赋值
                      * @return OutputGroupName 是否已赋值
+                     * 
                      */
                     bool OutputGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Output group statistics.
                      * @return Statistics Output group statistics.
+                     * 
                      */
                     OutputsStatistics GetStatistics() const;
 
                     /**
                      * 设置Output group statistics.
-                     * @param Statistics Output group statistics.
+                     * @param _statistics Output group statistics.
+                     * 
                      */
                     void SetStatistics(const OutputsStatistics& _statistics);
 
                     /**
                      * 判断参数 Statistics 是否已赋值
                      * @return Statistics 是否已赋值
+                     * 
                      */
                     bool StatisticsHasBeenSet() const;
 

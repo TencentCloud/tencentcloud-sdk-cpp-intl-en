@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Resource name
                      * @return Name Resource name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Resource name
-                     * @param Name Resource name
+                     * @param _name Resource name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Resource usage
                      * @return Usage Resource usage
+                     * 
                      */
                     uint64_t GetUsage() const;
 
                     /**
                      * 设置Resource usage
-                     * @param Usage Resource usage
+                     * @param _usage Resource usage
+                     * 
                      */
                     void SetUsage(const uint64_t& _usage);
 
                     /**
                      * 判断参数 Usage 是否已赋值
                      * @return Usage 是否已赋值
+                     * 
                      */
                     bool UsageHasBeenSet() const;
 

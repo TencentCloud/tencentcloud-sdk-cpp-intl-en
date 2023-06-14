@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value was found.
                      * @return AppName Path for RTMP stream pushing
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     std::string GetAppName() const;
 
                     /**
                      * 设置Path for RTMP stream pushing
 Note: this field may return `null`, indicating that no valid value was found.
-                     * @param AppName Path for RTMP stream pushing
+                     * @param _appName Path for RTMP stream pushing
 Note: this field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     void SetAppName(const std::string& _appName);
 
                     /**
                      * 判断参数 AppName 是否已赋值
                      * @return AppName 是否已赋值
+                     * 
                      */
                     bool AppNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid value was found.
 Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
                      * @return StreamKey StreamKey for RTMP stream pushing
 Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+                     * 
                      */
                     std::string GetStreamKey() const;
 
                     /**
                      * 设置StreamKey for RTMP stream pushing
 Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
-                     * @param StreamKey StreamKey for RTMP stream pushing
+                     * @param _streamKey StreamKey for RTMP stream pushing
 Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+                     * 
                      */
                     void SetStreamKey(const std::string& _streamKey);
 
                     /**
                      * 判断参数 StreamKey 是否已赋值
                      * @return StreamKey 是否已赋值
+                     * 
                      */
                     bool StreamKeyHasBeenSet() const;
 

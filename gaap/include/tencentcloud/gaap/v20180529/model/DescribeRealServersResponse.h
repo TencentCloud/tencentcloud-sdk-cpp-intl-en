@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取An information list of origin server
                      * @return RealServerSet An information list of origin server
+                     * 
                      */
                     std::vector<BindRealServerInfo> GetRealServerSet() const;
 
                     /**
                      * 判断参数 RealServerSet 是否已赋值
                      * @return RealServerSet 是否已赋值
+                     * 
                      */
                     bool RealServerSetHasBeenSet() const;
 
                     /**
                      * 获取The quantity of origin servers
                      * @return TotalCount The quantity of origin servers
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

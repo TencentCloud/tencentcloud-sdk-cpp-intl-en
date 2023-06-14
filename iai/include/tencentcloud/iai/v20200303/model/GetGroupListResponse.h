@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Returned group information
                      * @return GroupInfos Returned group information
+                     * 
                      */
                     std::vector<GroupInfo> GetGroupInfos() const;
 
                     /**
                      * 判断参数 GroupInfos 是否已赋值
                      * @return GroupInfos 是否已赋值
+                     * 
                      */
                     bool GroupInfosHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GroupNum Total number of groups
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetGroupNum() const;
 
                     /**
                      * 判断参数 GroupNum 是否已赋值
                      * @return GroupNum 是否已赋值
+                     * 
                      */
                     bool GroupNumHasBeenSet() const;
 

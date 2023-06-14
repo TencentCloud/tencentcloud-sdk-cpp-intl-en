@@ -48,126 +48,147 @@ namespace TencentCloud
                     /**
                      * 获取Migration task ID
                      * @return MigrateId Migration task ID
+                     * 
                      */
                     uint64_t GetMigrateId() const;
 
                     /**
                      * 设置Migration task ID
-                     * @param MigrateId Migration task ID
+                     * @param _migrateId Migration task ID
+                     * 
                      */
                     void SetMigrateId(const uint64_t& _migrateId);
 
                     /**
                      * 判断参数 MigrateId 是否已赋值
                      * @return MigrateId 是否已赋值
+                     * 
                      */
                     bool MigrateIdHasBeenSet() const;
 
                     /**
                      * 获取New name of migration task. If this parameter is left empty, no modification will be made
                      * @return MigrateName New name of migration task. If this parameter is left empty, no modification will be made
+                     * 
                      */
                     std::string GetMigrateName() const;
 
                     /**
                      * 设置New name of migration task. If this parameter is left empty, no modification will be made
-                     * @param MigrateName New name of migration task. If this parameter is left empty, no modification will be made
+                     * @param _migrateName New name of migration task. If this parameter is left empty, no modification will be made
+                     * 
                      */
                     void SetMigrateName(const std::string& _migrateName);
 
                     /**
                      * 判断参数 MigrateName 是否已赋值
                      * @return MigrateName 是否已赋值
+                     * 
                      */
                     bool MigrateNameHasBeenSet() const;
 
                     /**
                      * 获取New migration type (1: structure migration, 2: data migration, 3: incremental sync). If this parameter is left empty, no modification will be made
                      * @return MigrateType New migration type (1: structure migration, 2: data migration, 3: incremental sync). If this parameter is left empty, no modification will be made
+                     * 
                      */
                     uint64_t GetMigrateType() const;
 
                     /**
                      * 设置New migration type (1: structure migration, 2: data migration, 3: incremental sync). If this parameter is left empty, no modification will be made
-                     * @param MigrateType New migration type (1: structure migration, 2: data migration, 3: incremental sync). If this parameter is left empty, no modification will be made
+                     * @param _migrateType New migration type (1: structure migration, 2: data migration, 3: incremental sync). If this parameter is left empty, no modification will be made
+                     * 
                      */
                     void SetMigrateType(const uint64_t& _migrateType);
 
                     /**
                      * 判断参数 MigrateType 是否已赋值
                      * @return MigrateType 是否已赋值
+                     * 
                      */
                     bool MigrateTypeHasBeenSet() const;
 
                     /**
                      * 获取Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode). If this parameter is left empty, no modification will be made
                      * @return SourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode). If this parameter is left empty, no modification will be made
+                     * 
                      */
                     uint64_t GetSourceType() const;
 
                     /**
                      * 设置Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode). If this parameter is left empty, no modification will be made
-                     * @param SourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode). If this parameter is left empty, no modification will be made
+                     * @param _sourceType Migration source type. 1: TencentDB for SQL Server, 2: CVM-based self-created SQL Server database; 3: SQL Server backup restoration, 4: SQL Server backup restoration (in COS mode). If this parameter is left empty, no modification will be made
+                     * 
                      */
                     void SetSourceType(const uint64_t& _sourceType);
 
                     /**
                      * 判断参数 SourceType 是否已赋值
                      * @return SourceType 是否已赋值
+                     * 
                      */
                     bool SourceTypeHasBeenSet() const;
 
                     /**
                      * 获取Migration source. If this parameter is left empty, no modification will be made
                      * @return Source Migration source. If this parameter is left empty, no modification will be made
+                     * 
                      */
                     MigrateSource GetSource() const;
 
                     /**
                      * 设置Migration source. If this parameter is left empty, no modification will be made
-                     * @param Source Migration source. If this parameter is left empty, no modification will be made
+                     * @param _source Migration source. If this parameter is left empty, no modification will be made
+                     * 
                      */
                     void SetSource(const MigrateSource& _source);
 
                     /**
                      * 判断参数 Source 是否已赋值
                      * @return Source 是否已赋值
+                     * 
                      */
                     bool SourceHasBeenSet() const;
 
                     /**
                      * 获取Migration target. If this parameter is left empty, no modification will be made
                      * @return Target Migration target. If this parameter is left empty, no modification will be made
+                     * 
                      */
                     MigrateTarget GetTarget() const;
 
                     /**
                      * 设置Migration target. If this parameter is left empty, no modification will be made
-                     * @param Target Migration target. If this parameter is left empty, no modification will be made
+                     * @param _target Migration target. If this parameter is left empty, no modification will be made
+                     * 
                      */
                     void SetTarget(const MigrateTarget& _target);
 
                     /**
                      * 判断参数 Target 是否已赋值
                      * @return Target 是否已赋值
+                     * 
                      */
                     bool TargetHasBeenSet() const;
 
                     /**
                      * 获取Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
                      * @return MigrateDBSet Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
+                     * 
                      */
                     std::vector<MigrateDB> GetMigrateDBSet() const;
 
                     /**
                      * 设置Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
-                     * @param MigrateDBSet Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
+                     * @param _migrateDBSet Database objects to be migrated. This parameter is not used for offline migration (SourceType=4 or SourceType=5). If it left empty, no modification will be made
+                     * 
                      */
                     void SetMigrateDBSet(const std::vector<MigrateDB>& _migrateDBSet);
 
                     /**
                      * 判断参数 MigrateDBSet 是否已赋值
                      * @return MigrateDBSet 是否已赋值
+                     * 
                      */
                     bool MigrateDBSetHasBeenSet() const;
 

@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Number of items per page
                      * @return Limit Number of items per page
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of items per page
-                     * @param Limit Number of items per page
+                     * @param _limit Number of items per page
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Page number
                      * @return Offset Page number
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Page number
-                     * @param Offset Page number
+                     * @param _offset Page number
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Source
                      * @return SourceChannel Source
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source
-                     * @param SourceChannel Source
+                     * @param _sourceChannel Source
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Search by name. The match criteria include user group name and user group ID.
                      * @return Keyword Search by name. The match criteria include user group name and user group ID.
+                     * 
                      */
                     std::string GetKeyword() const;
 
                     /**
                      * 设置Search by name. The match criteria include user group name and user group ID.
-                     * @param Keyword Search by name. The match criteria include user group name and user group ID.
+                     * @param _keyword Search by name. The match criteria include user group name and user group ID.
+                     * 
                      */
                     void SetKeyword(const std::string& _keyword);
 
                     /**
                      * 判断参数 Keyword 是否已赋值
                      * @return Keyword 是否已赋值
+                     * 
                      */
                     bool KeywordHasBeenSet() const;
 

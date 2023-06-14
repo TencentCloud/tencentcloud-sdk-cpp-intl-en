@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The URL.
                      * @return Url The URL.
+                     * 
                      */
                     std::string GetUrl() const;
 
                     /**
                      * 设置The URL.
-                     * @param Url The URL.
+                     * @param _url The URL.
+                     * 
                      */
                     void SetUrl(const std::string& _url);
 
                     /**
                      * 判断参数 Url 是否已赋值
                      * @return Url 是否已赋值
+                     * 
                      */
                     bool UrlHasBeenSet() const;
 
                     /**
                      * 获取Whether the URL uses HTTPS.
                      * @return Tls Whether the URL uses HTTPS.
+                     * 
                      */
                     bool GetTls() const;
 
                     /**
                      * 设置Whether the URL uses HTTPS.
-                     * @param Tls Whether the URL uses HTTPS.
+                     * @param _tls Whether the URL uses HTTPS.
+                     * 
                      */
                     void SetTls(const bool& _tls);
 
                     /**
                      * 判断参数 Tls 是否已赋值
                      * @return Tls 是否已赋值
+                     * 
                      */
                     bool TlsHasBeenSet() const;
 
                     /**
                      * 获取Creation time of the task.
                      * @return CreatedOn Creation time of the task.
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置Creation time of the task.
-                     * @param CreatedOn Creation time of the task.
+                     * @param _createdOn Creation time of the task.
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 
@@ -111,6 +120,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`100`: The task is running.</li>
 <li>`503`: The task failed./li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStatusCode() const;
 
@@ -120,17 +130,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`100`: The task is running.</li>
 <li>`503`: The task failed./li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StatusCode The task status. Values:
+                     * @param _statusCode The task status. Values:
 <li>`200`: The task completed.</li>
 <li>`100`: The task is running.</li>
 <li>`503`: The task failed./li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStatusCode(const int64_t& _statusCode);
 
                     /**
                      * 判断参数 StatusCode 是否已赋值
                      * @return StatusCode 是否已赋值
+                     * 
                      */
                     bool StatusCodeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UA The user agent.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUA() const;
 
                     /**
                      * 设置The user agent.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UA The user agent.
+                     * @param _uA The user agent.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUA(const std::string& _uA);
 
                     /**
                      * 判断参数 UA 是否已赋值
                      * @return UA 是否已赋值
+                     * 
                      */
                     bool UAHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Connectivity The network environment.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConnectivity() const;
 
                     /**
                      * 设置The network environment.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Connectivity The network environment.
+                     * @param _connectivity The network environment.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConnectivity(const std::string& _connectivity);
 
                     /**
                      * 判断参数 Connectivity 是否已赋值
                      * @return Connectivity 是否已赋值
+                     * 
                      */
                     bool ConnectivityHasBeenSet() const;
 
@@ -187,6 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`true`: Yes</li>
 <li>`false`: No</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetReachable() const;
 
@@ -195,16 +214,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`true`: Yes</li>
 <li>`false`: No</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Reachable Whether the URL is reachable. Values:
+                     * @param _reachable Whether the URL is reachable. Values:
 <li>`true`: Yes</li>
 <li>`false`: No</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReachable(const bool& _reachable);
 
                     /**
                      * 判断参数 Reachable 是否已赋值
                      * @return Reachable 是否已赋值
+                     * 
                      */
                     bool ReachableHasBeenSet() const;
 
@@ -217,6 +238,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`true`: Yes</li>
 <li>`false`: No</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetTimedOut() const;
 
@@ -225,16 +247,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`true`: Yes</li>
 <li>`false`: No</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TimedOut Whether the URL connection timed out. Values:
+                     * @param _timedOut Whether the URL connection timed out. Values:
 <li>`true`: Yes</li>
 <li>`false`: No</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTimedOut(const bool& _timedOut);
 
                     /**
                      * 判断参数 TimedOut 是否已赋值
                      * @return TimedOut 是否已赋值
+                     * 
                      */
                     bool TimedOutHasBeenSet() const;
 

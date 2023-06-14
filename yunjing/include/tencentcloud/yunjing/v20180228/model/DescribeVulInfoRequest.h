@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Vulnerability category ID.
                      * @return VulId Vulnerability category ID.
+                     * 
                      */
                     uint64_t GetVulId() const;
 
                     /**
                      * 设置Vulnerability category ID.
-                     * @param VulId Vulnerability category ID.
+                     * @param _vulId Vulnerability category ID.
+                     * 
                      */
                     void SetVulId(const uint64_t& _vulId);
 
                     /**
                      * 判断参数 VulId 是否已赋值
                      * @return VulId 是否已赋值
+                     * 
                      */
                     bool VulIdHasBeenSet() const;
 

@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique ID of media file.
                      * @return FileId Unique ID of media file.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
                     /**
                      * 获取The media playback URL.
                      * @return MediaUrl The media playback URL.
+                     * 
                      */
                     std::string GetMediaUrl() const;
 
                     /**
                      * 判断参数 MediaUrl 是否已赋值
                      * @return MediaUrl 是否已赋值
+                     * 
                      */
                     bool MediaUrlHasBeenSet() const;
 
                     /**
                      * 获取The thumbnail URL.
                      * @return CoverUrl The thumbnail URL.
+                     * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
                      * 判断参数 CoverUrl 是否已赋值
                      * @return CoverUrl 是否已赋值
+                     * 
                      */
                     bool CoverUrlHasBeenSet() const;
 

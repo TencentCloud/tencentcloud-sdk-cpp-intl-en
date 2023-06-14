@@ -46,126 +46,147 @@ namespace TencentCloud
                     /**
                      * 获取It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
                      * @return Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+                     * 
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
-                     * @param Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+                     * @param _order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
                     /**
                      * 获取It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
                      * @return Orderby It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
+                     * 
                      */
                     std::string GetOrderby() const;
 
                     /**
                      * 设置It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
-                     * @param Orderby It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
+                     * @param _orderby It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`, and `FunctionName`.
+                     * 
                      */
                     void SetOrderby(const std::string& _orderby);
 
                     /**
                      * 判断参数 Orderby 是否已赋值
                      * @return Orderby 是否已赋值
+                     * 
                      */
                     bool OrderbyHasBeenSet() const;
 
                     /**
                      * 获取Data offset. The default value is `0`.
                      * @return Offset Data offset. The default value is `0`.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Data offset. The default value is `0`.
-                     * @param Offset Data offset. The default value is `0`.
+                     * @param _offset Data offset. The default value is `0`.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Return data length. The default value is `20`.
                      * @return Limit Return data length. The default value is `20`.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Return data length. The default value is `20`.
-                     * @param Limit Return data length. The default value is `20`.
+                     * @param _limit Return data length. The default value is `20`.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取It specifies whether to support fuzzy matching for the function name.
                      * @return SearchKey It specifies whether to support fuzzy matching for the function name.
+                     * 
                      */
                     std::string GetSearchKey() const;
 
                     /**
                      * 设置It specifies whether to support fuzzy matching for the function name.
-                     * @param SearchKey It specifies whether to support fuzzy matching for the function name.
+                     * @param _searchKey It specifies whether to support fuzzy matching for the function name.
+                     * 
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
                     /**
                      * 判断参数 SearchKey 是否已赋值
                      * @return SearchKey 是否已赋值
+                     * 
                      */
                     bool SearchKeyHasBeenSet() const;
 
                     /**
                      * 获取Namespace
                      * @return Namespace Namespace
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置Namespace
-                     * @param Namespace Namespace
+                     * @param _namespace Namespace
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Function description. Fuzzy search is supported.
                      * @return Description Function description. Fuzzy search is supported.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Function description. Fuzzy search is supported.
-                     * @param Description Function description. Fuzzy search is supported.
+                     * @param _description Function description. Fuzzy search is supported.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -178,6 +199,7 @@ The maximum number of `Filters` for each request is 10, and that of `Filter.Valu
 - tag:tag-key - String - Required: No - Filtering criteria based on tag-key - value pairs. Replace `tag-key` with a specific tag-key.
 
 The maximum number of `Filters` for each request is 10, and that of `Filter.Values` is 5.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -186,16 +208,18 @@ The maximum number of `Filters` for each request is 10, and that of `Filter.Valu
 - tag:tag-key - String - Required: No - Filtering criteria based on tag-key - value pairs. Replace `tag-key` with a specific tag-key.
 
 The maximum number of `Filters` for each request is 10, and that of `Filter.Values` is 5.
-                     * @param Filters Filters
+                     * @param _filters Filters
 - tag:tag-key - String - Required: No - Filtering criteria based on tag-key - value pairs. Replace `tag-key` with a specific tag-key.
 
 The maximum number of `Filters` for each request is 10, and that of `Filter.Values` is 5.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

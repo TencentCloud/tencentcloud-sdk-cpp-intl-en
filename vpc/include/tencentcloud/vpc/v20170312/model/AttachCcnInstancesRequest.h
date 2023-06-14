@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取The CCN instance ID, such as `ccn-f49l6u0z`.
                      * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     std::string GetCcnId() const;
 
                     /**
                      * 设置The CCN instance ID, such as `ccn-f49l6u0z`.
-                     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * @param _ccnId The CCN instance ID, such as `ccn-f49l6u0z`.
+                     * 
                      */
                     void SetCcnId(const std::string& _ccnId);
 
                     /**
                      * 判断参数 CcnId 是否已赋值
                      * @return CcnId 是否已赋值
+                     * 
                      */
                     bool CcnIdHasBeenSet() const;
 
                     /**
                      * 获取List of associated network instances
                      * @return Instances List of associated network instances
+                     * 
                      */
                     std::vector<CcnInstance> GetInstances() const;
 
                     /**
                      * 设置List of associated network instances
-                     * @param Instances List of associated network instances
+                     * @param _instances List of associated network instances
+                     * 
                      */
                     void SetInstances(const std::vector<CcnInstance>& _instances);
 
                     /**
                      * 判断参数 Instances 是否已赋值
                      * @return Instances 是否已赋值
+                     * 
                      */
                     bool InstancesHasBeenSet() const;
 
                     /**
                      * 获取The UIN (root account) of the CCN. By default, the current account belongs to the UIN
                      * @return CcnUin The UIN (root account) of the CCN. By default, the current account belongs to the UIN
+                     * 
                      */
                     std::string GetCcnUin() const;
 
                     /**
                      * 设置The UIN (root account) of the CCN. By default, the current account belongs to the UIN
-                     * @param CcnUin The UIN (root account) of the CCN. By default, the current account belongs to the UIN
+                     * @param _ccnUin The UIN (root account) of the CCN. By default, the current account belongs to the UIN
+                     * 
                      */
                     void SetCcnUin(const std::string& _ccnUin);
 
                     /**
                      * 判断参数 CcnUin 是否已赋值
                      * @return CcnUin 是否已赋值
+                     * 
                      */
                     bool CcnUinHasBeenSet() const;
 

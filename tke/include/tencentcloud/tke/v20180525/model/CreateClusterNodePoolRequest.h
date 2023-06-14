@@ -49,252 +49,294 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterId Cluster ID
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * @param _clusterId Cluster ID
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
                      * @return AutoScalingGroupPara AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
+                     * 
                      */
                     std::string GetAutoScalingGroupPara() const;
 
                     /**
                      * 设置AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
-                     * @param AutoScalingGroupPara AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
+                     * @param _autoScalingGroupPara AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
+                     * 
                      */
                     void SetAutoScalingGroupPara(const std::string& _autoScalingGroupPara);
 
                     /**
                      * 判断参数 AutoScalingGroupPara 是否已赋值
                      * @return AutoScalingGroupPara 是否已赋值
+                     * 
                      */
                     bool AutoScalingGroupParaHasBeenSet() const;
 
                     /**
                      * 获取Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
                      * @return LaunchConfigurePara Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
+                     * 
                      */
                     std::string GetLaunchConfigurePara() const;
 
                     /**
                      * 设置Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
-                     * @param LaunchConfigurePara Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
+                     * @param _launchConfigurePara Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
+                     * 
                      */
                     void SetLaunchConfigurePara(const std::string& _launchConfigurePara);
 
                     /**
                      * 判断参数 LaunchConfigurePara 是否已赋值
                      * @return LaunchConfigurePara 是否已赋值
+                     * 
                      */
                     bool LaunchConfigureParaHasBeenSet() const;
 
                     /**
                      * 获取Sample parameters
                      * @return InstanceAdvancedSettings Sample parameters
+                     * 
                      */
                     InstanceAdvancedSettings GetInstanceAdvancedSettings() const;
 
                     /**
                      * 设置Sample parameters
-                     * @param InstanceAdvancedSettings Sample parameters
+                     * @param _instanceAdvancedSettings Sample parameters
+                     * 
                      */
                     void SetInstanceAdvancedSettings(const InstanceAdvancedSettings& _instanceAdvancedSettings);
 
                     /**
                      * 判断参数 InstanceAdvancedSettings 是否已赋值
                      * @return InstanceAdvancedSettings 是否已赋值
+                     * 
                      */
                     bool InstanceAdvancedSettingsHasBeenSet() const;
 
                     /**
                      * 获取Indicates whether to enable auto scaling
                      * @return EnableAutoscale Indicates whether to enable auto scaling
+                     * 
                      */
                     bool GetEnableAutoscale() const;
 
                     /**
                      * 设置Indicates whether to enable auto scaling
-                     * @param EnableAutoscale Indicates whether to enable auto scaling
+                     * @param _enableAutoscale Indicates whether to enable auto scaling
+                     * 
                      */
                     void SetEnableAutoscale(const bool& _enableAutoscale);
 
                     /**
                      * 判断参数 EnableAutoscale 是否已赋值
                      * @return EnableAutoscale 是否已赋值
+                     * 
                      */
                     bool EnableAutoscaleHasBeenSet() const;
 
                     /**
                      * 获取Node pool name
                      * @return Name Node pool name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Node pool name
-                     * @param Name Node pool name
+                     * @param _name Node pool name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Labels
                      * @return Labels Labels
+                     * 
                      */
                     std::vector<Label> GetLabels() const;
 
                     /**
                      * 设置Labels
-                     * @param Labels Labels
+                     * @param _labels Labels
+                     * 
                      */
                     void SetLabels(const std::vector<Label>& _labels);
 
                     /**
                      * 判断参数 Labels 是否已赋值
                      * @return Labels 是否已赋值
+                     * 
                      */
                     bool LabelsHasBeenSet() const;
 
                     /**
                      * 获取Taints
                      * @return Taints Taints
+                     * 
                      */
                     std::vector<Taint> GetTaints() const;
 
                     /**
                      * 设置Taints
-                     * @param Taints Taints
+                     * @param _taints Taints
+                     * 
                      */
                     void SetTaints(const std::vector<Taint>& _taints);
 
                     /**
                      * 判断参数 Taints 是否已赋值
                      * @return Taints 是否已赋值
+                     * 
                      */
                     bool TaintsHasBeenSet() const;
 
                     /**
                      * 获取Node pool runtime type and version
                      * @return ContainerRuntime Node pool runtime type and version
+                     * 
                      */
                     std::string GetContainerRuntime() const;
 
                     /**
                      * 设置Node pool runtime type and version
-                     * @param ContainerRuntime Node pool runtime type and version
+                     * @param _containerRuntime Node pool runtime type and version
+                     * 
                      */
                     void SetContainerRuntime(const std::string& _containerRuntime);
 
                     /**
                      * 判断参数 ContainerRuntime 是否已赋值
                      * @return ContainerRuntime 是否已赋值
+                     * 
                      */
                     bool ContainerRuntimeHasBeenSet() const;
 
                     /**
                      * 获取Runtime version
                      * @return RuntimeVersion Runtime version
+                     * 
                      */
                     std::string GetRuntimeVersion() const;
 
                     /**
                      * 设置Runtime version
-                     * @param RuntimeVersion Runtime version
+                     * @param _runtimeVersion Runtime version
+                     * 
                      */
                     void SetRuntimeVersion(const std::string& _runtimeVersion);
 
                     /**
                      * 判断参数 RuntimeVersion 是否已赋值
                      * @return RuntimeVersion 是否已赋值
+                     * 
                      */
                     bool RuntimeVersionHasBeenSet() const;
 
                     /**
                      * 获取Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
                      * @return NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
+                     * 
                      */
                     std::string GetNodePoolOs() const;
 
                     /**
                      * 设置Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
-                     * @param NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
+                     * @param _nodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
+                     * 
                      */
                     void SetNodePoolOs(const std::string& _nodePoolOs);
 
                     /**
                      * 判断参数 NodePoolOs 是否已赋值
                      * @return NodePoolOs 是否已赋值
+                     * 
                      */
                     bool NodePoolOsHasBeenSet() const;
 
                     /**
                      * 获取Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
                      * @return OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+                     * 
                      */
                     std::string GetOsCustomizeType() const;
 
                     /**
                      * 设置Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
-                     * @param OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+                     * @param _osCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+                     * 
                      */
                     void SetOsCustomizeType(const std::string& _osCustomizeType);
 
                     /**
                      * 判断参数 OsCustomizeType 是否已赋值
                      * @return OsCustomizeType 是否已赋值
+                     * 
                      */
                     bool OsCustomizeTypeHasBeenSet() const;
 
                     /**
                      * 获取Resource tag
                      * @return Tags Resource tag
+                     * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
                      * 设置Resource tag
-                     * @param Tags Resource tag
+                     * @param _tags Resource tag
+                     * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 
                     /**
                      * 获取Whether Deletion Protection is enabled
                      * @return DeletionProtection Whether Deletion Protection is enabled
+                     * 
                      */
                     bool GetDeletionProtection() const;
 
                     /**
                      * 设置Whether Deletion Protection is enabled
-                     * @param DeletionProtection Whether Deletion Protection is enabled
+                     * @param _deletionProtection Whether Deletion Protection is enabled
+                     * 
                      */
                     void SetDeletionProtection(const bool& _deletionProtection);
 
                     /**
                      * 判断参数 DeletionProtection 是否已赋值
                      * @return DeletionProtection 是否已赋值
+                     * 
                      */
                     bool DeletionProtectionHasBeenSet() const;
 

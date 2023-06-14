@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Private network IP type, which can be `cvm` or `eni`.
                      * @return Type Private network IP type, which can be `cvm` or `eni`.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Private network IP type, which can be `cvm` or `eni`.
-                     * @param Type Private network IP type, which can be `cvm` or `eni`.
+                     * @param _type Private network IP type, which can be `cvm` or `eni`.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Private network IP of the real server.
                      * @return PrivateIp Private network IP of the real server.
+                     * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
                      * 设置Private network IP of the real server.
-                     * @param PrivateIp Private network IP of the real server.
+                     * @param _privateIp Private network IP of the real server.
+                     * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
 
                     /**
                      * 判断参数 PrivateIp 是否已赋值
                      * @return PrivateIp 是否已赋值
+                     * 
                      */
                     bool PrivateIpHasBeenSet() const;
 
                     /**
                      * 获取Port bound to the real server.
                      * @return Port Port bound to the real server.
+                     * 
                      */
                     int64_t GetPort() const;
 
                     /**
                      * 设置Port bound to the real server.
-                     * @param Port Port bound to the real server.
+                     * @param _port Port bound to the real server.
+                     * 
                      */
                     void SetPort(const int64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -105,20 +114,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return VpcId VPC ID of the real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetVpcId() const;
 
                     /**
                      * 设置VPC ID of the real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param VpcId VPC ID of the real server.
+                     * @param _vpcId VPC ID of the real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVpcId(const int64_t& _vpcId);
 
                     /**
                      * 判断参数 VpcId 是否已赋值
                      * @return VpcId 是否已赋值
+                     * 
                      */
                     bool VpcIdHasBeenSet() const;
 
@@ -127,20 +139,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Weight Weight of the real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetWeight() const;
 
                     /**
                      * 设置Weight of the real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Weight Weight of the real server.
+                     * @param _weight Weight of the real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetWeight(const int64_t& _weight);
 
                     /**
                      * 判断参数 Weight 是否已赋值
                      * @return Weight 是否已赋值
+                     * 
                      */
                     bool WeightHasBeenSet() const;
 

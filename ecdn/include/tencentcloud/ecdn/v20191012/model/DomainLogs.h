@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Log start time.
                      * @return StartTime Log start time.
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Log start time.
-                     * @param StartTime Log start time.
+                     * @param _startTime Log start time.
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Log end time.
                      * @return EndTime Log end time.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Log end time.
-                     * @param EndTime Log end time.
+                     * @param _endTime Log end time.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Log download path.
                      * @return LogPath Log download path.
+                     * 
                      */
                     std::string GetLogPath() const;
 
                     /**
                      * 设置Log download path.
-                     * @param LogPath Log download path.
+                     * @param _logPath Log download path.
+                     * 
                      */
                     void SetLogPath(const std::string& _logPath);
 
                     /**
                      * 判断参数 LogPath 是否已赋值
                      * @return LogPath 是否已赋值
+                     * 
                      */
                     bool LogPathHasBeenSet() const;
 

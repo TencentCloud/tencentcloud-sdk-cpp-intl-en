@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Domain ID
                      * @return DomainId Domain ID
+                     * 
                      */
                     uint64_t GetDomainId() const;
 
                     /**
                      * 设置Domain ID
-                     * @param DomainId Domain ID
+                     * @param _domainId Domain ID
+                     * 
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
                     /**
                      * 判断参数 DomainId 是否已赋值
                      * @return DomainId 是否已赋值
+                     * 
                      */
                     bool DomainIdHasBeenSet() const;
 
                     /**
                      * 获取Domain unlock code
                      * @return LockCode Domain unlock code
+                     * 
                      */
                     std::string GetLockCode() const;
 
                     /**
                      * 设置Domain unlock code
-                     * @param LockCode Domain unlock code
+                     * @param _lockCode Domain unlock code
+                     * 
                      */
                     void SetLockCode(const std::string& _lockCode);
 
                     /**
                      * 判断参数 LockCode 是否已赋值
                      * @return LockCode 是否已赋值
+                     * 
                      */
                     bool LockCodeHasBeenSet() const;
 
                     /**
                      * 获取Automatic unlock date of the domain
                      * @return LockEnd Automatic unlock date of the domain
+                     * 
                      */
                     std::string GetLockEnd() const;
 
                     /**
                      * 设置Automatic unlock date of the domain
-                     * @param LockEnd Automatic unlock date of the domain
+                     * @param _lockEnd Automatic unlock date of the domain
+                     * 
                      */
                     void SetLockEnd(const std::string& _lockEnd);
 
                     /**
                      * 判断参数 LockEnd 是否已赋值
                      * @return LockEnd 是否已赋值
+                     * 
                      */
                     bool LockEndHasBeenSet() const;
 

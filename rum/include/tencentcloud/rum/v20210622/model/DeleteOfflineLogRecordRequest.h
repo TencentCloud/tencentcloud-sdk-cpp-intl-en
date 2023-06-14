@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique project key for reporting
                      * @return ProjectKey Unique project key for reporting
+                     * 
                      */
                     std::string GetProjectKey() const;
 
                     /**
                      * 设置Unique project key for reporting
-                     * @param ProjectKey Unique project key for reporting
+                     * @param _projectKey Unique project key for reporting
+                     * 
                      */
                     void SetProjectKey(const std::string& _projectKey);
 
                     /**
                      * 判断参数 ProjectKey 是否已赋值
                      * @return ProjectKey 是否已赋值
+                     * 
                      */
                     bool ProjectKeyHasBeenSet() const;
 
                     /**
                      * 获取Offline log file ID
                      * @return FileID Offline log file ID
+                     * 
                      */
                     std::string GetFileID() const;
 
                     /**
                      * 设置Offline log file ID
-                     * @param FileID Offline log file ID
+                     * @param _fileID Offline log file ID
+                     * 
                      */
                     void SetFileID(const std::string& _fileID);
 
                     /**
                      * 判断参数 FileID 是否已赋值
                      * @return FileID 是否已赋值
+                     * 
                      */
                     bool FileIDHasBeenSet() const;
 

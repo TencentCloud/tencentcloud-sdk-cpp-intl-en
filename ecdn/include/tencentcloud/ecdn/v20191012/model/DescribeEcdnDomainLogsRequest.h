@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Domain name to be queried.
                      * @return Domain Domain name to be queried.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置Domain name to be queried.
-                     * @param Domain Domain name to be queried.
+                     * @param _domain Domain name to be queried.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Log start time, such as 2019-10-01 00:00:00
                      * @return StartTime Log start time, such as 2019-10-01 00:00:00
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Log start time, such as 2019-10-01 00:00:00
-                     * @param StartTime Log start time, such as 2019-10-01 00:00:00
+                     * @param _startTime Log start time, such as 2019-10-01 00:00:00
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取Log end time, such as 2019-10-02 00:00:00. Only logs for the last 30 days can be queried.
                      * @return EndTime Log end time, such as 2019-10-02 00:00:00. Only logs for the last 30 days can be queried.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置Log end time, such as 2019-10-02 00:00:00. Only logs for the last 30 days can be queried.
-                     * @param EndTime Log end time, such as 2019-10-02 00:00:00. Only logs for the last 30 days can be queried.
+                     * @param _endTime Log end time, such as 2019-10-02 00:00:00. Only logs for the last 30 days can be queried.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Pagination offset for log link list. Default value: 0.
                      * @return Offset Pagination offset for log link list. Default value: 0.
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Pagination offset for log link list. Default value: 0.
-                     * @param Offset Pagination offset for log link list. Default value: 0.
+                     * @param _offset Pagination offset for log link list. Default value: 0.
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of log links per page. Default value: 100. Maximum value: 1000.
                      * @return Limit Number of log links per page. Default value: 100. Maximum value: 1000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of log links per page. Default value: 100. Maximum value: 1000.
-                     * @param Limit Number of log links per page. Default value: 100. Maximum value: 1000.
+                     * @param _limit Number of log links per page. Default value: 100. Maximum value: 1000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

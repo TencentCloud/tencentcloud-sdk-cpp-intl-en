@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible launch configurations.
                      * @return TotalCount Number of eligible launch configurations.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of launch configuration details.
                      * @return LaunchConfigurationSet List of launch configuration details.
+                     * 
                      */
                     std::vector<LaunchConfiguration> GetLaunchConfigurationSet() const;
 
                     /**
                      * 判断参数 LaunchConfigurationSet 是否已赋值
                      * @return LaunchConfigurationSet 是否已赋值
+                     * 
                      */
                     bool LaunchConfigurationSetHasBeenSet() const;
 

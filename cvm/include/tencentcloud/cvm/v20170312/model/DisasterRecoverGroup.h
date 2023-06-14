@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of a spread placement group.
                      * @return DisasterRecoverGroupId ID of a spread placement group.
+                     * 
                      */
                     std::string GetDisasterRecoverGroupId() const;
 
                     /**
                      * 设置ID of a spread placement group.
-                     * @param DisasterRecoverGroupId ID of a spread placement group.
+                     * @param _disasterRecoverGroupId ID of a spread placement group.
+                     * 
                      */
                     void SetDisasterRecoverGroupId(const std::string& _disasterRecoverGroupId);
 
                     /**
                      * 判断参数 DisasterRecoverGroupId 是否已赋值
                      * @return DisasterRecoverGroupId 是否已赋值
+                     * 
                      */
                     bool DisasterRecoverGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Name of a spread placement group, which must be 1-60 characters long.
                      * @return Name Name of a spread placement group, which must be 1-60 characters long.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of a spread placement group, which must be 1-60 characters long.
-                     * @param Name Name of a spread placement group, which must be 1-60 characters long.
+                     * @param _name Name of a spread placement group, which must be 1-60 characters long.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
                      * @return Type Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
-                     * @param Type Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+                     * @param _type Type of a spread placement group. Valid values: <br><li>HOST: physical machine <br><li>SW: switch <br><li>RACK: rack.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of CVMs that can be hosted in a spread placement group.
                      * @return CvmQuotaTotal The maximum number of CVMs that can be hosted in a spread placement group.
+                     * 
                      */
                     int64_t GetCvmQuotaTotal() const;
 
                     /**
                      * 设置The maximum number of CVMs that can be hosted in a spread placement group.
-                     * @param CvmQuotaTotal The maximum number of CVMs that can be hosted in a spread placement group.
+                     * @param _cvmQuotaTotal The maximum number of CVMs that can be hosted in a spread placement group.
+                     * 
                      */
                     void SetCvmQuotaTotal(const int64_t& _cvmQuotaTotal);
 
                     /**
                      * 判断参数 CvmQuotaTotal 是否已赋值
                      * @return CvmQuotaTotal 是否已赋值
+                     * 
                      */
                     bool CvmQuotaTotalHasBeenSet() const;
 
                     /**
                      * 获取The current number of CVMs in a spread placement group.
                      * @return CurrentNum The current number of CVMs in a spread placement group.
+                     * 
                      */
                     int64_t GetCurrentNum() const;
 
                     /**
                      * 设置The current number of CVMs in a spread placement group.
-                     * @param CurrentNum The current number of CVMs in a spread placement group.
+                     * @param _currentNum The current number of CVMs in a spread placement group.
+                     * 
                      */
                     void SetCurrentNum(const int64_t& _currentNum);
 
                     /**
                      * 判断参数 CurrentNum 是否已赋值
                      * @return CurrentNum 是否已赋值
+                     * 
                      */
                     bool CurrentNumHasBeenSet() const;
 
@@ -141,20 +156,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceIds The list of CVM IDs in a spread placement group.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置The list of CVM IDs in a spread placement group.
 Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceIds The list of CVM IDs in a spread placement group.
+                     * @param _instanceIds The list of CVM IDs in a spread placement group.
 Note: This field may return null, indicating that no valid value was found.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 
@@ -163,20 +181,23 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value is found.
                      * @return CreateTime Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
-                     * @param CreateTime Creation time of a spread placement group.
+                     * @param _createTime Creation time of a spread placement group.
 Note: This field may return null, indicating that no valid value is found.
+                     * 
                      */
                     void SetCreateTime(const std::string& _createTime);
 
                     /**
                      * 判断参数 CreateTime 是否已赋值
                      * @return CreateTime 是否已赋值
+                     * 
                      */
                     bool CreateTimeHasBeenSet() const;
 

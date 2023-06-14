@@ -46,18 +46,21 @@ namespace TencentCloud
                     /**
                      * 获取Forwarding rule ID
                      * @return RuleId Forwarding rule ID
+                     * 
                      */
                     std::string GetRuleId() const;
 
                     /**
                      * 设置Forwarding rule ID
-                     * @param RuleId Forwarding rule ID
+                     * @param _ruleId Forwarding rule ID
+                     * 
                      */
                     void SetRuleId(const std::string& _ruleId);
 
                     /**
                      * 判断参数 RuleId 是否已赋值
                      * @return RuleId 是否已赋值
+                     * 
                      */
                     bool RuleIdHasBeenSet() const;
 
@@ -70,6 +73,7 @@ If the origin server scheduling policy type of this rule is weighted round robin
 If there are origin servers bound already, they will be replaced by this new origin server list.
 If this field is empty, it indicates unbinding all origin servers of this rule.
 If the origin server scheduling policy type of this rule is weighted round robin, you need to enter `RealServerWeight`, i.e., the origin server weight. If this field is left empty or for other scheduling types, the default origin server weight is 1.
+                     * 
                      */
                     std::vector<RealServerBindSetReq> GetRealServerBindSet() const;
 
@@ -78,16 +82,18 @@ If the origin server scheduling policy type of this rule is weighted round robin
 If there are origin servers bound already, they will be replaced by this new origin server list.
 If this field is empty, it indicates unbinding all origin servers of this rule.
 If the origin server scheduling policy type of this rule is weighted round robin, you need to enter `RealServerWeight`, i.e., the origin server weight. If this field is left empty or for other scheduling types, the default origin server weight is 1.
-                     * @param RealServerBindSet An information list of the origin servers to bind.
+                     * @param _realServerBindSet An information list of the origin servers to bind.
 If there are origin servers bound already, they will be replaced by this new origin server list.
 If this field is empty, it indicates unbinding all origin servers of this rule.
 If the origin server scheduling policy type of this rule is weighted round robin, you need to enter `RealServerWeight`, i.e., the origin server weight. If this field is left empty or for other scheduling types, the default origin server weight is 1.
+                     * 
                      */
                     void SetRealServerBindSet(const std::vector<RealServerBindSetReq>& _realServerBindSet);
 
                     /**
                      * 判断参数 RealServerBindSet 是否已赋值
                      * @return RealServerBindSet 是否已赋值
+                     * 
                      */
                     bool RealServerBindSetHasBeenSet() const;
 

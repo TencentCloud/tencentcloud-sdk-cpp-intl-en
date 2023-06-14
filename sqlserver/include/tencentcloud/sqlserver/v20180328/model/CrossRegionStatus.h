@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The target region of cross-region backup
                      * @return CrossRegion The target region of cross-region backup
+                     * 
                      */
                     std::string GetCrossRegion() const;
 
                     /**
                      * 设置The target region of cross-region backup
-                     * @param CrossRegion The target region of cross-region backup
+                     * @param _crossRegion The target region of cross-region backup
+                     * 
                      */
                     void SetCrossRegion(const std::string& _crossRegion);
 
                     /**
                      * 判断参数 CrossRegion 是否已赋值
                      * @return CrossRegion 是否已赋值
+                     * 
                      */
                     bool CrossRegionHasBeenSet() const;
 
                     /**
                      * 获取Synchronization status of cross-region backup. Valid values: `0` (creating), `1` (succeeded), `2`: (failed), `4` (syncing)
                      * @return CrossStatus Synchronization status of cross-region backup. Valid values: `0` (creating), `1` (succeeded), `2`: (failed), `4` (syncing)
+                     * 
                      */
                     int64_t GetCrossStatus() const;
 
                     /**
                      * 设置Synchronization status of cross-region backup. Valid values: `0` (creating), `1` (succeeded), `2`: (failed), `4` (syncing)
-                     * @param CrossStatus Synchronization status of cross-region backup. Valid values: `0` (creating), `1` (succeeded), `2`: (failed), `4` (syncing)
+                     * @param _crossStatus Synchronization status of cross-region backup. Valid values: `0` (creating), `1` (succeeded), `2`: (failed), `4` (syncing)
+                     * 
                      */
                     void SetCrossStatus(const int64_t& _crossStatus);
 
                     /**
                      * 判断参数 CrossStatus 是否已赋值
                      * @return CrossStatus 是否已赋值
+                     * 
                      */
                     bool CrossStatusHasBeenSet() const;
 

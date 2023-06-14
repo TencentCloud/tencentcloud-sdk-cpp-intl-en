@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Async task ID. The task status can be queried through the `DescribeFlow` API.
                      * @return FlowIds Async task ID. The task status can be queried through the `DescribeFlow` API.
+                     * 
                      */
                     std::vector<uint64_t> GetFlowIds() const;
 
                     /**
                      * 判断参数 FlowIds 是否已赋值
                      * @return FlowIds 是否已赋值
+                     * 
                      */
                     bool FlowIdsHasBeenSet() const;
 
                     /**
                      * 获取Passed through from input parameters.
                      * @return InstanceIds Passed through from input parameters.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

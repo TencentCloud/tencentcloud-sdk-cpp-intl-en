@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Status Operation type
 `online`: Nodes activated
 `offline`: Nodes deactivated
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Operation type
 `online`: Nodes activated
 `offline`: Nodes deactivated
-                     * @param Status Operation type
+                     * @param _status Operation type
 `online`: Nodes activated
 `offline`: Nodes deactivated
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -79,6 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return Datetime Operation time corresponding to operation type
 If its value is `null`, it means there is no status change record.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetDatetime() const;
 
@@ -86,15 +90,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * 设置Operation time corresponding to operation type
 If its value is `null`, it means there is no status change record.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Datetime Operation time corresponding to operation type
+                     * @param _datetime Operation time corresponding to operation type
 If its value is `null`, it means there is no status change record.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetDatetime(const std::string& _datetime);
 
                     /**
                      * 判断参数 Datetime 是否已赋值
                      * @return Datetime 是否已赋值
+                     * 
                      */
                     bool DatetimeHasBeenSet() const;
 

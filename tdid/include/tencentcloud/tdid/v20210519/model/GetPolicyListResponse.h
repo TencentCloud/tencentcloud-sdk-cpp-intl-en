@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取A list of disclosure policies.
                      * @return PolicyDataList A list of disclosure policies.
+                     * 
                      */
                     std::vector<Policy> GetPolicyDataList() const;
 
                     /**
                      * 判断参数 PolicyDataList 是否已赋值
                      * @return PolicyDataList 是否已赋值
+                     * 
                      */
                     bool PolicyDataListHasBeenSet() const;
 
                     /**
                      * 获取The total number of records.
                      * @return AllCount The total number of records.
+                     * 
                      */
                     int64_t GetAllCount() const;
 
                     /**
                      * 判断参数 AllCount 是否已赋值
                      * @return AllCount 是否已赋值
+                     * 
                      */
                     bool AllCountHasBeenSet() const;
 

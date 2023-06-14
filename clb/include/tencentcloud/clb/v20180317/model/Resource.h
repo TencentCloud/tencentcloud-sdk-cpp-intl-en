@@ -50,36 +50,42 @@ namespace TencentCloud
                     /**
                      * 获取Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
                      * @return Type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+                     * 
                      */
                     std::vector<std::string> GetType() const;
 
                     /**
                      * 设置Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
-                     * @param Type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+                     * @param _type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+                     * 
                      */
                     void SetType(const std::vector<std::string>& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
                      * @return Isp ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+                     * 
                      */
                     std::string GetIsp() const;
 
                     /**
                      * 设置ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
-                     * @param Isp ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+                     * @param _isp ISP information, such as `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
+                     * 
                      */
                     void SetIsp(const std::string& _isp);
 
                     /**
                      * 判断参数 Isp 是否已赋值
                      * @return Isp 是否已赋值
+                     * 
                      */
                     bool IspHasBeenSet() const;
 
@@ -88,20 +94,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return AvailabilitySet Available resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ResourceAvailability> GetAvailabilitySet() const;
 
                     /**
                      * 设置Available resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param AvailabilitySet Available resources
+                     * @param _availabilitySet Available resources
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAvailabilitySet(const std::vector<ResourceAvailability>& _availabilitySet);
 
                     /**
                      * 判断参数 AvailabilitySet 是否已赋值
                      * @return AvailabilitySet 是否已赋值
+                     * 
                      */
                     bool AvailabilitySetHasBeenSet() const;
 

@@ -58,6 +58,7 @@ In normal cases, you only need to use `Score` as the overall quality standard sc
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
 We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
@@ -67,17 +68,19 @@ In normal cases, you only need to use `Score` as the overall quality standard sc
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
 We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Score Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
+                     * @param _score Quality score. Value range: [0,100]. It comprehensively evaluates whether the image quality is suitable for face recognition; the higher the score, the higher the quality. 
 In normal cases, you only need to use `Score` as the overall quality standard score. Specific item scores such as `Sharpness`, `Brightness`, `Completeness` are for reference only.
 Reference range: [0,40]: poor; [40,60]: fine; [60,80]: good; [80,100]: excellent. 
 We recommend selecting images with a score above 70 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -90,6 +93,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
 We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetSharpness() const;
 
@@ -98,16 +102,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
 We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Sharpness Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
+                     * @param _sharpness Sharpness. Value range: [0,100]. It evaluates the sharpness of the image. The higher the score, the sharper the image. 
 Reference range: [0,40]: very blurry; [40,60]: blurry; [60,80]: fine; [80,100]: sharp. 
 We recommend selecting images with a score above 80 for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSharpness(const int64_t& _sharpness);
 
                     /**
                      * 判断参数 Sharpness 是否已赋值
                      * @return Sharpness 是否已赋值
+                     * 
                      */
                     bool SharpnessHasBeenSet() const;
 
@@ -120,6 +126,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
 We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetBrightness() const;
 
@@ -128,16 +135,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
 We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Brightness Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
+                     * @param _brightness Brightness. Value range: [0,100]. The brighter the image, the higher the score. 
 Reference range: [0,30]: dark; [30,70]: normal; [70,100]: bright. 
 We recommend selecting images in the [30,70] range for adding faces.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetBrightness(const int64_t& _brightness);
 
                     /**
                      * 判断参数 Brightness 是否已赋值
                      * @return Brightness 是否已赋值
+                     * 
                      */
                     bool BrightnessHasBeenSet() const;
 
@@ -146,20 +155,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Completeness Completeness of facial features, which assesses the completeness of the eyebrows, eyes, nose, cheeks, mouth, and chin.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FaceQualityCompleteness GetCompleteness() const;
 
                     /**
                      * 设置Completeness of facial features, which assesses the completeness of the eyebrows, eyes, nose, cheeks, mouth, and chin.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Completeness Completeness of facial features, which assesses the completeness of the eyebrows, eyes, nose, cheeks, mouth, and chin.
+                     * @param _completeness Completeness of facial features, which assesses the completeness of the eyebrows, eyes, nose, cheeks, mouth, and chin.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompleteness(const FaceQualityCompleteness& _completeness);
 
                     /**
                      * 判断参数 Completeness 是否已赋值
                      * @return Completeness 是否已赋值
+                     * 
                      */
                     bool CompletenessHasBeenSet() const;
 

@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of repository IDs
                      * @return Id List of repository IDs
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置List of repository IDs
-                     * @param Id List of repository IDs
+                     * @param _id List of repository IDs
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 

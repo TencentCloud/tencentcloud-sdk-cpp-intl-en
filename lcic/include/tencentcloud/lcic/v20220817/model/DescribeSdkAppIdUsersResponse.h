@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The total number of users.
                      * @return Total The total number of users.
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
                     /**
                      * 获取The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Users The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<UserInfo> GetUsers() const;
 
                     /**
                      * 判断参数 Users 是否已赋值
                      * @return Users 是否已赋值
+                     * 
                      */
                     bool UsersHasBeenSet() const;
 

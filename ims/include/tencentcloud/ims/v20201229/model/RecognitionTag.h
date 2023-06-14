@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Name Tag name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Tag name
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Name Tag name
+                     * @param _name Tag name
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -74,20 +77,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Score Confidence score. Value: 1 to 100. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetScore() const;
 
                     /**
                      * 设置Confidence score. Value: 1 to 100. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Score Confidence score. Value: 1 to 100. 
+                     * @param _score Confidence score. Value: 1 to 100. 
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetScore(const int64_t& _score);
 
                     /**
                      * 判断参数 Score 是否已赋值
                      * @return Score 是否已赋值
+                     * 
                      */
                     bool ScoreHasBeenSet() const;
 
@@ -96,20 +102,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Location Location information. It returns 0 if there is not location information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     Location GetLocation() const;
 
                     /**
                      * 设置Location information. It returns 0 if there is not location information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Location Location information. It returns 0 if there is not location information.
+                     * @param _location Location information. It returns 0 if there is not location information.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLocation(const Location& _location);
 
                     /**
                      * 判断参数 Location 是否已赋值
                      * @return Location 是否已赋值
+                     * 
                      */
                     bool LocationHasBeenSet() const;
 

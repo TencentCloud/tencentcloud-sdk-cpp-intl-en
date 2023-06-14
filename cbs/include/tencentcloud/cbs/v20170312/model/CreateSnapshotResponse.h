@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the new snapshot.
                      * @return SnapshotId ID of the new snapshot.
+                     * 
                      */
                     std::string GetSnapshotId() const;
 
                     /**
                      * 判断参数 SnapshotId 是否已赋值
                      * @return SnapshotId 是否已赋值
+                     * 
                      */
                     bool SnapshotIdHasBeenSet() const;
 

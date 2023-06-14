@@ -47,216 +47,252 @@ namespace TencentCloud
                     /**
                      * 获取Cluster ID
                      * @return ClusterID Cluster ID
+                     * 
                      */
                     std::string GetClusterID() const;
 
                     /**
                      * 设置Cluster ID
-                     * @param ClusterID Cluster ID
+                     * @param _clusterID Cluster ID
+                     * 
                      */
                     void SetClusterID(const std::string& _clusterID);
 
                     /**
                      * 判断参数 ClusterID 是否已赋值
                      * @return ClusterID 是否已赋值
+                     * 
                      */
                     bool ClusterIDHasBeenSet() const;
 
                     /**
                      * 获取Module ID
                      * @return ModuleId Module ID
+                     * 
                      */
                     std::string GetModuleId() const;
 
                     /**
                      * 设置Module ID
-                     * @param ModuleId Module ID
+                     * @param _moduleId Module ID
+                     * 
                      */
                     void SetModuleId(const std::string& _moduleId);
 
                     /**
                      * 判断参数 ModuleId 是否已赋值
                      * @return ModuleId 是否已赋值
+                     * 
                      */
                     bool ModuleIdHasBeenSet() const;
 
                     /**
                      * 获取Instance AZ, number of instances and ISP
                      * @return ZoneInstanceCountISPSet Instance AZ, number of instances and ISP
+                     * 
                      */
                     std::vector<ECMZoneInstanceCountISP> GetZoneInstanceCountISPSet() const;
 
                     /**
                      * 设置Instance AZ, number of instances and ISP
-                     * @param ZoneInstanceCountISPSet Instance AZ, number of instances and ISP
+                     * @param _zoneInstanceCountISPSet Instance AZ, number of instances and ISP
+                     * 
                      */
                     void SetZoneInstanceCountISPSet(const std::vector<ECMZoneInstanceCountISP>& _zoneInstanceCountISPSet);
 
                     /**
                      * 判断参数 ZoneInstanceCountISPSet 是否已赋值
                      * @return ZoneInstanceCountISPSet 是否已赋值
+                     * 
                      */
                     bool ZoneInstanceCountISPSetHasBeenSet() const;
 
                     /**
                      * 获取Password
                      * @return Password Password
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password
-                     * @param Password Password
+                     * @param _password Password
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Public network bandwidth
                      * @return InternetMaxBandwidthOut Public network bandwidth
+                     * 
                      */
                     int64_t GetInternetMaxBandwidthOut() const;
 
                     /**
                      * 设置Public network bandwidth
-                     * @param InternetMaxBandwidthOut Public network bandwidth
+                     * @param _internetMaxBandwidthOut Public network bandwidth
+                     * 
                      */
                     void SetInternetMaxBandwidthOut(const int64_t& _internetMaxBandwidthOut);
 
                     /**
                      * 判断参数 InternetMaxBandwidthOut 是否已赋值
                      * @return InternetMaxBandwidthOut 是否已赋值
+                     * 
                      */
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
                      * 获取Image ID
                      * @return ImageId Image ID
+                     * 
                      */
                     std::string GetImageId() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageId Image ID
+                     * @param _imageId Image ID
+                     * 
                      */
                     void SetImageId(const std::string& _imageId);
 
                     /**
                      * 判断参数 ImageId 是否已赋值
                      * @return ImageId 是否已赋值
+                     * 
                      */
                     bool ImageIdHasBeenSet() const;
 
                     /**
                      * 获取Instance name
                      * @return InstanceName Instance name
+                     * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-                     * @param InstanceName Instance name
+                     * @param _instanceName Instance name
+                     * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
                     /**
                      * 判断参数 InstanceName 是否已赋值
                      * @return InstanceName 是否已赋值
+                     * 
                      */
                     bool InstanceNameHasBeenSet() const;
 
                     /**
                      * 获取Host name
                      * @return HostName Host name
+                     * 
                      */
                     std::string GetHostName() const;
 
                     /**
                      * 设置Host name
-                     * @param HostName Host name
+                     * @param _hostName Host name
+                     * 
                      */
                     void SetHostName(const std::string& _hostName);
 
                     /**
                      * 判断参数 HostName 是否已赋值
                      * @return HostName 是否已赋值
+                     * 
                      */
                     bool HostNameHasBeenSet() const;
 
                     /**
                      * 获取Enhanced service (including CWP and Cloud Monitoring)
                      * @return EnhancedService Enhanced service (including CWP and Cloud Monitoring)
+                     * 
                      */
                     ECMEnhancedService GetEnhancedService() const;
 
                     /**
                      * 设置Enhanced service (including CWP and Cloud Monitoring)
-                     * @param EnhancedService Enhanced service (including CWP and Cloud Monitoring)
+                     * @param _enhancedService Enhanced service (including CWP and Cloud Monitoring)
+                     * 
                      */
                     void SetEnhancedService(const ECMEnhancedService& _enhancedService);
 
                     /**
                      * 判断参数 EnhancedService 是否已赋值
                      * @return EnhancedService 是否已赋值
+                     * 
                      */
                     bool EnhancedServiceHasBeenSet() const;
 
                     /**
                      * 获取Custom script
                      * @return UserData Custom script
+                     * 
                      */
                     std::string GetUserData() const;
 
                     /**
                      * 设置Custom script
-                     * @param UserData Custom script
+                     * @param _userData Custom script
+                     * 
                      */
                     void SetUserData(const std::string& _userData);
 
                     /**
                      * 判断参数 UserData 是否已赋值
                      * @return UserData 是否已赋值
+                     * 
                      */
                     bool UserDataHasBeenSet() const;
 
                     /**
                      * 获取Instance extension information
                      * @return External Instance extension information
+                     * 
                      */
                     std::string GetExternal() const;
 
                     /**
                      * 设置Instance extension information
-                     * @param External Instance extension information
+                     * @param _external Instance extension information
+                     * 
                      */
                     void SetExternal(const std::string& _external);
 
                     /**
                      * 判断参数 External 是否已赋值
                      * @return External 是否已赋值
+                     * 
                      */
                     bool ExternalHasBeenSet() const;
 
                     /**
                      * 获取Security group of the instance
                      * @return SecurityGroupIds Security group of the instance
+                     * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
                      * 设置Security group of the instance
-                     * @param SecurityGroupIds Security group of the instance
+                     * @param _securityGroupIds Security group of the instance
+                     * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
                     /**
                      * 判断参数 SecurityGroupIds 是否已赋值
                      * @return SecurityGroupIds 是否已赋值
+                     * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 

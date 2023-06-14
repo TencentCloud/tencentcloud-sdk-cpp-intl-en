@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取Ingress rule configuration
                      * @return Ingress Ingress rule configuration
+                     * 
                      */
                     IngressInfo GetIngress() const;
 
                     /**
                      * 设置Ingress rule configuration
-                     * @param Ingress Ingress rule configuration
+                     * @param _ingress Ingress rule configuration
+                     * 
                      */
                     void SetIngress(const IngressInfo& _ingress);
 
                     /**
                      * 判断参数 Ingress 是否已赋值
                      * @return Ingress 是否已赋值
+                     * 
                      */
                     bool IngressHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 

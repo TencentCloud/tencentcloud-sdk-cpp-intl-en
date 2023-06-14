@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Invitation ID
                      * @return Id Invitation ID
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置Invitation ID
-                     * @param Id Invitation ID
+                     * @param _id Invitation ID
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

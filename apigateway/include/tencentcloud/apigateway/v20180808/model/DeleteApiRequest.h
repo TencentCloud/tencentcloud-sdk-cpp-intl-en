@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Unique service ID of API.
                      * @return ServiceId Unique service ID of API.
+                     * 
                      */
                     std::string GetServiceId() const;
 
                     /**
                      * 设置Unique service ID of API.
-                     * @param ServiceId Unique service ID of API.
+                     * @param _serviceId Unique service ID of API.
+                     * 
                      */
                     void SetServiceId(const std::string& _serviceId);
 
                     /**
                      * 判断参数 ServiceId 是否已赋值
                      * @return ServiceId 是否已赋值
+                     * 
                      */
                     bool ServiceIdHasBeenSet() const;
 
                     /**
                      * 获取Unique API ID.
                      * @return ApiId Unique API ID.
+                     * 
                      */
                     std::string GetApiId() const;
 
                     /**
                      * 设置Unique API ID.
-                     * @param ApiId Unique API ID.
+                     * @param _apiId Unique API ID.
+                     * 
                      */
                     void SetApiId(const std::string& _apiId);
 
                     /**
                      * 判断参数 ApiId 是否已赋值
                      * @return ApiId 是否已赋值
+                     * 
                      */
                     bool ApiIdHasBeenSet() const;
 

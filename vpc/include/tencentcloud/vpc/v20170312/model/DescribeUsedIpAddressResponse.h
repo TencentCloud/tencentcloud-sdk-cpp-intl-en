@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return IpAddressStates Information of resources bound with the queried IPs 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<IpAddressStates> GetIpAddressStates() const;
 
                     /**
                      * 判断参数 IpAddressStates 是否已赋值
                      * @return IpAddressStates 是否已赋值
+                     * 
                      */
                     bool IpAddressStatesHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This parameter may return null, indicating that no valid values can be obt
 Note: This parameter may return null, indicating that no valid values can be obtained.
                      * @return TotalCount Number of taken IPs 
 Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

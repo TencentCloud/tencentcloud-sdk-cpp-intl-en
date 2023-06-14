@@ -50,6 +50,7 @@ namespace TencentCloud
                      * @return Filters Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
 <li>vm-ip - String - (Filter condition) The IP address of the CVM on the basic network.</li>
+                     * 
                      */
                     std::vector<FilterObject> GetFilters() const;
 
@@ -57,51 +58,59 @@ namespace TencentCloud
                      * 设置Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
 <li>vm-ip - String - (Filter condition) The IP address of the CVM on the basic network.</li>
-                     * @param Filters Filter conditions.
+                     * @param _filters Filter conditions.
 <li>vpc-id - String - (Filter condition) The VPC instance ID.</li>
 <li>vm-ip - String - (Filter condition) The IP address of the CVM on the basic network.</li>
+                     * 
                      */
                     void SetFilters(const std::vector<FilterObject>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     std::string GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const std::string& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity
                      * @return Limit The returned quantity
+                     * 
                      */
                     std::string GetLimit() const;
 
                     /**
                      * 设置The returned quantity
-                     * @param Limit The returned quantity
+                     * @param _limit The returned quantity
+                     * 
                      */
                     void SetLimit(const std::string& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

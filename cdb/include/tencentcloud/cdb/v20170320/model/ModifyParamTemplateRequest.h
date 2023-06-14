@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Template ID.
                      * @return TemplateId Template ID.
+                     * 
                      */
                     int64_t GetTemplateId() const;
 
                     /**
                      * 设置Template ID.
-                     * @param TemplateId Template ID.
+                     * @param _templateId Template ID.
+                     * 
                      */
                     void SetTemplateId(const int64_t& _templateId);
 
                     /**
                      * 判断参数 TemplateId 是否已赋值
                      * @return TemplateId 是否已赋值
+                     * 
                      */
                     bool TemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Template name (up to 64 characters)
                      * @return Name Template name (up to 64 characters)
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Template name (up to 64 characters)
-                     * @param Name Template name (up to 64 characters)
+                     * @param _name Template name (up to 64 characters)
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Template description (up to 255 characters)
                      * @return Description Template description (up to 255 characters)
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Template description (up to 255 characters)
-                     * @param Description Template description (up to 255 characters)
+                     * @param _description Template description (up to 255 characters)
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取List of parameters.
                      * @return ParamList List of parameters.
+                     * 
                      */
                     std::vector<Parameter> GetParamList() const;
 
                     /**
                      * 设置List of parameters.
-                     * @param ParamList List of parameters.
+                     * @param _paramList List of parameters.
+                     * 
                      */
                     void SetParamList(const std::vector<Parameter>& _paramList);
 
                     /**
                      * 判断参数 ParamList 是否已赋值
                      * @return ParamList 是否已赋值
+                     * 
                      */
                     bool ParamListHasBeenSet() const;
 

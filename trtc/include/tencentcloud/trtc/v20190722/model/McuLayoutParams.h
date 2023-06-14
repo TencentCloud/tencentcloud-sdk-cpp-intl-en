@@ -51,90 +51,105 @@ namespace TencentCloud
                     /**
                      * 获取The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
                      * @return MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+                     * 
                      */
                     uint64_t GetMixLayoutMode() const;
 
                     /**
                      * 设置The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
-                     * @param MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+                     * @param _mixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+                     * 
                      */
                     void SetMixLayoutMode(const uint64_t& _mixLayoutMode);
 
                     /**
                      * 判断参数 MixLayoutMode 是否已赋值
                      * @return MixLayoutMode 是否已赋值
+                     * 
                      */
                     bool MixLayoutModeHasBeenSet() const;
 
                     /**
                      * 获取Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
                      * @return PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+                     * 
                      */
                     uint64_t GetPureAudioHoldPlaceMode() const;
 
                     /**
                      * 设置Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
-                     * @param PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+                     * @param _pureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+                     * 
                      */
                     void SetPureAudioHoldPlaceMode(const uint64_t& _pureAudioHoldPlaceMode);
 
                     /**
                      * 判断参数 PureAudioHoldPlaceMode 是否已赋值
                      * @return PureAudioHoldPlaceMode 是否已赋值
+                     * 
                      */
                     bool PureAudioHoldPlaceModeHasBeenSet() const;
 
                     /**
                      * 获取The details of a custom layout.
                      * @return MixLayoutList The details of a custom layout.
+                     * 
                      */
                     std::vector<McuLayout> GetMixLayoutList() const;
 
                     /**
                      * 设置The details of a custom layout.
-                     * @param MixLayoutList The details of a custom layout.
+                     * @param _mixLayoutList The details of a custom layout.
+                     * 
                      */
                     void SetMixLayoutList(const std::vector<McuLayout>& _mixLayoutList);
 
                     /**
                      * 判断参数 MixLayoutList 是否已赋值
                      * @return MixLayoutList 是否已赋值
+                     * 
                      */
                     bool MixLayoutListHasBeenSet() const;
 
                     /**
                      * 获取The information of the large video in screen sharing or floating layout mode.
                      * @return MaxVideoUser The information of the large video in screen sharing or floating layout mode.
+                     * 
                      */
                     MaxVideoUser GetMaxVideoUser() const;
 
                     /**
                      * 设置The information of the large video in screen sharing or floating layout mode.
-                     * @param MaxVideoUser The information of the large video in screen sharing or floating layout mode.
+                     * @param _maxVideoUser The information of the large video in screen sharing or floating layout mode.
+                     * 
                      */
                     void SetMaxVideoUser(const MaxVideoUser& _maxVideoUser);
 
                     /**
                      * 判断参数 MaxVideoUser 是否已赋值
                      * @return MaxVideoUser 是否已赋值
+                     * 
                      */
                     bool MaxVideoUserHasBeenSet() const;
 
                     /**
                      * 获取The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
                      * @return RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     * 
                      */
                     uint64_t GetRenderMode() const;
 
                     /**
                      * 设置The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
-                     * @param RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     * @param _renderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     * 
                      */
                     void SetRenderMode(const uint64_t& _renderMode);
 
                     /**
                      * 判断参数 RenderMode 是否已赋值
                      * @return RenderMode 是否已赋值
+                     * 
                      */
                     bool RenderModeHasBeenSet() const;
 

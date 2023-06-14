@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取User account attribute object
                      * @return AccountAttributeSet User account attribute object
+                     * 
                      */
                     std::vector<AccountAttribute> GetAccountAttributeSet() const;
 
                     /**
                      * 判断参数 AccountAttributeSet 是否已赋值
                      * @return AccountAttributeSet 是否已赋值
+                     * 
                      */
                     bool AccountAttributeSetHasBeenSet() const;
 

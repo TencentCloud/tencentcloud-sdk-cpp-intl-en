@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取The site name.
                      * @return ZoneName The site name.
+                     * 
                      */
                     std::string GetZoneName() const;
 
                     /**
                      * 设置The site name.
-                     * @param ZoneName The site name.
+                     * @param _zoneName The site name.
+                     * 
                      */
                     void SetZoneName(const std::string& _zoneName);
 
                     /**
                      * 判断参数 ZoneName 是否已赋值
                      * @return ZoneName 是否已赋值
+                     * 
                      */
                     bool ZoneNameHasBeenSet() const;
 
@@ -71,20 +74,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDomain() const;
 
                     /**
                      * 设置The subdomain name to be verified. To verify the ownership of a site, leave it blank.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+                     * @param _domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDomain(const std::string& _domain);
 
                     /**
                      * 判断参数 Domain 是否已赋值
                      * @return Domain 是否已赋值
+                     * 
                      */
                     bool DomainHasBeenSet() const;
 
@@ -95,6 +101,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return Status The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
+                     * 
                      */
                     std::string GetStatus() const;
 
@@ -102,33 +109,38 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 设置The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
-                     * @param Status The verification status. Values:
+                     * @param _status The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取Details of the DNS record.
                      * @return Ascription Details of the DNS record.
+                     * 
                      */
                     AscriptionInfo GetAscription() const;
 
                     /**
                      * 设置Details of the DNS record.
-                     * @param Ascription Details of the DNS record.
+                     * @param _ascription Details of the DNS record.
+                     * 
                      */
                     void SetAscription(const AscriptionInfo& _ascription);
 
                     /**
                      * 判断参数 Ascription 是否已赋值
                      * @return Ascription 是否已赋值
+                     * 
                      */
                     bool AscriptionHasBeenSet() const;
 
@@ -137,38 +149,44 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginalNameServers The NS record of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetOriginalNameServers() const;
 
                     /**
                      * 设置The NS record of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginalNameServers The NS record of the domain name.
+                     * @param _originalNameServers The NS record of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginalNameServers(const std::vector<std::string>& _originalNameServers);
 
                     /**
                      * 判断参数 OriginalNameServers 是否已赋值
                      * @return OriginalNameServers 是否已赋值
+                     * 
                      */
                     bool OriginalNameServersHasBeenSet() const;
 
                     /**
                      * 获取Details of the verification file.
                      * @return FileAscription Details of the verification file.
+                     * 
                      */
                     FileAscriptionInfo GetFileAscription() const;
 
                     /**
                      * 设置Details of the verification file.
-                     * @param FileAscription Details of the verification file.
+                     * @param _fileAscription Details of the verification file.
+                     * 
                      */
                     void SetFileAscription(const FileAscriptionInfo& _fileAscription);
 
                     /**
                      * 判断参数 FileAscription 是否已赋值
                      * @return FileAscription 是否已赋值
+                     * 
                      */
                     bool FileAscriptionHasBeenSet() const;
 

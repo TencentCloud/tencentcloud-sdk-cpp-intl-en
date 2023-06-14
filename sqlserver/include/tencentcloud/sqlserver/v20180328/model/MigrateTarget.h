@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取ID of target instance in the format of mssql-si2823jyl
                      * @return InstanceId ID of target instance in the format of mssql-si2823jyl
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置ID of target instance in the format of mssql-si2823jyl
-                     * @param InstanceId ID of target instance in the format of mssql-si2823jyl
+                     * @param _instanceId ID of target instance in the format of mssql-si2823jyl
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Username of migration target instance
                      * @return UserName Username of migration target instance
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username of migration target instance
-                     * @param UserName Username of migration target instance
+                     * @param _userName Username of migration target instance
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取Password of migration target instance
                      * @return Password Password of migration target instance
+                     * 
                      */
                     std::string GetPassword() const;
 
                     /**
                      * 设置Password of migration target instance
-                     * @param Password Password of migration target instance
+                     * @param _password Password of migration target instance
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 

@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ActionType Transaction type code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetActionType() const;
 
                     /**
                      * 设置Transaction type code
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ActionType Transaction type code
+                     * @param _actionType Transaction type code
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActionType(const std::string& _actionType);
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ActionTypeName Transaction type name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetActionTypeName() const;
 
                     /**
                      * 设置Transaction type name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ActionTypeName Transaction type name
+                     * @param _actionTypeName Transaction type name
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActionTypeName(const std::string& _actionTypeName);
 
                     /**
                      * 判断参数 ActionTypeName 是否已赋值
                      * @return ActionTypeName 是否已赋值
+                     * 
                      */
                     bool ActionTypeNameHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OriginalCost The actual total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
                      * 设置The actual total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginalCost The actual total consumption amount accurate down to eight decimal places
+                     * @param _originalCost The actual total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
 
                     /**
                      * 判断参数 OriginalCost 是否已赋值
                      * @return OriginalCost 是否已赋值
+                     * 
                      */
                     bool OriginalCostHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVoucherPayAmount() const;
 
                     /**
                      * 设置The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VoucherPayAmount The deducted voucher amount accurate down to eight decimal places
+                     * @param _voucherPayAmount The deducted voucher amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVoucherPayAmount(const std::string& _voucherPayAmount);
 
                     /**
                      * 判断参数 VoucherPayAmount 是否已赋值
                      * @return VoucherPayAmount 是否已赋值
+                     * 
                      */
                     bool VoucherPayAmountHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TotalCost Total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
                      * 设置Total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TotalCost Total consumption amount accurate down to eight decimal places
+                     * @param _totalCost Total consumption amount accurate down to eight decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
 
                     /**
                      * 判断参数 TotalCost 是否已赋值
                      * @return TotalCost 是否已赋值
+                     * 
                      */
                     bool TotalCostHasBeenSet() const;
 

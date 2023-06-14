@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EipAddressRegion Region of the Anti-DDoS instance bound to the EIP. For example, hk indicates Hong Kong.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEipAddressRegion() const;
 
                     /**
                      * 设置Region of the Anti-DDoS instance bound to the EIP. For example, hk indicates Hong Kong.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param EipAddressRegion Region of the Anti-DDoS instance bound to the EIP. For example, hk indicates Hong Kong.
+                     * @param _eipAddressRegion Region of the Anti-DDoS instance bound to the EIP. For example, hk indicates Hong Kong.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetEipAddressRegion(const std::string& _eipAddressRegion);
 
                     /**
                      * 判断参数 EipAddressRegion 是否已赋值
                      * @return EipAddressRegion 是否已赋值
+                     * 
                      */
                     bool EipAddressRegionHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This is field may return `null`, indicating that no valid value can be obtained.
                      * @return EipBoundRscIns ID of the bound resource. For example, an ID may be bound to an CVM instance.
 Note: This is field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEipBoundRscIns() const;
 
                     /**
                      * 设置ID of the bound resource. For example, an ID may be bound to an CVM instance.
 Note: This is field may return `null`, indicating that no valid value can be obtained.
-                     * @param EipBoundRscIns ID of the bound resource. For example, an ID may be bound to an CVM instance.
+                     * @param _eipBoundRscIns ID of the bound resource. For example, an ID may be bound to an CVM instance.
 Note: This is field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetEipBoundRscIns(const std::string& _eipBoundRscIns);
 
                     /**
                      * 判断参数 EipBoundRscIns 是否已赋值
                      * @return EipBoundRscIns 是否已赋值
+                     * 
                      */
                     bool EipBoundRscInsHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This is field may return `null`, indicating that no valid value can be obt
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EipBoundRscEni ID of the bound ENI
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEipBoundRscEni() const;
 
                     /**
                      * 设置ID of the bound ENI
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param EipBoundRscEni ID of the bound ENI
+                     * @param _eipBoundRscEni ID of the bound ENI
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetEipBoundRscEni(const std::string& _eipBoundRscEni);
 
                     /**
                      * 判断参数 EipBoundRscEni 是否已赋值
                      * @return EipBoundRscEni 是否已赋值
+                     * 
                      */
                     bool EipBoundRscEniHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return EipBoundRscVip Private IP of the bound resource
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetEipBoundRscVip() const;
 
                     /**
                      * 设置Private IP of the bound resource
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param EipBoundRscVip Private IP of the bound resource
+                     * @param _eipBoundRscVip Private IP of the bound resource
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetEipBoundRscVip(const std::string& _eipBoundRscVip);
 
                     /**
                      * 判断参数 EipBoundRscVip 是否已赋值
                      * @return EipBoundRscVip 是否已赋值
+                     * 
                      */
                     bool EipBoundRscVipHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ModifyTime Modification time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetModifyTime() const;
 
                     /**
                      * 设置Modification time
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ModifyTime Modification time
+                     * @param _modifyTime Modification time
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetModifyTime(const std::string& _modifyTime);
 
                     /**
                      * 判断参数 ModifyTime 是否已赋值
                      * @return ModifyTime 是否已赋值
+                     * 
                      */
                     bool ModifyTimeHasBeenSet() const;
 

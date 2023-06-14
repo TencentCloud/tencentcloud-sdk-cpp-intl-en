@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取COS import configuration ID.
                      * @return Id COS import configuration ID.
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 设置COS import configuration ID.
-                     * @param Id COS import configuration ID.
+                     * @param _id COS import configuration ID.
+                     * 
                      */
                     void SetId(const std::string& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取ID of the log topic.
                      * @return TopicId ID of the log topic.
+                     * 
                      */
                     std::string GetTopicId() const;
 
                     /**
                      * 设置ID of the log topic.
-                     * @param TopicId ID of the log topic.
+                     * @param _topicId ID of the log topic.
+                     * 
                      */
                     void SetTopicId(const std::string& _topicId);
 
                     /**
                      * 判断参数 TopicId 是否已赋值
                      * @return TopicId 是否已赋值
+                     * 
                      */
                     bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取COS import task name.
                      * @return Name COS import task name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置COS import task name.
-                     * @param Name COS import task name.
+                     * @param _name COS import task name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
                      * @return Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
+                     * 
                      */
                     uint64_t GetEnable() const;
 
                     /**
                      * 设置Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-                     * @param Enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
+                     * @param _enable Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
+                     * 
                      */
                     void SetEnable(const uint64_t& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 

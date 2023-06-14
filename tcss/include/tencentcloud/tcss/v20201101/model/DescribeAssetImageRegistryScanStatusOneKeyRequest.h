@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取List of images for which to get the progress
                      * @return Images List of images for which to get the progress
+                     * 
                      */
                     std::vector<ImageInfo> GetImages() const;
 
                     /**
                      * 设置List of images for which to get the progress
-                     * @param Images List of images for which to get the progress
+                     * @param _images List of images for which to get the progress
+                     * 
                      */
                     void SetImages(const std::vector<ImageInfo>& _images);
 
                     /**
                      * 判断参数 Images 是否已赋值
                      * @return Images 是否已赋值
+                     * 
                      */
                     bool ImagesHasBeenSet() const;
 
                     /**
                      * 获取Whether to get all images
                      * @return All Whether to get all images
+                     * 
                      */
                     bool GetAll() const;
 
                     /**
                      * 设置Whether to get all images
-                     * @param All Whether to get all images
+                     * @param _all Whether to get all images
+                     * 
                      */
                     void SetAll(const bool& _all);
 
                     /**
                      * 判断参数 All 是否已赋值
                      * @return All 是否已赋值
+                     * 
                      */
                     bool AllHasBeenSet() const;
 
                     /**
                      * 获取List of IDs of images for which to get the progress
                      * @return Id List of IDs of images for which to get the progress
+                     * 
                      */
                     std::vector<uint64_t> GetId() const;
 
                     /**
                      * 设置List of IDs of images for which to get the progress
-                     * @param Id List of IDs of images for which to get the progress
+                     * @param _id List of IDs of images for which to get the progress
+                     * 
                      */
                     void SetId(const std::vector<uint64_t>& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

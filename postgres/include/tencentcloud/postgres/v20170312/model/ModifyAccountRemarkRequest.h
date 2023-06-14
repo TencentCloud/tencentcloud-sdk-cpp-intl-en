@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of postgres-4wdeb0zv
                      * @return DBInstanceId Instance ID in the format of postgres-4wdeb0zv
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of postgres-4wdeb0zv
-                     * @param DBInstanceId Instance ID in the format of postgres-4wdeb0zv
+                     * @param _dBInstanceId Instance ID in the format of postgres-4wdeb0zv
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Instance username
                      * @return UserName Instance username
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Instance username
-                     * @param UserName Instance username
+                     * @param _userName Instance username
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 
                     /**
                      * 获取New remarks corresponding to user `UserName`
                      * @return Remark New remarks corresponding to user `UserName`
+                     * 
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置New remarks corresponding to user `UserName`
-                     * @param Remark New remarks corresponding to user `UserName`
+                     * @param _remark New remarks corresponding to user `UserName`
+                     * 
                      */
                     void SetRemark(const std::string& _remark);
 
                     /**
                      * 判断参数 Remark 是否已赋值
                      * @return Remark 是否已赋值
+                     * 
                      */
                     bool RemarkHasBeenSet() const;
 

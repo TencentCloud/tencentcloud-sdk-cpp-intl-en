@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Flow ID
                      * @return FlowId Flow ID
+                     * 
                      */
                     std::string GetFlowId() const;
 
                     /**
                      * 设置Flow ID
-                     * @param FlowId Flow ID
+                     * @param _flowId Flow ID
+                     * 
                      */
                     void SetFlowId(const std::string& _flowId);
 
                     /**
                      * 判断参数 FlowId 是否已赋值
                      * @return FlowId 是否已赋值
+                     * 
                      */
                     bool FlowIdHasBeenSet() const;
 
                     /**
                      * 获取Output ID
                      * @return OutputId Output ID
+                     * 
                      */
                     std::string GetOutputId() const;
 
                     /**
                      * 设置Output ID
-                     * @param OutputId Output ID
+                     * @param _outputId Output ID
+                     * 
                      */
                     void SetOutputId(const std::string& _outputId);
 
                     /**
                      * 判断参数 OutputId 是否已赋值
                      * @return OutputId 是否已赋值
+                     * 
                      */
                     bool OutputIdHasBeenSet() const;
 

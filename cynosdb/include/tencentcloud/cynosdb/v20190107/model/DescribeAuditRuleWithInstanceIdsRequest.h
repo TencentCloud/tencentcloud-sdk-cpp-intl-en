@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID. Currently, only one single instance can be queried.
                      * @return InstanceIds Instance ID. Currently, only one single instance can be queried.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置Instance ID. Currently, only one single instance can be queried.
-                     * @param InstanceIds Instance ID. Currently, only one single instance can be queried.
+                     * @param _instanceIds Instance ID. Currently, only one single instance can be queried.
+                     * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
                     /**
                      * 判断参数 InstanceIds 是否已赋值
                      * @return InstanceIds 是否已赋值
+                     * 
                      */
                     bool InstanceIdsHasBeenSet() const;
 

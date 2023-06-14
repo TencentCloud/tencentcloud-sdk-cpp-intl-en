@@ -46,24 +46,28 @@ namespace TencentCloud
                     /**
                      * 获取Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
                      * @return Changed Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+                     * 
                      */
                     bool GetChanged() const;
 
                     /**
                      * 判断参数 Changed 是否已赋值
                      * @return Changed 是否已赋值
+                     * 
                      */
                     bool ChangedHasBeenSet() const;
 
                     /**
                      * 获取ID of the task
                      * @return TaskId ID of the task
+                     * 
                      */
                     int64_t GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
                      * @return TaskId 是否已赋值
+                     * 
                      */
                     bool TaskIdHasBeenSet() const;
 

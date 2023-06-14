@@ -52,38 +52,44 @@ namespace TencentCloud
 `off`: Disable
                      * @return Switch `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置`on`: Enable
 `off`: Disable
-                     * @param Switch `on`: Enable
+                     * @param _switch `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取Heuristic cache validity configuration
                      * @return CacheConfig Heuristic cache validity configuration
+                     * 
                      */
                     CacheConfig GetCacheConfig() const;
 
                     /**
                      * 设置Heuristic cache validity configuration
-                     * @param CacheConfig Heuristic cache validity configuration
+                     * @param _cacheConfig Heuristic cache validity configuration
+                     * 
                      */
                     void SetCacheConfig(const CacheConfig& _cacheConfig);
 
                     /**
                      * 判断参数 CacheConfig 是否已赋值
                      * @return CacheConfig 是否已赋值
+                     * 
                      */
                     bool CacheConfigHasBeenSet() const;
 

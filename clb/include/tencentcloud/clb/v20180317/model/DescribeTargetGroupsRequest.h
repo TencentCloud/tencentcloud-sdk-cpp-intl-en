@@ -46,72 +46,84 @@ namespace TencentCloud
                     /**
                      * 获取Target group ID, which is exclusive of `Filters`.
                      * @return TargetGroupIds Target group ID, which is exclusive of `Filters`.
+                     * 
                      */
                     std::vector<std::string> GetTargetGroupIds() const;
 
                     /**
                      * 设置Target group ID, which is exclusive of `Filters`.
-                     * @param TargetGroupIds Target group ID, which is exclusive of `Filters`.
+                     * @param _targetGroupIds Target group ID, which is exclusive of `Filters`.
+                     * 
                      */
                     void SetTargetGroupIds(const std::vector<std::string>& _targetGroupIds);
 
                     /**
                      * 判断参数 TargetGroupIds 是否已赋值
                      * @return TargetGroupIds 是否已赋值
+                     * 
                      */
                     bool TargetGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Limit of the number of displayed results. Default value: 20.
                      * @return Limit Limit of the number of displayed results. Default value: 20.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Limit of the number of displayed results. Default value: 20.
-                     * @param Limit Limit of the number of displayed results. Default value: 20.
+                     * @param _limit Limit of the number of displayed results. Default value: 20.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Starting display offset
                      * @return Offset Starting display offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Starting display offset
-                     * @param Offset Starting display offset
+                     * @param _offset Starting display offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
                      * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
-                     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+                     * @param _filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

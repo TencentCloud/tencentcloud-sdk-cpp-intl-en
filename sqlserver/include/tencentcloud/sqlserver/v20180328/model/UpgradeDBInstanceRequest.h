@@ -45,180 +45,210 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of mssql-j8kv137v
                      * @return InstanceId Instance ID in the format of mssql-j8kv137v
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of mssql-j8kv137v
-                     * @param InstanceId Instance ID in the format of mssql-j8kv137v
+                     * @param _instanceId Instance ID in the format of mssql-j8kv137v
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
                      * @return Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
-                     * @param Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * @param _memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
+                     * 
                      */
                     void SetMemory(const int64_t& _memory);
 
                     /**
                      * 判断参数 Memory 是否已赋值
                      * @return Memory 是否已赋值
+                     * 
                      */
                     bool MemoryHasBeenSet() const;
 
                     /**
                      * 获取Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
                      * @return Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * 
                      */
                     int64_t GetStorage() const;
 
                     /**
                      * 设置Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
-                     * @param Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * @param _storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
+                     * 
                      */
                     void SetStorage(const int64_t& _storage);
 
                     /**
                      * 判断参数 Storage 是否已赋值
                      * @return Storage 是否已赋值
+                     * 
                      */
                     bool StorageHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
                      * @return AutoVoucher Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
+                     * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
                      * 设置Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
-                     * @param AutoVoucher Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
+                     * @param _autoVoucher Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
+                     * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
 
                     /**
                      * 判断参数 AutoVoucher 是否已赋值
                      * @return AutoVoucher 是否已赋值
+                     * 
                      */
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
                      * 获取Voucher ID (currently, only one voucher can be used per order)
                      * @return VoucherIds Voucher ID (currently, only one voucher can be used per order)
+                     * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
                      * 设置Voucher ID (currently, only one voucher can be used per order)
-                     * @param VoucherIds Voucher ID (currently, only one voucher can be used per order)
+                     * @param _voucherIds Voucher ID (currently, only one voucher can be used per order)
+                     * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
 
                     /**
                      * 判断参数 VoucherIds 是否已赋值
                      * @return VoucherIds 是否已赋值
+                     * 
                      */
                     bool VoucherIdsHasBeenSet() const;
 
                     /**
                      * 获取The number of CUP cores after the instance is upgraded.
                      * @return Cpu The number of CUP cores after the instance is upgraded.
+                     * 
                      */
                     int64_t GetCpu() const;
 
                     /**
                      * 设置The number of CUP cores after the instance is upgraded.
-                     * @param Cpu The number of CUP cores after the instance is upgraded.
+                     * @param _cpu The number of CUP cores after the instance is upgraded.
+                     * 
                      */
                     void SetCpu(const int64_t& _cpu);
 
                     /**
                      * 判断参数 Cpu 是否已赋值
                      * @return Cpu 是否已赋值
+                     * 
                      */
                     bool CpuHasBeenSet() const;
 
                     /**
                      * 获取Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
                      * @return DBVersion Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     * 
                      */
                     std::string GetDBVersion() const;
 
                     /**
                      * 设置Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
-                     * @param DBVersion Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     * @param _dBVersion Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+                     * 
                      */
                     void SetDBVersion(const std::string& _dBVersion);
 
                     /**
                      * 判断参数 DBVersion 是否已赋值
                      * @return DBVersion 是否已赋值
+                     * 
                      */
                     bool DBVersionHasBeenSet() const;
 
                     /**
                      * 获取Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
                      * @return HAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     * 
                      */
                     std::string GetHAType() const;
 
                     /**
                      * 设置Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
-                     * @param HAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     * @param _hAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+                     * 
                      */
                     void SetHAType(const std::string& _hAType);
 
                     /**
                      * 判断参数 HAType 是否已赋值
                      * @return HAType 是否已赋值
+                     * 
                      */
                     bool HATypeHasBeenSet() const;
 
                     /**
                      * 获取Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
                      * @return MultiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     * 
                      */
                     std::string GetMultiZones() const;
 
                     /**
                      * 设置Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
-                     * @param MultiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     * @param _multiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+                     * 
                      */
                     void SetMultiZones(const std::string& _multiZones);
 
                     /**
                      * 判断参数 MultiZones 是否已赋值
                      * @return MultiZones 是否已赋值
+                     * 
                      */
                     bool MultiZonesHasBeenSet() const;
 
                     /**
                      * 获取The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
                      * @return WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     * 
                      */
                     int64_t GetWaitSwitch() const;
 
                     /**
                      * 设置The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
-                     * @param WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     * @param _waitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     * 
                      */
                     void SetWaitSwitch(const int64_t& _waitSwitch);
 
                     /**
                      * 判断参数 WaitSwitch 是否已赋值
                      * @return WaitSwitch 是否已赋值
+                     * 
                      */
                     bool WaitSwitchHasBeenSet() const;
 

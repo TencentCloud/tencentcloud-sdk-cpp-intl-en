@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The consortium ID.
                      * @return Id The consortium ID.
+                     * 
                      */
                     uint64_t GetId() const;
 
                     /**
                      * 设置The consortium ID.
-                     * @param Id The consortium ID.
+                     * @param _id The consortium ID.
+                     * 
                      */
                     void SetId(const uint64_t& _id);
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 
                     /**
                      * 获取The consortium name.
                      * @return Name The consortium name.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置The consortium name.
-                     * @param Name The consortium name.
+                     * @param _name The consortium name.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 

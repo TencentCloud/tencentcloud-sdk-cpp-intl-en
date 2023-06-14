@@ -51,20 +51,23 @@ namespace TencentCloud
 The instance type, `hive` or `flink`.
                      * @return Software The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 The instance type, `hive` or `flink`.
+                     * 
                      */
                     std::vector<std::string> GetSoftware() const;
 
                     /**
                      * 设置The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 The instance type, `hive` or `flink`.
-                     * @param Software The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+                     * @param _software The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 The instance type, `hive` or `flink`.
+                     * 
                      */
                     void SetSoftware(const std::vector<std::string>& _software);
 
                     /**
                      * 判断参数 Software 是否已赋值
                      * @return Software 是否已赋值
+                     * 
                      */
                     bool SoftwareHasBeenSet() const;
 
@@ -81,6 +84,7 @@ Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
 Hadoop-Default
+                     * 
                      */
                     std::string GetSceneName() const;
 
@@ -91,18 +95,20 @@ Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
 Hadoop-Default
-                     * @param SceneName The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+                     * @param _sceneName The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
 Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
 Hadoop-Default
+                     * 
                      */
                     void SetSceneName(const std::string& _sceneName);
 
                     /**
                      * 判断参数 SceneName 是否已赋值
                      * @return SceneName 是否已赋值
+                     * 
                      */
                     bool SceneNameHasBeenSet() const;
 

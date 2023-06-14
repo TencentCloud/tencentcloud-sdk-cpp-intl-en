@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Certificate ID and list of CLB instances associated with it
                      * @return CertSet Certificate ID and list of CLB instances associated with it
+                     * 
                      */
                     std::vector<CertIdRelatedWithLoadBalancers> GetCertSet() const;
 
                     /**
                      * 判断参数 CertSet 是否已赋值
                      * @return CertSet 是否已赋值
+                     * 
                      */
                     bool CertSetHasBeenSet() const;
 

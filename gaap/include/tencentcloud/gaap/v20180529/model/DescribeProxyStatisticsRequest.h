@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Connection ID
                      * @return ProxyId Connection ID
+                     * 
                      */
                     std::string GetProxyId() const;
 
                     /**
                      * 设置Connection ID
-                     * @param ProxyId Connection ID
+                     * @param _proxyId Connection ID
+                     * 
                      */
                     void SetProxyId(const std::string& _proxyId);
 
                     /**
                      * 判断参数 ProxyId 是否已赋值
                      * @return ProxyId 是否已赋值
+                     * 
                      */
                     bool ProxyIdHasBeenSet() const;
 
                     /**
                      * 获取Start time (2019-03-25 12:00:00)
                      * @return StartTime Start time (2019-03-25 12:00:00)
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time (2019-03-25 12:00:00)
-                     * @param StartTime Start time (2019-03-25 12:00:00)
+                     * @param _startTime Start time (2019-03-25 12:00:00)
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取End time (2019-03-25 12:00:00)
                      * @return EndTime End time (2019-03-25 12:00:00)
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time (2019-03-25 12:00:00)
-                     * @param EndTime End time (2019-03-25 12:00:00)
+                     * @param _endTime End time (2019-03-25 12:00:00)
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
                     /**
                      * 获取Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
                      * @return MetricNames Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
+                     * 
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
                      * 设置Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
-                     * @param MetricNames Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
+                     * @param _metricNames Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
+                     * 
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
                     /**
                      * 判断参数 MetricNames 是否已赋值
                      * @return MetricNames 是否已赋值
+                     * 
                      */
                     bool MetricNamesHasBeenSet() const;
 
@@ -123,6 +135,7 @@ Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
 Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
 Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
 Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
+                     * 
                      */
                     uint64_t GetGranularity() const;
 
@@ -131,34 +144,39 @@ Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
 Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
 Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
 Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
-                     * @param Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
+                     * @param _granularity Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
 Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
 Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
 Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
+                     * 
                      */
                     void SetGranularity(const uint64_t& _granularity);
 
                     /**
                      * 判断参数 Granularity 是否已赋值
                      * @return Granularity 是否已赋值
+                     * 
                      */
                     bool GranularityHasBeenSet() const;
 
                     /**
                      * 获取Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
                      * @return Isp Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+                     * 
                      */
                     std::string GetIsp() const;
 
                     /**
                      * 设置Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
-                     * @param Isp Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+                     * @param _isp Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+                     * 
                      */
                     void SetIsp(const std::string& _isp);
 
                     /**
                      * 判断参数 Isp 是否已赋值
                      * @return Isp 是否已赋值
+                     * 
                      */
                     bool IspHasBeenSet() const;
 

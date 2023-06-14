@@ -46,108 +46,126 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
                      * @return Type Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
+                     * 
                      */
                     uint64_t GetType() const;
 
                     /**
                      * 设置Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
-                     * @param Type Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
+                     * @param _type Rollback type. 0: the database rolled back overwrites the original database; 1: the database rolled back is renamed and does not overwrite the original database
+                     * 
                      */
                     void SetType(const uint64_t& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
                     /**
                      * 获取Database to be rolled back
                      * @return DBs Database to be rolled back
+                     * 
                      */
                     std::vector<std::string> GetDBs() const;
 
                     /**
                      * 设置Database to be rolled back
-                     * @param DBs Database to be rolled back
+                     * @param _dBs Database to be rolled back
+                     * 
                      */
                     void SetDBs(const std::vector<std::string>& _dBs);
 
                     /**
                      * 判断参数 DBs 是否已赋值
                      * @return DBs 是否已赋值
+                     * 
                      */
                     bool DBsHasBeenSet() const;
 
                     /**
                      * 获取Target time point for rollback
                      * @return Time Target time point for rollback
+                     * 
                      */
                     std::string GetTime() const;
 
                     /**
                      * 设置Target time point for rollback
-                     * @param Time Target time point for rollback
+                     * @param _time Target time point for rollback
+                     * 
                      */
                     void SetTime(const std::string& _time);
 
                     /**
                      * 判断参数 Time 是否已赋值
                      * @return Time 是否已赋值
+                     * 
                      */
                     bool TimeHasBeenSet() const;
 
                     /**
                      * 获取ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
                      * @return TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     * 
                      */
                     std::string GetTargetInstanceId() const;
 
                     /**
                      * 设置ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
-                     * @param TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     * @param _targetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+                     * 
                      */
                     void SetTargetInstanceId(const std::string& _targetInstanceId);
 
                     /**
                      * 判断参数 TargetInstanceId 是否已赋值
                      * @return TargetInstanceId 是否已赋值
+                     * 
                      */
                     bool TargetInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
                      * @return RenameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     * 
                      */
                     std::vector<RenameRestoreDatabase> GetRenameRestore() const;
 
                     /**
                      * 设置Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
-                     * @param RenameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     * @param _renameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+                     * 
                      */
                     void SetRenameRestore(const std::vector<RenameRestoreDatabase>& _renameRestore);
 
                     /**
                      * 判断参数 RenameRestore 是否已赋值
                      * @return RenameRestore 是否已赋值
+                     * 
                      */
                     bool RenameRestoreHasBeenSet() const;
 

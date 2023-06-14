@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取The session ID.
                      * @return Sid The session ID.
+                     * 
                      */
                     std::string GetSid() const;
 
                     /**
                      * 设置The session ID.
-                     * @param Sid The session ID.
+                     * @param _sid The session ID.
+                     * 
                      */
                     void SetSid(const std::string& _sid);
 
                     /**
                      * 判断参数 Sid 是否已赋值
                      * @return Sid 是否已赋值
+                     * 
                      */
                     bool SidHasBeenSet() const;
 
                     /**
                      * 获取The recording start time, which is a Unix timestamp.
                      * @return StartTime The recording start time, which is a Unix timestamp.
+                     * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
                      * 设置The recording start time, which is a Unix timestamp.
-                     * @param StartTime The recording start time, which is a Unix timestamp.
+                     * @param _startTime The recording start time, which is a Unix timestamp.
+                     * 
                      */
                     void SetStartTime(const int64_t& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
                     /**
                      * 获取The recording end time, which is a Unix timestamp.
                      * @return EndTime The recording end time, which is a Unix timestamp.
+                     * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
                      * 设置The recording end time, which is a Unix timestamp.
-                     * @param EndTime The recording end time, which is a Unix timestamp.
+                     * @param _endTime The recording end time, which is a Unix timestamp.
+                     * 
                      */
                     void SetEndTime(const int64_t& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

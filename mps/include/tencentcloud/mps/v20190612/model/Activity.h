@@ -74,6 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetActivityType() const;
 
@@ -91,7 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ActivityType The subtask type.
+                     * @param _activityType The subtask type.
 <li>`input`: The start.</li>
 <li>`output`: The end.</li>
 <li>`action-trans`: Transcoding.</li>
@@ -104,12 +105,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActivityType(const std::string& _activityType);
 
                     /**
                      * 判断参数 ActivityType 是否已赋值
                      * @return ActivityType 是否已赋值
+                     * 
                      */
                     bool ActivityTypeHasBeenSet() const;
 
@@ -118,20 +121,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReardriveIndex The indexes of the subsequent actions.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetReardriveIndex() const;
 
                     /**
                      * 设置The indexes of the subsequent actions.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReardriveIndex The indexes of the subsequent actions.
+                     * @param _reardriveIndex The indexes of the subsequent actions.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReardriveIndex(const std::vector<int64_t>& _reardriveIndex);
 
                     /**
                      * 判断参数 ReardriveIndex 是否已赋值
                      * @return ReardriveIndex 是否已赋值
+                     * 
                      */
                     bool ReardriveIndexHasBeenSet() const;
 
@@ -140,20 +146,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ActivityPara The parameters of a subtask.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ActivityPara GetActivityPara() const;
 
                     /**
                      * 设置The parameters of a subtask.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ActivityPara The parameters of a subtask.
+                     * @param _activityPara The parameters of a subtask.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetActivityPara(const ActivityPara& _activityPara);
 
                     /**
                      * 判断参数 ActivityPara 是否已赋值
                      * @return ActivityPara 是否已赋值
+                     * 
                      */
                     bool ActivityParaHasBeenSet() const;
 

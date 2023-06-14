@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取The callback URL (required).
                      * @return NotifyUrl The callback URL (required).
+                     * 
                      */
                     std::string GetNotifyUrl() const;
 
                     /**
                      * 设置The callback URL (required).
-                     * @param NotifyUrl The callback URL (required).
+                     * @param _notifyUrl The callback URL (required).
+                     * 
                      */
                     void SetNotifyUrl(const std::string& _notifyUrl);
 
                     /**
                      * 判断参数 NotifyUrl 是否已赋值
                      * @return NotifyUrl 是否已赋值
+                     * 
                      */
                     bool NotifyUrlHasBeenSet() const;
 
                     /**
                      * 获取The callback key (optional).
                      * @return NotifyKey The callback key (optional).
+                     * 
                      */
                     std::string GetNotifyKey() const;
 
                     /**
                      * 设置The callback key (optional).
-                     * @param NotifyKey The callback key (optional).
+                     * @param _notifyKey The callback key (optional).
+                     * 
                      */
                     void SetNotifyKey(const std::string& _notifyKey);
 
                     /**
                      * 判断参数 NotifyKey 是否已赋值
                      * @return NotifyKey 是否已赋值
+                     * 
                      */
                     bool NotifyKeyHasBeenSet() const;
 

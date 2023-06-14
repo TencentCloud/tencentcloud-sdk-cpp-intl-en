@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Parameter name
                      * @return Name Parameter name
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter name
-                     * @param Name Parameter name
+                     * @param _name Parameter name
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
                     /**
                      * 获取The new value to which the parameter will be modified. When this parameter is used as an input parameter, its value must be a string, such as `0.1` (decimal), `1000` (integer), and `replica` (enum).
                      * @return ExpectedValue The new value to which the parameter will be modified. When this parameter is used as an input parameter, its value must be a string, such as `0.1` (decimal), `1000` (integer), and `replica` (enum).
+                     * 
                      */
                     std::string GetExpectedValue() const;
 
                     /**
                      * 设置The new value to which the parameter will be modified. When this parameter is used as an input parameter, its value must be a string, such as `0.1` (decimal), `1000` (integer), and `replica` (enum).
-                     * @param ExpectedValue The new value to which the parameter will be modified. When this parameter is used as an input parameter, its value must be a string, such as `0.1` (decimal), `1000` (integer), and `replica` (enum).
+                     * @param _expectedValue The new value to which the parameter will be modified. When this parameter is used as an input parameter, its value must be a string, such as `0.1` (decimal), `1000` (integer), and `replica` (enum).
+                     * 
                      */
                     void SetExpectedValue(const std::string& _expectedValue);
 
                     /**
                      * 判断参数 ExpectedValue 是否已赋值
                      * @return ExpectedValue 是否已赋值
+                     * 
                      */
                     bool ExpectedValueHasBeenSet() const;
 

@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取The file ID.
                      * @return FileId The file ID.
+                     * 
                      */
                     std::string GetFileId() const;
 
                     /**
                      * 设置The file ID.
-                     * @param FileId The file ID.
+                     * @param _fileId The file ID.
+                     * 
                      */
                     void SetFileId(const std::string& _fileId);
 
                     /**
                      * 判断参数 FileId 是否已赋值
                      * @return FileId 是否已赋值
+                     * 
                      */
                     bool FileIdHasBeenSet() const;
 
@@ -73,6 +76,7 @@ The file must be in HLS format.
 <li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
 <li>`Original`: The original file.</li>
 The file must be in HLS format.
+                     * 
                      */
                     std::string GetAudioVideoType() const;
 
@@ -81,34 +85,39 @@ The file must be in HLS format.
 <li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
 <li>`Original`: The original file.</li>
 The file must be in HLS format.
-                     * @param AudioVideoType The type of the media played. Valid values:
+                     * @param _audioVideoType The type of the media played. Valid values:
 <li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
 <li>`Original`: The original file.</li>
 The file must be in HLS format.
+                     * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
 
                     /**
                      * 判断参数 AudioVideoType 是否已赋值
                      * @return AudioVideoType 是否已赋值
+                     * 
                      */
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
                      * 获取The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
                      * @return Definition The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+                     * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
                      * 设置The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
-                     * @param Definition The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+                     * @param _definition The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+                     * 
                      */
                     void SetDefinition(const int64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

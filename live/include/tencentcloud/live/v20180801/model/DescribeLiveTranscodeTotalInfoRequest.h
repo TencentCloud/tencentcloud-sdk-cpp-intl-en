@@ -47,20 +47,23 @@ namespace TencentCloud
 Format: yyyy-mm-dd HH:MM:SS
                      * @return StartTime Start time (Beijing time)
 Format: yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time (Beijing time)
 Format: yyyy-mm-dd HH:MM:SS
-                     * @param StartTime Start time (Beijing time)
+                     * @param _startTime Start time (Beijing time)
 Format: yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -69,20 +72,23 @@ Format: yyyy-mm-dd HH:MM:SS
 Format: yyyy-mm-dd HH:MM:SS
                      * @return EndTime End time (Beijing time)
 Format: yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time (Beijing time)
 Format: yyyy-mm-dd HH:MM:SS
-                     * @param EndTime End time (Beijing time)
+                     * @param _endTime End time (Beijing time)
 Format: yyyy-mm-dd HH:MM:SS
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 
@@ -91,20 +97,23 @@ Format: yyyy-mm-dd HH:MM:SS
 If this parameter is specified, the data returned will be on an hourly basis.
                      * @return PushDomains List of push domains to query. If this parameter is left empty, the data of all domains is queried.
 If this parameter is specified, the data returned will be on an hourly basis.
+                     * 
                      */
                     std::vector<std::string> GetPushDomains() const;
 
                     /**
                      * 设置List of push domains to query. If this parameter is left empty, the data of all domains is queried.
 If this parameter is specified, the data returned will be on an hourly basis.
-                     * @param PushDomains List of push domains to query. If this parameter is left empty, the data of all domains is queried.
+                     * @param _pushDomains List of push domains to query. If this parameter is left empty, the data of all domains is queried.
 If this parameter is specified, the data returned will be on an hourly basis.
+                     * 
                      */
                     void SetPushDomains(const std::vector<std::string>& _pushDomains);
 
                     /**
                      * 判断参数 PushDomains 是否已赋值
                      * @return PushDomains 是否已赋值
+                     * 
                      */
                     bool PushDomainsHasBeenSet() const;
 
@@ -117,6 +126,7 @@ By default, the data both in and outside the Chinese mainland is queried.
 `Mainland`: queries transcoding data in the Chinese mainland
 `Oversea`: queries transcoding data outside the Chinese mainland
 By default, the data both in and outside the Chinese mainland is queried.
+                     * 
                      */
                     std::string GetMainlandOrOversea() const;
 
@@ -125,16 +135,18 @@ By default, the data both in and outside the Chinese mainland is queried.
 `Mainland`: queries transcoding data in the Chinese mainland
 `Oversea`: queries transcoding data outside the Chinese mainland
 By default, the data both in and outside the Chinese mainland is queried.
-                     * @param MainlandOrOversea Valid values:
+                     * @param _mainlandOrOversea Valid values:
 `Mainland`: queries transcoding data in the Chinese mainland
 `Oversea`: queries transcoding data outside the Chinese mainland
 By default, the data both in and outside the Chinese mainland is queried.
+                     * 
                      */
                     void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
 
                     /**
                      * 判断参数 MainlandOrOversea 是否已赋值
                      * @return MainlandOrOversea 是否已赋值
+                     * 
                      */
                     bool MainlandOrOverseaHasBeenSet() const;
 

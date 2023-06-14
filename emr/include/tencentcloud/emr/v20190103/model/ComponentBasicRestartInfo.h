@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ComponentName The process name (required), such as NameNode.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetComponentName() const;
 
                     /**
                      * 设置The process name (required), such as NameNode.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ComponentName The process name (required), such as NameNode.
+                     * @param _componentName The process name (required), such as NameNode.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetComponentName(const std::string& _componentName);
 
                     /**
                      * 判断参数 ComponentName 是否已赋值
                      * @return ComponentName 是否已赋值
+                     * 
                      */
                     bool ComponentNameHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IpList The target IP list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetIpList() const;
 
                     /**
                      * 设置The target IP list.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IpList The target IP list.
+                     * @param _ipList The target IP list.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpList(const std::vector<std::string>& _ipList);
 
                     /**
                      * 判断参数 IpList 是否已赋值
                      * @return IpList 是否已赋值
+                     * 
                      */
                     bool IpListHasBeenSet() const;
 

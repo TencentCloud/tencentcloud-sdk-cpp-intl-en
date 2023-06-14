@@ -51,18 +51,21 @@ namespace TencentCloud
                     /**
                      * 获取
                      * @return RuleName 
+                     * 
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置
-                     * @param RuleName 
+                     * @param _ruleName 
+                     * 
                      */
                     void SetRuleName(const std::string& _ruleName);
 
                     /**
                      * 判断参数 RuleName 是否已赋值
                      * @return RuleName 是否已赋值
+                     * 
                      */
                     bool RuleNameHasBeenSet() const;
 
@@ -85,6 +88,7 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
+                     * 
                      */
                     std::string GetAction() const;
 
@@ -98,7 +102,7 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
-                     * @param Action The action. Values:
+                     * @param _action The action. Values:
 <li>`drop`: Block</li>
 <li>`monitor`: Observe</li>
 <li>`trans`: Allow</li>
@@ -107,12 +111,14 @@ namespace TencentCloud
 <li>`silence`: Drop w/o response</li>
 <li>`shortdelay`: Add short latency</li>
 <li>`longdelay`: Add long latency</li>
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
@@ -123,6 +129,7 @@ namespace TencentCloud
                      * @return RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: `on`
+                     * 
                      */
                     std::string GetRuleStatus() const;
 
@@ -130,51 +137,59 @@ namespace TencentCloud
                      * 设置The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: `on`
-                     * @param RuleStatus The rule status. Values:
+                     * @param _ruleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>Default value: `on`
+                     * 
                      */
                     void SetRuleStatus(const std::string& _ruleStatus);
 
                     /**
                      * 判断参数 RuleStatus 是否已赋值
                      * @return RuleStatus 是否已赋值
+                     * 
                      */
                     bool RuleStatusHasBeenSet() const;
 
                     /**
                      * 获取Details of the rule.
                      * @return AclConditions Details of the rule.
+                     * 
                      */
                     std::vector<AclCondition> GetAclConditions() const;
 
                     /**
                      * 设置Details of the rule.
-                     * @param AclConditions Details of the rule.
+                     * @param _aclConditions Details of the rule.
+                     * 
                      */
                     void SetAclConditions(const std::vector<AclCondition>& _aclConditions);
 
                     /**
                      * 判断参数 AclConditions 是否已赋值
                      * @return AclConditions 是否已赋值
+                     * 
                      */
                     bool AclConditionsHasBeenSet() const;
 
                     /**
                      * 获取The rule weight. Value range: 0-100.
                      * @return RulePriority The rule weight. Value range: 0-100.
+                     * 
                      */
                     int64_t GetRulePriority() const;
 
                     /**
                      * 设置The rule weight. Value range: 0-100.
-                     * @param RulePriority The rule weight. Value range: 0-100.
+                     * @param _rulePriority The rule weight. Value range: 0-100.
+                     * 
                      */
                     void SetRulePriority(const int64_t& _rulePriority);
 
                     /**
                      * 判断参数 RulePriority 是否已赋值
                      * @return RulePriority 是否已赋值
+                     * 
                      */
                     bool RulePriorityHasBeenSet() const;
 
@@ -183,38 +198,44 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return RuleID The rule ID, which is only used as an output parameter.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRuleID() const;
 
                     /**
                      * 设置The rule ID, which is only used as an output parameter.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param RuleID The rule ID, which is only used as an output parameter.
+                     * @param _ruleID The rule ID, which is only used as an output parameter.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
                     /**
                      * 判断参数 RuleID 是否已赋值
                      * @return RuleID 是否已赋值
+                     * 
                      */
                     bool RuleIDHasBeenSet() const;
 
                     /**
                      * 获取[Currently unavailable] Specify the random action and percentage.
                      * @return ExtendActions [Currently unavailable] Specify the random action and percentage.
+                     * 
                      */
                     std::vector<BotExtendAction> GetExtendActions() const;
 
                     /**
                      * 设置[Currently unavailable] Specify the random action and percentage.
-                     * @param ExtendActions [Currently unavailable] Specify the random action and percentage.
+                     * @param _extendActions [Currently unavailable] Specify the random action and percentage.
+                     * 
                      */
                     void SetExtendActions(const std::vector<BotExtendAction>& _extendActions);
 
                     /**
                      * 判断参数 ExtendActions 是否已赋值
                      * @return ExtendActions 是否已赋值
+                     * 
                      */
                     bool ExtendActionsHasBeenSet() const;
 
@@ -225,6 +246,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return FreqFields The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFreqFields() const;
 
@@ -232,15 +254,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * 设置The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param FreqFields The filter. Values:
+                     * @param _freqFields The filter. Values:
 <li>`sip`: Client IP</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFreqFields(const std::vector<std::string>& _freqFields);
 
                     /**
                      * 判断参数 FreqFields 是否已赋值
                      * @return FreqFields 是否已赋值
+                     * 
                      */
                     bool FreqFieldsHasBeenSet() const;
 
@@ -249,20 +273,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return UpdateTime Updated time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Updated time
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param UpdateTime Updated time
+                     * @param _updateTime Updated time
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -275,6 +302,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
 <li>`client_to_eo`: Requests from the client to EdgeOne</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetFreqScope() const;
 
@@ -283,16 +311,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
 <li>`client_to_eo`: Requests from the client to EdgeOne</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param FreqScope The statistical dimension. Values:
+                     * @param _freqScope The statistical dimension. Values:
 <li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
 <li>`client_to_eo`: Requests from the client to EdgeOne</li>
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFreqScope(const std::vector<std::string>& _freqScope);
 
                     /**
                      * 判断参数 FreqScope 是否已赋值
                      * @return FreqScope 是否已赋值
+                     * 
                      */
                     bool FreqScopeHasBeenSet() const;
 

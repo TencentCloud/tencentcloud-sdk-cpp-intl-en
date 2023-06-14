@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Switch Forced access protocol redirection configuration switch. Valid values: on, off.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Forced access protocol redirection configuration switch. Valid values: on, off.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Forced access protocol redirection configuration switch. Valid values: on, off.
+                     * @param _switch Forced access protocol redirection configuration switch. Valid values: on, off.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RedirectType Access protocol type for forced redirection. Valid values: http (forced redirection to HTTP protocol), https (forced redirection to HTTPS protocol).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetRedirectType() const;
 
                     /**
                      * 设置Access protocol type for forced redirection. Valid values: http (forced redirection to HTTP protocol), https (forced redirection to HTTPS protocol).
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RedirectType Access protocol type for forced redirection. Valid values: http (forced redirection to HTTP protocol), https (forced redirection to HTTPS protocol).
+                     * @param _redirectType Access protocol type for forced redirection. Valid values: http (forced redirection to HTTP protocol), https (forced redirection to HTTPS protocol).
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRedirectType(const std::string& _redirectType);
 
                     /**
                      * 判断参数 RedirectType 是否已赋值
                      * @return RedirectType 是否已赋值
+                     * 
                      */
                     bool RedirectTypeHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return RedirectStatusCode HTTP status code returned when forced redirection is enabled. Valid values: 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetRedirectStatusCode() const;
 
                     /**
                      * 设置HTTP status code returned when forced redirection is enabled. Valid values: 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RedirectStatusCode HTTP status code returned when forced redirection is enabled. Valid values: 301, 302.
+                     * @param _redirectStatusCode HTTP status code returned when forced redirection is enabled. Valid values: 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRedirectStatusCode(const int64_t& _redirectStatusCode);
 
                     /**
                      * 判断参数 RedirectStatusCode 是否已赋值
                      * @return RedirectStatusCode 是否已赋值
+                     * 
                      */
                     bool RedirectStatusCodeHasBeenSet() const;
 

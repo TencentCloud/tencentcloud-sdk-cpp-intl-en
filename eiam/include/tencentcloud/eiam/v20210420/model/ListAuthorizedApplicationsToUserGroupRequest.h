@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取User group ID.
                      * @return UserGroupId User group ID.
+                     * 
                      */
                     std::string GetUserGroupId() const;
 
                     /**
                      * 设置User group ID.
-                     * @param UserGroupId User group ID.
+                     * @param _userGroupId User group ID.
+                     * 
                      */
                     void SetUserGroupId(const std::string& _userGroupId);
 
                     /**
                      * 判断参数 UserGroupId 是否已赋值
                      * @return UserGroupId 是否已赋值
+                     * 
                      */
                     bool UserGroupIdHasBeenSet() const;
 

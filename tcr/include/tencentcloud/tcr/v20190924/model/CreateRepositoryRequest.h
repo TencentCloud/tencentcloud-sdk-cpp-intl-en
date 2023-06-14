@@ -45,90 +45,105 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return RegistryId Instance ID
+                     * 
                      */
                     std::string GetRegistryId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param RegistryId Instance ID
+                     * @param _registryId Instance ID
+                     * 
                      */
                     void SetRegistryId(const std::string& _registryId);
 
                     /**
                      * 判断参数 RegistryId 是否已赋值
                      * @return RegistryId 是否已赋值
+                     * 
                      */
                     bool RegistryIdHasBeenSet() const;
 
                     /**
                      * 获取Namespace name
                      * @return NamespaceName Namespace name
+                     * 
                      */
                     std::string GetNamespaceName() const;
 
                     /**
                      * 设置Namespace name
-                     * @param NamespaceName Namespace name
+                     * @param _namespaceName Namespace name
+                     * 
                      */
                     void SetNamespaceName(const std::string& _namespaceName);
 
                     /**
                      * 判断参数 NamespaceName 是否已赋值
                      * @return NamespaceName 是否已赋值
+                     * 
                      */
                     bool NamespaceNameHasBeenSet() const;
 
                     /**
                      * 获取Repository name
                      * @return RepositoryName Repository name
+                     * 
                      */
                     std::string GetRepositoryName() const;
 
                     /**
                      * 设置Repository name
-                     * @param RepositoryName Repository name
+                     * @param _repositoryName Repository name
+                     * 
                      */
                     void SetRepositoryName(const std::string& _repositoryName);
 
                     /**
                      * 判断参数 RepositoryName 是否已赋值
                      * @return RepositoryName 是否已赋值
+                     * 
                      */
                     bool RepositoryNameHasBeenSet() const;
 
                     /**
                      * 获取Brief repository description
                      * @return BriefDescription Brief repository description
+                     * 
                      */
                     std::string GetBriefDescription() const;
 
                     /**
                      * 设置Brief repository description
-                     * @param BriefDescription Brief repository description
+                     * @param _briefDescription Brief repository description
+                     * 
                      */
                     void SetBriefDescription(const std::string& _briefDescription);
 
                     /**
                      * 判断参数 BriefDescription 是否已赋值
                      * @return BriefDescription 是否已赋值
+                     * 
                      */
                     bool BriefDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Detailed repository description
                      * @return Description Detailed repository description
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Detailed repository description
-                     * @param Description Detailed repository description
+                     * @param _description Detailed repository description
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

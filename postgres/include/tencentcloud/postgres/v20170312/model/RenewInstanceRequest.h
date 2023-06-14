@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID in the format of `postgres-6fego161`
                      * @return DBInstanceId Instance ID in the format of `postgres-6fego161`
+                     * 
                      */
                     std::string GetDBInstanceId() const;
 
                     /**
                      * 设置Instance ID in the format of `postgres-6fego161`
-                     * @param DBInstanceId Instance ID in the format of `postgres-6fego161`
+                     * @param _dBInstanceId Instance ID in the format of `postgres-6fego161`
+                     * 
                      */
                     void SetDBInstanceId(const std::string& _dBInstanceId);
 
                     /**
                      * 判断参数 DBInstanceId 是否已赋值
                      * @return DBInstanceId 是否已赋值
+                     * 
                      */
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Renewal duration in months
                      * @return Period Renewal duration in months
+                     * 
                      */
                     int64_t GetPeriod() const;
 
                     /**
                      * 设置Renewal duration in months
-                     * @param Period Renewal duration in months
+                     * @param _period Renewal duration in months
+                     * 
                      */
                     void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
                      * @return Period 是否已赋值
+                     * 
                      */
                     bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
                      * @return AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+                     * 
                      */
                     int64_t GetAutoVoucher() const;
 
                     /**
                      * 设置Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
-                     * @param AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+                     * @param _autoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: 0
+                     * 
                      */
                     void SetAutoVoucher(const int64_t& _autoVoucher);
 
                     /**
                      * 判断参数 AutoVoucher 是否已赋值
                      * @return AutoVoucher 是否已赋值
+                     * 
                      */
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
                      * 获取Voucher ID list (only one voucher can be specified currently)
                      * @return VoucherIds Voucher ID list (only one voucher can be specified currently)
+                     * 
                      */
                     std::vector<std::string> GetVoucherIds() const;
 
                     /**
                      * 设置Voucher ID list (only one voucher can be specified currently)
-                     * @param VoucherIds Voucher ID list (only one voucher can be specified currently)
+                     * @param _voucherIds Voucher ID list (only one voucher can be specified currently)
+                     * 
                      */
                     void SetVoucherIds(const std::vector<std::string>& _voucherIds);
 
                     /**
                      * 判断参数 VoucherIds 是否已赋值
                      * @return VoucherIds 是否已赋值
+                     * 
                      */
                     bool VoucherIdsHasBeenSet() const;
 

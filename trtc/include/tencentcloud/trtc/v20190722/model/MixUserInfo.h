@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取User ID.
                      * @return UserId User ID.
+                     * 
                      */
                     std::string GetUserId() const;
 
                     /**
                      * 设置User ID.
-                     * @param UserId User ID.
+                     * @param _userId User ID.
+                     * 
                      */
                     void SetUserId(const std::string& _userId);
 
                     /**
                      * 判断参数 UserId 是否已赋值
                      * @return UserId 是否已赋值
+                     * 
                      */
                     bool UserIdHasBeenSet() const;
 
                     /**
                      * 获取If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
                      * @return RoomId If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
+                     * 
                      */
                     std::string GetRoomId() const;
 
                     /**
                      * 设置If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
-                     * @param RoomId If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
+                     * @param _roomId If a dynamic layout is used, the value of this parameter should be the ID of the main room. If a custom layout is used, the value of this parameter should be the same as the room ID in `MixLayoutList`.
+                     * 
                      */
                     void SetRoomId(const std::string& _roomId);
 
                     /**
                      * 判断参数 RoomId 是否已赋值
                      * @return RoomId 是否已赋值
+                     * 
                      */
                     bool RoomIdHasBeenSet() const;
 
                     /**
                      * 获取The type of the `RoomId` parameter. 0: integer; 1: string.
                      * @return RoomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+                     * 
                      */
                     uint64_t GetRoomIdType() const;
 
                     /**
                      * 设置The type of the `RoomId` parameter. 0: integer; 1: string.
-                     * @param RoomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+                     * @param _roomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+                     * 
                      */
                     void SetRoomIdType(const uint64_t& _roomIdType);
 
                     /**
                      * 判断参数 RoomIdType 是否已赋值
                      * @return RoomIdType 是否已赋值
+                     * 
                      */
                     bool RoomIdTypeHasBeenSet() const;
 

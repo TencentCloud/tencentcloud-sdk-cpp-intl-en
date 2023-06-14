@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The log ID.
                      * @return LogId The log ID.
+                     * 
                      */
                     int64_t GetLogId() const;
 
                     /**
                      * 设置The log ID.
-                     * @param LogId The log ID.
+                     * @param _logId The log ID.
+                     * 
                      */
                     void SetLogId(const int64_t& _logId);
 
                     /**
                      * 判断参数 LogId 是否已赋值
                      * @return LogId 是否已赋值
+                     * 
                      */
                     bool LogIdHasBeenSet() const;
 
                     /**
                      * 获取The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
                      * @return Action The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
+                     * 
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
-                     * @param Action The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
+                     * @param _action The bulk operation type. Valid values: `new` (register domains), `batch_transfer_prohibition_on` (enable transfer prohibition), `batch_transfer_prohibition_off` (disable transfer prohibition), `batch_update_prohibition_on` (enable update prohibition), `batch_update_prohibition_off` (disable update prohibition).
+                     * 
                      */
                     void SetAction(const std::string& _action);
 
                     /**
                      * 判断参数 Action 是否已赋值
                      * @return Action 是否已赋值
+                     * 
                      */
                     bool ActionHasBeenSet() const;
 
                     /**
                      * 获取The quantity.
                      * @return Number The quantity.
+                     * 
                      */
                     int64_t GetNumber() const;
 
                     /**
                      * 设置The quantity.
-                     * @param Number The quantity.
+                     * @param _number The quantity.
+                     * 
                      */
                     void SetNumber(const int64_t& _number);
 
                     /**
                      * 判断参数 Number 是否已赋值
                      * @return Number 是否已赋值
+                     * 
                      */
                     bool NumberHasBeenSet() const;
 
                     /**
                      * 获取The execution status. Valid values: `doing`, `done`
                      * @return Status The execution status. Valid values: `doing`, `done`
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置The execution status. Valid values: `doing`, `done`
-                     * @param Status The execution status. Valid values: `doing`, `done`
+                     * @param _status The execution status. Valid values: `doing`, `done`
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
                     /**
                      * 获取The submission time.
                      * @return CreatedOn The submission time.
+                     * 
                      */
                     std::string GetCreatedOn() const;
 
                     /**
                      * 设置The submission time.
-                     * @param CreatedOn The submission time.
+                     * @param _createdOn The submission time.
+                     * 
                      */
                     void SetCreatedOn(const std::string& _createdOn);
 
                     /**
                      * 判断参数 CreatedOn 是否已赋值
                      * @return CreatedOn 是否已赋值
+                     * 
                      */
                     bool CreatedOnHasBeenSet() const;
 

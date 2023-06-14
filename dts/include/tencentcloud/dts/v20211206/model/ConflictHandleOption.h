@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConditionColumn Conditionally overwritten column
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConditionColumn() const;
 
                     /**
                      * 设置Conditionally overwritten column
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConditionColumn Conditionally overwritten column
+                     * @param _conditionColumn Conditionally overwritten column
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConditionColumn(const std::string& _conditionColumn);
 
                     /**
                      * 判断参数 ConditionColumn 是否已赋值
                      * @return ConditionColumn 是否已赋值
+                     * 
                      */
                     bool ConditionColumnHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConditionOperator Conditional overwrite operation
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConditionOperator() const;
 
                     /**
                      * 设置Conditional overwrite operation
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConditionOperator Conditional overwrite operation
+                     * @param _conditionOperator Conditional overwrite operation
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConditionOperator(const std::string& _conditionOperator);
 
                     /**
                      * 判断参数 ConditionOperator 是否已赋值
                      * @return ConditionOperator 是否已赋值
+                     * 
                      */
                     bool ConditionOperatorHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConditionOrderInSrcAndDst Conditional overwrite priority configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetConditionOrderInSrcAndDst() const;
 
                     /**
                      * 设置Conditional overwrite priority configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ConditionOrderInSrcAndDst Conditional overwrite priority configuration
+                     * @param _conditionOrderInSrcAndDst Conditional overwrite priority configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetConditionOrderInSrcAndDst(const std::string& _conditionOrderInSrcAndDst);
 
                     /**
                      * 判断参数 ConditionOrderInSrcAndDst 是否已赋值
                      * @return ConditionOrderInSrcAndDst 是否已赋值
+                     * 
                      */
                     bool ConditionOrderInSrcAndDstHasBeenSet() const;
 

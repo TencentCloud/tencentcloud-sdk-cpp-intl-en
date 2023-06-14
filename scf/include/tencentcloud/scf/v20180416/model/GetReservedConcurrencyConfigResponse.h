@@ -48,12 +48,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ReservedMem The reserved quota of the function
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetReservedMem() const;
 
                     /**
                      * 判断参数 ReservedMem 是否已赋值
                      * @return ReservedMem 是否已赋值
+                     * 
                      */
                     bool ReservedMemHasBeenSet() const;
 

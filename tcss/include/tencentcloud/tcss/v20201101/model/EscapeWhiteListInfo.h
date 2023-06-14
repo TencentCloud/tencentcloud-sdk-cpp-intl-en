@@ -49,162 +49,189 @@ namespace TencentCloud
                     /**
                      * 获取Image ID
                      * @return ImageID Image ID
+                     * 
                      */
                     std::string GetImageID() const;
 
                     /**
                      * 设置Image ID
-                     * @param ImageID Image ID
+                     * @param _imageID Image ID
+                     * 
                      */
                     void SetImageID(const std::string& _imageID);
 
                     /**
                      * 判断参数 ImageID 是否已赋值
                      * @return ImageID 是否已赋值
+                     * 
                      */
                     bool ImageIDHasBeenSet() const;
 
                     /**
                      * 获取Image name
                      * @return ImageName Image name
+                     * 
                      */
                     std::string GetImageName() const;
 
                     /**
                      * 设置Image name
-                     * @param ImageName Image name
+                     * @param _imageName Image name
+                     * 
                      */
                     void SetImageName(const std::string& _imageName);
 
                     /**
                      * 判断参数 ImageName 是否已赋值
                      * @return ImageName 是否已赋值
+                     * 
                      */
                     bool ImageNameHasBeenSet() const;
 
                     /**
                      * 获取Allowed item ID
                      * @return ID Allowed item ID
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Allowed item ID
-                     * @param ID Allowed item ID
+                     * @param _iD Allowed item ID
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
                     /**
                      * 获取Number of associated servers
                      * @return HostCount Number of associated servers
+                     * 
                      */
                     int64_t GetHostCount() const;
 
                     /**
                      * 设置Number of associated servers
-                     * @param HostCount Number of associated servers
+                     * @param _hostCount Number of associated servers
+                     * 
                      */
                     void SetHostCount(const int64_t& _hostCount);
 
                     /**
                      * 判断参数 HostCount 是否已赋值
                      * @return HostCount 是否已赋值
+                     * 
                      */
                     bool HostCountHasBeenSet() const;
 
                     /**
                      * 获取Number of associated containers
                      * @return ContainerCount Number of associated containers
+                     * 
                      */
                     int64_t GetContainerCount() const;
 
                     /**
                      * 设置Number of associated containers
-                     * @param ContainerCount Number of associated containers
+                     * @param _containerCount Number of associated containers
+                     * 
                      */
                     void SetContainerCount(const int64_t& _containerCount);
 
                     /**
                      * 判断参数 ContainerCount 是否已赋值
                      * @return ContainerCount 是否已赋值
+                     * 
                      */
                     bool ContainerCountHasBeenSet() const;
 
                     /**
                      * 获取Allowed event type
                      * @return EventType Allowed event type
+                     * 
                      */
                     std::vector<std::string> GetEventType() const;
 
                     /**
                      * 设置Allowed event type
-                     * @param EventType Allowed event type
+                     * @param _eventType Allowed event type
+                     * 
                      */
                     void SetEventType(const std::vector<std::string>& _eventType);
 
                     /**
                      * 判断参数 EventType 是否已赋值
                      * @return EventType 是否已赋值
+                     * 
                      */
                     bool EventTypeHasBeenSet() const;
 
                     /**
                      * 获取Creation time
                      * @return InsertTime Creation time
+                     * 
                      */
                     std::string GetInsertTime() const;
 
                     /**
                      * 设置Creation time
-                     * @param InsertTime Creation time
+                     * @param _insertTime Creation time
+                     * 
                      */
                     void SetInsertTime(const std::string& _insertTime);
 
                     /**
                      * 判断参数 InsertTime 是否已赋值
                      * @return InsertTime 是否已赋值
+                     * 
                      */
                     bool InsertTimeHasBeenSet() const;
 
                     /**
                      * 获取Update time
                      * @return UpdateTime Update time
+                     * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-                     * @param UpdateTime Update time
+                     * @param _updateTime Update time
+                     * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
                      * 获取Image size
                      * @return ImageSize Image size
+                     * 
                      */
                     int64_t GetImageSize() const;
 
                     /**
                      * 设置Image size
-                     * @param ImageSize Image size
+                     * @param _imageSize Image size
+                     * 
                      */
                     void SetImageSize(const int64_t& _imageSize);
 
                     /**
                      * 判断参数 ImageSize 是否已赋值
                      * @return ImageSize 是否已赋值
+                     * 
                      */
                     bool ImageSizeHasBeenSet() const;
 

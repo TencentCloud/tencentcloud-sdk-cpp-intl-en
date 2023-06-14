@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of UINs of the members to be deleted.
                      * @return MemberUin List of UINs of the members to be deleted.
+                     * 
                      */
                     std::vector<int64_t> GetMemberUin() const;
 
                     /**
                      * 设置List of UINs of the members to be deleted.
-                     * @param MemberUin List of UINs of the members to be deleted.
+                     * @param _memberUin List of UINs of the members to be deleted.
+                     * 
                      */
                     void SetMemberUin(const std::vector<int64_t>& _memberUin);
 
                     /**
                      * 判断参数 MemberUin 是否已赋值
                      * @return MemberUin 是否已赋值
+                     * 
                      */
                     bool MemberUinHasBeenSet() const;
 

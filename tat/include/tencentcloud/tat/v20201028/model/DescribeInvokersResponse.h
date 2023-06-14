@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of matching invokers.
                      * @return TotalCount Number of matching invokers.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Invoker information.
                      * @return InvokerSet Invoker information.
+                     * 
                      */
                     std::vector<Invoker> GetInvokerSet() const;
 
                     /**
                      * 判断参数 InvokerSet 是否已赋值
                      * @return InvokerSet 是否已赋值
+                     * 
                      */
                     bool InvokerSetHasBeenSet() const;
 

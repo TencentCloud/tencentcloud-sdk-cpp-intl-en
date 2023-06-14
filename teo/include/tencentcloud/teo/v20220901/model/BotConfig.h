@@ -58,6 +58,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable bot security. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -65,51 +66,59 @@ namespace TencentCloud
                      * 设置Whether to enable bot security. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
-                     * @param Switch Whether to enable bot security. Values:
+                     * @param _switch Whether to enable bot security. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
                      * @return BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     BotManagedRule GetBotManagedRule() const;
 
                     /**
                      * 设置The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
-                     * @param BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+                     * @param _botManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     void SetBotManagedRule(const BotManagedRule& _botManagedRule);
 
                     /**
                      * 判断参数 BotManagedRule 是否已赋值
                      * @return BotManagedRule 是否已赋值
+                     * 
                      */
                     bool BotManagedRuleHasBeenSet() const;
 
                     /**
                      * 获取The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
                      * @return BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     BotPortraitRule GetBotPortraitRule() const;
 
                     /**
                      * 设置The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
-                     * @param BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+                     * @param _botPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     void SetBotPortraitRule(const BotPortraitRule& _botPortraitRule);
 
                     /**
                      * 判断参数 BotPortraitRule 是否已赋值
                      * @return BotPortraitRule 是否已赋值
+                     * 
                      */
                     bool BotPortraitRuleHasBeenSet() const;
 
@@ -118,56 +127,65 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     IntelligenceRule GetIntelligenceRule() const;
 
                     /**
                      * 设置The bot intelligence settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IntelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
+                     * @param _intelligenceRule The bot intelligence settings. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIntelligenceRule(const IntelligenceRule& _intelligenceRule);
 
                     /**
                      * 判断参数 IntelligenceRule 是否已赋值
                      * @return IntelligenceRule 是否已赋值
+                     * 
                      */
                     bool IntelligenceRuleHasBeenSet() const;
 
                     /**
                      * 获取Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
                      * @return BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     std::vector<BotUserRule> GetBotUserRules() const;
 
                     /**
                      * 设置Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
-                     * @param BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * @param _botUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * 
                      */
                     void SetBotUserRules(const std::vector<BotUserRule>& _botUserRules);
 
                     /**
                      * 判断参数 BotUserRules 是否已赋值
                      * @return BotUserRules 是否已赋值
+                     * 
                      */
                     bool BotUserRulesHasBeenSet() const;
 
                     /**
                      * 获取Active bot detection rule.
                      * @return AlgDetectRule Active bot detection rule.
+                     * 
                      */
                     std::vector<AlgDetectRule> GetAlgDetectRule() const;
 
                     /**
                      * 设置Active bot detection rule.
-                     * @param AlgDetectRule Active bot detection rule.
+                     * @param _algDetectRule Active bot detection rule.
+                     * 
                      */
                     void SetAlgDetectRule(const std::vector<AlgDetectRule>& _algDetectRule);
 
                     /**
                      * 判断参数 AlgDetectRule 是否已赋值
                      * @return AlgDetectRule 是否已赋值
+                     * 
                      */
                     bool AlgDetectRuleHasBeenSet() const;
 
@@ -176,20 +194,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Customizes Settings of the bot managed rule. It is only used for output.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<BotUserRule> GetCustomizes() const;
 
                     /**
                      * 设置Settings of the bot managed rule. It is only used for output.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Customizes Settings of the bot managed rule. It is only used for output.
+                     * @param _customizes Settings of the bot managed rule. It is only used for output.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCustomizes(const std::vector<BotUserRule>& _customizes);
 
                     /**
                      * 判断参数 Customizes 是否已赋值
                      * @return Customizes 是否已赋值
+                     * 
                      */
                     bool CustomizesHasBeenSet() const;
 

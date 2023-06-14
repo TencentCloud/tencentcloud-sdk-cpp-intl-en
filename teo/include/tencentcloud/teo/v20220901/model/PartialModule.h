@@ -51,20 +51,23 @@ namespace TencentCloud
 <li>`waf`: Managed rules</li>
                      * @return Module The module. Values:
 <li>`waf`: Managed rules</li>
+                     * 
                      */
                     std::string GetModule() const;
 
                     /**
                      * 设置The module. Values:
 <li>`waf`: Managed rules</li>
-                     * @param Module The module. Values:
+                     * @param _module The module. Values:
 <li>`waf`: Managed rules</li>
+                     * 
                      */
                     void SetModule(const std::string& _module);
 
                     /**
                      * 判断参数 Module 是否已赋值
                      * @return Module 是否已赋值
+                     * 
                      */
                     bool ModuleHasBeenSet() const;
 
@@ -73,20 +76,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Include List of managed rule IDs to be skipped.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> GetInclude() const;
 
                     /**
                      * 设置List of managed rule IDs to be skipped.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Include List of managed rule IDs to be skipped.
+                     * @param _include List of managed rule IDs to be skipped.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetInclude(const std::vector<int64_t>& _include);
 
                     /**
                      * 判断参数 Include 是否已赋值
                      * @return Include 是否已赋值
+                     * 
                      */
                     bool IncludeHasBeenSet() const;
 

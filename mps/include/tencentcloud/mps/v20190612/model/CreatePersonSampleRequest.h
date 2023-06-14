@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Name of an image. Length limit: 20 characters
                      * @return Name Name of an image. Length limit: 20 characters
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Name of an image. Length limit: 20 characters
-                     * @param Name Name of an image. Length limit: 20 characters
+                     * @param _name Name of an image. Length limit: 20 characters
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -69,6 +72,7 @@ namespace TencentCloud
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2
+                     * 
                      */
                     std::vector<std::string> GetUsages() const;
 
@@ -77,34 +81,39 @@ namespace TencentCloud
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2
-                     * @param Usages Image usage. Valid values:
+                     * @param _usages Image usage. Valid values:
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2
+                     * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
 
                     /**
                      * 判断参数 Usages 是否已赋值
                      * @return Usages 是否已赋值
+                     * 
                      */
                     bool UsagesHasBeenSet() const;
 
                     /**
                      * 获取Image description. Length limit: 1,024 characters
                      * @return Description Image description. Length limit: 1,024 characters
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Image description. Length limit: 1,024 characters
-                     * @param Description Image description. Length limit: 1,024 characters
+                     * @param _description Image description. Length limit: 1,024 characters
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -113,20 +122,23 @@ namespace TencentCloud
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
                      * @return FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
+                     * 
                      */
                     std::vector<std::string> GetFaceContents() const;
 
                     /**
                      * 设置[Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
-                     * @param FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
+                     * @param _faceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
+                     * 
                      */
                     void SetFaceContents(const std::vector<std::string>& _faceContents);
 
                     /**
                      * 判断参数 FaceContents 是否已赋值
                      * @return FaceContents 是否已赋值
+                     * 
                      */
                     bool FaceContentsHasBeenSet() const;
 
@@ -137,6 +149,7 @@ Note: the image must be a relatively clear facial feature photo of one person wi
                      * @return Tags Image tag
 <li>Array length limit: 20 tags</li>
 <li>Tag length limit: 128 characters</li>
+                     * 
                      */
                     std::vector<std::string> GetTags() const;
 
@@ -144,15 +157,17 @@ Note: the image must be a relatively clear facial feature photo of one person wi
                      * 设置Image tag
 <li>Array length limit: 20 tags</li>
 <li>Tag length limit: 128 characters</li>
-                     * @param Tags Image tag
+                     * @param _tags Image tag
 <li>Array length limit: 20 tags</li>
 <li>Tag length limit: 128 characters</li>
+                     * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
                      * @return Tags 是否已赋值
+                     * 
                      */
                     bool TagsHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Stream image width. Value range: [2,3000]
                      * @return Width Stream image width. Value range: [2,3000]
+                     * 
                      */
                     int64_t GetWidth() const;
 
                     /**
                      * 设置Stream image width. Value range: [2,3000]
-                     * @param Width Stream image width. Value range: [2,3000]
+                     * @param _width Stream image width. Value range: [2,3000]
+                     * 
                      */
                     void SetWidth(const int64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取Stream image height. Value range: [2,3000]
                      * @return Height Stream image height. Value range: [2,3000]
+                     * 
                      */
                     int64_t GetHeight() const;
 
                     /**
                      * 设置Stream image height. Value range: [2,3000]
-                     * @param Height Stream image height. Value range: [2,3000]
+                     * @param _height Stream image height. Value range: [2,3000]
+                     * 
                      */
                     void SetHeight(const int64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取Offset of the top point in the upper-left corner of the current image to the X axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
                      * @return X Offset of the top point in the upper-left corner of the current image to the X axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+                     * 
                      */
                     int64_t GetX() const;
 
                     /**
                      * 设置Offset of the top point in the upper-left corner of the current image to the X axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
-                     * @param X Offset of the top point in the upper-left corner of the current image to the X axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+                     * @param _x Offset of the top point in the upper-left corner of the current image to the X axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+                     * 
                      */
                     void SetX(const int64_t& _x);
 
                     /**
                      * 判断参数 X 是否已赋值
                      * @return X 是否已赋值
+                     * 
                      */
                     bool XHasBeenSet() const;
 
                     /**
                      * 获取Offset of the top point in the upper-left corner of the current image to the Y axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
                      * @return Y Offset of the top point in the upper-left corner of the current image to the Y axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+                     * 
                      */
                     int64_t GetY() const;
 
                     /**
                      * 设置Offset of the top point in the upper-left corner of the current image to the Y axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
-                     * @param Y Offset of the top point in the upper-left corner of the current image to the Y axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+                     * @param _y Offset of the top point in the upper-left corner of the current image to the Y axis of the top point in the upper-left corner of the canvas. Default value: 0. Value range: [0,3000].
+                     * 
                      */
                     void SetY(const int64_t& _y);
 
                     /**
                      * 判断参数 Y 是否已赋值
                      * @return Y 是否已赋值
+                     * 
                      */
                     bool YHasBeenSet() const;
 
@@ -123,20 +135,23 @@ namespace TencentCloud
 The Z axis determines the overlap sequence of images. The image with the largest z-axis value is at the top layer.
                      * @return ZOrder Z-axis position of the image. The default value is 0.
 The Z axis determines the overlap sequence of images. The image with the largest z-axis value is at the top layer.
+                     * 
                      */
                     int64_t GetZOrder() const;
 
                     /**
                      * 设置Z-axis position of the image. The default value is 0.
 The Z axis determines the overlap sequence of images. The image with the largest z-axis value is at the top layer.
-                     * @param ZOrder Z-axis position of the image. The default value is 0.
+                     * @param _zOrder Z-axis position of the image. The default value is 0.
 The Z axis determines the overlap sequence of images. The image with the largest z-axis value is at the top layer.
+                     * 
                      */
                     void SetZOrder(const int64_t& _zOrder);
 
                     /**
                      * 判断参数 ZOrder 是否已赋值
                      * @return ZOrder 是否已赋值
+                     * 
                      */
                     bool ZOrderHasBeenSet() const;
 

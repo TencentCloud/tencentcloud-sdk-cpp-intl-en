@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Flag Manually set flag.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetFlag() const;
 
                     /**
                      * 设置Manually set flag.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Flag Manually set flag.
+                     * @param _flag Manually set flag.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFlag(const bool& _flag);
 
                     /**
                      * 判断参数 Flag 是否已赋值
                      * @return Flag 是否已赋值
+                     * 
                      */
                     bool FlagHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Version CKafka version (v1.1.1/2.4.2/0.10.2）
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置CKafka version (v1.1.1/2.4.2/0.10.2）
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Version CKafka version (v1.1.1/2.4.2/0.10.2）
+                     * @param _version CKafka version (v1.1.1/2.4.2/0.10.2）
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Platform Whether it is Pro Edition or Standard Edition.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetPlatform() const;
 
                     /**
                      * 设置Whether it is Pro Edition or Standard Edition.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Platform Whether it is Pro Edition or Standard Edition.
+                     * @param _platform Whether it is Pro Edition or Standard Edition.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPlatform(const std::string& _platform);
 
                     /**
                      * 判断参数 Platform 是否已赋值
                      * @return Platform 是否已赋值
+                     * 
                      */
                     bool PlatformHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SoldOut Whether it has been sold out. `true`: sold out.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSoldOut() const;
 
                     /**
                      * 设置Whether it has been sold out. `true`: sold out.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SoldOut Whether it has been sold out. `true`: sold out.
+                     * @param _soldOut Whether it has been sold out. `true`: sold out.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSoldOut(const bool& _soldOut);
 
                     /**
                      * 判断参数 SoldOut 是否已赋值
                      * @return SoldOut 是否已赋值
+                     * 
                      */
                     bool SoldOutHasBeenSet() const;
 

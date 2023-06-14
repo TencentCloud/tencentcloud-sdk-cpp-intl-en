@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取It specifies whether to enable RecordControl. Valid values: true (yes); false (no).
                      * @return Enabled It specifies whether to enable RecordControl. Valid values: true (yes); false (no).
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置It specifies whether to enable RecordControl. Valid values: true (yes); false (no).
-                     * @param Enabled It specifies whether to enable RecordControl. Valid values: true (yes); false (no).
+                     * @param _enabled It specifies whether to enable RecordControl. Valid values: true (yes); false (no).
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
@@ -78,6 +81,7 @@ true: no stream is recorded.
 false: all streams are recorded. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+                     * 
                      */
                     bool GetDisableRecord() const;
 
@@ -88,18 +92,20 @@ true: no stream is recorded.
 false: all streams are recorded. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
-                     * @param DisableRecord A global parameter generally used in conjunction with `StreamControls` that specifies whether to disable recording. Valid values:
+                     * @param _disableRecord A global parameter generally used in conjunction with `StreamControls` that specifies whether to disable recording. Valid values:
 
 true: no stream is recorded.
 false: all streams are recorded. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+                     * 
                      */
                     void SetDisableRecord(const bool& _disableRecord);
 
                     /**
                      * 判断参数 DisableRecord 是否已赋值
                      * @return DisableRecord 是否已赋值
+                     * 
                      */
                     bool DisableRecordHasBeenSet() const;
 
@@ -116,6 +122,7 @@ true: no audio recording of any streams.
 false: audio recording of all streams. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+                     * 
                      */
                     bool GetDisableAudio() const;
 
@@ -126,18 +133,20 @@ true: no audio recording of any streams.
 false: audio recording of all streams. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
-                     * @param DisableAudio A global parameter generally used in conjunction with `StreamControls` that specifies whether to disable audio recording over all streams. Valid values:
+                     * @param _disableAudio A global parameter generally used in conjunction with `StreamControls` that specifies whether to disable audio recording over all streams. Valid values:
 
 true: no audio recording of any streams.
 false: audio recording of all streams. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+                     * 
                      */
                     void SetDisableAudio(const bool& _disableAudio);
 
                     /**
                      * 判断参数 DisableAudio 是否已赋值
                      * @return DisableAudio 是否已赋值
+                     * 
                      */
                     bool DisableAudioHasBeenSet() const;
 
@@ -154,6 +163,7 @@ true: only records low-resolution videos for all streams. Please ensure that the
 false: high-resolution video recording of all streams. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+                     * 
                      */
                     bool GetPullSmallVideo() const;
 
@@ -164,36 +174,41 @@ true: only records low-resolution videos for all streams. Please ensure that the
 false: high-resolution video recording of all streams. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
-                     * @param PullSmallVideo A global parameter generally used in conjunction with `StreamControls` that specifies whether to record low-resolution videos only. Valid values:
+                     * @param _pullSmallVideo A global parameter generally used in conjunction with `StreamControls` that specifies whether to record low-resolution videos only. Valid values:
 
 true: only records low-resolution videos for all streams. Please ensure that the up-streaming end pushes the low-resolution videos. Otherwise, the recorded video may be black.
 false: high-resolution video recording of all streams. Default value: false.
 
 The setting in this parameter is applied to all streams. However, if `StreamControls` is passed in, the parameters in `StreamControls` will take precedence.
+                     * 
                      */
                     void SetPullSmallVideo(const bool& _pullSmallVideo);
 
                     /**
                      * 判断参数 PullSmallVideo 是否已赋值
                      * @return PullSmallVideo 是否已赋值
+                     * 
                      */
                     bool PullSmallVideoHasBeenSet() const;
 
                     /**
                      * 获取Parameters over specific streams, which take priority over global configurations. If it’s empty, all streams are recorded according to the global configurations. 
                      * @return StreamControls Parameters over specific streams, which take priority over global configurations. If it’s empty, all streams are recorded according to the global configurations. 
+                     * 
                      */
                     std::vector<StreamControl> GetStreamControls() const;
 
                     /**
                      * 设置Parameters over specific streams, which take priority over global configurations. If it’s empty, all streams are recorded according to the global configurations. 
-                     * @param StreamControls Parameters over specific streams, which take priority over global configurations. If it’s empty, all streams are recorded according to the global configurations. 
+                     * @param _streamControls Parameters over specific streams, which take priority over global configurations. If it’s empty, all streams are recorded according to the global configurations. 
+                     * 
                      */
                     void SetStreamControls(const std::vector<StreamControl>& _streamControls);
 
                     /**
                      * 判断参数 StreamControls 是否已赋值
                      * @return StreamControls 是否已赋值
+                     * 
                      */
                     bool StreamControlsHasBeenSet() const;
 

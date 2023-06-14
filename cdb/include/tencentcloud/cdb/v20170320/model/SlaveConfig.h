@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Replication mode of the secondary database. Value range: async, semi-sync
                      * @return ReplicationMode Replication mode of the secondary database. Value range: async, semi-sync
+                     * 
                      */
                     std::string GetReplicationMode() const;
 
                     /**
                      * 设置Replication mode of the secondary database. Value range: async, semi-sync
-                     * @param ReplicationMode Replication mode of the secondary database. Value range: async, semi-sync
+                     * @param _replicationMode Replication mode of the secondary database. Value range: async, semi-sync
+                     * 
                      */
                     void SetReplicationMode(const std::string& _replicationMode);
 
                     /**
                      * 判断参数 ReplicationMode 是否已赋值
                      * @return ReplicationMode 是否已赋值
+                     * 
                      */
                     bool ReplicationModeHasBeenSet() const;
 
                     /**
                      * 获取AZ name of the secondary database, such as ap-shanghai-1
                      * @return Zone AZ name of the secondary database, such as ap-shanghai-1
+                     * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置AZ name of the secondary database, such as ap-shanghai-1
-                     * @param Zone AZ name of the secondary database, such as ap-shanghai-1
+                     * @param _zone AZ name of the secondary database, such as ap-shanghai-1
+                     * 
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
+                     * 
                      */
                     bool ZoneHasBeenSet() const;
 

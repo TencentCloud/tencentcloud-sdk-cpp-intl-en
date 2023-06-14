@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Message retention period
                      * @return TimeInMinutes Message retention period
+                     * 
                      */
                     int64_t GetTimeInMinutes() const;
 
                     /**
                      * 设置Message retention period
-                     * @param TimeInMinutes Message retention period
+                     * @param _timeInMinutes Message retention period
+                     * 
                      */
                     void SetTimeInMinutes(const int64_t& _timeInMinutes);
 
                     /**
                      * 判断参数 TimeInMinutes 是否已赋值
                      * @return TimeInMinutes 是否已赋值
+                     * 
                      */
                     bool TimeInMinutesHasBeenSet() const;
 
                     /**
                      * 获取Message retention size
                      * @return SizeInMB Message retention size
+                     * 
                      */
                     int64_t GetSizeInMB() const;
 
                     /**
                      * 设置Message retention size
-                     * @param SizeInMB Message retention size
+                     * @param _sizeInMB Message retention size
+                     * 
                      */
                     void SetSizeInMB(const int64_t& _sizeInMB);
 
                     /**
                      * 判断参数 SizeInMB 是否已赋值
                      * @return SizeInMB 是否已赋值
+                     * 
                      */
                     bool SizeInMBHasBeenSet() const;
 

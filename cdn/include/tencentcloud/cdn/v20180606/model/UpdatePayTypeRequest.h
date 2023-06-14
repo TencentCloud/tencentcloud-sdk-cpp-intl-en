@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Billing region, which can be `mainland` or `overseas`.
                      * @return Area Billing region, which can be `mainland` or `overseas`.
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Billing region, which can be `mainland` or `overseas`.
-                     * @param Area Billing region, which can be `mainland` or `overseas`.
+                     * @param _area Billing region, which can be `mainland` or `overseas`.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 
                     /**
                      * 获取Billing mode, which can be `flux` or `bandwidth`.
                      * @return PayType Billing mode, which can be `flux` or `bandwidth`.
+                     * 
                      */
                     std::string GetPayType() const;
 
                     /**
                      * 设置Billing mode, which can be `flux` or `bandwidth`.
-                     * @param PayType Billing mode, which can be `flux` or `bandwidth`.
+                     * @param _payType Billing mode, which can be `flux` or `bandwidth`.
+                     * 
                      */
                     void SetPayType(const std::string& _payType);
 
                     /**
                      * 判断参数 PayType 是否已赋值
                      * @return PayType 是否已赋值
+                     * 
                      */
                     bool PayTypeHasBeenSet() const;
 

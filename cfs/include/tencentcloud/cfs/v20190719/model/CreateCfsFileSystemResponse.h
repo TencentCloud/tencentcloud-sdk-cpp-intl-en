@@ -46,96 +46,112 @@ namespace TencentCloud
                     /**
                      * 获取File system creation time
                      * @return CreationTime File system creation time
+                     * 
                      */
                     std::string GetCreationTime() const;
 
                     /**
                      * 判断参数 CreationTime 是否已赋值
                      * @return CreationTime 是否已赋值
+                     * 
                      */
                     bool CreationTimeHasBeenSet() const;
 
                     /**
                      * 获取Custom file system name
                      * @return CreationToken Custom file system name
+                     * 
                      */
                     std::string GetCreationToken() const;
 
                     /**
                      * 判断参数 CreationToken 是否已赋值
                      * @return CreationToken 是否已赋值
+                     * 
                      */
                     bool CreationTokenHasBeenSet() const;
 
                     /**
                      * 获取File system ID
                      * @return FileSystemId File system ID
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
                      * 获取File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
                      * @return LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+                     * 
                      */
                     std::string GetLifeCycleState() const;
 
                     /**
                      * 判断参数 LifeCycleState 是否已赋值
                      * @return LifeCycleState 是否已赋值
+                     * 
                      */
                     bool LifeCycleStateHasBeenSet() const;
 
                     /**
                      * 获取Storage used by the file system, in bytes
                      * @return SizeByte Storage used by the file system, in bytes
+                     * 
                      */
                     uint64_t GetSizeByte() const;
 
                     /**
                      * 判断参数 SizeByte 是否已赋值
                      * @return SizeByte 是否已赋值
+                     * 
                      */
                     bool SizeByteHasBeenSet() const;
 
                     /**
                      * 获取AZ ID
                      * @return ZoneId AZ ID
+                     * 
                      */
                     uint64_t GetZoneId() const;
 
                     /**
                      * 判断参数 ZoneId 是否已赋值
                      * @return ZoneId 是否已赋值
+                     * 
                      */
                     bool ZoneIdHasBeenSet() const;
 
                     /**
                      * 获取Custom file system name
                      * @return FsName Custom file system name
+                     * 
                      */
                     std::string GetFsName() const;
 
                     /**
                      * 判断参数 FsName 是否已赋值
                      * @return FsName 是否已赋值
+                     * 
                      */
                     bool FsNameHasBeenSet() const;
 
                     /**
                      * 获取Whether a file system is encrypted
                      * @return Encrypted Whether a file system is encrypted
+                     * 
                      */
                     bool GetEncrypted() const;
 
                     /**
                      * 判断参数 Encrypted 是否已赋值
                      * @return Encrypted 是否已赋值
+                     * 
                      */
                     bool EncryptedHasBeenSet() const;
 

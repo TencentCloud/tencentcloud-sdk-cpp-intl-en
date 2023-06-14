@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to use digital watermarks. This parameter is required. Valid values:
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,33 +61,38 @@ namespace TencentCloud
                      * 设置Whether to use digital watermarks. This parameter is required. Valid values:
 <li>ON</li>
 <li>OFF</li>
-                     * @param Switch Whether to use digital watermarks. This parameter is required. Valid values:
+                     * @param _switch Whether to use digital watermarks. This parameter is required. Valid values:
 <li>ON</li>
 <li>OFF</li>
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
                     /**
                      * 获取This parameter has been deprecated.
                      * @return Definition This parameter has been deprecated.
+                     * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
                      * 设置This parameter has been deprecated.
-                     * @param Definition This parameter has been deprecated.
+                     * @param _definition This parameter has been deprecated.
+                     * 
                      */
                     void SetDefinition(const uint64_t& _definition);
 
                     /**
                      * 判断参数 Definition 是否已赋值
                      * @return Definition 是否已赋值
+                     * 
                      */
                     bool DefinitionHasBeenSet() const;
 

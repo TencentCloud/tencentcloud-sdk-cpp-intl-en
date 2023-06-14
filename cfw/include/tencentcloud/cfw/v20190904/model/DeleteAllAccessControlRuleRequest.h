@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Direction. 0: outbound; 1: inbound. 0 by default
                      * @return Direction Direction. 0: outbound; 1: inbound. 0 by default
+                     * 
                      */
                     uint64_t GetDirection() const;
 
                     /**
                      * 设置Direction. 0: outbound; 1: inbound. 0 by default
-                     * @param Direction Direction. 0: outbound; 1: inbound. 0 by default
+                     * @param _direction Direction. 0: outbound; 1: inbound. 0 by default
+                     * 
                      */
                     void SetDirection(const uint64_t& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 
                     /**
                      * 获取Deletes all the access control rules for inter-VPC firewall toggles associated with the EdgeId. It is empty by default. Enter either EdgeId or Area.
                      * @return EdgeId Deletes all the access control rules for inter-VPC firewall toggles associated with the EdgeId. It is empty by default. Enter either EdgeId or Area.
+                     * 
                      */
                     std::string GetEdgeId() const;
 
                     /**
                      * 设置Deletes all the access control rules for inter-VPC firewall toggles associated with the EdgeId. It is empty by default. Enter either EdgeId or Area.
-                     * @param EdgeId Deletes all the access control rules for inter-VPC firewall toggles associated with the EdgeId. It is empty by default. Enter either EdgeId or Area.
+                     * @param _edgeId Deletes all the access control rules for inter-VPC firewall toggles associated with the EdgeId. It is empty by default. Enter either EdgeId or Area.
+                     * 
                      */
                     void SetEdgeId(const std::string& _edgeId);
 
                     /**
                      * 判断参数 EdgeId 是否已赋值
                      * @return EdgeId 是否已赋值
+                     * 
                      */
                     bool EdgeIdHasBeenSet() const;
 
                     /**
                      * 获取Deletes all the access control rules for NAT firewalls of this region. It is empty by default. Enter either EdgeId or Area.
                      * @return Area Deletes all the access control rules for NAT firewalls of this region. It is empty by default. Enter either EdgeId or Area.
+                     * 
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Deletes all the access control rules for NAT firewalls of this region. It is empty by default. Enter either EdgeId or Area.
-                     * @param Area Deletes all the access control rules for NAT firewalls of this region. It is empty by default. Enter either EdgeId or Area.
+                     * @param _area Deletes all the access control rules for NAT firewalls of this region. It is empty by default. Enter either EdgeId or Area.
+                     * 
                      */
                     void SetArea(const std::string& _area);
 
                     /**
                      * 判断参数 Area 是否已赋值
                      * @return Area 是否已赋值
+                     * 
                      */
                     bool AreaHasBeenSet() const;
 

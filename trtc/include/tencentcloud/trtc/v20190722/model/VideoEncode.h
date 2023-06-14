@@ -49,90 +49,105 @@ namespace TencentCloud
                     /**
                      * 获取The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
                      * @return Width The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
+                     * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
                      * 设置The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
-                     * @param Width The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
+                     * @param _width The width of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1920].
+                     * 
                      */
                     void SetWidth(const uint64_t& _width);
 
                     /**
                      * 判断参数 Width 是否已赋值
                      * @return Width 是否已赋值
+                     * 
                      */
                     bool WidthHasBeenSet() const;
 
                     /**
                      * 获取The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
                      * @return Height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+                     * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
                      * 设置The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
-                     * @param Height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+                     * @param _height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+                     * 
                      */
                     void SetHeight(const uint64_t& _height);
 
                     /**
                      * 判断参数 Height 是否已赋值
                      * @return Height 是否已赋值
+                     * 
                      */
                     bool HeightHasBeenSet() const;
 
                     /**
                      * 获取The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
                      * @return Fps The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
+                     * 
                      */
                     uint64_t GetFps() const;
 
                     /**
                      * 设置The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
-                     * @param Fps The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
+                     * @param _fps The frame rate (fps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 60].
+                     * 
                      */
                     void SetFps(const uint64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 
                     /**
                      * 获取The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
                      * @return BitRate The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
+                     * 
                      */
                     uint64_t GetBitRate() const;
 
                     /**
                      * 设置The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
-                     * @param BitRate The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
+                     * @param _bitRate The bitrate (Kbps) of the output stream. This parameter is required if audio and video are relayed. Value range: [0, 10000].
+                     * 
                      */
                     void SetBitRate(const uint64_t& _bitRate);
 
                     /**
                      * 判断参数 BitRate 是否已赋值
                      * @return BitRate 是否已赋值
+                     * 
                      */
                     bool BitRateHasBeenSet() const;
 
                     /**
                      * 获取The GOP (seconds) of the output stream. This parameter is required if audio and video are relayed. Value range: [1, 5].
                      * @return Gop The GOP (seconds) of the output stream. This parameter is required if audio and video are relayed. Value range: [1, 5].
+                     * 
                      */
                     uint64_t GetGop() const;
 
                     /**
                      * 设置The GOP (seconds) of the output stream. This parameter is required if audio and video are relayed. Value range: [1, 5].
-                     * @param Gop The GOP (seconds) of the output stream. This parameter is required if audio and video are relayed. Value range: [1, 5].
+                     * @param _gop The GOP (seconds) of the output stream. This parameter is required if audio and video are relayed. Value range: [1, 5].
+                     * 
                      */
                     void SetGop(const uint64_t& _gop);
 
                     /**
                      * 判断参数 Gop 是否已赋值
                      * @return Gop 是否已赋值
+                     * 
                      */
                     bool GopHasBeenSet() const;
 

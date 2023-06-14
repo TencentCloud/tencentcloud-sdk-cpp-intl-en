@@ -53,6 +53,7 @@ namespace TencentCloud
                      * @return Switch Whether to enable Smart compression
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -60,15 +61,17 @@ namespace TencentCloud
                      * 设置Whether to enable Smart compression
 `on`: Enable
 `off`: Disable
-                     * @param Switch Whether to enable Smart compression
+                     * @param _switch Whether to enable Smart compression
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 

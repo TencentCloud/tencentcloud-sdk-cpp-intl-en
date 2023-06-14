@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the file systems to be unbound, separated by comma
                      * @return FileSystemIds List of IDs of the file systems to be unbound, separated by comma
+                     * 
                      */
                     std::string GetFileSystemIds() const;
 
                     /**
                      * 设置List of IDs of the file systems to be unbound, separated by comma
-                     * @param FileSystemIds List of IDs of the file systems to be unbound, separated by comma
+                     * @param _fileSystemIds List of IDs of the file systems to be unbound, separated by comma
+                     * 
                      */
                     void SetFileSystemIds(const std::string& _fileSystemIds);
 
                     /**
                      * 判断参数 FileSystemIds 是否已赋值
                      * @return FileSystemIds 是否已赋值
+                     * 
                      */
                     bool FileSystemIdsHasBeenSet() const;
 
                     /**
                      * 获取ID of the snapshot to be unbound
                      * @return AutoSnapshotPolicyId ID of the snapshot to be unbound
+                     * 
                      */
                     std::string GetAutoSnapshotPolicyId() const;
 
                     /**
                      * 设置ID of the snapshot to be unbound
-                     * @param AutoSnapshotPolicyId ID of the snapshot to be unbound
+                     * @param _autoSnapshotPolicyId ID of the snapshot to be unbound
+                     * 
                      */
                     void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
 
                     /**
                      * 判断参数 AutoSnapshotPolicyId 是否已赋值
                      * @return AutoSnapshotPolicyId 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicyIdHasBeenSet() const;
 

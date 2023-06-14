@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取TencentDB product type to be queried. Currently, only `mysql` is supported.
                      * @return Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * 
                      */
                     std::string GetProduct() const;
 
                     /**
                      * 设置TencentDB product type to be queried. Currently, only `mysql` is supported.
-                     * @param Product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * @param _product TencentDB product type to be queried. Currently, only `mysql` is supported.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

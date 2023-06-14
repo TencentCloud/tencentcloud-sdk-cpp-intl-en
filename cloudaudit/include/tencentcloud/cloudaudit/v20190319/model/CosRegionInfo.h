@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取COS region
                      * @return CosRegion COS region
+                     * 
                      */
                     std::string GetCosRegion() const;
 
                     /**
                      * 设置COS region
-                     * @param CosRegion COS region
+                     * @param _cosRegion COS region
+                     * 
                      */
                     void SetCosRegion(const std::string& _cosRegion);
 
                     /**
                      * 判断参数 CosRegion 是否已赋值
                      * @return CosRegion 是否已赋值
+                     * 
                      */
                     bool CosRegionHasBeenSet() const;
 
                     /**
                      * 获取Region description
                      * @return CosRegionName Region description
+                     * 
                      */
                     std::string GetCosRegionName() const;
 
                     /**
                      * 设置Region description
-                     * @param CosRegionName Region description
+                     * @param _cosRegionName Region description
+                     * 
                      */
                     void SetCosRegionName(const std::string& _cosRegionName);
 
                     /**
                      * 判断参数 CosRegionName 是否已赋值
                      * @return CosRegionName 是否已赋值
+                     * 
                      */
                     bool CosRegionNameHasBeenSet() const;
 

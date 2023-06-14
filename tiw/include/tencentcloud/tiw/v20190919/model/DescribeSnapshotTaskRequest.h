@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the query task.
                      * @return TaskID ID of the query task.
+                     * 
                      */
                     std::string GetTaskID() const;
 
                     /**
                      * 设置ID of the query task.
-                     * @param TaskID ID of the query task.
+                     * @param _taskID ID of the query task.
+                     * 
                      */
                     void SetTaskID(const std::string& _taskID);
 
                     /**
                      * 判断参数 TaskID 是否已赋值
                      * @return TaskID 是否已赋值
+                     * 
                      */
                     bool TaskIDHasBeenSet() const;
 
                     /**
                      * 获取SdkAppId of the task.
                      * @return SdkAppId SdkAppId of the task.
+                     * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
                      * 设置SdkAppId of the task.
-                     * @param SdkAppId SdkAppId of the task.
+                     * @param _sdkAppId SdkAppId of the task.
+                     * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
                     /**
                      * 判断参数 SdkAppId 是否已赋值
                      * @return SdkAppId 是否已赋值
+                     * 
                      */
                     bool SdkAppIdHasBeenSet() const;
 

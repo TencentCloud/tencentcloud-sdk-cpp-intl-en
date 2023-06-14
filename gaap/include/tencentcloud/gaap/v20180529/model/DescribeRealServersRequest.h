@@ -47,72 +47,84 @@ namespace TencentCloud
                     /**
                      * 获取Queries the project ID to which the origin server belongs. -1: all projects.
                      * @return ProjectId Queries the project ID to which the origin server belongs. -1: all projects.
+                     * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
                      * 设置Queries the project ID to which the origin server belongs. -1: all projects.
-                     * @param ProjectId Queries the project ID to which the origin server belongs. -1: all projects.
+                     * @param _projectId Queries the project ID to which the origin server belongs. -1: all projects.
+                     * 
                      */
                     void SetProjectId(const int64_t& _projectId);
 
                     /**
                      * 判断参数 ProjectId 是否已赋值
                      * @return ProjectId 是否已赋值
+                     * 
                      */
                     bool ProjectIdHasBeenSet() const;
 
                     /**
                      * 获取Origin server IP or domain name to be queried. The fuzzy match is supported.
                      * @return SearchValue Origin server IP or domain name to be queried. The fuzzy match is supported.
+                     * 
                      */
                     std::string GetSearchValue() const;
 
                     /**
                      * 设置Origin server IP or domain name to be queried. The fuzzy match is supported.
-                     * @param SearchValue Origin server IP or domain name to be queried. The fuzzy match is supported.
+                     * @param _searchValue Origin server IP or domain name to be queried. The fuzzy match is supported.
+                     * 
                      */
                     void SetSearchValue(const std::string& _searchValue);
 
                     /**
                      * 判断参数 SearchValue 是否已赋值
                      * @return SearchValue 是否已赋值
+                     * 
                      */
                     bool SearchValueHasBeenSet() const;
 
                     /**
                      * 获取Offset, which is 0 by default.
                      * @return Offset Offset, which is 0 by default.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset, which is 0 by default.
-                     * @param Offset Offset, which is 0 by default.
+                     * @param _offset Offset, which is 0 by default.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Quantity of values to return. The default value is 20 and the maximum value is 50.
                      * @return Limit Quantity of values to return. The default value is 20 and the maximum value is 50.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Quantity of values to return. The default value is 20 and the maximum value is 50.
-                     * @param Limit Quantity of values to return. The default value is 20 and the maximum value is 50.
+                     * @param _limit Quantity of values to return. The default value is 20 and the maximum value is 50.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -121,38 +133,44 @@ namespace TencentCloud
 It supports up to 5 tags. If there are two or more tags, the origin servers tagged any of them will be pulled.
                      * @return TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the origin servers tagged any of them will be pulled.
+                     * 
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
                      * 设置Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the origin servers tagged any of them will be pulled.
-                     * @param TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
+                     * @param _tagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the origin servers tagged any of them will be pulled.
+                     * 
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
                     /**
                      * 判断参数 TagSet 是否已赋值
                      * @return TagSet 是否已赋值
+                     * 
                      */
                     bool TagSetHasBeenSet() const;
 
                     /**
                      * 获取Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
                      * @return Filters Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
-                     * @param Filters Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
+                     * @param _filters Filter conditions. The value of the `name` of the `filter` (RealServerName, RealServerIP)
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 

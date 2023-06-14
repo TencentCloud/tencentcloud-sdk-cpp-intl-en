@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Instance ID
                      * @return InstanceId Instance ID
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * @param _instanceId Instance ID
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取List of alerting rule IDs
                      * @return AlertIds List of alerting rule IDs
+                     * 
                      */
                     std::vector<std::string> GetAlertIds() const;
 
                     /**
                      * 设置List of alerting rule IDs
-                     * @param AlertIds List of alerting rule IDs
+                     * @param _alertIds List of alerting rule IDs
+                     * 
                      */
                     void SetAlertIds(const std::vector<std::string>& _alertIds);
 
                     /**
                      * 判断参数 AlertIds 是否已赋值
                      * @return AlertIds 是否已赋值
+                     * 
                      */
                     bool AlertIdsHasBeenSet() const;
 
                     /**
                      * 获取Alerting rule name
                      * @return Names Alerting rule name
+                     * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
                      * 设置Alerting rule name
-                     * @param Names Alerting rule name
+                     * @param _names Alerting rule name
+                     * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
                     /**
                      * 判断参数 Names 是否已赋值
                      * @return Names 是否已赋值
+                     * 
                      */
                     bool NamesHasBeenSet() const;
 

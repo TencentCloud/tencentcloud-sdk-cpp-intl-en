@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The number of tasks.
                      * @return DataInfoList The number of tasks.
+                     * 
                      */
                     std::vector<TranscodeTaskNum> GetDataInfoList() const;
 
                     /**
                      * 判断参数 DataInfoList 是否已赋值
                      * @return DataInfoList 是否已赋值
+                     * 
                      */
                     bool DataInfoListHasBeenSet() const;
 

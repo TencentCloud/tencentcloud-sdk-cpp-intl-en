@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取The page number, beginning from 1.
                      * @return PageNumber The page number, beginning from 1.
+                     * 
                      */
                     int64_t GetPageNumber() const;
 
                     /**
                      * 设置The page number, beginning from 1.
-                     * @param PageNumber The page number, beginning from 1.
+                     * @param _pageNumber The page number, beginning from 1.
+                     * 
                      */
                     void SetPageNumber(const int64_t& _pageNumber);
 
                     /**
                      * 判断参数 PageNumber 是否已赋值
                      * @return PageNumber 是否已赋值
+                     * 
                      */
                     bool PageNumberHasBeenSet() const;
 
                     /**
                      * 获取The number of records per page.
                      * @return PageSize The number of records per page.
+                     * 
                      */
                     int64_t GetPageSize() const;
 
                     /**
                      * 设置The number of records per page.
-                     * @param PageSize The number of records per page.
+                     * @param _pageSize The number of records per page.
+                     * 
                      */
                     void SetPageSize(const int64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
                     /**
                      * 获取The DID.
                      * @return Did The DID.
+                     * 
                      */
                     std::string GetDid() const;
 
                     /**
                      * 设置The DID.
-                     * @param Did The DID.
+                     * @param _did The DID.
+                     * 
                      */
                     void SetDid(const std::string& _did);
 
                     /**
                      * 判断参数 Did 是否已赋值
                      * @return Did 是否已赋值
+                     * 
                      */
                     bool DidHasBeenSet() const;
 
                     /**
                      * 获取Whether to query certified or uncertified authorities. `1`: Certified; `2`: Uncertified.
                      * @return Status Whether to query certified or uncertified authorities. `1`: Certified; `2`: Uncertified.
+                     * 
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Whether to query certified or uncertified authorities. `1`: Certified; `2`: Uncertified.
-                     * @param Status Whether to query certified or uncertified authorities. `1`: Certified; `2`: Uncertified.
+                     * @param _status Whether to query certified or uncertified authorities. `1`: Certified; `2`: Uncertified.
+                     * 
                      */
                     void SetStatus(const int64_t& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 

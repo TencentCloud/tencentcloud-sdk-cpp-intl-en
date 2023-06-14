@@ -46,54 +46,63 @@ namespace TencentCloud
                     /**
                      * 获取File system ID
                      * @return FileSystemId File system ID
+                     * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
                      * 设置File system ID
-                     * @param FileSystemId File system ID
+                     * @param _fileSystemId File system ID
+                     * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
 
                     /**
                      * 判断参数 FileSystemId 是否已赋值
                      * @return FileSystemId 是否已赋值
+                     * 
                      */
                     bool FileSystemIdHasBeenSet() const;
 
                     /**
                      * 获取Snapshot name
                      * @return SnapshotName Snapshot name
+                     * 
                      */
                     std::string GetSnapshotName() const;
 
                     /**
                      * 设置Snapshot name
-                     * @param SnapshotName Snapshot name
+                     * @param _snapshotName Snapshot name
+                     * 
                      */
                     void SetSnapshotName(const std::string& _snapshotName);
 
                     /**
                      * 判断参数 SnapshotName 是否已赋值
                      * @return SnapshotName 是否已赋值
+                     * 
                      */
                     bool SnapshotNameHasBeenSet() const;
 
                     /**
                      * 获取Snapshot tag
                      * @return ResourceTags Snapshot tag
+                     * 
                      */
                     std::vector<TagInfo> GetResourceTags() const;
 
                     /**
                      * 设置Snapshot tag
-                     * @param ResourceTags Snapshot tag
+                     * @param _resourceTags Snapshot tag
+                     * 
                      */
                     void SetResourceTags(const std::vector<TagInfo>& _resourceTags);
 
                     /**
                      * 判断参数 ResourceTags 是否已赋值
                      * @return ResourceTags 是否已赋值
+                     * 
                      */
                     bool ResourceTagsHasBeenSet() const;
 

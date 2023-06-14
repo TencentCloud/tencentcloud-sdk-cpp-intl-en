@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Environment ID
                      * @return EnvironmentId Environment ID
+                     * 
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
                      * 设置Environment ID
-                     * @param EnvironmentId Environment ID
+                     * @param _environmentId Environment ID
+                     * 
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
                     /**
                      * 判断参数 EnvironmentId 是否已赋值
                      * @return EnvironmentId 是否已赋值
+                     * 
                      */
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
                      * 获取Environment namespace
                      * @return ClusterNamespace Environment namespace
+                     * 
                      */
                     std::string GetClusterNamespace() const;
 
                     /**
                      * 设置Environment namespace
-                     * @param ClusterNamespace Environment namespace
+                     * @param _clusterNamespace Environment namespace
+                     * 
                      */
                     void SetClusterNamespace(const std::string& _clusterNamespace);
 
                     /**
                      * 判断参数 ClusterNamespace 是否已赋值
                      * @return ClusterNamespace 是否已赋值
+                     * 
                      */
                     bool ClusterNamespaceHasBeenSet() const;
 
                     /**
                      * 获取Source channel
                      * @return SourceChannel Source channel
+                     * 
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
                      * 设置Source channel
-                     * @param SourceChannel Source channel
+                     * @param _sourceChannel Source channel
+                     * 
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
                     /**
                      * 判断参数 SourceChannel 是否已赋值
                      * @return SourceChannel 是否已赋值
+                     * 
                      */
                     bool SourceChannelHasBeenSet() const;
 
                     /**
                      * 获取Ingress rule name list
                      * @return IngressNames Ingress rule name list
+                     * 
                      */
                     std::vector<std::string> GetIngressNames() const;
 
                     /**
                      * 设置Ingress rule name list
-                     * @param IngressNames Ingress rule name list
+                     * @param _ingressNames Ingress rule name list
+                     * 
                      */
                     void SetIngressNames(const std::vector<std::string>& _ingressNames);
 
                     /**
                      * 判断参数 IngressNames 是否已赋值
                      * @return IngressNames 是否已赋值
+                     * 
                      */
                     bool IngressNamesHasBeenSet() const;
 

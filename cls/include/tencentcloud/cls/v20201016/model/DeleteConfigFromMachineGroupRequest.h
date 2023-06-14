@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Machine group ID
                      * @return GroupId Machine group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Machine group ID
-                     * @param GroupId Machine group ID
+                     * @param _groupId Machine group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
                     /**
                      * 获取Collection configuration ID
                      * @return ConfigId Collection configuration ID
+                     * 
                      */
                     std::string GetConfigId() const;
 
                     /**
                      * 设置Collection configuration ID
-                     * @param ConfigId Collection configuration ID
+                     * @param _configId Collection configuration ID
+                     * 
                      */
                     void SetConfigId(const std::string& _configId);
 
                     /**
                      * 判断参数 ConfigId 是否已赋值
                      * @return ConfigId 是否已赋值
+                     * 
                      */
                     bool ConfigIdHasBeenSet() const;
 

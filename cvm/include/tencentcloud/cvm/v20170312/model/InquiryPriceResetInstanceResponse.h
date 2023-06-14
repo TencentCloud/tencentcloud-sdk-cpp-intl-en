@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Price of reinstalling the instance with the specified configuration.
                      * @return Price Price of reinstalling the instance with the specified configuration.
+                     * 
                      */
                     Price GetPrice() const;
 
                     /**
                      * 判断参数 Price 是否已赋值
                      * @return Price 是否已赋值
+                     * 
                      */
                     bool PriceHasBeenSet() const;
 

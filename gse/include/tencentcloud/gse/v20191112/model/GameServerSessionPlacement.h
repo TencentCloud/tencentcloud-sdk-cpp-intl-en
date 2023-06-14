@@ -52,36 +52,42 @@ namespace TencentCloud
                     /**
                      * 获取Deployment ID
                      * @return PlacementId Deployment ID
+                     * 
                      */
                     std::string GetPlacementId() const;
 
                     /**
                      * 设置Deployment ID
-                     * @param PlacementId Deployment ID
+                     * @param _placementId Deployment ID
+                     * 
                      */
                     void SetPlacementId(const std::string& _placementId);
 
                     /**
                      * 判断参数 PlacementId 是否已赋值
                      * @return PlacementId 是否已赋值
+                     * 
                      */
                     bool PlacementIdHasBeenSet() const;
 
                     /**
                      * 获取Service deployment group name
                      * @return GameServerSessionQueueName Service deployment group name
+                     * 
                      */
                     std::string GetGameServerSessionQueueName() const;
 
                     /**
                      * 设置Service deployment group name
-                     * @param GameServerSessionQueueName Service deployment group name
+                     * @param _gameServerSessionQueueName Service deployment group name
+                     * 
                      */
                     void SetGameServerSessionQueueName(const std::string& _gameServerSessionQueueName);
 
                     /**
                      * 判断参数 GameServerSessionQueueName 是否已赋值
                      * @return GameServerSessionQueueName 是否已赋值
+                     * 
                      */
                     bool GameServerSessionQueueNameHasBeenSet() const;
 
@@ -90,38 +96,44 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PlayerLatencies Player latency
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PlayerLatency> GetPlayerLatencies() const;
 
                     /**
                      * 设置Player latency
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PlayerLatencies Player latency
+                     * @param _playerLatencies Player latency
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPlayerLatencies(const std::vector<PlayerLatency>& _playerLatencies);
 
                     /**
                      * 判断参数 PlayerLatencies 是否已赋值
                      * @return PlayerLatencies 是否已赋值
+                     * 
                      */
                     bool PlayerLatenciesHasBeenSet() const;
 
                     /**
                      * 获取Service deployment status
                      * @return Status Service deployment status
+                     * 
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Service deployment status
-                     * @param Status Service deployment status
+                     * @param _status Service deployment status
+                     * 
                      */
                     void SetStatus(const std::string& _status);
 
                     /**
                      * 判断参数 Status 是否已赋值
                      * @return Status 是否已赋值
+                     * 
                      */
                     bool StatusHasBeenSet() const;
 
@@ -130,20 +142,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return DnsName DNS ID assigned to the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDnsName() const;
 
                     /**
                      * 设置DNS ID assigned to the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DnsName DNS ID assigned to the instance where the game session is running
+                     * @param _dnsName DNS ID assigned to the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDnsName(const std::string& _dnsName);
 
                     /**
                      * 判断参数 DnsName 是否已赋值
                      * @return DnsName 是否已赋值
+                     * 
                      */
                     bool DnsNameHasBeenSet() const;
 
@@ -152,20 +167,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GameServerSessionId Game session ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGameServerSessionId() const;
 
                     /**
                      * 设置Game session ID
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GameServerSessionId Game session ID
+                     * @param _gameServerSessionId Game session ID
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGameServerSessionId(const std::string& _gameServerSessionId);
 
                     /**
                      * 判断参数 GameServerSessionId 是否已赋值
                      * @return GameServerSessionId 是否已赋值
+                     * 
                      */
                     bool GameServerSessionIdHasBeenSet() const;
 
@@ -174,20 +192,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GameServerSessionName Game session name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGameServerSessionName() const;
 
                     /**
                      * 设置Game session name
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GameServerSessionName Game session name
+                     * @param _gameServerSessionName Game session name
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGameServerSessionName(const std::string& _gameServerSessionName);
 
                     /**
                      * 判断参数 GameServerSessionName 是否已赋值
                      * @return GameServerSessionName 是否已赋值
+                     * 
                      */
                     bool GameServerSessionNameHasBeenSet() const;
 
@@ -196,20 +217,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GameServerSessionRegion Service deployment region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGameServerSessionRegion() const;
 
                     /**
                      * 设置Service deployment region
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GameServerSessionRegion Service deployment region
+                     * @param _gameServerSessionRegion Service deployment region
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGameServerSessionRegion(const std::string& _gameServerSessionRegion);
 
                     /**
                      * 判断参数 GameServerSessionRegion 是否已赋值
                      * @return GameServerSessionRegion 是否已赋值
+                     * 
                      */
                     bool GameServerSessionRegionHasBeenSet() const;
 
@@ -218,38 +242,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GameProperties Game attributes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<GameProperty> GetGameProperties() const;
 
                     /**
                      * 设置Game attributes
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GameProperties Game attributes
+                     * @param _gameProperties Game attributes
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGameProperties(const std::vector<GameProperty>& _gameProperties);
 
                     /**
                      * 判断参数 GameProperties 是否已赋值
                      * @return GameProperties 是否已赋值
+                     * 
                      */
                     bool GamePropertiesHasBeenSet() const;
 
                     /**
                      * 获取The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
                      * @return MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+                     * 
                      */
                     uint64_t GetMaximumPlayerSessionCount() const;
 
                     /**
                      * 设置The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
-                     * @param MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+                     * @param _maximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+                     * 
                      */
                     void SetMaximumPlayerSessionCount(const uint64_t& _maximumPlayerSessionCount);
 
                     /**
                      * 判断参数 MaximumPlayerSessionCount 是否已赋值
                      * @return MaximumPlayerSessionCount 是否已赋值
+                     * 
                      */
                     bool MaximumPlayerSessionCountHasBeenSet() const;
 
@@ -258,20 +288,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GameServerSessionData Game session data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetGameServerSessionData() const;
 
                     /**
                      * 设置Game session data
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GameServerSessionData Game session data
+                     * @param _gameServerSessionData Game session data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGameServerSessionData(const std::string& _gameServerSessionData);
 
                     /**
                      * 判断参数 GameServerSessionData 是否已赋值
                      * @return GameServerSessionData 是否已赋值
+                     * 
                      */
                     bool GameServerSessionDataHasBeenSet() const;
 
@@ -280,20 +313,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return IpAddress IP address of the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetIpAddress() const;
 
                     /**
                      * 设置IP address of the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IpAddress IP address of the instance where the game session is running
+                     * @param _ipAddress IP address of the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetIpAddress(const std::string& _ipAddress);
 
                     /**
                      * 判断参数 IpAddress 是否已赋值
                      * @return IpAddress 是否已赋值
+                     * 
                      */
                     bool IpAddressHasBeenSet() const;
 
@@ -302,20 +338,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Port Port number of the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetPort() const;
 
                     /**
                      * 设置Port number of the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Port Port number of the instance where the game session is running
+                     * @param _port Port number of the instance where the game session is running
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPort(const uint64_t& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
@@ -324,20 +363,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return MatchmakerData Game match data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetMatchmakerData() const;
 
                     /**
                      * 设置Game match data
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MatchmakerData Game match data
+                     * @param _matchmakerData Game match data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMatchmakerData(const std::string& _matchmakerData);
 
                     /**
                      * 判断参数 MatchmakerData 是否已赋值
                      * @return MatchmakerData 是否已赋值
+                     * 
                      */
                     bool MatchmakerDataHasBeenSet() const;
 
@@ -346,38 +388,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return PlacedPlayerSessions Deployed player game data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<PlacedPlayerSession> GetPlacedPlayerSessions() const;
 
                     /**
                      * 设置Deployed player game data
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PlacedPlayerSessions Deployed player game data
+                     * @param _placedPlayerSessions Deployed player game data
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetPlacedPlayerSessions(const std::vector<PlacedPlayerSession>& _placedPlayerSessions);
 
                     /**
                      * 判断参数 PlacedPlayerSessions 是否已赋值
                      * @return PlacedPlayerSessions 是否已赋值
+                     * 
                      */
                     bool PlacedPlayerSessionsHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return StartTime Start time
+                     * 
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Start time
-                     * @param StartTime Start time
+                     * @param _startTime Start time
+                     * 
                      */
                     void SetStartTime(const std::string& _startTime);
 
                     /**
                      * 判断参数 StartTime 是否已赋值
                      * @return StartTime 是否已赋值
+                     * 
                      */
                     bool StartTimeHasBeenSet() const;
 
@@ -386,20 +434,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return EndTime End time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime End time
+                     * @param _endTime End time
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEndTime(const std::string& _endTime);
 
                     /**
                      * 判断参数 EndTime 是否已赋值
                      * @return EndTime 是否已赋值
+                     * 
                      */
                     bool EndTimeHasBeenSet() const;
 

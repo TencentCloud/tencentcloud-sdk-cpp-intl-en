@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Number of successfully modified instances
                      * @return Count Number of successfully modified instances
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 

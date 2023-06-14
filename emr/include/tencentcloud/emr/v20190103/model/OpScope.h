@@ -52,20 +52,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServiceInfoList The information of the services to operate on.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ServiceBasicRestartInfo> GetServiceInfoList() const;
 
                     /**
                      * 设置The information of the services to operate on.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ServiceInfoList The information of the services to operate on.
+                     * @param _serviceInfoList The information of the services to operate on.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetServiceInfoList(const std::vector<ServiceBasicRestartInfo>& _serviceInfoList);
 
                     /**
                      * 判断参数 ServiceInfoList 是否已赋值
                      * @return ServiceInfoList 是否已赋值
+                     * 
                      */
                     bool ServiceInfoListHasBeenSet() const;
 

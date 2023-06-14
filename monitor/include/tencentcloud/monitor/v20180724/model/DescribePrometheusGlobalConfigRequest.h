@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance-level scrape configuration
                      * @return InstanceId Instance-level scrape configuration
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance-level scrape configuration
-                     * @param InstanceId Instance-level scrape configuration
+                     * @param _instanceId Instance-level scrape configuration
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 
                     /**
                      * 获取Whether to disable statistics
                      * @return DisableStatistics Whether to disable statistics
+                     * 
                      */
                     bool GetDisableStatistics() const;
 
                     /**
                      * 设置Whether to disable statistics
-                     * @param DisableStatistics Whether to disable statistics
+                     * @param _disableStatistics Whether to disable statistics
+                     * 
                      */
                     void SetDisableStatistics(const bool& _disableStatistics);
 
                     /**
                      * 判断参数 DisableStatistics 是否已赋值
                      * @return DisableStatistics 是否已赋值
+                     * 
                      */
                     bool DisableStatisticsHasBeenSet() const;
 

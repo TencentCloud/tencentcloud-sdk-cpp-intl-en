@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Subnet instance ID.
                      * @return SubnetId Subnet instance ID.
+                     * 
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet instance ID.
-                     * @param SubnetId Subnet instance ID.
+                     * @param _subnetId Subnet instance ID.
+                     * 
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
                     /**
                      * 判断参数 SubnetId 是否已赋值
                      * @return SubnetId 是否已赋值
+                     * 
                      */
                     bool SubnetIdHasBeenSet() const;
 
                     /**
                      * 获取Route table instance ID.
                      * @return RouteTableId Route table instance ID.
+                     * 
                      */
                     std::string GetRouteTableId() const;
 
                     /**
                      * 设置Route table instance ID.
-                     * @param RouteTableId Route table instance ID.
+                     * @param _routeTableId Route table instance ID.
+                     * 
                      */
                     void SetRouteTableId(const std::string& _routeTableId);
 
                     /**
                      * 判断参数 RouteTableId 是否已赋值
                      * @return RouteTableId 是否已赋值
+                     * 
                      */
                     bool RouteTableIdHasBeenSet() const;
 

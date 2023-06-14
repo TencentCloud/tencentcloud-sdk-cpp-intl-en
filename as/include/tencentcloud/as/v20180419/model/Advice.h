@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Problem Description
                      * @return Problem Problem Description
+                     * 
                      */
                     std::string GetProblem() const;
 
                     /**
                      * 设置Problem Description
-                     * @param Problem Problem Description
+                     * @param _problem Problem Description
+                     * 
                      */
                     void SetProblem(const std::string& _problem);
 
                     /**
                      * 判断参数 Problem 是否已赋值
                      * @return Problem 是否已赋值
+                     * 
                      */
                     bool ProblemHasBeenSet() const;
 
                     /**
                      * 获取Problem Details
                      * @return Detail Problem Details
+                     * 
                      */
                     std::string GetDetail() const;
 
                     /**
                      * 设置Problem Details
-                     * @param Detail Problem Details
+                     * @param _detail Problem Details
+                     * 
                      */
                     void SetDetail(const std::string& _detail);
 
                     /**
                      * 判断参数 Detail 是否已赋值
                      * @return Detail 是否已赋值
+                     * 
                      */
                     bool DetailHasBeenSet() const;
 
                     /**
                      * 获取Recommended resolutions
                      * @return Solution Recommended resolutions
+                     * 
                      */
                     std::string GetSolution() const;
 
                     /**
                      * 设置Recommended resolutions
-                     * @param Solution Recommended resolutions
+                     * @param _solution Recommended resolutions
+                     * 
                      */
                     void SetSolution(const std::string& _solution);
 
                     /**
                      * 判断参数 Solution 是否已赋值
                      * @return Solution 是否已赋值
+                     * 
                      */
                     bool SolutionHasBeenSet() const;
 

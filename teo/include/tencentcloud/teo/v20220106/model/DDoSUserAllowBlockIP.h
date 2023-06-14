@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Ip Start IP address in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置Start IP address in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Ip Start IP address in a specific range
+                     * @param _ip Start IP address in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIp(const std::string& _ip);
 
                     /**
                      * 判断参数 Ip 是否已赋值
                      * @return Ip 是否已赋值
+                     * 
                      */
                     bool IpHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mask Start mask in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetMask() const;
 
                     /**
                      * 设置Start mask in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mask Start mask in a specific range
+                     * @param _mask Start mask in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMask(const int64_t& _mask);
 
                     /**
                      * 判断参数 Mask 是否已赋值
                      * @return Mask 是否已赋值
+                     * 
                      */
                     bool MaskHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Type IP type. `block`: IP blocklist; `allow`: IP allowlist.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置IP type. `block`: IP blocklist; `allow`: IP allowlist.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Type IP type. `block`: IP blocklist; `allow`: IP allowlist.
+                     * @param _type IP type. `block`: IP blocklist; `allow`: IP allowlist.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpdateTime Timestamp
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetUpdateTime() const;
 
                     /**
                      * 设置Timestamp
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param UpdateTime Timestamp
+                     * @param _updateTime Timestamp
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetUpdateTime(const int64_t& _updateTime);
 
                     /**
                      * 判断参数 UpdateTime 是否已赋值
                      * @return UpdateTime 是否已赋值
+                     * 
                      */
                     bool UpdateTimeHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Ip2 End IP address in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetIp2() const;
 
                     /**
                      * 设置End IP address in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Ip2 End IP address in a specific range
+                     * @param _ip2 End IP address in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetIp2(const std::string& _ip2);
 
                     /**
                      * 判断参数 Ip2 是否已赋值
                      * @return Ip2 是否已赋值
+                     * 
                      */
                     bool Ip2HasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mask2 End mask in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetMask2() const;
 
                     /**
                      * 设置End mask in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Mask2 End mask in a specific range
+                     * @param _mask2 End mask in a specific range
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetMask2(const int64_t& _mask2);
 
                     /**
                      * 判断参数 Mask2 是否已赋值
                      * @return Mask2 是否已赋值
+                     * 
                      */
                     bool Mask2HasBeenSet() const;
 

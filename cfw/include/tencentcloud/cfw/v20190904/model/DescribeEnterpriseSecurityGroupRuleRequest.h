@@ -49,6 +49,7 @@ namespace TencentCloud
                      * @return PageNo Page number of the current page displayed for query by page number.
 
 1 by default.
+                     * 
                      */
                     std::string GetPageNo() const;
 
@@ -56,15 +57,17 @@ namespace TencentCloud
                      * 设置Page number of the current page displayed for query by page number.
 
 1 by default.
-                     * @param PageNo Page number of the current page displayed for query by page number.
+                     * @param _pageNo Page number of the current page displayed for query by page number.
 
 1 by default.
+                     * 
                      */
                     void SetPageNo(const std::string& _pageNo);
 
                     /**
                      * 判断参数 PageNo 是否已赋值
                      * @return PageNo 是否已赋值
+                     * 
                      */
                     bool PageNoHasBeenSet() const;
 
@@ -75,6 +78,7 @@ Maximum value: 50.
                      * @return PageSize Maximum number of entries per page displayed for query by page number.
 
 Maximum value: 50.
+                     * 
                      */
                     std::string GetPageSize() const;
 
@@ -82,15 +86,17 @@ Maximum value: 50.
                      * 设置Maximum number of entries per page displayed for query by page number.
 
 Maximum value: 50.
-                     * @param PageSize Maximum number of entries per page displayed for query by page number.
+                     * @param _pageSize Maximum number of entries per page displayed for query by page number.
 
 Maximum value: 50.
+                     * 
                      */
                     void SetPageSize(const std::string& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 
@@ -111,6 +117,7 @@ resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
 Wildcards are supported.
+                     * 
                      */
                     std::string GetSourceContent() const;
 
@@ -123,7 +130,7 @@ resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
 Wildcards are supported.
-                     * @param SourceContent Source example:
+                     * @param _sourceContent Source example:
 net: IP/CIDR (192.168.0.2)
 template: parameter template (ipm-dyodhpby)
 instance: asset instance (ins-123456)
@@ -131,12 +138,14 @@ resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
 Wildcards are supported.
+                     * 
                      */
                     void SetSourceContent(const std::string& _sourceContent);
 
                     /**
                      * 判断参数 SourceContent 是否已赋值
                      * @return SourceContent 是否已赋值
+                     * 
                      */
                     bool SourceContentHasBeenSet() const;
 
@@ -157,6 +166,7 @@ resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
 Wildcards are supported.
+                     * 
                      */
                     std::string GetDestContent() const;
 
@@ -169,7 +179,7 @@ resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
 Wildcards are supported.
-                     * @param DestContent Destination example:
+                     * @param _destContent Destination example:
 net: IP/CIDR (192.168.0.2)
 template: parameter template (ipm-dyodhpby)
 instance: asset instance (ins-123456)
@@ -177,30 +187,35 @@ resourcegroup: asset group (/all groups/group 1/subgroup 1)
 tag: resource tag ({"Key":"tag key","Value":"tag value"})
 region: region (ap-gaungzhou)
 Wildcards are supported.
+                     * 
                      */
                     void SetDestContent(const std::string& _destContent);
 
                     /**
                      * 判断参数 DestContent 是否已赋值
                      * @return DestContent 是否已赋值
+                     * 
                      */
                     bool DestContentHasBeenSet() const;
 
                     /**
                      * 获取Rule description. Wildcards are supported.
                      * @return Description Rule description. Wildcards are supported.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Rule description. Wildcards are supported.
-                     * @param Description Rule description. Wildcards are supported.
+                     * @param _description Rule description. Wildcards are supported.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 
@@ -211,6 +226,7 @@ drop: deny
                      * @return RuleAction The action that Cloud Firewall performs on the traffic. Valid values:
 accept: allow
 drop: deny
+                     * 
                      */
                     std::string GetRuleAction() const;
 
@@ -218,15 +234,17 @@ drop: deny
                      * 设置The action that Cloud Firewall performs on the traffic. Valid values:
 accept: allow
 drop: deny
-                     * @param RuleAction The action that Cloud Firewall performs on the traffic. Valid values:
+                     * @param _ruleAction The action that Cloud Firewall performs on the traffic. Valid values:
 accept: allow
 drop: deny
+                     * 
                      */
                     void SetRuleAction(const std::string& _ruleAction);
 
                     /**
                      * 判断参数 RuleAction 是否已赋值
                      * @return RuleAction 是否已赋值
+                     * 
                      */
                     bool RuleActionHasBeenSet() const;
 
@@ -235,20 +253,23 @@ drop: deny
 true: enable; false: disable
                      * @return Enable Indicates whether to enable the rules. Default: enable. Valid values:
 true: enable; false: disable
+                     * 
                      */
                     std::string GetEnable() const;
 
                     /**
                      * 设置Indicates whether to enable the rules. Default: enable. Valid values:
 true: enable; false: disable
-                     * @param Enable Indicates whether to enable the rules. Default: enable. Valid values:
+                     * @param _enable Indicates whether to enable the rules. Default: enable. Valid values:
 true: enable; false: disable
+                     * 
                      */
                     void SetEnable(const std::string& _enable);
 
                     /**
                      * 判断参数 Enable 是否已赋值
                      * @return Enable 是否已赋值
+                     * 
                      */
                     bool EnableHasBeenSet() const;
 
@@ -259,6 +280,7 @@ true: enable; false: disable
                      * @return Port The port to apply access control rules. Valid values:
 -1/-1: all ports
 80: port 80
+                     * 
                      */
                     std::string GetPort() const;
 
@@ -266,51 +288,59 @@ true: enable; false: disable
                      * 设置The port to apply access control rules. Valid values:
 -1/-1: all ports
 80: port 80
-                     * @param Port The port to apply access control rules. Valid values:
+                     * @param _port The port to apply access control rules. Valid values:
 -1/-1: all ports
 80: port 80
+                     * 
                      */
                     void SetPort(const std::string& _port);
 
                     /**
                      * 判断参数 Port 是否已赋值
                      * @return Port 是否已赋值
+                     * 
                      */
                     bool PortHasBeenSet() const;
 
                     /**
                      * 获取Protocol. TCP/UDP/ICMP/ANY
                      * @return Protocol Protocol. TCP/UDP/ICMP/ANY
+                     * 
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置Protocol. TCP/UDP/ICMP/ANY
-                     * @param Protocol Protocol. TCP/UDP/ICMP/ANY
+                     * @param _protocol Protocol. TCP/UDP/ICMP/ANY
+                     * 
                      */
                     void SetProtocol(const std::string& _protocol);
 
                     /**
                      * 判断参数 Protocol 是否已赋值
                      * @return Protocol 是否已赋值
+                     * 
                      */
                     bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
                      * @return ServiceTemplateId Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
+                     * 
                      */
                     std::string GetServiceTemplateId() const;
 
                     /**
                      * 设置Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
-                     * @param ServiceTemplateId Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
+                     * @param _serviceTemplateId Parameter template ID of port and protocol type; mutually exclusive with Protocol and Port
+                     * 
                      */
                     void SetServiceTemplateId(const std::string& _serviceTemplateId);
 
                     /**
                      * 判断参数 ServiceTemplateId 是否已赋值
                      * @return ServiceTemplateId 是否已赋值
+                     * 
                      */
                     bool ServiceTemplateIdHasBeenSet() const;
 

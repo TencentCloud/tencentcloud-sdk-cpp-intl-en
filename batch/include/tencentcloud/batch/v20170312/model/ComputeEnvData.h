@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取List of CVM instance types
                      * @return InstanceTypes List of CVM instance types
+                     * 
                      */
                     std::vector<std::string> GetInstanceTypes() const;
 
                     /**
                      * 设置List of CVM instance types
-                     * @param InstanceTypes List of CVM instance types
+                     * @param _instanceTypes List of CVM instance types
+                     * 
                      */
                     void SetInstanceTypes(const std::vector<std::string>& _instanceTypes);
 
                     /**
                      * 判断参数 InstanceTypes 是否已赋值
                      * @return InstanceTypes 是否已赋值
+                     * 
                      */
                     bool InstanceTypesHasBeenSet() const;
 

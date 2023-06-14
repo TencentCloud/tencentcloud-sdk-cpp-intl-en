@@ -54,20 +54,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Cache Cache configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Cache GetCache() const;
 
                     /**
                      * 设置Cache configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Cache Cache configuration
+                     * @param _cache Cache configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCache(const Cache& _cache);
 
                     /**
                      * 判断参数 Cache 是否已赋值
                      * @return Cache 是否已赋值
+                     * 
                      */
                     bool CacheHasBeenSet() const;
 
@@ -76,20 +79,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NoCache No-cache configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     NoCache GetNoCache() const;
 
                     /**
                      * 设置No-cache configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NoCache No-cache configuration
+                     * @param _noCache No-cache configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNoCache(const NoCache& _noCache);
 
                     /**
                      * 判断参数 NoCache 是否已赋值
                      * @return NoCache 是否已赋值
+                     * 
                      */
                     bool NoCacheHasBeenSet() const;
 
@@ -98,20 +104,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FollowOrigin Follows the origin server configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     FollowOrigin GetFollowOrigin() const;
 
                     /**
                      * 设置Follows the origin server configuration
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FollowOrigin Follows the origin server configuration
+                     * @param _followOrigin Follows the origin server configuration
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFollowOrigin(const FollowOrigin& _followOrigin);
 
                     /**
                      * 判断参数 FollowOrigin 是否已赋值
                      * @return FollowOrigin 是否已赋值
+                     * 
                      */
                     bool FollowOriginHasBeenSet() const;
 

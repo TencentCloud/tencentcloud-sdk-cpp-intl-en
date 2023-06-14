@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取The network detection (NetDetect) object.
                      * @return NetDetect The network detection (NetDetect) object.
+                     * 
                      */
                     NetDetect GetNetDetect() const;
 
                     /**
                      * 判断参数 NetDetect 是否已赋值
                      * @return NetDetect 是否已赋值
+                     * 
                      */
                     bool NetDetectHasBeenSet() const;
 

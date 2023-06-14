@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Information of connections that the statistics can be derived from
                      * @return ProxySet Information of connections that the statistics can be derived from
+                     * 
                      */
                     std::vector<ProxySimpleInfo> GetProxySet() const;
 
                     /**
                      * 判断参数 ProxySet 是否已赋值
                      * @return ProxySet 是否已赋值
+                     * 
                      */
                     bool ProxySetHasBeenSet() const;
 
                     /**
                      * 获取Quantity of connections
                      * @return TotalCount Quantity of connections
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

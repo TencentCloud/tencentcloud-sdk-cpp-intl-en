@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Instance launch template ID. This parameter enables you to create an instance using the preset parameters in the template.
                      * @return LaunchTemplateId Instance launch template ID. This parameter enables you to create an instance using the preset parameters in the template.
+                     * 
                      */
                     std::string GetLaunchTemplateId() const;
 
                     /**
                      * 设置Instance launch template ID. This parameter enables you to create an instance using the preset parameters in the template.
-                     * @param LaunchTemplateId Instance launch template ID. This parameter enables you to create an instance using the preset parameters in the template.
+                     * @param _launchTemplateId Instance launch template ID. This parameter enables you to create an instance using the preset parameters in the template.
+                     * 
                      */
                     void SetLaunchTemplateId(const std::string& _launchTemplateId);
 
                     /**
                      * 判断参数 LaunchTemplateId 是否已赋值
                      * @return LaunchTemplateId 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateIdHasBeenSet() const;
 
                     /**
                      * 获取Instance launch template version number. If specified, this parameter will be used to create a new instance launch template.
                      * @return LaunchTemplateVersion Instance launch template version number. If specified, this parameter will be used to create a new instance launch template.
+                     * 
                      */
                     uint64_t GetLaunchTemplateVersion() const;
 
                     /**
                      * 设置Instance launch template version number. If specified, this parameter will be used to create a new instance launch template.
-                     * @param LaunchTemplateVersion Instance launch template version number. If specified, this parameter will be used to create a new instance launch template.
+                     * @param _launchTemplateVersion Instance launch template version number. If specified, this parameter will be used to create a new instance launch template.
+                     * 
                      */
                     void SetLaunchTemplateVersion(const uint64_t& _launchTemplateVersion);
 
                     /**
                      * 判断参数 LaunchTemplateVersion 是否已赋值
                      * @return LaunchTemplateVersion 是否已赋值
+                     * 
                      */
                     bool LaunchTemplateVersionHasBeenSet() const;
 

@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GameServerSessionDetails List of game server session details
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<GameServerSessionDetail> GetGameServerSessionDetails() const;
 
                     /**
                      * 判断参数 GameServerSessionDetails 是否已赋值
                      * @return GameServerSessionDetails 是否已赋值
+                     * 
                      */
                     bool GameServerSessionDetailsHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
 Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 
                      */
                     std::string GetNextToken() const;
 
                     /**
                      * 判断参数 NextToken 是否已赋值
                      * @return NextToken 是否已赋值
+                     * 
                      */
                     bool NextTokenHasBeenSet() const;
 

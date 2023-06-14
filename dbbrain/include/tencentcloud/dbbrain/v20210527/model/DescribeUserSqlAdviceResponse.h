@@ -46,84 +46,98 @@ namespace TencentCloud
                     /**
                      * 获取SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
                      * @return Advices SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+                     * 
                      */
                     std::string GetAdvices() const;
 
                     /**
                      * 判断参数 Advices 是否已赋值
                      * @return Advices 是否已赋值
+                     * 
                      */
                     bool AdvicesHasBeenSet() const;
 
                     /**
                      * 获取Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
                      * @return Comments Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
+                     * 
                      */
                     std::string GetComments() const;
 
                     /**
                      * 判断参数 Comments 是否已赋值
                      * @return Comments 是否已赋值
+                     * 
                      */
                     bool CommentsHasBeenSet() const;
 
                     /**
                      * 获取SQL statement.
                      * @return SqlText SQL statement.
+                     * 
                      */
                     std::string GetSqlText() const;
 
                     /**
                      * 判断参数 SqlText 是否已赋值
                      * @return SqlText 是否已赋值
+                     * 
                      */
                     bool SqlTextHasBeenSet() const;
 
                     /**
                      * 获取Database name.
                      * @return Schema Database name.
+                     * 
                      */
                     std::string GetSchema() const;
 
                     /**
                      * 判断参数 Schema 是否已赋值
                      * @return Schema 是否已赋值
+                     * 
                      */
                     bool SchemaHasBeenSet() const;
 
                     /**
                      * 获取DDL information of related tables, which can be parsed into JSON arrays.
                      * @return Tables DDL information of related tables, which can be parsed into JSON arrays.
+                     * 
                      */
                     std::string GetTables() const;
 
                     /**
                      * 判断参数 Tables 是否已赋值
                      * @return Tables 是否已赋值
+                     * 
                      */
                     bool TablesHasBeenSet() const;
 
                     /**
                      * 获取SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
                      * @return SqlPlan SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+                     * 
                      */
                     std::string GetSqlPlan() const;
 
                     /**
                      * 判断参数 SqlPlan 是否已赋值
                      * @return SqlPlan 是否已赋值
+                     * 
                      */
                     bool SqlPlanHasBeenSet() const;
 
                     /**
                      * 获取Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
                      * @return Cost Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+                     * 
                      */
                     std::string GetCost() const;
 
                     /**
                      * 判断参数 Cost 是否已赋值
                      * @return Cost 是否已赋值
+                     * 
                      */
                     bool CostHasBeenSet() const;
 

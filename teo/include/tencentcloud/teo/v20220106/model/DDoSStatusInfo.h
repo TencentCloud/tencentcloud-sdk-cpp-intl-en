@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取This field is not supported. Value: `off`.
                      * @return AiStatus This field is not supported. Value: `off`.
+                     * 
                      */
                     std::string GetAiStatus() const;
 
                     /**
                      * 设置This field is not supported. Value: `off`.
-                     * @param AiStatus This field is not supported. Value: `off`.
+                     * @param _aiStatus This field is not supported. Value: `off`.
+                     * 
                      */
                     void SetAiStatus(const std::string& _aiStatus);
 
                     /**
                      * 判断参数 AiStatus 是否已赋值
                      * @return AiStatus 是否已赋值
+                     * 
                      */
                     bool AiStatusHasBeenSet() const;
 
                     /**
                      * 获取User appid
                      * @return Appid User appid
+                     * 
                      */
                     std::string GetAppid() const;
 
                     /**
                      * 设置User appid
-                     * @param Appid User appid
+                     * @param _appid User appid
+                     * 
                      */
                     void SetAppid(const std::string& _appid);
 
                     /**
                      * 判断参数 Appid 是否已赋值
                      * @return Appid 是否已赋值
+                     * 
                      */
                     bool AppidHasBeenSet() const;
 
                     /**
                      * 获取Protection level. Values: `low`, `middle`, and `high`.
                      * @return PlyLevel Protection level. Values: `low`, `middle`, and `high`.
+                     * 
                      */
                     std::string GetPlyLevel() const;
 
                     /**
                      * 设置Protection level. Values: `low`, `middle`, and `high`.
-                     * @param PlyLevel Protection level. Values: `low`, `middle`, and `high`.
+                     * @param _plyLevel Protection level. Values: `low`, `middle`, and `high`.
+                     * 
                      */
                     void SetPlyLevel(const std::string& _plyLevel);
 
                     /**
                      * 判断参数 PlyLevel 是否已赋值
                      * @return PlyLevel 是否已赋值
+                     * 
                      */
                     bool PlyLevelHasBeenSet() const;
 

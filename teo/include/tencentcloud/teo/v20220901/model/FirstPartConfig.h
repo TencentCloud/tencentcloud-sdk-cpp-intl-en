@@ -55,6 +55,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -63,16 +64,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Switch Switch. Values:
+                     * @param _switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -81,20 +84,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return StatTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t GetStatTime() const;
 
                     /**
                      * 设置The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param StatTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
+                     * @param _statTime The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetStatTime(const uint64_t& _statTime);
 
                     /**
                      * 判断参数 StatTime 是否已赋值
                      * @return StatTime 是否已赋值
+                     * 
                      */
                     bool StatTimeHasBeenSet() const;
 

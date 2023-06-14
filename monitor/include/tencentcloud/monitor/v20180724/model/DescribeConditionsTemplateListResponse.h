@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Total number of templates.
                      * @return Total Total number of templates.
+                     * 
                      */
                     int64_t GetTotal() const;
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TemplateGroupList Template list.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TemplateGroup> GetTemplateGroupList() const;
 
                     /**
                      * 判断参数 TemplateGroupList 是否已赋值
                      * @return TemplateGroupList 是否已赋值
+                     * 
                      */
                     bool TemplateGroupListHasBeenSet() const;
 

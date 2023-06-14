@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return Count Number of queried configurations
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     int64_t GetCount() const;
 
                     /**
                      * 判断参数 Count 是否已赋值
                      * @return Count 是否已赋值
+                     * 
                      */
                     bool CountHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
                      * @return PoolConf Connection pool configuration details
 Note: this field may return `null`, indicating that no valid value can be found.
+                     * 
                      */
                     PoolConf GetPoolConf() const;
 
                     /**
                      * 判断参数 PoolConf 是否已赋值
                      * @return PoolConf 是否已赋值
+                     * 
                      */
                     bool PoolConfHasBeenSet() const;
 

@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取The quantity of scheduled snapshots binded to cloud disk.
                      * @return TotalCount The quantity of scheduled snapshots binded to cloud disk.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of scheduled snapshots bound to cloud disk.
                      * @return AutoSnapshotPolicySet List of scheduled snapshots bound to cloud disk.
+                     * 
                      */
                     std::vector<AutoSnapshotPolicy> GetAutoSnapshotPolicySet() const;
 
                     /**
                      * 判断参数 AutoSnapshotPolicySet 是否已赋值
                      * @return AutoSnapshotPolicySet 是否已赋值
+                     * 
                      */
                     bool AutoSnapshotPolicySetHasBeenSet() const;
 

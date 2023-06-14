@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取The target domains.
                      * @return Domains The target domains.
+                     * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
                      * 设置The target domains.
-                     * @param Domains The target domains.
+                     * @param _domains The target domains.
+                     * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
                     /**
                      * 判断参数 Domains 是否已赋值
                      * @return Domains 是否已赋值
+                     * 
                      */
                     bool DomainsHasBeenSet() const;
 
                     /**
                      * 获取The domain DNS array.
                      * @return Dns The domain DNS array.
+                     * 
                      */
                     std::vector<std::string> GetDns() const;
 
                     /**
                      * 设置The domain DNS array.
-                     * @param Dns The domain DNS array.
+                     * @param _dns The domain DNS array.
+                     * 
                      */
                     void SetDns(const std::vector<std::string>& _dns);
 
                     /**
                      * 判断参数 Dns 是否已赋值
                      * @return Dns 是否已赋值
+                     * 
                      */
                     bool DnsHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `batch_modify_domain_dns1`, `batch_modify_domain_dns2`, `batch_modify_domain_dns3`
                      * @return BatchAction Valid values: `batch_modify_domain_dns1`, `batch_modify_domain_dns2`, `batch_modify_domain_dns3`
+                     * 
                      */
                     std::string GetBatchAction() const;
 
                     /**
                      * 设置Valid values: `batch_modify_domain_dns1`, `batch_modify_domain_dns2`, `batch_modify_domain_dns3`
-                     * @param BatchAction Valid values: `batch_modify_domain_dns1`, `batch_modify_domain_dns2`, `batch_modify_domain_dns3`
+                     * @param _batchAction Valid values: `batch_modify_domain_dns1`, `batch_modify_domain_dns2`, `batch_modify_domain_dns3`
+                     * 
                      */
                     void SetBatchAction(const std::string& _batchAction);
 
                     /**
                      * 判断参数 BatchAction 是否已赋值
                      * @return BatchAction 是否已赋值
+                     * 
                      */
                     bool BatchActionHasBeenSet() const;
 

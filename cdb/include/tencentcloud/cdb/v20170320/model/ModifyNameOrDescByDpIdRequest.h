@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Placement group ID
                      * @return DeployGroupId Placement group ID
+                     * 
                      */
                     std::string GetDeployGroupId() const;
 
                     /**
                      * 设置Placement group ID
-                     * @param DeployGroupId Placement group ID
+                     * @param _deployGroupId Placement group ID
+                     * 
                      */
                     void SetDeployGroupId(const std::string& _deployGroupId);
 
                     /**
                      * 判断参数 DeployGroupId 是否已赋值
                      * @return DeployGroupId 是否已赋值
+                     * 
                      */
                     bool DeployGroupIdHasBeenSet() const;
 
                     /**
                      * 获取Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
                      * @return DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
+                     * 
                      */
                     std::string GetDeployGroupName() const;
 
                     /**
                      * 设置Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
-                     * @param DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
+                     * @param _deployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
+                     * 
                      */
                     void SetDeployGroupName(const std::string& _deployGroupName);
 
                     /**
                      * 判断参数 DeployGroupName 是否已赋值
                      * @return DeployGroupName 是否已赋值
+                     * 
                      */
                     bool DeployGroupNameHasBeenSet() const;
 
                     /**
                      * 获取Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
                      * @return Description Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
+                     * 
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
-                     * @param Description Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
+                     * @param _description Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
+                     * 
                      */
                     void SetDescription(const std::string& _description);
 
                     /**
                      * 判断参数 Description 是否已赋值
                      * @return Description 是否已赋值
+                     * 
                      */
                     bool DescriptionHasBeenSet() const;
 

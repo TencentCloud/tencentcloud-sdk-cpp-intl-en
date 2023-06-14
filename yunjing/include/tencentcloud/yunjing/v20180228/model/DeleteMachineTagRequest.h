@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取Associated tag ID
                      * @return Rid Associated tag ID
+                     * 
                      */
                     uint64_t GetRid() const;
 
                     /**
                      * 设置Associated tag ID
-                     * @param Rid Associated tag ID
+                     * @param _rid Associated tag ID
+                     * 
                      */
                     void SetRid(const uint64_t& _rid);
 
                     /**
                      * 判断参数 Rid 是否已赋值
                      * @return Rid 是否已赋值
+                     * 
                      */
                     bool RidHasBeenSet() const;
 

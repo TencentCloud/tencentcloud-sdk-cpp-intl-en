@@ -46,36 +46,42 @@ namespace TencentCloud
                     /**
                      * 获取The page offset. Default value: 0
                      * @return Offset The page offset. Default value: 0
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置The page offset. Default value: 0
-                     * @param Offset The page offset. Default value: 0
+                     * @param _offset The page offset. Default value: 0
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The paginated query limit. Default value: 20. Maximum value: 1000.
                      * @return Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置The paginated query limit. Default value: 20. Maximum value: 1000.
-                     * @param Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * @param _limit The paginated query limit. Default value: 20. Maximum value: 1000.
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
@@ -84,20 +90,23 @@ namespace TencentCloud
 <li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
                      * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
 <li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+                     * 
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria. Each filter criteria can have up to 20 entries.
 <li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
-                     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
+                     * @param _filters Filter criteria. Each filter criteria can have up to 20 entries.
 <li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+                     * 
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
@@ -116,6 +125,7 @@ namespace TencentCloud
 <li>`zone-name`: Site name</li>
 <li>`use-time`: Last used date</li>
 <li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+                     * 
                      */
                     std::string GetOrder() const;
 
@@ -127,19 +137,21 @@ namespace TencentCloud
 <li>`zone-name`: Site name</li>
 <li>`use-time`: Last used date</li>
 <li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
-                     * @param Order The sorting field. Values:
+                     * @param _order The sorting field. Values:
 <li>`type`: Access mode</li>
 <li>`area`: Acceleration region</li>
 <li>`create-time`: Creation date</li>
 <li>`zone-name`: Site name</li>
 <li>`use-time`: Last used date</li>
 <li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+                     * 
                      */
                     void SetOrder(const std::string& _order);
 
                     /**
                      * 判断参数 Order 是否已赋值
                      * @return Order 是否已赋值
+                     * 
                      */
                     bool OrderHasBeenSet() const;
 
@@ -150,6 +162,7 @@ namespace TencentCloud
                      * @return Direction The sorting direction. Values:
 <li>`asc`: From smallest to largest</li>
 <li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+                     * 
                      */
                     std::string GetDirection() const;
 
@@ -157,15 +170,17 @@ namespace TencentCloud
                      * 设置The sorting direction. Values:
 <li>`asc`: From smallest to largest</li>
 <li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
-                     * @param Direction The sorting direction. Values:
+                     * @param _direction The sorting direction. Values:
 <li>`asc`: From smallest to largest</li>
 <li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+                     * 
                      */
                     void SetDirection(const std::string& _direction);
 
                     /**
                      * 判断参数 Direction 是否已赋值
                      * @return Direction 是否已赋值
+                     * 
                      */
                     bool DirectionHasBeenSet() const;
 

@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Slow log pattern
                      * @return Pattern Slow log pattern
+                     * 
                      */
                     std::string GetPattern() const;
 
                     /**
                      * 设置Slow log pattern
-                     * @param Pattern Slow log pattern
+                     * @param _pattern Slow log pattern
+                     * 
                      */
                     void SetPattern(const std::string& _pattern);
 
                     /**
                      * 判断参数 Pattern 是否已赋值
                      * @return Pattern 是否已赋值
+                     * 
                      */
                     bool PatternHasBeenSet() const;
 
                     /**
                      * 获取Maximum execution time
                      * @return MaxTime Maximum execution time
+                     * 
                      */
                     uint64_t GetMaxTime() const;
 
                     /**
                      * 设置Maximum execution time
-                     * @param MaxTime Maximum execution time
+                     * @param _maxTime Maximum execution time
+                     * 
                      */
                     void SetMaxTime(const uint64_t& _maxTime);
 
                     /**
                      * 判断参数 MaxTime 是否已赋值
                      * @return MaxTime 是否已赋值
+                     * 
                      */
                     bool MaxTimeHasBeenSet() const;
 
                     /**
                      * 获取Average execution time
                      * @return AverageTime Average execution time
+                     * 
                      */
                     uint64_t GetAverageTime() const;
 
                     /**
                      * 设置Average execution time
-                     * @param AverageTime Average execution time
+                     * @param _averageTime Average execution time
+                     * 
                      */
                     void SetAverageTime(const uint64_t& _averageTime);
 
                     /**
                      * 判断参数 AverageTime 是否已赋值
                      * @return AverageTime 是否已赋值
+                     * 
                      */
                     bool AverageTimeHasBeenSet() const;
 
                     /**
                      * 获取Number of slow logs in this pattern
                      * @return Total Number of slow logs in this pattern
+                     * 
                      */
                     uint64_t GetTotal() const;
 
                     /**
                      * 设置Number of slow logs in this pattern
-                     * @param Total Number of slow logs in this pattern
+                     * @param _total Number of slow logs in this pattern
+                     * 
                      */
                     void SetTotal(const uint64_t& _total);
 
                     /**
                      * 判断参数 Total 是否已赋值
                      * @return Total 是否已赋值
+                     * 
                      */
                     bool TotalHasBeenSet() const;
 

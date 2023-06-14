@@ -51,20 +51,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
                      * 设置The final result of this verification. `0` indicates that the person is the same as that in the photo.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
+                     * @param _errorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
 
                     /**
                      * 判断参数 ErrorCode 是否已赋值
                      * @return ErrorCode 是否已赋值
+                     * 
                      */
                     bool ErrorCodeHasBeenSet() const;
 
@@ -73,20 +76,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ErrorMsg The description of the final verification result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
                      * 设置The description of the final verification result.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ErrorMsg The description of the final verification result.
+                     * @param _errorMsg The description of the final verification result.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
 
                     /**
                      * 判断参数 ErrorMsg 是否已赋值
                      * @return ErrorMsg 是否已赋值
+                     * 
                      */
                     bool ErrorMsgHasBeenSet() const;
 
@@ -95,20 +101,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LivenessErrorCode The result of this liveness detection process. `0` indicates success.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetLivenessErrorCode() const;
 
                     /**
                      * 设置The result of this liveness detection process. `0` indicates success.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LivenessErrorCode The result of this liveness detection process. `0` indicates success.
+                     * @param _livenessErrorCode The result of this liveness detection process. `0` indicates success.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLivenessErrorCode(const int64_t& _livenessErrorCode);
 
                     /**
                      * 判断参数 LivenessErrorCode 是否已赋值
                      * @return LivenessErrorCode 是否已赋值
+                     * 
                      */
                     bool LivenessErrorCodeHasBeenSet() const;
 
@@ -117,20 +126,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LivenessErrorMsg The result description of this liveness detection process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLivenessErrorMsg() const;
 
                     /**
                      * 设置The result description of this liveness detection process.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LivenessErrorMsg The result description of this liveness detection process.
+                     * @param _livenessErrorMsg The result description of this liveness detection process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLivenessErrorMsg(const std::string& _livenessErrorMsg);
 
                     /**
                      * 判断参数 LivenessErrorMsg 是否已赋值
                      * @return LivenessErrorMsg 是否已赋值
+                     * 
                      */
                     bool LivenessErrorMsgHasBeenSet() const;
 
@@ -139,20 +151,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetCompareErrorCode() const;
 
                     /**
                      * 设置The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
+                     * @param _compareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompareErrorCode(const int64_t& _compareErrorCode);
 
                     /**
                      * 判断参数 CompareErrorCode 是否已赋值
                      * @return CompareErrorCode 是否已赋值
+                     * 
                      */
                     bool CompareErrorCodeHasBeenSet() const;
 
@@ -161,20 +176,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CompareErrorMsg The result description of this comparison process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCompareErrorMsg() const;
 
                     /**
                      * 设置The result description of this comparison process.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CompareErrorMsg The result description of this comparison process.
+                     * @param _compareErrorMsg The result description of this comparison process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCompareErrorMsg(const std::string& _compareErrorMsg);
 
                     /**
                      * 判断参数 CompareErrorMsg 是否已赋值
                      * @return CompareErrorMsg 是否已赋值
+                     * 
                      */
                     bool CompareErrorMsgHasBeenSet() const;
 
@@ -183,20 +201,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReqTimestamp The timestamp (ms) of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetReqTimestamp() const;
 
                     /**
                      * 设置The timestamp (ms) of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReqTimestamp The timestamp (ms) of this verification process.
+                     * @param _reqTimestamp The timestamp (ms) of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetReqTimestamp(const uint64_t& _reqTimestamp);
 
                     /**
                      * 判断参数 ReqTimestamp 是否已赋值
                      * @return ReqTimestamp 是否已赋值
+                     * 
                      */
                     bool ReqTimestampHasBeenSet() const;
 
@@ -205,20 +226,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetSimilarity() const;
 
                     /**
                      * 设置The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
+                     * @param _similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Valid range: [0.00, 100.00]. By default, the person in the screenshot is judged as the same person in the image if the similarity is greater than or equal to 70.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSimilarity(const double& _similarity);
 
                     /**
                      * 判断参数 Similarity 是否已赋值
                      * @return Similarity 是否已赋值
+                     * 
                      */
                     bool SimilarityHasBeenSet() const;
 
@@ -227,20 +251,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Seq Unique ID of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetSeq() const;
 
                     /**
                      * 设置Unique ID of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Seq Unique ID of this verification process.
+                     * @param _seq Unique ID of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSeq(const std::string& _seq);
 
                     /**
                      * 判断参数 Seq 是否已赋值
                      * @return Seq 是否已赋值
+                     * 
                      */
                     bool SeqHasBeenSet() const;
 

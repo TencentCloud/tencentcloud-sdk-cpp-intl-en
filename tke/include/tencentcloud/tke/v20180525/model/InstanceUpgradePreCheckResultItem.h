@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取The namespace of the workload
                      * @return Namespace The namespace of the workload
+                     * 
                      */
                     std::string GetNamespace() const;
 
                     /**
                      * 设置The namespace of the workload
-                     * @param Namespace The namespace of the workload
+                     * @param _namespace The namespace of the workload
+                     * 
                      */
                     void SetNamespace(const std::string& _namespace);
 
                     /**
                      * 判断参数 Namespace 是否已赋值
                      * @return Namespace 是否已赋值
+                     * 
                      */
                     bool NamespaceHasBeenSet() const;
 
                     /**
                      * 获取Workload type
                      * @return WorkLoadKind Workload type
+                     * 
                      */
                     std::string GetWorkLoadKind() const;
 
                     /**
                      * 设置Workload type
-                     * @param WorkLoadKind Workload type
+                     * @param _workLoadKind Workload type
+                     * 
                      */
                     void SetWorkLoadKind(const std::string& _workLoadKind);
 
                     /**
                      * 判断参数 WorkLoadKind 是否已赋值
                      * @return WorkLoadKind 是否已赋值
+                     * 
                      */
                     bool WorkLoadKindHasBeenSet() const;
 
                     /**
                      * 获取Workload name
                      * @return WorkLoadName Workload name
+                     * 
                      */
                     std::string GetWorkLoadName() const;
 
                     /**
                      * 设置Workload name
-                     * @param WorkLoadName Workload name
+                     * @param _workLoadName Workload name
+                     * 
                      */
                     void SetWorkLoadName(const std::string& _workLoadName);
 
                     /**
                      * 判断参数 WorkLoadName 是否已赋值
                      * @return WorkLoadName 是否已赋值
+                     * 
                      */
                     bool WorkLoadNameHasBeenSet() const;
 
                     /**
                      * 获取The number of running pods in the workload before draining the node
                      * @return Before The number of running pods in the workload before draining the node
+                     * 
                      */
                     uint64_t GetBefore() const;
 
                     /**
                      * 设置The number of running pods in the workload before draining the node
-                     * @param Before The number of running pods in the workload before draining the node
+                     * @param _before The number of running pods in the workload before draining the node
+                     * 
                      */
                     void SetBefore(const uint64_t& _before);
 
                     /**
                      * 判断参数 Before 是否已赋值
                      * @return Before 是否已赋值
+                     * 
                      */
                     bool BeforeHasBeenSet() const;
 
                     /**
                      * 获取The number of running pods in the workload after draining the node
                      * @return After The number of running pods in the workload after draining the node
+                     * 
                      */
                     uint64_t GetAfter() const;
 
                     /**
                      * 设置The number of running pods in the workload after draining the node
-                     * @param After The number of running pods in the workload after draining the node
+                     * @param _after The number of running pods in the workload after draining the node
+                     * 
                      */
                     void SetAfter(const uint64_t& _after);
 
                     /**
                      * 判断参数 After 是否已赋值
                      * @return After 是否已赋值
+                     * 
                      */
                     bool AfterHasBeenSet() const;
 
                     /**
                      * 获取The pod list of the workload on this node
                      * @return Pods The pod list of the workload on this node
+                     * 
                      */
                     std::vector<std::string> GetPods() const;
 
                     /**
                      * 设置The pod list of the workload on this node
-                     * @param Pods The pod list of the workload on this node
+                     * @param _pods The pod list of the workload on this node
+                     * 
                      */
                     void SetPods(const std::vector<std::string>& _pods);
 
                     /**
                      * 判断参数 Pods 是否已赋值
                      * @return Pods 是否已赋值
+                     * 
                      */
                     bool PodsHasBeenSet() const;
 

@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Audit information list.
                      * @return MiniProgramReviewList Audit information list.
+                     * 
                      */
                     std::vector<MediaMiniProgramReviewInfoItem> GetMiniProgramReviewList() const;
 
                     /**
                      * 设置Audit information list.
-                     * @param MiniProgramReviewList Audit information list.
+                     * @param _miniProgramReviewList Audit information list.
+                     * 
                      */
                     void SetMiniProgramReviewList(const std::vector<MediaMiniProgramReviewInfoItem>& _miniProgramReviewList);
 
                     /**
                      * 判断参数 MiniProgramReviewList 是否已赋值
                      * @return MiniProgramReviewList 是否已赋值
+                     * 
                      */
                     bool MiniProgramReviewListHasBeenSet() const;
 

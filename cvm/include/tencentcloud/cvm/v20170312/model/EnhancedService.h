@@ -52,54 +52,63 @@ namespace TencentCloud
                     /**
                      * 获取Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
                      * @return SecurityService Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
+                     * 
                      */
                     RunSecurityServiceEnabled GetSecurityService() const;
 
                     /**
                      * 设置Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
-                     * @param SecurityService Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
+                     * @param _securityService Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
+                     * 
                      */
                     void SetSecurityService(const RunSecurityServiceEnabled& _securityService);
 
                     /**
                      * 判断参数 SecurityService 是否已赋值
                      * @return SecurityService 是否已赋值
+                     * 
                      */
                     bool SecurityServiceHasBeenSet() const;
 
                     /**
                      * 获取Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
                      * @return MonitorService Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
+                     * 
                      */
                     RunMonitorServiceEnabled GetMonitorService() const;
 
                     /**
                      * 设置Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
-                     * @param MonitorService Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
+                     * @param _monitorService Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
+                     * 
                      */
                     void SetMonitorService(const RunMonitorServiceEnabled& _monitorService);
 
                     /**
                      * 判断参数 MonitorService 是否已赋值
                      * @return MonitorService 是否已赋值
+                     * 
                      */
                     bool MonitorServiceHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
                      * @return AutomationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+                     * 
                      */
                     RunAutomationServiceEnabled GetAutomationService() const;
 
                     /**
                      * 设置Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
-                     * @param AutomationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+                     * @param _automationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+                     * 
                      */
                     void SetAutomationService(const RunAutomationServiceEnabled& _automationService);
 
                     /**
                      * 判断参数 AutomationService 是否已赋值
                      * @return AutomationService 是否已赋值
+                     * 
                      */
                     bool AutomationServiceHasBeenSet() const;
 

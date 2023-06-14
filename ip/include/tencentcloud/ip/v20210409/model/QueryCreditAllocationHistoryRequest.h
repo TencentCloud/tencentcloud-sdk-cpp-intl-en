@@ -45,54 +45,63 @@ namespace TencentCloud
                     /**
                      * 获取Customer UIN
                      * @return ClientUin Customer UIN
+                     * 
                      */
                     uint64_t GetClientUin() const;
 
                     /**
                      * 设置Customer UIN
-                     * @param ClientUin Customer UIN
+                     * @param _clientUin Customer UIN
+                     * 
                      */
                     void SetClientUin(const uint64_t& _clientUin);
 
                     /**
                      * 判断参数 ClientUin 是否已赋值
                      * @return ClientUin 是否已赋值
+                     * 
                      */
                     bool ClientUinHasBeenSet() const;
 
                     /**
                      * 获取Page number
                      * @return Page Page number
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number
-                     * @param Page Page number
+                     * @param _page Page number
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of data entries per page
                      * @return PageSize Number of data entries per page
+                     * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
                      * 设置Number of data entries per page
-                     * @param PageSize Number of data entries per page
+                     * @param _pageSize Number of data entries per page
+                     * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
 
                     /**
                      * 判断参数 PageSize 是否已赋值
                      * @return PageSize 是否已赋值
+                     * 
                      */
                     bool PageSizeHasBeenSet() const;
 

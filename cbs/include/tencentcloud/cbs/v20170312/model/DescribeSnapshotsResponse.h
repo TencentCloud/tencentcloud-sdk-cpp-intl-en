@@ -47,24 +47,28 @@ namespace TencentCloud
                     /**
                      * 获取Number of snapshots.
                      * @return TotalCount Number of snapshots.
+                     * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取List of snapshot details.
                      * @return SnapshotSet List of snapshot details.
+                     * 
                      */
                     std::vector<Snapshot> GetSnapshotSet() const;
 
                     /**
                      * 判断参数 SnapshotSet 是否已赋值
                      * @return SnapshotSet 是否已赋值
+                     * 
                      */
                     bool SnapshotSetHasBeenSet() const;
 

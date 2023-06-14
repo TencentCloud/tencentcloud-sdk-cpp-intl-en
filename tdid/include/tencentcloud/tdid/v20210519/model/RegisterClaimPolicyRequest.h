@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取The claim protocol type (CPT) index.
                      * @return CptIndex The claim protocol type (CPT) index.
+                     * 
                      */
                     uint64_t GetCptIndex() const;
 
                     /**
                      * 设置The claim protocol type (CPT) index.
-                     * @param CptIndex The claim protocol type (CPT) index.
+                     * @param _cptIndex The claim protocol type (CPT) index.
+                     * 
                      */
                     void SetCptIndex(const uint64_t& _cptIndex);
 
                     /**
                      * 判断参数 CptIndex 是否已赋值
                      * @return CptIndex 是否已赋值
+                     * 
                      */
                     bool CptIndexHasBeenSet() const;
 
                     /**
                      * 获取The disclosure policy.
                      * @return Policy The disclosure policy.
+                     * 
                      */
                     std::string GetPolicy() const;
 
                     /**
                      * 设置The disclosure policy.
-                     * @param Policy The disclosure policy.
+                     * @param _policy The disclosure policy.
+                     * 
                      */
                     void SetPolicy(const std::string& _policy);
 
                     /**
                      * 判断参数 Policy 是否已赋值
                      * @return Policy 是否已赋值
+                     * 
                      */
                     bool PolicyHasBeenSet() const;
 

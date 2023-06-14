@@ -50,54 +50,63 @@ namespace TencentCloud
                     /**
                      * 获取The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.
                      * @return Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.
+                     * 
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.
-                     * @param Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.
+                     * @param _version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.
+                     * 
                      */
                     void SetVersion(const std::string& _version);
 
                     /**
                      * 判断参数 Version 是否已赋值
                      * @return Version 是否已赋值
+                     * 
                      */
                     bool VersionHasBeenSet() const;
 
                     /**
                      * 获取Outbound rule. You must select either an outbound rule or inbound rule.
                      * @return Egress Outbound rule. You must select either an outbound rule or inbound rule.
+                     * 
                      */
                     std::vector<SecurityGroupPolicy> GetEgress() const;
 
                     /**
                      * 设置Outbound rule. You must select either an outbound rule or inbound rule.
-                     * @param Egress Outbound rule. You must select either an outbound rule or inbound rule.
+                     * @param _egress Outbound rule. You must select either an outbound rule or inbound rule.
+                     * 
                      */
                     void SetEgress(const std::vector<SecurityGroupPolicy>& _egress);
 
                     /**
                      * 判断参数 Egress 是否已赋值
                      * @return Egress 是否已赋值
+                     * 
                      */
                     bool EgressHasBeenSet() const;
 
                     /**
                      * 获取Inbound rule. You must select either outbound rule or inbound rule.
                      * @return Ingress Inbound rule. You must select either outbound rule or inbound rule.
+                     * 
                      */
                     std::vector<SecurityGroupPolicy> GetIngress() const;
 
                     /**
                      * 设置Inbound rule. You must select either outbound rule or inbound rule.
-                     * @param Ingress Inbound rule. You must select either outbound rule or inbound rule.
+                     * @param _ingress Inbound rule. You must select either outbound rule or inbound rule.
+                     * 
                      */
                     void SetIngress(const std::vector<SecurityGroupPolicy>& _ingress);
 
                     /**
                      * 判断参数 Ingress 是否已赋值
                      * @return Ingress 是否已赋值
+                     * 
                      */
                     bool IngressHasBeenSet() const;
 

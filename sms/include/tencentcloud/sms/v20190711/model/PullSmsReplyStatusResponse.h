@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Reply status response set.
                      * @return PullSmsReplyStatusSet Reply status response set.
+                     * 
                      */
                     std::vector<PullSmsReplyStatus> GetPullSmsReplyStatusSet() const;
 
                     /**
                      * 判断参数 PullSmsReplyStatusSet 是否已赋值
                      * @return PullSmsReplyStatusSet 是否已赋值
+                     * 
                      */
                     bool PullSmsReplyStatusSetHasBeenSet() const;
 

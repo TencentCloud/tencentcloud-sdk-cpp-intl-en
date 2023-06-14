@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Whether it is enabled
                      * @return Enabled Whether it is enabled
+                     * 
                      */
                     bool GetEnabled() const;
 
                     /**
                      * 设置Whether it is enabled
-                     * @param Enabled Whether it is enabled
+                     * @param _enabled Whether it is enabled
+                     * 
                      */
                     void SetEnabled(const bool& _enabled);
 
                     /**
                      * 判断参数 Enabled 是否已赋值
                      * @return Enabled 是否已赋值
+                     * 
                      */
                     bool EnabledHasBeenSet() const;
 
                     /**
                      * 获取Convergence time
                      * @return RepeatInterval Convergence time
+                     * 
                      */
                     std::string GetRepeatInterval() const;
 
                     /**
                      * 设置Convergence time
-                     * @param RepeatInterval Convergence time
+                     * @param _repeatInterval Convergence time
+                     * 
                      */
                     void SetRepeatInterval(const std::string& _repeatInterval);
 
                     /**
                      * 判断参数 RepeatInterval 是否已赋值
                      * @return RepeatInterval 是否已赋值
+                     * 
                      */
                     bool RepeatIntervalHasBeenSet() const;
 
                     /**
                      * 获取Start time
                      * @return TimeRangeStart Start time
+                     * 
                      */
                     std::string GetTimeRangeStart() const;
 
                     /**
                      * 设置Start time
-                     * @param TimeRangeStart Start time
+                     * @param _timeRangeStart Start time
+                     * 
                      */
                     void SetTimeRangeStart(const std::string& _timeRangeStart);
 
                     /**
                      * 判断参数 TimeRangeStart 是否已赋值
                      * @return TimeRangeStart 是否已赋值
+                     * 
                      */
                     bool TimeRangeStartHasBeenSet() const;
 
                     /**
                      * 获取End time
                      * @return TimeRangeEnd End time
+                     * 
                      */
                     std::string GetTimeRangeEnd() const;
 
                     /**
                      * 设置End time
-                     * @param TimeRangeEnd End time
+                     * @param _timeRangeEnd End time
+                     * 
                      */
                     void SetTimeRangeEnd(const std::string& _timeRangeEnd);
 
                     /**
                      * 判断参数 TimeRangeEnd 是否已赋值
                      * @return TimeRangeEnd 是否已赋值
+                     * 
                      */
                     bool TimeRangeEndHasBeenSet() const;
 
@@ -125,6 +137,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * @return NotifyWay Alarm delivery method. Valid values: `SMS`, `EMAIL`, `CALL`, and `WECHAT`
 It respectively represents SMS, email, phone calls, and WeChat.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetNotifyWay() const;
 
@@ -132,15 +145,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * 设置Alarm delivery method. Valid values: `SMS`, `EMAIL`, `CALL`, and `WECHAT`
 It respectively represents SMS, email, phone calls, and WeChat.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param NotifyWay Alarm delivery method. Valid values: `SMS`, `EMAIL`, `CALL`, and `WECHAT`
+                     * @param _notifyWay Alarm delivery method. Valid values: `SMS`, `EMAIL`, `CALL`, and `WECHAT`
 It respectively represents SMS, email, phone calls, and WeChat.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetNotifyWay(const std::vector<std::string>& _notifyWay);
 
                     /**
                      * 判断参数 NotifyWay 是否已赋值
                      * @return NotifyWay 是否已赋值
+                     * 
                      */
                     bool NotifyWayHasBeenSet() const;
 
@@ -149,20 +164,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return ReceiverGroups The alarm recipient group (user group)
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<uint64_t> GetReceiverGroups() const;
 
                     /**
                      * 设置The alarm recipient group (user group)
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param ReceiverGroups The alarm recipient group (user group)
+                     * @param _receiverGroups The alarm recipient group (user group)
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetReceiverGroups(const std::vector<uint64_t>& _receiverGroups);
 
                     /**
                      * 判断参数 ReceiverGroups 是否已赋值
                      * @return ReceiverGroups 是否已赋值
+                     * 
                      */
                     bool ReceiverGroupsHasBeenSet() const;
 
@@ -173,6 +191,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * @return PhoneNotifyOrder The alarm sequence of phone calls
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<uint64_t> GetPhoneNotifyOrder() const;
 
@@ -180,15 +199,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * 设置The alarm sequence of phone calls
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PhoneNotifyOrder The alarm sequence of phone calls
+                     * @param _phoneNotifyOrder The alarm sequence of phone calls
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPhoneNotifyOrder(const std::vector<uint64_t>& _phoneNotifyOrder);
 
                     /**
                      * 判断参数 PhoneNotifyOrder 是否已赋值
                      * @return PhoneNotifyOrder 是否已赋值
+                     * 
                      */
                     bool PhoneNotifyOrderHasBeenSet() const;
 
@@ -199,6 +220,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * @return PhoneCircleTimes The number of phone call alarms
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPhoneCircleTimes() const;
 
@@ -206,15 +228,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * 设置The number of phone call alarms
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PhoneCircleTimes The number of phone call alarms
+                     * @param _phoneCircleTimes The number of phone call alarms
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPhoneCircleTimes(const int64_t& _phoneCircleTimes);
 
                     /**
                      * 判断参数 PhoneCircleTimes 是否已赋值
                      * @return PhoneCircleTimes 是否已赋值
+                     * 
                      */
                     bool PhoneCircleTimesHasBeenSet() const;
 
@@ -225,6 +249,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * @return PhoneInnerInterval Dialing interval in seconds within one polling
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPhoneInnerInterval() const;
 
@@ -232,15 +257,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * 设置Dialing interval in seconds within one polling
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PhoneInnerInterval Dialing interval in seconds within one polling
+                     * @param _phoneInnerInterval Dialing interval in seconds within one polling
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPhoneInnerInterval(const int64_t& _phoneInnerInterval);
 
                     /**
                      * 判断参数 PhoneInnerInterval 是否已赋值
                      * @return PhoneInnerInterval 是否已赋值
+                     * 
                      */
                     bool PhoneInnerIntervalHasBeenSet() const;
 
@@ -251,6 +278,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * @return PhoneCircleInterval Polling interval in seconds
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     int64_t GetPhoneCircleInterval() const;
 
@@ -258,15 +286,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * 设置Polling interval in seconds
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PhoneCircleInterval Polling interval in seconds
+                     * @param _phoneCircleInterval Polling interval in seconds
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPhoneCircleInterval(const int64_t& _phoneCircleInterval);
 
                     /**
                      * 判断参数 PhoneCircleInterval 是否已赋值
                      * @return PhoneCircleInterval 是否已赋值
+                     * 
                      */
                     bool PhoneCircleIntervalHasBeenSet() const;
 
@@ -277,6 +307,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * @return PhoneArriveNotice Phone call alarm arrival notification
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     bool GetPhoneArriveNotice() const;
 
@@ -284,15 +315,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * 设置Phone call alarm arrival notification
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PhoneArriveNotice Phone call alarm arrival notification
+                     * @param _phoneArriveNotice Phone call alarm arrival notification
 This parameter is used when you specify `CALL` for `NotifyWay`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetPhoneArriveNotice(const bool& _phoneArriveNotice);
 
                     /**
                      * 判断参数 PhoneArriveNotice 是否已赋值
                      * @return PhoneArriveNotice 是否已赋值
+                     * 
                      */
                     bool PhoneArriveNoticeHasBeenSet() const;
 
@@ -305,6 +338,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 amp
 webhook
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetType() const;
 
@@ -313,16 +347,18 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 amp
 webhook
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param Type Channel type. Default value: `amp`. The following channels are supported:
+                     * @param _type Channel type. Default value: `amp`. The following channels are supported:
 amp
 webhook
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetType(const std::string& _type);
 
                     /**
                      * 判断参数 Type 是否已赋值
                      * @return Type 是否已赋值
+                     * 
                      */
                     bool TypeHasBeenSet() const;
 
@@ -331,20 +367,23 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return WebHook This parameter is required if `Type` is `webhook`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string GetWebHook() const;
 
                     /**
                      * 设置This parameter is required if `Type` is `webhook`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param WebHook This parameter is required if `Type` is `webhook`.
+                     * @param _webHook This parameter is required if `Type` is `webhook`.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetWebHook(const std::string& _webHook);
 
                     /**
                      * 判断参数 WebHook 是否已赋值
                      * @return WebHook 是否已赋值
+                     * 
                      */
                     bool WebHookHasBeenSet() const;
 

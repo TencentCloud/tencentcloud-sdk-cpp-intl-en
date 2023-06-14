@@ -47,90 +47,105 @@ namespace TencentCloud
                     /**
                      * 获取RO group ID.
                      * @return RoGroupId RO group ID.
+                     * 
                      */
                     std::string GetRoGroupId() const;
 
                     /**
                      * 设置RO group ID.
-                     * @param RoGroupId RO group ID.
+                     * @param _roGroupId RO group ID.
+                     * 
                      */
                     void SetRoGroupId(const std::string& _roGroupId);
 
                     /**
                      * 判断参数 RoGroupId 是否已赋值
                      * @return RoGroupId 是否已赋值
+                     * 
                      */
                     bool RoGroupIdHasBeenSet() const;
 
                     /**
                      * 获取RO group details.
                      * @return RoGroupInfo RO group details.
+                     * 
                      */
                     RoGroupAttr GetRoGroupInfo() const;
 
                     /**
                      * 设置RO group details.
-                     * @param RoGroupInfo RO group details.
+                     * @param _roGroupInfo RO group details.
+                     * 
                      */
                     void SetRoGroupInfo(const RoGroupAttr& _roGroupInfo);
 
                     /**
                      * 判断参数 RoGroupInfo 是否已赋值
                      * @return RoGroupInfo 是否已赋值
+                     * 
                      */
                     bool RoGroupInfoHasBeenSet() const;
 
                     /**
                      * 获取Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
                      * @return RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+                     * 
                      */
                     std::vector<RoWeightValue> GetRoWeightValues() const;
 
                     /**
                      * 设置Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
-                     * @param RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+                     * @param _roWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+                     * 
                      */
                     void SetRoWeightValues(const std::vector<RoWeightValue>& _roWeightValues);
 
                     /**
                      * 判断参数 RoWeightValues 是否已赋值
                      * @return RoWeightValues 是否已赋值
+                     * 
                      */
                     bool RoWeightValuesHasBeenSet() const;
 
                     /**
                      * 获取Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
                      * @return IsBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+                     * 
                      */
                     int64_t GetIsBalanceRoLoad() const;
 
                     /**
                      * 设置Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
-                     * @param IsBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+                     * @param _isBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+                     * 
                      */
                     void SetIsBalanceRoLoad(const int64_t& _isBalanceRoLoad);
 
                     /**
                      * 判断参数 IsBalanceRoLoad 是否已赋值
                      * @return IsBalanceRoLoad 是否已赋值
+                     * 
                      */
                     bool IsBalanceRoLoadHasBeenSet() const;
 
                     /**
                      * 获取This field has been deprecated.
                      * @return ReplicationDelayTime This field has been deprecated.
+                     * 
                      */
                     int64_t GetReplicationDelayTime() const;
 
                     /**
                      * 设置This field has been deprecated.
-                     * @param ReplicationDelayTime This field has been deprecated.
+                     * @param _replicationDelayTime This field has been deprecated.
+                     * 
                      */
                     void SetReplicationDelayTime(const int64_t& _replicationDelayTime);
 
                     /**
                      * 判断参数 ReplicationDelayTime 是否已赋值
                      * @return ReplicationDelayTime 是否已赋值
+                     * 
                      */
                     bool ReplicationDelayTimeHasBeenSet() const;
 

@@ -51,6 +51,7 @@ Default value: `liveness`.
 `liveness`: Liveness detection only.
 `compare`: Liveness detection and face comparison.
 Default value: `liveness`.
+                     * 
                      */
                     std::string GetCheckMode() const;
 
@@ -59,16 +60,18 @@ Default value: `liveness`.
 `liveness`: Liveness detection only.
 `compare`: Liveness detection and face comparison.
 Default value: `liveness`.
-                     * @param CheckMode The detection mode. Valid values:
+                     * @param _checkMode The detection mode. Valid values:
 `liveness`: Liveness detection only.
 `compare`: Liveness detection and face comparison.
 Default value: `liveness`.
+                     * 
                      */
                     void SetCheckMode(const std::string& _checkMode);
 
                     /**
                      * 判断参数 CheckMode 是否已赋值
                      * @return CheckMode 是否已赋值
+                     * 
                      */
                     bool CheckModeHasBeenSet() const;
 
@@ -85,6 +88,7 @@ Default value: `4`.
 `3`: Reflection-based liveness detection.
 `4`: Motion- and reflection-based liveness detection.
 Default value: `4`.
+                     * 
                      */
                     std::string GetSecureLevel() const;
 
@@ -95,54 +99,62 @@ Default value: `4`.
 `3`: Reflection-based liveness detection.
 `4`: Motion- and reflection-based liveness detection.
 Default value: `4`.
-                     * @param SecureLevel The verification security level. Valid values:
+                     * @param _secureLevel The verification security level. Valid values:
 `1`: Video-based liveness detection.
 `2`: Motion-based liveness detection.
 `3`: Reflection-based liveness detection.
 `4`: Motion- and reflection-based liveness detection.
 Default value: `4`.
+                     * 
                      */
                     void SetSecureLevel(const std::string& _secureLevel);
 
                     /**
                      * 判断参数 SecureLevel 是否已赋值
                      * @return SecureLevel 是否已赋值
+                     * 
                      */
                     bool SecureLevelHasBeenSet() const;
 
                     /**
                      * 获取The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
                      * @return Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * 
                      */
                     std::string GetImage() const;
 
                     /**
                      * 设置The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
-                     * @param Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * @param _image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * 
                      */
                     void SetImage(const std::string& _image);
 
                     /**
                      * 判断参数 Image 是否已赋值
                      * @return Image 是否已赋值
+                     * 
                      */
                     bool ImageHasBeenSet() const;
 
                     /**
                      * 获取The pass-through parameter, which can be omitted if there are no special requirements.
                      * @return Extra The pass-through parameter, which can be omitted if there are no special requirements.
+                     * 
                      */
                     std::string GetExtra() const;
 
                     /**
                      * 设置The pass-through parameter, which can be omitted if there are no special requirements.
-                     * @param Extra The pass-through parameter, which can be omitted if there are no special requirements.
+                     * @param _extra The pass-through parameter, which can be omitted if there are no special requirements.
+                     * 
                      */
                     void SetExtra(const std::string& _extra);
 
                     /**
                      * 判断参数 Extra 是否已赋值
                      * @return Extra 是否已赋值
+                     * 
                      */
                     bool ExtraHasBeenSet() const;
 

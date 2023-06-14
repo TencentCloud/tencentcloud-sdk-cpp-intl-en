@@ -47,36 +47,42 @@ namespace TencentCloud
                     /**
                      * 获取Number of eligible firewall rules.
                      * @return TotalCount Number of eligible firewall rules.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
                     /**
                      * 获取Firewall rule details list.
                      * @return FirewallRuleSet Firewall rule details list.
+                     * 
                      */
                     std::vector<FirewallRuleInfo> GetFirewallRuleSet() const;
 
                     /**
                      * 判断参数 FirewallRuleSet 是否已赋值
                      * @return FirewallRuleSet 是否已赋值
+                     * 
                      */
                     bool FirewallRuleSetHasBeenSet() const;
 
                     /**
                      * 获取Firewall version number.
                      * @return FirewallVersion Firewall version number.
+                     * 
                      */
                     uint64_t GetFirewallVersion() const;
 
                     /**
                      * 判断参数 FirewallVersion 是否已赋值
                      * @return FirewallVersion 是否已赋值
+                     * 
                      */
                     bool FirewallVersionHasBeenSet() const;
 

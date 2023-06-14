@@ -49,6 +49,7 @@ For other products, leave this field empty.
                      * @return Product Indicates whether a hybrid cloud product is used.
 `hybrid`: Anti-DDoS Service Platform
 For other products, leave this field empty.
+                     * 
                      */
                     std::string GetProduct() const;
 
@@ -56,15 +57,17 @@ For other products, leave this field empty.
                      * 设置Indicates whether a hybrid cloud product is used.
 `hybrid`: Anti-DDoS Service Platform
 For other products, leave this field empty.
-                     * @param Product Indicates whether a hybrid cloud product is used.
+                     * @param _product Indicates whether a hybrid cloud product is used.
 `hybrid`: Anti-DDoS Service Platform
 For other products, leave this field empty.
+                     * 
                      */
                     void SetProduct(const std::string& _product);
 
                     /**
                      * 判断参数 Product 是否已赋值
                      * @return Product 是否已赋值
+                     * 
                      */
                     bool ProductHasBeenSet() const;
 

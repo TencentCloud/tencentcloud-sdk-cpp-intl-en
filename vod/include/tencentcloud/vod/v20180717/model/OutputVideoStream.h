@@ -53,6 +53,7 @@ Default value: libx264.
                      * @return Codec Video stream encoder. Valid values:
 <li>libx264: H.264</li>
 Default value: libx264.
+                     * 
                      */
                     std::string GetCodec() const;
 
@@ -60,15 +61,17 @@ Default value: libx264.
                      * 设置Video stream encoder. Valid values:
 <li>libx264: H.264</li>
 Default value: libx264.
-                     * @param Codec Video stream encoder. Valid values:
+                     * @param _codec Video stream encoder. Valid values:
 <li>libx264: H.264</li>
 Default value: libx264.
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Default value: libx264.
 Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
                      * @return Fps Video frame rate in Hz. Value range: [0, 60].
 Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+                     * 
                      */
                     int64_t GetFps() const;
 
                     /**
                      * 设置Video frame rate in Hz. Value range: [0, 60].
 Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
-                     * @param Fps Video frame rate in Hz. Value range: [0, 60].
+                     * @param _fps Video frame rate in Hz. Value range: [0, 60].
 Default value: 0, which means that the value is the same as the video frame rate of the first video segment in the first video track.
+                     * 
                      */
                     void SetFps(const int64_t& _fps);
 
                     /**
                      * 判断参数 Fps 是否已赋值
                      * @return Fps 是否已赋值
+                     * 
                      */
                     bool FpsHasBeenSet() const;
 

@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取Valid values: `NoLimit` (backups can be downloaded over both private and public networks with any IPs), `LimitOnlyIntranet` (backups can be downloaded over the private network with any private IPs), `Customize` (backups can be downloaded over specified VPCs with specified IPs). The `LimitVpc` and `LimitIp` parameters are valid only when this parameter is set to `Customize`.
                      * @return LimitType Valid values: `NoLimit` (backups can be downloaded over both private and public networks with any IPs), `LimitOnlyIntranet` (backups can be downloaded over the private network with any private IPs), `Customize` (backups can be downloaded over specified VPCs with specified IPs). The `LimitVpc` and `LimitIp` parameters are valid only when this parameter is set to `Customize`.
+                     * 
                      */
                     std::string GetLimitType() const;
 
                     /**
                      * 设置Valid values: `NoLimit` (backups can be downloaded over both private and public networks with any IPs), `LimitOnlyIntranet` (backups can be downloaded over the private network with any private IPs), `Customize` (backups can be downloaded over specified VPCs with specified IPs). The `LimitVpc` and `LimitIp` parameters are valid only when this parameter is set to `Customize`.
-                     * @param LimitType Valid values: `NoLimit` (backups can be downloaded over both private and public networks with any IPs), `LimitOnlyIntranet` (backups can be downloaded over the private network with any private IPs), `Customize` (backups can be downloaded over specified VPCs with specified IPs). The `LimitVpc` and `LimitIp` parameters are valid only when this parameter is set to `Customize`.
+                     * @param _limitType Valid values: `NoLimit` (backups can be downloaded over both private and public networks with any IPs), `LimitOnlyIntranet` (backups can be downloaded over the private network with any private IPs), `Customize` (backups can be downloaded over specified VPCs with specified IPs). The `LimitVpc` and `LimitIp` parameters are valid only when this parameter is set to `Customize`.
+                     * 
                      */
                     void SetLimitType(const std::string& _limitType);
 
                     /**
                      * 判断参数 LimitType 是否已赋值
                      * @return LimitType 是否已赋值
+                     * 
                      */
                     bool LimitTypeHasBeenSet() const;
 
                     /**
                      * 获取Valid value: `In` (backups can only be downloaded over the VPCs specified in `LimitVpc`). Default value: `In`.
                      * @return VpcComparisonSymbol Valid value: `In` (backups can only be downloaded over the VPCs specified in `LimitVpc`). Default value: `In`.
+                     * 
                      */
                     std::string GetVpcComparisonSymbol() const;
 
                     /**
                      * 设置Valid value: `In` (backups can only be downloaded over the VPCs specified in `LimitVpc`). Default value: `In`.
-                     * @param VpcComparisonSymbol Valid value: `In` (backups can only be downloaded over the VPCs specified in `LimitVpc`). Default value: `In`.
+                     * @param _vpcComparisonSymbol Valid value: `In` (backups can only be downloaded over the VPCs specified in `LimitVpc`). Default value: `In`.
+                     * 
                      */
                     void SetVpcComparisonSymbol(const std::string& _vpcComparisonSymbol);
 
                     /**
                      * 判断参数 VpcComparisonSymbol 是否已赋值
                      * @return VpcComparisonSymbol 是否已赋值
+                     * 
                      */
                     bool VpcComparisonSymbolHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `In` (backups can only be downloaded with the IPs specified in `LimitIp`), `NotIn` (backups cannot be downloaded with the IPs specified in `LimitIp`). Default value: `In`.
                      * @return IpComparisonSymbol Valid values: `In` (backups can only be downloaded with the IPs specified in `LimitIp`), `NotIn` (backups cannot be downloaded with the IPs specified in `LimitIp`). Default value: `In`.
+                     * 
                      */
                     std::string GetIpComparisonSymbol() const;
 
                     /**
                      * 设置Valid values: `In` (backups can only be downloaded with the IPs specified in `LimitIp`), `NotIn` (backups cannot be downloaded with the IPs specified in `LimitIp`). Default value: `In`.
-                     * @param IpComparisonSymbol Valid values: `In` (backups can only be downloaded with the IPs specified in `LimitIp`), `NotIn` (backups cannot be downloaded with the IPs specified in `LimitIp`). Default value: `In`.
+                     * @param _ipComparisonSymbol Valid values: `In` (backups can only be downloaded with the IPs specified in `LimitIp`), `NotIn` (backups cannot be downloaded with the IPs specified in `LimitIp`). Default value: `In`.
+                     * 
                      */
                     void SetIpComparisonSymbol(const std::string& _ipComparisonSymbol);
 
                     /**
                      * 判断参数 IpComparisonSymbol 是否已赋值
                      * @return IpComparisonSymbol 是否已赋值
+                     * 
                      */
                     bool IpComparisonSymbolHasBeenSet() const;
 
                     /**
                      * 获取VPCs used to restrict backup download.
                      * @return LimitVpc VPCs used to restrict backup download.
+                     * 
                      */
                     std::vector<BackupLimitVpcItem> GetLimitVpc() const;
 
                     /**
                      * 设置VPCs used to restrict backup download.
-                     * @param LimitVpc VPCs used to restrict backup download.
+                     * @param _limitVpc VPCs used to restrict backup download.
+                     * 
                      */
                     void SetLimitVpc(const std::vector<BackupLimitVpcItem>& _limitVpc);
 
                     /**
                      * 判断参数 LimitVpc 是否已赋值
                      * @return LimitVpc 是否已赋值
+                     * 
                      */
                     bool LimitVpcHasBeenSet() const;
 
                     /**
                      * 获取IPs used to restrict backup download.
                      * @return LimitIp IPs used to restrict backup download.
+                     * 
                      */
                     std::vector<std::string> GetLimitIp() const;
 
                     /**
                      * 设置IPs used to restrict backup download.
-                     * @param LimitIp IPs used to restrict backup download.
+                     * @param _limitIp IPs used to restrict backup download.
+                     * 
                      */
                     void SetLimitIp(const std::vector<std::string>& _limitIp);
 
                     /**
                      * 判断参数 LimitIp 是否已赋值
                      * @return LimitIp 是否已赋值
+                     * 
                      */
                     bool LimitIpHasBeenSet() const;
 

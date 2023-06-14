@@ -49,12 +49,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PurgeQuota Purging quotas.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Quota> GetPurgeQuota() const;
 
                     /**
                      * 判断参数 PurgeQuota 是否已赋值
                      * @return PurgeQuota 是否已赋值
+                     * 
                      */
                     bool PurgeQuotaHasBeenSet() const;
 
@@ -63,12 +65,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrefetchQuota Pre-warming quotas.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Quota> GetPrefetchQuota() const;
 
                     /**
                      * 判断参数 PrefetchQuota 是否已赋值
                      * @return PrefetchQuota 是否已赋值
+                     * 
                      */
                     bool PrefetchQuotaHasBeenSet() const;
 

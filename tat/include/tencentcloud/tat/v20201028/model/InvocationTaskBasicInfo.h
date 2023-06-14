@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Execution task ID.
                      * @return InvocationTaskId Execution task ID.
+                     * 
                      */
                     std::string GetInvocationTaskId() const;
 
                     /**
                      * 设置Execution task ID.
-                     * @param InvocationTaskId Execution task ID.
+                     * @param _invocationTaskId Execution task ID.
+                     * 
                      */
                     void SetInvocationTaskId(const std::string& _invocationTaskId);
 
                     /**
                      * 判断参数 InvocationTaskId 是否已赋值
                      * @return InvocationTaskId 是否已赋值
+                     * 
                      */
                     bool InvocationTaskIdHasBeenSet() const;
 
@@ -93,6 +96,7 @@ namespace TencentCloud
 <li> CANCELLING: Canceling
 <li> CANCELLED: Canceled (canceled before execution)
 <li> TERMINATED: Terminated (canceled during execution)
+                     * 
                      */
                     std::string GetTaskStatus() const;
 
@@ -111,7 +115,7 @@ namespace TencentCloud
 <li> CANCELLING: Canceling
 <li> CANCELLED: Canceled (canceled before execution)
 <li> TERMINATED: Terminated (canceled during execution)
-                     * @param TaskStatus Execution task status. Valid values:
+                     * @param _taskStatus Execution task status. Valid values:
 <li> PENDING: Pending 
 <li> DELIVERING: Delivering
 <li> DELIVER_DELAYED: Delivery delayed 
@@ -125,30 +129,35 @@ namespace TencentCloud
 <li> CANCELLING: Canceling
 <li> CANCELLED: Canceled (canceled before execution)
 <li> TERMINATED: Terminated (canceled during execution)
+                     * 
                      */
                     void SetTaskStatus(const std::string& _taskStatus);
 
                     /**
                      * 判断参数 TaskStatus 是否已赋值
                      * @return TaskStatus 是否已赋值
+                     * 
                      */
                     bool TaskStatusHasBeenSet() const;
 
                     /**
                      * 获取Instance ID.
                      * @return InstanceId Instance ID.
+                     * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * @param _instanceId Instance ID.
+                     * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
                     /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
+                     * 
                      */
                     bool InstanceIdHasBeenSet() const;
 

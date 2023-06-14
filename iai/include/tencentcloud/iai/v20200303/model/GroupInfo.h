@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Group name
                      * @return GroupName Group name
+                     * 
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Group name
-                     * @param GroupName Group name
+                     * @param _groupName Group name
+                     * 
                      */
                     void SetGroupName(const std::string& _groupName);
 
                     /**
                      * 判断参数 GroupName 是否已赋值
                      * @return GroupName 是否已赋值
+                     * 
                      */
                     bool GroupNameHasBeenSet() const;
 
                     /**
                      * 获取Group ID
                      * @return GroupId Group ID
+                     * 
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置Group ID
-                     * @param GroupId Group ID
+                     * @param _groupId Group ID
+                     * 
                      */
                     void SetGroupId(const std::string& _groupId);
 
                     /**
                      * 判断参数 GroupId 是否已赋值
                      * @return GroupId 是否已赋值
+                     * 
                      */
                     bool GroupIdHasBeenSet() const;
 
@@ -87,20 +93,23 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return GroupExDescriptions Custom group description field
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetGroupExDescriptions() const;
 
                     /**
                      * 设置Custom group description field
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param GroupExDescriptions Custom group description field
+                     * @param _groupExDescriptions Custom group description field
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetGroupExDescriptions(const std::vector<std::string>& _groupExDescriptions);
 
                     /**
                      * 判断参数 GroupExDescriptions 是否已赋值
                      * @return GroupExDescriptions 是否已赋值
+                     * 
                      */
                     bool GroupExDescriptionsHasBeenSet() const;
 
@@ -109,20 +118,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Tag Group remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetTag() const;
 
                     /**
                      * 设置Group remarks
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Tag Group remarks
+                     * @param _tag Group remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetTag(const std::string& _tag);
 
                     /**
                      * 判断参数 Tag 是否已赋值
                      * @return Tag 是否已赋值
+                     * 
                      */
                     bool TagHasBeenSet() const;
 
@@ -131,20 +143,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return FaceModelVersion Algorithm model version used for face recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetFaceModelVersion() const;
 
                     /**
                      * 设置Algorithm model version used for face recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FaceModelVersion Algorithm model version used for face recognition.
+                     * @param _faceModelVersion Algorithm model version used for face recognition.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetFaceModelVersion(const std::string& _faceModelVersion);
 
                     /**
                      * 判断参数 FaceModelVersion 是否已赋值
                      * @return FaceModelVersion 是否已赋值
+                     * 
                      */
                     bool FaceModelVersionHasBeenSet() const;
 
@@ -155,6 +170,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return CreationTimestamp Group creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
 The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t GetCreationTimestamp() const;
 
@@ -162,15 +178,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Group creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
 The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param CreationTimestamp Group creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
+                     * @param _creationTimestamp Group creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
 The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCreationTimestamp(const uint64_t& _creationTimestamp);
 
                     /**
                      * 判断参数 CreationTimestamp 是否已赋值
                      * @return CreationTimestamp 是否已赋值
+                     * 
                      */
                     bool CreationTimestampHasBeenSet() const;
 

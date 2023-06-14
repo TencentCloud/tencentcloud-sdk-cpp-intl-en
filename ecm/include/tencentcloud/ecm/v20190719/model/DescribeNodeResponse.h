@@ -49,24 +49,28 @@ namespace TencentCloud
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return NodeSet List of node details
 Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<Node> GetNodeSet() const;
 
                     /**
                      * 判断参数 NodeSet 是否已赋值
                      * @return NodeSet 是否已赋值
+                     * 
                      */
                     bool NodeSetHasBeenSet() const;
 
                     /**
                      * 获取Total number of nodes.
                      * @return TotalCount Total number of nodes.
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 

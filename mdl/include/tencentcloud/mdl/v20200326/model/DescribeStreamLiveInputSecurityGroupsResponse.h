@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取List of input security group information
                      * @return Infos List of input security group information
+                     * 
                      */
                     std::vector<InputSecurityGroupInfo> GetInfos() const;
 
                     /**
                      * 判断参数 Infos 是否已赋值
                      * @return Infos 是否已赋值
+                     * 
                      */
                     bool InfosHasBeenSet() const;
 

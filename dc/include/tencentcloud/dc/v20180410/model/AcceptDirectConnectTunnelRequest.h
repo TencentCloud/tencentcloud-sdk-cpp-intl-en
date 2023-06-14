@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取The connection owner accepts an application for sharing the dedicated tunnel
                      * @return DirectConnectTunnelId The connection owner accepts an application for sharing the dedicated tunnel
+                     * 
                      */
                     std::string GetDirectConnectTunnelId() const;
 
                     /**
                      * 设置The connection owner accepts an application for sharing the dedicated tunnel
-                     * @param DirectConnectTunnelId The connection owner accepts an application for sharing the dedicated tunnel
+                     * @param _directConnectTunnelId The connection owner accepts an application for sharing the dedicated tunnel
+                     * 
                      */
                     void SetDirectConnectTunnelId(const std::string& _directConnectTunnelId);
 
                     /**
                      * 判断参数 DirectConnectTunnelId 是否已赋值
                      * @return DirectConnectTunnelId 是否已赋值
+                     * 
                      */
                     bool DirectConnectTunnelIdHasBeenSet() const;
 

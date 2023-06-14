@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Offset
                      * @return Offset Offset
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset
-                     * @param Offset Offset
+                     * @param _offset Offset
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Quantity, maximum is 1000
                      * @return Limit Quantity, maximum is 1000
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置Quantity, maximum is 1000
-                     * @param Limit Quantity, maximum is 1000
+                     * @param _limit Quantity, maximum is 1000
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
                      * @return Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+                     * 
                      */
                     std::string GetMonth() const;
 
                     /**
                      * 设置Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
-                     * @param Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+                     * @param _month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+                     * 
                      */
                     void SetMonth(const std::string& _month);
 
                     /**
                      * 判断参数 Month 是否已赋值
                      * @return Month 是否已赋值
+                     * 
                      */
                     bool MonthHasBeenSet() const;
 
                     /**
                      * 获取The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
                      * @return PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+                     * 
                      */
                     std::string GetPeriodType() const;
 
                     /**
                      * 设置The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-                     * @param PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+                     * @param _periodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+                     * 
                      */
                     void SetPeriodType(const std::string& _periodType);
 
                     /**
                      * 判断参数 PeriodType 是否已赋值
                      * @return PeriodType 是否已赋值
+                     * 
                      */
                     bool PeriodTypeHasBeenSet() const;
 
@@ -119,20 +131,23 @@ namespace TencentCloud
 1 = yes, 0 = no
                      * @return NeedRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
+                     * 
                      */
                     int64_t GetNeedRecordNum() const;
 
                     /**
                      * 设置Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
-                     * @param NeedRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
+                     * @param _needRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
+                     * 
                      */
                     void SetNeedRecordNum(const int64_t& _needRecordNum);
 
                     /**
                      * 判断参数 NeedRecordNum 是否已赋值
                      * @return NeedRecordNum 是否已赋值
+                     * 
                      */
                     bool NeedRecordNumHasBeenSet() const;
 
@@ -177,6 +192,7 @@ New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+                     * 
                      */
                     std::string GetActionType() const;
 
@@ -201,7 +217,7 @@ New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
-                     * @param ActionType Action type to query. Valid values:
+                     * @param _actionType Action type to query. Valid values:
 Purchase
 Renewal
 Modify
@@ -221,48 +237,56 @@ New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
 Monthly subscription refund
+                     * 
                      */
                     void SetActionType(const std::string& _actionType);
 
                     /**
                      * 判断参数 ActionType 是否已赋值
                      * @return ActionType 是否已赋值
+                     * 
                      */
                     bool ActionTypeHasBeenSet() const;
 
                     /**
                      * 获取ID of the instance to be queried
                      * @return ResourceId ID of the instance to be queried
+                     * 
                      */
                     std::string GetResourceId() const;
 
                     /**
                      * 设置ID of the instance to be queried
-                     * @param ResourceId ID of the instance to be queried
+                     * @param _resourceId ID of the instance to be queried
+                     * 
                      */
                     void SetResourceId(const std::string& _resourceId);
 
                     /**
                      * 判断参数 ResourceId 是否已赋值
                      * @return ResourceId 是否已赋值
+                     * 
                      */
                     bool ResourceIdHasBeenSet() const;
 
                     /**
                      * 获取Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
                      * @return PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+                     * 
                      */
                     std::string GetPayMode() const;
 
                     /**
                      * 设置Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
-                     * @param PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+                     * @param _payMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+                     * 
                      */
                     void SetPayMode(const std::string& _payMode);
 
                     /**
                      * 判断参数 PayMode 是否已赋值
                      * @return PayMode 是否已赋值
+                     * 
                      */
                     bool PayModeHasBeenSet() const;
 
@@ -271,20 +295,23 @@ Monthly subscription refund
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
                      * @return BusinessCode Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+                     * 
                      */
                     std::string GetBusinessCode() const;
 
                     /**
                      * 设置Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
-                     * @param BusinessCode Product code
+                     * @param _businessCode Product code
 Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+                     * 
                      */
                     void SetBusinessCode(const std::string& _businessCode);
 
                     /**
                      * 判断参数 BusinessCode 是否已赋值
                      * @return BusinessCode 是否已赋值
+                     * 
                      */
                     bool BusinessCodeHasBeenSet() const;
 

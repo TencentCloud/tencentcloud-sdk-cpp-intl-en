@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Database name
                      * @return DbName Database name
+                     * 
                      */
                     std::string GetDbName() const;
 
                     /**
                      * 设置Database name
-                     * @param DbName Database name
+                     * @param _dbName Database name
+                     * 
                      */
                     void SetDbName(const std::string& _dbName);
 
                     /**
                      * 判断参数 DbName 是否已赋值
                      * @return DbName 是否已赋值
+                     * 
                      */
                     bool DbNameHasBeenSet() const;
 

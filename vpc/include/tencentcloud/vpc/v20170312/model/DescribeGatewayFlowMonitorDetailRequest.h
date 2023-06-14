@@ -45,162 +45,189 @@ namespace TencentCloud
                     /**
                      * 获取The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
                      * @return TimePoint The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
+                     * 
                      */
                     std::string GetTimePoint() const;
 
                     /**
                      * 设置The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
-                     * @param TimePoint The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
+                     * @param _timePoint The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
+                     * 
                      */
                     void SetTimePoint(const std::string& _timePoint);
 
                     /**
                      * 判断参数 TimePoint 是否已赋值
                      * @return TimePoint 是否已赋值
+                     * 
                      */
                     bool TimePointHasBeenSet() const;
 
                     /**
                      * 获取The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
                      * @return VpnId The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
+                     * 
                      */
                     std::string GetVpnId() const;
 
                     /**
                      * 设置The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
-                     * @param VpnId The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
+                     * @param _vpnId The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
+                     * 
                      */
                     void SetVpnId(const std::string& _vpnId);
 
                     /**
                      * 判断参数 VpnId 是否已赋值
                      * @return VpnId 是否已赋值
+                     * 
                      */
                     bool VpnIdHasBeenSet() const;
 
                     /**
                      * 获取The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
                      * @return DirectConnectGatewayId The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
+                     * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
                      * 设置The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
-                     * @param DirectConnectGatewayId The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
+                     * @param _directConnectGatewayId The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
+                     * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
 
                     /**
                      * 判断参数 DirectConnectGatewayId 是否已赋值
                      * @return DirectConnectGatewayId 是否已赋值
+                     * 
                      */
                     bool DirectConnectGatewayIdHasBeenSet() const;
 
                     /**
                      * 获取The instance ID of the peering connection, such as `pcx-ltjahce6`.
                      * @return PeeringConnectionId The instance ID of the peering connection, such as `pcx-ltjahce6`.
+                     * 
                      */
                     std::string GetPeeringConnectionId() const;
 
                     /**
                      * 设置The instance ID of the peering connection, such as `pcx-ltjahce6`.
-                     * @param PeeringConnectionId The instance ID of the peering connection, such as `pcx-ltjahce6`.
+                     * @param _peeringConnectionId The instance ID of the peering connection, such as `pcx-ltjahce6`.
+                     * 
                      */
                     void SetPeeringConnectionId(const std::string& _peeringConnectionId);
 
                     /**
                      * 判断参数 PeeringConnectionId 是否已赋值
                      * @return PeeringConnectionId 是否已赋值
+                     * 
                      */
                     bool PeeringConnectionIdHasBeenSet() const;
 
                     /**
                      * 获取The instance ID of the NAT gateway, such as `nat-ltjahce6`.
                      * @return NatId The instance ID of the NAT gateway, such as `nat-ltjahce6`.
+                     * 
                      */
                     std::string GetNatId() const;
 
                     /**
                      * 设置The instance ID of the NAT gateway, such as `nat-ltjahce6`.
-                     * @param NatId The instance ID of the NAT gateway, such as `nat-ltjahce6`.
+                     * @param _natId The instance ID of the NAT gateway, such as `nat-ltjahce6`.
+                     * 
                      */
                     void SetNatId(const std::string& _natId);
 
                     /**
                      * 判断参数 NatId 是否已赋值
                      * @return NatId 是否已赋值
+                     * 
                      */
                     bool NatIdHasBeenSet() const;
 
                     /**
                      * 获取Offset.
                      * @return Offset Offset.
+                     * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
                      * 设置Offset.
-                     * @param Offset Offset.
+                     * @param _offset Offset.
+                     * 
                      */
                     void SetOffset(const uint64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取The returned quantity.
                      * @return Limit The returned quantity.
+                     * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
                      * 设置The returned quantity.
-                     * @param Limit The returned quantity.
+                     * @param _limit The returned quantity.
+                     * 
                      */
                     void SetLimit(const uint64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 
                     /**
                      * 获取The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
                      * @return OrderField The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
+                     * 
                      */
                     std::string GetOrderField() const;
 
                     /**
                      * 设置The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
-                     * @param OrderField The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
+                     * @param _orderField The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
+                     * 
                      */
                     void SetOrderField(const std::string& _orderField);
 
                     /**
                      * 判断参数 OrderField 是否已赋值
                      * @return OrderField 是否已赋值
+                     * 
                      */
                     bool OrderFieldHasBeenSet() const;
 
                     /**
                      * 获取Order methods. Ascending: `ASC`, Descending: `DESC`.
                      * @return OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
+                     * 
                      */
                     std::string GetOrderDirection() const;
 
                     /**
                      * 设置Order methods. Ascending: `ASC`, Descending: `DESC`.
-                     * @param OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
+                     * @param _orderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
+                     * 
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
 
                     /**
                      * 判断参数 OrderDirection 是否已赋值
                      * @return OrderDirection 是否已赋值
+                     * 
                      */
                     bool OrderDirectionHasBeenSet() const;
 

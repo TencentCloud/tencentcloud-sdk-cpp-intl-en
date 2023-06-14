@@ -49,72 +49,84 @@ namespace TencentCloud
                     /**
                      * 获取Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
                      * @return Bucket Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
+                     * 
                      */
                     std::string GetBucket() const;
 
                     /**
                      * 设置Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
-                     * @param Bucket Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
+                     * @param _bucket Name of the COS bucket bound to a workflow, such as `TopRankVideo-125xxx88`.
+                     * 
                      */
                     void SetBucket(const std::string& _bucket);
 
                     /**
                      * 判断参数 Bucket 是否已赋值
                      * @return Bucket 是否已赋值
+                     * 
                      */
                     bool BucketHasBeenSet() const;
 
                     /**
                      * 获取Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
                      * @return Region Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
+                     * 
                      */
                     std::string GetRegion() const;
 
                     /**
                      * 设置Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
-                     * @param Region Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
+                     * @param _region Region of the COS bucket bound to a workflow, such as `ap-chongiqng`.
+                     * 
                      */
                     void SetRegion(const std::string& _region);
 
                     /**
                      * 判断参数 Region 是否已赋值
                      * @return Region 是否已赋值
+                     * 
                      */
                     bool RegionHasBeenSet() const;
 
                     /**
                      * 获取Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
                      * @return Dir Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
+                     * 
                      */
                     std::string GetDir() const;
 
                     /**
                      * 设置Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
-                     * @param Dir Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
+                     * @param _dir Input path directory bound to a workflow, such as `/movie/201907/`. If this parameter is left empty, the `/` root directory will be used.
+                     * 
                      */
                     void SetDir(const std::string& _dir);
 
                     /**
                      * 判断参数 Dir 是否已赋值
                      * @return Dir 是否已赋值
+                     * 
                      */
                     bool DirHasBeenSet() const;
 
                     /**
                      * 获取Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
                      * @return Formats Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+                     * 
                      */
                     std::vector<std::string> GetFormats() const;
 
                     /**
                      * 设置Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
-                     * @param Formats Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+                     * @param _formats Format list of files that can trigger a workflow, such as ["mp4", "flv", "mov"]. If this parameter is left empty, files in all formats can trigger the workflow.
+                     * 
                      */
                     void SetFormats(const std::vector<std::string>& _formats);
 
                     /**
                      * 判断参数 Formats 是否已赋值
                      * @return Formats 是否已赋值
+                     * 
                      */
                     bool FormatsHasBeenSet() const;
 

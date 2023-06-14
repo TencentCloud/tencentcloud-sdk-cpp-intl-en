@@ -49,36 +49,42 @@ namespace TencentCloud
                     /**
                      * 获取Creation quantity. Minimum value: 1. Default value: 2.
                      * @return NewGameServerSessionsPerCreator Creation quantity. Minimum value: 1. Default value: 2.
+                     * 
                      */
                     uint64_t GetNewGameServerSessionsPerCreator() const;
 
                     /**
                      * 设置Creation quantity. Minimum value: 1. Default value: 2.
-                     * @param NewGameServerSessionsPerCreator Creation quantity. Minimum value: 1. Default value: 2.
+                     * @param _newGameServerSessionsPerCreator Creation quantity. Minimum value: 1. Default value: 2.
+                     * 
                      */
                     void SetNewGameServerSessionsPerCreator(const uint64_t& _newGameServerSessionsPerCreator);
 
                     /**
                      * 判断参数 NewGameServerSessionsPerCreator 是否已赋值
                      * @return NewGameServerSessionsPerCreator 是否已赋值
+                     * 
                      */
                     bool NewGameServerSessionsPerCreatorHasBeenSet() const;
 
                     /**
                      * 获取Unit time. Minimum value: 1. Default value: 3. Unit: minute.
                      * @return PolicyPeriodInMinutes Unit time. Minimum value: 1. Default value: 3. Unit: minute.
+                     * 
                      */
                     uint64_t GetPolicyPeriodInMinutes() const;
 
                     /**
                      * 设置Unit time. Minimum value: 1. Default value: 3. Unit: minute.
-                     * @param PolicyPeriodInMinutes Unit time. Minimum value: 1. Default value: 3. Unit: minute.
+                     * @param _policyPeriodInMinutes Unit time. Minimum value: 1. Default value: 3. Unit: minute.
+                     * 
                      */
                     void SetPolicyPeriodInMinutes(const uint64_t& _policyPeriodInMinutes);
 
                     /**
                      * 判断参数 PolicyPeriodInMinutes 是否已赋值
                      * @return PolicyPeriodInMinutes 是否已赋值
+                     * 
                      */
                     bool PolicyPeriodInMinutesHasBeenSet() const;
 

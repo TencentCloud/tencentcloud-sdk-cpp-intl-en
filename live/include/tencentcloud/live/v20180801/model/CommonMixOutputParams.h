@@ -49,18 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Output stream name.
                      * @return OutputStreamName Output stream name.
+                     * 
                      */
                     std::string GetOutputStreamName() const;
 
                     /**
                      * 设置Output stream name.
-                     * @param OutputStreamName Output stream name.
+                     * @param _outputStreamName Output stream name.
+                     * 
                      */
                     void SetOutputStreamName(const std::string& _outputStreamName);
 
                     /**
                      * 判断参数 OutputStreamName 是否已赋值
                      * @return OutputStreamName 是否已赋值
+                     * 
                      */
                     bool OutputStreamNameHasBeenSet() const;
 
@@ -75,6 +78,7 @@ If this parameter is left empty, 0 will be used by default.
 If the output stream is a stream in the input stream list, enter 0.
 If you want the stream mix result to be a new stream, enter 1.
 If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and there cannot be a stream with the same ID on the LVB backend.
+                     * 
                      */
                     int64_t GetOutputStreamType() const;
 
@@ -84,17 +88,19 @@ If this parameter is left empty, 0 will be used by default.
 If the output stream is a stream in the input stream list, enter 0.
 If you want the stream mix result to be a new stream, enter 1.
 If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and there cannot be a stream with the same ID on the LVB backend.
-                     * @param OutputStreamType Output stream type. Valid values: [0,1].
+                     * @param _outputStreamType Output stream type. Valid values: [0,1].
 If this parameter is left empty, 0 will be used by default.
 If the output stream is a stream in the input stream list, enter 0.
 If you want the stream mix result to be a new stream, enter 1.
 If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and there cannot be a stream with the same ID on the LVB backend.
+                     * 
                      */
                     void SetOutputStreamType(const int64_t& _outputStreamType);
 
                     /**
                      * 判断参数 OutputStreamType 是否已赋值
                      * @return OutputStreamType 是否已赋值
+                     * 
                      */
                     bool OutputStreamTypeHasBeenSet() const;
 
@@ -103,20 +109,23 @@ If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and 
 If you do not specify this, the system will select a bitrate automatically.
                      * @return OutputStreamBitRate The output bitrate. Value range: 1-10000.
 If you do not specify this, the system will select a bitrate automatically.
+                     * 
                      */
                     int64_t GetOutputStreamBitRate() const;
 
                     /**
                      * 设置The output bitrate. Value range: 1-10000.
 If you do not specify this, the system will select a bitrate automatically.
-                     * @param OutputStreamBitRate The output bitrate. Value range: 1-10000.
+                     * @param _outputStreamBitRate The output bitrate. Value range: 1-10000.
 If you do not specify this, the system will select a bitrate automatically.
+                     * 
                      */
                     void SetOutputStreamBitRate(const int64_t& _outputStreamBitRate);
 
                     /**
                      * 判断参数 OutputStreamBitRate 是否已赋值
                      * @return OutputStreamBitRate 是否已赋值
+                     * 
                      */
                     bool OutputStreamBitRateHasBeenSet() const;
 
@@ -125,20 +134,23 @@ If you do not specify this, the system will select a bitrate automatically.
 If this parameter is left empty, the system will automatically determine.
                      * @return OutputStreamGop Output stream GOP size. Value range: [1,10].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     int64_t GetOutputStreamGop() const;
 
                     /**
                      * 设置Output stream GOP size. Value range: [1,10].
 If this parameter is left empty, the system will automatically determine.
-                     * @param OutputStreamGop Output stream GOP size. Value range: [1,10].
+                     * @param _outputStreamGop Output stream GOP size. Value range: [1,10].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     void SetOutputStreamGop(const int64_t& _outputStreamGop);
 
                     /**
                      * 判断参数 OutputStreamGop 是否已赋值
                      * @return OutputStreamGop 是否已赋值
+                     * 
                      */
                     bool OutputStreamGopHasBeenSet() const;
 
@@ -147,20 +159,23 @@ If this parameter is left empty, the system will automatically determine.
 If this parameter is left empty, the system will automatically determine.
                      * @return OutputStreamFrameRate Output stream frame rate. Value range: [1,60].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     int64_t GetOutputStreamFrameRate() const;
 
                     /**
                      * 设置Output stream frame rate. Value range: [1,60].
 If this parameter is left empty, the system will automatically determine.
-                     * @param OutputStreamFrameRate Output stream frame rate. Value range: [1,60].
+                     * @param _outputStreamFrameRate Output stream frame rate. Value range: [1,60].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     void SetOutputStreamFrameRate(const int64_t& _outputStreamFrameRate);
 
                     /**
                      * 判断参数 OutputStreamFrameRate 是否已赋值
                      * @return OutputStreamFrameRate 是否已赋值
+                     * 
                      */
                     bool OutputStreamFrameRateHasBeenSet() const;
 
@@ -169,20 +184,23 @@ If this parameter is left empty, the system will automatically determine.
 If this parameter is left empty, the system will automatically determine.
                      * @return OutputAudioBitRate Output stream audio bitrate. Value range: [1,500]
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     int64_t GetOutputAudioBitRate() const;
 
                     /**
                      * 设置Output stream audio bitrate. Value range: [1,500]
 If this parameter is left empty, the system will automatically determine.
-                     * @param OutputAudioBitRate Output stream audio bitrate. Value range: [1,500]
+                     * @param _outputAudioBitRate Output stream audio bitrate. Value range: [1,500]
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     void SetOutputAudioBitRate(const int64_t& _outputAudioBitRate);
 
                     /**
                      * 判断参数 OutputAudioBitRate 是否已赋值
                      * @return OutputAudioBitRate 是否已赋值
+                     * 
                      */
                     bool OutputAudioBitRateHasBeenSet() const;
 
@@ -191,20 +209,23 @@ If this parameter is left empty, the system will automatically determine.
 If this parameter is left empty, the system will automatically determine.
                      * @return OutputAudioSampleRate Output stream audio sample rate. Valid values: [96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     int64_t GetOutputAudioSampleRate() const;
 
                     /**
                      * 设置Output stream audio sample rate. Valid values: [96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000].
 If this parameter is left empty, the system will automatically determine.
-                     * @param OutputAudioSampleRate Output stream audio sample rate. Valid values: [96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000].
+                     * @param _outputAudioSampleRate Output stream audio sample rate. Valid values: [96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     void SetOutputAudioSampleRate(const int64_t& _outputAudioSampleRate);
 
                     /**
                      * 判断参数 OutputAudioSampleRate 是否已赋值
                      * @return OutputAudioSampleRate 是否已赋值
+                     * 
                      */
                     bool OutputAudioSampleRateHasBeenSet() const;
 
@@ -213,38 +234,44 @@ If this parameter is left empty, the system will automatically determine.
 If this parameter is left empty, the system will automatically determine.
                      * @return OutputAudioChannels Output stream audio sound channel. Valid values: [1,2].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     int64_t GetOutputAudioChannels() const;
 
                     /**
                      * 设置Output stream audio sound channel. Valid values: [1,2].
 If this parameter is left empty, the system will automatically determine.
-                     * @param OutputAudioChannels Output stream audio sound channel. Valid values: [1,2].
+                     * @param _outputAudioChannels Output stream audio sound channel. Valid values: [1,2].
 If this parameter is left empty, the system will automatically determine.
+                     * 
                      */
                     void SetOutputAudioChannels(const int64_t& _outputAudioChannels);
 
                     /**
                      * 判断参数 OutputAudioChannels 是否已赋值
                      * @return OutputAudioChannels 是否已赋值
+                     * 
                      */
                     bool OutputAudioChannelsHasBeenSet() const;
 
                     /**
                      * 获取SEI information in output stream. If there are no special needs, leave it empty.
                      * @return MixSei SEI information in output stream. If there are no special needs, leave it empty.
+                     * 
                      */
                     std::string GetMixSei() const;
 
                     /**
                      * 设置SEI information in output stream. If there are no special needs, leave it empty.
-                     * @param MixSei SEI information in output stream. If there are no special needs, leave it empty.
+                     * @param _mixSei SEI information in output stream. If there are no special needs, leave it empty.
+                     * 
                      */
                     void SetMixSei(const std::string& _mixSei);
 
                     /**
                      * 判断参数 MixSei 是否已赋值
                      * @return MixSei 是否已赋值
+                     * 
                      */
                     bool MixSeiHasBeenSet() const;
 

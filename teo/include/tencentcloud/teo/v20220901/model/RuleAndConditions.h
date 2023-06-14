@@ -50,18 +50,21 @@ namespace TencentCloud
                     /**
                      * 获取Rule engine condition. This condition will be considered met if all items in the array are met.
                      * @return Conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+                     * 
                      */
                     std::vector<RuleCondition> GetConditions() const;
 
                     /**
                      * 设置Rule engine condition. This condition will be considered met if all items in the array are met.
-                     * @param Conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+                     * @param _conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+                     * 
                      */
                     void SetConditions(const std::vector<RuleCondition>& _conditions);
 
                     /**
                      * 判断参数 Conditions 是否已赋值
                      * @return Conditions 是否已赋值
+                     * 
                      */
                     bool ConditionsHasBeenSet() const;
 

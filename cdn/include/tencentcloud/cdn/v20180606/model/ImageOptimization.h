@@ -55,20 +55,23 @@ namespace TencentCloud
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return WebpAdapter `WebpAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     WebpAdapter GetWebpAdapter() const;
 
                     /**
                      * 设置`WebpAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param WebpAdapter `WebpAdapter` configuration
+                     * @param _webpAdapter `WebpAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetWebpAdapter(const WebpAdapter& _webpAdapter);
 
                     /**
                      * 判断参数 WebpAdapter 是否已赋值
                      * @return WebpAdapter 是否已赋值
+                     * 
                      */
                     bool WebpAdapterHasBeenSet() const;
 
@@ -77,20 +80,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TpgAdapter `TpgAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     TpgAdapter GetTpgAdapter() const;
 
                     /**
                      * 设置`TpgAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param TpgAdapter `TpgAdapter` configuration
+                     * @param _tpgAdapter `TpgAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetTpgAdapter(const TpgAdapter& _tpgAdapter);
 
                     /**
                      * 判断参数 TpgAdapter 是否已赋值
                      * @return TpgAdapter 是否已赋值
+                     * 
                      */
                     bool TpgAdapterHasBeenSet() const;
 
@@ -99,20 +105,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return GuetzliAdapter `GuetzliAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     GuetzliAdapter GetGuetzliAdapter() const;
 
                     /**
                      * 设置`GuetzliAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param GuetzliAdapter `GuetzliAdapter` configuration
+                     * @param _guetzliAdapter `GuetzliAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetGuetzliAdapter(const GuetzliAdapter& _guetzliAdapter);
 
                     /**
                      * 判断参数 GuetzliAdapter 是否已赋值
                      * @return GuetzliAdapter 是否已赋值
+                     * 
                      */
                     bool GuetzliAdapterHasBeenSet() const;
 
@@ -121,20 +130,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AvifAdapter AVIF adapter configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     AvifAdapter GetAvifAdapter() const;
 
                     /**
                      * 设置AVIF adapter configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param AvifAdapter AVIF adapter configuration
+                     * @param _avifAdapter AVIF adapter configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
                     void SetAvifAdapter(const AvifAdapter& _avifAdapter);
 
                     /**
                      * 判断参数 AvifAdapter 是否已赋值
                      * @return AvifAdapter 是否已赋值
+                     * 
                      */
                     bool AvifAdapterHasBeenSet() const;
 

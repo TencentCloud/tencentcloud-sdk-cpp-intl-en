@@ -54,6 +54,7 @@ namespace TencentCloud
                      * @return Switch Origin-pull follow-redirect switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     std::string GetSwitch() const;
 
@@ -61,15 +62,17 @@ namespace TencentCloud
                      * 设置Origin-pull follow-redirect switch
 `on`: Enable
 `off`: Disable
-                     * @param Switch Origin-pull follow-redirect switch
+                     * @param _switch Origin-pull follow-redirect switch
 `on`: Enable
 `off`: Disable
+                     * 
                      */
                     void SetSwitch(const std::string& _switch);
 
                     /**
                      * 判断参数 Switch 是否已赋值
                      * @return Switch 是否已赋值
+                     * 
                      */
                     bool SwitchHasBeenSet() const;
 
@@ -78,20 +81,23 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RedirectConfig GetRedirectConfig() const;
 
                     /**
                      * 设置Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+                     * @param _redirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetRedirectConfig(const RedirectConfig& _redirectConfig);
 
                     /**
                      * 判断参数 RedirectConfig 是否已赋值
                      * @return RedirectConfig 是否已赋值
+                     * 
                      */
                     bool RedirectConfigHasBeenSet() const;
 

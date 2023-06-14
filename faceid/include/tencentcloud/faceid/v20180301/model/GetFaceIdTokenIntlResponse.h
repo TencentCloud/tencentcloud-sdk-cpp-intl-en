@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取The SDK token, which is used throughout the verification process and to get the verification result.
                      * @return SdkToken The SDK token, which is used throughout the verification process and to get the verification result.
+                     * 
                      */
                     std::string GetSdkToken() const;
 
                     /**
                      * 判断参数 SdkToken 是否已赋值
                      * @return SdkToken 是否已赋值
+                     * 
                      */
                     bool SdkTokenHasBeenSet() const;
 

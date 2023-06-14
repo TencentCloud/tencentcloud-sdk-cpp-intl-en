@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Alerting rule ID
                      * @return Id Alerting rule ID
+                     * 
                      */
                     std::string GetId() const;
 
                     /**
                      * 判断参数 Id 是否已赋值
                      * @return Id 是否已赋值
+                     * 
                      */
                     bool IdHasBeenSet() const;
 

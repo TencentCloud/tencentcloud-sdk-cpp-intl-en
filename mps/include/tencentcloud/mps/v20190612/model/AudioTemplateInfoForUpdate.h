@@ -79,6 +79,7 @@ When the outer `Container` parameter is `mp4` or `flv`, the valid values include
 When the outer `Container` parameter is `hls`, the valid values include:
 <li>libfdk_aac;</li>
 <li>libmp3lame.</li>
+                     * 
                      */
                     std::string GetCodec() const;
 
@@ -99,7 +100,7 @@ When the outer `Container` parameter is `mp4` or `flv`, the valid values include
 When the outer `Container` parameter is `hls`, the valid values include:
 <li>libfdk_aac;</li>
 <li>libmp3lame.</li>
-                     * @param Codec Audio stream codec.
+                     * @param _codec Audio stream codec.
 When the outer `Container` parameter is `mp3`, the valid value is:
 <li>libmp3lame.</li>
 When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
@@ -115,30 +116,35 @@ When the outer `Container` parameter is `mp4` or `flv`, the valid values include
 When the outer `Container` parameter is `hls`, the valid values include:
 <li>libfdk_aac;</li>
 <li>libmp3lame.</li>
+                     * 
                      */
                     void SetCodec(const std::string& _codec);
 
                     /**
                      * 判断参数 Codec 是否已赋值
                      * @return Codec 是否已赋值
+                     * 
                      */
                     bool CodecHasBeenSet() const;
 
                     /**
                      * 获取Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
                      * @return Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 
                      */
                     uint64_t GetBitrate() const;
 
                     /**
                      * 设置Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-                     * @param Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * @param _bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+                     * 
                      */
                     void SetBitrate(const uint64_t& _bitrate);
 
                     /**
                      * 判断参数 Bitrate 是否已赋值
                      * @return Bitrate 是否已赋值
+                     * 
                      */
                     bool BitrateHasBeenSet() const;
 
@@ -153,6 +159,7 @@ In Hz.
 <li>44,100</li>
 <li>48,000</li>
 In Hz.
+                     * 
                      */
                     uint64_t GetSampleRate() const;
 
@@ -162,17 +169,19 @@ In Hz.
 <li>44,100</li>
 <li>48,000</li>
 In Hz.
-                     * @param SampleRate Audio stream sample rate. Valid values:
+                     * @param _sampleRate Audio stream sample rate. Valid values:
 <li>32,000</li>
 <li>44,100</li>
 <li>48,000</li>
 In Hz.
+                     * 
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
 
                     /**
                      * 判断参数 SampleRate 是否已赋值
                      * @return SampleRate 是否已赋值
+                     * 
                      */
                     bool SampleRateHasBeenSet() const;
 
@@ -187,6 +196,7 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
 <li>2: Dual</li>
 <li>6: Stereo</li>
 When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+                     * 
                      */
                     int64_t GetAudioChannel() const;
 
@@ -196,35 +206,40 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
 <li>2: Dual</li>
 <li>6: Stereo</li>
 When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
-                     * @param AudioChannel Audio channel system. Valid values:
+                     * @param _audioChannel Audio channel system. Valid values:
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
 When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+                     * 
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
 
                     /**
                      * 判断参数 AudioChannel 是否已赋值
                      * @return AudioChannel 是否已赋值
+                     * 
                      */
                     bool AudioChannelHasBeenSet() const;
 
                     /**
                      * 获取The audio tracks to retain. All audio tracks are retained by default.
                      * @return StreamSelects The audio tracks to retain. All audio tracks are retained by default.
+                     * 
                      */
                     std::vector<int64_t> GetStreamSelects() const;
 
                     /**
                      * 设置The audio tracks to retain. All audio tracks are retained by default.
-                     * @param StreamSelects The audio tracks to retain. All audio tracks are retained by default.
+                     * @param _streamSelects The audio tracks to retain. All audio tracks are retained by default.
+                     * 
                      */
                     void SetStreamSelects(const std::vector<int64_t>& _streamSelects);
 
                     /**
                      * 判断参数 StreamSelects 是否已赋值
                      * @return StreamSelects 是否已赋值
+                     * 
                      */
                     bool StreamSelectsHasBeenSet() const;
 

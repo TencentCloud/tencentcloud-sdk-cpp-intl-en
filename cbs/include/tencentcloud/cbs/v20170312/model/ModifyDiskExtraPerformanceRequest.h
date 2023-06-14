@@ -45,36 +45,42 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
                      * @return DiskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+                     * 
                      */
                     std::string GetDiskId() const;
 
                     /**
                      * 设置ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-                     * @param DiskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+                     * @param _diskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+                     * 
                      */
                     void SetDiskId(const std::string& _diskId);
 
                     /**
                      * 判断参数 DiskId 是否已赋值
                      * @return DiskId 是否已赋值
+                     * 
                      */
                     bool DiskIdHasBeenSet() const;
 
                     /**
                      * 获取The extra throughput to purchase, in MB/s
                      * @return ThroughputPerformance The extra throughput to purchase, in MB/s
+                     * 
                      */
                     uint64_t GetThroughputPerformance() const;
 
                     /**
                      * 设置The extra throughput to purchase, in MB/s
-                     * @param ThroughputPerformance The extra throughput to purchase, in MB/s
+                     * @param _throughputPerformance The extra throughput to purchase, in MB/s
+                     * 
                      */
                     void SetThroughputPerformance(const uint64_t& _throughputPerformance);
 
                     /**
                      * 判断参数 ThroughputPerformance 是否已赋值
                      * @return ThroughputPerformance 是否已赋值
+                     * 
                      */
                     bool ThroughputPerformanceHasBeenSet() const;
 

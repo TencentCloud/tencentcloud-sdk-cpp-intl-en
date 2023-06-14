@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID. Either `PolicyId` or `PolicyName` must be entered
                      * @return PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID. Either `PolicyId` or `PolicyName` must be entered
-                     * @param PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * @param _policyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
                      * @return AttachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 
                      */
                     std::string GetAttachRoleId() const;
 
                     /**
                      * 设置Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-                     * @param AttachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * @param _attachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 
                      */
                     void SetAttachRoleId(const std::string& _attachRoleId);
 
                     /**
                      * 判断参数 AttachRoleId 是否已赋值
                      * @return AttachRoleId 是否已赋值
+                     * 
                      */
                     bool AttachRoleIdHasBeenSet() const;
 
                     /**
                      * 获取Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
                      * @return AttachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 
                      */
                     std::string GetAttachRoleName() const;
 
                     /**
                      * 设置Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-                     * @param AttachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * @param _attachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 
                      */
                     void SetAttachRoleName(const std::string& _attachRoleName);
 
                     /**
                      * 判断参数 AttachRoleName 是否已赋值
                      * @return AttachRoleName 是否已赋值
+                     * 
                      */
                     bool AttachRoleNameHasBeenSet() const;
 
                     /**
                      * 获取Policy name. Either `PolicyId` or `PolicyName` must be entered
                      * @return PolicyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     std::string GetPolicyName() const;
 
                     /**
                      * 设置Policy name. Either `PolicyId` or `PolicyName` must be entered
-                     * @param PolicyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+                     * @param _policyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+                     * 
                      */
                     void SetPolicyName(const std::string& _policyName);
 
                     /**
                      * 判断参数 PolicyName 是否已赋值
                      * @return PolicyName 是否已赋值
+                     * 
                      */
                     bool PolicyNameHasBeenSet() const;
 

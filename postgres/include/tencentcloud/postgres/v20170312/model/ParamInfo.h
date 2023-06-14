@@ -53,20 +53,23 @@ namespace TencentCloud
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ID Parameter ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetID() const;
 
                     /**
                      * 设置Parameter ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ID Parameter ID
+                     * @param _iD Parameter ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetID(const int64_t& _iD);
 
                     /**
                      * 判断参数 ID 是否已赋值
                      * @return ID 是否已赋值
+                     * 
                      */
                     bool IDHasBeenSet() const;
 
@@ -75,20 +78,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Name Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Name Parameter name
+                     * @param _name Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetName(const std::string& _name);
 
                     /**
                      * 判断参数 Name 是否已赋值
                      * @return Name 是否已赋值
+                     * 
                      */
                     bool NameHasBeenSet() const;
 
@@ -103,6 +109,7 @@ For an `integer` or `real` parameter, the `Min` field represents the minimum val
 For a `bool` parameter, the valid values include `true` and `false`; 
 For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetParamValueType() const;
 
@@ -112,17 +119,19 @@ For an `integer` or `real` parameter, the `Min` field represents the minimum val
 For a `bool` parameter, the valid values include `true` and `false`; 
 For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+                     * @param _paramValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
 For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
 For a `bool` parameter, the valid values include `true` and `false`; 
 For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParamValueType(const std::string& _paramValueType);
 
                     /**
                      * 判断参数 ParamValueType 是否已赋值
                      * @return ParamValueType 是否已赋值
+                     * 
                      */
                     bool ParamValueTypeHasBeenSet() const;
 
@@ -131,20 +140,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置Unit of the parameter value. If the parameter has no unit, this field will return null.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
+                     * @param _unit Unit of the parameter value. If the parameter has no unit, this field will return null.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetUnit(const std::string& _unit);
 
                     /**
                      * 判断参数 Unit 是否已赋值
                      * @return Unit 是否已赋值
+                     * 
                      */
                     bool UnitHasBeenSet() const;
 
@@ -153,20 +165,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return DefaultValue Default value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetDefaultValue() const;
 
                     /**
                      * 设置Default value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DefaultValue Default value of the parameter, which is returned as a string
+                     * @param _defaultValue Default value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
 
                     /**
                      * 判断参数 DefaultValue 是否已赋值
                      * @return DefaultValue 是否已赋值
+                     * 
                      */
                     bool DefaultValueHasBeenSet() const;
 
@@ -175,20 +190,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CurrentValue Current value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
                      * 设置Current value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CurrentValue Current value of the parameter, which is returned as a string
+                     * @param _currentValue Current value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
                     /**
                      * 判断参数 CurrentValue 是否已赋值
                      * @return CurrentValue 是否已赋值
+                     * 
                      */
                     bool CurrentValueHasBeenSet() const;
 
@@ -197,20 +215,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Max The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetMax() const;
 
                     /**
                      * 设置The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Max The maximum value of the `integer` or `real` parameter
+                     * @param _max The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMax(const double& _max);
 
                     /**
                      * 判断参数 Max 是否已赋值
                      * @return Max 是否已赋值
+                     * 
                      */
                     bool MaxHasBeenSet() const;
 
@@ -219,20 +240,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return EnumValue Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
                      * 设置Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnumValue Value range of the enum parameter
+                     * @param _enumValue Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
 
                     /**
                      * 判断参数 EnumValue 是否已赋值
                      * @return EnumValue 是否已赋值
+                     * 
                      */
                     bool EnumValueHasBeenSet() const;
 
@@ -241,20 +265,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Min The minimum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     double GetMin() const;
 
                     /**
                      * 设置The minimum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Min The minimum value of the `integer` or `real` parameter
+                     * @param _min The minimum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetMin(const double& _min);
 
                     /**
                      * 判断参数 Min 是否已赋值
                      * @return Min 是否已赋值
+                     * 
                      */
                     bool MinHasBeenSet() const;
 
@@ -263,20 +290,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ParamDescriptionCH Parameter description in Chinese
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetParamDescriptionCH() const;
 
                     /**
                      * 设置Parameter description in Chinese
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ParamDescriptionCH Parameter description in Chinese
+                     * @param _paramDescriptionCH Parameter description in Chinese
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParamDescriptionCH(const std::string& _paramDescriptionCH);
 
                     /**
                      * 判断参数 ParamDescriptionCH 是否已赋值
                      * @return ParamDescriptionCH 是否已赋值
+                     * 
                      */
                     bool ParamDescriptionCHHasBeenSet() const;
 
@@ -285,20 +315,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ParamDescriptionEN Parameter description in English
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetParamDescriptionEN() const;
 
                     /**
                      * 设置Parameter description in English
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ParamDescriptionEN Parameter description in English
+                     * @param _paramDescriptionEN Parameter description in English
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetParamDescriptionEN(const std::string& _paramDescriptionEN);
 
                     /**
                      * 判断参数 ParamDescriptionEN 是否已赋值
                      * @return ParamDescriptionEN 是否已赋值
+                     * 
                      */
                     bool ParamDescriptionENHasBeenSet() const;
 
@@ -307,20 +340,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return NeedReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetNeedReboot() const;
 
                     /**
                      * 设置Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param NeedReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
+                     * @param _needReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetNeedReboot(const bool& _needReboot);
 
                     /**
                      * 判断参数 NeedReboot 是否已赋值
                      * @return NeedReboot 是否已赋值
+                     * 
                      */
                     bool NeedRebootHasBeenSet() const;
 
@@ -329,20 +365,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ClassificationCN Parameter category in Chinese
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClassificationCN() const;
 
                     /**
                      * 设置Parameter category in Chinese
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClassificationCN Parameter category in Chinese
+                     * @param _classificationCN Parameter category in Chinese
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassificationCN(const std::string& _classificationCN);
 
                     /**
                      * 判断参数 ClassificationCN 是否已赋值
                      * @return ClassificationCN 是否已赋值
+                     * 
                      */
                     bool ClassificationCNHasBeenSet() const;
 
@@ -351,20 +390,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return ClassificationEN Parameter category in English
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetClassificationEN() const;
 
                     /**
                      * 设置Parameter category in English
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClassificationEN Parameter category in English
+                     * @param _classificationEN Parameter category in English
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetClassificationEN(const std::string& _classificationEN);
 
                     /**
                      * 判断参数 ClassificationEN 是否已赋值
                      * @return ClassificationEN 是否已赋值
+                     * 
                      */
                     bool ClassificationENHasBeenSet() const;
 
@@ -373,20 +415,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SpecRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetSpecRelated() const;
 
                     /**
                      * 设置Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SpecRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
+                     * @param _specRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpecRelated(const bool& _specRelated);
 
                     /**
                      * 判断参数 SpecRelated 是否已赋值
                      * @return SpecRelated 是否已赋值
+                     * 
                      */
                     bool SpecRelatedHasBeenSet() const;
 
@@ -395,20 +440,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool GetAdvanced() const;
 
                     /**
                      * 设置Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
+                     * @param _advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetAdvanced(const bool& _advanced);
 
                     /**
                      * 判断参数 Advanced 是否已赋值
                      * @return Advanced 是否已赋值
+                     * 
                      */
                     bool AdvancedHasBeenSet() const;
 
@@ -417,20 +465,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return LastModifyTime The last modified time of the parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string GetLastModifyTime() const;
 
                     /**
                      * 设置The last modified time of the parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param LastModifyTime The last modified time of the parameter
+                     * @param _lastModifyTime The last modified time of the parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetLastModifyTime(const std::string& _lastModifyTime);
 
                     /**
                      * 判断参数 LastModifyTime 是否已赋值
                      * @return LastModifyTime 是否已赋值
+                     * 
                      */
                     bool LastModifyTimeHasBeenSet() const;
 
@@ -439,20 +490,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t GetStandbyRelated() const;
 
                     /**
                      * 设置Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+                     * @param _standbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetStandbyRelated(const int64_t& _standbyRelated);
 
                     /**
                      * 判断参数 StandbyRelated 是否已赋值
                      * @return StandbyRelated 是否已赋值
+                     * 
                      */
                     bool StandbyRelatedHasBeenSet() const;
 
@@ -461,20 +515,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ParamVersionRelation> GetVersionRelationSet() const;
 
                     /**
                      * 设置Associated parameter version information, which refers to the detailed parameter information of the kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+                     * @param _versionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetVersionRelationSet(const std::vector<ParamVersionRelation>& _versionRelationSet);
 
                     /**
                      * 判断参数 VersionRelationSet 是否已赋值
                      * @return VersionRelationSet 是否已赋值
+                     * 
                      */
                     bool VersionRelationSetHasBeenSet() const;
 
@@ -483,20 +540,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ParamSpecRelation> GetSpecRelationSet() const;
 
                     /**
                      * 设置Associated parameter specification information, which refers to the detailed parameter information of the specifications.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+                     * @param _specRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     void SetSpecRelationSet(const std::vector<ParamSpecRelation>& _specRelationSet);
 
                     /**
                      * 判断参数 SpecRelationSet 是否已赋值
                      * @return SpecRelationSet 是否已赋值
+                     * 
                      */
                     bool SpecRelationSetHasBeenSet() const;
 

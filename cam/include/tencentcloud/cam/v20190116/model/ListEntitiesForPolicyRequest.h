@@ -45,72 +45,84 @@ namespace TencentCloud
                     /**
                      * 获取Policy ID
                      * @return PolicyId Policy ID
+                     * 
                      */
                     uint64_t GetPolicyId() const;
 
                     /**
                      * 设置Policy ID
-                     * @param PolicyId Policy ID
+                     * @param _policyId Policy ID
+                     * 
                      */
                     void SetPolicyId(const uint64_t& _policyId);
 
                     /**
                      * 判断参数 PolicyId 是否已赋值
                      * @return PolicyId 是否已赋值
+                     * 
                      */
                     bool PolicyIdHasBeenSet() const;
 
                     /**
                      * 获取Page number, which starts from 1. Default is 1
                      * @return Page Page number, which starts from 1. Default is 1
+                     * 
                      */
                     uint64_t GetPage() const;
 
                     /**
                      * 设置Page number, which starts from 1. Default is 1
-                     * @param Page Page number, which starts from 1. Default is 1
+                     * @param _page Page number, which starts from 1. Default is 1
+                     * 
                      */
                     void SetPage(const uint64_t& _page);
 
                     /**
                      * 判断参数 Page 是否已赋值
                      * @return Page 是否已赋值
+                     * 
                      */
                     bool PageHasBeenSet() const;
 
                     /**
                      * 获取Number of entries per page; 20 by default
                      * @return Rp Number of entries per page; 20 by default
+                     * 
                      */
                     uint64_t GetRp() const;
 
                     /**
                      * 设置Number of entries per page; 20 by default
-                     * @param Rp Number of entries per page; 20 by default
+                     * @param _rp Number of entries per page; 20 by default
+                     * 
                      */
                     void SetRp(const uint64_t& _rp);
 
                     /**
                      * 判断参数 Rp 是否已赋值
                      * @return Rp 是否已赋值
+                     * 
                      */
                     bool RpHasBeenSet() const;
 
                     /**
                      * 获取Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
                      * @return EntityFilter Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
+                     * 
                      */
                     std::string GetEntityFilter() const;
 
                     /**
                      * 设置Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
-                     * @param EntityFilter Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
+                     * @param _entityFilter Valid values: `All`, `User`, `Group`, and `Role`. `All` means all entity types will be returned; `User` means only sub-accounts will be returned; `Group` means only User Groups will be returned; `Role` means only roles will be returned. `All` is the default value.
+                     * 
                      */
                     void SetEntityFilter(const std::string& _entityFilter);
 
                     /**
                      * 判断参数 EntityFilter 是否已赋值
                      * @return EntityFilter 是否已赋值
+                     * 
                      */
                     bool EntityFilterHasBeenSet() const;
 

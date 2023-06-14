@@ -46,12 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取ID of the exportation task. You can query the task progress by using this ID in the console.
                      * @return JobId ID of the exportation task. You can query the task progress by using this ID in the console.
+                     * 
                      */
                     std::string GetJobId() const;
 
                     /**
                      * 判断参数 JobId 是否已赋值
                      * @return JobId 是否已赋值
+                     * 
                      */
                     bool JobIdHasBeenSet() const;
 

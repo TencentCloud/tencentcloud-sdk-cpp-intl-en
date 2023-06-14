@@ -45,18 +45,21 @@ namespace TencentCloud
                     /**
                      * 获取List of IDs of the instances for which to set the password. You can request up to 100 instances in a region at a time.
                      * @return InstanceIdSet List of IDs of the instances for which to set the password. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
 
                     /**
                      * 设置List of IDs of the instances for which to set the password. You can request up to 100 instances in a region at a time.
-                     * @param InstanceIdSet List of IDs of the instances for which to set the password. You can request up to 100 instances in a region at a time.
+                     * @param _instanceIdSet List of IDs of the instances for which to set the password. You can request up to 100 instances in a region at a time.
+                     * 
                      */
                     void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
 
                     /**
                      * 判断参数 InstanceIdSet 是否已赋值
                      * @return InstanceIdSet 是否已赋值
+                     * 
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
@@ -67,6 +70,7 @@ If the instances include both Linux instances and Windows instances, the passwor
                      * @return Password New password. The password of a Linux instance must contain 8–16 characters in at least two of the following character types: letters, digits, and special symbols [( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /] and cannot start with `/`.
 The password of a Windows instance must contain 12–16 characters in at least three of the following character types: letters, digits, and special symbols [( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /] and cannot start with `/`.
 If the instances include both Linux instances and Windows instances, the password complexity limit for Windows instances will apply.
+                     * 
                      */
                     std::string GetPassword() const;
 
@@ -74,51 +78,59 @@ If the instances include both Linux instances and Windows instances, the passwor
                      * 设置New password. The password of a Linux instance must contain 8–16 characters in at least two of the following character types: letters, digits, and special symbols [( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /] and cannot start with `/`.
 The password of a Windows instance must contain 12–16 characters in at least three of the following character types: letters, digits, and special symbols [( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /] and cannot start with `/`.
 If the instances include both Linux instances and Windows instances, the password complexity limit for Windows instances will apply.
-                     * @param Password New password. The password of a Linux instance must contain 8–16 characters in at least two of the following character types: letters, digits, and special symbols [( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /] and cannot start with `/`.
+                     * @param _password New password. The password of a Linux instance must contain 8–16 characters in at least two of the following character types: letters, digits, and special symbols [( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /] and cannot start with `/`.
 The password of a Windows instance must contain 12–16 characters in at least three of the following character types: letters, digits, and special symbols [( ) ~ ~ ! @ # $ % ^ & * - + = _ | { } [ ] : ; ' < > , . ? /] and cannot start with `/`.
 If the instances include both Linux instances and Windows instances, the password complexity limit for Windows instances will apply.
+                     * 
                      */
                     void SetPassword(const std::string& _password);
 
                     /**
                      * 判断参数 Password 是否已赋值
                      * @return Password 是否已赋值
+                     * 
                      */
                     bool PasswordHasBeenSet() const;
 
                     /**
                      * 获取Whether to force shut down. Default value: false.
                      * @return ForceStop Whether to force shut down. Default value: false.
+                     * 
                      */
                     bool GetForceStop() const;
 
                     /**
                      * 设置Whether to force shut down. Default value: false.
-                     * @param ForceStop Whether to force shut down. Default value: false.
+                     * @param _forceStop Whether to force shut down. Default value: false.
+                     * 
                      */
                     void SetForceStop(const bool& _forceStop);
 
                     /**
                      * 判断参数 ForceStop 是否已赋值
                      * @return ForceStop 是否已赋值
+                     * 
                      */
                     bool ForceStopHasBeenSet() const;
 
                     /**
                      * 获取Username of the instance for which to reset the password, which can contain up to 64 characters. If this parameter is not specified, the password of the root user will be reset by default for Linux, and the password of the admin will be reset by default for Windows.
                      * @return UserName Username of the instance for which to reset the password, which can contain up to 64 characters. If this parameter is not specified, the password of the root user will be reset by default for Linux, and the password of the admin will be reset by default for Windows.
+                     * 
                      */
                     std::string GetUserName() const;
 
                     /**
                      * 设置Username of the instance for which to reset the password, which can contain up to 64 characters. If this parameter is not specified, the password of the root user will be reset by default for Linux, and the password of the admin will be reset by default for Windows.
-                     * @param UserName Username of the instance for which to reset the password, which can contain up to 64 characters. If this parameter is not specified, the password of the root user will be reset by default for Linux, and the password of the admin will be reset by default for Windows.
+                     * @param _userName Username of the instance for which to reset the password, which can contain up to 64 characters. If this parameter is not specified, the password of the root user will be reset by default for Linux, and the password of the admin will be reset by default for Windows.
+                     * 
                      */
                     void SetUserName(const std::string& _userName);
 
                     /**
                      * 判断参数 UserName 是否已赋值
                      * @return UserName 是否已赋值
+                     * 
                      */
                     bool UserNameHasBeenSet() const;
 

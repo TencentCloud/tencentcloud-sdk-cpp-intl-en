@@ -46,90 +46,105 @@ namespace TencentCloud
                     /**
                      * 获取ID of the cluster where a table group resides
                      * @return ClusterId ID of the cluster where a table group resides
+                     * 
                      */
                     std::string GetClusterId() const;
 
                     /**
                      * 设置ID of the cluster where a table group resides
-                     * @param ClusterId ID of the cluster where a table group resides
+                     * @param _clusterId ID of the cluster where a table group resides
+                     * 
                      */
                     void SetClusterId(const std::string& _clusterId);
 
                     /**
                      * 判断参数 ClusterId 是否已赋值
                      * @return ClusterId 是否已赋值
+                     * 
                      */
                     bool ClusterIdHasBeenSet() const;
 
                     /**
                      * 获取Table group ID list
                      * @return TableGroupIds Table group ID list
+                     * 
                      */
                     std::vector<std::string> GetTableGroupIds() const;
 
                     /**
                      * 设置Table group ID list
-                     * @param TableGroupIds Table group ID list
+                     * @param _tableGroupIds Table group ID list
+                     * 
                      */
                     void SetTableGroupIds(const std::vector<std::string>& _tableGroupIds);
 
                     /**
                      * 判断参数 TableGroupIds 是否已赋值
                      * @return TableGroupIds 是否已赋值
+                     * 
                      */
                     bool TableGroupIdsHasBeenSet() const;
 
                     /**
                      * 获取Filter. Valid values: TableGroupName, TableGroupId
                      * @return Filters Filter. Valid values: TableGroupName, TableGroupId
+                     * 
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter. Valid values: TableGroupName, TableGroupId
-                     * @param Filters Filter. Valid values: TableGroupName, TableGroupId
+                     * @param _filters Filter. Valid values: TableGroupName, TableGroupId
+                     * 
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
                     /**
                      * 判断参数 Filters 是否已赋值
                      * @return Filters 是否已赋值
+                     * 
                      */
                     bool FiltersHasBeenSet() const;
 
                     /**
                      * 获取Query list offset
                      * @return Offset Query list offset
+                     * 
                      */
                     int64_t GetOffset() const;
 
                     /**
                      * 设置Query list offset
-                     * @param Offset Query list offset
+                     * @param _offset Query list offset
+                     * 
                      */
                     void SetOffset(const int64_t& _offset);
 
                     /**
                      * 判断参数 Offset 是否已赋值
                      * @return Offset 是否已赋值
+                     * 
                      */
                     bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Number of returned results in query list
                      * @return Limit Number of returned results in query list
+                     * 
                      */
                     int64_t GetLimit() const;
 
                     /**
                      * 设置Number of returned results in query list
-                     * @param Limit Number of returned results in query list
+                     * @param _limit Number of returned results in query list
+                     * 
                      */
                     void SetLimit(const int64_t& _limit);
 
                     /**
                      * 判断参数 Limit 是否已赋值
                      * @return Limit 是否已赋值
+                     * 
                      */
                     bool LimitHasBeenSet() const;
 

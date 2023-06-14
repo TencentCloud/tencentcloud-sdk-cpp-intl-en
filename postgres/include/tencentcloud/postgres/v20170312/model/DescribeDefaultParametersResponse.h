@@ -47,12 +47,14 @@ namespace TencentCloud
                     /**
                      * 获取Number of parameters
                      * @return TotalCount Number of parameters
+                     * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
                      * @return TotalCount 是否已赋值
+                     * 
                      */
                     bool TotalCountHasBeenSet() const;
 
@@ -61,12 +63,14 @@ namespace TencentCloud
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ParamInfoSet Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ParamInfo> GetParamInfoSet() const;
 
                     /**
                      * 判断参数 ParamInfoSet 是否已赋值
                      * @return ParamInfoSet 是否已赋值
+                     * 
                      */
                     bool ParamInfoSetHasBeenSet() const;
 

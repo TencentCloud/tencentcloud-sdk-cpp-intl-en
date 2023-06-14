@@ -49,54 +49,63 @@ namespace TencentCloud
                     /**
                      * 获取Traffic package type, Valid values: ZONE (private domain); TRAFFIC (DNS traffic package)
                      * @return FlowType Traffic package type, Valid values: ZONE (private domain); TRAFFIC (DNS traffic package)
+                     * 
                      */
                     std::string GetFlowType() const;
 
                     /**
                      * 设置Traffic package type, Valid values: ZONE (private domain); TRAFFIC (DNS traffic package)
-                     * @param FlowType Traffic package type, Valid values: ZONE (private domain); TRAFFIC (DNS traffic package)
+                     * @param _flowType Traffic package type, Valid values: ZONE (private domain); TRAFFIC (DNS traffic package)
+                     * 
                      */
                     void SetFlowType(const std::string& _flowType);
 
                     /**
                      * 判断参数 FlowType 是否已赋值
                      * @return FlowType 是否已赋值
+                     * 
                      */
                     bool FlowTypeHasBeenSet() const;
 
                     /**
                      * 获取Traffic package quota
                      * @return TotalQuantity Traffic package quota
+                     * 
                      */
                     int64_t GetTotalQuantity() const;
 
                     /**
                      * 设置Traffic package quota
-                     * @param TotalQuantity Traffic package quota
+                     * @param _totalQuantity Traffic package quota
+                     * 
                      */
                     void SetTotalQuantity(const int64_t& _totalQuantity);
 
                     /**
                      * 判断参数 TotalQuantity 是否已赋值
                      * @return TotalQuantity 是否已赋值
+                     * 
                      */
                     bool TotalQuantityHasBeenSet() const;
 
                     /**
                      * 获取Available quota of traffic package
                      * @return AvailableQuantity Available quota of traffic package
+                     * 
                      */
                     int64_t GetAvailableQuantity() const;
 
                     /**
                      * 设置Available quota of traffic package
-                     * @param AvailableQuantity Available quota of traffic package
+                     * @param _availableQuantity Available quota of traffic package
+                     * 
                      */
                     void SetAvailableQuantity(const int64_t& _availableQuantity);
 
                     /**
                      * 判断参数 AvailableQuantity 是否已赋值
                      * @return AvailableQuantity 是否已赋值
+                     * 
                      */
                     bool AvailableQuantityHasBeenSet() const;
 

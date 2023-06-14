@@ -49,108 +49,126 @@ namespace TencentCloud
                     /**
                      * 获取Whether there is permission to operate on the billing information. Valid values: 1 (yes), 2 (no).
                      * @return HasChargeOperation Whether there is permission to operate on the billing information. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     int64_t GetHasChargeOperation() const;
 
                     /**
                      * 设置Whether there is permission to operate on the billing information. Valid values: 1 (yes), 2 (no).
-                     * @param HasChargeOperation Whether there is permission to operate on the billing information. Valid values: 1 (yes), 2 (no).
+                     * @param _hasChargeOperation Whether there is permission to operate on the billing information. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     void SetHasChargeOperation(const int64_t& _hasChargeOperation);
 
                     /**
                      * 判断参数 HasChargeOperation 是否已赋值
                      * @return HasChargeOperation 是否已赋值
+                     * 
                      */
                     bool HasChargeOperationHasBeenSet() const;
 
                     /**
                      * 获取Whether there is permission to display the VPC information. Valid values: 1 (yes), 2 (no).
                      * @return HasVpcDisplay Whether there is permission to display the VPC information. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     int64_t GetHasVpcDisplay() const;
 
                     /**
                      * 设置Whether there is permission to display the VPC information. Valid values: 1 (yes), 2 (no).
-                     * @param HasVpcDisplay Whether there is permission to display the VPC information. Valid values: 1 (yes), 2 (no).
+                     * @param _hasVpcDisplay Whether there is permission to display the VPC information. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     void SetHasVpcDisplay(const int64_t& _hasVpcDisplay);
 
                     /**
                      * 判断参数 HasVpcDisplay 是否已赋值
                      * @return HasVpcDisplay 是否已赋值
+                     * 
                      */
                     bool HasVpcDisplayHasBeenSet() const;
 
                     /**
                      * 获取Whether there is permission to change the Grafana status. Valid values: 1 (yes), 2 (no).
                      * @return HasGrafanaStatusChange Whether there is permission to change the Grafana status. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     int64_t GetHasGrafanaStatusChange() const;
 
                     /**
                      * 设置Whether there is permission to change the Grafana status. Valid values: 1 (yes), 2 (no).
-                     * @param HasGrafanaStatusChange Whether there is permission to change the Grafana status. Valid values: 1 (yes), 2 (no).
+                     * @param _hasGrafanaStatusChange Whether there is permission to change the Grafana status. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     void SetHasGrafanaStatusChange(const int64_t& _hasGrafanaStatusChange);
 
                     /**
                      * 判断参数 HasGrafanaStatusChange 是否已赋值
                      * @return HasGrafanaStatusChange 是否已赋值
+                     * 
                      */
                     bool HasGrafanaStatusChangeHasBeenSet() const;
 
                     /**
                      * 获取Whether there is permission to manage agents. Valid values: 1 (yes), 2 (no).
                      * @return HasAgentManage Whether there is permission to manage agents. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     int64_t GetHasAgentManage() const;
 
                     /**
                      * 设置Whether there is permission to manage agents. Valid values: 1 (yes), 2 (no).
-                     * @param HasAgentManage Whether there is permission to manage agents. Valid values: 1 (yes), 2 (no).
+                     * @param _hasAgentManage Whether there is permission to manage agents. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     void SetHasAgentManage(const int64_t& _hasAgentManage);
 
                     /**
                      * 判断参数 HasAgentManage 是否已赋值
                      * @return HasAgentManage 是否已赋值
+                     * 
                      */
                     bool HasAgentManageHasBeenSet() const;
 
                     /**
                      * 获取Whether there is permission to manage TKE integrations. Valid values: 1 (yes), 2 (no).
                      * @return HasTkeManage Whether there is permission to manage TKE integrations. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     int64_t GetHasTkeManage() const;
 
                     /**
                      * 设置Whether there is permission to manage TKE integrations. Valid values: 1 (yes), 2 (no).
-                     * @param HasTkeManage Whether there is permission to manage TKE integrations. Valid values: 1 (yes), 2 (no).
+                     * @param _hasTkeManage Whether there is permission to manage TKE integrations. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     void SetHasTkeManage(const int64_t& _hasTkeManage);
 
                     /**
                      * 判断参数 HasTkeManage 是否已赋值
                      * @return HasTkeManage 是否已赋值
+                     * 
                      */
                     bool HasTkeManageHasBeenSet() const;
 
                     /**
                      * 获取Whether there is permission to display the API information. Valid values: 1 (yes), 2 (no).
                      * @return HasApiOperation Whether there is permission to display the API information. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     int64_t GetHasApiOperation() const;
 
                     /**
                      * 设置Whether there is permission to display the API information. Valid values: 1 (yes), 2 (no).
-                     * @param HasApiOperation Whether there is permission to display the API information. Valid values: 1 (yes), 2 (no).
+                     * @param _hasApiOperation Whether there is permission to display the API information. Valid values: 1 (yes), 2 (no).
+                     * 
                      */
                     void SetHasApiOperation(const int64_t& _hasApiOperation);
 
                     /**
                      * 判断参数 HasApiOperation 是否已赋值
                      * @return HasApiOperation 是否已赋值
+                     * 
                      */
                     bool HasApiOperationHasBeenSet() const;
 
